@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 256986
 
 ## Description of the registry
 
-The *Microsoft Computer Dictionary*, Fifth Edition, defines the registry as:
+The _Microsoft Computer Dictionary_, Fifth Edition, defines the registry as:
 
 A central hierarchical database used in Windows 98, Windows CE, Windows NT, and Windows 2000 used to store information that is necessary to configure the system for one or more users, applications, and hardware devices.
 
@@ -38,8 +38,6 @@ The Registry replaces most of the text-based .ini files that are used in Windows
 |HKEY_LOCAL_MACHINE\System|System, System.alt, System.log, System.sav|
 |HKEY_CURRENT_CONFIG|System, System.alt, System.log, System.sav, Ntuser.dat, Ntuser.dat.log|
 |HKEY_USERS\DEFAULT|Default, Default.log, Default.sav|
-|| |
-|||
 
 In Windows 98, the registry files are named User.dat and System.dat. In Windows Millennium Edition, the registry files are named Classes.dat, User.dat, and System.dat.
 
@@ -50,12 +48,11 @@ The following table lists the predefined keys that are used by the system. The m
 
 | Folder/predefined key| Description |
 |---|---|
-|HKEY_CURRENT_USER|Contains the root of the configuration information for the user who is currently logged on. The user's folders, screen colors, and Control Panel settings are stored here. This information is associated with the user's profile. This key is sometimes abbreviated as *HKCU*.|
-|HKEY_USERS|Contains all the actively loaded user profiles on the computer. HKEY_CURRENT_USER is a subkey of HKEY_USERS. HKEY_USERS is sometimes abbreviated as *HKU*.|
-|HKEY_LOCAL_MACHINE|Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as *HKLM*.|
-|HKEY_CLASSES_ROOT|Is a subkey of `HKEY_LOCAL_MACHINE\Software`. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as *HKCR*. Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The `HKEY_LOCAL_MACHINE\Software\Classes` key contains default settings that can apply to all users on the local computer. The `HKEY_CURRENT_USER\Software\Classes` key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under `HKEY_CURRENT_USER\Software\Classes` instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write keys to a key under HKEY_CLASSES_ROOT, the system stores the information under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under `HKEY_CURRENT_USER\Software\Classes`, the system will store the information there instead of under `HKEY_LOCAL_MACHINE\Software\Classes`.|
+|HKEY_CURRENT_USER|Contains the root of the configuration information for the user who is currently logged on. The user's folders, screen colors, and Control Panel settings are stored here. This information is associated with the user's profile. This key is sometimes abbreviated as _HKCU_.|
+|HKEY_USERS|Contains all the actively loaded user profiles on the computer. HKEY_CURRENT_USER is a subkey of HKEY_USERS. HKEY_USERS is sometimes abbreviated as _HKU_.|
+|HKEY_LOCAL_MACHINE|Contains configuration information particular to the computer (for any user). This key is sometimes abbreviated as _HKLM_.|
+|HKEY_CLASSES_ROOT|Is a subkey of `HKEY_LOCAL_MACHINE\Software`. The information that is stored here makes sure that the correct program opens when you open a file by using Windows Explorer. This key is sometimes abbreviated as _HKCR_. Starting with Windows 2000, this information is stored under both the HKEY_LOCAL_MACHINE and HKEY_CURRENT_USER keys. The `HKEY_LOCAL_MACHINE\Software\Classes` key contains default settings that can apply to all users on the local computer. The `HKEY_CURRENT_USER\Software\Classes` key contains settings that override the default settings and apply only to the interactive user. The HKEY_CLASSES_ROOT key provides a view of the registry that merges the information from these two sources. HKEY_CLASSES_ROOT also provides this merged view for programs that are designed for earlier versions of Windows. To change the settings for the interactive user, changes must be made under `HKEY_CURRENT_USER\Software\Classes` instead of under HKEY_CLASSES_ROOT. To change the default settings, changes must be made under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write keys to a key under HKEY_CLASSES_ROOT, the system stores the information under `HKEY_LOCAL_MACHINE\Software\Classes`. If you write values to a key under HKEY_CLASSES_ROOT, and the key already exists under `HKEY_CURRENT_USER\Software\Classes`, the system will store the information there instead of under `HKEY_LOCAL_MACHINE\Software\Classes`.|
 |HKEY_CURRENT_CONFIG|Contains information about the hardware profile that is used by the local computer at system startup.|
-|||
 
 > [!NOTE]
 > The registry in 64-bit versions of Windows XP, Windows Server 2003, and Windows Vista is divided into 32-bit and 64-bit keys. Many of the 32-bit keys have the same names as their 64-bit counterparts, and vice versa. The default 64-bit version of Registry Editor that is included with 64-bit versions of Windows XP, Windows Server 2003, and Windows Vista displays the 32-bit keys under the node `HKEY_LOCAL_MACHINE\Software\WOW6432Node`.
@@ -89,8 +86,7 @@ Long values (more than 2,048 bytes) must be stored as files with the file names 
 |None|REG_NONE|Data without any particular type. This data is written to the registry by the system or applications and is displayed in Registry Editor in hexadecimal format as a Binary Value|
 |Link|REG_LINK|A Unicode string naming a symbolic link.|
 |QWORD Value|REG_QWORD|Data represented by a number that is a 64-bit integer. This data is displayed in Registry Editor as a Binary Value and was introduced in Windows 2000.|
-||||
-
+  
 ## Back up the registry
 
 Before you edit the registry, export the keys in the registry that you plan to edit, or back up the whole registry. If a problem occurs, you can then follow the steps in the [Restore the registry](#restore-the-registry) section to restore the registry to its previous state. To back up the whole registry, use the Backup utility to back up the system state. The system state includes the registry, the COM+ Class Registration Database, and your boot files. For more information about how to use the Backup utility to back up the system state, see the following articles:

@@ -29,8 +29,7 @@ Support for third-party VM agent extensions is provided directly by the vendor.
 |PuppetEnterpriseAgent|PuppetLabs agent|Supported by PuppetLabs| [https://support.puppet.com/hc/](https://support.puppet.com/hc/)|
 |Symantec Endpoint Protection|Symantec antivirus|Supported by Symantec| [http://www.symantec.com/business/support/index?page=contactsupport&key=54619](http://www.symantec.com/business/support/index?page=contactsupport&key=54619) |
 |Trend Micro Deep Security Agent|Trend Micro antivirus|Supported by Trend Micro| [http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html](http://www.trendmicro.com/us/business/saas/deep-security-as-a-service/index.html) |
-|||||
-
+  
 ## More information
 
 Understanding the difference between the VM agent and VM extensions helps troubleshoot problems by isolating the location of the problem.

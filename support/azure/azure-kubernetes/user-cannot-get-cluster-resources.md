@@ -17,7 +17,7 @@ This article describes how to fix issues that occur when you can't get the detai
 - The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)).
 
 > [!NOTE]
-> If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az_aks_install_cli) command.
+> If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Symptoms
 

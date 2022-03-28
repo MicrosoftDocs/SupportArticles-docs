@@ -43,8 +43,7 @@ This error occurs when you try to make an encrypted connection to SQL Server usi
 |---|---|---|---|---|
 |1|Yes|No|You provision a certificate from a non-trusted source (the certificate issuing authority is not listed as a trusted authority in Trusted Root Certification Authorities on the client machine) |No|
 |2|Off|Yes|SQL Server self-generated certificate |Self-signed certificates do not show up in this store. |
-||||
-
+  
 When establishing encrypted connections to SQL Server, Secure Channel (Schannel) creates the list of trusted certificate authorities by searching the Trusted Root Certification Authorities store on the local computer. During the TLS handshake, the server sends its public key certificate to the client. The issuer of a public key certificate is known as a Certificate Authority (CA). The client has to ensure that the certificate authority is one that the client trusts. This is achieved by knowing the public key of trusted CAs in advance. When Schannel detects a certificate that was issued by an untrusted certification authority, such as in the above two cases, you get the error message listed in the [Symptoms](#symptoms) section.
 
 ## Resolution
@@ -55,9 +54,9 @@ For Scenario 1: Add the certificate authority to the Trusted Root Certification 
 
 Export the server certificate.
 
-The example uses a file named *caCert.cer* as a certificate file. You must obtain this certificate file from the server. The following steps explain how to export the server certificate to a file:
+The example uses a file named _caCert.cer_ as a certificate file. You must obtain this certificate file from the server. The following steps explain how to export the server certificate to a file:
 
-1. Click **Start** and then **Run**, and type *MMC*. (MMC is an acronym for the Microsoft Management Console.)
+1. Click **Start** and then **Run**, and type _MMC_. (MMC is an acronym for the Microsoft Management Console.)
 
 1. In MMC, open the **Certificates**.
 
@@ -101,7 +100,7 @@ Install the root certificate authority (CA) on the client machine
 
 1. On the Completing the **Certificate Import Wizard** page, choose **Finish**.
 
-For Scenarios 1 and 2: Set **Trust Server Certificate** setting to *true* in your client application.
+For Scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in your client application.
 
 For more information on how to do this review the following topics:
 

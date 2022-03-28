@@ -18,64 +18,55 @@ Number of stores
 |Description|File name|
 |---|---|
 |Count the number of stores in the database|Store.csv|
-|||
-
+  
 Accounting information
 
 |Description|File name|
 |---|---|
 |Collection of accounting data that is stored in the Accounting table|Accounting.csv|
-|||
-
+  
 Configuration
 
 |Description|File name|
 |---|---|
 |Collection of store-configuration information from the database|Configuration.csv|
-|||
-
+  
 Items
 
 |Description|File name|
 |---|---|
 |Collection of items in the database|Items.csv|
-|||
-
+  
 Duplicate customers
 
 |Description|File name|
 |---|---|
 |Collection of duplicate customers in the database|Duplicate Customers.csv|
-|||
-
+  
 Duplicate items
 
 |Description|File name|
 |---|---|
 |Collection of duplicate items in the database|Duplicate Items.csv|
-|||
-
+  
 Duplicate batches
 
 |Description|File name|
 |---|---|
 |Collection of duplicate batches in the database|Duplicate Batches.csv|
-|||
-
+  
 DB schema
 
 |Description|File name|
 |---|---|
 |Collection of the database schema|DB Schema.csv|
-|||
-
+  
 DB triggers
 
 |Description|File name|
 |---|---|
 |Collection of all the database triggers|DB Triggers.csv|
-|||
-
+  
 ## More information
 
 - We recommend that you run the diagnostic from the computer that is experiencing the problem or from the computer for which you want to represent the environment for your question.

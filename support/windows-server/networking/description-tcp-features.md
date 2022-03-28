@@ -195,8 +195,7 @@ It means that the first data packet sent after the three-way handshake is the ac
 |12|4096|65535|268,431,360|
 |13|8192|65535|536,862,720|
 |14|16384|65535|1,073,725,440|
-|||||
-
+  
 For example:
 
 If the window size in the registry is entered as 269000000 (269M) in decimal, the scaling factor during the three-way handshake is 13. A scaling factor of 12 only allows a window size up to 268,431,360 bytes (268M).
@@ -243,8 +242,7 @@ TCP Timestamps Option (TSopt):
 |Kind = 8|Length = 10|TS Value (Tsval)|TS Echo Reply (Tsecr)|
 |---|---|---|---|
 |1 byte|1 byte|4 bytes|4 bytes|
-|||||
-
+  
 The timestamp option field can be viewed in a Network Monitor trace by expanding the TCP options field, as shown below:  
 
 ```output
@@ -276,15 +274,13 @@ Tcp SACK Permitted:
 |Kind = 4|Length = 2|
 |---|---|
 |1 byte|1 byte|
-|||
-
+  
 Tcp SACK Option:
 
 |Kind = 5|Length = Variable|
 |---|---|
 |1 byte|Left edge of first block to Right edge of first block<br/>...<br/>Left edge of Nth block to Right edge of Nth block|
-|||
-
+  
 With SACK enabled (default), a packet or series of packets can be dropped. The receiver informs the sender which data has been received, and where there may be "holes" in the data. The sender can then selectively retransmit the missing data without a retransmission of blocks of data that have already been received successfully. SACK is controlled by the SackOpts registry parameter.
 
 The SackOpts value in the following registry key can be edited to control the use of selective acknowledgments:

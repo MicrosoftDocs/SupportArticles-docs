@@ -14,6 +14,10 @@ ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Remote Server Administration Tools (RSAT) for Windows
 
 RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.
@@ -74,7 +78,6 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 |**Volume Activation**|Manage Volume Activation, vmw.exe| **√**| **√**|
 |**Windows System Resource Manager tools**|Windows System Resource Manager tools include the Windows System Resource Manager snap-in and the **Wsrmc.exe** command-line tool.| **√**<br/><br/> WSRM has been deprecated in Windows Server 2012 R2. Tools for managing WSRM aren't available in RSAT for Windows 8.1 and later releases of RSAT.| |
 | **Windows Server Update Services tools**| Windows Server Update Services tools include the Windows Server Update Services snap-in, WSUS.msc, and PowerShell cmdlets.| **√**| **√** |
-|||||
 
 ## RSAT for Windows 10, version 1809 or later versions
 

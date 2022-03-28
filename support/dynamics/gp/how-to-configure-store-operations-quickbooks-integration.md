@@ -220,8 +220,7 @@ Table: QuickBooks general ledger account setup in Store Operations
 |Dept. **xxxx: Commission|Selling Expense|Other Current Liabilities|The commission payable to sales reps by department. Set up this account if you want to track this value separately for every department. If you want to track this value as a total, leave these accounts blank and enter your account numbers in the Commission Account.|
 |Dept. **xxxx: Sales||Sales|The sales amount not including taxes for the department. If you post this account, do not post Sales: Total + Tax or Sales: Total Account to avoid redundant posting. Set up this account if you want to track sales and taxes for each department separately. If you want to track this value as a total, leave these accounts blank and enter your account numbers in the Sales: Total + Tax or Sales: Total.|
 |Department Tax Rounding||Cash|A rounding error may occur when you calculate the tax per department in a VAT system. Use this option if you use VAT.|
-|||||
-
+  
 > [!TIP]
 > For the tender amounts to post correctly to your accounting system, type opening and closing amounts in the point of sale for each batch.
 >
@@ -274,7 +273,6 @@ To export your accounting data directly in the QuickBooks general ledger and to 
     |Total of the Purchase Order|Amount Due|
     |Terms|Payment Terms|
     ||One expense line for posting to the Account specified in the Assign Accounts Bill Posting Account|
-    |||
 
 5. Select **Post** to export the account data and the closed Purchase Orders.
 
