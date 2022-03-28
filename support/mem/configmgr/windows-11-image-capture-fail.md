@@ -1,18 +1,20 @@
 ---
-title: Capture media fails to capture Windows 11 image
+title: Capture media in Configuration Manager fails to capture Windows 11 image
 description: Describes some errors that occur when you capture a Windows 11 image by using capture media in Configuration Manager, and provides solutions.
 ms.date: 03/28/2022
 ms.reviewer: sccmcsscontent, alpasc
 author: helenclu
 ms.author: luche
 ---
-# Errors when capturing Windows 11 image by using capture media
+# Errors when capturing Windows 11 image by using capture media in Configuration Manager
 
 This article provides solutions for some errors that occur when you capture a Windows 11 image by using capture media in Configuration Manager.
 
+_Applies to:_ &nbsp; Configuration Manager (current branch)
+
 ## Symptoms
 
-When you try to capture a Windows 11 image by using capture media, one or more of the following errors might occur:
+When you try to capture a Windows 11 image by using capture media in Configuration Manager, one or more of the following errors might occur:
 
 - [VCRUNTIME140_1.dll was not found](#vcruntime140dllwasnotfound)
 - [Package \<package name> was installed for a user, but not provisioned for all users](#packagenotprovisionedforallusers)
