@@ -79,7 +79,7 @@ To find and remove soft-deleted public folder mailboxes that have the same names
    > DistinguishedName: CN=**Mailbox1**,OU= contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=EURPR05A008,DC=PROD,DC=OUTLOOK,DC=COM
    > ExchangeGuid: \<Guid_number>
 
-   **Note:** If no soft-deleted public folder mailboxes are found in the output, follow Step 2: Find and remove all existing orphaned public folder mailboxes.
+   **Note:** If no soft-deleted public folder mailboxes are found in the output, follow [Step 2: Find and remove all existing orphaned public folder mailboxes](#resolution-step-2-remove-all-existing-orphaned-public-folder-mailboxes).
 
 3. Remove the soft-deleted public folder mailbox by running the following cmdlet:
 
