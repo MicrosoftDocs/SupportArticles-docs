@@ -1190,3 +1190,5 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Data collection toolset (TSSv2) introduction and FAQ
+    href: ./windows-troubleshooters/introduction-faq-data-collection-toolset-tssv2.md
