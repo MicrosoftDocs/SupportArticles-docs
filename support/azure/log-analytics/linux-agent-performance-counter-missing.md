@@ -1,5 +1,5 @@
 ---
-title: Linux performance counters missing in the Log Analytics workspace
+title: Linux performance counters missing in Log Analytics workspace
 description: Helps troubleshoot an issue where performance counters are missing in a Linux agent-connected workspace.
 ms.date: 03/15/2022
 author: genlin
@@ -7,7 +7,7 @@ ms.author: genli
 ms.reviewer: irfanr
 ms.service: log-analytics
 ---
-# Linux performance counters are missing in the Log Analytics workspace
+# Linux performance counters are missing in Log Analytics workspace
 
 This article provides troubleshooting steps for an issue where Linux performance counters and other non-heartbeat data are missing in a Log Analytics workspace.
 
@@ -23,9 +23,9 @@ If you're uncertain, use one of the following methods to determine the Linux dis
 
 Here are troubleshooting steps for this issue. If there are multiple faulty Linux agents, apply these steps to one agent first. After the issue is resolved, apply the same steps to the others.
 
-## Step 1: Check if the Linux agent sends heartbeats
+## Step 1: Check if Linux agent sends heartbeats
 
-Basic heartbeats must work first. If the Linux agent hasn't sent any recent heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
+Basic heartbeats must work first. If the Linux agent doesn't send any recent heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
 
 To check if the Linux agent sends heartbeats, go to the workspace in the Azure portal and run the following query:
 
@@ -45,17 +45,17 @@ To collect the most recent performance counter data based on the time frame that
 Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated desc
 ```
 
-Suppose some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent. In that case, the Linux agents are configured to collect performance counter data and send it to the workspace successfully. The issue is isolated to these Linux agents, the workspace configuration is set correctly, and these Linux agents get the correct configuration.
+If some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent, it means that the Linux agents are configured to collect performance counter data and send them to the workspace successfully. In this case, the issue is isolated to these Linux agents, the workspace configuration is set correctly and these Linux agents get correct configuration.
 
-The issue is resolved if the computer with the faulty agent installed is displayed in the query result. If not, proceed to the Step 3.
+If the computer with the faulty agent installed is displayed in the query result, the issue is resolved. If not, proceed to the Step 3.
 
-## Step 3: Check if the Linux agent receives the current configuration from the workspace
+## Step 3: Check if Linux agent receives current configuration from workspace
 
 The workspace configuration tells an agent what data to collect and send to the workspace. Use the *omsagent* log to check the current configuration of the faulty Linux agent. The log can be found in */var/opt/microsoft/omsagent/\<workspaceid>/log/*. You can also get it through the collected logs in Step 1.
 
 Open the log file and search through the `[info]: using configuration file: <ROOT>` string from the bottom up to get the most recent time when the Linux agent received configuration data from the workspace.
 
-If there are some sources like the following output in the log file, the agent is set to collect some performance counters. Check if the entries match what is shown in: **Advanced Settings** > **Data** > **Linux Performance Counters**.
+If there are some sources like the following output in the log file, the agent is set to collect some performance counters. Check if the entries match what is shown in **Advanced Settings** > **Data** > **Linux Performance Counters**.
 
 ```output
 <source>
@@ -96,7 +96,7 @@ If there are some sources like the following output in the log file, the agent i
 
 If there's no such performance counter entry in the log file, check the time stamp for the `[info]: using configuration file:` entry. If the time stamp predates the time when performance counters are configured to collect, the Linux agent doesn't receive the current configuration from the workspace. To resolve this issue, force the Linux agent to pull the current configuration from the workspace.
 
-### Force the Linux agent to pull the current configuration from the workspace.
+### Force Linux agent to pull current configuration from workspace
 
 To force a Linux agent to pull the current configuration from a workspace, run the following command:
 
