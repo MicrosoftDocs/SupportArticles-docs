@@ -20,15 +20,15 @@ appliesto:
 
 # Reset Microsoft 365 Apps for enterprise activation state
 
-In some circumstances, previous activations for Microsoft 365 apps for enterprise must be cleared to remove previous licenses and cached Office account information to reset the application to a clean un-activated state. After that is done, you can then activate with a different Office account or move to a different license mode. Common changes that require this are if users switch devices, an enterprise adds or changes Microsoft 365 tenants, or you are switching an Office desktop client license mode on a device, such as moving to use Shared Computer Activation for a shared device.
+In some circumstances, previous activations for Microsoft 365 apps for enterprise must be cleared to remove previous licenses and cached Office account information to reset the application to a clean un-activated state. After that is done, you can then activate with a different Office account or move to a different license mode. Common changes that require this are if users switch devices, an enterprise adds or changes Microsoft 365 tenants, or you are switching an Office desktop client [license mode](/deployoffice/overview-licensing-activation-microsoft-365-apps) on a device, such as moving to use Shared Computer Activation for a shared device.
 
 >[!NOTE]
 >To automatically perform all of the checks listed below and run the appropriate scripts needed to reset the activation state, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeActivation-Reset).
 
-In addition to the manual steps, there are also three scripts provided in this article to automate these steps. To get the best results we recommend that run all three scripts included in this article. If you aren't able to run the scripts, perform the manual steps for each section.
+In addition to the manual steps, there are also three scripts provided in this article to automate these steps. To get the best results we recommend that you run all three scripts included in this article. If you aren't able to run the scripts, perform the manual steps for each section.
 
 > [!NOTE]
-> - The steps below apply to other Microsoft 365 apps, such as Microsoft Project and Microsoft Visio.
+> - The steps below apply to Microsoft Project and Microsoft Visio as well.
 > - The steps and scripts in this article apply to Windows installations of Office apps. For Office for Mac installations, see [How to remove Office license files on a Mac](https://support.microsoft.com/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 > - Close all Office applications prior to taking any of the following actions.
 > - We also recommend restarting the device after completing these steps or running the related scripts.
@@ -37,13 +37,13 @@ In addition to the manual steps, there are also three scripts provided in this a
 
 To reset Office desktop client activations, make sure that previous activations, their related licenses, and cached Office account information are removed from the device. For example, with subscription versions of Office apps, activation is based on an Office user account that has been assigned a license for the desktop client. You must be able to successfully sign in with that licensed Office account.
 
-To automate the steps in this section, download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the OLicenseCleanup.vbs file, right-click OLicenseCleanup.vbs, and then select **Run as administrator**.
+To automate the steps in this section, download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the OLicenseCleanup.vbs file, and run OLicenseCleanup.vbs with elevated permissions.
 
 If you're unable to run the script, manually remove existing Office activations and cached Office account information use the following four steps in this section.
 <br>
 <br>
 <details>
-<summary><b>Step 1: Remove Office 365 license for subscription-based installations</b></summary>
+<summary><b>Step 1: Remove previous Office activations</b></summary>
 
 Check for and remove existing licenses on the device. Make sure to check all the noted locations for potential license types, which include vNext, Shared Computer Activation, and Legacy licenses.
 
@@ -81,12 +81,12 @@ Check for and remove existing licenses on the device. Make sure to check all the
 1. Run the following command to remove the license for the applicable application:
     `cscript ospp.vbs /unpkey:<last 5 characters of product key>`
     For example:
-    `cscript ospp.vbs /unpkey:2WC2W`
+    `cscript ospp.vbs /unpkey:2WC00`
     
     You should see the message “Product key uninstall successful” when the license is removed.
     :::image type="content" source="media/reset-office-365-proplus-activation-state/capture3.png" alt-text="Output shows Uninstalling product key for Office 16, and the message Product key uninstall successful":::
 
-1. Repeat the `cscript ospp.vbs /dstatus` and `/unpkey` commands as needed to remove all keys for the applications you need to activate. When you have removed all the necessary product keys, close the Command Prompt window and continue to Step 2, below.
+1. Repeat the `cscript ospp.vbs /dstatus` and `/unpkey` commands as needed to remove all keys for the applications for which you need to remove previous activations. When you have removed all the necessary product keys, close the Command Prompt window and continue to Step 2, below.
 
 </details>
 
@@ -163,7 +163,7 @@ To clear WAM accounts associated with Office on the device for AADJ and HAADJ, d
 > - It is recommended that you run Signoutofwamaccounts.ps1 in addition to the OLicenseCleanup.vbs script mentioned in <a href="#removeexisting"><u>Remove existing Office activations and cached Office account information</u></a>. Signoutofwamaccounts.ps1 can be run separately or in conjunction with OLicenseCleanup.vbs. If you place signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, running OLicenseCleanup.vbs will also execute Signoutofwamaccounts.ps1.
 > - This script is only compatible with Windows 10 version 1803 and later. If the operating system isn't compatible, you'll receive a message saying the tool is not supported on that version of Windows.
 
-<h2 id="clearwpj">Clear credentials from Workplace Join</h2>
+<h2 id="clearwpj">Clear Workplace-Joined accounts</h2>
 
 To clear existing Workplace Joined (WPJ) accounts use the automated WPJCleanUp tool or the manual steps below. Removing WPJ accounts will remove Single Sign-On (SSO) behavior in the current Windows logon session. After this operation, all applications in the current logon session will lose SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time an application tries to sign in, users will be asked to add the account again.
 
@@ -175,7 +175,7 @@ If you can't run the script, manually clear Workplace Joined accounts by going t
 
 After Office successfully authenticates and activates, the **Stay signed in to all your apps** dialog pops up. By default, the **Allow my organization to manage the devices** checkbox is selected. This registers your device in Azure AD while adding your account to Workplace Join.
 
-To prevent your device from being Azure AD registered, clear **Allow my organization to manage my device**, select **No, sign in to this app only**, and then select **OK**.
+If you find there's a need to keep the device from being Azure AD registered, clear **Allow my organization to manage my device**, and then select **No, sign in to this app only**.
 
 :::image type="content" source="media/reset-office-365-proplus-activation-state/prevent-azure-join.png" alt-text="Clear the Allow my organization to manage my device option to prevent Azure AD registration." border="false":::
 
