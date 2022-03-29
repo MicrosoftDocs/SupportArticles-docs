@@ -1,7 +1,7 @@
 ---
 title: Use registry entries to configure standalone WMI providers
 description: Describes how to use registry entries to configure standalone WMI providers and resolve a WMIPrvSE.exe quota overflow error.
-ms.date: 03/28/2022
+ms.date: 03/29/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -41,7 +41,7 @@ To configure standalone providers, you previously had to run the following manua
    > [!NOTE]  
    > In this command, \<*pid of suspect wmiprvse process*> represents the process ID (PID) of the Wmiprvse.exe process that generated the issue.
 
-1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host. (Typically, this is a WMIPrvSE.exe share that's set as `HostingModel='NetworkserviceHost'.) To do this, run the following command:
+1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host. (Typically, this is a WMIPrvSE.exe share that's set as `HostingModel='NetworkserviceHost'`.) To do this, run the following command:
 
    ```powershell
    $prv = gcim -namespace root/standardcimv2 __win32provider -filter "name=<providername>"
@@ -102,4 +102,4 @@ This script checks whether the subkey exists. If the subkey doesn't exist, the s
 
 The following image shows how this listing appears in a list of providers.
 
-  ![Provider listing](media/configure-standalone-wmi-providers/wmi-provider-listing.png)
+![Provider listing](media/configure-standalone-wmi-providers/wmi-provider-listing.png)
