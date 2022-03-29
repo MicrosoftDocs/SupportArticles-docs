@@ -45,7 +45,7 @@ To collect the most recent performance counter data based on the time frame that
 Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated desc
 ```
 
-If some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent, it means that the Linux agents are configured to collect performance counter data and send them to the workspace successfully. In this case, the issue is isolated to these Linux agents, the workspace configuration is set correctly and these Linux agents get correct configuration.
+If some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent, it means that the Linux agents are configured to collect performance counter data and send them to the workspace successfully. In this case, the issue is isolated to these Linux agents, the workspace configuration is set correctly, and these Linux agents get correct configuration.
 
 If the computer with the faulty agent installed is displayed in the query result, the issue is resolved. If not, proceed to the Step 3.
 
@@ -111,7 +111,7 @@ The following output is returned if it works:
 Operation PerformRequiredConfigurationChecks completed successfully. Operation was successful.
 ```
 
-If the result isn't expected, run the following command to stop and start the Linux agent by using a Linux terminal window:
+If the result isn't as expected, run the following command to stop and start the Linux agent by using a Linux terminal window:
 
 ```
 sudo /opt/microsoft/omsagent/bin/service_control stop
