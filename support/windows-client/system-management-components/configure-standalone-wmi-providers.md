@@ -20,7 +20,7 @@ _Applies to:_ &nbsp; Windows 11
 
 ## Symptoms
 
-You experience a quota overflow error in a Windows Management Instrumentation (WMI) shared provider host process (wmiprvse.exe).
+You experience a quota overflow error in a Windows Management Instrumentation (WMI) shared provider host process (WMIPrvSE.exe).
 
 ## Resolution
 
@@ -41,7 +41,7 @@ To configure standalone providers, you previously had to run the following manua
    > [!NOTE]  
    > In this command, \<*pid of suspect wmiprvse process*> represents the process ID (PID) of the Wmiprvse.exe process that generated the issue.
 
-1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host. (This was a WMIPrvSE.exe share that was typically set as `HostingModel='NetworkserviceHost'`). To do this, run the following command:
+1. Use the `OWN` HostingmodelGroup to move the target working provider away from the suspect provider host. (Typically, this is a WMIPrvSE.exe share that's set as `HostingModel='NetworkserviceHost'.) To do this, run the following command:
 
    ```powershell
    $prv = gcim -namespace root/standardcimv2 __win32provider -filter "name=<providername>"
@@ -77,7 +77,7 @@ The registry information uses the following structure:
 
 You can use Registry Editor to manually configure the registry, or you can use a PowerShell script.
 
-The following example script configures the registry information for the **StorageWMI** provider, and assigns the information the index value **50**.
+The following example script configures the registry information for the **StorageWMI** provider. In this example, index value for the provider is **50**.
 
 ```powershell
 $registryPath = "HKLM:\SOFTWARE\Microsoft\Wbem\CIMOM\StandaloneProviders"
@@ -94,7 +94,7 @@ ELSE
 }
 ```
 
-This script checks whether the subkey exists. If the subkey doesn't exist, the script creates it. Then, it creates the subordinate entry for StorageWMI. After it makes this change, the provider runs in the standalone configuration, and the provider's hosting group information includes a string that resembles the following text:
+This script checks whether the subkey exists. If the subkey doesn't exist, the script creates it. Then, it creates the subordinate entry for **StorageWMI**. After the script makes this change, the provider runs in the standalone configuration, and the provider's hosting group information includes a string that resembles the following text:
 
 ```console
 :OWNStorageWMI50
