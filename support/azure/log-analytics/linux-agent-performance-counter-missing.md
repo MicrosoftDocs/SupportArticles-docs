@@ -25,7 +25,7 @@ Here are troubleshooting steps for this issue. If there are multiple faulty Linu
 
 ## Step 1: Check if Linux agent sends heartbeats
 
-Basic heartbeats must work first. If the Linux agent doesn't send any recent heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
+Basic heartbeats must work first. If the Linux agent doesn't send heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
 
 To check if the Linux agent sends heartbeats, go to the workspace in the Azure portal and run the following query:
 
