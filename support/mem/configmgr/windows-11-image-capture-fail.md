@@ -102,7 +102,7 @@ This issue occurs because no drive letter is assigned to the operating system (O
 
 ### Solution: Allow automatic assignment of drive letters
 
-To resolve this issue, restart the computer into Windows 11 original OS and change the partition attributes by running the following commands to assign drive letters:
+To resolve this issue, restart the computer into Windows 11 original OS, and change the partition attributes to assign drive letters by running the following commands:
 
 ```cmd
 diskpart
