@@ -1,31 +1,31 @@
 ---
-title: Linux performance counters missing in Log Analytics workspace
-description: Helps troubleshoot an issue where performance counters are missing in a Linux agent connected workspace.
+title: Linux performance counters missing in the Log Analytics workspace
+description: Helps troubleshoot an issue where performance counters are missing in a Linux agent-connected workspace.
 ms.date: 03/15/2022
 author: genlin
 ms.author: genli
 ms.reviewer: irfanr
 ms.service: log-analytics
 ---
-# Linux performance counters are missing in Log Analytics workspace
+# Linux performance counters are missing in the Log Analytics workspace
 
 This article provides troubleshooting steps for an issue where Linux performance counters and other non-heartbeat data are missing in a Log Analytics workspace.
 
 ## Prerequisites
 
-Ensure that the Linux agent can be supported. For supported operating systems, see [Linux operating systems supported by Log Analytics agents](/azure/azure-monitor/agents/agents-overview#linux).
+Ensure that the Linux agent is supported. For supported operating systems, see [Linux operating systems supported by Log Analytics agents](/azure/azure-monitor/agents/agents-overview#linux).
 
-Determine the Linux distribution by using one of the following methods if you're uncertain:
+If you're uncertain, use one of the following methods to determine the Linux distribution:
 
 - Run the `cat /etc/system-release` command in a Linux terminal window.
 
-- Collect logs for the Linux agent by using [Linux Agent Log Collector](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/tools/LogCollector/OMS_Linux_Agent_Log_Collector.md). Find the Linux distribution from the Linux Log Collector output.
+- Collect logs for the Linux agent with [Linux Agent Log Collector](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/tools/LogCollector/OMS_Linux_Agent_Log_Collector.md). Find the Linux distribution in the Linux Log Collector output.
 
-Here are troubleshooting steps for this issue. If there are multiple faulty Linux agents, apply these steps to one agent first. After the issue is resolved, apply the same steps to others.
+Here are troubleshooting steps for this issue. If there are multiple faulty Linux agents, apply these steps to one agent first. After the issue is resolved, apply the same steps to the others.
 
-## Step 1: Check if Linux agent sends heartbeats
+## Step 1: Check if the Linux agent sends heartbeats
 
-Basic heartbeats must work first. If the Linux agent doesn't send any recent heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
+Basic heartbeats must work first. If the Linux agent hasn't sent any recent heartbeats to the workspace, performance counters or other data won't be sent to the workspace.
 
 To check if the Linux agent sends heartbeats, go to the workspace in the Azure portal and run the following query:
 
@@ -39,23 +39,23 @@ If the query result displays the computer, it means the Linux agent can communic
 
 ## Step 2: Check if other Linux agents send performance counters
 
-To collect most recent performance counter data based on time frame that's set in the Log Search Dialog, run the following query in the workspace:
+To collect the most recent performance counter data based on the time frame that's set in the Log Search Dialog, run the following query in the workspace:
 
 ```powershell
 Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated desc
 ```
 
-If some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent, it means that the Linux agents are configured to collect performance counter data and send them to the workspace successfully. In this case, the issue is isolated to these Linux agents. The workspace configuration is set correctly and these Linux agents get correct configuration.
+Suppose some Linux computers and desired performance counter data are displayed in the query result, and the time stamps are recent. In that case, the Linux agents are configured to collect performance counter data and send it to the workspace successfully. The issue is isolated to these Linux agents, the workspace configuration is set correctly, and these Linux agents get the correct configuration.
 
-If the computer with the faulty agent installed is displayed in the query result, the issue is resolved. If not, proceed to the Step 3.
+The issue is resolved if the computer with the faulty agent installed is displayed in the query result. If not, proceed to the Step 3.
 
-## Step 3: Check if Linux agent receives current configuration from workspace
+## Step 3: Check if the Linux agent receives the current configuration from the workspace
 
-The workspace configuration tells an agent what data to collect and send to the workspace. Check the current configuration of the faulty Linux agent by using the omsagent log. The log can be found in */var/opt/microsoft/omsagent/\<workspaceid>/log/*. You also can get it through the collected logs in Step 1.
+The workspace configuration tells an agent what data to collect and send to the workspace. Use the *omsagent* log to check the current configuration of the faulty Linux agent. The log can be found in */var/opt/microsoft/omsagent/\<workspaceid>/log/*. You can also get it through the collected logs in Step 1.
 
-Open the log file, search the `[info]: using configuration file: <ROOT>` string from the bottom up to get the most recent time when the Linux agent gets configuration data from the workspace.
+Open the log file and search through the `[info]: using configuration file: <ROOT>` string from the bottom up to get the most recent time when the Linux agent received configuration data from the workspace.
 
-If there are some of the sources like the following output in the log file, it means the agent is set to collect some performance counters. Check if the entries match up to what is shown in the **Advanced Settings** > **Data** > **Linux Performance Counters**.
+If there are some sources like the following output in the log file, the agent is set to collect some performance counters. Check if the entries match what is shown in: **Advanced Settings** > **Data** > **Linux Performance Counters**.
 
 ```output
 <source>
@@ -96,7 +96,7 @@ If there are some of the sources like the following output in the log file, it m
 
 If there's no such performance counter entry in the log file, check the time stamp for the `[info]: using configuration file:` entry. If the time stamp predates the time when performance counters are configured to collect, the Linux agent doesn't receive the current configuration from the workspace. To resolve this issue, force the Linux agent to pull the current configuration from the workspace.
 
-### Force Linux agent to pull current configuration from workspace
+### Force the Linux agent to pull the current configuration from the workspace.
 
 To force a Linux agent to pull the current configuration from a workspace, run the following command:
 
@@ -118,9 +118,9 @@ sudo /opt/microsoft/omsagent/bin/service_control stop
 sudo /opt/microsoft/omsagent/bin/service_control start
 ```
 
-After this command runs, the Linux agent will pull new configuration from the workspace. Once the agent starts again, check if a performance counter entry is displayed in the omsagent log.
+After this command runs, the Linux agent will pull new configuration from the workspace. Once the agent starts again, check if a performance counter entry is displayed in the *omsagent* log.
 
-If a performance counter entry is displayed, go to the Azure portal and run the following query to check if the Linux agent sends performance counter data to the workspace. The Linux agent may take a few minutes to appear in the query result.
+If a performance counter entry is displayed, go to the Azure portal and run the following query to check if the Linux agent sends performance counter data to the workspace (the Linux agent may take a few minutes to appear in the query result):
 
 ```powershell
 Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated desc
