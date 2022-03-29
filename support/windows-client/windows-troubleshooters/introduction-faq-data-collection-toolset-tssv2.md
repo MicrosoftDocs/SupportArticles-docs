@@ -15,7 +15,7 @@ ms.technology: windows-client-troubleshooter
 ---
 # Introduction and FAQ about the data collection toolset (TSSv2)
 
-This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions about the toolset.
+This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions.
 
 _Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
@@ -23,18 +23,18 @@ The TroubleShootingScript Version 2 (TSSv2) toolset includes a suite of PowerShe
 
 The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Depending on how the toolset is started, it uses one or more of those scripts and executables to collect the required logs.
 
-You can download the toolset as a zip file (TSSv2.zip) from `https://aka.ms/getTSS`.  
+You can download the toolset as a zip file (*TSSv2.zip*) from `https://aka.ms/getTSS`.  
 
 ## Prerequisites
 
 Here are some prerequisites for the toolset to run properly:
 
-The TSSv2 toolset must be run by accounts with administrator privileges on the local system, and the end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSSv2 toolset won't prompt the EULA again.
+- The TSSv2 toolset must be run by accounts with administrator privileges on the local system, and the end-user license agreement (EULA) must be accepted. Once the EULA is accepted, the TSSv2 toolset won't prompt the EULA again.
 
-The PowerShell script execution policy should be set to `RemoteSigned` for the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
+- The PowerShell script execution policy should be set to `RemoteSigned` for the process level by running the cmdlet `Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned -Force` from an elevated PowerShell command prompt.
 
-> [!NOTE]  
-> The process level changes only affect the current PowerShell session.
+    > [!NOTE]  
+    > The process level changes only affect the current PowerShell session.
 
 ## Logs collection and sharing process
 
@@ -51,12 +51,12 @@ The TSSv2 toolset supports collecting various logs for troubleshooting purposes.
 
 Here are the steps for the logs collection and sharing process:
 
-> [NOTE]
+> [!NOTE]
 > The support representative will provide you with the full steps for the download and the data collection.
 
 1. The support representative identifies the problem and provides a certain TSSv2 cmdlet to collect the proper logs.
-2. Download the TSSv2.zip file and copy the file to the affected systems.
-3. Extract the TSSv2.zip file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
+2. Download the *TSSv2.zip* file and copy the file to the affected systems.
+3. Extract the *TSSv2.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
 4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterwards.
 5. Upload the logs to a Microsoft secure file transfer site, which is provided by the support representative.
 
