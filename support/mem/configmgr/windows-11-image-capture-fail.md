@@ -1,5 +1,5 @@
 ---
-title: Capture media in Configuration Manager fails to capture Windows 11 image
+title: Capture media fails to capture Windows 11 image
 description: Describes some errors that occur when you capture a Windows 11 image by using capture media in Configuration Manager, and provides solutions.
 ms.date: 03/28/2022
 ms.reviewer: sccmcsscontent, alpasc
@@ -96,13 +96,13 @@ When you boot the computer into Windows PE (WinPE) and capture the Windows image
 02-07-2022 09:41:51.246 TSBootShell 1136 (0x470) ConvertBootToLogicalPath failed to convert 'MULTI(0)DISK(0)RDISK(0)PARTITION(3)\_SMSTASKSEQUENCE\WINPE\SOURCES\BOOT.WIM' (0x80070490). Retrying (0)...
 ```
 
-This issue occurs because there's no drive letter for the C drive in WinPE and the **No Default Drive Letter** attribute is set to **Yes**. See the following screenshot for an example:
+This issue occurs because no drive letter is assigned to the operating system (OS) partition that needs to be captured. This is because the **No Default Drive Letter** attribute is set to **Yes** for the Windows 11 C drive. See the following screenshot for an example:
 
 :::image type="content" source="./media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="Screenshot of No Default Drive Letter attribute with Yes value.":::
 
-### Solution: Assign drive letter for C drive
+### Solution: Allow automatic assignment of drive letters
 
-To resolve this issue, restart the computer and then assign the drive letter for the C drive by running the following commands:
+To resolve this issue, restart the computer into Windows 11 original OS and change the partition attributes by running the following commands to assign drive letters:
 
 ```cmd
 diskpart
@@ -112,11 +112,17 @@ GPT attributes=0x0000000000000000
 Exit
 ```
 
-The selected partition should be the partition where the operating system is installed. You can confirm it by using the `list partition` command as follows.
+The `Partition 3` in this command line is just an example. The selected partition should be the partition where the OS is installed. You can confirm it by using the `detail partition` command as follows:
 
-:::image type="content" source="./media/windows-11-image-capture-fail/list-partition-command.png" alt-text="Screenshot of running list partition command.":::
+```cmd
+diskpart
+Select Disk 0
+Select Partition 3
+detail partition
+```
+
+See the following screenshot for the partition attributes:
+
+:::image type="content" source="./media/windows-11-image-capture-fail/detail-partition-command-output.jpg" alt-text="Screenshot of detail partition command output.":::
 
 After the assignment is completed, restart the capture process.
-
-> [!IMPORTANT]
-> Don't restart the computer before the capture.
