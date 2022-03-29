@@ -107,11 +107,11 @@ sudo -u omsagent python /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigur
 The following output is returned if it works:
 
 ```output
-[2020/02/20 02:13:25] [4427] [INFO] [0] [/opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py:0] dsc_host lock file is acquired by : PerformRequiredConfigurationChecks
+[2020/02/20 02:13:25] [4427] [INFO] [0] [/opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py:0] dsc_host lock file is acquired by: PerformRequiredConfigurationChecks
 Operation PerformRequiredConfigurationChecks completed successfully. Operation was successful.
 ```
 
-If the result isn't as expected, run the following command to stop and start the Linux agent by using a Linux terminal window:
+If it doesn't work, run the following command to stop and start the Linux agent by using a Linux terminal window:
 
 ```
 sudo /opt/microsoft/omsagent/bin/service_control stop
