@@ -53,7 +53,6 @@ The following table summarizes the field names that will synchronize and that wi
 |Home 2|Other|
 |Home Fax|Radio|
 |Mobile|Telex|
-|||
 
 ## References
 

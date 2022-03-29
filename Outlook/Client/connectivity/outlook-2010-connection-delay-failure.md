@@ -115,7 +115,6 @@ Although the symptom that is described in the [Symptoms](#symptoms) section is n
         |Identity|User|Access Rights|IsInherited|Deny|
         |---|---|---|---|---|
         |Henry Ross|Contoso\henryr|Full access|False|False|
-        ||||||
 
 4. If the user also requires Send As permissions, run the following command:
 

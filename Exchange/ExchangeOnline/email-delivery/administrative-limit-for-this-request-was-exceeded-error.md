@@ -51,7 +51,6 @@ To resolve this issue, follow these steps:
         |---|
         |`Contoso.com`|
         |`Fabrikam.com`|
-        ||
 
     2. Import the data from the .csv file to a variable that's named domainname:
 

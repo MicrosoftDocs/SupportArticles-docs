@@ -133,4 +133,3 @@ The bitmask certificate problem codes are listed in the following table.
 |FLAG_CERT_DATE_INVALID|0x00000020|
 |FLAG_CERT_WRONG_USAGE|0x00000040|
 |FLAG_SECURITY_CHANNEL_ERROR|0x80000000|
-|||

@@ -65,6 +65,5 @@ Here is a list of some fields and their Hebrew translation:
 |Home|בית|
 |Fax|פקס|
 |Mobile|נייד|
-|||
 
 This article also applies to any right-to-left languages, such as Arabic.

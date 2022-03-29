@@ -74,7 +74,6 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 |Name|CalendarSyncWindowSetting|
 |Type|REG_DWORD|
 |Value|Value = 0 Inactive<br/>Value = 1 Primary Calendar folder<br/>Value = 2 All Calendar folders<br/>Defaults to 0 if not set|
-|||
 
 |Description|Setting to control the number of months in the Calendar Sync window|
 |---|---|
@@ -82,7 +81,6 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 |Name|CalendarSyncWindowSettingMonths|
 |Type|REG_DWORD|
 |Value|Value = Choose decimal value to select how many months in the Calendar sync window such as 1, 3, 6, or 12<br/>Defaults to 6 if not set|
-|||
 
 |Description|Setting to control whether to keep all recurring items instead of filtering them|
 |---|---|
@@ -90,7 +88,6 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 |Name|CalendarSyncWindowAllRecurring|
 |Type|REG_DWORD|
 |Value|0|
-|||
 
 These registry keys update the sync restriction so that the Cached Mode client downloads fewer Calendar items, even for a Calendar that has multiple years of history on the server. These keys don't clean up older Calendar content that was already downloaded. However, this method can be effective if you're willing to *clear offline items* and resync your Calendar (instead of bulk deleting old items). If you already have the Calendar in the profile, you have to clear the Offline Items after you set the registry keys and restart Outlook.
 

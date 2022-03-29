@@ -50,8 +50,7 @@ The following switches are available to control SaRAcmd.exe.
    |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
    |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
    |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook|No|
-   |||
-
+   
    **Note:** To open an elevated Command Prompt window, select **Start**, enter `cmd`, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 2. `-CloseOutlook`
@@ -104,7 +103,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|None|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
   |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|Scan initiated but not completed|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
-  |||
+
 - `OfficeScrubScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
@@ -115,8 +114,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
-  |||
-
+  
 - `TeamsAddinScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
@@ -130,8 +128,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect <> 1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
   |None of the above conditions were detected|Run the re-register dll recovery action, and then exit the scenario.|*24:* The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
   |Failure to complete the scenario (for any reason)|Exit the scenario|*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
-  |||
-
+  
 ## SaRA command-line version history
 
 Throughout the year, a new build of SaRA is available through the download link that is provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
@@ -143,6 +140,5 @@ The following table provides the versions of SaRA that were made available on th
 |Feb 8, 2022|17.00.7971.000|
 |Nov 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
-|||
 
 For more information about the full version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).

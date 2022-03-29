@@ -186,10 +186,7 @@
         "OneDrive/sharing-and-permissions/**/*.md": "sharing-and-permissions",
         "OneDrive/storage/**/*.md": "storage",
         "OneDrive/sync/**/*.md": "synchronization"
-      },      
-      "feedback_product_url": {
-        "OneDrive/**.md": "https://onedrive.uservoice.com/"
-      }
+      }      
     },
     "template": [],
     "dest": "OfficeDocs-Support-SharePoint",
