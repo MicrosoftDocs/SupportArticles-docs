@@ -100,7 +100,7 @@ If there's no such performance counter entry in the log file, check the time sta
 
 To force a Linux agent to pull the current configuration from a workspace, run the following command:
 
-```python
+```bash
 sudo -u omsagent python /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py
 ```
 
@@ -113,7 +113,7 @@ Operation PerformRequiredConfigurationChecks completed successfully. Operation w
 
 If it doesn't work, run the following command to stop and start the Linux agent by using a Linux terminal window:
 
-```
+```bash
 sudo /opt/microsoft/omsagent/bin/service_control stop
 sudo /opt/microsoft/omsagent/bin/service_control start
 ```
