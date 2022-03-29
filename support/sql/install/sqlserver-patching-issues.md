@@ -46,7 +46,7 @@ If there's no matching scenario, look for more pointers in the log files.
 
 ## "Wait on Database Engine recovery handle failed" and "912" and "3417" errors
 
-Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs _912_ (*/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error*) and _3417_ (*/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error*) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts were run.
+Upgrade T-SQL scripts are shipped together with every SQL Server update. They are executed after the SQL Server binaries are upgraded. If these scripts don't run, for some reason, the Setup program reports a *Wait on Database Engine recovery handle failed* error in the error details section. It logs [912](/sql/relational-databases/errors-events/mssqlserver-912-database-engine-error) and [3417](/sql/relational-databases/errors-events/mssqlserver-3417-database-engine-error) errors in the latest SQL Server error log. Errors _912_ and _3417_ are generic errors that are associated with database script upgrade failures. The messages that precede the _912_ errors usually provide information about what exactly failed when these scripts were run.
 
 To troubleshoot and fix these errors, follow these steps:
 
