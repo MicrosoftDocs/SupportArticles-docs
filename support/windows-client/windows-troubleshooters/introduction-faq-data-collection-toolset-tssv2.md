@@ -92,9 +92,10 @@ The support representative will work on the logs for further troubleshooting, an
 
 ## End User License Agreement (EULA)
 
-MICROSOFT SOFTWARE LICENSE TERMS
-
-Microsoft Diagnostic Scripts and Utilities
+Select below to view MICROSOFT SOFTWARE LICENSE TERMS.
+<br>
+<details>
+<summary><b>Microsoft Diagnostic Scripts and Utilities</b></summary>
 
 These license terms are an agreement between you and Microsoft Corporation (or one of its affiliates). IF YOU COMPLY WITH THESE LICENSE TERMS, YOU HAVE THE RIGHTS BELOW. BY USING THE SOFTWARE, YOU ACCEPT THESE TERMS.
 
@@ -110,3 +111,5 @@ These license terms are an agreement between you and Microsoft Corporation (or o
 8. BINDING ARBITRATION AND CLASS ACTION WAIVER. This section applies if you live in (or, if a business, your principal place of business is in) the United States.  If you and Microsoft have a dispute, you and Microsoft agree to try for 60 days to resolve it informally. If you and Microsoft can't, you and Microsoft agree to binding individual arbitration before the American Arbitration Association under the Federal Arbitration Act ("FAA"), and not to sue in court in front of a judge or jury. Instead, a neutral arbitrator will decide. Class action lawsuits, class-wide arbitrations, private attorney-general actions, and any other proceeding where someone acts in a representative capacity are not allowed; nor is combining individual proceedings without the consent of all parties. The complete Arbitration Agreement contains more terms and is at `https://aka.ms/arb-agreement-4`. You and Microsoft agree to these terms.  
 9. LAW AND VENUE. If U.S. federal jurisdiction exists, you and Microsoft consent to exclusive jurisdiction and venue in the federal court in King County, Washington for all disputes heard in court (excluding arbitration). If not, you and Microsoft consent to exclusive jurisdiction and venue in the Superior Court of King County, Washington for all disputes heard in court (excluding arbitration).
 10. ENTIRE AGREEMENT. This agreement, and any other terms Microsoft may provide for supplements, updates, or third-party applications, is the entire agreement for the software.
+    
+</details>
