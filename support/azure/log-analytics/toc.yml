@@ -8,6 +8,8 @@
     href: windows-could-not-start-mma.md
   - name: Missing heartbeats in the Linux agent
     href: linux-agent-missing-heartbeats.md
+  - name: Missing Linux performance counters
+    href: linux-agent-performance-counter-missing.md
   - name: Resolve Windows Agent installation issues
     href: resolve-windows-agent-installation-issues.md
   - name: Troubleshoot erased proxy settings
