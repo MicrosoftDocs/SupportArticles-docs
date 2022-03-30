@@ -12,6 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
+  - CI 162281
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
@@ -33,7 +34,7 @@ In this scenario, the transfer calls fail, and Outlook generates an **ErrorItemN
 
 ## Cause
 
-When Outlook is in Cached Exchange Mode, the item ID that's provided through the Office JavaScript API ([Office.context.mailbox.item.itemId](/office/dev/add-ins/reference/objectmodel/requirement-set-1.5/office.context.mailbox.item) is either outdated or not yet updated on the server.
+When Outlook is in Cached Exchange Mode, the item ID that's provided through the Office JavaScript API [Office.context.mailbox.item.itemId](/javascript/api/requirement-sets/outlook/requirement-set-1.6/office.context.mailbox.item) is either outdated or not yet updated on the server.
 
 ## More information
 
