@@ -84,7 +84,7 @@ The support representative will work on the logs for further troubleshooting, an
 
     A5: All TSSv2 tracing is configured to run with ring-buffers, so you can run the toolset for a long time if needed. The TSSv2 toolset also calculates the disk space at the beginning of the data collection, and may exit if there isn't sufficient disk space. If you see high disk usage after starting the TSSv2 toolset or have any other concerns on the disk usage of the toolset, contact your support representative.
 
-- Q6: What should I do if I receive the following security warning when running the .\TSSv2.ps1 script?
+- Q6: What should I do if I receive the following security warning when running the *.\\TSSv2.ps1* script?
 
     `Security Warning: Run only scripts that you trust. While scripts from the Internet can be useful, this script can potentially harm your computer. Do you want to run .\TSSv2.ps1? [D] Do not run [R] Run once [S] Suspend [?] Help (default is "D")`
 
