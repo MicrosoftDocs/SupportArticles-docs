@@ -3,7 +3,7 @@ title: Information about the Calendar Checking Tool for Outlook (CalCheck)
 description: Describes the Calendar Checking Tool for Outlook (CalCheck), including individual checks, command switches, and additional checked items.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
@@ -21,7 +21,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, randyto
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 
@@ -92,7 +91,7 @@ The following item-level checks are run and then logged in the report.
 |0008|The Items Recurrence End Date or Time is past the upper limit.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
 |0009|The Items Recurrence properties are not created correctly.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
 |0010|Appointments Recurrence data is empty.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
-|0011|The `dispidRecurring` property is set to *False*  or does not exist, but the `dispidRecurType` property is not set to None. This indicates that the appointment is recurring. Therefore, the two properties are conflicting.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `c alcheck  -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
+|0011|The `dispidRecurring` property is set to _False_  or does not exist, but the `dispidRecurType` property is not set to None. This indicates that the appointment is recurring. Therefore, the two properties are conflicting.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `c alcheck  -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
 |0012|There is no Appointment Recurrence but `dispidRecurring` is set to True|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
 |0013|The Recurrence Exception data mismatch.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
 |0014|The Recurrence Original Start Date or Time is set before the start of the series.|If you are the organizer, you should change the Calendar folder view to a table view, find the appointment or meeting, and then cancel and re-create it. If you don't see it in the list, run `calcheck -f`. If you are the attendee, you should contact the organizer and ask her or him to cancel and then re-create the meeting.|
@@ -146,7 +145,7 @@ The following item-level checks are run and then logged in the report.
 |0062|Conflicting items in the Calendar.|If you run `calCheck -f` , these conflicting items are moved.|
 
 > [!NOTE]
-> If you prefer not to have holiday items flagged, change the *CalCheck.cfg* file. CalCheck identifies an all-day event as a holiday if the **Keywords** named property includes the "holiday" string.
+> If you prefer not to have holiday items flagged, change the _CalCheck.cfg_ file. CalCheck identifies an all-day event as a holiday if the **Keywords** named property includes the "holiday" string.
 
 ### Current help and command-line switches
 
@@ -154,11 +153,11 @@ This section describes the command-line switches that are available to customize
 
 #### Usages
 
-You can edit the *CalCheck.cfg* file to turn specific tests on or off.
+You can edit the _CalCheck.cfg_ file to turn specific tests on or off.
 
 *CalCheck [-P \<profilename>] [-O \<path>] [-C \<Version>] [-A] [-F] [-R] [-V]*
 
-*CalCheck -?*
+_CalCheck -?_
   
 - **P** \<Profile name> (if absent, prompts for profile)
 - **O** \<Output Path> (path to put output files; the default path is the current directory)
@@ -174,20 +173,20 @@ Running the command creates CalCheck.log and CalCheckErr.csv files that show pot
 #### Examples
 
 - Default - Prompt for a profile, and process the mailbox in that profile:  
-    *CalCheck*
+    _CalCheck_
 
 - Process just the mailbox in "MyProfile":  
-    *CalCheck -P MyProfile*
+    _CalCheck -P MyProfile_
 - Process a mailbox and move error items to the **CalCheck** folder in the mailbox, and place a report message in the **Inbox**:  
-    *CalCheck -F -R*
+    _CalCheck -F -R_
 - Process a mailbox based on a specific profile and version of MAPI for Click-to-Run versions of Office:  
     *CalCheck -C \<Outlook version - like 2010, 2013, etc.> -P MyProfile*
 - Print this message:  
-    *CalCheck -?*
+    _CalCheck -?_
 
 #### Configuration file in CalCheck version 2
 
-CalCheck version 2 (v2) now includes a *CalCheck.cfg* file. This file is located in the same folder in which CalCheck.exe is located. If the `.cfg` file is missing, CalCheck v2 displays an error message and does not run. The `.cfg` file is in plain text format. You can manually edit the file to enable or disable individual tests. By default, all tests are set to **true**. By default, all tests are run.
+CalCheck version 2 (v2) now includes a _CalCheck.cfg_ file. This file is located in the same folder in which CalCheck.exe is located. If the `.cfg` file is missing, CalCheck v2 displays an error message and does not run. The `.cfg` file is in plain text format. You can manually edit the file to enable or disable individual tests. By default, all tests are set to **true**. By default, all tests are run.
 
 ## More information
 

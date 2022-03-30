@@ -3,7 +3,7 @@ title: Access is denied error when accessing a public folder
 description: Describes a by design behavior that you receive an Access is denied or  Cannot display the selected folder or item error when clicking an outlook:// link that references an Exchange public folder.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, sercast
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # "Access is denied" error when you click an "outlook:\\\\" link to a public folder in Outlook 2010 or Outlook 2013
 

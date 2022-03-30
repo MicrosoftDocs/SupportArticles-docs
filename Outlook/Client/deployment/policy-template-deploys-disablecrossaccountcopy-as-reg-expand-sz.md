@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: lahren, aruiz, jeffconn
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ instead of REG_MULTI_SZ
 

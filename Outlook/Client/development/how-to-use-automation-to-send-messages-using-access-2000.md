@@ -11,7 +11,6 @@ search.appverid: MET150
 ms.reviewer: meshel, benjak, aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # How to use Automation to send a Microsoft Outlook message using Access 2000
 

@@ -3,7 +3,7 @@ title: Outlook application event log entries for add-in load time
 description: Introduces the Outlook application event log entries for add-in load time.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: gregmans
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook application event log entries for add-in load time
 
@@ -104,6 +103,6 @@ DWORD: **DisableAddinLogging**
 Values: 0 (or missing DWORD) = Logging is enabled. 1 = Logging is disabled.
 
 > [!NOTE]
-> *x.0* in the above path represents the version of Outlook (16.0 = Outlook 2016, 15.0 = Outlook 2013, 14.0 = Outlook 2010).
+> _x.0_ in the above path represents the version of Outlook (16.0 = Outlook 2016, 15.0 = Outlook 2013, 14.0 = Outlook 2010).
 >
 > The **DisableAddinLogging** registry value only functions under the above path (\policies). If you push out this setting (for example, using a logon script) and the **DisableAddinLogging** value is not under the \Policies hive, Outlook will continue to log add-in loading information in the application event log.

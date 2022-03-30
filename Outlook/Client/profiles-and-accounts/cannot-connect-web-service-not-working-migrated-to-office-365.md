@@ -15,7 +15,6 @@ search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook doesn't connect or web services don't work after migration to Office 365
 
@@ -54,7 +53,7 @@ Value: 1
 > [!NOTE]
 > The <x.0> place holder represents your version of Office (**16.0** = Office 2016, Office 365 and Office 2019, **15.0** = Office 2013).
 >
-> When the **ExcludeLastKnownGoodUrl** value is set to **1**, Outlook does *not* use the last known working AutoDiscover URL.
+> When the **ExcludeLastKnownGoodUrl** value is set to **1**, Outlook does _not_ use the last known working AutoDiscover URL.
 
 Method 2: Create a new Outlook profile
 
@@ -62,7 +61,7 @@ Method 2: Create a new Outlook profile
 2. In Control Panel, select or double-click **Mail**.
 
     > [!NOTE]
-    > To locate the **Mail** item, open Control Panel, and then in the **Search** box at the top of window, type *Mail*. In Control Panel in Windows XP, type *Mail* in the **Address** box.
+    > To locate the *_Mail_* item, open Control Panel, and then in the **Search** box at the top of window, type *Mail*. In Control Panel in Windows XP, type *Mail* in the **Address** box.
 
 3. Select **Show Profiles**.
 4. Select **Add**.

@@ -3,7 +3,7 @@ title: How to use the Microsoft Outlook Object Library to retrieve an appointmen
 description: Describes how to retrieve an appointment in a Visual C# project by using the Outlook 2002 Object Library or the Outlook 2003 Object Library. This article also provides a code sample to show how to perform this task.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: Outlook Development
@@ -11,8 +11,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
-
 ---
 # How to use the Microsoft Outlook Object Library to retrieve an appointment by using Visual C\#
 

@@ -11,7 +11,6 @@ search.appverid: MET150
 ms.reviewer: kellybos
 author: simonxjx
 ms.author: v-six
-ms.prod:
 ---
 # Public folder permissions for Exchange Server
 

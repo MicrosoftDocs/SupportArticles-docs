@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: gregmans, aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # "\<resource mailbox> declined your meeting because it is recurring" Outlook error when direct booking a resource
 

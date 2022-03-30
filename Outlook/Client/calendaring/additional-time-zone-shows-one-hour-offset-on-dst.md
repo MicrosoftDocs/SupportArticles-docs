@@ -16,7 +16,6 @@ search.appverid: MET150
 ms.reviewer: randyto
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Additional time zone shows a one-hour offset on DST start day in Outlook
 

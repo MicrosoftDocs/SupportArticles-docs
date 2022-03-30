@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, gregmans
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Using Process Explorer to list dlls running under the Outlook.exe process
 

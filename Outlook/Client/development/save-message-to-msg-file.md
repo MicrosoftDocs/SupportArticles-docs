@@ -3,7 +3,7 @@ title: INFO: Save message to MSG compound file
 description: Describes how to save a message to a compound document, specifically an .msg file.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
@@ -11,7 +11,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # INFO: Save message to MSG compound file
 

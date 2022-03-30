@@ -14,7 +14,6 @@ search.appverid: MET150
 ms.reviewer: aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Attachment issues in Outlook 2010, Outlook 2007, or Outlook 2003
 
@@ -24,7 +23,7 @@ _Original KB number:_ &nbsp; 817878
 
 One of the following issues occurs in Outlook 2010, Outlook 2007, or Outlook 2003:
 
-- When exiting (or when Outlook closes unexpectedly) while email attachments are open, the attachments remain in the *Outlook Secure Temporary File folder*. (Even if the attachments are closed.)
+- When exiting (or when Outlook closes unexpectedly) while email attachments are open, the attachments remain in the _Outlook Secure Temporary File folder_. (Even if the attachments are closed.)
 - When you open the attachment from the **Reading** pane, you do not receive a prompt to save changes when you exit Outlook.
 - When you try to open or save an email attachment, you receive the following error message:
 
@@ -86,14 +85,14 @@ If the registry value does not exist, or if the value points to an invalid locat
         C:\Documents and Settings\ username \Local Settings\Temporary Internet Files\Content.Outlook
         ```
 
-    2. Open the subfolder under the *Content.Outlook* folder whose folder name is a randomly generated sequence of letters and numbers. For example, FW0B6RID.
+    2. Open the subfolder under the _Content.Outlook_ folder whose folder name is a randomly generated sequence of letters and numbers. For example, FW0B6RID.
 
         > [!NOTE]
         > There may be more than one subfolder with a randomly generated name under the Content.Outlook folder .
 
     For Outlook 2003:
 
-    1. Select **Start**, select **Run**, type *Regedit*, and then select **OK**.
+    1. Select **Start**, select **Run**, type _Regedit_, and then select **OK**.
     2. Locate and then select the following registry subkey:  
 
        `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Security`
@@ -129,7 +128,7 @@ If the registry value does not exist, or if the value points to an invalid locat
         C:\Users\ username \AppData\Local\Microsoft\Windows\Temporary Internet Files\Content.Outlook
         ```
 
-    3. Open the subfolder under the *Content.Outlook* folder whose folder name is a randomly generated sequence of letters and numbers. For example, FW0B6RID.
+    3. Open the subfolder under the _Content.Outlook_ folder whose folder name is a randomly generated sequence of letters and numbers. For example, FW0B6RID.
 
         > [!NOTE]
         > There may be more than one subfolder with a randomly generated name under the Content.Outlook folder.
@@ -137,7 +136,7 @@ If the registry value does not exist, or if the value points to an invalid locat
     For Outlook 2003:
 
     1. Select **Start**, select **All Programs**, select **Accessories**, and then select **Run**.
-    2. In the **Run** dialog box, type *Regedit*, and then select **OK**.
+    2. In the **Run** dialog box, type _Regedit_, and then select **OK**.
     3. Locate and then select the following registry subkey:
 
        `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Security`

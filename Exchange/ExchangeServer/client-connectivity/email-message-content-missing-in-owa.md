@@ -12,8 +12,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-six; mataylor; wduff
-ms.prod:  
+ms.author: v-six; mataylor; wduff 
 ---
 
 # Email message content is missing in OWA

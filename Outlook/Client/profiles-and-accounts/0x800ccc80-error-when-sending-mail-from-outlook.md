@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, doakm
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Sending mail from Outlook results in error 0x800ccc80
 

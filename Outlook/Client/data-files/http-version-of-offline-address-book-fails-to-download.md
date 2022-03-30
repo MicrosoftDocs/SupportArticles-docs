@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # HTTP version of the Outlook Offline Address Book (OAB) does not download
 
@@ -74,7 +73,7 @@ To resolve this issue, use one or more of the following solutions.
 
   If you are using a HTTP(s) location from which to download the OAB, the OAB download process is handled by BITS. In this configuration, you will want to ensure the status of the **Background Intelligent Transfer Service** service is started.
 
-  1. On the **Start** menu, enter *Services.msc* in the **Search programs and files** box, and then select **Services.msc** in the results pane.
+  1. On the **Start** menu, enter _Services.msc_ in the **Search programs and files** box, and then select **Services.msc** in the results pane.
 
   2. In the **Services** dialog box, locate the service called **Background Intelligent Transfer Service**.
 

@@ -3,7 +3,7 @@ title: How to force Outlook to resolve proxy addresses and custom properties in 
 description: Explains how to force Outlook to use the online Global Address List to resolve email alias or names in Cached Exchange Mode. This requires you add a registry key named ANR Include Online GAL.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -14,7 +14,6 @@ search.appverid: MET150
 ms.reviewer: bwilson
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # How to force Outlook 2010, 2007 or 2003 to resolve proxy addresses and custom properties in Cached Mode
 
@@ -106,12 +105,12 @@ You can manually add the `ANR Include Online GAL` registry subkey to the registr
 
 Follow these steps, and then exit Registry Editor:
 
-1. Select **Start**, select **Run**, type *regedit*, and then select **OK**.
+1. Select **Start**, select **Run**, type _regedit_, and then select **OK**.
 2. Locate and then select the following subkey in the registry `HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Outlook\Cached Mode`.
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-4. Type *ANR Include Online GAL*, and then press ENTER.
+4. Type _ANR Include Online GAL_, and then press ENTER.
 5. On the **Edit** menu, select **Modify**.
-6. Type *0* or *1*, and then select **OK**.
+6. Type _0_ or _1_, and then select **OK**.
 
 ### In Outlook 2007
 
@@ -138,16 +137,16 @@ You can manually add the `ANR Include Online GAL` registry key to the registry.
 
 Follow these steps, and then quit Registry Editor:
 
-1. Select **Start**, select **Run**, type *regedit*, and then select **OK**.
+1. Select **Start**, select **Run**, type _regedit_, and then select **OK**.
 
 2. Locate and then select the following key in the registry:
 
    `HKEY_CURRENT_USER\Software\Microsoft\Office\12.0\Outlook\Cached Mode`
 
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-4. Type *ANR Include Online GAL*, and then press ENTER.
+4. Type _ANR Include Online GAL_, and then press ENTER.
 5. On the **Edit** menu, select **Modify**.
-6. Type *0* or *1*, and then select **OK**.
+6. Type _0_ or _1_, and then select **OK**.
 
 ### In Outlook 2003
 
@@ -174,12 +173,12 @@ You can manually add the `ANR Include Online GAL` registry key to the registry.
 
 Follow these steps, and then quit Registry Editor:
 
-1. Select **Start**, select **Run**, type *regedit*, and then select **OK**.
+1. Select **Start**, select **Run**, type _regedit_, and then select **OK**.
 2. Locate and then select the following key in the registry:
 
    `HKEY_CURRENT_USER\Software\Microsoft\Office\11.0\Outlook\Cached Mode`
 
 3. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
-4. Type *ANR Include Online GAL*, and then press ENTER.
+4. Type _ANR Include Online GAL_, and then press ENTER.
 5. On the **Edit** menu, select **Modify**.
-6. Type *0* or *1*, and then select **OK**.
+6. Type _0_ or _1_, and then select **OK**.

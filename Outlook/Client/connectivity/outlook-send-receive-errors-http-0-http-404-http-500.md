@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: rakeshs, aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod:
 ---
 # Outlook send/receive errors HTTP 0, HTTP 404, HTTP 500
 
@@ -26,11 +25,11 @@ When you are using Microsoft Outlook 2010 or Microsoft Outlook 2013, you receive
 
 When you select the error, the Outlook Send/Receive Progress dialog opens and displays one or more of the following errors:
 
-> Task 'SharePoint' reported error (0x80040102) : 'Outlook cannot connect to the SharePoint List (*site name - list name*). The server may not be reachable from your location. Contact the SharePoint site administrator for more information. HTTP 0.'
+> Task 'SharePoint' reported error (0x80040102) : 'Outlook cannot connect to the SharePoint List (_site name - list name_). The server may not be reachable from your location. Contact the SharePoint site administrator for more information. HTTP 0.'
 
-> Task 'SharePoint' reported error (0x8004010F) : 'The SharePoint List (*site name - list name*) cannot be found. If the problem continues, contact the SharePoint site administrator. HTTP 404.'
+> Task 'SharePoint' reported error (0x8004010F) : 'The SharePoint List (_site name - list name_) cannot be found. If the problem continues, contact the SharePoint site administrator. HTTP 404.'
 
-> Task 'SharePoint' reported error (0x80004005) : 'An error occurred in this SharePoint List (*site name - list name*). Try updating the folder again. If the problem continues, contact the SharePoint site administrator. HTTP 500.  
+> Task 'SharePoint' reported error (0x80004005) : 'An error occurred in this SharePoint List (_site name - list name_). Try updating the folder again. If the problem continues, contact the SharePoint site administrator. HTTP 500.  
 > The server returned the following error message: Exception of type  
 > 'Microsoft.SharePoint.SoapServer.SoapServerException' was thrown.'
 

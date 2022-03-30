@@ -15,7 +15,6 @@ search.appverid: MET150
 ms.reviewer: danabeck, v-six
 author: simonxjx
 ms.author: v-six
-ms.prod:
 ---
 # A user cannot create new rules in Outlook or Outlook on the web
 

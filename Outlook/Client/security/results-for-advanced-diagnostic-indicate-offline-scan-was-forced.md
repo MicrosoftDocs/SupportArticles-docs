@@ -15,7 +15,6 @@ search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook Advanced Diagnostic scenario in SaRA results indicate an offline scan was forced by group policy for Outlook object model access
 

@@ -18,7 +18,6 @@ search.appverid: MET150
 ms.reviewer: abdallaa, excontent, ninob, kellybos, jmartin
 author: simonxjx
 ms.author: v-six
-ms.prod:  
 ---
 # Can't open a shared folder in Outlook on the web in Exchange Server
 
@@ -60,4 +59,4 @@ The AddSharedFolder  request is successful and adds the shared mailbox to the fo
 ## Workaround
 
 To work around this issue, use the **Open another mailbox** option in Outlook on the web to open a shared mailbox where you have **Full Access**  permission.
- **Note:**  This will generate a redirection link and credentials prompt before you can access the mailbox. For more information, read Mailbox permissions supported in hybrid environments section in [this article](https://docs.microsoft.com/Exchange/permissions#delegate-mailbox-permissions).
+ **Note:**  This will generate a redirection link and credentials prompt before you can access the mailbox. For more information, read Mailbox permissions supported in hybrid environments section in [this article](/Exchange/permissions#delegate-mailbox-permissions).

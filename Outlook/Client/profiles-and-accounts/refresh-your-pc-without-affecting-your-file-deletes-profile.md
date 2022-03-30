@@ -16,7 +16,6 @@ search.appverid: MET150
 ms.reviewer: aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # The "Refresh Your PC without affecting your file" option deletes your Outlook profile in Windows 8
 

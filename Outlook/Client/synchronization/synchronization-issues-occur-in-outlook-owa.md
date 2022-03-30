@@ -17,7 +17,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, rakeshs
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Synchronization problems occur in Outlook and in Outlook Web App
 

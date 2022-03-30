@@ -3,7 +3,7 @@ title: How to use Outlook Object Library to get message from Inbox
 description: Explains how to retrieve a message from the Inbox in a Visual C# project by using the Outlook 2002 Object Library or the Outlook 2003 Object Library. This article also provides a code sample to illustrate how to perform this task.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # How to use the Microsoft Outlook Object Library to retrieve a message by using Visual C# from the Inbox
 
@@ -34,7 +33,7 @@ To use the Outlook 2002 Object Library or the Outlook 2003 Object Library to ret
       > [!NOTE]
       > In Visual Studio 2005, select **Visual C#**.
    3. Under **Templates**, select **Console Application**.
-   4. Select **OK**. By default, a file that is named *Class1.cs* is created.
+   4. Select **OK**. By default, a file that is named _Class1.cs_ is created.
 
       > [!NOTE]
       > In Visual Studio 2005, Program.cs is created by default.

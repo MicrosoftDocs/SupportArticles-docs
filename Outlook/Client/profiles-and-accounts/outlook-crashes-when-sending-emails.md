@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: gregmans, dthayer
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook crashes when trying to send emails because of a nonexistent delivery location setting in your profile
 

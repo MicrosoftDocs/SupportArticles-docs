@@ -3,7 +3,7 @@ title: How to list messages in the inbox with MAPI
 description: Describes how to use MAPI to list the messages contained within the Inbox.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: Microsoft Office Outlook 2007
@@ -11,8 +11,6 @@ search.appverid: MET150
 ms.reviewer: SGRIFFIN
 author: simonxjx
 ms.author: v-six
-ms.prod: 
-
 ---
 # How to list messages in the inbox with MAPI
 

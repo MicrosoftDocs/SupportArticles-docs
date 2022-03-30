@@ -11,7 +11,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod:
 ---
 # Could not load file or assembly error occurs when browsing the Exchange EWS or Autodiscover sites
 
@@ -58,20 +57,20 @@ It could not load the assembly `Microsoft.Exchange.Diagnostics` due to incorrect
 
 - If the problem is occurring with `https://servername/autodiscover/autodiscover.xml`:
 
-  Take a backup of web.config in *C:\Program Files\Microsoft\Exchange Server\ClientAccess\Autodiscover*.
+  Take a backup of web.config in _C:\Program Files\Microsoft\Exchange Server\ClientAccess\Autodiscover_.
 
-  - Open web.config from *C:\Program Files\Microsoft\Exchange Server\ClientAccess\Autodiscover* in notepad.
-  - Replace all *file:///%ExchangeInstallDir%* with *file:///C:\Program Files\Microsoft\Exchange Server\\* where Cis the drive where Exchange is installed.
+  - Open web.config from _C:\Program Files\Microsoft\Exchange Server\ClientAccess\Autodiscover_ in notepad.
+  - Replace all _file:///%ExchangeInstallDir%_ with *file:///C:\Program Files\Microsoft\Exchange Server\\* where Cis the drive where Exchange is installed.
   - Save the file.
   - Open an Administrator command prompt and run `IISreset /noforce`.
   - Test browsing `https://servername/autodiscover/autodiscover.xml`.
 
 - If the problem is occurring with `https://servername/ews/exchange.asmx`:
 
-  Take a backup of web.config in *C:\Program Files\Microsoft\Exchange Server\ClientAccess\exchweb\ews*.
+  Take a backup of web.config in _C:\Program Files\Microsoft\Exchange Server\ClientAccess\exchweb\ews_.
 
-  - Open web.config from *C:\Program Files\Microsoft\Exchange Server\ClientAccess\exchweb\ews* in notepad.
-  - Replace all *file:///%ExchangeInstallDir%* with *file:///C:\Program Files\Microsoft\Exchange Server\\* where Cis the drive where Exchange is installed.
+  - Open web.config from _C:\Program Files\Microsoft\Exchange Server\ClientAccess\exchweb\ews_ in notepad.
+  - Replace all _file:///%ExchangeInstallDir%_ with *file:///C:\Program Files\Microsoft\Exchange Server\\* where Cis the drive where Exchange is installed.
   - Save the file.
   - Open an Administrator command prompt and run `IISreset /noforce`.
   - Test browsing `https://servername/ews/exchange.asmx`.

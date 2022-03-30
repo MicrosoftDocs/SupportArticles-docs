@@ -3,7 +3,7 @@ title: CDO 1.2.1 is not supported with Outlook 2010 and later versions
 description: Collaboration Data Objects (CDO) 1.2.1 is not supported with Outlook 2010 and later versions.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: article
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Collaboration Data Objects (CDO) 1.2.1 is not supported with Outlook 2010 and later versions
 

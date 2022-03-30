@@ -15,7 +15,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, robevans 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 
 # Outlook crashes when you open a meeting that contains Lync meeting details
@@ -71,6 +70,6 @@ To review the Application log, follow these steps:
 2. Double-click **Event Viewer**.
 3. In the navigation pane on the left side, select **Application** under **Windows Logs**.
 4. In the **Actions** pane on the right side, select **Filter Current Log**.
-5. In the **Filter Current Log** dialog box, type *1000* in the **Includes/Excludes Event IDs** field, as shown in the following screen shot, and then select **OK**.
+5. In the **Filter Current Log** dialog box, type _1000_ in the **Includes/Excludes Event IDs** field, as shown in the following screen shot, and then select **OK**.
 
     :::image type="content" source="media/outlook-crashes-when-open-meeting-contains-lync-meeting-details/event-ids-field.png" alt-text="Screenshot of the Filter Current Log dialog box, type 1000 in the Includes/Excludes Event IDs field.":::

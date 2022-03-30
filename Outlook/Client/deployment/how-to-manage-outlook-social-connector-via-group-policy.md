@@ -3,7 +3,7 @@ title: How to manage Outlook Social Connector by using Group Policy
 description: This article introduces how to manage the Outlook Social Connector by using Group Policy.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: gregmans
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # How to manage the Outlook Social Connector by using Group Policy
 

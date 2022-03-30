@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # VBA macro that uses data from a Word document and an Excel workbook to send messages from Outlook
 
@@ -29,8 +28,8 @@ This article describes a Visual Basic for Applications macro that uses data from
 
 The following example assumes that there are two defined names in the worksheet:
 
-- The first defined name, *subjectcell*, refers to a cell that contains the message subject line (for example, "This is a test message.").
-- The second defined name, *tolist*, refers to the first cell in the horizontal list that contains a list of recipients (for example, "John Doe", "Jane Doe", and so forth).
+- The first defined name, _subjectcell_, refers to a cell that contains the message subject line (for example, "This is a test message.").
+- The second defined name, _tolist_, refers to the first cell in the horizontal list that contains a list of recipients (for example, "John Doe", "Jane Doe", and so forth).
 
 You must also have a Microsoft Word document. The text of this document is used by the macro as the message body of your mail message.
 

@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # OneNote buttons may be missing in Outlook
 
@@ -35,11 +34,11 @@ To install the Outlook integration. follow these steps.
 
 For Windows XP or Windows Server 2003
 
-1. Select **Start**, select **Run**, type *control appwiz.cpl* in the **Open** box, and then select ENTER.
+1. Select **Start**, select **Run**, type _control appwiz.cpl_ in the **Open** box, and then select ENTER.
 
 For Windows Vista or Windows 7
 
-1. Select **Start**, type *programs and features* in the **Search** box, and then press ENTER.
+1. Select **Start**, type _programs and features_ in the **Search** box, and then press ENTER.
 2. Right-click on the version of Office or OneNote that is installed, and then select **Change**.
 3. Select **Add or Remove Features**, and then select **Continue**.
 4. Expand **Microsoft OneNote**.

@@ -3,7 +3,7 @@ title: New PST is created by default when adding new POP3 account
 description: Explains the new Outlook 2010 feature where you add a new POP3 account, and this creates a new Outlook Data File (.pst). Also explains how you can change this folder to use an existing folder for new email messages.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: aruiz, gregmans, tsimon, laurentc, amkanade, Najmal, doakm, randyto, gbratton, bobcool
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # A new Outlook Data File (.pst) is created by default in Outlook 2010 when you add a new POP3 account
 
