@@ -9,8 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 
-- 'Associated content asset: 4555325'
+  - 'Associated content asset: 4555325'
 ms.reviewer: subansal, mhaque
 appliesto: 
   - Exchange Online

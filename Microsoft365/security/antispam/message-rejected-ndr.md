@@ -9,8 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 
-- 'Associated content asset: 4555314'
+  - 'Associated content asset: 4555314'
 ms.reviewer: rymcgrat, romccart
 appliesto: 
   - Exchange Online Protection

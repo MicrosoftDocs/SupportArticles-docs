@@ -9,8 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 
-- 'Associated content asset: 4555332'
+  - 'Associated content asset: 4555332'
 ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
