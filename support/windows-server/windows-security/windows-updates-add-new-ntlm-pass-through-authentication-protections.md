@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 _Original KB number:_ &nbsp; 5010576
 
-After installing the January 11, 2022 Windows updates or later Windows updates containing protections for [CVE-2022-21857](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-21857), domain controllers (DCs) will enforce new security checks for NTLM pass-through authentication requests sent by a trusting domain over a domain or forest trust, or sent by a read-only domain controller (RODC) over a secure channel trust. The new security checks require that the domain or client being authenticated is appropriate for the trust being used. Specifically, security checks appropriate for the trust type being used will reject NTLM pass-through authentication request if the following requirements aren't satisfied:
+After you install the January 11, 2022 Windows updates or later Windows updates containing protections for [CVE-2022-21857](https://msrc.microsoft.com/update-guide/en-US/vulnerability/CVE-2022-21857), domain controllers (DCs) will enforce new security checks for NTLM pass-through authentication requests sent by a trusting domain over a domain or forest trust, or sent by a read-only domain controller (RODC) over a secure channel trust. The new security checks require that the domain or client being authenticated be appropriate for the trust being used. Specifically, security checks appropriate for the trust type being used will reject NTLM pass-through authentication request if the following requirements aren't satisfied:
 
 - The requests over a domain trust must use the same domain name as the trusting domain.
 - The requests over a forest trust must use a domain name that is a member of the trusting forest, and doesn't have a name collision from other forests.
@@ -30,8 +30,8 @@ To support the domain and forest trust validations, the Primary Domain Controlle
 As new trust scanning behaviors are added by the updates, anything that blocks LDAP activity traffic, authentication and authorization from a trusted forest's PDC to the trusting forest will cause a problem:
 
 - If firewalls are used, TCP and UDP ports 389 need to be allowed between the trusted PDC and trusting domain DCs, as well as the communication to operate the trust (name resolution, RPC for NTLM and port 88 for Kerberos).  
-- The PDC of the trusted forest also needs the **Access this computer from the network** user right to authenticate to the trusting domain DCs.  By default, "authenticated users" have this user right and this includes the trusted domain PDC.  
-- The PDC in the trusted domain must have sufficient read permissions on the trusting forest partitions container in the configuration NC and the children objects. By default, "authenticated users" have the access, which applies to the calling trusted domain PDC.
+- The PDC of the trusted forest also needs the **Access this computer from the network** user right to authenticate to the trusting domain DCs.  By default, "authenticated users" have the user right that includes the trusted domain PDC.  
+- The PDC in the trusted domain must have sufficient read permissions to the trusting forest partitions container in the configuration NC and the children objects. By default, "authenticated users" have the access, which applies to the calling trusted domain PDC.
 - When selective authentication is enabled, the PDC in the trusted forest must be granted the **Allowed to authenticate** permission to the trusting forest DC computer accounts to protect the trusting forests.
 
 If a trusting forest doesn't allow the trusted forest to query trust information, the trusting forest may be at risk of NTLM relay attacks.  
@@ -40,18 +40,18 @@ For example, forest A trusts forest B, and forest C trusts forest B. If forest A
 
 ## New events
 
-The following events are added as part of the protections for CVE-2022-21857, and are logged in the system event log.
+The following events are added as parts of the protections for CVE-2022-21857, and are logged in the system event log.
 
 ### Netlogon service related events
 
 By default, the Netlogon service throttles events for the warnings and error conditions, which means it doesn't log per-request warnings or failure events. Instead, summary events (Netlogon event ID 5832 and Netlogon event ID 5833) are logged once per day for NTLM pass-through authentications that are either blocked by the new security checks introduced in this update, or should have been blocked but were allowed due to the presence of an admin-configured exemption flag.
   
-If either Netlogon event ID 5832 or Netlogon event ID 5833 is logged and you need more information, you can disable the event throttling by creating and setting the `ThrottleNTLMPassThroughAuthEvents` REG_DWORD value to zero in the following registry path：
+If either Netlogon event ID 5832 or Netlogon event ID 5833 is logged and you need more information, disable the event throttling by creating and setting the `ThrottleNTLMPassThroughAuthEvents` REG_DWORD value to zero in the following registry path：
 
 `HKLM\SYSTEM\CurrentControlSet\Services\Netlogon\Parameters`
 
 > [!NOTE]
-> This setting takes effect immediately without a system or service restart, and it isn't under control of a Group Policy Object (GPO).
+> This setting takes effect immediately without a system or service restart, and it isn't under the control of a Group Policy Object (GPO).
 
 |Netlogon event ID  |Event message text  |Notes  |
 |---------|---------|---------|
@@ -70,11 +70,11 @@ If either Netlogon event ID 5832 or Netlogon event ID 5833 is logged and you nee
 |6148     |The PDC completed an automatic trust scan operation for all trusts with no errors. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This informational event is expected to show up periodically every eight hours.         |
 |6149     |The PDC completed an automatic trust scan operation for all trusts and encountered at least one error. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event should be investigated, especially if it shows up every eight hours.         |
 |6150     |The PDC completed an administrator-requested trust scan operation for the trust '\<Trust Name>' with no errors. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089.`|This informational event is used to track when administrators manually invoke the PDC trust scanner by using the `netdom trust <Local Forest> /Domain:* /InvokeTrustScanner` cmdlet.         |
-|6151     |The PDC was unable to find the specified trust '\<Trust Name>' to scan. The trust either does not exist or it is neither an inbound or bidirectional trust. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner with a bad forest name.         |
+|6151     |The PDC was unable to find the specified trust '\<Trust Name>' to scan. The trust either does not exist or it is neither an inbound or bidirectional trust. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner by running a bad forest name.         |
 |6152     |The PDC completed an administrator-requested trust scan operation for the trust '\<Trust Name>' and encountered an error. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner (for all trusts) by running the `netdom trust <Local Forest> /Domain:* /InvokeTrustScanner` cmdlet, and the operation fails.|
-|6153     |The PDC encountered an error trying to scan the named trust. Trust: \<Trust Name>Error: \<Error Message>More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event is a complement to the previous event and includes an error code. It is logged during scheduled trust scans that happen every eight hours.         |
+|6153     |The PDC encountered an error trying to scan the named trust. Trust: \<Trust Name>Error: \<Error Message>More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event is a complement to the previous event and includes an error code. It is logged during scheduled trust scans that occur every eight hours.         |
 
-When an error code is included in some of the failure related events, you need enable tracing for further investigations.
+When an error code is included in some of the failure related events, you need to enable tracing for further investigations.
 
 ## Improvements to Netlogon logging and LSA logging
 
@@ -196,7 +196,7 @@ The netdom.exe tool can initiate the new PDC trust scanner operations, and set a
      > [!NOTE]
      > If `/AuthTargetValidation` is not specified, the default value is 'yes'.
 
-    This operation sets or clears a new LSA forest trust record flag on the Scanner record for the specific child domain from the specific trusting forest. This provides a way to constrain the scope of the exemption to just that domain name. For more information, see the [Issue mitigations](#issue-mitigations) section.
+    This operation sets or clears a new LSA forest trust record flag on the Scanner record for the specific child domain from the specific trusting forest. The operation provides a way to constrain the scope of the exemption to just that domain name. For more information, see the [Issue mitigations](#issue-mitigations) section.
 
 ## Investigating failed NTLM pass-through authentications
 
@@ -234,7 +234,7 @@ Here are the basic steps:
 3. Disable LSA logging.
 4. Search the *lsp.log* file for the term "fail" or "failed", and review the log entries.
 
-The trust scanner may fail by the following reasons:
+The trust scanner may fail with the following reasons:
 
 - Permissions are missing on the partitions container.
 - The firewall ports needed between DCs and between members and DCs aren't open. Here are the firewall ports:
@@ -245,7 +245,7 @@ The trust scanner may fail by the following reasons:
 
 ## Issue mitigations
 
-If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, you can use the following options to mitigate the issue:
+If authentications fail due to domain name collisions, misconfiguration, or unforeseen circumstances, use the following options to mitigate the issue:
 
 - Rename the colliding domain(s) to prevent collision.
 - Temporarily set exemption flags on the corresponding TDOs, or on the Scanner records in the `msDS-TrustForestTrustInfo` attribute. It's a temporary method until the domain renaming prevents the issue.
@@ -264,7 +264,7 @@ If PDC trust scanner fails, the mitigation depends on specific context. For exam
     A2: No. Administrators can invoke it manually if needed, otherwise the new forest will be scanned at the next regular interval.
 - Q3: Can the new Scanner records be modified by domain administrators?
 
-    A3: Yes, but it isn't recommended or supported except for when the new exemption flag (LSA_SCANNER_INFO_DISABLE_AUTH_TARGET_VALIDATION) needs to be set by using the *netdom.exe* tool. If Scanner records are created, modified, or deleted unexpectedly, the PDC trust scanner will revert the changes the next time it runs.
+    A3: Yes, but it isn't recommended or supported except when the new exemption flag (LSA_SCANNER_INFO_DISABLE_AUTH_TARGET_VALIDATION) needs to be set by using the *netdom.exe* tool. If Scanner records are created, modified, or deleted unexpectedly, the PDC trust scanner will revert the changes the next time it runs.
 - Q4: I'm sure that NTLM isn't used in my environment. How can I turn off this behavior?
 
     A4: In general, the new behaviors can't be turned off. The RODC specific security validations can't be disabled. You can set a security check exemption flag for a domain trust case or a forest trust case.
@@ -276,8 +276,8 @@ If PDC trust scanner fails, the mitigation depends on specific context. For exam
     A6:  All variations of patching order are supported. The new PDC trust scanner operation takes effect only after the PDC is patched. All patched DCs will immediately start enforcing the RODC restrictions. Patched non-PDCs won't enforce NTLM pass-through restrictions until the PDC is patched and starts creating new scanner records in the msDS-TrustForestTrustInfo attributes. Non-patched DCs (non-PDC) will ignore the new scanner records once present.
 - Q7: When will my forest be secure?
 
-    A7: Your forest will be secure once all DCs in all domains have this update installed. Trusting forests will be secure once the PDC trust scanner has completed at least once successful operation, and replication has succeeded.
-- Q8: I don't control my trusting domains or forests, how can I ensure my forest is secure?
+    A7: Your forest will be secure once all DCs in all domains have this update installed. Trusting forests will be secure once the PDC trust scanner has completed at least one successful operation, and replication has succeeded.
+- Q8: I don't control my trusting domains or forests. How can I ensure my forest is secure?
 
     A8: See the previous question. The security of your forest doesn't depend on the patching status of any trusting domains or forests. We recommend all customers patch their DCs. In addition, change the configuration described in the [Prerequisites](#prerequisites) section.
 
