@@ -70,7 +70,7 @@ If either Netlogon event ID 5832 or Netlogon event ID 5833 is logged and you nee
 |6148     |The PDC completed an automatic trust scan operation for all trusts with no errors. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This informational event is expected to show up periodically every eight hours.         |
 |6149     |The PDC completed an automatic trust scan operation for all trusts and encountered at least one error. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event should be investigated, especially if it shows up every eight hours.         |
 |6150     |The PDC completed an administrator-requested trust scan operation for the trust '\<Trust Name>' with no errors. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089.`|This informational event is used to track when administrators manually invoke the PDC trust scanner by using the `netdom trust <Local Forest> /Domain:* /InvokeTrustScanner` cmdlet.         |
-|6151     |The PDC was unable to find the specified trust '\<Trust Name>' to scan. The trust either does not exist or it is neither an inbound or bidirectional trust. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner by running a bad forest name.         |
+|6151     |The PDC was unable to find the specified trust '\<Trust Name>' to scan. The trust either does not exist or it is neither an inbound or bidirectional trust. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner by using a bad forest name.         |
 |6152     |The PDC completed an administrator-requested trust scan operation for the trust '\<Trust Name>' and encountered an error. More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event tracks when administrators manually invoke the PDC trust scanner (for all trusts) by running the `netdom trust <Local Forest> /Domain:* /InvokeTrustScanner` cmdlet, and the operation fails.|
 |6153     |The PDC encountered an error trying to scan the named trust. Trust: \<Trust Name>Error: \<Error Message>More information can be found at `https://go.microsoft.com/fwlink/?linkid=2162089`.|This warning event is a complement to the previous event and includes an error code. It is logged during scheduled trust scans that occur every eight hours.         |
 
@@ -194,7 +194,7 @@ The netdom.exe tool can initiate the new PDC trust scanner operations, and set a
     ```
 
      > [!NOTE]
-     > If `/AuthTargetValidation` is not specified, the default value is 'yes'.
+     > If `/AuthTargetValidation` isn't specified, the default value is 'yes'.
 
     This operation sets or clears a new LSA forest trust record flag on the Scanner record for the specific child domain from the specific trusting forest. The operation provides a way to constrain the scope of the exemption to just that domain name. For more information, see the [Issue mitigations](#issue-mitigations) section.
 
@@ -252,7 +252,7 @@ If authentications fail due to domain name collisions, misconfiguration, or unfo
 
 If authentications over an RODC secure channel trust fail, contact Microsoft support for this issue because there are no mitigation methods.
 
-If PDC trust scanner fails, the mitigation depends on specific context. For example, DCs in a trusted forest aren't granted LDAP query permissions on the Configuration naming context (NC) of the trusting forest. The mitigation is to grant the permissions.
+If PDC trust scanner fails, the mitigation depends on specific context. For example, DCs in a trusted forest aren't granted LDAP query permissions to the Configuration naming context (NC) of the trusting forest. The mitigation is to grant the permissions.
 
 ## Frequently asked questions (FAQs)
 
