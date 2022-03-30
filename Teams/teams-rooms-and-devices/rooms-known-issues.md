@@ -1,6 +1,6 @@
 ---
-title: Known issues in Rooms
-description: Admin can learn about a list of known issues for various features of Microsoft Teams Rooms, including update, user interface, hardware, limitations, and expected behavior.
+title: Known issues in Teams Rooms and devices
+description: Provides a list of known issues for various features of Teams Rooms as well as limitations and expected behavior.
 ms.author: luche
 author: helenclu
 ms.reviewer: sohailta, garyanselme, czawideh
@@ -22,10 +22,10 @@ appliesto:
 search.appverid: 
   - MET150
 ---
-# Known issues in Microsoft Teams Rooms
+# Known issues in Teams Rooms and devices
 
-This article lists the known issues for Microsoft Teams Rooms, by feature area.
-<!-- If we get word that one of these issues no longer applies, contact meerak@microsoft.com or msmets@microsoft.com and let them know to EoL the corresponding KB  -->
+This article lists the known issues for Microsoft Teams Rooms by feature area.
+<!-- If we get word that one of these issues no longer applies, contact meerak@microsoft.com or kaushika@microsoft.com and let them know to EoL the corresponding KB  -->
 
 ## Update
 
@@ -50,6 +50,8 @@ This article lists the known issues for Microsoft Teams Rooms, by feature area.
 | Issue |  Description | Workaround |
 |  ---        |      ---             |   ---            |
 | Monitors not detected | When you run Microsoft Teams Rooms on a Surface Pro (Model 2017) device, monitors are not detected. |  Hold down the Surface Pro power button for 20 or more seconds. When you do this, the device restarts and clears the graphics cache. |
+| Login loops or fails for Teams on Android phones | You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. | The combination of MFA CA and ToU CA is not supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the MDM CA is used. When only the MFA CA is used, ensure it is enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions). |
+| Can't delete contacts | You can't delete contacts from Teams on Android phones. | Use either the Teams desktop or the Teams web client to delete contacts from Teams. |
 
 ## Limitations
 
