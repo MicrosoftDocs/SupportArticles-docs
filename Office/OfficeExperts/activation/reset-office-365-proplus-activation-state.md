@@ -134,7 +134,6 @@ If files or values are found underneath the following locations, remove those it
 
 - `%appdata%\Microsoft\Credentials`
 - `%localappdata%\Microsoft\Credentials`
-- `%appdata%\Microsoft\Protect`
 - `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System Provider`
 
 **Office  365 activation tokens and identities**
