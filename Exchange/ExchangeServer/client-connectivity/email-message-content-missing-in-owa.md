@@ -12,7 +12,7 @@ appliesto:
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
-ms.author: v-sixmataylor; wduff
+ms.author: v-six; mataylor; wduff
 ms.prod:  
 ---
 

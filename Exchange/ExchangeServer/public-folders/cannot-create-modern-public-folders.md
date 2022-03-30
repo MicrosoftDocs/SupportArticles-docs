@@ -3,7 +3,7 @@ title: Owner cannot create modern public folders by using Outlook in Exchange Se
 description: Resolves an issue in which you cannot create public folders in Outlook even if you have sufficient access permissions. This issue occurs in an Exchange Server 2013 or Exchange Server 2016 environment.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to\troubleshooting
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 
@@ -45,11 +45,11 @@ This issue occurs because the `LmCompatibilityLevel` registry entry on the Excha
 
 To work around this issue, follow these steps on the Exchange Server Mailbox Server role that is hosting the secondary hierarchy public folder mailbox:
 
-1. Change the value of the `LmCompatibilityLevel` registry entry to *2* or greater.
+1. Change the value of the `LmCompatibilityLevel` registry entry to _2_ or greater.
 
     > [!NOTE]
     > The entry is located under the following registry path:  
-    > *HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa*
+    > _HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa_
 
 2. Restart the following services:
 

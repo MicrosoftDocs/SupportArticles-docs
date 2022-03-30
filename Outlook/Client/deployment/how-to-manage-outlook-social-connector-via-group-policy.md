@@ -439,9 +439,9 @@ And, by default in Outlook 2010, if the People Pane is expanded, the contact pho
 
 When **TurnOffPhotograph** = 1, contact photos are not displayed, as shown in the following figures.
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-1.png" alt-text="Contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-1.png" alt-text="Example 1 about contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
 
-:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-2.png" alt-text="Contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
+:::image type="content" source="media/how-to-manage-outlook-social-connector-via-group-policy/contact-photos-not-shown-when-turnoffphotograph-is-set-to-1-example-2.png" alt-text="Example 2 about contact photo is not displayed when Turn Off Photograph is set to 1." border="false":::
 
 When **TurnOffPhotograph** = 1, contact photos are also not displayed in the Outlook 2010 Contact Card or in the Outlook 2010 Address Book dialog box, as shown in the following figures. Be aware that Outlook 2003 and Outlook 2007 do not have a contact card such as the one that is shown below, and these Outlook versions also do not display photos in the Address Book dialog box.
 

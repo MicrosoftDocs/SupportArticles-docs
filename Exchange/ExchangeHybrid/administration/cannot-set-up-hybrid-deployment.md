@@ -48,4 +48,4 @@ To resolve this problem, contact [Microsoft Support](https://support.microsoft.c
 
 See [Set-FederatedOrganizationIdentifier](/powershell/module/exchange/set-federatedorganizationidentifier) for more information.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](http://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).
+Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).

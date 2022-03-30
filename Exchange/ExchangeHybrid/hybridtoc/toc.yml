@@ -41,7 +41,7 @@
           href: ../administration/user-photos-not-synced-to-exchange-online.md
     - name: Calendars
       items:
-        - name: "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting
+        - name: '"550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting'
           href: ../calendars/550-5111-ndr-delegate-sends-update-meeting.md
         - name: Can't access free/busy of non-Internet-facing AD site
           href: ../calendars/cannot-access-freebusy-info-of-non-internet-facing-ad-site.md

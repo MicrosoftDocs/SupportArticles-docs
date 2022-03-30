@@ -3,7 +3,7 @@ title: Inconsistent search results when email body contains both English and non
 description: Describes an issue that affects search functionality in OWA in an Exchange Server 2013 environment. Occurs when the email message contains both English and Chinese-Japanese-Korean (CJK) languages.
 manager: dcscontentpm
 audience: ITPro
-ms.topic: how-to\troubleshooting
+ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto: 

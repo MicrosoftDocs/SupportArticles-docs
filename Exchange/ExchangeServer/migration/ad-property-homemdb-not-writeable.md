@@ -1,6 +1,6 @@
 ---
-title: 'MigrationPermanentException: Active Directory property ‎'homeMDB‎' is not writeable on recipient'
-description: Fixes an issue in which you receive the Active Directory property ‎'homeMDB‎' isn't writeable on recipient error when moving a mailbox to Office 365.
+title: MigrationPermanentException Active Directory property homeMDB is not writeable on recipient
+description: Fixes an issue in which you receive the Active Directory property homeMDB isn't writeable on recipient error when moving a mailbox to Office 365.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

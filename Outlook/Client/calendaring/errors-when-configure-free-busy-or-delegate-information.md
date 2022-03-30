@@ -91,7 +91,7 @@ You must have the administrator permission to run the PowerShell cmdlets to dele
     ```
 
     > [!NOTE]
-    > See [Remove-MailboxFolderPermission](/powershell/module/exchange/remove-mailboxfolderpermission?view=exchange-ps) for more details on the **ResetDelegateUserCollection** parameter.
+    > See [Remove-MailboxFolderPermission](/powershell/module/exchange/remove-mailboxfolderpermission) for more details on the **ResetDelegateUserCollection** parameter.
 
 1. Run the following cmdlet one or more times, as needed, to add or recreate any necessary delegate permissions:
 
