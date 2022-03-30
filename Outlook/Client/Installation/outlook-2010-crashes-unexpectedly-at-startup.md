@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: dthayer, aruiz
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Outlook 2010 crashes unexpectedly at startup
 

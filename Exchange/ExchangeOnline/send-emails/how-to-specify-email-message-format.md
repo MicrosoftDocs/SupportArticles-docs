@@ -11,7 +11,6 @@ search.appverid: MET150
 ms.reviewer: jhayes
 author: simonxjx
 ms.author: v-six
-ms.prod:  
 ---
 
 # How to specify the email message format that's used for external recipients to prevent Winmail.dat attachments

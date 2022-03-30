@@ -10,9 +10,9 @@ appliesto:
 - Exchange Server 2010 Enterprise
 - Exchange Server 2010 Standard
 search.appverid: MET150
-ms.reviewer: 
+ms.reviewer: mataylor, wduff
 author: simonxjx
-ms.author: v-six, mataylor, wduff
+ms.author: v-six
 ---
 
 # Email message content is missing in OWA

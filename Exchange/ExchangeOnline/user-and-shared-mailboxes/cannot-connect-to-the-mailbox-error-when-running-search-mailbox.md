@@ -14,7 +14,6 @@ search.appverid: MET150
 ms.reviewer: kellybos
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # "Can't connect to the mailbox" error when you run cmdlets for a mailbox hosted in a different Exchange Online region
 

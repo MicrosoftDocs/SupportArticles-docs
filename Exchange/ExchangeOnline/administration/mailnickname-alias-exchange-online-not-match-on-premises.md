@@ -13,7 +13,6 @@ search.appverid: MET150
 ms.reviewer: rrajan, v-maqiu, ninob
 author: simonxjx
 ms.author: v-six
-ms.prod:
 ---
 # MailNickName or Alias attribute in Exchange Online doesn't match what is set in Exchange on-premises
 
