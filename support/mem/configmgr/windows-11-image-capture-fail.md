@@ -102,7 +102,7 @@ This issue occurs because no drive letter is assigned to the operating system (O
 
 ### Solution: Allow automatic assignment of drive letters
 
-To resolve this issue, restart the computer into Windows 11 original OS, and change the partition attributes to assign drive letters by running the following commands:
+To resolve this issue, restart the computer into Windows 11 original OS, and change the partition attributes to re-enable the automatic assignment by running the following commands:
 
 ```cmd
 diskpart
@@ -112,7 +112,7 @@ GPT attributes=0x0000000000000000
 Exit
 ```
 
-The `Partition 3` in this command line is just an example. The selected partition should be the partition where the OS is installed. You can confirm it by using the `detail partition` command as follows:
+To confirm that the automatic assignment is enabled and the drive letter is assigned to the partition, use the `detail partition` command as follows:
 
 ```cmd
 diskpart
@@ -121,8 +121,20 @@ Select Partition 3
 detail partition
 ```
 
-See the following screenshot for the partition attributes:
+See the following screenshot for the correct partition attributes:
 
 :::image type="content" source="./media/windows-11-image-capture-fail/detail-partition-command-output.jpg" alt-text="Screenshot of detail partition command output.":::
+
+`Partition 3` that's used in the command lines above is just an example. The selected partition should match the partition index of your current installed OS. To determine the partition, run the following commands:
+
+```cmd
+diskpart
+Select Disk 0
+list partition
+```
+
+See the following screenshot for the command output. Use the partition that's marked as Primary.
+
+:::image type="content" source="./media/windows-11-image-capture-fail/list-partition-command-output.png" alt-text="Screenshot of list partition command output.":::
 
 After the assignment is completed, restart the capture process.
