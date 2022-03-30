@@ -20,7 +20,7 @@ _Original KB number:_ &nbsp; 2718817
 
 ## Symptoms
 
-Multiple mailboxes in Microsoft Office 365 may have incorrect or missing time zone settings. This symptoms applies to all kinds of mailboxes, such as user mailboxes, resource mailboxes, and equipment mailboxes.
+Multiple mailboxes in Microsoft Office 365 may have incorrect or missing time zone settings. This symptom applies to all kinds of mailboxes, such as user mailboxes, resource mailboxes, and equipment mailboxes.
 
 ## Resolution
 
@@ -43,4 +43,4 @@ To resolve this issue, bulk change the time zone info for mailboxes in Office 36
 
 ## Reference
 
-See [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration) for more information.
+For more information, see [Set-MailboxRegionalConfiguration](/powershell/module/exchange/set-mailboxregionalconfiguration) for more information.

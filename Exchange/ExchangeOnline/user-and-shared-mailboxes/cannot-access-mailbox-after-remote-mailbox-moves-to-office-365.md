@@ -14,7 +14,6 @@ search.appverid: MET150
 ms.reviewer: jhayes, shawsull, benwinz, sulobr
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # Can't access a mailbox by using Outlook after a remote mailbox move from an on-premises Exchange Server environment to Office 365
 
@@ -69,7 +68,7 @@ To resolve this issue, follow these steps:
 
 For more information about the cmdlets that are mentioned in this article, see:
 
-- [Disable-Mailbox](/powershell/module/exchange/disable-mailbox?view=exchange-ps)
-- [Enable-RemoteMailbox](/powershell/module/exchange/enable-remotemailbox?view=exchange-ps)
+- [Disable-Mailbox](/powershell/module/exchange/disable-mailbox)
+- [Enable-RemoteMailbox](/powershell/module/exchange/enable-remotemailbox)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

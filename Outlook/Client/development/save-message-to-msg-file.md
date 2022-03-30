@@ -1,5 +1,5 @@
 ---
-title: INFO: Save message to MSG compound file
+title: Save message to MSG compound file
 description: Describes how to save a message to a compound document, specifically an .msg file.
 manager: dcscontentpm
 audience: ITPro

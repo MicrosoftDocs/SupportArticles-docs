@@ -12,7 +12,6 @@ search.appverid: MET150
 ms.reviewer: kellybos, rjewell
 author: simonxjx
 ms.author: v-six
-ms.prod: 
 ---
 # The Out of Office feature in Outlook doesn't function correctly in Office 365
 
