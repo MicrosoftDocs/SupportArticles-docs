@@ -14,6 +14,7 @@ ms.reviewer: helmutk
 appliesto: 
   - Exchange Server 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Active Directory site redirection fails when accessing ECP from a remote site in Exchange Server 2016
 

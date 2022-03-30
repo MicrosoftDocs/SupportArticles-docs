@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # Remove the assembly reference from your Sandbox solution created in Visual Studio

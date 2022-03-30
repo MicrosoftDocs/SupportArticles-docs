@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "One of your on-premises Federation Service certificates is expiring" message in Office 365 portal

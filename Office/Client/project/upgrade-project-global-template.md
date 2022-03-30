@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Project 2013 Standard
   - Project Professional 2013
+ms.date: 3/31/2022
 ---
 
 # How to upgrade your Project global template after you install Project 2013

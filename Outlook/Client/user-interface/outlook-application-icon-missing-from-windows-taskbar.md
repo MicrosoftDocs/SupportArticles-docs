@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook application icon missing from the Windows taskbar
 

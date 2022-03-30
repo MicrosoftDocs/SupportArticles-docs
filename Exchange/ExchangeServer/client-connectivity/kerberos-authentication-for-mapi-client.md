@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010
+ms.date: 3/31/2022
 ---
 
 # Kerberos authentication for MAPI client connection to a Client Access server array

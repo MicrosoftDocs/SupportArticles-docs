@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Users can't sign in to Skype by using their Microsoft account after Public IM Connectivity (PIC) or External Communications is enabled in Skype for Business Online

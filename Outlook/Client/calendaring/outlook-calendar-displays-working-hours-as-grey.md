@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook Calendar displays working hours as grey
 

@@ -18,6 +18,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Method to determine whether a year is a leap year

@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You cannot start Outlook in cached mode or create a new cached mode profile
 

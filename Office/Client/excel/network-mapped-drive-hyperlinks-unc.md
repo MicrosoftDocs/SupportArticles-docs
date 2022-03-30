@@ -23,6 +23,7 @@ appliesto:
   - Excel 2016
   - Outlook 2016
   - Word 2016
+ms.date: 3/31/2022
 ---
 
 # Network Mapped Drive Hyperlinks resolve as UNC in Office Products

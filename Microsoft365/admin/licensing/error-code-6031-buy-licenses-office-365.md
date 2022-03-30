@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-six
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # "Sorry! We can't process your request right now" error code 6031 message when you buy licenses

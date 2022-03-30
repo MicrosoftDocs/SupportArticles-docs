@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Policy doesn't allow granting permissions at this level to one or more of the recipient(s) when sharing calendar
 

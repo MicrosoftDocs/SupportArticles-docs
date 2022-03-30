@@ -9,12 +9,14 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 'Associated content asset: 4555314'
+  - 
+- 'Associated content asset: 4555314'
 ms.reviewer: rymcgrat, romccart
 appliesto: 
   - Exchange Online Protection
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "550 5.7.1 Message rejected due to content restrictions" when you send email to external recipients in Exchange Online Protection

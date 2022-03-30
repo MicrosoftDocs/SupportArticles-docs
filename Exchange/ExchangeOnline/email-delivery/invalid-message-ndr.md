@@ -10,10 +10,12 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
-  - 'Associated content asset: 4555315'
+  - 
+- 'Associated content asset: 4555315'
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel or Word attachment
 

@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - SharePoint Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to display SharePoint pages from a different domain in iFrame
 

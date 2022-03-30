@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 'Associated content asset: 4555316'
+  - 
+- 'Associated content asset: 4555316'
 ms.reviewer: timothyh, bilong
 appliesto: 
   - Exchange Online,Exchange Online Archiving
@@ -20,6 +21,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mail access issues in a hybrid Exchange deployment with cloud-based archive
 

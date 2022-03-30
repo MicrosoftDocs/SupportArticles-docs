@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Only one reply is sent to each sender when the Out of Office Assistant is enabled

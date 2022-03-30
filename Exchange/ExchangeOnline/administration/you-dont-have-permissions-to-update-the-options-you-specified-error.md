@@ -14,6 +14,7 @@ ms.reviewer: alinastr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You  when Office 365 kiosk users create inbox rules
 

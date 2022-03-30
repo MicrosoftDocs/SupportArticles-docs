@@ -23,6 +23,7 @@ appliesto:
   - Windows 8.1
   - Windows 10
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # SideBySide event ID 35 is logged in the Application log when you start Skype for Business
 

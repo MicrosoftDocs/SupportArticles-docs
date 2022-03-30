@@ -14,6 +14,7 @@ ms.reviewer: saurkosh, jamesmi, romccart
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Remote Server returned 554 4.3.2 mailbox busy when you send mail to a mailbox in Exchange Online
 

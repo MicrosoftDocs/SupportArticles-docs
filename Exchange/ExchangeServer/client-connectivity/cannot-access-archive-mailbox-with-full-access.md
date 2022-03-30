@@ -7,7 +7,7 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom:
+ms.custom: 
   - CI 160833
   - Exchange Server
   - CSSTroubleshoot
@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # On-premises users can't access cloud archive mailboxes with Full Access permission in Outlook
 

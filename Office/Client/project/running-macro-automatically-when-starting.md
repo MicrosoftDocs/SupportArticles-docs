@@ -19,6 +19,7 @@ appliesto:
   - Project Professional 2013
   - Project Standard 2013
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # Running a macro automatically when you start Project
 

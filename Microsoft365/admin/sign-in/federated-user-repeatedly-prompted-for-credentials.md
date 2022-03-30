@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Intune
   - CRM Online via Office 365 E Plans
   - Azure Backup, Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure or Intune

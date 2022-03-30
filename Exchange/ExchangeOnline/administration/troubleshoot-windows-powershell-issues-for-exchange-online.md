@@ -14,6 +14,7 @@ ms.reviewer: jhayes
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to troubleshoot Windows PowerShell issues that affect Exchange Online for Office 365
 

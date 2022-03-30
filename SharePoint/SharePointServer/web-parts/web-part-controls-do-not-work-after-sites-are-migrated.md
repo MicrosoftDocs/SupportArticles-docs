@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Web part controls don't work after sites are migrated to SharePoint Server 2016  

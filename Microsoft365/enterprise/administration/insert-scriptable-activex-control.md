@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Cannot insert certain scriptable ActiveX controls into Office 2013 documents

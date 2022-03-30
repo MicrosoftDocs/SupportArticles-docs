@@ -14,6 +14,7 @@ ms.custom:
   - CI 153759
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "403 Forbidden" error on OneDrive or SharePoint

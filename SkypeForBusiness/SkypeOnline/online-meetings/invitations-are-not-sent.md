@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Invitations are not sent from Outlook when you try to schedule a meeting in Skype for Business Online

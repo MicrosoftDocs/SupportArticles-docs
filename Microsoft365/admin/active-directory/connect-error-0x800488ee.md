@@ -5,17 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Microsoft Intune
-- Azure Backup
-- Office 365 User and Domain Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Microsoft Intune
+  - Azure Backup
+  - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # 0x800488EE when connecting to Office 365, Azure, or Intune in the Azure AD Module for PowerShell

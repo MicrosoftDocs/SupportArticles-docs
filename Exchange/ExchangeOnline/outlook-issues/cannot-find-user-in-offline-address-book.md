@@ -14,6 +14,7 @@ ms.reviewer: jhayes, v-lanac
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't find a user in the offline address book in Microsoft 365
 

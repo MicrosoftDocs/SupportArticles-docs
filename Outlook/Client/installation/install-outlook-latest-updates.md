@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to install the latest applicable updates for Microsoft Outlook (US English only)
 

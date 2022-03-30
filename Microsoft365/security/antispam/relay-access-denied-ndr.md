@@ -13,6 +13,7 @@ ms.reviewer: rorylen
 appliesto: 
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "550 5.4.1 Relay Access Denied" NDR when sending mail from an on-premises Exchange organization through Exchange Online Protection in Office 365 Dedicated/ITAR

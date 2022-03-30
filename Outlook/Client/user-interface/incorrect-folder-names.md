@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Exchange Online
   - Microsoft Exchange Online Dedicated
+ms.date: 3/31/2022
 ---
 
 # Folder names are incorrect or displayed in an incorrect language in Outlook

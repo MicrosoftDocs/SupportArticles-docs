@@ -9,13 +9,15 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 'Associated content asset: 4555317'
+  - 
+- 'Associated content asset: 4555317'
 ms.reviewer: benjak
 appliesto: 
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Litigation Hold users cannot delete messages in Office 365 Dedicated

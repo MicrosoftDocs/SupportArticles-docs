@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
+ms.date: 3/31/2022
 ---
 
 # "HTTP 400 Bad Request" error when proxying HTTP requests from an Exchange Server to a previous version of Exchange Server

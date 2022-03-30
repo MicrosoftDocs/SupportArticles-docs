@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Skype for Business Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Set up Skype for Business Online external communications
 

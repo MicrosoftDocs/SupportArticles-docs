@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't send a response to a meeting request in Outlook
 

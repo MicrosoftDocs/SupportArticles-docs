@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Microsoft Teams
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Teams web client is stuck in a login loop

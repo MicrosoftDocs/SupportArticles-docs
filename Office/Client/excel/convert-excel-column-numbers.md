@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel 2007
+ms.date: 3/31/2022
 ---
 
 # How to convert Excel column numbers into alphabetical characters

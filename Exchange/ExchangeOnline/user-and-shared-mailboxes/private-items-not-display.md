@@ -19,6 +19,7 @@ appliesto:
   - Outlook 2013
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Private items aren't displayed in a shared mailbox in Outlook

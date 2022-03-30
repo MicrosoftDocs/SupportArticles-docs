@@ -1,18 +1,19 @@
 ---
 title: Troubleshoot directory synchronization errors with event 6941
-description: Discusses an issue in which an admin receives a  "Directory Synchronization Error Report" email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
+description: Discusses an issue in which an admin receives a  Directory Synchronization Error Report email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Azure Active Directory
-- Office 365 Identity Management
+appliesto: 
+  - Azure Active Directory
+  - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365

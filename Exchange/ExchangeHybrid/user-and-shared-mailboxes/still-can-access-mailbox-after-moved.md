@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # User can still access their on-premises mailbox after it is moved to Exchange Online in a hybrid deployment
 

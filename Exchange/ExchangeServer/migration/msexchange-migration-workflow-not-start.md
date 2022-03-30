@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Microsoft Exchange Migration Workflow service fail to start in Exchange Server 2013 Cumulative Update 3
 

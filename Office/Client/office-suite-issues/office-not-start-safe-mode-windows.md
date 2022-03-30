@@ -25,6 +25,7 @@ appliesto:
   - OneNote 2013
   - PowerPoint 2013
   - Access 2013
+ms.date: 3/31/2022
 ---
 # Office applications don't start when Windows is running in safe mode
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You experience poor audio or video quality in Skype for Business Online

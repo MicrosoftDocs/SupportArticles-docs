@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
+ms.date: 3/31/2022
 ---
 # Error when you try to move a mailbox in Exchange Server 2016: The migration mailbox for the organization is either missing or invalid
 

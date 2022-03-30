@@ -17,6 +17,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Excel 2007
+ms.date: 3/31/2022
 ---
 
 # How to troubleshoot "available resources" errors in Excel

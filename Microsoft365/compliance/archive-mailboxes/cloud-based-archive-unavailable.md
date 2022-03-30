@@ -9,7 +9,8 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
-  - 'Associated content asset: 4555324'
+  - 
+- 'Associated content asset: 4555324'
 ms.reviewer: chrisbur, jhayes
 appliesto: 
   - Exchange Online Archiving
@@ -19,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "Your archive appears to be unavailable" error when you try to access a cloud-based archive mailbox in a hybrid deployment

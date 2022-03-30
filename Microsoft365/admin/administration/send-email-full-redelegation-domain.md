@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: willfid
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # You can't send email messages in Office 365 Small Business from a domain that's set up for full redelegation

@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
   - Outlook Development
+ms.date: 3/31/2022
 ---
 
 # Calling OpenMsgStore in Outlook opens the archive mailbox instead of the primary mailbox

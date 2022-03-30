@@ -17,6 +17,7 @@ appliesto:
   - Office Professional Plus 2010
   - Office Standard 2010
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # How to determine the license type for Microsoft Office 2010 and 2007 products
 

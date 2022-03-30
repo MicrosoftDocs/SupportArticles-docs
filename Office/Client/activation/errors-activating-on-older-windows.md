@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Errors activating Microsoft 365 on older Windows versions

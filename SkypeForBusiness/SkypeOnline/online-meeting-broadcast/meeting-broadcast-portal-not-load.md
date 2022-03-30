@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, kristinw, dougl, Lynnroe, cbland, rischwen, Leonarwo, msp, romanma
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Skype Meeting Broadcast portal doesn't load completely in the browser
