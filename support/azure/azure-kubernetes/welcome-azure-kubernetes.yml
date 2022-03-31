@@ -112,13 +112,13 @@ landingContent:
         links:
           - text: Upgrade fails because of NSG rules
             url: ./troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
-          - text: Error code: PodDrainFailure
+          - text: Error code\:\ PodDrainFailure
             url: ./troubleshoot-upgrade-errors.md#error-code-poddrainfailure
-          - text: Error code: PublicIPCountLimitReached
+          - text: Error code\:\ PublicIPCountLimitReached
             url: ./troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
-          - text: Error code: Quotaexceeded
+          - text: Error code\:\ Quotaexceeded
             url: ./troubleshoot-upgrade-errors.md#error-code-quotaexceeded
-          - text: Error code: Subnetisfull
+          - text: Error code\:\ Subnetisfull
             url: ./troubleshoot-upgrade-errors.md#error-code-subnetisfull
 
 
