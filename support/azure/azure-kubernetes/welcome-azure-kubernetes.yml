@@ -112,7 +112,7 @@ landingContent:
         links:
           - text: Upgrade fails because of NSG rules
             url: ./troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
-          - text: Error code\:\ PodDrainFailure
+          - text: Error code&#58; PodDrainFailure
             url: ./troubleshoot-upgrade-errors.md#error-code-poddrainfailure
           - text: Error code\:\ PublicIPCountLimitReached
             url: ./troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
