@@ -857,6 +857,8 @@ System service name: **TermService**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |Terminal Services|TCP|3389|
+|---|---|---|
+|---|UDP|3389|
   
 ### Terminal Services Licensing
 
