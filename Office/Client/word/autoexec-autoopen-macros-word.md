@@ -89,15 +89,13 @@ Word 2007
 
 The following table summarizes the behavior of these two macros when Word is started, or when a document is opened by various means:
 
-||||
-|-|-|-|
 |Action |AutoExec |AutoOpen|
+|-|-|-|
 |Start Word with a blank document by typing Runs Does not run the following at a command prompt:   Winword.exe|Runs |Does not run|
 |Start Word with a saved document by typing the following at a command prompt:</br>Winword.exe C:\<Yourfile>.doc|Runs|Runs|
 |Embed a Word document in an OLE container by typing the following at a command prompt:</br>WinWord.exe /embedding C:\<Yourfile>.doc|Does not run|Runs|
 |Use code to automate Word and open Does not run Runs C:\<Yourfile>.doc by using the following code:</br> Set oWord = CreateObject("Word.Application")</br>oWord.Visible = True </br>oWord.Documents. Open "C:\YourFile.doc"|Does not run|Runs|
 |Browse to the document in Internet Explorer or the WebBrowser control|Does not run|Runs|
-||||
 
 ## References
 
