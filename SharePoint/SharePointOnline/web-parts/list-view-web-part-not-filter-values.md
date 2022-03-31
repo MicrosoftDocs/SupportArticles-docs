@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # A list view Web Part for a tasks list doesn't filter values from a connected Web Part

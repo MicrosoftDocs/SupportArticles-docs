@@ -14,6 +14,7 @@ ms.reviewer: kellybos
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Delegates are not listed correctly in Outlook after a migration to Office 365 hybrid environment
 

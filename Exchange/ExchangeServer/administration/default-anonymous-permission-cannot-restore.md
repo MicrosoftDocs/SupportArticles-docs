@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Removed Default or Anonymous permission for Outlook folders can't be restored in an Exchange Server 2013 environment
 

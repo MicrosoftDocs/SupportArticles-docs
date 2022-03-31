@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise Edition
+ms.date: 3/31/2022
 ---
 # Event 7009 when users try to send or receive email in Exchange Server 2013 or Exchange Server 2016
 

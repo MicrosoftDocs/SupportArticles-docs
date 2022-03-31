@@ -5,16 +5,17 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Azure Active Directory
-- Office 365 Identity Management
-- Windows Server 2012 Essentials
-- Windows Server 2012 R2 Essentials
+appliesto: 
+  - Azure Active Directory
+  - Office 365 Identity Management
+  - Windows Server 2012 Essentials
+  - Windows Server 2012 R2 Essentials
+ms.date: 3/31/2022
 ---
 
 # Properties of Office 365 users revert to original values when running Windows Server Essentials

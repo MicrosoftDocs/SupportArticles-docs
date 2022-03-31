@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Sorry, something went wrong" when you click an InfoPath form in mobile view in SharePoint Online

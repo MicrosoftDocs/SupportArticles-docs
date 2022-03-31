@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook can't connect through a proxy that's set up by using a file://-based PAC file
 

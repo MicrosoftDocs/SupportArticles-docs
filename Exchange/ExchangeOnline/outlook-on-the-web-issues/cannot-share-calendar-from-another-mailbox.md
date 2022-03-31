@@ -14,6 +14,7 @@ ms.reviewer: alinastr, mhaque, robertso
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't share the Calendar from another mailbox by using Outlook Web App in Office 365
 

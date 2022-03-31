@@ -8,14 +8,15 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
 description: Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them.
+ms.date: 3/31/2022
 ---
 
 # User not seeing add-ins

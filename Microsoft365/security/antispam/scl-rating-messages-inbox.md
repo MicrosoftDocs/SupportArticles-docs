@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Messages that have an SCL rating of 5 or higher are delivered to the Inbox instead of to the Junk Email folder in Outlook in Exchange Online

@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Troubleshooting mail enabled public folder synchronization failures when using PowerShell script
 

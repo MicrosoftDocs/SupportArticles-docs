@@ -18,6 +18,7 @@ appliesto:
   - Outlook for Office 365
   - Outlook LTSC 2021
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't change the location of the offline Outlook Data File (.ost) in Microsoft Outlook
 

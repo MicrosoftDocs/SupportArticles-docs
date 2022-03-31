@@ -14,6 +14,7 @@ ms.reviewer: timothyh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Same URI cannot be attached to different AppId on a single day when you run HCW
 

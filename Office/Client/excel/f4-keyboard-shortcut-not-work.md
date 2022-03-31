@@ -17,6 +17,7 @@ appliesto:
   - Excel 2010
   - Excel Home and Student 2010
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # F4 keyboard shortcut does not work as expected in Excel 2013, Excel 2010, and Excel 2007

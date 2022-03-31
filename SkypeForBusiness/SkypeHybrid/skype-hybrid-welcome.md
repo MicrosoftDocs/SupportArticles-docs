@@ -13,6 +13,7 @@ appliesto:
   - Skype for Business Online
   - Skype for Business Server
   - Lync Server
+ms.date: 3/31/2022
 ---
 
 # Hybrid deployment troubleshooting

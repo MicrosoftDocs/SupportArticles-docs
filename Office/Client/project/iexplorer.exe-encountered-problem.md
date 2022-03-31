@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Project
+ms.date: 3/31/2022
 ---
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access

@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business on Mac
+ms.date: 3/31/2022
 ---
 
 # How to do a clean uninstallation of Skype for Business on Mac

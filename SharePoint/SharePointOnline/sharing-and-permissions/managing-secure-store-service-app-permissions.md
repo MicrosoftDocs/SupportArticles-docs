@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2010
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Permissions required for managing the Secure Store Service app

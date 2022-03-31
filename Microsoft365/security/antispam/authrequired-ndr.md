@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired" nondelivery report when external users try to send mail to mail-enabled public folders in Office 365

@@ -14,6 +14,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Outlook 2016
+ms.date: 3/31/2022
 ---
 
 # "The Calendar folder cannot be found" or "The Tasks folder cannot be found" error when you use Quick Steps in Outlook

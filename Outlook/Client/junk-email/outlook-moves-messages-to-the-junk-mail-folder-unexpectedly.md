@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook moves messages to the Junk Mail Folder even if the Spam Confidence Level (SCL) is -1
 

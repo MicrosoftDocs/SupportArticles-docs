@@ -14,6 +14,7 @@ ms.reviewer: Entirenet, lthurman, jesko, sloanc, chikae, evasand
 appliesto: 
   - Office 2010
   - Office 2007
+ms.date: 3/31/2022
 ---
 
 # Information about the ability to uninstall Office updates

@@ -17,6 +17,7 @@ appliesto:
   - Outlook for Mac for Office 365
   - Outlook 2016 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot save a meeting as a draft in Outlook for Mac by using Office JS API
 

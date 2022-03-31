@@ -14,6 +14,7 @@ appliesto:
   - Azure Active Directory
   - Microsoft IntuneAzure Backup
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot account issues for federated users in Office 365, Azure, or Intune

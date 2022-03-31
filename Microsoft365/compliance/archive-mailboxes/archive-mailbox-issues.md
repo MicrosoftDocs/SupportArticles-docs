@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2003 Service Pack 2
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Archive mailbox issues for a mailbox that's migrated to or from Office 365

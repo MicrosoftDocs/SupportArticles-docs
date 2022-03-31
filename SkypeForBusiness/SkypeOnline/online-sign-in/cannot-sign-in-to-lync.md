@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Error message when you try to sign in to Skype for Business Online: "Cannot sign in to Lync because this sign-in address was not found"

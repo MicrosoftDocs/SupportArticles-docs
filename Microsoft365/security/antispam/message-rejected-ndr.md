@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online Protection
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "550 5.7.1 Message rejected due to content restrictions" when you send email to external recipients in Exchange Online Protection

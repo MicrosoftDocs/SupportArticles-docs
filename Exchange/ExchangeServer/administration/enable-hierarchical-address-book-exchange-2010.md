@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Enable the Hierarchical Address Book feature in Microsoft Exchange Server 2010
 

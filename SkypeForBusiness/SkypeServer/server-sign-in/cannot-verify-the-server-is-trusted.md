@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync 2013
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync can't verify that the server is trusted for your sign-in address" message during client sign-in

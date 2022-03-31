@@ -15,6 +15,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Excel 2007
+ms.date: 3/31/2022
 ---
 
 # How Excel determines the current mode of calculation

@@ -13,6 +13,7 @@ audience: Admin
 ms.topic: troubleshooting
 appliesto: 
   - Microsoft InfoPath
+ms.date: 3/31/2022
 ---
 # Disabling code-behind prompt for InfoPath forms
 

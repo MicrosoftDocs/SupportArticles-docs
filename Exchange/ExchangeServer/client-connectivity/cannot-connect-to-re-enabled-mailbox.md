@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Can't connect to a mailbox after it's re-enabled in Exchange Server
 

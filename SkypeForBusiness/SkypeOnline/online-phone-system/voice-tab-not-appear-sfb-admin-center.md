@@ -13,6 +13,7 @@ ms.reviewer: lyotechreview
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # The Voice tab doesn't appear in the Skype for Business Admin Center

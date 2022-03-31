@@ -13,6 +13,7 @@ ms.reviewer: romanma, dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Maximum Followers Reached" message in the Lync contact card or the Lync presence is not displayed

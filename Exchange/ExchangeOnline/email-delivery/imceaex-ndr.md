@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # IMCEAEX non-delivery report when you send email messages to an internal user in Office 365
 

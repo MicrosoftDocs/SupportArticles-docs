@@ -14,6 +14,7 @@ ms.reviewer: pramods
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (Remote Server returned 550 5.2.0 RESOLVER.ADR.BadPrimary) error when an Exchange Online user sends mail to an external contact
 

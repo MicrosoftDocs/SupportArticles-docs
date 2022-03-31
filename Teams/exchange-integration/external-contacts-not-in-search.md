@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # External federated contacts don't appear in Teams search

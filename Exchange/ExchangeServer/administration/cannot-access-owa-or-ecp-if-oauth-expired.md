@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't sign in to Outlook on the web or EAC if Exchange Server OAuth certificate is expired
 

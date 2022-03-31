@@ -16,6 +16,7 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # How to create a dynamic defined range in an Excel worksheet

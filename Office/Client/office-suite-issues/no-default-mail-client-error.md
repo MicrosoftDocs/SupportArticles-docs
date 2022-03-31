@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # "No default mail client" error when sending files from Office programs

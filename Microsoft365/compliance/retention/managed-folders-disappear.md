@@ -14,6 +14,7 @@ ms.reviewer: lindabr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Empty managed folders disappear in Exchange Online
