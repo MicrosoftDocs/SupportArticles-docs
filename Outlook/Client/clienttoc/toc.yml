@@ -343,6 +343,8 @@
       href: ../message-body/no-subject-content-in-automatically-email.md
     - name: Pictures are not shown but displayed as red X
       href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
+    - name: Send to OneNote and Meeting Notes buttons don't work
+      href: ../../../Office/Client/onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md
     - name: Strange characters in message body
       href: ../message-body/strange-characters-display-message-body.md
     - name: Specified Message Identity is Invalid error when opening delivery reports
