@@ -17,9 +17,9 @@ ms.technology: windows-client-troubleshooter
 
 This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions.
 
-_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
+_Applies to_: Supported versions of Windows Server and Windows Client
 
-The TroubleShootingScript Version 2 (TSSv2) toolset includes a suite of PowerShell based tools and framework for data collection and diagnostic. The toolset aims to resolve customer support cases efficiently and securely.
+The TSSv2 toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to resolve customer support cases efficiently and securely.
 
 The toolset includes several PowerShell scripts and executable files, which are all signed by Microsoft. Depending on how the toolset is started, it uses one or more of those scripts and executables to collect the required logs.
 
@@ -38,7 +38,7 @@ Here are some prerequisites for the toolset to run properly:
 
 ## Logs collection and sharing process
 
-The TSSv2 toolset supports collecting various logs for troubleshooting purposes. Microsoft support representative may provide you with a certain TSSv2 cmdlet to collect logs for a problem when working on a support case, such as:
+The TSSv2 toolset supports collecting various logs for troubleshooting purposes. Microsoft support representatives may provide you with a certain TSSv2 cmdlet to collect logs for a problem when working on a support case, such as:
 
 - Event logs
 - System configuration
@@ -52,37 +52,37 @@ The TSSv2 toolset supports collecting various logs for troubleshooting purposes.
 Here are the steps for the logs collection and sharing process:
 
 > [!NOTE]
-> The support representative will provide you with the full steps for the download and the data collection.
+> The support representative will provide you with complete steps for downloading and data collection.
 
 1. The support representative identifies the problem and provides a certain TSSv2 cmdlet to collect the proper logs.
 2. Download the *TSSv2.zip* file and copy the file to the affected systems.
 3. Extract the *TSSv2.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
-4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterwards.
-5. Upload the logs to a Microsoft secure file transfer site, which is provided by the support representative.
+4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterward.
+5. Upload the logs to a Microsoft secure file transfer site, which the support representative provides.
 
-The support representative will work on the logs for further troubleshooting, and provide the next action plan.
+The support representative will work on the logs for further troubleshooting and provide the next action plan.
 
 ## Frequently asked questions (FAQs)
 
 - Q1: Does the TSSv2 script change any setup or configuration of my system?
 
-    A1: No, but a registry setting is required for enabling debug logging in some scenarios. The script sets the necessary key at the start of the data collection, and reverts the key to the default value at the end of the data collection. It may also delete some caches (for example, ARP cache or name resolution cache) at the start of the data collection to observe the problem from the logs.
+    A1: No, but a registry setting is required for enabling debug logging in some scenarios. The script sets the necessary key at the start of the data collection and reverts the key to the default value at the end of the data collection. It may also delete some caches (for example, the ARP cache or the name resolution cache) at the start of the data collection to observe the problem from the logs.
 
-- Q2: Does the TSSv2 toolset put additional load on the server?
+- Q2: Does the TSSv2 toolset put an additional load on the server?
 
-    A2: Some loggings (for example, network capturing, ETW tracing collection, and so on) that are started by the TSSv2 toolset might have minor load on the system. The load is usually at ignorable levels. Contact your support representative when you see a high CPU, memory or disk usage after starting the TSSv2 toolset.
+    A2: Some loggings (for example, network capturing, ETW tracing collection, and so on) that are started by the TSSv2 toolset might put a minor load on the system. The load is usually at ignorable levels. Contact your support representative when you see high CPU, memory, or disk usage after starting the TSSv2 toolset.
 
 - Q3: Why can't we reproduce the issue when the TSSv2 toolset is running?
 
-    A3: The TSSv2 toolset may delete all cached information at the start. It also starts the network capturing in a promiscuous mode, which changes the Network Interface Card (NIC) default behaviors. These changes might affect the way that the problems happen, and the issue may disappear. Especially for some timing issues, problems disappear because of the data collection by using the TSSv2 toolset. The data collection starts some logging, which might affect the problems indirectly and change the issue.
+    A3: The TSSv2 toolset may delete all cached information at the start. It also starts the network capturing in a promiscuous mode, which changes the Network Interface Card (NIC) default behaviors. These changes might affect the issue, and the problems may disappear. Especially for particular timing issues, problems disappear because of the TSSv2 toolset's data collection. The data collection starts logging, which might affect the issue indirectly and change the situation.
 
 - Q4: Why is the TSSv2 toolset not responding for a long time?
 
-    A4: In some cases, the operating system built in commands that are run by the TSSv2 toolset might not respond or take a long time to complete. Contact your support representative if you experience this issue.
+    A4: In some cases, the operating system's built-in commands run by the TSSv2 toolset might not respond or take a long time to complete. Contact your support representative if you experience this issue.
 
-- Q5: Do I need to worry about the disk space or anything else when running the TSSv2 toolset for a long time?
+- Q5: Do I need to worry about disk space or anything else when I run the TSSv2 toolset for a long time?
 
-    A5: All TSSv2 tracing is configured to run with ring-buffers, so you can run the toolset for a long time if needed. The TSSv2 toolset also calculates the disk space at the beginning of the data collection, and may exit if there isn't sufficient disk space. If you see high disk usage after starting the TSSv2 toolset or have any other concerns on the disk usage of the toolset, contact your support representative.
+    A5: All TSSv2 tracing is configured to run with ring buffers, so you can run the toolset for a long time if needed. The TSSv2 toolset also calculates disk space at the beginning of the data collection and may exit if there isn't sufficient disk space. If you see high disk usage after starting the TSSv2 toolset or have any other concerns about the disk usage of the toolset, contact your support representative.
 
 - Q6: What should I do if I receive the following security warning when running the *.\\TSSv2.ps1* script?
 
