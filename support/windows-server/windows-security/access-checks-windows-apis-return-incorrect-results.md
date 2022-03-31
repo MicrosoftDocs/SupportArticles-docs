@@ -42,7 +42,7 @@ If you're using the **Effective Access** tab, the tab may display errors or warn
 
 ![Effective permissions error: The share security information is unavailable and was not evaluated for effective access.](./media/access-checks-windows-apis-return-incorrect-results/error-information-unavailable.png)
 
-For details about how to resolve these issues, see [Remote resources including SMB](#remote-resources-including-smb).
+For details about how to resolve these issues, see [Remote resources including SMB](#how-to-obtain-effective-permissions-on-remote-resources-including-smb-shares).
 
 ### Using AuthZ API calls
 
