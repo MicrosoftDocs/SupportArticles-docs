@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "The connection to your mail server timed out" error in Outlook for iOS or Outlook for Android

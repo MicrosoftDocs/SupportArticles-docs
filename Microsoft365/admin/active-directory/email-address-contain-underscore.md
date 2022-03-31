@@ -14,6 +14,7 @@ appliesto:
   - Exchange Online
   - Azure Active Directory
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Office 365 email address contains an underscore character after directory synchronization

@@ -27,6 +27,7 @@ appliesto:
   - Microsoft Office Small Business Edition 2003
   - Microsoft Office Basic Edition 2003
   - Microsoft Office Access 2003
+ms.date: 3/31/2022
 ---
 
 # How to use a setup log to troubleshoot setup problems in Office

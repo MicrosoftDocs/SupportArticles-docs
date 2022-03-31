@@ -14,6 +14,7 @@ ms.reviewer: timothyh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't disable Facebook contact sync for your Office 365 organization
 

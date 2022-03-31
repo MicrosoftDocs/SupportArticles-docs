@@ -19,6 +19,7 @@ appliesto:
   - SharePoint Server 2013
   - Project Online Desktop Client
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Sync with SharePoint tasks list from Project Professional

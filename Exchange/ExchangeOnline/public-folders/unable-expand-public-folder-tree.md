@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Outlook 2013
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # "Your server administrator has limited the number of items you can open simultaneously" error and you can't expand public folders in Outlook

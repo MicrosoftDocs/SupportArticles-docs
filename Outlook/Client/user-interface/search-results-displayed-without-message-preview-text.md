@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Search results are displayed without message preview in Outlook
 

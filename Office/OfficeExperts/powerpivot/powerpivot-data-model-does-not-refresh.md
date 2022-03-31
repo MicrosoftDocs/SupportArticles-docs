@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # PowerPivot data model does not refresh when the SQL Server authentication and "Save Password" are used

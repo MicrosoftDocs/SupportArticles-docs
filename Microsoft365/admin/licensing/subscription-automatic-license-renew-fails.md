@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Office 365 subscription automatic license renewal fails when heartbeatcache is in wrong location

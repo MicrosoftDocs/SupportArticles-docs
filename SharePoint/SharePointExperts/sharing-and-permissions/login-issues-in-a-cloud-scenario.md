@@ -13,6 +13,7 @@ ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - SharePoint Designer 2013
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Designer 2013 login Issues in a cloud scenario

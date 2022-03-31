@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # SharePoint Server doesn't support export/import of subsites with Publishing templates
 

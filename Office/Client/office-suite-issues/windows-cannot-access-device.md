@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office apps for the web
+ms.date: 3/31/2022
 ---
 
 # "Windows cannot access specified device, path, or file" error launching Office

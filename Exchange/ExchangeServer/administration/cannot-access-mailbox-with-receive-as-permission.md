@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to access a mailbox with Receive-As permissions on a mailbox database
 

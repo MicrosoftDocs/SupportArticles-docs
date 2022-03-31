@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You must specify the PrimaryOnly parameter error when moving a primary mailbox to Exchange Online in a hybrid deployment
 

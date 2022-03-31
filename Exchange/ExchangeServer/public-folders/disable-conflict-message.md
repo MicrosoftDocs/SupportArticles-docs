@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
 ms.reviewer: bilong
+ms.date: 3/31/2022
 ---
 # How to disable public folder Conflict Message notification
 

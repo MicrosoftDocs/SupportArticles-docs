@@ -16,6 +16,7 @@ appliesto:
   - Outlook for iOS
   - OneNote for iPhone
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "You cannot access this right now" error when saving items from Outlook for iOS to OneNote

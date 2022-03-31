@@ -14,6 +14,7 @@ appliesto:
   - Access 2010
   - Access 2007
   - Access 2003
+ms.date: 3/31/2022
 ---
 
 # Security Update MS12-060 Impairs Functionality of Access Database

@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appleisto: 
   - Lync 2010
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Lync client has a blank conversation window after joining an instant messaging conference

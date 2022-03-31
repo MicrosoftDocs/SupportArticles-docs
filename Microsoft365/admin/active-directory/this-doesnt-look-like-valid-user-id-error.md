@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "This doesn't look like a valid user ID" error when a user tries to sign in to Office 365

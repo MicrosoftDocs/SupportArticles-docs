@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 # Error when installation of Exchange Edge Transport role fails: Process execution failed with exit code 3
 

@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Server 2016
+ms.date: 3/31/2022
 ---
 
 # You're prompted for credentials when you open documents anonymously in SharePoint Server 2016

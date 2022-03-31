@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # Error message when you run the Office 365 Desktop Setup Tool: "Application configuration incomplete"

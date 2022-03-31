@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # How to view error signatures if an Office program experiences a serious error and quits

@@ -14,6 +14,7 @@ ms.topic: troubleshooting
 ms.author: v-matthamer
 appliesto: 
   - OneDrive
+ms.date: 3/31/2022
 ---
 
 # Searching private content in Microsoft 365 OneDrive for Business

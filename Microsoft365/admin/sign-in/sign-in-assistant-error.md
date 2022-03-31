@@ -12,6 +12,7 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # "Microsoft Online Services Sign In Assistant Error" when you activate Office Professional Plus

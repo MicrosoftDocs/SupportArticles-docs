@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # EWS Application pool crashes because the Exchange Server OAuth certificate is expired

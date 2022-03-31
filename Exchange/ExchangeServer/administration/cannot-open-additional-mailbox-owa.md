@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010 Service Pack 2
+ms.date: 3/31/2022
 ---
 # You can't open an additional mailbox in Outlook Web App after you install Update Rollup 4 for Exchange Server 2010 SP2
 

@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office

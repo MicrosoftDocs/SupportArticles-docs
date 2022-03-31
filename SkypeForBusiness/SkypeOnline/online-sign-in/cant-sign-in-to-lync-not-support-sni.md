@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: romanma, dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You can't sign in to Skype for Business or Lync clients on devices that don't support Server Name Indication (SNI)

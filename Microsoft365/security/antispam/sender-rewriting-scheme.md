@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Sender Rewriting Scheme (SRS) in Office 365

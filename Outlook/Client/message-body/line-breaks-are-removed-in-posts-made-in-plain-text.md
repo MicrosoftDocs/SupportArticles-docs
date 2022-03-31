@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Line breaks are removed in posts made in plain text format in Outlook
 

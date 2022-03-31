@@ -13,6 +13,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Lots of false positives are generated when the "SPF record: hard fail" advanced spam filtering option is enabled

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, lynnroe, cbland
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Total number of phone numbers exceeds the number of PSTN Calling licenses

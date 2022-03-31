@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Multiple meeting invites are sent to attendees
 

@@ -14,6 +14,7 @@ ms.reviewer: benwinz
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Item count from Get-MailboxStatistics shows more items than Get-MailboxFolderStatistics
 

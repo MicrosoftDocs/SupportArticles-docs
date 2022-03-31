@@ -14,6 +14,7 @@ ms.reviewer: v-mosha
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 412 Cookies Are Disabled when you click hybrid in the Exchange admin center
 

@@ -18,6 +18,7 @@ appliesto:
   - Outlook for Office 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The operation failed error when you send email messages in Outlook
 

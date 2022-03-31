@@ -14,6 +14,7 @@ appliesto:
   - Skype for Business Online
   - Lync 2010
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # You're repeatedly prompted for Exchange credentials after you sign in to Lync
