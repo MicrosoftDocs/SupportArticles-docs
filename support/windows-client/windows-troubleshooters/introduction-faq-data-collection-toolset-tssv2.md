@@ -1,5 +1,5 @@
 ---
-title: Introduction and FAQ about the data collection toolset (TSSv2)
+title: Introduction to TroubleShootingScript toolset (TSSv2)
 description: Introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions about the toolset.
 ms.date: 3/29/2022
 author: Deland-Han
@@ -9,11 +9,11 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: kaushika
+ms.reviewer: kaushika, muratka, waltere
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
-# Introduction and FAQ about the data collection toolset (TSSv2)
+# Introduction to TroubleShootingScript toolset (TSSv2)
 
 This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions.
 
