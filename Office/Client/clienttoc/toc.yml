@@ -1120,7 +1120,7 @@
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md
         - name: Fails to clear the Embed Linguistic Data check box
-          href: ../excel/fails-clear-embed-linguistic-data-check-box.md
+          href: ../word/fails-clear-embed-linguistic-data-check-box.md
         - name: Headers and footers remain after removing sensitivity label
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
         - name: How to merge multiple documents
