@@ -1,7 +1,7 @@
 ---
 title: Save As dialog box appears two times
 description: This article provides a resolution for the problem where the Save As dialog box appears two times when you save a file in Word.
-mmanager: dcscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
