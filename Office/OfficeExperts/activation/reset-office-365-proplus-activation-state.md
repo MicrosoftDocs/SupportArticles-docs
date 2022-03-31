@@ -20,6 +20,8 @@ appliesto:
 
 # Reset Microsoft 365 Apps for enterprise activation state
 
+This article is written and maintained by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Senior Support Escalation Engineer, [Matt Philipenko](https://social.technet.microsoft.com/profile/MattPhil+-+MSFT), Microsoft 365 Apps Ranger, and Tim Johnson, Support Escalation Engineer.
+
 In some circumstances, previous activations for Microsoft 365 apps for enterprise must be cleared to remove previous licenses and cached Office account information to reset the application to a clean un-activated state. After that is done, you can then activate with a different Office account or move to a different license mode. Common changes that require this are if users switch devices, an enterprise adds or changes Microsoft 365 tenants, or you are switching an Office desktop client [license mode](/deployoffice/overview-licensing-activation-microsoft-365-apps) on a device, such as moving to use Shared Computer Activation for a shared device.
 
 >[!NOTE]
