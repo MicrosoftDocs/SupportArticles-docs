@@ -2983,4 +2983,4 @@
 - name: Windows Troubleshooters
   items:
   - name: Introduction to TroubleShootingScript toolset (TSSv2)
-    href: ../windows-client/windows-troubleshooters/introduction-faq-data-collection-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
+    href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
