@@ -104,3 +104,12 @@ landingContent:
         links:
           - text: Identify high CPU consuming containers
             url: ./identify-high-cpu-consuming-containers-aks.md
+
+# Card 
+  - title: Troubleshoot upgrade issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Upgrade fails because of NSG rules
+            url: ./troubleshoot-upgrade-errors#upgrade-fails-because-of-nsg-rules
+
