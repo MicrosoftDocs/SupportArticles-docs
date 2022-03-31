@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: jasco, landerl, corbinm, dougl
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Bandwidth requirements for Skype Meeting Broadcast

@@ -15,6 +15,7 @@ ms.reviewer: aruiz
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Windows Mail app not blocked despite ActiveSync organization settings

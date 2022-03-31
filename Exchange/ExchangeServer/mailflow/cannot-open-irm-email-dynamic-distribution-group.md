@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Microsoft 365 Business
   - Outlook
+ms.date: 3/31/2022
 ---
 # Can't view Office 365 IRM-encrypted message for dynamic distribution group
 

@@ -17,6 +17,7 @@ appliesto:
   - Lync 2013
   - Microsoft Office Communications Online Dedicated
   - Microsoft Business Productivity Online Dedicated
+ms.date: 3/31/2022
 ---
 
 # You can't set your location in Lync from a virtual machine or remote desktop connection

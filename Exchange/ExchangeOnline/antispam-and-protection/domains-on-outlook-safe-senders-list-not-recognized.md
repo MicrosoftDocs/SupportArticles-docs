@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Domains on the Outlook Safe Senders list aren't recognized by Exchange Online or Exchange Online Protection
 

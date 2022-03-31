@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "There is a problem with this website's security certificate" error when a federated user signs out of Office 365, Intune, or Azure

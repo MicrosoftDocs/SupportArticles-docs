@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Microsoft Lync 2013
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Info about AllowAdalForNonLyncIndependentOfLync setting in Skype for Business, Lync 2013, and Exchange Online
@@ -46,7 +47,7 @@ After you apply this setting to the client computer, the environment functionali
 > [!NOTE]
 > This setting is not required for cloud-only topologies or if Exchange and Skype for Business are both configured for a hybrid environment that has Modern Authentication enabled. For detailed information about the topologies, see [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported).  
 
-In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as described in [Skype for Business topologies supported with Modern Authentication](https://apac01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fskypeforbusiness%2Fplan-your-deployment%2Fmodern-authentication%2Ftopologies-supported&data=02%7C01%7Cv-maqiu%40microsoft.com%7C4cf5a5f0b7f64bf7f72a08d67676eda0%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C636826650522806131&sdata=Cr7cSWF6yx97e2HiCEFxjogtuSB8X8ddn7I1bN2VLcQ%3D&reserved=0)), you have to set the **AllowADALForNonLynIndependentOfLync** registry key correctly for Windows desktop clients.
+In some cases (specifically, Mixed 1, Mixed 3, and Mixed 5 topologies as described in [Skype for Business topologies supported with Modern Authentication](/skypeforbusiness/plan-your-deployment/modern-authentication/topologies-supported)), you have to set the **AllowADALForNonLynIndependentOfLync** registry key correctly for Windows desktop clients.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.

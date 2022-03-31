@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Manage the Google sign-in prompt in Outlook 2016 for Mac
 

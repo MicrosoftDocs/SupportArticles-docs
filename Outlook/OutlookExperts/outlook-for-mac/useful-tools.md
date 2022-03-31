@@ -12,6 +12,7 @@ ms.custom: sap:outlookexperts, CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Outlook for Mac for Office 365
+ms.date: 3/31/2022
 ---
 
 # Outlook for Mac support tools

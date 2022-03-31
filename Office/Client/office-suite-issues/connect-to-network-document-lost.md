@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: antoa, alexze
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Connection to a network document is lost in the 2007 Office system or in Office 2010 after the computer resumes from standby

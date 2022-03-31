@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Office 365

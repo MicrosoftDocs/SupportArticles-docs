@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2016
   - SharePoint Server 2019
+ms.date: 3/31/2022
 ---
 
 # "Sorry, something went wrong" error when you try to save a site as a template in SharePoint Online or SharePoint Server

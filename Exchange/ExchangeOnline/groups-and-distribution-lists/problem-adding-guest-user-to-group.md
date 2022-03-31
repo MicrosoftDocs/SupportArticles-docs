@@ -14,6 +14,7 @@ ms.reviewer: kunalsh, ninob
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Problem adding one or more people to the group when you add an external contact as a guest in Office 365
 

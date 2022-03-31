@@ -13,6 +13,7 @@ ms.reviewer: joroar, mikedem
 appliesto: 
   - SharePoint Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users in any domain in the trusted forest receive No exact match was found People Picker error
 

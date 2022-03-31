@@ -16,6 +16,7 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
+ms.date: 3/31/2022
 ---
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security

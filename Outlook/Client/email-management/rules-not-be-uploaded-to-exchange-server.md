@@ -20,6 +20,7 @@ appliesto:
   - Outlook 2010
   - Office Outlook 2007
   - Office Outlook 2003
+ms.date: 3/31/2022
 ---
 # Some rules are disabled, and you receive an error message when you try to create or enable rules in Outlook
 

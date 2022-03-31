@@ -19,6 +19,7 @@ appliesto:
   - SharePoint Server 2010
   - SharePoint Designer 2013
   - SharePoint Designer 2010
+ms.date: 3/31/2022
 ---
 # "Access Denied" error when a SharePoint 2010 workflow sends an email to a group
 

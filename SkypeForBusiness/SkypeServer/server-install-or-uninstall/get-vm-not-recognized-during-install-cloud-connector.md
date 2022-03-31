@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Cloud Connector Edition
+ms.date: 3/31/2022
 ---
 
 # "The term 'Get-VM' is not recognized as the name of a cmdlet ..." error during install of Cloud Connector Edition

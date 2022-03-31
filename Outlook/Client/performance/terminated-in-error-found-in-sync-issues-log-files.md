@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Terminated in error found in Outlook Sync Issues log files
 

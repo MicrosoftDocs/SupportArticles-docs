@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: meerak
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 
 # Increase or customize Exchange Online mailbox size

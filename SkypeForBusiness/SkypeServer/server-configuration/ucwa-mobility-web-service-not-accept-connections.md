@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync Server 2013 UCWA mobility web service does not accept connections from Lync 2013 mobile clients

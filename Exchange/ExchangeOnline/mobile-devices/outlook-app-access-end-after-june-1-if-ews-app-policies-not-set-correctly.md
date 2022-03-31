@@ -16,6 +16,7 @@ appliesto:
   - Outlook for Android
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook app access may end after June 1 if EWS application policies are not set up correctly
 

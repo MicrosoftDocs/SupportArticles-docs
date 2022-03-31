@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel 2000
+ms.date: 3/31/2022
 ---
 
 # Error Message: That command cannot be used on multiple selections

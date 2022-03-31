@@ -14,6 +14,7 @@ ms.reviewer: jeknight
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # DataStrings.InvalidSmtpDomainName(domain) error when running Office 365 Hybrid Configuration wizard
 

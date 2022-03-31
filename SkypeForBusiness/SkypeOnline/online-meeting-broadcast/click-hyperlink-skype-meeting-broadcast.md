@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Server Error in '/' Application" error after you click the hyperlink for the Skype Meeting Broadcast portal in Word or OneNote

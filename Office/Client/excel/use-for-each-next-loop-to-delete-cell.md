@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2002
   - Excel 97
+ms.date: 3/31/2022
 ---
 
 # Delete cells by using a "For Each...Next" loop in Excel

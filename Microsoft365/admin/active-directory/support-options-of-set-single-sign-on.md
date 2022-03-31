@@ -5,14 +5,15 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 ms.reviewer: willfid
-appliesto:
-- Office Products
+appliesto: 
+  - Office Products
+ms.date: 3/31/2022
 ---
 
 # Support options for setting up single sign-on for Office 365

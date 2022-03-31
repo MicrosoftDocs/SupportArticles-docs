@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
+ms.date: 3/31/2022
 ---
 # Edge Transport servers reject messages sent to valid recipients
 

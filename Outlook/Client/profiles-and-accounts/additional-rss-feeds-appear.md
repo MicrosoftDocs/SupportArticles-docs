@@ -15,6 +15,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
   - Outlook
+ms.date: 3/31/2022
 ---
 
 # Additional RSS feeds appear in Outlook after a user signs in to Office 365 on a new computer

@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
 # How to enable coauthoring for OneDrive-synced files in Office 365

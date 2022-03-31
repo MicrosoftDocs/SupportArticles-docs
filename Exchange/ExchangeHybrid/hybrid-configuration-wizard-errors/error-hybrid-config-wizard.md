@@ -14,6 +14,7 @@ ms.reviewer: ninob
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # ADSTS50011 error when running the Hybrid Configuration Wizard

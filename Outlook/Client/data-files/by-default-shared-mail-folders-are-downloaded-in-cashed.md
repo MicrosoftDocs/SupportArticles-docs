@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Shared mail folders are downloaded in Cached mode by default in Outlook 2010 and later versions 
 

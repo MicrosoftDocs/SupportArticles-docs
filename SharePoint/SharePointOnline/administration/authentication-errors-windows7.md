@@ -17,6 +17,7 @@ appliesto:
   - SharePoint Online
   - Windows 7
   - Windows 8
+ms.date: 3/31/2022
 ---
 
 # Authentication errors when connecting to SharePoint or OneDrive from Windows 7 or 8

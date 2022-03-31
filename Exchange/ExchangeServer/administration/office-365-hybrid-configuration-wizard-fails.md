@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error from Office 365 Hybrid Configuration Wizard: Object not set to an instance of an object
 

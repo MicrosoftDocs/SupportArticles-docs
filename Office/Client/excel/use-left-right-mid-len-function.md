@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # Use the left, right, mid, and len functions in Visual Basic for Applications in Excel

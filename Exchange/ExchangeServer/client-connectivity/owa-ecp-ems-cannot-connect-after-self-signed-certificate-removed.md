@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to open OWA, ECP, or EMS after a self-signed certificate is removed from the Exchange Back End website
 

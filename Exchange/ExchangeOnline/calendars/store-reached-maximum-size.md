@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (Message store has reached its maximum size) error when an Office 365 user tries to delete an item in Outlook or Outlook on the Web
 

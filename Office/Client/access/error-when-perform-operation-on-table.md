@@ -20,6 +20,7 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table

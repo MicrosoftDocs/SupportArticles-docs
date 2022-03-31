@@ -15,6 +15,7 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Methods for transferring data to Excel from Visual Basic

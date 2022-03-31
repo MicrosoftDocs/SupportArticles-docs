@@ -12,6 +12,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 ms.author: ericspli
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # How to automate the uninstallation of an Office update programmatically

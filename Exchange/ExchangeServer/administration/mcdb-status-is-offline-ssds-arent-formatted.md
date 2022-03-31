@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # MCDB status is "Offline" and SSDs are not formatted in Exchange Server 2019
