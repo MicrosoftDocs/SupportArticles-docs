@@ -17,7 +17,7 @@ ms.technology: windows-client-troubleshooter
 
 This article introduces the TroubleShootingScript Version 2 (TSSv2) toolset and provides answers to frequently asked questions.
 
-_Applies to_: Supported versions of Windows Server and Windows Client
+_Applies to:_ &nbsp; Supported versions of Windows Server and Windows Client
 
 The TSSv2 toolset includes PowerShell-based tools and a framework for data collection and diagnostics. The toolset aims to resolve customer support cases efficiently and securely.
 
@@ -57,7 +57,7 @@ Here are the steps for the logs collection and sharing process:
 1. The support representative identifies the problem and provides a certain TSSv2 cmdlet to collect the proper logs.
 2. Download the *TSSv2.zip* file and copy the file to the affected systems.
 3. Extract the *TSSv2.zip* file to a local folder in the affected systems, and run the TSSv2 cmdlet(s) from an elevated PowerShell command prompt simultaneously.  
-4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterward.
+4. When the issue is reproduced, stop the TSSv2 toolset by pressing any key. The logs are automatically zipped by TSSv2 afterwards.
 5. Upload the logs to a Microsoft secure file transfer site, which the support representative provides.
 
 The support representative will work on the logs for further troubleshooting and provide the next action plan.
