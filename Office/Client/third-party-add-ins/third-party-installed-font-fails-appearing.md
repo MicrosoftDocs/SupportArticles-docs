@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Word for Mac
+ms.date: 3/31/2022
 ---
 
 # Third-party installed font does not appear in the font list in Word for Mac

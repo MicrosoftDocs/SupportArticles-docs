@@ -14,6 +14,7 @@ ms.reviewer: timothyh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Free/busy lookups between Exchange Online and on-premises users don't work as expected
 

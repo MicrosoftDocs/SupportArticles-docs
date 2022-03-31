@@ -18,6 +18,7 @@ ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Authentication errors occur when client doesn't have TLS 1.2 support

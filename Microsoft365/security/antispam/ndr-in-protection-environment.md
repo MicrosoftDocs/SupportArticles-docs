@@ -14,6 +14,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users in an Exchange Online Protection environment receive NDRs when they send mail to a recipient environment that uses the China Anti-Spam Alliance service
 

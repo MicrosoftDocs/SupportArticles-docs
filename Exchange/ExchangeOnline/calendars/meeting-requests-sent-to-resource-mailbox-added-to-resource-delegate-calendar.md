@@ -14,6 +14,7 @@ ms.reviewer: gabesl
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Meeting requests sent to resource mailbox in on-premises are added to resource delegate's calendar migrated to cloud
 

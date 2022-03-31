@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Conversation history, contact cards, Free/Busy, and Out of Office information are unavailable when Lync fails to connect to Exchange

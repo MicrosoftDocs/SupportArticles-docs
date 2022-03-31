@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # VSS_E_WRITERERROR_RETRYABLE error when backing up a passive database copy in an Exchange DAG
 

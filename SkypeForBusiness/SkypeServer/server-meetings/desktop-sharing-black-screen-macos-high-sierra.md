@@ -13,6 +13,7 @@ ms.author: v-six
 appliesto: 
   - Skype for Business Web App
   - Lync Web App
+ms.date: 3/31/2022
 ---
 
 # Black screen during desktop sharing in Skype for Business or Lync Web App on macOS High Sierra

@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business Online
   - Lync for Mac 2011
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # Users are unable to modify their contact lists in Lync 2010 and Lync for Mac 2011

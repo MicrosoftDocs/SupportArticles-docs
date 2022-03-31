@@ -17,6 +17,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # File association errors opening databases by double-clicking in Access
 

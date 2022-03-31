@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 

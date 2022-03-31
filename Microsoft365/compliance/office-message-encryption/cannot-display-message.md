@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "We can't display your message right now" error in Outlook Web App when an Exchange Online user views an encrypted message

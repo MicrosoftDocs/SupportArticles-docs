@@ -19,6 +19,7 @@ appliesto:
   - Azure Backup
   - Office 365 User and Domain Management
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "The user name or password is incorrect" when you use connect-MSOLService to connect to Office 365

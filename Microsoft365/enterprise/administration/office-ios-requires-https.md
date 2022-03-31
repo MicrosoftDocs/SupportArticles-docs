@@ -10,11 +10,12 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 160526
-- CI 161252
+  - CSSTroubleshoot
+  - CI 160526
+  - CI 161252
 appliesto: 
   - Office app for iOS
+ms.date: 3/31/2022
 ---
 
 # Office app for iOS requires HTTPS to connect to server resources

@@ -16,6 +16,7 @@ appliesto:
   - Access 2013
   - Access for Office 365
   - Access 2019
+ms.date: 3/31/2022
 ---
 
 # Access freezes when you open a linked table to a SharePoint list

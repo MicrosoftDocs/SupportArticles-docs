@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: xl15beta, brampson, jenl
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Inquire COM add-in options do not respond in Excel 2013

@@ -14,6 +14,7 @@ ms.reviewer: chwillia
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # One or more users cannot be added to the folder access list error when adding public folder permissions in Outlook
 

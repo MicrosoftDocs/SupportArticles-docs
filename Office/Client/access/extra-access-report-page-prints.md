@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # ACCESS 2010: Extra report page prints when Group Footer set to After Section

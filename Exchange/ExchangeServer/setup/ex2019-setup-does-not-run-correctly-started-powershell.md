@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 
 # Exchange Server 2019 setup does not run as expected if started from PowerShell using Setup.exe

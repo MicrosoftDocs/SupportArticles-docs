@@ -13,6 +13,7 @@ ms.reviewer: rrajan
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Email messages redirected from one mailbox to another mailbox through an Inbox rule are marked as SPAM

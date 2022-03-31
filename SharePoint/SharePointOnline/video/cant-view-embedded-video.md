@@ -14,6 +14,7 @@ ms.custom:
   - CI 149683
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Can’t view embedded Stream video in Teams app

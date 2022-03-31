@@ -14,6 +14,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel or Word attachment
 

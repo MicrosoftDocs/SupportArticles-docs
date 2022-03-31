@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Office 2013 Service Pack 1
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Contact and Calendar items are lost after you delete an IMAP account in Outlook 2013
 

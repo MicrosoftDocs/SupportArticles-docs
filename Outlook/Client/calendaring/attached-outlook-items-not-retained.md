@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2016
   - Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Attached Outlook items not retained in Office 365 Group Calendar meeting or appointment
 

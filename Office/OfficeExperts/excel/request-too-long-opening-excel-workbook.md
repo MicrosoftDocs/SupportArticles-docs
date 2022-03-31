@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: thempel
 appliesto: 
   - Excel Online
+ms.date: 3/31/2022
 ---
 
 # "Request Was Taking Too Long" when you open a workbook in Excel Online

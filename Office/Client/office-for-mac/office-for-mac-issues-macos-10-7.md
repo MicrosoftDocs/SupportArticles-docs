@@ -14,6 +14,7 @@ appliesto:
   - Office for Mac 2004
   - Office for Mac 2008
   - Office for Mac 2011
+ms.date: 3/31/2022
 ---
 
 # Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Server
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Online users can't present content in on-premises hosted meetings in a Skype for Business hybrid deployment

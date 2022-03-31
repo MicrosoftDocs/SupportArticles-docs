@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Provider-hosted add-ins stop working and HTTP 401 error after you configure SharePoint farm hybrid features  

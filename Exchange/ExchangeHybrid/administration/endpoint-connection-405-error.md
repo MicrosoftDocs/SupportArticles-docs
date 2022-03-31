@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # FederationInformation could not be received or 405 Method Not Allowed in a hybrid deployment
 

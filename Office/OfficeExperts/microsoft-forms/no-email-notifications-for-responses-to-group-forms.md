@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: zakirh
 appliesto: 
   - Microsoft Forms
+ms.date: 3/31/2022
 ---
 # No email notifications for responses to Group Forms
 

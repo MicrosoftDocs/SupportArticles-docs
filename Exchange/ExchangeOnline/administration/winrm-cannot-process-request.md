@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (WinRM client cannot process the request) error when you connect to Exchange Online through remote Windows PowerShell
 

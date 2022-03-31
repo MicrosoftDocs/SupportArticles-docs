@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: Rtaylor
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support

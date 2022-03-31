@@ -14,6 +14,7 @@ ms.reviewer: aruiz
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # An attachment does not appear in a Plain Text message in Outlook 2016
 

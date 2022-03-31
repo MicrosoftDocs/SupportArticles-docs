@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, dahans, kristinw, chanh, corbinm, rorylen
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "We couldn't sign you in" when you click the Skype button in Office Online on SharePoint Online

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Server
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Blank lines are truncated when a message is moved from online mode to a PST file
 

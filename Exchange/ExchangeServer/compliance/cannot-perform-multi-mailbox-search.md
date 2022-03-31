@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when you perform a multi-mailbox search in Exchange Server 2010: The user does not have an exchange mailbox
 

@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You can't add yourself to the Members list in the "Event team" area when you create a Skype Meeting Broadcast

@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # How to collect ActiveSync device logs to troubleshoot sync issues between mobile devices and Exchange Online
 

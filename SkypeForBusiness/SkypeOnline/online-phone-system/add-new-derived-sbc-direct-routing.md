@@ -15,6 +15,7 @@ ms.author: scapero
 ms.reviewer: scapero
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Error when adding a new derived SBC for Direct Routing: Cannot find specified Gateway 

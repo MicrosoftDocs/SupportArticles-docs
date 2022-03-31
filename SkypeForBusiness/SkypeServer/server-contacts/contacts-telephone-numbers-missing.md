@@ -16,6 +16,7 @@ appliesto:
   - Lync Basic 2013
   - Skype for Business
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Telephone numbers of contacts are missing in Lync 2013 or Skype for Business

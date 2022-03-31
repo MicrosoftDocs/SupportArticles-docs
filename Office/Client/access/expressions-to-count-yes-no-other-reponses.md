@@ -18,6 +18,7 @@ appliesto:
   - Access 2003
   - Access 2002
   - Access 2000
+ms.date: 3/31/2022
 ---
 
 # Description of the expressions to count yes, no, and other responses in Access

@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft PowerPoint
+ms.date: 3/31/2022
 ---
 
 # "Not enough printer memory available to print page" when you print a presentation in PowerPoint
