@@ -92,15 +92,15 @@ Build a list of trusted sites to use during your investigation.
 
 Don't overlook these valuable resources! Visit these sites and search using their own search engines.
 
-**Forums**
+**Forums**:
 
-- TechNet forums: [https://social.technet.microsoft.com/Forums/en-US/home](https://social.technet.microsoft.com/Forums/en-US/home)
-- Microsoft Q&A: [/answers/index.html](/answers/index.html)
-- Consumer or end-user forum: [https://answers.microsoft.com/](https://answers.microsoft.com/)
+- [TechNet forums](https://social.technet.microsoft.com/Forums/en-US/home)
+- [Microsoft Q&A](/answers/index.html)
+- [Consumer or end-user forum](https://answers.microsoft.com/)
 
-**Blogs**
+**Blogs**:
 
-- [https://techcommunity.microsoft.com/](https://techcommunity.microsoft.com/)
+- [Microsoft Tech Community](https://techcommunity.microsoft.com/)
 
 ## Microsoft Support Portals (An overlooked resource for troubleshooting)
 
