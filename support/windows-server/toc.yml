@@ -2914,6 +2914,8 @@
       href: ./windows-security/ntlm-user-authentication.md
     - name: Performance tuning for NTLM authentication
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
+    - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
+      href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md      
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
