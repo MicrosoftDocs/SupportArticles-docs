@@ -556,6 +556,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/restrict-usb-with-administrative-template.md",
+      "redirect_url": "/mem/intune/configuration/administrative-templates-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
       "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
       "redirect_document_id": false
