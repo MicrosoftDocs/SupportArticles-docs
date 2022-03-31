@@ -25,6 +25,7 @@ appliesto:
   - Outlook for iOS
   - Outlook for Android
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unintentional emails received in Outlook
 

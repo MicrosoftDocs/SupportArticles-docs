@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Senders don't receive Out of Office notifications from a Microsoft 365 user when Forwarding is enabled
 

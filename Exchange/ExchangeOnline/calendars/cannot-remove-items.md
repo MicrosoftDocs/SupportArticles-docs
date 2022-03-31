@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
+ms.date: 3/31/2022
 ---
 # You can't remove a calendar item or an email message in Outlook in Office 365
 

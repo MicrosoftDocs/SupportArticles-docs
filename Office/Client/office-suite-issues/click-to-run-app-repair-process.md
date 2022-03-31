@@ -20,6 +20,7 @@ appliesto:
   - Office Professional 2013
   - Office Home and Student 2013
   - Office Home and Business 2013
+ms.date: 3/31/2022
 ---
 
 # Repair process for an Office Click-to-Run application does not start

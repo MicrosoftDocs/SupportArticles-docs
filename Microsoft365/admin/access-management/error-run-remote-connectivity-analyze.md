@@ -13,6 +13,7 @@ ms.author: v-maqiu
 ms.reviewer: nical, smcgrath, bradh, jason
 appliesto: 
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "To authenticate to Office 365, you must enter your Microsoft account" when you run the Remote Connectivity Analyzer tool to test connectivity to Office 365

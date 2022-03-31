@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Access 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Results don't appear when you run a query linked SQL Server tables from different sources
 

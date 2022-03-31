@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when you use the IgnoreRuleLimitErrors switch in the New-MoveRequest cmdlet in Exchange Server 2013 - MapiExceptionPartialCompletion: Unable to copy to target
 

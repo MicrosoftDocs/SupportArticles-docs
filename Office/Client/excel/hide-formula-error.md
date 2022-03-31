@@ -16,6 +16,7 @@ appliesto:
   - Excel 2002
   - Excel 2000
   - Excel 97
+ms.date: 3/31/2022
 ---
 
 # Sample user-defined function to hide formula errors in Excel

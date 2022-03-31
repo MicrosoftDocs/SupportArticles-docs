@@ -14,6 +14,7 @@ ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How Azure AD Connect works in Office 365
 

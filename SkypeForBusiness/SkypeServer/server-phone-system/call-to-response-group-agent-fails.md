@@ -13,6 +13,7 @@ ms.reviewer: miadkins
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Lync Server
+ms.date: 3/31/2022
 ---
 
 # Call to Microsoft Lync Server Response Group Agent fails

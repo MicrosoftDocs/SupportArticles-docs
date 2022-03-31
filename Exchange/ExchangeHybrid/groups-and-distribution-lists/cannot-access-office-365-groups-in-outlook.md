@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users in an Exchange hybrid deployment can't access Office 365 groups in Outlook 2016, Outlook 2019, and Outlook for Office 365
 

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The domain of the recipient is not configured as part of connector when you validate a connector
 

@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Event ID 1649 - A TLS failure occurred because the remote server disconnected while TLS negotiation was in progress.

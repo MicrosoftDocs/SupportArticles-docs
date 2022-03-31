@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business
+ms.date: 3/31/2022
 ---
 
 # Error when you sign in to Skype for Business in a German Office 365 environment

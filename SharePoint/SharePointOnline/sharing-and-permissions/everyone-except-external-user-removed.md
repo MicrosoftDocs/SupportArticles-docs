@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Everyone except external users" group is removed on Office 365 private group website

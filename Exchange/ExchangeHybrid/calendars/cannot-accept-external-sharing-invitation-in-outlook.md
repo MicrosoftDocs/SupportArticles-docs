@@ -14,6 +14,7 @@ ms.reviewer: kellybos, aruiz, kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to accept an external sharing invitation by using Outlook in a hybrid environment
 

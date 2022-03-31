@@ -14,6 +14,7 @@ ms.reviewer: arvaradh, sadhil
 appliesto: 
   - Office 365 Planner
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Guests can't add comments to assigned Planner tasks
 

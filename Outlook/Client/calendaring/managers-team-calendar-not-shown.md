@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook doesn't display your manager's team calendars
 

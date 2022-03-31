@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 
 # User cannot create an appointment or all day event in the calendar of a shared mailbox in an Exchange Server 2007 or 2010 environment

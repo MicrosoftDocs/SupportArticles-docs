@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Cannot migrate on-premises archive mailboxes to Office 365 in a hybrid migration

@@ -12,6 +12,7 @@ ms.author: arhinesm
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - PowerPoint Web App
+ms.date: 3/31/2022
 ---
 
 # Increasing the size limit of embedded media for the Microsoft PowerPoint Online

@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Office 2010 Click-to-Run compatibility with add-ins

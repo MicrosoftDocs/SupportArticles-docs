@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Word 2010
+ms.date: 3/31/2022
 ---
 
 # Spell Check does not work in Word 2010

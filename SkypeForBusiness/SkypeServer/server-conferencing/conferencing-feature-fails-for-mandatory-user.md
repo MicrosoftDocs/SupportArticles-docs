@@ -14,6 +14,7 @@ appliesto:
   - Lync 2010
   - Lync 2010 Attendee
   - Microsoft Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Lync conferencing feature fails when the user is signed in using a mandatory user profile

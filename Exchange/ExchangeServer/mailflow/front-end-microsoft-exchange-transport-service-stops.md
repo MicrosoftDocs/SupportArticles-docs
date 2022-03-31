@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2016 Enterprise Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The front-end Microsoft Exchange Transport service stops and doesn't restart in Exchange Server 2013 SP1 or Exchange Server 2016
 

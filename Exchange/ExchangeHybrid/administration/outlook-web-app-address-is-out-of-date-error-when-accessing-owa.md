@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook Web App address \<URL> is out of date error when users try to access Outlook Web App
 

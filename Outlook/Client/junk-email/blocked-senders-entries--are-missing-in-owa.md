@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Blocked Senders entries in Outlook are missing in Outlook Web App
 

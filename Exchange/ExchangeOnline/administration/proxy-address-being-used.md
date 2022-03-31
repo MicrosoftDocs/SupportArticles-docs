@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # "Proxy address is already being used" error message in Exchange Online
 

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The rule can't be created because it is too large when you create or change a transport rule
 

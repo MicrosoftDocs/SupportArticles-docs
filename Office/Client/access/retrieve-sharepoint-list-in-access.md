@@ -15,6 +15,7 @@ appliesto:
   - Access 2013
   - Access 2010
   - Access for Office 365
+ms.date: 3/31/2022
 ---
 
 # Issues when you retrieve SharePoint list data in Access

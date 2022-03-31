@@ -14,6 +14,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Site deletion error: “The requested operation is not supported for site”  

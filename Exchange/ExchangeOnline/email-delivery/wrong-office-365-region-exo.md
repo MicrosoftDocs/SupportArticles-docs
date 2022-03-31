@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Online
   - Exchange Online Protection
+ms.date: 3/31/2022
 ---
 # ATTR35 response code when mail is sent to EOP/EXO
 

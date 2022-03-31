@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # HTTPS linked images in HTML emails display the red X
 

@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
+ms.date: 3/31/2022
 ---
 # Newly created move request remains in queued status forever in Exchange Server 2013 or Exchange Server 2016
 

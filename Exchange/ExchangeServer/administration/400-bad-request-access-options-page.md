@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
+ms.date: 3/31/2022
 ---
 # Error when a user accesses the Options page in Exchange Server 2010: 400 Bad Request
 

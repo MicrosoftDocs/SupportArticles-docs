@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # How to prevent users from creating and managing distribution groups in Office 365
 

@@ -12,6 +12,7 @@ ms.author: zakirh
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Sway
+ms.date: 3/31/2022
 ---
 
 # File size limit error when you upload files to Sway

@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft PowerPoint
+ms.date: 3/31/2022
 ---
 
 # "Hlink.dll Can't Be Loaded" or "PowerPoint Failed to Load Hlink.dll" in a PowerPoint presentation

@@ -14,6 +14,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Contents of cloud-based archive are the same as contents of on-premises primary mailbox
 

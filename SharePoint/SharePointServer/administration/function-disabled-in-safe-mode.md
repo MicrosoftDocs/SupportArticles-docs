@@ -13,6 +13,7 @@ ms.reviewer: patrigan
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Workspace 2010
+ms.date: 3/31/2022
 ---
 
 # Functions that are disabled in safe mode in SharePoint Workspace

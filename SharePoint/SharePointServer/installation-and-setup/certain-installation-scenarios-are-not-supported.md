@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Certain Microsoft SharePoint Server 2013 installation scenarios are not supported  

@@ -13,6 +13,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Changes to a data loss prevention policy don't take effect in Outlook 2013 in Office 365

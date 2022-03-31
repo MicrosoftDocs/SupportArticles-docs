@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, dougl, lynnroe, cbland, rischwen, leonarwo, msp, romanma, tonyq
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # The "Create Outlook invitation" link isn't available in Skype Meeting Broadcast

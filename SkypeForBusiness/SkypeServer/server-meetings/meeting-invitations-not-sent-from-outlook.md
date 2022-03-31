@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business
+ms.date: 3/31/2022
 ---
 
 # Meeting invitations are not sent from Outlook in Skype for Business

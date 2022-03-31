@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Incoming Lync To Phone calls aren't transferred to Exchange Online Unified Messaging voice mail
