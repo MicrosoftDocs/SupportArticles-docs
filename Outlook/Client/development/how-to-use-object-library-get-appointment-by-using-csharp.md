@@ -11,6 +11,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # How to use the Microsoft Outlook Object Library to retrieve an appointment by using Visual C\#
 

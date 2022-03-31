@@ -21,6 +21,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, randyto
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 

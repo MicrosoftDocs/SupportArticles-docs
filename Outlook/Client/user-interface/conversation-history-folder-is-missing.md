@@ -14,6 +14,7 @@ search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Conversation History folder is missing in Outlook
 

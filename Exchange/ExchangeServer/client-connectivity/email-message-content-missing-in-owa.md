@@ -13,6 +13,7 @@ search.appverid: MET150
 ms.reviewer: mataylor, wduff
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 
 # Email message content is missing in OWA

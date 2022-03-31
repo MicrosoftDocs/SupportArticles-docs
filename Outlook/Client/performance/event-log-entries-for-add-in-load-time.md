@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: gregmans
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Outlook application event log entries for add-in load time
 

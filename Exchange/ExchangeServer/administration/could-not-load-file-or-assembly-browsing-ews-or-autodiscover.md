@@ -11,6 +11,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Could not load file or assembly error occurs when browsing the Exchange EWS or Autodiscover sites
 

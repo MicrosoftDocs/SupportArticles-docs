@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: dthayer, aruiz
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Outlook 2010 crashes unexpectedly at startup
 
@@ -49,13 +50,13 @@ To remove only the Outlook component, follow these steps:
 
 For Windows XP:
 
-1. Select **Start**, select **Run**, type *appwiz.cpl* in the **Open** box, and then press ENTER.
+1. Select **Start**, select **Run**, type _appwiz.cpl_ in the **Open** box, and then press ENTER.
 2. If Outlook was installed as a standalone product, select Outlook from the application list, and then select **Remove**.
 3. If Outlook was installed as a part of an Office suite, select the Office product from the application list, and then select **Change**. Use the **Add or Remove Features** option to remove the Outlook application (or set it to "Not Available").
 
 For Windows Vista and Windows 7:
 
-1. Select **Start**, type *programs and features* in the **Search** box, and then press ENTER.
+1. Select **Start**, type _programs and features_ in the **Search** box, and then press ENTER.
 2. If Outlook was installed as a standalone product, select Outlook from the list of installed products. Then, select **Uninstall** from the bar that displays the available tasks.
 3. If Outlook was installed as a part of an Office suite, select the Office product from the list of installed products. Then, select **Change** from the bar that displays the available tasks. Use the **Add or Remove Features** option to remove the Outlook application (or set it to "Not Available").
 
@@ -65,11 +66,11 @@ To repair Office 2010 on your system, follow these steps:
 
 For Windows XP:
 
-1. Select **Start**, select **Run**, type *appwiz.cpl* in the **Open** box, and then press ENTER.
+1. Select **Start**, select **Run**, type _appwiz.cpl_ in the **Open** box, and then press ENTER.
 2. Select **Microsoft Office 2010** from the list, and then select **Change**.
 3. In the Microsoft Office setup dialog that appears, choose **Repair**, then select **Continue**.
 
 For Windows Vista and Windows 7:
 
-1. Select **Start**, type *programs and features* in the **Search** box, and then press ENTER.
+1. Select **Start**, type _programs and features_ in the **Search** box, and then press ENTER.
 2. In the list of installed programs, right-click **Microsoft Office 2010**, and then select **Repair**.

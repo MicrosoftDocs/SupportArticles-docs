@@ -15,6 +15,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, robevans 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 
 # Outlook crashes when you open a meeting that contains Lync meeting details

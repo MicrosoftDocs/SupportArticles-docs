@@ -20,6 +20,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Items disappear or are not visible in an Outlook folder
 

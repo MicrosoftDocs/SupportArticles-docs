@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Email may not be delivered at the scheduled time when the "Do not deliver before" option is enabled in an Outlook message
 

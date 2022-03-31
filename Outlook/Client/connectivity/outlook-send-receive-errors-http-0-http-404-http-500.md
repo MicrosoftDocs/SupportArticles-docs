@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: rakeshs, aruiz
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Outlook send/receive errors HTTP 0, HTTP 404, HTTP 500
 

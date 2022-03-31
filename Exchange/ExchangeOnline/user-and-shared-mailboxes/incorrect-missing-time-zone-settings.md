@@ -11,6 +11,7 @@ search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 
 # Time zone settings are incorrect or missing for multiple mailboxes in Office 365

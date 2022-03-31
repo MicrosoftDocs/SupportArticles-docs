@@ -13,6 +13,7 @@ search.appverid: MET150
 ms.reviewer: akashb, aruiz
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # 0x80040109 error when Outlook Object Model is used with an IMAP account in Outlook 2013
 

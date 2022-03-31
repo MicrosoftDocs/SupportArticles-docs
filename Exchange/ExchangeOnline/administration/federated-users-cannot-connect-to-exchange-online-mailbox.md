@@ -15,6 +15,7 @@ search.appverid: MET150
 ms.reviewer: willfid
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Federated users can't connect to an Exchange Online mailbox
 

@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: aruiz, sercast
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # "Access is denied" error when you click an "outlook:\\\\" link to a public folder in Outlook 2010 or Outlook 2013
 

@@ -12,6 +12,7 @@ search.appverid: MET150
 ms.reviewer: devmore, aruiz
 author: simonxjx
 ms.author: v-six
+ms.date: 3/31/2022
 ---
 # Meeting request sent in Outlook 2010 lacks Where and When text in body
 
