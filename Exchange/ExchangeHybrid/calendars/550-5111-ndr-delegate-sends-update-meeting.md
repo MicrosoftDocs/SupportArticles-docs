@@ -15,8 +15,6 @@ ms.date: 3/31/2022
 ---
 # "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Office 365 hybrid environment
 
-_Original KB number:_ &nbsp; 4039597
-
 ## Symptoms
 
 Consider the following scenario:

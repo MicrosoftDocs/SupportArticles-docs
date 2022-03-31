@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Custom error module does not recognize this error" error when you use an OWA web part URL
 
-_Original KB number:_ &nbsp; 3021827
-
 ## Symptoms
 
 When you try to access a shared mailbox folder by using a specially crafted web part URL for Microsoft Outlook Web App (OWA), you receive the following error message:

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Owner cannot create modern public folders by using Outlook in Exchange Server 2013 or Exchange Server 2016
 
-_Original KB number:_ &nbsp; 3035230
-
 ## Symptoms
 
 Assume that you are the owner of a public folder mailbox or have sufficient access permissions to create a public folder in a Microsoft Exchange Server 2013 or Microsoft Exchange Server 2016 environment. The mailbox uses the secondary hierarchy as the default public folder mailbox. In this situation, when you try to create a public folder by using Microsoft Outlook, you receive the following error message:

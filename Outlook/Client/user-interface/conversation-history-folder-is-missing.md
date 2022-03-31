@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Conversation History folder is missing in Outlook
 
-_Original KB number:_ &nbsp; 4012887
-
 ## Symptoms
 
 Scenario 1

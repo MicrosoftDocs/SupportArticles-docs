@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Outlook crashes when you open a meeting that contains Lync meeting details
 
-_Original KB number:_ &nbsp; 3017283
-
 ## Symptoms
 
 When you open a meeting that contains details from a Lync meeting or another online meeting in Microsoft Outlook 2013 or Outlook 2010, Outlook crashes. Additionally, in the Application log, you may find one or more of the following crash signatures in event ID 1000:

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "Active Directory property ‎'homeMDB‎' isn't writeable on recipient" error when moving a mailbox to Office 365
 
-_Original KB number:_ &nbsp; 4131514
-
 ## Symptoms
 
 When you move an on-premises Exchange mailbox to Office 365, you receive the following error message:

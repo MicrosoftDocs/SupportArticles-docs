@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Using Process Explorer to list dlls running under the Outlook.exe process
 
-_Original KB number:_ &nbsp; 970920
-
 ## Summary
 
 Process Explorer is a utility that provides information about which handles and dlls each process has open. In the context of Outlook troubleshooting, Process Explorer is commonly used to determine if you have any third-party dlls running under the Outlook.exe process. This is an important step as it raises a possibility that add-ins or other software on your computer may be causing problems in Outlook.

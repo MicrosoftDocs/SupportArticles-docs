@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 
 # How to use Outlook Web App to remotely wipe an ActiveSync device in Office 365
 
-_Original KB number:_ &nbsp; 2791863
-
 ## Introduction
 
 This article describes how to use Microsoft Outlook Web App to remotely wipe a mobile device in Office 365.

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # How to force Outlook 2010, 2007 or 2003 to resolve proxy addresses and custom properties in Cached Mode
 
-_Original KB number:_ &nbsp; 831124
-
 ## Summary
 
 When you use Microsoft Office Outlook 2003, Microsoft Office Outlook 2007, or Microsoft Office Outlook 2010 in Cached Exchange Mode, Outlook verifies and resolves the names of e-mail recipients with the Offline Address Book. The process of resolving e-mail addresses with similar fields, such as the DisplayName, is called Ambiguous Name Resolution (ANR).

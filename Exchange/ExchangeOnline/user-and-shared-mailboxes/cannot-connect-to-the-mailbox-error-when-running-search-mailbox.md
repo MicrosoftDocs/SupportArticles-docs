@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # "Can't connect to the mailbox" error when you run cmdlets for a mailbox hosted in a different Exchange Online region
 
-_Original KB number:_ &nbsp; 4493557
-
 ## Symptoms
 
 Assume that you are an account administrator. When you try to run the `Search-Mailbox` cmdlet for a mailbox that's hosted in a different region from your account region, you receive the following error message:

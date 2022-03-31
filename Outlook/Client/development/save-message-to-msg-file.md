@@ -15,8 +15,6 @@ ms.date: 3/31/2022
 ---
 # INFO: Save message to MSG compound file
 
-_Original KB number:_ &nbsp; 171907
-
 ## Summary
 
 This article contains code that demonstrates how to save a message to a compound document, specifically an .msg file that is readable by any client that supports the .msg file format.

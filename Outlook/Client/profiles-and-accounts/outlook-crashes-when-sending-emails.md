@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook crashes when trying to send emails because of a nonexistent delivery location setting in your profile
 
-_Original KB number:_ &nbsp; 2298962
-
 ## Symptoms
 
 Microsoft Outlook crashes when you try to send email messages.

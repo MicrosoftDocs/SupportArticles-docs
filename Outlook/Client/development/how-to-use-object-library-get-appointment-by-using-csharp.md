@@ -15,8 +15,6 @@ ms.date: 3/31/2022
 ---
 # How to use the Microsoft Outlook Object Library to retrieve an appointment by using Visual C\#
 
-_Original KB number:_ &nbsp; 310259
-
 ## Introduction
 
 This article describes how to use the Microsoft Outlook 2002 Object Library or the Microsoft Office Outlook 2003 Object Library to retrieve an appointment by using Microsoft Visual C#.

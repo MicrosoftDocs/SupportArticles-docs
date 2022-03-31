@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # A new Outlook Data File (.pst) is created by default in Outlook 2010 when you add a new POP3 account
 
-_Original KB number:_ &nbsp; 983131
-
 ## Summary
 
 Microsoft Office Outlook 2010 introduces changes to accounts that help you keep email messages better organized when those email messages come from multiple accounts. By default, Outlook 2010 automatically adds a new Outlook Data File (.pst) when you add a new POP3 account. However, earlier versions of Outlook let you select an existing Personal Folders file as the default delivery location. This could result in email messages from different accounts being delivered to the same Inbox.

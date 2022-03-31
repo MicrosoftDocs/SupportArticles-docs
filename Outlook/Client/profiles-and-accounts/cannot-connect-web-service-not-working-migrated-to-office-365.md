@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # Outlook doesn't connect or web services don't work after migration to Office 365
 
-_Original KB number:_ &nbsp; 3073002
-
 ## Symptoms
 
 After your mailbox is migrated to Office 365, you may experience the following issues:
@@ -62,7 +60,7 @@ Method 2: Create a new Outlook profile
 2. In Control Panel, select or double-click **Mail**.
 
     > [!NOTE]
-    > To locate the *_Mail_* item, open Control Panel, and then in the **Search** box at the top of window, type _Mail_. In Control Panel in Windows XP, type *Mail* in the **Address** box.
+    > To locate the *_Mail_* item, open Control Panel, and then in the **Search** box at the top of window, type _Mail_. In Control Panel in Windows XP, type _Mail_ in the **Address** box.
 
 3. Select **Show Profiles**.
 4. Select **Add**.

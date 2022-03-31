@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 This article describes the permissions that can be granted to a public folder in Microsoft Exchange Server.
 
-_Original KB number:_ &nbsp; 2573274
-
 ## Client permissions
 
 Many permissions can be granted to a public folder. The following list describes client permissions:

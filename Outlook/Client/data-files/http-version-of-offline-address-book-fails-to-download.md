@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # HTTP version of the Outlook Offline Address Book (OAB) does not download
 
-_Original KB number:_ &nbsp; 2619347
-
 ## Symptoms
 
 You use Microsoft Outlook to connect to a Microsoft Exchange Server mailbox. When you start a manual download of the Offline Address Book (OAB) from an HTTP(S) location, the progress bar that appears in the **Outlook Send/Receive Progress** dialog box seems to freeze or becomes stuck. The download never finishes, and the local OAB files are not updated.

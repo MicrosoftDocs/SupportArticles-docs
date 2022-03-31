@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # A user cannot create new rules in Outlook or Outlook on the web
 
-_Original KB number:_ &nbsp; 2622933
-
 ## Symptoms
 
 A user cannot create new rules in Microsoft Outlook or in Outlook on the web (OWA). Additionally, the user receives the following error message:

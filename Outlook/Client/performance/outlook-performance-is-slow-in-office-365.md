@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # Outlook performance is slow in the Office 365 environment
 
-_Original KB number:_ &nbsp; 2441551
-
 ## Symptoms
 
 When you use Microsoft Outlook together with Microsoft Office 365, you experience one or more of the following symptoms:

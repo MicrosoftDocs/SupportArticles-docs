@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # "Access is denied" error when you click an "outlook:\\\\" link to a public folder in Outlook 2010 or Outlook 2013
 
-_Original KB number:_ &nbsp; 2470828
-
 ## Symptoms
 
 In Microsoft Outlook 2010 and Microsoft Outlook 2013, you receive either of the following errors when you click an outlook:// link that references an Exchange public folder:

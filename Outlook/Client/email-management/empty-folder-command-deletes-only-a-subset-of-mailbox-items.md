@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 ---
 # The Empty Folder command deletes only a subset of Exchange mailbox items in Outlook 2013
 
-_Original KB number:_ &nbsp; 2754262
-
 ## Summary
 
 Consider the following scenario:

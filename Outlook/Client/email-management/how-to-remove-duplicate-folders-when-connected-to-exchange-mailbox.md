@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 ---
 # How to remove duplicate folders in Outlook when connected to an Exchange Server mailbox
 
-_Original KB number:_ &nbsp; 2509983
-
 ## Symptoms
 
 In Microsoft Outlook, you see duplicate folders in your Microsoft Exchange Server mailbox when you view the Outlook folder list, or when you view the folder list by using Outlook Web App (OWA).

@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 > [!NOTE]
 > The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [Microsoft.Online.CSE.Hybrid.Client](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
-_Original KB number:_ &nbsp; 3063582
-
 ## Symptoms
 
 You want to set up a hybrid deployment between your on-premises Exchange Server organization and an external federated organization. However, when you run the Set-FederatedOrganizationIdentifier cmdlet, the operation isn't successful, and you receive an "InternalError InternalError: Internal error" error message. The full text of the message resembles the following:

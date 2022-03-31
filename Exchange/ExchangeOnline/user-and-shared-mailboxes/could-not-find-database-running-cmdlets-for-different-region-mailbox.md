@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # "Couldn't find database" error when you run cmdlets for a mailbox hosted in a different Exchange Online region
 
-_Original KB number:_ &nbsp; 4493553
-
 ## Symptoms
 
 Assume that you are an account administrator. When you try to run the `New-MailboxSearch`, `Search-MailboxAuditLog`, `New-MailboxImportRequest`, or `New-MailboxRestoreRequest` cmdlet for a mailbox that's hosted in a different region from your account region, you receive one of the following error messages:

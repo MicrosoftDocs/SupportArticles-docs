@@ -15,8 +15,6 @@ ms.date: 3/31/2022
 ---
 # Could not load file or assembly error occurs when browsing the Exchange EWS or Autodiscover sites
 
-_Original KB number:_ &nbsp; 2020789
-
 ## Symptoms
 
 You may receive the following error while browsing `https://servername/autodiscover/Autodiscover.xml` or `https://servername/ews/exchange.asmx`.

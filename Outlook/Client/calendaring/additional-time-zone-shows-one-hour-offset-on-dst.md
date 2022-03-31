@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # Additional time zone shows a one-hour offset on DST start day in Outlook
 
-_Original KB number:_ &nbsp; 4558084
-
 ## Symptoms
 
 You use the feature in Microsoft Outlook that displays multiple time zones on the time bar in your Calendar. On the day that the time setting changes for daylight saving time (DST), you might notice that the time difference between your primary and secondary time zones doesn't change.

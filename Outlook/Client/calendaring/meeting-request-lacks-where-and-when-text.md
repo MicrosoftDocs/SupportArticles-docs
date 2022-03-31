@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Meeting request sent in Outlook 2010 lacks Where and When text in body
 
-_Original KB number:_ &nbsp; 2459997
-
 ## Symptoms
 
 When you send a meeting request in Microsoft Outlook 2010, where and when information about the meeting is not added to the body of the meeting request.

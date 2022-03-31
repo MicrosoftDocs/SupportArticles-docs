@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # Outlook Advanced Diagnostic scenario in SaRA results indicate an offline scan was forced by group policy for Outlook object model access
 
-_Original KB number:_ &nbsp; 2941697
-
 ## Symptoms
 
 When you run the Outlook Advanced Diagnostics scenario in the Support and Recovery Assistant (SaRA), the results indicate an Offline scan was performed.

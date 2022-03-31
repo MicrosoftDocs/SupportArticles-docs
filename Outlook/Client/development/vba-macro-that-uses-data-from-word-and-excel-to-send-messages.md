@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # VBA macro that uses data from a Word document and an Excel workbook to send messages from Outlook
 
-_Original KB number:_ &nbsp; 213712
-
 ## Summary
 
 This article describes a Visual Basic for Applications macro that uses data from a Microsoft Word document and a Microsoft Excel workbook to send messages from Microsoft Outlook.

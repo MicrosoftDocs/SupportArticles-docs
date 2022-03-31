@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook settings may unexpectedly change after administrator removes Group Policy settings that control some Outlook features
 
-_Original KB number:_ &nbsp; 2573406
-
 ## Symptoms
 
 After your administrator removes Group Policy settings that control some Microsoft Outlook 2013, Microsoft Outlook 2010 or Microsoft Office Outlook 2007 features, your Outlook settings may unexpectedly change. The affected Outlook settings include the following. However, the affected settings are not limited to these settings.

@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # OneNote buttons may be missing in Outlook
 
-_Original KB number:_ &nbsp; 919541
-
 ## Symptoms
 
 When you work in Microsoft Outlook, Microsoft Office OneNote 2007 buttons or OneNote 2010 buttons may be missing as follows:

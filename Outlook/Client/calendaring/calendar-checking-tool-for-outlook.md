@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 
-_Original KB number:_ &nbsp; 2678030
-
 ## Summary
 
 The Calendar Checking Tool for Outlook (CalCheck) is a command-line program that checks the Microsoft Outlook calendar for problems. The tool opens an Outlook messaging profile to access the Outlook calendar. It performs various checks on general settings, such as permissions, free/busy publishing, delegate configuration, and automatic booking. Then, each item in the Outlook calendar folder is checked for known problems that can cause unexpected behavior, such as meetings that seem to be missing.

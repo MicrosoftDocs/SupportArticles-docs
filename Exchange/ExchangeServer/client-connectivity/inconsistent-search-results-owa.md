@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Inconsistent search results when email body contains both English and non-English characters in Exchange Server 2013
 
-_Original KB number:_ &nbsp; 3199519
-
 ## Symptoms
 
 In a Microsoft Exchange Server 2013 environment, search functionality in Outlook Web App fails when you search non-English words in an email message whose body contains both non-English characters (such as Chinese or Japanese) and English characters.

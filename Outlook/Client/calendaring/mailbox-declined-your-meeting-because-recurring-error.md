@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # "\<resource mailbox> declined your meeting because it is recurring" Outlook error when direct booking a resource
 
-_Original KB number:_ &nbsp; 2486796
-
 ## Symptoms
 
 When you schedule a meeting with a resource mailbox that is configured for Direct Booking, you receive one of the following error messages, depending on the version of Outlook that you are using to schedule the meeting:

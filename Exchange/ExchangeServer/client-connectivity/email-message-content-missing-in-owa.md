@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Email message content is missing in OWA
 
-_Original KB number:_ &nbsp; 2640306
-
 ## Symptoms
 
 Consider the following scenario:

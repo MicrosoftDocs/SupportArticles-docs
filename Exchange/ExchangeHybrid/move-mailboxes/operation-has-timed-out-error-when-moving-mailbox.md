@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # "Operation has timed out" error when using New-MoveRequest to move a mailbox from Exchange Online to on-premises
 
-_Original KB number:_ &nbsp; 2723127
-
 ## Symptoms
 
 You have a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and of your on-premises Microsoft Exchange Server environment. When you try to use the New-MoveRequest Windows PowerShell cmdlet to move or offboard a mailbox from Office 365 to the on-premises environment, the mailbox isn't moved. Additionally, you may receive an error message that resembles the following:

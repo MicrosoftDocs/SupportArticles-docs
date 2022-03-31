@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 ---
 # 0x80040109 error when Outlook Object Model is used with an IMAP account in Outlook 2013
 
-_Original KB number:_ &nbsp; 3064609
-
 ## Symptoms
 
 When you use the [Outlook object model](/visualstudio/vsto/outlook-object-model-overview) to add a [UserProperty](/office/vba/api/Outlook.UserProperty) object to an email message for an IMAP account in Microsoft Outlook 2013, you receive the following error message:

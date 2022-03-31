@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 # Synchronization problems occur in Outlook and in Outlook Web App
 
-_Original KB number:_ &nbsp; 2526306
-
 ## Symptoms
 
 When synchronization issues occur in Microsoft Outlook or in Microsoft Outlook Web App (formerly Outlook Web Access), you may experience the following symptoms.

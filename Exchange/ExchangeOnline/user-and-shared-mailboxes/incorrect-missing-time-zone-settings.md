@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 
 # Time zone settings are incorrect or missing for multiple mailboxes in Office 365
 
-_Original KB number:_ &nbsp; 2718817
-
 ## Symptoms
 
 Multiple mailboxes in Microsoft Office 365 may have incorrect or missing time zone settings. This symptom applies to all kinds of mailboxes, such as user mailboxes, resource mailboxes, and equipment mailboxes.

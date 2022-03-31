@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # Federated users can't connect to an Exchange Online mailbox
 
-_Original KB number:_ &nbsp; 2466333
-
 ## Symptoms
 
 A federated user can't authenticate to Microsoft Outlook or to Microsoft Exchange ActiveSync by using a smartphone in Exchange Online.

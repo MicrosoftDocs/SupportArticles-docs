@@ -15,8 +15,6 @@ ms.date: 3/31/2022
 ---
 # How to list messages in the inbox with MAPI
 
-_Original KB number:_ &nbsp; 239795
-
 ## Summary
 
 Extended MAPI can be used to access a Mailbox and manipulate messages. This article demonstrates how to use MAPI to list the messages contained within the Inbox.

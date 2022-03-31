@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 This article applies to a Microsoft Access database (.mdb) and to a Microsoft Access project (.adp).
 
-_Original KB number:_ &nbsp; 209948
-
 ## Summary
 
 This article shows you how to use Automation to create and send a Microsoft Outlook message in Microsoft Access 2000.

@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook 2010 crashes unexpectedly at startup
 
-_Original KB number:_ &nbsp; 2427204
-
 ## Symptoms
 
 Microsoft Outlook crashes unexpectedly at startup. If you look in the Event Viewer for the following:

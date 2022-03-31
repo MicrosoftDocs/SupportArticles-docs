@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook policy template deploys DisableCrossAccountCopy as REG_EXPAND_SZ instead of REG_MULTI_SZ
 
-_Original KB number:_ &nbsp; 2479719
-
 ## Symptoms
 
 An Active Directory administrator deploys the Microsoft Outlook 2010 or Microsoft Outlook 2013 policy **Prevent copying or moving items between accounts**. However, although the policy is applied to Microsoft Windows workstations, Outlook does not restrict users from copying or moving organization email messages to an Outlook Data (.pst) file or other email account.

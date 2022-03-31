@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 
 # How to specify the email message format that's used for external recipients to prevent Winmail.dat attachments
 
-_Original KB number:_ &nbsp; 2487954
-
 ## Introduction
 
 This article describes how Microsoft Office 365 admins can change the message format so that messages that are sent from Office 365 users to external recipients don't contain Winmail.dat attachments.

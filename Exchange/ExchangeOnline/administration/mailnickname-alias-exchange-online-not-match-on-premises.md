@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 ---
 # MailNickName or Alias attribute in Exchange Online doesn't match what is set in Exchange on-premises
 
-_Original KB number:_ &nbsp; 2824766
-
 ## Symptoms
 
 The `Alias` or `Mailnickname` attribute in Microsoft Exchange Online doesn't match what is set in the Exchange on-premises environment for a synced user account.

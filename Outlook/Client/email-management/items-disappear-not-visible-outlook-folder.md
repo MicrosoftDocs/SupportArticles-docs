@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 # Items disappear or are not visible in an Outlook folder
 
-_Original KB number:_ &nbsp; 2530570
-
 ## Symptoms
 
 Some or all items disappear from a given folder in Microsoft Outlook. This occurs either immediately or after a set, consistent time period.

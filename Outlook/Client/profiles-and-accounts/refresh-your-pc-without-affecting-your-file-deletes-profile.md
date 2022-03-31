@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # The "Refresh Your PC without affecting your file" option deletes your Outlook profile in Windows 8
 
-_Original KB number:_ &nbsp; 2872888
-
 ## Symptoms
 
 After you run the "Refresh Your PC without affecting your files" feature in Microsoft Windows 8 and Windows RT, the Microsoft Outlook profile is deleted, and the data files are deleted or moved.

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # You experience issues in Outlook when you try to configure free/busy information or when you try to delegate information
 
-_Original KB number:_ &nbsp; 958443
-
 ## Symptoms
 
 In Microsoft Outlook, you experience one of the following issues when you try to configure free/busy information or when you try to delegate information:

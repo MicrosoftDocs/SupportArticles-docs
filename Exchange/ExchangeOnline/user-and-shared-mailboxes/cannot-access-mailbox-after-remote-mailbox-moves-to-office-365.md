@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Can't access a mailbox by using Outlook after a remote mailbox move from an on-premises Exchange Server environment to Office 365
 
-_Original KB number:_ &nbsp; 2745710
-
 ## Symptoms
 
 After you move a user's mailbox from an on-premises Microsoft Exchange Server environment to Microsoft Office 365, the user can't access the mailbox by using Microsoft Outlook. However, the user can access the mailbox by using Outlook Web App.

@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook 2016 for Mac crashes when a Proxy Auto Configuration file is used
 
-_Original KB number:_ &nbsp; 4042151
-
 ## Symptoms
 
 Consider the following scenario:

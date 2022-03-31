@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # The Out of Office feature in Outlook doesn't function correctly in Office 365
 
-_Original KB number:_ &nbsp; 2005652
-
 ## Symptoms
 
 When you try to use the Out of Office (OOF) feature in Outlook in Microsoft Office 365, you experience the following symptoms:

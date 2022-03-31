@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 # Can't open a shared folder in Outlook on the web in Exchange Server
 
-_Original KB number:_ &nbsp; 3152857
-
 ## Symptoms
 
 Consider the following scenarios:

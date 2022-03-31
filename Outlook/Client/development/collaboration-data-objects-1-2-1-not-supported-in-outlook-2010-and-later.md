@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Collaboration Data Objects (CDO) 1.2.1 is not supported with Outlook 2010 and later versions
 
-_Original KB number:_ &nbsp; 2028411
-
 ## Summary
 
 Although the Collaboration Data Objects (CDO) 1.2.1 object library could be used with Microsoft Outlook 2010 and later versions, we do not recommend or support this in any way.

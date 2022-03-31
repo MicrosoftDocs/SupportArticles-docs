@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Attachment issues in Outlook 2010, Outlook 2007, or Outlook 2003
 
-_Original KB number:_ &nbsp; 817878
-
 ## Symptoms
 
 One of the following issues occurs in Outlook 2010, Outlook 2007, or Outlook 2003:

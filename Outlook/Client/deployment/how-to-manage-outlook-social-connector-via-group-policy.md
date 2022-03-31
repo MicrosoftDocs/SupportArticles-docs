@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # How to manage the Outlook Social Connector by using Group Policy
 
-_Original KB number:_ &nbsp; 2020103
-
 ## Summary
 
 Several features and components of the Outlook Social Connector (OSC) can be managed by using Group Policy. This article contains a custom Group Policy template that you can use to manage the following tasks:

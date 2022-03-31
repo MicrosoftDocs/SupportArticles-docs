@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Error when you add a PST or OST file on a non-local drive in Outlook 2016
 
-_Original KB number:_ &nbsp; 4051806
-
 ## Symptoms
 
 When you try to add a personal folder file (.pst) or an offline folder file (.ost) in Microsoft Outlook 2016, you receive an error message that states that the file can't be opened. These may include:

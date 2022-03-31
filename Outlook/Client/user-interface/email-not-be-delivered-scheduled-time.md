@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Email may not be delivered at the scheduled time when the "Do not deliver before" option is enabled in an Outlook message
 
-_Original KB number:_ &nbsp; 918824
-
 ## Symptoms
 
 When you enable the **Do not deliver before** option to defer the delivery of a Microsoft Office Outlook e-mail message, the message may not be delivered at the scheduled time.

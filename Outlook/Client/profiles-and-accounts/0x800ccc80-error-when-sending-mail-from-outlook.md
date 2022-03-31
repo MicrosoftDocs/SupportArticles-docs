@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Sending mail from Outlook results in error 0x800ccc80
 
-_Original KB number:_ &nbsp; 2483175
-
 ## Symptoms
 
 When you try to send email from Microsoft Outlook using a POP3 or IMAP account, you receive the following error message:

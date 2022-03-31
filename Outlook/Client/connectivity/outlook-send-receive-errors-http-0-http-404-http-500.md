@@ -16,8 +16,6 @@ ms.date: 3/31/2022
 ---
 # Outlook send/receive errors HTTP 0, HTTP 404, HTTP 500
 
-_Original KB number:_ &nbsp; 2812355
-
 ## Symptoms
 
 When you are using Microsoft Outlook 2010 or Microsoft Outlook 2013, you receive the following error in the Outlook status bar:
