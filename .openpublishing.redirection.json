@@ -556,6 +556,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/restrict-usb-with-administrative-template.md",
+      "redirect_url": "/mem/intune/configuration/administrative-templates-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
       "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
       "redirect_document_id": false
@@ -807,7 +812,7 @@
     },
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
-      "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
+      "redirect_url": "/azure/automation/troubleshoot/runbooks",
       "redirect_document_id": false
     },
     {
