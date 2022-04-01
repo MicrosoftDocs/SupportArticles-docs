@@ -14,6 +14,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # In-Place eDiscovery preview isn't available for items in inactive Exchange Online mailboxes
 

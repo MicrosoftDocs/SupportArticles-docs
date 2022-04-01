@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The body of a message is shown incorrectly as an attachment when you send the message that has attachments in an Exchange Server environment
 

@@ -14,6 +14,7 @@ ms.reviewer: davmcdon
 appliesto: 
   - Office
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Some Office applications are not responding
@@ -38,7 +39,6 @@ The following Intel graphics driver versions cause this problem.
 |26.20.100.6999|
 |26.20.100.7000|
 |26.20.100.7063|
-||
 
 ## Resolution
 
@@ -69,7 +69,6 @@ The versions of Office that contain this fix are the following.
 | 1907 (July 2019) | 16.0.11929.20516 |
 | 1901 (January 2019) | 16.0.11328.20492 |
 | Office Insiders | 16.0.12406.20000 |
-|||
 
 To fix the problem, update your Office installation.
 

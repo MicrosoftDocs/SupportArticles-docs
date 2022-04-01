@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The delegates page is not available error when setting a delegate in Outlook 2010 or 2007
 

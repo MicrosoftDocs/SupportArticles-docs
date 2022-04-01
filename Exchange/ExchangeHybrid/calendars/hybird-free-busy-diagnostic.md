@@ -14,6 +14,7 @@ ms.reviewer: farshadt
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic
 
@@ -39,7 +40,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-FederationInformation cmdlet output for specified Domain.|O365_Get-FederationInformation -DomainName \<DomainName>.log|
 |Get-OrganizationRelationship cmdlet output|O365_Get-OrganizationRelationship.log|
 |Get-SharingPolicy cmdlet output|O365_Get-SharingPolicy.log|
-|||
 
 ### Hybrid server-related files
 
@@ -71,7 +71,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-WebServicesVirtualDirectory cmdlet output|\<HYBRIDSERVERNAME>_WebServicesVirtualDirectory_FL|
 |IIS log files|W3SVC1LogFiles.cab|
 |IIS log files|W3SVC2LogFiles.cab|
-|||
 
 ### On-premises legacy Exchange-related files
 
@@ -80,7 +79,6 @@ _Original KB number:_ &nbsp; 2957394
 |Get-mailbox -arbitration cmdlet output|\<HYBRIDSERVERNAME>_Arbitration Mailbox_FL.TXT|
 |Get-PublicFolderClientPermission cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE_BUSY_FIRST ORGANIZATION_EXTERNAL_FYDIBOHF25SPDLT.log_FL.TXT|
 |Get-PublicFolder cmdlet output|\<HYBRIDSERVERNAME>_NON_IPM_SUBTREE_SCHEDULE_FREE BUSY.log_FL|
-|||
 
 ## References
 

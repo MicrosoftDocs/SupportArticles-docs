@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Office 2010 Service Pack 2
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to hide columns in the Address Book in Outlook
 
@@ -65,7 +66,6 @@ For example, to hide the **Business Phone**, **Location**, and **Alias** columns
 | **Company**|1f 00 16 3a|
 | **Alias**|1f 00 00 3a|
 | **Department**|1f 00 18 3a|
-|||
 
 ## More information
 
@@ -79,7 +79,6 @@ The following table lists some special field mappings between the **Address Book
 |---|---|
 | **Business Phone**|Phone|
 | **Location**|Office|
-|||
 
 The `ABHiddenColumns` values for columns that can be hidden are determined by using the **Property ID** value and the **Data Type** value for the following properties.
 
@@ -92,7 +91,6 @@ The `ABHiddenColumns` values for columns that can be hidden are determined by us
 | **Company**|2.689 PidTagCompanyName<br/>Canonical name: PidTagCompanyName<br/> **Property ID** : 0x3A16<br/> **Data type** : PtypString, 0x001F|
 | **Alias**|2.570 PidTagAccount<br/>Canonical name: PidTagAccount<br/> **Property ID** : 0x3A00<br/> **Data type** : PtypString, 0x001F|
 | **Department**|2.663 PidTagDepartmentName<br/>Canonical name: PidTagDepartmentName<br/> **Property ID** : 0x3A18<br/> **Data type** : PtypString, 0x001F|
-|||
 
 These properties are described in the [MS-OXPROPS]: Exchange Server Protocols Master Property List document that is available for download from the Microsoft Download Center:
 

@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to determine where to publish a custom Outlook form
 
@@ -41,7 +42,6 @@ Forms can be published to three locations. The following table outlines those lo
 |A folder (or Folder Forms Library)|For most folder-based forms solutions, publish the form to the folder so that it's available whenever someone is using the folder. If you publish the form in a public folder, the form is available to everyone who can access the folder. If you publish the form to one of your personal folders, it's available only to you when you are using that folder. Contact, Post, Task, and Journal forms are examples of the types of forms that are typically associated with a folder. One advantage to publishing a form to a folder is that the form is available on the Actions menu when you are in the folder.|
 |Organizational Forms Library|Publish the form to this library if you want to make the form available to everyone in your organization, such as a form to report vacation time. This library is often used for e-mail message forms because they are typically not based on a specific folder. You can publish a form to the Organizational Forms Library when you want to use the same custom form in more than one folder. When you do this, you can maintain only a single published form. Forms that are published to this library are accessible to everyone in the organization as long as they are given permissions to the library by the administrator. The library is stored on the Microsoft Exchange Server-based computer. The administrator must give you permissions to publish to the Organizational Forms Library. This permission is typically given to only a few individuals or a department that manages the Exchange Server-based computer.|
 |Personal Forms Library|Forms that are saved in this library are only accessible to you. When you publish a form to the Personal Forms Library, the form is stored as a hidden item in the root folder of your mailbox or Personal Folders (.pst) file, whichever is your default mail delivery location. Like forms that are stored in the Organizational Forms Library, these forms can be opened by using the Choose Form command. Save a form to this library when you create a form for your own personal use, such as a standard e-mail message form that is pre-addressed to recipients.|
-|||
 
 It's also possible to store an Outlook form as a file in the file system or as an item in an Outlook folder. Microsoft recommends that you avoid both of these approaches, however, because the form will be a one-off form.
 
@@ -90,7 +90,6 @@ The following table describes how users typically open Outlook forms depending o
 |---|---|
 |Folder forms|If you open the folder that contains the forms, the forms are available on the **Actions** menu.|
 |Organizational Forms Library<br/><br/>-and-<br/><br/>Personal Forms Library|Forms stored in the Organizational Forms Library and Personal Forms Library are designed to be accessed by using the **Choose Form** dialog box. To access these forms, point to **New** on the **File** menu, and then select **Choose Form**.|
-|||
 
 You can use the following methods to make forms more accessible to users.
 

@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
+ms.date: 3/31/2022
 ---
 
 # "An error occurred when loading the Sandbox cube" error in PowerPivot

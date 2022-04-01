@@ -16,6 +16,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share
 
@@ -93,6 +94,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|March 17, 2022|17.00.8419.012|
 |February 25, 2022|17.00.8006.010|
 |January 13, 2022|17.00.7792.012|
 |November 10, 2021|17.00.7513.007|
@@ -120,6 +122,5 @@ The following table provides the versions of SaRA that were made available on th
 |January 14, 2020|17.00.4058.000|
 |December 9, 2019|17.00.3891.009|
 |December 2, 2019|17.00.3711.012|
-|||
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

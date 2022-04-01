@@ -15,6 +15,7 @@ ms.reviewer: mhaque, meerak, desingh, danab, v-kwaddo, danba, dechiang
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # POX Autodiscover not supported with OAuth client credentials grant
 

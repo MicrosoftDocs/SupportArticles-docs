@@ -17,6 +17,7 @@ ms.custom:
   - CI 113921
   - CSSTroubleshoot
 ms.reviewer: joselr
+ms.date: 3/31/2022
 ---
 # How to install Office LTSC installation files not found in VLSC
 

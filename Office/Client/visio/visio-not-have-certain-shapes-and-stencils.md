@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Visio 2013
   - Visio 2010
+ms.date: 3/31/2022
 ---
 
 # Visio 2010 or 2013 does not have certain shapes and stencils included with the product

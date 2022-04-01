@@ -14,6 +14,7 @@ ms.reviewer: willfid
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Email messages aren't received for a new domain that you add in the Office 365 portal
 

@@ -18,6 +18,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
+ms.date: 3/31/2022
 ---
 # Text that is in a text box control of a report or a form may not appear correctly in Access
 

@@ -15,6 +15,7 @@ ms.reviewer: batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Microsoft 365 Groups - common tasks
 
@@ -167,7 +168,6 @@ This table shows the size and membership limits that apply to Microsoft 365 Grou
 |Group mailbox size|50 GB|
 |Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. It can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) command, as necessary.|
 |Distribution Group as a member of a Microsoft 365 group|A distribution group that has more than 1,000 members cannot be added to a Microsoft 365 group. This also includes the nested distribution group members.|
-|||
 
 [Back to top](#summary)
 

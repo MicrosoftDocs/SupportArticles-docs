@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Office Professional Plus 2013
   - Office Professional 2013
+ms.date: 3/31/2022
 ---
 
 #  Office Sign-in and Authentication Diagnostics

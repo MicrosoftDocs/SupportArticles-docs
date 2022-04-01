@@ -15,6 +15,7 @@ appliesto:
   - Office Professional 2013
   - Office Professional Plus 2013
   - Office Home and Business 2013
+ms.date: 3/31/2022
 ---
 
 # "Click to Join" fails to invoke Skype for Business on computers that use Application Virtualization

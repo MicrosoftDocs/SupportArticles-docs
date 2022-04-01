@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Office Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # There is no shortcut menu command to add a sender's domain to the Blocked Senders list in Outlook
 
@@ -31,7 +32,6 @@ When you right-click an email message in Microsoft Office Outlook 2007, Outlook 
 |Outlook 2007|Outlook 2010 and Outlook 2013|
 |---|---|
 |:::image type="content" source="./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2007.png" alt-text="Screenshot showing Outlook 2007 Junk Email menu." border="false":::|:::image type="content" source="./media/no-shortcut-menu-command-to-add-senders-domain-to-blocked/junk-email-menu-2010-2013.png" alt-text="Screenshot showing Outlook 2010 Junk Email menu." border="false":::|
-|||
 
 ## Cause
 

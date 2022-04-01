@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Understanding and troubleshooting Out of Office (OOF) replies
 
@@ -57,7 +58,6 @@ These rules are set individually in the user's mailbox. Each rule has an associa
 |Internal |IPM.Rule.Version2.Message |Microsoft.Exchange.OOF.KnownExternalSenders.Global |
 |External |IPM.Rule.Version2.Message |Microsoft.Exchange.OOF.AllExternalSenders.Global |
 |Known Senders |IPM.ExtendedRule.Message |Microsoft.Exchange.OOF.KnownExternalSenders.Global|
-||||
 
 > [!NOTE]
 > In addition to the OOF rules, other rules (such as the Junk Email rule) also have the **IPM.ExtendedRule.Message** message class. The **MSG_NAME** variable determines how the rule is used.

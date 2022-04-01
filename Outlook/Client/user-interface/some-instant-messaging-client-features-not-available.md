@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Some instant messaging client features are not available in Outlook
 
@@ -48,7 +49,6 @@ To resolve the problem, make sure that the `DefaultIMApp` string value is set to
 |Microsoft Lync 2013 (Skype for Business)| Lync |
 |Skype for Business 2016<br/>Skype (Consumer)| Lync<br/>Skype |
 |Microsoft Teams| Teams |
-|||
 
 To do this, follow these steps:
 

@@ -14,6 +14,7 @@ ms.reviewer: aruiz, sercast
 appliesto: 
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You cannot undo the changes if you mark all messages as read
 

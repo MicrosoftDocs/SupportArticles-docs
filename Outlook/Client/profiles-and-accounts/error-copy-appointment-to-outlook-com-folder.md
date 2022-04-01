@@ -14,6 +14,7 @@ ms.reviewer: billja, aruiz, gbratton
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when you copy an appointment to an Outlook.com calendar folder: Cannot move the items
 
@@ -40,4 +41,3 @@ The following table summarizes what occurs when you move or copy appointments to
 | Drag Calendar to Hotmail Calendar folder|Moves item and syncs to server|Outlook disallows with error "Cannot move"<br/>|Moves item and syncs to server|
 | Right-click drag and *copy* to Hotmail Calendar folder|Copies locally but doesn't sync to server<br/>|Copies locally but doesn't sync to server<br/>|Nothing happens<br/>|
 | Right-click drag and *move* to Hotmail Calendar folder|Moves item and syncs to server|Outlook disallows with error "Cannot move"<br/>|Moves item and syncs to server|
-|||||

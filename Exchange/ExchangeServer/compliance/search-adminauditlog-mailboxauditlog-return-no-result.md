@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Enterprise Edition
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 

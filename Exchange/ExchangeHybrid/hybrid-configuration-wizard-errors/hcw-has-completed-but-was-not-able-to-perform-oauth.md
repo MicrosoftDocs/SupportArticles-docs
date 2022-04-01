@@ -10,14 +10,16 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Hybrid
   - CSSTroubleshoot
+  - CI 162077
 ms.reviewer: timothyh
 appliesto: 
   - Exchange Online
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
-# HCW has completed, but was not able to perform the OAuth error when running Hybrid Configuration
+# "HCW has completed, but was not able to perform the OAuth" error when running Hybrid Configuration
 
 _Original KB number:_ &nbsp; 3089172
 

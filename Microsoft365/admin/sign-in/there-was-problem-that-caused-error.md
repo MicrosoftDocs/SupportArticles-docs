@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Windows XP Home Edition
   - Office 365 User and Domain Management
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # You receive a "There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled" error

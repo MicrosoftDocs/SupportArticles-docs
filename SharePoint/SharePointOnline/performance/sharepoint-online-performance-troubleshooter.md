@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Office 365 SharePoint Online performance troubleshooter
@@ -44,7 +45,6 @@ If the results files are larger than 2 GB after compression, some files won't be
 |----------|----------|
 |Fiddler Trace|{Computer_name}_fiddler.cap|
 |Network capture information from nmcap.exe output|{ComputerName}_netcap.cap; {ComputerName}__NMcap_Trace_DisplayNet.txt}__NMcap_Trace_DisplayNet.txt|
-|||
 
 ### Site performance rules
 
@@ -60,7 +60,6 @@ The following checks are performed by the Office 365 SharePoint Online diagnosti
 |8D1F2D6E-07FF-462C-9EBE-02E44CCAE5A5|Checks whether round-trip time between client and server isn't greater than 300 ms.|[How to measure the Network Round Trip Time to Office 365](/archive/blogs/onthewire/how-to-measure-the-network-round-trip-time-to-office-365)|
 |1750D57E-FD44-4A83-8FCF-56B7DB0124BB|Checks whether Minimal Download Strategy is disabled.|[Minimal Download Strategy overview](/sharepoint/dev/general-development/minimal-download-strategy-overview)|
 |AB374115-9DCE-4977-BE87-22DD321E6737|Checks whether Structural Navigation is turned on for a SharePoint Online publishing site.|[Managed navigation in SharePoint](/sharepoint/dev/general-development/managed-navigation-in-sharepoint)|
-||||
 
 ## References
 

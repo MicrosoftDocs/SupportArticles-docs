@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, kristinw, dougl
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Can't add someone to a Skype Meeting Broadcast as an Event team member or attendee

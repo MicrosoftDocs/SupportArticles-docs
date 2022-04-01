@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # No search results or content displayed in public folder favorites in Outlook 2016
 

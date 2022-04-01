@@ -21,6 +21,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Server Client Connectivity Diagnostic
 
@@ -42,7 +43,6 @@ This article describes information that the Exchange Server Client Connectivity 
 | Description| File name |
 |---|---|
 |Event Logs -Application and System (.csv and .evtx)|{ComputerName}_evt_Application.\*<br/>{ComputerName}_evt_System.\*|
-|||
 
 ### Exchange Server and organization baseline
 
@@ -63,7 +63,6 @@ This article describes information that the Exchange Server Client Connectivity 
 |Get-WorkloadPolicy cmdlet output|{ComputerName}_WorkloadPolicy_FL.txt|
 |Get-ResourcePolicy cmdlet output|{ComputerName}_ResourcePolicy_FL.txt|
 |Get-SiteMailboxProvisioningPolicy cmdlet output|{ComputerName}_SiteMailboxProvisioningPolicy_FL.txt|
-|||
 
 ### Exchange Client Access server role
 
@@ -80,7 +79,6 @@ This article describes information that the Exchange Server Client Connectivity 
 |Get-WebServicesVirtualDirectory cmdlet output|{ComputerName}_WebServicesVirtualDirectory_FL.txt|
 |Get-EcpVirtualDirectory cmdlet output|{ComputerName}_EcpVirtualDirectory_FL.txt|
 |HKLM: SOFTWARE\Microsoft\Rpc\RpcProxy* registry keys, values|{ComputerName}_REG_RPCPROXY.txt|
-|||
 
 ### Exchange Client Access Web Configuration files
 
@@ -88,7 +86,6 @@ This article describes information that the Exchange Server Client Connectivity 
 |---|---|
 |ClientAccess_Autodiscover_Web.Config (.zip)|{ComputerName}_ClientAccess_Autodiscover_Web_Config.zip|
 |ClientAccess_Sync_Web.Config (.zip):|{ComputerName}_ClientAccess_Sync_Web_Config.zip|
-|||
 
 ### Exchange logging
 
@@ -116,14 +113,12 @@ This article describes information that the Exchange Server Client Connectivity 
 |Logging\ADDriver\w3wp.exe_AutoDisc* (newest 20)|{ComputerName}_Logs_ADDriver_w3wp.exe_AutoDisc.zip|
 |Logging\ADDriver\w3wp.exe_EWS* (newest 20)|{ComputerName}_Logs_ADDriver_w3wp.exe_EWS.zip|
 |Logging\ADDriver\w3wp.exe_OWA* (newest 20)|{ComputerName}_Logs_ADDriver_w3wp.exe_OWA.zip|
-|||
 
 ### Exchange Server IIS information
 
 |Description|File name|
 |---|---|
 |W3SVC logs for each site from the past two days|{ComputerName}_IISLogs_W3SVC[n].zip|
-|||
 
 In addition to collecting the information that is described in these tables, this diagnostic package can detect one or more of the following symptoms:
 

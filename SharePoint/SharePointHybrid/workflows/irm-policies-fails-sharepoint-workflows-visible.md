@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # SharePoint 2013 workflows aren't available for IRM policies in SharePoint Online or SharePoint Server on-premises

@@ -16,6 +16,7 @@ appliesto:
   - Azure Active Directory
   - Azure
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Effect on customer websites and Microsoft services and products in Chrome version 80 or later

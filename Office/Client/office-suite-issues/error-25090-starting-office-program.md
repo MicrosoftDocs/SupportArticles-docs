@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office 2007
   - Microsoft Office 2003
+ms.date: 3/31/2022
 ---
 
 # "Error 25090" error message when you start an Office program

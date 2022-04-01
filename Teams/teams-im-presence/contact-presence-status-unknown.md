@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # A contact's presence status is unknown in Teams
 

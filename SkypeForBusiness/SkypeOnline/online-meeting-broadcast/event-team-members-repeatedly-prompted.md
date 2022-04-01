@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm,kristinw, kristinw, dougl, lynnroe, cbland, rischwen, leonarwo, msp
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Event Team members are repeatedly prompted for a password when they try to join a Skype Meeting Broadcast

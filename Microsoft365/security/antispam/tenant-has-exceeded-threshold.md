@@ -13,6 +13,7 @@ appliesto:
   - Exchange Online Protection
   - Exchange Server
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "Tenant has exceeded threshold" NDR when mail is sent from your organization
 

@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2016 for Mac
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to suppress the Microsoft 365 AutoDiscover redirect warning in Outlook 2016 for Mac
 
@@ -64,4 +65,3 @@ The TrustO365AutodiscoverRedirect preference can be configured to use the follow
 |true|Don't prompt for trusted Microsoft 365 endpoints. Outlook defines what URLs are trusted and this is not configurable.|
 |false|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
 |if value is not present|Outlook will use the default behavior that is to prompt when Autodiscover Redirects occur.|
-|||

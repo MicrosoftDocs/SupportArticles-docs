@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # How to migrate mailbox data by using the Exchange Admin Center in Office 365
 

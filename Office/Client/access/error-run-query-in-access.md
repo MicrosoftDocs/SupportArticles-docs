@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: cochen, mattbum
 appliesto: 
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # You receive an error message when you run a query in Microsoft Access because of a double-byte Arabic number

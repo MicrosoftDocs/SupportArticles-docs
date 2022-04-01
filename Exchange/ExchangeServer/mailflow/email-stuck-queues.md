@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2019
   - Exchange Server 2016
   - Exchange Server 2013
+ms.date: 3/31/2022
 ---
 
 # Email messages are stuck in Exchange Server queues for several minutes

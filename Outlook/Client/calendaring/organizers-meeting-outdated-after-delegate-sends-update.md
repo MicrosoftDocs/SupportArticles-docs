@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Organizer's meeting remains outdated after a delegate sends an update on their behalf
 

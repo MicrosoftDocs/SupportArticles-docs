@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2010
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Mailbox Audit Log searches fail with exception "ErrorInvalidServerVersion" in Exchange Server 2016, 2013, and 2010 coexistence environment

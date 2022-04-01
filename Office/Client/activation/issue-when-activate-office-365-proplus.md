@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise

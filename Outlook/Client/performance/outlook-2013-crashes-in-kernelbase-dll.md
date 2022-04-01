@@ -14,6 +14,7 @@ ms.reviewer: tmoore, gregmans
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2013 crashes in KERNELBASE.dll due to corrupt data file
 
@@ -36,7 +37,6 @@ Microsoft Outlook 2013 crashes. If you then review the events in the Application
 |Outlook.exe|KERNELBASE.dll|6.3.9600.17278|0x000B3C5F|
 |Outlook.exe|KERNELBASE.dll|6.3.9600.16384|0x000B2BCD|
 |Outlook.exe|KERNELBASE.dll|6.3.9600.16408|0x00000000000D9532|
-|||||
 
 ## Cause
 

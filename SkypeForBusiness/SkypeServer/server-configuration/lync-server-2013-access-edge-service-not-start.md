@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync Server 2013 Access Edge service fails to start or stops responding after it starts

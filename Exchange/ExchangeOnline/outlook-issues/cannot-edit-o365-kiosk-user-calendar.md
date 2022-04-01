@@ -14,6 +14,7 @@ ms.reviewer: alinastr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't use Outlook to edit the calendar of an Office 365 Kiosk user
 

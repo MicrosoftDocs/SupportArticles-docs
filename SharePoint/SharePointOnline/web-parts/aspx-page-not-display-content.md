@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # The SharePoint Online Sites.aspx page doesn't display content after you add the "My Tasks" Web Part

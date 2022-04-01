@@ -15,6 +15,7 @@ appliesto:
   - Excel 2019
   - Excel 2016
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Error message when you update external links that contain a three-dimensional reference

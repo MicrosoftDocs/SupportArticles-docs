@@ -15,6 +15,7 @@ appliesto:
   - Access 2016
   - Access 2013
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # Memory leak when Access continually connects to database files

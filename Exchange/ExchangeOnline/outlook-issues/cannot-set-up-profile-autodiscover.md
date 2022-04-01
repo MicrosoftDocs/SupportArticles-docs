@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
 
@@ -113,7 +114,6 @@ If you have an Exchange hybrid deployment, you can use the [Get-RemoteMailbox](/
 |displayName|Ted Bremer |
 |emailAddresses|SMTP: ted@contoso.com X400:c=us;a= ;p=First Organization;o=Exchange;s=Bremer;g=Ted |
 |remoteRoutingAddress|ted@contoso.mail.onmicrosoft.com |
-|||
 
 To update these attributes, you can use the [Set-RemoteMailbox](/powershell/module/exchange/set-remotemailbox) cmdlet.
 

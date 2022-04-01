@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business 2016
   - Skype for Business Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't sign in using SSO if ADAL and AD FS used in Skype for Business
 

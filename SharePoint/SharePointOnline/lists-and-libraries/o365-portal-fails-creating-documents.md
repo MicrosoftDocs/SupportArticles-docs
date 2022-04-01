@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "List '|0' does not exist at site with URL '|1'" error when you try to create documents in the Office 365 portal

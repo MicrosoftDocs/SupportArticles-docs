@@ -5,14 +5,15 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- SharePoint Online
-- Office 365 Domain management
+appliesto: 
+  - SharePoint Online
+  - Office 365 Domain management
+ms.date: 3/31/2022
 ---
 
 # "Cannot Remove Domain" error when you try to remove a domain from Office 365
