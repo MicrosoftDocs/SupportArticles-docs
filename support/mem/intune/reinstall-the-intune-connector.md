@@ -14,6 +14,10 @@ This article describes how to uninstall and reinstall the Intune Certificate Con
 - The connector certificate is expired.
 - The connector version has to be updated.
 
+>[!NOTE]
+>Reinstalling to upgrade to the new unified Intune Certificate Connector is fully supported. But some of the steps in this article about checking the NDESCertThumbprint registry value, do not apply, as this entry is removed from the registry with the new unified connector.
+>Read more here, [Install the Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-install)
+
 ## Before you uninstall the connector
 
 To make sure that the connector will reinstall correctly, follow these steps before you uninstall it:
