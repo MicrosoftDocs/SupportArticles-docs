@@ -26,15 +26,14 @@ In the **Watch** window, type an expression that evaluates to a pointer followed
     ```cpp
     // Filename main.cpp
     // No compile option needed
-    #include <iostream.h>
-    void main(void)
+    #include <iostream>
+    int main()
     {
-        int * p;
-        char* ptr = "Hello World";
-        p = new int [10];
+        int* p = new int[10];
+        const char* ptr = "Hello World";
 
-        for(int i=0; i<=9; i++){*(p+i) = i+1;}
-        cout << i <<endl;
+        for (int i = 0; i <= 9; i++) { *(p + i) = i + 1; }
+        std::cout << ptr << std::endl;
     }
     ```
 
