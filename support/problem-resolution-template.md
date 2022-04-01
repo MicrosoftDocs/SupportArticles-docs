@@ -79,4 +79,4 @@ Description of Cause 2.
 
 ## Next steps/More information/Reference
 
-<!--- Optional: Include this section if there are 1 -3 concrete, highly relevant next steps the user should take. Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you include links to next steps, include text that explains why the next steps are relevant or important. If you do want to provide some links for more information or reference, provide the links with context to help the customers determine which one is relevant and helpful.--->
+<!--- Optional: Include this section if there are 1 -3 concrete, highly relevant next steps the user should take. Otherwise, delete this section if there are no next steps. This section is not a place for a list of links. If you provide links to the next steps, include text that explains why the next steps are relevant or important. If you provide links for more information or reference, you should also include text to help the customers determine which ones are relevant for their issue.--->
