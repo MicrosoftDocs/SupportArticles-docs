@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CI 162285
+  - CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
@@ -49,4 +51,8 @@ To fix this issue, do one of the following:
 
 For more info about how to reset a user's password, see [Reset a user's password](/azure/active-directory/fundamentals/active-directory-users-reset-password-azure-portal).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+If the issue persists, you can submit a support ticket from one of the following sites based on your subscription:
+
+- Office 365 subscription: [Get support](/microsoft-365/admin/get-help-support)
+- Azure subscription: [Azure support ticket](https://azure.microsoft.com/support/create-ticket/)
+- Intune subscription: [How to get support in Microsoft Endpoint Manager admin center](/mem/get-support)
