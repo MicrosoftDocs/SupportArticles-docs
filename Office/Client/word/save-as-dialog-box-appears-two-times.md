@@ -37,7 +37,7 @@ To resolve this problem, create a new Normal.dotm file by changing the name of t
 
 2. Right-click **Normal.dotm**, and then select **Rename**.
 
-   :::image type="content" source="media/save-as-dialog-box-appears-two-times/rename-option-to normal-dotm.png" alt-text="Screenshot of right-click Normal.dotm and select Rename.":::
+   :::image type="content" source="media/save-as-dialog-box-appears-two-times/rename-option-to-normal-dotm.png" alt-text="Screenshot of right-click Normal.dotm and select Rename.":::
 
 3. Change the file name to *Normal.old.dotm*.
 
