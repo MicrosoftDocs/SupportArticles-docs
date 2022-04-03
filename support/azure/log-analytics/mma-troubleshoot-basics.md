@@ -59,9 +59,9 @@ When you submit a support ticket for a Monitoring Agent problem, the Microsoft s
 
 If the script doesn't work, use the following steps to collect an ETL trace manually.
 
-1. Select **Start**, enter **cmd**, and then select **Command Prompt** from the results to open a Command Prompt window.
+1. Select **Start**, enter *cmd*, and then select **Command Prompt** from the results to open a Command Prompt window.
 
-1. At the command prompt, go to the following directory: `%programfiles%\Microsoft Monitoring Agent\Agent\Tools`.
+1. At the command prompt, go to the following directory: *%programfiles%\Microsoft Monitoring Agent\Agent\Tools*.
 
 1. Run the following command to stop trace logging:
 
