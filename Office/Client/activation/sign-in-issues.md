@@ -11,6 +11,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 157601
   - CI 159070
+  - CI 162419
 search.appverid: 
   - MET150
 appliesto: 
@@ -122,6 +123,17 @@ Each firewall will have a different method to enable access to these URIs. Check
   
 For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
+</details>
+
+<details>
+<summary><b>Check  external DNS for incorrect CNAME records</b></summary>
+
+Check your external DNS, and see if there is a MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
+
+:::image type="content" source="media/network-connection-issues/cname.png" alt-text="CNAME (Suite) shows alias as MSOID and target as clientconfig.partner.microsoftonline-p.net.cn.":::
+
+This CNAME only applies to Microsoft 365 operated by 21Vianet. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
+
 </details>
 
 <details>
