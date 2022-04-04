@@ -109,5 +109,5 @@ To configure the Automatic Metric feature:
 
 ## References
 
-[IPv4 Routing](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732974%28v=ws.10%29)
+[IPv4 Routing](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732974%28v=ws.10%29)
 [Download PDF version of TCP/IP Fundamentals for Microsoft Windows](https://www.microsoft.com/en-us/download/details.aspx?id=8781)

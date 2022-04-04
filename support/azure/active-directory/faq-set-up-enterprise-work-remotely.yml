@@ -22,7 +22,7 @@ sections:
       - question: |
           I'm new to Microsoft Cloud. How can I enable my employees to start working remotely by using Microsoft Teams with the free license that's offered by Microsoft?
         answer: |
-          Microsoft offers a free E1 license for six months to enable your employees to increase their productivity from home through Microsoft Teams. For information about licensing, and to check your eligibility, go to: [Manage the Office 365 E1 Trial](https://docs.microsoft.com/microsoftteams/e1-trial-license).
+          Microsoft offers a free E1 license for six months to enable your employees to increase their productivity from home through Microsoft Teams. For information about licensing, and to check your eligibility, go to: [Manage the Office 365 E1 Trial](/microsoftteams/e1-trial-license).
 
       - question: |
           What guidance is available to set up Microsoft Teams from an Azure AD perspective to work with my existing on-premises deployment?
@@ -35,8 +35,8 @@ sections:
           Microsoft offers a free A1 license for education. For information about licensing, go to [Get Office 365 free for your entire school](https://www.microsoft.com/microsoft-365/academic/compare-office-365-education-plans?activetab=tab%3aprimaryr1).
           The following documentation provides useful information about how to enable remote learning at your school or university:
 
-          - [Get started with Microsoft Teams for remote learning](https://docs.microsoft.com/MicrosoftTeams/remote-learning-edu) 
-          - [Create your Office 365 tenant account](https://docs.microsoft.com/microsoft-365/education/deploy/create-your-office-365-tenant)
+          - [Get started with Microsoft Teams for remote learning](/MicrosoftTeams/remote-learning-edu) 
+          - [Create your Office 365 tenant account](/microsoft-365/education/deploy/create-your-office-365-tenant)
 
       - question: |
           My administrators also work from home. How can I enable them to access our internal servers remotely and in a secure manner?
@@ -54,14 +54,14 @@ sections:
 
           Here are examples of MFA server integration with third-party VPNs:
 
-          [Advanced scenarios with Azure MFA Server](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfaserver-nps-vpn)
+          [Advanced scenarios with Azure MFA Server](/azure/active-directory/authentication/howto-mfaserver-nps-vpn)
 
           Here's how to [integrate Azure MFA server with gateway](http://azuredummies.com/2017/07/01/securing-rdp-connection-using-azure-mfa-for-windows-2012-r22016/).
 
           If you're using the MFA NPS extension, see the following articles for technical details:
 
-          - [Integrate your Remote Desktop Gateway infrastructure](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-nps-extension-rdg)
-          - [Integrate your VPN infrastructure with Azure MFA](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-nps-extension-vpn)
+          - [Integrate your Remote Desktop Gateway infrastructure](/azure/active-directory/authentication/howto-mfa-nps-extension-rdg)
+          - [Integrate your VPN infrastructure with Azure MFA](/azure/active-directory/authentication/howto-mfa-nps-extension-vpn)
 
       - question: |
           I want to enable Azure MFA. How can I choose the type of MFA to use?
@@ -76,7 +76,7 @@ sections:
           |Using Azure MFA with RADIUS Authentication|A Network Policy Server (NPS) is deployed.|
           |Users have Microsoft Office 2010 or earlier, or Apple Mail for iOS 11 or earlier|Upgrade to Microsoft Office 2013 or later and Apple Mail for iOS 12 or later. Conditional access is not supported by legacy authentication protocols.|
                       
-          For more information about how each MFA type works and when to use it, go to [Plan an Azure Multi-Factor Authentication deployment](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-getstarted).
+          For more information about how each MFA type works and when to use it, go to [Plan an Azure Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted).
 
       - question: |
           How can I enable users to be able to reset their passwords directly from Azure AD?
@@ -85,33 +85,33 @@ sections:
 
           - If the user has Azure Active Directory Premium and wants to enable SSPR-U (SSPR for users), we recommend this option:
 
-              [Enable Azure Active Directory self-service password reset](https://docs.microsoft.com/azure/active-directory/authentication/howto-sspr-windows)
+              [Enable Azure Active Directory self-service password reset](/azure/active-directory/authentication/howto-sspr-windows)
           - If the user doesn't have Azure Active Directory Premium, and uses an Active Directory Federation Services (AD FS) for federation but doesn't have any SSPR, we recommend this option:
 
-          If the user doesn't have Azure Active Directory premium but wants to use ADFS to change the password endpoint, they must explicitly enable the endpoint ([Update password customization](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/update-password-customization)). They can do this also on a proxy endpoint. Doing this enables the capability on AD FS.
+          If the user doesn't have Azure Active Directory premium but wants to use ADFS to change the password endpoint, they must explicitly enable the endpoint ([Update password customization](/windows-server/identity/ad-fs/operations/update-password-customization)). They can do this also on a proxy endpoint. Doing this enables the capability on AD FS.
 
           Users can send a claim that is named "passwordchangeurl" for the URL as a claim to Azure AD. Azure AD will honor this for Windows 10, Azure AD-joined workstations that are running Windows 10, version 1703 or a later version. The user will be directed to the URL that is shown in the claim when the user presses Ctrl+Alt+Del.
 
           Here's are some sample references on claims in the context of AD FS:
 
-          [Configure AD FS to Send Password Expiry Claims](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-to-send-password-expiry-claims)
+          [Configure AD FS to Send Password Expiry Claims](/windows-server/identity/ad-fs/operations/configure-ad-fs-to-send-password-expiry-claims)
 
       - question: |
           I have a cloud-only deployment, and I have to add Azure MFA as an additional layer of security. Is there a free license for this?
         answer: |
           Yes. Azure AD Free or standalone Office 365 licenses use security defaults to require MFA for users and administrators.
 
-          To learn how to manage your users' MFA settings, go to [View the status for a user](https://docs.microsoft.com/azure/active-directory/authentication/howto-mfa-userstates#view-the-status-for-a-user).
+          To learn how to manage your users' MFA settings, go to [View the status for a user](/azure/active-directory/authentication/howto-mfa-userstates#view-the-status-for-a-user).
 
       - question: |
           Is it worth connecting my user's devices to Azure AD while they are working remotely?
         answer: |
-          Azure AD enables single sign-on to devices, apps, and services from anywhere through connected devices. IT professionals get the controls they must have to manage and secure your organization's resources. For more information, go to [Getting devices in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
+          Azure AD enables single sign-on to devices, apps, and services from anywhere through connected devices. IT professionals get the controls they must have to manage and secure your organization's resources. For more information, go to [Getting devices in Azure AD](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
 
       - question: |
           What kinds of device types can connect to Azure AD?
         answer: |
-          You can connect three kinds of devices to Azure AD: Azure AD Registered, Azure AD Joined, or Hybrid Azure AD joined, depending on your infrastructure. For more information, go to [Getting devices in Azure AD](https://docs.microsoft.com/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
+          You can connect three kinds of devices to Azure AD: Azure AD Registered, Azure AD Joined, or Hybrid Azure AD joined, depending on your infrastructure. For more information, go to [Getting devices in Azure AD](/azure/active-directory/devices/overview#getting-devices-in-azure-ad).
 
       - question: |
           Is an additional license required to connect my device to Azure AD?
@@ -146,7 +146,7 @@ sections:
       - question: |
           How can I verify that Single Sign-On (SSO) is working as expected on my device?
         answer: |
-          Run the **dsregcmd /status**  command from a Hybrid Azure AD-joined or Azure AD-joined device, and check whether **AzureAdPrt**  is set as **YES**. For more information, go to [SSO state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
+          Run the **dsregcmd /status**  command from a Hybrid Azure AD-joined or Azure AD-joined device, and check whether **AzureAdPrt**  is set as **YES**. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
 
       - question: |
           What are the Hybrid Azure AD device registration steps?
@@ -169,14 +169,14 @@ sections:
       - question: |
           While working from home, I can't access cloud resources. My device's conditional access policy isn't registered, but the device seems to be connected to Azure AD. What might be wrong?
         answer: |
-          Double-check the device connection to Azure AD. Also check the Azure AD PRT value. For more information, go to [SSO state](https://docs.microsoft.com/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
+          Double-check the device connection to Azure AD. Also check the Azure AD PRT value. For more information, go to [SSO state](/azure/active-directory/devices/troubleshoot-device-dsregcmd#sso-state).
 
       - question: |
           When users work from home, is there a way to allow them to reset their passwords?
         answer: |
           Yes. You can allow users to change their password from home. Here's how to configure the password writeback feature:
 
-          1. Enable the password writeback feature from Azure Active Directory Connect. For more information, go to [Enable password writeback in Azure AD Connect](https://docs.microsoft.com/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-in-azure-ad-connect).
+          1. Enable the password writeback feature from Azure Active Directory Connect. For more information, go to [Enable password writeback in Azure AD Connect](/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-in-azure-ad-connect).
           2. Set the required permission to the Azure Active Directory Connect account by running the following PowerShell commands on the Azure Active Directory Connect server:
 
               ```powershell
@@ -193,18 +193,18 @@ sections:
                 Get-ADSyncADConnectorAccount
                 ```
 
-          3. To enable password writeback from Azure portal, go to [Enable password writeback for SSPR](https://docs.microsoft.com/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-for-sspr).
+          3. To enable password writeback from Azure portal, go to [Enable password writeback for SSPR](/azure/active-directory/authentication/tutorial-enable-sspr-writeback#enable-password-writeback-for-sspr).
 
       - question: |
           What is the required license for password writeback and SSPR?
         answer: |
           The required licenses are listed in the following article:
 
-          [How does self-service password reset writeback work in Azure Active Directory?](https://docs.microsoft.com/azure/active-directory/authentication/concept-sspr-writeback#licensing-requirements-for-password-writeback)
+          [How does self-service password reset writeback work in Azure Active Directory?](/azure/active-directory/authentication/concept-sspr-writeback#licensing-requirements-for-password-writeback)
 
       - question: |
           What are the required ports and URLs for password writeback and SSPR?
         answer: |
-          For an Azure Active Directory Connect server that is running behind a firewall or through a proxy, open the ports and URLs that are listed in [this article](https://docs.microsoft.com/azure/active-directory/authentication/active-directory-passwords-troubleshoot#confirm-network-connectivity).
+          For an Azure Active Directory Connect server that is running behind a firewall or through a proxy, open the ports and URLs that are listed in [this article](/azure/active-directory/authentication/active-directory-passwords-troubleshoot#confirm-network-connectivity).
 
           [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
