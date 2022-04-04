@@ -37,7 +37,7 @@
   - name: Backing up, restoring, and cloning
     href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
   - name: Built-in Linux containers FAQs
-    href: faqs-app-service-linux.md
+    href: faqs-app-service-linux.yml
   - name: Configuration and management FAQs for Web Apps
     href: web-apps-configuration-and-management-faqs.md
   - name: Deployment FAQs for Web Apps
