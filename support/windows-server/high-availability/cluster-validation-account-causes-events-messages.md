@@ -27,7 +27,7 @@ In a failover clustering environment, when you run the cluster validation proces
 
 During the cluster validation process, Windows creates a user account that has the following properties:
 
-- User name: CliTest2
+- User name: **CliTest2**
 - Password: 12 characters
 - Group memberships: None
 
