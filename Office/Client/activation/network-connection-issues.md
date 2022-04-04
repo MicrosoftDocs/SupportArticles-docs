@@ -124,6 +124,17 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 </details>
 
 <details>
+<summary><b>Check  external DNS for incorrect CNAME records</b></summary>
+
+Check your external DNS, and see if there is a MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
+
+:::image type="content" source="media/network-connection-issues/cname.png" alt-text="CNAME (Suite) shows alias as MSOID and target as clientconfig.partner.microsoftonline-p.net.cn.":::
+
+This CNAME only applies to Microsoft 365 operated by 21Vianet. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
+
+</details>
+
+<details>
 <summary><b>Disable IPv6</b></summary>
 
 1. Right-click the network icon in the System Tray.
