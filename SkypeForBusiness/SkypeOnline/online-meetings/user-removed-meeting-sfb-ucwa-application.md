@@ -17,6 +17,7 @@ appliesto:
   - Skype for Business 2015
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Users are removed from a meeting while using Skype for Business UCWA applications

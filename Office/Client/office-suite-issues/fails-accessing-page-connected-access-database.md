@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Access
+ms.date: 3/31/2022
 ---
 
 # PRB: Error Message: 0x80004005: General Error Unable to Open Registry Key

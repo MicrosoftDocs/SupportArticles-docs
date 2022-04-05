@@ -15,6 +15,7 @@ ms.custom:
   - CI 124895
 appliesto: 
   - Outlook for Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # You can open only two identically named Excel attachments from different email messages

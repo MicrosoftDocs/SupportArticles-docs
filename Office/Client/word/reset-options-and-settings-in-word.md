@@ -14,6 +14,7 @@ ms.custom:
 ms.author: luche
 appliesto: 
   - Microsoft Word
+ms.date: 3/31/2022
 ---
 
 # How to reset user options and registry settings in Word

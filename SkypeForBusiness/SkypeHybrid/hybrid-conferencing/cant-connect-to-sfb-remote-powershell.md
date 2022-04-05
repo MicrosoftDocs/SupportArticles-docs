@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Lync administrators can't connect to Skype for Business Online Remote PowerShell in a Lync hybrid environment

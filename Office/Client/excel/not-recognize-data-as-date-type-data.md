@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: jenl
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # Excel 2013 does not recognize data as Date type data after you import the data from a SQL Server data source to an Excel workbook

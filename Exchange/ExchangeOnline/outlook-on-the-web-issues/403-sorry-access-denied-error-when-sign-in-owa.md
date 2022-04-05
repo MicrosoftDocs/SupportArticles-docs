@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 403 Sorry Access denied error when a user tries to sign in to Outlook Web App in Microsoft 365
 

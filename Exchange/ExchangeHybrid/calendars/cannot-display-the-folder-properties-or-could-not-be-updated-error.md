@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot display the folder properties or could not be updated error when opening a room calendar in Outlook
 

@@ -17,6 +17,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2010
   - MSfC O365-Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Can't move Exchange Online mailboxes to Exchange Server 2010

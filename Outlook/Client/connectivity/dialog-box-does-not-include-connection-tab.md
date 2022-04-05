@@ -14,6 +14,7 @@ ms.reviewer: abarglo, aruiz
 appliesto: 
   - Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Server dialog box does not include a Connection tab in Outlook 2010
 

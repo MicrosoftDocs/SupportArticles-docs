@@ -8,12 +8,13 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.collection: Adm_O365
 ms.custom: CSSTroubleshoot
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 79e180b1-6290-48ff-8003-fb3e6a3f70af
-description: "Learn how to solve distribution group issues in Office 365 like emails not being delivered to the group, or external members not getting emails."
+description: Learn how to solve distribution group issues in Office 365 like emails not being delivered to the group, or external members not getting emails.
+ms.date: 3/31/2022
 ---
 
 # Distribution group issues

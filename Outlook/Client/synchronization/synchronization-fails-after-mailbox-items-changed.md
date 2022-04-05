@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise CAL
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Synchronization is unsuccessful after mailbox items are changed through EWS calls in cached-mode Outlook client
 

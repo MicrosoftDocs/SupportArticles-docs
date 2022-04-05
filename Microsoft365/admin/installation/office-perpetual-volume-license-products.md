@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Office Professional Plus 2019
   - Office LTSC Professional Plus 2021
+ms.date: 3/31/2022
 ---
 # Office LTSC 2021 and Office 2019 perpetual volume license products available as Click-to-Run
 

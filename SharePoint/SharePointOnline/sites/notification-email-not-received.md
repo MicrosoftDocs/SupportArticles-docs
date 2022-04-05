@@ -1,5 +1,5 @@
 ---
-title: Site storage notification emails for group-connected sites not received 
+title: Site storage notification emails for group-connected sites not received
 description: This article describes an issue that prevents site storage notification email messages for group-connected sites from being received.
 author: PramodBalusu
 manager: dcscontentpm
@@ -10,10 +10,11 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-matthamer
 ms.custom: 
-- CSSTroubleshoot
-- CI 161041
+  - CSSTroubleshoot
+  - CI 161041
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Site storage notifications for group-connected SharePoint sites aren't received

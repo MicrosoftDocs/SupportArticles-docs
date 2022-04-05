@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # "We can't sign you into your company portal" when activating Office 2013

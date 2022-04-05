@@ -21,6 +21,7 @@ appliesto:
   - Word 2016
   - PowerPoint 2016
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Office applications crash when you open an IRM document if HTTPS proxy is enabled

@@ -15,6 +15,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
+ms.date: 3/31/2022
 ---
 
 # "An error has occurred" message when you load an Access web app in Internet Explorer

@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Outlook 2010 with Business Contact Manager
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 # Outlook 2010 Room Finder doesn't show any conference rooms
 

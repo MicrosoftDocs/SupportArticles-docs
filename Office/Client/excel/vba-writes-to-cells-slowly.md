@@ -14,6 +14,7 @@ appliesto:
   - Excel for Office 365
   - Excel 2019
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # VBA code writes to cells slowly when many ActiveX controls are invisible in Excel 2016

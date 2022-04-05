@@ -16,6 +16,7 @@ appliesto:
   - Outlook for Office 365
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Outlook keeps trying to send a nonexistent message while Outbox folder shows zero messages

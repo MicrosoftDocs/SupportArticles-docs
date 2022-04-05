@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Azure Active Directory
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mailboxes listed in the following table can't be migrated when you perform a staged Exchange migration
 

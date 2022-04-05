@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2013 or Outlook 2016 IMAP account can't download messages because of UID SEARCH command
 

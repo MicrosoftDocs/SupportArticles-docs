@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to scan Outlook by using the Microsoft Support and Recovery Assistant
 

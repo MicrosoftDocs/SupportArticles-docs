@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 454 4.7.0 Temporary authentication failure in Exchange Server
 

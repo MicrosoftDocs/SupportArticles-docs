@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Updates to Client Access Rules in Office 365
 

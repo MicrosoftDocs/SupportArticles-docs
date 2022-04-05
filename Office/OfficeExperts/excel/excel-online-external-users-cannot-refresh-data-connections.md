@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: warrenr
 appliesto: 
   - Excel Online
+ms.date: 3/31/2022
 ---
 
 # External users can't refresh data connections from Excel Online

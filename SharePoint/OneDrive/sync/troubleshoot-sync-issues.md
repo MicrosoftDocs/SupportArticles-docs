@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - OneDrive for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Troubleshooting OneDrive for Business sync issues
 

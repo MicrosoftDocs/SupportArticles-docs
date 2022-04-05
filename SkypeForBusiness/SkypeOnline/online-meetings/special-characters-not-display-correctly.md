@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Special characters don't display correctly in the footer of Lync meeting invitations

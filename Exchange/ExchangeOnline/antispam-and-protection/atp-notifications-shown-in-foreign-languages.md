@@ -14,6 +14,7 @@ ms.reviewer: kunalsh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # ATP notifications are displayed in foreign languages in Office 365
 

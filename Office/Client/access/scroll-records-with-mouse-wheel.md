@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Access 2010
   - Office Access 2007
+ms.date: 3/31/2022
 ---
 
 # You cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form

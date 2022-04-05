@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "1007 AccessDenied" or "Ensure your system time is correct" error when you run Hybrid Configuration wizard
 

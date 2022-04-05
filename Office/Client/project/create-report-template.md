@@ -14,6 +14,7 @@ ms.reviewer: AikChen, TBennett, xl15beta
 appliesto: 
   - Project Professional 2013
   - Project 2013 Standard
+ms.date: 3/31/2022
 ---
 
 # How to create a report template in Project 2013

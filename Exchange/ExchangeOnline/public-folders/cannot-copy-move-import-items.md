@@ -15,6 +15,7 @@ ms.reviewer: haembab; meerak; batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't copy, move, or import more than 1,000 items to public folders in Outlook

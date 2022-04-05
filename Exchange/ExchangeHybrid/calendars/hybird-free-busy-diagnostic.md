@@ -14,6 +14,7 @@ ms.reviewer: farshadt
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic
 

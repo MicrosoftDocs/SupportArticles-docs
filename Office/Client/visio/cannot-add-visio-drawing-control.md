@@ -17,6 +17,7 @@ appliesto:
   - Visio Premium 2010
   - Visio Professional 2010
   - Visio Standard 2010
+ms.date: 3/31/2022
 ---
 
 # You cannot add the Microsoft Visio 2010 or 2013 drawing control to a Windows Form application in Visual Studio if you have the 64-bit version of Visio installed

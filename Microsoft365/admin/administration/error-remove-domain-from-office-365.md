@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # You get an error message when you try to remove a domain from Office 365

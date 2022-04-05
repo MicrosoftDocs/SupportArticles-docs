@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # "Call to Excel Services failed" error when you run a scheduled data refresh by using PowerPivot

@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # SharePoint Server 2013 crawler has insufficient permissions to crawl file shares

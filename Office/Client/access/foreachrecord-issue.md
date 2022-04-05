@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error (Within a ForEachRecord only the records of the outermost ForEachRecord may be edited or deleted.) when you run ForEachRecord data macro in Access
 
