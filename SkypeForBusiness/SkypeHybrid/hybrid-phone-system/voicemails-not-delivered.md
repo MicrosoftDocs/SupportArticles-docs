@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business
   - Microsoft Teams
+ms.date: 3/31/2022
 ---
 
 # Voicemail messages aren't delivered in Teams or Skype for Business client

@@ -14,6 +14,7 @@ appliesto:
   - Azure Active Directory
   - Office 365 Identity Management
   - Windows Server 2012 Essentials
+ms.date: 3/31/2022
 ---
 
 # "Exception has been thrown by the target of an invocation" with Directory Sync Configuration Wizard

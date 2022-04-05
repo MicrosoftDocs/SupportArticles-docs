@@ -15,6 +15,7 @@ appliesto:
   - Excel 2002
   - Excel 2003
   - Excel 2007
+ms.date: 3/31/2022
 ---
 
 # Description of the algorithm used by the XIRR() function in Excel

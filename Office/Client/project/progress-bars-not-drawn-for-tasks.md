@@ -18,6 +18,7 @@ appliesto:
   - Project Standard 2010
   - Project Professional 2013
   - Project 2013 Standard
+ms.date: 3/31/2022
 ---
 
 # Progress bars not drawn for tasks that are in progress in Project

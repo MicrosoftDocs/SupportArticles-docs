@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # EndpointNotFoundTransientException error in a public folder migration
 

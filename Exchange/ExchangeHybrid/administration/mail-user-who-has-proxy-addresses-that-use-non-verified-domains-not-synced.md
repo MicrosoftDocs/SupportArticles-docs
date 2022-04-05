@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # A mail user who has proxy addresses that use non-verified domains isn't synced in an Exchange hybrid deployment
 

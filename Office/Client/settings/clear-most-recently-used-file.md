@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # Edit the Windows registry to clear the list of most recently used files in Office

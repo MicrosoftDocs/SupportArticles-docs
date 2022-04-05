@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Products Preparation Tool may not progress past "Configuring Application Server Role, Web Server (IIS) Role"  

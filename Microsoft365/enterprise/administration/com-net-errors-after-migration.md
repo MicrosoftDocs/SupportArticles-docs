@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # COM and .NET errors after Office architecture migration

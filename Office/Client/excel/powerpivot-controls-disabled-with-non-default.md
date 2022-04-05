@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # PowerPivot controls disabled with non-default Excel file format

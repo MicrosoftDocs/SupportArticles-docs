@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # Use a macro to apply cell shading format to every other row in a selected range in Excel

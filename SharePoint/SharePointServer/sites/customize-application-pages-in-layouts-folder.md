@@ -13,6 +13,7 @@ ms.reviewer: sridhara
 appliesto: 
   - SharePoint Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to customize application pages in the Layouts folder in SharePoint
 

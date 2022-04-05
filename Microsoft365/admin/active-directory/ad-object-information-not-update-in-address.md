@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Exchange Online Dedicated
+ms.date: 3/31/2022
 ---
 
 # Changed Active Directory object information is not updated in the address book in Office 365 dedicated/ITAR

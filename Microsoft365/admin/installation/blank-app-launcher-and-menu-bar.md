@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # Office 365 app launcher and menu bar icons are blank

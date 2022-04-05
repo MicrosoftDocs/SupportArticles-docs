@@ -13,6 +13,7 @@ ms.reviewer: v-lanac
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Cannot connect to the server" error message when Skype for Business Online users try to sign in to the Lync 2010 mobile client on a mobile device

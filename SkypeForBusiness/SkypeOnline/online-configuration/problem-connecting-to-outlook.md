@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "There was a problem connecting to Microsoft Office Outlook" when you sign in to Skype for Business Online

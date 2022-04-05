@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error message when you use special characters in Access databases

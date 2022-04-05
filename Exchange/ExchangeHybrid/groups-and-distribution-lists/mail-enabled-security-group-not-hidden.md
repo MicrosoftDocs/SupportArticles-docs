@@ -14,6 +14,7 @@ ms.reviewer: travr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mail-enabled security group isn't hidden from GAL after directory synchronization in a hybrid deployment
 

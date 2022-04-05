@@ -21,6 +21,7 @@ appliesto:
   - Windows 8
   - Windows 8.1
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # No desktop alerts (toast notifications) if the Outlook Start menu shortcut is missing
 

@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Office 2010 Service Pack 2
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to hide columns in the Address Book in Outlook
 

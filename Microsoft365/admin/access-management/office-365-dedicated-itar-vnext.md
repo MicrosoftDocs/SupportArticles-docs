@@ -13,6 +13,7 @@ ms.author: v-maqiu
 appliesto: 
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
+ms.date: 3/31/2022
 ---
 
 # Full Access permissions are not working after a migration to Office 365 dedicated/ITAR (vNext)

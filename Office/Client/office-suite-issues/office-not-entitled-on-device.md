@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # No Office entitlement found on device

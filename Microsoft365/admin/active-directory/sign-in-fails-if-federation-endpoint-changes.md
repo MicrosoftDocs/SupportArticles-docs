@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint

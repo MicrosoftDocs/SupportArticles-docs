@@ -17,6 +17,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # You can't open your mailbox on an Exchange Server 2010 server by using Outlook
 

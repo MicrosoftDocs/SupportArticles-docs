@@ -16,6 +16,7 @@ appliesto:
   - Access 2013
   - Access for Office 365
   - Access 2019
+ms.date: 3/31/2022
 ---
 
 # "Cannot update. Database or object is read-only" error in linked SharePoint list in Access

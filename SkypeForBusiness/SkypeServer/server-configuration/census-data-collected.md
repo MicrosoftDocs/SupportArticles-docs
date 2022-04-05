@@ -15,6 +15,7 @@ appliesto:
   - Lync 2013
   - Skype for Business 2015
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # Census data is now collected for all Lync 2013 (Skype for Business) and Skype for Business 2016 clients

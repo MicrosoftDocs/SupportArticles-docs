@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: ericspli
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # How to check the size of this month's Office ProPlus update

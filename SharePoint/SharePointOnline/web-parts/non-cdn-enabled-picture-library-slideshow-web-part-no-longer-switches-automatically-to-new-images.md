@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Non-CDN-enabled SharePoint Picture Library Slideshow web part no longer switches automatically to new images

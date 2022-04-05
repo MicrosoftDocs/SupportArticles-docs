@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Secure Mail Certificate on server is not bound to the SMTP Service error when running Hybrid Configuration wizard
 

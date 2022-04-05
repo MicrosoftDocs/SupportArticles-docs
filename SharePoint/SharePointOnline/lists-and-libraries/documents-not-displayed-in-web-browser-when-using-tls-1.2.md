@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office Online Server
+ms.date: 3/31/2022
 ---
 
 # Documents aren't displayed in web browser when you're using TLS 1.2  

@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mail flow to Exchange Online stops and event ID 2004 is logged on the hybrid transport server
 

@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Document that was created through the SharePoint 2013 Workflow Platform doesn't open in SharePoint Online

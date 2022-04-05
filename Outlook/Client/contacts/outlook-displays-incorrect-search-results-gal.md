@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook displays incorrect search results of the GAL in Exchange Server
 

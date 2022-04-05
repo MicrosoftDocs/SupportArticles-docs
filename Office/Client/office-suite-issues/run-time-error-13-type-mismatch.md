@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft FRx
+ms.date: 3/31/2022
 ---
 
 # Run-Time Error 13: Type Mismatch

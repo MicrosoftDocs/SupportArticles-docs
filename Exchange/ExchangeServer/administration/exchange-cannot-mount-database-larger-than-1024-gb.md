@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2019 Standard Edition
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2016 Standard Edition
+ms.date: 3/31/2022
 ---
 # Exchange Server 2013, 2016 and 2019 Standard Edition can't mount databases that are larger than 1024 GB
 

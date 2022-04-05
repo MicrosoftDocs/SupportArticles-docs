@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Service Pack 1
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when adding a large attachment in Outlook on the web
 

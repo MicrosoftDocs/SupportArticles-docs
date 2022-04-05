@@ -15,6 +15,7 @@ appliesto:
   - Excel 2016
   - Excel 2013
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # Excel workbooks may not open after MS16-088 is installed

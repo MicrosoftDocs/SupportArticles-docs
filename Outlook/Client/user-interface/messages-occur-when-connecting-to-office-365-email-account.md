@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook Message Manager (profile_name) (KEY hex_number) email items in an Exchange Online mailbox
 

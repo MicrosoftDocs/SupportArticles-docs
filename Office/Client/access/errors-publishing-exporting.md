@@ -15,6 +15,7 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Access errors publishing or exporting to SharePoint when attachment file name is invalid
 

@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013
   - Exchange Server 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Inline UUEncoded attachments of email messages from a UNIX-based application are garbled or are unreadable
   

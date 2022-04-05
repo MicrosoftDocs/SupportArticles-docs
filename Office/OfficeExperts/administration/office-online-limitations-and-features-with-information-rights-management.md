@@ -13,6 +13,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
   - Office Web Apps
+ms.date: 3/31/2022
 ---
 
 # Office Online limitations and features with Information Rights Management (IRM)

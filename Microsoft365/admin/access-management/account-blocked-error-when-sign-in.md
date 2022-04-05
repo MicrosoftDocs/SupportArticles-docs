@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "Your account has been locked. Contact your support person to unlock it, then try again." error when signing in to Microsoft 365

@@ -5,13 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to open Support cases for GCC High and DoD

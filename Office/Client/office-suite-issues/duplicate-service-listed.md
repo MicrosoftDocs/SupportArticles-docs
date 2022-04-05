@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: amaniah
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result
