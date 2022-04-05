@@ -157,7 +157,7 @@ Continue to <a href="#clearwpj">Clear Workplace-Joined accounts</a>.
 
 <h3 id="clearwpj">Clear Workplace-Joined accounts</h3>
 
-When you clear WAM accounts associated with Office on  WPJ devices, the Single Sign-On (SSO) behavior for the current Windows session will be removed as well. All applications in the current Windows session will lose their SSO state and, the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time users try to sign in to an application, they will be asked to add their account to all the services again.
+When you clear WAM accounts associated with Office on  WPJ devices, the Single Sign-On (SSO) behavior for the current Windows session will be removed as well. All applications in the current Windows session will lose their SSO state, the device will be unenrolled from management tools (MDM), and the device will be unregistered from the cloud. The next time users try to sign in to an application, they will be asked to add their account to all the services again.
 
 To clear Workplace Joined accounts manually:
 
