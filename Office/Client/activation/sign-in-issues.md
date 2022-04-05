@@ -130,9 +130,9 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 
 Check your external DNS, and see if there is a MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
 
-:::image type="content" source="media/network-connection-issues/cname.png" alt-text="CNAME (Suite) shows alias as MSOID and target as clientconfig.partner.microsoftonline-p.net.cn.":::
+This CNAME only applies to Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
 
-This CNAME only applies to Microsoft 365 operated by 21Vianet. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
+For more information about Microsoft 365 DNS records, see [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide#external-dns-records-required-for-office-365-core-services).
 
 </details>
 
