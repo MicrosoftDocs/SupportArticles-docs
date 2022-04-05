@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 157765
+  - CI 162387
 search.appverid: 
   - MET150
 appliesto: 
@@ -126,11 +127,9 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 <details>
 <summary><b>Check  external DNS for incorrect CNAME records</b></summary>
 
-Check your external DNS, and see if there is a MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
+Check your external DNS for an MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
 
-This CNAME only applies to Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
-
-For more information about Microsoft 365 DNS records, see [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide#external-dns-records-required-for-office-365-core-services).
+This CNAME record is only required for customers who use Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete this CNAME record and wait for DNS replication to update the DNS record.
 
 </details>
 
