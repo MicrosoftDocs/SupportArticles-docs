@@ -35,11 +35,43 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/microsoftteams/support/breadcrumb/toc.json",
+      "breadcrumb_path": "/microsoftteams/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "recommendations": true,
+      "feedback_system": "none",
+      "hideEdit": true,
+      "titleSuffix": "Microsoft Teams",
+      "searchScope": ["Teams Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.service": {
+        "**/*.md": "msteams"
+      },
+      "ms.subservice": {
+        "authentication/**/*.md": "authentication",
+        "channels/**/*.md": "channels",        
+        "exchange-integration/**/*.md": "exchange-integration",
+        "files/**/*.md": "files",
+        "forms/**/*.md": "forms",
+        "known-issues/**/*.md": "",
+        "meetings/**/*.md": "meetings",
+        "mobile/**/*.md": "mobile-devices",
+        "phone-system/**/*.md": "phone-system",
+        "provisioning/**/*.md": "provisioning",
+        "sites/**/*.md": "sites",
+        "tabs/**/*.md": "tabs",
+        "teams-administration/**/*.md": "administration",
+        "teams-conferencing/**/*.md": "conferencing",
+        "Teams-devices-and-rooms/**/*.md": "devices-and-rooms",
+        "teams-im-presence/**/*.md": "im-and-presence",
+        "teams-on-linux/**/*.md": "teams-on-linux",
+        "teams-on-mac/**/*.md": "teams-on-mac",
+        "teams-on-windows/**/*.md": "teams-on-windows",
+        "teams-onenote-integration/**/*.md": "onenote-integration",
+        "teams-sign-in/**/*.md": "sign-in",
+        "third-party-programs/**/*.md": "third-party-programs"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-MicrosoftTeams",
     "markdownEngineName": "markdig"

@@ -4,13 +4,61 @@
       {
         "files": [
           "**/*.md",
-          "**/*.yml"
+          "**/**.yml"
         ],
+        "src": "Hub",
+        "dest": ".",
         "exclude": [
           "**/obj/**",
           "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeServer",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeOnline",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/**.yml"
+        ],
+        "src": "ExchangeHybrid",
+        "dest": ".",
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
           "README.md",
           "LICENSE",
           "LICENSE-CODE",
@@ -22,24 +70,73 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.pdf",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "_themes/**",
-          "_themes.pdf/**"
+          "**/includes/**"
         ]
       }
     ],
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/exchange/support/breadcrumb/toc.json",
+      "breadcrumb_path": "/exchange/troubleshoot/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None"
+      "recommendations": true,
+      "feedback_system": "none",
+      "titleSuffix": "Exchange",
+      "hideEdit": true,
+      "searchScope": ["Exchange Support"] 
     },
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.prod": {
+        "ExchangeServer/**/*.md": "exchange-server-it-pro"     
+      },
+      "ms.technology": {
+        "ExchangeServer/administration/**/*.md": "administration",
+        "ExchangeServer/client-connectivity/**/*.md": "client-connectivity",
+        "ExchangeServer/compliance/**/*.md": "compliance",
+        "ExchangeServer/development/**/*.md": "development",
+        "ExchangeServer/distribution-list/**/*.md": "distribution-list",
+        "ExchangeServer/mailflow/**/*.md": "mailflow",
+        "ExchangeServer/migration/**/*.md": "migration",
+        "ExchangeServer/public-folders/**/*.md": "public-folders",
+        "ExchangeServer/setup/**/*.md": "setup"
+      },
+      "ms.service": {
+        "ExchangeOnline/**/*.md": "exchange-online",
+        "ExchangeHybrid/**/*.md": "exchange-online"        
+      },
+      "ms.subservice": {
+        "ExchangeHybrid/administration/**/*.md": "administration",
+        "ExchangeHybrid/calendars/**/*.md": "calendars",
+        "ExchangeHybrid/email-delivery/**/*.md": "email-delivery",
+        "ExchangeHybrid/groups-and-distribution-lists/**/*.md": "groups-and-distribution-lists",
+        "ExchangeHybrid/hybrid-configuration-wizard-errors/**/*.md": "hybrid-configuration-wizard",
+        "ExchangeHybrid/move-mailboxes/**/*.md": "move-or-migrate-mailboxes",
+        "ExchangeHybrid/send-emails/**/*.md": "send-emails",
+        "ExchangeHybrid/public-folders/**/*.md": "public-folders",
+        "ExchangeHybrid/user-and-shared-mailboxes/**/*.md": "user-and-shared-mailboxes", 
+        "ExchangeOnline/administration/**/*.md": "administration",
+        "ExchangeOnline/antispam-and-protection/**/*.md": "antispam-and-protection",
+        "ExchangeOnline/calendars/**/*.md": "calendars",
+        "ExchangeOnline/development/**/*.md": "development",
+        "ExchangeOnline/email-alias/**/*.md": "email-alias",
+        "ExchangeOnline/email-delivery/**/*.md": "email-delivery",
+        "ExchangeOnline/groups-and-distribution-lists/**/*.md": "groups-and-distribution-lists",
+        "ExchangeOnline/mobile-devices/**/*.md": "mobile-devices",
+        "ExchangeOnline/move-or-migrate-mailboxes/**/*.md": "move-or-migrate-mailboxes",
+        "ExchangeOnline/outlook-issues/**/*.md": "outlook-issues",
+        "ExchangeOnline/outlook-on-the-web-issues/**/*.md": "outlook-on-the-web-issues",
+        "ExchangeOnline/send-emails/**/*.md": "send-emails",
+        "ExchangeOnline/public-folders/**/*.md": "public-folders",
+        "ExchangeOnline/user-and-shared-mailboxes/**/*.md": "user-and-shared-mailboxes"
+      }
+    },
     "template": [],
     "dest": "OfficeDocs-Support-Exchange",
     "markdownEngineName": "markdig"
