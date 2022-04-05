@@ -21,7 +21,7 @@ ms.date: 3/31/2022
 
 # Sign in issues when activating Microsoft 365 Apps
 
-This article will help you troubleshoot network connection issues when activating Microsoft 365 Apps.
+This article will help you troubleshoot sign in issues when activating Microsoft 365 Apps.
 
 **Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 
@@ -128,11 +128,9 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 <details>
 <summary><b>Check  external DNS for incorrect CNAME records</b></summary>
 
-Check your external DNS, and see if there is a MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
+Check your external DNS for an MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
 
-This CNAME only applies to Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete the record and wait for DNS replication.
-
-For more information about Microsoft 365 DNS records, see [External Domain Name System records for Office 365](/microsoft-365/enterprise/external-domain-name-system-records?view=o365-worldwide#external-dns-records-required-for-office-365-core-services).
+This CNAME record is only required for customers who use Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete this CNAME record and wait for DNS replication to update the DNS record.
 
 </details>
 
