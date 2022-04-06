@@ -23,11 +23,11 @@ search.appverid: MET150
 Consider the following scenario:  
 
 - You're working with some content that's encrypted by the Azure Information Protection service.
-- Usage rights are assigned to a Microsoft 365 group that contains mail contacts.
+- Usage rights are assigned to a group that contains mail contacts.
 
 In this scenario, the mail contacts lose access to the encrypted content or have only intermittent access to the content.
 
-**Note:** A typical way to apply this encryption is to use sensitivity labels that are created and published from the Microsoft 365 Security and Compliance Center.
+**Note:** A typical way to apply this encryption is to use sensitivity labels that are created and published from the Microsoft 365 compliance center.
 
 ## Cause
 
