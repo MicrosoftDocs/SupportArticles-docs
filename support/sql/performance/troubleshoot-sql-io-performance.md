@@ -82,8 +82,8 @@ Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 clear
 $cntr = 0 
 
-# replace with your server
-$serverName = "servername" 
+# replace with your server name, unless local computer
+$serverName = $env:COMPUTERNAME
 
 # replace with your volume name - C: , D:, etc
 $volumeName = "_total"
@@ -136,7 +136,8 @@ If SQL Server and the OS indicate I/O subsystem is slow, then check if that is c
 
 ```Powershell
 clear
-$serverName = "severname"
+
+$serverName = $env:COMPUTERNAME
 $Counters = @(
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Bytes/sec"),
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Read Bytes/sec"),
