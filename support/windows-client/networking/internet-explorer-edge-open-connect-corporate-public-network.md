@@ -54,7 +54,7 @@ The active probe process consists of the following steps:
 
 - Windows 10 or later versions:
    1. NCSI sends a DNS request to resolve the address of the `www.msftconnecttest.com` FQDN.
-   2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftconnecttest.com`/connecttest.txt.
+   2. If NCSI receives a valid response from a DNS server, NCSI sends a plain HTTP GET request to `http://www.msftconnecttest.com/connecttest.txt`.
    3. If NCSI successfully downloads the text file, it makes sure that the file contains Microsoft Connect Test.
    4. NCSI sends another DNS request to resolve the address of the `dns.msftncsi.com` FQDN.
 
