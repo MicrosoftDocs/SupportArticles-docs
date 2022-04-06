@@ -52,7 +52,10 @@ This article lists the known issues for Microsoft Teams Rooms by feature area.
 |  ---        |      ---             |   ---            |
 | Monitors not detected | When you run Microsoft Teams Rooms on a Surface Pro (Model 2017) device, monitors are not detected. |  Hold down the Surface Pro power button for 20 or more seconds. When you do this, the device restarts and clears the graphics cache. |
 | Login loops or fails for Teams on Android phones | You can't sign in or the sign-in continually loops when both the MFA and the Terms of Use (ToU) Conditional Access (CA) policies are used. | The combination of MFA CA and ToU CA is not supported. You should exclude it from being used. <br><br> To avoid the sign-in error, ensure that only the MFA CA or only the MDM CA is used. When only the MFA CA is used, ensure it is enabled in Device Registration Services (DRS). For more information, see [Conditional Access: Cloud apps, actions, and authentication context](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps#user-actions). |
-| Can't delete contacts | You can't delete contacts from Teams on Android phones. | Use either the Teams desktop or the Teams web client to delete contacts from Teams. |
+| Can't delete contacts on Android phones| You can't delete contacts from Teams on Android phones. | Use either the Teams desktop or the Teams web client to delete contacts from Teams. |
+| The username isn't displayed in Teams on Android phones | The sidecar username isn't displayed on the **Calls** tab or the **People** tab. | No workaround is available at this time. |
+| No video for remote participants from Android Meeting Room devices | Remote participants can't get video from meeting participants who're using Teams Rooms on Android devices, such as MTRA Poly X50, X30, and Yealink A20. The issue is intermittent. | Reboot the device and rejoin the Teams meeting. |
+| A random string displays in Teams on Android phones | A random string of characters is displayed in the **More** page when the time format is set to 24 hours. This issue occurs in **Firmware : 143.15.0.5 Teams app : 2022032303 CP : 5304 AA : 322**. | No workaround is available at this time. |
 
 ## Limitations
 
