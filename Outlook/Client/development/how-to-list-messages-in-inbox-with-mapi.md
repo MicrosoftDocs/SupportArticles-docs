@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Microsoft Office Outlook 2007
+appliesto: 
+- Microsoft Office Outlook 2007
 search.appverid: MET150
 ms.reviewer: SGRIFFIN
 author: simonxjx
