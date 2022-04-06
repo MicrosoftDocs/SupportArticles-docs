@@ -102,4 +102,4 @@ This script checks whether the subkey exists. If the subkey doesn't exist, the s
 
 The following image shows how this listing appears in a list of providers.
 
-:::image type="content" source="media/configure-standalone-wmi-providers/wmi-provider-listing.png" alt-text="Provider listing that shows the standalone hosting information":::
+:::image type="content" source="media/configure-standalone-wmi-providers/wmi-provider-listing.png" alt-text="Provider listing that shows the standalone hosting information.":::
