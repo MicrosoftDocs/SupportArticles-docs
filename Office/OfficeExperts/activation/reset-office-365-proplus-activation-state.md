@@ -145,7 +145,7 @@ If you have Shared Computer Activation enabled, remove the Identity registry key
 <div id="step4">
 <br>
 <details>
-<summary><b>Step 4: Clear cached Office credentials for managed devices</b>></summary>
+<summary><b>Step 4: Clear cached Office credentials for managed devices</b></summary>
 
 For managed devices, there are additional locations from which you need to remove cached Office credentials. Devices are considered managed if they are Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
 
