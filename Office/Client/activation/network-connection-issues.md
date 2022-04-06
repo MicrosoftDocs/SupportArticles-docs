@@ -125,11 +125,11 @@ For manual troubleshooting for step 7, or for more information, see [Fix authent
 </details>
 
 <details>
-<summary><b>Check  external DNS for incorrect CNAME records</b></summary>
+<summary><b>Check external DNS for incorrect CNAME records</b></summary>
 
-Check your external DNS for an MSOID CNAME record pointing to `clientconfig.partner.microsoftonline-p.net.cn`.
+Check your external DNS for an MSOID CNAME record that points to `clientconfig.partner.microsoftonline-p.net.cn`.
 
-This CNAME record is only required for customers who use Microsoft 365 operated by 21Vianet, a service available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will get a "custom domain isn't in our system" error and won't be able to activate their Microsoft 365 apps license. Delete this CNAME record and wait for DNS replication to update the DNS record.
+This CNAME record is required only for customers who use Microsoft 365 that's operated by 21Vianet. 21Vianet is a service that's available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will receive a "custom domain isn't in our system" error message. Because of this error, users won't be able to activate their Microsoft 365 apps license. If you find this CNAME record, delete it, and wait for DNS replication to update the DNS record.
 
 </details>
 
