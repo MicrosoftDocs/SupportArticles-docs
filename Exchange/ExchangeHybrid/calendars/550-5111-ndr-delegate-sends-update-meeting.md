@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
 ms.reviewer: kellybos, v-maqiu, v-jeffbo
 author: simonxjx

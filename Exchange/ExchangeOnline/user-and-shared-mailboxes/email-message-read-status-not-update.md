@@ -11,7 +11,8 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: chrisbur
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
