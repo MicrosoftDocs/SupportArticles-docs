@@ -89,7 +89,8 @@ For example, follow these steps for Internet Explorer 11:
     Image Version: 10.0.19041.985
     [==========================100.0%==========================]
     The operation completed successfully.
-    Restart Windows to complete this operation.
+    Restart Windows to complete this operation.![image](https://user-images.githubusercontent.com/77822529/159870921-dce4dc44-ee48-4745-963d-f7f45801589b.png)
+
     Do you want to restart the computer now? (Y/N)
     ```
 
@@ -97,9 +98,8 @@ For example, follow these steps for Internet Explorer 11:
 
 On client systems, follow these steps to disable Internet Explorer by using **Windows Features** in Control Panel:
 
-1. Press **Windows logo key+R**.
-1. In the **Run**, enter *appwiz.cpl*, and then select **OK**.
-1. In the **Programs and Features**, select **Turn Window features on or off**.
+1. Select Windows logo key+R.
+1. In the **Run**, enter *OptionalFeatures.exe*, and then select **OK**.
 1. In the **Windows Features** dialog box, clear the checkbox for the installed version of Internet Explorer. For example, find **Internet Explorer 11** and then clear its checkbox.
 1. Select **OK**.
 1. Restart the computer.
