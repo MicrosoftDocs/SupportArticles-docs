@@ -27,7 +27,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-You can't sign into Microsoft 365, Microsoft Azure, or Microsoft Intune because you forgot your password.
+You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune because you forgot your password.
 
 ## Solution
 
