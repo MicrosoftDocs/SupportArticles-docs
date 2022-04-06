@@ -22,7 +22,7 @@ search.appverid: MET150
 
 Consider the following scenario:  
 
-- You're working with some content is encrypted by the Azure Information Protection service.
+- You're working with some content that's encrypted by the Azure Information Protection service.
 - Usage rights are assigned to a Microsoft 365 group that contains mail contacts.
 
 In this scenario, the mail contacts lose access to the encrypted content or have only intermittent access to the content.
