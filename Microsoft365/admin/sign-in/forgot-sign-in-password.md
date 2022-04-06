@@ -53,6 +53,6 @@ To fix this issue, do one of the following:
 - When you submit your request to Support, include your name, telephone number and email address so that a Support professional can contact you.
 - If you're the only admin on your Azure subscription and have forgotten the password, contact [Azure support](https://azure.microsoft.com/support/create-ticket/).  
 - You can also use the following resources to contact Support:
-  - Microsoft 365: [Get support](/microsoft-365/admin/get-help-support)
+  - Office 365: [Get support for O365](/microsoft-365/admin/get-help-support)
   - Azure: [Get support for Azure](https://azure.microsoft.com/support/create-ticket/)
-  - Intune: [How to get support in Microsoft Endpoint Manager admin center](/mem/get-support)
+  - Intune: [Get support for Intune](/mem/get-support)
