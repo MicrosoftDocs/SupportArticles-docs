@@ -51,8 +51,8 @@ To fix this issue, do one of the following:
 
 - You can use the Self-Service Password Reset wizard to contact Support if the self-service password reset fails. You may need to wait a few seconds before the link to contact Support appears.
 - When you submit your request to Support, include your name, telephone number and email address so that a Support professional can contact you.
-- If you're the only admin on your Azure subscription and have forgotten the password, submit a free [Azure subscription ticket](https://azure.microsoft.com/support/create-ticket/).  
+- If you're the only admin on your Azure subscription and have forgotten the password, contact [Azure support](https://azure.microsoft.com/support/create-ticket/).  
 - You can also use the following resources to contact Support:
   - Microsoft 365: [Get support](/microsoft-365/admin/get-help-support)
-  - Azure: [Azure support ticket](https://azure.microsoft.com/support/create-ticket/)
+  - Azure: [Get support for Azure](https://azure.microsoft.com/support/create-ticket/)
   - Intune: [How to get support in Microsoft Endpoint Manager admin center](/mem/get-support)
