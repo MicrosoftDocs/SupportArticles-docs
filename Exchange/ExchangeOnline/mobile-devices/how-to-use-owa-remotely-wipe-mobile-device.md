@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: how-to
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
