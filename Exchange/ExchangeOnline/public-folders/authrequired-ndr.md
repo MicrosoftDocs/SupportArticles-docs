@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# "5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired" nondelivery report when external users try to send mail to mail-enabled public folders in Office 365
+# Error when external users send mail to mail-enabled public folders
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 

@@ -26,7 +26,7 @@ In Microsoft PowerPoint, you try to set a video file as the background of a slid
 
 > This image cannot currently be displayed.
 
-:::image type="content" source="media/cannot-use-videos-as-slide-backgrounds/this-image cannot-currently-be displayed-error.png" alt-text="Screenshot of this image cannot currently be displayed error message.":::
+:::image type="content" source="media/cannot-use-videos-as-slide-backgrounds/this-image-cannot-currently-be-displayed-error.png" alt-text="Screenshot of this image cannot currently be displayed error message.":::
 
 ## Cause
 

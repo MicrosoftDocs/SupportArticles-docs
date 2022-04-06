@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Microsoft Word 2010
+appliesto: 
+- Microsoft Word 2010
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx
