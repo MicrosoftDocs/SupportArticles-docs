@@ -106,7 +106,7 @@ Check for and remove existing licenses on the device. Make sure to check all the
     - Delete the following registry entry:
         - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Licensing`
 
-<a href="#method2">Back to Method 2</a>
+<a href="#method2">Go back to Method 2 instead</a>
 </details>
 
 <div id="step2">
@@ -123,7 +123,7 @@ Delete the following registry entry:
 
 If you have Shared Computer Activation enabled, remove the Identity registry key location from the `HKEY_USERS\<The user SID>\Software\Microsoft\Office\16.0\Common`registry key. To get the currently signed in user’s SID, use the command `whoami /user` in a non-elevated command prompt.
 
-<a href="#method2">Back to Method 2</a>
+<a href="#method2">Go back to Method 2 instead</a>
 </details>
 
 <br>
@@ -139,7 +139,7 @@ If you have Shared Computer Activation enabled, remove the Identity registry key
 1. Delete the values under the following registry entry:
     `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System`
 
-<a href="#method2">Back to Method 2</a>
+<a href="#method2">Go back to Method 2 instead</a>
 </details>
 
 <div id="step4">
@@ -159,7 +159,7 @@ The **signoutofwamaccounts.ps1** script will remove the tokens and accounts asso
 
 The script can only be run on Windows 10 version 1803 and later. If your operating system isn't compatible, you'll see the notification "Unsupported Windows 10 version!".
 
-<a href="#method2">Back to Method 2</a>
+<a href="#method2">Go back to Method 2 instead</a>
 </details>
 
 <div id="step5">
@@ -175,7 +175,7 @@ To clear Workplace Joined accounts manually:
 1. Select **Access Work or School**.
 1. Select the work or school account to be removed, and then select **Disconnect**.
 
-<a href="#method2">Back to Method 2</a>
+<a href="#method2">Go back to Method 2 instead</a>
 </details>
 
 <h2 id="checkmanaged">Check whether a device is managed</h2>
