@@ -75,6 +75,10 @@
   - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
+- name: Cluster upgrade issues
+  items:
+  - name: Troubleshooting upgrade errors
+    href: troubleshoot-upgrade-errors.md
 # Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
 # Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
 # - name: Cluster upgrade issues
@@ -101,10 +105,7 @@
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
 
-- name: Cluster upgrade issues
-  items:
-  - name: Troubleshooting upgrade errors
-    href: troubleshoot-upgrade-errors.md
+
 
 - name: Troubleshoot performance issues
   items:
