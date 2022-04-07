@@ -1,7 +1,7 @@
 ---
 title: I received the error “This update requires Visual Studio 2015 Update 3 to be installed”
 description: Provides resolution to this error caused from missing required cumulative servicing update KB3165756 to Visual Studio 2015 Update 3.
-ms.date: 3/25/2022
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
