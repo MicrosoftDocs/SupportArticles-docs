@@ -59,8 +59,6 @@
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error code
     href: error-code-zonalallocationfailed-allocationfailed.md
-  - name: Troubleshooting upgrade errors
-    href: troubleshoot-upgrade-errors.md
 
 - name: Cluster deletion issues
   items:
@@ -77,6 +75,10 @@
   - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
+- name: Cluster upgrade issues
+  items:
+  - name: Troubleshooting upgrade errors
+    href: troubleshoot-upgrade-errors.md
 # Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
 # Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
 # - name: Cluster upgrade issues
@@ -102,6 +104,8 @@
     href: capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
+
+
 
 - name: Troubleshoot performance issues
   items:
