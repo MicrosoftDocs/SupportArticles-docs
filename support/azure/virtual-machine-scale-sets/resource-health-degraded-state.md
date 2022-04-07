@@ -1,5 +1,5 @@
 ---
-title: Virtual Machine Scale Set health state Degraded
+title: Health state shows Degraded in Azure Virtual Machine Scale Set 
 description: Explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set Resource Health or Activity Log.
 ms.date: 04/07/2022
 author: genlin
@@ -7,16 +7,16 @@ ms.author: genli
 ms.service: virtual-machine-scale-sets
 ms.reviewer: macla, pudesira
 ---
-# Resource health state Degraded in Azure Virtual Machine Scale Set
+# Resource health state is Degraded in Azure Virtual Machine Scale Set
 
-This article explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set (VMSS) **Resource Health** or **Activity log** and provides a solution to eliminate this state.
+This article explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set (VMSS) **Resource Health** or **Activity log** and provides a solution for this issue.
 
 ## Symptoms
 
-In one of the following scenarios, you may receive an alert in the Azure VMSS **Resource Health** or **Activity log**:
+You may receive an alert in the Azure VMSS **Resource Health** or **Activity log** in one of the following scenarios:
 
-- VMs in the  Azure VMSS are in the process of being stopped, deallocated, deleted, and started.
-- Scaling in or out operations are performed on the VMSS.
+- VMs in the Azure VMSS are in the process of being stopped, deallocated, deleted, and started.
+- You have performed scaling in or out operations on the VMSS.
 
 The alert indicates that the aggregated platform health of the VMSS is in a transient state of Degraded.
 
@@ -28,4 +28,4 @@ Because of the operations mentioned in the [Symptoms](#symptoms) section, VMs ar
 
 To eliminate such transient state, destroyed VMs will be prevented from sending out a heath report that may distort the aggregated availability of a VMSS.
 
-Microsoft is investing in better coordinating and attributing emission of platform health. The investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/), to display highly accurate and actionable VM availability information.
+Microsoft is investing in better coordinating and attributing emission of platform health. The investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/), which aims to display highly accurate and actionable VM availability information.

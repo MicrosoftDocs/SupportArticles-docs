@@ -23,5 +23,5 @@
   - name: VM extension provisioning errors
     href: vm-extension-provisioning-errors.md
 
-- name: Resource health state Degraded
+- name: Resource health state shows Degraded
   href: resource-health-degraded-state.md
