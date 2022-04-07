@@ -1192,3 +1192,5 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md
