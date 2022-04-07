@@ -21,9 +21,9 @@ _Applies to:_ &nbsp; Windows Server 2016, all editions, Windows Server 2012 R2 D
 
 ## Symptoms
 
-In a failover clustering environment, when you run the cluster validation process, Windows creates a new user account. You may notice security events or messages that describe this account. The account is temporary. Windows removes the account when the cluster validation process ends.
+In a failover clustering environment, when you run the cluster validation process, Windows creates a new user account. After this occurs, you might notice security events or messages that describe this account. The account is temporary. Windows removes the account when the cluster validation process ends.
 
-## More Information
+## More information
 
 During the cluster validation process, Windows creates a user account that has the following properties:
 
