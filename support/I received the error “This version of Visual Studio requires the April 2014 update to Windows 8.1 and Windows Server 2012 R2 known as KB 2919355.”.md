@@ -1,14 +1,15 @@
 ---
 title: I received the error “This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB 2919355.”
-description: You receive the error “This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB2919355.”
-ms.date: 3/25/2022
+description: Provides a resolution to the error
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB 2919355.”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 You receive the error “This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB2919355.”
