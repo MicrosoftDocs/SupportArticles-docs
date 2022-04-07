@@ -1,7 +1,7 @@
 ---
 title: Running Parallels on Mac may cause error 1606
 description: Provides resources to a solution to the 1606 error that occurs when runnin Parallels on Mac.
-ms.date: 03/25/2022
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
