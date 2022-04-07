@@ -1,14 +1,15 @@
 ---
 title: I received the error “Windows Program Compatibility mode is on. Turn it off and then try Setup again.”
-description: While attempting to install Visual Studio the error  “Windows Program Compatibility mode is on. Turn it off and then try Setup again.” appears.
+description: Provides a resolution to the error.
 ms.date: 3/25/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “Windows Program Compatibility mode is on. Turn it off and then try Setup again.”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 While attempting to install Visual Studio the error  “Windows Program Compatibility mode is on. Turn it off and then try Setup again.” appears.
