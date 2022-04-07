@@ -1,14 +1,15 @@
 ---
 title: I received the error “This version of Visual Studio requires a computer with a newer version of Windows!”
-description: When attempting to install Visual Studio 2015, you receive the message “This version of Visual Studio requires a computer with a newer version of Windows!”. Visual Studio 2015 minimum operating system requirement is Windows 7 with Service Pack 1 (or higher).
-ms.date: 3/25/2022
+description: Providesa  resolution to not having the correct system requirements for Visual Studio.
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “This version of Visual Studio requires a computer with a newer version of Windows!”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 When attempting to install Visual Studio 2015, you receive the message: “This version of Visual Studio requires a computer with a newer version of Windows!”. Visual Studio 2015 minimum operating [system requirement](https://docs.microsoft.com/visualstudio/productinfo/vs2015-sysrequirements-vs) is Windows 7 with Service Pack 1 (or higher).
