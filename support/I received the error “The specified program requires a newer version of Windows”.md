@@ -1,14 +1,17 @@
 ---
 title: I received the error “The specified program requires a newer version of Windows”
-description: You want to install Visual Studio 2015 on a computer already having Windows 7 SP1 or newer installed but you receive an error message that the Visual Studio installer requires a newer version of Windows.
-ms.date: 3/25/2022
+description: Provides a resolution to the error that requires a newer version of Windows.
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “The specified program requires a newer version of Windows”
+
+This article provides a resolution to the error that requires a specified program to have a newer version of Windows.
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptoms
 You want to install Visual Studio 2015 on a computer already having Windows 7 SP1 or newer installed but you receive an error message that the Visual Studio installer requires a newer version of Windows.
