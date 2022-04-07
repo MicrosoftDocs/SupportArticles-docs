@@ -1,14 +1,15 @@
 ---
 title: I received the error “Please restart the computer and run setup again”
-description: When attempting to install Visual Studio you receive the following error “The computer needs to be restarted before setup can continue. Please restart the computer and run setup again.”
-ms.date: 3/25/2022
+description: Provides a resolution to the error.
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “Please restart the computer and run setup again”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 When attempting to install Visual Studio you receive the following error “The computer needs to be restarted before setup can continue. Please restart the computer and run setup again.”
