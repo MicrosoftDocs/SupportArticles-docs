@@ -25,7 +25,7 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > Dependency: Microsoft.Network/virtualNetworks; OrginalError: Code="LinkedAuthorizationFailed"
 >
-> Message="**The client '12345678-1234-1234-1234-123456789098' with object id '123456789-1234-1234-1234-1234567890987' has permission to perform action 'Microsoft.Network/virtualNetworks/write' on scope '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourceGroups/MC_MyRG_westeurope/providers/Microsoft.Network/virtualNetworks/aks-vnet'; however, it does not have permission to perform action 'Microsoft.Network/ddosProtectionPlans/join/action' on the linked scope(s) '/subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/ddos-protection-plan-rg/providers/microsoft.network/ddosprotectionplans/upmddosprotectionplan'** or the linked scope(s) are invalid.";
+> Message="**The client '12345678-1234-1234-1234-123456789098' with object id '123456789-1234-1234-1234-1234567890987' has permission to perform action 'Microsoft.Network/virtualNetworks/write' on scope '/subscriptions/*\<subscription-id-guid>*/resourceGroups/MC_MyRG_westeurope/providers/Microsoft.Network/virtualNetworks/aks-vnet'; however, it does not have permission to perform action 'Microsoft.Network/ddosProtectionPlans/join/action' on the linked scope(s) '/subscriptions/*\<subscription-id-guid>*/resourcegroups/ddos-protection-plan-rg/providers/microsoft.network/ddosprotectionplans/upmddosprotectionplan'** or the linked scope(s) are invalid.";
 >
 > AKSTeam: Networking, Retriable: false.
 
@@ -40,7 +40,7 @@ Grant the service principal permissions to use the resource that's mentioned in 
 | Item | Value |
 | ---- | ----- |
 | Service principal | 12345678-1234-1234-1234-123456789098 |
-| Resource | /subscriptions/xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx/resourcegroups/ddos-protection-plan-rg/providers/microsoft.network/ddosprotectionplans/upmddosprotectionplan |
+| Resource | /subscriptions/*\<subscription-id-guid>*/resourcegroups/ddos-protection-plan-rg/providers/microsoft.network/ddosprotectionplans/upmddosprotectionplan |
 | Operation | Microsoft.Network/ddosProtectionPlans/join/action |
 
 For more information about how to grant permissions to the service principal, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).

@@ -17,46 +17,6 @@ metadata:
 
 landingContent:
 
-# Stub out landing page entries per Public Content Request 161498: Create/Modify TOC for AKS
-
-# Pre-filling the landing page card for 161113 (troubleshoot delete operations) - uncomment, add file names, and sort when ready
-# # Card
-  # - title: Troubleshoot delete operations
-  #   linkLists:
-  #     - linkListType: how-to-guide
-  #       links:
-  #         - text: TooManyRequests or SubscriptionRequestsThrottled error code
-  #           href: 
-  #         - text: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
-  #           href: 
-  #         - text: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
-  #           href: 
-  #         - text: InUseRouteTableCannotBeDeleted error code
-  #           href: 
-  #         - text: RequestDisallowedByPolicy error code
-  #           href: 
-  #         - text: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
-  #           href: 
-
-# Pre-filling the landing page card for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
-# # Card
-  # - title: Troubleshoot upgrade operations
-  #   linkLists:
-  #     - linkListType: how-to-guide
-  #       links:
-  #         - text: Node not ready
-  #           href: 
-  #         - text: NSG prevents resource download
-  #           href: 
-  #         - text: PodDrainFailure error code
-  #           href: 
-  #         - text: PublicIPCountLimitReached error code
-  #           href: 
-  #         - text: QuotaExceeded error code
-  #           href: 
-  #         - text: SubnetIsFull error code
-  #           href: 
-
  # Card
   - title: Cannot connect to application hosted on AKS cluster
     linkLists:
@@ -86,6 +46,44 @@ landingContent:
             url: ./user-cannot-get-cluster-resources.md
 
  # Card
+  - title: Cluster deletion issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
+            url: ./cannot-delete-load-balancer-private-link-service.md
+          - text: InUseRouteTableCannotBeDeleted error code
+            url: ./error-code-inuseroutetablecannotbedeleted.md
+          - text: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
+            url: ./load-balancer-or-nsg-in-use-by-vm-scale-set.md
+          - text: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
+            url: ./cannot-delete-ip-subnet-nsg.md
+          - text: RequestDisallowedByPolicy error code
+            url: ./error-code-requestdisallowedbypolicy-delete.md
+          - text: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
+            url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+
+ # Stub out landing page entries per Public Content Request 161498: Create/Modify TOC for AKS
+# Pre-filling the landing page card for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
+# # Card
+  # - title: Cluster upgrade issues
+  #   linkLists:
+  #     - linkListType: how-to-guide
+  #       links:
+  #         - text: Node not ready
+  #           url: ./
+  #         - text: NSG prevents resource download
+  #           url: ./
+  #         - text: PodDrainFailure error code
+  #           url: ./
+  #         - text: PublicIPCountLimitReached error code
+  #           url: ./
+  #         - text: QuotaExceeded error code
+  #           url: ./
+  #         - text: SubnetIsFull error code
+  #           url: ./
+
+# Card
   - title: Data collection guide
     linkLists:
       - linkListType: how-to-guide
@@ -104,3 +102,21 @@ landingContent:
         links:
           - text: Identify high CPU consuming containers
             url: ./identify-high-cpu-consuming-containers-aks.md
+
+# Card 
+  - title: Troubleshoot upgrade issues
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Upgrade fails because of NSG rules
+            url: ./troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
+          - text: PodDrainFailure error code
+            url: ./troubleshoot-upgrade-errors.md#error-code-poddrainfailure
+          - text: PublicIPCountLimitReached error code
+            url: ./troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
+          - text: Quotaexceeded error code
+            url: ./troubleshoot-upgrade-errors.md#error-code-quotaexceeded
+          - text:  Subnetisfull error code
+            url: ./troubleshoot-upgrade-errors.md#error-code-subnetisfull
+
+

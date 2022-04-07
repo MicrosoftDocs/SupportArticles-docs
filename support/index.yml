@@ -77,7 +77,7 @@ productDirectory:
     url: azure/index.yml
       
   - title: Office
-    imageSrc: "https://docs.microsoft.com/media/logos/logo_office.svg"
+    imageSrc: "/media/logos/logo_office.svg"
     summary: Troubleshooting articles for Office
     url: /office/troubleshoot
 
@@ -99,7 +99,7 @@ productDirectory:
   - title: Previous Versions
     imageSrc: "media/hub-landing/microsoft-logo.svg"
     summary: Troubleshooting articles for previous versions of products
-    url: https://docs.microsoft.com/previous-versions/troubleshoot/
+    url: /previous-versions/troubleshoot/
 
 # conceptualContent:
 
