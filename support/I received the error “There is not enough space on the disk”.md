@@ -1,14 +1,15 @@
 ---
 title: I received the error “There is not enough space on the disk”
-description: When attempting to install Visual Studio you receive the error “There is not enough space on the disk”
-ms.date: 3/25/2022
+description: Provides a resolution to when you don't have enough space on the disk to download.
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I received the error “There is not enough space on the disk”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 When attempting to install Visual Studio you receive the error “There is not enough space on the disk”
