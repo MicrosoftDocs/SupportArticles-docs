@@ -13,16 +13,16 @@ ms.reviewer: kaushika
 ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
-# Unknown Device (VMBUS) in Device manager in Virtual Machine for AVMA
+# Unknown Device (VMBUS) appears in Device manager in Virtual Machine
 
 This article describes an issue where unknown devices appear in Device Manager of a virtual machine.
 
-_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 2925727
 
 ## Symptoms
 
-On a Windows Server 2012 R2 Datacenter Hyper-V host, you may see two **unknown devices** under Other Devices in device manager of any virtual machine running operating systems earlier than Windows Server 2012 R2.
+On virtual machines that are running on a Windows Server based Hyper-V host, you may see unknown devices under **Other Devices** in device manager.
 
 If you view the properties of these devices and check driver details, Hardware IDs, or Compatible IDs, they'll show the following:
 
@@ -30,6 +30,8 @@ If you view the properties of these devices and check driver details, Hardware I
 - vmbus\\{3375baf4-9e15-4b30-b765-67acb10d607b}
 - vmbus\\{99221fa0-24ad-11e2-be98-001aa01bbf6e}
 - vmbus\\{f8e65716-3cb3-4a06-9a60-1889c5cccab5}
+- vmbus\\{c376c1c3-d276-48d2-90a9-c04748072c60}
+- vmbus\\{c4e5e7d1-d748-4afc-979d-683167910a55}
 
 ## Cause
 
@@ -41,6 +43,4 @@ The unknown devices are harmless and can be ignored.
 
 ## More information
 
-For more information about Automatic Virtual Machine Activation (AVMA), see the following:
-
-[https://technet.microsoft.com/library/dn303421.aspx](https://technet.microsoft.com/library/dn303421.aspx)
+For more information about Automatic Virtual Machine Activation (AVMA), see [Automatic Virtual Machine Activation in Windows Server](/windows-server/get-started/automatic-vm-activation):
