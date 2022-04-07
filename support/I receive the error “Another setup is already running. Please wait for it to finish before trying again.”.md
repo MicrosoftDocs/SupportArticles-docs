@@ -1,14 +1,15 @@
 ---
 title: I receive the error “Another setup is already running. Please wait for it to finish before trying again.”
-description: After attempting to install Visual Studio more than once, subsequent installation attempts result in the error “Another setup is already running. Please wait for it to finish before trying again”.
-ms.date: 3/25/2022
+description: Provides a resolution to the error.
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
-Applies to: Visual Studio 2015
 ---
 
 # I receive the error “Another setup is already running. Please wait for it to finish before trying again.”
+
+_Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 After attempting to install Visual Studio more than once, subsequent installation attempts result in the error “Another setup is already running. Please wait for it to finish before trying again”.
