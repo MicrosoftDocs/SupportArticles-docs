@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot Azure Information Protection policy issues
 description: Discusses how to troubleshoot Azure Information Protection policy issues.
-ms.date: 08/14/2020
+ms.date: 04/07/2022
 ms.custom: sap:Azure\Azure Information Protection\AIP Service\Policy issues
 ms.service: information-protection
 ms.author: genli
@@ -48,7 +48,7 @@ _Original KB number:_ &nbsp; 4516523
 To export Azure Information Protection logs, follow these steps:
 
 1. Open an Office document or create an email message in Outlook.
-2. Select **Protect**  > **Help and feedback**.
+2. Select **Sensitivity**  > **Help and feedback**.
 3. Select **Export Logs**.
 4. Save the logs to the location of your choice in case you have to attach them to any service request.
 

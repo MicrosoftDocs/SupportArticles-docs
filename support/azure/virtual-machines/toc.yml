@@ -226,7 +226,7 @@
       href: troubleshoot-ssh-permissions-too-open.md
   - name: Windows
     items:
-    - name: Cannot RDP becasue "You must change your password before logging on the first time" error
+    - name: Cannot RDP because "You must change your password before logging on the first time" error
       href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md

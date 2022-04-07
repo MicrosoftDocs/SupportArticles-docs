@@ -296,9 +296,9 @@ To fix the issue, follow these steps:
 
    > Sep 3 14:49:07 server auth|security:debug /opt/microsoft/scx/bin/omiserver PAM: pam_authenticate: error Authentication failed.
 
-   If you see similar lines in the messages log, it means that the PAM configuration file is missing information about OMIServer. The PAM configuration file can be found in the `/etc/pam.d/` directory.
+   If you see similar lines in the messages log, it means that the PAM configuration file is missing information about OMIServer. The PAM configuration file can be found in the `/etc/pam.d/` directory or the `/etc/pam.conf` file.
 
-   The easiest way to add the information about OMIServer back to the PAM configuration file is to reinstall the SCX agent from scratch on that computer. If that is not easily possible, you can copy the lines pertaining to OMI from a working computer to the non-working computer.  
+   The easiest way to add the information about OMIServer back to the PAM configuration file is to reinstall the SCX agent from scratch on that computer. If that is not easily possible, you can copy the lines pertaining to OMI from a working computer to the non-working computer.
 
 ### WSMan only discovery failed for 192.168.x.x
 
