@@ -576,16 +576,6 @@ System service name: `Netlogon`
 
 > [!NOTE]
 > The Net Logon service uses RPC over named pipes for earlier versions of Windows clients. This service has the same firewall requirements as the File and Printer Sharing feature.
-
-### NetMeeting Remote Desktop Sharing
-
-The NetMeeting Remote Desktop Sharing system service allows authorized users to use Windows NetMeeting to remotely access your Windows desktop from another personal computer over a corporate intranet. You must explicitly enable this service in NetMeeting. You can disable or shut down this feature by using an icon that is displayed in the Windows notification area.
-
-System service name: **mnmsrvc**
-
-|Application protocol|Protocol|Ports|
-|---|---|---|
-|Terminal Services|TCP|3389|
   
 ### Network News Transfer Protocol (NNTP)
 
@@ -867,6 +857,7 @@ System service name: **TermService**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |Terminal Services|TCP|3389|
+|Terminal Services|UDP|3389|
   
 ### Terminal Services Licensing
 
@@ -1167,8 +1158,8 @@ The following table summarizes the information from the [System services ports](
 |3268|TCP|Global Catalog|Local Security Authority|
 |3269|TCP|Global Catalog|Local Security Authority|
 |3343|UDP|Cluster Services|Cluster Service|
-|3389|TCP|Terminal Services|NetMeeting Remote Desktop Sharing|
 |3389|TCP|Terminal Services|Terminal Services|
+|3389|UDP|Terminal Services|Terminal Services|
 |3527|UDP|MSMQ-Ping|Message Queuing|
 |4011|UDP|BINL|Remote Installation|
 |4500|UDP|NAT-T|Local Security Authority|
