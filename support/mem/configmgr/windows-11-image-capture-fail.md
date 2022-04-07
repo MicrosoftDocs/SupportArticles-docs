@@ -40,7 +40,7 @@ After *vcredist_x64.exe* is installed, restart the capture process.
 
 ## <a id="packagenotprovisionedforallusers"></a>Package \<package name> was installed for a user, but not provisioned for all users
 
-Check the *setupact.log* file in the *C:\Windows\System32\Sysprep\Panther* folder. If some applications are blocking the capture process, the "Package \<Package name> was installed for a user, but not provisioned for all users" error will be displayed in the *setupact.log* like the following output:
+Check the *setupact.log* file in the *C:\Windows\System32\Sysprep\Panther* folder. If some applications are blocking the capture process, the "Package \<Package name> was installed for a user, but not provisioned for all users" error will be displayed in the *setupact.log* file like the following output:
 
 ```output
 02-07-2022 15:18:02.000 SYSPRP Entering SysprepGeneralizeValidate (Appx) - validating whether all apps are also provisioned.
@@ -56,7 +56,7 @@ Check the *setupact.log* file in the *C:\Windows\System32\Sysprep\Panther* folde
 
 ### Solution: Remove package for current user
 
-To resolve this issue, remove the package by running the `Remove-AppxPackage -Package <package name>` cmdlet. For example,
+To resolve this issue, remove the package by running the `Remove-AppxPackage -Package <package name>` cmdlet as follows:
 
 ```powershell
 Remove-AppxPackage -Package Microsoft.OneDriveSync_21220.1024.5.0_neutral__8wekyb3d8bbwe
@@ -102,7 +102,7 @@ This issue occurs because no drive letter is assigned to the operating system (O
 
 ### Solution: Allow automatic assignment of drive letters
 
-To resolve this issue, restart the computer into Windows 11 original OS, and change the partition attributes to re-enable the automatic assignment by running the following commands:
+To resolve this issue, restart the computer into Windows 11 original OS, and change the partition attributes to reenable the automatic assignment by running the following commands:
 
 ```cmd
 diskpart
