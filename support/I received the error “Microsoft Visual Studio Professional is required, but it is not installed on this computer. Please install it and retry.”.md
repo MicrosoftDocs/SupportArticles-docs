@@ -1,7 +1,7 @@
 ---
 title: I received the error “Microsoft Visual Studio Professional is required, but it is not installed on this computer. Please install it and retry.”
 description: Provides a resolution to the error
-ms.date: 3/25/2022
+ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
