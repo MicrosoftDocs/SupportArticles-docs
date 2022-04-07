@@ -166,7 +166,7 @@ During this time, the Sqldumper.exe utility won't process commands. You'll notic
 
 ## Permission requirements
 
-To run the Sqldumper.exe utility, you must sign in Windows by using one of the following methods:
+To run the Sqldumper.exe utility, you must sign in to Windows by using one of the following methods:
 
 - Use an account that is a member of the administrator's group on the computer.
 - Use the same user account under which the SQL Server service is running.
