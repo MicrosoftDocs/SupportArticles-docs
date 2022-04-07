@@ -1,0 +1,31 @@
+---
+title: Virtual Machine Scale Set health state Degraded
+description: Explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set Resource Health or Activity Log.
+ms.date: 04/07/2022
+author: genlin
+ms.author: genli
+ms.service: virtual-machine-scale-sets
+ms.reviewer: macla, pudesira
+---
+# Resource health state Degraded in Azure Virtual Machine Scale Set
+
+This article explains the transient Degraded state that's displayed in Azure Virtual Machine Scale Set (VMSS) **Resource Health** or **Activity log** and provides a solution to eliminate this state.
+
+## Symptoms
+
+In one of the following scenarios, you may receive an alert in the Azure VMSS **Resource Health** or **Activity log**:
+
+- VMs in the  Azure VMSS are in the process of being stopped, deallocated, deleted, and started.
+- Scaling in or out operations are performed on the VMSS.
+
+The alert indicates that the aggregated platform health of the VMSS is in a transient state of Degraded.
+
+## Cause
+
+Because of the operations mentioned in the [Symptoms](#symptoms) section, VMs are destroyed and a new VM is created. When the VMs are destroyed, they'll send out degraded health signals to the platform, which causes the transient state of Degraded. Until the new VM is fully started and sends out an available status, the previous Degraded state will continue to be sent out.
+
+## Resolution
+
+To eliminate such transient state, destroyed VMs will be prevented from sending out a heath report that may distort the aggregated availability of a VMSS.
+
+Microsoft is investing in better coordinating and attributing emission of platform health. The investment is part of [Project Flash](https://azure.microsoft.com/blog/advancing-azure-virtual-machine-availability-monitoring-with-project-flash/), to display highly accurate and actionable VM availability information.
