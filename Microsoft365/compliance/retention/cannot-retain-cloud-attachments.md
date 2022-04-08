@@ -14,6 +14,7 @@ ms.reviewer: arungedela; meerak
 appliesto: 
   - Microsoft 365 Compliance
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't retain cloud attachments

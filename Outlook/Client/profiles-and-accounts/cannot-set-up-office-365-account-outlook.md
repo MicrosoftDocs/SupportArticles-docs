@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 # You can't set up an Office 365 account in Outlook
 

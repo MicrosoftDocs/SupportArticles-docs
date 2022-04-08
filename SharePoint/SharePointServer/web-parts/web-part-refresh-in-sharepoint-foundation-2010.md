@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010
+ms.date: 3/31/2022
 ---
 
 # A Web Part that is configured to refresh automatically on a SharePoint Foundation 2010 Web page never finishes refreshing

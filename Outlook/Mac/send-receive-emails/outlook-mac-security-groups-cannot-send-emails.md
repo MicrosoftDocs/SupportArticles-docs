@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2019 for Mac
   - Outlook 2016 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Errors when sending emails from security groups, distribution lists, or mail-enabled Public Folders in Outlook for Mac
 

@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Error when uploading files to a Teams chat
 

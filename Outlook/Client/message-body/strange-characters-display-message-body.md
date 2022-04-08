@@ -16,6 +16,7 @@ ms.custom:
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2016
+ms.date: 3/31/2022
 ---
 
 # Strange characters are displayed in meeting requests, read receipts, and IRM messages

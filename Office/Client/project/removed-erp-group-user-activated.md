@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Project Online
   - Project Server 2013
+ms.date: 3/31/2022
 ---
 
 # Users removed from the Enterprise Resource Pool group sync are not inactivated

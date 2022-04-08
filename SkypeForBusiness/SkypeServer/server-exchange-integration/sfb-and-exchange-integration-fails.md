@@ -14,6 +14,7 @@ appliesto:
   - Skype for Business server 2015
   - Exchange Server 2013
   - Exchange Server 2016
+ms.date: 3/31/2022
 ---
 
 # Skype for Business and Exchange integration fails if wildcards used in AcceptedDomains entries

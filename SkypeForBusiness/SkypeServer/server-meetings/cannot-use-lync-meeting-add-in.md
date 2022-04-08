@@ -15,6 +15,7 @@ appliesto:
   - Lync 2010
   - Lync 2013
   - Skype for Business 2015
+ms.date: 3/31/2022
 ---
 
 # Lync client administrative delegates cannot use the Lync Meeting add-in to create a meeting for their manager

@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Error when sending email to mail-enabled public folders in Office 365: 554 5.2.2 mailbox full
 

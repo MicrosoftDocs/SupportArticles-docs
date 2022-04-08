@@ -14,6 +14,7 @@ ms.reviewer: lisyu, RichPo, ARykhus, debbiery
 appliesto: 
   - Publisher 2010
   - Publisher 2013
+ms.date: 3/31/2022
 ---
 
 # Text boxes in a Publisher 2010 and 2013-created email message are converted to bitmap images when the email is sent

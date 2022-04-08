@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 # Troubleshoot Skype for Business Online sign-in issues for admins
 

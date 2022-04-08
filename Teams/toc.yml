@@ -229,17 +229,17 @@
       href: ./tabs/task-buckets-do-not-appear-in-planner.md
     - name: Teams website tabs lead to customer confusion
       href: ./tabs/website-tabs-cause-confusion-teams.md
-  - name: Teams devices and rooms
+  - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
-      href: ./Teams-devices-and-rooms/collect-device-logs.md
+      href: ./teams-rooms-and-devices/collect-device-logs.md
     - name: Issues when using SIP devices
-      href: ./Teams-devices-and-rooms/sip-gateway-issues.md
+      href: ./teams-rooms-and-devices/sip-gateway-issues.md
     - name: Known issues
-      href: ./Teams-devices-and-rooms/rooms-known-issues.md
+      href: ./teams-rooms-and-devices/rooms-known-issues.md
   - name: Teams on Linux
     items: 
-    - name: Known issues at Linux
+    - name: Known issues on Linux
       href: ./teams-on-linux/linux-known-issues.md
   - name: Teams on Mac
     items:

@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Antivirus status shown as Unavailable (This version of Windows does not support antivirus detection)
 

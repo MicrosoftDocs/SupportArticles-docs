@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Skype for Business Online admins can't use the "Set-CsUser" cmdlet in Skype for Business Online Remote PowerShell

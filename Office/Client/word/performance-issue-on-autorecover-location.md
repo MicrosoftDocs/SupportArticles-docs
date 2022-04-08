@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Word 2010
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # Performance issues with Auto-Recover location on network share

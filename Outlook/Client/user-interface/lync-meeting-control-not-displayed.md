@@ -15,6 +15,7 @@ ms.author: luche
 appliesto: 
   - Outlook 2010
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 
 # Lync Meeting control is not displayed on the Outlook 2013 ribbon

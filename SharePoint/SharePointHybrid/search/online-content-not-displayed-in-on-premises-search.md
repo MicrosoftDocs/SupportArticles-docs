@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Online content isn't displayed in a SharePoint on-premises search

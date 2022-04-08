@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Outlook 2013
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 # Event ID 27 when sending attachments outside of Outlook fails
 

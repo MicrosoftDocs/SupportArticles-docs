@@ -20,6 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # E-mail messages are not automatically sent or received at startup in Outlook
 

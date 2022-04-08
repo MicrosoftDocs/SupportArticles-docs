@@ -13,6 +13,7 @@ ms.reviewer: dahans, pankajr
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Lync contact list is empty or read-only after a user's Exchange mailbox is disconnected, unlicensed, or moved

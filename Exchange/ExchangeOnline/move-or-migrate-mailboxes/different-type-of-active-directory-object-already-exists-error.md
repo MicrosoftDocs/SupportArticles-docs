@@ -14,6 +14,7 @@ ms.reviewer: shahmul
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # A different type of Active Directory object already exists error when migrating mailboxes in cutover migration
 

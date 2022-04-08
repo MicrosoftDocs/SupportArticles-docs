@@ -13,6 +13,7 @@ ms.reviewer: sudeepg, sangits
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Use SPQuery to query a list in SharePoint Server 2013
 

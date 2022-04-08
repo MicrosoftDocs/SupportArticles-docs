@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # How to use mailbox audit logs in Office 365

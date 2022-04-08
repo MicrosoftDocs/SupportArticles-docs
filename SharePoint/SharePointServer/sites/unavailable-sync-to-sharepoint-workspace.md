@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Workspace 2010
   - SharePoint 2010 For Internet Sites Enterprise
   - SharePoint 2010 For Internet Sites Standard
+ms.date: 3/31/2022
 ---
 
 # "Sync to SharePoint Workspace" is not available on any SharePoint 2010 sites

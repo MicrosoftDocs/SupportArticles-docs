@@ -14,6 +14,7 @@ ms.reviewer: willfid
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # A mobile device can't connect to Exchange Online by using Exchange ActiveSync
 

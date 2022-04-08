@@ -18,6 +18,7 @@ appliesto:
   - PowerPoint 2010
   - Microsoft Office PowerPoint 2007
   - Microsoft Office PowerPoint 2003
+ms.date: 3/31/2022
 ---
 
 # How to export high-resolution (high-dpi) slides from PowerPoint

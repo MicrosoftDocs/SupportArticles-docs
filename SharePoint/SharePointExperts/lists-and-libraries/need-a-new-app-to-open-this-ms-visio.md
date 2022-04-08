@@ -13,6 +13,7 @@ ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint Server
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "You'll need a new app to open this ms-visio" when you open Visio files

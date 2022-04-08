@@ -5,18 +5,19 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Cloud Services (Web roles/Worker roles) 
-- Azure Active Directory 
-- Office 365 
-- Microsoft Intune 
-- CRM Online via Office 365 E Plans 
-- Azure Backup, Office 365 Identity Management
+appliesto: 
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Office 365
+  - Microsoft Intune
+  - CRM Online via Office 365 E Plans
+  - Azure Backup, Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune

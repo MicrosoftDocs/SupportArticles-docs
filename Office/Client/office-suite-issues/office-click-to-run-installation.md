@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Information about Office Click-to-Run installations and about related anti-malware applications

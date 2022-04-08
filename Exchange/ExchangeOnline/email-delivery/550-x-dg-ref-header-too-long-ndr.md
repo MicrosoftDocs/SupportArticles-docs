@@ -14,6 +14,7 @@ ms.reviewer: braalf
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 550 x-dg-ref header is too long NDR when you send mail in Exchange Online
 

@@ -12,6 +12,7 @@ ms.author: ericspli
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # Troubleshooting Office installation failures

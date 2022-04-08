@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Office Home & Business 2016 for Mac
   - Office Home & Student 2016 for Mac
+ms.date: 3/31/2022
 ---
 
 # Office 2016 for Mac 16.x prompts you for authentication when you open a URL

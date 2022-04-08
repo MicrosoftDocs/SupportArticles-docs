@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: miadkins
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # "Cannot find any suitable disks for database files" error message when you try to install or update Lync Server 2013 or Lync Server 2013 databases

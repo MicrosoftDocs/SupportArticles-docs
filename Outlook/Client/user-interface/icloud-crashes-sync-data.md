@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2016
+ms.date: 3/31/2022
 ---
 # iCloud crashes when synchronizing data with Outlook 2016
 

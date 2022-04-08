@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: mahesha, miadkins, rdubois, premgan, landerl, bwilson, brandber, dahans
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Can't sign in to a Lync client or signs in to the client in limited functionality mode in a Lync Server 2013 environment

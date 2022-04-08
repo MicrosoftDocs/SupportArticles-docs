@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Users in a hybrid deployment can't access a shared mailbox that was created in Exchange Online
 

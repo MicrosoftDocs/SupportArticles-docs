@@ -15,6 +15,7 @@ ms.author: luche
 ms.reviewer: jchishol
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # How to use the Workgroup Administrator utility in Access

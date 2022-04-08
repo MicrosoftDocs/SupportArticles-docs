@@ -14,6 +14,7 @@ ms.reviewer: laurieh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Office 365 users can't edit an Office document directly from an email message in Outlook Web App
 

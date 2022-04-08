@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Users can't share PowerPoint presentations from Lync 2010 or Lync 2013 in Skype for Business Online

@@ -13,6 +13,7 @@ ms.reviewer: divyarp
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # DLP policy tips in Security and Compliance Center don't work in OWA/Outlook

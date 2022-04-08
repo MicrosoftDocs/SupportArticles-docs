@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Excel 2016 for Mac
+ms.date: 3/31/2022
 ---
 
 # "Cannot use object linking and embedding" error in Excel 2016 for Mac

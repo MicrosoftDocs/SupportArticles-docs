@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business for iOS
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Mobile Skype for Business message content does not appear in Apple push notifications

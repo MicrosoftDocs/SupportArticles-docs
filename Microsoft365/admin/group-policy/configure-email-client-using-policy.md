@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Microsoft Outlook
+ms.date: 3/31/2022
 ---
 
 # Cannot configure the default email client using Group Policy

@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Office for Mac 2008
   - Office for Mac 2011
+ms.date: 3/31/2022
 ---
 
 # "Microsoft program cannot be opened because of a problem" error when you start an Office program

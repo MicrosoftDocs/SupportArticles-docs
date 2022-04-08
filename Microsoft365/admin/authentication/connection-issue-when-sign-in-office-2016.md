@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 2016
+ms.date: 3/31/2022
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10

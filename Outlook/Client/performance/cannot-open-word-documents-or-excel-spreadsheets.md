@@ -30,6 +30,7 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot open Word documents or Excel spreadsheets from an external source in Outlook
 

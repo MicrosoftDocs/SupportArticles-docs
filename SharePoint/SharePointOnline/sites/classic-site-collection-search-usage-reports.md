@@ -14,6 +14,7 @@ ms.topic: troubleshooting
 ms.author: wbaer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Classic site collection search usage reports

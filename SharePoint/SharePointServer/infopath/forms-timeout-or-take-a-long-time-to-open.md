@@ -14,6 +14,7 @@ appliesto:
   - InfoPath 2010
   - InfoPath 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Forms time out or take a long time to open in InfoPath 2010 or InfoPath 2013
 

@@ -14,6 +14,7 @@ appliesto:
   - Excel for Office 365
   - PowerPoint for Office 365
   - Word for Office 365
+ms.date: 3/31/2022
 ---
 
 # SAP add-ins don't display controls after update to Office 1806 or higher

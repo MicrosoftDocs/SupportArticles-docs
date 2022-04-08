@@ -18,6 +18,7 @@ appliesto:
   - Office 2016
   - Office 2013
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Use Support and Recovery Assistant to collect data about Microsoft 365 Apps installations

@@ -17,6 +17,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013
   - Exchange Server 2019
+ms.date: 3/31/2022
 ---
 
 # "Your request couldn't be completed. Please try again in a few minutes" error when Exchange 2013 Administrator can't manage Exchange 2019 databases in EAC

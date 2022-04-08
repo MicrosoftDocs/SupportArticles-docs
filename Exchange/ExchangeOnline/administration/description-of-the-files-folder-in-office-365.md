@@ -14,6 +14,7 @@ ms.reviewer: kerbo, kellybos
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Description of the Files folder in Office 365
 

@@ -14,6 +14,7 @@ ms.reviewer: tmoore, gregmans
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2013 crashes in KERNELBASE.dll due to corrupt data file
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: dahans
 appliesto: 
   - Lync for Mac 2011
+ms.date: 3/31/2022
 ---
 
 # How to do a clean uninstallation of Lync for Mac 2011

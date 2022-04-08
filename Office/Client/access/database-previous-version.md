@@ -15,6 +15,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
+ms.date: 3/31/2022
 ---
 
 # "Cannot Open a database created with a previous version of your application" in Access 2013 and Access 2016

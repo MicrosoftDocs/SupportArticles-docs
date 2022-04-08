@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Error when you run an Update cmdlet in an Exchange Server 2010 environment: The network path was not found
 

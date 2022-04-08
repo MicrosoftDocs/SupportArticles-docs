@@ -15,6 +15,7 @@ appliesto:
   - Excel 2007
   - Word 2003
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # "The document caused a serious error the last time it was opened" when you open a file

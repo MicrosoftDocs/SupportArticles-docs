@@ -13,6 +13,7 @@ ms.reviewer: nsimons
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Something went wrong when you open a file by using an Office Web App or Office Online Server
 

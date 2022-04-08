@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Lens
+ms.date: 3/31/2022
 ---
 
 # Office Lens icons on Windows 10 do not display correctly after registering private characters

@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The SharePoint Server crawler ignores directives in Robots.txt
 

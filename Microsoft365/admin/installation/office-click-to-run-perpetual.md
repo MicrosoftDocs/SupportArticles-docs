@@ -12,6 +12,7 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 2016

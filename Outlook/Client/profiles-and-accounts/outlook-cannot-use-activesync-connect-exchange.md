@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook doesn't support connections to Exchange by using ActiveSync and error: Log onto Exchange ActiveSync mail server (EAS)
 

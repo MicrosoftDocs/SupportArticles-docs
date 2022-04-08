@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Business Productivity Online Suite Federal
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Litigation Hold users cannot delete messages in Office 365 Dedicated

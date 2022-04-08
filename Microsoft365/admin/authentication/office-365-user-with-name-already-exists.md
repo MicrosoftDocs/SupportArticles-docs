@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # "A user with this name already exists. Use a different name." error in the Office 365 portal

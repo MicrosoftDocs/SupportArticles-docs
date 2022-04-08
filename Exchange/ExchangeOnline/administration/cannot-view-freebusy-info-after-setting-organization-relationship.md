@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # On-premises users can't view free/busy information of Exchange Online users after you set up an organization relationship
 

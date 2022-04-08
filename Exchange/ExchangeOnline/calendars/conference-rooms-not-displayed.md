@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Office 2016
   - Office 2013
+ms.date: 3/31/2022
 ---
 # Room Finder in Outlook doesn't display any conference rooms when a user creates a meeting
 

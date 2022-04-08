@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2015
+ms.date: 3/31/2022
 ---
 
 # Title bar displays "Lync" after you install the November 2015 update for Lync 2013 (Skype for Business 2015)

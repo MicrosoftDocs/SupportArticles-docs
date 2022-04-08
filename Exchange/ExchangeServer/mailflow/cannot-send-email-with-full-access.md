@@ -21,6 +21,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
+ms.date: 3/31/2022
 ---
 
 # Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - Skype Room Systems
+ms.date: 3/31/2022
 ---
 
 # Speaker and mute buttons stop working in a Skype Room Systems meeting

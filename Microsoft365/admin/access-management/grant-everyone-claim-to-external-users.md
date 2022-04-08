@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # Grant the Everyone claim to external users in Office 365

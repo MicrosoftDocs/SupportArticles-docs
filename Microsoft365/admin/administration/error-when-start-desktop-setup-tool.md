@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # Cannot continue error when you start the Office 365 Desktop Setup Tool

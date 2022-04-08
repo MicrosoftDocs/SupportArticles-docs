@@ -14,6 +14,7 @@ ms.reviewer: davmcdon
 appliesto: 
   - Office
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Some Office applications are not responding

@@ -14,6 +14,7 @@ ms.reviewer: scotro
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (The user name or password is incorrect) error when you run the Hybrid Configuration wizard
 

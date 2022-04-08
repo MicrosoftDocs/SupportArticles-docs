@@ -13,6 +13,7 @@ ms.reviewer: neozhu
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # "Your request couldn't be completed. Please try again" error when you try to search the audit log in Office 365

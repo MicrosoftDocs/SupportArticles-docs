@@ -12,6 +12,7 @@ ms.custom: sap:sfbexperts, CSSTroubleshoot
 ms.author: kenguil
 appliesto: 
   - Skype for Business
+ms.date: 3/31/2022
 ---
 
 # The Great Skype for Business Memory Mystery

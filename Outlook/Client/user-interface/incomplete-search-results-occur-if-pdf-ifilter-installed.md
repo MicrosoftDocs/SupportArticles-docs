@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Incomplete search results may occur in Outlook when a PDF iFilter is installed
 

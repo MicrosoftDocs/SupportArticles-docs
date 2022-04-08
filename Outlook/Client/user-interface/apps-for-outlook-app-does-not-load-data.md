@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2013
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Apps for Outlook app does not load data in Outlook 2013 or Outlook 2016
 

@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Excel
   - Access
+ms.date: 3/31/2022
 ---
 
 # Access data connections are slow to refresh in Excel

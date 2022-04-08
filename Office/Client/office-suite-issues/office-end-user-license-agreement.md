@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: V-ChaseC
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # You must accept the Office End User License Agreement every time that you start an Office program

@@ -11,6 +11,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot, CI 114181, CI 115742
 ms.author: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Reset Microsoft 365 Apps for enterprise activation state

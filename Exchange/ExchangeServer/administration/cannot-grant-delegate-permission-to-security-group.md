@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
+ms.date: 3/31/2022
 ---
 # Error in Outlook Web App when Exchange Server 2013 users try to grant Delegate permissions to a security group: Sharing invitation couldn't be sent
 

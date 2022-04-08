@@ -14,6 +14,7 @@ ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # TooManyBadItemsPermanentException during migration in Office 365
 

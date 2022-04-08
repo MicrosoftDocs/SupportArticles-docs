@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
   - Outlook 2007
+ms.date: 3/31/2022
 ---
 # Starting Outlook displays error: This information service is not installed on your computer
 

@@ -15,6 +15,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to deploy the Microsoft Support and Recovery Assistant (SaRA) using Microsoft Intune
 

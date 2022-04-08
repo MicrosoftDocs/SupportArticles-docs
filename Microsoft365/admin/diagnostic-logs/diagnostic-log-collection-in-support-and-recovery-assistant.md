@@ -8,12 +8,13 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.collection: Adm_O365
 ms.custom: CSSTroubleshoot
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 5f76de29-9ee3-47de-84ce-2d49fdc32174
-description: "Learn about diagnostic log collection in Support and Recovery Assistant for Office 365. "
+description: Learn about diagnostic log collection in Support and Recovery Assistant for Office 365. 
+ms.date: 3/31/2022
 ---
 
 # Turn off diagnostic log collection in Support and Recovery Assistant

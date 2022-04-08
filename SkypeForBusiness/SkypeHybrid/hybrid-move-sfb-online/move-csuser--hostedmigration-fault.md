@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Move-CsUser : HostedMigration fault" when you move users to Skype for Business Online from an on-premises Microsoft Lync Server

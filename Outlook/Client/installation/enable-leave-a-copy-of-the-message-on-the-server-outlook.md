@@ -19,6 +19,7 @@ appliesto:
   - Outlook for Office 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Leave a copy of the message on the server is missing in Outlook
 

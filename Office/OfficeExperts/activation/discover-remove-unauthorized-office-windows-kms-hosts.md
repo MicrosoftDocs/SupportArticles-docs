@@ -12,6 +12,7 @@ ms.author: ericspli
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # How to discover Office and Windows KMS hosts through DNS and remove unauthorized instances

@@ -14,6 +14,7 @@ ms.reviewer: nichburk
 appliesto: 
   - Lync 2013
   - Skype for Business 2015
+ms.date: 3/31/2022
 ---
 
 # No delegation relationship in Lync 2013 (Skype for Business) even though you're a delegate in Outlook 2013

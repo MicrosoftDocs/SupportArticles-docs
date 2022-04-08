@@ -16,6 +16,7 @@ appliesto:
   - Outlook for Mac 2011
   - Outlook for Mac for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Added appointments and contacts in Outlook for Mac do not synchronize to Outlook Web App
 

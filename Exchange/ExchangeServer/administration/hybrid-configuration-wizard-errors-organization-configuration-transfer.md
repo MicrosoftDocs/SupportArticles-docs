@@ -14,6 +14,7 @@ ms.reviewer: kchandra
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Hybrid Configuration Wizard errors when running the Organization Configuration transfer feature
 

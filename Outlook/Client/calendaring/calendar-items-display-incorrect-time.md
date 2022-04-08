@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Calendar items for next year may display an incorrect time in Outlook

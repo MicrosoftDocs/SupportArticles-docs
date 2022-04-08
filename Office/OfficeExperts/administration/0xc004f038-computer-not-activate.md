@@ -14,6 +14,7 @@ appliesto:
   - Office Professional Plus 2016
   - Office Professional Plus 2013
   - Office Standard 2013
+ms.date: 3/31/2022
 ---
 
 # "0xC004F038: The computer couldn't be activated" error in KMS activation

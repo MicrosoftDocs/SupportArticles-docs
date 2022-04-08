@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Office Professional Plus 2010
+ms.date: 3/31/2022
 ---
 
 # "Unlicensed Product" error when you open an Office Professional Plus 2010 application

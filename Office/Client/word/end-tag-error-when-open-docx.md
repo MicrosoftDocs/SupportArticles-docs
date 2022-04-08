@@ -14,6 +14,7 @@ appliesto:
   - Word 2013
   - Microsoft Word 2010
   - Microsoft Word 2007
+ms.date: 3/31/2022
 ---
 
 # (end tag) error occurs when you open a DOCX file in Word 2013, 2010, or 2007

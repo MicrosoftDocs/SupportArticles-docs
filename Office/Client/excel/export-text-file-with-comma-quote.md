@@ -14,6 +14,7 @@ appliesto:
   - Office Excel 2007
   - Office Excel 2003
   - Excel 2002
+ms.date: 3/31/2022
 ---
 
 # Procedure to export a text file with both comma and quote delimiters in Excel

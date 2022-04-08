@@ -12,6 +12,7 @@ ms.author: v-tappelgate
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Access Denied" error (Event ID 5566) when you open a form in the browser

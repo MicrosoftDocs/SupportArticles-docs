@@ -14,6 +14,7 @@ ms.reviewer: marcn
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Messages with attachments are not delivered when ATP Dynamic Delivery and Exclaimer are used
 

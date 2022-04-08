@@ -17,6 +17,7 @@ appliesto:
   - Skype for Business Online
   - Lync 2013
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # You can't sign in to Skype for Business Online because the certificate can't be acquired or validated

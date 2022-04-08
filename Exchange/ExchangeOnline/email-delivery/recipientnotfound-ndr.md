@@ -14,6 +14,7 @@ ms.reviewer: neozhu
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (550 5.1.10 RESOLVER.ADR.RecipientNotFound) NDR error when an Office 365 user tries to send mail to on-premises users in a hybrid deployment
 

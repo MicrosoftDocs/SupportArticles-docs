@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: thempel
 appliesto: 
   - Excel Online
+ms.date: 3/31/2022
 ---
 
 # How to refresh data to a SQL Azure Database in Excel Online

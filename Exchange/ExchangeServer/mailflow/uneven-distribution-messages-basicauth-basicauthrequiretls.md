@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Messages aren't evenly distributed if BasicAuth or BasicAuthRequireTLS is used in Exchange Server 2019, 2016, or 2013
 

@@ -14,6 +14,7 @@ ms.reviewer: salarson, prbalusu
 appliesto: 
   - SharePoint Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Unable to access SharePoint Online

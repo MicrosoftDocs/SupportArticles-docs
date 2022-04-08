@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # It is not possible to expand the folder error when accessing public folders in Exchange Online
 

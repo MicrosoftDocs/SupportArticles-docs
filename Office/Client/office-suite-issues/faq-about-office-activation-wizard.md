@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Frequently asked questions about the Office Activation Wizard

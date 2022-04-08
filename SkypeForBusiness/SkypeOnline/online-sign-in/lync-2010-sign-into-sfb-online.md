@@ -15,6 +15,7 @@ ms.custom:
 ms.reviewer: dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Lync 2010 requires additional software to sign into Skype for Business Online

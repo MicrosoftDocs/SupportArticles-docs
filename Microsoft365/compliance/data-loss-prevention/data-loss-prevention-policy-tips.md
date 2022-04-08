@@ -5,17 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: chgary, lindabr, sathyana
 ms.custom: 
-- CSSTroubleshoot
-- CI 100086
-- CI 160472
-appliesto:
-- Microsoft 365 Data Loss Prevention
+  - CSSTroubleshoot
+  - CI 100086
+  - CI 160472
+appliesto: 
+  - Microsoft 365 Data Loss Prevention
+ms.date: 3/31/2022
 ---
 
 # Resolve issues that affect DLP policy tips

@@ -11,8 +11,10 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: 
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook for Mac 2011 doesn't connect to Exchange Online
 

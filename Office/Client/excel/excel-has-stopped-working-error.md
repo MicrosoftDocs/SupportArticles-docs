@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Error message "Microsoft Excel has stopped working" after installing KB3118373

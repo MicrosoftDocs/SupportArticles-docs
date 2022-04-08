@@ -15,6 +15,7 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
+ms.date: 3/31/2022
 ---
 
 # "Not a valid Teradata SQL token" error when you run outer join queries

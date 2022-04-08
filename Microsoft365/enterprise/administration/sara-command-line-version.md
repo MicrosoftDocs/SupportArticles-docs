@@ -14,6 +14,7 @@ ms.reviewer: zebamehdi; brandisi
 appliesto: 
   - Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Command-line version of Microsoft Support and Recovery Assistant
 

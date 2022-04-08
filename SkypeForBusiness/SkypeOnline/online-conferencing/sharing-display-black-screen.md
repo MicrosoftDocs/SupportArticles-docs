@@ -15,6 +15,7 @@ appliesto:
   - Windows 7 Professional
   - Windows 7 Enterprise
   - Windows 7 Home Premium
+ms.date: 3/31/2022
 ---
 
 # "Share your desktop" displays a black screen in Skype for Business

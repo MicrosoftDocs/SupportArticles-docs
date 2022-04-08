@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Service Pack 3
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Format of the Exchange object version is wrong when you connect to Exchange Online in EMC
 

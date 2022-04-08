@@ -5,15 +5,16 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Microsoft 365 Apps for enterprise
-- Office 2016
-- OneDrive
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+  - Office 2016
+  - OneDrive
+ms.date: 3/31/2022
 ---
 
 # How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications

@@ -15,6 +15,7 @@ appliesto:
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Setup Lync Server Components wizard returns the warning "Host not found in topology" during the Lync Server Edge server installation

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Lync 2013
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # Lync 2013 and Skype for Business 2016 users are prompted with "You have been added as a delegate for %User%" notice that was previously dismissed

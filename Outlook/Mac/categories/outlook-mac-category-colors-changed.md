@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2016 for Mac
   - Outlook for Mac for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Category colors are different after you migrate from Outlook for Mac 2011 to Outlook 2016 for Mac
 

@@ -14,6 +14,7 @@ ms.reviewer: angelat
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook client displays Teams or Skype for Business retention policies
 

@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't publish a form to any Forms Library through Outlook
 

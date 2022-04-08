@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Create a default Site collection Term Set if none is present

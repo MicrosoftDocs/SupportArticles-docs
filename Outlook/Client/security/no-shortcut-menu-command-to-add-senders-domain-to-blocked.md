@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Office Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # There is no shortcut menu command to add a sender's domain to the Blocked Senders list in Outlook
 

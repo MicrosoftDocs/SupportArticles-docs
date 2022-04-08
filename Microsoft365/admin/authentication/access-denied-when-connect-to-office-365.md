@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365

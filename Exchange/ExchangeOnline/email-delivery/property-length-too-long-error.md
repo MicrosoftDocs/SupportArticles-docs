@@ -14,6 +14,7 @@ ms.reviewer: rrajan
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Length of the property is too long when you add sender domains to an inbound connector
 

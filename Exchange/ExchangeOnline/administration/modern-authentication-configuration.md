@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Modern Authentication configuration requirements for transition from Office 365 dedicated/ITAR to vNext
 

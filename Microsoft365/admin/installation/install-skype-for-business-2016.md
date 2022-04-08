@@ -13,6 +13,7 @@ ms.author: v-maqiu
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Skype for Business 2016
+ms.date: 3/31/2022
 ---
 
 # Install of Skype for Business 2016 from the Office 365 portal installs all the Microsoft 365 Apps for enterprise applications

@@ -14,6 +14,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo

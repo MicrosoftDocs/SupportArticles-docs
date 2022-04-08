@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Weather Bar and Weather settings missing in Outlook 2019, 2016, 2013, or Outlook for Office 365
 

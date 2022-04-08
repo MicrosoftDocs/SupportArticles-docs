@@ -15,6 +15,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Can't permanently delete a site when it's connected to a Microsoft 365 group

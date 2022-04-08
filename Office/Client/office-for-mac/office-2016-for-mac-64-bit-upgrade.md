@@ -17,6 +17,7 @@ appliesto:
   - Outlook for Mac for Office 365
   - PowerPoint for Mac for Office 365
   - Word for Mac for Office 365
+ms.date: 3/31/2022
 ---
 # Office 2016 for Mac 64-bit upgrade
 

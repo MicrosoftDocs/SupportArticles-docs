@@ -14,6 +14,7 @@ ms.reviewer: v-mosha
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Data in the command exceeded the maximum permitted by the session configuration error when running Get-Mailbox -ResultSize Unlimited
 

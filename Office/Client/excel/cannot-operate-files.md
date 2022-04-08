@@ -15,6 +15,7 @@ appliesto:
   - Office Professional Plus 2013
   - SharePoint Online
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
 # Office 365 users cannot open or synchronize SharePoint files after the Office 2013: March 12, 2013 update is installed

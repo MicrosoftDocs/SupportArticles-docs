@@ -14,6 +14,7 @@ ms.reviewer: monish
 appliesto: 
   - Outlook 2016 for Mac
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Email messages are stuck in Outbox in Outlook 2016 for Mac
 

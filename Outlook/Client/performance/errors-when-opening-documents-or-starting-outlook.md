@@ -22,6 +22,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Outlook 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # An out-of-date antivirus program may cause errors when you try to open an Office document or to start Outlook
 

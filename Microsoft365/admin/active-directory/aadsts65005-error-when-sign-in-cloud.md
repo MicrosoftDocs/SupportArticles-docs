@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Microsoft Intune
+ms.date: 3/31/2022
 ---
 
 # "AADSTS65005" error when you try to sign in to Microsoft Cloud services

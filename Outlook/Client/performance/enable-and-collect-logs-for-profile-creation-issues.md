@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Outlook
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Enable and collect Outlook logs to troubleshoot profile creation issues
 

@@ -14,6 +14,7 @@ ms.reviewer: jmartin, aruiz
 appliesto: 
   - Microsoft 365 for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error when accessing applications from iOS devices

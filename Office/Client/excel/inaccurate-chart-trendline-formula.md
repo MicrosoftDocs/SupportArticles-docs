@@ -14,6 +14,7 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # Chart trendline formula is inaccurate in Excel
 

@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2013
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't preview .msg files in Windows File Explorer with 64-bit Outlook
 

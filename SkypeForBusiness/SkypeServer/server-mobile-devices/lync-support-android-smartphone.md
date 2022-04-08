@@ -13,6 +13,7 @@ ms.reviewer: adam
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync 2010 for Android
+ms.date: 3/31/2022
 ---
 
 # Android smartphone devices that are supported for use with Lync 2010 for Android

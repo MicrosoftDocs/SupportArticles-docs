@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
+ms.date: 3/31/2022
 ---
 # Federation trust and sharing errors for federated Exchange 2010 organizations
 

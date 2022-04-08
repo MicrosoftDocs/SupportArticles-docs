@@ -17,6 +17,7 @@ appliesto:
   - Lync Server 2013
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # "There is a duplicate key sequence" in Lync or Skype for Business after you run the New-CSHostingProvider cmdlet

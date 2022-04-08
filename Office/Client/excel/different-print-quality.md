@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel 97
+ms.date: 3/31/2022
 ---
 
 # Unexpected behavior when you use different print quality for sheets in Excel

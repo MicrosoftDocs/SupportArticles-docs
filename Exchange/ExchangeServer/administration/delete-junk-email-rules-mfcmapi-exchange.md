@@ -21,6 +21,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # How to delete junk email rules by using MFCMAPI in an Exchange Server environment
 

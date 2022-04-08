@@ -14,6 +14,7 @@ ms.reviewer: sapadman
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't create a new message from Outlook Web App in Office 365
 

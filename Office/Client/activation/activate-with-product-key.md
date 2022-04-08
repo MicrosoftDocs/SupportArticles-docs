@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Activating Microsoft 365 Apps for Business with a product key

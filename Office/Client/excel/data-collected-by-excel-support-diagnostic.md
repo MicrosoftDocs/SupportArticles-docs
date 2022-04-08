@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - Excel 2010
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # [SDP 3][7b5791e2-2449-4351-867a-a22d34449d15] Data that is collected by the Excel Support Diagnostic

@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Template is too large to save or template couldn't be saved error in the My Templates app in Outlook Web App
 

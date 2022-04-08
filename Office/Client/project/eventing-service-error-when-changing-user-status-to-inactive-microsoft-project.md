@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 appliesto: 
   - Microsoft Project
+ms.date: 3/31/2022
 ---
 
 # "Eventing service" error message when changing the status of users to inactive in Microsoft Project

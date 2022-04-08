@@ -14,6 +14,7 @@ ms.reviewer: tmoore, gregmans
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2010 performance issues in Cached Mode on Citrix Virtual Desktop
 

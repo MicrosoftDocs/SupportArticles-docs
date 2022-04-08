@@ -16,6 +16,7 @@ appliesto:
   - Visio 2010
   - Visio 2007
   - Visio 2003
+ms.date: 3/31/2022
 ---
 
 # How to troubleshoot damaged drawings in Visio

@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Access 2010
+ms.date: 3/31/2022
 ---
 
 # Access 2010 crashes after you install Office 2010 Service Pack 1, and the error signature in Event Viewer points to the Vbe7.dll file

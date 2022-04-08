@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # How to change the database server in a SharePoint farm  

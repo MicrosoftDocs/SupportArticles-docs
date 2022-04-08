@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't use Group Policy to disable items in Backstage view in Outlook
 

@@ -13,6 +13,7 @@ ms.reviewer: gapart, munatara
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Couldn't update the following event error when editing calendar items from OWA or Outlook
 

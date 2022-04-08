@@ -18,6 +18,7 @@ appliesto:
   - Access 2003
   - Access 2002
   - Access 2000
+ms.date: 3/31/2022
 ---
 
 # How to retrieve the selected items in a multiple selection List Box as a comma-delimited string in Microsoft Access

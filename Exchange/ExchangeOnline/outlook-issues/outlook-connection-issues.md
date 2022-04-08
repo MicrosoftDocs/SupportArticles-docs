@@ -30,6 +30,7 @@ localization_priority: Normal
 manager: dcscontentpm
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Fix Outlook connection problems for Microsoft 365 account
 
