@@ -70,15 +70,15 @@ To find and remove soft-deleted public folder mailboxes that have the same names
 
    Here's an example of the output:
 
-   > Name: Mailbox1
-   > OrganizationalUnit: eurpr05a008.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com/**Soft Deleted Objects**
-   > DistinguishedName: CN=**Mailbox1**,OU=**Soft Deleted Objects**,OU=contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=EURPR05A008,DC=PROD,DC=OUTLOOK,DC=COM
-   > ExchangeGuid: \<Guid_number>
+   > Name: Mailbox1  
+   > OrganizationalUnit: <Domain_name>.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com/**Soft Deleted Objects**  
+   > DistinguishedName: CN=**Mailbox1**,OU=**Soft Deleted Objects**,OU=contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=<Domain_name>,DC=PROD,DC=OUTLOOK,DC=COM  
+   > ExchangeGuid: \<Guid_number>  
    >
-   > Name: Mailbox1
-   > OrganizationalUnit: eurpr05a008.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com
-   > DistinguishedName: CN=**Mailbox1**,OU= contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=EURPR05A008,DC=PROD,DC=OUTLOOK,DC=COM
-   > ExchangeGuid: \<Guid_number>
+   > Name: Mailbox1  
+   > OrganizationalUnit: <Domain_name>.prod.outlook.com/Microsoft Exchange Hosted Organizations/contoso.onmicrosoft.com  
+   > DistinguishedName: CN=**Mailbox1**,OU= contoso.onmicrosoft.com,OU=Microsoft Exchange Hosted Organizations,DC=<Domain_name>,DC=PROD,DC=OUTLOOK,DC=COM  
+   > ExchangeGuid: \<Guid_number>  
 
    **Note:** If no soft-deleted public folder mailboxes are found in the output, follow [Step 2: Find and remove all existing orphaned public folder mailboxes](#resolution-step-2-remove-all-existing-orphaned-public-folder-mailboxes).
 
