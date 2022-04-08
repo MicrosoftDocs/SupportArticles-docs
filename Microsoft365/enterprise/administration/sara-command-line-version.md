@@ -190,6 +190,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRACmd.exe version|
 |--------|--------|
+|Apr 7, 2022|17.00.8256.000|
 |Feb 8, 2022|17.00.7971.000|
 |Nov 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
