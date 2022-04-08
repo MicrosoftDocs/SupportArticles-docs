@@ -162,7 +162,7 @@ ForEach- Object  {$_.key; $_.Value}.txt
     - Get-Service.txt
     - Get-Tpm.txt
     - Get-WmiObject Win32_PnPSignedDriver select devicename, driverversion.txt
-  - Defender
+  - Defender for Cloud
     - Get-MpComputerStatus.txt
     - Get-MpPreference.txt
     - Get-MpThreat.txt
