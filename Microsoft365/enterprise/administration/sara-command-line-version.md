@@ -59,20 +59,22 @@ The following switches are available to control SaRAcmd.exe.
 
 2. `-CloseOutlook`
 
-   The `-CloseOutlook` switch is required to run the TeamsAddinScenario.  
+   The `-CloseOutlook` switch is required to run the TeamsAddinScenario.
+   
    **Note**: If Outlook is running, this switch closes Outlook.
    
    ```console
-  SaRAcmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
+   SaRAcmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
    ```
 
 3. `-CloseOffice`
 
-  The -CloseOffice switch is required to run the OfficeActivationScenario and OfficeSharedComputerScenario scenarios.  
- **Note**: The -CloseOffice switch closes Office applications.
+   The `-CloseOffice` switch is required to run the OfficeActivationScenario and OfficeSharedComputerScenario scenarios.
+ 
+   **Note**: The `-CloseOffice` switch closes Office applications.
    
    ```console
-  SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice
+   SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice
    ```
 
 4. `-AcceptEula`
@@ -99,40 +101,45 @@ The following switches are available to control SaRAcmd.exe.
    
 6. `-LogFolder <Output Path>`
 
-   The -LogFolder switch is optional for the ExpertExperienceAdminTask and OutlookCalendarCheckTask scenarios. If used, the -LogFolder switch forces SaraCmd.exe to        output scenario-specific logs to the folder specified by <Output Path>.
+   The `-LogFolder` switch is optional for the ExpertExperienceAdminTask and OutlookCalendarCheckTask scenarios. If the `-LogFolder` switch is used, it forces SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.
   
 7. `-P <Profile Name>`
   
-   The -P switch is optional for the OutlookCalendarCheckTask scenario. Profile name is the Outlook profile that is scanned by the OutlookCalendarCheckTask scenario.
+   The `-P` switch is optional for the OutlookCalendarCheckTask scenario. \<Profile name\> is the Outlook profile that's scanned by the OutlookCalendarCheckTask scenario.
   
 8. `RemoveSCA`
   
-  The -RemoveSCA switch is optional for OfficeActivationScenario and OfficeSharedComputerScenario. This switch removes Shared Computer Activation (SCA) and configures   non SCA activation for Office.
+   The `-RemoveSCA` switch is optional for OfficeActivationScenario and OfficeSharedComputerScenario. This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.
   
 9. `-HideProgress`
   
-  The -HideProgress switch is optional and only works with the ExpertExperienceTask and OutlookCalendarCheckTask scenarios. The default feature is to always show         progress but using this switch will hide the progress display for the above-mentioned scenarios.
+   The `-HideProgress` switch is optional and only works with the ExpertExperienceTask and OutlookCalendarCheckTask scenarios. The default feature is to always show progress. When this switch is used, it hides the progress display for the ExpertExperienceTask and OutlookCalendarCheckTask scenarios.
   
 10. `-OfflineScan`
   
-  The -OfflineScan switch is optional and only works with the ExpertExperienceAdminTask scenario. This switch forces the scan of Outlook to be an Offline scan when the   Outlook application is running. 
+    The `-OfflineScan` switch is optional and only works with the ExpertExperienceAdminTask scenario. This switch forces the scan of Outlook to be an Offline scan when the Outlook application is running. 
   
 11. `-OfficeVersion`
   
-  The -OfficeVersion switch is optional and works only with the OfficeScrubScenario scenario. Using this switch will only remove the Office version that is defined in   the parameter. If you use “All” as a parameter, it will remove all Office versions from your machine. For example, to uninstall 2016 Office version, run the           following command from an elevated Command Prompt window:
+    The `-OfficeVersion` switch is optional and works only with the OfficeScrubScenario scenario. Using this switch only removes the Office version that's defined in   the parameter. If you use **All** as a parameter, it removes all Office versions from your machine. For example, to uninstall only Office 2016 version, run the following command from an elevated Command Prompt window:
   
   ```console
-  SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion 2016 (Removes only 2016 Office version)
-SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion All  (Removes all Office versions)
+  SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion 2016
+  ```
+  
+ To uninstall all Office versions,  run the following command from an elevated Command Prompt window:
+ 
+ ```console
+ SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion All
   ```
    
 12. `-Help`
 
-The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other  switches except the `-?` switch.
+    The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other  switches except the `-?` switch.
 
 13. `-?`
 
-Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
+    Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
 
 ## Conditions addressed by the command-line scenarios
 
