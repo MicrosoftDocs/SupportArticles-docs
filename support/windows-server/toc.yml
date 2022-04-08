@@ -932,8 +932,6 @@
       href: ./deployment/rebuild-tokens-dotdat-file.md
     - name: Specified database is not a valid VAMT database error
       href: ./deployment/specified-database-not-valid-vamt-error.md
-    - name: Unknown devices in Device manager
-      href: ./deployment/unknown-device-vmbus-virtual-machine.md
     - name: Windows Activation fails with error 0x8007267C
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
@@ -2681,7 +2679,9 @@
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
     - name: VM Integration Services status reports protocol version mismatch
-      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
+      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md      
+    - name: Unknown devices in Device manager
+      href: ./virtualization/unknown-device-vmbus-virtual-machine.md
   - name: Live Migration
     items:
     - name: 'Troubleshooting guidance: Live Migration'

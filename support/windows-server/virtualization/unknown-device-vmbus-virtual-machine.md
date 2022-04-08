@@ -1,7 +1,7 @@
 ---
 title: Unknown devices (VMBUS) in Device manager
 description: Describes an issue where unknown devices appear in Device Manager of a virtual machine.
-ms.date: 09/08/2020
+ms.date: 04/08/2020
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -10,8 +10,8 @@ ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.custom: sap:activation, csstroubleshoot
-ms.technology: windows-server-deployment
+ms.custom: sap:integration-components, csstroubleshoot
+ms.technology: hyper-v
 ---
 # Unknown Device (VMBUS) appears in Device manager in Virtual Machine
 
