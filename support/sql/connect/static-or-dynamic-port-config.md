@@ -16,7 +16,7 @@ By default, a SQL Server named instance is configured to listen on dynamic ports
 
 Use the following procedure to determine whether the SQL Server named instance is listening on a dynamic port versus a static port.
 
-### Option 1: Use SQL Server Configuration Manager
+## Option 1: Use SQL Server Configuration Manager
 
 1. In **SQL Server Configuration Manager**, expand **SQL Server Network Configuration**, expand **Protocols** for *instance name*, and then double-click **TCP/IP**.
 1. In **TCP/IP Properties**, select **Protocol**.
@@ -41,7 +41,7 @@ Use the following procedure to determine whether the SQL Server named instance i
 > [!NOTE]
 > A value of **0** in **TCP dynamic ports** indicates that the named instance is currently not running and is configured for dynamic ports. After you start the instance, the value field will reflect the dynamic port that the instance is currently using.
 
-### Option 2: Use PowerShell
+## Option 2: Use PowerShell
 
 1. Run the following script in the PowerShell ISE. The Console window displays all the relevant TCP/IP for all your SQL Server instances (SQL Server 2014 through SQL Server 2019) that are currently installed on the system.
 

@@ -82,7 +82,7 @@ If the `PropertyValue` returned is **1**, the database is in recovery mode.
 Run the following SQL query to take the database out of recovery mode:
 
 ```sql
-updated tbl_DLS_GlobalSetting
+update tbl_DLS_GlobalSetting
 set PropertyValue = '0'
 where PropertyName like 'DbRecovery'
 ```
