@@ -31,7 +31,7 @@ When you view the properties of these devices and check driver details, Hardware
 
 These Virtual Devices (VDev) are provided for Automatic Virtual Machine Activation (AVMA) to communicate with the host. AVMA is only supported on virtual machines running Windows Server 2012 R2 or later versions of operating systems.
 
-Or, it may show the following IDs:
+Or, the device may show the following IDs:
 
 - vmbus\\{c376c1c3-d276-48d2-90a9-c04748072c60}
 - vmbus\\{c4e5e7d1-d748-4afc-979d-683167910a55}
