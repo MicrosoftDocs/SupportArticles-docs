@@ -3607,7 +3607,7 @@
     },
     {
       "source_path": "support/windows-server/deployment/unknown-device-vmbus-virtual-machine.md",
-      "redirect_url": "support/windows-server/virtualization/unknown-device-vmbus-virtual-machine.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/unknown-device-vmbus-virtual-machine",
       "redirect_document_id": true
     }
   ]
