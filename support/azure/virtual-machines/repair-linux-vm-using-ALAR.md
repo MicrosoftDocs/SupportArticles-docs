@@ -75,7 +75,7 @@ This action corrects an incorrect or malformed serial console configuration for 
 The ALAR scripts use the repair extension `run` command and its `--run-id` option. The script-id for the automated recovery is: **linux-alar2**. For example:
 
 ```azurecli-interactive
-az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234’ --copy-disk-name  repairdiskcopy
+az vm repair create --verbose -g centos7 -n cent7 --repair-username rescue --repair-password 'password!234' --copy-disk-name  repairdiskcopy
  ```
 
 ```azurecli-interactive

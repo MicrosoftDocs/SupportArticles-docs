@@ -857,6 +857,7 @@ System service name: **TermService**
 |Application protocol|Protocol|Ports|
 |---|---|---|
 |Terminal Services|TCP|3389|
+|Terminal Services|UDP|3389|
   
 ### Terminal Services Licensing
 
@@ -1158,6 +1159,7 @@ The following table summarizes the information from the [System services ports](
 |3269|TCP|Global Catalog|Local Security Authority|
 |3343|UDP|Cluster Services|Cluster Service|
 |3389|TCP|Terminal Services|Terminal Services|
+|3389|UDP|Terminal Services|Terminal Services|
 |3527|UDP|MSMQ-Ping|Message Queuing|
 |4011|UDP|BINL|Remote Installation|
 |4500|UDP|NAT-T|Local Security Authority|

@@ -23,7 +23,7 @@ Azure virtual machines (VMs) might sometimes reboot for no apparent reason, with
 
 The best way to protect an application that's running on Azure against VM reboots and downtime is to configure the VMs for high availability.
 
-To provide this level of redundancy to your application, we recommend that you group two or more VMs in an availability set. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available and meets the 99.95 percent [Azure SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_5/).
+To provide this level of redundancy to your application, we recommend that you group two or more VMs in an availability set. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available and meets the 99.95 percent [Azure SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9/).
 
 For more information about availability sets, see [Manage the availability of VMs](/azure/virtual-machines/manage-availability)
 
