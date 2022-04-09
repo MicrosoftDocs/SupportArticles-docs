@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 321185
 
 - A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. **[Click to download this Excel file now](https://aka.ms/SQLServerbuilds)**. (File name: _SQL Server Builds V3.xlsx_)
 
-  A new enhanced version of the Excel file contains detailed fixlists for SQL Server 2019 and SQL Server 2017 is now available. **[Click to download this new Excel file now](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx)**.
+  A new enhanced version of the Excel file contains detailed fix lists for SQL Server 2019 and SQL Server 2017 is now available. **[Click to download this new Excel file now](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx)**.
 
   > [!NOTE]
   > The new enhanced version of the Excel file will soon replace the current version. We are offering the two versions for this transition period.
