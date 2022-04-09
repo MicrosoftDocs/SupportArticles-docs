@@ -21,6 +21,11 @@ _Original KB number:_ &nbsp; 321185
 
 - A downloadable version of an Excel workbook that contains all the build versions together with their current support lifecycle stage for 2005 through the current version is available. **[Click to download this Excel file now](https://aka.ms/SQLServerbuilds)**. (File name: _SQL Server Builds V3.xlsx_)
 
+  A new enhanced version of the Excel file contains detailed fixlists for SQL Server 2019 and SQL Server 2017 is now available. **[Click to download this new Excel file now](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx)**.
+
+  > [!NOTE]
+  > The new enhanced version of the Excel file will soon replace the current version. We are offering the two versions for a this transition period.
+
 - To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](https://support.microsoft.com/help/321185/#completeversion) list tables.
 
 - To find the edition of your SQL Server instance, you can use one of the procedures in Method 2 through Method 5 in the [Determine which version and edition of SQL Server Database Engine is running](#determine-which-version-and-edition-of-sql-server-database-engine-is-running) section.
