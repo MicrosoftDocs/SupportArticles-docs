@@ -1,30 +1,27 @@
 ---
-title: The current environment doesnât meet the minimum requirements error message
-description: 
-ms.reviewer: 
+title: The current environment doesn't meet the minimum requirements error message
+description: Cause and resolution for an error that the current environment doesn't meet the minimum requirements.
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
 ---
 
-# The current environment doesnât meet the minimum requirements error message
+# The current environment doesn't meet the minimum requirements error message
 
-This article provides a solution to an error message that occurs when "The current environment doesn’t meet the minimum requirements"
+This article provides a solution to an error message that occurs when the current environment doesn’t meet the minimum requirements.
 
-_Applies to:_ &nbsp; Other
-
+_Applies to:_ &nbsp; Other <!--Angie will ask Vivek-Can you be specific? I don't see "Other" used in troubleshooting docs.-->
 
 ## Symptoms
 
-error message : “The current environment doesn't meet the minimum requirements” 
-
+You get an error message, **The current environment doesn't meet the minimum requirements**.
 
 ## Cause
 
 The Microsoft Dataverse database in the environment where you are creating your model doesn't have the latest updates installed.
 
-
 ## Resolution
 
-To solve this, create a support request in the Power Platform Admin Center to request that the latest AI Builder updates be installed in your Dataverse database.
+To solve this, create a support request in the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/) to request that the latest AI Builder updates be installed in your Dataverse database.
 

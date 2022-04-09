@@ -1,28 +1,27 @@
 ---
-title: AI Builder form processing is not extracting tables that span across multiple pages
-description: 
-ms.reviewer: 
+title: AI Builder form processing isn't extracting tables that span across multiple pages
+description: Cause and resolution for an error that AI Builder form processing isn't extracting tables that span across multiple pages.
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
 ---
 
-# AI Builder form processing is not extracting tables that span across multiple pages
+# AI Builder form processing isn't extracting tables that span across multiple pages
 
 This article provides a solution to an error that occurs when AI models fail to be imported in a new environment.
 
-_Applies to:_ &nbsp; Power Automate
-
+_Applies to:_ &nbsp; Microsoft Power Automate
 
 ## Symptoms
 
-form processing is not extracting tables that span across multiple pages
+Your form processing model isn't extracting tables that span across multiple pages.
 
+## Cause
+
+Support for extracting tables that span across multiple pages is currently experimental. Experimental features aren't meant for production usage and have restricted functionality.
 
 ## Resolution
 
-[!NOTE]
-"Support for extracting tables that span across multiple pages is currently experimental. 
-Experimental features aren't meant for production usage and have restricted functionality; therefore, we can't provide support for experimental features."
-
-- [To learn more, go to the latest guidance regarding multipage tables support in AI Builder today.](https://docs.microsoft.com/ai-builder/form-processing-multipage)
+We don't provide support for experimental features. 
+To learn more, go to [Process multipage tables in form processing (experimental)](/ai-builder/form-processing-multipage).

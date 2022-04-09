@@ -1,7 +1,7 @@
 ---
 title: AI Builder actions are disabled/deactivated
-description: 
-ms.reviewer: 
+description: Cause and resolution for an error that AI Builder actions are disabled/deactivated.
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
@@ -9,41 +9,43 @@ ms.subservice:
 
 # AI Builder actions are disabled/deactivated
 
-This article provides steps to activate AI Builder actions
+This article provides steps to activate AI Builder actions.
 
-_Applies to:_ &nbsp; Other
-
+_Applies to:_ &nbsp; Other <!--Angie will ask Vivek-Can you be specific? I don't see "Other" used in troubleshooting docs.-->
 
 ## Symptoms
 
-AI Builder actions are disabled/deactivated
-
+AI Builder actions are disabled/deactivated.
 
 ## Cause
 
 AI Builder can't be used if its actions have been deactivated.
 
-
 ## Resolution
 
-To activate them, the administrator of the environment needs to perform the following steps:
+To activate the actions, the administrator of the environment needs to perform the following steps.
 
-1. Sign in to the Power Platform Admin Center.
-2. Select the environment where the actions are deactivated and select Settings > Resources > All legacy settings.
-3. Select Processes from the Settings menu.
-4. Select to display All Processes and activate all the following AI Builder processes:
-IsPaiEnabled
-Predict
-PredictionSchema
-Train
-QuickTest
-BatchPrediction
-ScheduleTraining
-SchedulePrediction
-ScheduleRetrain
-UnschedulePrediction
-UnscheduleTraining
-CancelTraining
-PublishAIConfiguration
-UnpublishAIConfiguration
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 
+1. Select the environment where the actions are deactivated.
+
+1. Select **Settings** > **Resources** > **All legacy settings**.
+
+1. From the **Settings** menu, select **Processes**.
+
+1. Select to display **All Processes** and activate the following AI Builder processes.
+
+    - IsPaiEnabled
+    - Predict
+    - PredictionSchema
+    - Train
+    - QuickTest
+    - BatchPrediction
+    - ScheduleTraining
+    - SchedulePrediction
+    - ScheduleRetrain
+    - UnschedulePrediction
+    - UnscheduleTraining
+    - CancelTraining
+    - PublishAIConfiguration
+    - UnpublishAIConfiguration

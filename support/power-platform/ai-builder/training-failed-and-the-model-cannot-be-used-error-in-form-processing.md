@@ -1,40 +1,36 @@
 ---
-title: Fields Training failed and the model can't be used error in form processing
-description: 
-ms.reviewer: 
+title: Fields training failed and the model can't be used in a form processing model
+description: Causes and resolutions for an error that training failed and the model can't be used in a form processing model.
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
 ---
 
-# Training failed and the model can't be used error in form processing
+# Training failed and the model can't be used in a form processing model
 
-This article provides a solution to an error that occurs when a training failed and the model can't be used in form processing.
+This article provides a solution to an error that occurs when training failed and the model can't be used in a form processing model.
 
-_Applies to:_ &nbsp;
-
+_Applies to:_ &nbsp; <!--Add something here.-->
 
 ## Symptoms
 
- error message “Training failed and the model cannot be used” error in form processing after you have trained your form processing model
-
+You receive the error message, **Training failed and the model cannot be used** in form processing after you've trained your form processing model.
 
 ## Cause 1
 
-A temporary error
+This is a temporary error.
 
 
-## Resolution
+## Resolution for cause 1
 
-You can retry by retraining your model again by selecting Edit model.
-
-
+Retry by retraining your model again by selecting **Edit model**.
 
 ## Cause 2
 
-The documents that you uploaded for training don’t meet the Form-processing model requirements.
+The documents that you uploaded for training don’t meet the form processing model requirements.
 
+## Resolution for cause 2
 
-## Resolution
-
-Make sure your document meets the following requirements
+Make sure your document meets the following requirements.
+<!--List requirements-->
