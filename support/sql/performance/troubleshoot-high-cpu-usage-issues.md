@@ -57,7 +57,7 @@ If `% User Time` is consistently greater than 90 percent, this indicates that th
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common cause are SQL queries that perform table or index scans. To identify the queries that are responsible for high-CPU activity currently, run the following:
+If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans. To identify the queries that are responsible for high-CPU activity currently, run the following:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -87,7 +87,7 @@ WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
 
-If queries are not driving the CPU at this moment, but you know it has happened in the recent past, you can look for historical CPU-bound queries. Run the following: 
+If queries aren't driving the CPU at this moment, but you know it has happened in the recent past, you can look for historical CPU-bound queries. Run the following: 
 
 ```sql
 SELECT TOP 10 st.text AS batch_text,
@@ -187,7 +187,7 @@ Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeprocc
 
 If the issue still exists, you can add a `RECOMPILE` query hint to each of the high-CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
 
-If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, aka "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
+If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, also known as "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
 
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This hint helps balance the slight increase in compilation CPU usage with a more optimal performance for each query execution. For more information, see [Parameters and Execution Plan Reuse](/sql/relational-databases/query-processing-architecture-guide#PlanReuse), [Parameter Sensitivity](/sql/relational-databases/query-processing-architecture-guide#ParamSniffing) and [RECOMPILE query hint](/sql/t-sql/queries/hints-transact-sql-query/#recompile).
 
@@ -231,7 +231,52 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Investigate and resolve Sargability issues
 
-A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an an index to speed up the execution of the query. Many query designs prevent sargability and lead to SQL Server doing a table or index scan and lead to high-CPU usage. 
+A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an an index to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and corresponding high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be selected first, then the function applied and only then a comparison can be made. Selecting all rows means a table/clustered index scan and higher CPU usage. 
+
+```sql 
+SELECT ProductID, Name, ProductNumber
+FROM [Production].[Product]
+WHERE SUBSTRING(ProductNumber, 0, 4) =  'HN-'
+```
+
+Applying any function or computation on the column(s) in the search predicate generally makes the query non-sargable and leads to higher CPU consumption. Solutions generally involve rewriting the queries in a creative way to make the sargable. A possible solution to this example is this; the function is removed from the query predicate and the same results are achieved:
+
+```sql 
+SELECT ProductID, Name, ProductNumber
+FROM [Production].[Product]
+WHERE Name like  'Hex%'
+```
+
+Here's another example, where a sales manager may want to give 10% sales commission on large orders and wants to see which orders will have commission greater than $300. Here's the logical, but non-sargable way to do it.
+
+```sql
+SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
+FROM [Sales].[SalesOrderDetail]
+WHERE UnitPrice * 0.10 > 300
+```
+
+Here's a possible less-intuitive, but sargable, re-write of the query in which the computation is moved to the right side of the predicate.
+
+```sql
+SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
+FROM [Sales].[SalesOrderDetail]
+WHERE UnitPrice > 300/0.10
+```
+
+Sargability applies not only to WHERE predicates, but to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions which lead to scan of columns. In the conversion cases, the solution may be to ensure you are comparing the same data types. Here is an example where the T1.ProdID column is  converted to the INT data type in a JOIN defeating the use of an index on the join column. To avoid scan of T1 you can change the underlying data type of the column after proper planning and design.
+
+```sql 
+SELECT * 
+FROM T1 JOIN T2 
+ON CONVERT(INT, T1.ProdID) = T2.ProductID
+```
+
+Another solution is to create a computed column in T1 that uses the same CONVERT() and create an index on it. This will allow the Query optimizer to use that index without the need to change your query.
+
+```sql
+ALTER TABLE dbo.T1  ADD IntProdID AS CONVERT (INT, ProdID);
+CREATE INDEX IndProdID_int ON dbo.T1 (IntProdID);
+```
 
 ## Step 7: Disable heavy tracing
 
