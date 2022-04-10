@@ -57,7 +57,23 @@ If `% User Time` is consistently greater than 90 percent, this indicates that th
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans. To identify the queries that are responsible for high-CPU activity currently, run the following:
+If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort and hash operations, loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are using out of overall CPU capacity, run this:
+
+```sql
+DECLARE @init_sum_cpu_time int , @utilizedCpuCount int
+
+--get CPU count used by SQL Server
+SELECT @utilizedCpuCount = COUNT(*) FROM sys.dm_os_schedulers WHERE status = 'VISIBLE ONLINE'
+
+--calculate the CPU usage by queries over a 5 sec interval
+SELECT @init_sum_cpu_time  = SUM(cpu_time) FROM sys.dm_exec_requests
+waitfor delay '00:00:05'
+SELECT CONVERT(DECIMAL(5,2), ((SUM(cpu_time) - @init_sum_cpu_time) /
+       (@utilizedCpuCount * 5000.00))*100) as [CPU from Queries as Percent of Total CPU Capacity] 
+FROM sys.dm_exec_requests
+```
+
+To identify the queries that are responsible for high-CPU activity currently, run the following:
 
 ```sql
 SELECT TOP 10 s.session_id,
