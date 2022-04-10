@@ -231,7 +231,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Investigate and resolve Sargability issues
 
-A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an an index to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and corresponding high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be selected first, then the function applied and only then a comparison can be made. Selecting all rows means a table/clustered index scan and higher CPU usage. 
+A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an an index to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and corresponding high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or clustered index scan and higher CPU usage. 
 
 ```sql 
 SELECT ProductID, Name, ProductNumber
@@ -263,7 +263,7 @@ FROM [Sales].[SalesOrderDetail]
 WHERE UnitPrice > 300/0.10
 ```
 
-Sargability applies not only to WHERE predicates, but to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions which lead to scan of columns. In the conversion cases, the solution may be to ensure you are comparing the same data types. Here is an example where the T1.ProdID column is  converted to the INT data type in a JOIN defeating the use of an index on the join column. To avoid scan of T1 you can change the underlying data type of the column after proper planning and design.
+Sargability applies not only to WHERE predicates, but to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions used in WHERE or JOIN clauses which lead to scan of columns. In the data-type conversion cases, the solution may be to ensure you are comparing the same data types. Here is an example where the T1.ProdID column is converted to the INT data type in a JOIN, defeating the use of an index on the join column. To avoid a scan of T1 table, you can change the underlying data type of the ProdID column after proper planning and design.
 
 ```sql 
 SELECT * 
@@ -277,6 +277,8 @@ Another solution is to create a computed column in T1 that uses the same CONVERT
 ALTER TABLE dbo.T1  ADD IntProdID AS CONVERT (INT, ProdID);
 CREATE INDEX IndProdID_int ON dbo.T1 (IntProdID);
 ```
+
+In some cases, queries cannot be re-written easily to allow for sargability. In those cases, see if the computed column with an index on it can help or simply keep  the query as is with the awareness that it can lead to higher CPU scenarios.
 
 ## Step 7: Disable heavy tracing
 
