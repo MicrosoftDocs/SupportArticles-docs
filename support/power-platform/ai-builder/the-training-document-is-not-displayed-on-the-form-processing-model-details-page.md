@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a resolution for when the training document isn't displayed on the form processing model details page.
 
-_Applies to:_ &nbsp; Microsoft Power Automate, document processing models
+_Applies to:_ &nbsp; Power Automate, document processing models
 
 ## Symptoms
 

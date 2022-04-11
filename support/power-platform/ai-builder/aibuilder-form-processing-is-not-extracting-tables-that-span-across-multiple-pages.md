@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to an error that occurs when AI models fail to be imported in a new environment.
 
-_Applies to:_ &nbsp; Microsoft Power Automate
+_Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 

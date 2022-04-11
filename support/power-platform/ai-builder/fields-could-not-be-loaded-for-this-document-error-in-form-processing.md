@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to an error that occurs when fields couldn't be loaded for a document in a form processing model.
 
-_Applies to:_ &nbsp; Microsoft Power Automate
+_Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 

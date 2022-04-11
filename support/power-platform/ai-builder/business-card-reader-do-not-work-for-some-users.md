@@ -10,7 +10,7 @@ ms.subservice:
 
 This article provides a resolution for when AI Builder business card reader doesn't work for some users.
 
-_Applies to:_ &nbsp; Microsoft Power Apps
+_Applies to:_ &nbsp; Power Apps
 
 ## Symptoms
 
