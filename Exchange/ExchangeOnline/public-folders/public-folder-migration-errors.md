@@ -53,9 +53,9 @@ This issue occurs if one or both of the following conditions are true:
 - Public folder mailboxes that are soft deleted have the same names as active mailboxes.
 - Either the primary public folder mailbox or the secondary public folder mailbox has an orphaned CNF (conflict) object.
 
-To resolve this issue, follow these steps:
-
 ## Resolution
+
+To resolve this issue, follow these steps:
 
 ### Step 1: Remove soft-deleted public folder mailboxes that have the same names as active mailboxes
 
