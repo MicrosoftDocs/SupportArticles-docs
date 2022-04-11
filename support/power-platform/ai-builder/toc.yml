@@ -3,7 +3,7 @@
   items:
   - name: Administration
     items:
-    - name: Current environment doesn't meet the minimum requirements error message
+    - name: Current environment doesn't meet the minimum requirements
       href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
   - name: Licensing
     items:

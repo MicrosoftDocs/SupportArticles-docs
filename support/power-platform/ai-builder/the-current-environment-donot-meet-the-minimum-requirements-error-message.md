@@ -1,5 +1,5 @@
 ---
-title: The current environment doesn't meet the minimum requirements error message
+title: The current environment doesn't meet the minimum requirements
 description: Cause and resolution for an error that the current environment doesn't meet the minimum requirements.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
@@ -7,7 +7,7 @@ ms.date: 3/31/2021
 ms.subservice: 
 ---
 
-# The current environment doesn't meet the minimum requirements error message
+# The current environment doesn't meet the minimum requirements
 
 This article provides a solution to an error message that occurs when the current environment doesn’t meet the minimum requirements.
 
