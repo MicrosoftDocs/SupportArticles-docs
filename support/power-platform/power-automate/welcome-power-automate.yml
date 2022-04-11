@@ -29,6 +29,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Power Automate documentation
-            url: https://docs.microsoft.com/power-automate/
+            url: /power-automate/
           - text: Power Automate training 
-            url: https://docs.microsoft.com/learn/powerplatform/power-automate
+            url: /learn/powerplatform/power-automate

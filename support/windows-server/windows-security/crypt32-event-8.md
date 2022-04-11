@@ -1,6 +1,6 @@
 ---
 title: Crypt32 event 8 is continuously reported
-description: On those products referenced in the Applies To section of this article, Crypt32 event ID 8 may be continuously recorded in the Application event log. This occurs because Windows is attempting to verify the digital signature of third-party security software that has been designed to meet the requirements for integrating with the new Windows Security Center (WSC) introduced in Windows Vista. This behavior is expected, and can be ignored.
+description: On those products referenced in the Applies To section of this article, Crypt32 event ID 8 may be continuously recorded in the Application event log. This occurs because Windows is attempting to verify the digital signature of third-party security software that has been designed to meet the requirements for integrating with the Windows Security app introduced in Windows Vista. This behavior is expected, and can be ignored.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
@@ -59,7 +59,7 @@ These events are recorded despite the fact that no applications or services inst
 This behavior is expected under the following conditions:
 
 - The computer is unable to access the Windows Update web site due to router or proxy configuration.
-- An application has been installed that has been designed to interact with the Windows Security Center (WSC) on Windows Vista or higher. Example applications include third-party virus software, malware scanners, or firewall products.
+- An application has been installed that has been designed to interact with the Windows Security app on Windows Vista or higher. Example applications include third-party virus software, malware scanners, or firewall products.
 
 ## Resolution
 
@@ -74,7 +74,7 @@ There are three options for handling these events.
 
 ## More information
 
-Microsoft requires that any software registers and interacts with the Windows Security Center (WSC) that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
+Microsoft requires that any software registers and interacts with the Windows Security app that's signed with a digital certificate that chains up to an internal Microsoft code signing root certification authority (CA). This CA is called the Microsoft Code Verification Root CA (MSCV). Microsoft has cross-certified the MSCV with multiple third-party code-signing CAs allowing these vendors to continue issuing valid code-signing certificates to their customers.
 
 The MSCV certificate is embedded in the kernel, but it is not available as part of the Automatic Trusted Root Update service. Whenever the digital signature on one of these applications is checked, the chain of the vendor's code signing certificate is built up to both the root CA of the third-party that issued the code signing certificate and, by virtue of the cross-CA certificate issued by Microsoft, also to the MSCV. In short, two chains are built and the validity of both are verified.
 
