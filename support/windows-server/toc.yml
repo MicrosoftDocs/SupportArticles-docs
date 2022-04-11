@@ -1994,6 +1994,8 @@
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
+    - name: 'Troubleshooting guidance: High CPU usage'
+      href: ./performance/troubleshoot-high-cpu-usage-guidance.md
     - name: Add processors to a computer
       href: ./performance/add-processors-to-computer.md
     - name: Error occurs while deleting registry keys
