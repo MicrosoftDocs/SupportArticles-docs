@@ -1,6 +1,6 @@
 ---
-title: Error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer"
-description: This article provides a resolution for the issue where you receive the error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer".
+title: Update requires a member to be present or is blocked by another condition
+description: Provides a resolution for the issue where you receive the error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer".
 ms.date: 04/02/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -8,13 +8,13 @@ ms.reviewer: terry.g.lee
 ---
 # Error "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer"
 
-This article provides a resolution for the issue where you receive an error message in Visual Studio 2015.
+This article provides a resolution for the issue where you receive an error message like "KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer" in Visual Studio 2015.
 
 _Applies to:_&nbsp; Visual Studio 2015
 
 ## Symptom
 
-You receive the following error message:
+You receive the following error message when you install Visual Studio 2015:
 
 > KBXXXXXX requires a member of the Visual Studio 2015 family to be present or is blocked by another condition on your computer.
 
