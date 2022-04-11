@@ -46,10 +46,10 @@ The "Impersonate a client after authentication" user right (SeImpersonatePrivile
 - Component Object Model (COM) servers that are started by the COM infrastructure and that are configured to run under a specific account
 
 When you assign the "Impersonate a client after authentication" user right to a user, you permit programs that run on behalf of that user to impersonate a client. This security setting helps to prevent unauthorized servers from impersonating clients that connect to it through methods such as remote procedure calls (RPC) or named pipes. For more information about the SeImpersonatePrivilege function, visit the following Microsoft Web site:  
-[Authorization Constants (Authorization)](/windows/win32/secauthz/authorization-constants)
+[Impersonate a client after authentication](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication)
   
 For more information about Impersonate functions (such as ImpersonateClient, ImpersonateLoggedOnUser, and ImpersonateNamedPipeClient), search for SeImpersonatePrivilege in the Microsoft Platform SDK documentation. To view this documentation, visit the following Microsoft Web site:  
-[Authorization Constants (Authorization)](/windows/win32/secauthz/authorization-constants)  
+[Impersonate a client after authentication](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication)  
 
 #### Troubleshooting for issue 1
 
