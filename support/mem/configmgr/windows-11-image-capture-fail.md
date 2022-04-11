@@ -98,7 +98,7 @@ When you boot the computer into Windows PE (WinPE) and capture the Windows image
 
 This issue occurs because no drive letter is assigned to the operating system (OS) partition that needs to be captured. This is because the **No Default Drive Letter** attribute is set to **Yes** for the Windows 11 C drive. See the following screenshot for an example:
 
-:::image type="content" source="media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="No Default Drive Letter attribute is set to Yes.":::
+:::image type="content" source="media/windows-11-image-capture-fail/no-default-drive-letter-attribute.png" alt-text="Screenshot shows the No Default Drive Letter attribute is set to Yes.":::
 
 ### Solution: Allow automatic assignment of drive letters
 
@@ -123,7 +123,7 @@ detail partition
 
 See the following screenshot for the correct partition attributes:
 
-:::image type="content" source="media/windows-11-image-capture-fail/detail-partition-command-output.png" alt-text="Output of the detail partition command.":::
+:::image type="content" source="media/windows-11-image-capture-fail/detail-partition-command-output.png" alt-text="Screenshot of the detail partition command output.":::
 
 `Partition 3` that's used in the command lines above is just an example. The selected partition should match the partition index of your current installed OS. To determine the partition, run the following commands:
 
@@ -135,6 +135,6 @@ list partition
 
 See the following screenshot for the command output. Use the partition that's marked as Primary.
 
-:::image type="content" source="media/windows-11-image-capture-fail/list-partition-command-output.png" alt-text="Output of the list partition command.":::
+:::image type="content" source="media/windows-11-image-capture-fail/list-partition-command-output.png" alt-text="Screenshot of the list partition command output.":::
 
 After the assignment is completed, restart the capture process.
