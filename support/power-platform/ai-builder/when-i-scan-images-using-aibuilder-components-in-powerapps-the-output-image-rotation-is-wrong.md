@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a resolution for the issue when scanning images using AI Builder components in Microsoft Power Apps, the output image is wrong.
 
-_Applies to:_ &nbsp; Microsoft Power Apps
+_Applies to:_ &nbsp; Power Apps
 
 
 ## Symptoms
