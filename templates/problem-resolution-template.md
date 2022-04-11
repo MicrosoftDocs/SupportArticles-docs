@@ -4,7 +4,7 @@ description: #Required;  this article description is displayed in search results
 author: #Required;  your GitHub user alias — correct capitalization is needed.
 ms.author: #Required; Microsoft alias of author.
 ms.topic: troubleshooting #Required
-ms.date: #Required;  enter the date in the mm/dd/yyyy format.
+ms.date: #Required; enter the date in the mm/dd/yyyy format.
 ---
 <!---For SEO metadata, refer to the SEO cheat sheet provided at https://review.docs.microsoft.com/en-us/help/contribute/contribute-how-to-write-seo-basics?branch=main. It has complete information on metadata that impacts SEO, specifically the page title and meta description.--->
 
