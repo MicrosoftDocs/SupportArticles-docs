@@ -16,7 +16,8 @@ After you install January 2022 or later Windows cumulative updates on a Configur
 
 For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and the discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
 
-The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have rules based on a domain membership.
+The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have query rules based on a domain membership.
+This should not affect direct membership rules.
 
 ## Cause
 
@@ -24,11 +25,13 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 ## Resolution
 
-This issue is under investigation and will be resolved in a future release of Configuration Manager current branch.
+This issue is resolved in the Configuration Manager Current Branch 2203 release.
 
 ## Workaround
 
-To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name.
+To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name like in the following example:
+
+```select * from SMS_R_System where SMS_R_System.SystemGroupName in ("AAA\\Group1","BBB\\Group1")```
 
 ## Identify the issue
 
@@ -72,3 +75,48 @@ Here are the steps to check logs and identify the issue:
    ```
 
 1. If so, you've identified the issue successfully.
+
+## Additional information
+
+Same issue can be observed if one enables "Discover objects within Active Directory groups" checkbox in System or User Discovery scope settings. Here are the steps to identify it:
+
+1. Increase the size of the _ADSysDis.log_ or _ADUsrDis.log_ file to 100 megabytes (MB) or more to accommodate a full Active Directory System or User discovery. Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
+
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SYSTEM_DISCOVERY_AGENT`
+
+      or
+      
+   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_USER_DISCOVERY_AGENT`
+
+1. Enable verbose logging for the _ADSysDis.log_ or _ADUsrDis.log_ file. Under the following registry key, change the `Verbose Logs` registry value to `1` (the default value is `0`).
+
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SYSTEM_DISCOVERY_AGENT`
+      
+      or
+      
+      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_USER_DISCOVERY_AGENT`
+
+1. Run a full Active Directory System or Group discovery and make sure the following message is logged in the _ADSysDis.log_ or _ADUsrDis.log_ file upon completion.
+
+   `INFO: CADSource::fullSync returning 0x00000000~`
+
+1. Filter by the thread ID that logged the above message and find the following message in the filtered logs.
+
+   `VERBOSE : Could not get Domain Name using DSCrackNames, will parse ADs Path to get it`
+
+1. Check the following lines around. You'll find a group and its member are from different domains.
+
+   ```output
+   INFO: Processing discovered group object with ADsPath = 'LDAP://DC1.CONTOSO.COM/CN=GROUP1,OU=OU,DC=CONTOSO,DC=COM'~
+   VERBOSE: group not found in discovered group list~
+   VERBOSE: Bound to group.~
+   VERBOSE: group has 3 members~
+   ...
+   VERBOSE: full ADs path of member: LDAP://DC2.fourthcoffee.com/CN=Machine1,OU=US,DC=fourthcoffee,DC=com~
+   ...
+   VERBOSE: Could not get Domain Name using DsCrackNames, will parse ADs Path to get it
+   VERBOSE: domain = 'FourthCoffee' full domain name = 'fourthcoffee.com'
+   INFO: DDR was written for system 'Machine1' - C:\ConfigMgr\inboxes\auth\ddm.box\adsqznjr.DDR at <Date Time>.~
+   ```
+   
+ Besides of the workaround mentioned, temporarily disabling the checkbox "Discover objects within Active Directory groups" for the discovery scope(s) where you have groups with members from other domains.
