@@ -14,7 +14,7 @@ When applying Intune APP for data protection, a major unexpected behavior would 
 
 You can start by confirming that you’ve met the prerequisites for using app protection policies. There are some requirements for supported platforms, OS versions, and apps.
 
-- Supported platforms: App protection policies are supported on iOS, iPadOS, and Android. However, [Shared iPad devices](mem/intune/enrollment/device-enrollment-shared-ipad) and [Android Enterprise dedicated devices](/mem/intune/apps/app-protection-policy#app-protection-experience-for-android-devices) are not supported.
+- Supported platforms: App protection policies are supported on iOS, iPadOS, and Android. However, [Shared iPad devices](/mem/intune/enrollment/device-enrollment-shared-ipad) and [Android Enterprise dedicated devices](/mem/intune/apps/app-protection-policy#app-protection-experience-for-android-devices) are not supported.
 
 - Supported OS versions: Currently, app protection policies support iOS/iPadOS 12+ and Android 9+. [Supported OS versions](/mem/intune/fundamentals/supported-devices-browsers) will change in the future and older versions will become non-supported. Also, you need to meet requirements of each app you use, such as Office apps.
 
