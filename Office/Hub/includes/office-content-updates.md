@@ -2,6 +2,16 @@
 
 
 
+## Week of April 04, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/6/2022 | [A corrupt global template causes errors when automating Word](/office/troubleshoot/word/corrupt-global-template-causes-errors-automating-word) | modified |
+| 4/6/2022 | [Microsoft 365 Apps activation network connection issues](/office/troubleshoot/activation/network-connection-issues) | modified |
+| 4/6/2022 | [Sign in issues when activating Microsoft 365 Apps](/office/troubleshoot/activation/sign-in-issues) | modified |
+
+
 ## Week of March 21, 2022
 
 
