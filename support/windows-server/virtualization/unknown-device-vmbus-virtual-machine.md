@@ -36,7 +36,7 @@ Or, the device may show the following IDs:
 - vmbus\\{c376c1c3-d276-48d2-90a9-c04748072c60}
 - vmbus\\{c4e5e7d1-d748-4afc-979d-683167910a55}
 
-The device is for Initial Machine Config (IMC) for the virtual machines.
+The device is for Initial Machine Config (IMC) for the virtual machines. There could be various other causes that could lead this issue.
 
 ## More information
 
