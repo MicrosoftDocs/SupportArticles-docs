@@ -2,6 +2,15 @@
 
 
 
+## Week of April 04, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/6/2022 | [How to list messages in the inbox with MAPI](/outlook/troubleshoot/development/how-to-list-messages-in-inbox-with-mapi) | modified |
+| 4/6/2022 | [How to use the Microsoft Outlook Object Library to retrieve an appointment by using Visual C#](/outlook/troubleshoot/development/how-to-use-object-library-get-appointment-by-using-csharp) | modified |
+
+
 ## Week of March 21, 2022
 
 
