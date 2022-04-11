@@ -247,7 +247,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Investigate and resolve Sargability issues
 
-A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an an index to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and corresponding high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or clustered index scan and higher CPU usage. 
+A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can take advantage of an index (index seek) to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and corresponding high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or clustered index scan and higher CPU usage. 
 
 ```sql 
 SELECT ProductID, Name, ProductNumber
