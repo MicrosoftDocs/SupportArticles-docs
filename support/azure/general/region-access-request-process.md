@@ -9,7 +9,7 @@ ms.reviewer:
 ---
 # Azure region access request process  
 
-Certain Azure regions require customers to go through a request process in order to gain access. To request access to these regions, a customer or their Cloud Solution Provider may [open a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) and work with our Support team to discuss or enable access.
+Certain Azure regions require customers to go through a request process in order to gain access. To request access to these regions, you may [open a support request](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/newsupportrequest) and work with our Support team to discuss or enable access.
 
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4339658
@@ -35,7 +35,9 @@ The process to request access is relatively straight forward, you can initiate t
 ## Step 2: Provide problem details
 
 1. In the **Problem details** section, select **Enter details**.
-1. Select the deployment mode, select one or more countries/regions that you want to request access, select the VM series, and then specify new vCPU limit.
+1. Select the deployment mode. 
+1. Select one or more countries/regions that you want to request access.
+1. Select the VM series, and then specify new vCPU limit.
 
     :::image type="content" source="media/region-access-request-process/quota-details.png" alt-text="Screenshot of  the quota details page." border="true":::
 1. Select **Save and continue**.
