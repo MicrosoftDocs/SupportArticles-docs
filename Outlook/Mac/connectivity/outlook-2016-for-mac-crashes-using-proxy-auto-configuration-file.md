@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 162524
 appliesto:
 - Outlook 2016 for Mac
 search.appverid: MET150
@@ -50,8 +52,6 @@ To edit the Automatic Proxy Configuration settings in Mac operating system, foll
 - Talk to support
 
   To report issues or provide feedback, go to **Help** > **Contact Support** in Outlook for Mac.
-
-  For more information, see [New Contact Support feature in Outlook 2016 for Mac](https://answers.microsoft.com/msoffice/forum/msoffice_outlook-mso_mac/new-contact-support-feature-in-outlook-2016-for/d4fc21c4-25e2-4e10-b943-1fba6542b517).
 
 - Ask the community
 
