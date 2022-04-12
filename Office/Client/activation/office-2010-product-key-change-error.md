@@ -9,7 +9,9 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 162524
 appliesto: 
   - Office Home and Student 2010
   - Office Home and Business 2010
@@ -79,7 +81,6 @@ This issue can be resolved by removing the Office 2010 registry values.
 
 ## Reference materials
 
-- [2186281: Overview of product code GUID numbering in Office 2010](https://support.microsoft.com/kb/2186281)
 - [Change your Office product key](https://support.microsoft.com/office/change-your-office-product-key-d78cf8f7-239e-4649-b726-3a8d2ceb8c81)
 
 ## Send us feedback
