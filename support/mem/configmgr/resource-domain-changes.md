@@ -17,7 +17,9 @@ After you install January 2022 or later Windows cumulative updates on a Configur
 For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and the discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
 
 The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have query rules based on a domain membership.
-This should not affect direct membership rules.
+
+> [!NOTE]
+> Direct membership rules are not affected.
 
 ## Cause
 
@@ -25,13 +27,13 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 ## Resolution
 
-This issue is resolved in the Configuration Manager Current Branch 2203 release.
+This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/features-and-capabilities).
 
 ## Workaround
 
-To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name like in the following example:
+To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name. For example:
 
-```select * from SMS_R_System where SMS_R_System.SystemGroupName in ("AAA\\Group1","BBB\\Group1")```
+`select * from SMS_R_System where SMS_R_System.SystemGroupName in ("AAA\\Group1","BBB\\Group1")`
 
 ## Identify the issue
 
@@ -58,10 +60,10 @@ Here are the steps to check logs and identify the issue:
    ```output
    INFO: DDR was written for group 'contoso\ParentGroup' - C:\ConfigMgr\inboxes\auth\ddm.box\userddrsonly\asg1607o.DDR at <Date Time>.~ 
    VERBOSE: group has 1 members~
-   …
+   ...
    VERBOSE: Domain controller name for the SID is: \\DC.fourthcoffee.local
    VERBOSE: full ADs path of member: LDAP://DC.fourthcoffee.local/CN=ChildGroup,CN=Users,DC=fourthcoffee,DC=local~
-   …
+   ...
    VERBOSE: Could not get Domain Name using DSCrackNames, will parse ADs Path to get it
    VERBOSE: ParentGroup: "contoso\ParentGroup" ChildGroup: "fourthcoffee\ChildGroup"
    ```
@@ -78,25 +80,21 @@ Here are the steps to check logs and identify the issue:
 
 ## Additional information
 
-Same issue can be observed if one enables "Discover objects within Active Directory groups" checkbox in System or User Discovery scope settings. Here are the steps to identify it:
+This issue can also occur if the **Discover objects within Active Directory groups** option is enabled in System or User Discovery scope settings. In this case, here are the steps to check logs and identify the issue. You can also temporarily disable the option for the discovery scopes in which you have groups with members from other domains.
 
-1. Increase the size of the _ADSysDis.log_ or _ADUsrDis.log_ file to 100 megabytes (MB) or more to accommodate a full Active Directory System or User discovery. Under the following registry key, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
+1. Increase the size of the _ADSysDis.log_ or _ADUsrDis.log_ file to 100 megabytes (MB) or more to accommodate a full Active Directory system or user discovery. Under one of the following registry keys, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
 
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SYSTEM_DISCOVERY_AGENT`
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SYSTEM_DISCOVERY_AGENT`
 
-      or
-      
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_USER_DISCOVERY_AGENT`
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_USER_DISCOVERY_AGENT`
 
-1. Enable verbose logging for the _ADSysDis.log_ or _ADUsrDis.log_ file. Under the following registry key, change the `Verbose Logs` registry value to `1` (the default value is `0`).
+1. Enable verbose logging for the _ADSysDis.log_ or _ADUsrDis.log_ file. Under one of the following registry keys, change the `Verbose Logs` registry value to `1` (the default value is `0`).
 
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SYSTEM_DISCOVERY_AGENT`
-      
-      or
-      
-      `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_USER_DISCOVERY_AGENT`
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SYSTEM_DISCOVERY_AGENT`
 
-1. Run a full Active Directory System or Group discovery and make sure the following message is logged in the _ADSysDis.log_ or _ADUsrDis.log_ file upon completion.
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_USER_DISCOVERY_AGENT`
+
+1. Run a full Active Directory system or user discovery and make sure the following message is logged in the _ADSysDis.log_ or _ADUsrDis.log_ file upon completion.
 
    `INFO: CADSource::fullSync returning 0x00000000~`
 
@@ -118,5 +116,5 @@ Same issue can be observed if one enables "Discover objects within Active Direct
    VERBOSE: domain = 'FourthCoffee' full domain name = 'fourthcoffee.com'
    INFO: DDR was written for system 'Machine1' - C:\ConfigMgr\inboxes\auth\ddm.box\adsqznjr.DDR at <Date Time>.~
    ```
-   
- Besides of the workaround mentioned, temporarily disabling the checkbox "Discover objects within Active Directory groups" for the discovery scope(s) where you have groups with members from other domains.
+
+1. If so, you've identified the issue successfully.
