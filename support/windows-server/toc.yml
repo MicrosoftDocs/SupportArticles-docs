@@ -1254,6 +1254,8 @@
       href: ./high-availability/cluster-fileshare-resource-fails.md
     - name: Clustering information on IP address failover
       href: ./high-availability/cluster-information-ip-address-failover.md
+    - name: Cluster validation account causes events or messages
+      href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Error 0x8000ffff when you change Shadow Copy settings
       href: ./high-availability/error-0x8000ffff-catastrophic-failure.md
     - name: Error messages occur when bringing a cluster group online
