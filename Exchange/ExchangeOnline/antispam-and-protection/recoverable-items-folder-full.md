@@ -1,6 +1,6 @@
 ---
 title: Recoverable Items folder becomes full
-description: Fixes an issue in which Recoverable Items are not moved to archive when a mailbox is placed on litigation hold or retention hold.
+description: Fixes an issue in which Recoverable Items aren't moved to archive when a mailbox is placed on litigation hold or retention hold.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -36,7 +36,7 @@ When you run the [Start-ManagedFolderAssistant](/powershell/module/exchange/star
 
 This issue occurs if a new or changed retention policy has acted on the mailbox. In this case, the mailbox generates amounts of deleted items. This retention change causes the Managed Folder Assistant to move enough deleted items to the Recoverable Items folder. Therefore, the folder reaches its quota.  
 
-The Recoverable Items folder is not emptied because the retention policy applied to the folder is not aggressive enough to move items to the archive mailbox. A default retention policy tag (**Recoverable Items 14 days Move to Archive**) can keep the mailbox in this state for over 14 days.
+The Recoverable Items folder isn't emptied because the retention policy applied to the folder isn't aggressive enough to move items to the archive mailbox. A default retention policy tag (**Recoverable Items 14 days Move to Archive**) can keep the mailbox in this state for over 14 days.
 
 ## Resolution
 
