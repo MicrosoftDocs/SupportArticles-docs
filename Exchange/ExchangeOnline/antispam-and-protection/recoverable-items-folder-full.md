@@ -42,19 +42,19 @@ The Recoverable Items folder isn't emptied because the retention policy applied 
 
 To resolve this issue, configure the retention policy for the Recoverable Items folder more aggressive by following these steps:
 
-1. Confirm the action and age limit of the retention policy tag for the type RecoverableItems by running the following cmdlets:
+1. Confirm the action and age limit of the retention policy tag for the type **RecoverableItems** by running the following cmdlets:
 
     ```powershell
     $policy = Get-RetentionPolicy "POLICY"
     $policy.RetentionPolicyTagLinks | Get-RetentionPolicyTag | ft Name,Type,RetentionAction,AgeLimitForRetention
     ```
 
-2. Reduce the age limit (to 1 day) for the retention policy tag by running the [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet:
+2. Reduce the age limit (to 1 day) for the retention policy tag that you get from step 1. To do this, run the following [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet:
 
     ```powershell
     Set-RetentionPolicyTag "<Tag_name>" -AgeLimitForRetention 1
     ```
 
-    **Note:** Replace \<Tag_name> with the name of policy tag that you get from the output of the cmdlets in step 1.
+    **Note:** Replace \<Tag_name> with the name of policy tag that's applied to the Recoverable Items folder.
 
 3. Run the `Start-ManagedFolderAssistant` cmdlet to process the items to the archive mailbox and free up space in the Recoverable Items folder.
