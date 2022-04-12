@@ -55,6 +55,6 @@ To resolve this issue, configure the retention policy for the Recoverable Items 
     Set-RetentionPolicyTag "<Tag_name>" -AgeLimitForRetention 1
     ```
 
-    **Note:** Replace \<Tag_name> with the name of policy tag that's applied to the Recoverable Items folder.
+    **Note:** Replace \<Tag_name> with the name of the policy tag that's applied to the Recoverable Items folder.
 
 3. Run the `Start-ManagedFolderAssistant` cmdlet to process the items to the archive mailbox and free up space in the Recoverable Items folder.
