@@ -24,7 +24,7 @@ The process to request access is relatively straight forward, you can initiate t
 
 2. In the **New support request** page, complete the following:
 1. 
-    1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
+    1. In **Issue Type**, select **Service and subscription Limit (quotas)**.  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
     3. In **Quota type**, select **Compute-VM (core-vCPUs) subscription limit increases**.  
     4. Select **Next**.
@@ -37,7 +37,7 @@ The process to request access is relatively straight forward, you can initiate t
 1. In the **Problem details** section, select **Enter details**.
 1. Select the deployment mode, select one or more countries/regions that you want to request access, select the VM series, and then specify new vCPU limit.
 
-    :::image type="content" source="media/region-access-request-process/quota-details.png" alt-text="Screenshot of  the quota details page." border="false":::
+    :::image type="content" source="media/region-access-request-process/quota-details.png" alt-text="Screenshot of  the quota details page." border="true":::
 1. Select **Save and continue**.
 
 ## Step 3: Enter your support method
