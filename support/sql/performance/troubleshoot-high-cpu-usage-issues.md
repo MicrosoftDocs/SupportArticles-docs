@@ -103,7 +103,7 @@ WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
 
-If queries aren't driving the CPU at this moment, but you know it has happened in the recent past, you can look for historical CPU-bound queries. Run the following: 
+If queries aren't driving the CPU at this moment, but high CPU has happened in the recent past, you can look for historical CPU-bound queries. Run the following statement: 
 
 ```sql
 SELECT TOP 10 st.text AS batch_text,
@@ -124,7 +124,7 @@ ORDER  BY (qs.total_worker_time / qs.execution_count) DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) for the relevant tables that are involved in these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example:
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) of the tables that are used by these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example:
 
 ```sql
 exec sp_updatestats
@@ -247,7 +247,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Investigate and resolve Sargability issues
 
-A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can take advantage of an index seek to speed up the execution of the query.Many query designs prevent sargability and lead to table or index scans and high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or index scan and thus higher CPU usage. 
+A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can take advantage of an index seek to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or index scan and thus higher CPU usage. 
 
 ```sql 
 SELECT ProductID, Name, ProductNumber
@@ -255,7 +255,7 @@ FROM [Production].[Product]
 WHERE SUBSTRING(ProductNumber, 0, 4) =  'HN-'
 ```
 
-Applying any function or computation on the column(s) in the search predicate generally makes the query non-sargable and leads to higher CPU consumption. Solutions typically involve rewriting the queries in a creative way to make the sargable. A possible solution to this example is this re-write where the function is removed from the query predicate, another column is searched and the same results are achieved:
+Applying any function or computation on the column(s) in the search predicate generally makes the query non-sargable and leads to higher CPU consumption. Solutions typically involve rewriting the queries in a creative way to make the sargable. A possible solution to this example is this rewrite where the function is removed from the query predicate, another column is searched and the same results are achieved:
 
 ```sql 
 SELECT ProductID, Name, ProductNumber
@@ -271,7 +271,7 @@ FROM [Sales].[SalesOrderDetail]
 WHERE UnitPrice * 0.10 > 300
 ```
 
-Here's a possible less-intuitive, but sargable, re-write of the query in which the computation is moved to the other side of the predicate.
+Here's a possible less-intuitive, but sargable, rewrite of the query in which the computation is moved to the other side of the predicate.
 
 ```sql
 SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
@@ -279,7 +279,7 @@ FROM [Sales].[SalesOrderDetail]
 WHERE UnitPrice > 300/0.10
 ```
 
-Sargability applies not only to WHERE clauses, but also to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions used in WHERE or JOIN clauses which lead to scan of columns. In the data-type conversion cases (CONVERT or CAST), the solution may be to ensure you are comparing the same data types. Here is an example where the T1.ProdID column is converted to the INT data type in a JOIN, defeating the use of an index on the join column.
+Sargability applies not only to WHERE clauses, but also to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions used in WHERE or JOIN clauses which lead to scan of columns. In the data-type conversion cases (CONVERT or CAST), the solution may be to ensure you're comparing the same data types. Here's an example where the T1.ProdID column is explicitly converted to the INT data type in a JOIN. The conversion defeats the use of an index on the join column. The same issue occurs with [implicit conversion](/sql/t-sql/data-types/data-type-conversion-database-engine#implicit-and-explicit-conversion) where the data types are different and SQL Server converts one of them to perform the join. 
 
 ```sql 
 SELECT T1.ProdID, T1.ProdDesc
@@ -379,7 +379,7 @@ If your SQL Server instance experiences heavy `SOS_CACHESTORE spinlock` contenti
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
-> [NOTE!]
+> [!NOTE]
 > High CPU may result from spinlock contention on many other spinlock types, but SOS_CACHESTORE is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
 
 ## Step 9: Configure your virtual machine
