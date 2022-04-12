@@ -28,6 +28,8 @@ Use Task Manager to view CPU consumption.
 3. Select the **Processes** tab.
 4. Select the **CPU** column header to sort the list by CPU usage. Ensure the arrow that appears on the header points down to sort the data from highest to lowest.
 
+:::image type="content" source="media/troubleshoot-high-cpu-usage-guidance/task-manager-processes.png" alt-text="Screenshot of the task manager.":::
+
 If the process can be stopped, or related service can be disabled, stop the process or the service. Then, check whether it mitigates the issue.
 
 This helps to confirm the process or application causing high CPU usage issue.
@@ -48,18 +50,27 @@ The processes consuming more resources display at the top of the list. If any of
 
 ### Process Explorer
 
-The [Process Explorer](/sysinternals/downloads/process-explorer) tool gives you a complete overview on what processes are currently running in your computer along with the details on who invoked it and how much system resources it is consuming.  
+The [Process Explorer](/sysinternals/downloads/process-explorer) tool gives you a complete overview on what processes are currently running in your computer along with the details on who invoked it and how much system resources it is consuming.
 
-Use process explorer to look at the threads and their stacks executing at that time on the processor. If the process that is identified as the cause of the high CPU usage is a third party application, contact the application vendor for help.
+If you want to verify a process that is an operating system related process, for example, System, follow these steps:
 
-Run process explorer as an administrator. Go to options and click on configure symbols and specify path for dbghelp.dll( you should have Debugging tools for Windows installed) and symbol server
+1. Run Process Explorer as administrator.
+2. Right-click the process, select **Properties**, and then select the **Threads** tab.
+3. Select the thread that takes high CPU and select **Stack** to view the functions being executed.
 
-If the process is an operating system related process for Eg. System, run Process Explorer as an administrator.
-Right click on the process and go to properties. Then go to the threads tab and select the thread taking high CPU and click on stack to see the functions being executed.
+> [!Note]
+> To get a better stack information result, configure symbols in the Process Explorer. To do so, follow these steps:
+>
+> 1. Install [Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools).
+> 2. Run Process Explorer as administrator.
+> 3. Select **Options** menu, and select **Configure Symbols**.
+> 4. Change the Dbghelp.dll path to *C:\\Program Files (x86)\\Windows Kits\\10\\Debuggers\\x64\\dbghelp.dll* and select **OK**.
 
-## Common support scenarios
+## Common troubleshooting scenarios
 
-### Uniquely named Singular Microsoft Process
+This section introduce the scenarios of different processes that uses high CPU usage.
+
+### Uniquely named singular Microsoft process
 
 1. Collect (1-5 second snapshot interval) performance monitor log.
 2. Collect a [Windows Performance Recorder (WPR)](/windows-hardware/test/wpt/windows-performance-recorder) log while issue is occurring.
@@ -67,7 +78,7 @@ Right click on the process and go to properties. Then go to the threads tab and 
    > Do not let this log run for period of time or length as file grows very quickly. You should only need to run the a few minutes (three to five minutes) to capture the high CPU usage.
 3. Collect a couple of [ProcDump](/sysinternals/downloads/procdump) of process during high CPU spaced apart by few minutes.
 
-### Svchost Process
+### Svchost process
 
 If a svchost process consumes high CPU usage, and the svchost process contains more than one service, you need to break each service out to run in its own svchost process to determine which service is causing the high CPU usage. To do so, follow these step:
 
@@ -94,7 +105,7 @@ If a svchost process consumes high CPU usage, and the svchost process contains m
 8. Collect a WPR log while issue is occurring.
 9. Collect a couple of procdump during process high CPU spaced apart by few minutes.
 
-### Multiple instance of process running by same name
+### Multiple instance of process that has the same name
 
 For example, this issue could occur with the explorer.exe processes on a Remote Desktop Protocol (RDP) server.
 
@@ -105,7 +116,7 @@ To troubleshoot this issue, follow these steps:
 3. Collect a couple of procdump during process high CPU spaced apart by few minutes.
 4. Document the PID of the offending process by running the command: `tasklist /v /fo csv >Running_Process.txt`
 
-### Third party application that uses high CPU usage
+### Third party application process
 
 If the process that is identified as the cause is third party, you needs to contact the application vendor to understand why respective process is causing high CPU on the computer.
 
@@ -115,24 +126,19 @@ If the process that is identified as the cause is third party, you needs to cont
 
 You can use Debug Diagnostic 2.0 version to troubleshoot this issue further. To use the tool, follow these steps.
 
-1. Install the [Debug Diagnostic Tool v2 Update 2](https://www.microsoft.com/download/details.aspx?id=49924)
+1. Install the [Debug Diagnostic Tool v2 Update 2](https://www.microsoft.com/download/details.aspx?id=49924).
+
    > [!Note]
    > Please uninstall all other versions of Debug Diagnostic tool before installing the 2.0 version.
 
-2. Extract the contents of the PERFMON.ZIP file (attached) to some folder on the server.
-3. Open this folder from an elevated command prompt.
-4. Run the Start_Perfmon.bat in the elevated command prompt to create the performance counter log and to start the logging.
+2. Click Start, search *Performance Monitor*, and run it as administrator.
+3. Use Performance Monitor to collect the performance counter log and to start the logging.
 
-### At the time of the issue
+### When the issue happens
 
-1. Open the Debug Diagnostic collection.
-
-2. Go to the Processes tab, right-click the worker process corresponding to the right application pool and select “Create Full Userdump”.
-
+1. Open the **DebugDiag 2 Collection**.
+2. Select the **Processes** tab, right-click the worker process corresponding to the right application pool and select **Create Full Userdump**.
 3. Repeat the above step three times when the CPU is high
-
-4. Stop the perfmon log by running stop_perfmon.bat
-
-5. Compress the Data using DebugDiag (Tools menu -> Create Increment Cabinet File) and send this file. If this file gets too big, just zip up the folder where the dumps were generated and send it to us.
-
-6. Please upload both the perfmon logs ( C:\Perflogs) and dumps to the workspace created for you.
+4. Stop the Performance Monitor logging.
+5. Compress the Data using DebugDiag. To do so, Select **Tools** menu -> **Create Increment Cabinet File**. and send this file. If this file gets too big, just zip up the folder where the dumps were generated and send it to us.
+6. Send both the perfmon logs ( C:\Perflogs) and dumps to the workspace created for you.
