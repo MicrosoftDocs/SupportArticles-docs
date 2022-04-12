@@ -28,8 +28,7 @@ In affected environments, Configuration Manager may run better when the site dat
 |SQL Server 2017|140, 130, 120, 110|140|110|
 |SQL Server 2016|130, 120, 110|130|110|
 |SQL Server 2014|120, 110|110|110|
-|||||
-
+  
 Starting in Configuration Manager current branch version 1810, when the Configuration Manager database is running on SQL Server 2016 SP1 or later versions, all queries issued by the Admin console and SMS Provider will automatically add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'` query hint. Therefore, Admin console performance won't be affected when you change the CE Compatibility level to 110 at the database level to resolve performance issues. If you want to override this behavior, to have the Admin console and SMS Provider queries use the current SQL Server CE level instead, set the `UseLegacyCardinality` value to **0** under the following registry subkey on the computer that hosts the SMS Provider:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Providers`

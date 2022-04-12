@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4131517
 
 ## Summary
 
-If you select **Allow access to logs** when you create a Microsoft SQL Server on Azure Virtual Machines support case, Microsoft Support will get access to logs and data that are related to your environment to use for troubleshooting. These include common log files, configuration files, diagnostic information, system-generated event logs, and debug logs. The following tables list what information is collected and available to Support. 
+If you select **Allow access to logs** when you create a Microsoft SQL Server on Azure Virtual Machines support case, Microsoft Support will get access to logs and data that are related to your environment to use for troubleshooting. These include common log files, configuration files, diagnostic information, system-generated event logs, and debug logs. The following tables list what information is collected and available to Support.
 
 ## Information collected by Transact-SQL (T-SQL) queries
 
@@ -34,8 +34,7 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server on
 | Database Mirroring Endpoint| endpoint_name, endpoint_id, principal_id, protocol_desc, type_desc, state_desc, is_admin_endpoint, role_desc, is_encryption_enabled, connection_auth_desc, encryption_algorithm_desc|15 minutes| [sys.database_mirroring_endpoints](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql) |
 | Availability Group Listeners| listener_id, state_desc, dns_name, port, is_conformant, ip_configuration_string_from_cluster, ip_address, ip_subnet_mask, is_dhcp, network_subnet_ip, network_subnet_prefix_length, network_subnet_ipv4_mask, network_subnet_prefix_length|15 minutes| [sys.availability_group_listeners](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql) [sys.availability_group_listener_ip_addresses](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql) |
 | AlwaysOn Windows Cluster| cluster_name, quorum_type, quorum_state_desc|15 minutes| [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql) |
-|||||
-
+  
 ## Information collected via PowerShell
 
 | PowerShell command| Frequency-once every... |
@@ -43,8 +42,7 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server on
 | Get-ClusterLog|Hour|
 | get-clusterresource \| get-clusterparameter|Hour|
 | get-cluster \| fl *|Hour|
-|||
-
+  
 ## Information collected by WMI queries
 
 | Wmi query| Columns| Frequency-once every...| Link |
@@ -54,8 +52,7 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server on
 | MSFT_PhysicalDisk| FriendlyName, CanPool, OperationalStatus, HealthStatus, Usage, Size|Day| [MSFT_PhysicalDisk](/previous-versions/windows/desktop/stormgmt/msft-physicaldisk?redirectedfrom=MSDN) |
 | MSFT_Disk| Number, NumberOfPartitions, SerialNumber|Day| [MSFT_Disk](/previous-versions/windows/desktop/stormgmt/msft-disk?redirectedfrom=MSDN) |
 | MSFT_Partition| DiskNumber, PartitionNumber, DriveLetter, GptType, IsBoot, IsSystem, Size|Day| [MSFT_Partition](/previous-versions/windows/desktop/stormgmt/msft-partition?redirectedfrom=MSDN) |
-|||||
-
+  
 ## More information
 
 If you create a SQL Server AlwaysOn Availability Groups cluster, the AlwaysOn_health.xel files will be collected. For more information about the collected files, see [Always On Availability Groups extended events](/sql/database-engine/availability-groups/windows/always-on-extended-events).

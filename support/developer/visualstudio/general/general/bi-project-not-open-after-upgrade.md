@@ -69,7 +69,6 @@ The following table lists the configurations that are supported so that you can 
 |SQL Server 2005 BI projects|Supported|Supported after project upgrade|Supported after project upgrade|Not supported|
 |SQL Server 2008 BI projects|Not supported|Supported|Supported after project upgrade|Not supported|
 |SQL Server 2008 R2 BI projects|Not supported|Not supported|Supported|Not supported|
-||||||
 
 ## Applies to
 

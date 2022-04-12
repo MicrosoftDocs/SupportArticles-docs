@@ -40,8 +40,7 @@ This IIS ETW logs diagnostic collects various related logs, event logs, and allo
 |Security Event Log|{Computername}_evt_Security.evtx|
 |IIS Configuration Administrative Event Log|{Computername}_evt_IISConfiguration-Administrative.evtx|
 |IIS Configuration Operational Event Log|{Computername}_evt_IISConfiguration-Administrative.evtx|
-|||
-
+  
 ## IIS log files
 
 | Description| File Name |
@@ -49,19 +48,17 @@ This IIS ETW logs diagnostic collects various related logs, event logs, and allo
 |Http Error Logs|{Computername}_HttpErrorLogs.zip|
 |IIS Log Files|{Computername}_IISLogs.zip|
 |IIS/HTTP ETW Log|{Computername}_IISEtwLogFiles.zip|
-|||
-
+  
 ## Installation setup logs for IIS
 
 | Description| File Name |
 |---|---|
 |IIS Setup Log|{Computername}_IIS7.log|
 |CBS Setup Log|{Computername}_CBS.log|
-|||
-
+  
 ## More information
 
-If the user selects to collect an IIS/HTTP ETW log, the IIS ETW logs diagnostic will enable an IIS ETW Trace named *IIS ETW SDP Trace*. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
+If the user selects to collect an IIS/HTTP ETW log, the IIS ETW logs diagnostic will enable an IIS ETW Trace named _IIS ETW SDP Trace_. The diagnostic will automatically stop this trace when the user is clicks **next** while the trace is running. If the user clicks **Cancel**, they should stop the trace with the following command from an Administrative command prompt:
 
 ``` console
 LogMan.exe stop "IIS ETW SDP Trace" -ets

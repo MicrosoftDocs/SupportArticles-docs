@@ -27,9 +27,8 @@ You must apply a multicurrency transaction to documents that are in the **same o
 |Originating - USD|Functional - GBP|YES*  (Two-step process)|
 |Originating - USD|Same originating - USD|YES - on the fly|
 |Originating - USD|Different Originating - EUR|NO|
-||||
-
-How you access the **apply sales documents** window will also matter:
+  
+  How you access the **apply sales documents** window will also matter:
 
 - IN PROCESS/APPLY ON THE FLY: In the **Cash Receipts entry** window, if you select the **APPLY button**, you will only be able to apply to documents in the **SAME originating currency ID** as the cash receipt is in.
 - TWO STEP PROCESS: If you post the Cash receipt first (leaving it unapplied), and then navigate to **Transactions** > **Sales** > **Apply Sales Documents** window, you can apply the cash receipt to invoices that are in the **SAME originating currency ID** as the cash receipt, or invoices in the **FUNCTIONAL** currency ID.  

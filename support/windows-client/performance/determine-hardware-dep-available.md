@@ -85,7 +85,6 @@ To determine the current DEP support policy, follow these steps.
     |3|OptOut|DEP is enabled for all processes. Administrators can manually create a list of specific applications that do not have DEP applied|
     |1|AlwaysOn|DEP is enabled for all processes|
     |0|AlwaysOff|DEP is not enabled for any processes|
-    ||||  
 
    > [!NOTE]
    > To verify that Windows is running with hardware DEP enabled, examine the DataExecutionPrevention_Drivers property of the Win32_OperatingSystem class. In some system configurations, hardware DEP may be disabled by using the /nopae or /execute switches in the Boot.ini file. To examine this property, type the following command at a command prompt:  
@@ -99,7 +98,7 @@ To use the graphical user interface to determine whether DEP is available, follo
 2. In the **Windows Management Instrumentation Tester** dialog box, click **Connect**.
 3. In the box at the top of the **Connect** dialog box, type root\cimv2, and then click **Connect**.
 4. Click **Enum Instances**.
-5. In the **Class Info** dialog box, type Win32_OperatingSystem 
+5. In the **Class Info** dialog box, type Win32_OperatingSystem
 in the **Enter superclass name** box, and then click **OK**.
 6. In the **Query Result** dialog box, double-click the top item.
    > [!NOTE]

@@ -90,7 +90,7 @@ There are various reasons why Kerberos connections fail, like misconfigured SPNs
 Follow these steps to fix the error by KCM.
 
 1. On the computer where you have the connectivity issues, download and install [Kerberos Configuration Manager](https://www.microsoft.com/download/details.aspx?id=39046).
-1. Start *KerberosConfigMgr.exe* from the *%SystemDrive%:\Program Files\Microsoft\Kerberos Configuration Manager* folder. Then, use a domain account that has permissions to connect to the SQL Server computer you're unable to connect to.
+1. Start _KerberosConfigMgr.exe_ from the _%SystemDrive%:\Program Files\Microsoft\Kerberos Configuration Manager_ folder. Then, use a domain account that has permissions to connect to the SQL Server computer you're unable to connect to.
 1. Select **Connect**, leaving the server name and other details as applicable to your scenario blank if you're running KCM on the SQL Server computer. Select **Connect** to perform the analysis. After KCM finishes retrieving the necessary information, it automatically switches to the **SPN** tab and by default shows information for SQL Server, SQL Server Reporting Services, Analysis Services, and AG Listeners. To troubleshoot this error, uncheck everything except SQL Server.
 1. Review the diagnosis from the tool by using the **Status** column and follow relevant steps to resolve the issue:
 
@@ -204,8 +204,7 @@ Use the output above to determine the next steps (see examples below) and use [S
 |SPN does not exist |Add the required SPN(s) for your SQL Server service account. |
 |Duplicate SPNs |Delete the SPN that is registered for your SQL Service under the incorrect account. |
 |SPN under incorrect account |Delete the registered SPN for your SQL Service under the incorrect account, and then register the SPN under the correct service account. |
-|||
-
+  
 > [!NOTE]
 >
 > - You can review the **SQL Server Information** section of SQLCheck tool's output file to find the service account of your SQL Server instance.

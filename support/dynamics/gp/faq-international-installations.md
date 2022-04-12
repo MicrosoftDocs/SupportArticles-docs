@@ -36,8 +36,7 @@ A2: The translated releases that are available per release are listed in the fol
 |8.0|French-Canadian, Spanish-Latin America|
 |9.0|French-France, French-Canadian, Spanish-Latin America, Spanish-Iberia, German, Dutch-Netherlands|
 |10.0|French-Canadian, Spanish-Latin America|
-|||
-
+  
 **Q3:What does "translated" mean within Microsoft Dynamics GP releases?**  
 
 A3: "Translated" means that the user interface has been translated to a language other than English. The user interface includes the installation windows, the program menus and windows, and reports.

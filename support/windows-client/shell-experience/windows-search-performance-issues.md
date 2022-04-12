@@ -83,10 +83,10 @@ To control how the indexer treats specific file types, open **Indexing Options**
 
 ##### Defragment the index database  
 
-You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order: 
+You can use this approach to reclaim empty space within the index database. Open an administrative Command Prompt window, and then run the following commands in the given order:
 
 ```console
-Sc config wsearch start=disable
+Sc config wsearch start=disabled
 Net stop wsearch
 EsentUtl.exe /d %AllUsersProfile%\Microsoft\Search\Data\Applications\Windows\Windows.edb
 Sc config wsearch start=delayed-auto
@@ -129,4 +129,3 @@ If a different message appears, see the following table for more information abo
 |Index is performing maintenance. Please wait.|The Indexer is trying to recover and optimize the index database. It could occur because lots of content was added recently, or because the Indexer encountered a problem while writing out data to the hard disk.|Wait a few minutes for the Indexer to finish. It can take up to 30 minutes on a slow computer. Make sure that the system hard disk isn't generating failures. Usually, Indexer writing issues precede drive failure. Make sure that the user has backed up personal data.|
 |Indexing is paused by an external application.|An application on the computer requested the Indexer to stop. It commonly occurs during Game mode or during an upgrade.|Make sure that the device isn't in Game mode. Use services.msc or Task Manager to restart the Windows Search service. It resumes indexing until the next time that an external app requests a pause.|
 |The status message is missing, and the entire page is greyed out.|Something has corrupted the Indexer registry keys or database. The service can no longer start or report status.|Delete the contents of C:\ProgramData\Microsoft\Search\Data.Refresh the operating system.|
-||||

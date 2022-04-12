@@ -36,10 +36,9 @@ Specifically, assume that you configure the following HTTP and HTTPS bindings:
 
 |Type|IP address|Port|Host name|
 |---|---|---|---|
-|HTT|\<*specific IP address*>|80||
-|HTTPS|\<*specific IP address*>|443||
-||||
-
+|HTT|\<_specific IP address_>|80||
+|HTTPS|\<_specific IP address_>|443||
+  
 In the above bindings, host name is left blank.
 
 In this scenario, you also must configure the following two bindings:
@@ -48,20 +47,18 @@ In this scenario, you also must configure the following two bindings:
 |---|---|---|---|
 |HTTP|[::1]|80||
 |HTTPS|[::1]|443||
-||||
-
+  
 > [!NOTE]
-> Recent Windows versions use `[::1]` for the loopback address by default. If you have disabled IPv6 by using the `DisabledComponents` registry value, use *127.0.0.1* in the binding.
+> Recent Windows versions use `[::1]` for the loopback address by default. If you have disabled IPv6 by using the `DisabledComponents` registry value, use _127.0.0.1_ in the binding.
 
 Additionally, assume that you configure the following HTTP and HTTPS bindings:
 
 |Type|IP address|Port|Host name|
 |---|---|---|---|
-|HTTP|All unassigned|80|\<*host name*>|
-|HTTPS|All unassigned|443|\<*host name*>|
-||||
-
-In the above bindings, \<*host name*> is the DNS name of the web server.
+|HTTP|All unassigned|80|\<_host name_>|
+|HTTPS|All unassigned|443|\<_host name_>|
+  
+In the above bindings, \<_host name_> is the DNS name of the web server.
 
 In this scenario, you also must configure the following two bindings:
 
@@ -69,4 +66,3 @@ In this scenario, you also must configure the following two bindings:
 |---|---|---|---|
 |HTTP|All unassigned|80|localhost|
 |HTTPS|All unassigned|443|localhost|
-||||

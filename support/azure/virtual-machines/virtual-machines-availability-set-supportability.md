@@ -16,8 +16,8 @@ You may occasionally encounter limitations when you add new virtual machines (VM
 
 [Availability Sets - List Available Sizes - REST API](/rest/api/compute/availability-sets/list-available-sizes)
 
-
 ## Reference
+
 The following chart shows some common VM series you can mix in the same availability set.
 
 Series & Availability Set|Second VM|A|Av2|D|Dv2|Dv3|

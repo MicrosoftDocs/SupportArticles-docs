@@ -1,11 +1,20 @@
 ---
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
-ms.date: 03/07/2022
+ms.date: 03/17/2022
 ---
 # Known issues
 
 This page lists recent known issues with Microsoft Intune. For a list of weekly feature announcements, see [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new) in the Intune product documentation. Visit the [Intune Customer Success blog](https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess) for posts about best practices, support tips, and other tutorials, and a backlog of past known issues.
+
+## Android 12 clipboard data toast notification
+
+- **Status:** Active
+
+Android 12 introduced a toast notification when an application accesses the clipboard, regardless of whether the device is MDM enrolled or if apps are protected by app protection policies. Users running Android Company Portal version 5.0.5450.0 or later may notice an unexpected toast notification when using apps, such as Outlook. An example notification reads “Outlook pasted from your clipboard.”
+
+> [!NOTE]
+> The clipboard data is never stored locally or transmitted to Microsoft.
 
 ## Android devices lose access to Intune-managed resources after upgrading to Android 12
 

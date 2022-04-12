@@ -49,16 +49,14 @@ Microsoft has released an update that mitigates this issue. The following table 
 |Windows Server 2019, version 1903| [March 24, 2020-KB4541335 (OS Builds 18362.752 and 18363.752)](https://support.microsoft.com/help/4541335/windows-10-update-kb4541335) |
 |Windows Server 2019, version 1809| [March 17, 2020-KB4541331 (OS Build 17763.1131)](https://support.microsoft.com/help/4541331/windows-10-update-kb4541331) |
 |Windows Server 2016| [March 17, 2020-KB4541329 (OS Build 14393.3595)](https://support.microsoft.com/help/4541329/windows-10-update-kb4541329) |
-|||
-
+  
 The update introduces a new Group Policy policy setting in the NETLOGON.ADMX file, as described in the following table.
 
 |Policy name|Use lowercase DNS host names when registering domain controller SRV records |
 |---|---|
 |Policy path| Computer Configuration\\Policies\\Administrative Templates\\System\Net Logon\\DC Locator DNS Records\\|
 |Policy values|<ul><li>**1** (default). The policy is enabled. The policy purges duplicate DNS SRV records. When you install the update on a DC, this becomes part of that DC's default local configuration.</li> <li>**0**. The policy is disabled. Under this setting, the problematic behavior continues, and DCs that have computer names that include uppercase characters continue to register SRV records that include those uppercase characters. The value of **0** is supported for only emergency or testing use. It should not be used under typical conditions. </li> </ul> If the policy is not configured or the value is missing, the DC falls back to the new default local configuration and treats the policy as enabled.|
-|||
-
+  
 The update adds the following registry entry that is associated with this policy. (This information is provided for reference only.)
 
 - Registry subkey: `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Netlogon\Parameters`

@@ -36,8 +36,7 @@ The following table lists the series buttons that are available in the Navigatio
 |Manufacturing|Manufacturing orders, manufacturing bill numbers, job costing, picking documents, and primary routines|
 |Project Accounting|Projects, timesheet transactions, billing transactions, and project accounting purchase order transactions|
 |Field Service|Service call transactions, contract transactions, RMA transactions, RTV transactions, depot transactions, inventory transfers, and equipment|
-|||
-
+  
 You can use the **Actions** menu in each list window to view actions that you can do from the list.
 
 Only one list window can be open at a time. If you've opened a new list window from another list window, you can refer back to the previously opened list window by using the **Actions** menu.
@@ -87,10 +86,10 @@ Security access to the list windows in Microsoft Dynamics GP 10.0 is controlled 
 **Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains 8.0**  
 Security access to the list windows is controlled by the user's security access to the windows or to the forms that are in Microsoft Dynamics GP 9.0 or in Microsoft Business Solutions - Great Plains 8.0. For the windows, the security is regular security, and for the forms, it's advanced security. For example, access to lists for the Financial Series is controlled by the user's access to the windows and the forms that are featured in the Financial Series. To view your current security, follow these instructions:
 
-- *Personal users who are using regular security:* Select **Tools**, select **Setup**, select **System**, and then select **Security**.
-- *Personal users who are using advanced security:* Select **Tools**, select **Setup**, select **System**, and then select **Advanced Security**.
-- *Personal user classes that are using regular security:* Select **Tools**, select **Setup**, select **System**, and then select **User Class**.
-- *Personal user classes that are using advanced security:* Select **Tools**, select **Setup**, select **System**, and then select **Advanced Security**.
+- _Personal users who are using regular security:_ Select **Tools**, select **Setup**, select **System**, and then select **Security**.
+- _Personal users who are using advanced security:_ Select **Tools**, select **Setup**, select **System**, and then select **Advanced Security**.
+- _Personal user classes that are using regular security:_ Select **Tools**, select **Setup**, select **System**, and then select **User Class**.
+- _Personal user classes that are using advanced security:_ Select **Tools**, select **Setup**, select **System**, and then select **Advanced Security**.
 
 If a user doesn't have access to a window that the list windows use, the information in that window won't be available to the user. The navigation lists security table shows the windows that are used to populate the list windows for each series. If you want to completely deny access to the list windows, you must deny access to all windows for those list windows.
 
@@ -110,8 +109,7 @@ Financial lists
 |Trees (Analytical Accounting)|Tree Maintenance, Transaction Dimension Maintenance|
 |Analytical Accounts (Analytical Accounting)|Analytical Accounting Account Maintenance, Transaction Dimension Maintenance|
 |Report List|Report List|
-|||
-
+  
 Sales lists
 
 |Lists|Forms|
@@ -124,8 +122,7 @@ Sales lists
 |Sales Order Transactions|Sales Transaction Entry, Sales Transaction Inquiry Zoom|
 |Invoicing Transactions|Invoice Entry, Invoice Inquiry|
 |Report List|Report List|
-|||
-
+  
 Purchasing lists
 
 |Lists|Forms|
@@ -135,8 +132,7 @@ Purchasing lists
 |Purchasing Transactions|Payables Transaction Entry, Edit Payables Transactions, Void Historical Payables Transactions, Payables Manual Payments Entry, Payables Payment Zoom, Payables Scheduled Payments Entry, Payables Transaction Entry Zoom, Purchase Order Entry, Receivings Transaction Entry, Purchasing Invoice Entry, Purchasing Invoice Inquiry Zoom, Receivings Transaction Inquiry Zoom, Returns Transaction Entry (Purchase Order Enhancements), Returns Transaction Inquiry Zoom (Purchase Order Enhancements)|
 |Purchase Order Transactions|Purchase Order Entry, Purchase Order Inquiry Zoom, Purchasing Invoice Entry, Purchasing Invoice Inquiry Zoom, Receivings Transaction Entry, Receivings Transaction Inquiry Zoom, Returns Transaction Entry (Purchase Order Enhancements), Returns Transaction Inquiry Zoom (Purchase Order Enhancements)|
 |Report List|Report List|
-|||
-
+  
 Inventory lists
 
 |Lists|Forms|
@@ -144,8 +140,7 @@ Inventory lists
 |Items|Item Maintenance, Item Inquiry|
 |Item Transactions|Item Transaction Entry, Item Transfer Entry, Item Bin Transfer Entry, Inventory Transaction Inquiry, Sales Transaction Inquiry Zoom (sales), Invoice Inquiry (sales), Receivings Transaction Inquiry Zoom (Purchasing), Assembly Inquiry Zoom, Item Maintenance, Item Inquiry, Purchasing Invoice Inquiry Zoom, Analytical Inventory Transaction Inquiry (Analytical Accounting)|
 |Report List|Report List|
-|||
-
+  
 Human resources/payroll lists
 
 |Lists|Forms|
@@ -154,8 +149,7 @@ Human resources/payroll lists
 |Attendance Transactions (HR)|Attendance Transaction Entry|
 |Applicants (HR)|Applicant|
 |Report List|Report List|
-|||
-
+  
 Manufacturing lists
 
 |Lists|Forms|
@@ -166,8 +160,7 @@ Manufacturing lists
 |Routings|Routing Sequence Entry, Routing View|
 |Manufacturing Orders|Manufacturing Order Entry, Manufacturing Order Activity|
 |Report List|Report List|
-|||
-
+  
 Project accounting
 
 |Lists|Forms|
@@ -180,8 +173,7 @@ Project accounting
 |Purchase Orders|PA Purchase Order Entry, PA Purchase Order Inquiry Zoom|
 |Billings|Billing Entry, Billing Inquiry Zoom|
 |Report List|Report List|
-|||
-
+  
 Field service
 
 |Lists|Forms|
@@ -194,6 +186,5 @@ Field service
 |Inventory Transfers|Inventory Transfers, Inventory Transfers History Inquiry|
 |Equipment|Equipment Maintenance|
 |Report List|Report List|
-|||
-
+  
 By default, all users can see the list windows for all series on the Navigation Pane unless security access is removed as explained earlier. Users who want to change their view can open the Navigation Pane options window and remove any list window that they don't want listed on the Navigation Pane.

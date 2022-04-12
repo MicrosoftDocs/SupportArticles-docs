@@ -63,7 +63,6 @@ This update doesn't replace a previously released update.
 |File name|File version|File size|Date|Time|
 |---|---|---|---|---|
 |Microsoft.VisualStudio.TailoredProjectServices.dll|12.0.31112.0|287,520|19-Nov-2014|18:06|
-||||||
 
 ## Status
 

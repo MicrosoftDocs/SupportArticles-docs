@@ -38,7 +38,6 @@ The servicing updates that are listed in the following table contain all the Jap
 |Windows 10, version 1507|Windows 10, version 1607 (Anniversary Update) / Windows Server 2016|Windows 10, version 1703 (Creators Update)|Windows 10, version 1709 (Fall Creators Update)|Windows 10, version 1803 (April 2018 Update)|Windows 10, version 1809 (October 2018 Update) / Windows Server 2019|
 |---|---|---|---|---|---|
 |[4489872](https://support.microsoft.com/help/4489872)|[4489889](https://support.microsoft.com/help/4489889)|[4489888](https://support.microsoft.com/help/4489888)|[4489890](https://support.microsoft.com/help/4489890)|[4489894](https://support.microsoft.com/help/4489894)|[4489192](https://support.microsoft.com/help/4489192)|
-|||||||
 
 Microsoft released a .NET framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in May 2019 as below. All security and quality rollups released later to these updates will also contain Japanese era updates.
 
@@ -47,7 +46,6 @@ Microsoft released a .NET framework security and quality rollup for Windows 8.1 
 |.NET Framework 3.5|[4495604](https://support.microsoft.com/help/4495604)|[4495606](https://support.microsoft.com/help/4495606)|[4480061](https://support.microsoft.com/help/4480061)|[4495608](https://support.microsoft.com/help/4495608)|
 |.NET Framework 4.5.2|[4495596](https://support.microsoft.com/help/4495596)|[4495596](https://support.microsoft.com/help/4495596)|[4495594](https://support.microsoft.com/help/4495594)|[4495592](https://support.microsoft.com/help/4495592)|
 |.NET Framework 4.6 or later|[4495588](https://support.microsoft.com/help/4495588)|[4495588](https://support.microsoft.com/help/4495588)|[4495582](https://support.microsoft.com/help/4495582)|[4495585](https://support.microsoft.com/help/4495585)|
-||||||
 
 > [!NOTE]
 > Microsoft did not release a .NET Framework security and quality rollup for Windows 8.1 and earlier supported versions of Windows in March 2019. If you want to deploy the latest updates for .NET Framework that contain all the Japanese era updates for Windows 8.1 and earlier supported versions of Windows, see the [Changes for Security Only update customers](#changes-for-security-only-update-customers) section.
@@ -65,7 +63,6 @@ These updates don't include any new security updates or new additional quality a
 |.NET Framework 3.5|[4488661](https://support.microsoft.com/help/4488661)|[4488662](https://support.microsoft.com/help/4488662)|[4488660](https://support.microsoft.com/help/4488660)|[4488663](https://support.microsoft.com/help/4488663)|
 |.NET Framework 4.5.2|[4488669](https://support.microsoft.com/help/4488669)|[4488669](https://support.microsoft.com/help/4488669)|[4488668](https://support.microsoft.com/help/4488668)|[4488667](https://support.microsoft.com/help/4488667)|
 |.NET Framework 4.6 or later|[4488666](https://support.microsoft.com/help/4488666)|[4488666](https://support.microsoft.com/help/4488666)|[4488664](https://support.microsoft.com/help/4488664)|[4488665](https://support.microsoft.com/help/4488665)|
-||||||
 
 > [!IMPORTANT]
 > After you install update 4488669 on Windows 7 Service Pack 1 (SP1), Windows Server 2008 R2 Service Pack 1 (SP1), or Windows Server 2008 Service Pack 2 (SP2), .NET applications may not start after you upgrade .NET Framework from version 4.5.2 to version 4.6 or a later version. Microsoft is working on a resolution to this issue and will provide an update in an upcoming release. For more information, see [KB 4488669](https://support.microsoft.com/help/4488669).
@@ -130,7 +127,6 @@ Customers need only install the latest update listed above in the [Knowledge Bas
 |.NET Framework 3.5|[4459933](https://support.microsoft.com/help/4459933)|[4459934](https://support.microsoft.com/help/4459934)|[4459932](https://support.microsoft.com/help/4459932)|[4459935](https://support.microsoft.com/help/4459935)|[4471323](https://support.microsoft.com/help/4471323)|[4467691](https://support.microsoft.com/help/4467691)|[4467696](https://support.microsoft.com/help/4467696)|[4467686](https://support.microsoft.com/help/4467686)|[4467702](https://support.microsoft.com/help/4467702)|[4470502](https://support.microsoft.com/help/4470502)|[4470502](https://support.microsoft.com/help/4470502)|
 |.NET Framework 4.5.2|[4459945](https://support.microsoft.com/help/4459945)|[4459945](https://support.microsoft.com/help/4459945)|[4459944](https://support.microsoft.com/help/4459944)|[4459943](https://support.microsoft.com/help/4459943)|Not applicable|Not applicable|Not applicable|Not applicable|Not applicable|Not applicable|Not applicable|
 |.NET Framework 4.6 or later|[4459942](https://support.microsoft.com/help/4459942)|[4459942](https://support.microsoft.com/help/4459942)|[4459940](https://support.microsoft.com/help/4459940)|[4459941](https://support.microsoft.com/help/4459941)|[4467680](https://support.microsoft.com/help/4467680)|[4467691](https://support.microsoft.com/help/4467691)|[4467696](https://support.microsoft.com/help/4467696)|[4467686](https://support.microsoft.com/help/4467686)|[4467702](https://support.microsoft.com/help/4467702)|[4470502](https://support.microsoft.com/help/4470502)|[4470502](https://support.microsoft.com/help/4470502)|
-|||||||||||||
 
 ## Additional resources
 

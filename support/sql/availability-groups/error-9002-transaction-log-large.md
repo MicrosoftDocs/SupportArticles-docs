@@ -58,7 +58,6 @@ There are two scenarios that can lead to log growth in an availability database 
     | redo_rate| The rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second |
     | last_redone_lsn| Actual log sequence number of the last log record that was redone on the secondary database. last_redone_lsn is always less than last_hardened_lsn |
     | last_received_lsn| Log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It is not an actual log sequence number. |
-    |||
 
     For example, execute the following query against the primary replica in order to report the replica with the earliest truncation_lsn and is the upper bound that the primary can reclaim in its own transaction log:
 

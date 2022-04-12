@@ -3,7 +3,7 @@ title: Using Kerberos Configuration Manager for SQL Server
 description: Microsoft Kerberos Configuration Manager for SQL Server is a diagnostic tool that's used with SQL Server to troubleshoot Kerberos-related connectivity issues. 
 author: ramakoni1
 ms.author: v-jayaramanp
-ms.date: 02/22/2022
+ms.date: 03/10/2022
 ms.custom: sap:Connection Issues
 ms.prod: sql 
 ---
@@ -59,9 +59,9 @@ To troubleshoot connectivity issues that affect SQL, SSRS, and SSAS, connect to 
 
 ## Using the tool
 
-After the installation is finished, start the *KerberosConfigMgr.exe* binary by navigating to the installation folder. By default, the location is C:\Program Files\Microsoft\Kerberos Configuration Manager for SQL Server\.
+After the installation is finished, start the *KerberosConfigMgr.exe* binary by navigating to the installation folder. By default, the location is *C:\Program Files\Microsoft\Kerberos Configuration Manager for SQL Server\*.
 
-For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin - Windows Server `|` Microsoft Docs](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
+For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
 
 Use one of the following options to start troubleshooting:
 
@@ -73,7 +73,7 @@ Use one of the following options to start troubleshooting:
 - To connect to a local server, select **Connect** to analyze your Kerberos configuration. In this case, don't have to specify the server name, domain username, or password.
 
   > [!NOTE]
-  > The account that starts the tool should be a local administrator account. For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin - Windows Server | Microsoft Docs](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
+  > The account that starts the tool should be a local administrator account. For information about how to start an app as an administrator or a different user, see [Use Run to start an app as an admin](/troubleshoot/windows-server/shell-experience/use-run-as-start-app-admin).
 
 After the connection succeeds, all the related SPNs are shown in the following screenshot.
 
@@ -90,7 +90,7 @@ In this screenshot, the UI has the following tabs:
   1. Select **Generate**.
   1. In the dialog box that opens, provide a name (in this case, "generateSPNss"), set **Save As type** as the `Kerberos Config Mgr(.cmd)` file, and then select **Save**.
 
-    :::image type="content" source="media/using-kerberos-config-mngr/create-the-spn-generation-script.png" alt-text="dialog box to provide a name for the CMD file":::
+    :::image type="content" source="media/using-kerberos-config-mngr/create-the-spn-generation-script.png" alt-text="Dialog box to provide a name for the CMD file.":::
 
 The `generateSPNss.cmd` file is created, and you can run this file at a command prompt. The content of the `generateSPNss.cmd` file will resemble the following example:
 
@@ -107,8 +107,9 @@ The `generateSPNss.cmd` file is created, and you can run this file at a command 
 
   :: The file is intended to be run in domain `<DomainName>.com`"
 
-  :: Corrections for MSSQLSvc/`<HostName>.<DomainName>`.com **SetSPN -s MSSQLSvc/`<HostName>`. `<DomainName>`.com UserName** 
+  :: Corrections for MSSQLSvc/`<HostName>.<DomainName>.com` **SetSPN -s MSSQLSvc/`<HostName>`. `<DomainName>`.com UserName** 
   ```
+
 - Use **SetSPN** to create an SPN under the service account for SQL Server.
 
 - Use **Fix** to fix issues and add SPNs. You can add an SPN only if you have the required permissions. When you select **Fix**, the following tool tip is displayed:
@@ -116,11 +117,11 @@ The `generateSPNss.cmd` file is created, and you can run this file at a command 
   :::image type="content" source="media/using-kerberos-config-mngr/fix-option-add-spn.png" alt-text="Screenshot of the Fix option to add SPN.":::
 
    > [!NOTE]
-   > The tool provides the **Fix** and **Generate** commands only for default instances and named instances that have static ports. For named instances that use dynamic ports, we recommend that you switch from dynamic to static ports or provide necessary permissions for the service account to register and unregister the SPN every time that the SQL service is started. Otherwise, you have to manually unregister and re-register the corresponding SPNs whenever the service is started. For more information, see [Register a Service Principal Name for Kerberos Connections - SQL Server | Microsoft Docs](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
+   > The tool provides the **Fix** and **Generate** commands only for default instances and named instances that have static ports. For named instances that use dynamic ports, we recommend that you switch from dynamic to static ports or provide necessary permissions for the service account to register and unregister the SPN every time that the SQL service is started. Otherwise, you have to manually unregister and re-register the corresponding SPNs whenever the service is started. For more information, see [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
 
 - **Delegation**: Use **Delegation** to identify any issues that affect the service account's configuration for delegation. This is especially useful in troubleshooting linked server issues. For example, if the SPN checkout is fine but you still experience issues that affect linked server queries, this might indicate that the service account is not configured to delegate credentials. For more information, see the Books online topic at [Configuring Linked Servers for Delegation](/previous-versions/sql/sql-server-2008-r2/ms189580(v=sql.105)).
 
-  :::image type="content" source="media/using-kerberos-config-mngr/delegation-tab.png" alt-text="Screenshot of the Delegation tab":::
+  :::image type="content" source="media/using-kerberos-config-mngr/delegation-tab.png" alt-text="Screenshot of the Delegation tab.":::
 
 ### Interpreting and acting on the diagnosis from the Kerberos Configuration Manager
 
@@ -195,7 +196,7 @@ Review the diagnosis from the tool by referring the **Status** column. Based on 
   1. After the SPNs are removed, re-run Kerberos Configuration Manager to verify that the SPN issues are resolved.
 
    > [!NOTE]
-   > When an instance of the SQL Server Database Engine starts, SQL Server tries to register the SPN for the SQL Server service. When the instance is stopped, SQL Server tries to unregister the SPN. For this to occur, the SQL Server service account requites the appropriate permissions in Active Directory. But if the service account does not have these rights, the automatic SPN registration does not occur, and you must work with your Active Directory administrator to register these SPN so that the SQL instances can enable Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections - SQL Server | Microsoft Docs](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
+   > When an instance of the SQL Server Database Engine starts, SQL Server tries to register the SPN for the SQL Server service. When the instance is stopped, SQL Server tries to unregister the SPN. For this to occur, the SQL Server service account requites the appropriate permissions in Active Directory. But if the service account does not have these rights, the automatic SPN registration does not occur, and you must work with your Active Directory administrator to register these SPN so that the SQL instances can enable Kerberos authentication. For more information, see [Register a Service Principal Name for Kerberos Connections](/sql/database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections?view=sql-server-ver15&preserve-view=true).
 
    > [!NOTE]
    > In environments where SQL is clustered, automatic registration of SPNs is not recommended because it may take more time to unregister the SPN and re-register the SPN in Active Directory than the time it takes for SQL Server to get online. If the SPN registration does not occur in time, this might prevent SQL Server from getting online because the cluster administrator can't connect to the SQL Server instance.
@@ -226,7 +227,7 @@ To view a server's Kerberos configuration information from the saved file:
 
 To view the log files for this tool:
 
-By default, one log file is generated every time that the application is run in your application data folder: %APPDATA%\Microsoft\KerberosConfigMgr.
+By default, one log file is generated every time that the application is run in your application data folder: *%APPDATA%\Microsoft\KerberosConfigMgr*.
 
 To get help, use any of the following methods:
 

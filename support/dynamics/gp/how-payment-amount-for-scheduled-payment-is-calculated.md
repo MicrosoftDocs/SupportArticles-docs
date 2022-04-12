@@ -34,7 +34,6 @@ Select **Calculate** and then select **Amortization** to view the 60 lines in th
 |3|7/12/2009|$268.40|$102.90|$165.50|$9,826.96|
 |4|8/12/2009|$268.40|$104.62|$163.78|$9,722.34|
 |5|9/12/2009|$268.40|$106.36|$162.01|$9.615.98|
-|||||||
 
 ### First payment interest information
 

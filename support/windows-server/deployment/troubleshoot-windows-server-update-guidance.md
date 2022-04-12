@@ -1,7 +1,7 @@
 ---
 title: Guidance of troubleshooting Windows Server update
 description: Introduces general guidance of troubleshooting scenarios related to Windows Server update.
-ms.date: 03/03/2022
+ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -157,6 +157,37 @@ To fix the issue, follow these steps on the WSUS server:
 4. Change the value from **400** to **800**.
 5. Save the web.config file.
 6. Run `IISReset`.
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+
+> [!NOTE]
+> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+>
+> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+3. Start the traces on the problem computer by using the following cmdlet:
+
+    ```powershell
+    TSSv2.ps1 -CollectLog DND_SetupReport
+    ```
+
+4. Respond to the EULA prompt.
+5. Wait until the automated scripts finish collecting the required data.
+
+The traces will be stored in a zip file in the *C:\\MS_DATA\\* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

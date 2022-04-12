@@ -25,7 +25,7 @@ When you enable **Schannel event logging** on a machine that is running any vers
 This registry key is present already in Windows and Windows Server.
 
 1. Start Registry Editor. To do this, click **Start**, click **Run**, type `regedit`, and then click **OK**.
-2. Locate the following key in the registry: 
+2. Locate the following key in the registry:
 
     `HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL`
 
@@ -40,7 +40,7 @@ This registry key is present already in Windows and Windows Server.
 
 ## Logging options
 
-The default value for Schannel event logging is *0x00000001* in Windows, which means that error messages are logged. Additionally, you can log multiple events by specifying the hexadecimal value that equates to the logging options that you want. This is a combination DWORD, which combines individual values for the desired result. For example, to log **error messages** (0x00000001) and **warnings** (0x00000002), set the value to *0x00000003*.
+The default value for Schannel event logging is _0x00000001_ in Windows, which means that error messages are logged. Additionally, you can log multiple events by specifying the hexadecimal value that equates to the logging options that you want. This is a combination DWORD, which combines individual values for the desired result. For example, to log **error messages** (0x00000001) and **warnings** (0x00000002), set the value to _0x00000003_.
 
 |Value|Description|
 |---|---|
@@ -52,8 +52,7 @@ The default value for Schannel event logging is *0x00000001* in Windows, which m
 |0x0005|Log informational, success events and error messages|
 |0x0006|Log informational, success events and warnings|
 |0x0007|Log informational, success events, warnings, and error messages (all log levels)|
-|||
-
+  
 ## More information
 
 Schannel event logging is different from schannel logging. Use schannel logging to enable Windows products to log debug information using the checked version of Schannel.dll.

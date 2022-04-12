@@ -397,18 +397,8 @@
         ]
       },
       "ms.search.scope": {
-        "dynamics-365/supply-chain/**/*.md": [
-          "Core",
-          "Operations",
-          "Supply Chain",
-          "ShowInHelp"
-        ],
-        "dynamics-365/finance/**/*.md": [
-          "Core",
-          "Operations",
-          "Finance",
-          "ShowInHelp"
-        ]
+        "dynamics-365/supply-chain/**/*.md": "Core, Operations, Supply Chain, ShowInHelp", 
+        "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"         
       },
       "search.app": {
         "power-platform/power-apps/*.md": [

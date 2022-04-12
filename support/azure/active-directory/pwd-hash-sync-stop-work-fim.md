@@ -23,8 +23,7 @@ After you update your global administrator credentials in FIM for directory sync
 |0|Directory Synchronization|Error|The user name or password is incorrect. Verify your user name, and then type your password again.|
 |655|Directory Synchronization|Error|The user name or password is incorrect. Verify your user name, and then type your password again.|
 |6900|FIMSynchronizationService|Error|The server encountered an unexpected error while processing a password change notification:<br/>"The user name or password is incorrect. Verify your user name, and then type your password again.|
-|||||
-
+  
 ## Resolution
 
 To resolve this issue, run the Azure Active Directory Sync tool Configuration Wizard. For more information about how to do this, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).

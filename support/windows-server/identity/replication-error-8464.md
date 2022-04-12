@@ -205,7 +205,7 @@ To enable diagnostic logging for global catalog events, follow these steps:
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Diagnostics`
 3. Configure event logging for global catalog:
    1. On the right side of **Registry Editor**, double-click the **18 Global Catalog** entry.
-   2. Type *3* in the **Value** data box, and then click **OK**.
+   2. Type _3_ in the **Value** data box, and then click **OK**.
 4. Close Regedit.
 
 ### Replication status cycle in partial attribute synchronization
@@ -235,8 +235,7 @@ This section is a sample of the PAS synchronization cycle. The following table i
 | ChildDC1| `Child.root.contoso.com` |
 | ChildDC2| `Child.root.contoso.com` |
 | TRDC1| `Treeroot.fabrikam.com` |
-|||
-
+  
 The following is the structure of the forest:
 
 :::image type="content" source="./media/replication-error-8464/forest-structure.png" alt-text="The structure of the forest for P A S synchronization cycle.":::

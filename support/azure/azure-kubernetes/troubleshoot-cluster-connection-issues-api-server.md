@@ -26,7 +26,7 @@ Connection issues to the API server can occur for many reasons, but the root cau
 
 You can take these common troubleshooting steps to check the connectivity to the AKS cluster's API server:
 
-1. Enter the following [az aks show](/cli/azure/aks#az_aks_show) command in Azure CLI. This command gets the fully qualified domain name (FQDN) of your AKS cluster.
+1. Enter the following [az aks show](/cli/azure/aks#az-aks-show) command in Azure CLI. This command gets the fully qualified domain name (FQDN) of your AKS cluster.
 
     ```azurecli
     az aks show --resource-group <cluster-resource-group> --name <cluster-name> --query fqdn
@@ -47,7 +47,7 @@ You can take these common troubleshooting steps to check the connectivity to the
 
 1. If necessary, follow the steps in the troubleshooting article [Client IP address can't access the API server](client-ip-address-cannot-access-api-server.md), so the API server adds your client IP address to the IP ranges it authorizes.
 
-1. Make sure the version of kubectl on your client machine isn't two or more minor versions behind the AKS cluster's version of that tool. To install the latest version of kubectl, run the [az aks install-cli](/cli/azure/aks#az_aks_install_cli) command in Azure CLI. You can then run [kubectl version](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#version) command to check the version number of the new installation.
+1. Make sure the version of kubectl on your client machine isn't two or more minor versions behind the AKS cluster's version of that tool. To install the latest version of kubectl, run the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command in Azure CLI. You can then run [kubectl version](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#version) command to check the version number of the new installation.
 
     For example, on Linux you would run these commands:
 

@@ -55,8 +55,7 @@ where the 0xc0000135 status code maps to:
 | Hex| Decimal| Symbolic| Friendly error string |
 |---|---|---|---|
 |0xc0000135|-1073741515|STATUS_DLL_NOT_FOUND|This application has failed to start because %hs was not found. Re-installing the application may fix this problem.|
-|||||
-
+  
 These binaries are installed as part of the "Active Directory Domain Services" optional role. The DirectoryServices-DomainController role is disabled by default and is not enabled because there is no role with that name on the Windows Server 2008 R2 operating system. Since there is nothing to match up among the available Windows Server 2012 manifests, the upgrade hangs.
 
 ## Resolution

@@ -54,7 +54,6 @@ If the Microsoft SQL Server service can't find the path that's configured to cre
    |Subkey|Data|
    |---|---|
    |`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQLServer\Parameters\SQLArg1`|-eC:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVR\MSSQL\Log\ERRORLOG|
-   |||
 
 3. Try to copy the path, and then manually verify in Windows Explorer or at a command prompt that you can access the target in the path. (Be aware of typos, special characters, and copy-and-paste issues.)
 

@@ -1,7 +1,18 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: Can't connect to AKS cluster
+- name: Cannot connect to application hosted on AKS cluster
+  items:
+  - name: General troubleshooting
+    href: connection-issues-application-hosted-aks-cluster.md
+  - name: Custom NSG blocks traffic
+    href: custom-nsg-blocks-traffic.md
+  - name: Get and analyze HTTP response codes
+    href: get-and-analyze-http-response-codes.md
+  - name: Intermittent timeouts or server issues
+    href: intermittent-timeouts-or-server-issue.md
+
+- name: Cannot connect to AKS cluster
   items:
   - name: Basic troubleshooting
     href: troubleshoot-cluster-connection-issues-api-server.md
@@ -11,6 +22,80 @@
     href: config-file-is-not-available-when-connecting.md
   - name: User can't get cluster resources
     href: user-cannot-get-cluster-resources.md
+
+- name: Cluster creation and deployment issues
+  items:
+  - name: General troubleshooting
+    href: troubleshoot-aks-cluster-creation-issues.md
+  - name: InvalidParameter error code
+    href: error-code-invalidparameter.md
+  - name: InvalidResourceReference error code
+    href: error-code-invalidresourcereference.md
+  - name: K8SAPIServerConnFailVMExtensionError error code (51)
+    href: error-code-k8sapiserverconnfailvmextensionerror.md
+  - name: K8SAPIServerDNSLookupFailVMExtensionError error code (52)
+    href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
+  - name: LinkedAuthorizationFailed error code
+    href: error-code-linkedauthorizationfailed.md
+  - name: MissingSubscriptionRegistration error code
+    href: error-code-missingsubscriptionregistration.md
+  - name: OperationNotAllowed or PublicIPCountLimitReached error code
+    href: error-code-operationnotallowed-publicipcountlimitreached.md
+  - name: OperationPreempted error code
+    href: error-code-operationpreempted.md
+  - name: OutboundConnFailVMExtensionError error code (50)
+    href: error-code-outboundconnfailvmextensionerror.md
+  - name: RequestDisallowedByPolicy error code
+    href: error-code-requestdisallowedbypolicy.md
+  - name: ReservedResourceName error code
+    href: error-code-reservedresourcename.md
+  - name: ServicePrincipalValidationClientError error code
+    href: error-code-serviceprincipalvalidationclienterror.md
+  - name: SubnetIsFull error code
+    href: error-code-subnetisfull.md
+  - name: SubscriptionRequestsThrottled error code (429)
+    href: error-code-subscriptionrequeststhrottled.md
+  - name: VMExtensionProvisioningTimeout error code
+    href: error-code-vmextensionprovisioningtimeout.md
+  - name: ZonalAllocationFailed or AllocationFailed error code
+    href: error-code-zonalallocationfailed-allocationfailed.md
+
+- name: Cluster deletion issues
+  items:
+  - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
+    href: cannot-delete-load-balancer-private-link-service.md
+  - name: InUseRouteTableCannotBeDeleted error code
+    href: error-code-inuseroutetablecannotbedeleted.md
+  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
+    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
+    href: cannot-delete-ip-subnet-nsg.md
+  - name: RequestDisallowedByPolicy error code
+    href: error-code-requestdisallowedbypolicy-delete.md
+  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
+    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+
+- name: Cluster upgrade issues
+  items:
+  - name: Troubleshooting upgrade errors
+    href: troubleshoot-upgrade-errors.md
+# Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
+# Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
+# - name: Cluster upgrade issues
+#   items:
+#   - name: Node not ready
+#     href: 
+#   - name: NSG prevents resource download
+#     href: 
+#   - name: PodDrainFailure error code
+#     href: 
+#   - name: PublicIPCountLimitReached error code
+#     href: 
+#   - name: QuotaExceeded error code
+#     href: 
+#   - name: SubnetIsFull error code
+#     href: 
+
 - name: Data collection guide
   items:
   - name: Capture TCP dump from Linux node
@@ -19,9 +104,13 @@
     href: capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
+
+
+
 - name: Troubleshoot performance issues
   items:
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
+
 - name: Errors when pulling images from ACR to AKS cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md

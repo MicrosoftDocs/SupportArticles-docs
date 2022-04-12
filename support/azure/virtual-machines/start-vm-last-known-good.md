@@ -38,7 +38,6 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|3|
-    |||
 
     For Windows 10, Windows Server 2016, and newer versions:
 
@@ -48,7 +47,6 @@ _Original KB number:_ &nbsp; 4016731
     | HKEY_USERS\ProblemSystem\Select\Default| 2 |
     | HKEY_USERS\ProblemSystem\Select\Failed| 1 |
     |HKEY_USERS\ProblemSystem\Select\LastKnownGood|2|
-    |||
 
     > [!NOTE]
     > If the VM was restarted on a Last Known Good Configuration before, the value on Current, Default, Failed and LastKnownGood will be increased in 1.  So, to boot by using Last Known Good Configuration, add 1 to all those values. For example, you should set `HKEY_USERS\ProblemSystem\Select\Current` to **3** if the VM was restarted on a **Last Known Good Configuration** before.

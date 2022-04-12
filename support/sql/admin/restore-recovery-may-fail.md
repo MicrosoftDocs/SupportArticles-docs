@@ -32,7 +32,7 @@ You may notice one or more of the following symptoms with a database that is con
 
 - Symptom 3: Restoring the database from its backup may take a long time and messages similar to the following are logged in SQL Server Error log:
 
-    > Date Time SPID Query notification delivery could not send message on dialog '{ Dialog ID }.'. Delivery failed for notification '?\<qn:QueryNotification xmlns:qn="[https://schemas.microsoft.com/SQL/Notifications/QueryNotification](https://schemas.microsoft.com/sql/notifications/querynotification)" id="2881" type="change" source="database" info="restart" database_id="7" sid="0x010500000000000515000000FA48F22A6990BA52422C73DFF9030000">\<qn:Message>4a4c696b-645c-40fd-bfef-4f2bc7c599b4;eb99973e-3cc9-4c7e-b4b9-47d8cf590c43</qn:Message></qn:QueryNotification>' because of the following error in service broker: 'The conversation handle "\<Conversation Handler>" is not found.'.
+    > Date Time SPID Query notification delivery could not send message on dialog '{ Dialog ID }.'. Delivery failed for notification '?\<qn:QueryNotification xmlns:qn="`https://schemas.microsoft.com/SQL/Notifications/QueryNotification`" id="2881" type="change" source="database" info="restart" database_id="7" sid="0x010500000000000515000000FA48F22A6990BA52422C73DFF9030000">\<qn:Message>4a4c696b-645c-40fd-bfef-4f2bc7c599b4;eb99973e-3cc9-4c7e-b4b9-47d8cf590c43</qn:Message></qn:QueryNotification>' because of the following error in service broker: 'The conversation handle "\<Conversation Handler>" is not found.'.
 
     > [!NOTE]
     > You may encounter the issue during recovery phase of the database. Recovery is also run on a database when database is brought online, server is restarted, etc.

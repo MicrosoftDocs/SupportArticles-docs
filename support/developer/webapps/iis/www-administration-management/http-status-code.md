@@ -24,7 +24,7 @@ The HTTP status code may indicate whether a request is successful or unsuccessfu
 IIS 7.0 and later versions put log files in the following folder by default:  
 `inetpub\logs\Logfiles`
 
-This folder contains separate directories for each World Wide Web website. The log files are created in the directories daily and are named by using the date by default. For example, a log file may be named as *exYYMMDD.log*.
+This folder contains separate directories for each World Wide Web website. The log files are created in the directories daily and are named by using the date by default. For example, a log file may be named as _exYYMMDD.log_.
 
 ## The HTTP status codes
 
@@ -228,10 +228,10 @@ The following table describes the causes of some common HTTP status codes.
 |---|---|---|
 |200|OK|IIS 7.0 and later versions successfully processed the request.|
 |304|Not modified|The client browser requests a document that is already in the cache. And the document hasn't been modified since it was cached. The client browser uses the cached copy of the document instead of downloading the document from the server.|
-|400|Bad request|The Hypertext Transfer Protocol Stack (*Http.sys*) file blocks IIS 7.0 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the *Http.sys* file.|
+|400|Bad request|The Hypertext Transfer Protocol Stack (_Http.sys_) file blocks IIS 7.0 and later versions from processing the request because of a problem in the request. Typically, this HTTP status code means that the request contains invalid characters or sequences, or that the request goes against the security settings in the _Http.sys_ file.|
 |401.1|Logon failed|The logon attempt is unsuccessful probably because of a user name or a password that is invalid.|
 |401.2|Logon failed due to server configuration|This HTTP status code indicates a problem in the authentication configuration settings on the server.|
-|401.3|Unauthorized due to ACL on resource|This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you try to access. For example, this problem occurs if the IUSR account doesn't have access to the *C:\Winnt\System32\Inetsrv* directory.|
+|401.3|Unauthorized due to ACL on resource|This HTTP status code indicates a problem in the NTFS file system permissions. This problem may occur even if the permissions are correct for the file that you try to access. For example, this problem occurs if the IUSR account doesn't have access to the _C:\Winnt\System32\Inetsrv_ directory.|
 |401.4|Authorization failed by filter|An Internet Server Application Programming Interface (ISAPI) filter doesn't let the request be processed because of an authorization problem.|
 |401.5|Authorization failed by ISAPI/CGI application|An ISAPI application or a Common Gateway Interface (CGI) application doesn't let the request be processed because of an authorization problem.|
 |403.1|Execute access forbidden|The appropriate level of the Execute permission isn't granted.|
@@ -272,21 +272,19 @@ The following table describes the causes of some common HTTP status codes.
 |500.11|Application is shutting down on the web server.|The request isn't processed because the destination application pool is shutting down. Wait for the worker process to finish shutting down, and then try the request again. If this problem persists, the web application may be experiencing problems that prevent the web application from shutting down correctly.|
 |500.12|Application is busy restarting on the web server.|The request isn't processed because the destination application pool is restarting. This HTTP status code should disappear when you refresh the page. If this HTTP status code appears again after you refresh the page, the problem may be caused by antivirus software that is scanning the Global.asa file. If this problem persists, the web application may be experiencing problems that prevent the web application from restarting correctly.|
 |500.13|Web server is too busy.|The request isn't processed because the server is too busy to accept any new incoming requests. Typically, this HTTP status code means that the number of incoming concurrent requests exceeds the number that the IIS 7.0 and later versions web application can process. This problem may occur when the performance configuration settings are set too low, the hardware is insufficient, or a bottleneck occurs in the IIS 7.0 and later versions web application. A common troubleshooting method is to generate a memory dump file of the IIS 7.0 and later versions processes when the error is occurring and then to debug the memory dump file.|
-|500.15|Direct requests for Global.asax aren't allowed.|A direct request for the *Global.asa* file or for the *Global.asax* file is made.|
-|500.19|Configuration data is invalid.|This HTTP status code occurs because of a problem in the associated *applicationhost.config* file or in the associated *Web.config* file. For more information, see [HTTP Error 500.19 when you open an IIS Webpage](/troubleshoot/iis/http-error-500-19-webpage).|
+|500.15|Direct requests for Global.asax aren't allowed.|A direct request for the _Global.asa_ file or for the _Global.asax_ file is made.|
+|500.19|Configuration data is invalid.|This HTTP status code occurs because of a problem in the associated _applicationhost.config_ file or in the associated _Web.config_ file. For more information, see [HTTP Error 500.19 when you open an IIS Webpage](/troubleshoot/iis/http-error-500-19-webpage).|
 |500.100|Internal ASP error.|An error occurs during the processing of an Active Server Pages (ASP) page. To obtain more specific information about the error, disable friendly HTTP error messages in the web browser. Additionally, the IIS log may show an ASP error number that corresponds to the error that occurs.|
 |503.0|Service unavailable.|The request is sent to an application pool that is currently stopped or disabled. To resolve this issue, make sure that the destination application pool is started. The event log may give information about why the application pool is stopped or disabled.|
 |503.2|Concurrent request limit exceeded.|The `appConcurrentRequestLimit` property is set to a value that is lower than the current number of concurrent requests. IIS 7.0 and later versions don't allow more concurrent requests than the value of the `appConcurrentRequestLimit` property.|
-||||
-
+  
 ## HTTP substatus codes added in IIS 8.0
 
 |Subcode|Description|
 |---|---|
 |400.10|Invalid X-Forwarded-For (XFF) header|
 |400.11|Invalid WebSocket request|
-|||
-
+  
 ## HTTP substatus codes added in ARR 3.0.1916
 
 |Subcode|Description|
@@ -303,8 +301,7 @@ The following table describes the causes of some common HTTP status codes.
 |502.5|WebSocket failure (ARR)|
 |502.6|Forwarded request failure (ARR)|
 |502.7|Execute request failure (ARR)|
-|||
-
+  
 ## References
 
 For more information about HTTP status code definitions, see [HTTP/1.1: Status Code Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html#sec10).  

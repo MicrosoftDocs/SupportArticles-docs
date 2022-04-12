@@ -45,8 +45,7 @@ The following computer system is collected:
 |Security Event Log|{Computername}_evt_Security.evtx|
 |IIS Configuration Administrative Event Log|{Computername}_evt_IISConfiguration-Administrative.evtx|
 |IIS Configuration Operational Event Log|{Computername}_evt_IISConfiguration-Administrative.evtx|
-|||
-
+  
 ## IIS configuration
 
 |Description|File Name|
@@ -54,16 +53,14 @@ The following computer system is collected:
 |IIS/ASP.NET Configuration Files|{Computername}_IISConfiguration.zip|
 |IIS Machine Key Information|IISMachineKeyInfo.txt|
 |Kerberos Configuration Information|IISKerberosReport.htm|
-|||
-
+  
 ## IIS log files
 
 |Description|File Name|
 |---|---|
 |Http Error Logs|{Computername}_HttpErrorLogs.zip|
 |IIS Log Files|{Computername}_IISLogs.zip|
-|||
-
+  
 ## IIS Services registry settings
 
 |Description|File Name|
@@ -78,8 +75,7 @@ The following computer system is collected:
 |HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanManServer|{Computername}_REG_SERVICES_LANMANSERVER.TXT|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET|{Computername}_REG_SOFTWARE_ASPNET.TXT|
 |HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\ASP.NET|{Computername}_REG_SOFTWARE_WOW6432NODE_ASPNET.TXT|
-|||
-
+  
 ## IIS/ASP.NET file information
 
 |Description|File Name|
@@ -88,16 +84,14 @@ The following computer system is collected:
 |.NET Framework 32-bit File Information|NetFrameworkFileInfo.txt|
 |.NET Framework 64-bit File Information|NetFramework64FileInfo.txt|
 |Web Site File Information|{Web Site Name}_SiteFileInfo.txt|
-|||
-
+  
 ## Installation setup logs for IIS
 
 |Description|File Name|
 |---|---|
 |IIS Setup Log|{Computername}_IIS7.log|
 |CBS Setup Log|{Computername}_CBS.log|
-|||
-
+  
 ## Installed updates/hotfixes
 
 |Description|File Name|
@@ -105,32 +99,28 @@ The following computer system is collected:
 |Update/Hotfix history:|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history:|{Computername}_Hotfixes.htm|
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
-|||
-
+  
 ## Networking information
 
 |Description|File Name|
 |---|---|
 |TCP/IP Basic Information|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information|{Computername}_SMB-Info.txt|
-|||
-
+  
 ## System information
 
 |Description|File Name|
 |---|---|
 |MSINFO32.exe Information in Text Format|{Computername}_msinfo32.txt|
 |MSINFO32.exe Information in NFO Format|{Computername}_msinfo32.nfo|
-|||
-
+  
 ## Virtualization information
 
 |Description|File Name|
 |---|---|
 |Machine Virtualization Information in HTM format|{Computername}_Virtualization.htm|
 |Machine Virtualization Information in TXT format|{Computername}_Virtualization.txt|
-|||
-
+  
 ## More information
 
 The IIS/ASP.NET Basic Information Data Collector also reports ASP.NET applications that may have the compilation debug setting configured to **True**. For more information about this setting, see [Debug Mode in ASP.NET Applications](https://support.microsoft.com/help/2580348).

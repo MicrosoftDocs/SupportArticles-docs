@@ -64,8 +64,7 @@ When the DNS server receives a query for a record in a zone that it is not autho
 | 2 * <forwarding_timeout> +1| After <forwarding_timeout> +1 more seconds, if the second forwarder didn't reply, the DNS server queries the third forwarder. |
 | ...| ... |
 | N * <forwarding_timeout> +(N-1)| After <forwarding_timeout> + 1 more seconds, if the Nth forwarder didn't reply, the DNS server queries the (N+1)th forwarder. |
-|||
-
+  
 > [!NOTE]
 > In addition to the configured delay, there can be an additional half second delay due to system overhead.
 
@@ -138,8 +137,7 @@ When the DNS server receives a query for a record in a zone that it is not autho
 | 2 * <forwarder_timeout> +1| After <forwarder_timeout> +1 more seconds, if the second conditional forwarder didn't reply, the DNS server queries the third conditional forwarder |
 | ...| ... |
 | N * <forwarder_timeout> +(N-1)| After <forwarder_timeout> +1 more seconds, if the Nth conditional forwarder didn't reply, the DNS server queries the (N+1)th conditional forwarder |
-|||
-
+  
 > [!NOTE]
 > In addition to the configured delay there can be an additional half second delay due to system overhead  
 
@@ -179,6 +177,6 @@ On a network capture we would see the following Network Monitor output (note 10.
 
 - [RecursionTimeout](/previous-versions/windows/it-pro/windows-2000-server/cc940788(v=technet.10))
 
-- [DNS: The recursion timeout must be greater than the forwarding timeout](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807363(v=ws.10)) 
+- [DNS: The recursion timeout must be greater than the forwarding timeout](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807363(v=ws.10))
 
 - [DNS: The forwarding timeout value should be 2 to 10 seconds](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff807396(v=ws.10))

@@ -23,15 +23,14 @@ _Original KB number:_ &nbsp; 306572
     |1|FirstName|LastName|
     |2|Scott|Bishop|
     |3|Katie|Jordan|
-    ||||
 
     > [!NOTE]
     > Although the data starts with cell A1 in this example, you can add this data to any adjacent cells within the worksheet.
 
 3. Highlight the rows and columns where the data is.
 4. On the **Insert** menu, point to **Name**, and then click **Define**.
-5. In the **Names in workbook** text box, type *myRange1*, and then click **OK**.
-6. On the **File** menu, click **Save**. In the **Save in** list, select the Web server root (which is typically `C:\InetPub\Wwwroot\`). In the **File name** text box, type *ExcelData.xls*. Click **OK**.
+5. In the **Names in workbook** text box, type _myRange1_, and then click **OK**.
+6. On the **File** menu, click **Save**. In the **Save in** list, select the Web server root (which is typically `C:\InetPub\Wwwroot\`). In the **File name** text box, type _ExcelData.xls_. Click **OK**.
 7. On the **File** menu, click **Exit**.
 
 ## Create an ASP.NET sample by using Visual C# .NET
@@ -46,17 +45,17 @@ This code sample demonstrates how to query and display information in an Excel w
     > [!NOTE]
     >
     > - The **Name** text box is not available (it appears grayed out or dimmed). The **Location** text box contains the text (or similar) `http://localhost/WebApplication1`.
-    > - Replace the text in the **Location** text box with `http://localhost/ExcelCSTest`, and then click **OK**. A new project is created, which includes a Web Form named *WebForm1.aspx*.
+    > - Replace the text in the **Location** text box with `http://localhost/ExcelCSTest`, and then click **OK**. A new project is created, which includes a Web Form named _WebForm1.aspx_.
 
 5. In the Visual Studio .NET IDE, locate the **Solution Explorer** window. If you can't find it, click **Solution Explorer** on the **View** menu.
-6. In **Solution Explorer**, right-click *WebForm1.aspx*, and then click **View Designer** to display the designer for the appearance of the page. The designer allows you to add controls and manipulate the appearance of the page.
+6. In **Solution Explorer**, right-click _WebForm1.aspx_, and then click **View Designer** to display the designer for the appearance of the page. The designer allows you to add controls and manipulate the appearance of the page.
 7. Locate the toolbox. Depending on your IDE Option settings, the toolbox can appear as a window or a button (which often appears on the left side of the IDE). If you can't find the toolbox, click **Toolbox** on the **View** menu.
 
     If the toolbox appears as a button, move the pointer over the button so that the contents of the toolbox are displayed.
 
 8. When the designer view of a Web Form is active, the toolbox is divided into sections, including the **Web Forms**, **Components**, **HTML**, and other sections. Click the **Web Forms** section.
-9. In the **Web Forms** section of the toolbox, click **DataGrid**, and then drag it onto the designer for *WebForm1*.
-10. Right-click *WebForm1.aspx*, and then click **View Code** to display the code-behind page source.
+9. In the **Web Forms** section of the toolbox, click **DataGrid**, and then drag it onto the designer for _WebForm1_.
+10. Right-click _WebForm1.aspx_, and then click **View Code** to display the code-behind page source.
 11. Add the following statements to the top of the code-behind page, above the namespace section:
 
     ```csharp
@@ -64,7 +63,7 @@ This code sample demonstrates how to query and display information in an Excel w
     using System.Data;
     ```
 
-12. Highlight the following code, right-click the code, and then click **Copy**. In *WebForm1.aspx.cs*, paste the code into the `Page_Load` event:
+12. Highlight the following code, right-click the code, and then click **Copy**. In _WebForm1.aspx.cs_, paste the code into the `Page_Load` event:
 
     ```csharp
     // Create connection string variable. Modify the "Data Source"
@@ -123,13 +122,13 @@ String sConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;" +
 As the comments indicate, you must modify the path information for the specific Excel worksheet. In addition, you must also set the value of the `Extended Properties` parameter to properly connect to the file.
 
 > [!NOTE]
-> The connection string uses the `Server.MapPath` function. This function takes a path that is relative to Microsoft Internet Information Services (IIS) to a file and returns a hard disk path to that file. For example, in the [Create sample Excel worksheet](#create-a-sample-excel-worksheet) section, you create *ExcelData.xls* in the Web root directory, which is typically located at `C:\Inetpub\Wwwroot`. This also creates a subfolder named *ExcelCSTest* within the *Wwwroot* folder and a file named *WebForm1*.aspx within the *ExcelCSTest*folder.
+> The connection string uses the `Server.MapPath` function. This function takes a path that is relative to Microsoft Internet Information Services (IIS) to a file and returns a hard disk path to that file. For example, in the [Create sample Excel worksheet](#create-a-sample-excel-worksheet) section, you create _ExcelData.xls_ in the Web root directory, which is typically located at `C:\Inetpub\Wwwroot`. This also creates a subfolder named _ExcelCSTest_ within the _Wwwroot_ folder and a file named _WebForm1_.aspx within the _ExcelCSTest_folder.
 
-In this example, the file path on the hard disk is like `C:\Inetpub\Wwwroot\ExcelCSTest`. *Wwwroot* contains *ExcelData.xls*, *ExcelCSTest* contains *WebForm1.aspx*.
+In this example, the file path on the hard disk is like `C:\Inetpub\Wwwroot\ExcelCSTest`. _Wwwroot_ contains _ExcelData.xls_, _ExcelCSTest_ contains _WebForm1.aspx_.
 
-The IIS path to the files is like `C:\Web Root\ExcelCSTest`. And *Web Root* contains *ExcelData.xls*, *ExcelCSTest* contains *WebForm1.aspx*.
+The IIS path to the files is like `C:\Web Root\ExcelCSTest`. And _Web Root_ contains _ExcelData.xls_, _ExcelCSTest_ contains _WebForm1.aspx_.
 
-In this case, the relative path from the *WebForm1.aspx* page to the *ExcelData.xls* file is *../ExcelData.xls*. The *../* characters inform IIS to go up one folder level. So the code `Server.MapPath("../ExcelData.xls")` returns the following string:
+In this case, the relative path from the _WebForm1.aspx_ page to the _ExcelData.xls_ file is _../ExcelData.xls_. The _../_ characters inform IIS to go up one folder level. So the code `Server.MapPath("../ExcelData.xls")` returns the following string:
 
 ```console
 C:\Inetpub\Wwwroot\ExcelData.xls

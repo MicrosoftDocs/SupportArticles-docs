@@ -35,39 +35,35 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 
 ## Information collected by Internet Explorer WPAD Data Collection
 
-*Internet Explorer Connections Key Activity Log*
+_Internet Explorer Connections Key Activity Log_
 
 |Description|File Name|
 |---|---|
 |Connections Key:|{ComputerName}_{UserName}_Connections.txt|
 |Connections Key:|{ComputerName}_{UserName}_Connections.txt|
-|||
-
-*IPConfig Activity Log*
+  
+_IPConfig Activity Log_
 
 |Description|File Name|
 |---|---|
 |IPConfig Output:|{ComputerName}_ReleaseRenewIP.txt|
-|||
-
-*Network Trace Files (Windows 7, Windows Server 2008 R2)*
+  
+_Network Trace Files (Windows 7, Windows Server 2008 R2)_
 
 |Description|File Name|
 |---|---|
 |Network Trace Log:|{ComputerName}_Netsh.txt|
 |Network Trace File:|InternetClient.etl|
 |Network Trace Cab:|InternetClient.cab|
-|||
-
-*Network Trace Files (Windows Vista, Windows Server 2008)*
+  
+_Network Trace Files (Windows Vista, Windows Server 2008)_
 
 |Description|File Name|
 |---|---|
 |Network Trace Log:|{ComputerName}_{UserName}_NMcap_Trace_DisplayNet.txt|
 |Network Trace File:|{ComputerName}_NMcap.cap|
-|||
-
-*Network Trace Files (Windows XP, Windows Server 2003)*
+  
+_Network Trace Files (Windows XP, Windows Server 2003)_
 
 |Description|File Name|
 |---|---|
@@ -78,20 +74,18 @@ Internet Explorer WPAD Data Collection will perform the following actions:
 |Network Trace File:|{ComputerName}_capture3.cap|
 |Network Trace File:|{ComputerName}_capture4.cap|
 |Network Trace File:|{ComputerName}_capture5.cap|
-|||
-
-*Internet Explorer 6 Autoproxy Files*
+  
+_Internet Explorer 6 Autoproxy Files_
 
 |Description|File Name|
 |---|---|
 |Internet Explorer 6 Autoproxy File Log:|{ComputerName}_{UserName}_IE6_Autoproxy_file_log.txt|
-|||
-
+  
 ### Additional information
 
 In addition to the files collected as part of this diagnostic, the following files are also saved to the selected user's desktop if the related registry keys are present:
 
-*Internet Explorer Connections Key Exported Registry Keys Saved to User's Desktop*
+_Internet Explorer Connections Key Exported Registry Keys Saved to User's Desktop_
 
 |Description|File Name|
 |---|---|
@@ -99,8 +93,7 @@ In addition to the files collected as part of this diagnostic, the following fil
 |Connections Key:|{ComputerName}_{UserName}_ HKU_Wow6432Node_Connections\<YearDayMonth-HourMinute >.REG.txt|
 |Connections Key:|{ComputerName}_{UserName}_ HKLM_Connections\<YearDayMonth-HourMinute >.REG.txt|
 |Connections Key:|{ComputerName}_{UserName}_ HKLM_Wow6432Node_Connections\<YearDayMonth-HourMinute >.REG.txt|
-|||
-
+  
 ## References
 
 For more information, see [Frequently asked questions about the Microsoft Support Diagnostic Tool (MSDT)](https://support.microsoft.com/help/926079).

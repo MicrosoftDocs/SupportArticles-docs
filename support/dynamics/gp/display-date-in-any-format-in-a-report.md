@@ -132,9 +132,8 @@ The format string uses the following codes. These codes are substituted when the
 |mmmm|=|month of year in full|
 |YY|=|year of date (two digits)|
 |YYYY|=|year of date (four digits)|
-||||
-
-The following table contains several examples that are based on a date of April 12, 2007:
+  
+  The following table contains several examples that are based on a date of April 12, 2007:
 
 |DD-mmm-YYYY|=|12-Apr-2007|
 |---|---|---|
@@ -144,8 +143,7 @@ The following table contains several examples that are based on a date of April 
 |ddd, DD-mmm-YYYY|=|Thu, 12-Apr-2007|
 |dddd, mmmm the DD in the year YYYY|=|Thursday, April the 12 in the year 2007|
 |DD-mmm-YY is the NN day of YYYY|=|12-Apr-07 is the 102 day of 2007|
-||||
-
+  
 ## References
 
 For more information, see the Report Writer Programmer's Interface document in the Software Development Kit (SDK). The SDK can be installed from the Tools folder of CD 2 of the Microsoft Dynamics GP installation CDs.

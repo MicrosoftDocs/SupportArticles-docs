@@ -47,7 +47,6 @@ We recommend that you install the following hotfixes if you plan to install the 
 |May 14, 2011| [2545850](https://support.microsoft.com/help/2545850)|Users cannot access an IIS-hosted website after the computer password for the server is changed in Windows 7 or in Windows Server 2008 R2|Multiple Authentication DLL's|Prevents CNO and VCO objects from failing to register in DNS due to Kerberos authentication not working after the computer password is changed.|
 |March 24, 2010| [978309](https://support.microsoft.com/help/978309)|IPv6 transition technologies, such as ISATAP, 6to4, and Teredo do not work on a computer that is running Windows Server 2008 R2 Server Core|Tunnel.sys|Fixes components leveraged by failover cluster on 2008 R2 Server Core installations. Available for individual download.|
 |September 4, 2010| [976571](https://support.microsoft.com/help/976571)|Stability update for Windows Server 2008 R2 Failover Print Clusters|Win32spl.dll|Fixes print cluster stability. Apply only if print cluster resources are configured. Available for individual download.|
-||||||
 
 To avoid problems that affect the cluster operation when the network is unreliable, install the following hotfix:
 

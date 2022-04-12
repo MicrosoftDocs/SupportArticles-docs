@@ -45,8 +45,7 @@ The following table summarizes the behavior of compressed backups based on the a
 | Backup statement level with `COMPRESSION` clause|Success Back up compressed|Success|Error|
 | Backup statement level with `NO_COMPRESSION` clause|Success Backup - uncompressed|Error|Success|
 | Back up statement without statement level compression clause|Success Compression depends on sp_configure `backup compression` setting|Success Backup will be compressed|Success Backup will be uncompressed|
-|||||
-
+  
 As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
 
 > [!NOTE]
@@ -91,7 +90,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    Processed two pages for database `test`, file *test_log* on file 2.
+    Processed two pages for database `test`, file _test_log_ on file 2.
 
     BACKUP DATABASE successfully processed 162 pages in 6.211 seconds (0.203 MB/sec).
 

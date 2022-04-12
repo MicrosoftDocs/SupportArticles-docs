@@ -73,14 +73,14 @@ For applications that deserialize untrusted XML data into an instance of either 
 
     For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
 
-- Workaround 2: Create or change the *Sqlservr.exe.config* file for each applicable instance
+- Workaround 2: Create or change the _Sqlservr.exe.config_ file for each applicable instance
 
     This workaround applies only to the instance itself.
 
     > [!IMPORTANT]
     > We cannot guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
 
-    1. Locate the *Sqlservr.exe.config* file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
+    1. Locate the _Sqlservr.exe.config_ file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
 
        `%ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\MSSQL\Binn\`
 
@@ -122,7 +122,6 @@ For applications that deserialize untrusted XML data into an instance of either 
        |Name|Switch.System.Data.AllowArbitraryDataSetTypeInstantiation|
        |---|---|
        |Value|true|
-       |||
 
     1. Restart all SQL Server instances.
 

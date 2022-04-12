@@ -29,7 +29,7 @@ There are three locations to manually entering Data Collection. These windows ar
 
 **Data Collection** window can also be used to enter Direct labor, but you can also enter Indirect labor, as well as Machine Costs too.
 
-**Auto Data Collection** is typically used with integrations that push the labor information into the tables and the system then automatically posts the data when there is a "match". But if there is a hiccup you can also manually enter the data using this window to finish the process. There will be a start time record for a specific Employee, MO number, Sequence etc. When the system recognizes the ending time record or *match record* for the same, MO number/Sequence, the system will automatically post the document to the main SF010014 and SF010115 tables. The starting record will sit in the SF010501 until that match is found. If there is a hiccup and you need to enter the ending record, you can manually enter the "ending" record and the system will then post the document.  
+**Auto Data Collection** is typically used with integrations that push the labor information into the tables and the system then automatically posts the data when there is a "match". But if there is a hiccup you can also manually enter the data using this window to finish the process. There will be a start time record for a specific Employee, MO number, Sequence etc. When the system recognizes the ending time record or _match record_ for the same, MO number/Sequence, the system will automatically post the document to the main SF010014 and SF010115 tables. The starting record will sit in the SF010501 until that match is found. If there is a hiccup and you need to enter the ending record, you can manually enter the "ending" record and the system will then post the document.  
 
 > [!NOTE]
 > If the values don't leave the SF010501 table, check the status column (ADCSTATUS_I). Many times, you will see a 3 status.  Some reasons for Status of 3 and for records sitting in the table and not clearing are:
@@ -54,8 +54,7 @@ Below is some information on what tables get updated during our data collection 
 |---|---|---|
 |STARTS: </br></br>SF010600 (Summary)</br></br>SF010601 (Detail)</br></br> Posts to the following tables and clears out of the ones above||STARTS: </br></br>SF010500 (Starts here for a second)</br></br>Moves to:</br></br>SF010501 Immediately after saving.</br></br> On record for Start</br>One record for End</br></br> When Match is found, it removes from the SF010501 and ends up below |
 |ENDS: </br></br>SF010014 (Totals- Summary)</br></br>SF010115 (Detail)</br></br>|STARTS/ENDS:</br></br> SF010014 (Totals- Summary)</br></br>SF010115 (Detail)</br></br> SF010200 when DC Transaction Posts|ENDS:</br></br> SF010014 (Totals- Summary)</br>SF010115 (Detail)|
-||||
-
+  
 > [!NOTE]
 > All 3 options have the same resting place when completed. SF010014 and SF010115
 
@@ -91,8 +90,7 @@ You can import records directly to the SF010500 table if labor is collected by s
 |ADC Device ID|ADCDEVICEID_I|Enter ADC Device ID|None|
 |Pay Code Rate 1|PAYCODERATE1_I|Enter Pay Code associated with time being recorded|None|
 |Labor Code|LABORCODE_I|Enter payroll Labor Code associated with Pay Code|None|
-|||||
-
+  
 ### Validation Details
 
 #### Manufacture Order

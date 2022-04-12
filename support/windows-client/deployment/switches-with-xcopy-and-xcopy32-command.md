@@ -50,8 +50,7 @@ The following table describes the optional switches you can use with `xcopy` and
 | /e|Copies any subfolder, even if it's empty.|
 | /v|Verifies each new file.|
 | /w|Prompts you to press a key before copying.|
-|||
-
+  
 > [!WARNING]
 > Long file names aren't retained in MS-DOS mode.
 
@@ -93,4 +92,4 @@ The following table describes the optional switches you can use with `xcopy` and
 | /y|Overwrites existing files without prompting you.|
 | /-y|Prompts you before overwriting existing files.|
 | /n|Copies using the generated short names.|
-|||
+  

@@ -64,8 +64,7 @@ To do this in the Service Manager console, follow these steps.
 | Windows Server 2008 Operating System (Discovery)| Microsoft.Windows.Server.2008.Discovery| Windows Server 2008 Network Adapter| Microsoft.Windows.Server.2008.NetworkAdapter |
 | Windows Server Operating System Library| Microsoft.Windows.Server.Library| Windows Server 2012 Logical Disk| Microsoft.Windows.Server.6.2.LogicalDisk |
 | Windows Server Operating System Library| Microsoft.Windows.Server.Library| Windows Server 2012 Network Adapter| Microsoft.Windows.Server.6.2.NetworkAdapter |
-|||||
-
+  
 When you are finished, you should have four Operations Manager CI connectors:
 
 - The original

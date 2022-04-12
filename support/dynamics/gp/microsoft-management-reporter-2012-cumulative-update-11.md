@@ -77,4 +77,4 @@ New features included with CU11:
 |3209403|Data mart integration fails when the collation is different between tempdb and the data mart database|
 |3213527|Performance issues generating reports|
 |3240510|Performance issues and data base growth when dimension combinations are integrated into all companies in a partition|
-|||
+  

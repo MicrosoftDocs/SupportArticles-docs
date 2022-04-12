@@ -46,7 +46,6 @@ To enable MFA, follow these steps:
      |0|This is the default value. For this value, a second layer of authentication isn't required. Everyone can make SMS Provider calls based on their role-based access.|
      |10|For this level, users who are logged on by using a PIN or smart card can make SMS Provider calls if they have the appropriate permissions to access the respective provider.|
      |20|For this level, users who are logged on by using a PIN can make provider calls if they have the appropriate permissions to access the respective provider.|
-     |||
 
    - Edit the `ExceptionList` property.
 

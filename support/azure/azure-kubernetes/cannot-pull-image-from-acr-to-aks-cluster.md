@@ -138,7 +138,7 @@ When the image name isn't fully correct, the [401 Unauthorized error](#401unauth
 
 > Failed to pull image "\<acrname>.azurecr.io/\<repository\:tag>": rpc error: code = Unknown desc = failed to pull and unpack image "\<acrname>.azurecr.io/\<repository\:tag>": failed to resolve reference "\<acrname>.azurecr.io/\<repository\:tag>": failed to authorize: failed to fetch anonymous token: unexpected status: 403 Forbidden
 
-#### Solution: Ensure AKS virtual network link is set in ACR Private DNS zone
+#### Solution 1: Ensure AKS virtual network link is set in ACR Private DNS zone
 
 If the network interface of the ACR's private endpoint and the AKS cluster are in different virtual networks (VNETs), ensure that the [virtual network link](/azure/dns/private-dns-virtual-network-links) for the AKS cluster VNET is set in the Private DNS zone of the ACR (it's named "privatelink.azurecr.io" by default). If the virtual network link isn't in the Private DNS zone of the ACR, add it by using one of the following ways:
 
@@ -148,6 +148,41 @@ If the network interface of the ACR's private endpoint and the AKS cluster are i
     > It's optional to check the ["Enable auto registration"](/azure/dns/private-dns-autoregistration) feature.
 
 - [Create a virtual network link to the specified Private DNS zone by using Azure CLI](/cli/azure/network/private-dns/link/vnet#az-network-private-dns-link-vnet-create).
+
+#### Solution 2: Add AKS Load Balancer's public IP address to allowed IP address range of ACR
+
+If the AKS cluster connects publicly to the ACR (NOT through a private link or an endpoint) and the public network access of the ACR is limited to selected networks, add AKS Load Balancer's public IP address to the allowed IP address range of the ACR:
+
+1. Confirm that the public network access is limited to selected networks.
+
+    In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public access** tab, **Public network access** is set to **Selected networks** or **Disabled**.
+
+2. Obtain the AKS Load Balancer's public IP address by using one of the following ways:
+
+    - In the Azure portal, navigate to the AKS cluster. Under **Settings**, select **Properties**, select one of the virtual machine scale sets in the infrastructure resource group, and check the public IP address of the AKS Load Balancer.
+
+    - Run the following command:
+
+        ```azurecli
+        az network public-ip show --resource-group <infrastructure-resource-group> --name <public-IP-name> --query ipAddress -o tsv
+        ```
+
+3. Allow access from the AKS Load Balancer's public IP address by using one of the following ways:
+
+    - Run `az acr network-rule add` command as follows:
+
+        ```azurecli
+        az acr network-rule add --name acrname --ip-address <AKS-load-balancer-public-IP-address>
+        ```
+
+        For more information, see [Add network rule to registry](/azure/container-registry/container-registry-access-selected-networks#add-network-rule-to-registry).
+
+    - In the Azure portal, navigate to the ACR. Under **Settings**, select **Networking**. On the **Public access** tab, under **Firewall**, add the AKS Load Balancer's public IP address to **Address range** and then select **Save**. For more information, see [Access from selected public network - portal](/azure/container-registry/container-registry-access-selected-networks#access-from-selected-public-network---portal).
+
+        > [!NOTE]
+        > If **Public network access** is set to **Disabled**, switch it to **Selected networks** first.
+
+        :::image type="content" source="./media/cannot-pull-image-from-acr-to-aks-cluster/add-aks-load-balancer-public-ip.png" alt-text="Screenshot about how to add AKS Load Balancer's public IP address to Address range":::
 
 ### <a id="443timeouterror"></a>443 timeout error
 

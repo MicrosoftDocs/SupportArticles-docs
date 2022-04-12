@@ -40,9 +40,9 @@ Most large-scale deletions are accidental. Microsoft recommends that you take se
 > [!NOTE]
 > To prevent the accidental deletion or movement of objects (especially organizational units), two Deny access control entries (ACEs) can be added to the security descriptor of each object (DENY **DELETE** & **DELETE TREE**) and one Deny access control entries (ACEs) can be added to the security descriptor of the PARENT of each object (DENY **DELETE CHILD**). To do it, use Active Directory Users and Computers, ADSIEdit, LDP, or the DSACLS command-line tool. You can also change the default permissions in the AD schema for organizational units so that these ACEs are included by default.
 
-For example, to protect the organization unit that is called. Users in the AD domain that is called `CONTOSO.COM` from accidentally being moved or deleted out of its parent organizational unit that is called *MyCompany*, make the following configuration:
+For example, to protect the organization unit that is called. Users in the AD domain that is called `CONTOSO.COM` from accidentally being moved or deleted out of its parent organizational unit that is called _MyCompany_, make the following configuration:
 
-For the *MyCompany* organizational unit, add DENY ACE for **Everyone** to **DELETE CHILD** with **This object only** scope:
+For the _MyCompany_ organizational unit, add DENY ACE for **Everyone** to **DELETE CHILD** with **This object only** scope:
 
 ```console
 DSACLS "OU=MyCompany,DC=CONTOSO,DC=COM" /D "EVERYONE:DC"/
@@ -102,7 +102,7 @@ To use method 1, follow this procedure:
     If one or more of these global catalogs exist, use the Repadmin.exe command-line tool to immediately disable inbound replication by following these steps:
 
     1. Select **Start**, and then select **Run**.
-    2. Type *cmd* in the **Open** box, and then select **OK**.
+    2. Type _cmd_ in the **Open** box, and then select **OK**.
     3. Type the following command at the command prompt, and then press ENTER:
 
         ```console
@@ -159,7 +159,7 @@ To use method 1, follow this procedure:
 7. Auth restore the deleted user accounts, the deleted computer accounts, or the deleted security groups.
 
     > [!NOTE]
-    > The terms *auth restore* and *authoritative restore* refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
+    > The terms _auth restore_ and _authoritative restore_ refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
 
     Authoritative restorations are performed with the Ntdsutil command-line tool, and refer to the domain name (dn) path of the deleted users or of the containers that host the deleted users.
 
@@ -269,7 +269,7 @@ To use method 1, follow this procedure:
 
 12. On the console of the recovery domain controller, use the Ldifde.exe utility and the ar_**YYYYMMDD-HHMMSS**_links_usn.loc.ldf file to restore the user's group memberships. To do it, follow these steps:
 
-    - Select **Start**, select **Run**, type *cmd* in the **Open** box, and then select **OK**.
+    - Select **Start**, select **Run**, type _cmd_ in the **Open** box, and then select **OK**.
     - At the command prompt, type the following command, and then press ENTER:
 
       ```console
@@ -313,7 +313,7 @@ To use method 2, follow this procedure:
     If one or more of these global catalogs exist, use the Repadmin.exe command-line tool to immediately disable inbound replication. To do it, follow these steps:
 
       1. Select **Start**, and then select **Run**.
-      2. Type *cmd* in the **Open** box, and then select **OK**.
+      2. Type _cmd_ in the **Open** box, and then select **OK**.
       3. Type the following command at the command prompt, and then press ENTER:
 
       ```console
@@ -587,7 +587,7 @@ To use method 3, follow this procedure:
     > Focus on global catalogs in the domain that has the least frequent replication schedules. If these domain controllers exist, use the Repadmin.exe command-line tool to immediately disable inbound replication. To do it, follow these steps:
 
     1. Select **Start**, and then select **Run**.
-    2. Type *cmd* in the **Open** box, and then select **OK**.
+    2. Type _cmd_ in the **Open** box, and then select **OK**.
     3. Type `repadmin /options <recovery dc name> +DISABLE_INBOUND_REPL` at the command prompt, and then press ENTER.
 
     > [!NOTE]
@@ -642,7 +642,7 @@ To use method 3, follow this procedure:
 7. Auth restore the deleted user accounts, the deleted computer accounts, or the deleted security groups.
 
     > [!NOTE]
-    > The terms *auth restore* and *authoritative restore* refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
+    > The terms _auth restore_ and _authoritative restore_ refer to the process of using the authoritative restore command in the Ntdsutil command-line tool to increment the version numbers of specific objects or of specific containers and all their subordinate objects. As soon as end-to-end replication occurs, the targeted objects in the recovery domain controller's local copy of Active Directory become authoritative on all the domain controllers that share that partition. An authoritative restoration is different from a system state restoration. A system state restoration populates the restored domain controller's local copy of Active Directory with the versions of the objects at the time that the system state backup was made.
 
     Authoritative restorations are performed with the Ntdsutil command-line tool by referencing the domain name (dn) path of the deleted users, or of the containers that host the deleted users.
 
@@ -770,7 +770,7 @@ Microsoft provides third-party contact information to help you find technical su
 
 To manually undelete objects in a deleted object's container, follow these steps:
 
-1. Select **Start**, select **Run**, and then type *ldp.exe*.
+1. Select **Start**, select **Run**, and then type _ldp.exe_.
 
     ldp.exe is available:
 
@@ -804,16 +804,16 @@ To manually undelete objects in a deleted object's container, follow these steps
 
     Change the value for the `isDeleted` attribute and the DN path in a single Lightweight Directory Access Protocol (LDAP) modify operation. To configure the **Modify** dialog, follow these steps:
 
-    1. In the **Edit Entry Attribute** box, type *isDeleted*. Leave the **Value** box blank.
+    1. In the **Edit Entry Attribute** box, type _isDeleted_. Leave the **Value** box blank.
     2. Select the **Delete** option button, and then select **Enter** to make the first of two entries in the **Entry List** dialog.
 
         > [!IMPORTANT]
         > Don't select **Run**.
 
-    3. In the **Attribute** box, type *distinguishedName*.
+    3. In the **Attribute** box, type _distinguishedName_.
     4. In the **Values** box, type the new DN path of the reanimated object.
 
-        For example, to reanimate the *JohnDoe* user account to the Mayberry OU, use the following DN path: cn= **JohnDoe**,ou= **Mayberry**,dc= **contoso**,dc= **com**
+        For example, to reanimate the _JohnDoe_ user account to the Mayberry OU, use the following DN path: cn= **JohnDoe**,ou= **Mayberry**,dc= **contoso**,dc= **com**
 
         > [!NOTE]
         > If you want to reanimate a deleted object to its original container, append the value of the deleted object's lastKnownParent attribute to its CN value, and then paste the full DN path in the **Values** box.
@@ -876,7 +876,6 @@ You can paste this value when you enter the `Repadmin` command in step 4.
     |134760|Default-First-Site-Name\NA-DC1|134760|DateTime|2|name|
     |134760|Default-First-Site-Name\NA-DC1|134760|DateTime|1|lastKnownParent|
     |134760|Default-First-Site-Name\NA-DC1|134760|DateTime|2|objectCategory|
-    |||||||
 
 5. If the name of the originating domain controller appears as a 32-character alpha-numeric GUID, use the Ping command to resolve the GUID to the IP address and the name of the domain controller that originated the deletion. The Ping command uses the following syntax:
 

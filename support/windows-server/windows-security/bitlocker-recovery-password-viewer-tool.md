@@ -40,7 +40,7 @@ You can use this tool to help locate BitLocker Drive Encryption recovery passwor
 
 ## Overview
 
-The BitLocker Recovery Password Viewer lets you locate and view BitLocker recovery passwords that are stored in AD DS. You can use this tool to help recover data that's stored on a volume that has been encrypted by using BitLocker. The BitLocker Recovery Password Viewer tool is an extension for the Active Directory Users and Computers MMC snap-in. After you install this tool, you can examine the Properties dialog box of a computer object to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory *forest* (multiple domains).
+The BitLocker Recovery Password Viewer lets you locate and view BitLocker recovery passwords that are stored in AD DS. You can use this tool to help recover data that's stored on a volume that has been encrypted by using BitLocker. The BitLocker Recovery Password Viewer tool is an extension for the Active Directory Users and Computers MMC snap-in. After you install this tool, you can examine the Properties dialog box of a computer object to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory _forest_ (multiple domains).
 
 Before you can use the BitLocker Recovery Password Viewer tool to view BitLocker recovery passwords, the following conditions must be true:
 
@@ -65,15 +65,14 @@ The installation program adds the following two attributes to AD DS if these two
 |Container| **CN=**LanguageID**,CN=**DisplaySpecifier**,CN=Configuration,DC=example,DC=com** |
 |Attribute name| **adminPropertyPages** |
 |Attribute value| ****Password Viewer's GUID**** |
-|||
-
+  
 | Object type| Object value |
 |---|---|
 |Object| **CN=domainDNS-Display** |
 |Container| **CN=**LanguageID**,CN=**DisplaySpecifier**,CN=Configuration,DC=example,DC=com** |
 |Attribute name| **adminContextMenu** |
 |Attribute value| ****Password Viewer's GUID**** |
-|||
+
 > [!NOTE]
 > These tables use the following values:
 >
@@ -138,7 +137,7 @@ You may receive this error message when you try to perform a second or later ins
 
 To remove the BitLocker Recovery tool, follow these steps:
 
-1. Click **Start** > **Run**, type *appwiz.cpl*, and then click **OK**.
+1. Click **Start** > **Run**, type _appwiz.cpl_, and then click **OK**.
 2. In the **Add or Remove Programs** dialog box, click to select the **Show updates** check box.
 3. In the **Currently installed programs** list, click **BitLocker Recovery Password Viewer (for Active Directory Users and Computers)** > **Remove**.
 4. If you receive a message that states that other programs may not run correctly if you remove this update, click **Yes** to confirm the removal of this update.
@@ -148,7 +147,7 @@ To remove the BitLocker Recovery tool, follow these steps:
 
 ## Usage information
 
-The BitLocker Recovery Password Viewer tool extends the Active Directory Users and Computers MMC snap-in. To start Active Directory Users and Computers, click **Start** > **Run**, type *dsa.msc*, and then click **OK**.
+The BitLocker Recovery Password Viewer tool extends the Active Directory Users and Computers MMC snap-in. To start Active Directory Users and Computers, click **Start** > **Run**, type _dsa.msc_, and then click **OK**.
 
 The following information describes how to use the BitLocker Recovery Password Viewer tool.
 

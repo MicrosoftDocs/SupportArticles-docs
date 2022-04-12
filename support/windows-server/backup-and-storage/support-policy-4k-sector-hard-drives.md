@@ -31,11 +31,10 @@ There are three drive types that we'll discuss here. Because Microsoft support p
 |Common Names|Reported Logical Sector Size|Reported Physical Sector Size|Windows Version with Support|
 |---|---|---|---|
 |512-byte Native, 512n|512 bytes|512 bytes|All Windows versions|
-|Advanced Format, 512e, AF, 512-byte Emulation|512 bytes|4 KB|Windows Vista with update KB 2553708 installed<br/><br/>Windows Server 2008* with update KB 2553708 installed<br/><br/>Windows 7 with update KB 982018 installed<br/><br/>Windows Server 2008 R2* with update KB 982018 installed<br/><br/>All Windows versions from Windows 7 Server Pack 1 and later versions.<br/><br/>All Server versions from Server 2008 R2 Server Pack 1 and later versions.<br/><br/>*Except for Hyper-V. See the [Application support requirements for large-sector drives](#application-support-requirements-for-large-sector-drives) section.|
+|Advanced Format, 512e, AF, 512-byte Emulation|512 bytes|4 KB|Windows Vista with update KB 2553708 installed<br/><br/>Windows Server 2008*with update KB 2553708 installed<br/><br/>Windows 7 with update KB 982018 installed<br/><br/>Windows Server 2008 R2* with update KB 982018 installed<br/><br/>All Windows versions from Windows 7 Server Pack 1 and later versions.<br/><br/>All Server versions from Server 2008 R2 Server Pack 1 and later versions.<br/><br/>*Except for Hyper-V. See the [Application support requirements for large-sector drives](#application-support-requirements-for-large-sector-drives) section.|
 |Advance Format, AF, 4K Native, 4Kn|4 KB|4 KB|All Windows versions from Windows 8 and later versions. All Server versions from Server 2012 and later versions.|
 |Other|Not 4 KB or 512 bytes|Not 4 KB or 512 bytes|Not Supported|
-|||||
-
+  
 To verify the kind of drive that you have, follow these steps:
 
 1. Install [KB 982018](https://support.microsoft.com/help/982018).
@@ -59,7 +58,6 @@ To verify the kind of drive that you have, follow these steps:
    |4096|4096|4K native|
    |512|4096|Advanced Format (also known as 512E)|
    |512|512|512-byte native|
-   ||||
 
 ## Specific requirements for Microsoft support by operating system version
 

@@ -52,9 +52,8 @@ The build process looks for any **ALL ALL** posting accounts for all payroll acc
 |FUTA Payable (CR)|ALL|ALL|FUTA|
 |W/Comp Tax Expense (DR)|ALL|ALL|ALL|
 |W/Comp Tax Payable (CR)|ALL|ALL|ALL|
-|||||
-
-You can also try to run the **check links** process against the Account Master file in the Financial series.
+  
+  You can also try to run the **check links** process against the Account Master file in the Financial series.
 
 > [!NOTE]
 > These payroll account types should have a **Job** value and a **Department** value of **ALL**. This condition makes sure that no departments or jobs are missed or are added later. Even if a job and a department are set up for all the listed payroll account types, the generic **ALL ALL** types must also exist.
