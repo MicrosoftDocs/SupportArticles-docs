@@ -379,6 +379,8 @@ If your SQL Server instance experiences heavy `SOS_CACHESTORE spinlock` contenti
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
+High CPU may result from spinlock contention on many other spinlock types, but SOS_CACHESTORE is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
+
 ## Step 9: Configure your virtual machine
 
 If you are using a virtual machine, ensure that you aren't overprovisioning CPUs and that they are configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
