@@ -20,16 +20,17 @@ The process to request access is relatively straight forward, you can initiate t
 
 1. Log into the [Azure Portal](https://portal.azure.com) and navigate to **Help + support**, then select **Create a new support request**.
 
-    :::image type="content" source="media/region-access-request-process/help-support.png" alt-text="Screenshot of New Support Request." border="false":::
+    :::image type="content" source="media/region-access-request-process/help-support.png" alt-text="Screenshot of New Support Request." border="true":::
 
-2. In the ***New support request** page, complete the following:
-
-    :::image type="content" source="media/region-access-request-process/increase-cpu-quota.png" alt-text="Screenshot of the New Support Request information under Basics tab." border="false":::
-
+2. In the **New support request** page, complete the following:
+1. 
     1. In **Issue Type**, select " **Service and subscription Limit (quotas)** ".  
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
     3. In **Quota type**, select **Compute-VM (core-vCPUs) subscription limit increases**.  
     4. Select **Next**.
+    
+    :::image type="content" source="media/region-access-request-process/increase-cpu-quota.png" alt-text="Screenshot of the New Support Request information under Basics tab." border="true":::
+
 
 ## Step 2: Provide problem details
 
