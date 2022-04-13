@@ -6,6 +6,11 @@
   - name: "Error: AllocationFailed or ZonalAllocationFailed"
     href: allocationfailed-or-zonalallocationfailed.md
 
+- name: Troubleshoot compute health
+  items:
+  - name: Resource Health shows Degraded state in VMSS
+    href: resource-health-degraded-state.md
+
 - name: Troubleshoot scaling errors
   items:
   - name: QuotaExceeded error when scaling virtual machine scale sets
@@ -23,5 +28,3 @@
   - name: VM extension provisioning errors
     href: vm-extension-provisioning-errors.md
 
-- name: Resource health state shows Degraded
-  href: resource-health-degraded-state.md
