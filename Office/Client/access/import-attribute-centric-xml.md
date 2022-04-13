@@ -6,6 +6,7 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
   - CI 111294
+  - CI 162681
   - CSSTroubleshoot
 search.appverid: 
   - MET150
@@ -217,4 +218,4 @@ This behavior is by design.
 
 ## References
 
-For additional information about persisting an ADO Recordset to XML, see [Persisting Records in XML Format](https://msdn2.microsoft.com/library/ms805790.aspx).
+For additional information about persisting an ADO Recordset to XML, see [Persisting records in XML format](/office/client-developer/access/desktop-database-reference/persisting-records-in-xml-format).
