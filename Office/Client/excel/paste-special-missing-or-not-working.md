@@ -7,7 +7,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 162524
 search.appverid: 
   - MET150
 appliesto: 
@@ -19,7 +21,7 @@ ms.date: 3/31/2022
 
 [!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
-If you have Skype installed, see [Text has incorrect format when using paste in Microsoft Office](https://support.microsoft.com/help/2697462) for more information. The **Paste Special** option can make the task of pasting text go more smoothly by letting you choose which formatting you want to keep (source or destination) or by stripping all the formatting and just pasting the text. If you are having issues with the **Paste Special** option, continue on to the resolutions below.
+The **Paste Special** option can make the task of pasting text go more smoothly by letting you choose which formatting you want to keep (source or destination) or by stripping all the formatting and just pasting the text. If you are having issues with the **Paste Special** option, continue on to the resolutions below.
 
 ##  Resolution
 
