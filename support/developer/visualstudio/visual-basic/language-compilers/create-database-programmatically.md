@@ -84,8 +84,6 @@ Programmers often need to create databases programmatically. This article descri
 
 ## References
 
-- [https://msdn2.microsoft.com/library/e80y5yhx(vs.71).aspx](https://msdn2.microsoft.com/library/e80y5yhx%28vs.71%29.aspx)
-
 - [How To Create a SQL Server Database Programmatically by Using ADO.NET and Visual C++ .NET](https://support.microsoft.com/help/307402)
 
 - [How To Create a SQL Server Database Programmatically by Using ADO.NET and Visual C# .NET](https://support.microsoft.com/help/307283)
