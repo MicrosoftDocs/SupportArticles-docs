@@ -297,17 +297,18 @@ ALTER TABLE dbo.T1  ADD IntProdID AS CONVERT (INT, ProdID);
 CREATE INDEX IndProdID_int ON dbo.T1 (IntProdID);
 ```
 
-In some cases, queries can't be rewritten easily to allow for SARGability. In those cases, see if the computed column with an index on it can help, or keep the query as it was with the awareness that it can lead to higher CPU scenarios.
+In some cases, queries can't be rewritten easily to allow for SARGability. In those cases, see if the computed column with an index on it can help, or else keep the query as it was with the awareness that it can lead to higher CPU scenarios.
 
 ## Step 7: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, you find that SQL Audit events cause:
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, using the following events may cause high CPU usage when you trace high SQL workloads:
 
-- High XML plans
-- Statement event level events
-- Log-in and log-out operations
-- Locks
-- Waits
+- Query plan XML events (`query_plan_profile`, `query_post_compilation_showplan`, `query_post_execution_plan_profile`, `query_post_execution_showplan`, `query_pre_execution_showplan`)
+- Statement-level events (`sql_statement_completed`, `sql_statement_starting`, `sp_statement_starting`, `sp_statement_completed`)
+- Log-in and log-out events (`login`, `process_login_finish`, `login_event`, `logout`)
+- Lock events (`lock_acquired`, `lock_cancel`, `lock_released`)
+- Wait evetns (`wait_info`, `wait_info_external`)
+- SQL Audit events (depending on the group audited and SQL Server activity in that group)
 
 Run the following queries to identify active XEvent or Server traces:
 
