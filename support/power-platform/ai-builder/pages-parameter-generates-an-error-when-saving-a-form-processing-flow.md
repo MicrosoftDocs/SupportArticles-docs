@@ -24,5 +24,8 @@ When saving a form processing flow with the **Pages** parameter specified, it me
 
 ## Resolution
 
-To solve this issue, go to your model's page in AI Builder, unpublish, and republish your model. To learn more, go to [Publish your model in AI Builder](/ai-builder/publish-model).
+To solve this issue, go to your model's page in AI Builder, unpublish, and republish your model. 
 
+## Resources
+
+To learn more, go to [Publish your model in AI Builder](/ai-builder/publish-model).
