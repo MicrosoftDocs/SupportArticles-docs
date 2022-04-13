@@ -49,3 +49,6 @@ To activate the actions, the administrator of the environment needs to perform t
     - CancelTraining
     - PublishAIConfiguration
     - UnpublishAIConfiguration
+
+## Resources
+[Administer AI Builder](https://docs.microsoft.com/ai-builder/administer).
