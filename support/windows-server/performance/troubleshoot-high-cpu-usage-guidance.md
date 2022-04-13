@@ -140,5 +140,6 @@ You can use Debug Diagnostic 2.0 version to troubleshoot this issue further. To 
 2. Select the **Processes** tab, right-click the worker process corresponding to the right application pool and select **Create Full Userdump**.
 3. Repeat the above step three times when the CPU is high
 4. Stop the Performance Monitor logging.
-5. Compress the Data using DebugDiag. To do so, Select **Tools** menu -> **Create Increment Cabinet File**. and send this file. If this file gets too big, just zip up the folder where the dumps were generated and send it to us.
-6. Send both the perfmon logs ( C:\Perflogs) and dumps to the workspace created for you.
+5. Compress the Data using DebugDiag. To do so, Select **Tools** menu -> **Create Increment Cabinet File**.
+
+We recommend that you keep the information that you have gathered handy in case you decide to contact Microsoft Support.
