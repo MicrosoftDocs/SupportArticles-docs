@@ -139,4 +139,4 @@ In the following steps, you create an .aspx page that contains a DropDownList co
 
 - [DropDownList Class](/dotnet/api/system.web.ui.webcontrols.dropdownlist)
 
-- [Welcome to the ASP.NET 2.0 quickstart Tutorial](http://quickstart.developerfusion.co.uk/quickstart/aspnet/)
+- [Tutorial: Get started with ASP.NET Core](https://docs.microsoft.com/aspnet/core/getting-started)
