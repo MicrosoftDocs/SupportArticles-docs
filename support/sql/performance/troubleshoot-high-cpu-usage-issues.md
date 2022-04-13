@@ -13,7 +13,7 @@ ms.author: v-jayaramanp
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides a procedure to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU usage that occur in SQL Server, the following are the most common causes:
+This article provides procedures to diagnose and fix issues that are caused by high CPU usage on a computer that's running Microsoft SQL Server. Although there are many possible causes of high CPU usage that occur in SQL Server, the following ones are the most common causes:
 
 - High logical reads that are caused by table or index scans because of the following conditions:
   - Out-of-date statistics
@@ -53,11 +53,11 @@ Use one of the following tools to check whether the SQL Server process is actual
       }
     ```
 
-If `% User Time` is consistently greater than 90 percent, this indicates that the SQL Server process is causing high CPU usage. However, if you notice that `% Privileged time` is consistently greater than 90 percent, this indicates that either antivirus software, other drivers, or another OS component on the computer are contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
+If `% User Time` is consistently greater than 90 percent, the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
 
 ## Step 2: Identify queries contributing to CPU usage
 
-If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort and hash operations, loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run this:
+If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
 
 ```sql
 DECLARE @init_sum_cpu_time int , @utilizedCpuCount int
@@ -73,7 +73,7 @@ SELECT CONVERT(DECIMAL(5,2), ((SUM(cpu_time) - @init_sum_cpu_time) /
 FROM sys.dm_exec_requests
 ```
 
-To identify the queries that are responsible for high-CPU activity currently, run the following:
+To identify the queries that are responsible for high-CPU activity currently, run the following statement:
 
 ```sql
 SELECT TOP 10 s.session_id,
@@ -103,7 +103,7 @@ WHERE r.session_id != @@SPID
 ORDER BY r.cpu_time DESC
 ```
 
-If queries aren't driving the CPU at this moment, but high CPU has happened in the recent past, you can look for historical CPU-bound queries. Run the following statement: 
+If queries aren't driving the CPU at this moment, but high CPU has happened, you can run the following statement to look for historical CPU-bound queries:
 
 ```sql
 SELECT TOP 10 st.text AS batch_text,
@@ -113,9 +113,9 @@ SELECT TOP 10 st.text AS batch_text,
                 ELSE qs.statement_end_offset
             END - qs.statement_start_offset) / 2) + 1) AS statement_text,
     (qs.total_worker_time/1000) / qs.execution_count    AS    avg_cpu_time_ms,
-	(qs.total_elapsed_time/1000) / qs.execution_count   AS    avg_elapsed_time_ms,
+    (qs.total_elapsed_time/1000) / qs.execution_count   AS    avg_elapsed_time_ms,
     qs.total_logical_reads / qs.execution_count  AS    avg_logical_reads,
-	(qs.total_worker_time/1000)     AS    cumulative_cpu_time_all_executions_ms,
+    (qs.total_worker_time/1000)     AS    cumulative_cpu_time_all_executions_ms,
     (qs.total_elapsed_time/1000)                 AS    cumulative_elapsed_time_all_executions_ms
 FROM   sys.dm_exec_query_stats qs
     CROSS APPLY sys.dm_exec_sql_text (sql_handle) st
@@ -124,7 +124,7 @@ ORDER  BY (qs.total_worker_time / qs.execution_count) DESC
 
 ## Step 3: Update statistics
 
-After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) of the tables that are used by these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database, as in the following example:
+After you identify the queries that have the highest CPU consumption, [update statistics](/sql/relational-databases/statistics/statistics#UpdateStatistics) of the tables that are used by these queries. You can use the `sp_updatestats` system stored procedure to update the statistics of all user-defined and internal tables in the current database. For example:
 
 ```sql
 exec sp_updatestats
@@ -168,7 +168,7 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
     :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
 
-1. Use the following query to check for missing indexes and apply any recommended indexes that have high improvement measure values. Start with the top 5 or 10 recommendations from the output that have the highest **improvement_measure** value. Those indexes have the most significant positive effect on performance. Decide whether you want to apply these indexes and make sure that performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results. 
+1. Use the following query to check for missing indexes and apply any recommended indexes that have high improvement measure values. Start with the top 5 or 10 recommendations from the output that have the highest **improvement_measure** value. Those indexes have the most significant positive effect on performance. Decide whether you want to apply these indexes and make sure that performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results.
 
     ```sql
     SELECT CONVERT (VARCHAR(30),
@@ -207,7 +207,7 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This hint helps balance the slight increase in compilation CPU usage with a more optimal performance for each query execution. For more information, see [Parameters and Execution Plan Reuse](/sql/relational-databases/query-processing-architecture-guide#PlanReuse), [Parameter Sensitivity](/sql/relational-databases/query-processing-architecture-guide#ParamSniffing) and [RECOMPILE query hint](/sql/t-sql/queries/hints-transact-sql-query/#recompile).
 
-  Here's an example of how you can apply this to your query.
+  Here's an example of how you can apply this hint to your query.
 
   ```sql
   SELECT * FROM Person.Person 
@@ -247,9 +247,9 @@ If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP,
 
 ## Step 6: Investigate and resolve Sargability issues
 
-A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can take advantage of an index seek to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and high-CPU usage. Consider the following query against the AdventureWorks database where every ProductNumber must be retrieved and the SUBSTRING() function applied to it, before it's compared to a string literal value. As you can see all the rows of the table have to be fetched first, then the function applied, and only then a comparison can be made. Fetching all rows from the table means a table or index scan and thus higher CPU usage. 
+A predicate in a query is considered sargable (Search ARGument-able) when SQL Server engine can use an index seek to speed up the execution of the query. Many query designs prevent sargability and lead to table or index scans and high-CPU usage. Consider the following query against the AdventureWorks database where every `ProductNumber` must be retrieved and the `SUBSTRING()` function applied to it, before it's compared to a string literal value. As you can see, you have to fetch all the rows of the table first, and then apply the function before you can make a comparison. Fetching all rows from the table means a table or index scan, which leads to higher CPU usage.
 
-```sql 
+```sql
 SELECT ProductID, Name, ProductNumber
 FROM [Production].[Product]
 WHERE SUBSTRING(ProductNumber, 0, 4) =  'HN-'
@@ -257,7 +257,7 @@ WHERE SUBSTRING(ProductNumber, 0, 4) =  'HN-'
 
 Applying any function or computation on the column(s) in the search predicate generally makes the query non-sargable and leads to higher CPU consumption. Solutions typically involve rewriting the queries in a creative way to make the sargable. A possible solution to this example is this rewrite where the function is removed from the query predicate, another column is searched and the same results are achieved:
 
-```sql 
+```sql
 SELECT ProductID, Name, ProductNumber
 FROM [Production].[Product]
 WHERE Name like  'Hex%'
@@ -271,7 +271,7 @@ FROM [Sales].[SalesOrderDetail]
 WHERE UnitPrice * 0.10 > 300
 ```
 
-Here's a possible less-intuitive, but sargable, rewrite of the query in which the computation is moved to the other side of the predicate.
+Here's a possible less-intuitive but sargable rewrite of the query, in which the computation is moved to the other side of the predicate.
 
 ```sql
 SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
@@ -279,29 +279,35 @@ FROM [Sales].[SalesOrderDetail]
 WHERE UnitPrice > 300/0.10
 ```
 
-Sargability applies not only to WHERE clauses, but also to JOINs, HAVING, GROUP BY and ORDER BY clauses. Frequent occurrences of sargability prevention in queries involve CONVERT(), CAST(), ISNULL(), COALESCE() functions used in WHERE or JOIN clauses which lead to scan of columns. In the data-type conversion cases (CONVERT or CAST), the solution may be to ensure you're comparing the same data types. Here's an example where the T1.ProdID column is explicitly converted to the INT data type in a JOIN. The conversion defeats the use of an index on the join column. The same issue occurs with [implicit conversion](/sql/t-sql/data-types/data-type-conversion-database-engine#implicit-and-explicit-conversion) where the data types are different and SQL Server converts one of them to perform the join. 
+Sargability applies not only to `WHERE` clauses, but also to `JOINs`, `HAVING`, `GROUP BY` and `ORDER BY` clauses. Frequent occurrences of sargability prevention in queries involve `CONVERT()`, `CAST()`, `ISNULL()`, `COALESCE()` functions used in `WHERE` or `JOIN` clauses that lead to scan of columns. In the data-type conversion cases (`CONVERT` or `CAST`), the solution may be to ensure you're comparing the same data types. Here's an example where the `T1.ProdID` column is explicitly converted to the `INT` data type in a `JOIN`. The conversion defeats the use of an index on the join column. The same issue occurs with [implicit conversion](/sql/t-sql/data-types/data-type-conversion-database-engine#implicit-and-explicit-conversion) where the data types are different and SQL Server converts one of them to perform the join.
 
-```sql 
+```sql
 SELECT T1.ProdID, T1.ProdDesc
 FROM T1 JOIN T2 
 ON CONVERT(int, T1.ProdID) = T2.ProductID
 WHERE t2.ProductID BETWEEN 200 AND 300
 ```
 
-To avoid a scan of the T1 table, you can change the underlying data type of the ProdID column after proper planning and design, and then join the two columns without using the convert function `ON T1.ProdID = T2.ProductID`.
+To avoid a scan of the `T1` table, you can change the underlying data type of the `ProdID` column after proper planning and design, and then join the two columns without using the convert function `ON T1.ProdID = T2.ProductID`.
 
-Another solution is to create a computed column in T1 that uses the same CONVERT() function and then create an index on it. This will allow the Query optimizer to use that index without the need for you to change your query.
+Another solution is to create a computed column in `T1` that uses the same `CONVERT()` function and then create an index on it. This will allow the query optimizer to use that index without the need for you to change your query.
 
 ```sql
 ALTER TABLE dbo.T1  ADD IntProdID AS CONVERT (INT, ProdID);
 CREATE INDEX IndProdID_int ON dbo.T1 (IntProdID);
 ```
 
-In some cases, queries cannot be re-written easily to allow for sargability. In those cases, see if the computed column with an index on it can help or simply keep  the query as is with the awareness that it can lead to higher CPU scenarios.
+In some cases, queries can't be rewritten easily to allow for sargability. In those cases, see if the computed column with an index on it can help, or keep the query as it was with the awareness that it can lead to higher CPU scenarios.
 
 ## Step 7: Disable heavy tracing
 
-Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, you find that SQL Audit events cause high XML plans, statement event level events, log-in and log-out operations, locks, and waits.
+Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent tracing that affects the performance of SQL Server and causes high CPU usage. For example, you find that SQL Audit events cause:
+
+- High XML plans
+- Statement event level events
+- Log-in and log-out operations
+- Locks
+- Waits
 
 Run the following queries to identify active XEvent or Server traces:
 
@@ -371,20 +377,21 @@ INNER JOIN sys.trace_xe_event_map xemap
   ON evt.event_name = xemap.xe_event_name
 GO
 ```
-## Step 8: Fix `SOS_CACHESTORE spinlock` contention
 
-If your SQL Server instance experiences heavy `SOS_CACHESTORE spinlock` contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
+## Step 8: Fix SOS_CACHESTORE spinlock contention
+
+If your SQL Server instance experiences heavy `SOS_CACHESTORE` spinlock contention or you notice that your query plans are often removed on unplanned query workloads, review the following article and enable trace flag `T174` by using the `DBCC TRACEON (174, -1)` command:
 
 [FIX: SOS_CACHESTORE spinlock contention on ad hoc SQL Server plan cache causes high CPU usage in SQL Server](https://support.microsoft.com/topic/kb3026083-fix-sos-cachestore-spinlock-contention-on-ad-hoc-sql-server-plan-cache-causes-high-cpu-usage-in-sql-server-798ca4a5-3813-a3d2-f9c4-89eb1128fe68).
 
 If the high-CPU condition is resolved by using `T174`, enable it as a [startup parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab) by using SQL Server Configuration Manager.
 
 > [!NOTE]
-> High CPU may result from spinlock contention on many other spinlock types, but SOS_CACHESTORE is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
+> High CPU may result from spinlock contention on many other spinlock types, but `SOS_CACHESTORE` is a commonly-reported one. For more information on spinlocks, see [Diagnose and resolve spinlock contention on SQL Server](/sql/relational-databases/diagnose-resolve-spinlock-contention)
 
 ## Step 9: Configure your virtual machine
 
-If you are using a virtual machine, ensure that you aren't overprovisioning CPUs and that they are configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
+If you're using a virtual machine, ensure that you aren't overprovisioning CPUs and that they're configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
 
 ## Step 10: Scale up SQL Server
 
