@@ -25,8 +25,6 @@
 
 - name: Cluster creation and deployment issues
   items:
-  - name: Errors when mounting file share
-    href: fail-to-mount-azure-file-share.md
   - name: General troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
   - name: InvalidParameter error code
@@ -116,3 +114,6 @@
 
 - name: Errors when pulling images from ACR to AKS cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
+
+- name: Errors when mounting file share
+  href: fail-to-mount-azure-file-share.md
