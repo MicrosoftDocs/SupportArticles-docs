@@ -32,3 +32,6 @@ The document you're trying to select fields from is too large.
 ## Resolution for cause 2
 
 If it’s a PDF with multiple pages, split the PDF documents with only the pages you need the model to recognize and upload the reduced document that has been split instead. If it’s an image, reduce its dimensions and upload it to your model to replace the previous image uploaded.
+
+## Resources
+[Requirements and limitations for a form processing model](https://docs.microsoft.com/ai-builder/form-processing-model-requirements)
