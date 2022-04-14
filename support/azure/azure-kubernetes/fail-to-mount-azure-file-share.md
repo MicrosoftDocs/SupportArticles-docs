@@ -78,7 +78,9 @@ telnet <storage-account-name>.file.core.windows.net 445
 - [Cause 4: FIPS enabled node pool is used](#fipsnodepool)
 
 > [!NOTE]
-> Cause 1, 2 and 4 are applicable to both public and private storage account scenarios. Cause 3 is applicable to public scenario only.
+>
+> - Cause 1, 2 and 4 are applicable to both public and private storage account scenarios.
+> - Cause 3 is applicable to public scenario only.
 
 ### <a id="filesharenotexist"></a>Cause 1: File share doesn't exist
 
@@ -137,8 +139,7 @@ To add the route in the route table, follow the steps in [Create a route](/azure
 - **Address prefix**: \<storage-account's-public-IP>/32
 - **Next hop type**：Internet
 
-> [!NOTE]
-> This route will send all the traffics between the AKS cluster and storage account through public Internet.
+This route will send all the traffics between the AKS cluster and storage account through public Internet.
 
 After you add the route, test the connectivity by using the `nc` or `telnet` command and perform the mounting operation again.
 
@@ -180,10 +181,9 @@ To create a pod that can be scheduled on a FIPS-enabled node, follow these steps
       protocol: nfs 
     ```
     
-    > [!NOTE]
-    >
-    > - The SKU is set to Premium_LRS in the YAML file because Premium SKU is required for NFS. For more information, see [Dynamic Provision](https://github.com/kubernetes-sigs/azurefile-csi-driver/blob/master/docs/driver-parameters.md#dynamic-provision).
-    > - Because of Premium SKU, the minimum size of the file share is 100GB. For more information, see [Create a storage class](/azure/aks/azure-files-dynamic-pv#create-a-storage-class).
+    The SKU is set to Premium_LRS in the YAML file because Premium SKU is required for NFS. For more information, see [Dynamic Provision](https://github.com/kubernetes-sigs/azurefile-csi-driver/blob/master/docs/driver-parameters.md#dynamic-provision).
+   
+    Because of Premium SKU, the minimum size of the file share is 100GB. For more information, see [Create a storage class](/azure/aks/azure-files-dynamic-pv#create-a-storage-class).
 
 2. Create a PVC that references the custom StorageClass *azurefile-sc-fips*.
 
@@ -394,4 +394,4 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 - If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-- if the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+- If the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
