@@ -28,14 +28,14 @@ For more information about the related properties in WMI, see [Win32_TerminalSer
 
 ## Fair Share CPU Scheduling
 
-Fair Share CPU Scheduling dynamically distributes processor time across all Remote Desktop Services sessions on the same RD Session Host server, based on the number of sessions and the demand for processor time within each session. This process creates a consistent user experience across all of the active sessions, while sessions are being created and deleted dynamically. This feature builds on the Dynamic Fair Share Scheduling technology (DFSS) that was part of Windows Server 2008 R2.
+Fair Share CPU Scheduling dynamically distributes processor time across all sessions on the same server, based on the number of sessions and the demand for processor time within each session. This process creates a consistent user experience across all of the active sessions, while sessions are being created and deleted dynamically. This feature builds on the Dynamic Fair Share Scheduling technology (DFSS) that was part of Windows Server.
 
 ## Dynamic Disk Fair Share
 
-When disk-intensive processes run in one or more Remote Desktop sessions, they can starve non-disk intensive processes and prevent them from ever accessing disk resources. To fix this issue, the Dynamic Disk Fair Share feature balances disk access among the different sessions by balancing disk IO and throttling excess disk usage.
+When disk-intensive processes run in one or more sessions, they can starve non-disk intensive processes and prevent them from ever accessing disk resources. To fix this issue, the Dynamic Disk Fair Share feature balances disk access among the different sessions by balancing disk IO and throttling excess disk usage.
 
 ## Dynamic Network Fair Share
 
-When bandwidth-intensive applications run in one or more Remote Desktop sessions, they can starve applications in other sessions of bandwidth. To equalize network consumption among the sessions, the Network Fair Share feature uses a round-robin approach to allocate bandwidth for each session.
+When bandwidth-intensive applications run in one or more sessions, they can starve applications in other sessions of bandwidth. To equalize network consumption among the sessions, the Network Fair Share feature uses a round-robin approach to allocate bandwidth for each session.
 
 In a centralized computing scenario, the Dynamic Network Fair Share feature tries to fairly distribute network interface bandwidth load among the sessions.
