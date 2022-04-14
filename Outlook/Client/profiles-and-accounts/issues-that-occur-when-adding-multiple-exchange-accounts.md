@@ -32,7 +32,7 @@ In Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook 
 This article describes the following two scenarios in which this feature can cause unexpected behavior, and provides alternate steps that you can use to set up the scenario.
 
 1. [You add both the manager and delegate mailbox accounts to the same Outlook profile](#scenario-1-the-manager-and-delegate-mailboxes-are-added-to-the-same-profile).
-2. [You manually add another mailbox account, and the Exchange Server 2010 Service Pack 1 (SP1) Auto Mapping feature adds it at the same time](#scenario-2-the-mailbox-that-you-add-is-also-added-by-exchange-server-2010-sp1-auto-mapping).
+2. [You manually add another mailbox account, and the Exchange Server 2010 Service Pack 1 (SP1) Auto Mapping feature adds it at the same time](#scenario-2-the-mailbox-that-you-add-manually-is-also-added-by-exchange-server-2010-sp1-auto-mapping).
 
 ## Scenario 1: The manager and delegate mailboxes are added to the same profile
 
@@ -96,7 +96,7 @@ The following steps demonstrate two problems that may occur if manager and deleg
 14. Enter the name of the manager's mailbox, and then select **OK**.
 15. In the manager's calendar, open the appointment created in step 2.
 
-    The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox. 
+    The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox.
 
 1. Right-click anywhere on the manager's calendar and select **New Meeting Request**.
 1. Examine the account in the **From** field.
