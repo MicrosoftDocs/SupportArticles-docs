@@ -15,7 +15,7 @@ ms.technology: windows-server-performance
 ---
 # High CPU usage troubleshooting guidance
 
-This article helps you identify the cause of sustained high CPU. It's important to keep in mind that it is normal for CPU usage to increase as a process or an application serves requests. However, if you consistently see CPU remain at a high level (in the area of 80% or greater) for prolonged periods, the performance of your system or application will suffer. For that reason, it's important to understand the cause of sustained high CPU so that it can be addressed and corrected if possible.
+This article helps you identify the cause of sustained high CPU. It's important to keep in mind that it's normal for CPU usage to increase as a process or an application serves requests. However, if you consistently see CPU remain at a high level (in the area of 80% or greater) for prolonged periods, the performance of your system or application will suffer. For that reason, it's important to understand the cause of sustained high CPU so that it can be addressed and corrected if possible.
 
 ## Troubleshooting tools
 
@@ -24,11 +24,9 @@ This article helps you identify the cause of sustained high CPU. It's important 
 Use Task Manager to view CPU consumption.
 
 1. Select Start and search for Task Manager to start Task Manager.
-2. If you see a single list of tasks in the Task Manager window, click the **More details** arrow to show the expanded view.
+2. If you see a single list of tasks in the Task Manager window, select the **More details** arrow to show the expanded view.
 3. Select the **Processes** tab.
 4. Select the **CPU** column header to sort the list by CPU usage. Ensure the arrow that appears on the header points down to sort the data from highest to lowest.
-
-:::image type="content" source="media/troubleshoot-high-cpu-usage-guidance/task-manager-processes.png" alt-text="Screenshot of the task manager.":::
 
 If the process can be stopped, or related service can be disabled, stop the process or the service. Then, check whether it mitigates the issue.
 
@@ -50,7 +48,7 @@ The processes consuming more resources display at the top of the list. If any of
 
 ### Process Explorer
 
-The [Process Explorer](/sysinternals/downloads/process-explorer) tool gives you a complete overview on what processes are currently running in your computer along with the details on who invoked it and how much system resources it is consuming.
+The [Process Explorer](/sysinternals/downloads/process-explorer) tool gives you a complete overview on what processes are currently running in your computer along with the details on who invoked it and how much system resources it's consuming.
 
 If you want to verify a process that is an operating system related process, for example, System, follow these steps:
 
@@ -68,7 +66,7 @@ If you want to verify a process that is an operating system related process, for
 
 ## Common troubleshooting scenarios
 
-This section introduce the scenarios of different processes that uses high CPU usage.
+This section introduces the scenarios of different processes that use high CPU usage.
 
 ### Uniquely named singular Microsoft process
 
@@ -83,7 +81,7 @@ This section introduce the scenarios of different processes that uses high CPU u
 If a svchost process consumes high CPU usage, and the svchost process contains more than one service, you need to break each service out to run in its own svchost process to determine which service is causing the high CPU usage. To do so, follow these step:
 
 1. Open command prompted with elevated privileges.
-2. Break each service out into its own svchost process if it is a shared svchost process by running following command:
+2. Break out each service into its own svchost process if it's a shared svchost process by running following command:
 
    ```console
    sc config <service name> type= ow
@@ -118,7 +116,7 @@ To troubleshoot this issue, follow these steps:
 
 ### Third party application process
 
-If the process that is identified as the cause is third party, you needs to contact the application vendor to understand why respective process is causing high CPU on the computer.
+If the process that is identified as the cause is third party, you need to contact the application vendor to understand why respective process is causing high CPU on the computer.
 
 ## Data Collection
 
@@ -131,7 +129,7 @@ You can use Debug Diagnostic 2.0 version to troubleshoot this issue further. To 
    > [!Note]
    > Please uninstall all other versions of Debug Diagnostic tool before installing the 2.0 version.
 
-2. Click Start, search *Performance Monitor*, and run it as administrator.
+2. Select Start, search *Performance Monitor*, and run it as administrator.
 3. Use Performance Monitor to collect the performance counter log and to start the logging.
 
 ### When the issue happens
@@ -142,4 +140,4 @@ You can use Debug Diagnostic 2.0 version to troubleshoot this issue further. To 
 4. Stop the Performance Monitor logging.
 5. Compress the Data using DebugDiag. To do so, Select **Tools** menu -> **Create Increment Cabinet File**.
 
-We recommend that you keep the information that you have gathered handy in case you decide to contact Microsoft Support.
+We recommend that you keep the information that you've gathered handy in case you decide to contact Microsoft Support.
