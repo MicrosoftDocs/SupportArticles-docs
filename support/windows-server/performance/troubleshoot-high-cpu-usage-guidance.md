@@ -78,7 +78,7 @@ This section introduces the scenarios of different processes that use high CPU u
 
 ### Svchost process
 
-If a svchost process consumes high CPU usage, and the svchost process contains more than one service, you need to break each service out to run in its own svchost process to determine which service is causing the high CPU usage. To do so, follow these step:
+If a svchost process consumes high CPU usage, and the svchost process contains more than one service, you need to break each service out to run in its own svchost process to determine which service is causing the high CPU usage. To do so, follow these steps:
 
 1. Open command prompted with elevated privileges.
 2. Break out each service into its own svchost process if it's a shared svchost process by running following command:
