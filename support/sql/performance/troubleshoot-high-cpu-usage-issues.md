@@ -35,22 +35,21 @@ Use one of the following tools to check whether the SQL Server process is actual
   
 - You can use the following PowerShell script to collect the counter data over a 60-second span:
 
-  ```PowerShell
-      $serverName = "YourServerName"
-      $Counters = @(
-        ("\\$serverName" +"\Process(sqlservr*)\% User Time"),
-        ("\\$serverName" +"\Process(sqlservr*)\% Privileged Time")
-      )
-      Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
-          $_.CounterSamples | ForEach {
-              [pscustomobject]@{
-                  TimeStamp = $_.TimeStamp
-                  Path = $_.Path
-                  Value = ([Math]::Round($_.CookedValue, 3))
-              } 
-              Start-Sleep -s 2
-          }
-      }
+    ```powershell
+    $serverName = "YourServerName"
+    $Counters = @ (
+        ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
+    )
+    Get - Counter - Counter $Counters - MaxSamples 30 | ForEach {
+        $_.CounterSamples | ForEach {
+            [pscustomobject]@ {
+                TimeStamp = $_.TimeStamp
+                Path = $_.Path
+                Value = ([Math]::Round($_.CookedValue, 3))
+            }
+            Start - Sleep - s 2
+        }
+    }
     ```
 
 If `% User Time` is consistently greater than 90 percent, the SQL Server process is causing high CPU usage. However, if `% Privileged time` is consistently greater than 90 percent, your antivirus software, other drivers, or another OS component on the computer is contributing to high CPU usage. You should work with your system administrator to analyze the root cause of this behavior.
@@ -60,16 +59,16 @@ If `% User Time` is consistently greater than 90 percent, the SQL Server process
 If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
 
 ```sql
-DECLARE @init_sum_cpu_time int , @utilizedCpuCount int
+DECLARE@ init_sum_cpu_time int, @utilizedCpuCount int
 
 --get CPU count used by SQL Server
-SELECT @utilizedCpuCount = COUNT(*) FROM sys.dm_os_schedulers WHERE status = 'VISIBLE ONLINE'
+SELECT@ utilizedCpuCount = COUNT( * ) FROM sys.dm_os_schedulers WHERE status = 'VISIBLE ONLINE'
 
 --calculate the CPU usage by queries over a 5 sec interval
-SELECT @init_sum_cpu_time  = SUM(cpu_time) FROM sys.dm_exec_requests
+SELECT@ init_sum_cpu_time = SUM(cpu_time) FROM sys.dm_exec_requests
 WAITFOR DELAY '00:00:05'
-SELECT CONVERT(DECIMAL(5,2), ((SUM(cpu_time) - @init_sum_cpu_time) /
-       (@utilizedCpuCount * 5000.00))*100) as [CPU from Queries as Percent of Total CPU Capacity] 
+SELECT CONVERT(DECIMAL(5, 2), ((SUM(cpu_time) - @init_sum_cpu_time) /
+    (@utilizedCpuCount * 5000.00)) * 100) as[CPU from Queries as Percent of Total CPU Capacity]
 FROM sys.dm_exec_requests
 ```
 
@@ -107,19 +106,15 @@ If queries aren't driving the CPU at this moment, but high CPU has happened, you
 
 ```sql
 SELECT TOP 10 st.text AS batch_text,
-      SUBSTRING(st.TEXT, (qs.statement_start_offset / 2) + 1,
-           ((CASE qs.statement_end_offset
-                WHEN -1 THEN DATALENGTH(st.TEXT)
-                ELSE qs.statement_end_offset
-            END - qs.statement_start_offset) / 2) + 1) AS statement_text,
-    (qs.total_worker_time/1000) / qs.execution_count    AS    avg_cpu_time_ms,
-    (qs.total_elapsed_time/1000) / qs.execution_count   AS    avg_elapsed_time_ms,
-    qs.total_logical_reads / qs.execution_count  AS    avg_logical_reads,
-    (qs.total_worker_time/1000)     AS    cumulative_cpu_time_all_executions_ms,
-    (qs.total_elapsed_time/1000)                 AS    cumulative_elapsed_time_all_executions_ms
-FROM   sys.dm_exec_query_stats qs
-    CROSS APPLY sys.dm_exec_sql_text (sql_handle) st
-ORDER  BY (qs.total_worker_time / qs.execution_count) DESC
+    SUBSTRING(st.TEXT, (qs.statement_start_offset / 2) + 1, ((CASE qs.statement_end_offset WHEN - 1 THEN DATALENGTH(st.TEXT) ELSE qs.statement_end_offset END - qs.statement_start_offset) / 2) + 1) AS statement_text,
+    (qs.total_worker_time / 1000) / qs.execution_count AS avg_cpu_time_ms,
+    (qs.total_elapsed_time / 1000) / qs.execution_count AS avg_elapsed_time_ms,
+    qs.total_logical_reads / qs.execution_count AS avg_logical_reads,
+    (qs.total_worker_time / 1000) AS cumulative_cpu_time_all_executions_ms,
+    (qs.total_elapsed_time / 1000) AS cumulative_elapsed_time_all_executions_ms
+FROM sys.dm_exec_query_stats qs
+CROSS APPLY sys.dm_exec_sql_text(sql_handle) st
+ORDER BY(qs.total_worker_time / qs.execution_count) DESC
 ```
 
 ## Step 3: Update statistics
@@ -143,24 +138,22 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
     ```sql
     -- Captures the Total CPU time spent by a query along with the query plan and total executions
-    SELECT 
-           qs_cpu.total_worker_time/1000 AS total_cpu_time_ms,
-           q.[text],
-           p.query_plan,
-           qs_cpu.execution_count,
-           q.dbid,
-           q.objectid,
-           q.encrypted AS text_encrypted
+    SELECT
+        qs_cpu.total_worker_time / 1000 AS total_cpu_time_ms,
+        q.[text],
+        p.query_plan,
+        qs_cpu.execution_count,
+        q.dbid,
+        q.objectid,
+        q.encrypted AS text_encrypted
     FROM
-      (SELECT TOP 500 qs.plan_handle,
-                  qs.total_worker_time,
-                  qs.execution_count
-       FROM sys.dm_exec_query_stats qs
-       ORDER BY qs.total_worker_time DESC) AS qs_cpu 
-       CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
-       CROSS APPLY sys.dm_exec_query_plan (plan_handle) p
-      WHERE p.query_plan.exist('declare namespace 
-       qplan="http://schemas.microsoft.com/sqlserver/2004/07/showplan";
+        (SELECT TOP 500 qs.plan_handle,
+            qs.total_worker_time,
+            qs.execution_count FROM sys.dm_exec_query_stats qs ORDER BY qs.total_worker_time DESC) AS qs_cpu
+    CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+    CROSS APPLY sys.dm_exec_query_plan(plan_handle) p
+    WHERE p.query_plan.exist('declare namespace 
+            qplan = "http://schemas.microsoft.com/sqlserver/2004/07/showplan";
             //qplan:MissingIndexes')=1
     ```
 
@@ -171,21 +164,17 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 1. Use the following query to check for missing indexes and apply any recommended indexes that have high improvement measure values. Start with the top 5 or 10 recommendations from the output that have the highest **improvement_measure** value. Those indexes have the most significant positive effect on performance. Decide whether you want to apply these indexes and make sure that performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results.
 
     ```sql
-    SELECT CONVERT (VARCHAR(30),
-        GETDATE(),
-        126) AS runtime,
+    SELECT CONVERT(VARCHAR(30), GETDATE(), 126) AS runtime,
         mig.index_group_handle,
         mid.index_handle,
-        CONVERT (DECIMAL (28, 1),
-                migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) AS improvement_measure,
-                'CREATE INDEX missing_index_' + CONVERT (VARCHAR, mig.index_group_handle) + '_' + CONVERT (VARCHAR, mid.index_handle) 
-                + ' ON ' + mid.statement + ' (' + ISNULL (mid.equality_columns,
-                '') + CASE WHEN mid.equality_columns IS NOT NULL
-                            AND mid.inequality_columns IS NOT NULL THEN ','
-                        ELSE ''
-                      END + ISNULL (mid.inequality_columns,
-                    '') + ')' + ISNULL (' INCLUDE (' + mid.included_columns + ')',
-                    '') AS create_index_statement,
+        CONVERT(DECIMAL(28, 1), migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) AS improvement_measure,
+        'CREATE INDEX missing_index_' + CONVERT(VARCHAR, mig.index_group_handle) + '_' + CONVERT(VARCHAR, mid.index_handle) + ' ON ' + mid.statement + ' (' + ISNULL(mid.equality_columns,
+            '') + CASE WHEN mid.equality_columns IS NOT NULL
+    AND mid.inequality_columns IS NOT NULL THEN ','
+    ELSE ''
+    END + ISNULL(mid.inequality_columns,
+            '') + ')' + ISNULL(' INCLUDE (' + mid.included_columns + ')',
+            '') AS create_index_statement,
         migs.*,
         mid.database_id,
         mid.[object_id]
@@ -260,7 +249,7 @@ Applying any function or computation on the column(s) in the search predicate ge
 ```sql
 SELECT ProductID, Name, ProductNumber
 FROM [Production].[Product]
-WHERE Name like  'Hex%'
+WHERE Name LIKE  'Hex%'
 ```
 
 Here's another example, where a sales manager may want to give 10% sales commission on large orders and wants to see which orders will have commission greater than $300. Here's the logical, but non-sargable way to do it.
@@ -314,68 +303,64 @@ Run the following queries to identify active XEvent or Server traces:
 
 ```sql
 PRINT '--Profiler trace summary--'
-SELECT traceid, property, CONVERT (VARCHAR(1024), value) AS value FROM :: fn_trace_getinfo(default)
+SELECT traceid, property, CONVERT(VARCHAR(1024), value) AS value FROM::fn_trace_getinfo(
+    default)
 GO
 PRINT '--Trace event details--'
-      SELECT trace_id,
-            status,
-            CASE WHEN row_number = 1 THEN path ELSE NULL end AS path,
-            CASE WHEN row_number = 1 THEN max_size ELSE NULL end AS max_size,
-            CASE WHEN row_number = 1 THEN start_time ELSE NULL end AS start_time,
-            CASE WHEN row_number = 1 THEN stop_time ELSE NULL end AS stop_time,
-            max_files, 
-            is_rowset, 
-            is_rollover,
-            is_shutdown,
-            is_default,
-            buffer_count,
-            buffer_size,
-            last_event_time,
-            event_count,
-            trace_event_id, 
-            trace_event_name, 
-            trace_column_id,
-            trace_column_name,
-            expensive_event   
-      FROM 
-            (SELECT t.id AS trace_id, 
-                  row_number() over (PARTITION BY t.id order by te.trace_event_id, tc.trace_column_id) AS row_number, 
-                  t.status, 
-                  t.path, 
-                  t.max_size, 
-                  t.start_time,
-                  t.stop_time, 
-                  t.max_files, 
-                  t.is_rowset, 
-                  t.is_rollover,
-                  t.is_shutdown,
-                  t.is_default,
-                  t.buffer_count,
-                  t.buffer_size,
-                  t.last_event_time,
-                  t.event_count,
-                  te.trace_event_id, 
-                  te.name AS trace_event_name, 
-                  tc.trace_column_id,
-                  tc.name AS trace_column_name,
-                  CASE WHEN te.trace_event_id in (23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180) 
-                  THEN CAST(1 as bit) ELSE CAST(0 AS BIT) END AS expensive_event
-            FROM sys.traces t 
-                  CROSS APPLY ::fn_trace_geteventinfo(t .id) AS e 
-                  JOIN sys.trace_events te ON te.trace_event_id = e.eventid 
-                  JOIN sys.trace_columns tc ON e.columnid = trace_column_id) AS x
+SELECT trace_id,
+status,
+CASE WHEN row_number = 1 THEN path ELSE NULL end AS path,
+    CASE WHEN row_number = 1 THEN max_size ELSE NULL end AS max_size,
+    CASE WHEN row_number = 1 THEN start_time ELSE NULL end AS start_time,
+    CASE WHEN row_number = 1 THEN stop_time ELSE NULL end AS stop_time,
+    max_files,
+    is_rowset,
+    is_rollover,
+    is_shutdown,
+    is_default,
+    buffer_count,
+    buffer_size,
+    last_event_time,
+    event_count,
+    trace_event_id,
+    trace_event_name,
+    trace_column_id,
+    trace_column_name,
+    expensive_event
+FROM
+    (SELECT t.id AS trace_id,
+     row_number() over(PARTITION BY t.id order by te.trace_event_id, tc.trace_column_id) AS row_number,
+     t.status,
+     t.path,
+     t.max_size,
+     t.start_time,
+     t.stop_time,
+     t.max_files,
+     t.is_rowset,
+     t.is_rollover,
+     t.is_shutdown,
+     t.is_default,
+     t.buffer_count,
+     t.buffer_size,
+     t.last_event_time,
+     t.event_count,
+     te.trace_event_id,
+     te.name AS trace_event_name,
+     tc.trace_column_id,
+     tc.name AS trace_column_name,
+     CASE WHEN te.trace_event_id in (23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180) THEN CAST(1 as bit) ELSE CAST(0 AS BIT) END AS expensive_event FROM sys.traces t CROSS APPLY::fn_trace_geteventinfo(t.id) AS e JOIN sys.trace_events te ON te.trace_event_id = e.eventid JOIN sys.trace_columns tc ON e.columnid = trace_column_id) AS x
 GO
 PRINT '--XEvent Session Details--'
-SELECT sess.NAME 'session_name', event_name,xe_event_name, trace_event_id,
-CASE
- WHEN xemap.trace_event_id IN ( 23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180 )
- THEN Cast(1 AS BIT) ELSE Cast(0 AS BIT)
+SELECT sess.NAME 'session_name', event_name, xe_event_name, trace_event_id,
+    CASE WHEN xemap.trace_event_id IN(23, 24, 40, 41, 44, 45, 51, 52, 54, 68, 96, 97, 98, 113, 114, 122, 146, 180) 
+    THEN Cast(1 AS BIT)
+ELSE Cast(0 AS BIT)
 END AS expensive_event
 FROM sys.dm_xe_sessions sess
-  JOIN sys.dm_xe_session_events evt
-  ON sess.address = evt.event_session_address
+JOIN sys.dm_xe_session_events evt
+ON sess.address = evt.event_session_address
 INNER JOIN sys.trace_xe_event_map xemap
-  ON evt.event_name = xemap.xe_event_name
+ON evt.event_name = xemap.xe_event_name
 GO
 ```
 
@@ -402,20 +387,16 @@ If individual query instances are using little CPU capacity, but the overall wor
 -- Shows queries where Max and average CPU time exceeds 200 ms and executed more than 1000 times
 DECLARE @cputime_threshold_microsec INT = 200*1000
 DECLARE @execution_count INT = 1000
-
-SELECT 
-     qs.total_worker_time/1000 total_cpu_time_ms,
+SELECT qs.total_worker_time/1000 total_cpu_time_ms,
        qs.max_worker_time/1000 max_cpu_time_ms,
        (qs.total_worker_time/1000)/execution_count average_cpu_time_ms,
        qs.execution_count,
-     q.[text]
-FROM
-   sys.dm_exec_query_stats qs
-   CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
-WHERE  (qs.total_worker_time/execution_count > @cputime_threshold_microsec  
-       OR        qs.max_worker_time > @cputime_threshold_microsec )
-       AND execution_count > @execution_count
-ORDER BY qs.total_worker_time DESC 
+       q.[text]
+FROM sys.dm_exec_query_stats qs CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
+WHERE (qs.total_worker_time/execution_count > @cputime_threshold_microsec
+        OR qs.max_worker_time > @cputime_threshold_microsec )
+        AND execution_count > @execution_count
+ORDER BY  qs.total_worker_time DESC 
 OPTION (RECOMPILE)
 ```
 
