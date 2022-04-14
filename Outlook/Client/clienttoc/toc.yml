@@ -545,7 +545,7 @@
           href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
         - name: How to control AutoDiscover via Group Policy
           href: ../profiles-and-accounts/how-to-control-autodiscover-via-group-policy.md
-        - name: Issues occur when adding multiple accounts in a profile
+        - name: Issues when multiple accounts are added to the same profile
           href: ../profiles-and-accounts/issues-that-occur-when-adding-multiple-exchange-accounts.md
         - name: Mailboxes with full access aren't automapped to Outlook profile
           href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md
