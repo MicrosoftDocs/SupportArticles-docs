@@ -23,5 +23,6 @@ Steps:
 
 1. Stop the Visual Studio installation.
 2. Download [KB2999226](https://www.microsoft.com/en-us/search/DownloadsDrillInResults.aspx?q=kb2999226&cateorder=2_1_5) from Microsoft’s Download Center.
-> **Note**: Check the options to ensure it is the correct KB update for your system.
-- After the KB update installs, restart the Visual Studio installation.
+  >  [!NOTE]
+  > Check the options to ensure it is the correct KB update for your system.
+  > After the KB update installs, restart the Visual Studio installation.
