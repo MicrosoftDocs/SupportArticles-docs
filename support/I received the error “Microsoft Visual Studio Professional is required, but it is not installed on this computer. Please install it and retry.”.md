@@ -12,7 +12,7 @@ ms.reviewer: terry.g.lee
 _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
-When attempting to install a Visual Studio update or development tool you receive the error:
+When attempting to install a Visual Studio update or development tool you receive the following error:
 
 “Microsoft Visual Studio Professional is required, but it is not installed on this computer. Please install it and retry.”
 
