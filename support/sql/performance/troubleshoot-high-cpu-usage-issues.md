@@ -37,12 +37,12 @@ Use one of the following tools to check whether the SQL Server process is actual
 
     ```powershell
     $serverName = "YourServerName"
-    $Counters = @ (
+    $Counters = @(
         ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
     )
     Get - Counter - Counter $Counters - MaxSamples 30 | ForEach {
         $_.CounterSamples | ForEach {
-            [pscustomobject]@ {
+            [pscustomobject]@{
                 TimeStamp = $_.TimeStamp
                 Path = $_.Path
                 Value = ([Math]::Round($_.CookedValue, 3))
@@ -59,20 +59,6 @@ If `% User Time` is consistently greater than 90 percent, the SQL Server process
 If the `Sqlservr.exe` process is causing high CPU usage, by far, the most common reason is SQL Server queries that perform table or index scans, followed by sort, hash operations and loops (nested loop operator or WHILE (T-SQL)). To get an idea of how much CPU the queries are currently using, out of overall CPU capacity, run the following statement:
 
 ```sql
-DECLARE @init_sum_cpu_time int, @utilizedCpuCount int
-
---get CPU count used by SQL Server
-SELECT @utilizedCpuCount = COUNT( * ) FROM sys.dm_os_schedulers WHERE status = 'VISIBLE ONLINE'
-
---calculate the CPU usage by queries over a 5 sec interval
-SELECT@ init_sum_cpu_time = SUM(cpu_time) FROM sys.dm_exec_requests
-WAITFOR DELAY '00:00:05'
-SELECT CONVERT(DECIMAL(5, 2), ((SUM(cpu_time) - @init_sum_cpu_time) /
-    (@utilizedCpuCount * 5000.00)) * 100) as[CPU from Queries as Percent of Total CPU Capacity]
-FROM sys.dm_exec_requests
-```
-
-```sql
 DECLARE @init_sum_cpu_time int,
         @utilizedCpuCount int 
 --get CPU count used by SQL Server
@@ -83,8 +69,7 @@ WHERE status = 'VISIBLE ONLINE'
 SELECT @init_sum_cpu_time = SUM(cpu_time)
 FROM sys.dm_exec_requests WAITFOR DELAY '00:00:05'SELECT CONVERT(DECIMAL(5,
          2),
-         ((SUM(cpu_time) - @init_sum_cpu_time) / (@utilizedCpuCount * 5000.00)) * 100) as[CPU
-FROM Queries AS Percent of Total CPU Capacity]
+         ((SUM(cpu_time) - @init_sum_cpu_time) / (@utilizedCpuCount * 5000.00)) * 100) AS [CPU FROM Queries AS Percent of Total CPU Capacity]
 FROM sys.dm_exec_requests
 ```
 
@@ -164,8 +149,8 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
         q.encrypted AS text_encrypted
     FROM
         (SELECT TOP 500 qs.plan_handle,
-            qs.total_worker_time,
-            qs.execution_count FROM sys.dm_exec_query_stats qs ORDER BY qs.total_worker_time DESC) AS qs_cpu
+         qs.total_worker_time,
+         qs.execution_count FROM sys.dm_exec_query_stats qs ORDER BY qs.total_worker_time DESC) AS qs_cpu
     CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
     CROSS APPLY sys.dm_exec_query_plan(plan_handle) p
     WHERE p.query_plan.exist('declare namespace 
@@ -201,7 +186,6 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
                    migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) > 10
     ORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans) DESC
     ```
-   
 
 ## Step 5: Investigate and resolve parameter-sensitive issues
 
@@ -325,8 +309,8 @@ SELECT traceid, property, CONVERT(VARCHAR(1024), value) AS value FROM::fn_trace_
 GO
 PRINT '--Trace event details--'
 SELECT trace_id,
-status,
-CASE WHEN row_number = 1 THEN path ELSE NULL end AS path,
+    status,
+    CASE WHEN row_number = 1 THEN path ELSE NULL end AS path,
     CASE WHEN row_number = 1 THEN max_size ELSE NULL end AS max_size,
     CASE WHEN row_number = 1 THEN start_time ELSE NULL end AS start_time,
     CASE WHEN row_number = 1 THEN stop_time ELSE NULL end AS stop_time,
