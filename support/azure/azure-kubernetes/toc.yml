@@ -25,6 +25,8 @@
 
 - name: Cluster creation and deployment issues
   items:
+  - name: Errors when mounting file share
+    href: fail-to-mount-azure-file-share.md
   - name: General troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
   - name: InvalidParameter error code
