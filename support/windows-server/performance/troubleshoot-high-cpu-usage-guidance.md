@@ -103,7 +103,7 @@ If a svchost process consumes high CPU usage, and the svchost process contains m
 8. Collect a WPR log while issue is occurring.
 9. Collect a couple of procdump during process high CPU spaced apart by few minutes.
 
-### Multiple instance of process that has the same name
+### Multiple instances of process that has the same name
 
 For example, this issue could occur with the explorer.exe processes on a Remote Desktop Protocol (RDP) server.
 
