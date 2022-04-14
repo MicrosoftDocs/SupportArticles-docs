@@ -80,21 +80,22 @@ The following steps demonstrate two problems that may occur if manager and deleg
 
 1. In Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Office 365, use a profile for a manager's mailbox to configure a delegate for the manager's mailbox with default settings.
 
-**Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
-2. Add an appointment to the manager's calendar, and then enable the **Private** option on the **Tags** section of the Ribbon.
-3. Exit Outlook.
-4. Start Outlook by using a profile for the delegate.
-5. On the **File** tab, select **Add Account** on the **Info** tab.
-6. In the **Add New Account** dialog box, enter the manager's account information, and then select **Next**.
-7. Select **Finish** after the account is added successfully.
-8. Select **OK** at the prompt that instructs you to restart Outlook.
-9. Exit Outlook, and then restart it by using the delegate's profile.
-10. Enter the delegate's credentials if prompted.
-11. In the navigation pane, select the **Calendar** module.
-12. Under **My Calendars**, cancel the selection of the manager's calendar.
-13. Select **Open Calendar** on the Ribbon, and then select **Open Shared Calendar**.
-14. Enter the name of the manager's mailbox, and then select **OK**.
-15. In the manager's calendar, open the appointment created in step 2.
+    **Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
+
+1. Add an appointment to the manager's calendar, and then enable the **Private** option on the **Tags** section of the Ribbon.
+1. Exit Outlook.
+1. Start Outlook by using a profile for the delegate.
+1. On the **File** tab, select **Add Account** on the **Info** tab.
+1. In the **Add New Account** dialog box, enter the manager's account information, and then select **Next**.
+1. Select **Finish** after the account is added successfully.
+1. Select **OK** at the prompt that instructs you to restart Outlook.
+1. Exit Outlook, and then restart it by using the delegate's profile.
+1. Enter the delegate's credentials if prompted.
+1. In the navigation pane, select the **Calendar** module.
+1. Under **My Calendars**, cancel the selection of the manager's calendar.
+1. Select **Open Calendar** on the Ribbon, and then select **Open Shared Calendar**.
+1. Enter the name of the manager's mailbox, and then select **OK**.
+1. In the manager's calendar, open the appointment created in step 2.
 
     The appointment opens and the delegate is able to view the private item. However, this should not have been possible because of the default delegate settings used to configure the delegate for the manager's mailbox.
 
