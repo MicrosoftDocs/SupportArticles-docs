@@ -45,11 +45,11 @@
           href: ../calendaring/calendar-permissions-differences-in-different-versions-of-outlook.md
         - name: Calendar shows working hours as grey
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
-        - name: Can‘t send a response to a meeting request
+        - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't receive tentative meeting requests or responses
           href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
-        - name: Can't schedule meeting with resource mailbox that's set to Direct Booking
+        - name: Can't schedule meeting with resource mailbox that's set to Direct Booking
           href: ../calendaring/mailbox-declined-your-meeting-because-recurring-error.md
         - name: Can't send a meeting on behalf of a manager
           href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
