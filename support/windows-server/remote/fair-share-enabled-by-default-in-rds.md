@@ -28,7 +28,7 @@ For more information about the related properties in WMI, see [Win32_TerminalSer
 
 ## Fair Share CPU Scheduling
 
-Fair Share CPU Scheduling dynamically distributes processor time across all sessions on the same server, based on the number of sessions and the demand for processor time within each session. This process creates a consistent user experience across all of the active sessions, while sessions are being created and deleted dynamically. This feature builds on the Dynamic Fair Share Scheduling technology (DFSS) that was part of Windows Server.
+Fair Share CPU Scheduling dynamically distributes processor time across all RDS and Azure Virtual Desktop (AVD) multi-session sessions on the same Session Host server, based on the number of sessions and the demand for processor time within each session. This process creates a consistent user experience across all of the active sessions, while sessions are being created and deleted dynamically. This feature builds on the Dynamic Fair Share Scheduling technology (DFSS) that was part of Windows Server.
 
 ## Dynamic Disk Fair Share
 
