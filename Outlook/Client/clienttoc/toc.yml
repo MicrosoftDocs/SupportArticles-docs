@@ -45,11 +45,11 @@
           href: ../calendaring/calendar-permissions-differences-in-different-versions-of-outlook.md
         - name: Calendar shows working hours as grey
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
-        - name: Can‘t send a response to a meeting request
+        - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't receive tentative meeting requests or responses
           href: ../calendaring/cannot-receive-requests-of-tentative-meeting-or-responses.md
-        - name: Can't schedule meeting with resource mailbox that's set to Direct Booking
+        - name: Can't schedule meeting with resource mailbox that's set to Direct Booking
           href: ../calendaring/mailbox-declined-your-meeting-because-recurring-error.md
         - name: Can't send a meeting on behalf of a manager
           href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
@@ -363,8 +363,6 @@
       items:
         - name: Blocked Senders entries are missing in OWA
           href: ../junk-email/blocked-senders-entries--are-missing-in-owa.md
-        - name: Junk E-mail Reporting Add-in
-          href: /office365/troubleshoot/antispam/junk-email-reporting-add-in?context=/outlook/troubleshoot/context/client-context
         - name: Junk E-mail settings aren't synchronized
           href: ../junk-email/junk-email-setting-not-synchronized.md
         - name: Junk emails are permanently deleted
@@ -547,7 +545,7 @@
           href: ../profiles-and-accounts/focused-inbox-disappears-switch-folder.md
         - name: How to control AutoDiscover via Group Policy
           href: ../profiles-and-accounts/how-to-control-autodiscover-via-group-policy.md
-        - name: Issues occur when adding multiple accounts in a profile
+        - name: Issues when multiple accounts are added to the same profile
           href: ../profiles-and-accounts/issues-that-occur-when-adding-multiple-exchange-accounts.md
         - name: Mailboxes with full access aren't automapped to Outlook profile
           href: ../profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile.md

@@ -10,8 +10,10 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
+  - CI 162524
 ms.reviewer: 
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -21,11 +23,7 @@ _Original KB number:_ &nbsp; 2725168
 
 ## Problem
 
-When you use Microsoft Outlook 2011 for Mac to connect to your Microsoft Exchange Online account in Microsoft Office 365, your email server settings aren't automatically set for Exchange Online. So, you try to manually set Outlook 2011 for Mac to connect to Exchange Online by using the steps in the following article:
-
-[Outlook 2011 for Mac doesn't automatically set up your email server settings for Exchange Online in Office 365](https://support.microsoft.com/help/2459968).
-
-However, the set fails, and you can't access your Exchange Online account by using Outlook 2011 for Mac.
+When you use Microsoft Outlook 2011 for Mac to connect to your Microsoft Exchange Online account in Microsoft Office 365, your email server settings aren't automatically set for Exchange Online. So, you try to manually set Outlook 2011 for Mac to connect to Exchange Online. However, the set fails, and you can't access your Exchange Online account by using Outlook 2011 for Mac.
 
 ## Cause
 

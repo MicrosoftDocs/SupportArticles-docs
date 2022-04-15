@@ -8,7 +8,10 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.custom: sap:office-experts, CSSTroubleshoot
+ms.custom: 
+  - sap:office-experts
+  - CSSTroubleshoot
+  - CI 162524
 ms.author: ericspli
 appliesto: 
   - Microsoft Office
@@ -41,7 +44,6 @@ To determine the GUID of the installed Office version, follow these steps:
 
    - [Description of the numbering scheme for product code GUIDs in Office 2016](../../Client/office-suite-issues/numbering-scheme-for-product-guid.md)
    - [Description of the numbering scheme for product code GUIDs in Office 2013](../../Client/office-suite-issues/numbering-scheme-product-code-guids.md)
-   - [Description of the numbering scheme for product code GUIDs in Office 2010](https://support.microsoft.com/help/2186281)
 
    > [!NOTE]
    > Verify that you find the correct GUID by verifying the product in the **DisplayName** field of the key listed in the GUID.

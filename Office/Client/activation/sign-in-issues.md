@@ -11,6 +11,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 157601
   - CI 159070
+  - CI 162419
 search.appverid: 
   - MET150
 appliesto: 
@@ -20,7 +21,7 @@ ms.date: 3/31/2022
 
 # Sign in issues when activating Microsoft 365 Apps
 
-This article will help you troubleshoot network connection issues when activating Microsoft 365 Apps.
+This article will help you troubleshoot sign in issues when activating Microsoft 365 Apps.
 
 **Note** Some of these troubleshooting methods can only be performed by a Microsoft 365 admin. If you aren’t an admin, see [How do I find my Microsoft 365 admin?](https://support.microsoft.com/office/how-do-i-find-my-microsoft-365-admin-59b8e361-dbb6-407f-8ac3-a30889e7b99b)
 
@@ -122,6 +123,15 @@ Each firewall will have a different method to enable access to these URIs. Check
   
 For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
+</details>
+
+<details>
+<summary><b>Check external DNS for incorrect CNAME records</b></summary>
+
+Check your external DNS for an MSOID CNAME record that points to `clientconfig.partner.microsoftonline-p.net.cn`.
+
+This CNAME record is required only for customers who use Microsoft 365 that's operated by 21Vianet. 21Vianet is a service that's available in China. If this CNAME record is present, and your Microsoft 365 service is not operated by 21Vianet, users on your custom domain will receive a "custom domain isn't in our system" error message. Because of this error, users won't be able to activate their Microsoft 365 apps license. If you find this CNAME record, delete it, and wait for DNS replication to update the DNS record.
+
 </details>
 
 <details>
