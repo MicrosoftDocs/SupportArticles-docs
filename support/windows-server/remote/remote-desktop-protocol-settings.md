@@ -1,7 +1,7 @@
 ---
 title: Remote Desktop Protocol settings in Windows Server 2003 and in Windows XP
 description: Discusses the connection settings that are stored in the Default.rdp file on Windows Server 2003-based and Windows XP-based computers.
-ms.date: 09/07/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -68,8 +68,8 @@ This setting corresponds to the window position that you select on the **Display
 
 > [!NOTE]
 > On desktop computers, this setting determines the **Remote Desktop Connection** dialog box position on the screen. The six numbers represent a string form of the WINDOWPOS structure. For more information about the WINDOWPOS function, visit the following Microsoft Web site:
-
-[WINDOWPOS structure](https://msdn2.microsoft.com/library/ms632612.aspx)
+>
+> [WINDOWPOS structure](/windows/win32/api/winuser/ns-winuser-windowpos)
 
 > [!NOTE]
 > Microsoft Windows CE-based devices support only full-screen mode.
