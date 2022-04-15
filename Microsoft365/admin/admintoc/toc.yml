@@ -45,8 +45,6 @@
       href: ../active-directory/run-idfix-dirsync-error-remediation-tool.md
     - name: '"This does not look like a valid user ID" when you sign in'
       href: ../active-directory/this-doesnt-look-like-valid-user-id-error.md
-    - name: Active Directory object not updated in address book 
-      href: ../active-directory/ad-object-information-not-update-in-address.md
     - name: AD FS endpoint connection issues
       href: ../active-directory/ad-fs-endpoint-connection-issue.md
     - name: Can't change phone number with MFA
