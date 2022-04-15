@@ -1,7 +1,7 @@
 ---
 title: Error AADSTS50020 - User account from identity provider does not exist in tenant
 description: Troubleshoot scenarios in which a guest user unsuccessfully tries to sign in to the resource tenant and error code AADSTS50020 is returned.
-ms.date: 01/05/2022
+ms.date: 04/15/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.editor: v-jsitser
@@ -122,27 +122,56 @@ Error `AADSTS50020` might occur if the name of a guest user who was deleted in a
 
 ### Verification option 1: Check whether the resource tenant's guest user is older than the home tenant's user account
 
-Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation dates, as follows:
+The first verification option involves comparing the age of the resource tenant's guest user against the home tenant's user account. You can make this verification by using Microsoft Graph or MSOnline PowerShell.
 
-```AzurePowerShell
+#### Microsoft Graph
 
-Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+Issue a request to the [MS Graph API](/graph/api/user-get) to review the user creation date, as follows:
 
+<!-- 
+#### Request
+
+{
+  "blockType": "request",
+  "name": "get_user_createdDateTime"
+}
+-->
+
+```msgraph-interactive
+GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/createdDateTime
 ```
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
+#### MSOnline PowerShell
+
+> [!NOTE]
+> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands. 
+
+Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation date, as follows:
+
+```azurepowershell
+Get-MsolUser -SearchString user@contoso.com | Format-List whenCreated
+```
+
+Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
+
 ### Verification option 2: Check whether the resource tenant's guest alternative security ID differs from the home tenant's user net ID
+
+> [!NOTE]
+> The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands. 
 
 When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored within `AlternativeSecurityIds` in the `key` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
 
 1. In the home tenant, retrieve the value of the `LiveID` attribute using the `Get-MsolUser` PowerShell cmdlet:
 
-   ```AzurePowerShell
+   ```azurepowershell
    Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
    ```
 1. In the resource tenant, convert the value of the `key` attribute within `AlternativeSecurityIds` to a base64-encoded string:
 
-   ```AzurePowerShell
+   ```azurepowershell
    [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
           ).AlternativeSecurityIds.key)
    ```
