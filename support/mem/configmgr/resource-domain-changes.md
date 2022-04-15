@@ -27,7 +27,7 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 ## Resolution
 
-This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/features-and-capabilities).
+This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
 
 ## Workaround
 
