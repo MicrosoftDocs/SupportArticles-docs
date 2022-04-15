@@ -84,7 +84,8 @@ If a svchost process consumes high CPU usage, and the svchost process contains m
    sc config <service name> type= ow
    ```
 
-   **Note:** In this command, replace \<*service name*\> with the actual service name.
+   > [!NOTE]
+   > In this command, replace \<*service name*\> with the actual service name.
 
 3. Restart the service
 4. At the command prompt, run `tasklist /svc` to verify that the service is running in its own svchost process. 
@@ -131,7 +132,7 @@ You can use Debug Diagnostic 2.0 version to further troubleshoot this problem. T
 2. Select **Start**, enter *performance monitor*, and then right-click **Performance Monitor** to run it as an administrator.
 3. Use Performance Monitor to collect the performance counter log and start the logging.
 
-### After the problem occurs
+### When the problem occurs
 
 1. Open the **DebugDiag 2 Collection**.
 2. Select the **Processes** tab, right-click the worker process that corresponds to the appropriate application pool, and then select **Create Full Userdump**.
