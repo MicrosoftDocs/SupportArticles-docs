@@ -92,7 +92,7 @@ To check if the file share exists, follow these steps:
 
 2. Select **File shares** under **Data storage** in the storage account, and then check if the associated PersistentVolumeClaim in the yaml file of the pod, deployment, or statefulset exists in **File shares**.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/select-file-shares.png" alt-text="Screenshot of selecting File shares in the storage account":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/select-file-share.png" alt-text="Screenshot of selecting File shares in the storage account":::
 
 #### Solution for cause 1: Ensure file share exists
 
