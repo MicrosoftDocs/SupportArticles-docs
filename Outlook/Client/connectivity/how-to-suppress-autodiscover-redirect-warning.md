@@ -49,6 +49,10 @@ To configure Outlook behavior when HTTP redirection occurs, you can set or deplo
    - In Windows Vista, select **Start**, type *regedit* in the **Start Search** box, and then press Enter.
 
       If you are prompted for an administrator password or confirmation, type the password, or select **Continue**.
+   
+   - In Windows 7, click the **Start button**, type *regedit* in the **Search programs and files** box, and then press Enter.
+   
+   - In Windows 10, click the **Start button**, start typing *regedit* and when you see **"Registry Editor"** App, press Enter.
 
    - In Windows XP, select **Start**, select **Run**, type *regedit* in the **Open** box, and then select **OK**.
 
