@@ -94,7 +94,7 @@ To check if the file share exists, follow these steps:
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/select-file-share.png" alt-text="Screenshot of selecting File shares in the storage account":::
 
-#### Solution for cause 1: Ensure file share exists
+#### Solution: Ensure file share exists
 
 To resolve this issue, make sure that the file share that's associated with the PV/PVC exists.
 
@@ -118,7 +118,7 @@ To check if the NSG blocks the IP address of the storage account, follow these s
 
 The **Traffic** status can be **Allowed** or **Denied**. The **Denied** status means that the NSG is blocking the traffic between the AKS cluster and storage account. If the status is **Denied**, the NSG name will be shown.
 
-#### Solution for cause 2: Allow connectivity between AKS and storage account
+#### Solution: Allow connectivity between AKS and storage account
 
 To resolve this issue, perform changes accordingly at the NSG level to allow the connectivity between the AKS cluster and storage account on port 445.
 
@@ -143,7 +143,7 @@ This route will send all the traffics between the AKS cluster and storage accoun
 
 After you add the route, test the connectivity by using the `nc` or `telnet` command and perform the mounting operation again.
 
-#### Solution for cause 3: Ensure Virtual Appliance allows traffic between AKS and storage account
+#### Solution: Ensure Virtual Appliance allows traffic between AKS and storage account
 
 If the mounting operation succeeds, we recommend that you discuss with your networking team to make sure that the Virtual Appliance can allow the traffic between the AKS cluster and storage account on port 445.
 
@@ -153,13 +153,13 @@ If you're using a [Federal Information Processing Standard (FIPS) enabled node p
 
 To resolve the issue, use one of the following solutions:
 
-#### Solution 1 for cause 4: Schedule pods on nodes in non-FIPS node pool
+#### Solution 1: Schedule pods on nodes in non-FIPS node pool
 
 FIPS is disabled by default on AKS node pools. It can be enabled only during the node pool creation  by using the `--enable-fips-image` parameter.
 
 To resolve the error, you can schedule the pods on nodes in a non-FIPS node pool.
 
-#### Solution 2 for cause 4: Create pod that can be scheduled on a FIPS-enabled node
+#### Solution 2: Create pod that can be scheduled on a FIPS-enabled node
 
 To create a pod that can be scheduled on a FIPS-enabled node, follow these steps:
 
@@ -298,7 +298,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform the Ste
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name-and-key.png" alt-text="Screenshot of command that decodes storage account name":::
 
-#### Solution for cause 1: Adjust Kubernetes secret
+#### Solution: Adjust Kubernetes secret
 
 If the value of the storage account name or key in the Kubernetes secret doesn't match the value in **Access keys** in the storage account, adjust the Kubernetes secret at the Kubernetes secret level by running the following command:
 
@@ -320,7 +320,7 @@ For more information, see [Managing Secrets using kubectl](https://kubernetes.io
 
 If the storage account's network is limited to selected networks, but the VNET and subnet of the AKS cluster are't added to selected networks, the mounting operation will fail with the "Permission denied" error.
 
-#### Solution for cause 2: Allow AKS's VNET and subnet for storage account
+#### Solution: Allow AKS's VNET and subnet for storage account
 
 1. Identify the node that hosts the faulty pod by running the following command:
 
@@ -358,7 +358,7 @@ In this scenario, if the private endpoint and AKS node are in the same VNET, you
 
 If the private endpoint and your AKS cluster are in different VNETs, the mounting operation will fail with the "Permission denied" error.
 
-#### Solution for cause 3: Create virtual network link for VNET of AKS cluster at private DNS zone
+#### Solution: Create virtual network link for VNET of AKS cluster at private DNS zone
 
 [Get inside the node](/azure/aks/node-access) and check if the fully qualified domain name (FQDN) is resolved via a public or private IP address. To do this, run the following command:
 
