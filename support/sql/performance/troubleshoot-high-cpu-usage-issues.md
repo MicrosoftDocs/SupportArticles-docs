@@ -297,7 +297,7 @@ Check for [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) or XEvent t
 - Statement-level events (`sql_statement_completed`, `sql_statement_starting`, `sp_statement_starting`, `sp_statement_completed`)
 - Log-in and log-out events (`login`, `process_login_finish`, `login_event`, `logout`)
 - Lock events (`lock_acquired`, `lock_cancel`, `lock_released`)
-- Wait evetns (`wait_info`, `wait_info_external`)
+- Wait events (`wait_info`, `wait_info_external`)
 - SQL Audit events (depending on the group audited and SQL Server activity in that group)
 
 Run the following queries to identify active XEvent or Server traces:
