@@ -1,15 +1,15 @@
 ---
 title: Running Parallels on Mac may cause error 1606
-description: Provides resources to a solution to the 1606 error that occurs when runnin Parallels on Mac.
-ms.date: 04/07/2022
+description: Provides resources to a solution to the 1606 error that occurs when running Parallels on Mac.
+ms.date: 04/15/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# Error 1606 with a message that references a \\\psf folder
+# Running Parallels on Mac may cause error 1606
 
-This article provides a resolution to the 1606 error that occurs when runnin Parallels on Mac.
+This article provides a resolution to the 1606 error that occurs when running Parallels on Mac.
 
 _Applies to:_&nbsp;Visual Studio 2015
 
