@@ -37,7 +37,7 @@ Then, continue with the following steps.
 1. To begin the diagnostic file collection process, provide file paths with log file names and select **OK**.
 
     > [!NOTE]
-    > Diagnostic collection will take approximately 15 to 20 minutes. Supported file types: *.log, .txt, .dmp, .cab, .zip, .xml, .evtx, and.evtl*. A maximum of 25 file paths are allowed.
+    > Diagnostic collection will take approximately 15 to 20 minutes. Supported file types: *.log, .txt, .dmp, .cab, .zip, .xml, .evtx, and .evtl*. A maximum of 25 file paths are allowed.
 
 1. Once the diagnostic files are collected, you can select the **Download diagnostics** link to download the diagnostic files.
 
