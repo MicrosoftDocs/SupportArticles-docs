@@ -1,6 +1,6 @@
 ---
-title: How to use Secure File Exchange to exchange files with Microsoft Support
-description: Provides information to help you fast and secure transfer files with Microsoft Support using Secure File Exchange.
+title: How to securely transfer files to Microsoft Support
+description: Provides information to help you fast and secure transfer files with Microsoft Support.
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
@@ -10,6 +10,7 @@ ms.reviewer:
 # How to securely transfer files to Microsoft Support
 
 This article provides information on using Secure File Exchange.
+
 
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4012140
