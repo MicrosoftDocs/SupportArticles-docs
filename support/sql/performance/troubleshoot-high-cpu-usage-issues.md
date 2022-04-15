@@ -36,18 +36,18 @@ Use one of the following tools to check whether the SQL Server process is actual
 - You can use the following PowerShell script to collect the counter data over a 60-second span:
 
     ```powershell
-    $serverName = "YourServerName"
+    $serverName = $env:COMPUTERNAME
     $Counters = @(
         ("\\$serverName" + "\Process(sqlservr*)\% User Time"), ("\\$serverName" + "\Process(sqlservr*)\% Privileged Time")
     )
-    Get - Counter - Counter $Counters - MaxSamples 30 | ForEach {
+    Get-Counter -Counter $Counters -MaxSamples 30 | ForEach {
         $_.CounterSamples | ForEach {
             [pscustomobject]@{
                 TimeStamp = $_.TimeStamp
                 Path = $_.Path
                 Value = ([Math]::Round($_.CookedValue, 3))
             }
-            Start - Sleep - s 2
+            Start-Sleep -s 2
         }
     }
     ```
