@@ -13,16 +13,16 @@ This article explains how to use diagnostic files and the Intune Management exte
 
 ## Win32 app diagnostic requirements
 
-There are specific requirements that must be followed to collect log files:
+There are specific requirements that must be followed to collect diagnostic files:
 
-- You must specify the complete log file path. ​
-- You can specify environment variables for log collection, such as the following:<br>
+- You must specify the complete diagnostic file path.
+- You can specify environment variables for diagnostic collection, such as the following:
   *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
-- Only exact file extensions are allowed, such as:<br>
-  *.log,.txt,.dmp,.cab,.zip,.xml*
-- The maximum log file to upload is 250 MB or 25 files, whichever occurs first.
+- Only exact file extensions are allowed, such as:
+  *.log, .txt, .dmp, .cab, .zip, .xml*
+- The maximum diagnostic file to upload is 250 MB or 25 files, whichever occurs first.
 - Win32 app install diagnostic collection is enabled for apps that meet the required, available, and uninstall app assignment intent.
-- Stored diagnostics are encrypted to protect any personal identifiable information contained in the diagnostics​.
+- Stored diagnostics are encrypted to protect any personal identifiable information contained in the diagnostics.
 
 When opening support tickets for Win32 app failures, attach the related failure diagnostics using the steps in the following section.
 
@@ -34,19 +34,15 @@ Then, continue with the following steps.
 
 1. Select the **Collect diagnostics** option on the **Installation details** pane.
 
-    :::image type="content" source="media/troubleshoot-app-install/collect-logs.png" alt-text="Screenshot of the Collect log option in the Win32 app installation details pane." border="false":::
-
-1. To begin the log file collection process, provide file paths with log file names and select **OK**.
+1. To begin the diagnostic file collection process, provide file paths with log file names and select **OK**.
 
     > [!NOTE]
-    > Diagnostic collection will take approximately 15 to 20 minutes. Supported file types: *.log,.txt,.dmp,.cab,.zip,.xml,.evtx, and.evtl*. A maximum of 25 file paths are allowed.
+    > Diagnostic collection will take approximately 15 to 20 minutes. Supported file types: *.log, .txt, .dmp, .cab, .zip, .xml, .evtx, and.evtl*. A maximum of 25 file paths are allowed.
 
-1. Once the diagnostic files are collected, you can select the **Download diagnostics** link to download the log files.
-
-    :::image type="content" source="media/troubleshoot-app-install/download-app-logs.png" alt-text="Screenshot of the Download app logs option in the Win32 installation details pane." border="false":::
+1. Once the diagnostic files are collected, you can select the **Download diagnostics** link to download the diagnostic files.
 
     > [!NOTE]
-    > A notification will be displayed indicating the success of the app log collection.
+    > A notification will be displayed indicating the success of the app diagnostic collection.
 
 ## More information
 
