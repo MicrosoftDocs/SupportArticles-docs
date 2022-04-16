@@ -1,5 +1,5 @@
 ---
-title: Unable to schedule page publishing after changing a content type
+title: Can't schedule page publishing after changing a content type
 description: The scheduling section of a page is blank after you edit its content type in the SharePoint admin center.
 author: paotten
 manager: dcscontentpm
@@ -17,21 +17,21 @@ appliesto:
 ms.date: 4/15/2022
 ---
 
-# Unable to schedule page publishing after changing a content type
+# Can't schedule page publishing after changing a content type
 
-When [page scheduling](https://support.microsoft.com/office/schedule-a-sharepoint-page-or-news-post-to-go-live-at-a-specific-time-4b81873c-9bbc-4307-b7ea-7b6662ff1af2) is enabled in your SharePoint Online Pages library, a list field called *PublishStartDate*  is added to all content types in the Pages library.
+When [page scheduling](https://support.microsoft.com/office/schedule-a-sharepoint-page-or-news-post-to-go-live-at-a-specific-time-4b81873c-9bbc-4307-b7ea-7b6662ff1af2) is enabled in your SharePoint Online Pages library, a list field that's nameed *PublishStartDate* is added to all content types in the Pages library.
 
-If a content type is updated in the Content type gallery from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219) and published to the site, the *PublishStartDate* field will no longer be present in the content type. Making changes to content types from the Content type gallery will overwrite any changes that have been made to those content types at the site level.  
+If a content type is updated in the Content type gallery from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), and if it's published to the site, the **PublishStartDate** field will no longer be present in the content type. If you make changes to content types from the Content type gallery, this will overwrite any changes that were made to those content types at the site level.  
 
-When *PublishStartDate* isn’t present in the content type, you won’t be able to schedule publishing of pages of that content type. If you go to the page and select edit mode, the **Scheduling** section will be blank; instead of having elements such as the button to turn scheduling on or off or the **Publish at this time** option.
+If **PublishStartDate** isn’t present in the content type, you can't schedule page publishing of that content type. If you go to the page and select the edit mode, the **Scheduling** section will be blank. You expect that the section would contain such elements as the button to turn scheduling on or off and the **Publish at this time** option.
 
-To restore the ability to schedule pages, use the following steps.
+To restore the ability to schedule pages for the affected content types, follow these steps.
 
-**Note** You'll need administrator privileges to resolve this issue. If you aren’t an administrator, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
+**Note** You must have administrator privileges to resolve this issue. If you aren’t an administrator, contact your [Microsoft 365 administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
-1. Go to your Content type hub. For example, `https://contoso.sharepoint.com/sites/contentTypeHub`
+1. Go to your Content type hub. For example, go to `https://contoso.sharepoint.com/sites/contentTypeHub`.
 
-1. In the site navigation, select **Pages**.
+1. In the site navigation pane, select **Pages**.
 
 1. In the Pages library, select **Scheduling**. In the **Scheduling** panel, change **Enable scheduling** to **On**.
 
@@ -46,5 +46,3 @@ To restore the ability to schedule pages, use the following steps.
 1. In **Manage Publishing**, select **Republish**, and then select **Save**.
 
 1. Repeat steps 5 through 8 for any other content types that are affected.
-
-After following the above steps, publishing of the pages with the affected content types can be scheduled.
