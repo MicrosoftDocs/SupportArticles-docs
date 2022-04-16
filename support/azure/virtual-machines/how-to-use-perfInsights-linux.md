@@ -11,7 +11,7 @@ ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.topic: troubleshooting
-ms.date: 7/10/2019
+ms.date: 4/15/2022
 ms.author: genli
 
 ---
@@ -203,7 +203,7 @@ The following categories of rules are currently supported:
 
 ### Known issues
 
-- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 2.7
+- RHEL 8 does not have Python installed by default. To run PerfInsights Linux, you must first install Python 2.7 or Python 3.x
 
 - Guest Agent information collection may fail on CentOS 6.x
 
