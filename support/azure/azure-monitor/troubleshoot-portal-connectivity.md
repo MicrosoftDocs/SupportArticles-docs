@@ -8,7 +8,7 @@ ms.subservice: application-insights
 ms.reviewer: vgorbenko
 ---
 
-# "Error retrieving data" message on Application Insights portal 
+# "Error retrieving data" message on Application Insights portal
 
 This is a troubleshooting guide for the Application Insights portal when encountering connectivity errors similar to `Error retrieving data` or `Missing localization resource`.
 
