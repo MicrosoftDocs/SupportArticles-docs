@@ -1,6 +1,6 @@
 ---
 title: The remote server returned an error (401) Rbac check failed when you manage disposition of data
-description: Fixes an issue in which you can't manage disposition reviews from Microsoft Purview Records Management because you don't have sufficient permission.
+description: Fixes an issue in which you can't manage disposition reviews from Microsoft Purview Records Management. This issue occurs because you don't have sufficient permission.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -31,7 +31,7 @@ This error occurs if you don't have sufficient permission for disposition review
 
 ## Resolution
 
-Verify that the error is caused by the failure of the RBAC check. To do this, reproduce the issue, and [capture the associated network activity logs](/microsoft-edge/devtools-guide-chromium/network/#log-network-activity) from Microsoft Edge. Then, check the network logs for the RBAC "401" error message.
+Verify that the error is caused by the failure of the RBAC check. To do so, reproduce the issue, and [capture the associated network activity logs](/microsoft-edge/devtools-guide-chromium/network/#log-network-activity) from Microsoft Edge. Then, check the network logs for the RBAC "401" error message.
 
 If you see the error message, make sure that either you or the group that you belong to is part of the following role groups:
 
