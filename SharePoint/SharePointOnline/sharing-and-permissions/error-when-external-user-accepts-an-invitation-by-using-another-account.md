@@ -75,7 +75,7 @@ External users are managed from a site collection by site collection basis. An e
 
 For Office 365 Small Business subscriptions, use the SharePoint Online UI. To do this, follow these steps:
 
-1. Browse to the Office 365 admin center at https://portal.office.com.
+1. Browse to the Microsoft 365 admin center at https://portal.office.com.
 
 2. In **service settings**, click **Manage Organization-wide settings**.
 

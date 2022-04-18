@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 The managed property that you mapped to People:LastName wasn't set to the people index. To change this setting, follow these steps:
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
 
 2. Click **Admin**, click **SharePoint**, and then click **search** in the SharePoint admin center.
 
@@ -59,7 +59,7 @@ When you change the search schema in the people categories, the change is applie
 
 The search schema change was made for a specific site collection and not at the organization level. To resolve this issue, make the change at the organization level. To do this, follow these steps:
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
 
 2. Click **Admin**, click **SharePoint**, and then click **search** in the SharePoint admin center,
 

@@ -1,6 +1,6 @@
 ---
 title: The remote server returned an error (401) Rbac check failed when you manage disposition of data
-description: Fixes an issue in which you can't manage disposition reviews from Records Management because you don't have sufficient permission.
+description: Fixes an issue in which you can't manage disposition reviews from Microsoft Purview Records Management because you don't have sufficient permission.
 author: v-charloz
 ms.author: v-chazhang
 manager: dcscontentpm
@@ -21,13 +21,13 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When you use the **Disposition** tab in **Records Management** in the Microsoft 365 compliance center to manage [disposition reviews](/microsoft-365/compliance/disposition), you receive the following error message:
+When you use the **Disposition** tab in **Microsoft Purview Records Management** in the Microsoft Purview compliance portal to manage [disposition reviews](/microsoft-365/compliance/disposition), you receive the following error message:
 
 > The remote server returned an error: (401) Rbac check failed.
 
 ## Cause
 
-This error occurs if you don't have sufficient permission for disposition reviews, and the role-based access control (RBAC) check fails. Permissions in the compliance center are based on the RBAC permissions model.
+This error occurs if you don't have sufficient permission for disposition reviews, and the role-based access control (RBAC) check fails. Permissions in the compliance portal are based on the RBAC permissions model.
 
 ## Resolution
 
@@ -37,4 +37,4 @@ If you see the error message, make sure that either you or the group that you be
 
 - Content Explorer Content Viewer
 - Content Explorer List Viewer
-- Records Management with the Disposition Management role
+- Microsoft Purview Records Management with the Disposition Management role
