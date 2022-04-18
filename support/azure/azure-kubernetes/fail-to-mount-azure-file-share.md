@@ -380,7 +380,7 @@ To create the virtual network link, follow these steps:
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png" alt-text="Screenshot shows added virtual network link":::
 
-3. Fill the fields and select the VNET of the AKS cluster for **Virtual networks**. About how to identify the VNET of the AKS cluster, see the [Solution for cause 2: Allow AKS's VNET and subnet for storage account](#solution-for-cause-2-allow-akss-vnet-and-subnet-for-storage-account) section.
+3. Fill the fields and select the VNET of the AKS cluster for **Virtual networks**. About how to identify the VNET of the AKS cluster, see the [Solution: Allow AKS's VNET and subnet for storage account](#solution-allow-akss-vnet-and-subnet-for-storage-account) section.
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/add-virtual-network-link.png" alt-text="Screenshot shows how to add virtual network link":::
 
