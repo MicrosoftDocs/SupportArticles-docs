@@ -19,7 +19,7 @@ ms.date: 4/15/2022
 
 # Can't schedule page publishing after changing a content type
 
-When [page scheduling](https://support.microsoft.com/office/schedule-a-sharepoint-page-or-news-post-to-go-live-at-a-specific-time-4b81873c-9bbc-4307-b7ea-7b6662ff1af2) is enabled in your SharePoint Online Pages library, a list field that's nameed *PublishStartDate* is added to all content types in the Pages library.
+When [page scheduling](https://support.microsoft.com/office/schedule-a-sharepoint-page-or-news-post-to-go-live-at-a-specific-time-4b81873c-9bbc-4307-b7ea-7b6662ff1af2) is enabled in your SharePoint Online Pages library, a list field that's named *PublishStartDate* is added to all content types in the Pages library.
 
 If a content type is updated in the Content type gallery from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), and if it's published to the site, the **PublishStartDate** field will no longer be present in the content type. If you make changes to content types from the Content type gallery, this will overwrite any changes that were made to those content types at the site level.  
 
