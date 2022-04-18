@@ -21,6 +21,6 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Error retrieving data in portal
-            url: ./application-insights/troubleshoot-portal-connectivity.md
+            url: ./troubleshoot-portal-connectivity.md
           - text: Troubleshooting auto-instrumentation issues
-            url: ./application-insights/auto-instrumentation-troubleshoot.md
+            url: ./auto-instrumentation-troubleshoot.md

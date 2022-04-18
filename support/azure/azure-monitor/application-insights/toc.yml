@@ -1,5 +1,5 @@
 - name: Welcome
-  href: ../welcome-azure-monitor.yml
+  href: welcome-azure-monitor.yml
 
 - name: Application Insights
   items:
