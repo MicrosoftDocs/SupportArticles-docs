@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 4/18/2022
 ---
-# Error when delete a public folder from Outlook clients
+# Error when deleting a public folder from Outlook clients
 
 ## Symptoms
 
