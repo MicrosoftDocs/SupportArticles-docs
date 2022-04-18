@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# I received the error “Microsoft Visual Studio Professional is required, but it is not installed on this computer. Please install it and retry.”
+# Error received “Microsoft Visual Studio Professional required.”
 
 _Applies to:_&nbsp;Visual Studio 2015
 
