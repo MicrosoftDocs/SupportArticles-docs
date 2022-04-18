@@ -88,7 +88,7 @@ To check if the file share exists, follow these steps:
 
 1. Search **Storage accounts** in the Azure portal, access your storage account.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-lists.png" alt-text="Screenshot of storage accounts list." lightbox="media/fail-to-mount-azure-file-share/storage-account-lists.png:::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-lists.png" alt-text="Screenshot of storage accounts list." lightbox="media/fail-to-mount-azure-file-share/storage-account-lists.png":::
 
 2. Select **File shares** under **Data storage** in the storage account, and then check if the associated PersistentVolumeClaim in the yaml file of the pod, deployment, or statefulset exists in **File shares**.
 
@@ -272,11 +272,11 @@ To verify the mismatch, follow these steps:
 
 2. Go to the AKS cluster, select **Configuration** > **Secrets**, search and access the associated secret.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/select-storage-account.png" alt-text="Screenshot of searching and selecting storage account." lightbox="media/fail-to-mount-azure-file-share/select-storage-account.png:::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/select-storage-account.png" alt-text="Screenshot of searching and selecting storage account." lightbox="media/fail-to-mount-azure-file-share/select-storage-account.png":::
 
 3. Select **Show** (the eye icon) and compare the values of the storage account name and associated key with the values in Step 1.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png" alt-text="Screenshot shows storage account name and key in a secret." lightbox="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png:::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png" alt-text="Screenshot shows storage account name and key in a secret." lightbox="media/fail-to-mount-azure-file-share/storage-account-associated-secret-key.png":::
 
     Before you select **Show**, the values of the storage account name and associated key are encoded into base64 strings. After you select **Show**, the values will be decoded.
 
