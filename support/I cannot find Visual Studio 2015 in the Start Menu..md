@@ -1,7 +1,7 @@
 ---
 title: I cannot find Visual Studio 2015 in the Start Menu.
 description: Provides a resolution and reason why you cannot find the Visual Studio icon in the Start Menu.
-ms.date: 04/07/2022
+ms.date: 04/18/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
@@ -15,7 +15,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
 
-No, your Visual Studio install is not corrupt. The Visual Studio 2015 application icon has been moved outside of the Visual Studio 2015 folder. 
+Visual Studio install is not corrupt. The Visual Studio 2015 application icon has been moved outside of the Visual Studio 2015 folder. 
 
 ## Resolution
 
@@ -23,4 +23,4 @@ If youâ€™re running Windows 7, you can find the application at the top of the â€
 
 > Note: The application icon will no longer be located in the Visual Studio 2015 folder.
 
-If you are still unable to find Visual Studio after a successful install open your File Explorer and navigate to the following path. C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe and double click on the devenv.exe. If you installed Visual Studio to a drive other than C, go to the location where you installed Visual Studio and navigate to this path Common7\IDE\devenv.exe. 
+If you are still unable to find Visual Studio after a successful install, open File Explorer and navigate to the following path. C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe and double click on the devenv.exe. If you have installed Visual Studio to a drive other than C, go to the location where you installed Visual Studio and navigate to Common7\IDE\devenv.exe. 
