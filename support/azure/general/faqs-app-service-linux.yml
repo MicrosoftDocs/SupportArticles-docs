@@ -3,11 +3,11 @@ metadata:
   title: 'App Service on Linux FAQ'
   description: Find answers to the frequently asked questions about the built-in Linux containers in Azure App Service.
   keywords: azure app service, web app, faq, linux, oss, web app for containers, multi-container, multicontainer
-  author: msangapu-msft
+  author: genlin
   ms.topic: article
   ms.service: app-service
   ms.date: 10/30/2018
-  ms.author: msangapu
+  ms.author: genli
   ms.custom: seodec18
     
 title: Azure App Service on Linux FAQ
