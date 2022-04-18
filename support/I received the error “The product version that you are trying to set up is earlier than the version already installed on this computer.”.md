@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# I received the error “The product version that you are trying to set up is earlier than the version already installed on this computer.”
+# I received the error “The product version is earlier than the one already installed.”
 
 _Applies to:_&nbsp;Visual Studio 2015
 
