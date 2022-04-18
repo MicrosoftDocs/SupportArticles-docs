@@ -18,7 +18,7 @@ In this scenario, a user can unexpectedly transfer corporate files to unmanaged 
 
 ## User can receive files from unmanaged apps
 
-In this scenario, a user can unexpectedly receive files from unmanaged apps. Files can be inserted from Camera/OneDrive for Business/SharePoint.
+In this scenario, a user can unexpectedly receive files from unmanaged apps. For example, files can be inserted from the Camera, OneDrive for Business, or SharePoint app.
 
 - Check the **Receive data from other apps** setting value in both the Microsoft Endpoint Manager admin center and on the device side using Microsoft Edge. If it is set to **All apps**, users can transfer files from any apps. For instructions, see [Link to section in other article: Confirm the expected app protection policy settings are applied to the apps].
 
@@ -30,7 +30,7 @@ In this scenario, a user can unexpectedly receive files from unmanaged apps. Fil
 
 In this scenario, a user can transfer files to policy unmanaged apps even though you have set **Send org data to other apps** to ‘Policy managed apps’.
 
-- Check the **Select apps to exempt** setting value and make sure the receiver app is not set as a data transfer exemption.
+- Check the **Select apps to exempt** setting value and make sure the receiving app is not set as a data transfer exemption.
 
     :::image type="content" source="media/data-transfer-scenarios/select-apps-to-exempt.png" alt-text="Image showing the 'Select apps to exempt' option under 'Send org data to other apps'.":::
 
@@ -38,7 +38,7 @@ In this scenario, a user can transfer files to policy unmanaged apps even though
 
 ## Users can save corporate files to local storage when it should be blocked
 
-In this scenario, a user can save files to local storage even though **Save copies of org data** is set to 'Block'. Like the previous scenario, this is also expected behavior as long as the saved files are encrypted. Some apps implement data sharing with the Files app. In this case you can transfer corporate data to Files app.
+In this scenario, a user can save files to local storage even though **Save copies of org data** is set to 'Block'. Like the previous scenario, this is also expected behavior as long as the saved files are encrypted. Some apps implement data sharing with the Files app. In this case, users can transfer encrypted corporate data to the Files app.
 
 ## TO DO: The policy is applied, but iOS users can still transfer work files to unmanaged apps
 
@@ -46,7 +46,7 @@ Add this in after review (and delete from original article)
 
 ## I want to customize the apps available in the iOS Share extension
 
-A common scenario admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiver apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you are using Intune mobile device management (MDM).
+A common scenario admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiving apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you are using a mobile device management (MDM) solution.
 
 ### Option A: Restrict sharing for Intune-managed devices
 
@@ -62,7 +62,7 @@ With this configuration, only MDM managed apps are displayed in the sharing exte
 
 - Set the app protection setting **Send org data to other apps** to 'Policy managed app with Open-In/Share filtering'.
 
-With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app is not displayed in the share extension because it does not support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
+With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for an [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app is not displayed in the share extension because it does not support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
 
 :::image type="content" source="media/data-transfer-scenarios/send-data-to-other-apps.png" alt-text="Side-by-side screenshots showing the different options for apps you can send a file to, before and after applying the MDM setting.":::
 
@@ -70,7 +70,7 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 
 ## I want to customize the apps users can share to on Android devices
 
-On Android work profile and fully managed devices, there are some considerations for controlling which apps your users can share files to (receiver apps). For fully managed devices, use managed Google Play to deploy the apps you want to allow data sharing between. Do not deploy other apps with Intune MDM. For Android work profile devices, users can share files only between apps installed in the work profile.
+On Android work profile and fully managed devices, there are some considerations for controlling which apps your users can share files to (receiving apps). As a best practice for controlling data transfer, use managed Google Play to deploy the apps you want to allow data sharing between, and do not deploy other unnecessary apps. For Android work profile devices, users can share files only between apps installed in the work profile.
 
 ## Users can install and share to unapproved Google Play apps
 
@@ -80,18 +80,18 @@ Check the MDM device restriction setting **Allow access to all apps in Google Pl
 
 :::image type="content" source="media/data-transfer-scenarios/allow-access-to-google-play.png" alt-text="Image showing the option 'Allow access to all apps in Google Play store' in the admin center":::
 
-## Universal links in policy-managed apps are opened in an app instead of Microsoft Edge
+## URLs or universal links in policy-managed apps are opened in an app instead of Microsoft Edge
 
-In this scenario, if a user selects a universal link, it opens in an unmanaged app instead of the protect browser, Microsoft Edge. For more information on this topic, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+In this scenario, if a user selects a URL or universal link, it opens in an unmanaged app instead of the protect browser, Microsoft Edge. For more information on this topic, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
 
 - Check that the **Restrict web content transfer with other apps** dropdown setting is set to 'Microsoft Edge'.
 
-- Check if the link addresses are listed in the **Select universal links to exempt** and **Select managed universal links settings**. The universal links specified in these lists can be opened with other apps instead of Microsoft Edge. Remove the links from these lists to open the universal links with Microsoft Edge.
+- Check if the link addresses are listed in the **Select universal links to exempt** and **Select managed universal links settings**. The universal links specified in these lists can be opened with other apps instead of Microsoft Edge. Remove the links from these lists to open them with Microsoft Edge.
 
     :::image type="content" source="media/data-transfer-scenarios/universal-link-settings.png" alt-text="Image showing the 'Send org data to other apps' settings, which includes two universal link settings to review.":::
 
-## Universal links in policy managed apps are unexpectedly opened in Microsoft Edge
+## URLs or universal links in policy managed apps are unexpectedly opened in Microsoft Edge
 
-This scenario is the opposite of the previous scenario: you want a universal link to open in the corresponding, managed app but instead it opens in Microsoft Edge.
+This scenario is the opposite of the previous scenario: you want a URL or universal link to open in the corresponding, managed app but instead it opens in Microsoft Edge.
 
 - Check if the links are listed in the **Select universal links to exempt** and **Select managed universal links** settings. If not, add them so they will open in the specified app.

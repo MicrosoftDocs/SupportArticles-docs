@@ -89,7 +89,7 @@ It also helps to compare behaviors between apps. An issue you see with the Excel
 
 ## Confirm the data is encrypted once files are transferred
 
-In some cases, especially in iOS/iPadOS devices, files can be transferred to apps even when you set **Send org data to other apps** to ‘Policy managed apps’ and **Save copies of org data** to ‘Block’. For example, a user can use sharing options to transfer corporate word files from the Word app to the Dropbox app.
+In some scenarios for iOS or iPadOS devices, files can be transferred to unmanaged apps even when you set **Send org data to other apps** to ‘Policy managed apps’ and **Save copies of org data** to ‘Block’. For example, a user can use sharing options to transfer corporate word files from the Word app to the Dropbox app.
 
 This is expected behavior because setting **Send org data to other apps** to ‘Policy managed apps’ doesn’t filter out apps displayed in the sharing extension. And although **Save copies of org data** can ‘Block’ Save operations, it doesn’t block sharing options. As a result, users can still transfer corporate data to unmanaged apps with these settings. However, the data is still encrypted with APP once transferred, so the transferred files cannot be opened with unmanaged apps.
 
