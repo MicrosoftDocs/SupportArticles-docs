@@ -7,3 +7,5 @@
     href: troubleshoot-portal-connectivity.md
   - name: Troubleshooting auto-instrumentation issues
     href: auto-instrumentation-troubleshoot.md
+  - name: Error retrieving data in portal
+    href: troubleshoot-portal-connectivity.md
