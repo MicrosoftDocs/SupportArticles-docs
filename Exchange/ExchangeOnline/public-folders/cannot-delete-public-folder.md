@@ -24,10 +24,10 @@ ms.date: 4/18/2022
 
 When a user who has appropriate permissions tries to delete a public folder from a Microsoft Outlook client, they receive one of the following error messages:
 
-- In Outlook for windows
+- **In Outlook for windows**
     > Cannot delete this folder. Right-click the folder, and then click Properties to check your permissions for this folder. See the folder owner or administrator to change your permissions. Some items cannot be deleted. They were either moved or already deleted, or access was denied.
 
-- In Outlook for Mac
+- **In Outlook for Mac**
     > Outlook cannot complete the action because of an error on the Exchange server.  
     > HTTP error. Access to the resource has not been authorised.
 
