@@ -19,7 +19,7 @@ Visual Studio installation does not respond while updating Microsoft Windows KB2
 ## Resolution
 Install the KB update manually and restart the Visual Studio installation.
 
-Perform the folowwing steps:
+Perform the following steps:
 
 1. Stop the Visual Studio installation.
 2. Download [KB2999226](https://www.microsoft.com/en-us/search/DownloadsDrillInResults.aspx?q=kb2999226&cateorder=2_1_5) from Microsoft’s Download Center.
