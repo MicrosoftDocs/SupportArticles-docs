@@ -92,7 +92,7 @@ To check if the file share exists, follow these steps:
 
 2. Select **File shares** under **Data storage** in the storage account, and then check if the associated PersistentVolumeClaim in the yaml file of the pod, deployment, or statefulset exists in **File shares**.
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/select-file-share.png" alt-text="Screenshot of selecting File shares in the storage account.":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/file-shares.png" alt-text="Screenshot of selecting File shares in the storage account.":::
 
 #### Solution: Ensure file share exists
 
@@ -293,10 +293,10 @@ If you don't have access to the AKS cluster in the Azure portal, perform the Ste
     Here's an example to decode the storage account name:
 
     ```console
-    echo '<storage account name>' | base64 --decode ;echo
+    echo -n '<storage account name>' | base64 --decode ;echo
     ```
 
-    :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name-and-key.png" alt-text="Screenshot of command that decodes storage account name.":::
+    :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
 #### Solution: Adjust Kubernetes secret
 
@@ -372,19 +372,15 @@ If the FQDN is resolved via a public IP address (See the following screenshot), 
 
 To create the virtual network link, follow these steps:
 
-1. Access the Private DNS zone and select **Virtual network links**.
-
-    :::image type="content" source="media/fail-to-mount-azure-file-share/access-virtual-networks-links.png" alt-text="Screenshot that shows virtual network links in Private DNS zone.":::
-
-2. Select **Add**.
+1. Access the Private DNS zone and select **Virtual network links** > **Add**.
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png" alt-text="Screenshot shows a virtual network link that' added to the storage account" lightbox="media/fail-to-mount-azure-file-share/storage-account-virtual-network-link.png":::
 
-3. Fill the fields and select the VNET of the AKS cluster for **Virtual networks**. About how to identify the VNET of the AKS cluster, see the [Solution: Allow AKS's VNET and subnet for storage account](#solution-allow-akss-vnet-and-subnet-for-storage-account) section.
+2. Fill the fields and select the VNET of the AKS cluster for **Virtual networks**. About how to identify the VNET of the AKS cluster, see the [Solution: Allow AKS's VNET and subnet for storage account](#solution-allow-akss-vnet-and-subnet-for-storage-account) section.
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/add-virtual-network-link.png" alt-text="Screenshot shows how to add virtual network link.":::
 
-4. Select **OK**.
+3. Select **OK**.
 
 After the virtual network link is added, the FQDN should be resolved via a private IP address and the mounting operation should succeed. See the following screenshot for an example:
 
