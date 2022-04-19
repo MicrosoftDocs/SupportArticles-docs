@@ -1,6 +1,6 @@
 ---
-title: Can't bring a network name online in cluster
-description: Provides guidance where a network name fails to come online in a Windows-based failover cluster.
+title: Can't bring a network name online in a cluster
+description: Provides guidance for when a network name fails to come online in a Windows-based failover cluster
 ms.date: 04/18/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -17,7 +17,7 @@ ms.technology: windows-server-high-availability
 
 ## Troubleshooting checklist
 
-1. Review the system and the cluster log to find the exact errors or warnings that prevent the network name from coming online. Usually, except Event ID 1069, Event ID 1207 is logged:
+1. Review the system and the cluster log to find the exact errors or warnings that prevent the network name from coming online. Usually, in addition to Event ID 1069, Event ID 1207 is also logged:
 
    - Event ID 1069
 
@@ -27,13 +27,13 @@ ms.technology: windows-server-high-availability
 
      > Cluster network name resource 'Cluster Name' cannot be brought online. The computer object associated with the resource could not be updated in domain 'domainname.com' for the following reason.
 
-2. Ensure that the  Virtual Computer Object (VCO) or Cluster Name Object (CNO) has appropriate permissions in Active Directory. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519%28v=ws.11%29)
+2. Ensure that the Virtual Computer Object (VCO) or Cluster Name Object (CNO) has appropriate permissions in Active Directory. For more information, see [Prestage Cluster Computer Objects in Active Directory Domain Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn466519%28v=ws.11%29).
 
-3. If CNO is affected, after adjusting the permissions, you can run the **Repair** option to sync the AD password for the CNO again. For more information, see [Understanding the Repair Active Directory Object Recovery Action](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-repair-active-directory-object-recovery-action/ba-p/371891)
+3. If CNO is affected, after adjusting the permissions, you can run the **Repair** option to sync the AD password for the CNO again. For more information, see [Understanding the Repair Active Directory Object Recovery Action](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-the-repair-active-directory-object-recovery-action/ba-p/371891).
 
 4. You can run a cluster validation (without the storage section) to check the supportability of the cluster and see if there are any misconfigurations.
 
-5. It can occur that the CNO or VCO can't come online because of DNS issues. The permissions for the CNO or VCO records need to be checked as well. Network traces will show the cause of the issue.
+5. The CNO or VCO might not be able to come online because of DNS issues. The permissions for the CNO or VCO records need to be checked as well. Network traces will show the cause of the issue.
 
 ## Common issues and solutions
 
