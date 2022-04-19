@@ -1244,10 +1244,18 @@
     href: ./high-availability/high-availability-overview.md
   - name: Cannot bring a resource online
     items:
+    - name: 'Troubleshooting guidance: Can't bring a resource online'
+      href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Active Route removed
       href: ./high-availability/active-route-removed.md
+    - name: Can't bring a network name online
+      href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
+    - name: Can't bring a physical disk online
+      href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
+    - name: Can't bring an IP address online
+      href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: Cluster disk resource fails to come online
       href: ./high-availability/cluster-disk-resource-not-come-online.md
     - name: Cluster fileshare resource fails
