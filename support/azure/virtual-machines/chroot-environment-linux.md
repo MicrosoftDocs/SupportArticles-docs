@@ -272,208 +272,210 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 > [!NOTE]
 > It is possible that you need to deploy the rescue VM using the same lvm image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
->
-   1. Check the status of the disks prior attaching the disk you want to rescue
 
-      ```console
-      # lsblk -f
-      NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
-      sda
-      ├─sda1            vfat              93DA-8C20                              /boot/efi
-      ├─sda2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
-      ├─sda3
-      └─sda4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-      ├─rootvg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
-      ├─rootvg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
-      ├─rootvg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
-      ├─rootvg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
-      ├─rootvg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
-      └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
-      sdb
-      └─sdb1            ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
-      ```
+1. Check the status of the disks prior attaching the disk you want to rescue
 
-   1. Attach the disk you want to rescue as a data drive
-   2. Check the disks again
-      Note that it will not show you the lvm structures right away
+   ```console
+   # lsblk -f
+   NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
+   sda
+   ├─sda1            vfat              93DA-8C20                              /boot/efi
+   ├─sda2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
+   ├─sda3
+   └─sda4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+   ├─rootvg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
+   ├─rootvg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
+   ├─rootvg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
+   ├─rootvg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
+   ├─rootvg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
+   └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
+   sdb
+   └─sdb1            ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
+   ```
 
-      ```console
-      # lsblk -f
-      NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
-      sda
-      ├─sda1            vfat              93DA-8C20                              /boot/efi
-      ├─sda2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
-      ├─sda3
-      └─sda4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-      ├─rootvg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
-      ├─rootvg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
-      ├─rootvg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
-      ├─rootvg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
-      ├─rootvg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
-      └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
-      sdb
-      └─sdb1            ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
-      sdc
-      ├─sdc1            vfat              93DA-8C20
-      ├─sdc2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
-      ├─sdc3
-      └─sdc4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+2. Attach the disk you want to rescue as a data drive
+3. Check the disks again. Note that it will not show you the lvm structures right away.
 
-      ```
+   ```console
+   # lsblk -f
+   NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
+   sda
+   ├─sda1            vfat              93DA-8C20                              /boot/efi
+   ├─sda2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
+   ├─sda3
+   └─sda4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+   ├─rootvg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
+   ├─rootvg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
+   ├─rootvg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
+   ├─rootvg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
+   ├─rootvg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
+   └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
+   sdb
+   └─sdb1            ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
+   sdc
+   ├─sdc1            vfat              93DA-8C20
+   ├─sdc2            xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
+   ├─sdc3
+   └─sdc4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
 
-   1. lvm commands will complain about duplicated PV
+   ```
 
-      ```console
-      # pvs
-      WARNING: Not using lvmetad because duplicate PVs were found.
-      WARNING: Use multipath or vgimportclone to resolve duplicate PVs?
-      WARNING: After duplicates are resolved, run "pvscan --cache" to enable lvmetad.
-      WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
-      WARNING: PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU prefers device /dev/sda4 because device is used by LV.
-      PV         VG     Fmt  Attr PSize   PFree
-      /dev/sda4  rootvg lvm2 a--  <63.02g <38.02g
-      ```
+4. lvm commands will complain about duplicated PV
 
-   2. Use the vmimportclone command to import the rootvg from the data drive using another name
-      This will also change the UUID of the PV and will activate it
+   ```console
+   # pvs
+   WARNING: Not using lvmetad because duplicate PVs were found.
+   WARNING: Use multipath or vgimportclone to resolve duplicate PVs?
+   WARNING: After duplicates are resolved, run "pvscan --cache" to enable lvmetad.
+   WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
+   WARNING: PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU prefers device /dev/sda4 because device is used by LV.
+   PV         VG     Fmt  Attr PSize   PFree
+   /dev/sda4  rootvg lvm2 a--  <63.02g <38.02g
+   ```
 
-      ```console
-      # vgimportclone -n rescuemevg /dev/sdc4
-      WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
-      WARNING: PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU prefers device /dev/sda4 because device is used by LV.
+5. Use the vmimportclone command to import the rootvg from the data drive using another name.
 
-      # vgchange -a y rescuemevg 
-      6 logical volume(s) in volume group "rescuemevg" now active
-      ```
+   This will also change the UUID of the PV and will activate it.
 
-   3. Verify the name change
+   ```console
+   # vgimportclone -n rescuemevg /dev/sdc4
+   WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
+   WARNING: PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU prefers device /dev/sda4 because device is used by LV.
 
-      ```console
-      # lsblk -f
-      NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
-      sda
-      ├─sda1                vfat              93DA-8C20                              /boot/efi
-      ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
-      ├─sda3
-      └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-      ├─rootvg-tmplv      xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
-      ├─rootvg-usrlv      xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
-      ├─rootvg-optlv      xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
-      ├─rootvg-homelv     xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
-      ├─rootvg-varlv      xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
-      └─rootvg-rootlv     xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
-      sdb
-      └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
-      sdc
-      ├─sdc1                vfat              93DA-8C20
-      ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
-      ├─sdc3
-      └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
-      ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207
-      ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d
-      ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3
-      ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0
-      ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
-      └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
-      ```
+   # vgchange -a y rescuemevg 
+   6 logical volume(s) in volume group "rescuemevg" now active
+   ```
 
-   4. Rename the rootvg of the rescue VM
+6. Verify the name change
 
-      ```console
-      # vgrename rootvg oldvg
-      Volume group "rootvg" successfully renamed to "oldvg"
-      ```
+   ```console
+   # lsblk -f
+   NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
+   sda
+   ├─sda1                vfat              93DA-8C20                              /boot/efi
+   ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
+   ├─sda3
+   └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+   ├─rootvg-tmplv      xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
+   ├─rootvg-usrlv      xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
+   ├─rootvg-optlv      xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
+   ├─rootvg-homelv     xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
+   ├─rootvg-varlv      xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
+   └─rootvg-rootlv     xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
+   sdb
+   └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
+   sdc
+   ├─sdc1                vfat              93DA-8C20
+   ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
+   ├─sdc3
+   └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
+   ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207
+   ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d
+   ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3
+   ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0
+   ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
+   └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
+   ```
 
-   5. Check the disks
+7. Rename the rootvg of the rescue VM
 
-      ```console
-      # lsblk -f
-      NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
-      sda
-      ├─sda1                vfat              93DA-8C20                              /boot/efi
-      ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
-      ├─sda3
-      └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-      ├─oldvg-tmplv       xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
-      ├─oldvg-usrlv       xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
-      ├─oldvg-optlv       xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
-      ├─oldvg-homelv      xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
-      ├─oldvg-varlv       xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
-      └─oldvg-rootlv      xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
-      sdb
-      └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
-      sdc
-      ├─sdc1                vfat              93DA-8C20
-      ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
-      ├─sdc3
-      └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
-      ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207
-      ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d
-      ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3
-      ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0
-      ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
-      └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
-      ```
+   ```console
+   # vgrename rootvg oldvg
+   Volume group "rootvg" successfully renamed to "oldvg"
+   ```
 
-   6. Mount the FS coming from the data drive,
-      When using xfs use the -o nouuid option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
+8. Check the disks
 
-      ```console
-      mkdir /rescue
-      mount -o nouuid /dev/mapper/rescuemevg-rootlv /rescue
-      mount -o nouuid  /dev/mapper/rescuemevg-homelv /rescue/home
-      mount -o nouuid  /dev/mapper/rescuemevg-optlv /rescue/opt 
-      mount -o nouuid  /dev/mapper/rescuemevg-tmplv /rescue/tmp 
-      mount -o nouuid  /dev/mapper/rescuemevg-usrlv /rescue/usr 
-      mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
-      mount -o nouuid  /dev/sdc2 /rescue/boot
-      mount /dev/sdc1 /rescue/boot/efi
-      mount -t proc proc /rescue/proc 
-      mount -t sysfs sys /rescue/sys/ 
-      mount -o bind /dev /rescue/dev/ 
-      mount -o bind /dev/pts /rescue/dev/pts/
-      mount -o bind /run /rescue/run/
-      ```
+   ```console
+   # lsblk -f
+   NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
+   sda
+   ├─sda1                vfat              93DA-8C20                              /boot/efi
+   ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
+   ├─sda3
+   └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+   ├─oldvg-tmplv       xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
+   ├─oldvg-usrlv       xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
+   ├─oldvg-optlv       xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
+   ├─oldvg-homelv      xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
+   ├─oldvg-varlv       xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
+   └─oldvg-rootlv      xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
+   sdb
+   └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
+   sdc
+   ├─sdc1                vfat              93DA-8C20
+   ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d
+   ├─sdc3
+   └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
+   ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207
+   ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d
+   ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3
+   ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0
+   ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
+   └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
+   ```
 
-   7. Verify the mounts
+9. Mount the FS coming from the data drive.
 
-      ```console
-      # lsblk -f
-      NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
-      sda
-      ├─sda1                vfat              93DA-8C20                              /boot/efi
-      ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
-      ├─sda3
-      └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
-      ├─oldvg-tmplv       xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
-      ├─oldvg-usrlv       xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
-      ├─oldvg-optlv       xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
-      ├─oldvg-homelv      xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
-      ├─oldvg-varlv       xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
-      └─oldvg-rootlv      xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
-      sdb
-      └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
-      sdc
-      ├─sdc1                vfat              93DA-8C20                              /rescue/boot/efi
-      ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /rescue/boot
-      ├─sdc3
-      └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
-      ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /rescue/tmp
-      ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /rescue/usr
-      ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /rescue/opt
-      ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /rescue/home
-      ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /rescue/var
-      └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /rescue
-      ```
+   When using xfs use the -o nouuid option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
 
-   8. Use chroot
+   ```console
+   mkdir /rescue
+   mount -o nouuid /dev/mapper/rescuemevg-rootlv /rescue
+   mount -o nouuid  /dev/mapper/rescuemevg-homelv /rescue/home
+   mount -o nouuid  /dev/mapper/rescuemevg-optlv /rescue/opt 
+   mount -o nouuid  /dev/mapper/rescuemevg-tmplv /rescue/tmp 
+   mount -o nouuid  /dev/mapper/rescuemevg-usrlv /rescue/usr 
+   mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
+   mount -o nouuid  /dev/sdc2 /rescue/boot
+   mount /dev/sdc1 /rescue/boot/efi
+   mount -t proc proc /rescue/proc 
+   mount -t sysfs sys /rescue/sys/ 
+   mount -o bind /dev /rescue/dev/ 
+   mount -o bind /dev/pts /rescue/dev/pts/
+   mount -o bind /run /rescue/run/
+   ```
 
-      ```console
-      chroot /rescue/
-      ```
+10. Verify the mounts
 
-   10. Verify tge mounts "inside" the chroot environment
-      Notice that now rescuemevg-rootlv is the one mounted on /
+    ```console
+    # lsblk -f
+    NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
+    sda
+    ├─sda1                vfat              93DA-8C20                              /boot/efi
+    ├─sda2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /boot
+    ├─sda3
+    └─sda4                LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
+    ├─oldvg-tmplv       xfs               9098eb05-0176-4997-8132-9152a7bef207   /tmp
+    ├─oldvg-usrlv       xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /usr
+    ├─oldvg-optlv       xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /opt
+    ├─oldvg-homelv      xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /home
+    ├─oldvg-varlv       xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
+    └─oldvg-rootlv      xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
+    sdb
+    └─sdb1                ext4              e72e7c2c-db27-4a73-a97e-01d63d21ccf8   /mnt
+    sdc
+    ├─sdc1                vfat              93DA-8C20                              /rescue/boot/efi
+    ├─sdc2                xfs               d5da486e-fdfe-4ad8-bc01-aa72b91fd47d   /rescue/boot
+    ├─sdc3
+    └─sdc4                LVM2_member       BbZsAT-5oOK-nITn-bHFW-IVyS-y0O3-93oDes
+    ├─rescuemevg-tmplv  xfs               9098eb05-0176-4997-8132-9152a7bef207   /rescue/tmp
+    ├─rescuemevg-usrlv  xfs               2f9ff36c-742d-4914-b463-d4152801b95d   /rescue/usr
+    ├─rescuemevg-optlv  xfs               aeacea8e-3663-4569-af25-c52357f8a0a3   /rescue/opt
+    ├─rescuemevg-homelv xfs               a79e43dc-7adc-41b4-b6e1-4e6b033b15c0   /rescue/home
+    ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /rescue/var
+    └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /rescue
+    ```
+
+11. Use chroot
+
+    ```console
+    chroot /rescue/
+    ```
+
+12. Verify tge mounts "inside" the chroot environment.
+
+    Notice that now rescuemevg-rootlv is the one mounted on /
 
       ```console
       # lsblk -f
@@ -504,15 +506,16 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
 
-   1. Rename the VG to keep it consistent
-      Renaming the vg will keep you from facing issues when regenerating initrd and booting the disk again on the original VM
+13. Rename the VG to keep it consistent.
 
-      ```console
-      # vgrename rescuemevg rootvg
-      Volume group "rescuemevg" successfully renamed to "rootvg"
-      ```
+    Renaming the vg will keep you from facing issues when regenerating initrd and booting the disk again on the original VM
 
-   1. Verify the change
+    ```console
+    # vgrename rescuemevg rootvg
+    Volume group "rescuemevg" successfully renamed to "rootvg"
+    ```
+
+14. Verify the change
 
       ```console
       # lsblk -f
@@ -543,14 +546,14 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
 
-   2. Proceed with the required activities to rescue the OS, this may include regenerating initramfs or the grub configuration
-   3. Exit the chroot environment
+15. Proceed with the required activities to rescue the OS, this may include regenerating initramfs or the grub configuration
+16. Exit the chroot environment
 
       ```console
       exit
       ```
 
-   4. Unmount and detach the data disk from the rescue VM and perform a disk swap with the original VM
+17. Unmount and detach the data disk from the rescue VM and perform a disk swap with the original VM
 
       ```console
       umount /rescue/run/
@@ -568,7 +571,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue
       ```
 
-   5. Start the original VM and verify its functionality
+18. Start the original VM and verify its functionality
 
 ## Oracle 7.x
 
