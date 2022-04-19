@@ -27,7 +27,7 @@ Consider the following scenario:
 
 In this scenario, the mail contacts lose access to the encrypted content or have only intermittent access to the content.
 
-**Note:** A typical way to apply this encryption is to use sensitivity labels that are created and published from the Microsoft 365 compliance center.
+**Note:** A typical way to apply this encryption is to use sensitivity labels that are created and published from the Microsoft Purview compliance portal.
 
 ## Cause
 
