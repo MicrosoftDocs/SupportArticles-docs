@@ -92,7 +92,7 @@ If there are some sources like the following output in the log file, the agent i
 </source>
 ```
 
-:::image type="content" source="./media/linux-agent-performance-counter-missing/screenshot-collected-linux-performance-counters.png" alt-text="Screenshot of collected linux performance counters data":::
+:::image type="content" source="./media/linux-agent-performance-counter-missing/collected-linux-performance-counters.png" alt-text="Screenshot of collected linux performance counters data.":::
 
 If there's no such performance counter entry in the log file, check the time stamp for the `[info]: using configuration file:` entry. If the time stamp predates the time when performance counters are configured to collect, the Linux agent doesn't receive the current configuration from the workspace. To resolve this issue, force the Linux agent to pull the current configuration from the workspace.
 

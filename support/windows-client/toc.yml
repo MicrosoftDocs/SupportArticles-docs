@@ -1184,7 +1184,7 @@
       href: ./windows-security/tpm-device-driver-error-log.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Enable diagnostic logging for Windows Security Center
+    - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
 - name: Windows Troubleshooters
   items:
@@ -1192,3 +1192,5 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md

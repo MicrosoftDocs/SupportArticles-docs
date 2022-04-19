@@ -23,7 +23,7 @@ Azure virtual machines (VMs) might sometimes reboot for no apparent reason, with
 
 The best way to protect an application that's running on Azure against VM reboots and downtime is to configure the VMs for high availability.
 
-To provide this level of redundancy to your application, we recommend that you group two or more VMs in an availability set. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available and meets the 99.95 percent [Azure SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_5/).
+To provide this level of redundancy to your application, we recommend that you group two or more VMs in an availability set. This configuration ensures that during either a planned or unplanned maintenance event, at least one VM is available and meets the 99.95 percent [Azure SLA](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_9/).
 
 For more information about availability sets, see [Manage the availability of VMs](/azure/virtual-machines/manage-availability)
 
@@ -79,9 +79,9 @@ If you perform the action from the VM's operating system, you can find the event
 
 Other scenarios that usually cause the VM to reboot include multiple configuration-change actions. You'll ordinarily see a warning message indicating that executing a particular action will result in a reboot of the VM. Examples include any VM resize operations, changing the password of the administrative account, and setting a static IP address.
 
-### Azure Security Center and Windows Update
+### Microsoft Defender for Cloud and Windows Update
 
-Azure Security Center monitors daily Windows and Linux VMs for missing operating-system updates. Security Center retrieves a list of available security and critical updates from Windows Update or Windows Server Update Services (WSUS), depending on which service is configured on a Windows VM. Security Center also checks for the latest updates for Linux systems. If your VM is missing a system update, Security Center recommends that you apply system updates. The application of these system updates is controlled through the Security Center in the Azure portal. After you apply some updates, VM reboots might be required. For more information, see [Apply system updates in Azure Security Center](/azure/security-center/asset-inventory).
+Microsoft Defender for Cloud monitors daily Windows and Linux VMs for missing operating-system updates. Defender for Cloud retrieves a list of available security and critical updates from Windows Update or Windows Server Update Services (WSUS), depending on which service is configured on a Windows VM. Defender for Cloud also checks for the latest updates for Linux systems. If your VM is missing a system update, Defender for Cloud recommends that you apply system updates. The application of these system updates is controlled through the Defender for Cloud in the Azure portal. After you apply some updates, VM reboots might be required. For more information, see [Apply system updates in Microsoft Defender for Cloud](/azure/security-center/asset-inventory).
 
 Like on-premises servers, Azure does not push updates from Windows Update to Windows VMs, because these machines are intended to be managed by their users. You are, however, encouraged to leave the automatic Windows Update setting enabled. Automatic installation of updates from Windows Update can also cause reboots to occur after the updates are applied. For more information, see [Windows Update FAQ](https://support.microsoft.com/help/12373/windows-update-faq).
 
