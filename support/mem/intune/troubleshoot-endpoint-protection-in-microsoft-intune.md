@@ -1,6 +1,6 @@
 ---
 title: Common endpoint protection messages in Microsoft Intune
-description: See common messages and possible solution when using and troubleshooting endpoint protection and Microsoft Defender in Microsoft Intune.
+description: See common messages and possible solution when using and troubleshooting endpoint protection and Microsoft Defender for Endpoint in Microsoft Intune.
 ms.date: 11/09/2021
 ms.reviewer: tscott
 ---
@@ -8,7 +8,7 @@ ms.reviewer: tscott
 
 This article describes potential errors and solutions when using Microsoft Intune endpoint protection.
 
-For troubleshooting guidance specific to Microsoft Defender, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
+For troubleshooting guidance specific to Microsoft Defender for Endpoint, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
 ## Endpoint Protection engine unavailable
 
@@ -23,7 +23,7 @@ For troubleshooting guidance specific to Microsoft Defender, see [Review event l
 
 ## Features are disabled
 
-You may get a message that some features are disabled. These messages can happen if Intune endpoint protection or Microsoft Defender is disabled by an administrator using a configuration profile. Or, it's disabled by an end user on the device. Possible messages:
+You may get a message that some features are disabled. These messages can happen if Intune endpoint protection or Microsoft Defender for Endpoint is disabled by an administrator using a configuration profile. Or, it's disabled by an end user on the device. Possible messages:
 
 `Endpoint Protection disabled`  
 `Real-time protection disabled`  

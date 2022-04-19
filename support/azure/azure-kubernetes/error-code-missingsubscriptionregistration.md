@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the MissingSubscriptionRegistration error code
 description: Learn how to troubleshoot the MissingSubscriptionRegistration error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
+ms.date: 3/23/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -10,12 +10,12 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the MissingSubscriptionRegistration error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the MissingSubscriptionRegistration error code
-
-This article describes how to identify and resolve the `MissingSubscriptionRegistration` error, which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+ 
+This article discusses how to identify and resolve the `MissingSubscriptionRegistration` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
 
-When you try to deploy the cluster, you receive the following error message:
+When you try to deploy an AKS cluster, you receive the following error message:
 
 > Code="MissingSubscriptionRegistration"
 >
@@ -33,9 +33,9 @@ When you try to deploy the cluster, you receive the following error message:
 
 ## Cause
 
-You received this error for one of the following reasons:
+You receive this error message for one of the following reasons:
 
-- The required resource provider hasn't been registered for your subscription.
+- The required resource provider isn't registered for your subscription.
 
 - The API version isn't supported for the resource type.
 
@@ -43,7 +43,7 @@ You received this error for one of the following reasons:
 
 ## Solution
 
-To resolve this issue, follow the instructions in the "Solution" section of [Resolve errors for resource provider registration](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-portal#solution). Replace the namespace with what's listed in the error message. In the previous example, the namespace is `Microsoft.OperationsManagement`.
+To resolve this issue, follow the instructions in the "Solution" section of [Resolve errors for resource provider registration](/azure/azure-resource-manager/troubleshooting/error-register-resource-provider?tabs=azure-portal#solution). Replace the existing namespace with the namespace that's shown in the error message. In the example in the "Symptoms" section, the namespace is `Microsoft.OperationsManagement`.
 
 ## More information
 

@@ -54,7 +54,7 @@ If a scan takes more than 1 second, the XEvent will be recorded as follows when 
 
 ## Workaround
 
-There's currently no way to eliminate this problem. If an operation must finish quickly, clear the buffer pool by using the following commands before you execute it.
+There's currently no way to eliminate this problem. If an operation must finish quickly, clear the buffer pool by using the following commands before you execute it. It is likely that clearing the buffer pool is actually worse than waiting for the action to complete.
 
 1. Run `CHECKPOINT` on each database
 

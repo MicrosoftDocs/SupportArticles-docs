@@ -1,7 +1,7 @@
 ---
 title: Resolve Model database corruption in SQLLocalDB
 description: This article describes how to resolve a known issue in SQLLocalDB that can prevent the ADSync service from starting because of a corrupted "Model" database.
-ms.date: 03/21/2022
+ms.date: 03/24/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: nualex
@@ -92,85 +92,6 @@ To recover the `Model` database from a corrupted state, follow these steps:
 
 ## Solution
 
-To apply the solution, SQLLocalDB service must be in a running state. Before you continue to use this solution, you must apply the steps from the [Mitigation](#mitigation) section if the SQLLocalDB service can't start because of a corrupted `Model` database.
+Microsoft has introduced a fix for this issue in Azure AD Connect version 2.1.1.0. If the sync service (ADSync) can't be started, you need to apply the steps in the [Mitigation](#mitigation) section before you can upgrade Azure AD Connect.
 
-1. Open an administrative Command Prompt window.
-
-1. Run the following SQLLocalDB command:
-
-    ```cmd
-    SQLLocalDB.exe I .\ADSync2019
-    ```
-
-1. Copy the instance pipe name from the SQLLocalDB command output (for example, `np:\\.\pipe\LOCALDB#<database id>\tsql\query`).
-
-1. Run the following [sqlcmd](/sql/tools/sqlcmd-utility) command by using the instance pipe name that you copied from the previous step:
-
-    ```cmd
-    SQLCMD.exe -S <instance pipe name>
-    ```
-
-    You should now be connected to an ADSync2019 SQL LocalDB instance, and you should see a SQL Server command prompt (`#>`).
-
-1. Run the following Transact-SQL statements:
-
-    ```tsql
-    SELECT recovery_model_desc 
-    FROM sys.databases
-    WHERE name = 'model';
-    GO
-   ```
-
-    The output should verify that the recovery_model_desc is `SIMPLE`:
-
-    ```output
-    recovery_model_desc
-    ------------------------------------------------------------
-    SIMPLE
-    ```
-
-1. If the SQL Server recovery mode is `SIMPLE`, run the following set of Transact-SQL commands:
-
-    ```tsql
-    DROP TABLE IF EXISTS #modeldbinfo
-    CREATE TABLE #modeldbinfo (
-        [ParentObject] nvarchar(100),
-        [Object] nvarchar(200),
-        [Field] nvarchar(200),
-        [VALUE] nvarchar(1000)
-    )
-    INSERT INTO #modeldbinfo ([ParentObject], [Object], [Field], [Value])
-    EXEC ('dbcc dbinfo(model) WITH tableresults')
-    SELECT [Field], [VALUE]
-    FROM #modeldbinfo
-    WHERE [Field]
-    IN ('dbi_status', 'dbi_dbbackupLSN', 'dbi_LogBackupChainOrigin', 'dbi_LastLogBackupTime')
-    ORDER BY [Field]
-    GO
-    ```
-
-1. Analyze the output from the previous step to verify that the `dbi_status` value is **0x40010000**:
-
-    ```output
-    dbi_status
-                 0x40010000
-    ```
-
-   This value proves that the `Model` database is corrupted. If this value is something different, the issue is resolved, and you don't have to do anything else.
-
-1. To permanently fix the `Model` database recovery model on your SQLLocalDB service, run the following commands to flip the recovery mode to `FULL` and then revert it to `SIMPLE`:
-
-    ```tsql
-    ALTER DATABASE [model] SET RECOVERY FULL ;
-    ALTER DATABASE [model] SET RECOVERY SIMPLE ;
-    GO
-    ````
-
-1. Repeat step 6 to verify that the recovery mode is fixed. The `dbi_status` should show the correct value of **0x40010008**.
-
-    ```output
-    dbi_status
-                 0x40010008
-    ```
-
-After you apply this solution, `dbi_dbbackupLSN` will remain null after a new backup is run. Then, the ADSync service will be able to start, and the `Model` database will no longer be inconsistent.
+To prevent the corruption issues in the SQLLocalDB `Model` database, install the latest Azure AD Connect build, which is available at [Azure AD Connect: Version release history](/azure/active-directory/hybrid/reference-connect-version-history).

@@ -932,8 +932,6 @@
       href: ./deployment/rebuild-tokens-dotdat-file.md
     - name: Specified database is not a valid VAMT database error
       href: ./deployment/specified-database-not-valid-vamt-error.md
-    - name: Unknown devices in Device manager
-      href: ./deployment/unknown-device-vmbus-virtual-machine.md
     - name: Windows Activation fails with error 0x8007267C
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
@@ -1256,6 +1254,8 @@
       href: ./high-availability/cluster-fileshare-resource-fails.md
     - name: Clustering information on IP address failover
       href: ./high-availability/cluster-information-ip-address-failover.md
+    - name: Cluster validation account causes events or messages
+      href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Error 0x8000ffff when you change Shadow Copy settings
       href: ./high-availability/error-0x8000ffff-catastrophic-failure.md
     - name: Error messages occur when bringing a cluster group online
@@ -1994,6 +1994,8 @@
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
+    - name: 'Troubleshooting guidance: High CPU usage'
+      href: ./performance/troubleshoot-high-cpu-usage-guidance.md
     - name: Add processors to a computer
       href: ./performance/add-processors-to-computer.md
     - name: Error occurs while deleting registry keys
@@ -2681,7 +2683,9 @@
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
     - name: VM Integration Services status reports protocol version mismatch
-      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
+      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md      
+    - name: Unknown devices in Device manager
+      href: ./virtualization/unknown-device-vmbus-virtual-machine.md
   - name: Live Migration
     items:
     - name: 'Troubleshooting guidance: Live Migration'
@@ -2914,6 +2918,8 @@
       href: ./windows-security/ntlm-user-authentication.md
     - name: Performance tuning for NTLM authentication
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
+    - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
+      href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md      
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
@@ -2978,3 +2984,7 @@
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
+- name: Windows Troubleshooters
+  items:
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context
