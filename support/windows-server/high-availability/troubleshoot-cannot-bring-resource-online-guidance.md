@@ -1,6 +1,6 @@
 ---
 title: Can't bring a clustered resource online troubleshooting guidance
-description: Provides guidance where a clustered resource fails to come online in a Windows-based failover cluster.
+description: Provides guidance for when a clustered resource fails to come online in a Windows-based failover cluster
 ms.date: 04/18/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -19,19 +19,19 @@ This guidance is designed to get you started on troubleshooting issues where clu
 
 ## Troubleshooting checklist
 
-1. When a resource fails to come online, Event ID 1069 is logged on the server that hosting the resource of concern:
+1. When a resource fails to come online, Event ID 1069 is logged on the server that's hosting the resource of concern:
 
    > Error 1069 Microsoft-Windows-FailoverClustering Cluster resource '\<Name of the Resource>' of type '\<Resource Type>' in clustered role '\<Available Storage>' failed.
 
-2. Check the System event log for the Event ID and then check if other errors or warnings are logged. For example:
+2. Check the System event log for the Event ID, and then check if other errors or warnings are logged. For example:
 
-   - If a physical disk resource can't come online, check for disk related errors or warnings. For example, Event ID 129 (bus reset) or Event ID 153 (IO retried).
+   - If a physical disk resource can't come online, check for disk-related errors or warnings. For example, Event ID 129 (bus reset) or Event ID 153 (IO retried).
 
-   - If a network name resource can't come online, check for DNS related entries.
+   - If a network name resource can't come online, check for DNS-related entries.
 
-   - If an IP address resource can't come online, check for NIC related events, errors, or warnings.
+   - If an IP address resource can't come online, check for NIC-related events, errors, or warnings.
 
-3. If nothing except Event ID 1069 is logged, review the cluster log for further troubleshooting. Open an elevated PowerShell prompt, run the following cmdlet:
+3. If nothing except Event ID 1069 is logged, review the cluster log for further troubleshooting. Open an elevated PowerShell prompt and run the following cmdlet:
 
    ```powershell
    Get-ClusterLog -Destination C:\temp
@@ -40,7 +40,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
    > [!NOTE]
    > This cmdlet will generate the cluster logs on all cluster members and copy them to the *C:\temp* folder on the server where the cmdlet was executed.
 
-4. Search for strings in the cluster log, which might correlate with Event ID 1069:
+4. Search for strings in the cluster log that might correlate with Event ID 1069:
 
    ```output
    [RCM] rcm::RcmResource::HandleFailure
@@ -50,7 +50,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
    ```
 
    > [!NOTE]
-   > The placeholder \<Code> represents the error code and can be different depending on the issue.
+   > The placeholder \<Code> represents the error code and can differ depending on the issue.
 
 ## Common Support scenarios
 
@@ -64,16 +64,16 @@ This guidance is designed to get you started on troubleshooting issues where clu
 
 Before contacting Microsoft support, you can gather information about the issue.
 
-### Perquisite
+### Prerequisite
 
-1. [TSSv2](https://aka.ms/getTSSv2) must be executed in the context of account with admin rights on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt it again).
+1. [TSSv2](https://aka.ms/getTSSv2) must be executed in the context of an account with admin rights on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt it again).
 
-2. We recommend the local machine **RemoteSigned** PowerShell execution policy.
+2. We recommend that the local machine uses the **RemoteSigned** PowerShell execution policy.
 
 > [!NOTE]
 > In case the current PowerShell execution policy doesn't allow running TSSv2, the following actions could be taken:
 >
-> - Set **RemoteSigned** for the **Process** level, run the following cmdlet:
+> - Set **RemoteSigned** for the **Process** level and run the following cmdlet:
 >
 >   `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`
 >
@@ -87,7 +87,7 @@ Before contacting Microsoft support, you can gather information about the issue.
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) and unzip it to the *C:\tss_tool* folder.
 
-2. Open an elevated PowerShell prompt, change the directory to the *C:\tss_tool* folder.
+2. Open an elevated PowerShell prompt and change the directory to the *C:\tss_tool* folder.
 
 3. Start the trace by running the cmdlet on the source and destination nodes.
 
