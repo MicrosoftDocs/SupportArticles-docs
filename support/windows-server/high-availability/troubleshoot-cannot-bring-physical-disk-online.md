@@ -89,7 +89,7 @@ ms.technology: windows-server-high-availability
 
    `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
-If you identify an issue that you can fix, fix that issue and then try to bring the cluster resource online again before you proceed.
+If you identify an issue that you can fix, fix it and try to bring the cluster resource online again before you proceed.
 
 > [!NOTE]
 > If you change the storage configuration, we recommend that you use the Validate a Configuration wizard to validate the storage configuration.
@@ -116,7 +116,7 @@ To generate a fresh cluster log, reproduce the issue, and then open an elevated 
 
 `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
-If you identify an issue that you can fix, fix that issue and then try to bring the resource online again before you proceed.
+If you identify an issue that you can fix, fix it and try to bring the resource online again before you proceed.
 
 ### Event ID 5394
 

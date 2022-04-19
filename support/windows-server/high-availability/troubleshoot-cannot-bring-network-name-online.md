@@ -94,9 +94,9 @@ For Event ID 1050, 1051, 1052, 1211, 1212, 1218, and 1219, follow these steps:
 1. Use Event Viewer to review the application and system logs.
 
    > [!NOTE]
-   > In particular, search for any events that may be related to domain controller functionality.
+   > In particular, search for any events related to domain controller functionality.
 
-2. Search for information about an error code, use one of the following methods:
+2. To search for information about an error code, use one of the following methods:
 
    - See [system error codes](/windows/win32/debug/system-error-codes).
 
@@ -109,8 +109,8 @@ For Event ID 1050, 1051, 1052, 1211, 1212, 1218, and 1219, follow these steps:
      > [!NOTE]
      > The placeholder \<Code> represents the error code.
 
-3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue, and then open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
+3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue and open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
 
    `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
-If you identify an issue that you can fix, fix that issue and then try to start the affected clustered resource again.
+If you identify an issue that you can fix, fix it and try to start the affected clustered resource again.
