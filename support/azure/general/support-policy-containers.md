@@ -43,7 +43,7 @@ Container orchestrators are enabled to work with container deployments as mentio
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
 - [Mesosphere](https://support.d2iq.com/)
-- [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support)
+- [Docker Swarm](https://docs.docker.com/engine/swarm/)
 - [DC/OS](https://dcos.io/community/)
 - [Kubernetes](https://kubernetes.io/community/)
 

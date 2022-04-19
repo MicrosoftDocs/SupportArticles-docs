@@ -19,7 +19,7 @@ If you plan to move App Service resources to a new resource group or subscriptio
 
 ## How do I use a custom domain name for my web app?
 
-For answers to common questions about using a custom domain name with your Azure web app, see our seven-minute video [Add a custom domain name](https://channel9.msdn.com/blogs/Azure-App-Service-Self-Help/Add-a-Custom-Domain-Name). The video offers a walkthrough of how to add a custom domain name. It describes how to use your own URL instead of the *.azurewebsites.net URL with your App Service web app. You also can see a detailed walkthrough of [how to map a custom domain name](/azure/app-service/app-service-web-tutorial-custom-domain).
+About how to add a custom domain name, see the detailed walk-through: [how to map a custom domain name](/azure/app-service/app-service-web-tutorial-custom-domain).
 
 ## How do I purchase a new custom domain for my web app?
 
