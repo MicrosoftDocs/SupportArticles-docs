@@ -2736,6 +2736,8 @@
       href: ./virtualization/catastrophic-failure-0x8000ffff-error.md
     - name: Fail to start selected virtual machine
       href: ./virtualization/fail-to-start-selected-virtual-machine.md
+    - name: Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
+      href: ./virtualization/hyper-v-virtual-machine-can-not-start-secure-launch-enabled.md
     - name: Hyper-V virtual machine fails to start
       href: ./virtualization/hyper-v-virtual-machine-not-start-0x80070005.md
     - name: Restored Hyper-V virtual machines may not Start
