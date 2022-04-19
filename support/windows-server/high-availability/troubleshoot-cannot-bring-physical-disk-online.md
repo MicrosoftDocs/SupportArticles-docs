@@ -1,6 +1,6 @@
 ---
 title: Can't bring a physical disk online in a cluster
-description: Provides guidance where a physical disk fails to come online in a Windows-based failover cluster.
+description: Provides guidance for when a physical disk fails to come online in a Windows-based failover cluster
 ms.date: 04/18/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -23,11 +23,11 @@ ms.technology: windows-server-high-availability
 
    `Set-ClusterLog -Level 5`
 
-3. Capture a performance monitor log or storport trace to check for poor disk performance, which might delay the online process.
+3. Capture a performance monitor log or a Storport Trace to check for poor disk performance, which might delay the online process.
 
 4. Cluster validation is useful in this scenario also. You can create a new cluster disk from the same SAN and point the cluster validation to that disk.
 
-5. If the cluster Resource Hosting Subsystem (Rhs.exe) process is crashing during the failed online attempt, then you'll need to configure the server to generate a full memory dump and set the following registry keys:
+5. If the cluster Resource Hosting Subsystem (Rhs.exe) process crashes during the failed online attempt, then you need to configure the server to generate a full memory dump and set the following registry keys:
 
    - For Windows Server 2012:
 
@@ -38,19 +38,19 @@ ms.technology: windows-server-high-availability
      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ClusSvc\Parameters\DebugBreakOnDeadlock to DWORD 3.`
 
    > [!NOTE]
-   > After the registry key is configured, the server on which the RHS deadlock will occur, will go into a blue screen and generate a stop 0x9E memory dump. You can then analyze it and address the cause.
+   > After the registry key is configured, the server on which the RHS deadlock occurs displays a blue screen and generates a stop 0x9E memory dump. You can then analyze it and address the cause.
 
 ### Possible solutions
 
 - If disks read or write response times are slow (slow disk performance), contact the storage vendor.
 
-- If antivirus is interfering with the online attempt, uninstall and reboot the server so that the filter drivers are also removed.
+- If the antivirus interferes with the online attempt, uninstall and reboot the server to remove the filter drivers.
 
 - HBA or RAID controller drivers need to be updated.
 
 - Permissions on the root disks are missing.
 
-- If there are persistent reservation issues, recommendation is to contact the storage vendor to diagnose the issues.
+- If there are persistent reservation issues, the recommendation is to contact the storage vendor to diagnose the issues.
 
    Alternatively, you can run the `Clear-ClusterDiskReservation -Disk <Number>` cmdlet to clear the persistent reservation.
 
@@ -70,9 +70,9 @@ ms.technology: windows-server-high-availability
 1. Use Event Viewer to review the application and system logs.
 
    > [!NOTE]
-   > In particular, search for any events that may be related to domain controller functionality.
+   > In particular, search for any events related to domain controller functionality.
 
-2. Search for information about an error code, use one of the following methods:
+2. To search for information about an error code, use one of the following methods:
 
    - See [system error codes](/windows/win32/debug/system-error-codes).
 
@@ -85,7 +85,7 @@ ms.technology: windows-server-high-availability
      > [!NOTE]
      > The placeholder \<Code> represents the error code.
 
-3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue, and then open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
+3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue and open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
 
    `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
@@ -106,13 +106,13 @@ Confirm that the mounted disk is configured according to the following guideline
 
 - Clustered disks can only be mounted onto clustered disks (not local disks).
 
-- The mounted disk and the disk it's mounted onto must be part of the same clustered service or application. They can't be in two different clustered services or applications, and they can't be in the general pool of available storage in the cluster.
+- The mounted disk and the disk it's mounted onto must be part of the same clustered service or application. The disks can't be in two different clustered services or applications, and they can't be in the general pool of available storage in the cluster.
 
 For more information, see [Use Cluster Shared Volumes in a failover cluster](/windows-server/failover-clustering/failover-cluster-csvs).
 
 #### Generate a fresh cluster log that records the issue
 
-To generate a fresh cluster log, reproduce the issue, and then open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
+To generate a fresh cluster log, reproduce the issue and open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
 
 `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
@@ -126,7 +126,7 @@ If you identify an issue that you can fix, fix it and try to bring the resource 
 
 1. In **Disk Management** (available on the **Storage** menu in Server Manager), make sure that the disks are healthy and connected.
 
-2. In **Computer Management** (available on the **Tools** menu in Server Manager), select **Device Manager**, and then make sure that the disks are online with the latest drivers and firmware installed.
+2. In **Computer Management** (available on the **Tools** menu in Server Manager), select **Device Manager** and make sure that the disks are online with the latest drivers and firmware installed.
 
 #### Use the Validate a Configuration wizard to review the storage configuration
 
