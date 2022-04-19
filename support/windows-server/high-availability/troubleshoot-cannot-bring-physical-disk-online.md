@@ -1,5 +1,5 @@
 ---
-title: Can't bring a physical disk online in cluster
+title: Can't bring a physical disk online in a cluster
 description: Provides guidance where a physical disk fails to come online in a Windows-based failover cluster.
 ms.date: 04/18/2022
 author: kaushika-msft
