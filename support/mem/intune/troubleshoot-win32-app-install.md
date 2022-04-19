@@ -8,7 +8,7 @@ ms.reviewer: mghadial
 
 This article explains how to use log files and the Intune Management extension to help troubleshoot installation failures for Microsoft Intune-managed Win 32 apps. If a Win32 app installation fails, you will have the option to **Collect logs** to further diagnose the issue. The **Collect logs** option will not be enabled when the Win32 app has been successfully installed on the device.  
 
-Win32 app log collection is now contained the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 15 minutes. The log size 250mb. The app logs are available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+Win32 app log collection is now contained in the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 15 minutes. The log size is 250 MB. The app logs are available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For more information about how to collect diagnostics, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
 
 > [!IMPORTANT]
 > Before you can collect Win32 app log information, the Intune management extension must be installed on the Windows client. The Intune management extension is installed when a PowerShell script or a Win32 app is deployed to a user or device security group. For more information, see [Intune Management extension - Prerequisites](/mem/intune/apps/intune-management-extension#prerequisites).
