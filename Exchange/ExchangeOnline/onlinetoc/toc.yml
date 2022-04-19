@@ -205,6 +205,8 @@
           href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
     - name: Email Alias
       items:
+        - name: Recipient's address isn't autocompleted or suggested
+          href: ../email-alias/address-not-autocompleted-or-suggested.md
         - name: Remove an alias from a contact
           href: ../email-alias/remove-an-alias-from-a-contact.md
         - name: Remove an alias from a distribution list
