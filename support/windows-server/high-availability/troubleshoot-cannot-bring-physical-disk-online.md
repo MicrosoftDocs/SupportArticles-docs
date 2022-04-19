@@ -23,7 +23,7 @@ ms.technology: windows-server-high-availability
 
    `Set-ClusterLog -Level 5`
 
-3. Capture a performance monitor log or a Storport Trace to check for poor disk performance, which might delay the online process.
+3. Capture a performance monitor log or a Storport trace to check for poor disk performance, which might delay the online process.
 
 4. Cluster validation is useful in this scenario also. You can create a new cluster disk from the same SAN and point the cluster validation to that disk.
 
