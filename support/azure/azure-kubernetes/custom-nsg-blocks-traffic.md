@@ -1,10 +1,11 @@
 ---
 title: Fix time-out errors caused by a custom NSG that blocks traffic
 description: Troubleshoot time-out errors that occur because a custom network security group (NSG) blocks traffic to an app hosted on an Azure Kubernetes Service cluster.
-ms.date: 3/17/2022
+ms.date: 4/18/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
+editor: v-jsitser
 ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to fix custom network security group (NSG) configuration issues so that I don't get time-out errors when trying to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
@@ -31,14 +32,14 @@ my-deployment-66648877fc-v78jm   1/1     Running   0          5m53s
 
 $ kubectl get service
 NAME                      TYPE           CLUSTER-IP    EXTERNAL-IP    PORT(S)        AGE
-my-loadbalancer-service   LoadBalancer   10.0.107.79   20.81.x.x   80:31048/TCP   4m14s
+my-loadbalancer-service   LoadBalancer   10.0.107.79   10.81.x.x   80:31048/TCP   4m14s
 
-$ curl -Iv http://20.81.124.39  # Use an IP address that fits the "EXTERNAL-IP" pattern.
-*   Trying 20.81.x.x:80...
-* connect to 20.81.x.x port 80 failed: Timed out
-* Failed to connect to 20.81.x.x port 80 after 21033 ms: Timed out
+$ curl -Iv http://10.81.124.39  # Use an IP address that fits the "EXTERNAL-IP" pattern.
+*   Trying 10.81.x.x:80...
+* connect to 10.81.x.x port 80 failed: Timed out
+* Failed to connect to 10.81.x.x port 80 after 21033 ms: Timed out
 * Closing connection 0
-curl: (28) Failed to connect to 20.81.x.x port 80 after 21033 ms: Timed out
+curl: (28) Failed to connect to 10.81.x.x port 80 after 21033 ms: Timed out
 ```
 
 ## Cause
@@ -78,10 +79,10 @@ my-deployment-66648877fc-v78jm   1/1     Running   0          7m45s   172.25.0.9
 
 $ kubectl run -it --rm aks-ssh --image=debian  # Launch the test pod.
 If you don't see a command prompt, try pressing enter.
-$ root@aks-ssh:/# 
+$ root@aks-ssh:
 
 $ # Install packages inside the test pod.
-$ root@aks-ssh:/# apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y
+$ root@aks-ssh: apt-get update -y && apt-get install dnsutils -y && apt-get install curl -y
 Get:1 http://deb.debian.org/debian bullseye InRelease [116 kB]
 Get:2 http://deb.debian.org/debian bullseye-updates InRelease [39.4 kB]
 ...
@@ -111,7 +112,7 @@ The defined service is a `LoadBalancer` type. This means that the request flow f
 In this request flow, we can block the traffic through the following components:
 
 - Network policies in the cluster
-- The network security group (NSG) for the AKS subnet and the AKS node
+- The network security group (NSG) for the AKS subnet and AKS node
 
 To check network policy, run the following `kubectl get` command:
 
@@ -123,7 +124,7 @@ kube-system   konnectivity-agent   app=konnectivity-agent   3h8m
 
 Only the AKS default policy exists. Therefore, network policy doesn't seem to be blocking the traffic.
 
-To check the NSGs and their associated rules with AKS, follow these steps:
+To check the NSGs and their associated rules by using AKS, follow these steps:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Virtual machine scale sets**.
 
@@ -131,29 +132,50 @@ To check the NSGs and their associated rules with AKS, follow these steps:
 
 1. In the menu pane of your scale set instance, select `Networking`.
 
-    :::image type="content" source="./media/custom-nsg-blocks-traffic/virtual-machine-scale-set-networking-page.png" lightbox="./media/custom-nsg-blocks-traffic/virtual-machine-scale-set-networking-page.png" alt-text="Screenshot of the networking page of the virtual machine scale set instance on the Azure portal." border="true":::
+The **Networking** page for the scale set instance appears. In the **Inbound port rules** tab, two sets of rules are displayed that are based on the two NSGs that act on the scale set instance:
 
-In this diagram, the AKS scale set has two NSGs that act on it. One is at the subnet level. This is common when a custom virtual network and custom subnet for the AKS cluster are used. The other NSG is at the network adapter level. This NSG is applied by the AKS cluster, and it's managed by AKS.
+- The first set is composed of NSG rules at the subnet level. These rules are displayed under the following note heading:
 
-The NSG at the subnet level is missing the required `Inbound` rule. So why did AKS not apply the rule to the Custom NSG?
+  > Network security group *\<my-aks-nsg>* (attached to subnet: *\<my-aks-subnet>*)
 
-AKS doesn't apply NSGs to its subnet, and it won't modify any of the NSGs that are associated with that subnet. AKS will modify the NSGs only at the network adapter level.
+  This arrangement is common if a custom virtual network and custom subnet for the AKS cluster are used. The set of rules at the subnet level might resemble the following table.
+
+  | Priority | Name | Port | Protocol | Source | Destination | Action |
+  | -------- | ---- | ---- | -------- | ------ | ----------- | ------ |
+  | 65000 | AllowVnetInBound | Any | Any | VirtualNetwork | VirtualNetwork | Allow |
+  | 65001 | AllowAzureLoadBalancerInBound | Any | Any | AzureLoadBalancer | Any | Allow |
+  | 65500 | DenyAllInBound | Any | Any | Any | Any | Deny |
+
+- The second set is composed of NSG rules at the network adapter level. These rules are displayed under the following note heading:
+
+  > Network security group *aks-agentpool-\<agentpool-number>-nsg* (attached to network interface: *aks-agentpool-\<vm-scale-set-number>-vmss*)
+
+  This NSG is applied by the AKS cluster, and it's managed by AKS. The corresponding set of rules might resemble the following table.
+
+  | Priority | Name | Port | Protocol | Source | Destination | Action |
+  | -------- | ---- | ---- | -------- | ------ | ----------- | ------ |
+  | **500** | **\<guid>-TCP-80-Internet** | **80** | **TCP** | **Internet** | **10.81.*x*.*x*** | **Allow** |
+  | 65000 | AllowVnetInBound | Any | Any | VirtualNetwork | VirtualNetwork | Allow |
+  | 65001 | AllowAzureLoadBalancerInBound | Any | Any | AzureLoadBalancer | Any | Allow |
+  | 65500 | DenyAllInBound | Any | Any | Any | Any | Deny |
+
+At the network adapter level, there's an NSG inbound rule for TCP at IP address 10.81.*x*.*x* on port 80 (highlighted in the table). However, an equivalent rule is missing from the rules for the NSG at the subnet level.
+
+Why didn't AKS apply the rule to the custom NSG? Because AKS doesn't apply NSGs to its subnet, and it won't modify any of the NSGs that are associated with that subnet. AKS will modify the NSGs only at the network adapter level. For more information, see [Can I configure NSGs with AKS?](/azure/aks/faq#can-i-configure-nsgs-with-aks).
 
 ## Solution
 
 If the application is enabled for access on a certain port, you must make sure that the custom NSG allows that port as an `Inbound` rule. After the appropriate rule is added in the custom NSG at the subnet level, the application is accessible.
 
-:::image type="content" source="./media/custom-nsg-blocks-traffic/add-inbound-port-rule-custom-nsg-subnet.png" lightbox="./media/custom-nsg-blocks-traffic/add-inbound-port-rule-custom-nsg-subnet.png" alt-text="Screenshot of the new inbound port rule in the subnet level network security group (N S G) in the networking page of the V M scale set instance." border="true":::
-
 ```console
-$ curl -Iv http://20.81.x.x
-*   Trying 20.81.x.x:80...
-* Connected to 20.81.x.x (20.81.x.x) port 80 (#0)
+$ curl -Iv http://10.81.x.x
+*   Trying 10.81.x.x:80...
+* Connected to 10.81.x.x (10.81.x.x) port 80 (#0)
 ...
 ...
 < HTTP/1.1 200 OK
 HTTP/1.1 200 OK
 ...
 ...
-* Connection #0 to host 20.81.x.x left intact
+* Connection #0 to host 10.81.x.x left intact
 ```
