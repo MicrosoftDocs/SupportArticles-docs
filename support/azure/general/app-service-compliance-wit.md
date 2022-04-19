@@ -21,3 +21,5 @@ PCI DSS version 3.1 certification requires disabling TLS 1.0. If you are using A
 ## More information
 
 Microsoft regularly reviews standards compliance procedures and will periodically update compliance baselines as standards bodies update and change their requirements. As part of Microsoft's Fiscal 2017 compliance planning, PCI standards will again be re-reviewed and technical determinations will be made. To view the current certifications, technical determinations will be made. To view the current certifications, visit the [Microsoft Azure Trust Center: Compliance site](https://azure.microsoft.com/support/trust-center/compliance/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

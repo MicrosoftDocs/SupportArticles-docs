@@ -72,7 +72,7 @@ After you successfully install the Windows Agent, the agent will have a Log Anal
 
    The absence of this directory indicates that the VM Guest Agent didn't try the extension installation. In this situation, file a support request with the VM support team to troubleshoot the VM Guest Agent installation.
 
-1. Check whether the following extension log directory exists: 
+1. Check whether the following extension log directory exists:
 
    *C:\WindowsAzure\Logs\Plugins\Microsoft.EnterpriseCloud.Monitoring.MicrosoftMonitoringAgent\<Extension version\>*
 
@@ -91,9 +91,9 @@ After you successfully install the Windows Agent, the agent will have a Log Anal
         11/22/2019 1:11:42 AM +00:00 Completed installing the Microsoft Monitoring Agent VM Extension.
         ```
 
-     1. A failed installation will show the cause of the failure. If the failure occurs because of Windows Installer issues, check the Windows Installer logs to inspect *MMAExtensionInstall0-Setup0.log*.  
-     1. If possible, fix the issue that's reported by Windows Installer. Then, try to install the Windows Agent again.  
-     1. If the commands in step 2 in this solution don't produce any results, then the related service isn't running. In PowerShell, try to start the following services:  
+   1. A failed installation will show the cause of the failure. If the failure occurs because of Windows Installer issues, check the Windows Installer logs to inspect *MMAExtensionInstall0-Setup0.log*.  
+   1. If possible, fix the issue that's reported by Windows Installer. Then, try to install the Windows Agent again.  
+   1. If the commands in step 2 in this solution don't produce any results, then the related service isn't running. In PowerShell, try to start the following services:  
   
         - This service will start both the HealthService process and the MonitoringHost process:
 
@@ -107,9 +107,11 @@ After you successfully install the Windows Agent, the agent will have a Log Anal
            Net start MMAExtensionHeartbeatService 
            ```
 
-     1. Wait a few minutes, and then repeat step 2 in this solution. If the processes still don't return any values, check the following event viewer logs for possible causes:  
+   1. Wait a few minutes, and then repeat step 2 in this solution. If the processes still don't return any values, check the following event viewer logs for possible causes:  
 
           - Windows Logs - Application
           - Applications and Services Logs - Operations Manager
 
-     1. If you can't determine the cause of failure, run the Agent Troubleshooter to gather a set of troubleshooting logs, as described in [Log Analytics Agent Troubleshooting Tool](/azure/azure-monitor/agents/agent-windows-troubleshoot#log-analytics-troubleshooting-tool). Then, file a support request.  
+   1. If you can't determine the cause of failure, run the Agent Troubleshooter to gather a set of troubleshooting logs, as described in [Log Analytics Agent Troubleshooting Tool](/azure/azure-monitor/agents/agent-windows-troubleshoot#log-analytics-troubleshooting-tool). Then, file a support request.  
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

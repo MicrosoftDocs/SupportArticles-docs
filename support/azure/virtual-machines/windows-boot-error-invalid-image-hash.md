@@ -39,12 +39,12 @@ or the message:
   > Status: 0xc0000428
 
   > Info: The digital signature for this file couldn't be verified.
-	
+ 
   :::image type="content" source="media/windows-boot-error-invalid-image-hash/digital-signature-not-verified.png" alt-text="Screenshot of the Windows Boot Manager window, with the status Ox0000428 and the info that the digital signature for this file couldn't be verified.":::
 
 ## Cause
 
-The image that was used to build the VM was a preview image with an expiration date rather than an RTM (Release to Manufacturing) image. 
+The image that was used to build the VM was a preview image with an expiration date rather than an RTM (Release to Manufacturing) image.
 
 Preview images have a designated lifecycle and the screenshot you see is displayed when you pass the expiration date, meaning the trial of the image is over.
 
@@ -121,3 +121,5 @@ Depending upon your preference, you can use either Azure PowerShell or Azure CLI
   az vm image list-skus --location "West US" --publisher "MicrosoftWindowsServer" --offer "WindowsServer"
   az vm image list  --location "West US" --publisher "MicrosoftWindowsServer" --offer "WindowsServer" --sku "2016-Datacenter"
   ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

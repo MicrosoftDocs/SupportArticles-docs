@@ -51,3 +51,5 @@ For more information about NMI calls, see the [NMI calls in Azure Serial Console
 
 > [!div class="nextstepaction"]
 > [Troubleshoot Azure Virtual Machine boot errors](boot-error-troubleshoot.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -75,6 +75,8 @@ Microsoft offers commercially reasonable support for the components that are dep
 
 :::image type="content" source="media/support-policy-containers/component-support.png" alt-text="Screenshot of component support.":::
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

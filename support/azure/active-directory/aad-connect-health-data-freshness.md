@@ -50,19 +50,19 @@ If you use an HTTP proxy, follow these steps:
 
 1. Use a PowerShell cmdlet to find connectivity issues. You can [run the Test-AzureADConnectHealthConnectivity cmdlet](/azure/active-directory/hybrid/how-to-connect-health-agent-install#test-connectivity-to-azure-ad-connect-health-service) successfully as a regular user. However, if all data types are missing, the proxy setting might be correct for the user but not for **Local System** (the context that the service runs under). In that case, run the appropriate `Test-AzureADConnectHealthConnectivityAsSystem` cmdlet instead:
 
-    ## [Sync](#tab/sync)
+## [Sync](#tab/sync)
 
     ```powershell
     Test-AzureADConnectHealthConnectivityAsSystem -Role Sync
     ```
 
-    ## [AD DS](#tab/azure-ad-ds)
+## [AD DS](#tab/azure-ad-ds)
 
     ```powershell
     Test-AzureADConnectHealthConnectivityAsSystem -Role ADDS
     ```
 
-    ## [AD FS](#tab/ad-fs)
+## [AD FS](#tab/ad-fs)
 
     ```powershell
     Test-AzureADConnectHealthConnectivityAsSystem -Role ADFS
@@ -386,3 +386,5 @@ To collect Diagnostics Agent logs for AD FS, follow these steps:
 1. Let the Diagnostics Agent service run for 15 minutes. Then, press Ctrl+C to stop the service, and copy the console output into *diagnostics.log*.
 
 1. Search for `Error` in the logs, and check whether any error entry indicates a specific problem (such as connectivity or proxy configuration).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

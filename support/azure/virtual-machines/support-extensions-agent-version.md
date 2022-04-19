@@ -18,7 +18,7 @@ To get support for Linux Agent and extensions in Azure, the [Linux Agent](https
 
 **Starting in July 2020**, the minimum supported version will be version 2.2.41 for the Linux Agent.
 
-- If the Linux Agent version is earlier than version 2.2.10, you must update the VM by using the distribution package manager and by enabling auto-update. 
+- If the Linux Agent version is earlier than version 2.2.10, you must update the VM by using the distribution package manager and by enabling auto-update.
 - If the distribution vendor doesn't have the minimum Linux Agent version in the package repositories, the system is still in support. If the Linux Agent version is later than version 2.1.7, you must enable the Agent auto-update feature. It will retrieve the latest version of code for extension handling.
 - If the Linux Agent version is earlier than version 2.2.10, or if the Linux system is out-of-support, we may require you to update the agent before getting support.
 - If the Linux Agent version is customized by a publisher, Microsoft may direct you to the publisher for support agent or extension-specific support because of the customization.
@@ -47,7 +47,7 @@ For more information about the agent, see [https://github.com/Azure/WALinuxAgent
 To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to version 2.7.41491.911.
 
 - If the Windows Agent is earlier than version 2.7.41491.911, or if the Windows system is out-of-support, we may require you to update the agent before we can offer support.
- To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](/azure/virtual-machines/extensions/agent-windows). 
+ To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](/azure/virtual-machines/extensions/agent-windows).
 
 ## Frequently asked questions
 
@@ -83,3 +83,5 @@ No. This change only affects Linux VM publishers.
 ## More information
 
 [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

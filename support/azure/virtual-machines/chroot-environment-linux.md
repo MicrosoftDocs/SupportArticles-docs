@@ -160,7 +160,6 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    > [!NOTE]
    > If your original VM includes Logical Volume Manager (LVM) on the OS Disk, create the Rescue VM using the image with Raw Partitions on the OS Disk
 
-
 1. Stop or de-allocate the affected VM.
 1. Create a Rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
@@ -273,10 +272,10 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 
 > [!NOTE]
    > It is possible that you need to deploy the rescue VM using the same lvm image, if that's the case you would need to get around that by modifying some aspects of the rescue VM LVM.
-   > 
+   >
 
    1. Check the status of the disks prior attaching the disk you want to rescue
-   
+
       ```
       # lsblk -f
       NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -298,6 +297,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    1. Attach the disk you want to rescue as a data drive
    2. Check the disks again
       Note that it will not show you the lvm structures right away
+
       ```
       # lsblk -f
       NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -321,7 +321,9 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       └─sdc4            LVM2_member       pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU
 
       ```
+
    1. lvm commands will complain about duplicated PV
+
       ```
       # pvs
       WARNING: Not using lvmetad because duplicate PVs were found.
@@ -332,8 +334,10 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       PV         VG     Fmt  Attr PSize   PFree
       /dev/sda4  rootvg lvm2 a--  <63.02g <38.02g
       ```
+
    2. Use the vmimportclone command to import the rootvg from the data drive using another name
       This will also change the UUID of the PV and will activate it
+
       ```
       # vgimportclone -n rescuemevg /dev/sdc4
       WARNING: Not using device /dev/sdc4 for PV pdSI2Q-ZEzV-oT6P-R2JG-ZW3h-cmnf-iRN6pU.
@@ -342,7 +346,9 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       # vgchange -a y rescuemevg 
       6 logical volume(s) in volume group "rescuemevg" now active
       ```
+
    3. Verify the name change
+
       ```
       # lsblk -f
       NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -371,12 +377,16 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
       ```
+
    4. Rename the rootvg of the rescue VM
+
       ```
       # vgrename rootvg oldvg
       Volume group "rootvg" successfully renamed to "oldvg"
       ```
+
    5. Check the disks
+
       ```
       # lsblk -f
       NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -405,8 +415,10 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809
       ```
+
    6. Mount the FS coming from the data drive,
       When using xfs use the -o nouuid option to avoid conflicts with the UUIDs and mount the needed filesystems to perform a chroot:
+
       ```
       mkdir /rescue
       mount -o nouuid /dev/mapper/rescuemevg-rootlv /rescue
@@ -423,7 +435,9 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount -o bind /dev/pts /rescue/dev/pts/
       mount -o bind /run /rescue/run/
       ```
+
    7. Verify the mounts
+
       ```
       # lsblk -f
       NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -452,12 +466,16 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /rescue/var
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /rescue
       ```
+
    8. Use chroot
+
       ```
       chroot /rescue/
       ```
+
    10. Verify tge mounts "inside" the chroot environment
-      Notice that now rescuemevg-rootlv is the one mounted on / 
+      Notice that now rescuemevg-rootlv is the one mounted on /
+
       ```
       # lsblk -f
       NAME                  FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -486,13 +504,17 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ├─rescuemevg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
       └─rescuemevg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
+
    1. Rename the VG to keep it consistent
       Renaming the vg will keep you from facing issues when regenerating initrd and booting the disk again on the original VM
+
       ```
       # vgrename rescuemevg rootvg
       Volume group "rescuemevg" successfully renamed to "rootvg"
       ```
+
    1. Verify the change
+
       ```
       # lsblk -f
       NAME              FSTYPE      LABEL UUID                                   MOUNTPOINT
@@ -521,12 +543,16 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       ├─rootvg-varlv  xfs               c7cb68e9-7865-4187-b3bd-e9a869779d86   /var
       └─rootvg-rootlv xfs               d8dc4d62-ada5-4952-a0d9-1bce6cb6f809   /
       ```
+
    2. Proceed with the required activities to rescue the OS, this may include regenerating initramfs or the grub configuration
    3. Exit the chroot environment
+
       ```
       exit
       ```
+
    4. Unmount and detach the data disk from the rescue VM and perform a disk swap with the original VM
+
       ```
       umount /rescue/run/
       umount /rescue/dev/pts/
@@ -542,7 +568,8 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue/home
       umount /rescue
       ```
-   5.  Start the original VM and verify its functionality
+
+   5. Start the original VM and verify its functionality
 
 ## Oracle 7.x
 
@@ -685,3 +712,5 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ## Next Steps
 
 - [Troubleshoot ssh connection](troubleshoot-ssh-connection.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

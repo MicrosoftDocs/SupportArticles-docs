@@ -53,6 +53,4 @@ Use the command `Set-MsolDomainFederationSettings` to modify the IssuerURI of th
 
    The necessary IssuerURI value is listed by Azure AD in the authentication failure message.
 
-## Additional information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -65,3 +65,5 @@ To specifically work around the Work Item Tracking performance issue, use the fo
 
 - For more information about how to view or change the compatibility Level of a database, see:
 [View or Change the Compatibility Level of a Database](/sql/relational-databases/databases/view-or-change-the-compatibility-level-of-a-database)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

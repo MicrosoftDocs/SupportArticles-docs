@@ -104,7 +104,7 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
    > [!NOTE]
    > If the **Create new** option is not available to select, this is because you don't have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
-   
+
    - (Preview Feature): In the public preview phase, we are offering an experience that you don't need to select storage account again after the first time using VM Inspector. Unless you want to change the storage account, all diagnostic reports will be saved in the first time storage account that you selected. It is highly recommended to choose the storage account in the same region of the compute resources as best practice.
 
 1. Select the **Run Inspector** button or **Browse Inspector Report** button:
@@ -464,3 +464,5 @@ To delete one or more VM Inspector reports, select **Delete report**.
 ## Next steps
 
 If you need more help with any of the content in this article, or if you have any feedback regarding this feature, contact the Azure experts here: vminspector@microsoft.com.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

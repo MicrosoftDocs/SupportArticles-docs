@@ -147,9 +147,9 @@ SUSE now requires that VMs use attested data when they connect to the SUSE publi
 >Unprocessable Entity
 >
 >{  
->  "type": "error",  
->  "error": "The requested product 'SUSE Linux Enterprise Server for SAP Applications 15 SP1 x86_64' is not activated on this system.",  
->  "localized_error": "The requested product 'SUSE Linux Enterprise Server for SAP Applications 15 SP1 x86_64' is not activated on this system."  
+> "type": "error",  
+> "error": "The requested product 'SUSE Linux Enterprise Server for SAP Applications 15 SP1 x86_64' is not activated on this system.",  
+> "localized_error": "The requested product 'SUSE Linux Enterprise Server for SAP Applications 15 SP1 x86_64' is not activated on this system."  
 >}
 >
 >Unable to register modules, exiting.
@@ -253,3 +253,5 @@ For more information about [Endorsed Linux distributions](/azure/virtual-machine
 ## Third-party information disclaimer
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

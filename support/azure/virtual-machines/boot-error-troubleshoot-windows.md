@@ -147,6 +147,6 @@ To enable dump log and Serial Console, run the following script.
 
 8. Attach the OS disk to a recovery VM again, collect dump file.
 
-## Contact Microsoft support
-
 After you collect the dump file, contact Microsoft support to determine the root cause.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -35,6 +35,4 @@ Take one of the following actions:
 - Have a global admin remove the user from the recycle bin.
 - Wait 30 days. Deleted users will remain in the recycle bin for 30 days. After 30 days, they are automatically removed from the recycle bin.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
