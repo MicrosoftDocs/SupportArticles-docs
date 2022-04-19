@@ -54,7 +54,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
 
 ## Common Support scenarios
 
-- [Can't bring a network name online](troubleshoot-cannot-bring-network-name-online)
+- [Can't bring a network name online](troubleshoot-cannot-bring-network-name-online.md)
 
 - [Can't bring a physical disk online](troubleshoot-cannot-bring-physical-disk-online.md)
 
