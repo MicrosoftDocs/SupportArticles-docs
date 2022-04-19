@@ -8,9 +8,9 @@ author: genlin
 ms.reviewer: tiffanyyu
 ---
 
-# Azure dependency availability by country/region
+# Azure dependency availability by primary country/region
 
-Many product features have Azure dependencies that might not be available in all countries/regions. This includes, but is not limited to, the following list:
+Many product features have Azure dependencies that might not be available in all primary countries/regions. This includes, but is not limited to, the following list:
 
 - Insider risk management
 - Microsoft Threat Protection (MTP)
@@ -22,9 +22,11 @@ Many product features have Azure dependencies that might not be available in all
 - Privacy
 - Transport
 
-## Availability by country/region
+Please note that the Azure dependency is only applicable to a tenant's primary country and not it's subsidary countries/regions. 
 
-Countries/regions that have Azure dependencies availability as of December 2021:
+## Availability by primary country/region
+
+Primary countries/regions that have Azure dependencies availability as of April 2022:
 
 - Australia
 - Brazil*
