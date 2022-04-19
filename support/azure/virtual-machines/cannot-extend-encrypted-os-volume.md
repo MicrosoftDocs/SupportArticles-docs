@@ -48,9 +48,9 @@ To fix this problem, you need to perform the following steps:
 
 1. Sign in to the VM. In Disk Management, assign a drive letter to the System Reserved partition. For example, you can assign drive letter E to it.
 
-        :::image type="content" source="media/cannot-extend-encrypted-os-volume/change-drive.png" alt-text="Screenshot of the shortcut menu for the System Reserved volume in Disk Management, with Change Drive Letter and Paths selected.":::
+   :::image type="content" source="media/cannot-extend-encrypted-os-volume/change-drive.png" alt-text="Screenshot of the shortcut menu for the System Reserved volume in Disk Management, with Change Drive Letter and Paths selected.":::
 
-        :::image type="content" source="media/cannot-extend-encrypted-os-volume/add-drive.png" alt-text="Screenshot of the Add Drive Letter or Path dialog box, assigning the letter E to the System Reserved volume.":::
+   :::image type="content" source="media/cannot-extend-encrypted-os-volume/add-drive.png" alt-text="Screenshot of the Add Drive Letter or Path dialog box, assigning the letter E to the System Reserved volume.":::
 
 2. Right-click the **System Reserved** partition, and then select **Extend Volume…**. When selecting an amount of space to extend, *specify a value at least 200 MB less than the maximum allowed* (to leave room for a boot volume you will create later).
 
@@ -66,19 +66,19 @@ To fix this problem, you need to perform the following steps:
 
 1. Create a new volume in the remaining unallocated space and assign a drive letter to it. Make a note of this drive letter because you will be using it in the next step.
 
-        :::image type="content" source="media/cannot-extend-encrypted-os-volume/new-simple-volume.png" alt-text="Screenshot of the new simple volume option selected from unallocated space.":::
+   :::image type="content" source="media/cannot-extend-encrypted-os-volume/new-simple-volume.png" alt-text="Screenshot of the new simple volume option selected from unallocated space.":::
 
 2. Open an elevated command prompt and run the following command to create a new set of boot files in the last volume you have just created.
 
-        ```console
-        bcdboot C:\Windows /s [drive letter of newest volume]:
-        ```
+    ```console
+    bcdboot C:\Windows /s [drive letter of newest volume]:
+    ```
 
-        For example, if the last volume you created (the rightmost volume in Disk Management, created from the remaining unallocated space) was assigned the F: drive, you would type the following at the command prompt:
+   For example, if the last volume you created (the rightmost volume in Disk Management, created from the remaining unallocated space) was assigned the F: drive, you would type the following at the command prompt:
 
-        ```console
-        bcdboot C:\Windows /s F:
-        ```
+    ```console
+    bcdboot C:\Windows /s F:
+    ```
 
 3. Open Regedit, select **HKEY_LOCAL_MACHINE\BCD00000000**, and then select **Unload Hive** from the **File** menu.
 
@@ -86,57 +86,57 @@ To fix this problem, you need to perform the following steps:
 
 4. Use the following command to replace the *\boot\bcd* file located in the last volume you have created (that is, the rightmost drive in Disk Management, created from last unallocated space) with the current BCD file found in the *\boot* folder of the System Reserved volume.
 
-        ```console
-        Copy [Drive letter of System Reserved volume]:\boot\bcd [Drive letter of newest volume]:\boot\bcd
-        ```
+    ```console
+    Copy [Drive letter of System Reserved volume]:\boot\bcd [Drive letter of newest volume]:\boot\bcd
+    ```
 
-        For example, if the drive letter of your System Reserved volume is E, and the newest (rightmost) volume you created is F, you would type the following command:
+    For example, if the drive letter of your System Reserved volume is E, and the newest (rightmost) volume you created is F, you would type the following command:
 
-        ```console
-        Copy E:\boot\bcd F:\boot\bcd
-        ```
+    ```console
+    Copy E:\boot\bcd F:\boot\bcd
+    ```
 
-        You need to perform this step because the BCD file created in step 2 does not contain Azure-specific configuration settings. (Note that as an alternative to performing this copy operation, you can follow the "Set the Boot Configuration Data [BCD] settings" instructions found here: [Verify the VM](/azure/virtual-machines/windows/prepare-for-upload-vhd-image#verify-the-vm))
+    You need to perform this step because the BCD file created in step 2 does not contain Azure-specific configuration settings. (Note that as an alternative to performing this copy operation, you can follow the "Set the Boot Configuration Data [BCD] settings" instructions found here: [Verify the VM](/azure/virtual-machines/windows/prepare-for-upload-vhd-image#verify-the-vm))
 
 5. Run the following command to begin the process of changing Windows Boot Manager from the System Reserved partition to the newest (rightmost) partition:
 
-        ```console
-        bcdedit /store [Newest drive letter]:\boot\bcd /enum /v
-        ```
+    ```console
+    bcdedit /store [Newest drive letter]:\boot\bcd /enum /v
+    ```
 
-        For example, if the newest (rightmost) partition drive letter is F, you would type the following command:
+    For example, if the newest (rightmost) partition drive letter is F, you would type the following command:
 
-        ```console
-        bcdedit /store F:\boot\bcd /enum /v
-        ```
+    ```console
+    bcdedit /store F:\boot\bcd /enum /v
+    ```
 
-        You will see output that looks like the following example:
+    You will see output that looks like the following example:
 
-        ```output
-        Windows Boot Manager
-        --------------------
-        identifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}  <<<<<
-        device                  partition=E:
-        description             Windows Boot Manager
-        locale                  en-us
-        inherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}
-        displayorder            {05d0826e-19a2-4380-968f-4b45f971812d}
-        toolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}
-        timeout                 30
-        …………..
-        ```
+    ```output
+    Windows Boot Manager
+    --------------------
+    identifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}  <<<<<
+    device                  partition=E:
+    description             Windows Boot Manager
+    locale                  en-us
+    inherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}
+    displayorder            {05d0826e-19a2-4380-968f-4b45f971812d}
+    toolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}
+    timeout                 30
+    …………..
+    ```
 
 6. Use the Identifier value from the last output to run the following command and complete the process of moving Windows Boot Manager to the newest partition:
 
-        ```console
-        bcdedit /store [Newest drive letter]:\boot\bcd /set [Identifier] device partition=[Newest drive letter]:
-        ```
+    ```console
+    bcdedit /store [Newest drive letter]:\boot\bcd /set [Identifier] device partition=[Newest drive letter]:
+    ```
 
-        For example, if the newest drive letter is F and the identifier is the same as in the output above, you would type the following:
+    For example, if the newest drive letter is F and the identifier is the same as in the output above, you would type the following:
 
-        ```console
-        bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device partition=F:
-        ```
+    ```console
+    bcdedit /store F:\boot\bcd /set {9dea862c-5cdd-4e70-acc1-f32b344d4795} device partition=F:
+    ```
 
 7. In Disk Management, right-click the rightmost volume (the last volume you created), and select **Mark Partition as Active**. Click Yes to confirm.
 8. Restart the VM.
@@ -149,6 +149,6 @@ To fix this problem, you need to perform the following steps:
 
 2. Finally, extend the C drive as needed with the unallocated space that is now adjacent.
 
-        :::image type="content" source="media/cannot-extend-encrypted-os-volume/extend-volume-available.png" alt-text="Screenshot of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
+   :::image type="content" source="media/cannot-extend-encrypted-os-volume/extend-volume-available.png" alt-text="Screenshot of the Extend Volume now available on the shortcut menu for the Windows volume in Disk Management.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

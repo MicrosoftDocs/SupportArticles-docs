@@ -62,7 +62,7 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
     Set-Acl -Path " HKLM:\SOFTWARE\Microsoft\SystemCertificates\Remote Desktop\Certificates " -AclObject $NewAcl
     ```
 
-2. Set the following registry key value to ignore the profile loading error:
+ 2. Set the following registry key value to ignore the profile loading error:
 
     ```powershell
     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server' -name "IgnoreRegUserConfigErrors" 1 -Type DWord -force
@@ -71,14 +71,14 @@ After you connect to the VM by using PowerShell, follow these steps to troublesh
  3. Set the size of the token to its maximum value:
 
      ```powershell
- Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters' -name "MaxTokenSize" 65535 -Type DWord -force 
-    ```
+     Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Parameters' -name "MaxTokenSize" 65535 -Type DWord -force 
+     ```
 
  1. Set the correct account for the terminal services:
 
     ```powershell
- Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
-   ```
+    Set-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\services\termservice' -name "ObjectName" "NT Authority\NetworkService" -Type String -force
+    ```
 
  1. Restart VM to make the registry changes take effect.
 

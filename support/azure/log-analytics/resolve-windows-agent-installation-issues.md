@@ -109,8 +109,8 @@ After you successfully install the Windows Agent, the agent will have a Log Anal
 
    1. Wait a few minutes, and then repeat step 2 in this solution. If the processes still don't return any values, check the following event viewer logs for possible causes:  
 
-          - Windows Logs - Application
-          - Applications and Services Logs - Operations Manager
+      - Windows Logs - Application
+      - Applications and Services Logs - Operations Manager
 
    1. If you can't determine the cause of failure, run the Agent Troubleshooter to gather a set of troubleshooting logs, as described in [Log Analytics Agent Troubleshooting Tool](/azure/azure-monitor/agents/agent-windows-troubleshoot#log-analytics-troubleshooting-tool). Then, file a support request.  
 

@@ -31,7 +31,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 2. Select the affected Virtual Machine.
 3. Select **Networking** and then select the network Interface of the VM.
 
-        :::image type="content" source="media/reset-network-interface/select-vm-network-interface.png" alt-text="Screenshot shows the Network interface location." border="false":::
+    :::image type="content" source="media/reset-network-interface/select-vm-network-interface.png" alt-text="Screenshot shows the Network interface location." border="false":::
 
 4. Select **IP configurations**.
 5. Select the IP.
@@ -120,10 +120,10 @@ After you can remote desktop to the machine, you must delete the old NICs to avo
 4. Check for the adapters named as "Microsoft Hyper-V Network Adapter".
 5. You might see an unavailable adapter that is grayed out. Right-click the adapter and then select Uninstall.
 
-        :::image type="content" source="media/reset-network-interface/network-adapter.png" alt-text="Screenshot shows network adapters in which Microsoft Hyper-V Network Adapter is greyed." border="false":::
+    :::image type="content" source="media/reset-network-interface/network-adapter.png" alt-text="Screenshot shows network adapters in which Microsoft Hyper-V Network Adapter is greyed." border="false":::
 
-        > [!NOTE]
-        > Only uninstall the unavailable adapters that have the name "Microsoft Hyper-V Network Adapter". If you uninstall any of the other hidden adapters, it could cause additional issues.
+    > [!NOTE]
+    > Only uninstall the unavailable adapters that have the name "Microsoft Hyper-V Network Adapter". If you uninstall any of the other hidden adapters, it could cause additional issues.
 
 6. Now all unavailable adapters should be cleared of your system.
 

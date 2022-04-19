@@ -335,7 +335,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 2. Record the following values in Notepad. You will be prompted to supply them when the script runs.
 
     - **secretUrl**. This is the URL of the secret that's stored in the key vault. A valid secret URL uses the following format:
-*<<https://[key> vault name].vault.azure.net/secrets/[BEK Name]/[version ID]>*
+*<<`https://[key`> vault name].vault.azure.net/secrets/[BEK Name]/[version ID]>*
 
         To find this value in the Azure portal, navigate to the **Secrets** blade in your key vault. Select the BEK name that was determined in the previous step, [Retrieve the BEK file name](#retrieve-the-bek-file-name). Select the current version identifier, and then read the Secret Identifier URL below **Properties**. (You can copy this URL to the clipboard.)
 
@@ -343,7 +343,7 @@ The manual resolution method to unlock an encrypted disk offline relies on the A
 
     - **keyVaultResourceGroup**. The resource group of the key vault.
     - **kekUrl**. This is the URL of the key that's used to protect the BEK. A valid kek URL uses the following format:
-*<<https://[key> vault name].vault.azure.net/keys/[key name]/[version ID]>*
+*<<`https://[key`> vault name].vault.azure.net/keys/[key name]/[version ID]>*
 
         You can get this value in the Azure portal by navigating to the **Keys** blade in your key vault, selecting the name of the key that's used as the KEK, selecting the current version identifier, and then reading the **Key Identifier URL** below **Properties**. (You can copy this URL to the clipboard.)
 

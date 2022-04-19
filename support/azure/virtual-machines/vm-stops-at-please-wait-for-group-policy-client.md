@@ -46,7 +46,7 @@ To resolve this problem, the memory dump will need to be analyzed. Collect the m
 1. On the Repair VM, go to windows folder in the attached OS disk. For instance, if the driver letter that is assigned to the attached OS disk is F, go to F:\Windows.
 1. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the memory dump file.
 
-        > [!note]
-        > If you are having trouble locating the memory.dmp file, try to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](/windows/client-management/generate-kernel-or-complete-crash-dump).
+> [!NOTE]
+> If you are having trouble locating the memory.dmp file, try to use [non-maskable interrupt (NMI) calls in serial console](/azure/virtual-machines/troubleshooting/serial-console-windows#use-the-serial-console-for-nmi-calls) instead. You can follow the guide to [generate a crash dump file using NMI calls here](/windows/client-management/generate-kernel-or-complete-crash-dump).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
