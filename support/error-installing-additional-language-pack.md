@@ -19,6 +19,6 @@ When you try to install While attempting to install Visual Studio in a different
 ## Resolution
 To resolve this error, perform the following steps:
 1. Open the **Control Panel**.
-1. Go to **Programs**> **Programs and Features**.
+1. Go to **Programs** > **Programs and Features**.
 1. Look for Microsoft Visual Studio in the list of programs.
 1. Make sure that the version you are trying to install has not already been installed or partially installed.
