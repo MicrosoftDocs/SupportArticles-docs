@@ -1,6 +1,6 @@
 ---
-title: Can't bring an IP Address online in cluster
-description: Provides guidance where an IP address fails to come online in a Windows-based failover cluster.
+title: Can't bring an IP Address online in a cluster
+description: Provides guidance for when an IP address fails to come online in a Windows-based failover cluster
 ms.date: 04/18/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -19,19 +19,19 @@ ms.technology: windows-server-high-availability
 
 1. Review the system and the cluster log to find the exact errors or warnings that prevent the IP address from coming online.
 
-2. Check the IP address for this resource, ensure that the status of the corresponding cluster network is **UP** under **Networks** in Failover Cluster Manager.
+2. Check the IP address for this resource and ensure that the status of the corresponding cluster network is **UP** under **Networks** in Failover Cluster Manager.
 
 3. If you create a new IP address within an empty group from the same cluster network, does it come online?
 
 4. Check the output of the `ipconfig /all` command and compare the information of the affected network with a working one.
 
-5. Disable or enable NIC that is corresponding to the cluster network for the affected IP address.
+5. Disable or enable the Network Interface Card (NIC) that's corresponding to the cluster network for the affected IP address.
 
-6. Update the driver of NIC or teaming.
+6. Update the driver for the NIC or teaming.
 
 ## Common issues and solutions
 
-Try the following solutions according to the Event IDs:
+Try one of the following solutions according to the Event ID:
 
 - For Event ID 1046, 1047, 1048, 1049, 1078, and 1223, [check the role that is configured for a cluster network](#check-the-role-that-is-configured-for-a-cluster-network).
 
@@ -67,7 +67,7 @@ Try the following solutions according to the Event IDs:
 >
 > In a cluster, an IP Address resource is important because in most cases, other resources (such as a Network Name resource) depend on it. An IP Address resource can come online only if it is configured correctly, and is supported correctly by available networks and network configurations.
 
-This event indicates that there's a problem in the Windows Internet Name Service (WINS) configuration.
+This event indicates that there's a problem with the Windows Internet Name Service (WINS) configuration.
 
 ### Event ID 1223
 
@@ -87,9 +87,9 @@ For Event ID 1046, 1047, 1048, 1049, 1078, and 1223, follow these steps:
 
 3. Expand **Networks**.
 
-4. Right-click the network that you want to check settings for, and then select **Properties**.
+4. Right-click the network that you want to check settings for and select **Properties**.
 
-5. If you want to use this network for the cluster, make sure that the **Allow the cluster to use this network** option is selected. If you select this option and you want the network to be used by clients (not just the nodes), make sure that the **Allow clients to connect through this network** option is selected.
+5. If you want to use this network for the cluster, make sure that the **Allow the cluster to use this network** option is selected. If you select this option and want the network to be used by clients (not just the nodes), make sure that the **Allow clients to connect through this network** option is selected.
 
 If you change any of the settings, try to bring the resource online again before you proceed.
 
@@ -120,9 +120,9 @@ For Event ID 1360, 1361, and 1362, follow these steps:
 1. Use Event Viewer to review the application and system logs.
 
    > [!NOTE]
-   > In particular, search for any events that may be related to domain controller functionality.
+   > In particular, search for any events related to domain controller functionality.
 
-2. Search for information about an error code, use one of the following methods:
+2. To search for information about an error code, use one of the following methods:
 
    - See [system error codes](/windows/win32/debug/system-error-codes).
 
@@ -135,8 +135,8 @@ For Event ID 1360, 1361, and 1362, follow these steps:
      > [!NOTE]
      > The placeholder \<Code> represents the error code.
 
-3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue, and then open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
+3. Generate a fresh cluster log and review it. To generate a fresh cluster log, reproduce the issue and open an elevated PowerShell prompt. At the elevated PowerShell prompt, run the following cmdlet:
 
    `Get-ClusterLog -Destination C:\temp\ -TimeSpan 5 -UseLocalTime`
 
-If you identify an issue that you can fix, fix that issue and then try to start the affected clustered resource again.
+If you identify an issue that you can fix, fix it and try to start the affected clustered resource again.
