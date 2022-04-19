@@ -1,7 +1,7 @@
 ---
-title: I received the error “Please restart the computer and run setup again”
+title: Error “Please restart the computer and run setup again”
 description: This article helps to resolve the error to retart the computer.
-ms.date: 04/07/2022
+ms.date: 04/19/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
