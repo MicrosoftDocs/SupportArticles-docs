@@ -46,3 +46,5 @@ To restore the ability to schedule pages for the affected content types, follow 
 1. In **Manage Publishing**, select **Republish**, and then select **Save**.
 
 1. Repeat steps 5 through 8 for any other content types that are affected.
+
+**Note** It might take 15 minutes or more for the change to appear on all sites.
