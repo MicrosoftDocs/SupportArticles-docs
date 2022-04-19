@@ -64,7 +64,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
 
 Before contacting Microsoft support, you can gather information about the issue.
 
-### Prerequisite
+### Prerequisites
 
 1. [TSSv2](https://aka.ms/getTSSv2) must be executed in the context of an account with admin rights on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt it again).
 
