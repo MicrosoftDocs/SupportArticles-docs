@@ -11,7 +11,7 @@ ms.reviewer: terry.g.lee
 
 _Applies to:_&nbsp;Visual Studio 2015
 
-## Symptom
+## Symptoms
 When you try to install Microsoft Visual Studio, you receive the following error message:
 
 “No Internet connection detected on this machine. Please connect to the Internet and click Retry. Clicking Continue without an Internet connection may prevent installation of some optional features.”
