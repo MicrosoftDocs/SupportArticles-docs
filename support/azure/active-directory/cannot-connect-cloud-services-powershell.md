@@ -35,4 +35,4 @@ To resolve this issue, refer one of the following articles, as appropriate for y
 
 For more information about Azure Active Directory Module for Windows PowerShell, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -62,7 +62,7 @@ The Boot partition contains a folder named "Boot." This folder is hidden by defa
 
     **\<Boot partition>** is the partition that contains a hidden system folder named "Boot".
 
-    **\<Identifier>** is the identifier of Windows Boot Loader you found in the previous step. 
+    **\<Identifier>** is the identifier of Windows Boot Loader you found in the previous step.
 
     ```console
     bcdedit /store <Boot partition>:\boot\bcd /set {bootmgr} device partition=<boot partition>:
@@ -81,3 +81,5 @@ The Boot partition contains a folder named "Boot." This folder is hidden by defa
     ```
 
 3. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

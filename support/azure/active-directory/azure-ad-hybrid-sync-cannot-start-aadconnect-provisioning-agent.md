@@ -41,3 +41,5 @@ If you select the confirm button again, following message will be displayed:
 To resolve this issue, check the System event logs for **eventID 7041**. The event details describe how to assign a **Log on as a service** user right at the Local Security Policy snap-in (*secpol.msc*).
 
 :::image type="content" source="media/azure-ad-hybrid-sync-cannot-start-aadconnect-provisioning-agent/5-event-7041.png" alt-text="Screenshot of the Event 7041, Service Control Manager window. It notes that the service account doesn't have the required user right." border="true":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

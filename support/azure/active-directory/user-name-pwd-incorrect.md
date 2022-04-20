@@ -48,6 +48,4 @@ To resolve this problem, do one of the following:
 - Create an enterprise admin account in which the value of the sAMAccountName attribute is unique and does not exist in each domain.
 - Update the passwords of all accounts that have identical names so that the password is the same for all those accounts.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

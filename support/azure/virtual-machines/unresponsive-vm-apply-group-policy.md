@@ -149,3 +149,5 @@ Don't use this policy:
 ## Next steps
 
 If you have issues when you apply Windows Update, see [VM is unresponsive with "C01A001D" error when applying Windows Update](./unresponsive-vm-apply-windows-update.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

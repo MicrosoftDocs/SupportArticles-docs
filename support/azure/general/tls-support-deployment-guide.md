@@ -80,3 +80,5 @@ To enable the installation of Microsoft Azure Pack on the system to support the 
 4. Locate the following registry subkey: `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`.
 5. Create the following DWORD value under this key:SchUseStrongCrypto [Value = 1].
 6. Restart the system.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -39,6 +39,6 @@ landingContent:
       - linkListType: reference
         links:
           - text: Power Apps documentation
-            url: https://docs.microsoft.com/powerapps/
+            url: /powerapps/
           - text: Power Apps training 
-            url: https://docs.microsoft.com/learn/powerplatform/power-apps
+            url: /learn/powerplatform/power-apps
