@@ -3604,6 +3604,11 @@
       "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/implement-impersonation.md",
       "redirect_url": "/troubleshoot/developer/webapps/aspnet/development/implement-impersonation",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows-server/deployment/unknown-device-vmbus-virtual-machine.md",
+      "redirect_url": "/troubleshoot/windows-server/virtualization/unknown-device-vmbus-virtual-machine",
+      "redirect_document_id": true
     }
   ]
 }

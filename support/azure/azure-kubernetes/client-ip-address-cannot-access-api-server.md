@@ -42,6 +42,7 @@ az aks show --resource-group <cluster-resource-group> \
 Look at the cluster's API server-authorized ranges, and add your client's IP address within that range using the following steps:
 
 > [!NOTE]
+>
 > 1. Do you access the API server from a corporate network where traffic is routed through a proxy server or firewall? Then ask your network administrator before you add your client IP address to the list of authorized ranges for the API server.
 >
 > 1. Also ask your cluster administrator before you add your client IP address, because there might be security concerns with adding a temporary IP address to the list of authorized ranges.
@@ -60,3 +61,5 @@ Look at the cluster's API server-authorized ranges, and add your client's IP add
         --name <cluster-name> \
         --api-server-authorized-ip-ranges <ip-ranges-that-include-your-client-ip-address>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

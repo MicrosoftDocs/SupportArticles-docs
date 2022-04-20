@@ -156,3 +156,5 @@ Before rebuilding the VM, it is recommended to enable memory dump collection and
 ### Step 4: Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](/azure/virtual-machines/troubleshooting/repair-windows-vm-using-azure-virtual-machine-repair-commands) to rebuild the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

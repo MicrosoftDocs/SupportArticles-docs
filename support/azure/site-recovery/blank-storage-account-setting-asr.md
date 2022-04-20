@@ -32,3 +32,5 @@ To fix this issue, follow these steps:
 2. Either create a new storage account or change the replication setting to **geo redundant**. This setting is located under the storage account settings properties on the **Configure** tab in the Azure portal.
 3. Click Save to commit the change.
 4. Restart the Create Protection Group wizard.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
