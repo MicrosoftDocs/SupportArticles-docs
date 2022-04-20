@@ -38,3 +38,5 @@ The following table describes the error codes that the VM Inspector can return a
 
 - [VM Inspector for Azure virtual machines](vm-inspector-azure-virtual-machines.md)
 - [Grant limited access to Azure Storage resources using SAS](/azure/storage/common/storage-sas-overview)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

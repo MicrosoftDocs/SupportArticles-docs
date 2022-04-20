@@ -28,7 +28,7 @@ When a user or administrator tries to change or reset a password in Azure AD, pa
 
 Make sure that the **Sign and Encrypt LDAP Traffic** setting is enabled in three places within Synchronization Service Manager by following these steps:
 
-1. Open the Synchronization Service Manager. To do this, open the **Start** menu, go to the **Azure AD Connect** group, and then select **Synchronization Service**. 
+1. Open the Synchronization Service Manager. To do this, open the **Start** menu, go to the **Azure AD Connect** group, and then select **Synchronization Service**.
 
 1. Select the **Connectors** tab, and then select the applicable Active Directory connector. In the **Actions** pane, select **Properties**.
 
@@ -39,9 +39,11 @@ Make sure that the **Sign and Encrypt LDAP Traffic** setting is enabled in three
 1. In the **Domain controller connection settings** group, select the **Options** button. In the **Connection Options** dialog box, turn on **Sign and Encrypt LDAP Traffic**, and then select **OK**.
 
 1. In the **Credentials** group, check whether the **Alternate credentials for this directory partition** option is selected. If that option isn't selected, go to step 8. Otherwise, select the **Set Credentials** button, and then select **Options** in the **Credentials** dialog box.
- 
+
 1. In the **Connection Options** dialog box, turn on **Sign and Encrypt LDAP Traffic**, and then select **OK** two times to return to the **Properties** dialog box.
 
 1. Select **OK** to save the changes and return to Synchronization Service Manager.
 
 1. Select **Start**, enter *services.msc*, and then select the **Services** snap-in. Select **Microsoft Azure AD Sync** from the list of services, and then select the **Restart Service** icon.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

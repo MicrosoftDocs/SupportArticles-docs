@@ -29,3 +29,5 @@ Currently, the Microsoft 365 admin center doesn't use the self-service password 
 To make sure that password writeback updates the new password in on-premises Active Directory, the administrator who changes or resets the password must use [the Azure portal](https://portal.azure.com) instead of [the Microsoft 365 admin center](https://admin.microsoft.com).
 
 For more information, see [How does self-service password reset writeback work in Azure Active Directory?](/azure/active-directory/authentication/concept-sspr-writeback).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

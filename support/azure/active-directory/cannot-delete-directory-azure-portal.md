@@ -117,3 +117,5 @@ Contact Microsoft Partner Support at [Microsoft Partner Site](https://partner.mi
 ## Directory contains one or more applications that were added by a user or administrator
 
 To fix this issue, follow the steps in ["Cannot delete" error when you try to delete a B2C directory in Azure AD](https://support.microsoft.com/help/3112170).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
