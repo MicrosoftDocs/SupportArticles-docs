@@ -70,6 +70,6 @@ uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter\Secu
 
 For more inform about shutdown script, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-computer-shutdown-scripts).
 
-## Check whether WDFilter registry keys are excluded
+## More information
 
 To check whether WDFilter registry keys are excluded from UWF registry filter, run command prompt with as an administrator, and then run `uwfmgr.exe get-config`.
