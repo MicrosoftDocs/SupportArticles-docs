@@ -33,3 +33,5 @@ To work around this issue, follow these steps:
 2. Locate your Visual Studio Team Services or Team Foundation Server account in the web browser.
 3. Log on with your account.
 4. Refresh your work item in Team Explorer.  
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

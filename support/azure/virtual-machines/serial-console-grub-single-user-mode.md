@@ -273,3 +273,5 @@ To learn more about Serial Console, see:
 * [Use Serial Console for NMI and SysRq calls](serial-console-nmi-sysrq.md)
 * [Serial Console for Windows VMs](serial-console-windows.md)
 * [Boot diagnostics](boot-diagnostics.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

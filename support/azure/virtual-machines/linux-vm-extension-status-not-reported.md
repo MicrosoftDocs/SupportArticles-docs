@@ -19,7 +19,7 @@ On a Linux virtual machine (VM) that's running on an instance of Microsoft Azure
 
 ## Cause
 
-This problem occurs because of a [known issue](https://github.com/Azure/WALinuxAgent/wiki/Known-Issues#2219---protocolerror-varlibwaagentgoalstate1xml-is-missing). 
+This problem occurs because of a [known issue](https://github.com/Azure/WALinuxAgent/wiki/Known-Issues#2219---protocolerror-varlibwaagentgoalstate1xml-is-missing).
 
 ## Resolution
 
@@ -34,7 +34,7 @@ You can use [Azure CLI](/cli/azure/install-azure-cli)  to query the extensions 
 az vm extension list --vm-name <vmName> -g <resGroupName>
 ```
 
-You can also remove this extension by running the following command: 
+You can also remove this extension by running the following command:
 
 ```Azure CLI
 az vm extension delete --vm-name < vmName > -g <resGroupName> --name <extension name>
@@ -42,3 +42,5 @@ az vm extension delete --vm-name < vmName > -g <resGroupName> --name <extension 
 
 > [!NOTE]
 > In these commands, \<vmName>, \<resGroupName>, and \<extension name> represent the actual variable names.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -30,3 +30,5 @@ To delete and create a new certificate, follow the steps below:
 ## More Information
 
 For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

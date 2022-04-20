@@ -1,40 +1,6 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-# Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
-
-# Pre-filling the TOC tree for 161113 (troubleshoot delete operations) - uncomment, add file names, and sort when ready
-# - name: Troubleshoot delete operations
-#   items:
-#   - name: TooManyRequests or SubscriptionRequestsThrottled error code
-#     href: 
-#   - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
-#     href: 
-#   - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
-#     href: 
-#   - name: InUseRouteTableCannotBeDeleted error code
-#     href: 
-#   - name: RequestDisallowedByPolicy error code
-#     href: 
-#   - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
-#     href: 
-
-# Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
-# - name: Troubleshoot upgrade operations
-#   items:
-#   - name: Node not ready
-#     href: 
-#   - name: NSG prevents resource download
-#     href: 
-#   - name: PodDrainFailure error code
-#     href: 
-#   - name: PublicIPCountLimitReached error code
-#     href: 
-#   - name: QuotaExceeded error code
-#     href: 
-#   - name: SubnetIsFull error code
-#     href: 
-
 - name: Cannot connect to application hosted on AKS cluster
   items:
   - name: General troubleshooting
@@ -93,8 +59,42 @@
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error code
     href: error-code-zonalallocationfailed-allocationfailed.md
+
+- name: Cluster deletion issues
+  items:
+  - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
+    href: cannot-delete-load-balancer-private-link-service.md
+  - name: InUseRouteTableCannotBeDeleted error code
+    href: error-code-inuseroutetablecannotbedeleted.md
+  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
+    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
+    href: cannot-delete-ip-subnet-nsg.md
+  - name: RequestDisallowedByPolicy error code
+    href: error-code-requestdisallowedbypolicy-delete.md
+  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
+    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+
+- name: Cluster upgrade issues
+  items:
   - name: Troubleshooting upgrade errors
     href: troubleshoot-upgrade-errors.md
+# Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
+# Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
+# - name: Cluster upgrade issues
+#   items:
+#   - name: Node not ready
+#     href: 
+#   - name: NSG prevents resource download
+#     href: 
+#   - name: PodDrainFailure error code
+#     href: 
+#   - name: PublicIPCountLimitReached error code
+#     href: 
+#   - name: QuotaExceeded error code
+#     href: 
+#   - name: SubnetIsFull error code
+#     href: 
 
 - name: Data collection guide
   items:
@@ -104,6 +104,8 @@
     href: capture-tcp-dump-windows-node-aks.md
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
+
+
 
 - name: Troubleshoot performance issues
   items:

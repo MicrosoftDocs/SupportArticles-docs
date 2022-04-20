@@ -33,13 +33,13 @@ For best results, collect a VMM debug trace when you reproduce this issue, and t
 
 - Collect the VMM debug logs (event trace log) and SRS logs that are additional information to this channel. See the [detail of how to enable debug logging in Virtual Machine Manager](https://support2.microsoft.com/help/2913445). For Branch to Azure ASR installations, refer to [KB 3033922](https://support.microsoft.com/help/3033922) instead.
 - Run the following Windows PowerShell commands to filter and therefore narrow the scope of the investigation:
- 
+
     Get-SCVirtualMachine  
     Get-SCVMHost  
     Get-VMReplication  
     Get-SCJob  
 - Collect Disaster Recovery Adapter (DRA) logs in the following location:
- *%System Root%\ProgramData\VMMLogs\DRALogs*.
+ _%System Root%\ProgramData\VMMLogs\DRALogs_.
 
 ### How to troubleshoot on Microsoft Azure
 
@@ -73,7 +73,9 @@ wevtutil el | findstr /i hyper-v-vmms | % { wevtutil qe $_ /f:text}
     ```
 
 2. Collect all the log files in the following location:
-*C:\Program Files\Microsoft Azure Recovery Services Agent\Temp*
+_C:\Program Files\Microsoft Azure Recovery Services Agent\Temp_
 
 > [!NOTE]
 > These files may be opened in any plain Text Editor.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
