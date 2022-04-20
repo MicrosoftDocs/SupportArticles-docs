@@ -25,7 +25,7 @@ You cannot connect to an Azure Linux virtual machine (VM) by using Secure Shell 
 
 The following are examples of possible errors.
 
-### Example 1 
+### Example 1
 
 ```
 Checking all file systems.
@@ -51,7 +51,7 @@ EXT4-fs warning (device sda1): ext4_clear_journal_err:4532: Making fs in need of
 An error occurred while mounting /.
 ```
 
-### Example 4 
+### Example 4
 
 This example is caused by a clean fsck. In this case, there are also additional data disks attached to the VM (/dev/sdc1 and /dev/sde1).
 
@@ -64,8 +64,10 @@ Checking all file systems.
 /dev/sdc1: clean, 12/1048576 files, 109842/4192957 blocks
 /dev/sde1 : clean, 51/67043328 files, 4259482/268173037 blocks
 ```
+
 ## Cause
-This problem can occur if the file system was not shut down cleanly or storage related issues. The issues include hardware or software errors, issues with drivers or programs, write errors, etc. 
+
+This problem can occur if the file system was not shut down cleanly or storage related issues. The issues include hardware or software errors, issues with drivers or programs, write errors, etc.
 
 > [!NOTE]
 > It is always important to have a backup of critical data. The tools described in this article may help recover file systems, but data loss can still occur.
@@ -82,6 +84,7 @@ To resolve this problem, boot the VM into emergency mode by using the [serial co
 
    > [!Note]
    > For more information about using serial console for Linux, see:
+   >
    > * [Use serial console to access GRUB and single user mode](serial-console-grub-single-user-mode.md)
    > * [Use serial console for SysRq and NMI calls](./serial-console-nmi-sysrq.md)
 
@@ -119,7 +122,7 @@ To resolve this problem, boot the VM into emergency mode by using the [serial co
    ```
 
 9. Next, try to mount the file system. If the disk is mounted successfully, you will receive the following output:
- 
+
    ```
    XFS (sda1): Mounting V1 Filesystem
    XFS (sda1): Ending clean mount
@@ -179,3 +182,5 @@ To resolve this problem, boot the VM into emergency mode by using the [serial co
 
 * [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM with the Azure CLI 2.0](./troubleshoot-recovery-disks-linux.md)
 * [Use the portal to attach a data disk to a Linux VM](/azure/virtual-machines/linux/attach-disk-portal)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

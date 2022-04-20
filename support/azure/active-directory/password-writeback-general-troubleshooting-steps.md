@@ -47,7 +47,7 @@ Try to use the same domain controller every time that you test or make changes. 
 
 To set the preferred domain controller, follow these steps:
 
-1. Open the Synchronization Service Manager. To do this, select **Start**, enter *azure ad*, select the **Azure AD Connect** group, and then select **Synchronization Service**. 
+1. Open the Synchronization Service Manager. To do this, select **Start**, enter *azure ad*, select the **Azure AD Connect** group, and then select **Synchronization Service**.
 
 1. Select the **Connectors** tab, and then select the applicable Active Directory connector. In the **Actions** pane, select **Properties** to open the **Properties** dialog box.
 
@@ -65,7 +65,7 @@ In addition, when you use the Active Directory Users and Computers snap-in, chan
 
 1. In the navigation pane, right-click the domain name, and then select the **Change Domain Controller** menu item.
 
-1. In the **Change Directory Server** dialog box, select the **This Domain Controller or AD LDS instance** option. 
+1. In the **Change Directory Server** dialog box, select the **This Domain Controller or AD LDS instance** option.
 
 1. In the list of domain controllers, select the domain controller that matches the one that you selected for Azure AD Connect, and then select **OK**.
 
@@ -84,3 +84,5 @@ Recheck the name of the current account for the Active Directory Domain Connecto
 ## Learn which writeback operations are supported or unsupported
 
 To review the lists of supported and unsupported password writeback operations, see [How does self-service password reset writeback work in Azure Active Directory?](/azure/active-directory/authentication/concept-sspr-writeback).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

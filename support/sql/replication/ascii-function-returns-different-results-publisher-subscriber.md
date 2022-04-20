@@ -57,9 +57,9 @@ In this scenario, when you use the `ASCII` function to convert the column in the
 
     1. Apply the latest [Microsoft OLE DB driver](/sql/connect/oledb/download-oledb-driver-for-sql-server):
 
-        - If the distribution agent runs for push subscriptions, apply it on the Distributor server.
+        - If the distribution agent (or merge agent) runs for push subscriptions, apply it on the Distributor server.
 
-        - If the distribution agent runs for pull subscriptions, apply it on the Subscriber server.
+        - If the distribution agent (or merge agent) runs for pull subscriptions, apply it on the Subscriber server.
 
     1. Rename the *msoledbsql.dll* file in the *C:\Program Files\Microsoft SQL Server\150\COM* folder:
 

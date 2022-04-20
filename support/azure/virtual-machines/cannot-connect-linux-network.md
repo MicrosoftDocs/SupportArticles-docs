@@ -143,7 +143,7 @@ Remove the files that contain entries for eth0 or eth1 under `/etc/udev/rules.d`
 
 #### Error 1
 
-This error indicates that the aneth1 interface is configured instead of eth0. This may occur if the operating system on the VM does not have some updates for *udev* installed. In this situation, *udev* incorrectly saves the previous network interface. When the VM is resized or moved, it receives a different MAC address, which will be assigned to eth1.
+This error indicates that the aneth1 interface is configured instead of eth0. This may occur if the operating system on the VM does not have some updates for _udev_ installed. In this situation, *udev* incorrectly saves the previous network interface. When the VM is resized or moved, it receives a different MAC address, which will be assigned to eth1.
 
 > [!NOTE]
 > You can verify the version of the image from the serial logs. If a very old Ubuntu kernel (for example 3.2.0-58.88, released in January 2014) is found, this indicates that the operating system has not been updated.
@@ -249,3 +249,5 @@ set in ifcfg-ethn or /etc/sysconfig/network
 /etc/sysconfig/SuSEfirewall2.d/services (SuSE)
 /etc/ufw/ufw.conf (Ubuntu)
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

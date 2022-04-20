@@ -610,3 +610,5 @@ If the CAU status shows a **Succeeded** value for all nodes, and if version info
 If the CAU status does not show as **Succeeded** for all nodes, or if version information for all instances is correct, restart the P&U process, and make no change in parameters.
 
 If the process fails again, please escalate the case through your usual support channels.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

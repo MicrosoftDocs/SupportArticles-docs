@@ -1,7 +1,7 @@
 ---
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
-ms.date: 06/21/2021
+ms.date: 03/25/2022
 ms.reviewer: jarrettr, jrosse, keiththo
 ---
 # Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients
@@ -90,6 +90,7 @@ We recommend that you add the following real-time protection exclusions to preve
 - *Client installation folder*\Logs
 - C:\Windows\Setup\Scripts
 - C:\Windows\SMSTSPostUpgrade
+- C:\Program Files\Microsoft Policy Platform\authorityDb\\*.sdf
 
 ### File exclusions for MPs
 

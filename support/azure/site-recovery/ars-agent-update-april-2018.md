@@ -23,7 +23,7 @@ For more information about how to identify servers that have earlier versions of
 
 ### Offline Backup support for CSP subscriptions and ARM Storage Accounts
 
-The MARS Agent Offline Backup workflow now supports Azure Resource Manager Storage Accounts and subscriptions. These are used for initial offline seeding of large file-folder backup data to Azure through the new Azure portal-based Azure Import Service, and they provide the following benefits: 
+The MARS Agent Offline Backup workflow now supports Azure Resource Manager Storage Accounts and subscriptions. These are used for initial offline seeding of large file-folder backup data to Azure through the new Azure portal-based Azure Import Service, and they provide the following benefits:
 
 - Cloud Solution Provider friendly
     In this update, the MARS Agent (stand-alone) can now be used by Cloud Solution Providers (CSP) to seed backup data to Azure by using disks without the need to create any classic resources such as non-CSP Subscriptions, Classic Storage Accounts or Classic Azure Import Jobs.
@@ -40,7 +40,7 @@ The MARS Agent Offline Backup workflow now supports Azure Resource Manager Stora
 - System state backup and recovery success improvements
 - Backup and recovery success improvements for the backup of files and folders
 - Accessibility and reliability fixes and improvements
- 
+
 ## Update information
 
 To apply this update, install the latest version of the Microsoft Azure Recovery Services Agent.
@@ -76,12 +76,17 @@ If your servers are registered to one or more Recovery Services Vaults, you can 
 1. When you're done updating, you can select other servers that have Agent versions that are earlier than **2.0.9118.0**, and then update the Agents on those servers in the same manner.
 
 ### Restart information
+
 If you are using Windows Server 2008 (SP2 and R2 SP1, any version), you must restart the computer after you apply this update. Users who installed MARS Agent on other Windows Server versions don’t have to restart the computer after applying this update.
 
 ### Replacement information
+
 This update replaces previously released update [KB 4048992](https://support.microsoft.com/help/4048992).
 
 ### Prerequisites
+
 If you use System Center 2016 Data Protection Manager (SC DPM), Microsoft recommends that you apply [Update Rollup 1](https://support.microsoft.com/help/3190600) for System Center 2016 Data Protection Manager or a later version.
 
 If you use System Center 2012 R2 Data Protection Manager (SC DPM), apply [Update Rollup 12](https://support.microsoft.com/help/3209592/) for System Center 2012 R2 Data Protection Manager or a later version.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

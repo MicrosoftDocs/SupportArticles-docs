@@ -30,7 +30,7 @@ To fix the issue, follow these steps:
 1. Copy the \<GUID\> value from the error message. This is your application (client) ID.
 
 1. Go to the **Authentication** blade of your application in the Azure portal. You can open the page directly by inserting your application ID as the GUID value in one of the following links:
-    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/`. Make sure that you sign in to the portal by using an administrator account for that organization, or an account that owns the application.
+    - If this app is owned by an organization (Azure AD tenant), use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>`. Make sure that you sign in to the portal by using an administrator account for that organization, or an account that owns the application.
     - If this app is owned by your personal Microsoft (MSA) account, use `https://portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationMenuBlade/Authentication/appId/<GUID>/isMSAApp/true`. Make sure that you sign in to the portal by using your personal Microsoft account.
 
 1. Copy the \<redirect URI\> value from the error message.
@@ -44,8 +44,10 @@ To fix the issue, follow these steps:
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
-> [!VIDEO https://www.youtube.com/embed/a_abaB7494s]
+> [!VIDEO <https://www.youtube.com/embed/a_abaB7494s>]
 
 ## More information
 
 For a full list of Active Directory authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

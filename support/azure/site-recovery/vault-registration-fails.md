@@ -44,3 +44,5 @@ To fix this error and enable the ASR Provider and agent setup to complete succes
 
 3. Delete the registry key that you backed up in step 2.
 4. Restart the Provider and agent setup.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

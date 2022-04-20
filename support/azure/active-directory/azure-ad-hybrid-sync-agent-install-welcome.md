@@ -23,3 +23,5 @@ This troubleshooting doc applies to configuring the agent for [Azure AD Connect 
 ## Prerequisites
 
 To install *Cloud Provisioning Agent*, the following prerequisites are required: [Prerequisites for Azure AD Connect cloud sync](/azure/active-directory/cloud-sync/how-to-prerequisites).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
