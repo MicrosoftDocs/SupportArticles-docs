@@ -164,3 +164,5 @@ The Azure platform tries to partition datacenter servers into clusters. Normally
 If an allocation request is pinned to a cluster, there's a higher chance of failing to find free resources, because the available resource pool is smaller. What if your allocation request is pinned to a cluster that doesn't support the type of resource you requested? Then your request will fail even if the cluster has free resources. Diagram 3 below shows where a pinned allocation fails because the only candidate cluster doesn't have free resources. Diagram 4 shows where a pinned allocation fails, because the only candidate cluster doesn't support the requested VM size, even though the cluster has free resources.
 
 :::image type="content" source="media/allocationfailed-or-zonalallocationfailed/pinned-cluster-allocation-failure-no-free-resource-or-unsupported-size.png" alt-text="Diagrams of allocation failures are pinned clusters. Diagram 3 shows no free resources are available. Diagram 4 shows the size isn't supported.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

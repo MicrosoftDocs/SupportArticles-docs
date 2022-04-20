@@ -67,3 +67,5 @@ To resolve this problem, select the missing object type (**device**). To do this
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

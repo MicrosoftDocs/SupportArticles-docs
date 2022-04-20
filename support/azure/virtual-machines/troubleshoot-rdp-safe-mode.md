@@ -14,10 +14,9 @@ ms.date: 11/13/2018
 ms.author: genli
 ---
 
-#  Cannot RDP to a VM because the VM boots into Safe Mode
+# Cannot RDP to a VM because the VM boots into Safe Mode
 
 This article shows how to resolve a problem in which you cannot connect to Azure Windows Virtual Machines (VMs) because the VM is configured to boot into Safe Mode.
-
 
 ## Symptoms
 
@@ -28,7 +27,6 @@ You cannot make an RDP connection or other connections (such as HTTP) to a VM in
 ## Cause
 
 The RDP service is not available in Safe Mode. Only essential system programs and services are loaded when the VM boots into Safe Mode. This applies for the two different versions of Safe Mode which are "Safe Boot minimal" and "Safe Boot with connectivity".
-
 
 ## Solution
 
@@ -139,3 +137,5 @@ To enable dump log and Serial Console, run the following script.
     ```
 
 5. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md). Then check whether the issue is resolved.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

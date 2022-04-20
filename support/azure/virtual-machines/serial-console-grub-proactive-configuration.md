@@ -18,7 +18,7 @@ ms.author: mimckitt
 
 # Proactively ensuring you have access to GRUB and sysrq could save you lots of down time
 
-Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM. 
+Having access to the Serial Console and GRUB will improve recovery times of your IaaS Linux Virtual Machine in most cases. GRUB offers recovery options that otherwise would take longer to recover your VM.
 
 The reasons to perform a VM recovery are many and can be attributed to scenarios such as:
 
@@ -33,7 +33,7 @@ The reasons to perform a VM recovery are many and can be attributed to scenarios
 
  Many other scenarios as detailed [here](./serial-console-linux.md#common-scenarios-for-accessing-the-serial-console)
 
-Verify that you can access GRUB and the Serial console on your VMs deployed in Azure. 
+Verify that you can access GRUB and the Serial console on your VMs deployed in Azure.
 
 If you are new to Serial Console, refer to [this link](./serial-console-linux.md).
 
@@ -49,7 +49,7 @@ Progress is being made continually to tooling and features to ensure services ar
 
 With the Azure Serial Console, you can interact with your Linux VM as if you were at a system's console.
 
-You can manipulate many configuration files including how the kernel will boot. 
+You can manipulate many configuration files including how the kernel will boot.
 
 The more experienced Linux/Unix sys admins will appreciate the **single user** and  **emergency modes** that are accessible via the Azure Serial Console making Disk Swap and VM deletion for many recovery scenarios redundant.
 
@@ -69,16 +69,16 @@ Ensuring you have access to the Azure Serial Console and GRUB means that a passw
 
 - Disk Swap – can be automated using either:
 
-   - [PowerShell Recovery Scripts](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager)
-   - [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
+  - [PowerShell Recovery Scripts](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager)
+  - [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
 
 - Legacy Method
 
-## Disk Swap Video:
+## Disk Swap Video
 
 If you do not have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) video and see, how you can easily automate the disk swap procedure to recover your VM
 
-## Challenges:
+## Challenges
 
 Not all Linux Azure VMs are configured by default for GRUB access and neither are they all configured to be interrupted with the sysrq commands. Some older distros such as SLES 11 are not configured to display Login prompt in the Azure Serial Console
 
@@ -128,12 +128,11 @@ The system should log a reset message such as this
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/retting-log.png" alt-text="Screenshot of the reset message log in the command-line interface.":::
 
-
 ## Ubuntu GRUB configuration
 
 By default you should be able to access GRUB by holding down **Esc** key during the VM boot, if the GRUB menu is not presented you can force and keep the GRUB menu on screen in the Azure Serial Console by using one of these  options.
 
-**Option 1** - Forces GRUB to be displayed on Screen 
+**Option 1** - Forces GRUB to be displayed on Screen
 
 Update the file /etc/default/grub.d/50-cloudimg-settings.cfg to keep the GRUB menu on screen for the specified TIMEOUT.
 You are not required to hit **Esc** as GRUB will be displayed immediately.
@@ -148,13 +147,13 @@ GRUB_TIMEOUT_STYLE=menu
 Similar behavior can be experienced by making changes to the file
  /etc/default/grub and observe a 3-second timeout to hit **Esc**
 
-
 Comment out these two lines:
 
 ```console
 #GRUB_HIDDEN_TIMEOUT=0
 #GRUB_HIDDEN_TIMEOUT_QUIET=true
 ```
+
 and add this line:
 
 ```console
@@ -163,7 +162,7 @@ GRUB_TIMEOUT_STYLE=countdown
 
 ## Ubuntu 12\.04
 
-Ubuntu 12.04 will allow access to serial console but does not offer the ability to interact. 
+Ubuntu 12.04 will allow access to serial console but does not offer the ability to interact.
 A **login:** prompt is not seen
 
 For 12.04 to obtain a **login:** prompt:
@@ -183,11 +182,11 @@ For 12.04 to obtain a **login:** prompt:
     ```  
 
 2. Ask upstart to start the getty
-    
+
     ```console
     sudo start ttyS0
     ```
- 
+
 The settings required to configure serial console for Ubuntu versions can be found [here](https://help.ubuntu.com/community/SerialConsoleHowto)
 
 ## Ubuntu Recovery Mode
@@ -222,7 +221,6 @@ Press **Ctrl-x** to start and load the kernel.
 If all goes well you will see these additional Options, which can help perform other recovery options
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/additional-recovery-options-ubuntu.png" alt-text="Screenshot shows the Serial console at the Recovery Menu, which offers additional recovery options.":::
-
 
 ## Red Hat GRUB configuration
 
@@ -296,7 +294,7 @@ GRUB_TERMINAL="serial console"
 GRUB_CMDLINE_LINUX="console=tty1 console=ttyS0 earlyprintk=ttyS0"
 GRUB_DISABLE_RECOVERY="true"
 ```
- 
+
 Complete and update grub configuration using
 
 `grub2-mkconfig -o /boot/grub2/grub.cfg`
@@ -305,12 +303,10 @@ Set the SysRq kernel parameter:
 
 `sysctl -w kernel.sysrq = 1;echo kernel.sysrq = 1 >> /etc/sysctl.conf;sysctl -a | grep -i sysrq`
 
-You can alternatively configure GRUB and SysRq using a single line either in the shell or via the Run Command. 
+You can alternatively configure GRUB and SysRq using a single line either in the shell or via the Run Command.
 Backup your files before running this command:
 
-
 `cp /etc/default/grub /etc/default/grub.bak; sed -i 's/GRUB_TIMEOUT=1/GRUB_TIMEOUT=5/g' /etc/default/grub; sed -i 's/GRUB_TERMINAL_OUTPUT="console"/GRUB_TERMINAL="serial console"/g' /etc/default/grub; echo "GRUB_SERIAL_COMMAND=\"serial --speed=115200 --unit=0 --word=8 --parity=no --stop=1\"" >> /etc/default/grub;grub2-mkconfig -o /boot/grub2/grub.cfg;sysctl -w kernel.sysrq=1;echo kernel.sysrq = 1 /etc/sysctl.conf;sysctl -a | grep -i sysrq`
-
 
 ## Red Hat 6\.x GRUB configuration
 
@@ -326,7 +322,6 @@ serial --unit=0 --speed=9600
 terminal serial
 terminal --timeout=5 serial console
 ```
-
 
 The last line  *terminal –-timeout=5 serial console* will further increase **GRUB** timeout by adding a prompt of 5 seconds displaying **Press any key to continue.**
 
@@ -360,8 +355,7 @@ Recreate the grub.cfg
 
 `grub2-mkconfig -o /boot/grub2/grub.cfg`
 
-
-## SLES 11 SP4 
+## SLES 11 SP4
 
 The Serial Console appears and displays boot messages but does not display a **login:** prompt
 
@@ -371,11 +365,11 @@ Open an ssh session into the VM and update the file **/etc/inittab** by un-comme
 #S0:12345:respawn:/sbin/agetty -L 9600 ttyS0 vt102
 ```
 
-Next run the command 
+Next run the command
 
 `telinit q`
 
-To enable GRUB, the following changes should be made to /boot/grub/menu.lst 
+To enable GRUB, the following changes should be made to /boot/grub/menu.lst
 
 ```console
 timeout 5
@@ -387,14 +381,13 @@ kernel /boot/vmlinuz-3.0.101-108.74-default root=/dev/disk/by-uuid/ab6b62bb--
 1a8c-45eb-96b1-1fbc535b9265 disk=/dev/sda  USE_BY_UUID_DEVICE_NAMES=1 earlyprinttk=ttyS0 console=ttyS0 showopts vga=0x314
 ```
 
- This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds 
+ This configuration will enable the message **Press any key to continue** to appear on the console for 5 seconds
 
 It will then display the GRUB menu for an additional 5 seconds - by pressing the down arrow you will interrupt the counter and  select a kernel you want to boot either append the keyword **single** for single user mode that requires root password to be set.
 
 Appending the command **init=/bin/bash** will load the kernel but ensures that the init program is replaced by a bash shell.
 
 You will gain access to a shell without having to enter a password. You can then proceed to update password for Linux accounts or make other configuration changes.
-
 
 ## Force the kernel to a bash prompt
 
@@ -413,10 +406,9 @@ Now you can perform root password change or many other Linux configuration chang
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/bash-change-password.png" alt-text="Screenshot shows a console where you can change root password and other configuration.":::
 
-Restart the VM with 
+Restart the VM with
 
 `/sbin/reboot -f`
-
 
 ## Single User mode
 
@@ -424,9 +416,12 @@ Alternatively you might need to access the VM in single user or emergency mode. 
 Enter the desired mode by appending the keyword **single** or **1** to the kernel boot line.
 On RHEL systems, you can also append **rd.break**.
 
-For more information on how to access single user mode, see [this doc](./serial-console-grub-single-user-mode.md#general-single-user-mode-access) 
+For more information on how to access single user mode, see [this doc](./serial-console-grub-single-user-mode.md#general-single-user-mode-access)
 
 :::image type="content" source="media/serial-console-grub-proactive-configuration/single-user-ubuntu.png" alt-text="Screenshot of the *Ubuntu entry in the boot the selected OS screen in GRUB.":::
 
 ## Next steps
+
 Learn more about [Azure Serial Console](./serial-console-linux.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

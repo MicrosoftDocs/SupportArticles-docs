@@ -69,3 +69,5 @@ To fix this issue, follow these steps to verify the status of the JRE installat
 >
 > - If any of these configurations are not as described in these steps, use the [JRE windows installer](https://go.microsoft.com/fwlink/?LinkId=808605) to fix the problems.
 > - If all the configurations in these steps are correct as described, there may be a VC++ runtime library missing in the system. You can fix this problem by installing the VC++ 2010 Redistributable Package.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

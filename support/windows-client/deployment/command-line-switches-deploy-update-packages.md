@@ -1,7 +1,7 @@
 ---
 title: Command-line switches for Microsoft software update packages
 description: Describes the consistent set of command-line switches that Microsoft is adopting for deploying packages that contain software updates.
-ms.date: 09/21/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -33,9 +33,7 @@ For additional information about command-line switches that are used by Windows 
 
 For additional information about command-line switches used by Windows Installer, visit the following Microsoft Web site:
 
-[Command-Line Options](https://msdn2.microsoft.com/library/aa367988.aspx)  
-
- For additional information about the standard terminology that Microsoft is adopting to describe software updates, click the following article number to view the article in the Microsoft Knowledge Base:
+[Command-Line Options](/windows/win32/msi/command-line-options)  
 
 ## More information
 

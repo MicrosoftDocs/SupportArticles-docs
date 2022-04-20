@@ -168,3 +168,5 @@ You need to understand who is throwing these HTTP 404 and 500 responses, APIM, o
 - If you check the request content representation from the **Request** tab present in **Frontend** definition of the Divide operation, you would notice that **intB** value is set to zero. You need to change the value of **intB** to a non-zero value and it should resolve the issue.
 
     :::image type="content" source="media/soap-based-api-return-404-500-http-code/intb-value.png" alt-text="Screenshot of the intB value that is set to zero.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

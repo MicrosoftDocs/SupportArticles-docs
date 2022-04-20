@@ -56,7 +56,7 @@ The current SLES version must be SLES 12 SP4 or 12 SP5 before you can proceed to
     cat /etc/os-release
     ```
 
-4. Install the **suse-migration-sle15-activation**. When the package **suse-migration-sle15-activation** gets installed, another package **SLES15-Migration** will be automatically installed as a dependency package. 
+4. Install the **suse-migration-sle15-activation**. When the package **suse-migration-sle15-activation** gets installed, another package **SLES15-Migration** will be automatically installed as a dependency package.
 
    ```console
    zypper install suse-migration-sle15-activation
@@ -86,3 +86,5 @@ You can use one of the following methods to check the generation version:
 
      :::image type="content" source="media/linux-upgrade-suse-15sp1/output-gen2.png" alt-text="Screenshot shows output of the command for generation 2 V M." border="false":::
 - In the [Azure portal](https://portal.azure.com),  go to **Properties**  of the VM, and then check the **VM generation** field.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
