@@ -19,4 +19,4 @@ When attempting to install Visual Studio, you receive the following error:
 
 ## Resolution
 
-To resolve the issue, close all the instances of Visual Studio, and then restart the Visual Studio installer.
+To resolve the issue, close all the instances of Visual Studio and restart the Visual Studio installer.
