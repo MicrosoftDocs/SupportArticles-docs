@@ -21,5 +21,5 @@ When you try to install Microsoft Visual Studio on a Mac that’s running Parall
 
 To fix this issue, go to http://kb.parallels.com/en/115026 (or the older http://kb.parallels.com/en/114310), and then reinstall the “Parallels Tools” integration part that is specific to Macs that are running Parallels.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-contact-disclaimer.md)]
