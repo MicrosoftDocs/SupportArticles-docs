@@ -1246,14 +1246,12 @@
     items:
     - name: 'Troubleshooting guidance: Cannot bring a resource online'
       href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
-    - name: Troubleshoot cannot bring a resource online
-      items:
-      - name: Can't bring a network name online
-        href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
-      - name: Can't bring a physical disk online
-        href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
-      - name: Can't bring an IP address online
-        href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
+    - name: Can't bring a network name online
+      href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
+    - name: Can't bring a physical disk online
+      href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
+    - name: Can't bring an IP address online
+      href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Active Route removed
