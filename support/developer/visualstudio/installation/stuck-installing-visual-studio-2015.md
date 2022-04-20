@@ -20,7 +20,7 @@ A Visual Studio installation stops responding if Visual Studio can't automatical
 Install the KB update manually, and then restart the Visual Studio installation:
 
 1. Stop the Visual Studio installation.
-2. Download [KB2999226](https://www.microsoft.com/en-us/search/DownloadsDrillInResults.aspx?q=kb2999226&cateorder=2_1_5) from the Microsoft Download Center.
+2. Download [KB2999226](https://www.microsoft.com/en-us/download/details.aspx?id=49077) from the Microsoft Download Center.
    > [!NOTE]
    > Check the options carefully to make sure that the KB update is appropriate for your system.
 3. After the KB update is installed, restart the Visual Studio installation.
