@@ -1,6 +1,6 @@
 ---
 title: The installation hangs when you try to install a KB update
-description: Provides resolutions for the issue that the installation hangs when you try to install a KB update.
+description: Provides resolutions for an issue where installation hangs when you try to install a KB update.
 ms.date: 04/02/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -8,7 +8,7 @@ ms.reviewer: terry.g.lee
 ---
 # The installation hangs when you try to install a KB update
 
-This article provides resolutions for the issue that the installation hangs when you try to install a KB update.  
+This article provides resolutions for an issue where installation hangs when you try to install a KB update.  
 
 _Applies to:_&nbsp;Visual Studio 2015
 
@@ -18,9 +18,9 @@ The installation hangs when you try to install a KB update.
 
 ## Resolution
 
-To resolve the issue, stop the Visual Studio Installer and then ensure Windows is up to date. In addition, confirm that any installed antivirus software is properly disabled.
+To resolve the issue, stop the Visual Studio installer and ensure that Windows is up to date. In addition, confirm that any installed antivirus software is properly disabled.
 
-### For Windows 7, 8 or 8.1
+### For Windows 7, 8, or 8.1
 
 1. Enter _Control Panel_ in the search box of the taskbar to open **Control Panel**.
 2. Select **System and Security** > **Windows Update**.
@@ -42,4 +42,4 @@ The troubleshooter will scan your computer and fix any errors that it detects.
 If you're still unable to update Windows after running the Windows Update Troubleshooter, follow these steps:
 
 1. Contact [Windows Support](https://support.microsoft.com/contactus/) to get assistance with your issue.
-1. Select **Get Started**, and enter the details of the issue you're facing.
+1. Select **Get Started** and enter the details of the issue you're facing.
