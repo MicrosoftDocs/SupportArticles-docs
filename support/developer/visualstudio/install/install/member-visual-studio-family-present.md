@@ -22,4 +22,4 @@ You receive the following error message when you install Visual Studio 2015:
 
 ## Resolution
 
-To resolve the issue, install the latest [Visual Studio](https://visualstudio.microsoft.com/downloads/) to update your current version of Visual Studio.
+To resolve the issue, install the latest version of [Visual Studio](https://visualstudio.microsoft.com/downloads/) to update your current version of Visual Studio.
