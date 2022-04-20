@@ -1,7 +1,7 @@
 ---
 title: SeImpersonatePrivilege and SeCreateGlobalPrivilege
 description: Describes the Impersonate a Client After Authentication and the Create Global Objects security settings.
-ms.date: 05/25/2021
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -46,9 +46,10 @@ The "Impersonate a client after authentication" user right (SeImpersonatePrivile
 - Component Object Model (COM) servers that are started by the COM infrastructure and that are configured to run under a specific account
 
 When you assign the "Impersonate a client after authentication" user right to a user, you permit programs that run on behalf of that user to impersonate a client. This security setting helps to prevent unauthorized servers from impersonating clients that connect to it through methods such as remote procedure calls (RPC) or named pipes. For more information about the SeImpersonatePrivilege function, visit the following Microsoft Web site:  
-[https://msdn2.microsoft.com/library/aa375728.aspx](https://msdn2.microsoft.com/library/aa375728.aspx)  
+[Impersonate a client after authentication](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication)
+  
 For more information about Impersonate functions (such as ImpersonateClient, ImpersonateLoggedOnUser, and ImpersonateNamedPipeClient), search for SeImpersonatePrivilege in the Microsoft Platform SDK documentation. To view this documentation, visit the following Microsoft Web site:  
-[https://msdn2.microsoft.com/library/aa375728.aspx](https://msdn2.microsoft.com/library/aa375728.aspx)  
+[Impersonate a client after authentication](/windows/security/threat-protection/security-policy-settings/impersonate-a-client-after-authentication)  
 
 #### Troubleshooting for issue 1
 

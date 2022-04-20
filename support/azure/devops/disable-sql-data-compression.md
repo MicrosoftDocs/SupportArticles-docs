@@ -61,3 +61,5 @@ where p.data_compression_desc = 'page'
 - [SQL Server requirements for Team Foundation Server](/previous-versions/visualstudio/visual-studio-2013/dd631889(v=vs.120)).
 
 - [Data Compression](/sql/relational-databases/data-compression/data-compression)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

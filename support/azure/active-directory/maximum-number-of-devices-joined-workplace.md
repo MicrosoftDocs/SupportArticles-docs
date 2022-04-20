@@ -77,3 +77,5 @@ You can also verify that the user has reached the device capacity by reviewing t
 ## More information
 
 For more troubleshooting information, see [Diagnostic logging for troubleshooting Workplace Join issues](https://support.microsoft.com/help/3045377).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -25,7 +25,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Documentation for creating and managing VMs
-            url: https://docs.microsoft.com/azure/virtual-machines/
+            url: /azure/virtual-machines/
 
   # Card
   - title: Troubleshoot deployment failures

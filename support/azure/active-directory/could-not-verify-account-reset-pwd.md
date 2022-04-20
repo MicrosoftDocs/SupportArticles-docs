@@ -26,3 +26,5 @@ This problem may occur because there are no telephone numbers on file for you.
 ## Resolution
 
 To resolve this problem, work with your administrator to update your telephone number(s).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

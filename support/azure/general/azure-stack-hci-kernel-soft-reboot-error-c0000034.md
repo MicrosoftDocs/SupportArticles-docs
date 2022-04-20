@@ -27,3 +27,5 @@ In this scenario, the following volmgr warning is logged as a system log in the 
 ## Solution
 
 This warning message is insignificant and you can safely ignore it. In later versions of Azure Stack HCI, version 21H2, the message will appear as an information event rather than a warning.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

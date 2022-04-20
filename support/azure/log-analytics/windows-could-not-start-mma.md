@@ -84,3 +84,5 @@ Restore full control to the **SecureStorageManager** parameter for the system us
 1. In the address bar, reenter the registry path for the **SecureStorageManager** parameter (**HKLM\SYSTEM\CurrentControlSet\Services\HealthService\Parameters\SecureStorageManager**), and then press Enter.
 
 1. Select **Edit** > **Permissions**, and then reapply the default permission in **Full Control** (**Allow**) for the **SYSTEM** user and the **Administrators (*\<ComputerName>*)** group.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
