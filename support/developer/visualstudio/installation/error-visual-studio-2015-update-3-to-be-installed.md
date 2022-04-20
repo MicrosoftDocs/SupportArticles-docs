@@ -1,5 +1,5 @@
 ---
-title: Error: This update requires Visual Studio 2015 Update 3 to be installed
+title: Error "This update requires Visual Studio 2015 Update 3 to be installed."
 description: Resolves an error that occurs because a required cumulative update (KB3165756) to Visual Studio 2015 is missing.
 ms.date: 04/15/2022
 author: jasonchlus
@@ -14,12 +14,14 @@ This article helps you resolve the “This update requires Visual Studio 2015 Up
 _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptoms
+
 When you try to install Visual Studio 2015 security updates, you receive the a “This update requires Visual Studio 2015 Update 3 to be installed” error message.
 
 > [!NOTE]
 > To determine whether Visual Studio 2015 Update 3 (KB3022398) is installed, check the Installed Updates list in Control Panel.
 
 ## Cause
+
 Your computer has not been updated to have required cumulative servicing and performance update [KB3165756](https://aka.ms/vs/14/docs/2015_Update3) to Visual Studio 2015 Update 3 installed. You must explicitly download and install this update.
 
 Usually, [KB3165756](https://aka.ms/vs/14/release/3165756) is automatically downloaded and installed when you install Visual Studio 2015 Update 3 that is sourced from official Microsoft locations while the computer is connected to the internet. However, in certain situations, when organizations create their own offline layout on a network share, or when you’re updating less common products, such as Isolated Shell, KB3165756 is not downloaded and installed automatically. Instead, it must be independently acquired and explicitly applied. For more information, see [Cumulative Servicing Release KB3165756](https://aka.ms/vs/14/docs/2015_Update3) for Microsoft Visual Studio 2015 Update 3.
