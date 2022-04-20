@@ -25,6 +25,6 @@ If you're running Windows 7, you can find the Visual Studio 2015 application at 
 
 If you still can't find Visual Studio after a successful installation, open File Explorer, and then navigate to the following path:
 
-    C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe
+*C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe*
 
-Double-click the Devenv.exe file. If you installed Visual Studio to a drive other than the C drive, go to the folder where you installed Visual Studio, and then locate Common7\IDE\devenv.exe.
+Double-click the *Devenv.exe* file. If you installed Visual Studio to a drive other than the C drive, go to the folder where you installed Visual Studio, and then locate *Common7\IDE\devenv.exe*.
