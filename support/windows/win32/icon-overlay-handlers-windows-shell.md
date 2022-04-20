@@ -31,4 +31,6 @@ An icon overlay is a small image in the lower-left corner of an icon that repres
 
 Microsoft OneDrive and OneDrive for Business register multiple icon overlay handlers to indicate the synchronization and share states of the files that are managed by those applications. Because OneDrive is installed by default in Windows 10 systems, the number of icon overlay handlers that other applications can register before the problem that's described in the [Symptoms](#symptoms) section appears effectively reduced. OneDrive currently registers five icon overlay handlers, and there are four system icon overlays. This leaves just six slots in the system image list for use by other icon overlay handlers.
 
+Also, icon overlay handlers are not used under folders which are synchronized with cloud file system, such as OneDrive and OneDriver for Business, etc. The handlers are not even executed under such folders. 
+
 For more information, see [Creating icon overlay handlers](/previous-versions/cc144123(v=vs.85)).
