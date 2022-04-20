@@ -13,7 +13,7 @@ This article provides a resolution if an installation of Microsoft Visual Studio
 
 _Applies to:_&nbsp;Visual Studio 2015
 
-## Symptom
+## Symptoms
 A Visual Studio installation stops responding if Visual Studio can't automatically install KB2999226 ("Update for Universal C Runtime in Windows") because of the computer configuration.
 
 ## Resolution
