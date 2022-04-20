@@ -53,4 +53,4 @@ The AKS cluster is associated with a subnet, network security group (NSG), or sp
 
 - For the NSG and subnet, remove all associated rules. For more information, see [Associate or dissociate a network security group to or from a subnet or network interface](/azure/virtual-network/manage-network-security-group#associate-or-dissociate-a-network-security-group-to-or-from-a-subnet-or-network-interface).
 
-If the problem persists, open a new support ticket.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

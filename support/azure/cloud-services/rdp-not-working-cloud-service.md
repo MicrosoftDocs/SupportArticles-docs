@@ -103,3 +103,5 @@ If you are not able to RDP after running the above script, then definitely it's 
 Most of time your corporate network blocks the RDP traffic due to security reasons. So the first thing you should check if you are able to reach to RDP ports 3389 and 20000 (if applicable as mentioned above) using [PsPing](/sysinternals/downloads/psping)  or [PortQry](https://www.microsoft.com/download/details.aspx?id=24009) or [Telnet](https://blogs.technet.microsoft.com/danielmauser/2015/03/18/tip-installing-telnet-client-via-command-line/).
 
 You can refer this [article](https://support.microsoft.com/help/4464850) where discusses how to troubleshoot RDP issues using various tools like PsPing and Network monitor. If you are not getting any response, try to RDP from a different network, may be home network or mobile hotspot, etc.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

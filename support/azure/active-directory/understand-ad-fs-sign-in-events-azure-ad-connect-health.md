@@ -68,3 +68,5 @@ cluster('Idsharedwus').database('ADFSConnectHealth').SignInEvent
 ## Next steps
 
 Read more about [AD FS sign-ins in Azure AD with Connect Health](/azure/active-directory/hybrid/how-to-connect-health-ad-fs-sign-in).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

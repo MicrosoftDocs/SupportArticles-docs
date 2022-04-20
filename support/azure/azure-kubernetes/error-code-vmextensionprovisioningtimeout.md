@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the VMExtensionProvisioningTimeout error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the VMExtensionProvisioningTimeout error code
- 
+
 This article discusses how to identify and resolve the `VMExtensionProvisioningTimeout` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
@@ -29,7 +29,7 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > Dependency: Microsoft.Compute/VirtualMachineScaleSet;
 >
-> OrginalError: 
+> OrginalError:
 >
 > Code="VMExtensionProvisioningTimeout"
 >
@@ -65,7 +65,9 @@ Follow these steps:
     - [Create a private AKS cluster](/azure/aks/private-clusters)
     - [Private Azure Kubernetes service with custom DNS server](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
     - [What is IP address 168.63.129.16?](/azure/virtual-network/what-is-ip-address-168-63-129-16)
-    
+
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
