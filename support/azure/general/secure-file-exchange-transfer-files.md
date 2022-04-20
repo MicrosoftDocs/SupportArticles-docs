@@ -9,14 +9,15 @@ ms.reviewer:
 ---
 # How to securely transfer files to Microsoft Support
 
-This article provides information to help you use Secure File Exchange.
+This article provides information on using Secure File Exchange.
+
 
 _Original product version:_ &nbsp; Azure  
 _Original KB number:_ &nbsp; 4012140
 
 ## Summary
 
-When you work with Microsoft Support, it's frequently necessary to transfer files to help the troubleshooting process. We recognize that these files may contain sensitive data and must be handled securely. The **Secure File Exchange** was built to enable the fast and secure transfer and storage of files.
+When you work with Microsoft Support, it's frequently necessary to transfer files to help the troubleshooting process. We recognize that these files may contain sensitive data and must be handled securely. **Secure File Exchange** was built to enable the fast and secure transfer and storage of files.
 
 The main features of Secure File Exchange are as follows:
 
