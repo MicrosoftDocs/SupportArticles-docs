@@ -147,3 +147,5 @@ Once these details have been corrected, restart the VM with networking configure
 ### RHEL 8, Ubuntu, Debian
 
 These Linux distributions use `cloud-init`, and the issue should be resolved on the next reboot of the VM. If a reboot doesn't fix the issue, try any of the previously listed methods.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

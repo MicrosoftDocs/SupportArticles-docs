@@ -110,3 +110,5 @@ If you review the code of WorkerRole.cs for ZipEngine role, you would notice bel
 WorkerAssembly.WorkerAssembly workerAssembly = new WorkerAssembly.WorkerAssembly();
 workerAssembly.DoWork();
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

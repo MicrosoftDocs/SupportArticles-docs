@@ -43,3 +43,5 @@ If AKS manages integration with Azure Active Directory (Azure AD), the user migh
 ### Solution: Have the security group admin assign the correct access level
 
 Make sure the security group's administrator has given your account an Active  or Conditional Access assignment. See [AKS-managed Azure Active Directory integration](/azure/aks/managed-aad). This article has instructions for setting either [Active assignment](/azure/aks/managed-aad#configure-just-in-time-cluster-access-with-azure-ad-and-aks) or [Conditional Access assignment](/azure/aks/managed-aad#use-conditional-access-with-azure-ad-and-aks).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

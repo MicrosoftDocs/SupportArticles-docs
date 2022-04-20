@@ -40,3 +40,5 @@ Additionally, querying on the display name in Visual Studio 2013 or earlier vers
 - Visual Studio Express 2015 for Web
 - Visual Studio Express 2015 for Windows 10
 - Visual Studio Professional 2015
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
