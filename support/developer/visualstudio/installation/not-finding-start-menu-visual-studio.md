@@ -21,10 +21,11 @@ The Visual Studio icon no longer appears on the Start menu. Although your Visual
 
 If you're running Windows 7, you can find the Visual Studio 2015 application at the top of the “All Programs” list grouped with other application icons. If you're running Windows 10. Windows 8.1, or Windows 8, you can find the icon listed under the "V" grouping. If you still can't find the icon, use Windows search (press the Windows logo key, and then enter “Visual Studio 2015”).
 
-> [!NOTE] The application icon will no longer be in the Visual Studio 2015 folder.
+ >[!NOTE] 
+ >The application icon will no longer be in the Visual Studio 2015 folder.
 
 If you still can't find Visual Studio after a successful installation, open File Explorer, and then navigate to the following path:
 
-*C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe*
+```C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe```
 
 Double-click the *Devenv.exe* file. If you installed Visual Studio to a drive other than the C drive, go to the folder where you installed Visual Studio, and then locate *Common7\IDE\devenv.exe*.
