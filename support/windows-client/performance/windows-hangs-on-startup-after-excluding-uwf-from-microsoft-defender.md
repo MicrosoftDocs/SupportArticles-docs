@@ -23,9 +23,8 @@ _Applies to:_ &nbsp; Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows
 
 Consider the following scenario:
 
-- You enable the UWF feature in Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise.
-- You configure UWF registry exclusion for Windows Defender. Especially, the following registry key is excluded from write filter:
-
+- You enable the UWF feature on a Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise computer.
+- You configure UWF registry exclusion for Windows Defender. Especially, the following registry key is excluded from write filter:  
   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter`
 
 In this scenario, the computer hangs during Windows startup.
@@ -35,7 +34,7 @@ In this scenario, the computer hangs during Windows startup.
 
 ## Alternative way to exclude UWF
 
-To work around this issue, you can use the **Registry Commit** option of uwfmgr.exe. The option can commit changes to specify a value.
+To work around this issue, you can use the **Registry Commit** option of uwfmgr.exe to exclude UWF. The option can commit changes to specify a value.
 
 The following command can commit changes of specified registry value.
 
@@ -48,7 +47,7 @@ uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" Sta
 
 :::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-screenshot.png" alt-text="Screenshot of the registry editor." border="false":::
 
-If you find registry values reassemble the following screenshot, and you want to commit all changes under WDFilter registry subkeys, you need to run Registry Commit option as follows:
+If you find registry values that resemble the above screenshot, and you want to commit all changes under WDFilter registry subkeys, you need to run Registry Commit option as follows:
 
 ```console
 uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" DependOnService
