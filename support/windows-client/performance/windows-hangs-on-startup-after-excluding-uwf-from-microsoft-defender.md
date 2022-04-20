@@ -32,6 +32,8 @@ In this scenario, the computer hangs during Windows startup.
 > [!NOTE]
 > If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the problem does not occur.
 
+This issue is by design. To work around this issue, use alternative way to exclude UWF.
+
 ## Alternative way to exclude UWF
 
 To work around this issue, you can use the **Registry Commit** option of uwfmgr.exe to exclude UWF. The option can commit changes to specify a value.
