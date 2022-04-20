@@ -57,3 +57,5 @@ localResource = RoleEnvironment.GetLocalResource("FileStorage");
 Environment.SetEnvironmentVariable("TMP", localResource.RootPath);
 Environment.SetEnvironmentVariable("TEMP", localResource.RootPath);
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

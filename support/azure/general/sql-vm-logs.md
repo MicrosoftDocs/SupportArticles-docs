@@ -56,3 +56,5 @@ If you select **Allow access to logs** when you create a Microsoft SQL Server on
 ## More information
 
 If you create a SQL Server AlwaysOn Availability Groups cluster, the AlwaysOn_health.xel files will be collected. For more information about the collected files, see [Always On Availability Groups extended events](/sql/database-engine/availability-groups/windows/always-on-extended-events).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

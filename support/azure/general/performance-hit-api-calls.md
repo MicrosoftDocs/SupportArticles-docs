@@ -100,3 +100,5 @@ The API **ProductStore** in APIM communicates with the backend endpoint (`https:
        <!--base: End Api scope-->
     </outbound>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

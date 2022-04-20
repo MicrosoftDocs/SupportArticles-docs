@@ -30,20 +30,20 @@ Follow the mitigation steps below depending on the error you receive:
 
 * If you're getting the error **Unknown filesystem**, this error can result from a file system corruption on the boot partition, or an incorrect kernel configuration.
 
-   * For file system issues, follow the steps in the article [Linux Recovery: Cannot SSH to Linux VM due to file system errors (fsck, inodes)](/archive/blogs/linuxonazure/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck-inodes).
-   * For kernel issues, follow the steps in the article [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://support.microsoft.com/help/4091524/how-recover-azure-linux-vm-from-kernel-related-boot-related-issues), or [Linux Recovery: Fixing non-boot issues related to Kernel problems using chroot](http://linuxonazure.azurewebsites.net/linux-recovery-fixing-non-boot-issues-related-to-kernel-problems-using-chroot/).
-   
+  * For file system issues, follow the steps in the article [Linux Recovery: Cannot SSH to Linux VM due to file system errors (fsck, inodes)](/archive/blogs/linuxonazure/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck-inodes).
+  * For kernel issues, follow the steps in the article [How to recover an Azure Linux virtual machine from kernel-related boot issues](https://support.microsoft.com/help/4091524/how-recover-azure-linux-vm-from-kernel-related-boot-related-issues), or [Linux Recovery: Fixing non-boot issues related to Kernel problems using chroot](http://linuxonazure.azurewebsites.net/linux-recovery-fixing-non-boot-issues-related-to-kernel-problems-using-chroot/).
+
 ### Error - File not found
 
 * If you're getting the error **Error 15: File not found or initial RAM disk** or **initrd/initramfs file not found**, follow the steps below.
 
-    * For the missing file `/boot/grub2/grub.cfg` or `initrd/initramfs` proceed with the following process:
+  * For the missing file `/boot/grub2/grub.cfg` or `initrd/initramfs` proceed with the following process:
 
     1. Ensure `/etc/default/grub` exist and has correct/desired settings. If you don't know which are the default settings, you can check with a working VM.
 
     2. Next, run the following command to regenerate its configuration: `grub2-mkconfig -o /boot/grub2/grub.cfg`
 
-   * If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (**RHEL 6.x**, **Centos 6.x** and **Ubuntu 14.04**) so the commands could differ. You will have to spin up an old server and test to ensure the correct commands are provided.
+  * If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (**RHEL 6.x**, **Centos 6.x** and **Ubuntu 14.04**) so the commands could differ. You will have to spin up an old server and test to ensure the correct commands are provided.
 
 ### Error - No such partition
 
@@ -53,15 +53,17 @@ Follow the mitigation steps below depending on the error you receive:
 
 * If you're getting the error **/boot/grub2/grub.cfg file not found**, follow the steps below.
 
-    * For the missing file `/boot/grub2/grub.cfg` or `initrd/initramfs` proceed with the following process:
+  * For the missing file `/boot/grub2/grub.cfg` or `initrd/initramfs` proceed with the following process:
 
     1. Ensure `/etc/default/grub` exist and has correct/desired settings. If you don't know which are the default settings, you can check with a working VM.
 
     2. Next, run the following command to regenerate its configuration: `grub2-mkconfig -o /boot/grub2/grub.cfg`.
 
-   * If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (**RHEL 6.x**, **Centos 6.x** and **Ubuntu 14.04**) so the commands could defer. Spin up an old server and test it to ensure the correct commands are provided.
+  * If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (**RHEL 6.x**, **Centos 6.x** and **Ubuntu 14.04**) so the commands could defer. Spin up an old server and test it to ensure the correct commands are provided.
 
 ## Next steps
 
 * [Azure Virtual Machine Agent overview](/azure/virtual-machines/extensions/agent-windows)
 * [Virtual machine extensions and features for Windows](/azure/virtual-machines/extensions/features-windows)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
