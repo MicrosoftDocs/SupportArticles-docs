@@ -11,7 +11,7 @@ ms.reviewer: terry.g.lee
 
 _Applies to:_&nbsp;Visual Studio 2015
 
-## Symptom
+## Symptoms
 When you try to install Microsoft Visual Studio 2015, you receive the following error message:
 
 “The product version that you are trying to set up is earlier than the version already installed on this computer.”
