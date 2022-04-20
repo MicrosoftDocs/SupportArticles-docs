@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 162694
-ms.author: paotten
+ms.author: paul-otten
 appliesto: 
   - SharePoint Online
 ms.date: 4/15/2022
