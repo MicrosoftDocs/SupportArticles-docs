@@ -63,6 +63,4 @@ On the computer on which the Directory Sync tool is installed, follow these step
 
 If the methods did not work, see [Recreate missing arbitration mailboxes](/exchange/architecture/mailbox-servers/recreate-arbitration-mailboxes#re-create-an-arbitration-mailbox).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

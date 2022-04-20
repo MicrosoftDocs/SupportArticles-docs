@@ -54,6 +54,4 @@ To fix this issue, follow these steps:
      Remove-MsolUser -UserPrincipalName John.Smith@Contoso.com
      ```
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -302,5 +302,3 @@ End Module
 - [Trace Class](/dotnet/api/system.diagnostics.trace)
 
 - [Debug Class](/dotnet/api/system.diagnostics.debug)
-
-- [How Do I...Instrument a small application with tracing?](https://quickstart.developerfusion.co.uk/quickstart/howto/doc/tracedemo.aspx)

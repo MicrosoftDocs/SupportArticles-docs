@@ -353,6 +353,8 @@
       href: install/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: install/sql-server-2008-setup-issues.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
     - name: SxS install of X64 and X86 version of SSRS 2008
