@@ -1,5 +1,5 @@
 ---
-title: Windows Program Compatibility mode is on. Turn it off and then try Setup again
+title: Windows Program Compatibility mode is on
 description: Provides a resolution for the error "Windows Program Compatibility mode is on. Turn it off and then try Setup again".
 ms.date: 04/07/2022
 author: jasonchlus
