@@ -123,15 +123,21 @@ sections:
           If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to *false*, the `/home/` directory **will not be shared** across scale instances, and files written **will not persist** across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* will enable the mount. Once this is set to true, if you wish to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *false*.
 
       - question: |
-          My container fails to start with "no space left on device" What does this mean?
+          My container fails to start with "no space left on device". What does this error mean?
         answer: |
-          App Service Linux leverages two distinct types of storage during operation, the file system storage & the host disk space. The file system storage is included with your app service plan quota & in use when saving to persistent storage(`/home`). The host disk space is used to store container images & is managed by the platform through the docker storage driver.
+          App Service on Linux uses two different types of storage:
+          
+          - File system storage: The file system storage is included in the App Service plan quota. It’s used when files are saved to the persistent storage that’s rooted in the `/home` directory. 
+          - Host disk space: The host disk space is used to store container images. It’s managed by the platform through the docker storage driver.
+          
+          The host disk space is separate from the file system storage quota. It’s not expandable and there is a 15GB limit for each instance. It will be used to store any custom images on the worker. You might be able to use greater than 15GBs depending on the exact availability of host disk space, but this isn’t guaranteed. 
+          
+          If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storagepath](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space also will be consumed.
+          
+          The platform routinely cleans the host disk space to remove unused containers. If the container writes large amounts of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it will result in startup failures or runtime exceptions once the host disk space limit is exceeded.
+          
+          We recommend that you keep your container images as small as possible and write data to persistent storage or BYOS when running on Linux App Service. If not possible, you have to split the App Service plan because the host disk space is fixed and shared between all containers in the App Service Plan.
 
-          The host disk space is separate from the file system storage quota included with the App Service Plan and is not expandable. There is a 15GB limit for each instance & will be used to store any custom images on the worker. You might be able to use greater than 15GBs depending on the exact availability of host disk space, but this is not guaranteed. 
-  
-          If the container's writable layer saves data outside of /home or a [mounted azure storage path](https://docs.microsoft.com/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), this will also consume the host disk space. The platform routinely cleans this space to remove unused containers. Still, if the container writes large amounts of data outside of /home or BYOS, it will result in startup failures or runtime exceptions once the host disk space limit is exceeded.
-
-          It's recommended to keep your container images as small as possible & leverage writing to persistent storage or bring your own storage when running on App Service Linux. If not possible, splitting the App Service Plan will be required since the host disk space is fixed & shared between all containers in the App Service Plan.
 
       - question: |
           My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
