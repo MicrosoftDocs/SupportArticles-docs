@@ -35,3 +35,5 @@ https://go.microsoft.com/fwlink/?LinkID=164053&clcid=0x409
 1. Make sure that the domain controllers are accessible.
 1. Change computer SID to make it unique. See NewSID v4.10 for details.
 1. Reset the computer in AD or disjoin and rejoin computer to the domain.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

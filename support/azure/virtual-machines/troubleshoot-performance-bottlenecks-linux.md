@@ -425,3 +425,5 @@ For more information on PerfInsights in the Linux OS, review [How to use PerfIns
 - [Troubleshoot Azure virtual machine performance on Linux or Windows - Virtual Machines](troubleshoot-performance-virtual-machine-linux-windows.md)
 
 - [Performance diagnostics for Azure virtual machines](performance-diagnostics.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

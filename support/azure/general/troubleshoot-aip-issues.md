@@ -57,3 +57,5 @@ To export Azure Information Protection logs, follow these steps:
 - [Requirements for Azure Information Protection](/azure/information-protection/get-started/requirements)
 - [Quick start tutorial for Azure Information Protection](/azure/information-protection/get-started/infoprotect-quick-start-tutorial)
 - [Download Azure Information Protection client](https://www.microsoft.com/download/details.aspx?id=53018)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

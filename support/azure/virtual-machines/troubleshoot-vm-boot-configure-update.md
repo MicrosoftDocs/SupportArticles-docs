@@ -19,8 +19,6 @@ ms.author: delhan
 
 This article describes the "Getting ready" and "Getting Windows ready" screens that you may encounter when you boot a Windows virtual machine (VM) in Microsoft Azure. It provides steps to help you collect data for a support ticket.
 
- 
-
 ## Symptoms
 
 A Windows VM does not boot. When you use **Boot diagnostics** to get the screenshot of the VM, you may see that the VM displays the message "Getting ready" or "Getting Windows ready".
@@ -44,13 +42,13 @@ If the issue does not resolve after waiting for the changes to process, you woul
 
 1. Take a snapshot of the OS disk of the affected VM as a backup. For more information, see [Snapshot a disk](/azure/virtual-machines/windows/snapshot-copy-managed-disk).
 2. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
-3. Remote desktop to the recovery VM. 
+3. Remote desktop to the recovery VM.
 4. If the OS disk is encrypted, you must turn off the encryption before you move to the next step. For more information, see [Decrypt the encrypted OS disk in the VM that cannot boot](troubleshoot-bitlocker-boot-error.md#Decrypt-the-encrypted-OS disk).
 
 ### Locate dump file and submit a support ticket
 
 1. On the recovery VM, go to windows folder in the attached OS disk. If the driver letter that is assigned to the attached OS disk is F, you need to go to F:\Windows.
-2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file. 
+2. Locate the memory.dmp file, and then [submit a support ticket](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) with the dump file.
 
 If you cannot find the dump file, move the next step to enable dump log and Serial Console.
 
@@ -87,7 +85,7 @@ To enable dump log and Serial Console, run the following script.
 
     1. Make sure that there's enough space on the disk to allocate as much memory as the RAM, which depends on the size that you are selecting for this VM.
     2. If there's not enough space or this is a large size VM (G, GS or E series), you could then change the location where this file will be created and refer that to any other data disk which is attached to the VM. To do this, you will need to change the following key:
-    
+
         ```console
         reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
 
@@ -103,8 +101,8 @@ To enable dump log and Serial Console, run the following script.
 
     :::image type="content" source="media/troubleshoot-vm-boot-configure-update/run-nmi.png" alt-text="Screenshot of the Send Non-Maskable Interrupt item.":::
 
-1. Attach the OS disk to a recovery VM again, collect dump file.
+6. Attach the OS disk to a recovery VM again, collect dump file.
 
-## Contact Microsoft support
+After you collect the dump file, contact Microsoft support to analyze the root cause.
 
-After you collect the dump file, contact [Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to analyze the root cause.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

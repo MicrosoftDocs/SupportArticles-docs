@@ -245,6 +245,4 @@ The following attributes are set in Azure AD on the synchronized user object:
 > mailNickName: samenick0209  
 > proxyAddresses: {smtp:`us6@contoso.com`,SMTP:`samenick0209@contoso.onmicrosoft.com`}
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

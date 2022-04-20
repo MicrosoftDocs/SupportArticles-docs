@@ -43,7 +43,7 @@ Container orchestrators are enabled to work with container deployments as mentio
 We recommend that you use community resources or contact the orchestrator provider for additional technical assistance:
 
 - [Mesosphere](https://support.d2iq.com/)
-- [Docker Swarm](https://success.docker.com/Policies/Scope_of_Support)
+- [Docker Swarm](https://docs.docker.com/engine/swarm/)
 - [DC/OS](https://dcos.io/community/)
 - [Kubernetes](https://kubernetes.io/community/)
 
@@ -74,6 +74,8 @@ Customers may also choose to deploy containers to Azure Web Apps on Linux. In th
 Microsoft offers commercially reasonable support for the components that are deployed in this scenario, including the operating system, Docker Engine, and hosted elements in the container (such as Node.js). Customized code is not within the scope of support.
 
 :::image type="content" source="media/support-policy-containers/component-support.png" alt-text="Screenshot of component support.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
