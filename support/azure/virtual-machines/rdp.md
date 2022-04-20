@@ -38,5 +38,7 @@ The following issues with creating an RDP to connection to a VM are covered in t
 - [Disable the guest OS Firewall in Azure VM](disable-guest-os-firewall-windows.md)
 - [Enable or disable a firewall rule on a guest OS](enable-disable-firewall-rule-guest-os.md)
 - [Guest OS firewall is blocking inbound traffic](guest-os-firewall-blocking-inbound-traffic.md)
-- [Guest OS firewall is misconfigured](guest-os-firewall-misconfigured.md) 
+- [Guest OS firewall is misconfigured](guest-os-firewall-misconfigured.md)
 - [Troubleshoot RDP error caused by netvsc.sys](troubleshoot-rdp-driver-netvsc.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -70,4 +70,4 @@ To start the UPN matching process, follow these steps:
 
 For more information about UPN soft match, see [Azure AD Connect sync service features](/azure/active-directory/hybrid/how-to-connect-syncservice-features#userprincipalname-soft-match).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -235,7 +235,7 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. You will see the following message on the Solution Center page:
 
-  :::image type="content" source="media/use-sql-server-in-windows/problem-details-sql-server-2008-r2.png" alt-text="Screenshot of the setup problem details for SQL Server 2008 R2: Microsoft SQL Server (2008 and 2008 R2) has known compatibility issues." border="false":::
+  :::image type="content" source="media/use-sql-server-in-windows/problem-details-sql-server-2008-r2.svg" alt-text="Screenshot of the setup problem details for SQL Server 2008 R2: Microsoft SQL Server (2008 and 2008 R2) has known compatibility issues." border="false":::
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008 R2](https://support.microsoft.com/help/2527041).
 
@@ -246,14 +246,14 @@ Before you install SQL Server on a computer that is running Windows Server 2012 
   > [!NOTE]
   > The RTM installation of the product is supported. However, you have to install the respective service packs after the initial setup is complete. Your SQL server 2008 installation is not supported unless you apply Service Pack 4 after you install the RTM edition. You will see the following message on the Solution Center page.
 
-  :::image type="content" source="media/use-sql-server-in-windows/problem-details-sql-server-2008.png" alt-text="Screenshot of the setup problem details for SQL Server 2008: Microsoft SQL Server (2008 and 2008 R2) has known compatibility issues." border="false":::
+  :::image type="content" source="media/use-sql-server-in-windows/problem-details-sql-server-2008.svg" alt-text="Screenshot of the setup problem details for SQL Server 2008: Microsoft SQL Server (2008 and 2008 R2) has known compatibility issues." border="false":::
 
   For more information, see [How to obtain the latest service pack for SQL Server 2008](https://support.microsoft.com/help/968382).
 
   > [!IMPORTANT]
   > The following dialog box appears in SQL Server 2008 R2 and SQL Server 2008 when you run the Setup program.
 
-  :::image type="content" source="media/use-sql-server-in-windows/program-has-compatibility-issues.png" alt-text="Screenshot of the Program Compatibility Assistant dialog box, which shows This program has compatibility problems." border="false":::
+  :::image type="content" source="media/use-sql-server-in-windows/program-has-compatibility-issues.svg" alt-text="Screenshot of the Program Compatibility Assistant dialog box, which shows This program has compatibility problems." border="false":::
 
   After the SQL Server Setup program is finished, you have to install service packs before you run SQL Server on this version of Windows.
 
