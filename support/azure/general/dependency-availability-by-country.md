@@ -22,7 +22,8 @@ Many product features have Azure dependencies that might not be available in all
 - Privacy
 - Transport
 
-Please note that the Azure dependency is only applicable to a tenant's primary country and not it's subsidary countries/regions. 
+> [!NOTE]
+> The Azure dependency is only applicable to a tenant's primary country/region. It's not applicable to a tenant's subsidary countries/regions. 
 
 ## Availability by primary country/region
 
