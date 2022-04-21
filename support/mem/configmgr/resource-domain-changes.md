@@ -16,7 +16,10 @@ After you install January 2022 or later Windows cumulative updates on a Configur
 
 For example, a resource is in a domain with the NetBIOS domain name `AAA`, but with the FQDN `BBB.contoso.com`. The resource is discovered as `AAA\User1` or `AAA\Computer1`. After you install January 2022 Windows updates and the discovery runs, the resource name may be changed to `BBB\User1` or `BBB\Computer1`.
 
-The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have rules based on a domain membership.
+The domain name of the resource may alternate between `AAA` and `BBB`, which removes or adds devices to collections that have query rules based on a domain membership.
+
+> [!NOTE]
+> Direct membership rules are not affected.
 
 ## Cause
 
@@ -24,11 +27,13 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 ## Resolution
 
-This issue is under investigation and will be resolved in a future release of Configuration Manager current branch.
+This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
 
 ## Workaround
 
-To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name.
+To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name. For example:
+
+`select * from SMS_R_System where SMS_R_System.SystemGroupName in ("AAA\\Group1","BBB\\Group1")`
 
 ## Identify the issue
 
@@ -55,10 +60,10 @@ Here are the steps to check logs and identify the issue:
    ```output
    INFO: DDR was written for group 'contoso\ParentGroup' - C:\ConfigMgr\inboxes\auth\ddm.box\userddrsonly\asg1607o.DDR at <Date Time>.~ 
    VERBOSE: group has 1 members~
-   …
+   ...
    VERBOSE: Domain controller name for the SID is: \\DC.fourthcoffee.local
    VERBOSE: full ADs path of member: LDAP://DC.fourthcoffee.local/CN=ChildGroup,CN=Users,DC=fourthcoffee,DC=local~
-   …
+   ...
    VERBOSE: Could not get Domain Name using DSCrackNames, will parse ADs Path to get it
    VERBOSE: ParentGroup: "contoso\ParentGroup" ChildGroup: "fourthcoffee\ChildGroup"
    ```
@@ -69,6 +74,47 @@ Here are the steps to check logs and identify the issue:
    The Security System has detected a downgrade attempt when contacting the 3-part SPN LDAP/DC.contoso.local/fourthcoffee.LOCAL
    with error code "The SAM database on the Windows Server does not have a computer account for this workstation trust relationship. (0xc000018b)".
    Authentication was denied.
+   ```
+
+1. If so, you've identified the issue successfully.
+
+## Additional information
+
+This issue can also occur if the **Discover objects within Active Directory groups** option is enabled in System or User Discovery scope settings. In this case, here are the steps to check logs and identify the issue. You can also temporarily disable the option for the discovery scopes in which you have groups with members from other domains.
+
+1. Increase the size of the _ADSysDis.log_ or _ADUsrDis.log_ file to 100 megabytes (MB) or more to accommodate a full Active Directory system or user discovery. Under one of the following registry keys, change the `MaxFileSize` registry value to `104857600` (the default value is `2621440`).
+
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_SYSTEM_DISCOVERY_AGENT`
+
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_AD_USER_DISCOVERY_AGENT`
+
+1. Enable verbose logging for the _ADSysDis.log_ or _ADUsrDis.log_ file. Under one of the following registry keys, change the `Verbose Logs` registry value to `1` (the default value is `0`).
+
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_SYSTEM_DISCOVERY_AGENT`
+
+   - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\COMPONENTS\SMS_AD_USER_DISCOVERY_AGENT`
+
+1. Run a full Active Directory system or user discovery and make sure the following message is logged in the _ADSysDis.log_ or _ADUsrDis.log_ file upon completion.
+
+   `INFO: CADSource::fullSync returning 0x00000000~`
+
+1. Filter by the thread ID that logged the above message and find the following message in the filtered logs.
+
+   `VERBOSE : Could not get Domain Name using DSCrackNames, will parse ADs Path to get it`
+
+1. Check the following lines around. You'll find a group and its member are from different domains.
+
+   ```output
+   INFO: Processing discovered group object with ADsPath = 'LDAP://DC1.CONTOSO.COM/CN=GROUP1,OU=OU,DC=CONTOSO,DC=COM'~
+   VERBOSE: group not found in discovered group list~
+   VERBOSE: Bound to group.~
+   VERBOSE: group has 3 members~
+   ...
+   VERBOSE: full ADs path of member: LDAP://DC2.fourthcoffee.com/CN=Machine1,OU=US,DC=fourthcoffee,DC=com~
+   ...
+   VERBOSE: Could not get Domain Name using DsCrackNames, will parse ADs Path to get it
+   VERBOSE: domain = 'FourthCoffee' full domain name = 'fourthcoffee.com'
+   INFO: DDR was written for system 'Machine1' - C:\ConfigMgr\inboxes\auth\ddm.box\adsqznjr.DDR at <Date Time>.~
    ```
 
 1. If so, you've identified the issue successfully.

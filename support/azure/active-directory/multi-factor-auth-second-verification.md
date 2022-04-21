@@ -52,4 +52,4 @@ This is true even if the app is set to **Require multi-factor authentication,** 
 
 For users who are members of the exception group, the requirement for multi-factor authentication on the user account is overridden.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

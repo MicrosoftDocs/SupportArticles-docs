@@ -67,6 +67,8 @@ Using the SSRS web site, ensure the two TFS Data Sources point to the proper Dat
 > [!NOTE]
 > You will need to provide the password for the credentials being used by each Data Source before you can apply any changes made.
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
 ## Disclaimer
 
 [!INCLUDE [Publishing Disclaimer](../../includes/publishing-disclaimer.md)]

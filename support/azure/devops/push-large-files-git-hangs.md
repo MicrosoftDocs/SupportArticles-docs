@@ -38,3 +38,5 @@ To fix this problem, enable TLS 1.1 and TLS 1.2 on Windows Server 2008 R2. To do
 - Windows Server 2008 R2 Datacenter
 - Windows Server 2008 R2 Standard
 - Windows Server 2008 R2 Foundation
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

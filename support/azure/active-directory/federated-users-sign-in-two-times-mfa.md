@@ -52,3 +52,5 @@ To resolve this issue, you must configure Azure AD to let AD FS natively handle 
     ```powershell
     Set-MsolDomainFederationSettings -DomainNameyour_domain_name-PreferredAuthenticationProtocol <current auth setting such as WsFed> -SupportsMfa $True -PromptLoginBehavior NativeSupport
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
