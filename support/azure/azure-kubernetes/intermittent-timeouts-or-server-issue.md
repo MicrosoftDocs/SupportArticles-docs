@@ -137,8 +137,8 @@ Labels:       app=my-pod
 ...
 Containers:
   webserver:
-	...
-	...
+ ...
+ ...
   my-app:
     Container ID:   containerd://a46e5062d53039d0d812c57c76b740f8d1ffb222de35203575bf8e4d10d6b51e
     Image:          my-repo/my-image:latest
@@ -179,3 +179,5 @@ You can tell from the events that the container is being killed because it's exc
 You can remove the memory limit and monitor the application to determine how much memory it actually needs. After you learn the memory usage, you can update the memory limits on the container. If the memory usage continues to increase, determine whether there's a memory leak in the application.
 
 For more information about how to plan resources for workloads in Azure Kubernetes Service, see [resource management best practices](/azure/aks/developer-best-practices-resource-management).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

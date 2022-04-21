@@ -34,6 +34,4 @@ To add a subdomain to a domain that's set up for federated authentication, follo
      New-MSOLFederatedDomain -DomainName:<subdomain>
      ```
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -33,3 +33,5 @@ Unfortunately, there's no way to fix this issue. You must redeploy the VM with t
 For the images provided in Azure Marketplace, you can find the trial period information in the description of the image:
 
 :::image type="content" source="media/error-code-0xc0000605/trial-period-information.png" alt-text="Screenshot shows the trial period information of SharePoint Server 2016 in Azure Marketplace." border="false":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -17,7 +17,7 @@ This article provides steps to resolve issues in which a Microsoft Azure virtual
 
 ## Symptoms
 
-The VM status in the Azure portal is shown as **Failed**. 
+The VM status in the Azure portal is shown as **Failed**.
 
 ## Cause
 
@@ -60,11 +60,15 @@ Update-AzVM -VM $VM
 ### [REST](#tab/rest)
 
 Update the VM objects and properties by running the [reapply](/rest/api/compute/virtual-machines/reapply) command:
- 
+
 ```rest
 POST https://management.azure.com/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/reapply?api-version=2021-07-01
 ```
+
 ---
 
 ## Next steps
+
 If `reapply` doesn't clear the VM **Failed** state, try [redeploying to a new host node](redeploy-to-new-node-linux.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

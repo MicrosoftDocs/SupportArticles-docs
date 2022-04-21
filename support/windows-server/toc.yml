@@ -2051,17 +2051,15 @@
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
-      href: ./printing/third-party-print-driver-print-spooler-error.md
-  - name: Errors and troubleshooting General issues
-    items:
-    - name: Event ID associated with point and print restrictions
-      href: ./printing/event-ids-associated-point-print-restrictions.md
+      href: ./printing/third-party-print-driver-print-spooler-error.md    
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't print after installing a service pack or printer hotfix
       href: ./printing/cannot-print-install-service-pack-update-rollup.md
     - name: Error when installing a shared network printer
       href: ./printing/cannot-install-shared-network-printer-locally.md
+    - name: Event ID associated with point and print restrictions
+      href: ./printing/event-ids-associated-point-print-restrictions.md
     - name: Printer and drive redirection don't work in a Terminal Server session
       href: ./printing/printer-hard-drive-not-redirect-to-remote-desktop-session.md
     - name: Slow performance with HP printer drivers

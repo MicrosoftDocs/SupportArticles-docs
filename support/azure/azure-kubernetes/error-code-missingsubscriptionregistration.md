@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the MissingSubscriptionRegistration error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the MissingSubscriptionRegistration error code
- 
+
 This article discusses how to identify and resolve the `MissingSubscriptionRegistration` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
@@ -25,7 +25,7 @@ When you try to deploy an AKS cluster, you receive the following error message:
 >
 > "code": "MissingSubscriptionRegistration",
 >
-> "message": "The subscription is not registered to use namespace 'Microsoft.OperationsManagement'. See https://aka.ms/rps-not-found for how to register subscriptions.",
+> "message": "The subscription is not registered to use namespace 'Microsoft.OperationsManagement'. See <https://aka.ms/rps-not-found> for how to register subscriptions.",
 >
 > "target": "Microsoft.OperationsManagement"
 >
@@ -48,3 +48,5 @@ To resolve this issue, follow the instructions in the "Solution" section of [Res
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

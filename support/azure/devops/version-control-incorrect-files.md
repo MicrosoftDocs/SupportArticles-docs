@@ -29,7 +29,9 @@ For each application tier and each proxy server, the administrator needs to do t
 
 1. Log on to the AT machine.
 
-2. Navigate to the cache folder. (the default is `C:\Program Files\Microsoft Team Foundation Server 2013\Application Tier\Web Services\_tfs_data\%tfsInstanceGuid%\Proxy`) If you do not know the GUID for the TPC, just purge everything under the *_tfs_data* folder.
+2. Navigate to the cache folder. (the default is `C:\Program Files\Microsoft Team Foundation Server 2013\Application Tier\Web Services\_tfs_data\%tfsInstanceGuid%\Proxy`) If you do not know the GUID for the TPC, just purge everything under the __tfs_data_ folder.
 
 > [!IMPORTANT]
 > If the cache for every AT and proxy is not purged prior to restoration, it is possible that some users will continue to experience the symptoms above.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

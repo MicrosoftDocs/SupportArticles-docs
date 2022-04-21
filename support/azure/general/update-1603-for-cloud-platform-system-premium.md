@@ -237,3 +237,4 @@ The following automated firmware updates are applied as part of CPS 1.0 Update 1
 |Storage|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\spaceport\Parameters" -Name ResetInterval -Type DWord -Value 20000|
 |Storage|Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\spaceport\Parameters" -Name ResetUnresponsiveTimeout -Type DWord -Value 10000|
   
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

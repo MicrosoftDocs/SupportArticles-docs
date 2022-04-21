@@ -33,3 +33,5 @@ To work around this issue, run an XML for Analysis (XMLA) query in SSMS to delet
     </Object>
 </Delete>
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
