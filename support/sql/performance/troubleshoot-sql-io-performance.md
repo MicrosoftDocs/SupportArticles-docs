@@ -101,10 +101,11 @@ Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relatio
 
 If SQL Server reports I/O latency, then refer to OS counters. You can determine if there's an I/O problem by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Change to a specific drive volume (for example "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
-```SQL
-SELECT distinct volume_mount_point 
-FROM sys.master_files f
-CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs;
+```PowerShell
+#replace with server\instance or server for default instance
+$sqlserver_instance = "server\instance" 
+
+sqlcmd -E -S $sqlserver_instance -Q "SELECT distinct LEFT(volume_mount_point, 32) AS volume_mount_point FROM sys.master_files f CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs"
 ```
 
 Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
