@@ -60,7 +60,7 @@ Forefront Identity Manager 2010 R2 SP1 and later versions are supported.
 
 ### Microsoft HPC Pack
 
-Microsoft HPC Pack 2012 and later versions are supported. For more information, see the "Microsoft Azure integration" section of the following TechNet topic: [What's new in Microsoft HPC Pack 2012](https://technet.microsoft.com/library/jj899598.aspx#bkmk_windows_azure) 
+Microsoft HPC Pack 2012 and later versions are supported. For more information, see the "Microsoft Azure integration" section of the following TechNet topic: [What's new in Microsoft HPC Pack 2012](https://technet.microsoft.com/library/jj899598.aspx#bkmk_windows_azure)
 
 ### Microsoft Project Server
 
@@ -68,7 +68,7 @@ Project Server 2013 and later versions are supported.
 
 ### Microsoft SharePoint Server
 
-SharePoint Server 2010 and later versions are supported on Azure virtual machines. For more information, see the following SharePoint website: [Support and licensing for Microsoft Azure in SharePoint 2013](https://technet.microsoft.com/library/jj154957) 
+SharePoint Server 2010 and later versions are supported on Azure virtual machines. For more information, see the following SharePoint website: [Support and licensing for Microsoft Azure in SharePoint 2013](https://technet.microsoft.com/library/jj154957)
 
 ### Microsoft SQL Server
 
@@ -181,3 +181,5 @@ The following significant features are not supported:
 
   - Active Directory Domain Services: [Guidelines for deploying Windows Server Active Directory in Azure virtual machines](/windows-server/identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100?redirectedfrom=MSDN).
   - For information about Office activation on Azure virtual machines, see [Microsoft Office prompts for activation in Azure](https://support.microsoft.com/help/956893).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

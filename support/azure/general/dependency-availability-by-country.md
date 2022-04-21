@@ -15,7 +15,7 @@ Many product features have Azure dependencies that might not be available in all
 - Insider risk management
 - Microsoft Threat Protection (MTP)
 - Microsoft Information Protection (MIP)
-  - Auto-labeling for sensitivity labels 
+  - Auto-labeling for sensitivity labels
 - Communication compliance
 - Attack simulation
 - Microsoft Application Protection and Governance (MAPG)
@@ -48,3 +48,5 @@ Countries/regions that are planned to get Azure dependencies availability soon:
 - South Africa
 - Sweden
 - United Arab Emirates
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

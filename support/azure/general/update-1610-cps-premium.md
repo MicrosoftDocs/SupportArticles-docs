@@ -653,3 +653,5 @@ To resolve this problem, follow these steps:
 **Third-party information disclaimer**
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

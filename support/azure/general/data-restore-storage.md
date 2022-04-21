@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 4012226
 
 ## Background knowledge
 
-After the storage account or blob container is deleted, it is queued to be recycled and collected by the garbage collector. The system can then free up space for reuse. The deleted storage account or blob container may be restored if the garbage collector has not yet run and the storage space is not yet cleaned up. 
+After the storage account or blob container is deleted, it is queued to be recycled and collected by the garbage collector. The system can then free up space for reuse. The deleted storage account or blob container may be restored if the garbage collector has not yet run and the storage space is not yet cleaned up.
 
 The time at which the garbage collector is run varies depending on many factors, such as workloads on the storage scale unit, the number of available storage spaces, and so on. On average, the garbage collection of storage accounts occurs 14 days after deletion. Typically the data is unrecoverable by Microsoft. It is recommended to enabled soft delete for blobs that allow you to recover blob data after it has been deleted. For more information, see [Soft delete for blobs](/azure/storage/blobs/soft-delete-blob-overview).
 
@@ -25,8 +25,8 @@ The time at which the garbage collector is run varies depending on many factors,
 
 The following resources can be restored if they have not been collected by the garbage collector:
 
-- Storage account 
-- Blob container in geo-redundant storage, zone-redundant storage, or read-access geo-redundant storage 
+- Storage account
+- Blob container in geo-redundant storage, zone-redundant storage, or read-access geo-redundant storage
 
 A new Shared Access Signature (SAS) token is required for restoring.
 > [!NOTE]
@@ -34,12 +34,14 @@ A new Shared Access Signature (SAS) token is required for restoring.
 
 Azure supports only the storage account level or Blob container level restoring. Therefore, the following data restore scenarios are not supported:
 
-- Restoring Queue 
-- Restoring blob data (individual blob) in the storage account 
-- Restoring partial data in the storage account, such as files inside of a blob 
+- Restoring Queue
+- Restoring blob data (individual blob) in the storage account
+- Restoring partial data in the storage account, such as files inside of a blob
 - Restoring partial data in Table or Queue  
 
 ## More information
 
-- [Manage Azure Blob Storage resources with Storage Explorer (Preview)](/azure/vs-azure-tools-storage-explorer-blobs) 
+- [Manage Azure Blob Storage resources with Storage Explorer (Preview)](/azure/vs-azure-tools-storage-explorer-blobs)
 - [Protecting your tables](https://azure.microsoft.com/blog/)  
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

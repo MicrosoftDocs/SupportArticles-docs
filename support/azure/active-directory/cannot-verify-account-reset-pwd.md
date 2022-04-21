@@ -24,3 +24,5 @@ When a new user tries to reset password in Microsoft Azure, Microsoft Office 365
 ## Resolution
 
 Assign a Microsoft Azure Active Directory Premium license to the user. Users must have an Azure Active Directory Premium license to be able to reset their own password.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

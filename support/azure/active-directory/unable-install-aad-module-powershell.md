@@ -36,6 +36,4 @@ To resolve this issue, try one of the following methods. If one doesn't work for
 4. In the Windows Feature window, make sure that the **Windows PowerShell 2.0** checkbox is selected, and then select **OK**.
 5. Install [Azure Active Directory Module for PowerShell](/previous-versions/azure/jj151815(v=azure.100)?redirectedfrom=MSDN#install-the-azure-ad-module).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
