@@ -23,11 +23,11 @@ When [page scheduling](https://support.microsoft.com/office/schedule-a-sharepoin
 
 If a content type is updated in the Content type gallery from the [SharePoint admin center](https://go.microsoft.com/fwlink/?linkid=2185219), and if it's published to the site, the **PublishStartDate** field will no longer be present in the content type. If you make changes to content types from the Content type gallery, this will overwrite any changes that were made to those content types at the site level.  
 
-If **PublishStartDate** isn’t present in the content type, you can't schedule page publishing of that content type. If you go to the page and select the edit mode, the **Scheduling** section will be blank. You expect that the section would contain such elements as the button to turn scheduling on or off and the **Publish at this time** option.
+If **PublishStartDate** isn't present in the content type, you can't schedule page publishing of that content type. If you go to the page and select the edit mode, the **Scheduling** section will be blank. You expect that the section would contain such elements as the button to turn scheduling on or off and the **Publish at this time** option.
 
 To restore the ability to schedule pages for the affected content types, follow these steps.
 
-**Note** You must have administrator privileges to resolve this issue. If you aren’t an administrator, contact your [Microsoft 365 administrator](/microsoft-365/admin/add-users/about-admin-roles).
+**Note** You must have administrator privileges to resolve this issue. If you aren't an administrator, contact your [Microsoft 365 administrator](/microsoft-365/admin/add-users/about-admin-roles).
 
 1. Go to your Content type hub. For example, go to `https://contoso.sharepoint.com/sites/contentTypeHub`.
 
