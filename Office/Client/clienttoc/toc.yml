@@ -1154,7 +1154,7 @@
         - name: Spell checker doesn't check text in the form fields
           href: ../word/spell-checker-not-check-form-field-text.md
         - name: Spell checker doesn't recognize misspelled words in Word 2010
-          href: ../word/not-recognize-misspelled -words-in-word.md
+          href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
         - name: Troubleshoot print failures in Word for Office 365 on Windows 10
