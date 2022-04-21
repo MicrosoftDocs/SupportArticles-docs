@@ -36,7 +36,11 @@ The following flow chart is a description of the methodology Microsoft CSS uses 
 
 A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
-### Is SQL Server reporting slow I/O?
+### Step 1. Is SQL Server reporting slow I/O?
+
+SQL Server may report I/O latency in several ways: wait types, `sys.dm_io_virtual_file_stats` DMV , and in the Error log or Application Event log.
+
+#### I/O Wait types
 
 Determine if there’s I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG`, and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and requires further investigation. The following query may help you gather this diagnostic information on your system:
 
@@ -58,6 +62,33 @@ Start-Sleep -s 2
 }
 ```
 
+#### File stats in sys.dm_io_virtual_file_stats
+
+You can also look at the database file-level latency as reported in SQL Server by running the following query:
+
+```PowerShell
+#replace with server\instance or server for default instance
+$sqlserver_instance = "server\instance" 
+
+sqlcmd -E -S $sqlserver_instance -Q "SELECT   LEFT(mf.physical_name,100),   ReadLatency = CASE WHEN num_of_reads = 0 THEN 0 ELSE (io_stall_read_ms / num_of_reads) END, `
+          WriteLatency = CASE WHEN num_of_writes = 0 THEN 0 ELSE (io_stall_write_ms / num_of_writes) END, `
+          AvgLatency =  CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 0 ELSE (io_stall / (num_of_reads + num_of_writes)) END,`
+          LatencyAssessment = CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 'No data' ELSE `
+               CASE WHEN (io_stall / (num_of_reads + num_of_writes)) < 2 THEN 'Excellent' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 2 AND 5 THEN 'Very good' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 6 AND 15 THEN 'Good' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 16 AND 100 THEN 'Poor' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 100 AND 500 THEN  'Bad' ELSE 'Deplorable' END  END, `
+          [Avg KBs/Transfer] =  CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 0 ELSE ((([num_of_bytes_read] + [num_of_bytes_written]) / (num_of_reads + num_of_writes)) / 1024) END, `
+          LEFT (mf.physical_name, 2) AS Volume, LEFT(DB_NAME (vfs.database_id),32) AS [Database Name]`
+FROM sys.dm_io_virtual_file_stats (NULL,NULL) AS vfs  JOIN sys.master_files AS mf ON vfs.database_id = mf.database_id AND vfs.file_id = mf.file_id `
+ORDER BY AvgLatency DESC"
+```
+
+Look at AvgLatency and LatencyAssessment columns to understand the latency details.
+
+#### Error 833 reported in Errorlog or Application Event log
+
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
 ```Powershell
@@ -66,7 +97,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
 
-### Do Perfmon counters indicate I/O latency?
+### Step 2. Do Perfmon counters indicate I/O latency?
 
 If SQL Server reports I/O latency, then refer to OS counters. You can determine if there's an I/O problem by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Change to a specific drive volume (for example "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
@@ -130,7 +161,7 @@ For more information, see the [How to choose antivirus software to run on comput
 
 Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
 
-### Is the I/O subsystem overwhelmed beyond capacity?
+### Step 3. Is the I/O subsystem overwhelmed beyond capacity?
 
 If SQL Server and the OS indicate I/O subsystem is slow, then check if that is caused by the system being overwhelmed beyond capacity. You can check capacity by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor on what the expected throughput specifications are for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
@@ -154,7 +185,7 @@ $_.CounterSamples | ForEach-Object 	  {
 }
 ```
 
-### Is SQL Server driving the heavy I/O activity?
+### Step 4. Is SQL Server driving the heavy I/O activity?
 
 If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
