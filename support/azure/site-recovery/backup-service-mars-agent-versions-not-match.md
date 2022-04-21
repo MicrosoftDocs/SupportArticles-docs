@@ -79,3 +79,5 @@ To resolve this issue, follow these steps:
 
 There could be other servers in your Backup environment that contain an Azure Recovery Services agent that is older than version 2.0.9083.0 and may face a similar issue.
 Follow the guidance in [Updating Azure Backup agents](https://blogs.technet.microsoft.com/srinathv/2018/01/17/updating-azure-backup-agents/) to identify and update Azure Recovery Services agent.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

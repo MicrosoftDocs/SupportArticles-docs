@@ -17,14 +17,14 @@ ms.author: genli
 ---
 
 # Troubleshoot a Windows VM by attaching the OS disk to a recovery VM using Azure PowerShell
-If your Windows virtual machine (VM) in Azure encounters a boot or disk error, you may need to perform troubleshooting steps on the disk itself. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure PowerShell to connect the disk to another Windows VM to fix any errors, then repair your original VM. 
+
+If your Windows virtual machine (VM) in Azure encounters a boot or disk error, you may need to perform troubleshooting steps on the disk itself. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure PowerShell to connect the disk to another Windows VM to fix any errors, then repair your original VM.
 
 > [!Important]
-> The scripts in this article only apply to the VMs that use [Managed Disk](/azure/virtual-machines/managed-disks-overview). 
-
- 
+> The scripts in this article only apply to the VMs that use [Managed Disk](/azure/virtual-machines/managed-disks-overview).
 
 ## Recovery process overview
+
 We can now use Azure PowerShell to change the OS disk for a VM. We no longer need to delete and recreate the VM.
 
 The troubleshooting process is as follows:
@@ -45,9 +45,10 @@ Make sure that you have [the latest Azure PowerShell](/powershell/azure/) instal
 Connect-AzAccount
 ```
 
-In the following examples, replace the parameter names with your own values. 
+In the following examples, replace the parameter names with your own values.
 
 ## Determine boot issues
+
 You can view a screenshot of your VM in Azure to help troubleshoot boot issues. This screenshot can help identify why a VM fails to boot. The following example gets the screenshot from the Windows VM named `myVM` in the resource group named `myResourceGroup`:
 
 ```powershell
@@ -67,10 +68,9 @@ Stop-AzVM -ResourceGroupName "myResourceGroup" -Name "myVM"
 
 Wait until the VM has finished deleting before you process to the next step.
 
-
 ## Create a snapshot from the OS Disk of the VM
 
-The following example creates a snapshot with name `mySnapshot` from the OS disk of the VM named `myVM'. 
+The following example creates a snapshot with name `mySnapshot` from the OS disk of the VM named `myVM'.
 
 ```powershell
 $resourceGroupName = 'myResourceGroup' 
@@ -137,6 +137,7 @@ $diskConfig = New-AzDiskConfig -AccountType $storageType -Location $location -Cr
  
 New-AzDisk -Disk $diskConfig -ResourceGroupName $resourceGroupName -DiskName $diskName
 ```
+
 Now you have a copy of the original OS disk. You can mount this disk to another Windows VM for troubleshooting purposes.
 
 ## Attach the disk to another Windows VM for troubleshooting
@@ -189,6 +190,7 @@ Update-AzVM -VM $vm -ResourceGroupName $rgName
 After the copy of the original OS disk is mounted, you can perform any maintenance and troubleshooting steps as needed. Once you have addressed the issues, continue with the following steps.
 
 ## Unmount and detach original OS disk
+
 Once your errors are resolved, you unmount and detach the existing disk from your recovery VM. You cannot use your disk with any other VM until the lease attaching the disk to the recovery VM is released.
 
 1. From within your RDP session, unmount the data disk on your recovery VM. You need the disk number from the previous `Get-Disk` cmdlet. Then, use `Set-Disk` to set the disk as offline:
@@ -220,7 +222,7 @@ Once your errors are resolved, you unmount and detach the existing disk from you
 
 You can use Azure PowerShell to swap the OS disks. You don't have to delete and recreate the VM.
 
-This example stops the VM named `myVM` and assigns the disk named `newOSDisk` as the new OS disk. 
+This example stops the VM named `myVM` and assigns the disk named `newOSDisk` as the new OS disk.
 
 ```powershell
 # Get the VM 
@@ -253,6 +255,9 @@ Update-AzVM -ResourceGroup "myResourceGroup" -VM $myVM
 ```
 
 ## Next steps
+
 If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure VM](troubleshoot-rdp-connection.md). For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on a Windows VM](troubleshoot-app-connection.md).
 
 For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

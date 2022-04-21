@@ -89,7 +89,7 @@ For distribution-specific documentation on SysRq and steps to configure Linux to
 
 #### Ubuntu ####
 
- - [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
+- [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
 
 #### Red Hat ####
 
@@ -125,13 +125,13 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 ### Ubuntu
 
- - [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
+- [Kernel Crash Dump](https://help.ubuntu.com/lts/serverguide/kernel-crash-dump.html)
 
 ### Red Hat
 
- - [What is an NMI and what can I use it for?](https://access.redhat.com/solutions/4127)
- - [How can I configure my system to crash when NMI switch is pushed?](https://access.redhat.com/solutions/125103)
- - [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide)
+- [What is an NMI and what can I use it for?](https://access.redhat.com/solutions/4127)
+- [How can I configure my system to crash when NMI switch is pushed?](https://access.redhat.com/solutions/125103)
+- [Crash Dump Admin Guide](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/kernel_administration_guide/kernel_crash_dump_guide)
 
 ### SUSE
 
@@ -143,7 +143,9 @@ For more information on Linux kernel configurations, including `unknown_nmi_pani
 
 ## Next steps
 
-* The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
-* Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
-* The Serial Console is also available for [Windows](serial-console-windows.md) VMs
-* Learn more about [boot diagnostics](boot-diagnostics.md)
+- The main Serial Console Linux documentation page is located [here](serial-console-linux.md).
+- Use Serial Console to boot into [GRUB and enter single user mode](serial-console-grub-single-user-mode.md)
+- The Serial Console is also available for [Windows](serial-console-windows.md) VMs
+- Learn more about [boot diagnostics](boot-diagnostics.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

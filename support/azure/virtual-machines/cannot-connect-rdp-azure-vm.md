@@ -238,3 +238,5 @@ Restart the VM so that the changes to the registry take effect.
 - [SetEncryptionLevel method of the Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting-setencryptionlevel)
 - [Configure Server Authentication and Encryption Levels](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
 - [Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

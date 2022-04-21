@@ -67,3 +67,5 @@ If the usage quota is at 100% or about to exceed the limit, request a quota incr
 > All resources have a maximum limit listed in the [Azure subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits). If your current limit is already at the maximum number, the limit can't be increased.
 
 For more information, see [Understanding Azure limits and increases](https://azure.microsoft.com/blog/azure-limits-quotas-increase-requests/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

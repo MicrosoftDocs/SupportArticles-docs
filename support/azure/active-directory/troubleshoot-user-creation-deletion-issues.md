@@ -189,3 +189,5 @@ The following table contains a list of common error messages when you attempt to
 For the Free edition of Azure AD, you can create a maximum of 50,000 Azure AD resources in a single tenant by default. If you use at least one verified domain, the default Azure AD service quota for your organization is extended to 300,000 Azure AD resources. For organizations that are created by self-service sign-up, the Azure AD service quota remains 50,000 Azure AD resources. This limit applies even if you made an internal admin takeover and converted the organization to a managed tenant with one or more verified domains. This service limit is unrelated to the pricing tier limit of 500,000 resources on the Azure AD pricing page. To go beyond the default quota, you must contact Microsoft Support.
 
 For more information, see [Azure AD service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

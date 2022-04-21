@@ -57,6 +57,4 @@ To perform administrative tasks by using the Azure Active Directory Module for W
 - Disable Azure Active Directory Multi-Factor Authentication for the user account.
 - Use a different admin account that isn't enabled for Azure Active Directory Multi-Factor Authentication.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums)  website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

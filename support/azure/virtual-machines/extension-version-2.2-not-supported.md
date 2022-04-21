@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 4339481
 
 When you try to enable Azure Disk Encryption on an Azure virtual machine (VM) on Windows, you receive the following error message:
 
-> Azure Disk Encryption extension version '2.2' is not supported 
+> Azure Disk Encryption extension version '2.2' is not supported
 
 ## Workaround
 
@@ -35,7 +35,7 @@ The parameters are the following:
 
 ### Method 2
 
-Opt in to the "UnifiedDiskEncryptionForVMs" feature for your subscription by running the following script before you try again to enable encryption: 
+Opt in to the "UnifiedDiskEncryptionForVMs" feature for your subscription by running the following script before you try again to enable encryption:
 
 ```powershell
 Register-AzureRmProviderFeature -ProviderNamespace "Microsoft.Compute" -FeatureName "UnifiedDiskEncryptionForVMs" # Wait 10 minutes until state transitions to 'Registered' Register-AzureRmResourceProvider -ProviderNamespace Microsoft.Compute
@@ -65,3 +65,5 @@ At line:1 char:1
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
