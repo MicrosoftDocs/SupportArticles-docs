@@ -17,8 +17,6 @@
     href: ./install/fix-dia-sdk-install-location.md
   - name: Install Windows SDK 7.1 in Silent Mode
     href: ./install/install-windows-sdk-silent-mode.md
-  - name: Installation hangs in Visual Studio 2015
-    href: ./install/installation-hangs-install-kb-update.md 
   - name: Issues and workarounds in Visual Studio 2012 setup
     href: ./install/issues-workarounds-visual-studio-2012-setup.md
   - name: Issues and workarounds in Visual Studio 2013 setup
