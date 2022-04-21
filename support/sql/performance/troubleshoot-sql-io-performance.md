@@ -54,8 +54,9 @@ for ([int]$i = 0; $i -lt 100; $i++)
   sqlcmd -E -S $sqlserver_instance -Q "SELECT r.session_id, r.wait_type, r.wait_time as wait_time_ms`
                                        FROM sys.dm_exec_requests r JOIN sys.dm_exec_sessions s `
                                         ON r.session_id = s.session_id `
-                                       WHERE wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
-                                        AND is_user_process = 1"
+                                       WHERE wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', `
+                                        'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
+                                       AND is_user_process = 1"
 
   Start-Sleep -s 2
 }
@@ -189,10 +190,9 @@ $_.CounterSamples | ForEach-Object 	  {
    [pscustomobject]@{
       TimeStamp = $_.TimeStamp
       Path = $_.Path
-      Value = ([Math]::Round($_.CookedValue, 3))
-}
-}
-}
+      Value = ([Math]::Round($_.CookedValue, 3)) }
+    }
+ }
 ```
 
 ### Step 4. Is SQL Server driving the heavy I/O activity?
