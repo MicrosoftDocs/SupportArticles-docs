@@ -40,15 +40,15 @@ This behavior indicates that the items which were missing from the search result
 
 ## Cause
 
-In Exchange Server 2019, the default eDiscovery search query setting uses a **No Search Folder** query context type. Therefore the items in the message table that were created most recently are queried first. The search results are paged as part of the search process when appropriate to avoid overloading the server. Each subsequent page request adds the oldest received date and time from the previous page into the query as the time stamp for where to begin from.
+In Exchange Server 2019, the default eDiscovery search query setting uses a **No Search Folder** query context type. Therefore, the items in the message table that were created most recently are queried first. The search results are paged as part of the search process when appropriate to avoid overloading the server. Each subsequent page request adds the oldest received date and time from the previous page into the query as the time stamp for where to begin from.
 
-There are some scenarios though when the time stamp information passed on to a subsequent page request might not be correct. For example, if an item in the message table is a copy of an older item and has been created recently, it will be a placed along with items in the table which have newer received dates and time. However, the copy will still retain the received date and time of the original older message. In this scenario, if the received date and time of the copy happens to be the oldest in the message table at the end of a paging attempt, it might be used by the query for the next page attempt. This behavior can result in the newer items that are near the copy being skipped by the query because their received date time wasn't included in the previous page attempts.
+There are some scenarios though when the time stamp information that's passed on to a subsequent page request might not be correct. For example, if an item in the message table is a copy of an older item and has been created recently, it will be a placed along with items in the table which have newer received dates and time. However, the copy will still retain the received date and time of the original older message. In this scenario, if the received date and time of the copy happens to be the oldest in the message table at the end of a paging attempt, it might be used by the query for the next page attempt. This behavior can result in the newer items that are near the copy being skipped by the query because their received date time wasn't included in the previous page attempts.
 
 ## Workaround
 
 To work around this issue, create a setting override to use the **Search Folder** type in the search query setting.
 
-1. Run the following cmdlet:
+1. Run the following cmdlet to create a setting override:
 
     ```powershell
     New-SettingOverride -Name "Bigfunnel use Search Folder" -Component "BigFunnel" -Section "BigFunnelDiscoveryQuerySettings" -Parameters @("NoSearchFolder=false") -Reason "Improve Search Results" -MinVersion "<Build Number>" -MaxVersion "<Build Number>"
