@@ -26,6 +26,10 @@ Ensure that the `Issuer` attribute in the SAML request matches the Identifier va
 
 Verify that the value in the Identifier textbox matches the value for the identifier value displayed in the error.
 
+For more information about the Issuer attribute, see [Single Sign-On SAML protocol](/azure/active-directory/develop/single-sign-on-saml-protocol).
+
 ## More Information
 
-For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

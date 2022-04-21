@@ -19,7 +19,7 @@ If you plan to move App Service resources to a new resource group or subscriptio
 
 ## How do I use a custom domain name for my web app?
 
-For answers to common questions about using a custom domain name with your Azure web app, see our seven-minute video [Add a custom domain name](https://channel9.msdn.com/blogs/Azure-App-Service-Self-Help/Add-a-Custom-Domain-Name). The video offers a walkthrough of how to add a custom domain name. It describes how to use your own URL instead of the *.azurewebsites.net URL with your App Service web app. You also can see a detailed walkthrough of [how to map a custom domain name](/azure/app-service/app-service-web-tutorial-custom-domain).
+About how to add a custom domain name, see the detailed walk-through: [how to map a custom domain name](/azure/app-service/app-service-web-tutorial-custom-domain).
 
 ## How do I purchase a new custom domain for my web app?
 
@@ -260,6 +260,7 @@ Invoke-AzResourceAction -ResourceGroupName "<App Service Certificate Resource Gr
 ## How do authentication and authorization work in App Service?
 
 For detailed documentation for authentication and authorization in App Service, see docs for various identify provider sign-ins:
+
 - [Azure Active Directory](/azure/app-service/configure-authentication-provider-aad)
 - [Facebook](/azure/app-service/configure-authentication-provider-facebook)
 - [Google](/azure/app-service/configure-authentication-provider-google)
@@ -305,3 +306,5 @@ To migrate sites from Windows and Linux web servers to App Service, you can use 
 ## Why is my certificate issued for 11 months and not for a full year?
 
 For all certificates issued after 9/1/2020, the maximum duration is now 397 days. Certificates issued before 9/1/2020 have a maximum validity of 825 days until they're renewed, rekeyed etc. Any certificate renewed after 9/1/2020 will be affected by this change and users may notice a shorter validity on their renewed certificates. GoDaddy has implemented a subscription service that both meets the new requirements while honoring existing customer certificates. 30 days before the newly issued certificate expires, the service automatically issues a second certificate that extends the duration to the original expiration date. App Service is working with GoDaddy to address this change and make sure that our customers receive the full duration of their certificates.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

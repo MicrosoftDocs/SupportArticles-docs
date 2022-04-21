@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the SubnetIsFull error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the SubnetIsFull error code
- 
+
 This article discusses how to identify and resolve the `SubnetIsFull` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
@@ -67,7 +67,7 @@ To mitigate the issue, free up some IP addresses for your availability set clust
 
     > [!WARNING]
     > Moving the nodes to a new subnet will restart the systems that are being moved.
-    
+
 > [!NOTE]
 > This solution is actually a short-term workaround.
 
@@ -83,7 +83,7 @@ To scale down your VM scale set, follow these steps:
 
 1. Scale down the VM scale set by at least one instance.
 
-This change updates the node count in the node pool. It also reduces the number of IP addresses that are used so that the upgrade can finish. 
+This change updates the node count in the node pool. It also reduces the number of IP addresses that are used so that the upgrade can finish.
 
 > [!NOTE]
 > This method is actually a short-term workaround.
@@ -128,3 +128,5 @@ Instead of expanding the subnet in your VM scale set, you can create a new, larg
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -31,3 +31,5 @@ This issue occurs because of an inconsistency between the implementation of the 
 ## Workaround
 
 Use any other gateway size (for example, the Default or HighPerformance size) for site-to-site connection.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

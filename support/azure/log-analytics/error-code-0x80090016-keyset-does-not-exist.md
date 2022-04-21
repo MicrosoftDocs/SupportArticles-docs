@@ -44,7 +44,7 @@ The server was cloned from a golden image (also known as a master image) that al
 
 To resolve these errors, clean and refresh the MMA certificates, as follows:
 
-1. To open the Services snap-in, select **Start**, enter *services.msc*, and then press Enter. 
+1. To open the Services snap-in, select **Start**, enter *services.msc*, and then press Enter.
 
 1. To stop the service, select **Microsoft Monitoring Agent**, and then select the **Stop Service** icon.
 
@@ -56,11 +56,11 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
 1. We recommend that you export each certificate so that you have a backup copy for security and auditing. To do this, follow these steps:
 
-     1. Select and right-click each listed certificate individually, and then select **All Tasks** > **Export** > **Next** > **No, do not export the private key**. 
-     
-     1. On the **Export file format** page, select **Base-64 encoded X.509 (.CER)** > **Next**. 
-     
-     1. On the **File to Export** page, in the **file name** field, enter the name of the certificate file, and then **Browse** to the location where you want to export the certificate. Then, select **Save** > **Next** > **Finish**.      
+     1. Select and right-click each listed certificate individually, and then select **All Tasks** > **Export** > **Next** > **No, do not export the private key**.
+
+     1. On the **Export file format** page, select **Base-64 encoded X.509 (.CER)** > **Next**.
+
+     1. On the **File to Export** page, in the **file name** field, enter the name of the certificate file, and then **Browse** to the location where you want to export the certificate. Then, select **Save** > **Next** > **Finish**.
 
 1. After you export backup copies of the certificates that are listed in the middle pane as described in step 6, delete the certificates from MMC. Keep the console open.
 
@@ -68,10 +68,12 @@ To resolve these errors, clean and refresh the MMA certificates, as follows:
 
 1. Wait one minute. Then, in MMC, select the Certificates snap-in, and select the **Refresh** icon or F5 to refresh. You should see new certificates.
 
-Observe the agent, the event logs, and your Log Analytics workspace to determine whether these steps resolved the issue. 
+Observe the agent, the event logs, and your Log Analytics workspace to determine whether these steps resolved the issue.
 
 ## More information
 
 [Microsoft Monitoring Agent setup](/services-hub/health/mma-setup)
 
 [Log Analytics Agent overview: installation options](/azure/azure-monitor/agents/log-analytics-agent#installation-options)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

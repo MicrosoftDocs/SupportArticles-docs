@@ -1184,7 +1184,7 @@
       href: ./windows-security/tpm-device-driver-error-log.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Enable diagnostic logging for Windows Security Center
+    - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
 - name: Windows Troubleshooters
   items:

@@ -33,14 +33,14 @@ Azure Resource Health is a service that exposes the health of individual Azure r
 
 If Azure has further information about the root cause of a platform-initiated unavailability for a Virtual Machine, that information may be posted in resource health up to 72 hours after the initial unavailability.
 
-## Missing VM downtimes in activity log 
+## Missing VM downtimes in activity log
 
 [Resource Health alerts](/azure/service-health/resource-health-alert-monitor-guide) are sent based on the [activity Log](/azure/azure-monitor/essentials/activity-log) information. In some cases, VM downtimes may not show in the activity log. If the downtime doesn't show in the activity log, Resource Health alerts won't be sent for the downtime. The downtime is still visible in Resource Health.
 
 Here are the cases where VM downtimes don't show in the activity log:
 
 - When a VM is created or migrated to a new host, Azure platform doesn't display VM state correctly and the state changes to Unknown. Only after all network connectivity and node processes are established, the VM state changes to Available. The prolonged period of the Unknown state is filtered out of the activity log.
-- When the VM availability state changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition. 
+- When the VM availability state changes from Available to Unavailable and then goes back to Available within 35 seconds, the downtime doesn't show in the activity log. This case won't occur if a correlated downtime is sent within 15 minutes before the occurrence of the first transition.
 - If the VM health changes from a state to Unknown and then goes back to the original state, the intermittent Unknown state and related transitions are filtered out of the activity log.
 
 The VM downtimes that don't show in the activity log are filtered on the Azure platform side to prevent transient errors from showing incorrect downtimes to customers. With ongoing investments in VM health quality, the filters may no longer be necessary and may cause quick changes in VM health to remain unreported. Microsoft is working on a phase-out plan to deliver the best customer experience.
@@ -64,7 +64,7 @@ For this class of updates in Microsoft Azure, users experience no impact on thei
 
 These memory-preserving updates are accomplished with technology that enables in-place live migration. When it is being updated, the VM is placed in a *paused* state. This state preserves the memory in RAM while the underlying host operating system receives the necessary updates and patches. The VM is resumed typically within 30 seconds of being paused. After the VM is resumed, its clock is automatically synchronized.
 
-Because of the short pause period, deploying updates through this mechanism greatly reduces the impact on the VMs. However, not all updates can be deployed in this way. 
+Because of the short pause period, deploying updates through this mechanism greatly reduces the impact on the VMs. However, not all updates can be deployed in this way.
 
 Multi-instance updates (for VMs in an availability set) are applied one update domain at a time.
 
@@ -79,9 +79,9 @@ If you perform the action from the VM's operating system, you can find the event
 
 Other scenarios that usually cause the VM to reboot include multiple configuration-change actions. You'll ordinarily see a warning message indicating that executing a particular action will result in a reboot of the VM. Examples include any VM resize operations, changing the password of the administrative account, and setting a static IP address.
 
-### Azure Security Center and Windows Update
+### Microsoft Defender for Cloud and Windows Update
 
-Azure Security Center monitors daily Windows and Linux VMs for missing operating-system updates. Security Center retrieves a list of available security and critical updates from Windows Update or Windows Server Update Services (WSUS), depending on which service is configured on a Windows VM. Security Center also checks for the latest updates for Linux systems. If your VM is missing a system update, Security Center recommends that you apply system updates. The application of these system updates is controlled through the Security Center in the Azure portal. After you apply some updates, VM reboots might be required. For more information, see [Apply system updates in Azure Security Center](/azure/security-center/asset-inventory).
+Microsoft Defender for Cloud monitors daily Windows and Linux VMs for missing operating-system updates. Defender for Cloud retrieves a list of available security and critical updates from Windows Update or Windows Server Update Services (WSUS), depending on which service is configured on a Windows VM. Defender for Cloud also checks for the latest updates for Linux systems. If your VM is missing a system update, Defender for Cloud recommends that you apply system updates. The application of these system updates is controlled through the Defender for Cloud in the Azure portal. After you apply some updates, VM reboots might be required. For more information, see [Apply system updates in Microsoft Defender for Cloud](/azure/security-center/asset-inventory).
 
 Like on-premises servers, Azure does not push updates from Windows Update to Windows VMs, because these machines are intended to be managed by their users. You are, however, encouraged to leave the automatic Windows Update setting enabled. Automatic installation of updates from Windows Update can also cause reboots to occur after the updates are applied. For more information, see [Windows Update FAQ](https://support.microsoft.com/help/12373/windows-update-faq).
 
@@ -99,7 +99,7 @@ Because some host server faults can be specific to that server, a repeated VM re
 
 ### Auto-recovery
 
-If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation. 
+If the host server cannot reboot for any reason, the Azure platform initiates an auto-recovery action to take the faulty host server out of rotation for further investigation.
 
 All VMs on that host are automatically relocated to a different, healthy host server. This process is usually complete within 15 minutes. To learn more about the auto-recovery process, see [Auto-recovery of VMs](https://azure.microsoft.com/blog/service-healing-auto-recovery-of-virtual-machines).
 
@@ -126,4 +126,6 @@ In rare circumstances, a widespread issue can affect multiple servers in an Azur
 
 ## Diagnose VM Restarts
 
-You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart. 
+You can use the Diagnose and Solve blade on the VM blade to run additional diagnostics. This may uncover more specific reasons for your recent VM restart.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
