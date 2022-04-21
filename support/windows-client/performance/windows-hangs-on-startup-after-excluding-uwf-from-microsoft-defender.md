@@ -1,6 +1,6 @@
 ---
 title: Windows startup hangs after you exclude UWF from Microsoft Defender
-description: Introduces how to work around an issue in which Windows startup hangs after you exclude UWF from Microsoft Defender.
+description: Discusses how to work around an issue in which Windows doesn't start after you exclude the UWF feature from Microsoft Defender.
 ms.date: 04/25/2022
 author: Deland-Han
 ms.author: delhan
@@ -13,47 +13,49 @@ ms.reviewer: koaiiot, kaushika
 ms.technology: windows-client-performance
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ---
-# Windows may hang during startup after you exclude UWF from Microsoft Defender
+# Windows doesn't start after you exclude UWF from Microsoft Defender
 
-This article introduce how to work around the issue in which Windows startup hangs after you exclude Unified Write Filter (UWF) from Microsoft Defender.
+This article discusses how to work around an issue in which Windows doesn't start after you exclude Unified Write Filter (UWF) from Microsoft Defender.
 
 _Applies to:_ &nbsp; Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise
 
-## Issue
+## Symptoms
 
 Consider the following scenario:
 
-- You enable the UWF feature on a Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise computer.
-- You configure UWF registry exclusion for Windows Defender. Especially, the following registry key is excluded from write filter:  
+- You enable the UWF feature on a Windows 11 Enterprise-based, Windows 10 Enterprise-based, or Windows 10 IoT Enterprise-based computer.
+- You configure a UWF registry exclusion for Windows Defender. Specifically, the following registry key is excluded from the write filter:  
   `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WdFilter`
 
-In this scenario, the computer hangs during Windows startup.
+In this scenario, the computer stops responding during Windows startup.
 
 > [!NOTE]
 >
-> - If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the problem does not occur.
-> - The computer could boot after several retries.
+> - If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the issue doesn't occur.
+> - The computer might start up after several retries.
 
-This issue is by design. To work around this issue, use alternative way to exclude UWF.
+# Workaround
 
-## Supported way to exclude UWF
+This behavior is by design. To work around this issue, use an alternative menthod to exclude UWF.
 
-To work around this issue, you can use the **Registry Commit** option of uwfmgr.exe to exclude UWF. The option can commit changes to specify a value.
+## Supported method to exclude UWF
 
-The following command can commit changes of specified registry value.
+To work around this issue, you can use the **Registry Commit** option for Uwfmgr.exe to exclude UWF. This option can commit changes to specify a value.
+
+The following command can commit changes of a specified registry value:
 
 ```console
 uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" Start
 ```
 
 > [!NOTE]
-> Since the command can only specify single registry value, you will need to specify whole registry value under registry keys where you want commit changes.
+> Because the command can specify only a single registry value, you must specify the whole registry value for the registry keys where you want to commit changes.
 
-For example, you find registry values that resemble the following screenshot:
+For example, you find registry values that resemble the values in the following screenshot.
 
-:::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-screenshot.png" alt-text="Screenshot of the registry editor." border="false":::
+:::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-screenshot.png" alt-text="Screenshot of Registry Editor" border="false":::
 
-To commit all changes under WDFilter registry subkeys, you need to run Registry Commit option as follows:
+To commit all the changes that are made under the WDFilter registry subkeys, you have to run the Registry Commit option, as follows:
 
 ```console
 uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" DependOnService
@@ -72,10 +74,10 @@ uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter\Secu
 ```
 
 > [!NOTE]
-> The Registry Commit option is a one-shot operation. It does not continue to bypass write filter by executing single command. To make value changes commit whenever your machine is going to be shutting down, you will need to add the above command set to the shutdown script.
+> The Registry Commit option is a one-shot operation. It doesn't continue to bypass the write filter by running a single command. To make value changes commit whenever your computer shuts down, you must add this command set to the shutdown script.
 
-For more inform about shutdown script, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-computer-shutdown-scripts).
+For more inform about the shutdown script, see [Working with startup, shutdown, logon, and logoff scripts using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn789190(v=ws.11)#how-to-assign-computer-shutdown-scripts).
 
 ## More information
 
-To check whether WDFilter registry keys are excluded from UWF registry filter, run command prompt with as an administrator, and then run `uwfmgr.exe get-config`.
+To check whether WDFilter registry keys are excluded from the UWF registry filter, open a Command Prompt window as an administrator, and then run `uwfmgr.exe get-config` at the prompt.
