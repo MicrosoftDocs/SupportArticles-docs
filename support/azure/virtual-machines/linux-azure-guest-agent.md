@@ -76,10 +76,8 @@ The following error appears in the **/var/log/waagent.log** file when the VM can
 
 To resolve this issue:
 
-* Connect to the VM by using SSH, and then try to access the following URL from curl: http://168.63.129.16/?comp=versions.
+* Connect to the VM by using SSH, and then try to access the following URL from curl: <http://168.63.129.16/?comp=versions>.
 * Check for any issues that might be caused by a firewall, a proxy, or another source that might be blocking access to the IP address 168.63.129.16.
 * Check whether Linux IPTables or a third-party firewall is blocking access to ports 80, and 32526.
 
-## Next steps
-
-To further troubleshoot Azure Linux Agent issues, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

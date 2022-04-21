@@ -24,7 +24,7 @@ Open ports on Internet-facing virtual machines are targets for brute force attac
 
    - Events 4625 from the logon is logged almost every second, with the failure reason **Bad Username Or Password**.
 
-   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/events-log.png" alt-text="Screenshot of failed logon attempts Events 4625 in the Security Event Logs."::: 
+   :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/events-log.png" alt-text="Screenshot of failed logon attempts Events 4625 in the Security Event Logs.":::
 
    :::image type="content" source="media/cannot-rdp-azure-vm-brute-force/event-properties.png" alt-text="Screenshot of the Event Properties - Event 4625 window, which shows the Failure Reason is Unknown users name or bad password." border="false":::
 
@@ -72,3 +72,5 @@ In this scenario the RDP TCP Port 3389 is exposed to the internet, please use on
 
 - [Azure best practices for network security](/azure/security/fundamentals/network-best-practices)
 - [The virtual datacenter: A network perspective](/azure/cloud-adoption-framework/reference/networking-vdc)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -39,3 +39,5 @@ To work around this issue, do one of the following:
 ## References
 
 Check out [Known issues when you install Release Management for Visual Studio 2013](/troubleshoot/visualstudio/install/release-management-installation-issues).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

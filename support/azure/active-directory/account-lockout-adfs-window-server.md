@@ -270,3 +270,5 @@ foreach ($instance in $Instances)
  }
 
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

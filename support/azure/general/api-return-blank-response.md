@@ -48,3 +48,5 @@ To debug this kind of issues, the best approach is collect [APIM inspector trace
 - Add the forward-request policy in the backend section or add **\<base />** element so that it inherits forward-request policy from the parent level (i.e. from the API level), which should resolve the problem.
 
 Read about the [forward-request](/azure/api-management/api-management-advanced-policies#ForwardRequest) policy to know more about it.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

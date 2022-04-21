@@ -30,4 +30,4 @@ In a rare circumstance, it's possible that an existing Capacity Reservation ente
 
 1. Follow the steps at [Modify Capacity Reservations](/azure/virtual-machines/capacity-reservation-modify) to update the Capacity Reservation to the previous reserved quantity. Once updated, the reservation will be immediately available for use with virtual machines (VMs).
 
-If the capacity reservation is still in a "Failed" provisioning state after taking these steps, then [create a support ticket](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

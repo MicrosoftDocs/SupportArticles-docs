@@ -27,3 +27,5 @@ Another option is to make sure the `RequestedAuthnContext` will be honored. This
 ## More Information
 
 For a full list of Active Directory Authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

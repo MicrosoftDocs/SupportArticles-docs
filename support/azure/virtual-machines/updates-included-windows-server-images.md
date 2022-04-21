@@ -28,3 +28,5 @@ For information about the support policy for running Microsoft server software i
 Windows Update on Windows 8, Windows Server 2012, and later Windows operating system has a new automatic restart setting. After installing updates, by default Windows Update will force the computer to restart in three days instead of 15 minutes.
 
 For more information, see [Allow configuration of Automatic Updates in Windows 8 and Windows Server 2012](https://support.microsoft.com/help/2885694/allow-configuration-of-automatic-updates-in-windows-8-and-windows-serv).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

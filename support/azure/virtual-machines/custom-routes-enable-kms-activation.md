@@ -41,14 +41,11 @@ The IP address of the KMS server for the Azure Global cloud is 23.102.135.246. I
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
 
-
 To add the custom route, follow these steps:
 
 ### For Resource Manager VMs
 
- 
-
-> [!NOTE] 
+> [!NOTE]
 > Activation uses public IP addresses and will be affected by a Standard SKU Load Balancer configuration. Carefully review [Outbound connections in Azure](/azure/load-balancer/load-balancer-outbound-connections) to learn about the requirements.
 
 1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
@@ -73,6 +70,7 @@ To add the custom route, follow these steps:
 
     Set-AzVirtualNetwork -VirtualNetwork $vnet
     ```
+
 3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
 
     ```console
@@ -115,3 +113,5 @@ To add the custom route, follow these steps:
 
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
 - [Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134256(v=ws.11))
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -30,7 +30,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 ### Windows
 
-* Windows server 2022 
+* Windows server 2022
 * Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
@@ -43,7 +43,7 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 ### Linux
 
-- The following distributions are currently supported:
+* The following distributions are currently supported:
 
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
@@ -168,7 +168,6 @@ You can use the **Download report** button to download an HTML report that conta
 > [!NOTE]
 > Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named azdiagextnresults. You can view the storage account information by using the **Settings** button on the toolbar.
 
-
 ## Manage performance diagnostics reports
 
 You can delete one or more performance diagnostics reports by using the **Delete report** button.
@@ -218,8 +217,4 @@ Each performance diagnostics run has two stages:
 
 Currently there is no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the performance diagnostics capture the correct set of data for troubleshooting.
 
-## Next steps
-
-After you review the performance diagnostics insights and report, if you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

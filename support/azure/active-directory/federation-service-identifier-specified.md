@@ -100,6 +100,4 @@ Implement an AD FS Federation Service farm to federate every cloud service domai
 
 Step-by-step implementation guidance: [Plan for and deploy Active Directory Federation Services 2.0 for use with single sign-on](https://onlinehelp.microsoft.com/office365-**enter**prises/ff652539.aspx)
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

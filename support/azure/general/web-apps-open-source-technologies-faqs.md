@@ -65,12 +65,15 @@ To change the version of the Node.js application, you can use one of the followi
   3. In **App settings**, you can include WEBSITE_NODE_DEFAULT_VERSION as the key, and the version of Node.js you want as the value.
   4. Go to your **Kudu console** (`https://*yourwebsitename*.scm.azurewebsites.net`).
   5. To check the Node.js version, enter the following command:
+
       ```nodejs
       node -v
       ```
+
 - Modify the iisnode.yml file. Changing the Node.js version in the iisnode.yml file only sets the runtime environment that iisnode uses. Your Kudu cmd and others still use the Node.js version that is set in **App settings** in the Azure portal.
 
   To set the iisnode.yml manually, create an iisnode.yml file in your app root folder. In the file, include the following line:
+
   ```yml
   nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
   ```
@@ -81,6 +84,7 @@ To change the version of the Node.js application, you can use one of the followi
   2. Creates a default deployment script, if there isn’t one (deploy.cmd, \.deployment files) in the web app root folder.
   3. Runs a deployment script in which it creates an iisnode.yml file if you mention the Node.js version in the package.json file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
   4. The iisnode.yml file has the following line of code:
+
       ```yml
       nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
       ```
@@ -216,3 +220,5 @@ After you ensure that MySQL in-app is running, try to use PHPMyAdmin.
 ## I get an HTTP 403 error when I try to import or export my MySQL in-app database by using PHPMyadmin. How do I resolve this issue?
 
 If you're using an older version of Chrome, you might be experiencing a known bug. To resolve the issue, upgrade to a newer version of Chrome. Also try using a different browser, like Internet Explorer or Microsoft Edge, where the issue doesn't occur.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
