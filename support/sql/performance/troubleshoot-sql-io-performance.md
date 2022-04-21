@@ -45,20 +45,19 @@ SQL Server may report I/O latency in several ways: wait types, `sys.dm_io_virtua
 Determine if there’s I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG`, and `ASYNC_IO_COMPLETION` and the values of several other less common wait types, should generally stay below 10-15 milliseconds per I/O request. If these values are greater on a consistent basis, then an I/O performance problem exists and requires further investigation. The following query may help you gather this diagnostic information on your system:
 
 ```Powershell
-   
 #replace with server\instance or server for default instance
 $sqlserver_instance = "server\instance" 
 
 for ([int]$i = 0; $i -lt 100; $i++)
 {
    
-sqlcmd -E -S $sqlserver_instance -Q "select r.session_id, r.wait_type, r.wait_time as wait_time_ms`
-                                    from sys.dm_exec_requests r join sys.dm_exec_sessions s `
-                                    on r.session_id = s.session_id `
-                                    where wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
-                                    and is_user_process = 1"
+  sqlcmd -E -S $sqlserver_instance -Q "SELECT r.session_id, r.wait_type, r.wait_time as wait_time_ms`
+                                       FROM sys.dm_exec_requests r JOIN sys.dm_exec_sessions s `
+                                        ON r.session_id = s.session_id `
+                                       WHERE wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
+                                        AND is_user_process = 1"
 
-Start-Sleep -s 2
+  Start-Sleep -s 2
 }
 ```
 
@@ -92,7 +91,8 @@ Look at AvgLatency and LatencyAssessment columns to understand the latency detai
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
 ```Powershell
-Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog | Select-String "occurrence(s) of I/O requests taking longer than" Longer than 15 secs
+Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |
+   Select-String "occurrence(s) of I/O requests taking longer than Longer than 15 secs"
 ```
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
@@ -105,7 +105,8 @@ If SQL Server reports I/O latency, then refer to OS counters. You can determine 
 #replace with server\instance or server for default instance
 $sqlserver_instance = "server\instance" 
 
-sqlcmd -E -S $sqlserver_instance -Q "SELECT distinct LEFT(volume_mount_point, 32) AS volume_mount_point FROM sys.master_files f CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs"
+sqlcmd -E -S $sqlserver_instance -Q "SELECT DISTINCT LEFT(volume_mount_point, 32) AS volume_mount_point `
+                                     FROM sys.master_files f CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs"
 ```
 
 Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
