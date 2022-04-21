@@ -440,7 +440,7 @@ Deleted Microsoft 365 groups and related services (such as Teams, SharePoint sit
 
 ### Export Microsoft 365 Groups information
 
-Use the Microsoft 365 compliance search to export email contents of a Microsoft 365 group to PST. For more information, see [Search for content using the Content Search tool](/microsoft-365/compliance/search-for-content?view=o365-worldwide&preserve-view=true).
+Use the Microsoft Purview search to export email contents of a Microsoft 365 group to PST. For more information, see [Search for content using the Content Search tool](/microsoft-365/compliance/search-for-content?view=o365-worldwide&preserve-view=true).
 
 You can run PowerShell commands to accomplish the following tasks.
 

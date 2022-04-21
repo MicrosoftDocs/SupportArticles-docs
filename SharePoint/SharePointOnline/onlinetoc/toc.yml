@@ -355,6 +355,8 @@
       href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
     - name: Unable to delete a SharePoint site
       href: ../sites/unable-to-delete-site.md
+    - name: Unable to schedule page publishing after changing a content type 
+      href: ../sites/cant-schedule-publish.md
   - name: Synchronization
     items:
     - name: A synchronized file is moved to the recycle bin

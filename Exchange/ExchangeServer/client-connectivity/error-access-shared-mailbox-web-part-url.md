@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 162524
 appliesto: 
 - Exchange Server 2013 Enterprise
 - Exchange Server 2013 Standard Edition
@@ -31,7 +33,7 @@ Consider the following example scenario:
 - UserB is granted delegate access to UserA's calendar folder.
 - UserB generates an explicit OWA logon address that is combined with the Uniform Resource Identifier (URI) for the calendar web part of UserA's mailbox. This address resembles the following:
 
-    [https://exchange2013.fabrikam.com/owa/userA@fabrikam.com/?cmd=contents&module=calendar](https://exchange2013.fabrikam.com/owa/usera@fabrikam.com/?cmd=contents&module=calendar)
+    `https://exchange2013.fabrikam.com/owa/userA@fabrikam.com/?cmd=contents&module=calendar`
 
 - On the logon screen, UserB enters credentials.
 

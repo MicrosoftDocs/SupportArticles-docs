@@ -324,7 +324,7 @@ If the issue still exists, see the [Directory synchronization](#directory-synchr
 
 Find out if you've set up directory synchronization:
 
-1. In the Office 365 admin center, go to **User and groups**.
+1. In the Microsoft 365 admin center, go to **User and groups**.
 1. Check the status of Active Directory synchronization.
 
     :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/check-status-of-ad-synchronization.png" alt-text="Screenshot that shows the Active Directory synchronization status in the User and groups tab.":::
@@ -401,15 +401,15 @@ Have you already set up your custom domain? If yes, go to [Test your custom doma
 
 #### Test your custom domain (Small Business)
 
-Now make sure everything works as expected by running the domain troubleshooter in the Office 365 admin center.
+Now make sure everything works as expected by running the domain troubleshooter in the Microsoft 365 admin center.
 
 If you discovered any network setup issues, resolve them, and then try signing in again.
 
 Run the domain troubleshooter:
 
-1. Go to the Office 365 admin center and click **Domains**.
+1. Go to the Microsoft 365 admin center and click **Domains**.
 
-    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-domains.png" alt-text="Screenshot that shows the Domains option in the Office 365 admin center.":::
+    :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-domains.png" alt-text="Screenshot that shows the Domains option in the Microsoft 365 admin center.":::
 
 1. Select your custom domain name, and then click **Troubleshooting**.
 
@@ -447,17 +447,17 @@ If the issue still exists, go to the [Access to Office 365 on the web](#access-t
 
 To set up your custom domain, sign in and go to **Admin** > **Setup**.
 
-:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-setup.png" alt-text="Screenshot that shows the setup tab in the Office 365 admin center.":::
+:::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/click-setup.png" alt-text="Screenshot that shows the setup tab in the Microsoft 365 admin center.":::
 
 Have you already set up your custom domain? If yes, go to [Test your custom domain](#test-your-custom-domain). If no, go to the [Set up your custom domain](#set-up-your-custom-domain) section.
 
 ### Test your custom domain
 
-Now make sure everything works as expected by running the domain troubleshooter in the Office 365 admin center.
+Now make sure everything works as expected by running the domain troubleshooter in the Microsoft 365 admin center.
 
 Run the domain troubleshooter:
 
-1. Go to the Office 365 admin center and click **Domains**.
+1. Go to the Microsoft 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
     :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png" alt-text="Screenshot that shows the Troubleshoot option selected in the domains tab.":::
@@ -475,11 +475,11 @@ To set up your custom domain, sign in and go to **Admin** > **Setup**.
 
 Don't worry, we'll save your place, and you can start where you left off.
 
-Now make sure everything works as expected by running the domain troubleshooter in the Office 365 admin center.
+Now make sure everything works as expected by running the domain troubleshooter in the Microsoft 365 admin center.
 
 Run the domain troubleshooter:
 
-1. Go to the Office 365 admin center and click **Domains**.
+1. Go to the Microsoft 365 admin center and click **Domains**.
 1. Select your custom domain name, and then click **Troubleshooting**.
 
     :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/troubleshoot-option.png" alt-text="Screenshot that shows the Troubleshoot option selected in the domains tab.":::
@@ -493,7 +493,7 @@ If the issue still isn't solved, go to the [Access to Office 365 on the web](#ac
 
 ### Check for a service interruption
 
-In the Office 365 admin center, click **Service health**. A green check mark next to Skype for Business Online indicates no service interruptions.
+In the Microsoft 365 admin center, click **Service health**. A green check mark next to Skype for Business Online indicates no service interruptions.
 
 :::image type="content" source="./media/troubleshoot-sign-in-issues-for-admins/service-health.png" alt-text="Screenshot that shows the Lync Online service tab and service status on the service health page.":::
 

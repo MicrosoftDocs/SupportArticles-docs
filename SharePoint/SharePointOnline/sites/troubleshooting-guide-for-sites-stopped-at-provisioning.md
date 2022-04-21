@@ -36,7 +36,7 @@ Listed below are some recommendations to help resolve the issue.
 
 ### If the user account is disabled on the tenant
 
-1. Navigate to the [Office 365 Admin Center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
+1. Navigate to the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
 2. Under **Users**, select **Active users**.
 3. Search for and select the user's account. A panel opens on the right with the user's information.  
 4. If the message "Sign in blocked" is displayed, unblock the user by selecting the "blocked"  icon (:::image type="icon" source="media/troubleshooting-guide-for-sites/blocked-icon.png" border="false":::).
@@ -47,7 +47,7 @@ Listed below are some recommendations to help resolve the issue.
 
 ### If the user account does not have an appropriate license assigned
 
-1. Navigate to the [Office 365 Admin Center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
+1. Navigate to the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal/Home#/homepage). 
 2. Under **Users**, select **Active users**.
 3. Search for and select the user's account. A panel opens on the right with the user's information.  
 4. Select **Licenses and Apps**.
