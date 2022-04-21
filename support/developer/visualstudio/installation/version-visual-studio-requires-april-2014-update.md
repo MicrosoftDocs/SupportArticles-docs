@@ -25,7 +25,7 @@ Check to make sure that Windows is up to date.
 1. Select **System and Security**.
 1. Select **Windows Update** > **Check for Updates**.
 
-If you're unable to update your machine for some reason, try running the [Windows Update Troubleshooter](https://support.microsoft.com/instantanswers/512a5183-ffab-40c5-8a68-021e32467565/windows-update-troubleshooter).
+If you're unable to update your machine, try running the [Windows Update Troubleshooter](https://support.microsoft.com/instantanswers/512a5183-ffab-40c5-8a68-021e32467565/windows-update-troubleshooter).
 
 1. Run the Windows Update Troubleshooter.
 1. Select **Next**.
@@ -35,7 +35,6 @@ The troubleshooter will scan your computer and fix any errors that it detects.
 If you're still unable to update Windows after running the Windows Update Troubleshooter, follow these steps:
 
 1. Contact [Windows Support](https://support.microsoft.com/contactus/) to get assistance with your issue.
-1. Select **Get Started**.
-1. Enter the details of the issue you're having.
+1. Select **Get Started** and enter the details of the issue you're having.
 
-If your machine is up to date and you find that the KB was still not installed. Download it independently from the [Download Center](https://support.microsoft.com/kb/2919355).
+If your machine is up to date and you find that the KB is still not installed, download it independently from the [Download Center](https://support.microsoft.com/kb/2919355).
