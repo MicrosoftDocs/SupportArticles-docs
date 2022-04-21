@@ -12,7 +12,6 @@ ms.reviewer: terry.g.lee
 _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptom
-
 When you try to install a Microsoft Visual Studio Enterprise update or development tool, you receive the following error message:
 
 “Microsoft Visual Studio Enterprise is required, but it is not installed on this computer. Please install it and retry.”
