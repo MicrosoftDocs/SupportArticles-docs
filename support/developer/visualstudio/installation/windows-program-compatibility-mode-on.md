@@ -23,10 +23,10 @@ The following error appears when you attempt to install Visual Studio:
 1. Right-click on the **Visual Studio Installer** icon.
 1. Select **Properties**.
 1. Go to the **Compatibility** tab.
-1. Look for the **Compatibility Mode** section. Uncheck **Run this program in compatibility mode for:**.
+1. Look for the **Compatibility Mode** section and uncheck **Run this program in compatibility mode for:**.
 1. Restart the installation.
 
 If the option to change the Compatibility Mode is greyed out, follow these steps:
 
 1. Select **Change settings for all users**.
-1. Look for the **Compatibility Mode** section. Uncheck **Run this program in compatibility mode for:**.
+1. Look for the **Compatibility Mode** section and uncheck **Run this program in compatibility mode for:**.
