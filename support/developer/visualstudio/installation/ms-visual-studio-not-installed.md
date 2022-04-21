@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# “Microsoft Visual Studio Professional required” error when installing update or tool
+# “Microsoft Visual Studio Professional required” error when you try to install an update or tool
 
 _Applies to:_&nbsp;Visual Studio 2015
 
