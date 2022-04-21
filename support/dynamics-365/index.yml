@@ -21,7 +21,7 @@ productDirectory:
     imageSrc: "../media/hub-landing/sales.svg"
     summary: Troubleshooting articles for Dynamics 365 Sales
     url: sales/welcome-sales.yml
-  - title: Dynamics 365 Sales
+  - title: Dynamics 365 Supply Chain Management
     imageSrc: "../media/hub-landing/sales.svg"
     summary: Troubleshooting articles for Dynamics 365 Supply Chain Management
     url: supply-chain/welcome-supply-chain.yml
