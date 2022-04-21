@@ -29,7 +29,7 @@ ms.date: 4/21/2022
 
 Consider the following scenario:
 
-- You have implemented global address list (GAL) segmentation, address lists, and [address book policies (ABPs)] (/exchange/address-books/address-book-policies/address-book-policies) in your organization.
+- You have implemented global address list (GAL) segmentation, address lists, and [address book policies (ABPs)](/exchange/address-books/address-book-policies/address-book-policies) in your organization.
 - You have assigned an address book policy to a user's Exchange Online account.
 - The user who is assigned an ABP tries to send an email message to a recipient in the same organization.
 - That recipient is not part of any of the address lists that are included in the assigned ABP.
