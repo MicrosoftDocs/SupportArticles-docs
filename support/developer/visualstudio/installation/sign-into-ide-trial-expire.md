@@ -1,6 +1,6 @@
 ---
 title: The trial will expire after you sign in to the IDE
-description: Provides a resolution for an issue where you sign in to the IDE but trial will expire.
+description: Provides a resolution for an issue where you sign in to the IDE but the trial will expire.
 ms.date: 04/07/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -21,4 +21,4 @@ You might have signed in with an account that doesn't have subscriber benefits (
 
 ## Resolution
 
-When you sign in with an account as mentioned above, you should apply a product key or the license should be issued automatically.
+When you sign in with an account as mentioned above, you should apply a product key, or the license should be issued automatically.
