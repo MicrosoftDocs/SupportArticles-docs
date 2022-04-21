@@ -45,4 +45,4 @@ This issue occurs because the address book policy that's applied to the sender d
 To have the recipient's address autocompleted or suggested, use one of the following methods:
 
 - Method 1: Ask the user to add the recipient's address as a personal contact in Outlook or in Outlook on the web.
-- Method 2: If the address book policy that's applied on the user's account isn't needed, [Remove the address book policy](/exchange/address-books/address-book-policies/remove-an-address-book-policy) in Exchange Online.
+- Method 2: If the address book policy that's applied on the user's account isn't needed, [remove the address book policy](/exchange/address-books/address-book-policies/remove-an-address-book-policy) in Exchange Online.
