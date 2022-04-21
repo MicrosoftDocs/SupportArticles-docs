@@ -7,13 +7,13 @@ ms.author: genli
 ms.reviewer: chiragpa, akscsscic
 ms.service: container-service
 ---
-# Errors occur when mounting an Azure file share
+# Errors when mounting an Azure file share
 
 This article provides possible causes and solutions for errors that cause the mounting of an Azure file share to fail.
 
 ## Symptoms
 
-You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment creates a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
+You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
 
@@ -246,13 +246,13 @@ Here are possible causes for this error:
 > - Cause 2 applies to the public scenario only.
 > - Cause 3 applies to the private scenario only.
 
-### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference the correct storage account name or key
+### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
 If the file share is created [dynamically](/azure/aks/azure-files-dynamic-pv), a [Kubernetes secret resource](https://kubernetes.io/docs/concepts/configuration/secret/) is automatically created with the name "azure-storage-account-\<storage-account-name>-secret".
 
 If the file share is created [manually](/azure/aks/azure-files-volume), the Kubernetes secret resource should be created manually.
 
-Regardless of the creation method, if the storage account name or the key that's referenced in the Kubernetes secret mismatches the actual value, the mounting operation will fail with a "Permission denied" error.
+Regardless of the creation method, if the storage account name or the key that's referenced in the Kubernetes secret mismatches the actual value, the mounting operation will fail with the "Permission denied" error.
 
 #### Possible causes for mismatch
 
@@ -298,7 +298,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
-#### Solution: Adjust the Kubernetes secret
+#### Solution: Adjust Kubernetes secret
 
 If the value of the storage account name or key in the Kubernetes secret doesn't match the value in **Access keys** in the storage account, adjust the Kubernetes secret at the Kubernetes secret level by running the following command:
 
@@ -316,9 +316,9 @@ echo -n '<storage account name>'| base64 | tr -d '\n' ; echo
 
 For more information, see [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
 
-### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for the storage account
+### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for storage account
 
-If the storage account's network is limited to selected networks, but the VNET and subnet of the AKS cluster aren't added to selected networks, the mounting operation will fail with a "Permission denied" error.
+If the storage account's network is limited to selected networks, but the VNET and subnet of the AKS cluster aren't added to selected networks, the mounting operation will fail with the "Permission denied" error.
 
 #### Solution: Allow AKS's VNET and subnet for storage account
 
@@ -348,7 +348,7 @@ If the storage account's network is limited to selected networks, but the VNET a
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/verify-pod-status.png" alt-text="Screenshot of command output that shows current pod status.":::
 
-### <a id="aksnotawareprivateipaddress"></a>Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs
+### <a id="aksnotawareprivateipaddress"></a>Cause 3: Connectivity is via private link but nodes and private endpoint are in different VNETs
 
 When the AKS cluster and storage account are connected via a private link, an approved private endpoint connection is used.
 
@@ -356,7 +356,7 @@ When the AKS cluster and storage account are connected via a private link, an ap
 
 In this scenario, if the private endpoint and AKS node are in the same VNET, you'll be able to mount an Azure file share.
 
-If the private endpoint and your AKS cluster are in different VNETs, the mounting operation will fail with a "Permission denied" error.
+If the private endpoint and your AKS cluster are in different VNETs, the mounting operation will fail with the "Permission denied" error.
 
 #### Solution: Create virtual network link for VNET of AKS cluster at private DNS zone
 
