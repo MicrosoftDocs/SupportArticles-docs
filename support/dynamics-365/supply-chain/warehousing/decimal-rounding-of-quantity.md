@@ -8,7 +8,7 @@ ms.search.form: WHSLoadPlanningListPage_WHSSalesPackingSlipPost, WHSLoadTable_WH
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: v-gfedorova
+ms.author: kamaybac
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.18
 ---

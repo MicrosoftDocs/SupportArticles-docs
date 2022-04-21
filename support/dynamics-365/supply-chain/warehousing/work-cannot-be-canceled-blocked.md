@@ -45,4 +45,4 @@ If the previous steps didn't fix the issue, you can cancel the work by following
 1. Select **OK**.
 1. Select **Yes** to confirm that you want to cancel the work.
 
-For more information, see [Cancel warehouse work for exception handling](../../warehousing/cancel-warehouse-work.md).
+For more information, see [Cancel warehouse work for exception handling](/dynamics365/supply-chain/warehousing/cancel-warehouse-work.md).

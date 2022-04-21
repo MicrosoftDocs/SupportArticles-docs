@@ -27,4 +27,4 @@ The **From date** value (effective date) that is set on the pending price isn't 
 
 When an item cost record is first entered, it has a status of *Pending* and an intended effective date. When you activate the item cost record, the status is updated to *Active*, and the effective date is updated to the activation date. Therefore, the active price's activation date is always the actual date of the activation.
 
-For more information, see [Costing versions overview](../../cost-management/costing-versions.md).
+For more information, see [Costing versions overview](/dynamics365/supply-chain/cost-management/costing-versions.md).

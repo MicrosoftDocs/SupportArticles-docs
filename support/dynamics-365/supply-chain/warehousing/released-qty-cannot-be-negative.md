@@ -8,7 +8,7 @@ ms.search.form: WHSLoadPlanningListPage_WHSLoadLineUnShipQty,WHSLoadTable_WHSLoa
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: v-gfedorova
+ms.author: kamaybac
 ms.search.validFrom: 2021-06-30
 ms.dyn365.ops.version: 10.0.21
 ---

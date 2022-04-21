@@ -23,4 +23,4 @@ You've defined text translations for product names. However, product names are a
 
 ## Resolution
 
-Product translations are shown only on external-facing documents. They aren't shown to internal users. For more information, see [Product-related translations FAQ](../../pim/translations-product-related-information.md#where-can-i-view-the-translated-information).
+Product translations are shown only on external-facing documents. They aren't shown to internal users. For more information, see [Product-related translations FAQ](/dynamics365/supply-chain/pim/translations-product-related-information.md#where-can-i-view-the-translated-information).
