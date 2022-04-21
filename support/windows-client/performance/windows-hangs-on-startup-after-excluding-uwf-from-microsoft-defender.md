@@ -32,7 +32,7 @@ In this scenario, the computer hangs during Windows startup.
 > [!NOTE]
 >
 > - If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the problem does not occur.
-> - The computer could start after several retries.
+> - The computer could boot after several retries.
 
 This issue is by design. To work around this issue, use alternative way to exclude UWF.
 
