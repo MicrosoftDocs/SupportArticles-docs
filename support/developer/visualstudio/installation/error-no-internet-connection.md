@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# “No Internet connection” error when installing Visual Studio
+# “No Internet connection” error when you try to install Visual Studio
 
 _Applies to:_&nbsp;Visual Studio 2015
 
