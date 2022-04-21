@@ -1,7 +1,7 @@
 ---
 title: Windows startup hangs after you exclude UWF from Microsoft Defender
 description: Introduces how to work around an issue in which Windows startup hangs after you exclude UWF from Microsoft Defender.
-ms.date: 09/08/2020
+ms.date: 04/25/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -9,7 +9,7 @@ audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
-ms.reviewer: koaiiot
+ms.reviewer: koaiiot, kaushika
 ms.technology: windows-client-performance
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ---
@@ -19,7 +19,7 @@ This article introduce how to work around the issue in which Windows startup han
 
 _Applies to:_ &nbsp; Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise
 
-## Issue symptoms
+## Issue
 
 Consider the following scenario:
 
@@ -30,11 +30,13 @@ Consider the following scenario:
 In this scenario, the computer hangs during Windows startup.
 
 > [!NOTE]
-> If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the problem does not occur.
+>
+> - If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the problem does not occur.
+> - The computer could start after several retries.
 
 This issue is by design. To work around this issue, use alternative way to exclude UWF.
 
-## Alternative way to exclude UWF
+## Supported way to exclude UWF
 
 To work around this issue, you can use the **Registry Commit** option of uwfmgr.exe to exclude UWF. The option can commit changes to specify a value.
 
@@ -47,9 +49,11 @@ uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" Sta
 > [!NOTE]
 > Since the command can only specify single registry value, you will need to specify whole registry value under registry keys where you want commit changes.
 
+For example, you find registry values that resemble the following screenshot:
+
 :::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-screenshot.png" alt-text="Screenshot of the registry editor." border="false":::
 
-If you find registry values that resemble the above screenshot, and you want to commit all changes under WDFilter registry subkeys, you need to run Registry Commit option as follows:
+To commit all changes under WDFilter registry subkeys, you need to run Registry Commit option as follows:
 
 ```console
 uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" DependOnService
