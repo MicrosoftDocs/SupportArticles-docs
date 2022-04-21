@@ -23,8 +23,6 @@
     href: ./install/issues-workarounds-visual-studio-2013-setup.md
   - name: MsiApplyMultiplePatches returns 1601 error
     href: ./install/msiapplymultiplepatches-error-1601.md
-  - name: KBXXXXXX is blocked by another condition
-    href: ./install/member-visual-studio-family-present.md
   - name: Known issues for Visual Studio 2012 and updates
     href: ./install/known-issues-visual-studio-2012-update.md
   - name: Secondary Installer uninstallation instructions
