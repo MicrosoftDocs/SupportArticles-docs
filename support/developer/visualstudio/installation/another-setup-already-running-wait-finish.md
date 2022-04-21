@@ -19,7 +19,7 @@ After attempting to install Visual Studio more than once, subsequent installatio
 
 ## Resolution
 
-Only one instance of a Visual Studio installation can run at a time. Make sure that there's only one instance open. If you receive this error even when there's only one instance of Visual Studio open, restart your machine to end the processes that can cause this issue. If restarting your machine doesn't resolve the problem, follow these steps:
+Only one instance of a Visual Studio installation can run at a time. Make sure that there's only one instance open. If you receive this error, even when there's only one instance of Visual Studio open, restart your machine to end the processes that can cause this issue. If restarting your machine doesn't resolve the problem, follow these steps:
 
 1. Open **Task Manager**.
 1. Select **Details**.
