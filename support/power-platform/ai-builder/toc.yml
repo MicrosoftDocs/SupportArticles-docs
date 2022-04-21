@@ -1,31 +1,28 @@
 - name: AI Builder Troubleshooting
   href: welcome-ai-builder.yml
   items:
-  - name: Administration
+  - name: Administration and licensing
     items:
     - name: Current environment doesn't meet the minimum requirements
       href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
-  - name: Licensing
-    items:
-    - name: TO DO
-      href: ""
   - name: Models
     items:
     - name: AI models fail to be imported in a new environment
       href: aimodels-fail-to-be-imported-in-a-new-environment.md
-  - name: Use in Power Automate
-    items:
     - name: Dependency Timeout error when using a form processing model
       href: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
     - name: Fields couldn't be loaded for this document error in a form processing model
+      href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
     - name: Form processing isn't extracting tables that span across multiple pages
       href: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
-    - name: Output of an action is empty or the next action returns an error
-      href: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
     - name: Pages parameter generates an error when saving a form processing flow
       href: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
     - name: Training document isn't displayed on the form processing model details page
       href: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
+  - name: Use in Power Automate
+    items:
+    - name: Output of an action is empty or the next action returns an error
+      href: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
   - name: Use in Power Apps
     items:
     - name: Business card reader doesn't work for some users
@@ -37,4 +34,3 @@
     - name: Processes and plug-in steps are turned off in default solution
       href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
 
-      
