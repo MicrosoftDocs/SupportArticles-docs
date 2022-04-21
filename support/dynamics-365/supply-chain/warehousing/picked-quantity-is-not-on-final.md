@@ -62,7 +62,7 @@ Use the following procedure to cancel the work IDs that have the packing locatio
 1. Select **Yes** to confirm that you want to cancel the work.
 1. Repeat this procedure for the other work IDs as needed.
 
-For more information, see [Cancel warehouse work for exception handling](/dynamics365/supply-chain/warehousing/cancel-warehouse-work.md).
+For more information, see [Cancel warehouse work for exception handling](/dynamics365/supply-chain/warehousing/cancel-warehouse-work).
 
 Use the following procedure to reconfigure the location directive so it won't use the packing location as the final shipping location when automated containerization is set up for the wave template.
 
