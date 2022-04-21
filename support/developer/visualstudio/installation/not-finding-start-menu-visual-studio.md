@@ -9,7 +9,7 @@ ms.reviewer: terry.g.lee
 
 # Can't find Visual Studio 2015 icon on the Start menu
 
-This article helps you resolve an issue that causes the Microsoft Visual Studio icon not to be displayed on the Start menu.
+This article helps you resolve the issue where Microsoft Visual Studio icon is not visible on the Start menu.
 
 _Applies to:_&nbsp;Visual Studio 2015
 
