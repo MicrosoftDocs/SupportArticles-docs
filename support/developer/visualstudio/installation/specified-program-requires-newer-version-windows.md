@@ -15,7 +15,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptoms
 
-You want to install Visual Studio 2015 on a computer already having Windows 7 SP1 or newer installed, but you receive the following error message:
+You want to install Visual Studio 2015 on a computer that already has Windows 7 SP1 or newer installed, but you receive the following error message:
 
 > The specified program requires a newer version of Windows
 
@@ -26,7 +26,7 @@ You may receive this error during a Visual Studio 2015 installation due to autom
 1. Right-click the **Visual Studio Installer** icon.
 1. Select **Properties** > **Compatibility**.
 1. Select **Change settings for all users**.
-1. Uncheck **Run this program in compatibility mode for**, and then select your operation system.
+1. Uncheck **Run this program in compatibility mode for:** and select your operating system.
 1. Select **Ok**.
 1. Exit the configuration window.
-1. Launch the Visual Studio Installer again.
+1. Launch Visual Studio Installer again.
