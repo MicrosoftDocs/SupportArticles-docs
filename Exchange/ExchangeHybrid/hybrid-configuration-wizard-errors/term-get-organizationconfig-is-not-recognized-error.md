@@ -44,7 +44,7 @@ The Hybrid Configuration wizard depends on the availability of an Office 365 pla
 Add a trial subscription of Office 365 Enterprise E3 to your account. After you add the Office 365 Enterprise E3 plan, the Hybrid Configuration wizard will complete successfully. To add a trial subscription, follow these steps:
 
 1. Sign in to the [Office 365 portal](https://www.office.com/?auth=2).
-2. Select **Admin** to open the Office 365 admin center.
+2. Select **Admin** to open the Microsoft 365 admin center.
 3. In the navigation pane, expand **Billing**, select **Subscriptions**, and then select **New Subscription**.
 4. Under **Office 365 Enterprise E3**, select **Trial**, and then follow the steps that are displayed on the screen.For more help to work around this issue, contact [Microsoft Support](https://support.microsoft.com/contactus/).
 

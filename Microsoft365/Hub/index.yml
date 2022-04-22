@@ -26,9 +26,9 @@ productDirectory:
         - url: ../enterprise/o365-enterprise-welcome.md
           text: Office 365 Enterprise
         - url: ../admin/o365-admin-welcome.md
-          text: Office 365 Admin Center
+          text: Microsoft 365 admin center
         - url: ../compliance/microsoft-365-compliance-welcome.md
-          text: Microsoft 365 Compliance
+          text: Microsoft Purview
         - url: ../security/microsoft-365-security-welcome.md
           text: Microsoft 365 Security
     # Card
