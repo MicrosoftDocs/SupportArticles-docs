@@ -19,7 +19,7 @@ This article discusses how to work around an issue in which Windows doesn't star
 
 _Applies to:_ &nbsp; Windows 10 Enterprise, Windows 10 IoT Enterprise or Windows 11 Enterprise
 
-## Symptoms
+## Issue
 
 Consider the following scenario:
 
@@ -33,8 +33,6 @@ In this scenario, the computer stops responding during Windows startup.
 >
 > - If you disable the UWF feature by using the `uwfmgr.exe filter disable` command, the issue doesn't occur.
 > - The computer might start up after several retries.
-
-# Workaround
 
 This behavior is by design. To work around this issue, use an alternative menthod to exclude UWF.
 
