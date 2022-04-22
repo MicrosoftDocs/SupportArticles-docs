@@ -35,7 +35,7 @@ Here are some actions that can be done to improve this.
 
 - Be sure to leave a certain time delay interval between each execution after a failure.
 
-The following screenshots show an example on how to setup a retry logic in a cloud flow. Make sure you choose the appropriate settings for when your variable should run. To get to the settings, in your variable heading, select (**...**) > **Configure run after**, select when the variable should run, and then select **Done**.  
+The following screenshots show an example of how to set up a retry logic in a cloud flow. Make sure you choose the appropriate settings for when your variable should run. To get to the settings, in your variable heading, select (**...**) > **Configure run after**, select when the variable should run, and then select **Done**.  
 
 > [!div class="mx-imgBorder"]
 > ![Screenshot of retry logic in a Power Automate cloud flow example 1.](media/retry-pattern-aib-1.png "Retry logic in a Power Automate cloud flow")

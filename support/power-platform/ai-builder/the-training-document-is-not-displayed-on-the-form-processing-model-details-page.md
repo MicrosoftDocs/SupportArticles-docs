@@ -27,7 +27,12 @@ The training document might not appear in any of the following situations.
 
 ## Resolution
 
-<!--No resolution? How about, assign permissions and assign model?-->
+Try to resolve this issue by doing the following.
+
+- Make sure you have permissions to view training documents.
+- Get co-owner permissions (if allowed).
+
+If your form processing model was imported from another environment, you won't be able to view the original training data.
 
 ## Resources
 

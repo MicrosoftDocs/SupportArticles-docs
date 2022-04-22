@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; AI Builder home page
 
 ## Symptoms
 
-You're not able to use AI Builder procesess and plug-ins.
+You're not able to use AI Builder processes and plug-ins.
 
 ## Cause
 
@@ -54,7 +54,7 @@ AI Builder can't be used if its plug-in steps and processes have been turned off
 
     1. Select **IsPaiEnabled** > **Turn On**.
 
-1. Check all those processes that are required for AI Builder to ensure they are turned on.
+1. Check all those processes that are required for AI Builder to ensure they're turned on.
 
     - AlmHandler
     - AnalyzeSentiment
