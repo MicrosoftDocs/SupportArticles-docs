@@ -50,4 +50,4 @@ To work around this issue, try the following methods:
     1. Select **Xamarin**.
     1. Select **Android Settings**.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

@@ -28,4 +28,4 @@ To work around this problem, follow these steps:
 
 We also recommend deploying to a real device when it's possible, as this is faster and less error-prone than using an emulator.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

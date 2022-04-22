@@ -1369,7 +1369,7 @@
       "source_path": "support/browsers/welcome-browsers.md",
       "redirect_url": "/troubleshoot/developer/browsers/welcome-browsers",
       "redirect_document_id": true
-    },    
+    },
     {
       "source_path": "support/browsers/cannot-add-favorites-in-enhanced-protected-mode.md",
       "redirect_url": "/troubleshoot/developer/browsers/administration/cannot-add-favorites-in-enhanced-protected-mode",
@@ -2638,7 +2638,7 @@
     {
       "source_path": "support/cpp/atl-service-not-start.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/libraries/atl-service-not-start",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/c2653-c2039-error-reference-function.md",
@@ -2778,47 +2778,47 @@
     {
       "source_path": "support/cpp/add-references-managed.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/add-references-managed",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/add-html-code-clipboard.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/add-html-code-clipboard",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/declare-pointers-to-functions.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/declare-pointers-to-functions",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/expand-pointer-debugger-watch-window.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/expand-pointer-debugger-watch-window",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/start-internet-browser.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/start-internet-browser",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/update-database-sqldataadapter.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/general/update-database-sqldataadapter",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/minimum-service-pack-levels.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/installation/minimum-service-pack-levels",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/runtime-installation-fails.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/installation/runtime-installation-fails",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/visual-studio-2013-startup-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/ide/visual-studio-2013-startup-crashes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/cs0433-error-when-building-aspnet-project.md",
@@ -2848,7 +2848,7 @@
     {
       "source_path": "support/cpp/mfc-enable-tablet-press-and-hold-gesture.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/mfc-enable-tablet-press-and-hold-gesture",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/lnk1000-error-wholearchive-switch.md",
@@ -2883,7 +2883,7 @@
     {
       "source_path": "support/cpp/troubleshoot-visual-c-compile-linker.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/troubleshoot-visual-c-compile-linker",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/unnested-loops-cause-c1061-error.md",
@@ -2908,62 +2908,62 @@
     {
       "source_path": "support/cpp/file-setting-not-save.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/project-build/file-setting-not-save",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/cpp/cpp-2010-support-dotnet-4-target.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/project-build/cpp-2010-support-dotnet-4-target",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/update-available.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/update-available",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/application-exception-0xc0000094-vmware.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/application-exception-0xc0000094-vmware",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/drm-protected-subtitles-not-supported.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/drm-protected-subtitles-not-supported",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/playback-protected-video-content-fail-error.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/playback-protected-video-content-fail-error",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/run-configuration-tool.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/run-configuration-tool",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/silverlight-not-work-google-chrome.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/silverlight-not-work-google-chrome",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/slsvcutil-tool-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/slsvcutil-tool-crashes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/subscriptions/opt-out-of-dev-essentials",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/visual-basic/mouse-wheel-events-do-not-work.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/ide/mouse-wheel-events-do-not-work",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/visual-basic/check-if-program-is-running.md",
@@ -3018,517 +3018,517 @@
     {
       "source_path": "support/dotnet/visual-basic/checkbox-control-values-datagrid.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/checkbox-control-values-datagrid",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/visual-basic/nullreferenceexception-commandbuilder.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/nullreferenceexception-commandbuilder",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/visual-basic/race-conditions-deadlocks.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/race-conditions-deadlocks",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/visual-basic/trace-debug.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/trace-debug",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/dotnet-source-code-debug.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/debuggers/dotnet-source-code-debug",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/windows-simulator-needs-credentials.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/debuggers/windows-simulator-needs-credentials",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/concurrency-visualizer-lost-kernel-user-mode-event.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/remote-debugger-collect-information.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/debuggers/remote-debugger-collect-information",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/debugger-not-stop-breakpoint.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/debuggers/debugger-not-stop-breakpoint",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/_stat-family-cannot-support-symbolic-directory-link.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/_stat-family-cannot-support-symbolic-directory-link",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/alternate-credentials-stop-working.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/alternate-credentials-stop-working",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/bi-project-not-open-after-upgrade.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/bi-project-not-open-after-upgrade",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-find-resource-named-error.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/cannot-find-resource-named-error",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-sign-in-javascript-disabled.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/cannot-sign-in-javascript-disabled",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/not-transform-license-file-to-binary-resource.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/not-transform-license-file-to-binary-resource",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/release-management-not-have-https-protocol.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/release-management-not-have-https-protocol",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/resource-editor-cannot-save-file.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/resource-editor-cannot-save-file",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/help-viewer-power-tool.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/help-viewer-power-tool",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/jdk-missing-create-xamarin-app.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/jdk-missing-create-xamarin-app",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/vsa-tlb-not-loaded.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/vsa-tlb-not-loaded",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/subscription-administrator-migration.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/subscription-administrator-migration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/assembly-version-assembly-file-version.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/assembly-version-assembly-file-version",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/vbs-type-mismatch-error.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/vbs-type-mismatch-error",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/windows-automation-api-3-improve-visual-studio.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/windows-automation-api-3-improve-visual-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/visual-studio-2022-unsupported-operating-systems.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/general/visual-studio-2022-unsupported-operating-systems",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/warnings-untrusted-certificate.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/installation/warnings-untrusted-certificate",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-use-scale-140-badge-logo.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/cannot-use-scale-140-badge-logo",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/deploy-aspnet-app-xcopy-command.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/deploy-aspnet-app-xcopy-command",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/determine-connection-state-local-system.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/determine-connection-state-local-system",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-compile-32-bit-app-x64-machine.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/cannot-compile-32-bit-app-x64-machine",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/help-viewer-2-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/help-viewer-2-crashes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/instrumenting-signed-assembly-throw-warning-message.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/instrumenting-signed-assembly-throw-warning-message",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/linker-fatal-error-out-of-memory.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/linker-fatal-error-out-of-memory",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/building-solution-with-multiple-projects-fails.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/building-solution-with-multiple-projects-fails",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/single-instance-application-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/single-instance-application-crashes",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/crash-with-stardist-3.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/crash-with-stardist-3",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/use-jscript-javascript-traverse-collection.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/language-compilers/use-jscript-javascript-traverse-collection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/adjust-visual-experience-settings.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/adjust-visual-experience-settings",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/atl-control-font-stock-not-update.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/atl-control-font-stock-not-update",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/developer-license-notification-not-dismiss.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/developer-license-notification-not-dismiss",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-switch-accounts.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/cannot-switch-accounts",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/visual-studio-2012-updates.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/visual-studio-2012-updates",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/performance-crash-issue.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/performance-crash-issue",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/release-management-client-crash.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/release-management-client-crash",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/screen-readers-not-read-tool-windows.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/ide/screen-readers-not-read-tool-windows",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/build-errors-delete-debug-configuration.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/project-build/build-errors-delete-debug-configuration",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/building-windows-10-driver-fails.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/project-build/building-windows-10-driver-fails",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/setup-project-depend-dotnet-framework.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/project-build/setup-project-depend-dotnet-framework",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/excel-project-cannot-connect-tfs-2010.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/version-control/excel-project-cannot-connect-tfs-2010",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/invisible-solution-platform-drop-down-list.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/version-control/invisible-solution-platform-drop-down-list",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/android-27-emulator-not-start.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/third-party/android-27-emulator-not-start",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/third-party-dependencies.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/third-party/third-party-dependencies",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-start-windows-simulator.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/tools-utilities/cannot-start-windows-simulator",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/cannot-use-custom-report-items-ssdt.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/tools-utilities/cannot-use-custom-report-items-ssdt",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/general/nuget-based-package-manager-missing.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/general/tools-utilities/nuget-based-package-manager-missing",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/visual-studio-2012-update-4.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/general/visual-studio-2012-update-4",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/jdk-installation-fails.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/general/jdk-installation-fails",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/release-management-installation-issues.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/general/release-management-installation-issues",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/known-issues-in-windows-8.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/general/known-issues-in-windows-8",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/known-issues-visual-studio-2013.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/general/known-issues-visual-studio-2013",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/fix-dia-sdk-install-location.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/fix-dia-sdk-install-location",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/install-windows-sdk-silent-mode.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/install-windows-sdk-silent-mode",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/issues-workarounds-visual-studio-2012-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/issues-workarounds-visual-studio-2012-setup",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/issues-workarounds-visual-studio-2013-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/issues-workarounds-visual-studio-2013-setup",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/msiapplymultiplepatches-error-1601.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/msiapplymultiplepatches-error-1601",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/known-issues-visual-studio-2012-update.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/known-issues-visual-studio-2012-update",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/secondary-installer-third-party-app.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/secondary-installer-third-party-app",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/fonts-cause-setup-crash.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/fonts-cause-setup-crash",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/setup-issues-readme-file.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/setup-issues-readme-file",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/uninstall-third-party-app.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/uninstall-third-party-app",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/uninstall-visual-studio-2012.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/uninstall-visual-studio-2012",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/visual-studio-2015-2013-feature-not-work.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/visual-studio-2015-2013-feature-not-work",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/windows-installer-display-inaccurate-progress.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/install/windows-installer-display-inaccurate-progress",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/visualstudio/install/cannot-install-tools-ctp-3-1.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/install/third-party/cannot-install-tools-ctp-3-1",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/idebugaddress-getaddress-crash.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/debuggers/idebugaddress-getaddress-crash",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/add-controls-to-windows-forms.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/add-controls-to-windows-forms",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/add-static-items-results-data-binding.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/add-static-items-results-data-binding",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/file-io-operation.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/file-io-operation",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/compile-code-using-compiler.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/compile-code-using-compiler",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/compute-hash-values.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/compute-hash-values",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/create-remote-server.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/create-remote-server",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/create-file-compare.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/create-file-compare",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/create-smooth-progress-bar.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/create-smooth-progress-bar",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/create-summary-row-datagrid.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/create-summary-row-datagrid",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/create-thread.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/create-thread",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/hierarchical-data-nested-repeater-control.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/hierarchical-data-nested-repeater-control",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/store-custom-information-config-file.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/store-custom-information-config-file",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/implement-custom-collection.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/implement-custom-collection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/string-concatenation.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/string-concatenation",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/install-assembly-gac.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/install-assembly-gac",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/make-class-foreach-statement.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/make-class-foreach-statement",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/usercontrol-act-control-container-design-time.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/usercontrol-act-control-container-design-time",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/match-pattern-regular-expression.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/match-pattern-regular-expression",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/query-excel-data-aspx-page.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/query-excel-data-aspx-page",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/read-write-text-file.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/read-write-text-file",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/read-xml-data-from-url.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/read-xml-data-from-url",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/serialize-object-xml.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/serialize-object-xml",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/sort-listview-by-column.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/sort-listview-by-column",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/use-icomparable-icomparer.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/use-icomparable-icomparer",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/start-internet-browser.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/start-internet-browser",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/hashtable-collection.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/hashtable-collection",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/wait-shelled-app-finish.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/wait-shelled-app-finish",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/write-web-service.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/general/write-web-service",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/add-user-local-system.md",
@@ -3543,7 +3543,7 @@
     {
       "source_path": "support/dotnet/csharp/no-warning-event-obsolete.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/no-warning-event-obsolete",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/dotnet/csharp/convert-systemstring-char.md",
@@ -3608,6 +3608,576 @@
     {
       "source_path": "support/windows-server/deployment/unknown-device-vmbus-virtual-machine.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/unknown-device-vmbus-virtual-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/determine-connection-state-local-system.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/determine-connection-state-local-system",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/checkbox-control-values-datagrid.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/checkbox-control-values-datagrid",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/nullreferenceexception-commandbuilder.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/nullreferenceexception-commandbuilder",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/race-conditions-deadlocks.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/race-conditions-deadlocks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/visual-basic/trace-debug.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/visual-basic/language-compilers/trace-debug",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/version-control/excel-project-cannot-connect-tfs-2010.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/version-control/excel-project-cannot-connect-tfs-2010",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/version-control/invisible-solution-platform-drop-down-list.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/version-control/invisible-solution-platform-drop-down-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/tools-utilities/cannot-start-windows-simulator.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/tools-utilities/cannot-start-windows-simulator",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/tools-utilities/cannot-use-custom-report-items-ssdt.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/tools-utilities/cannot-use-custom-report-items-ssdt",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/tools-utilities/nuget-based-package-manager-missing.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/tools-utilities/nuget-based-package-manager-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/third-party/android-27-emulator-not-start.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/android-27-emulator-not-start",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/third-party/third-party-dependencies.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/third-party-dependencies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/general/jdk-installation-fails.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/jdk-installation-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/third-party/cannot-install-tools-ctp-3-1.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/cannot-install-tools-ctp-3-1",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/project-build/cpp-2010-support-dotnet-4-target.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/cpp-2010-support-dotnet-4-target",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/project-build/file-setting-not-save.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/file-setting-not-save",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/project-build/build-errors-delete-debug-configuration.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/build-errors-delete-debug-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/project-build/building-windows-10-driver-fails.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/building-windows-10-driver-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/project-build/setup-project-depend-dotnet-framework.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/project-build/setup-project-depend-dotnet-framework",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/building-solution-with-multiple-projects-fails.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/building-solution-with-multiple-projects-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/cannot-compile-32-bit-app-x64-machine.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/cannot-use-scale-140-badge-logo.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/cannot-use-scale-140-badge-logo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/deploy-aspnet-app-xcopy-command.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/deploy-aspnet-app-xcopy-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/instrumenting-signed-assembly-throw-warning-message.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/instrumenting-signed-assembly-throw-warning-message",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/linker-fatal-error-out-of-memory.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/linker-fatal-error-out-of-memory",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/use-jscript-javascript-traverse-collection.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/language-compilers/use-jscript-javascript-traverse-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/installation/warnings-untrusted-certificate.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/warnings-untrusted-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/general/known-issues-in-windows-8.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/known-issues-in-windows-8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/general/known-issues-visual-studio-2013.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/known-issues-visual-studio-2013",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/general/release-management-installation-issues.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/release-management-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/general/visual-studio-2012-update-4.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/visual-studio-2012-update-4",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/fix-dia-sdk-install-location.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/fix-dia-sdk-install-location",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/fonts-cause-setup-crash.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/fonts-cause-setup-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/install-windows-sdk-silent-mode.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/install-windows-sdk-silent-mode",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/issues-workarounds-visual-studio-2012-setup.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/issues-workarounds-visual-studio-2013-setup.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-2013-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/known-issues-visual-studio-2012-update.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/known-issues-visual-studio-2012-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/msiapplymultiplepatches-error-1601.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/msiapplymultiplepatches-error-1601",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/secondary-installer-third-party-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/secondary-installer-third-party-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/setup-issues-readme-file.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/setup-issues-readme-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/uninstall-third-party-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/uninstall-third-party-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/uninstall-visual-studio-2012.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/uninstall-visual-studio-2012",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/visual-studio-2015-2013-feature-not-work.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/visual-studio-2015-2013-feature-not-work",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/install/install/windows-installer-display-inaccurate-progress.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/windows-installer-display-inaccurate-progress",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/ide/visual-studio-2013-startup-crashes.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/visual-studio-2013-startup-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/adjust-visual-experience-settings.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/adjust-visual-experience-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/atl-control-font-stock-not-update.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/atl-control-font-stock-not-update",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/cannot-switch-accounts.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/cannot-switch-accounts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/developer-license-notification-not-dismiss.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/developer-license-notification-not-dismiss",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/performance-crash-issue.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/performance-crash-issue",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/release-management-client-crash.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/release-management-client-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/screen-readers-not-read-tool-windows.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/screen-readers-not-read-tool-windows",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/ide/visual-studio-2012-updates.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/visual-studio-2012-updates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/crash-with-stardist-3.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardist-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/help-viewer-2-crashes.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/help-viewer-2-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/_stat-family-cannot-support-symbolic-directory-link.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/_stat-family-cannot-support-symbolic-directory-link",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/alternate-credentials-stop-working.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/alternate-credentials-stop-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/assembly-version-assembly-file-version.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/assembly-version-assembly-file-version",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/bi-project-not-open-after-upgrade.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/bi-project-not-open-after-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/cannot-find-resource-named-error.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/cannot-find-resource-named-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/cannot-sign-in-javascript-disabled.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/cannot-sign-in-javascript-disabled",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/help-viewer-power-tool.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/help-viewer-power-tool",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/jdk-missing-create-xamarin-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/jdk-missing-create-xamarin-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/not-transform-license-file-to-binary-resource.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/not-transform-license-file-to-binary-resource",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/release-management-not-have-https-protocol.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/release-management-not-have-https-protocol",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/resource-editor-cannot-save-file.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/resource-editor-cannot-save-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/subscription-administrator-migration.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/subscription-administrator-migration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/vbs-type-mismatch-error.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/vbs-type-mismatch-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/visual-studio-2022-unsupported-operating-systems.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/visual-studio-2022-unsupported-operating-systems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/general/windows-automation-api-3-improve-visual-studio.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/general/windows-automation-api-3-improve-visual-studio",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/debuggers/idebugaddress-getaddress-crash.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/idebugaddress-getaddress-crash",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/debuggers/debugger-not-stop-breakpoint.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/debugger-not-stop-breakpoint",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/debuggers/dotnet-source-code-debug.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/dotnet-source-code-debug",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/debuggers/remote-debugger-collect-information.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/remote-debugger-collect-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/debuggers/windows-simulator-needs-credentials.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/debuggers/windows-simulator-needs-credentials",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/add-controls-to-windows-forms.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/add-controls-to-windows-forms",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/add-static-items-results-data-binding.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/add-static-items-results-data-binding",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/compile-code-using-compiler.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/compile-code-using-compiler",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/compute-hash-values.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/compute-hash-values",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/create-file-compare.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/create-file-compare",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/create-remote-server.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/create-remote-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/create-smooth-progress-bar.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/create-smooth-progress-bar",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/create-summary-row-datagrid.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/create-summary-row-datagrid",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/create-thread.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/create-thread",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/file-io-operation.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/file-io-operation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/hashtable-collection.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/hashtable-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/hierarchical-data-nested-repeater-control.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/hierarchical-data-nested-repeater-control",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/implement-custom-collection.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/implement-custom-collection",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/install-assembly-gac.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/install-assembly-gac",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/make-class-foreach-statement.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/make-class-foreach-statement",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/match-pattern-regular-expression.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/match-pattern-regular-expression",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/query-excel-data-aspx-page.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/query-excel-data-aspx-page",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/read-write-text-file.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/read-write-text-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/read-xml-data-from-url.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/read-xml-data-from-url",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/serialize-object-xml.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/serialize-object-xml",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/sort-listview-by-column.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/sort-listview-by-column",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/start-internet-browser.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/start-internet-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/store-custom-information-config-file.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/store-custom-information-config-file",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/string-concatenation.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/string-concatenation",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/use-icomparable-icomparer.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/use-icomparable-icomparer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/usercontrol-act-control-container-design-time.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/usercontrol-act-control-container-design-time",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/wait-shelled-app-finish.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/wait-shelled-app-finish",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/general/write-web-service.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/write-web-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/language-compilers/single-instance-application-crashes.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/csharp/language-compilers/single-instance-application-crashes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/installation/minimum-service-pack-levels.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/libraries/minimum-service-pack-levels",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/installation/runtime-installation-fails.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/libraries/runtime-installation-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/add-html-code-clipboard.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/add-html-code-clipboard",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/add-references-managed.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/add-references-managed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/declare-pointers-to-functions.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/declare-pointers-to-functions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/start-internet-browser.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/start-internet-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/update-database-sqldataadapter.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/language-compilers/update-database-sqldataadapter",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/general/expand-pointer-debugger-watch-window.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/cpp/debuggers/expand-pointer-debugger-watch-window",
       "redirect_document_id": true
     }
   ]

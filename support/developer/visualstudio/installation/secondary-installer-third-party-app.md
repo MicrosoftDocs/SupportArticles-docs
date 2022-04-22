@@ -45,4 +45,4 @@ Websocket4Net is installed as a DLL of Windows 7 operating system only. Here is 
 
 1. In the root folder for Visual Studio, locate the `Common7\IDE\CommonExtensions\Microsoft\WebClient\Diagnostics\ToolWindows` subfolder and delete *WebSocket4Net.dll*.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
