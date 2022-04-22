@@ -1,7 +1,7 @@
 ---
 title: Error message for installing an additional language pack.
-description: Resolves an error about installing a language pack when you try to install Visual Studio in an additional language.
-ms.date: 04/19/2022
+description: This article helps you resolve an error that is shown when you try to install Visual Studio in a new language.
+ms.date: 04/22/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
@@ -15,7 +15,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 When you try to install Microsoft Visual Studio in a new language, you receive the following error message:
 
-“This product is already installed. To install an additional language, please install the language pack for that language.”
+> "This product is already installed. To install an additional language, please install the language pack for that language."
 
 ## Resolution
 
