@@ -14,6 +14,7 @@ ms.custom:
 ms.reviewer: igserr
 appliesto: 
   - Exchange Server 2019
+  - Outlook on the web
 search.appverid: MET150
 ms.date: 4/22/2022
 ---
