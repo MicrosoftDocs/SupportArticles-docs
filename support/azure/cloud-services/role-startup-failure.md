@@ -12,7 +12,7 @@ ms.custom:
 
 # Troubleshoot Azure Cloud Services (extended support) roles that fail to start
 
-Here are some common problems and solutions related to Azure Cloud Services (extended support) roles that fail to start. 
+Here are some common problems and solutions related to Azure Cloud Services (extended support) roles that fail to start.
 
 ## Cloud service operation fails with RoleInstanceStartupTimeoutError
 
@@ -74,9 +74,11 @@ To view complete error information, in the *web.config* file for the web role, s
 1. In Visual Studio, open the solution.
 1. In Solution Explorer, open the *web.config* file.
 1. In the `system.web` section, add the following code:
+
    ```xml
    <customErrors mode="Off" />
    ```
+
 1. Save the file.
 1. Repackage and redeploy the service.
 
@@ -133,4 +135,6 @@ To deploy your cloud service with IntelliTrace turned on:
 
 ## Next steps
 
-- Learn how to [troubleshoot cloud service role issues by using Azure PaaS computer diagnostics data](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data).
+* Learn how to [troubleshoot cloud service role issues by using Azure PaaS computer diagnostics data](/archive/blogs/kwill/windows-azure-paas-compute-diagnostics-data).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

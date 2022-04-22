@@ -74,3 +74,5 @@ instance of PerformRequiredConfigurationChecks
     ReturnValue=0
 }
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

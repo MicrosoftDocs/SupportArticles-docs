@@ -80,3 +80,5 @@ rule.Direction = NET_FW_RULE_DIRECTION_.NET_FW_RULE_DIR_IN;
 rule.Enabled = true;
 rules.Add(rule);
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

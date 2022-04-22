@@ -1,7 +1,7 @@
 ---
 title: Performance of System.Diagnostics.StackFrame decreases in Windows 10 and .NET Framework 4.7.1
 description: Fixes an issue that occurs after you upgrade to Windows 10 or .NET Framework 4.7.1 in which applications that use System.Diagnostics.StackFrame run much slower than before.
-ms.date: 10/23/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -116,4 +116,4 @@ For more information about how to measure the rate of exceptions for an applicat
 > [!NOTE]
 > This issue does not change the number of exceptions that are thrown. However, it does significantly decrease the ability of applications to handle those exceptions. For more information about this issue, see [this GitHub post](https://github.com/Microsoft/dotnet/blob/master/releases/net471/KnownIssues/517815-BCL%20Applications%20making%20heavy%20use%20of%20System.Diagnostics.StackTrace%20might%20run%20more%20slowly%20on%20.NET%204.7.1.md).
 
-Applications that use [IKVM library](https://www.ikvm.net/) are known to be affected by this issue if they probe for assemblies. Probing for assemblies is known to cause exceptions.
+Applications that use IKVM library are known to be affected by this issue if they probe for assemblies. Probing for assemblies is known to cause exceptions.

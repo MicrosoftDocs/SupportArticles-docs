@@ -44,8 +44,10 @@ To fix the issue, follow these steps:
 
 The following video shows how to fix the redirect URI mismatch error in Azure AD:
 
-> [!VIDEO https://www.youtube.com/embed/a_abaB7494s]
+> [!VIDEO <https://www.youtube.com/embed/a_abaB7494s>]
 
 ## More information
 
 For a full list of Active Directory authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

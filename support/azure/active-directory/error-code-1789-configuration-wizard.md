@@ -36,6 +36,4 @@ To resolve this issue, use one or more of the following methods:
   7. Select the **Domain** option, and then type the domain name in the **Domain** dialog box to add the computer back to the domain.
   8. Restart the computer.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

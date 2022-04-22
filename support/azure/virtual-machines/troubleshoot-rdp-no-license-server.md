@@ -55,6 +55,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
       ```
       mstsc /v:<Server>[:<Port>] /admin
       ```
+
     - In the Azure portal, go to the VM, select **Connect** under **Settings**. In the right panel, select **Download RDP File** to download a connection file.
 
     If you can't connect to the VM by using an administrative session, you can use the [Virtual Machine Serial Console on Azure](serial-console-windows.md) to access the VM as follows:
@@ -115,7 +116,7 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
         dism /ONLINE /Disable-feature /FeatureName:Licensing
         ```
 
-    5. Make sure that the VM can connect to the Remote Desktop license server. You can test the connectivity to the port 135 between the VM and the license server: 
+    5. Make sure that the VM can connect to the Remote Desktop license server. You can test the connectivity to the port 135 between the VM and the license server:
 
        ```
        telnet <FQDN / IP License Server> 135
@@ -125,6 +126,4 @@ To resolve this problem, [back up the OS disk](/azure/virtual-machines/windows/s
 
 4. If a Remote Desktop license server is configured and healthy, make sure that the Remote Desktop license server is activated with CALs.
 
-## Need help? Contact support
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

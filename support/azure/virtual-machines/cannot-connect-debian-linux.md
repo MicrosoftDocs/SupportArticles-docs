@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4056276
 
 ## Symptoms
 
-After creating a specialized Debian 9.1 (Stretch) virtual machine (VM) and then migrate that VM from VMware to Microsoft Azure, you can't connect to the VM. 
+After creating a specialized Debian 9.1 (Stretch) virtual machine (VM) and then migrate that VM from VMware to Microsoft Azure, you can't connect to the VM.
 
 ## Cause
 
@@ -30,3 +30,5 @@ Debian now uses "ens33" (or "ens33p0") interface names instead of "eth0." To wo
     ```  
 
 2. Manually update the `/etc/network/interfaces` file by removing the `ens33` entry and then adding `auto eth0` and `iface inet eth0 dhcp`.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
