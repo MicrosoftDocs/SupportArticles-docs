@@ -74,7 +74,7 @@ Websocket4Net is installed as a DLL to your operating system (only in Windows 7)
 
 3. In this folder, locate and delete `WebSocket4Net.dll`.
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 ## Applies to
 

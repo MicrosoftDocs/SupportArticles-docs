@@ -4,6 +4,7 @@ description: Visual C++ 2010 toolset only supports .NET Framework 4 as a target 
 ms.date: 04/30/2020
 ms.custom: sap:Project/Build System
 ms.technology: visual-cpp-project-build
+ms.prod: visual-cpp
 ---
 # Visual C++ 2010 toolset supports only .NET Framework 4 as a target
 

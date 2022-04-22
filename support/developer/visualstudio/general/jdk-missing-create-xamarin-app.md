@@ -37,4 +37,4 @@ To work around this issue, follow these steps:
 > [!NOTE]
 > For the best mobile development experience, we encourage you to update to the latest Visual Studio version to keep up with the latest changes in iOS and Android development.  
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

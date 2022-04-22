@@ -26,7 +26,7 @@ If you installed Cross Platform Mobile Development features, you must use additi
 |Oracle Java Development Kit|Perform the build steps for Android.|No|Yes|No|
 |Websocket4Net|Enable debugging on Windows 7 computers.|No|Yes|No|
 
-[!INCLUDE [Third-party disclaimer](../../../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
 ## Applies to
 

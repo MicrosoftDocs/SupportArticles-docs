@@ -4,7 +4,6 @@ description: This article provides a resolution to solve the problem that single
 ms.date: 04/27/2020
 ms.custom: sap:Language or compilers
 ms.reviewer: rachanr
-ms.technology: vs-language-compilers
 ---
 # Single instance application crashes
 

@@ -40,7 +40,7 @@ An update to resolve this problem is available for manual download and installat
 
 - [Download for Update to Microsoft Visual Studio 2013 Update 4](https://www.microsoft.com/download/details.aspx?id=44998)
 
-[!INCLUDE [Virus-scan claim](../../../../includes/virus-scan-claim.md)]
+[!INCLUDE [Virus-scan claim](../../../includes/virus-scan-claim.md)]
 
 ## Prerequisites
 
