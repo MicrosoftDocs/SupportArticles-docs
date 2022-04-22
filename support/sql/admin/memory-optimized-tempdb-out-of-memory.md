@@ -91,7 +91,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID` and `Index_ID` are `NULL`.
 
-    **Resolution**: The root cause has been identified and a product fix is being examined.
+    **Resolution**: Fixed in CU16.
 
 - Scenario 4
 
