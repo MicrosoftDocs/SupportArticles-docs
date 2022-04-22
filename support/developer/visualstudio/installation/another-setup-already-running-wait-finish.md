@@ -24,4 +24,4 @@ Only one instance of a Visual Studio installation can run at a time. Make sure t
 1. Open **Task Manager**.
 1. Select **Details**.
 1. Look for the process **msiexec.exe**.
-1. If there's more than one, select them and choose **End Task**.
+1. Select them and choose **End Task** if there's more than one.
