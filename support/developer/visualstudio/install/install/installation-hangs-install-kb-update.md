@@ -31,15 +31,6 @@ To resolve the issue, stop the Visual Studio installer and ensure that Windows i
 1. Select **Start** > **Settings** > **Update & Security** > **Windows Update**.
 1. Select **Check for updates** or view **Update history**.
 
-If you experience issues when trying to update Windows, follow these steps:
+If you experience issues when trying to update Windows, try the [Windows Update Troubleshooter](https://support.microsoft.com/windows/windows-update-troubleshooter-19bc41ca-ad72-ae67-af3c-89ce169755dd#WindowsVersion=Windows_10).The troubleshooter will scan your computer and fix any errors that it detects.
 
-1. Download the [Windows Update Troubleshooter](https://support.microsoft.com/windows/windows-update-troubleshooter-19bc41ca-ad72-ae67-af3c-89ce169755dd#WindowsVersion=Windows_10).
-1. Select **Open** when the browser prompt appears.
-1. Select **Next**.
-
-The troubleshooter will scan your computer and fix any errors that it detects.
-
-If you're still unable to update Windows after running the Windows Update Troubleshooter, follow these steps:
-
-1. Contact [Windows Support](https://support.microsoft.com/contactus/) to get assistance with your issue.
-1. Select **Get Started** and enter the details of the issue you're facing.
+If you're still unable to update Windows after running the Windows Update Troubleshooter, contact [Windows Support](https://support.microsoft.com/contactus/) to get assistance with your issue.
