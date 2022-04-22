@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - Administer AI Builder
+          - text: Administer AI Builder
             url: https://docs.microsoft.com/ai-builder/administer
 
  # Card
