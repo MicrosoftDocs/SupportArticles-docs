@@ -87,3 +87,5 @@ In addition to collecting the information that is described earlier, this diagno
 For more information about the Microsoft Automated Troubleshooting Services and about the Support Diagnostics Platform, please open the following Microsoft Knowledge Base article:
 
 [2598970](https://support.microsoft.com/help/2598970) Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

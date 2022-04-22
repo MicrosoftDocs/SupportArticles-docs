@@ -29,3 +29,5 @@ Microsoft has identified an issue in the Azure platform that prevents the metric
 ## Status
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section. A change to resolve this problem is scheduled to be deployed.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

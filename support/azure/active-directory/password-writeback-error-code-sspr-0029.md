@@ -61,7 +61,7 @@ This situation can occur if the Azure AD Connect server or the domain controller
 
 1. Open the *C:\Temp\gpresult.htm* file in your web browser, and expand **Computer Details** > **Settings** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies/Security Options** > **Network Access**. Then, check whether you have a setting that's named [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
 
-1. To open the Local Security Policy snap-in, select **Start**, enter *secpol.msc*, press Enter, and then expand **Local Policies** > **Expand Security Options**. 
+1. To open the Local Security Policy snap-in, select **Start**, enter *secpol.msc*, press Enter, and then expand **Local Policies** > **Expand Security Options**.
 
 1. In the list of policies, select [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls). The **Security Setting** column will show **Not Defined** if the setting isn't enabled, or it displays an `O:BAG:...` security descriptor value if the setting is enabled. If the setting is enabled, you can also select the **Properties** icon to see the Access Control List (ACL) that's currently applied.
 
@@ -86,7 +86,7 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
 
 1. Select **Edit Security** to display the **Security Settings for Remote Access to SAM** dialog box.
 
-1. In the **Group or user names** list, select **Add** to display the **Select Users or Groups** dialog box. In the **Enter the object names to select** box, enter the name of the AD DS Connector account (*MSOL_* account), and then select **OK** to exit that dialog box. 
+1. In the **Group or user names** list, select **Add** to display the **Select Users or Groups** dialog box. In the **Enter the object names to select** box, enter the name of the AD DS Connector account (*MSOL_* account), and then select **OK** to exit that dialog box.
 
 1. Select the AD DS Connector account in the list. Under **Permissions for \<account name>**, in the **Remote Access** row, select **Allow**.
 
@@ -104,7 +104,7 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
 
 1. Open the GPMC snap-in from a Domain Controller, and edit the respective Domain GPO.
 
-1. Expand **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Computer Configuration** > **Local Policies** > **Security Options**. 
+1. Expand **Computer Configuration** > **Policies** > **Windows Settings** > **Security Settings** > **Computer Configuration** > **Local Policies** > **Security Options**.
 
 1. In the list of security options, select **Network access: Restrict clients allowed to make remote calls to SAM**, open **Properties**, and then disable **Define this policy setting**.
 
@@ -137,3 +137,5 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
 
 [access-rights-permissions]: password-writeback-access-rights-permissions.md
 [identify-ad-ds-connector]: password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

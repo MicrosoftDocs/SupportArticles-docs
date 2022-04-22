@@ -62,3 +62,5 @@ After completing the steps above, you can now safely apply the [Windows Update J
 
 > [!NOTE]
 > If you cannot revert the state of a VM in a non-boot state, [open a support ticket with Azure Support](https://ms.portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

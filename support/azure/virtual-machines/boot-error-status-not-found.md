@@ -16,7 +16,7 @@ ms.author: genli
 ---
 
 # Troubleshoot Windows Boot Manager error  - 0xC0000225 "Status not found"
- 
+
 This article provides steps to resolve issues where error code 0xC0000225 occurs in an Azure VM. This error states that the status or object is not found.
 
 ## Symptoms
@@ -28,10 +28,10 @@ The file associated with this error code will inform you which steps to take in 
 ### Drivers, OS Related or Third Party
 
 If the file is present but refers to a driver (as is shown) or is OS related or third party, follow the steps under the section [Repair the System File](#repair-the-system-file).
- 
+
 In the following image, Windows Boot Manager states "Windows failed to start. A recent hardware or software change might be the cause." The image also shows the Status as "0xc0000225", **File:** as `\windows\System32\drivers\atapi.sys`, and **Info:** as "The operating system couldn't be loaded because a critical system driver is missing or contains errors."
 
-:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-driver-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when the associated file is present but refers to a driver."::: 
+:::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-driver-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when the associated file is present but refers to a driver.":::
 
 ### No File
 
@@ -44,7 +44,7 @@ In the following image, Windows Boot Manager states "Windows failed to start. A 
 ### Registry File
 
 If it refers to any of the registry files, such as \windows\system32\config\system, follow the steps under the section [Create a Support Ticket](#contact-support).
- 
+
 In the following image, Windows Boot Manager states "Windows failed to start. A recent hardware or software change might be the cause." The image also shows the Status as "0xc0000225", the File as `\windows\System32\config\system`, and **Info:** as "The operating system couldn't be loaded because the system registry file is missing or contains errors."
 
 :::image type="content" source="media/boot-error-status-not-found/error-0xc0000225-registry-file.png" alt-text="Screenshot of Windows failed to start error with the Status code 0xc0000225 when it refers to \windows\system32\config\system.":::
@@ -70,6 +70,7 @@ A registry hive corruption could be due to:
 - The Hive fails
 - The Hive mounts, but is empty
 - The Hive was not closed properly
+
 ## Solution
 
 ### Process Overview
@@ -103,7 +104,7 @@ A registry hive corruption could be due to:
 
 1. Using the attached VHD, navigate to the file location of the binary shown in your virtual machine (VM) screenshot.
 1. Right-click the file, select **Properties**, and then select the **Details** tab to see information on the file.
-       
+
     Note the version of the file, as shown in the image below:
 
       :::image type="content" source="media/boot-error-status-not-found/file-properties.png" alt-text="Screenshot of the properties window for the cng.sys file, with the file version highlighted.":::
@@ -148,7 +149,7 @@ Once this task is complete, continue to [Enable the Serial Console and memory du
 
 Collect the current booting setup information and note the identifier on the active partition. You will then use this information to add the **OSDEVICE** variable, following the directions for the generation of your VM.
 
-If this information collection gives an error where there's no **\boot\bcd** file, then use the instructions in [Repair the System File](#repair-the-system-file) instead. 
+If this information collection gives an error where there's no **\boot\bcd** file, then use the instructions in [Repair the System File](#repair-the-system-file) instead.
 
 1. For Generation 1 VMs, open an elevated command prompt as an Administrator and enter the following command:
 
@@ -170,7 +171,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
    1. Open an elevated command prompt as an Administrator and enter the following commands:
       1. Open the **DISKPART TOOL** using the command `diskpart`.
       1. List all disks, then select the attached disk identified in the previous step:
-      
+
          ```
          list disk
          sel disk <DISK #>
@@ -181,7 +182,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
          :::image type="content" source="media/boot-error-status-not-found/list-select-disk-result.png" alt-text="Screenshot shows the results of listing and selecting a disk.":::
 
       1. List the partitions and select the EFI system partition identified in the previous step:
-      
+
          ```
          list partition
          sel partition <PARTITION #>
@@ -198,7 +199,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
          :::image type="content" source="media/boot-error-status-not-found/assign-command-and-new-drive.png" alt-text="Screenshot of the assign command output and the new drive SYSTEM (F:) in File Explorer.":::
 
       1. List the BCD store data using the following command:
-      
+
          `bcdedit /store <LETTER OF EFI SYSTEM PARTITION>:EFI\Microsoft\boot\bcd /enum`
 
          In the following image, Windows Boot Loader is in a generation 2 VM with the identifier attribute highlighted. The highlighted identifier attribute has a value of **{default}**.
@@ -210,7 +211,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
 1. Notice that the OSDEVICE variable on the active partition is missing:
 
    :::image type="content" source="media/boot-error-status-not-found/osdevice-missing.png" alt-text="Screenshot of Windows Boot Manager and Windows Boot Loader's attributes.":::
-   
+
    In this image, Windows Boot Manager and Windows Boot Loader's attributes are listed in the command prompt, but the OSDEVICE attribute is missing.
 
 1. Add the OSDEVICE variable based on the following information:
@@ -219,6 +220,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
 
    > [!NOTE]
    > The boot-able folder will be on the same partition as the windows folder **\windows folder**.
+   >
    > - The bootable folder for Generation 1 VMs is **(\boot\bcd folder)**.
    > - The bootable folder for Generation 2 VMs is **EFI\Microsoft\boot\bcd**.
 
@@ -234,6 +236,7 @@ If this information collection gives an error where there's no **\boot\bcd** fil
 
    > [!NOTE]
    > The boot-able folder will most likely be on a different partition than the windows folder **\windows folder**.
+   >
    > - The bootable folder for Generation 1 VMs is **(\boot\bcd folder)**.
    > - The bootable folder for Generation 2 VMs is **EFI\Microsoft\boot\bcd**.
 
@@ -259,7 +262,7 @@ The **Registry File** error has a solution, but you will need to [create a suppo
 1. Run the following commands:
 
    **Enable the Serial Console**:
-   
+
    ```console
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
@@ -298,7 +301,9 @@ The **Registry File** error has a solution, but you will need to [create a suppo
    ```console
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
-   
+
 ### Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -44,6 +44,4 @@ To resolve this issue for only those users who aren't synced to Azure AD, follow
 
 The yellow exclamation mark isn't displayed in Office 2016 applications.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
