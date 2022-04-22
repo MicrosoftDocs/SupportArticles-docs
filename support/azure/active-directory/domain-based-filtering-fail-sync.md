@@ -56,6 +56,4 @@ This issue may occur if the run profile isn't updated.
 8. Right-click the same management agent or Connector again, and then select **Run**.
 9. Select **Full Sync**, and then select **OK**.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

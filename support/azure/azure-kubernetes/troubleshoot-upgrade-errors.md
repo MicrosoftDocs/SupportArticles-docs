@@ -36,15 +36,16 @@ To resolve this issue, follow these steps:
     ```cli
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
-    The following screenshpt shows the default rules:
+
+    The following screenshot shows the default rules:
 
     :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules.":::
 
 1. If you have the default rules, skip this step. Otherwise, revise and remove the rules that are blocking the internet traffic. Then, try to upgrade the AKS cluster to the same version that you previously tried to upgrade to. This process will trigger a reconciliation.
 
-```cli
-az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
-```
+    ```cli
+    az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
+    ```
 
 ## Error code: PodDrainFailure
 
@@ -81,6 +82,7 @@ After the quota change takes effect, try to upgrade the cluster to the same vers
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
+
 ## Error code: Quotaexceeded
 
 ### Cause
@@ -101,7 +103,7 @@ In this case, you have to submit a support ticket to increase the quote for Comp
 
 ### Error message
 
-Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ doesn't have enough capacity for XXX IP addresses.' Details=[]
+Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ doesn't have enough capacity for IP addresses.' Details=[]
 
 ### Cause
 
@@ -119,3 +121,5 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 1. Switch the original node pool to one of type system.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

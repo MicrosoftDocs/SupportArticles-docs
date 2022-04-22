@@ -76,6 +76,4 @@ After you run both sets of cmdlets, your application will be enabled to change t
 > [!NOTE]
 > It can take up to 30 minutes for the permissions to be applied to the Application Service Principal after you add the permissions to the Office 365 administrative roles.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

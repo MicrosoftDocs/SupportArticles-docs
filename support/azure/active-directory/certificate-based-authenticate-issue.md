@@ -77,7 +77,7 @@ _Original KB number:_ &nbsp; 4032987
     ```
 
     > [!NOTE]
-    > This occurs because some modern apps send *prompt=login* to Azure AD in their request. Azure AD translates this in the ADFS request to **wauth=usernamepassworduri** (this tells ADFS to do username/password authentication) and **wfresh=0** (tells ADFS to ignore the SSO state and do a fresh authentication). If users have to use Certificate Based Authentication, the **PromptLoginBehavior** must be set to **False**.
+    > This occurs because some modern apps send _prompt=login_ to Azure AD in their request. Azure AD translates this in the ADFS request to **wauth=usernamepassworduri** (this tells ADFS to do username/password authentication) and **wfresh=0** (tells ADFS to ignore the SSO state and do a fresh authentication). If users have to use Certificate Based Authentication, the **PromptLoginBehavior** must be set to **False**.
 
     To disable **PromptLoginBehavior** on the Azure AD domain, run the following command:
 
@@ -221,3 +221,5 @@ _Original KB number:_ &nbsp; 4032987
 - [Azure AD: Certificate based authentication for iOS and Android now in preview.](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/azuread-certificate-based-authentication-for-ios-and-android-now/ba-p/244999)
 - [Get started with certificate based authentication on iOS - Public Preview](/azure/active-directory/authentication/active-directory-certificate-based-authentication-ios)
 - [ADFS: Certificate Authentication with Azure AD & Office 365](/archive/blogs/samueld/adfs-certauth-aad-o365)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

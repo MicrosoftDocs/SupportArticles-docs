@@ -33,3 +33,5 @@ To resolve this problem, follow these steps:
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters`
 3. Delete the `supportedencryptiontypes` DWORD entry if it exists.
 4. Restart the device.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

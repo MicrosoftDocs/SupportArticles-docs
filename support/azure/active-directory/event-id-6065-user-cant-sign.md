@@ -124,3 +124,5 @@ Set-MsolCompanySettings -AllowAdHocSubscriptions $false
 - [Set-MsolCompanySettings](/powershell/module/msonline/set-msolcompanysettings?view=azureadps-1.0&preserve-view=true)
 - [How administrators can control the accounts created for RMS for individuals](/azure/information-protection/rms-for-individuals)
 - [50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization](https://support.microsoft.com/help/2925380)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

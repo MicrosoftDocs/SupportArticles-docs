@@ -208,4 +208,5 @@ If the troubleshooting guidance in this article doesn't help you resolve the iss
 
 - Check the network security groups and route tables associated with subnets if you have any.
 - If a virtual appliance like a firewall controls the traffic between subnets, check the firewall and [Firewall access rules](/azure/container-registry/container-registry-firewall-access-rules).
-- [Contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

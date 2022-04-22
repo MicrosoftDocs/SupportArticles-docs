@@ -22,6 +22,7 @@ ms.author: genli
 This article explains why device names change after you restart a Linux VM or reattach the data disks. The article also provides solutions for this problem.
 
 ## Symptoms
+
 You may experience the following problems when running Linux VMs in Microsoft Azure:
 
 - The VM fails to boot after a restart.
@@ -148,7 +149,6 @@ $ ls -l /dev/disk/by-uuid/b0048738-4ecc-4837-9793-49ce296d2692
 lrwxrwxrwx 1 root root 10 Jun 19 15:57 /dev/disk/by-uuid/b0048738-4ecc-4837-9793-49ce296d2692 -> ../../sdc1
 ```
 
-
 ### Get the latest Azure Storage rules
 
 To get the latest Azure Storage rules, run the following commands:
@@ -167,3 +167,4 @@ For more information, see the following articles:
 - [Linux: What UUIDs can do for you](https://www.linux.com/news/what-uuids-can-do-you)
 - [Udev: Introduction to device management in a modern Linux system](https://www.linux.com/news/udev-introduction-device-management-modern-linux-system)
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
