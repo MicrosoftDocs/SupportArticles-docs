@@ -21,7 +21,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - Administer AI Builder
-            url: https://docs.microsoft.com/en-us/ai-builder/administer
+            url: https://docs.microsoft.com/ai-builder/administer
 
  # Card
   - title: Models

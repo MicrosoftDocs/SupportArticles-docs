@@ -11,7 +11,7 @@
       href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
   - name: Models
     items:
-    - name: AI models fail to be imported in new environment
+    - name: AI models fail to be imported in a new environment
       href: aimodels-fail-to-be-imported-in-a-new-environment.md
     - name: Dependency Timeout error
       href: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
