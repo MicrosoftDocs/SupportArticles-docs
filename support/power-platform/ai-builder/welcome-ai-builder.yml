@@ -34,8 +34,6 @@ landingContent:
             url: aimodels-fail-to-be-imported-in-a-new-environment.md
           - text: Form processing isn't extracting tables
             url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
-          - text: Training document isn't displayed
-            url: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md 
 
  # Card
   - title: Documentation and training
