@@ -17,7 +17,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 When you try to install Visual Studio 2015 security updates, you receive the error 
 
->This update requires Visual Studio 2015 Update 3 to be installed.
+> This update requires Visual Studio 2015 Update 3 to be installed.
 
 > [!NOTE]
 > To determine whether Visual Studio 2015 Update 3 (KB3022398) is installed, check the Installed Updates list in Control Panel.
