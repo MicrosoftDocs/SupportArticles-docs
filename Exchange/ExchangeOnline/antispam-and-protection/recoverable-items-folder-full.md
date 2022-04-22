@@ -40,7 +40,7 @@ The Recoverable Items folder isn't emptied because the retention policy tag appl
 
 ## Resolution
 
-To resolve this issue, configure the retention policy for Recoverable Items more active by following these steps:
+To resolve this issue, configure the retention policy tag for Recoverable Items more active by following these steps:
 
 1. Confirm the action and age limit of the retention policy tag for the type **RecoverableItems** by running the following cmdlets:
 
