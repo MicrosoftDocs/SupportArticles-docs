@@ -47,3 +47,5 @@ Sc.exe managedaccount aadconnectprovisioningagent true
 ```
 
 The wizard now completes successfully.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

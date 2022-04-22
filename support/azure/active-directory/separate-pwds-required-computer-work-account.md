@@ -31,6 +31,4 @@ To resolve this problem, do one of the following:
 
 After directory synchronization occurs, users' computer passwords in the on-premises Active Directory environment are synced to Azure AD. Users can then log on to their computers and sign in to the cloud service by using the same password.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

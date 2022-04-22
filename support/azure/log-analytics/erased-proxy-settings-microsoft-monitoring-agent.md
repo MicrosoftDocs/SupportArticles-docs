@@ -78,3 +78,5 @@ You can remove the override of the advisor proxy setting rule so that the restor
 1. Select the entry that involves the Microsoft Monitoring Agent, select **Delete**, and then select **Close**.
 
 1. Return to the **Proxy Settings** tab in the **Microsoft Monitoring Agent Properties** dialog box, select the **Use a proxy server** option, and then reenter the **Proxy Server** address that you want to specify.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

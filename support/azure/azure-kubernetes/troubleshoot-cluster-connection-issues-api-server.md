@@ -67,3 +67,5 @@ You can take these common troubleshooting steps to check the connectivity to the
 1. Make sure the [network security group that's associated with AKS nodes](/azure/aks/concepts-security#azure-network-security-groups) allows communication on TCP port 10250 within the AKS nodes.
 
 For other common troubleshooting steps, see [I'm receiving TCP timeouts when using kubectl or other third-party tools connecting to the API server](/azure/aks/troubleshooting#im-receiving-tcp-timeouts-when-using-kubectl-or-other-third-party-tools-connecting-to-the-api-server).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
