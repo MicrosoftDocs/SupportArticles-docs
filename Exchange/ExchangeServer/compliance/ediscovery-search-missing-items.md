@@ -1,6 +1,6 @@
 ---
 title: Missing items in eDiscovery search results
-description: Fixes an issue in which the eDiscovery search returns an incomplete set of results.
+description: Provides a workaround for an issue in which eDiscovery search returns an incomplete set of results.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -46,7 +46,7 @@ There are some scenarios though when the time stamp information that's passed on
 
 ## Workaround
 
-To work around this issue, create a setting override to use the **Search Folder** type in the search query setting.
+To work around this issue, create a setting override to use the **Search Folder** type in the search query setting. The setting override will be retained for 180 days only. Re-create the override before it expires.
 
 1. Run the following cmdlet to create a setting override:
 
