@@ -1,15 +1,15 @@
 ---
-title: Common issues in Visual Studio 2013 setup
+title: Common issues in Visual Studio setup
 description: This article describes common issues during Visual Studio installation, and provides suggested workarounds.
-ms.date: 04/13/2020
+ms.date: 04/22/2020
 ms.custom: sap:Installation
 ms.technology: vs-installation-install
 ---
-# Common issues and workarounds in Visual Studio 2013 setup
+# Common issues and workarounds in Visual Studio setup
 
-This article helps you resolve problems that occur when you install Microsoft Visual Studio 2013.
+This article helps you resolve problems that occur when you install Microsoft Visual Studio.
 
-_Original product version:_ &nbsp; Visual Studio 2013  
+_Original product version:_ &nbsp; Visual Studio 2013, Visual Studio 2015  
 _Original KB number:_ &nbsp; 2899270
 
 ## Symptoms
@@ -69,7 +69,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
     ```
 
     > [!NOTE]
-    >In this command, the *\<DIRECTORY NAME>* placeholder is the folder to which you extracted the files, and the *\<ISO_NAME>* placeholder is the path of the Visual Studio ISO file. For more information, see the *ReadMe.htm* file in the extraction directory.
+    >In this command, the *\<DIRECTORY NAME>* placeholder is the folder to which you extracted the files, and the *\<ISO_NAME>* placeholder is the path of the Visual Studio ISO file. For more information, see the _ReadMe.htm_ file in the extraction directory.
 
 4. Verify that the Secure Hash Algorithm 1 (SHA-1) value that is returned by the File Checksum tool matches the expected value. To determine the expected value, examine the folder to which you downloaded the ISO file.
 
@@ -91,9 +91,9 @@ If the expected SHA-1 value doesn't match the value that is returned by the File
 If the error occurs when you try to repair Visual Studio, your installation cache may have become corrupted. To repair the cache, follow these steps:
 
 1. Close Visual Studio.
-2. Open an elevated command prompt. To do it, select **Start**, type *cmd* in the **Start** search box, right-click *cmd.exe* in the results list, and then select **Run as administrator**.
+2. Open an elevated command prompt. To do it, select **Start**, type _cmd_ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
 3. At the command prompt, type `cd C:\ProgramData\Package Cache`, and then press Enter.
-4. To clear the *.msi* and *.cab* files from the cache, type the following commands at the command prompt, and press Enter after each command:
+4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands at the command prompt, and press Enter after each command:
 
     ```console
     Delete /F /S *.msi Delete /F /S *.cab
@@ -117,7 +117,7 @@ If you select **Continue** to proceed with the Visual Studio installation, you m
 
 > Setup Completed. However, not all features installed correctly.
 
-You are also shown a list of multiple features that couldn't be installed because the system can't find the file specified. To fix the issue, try the following method:
+You're also shown a list of multiple features that couldn't be installed because the system can't find the file specified. To fix the issue, try the following method:
 
 - Ensure that you are on a computer that's connected to the internet.
 In some cases, Visual Studio can programmatically retrieve and then apply the required certificate updates so that the affected features can be successfully installed.
@@ -129,7 +129,7 @@ In some cases, Visual Studio can programmatically retrieve and then apply the re
 
 - If the above steps don't resolve the issue, you can also try to manually install the required certificate updates. For information on how to obtain Windows update root certificates, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).
 
-If you have already installed Visual Studio 2013, try to repair Visual Studio after you have tried one or more of the above methods. This process attempts to successfully install the features that didn't install on the previous attempt. To repair Visual Studio, open **Programs and Features** (appwiz.cpl). From the **Programs and Features** window, right-click **Visual Studio 2013** and select **Change**, and then select **Repair** to initiate the repair process.
+If you have already installed Visual Studio 2013, try to repair Visual Studio after you've tried one or more of the above methods. This process attempts to successfully install the features that didn't install on the previous attempt. To repair Visual Studio, open **Programs and Features** (appwiz.cpl). From the **Programs and Features** window, right-click **Visual Studio 2013** and select **Change**, and then select **Repair** to initiate the repair process.
 
 > [!NOTE]
 > This error applies only to Windows 7 Service Pack 1 (SP1). Windows 8 and later versions of Windows have these certificate updates installed by default.
@@ -162,4 +162,4 @@ To do it, follow these steps:
 1. Download the [Microsoft Visual Studio and .NET Framework Log Collection Tool](https://www.microsoft.com/download/details.aspx?id=12493) (collect.exe).
 2. Run the collect.exe tool from the directory where you saved the tool.
 3. The utility creates a compressed cabinet file of all the Visual Studio and .NET logs to `%TEMP%\vslogs.cab`.
-4. Post the *vslogs.cab* file with some descriptions of your issue to the forum.
+4. Post the _vslogs.cab_ file with some descriptions of your issue to the forum.
