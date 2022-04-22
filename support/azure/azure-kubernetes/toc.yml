@@ -115,8 +115,11 @@
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
 
+- name: Storage
+  items:
+  - name: Errors when mounting file share
+    href: fail-to-mount-azure-file-share.md
+
 - name: Errors when pulling images from ACR to AKS cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
 
-- name: Errors when mounting file share
-  href: fail-to-mount-azure-file-share.md
