@@ -88,3 +88,5 @@ To make sure that the file specification is updated, follow these steps:
     |:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-before.png" alt-text="Screenshot of the search results for the imagepath before change.":::<br/>|:::image type="content" source="media/mars-agent-system-state-backup-failure/imagepath-value-after.png" alt-text="Screenshot of the search results for the imagepath after change.":::<br/>|
 
 10. Go back to the MARS Agent console and start a System State Backup by clicking **Back Up Now**.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

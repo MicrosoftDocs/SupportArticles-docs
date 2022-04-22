@@ -294,9 +294,9 @@ To review the JSON logs:
 
 1. Open the JSON log files your JSON viewer.
 
-1. Search for the term *legacy TLS*.
+1. Search for the term _legacy TLS_.
 
-1. If you find a log file with *legacy TLS*, review that sign-in log entry to learn more about the source of the legacy TLS request. Look for the following fields:
+1. If you find a log file with _legacy TLS_, review that sign-in log entry to learn more about the source of the legacy TLS request. Look for the following fields:
     - **UserDisplayName**
     - **AppDisplayName**
     - **ResourceDisplayName**
@@ -399,3 +399,5 @@ After you obtain the logs, you can get more details about legacy TLS-based sign-
 1. Check for a **Legacy TLS (TLS 1.0, 1.1, or 3DES)** value that's set to **True**. If you see that particular field and value, the sign-in attempt was made using legacy TLS. If the sign-in attempt was made using TLS 1.2, that field doesn't appear.
 
 For more information, see [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

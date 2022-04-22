@@ -157,6 +157,7 @@ First, follow these steps to transfer the TCP dump files from the AKS Windows no
     C:\Users\bookbinder>net use z: \\tsclient\c
     The command completed successfully.
     ```
+
 1. Then run the following copy command to copy the TCP dump files to your jump VM:
 
     ```output
@@ -178,4 +179,4 @@ Next, follow these steps to copy the dump files from the jump VM to your machine
 
 The dump files are now in the root directory of your machine's c: drive.
 
----
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

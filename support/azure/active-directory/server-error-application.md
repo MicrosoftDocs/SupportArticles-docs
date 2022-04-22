@@ -45,3 +45,5 @@ To fix this issue, follow these steps:
     <add key="ida:SignUpPolicyId" value="B2C_Signup_Policy_Name">
     </appSettings>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

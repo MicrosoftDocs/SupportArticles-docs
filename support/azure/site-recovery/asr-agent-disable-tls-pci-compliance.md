@@ -75,3 +75,5 @@ To fix these issues, make sure that the .NET Framework 4.6 or a later version is
     ```
 
 After you complete these steps, you should be able to install and use Azure Site Recovery as expected.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

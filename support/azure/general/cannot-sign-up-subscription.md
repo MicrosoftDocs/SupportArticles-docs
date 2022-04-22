@@ -32,5 +32,7 @@ This process transforms the unmanaged directory into a managed directory by ass
 
 ## References
 
-- [How to perform an IT Admin Takeover with O365](https://powerbi.microsoft.com/blog/how-to-perform-an-it-admin-takeover-with-o365/) 
+- [How to perform an IT Admin Takeover with O365](https://powerbi.microsoft.com/blog/how-to-perform-an-it-admin-takeover-with-o365/)
 - [Take over an unmanaged directory in Azure Active Directory](/azure/active-directory/domains-admin-takeover)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

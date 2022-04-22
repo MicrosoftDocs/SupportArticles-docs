@@ -24,3 +24,5 @@ An InvalidModel or BadRequest exception was thrown during the deployment because
 Review your service configuration (.cscfg) and service definition (.csdef) files so that all parameters are entered correctly.
 
 Use [Azure Cloud Services (classic) configuration schema (.cscfg file)](/azure/cloud-services/schema-cscfg-file) and [Azure Cloud Services (classic) definition schema (.csdef file)](/azure/cloud-services/schema-csdef-file) as references for correcting each file.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

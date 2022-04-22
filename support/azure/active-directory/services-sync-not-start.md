@@ -21,7 +21,7 @@ You discover that one or more Azure AD Connect services don't start. For example
 
 ## Solution 1: Set the directory synchronization account to log on as a service in Group Policy
 
-1. Select **Start**, enter *gpedit.msc* in the search box, and then press Enter to open the Local Group Policy Editor snap-in.
+1. Select **Start**, enter _gpedit.msc_ in the search box, and then press Enter to open the Local Group Policy Editor snap-in.
 
 2. Expand **Computer Configuration** > **Window Settings** > **Security Settings** > **Local policies**, and then select **User rights assignment**.
 
@@ -43,6 +43,4 @@ If solutions 1 and 2 don't resolve the issue, remove and then reinstall director
 
 For example, if you use the Azure Active Directory Sync tool, remove and then reinstall it. Or, if you use Azure AD Sync, remove and then reinstall it.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
