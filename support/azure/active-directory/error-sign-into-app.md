@@ -43,3 +43,5 @@ To fix this issue, follow these steps:
     <add key="ida:ClientId" value="**xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx**">
     </appSettings>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

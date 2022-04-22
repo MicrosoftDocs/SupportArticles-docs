@@ -47,3 +47,5 @@ What if you don't want to lose the IP address that's associated with your existi
 1. Make a new deployment to that slot.
 
 1. Associate the required reserved IP address to this cloud service slot.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

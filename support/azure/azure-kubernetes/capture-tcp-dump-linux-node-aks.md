@@ -121,3 +121,5 @@ Output similar to the following text appears:
 $ kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 tar: Removing leading `/' from member names
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

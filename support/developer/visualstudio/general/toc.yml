@@ -1,128 +1,32 @@
-- name: Debuggers and analyzers
-  items:
-  - name: .NET source code debugging
-    href: ./debuggers/dotnet-source-code-debug.md
-  - name: Can't use Windows Simulator
-    href: ./debuggers/windows-simulator-needs-credentials.md
-  - name: Prevent lost kernel and user mode events
-    href: ./debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md
-  - name: Information collected by Remote Debugger
-    href: ./debuggers/remote-debugger-collect-information.md
-  - name: Debugger doesn't stop on breakpoints
-    href: ./debuggers/debugger-not-stop-breakpoint.md
-
-- name: General
-  items:
-  - name: _stat-family function can't support Symbolic Directory Link
-    href: ./general/_stat-family-cannot-support-symbolic-directory-link.md
-  - name: Alternate credentials don't work for Online accounts
-    href: ./general/alternate-credentials-stop-working.md
-  - name: BI projects don't open after an upgrade
-    href: ./general/bi-project-not-open-after-upgrade.md
-  - name: Can't find resources in XAML or WPF designer
-    href: ./general/cannot-find-resource-named-error.md
-  - name: Can't sign in when JavaScript is disabled
-    href: ./general/cannot-sign-in-javascript-disabled.md
-  - name: Error when you build applications
-    href: ./general/not-transform-license-file-to-binary-resource.md
-  - name: Error when you use HTTPS protocol
-    href: ./general/release-management-not-have-https-protocol.md
-  - name: Files can't be saved when you use Resource Editor
-    href: ./general/resource-editor-cannot-save-file.md
-  - name: Help Viewer Power Tool
-    href: ./general/help-viewer-power-tool.md
-  - name: JDK is missing
-    href: ./general/jdk-missing-create-xamarin-app.md
-  - name: Microsoft.Vsa.tlb could not be loaded
-    href: ./general/vsa-tlb-not-loaded.md
-  - name: Subscriptions administrator migration
-    href: ./general/subscription-administrator-migration.md
-  - name: Use AssemblyVersion and AssemblyFileVersion
-    href: ./general/assembly-version-assembly-file-version.md
-  - name: VBScript runtime error when you do a numeric comparison
-    href: ./general/vbs-type-mismatch-error.md
-  - name: Windows Automation API 3.0 improves performance
-    href: ./general/windows-automation-api-3-improve-visual-studio.md
-  - name: Workarounds for Visual Studio 2022 on unsupported operating systems
-    href: ./general/visual-studio-2022-unsupported-operating-systems.md
-  
-- name: Installation
-  items:
-  - name: Warnings about an untrusted certificate
-    href: ./installation/warnings-untrusted-certificate.md
-
-- name: Language or compilers
-  items:
-  - name: Can't use the Scale-140 logo
-    href: ./language-compilers/cannot-use-scale-140-badge-logo.md
-  - name: Deploy web applications with Xcopy
-    href: ./language-compilers/deploy-aspnet-app-xcopy-command.md
-  - name: Determine connection state of local system
-    href: ./language-compilers/determine-connection-state-local-system.md
-  - name: Fail to compile a 32-bit app on a x64 machine
-    href: ./language-compilers/cannot-compile-32-bit-app-x64-machine.md
-  - name: Help Viewer 2.0 crashes
-    href: ./language-compilers/help-viewer-2-crashes.md
-  - name: Instrumenting an signed assembly would throw warning message
-    href: ./language-compilers/instrumenting-signed-assembly-throw-warning-message.md
-  - name: LNK1102 error when you build projects
-    href: ./language-compilers/linker-fatal-error-out-of-memory.md
-  - name: Referenced project doesn't exist
-    href: ./language-compilers/building-solution-with-multiple-projects-fails.md
-  - name: Single instance application crashes
-    href: ./language-compilers/single-instance-application-crashes.md
-  - name: Visual Studio 2012 crashes with StarDist-3
-    href: ./language-compilers/crash-with-stardist-3.md
-  - name: Use JScript or JavaScript to traverse a collection
-    href: ./language-compilers/use-jscript-javascript-traverse-collection.md
-
-- name: Integrated development environment (IDE)
-  items:
-  - name: Adjust visual experience settings
-    href: ./ide/adjust-visual-experience-settings.md
-  - name: ATL control font stock property doesn't update
-    href: ./ide/atl-control-font-stock-not-update.md
-  - name: Can't dismiss developer license notifications
-    href: ./ide/developer-license-notification-not-dismiss.md
-  - name: Can't switch between organizational accounts
-    href: ./ide/cannot-switch-accounts.md
-  - name: Overview of Visual Studio 2012 updates
-    href: ./ide/visual-studio-2012-updates.md
-  - name: Performance and crashes issues
-    href: ./ide/performance-crash-issue.md
-  - name: Release Management Client crashes 
-    href: ./ide/release-management-client-crash.md
-  - name: Screen readers can't read tool windows
-    href: ./ide/screen-readers-not-read-tool-windows.md
-
-- name: Project/Build system
-  items:
-  - name: Build errors when you delete the debug configuration
-    href: ./project-build/build-errors-delete-debug-configuration.md
-  - name: Building a Windows 10 driver fails
-    href: ./project-build/building-windows-10-driver-fails.md
-  - name: Setup projects have dependencies on .NET Framework
-    href: ./project-build/setup-project-depend-dotnet-framework.md
-
-- name: Team Explorer/Version control
-  items:
-  - name: Excel or Project can't connect to Team Foundation Server
-    href: ./version-control/excel-project-cannot-connect-tfs-2010.md
-  - name: Solution Platform drop-down list isn't visible
-    href: ./version-control/invisible-solution-platform-drop-down-list.md
-
-- name: Third-party tools installed with Visual Studio
-  items:
-  - name: Google Android 27 emulator fails to start
-    href: ./third-party/android-27-emulator-not-start.md
-  - name: Third-party dependencies
-    href: ./third-party/third-party-dependencies.md
-
-- name: Tools and utilities
-  items:
-  - name: Can't start Windows Simulator
-    href: ./tools-utilities/cannot-start-windows-simulator.md
-  - name: Can't use Custom Report Items in SSDT
-    href: ./tools-utilities/cannot-use-custom-report-items-ssdt.md
-  - name: NuGet-based Package Manager is missing
-    href: ./tools-utilities/nuget-based-package-manager-missing.md
+- name: _stat-family function can't support Symbolic Directory Link
+  href: ./_stat-family-cannot-support-symbolic-directory-link.md
+- name: Alternate credentials don't work for Online accounts
+  href: ./alternate-credentials-stop-working.md
+- name: BI projects don't open after an upgrade
+  href: ./bi-project-not-open-after-upgrade.md
+- name: Can't find resources in XAML or WPF designer
+  href: ./cannot-find-resource-named-error.md
+- name: Can't sign in when JavaScript is disabled
+  href: ./cannot-sign-in-javascript-disabled.md
+- name: Error when you build applications
+  href: ./not-transform-license-file-to-binary-resource.md
+- name: Error when you use HTTPS protocol
+  href: ./release-management-not-have-https-protocol.md
+- name: Files can't be saved when you use Resource Editor
+  href: ./resource-editor-cannot-save-file.md
+- name: Help Viewer Power Tool
+  href: ./help-viewer-power-tool.md
+- name: JDK is missing
+  href: ./jdk-missing-create-xamarin-app.md
+- name: Microsoft.Vsa.tlb could not be loaded
+  href: ./vsa-tlb-not-loaded.md
+- name: Subscriptions administrator migration
+  href: ./subscription-administrator-migration.md
+- name: Use AssemblyVersion and AssemblyFileVersion
+  href: ./assembly-version-assembly-file-version.md
+- name: VBScript runtime error when you do a numeric comparison
+  href: ./vbs-type-mismatch-error.md
+- name: Windows Automation API 3.0 improves performance
+  href: ./windows-automation-api-3-improve-visual-studio.md
+- name: Workarounds for Visual Studio 2022 on unsupported operating systems
+  href: ./visual-studio-2022-unsupported-operating-systems.md

@@ -104,3 +104,5 @@ For more information about how to implement and verify sync rule changes, see  
 #### Password hash synchronization
 
 If the Password Hash Synchronization feature is enabled on Azure AD Connect, the Password Synchronization Manager synchronizes the on-premises Active Directory **PwdLastSet** attribute with the Azure AD **LastPasswordChangeTimestamp** attribute. This is true even if the **PwdLastSet** attribute has been filtered by using the two methods in this section.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

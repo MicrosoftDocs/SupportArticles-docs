@@ -85,3 +85,5 @@ Navigate to the path `C:\Resources\temp\{Deployment ID}.ProcessorEngine\RoleTemp
 In Visual Studio, the **Copy to Output Directory** property for your startup batch file or any other dependent files should be set to **Copy Always** to be sure that your startup batch file is properly deployed to your project on Azure (**approot\bin** for Web roles, and **approot**  for worker roles). However in this case **Copy to Output Directory** was set to **Do not copy** for 'configuration.xml' file.
 
 :::image type="content" source="media/scenario-4-processorengine-role-stuck-busy-state/configurationxml-file.png" alt-text="Screenshot shows the configuration.xml file properties.":::
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
