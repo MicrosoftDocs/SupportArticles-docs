@@ -35,7 +35,7 @@ Here's an example of the full response that contains the detailed error message:
 
 ## Cause
 
-This issue occurs because the new BigFunnelDelayItemSizeThreshold limit that's used in Exchange Server 2019 isn't increased.
+This issue occurs because the new `BigFunnelDelayItemSizeThreshold` limit that's used in Exchange Server 2019 isn't increased.
 
 ## Resolution
 
