@@ -1,4 +1,4 @@
-- name: Can't save file settings in a project
+- name: Can't save file settings in a C++ project
   href: ./file-setting-not-save.md
 - name: Visual C++ 2010 supports .NET 4 as target
   href: ./cpp-2010-support-dotnet-4-target.md

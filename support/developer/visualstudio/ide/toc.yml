@@ -20,5 +20,5 @@
   href: ./crash-with-stardist-3.md
 - name: Help Viewer 2.0 crashes
   href: ./help-viewer-2-crashes.md
-- name: Mouse wheel events don't work
+- name: Mouse wheel events don't work in Visual Basic 6.0 IDE
   href: ../visual-basic/ide/mouse-wheel-events-do-not-work.md

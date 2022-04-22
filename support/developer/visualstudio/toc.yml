@@ -26,12 +26,6 @@
     href: ./language-compilers/toc.yml
 - name: Project/Build System
   href: ./project-build/toc.yml
-- name: Silverlight
-  href: ./silverlight/toc.yml
-- name: Subscriptions
-  items:
-  - name: Opt out of dev essentials
-    href: ./subscriptions/opt-out-of-dev-essentials.md
 - name: Team Explorer/Version control
   items:
   - name: Excel or Project can't connect to Team Foundation Server
@@ -56,3 +50,9 @@
     href: ./tools-utilities/cannot-use-custom-report-items-ssdt.md
   - name: NuGet-based Package Manager is missing
     href: ./tools-utilities/nuget-based-package-manager-missing.md
+- name: Silverlight
+  href: ./silverlight/toc.yml
+- name: Subscriptions
+  items:
+  - name: Opt out of dev essentials
+    href: ./subscriptions/opt-out-of-dev-essentials.md
