@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data transfer and Intune app protection policies
 description: General steps to help troubleshoot when Microsoft Intune app protection policies (APP) to not control data transfer as expected.
-ms.date: 04/12/2022
+ms.date: 04/22/2022
 ms.reviewer: roblane-msft
 ---
 # Troubleshooting data transfer between apps
@@ -16,7 +16,7 @@ You can start by confirming that you’ve met the prerequisites for using app pr
 
 - Supported platforms: App protection policies are supported on iOS, iPadOS, and Android. However, [Shared iPad devices](/mem/intune/enrollment/device-enrollment-shared-ipad) and [Android Enterprise dedicated devices](/mem/intune/apps/app-protection-policy#app-protection-experience-for-android-devices) are not supported.
 
-- Supported OS versions: Currently, app protection policies support iOS/iPadOS 12+ and Android 9+. [Supported OS versions](/mem/intune/fundamentals/supported-devices-browsers) will change in the future and older versions will become non-supported. Also, you need to meet requirements of each app you use, such as Office apps.
+- Supported OS versions: Check that you are working with a supported OS and version, and note any special version requirements for app protection policies: [Supported operating systems and browsers in Intune](/mem/intune/fundamentals/supported-devices-browsers). Supported OSes will change in the future and older versions will become non-supported. Also, you need to meet requirements of each app you use, such as Office apps.
 
 - Supported apps: Apps need to be integrated with the [Microsoft Intune App SDK](/mem/intune/developer/app-sdk-get-started) to support app protection policies. For a list of supported Microsoft apps and partner apps, see [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps).
 

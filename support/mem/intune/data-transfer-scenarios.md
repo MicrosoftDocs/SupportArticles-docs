@@ -1,7 +1,7 @@
 ---
 title: Common issues when using Intune app protection policies to control data transfer
 description: Learn how to diagnose and troubleshoot some common issues and misconfigurations when using Microsoft Intune app protection policies (APP) to control data transfer.
-ms.date: 04/12/2022
+ms.date: 04/22/2022
 ms.reviewer: roblane-msft
 ---
 # Common data transfer issues and scenarios
@@ -40,13 +40,21 @@ In this scenario, a user can transfer files to policy unmanaged apps even though
 
 In this scenario, a user can save files to local storage even though **Save copies of org data** is set to 'Block'. Like the previous scenario, this is also expected behavior as long as the saved files are encrypted. Some apps implement data sharing with the Files app. In this case, users can transfer encrypted corporate data to the Files app.
 
-## TO DO: The policy is applied, but iOS users can still transfer work files to unmanaged apps
+## The policy is applied, but iOS users can still transfer work files to unmanaged apps
 
-Add this in after review (and delete from original article)
+The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/open-in-icon.png":::) feature for iOS devices (i.e., Share extension) can limit file transfers between apps that are deployed through a mobile device management (MDM) solution. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
+
+You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
+
+- **Employee-owned devices that are not managed by an MDM solution:** You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Configured in this way, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
+
+- **Devices that are managed by MDM solutions:** For devices that are enrolled in Intune or third-party MDM solutions, Intune APP and the iOS **Open-in management** feature control data sharing between protected apps and other managed iOS apps that are deployed through MDM.
+
+For more information about how to receive and share app data, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios). For details on how to customize the apps that appear when sharing, see the following scenario.
 
 ## I want to customize the apps available in the iOS Share extension
 
-A common scenario admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiving apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you are using a mobile device management (MDM) solution.
+A common scenario admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiving apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you are using an MDM solution.
 
 ### Option A: Restrict sharing for Intune-managed devices
 

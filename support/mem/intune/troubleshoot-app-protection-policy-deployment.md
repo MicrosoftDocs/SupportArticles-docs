@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot Microsoft Intune app protection policy deployment
 description: This articles gives troubleshooting guidance for IT Admins for issues when you deploying Intune app protection policies. 
-ms.date: 09/03/2021
+ms.date: 04/21/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ---
 
 # Troubleshooting app protection policy deployment in Intune
 
-This article helps IT Admins understand and troubleshoot problems when you apply app protection policies (APP) in Microsoft Intune. Follow the instructions in the sections that apply to your situation.
+This article helps IT Admins understand and troubleshoot problems when you apply app protection policies (APP) in Microsoft Intune. Follow the instructions in the sections that apply to your situation. Browse the guide for additional APP-related troubleshooting guidance, such as [Troubleshooting app protection policy user issues](troubleshoot-mam.md) and [Troubleshoot data transfer between apps](troubleshoot-data-transfer.md).
 
 ## Before you begin
 
@@ -122,6 +122,8 @@ For iOS, this practice is important because each version contains fixes that aff
 
 ## Additional troubleshooting scenarios
 
+Review the following common scenarios when troubleshooting APP issue. You can also review the scenarios in [Common data transfer issues](data-transfer-scenarios.md).
+
 ### Scenario: Policy changes are not applying
 
 The [Intune App SDK](/mem/intune/developer/app-sdk-get-started) checks regularly for policy changes. However, this process may be delayed for any of the following reasons:
@@ -163,32 +165,8 @@ For iOS, the following additional [app configuration settings](/mem/intune/apps/
 - **IntuneMAMDeviceID** must be configured as the device ID token. For example, key=IntuneMAMDeviceID, value={{deviceID}}. For more information, see [Add app configuration policies for managed iOS devices](/mem/intune/apps/app-configuration-policies-use-ios).
 - If only the **IntuneMAMDeviceID** value is configured, Intune APP will consider the device as unmanaged.
 
-### Scenario: The policy is applied, but iOS users can still transfer work files to unmanaged apps
-
-The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/open-in-icon.png":::) feature for iOS devices can limit file transfers between apps that are deployed through the MDM channel. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
-
-You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
-
-- **Employee-owned devices that are not managed by an MDM solution**: You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Configured in this way, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
-
-- **Devices that are managed by MDM solutions**: For devices that are enrolled in Intune or third-party MDM solutions, Intune APP and the iOS **Open-in management** feature control data sharing between protected apps and other managed iOS apps that are deployed through MDM.
-
-    To make sure that apps you deploy by using an MDM solution are also associated with your Intune app protection policies, configure the user UPN setting as described in [Configure user UPN setting](/mem/intune/apps/data-transfer-between-apps-manage-ios#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm).
-
-    To specify how you want to allow data transfer to other apps, enable **Send Org data to other apps**, and then select your preferred level of sharing.
-
-    To specify how you want to allow an app to receive data from other apps, enable **Receive data from other apps**, and then select your preferred level of receiving data.
-
-For more information about how to receive and share app data, see [Data relocation settings](/mem/intune/apps/app-protection-policy-settings-ios#data-protection).
-
-For more information, see [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).
-
-<!--- leftover from other article: 
-| Policy not applied to Skype for Business | App protection policy without device enrollment, made in the Azure portal, is not applying to the Skype for Business app on iOS/iPadOS and Android devices. | Skype for Business must be set up for modern authentication. Follow instructions in [Enable your tenant for modern authentication](https://social.technet.microsoft.com/wiki/contents/articles/34339.skype-for-business-online-enable-your-tenant-for-modern-authentication.aspx) to set up modern authentication for Skype. | -->
-
 ## Next steps
 
+- [Troubleshooting app protection policy user issues](troubleshoot-mam.md)
 - [Frequently asked questions about MAM and app protection](/mem/intune/apps/mam-faq)
 - [Validate your app protection policy setup in Microsoft Intune](/mem/intune/apps/app-protection-policies-validate)
-- [Troubleshooting app protection policy user issues](troubleshoot-mam.md)
-- [How to get support in Microsoft Endpoint Manager admin center](/mem/get-support)
