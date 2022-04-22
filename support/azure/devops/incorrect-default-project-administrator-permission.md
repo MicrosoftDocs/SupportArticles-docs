@@ -22,3 +22,5 @@ When Team Foundation Server creates a new project, a set of default permissions 
 This permissions configuration may be intentional, and there is no automated way to detect whether it was incorrectly configured as the default setting or else set that way intentionally. Team Foundation Server upgrades will not change the setting for projects that already exist. If you want to prevent project administrators from bypassing Git branch policies, reset that group's permissions to **not set**. For more information, see the [Permissions, users, and groups in Azure DevOps](/azure/devops/organizations/security/permissions).
 
 Future versions of Team Foundation Server will apply the correct default setting to new projects.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -413,6 +413,7 @@ On-demand bursting is available only in the west-central United States region.
 </details>
 
 ## Unmanaged disks
+
 <details>
   <summary>Click here to expand this section.</summary>
 
@@ -456,3 +457,5 @@ To request features, submit your requests and ideas to the [Azure Storage feedba
 - [Use Azure Storage Explorer to manage Azure managed disks](/azure/virtual-machines/disks-use-storage-explorer-managed-disks)
 - [Attach a managed data disk to a Windows VM](/azure/virtual-machines/windows/attach-managed-disk-portal)
 - [Resize a virtual machine using the Azure portal or PowerShell](/azure/virtual-machines/windows/resize-vm)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

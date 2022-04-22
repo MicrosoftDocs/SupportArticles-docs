@@ -25,6 +25,8 @@ landingContent:
             url: ./error-code-0x80090016-keyset-does-not-exist.md
           - text: Microsoft Monitoring Agent couldn't start
             url: ./windows-could-not-start-mma.md
+          - text: Missing heartbeats in the Linux agent
+            url: ./linux-agent-missing-heartbeats.md
           - text: Resolve Windows Agent installation issues
             url: ./resolve-windows-agent-installation-issues.md            
           - text: Troubleshoot erased proxy settings in the Microsoft Monitoring Agent

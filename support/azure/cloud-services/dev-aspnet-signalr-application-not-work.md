@@ -65,3 +65,5 @@ In order to enable WebSocket feature you can use the below DISM command in a sta
 ```console
 %SystemRoot%\system32\DISM.exe /Online /Enable-Feature /FeatureName:IIS-WebSockets
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
