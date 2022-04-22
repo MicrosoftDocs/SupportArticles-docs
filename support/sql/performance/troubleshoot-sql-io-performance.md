@@ -206,11 +206,13 @@ If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server
 
 In general, there exist three high-level reasons why SQL Server queries suffer from I/O latency and they are:
 
- - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (throughout entire SAN network, not just back-end storage), drivers/firmware bugs, and so on. This is the stage at which a hardware vendor needs to be engaged.
+ - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (unbalanced throughout on entire SAN network, not just back-end storage), drivers/firmware issues, and so on. This is the stage at which a hardware vendor and/or system administrators need to be engaged.
 
- - **Query issues:** SQL Server (or some other process in some cases) on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, find the queries that are causing a large number of logical reads (or writes) and tune the queries to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also, incorrect database design and query design lead to increase in I/O issues.
+ - **Query issues:** SQL Server on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, find the queries that are causing a large number of logical reads (or writes) and tune the queries to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also, incorrect database design and query design lead to increase in I/O issues.
 
  - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
+ 
+ - **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application, tune it or move it elsewhere to eliminate its impact on the I/O stack.
 
 ## Graphical representation of the methodology
 
