@@ -33,7 +33,7 @@ To resolve the issue, stop the Visual Studio installer and ensure that Windows i
 
 If you experience issues when trying to update Windows, follow these steps:
 
-1. Download the [Windows Update Troubleshooter](https://support.microsoft.com/instantanswers/512a5183-ffab-40c5-8a68-021e32467565/windows-update-troubleshooter).
+1. Download the [Windows Update Troubleshooter](https://support.microsoft.com/windows/windows-update-troubleshooter-19bc41ca-ad72-ae67-af3c-89ce169755dd#WindowsVersion=Windows_10).
 1. Select **Open** when the browser prompt appears.
 1. Select **Next**.
 
