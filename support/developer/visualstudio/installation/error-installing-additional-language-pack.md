@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# "This product is already installed" error when you try to install Visual Studio in a new language
+# "This product is already installed" error is shown when you try to install Visual Studio in a new language
 
 _Applies to:_&nbsp;Visual Studio 2015
 
@@ -15,7 +15,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 When you try to install Microsoft Visual Studio in a new language, you receive the following error message:
 
-> "This product is already installed. To install an additional language, please install the language pack for that language."
+> This product is already installed. To install an additional language, please install the language pack for that language.
 
 ## Resolution
 
