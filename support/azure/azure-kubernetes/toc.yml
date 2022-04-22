@@ -115,7 +115,7 @@
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
 
-- name: Storage
+- name: Troubleshoot Storage related issues
   items:
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
