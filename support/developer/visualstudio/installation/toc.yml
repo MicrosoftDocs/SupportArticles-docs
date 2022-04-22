@@ -20,3 +20,22 @@
   href: ./error-installing-additional-language-pack.md
 - name: Error "Product version that is being installed is old."
   href: ./error-product-version-is-old.md
+- name: The trial will expire after you sign in to the IDE
+  href: ./sign-into-ide-trial-expire.md
+- name: Wait for setup to finish before trying again
+  href: ./another-setup-already-running-wait-finish.md
+- name: Windows Program Compatibility mode is on
+  href: ./windows-program-compatibility-mode-on.md
+- name: Visual Studio requires a newer version of Windows
+  href: ./visual-studio-requires-computer-newer-version-windows.md
+- name: The version of Visual Studio requires the April 2014 update
+  href: ./visual-studio-requires-computer-newer-version-windows.md
+- name: The specified program requires a newer version of Windows
+  href: ./specified-program-requires-newer-version-windows.md
+- name:  We recommend you close Visual Studio now before setup continues
+  href: ./we-recommend-you-close-visual-studio.md
+- name:  The installation hangs when you try to install a KB update
+  href: ./installation-hangs-install-kb-update.md
+- name:  Update requires a member to be present or is blocked by another condition
+  href: ./member-visual-studio-family-present.md
+
