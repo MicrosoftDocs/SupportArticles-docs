@@ -5,10 +5,8 @@
     items:
     - name: Actions are disabled or deactivated
       href: aibuilder-actions-are-disabled-deactivated.md
-    - name: Current environment doesn't meet minimum requirements
+    - name: Current environment doesn't meet the minimum requirements
       href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md      
-    - name: Processes and plug-in steps are turned off
-      href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
   - name: Models
     items:
     - name: AI models fail to be imported in a new environment
@@ -33,10 +31,6 @@
       href: business-card-reader-do-not-work-for-some-users.md
   - name: Other
     items:
-    - name: Actions are disabled or deactivated
-      href: aibuilder-actions-are-disabled-deactivated.md
-    - name: Current environment doesn't meet the minimum requirements
-      href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md      
     - name: Processes and plug-in steps are turned off
       href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
 

@@ -16,27 +16,31 @@ metadata:
 landingContent:
 
  # Card
-  - title: Administration
+  - title: Administration and licensing
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-          - text: Administer AI Builder
-            url: https://docs.microsoft.com/ai-builder/administer
+          - text: Actions are disabled or deactivated
+            url: aibuilder-actions-are-disabled-deactivated.md
+          - text: Current environment doesn't meet the minimum requirements
+            url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md 
 
  # Card
   - title: Models
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-          - text: FAQ for form processing in AI Builder
-            url: https://docs.microsoft.com/ai-builder/form-processing-faq
-          - text: Get support for AI Builder
-            url: https://docs.microsoft.com/ai-builder/support
+          - text: AI models fail to be imported in a new environment
+            url: aimodels-fail-to-be-imported-in-a-new-environment.md
+          - text: Form processing isn't extracting tables
+            url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
+            text: Training document isn't displayed
+            url: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md 
 
  # Card
   - title: Documentation and training
     linkLists:
-      - linkListType: reference
+      - linkListType: get-started
         links:
           - text: AI Builder documentation
             url: https://docs.microsoft.com/ai-builder/
