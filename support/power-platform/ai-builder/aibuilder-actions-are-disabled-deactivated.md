@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides steps to activate AI Builder actions.
 
-_Applies to:_ &nbsp; Other <!--Angie will ask Vivek-Can you be specific? I don't see "Other" used in troubleshooting docs.-->
+_Applies to:_ &nbsp; Other
 
 ## Symptoms
 
@@ -51,4 +51,5 @@ To activate the actions, the administrator of the environment needs to perform t
     - UnpublishAIConfiguration
 
 ## Resources
-[Administer AI Builder](https://docs.microsoft.com/ai-builder/administer).
+
+[Administer AI Builder](/ai-builder/administer)

@@ -32,5 +32,4 @@ The documents that you uploaded for training don’t meet the form processing mo
 
 ## Resolution for cause 2
 
-Make sure your document meets the following [form processing model requirements](https://docs.microsoft.com/ai-builder/form-processing-model-requirements#requirements).
-<!--List requirements-->
+Make sure your document meets the following [form processing model requirements](/ai-builder/form-processing-model-requirements).

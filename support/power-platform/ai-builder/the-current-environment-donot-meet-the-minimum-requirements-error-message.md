@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to an error message that occurs when the current environment doesn’t meet the minimum requirements.
 
-_Applies to:_ &nbsp; Other <!--Angie will ask Vivek-Can you be specific? I don't see "Other" used in troubleshooting docs.-->
+_Applies to:_ &nbsp; Other
 
 ## Symptoms
 
@@ -23,5 +23,5 @@ The Microsoft Dataverse database in the environment where you are creating your 
 
 ## Resolution
 
-To solve this, create a support request in the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/) to request that the latest AI Builder updates be installed in your Dataverse database.
+To solve this, create a support request in the [Power Platform admin center](https://admin.powerplatform.microsoft.com/) to request that the latest AI Builder updates be installed in your Dataverse database.
 

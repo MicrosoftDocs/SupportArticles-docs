@@ -3,21 +3,25 @@
   items:
   - name: Administration and licensing
     items:
-    - name: Current environment doesn't meet the minimum requirements
-      href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
+    - name: Actions are disabled or deactivated
+      href: aibuilder-actions-are-disabled-deactivated.md
+    - name: Current environment doesn't meet minimum requirements
+      href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md      
+    - name: Processes and plug-in steps are turned off
+      href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
   - name: Models
     items:
-    - name: AI models fail to be imported in a new environment
+    - name: AI models fail to be imported in new environment
       href: aimodels-fail-to-be-imported-in-a-new-environment.md
-    - name: Dependency Timeout error when using a form processing model
+    - name: Dependency Timeout error
       href: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
-    - name: Fields couldn't be loaded for this document error in a form processing model
+    - name: Fields couldn't be loaded for this document error
       href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
-    - name: Form processing isn't extracting tables that span across multiple pages
+    - name: Form processing isn't extracting tables
       href: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
-    - name: Pages parameter generates an error when saving a form processing flow
+    - name: Pages parameter generates an error
       href: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
-    - name: Training document isn't displayed on the form processing model details page
+    - name: Training document isn't displayed
       href: the-training-document-is-not-displayed-on-the-form-processing-model-details-page.md
   - name: Use in Power Automate
     items:
@@ -25,12 +29,14 @@
       href: the-output-of-an-ai-builder-action-is-empty-in-power-automate-or-the-next-action-returns-an-error.md
   - name: Use in Power Apps
     items:
-    - name: Business card reader doesn't work for some users
+    - name: Business card reader doesn't work
       href: business-card-reader-do-not-work-for-some-users.md
   - name: Other
     items:
     - name: Actions are disabled or deactivated
       href: aibuilder-actions-are-disabled-deactivated.md
-    - name: Processes and plug-in steps are turned off in default solution
+    - name: Current environment doesn't meet the minimum requirements
+      href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md      
+    - name: Processes and plug-in steps are turned off
       href: aibuilder-processes-and-plug-in-steps-are-turned-off-in-default-solution.md
 

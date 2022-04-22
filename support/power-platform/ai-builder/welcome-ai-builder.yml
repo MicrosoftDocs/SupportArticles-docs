@@ -16,20 +16,22 @@ metadata:
 landingContent:
 
  # Card
-  - title: TO DO
+  - title: Administration
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: TO DO
-            url: ""
+          - Administer AI Builder
+            url: https://docs.microsoft.com/en-us/ai-builder/administer
 
  # Card
-  - title: TO DO
+  - title: Models
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: TO DO
-            url: ""
+          - text: FAQ for form processing in AI Builder
+            url: https://docs.microsoft.com/ai-builder/form-processing-faq
+          - text: Get support for AI Builder
+            url: https://docs.microsoft.com/ai-builder/support
 
  # Card
   - title: Documentation and training
