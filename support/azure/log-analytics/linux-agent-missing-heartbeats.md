@@ -219,3 +219,5 @@ Verify whether the agent has [ingestion latency delays](/azure/azure-monitor/log
 ### Solution 2: Wait for the ingestion problem to clear on the Azure service or region
 
 The problem might be caused by ingestion issues on the Azure service or Azure region. [Check the status of Azure services and regions](https://status.azure.com). If you find a problem, wait for the affected service or region to return to health. Then, recheck whether heartbeats are reported to the workspace.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

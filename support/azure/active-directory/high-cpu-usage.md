@@ -44,6 +44,4 @@ To resolve this issue for Active Directory Domain Services (AD DS) and Active 
 
 To resolve this issue for Azure AD Connect, install the [latest version of Azure AD Connect](https://go.microsoft.com/fwlink/?LinkId=615771).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

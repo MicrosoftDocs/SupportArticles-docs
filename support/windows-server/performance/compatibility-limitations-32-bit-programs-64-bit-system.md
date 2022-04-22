@@ -1,7 +1,7 @@
 ---
 title: Overview of the compatibility considerations for 32-bit programs on 64-bit versions of Windows
 description: Discusses the compatibility considerations and limitations for 32-bit programs that are running on 64-bit versions of Windows .
-ms.date: 09/08/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -34,7 +34,7 @@ The x64-based versions of Microsoft Windows are optimized to run native 64-bit p
 
 ## Running 32-bit programs
 
-The WOW64 subsystem enables 32-bit programs to run without modification on the x64-based versions of Windows. The WOW64 subsystem does this by creating a 32-bit environment on the x64-based versions of Windows. For more information about the WOW64 subsystem, see the "Running 32-bit Applications" topic in the 64-Bit Windows section of the Microsoft Platform SDK documentation. To view this document, visit the following Microsoft Web site: [Running 32-bit Applications](https://msdn2.microsoft.com/library/aa384249.aspx)  
+The WOW64 subsystem enables 32-bit programs to run without modification on the x64-based versions of Windows. The WOW64 subsystem does this by creating a 32-bit environment on the x64-based versions of Windows. For more information about the WOW64 subsystem, see the "Running 32-bit Applications" topic in the 64-Bit Windows section of the Microsoft Platform SDK documentation. To view this document, visit the following Microsoft Web site: [Running 32-bit Applications](/windows/win32/winprog64/running-32-bit-applications).  
 
 ## Program performance considerations
 

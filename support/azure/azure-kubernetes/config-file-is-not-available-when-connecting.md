@@ -100,3 +100,5 @@ az aks get-credentials --resource-group <cluster-resource-group> \
     --overwrite-existing \
     [--file <config-file-location>]
 ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

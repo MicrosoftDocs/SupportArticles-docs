@@ -88,7 +88,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
-|Microsoft Cloud App Security|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
+|Microsoft Defender for Cloud Apps|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
 |Microsoft Docs|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Dynamics ERP|00000015-0000-0000-c000-000000000000|
 |Microsoft Edge Insider Addons Prod|6253bca8-faf2-4587-8f2f-b056d80998a7|
@@ -127,6 +127,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Office.com|4b233688-031c-404b-9a80-a4f3f2351f90|
 |Office365 Shell WCSS-Client|89bee1f7-5e6e-4d8a-9f3d-ecd601259da7|
 |OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
+|OfficeHome|4765445b-32c6-49b0-83e6-1d93765276ca|
 |OfficeShredderWacClient|4d5c2d63-cf83-4365-853c-925fd1a64357|
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
@@ -151,4 +152,6 @@ The following table lists some, but not all, first party Microsoft applications.
 
 ## More information
 
-For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report)
+For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
