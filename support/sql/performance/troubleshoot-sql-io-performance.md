@@ -204,7 +204,7 @@ If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server
 
 ## Causes
 
-In general, there exist three high-level reasons why SQL Server queries suffer from I/O latency and they are:
+In general, these are the high-level reasons why SQL Server queries suffer from I/O latency:
 
  - **Hardware issues:** There’s a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (unbalanced throughout on entire SAN network, not just back-end storage), drivers/firmware issues, and so on. This is the stage at which a hardware vendor and/or system administrators need to be engaged.
 
