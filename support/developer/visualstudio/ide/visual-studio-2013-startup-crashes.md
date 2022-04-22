@@ -4,7 +4,6 @@ description: This article provides information about resolving a problem that Vi
 ms.date: 04/27/2020
 ms.custom: sap:Integrated Development Environment (IDE)
 ms.reviewer: Selma Ikiz
-ms.technology: visual-cpp-ide
 ---
 # Visual Studio 2013 crashes at startup because of CLR runtime settings
 
