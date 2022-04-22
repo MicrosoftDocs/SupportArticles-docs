@@ -67,3 +67,5 @@ These image SKUs are appended by "-HUB" on the Azure portal.
 ## Action required
 
 Make sure that your virtual machine deployment is updated to use the new image SKUs.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1244,6 +1244,14 @@
     href: ./high-availability/high-availability-overview.md
   - name: Cannot bring a resource online
     items:
+    - name: 'Troubleshooting guidance: Cannot bring a resource online'
+      href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
+    - name: Can't bring a network name online
+      href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
+    - name: Can't bring a physical disk online
+      href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
+    - name: Can't bring an IP address online
+      href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Active Route removed
@@ -2043,17 +2051,15 @@
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
-      href: ./printing/third-party-print-driver-print-spooler-error.md
-  - name: Errors and troubleshooting General issues
-    items:
-    - name: Event ID associated with point and print restrictions
-      href: ./printing/event-ids-associated-point-print-restrictions.md
+      href: ./printing/third-party-print-driver-print-spooler-error.md    
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't print after installing a service pack or printer hotfix
       href: ./printing/cannot-print-install-service-pack-update-rollup.md
     - name: Error when installing a shared network printer
       href: ./printing/cannot-install-shared-network-printer-locally.md
+    - name: Event ID associated with point and print restrictions
+      href: ./printing/event-ids-associated-point-print-restrictions.md
     - name: Printer and drive redirection don't work in a Terminal Server session
       href: ./printing/printer-hard-drive-not-redirect-to-remote-desktop-session.md
     - name: Slow performance with HP printer drivers
@@ -2736,6 +2742,8 @@
       href: ./virtualization/catastrophic-failure-0x8000ffff-error.md
     - name: Fail to start selected virtual machine
       href: ./virtualization/fail-to-start-selected-virtual-machine.md
+    - name: Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
+      href: ./virtualization/hyper-v-virtual-machine-can-not-start-secure-launch-enabled.md
     - name: Hyper-V virtual machine fails to start
       href: ./virtualization/hyper-v-virtual-machine-not-start-0x80070005.md
     - name: Restored Hyper-V virtual machines may not Start

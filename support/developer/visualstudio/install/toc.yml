@@ -20,8 +20,8 @@
     href: ./install/install-windows-sdk-silent-mode.md
   - name: Issues and workarounds in Visual Studio 2012 setup
     href: ./install/issues-workarounds-visual-studio-2012-setup.md
-  - name: Issues and workarounds in Visual Studio 2013 setup
-    href: ./install/issues-workarounds-visual-studio-2013-setup.md
+  - name: Issues and workarounds in Visual Studio setup
+    href: ./install/issues-workarounds-visual-studio-setup.md
   - name: MsiApplyMultiplePatches returns 1601 error
     href: ./install/msiapplymultiplepatches-error-1601.md
   - name: Known issues for Visual Studio 2012 and updates
