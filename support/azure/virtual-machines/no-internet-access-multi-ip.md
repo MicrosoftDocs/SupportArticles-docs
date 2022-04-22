@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4040882
 
 ## Symptoms
 
-In Microsoft Azure, you set multiple IP addresses in the network interface of an Azure Windows virtual machine. After you make the settings, the virtual machine cannot connect to the Internet or to Azure services, such as Azure Backup. 
+In Microsoft Azure, you set multiple IP addresses in the network interface of an Azure Windows virtual machine. After you make the settings, the virtual machine cannot connect to the Internet or to Azure services, such as Azure Backup.
 
 ## Cause
 
@@ -36,3 +36,5 @@ Set-NetIPAddress -IPAddress $IPs.IPAddress -InterfaceAlias $netInterface -SkipAs
 ```
 
 For Linux VMs with multiple IP addresses, follow the steps in [Add IP addresses to a Linux VM operating system](/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal#linux-ubuntu-1416).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

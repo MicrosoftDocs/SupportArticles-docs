@@ -9,6 +9,7 @@ ms.service: container-service
 # Capture TCP packets from a pod on an AKS cluster
 
 This article discusses how to take a TCP traffic capture at a pod of an Azure Kubernetes Service (AKS) cluster, and download the capture to your local computer.
+
 ## Prerequisite
 
 You must run the Azure CLI version 2.0.59 or a later version.
@@ -32,16 +33,19 @@ Run `az --version` to verify the version. To install the latest version of the A
    ```azurecli
    kubectl exec azure-vote-front-848767080-tf34m -it -- /bin/bash
    ```
+
 1. After you connect to the pod, run `tcpdump --version` to determine whether the TCPdump is installed. If you receive a "command not found" message, run the following command to install the TCPdump in the pod:
 
     ```azurecli
     apt-get update && apt-get install tcpdump
     ```
+
     If your pod uses Alpine Linux, run the following command to install TCPdump:
 
    ```azurecli
     apk add tcpdump
     ```
+
 ## Capture TCP packets and save them to a local directory
 
 1. Run `tcpdump -s 0 -vvv -w /capture.cap` to start capturing TCP packets on your pod.
@@ -51,3 +55,5 @@ Run `az --version` to verify the version. To install the latest version of the A
     ```azurecli
     kubectl cp azure-vote-front-848767080-tf34m:/capture.cap capture.cap
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

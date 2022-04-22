@@ -44,7 +44,6 @@ For Serial Console documentation for Windows, see [Serial Console for Windows](.
 
 - Your VM or virtual machine scale set instance must be configured for serial output on `ttys0`. This is the default for Azure images, but you will want to double check this on custom images. Details [below](#custom-linux-images).
 
-
 > [!NOTE]
 > The serial console requires a local user with a configured password. VMs or virtual machine scale sets configured only with an SSH public key won't be able to sign in to the serial console. To create a local user with a password, use the [VMAccess Extension](/azure/virtual-machines/extensions/vmaccess), which is available in the portal by selecting **Reset password** in the Azure portal, and create a local user with a password.
 > You can also reset the administrator password in your account by [using GRUB to boot into single user mode](./serial-console-grub-single-user-mode.md).
@@ -139,12 +138,11 @@ Serial console text only takes up a portion of the screen size (often after usin
 Pasting long strings doesn't work. | The serial console limits the length of strings pasted into the terminal to 2048 characters to prevent overloading the serial port bandwidth.
 Erratic keyboard input in SLES BYOS images. Keyboard input is only sporadically recognized. | This is an issue with the Plymouth package. Plymouth should not be run in Azure as you don't need a splash screen and Plymouth interferes with the platform ability to use Serial Console. Remove Plymouth with `sudo zypper remove plymouth` and then reboot. Alternatively, modify the kernel line of your GRUB config by appending `plymouth.enable=0` to the end of the line. You can do this by [editing the boot entry at boot time](./serial-console-grub-single-user-mode.md#single-user-mode-in-suse-sles), or by editing the GRUB_CMDLINE_LINUX line in `/etc/default/grub`, rebuilding GRUB with `grub2-mkconfig -o /boot/grub2/grub.cfg`,  and then rebooting.
 
-
 ## Frequently asked questions
 
 **Q. How can I send feedback?**
 
-A. Provide feedback by creating a GitHub issue at  https://aka.ms/serialconsolefeedback. Alternatively (less preferred), you can send feedback via azserialhelp@microsoft.com or in the virtual machine category of https://feedback.azure.com.
+A. Provide feedback by creating a GitHub issue at  <https://aka.ms/serialconsolefeedback>. Alternatively (less preferred), you can send feedback via azserialhelp@microsoft.com or in the virtual machine category of <https://feedback.azure.com>.
 
 **Q. Does the serial console support copy/paste?**
 
@@ -179,8 +177,10 @@ A. Yes. Because the serial console doesn't require SSH keys, you only need to se
 
 ## Next steps
 
-* Use the serial console to [access GRUB and single user mode](serial-console-grub-single-user-mode.md).
-* Use the serial console for [NMI and SysRq calls](serial-console-nmi-sysrq.md).
-* Learn how to use the serial console to [enable GRUB in various distros](serial-console-grub-proactive-configuration.md)
-* The serial console is also available for [Windows VMs](./serial-console-windows.md).
-* Learn more about [boot diagnostics](boot-diagnostics.md).
+- Use the serial console to [access GRUB and single user mode](serial-console-grub-single-user-mode.md).
+- Use the serial console for [NMI and SysRq calls](serial-console-nmi-sysrq.md).
+- Learn how to use the serial console to [enable GRUB in various distros](serial-console-grub-proactive-configuration.md)
+- The serial console is also available for [Windows VMs](./serial-console-windows.md).
+- Learn more about [boot diagnostics](boot-diagnostics.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

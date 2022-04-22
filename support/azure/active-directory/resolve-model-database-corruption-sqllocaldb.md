@@ -50,7 +50,7 @@ You can verify that the issue is based on the following events in the Azure AD C
   Failure Code = 0x80004005 
   ```
 
-- SQLLocalDB *error.log* file in *\<ADSync service profile path>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\ADSync2019*
+- SQLLocalDB _error.log_ file in *\<ADSync service profile path>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\ADSync2019*
 
   ```output
   <yyyy-MM-dd HH:mm:ss.##> spid14s     The resource database build version is 15.00.4138. This is an informational message only. No user action is required.
@@ -71,7 +71,7 @@ To recover the `Model` database from a corrupted state, follow these steps:
     - *C:\\Users\\ADSyncMSAxxxx$\\*
     - *C:\\Windows\\ServiceProfiles\ADSync\\*
 
-1. Open the *error.log* file from the ADSync2019 instance folder in the following directory path:
+1. Open the _error.log_ file from the ADSync2019 instance folder in the following directory path:
 
    *\<service profile path>\\AppData\\Local\\Microsoft\\Microsoft SQL Server Local DB\\Instances\\ADSync2019\\*
 
@@ -82,11 +82,11 @@ To recover the `Model` database from a corrupted state, follow these steps:
     <yyyy-MM-dd HH:mm:ss.##> spid14s     The log scan number (41:488:1) passed to log scan in database 'model' is not valid. This error may indicate data corruption or that the log file (.ldf) does not match the data file (.mdf). If this error occurred during replication, re-create the publication. Otherwise, restore from backup if the problem results in a failure during startup.   
     ```
 
-1. If error "9003" exists in this entry, rename the *model.mdf* and *modellog.ldf* files in this folder to *old_model.mdf* and *old_modellog.ldf*, respectively.
+1. If error "9003" exists in this entry, rename the _model.mdf_ and _modellog.ldf_ files in this folder to _old_model.mdf_ and _old_modellog.ldf_, respectively.
 
-1. Open the *SQL Templates* folder at *C:\\Program Files\\Microsoft SQL Server\\150\\LocalDB\\Binn\\Templates*.
+1. Open the _SQL Templates_ folder at *C:\\Program Files\\Microsoft SQL Server\\150\\LocalDB\\Binn\\Templates*.
 
-1. Copy the *model.mdf* and *modellog.ldf* files to the ADSync2019 instance folder from step 2.
+1. Copy the _model.mdf_ and _modellog.ldf_ files to the ADSync2019 instance folder from step 2.
 
 1. Start the ADSync service.
 
@@ -95,3 +95,5 @@ To recover the `Model` database from a corrupted state, follow these steps:
 Microsoft has introduced a fix for this issue in Azure AD Connect version 2.1.1.0. If the sync service (ADSync) can't be started, you need to apply the steps in the [Mitigation](#mitigation) section before you can upgrade Azure AD Connect.
 
 To prevent the corruption issues in the SQLLocalDB `Model` database, install the latest Azure AD Connect build, which is available at [Azure AD Connect: Version release history](/azure/active-directory/hybrid/reference-connect-version-history).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

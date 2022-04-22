@@ -80,3 +80,5 @@ If you have already installed LIS 4.1.3, and you cannot start the VM, follow the
     packages=($(rpm -qa *microsoft-hyper-v*))  
     rpm -e ${packages[@]}
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

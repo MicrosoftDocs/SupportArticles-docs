@@ -155,7 +155,7 @@ To uninstall the product code for the Azure AD Sync Engine, run the Windows Inst
     SET /a counter+=1
     & MSIEXEC /x %productcode% /qn /norestart /l*v "%ProgramData%\AADConnect\AADConnect_Uninstall-ForcedUninstall_%counter%.log" EXECUTE_UNINSTALL="1"
     ```
-    
+
 1. Start the Azure AD Connect wizard, and wait for the first page to open.
 
 1. Open the `%ProgramData%\AADConnect\` folder, and analyze the latest installation trace log.
@@ -180,3 +180,5 @@ After you run the tool, restart the server, and then follow these steps:
 1. If the inconsistent or stale product code is no longer present in the log file, continue the wizard, and complete the installation. If the stale product code is present, we recommend that you reinstall the Windows operating system because you can't recover the Windows Installer database from an inconsistent state.
 
 </details>
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

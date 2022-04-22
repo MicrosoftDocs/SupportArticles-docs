@@ -240,4 +240,4 @@ The Windows PowerShell commands that are mentioned in this article require the A
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

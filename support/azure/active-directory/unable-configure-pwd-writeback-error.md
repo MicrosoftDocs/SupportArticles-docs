@@ -59,4 +59,4 @@ Password writeback service is not in a healthy state. No serviceHost for service
 running state. Please refer aka.ms/ssprtroubleshoot, Details: Version: 5.0.0.686
 ```
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
