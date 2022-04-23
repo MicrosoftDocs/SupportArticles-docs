@@ -24,7 +24,7 @@ ms.date: 4/18/2022
 
 When a user who has appropriate permissions tries to delete a public folder from a Microsoft Outlook client, they receive one of the following error messages:
 
-- **In Outlook for windows**
+- **In Outlook for Windows**
     > Cannot delete this folder. Right-click the folder, and then click Properties to check your permissions for this folder. See the folder owner or administrator to change your permissions. Some items cannot be deleted. They were either moved or already deleted, or access was denied.
 
 - **In Outlook for Mac**
@@ -33,13 +33,13 @@ When a user who has appropriate permissions tries to delete a public folder from
 
 ## Cause
 
-This issue occurs because the public folder is mail-enabled. Public folders must be mail-disabled before users delete them.
+This issue occurs because the public folder is mail-enabled. Public folders must be mail-disabled before users can delete them.
 
 ## Resolution
 
-To resolve this issue, mail-disable the public folder by using the following steps:
+To resolve this issue, mail-disable the public folder by using the following steps.
 
-**Note:** You must have administrator permissions to perform the following steps.
+**Note:** You must have administrator permissions to do these steps.
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 2. Remove the public folder by using the following command:
@@ -48,7 +48,7 @@ To resolve this issue, mail-disable the public folder by using the following ste
     Remove-PublicFolder <identity of PF>
     ```
 
-    In the output, you see an error that indicates the public folder should be mail-disabled first.
+    In the output, you see an error message that indicates that the public folder should be mail-disabled before you can continue.
 
     :::image type="content" source="media/cannot-delete-public-folder/remove-pf-cmdlet.png" alt-text="Screenshot of the removing public folder cmdlet. An error that indicates a public folder should be mail-disabled before removing is displayed.":::
 
@@ -58,8 +58,8 @@ To resolve this issue, mail-disable the public folder by using the following ste
     Disable-MailPublicFolder <identity of PF>
     ```
 
-    When you're prompted to confirm this action, type **Y**.
+    When you're prompted to confirm this action, enter **Y**.
 
     :::image type="content" source="media/cannot-delete-public-folder/mail-disable-pf.png" alt-text="Screenshot of cmdlet to mail-disable a public folder.":::
 
-    Then, you can remove the public folder from Exchange Online PowerShell or the user can remove it from the Outlook client.
+After you complete these steps, you can remove the public folder from Exchange Online PowerShell, or the user can remove it from the Outlook client.
