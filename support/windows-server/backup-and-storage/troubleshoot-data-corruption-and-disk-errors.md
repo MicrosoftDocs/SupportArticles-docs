@@ -143,7 +143,7 @@ SCSIOP_READ - 0x28
 SCSIOP_WRITE - 0x2A
 ```
 
-See [scsi.h](https://docs.microsoft.com/windows-hardware/drivers/ddi/scsi/) for a list of SCSI operations and statuses.
+See [scsi.h](/windows-hardware/drivers/ddi/scsi/) for a list of SCSI operations and statuses.
 
 Here are the most common SRB statuses:
 
@@ -153,7 +153,7 @@ SRB_STATUS_BUS_RESET - 0x0E
 SRB_STATUS_COMMAND_TIMEOUT - 0x0B
 ```
 
-See [srb.h](https://docs.microsoft.com/windows-hardware/drivers/ddi/srb/ns-srb-_scsi_request_block) for a list of SRB statuses.
+See [srb.h](/windows-hardware/drivers/ddi/srb/ns-srb-_scsi_request_block) for a list of SRB statuses.
 
 > [!NOTE]
 >
