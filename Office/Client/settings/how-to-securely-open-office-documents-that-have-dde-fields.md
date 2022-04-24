@@ -5,7 +5,9 @@ manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
-ms.custom: CSSTroubleshoot
+ms.custom: 
+- CSSTroubleshoot
+- CI 162524
 appliesto:
 - Outlook
 - Exchange
@@ -153,7 +155,7 @@ For Office apps, ASR can:
 - Block Win32 imports from macro code in Office
 - Block obfuscated macro code
 
-Emerging exploits like [DDEDownloader](https://www.microsoft.com/wdsi/threats/malware-encyclopedia-description?Name=Exploit:O97M/DDEDownloader.A&ocid=cx-blog-mmpc) use the Dynamic Data Exchange (DDE) popup in Office documents to run a PowerShell downloader; however, in doing so, they launch a child process that the corresponding child process rule blocks.
+Emerging exploits like [DDEDownloader](https://www.microsoft.com/en-us/wdsi/threats/malware-encyclopedia-description?Name=Exploit:O97M/DDEDownloader.A) use the Dynamic Data Exchange (DDE) popup in Office documents to run a PowerShell downloader; however, in doing so, they launch a child process that the corresponding child process rule blocks.
 
 To learn more about Windows Defender Exploit Guard, see [Windows Defender Exploit Guard: Reduce the attack surface against next-generation malware](https://www.microsoft.com/security/blog/2017/10/23/windows-defender-exploit-guard-reduce-the-attack-surface-against-next-generation-malware/?source=mmpc).
 

@@ -1,4 +1,4 @@
-- name: Microsoft 365 Compliance Troubleshooting
+- name: Microsoft Purview Troubleshooting
   href: ../microsoft-365-compliance-welcome.md
   items:
   - name: Archive Mailboxes
@@ -103,7 +103,7 @@
       href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../retention/mrm-and-retention-policy.md
-  - name: Office Message Encryption (OME)
+  - name: Microsoft Purview Message Encryption
     items:
     - name: Can't display message
       href: ../office-message-encryption/cannot-display-message.md
@@ -115,3 +115,7 @@
       href: ../pst-import-service/import-fails-mailboxambiguous.md
     - name: Import job common issues
       href: ../pst-import-service/issues-with-pst-import-job.md
+  - name: Sensitivity Labels
+    items:
+    - name: Mail contacts lose access to encrypted content
+      href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md

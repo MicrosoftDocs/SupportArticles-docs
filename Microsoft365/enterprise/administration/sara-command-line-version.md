@@ -51,17 +51,35 @@ The following switches are available to control SaRAcmd.exe.
    |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
    |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
    |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook|No|
+   |`OfficeActivationScenario`|Office \ I've installed a subscription version of Office, but I can't activate it|Yes|
+   |`OutlookCalendarCheckTask`|Advance Diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues|No|
+   |`OfficeSharedComputerScenario`|Office \ I want to setup Office with shared computer activation on a computer or server in my organization|Yes|
    
    **Note:** To open an elevated Command Prompt window, select **Start**, enter `cmd`, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
 2. `-CloseOutlook`
 
-   The `-CloseOutlook` switch is required to run TeamsAddinScenario.  
+   The `-CloseOutlook` switch is required to run the TeamsAddinScenario.
+   
    **Note**: If Outlook is running, this switch closes Outlook.
+   
+   ```console
+   SaRAcmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
+   ```
 
-3. `-AcceptEula`
+3. `-CloseOffice`
 
-   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
+   The `-CloseOffice` switch is required to run the OfficeActivationScenario and OfficeSharedComputerScenario scenarios.
+ 
+   **Note**: The `-CloseOffice` switch closes Office applications.
+   
+   ```console
+   SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice
+   ```
+
+4. `-AcceptEula`
+
+   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify    the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
 
    ```console
    SaRAcmd.exe -S OfficeScrubScenario -AcceptEula
@@ -73,21 +91,55 @@ The following switches are available to control SaRAcmd.exe.
    SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula
    ```
 
-4. `-DisplayEULA`
+5. `-DisplayEULA`
 
    Use the `-DisplayEULA` switch to display the EULA. To save the EULA text to a file, run a command that resembles the following example:
 
    ```console
    SaRAcmd.exe -DisplayEULA > c:\temp\SaRAEula.txt
    ```
+   
+6. `-LogFolder <Output Path>`
 
-5. `-Help`
+   The `-LogFolder` switch is optional for the ExpertExperienceAdminTask and OutlookCalendarCheckTask scenarios. If the `-LogFolder` switch is used, it forces SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.
+  
+7. `-P <Profile Name>`
+  
+   The `-P` switch is optional for the OutlookCalendarCheckTask scenario. \<Profile name\> is the Outlook profile that's scanned by the OutlookCalendarCheckTask scenario.
+  
+8. `RemoveSCA`
+  
+   The `-RemoveSCA` switch is optional for OfficeActivationScenario and OfficeSharedComputerScenario. This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.
+  
+9. `-HideProgress`
+  
+   The `-HideProgress` switch is optional and only works with the ExpertExperienceTask and OutlookCalendarCheckTask scenarios. The default feature is to always show progress. When this switch is used, it hides the progress display for the ExpertExperienceTask and OutlookCalendarCheckTask scenarios.
+  
+10. `-OfflineScan`
+  
+    The `-OfflineScan` switch is optional and only works with the ExpertExperienceAdminTask scenario. This switch forces the scan of Outlook to be an Offline scan when the Outlook application is running. 
+  
+11. `-OfficeVersion`
+  
+    The `-OfficeVersion` switch is optional and works only with the OfficeScrubScenario scenario. Using this switch only removes the Office version that's defined in   the parameter. If you use **All** as a parameter, it removes all Office versions from your machine. For example, to uninstall only Office 2016 version, run the following command from an elevated Command Prompt window:
+  
+  ```console
+  SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion 2016
+  ```
+  
+ To uninstall all Office versions,  run the following command from an elevated Command Prompt window:
+ 
+ ```console
+ SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion All
+  ```
+   
+12. `-Help`
 
-   The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other switches except the `-?` switch.
+    The `-Help` switch displays a link to online content for additional information. If you use `-Help` together with other switches, `-Help` will override all the other  switches except the `-?` switch.
 
-6. `-?`
+13. `-?`
 
-   Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
+    Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use `-?` together with other switches, `-?` will override the other switches.
 
 ## Conditions addressed by the command-line scenarios
 
@@ -138,6 +190,7 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRACmd.exe version|
 |--------|--------|
+|Apr 7, 2022|17.00.8256.000|
 |Feb 8, 2022|17.00.7971.000|
 |Nov 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
