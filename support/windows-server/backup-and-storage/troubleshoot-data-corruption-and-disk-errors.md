@@ -223,7 +223,7 @@ This event indicates that the *Classpnp.sys* driver has received a surprise remo
 
 This issue is most often caused when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails, or when a user unplugs a disk while the system is running. In this case, administrator needs to verify the heath of the disk subsystem.
 
-## Troubleshooting Event ID 55
+## Troubleshooting Event ID 55 and 98
 
 If NTFS events such as Event ID 55, 50, 140, and 98 are logged, you need to run the chkdsk utility.
 
