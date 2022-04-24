@@ -29,7 +29,7 @@ The following Event IDs indicate that there's a data corruption or disk error.
 
 - Event ID 157
 
-   > > Disk 2 has been surprise removed.
+   > Disk 2 has been surprise removed.
 
 - Event ID 55
 
