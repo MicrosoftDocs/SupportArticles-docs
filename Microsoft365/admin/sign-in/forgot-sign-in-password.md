@@ -1,6 +1,6 @@
 ---
 title: A user or an admin forgot their password
-description: Describes a scenario in which a user or an administrator forgets his or her password and can't sign in to Office 365, Azure, or Microsoft Intune. Provides a resolution.
+description: Fixes an issue in which a user or an administrator forgets his or her password and can't sign in to Office 365, Azure, or Microsoft Intune.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
