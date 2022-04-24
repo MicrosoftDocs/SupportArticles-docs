@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting data corruption and disk errors
-description: Provides guidance to help troubleshoot data corruption and disk errors in Windows
+description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
 ms.date: 04/21/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -17,7 +17,7 @@ ms.technology: windows-server-backup-and-storage
 
 Data corruption and disk errors cover different areas such as issues about accessing a drive, drive corruption, and slow performance.
 
-The following Event IDs indicate that there's a data corruption or disk error.
+The following Event IDs indicate that there's data corruption or a disk error:
 
 - Event ID 153
 
@@ -42,9 +42,9 @@ The following Event IDs indicate that there's a data corruption or disk error.
 ## Troubleshooting checklist
 
 > [!NOTE]
-> The commands that are described in this article need to be run at an elevated command prompt.
+> This article describes commands that need to be run at an elevated command prompt.
 
-- In the System event log, search for New Technology File System (NTFS) and disk related warnings and errors. For example, Event ID 55, 153, or 98.
+- In the System event log, search for New Technology File System (NTFS) and disk-related warnings and errors. For example, Event ID 55, 153, or 98.
 
 - Run the `chkdsk /scan` command and check the result.
 
@@ -63,15 +63,15 @@ The following Event IDs indicate that there's a data corruption or disk error.
    > [!NOTE]
    > The placeholder \<volumepath> represents the drive letter.
 
-  - For a volume which file system is NTFS, run the `chkdsk /f /r` command if the volume is dirty. The `chkdsk /F /R` command needs downtime because the disk won't be accessible.
+  - For a volume whose file system is NTFS, run the `chkdsk /f /r` command if the volume is dirty. The `chkdsk /F /R` command needs downtime because the disk won't be accessible.
 
-  - For a volume which file system is Resilient File System (ReFS), the disk corruption will be repaired automatically.
+  - For a volume whose file system is Resilient File System (ReFS), the disk corruption will be repaired automatically.
 
-- If the chkdsk utility doesn't fix the disk errors, perform a restore from a backup.
+- If the "chkdsk" utility doesn't fix the disk errors, perform a restore from a backup.
 
-- Run a storage validation to check if there's any storage related errors.
+- Run a storage validation to check if there are any storage-related errors.
 
-- Remove the disks from the cluster and check on the operating system level.
+- Remove the disks from the cluster and check the operating system level.
 
 - Run the `chkdsk /f` command on all volumes that the event is logged for.
 
@@ -83,27 +83,27 @@ If the issue persists, try the following methods:
 
 - Remove or update filter drivers.
 
-- Contact the hardware vendor and run hardware diagnostic to avoid possibilities of any hardware issues.
+- Contact the hardware vendor and run hardware diagnostics to avoid the possibility of any hardware issues.
 
-- Involve the storage vendor to check the multipathing configuration.
+- Get in touch with the storage vendor to check the multipathing configuration.
 
-- Update SCSI port or RAID controller drivers.
+- Update the SCSI port or RAID the controller drivers.
 
-- Switching to different types of drivers. For example, RAID controller or monolithic drivers.
+- Switching to different types of drivers. For example, a RAID controller or monolithic drivers.
 
-- Update Host Bud Adapter (HBA) drivers.
+- Update the Host Bud Adapter (HBA) drivers.
 
-- Update multipathing drivers of device specific modules (DSM).
+- Update the multipathing drivers of device-specific modules (DSM).
 
-- Update HBA firmware.
+- Update the HBA firmware.
 
 ## Troubleshooting Event ID 153
 
-Event ID 153 indicates that there's an error with the storage subsystem. Event ID 153 is similar to Event ID 129. The difference is that Event ID 129 is logged when the Storport driver times out a request to the disk, and Event ID 153 is logged when the Storport miniport driver times out a request. The miniport driver may also be referred to an adapter driver or HBA driver, which is typically written by the hardware vendor.
+Event ID 153 indicates that there's an error with the storage subsystem. Event ID 153 is similar to Event ID 129. The difference is that Event ID 129 is logged when the Storport driver times out a request to the disk, and Event ID 153 is logged when the Storport miniport driver times out a request. The miniport driver may also be referred to as an adapter driver or HBA driver, which is typically written by the hardware vendor.
 
-If Event ID 153 or Event ID 129 is logged, disk I/O time-out is the common cause because the storage controller can't handle the load. In this case, the I/O operation times out and the miniport driver (from a vendor) sends back the messages to the Storport driver (the last Microsoft storage driver in the stack). Then, the Storport driver translates the information and logs the event in the Event Viewer.
+If Event ID 153 or Event ID 129 is logged, disk I/O timeout is the common cause because the storage controller can't handle the load. In this case, the I/O operation times out, and the miniport driver (from a vendor) sends back the messages to the Storport driver (the last Microsoft storage driver in the stack). Then, the Storport driver translates the information and logs the event in the Event Viewer.
 
-Because the miniport driver has a better knowledge of the request execution environment, some miniport drivers time the request themselves instead of letting the Storport driver handle request timing. And the miniport driver can abort an individual request and return an error rather than the Storport driver resets the drive after a timeout. Resetting the drive is disruptive to the I/O subsystem and may not be necessary if only one request has timed out. The miniport driver returns the error to the class driver that logs Event ID 153 and retries the request.
+Because the miniport driver has sufficient knowledge of the request execution environment, some miniport drivers time the request themselves instead of letting the Storport driver handle request timing. The miniport driver can abort an individual request and return an error, whereas the Storport driver resets the drive after a timeout. Resetting the drive is disruptive to the I/O subsystem and may not be necessary if only one request has timed out. The miniport driver returns the error to the class driver that logs Event ID 153 and retries the request.
 
 Here's an example of Event ID 153:
 
@@ -115,9 +115,9 @@ Level: Warning
 Description: The IO operation at logical block address 123456 for Disk 2 was retried.
 ```
 
-This event indicates that a request was failed and retried by the class driver. Previously, no error message is logged in this situation because the Storport driver doesn't time out the request. The lack of messages resulted in confusion when troubleshooting disk errors because there's no evidence of the error.
+This event indicates that a request failed and was retried by the class driver. No error message was logged in this situation because the Storport driver didn't time out the request. The lack of messages resulted in confusion when troubleshooting disk errors because there was no evidence of the error.
 
-On the **Details** tab of the event log, the detailed information shows the error that caused the retry and whether the request was read or write. For example:
+On the **Details** tab of the event log, the detailed information shows the error that caused the retry and whether the request was a Read or Write. For example:
 
 ```output
 0000: 0004010F 002C0003 00000000 80040099
@@ -157,11 +157,11 @@ See [srb.h](/windows-hardware/drivers/ddi/srb/ns-srb-_scsi_request_block) for a 
 
 > [!NOTE]
 >
-> - The timeout errors (`SRB_STATUS_TIMEOUT` or `SRB_STATUS_COMMAND_TIMEOUT`) indicate that a request is timed out in the adapter. A request was sent to the drive and there was no response within the timeout period.
+> - The timeout errors (`SRB_STATUS_TIMEOUT` or `SRB_STATUS_COMMAND_TIMEOUT`) indicate that a request is timed out in the adapter. A request was sent to the drive, and there was no response within the timeout period.
 >
 > - The bus reset error (`SRB_STATUS_BUS_RESET`) indicates that the device was reset and the request is being retried because of the reset since all incomplete requests are aborted when a drive receives a reset.
 
-Administrator needs to verify the health of the disk subsystem. Although an occasional timeout may be part of the normal operation of a system, the frequent retry requests indicate a performance issue with the storage that should be fixed.
+An administrator needs to verify the health of the disk subsystem. Although an occasional timeout may be part of the normal operation of a system, the frequent retry requests indicate a performance issue with storage that should be fixed.
 
 ### More information
 
