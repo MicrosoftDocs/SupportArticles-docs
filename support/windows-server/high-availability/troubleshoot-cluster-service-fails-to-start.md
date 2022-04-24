@@ -41,7 +41,7 @@ For more information about how to configure a network and network ports for a cl
 
 - [Enable a network for cluster use](/previous-versions/windows/it-pro/windows-server-2003/cc728293(v=ws.10))
 
-- [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements#system-services-ports.md)
+- [Service overview and network port requirements for Windows](../networking/service-overview-and-network-port-requirements.md#system-services-ports)
 
 After you change the port settings, try to bring the node online again before you proceed.
 
@@ -81,7 +81,7 @@ In the Group Policy Object Editor, these policy objects are located in the follo
 
 - Make sure that the list of accounts doesn't include local accounts. For more information, see [How to deny access to this computer from the network](/windows/security/threat-protection/security-policy-settings/deny-access-to-this-computer-from-the-network).
 
-- Make sure the list of accounts and groups doesn't include the Everyone group. For more information, see [the Deny log on locally security policy setting](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
+- Make sure the list of accounts and groups doesn't include the Everyone group. For more information, see [the Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
 
 After you change the policy settings, try to bring the node online again before you proceed.
 
