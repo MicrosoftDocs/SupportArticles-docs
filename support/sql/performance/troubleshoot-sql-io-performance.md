@@ -67,7 +67,7 @@ for ([int]$i = 0; $i -lt 100; $i++)
 
 #### File stats in sys.dm_io_virtual_file_stats
 
-You can also look at the database file-level latency as reported in SQL Server by running the following query:
+To view the database file-level latency as reported in SQL Server, run the following query:
 
 ```PowerShell
 #replace with server\instance or server for default instance
@@ -217,19 +217,27 @@ $_.CounterSamples | ForEach-Object {
 If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will allow more data or index pages to be cached and not re-read from disk frequently, which will reduce I/O activity.
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will  cache more data or index pages without having to frequently re-read from disk, which will reduce I/O activity.
 
 ## Causes
 
-In general, these are the high-level reasons why SQL Server queries suffer from I/O latency:
+In general, the following issues are the high-level reasons why SQL Server queries suffer from I/O latency:
 
-- **Hardware issues:** There's a SAN misconfiguration (switch, cables, HBA, storage), exceeded I/O capacity (unbalanced throughout on entire SAN network, not just back-end storage), drivers/firmware issues, and so on. This is the stage at which a hardware vendor and/or system administrators need to be engaged.
+- **Hardware issues:**
+
+  - A SAN misconfiguration (switch, cables, HBA, storage)
+
+  - Exceeded I/O capacity (unbalanced throughout on entire SAN network, not just back-end storage)
+
+  - Drivers or firmware issues
+
+  Hardware vendors and/or system administrators need to be engaged in the stage.
 
 - **Query issues:** SQL Server on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, find the queries that are causing a large number of logical reads (or writes) and tune the queries to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also, incorrect database design and query design lead to increase in I/O issues.
 
 - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
 
-- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application, tune it or move it elsewhere to eliminate its impact on the I/O stack.
+- **Other application(s):** Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application, tune it or move it elsewhere to eliminate its impact on the I/O stack.
 
 ## Graphical representation of the methodology
 
@@ -257,11 +265,11 @@ Occurs when a task is waiting for a transaction log flush to complete. A flush o
 
 Common reasons for long waits on `WRITELOG` are:
 
-- **Transaction log disk latency**: This is the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing these two on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
+- **Transaction log disk latency**: It's the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing these two files on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
 
 - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other type of issues such as long recovery.
 
-- **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result into a transaction (we call this auto transaction). If you do 1,000 inserts in a loop, there will be 1,000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush. This will result in 1,000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This can lead to fewer `WRITELOG` waits.
+- **Too many small transactions**: While large transactions can lead to blocking, too many small transactions can lead to another set of issues. If you don't explicitly begin a transaction, any insert, delete, or update will result in a transaction (we call this auto transaction). If you do 1,000 inserts in a loop, there will be 1,000 transactions generated. Each transaction in this example needs to commit, which results in a transaction log flush and 1,000 transaction flushes. When possible, group individual update, delete, or insert into a bigger transaction to reduce transaction log flushes and [increase performance](/troubleshoot/sql/admin/logging-data-storage-algorithms#increasing-performance). This operation can lead to fewer `WRITELOG` waits.
 
 - **Scheduling issues causing Log Writer threads to not get scheduled fast enough**: Prior to SQL Server 2016, a single Log Writer thread performed all log writes. If there were issues with thread scheduling (for example, high CPU) the Log Writer thread could get delayed and so too would be log flushes. In SQL Server 2016, up to four Log Writer threads were added to increase the log-writing throughput. See [SQL 2016 - It Just Runs Faster: Multiple Log Writer Workers](https://techcommunity.microsoft.com/t5/sql-server-support/sql-2016-it-just-runs-faster-multiple-log-writer-workers/ba-p/318732). In SQL Server 2019, up to eight Log Writer threads were added, which improves throughput even more. Also, in SQL Server 2019, each regular worker thread can do log writes directly instead of posting to Log writer thread. With these improvements, `WRITELOG` waits would rarely be triggered by scheduling issues.
 
