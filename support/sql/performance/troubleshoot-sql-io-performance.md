@@ -217,7 +217,7 @@ $_.CounterSamples | ForEach-Object {
 If the I/O subsystem is overwhelmed beyond capacity, then find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
 - Tune queries, for example: better indexes, update statistics, rewrite queries, and redesign the database.
-- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will  cache more data or index pages without having to frequently re-read from disk, which will reduce I/O activity.
+- Increase [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) or add more RAM on the system. More RAM will cache more data or index pages without having to frequently re-read from disk, which will reduce I/O activity.
 
 ## Causes
 
@@ -265,7 +265,7 @@ Occurs when a task is waiting for a transaction log flush to complete. A flush o
 
 Common reasons for long waits on `WRITELOG` are:
 
-- **Transaction log disk latency**: It's the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing these two files on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
+- **Transaction log disk latency**: It's the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing data and log files on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
 
 - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other type of issues such as long recovery.
 
