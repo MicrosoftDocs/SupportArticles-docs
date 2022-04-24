@@ -79,7 +79,7 @@ The following Event IDs indicate that there's a data corruption or disk error.
 
 If the issue persists, try the following methods:
 
-1. Uninstall any disk managing software such as Diskeeper.
+1. Uninstall any third-party disk managing software (for example, Diskeeper).
 
 2. Remove or update filter drivers.
 
@@ -103,7 +103,7 @@ Event ID 153 indicates that there's an error with the storage subsystem. Event I
 
 If Event ID 153 or Event ID 129 is logged, disk I/O time-out is the common cause because the storage controller can't handle the load. In this case, the I/O operation times out and the miniport driver (from a vendor) sends back the messages to the Storport driver (the last Microsoft storage driver in the stack). Then, the Storport driver translates the information and logs the event in the Event Viewer.
 
-Because the miniport driver has a better knowledge of the request execution environment, some miniport drivers time the request themselves instead of letting the Storport driver handle request timing. This is because the miniport driver can abort an individual request and return an error rather than the Storport driver resets the drive after a timeout. Resetting the drive is disruptive to the I/O subsystem and may not be necessary if only one request has timed out. The error that is returned from the miniport driver is bubbled up to the class driver that logs Event ID 153 and retries the request.
+Because the miniport driver has a better knowledge of the request execution environment, some miniport drivers time the request themselves instead of letting the Storport driver handle request timing. And the miniport driver can abort an individual request and return an error rather than the Storport driver resets the drive after a timeout. Resetting the drive is disruptive to the I/O subsystem and may not be necessary if only one request has timed out. The miniport driver returns the error to the class driver that logs Event ID 153 and retries the request.
 
 Here's an example of Event ID 153:
 
@@ -171,7 +171,7 @@ Because the issue is normally outside the operating system, check the following 
 
 - Too many drives with high load on the same storage controller, hence the drives need to be split among different controllers.
 
-- Multipath I/O (MPIO) that is configured for a single cable can be a problem or a damaged network interface controller (NIC) in the case of iSCSI.
+- If Multipath I/O (MPIO) is configured, a single cable can be a damaged iSCSI network interface controller (NIC).
 
 ## Troubleshooting Event ID 129
 
@@ -201,7 +201,7 @@ The port driver does most of the request processing. There are different port dr
 
 - Building scatter and gather arrays for data buffers.
 
-The port driver interfaces with the miniport driver. The miniport driver is designed by the hardware vendor to work with a specific adapter. It is responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter which value is set to `RequestComplete`, along with a pointer to the completed SRB.
+The port driver interfaces with the miniport driver. The miniport driver is designed by the hardware vendor to work with a specific adapter. It's responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter which value is set to `RequestComplete`, along with a pointer to the completed SRB.
 
 When a request is sent to the miniport driver, the Storport driver will put the request in a pending queue and it's timed. When the request is completed, it's removed from this queue.
 
@@ -211,7 +211,7 @@ The timing mechanism is simple. There's one timer per logical unit and it's init
 
 Some hardware vendors will tune this value to best match their hardware. Don't change this value without the guidance from your storage vendor.
 
-The timer is decremented once per second. When a request is completed, the timer is refreshed with the timeout value of the head request in the pending queue. Therefore, the timer will never go to zero as long as requests complete. If the timer goes to zero, it means that the device has stopped responding. For example, when the Storport driver logs Event ID 129, the Storport driver has to take corrective action by trying to reset the unit. When the unit is reset, all incomplete requests are completed with an error and they're retried. When the pending queue is cleared, the timer is set to `-1` which is the initial value.
+The timer is decremented once per second. When a request is completed, the timer is refreshed with the timeout value of the head request in the pending queue. Therefore, the timer will never go to zero as long as requests complete. If the timer goes to zero, it means that the device has stopped responding. For example, when the Storport driver logs Event ID 129, the Storport driver has to take corrective action by trying to reset the unit. When the unit is reset, all incomplete requests are completed with an error and they're retried. When the pending queue is cleared, the timer is set to `-1` that is the initial value.
 
 Each SRB has a timer value set. When requests are completed, the queue timer is refreshed with the timeout value of the SRB at the head of the list.
 
