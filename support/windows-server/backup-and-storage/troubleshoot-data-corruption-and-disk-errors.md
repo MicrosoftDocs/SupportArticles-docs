@@ -169,7 +169,7 @@ Because the issue is normally outside the operating system, check the following 
 
 - Some types of throttling are configured, such as I/O limitations. Sometimes, Storage I/O Control in VMware causes this issue.
 
-- Too many drives with high load on the same storage controller, hence the drives need to be split among different controllers.
+- Too many drives with a high load are on the same storage controller. Therefore the drives need to be split among different controllers.
 
 - If Multipath I/O (MPIO) is configured, a single cable can be a damaged iSCSI network interface controller (NIC).
 
@@ -191,27 +191,27 @@ Reset to device, \Device\RaidPort1, was issued.
 
 ### Information about Windows I/O stack architecture
 
-Windows I/O operation uses a layered architecture where device drivers are on a device stack. In a basic model, the top of the stack is the file system. The next is the volume manager, followed by the disk driver. The port and miniport drivers are at the bottom of the device stack. When an I/O request reaches the file system, it takes the block number of the file and translates it to an offset in the volume. Then, the volume manager translates the volume offset to a block number on the disk and passes the request to the disk driver. When the request reaches the disk driver, it will create a command descriptor block (CDB) that will be sent to the SCSI device. The disk driver imbeds the CDB into the SCSI_REQUEST_BLOCK (SRB) structure. This SRB is sent to the port driver as part of the I/O request packet (IRP).
+Windows I/O operation uses a layered architecture where device drivers are on a device stack. In a basic model, the top of the stack is the file system. The next is the volume manager, followed by the disk driver. The port and miniport drivers are at the bottom of the device stack. When an I/O request reaches the file system, it takes the block number of the file and translates it to an offset in the volume. Then, the volume manager translates the volume offset to a block number on the disk and passes the request to the disk driver. When the request reaches the disk driver, it will create a command descriptor block (CDB) and send it to the SCSI device. The disk driver embeds the CDB into the SCSI_REQUEST_BLOCK (SRB) structure. This SRB is sent to the port driver as part of the I/O request packet (IRP).
 
-The port driver does most of the request processing. There are different port drivers depending on the architecture. For example, ATA port driver (*Ataport.sys*) and SCSI port driver (*Storport.sys*). Here are some responsibilities for a port driver:
+The port driver does most of the request processing. There are different port drivers depending on the architecture. For example, the ATA port driver (*Ataport.sys*) and the SCSI port driver (*Storport.sys*). Here are some responsibilities of a port driver:
 
 - Providing timing services for requests.
 
-- Enforcing queue depth to make sure that a device doesn't have more requests that it can handle.
+- Enforcing queue depth to make sure that a device doesn't have more requests than it can handle.
 
-- Building scatter and gather arrays for data buffers.
+- Building "scatter" and "gather" arrays for data buffers.
 
-The port driver interfaces with the miniport driver. The miniport driver is designed by the hardware vendor to work with a specific adapter. It's responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter which value is set to `RequestComplete`, along with a pointer to the completed SRB.
+The port driver interfaces with the miniport driver, and the miniport driver is designed by the hardware vendor to work with a specific adapter. It's responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter with a value set to `RequestComplete`, along with a pointer to the completed SRB.
 
-When a request is sent to the miniport driver, the Storport driver will put the request in a pending queue and it's timed. When the request is completed, it's removed from this queue.
+When a request is sent to the miniport driver, the Storport driver will put the request in a pending queue, and it's timed. When the request is completed, it's removed from this queue.
 
-The timing mechanism is simple. There's one timer per logical unit and it's initialized to `-1`. When the first request is sent to the miniport driver, the timer is set to the timeout value in the SRB. The disk timeout value is a tunable parameter that is located under the following registry key:
+The timing mechanism is simple. There's one timer per logical unit, and it's initialized to `-1`. When the first request is sent to the miniport driver, the timer is set to the timeout value in the SRB. The disk timeout value is a tunable parameter that is located under the following registry key:
 
 `HKLM\System\CurrentControlSet\Services\Disk\TimeOutValue`
 
-Some hardware vendors will tune this value to best match their hardware. Don't change this value without the guidance from your storage vendor.
+Some hardware vendors will tune this value to best match their hardware. Don't change this value without guidance from your storage vendor.
 
-The timer is decremented once per second. When a request is completed, the timer is refreshed with the timeout value of the head request in the pending queue. Therefore, the timer will never go to zero as long as requests complete. If the timer goes to zero, it means that the device has stopped responding. For example, when the Storport driver logs Event ID 129, the Storport driver has to take corrective action by trying to reset the unit. When the unit is reset, all incomplete requests are completed with an error and they're retried. When the pending queue is cleared, the timer is set to `-1` that is the initial value.
+The timer is decremented once per second. When a request is completed, the timer is refreshed with the timeout value of the head request in the pending queue. Therefore, the timer will never go to zero as long as requests complete. If the timer goes to zero, it means that the device has stopped responding. For example, when the Storport driver logs Event ID 129, the Storport driver has to take corrective action by trying to reset the unit. When the unit is reset, all incomplete requests are completed with an error, and they're retried. When the pending queue is cleared, the timer is set to `-1`, which is the initial value.
 
 Each SRB has a timer value set. When requests are completed, the queue timer is refreshed with the timeout value of the SRB at the head of the list.
 
@@ -221,13 +221,13 @@ The most common causes of Event ID 129 are unresponsive LUNs or a dropped reques
 
 This event indicates that the *Classpnp.sys* driver has received a surprise removal request from the plug and play manager (PNP) for a non-removable disk.
 
-This issue is most often caused when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails, or when a user unplugs a disk while the system is running. In this case, administrator needs to verify the heath of the disk subsystem.
+This issue is most often caused when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails or when a user unplugs a disk while the system is running. In this case, an administrator needs to verify the heath of the disk subsystem.
 
 ## Troubleshooting Event ID 55 and 98
 
-If NTFS events such as Event ID 55, 50, 140, and 98 are logged, you need to run the chkdsk utility.
+If NTFS events such as Event ID 55, 50, 140, and 98 are logged, you need to run the "chkdsk" utility.
 
-Because NTFS couldn't write data to the transaction log, which could affect the ability of NTFS to stop or roll back the operations for which the transaction data couldn't be written.
+Because NTFS couldn't write data to the transaction log, this could affect the ability of NTFS to stop or roll back the operations in which the transaction data couldn't be written.
 
 Here's an example of Event ID 55:
 
@@ -245,15 +245,15 @@ Usually, Event ID 55 is logged when file system corruption occurs. The file syst
 
 - I/O requests that are delivered by the file system to the disk subsystem aren't completed successfully.
 
-Most issues are hardware related and hardware may be corrupt unexpectedly. You can try the following methods to fix the issues:
+Most issues are hardware-related, and hardware may be corrupted unexpectedly. You can try the following methods to fix the issues:
 
-- Update SCSI port or RAID controller drivers.
+- Update the SCSI port or the RAID controller drivers.
 
 - Remove or update filter drivers.
 
 - Update third-party storage drivers or firmware.
 
-- Switching to different types of drivers. For example, RAID controller or monolithic drivers.
+- Switching to different types of drivers. For example, a RAID controller or monolithic drivers.
 
 - Rearrange hardware into various combinations.
 
