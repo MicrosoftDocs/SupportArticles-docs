@@ -1280,6 +1280,8 @@
       href: ./high-availability/corrupted-memory-dump-file.md
   - name: Cluster service fails to start
     items:
+    - name: 'Troubleshooting guidance: Cluster service fails to start'
+      href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
     - name: Cluster service startup options
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
