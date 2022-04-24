@@ -22,39 +22,41 @@ search.appverid: MET150
 
 Consider the following scenario:
 
-- A user's mailbox is placed on litigation hold or retention hold.
-- The archive feature is enabled for the user.  
+- Your mailbox is placed on litigation hold or retention hold.
+- The archive feature is enabled for your mailbox.  
 
-In this scenario, the Recoverable Items folder becomes full, and the user may experience the following issues:
+In this scenario, the Recoverable Items folder becomes full, and you may experience the following issues:
 
-- They can't accept calendar invitations.  
-- They can't delete or archive data so that the Inbox folder also becomes full.
+- You can't accept calendar invitations.  
+- You can't delete or archive items so that your mailbox becomes full.
 
 When you run the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet to process the retention of items, the items are not moved to the archive mailbox. However, the mailbox diagnostic logs show that the Managed Folder Assistant ran successfully on both the primary and archive mailboxes.
 
 ## Cause
 
-This issue occurs if a new or changed retention policy has acted on the mailbox. In this case, the mailbox generates amounts of deleted items. This retention change causes the Managed Folder Assistant to move enough deleted items to the Recoverable Items folder. Therefore, the folder reaches its quota.  
+This issue occurs if a new or changed retention policy has acted on the mailbox resulting in a large number of items being deleted. Consequently, the Managed Folder Assistant moves enough deleted items to the Recoverable Items folder so that the folder reaches its quota.
 
-The Recoverable Items folder isn't emptied because the retention policy tag applied to Recoverable Items isn't active enough to move items to the archive mailbox. A default retention policy tag (**Recoverable Items 14 days Move to Archive**) can keep the mailbox in this state for over 14 days.
+However, the Recoverable Items folder is not emptied before it reaches its quota because the default retention policy tag (Recoverable Items 14 days Move to Archive) has been applied to it. Due to this tag, the Recoverable Items folder will remain full for 14 days before it's emptied and the cycle repeats.
 
 ## Resolution
 
-To resolve this issue, configure the retention policy tag for Recoverable Items more active by following these steps:
+To resolve this issue, configure the retention policy tag for Recoverable Items to move deleted items to the Archive folder earlier than the default time frame.
 
-1. Confirm the action and age limit of the retention policy tag for the type **RecoverableItems** by running the following cmdlets:
+1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
+
+2. Run the following cmdlets to verify the action and age limit of the retention policy tag for the type **RecoverableItems**:
 
     ```powershell
     $policy = Get-RetentionPolicy "POLICY"
     $policy.RetentionPolicyTagLinks | Get-RetentionPolicyTag | ft Name,Type,RetentionAction,AgeLimitForRetention
     ```
 
-2. Reduce the age limit (to 1 day) for the retention policy tag that you get from step 1. To do this, run the following [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet:
+3. Run the [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet to set the age limit for the retention policy tag from the output of the second cmdlet in step 1 to 1 day.
 
     ```powershell
-    Set-RetentionPolicyTag "<Tag_name>" -AgeLimitForRetention 1
+    Set-RetentionPolicyTag "<Retention_policy_tag>" -AgeLimitForRetention 1
     ```
 
-    **Note:** Replace \<Tag_name> with the name of the policy tag that's applied to the Recoverable Items folder.
+    **Note:** Replace \<Retention_policy_tag> with the name of the policy tag that's applied to the Recoverable Items folder.
 
-3. Run the `Start-ManagedFolderAssistant` cmdlet to process the items to the archive mailbox and free up space in the Recoverable Items folder.
+4. Run the `Start-ManagedFolderAssistant` cmdlet to process the items to the archive mailbox and free up space in the Recoverable Items folder.
