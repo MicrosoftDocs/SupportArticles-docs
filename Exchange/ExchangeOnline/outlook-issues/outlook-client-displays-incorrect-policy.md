@@ -26,7 +26,7 @@ The Outlook desktop client uses the Teams or Skype for Business retention policy
 
 ## Cause
 
-If an organization creates multiple retention policies for either Teams or Skype for Business in the Microsoft 365 compliance center, the Outlook client by default displays either the Teams or Skype for Business policy.
+If an organization creates multiple retention policies for either Teams or Skype for Business in the Microsoft Purview compliance portal, the Outlook client by default displays either the Teams or Skype for Business policy.
 
 The Teams or Skype for Business policy that's displayed in Outlook doesn't apply to a user's mail folders. Therefore, the Outlook client displays the incorrect policy information for the mail folder.
 
