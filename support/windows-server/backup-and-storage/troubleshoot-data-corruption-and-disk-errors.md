@@ -44,58 +44,58 @@ The following Event IDs indicate that there's a data corruption or disk error.
 > [!NOTE]
 > The commands that are described in this article need to be run at an elevated command prompt.
 
-1. In the System event log, search for New Technology File System (NTFS) and disk related warnings and errors. For example, Event ID 55, 153, or 98.
+- In the System event log, search for New Technology File System (NTFS) and disk related warnings and errors. For example, Event ID 55, 153, or 98.
 
-2. Run the `chkdsk /scan` command and check the result.
+- Run the `chkdsk /scan` command and check the result.
 
    > [!NOTE]
    > The `chkdsk /scan` command is read-only.
 
-3. Query a drive for NTFS-specific volume information by running the following command:
+- Query a drive for NTFS-specific volume information by running the following command:
 
    `fsutil fsinfo ntfsinfo <rootpath>:`
 
    > [!NOTE]
    > The placeholder \<rootpath> represents the drive letter of the root drive.
 
-4. Run the `fsutil dirty query <volumepath>:` command to check if the volume is dirty.
+- Run the `fsutil dirty query <volumepath>:` command to check if the volume is dirty.
 
    > [!NOTE]
    > The placeholder \<volumepath> represents the drive letter.
 
-   - For a volume which file system is NTFS, run the `chkdsk /f /r` command if the volume is dirty. The `chkdsk /F /R` command needs downtime because the disk won't be accessible.
+  - For a volume which file system is NTFS, run the `chkdsk /f /r` command if the volume is dirty. The `chkdsk /F /R` command needs downtime because the disk won't be accessible.
 
-   - For a volume which file system is Resilient File System (ReFS), the disk corruption will be repaired automatically.
+  - For a volume which file system is Resilient File System (ReFS), the disk corruption will be repaired automatically.
 
-5. If the chkdsk utility doesn't fix the disk errors, perform a restore from a backup.
+- If the chkdsk utility doesn't fix the disk errors, perform a restore from a backup.
 
-6. Run a storage validation to check if there's any storage related errors.
+- Run a storage validation to check if there's any storage related errors.
 
-7. Remove the disks from the cluster and check on the operating system level.
+- Remove the disks from the cluster and check on the operating system level.
 
-8. Run the `chkdsk /f` command on all volumes that the event is logged for.
+- Run the `chkdsk /f` command on all volumes that the event is logged for.
 
-9. Update third-party storage drivers or firmware.
+- Update third-party storage drivers or firmware.
 
 If the issue persists, try the following methods:
 
-1. Uninstall any third-party disk managing software (for example, Diskeeper).
+- Uninstall any third-party disk managing software (for example, Diskeeper).
 
-2. Remove or update filter drivers.
+- Remove or update filter drivers.
 
-3. Contact the hardware vendor and run hardware diagnostic to avoid possibilities of any hardware issues.
+- Contact the hardware vendor and run hardware diagnostic to avoid possibilities of any hardware issues.
 
-4. Involve the storage vendor to check the multipathing configuration.
+- Involve the storage vendor to check the multipathing configuration.
 
-5. Update SCSI port or RAID controller drivers.
+- Update SCSI port or RAID controller drivers.
 
-6. Switching to different types of drivers. For example, RAID controller or monolithic drivers.
+- Switching to different types of drivers. For example, RAID controller or monolithic drivers.
 
-7. Update Host Bud Adapter (HBA) drivers.
+- Update Host Bud Adapter (HBA) drivers.
 
-8. Update multipathing drivers of device specific modules (DSM).
+- Update multipathing drivers of device specific modules (DSM).
 
-9. Update HBA firmware.
+- Update HBA firmware.
 
 ## Troubleshooting Event ID 153
 
