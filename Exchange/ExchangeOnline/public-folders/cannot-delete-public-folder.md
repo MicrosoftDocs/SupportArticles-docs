@@ -1,5 +1,5 @@
 ---
-title: Can't delete public folder from Outlook clients
+title: Can't delete a mail-enabled public folder
 description: Fixes an issue in which you can't delete a public folder from Outlook clients because the public folder is mail-enabled.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -22,7 +22,7 @@ ms.date: 4/18/2022
 
 ## Symptoms
 
-When a user who has appropriate permissions tries to delete a public folder from a Microsoft Outlook client, they receive one of the following error messages:
+When you try to delete a public folder from a Microsoft Outlook client, you receive one of the following error messages even if you have appropriate permissions:
 
 - **In Outlook for Windows**
     > Cannot delete this folder. Right-click the folder, and then click Properties to check your permissions for this folder. See the folder owner or administrator to change your permissions. Some items cannot be deleted. They were either moved or already deleted, or access was denied.
@@ -33,7 +33,7 @@ When a user who has appropriate permissions tries to delete a public folder from
 
 ## Cause
 
-This issue occurs because the public folder is mail-enabled. Public folders must be mail-disabled before users can delete them.
+This issue occurs because the public folder is mail-enabled. Public folders must be mail-disabled before you can delete them.
 
 ## Resolution
 
