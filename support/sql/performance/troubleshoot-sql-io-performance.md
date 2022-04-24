@@ -233,7 +233,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
   Hardware vendors and/or system administrators need to be engaged in the stage.
 
-- **Query issues:** SQL Server on the system is saturating the disks with I/O requests and that is why transfer rates are high. In this case, find the queries that are causing a large number of logical reads (or writes) and tune the queries to minimize the disk I/O. Using appropriate indexes provides the query optimizer sufficient information to choose the best plan, that is, to keep statistics updated. Also, incorrect database design and query design lead to increase in I/O issues.
+- **Query issues:** SQL Server is saturating disk volumes with I/O requests and is pushing the I/O subsystem beyond capacity. This causes I/O transfer rates to be high. In this case, the solution is to find the queries that are causing a high number of logical reads (or writes) and tune those queries to minimize disk I/O. Using appropriate indexes is the first best step to do that. Also keep statistics updated as they provide the query optimizer sufficient information to choose the best plan. Also, incorrect database design and query design can lead to increase in I/O issues. Therefore, re-designing queries and sometimes tables may help with improved I/O.
 
 - **Filter drivers:** SQL Server I/O response can be severely impacted if file-system filter drivers process the heavy I/O traffic. Proper file exclusions from anti-virus scanning and correct filter driver design by software vendors are recommended to prevent impact on I/O performance.
 
