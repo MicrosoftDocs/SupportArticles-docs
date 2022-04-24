@@ -2,6 +2,14 @@
 
 
 
+## Week of April 18, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 4/19/2022 | [Cannot determine group type error when checking group in Microsoft 365 admin center](/exchange/troubleshoot/groups-and-distribution-lists/cannot-determine-group-type-error) | modified |
+
+
 ## Week of April 04, 2022
 
 
