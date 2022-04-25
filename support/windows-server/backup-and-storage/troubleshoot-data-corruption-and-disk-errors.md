@@ -87,9 +87,9 @@ If the issue persists, try the following methods:
 
 - Get in touch with the storage vendor to check the multipathing configuration.
 
-- Update the SCSI port or RAID the controller drivers.
+- Update the SCSI port or the RAID controller drivers.
 
-- Switching to different types of drivers. For example, a RAID controller or monolithic drivers.
+- Switching to different types of drivers. For example, RAID controller drivers or monolithic drivers.
 
 - Update the Host Bud Adapter (HBA) drivers.
 
@@ -117,7 +117,7 @@ Description: The IO operation at logical block address 123456 for Disk 2 was ret
 
 This event indicates that a request failed and was retried by the class driver. No error message was logged in this situation because the Storport driver didn't time out the request. The lack of messages resulted in confusion when troubleshooting disk errors because there was no evidence of the error.
 
-On the **Details** tab of the event log, the detailed information shows the error that caused the retry and whether the request was a Read or Write. For example:
+On the **Details** tab of the event log, the detailed information shows the error that caused the retry and whether the request was a Read or Write request. For example:
 
 ```output
 0000: 0004010F 002C0003 00000000 80040099
@@ -253,7 +253,7 @@ Most issues are hardware-related, and hardware may be corrupted unexpectedly. Yo
 
 - Update third-party storage drivers or firmware.
 
-- Switching to different types of drivers. For example, a RAID controller or monolithic drivers.
+- Switching to different types of drivers. For example, RAID controller drivers or monolithic drivers.
 
 - Rearrange hardware into various combinations.
 
