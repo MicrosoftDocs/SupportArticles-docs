@@ -40,7 +40,7 @@ A [flow chart](#graphical-representation-of-the-methodology) at the end of this 
 
 SQL Server may report I/O latency in several ways:
 
-- Wait types
+- I/O wait types
 - DMV `sys.dm_io_virtual_file_stats`
 - Error log or Application Event log
 
@@ -55,12 +55,12 @@ $sqlserver_instance = "server\instance"
 for ([int]$i = 0; $i -lt 100; $i++)
 {
    
-  sqlcmd -E -S $sqlserver_instance -Q "SELECT r.session_id, r.wait_type, r.wait_time as wait_time_ms
-                                       FROM sys.dm_exec_requests r
-                                       JOIN sys.dm_exec_sessions s ON r.session_id = s.session_id
-                                       WHERE wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', 'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')
+  sqlcmd -E -S $sqlserver_instance -Q "SELECT r.session_id, r.wait_type, r.wait_time as wait_time_ms`
+                                       FROM sys.dm_exec_requests r JOIN sys.dm_exec_sessions s `
+                                        ON r.session_id = s.session_id `
+                                       WHERE wait_type in ('PAGEIOLATCH_SH', 'PAGEIOLATCH_EX', 'WRITELOG', `
+                                        'IO_COMPLETION', 'ASYNC_IO_COMPLETION', 'BACKUPIO')`
                                        AND is_user_process = 1"
-
   Start-Sleep -s 2
 }
 ```
@@ -72,40 +72,26 @@ To view the database file-level latency as reported in SQL Server, run the follo
 ```PowerShell
 #replace with server\instance or server for default instance
 $sqlserver_instance = "server\instance" 
-
-sqlcmd -E -S $sqlserver_instance -Q "SELECT  LEFT(mf.physical_name,100),   
-                                         ReadLatency = CASE 
-                                             WHEN num_of_reads = 0 THEN 0 
-                                         ELSE (io_stall_read_ms / num_of_reads) 
-                                         END, 
-                                         WriteLatency = CASE 
-                                             WHEN num_of_writes = 0 THEN 0 
-                                             ELSE (io_stall_write_ms / num_of_writes) 
-                                         END, 
-                                         AvgLatency =  CASE 
-                                             WHEN (num_of_reads = 0 AND num_of_writes = 0 THEN 0 
-                                         ELSE (io_stall / (num_of_reads + num_of_writes)) 
-                                         END,
-                                         LatencyAssessment = CASE 
-                                             WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 'No data' 
-                                         ELSE 
-                                         CASE WHEN (io_stall / (num_of_reads + num_of_writes)) < 2 THEN 'Excellent' 
-                                              WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 2 AND 5 THEN 'Very good' 
-                                              WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 6 AND 15 THEN 'Good' 
-                                              WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 16 AND 100 THEN 'Poor' 
-                                              WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 100 AND 500 THEN  'Bad' 
-                                         ELSE 'Deplorable'  
-                                         END, 
-                                         [Avg KBs/Transfer] =  CASE 
-                                              WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 0 
-                                         ELSE ((([num_of_bytes_read] + [num_of_bytes_written]) / (num_of_reads + num_of_writes)) / 1024) 
-                                         END, 
-                                         LEFT (mf.physical_name, 2) AS Volume, 
-                                         LEFT(DB_NAME (vfs.database_id),32) AS [Database Name]
-                                     FROM sys.dm_io_virtual_file_stats (NULL,NULL) AS vfs
-                                     JOIN sys.master_files AS mf ON vfs.database_id = mf.database_id
-                                     AND vfs.file_id = mf.file_id
-                                     ORDER BY AvgLatency DESC"
+sqlcmd -E -S $sqlserver_instance -Q "SELECT   LEFT(mf.physical_name,100),   `
+         ReadLatency = CASE WHEN num_of_reads = 0 THEN 0 ELSE (io_stall_read_ms / num_of_reads) END, `
+         WriteLatency = CASE WHEN num_of_writes = 0 THEN 0 ELSE (io_stall_write_ms / num_of_writes) END, `
+         AvgLatency =  CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 0 `
+                        ELSE (io_stall / (num_of_reads + num_of_writes)) END,`
+         LatencyAssessment = CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 'No data' ELSE `
+               CASE WHEN (io_stall / (num_of_reads + num_of_writes)) < 2 THEN 'Excellent' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 2 AND 5 THEN 'Very good' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 6 AND 15 THEN 'Good' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 16 AND 100 THEN 'Poor' `
+                    WHEN (io_stall / (num_of_reads + num_of_writes)) BETWEEN 100 AND 500 THEN  'Bad' `
+                    ELSE 'Deplorable' END  END, `
+         [Avg KBs/Transfer] =  CASE WHEN (num_of_reads = 0 AND num_of_writes = 0) THEN 0 `
+                    ELSE ((([num_of_bytes_read] + [num_of_bytes_written]) / (num_of_reads + num_of_writes)) / 1024) END, `
+         LEFT (mf.physical_name, 2) AS Volume, `
+         LEFT(DB_NAME (vfs.database_id),32) AS [Database Name]`
+       FROM sys.dm_io_virtual_file_stats (NULL,NULL) AS vfs  `
+       JOIN sys.master_files AS mf ON vfs.database_id = mf.database_id `
+         AND vfs.file_id = mf.file_id `
+       ORDER BY AvgLatency DESC"
 ```
 
 Look at `AvgLatency` and `LatencyAssessment` columns to understand the latency details.
@@ -128,9 +114,8 @@ If SQL Server reports I/O latency, refer to OS counters. You can determine if th
 ```PowerShell
 #replace with server\instance or server for default instance
 $sqlserver_instance = "server\instance" 
-
-sqlcmd -E -S $sqlserver_instance -Q "SELECT DISTINCT LEFT(volume_mount_point, 32) AS volume_mount_point
-                                     FROM sys.master_files f
+sqlcmd -E -S $sqlserver_instance -Q "SELECT DISTINCT LEFT(volume_mount_point, 32) AS volume_mount_point `
+                                     FROM sys.master_files f `
                                      CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id) vs"
 ```
 
@@ -139,18 +124,13 @@ Gather `Avg Disk Sec/Transfer` metrics on your volume of choice:
 ```Powershell
 clear
 $cntr = 0 
-
 # replace with your server name, unless local computer
 $serverName = $env:COMPUTERNAME
-
 # replace with your volume name - C: , D:, etc
 $volumeName = "_total"
-
 $Counters = @(("\\$serverName" +"\LogicalDisk($volumeName)\Avg. disk sec/transfer"))
-
 $disksectransfer = Get-Counter -Counter $Counters -MaxSamples 1 
 $avg = $($disksectransfer.CounterSamples | Select-Object CookedValue).CookedValue
-
 Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 30 | ForEach-Object {
 $_.CounterSamples | ForEach-Object {
    [pscustomobject]@{
@@ -160,10 +140,9 @@ $_.CounterSamples | ForEach-Object {
          turn = $cntr = $cntr +1
          running_avg = [Math]::Round(($avg = (($_.CookedValue + $avg) / 2)), 5)  
          
-       } | Format-Table
+   } | Format-Table
      }
    }
-
    write-host "Final_Running_Average: $([Math]::Round( $avg, 5)) sec/transfer`n"
   
    if ($avg -gt 0.01)
@@ -194,22 +173,20 @@ If SQL Server and the OS indicate I/O subsystem is slow, then check if that is c
 
 ```Powershell
 clear
-
 $serverName = $env:COMPUTERNAME
 $Counters = @(
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Bytes/sec"),
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Read Bytes/sec"),
    ("\\$serverName" +"\PhysicalDisk(*)\Disk Write Bytes/sec")
    )
-Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach-Object {
-$_.CounterSamples | ForEach-Object {
+Get-Counter -Counter $Counters -SampleInterval 2 -MaxSamples 20 | ForEach-Object  {
+$_.CounterSamples | ForEach-Object       {
    [pscustomobject]@{
       TimeStamp = $_.TimeStamp
       Path = $_.Path
-      Value = ([Math]::Round($_.CookedValue, 3)) 
+      Value = ([Math]::Round($_.CookedValue, 3)) }
     }
-  }
-}
+ }
 ```
 
 ### Step 4. Is SQL Server driving the heavy I/O activity?
@@ -231,7 +208,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
   - Drivers or firmware issues
 
-Hardware vendors and/or system administrators need to be engaged at this stage.
+  Hardware vendors and/or system administrators need to be engaged at this stage.
 
 - **Query issues:** SQL Server is saturating disk volumes with I/O requests and is pushing the I/O subsystem beyond capacity. This causes I/O transfer rates to be high. In this case, the solution is to find the queries that are causing a high number of logical reads (or writes) and tune those queries to minimize disk I/O. Using appropriate indexes is the first best step to do that. Also keep statistics updated as they provide the query optimizer sufficient information to choose the best plan. Also, incorrect database design and query design can lead to increase in I/O issues. Therefore, re-designing queries and sometimes tables may help with improved I/O.
 
