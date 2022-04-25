@@ -38,7 +38,7 @@ If the policies are assigned correctly but you’re still unable to install the 
 
 ## Command-line version of the Assistant
 
-If you’re an administrator who has multiple users affected by the issues with the Teams Meeting add-in, you can use the command-line version of the Assistant. This version can be scripted to detect and fix most of the issues automatically without requiring user interaction. For details about using the command-line version of the Assistant to troubleshoot issues with the Teams Meeting add-in, see [Command-line version of Microsoft Support and Recovery Assistant](../../office365/troubleshoot/administration/sara-command-line-version#supported-switches.md).  
+If you’re an administrator who has multiple users affected by the issues with the Teams Meeting add-in, you can use the command-line version of the Assistant. This version can be scripted to detect and fix most of the issues automatically without requiring user interaction. For details about using the command-line version of the Assistant to troubleshoot issues with the Teams Meeting add-in, see [Command-line version of Microsoft Support and Recovery Assistant](../../Microsoft365/enterprise/administration/sara-command-line-version#supported-switches.md).  
 
 ## Fix the issue manually
 
