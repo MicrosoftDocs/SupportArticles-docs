@@ -7,7 +7,7 @@ ms.date: 3/31/2021
 ms.subservice: 
 ---
 
-# Dependency Timeout error when using a form processing model in Power Automate
+# Dependency timeout error when using a form processing model in Power Automate
 
 This article provides a solution to a dependency timeout error when using a form processing model in Microsoft Power Automate.
 
@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-You get the error, **Dependency Timeout error (408 – Dependency Timeout)**.
+You get the dependency timeout error, **408 - Dependency Timeout**.
 
 ## Cause
 

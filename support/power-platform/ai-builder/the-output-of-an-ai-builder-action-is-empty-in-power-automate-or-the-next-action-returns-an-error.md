@@ -8,7 +8,7 @@ ms.subservice:
 ---
 
 # Output of an AI Builder action is empty in Power Automate or the next action returns an error
-This article provides a solution to an error, **Unable to process template language expressions in action...** with a statusCode **202**.
+This article provides a solution to an error, **Unable to process template language expressions in action...** with **statusCode: 202**.
 
 _Applies to:_ &nbsp; Power Automate
 
