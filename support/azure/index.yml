@@ -28,7 +28,7 @@ productDirectory:
   - title: Azure Monitor
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
-    - url: /log-analytics/welcome-log-analytics.yml
+    - url: log-analytics/welcome-log-analytics.yml
       text: Troubleshooting articles for Azure Log Analytics
     - url: azure-monitor/app-insights/welcome-application-insights.yml
       text: Troubleshooting articles for Azure Application Insights
