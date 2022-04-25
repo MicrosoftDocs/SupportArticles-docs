@@ -99,7 +99,7 @@ If the issue persists, try the following methods:
 
 ## Troubleshooting Event ID 153
 
-Event ID 153 indicates that there's an error with the storage subsystem. Event ID 153 is similar to Event ID 129. The difference is that Event ID 129 is logged when the Storport driver times out a request to the disk, and Event ID 153 is logged when the Storport miniport driver times out a request. The miniport driver may also be referred to as an adapter driver or HBA driver, which is typically written by the hardware vendor.
+Event ID 153 indicates that there's an error with the storage subsystem. Event ID 153 is similar to Event ID 129, but the difference is that Event ID 129 is logged when the Storport driver times out a request to the disk, and Event ID 153 is logged when the Storport miniport driver times out a request. The miniport driver may also be referred to as an adapter driver or HBA driver, which is typically written by the hardware vendor.
 
 If Event ID 153 or Event ID 129 is logged, disk I/O timeout is the common cause because the storage controller can't handle the load. In this case, the I/O operation times out, and the miniport driver (from a vendor) sends back the messages to the Storport driver (the last Microsoft storage driver in the stack). Then, the Storport driver translates the information and logs the event in the Event Viewer.
 
@@ -167,11 +167,11 @@ An administrator needs to verify the health of the disk subsystem. Although an o
 
 Because the issue is normally outside the operating system, check the following common causes:
 
-- Some types of throttling are configured, such as I/O limitations. Sometimes, Storage I/O Control in VMware causes this issue.
+- Some type of throttling is configured, such as I/O limitations. Sometimes, Storage I/O Control in VMware causes this issue.
 
 - Too many drives with a high load are on the same storage controller. Therefore the drives need to be split among different controllers.
 
-- If Multipath I/O (MPIO) is configured, a single cable can be a damaged iSCSI network interface controller (NIC).
+- If Multipath I/O (MPIO) is configured, a single cable or a damaged NIC can cause issues with iSCSI.
 
 ## Troubleshooting Event ID 129
 
@@ -195,17 +195,17 @@ Windows I/O operation uses a layered architecture where device drivers are on a 
 
 The port driver does most of the request processing. There are different port drivers depending on the architecture. For example, the ATA port driver (*Ataport.sys*) and the SCSI port driver (*Storport.sys*). Here are some responsibilities of a port driver:
 
-- Providing timing services for requests.
+- Providing timing services for requests
 
-- Enforcing queue depth to make sure that a device doesn't have more requests than it can handle.
+- Enforcing queue depth to make sure that a device doesn't have more requests than it can handle
 
-- Building "scatter" and "gather" arrays for data buffers.
+- Building "scatter" and "gather" arrays for data buffers
 
 The port driver interfaces with the miniport driver, and the miniport driver is designed by the hardware vendor to work with a specific adapter. It's responsible for taking requests from the port driver and sending them to the target logical unit number (LUN). The port driver calls the `HwStorStartIo()` function to send requests to the miniport driver, and the miniport driver will send the requests to the HBA driver so that they can be sent over the physical medium (Fibre or Ethernet) to the LUN. When the request is completed, the miniport driver will call the `StorPortNotification()` function with the `NotificationType` parameter with a value set to `RequestComplete`, along with a pointer to the completed SRB.
 
 When a request is sent to the miniport driver, the Storport driver will put the request in a pending queue, and it's timed. When the request is completed, it's removed from this queue.
 
-The timing mechanism is simple. There's one timer per logical unit, and it's initialized to `-1`. When the first request is sent to the miniport driver, the timer is set to the timeout value in the SRB. The disk timeout value is a tunable parameter that is located under the following registry key:
+The timing mechanism is simple. There's one timer per logical unit, and it's initialized to `-1`. When the first request is sent to the miniport driver, the timer is set to the timeout value in the SRB. The disk timeout value is a tunable parameter that's located under the following registry key:
 
 `HKLM\System\CurrentControlSet\Services\Disk\TimeOutValue`
 
@@ -221,7 +221,7 @@ The most common causes of Event ID 129 are unresponsive LUNs or a dropped reques
 
 This event indicates that the *Classpnp.sys* driver has received a surprise removal request from the plug and play manager (PNP) for a non-removable disk.
 
-This issue is most often caused when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails or when a user unplugs a disk while the system is running. In this case, an administrator needs to verify the heath of the disk subsystem.
+This issue most often occurs when something disrupts the system's communication with a disk, such as a SAN fabric error or a SCSI bus problem. The errors can also be caused by a disk that fails or when a user unplugs a disk while the system is running. In this case, an administrator needs to verify the heath of the disk subsystem.
 
 ## Troubleshooting Event ID 55 and 98
 
