@@ -1,6 +1,6 @@
 ---
 title: Cluster service fails to start troubleshooting guidance
-description: Provides guidance for when a cluster service fails to start in a Windows-based failover cluster
+description: Provides guidance for when a cluster service fails to start in a Windows-based failover cluster.
 ms.date: 04/24/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -70,9 +70,7 @@ After you change the port settings, try to bring the node online again before yo
 
 ### Check the security policies that might affect the cluster node
 
-In the Group Policy Object Editor, these policy objects are located in the following folder:
-
-`Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment`
+In the Group Policy Object Editor, these policy objects are located in *Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment*.
 
 > [!NOTE]
 > To access the local security policy settings, select **Start**, type **local security policy**, and then select **Local Security Policy**.
