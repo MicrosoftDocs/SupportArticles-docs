@@ -143,6 +143,8 @@
       href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: Issues with webinars
       href: ./meetings/issues-with-webinars.md
+    - name: Resolve Teams Meeting add-in issues
+      href: ./resolve-teams-meeting-add-in-issues.md
   - name: Mobile
     items:
     - name: A website with Conditional Access doesn't display when viewed on the Website tab 
