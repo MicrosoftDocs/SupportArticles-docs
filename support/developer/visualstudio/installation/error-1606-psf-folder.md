@@ -15,7 +15,7 @@ _Applies to:_&nbsp;Visual Studio 2015
 
 ## Symptoms
 
-When you try to install Microsoft Visual Studio on a Mac that’s running Parallels Tools, you experience the error "1606" and you receive an error message that refers to a *\\.psf* folder.
+When you try to install Microsoft Visual Studio on a Mac that’s running Parallels Tools, you experience the error "1606" and you receive an error message that refers to a *`\\.psf`* folder.
 
 ## Resolution
 
