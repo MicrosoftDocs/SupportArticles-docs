@@ -1,5 +1,5 @@
 ---
-title: Error "No Internet connection detected on this machine"
+title: Error - No Internet connection detected on this machine
 description: This article helps you resolve a "No Internet connection" error when you try to install Visual Studio 2015.
 ms.date: 04/22/2022
 author: jasonchlus
