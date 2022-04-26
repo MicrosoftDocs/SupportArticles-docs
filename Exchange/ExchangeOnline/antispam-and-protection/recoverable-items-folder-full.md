@@ -50,7 +50,7 @@ To resolve this issue, configure the retention policy tag for Recoverable Items 
     Get-RetentionPolicyTag | ft Name,Type,RetentionAction,AgeLimitForRetention
     ```
 
-3. Run the [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet to set the age limit for the retention policy tag from the output of the second cmdlet in step 1 to 1 day.
+3. Run the [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet to set the age limit for the retention policy tag from the output of the cmdlet in step 2 to 1 day.
 
     ```powershell
     Set-RetentionPolicyTag "<Retention_policy_tag>" -AgeLimitForRetention 1
