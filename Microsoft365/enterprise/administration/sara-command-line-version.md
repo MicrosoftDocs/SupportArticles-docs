@@ -210,8 +210,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Office is already activated|Exit the scenario|Result Code: 37 It looks like Microsoft Office is already activated. If you don’t think this is correct, please run the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
   |Failure to complete the scenario (for any reason)|Exit the scenario|Result Code: 38 `<message depends on the ReasonCode>`|
   |Unable to activate Office|Exit the scenario|Result Code: 39 Office may not be activated. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
-  |Failure to complete the scenario|Exit the scenario|Result Code: 40
-Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
+  |Failure to complete the scenario|Exit the scenario|Result Code: 40 Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
 
 - `OfficeSharedActivationScenario`
 
