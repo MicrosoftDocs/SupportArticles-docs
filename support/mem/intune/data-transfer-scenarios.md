@@ -6,7 +6,7 @@ ms.reviewer: roblane-msft
 ---
 # Common data transfer issues and scenarios
 
-This article gives troubleshooting checks for common scenarios in which data transfer is not restricted as expected with Intune app protection policies (APP). For general troubleshooting guidance related to data transfer and Intune APP, see [Troubleshooting data transfer between apps](troubleshoot-data-transfer.md).
+This article gives troubleshooting checks for common scenarios in which data transfer isn't restricted as expected with Intune app protection policies (APP). For general troubleshooting guidance related to data transfer and Intune APP, see [Troubleshooting data transfer between apps](troubleshoot-data-transfer.md).
 
 ## User can transfer corporate files, or copy/paste corporate data, to unmanaged apps
 
@@ -14,7 +14,7 @@ In this scenario, a user can unexpectedly transfer corporate files to unmanaged 
 
 - Check the **Send org data to other apps** setting value in both the Microsoft Endpoint Manager admin center and on the device side using Microsoft Edge. If it is set to **All apps**, users can transfer files to any apps. For instructions, see [Link to section in other article: Confirm the expected app protection policy settings are applied to the apps].
 
-- Confirm that the user is working with corporate accounts and corporate data. Personal accounts and data are not protected by app protection policies. Office files such as Word, Excel, and PowerPoint files are not treated as corporate data unless they are saved to managed locations such as OneDrive for Business.
+- Confirm that the user is working with corporate accounts and corporate data. Personal accounts and data aren't protected by app protection policies. Office files such as Word, Excel, and PowerPoint files aren't treated as corporate data unless they are saved to managed locations such as OneDrive for Business.
 
 ## User can receive files from unmanaged apps
 
@@ -22,11 +22,11 @@ In this scenario, a user can unexpectedly receive files from unmanaged apps. For
 
 - Check the **Receive data from other apps** setting value in both the Microsoft Endpoint Manager admin center and on the device side using Microsoft Edge. If it is set to **All apps**, users can transfer files from any apps. For instructions, see [Link to section in other article: Confirm the expected app protection policy settings are applied to the apps].
 
-- Also, check the setting values for  **Open data into Org documents** and **Allow users to open data from selected services** to restrict the data source you block/allow. Currently, you cannot control **Camera** and **Photo Library** data sources separately.
+- Also, check the setting values for  **Open data into Org documents** and **Allow users to open data from selected services** to restrict the data source you block/allow. Currently, you can't control **Camera** and **Photo Library** data sources separately.
 
     :::image type="content" source="media/data-transfer-scenarios/open-data-from-services.png" alt-text="Dropdown options for 'Allow users to open data from selected services' in the admin center.":::
 
-## User can transfer files to unmanaged apps even if data transfer if restricted
+## User can transfer files to unmanaged apps even if data transfer is restricted
 
 In this scenario, a user can transfer files to policy unmanaged apps even though you have set **Send org data to other apps** to ‘Policy managed apps’.
 
@@ -34,7 +34,7 @@ In this scenario, a user can transfer files to policy unmanaged apps even though
 
     :::image type="content" source="media/data-transfer-scenarios/select-apps-to-exempt.png" alt-text="Image showing the 'Select apps to exempt' option under 'Send org data to other apps'.":::
 
-- If the file is still encrypted once transferred to unmanaged apps, this is expected behavior as explained in [Confirm the data is encrypted once files are transferred](troubleshoot-data-transfer.md#confirm-the-data-is-encrypted-once-files-are-transferred). The files are encrypted and cannot be opened with unmanaged apps.
+- If the file is still encrypted once transferred to unmanaged apps, this is expected behavior as explained in [Confirm the data is encrypted once files are transferred](troubleshoot-data-transfer.md#confirm-the-data-is-encrypted-once-files-are-transferred). The files are encrypted and can't be opened with unmanaged apps.
 
 ## Users can save corporate files to local storage when it should be blocked
 
@@ -46,7 +46,7 @@ The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-
 
 You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
 
-- **Employee-owned devices that are not managed by an MDM solution:** You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Configured in this way, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
+- **Employee-owned devices that aren't managed by an MDM solution:** You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Configured in this way, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
 
 - **Devices that are managed by MDM solutions:** For devices that are enrolled in Intune or third-party MDM solutions, Intune APP and the iOS **Open-in management** feature control data sharing between protected apps and other managed iOS apps that are deployed through MDM.
 
@@ -54,7 +54,7 @@ For more information about how to receive and share app data, see [iOS app prote
 
 ## I want to customize the apps available in the iOS Share extension
 
-A common scenario admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiving apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you are using an MDM solution.
+A common scenario that admins want to apply is to filter the list of apps displayed in the iOS Share extension (receiving apps) to prevent data transfer to unmanaged apps. There are two methods to control which apps are available in the share extension. You can combine both methods if you're using an MDM solution.
 
 ### Option A: Restrict sharing for Intune-managed devices
 
@@ -62,7 +62,7 @@ A common scenario admins want to apply is to filter the list of apps displayed i
 - Use Intune MDM to deploy the apps you want to allow data sharing between.
 - Do not deploy other apps and instead have your users install them from the Apple App Store.
 
-With this configuration, only MDM managed apps are displayed in the sharing extension if the sender app is MDM managed. Here is an example how apps in the sharing extension change with the MDM setting. In this example the Teams app is not deployed with Intune, so the app is not displayed in the share extension.
+With this configuration, only MDM managed apps are displayed in the sharing extension if the sender app is MDM managed. Here is an example how apps in the sharing extension change with the MDM setting. In this example the Teams app isn't deployed with Intune, so the app is not displayed in the share extension.
 
 :::image type="content" source="media/data-transfer-scenarios/block-viewing-corporate-docs.png" alt-text="Side-by-side screenshots showing the different options for apps you can use to open a document, before and after applying the MDM setting.":::
 
@@ -70,7 +70,7 @@ With this configuration, only MDM managed apps are displayed in the sharing exte
 
 - Set the app protection setting **Send org data to other apps** to 'Policy managed app with Open-In/Share filtering'.
 
-With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for an [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app is not displayed in the share extension because it does not support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
+With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for an [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app is not displayed in the share extension because it doesn't support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
 
 :::image type="content" source="media/data-transfer-scenarios/send-data-to-other-apps.png" alt-text="Side-by-side screenshots showing the different options for apps you can send a file to, before and after applying the MDM setting.":::
 

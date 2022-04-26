@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Microsoft Intune app protection policy deployment
-description: This articles gives troubleshooting guidance for IT Admins for issues when you deploying Intune app protection policies. 
-ms.date: 04/21/2022
+description: This article gives troubleshooting guidance for IT Admins with issues when deploying Intune app protection policies. 
+ms.date: 04/26/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ---
@@ -39,7 +39,7 @@ Successful app protection policy deployment relies on proper configuration of se
 
 ### Solution 1: Verify app protection policy prerequisites
 
-The first step in troubleshooting is to check whether all prerequisites are met. Although you can use Intune app protection policies independent of any MDM solution, the following prerequisites must be met:
+The first step in troubleshooting is to check whether all prerequisites are met. Although you can use Intune APP independent of any MDM solution, the following prerequisites must be met:
 
 - The user must have an Intune license assigned.
 - The user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app that's used.
@@ -145,7 +145,7 @@ To check app protection status, follow these steps:
 1. Review the policies that are currently applied, including the status and last sync time.
 1. If the status is **Not checked in**, or if the display indicates that there has not been a recent sync, check whether the user has a consistent network connection. For Android users, make sure that they have the latest version of the Company Portal app installed.
 
-Intune app protection policies includes multi-identity support. Intune can apply app protection policies to only the work or school account that's signed in to the app. However, only one work or school account per device is supported.
+Intune app protection policies include multi-identity support. Intune can apply app protection policies to only the work or school account that's signed in to the app. However, only one work or school account per device is supported.
 
 ### Scenario: Intune-enrolled iOS devices require additional configuration
 
