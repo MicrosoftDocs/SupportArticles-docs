@@ -1,5 +1,5 @@
 ---
-title: Error "Please restart the computer and run setup again"
+title: Error - Please restart the computer and run setup again
 description: This article helps you resolve the restart computer error.
 ms.date: 04/22/2022
 author: jasonchlus
