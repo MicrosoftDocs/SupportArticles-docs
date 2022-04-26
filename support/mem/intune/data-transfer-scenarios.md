@@ -1,7 +1,7 @@
 ---
 title: Common issues when using Intune app protection policies to control data transfer
 description: Learn how to diagnose and troubleshoot some common issues and misconfigurations when using Microsoft Intune app protection policies (APP) to control data transfer.
-ms.date: 04/22/2022
+ms.date: 04/26/2022
 ms.reviewer: roblane-msft
 ---
 # Common data transfer issues and scenarios
@@ -66,7 +66,7 @@ With this configuration, only MDM managed apps are displayed in the sharing exte
 
 :::image type="content" source="media/data-transfer-scenarios/block-viewing-corporate-docs.png" alt-text="Side-by-side screenshots showing the different options for apps you can use to open a document, before and after applying the MDM setting.":::
 
-### Option B: Restrict sharing for unenrolled devices
+### Option B: Restrict sharing for devices with APP managed apps
 
 - Set the app protection setting **Send org data to other apps** to 'Policy managed app with Open-In/Share filtering'.
 
