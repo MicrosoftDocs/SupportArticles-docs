@@ -16,9 +16,11 @@ metadata:
 landingContent:
 
  # Card
-  - title: Applications and Add-ons
+  - title: Product documentation and training
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: learn
         links:
-          - text: Inventory aging report discrepancies
-            url: costing/aging-report-discrepancies.md
+          - text: SCM core Docs
+            url: /dynamics365/supply-chain/
+          - text: SCM content on Learn
+            url: /learn/dynamics365/scm
