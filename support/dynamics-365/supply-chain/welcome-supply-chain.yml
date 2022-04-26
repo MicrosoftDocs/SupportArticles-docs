@@ -5,22 +5,21 @@ summary: Welcome to Microsoft Dynamics 365 Supply Chain Management troubleshooti
 metadata:
   title: Microsoft Dynamics 365 Supply Chain Management troubleshooting
   description: Landing page for Microsoft Dynamics 365 Supply Chain Management troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: dynamics-365  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.prod: dynamics-365 #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
   ms.date: 3/31/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
+  # Card
   - title: Product documentation and training
     linkLists:
       - linkListType: learn
         links:
-          - text: SCM core Docs
+          - text: Supply Chain Management documentation
             url: /dynamics365/supply-chain/
-          - text: SCM content on Learn
+          - text: Supply Chain Management training
             url: /learn/dynamics365/scm
