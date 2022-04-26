@@ -92,7 +92,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID` and `Index_ID` are `NULL`.
 
-    **Resolution**: Apply SQL Server 2019 [CU16](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896?msclkid=f1148209c24811ecbfa6aa36a20ffa89#bkmk_14535149) for the fix.
+    **Resolution**: Apply [SQL Server 2019 CU16](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896) for the issue [14535149](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896?msclkid=f1148209c24811ecbfa6aa36a20ffa89#bkmk_14535149).
 
 - Scenario 4
 
