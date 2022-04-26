@@ -10,11 +10,12 @@ localization_priority: Normal
 ms.custom: 
   - CI 148047
   - CSSTroubleshoot
+  - CI 163053
 ms.reviewer: zebamehdi; brandisi
 appliesto: 
   - Office 365
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 4/26/2022
 ---
 # Command-line version of Microsoft Support and Recovery Assistant
 
@@ -181,7 +182,51 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect <> 1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
   |None of the above conditions were detected|Run the re-register dll recovery action, and then exit the scenario.|*24:* The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
   |Failure to complete the scenario (for any reason)|Exit the scenario|*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
-  
+
+- `OutlookCalendarCheckTask`
+
+  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |---|---|---|
+  |Scan completed successfully |Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at %localappdata%\saralogs\uploadlogs location.|
+  |Scan completed successfully with custom location (-LogFolder)|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at the location specified by you. |
+  |User does not include -AcceptEULA switch|Exit the scenario|01: Please provide -AcceptEula to continue with this scenario. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Outlook isn’t installed|Exit the scenario|40: To run diagnostics for this scenario, please download and install Microsoft Outlook. For additional information, please visit https://aka.ms/SaRA-CalCheckDocs.|
+  |Unable to identify user’s profile |Exit the scenario|41: Unable to complete this scenario as Microsoft Outlook profile is missing. For additional information, please visit https://aka.ms/SaRA-CalCheckDocs.|
+  |Failure to complete the scenario (for any reason)|Exit the scenario|42: An error occurred while running this scenario. You can also try using the full SaRA version. For additional information, please see this article https://aka.ms/SaRA-CalCheckDocs.|
+  |If current active Outlook profile is not the same as -P switch profile|Exit the scenario|44: Unable to complete this scenario because the profile specified using the -P switch does not match the profile currently running in Outlook. Please close the Outlook application and try again. For additional information, please see this article https://aka.ms/SaRA-CalCheckDocs.|
+
+- `OfficeActivationScenario`
+
+  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |---|---|---|
+  |User does not include -CloseOffice switch|Exit the scenario|Result Code 01 This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Office isn't installed|Exit the scenario|Result Code: 30 Could not find an installed version of Office|
+  |Office subscription not found|Exit the scenario|Result Code: 31 Could not find a subscription version of Office. Please see https://aka.ms/SaRA-Cmdline-NoSubscriptionFound for troubleshooting information.|
+  |Device subscription detected.|Exit the scenario|Result Code: 32 Device subscription detected. See https://aka.ms/SaRA_DeviceActivationDetectedCmd for troubleshooting and configuration information.|
+  |SaRA isn't elevated|Exit the scenario|Result Code: 33 This scenario requires an elevated command-prompt.|
+  |Shared Computer Activation (SCA) is enabled for Office|Exit the scenario|Result Code: 34 Shared Computer Activation (SCA) is enabled for Office. Please use the -RemoveSCA switch if you want this scenario to remove SCA and configure non-SCA activation for Office. Otherwise, use the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario (for any reason)|Exit the scenario|Result Code: 35 We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Scan completed successfully|Exit the scenario|Result Code: 36 Successful run. Start any Office app and sign-in to activate.|
+  |Office is already activated|Exit the scenario|Result Code: 37 It looks like Microsoft Office is already activated. If you don’t think this is correct, please run the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario (for any reason)|Exit the scenario|Result Code: 38 `<message depends on the ReasonCode>`|
+  |Unable to activate Office|Exit the scenario|Result Code: 39 Office may not be activated. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario|Exit the scenario|Result Code: 40
+Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
+
+- `OfficeSharedActivationScenario`
+
+  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |---|---|---|
+  |Scan completed successfully|Exit the scenario|Result Code: 63 Scenario completed successfully.  Please exit and restart Windows and sign back in as an end-user that needs to use Office.|
+  |User does not include -CloseOffice switch|Exit the scenario|Result Code 01 This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Error closing Office application|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Failure to remove SCA|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Office isn't installed|Exit the scenario|Result Code: 60 This scenario requires an existing Office installation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Error checking if Office is installed|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared1 Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Error determining if Office is ProPlus or BusinessRetail|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Office SKU installed is not ProPlus or BusinessRetail|Exit the scenario|Result Code: 61 This scenario requires an existing Office installation that supports Shared Computer Activation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-CmdLine.|
+  |Error running recovery action|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+
 ## SaRA command-line version history
 
 Throughout the year, a new build of SaRA is available through the download link that is provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
