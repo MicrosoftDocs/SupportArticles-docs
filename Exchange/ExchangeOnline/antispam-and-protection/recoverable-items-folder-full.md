@@ -44,11 +44,10 @@ To resolve this issue, configure the retention policy tag for Recoverable Items 
 
 1. [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-2. Run the following cmdlets to verify the action and age limit of the retention policy tag for the type **RecoverableItems**:
+2. Run the following cmdlet to verify the action and age limit of the retention policy tag for the type **RecoverableItems**:
 
     ```powershell
-    $policy = Get-RetentionPolicy "POLICY"
-    $policy.RetentionPolicyTagLinks | Get-RetentionPolicyTag | ft Name,Type,RetentionAction,AgeLimitForRetention
+    Get-RetentionPolicyTag | ft Name,Type,RetentionAction,AgeLimitForRetention
     ```
 
 3. Run the [Set-RetentionPolicyTag](/powershell/module/exchange/set-retentionpolicytag) cmdlet to set the age limit for the retention policy tag from the output of the second cmdlet in step 1 to 1 day.
