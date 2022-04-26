@@ -31,11 +31,11 @@ Make sure that the following ports are open to cluster traffic on any firewalls:
 
 - Port 139: NetBIOS session service.
 
-- Ports in the range of 5000 to 5099: If the System event logs Event ID 1721 when you connect to a cluster as a cluster administrator, try opening the ports in this range (or other ports) to RPC traffic. The ports support communication through RPC (unless you just type a period character).
+- Ports in the range of 5000 to 5099: If Event ID 1721 is logged when you connect to a cluster as a cluster administrator, try opening the ports in this range (or other ports) to RPC traffic. The ports support communication through RPC (unless you just type a period character).
 
-  This issue can occur because the cluster service uses at least 100 ports for RPC communication. The number of ports available to the cluster service can become too small when other services use some of the necessary ports. For example, Windows DNS service, Windows Internet Name service (WINS), or Microsoft SQL Server service.
+  This issue can occur because the cluster service uses at least 100 ports for RPC communication. The number of ports available to the cluster service can become too small when other services use some of the necessary ports. These services may include Windows DNS service, Windows Internet Name service (WINS), or Microsoft SQL Server service.
 
-- Ports in the range of 8011 to 8031: If the cluster nodes are separated by firewalls, the ports in the range of 8011 to 8031 must be open to internode RPC traffic. Otherwise, errors in the cluster log indicate that a sponsor node isn't available. These errors occur because there aren't enough ports available for RPC communication between a node that is trying to join the cluster and a node that can sponsor that node.
+- Ports in the range of 8011 to 8031: If firewalls separate the cluster nodes, the ports in the range of 8011 to 8031 must be open to internode RPC traffic. Otherwise, errors in the cluster log indicate that a sponsor node isn't available. These errors occur because there aren't enough ports available for RPC communication between a node that tries to join the cluster and a node that can sponsor that node.
 
 For more information about how to configure a network and network ports for a cluster, see the following articles:
 
@@ -53,7 +53,7 @@ After you change the port settings, try to bring the node online again before yo
 
 3. Select **Validate Configuration**.
 
-4. Type each name of nodes in the cluster, and then select **Add** after each one.
+4. Type the name of each node in the cluster and select **Add** after each one.
 
 5. When all nodes have been added to the **Selected servers:** list, select **Next**.
 
@@ -61,7 +61,7 @@ After you change the port settings, try to bring the node online again before yo
 
 7. Allow the test to finish. Once complete, select **View Report**.
 
-8. Review any tests results that are labeled as **Failed** or **Warning**. This information may be helpful in providing actionable steps to fix the issue.
+8. Review any tests results that are labeled as **Failed** or **Warning**. This information may help provide actionable steps to fix the issue.
 
 9. To get a downloadable file, navigate to the *C:\Windows\Cluster\Reports* folder and open the Validation Report (*.MHT*) file.
 
@@ -75,11 +75,11 @@ In the Group Policy Object Editor, these policy objects are located in *Computer
 > [!NOTE]
 > To access the local security policy settings, select **Start**, type **local security policy**, and then select **Local Security Policy**.
 
-- Make sure that the list of accounts includes the accounts that are responsible for running the cluster node. For more information, see [How to access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) and [the Allow log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally).
+- Make sure that the list of accounts includes the accounts that are responsible for running the cluster node. For more information, see [How to access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) and the [Allow log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally).
 
 - Make sure that the list of accounts doesn't include local accounts. For more information, see [How to deny access to this computer from the network](/windows/security/threat-protection/security-policy-settings/deny-access-to-this-computer-from-the-network).
 
-- Make sure the list of accounts and groups doesn't include the Everyone group. For more information, see [the Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
+- Make sure the list of accounts and groups doesn't include the "Everyone group." For more information, see the [Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
 
 After you change the policy settings, try to bring the node online again before you proceed.
 
@@ -130,4 +130,4 @@ To generate a more detailed trace, follow these steps:
 
    `Get-ClusterLog -Node 'Local Node Name' -Destination c:\temp -UseLocalTime`
 
-For more information about tracing and issues to look for, see [How to Troubleshoot Create Cluster Failures](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-troubleshoot-create-cluster-failures/ba-p/371780).
+For more information about tracing and other issues to look out for, see [How to Troubleshoot Create Cluster Failures](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-troubleshoot-create-cluster-failures/ba-p/371780).
