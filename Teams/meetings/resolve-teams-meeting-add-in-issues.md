@@ -1,6 +1,6 @@
 ---
 title: Resolve issues with Teams add-in for Outlook
-description: Provides troubleshooting steps for the Teams add-in for Outlook
+description: Provides steps to troubleshoot issues with the Teams Meeting add-in for Outlook.
 author: v-matthamer
 ms.author: meerak
 manager: dcscontentpm
@@ -62,7 +62,7 @@ If you’d like to perform the checks and make the fixes manually, do the follow
 
     - **32 Bit Office:** `%SystemRoot%\SysWOW64\regsvr32.exe /n /i:user %LocalAppData%\Microsoft\TeamsMeetingAddin\1.0.18012.2\x86\Microsoft.Teams.AddinLoader.dll`
 
-    **Note:** There might be multiple folders with the same version number under **\TeamsMeetingAddin**. Select the folder with the highest build number.
+    **Note** There might be multiple folders with the same version number under *\TeamsMeetingAddin*. Select the folder with the highest build number.
 
 - Restart the Teams desktop client.
 
