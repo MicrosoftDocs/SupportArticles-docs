@@ -31,7 +31,7 @@ Verify that the following policies are assigned to the affected users:
 
 ## Use Microsoft Support and Recovery Assistant
 
-If the policies are assigned correctly but you’re still unable to install the add-in or if you’re not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+If the policies are assigned correctly, but you’re still unable to install the add-in, or if you’re not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
 
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-TeamsAddInScenario)
