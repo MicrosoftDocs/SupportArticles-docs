@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting data corruption and disk errors
+title: Guidance of troubleshooting data corruption and disk errors
 description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
 ms.date: 04/21/2022
 author: kaushika-msft
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:data-corruption-and-disk-errors, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
-# Troubleshooting data corruption and disk errors in Windows
+# Data corruption and disk errors troubleshooting guidance
 
 Data corruption and disk errors cover different areas such as issues about accessing a drive, drive corruption, and slow performance.
 
