@@ -31,7 +31,7 @@ Make sure that the following ports are open to cluster traffic on any firewalls:
 
 - Port 139: NetBIOS session service.
 
-- Ports in the range of 5000 to 5099: If Event ID 1721 is logged when you connect to a cluster as a cluster administrator, try opening the ports in this range (or other ports) to RPC traffic. The ports support communication through RPC (unless you just type a period character).
+- Ports in the range of 5000 to 5099: If Event ID 1721 is logged when you connect to a cluster as a cluster administrator, try opening the ports in this range (or other ports) to RPC traffic. The ports support communication through RPC unless you just type a period character (.).
 
   This issue can occur because the cluster service uses at least 100 ports for RPC communication. The number of ports available to the cluster service can become too small when other services use some of the necessary ports. These services may include Windows DNS service, Windows Internet Name service (WINS), or Microsoft SQL Server service.
 
@@ -75,11 +75,11 @@ In the Group Policy Object Editor, these policy objects are located in *Computer
 > [!NOTE]
 > To access the local security policy settings, select **Start**, type **local security policy**, and then select **Local Security Policy**.
 
-- Make sure that the list of accounts includes the accounts that are responsible for running the cluster node. For more information, see [How to access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) and the [Allow log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally).
+- Make sure that the list of accounts includes the accounts that are responsible for running the cluster node. For more information, see [How to access this computer from the network](/windows/security/threat-protection/security-policy-settings/access-this-computer-from-the-network) and [Allow log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/allow-log-on-locally).
 
 - Make sure that the list of accounts doesn't include local accounts. For more information, see [How to deny access to this computer from the network](/windows/security/threat-protection/security-policy-settings/deny-access-to-this-computer-from-the-network).
 
-- Make sure the list of accounts and groups doesn't include the "Everyone group." For more information, see the [Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
+- Make sure the list of accounts and groups doesn't include the "Everyone group." For more information, see [Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
 
 After you change the policy settings, try to bring the node online again before you proceed.
 
