@@ -32,7 +32,14 @@ A user or administrator takes the following steps, and then receives an `SSPR_00
     >
     > If you're an administrator, you can get more information from the Troubleshoot password writeback article. If you're not an administrator, you can provide this information when you contact your administrator.
 
-## Cause 1: Synchronized user doesn't have the right Active Directory permissions
+## Cause 1: Can't use password writeback to reset the password of a synchronized Windows Active Directory administrator
+
+### Solution: By Design
+
+If you're a Synchronized Windows Active Directory admin who belongs (or used to belong) to an on-premises Active Directory [protected group](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory), you can't use SSPR and password writeback to reset your on-premises password. For security, Administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud but can't reset a forgotten password. For more information, see [How does self-service password reset writeback work in Azure Active Directory](/azure/active-directory/authentication/concept-sspr-writeback).
+
+
+## Cause 2: AD DS Connector account doesn't have the right Active Directory permissions
 
 The synchronized user is missing the correct permissions in Active Directory.
 
@@ -40,10 +47,26 @@ The synchronized user is missing the correct permissions in Active Directory.
 
 To resolve issues that affect Active Directory permissions, see [Password Writeback access rights and permissions][access-rights-permissions].
 
-> [!NOTE]
-> If you're a Synchronized Windows Active Directory admin who belongs (or used to belong) to an on-premises Active Directory protected group, you can't use SSPR and password writeback to reset your on-premises password. For security, Administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud but can't use password reset to reset a forgotten password. For more information, see [Protected Accounts and Groups in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory).
+### Workaround: Target a different Active Directory Domain Controller
 
-## Cause 2: Servers aren't allowed to make remote calls to Security Accounts Manager (SAM)
+> [!NOTE]
+> Password writeback has a dependency in the legacy API NetUserGetInfo which requires a complex set of allowed permissions in Active Directory that can be difficult to identity, especially when Azure AD Connect server is running in a Domain Controller. For more information about this issue, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain AD objects](https://docs.microsoft.com/en-us/troubleshoot/windows-server/identity/netuser-netgroup-fails-with-access-denied). 
+
+In scenarios where Azure AD Connect server is running in a Domain Controller and it's not possible to resolve Active Directory permissions, it is recommended to deploy Azure AD Connect server on a member server instead of a Domain Controller, or configure your AD Connector to "**Only use preferred domain controllers**" using the following steps:
+
+1. Open **Synchronization Service Manager** and go to **Connectors**
+
+1. Right-click the Active Directory Connector and select **Properties**
+
+1. Select **Configure Directory Partitions**
+
+1. Enable the option to **Only use preferred domain controllers**
+
+1. Click **Configure** and add a server name(s) pointing to a different Domain Controller(s) than the local host.
+
+1. Click OK 3 times including the Warning message regarding advanced configuration disclaimer.
+
+## Cause 3: Servers aren't allowed to make remote calls to Security Accounts Manager (SAM)
 
 In this case, two similar application error events are logged: Event ID 33004 and 6329. Event ID 6329 differs from 33004 because it contains an `ERROR_ACCESS_DENIED` error code in the stack trace when the server tries to make a remote call to SAM:
 
