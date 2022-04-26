@@ -1,7 +1,7 @@
 - name: Dynamics 365 Supply Chain Management
   href: welcome-supply-chain.yml
   items:
-  - name: Cost management
+  - name: Inventory costing and closing
     items:
     - name: Inventory aging report discrepancies
       href: costing/aging-report-discrepancies.md
@@ -97,7 +97,7 @@
       href: planning/warehouse-removal-fr.md
     - name: You're prompted to save item coverage settings even though you made no changes
       href: planning/when-importing-to-th.md
-  - name: Procurement
+  - name: Purchase order, procurement, and sourcing
     items:
     - name: Purchase order line data discrepancies
       href: procurement/purchase-order-line-data-issues.md
@@ -155,7 +155,7 @@
       href: procurement/not-able-to-invoice-.md
     - name: Can't add a line to a purchase requisition after requesting a change
       href: procurement/purchase-requisition.md
-  - name: Product information management
+  - name: Product management
     items:
     - name: You can't delete a released product
       href: products/cant-delete-released-prod.md
@@ -169,7 +169,7 @@
       href: products/cannot-import-with-r.md
     - name: Purchase orders don't show translated product text
       href: products/when-the-customer-ad.md
-  - name: Production control
+  - name: Manufacturing and Production
     items:
     - name: Backflush costing calculation error during inventory closing
       href: production/backflush-costing-calculation-error.md
@@ -213,7 +213,7 @@
     items:
     - name: Cumulating customer rebates using item rebate groups fails
       href: rebates/cumulating-customer-.md
-  - name: Sales and marketing
+  - name: Sales order processing
     items:
     - name: Sales update history cleanup job fails or has performance issues
       href: sales/sales-update-history-cleanup-job-performance-issues.md
