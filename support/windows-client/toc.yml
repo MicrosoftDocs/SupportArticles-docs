@@ -706,6 +706,8 @@
       href: ./performance/windows-devices-fail-boot-after-installing-kb4041676-kb4041691.md
     - name: Windows fails to start with error Missing or Corrupt ntoskrnl.exe
       href: ./performance/windows-fails-start-error-missing-corrupt-ntoskrnl.md
+    - name: Windows may hang during startup after you exclude UWF from Microsoft Defender
+      href: ./performance/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender.md
   - name: Performance monitoring tools
     items:
     - name: Cannot modify user environment variables
