@@ -27,6 +27,8 @@
       href: pages-parameter-generates-an-error-when-saving-a-form-processing-flow.md
     - name: Training failed and the form can't be used in form processing
       href: training-failed-and-the-model-cannot-be-used-error-in-form-processing.md
+    - name: Too many requests error
+      href: too-many-requests-error-in-power-automate.md
   - name: Use in Power Apps
     items:
     - name: Business card reader doesn't work
