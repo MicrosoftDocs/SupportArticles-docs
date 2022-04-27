@@ -16,8 +16,10 @@ The Azure App Service is currently in compliance with PCI DSS version 3.0 Level 
 
 ## What this means
 
-PCI DSS version 3.1 certification requires disabling TLS 1.0. If you are using App Service Environments or are willing to migrate your workload to App Service Environments, you can get greater control of your environment including disabling TLS 1.0, for more information, see [Custom configuration settings for App Service Environments](https://azure.microsoft.com/documentation/articles/app-service-app-service-environment-custom-settings/).
+PCI DSS version 3.1 certification requires disabling TLS 1.0. If you are using App Service Environments or are willing to migrate your workload to App Service Environments, you can get greater control of your environment including disabling TLS 1.0, for more information, see [Custom configuration settings for App Service Environments](/azure/app-service/environment/app-service-app-service-environment-custom-settings).
 
 ## More information
 
 Microsoft regularly reviews standards compliance procedures and will periodically update compliance baselines as standards bodies update and change their requirements. As part of Microsoft's Fiscal 2017 compliance planning, PCI standards will again be re-reviewed and technical determinations will be made. To view the current certifications, technical determinations will be made. To view the current certifications, visit the [Microsoft Azure Trust Center: Compliance site](https://azure.microsoft.com/support/trust-center/compliance/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

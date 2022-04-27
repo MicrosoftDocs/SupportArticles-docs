@@ -140,13 +140,14 @@ Issue a request to the [MS Graph API](/graph/api/user-get) to review the user cr
 ```msgraph-interactive
 GET https://graph.microsoft.com/v1.0/users/{id | userPrincipalName}/createdDateTime
 ```
+
 Then, check the creation date of the guest user in the resource tenant against the creation date of the user account in the home tenant. The scenario is confirmed if the guest user was created before the home tenant's user account was created.
 
 #### MSOnline PowerShell
 
 > [!NOTE]
 > The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
-> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands. 
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
 
 Run the [Get-MsolUser](/powershell/module/msonline/get-msoluser) PowerShell cmdlet to review the user creation date, as follows:
 
@@ -160,7 +161,7 @@ Then, check the creation date of the guest user in the resource tenant against t
 
 > [!NOTE]
 > The [MSOnline PowerShell module](/powershell/azure/active-directory/install-msonlinev1) is set to be deprecated.
-> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands. 
+> Because it's also incompatible with PowerShell Core, make sure that you're using a compatible PowerShell version so that you can run the following commands.
 
 When a guest user accepts an invitation, the user's `LiveID` attribute (the unique sign-in ID of the user) is stored within `AlternativeSecurityIds` in the `key` attribute. Because the user account was deleted and created in the home tenant, the `NetID` value for the account will have changed for the user in the home tenant. Compare the `NetID` value of the user account in the home tenant against the key value that's stored within `AlternativeSecurityIds` of the guest account in the resource tenant, as follows:
 
@@ -169,15 +170,19 @@ When a guest user accepts an invitation, the user's `LiveID` attribute (the uniq
    ```azurepowershell
    Get-MsolUser -SearchString tuser1 | Select-Object -ExpandProperty LiveID
    ```
+
 1. In the resource tenant, convert the value of the `key` attribute within `AlternativeSecurityIds` to a base64-encoded string:
 
    ```azurepowershell
    [convert]::ToBase64String((Get-MsolUser -ObjectId 01234567-89ab-cdef-0123-456789abcdef
           ).AlternativeSecurityIds.key)
    ```
+
 1. Convert the base64-encoded string to a hexadecimal value by using an online converter (such as [base64.guru](https://base64.guru/converter/decode/hex)).
 1. Compare the values from step 1 and step 3 to verify that they're different. The `NetID` of the user account in the home tenant changed when the account was deleted and re-created.
 
 ### Solution: Reset the redemption status of the guest user account
 
 Reset the redemption status of the guest user account in the resource tenant. Then, you can keep the guest user object without having to delete and then re-create the guest account. You can reset the redemption status by using the Azure portal, Azure PowerShell, or the Microsoft Graph API. For instructions, see [Reset redemption status for a guest user](/azure/active-directory/external-identities/reset-redemption-status).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

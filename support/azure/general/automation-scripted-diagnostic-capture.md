@@ -78,3 +78,5 @@ The script then runs on its own to collect relevant data.
 ## After script runs
 
 After the script runs, it opens a Windows File Explorer window that points to the folder in which it stored the captured information.  To have the information analyzed, compress the storage folder, and then send the compressed file to Microsoft Support.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

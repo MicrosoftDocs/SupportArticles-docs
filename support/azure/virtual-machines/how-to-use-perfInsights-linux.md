@@ -158,9 +158,9 @@ The following categories of rules are currently supported:
 
 - High resource usage:
 
-    * High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
-    * High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
-    * High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
+  - High CPU usage: Detects high CPU usage periods, and shows the top CPU usage consumers during those periods.
+  - High memory usage: Detects high memory usage periods, and shows the top memory usage consumers during those periods.
+  - High disk usage: Detects high disk usage periods on physical disks, and shows the top disk usage consumers during those periods.
 
 - Storage: Detects specific storage configurations.
 - Memory: Detects specific memory configurations.
@@ -342,3 +342,5 @@ The following screenshot shows a message similar to what you might receive:
 Follow the instructions in the message to access the file transfer workspace. For additional security, you have to change your password on first use.
 
 After you sign in, you will find a dialog box to upload the **PerformanceDiagnostics\_yyyy-MM-dd\_hh-mm-ss-fff.tar.gz** file that was collected by PerfInsights.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

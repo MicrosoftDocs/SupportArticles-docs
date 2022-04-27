@@ -62,5 +62,6 @@ To resolve this issue, make sure that the following are true:
 
 ## More information
 
-- For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/)
-- Still need help? Visit the [Microsoft Community](https://answers.microsoft.com/).
+For more information on Azure Information Protection, visit [AIPService](/powershell/module/aipservice/).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
