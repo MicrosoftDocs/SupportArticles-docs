@@ -135,7 +135,7 @@ This section lists the common error messages you may encounter when managing VMs
 |  OperationNotAllowed  |  Cannot modify extensions in the VM when the VM is not running.  |
 |  OperationNotAllowed  |  The Capture action is only supported on a Virtual Machine with blob based disks. Please use the 'Image' resource APIs to create an Image from a managed Virtual Machine.  |
 |  OperationNotAllowed  |  The resource {0} cannot be created from Image {1} until Image has been successfully created.  |
-|  OperationNotAllowed  |  Updates to encryptionSettings is not allowed when VM is allocated, Please retry after VM is deallocated  |
+|  OperationNotAllowed  |  Updates to encryptionSettings is not allowed when VM is allocated. Please retry after VM is deallocated  |
 |  OperationNotAllowed  |  Addition of a managed disk to a VM with blob based disks is not supported.  |
 |  OperationNotAllowed  |  The maximum number of data disks allowed to be attached to a VM of this size is {0}.  |
 |  OperationNotAllowed  |  Addition of a blob based disk to VM with managed disks is not supported.  |
