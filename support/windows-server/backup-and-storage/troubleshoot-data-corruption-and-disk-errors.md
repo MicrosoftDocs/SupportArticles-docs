@@ -33,7 +33,7 @@ The following Event IDs indicate that there's data corruption or a disk error:
 
 - Event ID 55
 
-   > The file system structure on the disk is corrupt and unstable. Please run the chkdsk utility on the volume.
+   > The file system structure on the disk is corrupt and unusable. Please run the chkdsk utility on the volume.
 
 - Event ID 98
 
@@ -185,8 +185,7 @@ Event Source:     <HBA_Name>
 Event Category:   None
 Event ID:         129
 Computer:         <Computer_Name>
-Description:
-Reset to device, \Device\RaidPort1, was issued.
+Description: Reset to device, \Device\RaidPort1, was issued.
 ```
 
 ### Information about Windows I/O stack architecture
@@ -235,8 +234,7 @@ Here's an example of Event ID 55:
 Event Type: Error
 Event Source: NTFS
 Event ID: 55
-Description:
-The file system structure on disk is corrupt and unusable. Please run the chkdsk utility on the volume.
+Description: The file system structure on the disk is corrupt and unusable. Please run the chkdsk utility on the volume.
 ```
 
 Usually, Event ID 55 is logged when file system corruption occurs. The file system corruption occurs when one or more of the following issues occur:
