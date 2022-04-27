@@ -1,7 +1,7 @@
 ---
 title: Error - Microsoft Visual Studio Enterprise is required
 description: Provides a resolution to an error that occurs when you try to install a Microsoft Visual Studio Enterprise update or tool.
-ms.date: 04/22/2022
+ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
