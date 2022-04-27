@@ -1,7 +1,7 @@
 ---
 title: Error message for installing an additional language pack
 description: This article helps you resolve an error that is shown when you try to install Visual Studio in a new language.
-ms.date: 04/22/2022
+ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
