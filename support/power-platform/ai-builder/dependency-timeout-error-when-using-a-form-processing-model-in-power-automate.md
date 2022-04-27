@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to a dependency timeout error when using a form processing model in Microsoft Power Automate.
 
-_Applies to:_ &nbsp; Power Automate
+_Applies to:_ &nbsp; Power Automate and Power Apps
 
 ## Symptoms
 
