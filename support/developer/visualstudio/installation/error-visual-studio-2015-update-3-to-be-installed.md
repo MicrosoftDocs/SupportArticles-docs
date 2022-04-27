@@ -36,3 +36,4 @@ Usually, [KB3165756](https://aka.ms/vs/14/release/3165756) is automatically down
 
    - Start the Visual Studio Installer, and verify that **Help** > **About** shows version **14.0.25431 or greater**.  
    - Examine the installed updates list in Control Panel, and verify that both Visual Studio 2015 update 3 (KB3022398) and the update for Microsoft Visual Studio 2015 (KB3165756) are present.
+
