@@ -32,7 +32,7 @@ In this scenario, a user can transfer files to policy unmanaged apps even though
 
 - Check the **Select apps to exempt** setting value and make sure the receiving app is not set as a data transfer exemption.
 
-    :::image type="content" source="media/data-transfer-scenarios/select-apps-to-exempt.png" alt-text="Image showing the 'Select apps to exempt' option under 'Send org data to other apps'.":::
+    :::image type="content" source="media/data-transfer-scenarios/select-apps-to-exempt.png" alt-text="Screenshot showing the 'Select apps to exempt' option under 'Send org data to other apps'.":::
 
 - If the file is still encrypted once transferred to unmanaged apps, this is expected behavior as explained in [Confirm the data is encrypted once files are transferred](troubleshoot-data-transfer.md#confirm-the-data-is-encrypted-once-files-are-transferred). The files are encrypted and can't be opened with unmanaged apps.
 
@@ -86,7 +86,7 @@ In this scenario, users are manually installing unapproved apps from Google Play
 
 Check the MDM device restriction setting **Allow access to all apps in Google Play store**. If you don't want to explicitly allow app installation, it should be set to Not configured, which is the default value. If the setting is set to Allow, users can install any apps using managed Google Play and use them on fully managed devices.
 
-:::image type="content" source="media/data-transfer-scenarios/allow-access-to-google-play.png" alt-text="Image showing the option 'Allow access to all apps in Google Play store' in the admin center.":::
+:::image type="content" source="media/data-transfer-scenarios/allow-access-to-google-play.png" alt-text="Screenshot showing the option 'Allow access to all apps in Google Play store' in the admin center.":::
 
 ## URLs or universal links in policy-managed apps are opened in an app instead of Microsoft Edge
 
@@ -96,7 +96,7 @@ In this scenario, if a user selects a URL or universal link, it opens in an unma
 
 - Check if the link addresses are listed in the **Select universal links to exempt** and **Select managed universal links settings**. The universal links specified in these lists can be opened with other apps instead of Microsoft Edge. Remove the links from these lists to open them with Microsoft Edge.
 
-    :::image type="content" source="media/data-transfer-scenarios/universal-link-settings.png" alt-text="Image showing the 'Send org data to other apps' settings, which includes two universal link settings to review.":::
+    :::image type="content" source="media/data-transfer-scenarios/universal-link-settings.png" alt-text="Screenshot showing the 'Send org data to other apps' settings, which includes two universal link settings to review.":::
 
 ## URLs or universal links in policy managed apps are unexpectedly opened in Microsoft Edge
 
