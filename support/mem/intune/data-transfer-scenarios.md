@@ -28,7 +28,7 @@ In this scenario, a user can unexpectedly receive files from unmanaged apps. For
 
 ## User can transfer files to unmanaged apps even if data transfer is restricted
 
-In this scenario, a user can transfer files to policy unmanaged apps even though you have set **Send org data to other apps** to ‘Policy managed apps’.
+In this scenario, a user can transfer files to policy unmanaged apps even though you have set **Send org data to other apps** to 'Policy managed apps'.
 
 - Check the **Select apps to exempt** setting value and make sure the receiving app is not set as a data transfer exemption.
 
@@ -46,7 +46,7 @@ The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-
 
 You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
 
-- **Employee-owned devices that aren't managed by an MDM solution:** You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Configured in this way, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
+- **Employee-owned devices that aren't managed by an MDM solution:** You can set the app protection policy settings to **Allow app to transfer data to only Policy Managed apps**. Then, the **Open-in** behavior in a policy-managed app provides only other policy-managed apps as options for sharing. For example, if a user tries to send a protected file as an attachment from OneDrive in the native mail app, that file is unreadable.
 
 - **Devices that are managed by MDM solutions:** For devices that are enrolled in Intune or third-party MDM solutions, Intune APP and the iOS **Open-in management** feature control data sharing between protected apps and other managed iOS apps that are deployed through MDM.
 
@@ -60,9 +60,9 @@ A common scenario that admins want to apply is to filter the list of apps displa
 
 - Set the MDM device restriction setting **Block viewing corporate documents in unmanaged apps** to 'Yes'.
 - Use Intune MDM to deploy the apps you want to allow data sharing between.
-- Do not deploy other apps and instead have your users install them from the Apple App Store.
+- Don't deploy other apps and instead have your users install them from the Apple App Store.
 
-With this configuration, only MDM managed apps are displayed in the sharing extension if the sender app is MDM managed. Here is an example how apps in the sharing extension change with the MDM setting. In this example the Teams app isn't deployed with Intune, so the app is not displayed in the share extension.
+With this configuration, only MDM managed apps are displayed in the sharing extension if the sender app is MDM managed. Here's an example how apps in the sharing extension change with the MDM setting. In this example the Teams app isn't deployed with Intune, so the app isn't displayed in the share extension.
 
 :::image type="content" source="media/data-transfer-scenarios/block-viewing-corporate-docs.png" alt-text="Side-by-side screenshots showing the different options for apps you can use to open a document, before and after applying the MDM setting.":::
 
@@ -70,7 +70,7 @@ With this configuration, only MDM managed apps are displayed in the sharing exte
 
 - Set the app protection setting **Send org data to other apps** to 'Policy managed app with Open-In/Share filtering'.
 
-With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for an [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app is not displayed in the share extension because it doesn't support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
+With this configuration, the share extension is filtered to show only apps that support Intune APP. This method can be used for an [Application management without enrollment scenario](/mem/intune/fundamentals/deployment-guide-enrollment-mamwe). The following example shows how available apps in the share extension will change once you set the policy setting to **Policy managed app with Open-In/Share filtering**. In this example, the Dropbox app isn't displayed in the share extension because it doesn't support Intune APP. Also, the **Save to Files** option is filtered out to prevent data transfer using the local Files app.
 
 :::image type="content" source="media/data-transfer-scenarios/send-data-to-other-apps.png" alt-text="Side-by-side screenshots showing the different options for apps you can send a file to, before and after applying the MDM setting.":::
 
@@ -78,19 +78,19 @@ For more information, see [How to manage data transfer between iOS apps in Micro
 
 ## I want to customize the apps users can share to on Android devices
 
-On Android work profile and fully managed devices, there are some considerations for controlling which apps your users can share files to (receiving apps). As a best practice for controlling data transfer, use managed Google Play to deploy the apps you want to allow data sharing between, and do not deploy other unnecessary apps. For Android work profile devices, users can share files only between apps installed in the work profile.
+On Android work profile and fully managed devices, there are some considerations for controlling which apps your users can share files to (receiving apps). As a best practice for controlling data transfer, use managed Google Play to deploy the apps you want to allow data sharing between, and don't deploy other unnecessary apps. For Android work profile devices, users can share files only between apps installed in the work profile.
 
 ## Users can install and share to unapproved Google Play apps
 
 In this scenario, users are manually installing unapproved apps from Google Play to Android Enterprise fully managed devices, and they can share files to the apps.
 
-Check the MDM device restriction setting **Allow access to all apps in Google Play store**. If you do not want to explicitly allow app installation, it should be set to Not configured, which is the default value. If the setting is set to Allow, users can install any apps using managed Google Play and use them on fully managed devices.
+Check the MDM device restriction setting **Allow access to all apps in Google Play store**. If you don't want to explicitly allow app installation, it should be set to Not configured, which is the default value. If the setting is set to Allow, users can install any apps using managed Google Play and use them on fully managed devices.
 
-:::image type="content" source="media/data-transfer-scenarios/allow-access-to-google-play.png" alt-text="Image showing the option 'Allow access to all apps in Google Play store' in the admin center":::
+:::image type="content" source="media/data-transfer-scenarios/allow-access-to-google-play.png" alt-text="Image showing the option 'Allow access to all apps in Google Play store' in the admin center.":::
 
 ## URLs or universal links in policy-managed apps are opened in an app instead of Microsoft Edge
 
-In this scenario, if a user selects a URL or universal link, it opens in an unmanaged app instead of the protect browser, Microsoft Edge. For more information on this topic, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
+In this scenario, if a user selects a URL or universal link, it opens in an unmanaged app instead of the protect browser, Microsoft Edge. For more information, see [iOS app protection policy settings](/mem/intune/apps/app-protection-policy-settings-ios).
 
 - Check that the **Restrict web content transfer with other apps** dropdown setting is set to 'Microsoft Edge'.
 
