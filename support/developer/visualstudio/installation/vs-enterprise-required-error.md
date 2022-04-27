@@ -20,3 +20,4 @@ When you try to install a Microsoft Visual Studio Enterprise update or developme
 ## Resolution
 
 This error occurs if you try to install a program that depends on Microsoft Visual Studio Enterprise but was not detected by the program installer. To fix this problem, make sure that your computer meets the prerequisites of the program or component that you're trying to install.
+
