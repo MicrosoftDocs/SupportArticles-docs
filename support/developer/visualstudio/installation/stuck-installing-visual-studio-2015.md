@@ -1,7 +1,7 @@
 ---
 title: Stuck while installing Visual Studio 2015 (update for Microsoft Windows KB2999226)
 description: An installation of Visual Studio 2015 gets stuck if you cannot automatically install KB2999226 correctly because of the computer configuration.
-ms.date: 04/22/2022
+ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
