@@ -79,7 +79,7 @@ In the Group Policy Object Editor, these policy objects are located in *Computer
 
 - Make sure that the list of accounts doesn't include local accounts. For more information, see [How to deny access to this computer from the network](/windows/security/threat-protection/security-policy-settings/deny-access-to-this-computer-from-the-network).
 
-- Make sure the list of accounts and groups doesn't include the "Everyone group." For more information, see [Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
+- Make sure the list of accounts and groups doesn't include the "Everyone" group. For more information, see [Deny log on locally security policy setting](/windows/security/threat-protection/security-policy-settings/deny-log-on-locally).
 
 After you change the policy settings, try to bring the node online again before you proceed.
 
