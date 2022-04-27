@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Windows XP Professional
   - Microsoft Windows XP Home Edition
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup

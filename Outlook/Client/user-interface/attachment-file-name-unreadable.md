@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # File name on an attachment icon is unreadable when you print an RTF email message in Outlook
 

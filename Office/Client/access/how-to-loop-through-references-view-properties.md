@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2000
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # How to loop through the references to view their properties in Microsoft Access

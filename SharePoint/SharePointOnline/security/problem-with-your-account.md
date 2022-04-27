@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
 # "There is a problem with your account, please try again later" when you open Office documents from OneDrive for Business or SharePoint Online

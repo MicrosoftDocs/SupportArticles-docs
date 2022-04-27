@@ -14,6 +14,7 @@ ms.reviewer: dahans
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You may have already signed in to Outlook Web App error when you try to open Outlook Web App in Office 365
 

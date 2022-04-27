@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Error when you install Exchange Server: Organization Preparation FAILED
 

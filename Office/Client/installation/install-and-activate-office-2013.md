@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office Professional Plus 2013
+ms.date: 3/31/2022
 ---
 
 # How to install and activate Office Professional Plus 2013 on a terminal server

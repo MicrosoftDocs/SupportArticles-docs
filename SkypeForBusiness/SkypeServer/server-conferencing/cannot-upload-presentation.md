@@ -15,6 +15,7 @@ appliesto:
   - Lync Server 2013
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # Lync clients cannot upload a Microsoft PowerPoint presentation

@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Site names cannot contain certain reserved words" when you create a new SharePoint Online subsite

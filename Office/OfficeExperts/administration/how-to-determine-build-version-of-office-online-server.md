@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
+ms.date: 3/31/2022
 ---
 
 # How to determine the build version of Office Online Server

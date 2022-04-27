@@ -15,6 +15,7 @@ appliesto:
   - Word 2019
   - Word 2016
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # Word Track Changes functionality disabled when Rights Management Services (RMS) is applied

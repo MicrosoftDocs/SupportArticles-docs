@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't install Exchange Cumulative Update on a localized version of Windows Server

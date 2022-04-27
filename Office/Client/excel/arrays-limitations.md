@@ -14,6 +14,7 @@ appliesto:
   - Excel 2007
   - Excel 2003
   - Excel 2002
+ms.date: 3/31/2022
 ---
 
 # Description of the limitations for working with arrays in Excel

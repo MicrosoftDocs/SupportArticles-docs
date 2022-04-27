@@ -12,6 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office Starter 2010
+ms.date: 3/31/2022
 ---
 
 # "Cannot be opened" error when you start an Office Starter 2010 program.

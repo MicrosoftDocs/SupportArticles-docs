@@ -13,6 +13,7 @@ ms.reviewer: v-ernord, dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # The telephone number isn't visible in the Lync contact card or appears in an unexpected format

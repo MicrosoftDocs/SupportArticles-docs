@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Users without permissions to a SharePoint Online resource don't receive the option to request access to the resource

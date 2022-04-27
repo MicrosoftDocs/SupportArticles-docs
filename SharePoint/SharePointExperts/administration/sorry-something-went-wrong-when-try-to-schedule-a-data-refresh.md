@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
+ms.date: 3/31/2022
 ---
 
 # "A schedule cannot be enabled for a workbook" when you try to schedule a data refresh by using PowerPivot

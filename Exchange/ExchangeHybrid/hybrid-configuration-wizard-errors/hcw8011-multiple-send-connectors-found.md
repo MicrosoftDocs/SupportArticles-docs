@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # HCW8011 multiple Send Connectors found for AddressSpace when you run the HCW
 

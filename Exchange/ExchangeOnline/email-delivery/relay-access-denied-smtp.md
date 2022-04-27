@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (550 5.7.64 TenantAttribution; Relay Access Denied SMTP) error when users send mail externally in Office 365
 

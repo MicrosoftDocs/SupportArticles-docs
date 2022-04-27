@@ -14,6 +14,7 @@ ms.reviewer: balinger, v-shum, v-huzhan
 appliesto: 
   - Exchange Server 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Hashed lines shown in scheduling assistant when Exchange Server 2016 tries to retrieve free/busy information across untrusted forests
 

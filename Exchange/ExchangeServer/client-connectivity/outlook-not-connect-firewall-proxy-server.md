@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Outlook
+ms.date: 3/31/2022
 ---
 # Outlook can't connect through a firewall or a proxy server that is performing Network Address Translation (NAT) between public and private networks
 

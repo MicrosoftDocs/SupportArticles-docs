@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "You can't sign in with this version of Lync. Install Lync 2010" error after Lync Mobile 2013 is installed

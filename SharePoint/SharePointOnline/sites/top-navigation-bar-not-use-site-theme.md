@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Online site doesn't use the site theme for the Office 365 top navigation bar

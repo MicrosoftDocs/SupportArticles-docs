@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Upload Multiple Documents option isn't available in a document library in SharePoint Server 2013
 

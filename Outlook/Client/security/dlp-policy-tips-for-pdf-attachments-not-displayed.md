@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2013
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook doesn't display DLP policy tips for PDF attachments in Windows 7
 

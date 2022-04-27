@@ -15,6 +15,7 @@ ms.author: luche
 ms.reviewer: acc12b
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # How to register or unregister ActiveX controls in Access 2007

@@ -17,6 +17,7 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # Create An Excel Add-In to Calculate Body Mass Index (BMI)

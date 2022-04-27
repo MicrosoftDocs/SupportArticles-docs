@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # You can't send or receive files or attachments in Skype for Business Online

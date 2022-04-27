@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The Mailbox Cleanup Wizard doesn't start in Outlook 2010 or Outlook 2013 when the mailbox is full
 

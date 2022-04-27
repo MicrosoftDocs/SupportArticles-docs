@@ -5,13 +5,14 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to open Support cases for GCC High and DoD
@@ -20,7 +21,7 @@ appliesto:
 
 ## Summary
 
-Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 admin center to manage your user accounts and define who has permissions to contact support.
+Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Microsoft 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Microsoft 365 admin center to manage your user accounts and define who has permissions to contact support.
 
 If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.
 
@@ -42,11 +43,11 @@ For more information on how to populate a valid email address for a user account
 
 Options and steps to populate a valid email address for an Office 365 user account -
 
-**Option 1 - Update the UserPrincipalName/Username value in the Office 365 admin center** 
+**Option 1 - Update the UserPrincipalName/Username value in the Microsoft 365 admin center** 
 
-1. Log into the Office 365 admin center and look up the user.
+1. Log into the Microsoft 365 admin center and look up the user.
 
-   :::image type="content" source="media/support-cases-for-gcc-high-dod/look-up-o365-user.png" alt-text="Screenshot to look up the user after logging into the Office 365 admin center.":::
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/look-up-o365-user.png" alt-text="Screenshot to look up the user after logging into the Microsoft 365 admin center.":::
 
 1. Next to Username select Edit. 
 
@@ -71,7 +72,7 @@ Options and steps to populate a valid email address for an Office 365 user accou
    :::image type="content" source="media/support-cases-for-gcc-high-dod/desired-address-show.png" alt-text="Screenshot of the desired address in the Admin center.":::
 
 **Option 2 - Add an alternate email address to the existing administrator user** 
-1. Log into the Office 365 admin center and look up the user.  
+1. Log into the Microsoft 365 admin center and look up the user.  
 1. Edit the user and go the Roles section. Select Edit. 
 
     :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for an office 365 user.":::

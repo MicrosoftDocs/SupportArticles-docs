@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # InfoPath Forms Services differences between SharePoint Online (DvNext/MT) and SharePoint On-Premises

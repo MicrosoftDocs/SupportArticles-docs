@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 # Outlook can't connect to an Exchange server that uses certificate validation on a network device
 

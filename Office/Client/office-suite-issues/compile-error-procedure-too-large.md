@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: rtaylor
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # "Compile Error: Procedure too large" when you try to run a VBA macro in a 32-bit version of an Office 2010 program

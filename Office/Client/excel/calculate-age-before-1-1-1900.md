@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # How to calculate ages before 1/1/1900 in Excel

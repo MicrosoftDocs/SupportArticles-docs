@@ -14,6 +14,7 @@ ms.reviewer: alinastr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Voice mail settings are missing from the Options pane in Outlook on the web in Office 365
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
 # OneDrive for Business sync returns the error "We can't connect to the specified SharePoint site"

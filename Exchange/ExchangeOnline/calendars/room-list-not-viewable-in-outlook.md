@@ -14,6 +14,7 @@ ms.reviewer: rrajan
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # An Exchange Online room list isn't viewable in Outlook or OWA
 

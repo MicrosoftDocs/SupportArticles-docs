@@ -16,6 +16,7 @@ appliesto:
   - Azure Active Directory
   - Office 365 Identity Management
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Mail-enabled groups that have an email address aren't synchronized to Office 365
 

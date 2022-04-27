@@ -14,6 +14,7 @@ ms.reviewer: V-BARRYB
 appliesto: 
   - Office 2007
   - Office 2003
+ms.date: 3/31/2022
 ---
 
 # "The Windows Installer service could not be accessed" when you try to install Office

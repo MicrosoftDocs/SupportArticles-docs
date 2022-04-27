@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-six
 appliesto: 
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # The installation of Lync 2010 will not complete using Windows Installer (MSI)

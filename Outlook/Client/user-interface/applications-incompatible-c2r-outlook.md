@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 # Some applications are incompatible with a Click-to-Run installation of Outlook 2010
 

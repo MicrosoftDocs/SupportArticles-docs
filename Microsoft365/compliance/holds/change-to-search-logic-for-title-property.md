@@ -1,5 +1,5 @@
 ---
-title: Search logic change to Title property in the Security and Compliance Centerx
+title: Search logic change to Title property in the Security and Compliance Center
 description: Describes a change to the Title property when conducting eDiscovery searches in the Security and Compliance Center.
 ms.author: v-maqiu
 author: MaryQiu1987
@@ -15,6 +15,7 @@ ms.custom:
   - CI 115091
   - CSSTroubleshoot
 ms.reviewer: markjjo
+ms.date: 3/31/2022
 ---
 
 # Change to search logic for the "Title" property in the Security and Compliance Center

@@ -14,6 +14,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - Excel for Mac
+ms.date: 3/31/2022
 ---
 
 # Can’t edit certain cells in a protected worksheet in Excel for Mac

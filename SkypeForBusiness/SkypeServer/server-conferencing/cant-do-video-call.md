@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business 2015
   - Skype for Business 2016
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # Skype for Business video calls not working with Logitech BRIO Webcam

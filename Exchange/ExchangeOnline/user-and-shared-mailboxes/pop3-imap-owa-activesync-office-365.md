@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Enable or disable POP3, IMAP, MAPI, Outlook Web App or Exchange ActiveSync in Office 365
 

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: landerl, jasco, corbinm, kristinw, oscarr, nmurav, lynnroe, cbland, rischwen, leonarwo
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "Cannot be reached" when you dial out to a telephone number from a PSTN Conferencing meeting in Skype for Business Online

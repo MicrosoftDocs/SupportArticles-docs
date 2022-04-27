@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # How to use cell references and defined names in criteria in Excel

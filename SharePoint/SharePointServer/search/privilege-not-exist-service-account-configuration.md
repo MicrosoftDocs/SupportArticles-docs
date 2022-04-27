@@ -15,6 +15,7 @@ ms.custom:
   - CI 110752
 appliesto: 
   - FAST Search Server 2010 for SharePoint
+ms.date: 3/31/2022
 ---
 
 # "A privilege that the service requires to function properly does not exist in the service account configuration" error in FAST Search Server 2010 for SharePoint

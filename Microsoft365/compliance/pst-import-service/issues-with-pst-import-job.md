@@ -16,6 +16,7 @@ appliesto:
   - O365 Modern Support
   - Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Issues that affect PST import jobs
 

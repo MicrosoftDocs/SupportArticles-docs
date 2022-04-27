@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "We don't recognize this user ID or password" error when a user tries to sign in to the Office 365 portal

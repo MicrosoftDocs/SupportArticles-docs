@@ -15,6 +15,7 @@ appliesto:
   - Word 2016
   - Word 2013
   - Microsoft Word 2010
+ms.date: 3/31/2022
 ---
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word

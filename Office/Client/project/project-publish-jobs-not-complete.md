@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Project Online
   - Project Server 2013
+ms.date: 3/31/2022
 ---
 
 # Project Publish jobs remain at 80 percent for a long time before completing

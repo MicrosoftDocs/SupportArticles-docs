@@ -14,6 +14,7 @@ ms.reviewer: kellybos
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # InvalidShellID error in RPS in Office 365
 

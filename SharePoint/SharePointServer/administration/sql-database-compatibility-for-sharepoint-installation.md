@@ -18,6 +18,7 @@ appliesto:
   - SharePoint Server 2019
   - SharePoint Server 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Supported SQL Server database compatibility level for SharePoint Server installations
 

@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The OpenSharedItem method for Outlook holds a file handle on signed .msg files
 

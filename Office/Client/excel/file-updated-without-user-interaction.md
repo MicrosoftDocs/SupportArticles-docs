@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel for the web
+ms.date: 3/31/2022
 ---
 
 # Excel files are updated without user interaction

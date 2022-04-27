@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # LastActive attribute gives wrong user status info in Skype for Business Online

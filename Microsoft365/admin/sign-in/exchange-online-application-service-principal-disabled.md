@@ -1,17 +1,18 @@
 ---
-title: Unable to sign in to Office 365 portal 
-description: You can't sign in to Office 365 portal when Exchange Online application service principal is disabled. 
+title: Unable to sign in to Office 365 portal
+description: You can't sign in to Office 365 portal when Exchange Online application service principal is disabled.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
-appliesto:
-- Office 365
+appliesto: 
+  - Office 365
+ms.date: 3/31/2022
 ---
 
 # "Sorry, but we're having trouble signing you in" error when signing in to Office 365

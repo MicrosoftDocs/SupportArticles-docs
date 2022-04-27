@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Office 365 users don't receive out-of-office notifications from on-premises users in a hybrid deployment
 

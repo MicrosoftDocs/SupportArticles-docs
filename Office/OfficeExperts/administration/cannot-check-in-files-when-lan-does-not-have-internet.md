@@ -12,6 +12,7 @@ audience: ITPro
 ms.topic: troubleshooting
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Office 2013 can't check in files when LAN doesn't have Internet access or over some VPNs

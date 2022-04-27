@@ -14,6 +14,7 @@ ms.reviewer: tado, WADEJACK
 appliesto: 
   - Microsoft Office Access 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # How to use the query by form (QBF) technique in Microsoft Access
 

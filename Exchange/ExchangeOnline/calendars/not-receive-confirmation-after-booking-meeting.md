@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You don't receive any confirmation after you successfully schedule a meeting or an appointment
 

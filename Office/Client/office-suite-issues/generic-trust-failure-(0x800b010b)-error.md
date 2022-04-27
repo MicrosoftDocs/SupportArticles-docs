@@ -14,6 +14,7 @@ search.appverid:
 appliesto: 
   - Microsoft Office 2013 Service Pack 1
   - Microsoft Office 2010 Service Pack 2
+ms.date: 3/31/2022
 ---
 
 # "Generic Trust Failure (0x800B010B)" error when you install Visual Studio 2010 Tools for Office Runtime

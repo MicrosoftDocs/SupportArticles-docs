@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: romanma, corbinm, dahans
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # "License validation error" when an Office 365 administrator tries to disable a Skype for Business Online user

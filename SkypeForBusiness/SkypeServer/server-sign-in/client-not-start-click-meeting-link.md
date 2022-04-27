@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Lync Online
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # Lync or Skype for Business client does not start when you click a meeting link if the default browser is Google Chrome

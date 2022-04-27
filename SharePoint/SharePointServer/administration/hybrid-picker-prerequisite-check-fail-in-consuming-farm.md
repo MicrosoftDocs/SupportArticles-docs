@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2016
+ms.date: 3/31/2022
 ---
 
 # Hybrid Picker prerequisite check fail in a consuming farm  

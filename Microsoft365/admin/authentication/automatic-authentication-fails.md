@@ -19,6 +19,7 @@ appliesto:
   - PowerPoint for Office 365
   - OneNote for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Fix authentication issues in Office applications when you try to connect to an Office 365 service

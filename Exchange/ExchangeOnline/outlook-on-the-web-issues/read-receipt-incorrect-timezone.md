@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Read receipt from an Office 365 recipient displays incorrect time zone information
 

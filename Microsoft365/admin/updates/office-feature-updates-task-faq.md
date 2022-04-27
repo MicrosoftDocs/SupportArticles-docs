@@ -9,9 +9,10 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps for enterprise
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Description of the Office Feature Updates task

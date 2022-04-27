@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Skype for Business Online sign-in error if settings such as the computer time, date, user name, or password are incorrect

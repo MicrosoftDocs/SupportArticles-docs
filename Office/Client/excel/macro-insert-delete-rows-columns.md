@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel

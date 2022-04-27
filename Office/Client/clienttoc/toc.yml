@@ -449,6 +449,8 @@
           href: ../excel/custom-function-calculate-wrong-value.md
         - name: Data collected by Excel Baseline Diagnostic
           href: ../excel/data-collected-by-excel-support-diagnostic.md
+        - name: Excel data doesn't retain formatting in mail merge
+          href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
         - name: Date format is incorrect when converting a CSV text file with macros
           href: ../excel/incorrect-date-format-converted-csv-file.md
         - name: Delete cells with a "For Each...Next" loop
@@ -497,6 +499,8 @@
           href: ../excel/excel-takes-long-time-to-insert-delete-rows.md
         - name: Export a text file with both comma and quote delimiters
           href: ../excel/export-text-file-with-comma-quote.md
+        - name: External links may be calculated when you open a workbook
+          href: ../excel/external-links-calculated-open-workbook-earlier-version-excel.md
         - name: F4 keyboard shortcut doesn't work in Excel
           href: ../excel/f4-keyboard-shortcut-not-work.md
         - name: FALSE result with the ISBLANK() function
@@ -579,6 +583,8 @@
           href: ../excel/output-misleading-labels.md
         - name: Network Mapped Drive hyperlinks resolve as UNC
           href: ../excel/network-mapped-drive-hyperlinks-unc.md
+        - name: Object Model calls fails from WorkbookOpen event
+          href: ../excel/object-model-calls-fails-workbookopen-event.md
         - name: Office 365 users can't open or synchronize files
           href: ../excel/cannot-operate-files.md
         - name: Operation Must Use an Updatable Query
@@ -587,6 +593,8 @@
           href: ../excel/parts-of-excel-turn-white-or-gray.md
         - name: Paster special option is missing or not working
           href: ../excel/paste-special-missing-or-not-working.md
+        - name: Percentage format changes to Numeric
+          href: ../excel/percentage-format-changes-numeric.md
         - name: PowerPivot controls disabled with non-default Excel file format
           href: ../excel/powerpivot-controls-disabled-with-non-default.md
         - name: Prevent files from opening automatically
@@ -719,6 +727,8 @@
           href: ../office-for-mac/o365-e3-setup-incomplete.md
         - name: PowerPoint for Mac is closed unexpectedly
           href: ../office-for-mac/powerpoint-mac-closes-unexpectedly.md
+        - name: The application Microsoft Excel quit unexpectedly
+          href: ../office-for-mac/excel-mac-error-application-quit-unexpectedly.md
         - name: wkresources files in Trash
           href: ../office-for-mac/wkresources-files-moved-to-trash.md
     - name: Office Suite Issues
@@ -737,6 +747,8 @@
           href: ../office-suite-issues/apps-for-office-not-start.md
         - name: Background task activation is spurious
           href: ../office-suite-issues/background-task-activation-spurious.md
+        - name: Can't access a SharePoint Online place in Office Mobile
+          href: ../office-suite-issues/cannot-access-sharepoint-online-place.md
         - name: Can't change the number of places in Recent Places
           href: ../office-suite-issues/change-number-of-recent-places.md
         - name: Can't create user name that contains special characters
@@ -897,6 +909,8 @@
           href: ../onenote/onenote-error-content-not-yet-available.md
         - name: Errors when you sync a notebook
           href: ../onenote/error-sync-notebook.md
+        - name: Send to OneNote and Meeting Notes buttons don't work
+          href: ../onenote/send-to-onenote-and-meeting-notes-buttons-not-working.md
         - name: Temporary change to file size download limit in OneNote
           href: ../onenote/temp-change-onenote-file-size-download.md
         - name: Warning when a notebook is in an offline location
@@ -919,6 +933,8 @@
           href: ../powerpoint/cannot-edit-video-or-audio.md
         - name: Can't load an add-in with a low macro security level
           href: ../powerpoint/powerpoint-fails-loading-add-in.md
+        - name: Can't use videos as slide backgrounds
+          href: ../powerpoint/cannot-use-videos-as-slide-backgrounds.md  
         - name: Change the export resolution of PowerPoint slide
           href: ../powerpoint/change-export-slide-resolution.md
         - name: Hlink.dll Can't Be Loaded
@@ -1023,6 +1039,8 @@
           href: ../settings/file-blocked-in-office.md
         - name: How to use Problem Steps Recorder
           href: ../settings/how-to-use-problem-steps-recorder.md
+        - name: Securely opening Office documents with DDE fields
+          href: ../settings/how-to-securely-open-office-documents-that-have-dde-fields.md
         - name: Task panes in Office
           href: ../settings/office-program-task-panes.md
         - name: Use registry to clear the most recently used files list
@@ -1047,6 +1065,10 @@
           href: ../visio/file-blocked-by-registry-policy.md
         - name: Can't open Visio files in Visio Web Access
           href: ../visio/open-visio-files-in-visio-web-access.md
+        - name: Can't split a connector to insert a new shape
+          href: ../visio/cannot-split-connector-insert-new-shape.md
+        - name: Create flexible organization charts in Visio
+          href: ../visio/create-flexible-organization-charts-visio.md
         - name: Data graphics aren't displayed
           href: ../visio/data-graphics-not-displayed.md
         - name: Enable Windows Search service to use Search for Shapes
@@ -1071,6 +1093,10 @@
       items:
         - name: A connector doesn't move when moving a shape
           href: ../word/connector-not-move-with-shapes.md
+        - name: A corrupt global template causes errors when automating Word
+          href: ../word/corrupt-global-template-causes-errors-automating-word.md
+        - name: Auto-Exec and Auto-Open macros
+          href: ../word/autoexec-autoopen-macros-word.md
         - name: Can't open documents with unsupported XML elements
           href: ../word/custom-xml-elements-not-supported.md
         - name: Can't open this file because it is larger than 512 Megabytes
@@ -1087,8 +1113,14 @@
           href: ../word/spelling-grammar-checker-underline-color.md
         - name: Damaged documents in Word
           href: ../word/damaged-documents-in-word.md
+        - name: Document building blocks may be missing
+          href: ../word/document-building-blocks-missing.md
         - name: End tag error when opening docx file
           href: ../word/end-tag-error-when-open-docx.md
+        - name: Excel data doesn't retain formatting in mail merge
+          href: ../excel/excel-data-not-retain-formatting-mail-merge.md
+        - name: Fails to clear the Embed Linguistic Data check box
+          href: ../word/fails-clear-embed-linguistic-data-check-box.md
         - name: Headers and footers remain after removing sensitivity label
           href: ../word/headers-footers-remain-after-remove-sensitivity-label.md
         - name: How to merge multiple documents
@@ -1117,10 +1149,12 @@
           href: ../word/image-part-relationship-rld8-not-found-error-microsoft-word.md
         - name: Reset user options and registry settings in Word
           href: ../word/reset-options-and-settings-in-word.md
+        - name: Save As dialog box appears two times
+          href: ../word/save-as-dialog-box-appears-two-times.md  
         - name: Spell checker doesn't check text in the form fields
           href: ../word/spell-checker-not-check-form-field-text.md
-        - name: Spell Checker not recognizes misspelled words in Word 2010
-          href: ../word/not-recognize-mispespelled-words-in-word.md
+        - name: Spell checker doesn't recognize misspelled words in Word 2010
+          href: ../word/not-recognize-misspelled-words-in-word.md
         - name: Track Changes functionality disabled when RMS is disabled
           href: ../word/track-changes-disabled.md
         - name: Troubleshoot print failures in Word for Office 365 on Windows 10

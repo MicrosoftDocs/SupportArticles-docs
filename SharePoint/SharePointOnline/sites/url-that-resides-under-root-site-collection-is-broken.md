@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # How to replace the root site in SharePoint Online

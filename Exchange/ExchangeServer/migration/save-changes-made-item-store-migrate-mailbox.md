@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010
+ms.date: 3/31/2022
 ---
 # Error while migrating mailbox to Exchange Online: Cannot save changes made to an item to store
 

@@ -15,6 +15,7 @@ ms.author: luche
 appliesto: 
   - Exchange Online
   - Outlook 2016 for Mac
+ms.date: 3/31/2022
 ---
 
 # Outlook 2016 for Mac repeatedly prompts for authentication

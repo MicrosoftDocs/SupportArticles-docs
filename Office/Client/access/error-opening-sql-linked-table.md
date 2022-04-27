@@ -21,6 +21,7 @@ appliesto:
   - Microsoft Office Access 2003
   - Microsoft Office Access 2000
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error (ODBC--call failed) when you open a table that is linked to a SQL Database instance in Access

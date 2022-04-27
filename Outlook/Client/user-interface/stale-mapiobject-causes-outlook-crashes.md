@@ -18,6 +18,7 @@ appliesto:
   - Outlook for Office 365
   - Outlook 2019
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook crashes when you call IMAPIProp::GetProps on a stale MAPIOBJECT
 

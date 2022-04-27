@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Missing registry information can cause problems with the Outlook object model
 

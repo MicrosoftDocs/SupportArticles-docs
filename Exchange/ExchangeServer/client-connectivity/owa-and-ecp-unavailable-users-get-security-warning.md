@@ -14,6 +14,7 @@ ms.reviewer: balinger
 appliesto: 
   - Exchange Server
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users get a security warning when trying to connect OWA and ECP
 

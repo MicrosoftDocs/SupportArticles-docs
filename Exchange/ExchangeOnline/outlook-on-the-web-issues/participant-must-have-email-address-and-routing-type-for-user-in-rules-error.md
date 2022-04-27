@@ -14,6 +14,7 @@ ms.reviewer: sapadman
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Participant must have email address and routing type for use in rules error when creating a rule in OWA
 

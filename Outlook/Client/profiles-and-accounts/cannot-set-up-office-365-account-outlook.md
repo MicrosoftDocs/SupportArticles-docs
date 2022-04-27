@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
+ms.date: 3/31/2022
 ---
 # You can't set up an Office 365 account in Outlook
 
@@ -35,7 +36,7 @@ When this issue occurs, the server returns an HTTP 456 authentication error.
 
 ## Resolution
 
-To fix this issue, disable MFA for the account in the Office 365 admin center. To do this, follow these steps.
+To fix this issue, disable MFA for the account in the Microsoft 365 admin center. To do this, follow these steps.
 
 > [!NOTE]
 > You might have to contact your Exchange administrator to disable the MFA .

@@ -17,6 +17,7 @@ appliesto:
   - Access 2003
   - Access 2002
   - Access 2000
+ms.date: 3/31/2022
 ---
 
 # How to enforce or disable the startup options in an Access database

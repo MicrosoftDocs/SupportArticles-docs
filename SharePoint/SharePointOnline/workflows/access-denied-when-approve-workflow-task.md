@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # "Access denied" error when a user tries to approve an Approval Workflow task

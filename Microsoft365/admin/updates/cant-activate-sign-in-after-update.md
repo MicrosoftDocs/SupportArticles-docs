@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - office 2016
+ms.date: 3/31/2022
 ---
 
 # You can't activate or sign-in after you update to Office 2016 for Mac version 15.33

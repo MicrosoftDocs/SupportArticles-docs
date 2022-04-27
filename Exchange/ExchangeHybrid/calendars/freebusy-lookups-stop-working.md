@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Free/busy lookups stop working in a cross-premises environment or in an Exchange Server hybrid deployment
 

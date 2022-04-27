@@ -13,6 +13,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Clear the Teams client cache
 

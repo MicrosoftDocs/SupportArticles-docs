@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Online no longer supports automatic import of EXIF properties after image upload

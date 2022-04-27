@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
+ms.date: 3/31/2022
 ---
 # Unexpected PublicFolderMailBoxes dynamic distribution groups in Exchange Server 2016
 

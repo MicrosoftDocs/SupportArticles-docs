@@ -13,6 +13,7 @@ ms.reviewer: dakova, spspms
 appliesto: 
   - SharePoint Designer 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't switch the user account in SharePoint Designer 2013
 

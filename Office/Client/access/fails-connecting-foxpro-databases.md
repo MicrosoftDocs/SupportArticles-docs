@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You cannot connect directly to FoxPro databases in Access 2007 and in Access 2003
 

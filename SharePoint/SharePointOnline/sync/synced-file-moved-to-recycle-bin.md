@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # A file that was synchronized in SharePoint Online or OneDrive for Business is moved to the recycle bin

@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Office Outlook 2007
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Offline item count for a folder in Outlook differs from the server item count
 

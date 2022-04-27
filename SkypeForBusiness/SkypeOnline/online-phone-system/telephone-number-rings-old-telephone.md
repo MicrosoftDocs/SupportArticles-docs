@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: Landerl, corbinm, jasco, cbland
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # The telephone number still rings the old telephone after the time and date for a local number port order request in Skype for Business Online have passed

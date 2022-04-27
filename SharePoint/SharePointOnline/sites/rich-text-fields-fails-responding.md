@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # Rich Text fields don't respond when you use Internet Explorer to access a SharePoint site

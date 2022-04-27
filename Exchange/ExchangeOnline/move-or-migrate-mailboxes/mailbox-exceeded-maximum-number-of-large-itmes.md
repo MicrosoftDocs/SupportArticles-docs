@@ -11,8 +11,10 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: jhayes
-appliesto: Exchange Online
+appliesto: 
+- xchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # This mailbox exceeded the maximum number of large items when migrating a user's mailbox data from the on-premises environment to Office 365
 

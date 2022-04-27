@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online

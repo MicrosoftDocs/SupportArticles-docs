@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to troubleshoot issues when you use Cortana with Microsoft 365

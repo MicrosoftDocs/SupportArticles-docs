@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Foundation 2010
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # SPD Workflow cannot send email to group(s) from initiation form

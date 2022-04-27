@@ -16,6 +16,7 @@ appliesto:
   - Project Server 2016
   - Project Server 2013
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 # Resource Plan FTE doesn't calculate as expected when Max Units are 0 or 0%
 

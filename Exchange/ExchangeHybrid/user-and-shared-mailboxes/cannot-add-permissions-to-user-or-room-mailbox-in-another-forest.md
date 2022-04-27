@@ -14,6 +14,7 @@ ms.reviewer: kellybos
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't add permissions to Outlook user or room mailbox in another forest in Office 365 hybrid environment
 

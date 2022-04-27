@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office Excel 2003
   - Excel 2004 for Mac
+ms.date: 3/31/2022
 ---
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel

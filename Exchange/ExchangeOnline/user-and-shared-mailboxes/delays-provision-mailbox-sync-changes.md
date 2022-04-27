@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Delays in provisioning of user/mailbox or synchronizing changes in Exchange Online
 

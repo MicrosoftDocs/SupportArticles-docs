@@ -13,6 +13,7 @@ ms.author: luche
 ms.reviewer: patdav, viwoods
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # You can't install Office Starter 2010 on Windows 8

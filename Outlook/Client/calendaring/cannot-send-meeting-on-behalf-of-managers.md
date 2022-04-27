@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to send an Outlook meeting on behalf of a manager when viewing their calendar
 

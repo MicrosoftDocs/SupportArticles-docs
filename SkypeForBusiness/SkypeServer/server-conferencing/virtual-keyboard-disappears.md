@@ -13,6 +13,7 @@ ms.reviewer: chanh
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype Room System v2
+ms.date: 3/31/2022
 ---
 
 # The on-screen keyboard disappears in Skype Room Systems v2

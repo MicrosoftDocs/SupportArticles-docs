@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Excel for Mac
+ms.date: 3/31/2022
 ---
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac

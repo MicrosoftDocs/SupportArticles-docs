@@ -17,6 +17,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The From field in a meeting request does not list all accounts in Microsoft Outlook
 

@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "Connect-MsolService: Exception of type was thrown" when you use the connect-MSOLService to connect to Office 365, Azure, or Intune

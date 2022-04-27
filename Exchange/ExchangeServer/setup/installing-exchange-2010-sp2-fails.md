@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
+ms.date: 3/31/2022
 ---
 # Error message when you try to install Exchange Server 2010 SP2: AuthorizationManager check failed
 

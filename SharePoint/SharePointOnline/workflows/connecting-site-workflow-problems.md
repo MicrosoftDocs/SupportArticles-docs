@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - SharePoint Server 2013
+ms.date: 3/31/2022
 ---
 
 # Workflow problems after you connect to a SharePoint Online or SharePoint Server 2013 site

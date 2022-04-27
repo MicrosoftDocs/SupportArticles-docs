@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2013
   - Microsoft SharePoint Server 2013 Service Pack 1
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Can't open SharePoint documents in a local client (rich client) from Chrome when NPAPI plug-in is missing

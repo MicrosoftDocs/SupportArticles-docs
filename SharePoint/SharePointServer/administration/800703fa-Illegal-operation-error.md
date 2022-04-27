@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2013
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # "800703fa Illegal operation attempted on a registry key" error

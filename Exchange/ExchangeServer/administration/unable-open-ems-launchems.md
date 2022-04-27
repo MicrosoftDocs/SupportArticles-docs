@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Can't open EMS on an Exchange Server 2019 Edge Transport server by using the LaunchEMS command

@@ -18,6 +18,7 @@ appliesto:
   - Microsoft Office Excel 2007
   - Microsoft Excel 2002 Standard Edition
   - Microsoft Excel 2000 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" Error

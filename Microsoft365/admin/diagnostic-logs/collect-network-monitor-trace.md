@@ -13,6 +13,7 @@ ms.author: v-maqiu
 appliesto: 
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
+ms.date: 3/31/2022
 ---
 
 # How to collect a Network Monitor trace in Office 365 Dedicated/ITAR

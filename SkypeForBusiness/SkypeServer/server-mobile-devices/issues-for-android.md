@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business for Android
+ms.date: 3/31/2022
 ---
 
 # Troubleshooting issues with Microsoft Skype for Business (formerly Lync 2013) for Android

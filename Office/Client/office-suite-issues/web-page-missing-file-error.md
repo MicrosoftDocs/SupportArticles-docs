@@ -14,6 +14,7 @@ appliesto:
   - Microsoft Excel
   - Microsoft PowerPoint
   - Microsoft Word
+ms.date: 3/31/2022
 ---
 
 # "The page cannot be found" or "Missing file" error when you view or change an Office document

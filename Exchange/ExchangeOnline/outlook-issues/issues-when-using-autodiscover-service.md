@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't create new Outlook profiles, view free/busy, or connect to a shared mailbox or a public folder
 

@@ -16,6 +16,7 @@ appliesto:
   - Word 2013
   - Word 2010
   - Word 2007
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot why Word does not print

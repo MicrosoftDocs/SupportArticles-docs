@@ -6,14 +6,15 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-six
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Office 365
+  - MET150
+appliesto: 
+  - Office 365
+ms.date: 3/31/2022
 ---
 # Cautions against bypassing Office 365 spam filters
 

@@ -13,6 +13,7 @@ ms.reviewer: vrunge
 appliesto: 
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to retrieve data from the server when you display Visio files in SharePoint Server 2013
 

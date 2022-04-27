@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The UseLegacyFB registry value does not work as expected in Outlook 2010 and Outlook 2013
 

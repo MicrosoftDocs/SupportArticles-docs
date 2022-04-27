@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # An external user receives an error message when they click the link to a shared resource in SharePoint Online

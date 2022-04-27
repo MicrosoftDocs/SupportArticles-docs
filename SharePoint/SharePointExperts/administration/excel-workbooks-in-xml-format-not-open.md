@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.custom: sap:spsexperts, CSSTroubleshoot
 appliesto: 
   - Microsoft SharePoint
+ms.date: 3/31/2022
 ---
 
 # Excel workbooks in XML format don't open from SharePoint

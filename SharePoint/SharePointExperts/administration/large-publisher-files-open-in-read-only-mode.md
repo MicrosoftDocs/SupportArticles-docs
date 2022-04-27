@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - Publisher 2013
+ms.date: 3/31/2022
 ---
 
 # Large Publisher files open in read-only mode

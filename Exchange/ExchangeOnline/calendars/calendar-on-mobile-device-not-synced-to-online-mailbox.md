@@ -14,6 +14,7 @@ ms.reviewer: v-jhayes, jhayes, v-lanac
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Calendar on mobile device isn't synced to the calendar in an Exchange Online mailbox when you use Exchange ActiveSync
 

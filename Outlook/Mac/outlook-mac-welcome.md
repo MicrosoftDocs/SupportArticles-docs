@@ -12,6 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - Microsoft Outlook for Mac
+ms.date: 3/31/2022
 ---
 
 # Outlook for Mac troubleshooting

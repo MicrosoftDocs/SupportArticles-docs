@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010
+ms.date: 3/31/2022
 ---
 # Manually update scan engines in Exchange Server
 

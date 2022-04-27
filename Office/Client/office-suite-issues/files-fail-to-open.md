@@ -13,6 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2016
+ms.date: 3/31/2022
 ---
 
 # Office files in SharePoint fail to open from an Office 2016 client

@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # eDiscovery searches in Exchange Online are queued indefinitely
 

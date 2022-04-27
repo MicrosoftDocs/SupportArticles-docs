@@ -15,6 +15,7 @@ ms.reviewer: dlaughli
 appliesto: 
   - Outlook for iOS
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Duplicate Outlook contacts appear in iOS Contacts app
 

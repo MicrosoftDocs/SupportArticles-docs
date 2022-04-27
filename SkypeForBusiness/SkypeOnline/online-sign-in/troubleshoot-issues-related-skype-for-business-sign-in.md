@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business Online
   - Skype for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Troubleshoot Office 365 issues when signing in to Microsoft Skype for Business
 

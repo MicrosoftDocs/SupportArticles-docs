@@ -7,15 +7,16 @@ ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
-- Exchange Hybrid
-- CSSTroubleshoot
+  - Exchange Hybrid
+  - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
-- Exchange Server 2010 Enterprise
-- Exchange Server 2010 Standard
+  - MET150
+appliesto: 
+  - Exchange Online
+  - Exchange Server 2010 Enterprise
+  - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Move operation fails when moving a mailbox from Office 365 back to the on-premises environment
 

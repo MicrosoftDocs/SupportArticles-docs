@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # How to troubleshoot issues that you may encounter when you use the Lync 2010 mobile client for Google Android

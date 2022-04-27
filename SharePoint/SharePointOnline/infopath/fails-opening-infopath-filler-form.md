@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "InfoPath cannot open the selected form" error when you try to open an InfoPath Filler form that is published to a SharePoint Online site

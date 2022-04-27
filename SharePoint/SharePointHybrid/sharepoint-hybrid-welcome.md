@@ -12,6 +12,7 @@ ms.custom:
 appliesto: 
   - SharePoint Online
   - SharePoint Server
+ms.date: 3/31/2022
 ---
 
 # Hybrid deployment troubleshooting

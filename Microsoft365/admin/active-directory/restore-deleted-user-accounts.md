@@ -5,17 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 ms.reviewer: v-lanac
-appliesto:
-- Microsoft Office 365
-- Cloud Services (Web roles/Worker roles)
-- Azure Active Directory
-- Office 365 User and Domain Management
+appliesto: 
+  - Microsoft Office 365
+  - Cloud Services (Web roles/Worker roles)
+  - Azure Active Directory
+  - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 # How to restore deleted user accounts in Office 365, Azure, and Intune
 

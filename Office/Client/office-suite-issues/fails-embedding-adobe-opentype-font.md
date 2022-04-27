@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # You cannot embed an Adobe OpenType font in a document in an Office program

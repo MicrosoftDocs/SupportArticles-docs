@@ -20,6 +20,7 @@ appliesto:
   - Outlook 2010
   - Microsoft 365 Apps for enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't access a shared calendar by using Outlook for a hidden mailbox
 

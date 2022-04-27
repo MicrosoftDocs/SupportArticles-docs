@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error when you view free/busy information in Outlook: We're checking everyone's calendars

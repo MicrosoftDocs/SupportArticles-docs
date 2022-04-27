@@ -14,6 +14,7 @@ ms.reviewer: billja, aruiz, gbratton
 appliesto: 
   - Outlook 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when you copy an appointment to an Outlook.com calendar folder: Cannot move the items
 

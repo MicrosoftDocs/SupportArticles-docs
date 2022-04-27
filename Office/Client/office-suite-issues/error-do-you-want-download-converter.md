@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Excel 2010
   - Microsoft PowerPoint 2010
 ms.reviewer: jenl
+ms.date: 3/31/2022
 ---
 # "Do you want to download the converter" error when trying to open a file in Word, Excel, or PowerPoint
 

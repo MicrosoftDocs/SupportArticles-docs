@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Outlook 2010
+ms.date: 3/31/2022
 ---
 # You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Office 365 accounts
 

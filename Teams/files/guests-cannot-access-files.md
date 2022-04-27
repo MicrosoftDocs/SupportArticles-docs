@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # "Attempted to perform an unauthorized operation" error when accessing Files tab in Teams

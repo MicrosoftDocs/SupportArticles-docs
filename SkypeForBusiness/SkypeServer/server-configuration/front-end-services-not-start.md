@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync Server 2013 Front-End server services do not start for a long time

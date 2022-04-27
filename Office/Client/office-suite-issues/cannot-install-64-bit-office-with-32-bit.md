@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # You receive the error message "You cannot install the 64-bit version of Office 2010 because you have 32-bit Office products installed"

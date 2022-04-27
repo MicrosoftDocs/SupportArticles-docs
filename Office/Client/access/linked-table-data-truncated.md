@@ -9,6 +9,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - CI 114797
+  - CI 162681
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
@@ -20,6 +21,7 @@ appliesto:
   - Access 2007
   - Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # The data in a linked Excel spreadsheet column is truncated to 255 characters in an Access database
@@ -66,4 +68,4 @@ However, when you import an Excel spreadsheet that has columns that contain more
 
 For additional information about how to import or link data from a spreadsheet, visit the following Microsoft Web site:
 
-[Import or link data from a spreadsheet](https://msdn2.microsoft.com/library/aa831316%28office.10%29.aspx)
+[Import or link to data in an Excel workbook](https://support.microsoft.com/office/import-or-link-to-data-in-an-excel-workbook-a1952878-7c58-47b1-893d-e084913cc958)

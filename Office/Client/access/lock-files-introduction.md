@@ -14,6 +14,7 @@ ms.reviewer: denniwil
 appliesto: 
   - Access
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Introduction to lock files (laccdb and ldb) in Access

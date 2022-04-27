@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # Download the latest online Excel Viewer

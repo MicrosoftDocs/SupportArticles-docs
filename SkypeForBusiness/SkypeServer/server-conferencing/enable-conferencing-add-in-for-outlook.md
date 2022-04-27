@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Outlook 2007
   - Outlook 2003
+ms.date: 3/31/2022
 ---
 
 # How to enable the Conferencing Add-in for Outlook

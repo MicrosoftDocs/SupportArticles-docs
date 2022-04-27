@@ -16,6 +16,7 @@ editor: v-jesits
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Error when finalizing a batch migration of public folders to Exchange Online
 

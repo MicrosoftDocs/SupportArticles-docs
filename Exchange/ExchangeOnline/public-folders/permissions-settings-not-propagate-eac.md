@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Public folder permissions and settings don't propagate in EAC
 

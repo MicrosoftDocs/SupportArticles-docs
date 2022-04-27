@@ -13,6 +13,7 @@ ms.author: v-maqiu
 appliesto: 
   - Azure Active Directory
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # Domain errors in the Office 365 portal

@@ -14,6 +14,7 @@ ms.reviewer: timothyh
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Sending Mailbox Server isn't running Exchange 2013 or a later version when you run HCW
 

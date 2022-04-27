@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error when you install add-ins by using Microsoft Store on Exchange Server 2016: The app couldn't be downloaded

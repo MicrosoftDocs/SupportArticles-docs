@@ -8,12 +8,13 @@ ms.author: v-six
 manager: dcscontentpm
 localization_priority: Normal
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Office 365 link in on-premises EAC goes to product comparison, not Exchange admin center

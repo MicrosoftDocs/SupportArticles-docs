@@ -14,6 +14,7 @@ ms.reviewer: off12set
 appliesto: 
   - Office 2010
   - IIS Media Services 2.0
+ms.date: 3/31/2022
 ---
 
 # The 2010 Office suite Setup program will not restart after an initial installation is interrupted

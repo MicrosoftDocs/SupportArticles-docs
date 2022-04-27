@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "Daily email limit has exceeded and your workflow has been suspended" or "Unable to send to a recipient" error in a SharePoint Online workflow

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Skype for Business Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Enable-UMMailbox... cannot be performed error in Exchange Online
 

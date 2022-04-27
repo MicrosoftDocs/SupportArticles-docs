@@ -16,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2010, Outlook 2013, Outlook 2016, Office 365
+ms.date: 3/31/2022
 ---
 
 # Planning considerations for deploying Outlook 2016 for Windows

@@ -12,6 +12,7 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - PowerPoint 2010
+ms.date: 3/31/2022
 ---
 
 # "You selected a single-byte font to replace a double-byte font" when replacing a Japanese font

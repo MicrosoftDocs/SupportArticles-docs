@@ -14,6 +14,7 @@ ms.reviewer: vikkarti
 appliesto: 
   - Office Mobile
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Control the File Transfer feature in the Office app
 

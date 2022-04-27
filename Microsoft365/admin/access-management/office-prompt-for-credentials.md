@@ -13,6 +13,7 @@ search.appverid:
 appliesto: 
   - Office 2016
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Office applications periodically prompt for credentials to SharePoint Online, OneDrive, and Lync Online

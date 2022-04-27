@@ -6,12 +6,13 @@ manager: dcscontentpm
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-audience: ITPro 
+  - MET150
+audience: ITPro
 ms.topic: troubleshooting
 description: Users from multiple federated domain (top level or child domains) are unable to sign in to office 365
-appliesto:
-- Office 365 Identity Management
+appliesto: 
+  - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # You can't sign in to Office 365 from multiple federated domains

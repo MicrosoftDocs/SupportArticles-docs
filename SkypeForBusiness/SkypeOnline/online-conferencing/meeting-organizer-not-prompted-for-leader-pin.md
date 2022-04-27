@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, jasco, corbinm, oscarr, nmurav, lynnroe, cbland, rischwen, Leonarwo, msp, romanma, tonyq
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Meeting organizer isn't prompted for leader PIN when joining Skype for Business Online meeting

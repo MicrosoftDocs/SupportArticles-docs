@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # How Excel works with two-digit year numbers

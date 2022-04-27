@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # The value of WhenCreated is changed in Exchange Online
 

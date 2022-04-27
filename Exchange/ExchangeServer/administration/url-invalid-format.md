@@ -7,13 +7,14 @@ ms.topic: troubleshooting
 ms.author: v-six
 manager: dcscontentpm
 ms.custom: 
-- Exchange Server
-- CSSTroubleshoot
+  - Exchange Server
+  - CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Exchange Online
+  - MET150
+appliesto: 
+  - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # "Active Sync URL was in an Invalid format" when using Remote Connectivity Analyzer tool

@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business 2016
   - Skype for Business 2015
+ms.date: 3/31/2022
 ---
 
 # Emoticons and emojis converted to text if more than 10 are sent in a single message block in Skype for Business 2015 or 2016 clients

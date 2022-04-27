@@ -13,6 +13,7 @@ ms.custom:
 ms.reviewer: sarvdon, SfB_Triage
 appliesto: 
   - Microsoft Teams
+ms.date: 3/31/2022
 ---
 
 # "Give Control" doesn't work when you share a screen in Teams

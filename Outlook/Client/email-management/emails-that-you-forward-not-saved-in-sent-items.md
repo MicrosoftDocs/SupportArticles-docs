@@ -19,6 +19,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Emails that you forward are not saved in the Sent Items folder in Outlook
 

@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “We’ve run into a problem with your Office 365 subscription”

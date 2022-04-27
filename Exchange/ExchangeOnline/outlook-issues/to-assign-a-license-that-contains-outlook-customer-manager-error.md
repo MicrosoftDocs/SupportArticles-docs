@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # To assign a license that contains Outlook Customer Manager error when creating a new user
 

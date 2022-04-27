@@ -18,6 +18,7 @@ appliesto:
   - SharePoint Server 2016
   - SharePoint Server 2013
   - SharePoint in Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Hybrid search fails to crawl or return results

@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Intune
   - Azure Backup
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "You first must install one of the following versions of .NET Framework" when you run the IdFix tool

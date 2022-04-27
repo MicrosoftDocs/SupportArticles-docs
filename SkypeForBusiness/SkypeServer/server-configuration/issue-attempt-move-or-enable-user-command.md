@@ -14,6 +14,7 @@ appliesto:
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Lync Server Control Panel returns that error "Insufficient access rights to perform the operation" when attempting a move user or enable user command

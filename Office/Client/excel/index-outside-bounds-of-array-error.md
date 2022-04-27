@@ -15,6 +15,7 @@ appliesto:
   - SQL Server 2012 Enterprise
   - SQL Server 2012 Standard
   - Power BI for Office 365
+ms.date: 3/31/2022
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook

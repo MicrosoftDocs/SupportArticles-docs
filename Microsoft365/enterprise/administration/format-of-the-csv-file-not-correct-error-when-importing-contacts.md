@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Format of the CSV file isn't correct error when an Office 365 user tries to import contacts
 

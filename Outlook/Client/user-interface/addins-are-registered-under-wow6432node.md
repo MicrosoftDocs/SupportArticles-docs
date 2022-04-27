@@ -24,6 +24,7 @@ appliesto:
   - Microsoft Office Word 2003
   - Microsoft Office Excel 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Add-ins for Office programs may be registered under the \Wow6432Node
 
