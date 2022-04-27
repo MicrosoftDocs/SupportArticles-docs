@@ -11,7 +11,7 @@
     items:
     - name: AI models fail to be imported in a new environment
       href: aimodels-fail-to-be-imported-in-a-new-environment.md
-    - name: Dependency Timeout error
+    - name: Dependency timeout error
       href: dependency-timeout-error-when-using-a-form-processing-model-in-power-automate.md
     - name: Fields couldn't be loaded for this document error
       href: fields-could-not-be-loaded-for-this-document-error-in-form-processing.md
