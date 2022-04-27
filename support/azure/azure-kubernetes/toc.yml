@@ -114,6 +114,8 @@
   items:
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
+  - name: Identify memory saturation in AKS clusters
+    href: identify-memory-saturation-aks.md
 
 - name: Troubleshoot Storage related issues
   items:
