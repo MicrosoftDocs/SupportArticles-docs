@@ -1,13 +1,13 @@
 ---
 title: Error - Product version that is being installed is old
-description: This article helps you resolve the error "The product version is old" when you try to install Visual Studio 2015.
+description: This article helps you resolve the error when you try to install an older  version of Visual Studio.
 ms.date: 04/27/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# "The product version is old" error when you try to install Visual Studio 2015
+# Error - Product version that is being installed is old
 
 _Applies to:_&nbsp;Visual Studio 2015
 

@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# "No Internet connection" error is shown when you try to install Visual Studio 2015
+# Error - No Internet connection detected on this machine
 
 _Applies to:_&nbsp;Visual Studio 2015
 
@@ -16,7 +16,6 @@ _Applies to:_&nbsp;Visual Studio 2015
 When you try to install Microsoft Visual Studio, you receive the following error message:
 
 > No Internet connection detected on this machine. Please connect to the Internet and click Retry. Clicking Continue without an Internet connection may prevent installation of some optional features.
-
 
 ## Resolution
 

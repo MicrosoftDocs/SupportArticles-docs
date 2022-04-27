@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# "Please restart the computer and run setup again" error when you try to install Visual Studio 2015
+# Error - Please restart the computer and run setup again
 
 _Applies to:_&nbsp;Visual Studio 2015
 
