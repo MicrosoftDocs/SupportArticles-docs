@@ -1,29 +1,7 @@
 - name: Welcome
   href: welcome-azure-kubernetes.yml
 
-- name: Cannot connect to application hosted on AKS cluster
-  items:
-  - name: General troubleshooting
-    href: connection-issues-application-hosted-aks-cluster.md
-  - name: Custom NSG blocks traffic
-    href: custom-nsg-blocks-traffic.md
-  - name: Get and analyze HTTP response codes
-    href: get-and-analyze-http-response-codes.md
-  - name: Intermittent timeouts or server issues
-    href: intermittent-timeouts-or-server-issue.md
-
-- name: Cannot connect to AKS cluster
-  items:
-  - name: Basic troubleshooting
-    href: troubleshoot-cluster-connection-issues-api-server.md
-  - name: Client IP address can't access API server
-    href: client-ip-address-cannot-access-api-server.md
-  - name: Config file isn't available when connecting
-    href: config-file-is-not-available-when-connecting.md
-  - name: User can't get cluster resources
-    href: user-cannot-get-cluster-resources.md
-
-- name: Cluster creation and deployment issues
+- name: Troubleshoot create operations
   items:
   - name: General troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
@@ -59,10 +37,8 @@
     href: error-code-vmextensionprovisioningtimeout.md
   - name: ZonalAllocationFailed or AllocationFailed error code
     href: error-code-zonalallocationfailed-allocationfailed.md
-  - name: Troubleshooting upgrade errors
-    href: troubleshoot-upgrade-errors.md
 
-- name: Cluster deletion issues
+- name: Troubleshoot delete operations
   items:
   - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
     href: cannot-delete-load-balancer-private-link-service.md
@@ -77,22 +53,53 @@
   - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
-# Stub out TOC entries per Public Content Request 161498: Create/Modify TOC for AKS
-# Pre-filling the TOC tree for 161114 (troubleshoot upgrade/update operations) - uncomment, add file names, and sort when ready
-# - name: Cluster upgrade issues
-#   items:
-#   - name: Node not ready
-#     href: 
-#   - name: NSG prevents resource download
-#     href: 
-#   - name: PodDrainFailure error code
-#     href: 
-#   - name: PublicIPCountLimitReached error code
-#     href: 
-#   - name: QuotaExceeded error code
-#     href: 
-#   - name: SubnetIsFull error code
-#     href: 
+- name: Troubleshoot upgrade operations
+  items:
+  - name: NSG prevents resource download
+    href: troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
+  - name: PodDrainFailure error code
+    href: troubleshoot-upgrade-errors.md#error-code-poddrainfailure
+  - name: PublicIPCountLimitReached error code
+    href: troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
+  - name: QuotaExceeded error code
+    href: troubleshoot-upgrade-errors.md#error-code-quotaexceeded
+  - name: SubnetIsFull error code
+    href: troubleshoot-upgrade-errors.md#error-code-subnetisfull
+
+- name: Troubleshoot node not ready
+  items:
+  - name: Basic troubleshooting
+    href: node-not-ready-basic-troubleshooting.md
+  - name: Custom script extension errors
+    href: node-not-ready-custom-script-extension-errors.md
+  - name: Expired certificates
+    href: node-not-ready-expired-certificates.md
+  - name: Node not ready after being healthy
+    href: node-not-ready-after-being-healthy.md
+  - name: Node not ready but then recovers
+    href: node-not-ready-then-recovers.md
+
+- name: Cannot connect to application hosted on AKS cluster
+  items:
+  - name: General troubleshooting
+    href: connection-issues-application-hosted-aks-cluster.md
+  - name: Custom NSG blocks traffic
+    href: custom-nsg-blocks-traffic.md
+  - name: Get and analyze HTTP response codes
+    href: get-and-analyze-http-response-codes.md
+  - name: Intermittent timeouts or server issues
+    href: intermittent-timeouts-or-server-issue.md
+
+- name: Cannot connect to AKS cluster
+  items:
+  - name: Basic troubleshooting
+    href: troubleshoot-cluster-connection-issues-api-server.md
+  - name: Client IP address can't access API server
+    href: client-ip-address-cannot-access-api-server.md
+  - name: Config file isn't available when connecting
+    href: config-file-is-not-available-when-connecting.md
+  - name: User can't get cluster resources
+    href: user-cannot-get-cluster-resources.md
 
 - name: Data collection guide
   items:
@@ -103,10 +110,16 @@
   - name: Capture TCP packets from pod
     href: packet-capture-pod-level.md
 
-- name: Troubleshoot performance issues
+- name: Troubleshoot AKS cluster performance issues
   items:
   - name: Identify high CPU consuming containers
     href: identify-high-cpu-consuming-containers-aks.md
 
+- name: Troubleshoot Storage related issues
+  items:
+  - name: Errors when mounting file share
+    href: fail-to-mount-azure-file-share.md
+
 - name: Errors when pulling images from ACR to AKS cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
+

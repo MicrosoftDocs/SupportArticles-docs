@@ -1,7 +1,7 @@
 ---
 title: Disk duplication of Windows installations
 description: Describes the SID and supported methods for cloning or duplicating a Windows installation.
-ms.date: 10/10/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -78,7 +78,7 @@ We support the following operating systems that are prepared by using the Syspre
 We do not provide support for computers that are set up by using SID-duplicating tools other than the System Preparation tool. For example, this includes the following:
 
 - [NewSID](/sysinternals/downloads/newsid)
-- [GhostWalker](http://service1.symantec.com/support/on-technology.nsf/docid/1999050308324125)
+- GhostWalker
 
 Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft does not guarantee the accuracy of this third-party contact information.
 

@@ -25,3 +25,5 @@ This is a known issue on the Azure portal and Microsoft is working to address it
 ## Resolution
 
 Microsoft is aware of the issue and is working to address it.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

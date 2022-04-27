@@ -38,3 +38,5 @@ This error is caused when the operating system (OS) is unable to complete the [S
 > If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 To fix this issue, follow the [Azure guidance on preparing/capturing an image](/azure/virtual-machines/windows/upload-generalized-managed) and prepare a new generalized image.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

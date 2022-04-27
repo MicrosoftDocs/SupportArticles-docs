@@ -16,6 +16,7 @@ ms.author: genli
 ---
 
 # Common errors within the Azure Serial Console
+
 There are a set of known errors within the Azure Serial Console. This is a list of those errors and mitigation steps for them.
 
 ## Common errors
@@ -38,5 +39,8 @@ The serial console connection to the VM encountered an error: 'Forbidden'(Subscr
 Azure Serial Console requests result in the error “Sorry, the serial console was unable to connect to the VM because the service did not respond in a timely manner.” | In rare circumstances, communication failure may prevent the Azure node from properly applying boot diagnostics configuration. [Reapplying the virtual machine state](vm-stuck-in-failed-state.md#resolution) in the Azure portal may resolve this issue.
 
 ## Next steps
+
 * Learn more about the [Azure Serial Console for Linux VMs](./serial-console-linux.md)
 * Learn more about the [Azure Serial Console for Windows VMs](./serial-console-windows.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
