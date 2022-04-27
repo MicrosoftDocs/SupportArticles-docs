@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides steps to activate AI Builder actions.
 
-_Applies to:_ &nbsp; Other
+_Applies to:_ &nbsp; Power Automate and Power Apps
 
 ## Symptoms
 
