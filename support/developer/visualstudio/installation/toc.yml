@@ -2,23 +2,23 @@
   href: ./error-1606-psf-folder.md
 - name: Visual Studio 2015 is stuck while installing KB2999226
   href: ./stuck-installing-visual-studio-2015.md
-- name: Error "This update requires Visual Studio 2015 Update 3 to be installed"
+- name: Error - This update requires Visual Studio 2015 Update 3 to be installed
   href: ./error-visual-studio-2015-update-3-to-be-installed.md
-- name: Can't find Visual Studio 2015 on the Start menu
+- name: Error - Can't find Visual Studio 2015 on the Start menu
   href: ./not-finding-start-menu-visual-studio.md
-- name: Error "Microsoft Visual Studio Enterprise is required"
+- name: Error - Microsoft Visual Studio Enterprise is required
   href: ./vs-enterprise-required-error.md
-- name: Error "Microsoft Visual Studio Professional required"
+- name: Error - Microsoft Visual Studio Professional is required
   href: ./ms-visual-studio-not-installed.md
-- name: Error "No Internet connection detected on this machine"
+- name: Error - No Internet connection detected on this machine
   href: ./error-no-internet-connection.md
-- name: Error "There is not enough space on the disk"
+- name: Error - There is not enough space on the disk
   href: ./error-not-enough-space-on-disk.md
-- name: Error "Please restart the computer and run setup again"
+- name: Error - Please restart the computer and run setup again
   href: ./error-restart-computer-and-run-setup.md
 - name: Error message for installing an additional language pack
   href: ./error-installing-additional-language-pack.md
-- name: Error "Product version that is being installed is old"
+- name: Error - Product version that is being installed is old
   href: ./error-product-version-is-old.md
 - name: The trial will expire after you sign in to the IDE
   href: ./sign-into-ide-trial-expire.md
@@ -74,4 +74,5 @@
   href: ./known-issues-visual-studio-2013.md
 - name: Warnings about an untrusted certificate
   href: ./warnings-untrusted-certificate.md
+
 
