@@ -1,14 +1,14 @@
 ---
 title: Wave isn't eligible for cleanup
 description: Wave isn't eligible for cleanup
-author: perlynne
+author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.search.form: WHSWaveTable_WHSWaveProcessingDataCleanup
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
 ---

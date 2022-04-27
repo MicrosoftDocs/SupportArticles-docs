@@ -1,14 +1,14 @@
 ---
 title: Quantity exceeds under-delivery percentage during packing slip generation
 description: When you generate a packing slip, the outbound load contains a quantity that exceeds the under-delivery percentage.
-author: GalynaFedorova
+author: Mirzaab
 ms.date: 5/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadTable_WHSSalesPackingSlipPost,WHSLoadPlanningListPage_WHSSalesPackingSlipPost,WHSLoadPlanningWorkbench_WHSSalesPackingSlipPost
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: kamaybac
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.18
 ---

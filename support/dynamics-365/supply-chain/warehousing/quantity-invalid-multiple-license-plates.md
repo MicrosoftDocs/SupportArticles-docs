@@ -1,14 +1,14 @@
 ---
 title: Quantity not valid for picking work with multiple LPs 
 description: When there is picking work with multiple license plates in one location, the quantity is not valid for unit ea. Verify that the following fields are correct. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

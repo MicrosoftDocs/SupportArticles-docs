@@ -1,14 +1,14 @@
 ---
 title: Product is on hold for transactions
 description: After you firm planning orders, you receive an error message that states that an item is on hold for transactions.
-author: ankubik
+author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
 ms.search.form: ReqTransPo
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: ankubik
+ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
 ---

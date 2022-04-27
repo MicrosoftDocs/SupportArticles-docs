@@ -1,14 +1,14 @@
 --- 
 title: Integers incorrectly rounded in product configuration model calculations 
 description: Integer results aren't always rounded correctly when product configuration models are calculated. Fix the issue with an added decimal attribute and calculation. 
-author: SmithaNataraj 
+author: t-benebo 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: benebotg 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

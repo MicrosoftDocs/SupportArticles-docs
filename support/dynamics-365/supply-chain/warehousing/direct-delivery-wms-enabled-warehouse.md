@@ -1,14 +1,14 @@
 --- 
 title: Direct delivery unable to process for WMS-enabled warehouse 
 description: If the warehouse has WMS enabled, it doesn't support direct delivery. To use direct delivery, you must select a non-WMS item and warehouse. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

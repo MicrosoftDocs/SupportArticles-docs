@@ -1,14 +1,14 @@
 ---
 title: You can't delete a released product
 description: You can delete a released product and all its variants only if the released product doesn't have any related transactions.
-author: SmithaNataraj
+author: t-benebo
 ms.date: 06/11/2021
 ms.topic: troubleshooting
 # ms.search.form:  [Operations AOT form name to tie this topic to]
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: smnatara
+ms.author: benebotg
 ms.search.validFrom: 2021-06-11
 ms.dyn365.ops.version: 10.0.18
 ---

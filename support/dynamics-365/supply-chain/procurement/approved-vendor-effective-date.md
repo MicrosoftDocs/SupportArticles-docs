@@ -1,20 +1,19 @@
 ---
 title: Can't change the effective date for an approved vendor
 description: The Approved vendor list by product entity doesn't allow the effective date to be changed
-author: kamaybac
+author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: yanansong
+ms.author: gfedorova
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---
 
 # Can't change the effective date for an approved vendor
-
 
 ## Symptoms
 

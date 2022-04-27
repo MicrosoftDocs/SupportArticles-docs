@@ -1,14 +1,14 @@
 ---
 title: Can't update a load line because the released quantity would be negative
 description: This issue occurs when updating or deleting a load line would cause a negative released quantity.
-author: GalynaFedorova
+author: Mirzaab
 ms.date: 6/30/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadPlanningListPage_WHSLoadLineUnShipQty,WHSLoadTable_WHSLoadLineUnShipQty,WHSLoadPlanningWorkbench_WHSLoadLineUnShipQty,WHSShipmentDetails_WHSLoadLineUnShipQty,WHSLoadPlanningListPage_DeleteButtonLoadLine,WHSLoadTable_DeleteButtonLoadLine,WHSLoadPlanningWorkbench_DeleteButtonLoadLine,WHSShipmentDetails_DeleteButtonShipment
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: kamaybac
+ms.author: mirzaab
 ms.search.validFrom: 2021-06-30
 ms.dyn365.ops.version: 10.0.21
 ---

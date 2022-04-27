@@ -1,14 +1,14 @@
 --- 
 title: In-progress jobs end when reporting partial quantity on last job 
 description: When using the job card device to report partial quantity on the last job in a production order, all previous jobs that have status of In progress are ended. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

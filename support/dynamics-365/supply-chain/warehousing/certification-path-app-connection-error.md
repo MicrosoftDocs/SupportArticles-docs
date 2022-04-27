@@ -1,14 +1,14 @@
 --- 
 title: Certification path error when setting up app connection 
 description: If the Warehouse Management app shows the error "Trust anchor for certification path not found," use this page to resolve or work around the issue. 
-author: ivanv-microsoft 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 ms.search.form: WMA
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: ivanv 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

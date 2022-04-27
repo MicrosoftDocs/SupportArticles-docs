@@ -1,14 +1,14 @@
 ---
 title: Item RM can't be reserved when production order is released 
 description: 'When releasing a production order, you may get the error: "Item RM could not be fully reserved." Ensure full quantity is available or reserve items manually.'
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

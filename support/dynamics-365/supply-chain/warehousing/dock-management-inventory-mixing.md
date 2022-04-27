@@ -1,14 +1,14 @@
 --- 
 title: Mixed inventory types when using dock management profile 
 description: For a dock management profile to effectively manage the mixing of inventory, a work header break must be set up first. This page explains how to do it. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

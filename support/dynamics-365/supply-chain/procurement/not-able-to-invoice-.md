@@ -1,14 +1,14 @@
 ---
 title: You can't invoice a customer-facing sales order
 description: You can no longer invoice the original sales order and the original direct delivery purchase order after you enable the Post invoice automatically option.
-author: niwang
+author: GalynaFedorova
 ms.date: 4/11/2021
 ms.topic: troubleshooting
 ms.search.form: SalesEditLines
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: smnatara
+ms.author: gfedorova
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
 ---

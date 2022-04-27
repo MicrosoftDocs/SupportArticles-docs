@@ -1,14 +1,14 @@
 ---
 title: Vendor isn't specified when planned orders are firmed
 description: When you try to firm planned orders, you receive an error message that states that no vendor is specified.
-author: ankubik
+author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
 ms.search.form: ReqTrans
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: ankubik
+ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
 ---

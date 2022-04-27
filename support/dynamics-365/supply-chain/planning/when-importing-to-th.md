@@ -1,14 +1,14 @@
 ---
 title: You're prompted to save item coverage settings even though you made no changes
 description: You're prompted to save item coverage settings even though you made no changes.
-author: ChristianRytt
+author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting
 ms.search.form: DataManagementWorkspace_
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: angarmas
+ms.author: benebotg
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
 ---

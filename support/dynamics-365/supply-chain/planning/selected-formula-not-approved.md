@@ -1,14 +1,14 @@
 ---
 title: Selected formula number isn't approved for a batch order
 description: When you try to firm a planned order, you receive an error message that states that the selected formula number isn't approved for a batch order.
-author: ankubik
+author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
 ms.search.form: ReqTransPo
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: ankubik
+ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
 ---

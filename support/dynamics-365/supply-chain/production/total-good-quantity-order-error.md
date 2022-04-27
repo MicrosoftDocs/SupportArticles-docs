@@ -1,14 +1,14 @@
 --- 
 title: Total good quantity error when trying to end an order 
 description: When trying to end a production order and report as finished, you may receive a total good quantity error. This page explains why and how to fix the issue. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

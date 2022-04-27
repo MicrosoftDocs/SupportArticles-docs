@@ -1,14 +1,14 @@
 --- 
 title: Can't set service item quantity on a sales quotation line 
 description: When working with sales quotations, you can't set a sales quantity for products that are service items, because there are no physical items to be counted. 
-author: SmithaNataraj 
+author: Henrikan 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 ms.search.form: SalesQuotationTable, SalesQuotationTableListPage
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global
-ms.author: smnatara 
+ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

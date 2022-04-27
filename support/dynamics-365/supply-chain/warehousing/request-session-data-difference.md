@@ -1,14 +1,14 @@
 ---
 title: Unexpected difference between request and session data during testing
 description: An unexpected difference occurs between request and session data in warehouse app task validation results.
-author: mamuszal
+author: Mirzaab
 ms.date: 03/11/2022
 ms.topic: troubleshooting
 ms.search.form: WHSValidatorRunInstance_executeRun
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: mamuszal
+ms.author: mirzaab
 ms.search.validFrom: 2022-03-11
 ms.dyn365.ops.version: 10.0.18
 ---

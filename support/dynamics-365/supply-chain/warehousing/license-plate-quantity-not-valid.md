@@ -1,14 +1,14 @@
 --- 
 title: Quantity is not valid when registering inbound orders 
 description: "If the quantity that's allocated for a license plate exceeds the quantity that must still be received, you'll receive the error: 'The quantity is not valid.'"
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

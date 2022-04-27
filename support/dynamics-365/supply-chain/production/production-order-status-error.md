@@ -1,14 +1,14 @@
 ---
 title: Error when changing status from Reported as finished to End 
 description: You may receive an error when changing the status of a production order from Reported as finished to End. This page explains how to mitigate the issue. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

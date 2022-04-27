@@ -1,14 +1,14 @@
 --- 
 title: Can't release load for partial quantity with batch-above hierarchy 
 description: When using an item with the batch-above reservation hierarchy, load lines must specify dimensions above the location in order for inventory to be allocated. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

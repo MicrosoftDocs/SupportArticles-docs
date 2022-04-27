@@ -1,14 +1,14 @@
 ---
 title: Can't cancel packing slip after it's posted from an order
 description: When picking and shipping processes are enabled for WMS, you can't cancel a packing slip after it's posted from a sales order. This page offers a workaround.
-author: perlynne
+author: Mirzaab
 ms.date: 06/24/2021
 ms.topic: troubleshooting
 # ms.search.form:
 audience: Application User
 ms.reviewer: kamaybac 
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2021-06-24
 ms.dyn365.ops.version: 10.0.20
 ---

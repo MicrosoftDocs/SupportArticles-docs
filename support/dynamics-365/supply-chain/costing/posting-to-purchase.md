@@ -1,14 +1,14 @@
 ---
 title: Purchase accrual that has a zero amount is posted for a zero-value product receipt
 description: When a product receipt that has zero value is posted, the system creates a posting to purchase accrual where the amount is 0 (zero).
-author: niwang
+author: JennySong-SH
 ms.date: 4/11/2021
 ms.topic: troubleshooting
 ms.search.form: LedgerTransVoucher
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: smnatara
+ms.author: yanansong
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
 ---

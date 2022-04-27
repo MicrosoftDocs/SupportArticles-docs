@@ -1,14 +1,14 @@
 --- 
 title: Bundle item not supported in an intercompany process  
 description: The bundle item isn't available for purchase. The sales order only buys the components of the bundle item, not the bundle item itself.
-author: SmithaNataraj 
+author: Henrikan 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 ms.search.form: SalesTable, SalesTableListPage, SalesTableListPage_SalesCancelOrder
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

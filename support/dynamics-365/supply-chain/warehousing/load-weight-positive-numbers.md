@@ -1,14 +1,14 @@
 --- 
 title: Load weight can only contain positive numbers 
 description: When processing work between locations, you may receive an error regarding load weight and your update being canceled. Follow these steps to fix the issue. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

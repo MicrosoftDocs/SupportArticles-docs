@@ -1,14 +1,14 @@
 ---
 title: Can't insert active version of BOM and route numbers  
 description: If the default site and warehouse are already defined for a selected product, you won't be prompted to insert the active version of BOM and route numbers. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

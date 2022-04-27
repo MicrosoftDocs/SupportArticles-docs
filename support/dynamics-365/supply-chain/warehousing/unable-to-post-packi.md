@@ -1,14 +1,14 @@
 ---
 title: Can't post packing slip for a stopped a sales order line
 description: You are unable to post packing slip for a stopped a sales order line
-author: smithanataraj
+author: Mirzaab
 ms.date: 03/07/2022
 ms.topic: article
 ms.search.form: WHSLoadTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: mfp
+ms.author: mirzaab
 ms.search.validFrom: 2022-03-07
 ms.dyn365.ops.version: 10.0.26
 ---

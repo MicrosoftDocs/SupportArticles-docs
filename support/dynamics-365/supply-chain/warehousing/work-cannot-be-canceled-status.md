@@ -1,14 +1,14 @@
 ---
 title: Work can't be canceled because of its status
 description: Work can't be canceled because of its status
-author: perlynne
+author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.search.form: WHSWorkTable_WHSWorkCancel, WHSWorkTableListPage_WHSWorkCancel
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
 ---

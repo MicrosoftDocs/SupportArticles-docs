@@ -1,14 +1,14 @@
 ---
 title: Error "Object reference not set" occurs during purchase order confirmation
 description: Error "Object reference not set" occurs during purchase order confirmation
-author: kamaybac
+author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: yanansong
+ms.author: gfedorova
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---

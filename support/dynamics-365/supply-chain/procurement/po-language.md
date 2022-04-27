@@ -1,20 +1,19 @@
 ---
 title: Purchase orders don't reflect the language settings of the legal entity
 description: The product name on a purchase order is shown in the system language instead of the language set for the legal entity where the purchase order was created
-author: kamaybac
+author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: yanansong
+ms.author: gfedorova
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---
 
 # Purchase orders don't reflect the language settings of the legal entity
-
 
 ## Symptoms
 

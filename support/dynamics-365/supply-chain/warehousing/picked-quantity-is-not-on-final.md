@@ -1,14 +1,14 @@
 ---
 title: You can't confirm a shipment because items haven't been picked
 description: You can't confirm a shipment because items haven't been picked
-author: perlynne
+author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadTable_WHSShipConfirm,WHSLoadPlanningListPage_WHSShipConfirm,WHSLoadPlanningWorkbench_WHSShipConfirm,WHSTransportLoad_WHSShipConfirm,WHSShipPlanningListPage_WHSShipConfirm,WHSShipmentDetails_WHSShipConfirm,WHSWorkTable_WHSShipConfirm,WHSWorkTableListPage_WHSShipConfirm,Dialog_WHSOutboundShipConfirmController_WHSOutboundShipConfirm
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: lbc
+ms.author: mirzaab
 ms.search.validFrom: 2021-04-21
 ms.dyn365.ops.version: 10.0.18
 ---

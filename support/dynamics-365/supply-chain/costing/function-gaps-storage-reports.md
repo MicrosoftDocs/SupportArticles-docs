@@ -1,14 +1,14 @@
 ---
 title: Functional gaps between inventory value/aging reports and their storage versions
 description: Functional gaps between inventory value/aging reports and their storage versions
-author: AndersGirke
+author: JennySong-SH
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: InventAgingStorage, InventAgingStorageChart, InventAgingStorageDetails
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: aevengir
+ms.author: yanansong
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.15
 ---

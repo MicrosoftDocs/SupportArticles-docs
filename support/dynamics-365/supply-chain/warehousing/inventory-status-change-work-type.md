@@ -1,14 +1,14 @@
 --- 
 title: Can't select Inventory status change as Work type 
 description: You can't create a work template line for Inventory status change because the work type is used only by system processes. Select a different work type. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

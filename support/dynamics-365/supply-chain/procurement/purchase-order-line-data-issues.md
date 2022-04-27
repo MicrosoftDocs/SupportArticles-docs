@@ -1,14 +1,14 @@
 --- 
 title: Purchase order line data discrepancies 
 description: You see data discrepancies or data corruption on your purchase order lines.
-author: SmithaNataraj 
+author: GalynaFedorova 
 ms.date: 12/07/2021 
 ms.topic: troubleshooting 
 ms.search.form: PurchLineManualCorrection, PurchTable, PurchLine, InventTrans
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: gfedorova 
 ms.search.validFrom: 2021-12-07
 ms.dyn365.ops.version: 10.0.24 
 --- 
@@ -22,14 +22,14 @@ When you inspect the lines of a purchase order, you notice one or more of the fo
 - There is corruption in a purchase order line or header status.
 - You can't invoice a purchase order because, for example, you receive one or more of the following error messages:
 
-    - "Stopped (error): Transaction has already been posted."
-    - "The quantity cannot be invoiced because inventory transactions with a status of Received are insufficient."
-    - "Insufficient inventory transactions with status "Purchased" for item %0 quantity %1."
+  - "Stopped (error): Transaction has already been posted."
+  - "The quantity cannot be invoiced because inventory transactions with a status of Received are insufficient."
+  - "Insufficient inventory transactions with status "Purchased" for item %0 quantity %1."
 
 - You can't finalize or close a purchase order because of, for example, one of the following issues:
 
-    - The **Finalize** button is unavailable.
-    - You can't cancel the ordered quantity of a purchase order line for a purchase order that is in a confirmed and received state.
+  - The **Finalize** button is unavailable.
+  - You can't cancel the ordered quantity of a purchase order line for a purchase order that is in a confirmed and received state.
 
 ## Cause
 

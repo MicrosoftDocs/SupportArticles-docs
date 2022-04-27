@@ -1,14 +1,14 @@
 ---
 title: Inventory aging report discrepancies
 description: Inventory aging report discrepancies
-author: AndersGirke
+author: JennySong-SH
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: InventAgingStorage, InventAgingStorageChart, InventAgingStorageDetails, InventValueProcess, InventValueReportSetup, InventClosing
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: aevengir
+ms.author: yanansong
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.15
 ---

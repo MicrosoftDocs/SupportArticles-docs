@@ -1,14 +1,14 @@
 ---
 title: Transactions can be posted to a suspended ledger account
 description: If a product receipt is canceled, the system allows transactions to be posted to suspended ledger accounts, even though the main accounts are suspended
-author: kamaybac
+author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: yanansong
+ms.author: gfedorova
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---

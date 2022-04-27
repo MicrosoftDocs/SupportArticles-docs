@@ -1,14 +1,14 @@
 --- 
 title: Tax information not updated if sales order location is changed 
 description: If the site, warehouse, or delivery address is changed on a sales order header, the case tax information isn't updated on the lines. You must do this manually. 
-author: SmithaNataraj 
+author: Henrikan 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

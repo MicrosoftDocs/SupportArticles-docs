@@ -1,14 +1,14 @@
 ---
 title: Decimal rounding of the physical updating quantity is incorrect
 description: When you generate a packing slip, the outbound load contains a quantity that doesn't match the decimal precision that is defined in the unit.
-author: GalynaFedorova
+author: Mirzaab
 ms.date: 5/31/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLoadPlanningListPage_WHSSalesPackingSlipPost, WHSLoadTable_WHSSalesPackingSlipPost
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: kamaybac
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.18
 ---

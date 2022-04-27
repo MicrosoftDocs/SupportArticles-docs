@@ -1,14 +1,14 @@
 --- 
 title: Backflush costing calculation error during inventory closing 
 description: In earlier releases, you may have received a Backflush costing calculation error during inventory closing. This issue has been fixed. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

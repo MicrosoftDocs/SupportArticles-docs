@@ -1,14 +1,14 @@
 --- 
 title: Order status remains Partially released after it's invoiced 
 description: In some cases, the status of a sales order remains Partially released, even after the order has been invoiced. This page explains why and a possible workaround. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

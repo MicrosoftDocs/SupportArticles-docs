@@ -1,14 +1,14 @@
 --- 
 title: One of the lines is already on a load 
 description: This page explains why you may have received the error, "One of the lines is already on a load. Unable to release to warehouse," and how to resolve the issue. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 ---

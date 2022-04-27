@@ -1,14 +1,14 @@
 --- 
 title: Invalid license plate or location error in mobile app 
 description: When you scan a license plate ID or location, you may receive an error that it's invalid. Make sure that the license plate ID isn't reserved by something else. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

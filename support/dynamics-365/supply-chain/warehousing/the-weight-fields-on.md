@@ -1,14 +1,14 @@
 ---
 title: The weight fields on load lines don't match the weight fields on the load
 description: The weight fields on load lines don't match the weight fields on the load
-author: perlynne
+author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.search.form: WHSShipmentDetails_WHSShipConfirm
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
 ---

@@ -1,14 +1,14 @@
 ---
 title: Master planning is scheduling more than the available capacity
 description: Master planning doesn't seem to respect capacity limitations and is scheduling more than the available capacity
-author: ChristianRytt
+author: t-benebo
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: 
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: crytt
+ms.author: benebotg
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---

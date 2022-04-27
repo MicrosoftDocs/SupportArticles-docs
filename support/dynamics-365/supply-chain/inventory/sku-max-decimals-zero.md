@@ -15,7 +15,6 @@ ms.dyn365.ops.version: 10.0.16
 
 # Maximum number of decimals for the stock keeping unit is 0
 
-
 ## Symptoms
 
 When you try to post an inventory transaction or an inventory reservation, you receive the following error message:

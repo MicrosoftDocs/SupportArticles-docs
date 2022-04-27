@@ -1,14 +1,14 @@
 ---
 title: You receive an error when running the built-in master planning engine
 description: When you run the deprecated built-in master planning engine, you receive an error message.
-author: ankubik
+author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
 ms.search.form: Dialog_ReqCalcScheduleItemTable
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: ankubik
+ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
 ---

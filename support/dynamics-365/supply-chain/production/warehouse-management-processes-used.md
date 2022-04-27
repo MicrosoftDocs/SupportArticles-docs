@@ -1,14 +1,14 @@
 --- 
 title: Warehouse management processes are currently being used 
 description: When reserving or releasing work, you may get a message that warehouse management processes are currently being used. Fix the issue with one of these steps. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

@@ -1,14 +1,14 @@
 --- 
 title: Production orders not shown on the Marking page 
 description: Some production orders aren't shown on the Marking page. This topic explains the three product configurations that aren't available for marking. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

@@ -1,14 +1,14 @@
 ---
 title: Update conflict when inventory valuation method is standard cost or moving average
 description: An update conflict occurs when the inventory valuation method is either standard cost or moving average
-author: AndersGirke
+author: JennySong-SH
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: InventAgingStorage, InventAgingStorageChart, InventAgingStorageDetails, InventValueProcess, InventValueReportSetup, InventClosing
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: aevengir
+ms.author: yanansong
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.15
 ---

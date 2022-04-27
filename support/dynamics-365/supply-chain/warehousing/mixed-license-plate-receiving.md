@@ -1,14 +1,14 @@
 --- 
 title: Mixed license plate receiving doesn't work for all disposition codes 
 description: When the Action field for a disposition code is set to Credit or Scrap, you can use only the Mixed license plate receiving menu item to process returned items. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 

@@ -1,14 +1,14 @@
 --- 
 title: Can't cancel intercompany purchase order linked to sales order  
 description: In Microsoft Dynamics 365 Supply Chain Management versions 10.0.13 and later, you can now cancel an intercompany purchase order that's linked to a sales order. 
-author: SmithaNataraj 
+author: Henrikan 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 ms.search.form: SalesTable, SalesTableListPage, SalesTableListPage_SalesCancelOrder
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: henrikan 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

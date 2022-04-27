@@ -1,14 +1,14 @@
 ---
 title: Item can't have a BOM or formula
 description: When you try to firm an order, you receive an error message during item validation. It states that the item can't have a bill of materials (BOM) or formula.
-author: ankubik
+author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
 ms.search.form: ReqTransPO
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: ankubik
+ms.author: benebotg
 ms.search.validFrom: 2021-06-10
 ms.dyn365.ops.version: 10.0.20
 ---

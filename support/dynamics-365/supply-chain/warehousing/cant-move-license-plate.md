@@ -1,14 +1,14 @@
 --- 
 title: Can't move license plate if Blank issue and Blank receipt allowed 
 description: You can't move a license plate if the serial number has Blank issue and Blank receipt allowed. This will be fixed by making the serial number field optional. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

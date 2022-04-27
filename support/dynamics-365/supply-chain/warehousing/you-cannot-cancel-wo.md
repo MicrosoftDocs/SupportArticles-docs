@@ -1,14 +1,14 @@
 ---
 title: You can't cancel work that is on a user
 description: You can't cancel work that is on a user
-author: perlynne
+author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
 ms.search.form: WHSWorkTable_WHSWorkCancel, WHSWorkTableListPage_WHSWorkCancel
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2021-05-15
 ms.dyn365.ops.version: 10.0.18
 ---

@@ -1,14 +1,14 @@
 --- 
 title: BOM consumptionCost value error when trying to end an order
 description: When trying to end a production order, you may receive an error message that says the BOM consumptionCost value must be negative. This issue has been fixed. 
-author: SmithaNataraj 
+author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: johanho 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

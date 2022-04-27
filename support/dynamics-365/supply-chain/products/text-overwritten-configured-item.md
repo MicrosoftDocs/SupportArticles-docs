@@ -1,14 +1,14 @@
 --- 
 title: Text overwritten when item is configured on sales order line 
 description: When a product is configured on a sales order line, modified text is overwritten with standard text. Change the text after you configure the line, not before. 
-author: SmithaNataraj 
+author: t-benebo 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form: 
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: smnatara 
+ms.author: benebotg 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

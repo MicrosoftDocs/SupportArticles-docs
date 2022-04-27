@@ -1,14 +1,14 @@
 ---
 title: The Post to charge account in ledger setting isn't turned on
 description: This issue occurs when a purchase order is invoiced, if the "Post to charge account in ledger" option is enabled on the "Invoice" tab of the "Accounts payable parameters" page
-author: kamaybac
+author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
 ms.search.form: PurchTable, PurchTablePart
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: yanansong
+ms.author: gfedorova
 ms.search.validFrom: 2021-05-31
 ms.dyn365.ops.version: 10.0.13
 ---

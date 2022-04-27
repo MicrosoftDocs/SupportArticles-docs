@@ -1,14 +1,14 @@
 ---
 title: The quantity can't be reduced when a sales order is canceled
 description: The quantity can't be reduced when a sales order is canceled.
-author: hja-ms
+author: Henrikan
 ms.date: 5/17/2021
 ms.topic: troubleshooting
 ms.search.form: SalesTable_SalesCancelOrder, SalesTableListPage_SalesCancelOrder
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: hja
+ms.author: henrikan
 ms.search.validFrom: 2021-05-17
 ms.dyn365.ops.version: 10.0.18
 ---

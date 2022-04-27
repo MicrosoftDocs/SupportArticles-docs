@@ -1,14 +1,14 @@
 ---
 title: Processing issues occur after a scale unit warehouse workload is installed
 description: This topic describes issues that can occur soon after a scale unit warehouse workload is installed, and gives advice for fixing them.
-author: perlynne
+author: Mirzaab
 ms.date: 1/13/2022
 ms.topic: troubleshooting
 ms.search.form: WHSLoadPlanningWorkbench, WHSOutboundLoadPlanningWorkbench
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: perlynne
+ms.author: mirzaab
 ms.search.validFrom: 2022-01-13
 ms.dyn365.ops.version: 10.0.25
 ---
@@ -24,9 +24,9 @@ This topic describes issues that can occur soon after a scale unit warehouse wor
 When you release a load from the **Load planning workbench** or **Outbound load planning workbench** page, you receive an error message that has the following form:
 
 > An exception was caught when posting the load %1, load could not be released.
-> 
+>
 > UPDATE WHSSHIPMENTTABLE SET ...
-> 
+>
 > Cannot edit a record in Shipments (WHSShipmentTable). Shipment ID: ...
 
 Here is an actual example that includes sample data:

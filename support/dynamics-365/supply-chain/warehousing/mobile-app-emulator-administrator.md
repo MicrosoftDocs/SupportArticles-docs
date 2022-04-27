@@ -1,14 +1,14 @@
 --- 
 title: Only administrator can use mobile device app emulator 
 description: When setting up warehouses in Supply Chain Management, only an administrator can work with the app emulator. For testing, use the mobile app itself.
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 

@@ -1,14 +1,14 @@
 ---
 title: Location profile disallows negative inventory, but negative on-hand inventory is permitted
 description: The Allow negative inventory option for the location profile is set to No, but the system still allows negative on-hand inventory.
-author: niwang
+author: Mirzaab
 ms.date: 4/11/2021
 ms.topic: troubleshooting
 ms.search.form: WHSLocationProfile
 audience: Application User
 ms.reviewer: kamaybac
 ms.search.region: Global
-ms.author: shawan
+ms.author: mirzaab
 ms.search.validFrom: 2021-04-11
 ms.dyn365.ops.version: 10.0.19
 ---

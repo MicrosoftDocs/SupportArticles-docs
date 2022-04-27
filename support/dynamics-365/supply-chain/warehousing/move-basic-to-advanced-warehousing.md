@@ -1,14 +1,14 @@
 --- 
 title: How to move from basic warehousing to advanced warehousing 
 description: If you experience issues when trying to move from basic to advanced warehousing, this page guides you to documentation for the approved process. 
-author: perlynne 
+author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
 # ms.search.form:  
 audience: Application User 
 ms.reviewer: kamaybac 
 ms.search.region: Global 
-ms.author: perlynne 
+ms.author: mirzaab 
 ms.search.validFrom: 2021-06-24 
 ms.dyn365.ops.version: 10.0.20 
 --- 
