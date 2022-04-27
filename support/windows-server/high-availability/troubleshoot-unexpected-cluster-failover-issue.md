@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot unexpected cluster failover
+title: Guidance of troubleshooting unexpected cluster failover
 description: Provides guidance to find the root cause of an unexpected failover in a Windows-based failover cluster.
 ms.date: 04/24/2022
 author: kaushika-msft
@@ -13,7 +13,7 @@ ms.reviewer: kaushika
 ms.custom: sap:root-cause-of-an-unexpected-failover, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
-# Troubleshoot unexpected cluster failover in Windows
+# Unexpected cluster failover troubleshooting guidance
 
 Cluster won't trigger a failover unless there's an actual issue with one of the cluster's components (software or hardware). It will perform a basic recovery step and the affected resource will fail over to another node because of the following possible causes:
 
