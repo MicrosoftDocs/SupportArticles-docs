@@ -204,7 +204,7 @@ In general, the following issues are the high-level reasons why SQL Server queri
 
   - A SAN misconfiguration (switch, cables, HBA, storage)
 
-  - Exceeded I/O capacity (unbalanced throughout on entire SAN network, not just back-end storage)
+  - Exceeded I/O capacity (unbalanced throughout an entire SAN network, not just back-end storage)
 
   - Drivers or firmware issues
 
