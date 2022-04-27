@@ -24,3 +24,4 @@ Install the KB update manually, and then restart the Visual Studio installation:
    > [!NOTE]
    > Check the options carefully to make sure that the KB update is appropriate for your system.
 3. After the KB update is installed, restart the Visual Studio installation.
+
