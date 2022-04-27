@@ -7,7 +7,7 @@ ms.author: jasonchlus
 ms.reviewer: terry.g.lee
 ---
 
-# This update requires Visual Studio 2015 Update 3 to be installed error when installing updates
+# Error-This update requires Visual Studio 2015 Update 3 to be installed
 
 This article helps you resolve the "This update requires Visual Studio 2015 Update 3 to be installed" error that occurs if a required cumulative servicing and performance update (KB3165756) to Visual Studio 2015 Update 3 is missing.
 
