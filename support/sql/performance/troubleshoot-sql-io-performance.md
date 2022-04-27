@@ -36,7 +36,7 @@ The following flow chart describes the methodology Microsoft CSS uses to approac
 
 A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
-### Step 1. Is SQL Server reporting slow I/O?
+### Step 1: Is SQL Server reporting slow I/O?
 
 SQL Server may report I/O latency in several ways:
 
@@ -107,7 +107,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
 
-### Step 2. Do performance counters indicate I/O latency?
+### Step 2: Do performance counters indicate I/O latency?
 
 If SQL Server reports I/O latency, refer to OS counters. You can determine if there's an I/O problem by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Change to a specific drive volume (for example, "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
@@ -167,7 +167,7 @@ For more information, see [How to choose antivirus software to run on computers 
 
 Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
 
-### Step 3. Is the I/O subsystem overwhelmed beyond capacity?
+### Step 3: Is the I/O subsystem overwhelmed beyond capacity?
 
 If SQL Server and the OS indicate that the I/O subsystem is slow, then check if the cause is the system being overwhelmed beyond capacity. You can check capacity by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor for the expected throughput specifications for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
@@ -189,7 +189,7 @@ $_.CounterSamples | ForEach-Object       {
  }
 ```
 
-### Step 4. Is SQL Server driving the heavy I/O activity?
+### Step 4: Is SQL Server driving the heavy I/O activity?
 
 If the I/O subsystem is overwhelmed beyond capacity, find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
@@ -242,7 +242,7 @@ Occurs when a task is waiting for a transaction log flush to complete. A flush o
 
 Common reasons for long waits on `WRITELOG` are:
 
-- **Transaction log disk latency**: It's the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing data and log files on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
+- **Transaction log disk latency**: This is the most common cause of `WRITELOG` waits. Generally, the recommendation is to keep the data and log files on separate volumes. Transaction log writes are sequential writes while reading or writing data from a data file is random. Mixing data and log files on one drive volume (especially conventional spinning disk drives) will cause excessive disk head movement.
 
 - **Too many VLFs**: Too many virtual log files (VLFs) can cause `WRITELOG` waits. Too many VLFs can cause other types of issues, such as long recovery.
 
