@@ -17,6 +17,7 @@ When you try to install Microsoft Visual Studio, you receive the following error
 
 > No Internet connection detected on this machine. Please connect to the Internet and click Retry. Clicking Continue without an Internet connection may prevent installation of some optional features.
 
+
 ## Resolution
 
 Make sure that your computer has a connection to the internet when you run the installation. Also, make sure that you follow these [Visual Studio installation tips](/visualstudio.microsoft.com/vs/support/vs2015/need-installing-visual-studio) and that your computer meets the minimum [system requirements](/visualstudio/productinfo/vs2015-sysrequirements-vs). If you meet the requirements and follow the tips, but you still experience this error, verify that you have Internet Explorer 11 installed on your computer. This error can be resolved by installing the latest Internet Explorer version.
