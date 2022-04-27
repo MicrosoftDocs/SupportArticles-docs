@@ -1,5 +1,5 @@
 ---
-title: Guidance of troubleshooting unexpected cluster failover
+title: Guidance for troubleshooting unexpected cluster failover
 description: Provides guidance to find the root cause of an unexpected failover in a Windows-based failover cluster.
 ms.date: 04/24/2022
 author: kaushika-msft
@@ -15,7 +15,7 @@ ms.technology: windows-server-high-availability
 ---
 # Unexpected cluster failover troubleshooting guidance
 
-Cluster won't trigger a failover unless there's an actual issue with one of the cluster's components (software or hardware). It will perform a basic recovery step and the affected resource will fail over to another node because of the following possible causes:
+A cluster won't trigger a failover unless there's an actual issue with one of the cluster's components (software or hardware). It will perform a basic recovery step, and the affected resource will fail over to another node because of the following possible causes:
 
 - Resource failure
 
@@ -25,7 +25,7 @@ Cluster won't trigger a failover unless there's an actual issue with one of the 
 
 ## Troubleshooting checklist
 
-1. Identify the occurrence timestamp in the System Event Log. Then, search for events about the source *Microsoft-Windows-FailoverClustering* and check for [Event ID 1069, 1146 or 1230](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-how-failover-clustering-recovers-from-unresponsive/ba-p/371847).
+1. Identify the occurrence timestamp in the System Event Log. Then, search for events about the source *Microsoft-Windows-FailoverClustering* and check for [Event ID 1069, 1146, or 1230](https://techcommunity.microsoft.com/t5/failover-clustering/understanding-how-failover-clustering-recovers-from-unresponsive/ba-p/371847).
 
 2. Match the time zone of the System event log to the GMT time zone in the cluster log.
 
