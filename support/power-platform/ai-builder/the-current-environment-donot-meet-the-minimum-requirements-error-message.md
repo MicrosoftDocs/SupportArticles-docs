@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to an error message that occurs when the current environment doesn’t meet the minimum requirements.
 
-_Applies to:_ &nbsp; Other
+_Applies to:_ &nbsp; Power Automate and Power Apps
 
 ## Symptoms
 

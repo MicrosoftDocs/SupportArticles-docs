@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution to an error that the **Pages** parameter generates when saving a form processing flow.
 
-_Applies to:_ &nbsp; Power Automate and Power Apps
+_Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 

@@ -1,15 +1,15 @@
 ---
-title: TooManyRequests error in Power Automate
-description: Cause and resolution for a TooManyRequests error. 
+title: Too many requests error in Power Automate
+description: Cause and resolution for a 429-TooManyRequests error. 
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice:
 ---
 
-# TooManyRequests error in Power Automate
+# Too many requests error in Power Automate
 
-This article provides a solution when you receive a **TooManyRequests** error.
+This article provides a solution when you receive a *too many requests* error.
 
 _Applies to:_ &nbsp; Power Automate
 
