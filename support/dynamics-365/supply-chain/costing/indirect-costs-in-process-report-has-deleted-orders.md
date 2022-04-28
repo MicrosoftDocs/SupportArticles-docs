@@ -15,6 +15,8 @@ ms.dyn365.ops.version: 10.0.19
 
 # The Indirect costs in process report includes deleted production orders
 
+KB number: 4612748
+
 ## Symptoms
 
 The **Indirect costs in process** report presents information about production orders that were partially processed and later deleted.
