@@ -162,3 +162,8 @@ landingContent:
         links:
           - text: Identify high CPU consuming containers
             url: ./identify-high-cpu-consuming-containers-aks.md
+          - text: Identify memory saturation in AKS clusters
+            url: ./identify-memory-saturation-aks.md
+
+
+
