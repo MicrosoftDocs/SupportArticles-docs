@@ -145,9 +145,9 @@ You might see the following message in your Tomcat logs:
 
 To resolve the error, follow these steps:
 
-1. Remove the sqljdbc*.jar file from your *app/lib* folder.
+1. Remove the *sqljdbc\*.jar* file from your *app/lib* folder.
 2. If you're using the custom Tomcat or Azure Marketplace Tomcat web server, copy this .jar file to the Tomcat lib folder.
-3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the sqljdbc.* jar file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config* file:
+3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the *sqljdbc\*.jar* file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config* file:
 
     ```xml
     <httpPlatform>
