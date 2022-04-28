@@ -26,7 +26,7 @@ When you use [IntelliTrace](/visualstudio/debugger/intellitrace) to examine a lo
 
 ### Debug Managed Memory feature displays a blank page and an error message
 
-When you open a managed dump file that contains heap information, the summary page includes a **Debug Managed Memory** option. If Internet Explorer 10 or a later version isn't installed when you select this option, the document window that is opened is blank and you receive an error message. If issue occurs, you can safely ignore the error and close the document window.
+When you open a managed dump file that contains heap information, the summary page includes a **Debug Managed Memory** option. If Internet Explorer 10 or a later version isn't installed when you select this option, the document window that is opened is blank and you receive an error message. If this issue occurs, you can safely ignore the error and close the document window.
 
 ### Load Testing by using Team Foundation Service: Load Test Runner results aren't displayed as expected
 
