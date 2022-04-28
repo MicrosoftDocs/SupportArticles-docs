@@ -50,8 +50,8 @@ To capture Python application errors, follow these steps:
 2. On the **Settings** tab, select **Application settings**.
 3. Under **App settings**, enter the following key/value pair:
 
-    - Key : WSGI_LOG
-    - Value : *D:\home\site\wwwroot\logs.txt* (enter your choice of file name)
+    - Key: *WSGI_LOG*
+    - Value: *D:\home\site\wwwroot\logs.txt* (enter your choice of file name)
 
 You should now see errors in the *logs.txt* file in the *wwwroot* folder.
 
@@ -83,7 +83,7 @@ To change the version of the Node.js application, you can use one of the followi
   1. Moves content to the Azure web app.
   2. Creates a default deployment script, if there isn't one (*deploy.cmd*, *\.deployment* files) in the web app root folder.
   3. Runs a deployment script in which it creates an *iisnode.yml* file if you mention the Node.js version in the *package.json* file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
-  4. The iisnode.yml file has the following line of code:
+  4. The *iisnode.yml* file has the following line of code:
 
       ```yml
       nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
@@ -121,21 +121,21 @@ For Azure Marketplace and custom deployments:
 
 - Folder location: *D:\\home\\site\\wwwroot\\bin\\apache-tomcat-8.0.33\\logs*
 - Files of interest:
-  - catalina.*yyyy-mm-dd*.log
-  - host-manager.*yyyy-mm-dd*.log
-  - localhost.*yyyy-mm-dd*.log
-  - manager.*yyyy-mm-dd*.log
-  - site_access_log.*yyyy-mm-dd*.log
+  - *catalina.\<yyyy-mm-dd>.log*
+  - *host-manager.\<yyyy-mm-dd>.log*
+  - *localhost.\<yyyy-mm-dd>.log*
+  - *manager.\<yyyy-mm-dd>.log*
+  - *site_access_log.\<yyyy-mm-dd>.log*
 
 For portal **App settings** deployments:
 
 - Folder location: *D:\\home\\LogFiles*
 - Files of interest:
-  - catalina.*yyyy-mm-dd*.log
-  - host-manager.*yyyy-mm-dd*.log
-  - localhost.*yyyy-mm-dd*.log
-  - manager.*yyyy-mm-dd*.log
-  - site_access_log.*yyyy-mm-dd*.log
+  - *catalina.<yyyy-mm-dd>.log*
+  - *host-manager.<yyyy-mm-dd>.log*
+  - *localhost.<yyyy-mm-dd>.log*
+  - *manager.<yyyy-mm-dd>.log*
+  - *site_access_log.<yyyy-mm-dd>.log*
 
 ## How do I troubleshoot JDBC driver connection errors?
 
@@ -147,7 +147,7 @@ To resolve the error, follow these steps:
 
 1. Remove the sqljdbc*.jar file from your *app/lib* folder.
 2. If you're using the custom Tomcat or Azure Marketplace Tomcat web server, copy this .jar file to the Tomcat lib folder.
-3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the sqljdbc.* jar file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config*file:
+3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the sqljdbc.* jar file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config* file:
 
     ```xml
     <httpPlatform>
@@ -176,9 +176,9 @@ Another workaround is to write a WebJob that runs on a schedule and copies these
 
 ## Where do I find the log files for Jetty?
 
-For Marketplace and custom deployments, the log file is in the *D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs* folder. The folder location depends on the version of Jetty you're using. For example, the path provided here is for Jetty 9.1.2. Look for jetty_*YYYY_MM_DD*.stderrout.log.
+For Marketplace and custom deployments, the log file is in the *D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs* folder. The folder location depends on the version of Jetty you're using. For example, the path provided here is for Jetty 9.1.2. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
 
-For portal App Setting deployments, the log file is in *D:\\home\\LogFiles*. Look for jetty_*YYYY_MM_DD*.stderrout.log.
+For portal App Setting deployments, the log file is in *D:\\home\\LogFiles*. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
 
 ## Can I send email from my Azure web app?
 
