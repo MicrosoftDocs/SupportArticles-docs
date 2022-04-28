@@ -1,5 +1,5 @@
 ---
-title: Error message to install the Microsoft Visual Studio Professional and retry installing the tool.
+title: Error message to install the Microsoft Visual Studio Professional and retry installing the tool
 description: This article helps you to resolve an error that occurs when you try to install a Microsoft Visual Studio Professional update or tool.
 ms.date: 04/22/2022
 author: jasonchlus
