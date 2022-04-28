@@ -78,11 +78,11 @@ To change the version of the Node.js application, you can use one of the followi
   nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
   ```
 
-- Set the *iisnode.yml* file by using package.json during source control deployment.
+- Set the *iisnode.yml* file by using *package.json* during source control deployment.
   The Azure source control deployment process involves the following steps:
   1. Moves content to the Azure web app.
   2. Creates a default deployment script, if there isn't one (*deploy.cmd*, *\.deployment* files) in the web app root folder.
-  3. Runs a deployment script in which it creates an *iisnode.yml* file if you mention the Node.js version in the package.json file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
+  3. Runs a deployment script in which it creates an *iisnode.yml* file if you mention the Node.js version in the *package.json* file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
   4. The iisnode.yml file has the following line of code:
 
       ```yml
