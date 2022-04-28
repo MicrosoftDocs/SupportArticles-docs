@@ -131,11 +131,11 @@ For portal **App settings** deployments:
 
 - Folder location: *D:\\home\\LogFiles*
 - Files of interest:
-  - *catalina.<yyyy-mm-dd>.log*
-  - *host-manager.<yyyy-mm-dd>.log*
-  - *localhost.<yyyy-mm-dd>.log*
-  - *manager.<yyyy-mm-dd>.log*
-  - *site_access_log.<yyyy-mm-dd>.log*
+  - *catalina.\<yyyy-mm-dd>.log*
+  - *host-manager.\<yyyy-mm-dd>.log*
+  - *localhost.\<yyyy-mm-dd>.log*
+  - *manager.\<yyyy-mm-dd>.log*
+  - *site_access_log.\<yyyy-mm-dd>.log*
 
 ## How do I troubleshoot JDBC driver connection errors?
 
