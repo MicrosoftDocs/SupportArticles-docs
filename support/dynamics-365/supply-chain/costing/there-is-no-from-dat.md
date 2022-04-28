@@ -1,6 +1,6 @@
 ---
-title: No From date on Active prices tab of Item price page
-description: Provides more information about the From date value on the Active prices tab of the Item price page.
+title: There is no From date value on the Active prices tab of the Item price page
+description: There is no From date value on the Active prices tab of the Item price page.
 author: JennySong-SH
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -14,6 +14,8 @@ ms.dyn365.ops.version: 10.0.19
 ---
 
 # There is no From date value on the Active prices tab of the Item price page
+
+KB number: 4613548
 
 ## Symptoms
 

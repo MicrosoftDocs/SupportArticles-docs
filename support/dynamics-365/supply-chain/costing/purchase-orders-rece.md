@@ -1,6 +1,6 @@
 ---
-title: Physically received purchase orders don't show on inventory closing report
-description: Provides a resolution for the issue that physically received purchase orders don't appear on the Check open quantities inventory closing report.
+title: Physically received purchase orders don't appear on the inventory closing report
+description: Physically received purchase orders don't appear on the Check open quantities inventory closing report.
 author: JennySong-SH
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -14,6 +14,8 @@ ms.dyn365.ops.version: 10.0.19
 ---
 
 # Physically received purchase orders don't appear on the inventory closing report
+
+KB number: 4612595
 
 ## Symptoms
 
