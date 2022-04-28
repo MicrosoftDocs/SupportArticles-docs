@@ -44,7 +44,7 @@ For more information about the agent, see [https://github.com/Azure/WALinuxAgent
 
 ## Minimum supported version of Windows VM Agent
 
-To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to version 2.7.41491.911.
+To get support for Windows Agent and extensions in Azure, the Windows Agent on the Windows VM must be later than or equal to version 2.7.41491.1010.
 
 - If the Windows Agent is earlier than version 2.7.41491.1010, or if the Windows system is out-of-support, we may require you to update the agent before we can offer support.
  To upgrade the Windows Agent, see [About the virtual machine agent and extensions for Windows VMs](/azure/virtual-machines/extensions/agent-windows).
@@ -55,7 +55,7 @@ To get support for Windows Agent and extensions in Azure, the Windows Agent on
   
 The Microsoft Azure Linux Agent (waagent) manages both Linux & FreeBSD provisioning, and virtual machine (VM) interaction with the Azure Fabric Controller. Besides the Linux Agent providing provisioning functionality, Azure also provides the option of using cloud-init for some Linux operating systems. To know more about the functionality, visit the [Linux VM Agent page](/azure/virtual-machines/extensions/agent-linux).
 
-**What is changing on Azure Linux Agent version requirements after July 31, 2020?**
+**What is changing on Azure Linux Agent version requirements after July 31, 2022?**
   
 After July 31, 2022, any Azure Linux Agent version below version 2.2.53.1 won't be supported for published images. It means that any Linux VM images published to Azure Marketplace need to have version 2.2.53.1 or later installed in them.
 
