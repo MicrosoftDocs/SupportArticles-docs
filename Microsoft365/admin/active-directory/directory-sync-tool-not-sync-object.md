@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Microsoft Online Services Directory Synchronization tool stops syncing objects and triggers a Directory Synchronization error
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You notice that synchronization of objects from your local Active Directory Domain Services to Microsoft cloud services has stopped. (These services may include Office 365, Microsoft Azure, and Microsoft Intune.)

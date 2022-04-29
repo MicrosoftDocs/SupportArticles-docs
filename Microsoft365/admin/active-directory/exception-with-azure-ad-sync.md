@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Exception has been thrown by the target of an invocation" with Directory Sync Configuration Wizard
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You run the Azure Active Directory Sync tool Configuration Wizard after you install the Azure Active Directory Sync tool on a Windows Server 2012 Essentials server or a Windows Server 2012 R2 Essentials server. In this situation, you receive the following error message:

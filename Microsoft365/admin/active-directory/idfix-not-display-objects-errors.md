@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # "Blank" is displayed in the ERROR column for one or more objects after you run the IdFix tool
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you run the IdFix DirSync Error Remediation Tool in your on-premises Active Directory Domain Services (AD DS) environment, "blank" is displayed in the **ERROR** column for one or more objects.

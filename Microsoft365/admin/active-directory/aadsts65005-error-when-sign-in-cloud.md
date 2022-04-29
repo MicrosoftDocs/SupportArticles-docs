@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "AADSTS65005" error when you try to sign in to Microsoft Cloud services
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use a company app to sign in to or authenticate to one of the Microsoft Cloud Services, such as Microsoft Office 365, Microsoft Intune, Microsoft Dynamics, Microsoft Power BI, or Microsoft Azure, or Azure Active Directory (Azure AD) Federated Gallery Apps, you receive the following error message:

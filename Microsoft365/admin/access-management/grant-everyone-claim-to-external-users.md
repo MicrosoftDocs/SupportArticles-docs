@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Grant the Everyone claim to external users in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Starting on March 23, 2018, we are updating the behavior and governance of access by external users in Office 365.

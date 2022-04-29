@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Full Access permissions are not working after a migration to Office 365 dedicated/ITAR (vNext)
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After a migration to Microsoft Office 365 dedicated/ITAR (vNext), the Full Access permissions are not working. 

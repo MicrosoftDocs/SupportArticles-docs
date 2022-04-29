@@ -24,9 +24,7 @@ ms.date: 3/31/2022
 
 # "The user name or password is incorrect" when you use connect-MSOLService to connect to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-## Problem 
+## Problem
 
 When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft Office 365, Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
 
