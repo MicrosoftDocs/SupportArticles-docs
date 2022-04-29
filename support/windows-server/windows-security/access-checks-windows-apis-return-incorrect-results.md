@@ -25,7 +25,7 @@ When you check a user's effective permissions on a remote resource, you sometime
 The details of this behavior and its resolution depend on how you obtain the effective permissions, as follows:
 
 - If you're using an existing Windows application, you can use the **Effective Access** tab of the **Advanced Security** dialog box for the resource.
-- If you're using the Authorization Manager Runtime engine (AuthZ.dll) application programming interface (API), you can call the following functions:
+- If you're using the Authorization Manager Runtime engine (Authz.dll) application programming interface (API), you can call the following functions:
 
   - **AuthzInitializeContextFromSid**
   - **AuthzInitializeRemoteResourceManager**
@@ -44,7 +44,7 @@ If you're using the **Effective Access** tab, the tab may display errors or warn
 
 For more information about how to resolve these issues, see [Remote resources including SMB](#how-to-obtain-effective-permissions-on-remote-resources-including-smb-shares).
 
-### Using AuthZ API calls
+### Using Authz API calls
 
 You might observe this issue when you use the API calls if either of the following conditions is true:
 
@@ -62,12 +62,12 @@ Here's a sample scenario:
 
 In the results that you retrieve, the user doesn't appear to have **Delete** permissions for the resource. However, the user actually does have **Delete** permissions.
 
-AuthZ.dll uses a Kerberos Service for a User (Kerberos S4U) transaction to obtain a token for the user. However, this token is relative to the administrative station or to the station where the server application runs. The token isn't relative to the resource server. Therefore, the token doesn't include the domain-local groups of the computer that hosts the resource if the resource meets one of the following conditions:
+Authz.dll uses a Kerberos Service for a User (Kerberos S4U) transaction to obtain a token for the user. However, this token is relative to the administrative station or to the station where the server application runs. The token isn't relative to the resource server. Therefore, the token doesn't include the domain-local groups of the computer that hosts the resource if the resource meets one of the following conditions:
 
 - The resource is in a different domain than the administrative station or the administrative user.
 - The resource has permissions that are assigned to built-in groups. Built-in groups can be misused.
 
-## How to obtain effective permissions by using AuthZ API calls
+## How to obtain effective permissions by using Authz API calls
 
 To resolve this issue, use one of the following methods:
 
@@ -78,7 +78,7 @@ To resolve this issue, use one of the following methods:
   - If you check the effective permissions for an Active Directory object, run the administrative tools on a domain controller that has a full copy of the object (configuration naming context (NC), domain NC, or application NC).
   - If you check the effective permissions for a clustered resource, you can run the administrative tools from any cluster node. Alternatively, run the administrative tools from the resource server.
 
-- **Turn off Kerberos S4U:** Switch the AuthZ engine to avoid the Kerberos S4U approach. Also, revert to Active Directory (AD) Lightweight Directory Access Protocol (LDAP) and standalone server Security Account Manager (SAM) queries to collect the users group list by using the **UseGroupRecursion** registry entry. To do this, follow these steps:
+- **Turn off Kerberos S4U:** Switch the Authz engine from the Kerberos S4U approach to Active Directory (AD) Lightweight Directory Access Protocol (LDAP) and standalone server Security Account Manager (SAM) queries to collect the user's group list. To do this, follow these steps to configure the **UseGroupRecursion** registry entry:
 
   1. Open Registry Editor, and then navigate to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Authz** subkey.
   1. Select **Edit** > **New** > **DWORD Value**.
@@ -86,7 +86,7 @@ To resolve this issue, use one of the following methods:
   1. Right-click **UseGroupRecursion**, and then select **Modify**.
   1. Enter **1**, and then select **OK**.  
      > [!NOTE]  
-     > If the value is **0** (default value), Authz uses the Kerberos method. If the value is **1**, AuthZ uses AD LDAP and standalone server SAM queries.
+     > If the value is **0** (default value), Authz uses the Kerberos method. If the value is **1**, Authz uses AD LDAP and standalone server SAM queries.
   1. Close Registry Editor.
 
 > [!NOTE]  
@@ -96,7 +96,7 @@ To resolve this issue, use one of the following methods:
 
 ## How to obtain effective permissions on remote resources including SMB shares
 
-Windows Server 2012 R2 added an AuthZ RPC interface to the LSASS process, managed by the Netlogon service. With the help of this RPC interface, you can evaluate effective permissions relative to the actual resource server.
+Windows Server 2012 R2 added an Authz RPC interface to the LSASS process. This interface is managed by the Netlogon service. With the help of this RPC interface, you can evaluate effective permissions relative to the actual resource server.
 
 This update also added the ability evaluate permissions set at both file system and the share level. When you use this capability, you see what part of the access check is limiting access.
 
