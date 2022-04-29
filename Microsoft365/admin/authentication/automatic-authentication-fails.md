@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # Fix authentication issues in Office applications when you try to connect to an Office 365 service
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the AAD logs or Office Client logs.

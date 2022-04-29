@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Troubleshoot account issues for federated users in Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to authenticate to a Microsoft a cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, the authentication is unsuccessful, and one or more of the following issues occur:

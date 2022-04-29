@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Office 365 app launcher and menu bar icons are blank
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 In Office 365, a user experiences the following symptoms:

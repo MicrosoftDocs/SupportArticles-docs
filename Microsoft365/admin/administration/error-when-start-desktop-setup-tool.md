@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Cannot continue error when you start the Office 365 Desktop Setup Tool
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to start the Office 365 Desktop Setup Tool, you receive the following error message:
