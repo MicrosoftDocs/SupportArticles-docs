@@ -1,7 +1,7 @@
 ---
 title: Fix connection issues to an app that's hosted on an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/17/2022
+ms.date: 4/29/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
@@ -69,7 +69,7 @@ A basic request flow to applications on an AKS cluster would resemble the flow t
 
 :::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="true":::
 
-## Basic troubleshooting
+## Inside-out troubleshooting
 
 Troubleshooting connectivity issues might involve many checks, but the *inside-out* approach can help find the source of the issue and identify the bottleneck. In this approach, you start at the pod itself, checking whether the application is responding on the pod's IP address. Then, check each component in turn up to the end client.
 

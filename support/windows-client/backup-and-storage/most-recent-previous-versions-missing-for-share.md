@@ -42,7 +42,7 @@ By default, Windows keeps only 64 snapshots per volume for previous versions. Yo
 
 See [Registry Keys and Values for Backup and Restore](/windows/win32/backup/registry-keys-for-backup-and-restore) for more information.
 
-Setting this key to a value higher than the client system can handle prevents users from seeing the most recent previous versions. The SMB server's limit for each operating system is as follows:
+Setting this key to a value higher than the SMB server can handle prevents users from seeing the most recent previous versions. The SMB server's limit for each operating system is as follows:
 
 - Windows 8, Windows Server 2012, and later versions have a limit of 500.
 - Windows Vista, Windows 7, Windows Server 2008, and Windows Server 2008 R2 have a limit of 500 for the SMB version 1 (SMBv1) protocol and 64 for the SMB version 2 (SMBv2) protocol.
