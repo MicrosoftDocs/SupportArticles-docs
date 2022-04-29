@@ -52,7 +52,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
    > [!NOTE]
    > The placeholder \<Code> represents the error code and can differ depending on the issue.
 
-## Common Support scenarios
+## Common support scenarios
 
 - [Can't bring a network name online](troubleshoot-cannot-bring-network-name-online.md)
 
