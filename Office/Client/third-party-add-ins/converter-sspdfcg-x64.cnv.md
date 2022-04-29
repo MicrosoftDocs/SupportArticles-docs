@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Word cannot start the converter SSPDFCG_X64.cnv" error when you start Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start Microsoft Word or perform a mail merge in Word, you receive the following error message:

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Spell Check does not work in Word 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You experience one of the following symptoms in Microsoft Word 2010.

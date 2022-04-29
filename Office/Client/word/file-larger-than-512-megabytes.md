@@ -20,13 +20,11 @@ ms.date: 3/31/2022
 
 # "Word cannot open this file because it is larger than 512 Megabytes" when opening a document in Word 
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a Word file, you receive an error:
 
-**Word cannot open this file because it is larger than 512 Megabytes**
+> Word cannot open this file because it is larger than 512 Megabytes
 
 ## Cause
 

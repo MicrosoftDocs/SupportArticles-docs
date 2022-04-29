@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to troubleshoot damaged documents in Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how to identify a damaged document in Word 2007 and later versions. Additionally, this article includes steps that explain how to recover the text and data that is contained in a document after you have identified the document as damaged.

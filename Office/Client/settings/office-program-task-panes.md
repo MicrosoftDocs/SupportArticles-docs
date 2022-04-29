@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Description of task panes in Office programs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Task panes, a new feature in Microsoft Office XP, provide a common area for those commands that may require more information or options than a toolbar can provide. This article describes task panes and how to use them.

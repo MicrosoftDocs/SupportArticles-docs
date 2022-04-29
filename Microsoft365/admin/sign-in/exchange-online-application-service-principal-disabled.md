@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Sorry, but we're having trouble signing you in" error when signing in to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to sign in to the Office 365 portal, you receive the following error message:

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "We're having trouble signing you in" error when you try to access your mail in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to access mail for your organizational account in Office 365, you receive the following error message: 

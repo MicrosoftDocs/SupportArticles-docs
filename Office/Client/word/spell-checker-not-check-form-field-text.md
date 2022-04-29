@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Spell checker doesn't check text in the form fields in Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom
 
 The spelling and grammar checker in Microsoft Word doesn't check text in the form fields.  

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # A user or an administrator forgot his or her password in Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 A user or admin forgot his or her password and can't sign in to Office 365, Microsoft Azure, or Microsoft Intune.
