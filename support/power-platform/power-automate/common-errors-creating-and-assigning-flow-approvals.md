@@ -171,4 +171,10 @@ The CDS database for this environment is protected by a security group. An owner
 
 > 'Encountered a general permissions error trying to access the CDS database. This could be caused by modification of the approvals administrator or user roles, or by an incompatible plugin.
 
-Ensure no custom plugins restrict access to the approvals data entities for either organization users for the Power Automate service principal used to provision records (`flowdev@microsoft.com`).
+Ensure no custom plugins restrict access to the approvals data entities for either organization users for the Power Automate service principal used to provision records (`flowdev@microsoft.com`)
+
+### HTTP 412 Code: 0x80040237 InnerError
+
+> 'A record with matching key values already exists'
+
+This is a transient error that can occur when trying to create or update an approval due to a race condition that gets triggered while creating the approval. Please retry the action.
