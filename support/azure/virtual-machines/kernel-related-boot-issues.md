@@ -249,11 +249,13 @@ Usually, you start a system from a recovery cd on-premises environment. However,
 
 You can follow these steps to rebuild the initramfs file:
 
-1. Make backup of current img file and then build Initramfs:
+1. Make a backup of the current img file and then build Initramfs:
 
-    `mv /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.old-img 
+    ```
+    mv /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.old-img 
 
-    dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img 2.6.32-504.8.1.el6.x86_64`
+    dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img 2.6.32-504.8.1.el6.x86_64
+    ```
 
     For example, you have to build and use the latest version available on the temporary CentOS 6.6 Linux VM, because you can't locate the exact same initramfs file.
 

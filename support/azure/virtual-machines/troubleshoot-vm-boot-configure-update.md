@@ -62,6 +62,8 @@ To enable dump log and Serial Console, run the following script.
     In this script, we assume that the drive letter that is assigned to the attached OS disk is F.  Replace it with the appropriate value in your VM.
 
     ```powershell
+    reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
+
     #Enable Serial Console
     bcdedit /store F:\boot\bcd /set {bootmgr} displaybootmenu yes
     bcdedit /store F:\boot\bcd /set {bootmgr} timeout 5
