@@ -1,6 +1,6 @@
 ---
-title: Resolve issues with Teams add-in for Outlook
-description: Provides steps to troubleshoot issues with the Teams Meeting add-in for Outlook.
+title: Resolve issues with Teams Meeting add-in for Outlook
+description: Provides steps to troubleshoot and fix issues with the Teams Meeting add-in for Outlook.
 author: v-matthamer
 ms.author: meerak
 manager: dcscontentpm
@@ -17,7 +17,7 @@ search.appverid:
 ms.date: 4/25/2022
 ---
 
-# Resolve issues with Teams add-in for Outlook
+# Resolve issues with Teams Meeting add-in for Outlook
 
 If you’re a Microsoft Teams administrator and your users aren’t able to install the Teams Meeting add-in for Outlook, schedule Outlook meetings from Teams, or schedule Teams meetings from Outlook, try the following steps to troubleshoot and resolve the issue.
 
