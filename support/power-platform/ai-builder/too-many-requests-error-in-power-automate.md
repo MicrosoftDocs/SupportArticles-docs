@@ -1,6 +1,6 @@
 ---
 title: Too many requests error in Power Automate
-description: Cause and resolution for a 429-TooManyRequests error. 
+description: Provides a resolution for the 429-TooManyRequests error.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
@@ -11,7 +11,7 @@ ms.subservice:
 
 This article provides a solution when you receive a *too many requests* error.
 
-_Applies to:_ &nbsp; Power Automate
+*Applies to:* &nbsp; Power Automate
 
 ## Symptoms
 
@@ -25,13 +25,16 @@ You've performed too many executions in a short time frame on a model.
 
 If this error occurs, decrease the concurrency level of your flow. For example, if your flow is triggered by the action, **When a file is created in a folder** when using the SharePoint trigger, you can reduce the degree of parallelism in the action settings.
 
+1. Select "..." on the **When a file is created in a folder** window and select **Settings**.
 
-![when_a_file_paramete](https://user-images.githubusercontent.com/79529948/163181352-30c29703-da2c-4e07-896c-9c6755697ddc.jpg)
+    :::image type="content" source="media/too-many-requests-error-in-power-automate/reduce-degree-of-parallelism-step-1.png" alt-text="Step 1 of reducing the degree of parallelism in the action settings." border="false":::
 
-![when_a_file_paramete2](https://user-images.githubusercontent.com/79529948/163181902-f49754f6-f457-4f00-95e8-46212fdf3b1f.jpg)
+2. Reduce the degree of parallelism under **Concurrency Control**.
 
-Click on Done.
+    :::image type="content" source="media/too-many-requests-error-in-power-automate/reduce-degree-of-parallelism-step-2.png" alt-text="Step 2 of reducing the degree of parallelism in the action settings." border="false":::
+
+3. Select **Done**.
 
 ## Resources
 
-[Concurrency, looping, and debatching limits](/power-automate/limits-and-config#concurrency-looping-and-debatching-limits)
+For more information, see [Concurrency, looping, and debatching limits](/power-automate/limits-and-config#concurrency-looping-and-debatching-limits).

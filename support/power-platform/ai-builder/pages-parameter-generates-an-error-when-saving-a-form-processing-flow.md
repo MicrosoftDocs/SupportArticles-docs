@@ -1,6 +1,6 @@
 ---
 title: Pages parameter generates an error when saving a form processing flow
-description: Cause and resolution for an error that occurs when saving a form processing flow with the pages parameter.
+description: Provides a resolution for the error that occurs when you save a form processing flow together with the Pages parameter.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
@@ -24,7 +24,7 @@ When saving a form processing flow with the **Pages** parameter specified, it me
 
 ## Resolution
 
-To solve this issue, go to your model's page in AI Builder, unpublish, and republish your model. 
+To solve this issue, go to your model's page in AI Builder, unpublish, and republish your model.
 
 ## Resources
 
