@@ -1,6 +1,6 @@
 ---
-title: Recoverable Items folder becomes full
-description: Fixes an issue in which Recoverable Items aren't moved to archive when a mailbox is placed on litigation hold or retention hold.
+title: Recoverable Items folder not emptied for mailbox on litigation or retention hold
+description: Provides a fix for an issue when the items in the Recoverable Items folder are not moved to the Archive mailbox.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online Archiving
 search.appverid: MET150
 ---
-# Unable to move Recoverable Items to archive
+# Recoverable Items folder not emptied for mailbox on litigation or retention hold
 
 ## Symptoms
 
@@ -25,18 +25,18 @@ Consider the following scenario:
 - Your mailbox is placed on litigation hold or retention hold.
 - The archive feature is enabled for your mailbox.  
 
-In this scenario, the Recoverable Items folder becomes full, and you may experience the following issues:
+In this scenario, the Recoverable Items folder of the mailbox becomes full, and you may experience the following issues:
 
 - You can't accept calendar invitations.  
 - You can't delete or archive items so that your mailbox becomes full.
 
-When you run the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet to process the retention of items, the items are not moved to the archive mailbox. However, the mailbox diagnostic logs show that the Managed Folder Assistant ran successfully on both the primary and archive mailboxes.
+When you run the [Start-ManagedFolderAssistant](/powershell/module/exchange/start-managedfolderassistant) cmdlet to process the retention of items, the items in the Recoverable Items folder are not moved to the Archive mailbox. However, the mailbox diagnostic logs show that the Managed Folder Assistant ran successfully on both the primary and Archive mailboxes.
 
 ## Cause
 
-This issue occurs if a new or changed retention policy has acted on the mailbox resulting in a large number of items being deleted. Consequently, the Managed Folder Assistant moves enough deleted items to the Recoverable Items folder so that the folder reaches its quota.
+This issue occurs if a new or changed retention policy has acted on the mailbox resulting in a large number of items being deleted. Consequently, the Managed Folder Assistant moves the deleted items to the Recoverable Items folder which causes the folder to reach its quota.
 
-However, the Recoverable Items folder is not emptied before it reaches its quota because the default retention policy tag (**Recoverable Items 14 days Move to Archive**) has been applied to it. Due to this tag, the Recoverable Items folder will remain full for 14 days before it's emptied and the cycle repeats.
+The items in the Recoverable Items folder are not moved to the Archive mailbox and the folder emptied before it reaches its quota because the default retention policy tag (**Recoverable Items 14 days Move to Archive**) has been applied to it. Due to this tag, the Recoverable Items folder remains full for 14 days before it is emptied and the cycle repeats.
 
 ## Resolution
 
