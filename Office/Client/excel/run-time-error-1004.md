@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Run-time Error 1004" when you make changes to legend entries in a chart in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you run a Microsoft Visual Basic for Applications (VBA) macro that uses the LegendEntries method to make changes to legend entries in a Microsoft Excel chart, you may receive the following error message:

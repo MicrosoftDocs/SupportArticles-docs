@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # SAP add-ins don't display controls after update to Office 1806 or higher
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

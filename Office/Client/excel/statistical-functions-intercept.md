@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions: INTERCEPT
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses the INTERCEPT function in Microsoft Excel, illustrates how to use the function, and compares its results for Excel 2003 and for later versions of Excel with its results in earlier versions of Excel.
