@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel 2016 for Mac crashes when you click the From Database option
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Excel 2016 for Mac crashes when you click **Data** > **New Database Query** > **From Database**.

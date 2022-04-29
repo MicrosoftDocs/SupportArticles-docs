@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to clean up an Excel workbook so that it uses less memory
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one or more of the following symptoms:
