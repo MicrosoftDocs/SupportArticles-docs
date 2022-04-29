@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # "Not a valid Teradata SQL token" error when you run outer join queries
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use the Teradata ODBC driver 15.10 or a later version to run outer join queries in Microsoft Access, you receive the following error message:

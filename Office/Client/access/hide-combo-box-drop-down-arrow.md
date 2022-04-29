@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 # How to hide the combo box drop-down arrow on a form in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 325233
 
 > [!NOTE]

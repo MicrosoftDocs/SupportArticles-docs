@@ -26,8 +26,6 @@ ms.date: 3/31/2022
 
 This article fixes an issue in the VBA code that prevents you from compiling a database or project or there is a reference.
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 283788
 
 > [!NOTE]

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 # How to troubleshoot errors that may occur when you update data in Access queries and forms
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 328828
 
 > [!NOTE]
