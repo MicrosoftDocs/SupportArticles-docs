@@ -110,7 +110,7 @@ To check if the NSG blocks the IP address of the storage account, follow these s
     - **Protocol**: Any
     - **Direction**: Outbound
     - **Source type**: IPv4 address/CIDR
-    - **IPv4 address/CIDR**: The IP address of an NSG instance that's associated with the AKS node
+    - **IPv4 address/CIDR**: The IP address of an instance that's associated with the AKS node
     - **Destination IP address**: The IP address of the storage account
     - **Destination port**: 445
 
