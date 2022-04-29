@@ -97,7 +97,7 @@ Before the release of the update, administrators can use the following steps to 
 5. Verify all scenarios that chain to the "G1" root certificate, including those that are listed in [Potential issues](#potential-issues).
 
 > [!Note]
-> The link to the test site never changes. However, the changes that are staged on the test site change from month to month. As of February 24, 2022, this testing URL is staged with 20 continuous deprecation changes that don't currently include removing the "G1" root certificate. That change will be staged in March 2022. This article will be updated noting when the removal of the "G1" root certificate has been staged on the test site.
+> The link to the test site never changes. However, the changes that are staged on the test site change from month to month.
 
 ### Production configuration setup
 
