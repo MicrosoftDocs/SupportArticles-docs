@@ -50,10 +50,10 @@ To capture Python application errors, follow these steps:
 2. On the **Settings** tab, select **Application settings**.
 3. Under **App settings**, enter the following key/value pair:
 
-    - Key : WSGI_LOG
-    - Value : D:\home\site\wwwroot\logs.txt (enter your choice of file name)
+    - Key: *WSGI_LOG*
+    - Value: *D:\home\site\wwwroot\logs.txt* (enter your choice of file name)
 
-You should now see errors in the logs.txt file in the wwwroot folder.
+You should now see errors in the *logs.txt* file in the *wwwroot* folder.
 
 ## How do I change the version of the Node.js application that is hosted in App Service?
 
@@ -70,20 +70,20 @@ To change the version of the Node.js application, you can use one of the followi
       node -v
       ```
 
-- Modify the iisnode.yml file. Changing the Node.js version in the iisnode.yml file only sets the runtime environment that iisnode uses. Your Kudu cmd and others still use the Node.js version that is set in **App settings** in the Azure portal.
+- Modify the *iisnode.yml* file. Changing the Node.js version in the *iisnode.yml* file only sets the runtime environment that iisnode uses. Your Kudu cmd and others still use the Node.js version that is set in **App settings** in the Azure portal.
 
-  To set the iisnode.yml manually, create an iisnode.yml file in your app root folder. In the file, include the following line:
+  To set the *iisnode.yml* manually, create an *iisnode.yml* file in your app root folder. In the file, include the following line:
 
   ```yml
   nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
   ```
 
-- Set the iisnode.yml file by using package.json during source control deployment.
+- Set the *iisnode.yml* file by using *package.json* during source control deployment.
   The Azure source control deployment process involves the following steps:
   1. Moves content to the Azure web app.
-  2. Creates a default deployment script, if there isn’t one (deploy.cmd, \.deployment files) in the web app root folder.
-  3. Runs a deployment script in which it creates an iisnode.yml file if you mention the Node.js version in the package.json file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
-  4. The iisnode.yml file has the following line of code:
+  2. Creates a default deployment script, if there isn't one (*deploy.cmd*, *\.deployment* files) in the web app root folder.
+  3. Runs a deployment script in which it creates an *iisnode.yml* file if you mention the Node.js version in the *package.json* file > engine `"engines": {"node": "5.9.1","npm": "3.7.3"}`
+  4. The *iisnode.yml* file has the following line of code:
 
       ```yml
       nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\5.9.1\node.exe"
@@ -91,7 +91,7 @@ To change the version of the Node.js application, you can use one of the followi
 
 ## I see the message "Error establishing a database connection" in my WordPress app that's hosted in App Service. How do I troubleshoot this error?
 
-If you see this error in your Azure WordPress app, to enable php_errors.log and debug.log, complete the steps detailed in [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
+If you see this error in your Azure WordPress app, to enable *php_errors.log* and *debug.log*, complete the steps detailed in [Enable WordPress error logs](/archive/blogs/azureossds/logging-php-errors-in-wordpress-2).
 
 When the logs are enabled, reproduce the error, and then check the logs to see if you're running out of connections:
 
@@ -99,13 +99,13 @@ When the logs are enabled, reproduce the error, and then check the logs to see i
 [09-Oct-2015 00:03:13 UTC] PHP Warning: mysqli_real_connect(): (HY000/1226): User ‘abcdefghijk79' has exceeded the ‘max_user_connections’ resource (current value: 4) in D:\home\site\wwwroot\wp-includes\wp-db.php on line 1454
 ```
 
-If you see this error in your debug.log or php_errors.log files, your app is exceeding the number of connections. If you’re hosting on ClearDB, verify the number of connections that are available in your [service plan](https://www.cleardb.com/pricing.view).
+If you see this error in your *debug.log* or *php_errors.log* files, your app is exceeding the number of connections. If you're hosting on ClearDB, verify the number of connections that are available in your [service plan](https://www.cleardb.com/pricing.view).
 
 ## How do I debug a Node.js app that's hosted in App Service?
 
 1. Go to your **Kudu console** (`https://*yourwebsitename*.scm.azurewebsites.net/DebugConsole`).
-2. Go to your application logs folder (D:\home\LogFiles\Application).
-3. In the logging_errors.txt file, check for content.
+2. Go to your application logs folder (*D:\home\LogFiles\Application*).
+3. In the *logging_errors.txt* file, check for content.
 
 ## How do I install native Python modules in an App Service web app or API app?
 
@@ -119,23 +119,23 @@ For information about installing Django, see [Deploying a Django app to App Serv
 
 For Azure Marketplace and custom deployments:
 
-- Folder location: D:\\home\\site\\wwwroot\\bin\\apache-tomcat-8.0.33\\logs
+- Folder location: *D:\\home\\site\\wwwroot\\bin\\apache-tomcat-8.0.33\\logs*
 - Files of interest:
-  - catalina.*yyyy-mm-dd*.log
-  - host-manager.*yyyy-mm-dd*.log
-  - localhost.*yyyy-mm-dd*.log
-  - manager.*yyyy-mm-dd*.log
-  - site_access_log.*yyyy-mm-dd*.log
+  - *catalina.\<yyyy-mm-dd>.log*
+  - *host-manager.\<yyyy-mm-dd>.log*
+  - *localhost.\<yyyy-mm-dd>.log*
+  - *manager.\<yyyy-mm-dd>.log*
+  - *site_access_log.\<yyyy-mm-dd>.log*
 
 For portal **App settings** deployments:
 
-- Folder location: D:\\home\\LogFiles
+- Folder location: *D:\\home\\LogFiles*
 - Files of interest:
-  - catalina.*yyyy-mm-dd*.log
-  - host-manager.*yyyy-mm-dd*.log
-  - localhost.*yyyy-mm-dd*.log
-  - manager.*yyyy-mm-dd*.log
-  - site_access_log.*yyyy-mm-dd*.log
+  - *catalina.\<yyyy-mm-dd>.log*
+  - *host-manager.\<yyyy-mm-dd>.log*
+  - *localhost.\<yyyy-mm-dd>.log*
+  - *manager.\<yyyy-mm-dd>.log*
+  - *site_access_log.\<yyyy-mm-dd>.log*
 
 ## How do I troubleshoot JDBC driver connection errors?
 
@@ -145,9 +145,9 @@ You might see the following message in your Tomcat logs:
 
 To resolve the error, follow these steps:
 
-1. Remove the sqljdbc*.jar file from your app/lib folder.
+1. Remove the *sqljdbc\*.jar* file from your *app/lib* folder.
 2. If you're using the custom Tomcat or Azure Marketplace Tomcat web server, copy this .jar file to the Tomcat lib folder.
-3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the sqljdbc.* jar file in the folder that's parallel to your app. Then, add the following classpath setting to the web.config file:
+3. If you're enabling Java from the Azure portal (select **Java 1.8** > **Tomcat server**), copy the *sqljdbc\*.jar* file in the folder that's parallel to your app. Then, add the following classpath setting to the *web.config* file:
 
     ```xml
     <httpPlatform>
@@ -176,9 +176,9 @@ Another workaround is to write a WebJob that runs on a schedule and copies these
 
 ## Where do I find the log files for Jetty?
 
-For Marketplace and custom deployments, the log file is in the D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs folder. The folder location depends on the version of Jetty you're using. For example, the path provided here is for Jetty 9.1.2. Look for jetty_*YYYY_MM_DD*.stderrout.log.
+For Marketplace and custom deployments, the log file is in the *D:\\home\\site\\wwwroot\\bin\\jetty-distribution-9.1.2.v20140210\logs* folder. The folder location depends on the version of Jetty you're using. For example, the path provided here is for Jetty 9.1.2. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
 
-For portal App Setting deployments, the log file is in D:\\home\\LogFiles. Look for jetty_*YYYY_MM_DD*.stderrout.log
+For portal App Setting deployments, the log file is in *D:\\home\\LogFiles*. Look for *jetty_\<YYYY_MM_DD>.stderrout.log*.
 
 ## Can I send email from my Azure web app?
 
@@ -213,7 +213,7 @@ To learn about security best practices for WordPress, see [Best practices for Wo
 
 ## I'm trying to use PHPMyAdmin, and I see the message "Access denied." How do I resolve this issue?
 
-You might experience this issue if the MySQL in-app feature isn't running yet in this App Service instance. To resolve the issue, try to access your website. This starts the required processes, including the MySQL in-app process. To verify that MySQL in-app is running, in Process Explorer, ensure that mysqld.exe is listed in the processes.
+You might experience this issue if the MySQL in-app feature isn't running yet in this App Service instance. To resolve the issue, try to access your website. This starts the required processes, including the MySQL in-app process. To verify that MySQL in-app is running, in Process Explorer, ensure that *mysqld.exe* is listed in the processes.
 
 After you ensure that MySQL in-app is running, try to use PHPMyAdmin.
 
