@@ -55,3 +55,5 @@ The process to request access is relatively straight forward, you can initiate t
 Once you have created the support request, the ticket follows our standard process, including a stop with the Azure Engineering team, where we validate the claims made in the request. This may include reaching out to the requestor for further details, so please ensure you add up-to-date contact details.  
 
 The support request will be routed back to you once complete, letting you know of the result. If successful, you will then see the Azure Region you have requested access to in your portal and can begin to consume resources just like any other Azure region.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

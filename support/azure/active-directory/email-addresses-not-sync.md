@@ -63,6 +63,4 @@ You can use the Office 365 portal or the Azure Active Directory Module for Windo
 
 To learn more about how to use the Azure AD Module for Windows PowerShell to identify objects that have duplicate values, see [Identity synchronization and duplicate attribute resiliency](/azure/active-directory/hybrid/how-to-connect-syncservice-duplicate-attribute-resiliency).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

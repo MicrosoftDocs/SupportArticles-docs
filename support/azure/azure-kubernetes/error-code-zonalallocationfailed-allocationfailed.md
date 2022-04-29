@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the ZonalAllocationFailed or AllocationFailed error code so that I can successfully create and deploy an Azure Kubernetes Service cluster.
 ---
 # Troubleshoot the ZonalAllocationFailed or AllocationFailed error code
- 
+
 This article describes how to identify and resolve the `ZonalAllocationFailed` or `AllocationFailed` error that might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
@@ -55,3 +55,5 @@ For more information about how to fix this error, see [Resolve errors for SKU no
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

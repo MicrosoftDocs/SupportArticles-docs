@@ -19,12 +19,12 @@ Windows Azure Guest Agent is a virtual machine (VM) agent. It enables the VM to 
  The VM that is migrated to Azure from on-premises or that is created by using a customized image doesn't have Windows Azure Guest Agent installed. In these scenarios, you have to manually install the VM agent. For more information about how to install the VM Agent, see [Azure Virtual Machine Agent Overview](/azure/virtual-machines/extensions/agent-windows).
 
 After Windows Azure Guest Agent is successfully installed, you can see following services listed in services.msc on the VM:
- 
+
 - Windows Azure Guest Agent Service
 - Telemetry Service
 - RD Agent service
 
-**Windows Azure Guest Agent Service**: This service is the service that is responsible for all the logging in WAppAgent.log. This service is responsible for configuring various extensions and communication from Guest to Host. 
+**Windows Azure Guest Agent Service**: This service is the service that is responsible for all the logging in WAppAgent.log. This service is responsible for configuring various extensions and communication from Guest to Host.
 
 **Telemetry Service**: This service is responsible for sending the telemetry data of the VM to the backend server.
 
@@ -44,23 +44,23 @@ Go to to the VM properties page in Azure portal, and check the **Agent status**.
 - Check for the Package
 
     Locate the C:\WindowsAzure folder. If you see the GuestAgent folder that displays the version number, that means that Windows Azure Guest Agent was installed on the VM. You can also look for the installed package.  If Windows Azure Guest Agent is installed on the VM, the package will be saved in the following location: `C:\windows\OEM\GuestAgent\VMAgentPackage.zip`.
-    
+
     You can run the following PowerShell command to check whether VM Agent has been deployed to the VM:
-    
+
     `Get-AzVM -ResourceGroupName "RGNAME" -Name "VMNAME" -DisplayHint expand`
-    
+
     In the output, locate the **ProvisionVMAgent** property, and check whether the value is set to **True**. If it is, this means that the agent is installed on the VM.
-    
+
 - Check the Services and Processes
 
    Go to the Services console (services.msc) and check the status of the following services: Windows Azure Guest Agent Service, RDAgent service, Windows Azure Telemetry Service, and Windows Azure Network Agent service.
- 
+
     You can also check whether these services are running by examining Task Manager for the following processes:
-       
-    - WindowsAzureGuestAgent.exe: Windows Azure Guest Agent service
-    - WaAppAgent.exe: RDAgent service
-    - WindowsAzureNetAgent.exe: Windows Azure Network Agent service
-    - WindowsAzureTelemetryService.exe: Windows Azure Telemetry Service
+
+  - WindowsAzureGuestAgent.exe: Windows Azure Guest Agent service
+  - WaAppAgent.exe: RDAgent service
+  - WindowsAzureNetAgent.exe: Windows Azure Network Agent service
+  - WindowsAzureTelemetryService.exe: Windows Azure Telemetry Service
 
    If you cannot find these processes and services, this indicates that you do not have Windows Azure Guest Agent installed.
 
@@ -81,17 +81,21 @@ The Windows Azure Guest Agent has an auto-update feature. It will automatically 
 2. Open a Command Prompt window that has administrator privileges.
 
 3. Stop the Guest Agent services. If the services do not stop, you must set the services to **manual startup** and then restart the VM.
+
     ```
     net stop rdagent
     net stop WindowsAzureGuestAgent
     net stop WindowsAzureTelemetryService
     ```
+
 1. Delete the Guest Agent Services:
+
     ```
     sc delete rdagent
     sc delete WindowsAzureGuestAgent
     sc delete WindowsAzureTelemetryService
     ```
+
 1. Under `C:\WindowsAzure` create a folder that is named OLD.
 
 1. Move any folders that are named Packages or GuestAgent into the OLD folder.
@@ -103,10 +107,10 @@ The Windows Azure Guest Agent has an auto-update feature. It will automatically 
     ```
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
+
     Then check whether the Guest Agent Services start correctly.
- 
+
     In rare cases in which Guest Agent doesn't install correctly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
-    
 
 ### Step 3 Check whether the VM can connect to the Fabric Controller
 
@@ -144,11 +148,11 @@ Also, reset the Sysprep state of the VM first. This consists of [modifying a few
 In the WaAppAgent log, you can see that the agent is stuck at the Starting process and cannot start.
 
 **Log information**
- 
+
 [00000007] [05/28/2019 12:58:50.90] [INFO] WindowsAzureGuestAgent starting. Version 2.7.41491.901
 
 **Analysis**
- 
+
 The VM is still running the older version of the Windows Azure Guest Agent. In the C:\WindowsAzure folder, you may notice that multiple Windows Azure Guest Agent instances are installed, including several of the same version. Because multiple  agent instances are installed, the VM does not start the latest version of Windows Azure Guest Agent.
 
 **Solution**
@@ -161,16 +165,18 @@ Manually uninstall the Windows Azure Guest Agent, and then reinstall it by follo
 1. Move any folders that are named Packages or GuestAgent into the OLD folder. Also, move any of the GuestAgent folders in C:\WindowsAzure\logs that start as GuestAgent_x.x.xxxxx to the OLD folder.
 1. Download and install the latest version of the MSI agent. You must have administrator rights to complete the installation.
 1. Install Guest Agent by using the following MSI command:
+
     ```
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log`
     ```
+
 1. Verify that the RDAgent, Windows Azure Guest Agent, and Windows Azure Telemetry services are now running.
- 
+
 1. Check the WaAppAgent.log to make sure that the latest version of Windows Azure Guest Agent is running.
- 
+
 1. Delete the OLD folder under C:\WindowsAzure.
   
-### Unable to connect to WireServer IP (Host IP) 
+### Unable to connect to WireServer IP (Host IP)
 
 You notice the following error entries in WaAppAgent.log and Telemetry.log:
 
@@ -180,6 +186,7 @@ You notice the following error entries in WaAppAgent.log and Telemetry.log:
 [ERROR] GetVersions() failed with exception: Microsoft.ServiceModel.Web.WebProtocolException: Server Error: Service Unavailable (ServiceUnavailable) ---> 
 System.Net.WebException: The remote server returned an error: (503) Server Unavailable.
 ```
+
 ```Log sample
 [00000011] [12/11/2018 06:27:55.66] [WARN]  (Ignoring) Exception while fetching supported versions from HostGAPlugin: System.Net.WebException: Unable to connect to the remote server 
 ---> System.Net.Sockets.SocketException: An attempt was made to access a socket in a way forbidden by its access permissions 168.63.129.16:32526
@@ -191,13 +198,14 @@ at System.Net.WebClient.DownloadString(Uri address)
 at Microsoft.GuestAgentHostPlugin.Client.GuestInformationServiceClient.GetVersions()
 at Microsoft.WindowsAzure.GuestAgent.ContainerStateMachine.HostGAPluginUtility.UpdateHostGAPluginAvailability()`
 ```
+
 **Analysis**
 
 The VM cannot reach the wireserver host server.
 
 **Solution**
 
-1. Because wireserver is not reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: http://168.63.129.16/?comp=versions 
+1. Because wireserver is not reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: <http://168.63.129.16/?comp=versions>
 1. If you cannot reach the URL from step 1, check the network interface to determine whether it is set as DHCP-enabled and has DNS. To check the DHCP status, of the network interface, run the following command:  `netsh interface ip show config`.
 1. If DHCP is disabled, run the following making sure you change the value in yellow to the name of your interface: `netsh interface ip set address name="Name of the interface" source=dhcp`.
 1. Check for any issues that might be caused by a firewall, a proxy, or other source that could be blocking access to the IP address 168.63.129.16.
@@ -207,7 +215,7 @@ The VM cannot reach the wireserver host server.
 
 You notice the following error entries in WaAppAgent.log:
 
-**Log information** 
+**Log information**
 
 ```Log sample
 [00000007] [07/18/2019 14:46:28.87] [WARN] WindowsAzureGuestAgent stopping.
@@ -220,6 +228,7 @@ at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentCore.Stop(Boolean waitForTer
 at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentService.DoStopService()
 at Microsoft.WindowsAzure.GuestAgent.AgentCore.AgentService.<>c__DisplayClass2.<OnStopProcessing>b__1()
 ```
+
 **Analysis**
 
 Windows Azure Guest Agent is stuck at the Stopping process.
@@ -229,15 +238,16 @@ Windows Azure Guest Agent is stuck at the Stopping process.
 1. Make sure that WaAppAgent.exe is running on the VM. If it is not running, restart the rdgagent service, and wait five minutes. When WaAppAgent.exe is running, end the WindowsAzureGuest.exe process.
 2. If step 1 does not resolve the issue, remove the currently installed version and install the latest version of the agent manually.
 
-### Npcap Loopback Adapter 
+### Npcap Loopback Adapter
 
 You notice the following error entries in WaAppAgent.log:
- 
+
 ```Log sample
 [00000006] [06/20/2019 07:44:28.93] [INFO]  Attempting to discover fabric address on interface Npcap Loopback Adapter.
 [00000024] [06/20/2019 07:44:28.93] [WARN]  Empty DHCP option data returned
 [00000006] [06/20/2019 07:44:28.93] [ERROR] Did not discover fabric address on interface Npcap Loopback Adapter
 ```
+
 **Analysis**
 
 The Npcap loopback adapter is installed on the VM by Wireshark. Wireshark is an open-source tool for profiling network traffic and analyzing packets. Such a tool is often referred to as a network analyzer, network protocol analyzer, or sniffer.
@@ -251,3 +261,5 @@ The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, a
 Other known issues with the Windows Azure Guest Agent are listed in its [Github repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
 
 To further troubleshoot the “Windows Azure Guest Agent is not working” issue, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
