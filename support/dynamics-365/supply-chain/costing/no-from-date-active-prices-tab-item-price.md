@@ -1,6 +1,6 @@
 ---
 title: There is no From date value on the Active prices tab of the Item price page
-description: There is no From date value on the Active prices tab of the Item price page.
+description: Provides more information about the From date value on the Active prices tab of the Item price page.
 author: JennySong-SH
 ms.date: 4/11/2021
 ms.topic: troubleshooting

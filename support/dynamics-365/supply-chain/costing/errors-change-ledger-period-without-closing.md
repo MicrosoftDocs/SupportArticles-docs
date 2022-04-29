@@ -1,6 +1,6 @@
 ---
 title: Warnings or errors on changing ledger period status without closing inventory
-description: Warnings or errors on changing ledger period status without closing inventory
+description: Provides a resolution for the warnings or errors that occur when you change the ledger period status without closing inventory.
 author: JennySong-SH
 ms.date: 05/31/2021
 ms.topic: troubleshooting

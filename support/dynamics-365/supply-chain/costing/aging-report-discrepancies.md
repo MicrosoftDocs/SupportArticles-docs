@@ -1,6 +1,6 @@
 ---
 title: Inventory aging report discrepancies
-description: Inventory aging report discrepancies
+description: Provides more information about the discrepancies that are shown in the Inventory aging report.
 author: JennySong-SH
 ms.date: 05/31/2021
 ms.topic: troubleshooting
