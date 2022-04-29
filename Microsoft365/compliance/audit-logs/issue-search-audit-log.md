@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Your request couldn't be completed. Please try again" error when you try to search the audit log in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;3193501
 
 ## Problem

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # Can't set up Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2830042
 
 ## Problem

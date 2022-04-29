@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # "Your archive appears to be unavailable" error when you try to access a cloud-based archive mailbox in a hybrid deployment
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2860302
 
 > [!NOTE]

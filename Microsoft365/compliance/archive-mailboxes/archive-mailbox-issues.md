@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Archive mailbox issues for a mailbox that's migrated to or from Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2757430
 
 ## Problem

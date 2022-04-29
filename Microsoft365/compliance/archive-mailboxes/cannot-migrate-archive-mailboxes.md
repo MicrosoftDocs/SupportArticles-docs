@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Cannot migrate on-premises archive mailboxes to Office 365 in a hybrid migration
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4508006
 
 ## Symptoms

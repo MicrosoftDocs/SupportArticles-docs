@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 # Mail access issues in a hybrid Exchange deployment with cloud-based archive
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2901386
 
 > [!NOTE]

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Litigation Hold users cannot delete messages in Office 365 Dedicated
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2617079
 
 ## Symptoms
