@@ -1,7 +1,7 @@
 ---
 title: How to recover Azure Linux VM from kernel-related boot issues
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.
-ms.date: 07/21/2020
+ms.date: 04/29/2022
 ms.reviewer: 
 ms.service: virtual-machines
 ms.collection: linux
@@ -249,9 +249,11 @@ Usually, you start a system from a recovery cd on-premises environment. However,
 
 You can follow these steps to rebuild the initramfs file:
 
-1. Generate an initramfs file that is based on the existing version:
+1. Make backup of current img file and then build Initramfs:
 
-    `mv /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.old-img dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img 2.6.32-504.8.1.el6.x86_64`
+    `mv /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.old-img 
+
+    dracut /mnt/troubleshootingdisk/boot/initramfs-2.6.32-504.8.1.el6.x86_64.img 2.6.32-504.8.1.el6.x86_64`
 
     For example, you have to build and use the latest version available on the temporary CentOS 6.6 Linux VM, because you can't locate the exact same initramfs file.
 
