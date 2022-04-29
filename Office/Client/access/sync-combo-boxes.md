@@ -26,8 +26,6 @@ ms.date: 3/31/2022
 
 This article describes the AfterUpdate property runs an event procedure when you select a category in the first combo box.
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 289670
 
 > [!NOTE]

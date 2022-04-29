@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You cannot open an IRM protected workbook in Protected View in Excel 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open an Information Rights Management (IRM) protected Microsoft Excel 97-2003 workbook (.xls file) in Protected View in Excel 2013, the operation fails. Additionally, you receive the following error message:

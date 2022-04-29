@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "Updating or deleting data in a linked table is not supported by this ISAM" error in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 824159
 
 > [!NOTE]
