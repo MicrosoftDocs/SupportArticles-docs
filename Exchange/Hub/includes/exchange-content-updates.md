@@ -10,6 +10,9 @@
 | 4/24/2022 | [Autocomplete and suggestions don't work for internal recipients](/exchange/troubleshoot/email-alias/address-not-autocompleted-or-suggested) | added |
 | 4/25/2022 | [Can't delete a mail-enabled public folder](/exchange/troubleshoot/public-folders/cannot-delete-public-folder) | added |
 | 4/25/2022 | [Missing items in eDiscovery search results](/exchange/troubleshoot/compliance/ediscovery-search-missing-items) | added |
+| 4/24/2022 | [Autocomplete and suggestions don't work for internal recipients](/exchange/troubleshoot/email-alias/address-not-autocompleted-or-suggested) | added |
+| 4/25/2022 | [Can't delete a mail-enabled public folder](/exchange/troubleshoot/public-folders/cannot-delete-public-folder) | added |
+| 4/25/2022 | [Missing items in eDiscovery search results](/exchange/troubleshoot/compliance/ediscovery-search-missing-items) | added |
 
 
 ## Week of April 18, 2022
