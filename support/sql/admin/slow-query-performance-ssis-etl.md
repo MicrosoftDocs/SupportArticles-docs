@@ -92,7 +92,7 @@ The following could be reasons why the Delete performance operation slows down t
 
 Follow these troubleshooting tips to resolve this scenario:
 
-- Check if there are `cascade delete` operations. If yes, check the delete execution plan, or you can consider to disable the `cascade delete` for the table. For cascade options, see [ALTER TABLE table_constraint (Transact-SQL)](/sql/t-sql/statements/alter-table-table-constraint-transact-sql?view=sql-server-ver15).
+- Check if there are `cascade delete` operations. If yes, check the delete execution plan, or you can consider to disable the `cascade delete` for the table. For cascade options, see [ALTER TABLE table_constraint (Transact-SQL)](/sql/t-sql/statements/alter-table-table-constraint-transact-sql?view=sql-server-ver15&preserve-view=true).
 - Tune the performance of `SELECT` in the `Delete` statement. For example, the following query is `DELETE`, but you can rewrite it as a `SELECT` and modify the select performance.
 
     ```sql
