@@ -71,6 +71,8 @@
 
 - name: Print Driver
   items:
+  - name: IStiDeviceControl::GetMyDevicePortName may return incorrect port name when multiple USB scanners connected
+    href: IStiDeviceControl-GetMyDevicePortName-incorrect-port-name-multiple-USB.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
 
