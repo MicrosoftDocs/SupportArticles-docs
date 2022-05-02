@@ -1,0 +1,122 @@
+---
+title: Troubleshoot Network Policy Server
+description: Learn how to troubleshoot scenarios related to Network Policy Server (NPS).
+ms.date: 04/10/2022
+author: v-tappelgate
+ms.author: v-tappelgate
+manager: dcscontentpm
+audience: itpro
+ms.topic: troubleshooting
+ms.prod: windows-server
+localization_priority: medium
+ms.reviewer: kaushika
+ms.custom: sap:nps, csstroubleshoot
+ms.technology: networking
+---
+
+# Troubleshoot Network Policy Server issues
+
+This article provides guideance for troubleshooting Network Policy Server. The article includes a checklist for troubleshooting, a description of known issues, and instructions for resolving specific Network Policy Server events.
+
+## Troubleshooting check list
+
+Use this checklist to identify and resolve common Network Policy Server issues
+
+### Check that NPS Auditing is enabled
+
+1. Open an administrative Command Prompt window, and then enter the following command:
+
+   ```console
+   auditpol /get /subcategory:"Network Policy Server"
+   ```
+
+   If the result of this command is "Success and Failure" or "Failure," then auditing is enabled.
+
+1. If auditing is not enabled, you can enable auditing by entering the following command:
+
+   ```console
+   auditpol /set /subcategory:"Network Policy Server" /success:enable /failure:enable
+   ```
+
+### Review event logs for authentication failure errors
+
+When NPS auditing is enabled, the event logs record any authentication failure errors. To review this information, follow these steps:
+
+1. Open Event Viewer, and then select **Custom views** > **Server roles** > **Network Policy and Access Services**.
+1. Check for events that have Event ID 6273 or 6274. Most authentication failures produce these events.
+1. Check the reason codes ofthe authentication failure events. The reason code indicates the cause of the failure.
+1. Check to see if the events are associated with a single user account. If so, check the NPS event log for additional references to that user account. Such events may indicate an issue in network policy or connection request policy.
+
+### Check the NPS configuration
+
+- Make sure that the NPS server certificate is valid
+- Make sure that the **RADIUS Clients and Servers** list includes the radius client in question.
+- Make sure that the shared secret key of the radius client matches the NPS shared secret key.
+- Make sure that the radius ports (1812,1813,1645,1646) are allowed through all firewalls.
+- Make sure that the network and connection request policy includes all appropriate conditions.
+- Make sure that the network policy constraints list the correct authentication method.
+
+### Check the request forwarding configuration
+
+If the NPS server must forward the request to another radius server for authentication, then check the following:
+
+- Make sure that the **Remote Radius Server Groups** list includes the radius server in question.
+- Make sure that the authentication settings for the connection request policy are correct, including the group that is used in forward requests to the remote server.
+
+### Temporarily remove Azure AD MFA registry keys
+
+If you are using NPS and Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA) try to isolate the behavior by temporarily removing the Azure AD MFA registry keys. To do this, follow these steps:
+
+1. In Registry Editor, back up the **HKEY_LOCAL_MACHINE\system\currentcontrolset\services\authsrv\parameters** subkey.
+1. Under this subkey, delete the **AuthorizationDLLs** and **ExtensionDLLs** entries.
+1. Test NPS authentication again.
+1. If NPS authentication fails, check Event Viewer to see the reason codes for any related events.
+1. If NPS authentication succeeds, then the issue might be specific to Azure AD MFA. To check for related events, open Event Viewer and go to **Applications and Services Logs** > **Microsoft** > **AzureMfa** > **AuthN** > **AuthZ**.
+
+## Emerging and Known issues
+
+For descriptions and summaries of emerging and known issues, see [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center. The Windows release health page is designed to provide troubleshooting information for known issues that your users may be experience. This page is available to customers who have a Microsoft 365 subscription.
+
+## NPS Event ID 13: A RADIUS message was received from the invalid RADIUS client IP address xx.xx.xx.xx
+
+### Cause of Event ID 13
+
+The NPS event log records this event when the NPS server receives a message from a radius client that isn't on the configured list of radius clients.
+
+### Solution to Event ID 13
+
+Check that the IP address listed in the radius client is relevant. If it is, add the radius client to the **Radius Clients** list.
+
+For more information, see [Event ID 13 - RADIUS Client Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd316135(v=ws.10))
+
+## NPS Event ID 18: An Access-Request message was received from RADIUS client %1 with a message authenticator attribute that is not valid
+
+### Cause of Event ID 18
+
+The NPS event log records this event when authentication fails because the shared secret key of the radius client doesn't match the shared secret key of the NPS server.
+
+### Solution to Event ID 18
+
+Check the value of both shared secret keys. Additionally, you can generate and configure a new key, and then check to see whether the issue recurrs.
+
+For more information, see [Event ID 18 - NPS Server Communication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735343(v=ws.10))
+
+## NPS Event ID 6273, reason code 16: Network Policy Server denied access to a user
+
+### Cause of Event ID 6273, reason code 16
+
+The NPS event log records this event and reason code when authentication fails because the user's password is incorrect.
+
+### Solutions to Event ID 6273, reason code 16
+
+- Check that the username and password for the user are valid.
+- Check to see whether the user account is locked in Active Directory.
+- Check if the request is hitting the correct DC and user account exist.
+
+For more information, see [Event ID 6273 - NPS Authentication Status](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd316172(v=ws.10))
+
+## References
+
+- [Audit Network Policy Server](/windows/security/threat-protection/auditing/audit-network-policy-server)
+- [Network Policy Server Best Practices](/windows-server/networking/technologies/nps/nps-best-practices)
+- [Manage Network Policy Server](/windows-server/networking/technologies/nps/nps-manage-top)
