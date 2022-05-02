@@ -41,7 +41,7 @@ HRESULT CYourWIADriver::Initialize(_In_ PSTIDEVICECONTROL pHelDcb,
         }
 ```
 
-The [IStiUSD::Initialize](https://docs.microsoft.com/windows-hardware/drivers/ddi/stiusd/nf-stiusd-istiusd-initialize) method typically creates a read/write path for the devices that connect to dedicated ports by calling `CreateFile`. The WIA driver uses a device port name that it obtains by calling the [IStiDeviceControl::GetMyDevicePortName](https://docs.microsoft.com/windows-hardware/drivers/ddi/stiusd/nf-stiusd-istidevicecontrol-getmydeviceportname).
+The [IStiUSD::Initialize](/windows-hardware/drivers/ddi/stiusd/nf-stiusd-istiusd-initialize) method typically creates a read/write path for the devices that connect to dedicated ports by calling `CreateFile`. The WIA driver uses a device port name that it obtains by calling the [IStiDeviceControl::GetMyDevicePortName](/windows-hardware/drivers/ddi/stiusd/nf-stiusd-istidevicecontrol-getmydeviceportname).
 
 In this scenario, when you try scanning a document from one device, the scan process can't initiate due to errors.
 
