@@ -32,7 +32,7 @@ Use this checklist to identify and resolve common Network Policy Server issues
 
    If the result of this command is "Success and Failure" or "Failure," then auditing is enabled.
 
-1. If auditing is not enabled, you can enable auditing by entering the following command:
+1. If auditing isn't enabled, you can enable auditing by entering the following command:
 
    ```console
    auditpol /set /subcategory:"Network Policy Server" /success:enable /failure:enable
@@ -45,7 +45,7 @@ When NPS auditing is enabled, the event logs record any authentication failure e
 1. Open Event Viewer, and then select **Custom views** > **Server roles** > **Network Policy and Access Services**.
 1. Check for events that have Event ID 6273 or 6274. Most authentication failures produce these events.
 1. Check the reason codes of the authentication failure events. The reason code indicates the cause of the failure.
-1. Check to see if the events are associated with a single user account. If so, check the NPS event log for additional references to that user account. Such events may indicate an issue in network policy or connection request policy.
+1. Check to see if the events are associated with a single user account. If so, check the NPS event log for other references to that user account. Such events may indicate an issue in network policy or connection request policy.
 
 ### Check the NPS configuration
 
@@ -65,7 +65,7 @@ If the NPS server must forward the request to another radius server for authenti
 
 ### Temporarily remove Azure AD MFA registry keys
 
-If you are using NPS and Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA) try to isolate the behavior by temporarily removing the Azure AD MFA registry keys. To do this, follow these steps:
+If you're using NPS and Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA), try to isolate the behavior by temporarily removing the Azure AD MFA registry keys. To do this, follow these steps:
 
 1. In Registry Editor, back up the **HKEY_LOCAL_MACHINE\system\currentcontrolset\services\authsrv\parameters** subkey.
 1. Under this subkey, delete the **AuthorizationDLLs** and **ExtensionDLLs** entries.
@@ -89,7 +89,7 @@ Check that the IP address listed in the radius client is relevant. If it is, add
 
 For more information, see [Event ID 13 - RADIUS Client Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd316135(v=ws.10))
 
-## NPS Event ID 18: An Access-Request message was received from RADIUS client %1 with a message authenticator attribute that is not valid
+## NPS Event ID 18: An Access-Request message was received from RADIUS client %1 with a message authenticator attribute that isn't valid
 
 ### Cause of Event ID 18
 
@@ -97,7 +97,7 @@ The NPS event log records this event when authentication fails because the share
 
 ### Solution to Event ID 18
 
-Check the value of both shared secret keys. Additionally, you can generate and configure a new key, and then check to see whether the issue recurrs.
+Check the value of both shared secret keys. Additionally, you can generate and configure a new key, and then check to see whether the issue recurs.
 
 For more information, see [Event ID 18 - NPS Server Communication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735343(v=ws.10))
 
