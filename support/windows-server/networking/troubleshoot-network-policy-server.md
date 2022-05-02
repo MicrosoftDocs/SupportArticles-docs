@@ -16,7 +16,7 @@ ms.technology: networking
 
 # Troubleshoot Network Policy Server issues
 
-This article provides guideance for troubleshooting Network Policy Server. The article includes a checklist for troubleshooting, a description of known issues, and instructions for resolving specific Network Policy Server events.
+This article provides guidance for troubleshooting Network Policy Server. The article includes a checklist for troubleshooting, a description of known issues, and instructions for resolving specific Network Policy Server events.
 
 ## Troubleshooting check list
 
@@ -44,7 +44,7 @@ When NPS auditing is enabled, the event logs record any authentication failure e
 
 1. Open Event Viewer, and then select **Custom views** > **Server roles** > **Network Policy and Access Services**.
 1. Check for events that have Event ID 6273 or 6274. Most authentication failures produce these events.
-1. Check the reason codes ofthe authentication failure events. The reason code indicates the cause of the failure.
+1. Check the reason codes of the authentication failure events. The reason code indicates the cause of the failure.
 1. Check to see if the events are associated with a single user account. If so, check the NPS event log for additional references to that user account. Such events may indicate an issue in network policy or connection request policy.
 
 ### Check the NPS configuration

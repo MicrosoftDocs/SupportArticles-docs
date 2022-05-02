@@ -1660,6 +1660,8 @@
     items:
     - name: Certificate requirements when you use EAP-TLS
       href: ./networking/certificate-requirements-eap-tls-peap.md
+    - name: Troubleshoot Network Policy Server
+      href: ./networking/troubleshoot-network-policy-server.md
   - name: Remote access
     items:
     - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
