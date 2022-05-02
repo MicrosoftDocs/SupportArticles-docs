@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot issues with Git clone to Azure repos
-description: This article helps you troubleshoot the problem when you try to clone a Git repository of Azure DevOps and the Git clone or Git Push function fails.
+description: This article helps you to troubleshoot the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.topic: troubleshooting 
@@ -10,17 +10,19 @@ ms.service: az-devops-project
 
 # Troubleshoot issues with Git clone to Azure repos
 
-This article helps you troubleshoot the problem when you try to clone a Git repository of Azure DevOps and the Git clone or Git Push function fails.
+This article helps you to troubleshoot the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 
 ## Troubleshoot issues with Git clone to a repository
 
-When you try cloning a repository in GitHub, various issues may cause the Git clone operation failing such as proxy configuration, SSL certificate, or credential cache problems.
+When you try cloning a repository in GitHub, various issues such as, proxy configuration, SSL certificate, or credential cache problems , might cause the Git clone operation to fail.
 
 ## Troubleshooting check list
 
-1. Step 1. Enable [verbose tracing](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt--v) to set verbose level of tracing for the Git commands that you're running.
+To identify the cause of the issues, follow these steps:
 
-2. Step 2. Set the following variables in sequence, and run the Git commands for each set variable to get more information on the errors.
+1. Enable [verbose tracing](https://git-scm.com/docs/git-clone#Documentation/git-clone.txt--v) to set verbose level of tracing for the Git commands that you're running.
+
+2. Set the following variables in sequence, and run the Git commands for each set variable to get more information on the errors.
     - GIT_TRACE=1
     - GIT_TRACE_PACKET=1
     - GIT_TRACE_CURL_NO_DATA=1
@@ -34,9 +36,9 @@ To learn more about Git environment variables, see [Git Internals - Environment 
 
 ## Cause 1: Git can't connect through the proxy server
 
-If you're using a proxy server but the Git configuration isn't set to connect through the proxy server, you may see the error messages such as 407 error or 502 error. This issue also occurs when the connection can't establish through the proxy server and you see the errors similar to "unable to access <git hub url\>:" or "couldn't resolve host <gihub.com\>".
+If you're using a proxy server but the Git configuration isn't set to connect through the proxy server, you may see the error messages such as 407 error or 502 error. This issue also occurs when the connection can't establish through the proxy server and you see the errors similar to "unable to access <`your github url`\>:" or "couldn't resolve host `github.com`".
 
-### Solution 1: Configure Git to use the proxy server
+### Solution: Configure Git to use the proxy server
 
 Run `git config --list` to get list of all the Git configuration on the system, and check whether the proxy server is in use.
 
@@ -61,7 +63,7 @@ If Git is using a local self-signed certificate, you may see the error "SSL cert
 
 ### Solution 1: Disable the TLS/SSL verification
 
-If you've installed a local Team Foundation Server (TFS) and you want to disable the TLS/SSL verification that Git does, run the following command.
+If you've installed a local Team Foundation Server (TFS) and you want to disable the TLS/SSL verification that Git performs, run the following command.
 
 `git config --global http.sslVerify false`
 
@@ -69,9 +71,9 @@ If you've installed a local Team Foundation Server (TFS) and you want to disable
 
 If you want to continue the TLS/SSL verification that Git does, follow these steps to add the root certificate in the local Git:
 
-1. Step 1. Export the root certificate as Base-64 encoded X.509 (.CER) file by following these steps:
+1. Export the root certificate as Base-64 encoded X.509 (.CER) file by following these steps:
 
-    1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as <https://myserver/tfs\>.
+    1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://myserver/tfs`.
 
     1. On rightmost to the address bar, select the lock icon, and then select the **Connection is secure** link.
 
@@ -82,7 +84,7 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Select **View Certificate** to open **Certification** window for the root certificate.
 
-    1. On the **Details** tab of root certificate, select **Copy to File...** .
+    1. On the' **Details** tab of root certificate, select **Copy to File...** .
     :::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-step-details-tab.jpg" alt-text="SSL Details tab in the Certification window":::
 
     1. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
@@ -90,49 +92,48 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Save the root certificate on the local disk.
 
-1. Step 2. Configure Git to use local directory for Git certificates store by following these steps:
+1. Configure Git to use local directory for Git certificates store by following these steps:
 
     1. Go to *C:\Program Files\Git\bin* on your local Windows disk, and make a copy of the *curl-ca-bundle.crt* file.
 
     > [!NOTE]
-    > In the Git for Windows 2.x series, the path will be changed to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86* section.
+    >
+    >- In the Git for Windows 2.x series, the path will be changed to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86*.
+    >- When you install Git for Windows (`msysgit`) on your device, a curl-ca-bundle.crt file stores in your Program Files directory. This directory is the root certificate store for `git.exe` that Git trusts.
+    >- The curl-ca-bundle.crt file, which stores on a per-device basis, is private for your local Windows client. The text file has UNIX (`\n`) line endings.
 
-    > [!IMPORTANT]
-    > When you install Git for Windows (`msysgit`) on your device, a curl-ca-bundle.crt file stores in your Program Files directory. This directory is the root certificate store for `git.exe` that Git trusts.
-    > The curl-ca-bundle.crt file, which stores on a per-device basis, is private for your local Windows client. The text file has UNIX (`\n`) line endings.
+    2. Copy the *curl-ca-bundle.crt* file on your user profile directory (*C:\Users\<yourname\>*). Or for example, you can run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname\>` command.
 
-    1. Copy the *curl-ca-bundle.crt* file on your user profile directory (*C:\Users\<yourname\>*). Or for example, you can run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname\>` command.
+    3. Run the following command to configure Git to use local copy of certificate store from your Windows client:
 
-    1. Run the following command to configure Git to use local copy of certificate store from your Windows client:
-
-    `git config --global http.sslCAInfo C:/Users/yourname/curl-ca-bundle.crt`
+        `git config --global http.sslCAInfo C:/Users/yourname/curl-ca-bundle.crt`
 
 1. Step 3. Add the exported root certificate to the local copy of Git certificate store by following these steps:
 
     1. Open the exported root certificate in Notepad, and copy entire contents on to the clipboard.
 
-    1. Open *curl-ca-bundle.crt* file by going to *C:/Users/yourname/curl-ca-bundle.crt* path in a text editor.
+    2. Open *curl-ca-bundle.crt* file by going to *C:/Users/yourname/curl-ca-bundle.crt* path in a text editor.
 
     > [!TIP]
     > You can use the *unix2dos* tool to change the line endings in the file from \n to \r\n and be able to open the file in Notepad.
 
-    1. Add an entry for the root certificate at the end, and then paste the certificate contents in the *curl-ca-bundle.crt* file.
+    3. Add an entry for the root certificate at the end, and then paste the certificate contents in the *curl-ca-bundle.crt* file.
 
-    1. Save the *curl-ca-bundle.crt* file.
+    4. Save the *curl-ca-bundle.crt* file.
 
-    1. Try cloning operation to verify if the SSL error is resolved.
+    5. Try cloning operation to verify if the SSL error is resolved.
 
 ## Cause 3: Authentication error or credential cache issues
 
 If your account name or domain password has changed, or you're getting authentication error, there could be authentication and credential cache issues.
 
-### Solution 1: Reset the Git credentials manager (GCM)
+### Solution: Reset the Git credentials manager (GCM)
 
 To resolve the authentication error or credentials cache issues, begin by following [Troubleshooting check list](#troubleshooting-check-list) to see the error information, and then follow these steps:
 
-1. Step 1. Run `git config --list` and check if you're using Git Credentials Manager (GCM). If the *credential.helper* is set to manager, then GCM is in use.
+1. Run `git config --list` and check if you're using Git Credentials Manager (GCM). If the *credential.helper* is set to manager, then GCM is in use.
 
-1. Step 2. Reset the GCM by following these steps:
+1. Reset the GCM by following these steps:
 
     1. Run `git config --global --unset credential.helper` command to unset the GCM.
 
