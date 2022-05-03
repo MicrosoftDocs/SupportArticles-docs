@@ -1,6 +1,6 @@
 ---
 title: IStiDeviceControl::GetMyDevicePortName may return incorrect port name when multiple USB scanners connected
-description: This article discusses the problem when you connect multiple USB scanners on Windows 11 and GetMyDevicePortName returns incorrect port name of a device.
+description: This article discusses the problem that occurs when you connect multiple USB scanners on Windows 11 and GetMyDevicePortName returns incorrect port name of a device.
 ms.date: 05/02/2022
 ms.custom: sap:Print driver
 author: Dipesh-Choubisa
@@ -10,7 +10,7 @@ ms.technology: windows-hardware-print-driver
 
 # IStiDeviceControl::GetMyDevicePortName may return incorrect port name when multiple USB scanners connected
 
-This article discusses the problem when you connect multiple USB scanners on Windows 11 and `GetMyDevicePortName` returns incorrect port name of a device.
+This article discusses the problem that occurs when you connect multiple USB scanners on Windows 11 and `GetMyDevicePortName` returns incorrect port name of a device.
 
 ## Symptoms
 
@@ -18,7 +18,7 @@ Consider the following scenario:
 
 1. You are connecting multiple USB scanners to a Windows 11 device.
 1. The scanner device isn't working properly when the device has started up from the sleep state.
-1. Your Windows Image Acquisition (WIA) driver is using `IStiDeviceControl::GetMyDevicePortName` under the `IStiUSD::Initialize` method as similar to the code example below.
+1. Your Windows Image Acquisition (WIA) driver is using `IStiDeviceControl::GetMyDevicePortName` under the `IStiUSD::Initialize` method as the following code example.
 
 ```cppwinrt
 ///////////////////////////////////////////////////////////////////////////
@@ -47,11 +47,11 @@ In this scenario, when you try scanning a document from one device, the scan pro
 
 ## Cause
 
-This issue occurs because the WIA service on Windows 11 does not refresh port name information that is present in memory storage while the system is in sleep state. The scanner port's path name might change after the sleep state. Therefore, the WIA driver may fail in driver initialization phase and may release the errors. The issue that you might see depends on your driver implementation.
+This issue occurs because the WIA service on Windows 11 does not refresh port name information that is present in memory storage while the system is in sleep state. The scanner port's path name might change after the sleep state. Therefore, the WIA driver might fail in driver initialization phase and release the errors. The issue that you might see depends on your driver implementation.
 
 ## Workaround
 
-To avoid this issue, you can retrieve the port name from registry by using `RegQueryValueEx` with code example below. Run this code considering as one of the alternatives to obtain the port name.
+To avoid this issue, you can retrieve the port name from registry by using `RegQueryValueEx` with the following code sample. Run this code considering as one of the alternatives to obtain the port name.
 
 ```cppwinrt
 ///////////////////////////////////////////////////////////////////////////
