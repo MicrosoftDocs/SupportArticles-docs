@@ -137,6 +137,13 @@ After the upload, a new diagnostics report is listed in the Azure portal.
 
 Use the **Settings** toolbar button to change the storage account where the diagnostics insights and output can be stored. You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights are not deleted. However, they will no longer be displayed in the list of diagnostics reports.
 
+> [!NOTE]
+> Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables and the reports (compressed files) are stored in a binary large object (BLOB) container that is named azdiagextnresults.  
+>    
+> If your storage account uses private endpoints, do the following so that Performance Diagnostics can store the insights and the reports in it:
+> * [Create separate private endpoints for Table and BLOB](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints#creating-a-private-endpoint)
+> * [Add DNS configuration to each of the private endpoints](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints#dns-changes-for-private-endpoints)
+
 ## Review insights and performance diagnostics report
 
 Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
