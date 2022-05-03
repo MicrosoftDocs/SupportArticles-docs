@@ -140,9 +140,9 @@ Use the **Settings** toolbar button to change the storage account where the diag
 > [!NOTE]
 > Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables and the reports (compressed files) are stored in a binary large object (BLOB) container that is named azdiagextnresults.  
 >    
-> If your storage account uses private endpoints, do the following so that Performance Diagnostics can store the insights and the reports in it:
-> * [Create separate private endpoints for Table and BLOB](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints#creating-a-private-endpoint)
-> * [Add DNS configuration to each of the private endpoints](https://docs.microsoft.com/en-us/azure/storage/common/storage-private-endpoints#dns-changes-for-private-endpoints)
+> If your storage account uses [private endpoints](https://docs.microsoft.com/azure/storage/common/storage-private-endpoints), do the following so that Performance Diagnostics can store insights and reports in it:
+> * Create separate private endpoints for Table and BLOB.  
+> * Add DNS configuration to each of the above private endpoints.  
 
 ## Review insights and performance diagnostics report
 
