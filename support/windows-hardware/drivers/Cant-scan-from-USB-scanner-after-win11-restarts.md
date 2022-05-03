@@ -15,18 +15,17 @@ This article discusses the problem that occurs when you restart your Windows 11 
 
 You've a scanner connected with your Windows 11 device by using USB cable. Consider the scenario where you've unplugged and turned off the scanner, and then reconnected and turned the scanner on after restarting your Windows 11 device.
 
-In this scenario, if you try to scan a document from the scanner, you are unable to scan the document due to the following error.
+In this scenario, if you try to scan a document from the scanner, you are unable to scan the document due to the following error:
 
 "You need a WIA driver to use this device. Please install it from the installation CD or manufacturer's website, and try again."
 
 You can verify by referring WIA service log whether this issue is occurring on your device. To verify, find WIA service log into the *C:\Windows\debug\WIA\wiatrace.log* file.
 
-If you see a similar error log to the following example in your WIA service log, then you're encountering this issue.
+If you see similar error messages to the following example in your WIA service log, then you're encountering this issue.
 
-```
-[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)
-[wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)
-```
+"[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)"
+
+"[wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)"
 
 ## Cause
 
