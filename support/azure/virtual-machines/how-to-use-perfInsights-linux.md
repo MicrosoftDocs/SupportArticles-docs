@@ -180,7 +180,9 @@ The following categories of rules are currently supported:
 #### Tool requirements
 
 - This tool must be run on the VM that has the performance issue.
-- Python 3.x or Python 2.7 must be installed on the VM.
+- Python 3.6 or greater, must be installed on the VM. 
+>[!Note]
+>The Python Software Foundation (PSF) has announced the end of support for Python 2. Installation of PerfInsights is not blocked if Python 2.7 is installed on the VM. However, no changes or bug fixes will be made in PerfInsights to support Python 2.7. Please see the external website page [Sunsetting Python 2](https://www.python.org/doc/sunset-python-2/) for more information. 
 
 - The following distributions are currently supported:
 
