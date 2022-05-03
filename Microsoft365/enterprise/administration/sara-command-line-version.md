@@ -24,7 +24,7 @@ The command-line version of Microsoft Support and Recovery Assistant (SaRA) is s
 ## Download and run the command-line version of SaRA
 
 1. Download SaRA by using the following link: [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles)
-1. In the downloaded file, extract the files in the *DONE* folder to a folder that you can access from the user's computer on which you will run SaRA.
+1. In the downloaded file, extract the files in the *DONE* folder to a folder that you can access from the user's computer on which you'll run SaRA.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
     **Note:** See the table in the "[Supported switches](#supported-switches)" section to determine whether an elevated Command Prompt window is required to run SaRA for the user's scenario.
