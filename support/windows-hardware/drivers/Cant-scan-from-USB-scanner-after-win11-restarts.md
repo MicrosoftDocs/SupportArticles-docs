@@ -23,17 +23,15 @@ You can verify by referring WIA service log whether this issue is occurring on y
 
 If you see a similar error log to the following example in your WIA service log, then you're encountering this issue.
 
-```csharp-interactive
+```
 [wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)
 [wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)
 ```
 
 ## Cause
 
-This issue occurs because Windows Image Acquisition (WIA) service on Windows 11 might not refresh the device identifier information after the restart, if the scanner is disconnected.
-
-> [!NOTE]
-> This problem is the known issue of WIA service.
+This issue occurs because Windows Image Acquisition (WIA) service on Windows 11 might not refresh the device identifier information after the restart, whenever the scanner is disconnected.
+This problem is the known issue of WIA service.
 
 ## Workaround
 
