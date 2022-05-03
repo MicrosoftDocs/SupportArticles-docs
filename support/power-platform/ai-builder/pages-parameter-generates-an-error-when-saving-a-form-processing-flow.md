@@ -15,8 +15,10 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-"error message “Flow save failed with code 'WorkflowOperationParametersExtraParameter' and message 'The API operation does not contain a definition for parameter 'item/requestv2/pages'.'”"
-<!--Is this all one message? Let's make bold the exact message(s). Start with "You get the message,...-->
+When you try to save a form processing flow by using the **Pages** parameter, you receive the following error message:
+
+> Flow save failed with code 'WorkflowOperationParametersExtraParameter'  
+> The API operation does not contain a definition for parameter 'item/requestv2/pages'
 
 ## Cause
 

@@ -23,4 +23,4 @@ This issue can occur with the Google Chrome browser due to the way this browser 
 
 ## Resolution
 
-To work around this issue, try a different browser like Microsoft Edge. <!--Is it ok that I added the Edge content?-->
+To work around this issue, try a different browser like Microsoft Edge.
