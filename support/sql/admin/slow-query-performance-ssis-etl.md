@@ -64,7 +64,6 @@ If the query can be completed, collect the actual execution plan, and treat it a
     Select text, * from sys.dm_exec_query_statistics_xml(64)
     cross apply sys.dm_exec_sql_text(sql_handle)
     ```
-
 1. Click on the `query_plan`, and save it as *.sqlplan*.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
