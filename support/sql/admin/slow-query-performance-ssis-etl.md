@@ -18,7 +18,7 @@ You may encounter some performance issues from the SQL Server Integration Servic
 Before you start troubleshooting such issues, consider the following questions:
 
 - Did you check which SQL statement in the Batch, ETL, or Bulk Data Processing job is slow?
-- Have you enabled a performance monitor tool such as Microsoft or 3rd party to monitor the session status in SQL Server of the Batch, ETL, or Bulk Data Processing job?
+- Have you enabled a performance monitor tool such as Microsoft or third party to monitor the session status in SQL Server of the Batch, ETL, or Bulk Data Processing job?
 - When did the issue occur? Before that, was there any change in the data volume or in the Batch, ETL, or Bulk Data Processing T-SQL statement?
 - Was there an SQL Server or OS patch or upgrade? Was there a change or migration in the server hardware?
 
@@ -57,8 +57,7 @@ If the query can be completed, collect the actual execution plan, and treat it a
     --your query body
     SET STATISTICS XML OFF
     ```
-``
-1. Run the following statement to collect the light weight query plan, replace the `spid` (Server process ID) with your executing query window’s `spid`:
+1. Run the following statement to collect the lightweight query plan, replace the `spid` (Server process ID) with your executing query window’s `spid`:
 
     ```sql
     Select * from sys.dm_exec_query_statistics_xml(spid)
@@ -72,7 +71,7 @@ If the query can be completed, collect the actual execution plan, and treat it a
 
 ### Insert performance
 
-Insert performance is one of the reasons to slow the query performance. The following could be the reasons why the insert performance slows down the query performance:
+Insert performance is one of the reasons to slow the query performance. The following reasons could be causing the Insert performance to slow down: 
 
 - Each Insert in a large batch causes a log flush, which increases the wait period.
 - Each Insert is against a clustered-index primary key (defined as an identity column), which causes a natural hotspot. The symptom is `PAGELATCH` contention (specific to inserts from multiple connections).
@@ -105,7 +104,7 @@ Following are some troubleshooting tips to resolve this scenario:
 
 ### ETL job performance is slow
 
-If the ETL jobs have become slow, the following could be the factors:
+If the ETL jobs have become slow, the following factors could be the reason:
 
 - The data volumes (disk) may have changed. For example, there could be a change in the speed, load on the volumes, and so on.
 - There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there may have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
@@ -115,4 +114,4 @@ If the ETL jobs have become slow, the following could be the factors:
 
 ### SSIS related settings
 
-If the bottleneck is not on the SQL Server side, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
+If the bottleneck isn't on the SQL Server side, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
