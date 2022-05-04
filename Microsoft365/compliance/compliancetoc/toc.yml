@@ -75,8 +75,6 @@
       href: ../ediscovery/resolve-ediscovery-issues.md
   - name: Holds
     items:
-    - name: Can't delete messages
-      href: ../holds/cannot-delete-messages.md
     - name: Can't update calendar items from OWA or Outlook on Mac
       href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
     - name: Changes to IgnoreLegalHold
