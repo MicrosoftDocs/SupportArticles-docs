@@ -32,7 +32,6 @@ This article lists the known issues for Microsoft Teams Rooms by feature area.
 
 | Issue  |  Description | Workaround |
 |  ---        |      ---             |   ---            |
-| Jabra Panacast 50 Running on MTR-W version 4.12.126 |Teams Meeting video will not work when Jabra Panacast 50 is configured as content camera mode.| Disable Jabra Panacast 50 Content camera mode.|
 |Whiteboard or Content Camera doesn't enhance content when edges are not detected|After you update to version [4.11.12.0](/microsoftteams/rooms/rooms-release-note#411120-1242022), the camera doesn't enhance or overlay all content in the camera view if there are no whiteboard edges in the content camera view.|The fix for this issue is available in application version [4.11.17.0](/microsoftteams/rooms/rooms-release-note#411170-332022).|
 |Edge browser starts automatically|Edge browser versions that are earlier than build 97.0.1072.62 start automatically together with the Microsoft Teams Rooms app when the device starts.|This issue should be resolved automatically (no user interaction required) on or before Monday, January 17, 2022. If a faster resolution is required when this issue occurs, go to edge://settings/help in Edge. An update should automatically download and install. In the browser, select **Restart** after the installation finishes. Close Azure IoT Edge, and then restart the system. The issue should now be resolved.|
 |Split gallery participant videos|When there's no shared content in a meeting that includes more than nine remote participants, and the meeting is presented in dual front-of-room displays, video participants on a front-of-room display that have the self-preview feature might appear as audio participants. Also, a smaller number of audio participants than the actual number of audio participants appears on the dual front-of-room displays.|Currently, there is no workaround.|
@@ -58,6 +57,7 @@ This article lists the known issues for Microsoft Teams Rooms by feature area.
 | No video for remote participants from Android Meeting Room devices | Remote participants can't get video from meeting participants who're using Teams Rooms on Android devices, such as MTRA Poly X50, X30, and Yealink A20. The issue is intermittent. | Reboot the device and rejoin the Teams meeting. |
 | A random string displays in Teams on Android phones | A random string of characters is displayed in the **More** page when the time format is set to 24 hours. This issue occurs in **Firmware : 143.15.0.5 Teams app : 2022032303 CP : 5304 AA : 322**. | No workaround is available at this time. |
 | Busy on Busy feature is unavailable | The Busy on Busy feature isn't available in Teams on phones. | This feature isn't available for Teams on phones at this time. |
+| Jabra Panacast 50 doesn't display video in Teams meeting | When using Jabra Panacast 50 in a Teams meeting, if the **Whiteboard sharing mode** in Jabra Direct is set to **In separate content camera view**, the video doesn't display. | Set the **Whiteboard sharing mode** in Jabra Direct to **In main camera view**, and then re-join the Teams meeting. |
 
 ## Limitations
 
