@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Microsoft Intune app protection policy deployment
 description: This article gives troubleshooting guidance for IT Admins with issues when deploying Intune app protection policies. 
-ms.date: 04/26/2022
+ms.date: 05/05/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ---
@@ -14,30 +14,40 @@ This article helps IT Admins understand and troubleshoot problems when you apply
 
 Before you start troubleshooting, collect some basic information to help you better understand the problem and reduce the time to find a resolution.
 
-Collect the following information:
+Collect the following background information:
 
 - Which policy setting is or isn't applied? Is any policy applied?
 - What is the user experience? Have users installed and started the targeted app?
 - When did the problem start? Has app protection ever worked?
 - Which platform (Android or iOS) has the problem?
-- How many users are affected? Are all devices or only some devices affected?
+- How many users are affected? Are all users or only some users affected?
 - How many devices are affected? Are all devices or only some devices affected?
 - Although Intune app protection policies don't require a mobile device management (MDM) service, are affected users using Intune or a third-party MDM solution?
 - Are all managed apps or only specific apps affected? For example, are line-of-business (LOB) apps built with the [Intune App SDK](/mem/intune/developer/app-sdk-get-started) affected but store apps are not?
+- Is any management service other than Intune being used on the device?
 
-Now, you can start troubleshooting based on the answers to these questions.
+With the above information in place, you can start troubleshooting.
 
-## Root cause and solutions
+## Investigating root cause
 
-Successful app protection policy deployment relies on proper configuration of settings and other dependencies. The following sections offer solutions to the most common issues customers encounter when deploying APP:
+Successful app protection policy deployment relies on proper configuration of settings and other dependencies. The recommended flow for investigating common issues with Intune APP is as follows, which we review in more detail in this article:
 
-- [Solution 1: Verify app protection policy prerequisites](#solution-1-verify-app-protection-policy-prerequisites)
-- [Solution 2: Check app protection policy status](#solution-2-check-app-protection-policy-status)
-- [Solution 3: Verify that user identity is consistent between the app and Intune App SDK](#solution-3-verify-that-user-identity-is-consistent-between-the-app-and-intune-app-sdk)
-- [Solution 4: Verify that the user is targeted](#solution-4-verify-that-the-user-is-targeted)
-- [Solution 5: Verify that the managed app is targeted](#solution-5-verify-that-the-managed-app-is-targeted)
+1. [Verify you have met the prerequisites for deploying app protection policies](#step-1-verify-app-protection-policy-prerequisites).
+1. [Check app protection policy status and check targeting](#step-2-check-app-protection-policy-status):
+    - Is the user targeted?
+    - Has there been a user check-in from the affected device?
+    - Are the applications for the problem scenario managed via the targeted policy?
+    - Verify that the timing of policy delivery is within expected behavior. See [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery) for more information.
+1. [Verify that the user signed in to the affected application using their targeted corporate account](#step-3-verify-that-the-user-is-targeted).
+1. [Verify that the managed app is targeted](#step-4-verify-that-the-managed-app-is-targeted).
+1. [Verify that the user signed in to the affected application using their targeted corporate account](#step-5-verify-that-the-user-signed-in-to-the-affected-application-using-their-targeted-corporate-account).
+   - [Verify that user identity is consistent between the app and Intune App SDK](#solution-3-verify-that-user-identity-is-consistent-between-the-app-and-intune-app-sdk).
+1. [Collect device data](#step-6-collect-device-data):
+    - Work with the user to review they are trying to do and the steps they are taking.
+    - Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed.
+    - Collect APP logs through Microsoft Edge.
 
-### Solution 1: Verify app protection policy prerequisites
+### Step 1: Verify app protection policy prerequisites
 
 The first step in troubleshooting is to check whether all prerequisites are met. Although you can use Intune APP independent of any MDM solution, the following prerequisites must be met:
 
@@ -64,7 +74,7 @@ For more information about how to enable modern authentication for Skype for Bus
 - **On-premises**  
   [Modern authentication for SfB OnPrem with Azure AD](https://techcommunity.microsoft.com/t5/Skype-for-Business-Blog/Modern-Auth-for-SfB-OnPrem-with-AAD/ba-p/180910)
 
-### Solution 2: Check app protection policy status
+### Step 2: Check app protection policy status
 
 To check your app protection status, follow these steps:
 
@@ -79,15 +89,7 @@ To check your app protection status, follow these steps:
 
 For more information, see [How to validate your app protection policy setup in Microsoft Intune](/mem/intune/apps/app-protection-policies-validate).
 
-### Solution 3: Verify that user identity is consistent between the app and Intune App SDK
-
-In most scenarios, users log in to their accounts by using their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Azure AD. When this issue occurs, app protection policies aren't applied as expected.
-
-Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname).
-
-If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
-
-### Solution 4: Verify that the user is targeted
+### Step 3: Verify that the user is targeted
 
 Intune app protection policies must be targeted to users. If you don't assign an app protection policy to a user or user group, the policy isn't applied.
 
@@ -112,13 +114,47 @@ When you assign the policy to a user group, make sure that the user is in the us
 > - If the affected device uses Android Enterprise, only personally-owned work profiles will support app protection policies.
 > - If the affected device uses Apple's Automated Device Enrollment (ADE), make sure that **User Affinity** is enabled. User Affinity is required for any app that requires user authentication under ADE. For more information on iOS/iPadOS ADE enrollment, see [Automatically enroll iOS/iPadOS devices](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
 
-### Solution 5: Verify that the managed app is targeted
+### Step 4: Verify that the managed app is targeted
 
 When you configure Intune app protection policies, the targeted apps must use [Intune App SDK](/mem/intune/developer/app-sdk-get-started). Otherwise, app protection policies may not work correctly.
 
 Make sure that the targeted app is listed in [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps). For LOB or custom apps, verify that the apps use the latest version of [Intune App SDK](/mem/intune/developer/app-sdk-get-started).
 
 For iOS, this practice is important because each version contains fixes that affect how these policies are applied and how they function. For more information, see [Intune App SDK iOS releases](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/releases). For Android, this practice isn't as important. However, users must have the latest version of the Company Portal app installed because the Company Portal app works as the policy broker agent.
+
+### Step 5: Verify that the user signed in to the affected application using their targeted corporate account
+
+#### LEFTOVER: Verify that user identity is consistent between the app and Intune App SDK
+
+In most scenarios, users log in to their accounts by using their user principal name (UPN). However, in some environments (such as on-premises scenarios), users might use some other form of sign-in credentials. In these cases, you might find that the UPN that's used in the app doesn't match the UPN object in Azure AD. When this issue occurs, app protection policies aren't applied as expected.
+
+Microsoft's recommended best practices are to match the UPN to the primary SMTP address. This practice enables users to log in to managed apps, Intune app protection, and other Azure AD resources by having a consistent identity. For more information, see [Azure AD UserPrincipalName population](/azure/active-directory/hybrid/plan-connect-userprincipalname).
+
+If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
+
+### Step 6: Collect device data with Edge
+
+Start collecting details of the steps the user takes leading up to and including when the problem behavior occurs. This should include  screen shots or video of the steps they are following. This section explains how to use Edge for iOS and Android to access managed app logs.
+
+Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can use the following steps to send logs to help with troubleshooting.
+
+1. Open Edge for iOS and Android on your device.
+1. In the address bar, type **about:intunehelp**.
+1. Edge for iOS and Android launches in troubleshooting mode.
+
+From this screen you will be presented with two options and data about the device.
+
+IMAGE
+
+Select **View Intune App Status** to see a list of apps. If you select a specific app, it will show the APP settings associated with that app that are currently active on the device.
+
+IMAGE
+
+If the information displayed for a specific app is limited to the App Version and bundle alone with the policy check-in timestamp, it means no policy is currently applied to that app on the device.
+
+The **Get Started** option allows you to collect logs about the APP enabled applications. If you end up opening a support ticket with Microsoft for APP, you should always provide these logs from an affected device if possible. For Android-specific instructions, see [Upload and email logs](/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
+
+For a list of the settings stored in the APP logs, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 
 ## Additional troubleshooting scenarios
 
