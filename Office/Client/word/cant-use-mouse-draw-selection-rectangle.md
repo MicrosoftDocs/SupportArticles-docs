@@ -20,20 +20,17 @@ ms.date: 3/31/2022
 
 # You cannot use the mouse to draw a selection rectangle around multiple AutoShape objects in Microsoft Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 If a Microsoft Word 2010 or later document contains multiple AutoShape objects that are near one another, you cannot use the mouse to draw a selection rectangle around the objects.
 
-##  Resolution
+## Resolution
 
 To resolve this issue, use one of the following methods. 
 
 ### Method 1: Insert a drawing canvas before you insert any objects
 
 If you always want the drawing canvas to appear when you insert AutoShape objects, follow these steps:
-
 
 1. On the **File** Menu, click **Options**.   
 2. Click **Advanced**.   

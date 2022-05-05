@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Sorry, another account from your organization is already signed in on this computer" in Office 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to sign in to an Office 2013 app by using your Office 365 user ID and password, you receive the following error message:  

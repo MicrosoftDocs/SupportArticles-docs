@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses how to troubleshoot the activation issues in Microsoft Office from Office 365. Activation fails and you receive one the following error messages:  

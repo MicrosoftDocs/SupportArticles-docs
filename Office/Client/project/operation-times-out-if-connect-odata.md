@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # The operation has timed out when connecting to OData by using SSIS in Project Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use Microsoft SQL Server Integration Services (SSIS) packages to download data from your Project Online OData feeds, you receive the following error message:  

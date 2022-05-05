@@ -23,8 +23,6 @@ description: Describes how to troubleshoot problems when printing documents from
 
 This article provides steps to diagnose and resolve issues that occur when you cannot print a Microsoft Word for Office 365 document on Windows 10.
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 > [!NOTE]
 > To troubleshoot previous versions of Word, see [Troubleshoot print failures in Word](print-failures-in-word.md).
 

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Known issues with Office for Mac on MacOS 10.7 (Lion) and Higher
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses known issues that may occur with Office for Mac applications on MacOS 10.7 (Lion).

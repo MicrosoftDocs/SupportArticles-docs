@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # Tasks don't schedule as expected in Microsoft Project
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes why a task may not be scheduled as expected in Microsoft Project and offers suggestions for correcting the behavior.

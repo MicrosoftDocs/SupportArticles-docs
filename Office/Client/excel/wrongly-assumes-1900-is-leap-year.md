@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # Excel incorrectly assumes that the year 1900 is a leap year
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Microsoft Excel incorrectly assumes that the year 1900 is a leap year. This article explains why the year 1900 is treated as a leap year, and outlines the behaviors that may occur if this specific issue is corrected.

@@ -20,6 +20,8 @@ ms.custom:
 ---
 # Resolve eDiscovery hold errors
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 This article discusses common issues that may occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
 
 ## Recommended practices

@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Word slows or stops responding if there are excessive tracked changes or comments
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Microsoft Word becomes very slow or stops responding if an open document contains excessive tracked changes or comments.

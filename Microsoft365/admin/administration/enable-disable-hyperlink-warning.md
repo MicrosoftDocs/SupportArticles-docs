@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Enable or disable hyperlink warning messages in Office programs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 This step-by-step article describes how to enable or to disable the display of a warning message every time that you click a hyperlink in a Microsoft Office program. 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # You can't assign a federated domain to a user in the Microsoft 365 Admin Center
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You create a new user in the Microsoft 365 Admin Center in Office 365. However, when you try to assign a federated domain to the new user, the federated domain isn't listed in the user's list of domains.

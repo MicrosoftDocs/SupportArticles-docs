@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # An administrator can't add a domain to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 When you try to add a domain to Microsoft Office 365, Microsoft Azure, or Microsoft Intune as an administrator, you experience one of the following symptoms:

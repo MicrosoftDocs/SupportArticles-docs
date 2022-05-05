@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # How Access resolves Visual Basic for Applications references
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 824255
 
 > [!NOTE]

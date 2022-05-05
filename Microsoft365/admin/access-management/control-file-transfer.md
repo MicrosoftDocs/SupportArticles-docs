@@ -18,10 +18,6 @@ ms.date: 3/31/2022
 ---
 # Control the File Transfer feature in the Office app
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-## Introduction
-
 The File Transfer feature in the Microsoft Office app lets you send files from your mobile device to your computer, and receive files from your computer or device. For more information about the feature, see [Transfer files in the Office app for Android and iOS](https://support.office.com/article/transfer-files-in-the-office-app-for-android-and-ios-76e6a127-4af0-454a-83e3-1eee0d0877f5).
 
 > [!NOTE]

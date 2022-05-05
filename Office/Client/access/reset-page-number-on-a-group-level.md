@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to reset the page number on a group level in an Access report
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies to a Microsoft Access database (.mdb or .accdb) and to a Microsoft Access project (.adp).

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to view error signatures if an Office program experiences a serious error and quits
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 If a Microsoft Office program experiences a serious error and quits, your computer records an error signature that describes the error that occurred. This article explains how to view these error signatures.

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Access cache formats for SharePoint lists and document libraries
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Both Microsoft Access 2010 and Microsoft Office Access 2007 make significant improvements over earlier versions in how they work together with linked Microsoft SharePoint lists and document libraries to deliver a better user experience.

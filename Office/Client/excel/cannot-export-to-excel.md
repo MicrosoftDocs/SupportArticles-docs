@@ -17,14 +17,11 @@ ms.date: 3/31/2022
 
 # Unable to export to Excel from SharePoint Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use the **Export to Excel** button in Microsoft SharePoint Online, Excel starts and shows the following error message:
-```adoc
-An unexpected error has occurred. Changes to your data cannot be saved.  
-```
+
+> An unexpected error has occurred. Changes to your data cannot be saved.  
 
 ## Cause
 

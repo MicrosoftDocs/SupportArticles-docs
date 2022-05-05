@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Copy all range names programmatically in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Office Excel, you can create a Microsoft Visual Basic for Applications (VBA) macro that you can use to copy all the range names from the active workbook to another workbook. 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How do I keep on running Microsoft 365 Apps for enterprise 2013?
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 > [!NOTE]

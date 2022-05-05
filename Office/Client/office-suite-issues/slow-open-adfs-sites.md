@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 ---
 # Links in Office take at least 60 seconds to open AD FS sites
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you access Active Directory Federation Services (AD FS) sites through hyperlinks in Microsoft Office applications, the sites take a minimum of 60 seconds to open.

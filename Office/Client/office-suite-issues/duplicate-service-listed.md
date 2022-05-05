@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # In the Research pane in an Office application, a service is listed two times, or a service returns no result
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In a Microsoft Office application, you encounter the following issues.

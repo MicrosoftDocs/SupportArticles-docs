@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Properties of Office 365 users revert to original values when running Windows Server Essentials
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 Assume that you're running Windows Server 2012 Essentials or Windows Server 2012 R2 Essentials integrated with Microsoft Office 365. You change the properties of one or more Office 365 users by using the Office 365 portal. However, after the Windows Server Essentials directory integration process runs, the properties revert to their original values.

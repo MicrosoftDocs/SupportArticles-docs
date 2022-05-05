@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Something went wrong 30016-4" error when you try to uninstall Microsoft 365 Apps for enterprise
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to uninstall Microsoft 365 Apps for enterprise from a computer, you receive the following error message:

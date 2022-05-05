@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Users can't change their office phone number when they set up Azure Multi-Factor Authentication
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When a user tries to set up Azure Multi-Factor Authentication, the user can't select or change the **Office Phone** option. The user can't edit the phone number because the text box is unavailable (appears dimmed). Additionally, the user can't set the office phone as the preferred contact method. 

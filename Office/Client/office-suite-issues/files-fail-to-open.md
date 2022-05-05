@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Office files in SharePoint fail to open from an Office 2016 client
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 An error occurs when you try to open a Microsoft Office file from SharePoint by using an Office 2016 client, such as Word, Excel, or PowerPoint. You may receive one of the following error messages, depending on the version of Office or SharePoint and the method that's used to open the file:

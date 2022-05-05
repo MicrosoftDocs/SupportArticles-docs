@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Use Saved property to determine if a workbook has changed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 You can determine if changes have been made to a workbook by checking the Saved property of the workbook. The Saved property returns a True or False value depending on whether changes have been made to the workbook.

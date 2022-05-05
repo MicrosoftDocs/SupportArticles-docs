@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Your account has been locked. Contact your support person to unlock it, then try again." error when signing in to Microsoft 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 When a user tries to sign in to the Microsoft 365 portal, he or she receives the following error message:

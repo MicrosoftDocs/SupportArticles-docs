@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Install of Skype for Business 2016 from the Office 365 portal installs all the Microsoft 365 Apps for enterprise applications
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You have a Microsoft Microsoft 365 Apps for enterprise or Office 365 E3 subscription. In the Office 365 portal, you click **Install** for Skype for Business 2016 on the **Skype for Business** tab of the **MySoftware** page. After you activate the installation, you notice that all the Microsoft 365 Apps for enterprise applications are installed, instead of just Skype for Business 2016.
