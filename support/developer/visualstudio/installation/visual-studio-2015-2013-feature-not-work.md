@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2906882
 
 Some Microsoft Visual Studio 2013 and 2015 features don't work as expected when Internet Explorer 10 or a later version isn't installed. This problem affects only Windows 7 users. Users of Windows 8 and later versions aren't affected because the required dependencies for the browser are built into those operating systems.
 
-The following features are known not to work as expected if Internet Explorer 10 or a later version isn't installed:
+The following features don't work as expected if Internet Explorer 10 or a later version isn't installed:
 
 ## Visual Studio 2013
 
@@ -38,9 +38,9 @@ Consider the following scenario:
 
 In this scenario, if Internet Explorer 10 or a later version isn't installed, the page that shows information about the test results isn't displayed correctly.
 
-### JavaScript Console and DOM Explorer windows aren't displayed as expected
+### JavaScript Console and DOM Explorer windows don't display as expected
 
-When you use Visual Studio 2013 for Web development and you don't have Internet Explorer 11 installed, the JavaScript Console and DOM Explorer windows aren't displayed as expected. These features require Internet Explorer 11. If you're using Internet Explorer 10, you receive an error message that states that these features are unsupported by your current browser. If you're using Internet Explorer 9 or an earlier version, the browser window is blank but you don't receive the error message.
+When you use Visual Studio 2013 for Web development, and you don't have Internet Explorer 11 installed, the JavaScript Console and DOM Explorer windows don't display as expected. These features require Internet Explorer 11. If you're using Internet Explorer 10, you receive an error message that states that these features are unsupported by your current browser. If you're using Internet Explorer 9 or an earlier version, the browser window is blank but you don't receive the error message.
 
 ## Visual Studio 2015
 
