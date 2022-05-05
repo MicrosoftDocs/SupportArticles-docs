@@ -1,6 +1,6 @@
 ---
 title: Can't sign in to Teams after signing out
-description: Provides a work around for an issue where Android devices are signed out of Teams and can't sign in.
+description: Provides workarounds for an issue that Android devices are signed out of Teams and can't sign in.
 ms.date: 05/04/2022
 author: helenclu
 ms.author: luche
@@ -19,14 +19,14 @@ ms.reviewer: kponnus
 
 # Signed out of Teams on Android devices and can't sign in
 
-You've been signed out of Microsoft Teams on your Android device and can't sign in to Teams again. The devices that are affected by this issue include:
+You've been signed out of Microsoft Teams on your Android devices and can't sign in to Teams again. The devices that are affected by this issue include:
 
 - Teams Rooms on Android
 - Teams phone devices
 - Teams panels
 - Teams displays
 
-To work around this issue, use one of the following options.
+To work around this issue, use one of the following workarounds.
 
 ## Workaround 1: Sign in from the Microsoft Teams admin center
 
@@ -48,7 +48,7 @@ To work around this issue, use one of the following options.
 
 **Note** You must have Teams administrator permissions to use this workaround.
 
-If workaround 1 doesn’t work, restart the Android device remotely from the Teams admin center and then try to sign in.
+If workaround 1 doesn't work, restart the Android device remotely from the Teams admin center and then try to sign in.
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
 2. Select **Devices** in the navigation menu on the left side, and then select your Android device.
@@ -72,7 +72,7 @@ If workaround 1 doesn’t work, restart the Android device remotely from the Tea
 
    :::image type="content" source="media/signed_out_of_teams_android_devices/sign-in-on-this-device.png" alt-text="Screenshot of selecting sign in on this device.":::
 4. The username will already be populated in the appropriate field. Enter the password to sign in to the device.
-5. If the sign in is still unsuccessful, select **Start over**. This will sign you out of the device.
+5. If the sign-in is still unsuccessful, select **Start over**. This will sign you out of the device.
 
    :::image type="content" source="media/signed_out_of_teams_android_devices/start-over.png" alt-text="Screenshot of selecting start over on this device.":::
 6. Select **Refresh code** to generate a new code to sign in to the device.
