@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # How to use defined names to automatically update a chart range in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 To set up a chart that is automatically updated as you add new information to an existing chart range in Microsoft Excel, create defined names that dynamically change as you add or remove data. 

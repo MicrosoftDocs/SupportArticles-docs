@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Access: Incorrect version registry key
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In some instances Access may not detect/repair the registry key that specifies the configured version of Access. In this scenario, when double-clicking on the database file, you receive the following error:

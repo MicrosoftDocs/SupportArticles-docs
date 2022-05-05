@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to determine whether your Office 365 account has been compromised
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 You may have issues when you try to sign in to Microsoft Office 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.

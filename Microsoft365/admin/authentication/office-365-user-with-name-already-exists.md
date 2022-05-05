@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "A user with this name already exists. Use a different name." error in the Office 365 portal
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 In Microsoft Office 365, you receive an error message that's like the following in the Microsoft Office 365 portal:

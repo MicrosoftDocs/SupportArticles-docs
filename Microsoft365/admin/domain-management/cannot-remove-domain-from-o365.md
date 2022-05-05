@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Cannot Remove Domain" error when you try to remove a domain from Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to remove a domain from Office 365 in the Office 365 portal, you receive the following error message:

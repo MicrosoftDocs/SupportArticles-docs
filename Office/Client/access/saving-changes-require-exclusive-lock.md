@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # Exclusive lock is required for saving design changes to Access objects
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 283228
 
 > [!NOTE]

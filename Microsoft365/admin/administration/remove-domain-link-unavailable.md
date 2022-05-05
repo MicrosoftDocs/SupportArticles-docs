@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # The "Remove" link is unavailable when removing a domain from Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 When you try to remove a domain from Microsoft Office 365, you experience one of the following symptoms:

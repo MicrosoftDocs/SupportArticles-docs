@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # SUMIF, COUNTIF, and COUNTBLANK functions return "#VALUE!" Error
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 A formula that contains the **SUMIF**, **SUMIFS**, **COUNTIF**, **COUNTIFS**, or **COUNTBLANK** functions may return the "#VALUE!" error in Microsoft Excel.

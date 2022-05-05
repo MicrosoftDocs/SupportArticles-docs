@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to enable ULS logging for Microsoft 365 Apps for enterprise
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 To troubleshoot Office issues, Microsoft Office support professionals may have to review advanced log data that's created by Office applications.
 
 To collect Office diagnostic logs, follow these steps:

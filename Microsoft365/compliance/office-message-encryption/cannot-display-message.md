@@ -17,9 +17,9 @@ ms.date: 3/31/2022
 
 # "We can't display your message right now" error in Outlook Web App when an Exchange Online user views an encrypted message
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2971787
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

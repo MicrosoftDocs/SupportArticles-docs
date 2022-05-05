@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Cannot change the number of places to list in Recent Places in Word 2010, in Excel 2010, or in PowerPoint 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you view the list of Recent Places in Backstage view in Microsoft Word 2010, in Microsoft Excel 2010, or in Microsoft PowerPoint 2010, you cannot change the number of places to list in Recent Places.

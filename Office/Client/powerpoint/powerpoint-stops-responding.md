@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # PowerPoint stops responding (spinning wheel)
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a PowerPoint for Mac presentation or application, it either hangs with spinning wheel or does not open at all.

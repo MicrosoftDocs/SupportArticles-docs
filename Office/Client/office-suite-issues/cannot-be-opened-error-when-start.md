@@ -15,14 +15,12 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "Cannot be opened" error when you start an Office Starter 2010 program.
+# "Cannot be opened" error when you start an Office Starter 2010 program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Resolution
+## Resolution
 
 If Word Starter 2010 or Excel Starter 2010 cannot be opened, uninstall and reinstall Microsoft Office Starter 2010: 
- 
+
 1. Click Start (or Start > Run in Windows XP).    
 2. Type appwiz.cpl, and then press Enter.
 

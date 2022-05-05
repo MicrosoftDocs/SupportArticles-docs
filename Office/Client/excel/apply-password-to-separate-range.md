@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Apply different passwords or permissions to separate ranges in workbooks in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel 2002 and in later versions of Excel, you can now use passwords to protect specific ranges in your worksheets. This is a change from earlier versions of Excel, in which one password applies to the entire worksheet, which might have several protected ranges. In addition, if you use Windows 2000, you can apply group-level passwords and user-level passwords to different ranges.

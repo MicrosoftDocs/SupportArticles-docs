@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "We are unable to connect right now" error when users try to activate Microsoft 365 Apps for enterprise
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you set up your network to block Internet Explorer 6, users discover that they cannot activate Microsoft 365 Apps for enterprise. When users try to activate Microsoft 365 Apps for enterprise, they receive the following error message:

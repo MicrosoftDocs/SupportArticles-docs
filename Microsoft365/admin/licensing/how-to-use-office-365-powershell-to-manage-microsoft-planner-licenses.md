@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to use Office 365 PowerShell to manage Microsoft Planner licenses
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 This article describes how to use Microsoft Office 365 PowerShell to manage licenses for Microsoft Planner.

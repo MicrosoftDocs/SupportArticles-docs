@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Auto-Complete may not work
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You type text in a cell in Microsoft Excel. The first few characters of the text that you type match an existing entry in that column. When this occurs, the Auto-Complete feature may not automatically fill in the remaining characters.

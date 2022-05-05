@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to run (SaRA) Fiddler Trace
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Fiddler is a third-party (non-Microsoft) web debugging proxy that logs all HTTP(S) traffic between a user's computer and the Internet. It includes a powerful, event-based scripting subsystem (Fiddler Tracer) and can be extended by using any Microsoft .NET language.

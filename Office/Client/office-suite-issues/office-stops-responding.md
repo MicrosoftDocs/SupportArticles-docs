@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Microsoft Office stops responding when you try to open or save a file
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 If you perform one of the following procedures in one of the Microsoft Office programs that are listed at the end of this article, the program may stop responding (hang) for a long time:

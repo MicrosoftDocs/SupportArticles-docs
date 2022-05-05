@@ -22,13 +22,11 @@ ms.date: 3/31/2022
 
 # Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com, authentication for that user is unsuccessful. The user gets the following error message:
 
-```asciidoc
+```output
 Sorry, but we're having trouble signing you in
 
 Please try again in a few minutes. If this doesn't work, you might want to contact your admin and report the following error:

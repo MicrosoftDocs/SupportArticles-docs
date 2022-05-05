@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Office 365 users cannot open or synchronize SharePoint files after the Office 2013: March 12, 2013 update is installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Office 365 users may be unable to open, edit, or synchronize files if the following conditions are true: 

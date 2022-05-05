@@ -20,9 +20,9 @@ ms.date: 3/31/2022
 
 # How to use mailbox audit logs in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4021960
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Summary
 

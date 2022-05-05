@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # User not seeing add-ins
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in will appear on all platforms that the add-in supports.
   
 ## For Word, PowerPoint, Excel (2016, 2019 or for Microsoft 365)

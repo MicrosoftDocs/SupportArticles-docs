@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to merge Word documents
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 If you have to combine separate Microsoft Word documents, you can copy and paste them together if they're short, or merge them if they're long.
 
 > [!NOTE]

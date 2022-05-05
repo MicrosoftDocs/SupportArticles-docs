@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # Office Applications crash or cannot start
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 > [!NOTE]
 > **This article only addresses the crash scenario where mso30win32client.dll is the module name in a crash signature.**
 >

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "Cannot group on fields selected with '*'" error when you run a query in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 835414
 
 > [!NOTE]

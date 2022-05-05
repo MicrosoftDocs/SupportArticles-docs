@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # You may receive an error message when you sort a range that contains merged cells in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you sort a range in a Microsoft Excel worksheet, Excel does not sort the range. Additionally, you may receive the following error message:

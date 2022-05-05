@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "An Error Occurred" error and domain removal fails in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use the **Remove-MsolDomain -domain name domain.com** PowerShell cmdlet to remove a domain from Office 365, you receive the following error message:

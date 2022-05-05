@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Results don't appear when you run a query linked SQL Server tables from different sources
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 824169
 
 > [!NOTE]

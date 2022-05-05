@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Install Office 365 apps
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Sometimes, things just aren't working. Here's some help for fixing administrative problems with Office 365.
   
  **If you need immediate help, [contact support](/office365/admin/contact-support-for-business-products)** to help resolve your technical issues.

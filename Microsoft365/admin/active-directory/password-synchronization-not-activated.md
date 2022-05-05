@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # User passwords aren't synced, and "Password Synchronization has not been activated for this company" error is logged in Event Viewer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 After you discover that some users can't sign in to a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, you notice that user passwords aren't being synced from your local Active Directory Domain Services (AD DS) environment to Azure Active Directory. When you view the Application login Event Viewer, you see that the following event ID 6900 error is logged:

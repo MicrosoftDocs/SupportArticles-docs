@@ -18,13 +18,11 @@ ms.date: 3/31/2022
 
 # "To authenticate to Office 365, you must enter your Microsoft account" when you run the Remote Connectivity Analyzer tool to test connectivity to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to run the Microsoft Remote Connectivity Analyzer tool to test connectivity to Microsoft Office 365, you receive the following error message:
 
-```adoc
+```output
 To authenticate to Office 365, you must enter your Microsoft account. This is your User Principal Name and in many cases will be something like user@contoso.com.
 ```
 
@@ -35,7 +33,6 @@ This issue occurs if one or more of the following conditions are true:
 - You're using an incorrect user name.   
 - Your password has expired.    
 - Your user account isn't activated.   
-
 
 ## Solution
 
