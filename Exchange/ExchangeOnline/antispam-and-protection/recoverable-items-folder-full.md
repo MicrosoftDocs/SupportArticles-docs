@@ -34,7 +34,7 @@ When you run the [Start-ManagedFolderAssistant](/powershell/module/exchange/star
 
 ## Cause
 
-This issue occurs if a new or changed retention policy has acted on the mailbox, which results in a large number of items being deleted. Consequently, the Managed Folder Assistant moves the deleted items to the Recoverable Items folder, which causes the folder to reach its quota.
+This issue occurs because a new or changed retention policy has acted on the mailbox, which results in a large number of items being deleted. Consequently, the Managed Folder Assistant moves the deleted items to the Recoverable Items folder, which causes the folder to reach its quota.
 
 The items in the Recoverable Items folder are not moved to the Archive mailbox as expected and the folder is not emptied before it reaches its quota because the default retention policy tag (**Recoverable Items 14 days Move to Archive**) has been applied to it. Due to this tag, the Recoverable Items folder remains full for 14 days before it is emptied.
 
