@@ -240,7 +240,7 @@
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
     - name: Signed out of Teams Android devices
-      href: ./teams-rooms-and-devices/signed_out_of_teams_android_devices.md
+      href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux
