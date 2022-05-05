@@ -19,14 +19,14 @@ ms.reviewer: kponnus
 
 # Signed out of Teams on Android devices and can't sign in
 
-You've been signed out of Microsoft Teams on your Android devices and can't sign in to Teams again. The devices that are affected by this issue include:
+You've been signed out of Microsoft Teams on your Android devices and can't sign in to Teams again. The devices that are affected by this issue are:
 
 - Teams Rooms on Android
 - Teams phone devices
 - Teams panels
 - Teams displays
 
-To work around this issue, use one of the following workarounds.
+Use one of the following options to work around the issue and sign in to Teams on your Teams devices.
 
 ## Workaround 1: Sign in from the Microsoft Teams admin center
 
@@ -48,7 +48,7 @@ To work around this issue, use one of the following workarounds.
 
 **Note** You must have Teams administrator permissions to use this workaround.
 
-If workaround 1 doesn't work, restart the Android device remotely from the Teams admin center and then try to sign in.
+If workaround 1 doesn't work, restart the Android device remotely from the Microsoft Teams admin center and then try to sign in.
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
 2. Select **Devices** in the navigation menu on the left side, and then select your Android device.
@@ -58,7 +58,7 @@ If workaround 1 doesn't work, restart the Android device remotely from the Teams
 4. After the device restarts, select **Sign in**.
 
    :::image type="content" source="media/signed_out_of_teams_android_devices/select-sign-in.png" alt-text="Screenshot of selecting sign in on the device page.":::
-5. A pop-up window will display. After you wait for two to vie minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
+5. A pop-up window will display. After you wait for two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
 
    :::image type="content" source="media/signed_out_of_teams_android_devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
 
