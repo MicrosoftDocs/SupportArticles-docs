@@ -115,6 +115,8 @@
           href: ../calendaring/outlook-crashes-when-open-meeting-contains-lync-meeting-details.md
         - name: Outlook or OWA doesn't show full details of private appointments
           href: ../calendaring/outlook-or-owa-not-shows-full-details-of-private-appointments.md
+        - name: Resolve Teams Meeting add-in issues
+          href: /microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues
         - name: Room Finder isn't available on shared calendars
           href: ../calendaring/room-finder-is-not-available-shared-calendars-outlook.md
         - name: Room Finder doesn't show conference rooms

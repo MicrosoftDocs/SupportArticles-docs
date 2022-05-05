@@ -143,6 +143,8 @@
       href: ./meetings/troubleshoot-meeting-recording-issues.md
     - name: Issues with webinars
       href: ./meetings/issues-with-webinars.md
+    - name: Resolve Teams Meeting add-in issues
+      href: ./meetings/resolve-teams-meeting-add-in-issues.md
   - name: Mobile
     items:
     - name: A website with Conditional Access doesn't display when viewed on the Website tab 
@@ -237,6 +239,8 @@
       href: ./teams-rooms-and-devices/sip-gateway-issues.md
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
+    - name: Signed out of Teams Android devices
+      href: ./teams-rooms-and-devices/signed_out_of_teams_android_devices.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux
