@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # A connector does not move when you move a shape in Microsoft Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # DLP policy tips in Security and Compliance Center don't work in OWA/Outlook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 4229971
 
 ## Symptoms

@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # You receive a "There was a problem that caused parts of the Microsoft Online Services Sign-in Assistant to be disabled" error
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You experience sign-in issues in a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune. Specifically, you see a pop-up dialog box that contains the following error message:

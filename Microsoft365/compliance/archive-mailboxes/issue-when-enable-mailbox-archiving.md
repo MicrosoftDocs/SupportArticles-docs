@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Error occurred during validation in agent 'Windows LiveId Agent'" when you try to enable archiving for a mailbox in an Exchange hybrid deployment
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2936559
 
 > [!NOTE]

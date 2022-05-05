@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Error when you try to enable or disable an archive mailbox for an Exchange Online user or move a mailbox to an on-premises environment
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;3050691
 
 ## Problem

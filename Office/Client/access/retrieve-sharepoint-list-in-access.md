@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Issues when you retrieve SharePoint list data in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you request data from Microsoft SharePoint lists in Microsoft Access, you may receive one of the following error messages:

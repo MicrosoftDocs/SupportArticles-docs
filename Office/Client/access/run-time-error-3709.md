@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # "Run-time error '3709'" when you enter a large amount of text in a Memo field that contains an index in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

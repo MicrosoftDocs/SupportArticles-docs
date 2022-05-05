@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # How to turn off Function Argument ToolTips in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, you can complete functions with the aid of the ToolTip feature. This feature displays ToolTips by default when you begin to type a formula in the formula bar. These ToolTips also make it easier to obtain additional help for a given function by allowing you to click the function name in the ToolTip and jump directly to its associated Help topic.

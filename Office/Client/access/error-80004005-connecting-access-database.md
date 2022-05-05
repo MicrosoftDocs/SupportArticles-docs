@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # PRB: Error 80004005 "The Microsoft Jet Database Engine cannot open the file '(unknown)'"
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use ActiveX Data Objects (ADO) or ODBC to connect to a Microsoft Access database, you may receive the following error message:

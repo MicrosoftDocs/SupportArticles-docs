@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Two new security options are now included in the Excel Trust Center in Office 365 under the **Security Settings for Dynamic Data Exchange** heading:

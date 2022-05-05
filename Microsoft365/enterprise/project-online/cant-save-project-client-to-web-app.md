@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You can't save a project from a Project client to Project Web App
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to save a project from a Project client to Project Web App (PWA), you receive the following error message:

@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 ---
 # You may receive an error message when you try to insert a new record in a table that contains an Autonumber field in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 884185
 
 ## Symptoms

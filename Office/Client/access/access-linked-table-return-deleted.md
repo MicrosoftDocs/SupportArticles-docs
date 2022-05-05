@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Access linked table to a SharePoint list returns #Deleted
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom
 
 When you open a linked table in Access that's linked to a SharePoint list, the results are displayed as #Deleted.

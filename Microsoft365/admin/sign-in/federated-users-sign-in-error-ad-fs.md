@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, the user receives the following error message from Active Directory Federation Services (AD FS):

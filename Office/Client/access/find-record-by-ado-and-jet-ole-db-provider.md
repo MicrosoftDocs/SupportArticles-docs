@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to find a record using ADO and Jet OLE DB provider
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

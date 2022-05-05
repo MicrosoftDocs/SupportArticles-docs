@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Another DNS record already exists with this host name" when adding an Address or CNAME record
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 In Office 365 Small Business, you try to add an Address (A) record or a CNAME record in the Office 365 portal. However, you get the following error message:

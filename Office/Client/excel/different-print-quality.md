@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Unexpected behavior when you use different print quality for sheets in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you print multiple worksheets in Microsoft Excel, multiple print jobs may be generated. This may cause the following behavior to occur:

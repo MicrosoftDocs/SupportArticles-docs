@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Parts of Excel turn white or gray when you run VBA code in Excel 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you run Microsoft Visual Basic for Applications (VBA) code in Microsoft Excel 2013, portions of Excel may appear white or gray, depending on your Office Theme. It stays blank until the code completes. This issue may occur if the VBA code performs one or more of the following actions in a macro that runs long enough for the user to see the results before the macro completes:

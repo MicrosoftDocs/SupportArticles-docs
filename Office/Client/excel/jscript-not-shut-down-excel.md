@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel doesn't shut down after calling the Quit method when automating from JScript
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When automating Microsoft Excel from Microsoft JScript, Excel stays in memory after calling the Quit method until you close Internet Explorer or navigate to another page.

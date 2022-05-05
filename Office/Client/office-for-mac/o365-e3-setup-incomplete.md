@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Office 365 for Mac
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 If Microsoft Office for Mac is installed by some method other than directly from the Office 365 portal, you receive the following error message even though Office is installed successfully: 

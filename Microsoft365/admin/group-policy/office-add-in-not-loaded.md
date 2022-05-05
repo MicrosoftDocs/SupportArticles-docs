@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you look at **Add-Ins** section of the **Options** dialog box in a Microsoft 2016 or Microsoft Office 2013 program, none of your add-ins are enabled, as shown in the following figure for Outlook.

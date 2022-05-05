@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Office files that have RMS protection seem to crash
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a Microsoft Office document that has Information Rights Management (IRM) protection, the document seems to crash and does not respond. This behavior occurs after you install either of the following: 

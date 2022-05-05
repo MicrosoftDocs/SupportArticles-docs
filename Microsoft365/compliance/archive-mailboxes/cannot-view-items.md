@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Can't view items in Exchange Online archive mailbox by using Microsoft Outlook Web App
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4051373
 
 ## Symptoms

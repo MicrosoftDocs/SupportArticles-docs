@@ -25,13 +25,11 @@ ms.date: 3/31/2022
 
 # How work and duration are calculated with assignment changes
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 This article describes how work and duration are calculated when you make resource assignment changes.
 
-##  More Information
+## More Information
 
 When you make multiple resource assignment changes on an Effort Driven task within the same edit session, Microsoft Project calculates work using the following formula:
 
@@ -112,4 +110,3 @@ The duration of the task changes from 2d to 2.67d due to the length of time nece
 12. Select R2, and then click Assign. Click Close. 
     
     **NOTE** The lower pane R1 is assigned 100% for 21.33 h of work while R2 is assigned 100% for 10.67 h of work.
-   

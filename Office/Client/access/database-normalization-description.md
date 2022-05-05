@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Description of the database normalization basics
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 283878
 
 This article explains database normalization terminology for beginners. A basic understanding of this terminology is helpful when discussing the design of a relational database.

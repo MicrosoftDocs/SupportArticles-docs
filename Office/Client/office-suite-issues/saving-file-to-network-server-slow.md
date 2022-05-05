@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Saving Office documents to a network server is slow when using EFS
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Assume that you use the Encrypting File System (EFS) to help secure the Temporary Internet Files folder. You save Microsoft Office documents to a remote server than can support encryption, but the server is not configured to do remote encryption. In this situation, it takes longer than expected to save the documents. 

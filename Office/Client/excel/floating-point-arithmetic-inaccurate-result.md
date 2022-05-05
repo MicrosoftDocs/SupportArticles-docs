@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Floating-point arithmetic may give inaccurate results in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses how Microsoft Excel stores and calculates floating-point numbers. This may affect the results of some numbers or formulas because of rounding or data truncation.

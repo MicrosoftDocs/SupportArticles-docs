@@ -36,8 +36,6 @@ ms.date: 3/31/2022
 
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Add-in
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 If you have the Adobe Acrobat PDFMaker Office COM add-in installed on your computer and your Office programs are crashing or not responding, this might mean that the version of PDFMaker you have installed is incompatible with your version of Office.

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # The SpecialCells(xlCellTypeBlanks) VBA function does not work as expected in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you create a Microsoft Visual Basic for Applications (VBA) macro that selects multiple non-contiguous ranges in a Microsoft Excel workbook that uses a VBA expression that is similar to the following, actions that were only supposed to occur with non-contiguous cells occur to every cell in the original selection on the worksheet:

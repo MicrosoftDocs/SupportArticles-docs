@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # You can't sign in to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 > [!NOTE]

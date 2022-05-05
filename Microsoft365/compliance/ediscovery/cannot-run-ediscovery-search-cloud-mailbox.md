@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In a Microsoft Exchange hybrid deployment environment, when you try to run In-Place eDiscovery searches in Microsoft Exchange Server 2019 or 2016 for cloud-based mailboxes by using Exchange admin center (EAC) in the on-premises server, you receive the following error message, depending on the scenario:

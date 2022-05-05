@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Forgot password to sign in to Microsoft 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune because you forgot your password.

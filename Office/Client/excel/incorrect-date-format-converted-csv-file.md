@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Date format is not correct when you convert a CSV text file in Excel by using a VBA macro
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use a Microsoft Visual Basic for Applications (VBA) macro to convert a Comma-Separated Values (CSV) text file into a Microsoft Office Excel workbook (*.xls), the format of dates that are converted into your Excel workbook may not be correct.

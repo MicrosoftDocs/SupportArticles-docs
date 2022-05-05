@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # No support for multiple Office versions installed on a machine with Remote Desktop Service (RDS)
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 On a computer with Remote Desktop Service (RDS) enabled, it is possible to install multiple versions of Office. However, this is not a supported Office configuration.

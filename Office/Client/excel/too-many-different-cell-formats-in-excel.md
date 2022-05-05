@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # You receive a "Too many different cell formats" error message in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Office Excel 2003, when you format a cell or a range of cells, you receive the following error messages:

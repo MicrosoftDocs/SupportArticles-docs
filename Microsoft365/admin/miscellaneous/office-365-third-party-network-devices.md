@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Using third-party network devices or solutions with Microsoft 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft 365 is Software-as-a-Service that provides productivity and collaboration opportunities through a distributed set of cloud-hosted applications and services.

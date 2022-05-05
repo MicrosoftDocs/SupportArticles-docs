@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Items reappear in a user's mailbox or are duplicated in the archive mailbox when an archiving policy is enabled during IMAP migration
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2783045
 
 ## Problem

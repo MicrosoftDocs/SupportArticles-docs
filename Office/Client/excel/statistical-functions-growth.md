@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions: GROWTH
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the GROWTH function in Microsoft Office Excel 2003 and in later versions of Excel, illustrates how the function is used, and compares results of the function for Excel 2003 and for later versions of Excel with results of GROWTH in earlier versions of Excel. GROWTH is evaluated by calling the related function, LINEST. Extensive changes to LINEST for Excel 2003 and for later versions of Excel are summarized, and their implications for GROWTH are noted.

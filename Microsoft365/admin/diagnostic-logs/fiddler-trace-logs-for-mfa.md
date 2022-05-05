@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to use Fiddler trace logs for MFA in Office 365 and Azure AD
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article introduces the Fiddler trace log for the following multifactor authentication (MFA) scenarios:
