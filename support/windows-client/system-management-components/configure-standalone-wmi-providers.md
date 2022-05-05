@@ -12,6 +12,7 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.technology: windows-client-system-management-components
 keywords: WMI standalone, quota overflow, wmiprvse.exe
+ms.custom: sap:wmi, csstroubleshoot
 ---
 
 # How to use registry entries to configure standalone WMI providers
