@@ -81,6 +81,8 @@
       href: ../holds/ignorelegalhold-not-available.md
     - name: Litigation Hold mailbox doesn't turn into inactive mailbox
       href: ../holds/litigation-hold-mailbox-not-turn-into-inactive.md
+    - name: eDiscovery hold errors
+      href: ../holds/resolve-ediscovery-hold-issues.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved
