@@ -1,6 +1,6 @@
 ---
 title: The Last tested date field isn't updated when multiple quality orders are created
-description: The Last tested date field isn't updated when multiple quality orders are created.
+description: Introduces a by design behavior that the Last tested date field isn't updated when multiple quality orders are created.
 author: sherry-zheng
 ms.date: 4/11/2021
 ms.topic: troubleshooting

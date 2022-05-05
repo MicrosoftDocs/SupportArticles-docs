@@ -1,6 +1,6 @@
 ---
 title: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
-description: When a catch-weight quantity is being split into batches, the Pick qty field uses the minimum quantity that is set for the item, not the nominal quantity.
+description: Introduces a by design behavior that the Pick qty field uses the minimum quantity that is set for the item when a catch-weight quantity is being split into batches.
 author: sherry-zheng
 ms.date: 4/11/2021
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: The filter pane on the On-hand list page doesn't work as expected
-description: The filters in the filter pane on the "On-hand list" page don't filter results as you expect.
+description: Provides a resolution for the issue that filters in the filter pane on the "On-hand list" page don't filter results as you expect.
 author: sherry-zheng
 ms.date: 05/31/2021
 ms.topic: troubleshooting

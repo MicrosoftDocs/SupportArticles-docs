@@ -1,6 +1,6 @@
 ---
 title: You can't find the "Workflow" drop-down dialog box for inventory journals
-description: You can't find the "Workflow" drop-down dialog box on the journal page, or related workflow operations aren't available
+description: Provides resolutions for the issue that you can't find the "Workflow" drop-down dialog box on the journal page, or related workflow operations aren't available.
 author: sherry-zheng
 ms.date: 05/31/2021
 ms.topic: troubleshooting
@@ -25,9 +25,9 @@ This issue can occur for three reasons, as described in the following sections.
 
 If the issue applies to all users, it might be occurring because the approval workflow hasn't been assigned to the journal name. To fix the issue, follow these steps.
 
-1. Go to **Inventory Management &gt; Setup &gt; Journal names &gt; Inventory**.
+1. Go to **Inventory Management** > **Setup** > **Journal names** > **Inventory**.
 1. In the list pane, select a journal name to open its settings.
-1. On the **General** FastTab, set the **Approval workflow** option to *Yes*. If you're prompted to confirm the change, select **Yes**.
+1. On the **General** FastTab, set the **Approval workflow** option to **Yes**. If you're prompted to confirm the change, select **Yes**.
 1. In the **Workflow** field, select the workflow that you want to use for the selected journal name.
 
 ## Resolution 2

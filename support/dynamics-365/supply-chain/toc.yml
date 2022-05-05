@@ -36,19 +36,19 @@
         - name: The filter pane on the On-hand list page doesn't work as expected
           href: inventory/on-hand-filter-unexpected.md
         - name: Maximum number of decimals for the stock keeping unit is 0
-          href: inventory/sku-max-decimals-zero.md
+          href: inventory/maximum-number-of-decimals-for-stock-keeping-unit-is-0.md
         - name: Multiple inventory transactions for batch numbers without "On physical update"
-          href: inventory/multiple-inventory-t.md
+          href: inventory/multiple-inventory-transactions-on-physical-update-disabled.md
         - name: Reversing a report as finished creates an unexpected open transaction
-          href: inventory/reverse-report-as-fi.md
+          href: inventory/reverse-report-as-finished-creates-open-transaction.md
         - name: Picking list report doesn't show new notes that are attached to a journal
-          href: inventory/unable-to-print-the.md
+          href: inventory/picking-list-report-not-show-new-notes-attached-to-journal.md
         - name: Quantity on a started quarantine order doesn't update when the order is split
-          href: inventory/quantity-on-a-start.md
+          href: inventory/quantity-started-quarantine-order-not-updated.md
         - name: The Last tested date field isn't updated when multiple quality orders are created
-          href: inventory/the-field-last-test.md
+          href: inventory/last-tested-date-not-updated.md
         - name: When a catch-weight quantity is split, minimum quantity is used instead of nominal quantity
-          href: inventory/while-splitting-the.md
+          href: inventory/minimum-quantity-pick-qty-catch-weight-quantity-split-into-batches.md
     - name: Master planning
       items:
         - name: The system can't find a planned order when operating on multiple orders

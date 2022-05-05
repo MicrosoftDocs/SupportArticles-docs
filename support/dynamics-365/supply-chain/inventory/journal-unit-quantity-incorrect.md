@@ -1,6 +1,6 @@
 ---
 title: The unit and unit quantity aren't working correctly in the inventory journal
-description: The unit and unit quantity aren't working correctly in the inventory journal
+description: Provides a resolution for the issue that the unit and unit quantity aren't working correctly in the inventory journal.
 author: sherry-zheng
 ms.date: 05/31/2021
 ms.topic: troubleshooting

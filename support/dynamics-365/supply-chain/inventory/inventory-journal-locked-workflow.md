@@ -1,6 +1,6 @@
 ---
 title: Your inventory journal is locked and the workflow batch job doesn't work
-description: One of your inventory journals is locked by some operation and isn't being released
+description: Provides a resolution for the issue that one of your inventory journals is locked by some operation and isn't being released.
 author: sherry-zheng
 ms.date: 05/31/2021
 ms.topic: troubleshooting
@@ -21,4 +21,4 @@ One of your inventory journals is locked by some operation and isn't being relea
 
 ## Resolution
 
-Sign in to the SQL Server instance for Supply Chain Management, and check whether **InventJournalTable.SystemBlocked** is set to *1*. If it is, make sure that the journal should not be in locked status, and then reset **InventJournalTable.SystemBlocked** to *0*.
+Sign in to the SQL Server instance for Supply Chain Management, and check whether **InventJournalTable.SystemBlocked** is set to **1**. If it is, make sure that the journal should not be in locked status, and then reset **InventJournalTable.SystemBlocked** to **0**.

@@ -1,6 +1,6 @@
 ---
 title: Picking list report doesn't show new notes that are attached to a journal
-description: The picking list report doesn't show new notes that are attached to a picking list journal.
+description: Provides more information about the issue that the picking list report doesn't show new notes that are attached to a picking list journal.
 author: sherry-zheng
 ms.date: 4/11/2021
 ms.topic: troubleshooting
