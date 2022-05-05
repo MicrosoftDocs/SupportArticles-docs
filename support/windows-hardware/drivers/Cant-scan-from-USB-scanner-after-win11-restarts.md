@@ -1,6 +1,6 @@
 ---
 title: Can’t scan document from a USB scanner after your Windows 11 device restarts
-description: This article discusses the problem that occurs when you restart your Windows 11 device and connect it with a USB scanner, but you're unable to scan document from the connected scanner.
+description: This article helps you workaround the problem when you're unable to scan documents from the USB scanner after restarting your Windows 11 device that is connected with the scanner.
 ms.date: 05/03/2022
 ms.custom: sap:Print driver
 author: Dipesh-Choubisa
@@ -9,7 +9,7 @@ ms.technology: windows-hardware-print-driver
 ---
 # Can’t scan a document from the USB scanner after restarting Windows 11 device
 
-This article helps you workaround the problem when you're unable to scan documents from the connected scanner after restarting your Windows 11 device and connecting it with a USB scanner.
+This article helps you workaround the problem when you're unable to scan documents from a USB scanner after restarting your Windows 11 device that is connected with the scanner.
 
 ## Symptoms
 
@@ -33,14 +33,14 @@ This issue may occur when you disconnect the USB scanner, and the WIA service in
 
 ## Workaround
 
-To resolve this problem, restart WIA service by following these steps:
+To resolve this issue, restart WIA service by following these steps:
 
-1. Open Windows Terminal, PowerShell, or Command Prompt as an Administrator.
+1. Open Windows Terminal, PowerShell, or Command Prompt as an administrator.
 
-1. Type `sc.exe stop StiSvc` command, and then press **Enter** to stop the WIA service.
-    :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-stop-wia-service.png" alt-text="Stopping WIA service command":::
+1. Type the `sc.exe stop StiSvc` command, and then press **Enter** to stop the WIA service.
+   :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-stop-wia-service.png" alt-text="Stopping WIA service command":::
 
-1. Type `sc.exe start StiSvc` command, and then press **Enter** to start the WIA service.
-    :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-restart-wia-service.png" alt-text="Starting WIA service command":::
+1. Type the `sc.exe start StiSvc` command, and then press **Enter** to start the WIA service. When the service completes the restart, the WIA driver will be able to retrieve the document from the USB scanner.
+   :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-restart-wia-service.png" alt-text="Starting WIA service command":::
 
-1. Check if you're able to scan the document. When the service completes the restart, the WIA driver will be able to retrieve the document from your USB scanner.
+1. Check if you're able to scan the document.
