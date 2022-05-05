@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2906882
 
 Some Microsoft Visual Studio 2013 and 2015 features don't work as expected when Internet Explorer 10 or a later version isn't installed. This problem affects only Windows 7 users. Users of Windows 8 and later versions aren't affected because the required dependencies for the browser are built into those operating systems.
 
-The following features don't work as expected if Internet Explorer 10 or a later version isn't installed:
+When you use Visual Studio 2013 or Visual Studio 2015, the following features don't work as expected if Internet Explorer 10 or a later version isn't installed:
 
 ## Visual Studio 2013
 
