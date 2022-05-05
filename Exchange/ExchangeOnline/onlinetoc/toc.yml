@@ -151,6 +151,8 @@
           href: ../antispam-and-protection/domains-on-outlook-safe-senders-list-not-recognized.md
         - name: How to reduce malware threats via file attachment blocking
           href: ../antispam-and-protection/how-to-reduce-malware-threats-via-file-attachment-blocking.md
+        - name: Recoverable Items aren't moved to archive
+          href: ../antispam-and-protection/recoverable-items-folder-full.md
         - name: SMTPSEND.BareLineFeedsAreIllegal NDR when tracing a message
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
         - name: User Impersonation messages are classified as phishing
