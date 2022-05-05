@@ -52,7 +52,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
    > [!NOTE]
    > The placeholder \<Code> represents the error code and can differ depending on the issue.
 
-## Common Support scenarios
+## Common support scenarios
 
 - [Can't bring a network name online](troubleshoot-cannot-bring-network-name-online.md)
 
@@ -62,7 +62,7 @@ This guidance is designed to get you started on troubleshooting issues where clu
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about the issue.
+Before contacting Microsoft Support, you can gather information about the issue.
 
 ### Prerequisites
 
@@ -83,7 +83,7 @@ Before contacting Microsoft support, you can gather information about the issue.
 >
 > Since the **Process** level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the **Process** level will also go back to the previously configured state.
 
-### Gather key information before you contact Microsoft support
+### Gather key information before you contact Microsoft Support
 
 1. Download [TSSv2](https://aka.ms/getTSSv2) and unzip it to the *C:\tss_tool* folder.
 

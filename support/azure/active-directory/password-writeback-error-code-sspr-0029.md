@@ -1,7 +1,7 @@
 ---
 title: SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset
 description: Troubleshoot password writeback generic error code SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset.
-ms.date: 2/11/2022
+ms.date: 4/29/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: jarrettr, nualex
@@ -20,7 +20,7 @@ A user or administrator takes the following steps, and then receives an `SSPR_00
 
 1. At a Microsoft account sign-in page or Microsoft Azure sign-in page in the <https://login.microsoftonline.com> domain, a user or admin selects **Can't access your account?**, **Forgot my password**, or **reset it now**.
 
-1. The user or admin selects the **Work or school account** account type. Then, they are redirected to the SSPR page at <https://passwordreset.microsoftonline.com> to start the **Get back into your account** flow.
+1. The user or admin selects the **Work or school account** account type. Then, they're redirected to the SSPR page at <https://passwordreset.microsoftonline.com> to start the **Get back into your account** flow.
 
 1. On the **Who are you?** screen, the user or admin enters their user ID, completes a case-insensitive captcha security challenge, and then selects **Next**.
 
@@ -32,7 +32,15 @@ A user or administrator takes the following steps, and then receives an `SSPR_00
     >
     > If you're an administrator, you can get more information from the Troubleshoot password writeback article. If you're not an administrator, you can provide this information when you contact your administrator.
 
-## Cause 1: Synchronized user doesn't have the right Active Directory permissions
+## Cause 1: Can't use password writeback to reset the password of a synchronized Windows Active Directory administrator
+
+You're a synchronized Windows Active Directory admin who belongs (or used to belong) to an on-premises Active Directory [protected group](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory), and you can't use SSPR and password writeback to reset your on-premises password.
+
+### Solution: None (behavior is by design)
+
+For security, administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud, but can't reset a forgotten password. For more information, see [How does self-service password reset writeback work in Azure Active Directory](/azure/active-directory/authentication/concept-sspr-writeback).
+
+## Cause 2: AD DS Connector account doesn't have the right Active Directory permissions
 
 The synchronized user is missing the correct permissions in Active Directory.
 
@@ -40,10 +48,28 @@ The synchronized user is missing the correct permissions in Active Directory.
 
 To resolve issues that affect Active Directory permissions, see [Password Writeback access rights and permissions][access-rights-permissions].
 
-> [!NOTE]
-> If you're a Synchronized Windows Active Directory admin who belongs (or used to belong) to an on-premises Active Directory protected group, you can't use SSPR and password writeback to reset your on-premises password. For security, Administrator accounts that exist within a local Active Directory protected group can't be used together with password writeback. Administrators can change their password in the cloud but can't use password reset to reset a forgotten password. For more information, see [Protected Accounts and Groups in Active Directory](/windows-server/identity/ad-ds/plan/security-best-practices/appendix-c--protected-accounts-and-groups-in-active-directory).
+### Workaround: Target a different Active Directory domain controller
 
-## Cause 2: Servers aren't allowed to make remote calls to Security Accounts Manager (SAM)
+> [!NOTE]
+> Password writeback has a dependency on the legacy API [NetUserGetInfo](/windows/win32/api/lmaccess/nf-lmaccess-netusergetinfo). The `NetUserGetInfo` API requires a complex set of allowed permissions in Active Directory that can be difficult to identify, especially when an Azure AD Connect server is running on a domain controller. For more information, see [Applications using NetUserGetInfo and similar APIs rely on read access to certain Active Directory objects](/troubleshoot/windows-server/identity/netuser-netgroup-fails-with-access-denied).
+
+Do you have a scenario in which an Azure AD Connect server is running on a domain controller, and it isn't possible to resolve Active Directory permissions? In this case, we recommend that you deploy Azure AD Connect server on a member server instead of a domain controller. Or, configure your Active Directory connector to **Only use preferred domain controllers** by using the following steps:
+
+1. On the **Start** menu, search for and select **Synchronization Service Manager**.
+
+1. In the **Synchronization Service Manager** window, select the **Connectors** tab.
+
+1. Right-click the Active Directory connector from the list of connectors, and then select **Properties**.
+
+1. In the **Connector Designer** pane of the **Properties** dialog box, select **Configure Directory Partitions**.
+
+1. In the **Configure Directory Partitions** pane, select the **Only use preferred domain controllers** option, and then select **Configure**.
+
+1. In the **Configure Preferred DCs** dialog box, add one or more server names that point to a different domain controller (or domain controllers) than the local host.
+
+1. To save your changes and return to the main window, select **OK** three times, including in the **Warning** dialog box that shows an advanced configuration disclaimer.
+
+## Cause 3: Servers aren't allowed to make remote calls to Security Accounts Manager (SAM)
 
 In this case, two similar application error events are logged: Event ID 33004 and 6329. Event ID 6329 differs from 33004 because it contains an `ERROR_ACCESS_DENIED` error code in the stack trace when the server tries to make a remote call to SAM:
 
@@ -135,7 +161,7 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
     > [!NOTE]
     > If you delete the **RestrictRemoteSam** registry entry without removing the Domain GPO setting, this registry entry will be re-created on the next Group Policy refresh cycle, and the `SSPR_0029` error will reoccur.
 
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
 [access-rights-permissions]: password-writeback-access-rights-permissions.md
 [identify-ad-ds-connector]: password-writeback-access-rights-permissions.md#identify-the-ad-ds-connector-account
-
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
