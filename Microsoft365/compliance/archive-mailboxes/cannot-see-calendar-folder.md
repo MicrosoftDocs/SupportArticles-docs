@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4341449
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 Assume that you have a cloud mailbox, and Exchange Online Archiving is enabled for the mailbox. In Outlook Web App (Microsoft Outlook Web App), you can't see the Calendar folder of the online-archive mailbox.

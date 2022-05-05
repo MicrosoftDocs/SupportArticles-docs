@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2979630
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 You perform an eDiscovery search in the Exchange admin center in Exchange Online. However, the status of the search remains in a **search has been queued** state.

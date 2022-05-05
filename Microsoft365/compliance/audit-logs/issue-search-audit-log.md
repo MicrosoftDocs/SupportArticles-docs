@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;3193501
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When a user tries to search the audit log in the Office 365 Security & Compliance Center, the user receives the following error message:

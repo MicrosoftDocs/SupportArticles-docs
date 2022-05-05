@@ -21,6 +21,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2830042
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When you try to set up Microsoft Outlook for Mac 2011 to use the archive mailbox feature in Exchange Online for Office 365, your attempt fails.

@@ -24,6 +24,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4508006
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 Consider the following in a Microsoft Exchange Server hybrid environment:

@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 4229971
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 Policy tips for unified data loss prevention (DLP) policies that are created in Office 365 Security and Compliance Center don't work in Microsoft Outlook or Outlook Web App (OWA).

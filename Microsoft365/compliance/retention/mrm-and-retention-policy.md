@@ -21,6 +21,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4032361
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Summary
 
 Microsoft Office 365 provides a default **retention policy** (also known as **Default MRM Policy**). To check for these policies in your environment, run the following cmdlet:

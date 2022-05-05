@@ -21,6 +21,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4009935
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptom
 
 After a mailbox that does not have an archive is migrated to Microsoft Office 365 Dedicated/ITAR vNext, you cannot add an archive to the mailbox. You also cannot deprovision an archive from a mailbox that was migrated from Dedicated.
