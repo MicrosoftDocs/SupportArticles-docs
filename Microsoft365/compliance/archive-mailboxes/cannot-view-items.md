@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4051373
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 When a user tries to view items in a Microsoft Exchange Online archive mailbox by using Outlook Web App (Microsoft Outlook Web App), they receive the following error message:

@@ -73,21 +73,23 @@ The following table describes the characters of the GUID.
 
 To view the GUIDs for the Office 2013 suites and programs that are installed on a computer, follow these steps: 
 
-1. Click **Start**, click **Run**, type regedit, and then click **OK**.
+1. Click **Start** > **Run**, type `regedit`, and then click **OK**.
 2. Locate the following subkey:
 
-   **`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`** The names of the GUIDs start with a brace ({ ). Therefore, GUIDs are the first items that are listed under **Uninstall**.
+   **`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall`**
+
+   The names of the GUIDs start with a brace ({ ). Therefore, GUIDs are the first items that are listed under **Uninstall**.
 
 Each GUID data pane contains multiple values, including the values that are described in the following table.
 
-    |Value name|Description|
-    |--|--|
-    |DisplayName|The product name that appears in the **Add or Remove Programs** dialog box|
-    |InstallDate|The date that the product was installed|
-    |Product ID|The product ID|
-    |InstallSource|The installation source|
-    |RegCompany|The registered company|
-    |RegOwner|The registered user name|
+|Value name|Description|
+|--|--|
+|DisplayName|The product name that appears in the **Add or Remove Programs** dialog box|
+|InstallDate|The date that the product was installed|
+|Product ID|The product ID|
+|InstallSource|The installation source|
+|RegCompany|The registered company|
+|RegOwner|The registered user name|
 
 ### Release version
 

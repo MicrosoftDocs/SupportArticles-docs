@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 3210985
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 When an archive mailbox in Exchange Online is automatically expanded through the auto-expand feature, folders that reside in the Deleted Items folder of that archive mailbox can't be deleted. When a user tries to delete a folder in Microsoft Outlook or Outlook on the web, the folder isn't deleted, and no error message is returned.

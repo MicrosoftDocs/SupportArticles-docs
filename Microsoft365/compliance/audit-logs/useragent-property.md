@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4487380
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Summary
 
 When you pull the unified audit log from the Office 365 Security & Compliance Center for successful or failed sign-in, you see the following value for the **UserAgent** property. This article explains what the information refers to.

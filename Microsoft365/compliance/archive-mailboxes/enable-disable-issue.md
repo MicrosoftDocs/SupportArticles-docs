@@ -21,6 +21,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;3050691
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When you try to enable or disable an archive mailbox for an existing Exchange Online user, or when you try to move a mailbox from Exchange Online to an on-premises environment, you receive an error message that resembles one of the following:

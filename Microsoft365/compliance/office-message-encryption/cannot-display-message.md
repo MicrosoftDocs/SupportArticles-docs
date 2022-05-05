@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2971787
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When a Microsoft Exchange Online user tries to read a message that was encrypted by Microsoft Purview Message Encryption in Microsoft Outlook Web App, the user receives the following error message:

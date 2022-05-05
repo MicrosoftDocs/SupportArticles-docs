@@ -22,6 +22,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2757430
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When you migrate a mailbox to or from Microsoft Office 365 and use an archive mailbox, you experience an issue in which the Microsoft Exchange Mailbox Replication service (MRS) in Microsoft Exchange Online stamps the target domain value of the ArchiveDomain property of the mailbox at the end of the migration.

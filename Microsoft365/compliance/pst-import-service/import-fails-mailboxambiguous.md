@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4025464
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 When you use the Office 365 Import Service in the Security & Compliance Center to import PST files through the network or drive shipping, you may receive an error message that resembles the following:

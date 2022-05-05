@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2823261
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 After you make a change to a data loss prevention (DLP) policy, the change doesn't take effect in Microsoft Outlook 2013 in Office 365. For example, you experience one or more of the following symptoms:

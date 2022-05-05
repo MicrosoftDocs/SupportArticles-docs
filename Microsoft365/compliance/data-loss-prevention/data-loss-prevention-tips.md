@@ -22,6 +22,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2823263
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 Assume that you create or change a data loss prevention (DLP) policy in Microsoft Exchange Online Protection in Office 365 policy. This policy notifies users when an email message that they create in Microsoft Outlook 2013 contains sensitive information. However, when a user creates an email message that contains sensitive information, the policy tips aren't displayed as expected.

@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2957583
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 As an administrator who wants to export the results of an In-Place eDiscovery search to a PST file, you click **Export to a PST file** in the Exchange admin center in Exchange Online. However, you receive an error message that resembles the following:

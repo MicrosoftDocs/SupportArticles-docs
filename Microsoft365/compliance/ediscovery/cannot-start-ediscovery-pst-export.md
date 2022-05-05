@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;2919825
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 Consider the following scenario. In Microsoft Exchange Online, you create an eDiscovery mailbox search in the Exchange admin center. You're then ready to export the search results to a PST file. You click **Export to a PST file**, and then you're prompted to install the eDiscovery PST Export Tool. However, after you install and start the eDiscovery PST Export Tool, you experience one of the following symptoms:

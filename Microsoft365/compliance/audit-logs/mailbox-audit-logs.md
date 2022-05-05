@@ -22,6 +22,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_&nbsp;4021960
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Summary
 
 In Microsoft Office 365, you can run mailbox audit logs to determine when a mailbox was updated unexpectedly or whether items are missing from a mailbox. You may have to do this, for example, if items are moved or if they're deleted unexpectedly or incorrectly.
