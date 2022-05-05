@@ -1,7 +1,7 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 03/24/2022
+ms.date: 05/5/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -67,7 +67,7 @@ Authz.dll uses a Kerberos Service for a User (Kerberos S4U) transaction to obtai
 - The resource is in a different domain than the administrative station or the administrative user.
 - The resource has permissions that are assigned to built-in groups. Built-in groups can be misused.
 
-## How to obtain effective permissions by using Authz API calls
+## Get effective permissions by using Authz API calls
 
 To resolve this issue, use one of the following methods:
 
@@ -78,7 +78,12 @@ To resolve this issue, use one of the following methods:
   - If you check the effective permissions for an Active Directory object, run the administrative tools on a domain controller that has a full copy of the object (configuration naming context (NC), domain NC, or application NC).
   - If you check the effective permissions for a clustered resource, you can run the administrative tools from any cluster node. Alternatively, run the administrative tools from the resource server.
 
-- **Turn off Kerberos S4U:** Switch the Authz engine from the Kerberos S4U approach to Active Directory (AD) Lightweight Directory Access Protocol (LDAP) and standalone server Security Account Manager (SAM) queries to collect the user's group list. To do this, follow these steps to configure the **UseGroupRecursion** registry entry:
+- **Turn off Kerberos S4U:** Switch the Authz engine from the Kerberos S4U approach to Active Directory (AD) Lightweight Directory Access Protocol (LDAP) and standalone server Security Account Manager (SAM) queries to collect the user's group list.
+
+  > [!IMPORTANT]  
+  > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur.
+
+  To do this, follow these steps to configure the **UseGroupRecursion** registry entry:
 
   1. Open Registry Editor, and then navigate to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Authz** subkey.
   1. Select **Edit** > **New** > **DWORD Value**.
@@ -94,11 +99,11 @@ To resolve this issue, use one of the following methods:
 >- The application user has to have **Read** permissions for the **TokenGroups** attribute and for the domain-local groups of the resource domain.
 >- The application has to be able to use SAM RPC protocol when it calls the APIs. This is because server-local groups are retrieved by using SAM APIs. You can set an access control list (ACL) on the SAM RPC interface by using the **RestrictRemoteSAM** security policy.
 
-## How to obtain effective permissions on remote resources including SMB shares
+## Get effective permissions on remote resources including SMB shares
 
 Windows Server 2012 R2 added an Authz RPC interface to the LSASS process. This interface is managed by the Netlogon service. With the help of this RPC interface, you can evaluate effective permissions relative to the actual resource server.
 
-This update also added the ability evaluate permissions set at both file system and the share level. When you use this capability, you see what part of the access check is limiting access.
+This update also added the ability to evaluate permissions set at both file system and the share level. When you use this capability, you see what part of the access check is limiting access.
 
 ![Information that provides details about what factors limit a users access to a resource.](./media/access-checks-windows-apis-return-incorrect-results/effective-access-limits.png)
 
