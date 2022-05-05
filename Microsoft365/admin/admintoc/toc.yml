@@ -265,7 +265,7 @@
     items:
     - name: AD FS sign-in webpage not displayed
       href: ../sign-in/ad-fs-sign-in-page-not-display.md
-    - name: Administrator forgot password
+    - name: Forgot sign-in password to M356, Azure, or Intune
       href: ../sign-in/forgot-sign-in-password.md
     - name: Can't sign in to an Office 2016 for Mac app
       href: ../sign-in/sign-in-to-office-2016-for-mac-fail.md
