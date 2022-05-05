@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Run-Time Error 13: Type Mismatch
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 This error occurs when setting the FW company as default.

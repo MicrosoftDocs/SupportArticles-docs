@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # "Invalid user name" when you try to create a user name that contains a special character in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you create a user name that contains a special character in Microsoft Office 365, you receive one of the following error messages: 
