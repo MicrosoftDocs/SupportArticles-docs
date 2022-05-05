@@ -76,7 +76,11 @@ items:
     - name: Troubleshoot APP deployment
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
-      href: troubleshoot-mam.md   
+      href: troubleshoot-mam.md
+    - name: Troubleshoot data transfer between apps
+      href: troubleshoot-data-transfer.md
+    - name: Common data transfer issues
+      href: data-transfer-scenarios.md
     - name: Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
 - name: Certificates
