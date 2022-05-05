@@ -15,20 +15,18 @@ ms.date: 04/28/2022
 ---
 # Removal of the U.S. Federal Common Policy CA certificate from the Microsoft trusted root
 
-This article discusses the removal of the U.S. Federal Common Policy CA root certificate. This article also provides solutions to avoid issues that will occur if enterprises haven't transition to the Federal Common Policy CA G2 root certificate before the removal of the Federal Common Policy CA root certificate from the Microsoft Certificate Trust List (CTL).
+This article discusses the removal of the U.S. Federal Common Policy CA root certificate in the May 24, 2022 Microsoft Root certificate update. This article also provides solutions to avoid or resolve issues that will occur if enterprises haven't transitioned to the Federal Common Policy CA G2 root certificate before the removal of the Federal Common Policy CA root certificate from the Microsoft Certificate Trust List (CTL) by May 24, 2022.
 
 > [!Note]
 > The root certificate that's being removed by the Microsoft Root Certificate Update is named "Federal Common Policy CA" and is commonly referred to as the "G1" root certificate even though "G1" does not appear in the certificate name.
 >
 > The root certificate that replaces the "G1" root certificate is named "Federal Common Policy CA G2" and is commonly referred to as the "G2" root certificate.
 
-The May 24, 2022 Microsoft Root certificate update will remove the "G1" root certificate.
-
 _Applies to:_ &nbsp; All versions of Windows
 
 ## Introduction
 
-The [United States Federal PKI (FPKI)](https://www.idmanagement.gov/) team that governs the U.S. Federal Common Policy CA formally requested the removal of the "G1" root certificate listed below from the Microsoft Trusted Root Program.
+The [United States Federal PKI (FPKI)](https://playbooks.idmanagement.gov/fpki/) team that governs the U.S. Federal Common Policy CA formally requested the removal of the "G1" root certificate listed below from the Microsoft Trusted Root Program.
 
 |Certificate name|SHA1 thumbprint|
 |---|---|
@@ -45,7 +43,7 @@ Applications and operations that depend on the "G1" root certificate will fail o
 
 ## Potential issues
 
-After the "G1" root certificate is removed, you may experience issues that affect the following scenarios:
+After the "G1" root certificate is removed, users in environments that have not transitioned to the "G2" root certificate may experience issues that affect the following scenarios:
 
 - TLS or SSL connections.
 - Secure or multipurpose internet Mail Extensions (S/MIME) or secure email.
@@ -76,7 +74,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 Before the release of the update, administrators can use the following steps to directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
 > [!NOTE]
-> In the test configuration, the "G1" root certificate is removed. The configuration will be staged between May 6th and May 12th, 2022. Use the test configuration during that time interval.
+> In the test configuration, the "G1" root certificate is removed. The configuration will be staged since a day between May 6th and May 12th, 2022. This article will be updated to note the exact day when the configuration has been staged.
 
 1. Open _regedit_, and then navigate to the following registry subkey:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
