@@ -72,7 +72,7 @@
 - name: Print Driver
   items:
   - name: Can’t scan document from a USB scanner device after Windows 11 restarts
-    href: Cant-scan-from-USB-scanner-after-win11-restarts.md
+    href: cant-scan-from-USB-scanner-after-win11-restarts.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
 

@@ -7,21 +7,21 @@ author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.technology: windows-hardware-print-driver
 ---
-# Can’t scan document from a USB scanner device after Windows 11 restarts
+# Can’t scan a document from the USB scanner after restarting Windows 11 device
 
-This article discusses the problem that occurs when you restart your Windows 11 device and connect it with a USB scanner, but you're unable to scan document from the connected scanner.
+This article helps you workaround the problem when you're unable to scan documents from the connected scanner after restarting your Windows 11 device and connecting it with a USB scanner.
 
 ## Symptoms
 
-You've a scanner connected with your Windows 11 device by using USB cable. Consider the scenario where you've unplugged and turned off the scanner, and then reconnected and turned the scanner on after restarting your Windows 11 device.
+Consider the scenario where you've a scanner connected with your Windows 11 device through a USB cable. You've unplugged and turned off the scanner, restarted Windows 11 device, and then reconnected the scanner and turned it on.
 
-In this scenario, if you try to scan a document from the scanner, you are unable to scan the document due to the following error:
+In this scenario, when you try to scan a document from the scanner, you're unable to scan due to the following error:
 
 "You need a WIA driver to use this device. Please install it from the installation CD or manufacturer's website, and try again."
 
-You can verify by referring WIA service log whether this issue is occurring on your device. To verify, find WIA service log into the *C:\Windows\debug\WIA\wiatrace.log* file.
+To verify if this issue is occurring in your device, refer to the Windows Image Acquisition (WIA) service log in *C:\Windows\debug\WIA\wiatrace.Log* file.
 
-If you see similar error messages to the following example in your WIA service log, then you're encountering this issue.
+If you're encountering this issue, you'll find error messages in the WIA service log that are similar to the following examples.
 
 "[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)"
 
@@ -29,19 +29,18 @@ If you see similar error messages to the following example in your WIA service l
 
 ## Cause
 
-This issue occurs because Windows Image Acquisition (WIA) service on Windows 11 might not refresh the device identifier information after the restart, whenever the scanner is disconnected.
-This problem is the known issue of WIA service.
+This issue may occur when you disconnect the USB scanner, and the WIA service in Window 11 does not refresh the device identifier information after the restart. It is a known issue of the WIA service.
 
 ## Workaround
 
 To resolve this problem, restart WIA service by following these steps:
 
-1. Open Windows Terminal, PowerShell, or Command Prompt as Administrator.
+1. Open Windows Terminal, PowerShell, or Command Prompt as an Administrator.
 
-1. Type `sc.exe stop StiSvc` command, and then press **Enter** to stop WIA service.
+1. Type `sc.exe stop StiSvc` command, and then press **Enter** to stop the WIA service.
     :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-stop-wia-service.png" alt-text="Stopping WIA service command":::
 
-1. Type `sc.exe start StiSvc` command, and then press **Enter** to start the service.
+1. Type `sc.exe start StiSvc` command, and then press **Enter** to start the WIA service.
     :::image type="content" source="media/cant-scan-from-USB-scanner-after-win11-restarts/cant-scan-restart-wia-service.png" alt-text="Starting WIA service command":::
 
-1. Check if you're able to scan the document. When the service completes restarting, your WIA driver will be able to retrieve document from your USB scanner.
+1. Check if you're able to scan the document. When the service completes the restart, the WIA driver will be able to retrieve the document from your USB scanner.
