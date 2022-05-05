@@ -142,7 +142,7 @@ Use the **Settings** toolbar button to change the storage account where the diag
 >    
 > If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that performance diagnostics can store insights and reports in the storage account, do the following two actions:
 > 1. Create separate private endpoints for Table and BLOB.  
-> 2. Add DNS configuration to each separate private endpoint.
+> 1. Add DNS configuration to each separate private endpoint.
 
 ## Review insights and performance diagnostics report
 
