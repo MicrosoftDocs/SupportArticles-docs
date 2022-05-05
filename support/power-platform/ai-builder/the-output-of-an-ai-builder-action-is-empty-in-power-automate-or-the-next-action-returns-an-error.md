@@ -1,6 +1,6 @@
 ---
 title: Output of an AI Builder action is empty in Power Automate or the next action returns an error
-description: Cause and resolution if the output of an AI Builder action is empty in Power Automate or the next action returns an error.
+description: Provides a resolution for the issue that the output of an AI Builder action is empty in Power Automate or the next action returns an error.
 ms.reviewer: angiendrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
@@ -8,6 +8,7 @@ ms.subservice:
 ---
 
 # Output of an AI Builder action is empty in Power Automate or the next action returns an error
+
 This article provides a solution to an error, **Unable to process template language expressions in action...** with **statusCode: 202**.
 
 _Applies to:_ &nbsp; Power Automate
@@ -26,4 +27,4 @@ Make sure that the asynchronous pattern isn't disabled for this action. If it's 
 
 ## Resources
 
-[Timeout](/power-automate/limits-and-config#timeout)
+For more information, see [Timeout](/power-automate/limits-and-config#timeout).

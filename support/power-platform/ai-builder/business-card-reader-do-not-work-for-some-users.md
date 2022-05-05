@@ -1,6 +1,6 @@
 ---
 title: AI Builder business card reader doesn't work for some users
-description: Cause and resolution for an when AI Builder business card reader doesn't work for some users. 
+description: Provides a resolution for the issue that AI Builder business card reader doesn't work for some users. 
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2022
@@ -26,6 +26,7 @@ Make sure that users of the business card reader component have access either to
 
 ## Resources
 
-Use the business card reader component in Microsoft Power Apps.
+For more information about using the business card reader component in Microsoft Power Apps, see:
+
 - [Use in a canvas app](/ai-builder/business-card-reader-component-in-powerapps)
 - [Use in a model-driven app](/ai-builder/business-card-reader-component-model-driven)
