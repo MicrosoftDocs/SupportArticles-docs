@@ -1,6 +1,6 @@
 ---
 title: Transactions can be posted to a suspended ledger account
-description: If a product receipt is canceled, the system allows transactions to be posted to suspended ledger accounts, even though the main accounts are suspended
+description: If a product receipt is canceled, transactions can be posted to suspended ledger accounts, even though the main accounts are suspended.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
@@ -23,7 +23,7 @@ If a product receipt is canceled, the system allows transactions to be posted to
 
 The following procedure shows one way to reproduce the issue.
 
-1. On the **Accounts payable parameters** page, on the **General** tab, make sure that the **Post product receipt in ledger** option is set to *Yes*.
+1. On the **Accounts payable parameters** page, on the **General** tab, make sure that the **Post product receipt in ledger** option is set to **Yes**.
 1. Create a purchase order, and add an order line that has a quantity of *1,000* for a product.
 1. Confirm the purchase order.
 1. Post the product receipt, and check the vouchers.
