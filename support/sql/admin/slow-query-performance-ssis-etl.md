@@ -37,14 +37,14 @@ The SSIS job may contain many data flow tasks and it may try to download source 
    The program name can be different when you run the package with a different version of SSIS or different method. If you can't filter by the program name, use query text to search. For example:
 
    ```sql
-   Select program_name, text,* from sys.sysprocesses 
-   cross apply sys.dm_exec_sql_text(sql_handle)
-   where spid>50 and text like ‘%Employees%’
+   SELECT text,* FROM sys.dm_exec_requests
+   CROSS APPLY sys.dm_exec_sql_text(sql_handle)
+   WHERE session_id>50 and text like '%Employees%’
    ```
 
 1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files.
 
-1. Contact the Microsoft SSIS support team to collect the SSIS package logs.
+1. Contact SSIS engineer to enable the SSIS package logging to identify which steps take long time and contribute major delay.
 
 ### Complex select query can't be completed
 
@@ -61,8 +61,8 @@ If the query can be completed, collect the actual execution plan, and treat it a
 1. Run the following statement to collect the lightweight query plan, replace the `spid` (Server process ID) with your executing query window’s `spid`:
 
     ```sql
-    Select * from sys.dm_exec_query_statistics_xml(spid)
-    Select text, * from sys.dm_exec_query_statistics_xml(64)
+    SELECT * FROM sys.dm_exec_query_statistics_xml(spid)
+    SELECT text, * FROM sys.dm_exec_query_statistics_xml(64)
     cross apply sys.dm_exec_sql_text(sql_handle)
     ```
 
@@ -103,15 +103,18 @@ Following are some troubleshooting tips to resolve this scenario:
      WHERE I.Id IS NULL
     ```
 
-### ETL job performance is slow
+### ETL job performance were faster before and slower now
 
 If the ETL jobs have become slow, the following factors could be the reason:
 
 - The data volumes (disk) may have changed. For example, there could be a change in the speed, load on the volumes, and so on.
 - There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there may have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
 - The hardware component performance such as disk I/O, CPUs, or memory could have changed.
-- If SSIS jobs are involved, you can request SSIS DB reports from a slow and fast scenario to compare package duration. You can also try to recreate the previous fast scenario so that PSSDIAG (or other similar) data can be collected to compare and identify slow queries.
-- Identify which specific query is slow.
+
+Following are some common troubleshooting tips:
+
+- Recreate the previous fast scenario so that PSSDIAG (or other similar) data can be collected to compare and identify slow queries. (If SSIS jobs are involved, you can also request SSISDB reports from a slow and fast scenario to compare package duration).
+- After identifying the slow query, use the steps mentioned earlier to troubleshoot query performance.
 
 ### SSIS related settings
 
