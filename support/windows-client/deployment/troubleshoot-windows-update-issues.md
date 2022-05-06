@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Windows Update issues
+title: Troubleshoot Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
 ms.date: 05/10/2022
 author: v-tappelgate
