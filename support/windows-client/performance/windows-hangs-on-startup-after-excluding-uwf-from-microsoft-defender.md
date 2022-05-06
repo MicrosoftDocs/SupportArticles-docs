@@ -38,7 +38,7 @@ This behavior is by design. To work around this issue, use an alternative mentho
 
 ## Supported method to exclude UWF
 
-To work around this issue, you can use the **Registry Commit** option for Uwfmgr.exe to exclude UWF. This option can commit changes to specify a value.
+To work around this issue, you can use the `Registry Commit` option for Uwfmgr.exe to exclude UWF. This option can commit changes to specify a value.
 
 The following command can commit changes of a specified registry value:
 
@@ -51,9 +51,9 @@ uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" Sta
 
 For example, you find registry values that resemble the values in the following screenshot.
 
-:::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-screenshot.png" alt-text="Screenshot of Registry Editor" border="false":::
+:::image type="content" source="media/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender/registry-editor-wdfilter-values.png" alt-text="Screenshot of Registry Editor." border="true":::
 
-To commit all the changes that are made under the WDFilter registry subkeys, you have to run the Registry Commit option, as follows:
+To commit all the changes that are made under the `WDFilter` registry subkeys, you have to run the `Registry Commit` option, as follows:
 
 ```console
 uwfmgr.exe registry commit "HKLM\SYSTEM\CurrentControlSet\Services\WdFilter" DependOnService
