@@ -19,7 +19,7 @@ keywords:
 
 Wireless connections involve a number of different Windows components and a lot of third-party devices and software. For example, Microsoft doesn't make access points or switches. Because wireless connectivity is not an end-to-end Microsoft solution, you have to identify where the problem is, and in many cases another vendor has to fix it.
 
-## Emerging and Known issues
+## Emerging and known issues
 
 The Windows release health page is designed to inform you about known issues so you can troubleshoot known issues your users may be experiencing in your organization. See [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center (available to customers with Microsoft 365 subscription).
 
@@ -29,7 +29,7 @@ There are a wide range of causes for connection failures. Use the following sect
 
 ### Identify the type of failure
 
-The answers to the following questions may help you to isolate the affected clients and other affectd components:
+The answers to the following questions may help you to isolate the affected clients and other affected components:
 
 1. Do all clients fail to connect, or only certain clients? If only certain clients are affected, what are the common factors? For example, do the clients use the same network interface controller (NIC) vendor or versions, operating system (OS) release, build, or installed software and drivers?
 1. Is the failing connection a manual connection, or an auto-connect connection?
