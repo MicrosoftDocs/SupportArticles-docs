@@ -1,6 +1,6 @@
 ---
 title: Production scheduling doesn't consider the safety margins
-description: Production scheduling doesn't consider the safety margins that are set on the item coverage for pegged supply
+description: Production scheduling doesn't consider the safety margins that are set on the item coverage for pegged supply.
 author: t-benebo
 ms.date: 05/31/2021
 ms.topic: troubleshooting

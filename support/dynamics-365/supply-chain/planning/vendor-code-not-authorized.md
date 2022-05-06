@@ -25,7 +25,7 @@ When you try to firm a planned order or add a line to a purchase order, you rece
 
 ## Cause
 
-The error occurs because the **Approved vendor check method** field is set to *Warning only* or *Not allowed* for the specified product, and the vendor isn't currently authorized to supply that product.
+The error occurs because the **Approved vendor check method** field is set to **Warning only** or **Not allowed** for the specified product, and the vendor isn't currently authorized to supply that product.
 
 ## Resolution
 
@@ -33,13 +33,13 @@ To fix this issue, either disable the vendor check for the relevant product or a
 
 To disable the vendor check for a product, follow these steps.
 
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product.
-1. On the **Purchase** FastTab, set the **Approved vendor check method** field to a value other than *Warning only* or *Not allowed*.
+1. On the **Purchase** FastTab, set the **Approved vendor check method** field to a value other than **Warning only** or **Not allowed**.
 
 To approve a vendor for a product, follow these steps.
 
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant item.
 1. On the Action Pane, on the **Purchase** tab, in the **Approved vendor** group, select **Setup**.
 1. On the **Approved vendor** list page, add a row to the grid, and set the following values for it:

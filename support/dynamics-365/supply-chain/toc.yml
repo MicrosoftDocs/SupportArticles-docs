@@ -62,9 +62,9 @@
         - name: Planned orders are generated for in-stock with production orders
           href: planning/planned-orders-in-stock-items.md
         - name: Production scheduling doesn't consider the safety margins
-          href: planning/prod-schedule-safety-margins.md
+          href: planning/production-schedule-not-consider-safety-margins.md
         - name: Master planning is scheduling more than the available capacity
-          href: planning/respect-capacity-limitations.md
+          href: planning/master-planning-not-respect-capacity-limitations.md
         - name: Not enough capacity could be found
           href: planning/not-enough-capacity-error.md
         - name: You receive an error when running the built-in master planning engine
@@ -84,19 +84,19 @@
         - name: Vendor is not specified when firming planned orders
           href: planning/vendor-not-specified.md
         - name: Directly derived firmed orders are processed by an in-review workflow
-          href: planning/firmed-directly-deri.md
+          href: planning/firmed-directly-derived-orders-processed-by-in-review-workflow.md
         - name: You can't filter master planning items by their related coverage group values
-          href: planning/master-planning-batc.md
+          href: planning/cant-filter-master-planning-batch-items-by-coverage-group-values.md
         - name: Master planning generates planned orders for phantom products
-          href: planning/planned-orders-are-g.md
+          href: planning/planned-orders-created-for-phantom-products-master-planning.md
         - name: Planned purchase order created when a purchase exists within negative days
-          href: planning/planning-optimisatio.md
+          href: planning/planning-optimization-creates-planned-purchase-order-negative-days.md
         - name: Can't update the forecasted unit cost when you import demand forecast records
-          href: planning/unable-to-upload-the.md
+          href: planning/unable-to-update-forecasted-unit-cost.md
         - name: Can't remove the warehouse demand forecast dimension from forecast lines
-          href: planning/warehouse-removal-fr.md
+          href: planning/warehouse-removal-from-forest-lines-not-work.md
         - name: You're prompted to save item coverage settings even though you made no changes
-          href: planning/when-importing-to-th.md
+          href: planning/prompted-to-save-item-coverage-settings-without-changes.md
     - name: Purchase order, procurement, and sourcing
       items:
         - name: Purchase order line data discrepancies

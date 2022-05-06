@@ -1,6 +1,6 @@
 ---
 title: You can't filter master planning items by their related coverage group values
-description: You can't filter master planning items by their related coverage group values.
+description: Provides more information about the issue that you can't filter master planning items by their related coverage group values.
 author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: Parameters for the master plan don't exist
-description: When you try to firm a planned order, you receive an error message that states that no parameters exist for the master plan.
+description: Provides a resolution for the error that occurs when you firm a planned order. The error states that no parameters exist for the master plan.
 author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
@@ -29,4 +29,4 @@ Because of configuration issues, the system can't find the settings for the spec
 
 ## Resolution
 
-- Go to **Master planning \> Setup \> Plans \> Master plans**, and make sure that a plan that has the specified name exists.
+Go to **Master planning** > **Setup** > **Plans** > **Master plans**, and make sure that a plan that has the specified name exists.

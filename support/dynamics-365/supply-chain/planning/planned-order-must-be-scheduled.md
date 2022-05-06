@@ -31,6 +31,6 @@ The scheduled start and end dates can't be blank.
 
 To specify start and end dates for the planned order, follow these steps.
 
-1. Go to **Master planning \> Master planning \> Planned orders**.
+1. Go to **Master planning** > **Master planning** > **Planned orders**.
 1. Open the relevant planned order.
 1. On the **General** FastTab, in the **Scheduled** section, specify dates in the **Start date** and **End date** fields.

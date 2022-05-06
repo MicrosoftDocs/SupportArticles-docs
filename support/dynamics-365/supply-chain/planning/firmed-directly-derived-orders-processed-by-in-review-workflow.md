@@ -1,6 +1,6 @@
 ---
 title: Directly derived firmed orders are processed by an in-review workflow
-description: Directly derived firmed orders are processed by a workflow that has a status of In-review.
+description: Directly derived firmed orders are processed by a workflow that has In-review status.
 author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting

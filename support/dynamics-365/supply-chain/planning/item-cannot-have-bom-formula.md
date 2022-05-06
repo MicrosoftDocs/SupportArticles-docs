@@ -1,6 +1,6 @@
 ---
 title: Item can't have a BOM or formula
-description: When you try to firm an order, you receive an error message during item validation. It states that the item can't have a bill of materials (BOM) or formula.
+description: Provides a resolution for the Item cannot have a BOM or formula error that occurs when you firm an order during item validation.
 author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
@@ -27,6 +27,6 @@ When you try to firm an order, you receive the following error message during it
 
 Items that have a bill of materials (BOM) or formula must be of the *Planning item*, *BOM*, or *formula* type. To change the type of an item, follow these steps.
 
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product.
-1. On the **Engineer** FastTab, set the **Production type** field to *Planning item*, *BOM*, or *formula*.
+1. On the **Engineer** FastTab, set the **Production type** field to **Planning item**, **BOM**, or **formula**.

@@ -1,6 +1,6 @@
 ---
 title: You can't remove the Warehouse demand forecast dimension from forecast lines
-description: You can't remove the Warehouse demand forecast dimension from forecast lines.
+description: Provides a resolution for the issue that you can't remove the Warehouse demand forecast dimension from forecast lines.
 author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -19,7 +19,7 @@ KB number: 4614408
 
 ## Symptoms
 
-This issue occurs when the **Warehouse** dimension isn't assigned on the **Forecast dimensions** tab of the **Demand forecasting parameter** page. Nevertheless, the **Warehouse** column is shown on the **Demand forecast** page (**Master planning \> Forecasting \> Manual forecast entity \> Demand forecast lines**).
+This issue occurs when the **Warehouse** dimension isn't assigned on the **Forecast dimensions** tab of the **Demand forecasting parameter** page. Nevertheless, the **Warehouse** column is shown on the **Demand forecast** page (**Master planning** > **Forecasting** > **Manual forecast entity** > **Demand forecast lines**).
 
 ## Resolution
 

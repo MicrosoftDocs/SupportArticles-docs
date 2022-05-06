@@ -1,6 +1,6 @@
 ---
 title: Selected formula number isn't approved for a batch order
-description: When you try to firm a planned order, you receive an error message that states that the selected formula number isn't approved for a batch order.
+description: Provides a resolution for the error that occurs when you try to firm a planned order.
 author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting
@@ -31,7 +31,7 @@ The system validates the firming operation to make sure that an approved formula
 
 To approve a formula, follow these steps.
 
-1. Go to **Product information management \> Bills of materials and formulas \> Formulas**.
+1. Go to **Product information management** > **Bills of materials and formulas** > **Formulas**.
 1. Select the relevant formula.
 1. On the Action Pane, on the **Formula** tab, in the **Maintain** group, select **Approve formula**.
 1. In the **Approve BOM or formula** dialog box, select an approver, and then select **OK**.

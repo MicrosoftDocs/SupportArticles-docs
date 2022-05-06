@@ -23,3 +23,37 @@ landingContent:
             url: /dynamics365/supply-chain/
           - text: Supply Chain Management training
             url: /learn/dynamics365/scm
+          - text: Dynamics 365 Community
+            url: https://community.dynamics.com/
+
+  # Card
+  - title: Warehouse Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve certification path error when setting up app connection
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/certification-path-app-connection-error
+          - text: Fix packing slip quantity error
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/physical-remaining-q
+          - text: Resolve issues when updating or deleting load line
+            url: /dynamics365/supply-chain/troubleshooting/warehousing/released-qty-cannot-be-negative
+
+  # Card
+  - title: Product management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't delete a released product
+            url: /dynamics365/supply-chain/troubleshooting/products/cant-delete-released-prod
+          - text: Product information FAQ
+            url: /dynamics365/supply-chain/pim/product-information-faq
+
+  # Card
+  - title: Sales order processing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resolve error when sales order canceled
+            url: /dynamics365/supply-chain/troubleshooting/sales/quantity-cannot-be-reduced
+          - text: Sales order FAQ
+            url: /dynamics365/supply-chain/sales-marketing/sales-orders-faq

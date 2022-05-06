@@ -1,6 +1,6 @@
 ---
 title: BOM explosion behaves differently for firmed and estimated production orders
-description: Bill of materials explosion behaves differently for firmed production orders and for estimated production orders for manually created work
+description: Bill of materials explosion behaves differently for firmed production orders and for estimated production orders for manually created work orders.
 author: t-benebo
 ms.date: 05/31/2021
 ms.topic: troubleshooting
