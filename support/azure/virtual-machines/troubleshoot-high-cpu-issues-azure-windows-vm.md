@@ -16,7 +16,7 @@ ms.date: 9/24/2020
 ms.author: mnanda
 ---
 
-# Troubleshoot high-CPU issues for Azure virtual machines
+# Troubleshoot high-CPU issues on Azure Windows virtual machines
 
 ## Summary
 
