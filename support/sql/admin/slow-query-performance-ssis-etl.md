@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow query performance in the SSIS or ETL jobs
 description: This article helps you resolve issues that occur because of Slow query performance from SSIS or ETL jobs.
-ms.date: 05/04/2022
+ms.date: 05/05/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -24,13 +24,13 @@ Before you start troubleshooting such issues, consider the following questions:
 
 ## Causes and resolutions
 
-The following sections list the common reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
+The next few sections list the common reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
 
 ### Not stuck on the SQL Server side
 
 The SSIS job may contain many data flow tasks and it may try to download source files from the FTP server, and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL Server side.
 
-1. Use the `Sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name should resemble the following screenshot:
+1. Use the `sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name should resemble the following screenshot:
 
    :::image type="content" source="media/slow-query-performance-ssis-etl/ssis-package-spid.png" alt-text="Find active SSIS related queries.":::
 
@@ -57,6 +57,7 @@ If the query can be completed, collect the actual execution plan, and treat it a
     --your query body
     SET STATISTICS XML OFF
     ```
+
 1. Run the following statement to collect the lightweight query plan, replace the `spid` (Server process ID) with your executing query window’s `spid`:
 
     ```sql
@@ -64,13 +65,14 @@ If the query can be completed, collect the actual execution plan, and treat it a
     Select text, * from sys.dm_exec_query_statistics_xml(64)
     cross apply sys.dm_exec_sql_text(sql_handle)
     ```
+
 1. Click on the `query_plan`, and save it as *.sqlplan*.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
 
 ### Insert performance
 
-Insert performance is one of the reasons to slow the query performance. The following reasons could be causing the Insert performance to slow down: 
+Insert performance is one of the reasons to slow the query performance. The following reasons could be causing the Insert performance to slow down:
 
 - Each Insert in a large batch causes a log flush, which increases the wait period.
 - Each Insert is against a clustered-index primary key (defined as an identity column), which causes a natural hotspot. The symptom is `PAGELATCH` contention (specific to inserts from multiple connections).
@@ -108,7 +110,7 @@ If the ETL jobs have become slow, the following factors could be the reason:
 - The data volumes (disk) may have changed. For example, there could be a change in the speed, load on the volumes, and so on.
 - There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there may have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
 - The hardware component performance such as disk I/O, CPUs, or memory could have changed.
-- If SSIS jobs are involved, you can request SSISDB reports from a slow and fast scenario to compare package duration. You can also try to recreate the previous fast scenario so that PSSDIAG (or other similar) data can be collected to compare and identify slow queries.
+- If SSIS jobs are involved, you can request SSIS DB reports from a slow and fast scenario to compare package duration. You can also try to recreate the previous fast scenario so that PSSDIAG (or other similar) data can be collected to compare and identify slow queries.
 - Identify which specific query is slow.
 
 ### SSIS related settings
