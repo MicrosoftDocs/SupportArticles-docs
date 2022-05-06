@@ -30,7 +30,13 @@ Use one of the following options to work around the issue and sign in to Teams o
 
 ## Workaround 1: Sign in from the Microsoft Teams admin center
 
-**Note** You must have Teams administrator permissions to use this workaround.
+**Note** You must have Teams administrator permissions to use this workaround. To use this work around, ensure that your device is running the following versions of the Teams app or a newer version:
+
+- Teams Rooms on Android: 1.0.96.2021051904
+- Teams phone devices: 1449/1.0.94.2021101205
+- Teams panels: 1449/1.0.95.2021111203
+
+For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
 2. Select **Devices** in the navigation menu on the left side, and then select your Android device.
@@ -46,7 +52,13 @@ Use one of the following options to work around the issue and sign in to Teams o
 
 ## Workaround 2: Restart the device and then sign in from the Microsoft Teams admin center
 
-**Note** You must have Teams administrator permissions to use this workaround.
+**Note** You must have Teams administrator permissions to use this workaround. To use this work around, ensure that your device is running the following versions of the Teams app or a newer version:
+
+- Teams Rooms on Android: 1.0.96.2021051904
+- Teams phone devices: 1449/1.0.94.2021101205
+- Teams panels: 1449/1.0.95.2021111203
+
+For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
 If workaround 1 doesn't work, restart the Android device remotely from the Microsoft Teams admin center and then try to sign in.
 
