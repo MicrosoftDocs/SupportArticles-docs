@@ -19,7 +19,7 @@ ms.date: 5/6/2022
 
 # OneDrive for Business can't sync after tenant migration
 
-After a tenant-to-tenant migration, a User Principal Namer (UPN) change, or a password update, OneDrive for Business might be unable to sync.
+After a tenant-to-tenant migration, a User Principal Name (UPN) change, or a password update, OneDrive for Business might be unable to sync.
 
 To resolve this issue, clear the cached credentials for OneDrive for Business using the following steps:
 
@@ -28,4 +28,4 @@ To resolve this issue, clear the cached credentials for OneDrive for Business us
     - `%localappdata%/Microsoft/OneAuth`
     - `%localappdata%/Microsoft/IdentityCache`
 
-1. Sign into OneDrive for Business.
+1. Sign in to OneDrive for Business.
