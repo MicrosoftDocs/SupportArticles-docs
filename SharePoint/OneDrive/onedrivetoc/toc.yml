@@ -59,6 +59,8 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: OneDrive for Business can't sync after tenant migration
+      href: ../sync/cant-sync-after-migration.md
     - name: Sync error “Sorry, OneDrive can’t add your folder right now” 
       href: ../sync/cant-add-folder-right-now.md
     - name: Troubleshoot sync issues
