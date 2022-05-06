@@ -74,7 +74,7 @@ SharePoint Server 2010 and later versions are supported on Azure virtual machine
 
 64-bit versions of SQL Server 2008 and later versions are supported. For more information, see the following Microsoft Knowledge Base article: [956893](https://support.microsoft.com/help/956893) Support policy for Microsoft SQL Server products that are running in a hardware virtualization environment
 
-Now Azure supports Failover Cluster Instances (FCI). For more information, see [Configure SQL Server Failover Cluster Instance on Azure Virtual Machine](/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-create-failover-cluster).
+Now Azure supports Failover Cluster Instances (FCI). For more information, see [Create an FCI with Storage Spaces Direct (SQL Server on Azure VMs)](/azure/azure-sql/virtual-machines/windows/failover-cluster-instance-storage-spaces-direct-manually-configure).
 
 ### Microsoft System Center
 
