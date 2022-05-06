@@ -24,9 +24,9 @@ This solution is designed to get you started on Windows Update troubleshooting s
    - **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool (For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file)).
    - **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
-   ```console
-   Dism /online /cleanup-image /restorehealth
-   ```
+      ```console
+      Dism /online /cleanup-image /restorehealth
+      ```
 
 1. Restart the computer. If the computer didn't restart after a previous update, pending actions may still have to be completed before you can apply new updates.
 
