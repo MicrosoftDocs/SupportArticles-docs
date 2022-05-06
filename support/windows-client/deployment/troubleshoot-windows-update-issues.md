@@ -28,7 +28,7 @@ This solution is designed to get you started on Windows Update troubleshooting s
    Dism /online /cleanup-image /restorehealth
    ```
 
-1. Restart the computer. If the computer did not restart after a previous update, pending actions may still have to be completed before you can apply new updates.
+1. Restart the computer. If the computer didn't restart after a previous update, pending actions may still have to be completed before you can apply new updates.
 
 1. Install the latest servicing stack update. For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
 
@@ -50,7 +50,7 @@ This error has several possible causes. The following instructions help you iden
 
 ### Has the update been superseded?
 
-Make sure that the update package contains newer versions of the biniaries than the system that you are updating. Alternatively, check that the package is superseded by another new package.
+Make sure that the update package contains newer versions of the binaries than the system that you are updating. Alternatively, check that the package is superseded by another new package.
 
 As updates for a component are released, the updated component will supersede an older component that is already on the system. When this occurs, the previous update is marked as superseded. If the update that you're trying to install already has a newer version of the payload on your system, you might receive this error message.
 
@@ -61,7 +61,7 @@ Verify that the package that you are trying to install isn't already installed.
 ### Is the update appropriate for this architecture?
 
 1. Verify that the package that you're trying to install matches the Windows version that you are using.  
-   The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates cannot be installed on Windows Server 2012 R2-based computers.  
+   The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers.  
 1. Verify that the package you want to install matches the processor architecture of the Windows version that you are using.  
    For example, an x86-based update can't be installed on x64-based installations of Windows.
 
