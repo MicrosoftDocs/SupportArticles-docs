@@ -71,7 +71,7 @@
 
 - name: Print Driver
   items:
-  - name: IStiDeviceControl::GetMyDevicePortName may return incorrect port name in Windows 11 when you connect multiple USB scanners
+  - name: GetMyDevicePortName may return incorrect port name in Windows 11 when you connect multiple USB scanners
     href: IStiDeviceControl-GetMyDevicePortName-incorrect-port-name-multiple-USB.md
   - name: Recurring icon is black when printing a calendar
     href: recurring-icon-background-is-black.md
