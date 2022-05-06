@@ -1,7 +1,7 @@
 ---
 title: Common issues in Visual Studio 2012 setup
 description: This article describes common problems during Visual Studio installation, and provides suggested workarounds.
-ms.date: 04/15/2020
+ms.date: 05/06/2022
 ms.custom: sap:Installation
 ms.technology: vs-installation-install
 ---
@@ -20,7 +20,6 @@ Visual Studio can't be installed, and you receive an error message that contains
 - [0x80070005 - Access denied](#0x80070005---access-denied)
 - [0x80070643 - Installation cache or ISO is corrupted](#0x80070643---installation-cache-or-iso-is-corrupted)
 - [0x800713ec - .NET Framework installation is in progress](#0x800713ec---net-framework-installation-is-in-progress)
-- [Web Deploy 3.0 - Certificate warning or Unable to locate package source error](#web-deploy-30---certificate-warning-or-unable-to-locate-package-source-error)
 
 If this article doesn't address the Visual Studio installation issues that you're experiencing or you receive an error message of other error codes, see [Visual Studio Setup and Installation forum](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vssetup).
 
@@ -64,7 +63,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
     > [!NOTE]
     > The directory for later access. For example, you can extract the files to the `C:\TEMP\fciv` location.
 
-3. At a command prompt, type the following command, and then press Enter:
+3. At the command prompt, type the following command, and then press **Enter**:
 
     ```console
     <DIRECTORY_NAME>\fciv.exe -sha1 <ISO_NAME>
@@ -106,21 +105,6 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 ## 0x800713ec - .NET Framework installation is in progress
 
 This error typically occurs when an installation of the .NET Framework that is separate from Visual Studio is already in progress. Because many components of the Visual Studio installer depend on the .NET Framework, an attempt to install the .NET Framework while Visual Studio is being installed can cause unexpected behavior. To work around this issue, wait for the .NET Framework installer to finish before you install Visual Studio.
-
-## Web Deploy 3.0 - Certificate warning or unable to locate package source error
-
-A warning related to WebDeploy 3.0 may cause two types of problems:
-
-1. During installation, you may meet an **Unable to locate package source** error that isn't resolved via the Download packages from the internet option.
-2. After installation is complete, you see a message that indicates setup has completed but not all features have installed correctly, along with the following warning:
-
-    > Microsoft Web Deploy 3.0  
-    > A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
-
-To work around these issues and successfully install Web Deploy 3.0, you can try any of the following approaches:
-
-- Obtain an updated installer that has been published at the distribution channel of your choice (such as [MSDN](https://msdn.microsoft.com/subscriptions/securedownloads)).
-- Install the [latest Visual Studio Update](https://visualstudio.microsoft.com/).
 
 ## More information
 
