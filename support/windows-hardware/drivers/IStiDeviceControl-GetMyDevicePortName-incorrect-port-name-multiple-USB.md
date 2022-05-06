@@ -47,36 +47,6 @@ In this scenario, when you try scanning a document from one device, the scan pro
 
 ## Cause
 
-This issue occurs because the WIA service on Windows 11 does not refresh port name information that is present in memory storage while the system is in sleep state. The scanner port's path name might change after the sleep state. Therefore, the WIA driver might fail in driver initialization phase and release the errors. The issue that you might see depends on your driver implementation.
+This issue occurs because the WIA service in Windows 11 does not refresh port name information that is present in memory storage while the system is in sleep state. The scanner port's path name might change after the sleep state. Therefore, the WIA driver might fail in driver initialization phase and release the errors. The issue that you might see depends on your driver implementation. It's a known issue in Windows 11.
 
 ## Workaround
-
-To avoid this issue, you can retrieve the port name from registry by using `RegQueryValueEx` with the following code sample. Run this code considering as one of the alternatives to obtain the port name.
-
-```cppwinrt
-///////////////////////////////////////////////////////////////////////////
-// IStiUSD Interface Section (for all WIA drivers)
-///////////////////////////////////////////////////////////////////////////
-HRESULT CYourWIADriver::Initialize(_In_ PSTIDEVICECONTROL pHelDcb,
-                                    DWORD             dwStiVersion,
-                               _In_ HKEY              hParametersKey)
-{
-    HRESULT hr = E_INVALIDARG;
-
-    if ((pHelDcb)&&(hParametersKey))
-    {
-        TCHAR wszPortName[MAX_PATH];
-        DWORD cbPortName = sizeof(wszPortName);
-        DWORD dwType = REG_SZ;
-
-        if (ERROR_SUCCESS == RegQueryValueEx(
-                                     hParametersKey,
-                                     L"CreateFileName",
-                                     NULL,
-                                     &dwType,
-                                     (BYTE*)wszPortName,
-                                     &cbPortName))
-        {
-            WIAS_TRACE((g_hInst, "PortName = %ws", wszPortName));
-        }
-```
