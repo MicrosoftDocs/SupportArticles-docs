@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4049215
 
 ## Minimum supported version of Linux VM Agent
 
-To get support for Linux Agent and extensions in Azure, the [Linux Agent](https://github.com/Azure/WALinuxAgent) version on the Linux virtual machine (VM) must be later than or equal to version 2.2.10.
+To get support for Linux Agent and extensions in Azure, the [Linux Agent](https://github.com/Azure/WALinuxAgent) version on the Linux virtual machine (VM) must be later than or equal to version 2.2.53.1.
 
 **Starting in July 2022**, the minimum supported version will be version 2.2.53.1 for the Linux Agent.
 
@@ -32,7 +32,7 @@ To check your Linux Agent Version, run:
 waagent --version
 ```
 
-For example, if you are running this command on Ubuntu 18.04, you'll see the output as:WALinuxAgent - 2.2.45 Python - 3.6.9 Goal State Agent - 2.2.48.1
+For example, if you are running this command on Ubuntu 18.04, you'll see the output as:WALinuxAgent - 2.2.45 Python - 3.6.9 Goal State Agent - 2.2.53.1
 
 ```output
 WALinuxAgent – 2.2.45
