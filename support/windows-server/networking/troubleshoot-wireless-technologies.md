@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting Wireless Technologies
-description: Learn how to troubleshoot scenarios related to Wireless technologies
+title: Troubleshoot wireless technology issues
+description: Learn how to troubleshoot scenarios related to wireless technologies
 ms.date: 5/10/2022
 author: v-tappelgate
 ms.author: v-tappelgate
