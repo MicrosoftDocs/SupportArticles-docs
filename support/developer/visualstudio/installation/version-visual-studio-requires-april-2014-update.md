@@ -1,7 +1,7 @@
 ---
 title: This version of Visual Studio requires the April 2014 update
 description: Provides a resolution for the error "This version of Visual Studio requires the April 2014 update to Windows 8.1 and Windows Server 2012 R2 known as KB2919355".
-ms.date: 04/07/2022
+ms.date: 05/05/2022
 author: jasonchlus
 ms.author: jasonchlus
 ms.reviewer: terry.g.lee
@@ -25,7 +25,7 @@ Check to make sure that Windows is up to date.
 1. Select **System and Security**.
 1. Select **Windows Update** > **Check for Updates**.
 
-If you're unable to update your machine, try running the [Windows Update Troubleshooter](https://support.microsoft.com/instantanswers/512a5183-ffab-40c5-8a68-021e32467565/windows-update-troubleshooter).
+If you're unable to update your machine, try running the [Windows Update Troubleshooter](https://support.microsoft.com/windows/windows-update-troubleshooter-19bc41ca-ad72-ae67-af3c-89ce169755dd#WindowsVersion=Windows_10).
 
 1. Run the Windows Update Troubleshooter.
 1. Select **Next**.
