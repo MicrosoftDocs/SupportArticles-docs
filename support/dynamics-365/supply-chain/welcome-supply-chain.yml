@@ -33,7 +33,7 @@ landingContent:
         links:
           - text: Can't delete a released product
             url: /dynamics365/supply-chain/troubleshooting/products/cant-delete-released-prod
-          - text: Product information FAQ
+          - text: Product information management FAQ
             url: /dynamics365/supply-chain/pim/product-information-faq
 
   # Card
@@ -41,9 +41,9 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Resolve error when sales order canceled
+          - text: Resolve a quantity can't be reduced error when canceling a sales order
             url: /dynamics365/supply-chain/troubleshooting/sales/quantity-cannot-be-reduced
-          - text: Sales order FAQ
+          - text: Sales order FAQs
             url: /dynamics365/supply-chain/sales-marketing/sales-orders-faq
 
   # Card
@@ -51,9 +51,9 @@ landingContent:
     linkLists:
       - linkListType: reference
         links:
-          - text: Fix packing slip quantity error
+          - text: Resolve a packing slip quantity error
             url: /dynamics365/supply-chain/troubleshooting/warehousing/physical-remaining-q
-          - text: Resolve certification path error when setting up app connection
+          - text: Resolve a certification path error when setting up app connection
             url: /dynamics365/supply-chain/troubleshooting/warehousing/certification-path-app-connection-error
-          - text: Resolve issues when updating or deleting load line
+          - text: Resolve a released quantity error when updating or deleting a load line
             url: /dynamics365/supply-chain/troubleshooting/warehousing/released-qty-cannot-be-negative
