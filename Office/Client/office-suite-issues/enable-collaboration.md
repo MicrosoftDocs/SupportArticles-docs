@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Description of Office features that are intended to enable collaboration and that are not intended to increase security
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Office products include features that enable specific collaboration scenarios and features that are designed to help make your documents and files more secure. Features that enable collaboration scenarios function correctly in collaboration environments that do not include users who have malicious intent. 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Office 365 Subscription Portal
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You download Microsoft Office Professional Plus from the Office 365 Subscription Portal and when you double-click the MicrosoftOffice.EXE file to install it, you receive the following error message: "The Installation of this package failed."

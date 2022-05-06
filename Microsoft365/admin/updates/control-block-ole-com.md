@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 After you install the March 2017 updates for Office 365 Subscription Version 1703 (Build 7967.2139), you gain the ability to block activation of OLE/COM components. In this update, we are blocking activation of components that are listed under the following registry key:

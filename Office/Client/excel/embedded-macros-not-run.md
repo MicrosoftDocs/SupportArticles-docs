@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Macros in embedded Excel workbook are blocked from running
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom
 
 In an environment that has the **Block macros from running in Office files from the Internet** Group Policy setting enabled for Microsoft Excel 2016, macros in embedded Excel workbooks are blocked from running.

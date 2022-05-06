@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 # How to reset an AutoNumber field value in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 812718
 
 ## Summary

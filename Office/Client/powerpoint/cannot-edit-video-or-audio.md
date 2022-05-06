@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You cannot edit video or audio in PowerPoint if Desktop Experience is not installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When PowerPoint is installed on a Windows Server 2012 or Windows Server 2008 machine, certain media editing options may be unavailable. For example, the Insert Video and Insert Audio options are greyed out.

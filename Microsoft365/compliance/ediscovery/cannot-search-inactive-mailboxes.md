@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2898413
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 You want to use In-Place eDiscovery to search the contents of inactive mailboxes in your Microsoft Exchange Online organization. However, after you select **Specify mailboxes to search** on the Mailboxes page of the Exchange admin center, no inactive mailboxes are listed.

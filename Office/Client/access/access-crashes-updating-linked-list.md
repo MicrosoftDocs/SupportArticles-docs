@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 # Access crashes when you update a linked SharePoint list
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 3200416
 
 ## Symptoms

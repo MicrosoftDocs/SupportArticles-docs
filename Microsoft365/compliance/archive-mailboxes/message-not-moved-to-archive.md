@@ -17,7 +17,7 @@ ms.date: 3/31/2022
 
 # Messages aren't moved to archive mailboxes after you create a retention policy in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem 
 

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Problems when signing out of Office 365, Azure, or Intune in a web browser
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 Users experience issues when they try to sign out of Office 365, Microsoft Intune, or Microsoft Azure in a web browser. For example, users may experience one of the following issues:

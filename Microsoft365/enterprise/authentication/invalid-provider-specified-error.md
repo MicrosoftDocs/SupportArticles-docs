@@ -35,8 +35,6 @@ ms.date: 3/31/2022
 
 # "Invalid provider specified" when using an Office 2016 application to access Office 365 resources
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 Consider the following scenario:

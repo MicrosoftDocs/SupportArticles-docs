@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to upgrade your Project global template after you install Project 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be resolved. Modify the registry at your own risk.
 
 ##  Summary

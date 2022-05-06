@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "The field is too small to accept the amount of data you attempted to add" error when running a query
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 896950
 
 ## Symptoms

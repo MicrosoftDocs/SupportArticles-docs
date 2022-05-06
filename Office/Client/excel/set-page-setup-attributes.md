@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Set page setup attributes for more than one sheet in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, page setup attributes, such as margins, sheet orientation, and print titles, are set for each worksheet, individually. This article describes three methods that you can use to set some of these attributes globally.

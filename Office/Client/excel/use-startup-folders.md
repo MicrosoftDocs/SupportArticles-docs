@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Use startup folders in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 For information about Excel 2010, Excel for Mac 2011, and later versions, see the following articles:
 
 - [Customize how Excel starts](https://support.microsoft.com/office/6509b9af-2cc8-4fb6-9ef5-cf5f1d292c19)

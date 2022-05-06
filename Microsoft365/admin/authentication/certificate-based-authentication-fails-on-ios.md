@@ -18,9 +18,7 @@ ms.date: 3/31/2022
 
 # Certificate-based authentication for iOS fails to prompt for user certificates
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Federated users on Apple iOS devices that have valid user certificates discover that they can't perform Certificate-Based Authentication (CBA) against Azure AD. However, federated users on Android and Windows devices can successfully authenticate by using CBA. The same iOS users encounter no issues when they authenticate by using their user name and password.
 

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Precision and accuracy in floating-point calculations
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 125056
 
 ## Summary

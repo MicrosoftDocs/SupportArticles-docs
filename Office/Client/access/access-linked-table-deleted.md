@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Access linked table to SQL Server database returns "#Deleted"
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom
 
 A Microsoft Access-linked table that contains one or more **datetime** or **datetime2** columns and that’s connected to a Microsoft SQL Server database and has a compatibility level of 130 or larger (the compatibility level for SQL Server 2016) returns **#Deleted** in the results.

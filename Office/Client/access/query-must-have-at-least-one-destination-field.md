@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # "Query must have at least one destination field" when you run an Access query
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you run an existing Microsoft Access query, you receive the following error message:

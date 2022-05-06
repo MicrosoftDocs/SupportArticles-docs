@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Download information about the SQL Server Native Client drivers that are used by Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains download information about the Microsoft SQL Server Native Client Drivers package. Certain Microsoft Access features do not work correctly when these drivers are not installed.

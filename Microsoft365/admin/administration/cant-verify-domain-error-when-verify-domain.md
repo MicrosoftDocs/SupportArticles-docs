@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 When you try to verify a domain in Microsoft Office 365, you receive the following error message:

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Office 2010 product key change error step by step
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 The previously installed version of Office 2010 prompts the user to change the product key. The screen then disappears, and shows no response when product key change is clicked.

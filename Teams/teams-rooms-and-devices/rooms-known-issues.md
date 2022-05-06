@@ -57,6 +57,8 @@ This article lists the known issues for Microsoft Teams Rooms by feature area.
 | No video for remote participants from Android Meeting Room devices | Remote participants can't get video from meeting participants who're using Teams Rooms on Android devices, such as MTRA Poly X50, X30, and Yealink A20. The issue is intermittent. | Reboot the device and rejoin the Teams meeting. |
 | A random string displays in Teams on Android phones | A random string of characters is displayed in the **More** page when the time format is set to 24 hours. This issue occurs in **Firmware : 143.15.0.5 Teams app : 2022032303 CP : 5304 AA : 322**. | No workaround is available at this time. |
 | Busy on Busy feature is unavailable | The Busy on Busy feature isn't available in Teams on phones. | This feature isn't available for Teams on phones at this time. |
+| Microsoft Teams Rooms on Windows does not display video from Jabra Panacast 50 | When the **Whiteboard sharing mode** in Jabra Panacast 50 is set to **In separate content camera view**, Teams Rooms on Windows is unable to display video. | Set the **Whiteboard sharing mode** in Jabra Panacast 50 to **In main camera view**, and then re-join the Teams meeting. |
+| Signed out of Teams on Android devices and can't sign in again | When using Teams Rooms on Android, Teams phone devices, Teams panels, or Teams displays, you're signed out of Teams and unable to sign in. | Follow the instructions provided in [Signed out of Teams on Android devices and can't sign in](./signed-out-of-teams-android-devices.md).|
 
 ## Limitations
 

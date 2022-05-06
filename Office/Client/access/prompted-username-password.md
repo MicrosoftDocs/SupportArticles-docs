@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # You're prompted for username and password though you don't set up security in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 888734
 
 ## Symptoms

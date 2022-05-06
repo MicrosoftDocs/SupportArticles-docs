@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # You can't sign in to Office 365 from multiple federated domains
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 Users from multiple federated domains (top-level or child domains) cannot sign in to Office 365. Additionally, they receive the following error message:

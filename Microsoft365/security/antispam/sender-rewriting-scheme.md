@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Sender Rewriting Scheme (SRS) in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4490129
 
 > [!NOTE]
