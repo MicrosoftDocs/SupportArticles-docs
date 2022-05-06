@@ -38,8 +38,8 @@ For versions SQL Server 2008R2 and earlier, the .NET Framework requirements vary
 >
 > Support for .NET Framework 4.5.2, 4.6, and 4.6.1 ended on April 26, 2022.
 >
-> - SQL Server 2016 (13.x) and later require .NET Framework 4.6 for the Database Engine, Master Data Services, or Replication. SQL Server setup automatically installs .NET Framework. Customers can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do in-place upgrade and they are backward compatible. For more information check [Download .NET Framework 4.8 | Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
-> - SQL Server 2014 and SQL Server 2012 use .Net Framework 3.5 SP1, which is still in support till 2029 and are not impacted by this retirement.
+> - SQL Server 2016 (13.x) and later require .NET Framework 4.6 for Database Engine, Master Data Services, or Replication (SQL Server setup automatically installs .NET Framework). Customers can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do an in-place upgrade, and they are backward compatible. For more information, check [Download .NET Framework 4.8 | Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+> - SQL Server 2014 and SQL Server 2012 use .Net Framework 3.5 SP1, which is supported till 2029 and are not impacted by this retirement.
 
 ## Microsoft .NET Framework prerequisites for SQL Server 2008 R2 and earlier versions of SQL Server
 
