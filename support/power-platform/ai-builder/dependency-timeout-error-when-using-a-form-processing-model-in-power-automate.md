@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-You get the dependency timeout error, **408 - Dependency Timeout**.
+You get the dependency timeout error "408 - Dependency Timeout".
 
 ## Cause
 
