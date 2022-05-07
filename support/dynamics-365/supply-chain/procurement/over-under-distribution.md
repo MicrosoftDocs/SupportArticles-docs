@@ -1,6 +1,6 @@
 ---
 title: Accounting distributions are either over- or under-distributed
-description: Provides a resolution for the issue that one or more accounting distributions are either over-distributed or under-distributed.
+description: Provides a resolution for the error that states one or more accounting distributions are either over-distributed or under-distributed.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

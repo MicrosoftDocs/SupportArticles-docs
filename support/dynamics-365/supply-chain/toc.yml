@@ -132,7 +132,7 @@
         - name: You can't add the Price unit field to the Purchase agreement page
           href: procurement/personalize-purchase-agreement-price.md
         - name: Purchase orders don't reflect the language settings of the legal entity
-          href: procurement/po-language.md
+          href: procurement/purchase-order-language-not-reflect-legal-entity-settings.md
         - name: A purchase order receipt doesn't include all charges
           href: procurement/po-receipt-missing-charges.md
         - name: Unit prices on purchase orders aren't calculated based on the unit conversion
@@ -140,7 +140,7 @@
         - name: The Post to charge account in ledger setting isn't turned on
           href: procurement/post-setting-turned-off.md
         - name: Error on resubmitting a purchase order to a workflow after a change
-          href: procurement/resubmit-po-after-change.md
+          href: procurement/cant-resubmit-purchase-order-after-change
         - name: Trade agreement currency conversion issues
           href: procurement/trade-agreement-currencies.md
         - name: Trade agreement conditions aren't applied to imported order lines
@@ -152,9 +152,9 @@
         - name: A product receipt voucher number is consumed even when not generating a voucher
           href: procurement/voucher-number-consumed.md
         - name: You can't invoice a customer-facing sales order
-          href: procurement/not-able-to-invoice-.md
+          href: procurement/cant-invoice-original-sales-order-direct-delivery-purchase-order.md
         - name: Can't add a line to a purchase requisition after requesting a change
-          href: procurement/purchase-requisition.md
+          href: procurement/cant-add-line-to-purchase-requisition-after-change.md
     - name: Product management
       items:
         - name: You can't delete a released product
