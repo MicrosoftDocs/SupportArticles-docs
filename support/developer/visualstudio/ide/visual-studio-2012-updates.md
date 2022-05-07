@@ -4,7 +4,7 @@ description: This article introduces the updates that were released after Visual
 ms.date: 04/20/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: meyoun
-ms.technology: vs-ide
+
 ---
 # Overview of Visual Studio 2012 updates
 

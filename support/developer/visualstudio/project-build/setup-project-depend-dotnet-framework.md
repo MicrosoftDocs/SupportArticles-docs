@@ -4,7 +4,7 @@ description: Installing .NET 4.5 (perhaps via VS 2012 installation) will cause s
 ms.date: 04/27/2020
 ms.custom: sap:Project/Build system
 ms.reviewer: candyc, sbonev, chrmann
-ms.technology: vs-project-build
+
 ---
 # Visual Studio 2010 setup projects depend on .NET Framework after you install .NET Framework 4.5
 

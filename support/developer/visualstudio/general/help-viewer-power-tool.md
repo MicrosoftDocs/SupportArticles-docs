@@ -3,7 +3,6 @@ title: Help Viewer Power Tool
 description: This article describes the Help Viewer Power Tool.
 ms.date: 04/27/2020
 ms.reviewer: scotbren
-ms.technology: vs-general
 ---
 # Help Viewer Power Tool
 
