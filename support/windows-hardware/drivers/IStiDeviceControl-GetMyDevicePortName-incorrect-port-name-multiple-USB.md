@@ -49,7 +49,7 @@ In this scenario, if you try to scan a document by using the scanner, the scan p
 
 ## Cause
 
-This error occurs because the WIA service doesn't update cached information of the port name if a scanner’s port name changes when the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver’s implementation.  
+This error occurs because the WIA service doesn't update cached information of the port name, if a scanner’s port name changes when the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver’s implementation.  
 
 ## Status
 
