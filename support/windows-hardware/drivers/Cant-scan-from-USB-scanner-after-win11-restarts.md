@@ -1,5 +1,5 @@
 ---
-title: Can't scan document from a USB scanner after restarting Windows 11
+title: Can't scan documents from a USB scanner after restarting Windows 11
 description: This article helps you work around the problem when you're unable to scan documents from a USB scanner, which you connect to Windows 11 device after it restarts.
 ms.date: 05/03/2022
 ms.custom: sap:Print driver
@@ -8,7 +8,7 @@ ms.author: v-dchoubisa
 ms.technology: windows-hardware-print-driver
 ---
 
-# Can't scan document from a USB scanner after restarting Windows 11
+# Can't scan documents from a USB scanner after restarting Windows 11
 
 This article helps you work around the problem when you're unable to scan documents from a USB scanner, which you connect to Windows 11 device after it restarts.
 
