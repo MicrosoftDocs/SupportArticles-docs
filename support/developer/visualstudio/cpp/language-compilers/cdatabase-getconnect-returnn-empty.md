@@ -4,7 +4,6 @@ description: This article discusses that the GetConnect method returns an empty 
 ms.date: 04/27/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: aymans, scotbren
-ms.technology: visual-cpp-language-compilers
 ---
 # The CDatabase::GetConnect method returns an empty string in Visual Studio
 

@@ -4,7 +4,6 @@ description: Describes the benefits of using the StringBuilder class over tradit
 ms.date: 04/16/2020
 ms.reviewer: BRODER
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use Visual C# to improve string concatenation performance
 
