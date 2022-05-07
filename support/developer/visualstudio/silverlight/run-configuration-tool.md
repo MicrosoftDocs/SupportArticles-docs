@@ -5,7 +5,6 @@ ms.date: 04/30/2020
 ms.custom: sap:Silverlight
 ms.reviewer: andyriv
 ms.topic: how-to
-
 ---
 # Run the Silverlight Configuration tool in Silverlight 4
 

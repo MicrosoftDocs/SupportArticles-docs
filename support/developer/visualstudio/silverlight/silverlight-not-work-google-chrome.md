@@ -3,7 +3,6 @@ title: Silverlight may not work in Google Chrome
 description: This article provides a workaround for the problem that occurs when you use Google Chrome (version 42.0 or later) to access a website that runs Microsoft Silverlight.
 ms.date: 01/21/2021
 ms.custom: sap:visualstudio/silverlight
-
 ms.reviewer: 
 ms.topic: troubleshooting
 ---

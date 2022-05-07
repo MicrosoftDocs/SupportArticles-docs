@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs when
 ms.date: 01/04/2021
 ms.reviewer: MarkRi
 ms.topic: troubleshooting
-
 ---
 # Type many characters into a Silverlight TextBox or RichTextBox using Chinese or Japanese IMEs can produce unexpected results
 

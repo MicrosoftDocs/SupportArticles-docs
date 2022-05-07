@@ -4,7 +4,6 @@ description: This article discusses intermittent performance issue, product cras
 ms.date: 04/13/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: Ashok Kamath, meyoun
-
 ---
 # Performance issues, product crashes, or rendering issues in Visual Studio 2013 and later
 

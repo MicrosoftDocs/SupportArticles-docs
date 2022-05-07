@@ -4,7 +4,6 @@ description: This article discusses that you can't dismiss developer license not
 ms.date: 04/27/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: pchapman
-
 ---
 # You can't dismiss developer license notifications in Visual Studio 2013 Update 4
 

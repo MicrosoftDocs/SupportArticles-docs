@@ -4,7 +4,6 @@ description: This article provides a resolution for the problem that occurs afte
 ms.date: 01/04/2021
 ms.custom: sap:Project/Build system
 ms.topic: troubleshooting
-
 ---
 # Build errors when you delete the debug configuration from a solution
 

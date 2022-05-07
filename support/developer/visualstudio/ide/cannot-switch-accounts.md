@@ -4,7 +4,6 @@ description: This article describes a problem that prevents you from switching b
 ms.date: 04/24/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: acabello
-
 ---
 # You can't switch between different organizational accounts in Visual Studio Online
 

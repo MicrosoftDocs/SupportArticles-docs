@@ -5,7 +5,6 @@ ms.date: 04/30/2020
 ms.custom: sap:Silverlight
 ms.reviewer: ddixon
 ms.topic: article
-
 ---
 # Silverlight supports for DRM protected subtitles
 

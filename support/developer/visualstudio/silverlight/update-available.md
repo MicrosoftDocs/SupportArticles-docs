@@ -3,7 +3,6 @@ title: An update is available for Silverlight 5
 description: This article describes the Microsoft Silverlight 5 for Windows download version 5.1.40620.0.
 ms.date: 10/26/2020
 ms.custom: sap:Silverlight
-
 ---
 # An update is available for Microsoft Silverlight 5 for Windows
 

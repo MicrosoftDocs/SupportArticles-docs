@@ -4,7 +4,6 @@ description: This article describes a problem in which Release Management Client
 ms.date: 04/27/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: achand, daleche, muthuk, sriramb, ronai, leov
-
 ---
 # Release Management Client crashes and logs MissingSatelliteAssemblyException
 

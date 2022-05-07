@@ -4,7 +4,6 @@ description: This article resolves an error that may be thrown when you use the 
 ms.date: 04/30/2020
 ms.custom: sap:Silverlight
 ms.reviewer: kagatlin
-
 ---
 # The slsvcutil tool crashes when Silverlight 5 is installed
 
