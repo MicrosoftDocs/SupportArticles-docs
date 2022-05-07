@@ -1,6 +1,6 @@
 ---
 title: You can't consolidate multiple product receipts into a single purchase order
-description: You can't consolidate multiple product receipts into a single purchase order if the different product receipt lines have different accounting dates.
+description: Provides more information about the issue that the consolidation of multiple product receipts into a single purchase orders is no longer allowed.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

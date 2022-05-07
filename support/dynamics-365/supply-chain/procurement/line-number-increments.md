@@ -1,6 +1,6 @@
 ---
 title: Imported purchase orders show incorrect line numbers
-description: When purchase orders are imported through data management, purchase order line numbers don't follow the increment defined in system parameters
+description: Provides a workaround to solve the issue that purchase order line numbers don't follow the increment defined in system parameters when purchase orders are imported through data management.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

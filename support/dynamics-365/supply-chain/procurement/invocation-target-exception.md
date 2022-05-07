@@ -1,6 +1,6 @@
 ---
 title: An exception occurs during vendor invoice posting
-description: An "Exception has been thrown by the target of an invocation" exception occurs during vendor invoice posting.
+description: Provides a resolution for the "Exception has been thrown by the target of an invocation" exception that occurs during vendor invoice posting.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
@@ -27,4 +27,4 @@ This issue can occur because of inconsistency in purchase order distributions.
 
 ## Resolution
 
-To unblock this issue and reset the purchase order to a *Draft* state, go to **Procurement and sourcing \> Periodic tasks \> Clean up \> Purchase order distribution reset**. For more information, see the following blog post: [Resolve PO distribution errors in Dynamics 365 Supply Chain Management](https://cloudblogs.microsoft.com/dynamics365/it/2020/08/12/resolve-po-distribution-errors-in-dynamics-365-supply-chain-management/).
+To unblock this issue and reset the purchase order to a *Draft* state, go to **Procurement and sourcing** > **Periodic tasks** > **Clean up** > **Purchase order distribution reset**. For more information, see [Resolve PO distribution errors in Dynamics 365 Supply Chain Management](https://cloudblogs.microsoft.com/dynamics365/it/2020/08/12/resolve-po-distribution-errors-in-dynamics-365-supply-chain-management/).

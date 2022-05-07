@@ -1,6 +1,6 @@
 ---
 title: Unit prices on purchase orders aren't calculated based on the unit conversion
-description: Unit prices on purchase orders aren't calculated based on the unit conversion
+description: Provides a workaround for the issue that unit prices on purchase orders aren't calculated based on the unit conversion.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: A vendor rebate isn't cumulated based on invoices
-description: A vendor rebate isn't cumulated based on invoices
+description: Provides more information about the issue that a vendor rebate isn't cumulated based on invoices.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

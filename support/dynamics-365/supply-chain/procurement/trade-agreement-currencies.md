@@ -1,6 +1,6 @@
 ---
 title: Trade agreement currency conversion issues
-description: Trade agreement prices aren't recalculated according to the currency when the currency differs on a purchase order
+description: Provides a resolution for the currency conversion issues when the currency differs on a purchase order.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

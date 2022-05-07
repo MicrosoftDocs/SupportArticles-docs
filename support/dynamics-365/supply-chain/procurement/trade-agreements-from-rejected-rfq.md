@@ -1,6 +1,6 @@
 ---
 title: Trade agreements can be created from rejected RFQs
-description: Trade agreements can be created from rejected RFQs. The system doesn't prevent trade agreement journals from being created if the RFQ line hasn't been accepted
+description: Introduces a by design behavior that you can create trade agreements from rejected RFQs.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.13
 
 ## Symptoms
 
-Trade agreements can be created from rejected RFQs. Therefore, the system doesn't prevent trade agreement journals from being created if the RFQ line hasn't been accepted.
+Trade agreements can be created from rejected request for quotations (RFQs). Therefore, the system doesn't prevent trade agreement journals from being created if the RFQ line hasn't been accepted.
 
 ## Resolution
 
