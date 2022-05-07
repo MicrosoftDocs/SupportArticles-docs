@@ -1,5 +1,5 @@
 ---
-title: GetMyDevicePortName may return incorrect port name in Windows 11 when you connect multiple USB scanners
+title: GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
 description: This article discusses the problem that occurs where the IStiDeviceControl::GetMyDevicePortName method on Windows 11 returns an incorrect port name when you connect multiple USB scanners.
 ms.date: 05/02/2022
 ms.custom: sap:Print driver
@@ -8,7 +8,7 @@ ms.author: v-dchoubisa
 ms.technology: windows-hardware-print-driver
 ---
 
-# GetMyDevicePortName may return incorrect port name in Windows 11 when you connect multiple USB scanners
+# GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
 
 This article discusses the problem that occurs where the `IStiDeviceControl::GetMyDevicePortName` method on Windows 11 returns an incorrect port name when you connect multiple USB scanners.
 
@@ -49,7 +49,7 @@ In this scenario, if you try to scan a document by using the scanner, the scan p
 
 ## Cause
 
-This error occurs because the WIA service doesn't update cached information of the port name, if a scanner’s port name changes when the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver’s implementation.  
+This error occurs because the WIA service doesn't update cached information of the port name when a scanner’s port name changes after the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver’s implementation.  
 
 ## Status
 
