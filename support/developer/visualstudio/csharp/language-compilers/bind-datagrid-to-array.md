@@ -4,7 +4,6 @@ description: Describes how to bind a DataGrid control to an array of objects or 
 ms.date: 04/20/2020
 ms.custom: sap:Language or compilers
 ms.topic: how-to
-ms.technology: csharp-language-compilers
 ---
 # Use Visual C# to bind a DataGrid control to an array of objects or of structures
 

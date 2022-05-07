@@ -5,7 +5,6 @@ ms.date: 04/17/2020
 ms.custom: sap:Installation
 ms.reviewer: rflaming
 ms.topic: how-to
-ms.technology: vs-installation-install
 ---
 # Uninstall third-party applications deployed by the Secondary Installer in Visual Studio 2015
 

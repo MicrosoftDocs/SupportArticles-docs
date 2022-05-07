@@ -4,7 +4,6 @@ description: This article describes how to adjust ETW buffer to prevent lost ker
 ms.date: 04/27/2020
 ms.custom: sap:Debuggers and analyzers
 ms.reviewer: dangrif
-ms.technology: vs-debuggers
 ---
 # Visual Studio 2010 Concurrency Visualizer prevents lost kernel and user mode events by ETW buffer
 
