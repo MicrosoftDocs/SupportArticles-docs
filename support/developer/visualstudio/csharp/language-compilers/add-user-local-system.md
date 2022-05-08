@@ -4,7 +4,6 @@ description: This article describes how to use the DirectoryServices namespace t
 ms.date: 10/12/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: csharp-language-compilers
 ---
 # Add a user to the local system by using directory services and Visual C sharp
 

@@ -5,7 +5,6 @@ ms.date: 04/20/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: bobbym
 ms.topic: how-to
-ms.technology: visual-cpp-language-compilers
 ---
 # Do basic file I/O in Visual C++
 
