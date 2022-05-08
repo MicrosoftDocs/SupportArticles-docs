@@ -4,7 +4,6 @@ description: This article illustrates how to use the acos, asin, atan, atan2, co
 ms.date: 04/27/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use trigonometry STL functions in Visual C++
 

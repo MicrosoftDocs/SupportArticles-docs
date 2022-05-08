@@ -4,7 +4,6 @@ description: This article describes how to determine if your program is running 
 ms.date: 10/12/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Check If program is running in the IDE or an EXE File
 
