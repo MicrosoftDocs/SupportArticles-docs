@@ -10,6 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
+  - CI 163089
 ms.reviewer: gregmans, gbratton
 appliesto: 
   - Outlook for Microsoft 365
@@ -88,7 +89,8 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 |Registry Path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
 |Name|CalendarSyncWindowAllRecurring|
 |Type|REG_DWORD|
-|Value|0|
+|Value|Value = 0 Only recurring meeting series whose end date is in the future or falls within the current calendar sync window setting will be synced. <br/>Value = 1 All recurring meeting series will be synced, regardless of the end date. <br/>Defaults to 0 if not set|
+|Explanation|By default (if the value isn't set or is set to 0), recurring meeting series whose end date is in the future or falls within the current calendar sync window setting will be downloaded. For example, if today's date is May 3, 2022 and the calendar sync window is set to 1 month, all recurring meeting series whose end date falls on or after April 3, 2022 will be synced. If the end date falls outside the sync window setting, the recurring meeting series will be removed from the .ost file.<br/>To sync all recurring meeting series regardless of the end date, set the `CalendarSyncWindowAllRecurring` value to 1.|
 
 These registry keys update the sync restriction so that the Cached Mode client downloads fewer Calendar items, even for a Calendar that has multiple years of history on the server. These keys don't clean up older Calendar content that was already downloaded. However, this method can be effective if you're willing to *clear offline items* and resync your Calendar (instead of bulk deleting old items). If you already have the Calendar in the profile, you have to clear the Offline Items after you set the registry keys and restart Outlook.
 
