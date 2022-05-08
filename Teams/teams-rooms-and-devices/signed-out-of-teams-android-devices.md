@@ -1,6 +1,6 @@
 ---
-title: Can't sign in to Teams after signing out
-description: Provides workarounds for an issue that Android devices are signed out of Teams and can't sign in.
+title: Signed out of Teams on Android devices 
+description: Provides workarounds for when Android devices are signed out of Teams automatically.
 ms.date: 05/04/2022
 author: helenclu
 ms.author: luche
@@ -17,20 +17,20 @@ ms.custom: CI163313
 ms.reviewer: kponnus
 ---
 
-# Signed out of Teams on Android devices and can't sign in
+# Signed out of Teams on Android devices
 
-You've been signed out of Microsoft Teams on your Android devices and can't sign in to Teams again. The devices that are affected by this issue are:
+Some Microsoft Teams devices in your environment are signed out of Teams automatically. The devices that are affected by this issue are:
 
 - Teams Rooms on Android
 - Teams phone devices
 - Teams panels
 - Teams displays
 
-Use one of the following options to work around the issue and sign in to Teams on your Teams devices.
+Use one of the following options to sign in to Teams.
 
-## Workaround 1: Sign in from the Microsoft Teams admin center
+## Option 1: Sign in from the Microsoft Teams admin center
 
-**Note** You must have Teams administrator permissions to use this workaround. To use this work around, ensure that your device is running the following versions of the Teams app or a newer version:
+**Note** You must have Teams administrator permissions to use this option. Also ensure that your device is running the following versions of the Teams app or a newer version before you begin:
 
 - Teams Rooms on Android: 1.0.96.2021051904
 - Teams phone devices: 1449/1.0.94.2021101205
@@ -39,20 +39,20 @@ Use one of the following options to work around the issue and sign in to Teams o
 For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
-2. Select **Devices** in the navigation menu on the left side, and then select your Android device.
+2. Select **Devices** in the navigation menu on the left, and then select your Android device.
 3. On the page for the Android device, select **Actions** > **Sign out** to sign out of the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-out.png" alt-text="Screenshot of selecting sign out on the device page.":::
 4. After you're signed out, select **Sign in**.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-in.png" alt-text="Screenshot of selecting sign in on the device page.":::
-5. A pop-up window will display. After you wait for two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the information provided to sign in to the device.
+5. A pop-up window will display. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the information provided to sign in to the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
 
-## Workaround 2: Restart the device and then sign in from the Microsoft Teams admin center
+## Option 2: Restart the device and then sign in from the Microsoft Teams admin center
 
-**Note** You must have Teams administrator permissions to use this workaround. To use this work around, ensure that your device is running the following versions of the Teams app or a newer version:
+**Note** You must have Teams administrator permissions to use this option. Also ensure that your device is running the following versions of the Teams app or a newer version before you begin:
 
 - Teams Rooms on Android: 1.0.96.2021051904
 - Teams phone devices: 1449/1.0.94.2021101205
@@ -60,21 +60,21 @@ For more information, see [What's new in Microsoft Teams devices](https://suppor
 
 For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
-If workaround 1 doesn't work, restart the Android device remotely from the Microsoft Teams admin center and then try to sign in.
+Restart the Android device remotely from the Microsoft Teams admin center and then try to sign in.
 
 1. Navigate to the [Microsoft Teams admin center](https://admin.teams.microsoft.com/).
-2. Select **Devices** in the navigation menu on the left side, and then select your Android device.
+2. Select **Devices** in the navigation menu on the left, and then select your Android device.
 3. On the page for the Android device, select **Restart** to restart the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-restart.png" alt-text="Screenshot of selecting restart on the device page.":::
 4. After the device restarts, select **Sign in**.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-in.png" alt-text="Screenshot of selecting sign in on the device page.":::
-5. A pop-up window will display. After you wait for two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
+5. A pop-up window will display. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
 
-## Workaround 3: Generate a new code on the device to sign in
+## Option 3: Generate a new code on the device to sign in
 
 1. Select **Refresh code** on the device to generate a new code to sign in.
 
@@ -91,7 +91,7 @@ If workaround 1 doesn't work, restart the Android device remotely from the Micro
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/refresh-code.png" alt-text="Screenshot of selecting refresh code on the device.":::
 
-## Workaround 4: If you still can't sign in to the device, reset the device to its factory settings
+## Option 4: If you still can't sign in to the device, reset the device to its factory settings
 
 1. Perform a factory reset from the OEM device settings or by using the key combination that's specific to the OEM model.
-2. Use workaround 1, 2 or 3 to sign in to the device.
+2. Use option 1, 2 or 3 to sign in to the device.
