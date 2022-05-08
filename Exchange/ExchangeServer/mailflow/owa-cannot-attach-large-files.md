@@ -30,7 +30,7 @@ To get more information about this issue,  you can [run a network trace in your 
 
 :::image type="content" source="media/owa-cannot-attach-large-files/network-trace.png" alt-text="Screenshot of the network trace page, and the ErrorIrresolvableConflict response code for the OWA request is highlighted.":::
 
-Here's an example of a complete response which includes the reason for the error in the Message Text section:
+Here's an example of a complete response that includes the reason for the error in the Message Text section:
 
 > {"Header":{"ServerVersionInfo":{"MajorVersion":15,"MinorVersion":2,"MajorBuildNumber":986,"MinorBuildNumber":22,"Version":"V2017_08_18"}},"Body":{"ResponseMessages":{"Items":[{"__type":"AttachmentInfoResponseMessage:#Exchange","MessageText":"**The send or update operation could not be performed because the change key passed in the request does not match the current change key for the item., Cannot save changes made to an item to store.SaveStatus: IrresolvableConflict**\u000d\u000aPropertyConflicts:\u000d\u000a","ResponseCode":"**ErrorIrresolvableConflict**","ResponseClass":"Error","Attachments":[null]}]},"SharingInformation":null}}
 
