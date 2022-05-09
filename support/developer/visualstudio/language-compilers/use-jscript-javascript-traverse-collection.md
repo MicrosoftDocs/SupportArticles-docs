@@ -5,7 +5,6 @@ ms.date: 09/24/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: TFERRAND
 ms.topic: how-to
-ms.technology: vs-language-compilers
 ---
 # Use JScript or JavaScript to traverse through a collection
 

@@ -3,17 +3,15 @@ title: Chroot environment in a Linux Rescue VM.
 description: This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
 services: virtual-machines
 documentationcenter: ''
-author: kailashmsft
+author: genlin
 manager: dcscontentpm
-tags: ''
-
 ms.service: virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.date: 05/05/2020
-ms.author: kaib
+ms.author: genli
 
 ---
 
