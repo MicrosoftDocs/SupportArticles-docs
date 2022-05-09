@@ -1,6 +1,6 @@
 ---
 title: Late selection isn't respected when production orders are reset via a batch job
-description: Introduces a by design behavior that late selections aren't respected when you use a recurring batch job to reset the status of a production order.
+description: Introduces a by-design behavior where late selections aren't respected when you use a recurring batch job to reset the status of a production order.
 author: johanhoffmann
 ms.date: 4/11/2021
 ms.topic: troubleshooting

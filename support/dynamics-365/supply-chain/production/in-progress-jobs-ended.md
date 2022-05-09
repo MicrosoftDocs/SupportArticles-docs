@@ -1,6 +1,6 @@
 --- 
 title: In-progress jobs end when reporting partial quantity on last job 
-description: Introduces a by design behavior that all previous jobs that have status of In progress are ended when using the job card device to report partial quantity on the last job in a production order.
+description: Introduces a by-design behavior where all previous jobs that have status of In progress are ended when using the job card device to report partial quantity on the last job in a production order.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
