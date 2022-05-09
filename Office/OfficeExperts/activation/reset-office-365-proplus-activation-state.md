@@ -185,6 +185,8 @@ When you clear a WPJ account on a device, the Single Sign-On (SSO) behavior for 
 
 Check whether your device is Workplace Joined if you're not sure. Run the `dsregcmd /status` command from an elevated command prompt as described in <a href="#sectionb">Section B</a>, above.
 
+The state of Workplace Joined (WPJ) (Azure AD registered) devices is displayed in the **User State** section of the output. If the value displayed for the WorkplaceJoined parameter is **YES**, it indicates that your device is Workplace Joined.
+
 To clear WPJ accounts:
 
 1. Navigate to **Settings** on the device.
