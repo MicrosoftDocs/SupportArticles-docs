@@ -1,6 +1,6 @@
 ---
 title: Error when the Report as finished journal is posted
-description: When you post the Report as finished journal, you receive an error message that states that the ordered quantity ordered can't be reduced.
+description: Provides a resolution for the error that states that the ordered quantity ordered can't be reduced when you post the Report as finished journal.
 author: johanhoffmann
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -27,4 +27,4 @@ This error occurs only when the **Error quantity** field is set on the first lin
 
 ## Resolution
 
-To prevent this error, open the **Production control parameters** page, and then, on the **General** tab, set the **Increase remain qty with error qty** option to *Yes*.
+To prevent this error, open the **Production control parameters** page, and then, on the **General** tab, set the **Increase remain qty with error qty** option to **Yes**.

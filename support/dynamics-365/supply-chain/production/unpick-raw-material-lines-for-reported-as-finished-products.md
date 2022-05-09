@@ -1,6 +1,6 @@
 ---
 title: Users can unpick material lines for products that have been reported as finished
-description: The system allows users to unpick raw material lines for products that have been reported as finished.
+description: Introduces a by design behavior that you can unpick raw material lines for products that have been reported as finished.
 author: johanhoffmann
 ms.date: 4/11/2021
 ms.topic: troubleshooting

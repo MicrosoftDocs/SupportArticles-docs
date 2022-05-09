@@ -198,17 +198,17 @@
         - name: Can't reserve or release work because processes are currently being used
           href: production/warehouse-management-processes-used.md
         - name: Flushing principle settings on BOM lines aren't respected
-          href: production/flushing-principle-n.md
+          href: production/flushing-principle-not-respected-bom-lines.md
         - name: Batch number is cleared on selecting a new lot ID
-          href: production/when-customer-is-try.md
+          href: production/batch-number-cleared-new-lot-id-selected.md
         - name: Late selection not respected when resetting production orders via batch job
-          href: production/late-selection-is-no.md
+          href: production/late-selection-not-respected-reset-status-recurring-batch-job.md
         - name: Users can unpick material lines for products that have been reported as finished
-          href: production/raw-material-lines-a.md
+          href: production/unpick-raw-material-lines-for-reported-as-finished-products.md
         - name: Error when the Report as finished journal is posted
-          href: production/posting-report-as-.md
+          href: production/quantity-ordered-cant-reduced-post-report-as-finished-journal.md
         - name: The warehouse in the picking list journal is not updated on a BOM line
-          href: production/the-warehouse-in-pic.md
+          href: production/picking-list-warehouse-not-updated-bom-line.md
     - name: Rebate management
       items:
         - name: Cumulating customer rebates using item rebate groups fails

@@ -1,6 +1,6 @@
 --- 
 title: Resource name isn't updated after worker name change 
-description: If you change a worker name in the global address book, the matching resource name isn't updated in the group master. You must manually make this update. 
+description: The matching resource name isn't updated automatically in the group master if you change a worker name in the global address book. You must manually make this update.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

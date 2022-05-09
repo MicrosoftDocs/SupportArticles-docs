@@ -1,6 +1,6 @@
 ---
 title: Error when changing status from Reported as finished to End 
-description: You may receive an error when changing the status of a production order from Reported as finished to End. This page explains how to mitigate the issue. 
+description: Explains how to mitigate the issue that you may receive an error when changing the status of a production order from Reported as finished to End.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

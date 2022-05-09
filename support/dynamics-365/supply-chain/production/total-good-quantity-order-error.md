@@ -1,6 +1,6 @@
 --- 
 title: Total good quantity error when trying to end an order 
-description: When trying to end a production order and report as finished, you may receive a total good quantity error. This page explains why and how to fix the issue. 
+description: Provides a resolution for the total good quantity error that occurs when you try to end a production order and report as finished.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

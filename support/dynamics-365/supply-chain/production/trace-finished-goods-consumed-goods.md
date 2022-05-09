@@ -1,6 +1,6 @@
 --- 
-title: Trace serial numbers of finished goods against materials 
-description: You can't trace the serial numbers of finished goods against those of the materials to make those goods. Instead, create production orders for a quantity of 1. 
+title: Trace serial numbers of finished goods against materials
+description: You can't trace the serial numbers of finished goods against those of the materials to make those goods. Instead, create production orders for a quantity of 1.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

@@ -1,6 +1,6 @@
 --- 
 title: Warehouse management processes are currently being used 
-description: When reserving or releasing work, you may get a message that warehouse management processes are currently being used. Fix the issue with one of these steps. 
+description: Provides a resolution for the warehouse management processes are currently being used error that occurs when you reserve or release work.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
