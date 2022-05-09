@@ -148,4 +148,4 @@ If you have already installed Visual Studio, try to repair Visual Studio after y
 
 If this article doesn't address the Visual Studio installation issue that you're experiencing, see [Visual Studio setup Microsoft Q&A community](/answers/topics/vs-setup.html) or [Visual Studio Setup and Installation forum](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vssetup). You may also post your issue along with the Visual Studio installation log file, to the [community](/answers/topics/vs-setup.html) for further help.
 
-For more steps on collecting the installation logs, see [Troubleshoot installation or upgrade issues](/visualstudio/install/troubleshooting-installation-issues?view=vs-2022#installation-logs).
+For more steps on collecting the installation logs, see [Troubleshoot installation or upgrade issues](/visualstudio/install/troubleshooting-installation-issues#installation-logs).
