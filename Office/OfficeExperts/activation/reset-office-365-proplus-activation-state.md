@@ -46,10 +46,10 @@ For a fully automated solution to reset the activation state, download and run t
 
 Run the following scripts that automate each section of the process. We recommend that you run the**OLicenseCleanup.vbs** and **signoutofwamaccounts.ps1** scripts listed below, while **WPJCleanUp.cmd** is required only if your device is Workplace Joined. For details about the specific steps that each script automates, select the associated **Details** link. Use the “Select if using automated scripts” link to navigate back to this method.
 
-1. To remove previous licenses and cached account information: download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the **OLicenseCleanup.vbs** script, and run it using elevated permissions. <a href="#step1">Details</a>
+1. To remove previous licenses and cached account information: download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the **OLicenseCleanup.vbs** script, and run it using elevated permissions. <a href="#sectiona">Details</a>
 1. To clear the WAM accounts on the device that are associated with Office: download the [signoutofwamaccounts.zip](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) file, extract, and run the **signoutofwamaccounts.ps1** script with elevated permissions.
-If you save signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, then it will be executed automatically when you run OLicenseCleanup.vbs. <a href="#step4">Details</a>
-1. To remove Workplace Joined accounts: download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the WPJCleanUp folder, and run **WPJCleanUp.cmd**. <a href="#step5">Details</a>
+If you save signoutofwamaccounts.ps1 in the same location as OLicenseCleanup.vbs, then it will be executed automatically when you run OLicenseCleanup.vbs. <a href="#sectionb">Details</a>
+1. To remove Workplace Joined accounts: download [WPJCleanUp.zip](https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip), extract the WPJCleanUp folder, and run **WPJCleanUp.cmd**. <a href="#sectionc">Details</a>
 
 ## Method: Clear prior activation information manually
 
