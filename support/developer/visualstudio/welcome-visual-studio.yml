@@ -42,21 +42,21 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Latest Visual C++ Redistributable Downloads 
+          - text: Latest Visual C++ Redistributable downloads 
             url: /cpp/windows/latest-supported-vc-redist
           - text: Supported OS for Visual C++ Redistributable 
             url: ./cpp/libraries/minimum-service-pack-levels.md
           - text: Runtime framework packages for Desktop Bridge
             url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
-  - title: Documentation, training, and support
+  - title: Documentation, Training and Support
     linkLists:      
       - linkListType: how-to-guide
         links:          
           - text: Visual Studio IDE documentation 
             url: /visualstudio/ide
-          - text: Learning Paths and resources
+          - text: Learning paths and resources
             url: /learn/browse/?products=vs
-          - text: Support Resources 
+          - text: Support resources 
             url: https://visualstudio.microsoft.com/vs/support/#talktous
 
 
