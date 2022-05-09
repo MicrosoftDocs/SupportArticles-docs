@@ -42,7 +42,7 @@ For a fully automated solution to reset the activation state, download and run t
 > [!div class="nextstepaction"]
 > [Download the Assistant](https://aka.ms/SaRA-OfficeActivation-Reset)
 
-<h2 id="method2">Method: Use scripts to automate the process</h2>
+<h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
 Run the following scripts that automate each section of the process. We recommend that you run the**OLicenseCleanup.vbs** and **signoutofwamaccounts.ps1** scripts listed below, while **WPJCleanUp.cmd** is required only if your device is Workplace Joined. For details about the specific steps that each script automates, select the associated **Details** link. Use the “Select if using automated scripts” link to navigate back to this method.
 
@@ -60,7 +60,7 @@ If you prefer to perform the steps for the cleanup process manually, use the inf
 <details>
 <summary><b>Section A: Remove Office licenses & cached accounts</a></b></summary>
 
-This section is sub-divided into three parts. Some of the parts require editing registry entries.
+This section is subdivided into three parts. Some of the parts require editing registry entries.
 
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
