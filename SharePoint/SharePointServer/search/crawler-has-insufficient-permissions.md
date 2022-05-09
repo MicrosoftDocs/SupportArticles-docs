@@ -29,10 +29,10 @@ ms.date: 3/31/2022
 
 Consider the following scenario:
 
-- You create a file share on a server based on Windows Server 2012 (or a later version) and assign Read permissions to the SharePoint crawler (content access account).
-- For this file share you set up a content source of the "File Shares" type via the SharePoint Search Service Application administration.
-- You start a crawl for the content source of type "File Shares".
-- In your SharePoint Search Center, run a search query for a file stored in the file share.
+- You create a file share on a server that's running Windows Server 2012 or a later version, and assign Read permissions to the SharePoint crawler (content access account).
+- For this file share, you set up a content source of the "File Shares" type through the SharePoint Search Service Application administration.
+- You start to crawl for content source of the "File Shares" type.
+- In the SharePoint Search Center, you run a search query for a file stored in the file share.
 
 In this scenario, no search result is returned. Additionally, the following error message is generated in the crawl log:
 
@@ -40,9 +40,9 @@ In this scenario, no search result is returned. Additionally, the following erro
 
 ## Resolution
 
-To resolve this issue, assign the 'Manage Auditing And Security Log' (SeSecurityPrivilege) privilege to the SharePoint content access account. To do this, follow these steps on the computer that hosts the file shares:
+To resolve this issue, assign the **Manage Auditing And Security Log** (SeSecurityPrivilege) privilege to the SharePoint content access account. To do so, follow these steps on the computer that hosts the file shares:
 
-1. Click **Start**, click **Run**, type gpedit.msc, and then click **OK**.
+1. Select **Start** > **Run**, type `gpedit.msc`, and then select **OK**.
 1. Navigate to the following location in the Local Group Policy Editor:
 
    Computer Configuration\Windows Settings\Security Settings\Local Policies\User Rights Assignment
@@ -52,7 +52,7 @@ To resolve this issue, assign the 'Manage Auditing And Security Log' (SeSecurity
 1. Click **OK** in the **Manage auditing and security log properties** dialog box.
 
    > [!NOTE]
-   > If you assign the 'Manage Auditing And Security Log permission' by using a Group Policy Object (GPO), add the crawl account to the GPO.
+   > If you assign the **Manage Auditing And Security Log** permission by using a Group Policy Object (GPO), add the crawl account to the GPO.
 
 ## More information
 
