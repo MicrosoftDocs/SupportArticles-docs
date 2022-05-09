@@ -107,7 +107,7 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 3. Once the vm has booted into single user mode. Use your favorite text editor to open the fstab file.
 
    ```
-   # nano /etc/fstab
+   nano /etc/fstab
    ```
 
 4. Review the listed file systems. Each line in the fstab file indicates a file system that is mounted when the VM starts. For more information about the syntax of the fstab file, run the man fstab command. To troubleshoot a start failure, review each line to make sure that it's correct in both structure and content.
@@ -127,7 +127,7 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 7. Reboot the vm using the below command.
 
    ```
-   # reboot -f
+   reboot -f
    ```
 
 > [!Note]
