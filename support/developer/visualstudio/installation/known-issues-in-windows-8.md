@@ -3,7 +3,6 @@ title: Issues for Visual Studio 2010 SP1 in Windows 8
 description: This article lists known issues for Visual Studio 2010 Service Pack 1 in Windows 8.
 ms.date: 04/22/2020
 ms.reviewer: meyoun
-ms.technology: vs-installation-general
 ---
 # Known issues for Visual Studio 2010 SP1 in Windows 8
 
