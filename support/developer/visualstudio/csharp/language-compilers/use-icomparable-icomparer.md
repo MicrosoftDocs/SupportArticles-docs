@@ -3,7 +3,6 @@ title: Use comparison interfaces in Visual C#
 description: This article describes how to use the `IComparable` and `IComparer` interfaces in Visual C#.
 ms.date: 04/14/2020
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use the `IComparable` and `IComparer` interfaces in Visual CSharp
 

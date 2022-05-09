@@ -4,7 +4,6 @@ description: This article provides workarounds for linker out of memory problems
 ms.date: 04/23/2020
 ms.custom: sap:Language or compilers
 ms.reviewer: yongzhu, corob
-ms.technology: vs-language-compilers
 ---
 # Linker fatal error: LNK1102: out of memory
 

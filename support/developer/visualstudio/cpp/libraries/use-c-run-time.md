@@ -4,7 +4,6 @@ description: This article describes how to use the C Run-time.
 ms.date: 10/27/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use the C Run-Time
 
