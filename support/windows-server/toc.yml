@@ -718,6 +718,8 @@
       href: ./backup-and-storage/server-backup-mmc-fails-open.md
   - name: Data corruption and disk errors
     items:
+    - name: 'Troubleshooting guidance: Data corruption and disk errors'
+      href: ./backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system

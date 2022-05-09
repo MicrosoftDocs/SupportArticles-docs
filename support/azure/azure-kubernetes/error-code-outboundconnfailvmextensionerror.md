@@ -17,7 +17,7 @@ This article describes how to identify and resolve the `OutboundConnFailVMExtens
 
 - The [Netcat](https://linuxcommandlibrary.com/man/netcat) (nc) command-line tool
 
-- The [dig](https://downloads.isc.org/isc/bind9/cur/9.17/doc/arm/html/manpages.html#dig-dns-lookup-utility) command-line tool
+- The [dig](https://linux.die.net/man/1/dig) command-line tool
 
 ## Symptoms
 

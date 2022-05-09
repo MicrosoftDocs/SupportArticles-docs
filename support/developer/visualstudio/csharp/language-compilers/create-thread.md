@@ -3,7 +3,6 @@ title: How to create a thread by using Visual C#
 description: Describes how to create a thread by using Visual C#. Contains sample steps to explain related information.
 ms.date: 04/22/2020
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use Visual C# to create a thread
 

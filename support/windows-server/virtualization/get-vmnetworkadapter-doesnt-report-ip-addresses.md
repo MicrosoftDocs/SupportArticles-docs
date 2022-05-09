@@ -11,7 +11,7 @@ ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:virtual-machine-state, csstroubleshoot
-ms.technology: virtualization
+ms.technology: hyper-v
 keywords: Get-VMNetworkAdapter
 ---
 
