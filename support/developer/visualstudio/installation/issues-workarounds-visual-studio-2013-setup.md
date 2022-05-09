@@ -6,7 +6,7 @@ ms.custom: sap:installation
 ---
 # Some shortcut names still indicate Preview after a newer version is installed
 
-This article helps you resolve a problem that occurs when you install Microsoft Visual Studio 2013.
+This article helps you resolve an issue that occurs when you install Microsoft Visual Studio 2013.
 
 _Original product version:_ &nbsp; Visual Studio 2013  
 _Original KB number:_ &nbsp; 2899270
@@ -26,9 +26,9 @@ To fix these shortcut names, follow these steps:
 
 2. Manually delete any shortcuts that have been left behind.
 
-    1. Open an elevated command prompt.
+    1. Open an elevated **Command Prompt** window.
 
-    2. At the command prompt, type the following command, and then press **Enter**:
+    2. In the **Command Prompt** window, type the following command, and then press **Enter**:
 
         ```console
         rmdir /S "%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Microsoft Visual Studio 2013"

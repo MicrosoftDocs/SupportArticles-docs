@@ -92,7 +92,7 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 
 1. Close Visual Studio.
 2. To open an elevated **Command Prompt**, select **Start**, type _cmd_ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
-3. At the **Command Prompt**, type _cd C:\ProgramData\Package Cache_, and then press **Enter**.
+3. In the **Command Prompt** window, type _cd C:\ProgramData\Package Cache_, and then press **Enter**.
 4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands at the **Command Prompt**, and press **Enter** after each command:
 
     ```console
