@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot slow query performance in the SSIS or ETL jobs
 description: This article helps you resolve issues that occur because of Slow query performance from SSIS or ETL jobs.
-ms.date: 05/05/2022
+ms.date: 05/09/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -9,7 +9,7 @@ author: yuej
 ms.author: v-jayaramanp
 ---
 
-# Troubleshoot slow query performance in SSIS or ETL jobs
+# Troubleshoot slow query performance in the SSIS or ETL jobs
 
 ## Symptoms
 
@@ -42,7 +42,7 @@ The SSIS job may contain many data flow tasks and it may try to download source 
    WHERE session_id>50 and text like '%Employees%’
    ```
 
-1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files.
+1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
 
 1. Contact SSIS engineer to enable the SSIS package logging to identify which steps take long time and contribute major delay.
 
@@ -69,6 +69,8 @@ If the query can be completed, collect the actual execution plan, and treat it a
 1. Click on the `query_plan`, and save it as *.sqlplan*.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
+
+1. Find the major resource consumer in the query plan. If you have historical query plan(Query store is a good tool), compare and check why the plan changed].
 
 ### Insert performance
 
