@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "This feature has been disabled by your Administrator" when Office 365 activates Skype for Business
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to install Microsoft Skype for Business as a stand-alone application from a Microsoft Microsoft 365 Apps for enterprise suite, you receive one of the following error messages:

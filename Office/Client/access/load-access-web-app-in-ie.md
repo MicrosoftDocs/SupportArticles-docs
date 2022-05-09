@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # "An error has occurred" message when you load an Access web app in Internet Explorer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to load a Microsoft Access web app in Internet Explorer, the app may not load completely, and then you receive an "Error has occurred. Sorry, something went wrong. Please try again later" error message.

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Memory leak when Access continually connects to database files
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom
 
 When Microsoft Access (MsAccess.exe) or a custom solution continually connects to Access database files (.mdb or .accdb) through the Access ODBC driver and the OLE DB provider (Microsoft.ACE.OLEDB.12.0), the memory usage of the Access database engine keeps increasing until the process is completed.

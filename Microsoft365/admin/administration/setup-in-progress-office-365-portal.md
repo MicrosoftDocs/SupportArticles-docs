@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Domain shows a status of "Setup in progress" in the Office 365 portal
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You experience one of the following problems in the Microsoft Office 365 portal:

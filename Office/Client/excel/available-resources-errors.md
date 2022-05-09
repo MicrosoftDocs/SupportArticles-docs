@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to troubleshoot "available resources" errors in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you work with a Microsoft Excel file, you receive one of the following messages:

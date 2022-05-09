@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Exchange Server
+appliesto: 
+- Exchange Server
 search.appverid: MET150
 ms.reviewer: kellybos
 author: simonxjx

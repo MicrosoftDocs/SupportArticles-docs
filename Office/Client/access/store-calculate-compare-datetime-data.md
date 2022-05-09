@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to store, calculate, and compare Date/Time data in Microsoft Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how Microsoft Access stores the Date/Time data type. This article also describes why you may receive unexpected results when you calculate dates and times or compare dates and times.

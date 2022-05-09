@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Microsoft Excel has encountered a problem and needs to close" when starting Excel for Mac
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start Microsoft Excel for Mac, you receive the following error message:

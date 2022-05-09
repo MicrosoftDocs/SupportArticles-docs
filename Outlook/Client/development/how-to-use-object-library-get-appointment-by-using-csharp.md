@@ -6,7 +6,8 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
-appliesto: Outlook Development
+appliesto: 
+- Outlook Development
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx

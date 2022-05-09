@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You can't activate or sign-in after you update to Office 2016 for Mac version 15.33
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to activate or sign in to any of the Microsoft Office 2016 applications after you install the version 15.33 update, you receive a blank authentication screen.

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Office 365 subscription automatic license renewal fails when sppcext.dll is missing
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When O365 paid subscription tries to renew, the license fails and eventually displays a red bar stating that the subscription is unlicensed.

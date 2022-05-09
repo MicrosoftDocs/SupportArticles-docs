@@ -34,7 +34,7 @@ A user who is granted full access permissions to a shared mailbox can't read enc
 
 Outlook and the Azure Information Protection unified labeling client require the user to have full access permissions and have automapping enabled. However, automapping isn't enabled for users who are granted the full access permissions through a security group.
 
-For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message Encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
+For more information, see the “Can I open encrypted messages sent to a shared mailbox?” section of [Message encryption FAQ](/microsoft-365/compliance/ome-faq?view=o365-worldwide&preserve-view=true#can-i-open-encrypted-messages-sent-to-a-shared-mailbox).
 
 ## Workaround
 

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # A child domain doesn't inherit parent domain changes in Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 When you make a change to a parent (top-level) domain that's verified in Office 365, Microsoft Azure, or Microsoft Intune, a child domain that's also verified doesn't inherit the changes. This issue may occur when you do one of the following:

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Use shared workbooks with different versions of Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This step-by-step article explains how to share a Microsoft Excel workbook with other users.

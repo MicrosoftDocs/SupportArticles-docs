@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You receive a "0x80041015" error message when you try to start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start a Microsoft Office 365 program, you receive the following error message:

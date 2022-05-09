@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Spell Check does not work in Word 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You experience one of the following symptoms in Microsoft Word 2010.
@@ -66,7 +64,7 @@ To install the proofing tools, follow these steps:
     > In this step and in the following step, <*Edition*> is a placeholder for the edition of Office that's installed on the computer.
 5. In the **Microsoft Office <*Edition*>** dialog box, select **Add or Remove Features**, and then select **Continue**.
 
-    :::image type="content" source="media/not-recognize-mispespelled-words-in-word/add-remove-features.png" alt-text="Screenshot of selecting Add or Remove Features in the Microsoft Office <Edition> dialog box." border="false":::
+    :::image type="content" source="media/not-recognize-mispespelled-words-in-word/add-remove-features.png" alt-text="Screenshot of selecting Add or Remove Features in the Microsoft Office \<Edition> dialog box." border="false":::
 
 6. Expand **Office Shared Features**, select the icon to the left of **Proofing Tools**, and then select **Run all from My Computer**.
 

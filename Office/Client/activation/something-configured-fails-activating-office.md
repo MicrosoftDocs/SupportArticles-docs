@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "We can't sign you into your company portal" when activating Office 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 When a user tries to activate Office 2013, the user receives the following error message:

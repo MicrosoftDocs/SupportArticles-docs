@@ -39,8 +39,6 @@ appliesto:
 
 # Error message when selecting hyperlink in Office: "Cannot locate the Internet server or proxy server"
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you create a hyperlink in an Office document and then select the link, you may receive one of these error messages:

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # "Sorry, but we're having trouble signing you in" when a user signs in to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When a user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com/login.srf," the user receives a sign-in error message and can't sign in.

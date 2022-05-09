@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Sample user-defined function to hide formula errors in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Some formulas in Microsoft Excel return error values under certain conditions. For example, when you use a division formula that multiplies a number by zero, you receive the following error value:

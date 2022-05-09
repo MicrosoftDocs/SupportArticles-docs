@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to programmatically change the connection of an Access project
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies only to a Microsoft Access project (.adp).

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # GetObject and CreateObject behavior of Office automation servers
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses the different behaviors that occur when you use the GetObject and CreateObject functions with various versions of Microsoft Office applications.

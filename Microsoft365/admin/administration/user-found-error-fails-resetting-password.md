@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "A user with this name could not be found" when resetting a password for a user in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to reset a password for a user in Microsoft Office 365, you receive the following message:

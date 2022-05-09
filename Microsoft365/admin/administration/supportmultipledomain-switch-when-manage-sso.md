@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # SupportMultipleDomain switch when managing SSO to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 ### Use of SupportMultipleDomain switch, when managing SSO to Office 365 using ADFS

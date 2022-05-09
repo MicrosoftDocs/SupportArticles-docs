@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Description of the Office Feature Updates task
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Starting in Microsoft Office ProPlus build 16.0.11220.*xxxxx* or a later build, there are two new tasks:
