@@ -183,8 +183,6 @@
           href: production/item-rm-not-reserved.md
         - name: Report as finished update fails with a missing quantity error
           href: production/missing-report-finished-quantity.md
-        - name: Error when the Report as finished journal is posted
-          href: production/posting-report-as-.md
         - name: Error when changing status of production order from Reported as finished to End
           href: production/production-order-status-error.md
         - name: Production orders aren't shown on the Marking page
