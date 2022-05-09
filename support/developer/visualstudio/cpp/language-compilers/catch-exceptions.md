@@ -4,7 +4,6 @@ description: Describes how to use a try-catch-finally block to catch an exceptio
 ms.date: 04/22/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-cpp-language-compilers
 ---
 # Catch exceptions in Visual C++
 

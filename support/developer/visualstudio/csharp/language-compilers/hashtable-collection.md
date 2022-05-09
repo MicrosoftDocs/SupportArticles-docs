@@ -4,7 +4,6 @@ description: This article describes how to use the HashTable collection by using
 ms.date: 04/22/2020
 ms.reviewer: imtiazs
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use Visual C# to work with the HashTable collection
 

@@ -4,7 +4,6 @@ description: This article describes a problem in which you can't install Visual 
 ms.date: 04/27/2020
 ms.custom: sap:Third-party tools installed with Visual Studio
 ms.reviewer: pchapman
-ms.technology: vs-installation-third-party
 ---
 # You can't install Visual Studio Tools for Apache Cordova CTP 3.1 in Visual Studio 2013
 
