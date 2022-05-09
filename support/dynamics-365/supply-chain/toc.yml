@@ -213,28 +213,28 @@
           href: rebates/cumulate-customer-rebates-fails.md
     - name: Sales order processing
       items:
-        - name: Sales update history cleanup job fails or has performance issues
-          href: sales/sales-update-history-cleanup-job-performance-issues.md
         - name: A bundle item isn't supported in an intercompany process
           href: sales/bundle-item-intercompany-process.md
         - name: Can't cancel an intercompany purchase order that's linked to a sales order
           href: sales/cancel-intercompany-purchase-order.md
-        - name: Reservations cannot be removed when canceling an order
-          href: sales/cancel-order-reservations-not-removed.md
-        - name: If two trade agreements exist for overlapping dates, the same one is always selected
-          href: sales/same-trade-agreement-selected.md
         - name: Can't change the sales quantity of a service item on a sales quotation line
           href: sales/service-item-sales-quantity.md
+        - name: If two trade agreements exist for overlapping dates, the same one is always selected
+          href: sales/same-trade-agreement-selected.md
+        - name: Reservations cannot be removed when canceling an order
+          href: sales/cancel-order-reservations-not-removed.md
+        - name: Sales update history cleanup job fails or has performance issues
+          href: sales/sales-update-history-cleanup-job-performance-issues.md
+        - name: System administrators can't clear order holds because they aren't authorized
+          href: sales/system-administrator-cant-clear-order-holds.md
         - name: Tax information isn't updated if location on a sales order header is changed
           href: sales/tax-information-not-updated.md
         - name: The quantity can't be reduced when canceling sales order
           href: sales/quantity-cannot-be-reduced.md
-        - name: System administrators can't clear order holds because they aren't authorized
-          href: sales/system-administrator.md
     - name: Transportation management
       items:
         - name: Can only add the main account as the credit account for reconciliation reasons
-          href: transportation/reconciliation-reaso.md
+          href: transportation/add-only-main-account-as-credit-reconciliation-reason.md
     - name: Warehouse management
       items:
         - name: Warehouse mobile app

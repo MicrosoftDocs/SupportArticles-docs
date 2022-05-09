@@ -1,6 +1,6 @@
 ---
 title: The quantity can't be reduced when a sales order is canceled
-description: The quantity can't be reduced when a sales order is canceled.
+description: Provides a resolution for the quantity can't be reduced issue when a sales order is canceled.
 author: Henrikan
 ms.date: 5/17/2021
 ms.topic: troubleshooting
@@ -39,7 +39,7 @@ To fix this issue, complete the following tasks:
 
 To cancel open work, follow these steps.
 
-1. Go to **Warehouse management \> Periodic tasks \> Clean up \> Cancel work**.
+1. Go to **Warehouse management** > **Periodic tasks** > **Clean up** > **Cancel work**.
 1. In the **Work ID** field, specify the ID of the work that you want to cancel, and that currently has a **Work status** value of *Open*, *In progress*, *Canceled*, *Combined*, or *Closed*.
 1. Select **OK**.
 1. Select **Yes** to confirm that you want to cancel the work.
@@ -48,13 +48,13 @@ To cancel open work, follow these steps.
 
 To delete a load, follow these steps.
 
-1. Go to **Sales and marketing \> Sales orders \> All sales orders**.
+1. Go to **Sales and marketing** > **Sales orders** > **All sales orders**.
 1. Open the relevant sales order.
-1. On the **Sales order lines** FastTab, select **Warehouse \> Work details**.
+1. On the **Sales order lines** FastTab, select **Warehouse** > **Work details**.
 1. On the **Work** page, on the Action Pane, on the **Work** tab, in the **Work** group, select **Cancel work**.
-1. Confirm that the **Work status** field is set to *Canceled*.
+1. Confirm that the **Work status** field is set to **Canceled**.
 1. Close the **Work** page.
-1. On the sales order details page, on the **Sales order lines** FastTab, select **Warehouse \> Load details**.
+1. On the sales order details page, on the **Sales order lines** FastTab, select **Warehouse** > **Load details**.
 1. On the Action Pane, select **Delete**.
 1. Select **Yes** to confirm that you want to delete the load.
 1. Close the **Load** page.
@@ -63,10 +63,10 @@ To delete a load, follow these steps.
 
 After all work has been canceled, follow these steps to reduce the picked quantity.
 
-1. Go to **Sales and marketing \> Sales orders \> All sales orders**.
+1. Go to **Sales and marketing** > **Sales orders** > **All sales orders**.
 1. Open the relevant sales order.
-1. On the **Sales order lines** FastTab, select **Update line \> Pick** from the toolbar.
-1. On the **Pick** page, in the **Transactions** section, select the line where the **Issue status** field is set to *Picked*.
+1. On the **Sales order lines** FastTab, select **Update line** > **Pick** from the toolbar.
+1. On the **Pick** page, in the **Transactions** section, select the line where the **Issue status** field is set to **Picked**.
 1. In the **Transactions** section, select **Add picking line** from the toolbar.
 1. In the **Picking lines** section, select **Confirm pick all** from the toolbar.
 1. Close the **Pick** page.

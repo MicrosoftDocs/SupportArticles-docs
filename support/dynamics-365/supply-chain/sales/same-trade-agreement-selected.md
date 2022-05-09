@@ -21,4 +21,4 @@ If two trade agreements are defined for the same period or overlapping periods, 
 
 ## Resolution
 
-If there is more than one trade agreement for a given date, the trade agreement that has the lowest price is always selected. For more information, download the following white paper: [Trade agreements in Microsoft Dynamics AX 2012](https://www.axug.com/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=3396a3a8-1f48-4d85-8cd6-5fa982f62e90).
+If there is more than one trade agreement for a given date, the trade agreement that has the lowest price is always selected. For more information, download the white paper [Trade agreements in Microsoft Dynamics AX 2012](https://www.axug.com/HigherLogic/System/DownloadDocumentFile.ashx?DocumentFileKey=3396a3a8-1f48-4d85-8cd6-5fa982f62e90).
