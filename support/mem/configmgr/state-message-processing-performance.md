@@ -127,9 +127,8 @@ To troubleshoot the performance issue, follow these steps:
 
 ## More information
 
-Microsoft Premier Services provides the following proactive deliveries:
+Microsoft Premier Services provides the following proactive delivery:
 
 - [On-demand Assessment for Configuration Manager](/services-hub/health/getting-started-sccm)
-- [Microsoft Endpoint Configuration Manager: Troubleshooting Infrastructure](https://datasheet.azureedge.net/offerings-datasheets/11228%2FEN.pdf)
 
 Contact the Customer Success Account Manager (CSAM) for your Premier Support contract to plan these engagements.

@@ -4,7 +4,6 @@ description: This article describes how to redirect the input and the output of 
 ms.date: 10/14/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Start a process as another user from Visual Basic
 

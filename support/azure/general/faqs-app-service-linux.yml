@@ -121,6 +121,24 @@ sections:
           I'm using my own custom container. I want the platform to mount an SMB share to the `/home/` directory.
         answer: |
           If `WEBSITES_ENABLE_APP_SERVICE_STORAGE` setting is **unspecified** or set to *false*, the `/home/` directory **will not be shared** across scale instances, and files written **will not persist** across restarts. Explicitly setting `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *true* will enable the mount. Once this is set to true, if you wish to disable the mount, you need to explicitly set `WEBSITES_ENABLE_APP_SERVICE_STORAGE` to *false*.
+
+      - question: |
+          My container fails to start with "no space left on device". What does this error mean?
+        answer: |
+          App Service on Linux uses two different types of storage:
+          
+          - File system storage: The file system storage is included in the App Service plan quota. It's used when files are saved to the persistent storage that's rooted in the `/home` directory. 
+          - Host disk space: The host disk space is used to store container images. It's managed by the platform through the docker storage driver.
+          
+          The host disk space is separate from the file system storage quota. It's not expandable and there is a 15 GB limit for each instance. It's used to store any custom images on the worker. You might be able to use larger than 15 GBs depending on the exact availability of host disk space, but this isn't guaranteed. 
+          
+          If the container's writable layer saves data outside of the `/home` directory or a [mounted azure storage path](/azure/app-service/configure-connect-to-azure-storage?tabs=portal&pivots=container-linux), the host disk space will also be consumed.
+          
+          The platform routinely cleans the host disk space to remove unused containers. If the container writes a large quantity of data outside of the `/home` directory or Bring Your Own Storage (BYOS), it will result in startup failures or runtime exceptions once the host disk space limit is exceeded.
+          
+          We recommend that you keep your container images as small as possible and write data to the persistent storage or BYOS when running on Linux App Service. If not possible, you have to split the App Service plan because the host disk space is fixed and shared between all containers in the App Service Plan.
+
+
       - question: |
           My custom container takes a long time to start, and the platform restarts the container before it finishes starting up.
         answer: |

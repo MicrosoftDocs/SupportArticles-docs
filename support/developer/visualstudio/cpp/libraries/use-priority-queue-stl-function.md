@@ -4,7 +4,6 @@ description: This article describes how to use the priority_queue::push, priorit
 ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use priority_queue::(push, pop, empty, top) STL functions in Visual C++
 

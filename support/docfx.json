@@ -174,26 +174,18 @@
         "developer/browsers/stability-performance/**/*.md": "internet-explorer-stability-performance",
         "developer/visualstudio/**/*.md": "",
         "developer/visualstudio/cpp/libraries/**/*.md": "visual-cpp-libraries",
-        "developer/visualstudio/cpp/general/**/*.md": "visual-cpp-general",
-        "developer/visualstudio/cpp/installation/**/*.md": "visual-cpp-installation",
-        "developer/visualstudio/cpp/ide/**/*.md": "visual-cpp-ide",
+        "developer/visualstudio/cpp/debuggers/**/*.md": "visual-cpp-debuggers",
         "developer/visualstudio/cpp/language-compilers/**/*.md": "visual-cpp-language-compilers",
-        "developer/visualstudio/cpp/project-build/**/*.md": "visual-cpp-project-build",
-        "developer/visualstudio/csharp/debuggers/**/*.md": "csharp-debuggers",
-        "developer/visualstudio/csharp/general/**/*.md": "csharp-general",
         "developer/visualstudio/csharp/language-compilers/**/*.md": "csharp-language-compilers",
-        "developer/visualstudio/general/debuggers/**/*.md": "vs-debuggers",
-        "developer/visualstudio/general/general/**/*.md": "vs-general",
-        "developer/visualstudio/general/installation/**/*.md": "vs-installation",
-        "developer/visualstudio/general/language-compilers/**/*.md": "vs-language-compilers",
-        "developer/visualstudio/general/ide/**/*.md": "vs-ide",
-        "developer/visualstudio/general/project-build/**/*.md": "vs-project-build",
-        "developer/visualstudio/general/version-control/**/*.md": "vs-version-control",
-        "developer/visualstudio/general/third-party/**/*.md": "vs-third-party",
-        "developer/visualstudio/general/tools-utilities/**/*.md": "vs-tools-utilities",
-        "developer/visualstudio/install/general/**/*.md": "vs-installation-general",
-        "developer/visualstudio/install/install/**/*.md": "vs-installation-install",
-        "developer/visualstudio/install/third-party/**/*.md": "vs-installation-third-party",
+        "developer/visualstudio/debuggers/**/*.md": "vs-debuggers",
+        "developer/visualstudio/general/**/*.md": "vs-general",
+        "developer/visualstudio/installation/**/*.md": "vs-install",
+        "developer/visualstudio/language-compilers/**/*.md": "vs-language-compilers",
+        "developer/visualstudio/ide/**/*.md": "vs-ide",
+        "developer/visualstudio/project-build/**/*.md": "vs-project-build",
+        "developer/visualstudio/version-control/**/*.md": "vs-version-control",
+        "developer/visualstudio/third-party/**/*.md": "vs-third-party",
+        "developer/visualstudio/tools-utilities/**/*.md": "vs-tools-utilities",
         "developer/visualstudio/silverlight/**/*.md": "vs-silverlight",
         "developer/visualstudio/subscriptions/**/*.md": "vs-subscriptions",
         "developer/visualstudio/visual-basic/ide/**/*.md": "visual-basic-ide",
@@ -240,7 +232,8 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
-        "mem/intune/**/*.md": "microsoft-intune"
+        "mem/intune/**/*.md": "microsoft-intune",
+        "power-platform/ai-builder/*.md": "aibuilder"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
@@ -394,6 +387,11 @@
           "Troubleshoot",
           "Power Platform",
           "Power Automate"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "AI Builder"
         ]
       },
       "ms.search.scope": {
@@ -405,6 +403,10 @@
           "PowerApps"
         ],
         "power-platform/power-automate/*.md": [
+          "Flow"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "PowerApps",
           "Flow"
         ]
       }

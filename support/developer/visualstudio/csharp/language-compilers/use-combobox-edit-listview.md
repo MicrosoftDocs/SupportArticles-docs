@@ -4,7 +4,6 @@ description: Describes how to use a ComboBox control to edit data that is in a L
 ms.date: 04/22/2020
 ms.custom: sap:Language or compilers
 ms.topic: how-to
-ms.technology: csharp-language-compilers
 ---
 # Use a ComboBox control to edit data in a ListView control in Visual CSharp
 
