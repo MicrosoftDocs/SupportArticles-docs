@@ -4,7 +4,6 @@ description: Describes how to wait for a shelled application to finish by using 
 ms.date: 04/16/2020
 ms.reviewer: BRODER
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use Visual C# to wait for a shelled application to finish
 

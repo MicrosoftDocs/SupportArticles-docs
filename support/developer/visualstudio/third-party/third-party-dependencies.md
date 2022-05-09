@@ -3,7 +3,6 @@ title: Third-party dependencies in Visual Studio 2015
 description: This article provides a table that summarizes the third-party apps that are required when you install Cross Platform Mobile Development tools from Visual Studio 2015.
 ms.date: 04/24/2020
 ms.custom: sap:Third-party tools installed with Visual Studio
-ms.technology: vs-third-party
 ---
 # Visual Studio 2015 setup: Third-party dependencies
 

@@ -4,7 +4,6 @@ description: This article provides two resolutions for the problem where error m
 ms.date: 01/04/2021
 ms.custom: sap:Language or Compilers
 ms.topic: troubleshooting
-ms.technology: vs-language-compilers
 ---
 # Instrumenting a signed assembly would throw warning message: XXX.DLL/XXX.EXE has been signed. Instrumenting will break verification
 
