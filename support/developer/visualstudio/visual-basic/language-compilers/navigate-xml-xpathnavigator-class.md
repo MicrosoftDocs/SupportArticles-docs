@@ -4,7 +4,6 @@ description: This article describes some sample steps and sample code to navigat
 ms.date: 10/10/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Navigate XML with the XPathNavigator class by using Visual Basic  
 

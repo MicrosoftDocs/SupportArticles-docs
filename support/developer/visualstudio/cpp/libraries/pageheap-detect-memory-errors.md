@@ -5,7 +5,6 @@ ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.reviewer: JULIAJ
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use the PageHeap utility to detect memory errors in a Visual C++ project
 

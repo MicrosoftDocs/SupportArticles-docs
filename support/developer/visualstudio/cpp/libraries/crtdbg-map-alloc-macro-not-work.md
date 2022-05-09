@@ -4,7 +4,6 @@ description: This article explains that allocation is reported as occurring in t
 ms.date: 04/22/2020
 ms.custom: sap:C and C++ Libraries
 ms.reviewer: kayda
-ms.technology: visual-cpp-libraries
 ---
 # The _CRTDBG_MAP_ALLOC macro doesn't work as expected
 

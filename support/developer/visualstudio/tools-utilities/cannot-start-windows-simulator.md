@@ -4,7 +4,6 @@ description: Resolves a problem in which you can't start Windows Simulator in Vi
 ms.date: 04/27/2020
 ms.custom: sap:Tools and utilities
 ms.reviewer: sbonev, meyoung
-ms.technology: vs-tools-utilities
 ---
 # Can't start Windows Simulator after you upgrade to Windows 8.1 in Visual Studio 2012
 
