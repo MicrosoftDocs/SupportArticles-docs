@@ -1,6 +1,6 @@
 ---
 title: You can't apply a template to a released product
-description: You can't apply a template to a released product.
+description: Provides a resolution for the issue that you can't apply a template to a released product.
 author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -29,5 +29,5 @@ Many pages in Microsoft Dynamics 365 Supply Chain Management let you create a te
 
 To create a product template, use the **Template** menu on the **Product** tab of the Action Pane, not the **Record info** button on the **Options** tab.
 
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. On the Action Pane, on the **Product** tab, in the **New** group, select **Template**, and then select either **Create personal template** or **Create shared template**, as appropriate.

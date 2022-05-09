@@ -1,6 +1,6 @@
 ---
 title: You receive an error when running the built-in master planning engine
-description: Provides a resolution for the error that occurs When you run the deprecated built-in master planning engine.
+description: Provides a resolution for the error that occurs when you run the deprecated built-in master planning engine.
 author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting

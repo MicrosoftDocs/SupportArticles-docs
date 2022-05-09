@@ -1,6 +1,6 @@
 ---
 title: Item can't have a BOM or formula
-description: Provides a resolution for the Item cannot have a BOM or formula error that occurs when you firm an order during item validation.
+description: Provides a resolution for the item cannot have a BOM or formula error that occurs when you firm an order during item validation.
 author: t-benebo
 ms.date: 06/10/2021
 ms.topic: troubleshooting

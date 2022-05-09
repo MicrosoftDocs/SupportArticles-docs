@@ -1,6 +1,6 @@
 ---
 title: A product receipt voucher number is consumed even when not generating a voucher
-description: Provides a resolution for the issue that a product receipt voucher number is consumed even if no financial voucher is created during product receipt.
+description: Provides a resolution for the issue that a product receipt voucher number is consumed even if no financial voucher is created in the product receipt.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

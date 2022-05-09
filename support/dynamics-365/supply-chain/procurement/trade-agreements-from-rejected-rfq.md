@@ -1,6 +1,6 @@
 ---
 title: Trade agreements can be created from rejected RFQs
-description: Introduces a by design behavior that you can create trade agreements from rejected RFQs.
+description: Introduces a by-design behavior where you can create trade agreements from rejected RFQs.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

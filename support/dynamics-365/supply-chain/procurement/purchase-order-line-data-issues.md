@@ -1,6 +1,6 @@
 --- 
 title: Purchase order line data discrepancies 
-description: Provides a resolution for the data discrepancies or data corruption on your purchase order lines.
+description: Provides a resolution for data discrepancies or data corruption on your purchase order lines.
 author: GalynaFedorova 
 ms.date: 12/07/2021 
 ms.topic: troubleshooting 

@@ -1,6 +1,6 @@
 --- 
 title: Integers incorrectly rounded in product configuration model calculations 
-description: Integer results aren't always rounded correctly when product configuration models are calculated. Fix the issue with an added decimal attribute and calculation. 
+description: Integer results aren't always rounded correctly when product configuration models are calculated. You can solve the issue by using an added decimal attribute and calculation. 
 author: t-benebo 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

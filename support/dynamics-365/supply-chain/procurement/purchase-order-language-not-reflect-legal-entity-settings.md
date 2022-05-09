@@ -1,6 +1,6 @@
 ---
 title: Purchase orders don't reflect the language settings of the legal entity
-description: Introduces a by design behavior that the product name on a purchase order is shown in the system language instead of the language set for the legal entity where the purchase order was created.
+description: Introduces a by-design behavior where the product name on a purchase order is shown in the system language instead of the language set for the legal entity where the purchase order was created.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

@@ -1,6 +1,6 @@
 ---
 title: Trade agreement currency conversion issues
-description: Provides a resolution for the currency conversion issues when the currency differs on a purchase order.
+description: Provides a resolution for currency conversion issues when the currency differs on a purchase order.
 author: GalynaFedorova
 ms.date: 05/31/2021
 ms.topic: troubleshooting

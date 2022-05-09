@@ -1,6 +1,6 @@
 ---
 title: You can't import an item by using the Released products V2 entity
-description: You can't import an item by using the Released products V2 entity.
+description: Provides a resolution for the issue that you can't import an item by using the Released products V2 entity.
 author: t-benebo
 ms.date: 4/11/2021
 ms.topic: troubleshooting
