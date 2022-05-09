@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Network Policy Server
+title: Troubleshooting Network Policy Server
 description: Learn how to troubleshoot scenarios related to Network Policy Server (NPS).
-ms.date: 04/10/2022
+ms.date: 04/13/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -93,7 +93,7 @@ The NPS event log records this event when authentication fails because the share
 
 ## NPS Event ID 6273, reason code 16: Network Policy Server denied access to a user
 
-To resolve this issue, check each of te following possible causes:
+To resolve this issue, check each of the following possible causes:
 
 - Check that the username and password for the user are valid.
 - Check to see whether the user account is locked in Active Directory.
