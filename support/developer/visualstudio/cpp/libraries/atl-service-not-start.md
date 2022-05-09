@@ -4,7 +4,6 @@ description: An ATL service created with the ATL Project Wizard will not start a
 ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.reviewer: shorne, scotbren
-ms.technology: visual-cpp-libraries
 ---
 # ATL service with _ATL_NO_COM_SUPPORT defined will not start
 

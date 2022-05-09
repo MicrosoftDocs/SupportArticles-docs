@@ -4,7 +4,6 @@ description: Describes how to start the default Internet browser programmaticall
 ms.date: 04/20/2020
 ms.reviewer: BRODER
 ms.topic: how-to
-ms.technology: csharp-general
 ---
 # Use Visual C# to start the default Internet browser programmatically
 
