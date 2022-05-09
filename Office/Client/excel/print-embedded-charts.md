@@ -20,10 +20,6 @@ ms.date: 3/31/2022
 
 # Print all embedded charts programmatically on a worksheet in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-## Summary
-
 In Microsoft Excel, you can create a Microsoft Visual Basic for Applications macro that prints all embedded charts in an Excel worksheet. Each chart is printed on a separate page.
 
 ## More information

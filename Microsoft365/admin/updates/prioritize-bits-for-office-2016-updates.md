@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to prioritize the use of BITS by Office 2016 clients for downloading updates
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you download updates from Microsoft Content Delivery Network (CDN) to update Microsoft Office 2016 clients, you may have to prioritize the use of Windows Background Interface Transfer Service (BITS) to better manage network bandwidth.

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Cannot activate Office 2013 on a new computer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you enter a product key and then click **Activate** to active Microsoft Office 2013 for the first time on a new computer, you receive the following error message:

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Office 365 or Office 2013 installation process stops at the "10% - Configuring" stage
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Assume that you access the Internet by using a proxy server. When you try to install Microsoft Office 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Domain errors in the Office 365 portal
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 This article lists all domain error messages that you may experience in the Microsoft Office 365 portal.

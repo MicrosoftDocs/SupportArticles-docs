@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Command bars of add-ins are not displayed or removed in Excel 2013 or later when you load or unload the add-ins
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use add-ins in Microsoft Excel 2013 or later, you experience the following issues.

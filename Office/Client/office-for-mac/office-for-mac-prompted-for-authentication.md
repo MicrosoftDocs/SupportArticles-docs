@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Office 2016 for Mac 16.x prompts you for authentication when you open a URL
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you install or upgrade to Microsoft Office 2016 for Mac version 16.9 and later versions, you experience one of the following issues in Microsoft Excel, Microsoft Word, or Microsoft PowerPoint: 

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You are redirected to a logon page or an error page, or you are prompted for authentication information when you click a hyperlink to a SSO Web site in an Office document
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you click a hyperlink in a Microsoft Office document, you may experience the following behavior before you can open the page that you requested:

@@ -19,12 +19,10 @@ ms.date: 3/31/2022
 
 # Turn off diagnostic log collection in Support and Recovery Assistant
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 By default, [Support and Recovery Assistant](https://diagnostics.office.com/#/Download/?env=SOC) collects diagnostic logs to help troubleshoot problems in the following scenarios. 
   
 - Support and Recovery Assistant sometimes collects diagnostic logs when the tool fails to solve a user's problem.
-    
+
 - Support and Recovery Assistant collects diagnostic logs when a user chooses to run advanced diagnostics. Typically this happens at the request of an admin or Microsoft support engineer.
     
     :::image type="content" source="media/diagnostic-log-collection-in-support-and-recovery-assistant/support-recovery-assistant.png" alt-text="Screenshot of Microsoft Support and Recovery Assistant page.":::

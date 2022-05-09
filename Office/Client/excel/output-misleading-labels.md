@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the misleading labels that exist in the output of each of the three Analysis ToolPak t-Test tools, and that are common to the output of all three tools.

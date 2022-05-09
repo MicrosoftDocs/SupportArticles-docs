@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use Office Mobile for iPhone, you receive one of the following error messages:  

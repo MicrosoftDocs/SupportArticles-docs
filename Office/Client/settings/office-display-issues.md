@@ -35,8 +35,6 @@ ms.date: 3/31/2022
 
 # Display issues in Office client applications
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use Microsoft Office programs, you notice that visual features differ from one computer to another. For example, you see animations in Excel when you scroll through a worksheet on one computer, but you do not see the same animations on another computer. 

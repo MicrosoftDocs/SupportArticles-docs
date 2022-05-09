@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Connection to a network document is lost in the 2007 Office system or in Office 2010 after the computer resumes from standby
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario. You access a Microsoft Office 2010 document that is located on a network share. Your computer enters standby. Then, you resume the computer from standby. In this scenario, you receive an error message. Error messages resemble those below. 

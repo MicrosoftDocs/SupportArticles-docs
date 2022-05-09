@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "The Windows Installer service could not be accessed" when you try to install Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to install Microsoft Office, you may receive an error message that is similar to the following: 

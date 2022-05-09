@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft SharePoint with the OneNote 2016 desktop client, you can't sync a notebook by selecting **View Sync Status** > **Sync All**. Additionally, you receive error messages that mention the "0xE40200B4" and "0x800700DF" error codes.

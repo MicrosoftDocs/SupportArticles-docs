@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Create and insert a calendar in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains a sample Microsoft Visual Basic for Applications macro (sub-procedure) that prompts you for the month and year and creates a monthly calendar by using a worksheet. 

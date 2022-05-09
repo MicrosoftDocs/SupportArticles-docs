@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Add domain" option is missing from the Microsoft 365 admin center
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 The **Add domain** option is missing from the "Manage domains" page of the Microsoft 365 admin center. Therefore, you cannot add a domain to Office 365.

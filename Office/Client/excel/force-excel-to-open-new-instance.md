@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # How to force Excel to open in a new instance by default
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Excel 2013 and later versions, when you open multiple workbooks, they all open in the same instance of Excel. However, in some situations, you may want to open each workbook in a new instance, such as:

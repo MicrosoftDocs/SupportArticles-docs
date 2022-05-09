@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you install Microsoft Office 2016, the OneDrive sync client (OneDrive.exe) is included in the installation package. This article describes how to use Group Policy settings and registry modification to block access to OneDrive from within the Office applications.

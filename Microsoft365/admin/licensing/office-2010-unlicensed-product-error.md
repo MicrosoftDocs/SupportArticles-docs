@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Unlicensed Product" error when you open an Office Professional Plus 2010 application
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 For an Office 2013 version of this article, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/Unlicensed-Product-and-activation-errors-in-Office-0d23d3c0-c19c-4b2f-9845-5344fedc4380). 
 
 For an Office 2016 version of this article, see [Unlicensed Product and activation errors in Office](https://support.office.com/article/Unlicensed-Product-and-activation-errors-in-Office-0d23d3c0-c19c-4b2f-9845-5344fedc4380). 

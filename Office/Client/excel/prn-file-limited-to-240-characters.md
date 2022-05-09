@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Formatted text (.prn) is limited to 240 characters per line in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Excel, when you save a worksheet as a Formatted Text (Space Delimited) (.prn) file, any characters beyond the two-hundred fortieth character are wrapped to the next line.

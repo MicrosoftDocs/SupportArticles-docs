@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Office Click-to-Run Perpetual (C2R-P) release for Project 2016 and Visio 2016
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

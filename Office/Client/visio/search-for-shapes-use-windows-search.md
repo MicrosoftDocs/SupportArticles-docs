@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Enable the Windows Search service if you want to use the Search for Shapes feature in Visio 2010 or in Visio 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 The Search for Shapes feature in Microsoft Visio 2010 and in Microsoft Visio 2013 uses the Windows Search service to search for the Visio stencils that are installed on your computer. The Windows Search service must be running to enable quick searching. Otherwise, searches take a long time to finish, and the search results may be incorrect. Additionally, you receive the following warning message:

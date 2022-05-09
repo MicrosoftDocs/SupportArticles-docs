@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Search for Shapes feature on the Internet is discontinued
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 The Search for Shapes feature in Visio 2003 and 2007 (known as "Find Shape" in Visio 2002) allowed users to query for Visio shapes both on their computer as well as online from Microsoft servers. The online search portion of Search for Shapes feature is being discontinued and the servers are being shut down. Users of Visio 2002 and later versions will only be able to search for shapes locally. Results will not be returned from the online source.

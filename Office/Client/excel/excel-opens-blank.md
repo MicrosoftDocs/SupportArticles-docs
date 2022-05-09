@@ -25,8 +25,6 @@ appliesto:
 
 # Troubleshoot opening a blank screen when you double-click a file icon or file name in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you double-click an icon or file name for a Microsoft Excel workbook, Excel starts and then displays a blank screen instead of the file that you expect to see.

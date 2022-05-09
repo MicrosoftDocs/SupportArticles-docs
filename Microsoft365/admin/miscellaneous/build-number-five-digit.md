@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Office 365 is changing its build numbers to a five-digit format
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In June, 2018, Microsoft Office 365 is changing its build numbers from a four-digit to a five-digit format. This change is shown in the following table. 

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You cannot find any clip art when you open Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenarios.

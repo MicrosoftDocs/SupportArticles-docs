@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Can't sign in to an Office 2016 for Mac app
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to sign in to an Office 2016 for Mac app by using your Office 365 user ID and password, you receive the following error message:

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Text is not displayed in a Visio 2010 / 2013 drawing when you open the drawing in a browser
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Using Microsoft Visio 2010 / 2013, you save a Microsoft Visio Drawing as a Web Page (.htm; .html) to an HTTP server. However, the text in the Visio drawing is not displayed when you open the Web Page (.htm; .html) file in a browser.

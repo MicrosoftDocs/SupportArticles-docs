@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Recalculation of a worksheet that contains a SUMIF formula takes longer than expected to finish
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When Microsoft Excel recalculates a worksheet that contains a SUMIF formula, the recalculation takes longer to finish than expected.

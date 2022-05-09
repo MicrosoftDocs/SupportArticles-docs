@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # "Cannot update. Database or object is read-only" in a query against a linked SharePoint view if there are unlinked lookup fields
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

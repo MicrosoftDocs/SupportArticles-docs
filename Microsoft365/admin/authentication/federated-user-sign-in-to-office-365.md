@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # "Sorry, but we're having trouble signing you in" and "8004789A" error when a federated user sign in to Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 Consider the following scenario. You update the relying party trust with Microsoft Azure Active Directory (Azure AD) in Active Directory Federation Services (AD FS) 2.0 by using the procedures that are described in one of the following resources: 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Office 365 Desktop Setup Tool cannot download updates or you receive an "Your computer is not allowed to connect to the Microsoft Update service" error message
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 The Microsoft Office 365 Desktop Setup Tool can't download and install software updates from Windows Update or from Microsoft Update in a Microsoft Office 365 environment. You may also get the following error message:

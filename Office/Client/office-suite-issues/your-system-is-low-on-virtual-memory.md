@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Your system is low on virtual memory" error message when you try to start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you start any of the Microsoft Office 2010, 2007, or 2003 programs, you may receive an error message that is similar to the following error message:

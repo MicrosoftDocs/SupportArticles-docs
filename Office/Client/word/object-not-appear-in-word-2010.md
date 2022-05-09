@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # A picture or an object may not appear in a Word 2010 or Word 2007 document
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you open a Microsoft Office Word 2010 or Word 2007 document that contains a picture or an object, the picture or the object may not appear. This issue may occur in a document that contains a picture, a graphic image, an AutoShape object, or another object.

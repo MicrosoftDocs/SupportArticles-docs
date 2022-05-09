@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Distribution group issues
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 This topic discusses how to solve distribution group (also known as distribution list) issues that you may run into when using Office 365.
 
 > [!NOTE]
