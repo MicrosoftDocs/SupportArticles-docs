@@ -153,8 +153,6 @@ If you have Shared Computer Activation enabled, remove the Identity registry key
 
 For managed devices, there are additional locations from which you need to remove cached Office credentials. Devices are considered managed if they're Azure AD Joined (AADJ), Hybrid Azure AD Joined (HAADJ), or Workplace Joined (WPJ). These configurations use Web Account Management (WAM), which stores credentials in different locations.
 
-To check whether your device is managed, see <a href="#checkmanaged">Check whether a device is managed</a>.
-
 There are no steps that you can run manually to clear WAM accounts associated with Office on the device for AADJ and HAADJ devices.
 
 Download the [signoutofwamaccounts.zip](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) file, extract, and run the **signoutofwamaccounts.ps1** script as administrator.
@@ -163,8 +161,7 @@ The **signoutofwamaccounts.ps1** script will remove the tokens and accounts asso
 
 The script can only be run on Windows 10 version 1803 and later. If your operating system isn't compatible, you'll see the notification "Unsupported Windows 10 version!".
 
-Run the [dsregcmd](/azure/active-directory/devices/troubleshoot-device-dsregcmd) command in an elevated command prompt:
-    `dsregcmd /status`
+To check whether your device is managed, run the `dsregcmd /status` command in an elevated command prompt.
 
 In the output that displays, check the values for the **AzureAdJoined**, **EnterpriseJoined** and **DomainJoined** parameters in the **Device State** section. Then use the following table to determine whether your device is AADJ or HAADJ:
 
@@ -173,6 +170,8 @@ In the output that displays, check the values for the **AzureAdJoined**, **Enter
 | YES | NO | NO | Azure AD Joined (AADJ) |
 | NO | NO | YES | Domain Joined (DJ) |
 | YES | NO | YES | Hybrid AD Joined (HAADJ) |
+
+For more information, see [Troubleshoot devices by using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
 <a href="#method2">Select if using automated scripts</a>
 </details>
