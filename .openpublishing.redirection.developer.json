@@ -3583,7 +3583,7 @@
     {
       "source_path": "support/visualstudio/welcome-visual-studio.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/developer/webapps/aspnet/ftp-authentication-authorization/configure-sql-store-session-state.md",
@@ -4178,6 +4178,11 @@
     {
       "source_path": "support/developer/visualstudio/cpp/general/expand-pointer-debugger-watch-window.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/debuggers/expand-pointer-debugger-watch-window",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/visualstudio/welcome-visual-studio.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": true
     }
   ]
