@@ -56,7 +56,15 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     If the settings are correct, the output resembles the following example:
 
     ```output
-    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    DC: \DC.contoso.com 
+    Address:\ <IP Address> 
+    Dom Guid: <GUID> 
+    Dom Name: contoso.com 
+    Forest Name: contoso.com 
+    DC Site Name: Default-First-Site-Name 
+    Our Site Name: Default-First-Site-Name 
+    Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE 
+    The command completed successfully
     ```
 
 - To check the computer's site membership, run the following command at the command prompt:
@@ -68,7 +76,8 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     A successful result resembles the following example:
 
     ```output
-    Default-First-Site-Name The command completed successfully
+    Default-First-Site-Name 
+    The command completed successfully
     ```
 
 ## Error 1: The computer must be joined to a domain
