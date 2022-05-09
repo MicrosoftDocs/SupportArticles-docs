@@ -25,11 +25,11 @@ landingContent:
           - text: Troubleshoot network related errors
             url: /visualstudio/install/troubleshooting-network-related-errors-in-visual-studio
           - text: Uninstall third-party applications
-            url: /installation/secondary-installer-third-party-app.md
+            url: ./installation/secondary-installer-third-party-app.md
           - text: OS requirements for Visual Studio 2022
-            url: /general/visual-studio-2022-unsupported-operating-systems.md
+            url: ./general/visual-studio-2022-unsupported-operating-systems.md
           - text: Resolve common setup errors
-            url: /installation/issues-workarounds-visual-studio-setup.md
+            url: ./installation/issues-workarounds-visual-studio-setup.md
   - title: Language or Compilers
     linkLists:
       - linkListType: how-to-guide
@@ -37,7 +37,7 @@ landingContent:
           - text: Language documentation
             url: /visualstudio/windows#language-documentation
           - text: Use C# to read from and write to text file
-            url: /csharp/language-compilers/read-write-text-file.md
+            url: ./csharp/language-compilers/read-write-text-file.md
   - title: C and C++ Libraries
     linkLists:
       - linkListType: how-to-guide
@@ -45,9 +45,9 @@ landingContent:
           - text: Latest Visual C++ Redistributable Downloads 
             url: /cpp/windows/latest-supported-vc-redist
           - text: Supported OS for Visual C++ Redistributable 
-            url: /cpp/libraries/minimum-service-pack-levels.md
+            url: ./cpp/libraries/minimum-service-pack-levels.md
           - text: Runtime framework packages for Desktop Bridge
-            url: /cpp/libraries/c-runtime-packages-desktop-bridge.md
+            url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
   - title: Documentation, training, and support
     linkLists:      
       - linkListType: how-to-guide
