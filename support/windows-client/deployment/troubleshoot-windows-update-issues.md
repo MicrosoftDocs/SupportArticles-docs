@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Windows Update issues
+title: Guidance for troubleshooting Windows Update issues
 description: Learn how to troubleshoot scenarios related to Windows Updates
-ms.date: 05/10/2022
+ms.date: 05/13/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -14,58 +14,69 @@ ms.custom: csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 
-# Troubleshoot Windows Update issues
+# Windows Update troubleshooting guidance
 
-This solution is designed to get you started on Windows Update troubleshooting scenarios. Most users are able to resolve their issue using these solutions.
+These solutions designed to get you started on Windows Update troubleshooting scenarios.
 
 ## Troubleshooting checklist
 
-1. Run the diagnostic tool for your version of Windows.
-   - **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool (For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file)).
-   - **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
+### Step 1: Run the diagnostic tool for your version of Windows
 
-      ```console
-      Dism /online /cleanup-image /restorehealth
-      ```
+- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool (For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file)).
+- **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
-1. Restart the computer. If the computer didn't restart after a previous update, pending actions may still have to be completed before you can apply new updates.
+  ```console
+  Dism /online /cleanup-image /restorehealth
+  ```
 
-1. Install the latest servicing stack update. For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
+### Step 2: Restart the computer
 
-1. Check for and fix any Windows file corruption. For more information, see [Fix Windows file corruption](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+If the computer didn't restart after a previous update, pending actions may still have to be completed before you can apply new updates.
 
-1. Download the update package and try to install the update manually. To do this, follow these steps:
+### Step 3: Install the latest servicing stack update
 
-   1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
-   1. In the search box, type the update number that you want to download, and then select **Search**.
-   1. Find the update that applies to your operating system in the search results. Next to that update, select **Add** to add the update to your basket.
-   1. Select **View basket**, and then select **Download**.
-   1. To choose a destination for the update, select **Browse**, and then select **Continue**.
-   1. When the download process finishes, select **Close**.
-   1. Browse to the download location, and then double-click the download package to install the update.
+For more information, see [Latest Servicing Stack Updates](https://msrc.microsoft.com/update-guide/vulnerability/ADV990001).
 
-## Error: The update is not applicable to your computer
+### Step 4: Check for and fix any Windows file corruption
+
+For more information, see [Fix Windows file corruption](/troubleshoot/windows-server/deployment/fix-windows-update-errors).
+
+### Step 5: Download the update package and try to install the update manually
+
+To do this, follow these steps:
+
+1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
+1. In the search box, type the update number that you want to download, and then select **Search**.
+1. Find the update that applies to your operating system in the search results. Next to that update, select **Add** to add the update to your basket.
+1. Select **View basket**, and then select **Download**.
+1. To choose a destination for the update, select **Browse**, and then select **Continue**.
+1. When the download process finishes, select **Close**.
+1. Browse to the download location, and then double-click the download package to install the update.
+
+## Common issues and solutions
+
+### Error: The update is not applicable to your computer
 
 This error has several possible causes. The following instructions help you identify the specific cause that affects you.
 
-### Has the update been superseded?
+#### Step 1: Has the update been superseded?
 
-Make sure that the update package contains newer versions of the binaries than the system that you are updating. Alternatively, check that the package is superseded by another new package.
+Make sure that the update package contains newer versions of the binaries than the system that you're updating. Alternatively, check that the package is superseded by another new package.
 
 As updates for a component are released, the updated component will supersede an older component that is already on the system. When this occurs, the previous update is marked as superseded. If the update that you're trying to install already has a newer version of the payload on your system, you might receive this error message.
 
-### Has the update already been installed?
+#### Step 2: Has the update already been installed?
 
-Verify that the package that you are trying to install isn't already installed.
+Verify that the package that you're trying to install isn't already installed.
 
-### Is the update appropriate for this architecture?
+#### Step 3: Is the update appropriate for this architecture?
 
-1. Verify that the package that you're trying to install matches the Windows version that you are using.  
+1. Verify that the package that you're trying to install matches the Windows version that you're using.  
    The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers.  
-1. Verify that the package you want to install matches the processor architecture of the Windows version that you are using.  
+1. Verify that the package you want to install matches the processor architecture of the Windows version that you're using.  
    For example, an x86-based update can't be installed on x64-based installations of Windows.
 
-### Have all prerequisite updates been installed?
+#### Step 4: Have all prerequisite updates been installed?
 
 Read the package's related article to find out if the prerequisite updates are installed. For example, if you receive the error message in Windows 8.1 or Windows Server 2012 R2, you might have to install the April 2014 update 2919355 as a prerequisite and one or more prerequisite servicing updates (KB 2919442 and KB 3173424).
 
@@ -77,7 +88,7 @@ get-hotfix KB3173424, KB2919355, KB2919442
 
 If the updates are installed, the command returns the installed date in the **InstalledOn** section of the output.
 
-## The device isn't receiving an update that you deployed
+### The device isn't receiving an update that you deployed
 
 Follow these steps to troubleshoot this issue.
 
@@ -88,7 +99,7 @@ Follow these steps to troubleshoot this issue.
 1. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
 1. Check that the device has scanned for updates and is scanning the Windows Update service.  
    To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
-1. **Feature updates only:** Verify that the device is successfully enrolled in feature update management by the deployment service. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+1. **Feature updates only:** Verify that the device is successfully enrolled in feature update management by the deployment service. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
 1. **Expedited quality updates only:** Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update).  
    The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*. To verify its presence, view the installed programs list or run the following PowerShell script:  
 
@@ -96,14 +107,14 @@ Follow these steps to troubleshoot this issue.
    Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
    ```
 
-## The device is receiving an update that you didn't deploy
+### The device is receiving an update that you didn't deploy
 
-Follow these steps to troubleshoot this issue.
+To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint.  
    For example, if the device is scanning for updates from a WSUS endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
-   A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that is successfully enrolled is represented by an Azure AD device resource with an update management enrollment for feature updates and has no Azure AD device registration errors.
+   A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
 
 ## References
 
