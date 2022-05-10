@@ -258,7 +258,7 @@ To troubleshoot the issue in this situation, collect the following information f
     > [!NOTE]
     > For more information, see [Recommendations for antivirus exclusions that relate to Operations Manager](antivirus-exclusions-recommendations.md).
 
-- RAID level (0, 1, 5, 0+1 or 1+0) for the drive that is used by the Health Service State
+- RAID level (`0`, `1`, `5`, `0+1` or `1+0`) for the drive that is used by the Health Service State
 - Number of disks used for the RAID
 - Whether battery-backed write cache is enabled on the array controller
 
