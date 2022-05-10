@@ -309,13 +309,13 @@ To troubleshoot the issue in this situation, collect the following information f
     GO
     ```
 
-- Drive letters that contain data warehouse or Ops and Tempdb files
+- Drive letters that contain data warehouse, operations manager db, and Tempdb files
 - Whether the antivirus software is configured to exclude SQL data and log files (Scanning SQL Server database files with antivirus software can degrade performance.)
-- Amount of free space on drives that contain data warehouse or Ops and Tempdb files
+- Amount of free space on drives that contain data warehouse, operations manager db, and Tempdb files
 - Storage type (SAN or local)
 - RAID level (0, 1, 5, 0+1 or 1+0) for drives that are used by SQL Server
 - If SAN storage is used: number of spindles on each LUN that's used by SQL Server
-- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the Ops database and in the `EventPublisher` table in the data warehouse database
+- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the operations manager database and in the `EventPublisher` table in the data warehouse database
 
   To determine the row amounts, run the following commands:
 
