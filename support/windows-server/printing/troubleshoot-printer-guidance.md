@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting printing issues
-description: Introduces general guidance of troubleshooting scenarios related to printers.
+title: Guidance for troubleshooting printing issues
+description: Introduces general guidance for troubleshooting scenarios related to printers.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
