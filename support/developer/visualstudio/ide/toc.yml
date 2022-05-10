@@ -22,5 +22,5 @@
   href: ./help-viewer-2-crashes.md
 - name: Mouse wheel events don't work in Visual Basic 6.0 IDE
   href: ../visual-basic/ide/mouse-wheel-events-do-not-work.md
-- name: [Troubleshoot] Visual Studio may stop responding if the running resources are consuming disk space
+- name: Visual Studio may stop responding if the running resources are consuming disk space
   href: ./Visual-studio-stop-reponding-resources-consuming-disk-space.md
