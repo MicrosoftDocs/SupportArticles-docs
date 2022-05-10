@@ -23,4 +23,4 @@ You want to filter the items that will be included in a master planning batch jo
 
 ## Resolution
 
-The batch job filter can filter only on items. Although you can add a join to the **Item coverage** table, filter settings that you make against that table won't affect the query output. At runtime, the system runs planning for all the coverage groups and all the variations that the filtered items have. After an item is already included in the run, any coverage groups that are included in the item filter a won't affect the planning output.
+The batch job filter can filter only on items. Although you can add a join to the **Item coverage** table, filter settings that you make against that table won't affect the query output. At runtime, the system runs planning for all the coverage groups and all the variations that the filtered items have. After an item is already included in the run, any coverage groups that are included in the item filter won't affect the planning output.
