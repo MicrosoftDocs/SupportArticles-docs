@@ -50,7 +50,7 @@ landingContent:
             url: ./cpp/libraries/c-runtime-packages-desktop-bridge.md
   - title: Documentation, Training and Support
     linkLists:      
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:          
           - text: Visual Studio IDE documentation 
             url: /visualstudio/ide
