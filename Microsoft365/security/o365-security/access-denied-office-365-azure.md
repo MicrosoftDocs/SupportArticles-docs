@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # "Access Denied" error when you use the connect-MSOLService cmdlet to connect to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms 
 
 When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:

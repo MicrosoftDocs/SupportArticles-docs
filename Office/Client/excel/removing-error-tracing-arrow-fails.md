@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You cannot remove error tracing arrow in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you correct an error found by the **Formulas referring to empty cells** rule in Microsoft Excel, the Trace Empty Cell arrow changes into a Trace Precedents arrow instead of disappearing as expected.

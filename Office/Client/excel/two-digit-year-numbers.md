@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How Excel works with two-digit year numbers
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you type a date using a two-digit year number (such as 98), Microsoft Excel uses specific rules to determine which century to use for the date. This article explains how Microsoft Excel determines the century.

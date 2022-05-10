@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Your session has expired" error message in Office Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Users receive a "Your session has expired" error message in Microsoft Office Online after 15 minutes.This error may occur when they do one or more of the following actions: 

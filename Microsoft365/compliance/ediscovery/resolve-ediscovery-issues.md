@@ -24,6 +24,8 @@ ms.date: 3/31/2022
 ---
 # Resolve common eDiscovery issues
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 This article covers basic troubleshooting steps that you can take to identify and resolve issues that you might encounter during an eDiscovery search or elsewhere in the eDiscovery process. Resolving some of these scenarios requires help from Microsoft Support. Information about when to contact Microsoft Support is included in the resolution steps.
 
 ## Error/issue: Ambiguous location

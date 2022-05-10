@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to create and use two-input data tables in Microsoft Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how to create and to use two-input tables in Microsoft Excel. These tables allow you to test how changes in two variables affect one formula.

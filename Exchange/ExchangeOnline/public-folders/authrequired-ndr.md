@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Error when external users send mail to mail-enabled public folders
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2984402
 
 ## Problem

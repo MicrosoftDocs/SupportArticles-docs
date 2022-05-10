@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "We can't open this add-in from localhost" when loading an Office Add-in or using Fiddler
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you load an Office Add-in from https://localhost or when you use [Fiddler](https://www.telerik.com/fiddler), you receive the following error:     

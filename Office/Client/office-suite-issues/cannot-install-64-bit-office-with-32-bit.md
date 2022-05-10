@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # You receive the error message "You cannot install the 64-bit version of Office 2010 because you have 32-bit Office products installed"
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to install the 64-bit version of a Microsoft Office 2010 suite or the 64-bit version of a Microsoft Office 2010 product, you receive the following error message at the beginning of the installation process:

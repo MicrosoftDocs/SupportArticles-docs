@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Error message when you open a file type that is blocked by registry policy settings in Visio 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 A user cannot open a drawing file that uses one of the following formats or save a drawing file to one of the following formats by using Microsoft Visio 2013:

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "We don't recognize this user ID or password" error when a user tries to sign in to the Office 365 portal
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 When users try to sign in to the Office 365 portal, they receive the following error message:

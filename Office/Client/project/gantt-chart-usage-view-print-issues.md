@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Gantt Chart view or Usage view print on too many pages in Project
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Project, when you print or print preview a Gantt Chart view or a Usage view, task bars or columns of data may be printed on more pages than necessary, or you may see an additional timescale beyond the end of your project.

@@ -48,9 +48,7 @@ ms.date: 3/31/2022
 
 # Office programs may crash with the SendToBluetooth add-in installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Resolution
+## Resolution
 
 If you have the WIDCOMM SendToBluetoothadd-in installed, your Office programs might be crashing due to an incompatibility issue between the add-in and other Microsoft Office programs.
 

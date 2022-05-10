@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 ---
 # "Action Failed Error Number: 2950" error when running a macro that calls a VBA function in an Access database
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 931407
 
 > [!NOTE]

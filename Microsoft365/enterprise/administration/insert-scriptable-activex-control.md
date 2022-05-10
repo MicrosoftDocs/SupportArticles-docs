@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Cannot insert certain scriptable ActiveX controls into Office 2013 documents
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 > [!NOTE]
 > Information the user should notice even if skimmingImportant This article contains information that shows how to reduce security settings or turn off security features on a computer. You can perform these changes to work around a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your environment. If you implement this workaround, take appropriate additional steps to help protect the computer.
 

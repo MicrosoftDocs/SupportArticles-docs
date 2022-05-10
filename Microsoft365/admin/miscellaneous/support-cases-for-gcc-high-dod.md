@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to open Support cases for GCC High and DoD
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Microsoft 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Microsoft 365 admin center to manage your user accounts and define who has permissions to contact support.

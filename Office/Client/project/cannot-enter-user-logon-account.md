@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Cannot enter User Logon Account for new resource
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you open the Enterprise Resource Pool from Project Server 2013 or Project Online, into Project Professional 2013 or Project Pro for Office 365 respectively, you cannot edit the **User Logon Account** field, the field is unavailable or grayed out. 

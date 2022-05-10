@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Word Track Changes functionality disabled when Rights Management Services (RMS) is applied
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You are editing a Microsoft Word document that has Rights Management Services (RMS) applied to it and includes tracked changes. You notice that you cannot use Word's Track Changes feature. The Track Changes control, as well as the Accept and Reject changes controls are disabled. 

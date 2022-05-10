@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When users try to access a Microsoft Office 365 resource from a rich client application such as Microsoft Outlook or Microsoft Lync, one of the following symptoms occurs:

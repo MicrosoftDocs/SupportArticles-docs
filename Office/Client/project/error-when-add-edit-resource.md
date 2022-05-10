@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Error occurs when you add or edit a Resource in Enterprise Resource Pool
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you attempt to Save a resource to the Enterprise Resource Pool, you may receive the following error message:

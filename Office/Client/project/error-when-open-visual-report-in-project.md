@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Error when opening a Visual Report in Project 2010 with Office 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you attempt to open a Visual Report in Project 2010 with Visio 2013 installed you may receive the following error message:

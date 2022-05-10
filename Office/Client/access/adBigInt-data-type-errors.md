@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Access ADODB code errors when you use the adBigInt data type
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Access for Office 365 and Microsoft Access 2019, you may encounter the following error messages in the Visual Basic for Applications (VBA) ADODB code that refers to the adBigInt data type:

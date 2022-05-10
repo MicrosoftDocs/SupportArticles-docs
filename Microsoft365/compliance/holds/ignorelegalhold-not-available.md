@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 ---
 # IgnoreLegalHold isn't available or functional for Exchange Online user objects
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 The **IgnoreLegalHold** switch specifies whether to ignore a user's legal hold status. This parameter isn't available for these commands:
 
 - Disable-Mailbox

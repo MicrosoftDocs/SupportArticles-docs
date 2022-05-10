@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 ---
 # Issues with communications and information barriers
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 [Information barriers](/microsoft-365/compliance/information-barriers) can help your organization remain compliant with legal requirements and industry regulations. For example, with information barriers, you can restrict communication between specific groups of users to avoid a conflict of interest or other issues. (To learn more about how to set up information barriers, see [Define policies for information barriers](/microsoft-365/compliance/information-barriers-policies).)
 
 When people run into unexpected issues after information barriers are in place, there are some steps you can take to resolve those issues. Use this article as a guide.

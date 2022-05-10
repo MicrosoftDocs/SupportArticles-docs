@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 
 # Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run applications
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to create an ODBC DSN for drivers that are provided by Microsoft Access in the Data Sources ODBC Administrator, the attempt fails. This problem occurs if you're using a Click-to-Run (C2R) installation of Office. Depending on the version of Office, you may encounter any of the following issues when you try this operation:

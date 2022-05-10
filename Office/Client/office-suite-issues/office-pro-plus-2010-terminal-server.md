@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to enable Office Professional Plus 2010 to run on a terminal server
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how Microsoft Developer Network (MSDN) and Microsoft TechNet subscription customers can enable Microsoft Office Professional Plus 2010 to run on a server on which Office 2010 was installed and activated and on which the Terminal Services (Remote Desktop Services) server role was later added.

@@ -35,8 +35,6 @@ ms.date: 3/31/2022
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 This article contains information that applies when you use the OneDrive for Business Next Generation Sync Client (onedrive.exe) or the OneDrive for Business sync client (groove.exe) OneDrive for Business sync client.

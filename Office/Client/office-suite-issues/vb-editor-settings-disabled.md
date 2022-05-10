@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Some settings for the Visual Basic Editor that you enabled in an earlier version of an Office application are disabled in Office 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario. You create a file in a 2007 Microsoft Office application or in an earlier version of the application. You notice that some settings for the Microsoft Visual Basic Editor are enabled in the application, such as the Require Variable Declaration option and the Compile on Demand option. When you open the file in a Microsoft Office 2010 application, these settings are disabled.

@@ -18,9 +18,9 @@ ms.date: 3/31/2022
 
 # Can't delete folders in the Deleted Items folder of an archive mailbox in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 3210985
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

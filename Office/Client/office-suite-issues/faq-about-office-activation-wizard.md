@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Frequently asked questions about the Office Activation Wizard
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 This article contains some of the most frequently asked questions about the Microsoft Office Activation Wizard. This article only pertains to Retail versions of Office 2010 suite or program.

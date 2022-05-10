@@ -91,7 +91,7 @@
       href: ../active-directory/password-synchronization-not-activated.md
   - name: Authentication
     items:
-    - name: 80041317 or 80043431 during sign in
+    - name: 80041317 or 80043431 during sign-in
       href: ../authentication/office-365-sign-in-error-80041317-80043431.md
     - name: 8004789A when signing in to Office 365
       href: ../authentication/federated-user-sign-in-to-office-365.md
@@ -115,7 +115,7 @@
       href: ../authentication/problem-with-websites-security-error.md
     - name: Federated users account issues
       href: ../authentication/account-issues-for-federated-users.md
-    - name: Federation Service certificates is expiring
+    - name: Federation Service certificates are expiring
       href: ../authentication/federation-service-certificate-expire.md
     - name: Issue with adding Address or CNAME record
       href: ../authentication/error-add-address-cname-record.md
@@ -265,8 +265,6 @@
     items:
     - name: AD FS sign-in webpage not displayed
       href: ../sign-in/ad-fs-sign-in-page-not-display.md
-    - name: Administrator forgot password
-      href: ../sign-in/forgot-sign-in-password.md
     - name: Can't sign in to an Office 2016 for Mac app
       href: ../sign-in/sign-in-to-office-2016-for-mac-fail.md
     - name: Can't sign in to Microsoft cloud service
@@ -289,6 +287,8 @@
       href: ../sign-in/we-are-having-trouble-signing-you-in-error.md
     - name: Federated user is repeatedly prompted for credentials
       href: ../sign-in/federated-user-repeatedly-prompted-for-credentials.md
+    - name: Forgot sign-in password to M365, Azure, or Intune
+      href: ../sign-in/forgot-sign-in-password.md
     - name: Issue when sign in Office 365
       href: ../sign-in/exchange-online-application-service-principal-disabled.md
     - name: Issue with activate or sign in to Office Mobile
