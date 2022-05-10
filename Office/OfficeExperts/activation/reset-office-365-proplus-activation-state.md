@@ -112,7 +112,6 @@ Check for and remove existing licenses on the device. Make sure to check all the
 1. Delete the following registry entry:
     - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Licensing`
 
-<a href="#method2">Select if using automated scripts</a>
 </details>
 
 <div id="step2">
@@ -126,7 +125,6 @@ Delete the following registry entry:
 
 If you have Shared Computer Activation enabled, remove the Identity registry key location from the `HKEY_USERS\<The user SID>\Software\Microsoft\Office\16.0\Common`registry key. To get the currently signed in user’s SID, run the command `whoami /user` in a non-elevated command prompt.
 
-<a href="#method2">Select if using automated scripts</a>
 </details>
 
 <br>
@@ -142,8 +140,9 @@ If you have Shared Computer Activation enabled, remove the Identity registry key
 1. Check for and delete any values present under the following registry key:
     `HKEY_CURRENT_USER\Software\Microsoft\Protected Storage System`
 
-<a href="#method2">Select if using automated scripts</a>
 </details>
+
+<a href="#method2">Select if using automated scripts</a>
 </details>
 
 <div id="sectionb">
