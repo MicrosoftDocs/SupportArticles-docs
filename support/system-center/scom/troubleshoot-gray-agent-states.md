@@ -326,11 +326,13 @@ To troubleshoot the issue in this situation, collect the following information f
 
 #### Counters to identify memory pressure
 
-- `MSSQL$\<instance>: Buffer Manager: Page life expectancy` - How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.
-- `MSSQL$\<instance>: Buffer Manager: Lazy writes/sec` - Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.
-- `Memory: Available Mbytes` - Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.
-- `Process: Private Bytes: _Total`: This is the amount of memory (physical and page) being used by all processes combined.
-- `Process: Working Set: _Total`: This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.
+| Performance Counter Name                                | Description                                                                                                                                                                                                                                                                                 |
+|---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| MSSQL$\<instance>: Buffer Manager: Page life expectancy | How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.                                                                                                        |
+| MSSQL$\<instance>: Buffer Manager: Lazy writes/sec      | Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.                                                                                                                |
+| Memory: Available Mbytes                                | Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.                                                                                                                                                                   |
+| Process: Private Bytes: _Total                          | This is the amount of memory (physical and page) being used by all processes combined.                                                                                                                                                                                                      |
+| Process: Working Set: _Total                            | This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant. |
 
 #### Counters to identify disk pressure
 
@@ -366,82 +368,102 @@ Capture these physical disk counters for all drives that contain SQL data or log
 
 ### OpsMgr performance counters
 
-The following sections describe the performance counters that you can use to monitor and troubleshoot OpsMgr performance.
+The following sections describe the performance counters that you can use to monitor and troubleshoot Operations Manager performance.
 
 #### Gateway server role
 
 Overall performance counters: These counters indicate the overall performance of the gateway:
 
-- Processor(_Total)\\% Processor Time
-- Memory\\% Committed Bytes In Use
-- Network Interface(*)\\Bytes Total/sec
-- LogicalDisk(*)\\% Idle Time
-- LogicalDisk(*)\Avg. Disk Queue Length
+| Performance Counter Name               | Description |
+|----------------------------------------|-------------|
+| Processor(_Total)\\% Processor Time    |             |
+| Memory\\% Committed Bytes In Use       |             |
+| Network Interface(*)\\Bytes Total/sec  |             |
+| LogicalDisk(*)\\% Idle Time            |             |
+| LogicalDisk(*)\\Avg. Disk Queue Length |             |
 
-OpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the gateway:
+##### Operations Manager process generic performance counters
+These counters indicate the overall performance of Operations Manager processes on the gateway:
 
-- Process(HealthService)\\%Processor Time
-- Process(HealthService)\Private Bytes (depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes)
-- Process(HealthService)\Thread Count
-- Process(HealthService)\Virtual Bytes
-- Process(HealthService)\Working Set
-- Process(MonitoringHost*)\\% Processor Time
-- Process(MonitoringHost*)\Private Bytes
-- Process(MonitoringHost*)\Thread Count
-- Process(MonitoringHost*)\Virtual Bytes
-- Process(MonitoringHost*)\Working Set
+| Performance Counter Name                   | Description                                                                                                            |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Process(HealthService)\\%Processor Time    |                                                                                                                        |
+| Process(HealthService)\\Private Bytes      | _(depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes)_ |
+| Process(HealthService)\\Thread Count       |                                                                                                                        |
+| Process(HealthService)\\Virtual Bytes      |                                                                                                                        |
+| Process(HealthService)\\Working Set        |                                                                                                                        |
+| Process(MonitoringHost*)\\% Processor Time |                                                                                                                        |
+| Process(MonitoringHost*)\\Private Bytes    |                                                                                                                        |
+| Process(MonitoringHost*)\\Thread Count     |                                                                                                                        |
+| Process(MonitoringHost*)\\Virtual Bytes    |                                                                                                                        |
+| Process(MonitoringHost*)\\Working Set      |                                                                                                                        |
 
-OpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the gateway:
+##### Operations Manager specific performance counters
+These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the gateway:
 
-- Health Service\Workflow Count
-- Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
-- Health Service Management Groups(*)\Send Queue % Used: The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the management server or database is too busy or is offline.
-- OpsMgr Connector\Bytes Received: The number of network bytes received by the gateway - that is, the number of incoming bytes before decompression.
-- OpsMgr Connector\Bytes Transmitted: The number network bytes sent by the gateway - that is, the number of outgoing bytes after compression.
-- OpsMgr Connector\Data Bytes Received: The number of data bytes received by the gateway - that is, the amount of incoming data after decompression.
-- OpsMgr Connector\Data Bytes Transmitted: The number of data bytes sent by the gateway - that is, the amount of outgoing data before compression.
-- OpsMgr Connector\Open Connections: The number of connections that are open on gateway. This number should be same as the number of agents or management servers that are directly connected to the gateway.
+| Performance Counter Name                                | Description                                                                                                                                                                                                                                                                                                                                      |
+|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Health Service\Workflow Count                           |                                                                                                                                                                                                                                                                                                                                                  |
+| Health Service Management Groups(*)\Active File Uploads | The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer. |
+| Health Service Management Groups(*)\Send Queue % Used   | The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the management server or database is too busy or is offline.                                                               |
+| OpsMgr Connector\Bytes Received                         | The number of network bytes received by the gateway - that is, the number of incoming bytes before decompression.                                                                                                                                                                                                                                |
+| OpsMgr Connector\Bytes Transmitted                      | The number network bytes sent by the gateway - that is, the number of outgoing bytes after compression.                                                                                                                                                                                                                                          |
+| OpsMgr Connector\Data Bytes Received                    | The number of data bytes received by the gateway - that is, the amount of incoming data after decompression.                                                                                                                                                                                                                                     |
+| OpsMgr Connector\Data Bytes Transmitted                 | The number of data bytes sent by the gateway - that is, the amount of outgoing data before compression.                                                                                                                                                                                                                                          |
+| OpsMgr Connector\Open Connections                       | The number of connections that are open on gateway. This number should be same as the number of agents or management servers that are directly connected to the gateway.                                                                                                                                                                         |
+
 
 #### Management server role
 
 Overall performance counters: These counters indicate the overall performance of the management server:
 
-- Processor(_Total)\\% Processor Time
-- Memory\\% Committed Bytes In Use
-- Network Interface(*)\Bytes Total/sec
-- LogicalDisk(*)\\% Idle Time
-- LogicalDisk(*)\Avg. Disk Queue Length
+| Performance Counter Name               | Description |
+|----------------------------------------|-------------|
+| Processor(_Total)\\% Processor Time    |             |
+| Memory\\% Committed Bytes In Use       |             |
+| Network Interface(*)\\Bytes Total/sec  |             |
+| LogicalDisk(*)\\% Idle Time            |             |
+| LogicalDisk(*)\\Avg. Disk Queue Length |             |
 
-OpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the management server:
 
-- Process(HealthService)\\% Processor Time
-- Process(HealthService)\Private Bytes - _Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes._
-- Process(HealthService)\Thread Count
-- Process(HealthService)\Virtual Bytes
-- Process(HealthService)\Working Set
-- Process(MonitoringHost*)\\% Processor Time
-- Process(MonitoringHost*)\Private Bytes
-- Process(MonitoringHost*)\Thread Count
-- Process(MonitoringHost*)\Virtual Bytes
-- Process(MonitoringHost*)\Working Set
+##### Operations Manager process generic performance counters
+These counters indicate the overall performance of Operations Manager processes on the management server:
 
-OpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the management server:
-- Health Service\Workflow Count: The number of workflows that are running on this management server.
-- Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
-- Health Service Management Groups(*)\Send Queue % Used: The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the OpsMgr system (for example, the root management server) is too busy or is offline.
-- Health Service Management Groups(*)\Bind Data Source Item Drop Rate: The number of data items that are dropped by the management server for database or data warehouse data collection write actions. When this counter value is not 0, the management server or database is overloaded because it can't handle the incoming data item fast enough or because a data item burst is occurring. The dropped data items will be resent by agents. After the overload or burst situation is finished, these data items will be inserted into the database or into the data warehouse.
-- Health Service Management Groups(*)\Bind Data Source Item Incoming Rate: The number of data items received by the management server for database or data warehouse data collection write actions.
-- Health Service Management Groups(*)\Bind Data Source Item Post Rate: The number of data items that the management server wrote to the database or data warehouse for data collection write actions.
-- OpsMgr Connector\Bytes Received: The number of network bytes received by the management server - that is, the size of incoming bytes before decompression.
-- OpsMgr Connector\Bytes Transmitted: The number of network bytes sent by the management server - that is, the size of outgoing bytes after compression.
-- OpsMgr Connector\Data Bytes Received: The number of data bytes received by the management server - that is, the size of incoming data after decompress)
-- OpsMgr Connector\Data Bytes Transmitted: The number of data bytes sent by the management server - that is, the size of outgoing data before compression)
-- OpsMgr Connector\Open Connections: The number of connections open on management server. It should be same as the number of agents or root management server that are directly connected to it.
-- OpsMgr database Write Action Modules(*)\Avg. Batch Size: The number of data items or batches that are received by database write action modules. If this number is 5,000, a data item burst is occurring.
-- OpsMgr DB Write Action Modules(*)\Avg. Processing Time: The number of seconds a database write action modules takes to insert a batch into database. If this number is often greater than 60, a database insertion performance issue is occurring.
-- OpsMgr DW Writer Module(*)\Avg. Batch Processing Time, ms: The number of milliseconds for data warehouse write action to insert a batch of data items into a data warehouse.
-- OpsMgr DW Writer Module(*)\Avg. Batch Size: The average number of data items or batches received by data warehouse write action modules.
-- OpsMgr DW Writer Module(*)\Batches/sec: The number of batches received by data warehouse write action modules per second.
-- OpsMgr DW Writer Module(*)\Data Items/sec: The number of data items received by data warehouse write action modules per second.
-- OpsMgr DW Writer Module(*)\Dropped Data Item Count: The number of data items dropped by data warehouse write action modules.
-- OpsMgr DW Writer Module(*)\Total Error Count: The number of errors that occurred in a data warehouse write action module.
+| Performance Counter Name                   | Description                                                                                                                         |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Process(HealthService)\\% Processor Time   |                                                                                                                                     |
+| Process(HealthService)\Private Bytes       | _Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes._ |
+| Process(HealthService)\Thread Count        |                                                                                                                                     |
+| Process(HealthService)\Virtual Bytes       |                                                                                                                                     |
+| Process(HealthService)\Working Set         |                                                                                                                                     |
+| Process(MonitoringHost*)\\% Processor Time |                                                                                                                                     |
+| Process(MonitoringHost*)\Private Bytes     |                                                                                                                                     |
+| Process(MonitoringHost*)\Thread Count      |                                                                                                                                     |
+| Process(MonitoringHost*)\Virtual Bytes     |                                                                                                                                     |
+| Process(MonitoringHost*)\Working Set       |                                                                                                                                     |
+
+
+##### Operations Manager specific performance counters
+These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the management server:
+
+| Performance Counter Name                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Health Service\Workflow Count                                           | The number of workflows that are running on this management server.                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Health Service Management Groups(*)\Active File Uploads                 | The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.                                                                                                                                                   |
+| Health Service Management Groups(*)\Send Queue % Used                   | The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the OpsMgr system (for example, the root management server) is too busy or is offline.                                                                                                                                                                                             |
+| Health Service Management Groups(*)\Bind Data Source Item Drop Rate     | The number of data items that are dropped by the management server for database or data warehouse data collection write actions. When this counter value is not 0, the management server or database is overloaded because it can't handle the incoming data item fast enough or because a data item burst is occurring. The dropped data items will be resent by agents. After the overload or burst situation is finished, these data items will be inserted into the database or into the data warehouse. |
+| Health Service Management Groups(*)\Bind Data Source Item Incoming Rate | The number of data items received by the management server for database or data warehouse data collection write actions.                                                                                                                                                                                                                                                                                                                                                                                     |
+| Health Service Management Groups(*)\Bind Data Source Item Post Rate     | The number of data items that the management server wrote to the database or data warehouse for data collection write actions.                                                                                                                                                                                                                                                                                                                                                                               |
+| OpsMgr Connector\Bytes Received                                         | The number of network bytes received by the management server - that is, the size of incoming bytes before decompression.                                                                                                                                                                                                                                                                                                                                                                                    |
+| OpsMgr Connector\Bytes Transmitted                                      | The number of network bytes sent by the management server - that is, the size of outgoing bytes after compression.                                                                                                                                                                                                                                                                                                                                                                                           |
+| OpsMgr Connector\Data Bytes Received                                    | The number of data bytes received by the management server - that is, the size of incoming data after decompress)                                                                                                                                                                                                                                                                                                                                                                                            |
+| OpsMgr Connector\Data Bytes Transmitted                                 | The number of data bytes sent by the management server - that is, the size of outgoing data before compression)                                                                                                                                                                                                                                                                                                                                                                                              |
+| OpsMgr Connector\Open Connections                                       | The number of connections open on management server. It should be same as the number of agents or root management server that are directly connected to it.                                                                                                                                                                                                                                                                                                                                                  |
+| OpsMgr database Write Action Modules(*)\Avg. Batch Size                 | The number of data items or batches that are received by database write action modules. If this number is 5,000, a data item burst is occurring.                                                                                                                                                                                                                                                                                                                                                             |
+| OpsMgr DB Write Action Modules(*)\Avg. Processing Time                  | The number of seconds a database write action modules takes to insert a batch into database. If this number is often greater than 60, a database insertion performance issue is occurring.                                                                                                                                                                                                                                                                                                                   |
+| OpsMgr DW Writer Module(*)\Avg. Batch Processing Time, ms               | The number of milliseconds for data warehouse write action to insert a batch of data items into a data warehouse.                                                                                                                                                                                                                                                                                                                                                                                            |
+| OpsMgr DW Writer Module(*)\Avg. Batch Size                              | The average number of data items or batches received by data warehouse write action modules.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| OpsMgr DW Writer Module(*)\Batches/sec                                  | The number of batches received by data warehouse write action modules per second.                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| OpsMgr DW Writer Module(*)\Data Items/sec                               | The number of data items received by data warehouse write action modules per second.                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| OpsMgr DW Writer Module(*)\Dropped Data Item Count                      | The number of data items dropped by data warehouse write action modules.                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| OpsMgr DW Writer Module(*)\Total Error Count                            | The number of errors that occurred in a data warehouse write action module.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
