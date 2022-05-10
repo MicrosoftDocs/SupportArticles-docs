@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-visual-studio.md
+  href: welcome-visual-studio.yml
 - name: C and C++ Libraries
   href: ./cpp/libraries/toc.yml
 - name: Debuggers and analyzers
