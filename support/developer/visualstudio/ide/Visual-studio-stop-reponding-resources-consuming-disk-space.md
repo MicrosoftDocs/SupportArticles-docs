@@ -67,9 +67,9 @@ The default configuration of page file on Windows is such that the system can su
 - If you want to customize page file size, uncheck **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
 
     - If you want to let the system manage a disk size, select the **System managed size** option.
-    
+
     - In some circumstances, you can customize the size of the page file for a disk. To learn about customizing page file size, see [Manually managing the Windows page file](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#manually-managing-the-windows-pagefile).
-    
+
     > [!IMPORTANT]
     > Make sure that you set the **Initial size** and **Maximum size** with the current cumulative peak RAM usage of the applications that are running on the system.
     >
