@@ -3788,7 +3788,7 @@
     {
       "source_path": "support/developer/visualstudio/install/install/issues-workarounds-visual-studio-2013-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
-      "redirect_document_id": false
+      "redirect_document_id": true
     },
     {
       "source_path": "support/developer/visualstudio/install/install/known-issues-visual-studio-2012-update.md",
@@ -4183,7 +4183,7 @@
     {
       "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
-      "redirect_document_id": true
+      "redirect_document_id": false
     }
   ]
 }
