@@ -272,7 +272,7 @@ During operational data insertion, the database disks are primarily used for wri
 
 The database is also CPU-bound when it handles configuration redistribution bursts, which are caused by MP imports or by a large instance space change. In these cases, the Config service queries the database for new agent configuration. This usually causes CPU spikes to occur on the database before the service sends the configuration updates to the agents.
 
-### Data warehouse (OperationsManagerDW)
+### Data warehouse (`OperationsManagerDW`)
 
 For the `OperationsManagerDW` database, the most likely bottleneck is the disk array. This usually occurs because of large operational data insertions. In these cases, the disks are mostly busy performing writes. Usually, the disks are performing few reads, except to handle manually generated Reporting views because these run queries on the data warehouse.
 
