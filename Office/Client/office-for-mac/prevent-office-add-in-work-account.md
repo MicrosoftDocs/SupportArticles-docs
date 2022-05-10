@@ -15,7 +15,7 @@ appliesto:
   - Office app for iOS
 ms.date: 04/29/2022
 ---
-# Block use of Office add-ins from a work or school account
+# Block use of Office add-ins from work or school accounts
 
 ## Symptom
 
