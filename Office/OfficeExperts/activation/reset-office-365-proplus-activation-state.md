@@ -189,7 +189,7 @@ The state of Workplace Joined (WPJ) (Azure AD registered) devices is displayed i
 To clear WPJ accounts:
 
 1. On the device, select the Start button and then choose **Settings**.
-1. Select **Access Work or School**.
+1. Select **Accounts** > **Access Work or School**.
 1. Select the work or school account to be removed, and then select **Disconnect**.
 
 <a href="#method2">Select if using automated scripts</a>
