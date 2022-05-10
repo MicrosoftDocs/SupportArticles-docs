@@ -1,7 +1,7 @@
 ---
 title: How to troubleshoot Azure Active Directory Sync tool installation and Configuration Wizard errors
 description: Describes how to troubleshoot Azure Active Directory Sync tool installation and Directory Sync tool Configuration Wizard error messages.
-ms.date: 05/11/2020
+ms.date: 05/09/2022
 ms.reviewer: jhayes, willfid
 ms.service: active-directory
 ms.subservice: enterprise-users
@@ -56,7 +56,15 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     If the settings are correct, the output resembles the following example:
 
     ```output
-    DC: \DC.contoso.com Address:\ <IP Address> Dom Guid: <GUID> Dom Name: contoso.com Forest Name: contoso.com Dc Site Name: Default-First-Site-Name Our Site Name: Default-First-Site-Name Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE The command completed successfully
+    DC: \DC.contoso.com 
+    Address:\ <IP Address> 
+    Dom Guid: <GUID> 
+    Dom Name: contoso.com 
+    Forest Name: contoso.com 
+    DC Site Name: Default-First-Site-Name 
+    Our Site Name: Default-First-Site-Name 
+    Flags: PDC GC DS LDAP KDC TIMESERV GTIMESERV WRITABLE DNS_DC DNS_DOMAIN DNS_FOREST CLOSE_SITE 
+    The command completed successfully
     ```
 
 - To check the computer's site membership, run the following command at the command prompt:
@@ -68,7 +76,8 @@ When you run the Directory Sync tool Configuration Wizard, you must provide the 
     A successful result resembles the following example:
 
     ```output
-    Default-First-Site-Name The command completed successfully
+    Default-First-Site-Name 
+    The command completed successfully
     ```
 
 ## Error 1: The computer must be joined to a domain

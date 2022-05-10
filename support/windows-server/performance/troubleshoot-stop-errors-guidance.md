@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting stop errors and unexpected restart.
-description: Introduces general guidance of troubleshooting scenarios related to stop errors and unexpected restart.
+title: Guidance for troubleshooting stop errors and unexpected restart.
+description: Introduces general guidance for troubleshooting scenarios related to stop errors and unexpected restart.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
