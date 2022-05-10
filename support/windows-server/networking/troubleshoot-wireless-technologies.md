@@ -21,7 +21,7 @@ Wireless connections involve many different Windows components, as well as third
 
 ## Emerging and known issues
 
-The Windows release health page is designed to inform you about known issues so you can troubleshoot known issues your users may be experiencing in your organization. See [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center (available to customers with Microsoft 365 subscription).
+The Windows release health page is designed to inform you about known issues so you can troubleshoot known issues your users may be experiencing in your organization. See [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center. The admin center is available to customers who have a Microsoft 365 subscription.
 
 ## Troubleshooting a WIFI connection that fails to establish
 
