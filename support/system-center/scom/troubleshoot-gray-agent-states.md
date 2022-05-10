@@ -420,9 +420,9 @@ LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters
 - Process(MonitoringHost*)\Private Bytes
 - Process(MonitoringHost*)\Thread Count
 - Process(MonitoringHost*)\Virtual Bytes
+- Process(MonitoringHost*)\Working Set
 
-Process(MonitoringHost*)\Working SetOpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the management server:
-
+OpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the management server:
 - Health Service\Workflow Count: The number of workflows that are running on this management server.
 - Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
 - Health Service Management Groups(*)\Send Queue % Used: The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the OpsMgr system (for example, the root management server) is too busy or is offline.
