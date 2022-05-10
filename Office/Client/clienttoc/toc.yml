@@ -349,7 +349,7 @@
           href: ../activation/sign-in-issues.md
         - name: Sorry, another account from your organization is already signed in on this computer
           href: ../activation/another-account-already-signed-in.md
-        - name: The account isn’t associated with this Office product
+        - name: The account isn't associated with this Office product
           href: ../activation/account-not-associated-with-office.md
         - name: The products we found in your account can't be used to activate
           href: ../activation/cant-be-used-to-activate.md
@@ -357,7 +357,7 @@
           href: ../activation/device-based-licensing.md
         - name: We can't sign you into your company portal
           href: ../activation/something-configured-fails-activating-office.md
-        - name: We’ve run into a problem with your Office 365 subscription
+        - name: We've run into a problem with your Office 365 subscription
           href: ../activation/run-into-a-problem.md
         - name: You currently have not been assigned an office license that includes the Office desktop apps
           href: ../activation/license-not-assigned.md
@@ -715,8 +715,8 @@
           href: ../installation/windows-installer-service-not-be-accessed.md
     - name: Office app for iOS
       items:
-        - name: Prevent Office add-ins when using Microsoft accounts
-          href: ../office-for-mac/prevent-office-add-in-msa.md
+        - name: Block use of Office add-ins from work or school accounts
+          href: ../office-for-mac/prevent-office-add-in-work-account.md
     - name: Office for Mac
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
