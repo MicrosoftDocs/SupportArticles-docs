@@ -23,7 +23,7 @@ To check which applications cause this issue, follow these steps on your compute
 1. Select the **Commit size** checkbox in the **Select Columns** window, and then select **OK**.
 1. On the **Commit size** column, double-click the column header to sort the column descending by the commit size.
 
-    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/Task-manager-details-tab-1.png" alt-text="Commit size column in Details tab of Task Manager":::
+    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/task-manager-details-tab-1.png" alt-text="Commit size column in Details tab of Task Manager":::
 
 ### Workaround: Close the RAM consuming applications that you aren't using
 
@@ -48,19 +48,19 @@ The default configuration of page file on Windows is such that the system can su
 
 1. Select **Settings…** in the **Performance** section.
 
-    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/System-Properties-Advanced-Settings-1.png" alt-text="Selecting Settings in the Performance group":::
+    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-advanced-settings-1.png" alt-text="Selecting Settings in the Performance group":::
 
 1. On the **Performance Options** window, select the **Advanced** tab.
 
 1. Select **Change…** in the **Virtual Memory** section.
 
-    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/System-Properties-Change-button-1.png" alt-text="Selecting Change button in Virtual Memory group":::
+    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-change-button-1.png" alt-text="Selecting Change button in Virtual Memory group":::
 
 #### Setting the page file optimal
 
 - If you want to let the system manage the page file transparently for you, choose the default option by selecting **Automatically manage paging file size for all drives** checkbox.
 
-    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/System-Properties-Virtual-Memory-1.png" alt-text="Virtual Memory window and settings":::
+    :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-virtual-memory-1.png" alt-text="Virtual Memory window and settings":::
 
 - If you’ve configured page file size such that the system manages it, but the applications aren't stable, check whether the system drive has sufficient disk space by checking in File Explorer. Use **Windows**+**E** keys to open **File Explorer** window on your computer.
 
