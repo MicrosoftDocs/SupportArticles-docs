@@ -388,8 +388,9 @@ LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters
 - Process(MonitoringHost*)\Private Bytes
 - Process(MonitoringHost*)\Thread Count
 - Process(MonitoringHost*)\Virtual Bytes
+- Process(MonitoringHost*)\Working Set
 
-Process(MonitoringHost*)\Working SetOpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the gateway:
+OpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the gateway:
 
 - Health Service\Workflow Count
 - Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
@@ -412,7 +413,7 @@ Overall performance counters: These counters indicate the overall performance of
 LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the management server:
 
 - Process(HealthService)\\% Processor Time
-- Process(HealthService)\Private Bytes - Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes.
+- Process(HealthService)\Private Bytes - _Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes._
 - Process(HealthService)\Thread Count
 - Process(HealthService)\Virtual Bytes
 - Process(HealthService)\Working Set
