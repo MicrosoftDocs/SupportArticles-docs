@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot slow query performance in the SSIS or ETL jobs
-description: This article helps you resolve issues that occur because of Slow query performance from SSIS or ETL jobs.
-ms.date: 05/09/2022
+title: Troubleshoot slow query performance in SSIS or ETL jobs
+description: This article helps resolve issues that occur because of Slow query performance by the SSIS or ETL jobs.
+ms.date: 05/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -9,32 +9,34 @@ author: yuej
 ms.author: v-jayaramanp
 ---
 
-# Troubleshoot slow query performance in the SSIS or ETL jobs
+# Troubleshoot slow query performance in SSIS or ETL jobs
+
+This article helps resolve issues that occur because of Slow query performance by the SSIS or ETL jobs.
 
 ## Symptoms
 
-You may encounter some performance issues from the SQL Server Integration Services (SSIS) or Extract, Transform and Load (ETL) jobs, which are treated as normal. The jobs may fail because of complex joins and huge DML queries. These jobs may take a long time to complete.
+You might encounter performance issues from the SQL server integration services (SSIS) or extract, transform and load (ETL) jobs. The jobs might fail because of complex joins and huge Data Manipulation Language (DML) queries and might take a long time to complete. These are normal performance issues.
 
 Before you start troubleshooting such issues, consider the following questions:
 
 - Did you check which SQL statement in the Batch, ETL, or Bulk Data Processing job is slow?
-- Have you enabled a performance monitor tool such as Microsoft or third party to monitor the session status in SQL Server of the Batch, ETL, or Bulk Data Processing job?
-- When did the issue occur? Before that, was there any change in the data volume or in the Batch, ETL, or Bulk Data Processing T-SQL statement?
+- Have you enabled a performance monitor tool such as Microsoft or a third-party tool to monitor the session status in the SQL Batch, ETL, or Bulk Data Processing job?
+- When did the issue occur? Before that, was there any change in the data volume or the Batch, ETL, or Bulk Data Processing T-SQL statement?
 - Was there an SQL Server or OS patch or upgrade? Was there a change or migration in the server hardware?
 
 ## Causes and resolutions
 
-The next few sections list the common reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
+The following sections explain the typical reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
 
-### Not stuck on the SQL Server side
+### Not stuck on the SQL server-side
 
-The SSIS job may contain many data flow tasks and it may try to download source files from the FTP server, and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL Server side.
+The SSIS job might contain many data flow tasks, and it might try to download source files from the FTP server and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL server-side.
 
-1. Use the `sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name should resemble the following screenshot:
+1. Use the `sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name must resemble the following screenshot:
 
    :::image type="content" source="media/slow-query-performance-ssis-etl/ssis-package-spid.png" alt-text="Find active SSIS related queries.":::
 
-   The program name can be different when you run the package with a different version of SSIS or different method. If you can't filter by the program name, use query text to search. For example:
+   The program name might be different when you run the package with a different version of SSIS or a different method. If you can't filter by the program name, use query text to search. For example:
 
    ```sql
    SELECT text,* FROM sys.dm_exec_requests
@@ -44,9 +46,9 @@ The SSIS job may contain many data flow tasks and it may try to download source 
 
 1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
 
-1. Contact SSIS engineer to enable the SSIS package logging to identify which steps take long time and contribute major delay.
+1. Contact a SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
 
-### Complex select query can't be completed
+### Can't complete complex select query
 
 If the query can be completed, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
 
@@ -66,18 +68,18 @@ If the query can be completed, collect the actual execution plan, and treat it a
     CROSS APPLY sys.dm_exec_sql_text(sql_handle)
     ```
 
-1. Click on the `query_plan`, and save it as *.sqlplan*.
+1. Click on the **query_plan**, and save it as *.sqlplan*.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
 
-1. Find the major resource consumer in the query plan. If you have historical query plan(Query store is a good tool), compare and check why the plan changed].
+1. Find the major resource consumer in the query plan. If you have a historical query plan such as the Query Store feature of SQL, compare and check why the plan changed.
 
-### Insert performance
+### Insert statement performance
 
-Insert performance is one of the reasons to slow the query performance. The following reasons could be causing the Insert performance to slow down:
+The insert operation is one of the reasons to slow the query performance. The following reasons could be causing the insert operation to slow down:
 
-- Each Insert in a large batch causes a log flush, which increases the wait period.
-- Each Insert is against a clustered-index primary key (defined as an identity column), which causes a natural hotspot. The symptom is `PAGELATCH` contention (specific to inserts from multiple connections).
+- Inserting a large batch causes a log flush, which increases the waiting period.
+- Each insert is against a clustered-index primary key (defined as an identity column), which causes a hotspot. The symptom is a PAGELATCH contention (specific to inserts from multiple connections).
 - Inserts are slower against a Heap.
 - The I/O subsystem could be slow.
 
@@ -86,7 +88,7 @@ Following are some common troubleshooting tips:
 - If there are too many indexes in the underlying table, consider disabling or dropping indexes as explained in [slow Inserts in SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support-blog/meditation-slow-inserts-in-sql-server/ba-p/333984).
 - To use `INSERT` with `SELECT`, check if the `SELECT` performance is good.
 
-### Delete performance
+### Delete insert performance
 
 The following could be reasons why the Delete performance operation slows down the query performance:
 
