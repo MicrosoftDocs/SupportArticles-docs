@@ -372,7 +372,8 @@ The following sections describe the performance counters that you can use to mon
 
 #### Gateway server role
 
-Overall performance counters: These counters indicate the overall performance of the gateway:
+##### Overall performance counters
+These counters indicate the overall performance of the gateway:
 
 | Performance Counter Name               | Description |
 |----------------------------------------|-------------|
