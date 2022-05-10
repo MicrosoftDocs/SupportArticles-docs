@@ -24,7 +24,7 @@ After a tenant-to-tenant migration, a User Principal Name (UPN) change, or a pas
 To resolve this issue, clear the cached credentials for OneDrive for Business using the following steps:
 
 1. Sign out of OneDrive for Business.
-1. Remove the following registry entries:
+1. Remove the following folders:
     - `%localappdata%/Microsoft/OneAuth`
     - `%localappdata%/Microsoft/IdentityCache`
 
