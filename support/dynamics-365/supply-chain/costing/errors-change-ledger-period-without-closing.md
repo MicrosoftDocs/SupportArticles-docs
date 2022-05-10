@@ -15,7 +15,7 @@ ms.dyn365.ops.version: 10.0.15
 
 # Warnings or errors on changing ledger period status without closing inventory
 
-Microsoft introduced the following validations to prevent issues caused by an incorrect period-end process around costing. for more information about how to resolve these error messages, see [KB 4561987](https://fix.lcs.dynamics.com/Issue/Details?kb=4561987&bugId=445351&dbType=3&qc=f514f2adcddcddceec43af58c26ae8a9020effdc7cdfe085d9d0deeb8cc7b6a3) .
+Microsoft introduced the following validations to prevent issues caused by an incorrect period-end process around costing. for more information about how to resolve these error messages, see [KB 4561987](https://fix.lcs.dynamics.com/Issue/Details?kb=4561987&bugId=445351&dbType=3&qc=f514f2adcddcddceec43af58c26ae8a9020effdc7cdfe085d9d0deeb8cc7b6a3).
 
 - You're about to execute a Recalculation with a date %1 (10-02-2019). The last registered Recalculation was executed in a previous period with a date %2 (20-01-2019). No execution of an inventory close with a date %3 (31-01-2019) matching period end has been registered. Remember to execute an inventory close as of %3 (31-01-2019) matching the period end. The valuation of inventories, cost of goods sold, and variances may not be correct in subledger or general ledger until this has been executed.
 

@@ -328,15 +328,15 @@
         - name: Can't unreserve inventory on a sales order line
           href: warehousing/unreserve-inventory-sales-line.md
         - name: You can't confirm a shipment because customer is on hold
-          href: warehousing/customer-is-on-hold.md
+          href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
         - name: You can't confirm a shipment because load lines have quantity zero
           href: warehousing/load-line-quantity-is-zero.md
         - name: Can't update a load line because the released quantity would be negative
           href: warehousing/released-qty-cannot-be-negative.md
         - name: Canceled product receipts don't update transactions status to registered
-          href: warehousing/canceled-product-receipts.md
+          href: warehousing/canceled-product-receipts-not-updated-to-registered.md
         - name: Decimal rounding of the physical updating quantity is incorrect
-          href: warehousing/decimal-rounding-of-quantity.md
+          href: warehousing/decimal-rounding-of-physical-updating-quantity-unit-incorrect-error.md
         - name: Physical remaining quantity in the unit must be other than zero
           href: warehousing/physical-remaining-q.md
         - name: Picked quantity is not sufficient during packing slip generation
@@ -348,7 +348,7 @@
         - name: Quantity exceeds under-delivery percentage during packing slip generation
           href: warehousing/quantity-exceeds-under-pack-slip.md
         - name: An error occurs when choosing the location during picking list registration
-          href: warehousing/error-cannot-update.md
+          href: warehousing/error-cannot-update-quantity-with-new-dimensions.md
         - name: Packing station doesn't show product notes
           href: warehousing/packing-station-not-.md
         - name: Location profile disallows negative inventory, but negative on-hand is permitted
@@ -356,7 +356,7 @@
         - name: Only one label is printed for multiple work headers on a single receipt
           href: warehousing/when-receipting-prod.md
         - name: You can't confirm a shipment because of an issue with the calendar
-          href: warehousing/load-has-active-appo.md
+          href: warehousing/calendar-type-requires-appointment-checked-in-out-error.md
         - name: You can't confirm a shipment because of incomplete or missing work
           href: warehousing/open-or-no-work-exis.md
         - name: You can't confirm a shipment because items haven't been picked

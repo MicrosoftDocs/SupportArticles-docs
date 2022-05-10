@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because of an issue with the calendar
-description: You can't confirm a shipment because of an issue with the calendar
+description: Provides a resolution for the issue that you can't confirm a shipment because of a problem with the calendar.
 author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
@@ -33,7 +33,7 @@ Active appointments for the load exist. For example, there is a rule that requir
 
 You must investigate and fix any issues with the active appointments that are linked to the load.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the Action Pane, on the **Transportation** tab, in the **Appointments** group, select **Appointment scheduling**.
 1. Follow one of these steps:

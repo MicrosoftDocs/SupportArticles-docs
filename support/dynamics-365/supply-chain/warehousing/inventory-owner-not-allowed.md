@@ -1,6 +1,6 @@
 --- 
 title: Inventory owner not allowed when processing movements
-description: You may receive the error, "The inventory owner %1 is not allowed." Warehouse management processes support only inventory that is owned by the legal entity. 
+description: You may receive the inventory owner is not allowed error. This issue occurs because currently warehouse management processes support only inventory that is owned by the legal entity.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

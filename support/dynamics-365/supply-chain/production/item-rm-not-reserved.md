@@ -1,6 +1,6 @@
 ---
 title: Item RM can't be reserved when production order is released 
-description: Introduces a by-design behavior where you receive an error that states that item RM could not be fully reserved when releasing a production order.
+description: Introduces a by-design behavior where you receive an error that states that Item RM could not be fully reserved when releasing a production order.
 author: johanhoffmann 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

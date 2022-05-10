@@ -1,6 +1,6 @@
 --- 
 title: Delivery note correction can't be processed
-description: If you try to correct a delivery note after it's posted, you receive an error. This page explains how to correct posted packing slips for items enabled for WMS. 
+description: Explains how to correct posted packing slips for items enabled for WMS when you correct a posted delivery note and receive an error.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

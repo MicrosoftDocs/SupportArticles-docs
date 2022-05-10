@@ -1,6 +1,6 @@
 ---
 title: Canceled product receipts don't update transaction status to Registered
-description: After you cancel product receipts on an inbound load, the system automatically updates the inventory transaction status from Received to Ordered.
+description: Provides a resolution for the issue that the inventory transaction status is automatically updated to Ordered after you cancel product receipts on an inbound load.
 author: Mirzaab
 ms.date: 06/11/2021
 ms.topic: troubleshooting

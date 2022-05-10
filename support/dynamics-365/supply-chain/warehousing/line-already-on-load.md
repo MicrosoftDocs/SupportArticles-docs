@@ -1,6 +1,6 @@
 --- 
 title: One of the lines is already on a load 
-description: This page explains why you may have received the error, "One of the lines is already on a load. Unable to release to warehouse," and how to resolve the issue. 
+description: Explains why and how to solve the error that states that one of the lines is already on a load and unable to release to warehouse. 
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

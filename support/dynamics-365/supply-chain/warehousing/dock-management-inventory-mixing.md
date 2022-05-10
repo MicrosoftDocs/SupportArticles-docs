@@ -1,6 +1,6 @@
 --- 
 title: Mixed inventory types when using dock management profile 
-description: For a dock management profile to effectively manage the mixing of inventory, a work header break must be set up first. This page explains how to do it. 
+description: For a dock management profile to effectively manage the mixing of inventory, a work header break must be set up first. This article explains how to do it.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
@@ -25,9 +25,9 @@ Dock management profiles require work to be split up front. In other words, the 
 
 For the dock management profile to effectively manage the mixing of inventory, a work header break must be set up.
 
-In this example, our dock management profile is configured such that **Inventory types that should not be mixed** is set to *Shipment ID*, and we'll set up a work header break for it:
+In this example, our dock management profile is configured such that **Inventory types that should not be mixed** is set to **Shipment ID**, and we'll set up a work header break for it:
 
-1. Go to **Warehouse management \> Setup \> Work \> Work templates**.
+1. Go to **Warehouse management** > **Setup** > **Work** > **Work templates**.
 1. Select the **Work order type** to edit (for example, *Purchase orders*).
 1. Select the work template to edit.
 1. On the Action Pane, select **Edit query**.

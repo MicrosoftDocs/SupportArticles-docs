@@ -1,6 +1,6 @@
 --- 
 title: Invalid license plate when scanning ID in mobile app 
-description: You may receive an error when scanning a license plate ID in the Warehouse Management mobile app. This page explains how to resolve the issue. 
+description: Provides a resolution for the invalid license plate error that occurs when you scan a license plate ID in the Warehouse Management mobile app.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

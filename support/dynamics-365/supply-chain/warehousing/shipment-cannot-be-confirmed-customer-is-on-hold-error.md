@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because the customer is on hold
-description: You can't confirm a shipment because the customer is on hold.
+description: Provides a resolution for the issue that you can't confirm a shipment because the customer is on hold.
 author: Mirzaab
 ms.date: 07/30/2021
 ms.topic: troubleshooting
@@ -33,7 +33,7 @@ The customer account of the load or shipment is on hold. Therefore, the customer
 
 Use the following procedure to unblock the customer account.
 
-1. Go to **Accounts receivable \> Customers \> All customers**.
+1. Go to **Accounts receivable** > **Customers** > **All customers**.
 1. Open the customer account that the shipment can't be confirmed for.
-1. On the **Credit and collections** FastTab, set the **Invoicing and delivery on hold** field to *No*.
+1. On the **Credit and collections** FastTab, set the **Invoicing and delivery on hold** field to **No**.
 1. Repeat this procedure for all blocked customers for the load.

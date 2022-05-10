@@ -1,6 +1,6 @@
 --- 
 title: Cluster profile could not be found 
-description: When working with inbound warehouse ops, you may receive an error that says the cluster profile can't be found. Make sure cluster profiles are set up correctly. 
+description: Make sure cluster profiles are set up correctly if you receive the cluster profile can't be found error when working with inbound warehouse operations.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

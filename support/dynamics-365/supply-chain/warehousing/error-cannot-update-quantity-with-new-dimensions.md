@@ -1,6 +1,6 @@
 ---
 title: An error occurs when the location is selected during picking list registration
-description: An error occurs when the location is selected during picking list registration.
+description: Introduces a by-design behavior where an error occurs when you select the location for a picking list registration line.
 author: Mirzaab
 ms.date: 4/11/2021
 ms.topic: troubleshooting

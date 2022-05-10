@@ -1,6 +1,6 @@
 --- 
 title: Generate picking work immediately when load is released 
-description: If work must be generated immediately when the load is released, you must configure the wave template accordingly. This page walks you through the steps. 
+description: Provides steps to set up the wave template accordingly if work must be created immediately when the load is released.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
@@ -21,7 +21,7 @@ You create an outbound load by using a sales or transfer order and release the l
 
 ## Resolution
 
-If work must be generated immediately when the load is released, you must configure the wave template accordingly. On the wave template, set the following options to *Yes*:
+If work must be generated immediately when the load is released, you must configure the wave template accordingly. On the wave template, set the following options to **Yes**:
 
 - Automate wave creation
 - Process wave at release to warehouse

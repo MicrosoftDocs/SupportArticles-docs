@@ -1,6 +1,6 @@
 --- 
 title: Certification path error when setting up app connection 
-description: If the Warehouse Management app shows the error "Trust anchor for certification path not found," use this page to resolve or work around the issue. 
+description: Provides a resolution and workaround for the error that states that trust anchor for certification path not found. 
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
@@ -45,7 +45,6 @@ Do one of the following to resolve this issue:
 Manually download the new root certificate using your internet browser by doing the following:
 
 1. Sign in to Dynamics Supply Chain Management and open the front page.
-
 1. In the address bar of your browser, select the lock icon to open the **Location is secure** dialog box.
 1. In the dialog box, select **Certificate (valid)** to open the **Certificate** window for that certificate.
 1. Open the **Certification path** tab of the **Certificate** window.

@@ -1,6 +1,6 @@
 --- 
 title: Inventory quantity not updated due to insufficient transactions 
-description: Inventory quantity -1% can't be updated because there aren't enough inventory transactions for item %2 that have the specified dimensions. 
+description: Provides a resolution for the inventory quantity can't be updated error that occurs if there aren't enough inventory transactions that have the specified dimensions.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
