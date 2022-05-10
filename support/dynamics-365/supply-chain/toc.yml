@@ -121,8 +121,6 @@
           href: procurement/default-tax-group-and-discount.md
         - name: Error "Object reference not set" occurs during purchase order confirmation
           href: procurement/object-reference-not-set.md
-        - name: Error on resubmitting a purchase order to a workflow after a change
-          href: procurement/cant-resubmit-purchase-order-after-change.md
         - name: Imported purchase orders show incorrect line numbers
           href: procurement/line-number-increments.md
         - name: Purchase order line data discrepancies
