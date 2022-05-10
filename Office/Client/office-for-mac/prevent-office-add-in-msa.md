@@ -1,5 +1,5 @@
 ---
-title: Block Office add-ins when using MSA
+title: Block use of Office Add-ins for work or school accounts
 description: When users use their Microsoft account as the active account in the Office app, corporate policies that block Office add-ins don't take effect.
 author: helenclu
 ms.author: luche
@@ -15,41 +15,37 @@ appliesto:
   - Office app for iOS
 ms.date: 04/29/2022
 ---
-# Prevent Office add-ins when accessing corporate resources with Microsoft accounts
+# Block use of Office add-ins from a work or school account
 
 ## Symptom
 
 Consider the following scenario:
 
-- Users in your organization can use their personal iOS devices to access corporate resources.
-- Office add-ins are blocked by policies in corporate resources.
-- Users sign in to Office apps with their Microsoft accounts, create a file with add-in enabled, and then save the file to a corporate storage location. For example, they create an Excel workbook with add-in enabled, then save the file to corporate OneDrive.
+- Users in your organization use personal iOS devices and their personal Microsoft accounts (MSA) to access corporate resources.
+- When users are signed into their work or school accounts, installation of Office add-ins is blocked. Users can install Office add-ins when they're signed into MSA.
+- Users sign in to Office apps with MSA, create a file such as an Excel workbook, install a few Office add-ins and use them. Then they save the file to a corporate storage location, such as the organization's OneDrive for Business.
 
-In this scenario, Office add-ins aren't blocked when users reopen the file from the corporate storage location.
+In this scenario, when users sign in to their work or school accounts and reopen the file, they can use the Office add-ins that were installed when the file was created with MSA.
 
-This issue also occurs when users perform these actions while their Microsoft account is selected as the active account in the Office app.
+If account switching is available to users in your organization, this issue also occurs when users switch the active account in Office apps from MSA to their work or school accounts.
 
 ## Cause
 
-This issue occurs because the policies that prevent Office add-ins are applied to work or school accounts, not Microsoft accounts. Therefore, these policies don't take effect when users use their Microsoft accounts as the active account in Office apps.
+This issue occurs if Office add-in installation is blocked for work or school accounts by [turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-addins-in-the-admin-center?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook). This method doesn't prevent the use of Office add-ins that exist in files created with MSA.
 
 ## Resolution
 
-To fix this issue, set a preference to prevent the use of Office add-ins.
+To prevent the use of Office add-ins, set a preference in the [app configuration policies](/mem/intune/apps/app-configuration-policies-overview#managed-apps) for managed apps. This method can be used for both managed and unmanaged devices.
 
 > [!NOTE]
-> The following keys are available in Office apps for iOS version 2.60 or later.
+>
+> - Make sure the Office apps (Word, Excel, PowerPoint) are managed by Intune, and are configured with [Intune app protection policies](/mem/intune/apps/app-protection-policy).
+> - The following keys are available in Office apps for iOS version 2.60 or later.
 
 - To block only add-ins from the Office Store, set the following key to **1**:
 
   `com.microsoft.office.OfficeWebAddinDisableOMEXCatalog`
-
-  For example, you can use [app configuration policies](/mem/intune/apps/app-configuration-policies-overview) in Microsoft Intune to configure this setting.
-
-  :::image type="content" source="media/prevent-office-add-in-msa/app-configuration-setting.png" alt-text="Screenshot to specify app configuration settings.":::
-
+  
 - To block all add-ins from the Office Store and sideloaded add-ins, set the following key to **1**:
 
   `com.microsoft.office.OfficeWebAddinDisableAllCatalogs`
-
-This preference can be deployed through a mobile device management (MDM) server, or [Microsoft Intune app protection policies (APP)](/mem/intune/apps/app-protection-policy). If you use Intune to deploy the preference, make sure the Office apps are managed by Intune.
