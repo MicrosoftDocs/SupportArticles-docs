@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 2899270
 
 ## Symptoms
 
-If you install Visual Studio 2013 Preview, and then install a newer version of Visual Studio 2013 without first uninstalling Preview, some Visual Studio shortcut names aren't correctly updated to indicate that a new version is installed.
+If you installed Visual Studio 2013 Preview, and then install a newer version of Visual Studio 2013 without first uninstalling Preview, some Visual Studio shortcut names aren't correctly updated to indicate that a new version is installed.
 
 > [!NOTE]
 > These shortcut names are incorrect but correctly point to the newer Visual Studio installation, so it isn't necessary to take any action.
