@@ -2938,8 +2938,6 @@
     items:
     - name: .bak log files are deleted and lost
       href: ./windows-security/bak-log-files-deleted-lost.md
-    - name: Access checks using Windows APIs return incorrect results
-      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
@@ -2948,6 +2946,8 @@
       href: ./windows-security/dont-have-permission-access-folder.md
     - name: Error 1079 when services fail to start
       href: ./windows-security/services-fail-to-start-error-1079.md
+    - name: Evaluate effective permissions for remote resources
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md
     - name: Grant the "Replicating Directory Changes" permission
       href: ./windows-security/grant-replicating-directory-changes-permission-adma-service.md
     - name: Grant users rights to manage services
