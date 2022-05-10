@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting TCP/IP performance
-description: Introduces general guidance of troubleshooting scenarios related to TCP/IP performance.
+title: Guidance for troubleshooting TCP/IP performance
+description: Introduces general guidance for troubleshooting scenarios related to TCP/IP performance.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
