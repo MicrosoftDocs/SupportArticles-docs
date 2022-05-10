@@ -84,7 +84,7 @@ If the expected SHA-1 value doesn't match the value that is returned by the File
 
 - If you obtained the ISO file from a DVD, try to download the Visual Studio web installer or ISO file from [MSDN](https://msdn.microsoft.com//subscriptions/securedownloads) or [Microsoft Download Center](https://www.microsoft.com/download), and then try the installation again.
 
-- If you purchased the DVD from a retail store, you might also be able to download Visual Studio from the store's website. And then use the license key that was provided together with the DVD to activate Visual Studio. Contact the retail store for more information about this process.
+- If you purchased the DVD from a retail store, you might also be able to download Visual Studio from the store's website. Then, use the license key that was provided together with the DVD to activate Visual Studio. Contact the retail store for more information about this process.
 
 ### Error during a repair
 
@@ -133,9 +133,9 @@ In some cases, Visual Studio can programmatically retrieve and then apply the re
     > [!NOTE]
     > We recommend that you contact your system administrator before you modify any group policy setting.
 
-- If the above steps don't resolve the issue, you can also try to manually install the required certificate updates. For information on how to obtain Windows update root certificates, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).
+- If the above steps don't resolve the issue, you can also try to manually install the required certificate updates. For more information on how to obtain Windows update root certificates, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).
 
-If you have already installed Visual Studio, try to repair Visual Studio after you've tried one or more of the above methods. This process attempts to successfully install the features that didn't install on the previous attempt. To repair Visual Studio, follow these steps:
+If you have already installed Visual Studio, try to repair Visual Studio after you've tried one or more of the above methods. This process tries to successfully install the features that weren't installed on the previous attempt. To repair Visual Studio, follow these steps:
 
 1. Open **Programs and Features** (appwiz.cpl).
 
