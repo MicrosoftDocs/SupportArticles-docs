@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot wireless technology issues
+title: Guidance for troubleshooting wireless technology issues
 description: Learn how to troubleshoot scenarios related to wireless technologies
-ms.date: 5/10/2022
+ms.date: 5/13/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -12,10 +12,10 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:nps, csstroubleshoot
 ms.technology: networking
-keywords: 
+keywords: wireless connection, dropped connection, wireless authentication
 ---
 
-# Troubleshoot wireless technology issues
+# Wireless technology troubleshooting guidance
 
 Wireless connections involve a number of different Windows components and a lot of third-party devices and software. For example, Microsoft doesn't make access points or switches. Because wireless connectivity is not an end-to-end Microsoft solution, you have to identify where the problem is, and in many cases another vendor has to fix it.
 
@@ -23,11 +23,11 @@ Wireless connections involve a number of different Windows components and a lot 
 
 The Windows release health page is designed to inform you about known issues so you can troubleshoot known issues your users may be experiencing in your organization. See [Windows release health page](https://admin.microsoft.com/adminportal/home?#/windowsreleasehealth) in the Microsoft 365 admin center (available to customers with Microsoft 365 subscription).
 
-## WIFI connection fails to establish
+## Troubleshooting a WIFI connection that fails to establish
 
 There are a wide range of causes for connection failures. Use the following sections to narrow down the cause of your particular issue.
 
-### Identify the type of failure
+### Step 1: Identify the type of failure
 
 The answers to the following questions may help you to isolate the affected clients and other affected components:
 
@@ -36,7 +36,7 @@ The answers to the following questions may help you to isolate the affected clie
 1. Does the connection fail to establish at all? Or does the connection establish, and then drop?
 1. Do the affected clients share specific components, such as a particular wireless Service Set IDentifier (SSID) or a particular access point (AP)?
 
-### Rule out common causes of connection failures
+### Step 2: Rule out common causes of connection failures
 
 Components such as services, connection managers, group policy, or updates can cause connection problems. To determine if any of these causes apply, follow these steps on an affected client. After each step, try to connect again.
 
@@ -47,7 +47,7 @@ Components such as services, connection managers, group policy, or updates can c
 
 For more troubleshooting instructions and information about how connections establish, see [Advanced troubleshooting wireless network connectivity: Troubleshooting](/windows/client-management/advanced-troubleshooting-wireless-network-connectivity#troubleshooting).
 
-## 802.1X authentication fails
+## Troubleshooting an 802.1X authentication failure
 
 Follow these steps to narrow down possible causes of an 802.1X authentication failure.
 
