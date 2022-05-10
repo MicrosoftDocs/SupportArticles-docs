@@ -16,7 +16,7 @@ ms.custom:
 ms.author: mattphil
 appliesto: 
   - Microsoft 365 Apps for enterprise
-ms.date: 3/31/2022
+ms.date: 5/10/2022
 ---
 
 # Reset activation state for Microsoft 365 Apps for enterprise
