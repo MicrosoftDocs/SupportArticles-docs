@@ -44,7 +44,7 @@ For a fully automated solution to reset the activation state, download and run t
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
-Run the following scripts that automate each section of the process. We recommend that you run the**OLicenseCleanup.vbs** and **signoutofwamaccounts.ps1** scripts listed below, while **WPJCleanUp.cmd** is required only if your device is Workplace Joined. For details about the specific steps that each script automates, select the associated **Details** link. Use the “Select if using automated scripts” link to navigate back to this method.
+Run the following scripts that automate each section of the process. We recommend that you run the **OLicenseCleanup.vbs** and **signoutofwamaccounts.ps1** scripts listed below, while **WPJCleanUp.cmd** is required only if your device is Workplace Joined. For details about the specific steps that each script automates, select the associated **Details** link. Use the “Select if using automated scripts” link to navigate back to this method.
 
 1. To remove previous licenses and cached account information: download the [OLicenseCleanup.zip](https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip) file, extract the **OLicenseCleanup.vbs** script, and run it using elevated permissions. <a href="#sectiona">Details</a>
 1. To clear the WAM accounts on the device that are associated with Office: download the [signoutofwamaccounts.zip](https://download.microsoft.com/download/f/8/7/f8745d3b-49ad-4eac-b49a-2fa60b929e7d/signoutofwamaccounts.zip) file, extract, and run the **signoutofwamaccounts.ps1** script with elevated permissions.
@@ -107,7 +107,7 @@ Check for and remove existing licenses on the device. Make sure to check all the
     - You should see the message “Product key uninstall successful” when the license is removed.
         :::image type="content" source="media/reset-office-365-proplus-activation-state/capture3.png" alt-text="Output shows Uninstalling product key for Office 16, and the message Product key uninstall successful":::
 
-1. Repeat the `cscript ospp.vbs /unpkey` command as needed to remove the licenses for the applications listed in the output from step
+1. Repeat the `cscript ospp.vbs /unpkey` command as needed to remove the licenses for the applications listed in the output from step 3.
 
 1. Delete the following registry entry:
     - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Licensing`
@@ -189,7 +189,7 @@ The state of Workplace Joined (WPJ) (Azure AD registered) devices is displayed i
 
 To clear WPJ accounts:
 
-1. Navigate to **Settings** on the device.
+1. On the device, select the Start button and then choose **Settings**.
 1. Select **Access Work or School**.
 1. Select the work or school account to be removed, and then select **Disconnect**.
 
