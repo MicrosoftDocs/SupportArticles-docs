@@ -180,7 +180,7 @@ For more information, see [Troubleshoot devices by using the dsregcmd command](/
 <details>
 <summary><b>Section C: Clear Workplace-Joined accounts</b></summary>
 
-When you clear a WPJ account on a device, the Single Sign-On (SSO) behavior for the current Windows session will be removed as well. All applications in the current Windows session will lose their SSO state, and the device will be unenrolled from management tools (MDM) and unregistered from the cloud. The next time you try to open an application, you'll be asked to sign-in.
+When you clear a WPJ account on a device, the Single Sign-On (SSO) behavior for the current Windows session will be removed as well. All applications in the current Windows session will lose their SSO state, and the device will be unenrolled from management tools and unregistered from the cloud. The next time you try to open an application, you'll be asked to sign-in.
 
 Check whether your device is Workplace Joined if you're not sure. Run the `dsregcmd /status` command from an elevated command prompt as described in <a href="#sectionb">Section B</a>, above.
 
