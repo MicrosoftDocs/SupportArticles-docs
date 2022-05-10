@@ -86,9 +86,9 @@ To resolve this issue, prevent the calendar change in the affected user's mailbo
     1. Restart the Exchange Information Store service.
     2. Active the affected user's database on another Exchange server.  
 
-    **Note:** The two options will cause service interruptions to the affected users of on the server or database.
+    **Note:** The two options will cause service interruptions to the affected user on the server or database.
 
-3. Delete the calendar item again.
+3. Delete the calendar item.
 
     **Note:** We recommend that you use the MFCMAPI tool to delete the item.
 
