@@ -5,42 +5,41 @@ summary: Welcome to AI Builder troubleshooting. These articles explain how to de
 metadata:
   title: AI Builder troubleshooting
   description: Landing page for AI Builder troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.service: aibuilder  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: aibuilder #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
   ms.date: 3/31/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
+  # Card
   - title: Administration and licensing
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
           - text: Actions are disabled or deactivated
             url: aibuilder-actions-are-disabled-deactivated.md
           - text: Current environment doesn't meet the minimum requirements
-            url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md 
+            url: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
 
- # Card
-  - title: Models
+  # Card
+  - title: Documentation and training
     linkLists:
       - linkListType: reference
+        links:
+          - text: AI Builder documentation
+            url: https://docs.microsoft.com/ai-builder/
+          - text: AI Builder training
+            url: https://docs.microsoft.com/learn/browse/?expanded=power-platform&products=ai-builder
+
+  # Card
+  - title: Models
+    linkLists:
+      - linkListType: how-to-guide
         links:
           - text: AI models fail to be imported in a new environment
             url: aimodels-fail-to-be-imported-in-a-new-environment.md
           - text: Form processing isn't extracting tables
             url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
-
- # Card
-  - title: Documentation and training
-    linkLists:
-      - linkListType: get-started
-        links:
-          - text: AI Builder documentation
-            url: https://docs.microsoft.com/ai-builder/
-          - text: AI Builder training 
-            url: https://docs.microsoft.com/learn/browse/?expanded=power-platform&products=ai-builder
