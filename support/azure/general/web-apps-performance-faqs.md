@@ -153,7 +153,7 @@ For more information, see [Configure web apps in App Service](/azure/app-service
 
 ## Why does my request time out after 230 seconds?
 
-Azure Load Balancer has a default idle timeout setting of four minutes. This setting is generally a reasonable response time limit for a web request. If your web app requires background processing, we recommend using Azure WebJobs. The Azure web app can call WebJobs and be notified when background processing is finished. You can choose from multiple methods for using WebJobs, including queues and triggers.
+Azure Load Balancer has a default idle timeout setting of four minutes. This setting is generally a reasonable response time limit for a web request. so, App Service returns a timeout to the client if your application does not return a response within approximately 240 seconds (230 seconds on Windows app, 240 seconds on Linux app).　If your web app requires background processing, we recommend using Azure WebJobs. The Azure web app can call WebJobs and be notified when background processing is finished. You can choose from multiple methods for using WebJobs, including queues and triggers.
 
 WebJobs is designed for background processing. You can do as much background processing as you want in a WebJob. For more information about WebJobs, see [Run background tasks with WebJobs](/azure/app-service/webjobs-create).
 
@@ -182,3 +182,5 @@ For more information about outbound connections in your web app, see the blog po
 ## How do I use Visual Studio to remote debug my App Service web app?
 
 For a detailed walkthrough that shows you how to debug your web app by using Visual Studio, see [Remote debug your App Service web app](/archive/blogs/benjaminperkins/remote-debug-your-azure-app-service-web-app).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

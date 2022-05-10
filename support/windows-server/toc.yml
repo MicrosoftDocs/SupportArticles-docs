@@ -718,6 +718,8 @@
       href: ./backup-and-storage/server-backup-mmc-fails-open.md
   - name: Data corruption and disk errors
     items:
+    - name: 'Troubleshooting guidance: Data corruption and disk errors'
+      href: ./backup-and-storage/troubleshoot-data-corruption-and-disk-errors.md
     - name: Backup doesn't start after you perform BMR
       href: ./backup-and-storage/backup-not-start-after-performing-bmr.md
     - name: Can't delete files on NTFS file system
@@ -932,8 +934,6 @@
       href: ./deployment/rebuild-tokens-dotdat-file.md
     - name: Specified database is not a valid VAMT database error
       href: ./deployment/specified-database-not-valid-vamt-error.md
-    - name: Unknown devices in Device manager
-      href: ./deployment/unknown-device-vmbus-virtual-machine.md
     - name: Windows Activation fails with error 0x8007267C
       href: ./deployment/windows-activation-fails-with-error-0x8007267.md
     - name: Windows installation fails with error
@@ -1246,6 +1246,14 @@
     href: ./high-availability/high-availability-overview.md
   - name: Cannot bring a resource online
     items:
+    - name: 'Troubleshooting guidance: Cannot bring a resource online'
+      href: ./high-availability/troubleshoot-cannot-bring-resource-online-guidance.md
+    - name: Can't bring a network name online
+      href: ./high-availability/troubleshoot-cannot-bring-network-name-online.md
+    - name: Can't bring a physical disk online
+      href: ./high-availability/troubleshoot-cannot-bring-physical-disk-online.md
+    - name: Can't bring an IP address online
+      href: ./high-availability/troubleshoot-cannot-bring-ip-address-online.md
     - name: '"The parameter is incorrect" error'
       href: ./high-availability/parameter-incorrect-error-cluster-validation-fails.md
     - name: Active Route removed
@@ -1256,6 +1264,8 @@
       href: ./high-availability/cluster-fileshare-resource-fails.md
     - name: Clustering information on IP address failover
       href: ./high-availability/cluster-information-ip-address-failover.md
+    - name: Cluster validation account causes events or messages
+      href: ./high-availability/cluster-validation-account-causes-events-messages.md
     - name: Error 0x8000ffff when you change Shadow Copy settings
       href: ./high-availability/error-0x8000ffff-catastrophic-failure.md
     - name: Error messages occur when bringing a cluster group online
@@ -1280,6 +1290,8 @@
       href: ./high-availability/corrupted-memory-dump-file.md
   - name: Cluster service fails to start
     items:
+    - name: 'Troubleshooting guidance: Cluster service fails to start'
+      href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
     - name: Cluster service startup options
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
@@ -1346,6 +1358,8 @@
       href: ./high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md
   - name: Root cause of an unexpected failover
     items:
+    - name: 'Troubleshooting guidance: Unexpected cluster failover'
+      href: ./high-availability/troubleshoot-unexpected-cluster-failover-issue.md
     - name: Failover behavior on clusters of three or more nodes
       href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: Run chkdsk /f command on a shared cluster disk
@@ -1994,6 +2008,8 @@
       href: ./performance/use-userdump-create-dump-file.md
   - name: Slow Performance
     items:
+    - name: 'Troubleshooting guidance: High CPU usage'
+      href: ./performance/troubleshoot-high-cpu-usage-guidance.md
     - name: Add processors to a computer
       href: ./performance/add-processors-to-computer.md
     - name: Error occurs while deleting registry keys
@@ -2041,17 +2057,15 @@
   - name: Management and Configuration of installing print drivers
     items:
     - name: Print Spooler errors
-      href: ./printing/third-party-print-driver-print-spooler-error.md
-  - name: Errors and troubleshooting General issues
-    items:
-    - name: Event ID associated with point and print restrictions
-      href: ./printing/event-ids-associated-point-print-restrictions.md
+      href: ./printing/third-party-print-driver-print-spooler-error.md    
   - name: 'Errors and troubleshooting: General issues'
     items:
     - name: Can't print after installing a service pack or printer hotfix
       href: ./printing/cannot-print-install-service-pack-update-rollup.md
     - name: Error when installing a shared network printer
       href: ./printing/cannot-install-shared-network-printer-locally.md
+    - name: Event ID associated with point and print restrictions
+      href: ./printing/event-ids-associated-point-print-restrictions.md
     - name: Printer and drive redirection don't work in a Terminal Server session
       href: ./printing/printer-hard-drive-not-redirect-to-remote-desktop-session.md
     - name: Slow performance with HP printer drivers
@@ -2681,7 +2695,9 @@
     - name: VMBus device doesn't load
       href: ./virtualization/vmbus-device-not-load.md
     - name: VM Integration Services status reports protocol version mismatch
-      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md
+      href: ./virtualization/vm-integration-services-status-protocol-version-mismatch.md      
+    - name: Unknown devices in Device manager
+      href: ./virtualization/unknown-device-vmbus-virtual-machine.md
   - name: Live Migration
     items:
     - name: 'Troubleshooting guidance: Live Migration'
@@ -2732,6 +2748,8 @@
       href: ./virtualization/catastrophic-failure-0x8000ffff-error.md
     - name: Fail to start selected virtual machine
       href: ./virtualization/fail-to-start-selected-virtual-machine.md
+    - name: Hyper-V virtual machine can't start when System Guard Secure Launch is enabled
+      href: ./virtualization/hyper-v-virtual-machine-can-not-start-secure-launch-enabled.md
     - name: Hyper-V virtual machine fails to start
       href: ./virtualization/hyper-v-virtual-machine-not-start-0x80070005.md
     - name: Restored Hyper-V virtual machines may not Start
@@ -2914,12 +2932,12 @@
       href: ./windows-security/ntlm-user-authentication.md
     - name: Performance tuning for NTLM authentication
       href: ./windows-security/performance-tuning-ntlm-authentication-maxconcurrentapi.md
+    - name: Windows updates add new NTLM pass-through authentication protections for CVE-2022-21857
+      href: ./windows-security/windows-updates-add-new-ntlm-pass-through-authentication-protections.md      
   - name: Permissions, access control, and auditing
     items:
     - name: .bak log files are deleted and lost
       href: ./windows-security/bak-log-files-deleted-lost.md
-    - name: Access checks using Windows APIs return incorrect results
-      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
@@ -2928,6 +2946,8 @@
       href: ./windows-security/dont-have-permission-access-folder.md
     - name: Error 1079 when services fail to start
       href: ./windows-security/services-fail-to-start-error-1079.md
+    - name: Evaluate effective permissions for remote resources
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md
     - name: Grant the "Replicating Directory Changes" permission
       href: ./windows-security/grant-replicating-directory-changes-permission-adma-service.md
     - name: Grant users rights to manage services
@@ -2978,3 +2998,7 @@
   items:
   - name: End of support for Windows Server 2008 and Windows Server 2008 R2
     href: ./windows-server-eos-faq/end-of-support-windows-server-2008-2008r2.yml
+- name: Windows Troubleshooters
+  items:
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md?context=/troubleshoot/windows-server/context/context

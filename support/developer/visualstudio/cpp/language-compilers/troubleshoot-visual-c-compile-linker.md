@@ -5,7 +5,6 @@ ms.date: 01/04/2021
 ms.custom: sap:Language or Compilers
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.technology: visual-cpp-language-compilers
 ---
 # Troubleshooting for the Microsoft Visual C++ Compiler or the Visual C++ Linker
 

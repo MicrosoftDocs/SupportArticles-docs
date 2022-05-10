@@ -22,6 +22,7 @@ ms.author: genli
 If your Linux virtual machine (VM) in Azure encounters a boot or disk error, you may need to perform mitigation on the disk itself. A common example would be a failed application update that prevents the VM from being able to boot successfully. This article details how to use Azure Virtual Machine repair commands to connect the disk to another Linux VM to fix any errors, then rebuild your original VM.
 
 > [!IMPORTANT]
+>
 > * The scripts in this article only apply to the VMs that use [Azure Resource Manager](/azure/azure-resource-manager/management/overview).
 > * Outbound connectivity from the VM (port 443) is required for the script to run.
 > * Only one script may run at a time.
@@ -45,6 +46,7 @@ Follow these steps to troubleshoot the VM issue:
 To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
 
 To run the commands, you need a role that can create the following types of resources in the subscription:
+
 * Resource Groups
 * Virtual Machines
 * Resource Tags
@@ -65,7 +67,7 @@ To run the commands, you need a role that can create the following types of reso
    Select **Copy** to copy the blocks of code, then paste the code into the Cloud Shell, and select **Enter** to run it.
 
    If you prefer to install and use the CLI locally, this quickstart requires Azure CLI version 2.0.67 or later. Run `az --version` to find the version. If you need to install or upgrade your Azure CLI, see [Install Azure CLI](/cli/azure/install-azure-cli).
-   
+
    If you need to login to Cloud Shell with a different account than you are currently logged in to the Azure portal with you can use `az login` [az login reference](/cli/azure/reference-index#az-login&preserve-view=true). To switch between subscriptions associated with your account you can use `az account set --subscription` [az account set reference](/cli/azure/account#az-account-set&preserve-view=true).
 
 2. If this is the first time you have used the `az vm repair` commands, add the vm-repair CLI extension.
@@ -86,6 +88,7 @@ To run the commands, you need a role that can create the following types of reso
 > The run and restore commands will require all inputs to be entered using the same case as used in the create command, make note or refer to the tags on the repair VM to see what was used.
 
    Repair VM example
+
    ```azurecli-interactive
    az vm repair create -g MyResourceGroup -n myVM --repair-username username --repair-password password1234 --verbose
    ```
@@ -119,3 +122,5 @@ az vm boot-diagnostics enable --name myVMDeployed --resource-group myResourceGro
 * If you are having issues connecting to your VM, see [Troubleshoot RDP connections to an Azure Virtual Machine](./troubleshoot-rdp-connection.md).
 * For issues with accessing applications running on your VM, see [Troubleshoot application connectivity issues on virtual machines in Azure](./troubleshoot-app-connection.md).
 * For more information about using Resource Manager, see [Azure Resource Manager overview](/azure/azure-resource-manager/management/overview).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

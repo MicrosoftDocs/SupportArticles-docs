@@ -129,6 +129,9 @@
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
+      - name: Azure Monitor
+        tocHref: /troubleshoot/azure/azure-monitor/
+        topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/

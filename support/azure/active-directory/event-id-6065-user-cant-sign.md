@@ -107,7 +107,7 @@ After obtaining a Premium Azure AD subscription, follow these steps to enable **
 2. On the left side, select **ACTIVE DIRECTORY**, and then select the directory for which you want to enable **Enterprise State Roaming**.
 3. Go to the **CONFIGURE** tab.
 4. Scroll down the page, look for **USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA**, and verify that **ALL** or **SELECTED** is selected.
-5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-windows-enterprise-state-roaming-enable/).
+5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
 ### (Optional) Set AllowAdHocSubscriptions to "False" on the tenant
 
@@ -124,3 +124,5 @@ Set-MsolCompanySettings -AllowAdHocSubscriptions $false
 - [Set-MsolCompanySettings](/powershell/module/msonline/set-msolcompanysettings?view=azureadps-1.0&preserve-view=true)
 - [How administrators can control the accounts created for RMS for individuals](/azure/information-protection/rms-for-individuals)
 - [50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization](https://support.microsoft.com/help/2925380)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the K8SAPIServerConnFailVMExtensionError error code (or error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the K8SAPIServerConnFailVMExtensionError error code (51)
- 
+
 This article discusses how to identify and resolve the `K8SAPIServerConnFailVMExtensionError` error (also known as error code ERR_K8S_API_SERVER_CONN_FAIL, error number 51) that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
@@ -27,11 +27,11 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > Message="VM has reported a failure when processing extension 'vmssCSE'.
 >
-> Error message: "**Enable failed: failed to execute command: command terminated with exit status=51**\n[stdout]\n{ 
+> Error message: "**Enable failed: failed to execute command: command terminated with exit status=51**\n[stdout]\n{
 >
 > "ExitCode": "51",
 >
-> "Output": "Thu Oct 14 18:07:37 UTC 2021,aks-nodepool1-18315663-vmss000000\\nConnection to 
+> "Output": "Thu Oct 14 18:07:37 UTC 2021,aks-nodepool1-18315663-vmss000000\\nConnection to
 
 ## Cause
 
@@ -52,3 +52,5 @@ In rare cases, the firewall's outbound IP address can be blocked if you've autho
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
