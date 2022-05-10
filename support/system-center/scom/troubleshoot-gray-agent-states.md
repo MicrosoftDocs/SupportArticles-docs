@@ -376,8 +376,9 @@ Overall performance counters: These counters indicate the overall performance of
 - Memory\\% Committed Bytes In Use
 - Network Interface(*)\\Bytes Total/sec
 - LogicalDisk(*)\\% Idle Time
+- LogicalDisk(*)\Avg. Disk Queue Length
 
-LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the gateway:
+OpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the gateway:
 
 - Process(HealthService)\\%Processor Time
 - Process(HealthService)\Private Bytes (depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes)
@@ -409,8 +410,9 @@ Overall performance counters: These counters indicate the overall performance of
 - Memory\\% Committed Bytes In Use
 - Network Interface(*)\Bytes Total/sec
 - LogicalDisk(*)\\% Idle Time
+- LogicalDisk(*)\Avg. Disk Queue Length
 
-LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the management server:
+OpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the management server:
 
 - Process(HealthService)\\% Processor Time
 - Process(HealthService)\Private Bytes - _Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes._
