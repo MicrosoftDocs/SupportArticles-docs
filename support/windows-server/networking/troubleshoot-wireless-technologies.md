@@ -17,7 +17,7 @@ keywords: wireless connection, dropped connection, wireless authentication
 
 # Wireless technology troubleshooting guidance
 
-Wireless connections involve a number of different Windows components and a lot of third-party devices and software. For example, Microsoft doesn't make access points or switches. Because wireless connectivity is not an end-to-end Microsoft solution, you have to identify where the problem is, and in many cases another vendor has to fix it.
+Wireless connections involve many different Windows components, as well as third-party devices and software. For example, Microsoft doesn't make access points or switches. Because wireless connectivity isn't an end-to-end Microsoft solution, you have to identify where the problem is, and in many cases another vendor has to fix it.
 
 ## Emerging and known issues
 
@@ -34,7 +34,7 @@ The answers to the following questions may help you to isolate the affected clie
 1. Do all clients fail to connect, or only certain clients? If only certain clients are affected, what are the common factors? For example, do the clients use the same network interface controller (NIC) vendor or versions, operating system (OS) release, build, or installed software and drivers?
 1. Is the failing connection a manual connection, or an auto-connect connection?
 1. Does the connection fail to establish at all? Or does the connection establish, and then drop?
-1. Do the affected clients share specific components, such as a particular wireless Service Set IDentifier (SSID) or a particular access point (AP)?
+1. Do the affected clients share specific components, such as a particular wireless Service Set Identifier (SSID) or a particular access point (AP)?
 
 ### Step 2: Rule out common causes of connection failures
 
