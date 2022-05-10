@@ -47,7 +47,7 @@
 
     - name: Web Apps
       tocHref: /troubleshoot/developer/webapps/
-      topicHref: /troubleshoot/developer/webapps
+      topicHref: /troubleshoot/developer/webapps/welcome-webapps
       items:
       - name: ASP.NET
         tocHref: /troubleshoot/developer/webapps/aspnet
