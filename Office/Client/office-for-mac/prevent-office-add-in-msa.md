@@ -31,7 +31,7 @@ If account switching is available to users in your organization, this issue also
 
 ## Cause
 
-This issue occurs if Office add-in installation is blocked for work or school accounts by [turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-addins-in-the-admin-center?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook). This method doesn't prevent the use of Office add-ins that exist in files created with MSA.
+This issue occurs if Office add-in installation is blocked for work or school accounts by [turning off the Office Store across all clients](/microsoft-365/admin/manage/manage-addins-in-the-admin-center?view=o365-worldwide#prevent-add-in-downloads-by-turning-off-the-office-store-across-all-clients-except-outlook&preserve-view=true). This method doesn't prevent the use of Office add-ins that exist in files created with MSA.
 
 ## Resolution
 
