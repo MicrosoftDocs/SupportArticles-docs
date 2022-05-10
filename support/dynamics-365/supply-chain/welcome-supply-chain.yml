@@ -17,7 +17,7 @@ landingContent:
   # Card
   - title: Product documentation and training
     linkLists:
-      - linkListType: get-started
+      - linkListType: reference
         links:
           - text: Dynamics 365 Community
             url: https://community.dynamics.com/
@@ -29,7 +29,7 @@ landingContent:
   # Card
   - title: Product management
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
           - text: Can't delete a released product
             url: /dynamics365/supply-chain/troubleshooting/products/cant-delete-released-prod
@@ -39,7 +39,7 @@ landingContent:
   # Card
   - title: Sales order processing
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
           - text: Resolve a quantity can't be reduced error when canceling a sales order
             url: /dynamics365/supply-chain/troubleshooting/sales/quantity-cannot-be-reduced
@@ -49,7 +49,7 @@ landingContent:
   # Card
   - title: Warehouse management
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
           - text: Resolve a packing slip quantity error
             url: /dynamics365/supply-chain/troubleshooting/warehousing/physical-remaining-q
