@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting MBAM
-description: Introduces general guidance of troubleshooting scenarios related to MBAM.
+title: Guidance for troubleshooting MBAM
+description: Introduces general guidance for troubleshooting scenarios related to MBAM.
 ms.date: 03/03/2022
 author: Deland-Han
 ms.author: delhan
