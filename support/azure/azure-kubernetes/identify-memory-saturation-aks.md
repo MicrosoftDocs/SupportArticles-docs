@@ -97,3 +97,5 @@ What about scenarios where the memory is unbounded by design and expected to be 
 ## More information
 
 * [Learn more about Azure Kubernetes Service (AKS) best practices](/azure/aks/best-practices)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

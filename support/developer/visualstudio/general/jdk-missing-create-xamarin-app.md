@@ -4,7 +4,6 @@ description: This article provides a workaround for an error that occurs when yo
 ms.date: 04/23/2020
 ms.custom: sap:Third Party Tools installed with Visual Studio
 ms.reviewer: vyedin
-ms.technology: vs-general
 ---
 # JDK is missing when you create a Xamarin-based app in Visual Studio 2015
 

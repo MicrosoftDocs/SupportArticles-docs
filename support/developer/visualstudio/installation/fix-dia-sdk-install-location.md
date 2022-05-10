@@ -4,7 +4,6 @@ description: Describes a workaround for a DIA SDK install location problem. Spec
 ms.date: 04/27/2020
 ms.custom: sap:Installation
 ms.reviewer: aasthana
-ms.technology: vs-installation-install
 ---
 # Fix the Visual Studio 2013 DIA SDK install location when Visual Studio 2012 is already installed
 
