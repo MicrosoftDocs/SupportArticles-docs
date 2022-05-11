@@ -264,7 +264,7 @@ To troubleshoot the issue in this situation, collect the following information f
 
 ## Troubleshooting SQL Server performance
 
-### Operational database (`OperationsManager`)
+### Operational database (OperationsManager)
 
 For the `OperationsManager` database, the most likely bottleneck is the disk array. If the disk array is not at maximum I/O capacity, the next most likely bottleneck is the CPU. The database will experience occasional slowdowns and operational data storms (high incidences of events, alerts, and performance data or state changes that persist for a relatively long time). A short burst typically does not cause any significant delay for an extended period of time.
 
@@ -309,13 +309,13 @@ To troubleshoot the issue in this situation, collect the following information f
     GO
     ```
 
-- Drive letters that contain data warehouse, operations manager db, and Tempdb files
+- Drive letters that contain data warehouse, Operations Manager DB, and Tempdb files
 - Whether the antivirus software is configured to exclude SQL data and log files (Scanning SQL Server database files with antivirus software can degrade performance.)
-- Amount of free space on drives that contain data warehouse, operations manager db, and Tempdb files
+- Amount of free space on drives that contain data warehouse, Operations Manager DB, and Tempdb files
 - Storage type (SAN or local)
 - RAID level (0, 1, 5, 0+1 or 1+0) for drives that are used by SQL Server
 - If SAN storage is used: number of spindles on each LUN that's used by SQL Server
-- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the operations manager database and in the `EventPublisher` table in the data warehouse database
+- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the Operations Manager database and in the `EventPublisher` table in the data warehouse database
 
   To determine the row amounts, run the following commands:
 
@@ -326,7 +326,7 @@ To troubleshoot the issue in this situation, collect the following information f
 
 #### Counters to identify memory pressure
 
-| Performance Counter Name                                | Description                                                                                                                                                                                                                                                                                 |
+| Performance counter name                                | Description                                                                                                                                                                                                                                                                                 |
 |---------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MSSQL$\<instance>: Buffer Manager: Page life expectancy | How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.                                                                                                        |
 | MSSQL$\<instance>: Buffer Manager: Lazy writes/sec      | Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.                                                                                                                |
@@ -373,9 +373,10 @@ The following sections describe the performance counters that you can use to mon
 #### Gateway server role
 
 ##### Overall performance counters
+
 These counters indicate the overall performance of the gateway:
 
-| Performance Counter Name               | Description |
+| Performance counter name               | Description |
 |----------------------------------------|-------------|
 | Processor(_Total)\\% Processor Time    |             |
 | Memory\\% Committed Bytes In Use       |             |
@@ -384,12 +385,13 @@ These counters indicate the overall performance of the gateway:
 | LogicalDisk(*)\\Avg. Disk Queue Length |             |
 
 ##### Operations Manager process generic performance counters
+
 These counters indicate the overall performance of Operations Manager processes on the gateway:
 
-| Performance Counter Name                   | Description                                                                                                            |
+| Performance counter name                   | Description                                                                                                            |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | Process(HealthService)\\%Processor Time    |                                                                                                                        |
-| Process(HealthService)\\Private Bytes      | _(depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes)_ |
+| Process(HealthService)\\Private Bytes      | Depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes |
 | Process(HealthService)\\Thread Count       |                                                                                                                        |
 | Process(HealthService)\\Virtual Bytes      |                                                                                                                        |
 | Process(HealthService)\\Working Set        |                                                                                                                        |
@@ -400,9 +402,10 @@ These counters indicate the overall performance of Operations Manager processes 
 | Process(MonitoringHost*)\\Working Set      |                                                                                                                        |
 
 ##### Operations Manager specific performance counters
+
 These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the gateway:
 
-| Performance Counter Name                                | Description                                                                                                                                                                                                                                                                                                                                      |
+| Performance counter name                                | Description                                                                                                                                                                                                                                                                                                                                      |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Health Service\Workflow Count                           |                                                                                                                                                                                                                                                                                                                                                  |
 | Health Service Management Groups(*)\Active File Uploads | The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer. |
@@ -413,12 +416,13 @@ These counters are Operations Manager specific counters that indicate the perfor
 | OpsMgr Connector\Data Bytes Transmitted                 | The number of data bytes sent by the gateway - that is, the amount of outgoing data before compression.                                                                                                                                                                                                                                          |
 | OpsMgr Connector\Open Connections                       | The number of connections that are open on gateway. This number should be same as the number of agents or management servers that are directly connected to the gateway.                                                                                                                                                                         |
 
-
 #### Management server role
 
-Overall performance counters: These counters indicate the overall performance of the management server:
+##### Overall performance counters
 
-| Performance Counter Name               | Description |
+These counters indicate the overall performance of the management server:
+
+| Performance counter name               | Description |
 |----------------------------------------|-------------|
 | Processor(_Total)\\% Processor Time    |             |
 | Memory\\% Committed Bytes In Use       |             |
@@ -426,14 +430,14 @@ Overall performance counters: These counters indicate the overall performance of
 | LogicalDisk(*)\\% Idle Time            |             |
 | LogicalDisk(*)\\Avg. Disk Queue Length |             |
 
-
 ##### Operations Manager process generic performance counters
+
 These counters indicate the overall performance of Operations Manager processes on the management server:
 
-| Performance Counter Name                   | Description                                                                                                                         |
+| Performance counter name                   | Description                                                                                                                         |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | Process(HealthService)\\% Processor Time   |                                                                                                                                     |
-| Process(HealthService)\Private Bytes       | _Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes._ |
+| Process(HealthService)\Private Bytes       | Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes. |
 | Process(HealthService)\Thread Count        |                                                                                                                                     |
 | Process(HealthService)\Virtual Bytes       |                                                                                                                                     |
 | Process(HealthService)\Working Set         |                                                                                                                                     |
@@ -443,8 +447,8 @@ These counters indicate the overall performance of Operations Manager processes 
 | Process(MonitoringHost*)\Virtual Bytes     |                                                                                                                                     |
 | Process(MonitoringHost*)\Working Set       |                                                                                                                                     |
 
-
 ##### Operations Manager specific performance counters
+
 These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the management server:
 
 | Performance Counter Name                                                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
