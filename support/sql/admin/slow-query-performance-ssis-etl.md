@@ -60,7 +60,7 @@ If you complete the query, collect the actual execution plan, and treat it as a 
     SET STATISTICS XML OFF
     ```
 
-1. Run the following statement to collect the lightweight query plan, replace the `spid` (Server process ID) with your executing query window’s `spid`:
+1. Run the following statement to collect the lightweight query plan; replace the `spid` (Server process ID) with your executing query window’s `spid`:
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml(spid)
