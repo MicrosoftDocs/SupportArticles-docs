@@ -1,6 +1,6 @@
 ---
 title: Wave isn't eligible for cleanup
-description: Provides a resolution for the wave isn't eligible for cleanup error.
+description: Provides a resolution for the Wave isn't eligible for cleanup error.
 author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting

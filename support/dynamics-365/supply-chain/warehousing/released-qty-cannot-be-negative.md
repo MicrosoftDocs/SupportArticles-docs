@@ -1,6 +1,6 @@
 ---
 title: Can't update a load line because the released quantity would be negative
-description: Provides a resolution for the issue that updating or deleting a load line would cause a negative released quantity.
+description: Provides a resolution for the issue that updating or deleting a load line causes a negative released quantity.
 author: Mirzaab
 ms.date: 6/30/2021
 ms.topic: troubleshooting

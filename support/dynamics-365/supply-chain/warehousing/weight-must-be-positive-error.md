@@ -1,6 +1,6 @@
 ---
 title: Weight must be positive
-description: Provides a resolution to specify a weight when you receive a weight must be positive error.
+description: Provides a resolution for specifying a weight when you receive a Weight must be positive error.
 author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting

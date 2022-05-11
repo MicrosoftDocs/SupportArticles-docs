@@ -1,6 +1,6 @@
 ---
 title: Unexpected difference between request and session data during testing
-description: Provides a resolution for the unexpected difference that occurs between request and session data in warehouse app task validation results.
+description: Provides a resolution for the unexpected difference between request and session data in warehouse app task validation results.
 author: Mirzaab
 ms.date: 03/11/2022
 ms.topic: troubleshooting

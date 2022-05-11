@@ -1,6 +1,6 @@
 --- 
 title: Certification path error when upgrading or migrating to WMS 
-description: Provides a resolution for the trust anchor for certification path not found error when upgrading or migrating to WMS.
+description: Provides a resolution for the Trust anchor for certification path not found error that occurs when upgrading or migrating to WMS.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
