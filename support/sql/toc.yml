@@ -203,7 +203,7 @@
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
-    - name: Troubleshoot slow query performance in the SSIS or ETL jobs
+    - name: Troubleshoot slow SSIS or ELT jobs query performance
       href: admin/slow-query-performance-ssis-etl.md
   - name: Client Application Development
     items:

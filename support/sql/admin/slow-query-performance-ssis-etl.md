@@ -11,11 +11,11 @@ ms.author: v-jayaramanp
 
 # Troubleshoot slow query performance in SSIS or ETL jobs
 
-This article helps resolve issues that occur because of Slow query performance by the SSIS or ETL jobs.
+This article helps you to troubleshoot problems related to slow query performance. It also provides various causes and resolutions.
 
 ## Symptoms
 
-You might encounter performance issues from the SQL server integration services (SSIS) or extract, transform and load (ETL) jobs. The jobs might fail because of complex joins and huge Data Manipulation Language (DML) queries and might take a long time to complete. These are normal performance issues.
+You might encounter performance issues from the SQL server integration services (SSIS) or extract, transform and load (ETL) jobs. The jobs might fail because of complex joins and huge Data Manipulation Language (DML) queries and might take a long time to complete. These performance issues are normal.
 
 Before you start troubleshooting such issues, consider the following questions:
 
@@ -46,13 +46,13 @@ The SSIS job might contain many data flow tasks, and it might try to download so
 
 1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
 
-1. Contact a SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
+1. Contact an SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
 
 ### Can't complete complex select query
 
 If the query can be completed, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
 
-1. Manually execute the query and set statistics XML to ON for the query as shown in the following code snippet. Let the query run for a longer period.
+1. Manually execute the query and `SET STATISTICS XML` to `ON` for it, as shown in the following code snippet. Let the query run for a longer period. Let the query run for a longer period.
 
     ```sql
     SET STATISTICS XML ON
@@ -79,26 +79,26 @@ If the query can be completed, collect the actual execution plan, and treat it a
 The insert operation is one of the reasons to slow the query performance. The following reasons could be causing the insert operation to slow down:
 
 - Inserting a large batch causes a log flush, which increases the waiting period.
-- Each insert is against a clustered-index primary key (defined as an identity column), which causes a hotspot. The symptom is a PAGELATCH contention (specific to inserts from multiple connections).
+- Each insert is against a clustered-index primary key (defined as an identity column), which causes a hotspot. The symptom is a `PAGELATCH` contention (specific to inserts from multiple connections).
 - Inserts are slower against a Heap.
 - The I/O subsystem could be slow.
 
 Following are some common troubleshooting tips:
 
-- If there are too many indexes in the underlying table, consider disabling or dropping indexes as explained in [slow Inserts in SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support-blog/meditation-slow-inserts-in-sql-server/ba-p/333984).
-- To use `INSERT` with `SELECT`, check if the `SELECT` performance is good.
+- If too many indexes are in the underlying table, consider disabling or dropping indexes as explained in [Slow inserts in SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support-blog/meditation-slow-inserts-in-sql-server/ba-p/333984).
+- To use the `INSERT` statement with `SELECT`, check if the select operation's performance is good.
 
-### Delete insert performance
+### Delete statement performance
 
-The following could be reasons why the Delete performance operation slows down the query performance:
+The following reasons could be why the delete operation slows down the query performance:
 
 - Delete operations are blocked.
-- The I/O subsystem may be slow.
+- The I/O subsystem might be slow.
 
 Following are some troubleshooting tips to resolve this scenario:
 
-- Check if there are `cascade delete` operations. If yes, check the delete execution plan, or you can consider disabling the `cascade delete` for the table. For cascade options, see [ALTER TABLE table_constraint (Transact-SQL)](/sql/t-sql/statements/alter-table-table-constraint-transact-sql?view=sql-server-ver15&preserve-view=true).
-- Tune the performance of `SELECT` in the `DELETE` statement. For example, the following query is `DELETE`, but you can rewrite it as a `SELECT` and modify the select performance.
+- Check if there are `DELETE CASCADE` statements. If yes, check the delete execution plan, or you can consider disabling the `DELETE CASCADE` operation for the table. For cascade options, see [ALTER TABLE table_constraint (Transact-SQL)](/sql/t-sql/statements/alter-table-table-constraint-transact-sql?view=sql-server-ver15&preserve-view=true).
+- Tune the performance of `SELECT` in the `DELETE` statement. For example, you can rewrite the delete operation as a `SELECT` statement in the following query and modify the select query performance.
 
     ```sql
     DELETE P
@@ -107,13 +107,13 @@ Following are some troubleshooting tips to resolve this scenario:
      WHERE I.Id IS NULL
     ```
 
-### ETL job performance were faster before and slower now
+### ETL job performance has become slow
 
 If the ETL jobs have become slow, the following factors could be the reason:
 
-- The data volumes (disk) may have changed. For example, there could be a change in the speed, load on the volumes, and so on.
-- There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there may have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
-- The hardware component performance such as disk I/O, CPUs, or memory could have changed.
+- The data volume disk might have changed. For example, there could be a change in the speed or load on the volume disk.
+- There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there might have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
+- The hardware components' performance, such as disk I/O, CPUs, or memory could have changed.
 
 Following are some common troubleshooting tips:
 
@@ -122,4 +122,4 @@ Following are some common troubleshooting tips:
 
 ### SSIS related settings
 
-If the bottleneck isn't on the SQL Server side, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
+If the bottleneck isn't on the SQL server-side, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
