@@ -21,13 +21,19 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Basic troubleshooting of Microsoft Monitoring Agent
+            url: ./mma-troubleshoot-basics.md
           - text: Error code 0x80090016 Keyset does not exist in event viewer or agent logs
             url: ./error-code-0x80090016-keyset-does-not-exist.md
           - text: Microsoft Monitoring Agent couldn't start
             url: ./windows-could-not-start-mma.md
           - text: Missing heartbeats in the Linux agent
             url: ./linux-agent-missing-heartbeats.md
+          - text: Missing Linux performance counters
+            url: ./linux-agent-performance-counter-missing.md
           - text: Resolve Windows Agent installation issues
             url: ./resolve-windows-agent-installation-issues.md            
           - text: Troubleshoot erased proxy settings in the Microsoft Monitoring Agent
             url: ./erased-proxy-settings-microsoft-monitoring-agent.md
+          - text: Workspace data export FAQ
+            url: ./workspace-data-export-faq.yml

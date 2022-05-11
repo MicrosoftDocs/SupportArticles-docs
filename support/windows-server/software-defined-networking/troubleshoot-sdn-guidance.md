@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting SDN
-description: Introduces general guidance of troubleshooting scenarios related to SDN.
+title: Guidance for troubleshooting SDN
+description: Introduces general guidance for troubleshooting scenarios related to SDN.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
