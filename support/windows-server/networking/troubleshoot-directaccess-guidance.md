@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting DirectAccess
-description: Introduces general guidance of troubleshooting scenarios related to DirectAccess.
+title: Guidance for troubleshooting DirectAccess
+description: Introduces general guidance for troubleshooting scenarios related to DirectAccess.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
