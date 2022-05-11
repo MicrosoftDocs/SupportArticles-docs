@@ -44,15 +44,15 @@ The SSIS job might contain many data flow tasks, and it might try to download so
    WHERE session_id>50 and text like '%Employees%’
    ```
 
-1. If you didn't find the queries using step 1, use the Process Monitor tool to identify if any operations are blocked on the Files layer, as the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
+1. If you didn't find the queries using step 1, use the Process Monitor tool to identify if any operations are blocked on the Files layer, as the SSIS package can load data from flat files. If the process is SSIS, you can use *DTExec.exe* to filter the process name.
 
 1. Contact an SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
 
 ### Can't complete complex query
 
-If you complete the query, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
+If you complete the query, collect the actual execution plan, and treat it as a normal slow query tuning. If you can't complete the query, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
 
-1. Run the following statement `SET STATISTICS XML` to `ON` for it, as shown in the following code snippet. Let the query run for a longer period. Let the query run for a longer period.
+1. Run the following statement `SET STATISTICS XML` to `ON` for it, as shown in the following code snippet. Let the query run for a longer period.
 
     ```sql
     SET STATISTICS XML ON
@@ -68,7 +68,7 @@ If you complete the query, collect the actual execution plan, and treat it as a 
     CROSS APPLY sys.dm_exec_sql_text(sql_handle)
     ```
 
-1. Click the **query_plan**, and save it as *.sqlplan*.
+1. Click the `query_plan`, and you'll be able to provide the plan in the flight query's execution plan graph.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
 
@@ -117,7 +117,7 @@ If the ETL jobs have become slow, the following factors could be the reason:
 
 Following are some common troubleshooting tips:
 
-- Recreate the previous scenario where the performance was fast by providing hardware and jobs' configuration, so that you can collect PSSDIAG (or other similar) data and compare with the slower ones, to find out the reasons that why current job is slow.
+- Recreate the previous scenario where the performance was fast by providing the same hardware and job configuration. This step is required to help PSSDIAG (or similar utility) collect data for comparing and identifying slow queries. If SSIS jobs are involved, you can request SSISDB reports from a slow and fast scenario to compare package duration.
 - After identifying the slow query, see [Can't complete complex query](#cant-complete-complex-query), [Delete statement performance](#delete-statement-performance), and [Insert statement performance](#insert-statement-performance) to troubleshoot query performance.
 
 ### SSIS related settings
