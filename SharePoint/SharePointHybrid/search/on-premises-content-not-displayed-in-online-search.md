@@ -26,10 +26,12 @@ ms.date: 3/31/2022
 Consider the following scenario,  
 
 - You configure _inbound hybrid_ Search to return results in SharePoint Online from a Microsoft SharePoint on-premises environment.   
-- When a user performs a search query from a SharePoint Online site, only results from the SharePoint Online sites are displayed. No results are returned from SharePoint on-premises or the user even faces an error message **'Sorry, something went wrong. (Search has encountered a problem that prevents results from being returned. If this issue persists, please contact your administrator)'**
+- When a user performs a search query from a SharePoint Online site, only results from the SharePoint Online sites are displayed. No results are returned from SharePoint on-premises, or the user even receives the following error message:  
+
+  > **Sorry, something went wrong. (Search has encountered a problem that prevents results from being returned. If this issue persists, please contact your administrator)**
 - An administrator edits the query rule that's associated with the result sources in SharePoint Online. Then, the administrator opens Query Builder from the result block. However, this triggers the following error:
 
-```
+```output
 System.Net.WebException: The remote server returned an error: (401) Unauthorized.
    at System.Net.HttpWebRequest.GetResponse()
    at Microsoft.SharePoint.Client.SPWebRequestExecutor.Execute()
@@ -48,7 +50,7 @@ System.Net.WebException: The remote server returned an error: (401) Unauthorized
 
 To work around this issue, change your SharePoint on-premises identity provider so that it works with SharePoint Online. To do this, run the following cmdlet on your on-premises SharePoint farm:
 
-```
+```powershell
 $config = Get-SPSecurityTokenServiceConfig  
 $config.AuthenticationPipelineClaimMappingRules.AddIdentityProviderNameMappingRule("OrgId Rule", Microsoft.SharePoint.Administration.Claims.SPIdentityProviderTypes]::Forms, "membership", "urn:federation:microsoftonline")  
 $config.Update()   
@@ -57,7 +59,7 @@ $config.Update()
 
 In the scenario that's described in the "Symptoms" section, the following exception is logged in the Unified Logging Service (ULS) log of the on-premises SharePoint environment:
 
-```
+```output
 w3wp.exe - SharePoint Portal Server - User Profiles - ae0sx - Unexpected - Error trying to search in the UPA.
 The exception message is 'System.ArgumentException: Exception of type 'System.ArgumentException' was thrown. Parameter name: value
    at Microsoft.SharePoint.Administration.Claims.SPIdentityProviders.GetIdentityProviderType(String value)   
