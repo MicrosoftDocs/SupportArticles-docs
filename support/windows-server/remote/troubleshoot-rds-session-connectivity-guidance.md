@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting RDS session connectivity
-description: Introduces general guidance of troubleshooting scenarios related to RDS session connectivity.
+title: Guidance for troubleshooting RDS session connectivity
+description: Introduces general guidance for troubleshooting scenarios related to RDS session connectivity.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
