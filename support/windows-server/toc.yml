@@ -1662,10 +1662,10 @@
       href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
-    - name: Certificate requirements when you use EAP-TLS
-      href: ./networking/certificate-requirements-eap-tls-peap.md
     - name: 'Troubleshooting guidance: Network Policy Server'
       href: ./networking/troubleshoot-network-policy-server.md
+    - name: Certificate requirements when you use EAP-TLS
+      href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
     items:
     - name: 'Troubleshooting guidance: Remote access (VPN and AOVPN)'
