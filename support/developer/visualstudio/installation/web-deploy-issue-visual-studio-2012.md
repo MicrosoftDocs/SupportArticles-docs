@@ -1,6 +1,6 @@
 ---
 title: Error "Certificate warning or Unable to locate package source error"
-description: This article helps you resolve an error when the  that is shown while installing Web Deploy 3.0.
+description: This article helps you resolve an error that is shown while installing Web Deploy 3.0.
 ms.date: 05/11/2022
 ms.custom: sap:Installation
 ms.topic: troubleshooting
@@ -10,7 +10,7 @@ ms.author: v-jayaramanp
 
 # Error while installing Web Deploy 3.0
 
- Web Deploy is installed while installing Visual Studio 2012. This article provides suitable workarounds to help you to install Web Deploy 3.0.
+Web Deploy is installed while installing Visual Studio 2012. This article provides suitable workarounds to help you to install Web Deploy 3.0.
 
 _Applies to:_&nbsp;Visual Studio 2012
 
@@ -30,8 +30,3 @@ To install Web Deploy 3.0, you can try any of the following methods:
 
 - Obtain an updated installer that has been published at the distribution channel of your choice (such as [MSDN](https://msdn.microsoft.com/subscriptions/securedownloads)).
 - Install the [latest Visual Studio Update](https://visualstudio.microsoft.com/).
-
-## More Information
-
-[Troubleshooting Common Problems with Web Deploy](/iis/publish/troubleshooting-web-deploy/troubleshooting-common-problems-with-web-deploy)
-[Troubleshooting Web Deploy problems with Visual Studio](/iis/publish/troubleshooting-web-deploy/troubleshooting-web-deploy-problems-with-visual-studio)
