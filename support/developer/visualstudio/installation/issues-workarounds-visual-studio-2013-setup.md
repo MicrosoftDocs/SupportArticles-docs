@@ -24,7 +24,7 @@ To fix these shortcut names, follow these steps:
 
 1. To uninstall Visual Studio 2013, open **Programs and Features** (appwiz.cpl), right-click **Visual Studio 2013**, and then select **Change** > **Uninstall**.
 
-2. Manually delete any shortcuts that have been left behind.
+2. Manually delete any shortcuts that have been left behind:
 
     1. Open an elevated **Command Prompt** window.
 
