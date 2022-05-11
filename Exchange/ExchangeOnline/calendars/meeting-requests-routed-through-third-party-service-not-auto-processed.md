@@ -74,7 +74,7 @@ When this issue occurs, you can check and analyze the RBA log or message trace a
 
 ### Check the RBA log
 
-1. In Exchange Online PowerShell, run the following cmdlet to get the log:
+1. In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following cmdlet to get the log:
 
     ```powershell
     Export-MailboxDiagnosticLogs <room_mailbox_name> -ComponentName RBA > RoomMBXLogs.txt
@@ -92,7 +92,7 @@ When this issue occurs, you can check and analyze the RBA log or message trace a
 
 ### Check the message trace
 
-1. Run an extended message trace by selecting **Custom** queries.
+1. Run an [extended message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac#message-trace-page) by selecting **Custom** queries.
 2. In the message trace, find the **RECEIVE** event to check whether the meeting request message is routed outside the organization through an outbound connector and then routed back to it through an inbound connector.
 3. Run the following cmdlet to check the details of the inbound connector that you find in the message trace.
 
