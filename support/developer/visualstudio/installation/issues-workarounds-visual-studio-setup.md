@@ -20,7 +20,7 @@ Visual Studio can't be installed, and you receive an error message that contains
 - [0x80070005 - Access denied](#0x80070005---access-denied)
 - [0x80070643 - Installation cache or ISO is corrupted](#0x80070643---installation-cache-or-iso-is-corrupted)
 - [0x800713ec - .NET Framework installation is in progress](#0x800713ec---net-framework-installation-is-in-progress)
-- [Multiple feature installation errors occur after warning about certificate updates is ignored](#multiple-feature-installation-errors-occur-after-warning-about-certificate-updates-is-ignored)
+- [Multiple feature installation errors occur after warning about certificate updates is ignored in Visual Studio 2013 and 2015](#multiple-feature-installation-errors-occur-after-warning-about-certificate-updates-is-ignored-in-visual-studio-2013-and-2015)
 
 If the Visual Studio installation issue that you're experiencing isn't listed, see [More information](#more-information) for further helps.  
 
@@ -107,7 +107,7 @@ This error typically occurs when an installation of the .NET Framework that is s
 
 To work around this issue, wait for the .NET Framework installer to finish before you install Visual Studio.
 
-## Multiple feature installation errors occur after warning about certificate updates is ignored
+## Multiple feature installation errors occur after warning about certificate updates is ignored in Visual Studio 2013 and 2015
 
 When you install Visual Studio on Windows 7, you receive the following warning:
 
