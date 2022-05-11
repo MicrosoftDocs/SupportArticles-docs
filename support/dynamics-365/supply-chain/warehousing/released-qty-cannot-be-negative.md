@@ -1,6 +1,6 @@
 ---
 title: Can't update a load line because the released quantity would be negative
-description: This issue occurs when updating or deleting a load line would cause a negative released quantity.
+description: Provides a resolution for the issue that updating or deleting a load line would cause a negative released quantity.
 author: Mirzaab
 ms.date: 6/30/2021
 ms.topic: troubleshooting
@@ -45,7 +45,7 @@ To fix this issue, complete the following tasks:
 
 Use the following procedure to review your load lines and make a note of the unit conversion that was used for the load line.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that includes the load line that can't be deleted or updated.
 1. On the Action Pane, on the **Loads** tab, in the **Related information** group, select **Work**.
 1. In the upper grid, select the relevant work ID.
@@ -56,7 +56,7 @@ Use the following procedure to review your load lines and make a note of the uni
 
 Use the following procedure to review your product's unit conversion and make adjustments to ensure that the unit conversion is aligned with the load line.
 
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product to go to its **Released product details** page.
 1. On the Action Pane, on the **Product** tab, in the **Set up** group, select **Unit conversions**.
 1. Select the conversion between the units, and make adjustments by using the conversion that you found in the previous section.
@@ -65,11 +65,11 @@ Use the following procedure to review your product's unit conversion and make ad
 
 Use the following procedure to process the load line as required and revert the unit conversions.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Open the load that includes the load line that can't be deleted or updated.
 1. On the **Load lines** FastTab, select the load line.
 1. Continue with the required actions as needed. (For example, delete the load line, or change its quantity.)
-1. Go to **Product information management \> Products \> Released products**.
+1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product to go to its **Released product details** page.
 1. On the Action Pane, on the **Product** tab, in the **Set up** group, select **Unit conversions**.
 1. Select the conversion between the units, and revert the adjustments that you made in the previous section.

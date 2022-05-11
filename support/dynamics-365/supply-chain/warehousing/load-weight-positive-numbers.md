@@ -22,4 +22,4 @@ If there's open work when you process work from packing locations to staging loc
 
 ## Resolution
 
-To fix this issue, go to **System administration \> Periodic tasks \> Database \> Consistency check**, and run the process for **Warehouse load weight consistency check**.
+To fix this issue, go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**, and run the process for **Warehouse load weight consistency check**.

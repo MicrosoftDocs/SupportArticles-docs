@@ -1,6 +1,6 @@
 --- 
 title: How to move from basic warehousing to advanced warehousing 
-description: If you experience issues when trying to move from basic to advanced warehousing, this page guides you to documentation for the approved process. 
+description: If you experience issues when trying to move from basic to advanced warehousing, this page guides you to documentation for the approved process.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

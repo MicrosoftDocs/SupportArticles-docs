@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because the quantity exceeds the underdelivery percentage
-description: You can't confirm a shipment because the quantity exceeds the underdelivery percentage
+description: Provides a resolution for the issue that you can't confirm a shipment because the quantity exceeds the underdelivery percentage.
 author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
@@ -40,7 +40,7 @@ To fix this issue, complete one of the following tasks:
 
 To set the load line quantity, follow these steps.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the **Load lines** FastTab, select the load line for the item that exceeds the underdelivery percentage.
 1. On the **Line details** FastTab, select **Order**.
@@ -50,7 +50,7 @@ To set the load line quantity, follow these steps.
 
 To set the underdelivery percentage, follow these steps.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the **Load lines** FastTab, select the load line for the item that exceeds the underdelivery percentage.
 1. On the **Line details** FastTab, select **General**.

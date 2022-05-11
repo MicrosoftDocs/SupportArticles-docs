@@ -1,6 +1,6 @@
 ---
 title: Weight must be positive
-description: Weight must be positive
+description: Provides a resolution to specify a weight when you receive a weight must be positive error.
 author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
@@ -25,7 +25,7 @@ The system shows the following error message:
 
 ## Cause
 
-The **Gross Weight** field is set to *0* (zero) or a negative value.
+The **Gross Weight** field is set to **0** (zero) or a negative value.
 
 ## Resolution
 

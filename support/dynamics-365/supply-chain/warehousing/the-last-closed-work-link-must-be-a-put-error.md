@@ -1,6 +1,6 @@
 ---
 title: The last closed work line must be a put
-description: The last closed work line must be a put
+description: Provides a resolution for the error that states that the last closed work line must be a put.
 author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
@@ -26,13 +26,13 @@ The system shows the following error message:
 
 The work can't be canceled in its current state.
 
-On the last work line, the **Work status** field is set to *Closed*, but the **Work type** field isn't set to *Put*.
+On the last work line, the **Work status** field is set to **Closed**, but the **Work type** field isn't set to **Put**.
 
 ## Resolution
 
 To cancel the work, follow these steps.
 
-1. Go to **Warehouse management \> Periodic tasks \> Clean up \> Cancel work**.
+1. Go to **Warehouse management** > **Periodic tasks** > **Clean up** > **Cancel work**.
 1. In the **Work ID** field, specify the ID of the work that you want to cancel.
 1. Select **OK**.
 1. Select **Yes** to confirm that you want to cancel the work.

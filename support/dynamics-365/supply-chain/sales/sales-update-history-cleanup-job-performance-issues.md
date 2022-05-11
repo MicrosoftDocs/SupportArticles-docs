@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.19
 
 ## Symptoms
 
-The **Sales update history cleanup** batch job fails or has performance issues.  
+The **Sales update history cleanup** batch job fails or has performance issues.
 
 ## Cause
 

@@ -1,6 +1,6 @@
 ---
 title: Can't post packing slip for a stopped a sales order line
-description: You are unable to post packing slip for a stopped a sales order line
+description: Provides a resolution for the issue that you cannot post a packing slip for a stopped sales order line.
 author: Mirzaab
 ms.date: 03/07/2022
 ms.topic: article
@@ -34,9 +34,9 @@ For example, a user may have decided to stop one or more order lines because the
 
 To be able to post the packing slip, make sure that none of the relevant sales order lines are stopped by doing the following steps.
 
-1. Go to **All sales orders \> Sales and marketing \> All sales orders**.
+1. Go to **All sales orders** > **Sales and marketing** > **All sales orders**.
 1. Find and open the sales order that you are having trouble with.
 1. On the **Sales order lines** FastTab, select a sales order line.
-1. On the **Line details** FastTab, open the **General** tab and make sure the **Stopped** field is set to *No*.
+1. On the **Line details** FastTab, open the **General** tab and make sure the **Stopped** field is set to **No**.
 1. Continue working until all of the relevant sales lines are no longer stopped.
 1. Try again to post the packing slip for the load or sales order.

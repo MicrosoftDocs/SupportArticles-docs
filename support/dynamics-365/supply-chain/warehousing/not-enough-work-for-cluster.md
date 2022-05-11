@@ -22,4 +22,4 @@ When using the *System directed cluster picking* process, if you configure a clu
 
 ## Resolution
 
-To fix this issue, edit the cluster profile and set the **Activate positions** option to *No*.
+To fix this issue, edit the cluster profile and set the **Activate positions** option to **No**.

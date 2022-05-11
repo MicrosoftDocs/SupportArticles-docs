@@ -21,6 +21,6 @@ When picking and shipping processes are enabled for advanced warehouse managemen
 
 ## Resolution
 
-To correct posted packing slips for items that are enabled for WMS, the posting must occur from the load, not from the order. Microsoft has evaluated this issue and has determined that it's a feature limitation.  
+To correct posted packing slips for items that are enabled for WMS, the posting must occur from the load, not from the order. Microsoft has evaluated this issue and has determined that it's a feature limitation.
 
 In general, a sales order that has been picked and shipped through warehouse management processes can be packing slip-updated from the load or shipment and the sales order document itself. However, if you packing slip-update the sales order from the sales order document, packing slip reversal still can't be done from the load or sales order. Therefore, we recommend that you use the packing slip posting from the load. In this case, the reversal that must be done from the load will be enabled.

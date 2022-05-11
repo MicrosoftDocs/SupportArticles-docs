@@ -1,6 +1,6 @@
 ---
 title: Physical remaining quantity in the unit must not be zero
-description: When you generate a packing slip, the data that is supplied to it has a non-zero inventory quantity but a zero sales quantity.
+description: Provides a resolution for the issue that the data that is supplied to the new packing slip has a non-zero inventory quantity but a zero sales quantity.
 author: Mirzaab
 ms.date: 5/31/2021
 ms.topic: troubleshooting
@@ -44,7 +44,7 @@ The load or shipment is currently in a state where packing slip generation fails
 
 Use the following procedure to review your load lines and make sure that all the related work has been completed at the final shipping location, and that the quantities match.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the **Load lines** FastTab, select the load line.
 1. Make a note of the value of the **Work created quantity** field.
@@ -56,7 +56,7 @@ Use the following procedure to review your load lines and make sure that all the
 
 Use the following procedure to review your load lines and make adjustments to ensure that the quantity can be cleanly converted without rounding issues.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the packing slip can't be generated for.
 1. On the Action Pane, on the **Ship and receive** tab, in the **Reverse** group, select **Reverse shipment confirmation**.
 1. On the **Load lines** tab, select the load line for the item that exceeds the over-delivery.
@@ -68,10 +68,10 @@ Use the following procedure to review your load lines and make adjustments to en
 
 Use the following procedure to review your load lines and make adjustments to ensure that the unit and quantity are aligned with the decimal precision of the unit.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the packing slip can't be generated for.
 1. On the **Load lines** FastTab, select the load line for the item that causes an issue. Make a note of the value of the **Quantity** and **Unit** fields.
-1. Go to **Organization administration \> Units \> Units**.
+1. Go to **Organization administration** > **Units** > **Units**.
 1. Select the unit that the packing slip can't be generated for.
 1. Adjust the value of the **Decimal precision** field as required.
 

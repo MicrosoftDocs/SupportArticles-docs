@@ -23,9 +23,9 @@ You need to make an inventory status change for a partial quantity of a batch.
 
 To enable workers to make this change, you can create a menu item for the Warehouse Management mobile app. On the **Mobile device menu items** page, create (or edit) a menu item that has the following settings:
 
-- **Mode:** *Work*
-- **Use existing work:** *No*
-- **Work creation process:** *Movement*
-- **Display inventory status:** *Yes*
+- **Mode**: *Work*
+- **Use existing work**: *No*
+- **Work creation process**: *Movement*
+- **Display inventory status**: *Yes*
 
 You can set other fields on the page as you require.

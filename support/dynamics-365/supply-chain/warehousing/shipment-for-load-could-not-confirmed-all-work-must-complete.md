@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because of incomplete or missing work
-description: You can't confirm a shipment because of incomplete or missing work
+description: Provides a resolution for the issue that you can't confirm a shipment because of incomplete or missing work.
 author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
@@ -37,7 +37,7 @@ You can work with shipments and loads on several pages. The following subsection
 
 ### All loads page
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the Action Pane, on the **Loads** tab, in the **Related information** group, select **Work**.
 1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.
@@ -45,7 +45,7 @@ You can work with shipments and loads on several pages. The following subsection
 
 ### All shipments page
 
-1. Go to **Warehouse management \> Shipments\> All shipments**.
+1. Go to **Warehouse management** > **Shipments** > **All shipments**.
 1. Select the shipment that can't be confirmed.
 1. On the Action Pane, on the **Shipments** tab, in the **Work** group, select **Work details**.
 1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.
@@ -53,7 +53,7 @@ You can work with shipments and loads on several pages. The following subsection
 
 ### All work page
 
-1. Go to **Warehouse management \> Work\> All work**.
+1. Go to **Warehouse management** > **Work**> **All work**.
 1. Select the work for the order number that the shipment can't be confirmed for.
 1. On the Action Pane, on the **Shipment** tab, in the **Shipment** group, select **Confirm shipment**.
 1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.

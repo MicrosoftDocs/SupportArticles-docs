@@ -1,6 +1,6 @@
 ---
 title: Only one label is printed for multiple work headers on a single receipt
-description: Only one label is printed for multiple work headers on a single receipt.
+description: Introduces a by-design behavior where only one label is printed for multiple work headers on a single receipt.
 author: Mirzaab
 ms.date: 4/11/2021
 ms.topic: troubleshooting

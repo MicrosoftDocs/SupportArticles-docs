@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because items haven't been picked
-description: You can't confirm a shipment because items haven't been picked
+description: Provides a resolution for the issue that you can't confirm a shipment because items haven't been picked.
 author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
@@ -44,7 +44,7 @@ The load or shipment is currently in a state where shipment confirmation fails. 
 
 Use the following procedure to review your load lines and make sure that all the related work has been completed at the final shipping location, and that the quantities match.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the **Load lines** FastTab, select the load line.
 1. Make a note of the value of the **Work created quantity** field.
@@ -56,8 +56,8 @@ Use the following procedure to review your load lines and make sure that all the
 
 Use the following procedure to cancel the work IDs that have the packing location as the final put location with automated containerization in place.
 
-1. Go to **Warehouse management \> Periodic tasks \> Clean up \> Cancel work**.
-1. The **Cancel work** dialog opens. In the **Work ID** field, specify the ID of the work that you want to cancel. The selected work ID must have a **Work status** value of *Open*, *In progress*, *Canceled*, *Combined*, or *Closed*.
+1. Go to **Warehouse management** > **Periodic tasks** > **Clean up** > **Cancel work**.
+1. The **Cancel work** dialog opens. In the **Work ID** field, specify the ID of the work that you want to cancel. The selected work ID must have a **Work status** value of **Open**, **In progress**, **Canceled**, **Combined**, or **Closed**.
 1. Select **OK**.
 1. Select **Yes** to confirm that you want to cancel the work.
 1. Repeat this procedure for the other work IDs as needed.
@@ -66,15 +66,15 @@ For more information, see [Cancel warehouse work for exception handling](/dynami
 
 Use the following procedure to reconfigure the location directive so it won't use the packing location as the final shipping location when automated containerization is set up for the wave template.
 
-1. Go to **Warehouse management \> Setup \> Location directives**.
-1. In the **Work order type** field, select *Sales orders*.
+1. Go to **Warehouse management** > **Setup** > **Location directives**.
+1. In the **Work order type** field, select **Sales orders**.
 1. Select the location directive you are using for automated containerization.
 1. On the **Location Directive Actions** FastTab toolbar, select **Edit query**.
-1. In the query editor dialog, on the **Range** tab, find the row where **Field** is set to *Location profile*, and verify that the **Criteria** field for that row is not set to a location profile that has a **Location type** of *Packing*. Adjust the **Criteria** field to correct the final put location.
+1. In the query editor dialog, on the **Range** tab, find the row where **Field** is set to **Location profile**, and verify that the **Criteria** field for that row is not set to a location profile that has a **Location type** of **Packing**. Adjust the **Criteria** field to correct the final put location.
 
 Use the following procedure to rerelease the load and create work IDs with the correct final shipping location.
 
-1. Go to **Warehouse management \> Loads \> Load planning workbench**.
+1. Go to **Warehouse management** > **Loads** > **Load planning workbench**.
 1. In the **Loads** section, find the load that needs to be released.
-1. On the **Loads** section toolbar, select **Release \> Release to warehouse** to release the selected load to the warehouse.
+1. On the **Loads** section toolbar, select **Release** > **Release to warehouse** to release the selected load to the warehouse.
 1. Repeat this procedure for the other loads as needed.

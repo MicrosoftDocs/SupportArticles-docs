@@ -1,6 +1,6 @@
 ---
 title: You can't confirm a shipment because there is zero quantity
-description: You can't confirm a shipment because there is zero quantity
+description: Provides a resolution for the issue that you can't confirm a shipment because there is zero quantity.
 author: Mirzaab
 ms.date: 04/21/2021
 ms.topic: troubleshooting
@@ -33,7 +33,7 @@ The system evaluates whether the picked quantity is within the expected limits, 
 
 Check your load lines to make sure that the underdelivery percentage and quantities are aligned with the picked work.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the **Load lines** FastTab, select the load line for the item that exceeds the underdelivery percentage.
 1. Adjust the value of the **Underdelivery** field or the **Quantity** field as required.

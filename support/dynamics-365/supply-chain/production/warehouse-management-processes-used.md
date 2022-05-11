@@ -32,7 +32,7 @@ To fix this issue, follow one of these steps.
 - Open the details page for the relevant production order. On the Action Pane, on the **Warehouse** tab, in the **Stop** group, select **Stop and unpick** to unpick all picked transactions. Then select **Remove stop** to process the production order.
 
 Here is an explanation of the *Unpick* and *Stop* functions:
-  
+
 - **Unpick** – This function reverses the status of inventory transactions for bill of materials (BOM) lines and formula lines that have a status from *Picked* through *On order*. When work for raw material picking is completed, the status of the lines is set to *Picked*. This status prevents the production order from being reset to *Created* status. In this case, you can use the *Unpick* function to revert the transactions from *Picked* status and then reset the production order to *Created* status.
 - **Stop** – This function sets a **Stopped** flag on the production order to prevent any status update on the order. You can find the **Stopped** flag on the **Warehouse** FastTab of the production order details page.
 

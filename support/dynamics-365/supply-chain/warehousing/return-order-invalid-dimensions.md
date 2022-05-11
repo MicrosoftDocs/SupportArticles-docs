@@ -1,6 +1,6 @@
 --- 
 title: Can't create load line due to invalid inventory dimensions 
-description: When trying to release a return sales order to the warehouse, you might receive an error about invalid inventory dimensions. Remove these from the order line. 
+description: When trying to release a return sales order to the warehouse, you receive an error about invalid inventory dimensions. The resolution is to remove these from the order line.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

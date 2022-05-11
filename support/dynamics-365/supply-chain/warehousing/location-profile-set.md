@@ -1,6 +1,6 @@
 ---
 title: Location profile disallows negative inventory, but negative on-hand inventory is permitted
-description: The Allow negative inventory option for the location profile is set to No, but the system still allows negative on-hand inventory.
+description: Provides a resolution for the issue that the system still allows negative on-hand inventory even though the Allow negative inventory option for the location profile is set to No.
 author: Mirzaab
 ms.date: 4/11/2021
 ms.topic: troubleshooting
@@ -19,7 +19,7 @@ KB number: 4613622
 
 ## Symptoms
 
-The **Allow negative inventory** option for the location profile is set to *No*, but the system still allows negative on-hand inventory.
+The **Allow negative inventory** option for the location profile is set to **No**, but the system still allows negative on-hand inventory.
 
 ## Example scenario
 

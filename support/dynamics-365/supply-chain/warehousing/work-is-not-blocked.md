@@ -1,6 +1,6 @@
 ---
 title: Work isn't blocked
-description: Work isn't blocked
+description: You can only unblock the work that has the Blocked wave option set as Yes.
 author: Mirzaab
 ms.date: 04/15/2021
 ms.topic: troubleshooting
@@ -25,8 +25,8 @@ The system shows the following error message:
 
 ## Cause
 
-The **Blocked wave** option on the wave is set to *No*. The work can't be unblocked because it isn't currently blocked.
+The **Blocked wave** option on the wave is set to **No**. The work can't be unblocked because it isn't currently blocked.
 
 ## Resolution
 
- Only work where the **Blocked wave** option is set to *Yes* can be unblocked.
+Only work where the **Blocked wave** option is set to **Yes** can be unblocked.

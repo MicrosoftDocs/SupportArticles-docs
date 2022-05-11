@@ -1,5 +1,5 @@
 --- 
-title: Shipment for load was confirmed, but no lines are posted 
+title: Shipment for load was confirmed but no lines are posted 
 description: Shipment confirmation doesn't affect posting. It just updates the shipment and load status. Posting must occur in a separate process. 
 author: Mirzaab 
 ms.date: 06/24/2021 

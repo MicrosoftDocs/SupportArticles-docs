@@ -235,144 +235,132 @@
       items:
         - name: Warehouse mobile app
           items:
-            - name: Unexpected difference between request and session data during testing
-              href: warehousing/request-session-data-difference.md
             - name: Trust anchor for certification path not found when setting up app connection
               href: warehousing/certification-path-app-connection-error.md
             - name: Trust anchor for certification path not found when updating and migrating to WMS
               href: warehousing/upgrade-migration-certification-path-error.md
-        - name: Can't post packing slip for a stopped a sales order line
-          href: warehousing/unable-to-post-packi.md
-        - name: Processing issues occur after installing a scale unit warehouse workload
-          href: warehousing/Scale-unit-warehouse-workload-installation-issues.md
+            - name: Unexpected difference between request and session data during testing
+              href: warehousing/request-session-data-difference.md
+        - name: An error occurs when choosing the location during picking list registration
+          href: warehousing/error-cannot-update-quantity-with-new-dimensions.md
         - name: Auto-reservation prompt for batch number is shown even with available inventory
           href: warehousing/auto-reservation-prompt-shown.md
-        - name: Picking work can't be unblocked because of unfinished replenishment work
-          href: warehousing/blocked-unfinished-replenishment-work.md
+        - name: Can only use administrator role to access the mobile device app emulator
+          href: warehousing/mobile-app-emulator-administrator.md
+        - name: Can't create load line for return sales order due to invalid inventory dimensions
+          href: warehousing/return-order-invalid-dimensions.md
+        - name: Can't release a load for partial quantity with batch-above reservation hierarchy
+          href: warehousing/specify-dimensions-above-location.md
         - name: Can't cancel a packing slip after it's posted from a sales order
           href: warehousing/cancel-posted-packing-slip.md
+        - name: Can't confirm a shipment because quantity exceeds overdelivery percentage
+          href: warehousing/quantity-exceeds-overdelivery-percentage.md
+        - name: Can't confirm a shipment because quantity exceeds underdelivery percentage
+          href: warehousing/quantity-exceeds-underdelivery-percentage.md
+        - name: Can't re-release a partially shipped load to the warehouse
+          href: warehousing/rerelease-partially-shipped-load.md
+        - name: Can't select Inventory status change in the Work type column
+          href: warehousing/inventory-status-change-work-type.md
+        - name: Can't unreserve inventory on a sales order line
+          href: warehousing/unreserve-inventory-sales-line.md
+        - name: Can't update a load line because the released quantity would be negative
+          href: warehousing/released-qty-cannot-be-negative.md
+        - name: Canceled product receipts don't update transactions status to registered
+          href: warehousing/canceled-product-receipts-not-updated-to-registered.md
+        - name: Can't post packing slip for a stopped a sales order line
+          href: warehousing/cant-post-packing-slip-for-stopped-sales-order-line.md
         - name: Can't move license plate if serial number has Blank issue and Blank receipt allowed
           href: warehousing/cant-move-license-plate.md
         - name: Can't move inventory to a location that is license plate-controlled
           href: warehousing/cant-reduce-picked-quantities.md
+        - name: Can't use the Warehouse Management mobile app to do partial picking
+          href: warehousing/partial-picking-warehouse-app.md
         - name: Cluster profile can't be found
           href: warehousing/cluster-profile-not-found-error.md
         - name: Delivery note correction can't be processed
           href: warehousing/delivery-note-correction.md
-        - name: Error when confirming shipment after creating a transfer order for a serial item
-          href: warehousing/dimension-location-left-blank.md
         - name: Direct delivery not able to process for WMS-enabled warehouse
           href: warehousing/direct-delivery-wms-enabled-warehouse.md
+        - name: Decimal rounding of the physical updating quantity is incorrect
+          href: warehousing/decimal-rounding-of-physical-updating-quantity-unit-incorrect-error.md
+        - name: Enable inventory status change for partial quantity work
+          href: warehousing/partial-quantity-inventory-status.md
+        - name: Error when confirming shipment after creating a transfer order for a serial item
+          href: warehousing/dimension-location-left-blank.md
         - name: Inventory types are being mixed when using a dock management profile
           href: warehousing/dock-management-inventory-mixing.md
-        - name: Multiple SKU option doesn't evaluate multiple location directive actions
-          href: warehousing/evaluate-multiple-location-directive-actions.md
-        - name: Picking work isn't generated immediately when outbound load is released
-          href: warehousing/generate-work-immediately-load-release.md
         - name: Invalid license plate error when scanning license plate ID in the mobile app
           href: warehousing/invalid-license-plate.md
         - name: Inventory owner not allowed when processing movements in the warehouse app
           href: warehousing/inventory-owner-not-allowed.md
-        - name: System can't update inventory quantity because of insufficient transactions
-          href: warehousing/inventory-quantity-insufficient-transactions.md
-        - name: Can't select Inventory status change in the Work type column
-          href: warehousing/inventory-status-change-work-type.md
         - name: Invalid license plate or location error when scanning in the mobile app
           href: warehousing/license-plate-location-invalid.md
+        - name: Issues moving from basic warehousing to advanced warehousing
+          href: warehousing/move-basic-to-advanced-warehousing.md
         - name: License plate quantity is not valid when registering inbound orders
           href: warehousing/license-plate-quantity-not-valid.md
         - name: License plate specification error when confirming shipment for a transfer order
           href: warehousing/license-plate-specified-location.md
-        - name: One of the lines is already on a load
-          href: warehousing/line-already-on-load.md
         - name: Load weight error and update canceled when processing work between locations
           href: warehousing/load-weight-positive-numbers.md
+        - name: Location profile disallows negative inventory, but negative on-hand is permitted
+          href: warehousing/location-profile-set.md
+        - name: Multiple SKU option doesn't evaluate multiple location directive actions
+          href: warehousing/evaluate-multiple-location-directive-actions.md
         - name: Mixed license plate receiving doesn't work for any disposition code but Credit
           href: warehousing/mixed-license-plate-receiving.md
-        - name: Can only use administrator role to access the mobile device app emulator
-          href: warehousing/mobile-app-emulator-administrator.md
-        - name: Issues moving from basic warehousing to advanced warehousing
-          href: warehousing/move-basic-to-advanced-warehousing.md
         - name: Not enough work found for cluster when using System directed cluster picking
           href: warehousing/not-enough-work-for-cluster.md
+        - name: One of the lines is already on a load
+          href: warehousing/line-already-on-load.md
         - name: Order status remains Partially released even after the sales order is invoiced
           href: warehousing/order-status-partially-released.md
-        - name: Can't use the Warehouse Management mobile app to do partial picking
-          href: warehousing/partial-picking-warehouse-app.md
-        - name: Enable inventory status change for partial quantity work
-          href: warehousing/partial-quantity-inventory-status.md
+        - name: Only one label is printed for multiple work headers on a single receipt
+          href: warehousing/one-label-printed-for-multiple-work-headers-receipt.md
         - name: Print a delivery note or packing content by warehouse or site
           href: warehousing/print-documents-by-warehouse.md
+        - name: Processing issues occur after installing a scale unit warehouse workload
+          href: warehousing/scale-unit-warehouse-workload-installation-issues.md
+        - name: Picking work isn't generated immediately when outbound load is released
+          href: warehousing/generate-work-immediately-load-release.md
+        - name: Packing station doesn't show product notes
+          href: warehousing/packing-station-not-show-product-notes.md
+        - name: Physical remaining quantity in the unit must be other than zero
+          href: warehousing/physical-remaining-quantity-unit-must-other-than-zero.md
+        - name: Picked quantity is not sufficient during packing slip generation
+          href: warehousing/picked-quantity-not-sufficient-error.md
+        - name: Picking work can't be unblocked because of unfinished replenishment work
+          href: warehousing/blocked-unfinished-replenishment-work.md
+        - name: Quantity exceeds over-delivery percentage during packing slip generation
+          href: warehousing/quantity-exceeds-over-pack-slip.md
+        - name: Quantity that you are trying to update exceeds the quantity received/delivered
+          href: warehousing/quantity-exceeds-received-delivered-quantity.md
+        - name: Quantity exceeds under-delivery percentage during packing slip generation
+          href: warehousing/quantity-exceeds-under-pack-slip.md
         - name: Quantity not valid when there's picking work with multiple LPs in one location
           href: warehousing/quantity-invalid-multiple-license-plates.md
         - name: Quantity is not valid when performing a split pick across multiple batches
           href: warehousing/quantity-invalid-split-pick.md
-        - name: Can't re-release a partially shipped load to the warehouse
-          href: warehousing/rerelease-partially-shipped-load.md
+        - name: System can't update inventory quantity because of insufficient transactions
+          href: warehousing/inventory-quantity-insufficient-transactions.md
         - name: System can't make reservations because 0.00 are available in the inventory
           href: warehousing/reservations-0-inventory-available.md
-        - name: Can't create load line for return sales order due to invalid inventory dimensions
-          href: warehousing/return-order-invalid-dimensions.md
         - name: Sales order could not be released with outbound warehouse operations
           href: warehousing/sales-order-not-released.md
         - name: Shipment for load has been confirmed, but no lines are posted
           href: warehousing/shipment-confirmed-no-posting.md
         - name: Slotting templates don't consider on-hand inventory for batch-above items
           href: warehousing/slotting-templates-inventory-batch-above.md
-        - name: Can't release a load for partial quantity with batch-above reservation hierarchy
-          href: warehousing/specify-dimensions-above-location.md
+        - name: The last closed work line must be a put
+          href: warehousing/the-last-closed-work-link-must-be-a-put-error.md
+        - name: The weight fields on load lines don't match the weight fields on the load
+          href: warehousing/weight-fields-on-load-lines-dont-match-weight-fields-error.md
         - name: Unconfirmed purchase orders are confirmed after running Update product receipts
           href: warehousing/unconfirmed-purchase-orders-confirmed.md
-        - name: Can't unreserve inventory on a sales order line
-          href: warehousing/unreserve-inventory-sales-line.md
-        - name: You can't confirm a shipment because customer is on hold
-          href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
-        - name: You can't confirm a shipment because load lines have quantity zero
-          href: warehousing/load-line-quantity-is-zero.md
-        - name: Can't update a load line because the released quantity would be negative
-          href: warehousing/released-qty-cannot-be-negative.md
-        - name: Canceled product receipts don't update transactions status to registered
-          href: warehousing/canceled-product-receipts-not-updated-to-registered.md
-        - name: Decimal rounding of the physical updating quantity is incorrect
-          href: warehousing/decimal-rounding-of-physical-updating-quantity-unit-incorrect-error.md
-        - name: Physical remaining quantity in the unit must be other than zero
-          href: warehousing/physical-remaining-q.md
-        - name: Picked quantity is not sufficient during packing slip generation
-          href: warehousing/picked-quantity-is-n.md
-        - name: Quantity exceeds over-delivery percentage during packing slip generation
-          href: warehousing/quantity-exceeds-over-pack-slip.md
-        - name: Quantity that you are trying to update exceeds the quantity received/delivered
-          href: warehousing/quantity-exceeds-rec-del.md
-        - name: Quantity exceeds under-delivery percentage during packing slip generation
-          href: warehousing/quantity-exceeds-under-pack-slip.md
-        - name: An error occurs when choosing the location during picking list registration
-          href: warehousing/error-cannot-update-quantity-with-new-dimensions.md
-        - name: Packing station doesn't show product notes
-          href: warehousing/packing-station-not-.md
-        - name: Location profile disallows negative inventory, but negative on-hand is permitted
-          href: warehousing/location-profile-set.md
-        - name: Only one label is printed for multiple work headers on a single receipt
-          href: warehousing/when-receipting-prod.md
-        - name: You can't confirm a shipment because of an issue with the calendar
-          href: warehousing/calendar-type-requires-appointment-checked-in-out-error.md
-        - name: You can't confirm a shipment because of incomplete or missing work
-          href: warehousing/open-or-no-work-exis.md
-        - name: You can't confirm a shipment because items haven't been picked
-          href: warehousing/picked-quantity-is-not-on-final.md
-        - name: You can't confirm a shipment because there is zero quantity
-          href: warehousing/picked-quantity-is-zero.md
-        - name: Can't confirm a shipment because quantity exceeds overdelivery percentage
-          href: warehousing/quantity-exceeds-ove.md
-        - name: Can't confirm a shipment because quantity exceeds underdelivery percentage
-          href: warehousing/quantity-exceeds-und.md
-        - name: The last closed work line must be a put
-          href: warehousing/the-last-closed-work.md
-        - name: The weight fields on load lines don't match the weight fields on the load
-          href: warehousing/the-weight-fields-on.md
         - name: Wave isn't eligible for cleanup
           href: warehousing/wave-is-not-eligible.md
         - name: Weight must be positive
-          href: warehousing/weight-must-be-posit.md
+          href: warehousing/weight-must-be-positive-error.md
         - name: Work can't be cancelled because it is blocked
           href: warehousing/work-cannot-be-canceled-blocked.md
         - name: Work can't be canceled because of status
@@ -382,4 +370,16 @@
         - name: Work remains blocked
           href: warehousing/work-remains-blocked.md
         - name: You can't cancel work that is on a user
-          href: warehousing/you-cannot-cancel-wo.md
+          href: warehousing/you-cannot-cancel-work-on-user-error.md
+        - name: You can't confirm a shipment because of an issue with the calendar
+          href: warehousing/calendar-type-requires-appointment-checked-in-out-error.md
+        - name: You can't confirm a shipment because of incomplete or missing work
+          href: warehousing/shipment-for-load-could-not-confirmed-all-work-must-complete.md
+        - name: You can't confirm a shipment because items haven't been picked
+          href: warehousing/some-items-not-picked-moved-to-final-shipping-location.md
+        - name: You can't confirm a shipment because there is zero quantity
+          href: warehousing/picked-quantity-is-zero.md
+        - name: You can't confirm a shipment because customer is on hold
+          href: warehousing/shipment-cannot-be-confirmed-customer-is-on-hold-error.md
+        - name: You can't confirm a shipment because load lines have quantity zero
+          href: warehousing/load-line-quantity-is-zero.md

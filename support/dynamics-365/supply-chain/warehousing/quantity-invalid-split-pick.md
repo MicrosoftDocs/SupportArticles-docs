@@ -1,6 +1,6 @@
 --- 
 title: Quantity not valid for unit %1 when performing a split pick 
-description: When performing a split pick across multiple batches, you may receive an error that the quantity is not valid for unit %1. This page helps resolve the issue. 
+description: Provides a resolution for the issue that you receive a quantity is not valid for unit %1 error when doing a split pick across multiple batches.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 

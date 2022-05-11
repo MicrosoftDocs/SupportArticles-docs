@@ -17,10 +17,10 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-A sales order is a delivery order, but one or more items on it have a different mode of delivery. After the order is invoiced, it still has a release status of *Partially released*.
+A sales order is a delivery order, but one or more items on it have a different mode of delivery. After the order is invoiced, it still has a release status of **Partially released**.
 
-For example, a sales order has two items: one for delivery and one for pickup. Both the delivery and the pickup have been done. Therefore, both lines have been invoiced. However, the release status is still shown as *Partially released*, which is misleading.
+For example, a sales order has two items: one for delivery and one for pickup. Both the delivery and the pickup have been done. Therefore, both lines have been invoiced. However, the release status is still shown as **Partially released**, which is misleading.
 
 ## Workaround
 
-The release status applies only to order lines where the items are enabled for warehouse management. Therefore, the release status remains *Partially released* in this scenario. Microsoft has evaluated this issue and has determined that it's a feature limitation. An extension could be added as part of the packing slip and invoicing process to update the release status.
+The release status applies only to order lines where the items are enabled for warehouse management. Therefore, the release status remains **Partially released** in this scenario. Microsoft has evaluated this issue and has determined that it's a feature limitation. An extension could be added as part of the packing slip and invoicing process to update the release status.

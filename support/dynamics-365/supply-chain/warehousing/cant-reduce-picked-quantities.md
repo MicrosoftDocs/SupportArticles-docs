@@ -1,6 +1,6 @@
 --- 
 title: Can't move inventory to a license plate-controlled location 
-description: In earlier versions, you couldn't reduce picked quantities on a load. However, you can now unpick to a license plate-controlled location.  
+description: In earlier versions, you couldn't reduce picked quantities on a load. However, you can now unpick to a license plate-controlled location.
 author: Mirzaab 
 ms.date: 06/24/2021 
 ms.topic: troubleshooting 
