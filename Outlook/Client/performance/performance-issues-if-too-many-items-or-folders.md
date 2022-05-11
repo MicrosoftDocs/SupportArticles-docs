@@ -11,7 +11,7 @@ ms.custom:
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 163089
-ms.reviewer: gregmans, gbratton
+ms.reviewer: gregmans, gbratton, tasitae
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2019
@@ -19,7 +19,7 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 5/11/2022
 ---
 # Outlook performance issues when there are too many items or folders in a cached mode .ost or .pst file
 
@@ -27,13 +27,13 @@ _Original KB number:_ &nbsp; 2768656
 
 ## Symptoms
 
-If you have lots of items in any single folder, you may experience symptoms such as the following in Microsoft Outlook:
+If you have a lot of items in any single folder, you may experience symptoms such as the following in Microsoft Outlook:
 
 - When you use Cached Exchange Mode or an Outlook data (.pst) file, you notice performance issues when you perform certain actions.
 - You experience decreased performance in Outlook if the Inbox, Calendar, Tasks, Sent Items, and Deleted Items folders contain lots of items.
 - Calendar performance is inconsistent. For example, meeting updates may not be reflected in the primary, shared or delegated Calendar.
 
-If you have lots of mail folders, you may experience performance issues such as the following:
+If you have a lot of mail folders, you may experience performance issues such as the following:
 
 - Folders are not displayed correctly, or they take a long time to appear, especially in cached mode.
 - If your Outlook profile has shared mailboxes and has caching enabled (**Download Shared Folders** is selected), folder synchronization issues, performance issues, and other problems occur if the number of shared folders per mailbox exceeds 500, as described in [Performance and synchronization problems when you work with folders in a secondary mailbox in Outlook](https://support.microsoft.com/help/3115602). Additionally, errors are logged in the Sync Issues folder and "9646" events are logged in the Application log.
@@ -89,8 +89,8 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 |Registry Path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
 |Name|CalendarSyncWindowAllRecurring|
 |Type|REG_DWORD|
-|Value|Value = 0 Only recurring meeting series whose end date is in the future or falls within the current calendar sync window setting will be synced. <br/>Value = 1 All recurring meeting series will be synced, regardless of the end date. <br/>Defaults to 0 if not set|
-|Explanation|By default (if the value isn't set or is set to 0), recurring meeting series whose end date is in the future or falls within the current calendar sync window setting will be downloaded. For example, if today's date is May 3, 2022 and the calendar sync window is set to 1 month, all recurring meeting series whose end date falls on or after April 3, 2022 will be synced. If the end date falls outside the sync window setting, the recurring meeting series will be removed from the .ost file.<br/>To sync all recurring meeting series regardless of the end date, set the `CalendarSyncWindowAllRecurring` value to **1**.|
+|Value|Value = 0 Only recurring meeting series that have an end date which is either in the future or falls within the current calendar sync window setting will be synced. <br/>Value = 1 All recurring meeting series will be synced, regardless of the end date. <br/>Defaults to 0 if not set|
+|Explanation|By default (if the value isn't set or is set to 0), recurring meeting series that have an end date which is either in the future or falls within the current calendar sync window setting will be synced. For example, if today's date is May 3, 2022 and the calendar sync window is set to 1 month, all recurring meeting series whose end date falls on or after April 3, 2022 will be synced. If the end date falls outside the sync window setting, the recurring meeting series will be removed from the .ost file.<br/>To sync all recurring meeting series regardless of the end date, set the `CalendarSyncWindowAllRecurring` value to **1**.|
 
 These registry keys update the sync restriction so that the Cached Mode client downloads fewer Calendar items, even for a Calendar that has multiple years of history on the server. These keys don't clean up older Calendar content that was already downloaded. However, this method can be effective if you're willing to *clear offline items* and resync your Calendar (instead of bulk deleting old items). If you already have the Calendar in the profile, you have to clear the Offline Items after you set the registry keys and restart Outlook.
 
