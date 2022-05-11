@@ -64,7 +64,7 @@ If you complete the query, collect the actual execution plan, and treat it as a 
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml(spid)
-    SELECT text, * FROM sys.dm_exec_query_statistics_xml(64)
+    SELECT text, * FROM sys.dm_exec_query_statistics_xml(spid)
     CROSS APPLY sys.dm_exec_sql_text(sql_handle)
     ```
 
