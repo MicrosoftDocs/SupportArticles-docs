@@ -260,6 +260,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS
@@ -330,8 +332,6 @@
       href: ./deployment/processor-not-supported-together-with-windows-version.md
     - name: The same update is offered repeately
       href: ./deployment/repeatedly-offer-the-same-update.md
-    - name: 'Troubleshooting guidance: Windows Update'
-      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: Update Windows Update Agent to latest version
       href: ./deployment/update-windows-update-agent.md
     - name: view system registry with 64-bit versions of Windows
