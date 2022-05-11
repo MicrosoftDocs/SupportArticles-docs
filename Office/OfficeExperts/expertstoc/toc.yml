@@ -7,7 +7,7 @@
       href: ../activation/activate-office-2010-kms-host-via-phone-activation.md
     - name: Discover Office and Windows KMS hosts
       href: ../activation/discover-remove-unauthorized-office-windows-kms-hosts.md
-    - name: Reset Microsoft 365 Apps for enterprise activation state
+    - name: Reset activation state for Microsoft 365 Apps for enterprise
       href: ../activation/reset-office-365-proplus-activation-state.md
   - name: Administration
     items:
@@ -35,7 +35,7 @@
       href: ../administration/manage-office-2013-first-run-screens.md
     - name: Office Online limitations and features with IRM
       href: ../administration/office-online-limitations-and-features-with-information-rights-management.md
-    - name: Office Web Apps 2013 and VMWare
+    - name: Office Web Apps 2013 and VMware
       href: ../administration/office-web-apps-and-vmware.md
     - name: Online Server authentication configuration
       href: ../administration/configuration-for-office-online-server-authentication-with-external-users.md
