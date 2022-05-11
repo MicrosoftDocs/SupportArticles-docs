@@ -62,7 +62,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
     > [!NOTE]
     > The directory for later access. For example, you can extract the files to the `C:\TEMP\fciv` location.
 
-3. At a command prompt, type the following command, and then press **Enter**.
+3. In a **Command Prompt** window, type the following command, and then press **Enter**.
 
     ```console
     <DIRECTORY_NAME>\fciv.exe -sha1 <ISO_NAME>
@@ -93,7 +93,7 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 1. Close Visual Studio.
 2. To open an elevated **Command Prompt**, select **Start**, type _cmd_ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
 3. In the **Command Prompt** window, type _cd C:\ProgramData\Package Cache_, and then press **Enter**.
-4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands at the **Command Prompt**, and press **Enter** after each command:
+4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press **Enter** after each command:
 
     ```console
     Delete /F /S *.msi Delete /F /S *.cab
