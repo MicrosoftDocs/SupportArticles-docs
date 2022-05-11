@@ -1,6 +1,6 @@
 ---
 title: Room mailbox can't automatically accept or decline meeting requests
-description: Meeting requests that are routed through a third-party mail service by using mail flow connectors are not automatically processed by a room mailbox. 
+description: Meeting requests that are routed through a third-party mail service by using mail flow connectors aren't automatically processed by a room mailbox. 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -66,7 +66,7 @@ Set-InboundConnector -Identity <inbound_connector_name> -TreatMessagesAsInternal
 
 - Replace \<inbound_connector_name> with the name of the inbound connector in your organization. You can run the [Get-InboundConnector](/powershell/module/exchange/get-inboundconnector) cmdlet to get the list of inbound connectors.
 - The `TreatMessagesAsInternal` parameter can only be used if the inbound connector is the on-premises type. For more information, see the `-TreatMessagesAsInternal` section in the [Set-InboundConnector](/powershell/module/exchange/set-inboundconnector) article.
-- This method has potential security risks because internal messages bypass antispam filtering. Therefore, you must make sure that the messages sent from the third-party mail service to the Microsoft 365 organization are only for internal use.
+- This method has potential security risks because internal messages bypass the antispam filtering. Therefore, you must make sure that the messages sent from the third-party mail service to the Microsoft 365 organization are only for internal use.
 
 ## More information
 
