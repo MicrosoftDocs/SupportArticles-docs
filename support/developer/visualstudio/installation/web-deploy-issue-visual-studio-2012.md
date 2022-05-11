@@ -8,9 +8,9 @@ author: haiying
 ms.author: v-jayaramanp
 ---
 
-# Introduction
+# Introduction 
 
-This article helps you resolve a warning that is displayed when you try to install Web Deploy 3.0. It lists the symptoms and resolutions to help resolve the warning.
+This article helps you resolve a warning that is displayed when you try to install Web Deploy 3.0. 
 
 _Applies to:_&nbsp;Visual Studio 2012
 
@@ -24,7 +24,7 @@ The "Certificate warning or unable to locate package source" warning is displaye
     > Microsoft Web Deploy 3.0  
     > A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
 
-## Resolution
+## Workarounds
 
 To install Web Deploy 3.0, you can try any of the following methods:
 
