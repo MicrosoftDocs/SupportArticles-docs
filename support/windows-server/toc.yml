@@ -1856,12 +1856,12 @@
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: 'Troubleshooting guidance: wireless technology'
+      href: ./networking/troubleshoot-wireless-technologies.md
     - name: Configure L2TP/IPsec server behind NAT-T device
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
       href: ./networking/set-up-internet-connection-sharing.md
-    - name: 'Troubleshooting guidance: wireless technology'
-      href: ./networking/troubleshoot-wireless-technologies.md
 - name: Performance
   items:
   - name: Performance
