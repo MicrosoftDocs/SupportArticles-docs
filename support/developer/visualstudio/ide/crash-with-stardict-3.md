@@ -22,4 +22,4 @@ If you suspect that StarDict-3 is the cause, open **Task Manager** and verify th
 
 If this method resolves the issue, you're advised to remove StarDict-3 from the **Programs and features** applet in the Control Panel.
 
-You can use StarDict-3.0.4 as the issue has not been seen with this version.
+You can use StarDict-3.0.4 as the issue hasn't been seen with this version.
