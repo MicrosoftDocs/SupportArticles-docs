@@ -28,9 +28,9 @@ Before you start troubleshooting such issues, consider the following questions:
 
 The following sections explain the typical reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
 
-### Not stuck on the SQL server-side
+### Performance issue is not blocked on the SQL Server
 
-The SSIS job might contain many data flow tasks, and it might try to download source files from the FTP server and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL server-side.
+The SSIS job might contain many data flow tasks, and it might try to download source files from the FTP server and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL Server.
 
 1. Use the `sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name must resemble the following screenshot:
 
@@ -48,7 +48,7 @@ The SSIS job might contain many data flow tasks, and it might try to download so
 
 1. Contact an SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
 
-### Can't complete complex select query
+### Can't complete complex query
 
 If the query can be completed, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
 
@@ -107,7 +107,7 @@ Following are some troubleshooting tips to resolve this scenario:
      WHERE I.Id IS NULL
     ```
 
-### ETL job performance has become slow
+### ETL job performance was faster before and slower now
 
 If the ETL jobs have become slow, the following factors could be the reason:
 
@@ -117,8 +117,8 @@ If the ETL jobs have become slow, the following factors could be the reason:
 
 Following are some common troubleshooting tips:
 
-- Recreate the previous fast scenario so that PSSDIAG (or other similar) data can be collected to compare and identify slow queries. (If SSIS jobs are involved, you can also request SSISDB reports from a slow and fast scenario to compare package duration).
-- After identifying the slow query, use the steps mentioned earlier to troubleshoot query performance.
+- Try to recreate the previous fast scenario by providing same hardware and jobs' configuration, so that you can collect PSSDIAG (or other similar) data and compare with the slower ones, to find out the reasons that why current job is slow.
+- After identifying the slow query, see [Can't complete complex query](#cant-complete-complex-query), [Delete statement performance](#delete-statement-performance), and [Insert statement performance](#insert-statement-performance) to troubleshoot query performance.
 
 ### SSIS related settings
 
