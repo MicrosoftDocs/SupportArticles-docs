@@ -73,7 +73,7 @@ On Windows Server 2008, enter the following command:
 trace -tools "C:\Program Files\Microsoft SDKs\Windows\v6.0\Bin"
 ```
 
-The `-tools` switch indicates to the location of the Tracelog.exe file to the *Trace.cmd* file.
+The `-tools` switch indicates the location of the Tracelog.exe file to the *Trace.cmd* file.
 
 ### Run the BizTalk Adapter Trace Utility
 
