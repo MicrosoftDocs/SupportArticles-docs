@@ -7,9 +7,11 @@ ms.subservice: d365-fraud-protection-application
 ---
 # DFP and Mobile Device fingerprinting
 
+This article describes Mobile device fingerprinting.
+
 _Applies to:_ &nbsp; Microsoft Dynamics 365 Fraud Protection  
 _Original KB number:_ &nbsp; 4569098
-Never make changes to the main branch.
+
 Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that (i) is based on artificial intelligence (AI); (ii) runs on Microsoft Azure; and (iii) is cloud-scalable, reliable, and has enterprise-grade security. Fraud Protection's device fingerprinting feature enables the identification of devices (computer, Xbox, tablet, and so on) across multiple sessions or interactions that engage with your business and other businesses in the Fraud Protection fraud network. Additionally, this feature allows Fraud Protection to link seemingly unrelated events to each other in the fraud network to identify patterns of fraud.
 
 When you implement Fraud Protection device fingerprinting by integrating the reference implementation provided in your application, you (i) agree to Microsoft's APIs terms of use located [Microsoft APIs Terms of Use](/legal/microsoft-apis/terms-of-use), and (ii) you direct Microsoft to process the following types of data from the devices interacting with the Fraud Protection services (collectively, Device Fingerprinting Data):
