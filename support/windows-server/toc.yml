@@ -1860,7 +1860,7 @@
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
       href: ./networking/set-up-internet-connection-sharing.md
-    - name: Troubleshoot wireless technology issues
+    - name: 'Troubleshooting guidance: wireless technology'
       href: ./networking/troubleshoot-wireless-technologies.md
 - name: Performance
   items:
