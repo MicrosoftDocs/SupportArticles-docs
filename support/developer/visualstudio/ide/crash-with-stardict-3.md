@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2901613
 
 ## Summary
 
-StarDict-3, a cross-platform and international dictionary software, might cause Visual Studio 2012 to crash. However, information and data of this behavior is limited.
+StarDict-3, cross-platform and international dictionary software, might cause Visual Studio 2012 to crash. However, information and data of this behavior is limited.
 
 ## Workaround
 
