@@ -117,7 +117,7 @@ If you select **Continue** to proceed with the Visual Studio installation, you m
 
 > Setup Completed. However, not all features installed correctly.
 
-You're also shown a list of multiple features that couldn't be installed because the system can't find the specified file. To fix the issue, try the following method:
+You're also shown a list of multiple features that couldn't be installed because the system can't find the specified file. To fix the issue, try the following methods:
 
 - Ensure that you are on a computer that's connected to the internet.
 In some cases, Visual Studio can programmatically retrieve and then apply the required certificate updates so that the affected features can be successfully installed.
@@ -135,7 +135,7 @@ In some cases, Visual Studio can programmatically retrieve and then apply the re
 
 - If the above steps don't resolve the issue, you can also try to manually install the required certificate updates. For more information on how to obtain Windows update root certificates, see [Configure Trusted Roots and Disallowed Certificates](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)).
 
-If you have already installed Visual Studio, try to repair Visual Studio after you've tried one or more of the above methods. This process tries to successfully install the features that weren't installed on the previous attempt. To repair Visual Studio, follow these steps:
+If you have already installed Visual Studio, try to repair Visual Studio after you've tried one or more of the above methods. This process tries to successfully install the features that weren't installed in the previous attempt. To repair Visual Studio, follow these steps:
 
 1. Open **Programs and Features** (appwiz.cpl).
 
