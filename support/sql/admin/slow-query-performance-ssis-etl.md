@@ -28,9 +28,9 @@ Before you start troubleshooting such issues, consider the following questions:
 
 The following sections explain the typical reasons, solutions, and troubleshooting steps for the slow SSIS or ETL jobs.
 
-### Performance issue is not blocked on the SQL Server
+### Performance issue isn't blocked on the SQL Server
 
-The SSIS job might contain many data flow tasks, and it might try to download source files from the FTP server and then insert the data into SQL. Perform the following steps to check if the SSIS job is stuck on the SQL Server.
+The SSIS job might contain many data flow tasks, and it might try to download source files from the FTP server and then insert the data into SQL. Perform the following steps to check if the SSIS job is blocked on the SQL Server.
 
 1. Use the `sys.sysprocesses` and `sys.dm_exec_sql_text` functions to check if there are active SSIS related queries. If there are active queries, then the program name must resemble the following screenshot:
 
@@ -44,15 +44,15 @@ The SSIS job might contain many data flow tasks, and it might try to download so
    WHERE session_id>50 and text like '%Employees%’
    ```
 
-1. If you didn't find the queries using step 1, use the Process Monitor to identify if any operations are blocked on the Files layer, since the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
+1. If you didn't find the queries using step 1, use the Process Monitor tool to identify if any operations are blocked on the Files layer, as the SSIS package can load data from flat files. If the process is SSIS, then you can use *DTExec.exe* to filter the process name.
 
 1. Contact an SSIS engineer to enable the SSIS package logging for identifying the steps that take a long time and contribute to major delay.
 
 ### Can't complete complex query
 
-If the query can be completed, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
+If you complete the query, collect the actual execution plan, and treat it as a normal slow query tuning. If the query can’t be completed, use the following steps to find the actual execution plan of the running query (2016 SP1 and above):
 
-1. Manually execute the query and `SET STATISTICS XML` to `ON` for it, as shown in the following code snippet. Let the query run for a longer period. Let the query run for a longer period.
+1. Run the following statement `SET STATISTICS XML` to `ON` for it, as shown in the following code snippet. Let the query run for a longer period. Let the query run for a longer period.
 
     ```sql
     SET STATISTICS XML ON
@@ -68,7 +68,7 @@ If the query can be completed, collect the actual execution plan, and treat it a
     CROSS APPLY sys.dm_exec_sql_text(sql_handle)
     ```
 
-1. Click on the **query_plan**, and save it as *.sqlplan*.
+1. Click the **query_plan**, and save it as *.sqlplan*.
 
     :::image type="content" source="media/slow-query-performance-ssis-etl/queryplan-sqlplan.png" alt-text="Save the query plan.":::
 
@@ -112,14 +112,14 @@ Following are some troubleshooting tips to resolve this scenario:
 If the ETL jobs have become slow, the following factors could be the reason:
 
 - The data volume disk might have changed. For example, there could be a change in the speed or load on the volume disk.
-- There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting may have changed. Also, there might have been an upgrade in the SQL Server version or application. An upgrade of compatibility level can introduce CE changes.
+- There could be a change in the configuration of SQL or OS. For example, the `MAXDOP` setting might have changed. Also, there might have been an upgrade in the SQL Server version or application. An upgrade of the compatibility level can introduce CE changes.
 - The hardware components' performance, such as disk I/O, CPUs, or memory could have changed.
 
 Following are some common troubleshooting tips:
 
-- Try to recreate the previous fast scenario by providing same hardware and jobs' configuration, so that you can collect PSSDIAG (or other similar) data and compare with the slower ones, to find out the reasons that why current job is slow.
+- Recreate the previous scenario where the performance was fast by providing hardware and jobs' configuration, so that you can collect PSSDIAG (or other similar) data and compare with the slower ones, to find out the reasons that why current job is slow.
 - After identifying the slow query, see [Can't complete complex query](#cant-complete-complex-query), [Delete statement performance](#delete-statement-performance), and [Insert statement performance](#insert-statement-performance) to troubleshoot query performance.
 
 ### SSIS related settings
 
-If the bottleneck isn't on the SQL server-side, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
+If the bottleneck isn't on the SQL server, see [SSIS: Capturing PerfMon Counters During Package Execution](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/ssis-capturing-perfmon-counters-during-package-execution/ba-p/371346) and check if anything can be improved from the SSIS.
