@@ -1,5 +1,5 @@
 ---
-title: Error "Certificate warning or Unable to locate package source error"
+title: Error while installing Web Deploy 3.0
 description: This article helps you resolve an error that is shown while installing Web Deploy 3.0.
 ms.date: 05/11/2022
 ms.custom: sap:Installation
@@ -10,23 +10,25 @@ ms.author: v-jayaramanp
 
 # Error while installing Web Deploy 3.0
 
-Web Deploy is installed while installing Visual Studio 2012. This article provides suitable workarounds to help you to install Web Deploy 3.0.
+Web Deploy is a tool for simplifying migration, management, and deployment of web applications, sites, and servers. It is installed along with Visual Studio 2012. This article helps you to troubleshoot an error message displayed when you try to install Web Deploy 3.0.
 
 _Applies to:_&nbsp;Visual Studio 2012
 
 ## Symptoms
 
-The "Certificate warning or unable to locate package source" error is displayed when you try to install Web Deploy 3.0. The error might cause either of the following problems:
+The "Certificate warning or unable to locate package source" error message is displayed when you try to install Web Deploy 3.0.
+
+The error might cause either of the following problems:
 
 - During the Visual Studio 2012 installation, you may experience an "Unable to locate package source" error that isn't resolved using the **Download packages from the Internet** option.
-- After installation is complete, you see a message that indicates setup has completed but not all features have installed correctly, along with the following warning:
+- After installation is complete, you see a message that indicates setup has completed but not all features have installed correctly, along with the following error message:
 
     > Microsoft Web Deploy 3.0  
     > A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.
 
 ## Workarounds
 
-To install Web Deploy 3.0, you can try any of the following methods:
+To install Web Deploy 3.0, you can try any of the following workarounds:
 
 - Obtain an updated installer that has been published at the distribution channel of your choice (such as [MSDN](https://msdn.microsoft.com/subscriptions/securedownloads)).
 - Install the [latest Visual Studio Update](https://visualstudio.microsoft.com/).
