@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 4/29/2022
+  ms.date: 5/11/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -73,7 +73,15 @@ landingContent:
           - text: TooManyRequestsReceived error
             url: ./error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
- # Card
+ # Card 
+  - title: Troubleshoot scale operations
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Failed to fix node group sizes
+            url: ./cluster-autoscaler-fails-to-scale.md
+
+# Card
   - title: Troubleshoot node not ready
     linkLists:
       - linkListType: how-to-guide
