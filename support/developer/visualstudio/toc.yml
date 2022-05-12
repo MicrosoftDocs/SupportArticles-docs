@@ -36,6 +36,8 @@
   items:
   - name: Google Android 27 emulator fails to start
     href: ./third-party/android-27-emulator-not-start.md
+- name: JDK is missing
+  href: ./third-party/jdk-missing-create-xamarin-app.md
   - name: Third-party dependencies
     href: ./third-party/third-party-dependencies.md
   - name: Can't install Visual Studio Tools for Apache Cordova CTP 3.1
