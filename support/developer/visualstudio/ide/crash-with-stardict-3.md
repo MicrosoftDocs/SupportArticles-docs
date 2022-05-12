@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2012 crashes with StarDict-3
-description: Provides a workaround when Visual Studio 2012 might crash because of StarDict-3. 
-ms.date: 05/11/2022
+description: Provides a workaround when Visual Studio 2012 may crash because of StarDict-3. 
+ms.date: 05/12/2022
 ms.custom: sap:Language or compilers
 ms.technology: vs-language-compilers
 ---
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2901613
 
 ## Summary
 
-StarDict-3, cross-platform and international dictionary software, might cause Visual Studio 2012 to crash. However, information and data of this behavior is limited.
+StarDict-3, cross-platform and international dictionary software, may cause Visual Studio 2012 to crash. However, information and data of this behavior is limited.
 
 ## Workaround
 
