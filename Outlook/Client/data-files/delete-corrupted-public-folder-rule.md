@@ -1,5 +1,5 @@
 ---
-title: Delete corrupted public folder rules in MFCMAPI
+title: Delete corrupted public folder rules
 description: Use the MFCMAPI tool to delete public folder corrupted rules that prevent you from accessing the Folder Assistant to manage the rules in Outlook.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -35,9 +35,9 @@ To resolve this issue, use the MFCMAPI tool to find and delete the corrupted rul
 1. Expand **Root Container** > **IPM_Subtree**.  
 1. Right-click the affected public folder, and then select **Open associated contents table**.
 
-1. Select the **Message Class** column header to sort the contents of the table by message class, and find the messages rows that have display the **IPM.Rule.Version2.Message** value as the message class. These set of messages are for each rule that's been configured for the public folder.
+1. Select the **Message Class** column header to sort the contents of the table by message class, and find the messages that display **IPM.Rule.Version2.Message** as the message class. The set of messages correspond to each rule that has been configured for the public folder.
 
-1. For each message with the **IPM.Rule.Version2.Message** message class, check the properties in the pane below. Find the messages for which the Properties pane displays **cb: 0** in the **Value** column for the **PR_EXTENDED_RULE_MSG_CONDITION** and **PR_EXTENDED_RULE_MSG_ACTIONS** properties. Additionally, these properties might display **PT_ERROR** in the **Type** column and **0x0E9A000A** in the **Tag** column. This information in the properties pane for a message indicates a corrupted rule.
+1. For each message with the **IPM.Rule.Version2.Message** message class, check the properties in the pane below. Find the messages for which the Properties pane displays **cb: 0** in the **Value** column for the **PR_EXTENDED_RULE_MSG_CONDITION** and **PR_EXTENDED_RULE_MSG_ACTIONS** properties. Additionally, these properties might display **PT_ERROR** in the **Type** column and **0x0E9A000A** in the **Tag** column. This information in the Properties pane for a message indicates a corrupted rule.
 
     :::image type="content" source="media/delete-corrupted-public-folder-rule/corrupted-rule.png" alt-text="Screenshot of the messages that have the properties with the empty value in MFCMAPI.":::
 
