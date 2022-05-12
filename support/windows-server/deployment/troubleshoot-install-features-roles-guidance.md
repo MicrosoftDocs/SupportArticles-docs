@@ -23,7 +23,7 @@ This guidance is designed to help troubleshoot issues when adding or removing ro
 
    *Applications And Services Logs\Microsoft\Windows\ServerManager-MultiMachine*
 
-2. Try to add or remove a different role or feature. This method will help to determine if the issue is specific to a role, feature, or both.
+2. Try to add or remove a different role or feature. This method will help to determine if the issue is specific to a role or feature.
 
 3. Verify the state of the component store for any corruption.
 
