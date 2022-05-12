@@ -74,7 +74,7 @@ The following error messages may be displayed in pop-up windows and dialog boxes
 Before the release of the update, administrators can use the following steps to directly configure the Windows registry to a prerelease or staged location of the latest certificate update. You can also configure the settings by using Group Policy. See [To configure a custom administrative template for a GPO](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983%28v=ws.11%29#to-configure-a-custom-administrative-template-for-a-gpo).
 
 > [!NOTE]
-> A preview of the May release which includes the removal of the "G1" root certificate is staged on May 11, 2022.
+> The preview of the May release which includes the removal of the "G1" root certificate is staged on May 11, 2022.
 
 1. Open _regedit_, and then navigate to the following registry subkey:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate`
