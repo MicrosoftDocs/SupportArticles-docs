@@ -1,10 +1,11 @@
 ---
-title: Visual Studio 2012 crashes with StarDist-3
-description: This article helps you resolve a situation where Visual Studio 2012 might crash because of StarDist-3. 
+title: Visual Studio 2012 crashes with StarDict-3
+description: Provides a workaround when Visual Studio 2012 might crash because of StarDict-3. 
 ms.date: 05/11/2022
 ms.custom: sap:Language or compilers
 ms.technology: vs-language-compilers
 ---
+
 # Visual Studio 2012 might crash with StarDict-3
 
 This article provides a workaround when Microsoft Visual Studio 2012 crashes with StarDict-3.
