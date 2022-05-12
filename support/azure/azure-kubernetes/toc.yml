@@ -76,6 +76,11 @@
   - name: TooManyRequestsReceived error
     href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
+- name: Troubleshoot scale operations
+  items:
+  - name: Failed to fix node group sizes
+    href: cluster-autoscaler-fails-to-scale.md
+
 - name: Troubleshoot node not ready
   items:
   - name: Basic troubleshooting
@@ -127,7 +132,7 @@
   - name: Identify memory saturation in AKS clusters
     href: identify-memory-saturation-aks.md
 
-- name: Troubleshoot Storage related issues
+- name: Troubleshoot Azure Storage-related issues
   items:
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
