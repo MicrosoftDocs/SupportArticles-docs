@@ -10,7 +10,7 @@ ms.author: v-jayaramanp
 
 # Error while installing Web Deploy 3.0
 
-Web Deploy is a tool for simplifying migration, management, and deployment of web applications, sites, and servers. It is installed along with Visual Studio 2012. This article helps you to resolve a warning or an error displayed when you try to install Web Deploy 3.0.
+Web Deploy is a tool for simplifying migration, management, and deployment of web applications, sites, and servers. It's installed along with Visual Studio 2012. This article helps you to resolve a warning or an error displayed when you try to install Web Deploy 3.0.
 
 _Applies to:_&nbsp;Visual Studio 2012
 
