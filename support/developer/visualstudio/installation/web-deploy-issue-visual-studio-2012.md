@@ -26,7 +26,7 @@ When you try to install Web Deploy 3.0, you may experience the following problem
 
 ## Workarounds
 
-To resolve the warning or error and install Web Deploy 3.0 successfully, you can try any of the following workarounds:
+To work around these issues and successfully install Web Deploy 3.0, you can try any of the following approaches:
 
 - Obtain an updated installer that has been published at the distribution channel of your choice (such as [MSDN](https://msdn.microsoft.com/subscriptions/securedownloads)).
 - Install the [latest Visual Studio Update](https://visualstudio.microsoft.com/).
