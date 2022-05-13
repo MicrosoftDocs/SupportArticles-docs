@@ -76,6 +76,7 @@ Verify that the package that you're trying to install isn't already installed.
 
    The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers.  
 1. Verify that the package you want to install matches the processor architecture of the Windows version that you're using.  
+
    For example, an x86-based update can't be installed on x64-based installations of Windows.
 
 #### Step 4: Have all prerequisite updates been installed?
@@ -110,7 +111,7 @@ Follow these steps to troubleshoot this issue.
    The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*. To verify its presence, view the installed programs list or run the following PowerShell script:  
 
    ```powershell
-   Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
+   Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -Match "Microsoft Update Health Tools"}
    ```
 
 ### The device is receiving an update that you didn't deploy
@@ -121,6 +122,7 @@ To troubleshoot this issue, follow these steps:
 
    For example, if the device is scanning for updates from a WSUS endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
+
    A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
 
 ## References
