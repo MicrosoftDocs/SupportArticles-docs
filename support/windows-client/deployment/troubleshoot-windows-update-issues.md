@@ -22,10 +22,10 @@ These solutions designed to get you started on Windows Update troubleshooting sc
 
 ### Step 1: Run the diagnostic tool for your version of Windows
 
-- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool (For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file)).
+- **Windows 7, Windows 2008 R2 or Windows 2008 SP2:** Run the System Readiness (CheckSUR) tool. For more information, see [Fix errors that are found in the CheckSUR log file](/troubleshoot/windows-server/deployment/fix-windows-update-errors#how-to-fix-errors-that-are-found-in-the-checksur-log-file).
 - **Windows 8 and later version of Windows:** Open an administrative command prompt window, and then run the following command:  
 
-  ```console
+  ```cmd
   Dism /online /cleanup-image /restorehealth
   ```
 
@@ -46,6 +46,7 @@ For more information, see [Fix Windows file corruption](/troubleshoot/windows-se
 To do this, follow these steps:
 
 1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx).
+
 1. In the search box, type the update number that you want to download, and then select **Search**.
 1. Find the update that applies to your operating system in the search results. Next to that update, select **Add** to add the update to your basket.
 1. Select **View basket**, and then select **Download**.
@@ -72,6 +73,7 @@ Verify that the package that you're trying to install isn't already installed.
 #### Step 3: Is the update appropriate for this architecture?
 
 1. Verify that the package that you're trying to install matches the Windows version that you're using.  
+
    The Windows version information can be found in the "Applies To" section of the article for each update. For example, Windows Server 2012-only updates can't be installed on Windows Server 2012 R2-based computers.  
 1. Verify that the package you want to install matches the processor architecture of the Windows version that you're using.  
    For example, an x86-based update can't be installed on x64-based installations of Windows.
@@ -82,8 +84,8 @@ Read the package's related article to find out if the prerequisite updates are i
 
 To determine whether these prerequisite updates are installed, open a Windows PowerShell window and run the following command:  
 
-```console
-get-hotfix KB3173424, KB2919355, KB2919442
+```powershell
+Get-Hotfix KB3173424, KB2919355, KB2919442
 ```
 
 If the updates are installed, the command returns the installed date in the **InstalledOn** section of the output.
@@ -93,6 +95,7 @@ If the updates are installed, the command returns the installed date in the **In
 Follow these steps to troubleshoot this issue.
 
 1. Check that the device's updates for the relevant category aren't paused.  
+
    For more information, see [Pause feature updates](/windows/deployment/update/waas-configure-wufb#pause-feature-updates) and [Pause quality updates](/windows/deployment/update/waas-configure-wufb#pause-quality-updates).
 1. **Feature updates only:** Check to see if the device might have a safeguard hold applied for the given feature update version.  
    For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
@@ -103,7 +106,7 @@ Follow these steps to troubleshoot this issue.
 1. **Expedited quality updates only:** Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update).  
    The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*. To verify its presence, view the installed programs list or run the following PowerShell script:  
 
-   ```console
+   ```powershell
    Get-WmiObject -Class Win32\_Product \| Where-Object {$\_.Name -amatch "Microsoft Update Health Tools"}
    ```
 
@@ -112,6 +115,7 @@ Follow these steps to troubleshoot this issue.
 To troubleshoot this issue, follow these steps:
 
 1. Check that the device is scanning the Windows Update service and not a different endpoint.  
+
    For example, if the device is scanning for updates from a WSUS endpoint, it might receive different updates. To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Check that the device is successfully enrolled in feature update management by the deployment service.  
    A device that isn't successfully enrolled might receive different updates according to its feature update deferral period. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
