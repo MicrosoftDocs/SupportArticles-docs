@@ -173,6 +173,13 @@ The TLS connection may have been closed by one of the intermediary devices (such
 
 </details>
 
+<summary><b>SBC in TAC has a warning that certificate is expiring or has already expired</b></summary>
+
+Please upload a new certificate.
+During an SBC certificate update, TLS connections, that were established from SBC to Microsoft with an old certificate, should be torn down and re-established with a new certificate to avoid a certificate expiration warning in a Teams Admin Centre. One of the ways of doing so should be a complete SBC reboot during maintenance window (low traffic time). If you cannot reboot an SBC, please reach out to your vendor for a detailed guidance on how to forcibly close all the old TLS connections.
+
+</details>
+
 ## More information
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
