@@ -376,13 +376,11 @@ The following sections describe the performance counters that you can use to mon
 
 These counters indicate the overall performance of the gateway:
 
-| Performance counter name               | Description |
-|----------------------------------------|-------------|
-| Processor(\_Total)\\% Processor Time    |             |
-| Memory\\% Committed Bytes In Use       |             |
-| Network Interface(\*)\\Bytes Total/sec  |             |
-| LogicalDisk(\*)\\% Idle Time            |             |
-| LogicalDisk(\*)\\Avg. Disk Queue Length |             |
+- Processor(\_Total)\\% Processor Time
+- Memory\\% Committed Bytes In Use
+- Network Interface(\*)\\Bytes Total/sec
+- LogicalDisk(\*)\\% Idle Time
+- LogicalDisk(\*)\\Avg. Disk Queue Length
 
 ##### Operations Manager process generic performance counters
 
@@ -422,13 +420,11 @@ These counters are Operations Manager specific counters that indicate the perfor
 
 These counters indicate the overall performance of the management server:
 
-| Performance counter name               | Description |
-|----------------------------------------|-------------|
-| Processor(\_Total)\\% Processor Time    |             |
-| Memory\\% Committed Bytes In Use       |             |
-| Network Interface(\*)\\Bytes Total/sec  |             |
-| LogicalDisk(\*)\\% Idle Time            |             |
-| LogicalDisk(\*)\\Avg. Disk Queue Length |             |
+- Processor(\_Total)\\% Processor Time
+- Memory\\% Committed Bytes In Use
+- Network Interface(\*)\\Bytes Total/sec
+- LogicalDisk(\*)\\% Idle Time
+- LogicalDisk(\*)\\Avg. Disk Queue Length
 
 ##### Operations Manager process generic performance counters
 
