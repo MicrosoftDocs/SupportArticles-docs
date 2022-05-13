@@ -89,8 +89,6 @@ productDirectory:
           text: Outlook for Mac
         - url: /outlook/troubleshoot/outlook-mobile-welcome
           text: Outlook for iOS and Android
-        - url: /outlook/troubleshoot/outlook-experts-welcome
-          text: From the Outlook Experts
     # Card
     - title: OneDrive
       imageSrc: https://docs.microsoft.com/office/media/logos/logo-onedriveforbusiness.svg
