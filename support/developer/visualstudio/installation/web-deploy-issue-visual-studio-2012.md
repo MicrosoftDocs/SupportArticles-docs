@@ -16,7 +16,7 @@ _Applies to:_&nbsp;Visual Studio 2012
 
 ## Symptoms
 
-When you try to install Web Deploy 3.0, you may experience the following problems if there are:
+When you try to install Web Deploy 3.0, you may experience the following problems:
 
 - During the installation, you may see the "Unable to locate package source" error that isn't resolved using the **Download packages from the Internet** option.
 - Post installation, you may see a warning, which indicates setup has completed but not all features have installed correctly, along with the following error message:
