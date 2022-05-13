@@ -105,7 +105,7 @@
   - name: Intermittent timeouts or server issues
     href: intermittent-timeouts-or-server-issue.md
 
-- name: Cannot connect to AKS cluster
+- name: Cannot connect to AKS cluster through API server
   items:
   - name: Basic troubleshooting
     href: troubleshoot-cluster-connection-issues-api-server.md
