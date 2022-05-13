@@ -85,7 +85,7 @@ Read the package's related article to find out if the prerequisite updates are i
 To determine whether these prerequisite updates are installed, open a Windows PowerShell window and run the following command:  
 
 ```powershell
-Get-Hotfix KB3173424, KB2919355, KB2919442
+Get-HotFix KB3173424, KB2919355, KB2919442
 ```
 
 If the updates are installed, the command returns the installed date in the **InstalledOn** section of the output.
@@ -98,12 +98,15 @@ Follow these steps to troubleshoot this issue.
 
    For more information, see [Pause feature updates](/windows/deployment/update/waas-configure-wufb#pause-feature-updates) and [Pause quality updates](/windows/deployment/update/waas-configure-wufb#pause-quality-updates).
 1. **Feature updates only:** Check to see if the device might have a safeguard hold applied for the given feature update version.  
+
    For more information about safeguard holds, see [Safeguard holds](/windows/deployment/update/safeguard-holds) and [Opt out of safeguard holds](/windows/deployment/update/safeguard-opt-out).
 1. Check that the deployment to which the device is assigned has the state **offering**. Deployments that have the states **paused** or **scheduled** won't deploy content to devices.
 1. Check that the device has scanned for updates and is scanning the Windows Update service.  
+
    To learn more about scanning for updates, see [Scanning updates](/windows/deployment/update/how-windows-update-works#scanning-updates).
 1. **Feature updates only:** Verify that the device is successfully enrolled in feature update management by the deployment service. A device that's successfully enrolled is represented by an Azure AD device resource. That resource documents an update management enrollment for feature updates, and has no Azure AD device registration errors.
 1. **Expedited quality updates only:** Check that the device has the Update Health Tools installed (available for Windows 10 version 1809 or later in the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update).  
+
    The Update Health Tools are required for a device to receive an expedited quality update. The program's location on the device is *C:\\Program Files\\Microsoft Update Health Tools*. To verify its presence, view the installed programs list or run the following PowerShell script:  
 
    ```powershell
