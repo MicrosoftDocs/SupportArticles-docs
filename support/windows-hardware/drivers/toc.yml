@@ -71,9 +71,9 @@
 
 - name: Scanner Driver
   items:
-  - name: GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
-    href: IStiDeviceControl-GetMyDevicePortName-incorrect-port-name-multiple-USB.md
-  - name: Can't scan documents from a USB scanner after restarting Windows 11
+  - name: GetMyDevicePortName returns incorrect port name of a USB scanner
+    href: GetMyDevicePortName-returns-an-incorrect-port-name-of-USB-scanner.md
+  - name: Can't scan documents from a USB scanner after Windows 11 restarts
     href: cant-scan-from-USB-scanner-after-win11-restarts.md
 
 - name: Print Driver
