@@ -1,0 +1,122 @@
+### YamlMime:Landing
+
+title: Microsoft Teams troubleshooting
+summary: This library provides information on how to identify and fix errors you may experience when using Microsoft Teams. For a complete article list, browse the navigation pane on the left, or use the search box to help find specific issues and solutions.
+metadata:
+  title: Teams troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft Teams.
+  ms.service: msteams
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 05/13/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Clear the Teams client cache
+            url: ./teams-administration/clear-teams-cache.md
+          - text: Include or exclude Teams from antivirus or DLP applications
+            url: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
+          - text: User information isn't updated
+            url: ./teams-administration/user-information-not-updated.md
+ # Card
+  - title: Conferencing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Dial pad is missing
+            url: ./teams-conferencing/no-dial-pad.md
+          - text: '"Give Control" doesn't work'
+            url: ./teams-conferencing/give-control-doesn’t-work-sharescreen.md
+          - text: No audio while sharing content during a live event
+            url: ./teams-conferencing/no-audio-when-sharing-content-in-meeting.md
+ # Card
+  - title: Exchange integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: External federated contacts don't appear in Teams search
+            url: ./exchange-integration/external-contacts-not-in-search.md
+          - text: Teams and Exchange interaction issues
+            url: ./exchange-integration/teams-exchange-interaction-issue.md
+ # Card
+  - title:  Files
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't open files in a chat window
+            url: ./files/do-not-have-access-to-this-file-teams.md
+          - text: Error uploading files to chats
+            url: ./files/cannot-upload-files-or-access-onedrive.md
+          - text: Error when selecting the Files tab
+            url: ./files/access-files-tab-errors.md
+# Card
+  - title: Device configuration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshooting Wi-Fi device configuration profiles
+            url: troubleshoot-wi-fi-profiles.md
+          - text: Windows - Troubleshooting CSP custom settings
+            url: troubleshoot-csp-custom-settings.md
+          - text: Android - Factory reset protection emails setting isn't enforced
+            url: factory-reset-protection-emails-not-enforced.md
+# Card
+  - title: IM and presence
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Actual presence status isn't displayed
+            url: ./teams-im-presence/presence-not-show-actual-status.md
+          - text: A contact's presence is unknown
+            url: ./teams-im-presence/contact-presence-status-unknown.md
+          - text: Issues with presence status in Outlook
+            url: ./teams-im-presence/issues-with-presence-in-outlook.md          
+# Card
+  - title: Meetings
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issues with meeting recordings
+            url: ./meetings/troubleshoot-meeting-recording-issues.md
+          - text: Issues with webinars
+            url: ./meetings/issues-with-webinars.md
+# Card
+  - title: OneNote integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't upload or download OneNote Files
+            url: ./teams-onenote-integration/cant-upload-download-onenote-file.md
+          - text: Issues with accessing notebooks
+            url: ./teams-onenote-integration/issue-access-notebook.md
+# Card
+  - title: Phone system
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issues with call transfers
+            url: ./phone-system/direct-routing/issues-with-call-transfers.md
+          - text: Issues with outbound calls
+            url: ./phone-system/direct-routing/issues-with-outbound-calls.md
+          - text: Issues with SBC connectivity
+            url: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
+# Card
+  - title: Sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Stuck in a login loop
+            url: ./teams-sign-in/sign-in-loop.md
+          - text: Teams doesn't automatically update
+            url: ./teams-sign-in/teams-doesnt-automatically-update.md
+          - text: You're missing out
+            url: ./teams-sign-in/error-missing-out-sign-in-teams.md
+            
