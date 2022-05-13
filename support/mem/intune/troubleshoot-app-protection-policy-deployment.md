@@ -33,18 +33,11 @@ With the above information in place, you can start troubleshooting.
 Successful app protection policy deployment relies on proper configuration of settings and other dependencies. The recommended flow for investigating common issues with Intune APP is as follows, which we review in more detail in this article:
 
 1. [Verify you have met the prerequisites for deploying app protection policies](#step-1-verify-app-protection-policy-prerequisites).
-1. [Check app protection policy status and check targeting](#step-2-check-app-protection-policy-status):
-    - Is the user targeted?
-    - Has there been a user check-in from the affected device?
-    - Are the applications for the problem scenario managed via the targeted policy?
-    - Verify that the timing of policy delivery is within expected behavior. See [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery) for more information.
+1. [Check app protection policy status and check targeting](#step-2-check-app-protection-policy-status).
 1. [Verify that the user is targeted](#step-3-verify-that-the-user-is-targeted).
 1. [Verify that the managed app is targeted](#step-4-verify-that-the-managed-app-is-targeted).
 1. [Verify that the user signed in to the affected application using their targeted corporate account](#step-5-verify-that-the-user-signed-in-to-the-affected-application-using-their-targeted-corporate-account).
-1. [Collect device data](#step-6-collect-device-data-with-edge):
-    - Work with the user to review they are trying to do and the steps they are taking.
-    - Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed.
-    - Collect APP logs through Microsoft Edge.
+1. [Collect device data](#step-6-collect-device-data-with-edge).
 
 ### Step 1: Verify app protection policy prerequisites
 
@@ -65,12 +58,18 @@ The first step in troubleshooting is to check whether all prerequisites are met.
 
 ### Step 2: Check app protection policy status
 
-To check your app protection status, follow these steps:
+Review the following details to understand the status of your app protection policies:
+
+- Has there been a user check-in from the affected device?
+- Are the applications for the problem scenario managed via the targeted policy?
+- Verify that the timing of policy delivery is within expected behavior. See [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery) for more information.
+
+Use these steps to get detailed information:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Apps** > **Monitor** > **App protection status**, and then select the **Assigned users** tile.
 1. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
-1. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting pane, you can see whether the user is licensed for app protection and has a license for Microsoft 365. You can also see the app status for all the user's devices.
+1. Search for and select one of the affected users from the list, then select **Select user**. At the top of the App reporting page, you can see whether the user is licensed for app protection and has a license for Microsoft 365. You can also see the app status for all the user's devices.
 1. Make a note of such important information as the targeted apps, device types, policies, device check-in status, and last sync time.
 
 > [!NOTE]
@@ -125,7 +124,7 @@ If your environment requires alternative sign-in methods, see [Configuring Alter
 
 ### Step 6: Collect device data with Edge
 
-Start collecting details of the steps the user takes leading up to and including when the problem behavior occurs. This should include  screen shots or video of the steps they are following. This section explains how to use Edge for iOS and Android to access managed app logs.
+Work with the user to collect details about they are trying to do and the steps they are taking.  Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed. Then, collect managed app logs through Microsoft Edge on the device.
 
 Users with Microsoft Edge installed on their iOS or Android device can view the management status of all Microsoft published apps. They can use the following steps to send logs to help with troubleshooting.
 
