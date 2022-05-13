@@ -4179,6 +4179,41 @@
       "source_path": "support/developer/visualstudio/cpp/general/expand-pointer-debugger-watch-window.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/cpp/debuggers/expand-pointer-debugger-watch-window",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "support/developer/webapps/index.md",
+      "redirect_url": "/support/developer/webapps/welcome-webapps",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/webapps/iis/index.md",
+      "redirect_url": "/support/developer/webapps/iis/iis-welcome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/browsers/index.md",
+      "redirect_url": "/support/developer/browsers/welcome-browsers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/biztalk/index.md",
+      "redirect_url": "/support/developer/biztalk/welcome-biztalk-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/dotnet/index.md",
+      "redirect_url": "/support/developer/dotnet/welcome-dotnet",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/host-integration-server/index.md",
+      "redirect_url": "/support/developer/host-integration-server/welcome-host-integration-server",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/index.md",
+      "redirect_url": "/support/developer/visualstudio/welcome-visual-studio",
+      "redirect_document_id": false
     }
   ]
 }
