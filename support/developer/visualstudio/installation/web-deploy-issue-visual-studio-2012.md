@@ -1,7 +1,7 @@
 ---
-title: Error while installing Web Deploy 3.0
+title: Fail to install Web Deploy 3.0
 description: This article helps you resolve a warning or error that is shown while installing Web Deploy 3.0.
-ms.date: 05/12/2022
+ms.date: 05/13/2022
 ms.custom: sap:Installation
 ms.topic: troubleshooting
 author: haiying
@@ -19,7 +19,7 @@ _Applies to:_&nbsp;Visual Studio 2012
 When you try to install Web Deploy 3.0, you may experience the following problems:
 
 - During the installation, you may see the "Unable to locate package source" error that isn't resolved using the **Download packages from the Internet** option.
-- Post installation, you may see a warning, which indicates setup has completed but not all features have installed correctly, along with the following error message:
+- After the installation, you may see a warning, which indicates setup has completed but not all features have installed correctly, along with the following error message:
 
   > Microsoft Web Deploy 3.0  
   > A required certificate is not within its validity period when verifying against the current system clock or the timestamp in the signed file.

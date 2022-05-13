@@ -62,7 +62,7 @@
   href: ./visual-studio-2015-2013-feature-not-work.md
 - name: Windows Installer may display inaccurate progress
   href: ./windows-installer-display-inaccurate-progress.md
-- name: Error while installing Web Deploy 3.0
+- name: Fail to install Web Deploy 3.0
   href: ./web-deploy-issue-visual-studio-2012.md
 - name: Description of Visual Studio 2012 Update 4
   href: ./visual-studio-2012-update-4.md
