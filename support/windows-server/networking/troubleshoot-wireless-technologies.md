@@ -32,6 +32,7 @@ There are a wide range of causes for connection failures. Use the following sect
 The answers to the following questions may help you to isolate the affected clients and other affected components:
 
 1. Do all clients fail to connect, or only certain clients? If only certain clients are affected, what are the common factors? For example, do the clients use the same network interface controller (NIC) vendor or versions, operating system (OS) release, build, or installed software and drivers?
+
 1. Is the failing connection a manual connection, or an auto-connect connection?
 1. Does the connection fail to establish at all? Or does the connection establish, and then drop?
 1. Do the affected clients share specific components, such as a particular wireless Service Set Identifier (SSID) or a particular access point (AP)?
@@ -41,6 +42,7 @@ The answers to the following questions may help you to isolate the affected clie
 Components such as services, connection managers, group policy, or updates can cause connection problems. To determine if any of these causes apply, follow these steps on an affected client. After each step, try to connect again.
 
 1. Restart the WLAN Autoconfig Service (WlanSvc).
+
 1. Uninstall any third-party connection managers.
 1. Turn off all group policy on the client.
 1. Make sure the most recent update package is installed. For more information about current update rollups, see [Windows 10 update history](https://support.microsoft.com/topic/windows-10-update-history-857b8ccb-71e4-49e5-b3f6-7073197d98fb) or [Windows 11 update history](https://support.microsoft.com/topic/windows-11-update-history-a19cd327-b57f-44b9-84e0-26ced7109ba9).
@@ -52,6 +54,7 @@ For more troubleshooting instructions and information about how connections esta
 Follow these steps to narrow down possible causes of an 802.1X authentication failure.
 
 1. What type of authentication is being used? Examples include PEAP-MSCHAPv2, EAP-TLS, and so on.
+
 1. Is Credential Guard configured?  
    > [!NOTE]  
    > MSCHAP(v2) cannot work with Credential Guard enabled. For more information, see [How Credential Guard works](/windows/security/identity-protection/credential-guard/credential-guard-how-it-works).
