@@ -1,6 +1,6 @@
 ---
-title: GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
-description: This article discusses the problem that occurs where the IStiDeviceControl::GetMyDevicePortName method on Windows 11 returns an incorrect port name when you connect multiple USB scanners.
+title: GetMyDevicePortName returns incorrect port name of a USB scanner
+description: This article discusses the issue where the GetMyDevicePortName returns incorrect port name when you connect multiple USB scanners to Windows 11.
 ms.date: 05/02/2022
 ms.custom: sap:Print driver
 author: Dipesh-Choubisa
@@ -10,7 +10,7 @@ ms.technology: windows-hardware-print-driver
 
 # GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
 
-This article discusses the problem that occurs where the `IStiDeviceControl::GetMyDevicePortName` method on Windows 11 returns an incorrect port name when you connect multiple USB scanners.
+This article discusses the issue where the GetMyDevicePortName returns incorrect port name when you connect multiple USB scanners to Windows 11.
 
 ## Symptoms
 
@@ -20,26 +20,26 @@ Consider the following scenario:
 1. Your scanner isn't working properly after the device starts up from the sleep state.
 1. The Windows Image Acquisition (WIA) driver is using `IStiDeviceControl::GetMyDevicePortName` inside the `IStiUSD::Initialize` method as in the following code example.
 
-```cppwinrt
-///////////////////////////////////////////////////////////////////////////
-// IStiUSD Interface Section (for all WIA drivers)
-///////////////////////////////////////////////////////////////////////////
-HRESULT CYourWIADriver::Initialize(_In_ PSTIDEVICECONTROL pHelDcb,
-                                    DWORD             dwStiVersion,
-                               _In_ HKEY              hParametersKey)
-{
-    HRESULT hr = E_INVALIDARG;
-.
-    if ((pHelDcb)&&(hParametersKey))
+    ```cppwinrt
+    ///////////////////////////////////////////////////////////////////////////
+    // IStiUSD Interface Section (for all WIA drivers)
+    ///////////////////////////////////////////////////////////////////////////
+    HRESULT CYourWIADriver::Initialize(_In_ PSTIDEVICECONTROL pHelDcb,
+                                        DWORD             dwStiVersion,
+                                   _In_ HKEY              hParametersKey)
     {
-        TCHAR wszPortName[MAX_PATH];
-        DWORD cchPortName = sizeof(wszPortName)/sizeof(wszPortName[0]);
-        hr = pHelDcb->GetMyDevicePortName(wszPortName, cchPortName);
-        if (SUCCEEDED(hr))
+        HRESULT hr = E_INVALIDARG;
+    .
+        if ((pHelDcb)&&(hParametersKey))
         {
-            WIAS_TRACE((g_hInst, "PortName = %ws", wszPortName));
-        }
-```
+            TCHAR wszPortName[MAX_PATH];
+            DWORD cchPortName = sizeof(wszPortName)/sizeof(wszPortName[0]);
+            hr = pHelDcb->GetMyDevicePortName(wszPortName, cchPortName);
+            if (SUCCEEDED(hr))
+            {
+                WIAS_TRACE((g_hInst, "PortName = %ws", wszPortName));
+            }
+    ```
 
 The [IStiUSD::Initialize](/windows-hardware/drivers/ddi/stiusd/nf-stiusd-istiusd-initialize) method creates a read or write path for the devices that you connect to the ports by running the `CreateFile` commands.
 
