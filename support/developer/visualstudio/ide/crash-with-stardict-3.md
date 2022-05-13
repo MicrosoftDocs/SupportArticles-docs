@@ -6,7 +6,7 @@ ms.custom: sap:Language or compilers
 ms.technology: vs-language-compilers
 ---
 
-# Visual Studio 2012 might crash with StarDict-3
+# Visual Studio 2012 may crash with StarDict-3
 
 This article helps you resolve the problem where Microsoft Visual Studio 2012 crashes with StarDict-3.
 
