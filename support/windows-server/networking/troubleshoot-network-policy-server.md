@@ -20,7 +20,7 @@ This article provides guidance for troubleshooting Network Policy Server. The ar
 
 ## Troubleshooting checklist
 
-Use this checklist to identify and resolve common Network Policy Server issues
+Use this checklist to identify and resolve common Network Policy Server issues.
 
 ### Step 1: Check that NPS Auditing is enabled
 
@@ -34,7 +34,7 @@ Use this checklist to identify and resolve common Network Policy Server issues
 
 1. If auditing isn't enabled, you can enable auditing by entering the following command:
 
-   ```console
+   ```cmd
    auditpol /set /subcategory:"Network Policy Server" /success:enable /failure:enable
    ```
 
@@ -43,31 +43,36 @@ Use this checklist to identify and resolve common Network Policy Server issues
 When NPS auditing is enabled, the event logs record any authentication failure errors. To review this information, follow these steps:
 
 1. Open Event Viewer, and then select **Custom views** > **Server roles** > **Network Policy and Access Services**.
+
 1. Check for events that have Event ID 6273 or 6274. Most authentication failures produce these events.
 1. Check the reason codes of the authentication failure events. The reason code indicates the cause of the failure.
 1. Check to see if the events are associated with a single user account. If so, check the NPS event log for other references to that user account. Such events may indicate an issue in network policy or connection request policy.
 
 ### Step 3: Check the NPS configuration
 
-- Make sure that the NPS server certificate is valid
-- Make sure that the **RADIUS Clients and Servers** list includes the radius client in question.
-- Make sure that the shared secret key of the radius client matches the NPS shared secret key.
-- Make sure that the radius ports (1812,1813,1645,1646) are allowed through all firewalls.
-- Make sure that the network and connection request policy includes all appropriate conditions.
-- Make sure that the network policy constraints list the correct authentication method.
+Make sure of the following:
+
+- The NPS server certificate is valid.
+
+- The **RADIUS Clients and Servers** list includes the radius client in question.
+- The shared secret key of the radius client matches the NPS shared secret key.
+- The radius ports (1812,1813,1645,1646) are allowed through all firewalls.
+- The network and connection request policy includes all appropriate conditions.
+- The network policy constraints list the correct authentication method.
 
 ### Step 4: Check the request forwarding configuration
 
-If the NPS server must forward the request to another radius server for authentication, then check the following:
+If the NPS server must forward the request to another radius server for authentication, then make sure of the following:
 
-- Make sure that the **Remote Radius Server Groups** list includes the radius server in question.
-- Make sure that the authentication settings for the connection request policy are correct, including the group that is used in forward requests to the remote server.
+- The **Remote Radius Server Groups** list includes the radius server in question.
+- The authentication settings for the connection request policy are correct, including the group that is used in forward requests to the remote server.
 
 ### Step 5: Temporarily remove Azure AD MFA registry keys
 
 If you're using NPS and Azure Active Directory (Azure AD) Multi-Factor Authentication (MFA), try to isolate the behavior by temporarily removing the Azure AD MFA registry keys. To do this, follow these steps:
 
-1. In Registry Editor, back up the **HKEY_LOCAL_MACHINE\system\currentcontrolset\services\authsrv\parameters** subkey.
+1. In Registry Editor, back up the **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Authsrv\Parameters** subkey.
+
 1. Under this subkey, delete the **AuthorizationDLLs** and **ExtensionDLLs** entries.
 1. Test NPS authentication again.
 1. If NPS authentication fails, check Event Viewer to see the reason codes for any related events.
@@ -83,19 +88,20 @@ For descriptions and summaries of emerging and known issues, see [Windows releas
 
 Check that the IP address listed in the radius client is relevant. If it is, add the radius client to the **Radius Clients** list.
 
-The NPS event log records this event when the NPS server receives a message from a radius client that isn't on the configured list of radius clients. For more information, see [Event ID 13 - RADIUS Client Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd316135(v=ws.10))
+The NPS event log records this event when the NPS server receives a message from a radius client that isn't on the configured list of radius clients. For more information, see [Event ID 13 - RADIUS Client Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd316135(v=ws.10)).
 
 ### NPS Event ID 18: An Access-Request message was received from RADIUS client %1 with a message authenticator attribute that isn't valid
 
 Check the value of both shared secret keys. Additionally, you can generate and configure a new key, and then check to see whether the issue recurs.
 
-The NPS event log records this event when authentication fails because the shared secret key of the radius client doesn't match the shared secret key of the NPS server. For more information, see [Event ID 18 - NPS Server Communication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735343(v=ws.10))
+The NPS event log records this event when authentication fails because the shared secret key of the radius client doesn't match the shared secret key of the NPS server. For more information, see [Event ID 18 - NPS Server Communication](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc735343(v=ws.10)).
 
-## NPS Event ID 6273, reason code 16: Network Policy Server denied access to a user
+### NPS Event ID 6273, reason code 16: Network Policy Server denied access to a user
 
 To resolve this issue, check each of the following possible causes:
 
 - Check that the username and password for the user are valid.
+
 - Check to see whether the user account is locked in Active Directory.
 - Check that the request is targeted to the correct domain controller and that the user account exists.
 
