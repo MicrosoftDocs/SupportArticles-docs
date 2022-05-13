@@ -26,7 +26,7 @@ Use this checklist to identify and resolve common Network Policy Server issues.
 
 1. Open an administrative Command Prompt window, and then enter the following command:
 
-   ```console
+   ```cmd
    auditpol /get /subcategory:"Network Policy Server"
    ```
 
