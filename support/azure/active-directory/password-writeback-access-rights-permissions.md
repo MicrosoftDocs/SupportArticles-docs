@@ -276,6 +276,28 @@ This section describes the expected Active Directory permissions for password wr
 
 1. Select **OK** to exit the **Advanced Security Settings** dialog box and return to the **Properties** dialog box.
 
+## Required permissions on the samServer object
+
+This section describes the expected Active Directory permissions for password writeback at the samServer object (CN=Server,CN=System,DC=Contoso,DC=com), follow these  steps to get to the security properties of the samSever object:
+
+1. Open to the Active Directory Users and Computers snap-in.
+
+1. In the navigation pane, locate and select the **System** container, at the container content listing locate and select the **samServer** object, and then select the **Properties** icon.
+
+1. In the **Properties** dialog box for the account, select the **Security** tab.
+
+1. Select the **Advanced Security Settings** dialog box. The **Permissions** tab displays the current list of samServer object permissions for each Active Directory identity (Principal).
+
+1. Certify that at least one of the below principal is listed at the ACE for the samServer object. If only Pre-Windows 2000 Compatible Access is listed, please make sure Authenticated Users is member of this builtin group.
+
+### Permissions for Pre-Windows 2000 Compatible Access (Allow)
+
+**Special** permissions must include **List contents**, **Read all properties**, and **Read permissions** rights.
+
+### Permissions for Authenticated Users (Allow)
+
+**Special** permissions must include **List contents**, **Read all properties**, and **Read permissions** rights.
+
 ## Other required Active Directory permissions
 
 In the **Pre-Windows 2000 Compatible Access** group properties, go to the **Members** tab, and make sure that **Authenticated Users** is a member of this group. Otherwise, you might experience issues that affect password writeback on Azure AD Connect and Active Directory (especially on older versions).
