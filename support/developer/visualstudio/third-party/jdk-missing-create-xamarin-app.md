@@ -1,7 +1,7 @@
 ---
 title: Java Development Kit is missing
 description: This article provides a workaround for an error that occurs when you create a Xamarin Android or Xamarin.Forms app in Visual Studio 2015.
-ms.date: 05/12/2022
+ms.date: 05/16/2022
 ms.custom: sap:Third Party Tools installed with Visual Studio
 ms.reviewer: vyedin
 ---
