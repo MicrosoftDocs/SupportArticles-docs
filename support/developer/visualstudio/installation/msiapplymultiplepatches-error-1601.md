@@ -4,7 +4,6 @@ description: This article provides a resolution for an error 1601 that occurs wh
 ms.date: 04/27/2020
 ms.custom: sap:Installation
 ms.reviewer: kelho
-ms.technology: vs-installation-install
 ---
 # MsiApplyMultiplePatches returns error 1601
 

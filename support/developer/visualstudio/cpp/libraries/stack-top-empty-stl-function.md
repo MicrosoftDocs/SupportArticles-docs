@@ -5,7 +5,6 @@ ms.date: 04/27/2020
 ms.custom: sap:C and C++ Libraries
 ms.reviewer: derekj
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use stack::top and stack::empty STL functions in Visual C++
 

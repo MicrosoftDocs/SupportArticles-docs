@@ -14,7 +14,7 @@ This article describes the default permissions and user rights that are set on c
 _Original product version:_ &nbsp; Internet Information Services 8.0  
 _Original KB number:_ &nbsp; 981949
 
-## Changes in permissions between IIS 6.0 and IIS 7.0/7.5/8.0/8.5
+## Permission changes in IIS 6.0, IIS 7.0, and later versions
 
 In IIS 6.0, a local account (`IUSR_MachineName`) is created when IIS is installed. The `IUSR_MachineName` account is the default identity that is used by IIS when Anonymous authentication is enabled. Anonymous authentication is used by both the File Transfer Protocol (FTP) service and the HyperText Transfer Protocol (HTTP) service. IIS 6.0 also contains a group that is named `IIS_WPG`. The `IIS_WPG` group is used as a container for all Application Pool Identities.
 
@@ -28,7 +28,7 @@ For more information about Application Pool Identities, visit [Application Pool 
 
 ## Default NTFS file system permissions
 
-The tables in this section list the default New Technology File System (NTFS) permissions that are assigned to certain folders and files. These folders and files are installed together with IIS 7.0, IIS 7.5, IIS 8.0, and IIS 8.5.
+The tables in this section list the default New Technology File System (NTFS) permissions that are assigned to certain folders and files. These folders and files are installed together with IIS 7.0, IIS 7.5, IIS 8.0, IIS 8.5, and IIS 10.0.
 
 ### \inetpub
 
@@ -384,10 +384,10 @@ The table in this section lists the default local security policies and the user
 |---|---|
 |Access this computer from the network|Everyone</br> Administrators</br> Users</br> Backup operators|
 |Adjust memory quotas for a process|LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> ApplicationPoolIdentity|
-|Allow sign in locally|Administrators</br> Users</br> Backup operators|
+|Allow log on locally|Administrators</br> Users</br> Backup operators|
 |Bypass traverse checking|Everyone</br> LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> Users</br> Backup operators|
-|Generate security audit details|ApplicationPoolIdentity|
+|Generate security audits|ApplicationPoolIdentity|
 |Impersonate a client after authentication|LOCAL SERVICE</br> NETWORK SERVICE</br> Administrators</br> `IIS_IUSRS`</br> SERVICE|
-|Sign in as a batch job|Administrators</br> Backup operators</br> Performance log users</br> `IIS_IUSRS`|
-|Sign in as a service|ApplicationPoolIdentity|
+|Log on as a batch job|Administrators</br> Backup operators</br> Performance log users</br> `IIS_IUSRS`|
+|Log on as a service|ApplicationPoolIdentity|
 |Replace a process level token|LOCAL SERVICE</br> NETWORK SERVICE</br> ApplicationPoolIdentity|

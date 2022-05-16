@@ -260,6 +260,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS

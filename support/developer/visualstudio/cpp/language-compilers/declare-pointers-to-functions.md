@@ -4,7 +4,6 @@ description: Describes how to build an array that contains function addresses an
 ms.date: 04/22/2020
 ms.reviewer: markm
 ms.topic: how-to
-ms.technology: visual-cpp-general
 ---
 # Declare an array of pointers to functions in Visual C++
 

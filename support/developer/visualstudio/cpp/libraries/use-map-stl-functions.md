@@ -4,7 +4,6 @@ description: This article provides a sample code to show how to use the map::end
 ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use the map::end, map::find, map::insert, map::iterator, and map::value_type STL functions in Visual C++
 

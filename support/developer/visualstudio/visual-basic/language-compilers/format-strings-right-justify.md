@@ -4,7 +4,6 @@ description: This article describes how to format strings to Right-Justify when 
 ms.date: 12/10/2020
 ms.custom: sap:Visual Basic
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Format strings to Right-Justify when an application calls printing
 
