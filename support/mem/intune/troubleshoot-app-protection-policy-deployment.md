@@ -124,27 +124,27 @@ If your environment requires alternative sign-in methods, see [Configuring Alter
 
 ### Step 6: Collect device data with Edge
 
-Work with the user to collect details about they are trying to do and the steps they are taking.  Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed. Then, collect managed app logs through Microsoft Edge on the device.
+Work with the user to collect details about they are trying to do and the steps they are taking. Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed. Then, collect managed app logs through Microsoft Edge on the device.
 
 Users with Microsoft Edge installed on their iOS or Android device can view the management status of all Microsoft published apps. They can use the following steps to send logs to help with troubleshooting.
 
 1. Open Edge for iOS and Android on your device.
-1. In the address bar, type **about:intunehelp**.
+1. In the address bar, type *about:intunehelp*.
 1. Edge for iOS and Android launches in troubleshooting mode.
 
-From this screen you will be presented with two options and data about the device.
+From this screen, you will be presented with two options and data about the device.
 
-:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/intune-diagnostics-start.png":::
+:::image type="content" source="media/troubleshoot-app-protection-policy-deployment/intune-diagnostics-start.png" alt-text="Screenshot that shows the shared device information.":::
 
 Select **View Intune App Status** to see a list of apps. If you select a specific app, it will show the APP settings associated with that app that are currently active on the device.
 
-:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/intune-diagnostics-app-status.png":::
+:::image type="content" source="media/troubleshoot-app-protection-policy-deployment/intune-diagnostics-app-status.png" alt-text="Screenshot that shows the information about the app.":::
 
 If the information displayed for a specific app is limited to the app version and bundle with the policy check-in timestamp, it means no policy is currently applied to that app on the device.
 
 The **Get Started** option allows you to collect logs about the APP enabled applications. If you open a support ticket with Microsoft for app protection policies, you should always provide these logs from an affected device if possible. For Android-specific instructions, see [Upload and email logs](/mem/intune/user-help/send-logs-to-your-it-admin-by-email-android).
 
-:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/intune-logs.png":::
+:::image type="content" source="media/troubleshoot-app-protection-policy-deployment/intune-logs.png" alt-text="Screenshot that shows the options to share logs.":::
 
 For a list of the settings stored in the Intune Diagnostics (APP) logs, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 
