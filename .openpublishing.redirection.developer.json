@@ -4214,6 +4214,11 @@
       "source_path": "support/developer/visualstudio/index.md",
       "redirect_url": "/support/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/jdk-missing-create-xamarin-app.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/third-party/jdk-missing-create-xamarin-app",
+      "redirect_document_id": true
     }
   ]
 }
