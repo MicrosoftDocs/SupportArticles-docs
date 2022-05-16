@@ -75,22 +75,25 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://myserver/tfs`.
 
-    1. On rightmost to the address bar, select the lock icon, and then select the **Connection is secure** link.
+    2. On rightmost to the address bar, select the lock icon, and then select the **Connection is secure** link.
 
-    1. Select the Certificate icon to open the **Certification** window.
+    3. Select the Certificate icon to open the **Certification** window.
 
-    1. In the **Certification Path** tab, select the upper left certificate, which is the root certificate.
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-step-certification-path.jpg" alt-text="SSL Certification Path tab in the Certification window":::
+    4. In the **Certification Path** tab, select the upper left certificate, which is the root certificate.
 
-    1. Select **View Certificate** to open **Certification** window for the root certificate.
+    :::image type="content" source="media/Git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="SSL Certification Path tab in the Certification window":::
 
-    1. On the' **Details** tab of root certificate, select **Copy to File...** .
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-step-details-tab.jpg" alt-text="SSL Details tab in the Certification window":::
+    5. Select **View Certificate** to open **Certification** window for the root certificate.
 
-    1. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-step-export-wizard.png" alt-text="SSL file format on the Certificate Export Wizard":::
+    6. On the' **Details** tab of root certificate, select **Copy to File...** .
 
-    1. Save the root certificate on the local disk.
+    :::image type="content" source="media/Git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="SSL Details tab in the Certification window":::
+
+    7. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
+
+    :::image type="content" source="media/Git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="SSL file format on the Certificate Export Wizard":::
+
+    8. Save the root certificate on the local disk.
 
 1. Configure Git to use local directory for Git certificates store by following these steps:
 
