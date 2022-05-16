@@ -2374,6 +2374,16 @@
       "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
       "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "/troubleshoot/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "/troubleshoot/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
+      "redirect_document_id": false
     }
   ]
 }
