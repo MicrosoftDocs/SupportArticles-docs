@@ -14,7 +14,7 @@ This article describes the default permissions and user rights that are set on c
 _Original product version:_ &nbsp; Internet Information Services 8.0  
 _Original KB number:_ &nbsp; 981949
 
-## Changes in permissions between IIS 6.0 and IIS 7.0+
+## Permission changes in IIS 6.0, IIS 7.0, and later versions
 
 In IIS 6.0, a local account (`IUSR_MachineName`) is created when IIS is installed. The `IUSR_MachineName` account is the default identity that is used by IIS when Anonymous authentication is enabled. Anonymous authentication is used by both the File Transfer Protocol (FTP) service and the HyperText Transfer Protocol (HTTP) service. IIS 6.0 also contains a group that is named `IIS_WPG`. The `IIS_WPG` group is used as a container for all Application Pool Identities.
 
