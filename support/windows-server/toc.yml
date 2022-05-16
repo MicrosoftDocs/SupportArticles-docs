@@ -1664,6 +1664,8 @@
       href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
+    - name: 'Troubleshooting guidance: Network Policy Server'
+      href: ./networking/troubleshoot-network-policy-server.md
     - name: Certificate requirements when you use EAP-TLS
       href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
@@ -1858,6 +1860,8 @@
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: 'Troubleshooting guidance: wireless technology'
+      href: ./networking/troubleshoot-wireless-technologies.md
     - name: Configure L2TP/IPsec server behind NAT-T device
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
