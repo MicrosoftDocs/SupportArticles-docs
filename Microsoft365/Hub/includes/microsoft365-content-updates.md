@@ -2,6 +2,14 @@
 
 
 
+## Week of May 09, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/11/2022 | [How to block OneDrive use from within Microsoft 365 Apps for enterprise and Office 2016 applications](/office365/troubleshoot/group-policy/block-onedrive-use-from-office) | modified |
+
+
 ## Week of May 02, 2022
 
 
