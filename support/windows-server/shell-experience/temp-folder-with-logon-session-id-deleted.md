@@ -48,11 +48,11 @@ You don't experience the issue in the following scenarios:
 - *%TEMP%* folder isn't empty.
 - Nobody logs on to the server, or any user session is ended within seven days.
 
-## %TEMP% folder is deleted by SilentCleanup (Cleanmgr.exe) or Storage Sense (storsvc.exe)
+## %TEMP% folder is deleted by SilentCleanup (cleanmgr.exe) or Storage Sense (storsvc.exe)
 
 This behavior is by design.
 
-The *%TEMP%* folder is deleted by the **SilentCleanup** task (Cleanmgr.exe) when the logon session exceeds seven days. **SilentCleanup** is scheduled daily together with Automatic Maintenance.
+The *%TEMP%* folder is deleted by the **SilentCleanup** task (*cleanmgr.exe*) when the logon session exceeds seven days. **SilentCleanup** is scheduled daily together with Automatic Maintenance.
 
 When Storage Sense (*storsvc.exe*) is enabled, the *%TEMP%* folder may be deleted. Storage Sense is disabled by default, but it may be enabled when the C drive runs out of free space.
 
@@ -88,7 +88,7 @@ To work around this issue, follow these steps:
 > [!NOTE]
 > After you make this configuration, you must manually delete the *%TEMP%* folder to avoid exhausting free space.
 
-You can also modify the LastAccess value alternatively.
+You can also modify the **LastAccess** value alternatively.
 
 ### Modify the LastAccess value
 
@@ -105,9 +105,9 @@ You can also modify the LastAccess value alternatively.
 5. Exit **Registry Editor**.
 
 > [!NOTE]
-> After you make this configuration, the **LastAccess** value controls the period during which Cleanmgr.exe deletes files in all temporary folders. If the **LastAccess** value is set too high, this may exhaust free space.
+> After you make this configuration, the **LastAccess** value controls the period during which *cleanmgr.exe* deletes files in all temporary folders. If the **LastAccess** value is set too high, this may exhaust free space.
 
-In addition to the cleanmgr.exe settings, make the following settings for Storage Sense.
+In addition to the *cleanmgr.exe* settings, make the following settings for Storage Sense.
 
 > [!NOTE]
 > After you make the configuration for Storage Sense, be careful not to run out of free space on the C drive.
