@@ -282,7 +282,7 @@ This section describes the expected Active Directory permissions for password wr
 
 1. Open to the Active Directory Users and Computers snap-in.
 
-1. In the navigation pane, locate and select the **System** container, at the container content listing locate and select the **samServer** object, and then select the **Properties** icon.
+1. In the navigation pane, locate and select the **System** container, at the container content listing locate and select the **samServer** object (DisplayName: Server), and then select the **Properties** icon.
 
 1. In the **Properties** dialog box for the account, select the **Security** tab.
 
