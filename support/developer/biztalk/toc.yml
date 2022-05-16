@@ -55,6 +55,8 @@
     href: setup-config/biztalk-hotfixes-cumulative-update.md
   - name: Configuration options can't be changed
     href: setup-config/biztalk-message-queuing-configuration.md
+  - name: Migrating BizTalk Servers isn't supported
+    href: setup-config/migrating-biztalk-servers-not-supported.md
 
 - name: Development and Deployment
   items:
