@@ -11,7 +11,7 @@ ms.collection: windows
 
 Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. Most of these issues revolve around CPU, memory, networking, and input/output (I/O) as key factors where the performance issue occurs. Each of these areas generates different symptoms (sometimes simultaneously) and require a different diagnostic approach and solution.
 
-This article discusses high memory usage (also known as Memory Pressure) issues that occur on Azure virtual machines (VMs) that run the Windows operating system (OS). For troubleshooting guidance for Azure VMs running Linux distros, see [Troubleshoot performance and isolate bottlenecks in Linux](./troubleshoot-performance-bottlenecks-linux.md).
+This article discusses high memory usage (also known as Memory Pressure) issues that occur on Azure virtual machines (VMs) that run the Windows operating system (OS). To get troubleshooting guidance for Azure VMs running Linux distros, see [Troubleshoot performance and isolate bottlenecks in Linux](./troubleshoot-performance-bottlenecks-linux.md).
 
 ## Memory Pressure issues on Azure Windows VMs
 
@@ -27,7 +27,7 @@ Many issues are directly related to the workload. The kind of workload that exis
 
 ### Common factors
 
-The following factors are common in a low memory situation. If any of these factors exists, you're already a step closer to the root of this issue:
+Here are common factors in a low memory situation. If any of these factors exists, you're closer to the root of this issue:
 
 - A recent code change or deployment that's mostly applicable to apps such as Internet Information Services (IIS), Microsoft SharePoint, SQL Server, or third-party applications.
 
@@ -72,7 +72,7 @@ For other known applications/configurations such as [SQL Server](/azure/azure-sq
 
 ### Ongoing low memory issues
 
-If the issue is occurring right now, this is the best opportunity to capture the process trace to determine what is causing the issue. You can use any existing tools ([Procmon](/sysinternals/downloads/procmon), Perfmon, [RAMMAP](/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on) that you've been using for on-premises Windows servers to locate the process.
+If the issue is occurring right now, this is the best opportunity to capture the process trace to determine what is causing the issue. To locate the process, you can use existing tools that you've been using for on-premises Windows servers, for example, [Procmon](/sysinternals/downloads/procmon), Perfmon, [RAMMAP](/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on.
 
 The following tools are recommended by Azure Support for Azure VMs:
 
@@ -102,7 +102,7 @@ Select the **Performance diagnostics** option. You'll be asked to install the op
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-performance-diagnostics.png" alt-text="Screenshot of Install performance diagnostics option.":::
 
-Select **Install performance diagnostics**. You will see a **Run diagnostics** panel. In the **Run diagnostics** panel, you can select [different analysis types](how-to-use-perfInsights.md#supported-troubleshooting-scenarios) to run. The preferred for memory analysis is **Performance Analysis** or **Advanced Performance Analysis**. See the following screenshot for an example:
+Select **Install performance diagnostics**. You will see a **Run diagnostics** panel. In the **Run diagnostics** panel, you can select [different analysis types](how-to-use-perfInsights.md#supported-troubleshooting-scenarios) to run. The preferred for memory analysis is **Performance Analysis** or **Advanced Performance Analysis**.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-analysis-type.png" alt-text="Screenshot of four analysis type.":::
 
@@ -122,11 +122,11 @@ The numbered options in the screenshot relate to the following comments:
 
 5. Select the **I acknowledge that I am getting this software from Microsoft Corp. and that I have read and agree to the legal terms and privacy policy** checkbox to accept the End User License Agreement (EULA). Select the **I agree to share diagnostics information with Microsoft** checkbox if you intend to make this report available to Azure Support team helping on this case.
 
-Performance diagnostics report is stored in one of the storage accounts under your subscription. It's available to view and download later. Once you submit a diagnostic, this same **Performance diagnostics** view will also display past report collections and a summary of findings under **High**/**Medium**/**Low** categories. You can select any of the reports to see the next level of details. See the following screenshot for an example:
+Performance diagnostics report is stored in one of the storage accounts under your subscription. It's available to view and download later. Once you submit a diagnostic, this same **Performance diagnostics** view will also display past report collections and a summary of findings under **High**/**Medium**/**Low** categories. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-diagnostics-report.png" alt-text="Screenshot of performance diagnostics report.":::
 
-You can also download the report for detailed analysis through selecting **Download report**. See the following screenshot for an example:
+You can select any of the reports to see the next level of details. You can also download the report for detailed analysis through selecting **Download report**. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/report-details.png" alt-text="Screenshot that shows performance diagnostics report details.":::
 
@@ -220,10 +220,9 @@ PerfInsights collect Perfmon as an extra log for VMSlow and Advanced scenarios. 
 
 Consider the same example that's shown in PerfInsights to see how Perfmon shows this data. A quick indicator for memory health is through **Available MBytes** counter, which indicates the physical memory available for allocation to system or process in need. Though the OS will start flagging processes to cut their WorkingSets when it senses contention, a generic ballpark number as a red flag for **Available Mbytes** is to be greater than 200 Mb (> 200 Mb).
 
-Perfmon is available by default in Windows (Server or client), and can be invoked through UI or a command line tool. For the following example,
-Perfmon can be loaded through selecting Start > Run in Windows and typing *Perfmon*. Any data collection done for Perfmon will have a *\*.blg* extension.
+Perfmon is available by default in Windows (Server or client), and can be invoked through UI or a command line tool. To load Perfmon in Windows,select **Start** > **Run**, type *Perfmon*, and select **OK**. Any data collection done for Perfmon will have a *\*.blg* extension.
 
-You can add counters, under various resource categories. For context of this article, you should opt for **Memory** > **Available MBytes**. See the following screenshot for an example:
+You can add counters, under various resource categories. For memory troubleshooting, opt for **Memory** > **Available MBytes**. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-available-mbytes-counter.png" alt-text="Screenshot that shows available counters and selects Available MBytes.":::
 
@@ -249,7 +248,7 @@ The list of available tools doesn't end at PerfInsights for Perfmon. You can use
 
 #### Azure monitoring tools
 
-Any production system needs consistent monitoring, so we're proactive in getting alerted as well as using it for historic patterns to understand the resource requirements for the app environment better. Luckily, Azure Virtual Machines (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
+Any production system needs consistent monitoring, so we proactively get alerts as well as use it for historic patterns to understand the resource requirements for the app environment better. Luckily, Azure Virtual Machines (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
 
 If a critical production VM is hitting a certain resource threshold (for example memory), you can create custom alerts. In this case, you can alert a team through email or text.
 
