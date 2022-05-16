@@ -3883,7 +3883,7 @@
     {
       "source_path": "support/developer/visualstudio/general/language-compilers/help-viewer-2-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/ide/help-viewer-2-crashes",
-      "edirect_document_id": true
+      "redirect_document_id": true
     },
     {
       "source_path": "support/developer/visualstudio/general/general/_stat-family-cannot-support-symbolic-directory-link.md",
