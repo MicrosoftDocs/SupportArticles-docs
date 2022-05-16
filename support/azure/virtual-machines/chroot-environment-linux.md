@@ -51,13 +51,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mkdir /rescue
       mount /dev/sdc1 /rescue
       mount /dev/sdc15 /rescue/boot/efi
-      cd /rescue
-
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -118,13 +117,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mkdir /rescue
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
-      cd /rescue
-
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -225,13 +223,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount /dev/mapper/rootvg-optlv /rescue/opt
       mount /dev/sdc2 /rescue/boot/
       mount /dev/sdc1 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -427,11 +424,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
    mount -o nouuid  /dev/mapper/rescuemevg-varlv /rescue/var 
    mount -o nouuid  /dev/sdc2 /rescue/boot
    mount /dev/sdc1 /rescue/boot/efi
-   mount -t proc proc /rescue/proc 
-   mount -t sysfs sys /rescue/sys/ 
-   mount -o bind /dev /rescue/dev/ 
-   mount -o bind /dev/pts /rescue/dev/pts/
-   mount -o bind /run /rescue/run/
+   
+   mount -t proc /proc /rescue/proc 
+   mount -t sysfs /sys /rescue/sys
+   mount -o bind /dev /rescue/dev 
+   mount -o bind /dev/pts /rescue/dev/pts
+   mount -o bind /run /rescue/run
    ```
 
 10. Verify the mounts
@@ -604,13 +602,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount -o nouuid /dev/sdc2 /rescue
       mount -o nouuid /dev/sdc1 /rescue/boot/
       mount /dev/sdc15 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -626,7 +623,6 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue/dev/pts
       umount /rescue/dev/
       umount /rescue/run
-      cd /
       umount /rescue/boot/efi
       umount /rescue/boot
       umount /rescue
@@ -673,13 +669,12 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       mount -o nouuid /dev/sdc4 /rescue
       mount -o nouuid /dev/sdc3 /rescue/boot/
       mount /dev/sdc2 /rescue/boot/efi
-      cd /rescue
 
-      mount -t proc proc proc
-      mount -t sysfs sys sys/
-      mount -o bind /dev dev/
-      mount -o bind /dev/pts dev/pts/
-      mount -o bind /run run/
+      mount -t proc /proc /rescue/proc
+      mount -t sysfs /sys /rescue/sys
+      mount -o bind /dev /rescue/dev
+      mount -o bind /dev/pts /rescue/dev/pts
+      mount -o bind /run /rescue/run
       chroot /rescue
       ```
 
@@ -695,7 +690,6 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
       umount /rescue/dev/pts
       umount /rescue/dev/
       umount /rescue/run
-      cd /
       umount /rescue/boot/efi
       umount /rescue/boot
       umount /rescue
