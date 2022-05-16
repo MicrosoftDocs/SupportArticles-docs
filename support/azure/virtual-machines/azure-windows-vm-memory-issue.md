@@ -72,7 +72,7 @@ For other known applications/configurations such as [SQL Server](/azure/azure-sq
 
 ### Ongoing low memory issues
 
-If the issue is occurring right now, this is the best opportunity to capture the process trace to determine what is causing the issue. You can use any existing tools ([Procmon](/sysinternals/downloads/procmon), Perfmon, [RAMMAP](https://docs.microsoft.com/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on) that you've been using for on-premises Windows servers to locate the process.
+If the issue is occurring right now, this is the best opportunity to capture the process trace to determine what is causing the issue. You can use any existing tools ([Procmon](/sysinternals/downloads/procmon), Perfmon, [RAMMAP](/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on) that you've been using for on-premises Windows servers to locate the process.
 
 The following tools are recommended by Azure Support for Azure VMs:
 
@@ -98,7 +98,7 @@ When PerfInsights is [installed through the Azure portal](/azure/virtual-machine
 
 ##### Azure portal option 1
 
-Select select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for. See the following screenshot for an example:
+Select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected it for. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-performance-diagnostics.png" alt-text="Screenshot of Install performance diagnostics option.":::
 
@@ -122,7 +122,7 @@ The numbered options in the screenshot relate to the following comments:
 
 5. Select the **I acknowledge that I am getting this software from Microsoft Corp. and that I have read and agree to the legal terms and privacy policy** checkbox to accept the End User License Agreement (EULA). Select the **I agree to share diagnostics information with Microsoft** checkbox if you intend to make this report available to Azure Support team helping on this case.
 
-Performance diagnostics report is stored in one of the storage accounts under your subscription. It's available to view and download later. Once you submit a performance analysis, this same **Performance diagnostics** view will also show you past report collections and a summary of findings under **High**/**Medium**/**Low** categories. You can select any of the reports to see the next level of detail. See the following screenshot for an example:
+Performance diagnostics report is stored in one of the storage accounts under your subscription. It's available to view and download later. Once you submit a diagnostic, this same **Performance diagnostics** view will also display past report collections and a summary of findings under **High**/**Medium**/**Low** categories. You can select any of the reports to see the next level of details. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-diagnostics-report.png" alt-text="Screenshot of performance diagnostics report.":::
 
@@ -132,7 +132,7 @@ You can also download the report for detailed analysis through selecting **Downl
 
 ##### Azure portal option 2
 
-Select **Diagnose and Solve Problems** in the VM blade and look for **VM Performance Issues**.
+Select **Diagnose and Solve Problems** in the VM blade and look for **VM Performance Issues** in the right panel. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/diagnose-and-solve-problems.png" alt-text="Screenshot of Diagnose and Solve Problems panel.":::
 
@@ -164,9 +164,9 @@ Your folder structure should resemble the following:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/log-folder-structure.png" alt-text="Screenshot shows log folder structure.":::
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/generalcounters-system-file.png" alt-text="Screenshot that shows GeneralCounters_000001.blg file and System.evtx files.":::
-
 1. Any additional collections such as Perfmon, Xperf, Netmon, SMB logs, Event logs, and so on, can be found in the *output* folder.
+
+    :::image type="content" source="media/azure-windows-vm-memory-issue/generalcounters-system-file.png" alt-text="Screenshot that shows GeneralCounters_000001.blg file and System.evtx files.":::
 
 2. The actual report together with analysis and recommendations is *Perfinsights Report.html*.
 
@@ -176,7 +176,7 @@ Your folder structure should resemble the following:
 
 ##### Where to start
 
-Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of high memory usage or any other resource constraints, the **Findings** tab will categorize it as either High impact or Medium impact.
+Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of high memory usage or any other resource constraints, the **Findings** tab will categorize it as either **High** impact or **Medium** impact.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png" alt-text="Screenshot that shows resource consumption logged in Findings tab.":::
 
@@ -194,11 +194,11 @@ The **Top Memory Consumers** tab has two separate sections: **High Memory Usage 
 
 - **High Memory Usage Periods**: This section shows a time bar when the memory consumption is high. It also shows overall Committed Memory %, which is one of the key indicators of memory exhaustion. The **AvailablePhysicalMemory%** indicates how thin the system is running on memory, or what is left available for it.
 
-- **Top Memory Consumers**: This section is equally important, as it shows process level details on high memory consumers during the data capture interval. This shows both the process details and their memory usage pattern. The list is sorted by having high average memory consumers at the top. Take a note of End Time - Start Time (End Time minus Start Time), which is the actual duration for the process consuming high memory, during the overall data collection timeframe.
+- **Top Memory Consumers**: This section is equally important, as it shows process level details on high memory consumers during the data capture interval. This shows both the process details and their memory usage pattern. The list is sorted by having high average memory consumers at the top. Take a note of **EndTime** - **StartTime** (**EndTime** minus **StartTime**), which is the actual duration for the process consuming high memory, during the overall data collection timeframe.
 
     :::image type="content" source="media/azure-windows-vm-memory-issue/high-memory-consumers.png" alt-text="Screenshot that shows High Memory Consumers.":::
 
-These two tabs will be enough to set the path for the next troubleshooting steps. Depending on the process that's driving the high memory condition, you'll have to address the questions that were asked earlier. Processes such as [SQL (sqlservr)](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size) or IIS(w3wp) require a specific drill-down on query or code changes that are causing this condition.
+These two tabs will be enough to set the path for the next troubleshooting steps. Depending on the process that's driving the high memory condition, you'll have to address the questions that were asked earlier. Processes such as [SQL (sqlservr)](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size) or IIS (w3wp) require a specific drill-down on query or code changes that are causing this condition.
 
 For system processes such as [WmiPrvSE](~/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md) or SvcHost, you have to follow a different path. A pre-requisite to those processes is that you should be on latest OS cumulative patch.
 
@@ -229,7 +229,7 @@ You can add counters, under various resource categories. For context of this art
 
 Once you add this counter, it will show the pattern for **AvailableMBytes** during data capture interval, or at run time. Open the Perfmon (*\*.blg*) file from the Perfinsights *output* folder and add counter under **Memory** > **Available MBytes**. Check how it shows a dip in the memory available for the machine. See the following screenshot for an example:
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png" alt-text="Screenshot that shows pattern for AvailableMBytes during data capture interval.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png" alt-text="Screenshot that shows pattern for AvailableMBytes during data capture interval." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png":::
 
 But the question (which app is driving the memory consumption crazy) remains. Tools like Perfinsights, Resource Monitor, Performance Analysis of Logs (PAL) and so on, help to pinpoint these apps through friendly UI or reports.
 
@@ -239,7 +239,7 @@ Perfmon has the Process counter category. Under this category, there are some co
 
 The pattern needs to be observed for those processes that have gradual or steep rise indicating continuous demand for memory. Here's how we can zero down on processes based on pattern matching close to the _Total/PrivateBytes counter.
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-private-bytes.png" alt-text="Screenshot that shows pattern for PrivateBytes counter.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-private-bytes.png" alt-text="Screenshot that shows pattern for PrivateBytes counter." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-private-bytes.png":::
 
 ##### Simplify Perfmon analysis
 
@@ -269,8 +269,8 @@ After you enable Azure Monitor metrics, the software installs an extension on th
 
 You can explore the exhaustive customization that Azure Monitoring provides in Azure virtual machines (Windows and Linux):
 
-- [Monitor Azure Virtual Machines](/azure/virtual-machines/monitor-vm)
-- [Monitor Virtual Machines with Azure Monitor](/azure/azure-monitor/vm/monitor-virtual-machine)
+- [Monitor Azure virtual machines](/azure/virtual-machines/monitor-vm)
+- [Monitor virtual machines with Azure Monitor](/azure/azure-monitor/vm/monitor-virtual-machine)
 - [How to chart performance with VM Insights](/azure/azure-monitor/vm/vminsights-performance)
 
 #### Reactive troubleshooting
@@ -305,6 +305,6 @@ For any performance issue, understanding your workload is the key to solving the
 
 Because the user operations and amount of data varies, always keep a buffer in the memory, computing, networking, and I/O capabilities of the VM. This way, any sudden change in workload can be absorbed by this additional resource buffer you have left as part of planning.
 
-If you expect the workload increasing soon, move to a higher VM offering or type, that has more compute/memory/IO capability. If the workload will be memory-intensive, choose the VM SKUs wisely, which have [higher memory ratio to cores](/azure/virtual-machines/sizes-memory).
+If you expect the workload increasing soon, move to a higher VM offering or type, that has more compute/memory/IO capability. If the workload will be memory-intensive, choose the VM SKUs wisely, which have [higher memory-to-CPU ratios](/azure/virtual-machines/sizes-memory).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
