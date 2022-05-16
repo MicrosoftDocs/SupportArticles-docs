@@ -4,7 +4,7 @@ description: Describes migrating BizTalk Servers from one domain to another doma
 ms.date: 05/16/2022
 ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: niklase
-ms.author: sevend2
+ms.author: v-sidong
 ---
 
 # Migrating BizTalk Servers from one domain to another domain isn't supported
