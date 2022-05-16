@@ -248,7 +248,7 @@ The list of available tools doesn't end at PerfInsights for Perfmon. You can use
 
 #### Azure monitoring tools
 
-Any production system needs consistent monitoring, so we proactively get alerts as well as use it for historic patterns to understand the resource requirements for the app environment better. Luckily, Azure Virtual Machines (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
+Any production system needs consistent monitoring, so we proactively get alerts and use them for historic patterns to understand the resource requirements for the app environment better. Luckily, Azure Virtual Machines (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
 
 If a critical production VM is hitting a certain resource threshold (for example memory), you can create custom alerts. In this case, you can alert a team through email or text.
 
