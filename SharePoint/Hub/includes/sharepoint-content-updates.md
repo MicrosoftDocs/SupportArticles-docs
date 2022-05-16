@@ -2,6 +2,15 @@
 
 
 
+## Week of May 09, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/9/2022 | [SharePoint crawler has insufficient permissions to crawl file shares](/sharepoint/troubleshoot/search/crawler-has-insufficient-permissions) | modified |
+| 5/11/2022 | [SharePoint on-premises content isn't displayed in SharePoint Online search results](/sharepoint/troubleshoot/search/on-premises-content-not-displayed-in-online-search) | modified |
+
+
 ## Week of May 02, 2022
 
 
