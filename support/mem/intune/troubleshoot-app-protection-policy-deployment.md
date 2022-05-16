@@ -37,7 +37,7 @@ Successful app protection policy deployment relies on proper configuration of se
 1. [Verify that the user is targeted](#step-3-verify-that-the-user-is-targeted).
 1. [Verify that the managed app is targeted](#step-4-verify-that-the-managed-app-is-targeted).
 1. [Verify that the user signed in to the affected application using their targeted corporate account](#step-5-verify-that-the-user-signed-in-to-the-affected-application-using-their-targeted-corporate-account).
-1. [Collect device data](#step-6-collect-device-data-with-edge).
+1. [Collect device data](#step-6-collect-device-data-with-microsoft-edge).
 
 ### Step 1: Verify app protection policy prerequisites
 
@@ -62,7 +62,7 @@ Review the following details to understand the status of your app protection pol
 
 - Has there been a user check-in from the affected device?
 - Are the applications for the problem scenario managed via the targeted policy?
-- Verify that the timing of policy delivery is within expected behavior. See [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery) for more information.
+- Verify that the timing of policy delivery is within expected behavior. For more information, see [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery).
 
 Use these steps to get detailed information:
 
@@ -122,15 +122,15 @@ The only way to guarantee this consistency is through modern authentication. The
 
 If your environment requires alternative sign-in methods, see [Configuring Alternate Login ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id), specifically [Hybrid Modern Authentication with Alternate-ID](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id#hybrid-modern-authentication-with-alternate-id).
 
-### Step 6: Collect device data with Edge
+### Step 6: Collect device data with Microsoft Edge
 
 Work with the user to collect details about they are trying to do and the steps they are taking. Ask the user to collect screenshots or video recording of the behavior. This helps clarify the explicit device actions being performed. Then, collect managed app logs through Microsoft Edge on the device.
 
 Users with Microsoft Edge installed on their iOS or Android device can view the management status of all Microsoft published apps. They can use the following steps to send logs to help with troubleshooting.
 
-1. Open Edge for iOS and Android on your device.
+1. Open Microsoft Edge for iOS and Android on your device.
 1. In the address bar, type *about:intunehelp*.
-1. Edge for iOS and Android launches in troubleshooting mode.
+1. Microsoft Edge for iOS and Android launches in troubleshooting mode.
 
 From this screen, you will be presented with two options and data about the device.
 
