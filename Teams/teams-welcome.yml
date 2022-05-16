@@ -73,6 +73,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Issues with meeting chat
+            url: ./meetings/meeting-chat-issues.md
           - text: Issues with meeting recordings
             url: ./meetings/troubleshoot-meeting-recording-issues.md
           - text: Issues with webinars
