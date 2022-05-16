@@ -162,7 +162,7 @@ After you run the report, the location of the contents depends on whether it's r
 
 Your folder structure should resemble the following:
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/log-folder-structure.png" alt-text="Screenshot shows log folder structure.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/log-folder-structure.png" alt-text="Screenshot that shows log folder structure.":::
 
 1. Any additional collections such as Perfmon, Xperf, Netmon, SMB logs, Event logs, and so on, can be found in the *output* folder.
 
