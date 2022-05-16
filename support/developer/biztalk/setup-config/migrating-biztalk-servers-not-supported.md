@@ -9,6 +9,10 @@ ms.author: v-sidong
 
 # Migrating BizTalk Servers from one domain to another domain isn't supported
 
+This article describes migrating BizTalk Servers from one domain to another domain isn't supported.
+
+_Original KB number:_ &nbsp; 904356
+
 ## Summary
 
 The Microsoft BizTalk Server installation and the BizTalk databases in Microsoft SQL Server contain domain-specific information. The following actions aren't supported:
