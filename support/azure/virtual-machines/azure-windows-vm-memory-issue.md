@@ -178,11 +178,11 @@ Your folder structure should resemble the following:
 
 Open the PerfInsights report. The **Findings** tab logs any outliers in terms of resource consumption. If there are instances of high memory usage or any other resource constraints, the **Findings** tab will categorize it as either **High** impact or **Medium** impact.
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png" alt-text="Screenshot that shows resource consumption logged in Findings tab.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png" alt-text="Screenshot that shows resource consumption logged in Findings tab." lightbox="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png":::
 
 If you expand the **Findings** event, you'll see several key details. The tab lists the processes in descending order, per Average Memory consumption, and shows whether the process is related to the system, an app (SQL Server, IIS, or a third-party app).
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/key-details-in-findings-event.png" alt-text="Screenshot that shows key details logged in Findings tab.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/key-details-in-findings-event.png" alt-text="Screenshot that shows key details logged in Findings tab." lightbox="media/azure-windows-vm-memory-issue/key-details-in-findings-event.png":::
 
 ##### More details
 
@@ -190,13 +190,13 @@ There's a dedicated subtab **Top Memory Consumers** under **Memory**. This tab c
 
 The **Top Memory Consumers** tab has two separate sections: **High Memory Usage Periods** and **Top Memory Consumers**.
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/top-memory-consumers-in-perfinsights-report.png" alt-text="Screenshot that shows High Memory Usage Periods.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/top-memory-consumers-in-perfinsights-report.png" alt-text="Screenshot that shows High Memory Usage Periods." lightbox="media/azure-windows-vm-memory-issue/top-memory-consumers-in-perfinsights-report.png":::
 
 - **High Memory Usage Periods**: This section shows a time bar when the memory consumption is high. It also shows overall Committed Memory %, which is one of the key indicators of memory exhaustion. The **AvailablePhysicalMemory%** indicates how thin the system is running on memory, or what is left available for it.
 
 - **Top Memory Consumers**: This section is equally important, as it shows process level details on high memory consumers during the data capture interval. This shows both the process details and their memory usage pattern. The list is sorted by having high average memory consumers at the top. Take a note of **EndTime** - **StartTime** (**EndTime** minus **StartTime**), which is the actual duration for the process consuming high memory, during the overall data collection timeframe.
 
-    :::image type="content" source="media/azure-windows-vm-memory-issue/high-memory-consumers.png" alt-text="Screenshot that shows High Memory Consumers.":::
+    :::image type="content" source="media/azure-windows-vm-memory-issue/high-memory-consumers.png" alt-text="Screenshot that shows High Memory Consumers." lightbox="media/azure-windows-vm-memory-issue/high-memory-consumers.png":::
 
 These two tabs will be enough to set the path for the next troubleshooting steps. Depending on the process that's driving the high memory condition, you'll have to address the questions that were asked earlier. Processes such as [SQL (sqlservr)](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size) or IIS (w3wp) require a specific drill-down on query or code changes that are causing this condition.
 
