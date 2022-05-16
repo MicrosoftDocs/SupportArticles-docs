@@ -75,7 +75,7 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://myserver/tfs`.
 
-    2. On rightmost to the address bar, select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/lock-icon.png" alt-text="lock"::: icon, and then select the **Connection is secure** link.
+    2. On the address bar, select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/lock-icon.png" alt-text="lock"::: icon, and then select the **Connection is secure** link.
 
     3. Select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/certificate-icon.png" alt-text="Certificate"::: icon to open the **Certification** window.
 
@@ -85,7 +85,7 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     5. Select **View Certificate** to open **Certification** window for the root certificate.
 
-    6. On the' **Details** tab of root certificate, select **Copy to File...** .
+    6. On the **Details** tab, select **Copy to File...** .
 
     :::image type="content" source="media/Git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="SSL Details tab in the Certification window":::
 
