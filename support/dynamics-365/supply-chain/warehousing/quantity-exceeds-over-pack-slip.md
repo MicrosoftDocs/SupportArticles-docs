@@ -43,7 +43,7 @@ The load or shipment is currently in a state where packing slip generation fails
 
 Use the following procedure to adjust the load line quantity.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the packing slip can't be generated for.
 1. On the Action Pane, on the **Ship and receive** tab, in the **Reverse** group, select **Reverse shipment confirmation**.
 1. On the **Load lines** tab, select the load line for the item that exceeds the over-delivery percentage.
@@ -55,7 +55,7 @@ Use the following procedure to adjust the load line quantity.
 
 Use the following procedure to adjust the over-delivery percentage.
 
-1. Go to **Accounts receivable \> Orders \> All orders**.
+1. Go to **Accounts receivable** > **Orders** > **All orders**.
 1. Select the sales order for which you can't post a packing slip for the load.
 1. On the **Sales order lines** tab, select the sales order line for the item that exceeds the over-delivery percentage.
 1. On the **Line details** tab, select **Delivery**.
@@ -67,15 +67,15 @@ Reverse everything that has been posted for the load (for example, the packing s
 
 Use the following procedure to cancel a packing slip.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. On the Action Pane, on the **Ship and receive** tab, in the **Reverse** group, select **Cancel packing slips**.
 
 Use the following procedure to reverse a shipment confirmation.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. On the Action Pane, on the **Ship and receive** tab, in the **Reverse** group, select **Reverse shipment confirmation**.
 
 Use the following procedure to reverse work.
 
-1. Go to **Warehouse management \> Loads \> All loads**.
+1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. On the Action Pane, on the **Loads** tab, in the **Work** group, select **Reverse work**.

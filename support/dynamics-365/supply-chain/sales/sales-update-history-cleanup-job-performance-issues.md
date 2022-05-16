@@ -1,6 +1,6 @@
 ---
 title: Sales update history cleanup job fails or has performance issues
-description: The Sales history cleanup batch job may fail or take very long if there is large amount of sales update data.
+description: The Sales history cleanup batch job may fail or take very long time to run if there's large amount of sales update data.
 author: Henrikan
 ms.date: 10/05/2021
 ms.topic: article
@@ -25,4 +25,4 @@ This can occur when your system includes a large number of sales updates, which 
 
 ## Resolution
 
-A new version of the **Sales update history cleanup** batch job is available for Supply Chain Management version 10.0.19 and higher. This feature is not turned on by default. For details about how it works and how to enable it in feature management, see [Schedule sales history data cleanup](/dynamics365/supply-chain/sales-marketing/sales-update-history-cleanup-performance-improvements).
+A new version of the **Sales update history cleanup** batch job is available for Supply Chain Management version 10.0.19 and higher. This feature isn't turned on by default. For details about how it works and how to enable it in feature management, see [Schedule sales history data cleanup](/dynamics365/supply-chain/sales-marketing/sales-update-history-cleanup-performance-improvements).

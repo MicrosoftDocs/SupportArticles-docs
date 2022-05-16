@@ -1,5 +1,5 @@
 ---
-title: You can't update the forecasted unit cost when you import demand forecast records
+title: You can't update the forecasted unit cost when importing demand forecast records
 description: When you use data entities to import demand forecast records, the cost price for existing records isn't updated so that it matches the imported data.
 author: t-benebo
 ms.date: 4/11/2021
