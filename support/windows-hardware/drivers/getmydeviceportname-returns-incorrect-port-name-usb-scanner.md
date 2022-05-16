@@ -8,9 +8,9 @@ ms.author: v-dchoubisa
 ms.technology: windows-hardware-print-driver
 ---
 
-# GetMyDevicePortName may return incorrect port name in Windows 11 if you connect multiple USB scanners
+# GetMyDevicePortName returns incorrect port name in Windows 11 if you connect multiple USB scanners
 
-This article discusses the issue where GetMyDevicePortName returns incorrect port name when you connect multiple USB scanners to Windows 11.
+This article discusses the issue where GetMyDevicePortName may return incorrect port name when you connect multiple USB scanners to Windows 11.
 
 ## Symptoms
 

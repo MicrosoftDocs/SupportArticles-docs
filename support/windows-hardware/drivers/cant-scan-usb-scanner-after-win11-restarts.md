@@ -1,6 +1,6 @@
 ---
 title: Can't scan documents from a USB scanner after Windows 11 restarts
-description: This article describes the issue where you can’t scan documents from a USB scanner, which you connect to Windows 11 device after it restarts.
+description: This article describes the issue where you can’t scan documents from a USB scanner that you connect to Windows 11 device after restarting it.
 ms.date: 05/03/2022
 ms.custom: sap:Print driver
 author: Dipesh-Choubisa
@@ -10,7 +10,7 @@ ms.technology: windows-hardware-print-driver
 
 # Can't scan documents from a USB scanner after Windows 11 restarts
 
-This article describes the issue where you can’t scan documents from a USB scanner, which you connect to Windows 11 device after it restarts.
+This article describes the issue when you can’t scan documents from a USB scanner that you connect to a restarted Windows 11 device.
 
 ## Symptoms
 
@@ -18,15 +18,15 @@ Consider the scenario where you have a scanner that connects to your Windows 11 
 
 In this scenario, when you try to scan a document from the scanner, you're unable to scan due to the following error:
 
-> "You need a WIA driver to use this device. Please install it from the installation CD or manufacturer's website, and try again."
+> You need a WIA driver to use this device. Please install it from the installation CD or manufacturer's website, and try again.
 
 To verify if this issue is occurring in your device, refer to the Windows Image Acquisition (WIA) service log file (*wiatrace.log*) in the *C:\Windows\debug\WIA\wiatrace.log* path.
 
 If you're encountering this issue, you'll find error messages in the WIA service log that are similar to the following examples:
 
-> "[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)"
+> [wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)
 >
-> "[wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)"
+> [wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)
 
 ## Cause
 
