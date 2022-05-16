@@ -4,7 +4,6 @@ description: Describes the debugger may not stop on breakpoints when you debug A
 ms.date: 04/20/2020
 ms.custom: sap:Debuggers and analyzers
 ms.reviewer: V-KIMWA
-ms.technology: vs-debuggers
 ---
 # Visual Studio .NET debugger doesn't stop on breakpoints when you debug ASP.NET pages
 

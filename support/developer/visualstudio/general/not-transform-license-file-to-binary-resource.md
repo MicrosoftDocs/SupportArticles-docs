@@ -3,7 +3,6 @@ title: Could not load the file or assembly lc.exe
 description: This article describes the error (Could not transform licenses file into a binary resource) that occurs when you build an application in Visual Studio 2017, and provides a workaround.
 ms.date: 04/23/2020
 ms.reviewer: hihayak
-ms.technology: vs-general
 ---
 # Error when you build an application in Visual Studio 2017: Could not transform licenses file into a binary resource
 

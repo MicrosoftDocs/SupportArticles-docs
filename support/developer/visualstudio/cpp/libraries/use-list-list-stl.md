@@ -4,7 +4,6 @@ description: "Describes how to use the list::list STL functions in Visual C++. T
 ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use the list::list STL function in Visual C++
 

@@ -16,8 +16,6 @@
   href: ./resource-editor-cannot-save-file.md
 - name: Help Viewer Power Tool
   href: ./help-viewer-power-tool.md
-- name: JDK is missing
-  href: ./jdk-missing-create-xamarin-app.md
 - name: Microsoft.Vsa.tlb could not be loaded
   href: ./vsa-tlb-not-loaded.md
 - name: Subscriptions administrator migration

@@ -4,7 +4,6 @@ description: "Describes that Access Denied error occurs when your application us
 ms.date: 04/27/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: prabhatt
-ms.technology: visual-cpp-language-compilers
 ---
 # CComVariant::ReadFromStream() returns an error (Access Denied) for stream > 1 MB
 

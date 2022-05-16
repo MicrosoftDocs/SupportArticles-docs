@@ -124,7 +124,7 @@ curl -Iv http://<pod-ip-address>:<port>
 
 For applications that listen on other protocols, you can install relevant tools inside the test pod and then check the connectivity to the application pod.
 
-For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/).
+For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/).
 
 ### Step 2: Check whether the application is reachable from the service
 
@@ -205,7 +205,7 @@ Does the `LoadBalancer` service IP address return a correct response? If it does
 
 1. Verify that the network security groups (NSGs) that are associated with the AKS nodes and AKS subnet allow the incoming traffic on the service port.
 
-For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/).
+For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/).
 
 ## Scenarios that use an ingress instead of a service
 

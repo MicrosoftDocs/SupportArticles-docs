@@ -4,7 +4,6 @@ description: This article resolves a problem in which you can't start the Window
 ms.date: 04/27/2020
 ms.custom: sap:Debuggers and analyzers
 ms.reviewer: pchapman, leolee, meyoung, lukewest
-ms.technology: vs-debuggers
 ---
 # Error when you debug an app in Visual Studio 2013: Windows Simulator needs your current credentials
 

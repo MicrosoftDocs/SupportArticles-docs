@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting RDS Licensing
-description: Introduces general guidance of troubleshooting scenarios related to RDS Licensing.
+title: Guidance for troubleshooting RDS Licensing
+description: Introduces general guidance for troubleshooting scenarios related to RDS Licensing.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
