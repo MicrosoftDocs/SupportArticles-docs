@@ -24,9 +24,9 @@ To verify if this issue is occurring in your device, refer to the Windows Image 
 
 If you're encountering this issue, you'll find error messages in the WIA service log that are similar to the following examples:
 
-> "[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for <YourScannerName>, error (0x80070057)"
+> "[wiaservc.dll] ERROR: USDWrapper::LoadDriver, We encountered an error attempting to load driver for (YourScannerName), error (0x80070057)"
 >
-> "[wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device <YourScannerName> failed to load (hr = 0x80070057)"
+> "[wiaservc.dll] ERROR: DeviceListManager::ProcessDeviceArrival, The driver for device (YourScannerName) failed to load (hr = 0x80070057)"
 
 ## Cause
 
