@@ -3877,13 +3877,13 @@
     },
     {
       "source_path": "support/developer/visualstudio/general/language-compilers/crash-with-stardist-3.md",
-      "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardict-3",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardist-3",
       "redirect_document_id": true
     },
     {
       "source_path": "support/developer/visualstudio/general/language-compilers/help-viewer-2-crashes.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/ide/help-viewer-2-crashes",
-      "redirect_document_id": true
+      "edirect_document_id": true
     },
     {
       "source_path": "support/developer/visualstudio/general/general/_stat-family-cannot-support-symbolic-directory-link.md",
@@ -4214,6 +4214,11 @@
       "source_path": "support/developer/visualstudio/index.md",
       "redirect_url": "/support/developer/visualstudio/welcome-visual-studio",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/crash-with-stardist-3.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardict-3",
+      "redirect_document_id": true
     }
   ]
 }
