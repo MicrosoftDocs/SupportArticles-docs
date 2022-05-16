@@ -42,7 +42,7 @@ In this scenario, a user can save files to local storage even though **Save copi
 
 ## The policy is applied, but iOS users can still transfer work files to unmanaged apps
 
-The **Open-in management** (:::image type="icon" source="media/troubleshoot-app-protection-policy-deployment/open-in-icon.png":::) feature for iOS devices (i.e., Share extension) can limit file transfers between apps that are deployed through a mobile device management (MDM) solution. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
+The **Open-in management** (:::image type="icon" source="media/data-transfer-scenarios/open-in-icon.png":::) feature for iOS devices (i.e., Share extension) can limit file transfers between apps that are deployed through a mobile device management (MDM) solution. The user may be able to transfer work files from managed locations such as OneDrive and Exchange to unmanaged apps or locations, depending on the configuration. The iOS **Open-in management** feature works outside other data transfer methods. Therefore, it isn't affected by **Save as** and **Copy/Paste** settings.
 
 You can use Intune app protection policies together with the iOS **Open-in management** feature to protect company data in the following manner:
 
