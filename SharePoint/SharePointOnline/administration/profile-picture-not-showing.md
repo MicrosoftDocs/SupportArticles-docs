@@ -94,6 +94,7 @@ If a user is encountering this problem, check that the Picture profile property 
 When you’ve confirmed the Picture property is user editable, have the user retry the steps in the above sections. If the picture still isn’t showing, contact Microsoft support.
 
 **Note** For Exchange Online users, it will still take 24 hours for the sync to occur and update the SharePoint picture.
+**Note** For Exchange Online users, changing the **Picture Exchange Sync State** to 0 and uploading a user picture directly into SharePoint will be a temporary change **ONLY**. The next time a picture sync occurs from Exchange Online, the users previously uploaded SharePoint picture will be overwritten by the profile picture that exists in Exchange Online.  
     
 </details>
 
