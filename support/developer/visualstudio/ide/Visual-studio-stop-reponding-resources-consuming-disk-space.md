@@ -8,14 +8,13 @@ ms.date: 05/10/2022
 ms.custom: sap:Integrated Development Environment (IDE)
 ---
 
-# [Troubleshoot] Visual Studio may stop responding if the running resources are consuming disk space
+# [Troubleshoot] Visual Studio may become unresponsive if the system runs out of memory
 
-This article helps you resolve the problem when the disk space exhausts in the computer and Visual Studio application stops responding.
+This article helps you resolve the problem where an error message appears on Windows when the system might be about to run out of memory. This issue may cause instability or unresponsiveness in Visual studio or other applications.
 
-## Cause 1: Some applications consume considerable RAM resources
+## Cause 1: Some applications consume considerable memory
 
-On your system, when you aren't actively using some applications, its resources might be running in background. If these apps use considerable disk space of random-access memory (RAM), you may experience the frequent instability issues in Visual Studio or in the operating system.
-To check which applications cause this issue, follow these steps on your computer:
+On your system, some applications may consume a lot of memory and may not be in active use. To check which applications might be causing this issue, follow these steps:
 
 1. Select the **Ctrl**+**Shift**+**Esc** keys to open **Task Manager**.
 1. Select the **Details** tab.
@@ -25,24 +24,25 @@ To check which applications cause this issue, follow these steps on your compute
 
     :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/task-manager-details-tab-1.png" alt-text="Commit size column in Details tab of Task Manager":::
 
-### Workaround: Close the RAM consuming applications that you aren't using
+### Workaround: Close the memory consuming applications that you aren't using
 
-If you notice a program that consumes a large disk space and if you aren't using it to keep it running, close the program. When you close such programs and processes, the system and Visual Studio application can become stable.
+If you notice a program that consumes a large commit size and you aren't actively using it, close that program. When you close such programs, the system and Visual Studio may become more stable than before closing them.
 
 > [!TIP]
-> If you see a *vmmem.exe* program using memory that your virtual machine commits, you would need to shut down the virtual machine to free up its disk space.
+> If you see a program as *vmmem.exe* in the list, which indicates a virtual machine consuming the memory, shut down the virtual machine to make the memory available.
 >
-> If the top processes that commit large disk space are the system programs, ending them may not be safe. The safest way is to reboot your computer when the running system processes are exhausting the RAM usage.
+> If programs with the largest Commit size are the system programs, closing them may not be safe. The safest approach is to reboot your computer.
 
-## Cause 2: Page file configuration isn't optimal
+## Cause 2: Page file configuration is not optimal
 
-A page file is a file on disk that acts as an extension of the physical memory (RAM) on the system. When the memory usage by applications on a system exceeds the capacity of RAM, Windows can allocate space for RAM by moving the used memory contents to the page file.
+When the memory used by applications exceeds the capacity of random-access memory (RAM), Windows makes space in RAM by moving the used memory contents to the page file. The default configuration of page file is such that Windows can support many programs at the same time.
+However, some configurations and circumstances can't allocate sufficient memory to support all the programs that are running on the system.
 
-The default configuration of page file on Windows is such that the system can support several programs at the same time. However, some configurations and circumstances can’t allocate sufficient memory to support all the programs that are running on the system. This problem might result in instability in any of the programs such as Visual Studio.
+This problem might result in instability in any of the programs such as Visual Studio.
 
-### Solution: Finding the Page file configuration and setting it optimal
+### Solution: Configure the page file settings to become optimal
 
-#### Finding the page file configuration
+#### Step 1: Finding the page file configuration
 
 1. Search for **Advanced System Settings** in Windows search, and select **Open** to open the **System Properties** window.
 
@@ -56,25 +56,25 @@ The default configuration of page file on Windows is such that the system can su
 
     :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-change-button-1.png" alt-text="Selecting Change button in Virtual Memory group":::
 
-#### Setting the page file optimal
+#### Step 2: Setting optimal page file
 
-- If you want to let the system manage the page file transparently for you, choose the default option by selecting **Automatically manage paging file size for all drives** checkbox.
+- We recommend that you let the system manage the page file transparently for you. To do this, select the **Automatically manage paging file size for all drives** checkbox, if not checked.
 
     :::image type="content" source="media/Visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-virtual-memory-1.png" alt-text="Virtual Memory window and settings":::
 
-- If you’ve configured page file size such that the system manages it, but the applications aren't stable, check whether the system drive has sufficient disk space by checking in File Explorer. Use **Windows**+**E** keys to open **File Explorer** window on your computer.
+- If you’ve configured page file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the **Windows**+**E** keys to open the **File Explorer** window on your computer.
 
-- If you want to customize page file size, uncheck **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
+- If you want to customize page file location, uncheck the **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
 
-    - If you want to let the system manage a disk size, select the **System managed size** option.
+    - We recommend that you let the system manage the page file size on a disk. To do this, select the **System managed size** option.
 
-    - In some circumstances, you can customize the size of the page file for a disk. To learn about customizing page file size, see [Manually managing the Windows page file](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#manually-managing-the-windows-pagefile).
+    - In some circumstances, you may have to customize the size of the page file. To learn about customizing page file size, see example in [Manually managing the Windows page file](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#manually-managing-the-windows-pagefile).
 
     > [!IMPORTANT]
-    > Make sure that you set the **Initial size** and **Maximum size** with the current cumulative peak RAM usage of the applications that are running on the system.
+    > Make sure that you set the **Initial size** and **Maximum size** with the current cumulative peak commit size of the applications that you're running on the system.
     >
-    > Because the system doesn’t automatically update page files, try to avoid an increase in memory requirements of applications by updating them when manually configured.
+    > With this setting, the system doesn't automatically update page file size. If the memory requirements increase because the running applications either consume large memory or start claiming new memory, then update the **Maximum size** to consider the new requirements.
     >
     > Ensure that the disk has enough space to accommodate the new size.
-    >
-    > In case of system instability issues due to disk space exhaustion, we recommend that you don't select **No paging file**.
+
+    - If you have been experiencing system instability due to memory exhaustion, we recommend that you do not select the **No paging file** option.
