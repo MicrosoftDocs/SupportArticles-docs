@@ -390,7 +390,7 @@ These counters indicate the overall performance of Operations Manager processes 
 
 | Performance counter name                   | Description                                                                                                            |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Process(HealthService)\\%Processor Time    |                                                                                                                        |
+| Process(HealthService)\\% Processor Time   |                                                                                                                        |
 | Process(HealthService)\\Private Bytes      | Depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes |
 | Process(HealthService)\\Thread Count       |                                                                                                                        |
 | Process(HealthService)\\Virtual Bytes      |                                                                                                                        |
