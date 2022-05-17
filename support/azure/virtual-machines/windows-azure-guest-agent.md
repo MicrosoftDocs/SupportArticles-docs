@@ -9,7 +9,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 09/15/2020
+ms.date: 05/17/2022
 ms.author: genli
 ---
 # Troubleshooting Windows Azure Guest Agent
@@ -114,7 +114,7 @@ The Windows Azure Guest Agent has an auto-update feature. It will automatically 
 
 ### Step 3 Check whether the VM can connect to the Fabric Controller
 
-Use a tool such as PsPing to test whether the VM can connect to 168.63.129.16 on ports 80, 32526 and 443. If the VM doesn’t connect as expected, check whether outbound communication over ports 80, 443, and 32526 is open in your local firewall on the VM. If this IP address is blocked, VM Agent may display unexpected behavior in a variety of scenarios.
+Use a tool such as PsPing to test whether the VM can connect to 168.63.129.16 on ports 80 and 32526. If the VM doesn’t connect as expected, check whether outbound communication over ports 80 and 32526 is open in your local firewall on the VM. If this IP address is blocked, VM Agent may display unexpected behavior in a variety of scenarios.
 
 ## Advanced troubleshooting
 
@@ -209,7 +209,7 @@ The VM cannot reach the wireserver host server.
 1. If you cannot reach the URL from step 1, check the network interface to determine whether it is set as DHCP-enabled and has DNS. To check the DHCP status, of the network interface, run the following command:  `netsh interface ip show config`.
 1. If DHCP is disabled, run the following making sure you change the value in yellow to the name of your interface: `netsh interface ip set address name="Name of the interface" source=dhcp`.
 1. Check for any issues that might be caused by a firewall, a proxy, or other source that could be blocking access to the IP address 168.63.129.16.
-1. Check whether Windows Firewall or a third-party firewall is blocking access to ports 80, 443, and 32526. For more information about why this address should not be blocked,  see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+1. Check whether Windows Firewall or a third-party firewall is blocking access to ports 80 and 32526. For more information about why this address should not be blocked,  see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
 
 ### Guest Agent is stuck "Stopping"  
 
