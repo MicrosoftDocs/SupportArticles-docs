@@ -405,7 +405,7 @@ These counters indicate the overall performance of Operations Manager processes 
 
 These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the gateway:
 
-|Performance counter name|Description|
+|<div style="width:370px">Performance counter name</div>|Description|
 |-|-|
 |Health Service\Workflow Count||
 |Health Service Management Groups(\*)\Active File Uploads|The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.|
