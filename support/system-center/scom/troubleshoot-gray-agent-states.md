@@ -328,11 +328,11 @@ To troubleshoot the issue in this situation, collect the following information f
 
 |Performance counter name|Description|
 |-|-|
-|`MSSQL$\<instance>: Buffer Manager: Page life expectancy`|How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.|
-|`MSSQL$\<instance>: Buffer Manager: Lazy writes/sec`|Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.|
-|`Memory: Available Mbytes`| Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.|
-|`Process: Private Bytes: _Total`|This is the amount of memory (physical and page) being used by all processes combined.|
-|`Process: Working Set: _Total`|This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.|
+|MSSQL$\<instance>:&nbsp;Buffer&nbsp;Manager:&nbsp;Page&nbsp;life&nbsp;expectancy|How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.|
+|MSSQL$\<instance>: Buffer Manager: Lazy writes/sec|Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.|
+|Memory: Available Mbytes| Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.|
+|Process: Private Bytes: _Total|This is the amount of memory (physical and page) being used by all processes combined.|
+|Process: Working Set: _Total|This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.|
 
 #### Counters to identify disk pressure
 
@@ -390,12 +390,12 @@ These counters indicate the overall performance of Operations Manager processes 
 
 | Performance counter name                   | Description                                                                                                            |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
-| Process(HealthService)\\%Processor Time    |                                                                                                                        |
+| Process(HealthService)\\% Processor Time   |                                                                                                                        |
 | Process(HealthService)\\Private Bytes      | Depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes |
 | Process(HealthService)\\Thread Count       |                                                                                                                        |
 | Process(HealthService)\\Virtual Bytes      |                                                                                                                        |
 | Process(HealthService)\\Working Set        |                                                                                                                        |
-| Process(MonitoringHost*)\\% Processor Time |                                                                                                                        |
+| Process(MonitoringHost*)\\%&nbsp;Processor&nbsp;Time |                                                                                                                        |
 | Process(MonitoringHost*)\\Private Bytes    |                                                                                                                        |
 | Process(MonitoringHost*)\\Thread Count     |                                                                                                                        |
 | Process(MonitoringHost*)\\Virtual Bytes    |                                                                                                                        |
@@ -409,7 +409,7 @@ These counters are Operations Manager specific counters that indicate the perfor
 |-|-|
 |Health Service\Workflow Count||
 |Health Service Management Groups(\*)\Active File Uploads|The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.|
-|Health Service Management Groups(\*)\Send Queue % Used|The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded Operations Manager system because the management server or database is too busy or is offline.|
+|Health&nbsp;Service&nbsp;Management&nbsp;Groups(\*)\Send&nbsp;Queue&nbsp;%&nbsp;Used|The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded Operations Manager system because the management server or database is too busy or is offline.|
 |OpsMgr Connector\Bytes Received|The number of network bytes received by the gateway - that is, the number of incoming bytes before decompression.|
 |OpsMgr Connector\Bytes Transmitted|The number network bytes sent by the gateway - that is, the number of outgoing bytes after compression.|
 |OpsMgr Connector\Data Bytes Received|The number of data bytes received by the gateway - that is, the amount of incoming data after decompression.|
@@ -441,7 +441,7 @@ These counters indicate the overall performance of Operations Manager processes 
 | Process(HealthService)\Thread Count        |                                                                                                                                     |
 | Process(HealthService)\Virtual Bytes       |                                                                                                                                     |
 | Process(HealthService)\Working Set         |                                                                                                                                     |
-| Process(MonitoringHost\*)\\% Processor Time |                                                                                                                                     |
+| Process(MonitoringHost\*)\\%&nbsp;Processor&nbsp;Time|                                                                                                                                     |
 | Process(MonitoringHost\*)\Private Bytes     |                                                                                                                                     |
 | Process(MonitoringHost\*)\Thread Count      |                                                                                                                                     |
 | Process(MonitoringHost\*)\Virtual Bytes     |                                                                                                                                     |
@@ -457,7 +457,7 @@ These counters are Operations Manager specific counters that indicate the perfor
 |Health Service Management Groups(\*)\Active File Uploads|The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.|
 |Health Service Management Groups(\*)\Send Queue % Used|The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded Operations Manager system because the Operations Manager system (for example, the root management server) is too busy or is offline.|
 |Health Service Management Groups(\*)\Bind Data Source Item Drop Rate|The number of data items that are dropped by the management server for database or data warehouse data collection write actions. When this counter value is not `0`, the management server or database is overloaded because it can't handle the incoming data item fast enough or because a data item burst is occurring. The dropped data items will be resent by agents. After the overload or burst situation is finished, these data items will be inserted into the database or into the data warehouse.|
-|Health Service Management Groups(\*)\Bind Data Source Item Incoming Rate|The number of data items received by the management server for database or data warehouse data collection write actions.|
+|Health&nbsp;Service&nbsp;Management&nbsp;Groups(\*)\Bind&nbsp;Data&nbsp;Source&nbsp;Item&nbsp;Incoming&nbsp;Rate|The number of data items received by the management server for database or data warehouse data collection write actions.|
 |Health Service Management Groups(\*)\Bind Data Source Item Post Rate|The number of data items that the management server wrote to the database or data warehouse for data collection write actions.|
 |OpsMgr Connector\Bytes Received|The number of network bytes received by the management server - that is, the size of incoming bytes before decompression.|
 |OpsMgr Connector\Bytes Transmitted|The number of network bytes sent by the management server - that is, the size of outgoing bytes after compression.|
