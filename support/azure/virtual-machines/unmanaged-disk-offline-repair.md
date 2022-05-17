@@ -118,14 +118,14 @@ This new VM will act as your repair VM, and its own OS disk must be unmanaged.
 
 3. On the Disks page, expand **Advanced** below **Data Disks** and then clear the **Use managed disks** check box. Select a storage account for the unmanaged OS disk. Do not select to attach an existing disk.
     :::image type="content" source="media/unmanaged-disk-offline-repair/create-vm-no-managed.png" alt-text="Screenshot of the Disks page of the Create a virtual machine wizard, with the use managed disk option cleared.":::
-    If the **Use managed disks** option cannot be unselect, run the following command:
+    If the **Use managed disks** option cannot be unselected, try to create the VM by using the following commands:
 
     ```azurecli
     ## Get the subnet ID of the VM
 
     $SubnetID = az network vnet subnet show --resource-group <RG name> --name <Subnet name> --vnet-name <VNet name> --query id -o tsv
     
-    ## Create the VM with the unmanaged disk
+    ## Create a VM with the unmanaged disk
 
     az vm create \
         --resource-group <RG name>\
