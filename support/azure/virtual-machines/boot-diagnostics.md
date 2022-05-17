@@ -9,7 +9,7 @@ tags: azure-resource-manager
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 05/17/2022
-ms.author: genlin
+ms.author: genli
 ---
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure
@@ -44,7 +44,7 @@ The following procedure is for a virtual machine created using the Resource Mana
 
 On the **Management** tab, in **Monitoring** section, make sure that **Boot diagnostics** is turned on. The default setting is to have boot diagnostics enabled using a managed storage account.
 
-  ![Screenshot of the options in the Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
+  ![Screenshot of the options in the VM creation Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
 
 > [!NOTE]
 > The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
@@ -83,7 +83,7 @@ To enable Boot diagnostics on an existing virtual machine, follow these steps:
 1. Sign in to the [Azure portal](https://portal.azure.com), and then select the virtual machine.
 2. In the **Help** section, select **Boot diagnostics**, then select the **Settings** tab.
 3. In **Boot diagnostics** settings, select the boot diagnostics with managed storage account or custom storage account.
-    ![Screenshot of the options in the Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/existing-boot-diagnostics-vm.png)
+    ![Screenshot of the options in the existing VM's Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/existing-boot-diagnostics-vm.png)
 
 1. Save the change.
 
