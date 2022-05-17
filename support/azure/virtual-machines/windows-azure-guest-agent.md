@@ -235,7 +235,7 @@ Azure VM Agent is stuck at the Stopping process.
 
 **Solution**
 
-1. Make sure that WaAppAgent.exe is running on the VM. If it isn't running, restart the **rdgagent** service, and wait five minutes. When WaAppAgent.exe is running, end the WindowsAzureGuest.exe process.
+1. Make sure that WaAppAgent.exe is running on the VM. If it isn't running, restart the **rdagent** service, and wait five minutes. When WaAppAgent.exe is running, end the WindowsAzureGuest.exe process.
 2. If step 1 doesn't resolve the issue, remove the currently installed version and install the latest version of the agent manually.
 
 ### Npcap Loopback Adapter
@@ -258,7 +258,7 @@ The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, a
 
 ## Next steps
 
-Other known issues with the Azure VM Agent are listed in its [Github repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
+Other known issues with the Azure VM Agent are listed in its [GitHub repository](https://github.com/Azure/WindowsVMAgent/wiki/Known-Issues).
 
 To further troubleshoot the “Azure VM Agent isn't working” issue, [contact Microsoft support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade).
 
