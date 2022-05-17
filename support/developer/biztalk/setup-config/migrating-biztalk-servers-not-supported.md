@@ -1,29 +1,27 @@
 ---
 title: Migrating BizTalk Servers to another domain isn't supported
 description: Describes migrating BizTalk Servers from one domain to another domain isn't supported.
-ms.date: 05/16/2022
+ms.date: 05/17/2022
 ms.custom: sap:BizTalk Server Setup and Configuration
 ms.reviewer: niklase
+author：NiklasEMS 
 ms.author: v-sidong
 ---
 
 # Migrating BizTalk Servers from one domain to another domain isn't supported
 
-This article describes migrating BizTalk Servers from one domain to another domain isn't supported.
-
+_Original product version:_ BizTalk Server  
 _Original KB number:_ &nbsp; 904356
-
-## Summary
 
 The Microsoft BizTalk Server installation and the BizTalk databases in Microsoft SQL Server contain domain-specific information. The following actions aren't supported:
 
-- Moving an existing BizTalk installation from one domain to another domain.
+- Moving an existing BizTalk Server installation from one domain to another domain.
 
-- Moving the databases associated with an existing BizTalk installation from one domain to another domain.
+- Moving the databases associated with an existing BizTalk Server installation from one domain to another domain.
 
-## More information
+## Workaround
 
-When you move an existing server, you must use the `ConfigFramework /u` command to completely unconfigure BizTalk before you migrate to the new domain.
+If you want to move an existing server, you must use the `ConfigFramework /u` command to completely unconfigure BizTalk Server before you migrate to the new domain.
 
 This command removes the current configuration and the existing BizTalk Server databases. Once you are in the new domain, you must run the Configuration Wizard to reconfigure BizTalk Server to create a new group that has a new set of databases.
 
