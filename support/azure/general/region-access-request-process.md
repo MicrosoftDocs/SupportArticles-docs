@@ -68,7 +68,7 @@ To request the access for the Reserved access regions, follow these steps:
     2. In **Subscription**, select the relevant subscription for which you would like to request access.
     3. In **Quota type**, select **Other Requests**.  
     4. Select **Next**.
-1. In the description section, state "Request access for the Azure \<insert the region name> Regions for \<insert your organization name>". Then input your initial deployment model and your compute, storage, or SQL resource quota needs in the following format.
+1. In the description section, input "Request access for the Azure \<the region name> Regions for \<your organization name>". Then specify your initial deployment model and your compute, storage, or SQL resource quota needs in the following format.
 
      | Field| Value |
     |---|---|
