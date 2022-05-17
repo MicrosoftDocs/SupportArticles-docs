@@ -44,9 +44,7 @@ The following procedure is for a virtual machine created using the Resource Mana
 
 On the **Management** tab, in **Monitoring** section, make sure that **Boot diagnostics** is turned on. The default setting is to have boot diagnostics enabled using a managed storage account.
 
-  ![Screenshot of the On option under the Status item and the Storage account field in the Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
-
-:::image type="content" source="media/virtual-machines-common-boot-diagnostics/enable-boot-diagnostics-vm.png" alt-text="Screenshot of the Monitoring section on the Management tab under Create a virtual machine page." border="false":::
+  ![Screenshot of the options in the Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/new-boot-diagnostics-vm.png)
 
 > [!NOTE]
 > The Boot diagnostics feature does not support premium storage account or Zone Redundant Storage Account Types. If you use the premium storage account for Boot diagnostics, you might receive the StorageAccountTypeNotSupported error when you start the VM.
