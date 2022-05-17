@@ -41,7 +41,7 @@ To resolve this issue, use one of the methods in the following table, as appropr
 |Cause|Resolution|
 |---|--|
 |You're using an incorrect user name.|Enter your Office 365 user ID. Your Office 365 user ID is your user principal name (UPN). For example, enter jane@contoso.com. If you don't know your Office 365 user ID, contact the admin for help. |
-|Your password has expired.|Contact the admin at your company to reset your password. For more information, see [A user or an administrator forgot his or her password in Office 365, Azure, or Intune](https://support.microsoft.com/help/2606983).|
+|Your password has expired.|Contact the admin at your company to reset your password. For more information, see [Forgot password to sign in to Microsoft 365, Intune, or Azure](https://support.microsoft.com/help/2606983).|
 |Your user account isn't activated.|To get started with Office 365, you have to activate your user account. To do this, sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)) for the first time by using your temporary password, and then create a new password to use when you sign in.|
 
 ## More information
