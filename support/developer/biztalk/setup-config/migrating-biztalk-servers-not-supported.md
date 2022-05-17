@@ -13,7 +13,7 @@ author: NiklasEMS
 _Original product version:_&nbsp;BizTalk Server  
 _Original KB number:_&nbsp;904356
 
-The Microsoft BizTalk Server installation and the BizTalk Server databases in Microsoft SQL Server contain domain-specific information. The following actions aren't supported:
+The Microsoft BizTalk Server installation and the BizTalk Server databases in Microsoft SQL Server contain domain-specific information. In this scenario, the following actions aren't supported:
 
 - Moving an existing BizTalk Server installation from one domain to another domain.
 
