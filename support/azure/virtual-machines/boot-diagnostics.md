@@ -2,14 +2,14 @@
 title: Boot diagnostics for VMs in Azure | Microsoft Doc
 description: Overview of the two debugging features for virtual machines in Azure
 services: virtual-machines
-author: Deland-Han
+author: genli
 manager: dcscontentpm
 tags: azure-resource-manager
 
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 05/17/2022
-ms.author: delhan
+ms.author: genlin
 ---
 
 # How to use boot diagnostics to troubleshoot virtual machines in Azure
@@ -84,7 +84,7 @@ To enable Boot diagnostics on an existing virtual machine, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com), and then select the virtual machine.
 2. In the **Help** section, select **Boot diagnostics**, then select the **Settings** tab.
-3. In **Boot diagnostics** settings, enable le the boot diagnostics with managed storage account or custom storage account.
+3. In **Boot diagnostics** settings, select the boot diagnostics with managed storage account or custom storage account.
     ![Screenshot of the options in the Boot diagnostics page](media/virtual-machines-common-boot-diagnostics/existing-boot-diagnostics-vm.png)
 
 1. Save the change.
@@ -109,6 +109,6 @@ powercfg /setacvalueindex SCHEME_CURRENT SUB_VIDEO VIDEOIDLE 0
 xset s off
 ```
 
-For Windows VMs, the Azure provisioning agent is different than the VM agent, and it is the provisioning agent that runs the above command during provisioning for VMs created from a generalized image. You can see the evidence of that if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
+For Windows VMs, the Azure provisioning agent is different than the VM agent. It runs the above command during provisioning for VMs created from a generalized image. You can see this event if you search for powercfg in C:\Windows\Panther\WaSetup.xml, which is the provisioning agent log. But since the provisioning agent does not need to run for VMs created from a specialized VHD, that is a scenario where you would need to run the powercfg command manually to disable the virtual display timeout. Also, it is possible to have a particularly old Azure VM created from generalized image that may not have it set because it was created before the provisioning agent was updated to disable the virtual display timeout.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
