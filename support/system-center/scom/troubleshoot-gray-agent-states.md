@@ -328,11 +328,11 @@ To troubleshoot the issue in this situation, collect the following information f
 
 |Performance counter name|Description|
 |-|-|
-|`MSSQL$\<instance>: Buffer Manager: Page life expectancy`|How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.|
-|`MSSQL$\<instance>: Buffer Manager: Lazy writes/sec`|Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.|
-|`Memory: Available Mbytes`| Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.|
-|`Process: Private Bytes: _Total`|This is the amount of memory (physical and page) being used by all processes combined.|
-|`Process: Working Set: _Total`|This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.|
+|MSSQL$\<instance>:&nbsp;Buffer&nbsp;Manager:&nbsp;Page&nbsp;life&nbsp;expectancy|How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.|
+|MSSQL$\<instance>: Buffer Manager: Lazy writes/sec|Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.|
+|Memory: Available Mbytes| Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.|
+|Process: Private Bytes: _Total|This is the amount of memory (physical and page) being used by all processes combined.|
+|Process: Working Set: _Total|This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.|
 
 #### Counters to identify disk pressure
 
