@@ -23,7 +23,7 @@ The Microsoft BizTalk Server installation and the BizTalk Server databases in Mi
 
 If you want to move an existing server, you must use the `ConfigFramework /u` command to completely unconfigure the server before you migrate it to the new domain.
 
-This command removes the current configuration and the existing BizTalk Server databases. Once you are in the new domain, you must run the Configuration Wizard to reconfigure the server to create a new group that has a new set of databases.
+This command removes the current configuration and the existing BizTalk Server databases. Once the server is in the new domain, you must run the Configuration Wizard to reconfigure the server to create a new group that has a new set of databases.
 
 ## Applies to
 
