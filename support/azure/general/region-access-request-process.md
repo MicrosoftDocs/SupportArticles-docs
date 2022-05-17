@@ -78,7 +78,7 @@ To request the access for the Reserved access regions, follow these steps:
     |---|---|
     |Region to Enable| \<insert the region you are requesting access to> |
     | Deployment Model| ARM |
-    | Planned VM type| For example, Dv3 Series |
+    | Planned VM types| For example, Dv3 Series |
     | Planned Compute usage in Cores|25|
     | Planned Storage usage in TB| 10 |
     | Planned SQL Database SKU| For example, S0 |
