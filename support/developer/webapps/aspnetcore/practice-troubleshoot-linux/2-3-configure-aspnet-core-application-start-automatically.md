@@ -67,8 +67,8 @@ RestartSec=10
 KillSignal=SIGINT
 SyslogIdentifier=dotnet-example
 User=www-data
-Environment=ASPNETCORE\_ENVIRONMENT=Production
-Environment=DOTNET\_PRINT\_TELEMETRY\_MESSAGE=false
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 
 [Install]
 WantedBy=multi-user.target
@@ -106,8 +106,8 @@ RestartSec=10
 KillSignal=SIGINT
 SyslogIdentifier=myfirstapp-identifier
 User=www-data
-Environment=ASPNETCORE\_ENVIRONMENT=Development
-Environment=DOTNET\_PRINT\_TELEMETRY\_MESSAGE=false
+Environment=ASPNETCORE_ENVIRONMENT=Development
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 
 [Install]
 WantedBy=multi-user.target
