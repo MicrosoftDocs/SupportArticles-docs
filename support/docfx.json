@@ -74,6 +74,16 @@
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
         "dynamics-365/**/*.md": "David-Pack",
+        "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
+        "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/planning/*.md": "t-benebo",
+        "dynamics-365/supply-chain/procurement/*.md": "GalynaFedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanhoffmann",
+        "dynamics-365/supply-chain/products/*.md": "t-benebo",
+        "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/sales/*.md": "Henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
         "power-platform/**/*.md": "David-Pack",
         "dynamics/gp/*.md": "David-Pack"
       },
@@ -86,6 +96,16 @@
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/**/*.md": "davidpac",
+        "dynamics-365/supply-chain/costing/*.md": "yanansong",
+        "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
+        "dynamics-365/supply-chain/planning/*.md": "benebotg",
+        "dynamics-365/supply-chain/procurement/*.md": "gfedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanho",
+        "dynamics-365/supply-chain/products/*.md": "benebotg",
+        "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
+        "dynamics-365/supply-chain/sales/*.md": "henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
         "power-platform/**/*.md": "davidpac",
         "dynamics/gp/*.md": "davidpac"
       },
@@ -232,6 +252,7 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
+        "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder"
       },
@@ -395,8 +416,8 @@
         ]
       },
       "ms.search.scope": {
-        "dynamics-365/supply-chain/**/*.md": "Core, Operations, Supply Chain, ShowInHelp", 
-        "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"         
+        "dynamics-365/supply-chain/**/*.md": "Core, Operations, Supply Chain, ShowInHelp",
+        "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"
       },
       "search.app": {
         "power-platform/power-apps/*.md": [
@@ -408,6 +429,9 @@
         "power-platform/ai-builder/*.md": [
           "PowerApps",
           "Flow"
+        ],
+        "dynamics-365/supply-chain/**/**.*": [
+          "SCM"
         ]
       }
     },
