@@ -136,6 +136,9 @@
       - name: Dynamics 365 Sales
         tocHref: /troubleshoot/dynamics-365/sales/
         topicHref: /troubleshoot/dynamics-365/sales/welcome-sales
+      - name: Dynamics 365 Supply Chain Management
+        tocHref: /troubleshoot/dynamics-365/supply-chain/
+        topicHref: /troubleshoot/dynamics-365/supply-chain/welcome-supply-chain
 
     - name: Microsoft Power Platform
       tocHref: /troubleshoot/power-platform/
