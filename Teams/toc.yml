@@ -1,5 +1,5 @@
 - name: Teams Troubleshooting
-  href: teams-welcome.md
+  href: teams-welcome.yml
   items:
   - name: Administration
     items:
