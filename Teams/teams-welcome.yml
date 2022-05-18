@@ -49,16 +49,16 @@ landingContent:
           - text: Issues with presence status in Outlook
             url: ./teams-im-presence/issues-with-presence-in-outlook.md
  # Card
-  - title: Administration
+  - title: Teams Rooms and devices
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Clear the Teams client cache
-            url: ./teams-administration/clear-teams-cache.md
-          - text: Include or exclude Teams from antivirus or DLP applications
-            url: ./teams-administration/include-exclude-teams-from-antivirus-dlp.md
-          - text: User information isn't updated
-            url: ./teams-administration/user-information-not-updated.md
+          - text: Collect Android Teams device logs
+            url: ./teams-rooms-and-devices/collect-device-logs.md
+          - text: Known issues
+            url: ./teams-rooms-and-devices/rooms-known-issues.md
+          - text: Signed out of Teams Android devices
+            url: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md          
  # Card
   - title: Meetings
     linkLists:
