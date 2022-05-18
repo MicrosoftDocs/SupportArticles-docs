@@ -74,4 +74,5 @@
   href: ./known-issues-visual-studio-2013.md
 - name: Warnings about an untrusted certificate
   href: ./warnings-untrusted-certificate.md
-
+- name: Can't find Windows 10 developer tools in Visual Studio 2015
+  href: ./cant-find-win-10-developer-tools-vs-2015.md
