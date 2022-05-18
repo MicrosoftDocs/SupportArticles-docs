@@ -27,9 +27,9 @@ You discover that one or more Azure AD Connect services don't start. For example
 
 3. Verify that the directory synchronization service account is added to the following policies:
 
-   - Log on as a service
-   - Log on as batch job
-   - Log on locally
+  - Allow Log on locally
+  - Log on as batch job
+  - Log on as a service  
 
 4. If you made changes to the local policy, restart the computer to apply the changes.
 
