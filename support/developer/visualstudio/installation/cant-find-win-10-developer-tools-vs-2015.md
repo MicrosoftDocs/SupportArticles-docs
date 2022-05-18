@@ -32,7 +32,7 @@ To install custom components such as developer tools in Visual Studio 2015, foll
 
 1. In the **Select features** list, select the items that you want to install, and then select **Next**.
 
-> [!TIP]
-> For Windows 10 developer tools, select **Windows 10 SDK feature**.
+    > [!TIP]
+    > For Windows 10 developer tools, select **Windows 10 SDK feature**.
 
 1. Select **Update** to install the selected custom components.
