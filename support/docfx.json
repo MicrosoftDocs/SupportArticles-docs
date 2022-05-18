@@ -429,6 +429,9 @@
         "power-platform/ai-builder/*.md": [
           "PowerApps",
           "Flow"
+        ],
+        "dynamics-365/supply-chain/*.md": [
+          "SCM"
         ]
       }
     },
