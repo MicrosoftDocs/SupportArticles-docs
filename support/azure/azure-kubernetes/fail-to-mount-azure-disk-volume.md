@@ -27,6 +27,8 @@ See the following sections for error details, possible causes and solutions.
 
 ## <a id="error1"></a>Disk cannot be attached to the VM because it is not in the same zone as the VM
 
+Here are details for this error:
+
 ```output
 AttachVolume.Attach failed for volume "<disk/PV name>": 
 rpc error: 
@@ -44,13 +46,13 @@ RawError:
 
 ### Cause: Disk and node hosting pod are in different zones
 
-In AKS, the default and other built-in StorageClasses for Azure disks use [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage). These disks are deployed in [availability zones](/azure/aks/availability-zones). If you use the node pool in AKS with [availability zones](/azure/aks/availability-zones), and the pod is scheduled on a node that's in another availability zone than the disk, you may get this error.
+In AKS, the default and other built-in StorageClasses for Azure disks use [locally redundant storage (LRS)](/azure/storage/common/storage-redundancy#locally-redundant-storage). These disks are deployed in [availability zones](/azure/aks/availability-zones). If you use the node pool in AKS with availability zones, and the pod is scheduled on a node that's in another availability zone than the disk, you may get this error.
 
 To resolve this error, use one of the following solutions:
 
 ### Solution 1: Ensure disk and node hosting the pod are in the same zone
 
-To make sure the disk and node that host the pod are in the same availability zone, use [node affinity](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/).
+To make sure the disk and node that hosts the pod are in the same availability zone, use [node affinity](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/).
 
 Refer to the following command as an example:
 
@@ -72,7 +74,7 @@ nodeAffinity:
 
 [ZRS](/azure/storage/common/storage-redundancy#zone-redundant-storage) disk volumes can be scheduled on all zone and non-zone agent nodes. For more information, see [Azure disk availability zone support](/azure/aks/availability-zones#azure-disk-availability-zone-support).
 
-To use a ZRS disk, create a new storage class with Premium_ZRS or StandardSSD_ZRS and then deploy the PersistentVolumeClaim (PVC) referencing the storage.
+To use a ZRS disk, create a new storage class with `Premium_ZRS` or `StandardSSD_ZRS` and then deploy the PersistentVolumeClaim (PVC) referencing the storage.
 
 For more information about parameters, see [Driver Parameters](https://github.com/kubernetes-sigs/azuredisk-csi-driver/blob/master/docs/driver-parameters.md)
 
@@ -86,6 +88,8 @@ For more information, see the following articles:
 - [Manually create Azure Files share](/azure/aks/azure-files-volume)
 
 ## <a id="error2"></a>Client '\<client-ID>' with object id '\<object-ID>' doesn't have authorization to perform action over scope '\<disk name>' or scope is invalid
+
+Here are details for this error:
 
 ```output
 AttachVolume.Attach failed for volume "pv-azuredisk": 
@@ -110,7 +114,7 @@ Create a role assignment that includes the authorization required as per the err
 
 To assign a Contributor role, use one of the following methods:
 
-- [Use the az role assignment create command](/azure/role-based-access-control/role-assignments-cli#step-4-assign-role).
+- [Use the az role assignment create command](/azure/role-based-access-control/role-assignments-cli#step-4-assign-role)
 
     Here's an example:
 
@@ -118,13 +122,15 @@ To assign a Contributor role, use one of the following methods:
     az role assignment create --assignee <AKS-identity-ID> --role "Contributor" --scope /subscriptions/<subscription-ID>/resourceGroups/<disk-resource-group>/providers/Microsoft.Compute/disks/<disk name>
     ```
 
-- Assign the role [using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+- Assign the role [using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
 
     In the Azure portal, access the disk, select **Access control (IAM)** > **Add** > **Add role assignment**. Select the **Contributor** role in the **Add role assignment** page. Select **Next**. On the **Members** tab, select the identity type of your AKS cluster (service principal or managed identity), and select **Review + assign** to perform the assignment.
 
-    If you use managed identity, use the [control plane identity](/azure/aks/use-managed-identity#summary-of-managed-identities) to manage Azure Disk.
+    If you use managed identity, use the [control plane identity](/azure/aks/use-managed-identity#summary-of-managed-identities) to manage Azure disks.
 
 ## <a id="error3"></a>Volume is already used by pod
+
+Here are details for this error:
 
 > Multi-Attach error for volume "\<PV/disk-name>" Volume is already used by pod(s) \<pod-name>
 
@@ -139,6 +145,8 @@ To resolve this error, refer to [Multi-Attach error](https://github.com/andyzhan
 To share a PersistentVolume across multiple nodes, use [Azure Files](/azure/aks/azure-files-dynamic-pv).
 
 ## <a id="error4"></a>StorageAccountType UltraSSD_LRS can be used only when additionalCapabilities.ultraSSDEnabled is set
+
+Here are details for this error:
 
 ```output
 AttachVolume.Attach failed for volume "<Disk/PV name>" : 
@@ -163,6 +171,8 @@ This error indicates that an [ultra disk](/azure/virtual-machines/disks-enable-u
 To use ultra disks on AKS, create a node pool with ultra disks support by using the `--enable-ultra-ssd` flag. For more information, see [Use Azure ultra disks on Azure Kubernetes Service](/azure/aks/use-ultra-disks).
 
 ## <a id="error5"></a>ApplyFSGroup failed for vol
+
+Here are details for this error:
 
 > MountVolume.SetUp failed for volume '\<PV/disk-name>': applyFSGroup failed for vol /subscriptions/\<subscriptionID>/resourceGroups/\<infra/disk-resource-group>/providers/Microsoft.Compute/disks/\<PV/disk-name>: […]: input/output error
 
