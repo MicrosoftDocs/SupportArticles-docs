@@ -9,7 +9,7 @@ ms.collection: windows
 
 # Troubleshoot high memory issues on Azure Windows virtual machines
 
-Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. Most of these issues revolve around CPU, memory, networking, and input/output (I/O) as key factors where the performance issue occurs. Each of these areas generates different symptoms (sometimes simultaneously) and require a different diagnostic approach and solution.
+Performance issues occur in different operating systems or applications, and every issue requires a unique approach to troubleshoot. CPU, memory, networking, and input/output (I/O) are often key factors when performance issues occur. Each area generates different symptoms (sometimes simultaneously) and requires a different diagnostic approach and solution.
 
 This article discusses high memory usage (also known as Memory Pressure) issues that occur on Azure virtual machines (VMs) that run the Windows operating system (OS). To get troubleshooting guidance for Azure VMs running Linux distros, see [Troubleshoot performance and isolate bottlenecks in Linux](./troubleshoot-performance-bottlenecks-linux.md).
 
@@ -17,29 +17,29 @@ This article discusses high memory usage (also known as Memory Pressure) issues 
 
 Aside from the I/O and network latency issues, the CPU and/or memory troubleshooting requires mostly the same tools and steps as the on-premises servers do. One of the tools that Azure VM support recommends is PerfInsights (available for both Windows and Linux). PerfInsights can provide an Azure VM best practices diagnosis in a user-friendly report. PerfInsights is also a wrapper tool that can help collect Perfmon, Xperf, and Netmon data, depending on the flags that are selected within the tool. You don't have to contact Microsoft Support to run Perfinsights on your Azure VM. Perfinsights is publicly available. It generates the report locally or in your specified storage account.
 
-Most of performance troubleshooting tools that are used for on-premises servers, such as Perfmon or Procmon, will work on Azure Windows VMs. However, PerfInsights is explicitly designed for Azure VMs to provide more insights, including Azure best practices, SQL best practices, high resolution IO latency graphs, memory and memory tabs, and so on. This article covers part of [Perfinsights](#perfinsights) relevant to memory troubleshooting.
+Most of the performance troubleshooting tools that are used for on-premises servers, such as Perfmon or Procmon, will work on Azure Windows VMs. However, PerfInsights is explicitly designed for Azure VMs to provide more insights, including Azure best practices, SQL best practices, high-resolution IO latency graphs, memory and memory tabs, and so on. This article covers the part of [Perfinsights](#perfinsights) relevant to memory troubleshooting.
 
 ### What is Memory Pressure?
 
-When the system is crunched on physical memory (random-access memory (RAM)) or virtual memory (backed by paging file), on the given demand from the processes running, the OS keeps adjusting the active pages in RAM with swap file. On a higher extent, this case indicates that there's memory pressure, and the OS is working hard to get the working area to demanding apps. Memory leak is another variation. It's mostly a result of coding glitches where it continues to seek more allocations, ultimately leading to virtual memory exhaustion.
+When the system is crunched on physical memory (random-access memory (RAM)) or virtual memory (backed by paging file), based on demand from the processes that are running, the OS keeps adjusting the active pages in RAM with a swap file. This case indicates that there's memory pressure, and the OS is working hard to get the working area to demanding apps. Memory leak is another variation. It's mostly a result of coding glitches where the OS continues to seek more allocations, ultimately leading to virtual memory exhaustion.
 
 Many issues are directly related to the workload. The kind of workload that exists on the machine drives resource consumption, which includes memory.
 
 ### Common factors
 
-Here are common factors in a low memory situation. If any of these factors exists, you're closer to the root of this issue:
+Here are common factors in a low memory situation. If any of these factors exist, you're close to the root of this issue:
 
 - A recent code change or deployment that's mostly applicable to apps such as Internet Information Services (IIS), Microsoft SharePoint, SQL Server, or third-party applications.
 
-- A recent update that might be related to an OS-level update, or to application-level cumulative updates and fixes.
+- A recent update that might be related to an OS-level update or application-level cumulative updates and fixes.
 
-- A query change or outdated indexes. SQL Server and Oracle data tier applications also have query plan optimization as another factor. Data changes or a lack of appropriate indexes can cause several queries to get more data pages in memory rather than what is optimal, which causes stress on swap space.
+- A query change or outdated indexes. SQL Server and Oracle data-tier applications also have query plan optimization as another factor. Data changes or a lack of appropriate indexes can cause several queries to get more data pages in memory than what's optimal, which causes stress on swap space.
 
-- Azure VM-specific. There are certain processes such as RDAgent, and extension-specific processes such as Monitoring Agent, MMA agent, or security client, that might cause high memory consumption. These processes have to be viewed from a configuration, known issues perspective or sometimes a regression build.
+- Azure VM-specific - Certain processes such as RDAgent, and extension-specific processes such as Monitoring Agent, MMA agent, or security client, might cause high memory consumption. These processes must be viewed from a configuration, known issues perspective, or sometimes a regression build.
 
 ## Troubleshoot Memory Pressure issue
 
-The intent of troubleshooting the issue is to zero down on the culprit process as far as possible. Further analysis is specific to the process that's found driving high memory consumption.
+The intent of troubleshooting the issue is to zero down on the culprit process as much as possible. Further analysis is specific to the process that's found to be driving high memory consumption.
 
 For example, if the process is SQL Server (sqlservr.exe), the next steps will be to analyze the settings like [MaxServerMemory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) and analyze which query is using the most memory cycles in a specific time period. For more information about SQL Server best practices in Azure, see [VM size: Performance best practices for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size).
 
@@ -49,26 +49,26 @@ Here are a few questions to ask when you troubleshoot the issue:
 
 - Is there a pattern to this issue? For example, does the low memory issue occur at a certain time every day, week, or month? If so, can you correlate it to a job, process, report, or user login?
 
-- App tier - Did the low memory issue start after a recent code change? Did you apply an update in Windows or deployed a new application build? Was there a sudden surge in user base or load balancing messed up leading to different load pattern?
+- App tier - Did the low memory issue start after a recent code change? Did you apply an update in Windows or deploy a new application build? Was there a sudden surge in the user base, or load balancing messed up, leading to a different load pattern?
 
 - Data tier - Did the low memory issue start after a change in workload, such as an increase in the number of users, a higher data influx, or a larger number of reports being pulled? Was this workload recently migrated to Azure? Did it ever work fine?
 
 - For Azure, did the low memory issue start in any of the following conditions?
-  - After a recent redeployment or restart
+  - After a recent redeployment or restart?
   - When a VM type or tier was changed?
   - After a new extension was added to the VM?
   - After load balancer changes were made?
-  - Was there a scale in/out for your VMSS setup, which led to invariable load?
+  - Was there a scale in/out for your VMSS setup, which led to an invariable load?
 
 #### Azure caveats
 
-- Most important - understand your workload. When you select a VM SKU (offering/type), you might underestimate the  memory specs, as the tendency is to look at overall monthly hosting cost. If your workload is memory-intensive, selecting a smaller VM SKU may lead to low memory issues. Test different configurations for your workload to determine the best computing capability that's required.
+- Most importantly, understand your workload. When you select a VM SKU (offering/type), you might underestimate the memory specs, as the tendency is to look at the overall monthly hosting cost. If your workload is memory-intensive, selecting a smaller VM SKU may lead to low memory issues. Test different configurations for your workload to determine the best computing capability that's required.
 
-- Are you planning to have a Multi-User setup like Azure Virtual Desktop (AVD)? The resources, including memory, need to be factored based on resource sharing, while the sessions are active.
+- Are you planning to have a Multi-User setup like Azure Virtual Desktop (AVD)? The resources, including memory, need to be factored based on resource sharing while the sessions are active.
 
 - Is your app designed to bring its working context in memory? For example, MongoDB can be configured to work In-Memory, which means it will use the memory and swap spaces heavily. Therefore, the VM type (offering) you selected should meet this requirement.
 
-For other known applications/configurations such as [SQL Server](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size), [Oracle](/azure/virtual-machines/workloads/oracle/oracle-design), RDS (Remote Desktop Services), [Azure Virtual Desktop](/azure/architecture/example-scenario/wvd/windows-virtual-desktop), IIS, or SharePoint, there are Azure best practices articles that include recommendations on minimal configuration is best for these workloads.
+For other known applications/configurations such as [SQL Server](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size), [Oracle](/azure/virtual-machines/workloads/oracle/oracle-design), RDS (Remote Desktop Services), [Azure Virtual Desktop](/azure/architecture/example-scenario/wvd/windows-virtual-desktop), IIS, or SharePoint, there are Azure best practices articles that include recommendations for which minimal configuration is best for these workloads.
 
 ### Ongoing low memory issues
 
@@ -82,9 +82,9 @@ The following tools are recommended by Azure Support for Azure VMs:
 
 #### PerfInsights
 
-PerfInsights is the recommended tool from Azure support for VM performance issues. It's designed to cover best practices and dedicated analysis tabs for memory, CPU, and high resolution I/O graphs. You can run it OnDemand through the Azure portal, or from within the VM. It's deeply integrated with the Azure portal and covers best practices recommendations for common windows guest tier applications.
+PerfInsights is the recommended tool from Azure support for VM performance issues. It covers best practices and has dedicated analysis tabs for memory, CPU, and high-resolution I/O graphs. You can run it OnDemand through the Azure portal or within the VM. It's deeply integrated with the Azure portal and also covers best practices recommendations for common windows guest tier applications.
 
-If you have an active ticket with them, you can share the PerfInsights data with the Azure support team, or you can use it independently as and when required.
+If you have an active ticket with the Azure support team, you can share the PerfInsights data with them or use it independently as needed.
 
 ##### Get PerfInsights
 
