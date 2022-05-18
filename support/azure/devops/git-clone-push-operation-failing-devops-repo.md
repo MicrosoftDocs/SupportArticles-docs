@@ -14,7 +14,7 @@ This article helps you to resolve the problems that may occur while performing c
 
 ## Troubleshoot issues with Git clone to a repository
 
-When you try to clone a repository in GitHub, various issues such as, proxy configuration, SSL certificate, or credential cache problems may cause the Git clone operation to fail.
+When you try to clone a repository in GitHub, various issues such as proxy configuration, SSL certificate, or credential cache problems may cause the Git clone operation to fail.
 
 ## Troubleshooting check list
 
@@ -42,7 +42,7 @@ If you're using a proxy server but the Git configuration isn't set to connect th
 
 Run `git config --list` to get a list of all the Git configuration on the system, and check whether the proxy server is in use.
 
-If you see multiple configuration files such as repo, system root, or so on, run `git config --list --show-origin` command and see the path from where Git retrieves the configuration information.
+If you see multiple configuration files such as repo, system root, or so on, run the `git config --list --show-origin` command, and then see the path from where Git retrieves the configuration information.
 
 If you don't find a proxy server in the configurations list, run the `git config --global` command to set a proxy server in configuration.
 
