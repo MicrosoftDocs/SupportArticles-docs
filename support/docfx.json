@@ -430,7 +430,7 @@
           "PowerApps",
           "Flow"
         ],
-        "dynamics-365/supply-chain/*.md": [
+        "dynamics-365/supply-chain/**/**.*": [
           "SCM"
         ]
       }
