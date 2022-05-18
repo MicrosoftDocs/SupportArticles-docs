@@ -1,7 +1,7 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 05/5/2022
+ms.date: 05/18/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
