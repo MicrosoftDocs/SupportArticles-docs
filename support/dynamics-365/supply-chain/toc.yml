@@ -257,8 +257,6 @@
           href: warehousing/quantity-exceeds-overdelivery-percentage.md
         - name: Can't confirm a shipment because quantity exceeds underdelivery percentage
           href: warehousing/quantity-exceeds-underdelivery-percentage.md
-        - name: Can't re-release a partially shipped load to the warehouse
-          href: warehousing/rerelease-partially-shipped-load.md
         - name: Can't select Inventory status change in the Work type column
           href: warehousing/inventory-status-change-work-type.md
         - name: Can't unreserve inventory on a sales order line
@@ -269,8 +267,6 @@
           href: warehousing/canceled-product-receipts-not-updated-to-registered.md
         - name: Can't post packing slip for a stopped a sales order line
           href: warehousing/cant-post-packing-slip-for-stopped-sales-order-line.md
-        - name: Can't move license plate if serial number has Blank issue and Blank receipt allowed
-          href: warehousing/cant-move-license-plate.md
         - name: Can't move inventory to a location that is license plate-controlled
           href: warehousing/cant-reduce-picked-quantities.md
         - name: Can't use the Warehouse Management mobile app to do partial picking
