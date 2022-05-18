@@ -46,14 +46,14 @@ If you see multiple configuration files such as repo, system root, or so on, run
 
 If you don't find a proxy server in the configurations list, run the `git config --global` command to set a proxy server in configuration.
 
-To use a specific proxy to some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:`as in the following example:
+For example, `http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port`.
+
+To use a specific proxy to some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:` similar to the following example:
 
 `git config --global`
 `http.https://domain.com.proxy  http://proxyUsername:proxyPassword@proxy.server.com:port`
 
-If the proxy uses `https`, set the Git configuration with `https` proxy URL. Otherwise, keep `http` as in the following example:
-
-`http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port`
+If the proxy uses `https`, set the Git configuration with `https` proxy URL in the example above. Otherwise, keep `http`.
 
 For more information on Git configuration, see [Git Config Documentation](https://git-scm.com/docs/git-config).
 
