@@ -1,17 +1,16 @@
 ---
 title: Troubleshoot issues with Git clone to Azure repos
-description: This article helps you to troubleshoot the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
+description: This article discusses resolutions to the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.topic: troubleshooting 
 ms.date: 05/01/2022
 ms.service: az-devops-project
-ms.topic: troubleshooting
 ---
 
 # Troubleshoot issues with Git clone to Azure repos
 
-This article helps you to troubleshoot the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
+This article helps you to resolve the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 
 ## Troubleshoot issues with Git clone to a repository
 
