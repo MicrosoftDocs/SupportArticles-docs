@@ -3,7 +3,6 @@ title: Known issues in Visual Studio 2013
 description: This article describes the known issues for Visual Studio 2013.
 ms.date: 04/16/2020
 ms.reviewer: meyoun
-ms.technology: vs-installation-general
 ---
 # Known issues for Visual Studio 2013
 

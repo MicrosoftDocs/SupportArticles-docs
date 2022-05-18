@@ -3,7 +3,6 @@ title: Google Android 27 emulator fails to start
 description: This article provides a workaround for a problem where a Google Android 27 emulator won't start on a computer with Visual Studio 2017.
 ms.date: 04/27/2020
 ms.custom: sap:Technical Support
-ms.technology: vs-third-party
 ---
 # GPU Driver Issue when you start a Google Android 27 emulator in Visual Studio 2017
 

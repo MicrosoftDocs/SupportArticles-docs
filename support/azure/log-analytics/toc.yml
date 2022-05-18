@@ -2,6 +2,8 @@
   href: welcome-log-analytics.yml
 - name: Troubleshoot Log Analytics
   items:
+  - name: Basic troubleshooting of Microsoft Monitoring Agent
+    href: mma-troubleshoot-basics.md
   - name: Error code 0x80090016 - keyset doesn't exist
     href: error-code-0x80090016-keyset-does-not-exist.md
   - name: Microsoft Monitoring Agent couldn't start
@@ -14,5 +16,5 @@
     href: resolve-windows-agent-installation-issues.md
   - name: Troubleshoot erased proxy settings
     href: erased-proxy-settings-microsoft-monitoring-agent.md
-  - name: Troubleshoot MMA Agent problems
-    href: mma-troubleshoot-basics.md
+  - name: Workspace data export FAQ
+    href: workspace-data-export-faq.yml

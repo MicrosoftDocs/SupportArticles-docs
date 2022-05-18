@@ -44,7 +44,7 @@ productDirectory:
   - title: Visual Studio
     imageSrc: "media/hub-landing/logo_vs-ide.svg"
     summary: Troubleshooting articles for Visual Studio
-    url: developer/visualstudio/welcome-visual-studio.md
+    url: developer/visualstudio/welcome-visual-studio.yml
       
   - title: Host Integration Server
     imageSrc: "media/hub-landing/his.jpeg"

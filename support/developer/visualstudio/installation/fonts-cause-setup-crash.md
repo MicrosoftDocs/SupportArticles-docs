@@ -4,7 +4,6 @@ description: This article works around a problem in which Visual Studio setup cr
 ms.date: 04/22/2020
 ms.custom: sap:Installation
 ms.reviewer: selmai, nahals, shibanib, rflaming
-ms.technology: vs-installation-install
 ---
 # Visual Studio setup crashes with an exception after the splash screen is shown
 

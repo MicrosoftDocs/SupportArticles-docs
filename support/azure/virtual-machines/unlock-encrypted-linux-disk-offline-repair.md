@@ -10,7 +10,7 @@ editor: v-jesits
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux
 ms.workload: infrastructure
-ms.date: 10/11/2021
+ms.date: 05/17/2022
 ms.author: diambroi
 ---
 # Unlocking an encrypted Linux disk for offline repair
@@ -83,7 +83,7 @@ You can identify the ADE version in the Azure portal by opening the properties o
 - If the version number is ``0.*``, the disk uses dual-pass encryption.
 - If the version number is `1.*` or a later version, the disk uses single-pass encryption.
 
-If your disk uses ADE version 1 (dual-pass encryption), use the [Method 3](#method3) to unlock the disk.
+If your disk uses ADE version 0 (dual-pass encryption), use the [Method 3](#method3) to unlock the disk.
 
 ### Determine whether the OS disk is managed or unmanaged
 
