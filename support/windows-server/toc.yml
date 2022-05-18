@@ -976,6 +976,8 @@
       href: ./deployment/multicast-deployment-fails-from-wds.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Installing Windows features or roles'
+      href: ./deployment/troubleshoot-install-features-roles-guidance.md
     - name: 'Troubleshooting guidance: Windows Server update'
       href: ./deployment/troubleshoot-windows-server-update-guidance.md
     - name: Can't connect to WSUS Administration Website
@@ -1290,6 +1292,8 @@
       href: ./high-availability/corrupted-memory-dump-file.md
   - name: Cluster service fails to start
     items:
+    - name: 'Troubleshooting guidance: Cluster service fails to start'
+      href: ./high-availability/troubleshoot-cluster-service-fails-to-start.md
     - name: Cluster service startup options
       href: ./high-availability/switches-start-cluster-service.md
     - name: Cluster Service Stops Responding on a Cluster Node
@@ -1356,6 +1360,8 @@
       href: ./high-availability/hotfixes-for-windows-server-2008-r2-server-cluster.md
   - name: Root cause of an unexpected failover
     items:
+    - name: 'Troubleshooting guidance: Unexpected cluster failover'
+      href: ./high-availability/troubleshoot-unexpected-cluster-failover-issue.md
     - name: Failover behavior on clusters of three or more nodes
       href: ./high-availability/groups-fail-logic-three-more-cluster-node-members.md
     - name: Run chkdsk /f command on a shared cluster disk
@@ -1658,6 +1664,8 @@
       href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: RADIUS - Network Policy Server (NPS) or Internet Authentication Service (IAS)
     items:
+    - name: 'Troubleshooting guidance: Network Policy Server'
+      href: ./networking/troubleshoot-network-policy-server.md
     - name: Certificate requirements when you use EAP-TLS
       href: ./networking/certificate-requirements-eap-tls-peap.md
   - name: Remote access
@@ -1852,6 +1860,8 @@
       href: ./networking/windows-internet-name-service-replication-related-errors.md
   - name: Wireless networking and 802.1X authentication
     items:
+    - name: 'Troubleshooting guidance: wireless technology'
+      href: ./networking/troubleshoot-wireless-technologies.md
     - name: Configure L2TP/IPsec server behind NAT-T device
       href: ./networking/configure-l2tp-ipsec-server-behind-nat-t-device.md
     - name: Set up Internet Connection Sharing
@@ -2934,8 +2944,6 @@
     items:
     - name: .bak log files are deleted and lost
       href: ./windows-security/bak-log-files-deleted-lost.md
-    - name: Access checks using Windows APIs return incorrect results
-      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md    
     - name: Can't copy files from mapped drive to local directory
       href: ./windows-security/cannot-copy-files-from-mapped-drive-to-local-directory.md
     - name: Default permissions for MachineKeys folders
@@ -2944,6 +2952,8 @@
       href: ./windows-security/dont-have-permission-access-folder.md
     - name: Error 1079 when services fail to start
       href: ./windows-security/services-fail-to-start-error-1079.md
+    - name: Evaluate effective permissions for remote resources
+      href: ./windows-security/access-checks-windows-apis-return-incorrect-results.md
     - name: Grant the "Replicating Directory Changes" permission
       href: ./windows-security/grant-replicating-directory-changes-permission-adma-service.md
     - name: Grant users rights to manage services

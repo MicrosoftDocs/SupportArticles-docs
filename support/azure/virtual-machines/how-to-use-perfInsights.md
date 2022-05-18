@@ -157,7 +157,7 @@ The following categories of rules are currently supported:
 
 Collects the following performance counters:
 
-- \Process, \Processor, \Memory, \Thread, \PhysicalDisk, and \LogicalDisk
+- \System, \Process, \Processor, \Memory, \Thread, \PhysicalDisk, and \LogicalDisk
 - \Cache\Dirty Pages, \Cache\Lazy Write Flushes/sec, \Server\Pool Nonpaged, Failures, and \Server\Pool Paged Failures
 - Selected counters under \Network Interface, \IPv4\Datagrams, \IPv6\Datagrams, \TCPv4\Segments, \TCPv6\Segments,  \Network Adapter, \WFPv4\Packets, \WFPv6\Packets, \UDPv4\Datagrams, \UDPv6\Datagrams, \TCPv4\Connection, \TCPv6\Connection, \Network QoS Policy\Packets, \Per Processor Network Interface Card Activity, and \Microsoft Winsock BSP
 

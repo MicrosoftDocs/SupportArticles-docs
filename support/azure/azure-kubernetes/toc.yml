@@ -3,68 +3,83 @@
 
 - name: Troubleshoot create operations
   items:
-  - name: General troubleshooting
+  - name: Basic troubleshooting
     href: troubleshoot-aks-cluster-creation-issues.md
-  - name: InvalidParameter error code
+  - name: InvalidParameter error
     href: error-code-invalidparameter.md
-  - name: InvalidResourceReference error code
+  - name: InvalidResourceReference error
     href: error-code-invalidresourcereference.md
-  - name: K8SAPIServerConnFailVMExtensionError error code (51)
+  - name: K8SAPIServerConnFailVMExtensionError error (51)
     href: error-code-k8sapiserverconnfailvmextensionerror.md
-  - name: K8SAPIServerDNSLookupFailVMExtensionError error code (52)
+  - name: K8SAPIServerDNSLookupFailVMExtensionError error (52)
     href: error-code-k8sapiserverdnslookupfailvmextensionerror.md
-  - name: LinkedAuthorizationFailed error code
+  - name: LinkedAuthorizationFailed error
     href: error-code-linkedauthorizationfailed.md
-  - name: MissingSubscriptionRegistration error code
+  - name: MissingSubscriptionRegistration error
     href: error-code-missingsubscriptionregistration.md
-  - name: OperationNotAllowed or PublicIPCountLimitReached error code
+  - name: OperationNotAllowed or PublicIPCountLimitReached error
     href: error-code-operationnotallowed-publicipcountlimitreached.md
-  - name: OperationPreempted error code
+  - name: OperationPreempted error
     href: error-code-operationpreempted.md
-  - name: OutboundConnFailVMExtensionError error code (50)
+  - name: OutboundConnFailVMExtensionError error (50)
     href: error-code-outboundconnfailvmextensionerror.md
-  - name: RequestDisallowedByPolicy error code
+  - name: RequestDisallowedByPolicy error
     href: error-code-requestdisallowedbypolicy.md
-  - name: ReservedResourceName error code
+  - name: ReservedResourceName error
     href: error-code-reservedresourcename.md
-  - name: ServicePrincipalValidationClientError error code
+  - name: ServicePrincipalValidationClientError error
     href: error-code-serviceprincipalvalidationclienterror.md
-  - name: SubnetIsFull error code
+  - name: SubnetIsFull error
     href: error-code-subnetisfull.md
-  - name: SubscriptionRequestsThrottled error code (429)
+  - name: SubscriptionRequestsThrottled error (429)
     href: error-code-subscriptionrequeststhrottled.md
-  - name: VMExtensionProvisioningTimeout error code
+  - name: VMExtensionProvisioningTimeout error
     href: error-code-vmextensionprovisioningtimeout.md
-  - name: ZonalAllocationFailed or AllocationFailed error code
+  - name: ZonalAllocationFailed or AllocationFailed error
     href: error-code-zonalallocationfailed-allocationfailed.md
-
-- name: Troubleshoot delete operations
-  items:
-  - name: CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
-    href: cannot-delete-load-balancer-private-link-service.md
-  - name: InUseRouteTableCannotBeDeleted error code
-    href: error-code-inuseroutetablecannotbedeleted.md
-  - name: LoadBalancerInUseByVirtualMachineScaleSet or NetworkSecurityGroupInUseByVirtualMachineScaleSet error code
-    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
-  - name: PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
-    href: cannot-delete-ip-subnet-nsg.md
-  - name: RequestDisallowedByPolicy error code
-    href: error-code-requestdisallowedbypolicy-delete.md
-  - name: TooManyRequestsReceived or SubscriptionRequestsThrottled error code
-    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
 
 - name: Troubleshoot upgrade operations
   items:
   - name: NSG prevents resource download
     href: troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
-  - name: PodDrainFailure error code
+  - name: PodDrainFailure error
     href: troubleshoot-upgrade-errors.md#error-code-poddrainfailure
-  - name: PublicIPCountLimitReached error code
+  - name: PublicIPCountLimitReached error
     href: troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
-  - name: QuotaExceeded error code
+  - name: QuotaExceeded error
     href: troubleshoot-upgrade-errors.md#error-code-quotaexceeded
-  - name: SubnetIsFull error code
+  - name: SubnetIsFull error
     href: troubleshoot-upgrade-errors.md#error-code-subnetisfull
+
+- name: Troubleshoot delete operations
+  items:
+  - name: CannotDeleteLoadBalancerWithPrivateLinkService error
+    href: cannot-delete-load-balancer-private-link-service.md
+  - name: InUseNetworkSecurityGroupCannotBeDeleted error
+    href: cannot-delete-ip-subnet-nsg.md
+  - name: InUseRouteTableCannotBeDeleted error
+    href: error-code-inuseroutetablecannotbedeleted.md
+  - name: InUseSubnetCannotBeDeleted error
+    href: cannot-delete-ip-subnet-nsg.md
+  - name: LoadBalancerInUseByVirtualMachineScaleSet error
+    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+  - name: NetworkSecurityGroupInUseByVirtualMachineScaleSet error
+    href: load-balancer-or-nsg-in-use-by-vm-scale-set.md
+  - name: PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error
+    href: cannot-delete-load-balancer-private-link-service.md
+  - name: PublicIPAddressCannotBeDeleted error
+    href: cannot-delete-ip-subnet-nsg.md
+  - name: RequestDisallowedByPolicy error
+    href: error-code-requestdisallowedbypolicy-delete.md
+  - name: SubscriptionRequestsThrottled error
+    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+  - name: TooManyRequestsReceived error
+    href: error-code-toomanyrequestsreceived-subscriptionrequeststhrottled.md
+
+- name: Troubleshoot scale operations
+  items:
+  - name: Failed to fix node group sizes
+    href: cluster-autoscaler-fails-to-scale.md
 
 - name: Troubleshoot node not ready
   items:
@@ -81,7 +96,7 @@
 
 - name: Cannot connect to application hosted on AKS cluster
   items:
-  - name: General troubleshooting
+  - name: Basic troubleshooting
     href: connection-issues-application-hosted-aks-cluster.md
   - name: Custom NSG blocks traffic
     href: custom-nsg-blocks-traffic.md
@@ -90,7 +105,7 @@
   - name: Intermittent timeouts or server issues
     href: intermittent-timeouts-or-server-issue.md
 
-- name: Cannot connect to AKS cluster
+- name: Cannot connect to AKS cluster through API server
   items:
   - name: Basic troubleshooting
     href: troubleshoot-cluster-connection-issues-api-server.md
@@ -117,7 +132,7 @@
   - name: Identify memory saturation in AKS clusters
     href: identify-memory-saturation-aks.md
 
-- name: Troubleshoot Storage related issues
+- name: Troubleshoot Azure Storage-related issues
   items:
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md

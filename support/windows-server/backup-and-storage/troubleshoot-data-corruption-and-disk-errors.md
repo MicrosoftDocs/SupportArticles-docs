@@ -1,5 +1,5 @@
 ---
-title: Guidance of troubleshooting data corruption and disk errors
+title: Guidance for troubleshooting data corruption and disk errors
 description: Provides guidance to help troubleshoot data corruption and disk errors in Windows.
 ms.date: 04/21/2022
 author: kaushika-msft

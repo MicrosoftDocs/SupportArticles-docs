@@ -4,7 +4,6 @@ description: "This article describes several ways to convert from System::String
 ms.date: 10/10/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: csharp-language-compilers
 ---
 # Convert from System::String to Char in Visual C++  
 

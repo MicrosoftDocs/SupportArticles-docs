@@ -5,7 +5,6 @@ ms.date: 01/04/2021
 ms.custom: sap:Installation
 ms.reviewer: 
 ms.topic: article
-ms.technology: vs-installation-install
 ---
 # Windows Installer Packages may display inaccurate progress during Install and Uninstall
 

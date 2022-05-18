@@ -4,7 +4,6 @@ description: Provides information about resolving the problem MSBuild 4.0 or Vis
 ms.date: 04/22/2020
 ms.custom: sap:Language or compilers
 ms.reviewer: prabhatt, scotbren
-ms.technology: vs-language-compilers
 ---
 # MSBuild 4.0 or Visual Studio 2010 may fail to compile a 32-bit application targeted for .NET Framework 3.5, 3.0 or 2.0 on a x64 machine
 
