@@ -26,7 +26,7 @@ To install custom components such as developer tools in Visual Studio 2015, foll
 
 1. Go to **Start**>**Run**, type *appwiz.cpl*, and then select **OK**.
 
-1. On the Programs and features window, right-click **Microsoft Visual Studio <Edition/> 2015** or **Microsoft Visual Studio <Edition/> 2015 Updates**, and then select **Change**.
+1. On the Programs and features window, right-click **Microsoft Visual Studio \<Edition\> 2015** or **Microsoft Visual Studio \<Edition\> 2015 Updates**, and then select **Change**.
 
 1. In the **Visual Studio 2015 Setup wizard**, select **Modify**.
 
