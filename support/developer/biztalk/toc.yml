@@ -56,7 +56,7 @@
   - name: Configuration options can't be changed
     href: setup-config/biztalk-message-queuing-configuration.md
   - name: Domain migration not supported
-    href: setup-config/migrating-biztalk-servers-not-supported.md
+    href: setup-config/domain-migration-not-supported.md
 
 - name: Development and Deployment
   items:
