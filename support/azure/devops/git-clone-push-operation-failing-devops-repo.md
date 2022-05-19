@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot issues with Git clone to Azure repos
+title: Issues with Git Clone or Git Push to repos of Azure DevOps
 description: This article discusses resolutions to the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
@@ -8,11 +8,11 @@ ms.date: 05/01/2022
 ms.service: az-devops-project
 ---
 
-# Troubleshoot issues with Git clone or Git push to Azure repos
+# [Troubleshoot] Issues with Git clone or Git push to a repository of Azure DevOps
 
 This article helps you to resolve the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
 
-## Troubleshoot issues with Git clone or push to a repository
+## Issues with Git clone or Git push to Azure repos
 
 When you try to clone a repository in GitHub, various issues such as proxy configuration, SSL certificate, or credential cache problems may cause the Git clone operation to fail.
 
@@ -30,7 +30,7 @@ To identify the cause of the issues, follow these steps:
 
 The level of tracing of these variables provides more information about the errors that are causing issues similar to the following example:
 
-:::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-cmd-verbose-checklist.png" alt-text="Git clone error information by running commands in verbose mode":::
+:::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-cmd-verbose-checklist.png" alt-text="Git clone error information by running commands in verbose mode.":::
 
 To learn more about Git environment variables, see [Git Internals - Environment Variables](https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables).
 
@@ -42,13 +42,13 @@ If you're using a proxy server but the Git configuration isn't set to connect th
 
 Run `git config --list` to get a list of all the Git configuration on the system, and check whether the proxy server is in use.
 
-If you see multiple configuration files such as repo, system root, or so on, run the `git config --list --show-origin` command, and then see the path from where Git retrieves the configuration information.
+If you see multiple configuration files such as repo or system root, run the `git config --list --show-origin` command, and then see the path from where Git retrieves the configuration information.
 
 If you don't find a proxy server in the configurations list, run the `git config --global` command to set a proxy server in configuration.
 
 For example, `http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port`.
 
-To use a specific proxy to some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:` similar to the following example:
+To use a specific proxy for some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:` similar to the following example:
 
 `git config --global`
 `http.https://domain.com.proxy  http://proxyUsername:proxyPassword@proxy.server.com:port`
@@ -76,6 +76,7 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
     1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://<servername>/tfs`.
 
     2. On the address bar, select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/lock-icon.png" alt-text="lock icon."::: icon, and then select the **Connection is secure** link.
+    
     3. Select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/certificate-icon.png" alt-text="Certificate icon."::: icon to open the **Certification** window.
 
     4. In the **Certification Path** tab, select the upper-left certificate, which is the root certificate.
@@ -96,13 +97,13 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
 1. Configure Git to use local directory for Git certificates store by following these steps:
 
-    1. Go to *C:\Program Files\Git\bin* path on your local disk, and then make a copy of the *curl-ca-bundle.crt* file.
+    1. Go to the *C:\Program Files\Git\bin* path on your local disk, and then make a copy of the *curl-ca-bundle.crt* file.
 
         > [!NOTE]
         >
         >- In the Git for Windows 2.x series, the path will change to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86*.
         >- When you install Git for Windows (`msysgit`) on your device, a *curl-ca-bundle.crt* file stores in your Program Files directory. This directory is the root certificate store for *git.exe* that Git trusts.
-        >- The *curl-ca-bundle.crt* file, which stores on a per-device basis, is private for your local Windows client. The text file has UNIX (`\n`) line endings.
+        >- The *curl-ca-bundle.crt* file, which stores on a per-device basis, is private to your local Windows client. The text file has UNIX (`\n`) line endings.
 
     2. Copy the *curl-ca-bundle.crt* file on your user profile directory (*C:\Users\<yourname\>*). Or run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname\>` example.
 
@@ -114,7 +115,7 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Open the exported root certificate in Notepad, and then copy entire contents on to the clipboard.
 
-    2. Open the *curl-ca-bundle.crt* file by going to *C:/Users/yourname/curl-ca-bundle.crt* path in a text editor.
+    2. Open the *curl-ca-bundle.crt* file by going to the *C:/Users/yourname/curl-ca-bundle.crt* path in a text editor.
 
         > [!TIP]
         > You can use the *unix2dos* tool to change the line endings in the file from \n to \r\n and be able to open the file in Notepad.
