@@ -13,7 +13,7 @@ ms.collection: linux
 
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
-Generally speaking, a kernel panic is a situation when the kernel can't load properly and therefore the system fails to boot or the kernel encounters an unexpected situation, it doesn't know how to handle it, and protects itself by stopping.
+Generally speaking, a kernel panic is a situation when the kernel is unable to load properly and therefore the system fails to boot.  Another form of kernel panic occurs when the kernel encounters an unexpected situation, it doesn't know how to handle it, and protects itself by stopping.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) 
 
 Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify the specific kernel panic string.
 
-A kernel panic will similar to the output below, and will show up at the end of the serial console log:
+A kernel panic looks similar to the output below, and will show up at the end of the serial console log:
 
 ```bash
 Probing EDD (edd=off to disable)... ok
@@ -80,7 +80,12 @@ To deal with this kind of kernel panic, the following approaches can be used:
 
 ### Method 1: Using the Azure serial console
 
-Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way the VM will be able to boot up again to be able to fix the specific issue with the non booting kernel: reinstall or regenerate a missing initramfs, reinstall the problematic kernel, review loaded/missing kernel modules, review partitions, and so on, and so forth.
+Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way the VM will be able to boot up again to be able to fix the specific issue with the non booting kernel: 
+
+* Reinstall or regenerate a missing initramfs.
+* Reinstall the problematic kernel.
+* Review the loaded pr missing kernel modules.
+* Review the partitions, and so on, and so forth.
 
 ### Method 2: Offline repair using a rescue VM
 
@@ -98,7 +103,7 @@ To deal with this kind of kernel panic, the following approaches can be used:
 
 * Review resource usage and over all system performance. The kernel panic might be related to a possible shortage of resources that could lead to a VM resize.
 * If possible, install the latest updates available in the corresponding Linux distribution repositories. The kernel panic might be related to known bugs in either the kernel or other software.
-* There's a possibility the kernel panic is related to recent kernel change, in which case it's also advisable to boot over a previous kernel version. This is explained in [Resolution 1](#method-1-using-the-azure-serial-console).
+* There's a possibility the kernel panic is related to a recent kernel change, in which case it's also advisable to boot over a previous kernel version, as explained in [Resolution 1](#method-1-using-the-azure-serial-console).
 * If the options above aren't applicable, it might be necessary to configure kdump and generate a core dump to share with support for further analysis.
 
 ## More specific kernel panic scenarios
