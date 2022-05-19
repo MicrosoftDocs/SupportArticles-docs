@@ -73,7 +73,7 @@ This problem might result in instability in any of the programs such as Visual S
     > [!IMPORTANT]
     > Make sure that you set the **Initial size** and **Maximum size** with the current cumulative peak commit size of the applications that you're running on the system.
     >
-    > With this setting, the system doesn't automatically update page file size. If the memory requirements increase because the running applications either consume large memory or start claiming new memory, then update the **Maximum size** to consider the new requirements.
+    > When you customize the page file size, the system may not update the page file size. Therefore, if the memory requirements increase because of the running applications either consuming large memory or claiming new memory, then update the **Maximum size** to consider the new requirements.
     >
     > Ensure that the disk has enough space to accommodate the new size.
 
