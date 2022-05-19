@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Linux Kernel Panics in Azure.
 description: Discusses multiple conditions that can lead to a kernel panic and provides general troubleshooting guidance.
-author: divargas-msft,adelgadohell
-ms.author: divargas,adelgadohell
+author: divargas-msft
+ms.author: adelgadohell
 ms.topic: troubleshooting #Required.
 ms.date: 05/19/2022
 ms.service: virtual-machines
@@ -49,7 +49,7 @@ Some of the most common :::no-loc text="kernel panic"::: events:
 | ":::no-loc text="Kernel panic"::: - not syncing: NMI: Not continuing" |The system received an NMI (either hardware or memory parity error) and kernel.panic_on_unrecovered_nmi was set (not the default). |
 | ":::no-loc text="Kernel panic"::: - not syncing: nmi watchdog" | The system received an NMI and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
 | ":::no-loc text="Kernel panic"::: - not syncing: Fatal Machine check" | A machine check exception event has been raised for a fatal condition |
-| ":::no-loc text="Kernel panic"::: - not syncing: Attempted to kill init!" | The init process is the first process to be started and should never exit. | ||
+| ":::no-loc text="Kernel panic"::: - not syncing: Attempted to kill init!" | The init process is the first process to be started and should never exit. |
 
 ### Which specific :::no-loc text="kernel panic"::: is occurring?
 
