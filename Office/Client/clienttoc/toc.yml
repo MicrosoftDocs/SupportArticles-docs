@@ -713,10 +713,10 @@
           href: ../installation/ability-to-uninstall-office.md
         - name: Windows Installer service could not be accessed
           href: ../installation/windows-installer-service-not-be-accessed.md
-    - name: Office app for iOS
+    - name: Mobile
       items:
         - name: Block use of Office add-ins from work or school accounts
-          href: ../office-for-mac/prevent-office-add-in-work-account.md
+          href: ../mobile/prevent-office-add-in-work-account.md
     - name: Office for Mac
       items:
         - name: Can't pass the Welcome Screen in Office for Mac
