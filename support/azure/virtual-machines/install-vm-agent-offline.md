@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 ms.topic: article
-ms.date: 07/06/2020
+ms.date: 05/19/2022
 ms.author: genli
 
 ---
@@ -21,10 +21,9 @@ The Azure Virtual Machine Agent (VM Agent) provides useful features, such as loc
 
 ## When to use the VM Agent in offline mode
 
-Install the VM Agent in offline mode in the following scenarios:
+Install the VM Agent in offline mode when the VM Agent is not installed and you can't RDP to the VM.
 
-The Guest Agent is not installed and you can't RDP into the VM. If you can RDP, instead please just RDP into the VM and download and install the latest .MSI of the Guest Agent"
-
+If you can RDP to the VM, you just need to [download and install the VM Agent manually](/azure/virtual-machines/extensions/agent-windows#manual-installation).
 
 ## How to install the VM Agent in offline mode
 
