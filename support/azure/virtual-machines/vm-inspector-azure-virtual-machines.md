@@ -7,7 +7,7 @@ manager: dcscontentpm
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.date: 04/20/2022
-ms.author: genlin
+ms.author: genli
 
 ---
 # VM Inspector for Azure virtual machines (Preview)
