@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the failed to fix group sizes error so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 
-# Cluster autoscaler fails to scale with failed to fix node group sizes error
+# Cluster autoscaler fails to scale with "failed to fix node group sizes" error
 
 This article discusses how to resolve the "failed to fix node group sizes" error that appears on the cluster autoscaler logs when you're creating or managing AKS clusters.
 
