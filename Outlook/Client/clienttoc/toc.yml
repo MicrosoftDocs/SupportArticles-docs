@@ -37,6 +37,8 @@
           href: ../authentication/you-dont-have-permission-to-create-an-entry-in-this-folder-error.md
     - name: Calendaring
       items:
+        - name: '"Send updates" prompt not displayed'
+          href: /exchange/troubleshoot/outlook-on-the-web-issues/send-updates-prompt-not-displayed?context=/outlook/troubleshoot/context/client-context
         - name: Attached Outlook items not retained
           href: ../calendaring/attached-outlook-items-not-retained.md
         - name: Calendar item body disappears in Outlook online mode
