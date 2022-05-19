@@ -120,7 +120,9 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 ### Registry strings
 
-To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values. For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values are not required unless they were set with different values:
+To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
+
+For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values are not required unless they were set with different values.
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
   - "DisabledByDefault": **00000000**

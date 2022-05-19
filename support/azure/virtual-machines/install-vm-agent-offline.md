@@ -23,8 +23,8 @@ The Azure Virtual Machine Agent (VM Agent) provides useful features, such as loc
 
 Install the VM Agent in offline mode in the following scenarios:
 
-- The deployed Azure VM doesn't have the VM Agent installed or the agent isn't working.
-- You forgot the administrator password for the VM or you can't access the VM.
+The Guest Agent is not installed and you can't RDP into the VM. If you can RDP, instead please just RDP into the VM and download and install the latest .MSI of the Guest Agent"
+
 
 ## How to install the VM Agent in offline mode
 
