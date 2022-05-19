@@ -36,20 +36,20 @@ Some of the most common kernel panic events:
 
 |Panic Message|Reason|
 |----------------|-------------------------------|
-| "Oops: 0000 [#1] SMP " (check log for details)" | System panicked due to dereferencing a bad address |
-| "SysRq: Trigger a crashdump" | Core dump was user initiated with sysrq-c or by echoing c into /proc/sysrq-trigger |
-| "kernel BUG at \<pathname/filename>:\<line number>!" | This format is the standard for a failed BUG check (which is just like an ASSERT but the logic is inverted). The filename and line number will indicate which BUG check failed |
-| "Kernel panic - not syncing: softlockup: hung tasks" | The soft lockup detector has found a CPU that hasn't scheduled the watchdog task within the soft lockup threshold |
-| "Kernel panic - not syncing: Watchdog detected hard LOCKUP on cpu 0" | The hard lockup detector has found a CPU that hasn't received any hrtimer interrupts within the hard lockup threshold. |
-| "Kernel panic - not syncing: hung_task: blocked tasks" | The hung task watchdog has detected at least one task that has been in uninterruptible state for more than the blocked task timeout value |
-| "Kernel panic - not syncing: out of memory. panic_on_oom is selected" | The system has run out of memory and swap and has been forced to start killing processes to free up memory (not default behavior) |
-| "Kernel panic - not syncing: Out of memory and no killable processes..." | The system has run out of memory and swap and has been killing processes to free up memory but has run out of processes to kill off. |
-| "Kernel panic - not syncing: An NMI occurred, see the Integrated Management Log for details." | Watchdog has intercepted an NMI (non-maskable interrupt). |
-| "Kernel panic - not syncing: NMI IOCK error: Not continuing" | The system received an IO check NMI from the hardware (not a memory parity error) and kernel.panic_on_io_nmi was set (not the default). |
-| "Kernel panic - not syncing: NMI: Not continuing" |The system received an NMI (either hardware or memory parity error) and kernel.panic_on_unrecovered_nmi was set (not the default). |
-| "Kernel panic - not syncing: nmi watchdog" | The system received an NMI and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
-| "Kernel panic - not syncing: Fatal Machine check" | A machine check exception event has been raised for a fatal condition |
-| "Kernel panic - not syncing: Attempted to kill init!" | The init process is the first process to be started and should never exit. |
+| ***Oops: 0000 [#1] SMP " (check log for details)*** | System panicked due to dereferencing a bad address |
+| ***SysRq: Trigger a crashdump*** | Core dump was user initiated with sysrq-c or by echoing c into /proc/sysrq-trigger |
+| ***kernel BUG at \<pathname/filename>:\<line number>!*** | This format is the standard for a failed BUG check (which is just like an ASSERT but the logic is inverted). The filename and line number will indicate which BUG check failed |
+| ***Kernel panic - not syncing: softlockup: hung tasks*** | The soft lockup detector has found a CPU that hasn't scheduled the watchdog task within the soft lockup threshold |
+| ***Kernel panic - not syncing: Watchdog detected hard LOCKUP on cpu 0*** | The hard lockup detector has found a CPU that hasn't received any hrtimer interrupts within the hard lockup threshold. |
+| ***Kernel panic - not syncing: hung_task: blocked tasks*** | The hung task watchdog has detected at least one task that has been in uninterruptible state for more than the blocked task timeout value |
+| ***Kernel panic - not syncing: out of memory. panic_on_oom is selected*** | The system has run out of memory and swap and has been forced to start killing processes to free up memory (not default behavior) |
+| ***Kernel panic - not syncing: Out of memory and no killable processes...*** | The system has run out of memory and swap and has been killing processes to free up memory but has run out of processes to kill off. |
+| ***Kernel panic - not syncing: An NMI occurred, see the Integrated Management Log for details.*** | Watchdog has intercepted an NMI (non-maskable interrupt). |
+| ***Kernel panic - not syncing: NMI IOCK error: Not continuing*** | The system received an IO check NMI from the hardware (not a memory parity error) and kernel.panic_on_io_nmi was set (not the default). |
+| ***Kernel panic - not syncing: NMI: Not continuing*** |The system received an NMI (either hardware or memory parity error) and kernel.panic_on_unrecovered_nmi was set (not the default). |
+| ***Kernel panic - not syncing: nmi watchdog*** | The system received an NMI and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
+| ***Kernel panic - not syncing: Fatal Machine check*** | A machine check exception event has been raised for a fatal condition |
+| ***Kernel panic - not syncing: Attempted to kill init!*** | The init process is the first process to be started and should never exit. |
 
 ### Which specific kernel panic is occurring?
 
