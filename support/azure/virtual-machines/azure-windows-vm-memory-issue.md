@@ -15,9 +15,9 @@ This article discusses high memory usage (also known as Memory Pressure) issues 
 
 ## Memory Pressure issues on Azure Windows VMs
 
-Aside from the I/O and network latency issues, the CPU and/or memory troubleshooting requires mostly the same tools and steps as the on-premises servers do. One of the tools that Azure VM support recommends is PerfInsights (available for both Windows and Linux). PerfInsights can provide an Azure VM best practices diagnosis in a user-friendly report. PerfInsights is also a wrapper tool that can help collect Perfmon, Xperf, and Netmon data, depending on the flags that are selected within the tool. You don't have to contact Microsoft Support to run Perfinsights on your Azure VM. Perfinsights is publicly available. It generates the report locally or in your specified storage account.
+Aside from the I/O and network latency issues, the CPU and/or memory troubleshooting requires mostly the same tools and steps as the on-premises servers do. One of the tools that Azure VM support recommends is PerfInsights (available for both Windows and Linux). PerfInsights can provide an Azure VM best practices diagnosis in a user-friendly report. PerfInsights is also a wrapper tool that can help collect Perfmon, Xperf, and Netmon data, depending on the flags that are selected within the tool. You don't have to contact Microsoft Support to run PerfInsights on your Azure VM. PerfInsights is publicly available. It generates the report locally or in your specified storage account.
 
-Most of the performance troubleshooting tools that are used for on-premises servers, such as Perfmon or Procmon, will work on Azure Windows VMs. However, PerfInsights is explicitly designed for Azure VMs to provide more insights, including Azure best practices, SQL best practices, high-resolution IO latency graphs, memory and memory tabs, and so on. This article covers the part of [Perfinsights](#perfinsights) relevant to memory troubleshooting.
+Most of the performance troubleshooting tools that are used for on-premises servers, such as Perfmon or Procmon, will work on Azure Windows VMs. However, PerfInsights is explicitly designed for Azure VMs to provide more insights, including Azure best practices, SQL best practices, high-resolution IO latency graphs, memory and memory tabs, and so on. This article covers the part of [PerfInsights](#perfinsights) relevant to memory troubleshooting.
 
 ### What is Memory Pressure?
 
@@ -136,7 +136,7 @@ Select **Diagnose and Solve Problems** in the VM blade and look for **VM Perform
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/diagnose-and-solve-problems.png" alt-text="Screenshot of Diagnose and Solve Problems panel.":::
 
-If you select **Troubleshoot**, the PerfInsights installation page loads. This page also shows automated diagnostics, which will run internal checks and show any instance of Memory Pressure on this VM for the last 24 hours. A **run performance diagnostics** link to switch back to Perfinsights view in Azure portal will also be displayed under **Troubleshooting steps** on this page.
+If you select **Troubleshoot**, the PerfInsights installation page loads. This page also shows automated diagnostics, which will run internal checks and show any instance of Memory Pressure on this VM for the last 24 hours. A **run performance diagnostics** link to switch back to PerfInsights view in Azure portal will also be displayed under **Troubleshooting steps** on this page.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/vm-performance-issue.png" alt-text="Screenshot of VM Performance Issues panel.":::
 
@@ -222,49 +222,49 @@ Consider the same example shown in PerfInsights to see how Perfmon shows this da
 
 Perfmon is available by default in Windows (Server or client) and can be invoked through UI or a command line tool. To load Perfmon in Windows, select **Start** > **Run**, type *Perfmon*, and select **OK**. Any data collection done for Perfmon will have a *\*.blg* extension.
 
-You can add counters, under various resource categories. For memory troubleshooting, opt for **Memory** > **Available MBytes**. See the following screenshot for an example:
+You can add counters under various resource categories. For memory troubleshooting, opt for **Memory** > **Available MBytes**. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-available-mbytes-counter.png" alt-text="Screenshot that shows available counters and selects Available MBytes.":::
 
-Once you add this counter, it will show the pattern for **AvailableMBytes** during data capture interval, or at run time. Open the Perfmon (*\*.blg*) file from the Perfinsights *output* folder and add counter under **Memory** > **Available MBytes**. Check how it shows a dip in the memory available for the machine. See the following screenshot for an example:
+Once you add this counter, it will show the pattern for **AvailableMBytes** during data capture interval or at run time. Open the Perfmon (*\*.blg*) file from the PerfInsights *output* folder and add the counter under **Memory** > **Available MBytes**. Check how it shows a dip in the memory available for the machine. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png" alt-text="Screenshot that shows pattern for AvailableMBytes during data capture interval." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png":::
 
-But the question (which app is driving the memory consumption crazy) remains. Tools like Perfinsights, Resource Monitor, Performance Analysis of Logs (PAL) and so on, help to pinpoint these apps through friendly UI or reports.
+But the question (which app is driving the memory consumption crazy?) remains. Tools like PerfInsights, Resource Monitor, Performance Analysis of Logs (PAL), and so on help to pinpoint these apps through friendly UI or reports.
 
 It's a bit tedious to zero down on the process because it has to be done through manual data analysis.
 
-Perfmon has the Process counter category. Under this category, there are some counters like Working Set, Private Bytes, Virtual Bytes. They indicate memory usage pattern of each process running during data collection duration.
+Perfmon has the Process counter category. Under this category, there are some counters like Working Set, Private Bytes, and Virtual Bytes. They indicate the memory usage pattern of each process running during the data collection duration.
 
-The pattern needs to be observed for those processes that have gradual or steep rise indicating continuous demand for memory. Here's how we can zero down on processes based on pattern matching close to the _Total/PrivateBytes counter.
+The pattern needs to be observed for those processes that have a gradual or steep rise indicating continuous demand for memory. Here's how to zero down on processes based on pattern matching close to the _Total/PrivateBytes counter.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-private-bytes.png" alt-text="Screenshot that shows pattern for PrivateBytes counter." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-private-bytes.png":::
 
 ##### Simplify Perfmon analysis
 
-There are no default user-ready reports available in Perfmon. There are different views that change the graph type, but the process filtration (or the work that's required to identify culprit processes) is manual. There are some good tools available that consume *\*.blg* files and provide a more user-friendly output to analyze. One of them is the PAL tool. The [PAL Tool](https://github.com/clinthuffman/PAL) can consume *\*.blg* files and generate detailed reports.
+There are no default user-ready reports available in Perfmon. Different views change the graph type, but the process filtration (or the work required to identify culprit processes) is manual. Some useful tools are available that consume *\*.blg* files and provide a more user-friendly output to analyze. One of them is the PAL tool. The [PAL Tool](https://github.com/clinthuffman/PAL) can consume *\*.blg* files and generate detailed reports.
 
-The list of available tools doesn't end at PerfInsights for Perfmon. You can use any existing tools ([Procmon](/sysinternals/downloads/procmon), [RAMMAP](/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on). There are many third-party tools available to use as necessary.
+The list of available tools doesn't end at PerfInsights for Perfmon. You can use any existing tools ([Procmon](/sysinternals/downloads/procmon), [RAMMAP](/sysinternals/downloads/rammap), [xPerf Windows Toolkit](/windows-hardware/test/wpt/windows-performance-toolkit-technical-reference), ResourceExplorer, and so on). There are many third-party tools available to use when necessary.
 
 #### Azure monitoring tools
 
-Any production system needs consistent monitoring, so Microsoft proactively gets alerts and uses them for historic patterns to understand the resource requirements for the app environment better. Luckily, Azure VMs (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
+Any production system needs consistent monitoring, so Microsoft proactively gets alerts and uses them for historical patterns to understand the resource requirements for the app environment better. Luckily, Azure VMs (both Windows and Linux) are deeply integrated with Azure Monitoring capability, which provides robust automated metrics collection and several avenues to build reports or use third-party tools to build reports your team needs.
 
-If a critical production VM is hitting a certain resource threshold (for example memory), you can create custom alerts. In this case, you can alert a team through email or text.
+If a critical production VM is hitting a certain resource threshold (for example, memory), you can create custom alerts. In this case, you can alert a team through email or text.
 
 Azure VMs have reliable metrics that include basic information such as memory, network I/O, and I/O bytes. For advanced metrics, such as Azure Monitor, you'll have to make only a few selections to configure and use a storage account that you specify.
 
 ##### Basic (default) counters
 
-When the VMs are created, Azure VMs come with basic default metrics pre-enabled. These metrics don't need any additional configuration as to enable Azure Monitoring (which installs an extension in the VMs). The capability of these basic metrics isn't as exhaustive as Azure Monitoring provides, but they can still show basic VM resource health.
+When Azure VMs are created, they come with basic default metrics pre-enabled. These metrics don't need any additional configuration to enable Azure Monitoring (which installs an extension in the VMs). The capability of these basic metrics isn't as exhaustive as what Azure Monitoring provides, but they can still show basic VM resource health.
 
-The following screenshot shows that the pattern of the same test VM is used to share Perfinsights and Perfmon analysis earlier. This is how it's displayed on Portal for Memory metrics.
+The following screenshot shows that the PerfInsights and Perfmon analysis patterns for a VM are the same. This is how it's displayed in the Portal for Memory metrics.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/memory-metrics.png" alt-text="Screenshot that shows Memory metrics.":::
 
 ##### Enable Azure Monitor
 
-After you enable Azure Monitor metrics, the software installs an extension on the VM, and then starts collecting granular metrics.
+After you enable Azure Monitor metrics, the software installs an extension on the VM and then starts collecting granular metrics.
 
 You can explore the exhaustive customization that Azure Monitoring provides in Azure virtual machines (Windows and Linux):
 
@@ -274,17 +274,17 @@ You can explore the exhaustive customization that Azure Monitoring provides in A
 
 #### Reactive troubleshooting
 
-If the issue has already occurred, you must discover what caused the high-memory issue in the first place. The reactive stance can be tricky because the data collection mode won't be as useful as the issue has already occurred. As shared in prior section, Azure Monitor configured metrics can play a big role here, as it maintains historic data, based on the retention time configured.
+If the issue has already occurred, you must discover what caused the high-memory issue in the first place. The reactive stance can be tricky because the data collection mode won't be as useful as the issue has already occurred. As shared in the prior section, Azure Monitor configured metrics can play a big role here, as it maintains historical data based on the retention time configured.
 
 If this issue was a one-time occurrence, it may be difficult to determine which app caused it.
 
-If you're dealing with a repeating pattern, you still have the opportunity to collect the data during the time that the issue is likely going to occur next. Perfinsights and Perfmon are handy tools as shared so far, but you can use your preferred tools too.
+If you're dealing with a repeating pattern, you have the opportunity to collect data before the time the issue is likely to occur next. PerfInsights and Perfmon are handy tools, but you can use your preferred tools too.
 
-PerfInsights doesn't have a scheduled run capability yet. However, Perfmon can be run and scheduled through the command line as shared in next section.
+PerfInsights doesn't have a scheduled run capability yet. However, Perfmon can be run and scheduled through the command line, as shared in the next section.
 
 ##### Logman command
 
-The `Logman create counter` command is used to run Perfmon collection through the command line, to schedule it through Task Manager, or to run it remotely.
+The `Logman create counter` command is used to run Perfmon collection through the command line, schedule it through Task Manager, or run it remotely.
 
 Here's a command sample (includes remote collection mode):
 
@@ -300,10 +300,10 @@ After the Perfmon data is collected while the issue is occurring, the remaining 
 
 ## Conclusion
 
-For any performance issue, understanding your workload is the key to solving the problem. The options on different VM SKUs and different disk storage options have to be evaluated by keeping the focus on production workload (use [Azure Virtual Machine selector](https://azure.microsoft.com/pricing/vm-selector/)). The process of testing solutions on different VMs can help you make the best decision.
+For any performance issue, understanding your workload is the key to solving the problem. The options on different VM SKUs and different disk storage options have to be evaluated by keeping the focus on the production workload (use [Azure Virtual Machine selector](https://azure.microsoft.com/pricing/vm-selector/)). The process of testing solutions on different VMs can help you make the best decision.
 
-Because the user operations and amount of data varies, always keep a buffer in the memory, computing, networking, and I/O capabilities of the VM. This way, any sudden change in workload can be absorbed by this additional resource buffer you have left as part of planning.
+Because the user operations and amount of data varies, always keep a buffer in the memory, computing, networking, and I/O capabilities of the VM. This way, any sudden change in workload can be absorbed by this additional resource buffer you have left.
 
-If you expect the workload increasing soon, move to a higher VM offering or type, that has more compute/memory/IO capability. If the workload will be memory-intensive, choose the VM SKUs wisely, which have [higher memory-to-CPU ratios](/azure/virtual-machines/sizes-memory).
+If you expect the workload to increase soon, move to a higher VM offering or type with more compute/memory/IO capability. If the workload is memory-intensive, carefully choose VM SKUs with [higher memory-to-CPU ratios](/azure/virtual-machines/sizes-memory).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
