@@ -1,6 +1,6 @@
 ---
 title: Can't find Windows 10 developer tools in Visual Studio 2015
-description: This article discusses the problem where you can’t find Windows 10 developer tools when they aren't turned on by default in Visual Studio 2015.
+description: This article discusses the problem where you can’t find Windows 10 developer tools because they aren't turned on by default in Visual Studio 2015.
 ms.date: 05/18/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -10,7 +10,7 @@ ms.reviewer: terry.g.lee
 
 # Can't find Windows 10 developer tools in Visual Studio 2015
 
-This article discusses the problem where you can’t find Windows 10 developer tools when they aren't turned on by default in Visual Studio 2015.
+This article discusses the problem where you can’t find Windows 10 developer tools because they aren't turned on by default in Visual Studio 2015.
 
 ## Symptoms
 
@@ -18,7 +18,7 @@ You've installed Visual Studio 2015 on your Windows 10 but you're unable to find
 
 ## Cause
 
-During setting up Visual Studio 2015, if you've selected the Default option in the type of installation on Windows 10, custom components such as Windows 10 developer tools might not be installed because these features remain turned off by default.
+When installing Visual Studio 2015, if you've chosen the default installation option, custom components such as Windows 10 developer tools might not install because these features remain turned off by default.
 
 ## Resolution
 
