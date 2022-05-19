@@ -30,7 +30,7 @@ When you try to remove a remote shared mailbox in the Exchange admin center (EAC
 
 This issue occurs because the EAC uses the `Remove-Mailbox` cmdlet to remove a mailbox, but the cmdlet can't find the specified object to remove the remote shared mailbox.
 
-**Note:** You can open the Show Command Logging window to check the cmdlet logs.
+**Note:** You can open the **Show Command Logging** window to check the cmdlet logs.
 
 ## Workaround
 
