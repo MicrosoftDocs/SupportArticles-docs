@@ -1,6 +1,6 @@
 ---
 title: Send updates prompt not displayed
-description: This article talks about a behavior change in Outlook on the web when a meeting organizer adds users to or removes users from an existing meeting request.
+description: This article describes a behavior change in Outlook on the web when a meeting organizer adds users to or removes users from an existing meeting request.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -11,7 +11,7 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
   - CI 159761
-ms.reviewer: alinastr, juforan, meshel
+ms.reviewer: alinastr, juforan, meshel, tylewis
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2021
