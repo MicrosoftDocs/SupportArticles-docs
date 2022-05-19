@@ -233,6 +233,7 @@ Throughout the year, a new build of SaRA is available through the download link 
 The following table provides the versions of SaRA that were made available on the specified date.
 
 |Release date|SaRACmd.exe version|
+|----------|-----------|
 |May 18, 2022|17.00.8433.005 |
 |April 7, 2022|17.00.8256.000|
 |February 8, 2022|17.00.7971.000|
