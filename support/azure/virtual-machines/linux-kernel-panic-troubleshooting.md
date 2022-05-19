@@ -13,7 +13,7 @@ ms.collection: linux
 
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
-Generally speaking, a kernel panic is a situation when the kernel is unable to load properly and therefore the system fails to boot.  Another form of kernel panic occurs when the kernel encounters an unexpected situation, it doesn't know how to handle it, and protects itself by stopping.
+Generally speaking, a kernel panic is a situation when the kernel is unable to load properly and therefore the system fails to boot. Another form of kernel panic occurs when the kernel encounters a situation it doesn't know how to handle, and protects itself by stopping.
 
 ## Prerequisites
 
@@ -91,11 +91,25 @@ Use the Azure serial console to interrupt the boot process and select a previous
 
 In case the Azure serial console isn't available or no  previous kernel is available, a rescue/repair VM can be created.
 
-The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used, to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: reinstall or regenerate a missing initramfs, reinstall the problematic kernel, review loaded/missing kernel modules, review partitions, possible missing files, and so on, and so forth.
+The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used, to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
+
+* Reinstall or regenerate a missing initramfs.
+* Reinstall the problematic kernel.
+* Review the loaded or missing kernel modules.
+* Review the partitions.
+* Possible missing files, and so on, and so forth.
 
 ## Scenario 2 - Kernel panic at run time
 
-This kind of event, is commonly related but not limited to: a recent kernel upgrade, kernel downgrade, kernel module changes, operating system configuration changes (sysctl), application workload changes, application development changes or bugs, performance related issues.
+This kind of event, is commonly related but not limited to: 
+
+* A recent kernel upgrade.
+* A recent kernel downgrade.
+* A kernel module changes. 
+* Operating system configuration changes (sysctl).
+* Application workload changes.
+* Application development changes or bugs.
+* Performance related issues.
 
 ## Resolution 2
 
