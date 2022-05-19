@@ -24,17 +24,17 @@ When installing Visual Studio 2015, if you've chosen the default installation op
 
 To install custom components such as developer tools in Visual Studio 2015, follow these steps:
 
-1. Right-click **Start**, and then select **Run**.
+1. Right-click the **Start** menu, and then select **Run**.
 
-1. In the **Run** window, type *appwiz.cpl*, and select **OK**.
+1. In the **Run** window, type in *appwiz.cpl*, and then select **OK**.
 
-1. On the **Programs and features** window, right-click **Microsoft Visual Studio \<Edition\> 2015** or **Microsoft Visual Studio \<Edition\> 2015 Updates**, and then select **Change**.
+1. On the **Programs and features** window, right-click the **Microsoft Visual Studio \<Edition\> 2015** or the **Microsoft Visual Studio \<Edition\> 2015 Updates** program, and then select **Change**.
 
-1. In the **Visual Studio 2015 Setup wizard**, select **Modify**.
+1. On the **Visual Studio 2015 Setup wizard** window, select **Modify**.
 
 1. In the **Select features** list, select the items that you want to install, and then select **Next**.
 
     > [!TIP]
-    > For Windows 10 developer tools, select **Windows 10 SDK feature**.
+    > For installing Windows 10 developer tools, select **Windows 10 SDK feature**.
 
 1. Select **Update** to install the selected custom components.
