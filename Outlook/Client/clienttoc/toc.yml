@@ -38,7 +38,7 @@
     - name: Calendaring
       items:
         - name: '"Send updates" prompt not displayed'
-          href: /exchange/troubleshoot/outlook-on-the-web-issues/send-updates-prompt-not-displayed?context=/outlook/troubleshoot/context/client-context
+          href: ../calendaring/send-updates-prompt-not-displayed.md
         - name: Attached Outlook items not retained
           href: ../calendaring/attached-outlook-items-not-retained.md
         - name: Calendar item body disappears in Outlook online mode
