@@ -1,8 +1,8 @@
 ---
 title: Troubleshooting Linux Kernel Panics in Azure.
 description: Discusses multiple conditions that can lead to a kernel panic and provides general troubleshooting guidance.
-author: divargas-msft, adelgadohell
-ms.author: divargas, adelgadohell
+author: divargas-msft,adelgadohell
+ms.author: divargas,adelgadohell
 ms.topic: troubleshooting #Required.
 ms.date: 05/19/2022
 ms.service: virtual-machines
@@ -17,11 +17,11 @@ Generally speaking, a :::no-loc text="kernel panic"::: is a situation when the k
 
 ## Prerequisites
 
-Make sure the [serial console](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/serial-console-linux) is enabled and functional in the Linux VM.
+Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) is enabled and functional in the Linux VM.
 
 ## Symptoms - How to identify a :::no-loc text="kernel panic":::?
 
-Use the Azure Portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](https://docs.microsoft.com/cli/azure/serial-console?view=azure-cli-latest#az-serial-console-connect) to identify the specific :::no-loc text="kernel panic"::: string.
+Use the Azure Portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify the specific :::no-loc text="kernel panic"::: string.
 
 A :::no-loc text="kernel panic"::: will similar to the output below, and will show up at the end of the serial console log:
 
@@ -34,7 +34,7 @@ Memory KASLR using RDRAND RDTSC...
 
 Some of the most common :::no-loc text="kernel panic"::: events:
 
-| Panic Message | Reason |
+|Panic Message|Reason|
 |----------------|-------------------------------|
 | "Oops: 0000 [#1] SMP " (check log for details)" | System panicked due to dereferencing a bad address |
 | "SysRq : Trigger a crashdump" | Core dump was user initiated with sysrq-c or by echoing c into /proc/sysrq-trigger |
@@ -79,7 +79,7 @@ Use the azure serial console to interrupt the boot process and select a previous
 
 In case the Azure serial console is not available or no  previous kernel is available, a rescue/repair VM can be created.
 
-The [Azure repair VM feature](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands) can be used, to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/chroot-environment-linux) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: reinstall or regenerate a missing initramfs, reinstall the problematic kernel, review loaded/missing kernel modules, review partitions, possible missing files, and so on, and so forth.
+The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used, to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: reinstall or regenerate a missing initramfs, reinstall the problematic kernel, review loaded/missing kernel modules, review partitions, possible missing files, and so on, and so forth.
 
 ## Scenario 2 - Kernel panic at run time
 
@@ -100,7 +100,7 @@ Common :::no-loc text="kernel panic"::: scenarios with specific troubleshooting/
 
 | Document | Scenario |
 |----------------|-------------------------------|
-|[An Azure Linux VM on a 3.10-based :::no-loc text="kernel panics"::: after a host node upgrade](https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux-kernel-panics-upgrade)| This article discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. |
-|[How to recover an Azure Linux virtual machine from kernel-related boot issues](https://docs.microsoft.com/en-us/troubleshoot/azure/virtual-machines/kernel-related-boot-issues)|This article provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.|
+|[An Azure Linux VM on a 3.10-based :::no-loc text="kernel panics"::: after a host node upgrade](/azure/virtual-machines/linux-kernel-panics-upgrade.md)| This article discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. |
+|[How to recover an Azure Linux virtual machine from kernel-related boot issues](/azure/virtual-machines/kernel-related-boot-issues.md)|This article provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.|
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
