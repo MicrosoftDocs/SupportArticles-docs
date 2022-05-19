@@ -47,7 +47,7 @@ The following switches are available to control SaRAcmd.exe.
 
    Currently, the following scenarios are supported through the command line.
 
-   |*Scenarioname* value|Scenario entry point in the full (UI) version of SaRA|Elevated Command Prompt window required|
+   |`Scenarioname` value|Scenario entry point in the full (UI) version of SaRA|Elevated Command Prompt window required|
    |---|---|---|
    |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
    |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
@@ -144,7 +144,7 @@ The following switches are available to control SaRAcmd.exe.
 
 ## Conditions addressed by the command-line scenarios
 
-When you run a scenario by using the command-line version of SaRA, you receive no prompts. This is a different experience from the full version of SaRA. The following table describes the actions that the command-line version of SaRA takes, and the output that the tool displays for each condition within a scenario.
+When you run a scenario by using the command-line version of SaRA, you receive no prompts. It's a different experience from the full version of SaRA. The following table describes the actions that the command-line version of SaRA takes, and the output that the tool displays for each condition within a scenario.
 
 - `ExpertExperienceAdminTask`
 
@@ -233,10 +233,11 @@ Throughout the year, a new build of SaRA is available through the download link 
 The following table provides the versions of SaRA that were made available on the specified date.
 
 |Release date|SaRACmd.exe version|
-|--------|--------|
-|Apr 7, 2022|17.00.8256.000|
-|Feb 8, 2022|17.00.7971.000|
-|Nov 9, 2021|17.00.7513.000|
+|----------|-----------|
+|May 18, 2022|17.00.8433.005 |
+|April 7, 2022|17.00.8256.000|
+|February 8, 2022|17.00.7971.000|
+|November 9, 2021|17.00.7513.000|
 |May 26, 2021|17.00.6665.000|
 
 For more information about the full version of SaRA, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/sara_home).
