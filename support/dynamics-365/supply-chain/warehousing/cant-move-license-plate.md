@@ -21,4 +21,4 @@ You can't move a license plate by using a **Movement** menu item if the serial n
 
 ## Resolution
 
-This issue has been fixed by changes that are deployed in [KB 4571546](https://fix.lcs.dynamics.com/Issue/Details?kb=4571546&bugId=467880&dbType=3&qc=5b46d7faa9cc326cebfe9854cb30be8ea30b21ef33d3572c325fbb21202de687). Those changes will make the **Serial number** field optional when Blank receipt and Blank issue are allowed.
+This issue has been fixed by changes that were deployed in [KB 4571546](https://fix.lcs.dynamics.com/Issue/Details?kb=4571546&bugId=467880&dbType=3&qc=5b46d7faa9cc326cebfe9854cb30be8ea30b21ef33d3572c325fbb21202de687). Those changes will make the **Serial number** field optional when Blank receipt and Blank issue are allowed.
