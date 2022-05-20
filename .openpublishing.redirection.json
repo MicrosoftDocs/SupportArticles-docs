@@ -2376,17 +2376,17 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb",
+      "source_path": "support/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb.md",
       "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-win11-sleep",
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts",
+      "source_path": "support/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts.md",
       "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
       "redirect_document_id": false
     },
     {
-      "source_path": "troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "source_path": "support/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner.md",
       "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-win11-sleep",
       "redirect_document_id": false
     }
