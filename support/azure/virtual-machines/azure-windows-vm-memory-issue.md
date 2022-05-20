@@ -96,7 +96,7 @@ Here are some options for Windows.
 
 When PerfInsights is [installed through the Azure portal](/azure/virtual-machines/troubleshooting/performance-diagnostics), it installs an extension on the VM. You can also install PerfInsights directly as an extension, by going to [Extensions in VM blade](/azure/virtual-machines/troubleshooting/performance-diagnostics-vm-extension), and then selecting a performance diagnostics option.
 
-##### Azure portal - Option #1
+##### Azure portal - Option 1
 
 Select the **Performance diagnostics** option. You'll be asked to install the option (uses extensions) on the VM that you selected. See the following screenshot for an example:
 
@@ -130,7 +130,7 @@ You can select any of the reports to see the next level of details. You can also
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/report-details.png" alt-text="Screenshot that shows performance diagnostics report details.":::
 
-##### Azure portal - Option #2
+##### Azure portal - Option 2
 
 Select **Diagnose and Solve Problems** in the VM blade and look for **VM Performance Issues** in the right panel. See the following screenshot for an example:
 
@@ -260,7 +260,7 @@ When Azure VMs are created, they come with basic default metrics pre-enabled. Th
 
 The following screenshot shows that the PerfInsights and Perfmon analysis patterns for a VM are the same. This is how it's displayed in the Portal for Memory metrics.
 
-:::image type="content" source="media/azure-windows-vm-memory-issue/memory-metrics.png" alt-text="Screenshot that shows Memory metrics.":::
+:::image type="content" source="media/azure-windows-vm-memory-issue/memory-metrics.png" alt-text="Screenshot that shows Memory metrics." lightbox="media/azure-windows-vm-memory-issue/memory-metrics.png":::
 
 ##### Enable Azure Monitor
 
