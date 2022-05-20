@@ -28,7 +28,7 @@ When you try to remove a remote shared mailbox by using the Exchange admin cente
 
 ## Cause
 
-This issue occurs because the EAC attempts to uses the `Remove-Mailbox` cmdlet to remove the mailbox, but this cmdlet is unable to find the specified mailbox object. This behavior can be verified by checking the logs for the commands that were run.
+This issue occurs because the EAC attempts to use the `Remove-Mailbox` cmdlet to remove the mailbox, but this cmdlet is unable to find the specified mailbox object. This behavior can be verified by checking the logs for the commands that were run.
 
 ## Workaround
 
