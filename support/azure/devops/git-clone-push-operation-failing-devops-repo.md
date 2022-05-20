@@ -16,7 +16,7 @@ This article discusses problems that may occur when you try to perform Git clone
 
 When you try to clone or push a repository in GitHub, some issues with proxy configuration, SSL certificate, or credential cache may cause the Git clone operation to fail.
 
-## Troubleshooting checklist
+## Troubleshooting check list
 
 To identify the cause of the issues, follow these steps:
 
