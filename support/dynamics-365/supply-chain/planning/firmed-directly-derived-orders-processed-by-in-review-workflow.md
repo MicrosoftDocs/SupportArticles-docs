@@ -19,8 +19,8 @@ KB number: 4612450
 
 ## Symptoms
 
-Directly derived firmed orders are processed by a workflow that has a status of *In-review*.
+Directly derived firmed orders are processed by a workflow that has a status of **In-review**.
 
 ## Resolution
 
-When change tracking is enabled, a status of *In-review* is assigned to firmed derived orders (subcontract purchase orders). Therefore, if a purchase order is derived (a subcontract purchase order), it's only submitted to a workflow. If a purchase order is a firmed planned purchase order, it's automatically approved to ensure that the planning engine doesn't create new planned orders while the purchase order is still in *Draft* status.
+When change tracking is enabled, a status of **In-review** is assigned to firmed derived orders (subcontract purchase orders). Therefore, if a purchase order is derived (a subcontract purchase order), it's only submitted to a workflow. If a purchase order is a firmed planned purchase order, it's automatically approved to ensure that the planning engine doesn't create new planned orders while the purchase order is still in **Draft** status.

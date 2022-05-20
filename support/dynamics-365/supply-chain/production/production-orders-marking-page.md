@@ -23,6 +23,6 @@ When working with discreet manufacturing, some production orders aren't shown on
 
 Products that have the following configurations aren't available for marking. Therefore, they won't be shown on the **Marking** page:
 
-- The products are defined as products of the *catch weight* type.
+- The products are defined as products of the **catch weight** type.
 - They're enabled for the advanced warehouse processes.
-- They're configured to be controlled by the *Standard cost* principle.
+- They're configured to be controlled by the **Standard cost** principle.

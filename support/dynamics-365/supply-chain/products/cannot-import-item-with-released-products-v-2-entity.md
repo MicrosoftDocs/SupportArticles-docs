@@ -18,7 +18,7 @@ KB number: 4611825
 
 ## Symptoms
 
-When you try to import an item by using the *Released products V2* entity, you receive an error message that resembles the following example:
+When you try to import an item by using the **Released products V2** entity, you receive an error message that resembles the following example:
 
 > Cannot create a record in Items - tracking dimension groups (EcoResTrackingDimensionGroupItem). Item number: 2040663, Batch. The record already exists.
 

@@ -37,4 +37,4 @@ The wave is currently being processed, as indicated by one of the following cond
 On the Action Pane, on the **Wave** tab, in the **Wave** group, select **Batch job**, and then follow one of these steps:
 
 - If the **Status** field is set to **Executing**: On the Action Pane, on the **Batch job** tab, in the **Batch job** group, select **View tasks**. You can follow the progress by refreshing the **Batch tasks** page.
-- If the **Status** field isn't set to *Executing*: On the Action Pane, on the **Batch job** tab, in the **Functions** group, select **Change status**. In the **Select new status** field, select **Waiting**. Then select **OK**.
+- If the **Status** field isn't set to **Executing**: On the Action Pane, on the **Batch job** tab, in the **Functions** group, select **Change status**. In the **Select new status** field, select **Waiting**. Then select **OK**.
