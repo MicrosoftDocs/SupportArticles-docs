@@ -23,10 +23,10 @@ The product name on a purchase order is shown in the system language instead of 
 
 The following procedure shows one way to reproduce the issue.
 
-1. Set the system language to *EN-US* (US English).
-1. Make sure that there is a product where the *EN-US* and *DE* (German) languages are maintained for translations of the product name.
+1. Set the system language to **EN-US** (US English).
+1. Make sure that there is a product where the **EN-US** and **DE** (German) languages are maintained for translations of the product name.
 1. Change the language of a legal entity to *DE*.
-1. In the legal entity where *DE* is set as the language, create a purchase order that includes the product.
+1. In the legal entity where **DE** is set as the language, create a purchase order that includes the product.
 1. Notice that the product name is still shown in US English (the system language).
 
 ## Resolution

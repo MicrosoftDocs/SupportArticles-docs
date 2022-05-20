@@ -29,7 +29,7 @@ The **Net weight** and **Tara weight** fields are set to **0** (zero) on the loa
 
 ## Resolution
 
-By default, when a load line is created, the weight fields from the product are entered on it. If the weight is zero, you can recalculate it by using the *Warehouse load weight consistency check* functionality.
+By default, when a load line is created, the weight fields from the product are entered on it. If the weight is zero, you can recalculate it by using the **Warehouse load weight consistency check** functionality.
 
 1. Go to **System administration** > **Periodic tasks** > **Database** > **Consistency check**.
 1. In the **Consistency check** dialog box, set the **Module** field to **Warehouse management**.

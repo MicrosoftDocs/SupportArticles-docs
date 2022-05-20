@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-You can't move a license plate by using a **Movement** menu item if the serial number has settings of *Blank issue allowed* and *Blank receipt allowed* on the tracking dimension group, and if there are multiple license plates in the same location, some of which have serial numbers and some of which don't.
+You can't move a license plate by using a **Movement** menu item if the serial number has settings of **Blank issue allowed** and **Blank receipt allowed** on the tracking dimension group, and if there are multiple license plates in the same location, some of which have serial numbers and some of which don't.
 
 ## Resolution
 

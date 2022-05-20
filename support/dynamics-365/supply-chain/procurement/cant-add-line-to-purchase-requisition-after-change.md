@@ -23,4 +23,4 @@ The system doesn't allow you to add a line to a purchase requisition after you r
 
 ## Resolution
 
-You must recall the workflow. After the purchase requisition is in *Draft* status, you can continue to edit it or add a line to it.
+You must recall the workflow. After the purchase requisition is in **Draft** status, you can continue to edit it or add a line to it.

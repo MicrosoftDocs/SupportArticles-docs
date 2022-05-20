@@ -27,7 +27,7 @@ Therefore, you can't confirm the shipment for the load.
 
 ## Cause
 
-The load or shipment is currently in a state where shipment confirmation fails. Before you can confirm the shipment, at least some work must exist for the load, and all that work must have a status of *Closed* or *Canceled*.
+The load or shipment is currently in a state where shipment confirmation fails. Before you can confirm the shipment, at least some work must exist for the load, and all that work must have a status of **Closed** or **Canceled**.
 
 ## Resolution
 
@@ -40,21 +40,21 @@ You can work with shipments and loads on several pages. The following subsection
 1. Go to **Warehouse management** > **Loads** > **All loads**.
 1. Select the load that the shipment can't be confirmed for.
 1. On the Action Pane, on the **Loads** tab, in the **Related information** group, select **Work**.
-1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.
-1. When every work ID has a status of *Closed* or *Canceled*, try again to confirm the shipment.
+1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of **Closed** or **Canceled**.
+1. When every work ID has a status of **Closed** or **Canceled**, try again to confirm the shipment.
 
 ### All shipments page
 
 1. Go to **Warehouse management** > **Shipments** > **All shipments**.
 1. Select the shipment that can't be confirmed.
 1. On the Action Pane, on the **Shipments** tab, in the **Work** group, select **Work details**.
-1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.
-1. When every work ID has a status of *Closed* or *Canceled*, try again to confirm the shipment.
+1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of **Closed** or **Canceled**.
+1. When every work ID has a status of **Closed** or **Canceled**, try again to confirm the shipment.
 
 ### All work page
 
 1. Go to **Warehouse management** > **Work**> **All work**.
 1. Select the work for the order number that the shipment can't be confirmed for.
 1. On the Action Pane, on the **Shipment** tab, in the **Shipment** group, select **Confirm shipment**.
-1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of *Closed* or *Canceled*.
-1. When every work ID has a status of *Closed* or *Canceled*, try again to confirm the shipment.
+1. Inspect the status of each work ID. Follow up on each work ID that doesn't have a status of **Closed** or **Canceled**.
+1. When every work ID has a status of **Closed** or **Canceled**, try again to confirm the shipment.
