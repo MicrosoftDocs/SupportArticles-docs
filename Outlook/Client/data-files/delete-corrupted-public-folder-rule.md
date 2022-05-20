@@ -11,7 +11,7 @@ ms.custom:
   - Outlook for Windows
   - CSSTroubleshoot
   - CI 162470
-ms.reviewer: ezurita
+ms.reviewer: ezurita, batre
 appliesto: 
   - Outlook 2016
   - Outlook 2019
