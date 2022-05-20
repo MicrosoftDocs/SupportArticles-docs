@@ -7,7 +7,7 @@ ms.author: v-sidong
 
 # Invalid entries passed to /FilterFeatureSelectionTree and /InstallSelectableItems switch
 
-This article provides a workaround for an issue where you receive error messages when you try to run the same Visual Studio 2015 Update installer again.
+This article provides a workaround for an issue where you receive error messages when you try to reinstall Visual Studio 2015 Update after the first setup fails or cancels out.
 
 _Original product version:_ &nbsp;Visual Studio 2015  
 _Original KB number:_ &nbsp;3039361
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp;3039361
 
 When you install a Visual Studio 2015 Update, the setup fails or cancels out. If you try to run the same Visual Studio 2015 Update installer again, you receive the following error messages:
 
-> Invalid entries passed to /FilterFeatureSelectionTree switch. For more details, please see the setup log.
+> Invalid entries passed to /FilterFeatureSelectionTree switch. For more details, please see the setup log.  
 Invalid entries passed to /InstallSelectableItems switch. For more details, please see the setup log.
 
 ## Cause

@@ -1,6 +1,6 @@
 ---
 title: SQL packages may fail in the local administrator account
-description: Describes an issue where SQL packages may fail when the local administrator account doesn't have certain rights.
+description: Describes an issue where SQL packages may fail when the local administrator account doesn't have certain rights when installing Visual Studio 2015.
 ms.date: 05/20/2022
 ms.author: v-sidong
 ---
@@ -12,7 +12,7 @@ _Original KB number:_ &nbsp;3039361
 
 ## Symptoms
 
-When you install Visual Studio on a locked-down desktop, this operation may trigger errors for the SQL packages.
+When you install Visual Studio 2015 on a locked-down desktop, this operation may trigger errors for the SQL packages.
 
 ## Cause
 
