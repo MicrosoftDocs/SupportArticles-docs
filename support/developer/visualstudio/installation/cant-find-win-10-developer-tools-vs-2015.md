@@ -1,6 +1,6 @@
 ---
 title: Can't find Windows 10 development tools
-description: This article provides resolution to the issue where you can’t find Windows 10 development tools (SDK) in Visual Studio 2015.
+description: This article provides resolution to the issue where you can't find Windows 10 development tools (SDK) in Visual Studio 2015.
 ms.date: 05/18/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -10,7 +10,7 @@ ms.reviewer: terry.g.lee
 
 # Can't find Windows 10 development tools in Visual Studio 2015
 
-This article helps you resolve the issue where you can’t find Windows 10 development tools (SDK) in Visual Studio 2015.
+This article helps you resolve the issue where you can't find Windows 10 development tools (SDK) in Visual Studio 2015.
 
 _Applies to_: Visual Studio 2015
 
