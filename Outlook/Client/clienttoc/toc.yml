@@ -219,6 +219,8 @@
           href: ../contacts/cannot-expand-nested-contact-groups-unknown-shown.md
     - name: Data Files
       items:
+        - name: Can't access Folder Assistant
+          href: ../data-files/delete-corrupted-public-folder-rule.md
         - name: Can't import or export files
           href: ../data-files/cannot-start-the-required-translator-error.md
         - name: Can't change the location of .ost file
