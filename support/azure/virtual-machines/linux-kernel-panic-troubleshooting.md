@@ -74,7 +74,7 @@ This kind of event, is commonly related but not limited to:
 * Wrong permissions on files.
 * Missing partitions.
 
-## Resolution 1
+## Resolution for scenario 1
 
 To deal with this kind of kernel panic, the following approaches can be used:
 
@@ -111,7 +111,7 @@ This kind of event, is commonly related but not limited to:
 * Application development changes or bugs.
 * Performance related issues.
 
-## Resolution 2
+## Resolution for scenario 2 
 
 To deal with this kind of kernel panic, the following approaches can be used:
 
