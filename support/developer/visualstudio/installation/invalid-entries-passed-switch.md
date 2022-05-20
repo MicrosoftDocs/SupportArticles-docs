@@ -35,20 +35,20 @@ The path of _feed.xml_ can be a web link from the following table or a local pat
 
 |Language|Download link|
 |-|-|
-|Chinese - Traditional (CHT)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x404|
-|Chinese - Simplified(CHS)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804|
-|Czech(CSY)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x405|
-|English(ENU)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x409|
-|French(FRA)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x40C|
-|German(DEU)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x407|
-|Italian(ITA)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x410|
-|Japanese(JPN)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x411|
-|Korean(KOR)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x412|
-|Polish(PLK)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x415|
-|Portuguese(PTB)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x416|
-|Russian(RUS)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x419|
-|Spanish(ESN)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0xC0A|
-|Turkish(TRK)|http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x41f|
+|Chinese - Traditional (CHT)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x404|
+|Chinese - Simplified(CHS)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804|
+|Czech(CSY)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x405|
+|English(ENU)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x409|
+|French(FRA)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x40C|
+|German(DEU)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x407|
+|Italian(ITA)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x410|
+|Japanese(JPN)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x411|
+|Korean(KOR)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x412|
+|Polish(PLK)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x415|
+|Portuguese(PTB)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x416|
+|Russian(RUS)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x419|
+|Spanish(ESN)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0xC0A|
+|Turkish(TRK)|https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x41f|
 
 > [!NOTE]
 > The _feed.xml_ is language specific. Therefore, select the _feed.xml_ that matches the language version of your Visual Studio. If you have multiple languages installed, select the one that you used to install Visual Studio.
@@ -58,10 +58,10 @@ For example, you have CHS Visual Studio installed on the computer.
 - If the path of _feed.xml_ is a web link, run the following command:
 
     ```cmd
-    VS2015.3.exe /overridefeeduri "http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804"
+    VS2015.3.exe /overridefeeduri "https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804"
     ```
 
-- If the path of _feed.xml_ is a local path (you download the _feed.xml_ from http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804 to your local disk at _d:\VisualStudio\feed.xml_), run the following command:
+- If the path of _feed.xml_ is a local path (you download the _feed.xml_ from https://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804 to your local disk at _d:\VisualStudio\feed.xml_), run the following command:
 
     ```cmd
     VS2015.3.exe /overridefeeduri d:\VisualStudio\feed.xml
