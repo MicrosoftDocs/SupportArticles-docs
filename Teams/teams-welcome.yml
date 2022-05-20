@@ -24,7 +24,7 @@ landingContent:
             url: ./teams-sign-in/sign-in-loop.md
           - text: Teams doesn't automatically update
             url: ./teams-sign-in/teams-doesnt-automatically-update.md
-          - text: Error "You're missing out"
+          - text: Error "You're missing out" during sign-in
             url: ./teams-sign-in/error-missing-out-sign-in-teams.md
   # Card
   - title: Conferencing
