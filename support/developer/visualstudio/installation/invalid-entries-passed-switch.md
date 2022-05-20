@@ -58,7 +58,7 @@ For example, you have CHS Visual Studio installed on the computer.
 - If the path of _feed.xml_ is a web link, run the following command:
 
     ```cmd
-    VS2015.3.exe /overridefeeduri http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804
+    VS2015.3.exe /overridefeeduri "http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804"
     ```
 
 - If the path of _feed.xml_ is a local path (you download the _feed.xml_ from http://go.microsoft.com/fwlink/?LinkID=564093&clcid=0x804 to your local disk at _d:\VisualStudio\feed.xml_), run the following command:
