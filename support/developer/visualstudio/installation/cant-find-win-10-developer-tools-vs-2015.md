@@ -6,6 +6,7 @@ author: jasonchlus
 ms.author: jasonchlus
 ms.custom: sap:Installation
 ms.reviewer: terry.g.lee
+ms.topic: troubleshooting
 ---
 
 # Can't find Windows 10 development tools in Visual Studio 2015
@@ -20,7 +21,7 @@ You've installed Visual Studio 2015 on your Windows 10 but you're unable to find
 
 ## Cause
 
-If you've chosen the default installation option when installing Visual Studio 2015, custom components such as Windows 10 developer tools do not install.
+If you've chosen the default installation option when installing Visual Studio 2015, custom components such as Windows 10 development tools don't install.
 
 ## Resolution
 
@@ -28,7 +29,7 @@ To install custom components such as Windows development tools in Visual Studio 
 
 1. Right-click the **Start** menu, and then select **Run**.
 
-1. In the **Run** window, type in *appwiz.cpl*, and then select **OK**.
+1. In the **Run** window, enter *appwiz.cpl*, and then select **OK**.
 
 1. On the **Programs and features** window, right-click the **Microsoft Visual Studio \<Edition\> 2015** or the **Microsoft Visual Studio \<Edition\> 2015 Updates** program, and then select **Change**.
 
