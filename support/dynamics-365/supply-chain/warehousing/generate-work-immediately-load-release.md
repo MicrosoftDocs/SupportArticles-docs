@@ -23,6 +23,6 @@ You create an outbound load by using a sales or transfer order and release the l
 
 If work must be generated immediately when the load is released, you must configure the wave template accordingly. On the wave template, set the following options to **Yes**:
 
-- Automate wave creation
-- Process wave at release to warehouse
-- Automate wave release
+- **Automate wave creation**
+- **Process wave at release to warehouse**
+- **Automate wave release**
