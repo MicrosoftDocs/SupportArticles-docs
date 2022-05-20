@@ -87,8 +87,6 @@ You can use your existing Group Policy settings as a reference as you build your
 
 The MDM Migration Analysis Tool (MMAT) determines which Group Policies have been set for a targeted user or computer. Then, it generates a report that lists the level of support for each policy setting in MDM equivalents.
 
-[Download the MMAT](https://github.com/WindowsDeviceManagement/MMAT).
-
 ### Aspects of your Group Policy before and after you migrate to the cloud
 
 The following table shows the different aspects of your Group Policy both before and after you migrate to the cloud using the MMAT.

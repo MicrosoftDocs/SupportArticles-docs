@@ -10,7 +10,7 @@ ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-ms.date: 05/05/2020
+ms.date: 05/17/2022
 ms.author: genli
 
 ---
@@ -22,7 +22,7 @@ This article describes how to troubleshoot the chroot environment in the Rescue 
 ## Ubuntu 16.x && Ubuntu 18.x
 
 1. Stop or de-allocate the affected VM.
-1. Create a rescue VM image of the same OS version, in same resource group (RSG) and location using managed disk.
+1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
 1. Use the Azure portal to take a snapshot of the affected virtual machine's OS disk.
 1. Create a disk out of the snapshot of the OS disk, and attach it to the Rescue VM.
 1. Once the disk has been created, Troubleshoot the chroot environment in the Rescue VM.
