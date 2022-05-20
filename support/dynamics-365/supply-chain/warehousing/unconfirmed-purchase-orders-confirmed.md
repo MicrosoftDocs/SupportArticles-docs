@@ -18,7 +18,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-After you run the *Update product receipts* periodic task, the system automatically confirms unconfirmed purchase orders that have an inventory transaction status of *Registered*.
+After you run the *Update product receipts* periodic task, the system automatically confirms unconfirmed purchase orders that have an inventory transaction status of **Registered**.
 
 ## Resolution
 

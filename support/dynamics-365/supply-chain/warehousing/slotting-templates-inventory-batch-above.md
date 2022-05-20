@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-Slotting templates that have the *Consider on-hand* slot criterion don't consider current on-hand inventory for *batch-above* items. They consider it only if the batch number is specified on the sales order line.
+Slotting templates that have the **Consider on-hand** slot criterion don't consider current on-hand inventory for **batch-above** items. They consider it only if the batch number is specified on the sales order line.
 
 However, when you use *batch-below* items, the current on-hand inventory is considered as expected.
 
@@ -25,6 +25,6 @@ For more information, see [Warehouse slotting](/dynamics365/supply-chain/warehou
 
 ## Resolution
 
-The slotting template header can be defined for the *Ordered,* *Reserved*, or *Released* demand strategy. For the *Ordered* demand strategy, the same reservation hierarchy requirements apply that apply to reservation or release to warehouse processes. Therefore, for items that have *batch-above* and *serial-below* reservation hierarchies, the batch or serial number must be specified on the demand order (sales or transfer).
+The slotting template header can be defined for the **Ordered**, **Reserved**, or **Released** demand strategy. For the **Ordered** demand strategy, the same reservation hierarchy requirements apply that apply to reservation or release to warehouse processes. Therefore, for items that have **batch-above** and **serial-below** reservation hierarchies, the batch or serial number must be specified on the demand order (sales or transfer).
 
-Alternatively, the *Reserved* demand strategy can be used to select the batch or serial number before the warehouse slotting demand is generated.
+Alternatively, the **Reserved** demand strategy can be used to select the batch or serial number before the warehouse slotting demand is generated.
