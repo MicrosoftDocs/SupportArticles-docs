@@ -1,22 +1,20 @@
 ---
-title: Issues with Git Clone or Git Push to repos of Azure DevOps
-description: This article discusses resolutions to the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
+title: Can't Git clone or Git push to an Azure DevOps repository
+description: This article discusses problems that may occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.topic: troubleshooting 
-ms.date: 05/01/2022
+ms.date: 05/20/2022
 ms.service: az-devops-project
 ---
 
-# [Troubleshoot] Issues with Git clone or Git push to a repository of Azure DevOps
+# [Troubleshoot] Can't Git clone or Git push to an Azure DevOps repository
 
-This article helps you to resolve the problems that may occur while performing clone or push function to the Git repository of Azure DevOps.
+This article discusses problems that may occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 
-## Issues with Git clone or Git push to Azure repos
+## Issues while performing Git clone or Git push to Azure DevOps repositories
 
-When you try to clone a repository in GitHub, various issues such as proxy configuration, SSL certificate, or credential cache problems may cause the Git clone operation to fail.
-
-## Troubleshooting check list
+When you try to clone or push a repository in GitHub, some issues with proxy configuration, SSL certificate, or credential cache may cause the Git clone operation to fail.
 
 To identify the cause of the issues, follow these steps:
 
@@ -28,7 +26,7 @@ To identify the cause of the issues, follow these steps:
     - `GIT_TRACE_CURL_NO_DATA=1`
     - `GIT_CURL_VERBOSE=1`
 
-The level of tracing of these variables provides more information about the errors that are causing issues similar to the following example:
+The level of tracing set for these variables provides more information similar to the following example about the errors that cause issue:
 
 :::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-cmd-verbose-checklist.png" alt-text="Git clone error information by running commands in verbose mode.":::
 
@@ -48,7 +46,7 @@ If you don't find a proxy server in the configurations list, run the `git config
 
 For example, `http.proxy http://proxyUsername:proxyPassword@proxy.server.com:port`.
 
-To use a specific proxy for some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:` similar to the following example:
+To use specific proxy for some of URLs, configure the proxy URL in Git config subsection as `http.<url\>.key notation:` similar to the following example:
 
 `git config --global`
 `http.https://domain.com.proxy  http://proxyUsername:proxyPassword@proxy.server.com:port`
