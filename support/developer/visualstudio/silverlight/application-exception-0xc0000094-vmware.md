@@ -4,7 +4,6 @@ description: This article introduces that in the VMware environment, Silverlight
 ms.date: 04/30/2020
 ms.custom: sap:Silverlight
 ms.reviewer: enamulkh, tref, ppratap, huanchix
-ms.technology: vs-silverlight
 ---
 # Integer divide by zero exception (0xC0000094) may occur in a Silverlight 5 application that's running in VMware
 

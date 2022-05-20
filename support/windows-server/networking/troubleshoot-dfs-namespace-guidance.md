@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting DFS Namespace
-description: Introduces general guidance of troubleshooting scenarios related to DFS Namespace.
+title: Guidance for troubleshooting DFS Namespace
+description: Introduces general guidance for troubleshooting scenarios related to DFS Namespace.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan

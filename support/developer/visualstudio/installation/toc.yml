@@ -42,8 +42,6 @@
   href: ./fix-dia-sdk-install-location.md
 - name: Install Windows SDK 7.1 in Silent Mode
   href: ./install-windows-sdk-silent-mode.md
-- name: Issues and workarounds in Visual Studio 2012 setup
-  href: ./issues-workarounds-visual-studio-2012-setup.md
 - name: Issues and workarounds in Visual Studio setup
   href: ./issues-workarounds-visual-studio-setup.md
 - name: MsiApplyMultiplePatches returns 1601 error
@@ -64,6 +62,8 @@
   href: ./visual-studio-2015-2013-feature-not-work.md
 - name: Windows Installer may display inaccurate progress
   href: ./windows-installer-display-inaccurate-progress.md
+- name: Fail to install Web Deploy 3.0
+  href: ./web-deploy-issue-visual-studio-2012.md
 - name: Description of Visual Studio 2012 Update 4
   href: ./visual-studio-2012-update-4.md
 - name: Known issues when you install Release Management
@@ -74,4 +74,7 @@
   href: ./known-issues-visual-studio-2013.md
 - name: Warnings about an untrusted certificate
   href: ./warnings-untrusted-certificate.md
-
+- name: Visual Studio requires the April 2014 update
+  href: ./version-visual-studio-requires-april-2014-update.md
+- name: Some shortcut names still indicate preview
+  href: ./issues-workarounds-visual-studio-2013-setup.md

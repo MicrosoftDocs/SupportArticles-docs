@@ -5,7 +5,6 @@ ms.date: 04/13/2020
 ms.custom: sap:C and C++ Libraries
 ms.reviewer: ericmitt, sherifm
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # C++ Runtime framework packages for Desktop Bridge
 

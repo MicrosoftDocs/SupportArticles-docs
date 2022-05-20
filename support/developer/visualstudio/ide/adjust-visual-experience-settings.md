@@ -5,7 +5,6 @@ ms.date: 04/24/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: jbartlet
 ms.topic: how-to
-ms.technology: vs-ide
 ---
 # Adjust Visual Studio 2010 visual experience settings
 

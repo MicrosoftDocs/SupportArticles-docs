@@ -3,7 +3,6 @@ title: Known issues for Visual Studio 2012 and updates
 description: This article describes the known issues that you may experience after you install Microsoft Visual Studio 2012 and updates.
 ms.date: 10/27/2020
 ms.custom: sap:installation
-ms.technology: vs-installation-install
 ---
 # Known issues for Visual Studio 2012 and Visual Studio 2012 updates
 

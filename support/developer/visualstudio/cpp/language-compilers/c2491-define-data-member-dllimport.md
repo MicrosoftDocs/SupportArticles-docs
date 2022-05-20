@@ -3,7 +3,6 @@ title: C2491 error when defining data as dllimport
 description: Describes that you receive a Compiler C2491 error message when you try to define data members as dllimport functions.
 ms.date: 04/20/2020
 ms.custom: sap:Language or Compilers
-ms.technology: visual-cpp-language-compilers
 ---
 # Compiler C2491 error when you try to define data members as dllimport functions
 
