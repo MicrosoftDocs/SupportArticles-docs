@@ -151,6 +151,8 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 
 If the [Health Dashboard for Direct Routing](/microsoftteams/direct-routing-health-dashboard) in the Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC.
 
+During SBC certificate renewal, TLS connections that were established from the SBC to Microsoft with the old certificate should be removed and re-established with the new certificate to avoid certificate expiration warnings in the Teams admin center. One way is to completely restart the SBC during maintenance windows (low traffic times). If you can’t restart the SBC, contact your vendor for detailed instructions on how to force close all old TLS connections.
+
 For a list of supported CAs, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
 </details>
