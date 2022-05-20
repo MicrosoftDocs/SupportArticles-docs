@@ -1,6 +1,6 @@
 ---
 title: Block use of Office Add-ins for work or school accounts
-description: Describes how to set a preference in Intune app configuration policies to prevent iOS users from using Office add-ins for Word, Excel, and PowerPoint when users are signed into their work or school accounts.
+description: Describes how to prevent iOS users from using Office add-ins for Word, Excel, and PowerPoint when users are signed into their work or school accounts.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -13,7 +13,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Office app for iOS
-ms.date: 04/29/2022
+ms.date: 05/20/2022
 ---
 # Block use of Office add-ins from work or school accounts
 
