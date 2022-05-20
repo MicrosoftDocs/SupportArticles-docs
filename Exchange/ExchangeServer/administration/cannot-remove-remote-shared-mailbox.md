@@ -22,16 +22,14 @@ ms.date: 5/19/2022
 
 ## Symptoms
 
-When you try to remove a remote shared mailbox in the Exchange admin center (EAC), you receive the following error message:
+When you try to remove a remote shared mailbox by using the Exchange admin center (EAC), you receive the following error message:
 
 > \<Mailbox_name> isn't a mailbox user.  
 
 ## Cause
 
-This issue occurs because the EAC uses the `Remove-Mailbox` cmdlet to remove a mailbox, but the cmdlet can't find the specified object to remove the remote shared mailbox.
-
-**Note:** You can open the **Show Command Logging** window to check the cmdlet logs.
+This issue occurs because the EAC attempts to uses the `Remove-Mailbox` cmdlet to remove the mailbox, but this cmdlet is unable to find the specified mailbox object. This behavior can be verified by checking the logs for the commands that were run.
 
 ## Workaround
 
-To remove the remote shared mailbox, use the [Remove-RemoteMailbox](/powershell/module/exchange/remove-remotemailbox) cmdlet in [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell).
+To remove the remote shared mailbox, run the [Remove-RemoteMailbox](/powershell/module/exchange/remove-remotemailbox) cmdlet in [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) instead.
