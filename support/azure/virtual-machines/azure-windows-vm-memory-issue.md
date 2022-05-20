@@ -37,11 +37,11 @@ Here are common factors in a low memory situation. If any of these factors exist
 
 - Azure VM-specific - Certain processes such as RDAgent, and extension-specific processes such as Monitoring Agent, MMA agent, or security client, might cause high memory consumption. These processes must be viewed from a configuration, known issues perspective, or sometimes a regression build.
 
-## Troubleshoot Memory Pressure issue
+## Troubleshoot Memory Pressure issues
 
 The intent of troubleshooting the issue is to zero down on the culprit process as much as possible. Further analysis is specific to the process that's found to be driving high memory consumption.
 
-For example, if the process is SQL Server (sqlservr.exe), the next steps will be to analyze the settings like [MaxServerMemory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) and analyze which query is using the most memory cycles in a specific time period. For more information about SQL Server best practices in Azure, see [VM size: Performance best practices for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size).
+For example, if the process is SQL Server (sqlservr.exe), the next steps will be to analyze settings like [MaxServerMemory](/sql/database-engine/configure-windows/server-memory-server-configuration-options) and analyze which query is using the most memory cycles in a specific time period. For more information about SQL Server best practices in Azure, see [VM size: Performance best practices for SQL Server on Azure VMs](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size).
 
 ### Scope Memory Pressure issue
 
@@ -49,7 +49,7 @@ Here are a few questions to ask when you troubleshoot the issue:
 
 - Is there a pattern to this issue? For example, does the low memory issue occur at a certain time every day, week, or month? If so, can you correlate it to a job, process, report, or user login?
 
-- App tier - Did the low memory issue start after a recent code change? Did you apply an update in Windows or deploy a new application build? Was there a sudden surge in the user base, or load balancing messed up, leading to a different load pattern?
+- App tier - Did the low memory issue start after a recent code change? Did you apply an update in Windows or deploy a new application build? Was there a sudden surge in the user base, or did load balancing mess up, leading to a different load pattern?
 
 - Data tier - Did the low memory issue start after a change in workload, such as an increase in the number of users, a higher data influx, or a larger number of reports being pulled? Was this workload recently migrated to Azure? Did it ever work fine?
 
@@ -62,7 +62,7 @@ Here are a few questions to ask when you troubleshoot the issue:
 
 #### Azure caveats
 
-- Most importantly, understand your workload. When you select a VM SKU (offering/type), you might underestimate the memory specs, as the tendency is to look at the overall monthly hosting cost. If your workload is memory-intensive, selecting a smaller VM SKU may lead to low memory issues. Test different configurations for your workload to determine the best computing capability that's required.
+- Most importantly, understand your workload. When you select a VM SKU (offering/type), you might underestimate the memory specs, as the tendency is to look at the overall monthly hosting cost. If your workload is memory-intensive, selecting a smaller VM SKU may lead to low memory issues. Test different configurations for your workload to determine the best computing capability required.
 
 - Are you planning to have a Multi-User setup like Azure Virtual Desktop (AVD)? The resources, including memory, need to be factored based on resource sharing while the sessions are active.
 
@@ -180,7 +180,7 @@ Open the PerfInsights report. The **Findings** tab logs any outliers in terms of
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png" alt-text="Screenshot that shows resource consumption logged in Findings tab." lightbox="media/azure-windows-vm-memory-issue/resource-consumption-in-finding-tab.png":::
 
-If you expand the **Findings** event, you'll see several key details. The tab lists the processes in descending order per Average Memory consumption. It shows whether the process is related to the system, an app (SQL Server, IIS, or a third-party app).
+If you expand the **Findings** event, you'll see several key details. The tab lists the processes in descending order per Average Memory consumption. It shows whether the process is related to the system or an app (SQL Server, IIS, or a third-party app).
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/key-details-in-findings-event.png" alt-text="Screenshot that shows key details logged in Findings tab." lightbox="media/azure-windows-vm-memory-issue/key-details-in-findings-event.png":::
 
@@ -198,7 +198,7 @@ The **Top Memory Consumers** tab has two separate sections: **High Memory Usage 
 
     :::image type="content" source="media/azure-windows-vm-memory-issue/high-memory-consumers.png" alt-text="Screenshot that shows High Memory Consumers." lightbox="media/azure-windows-vm-memory-issue/high-memory-consumers.png":::
 
-These two tabs all you need to set the path for the next troubleshooting steps. Depending on the process that's driving the high memory condition, you'll have to address the questions that were asked earlier. Processes such as [SQL (sqlservr)](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size) or IIS (w3wp) require a specific drill-down on query or code changes that are causing this condition.
+These two tabs are all you need to set the path for the next troubleshooting steps. Depending on the process that's driving the high memory condition, you'll have to address the questions that were asked earlier. Processes such as [SQL (sqlservr)](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-vm-size) or IIS (w3wp) require a specific drill-down on query or code changes that are causing this condition.
 
 For system processes such as [WmiPrvSE](~/windows-server/system-management-components/high-cpu-usage-wmiprvse-process-regular-intervals.md) or SvcHost, you have to follow a different path. A pre-requisite to those processes is that you should be on the latest OS cumulative patch.
 
@@ -210,7 +210,7 @@ The system event logs also can log Event ID 2004 as a warning. It also shows the
 
 #### Perfmon
 
-Perfmon is one of the earliest tools for troubleshooting a resource issue on Windows OS. It doesn't give a clear report that has recommendations or findings. Instead, it requires users to explore the collected data and use a specific filter under the different counter categories.
+Perfmon is one of the earliest tools for troubleshooting a resource issue on Windows OS. Note that it doesn't give a clear report with recommendations or findings. Instead, it requires users to explore the collected data and use a specific filter under the different counter categories.
 
 PerfInsights collects Perfmon as an extra log for VMSlow and Advanced scenarios. However, Perfmon can be collected independently and has these additional benefits:
 
@@ -226,7 +226,7 @@ You can add counters under various resource categories. For memory troubleshooti
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/select-available-mbytes-counter.png" alt-text="Screenshot that shows available counters and selects Available MBytes.":::
 
-Once you add this counter, it will show the pattern for **AvailableMBytes** during data capture interval or at run time. Open the Perfmon (*\*.blg*) file from the PerfInsights *output* folder and add the counter under **Memory** > **Available MBytes**. Check how it shows a dip in the memory available for the machine. See the following screenshot for an example:
+Once you add this counter, it will show the pattern for **AvailableMBytes** during the data capture interval or at run time. Open the Perfmon (*\*.blg*) file from the PerfInsights *output* folder and add the counter under **Memory** > **Available MBytes**. Check how it shows a dip in the memory available for the machine. See the following screenshot for an example:
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png" alt-text="Screenshot that shows pattern for AvailableMBytes during data capture interval." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png":::
 
@@ -278,13 +278,13 @@ If the issue has already occurred, you must discover what caused the high-memory
 
 If this issue was a one-time occurrence, it may be difficult to determine which app caused it.
 
-If you're dealing with a repeating pattern, you have the opportunity to collect data before the time the issue is likely to occur next. PerfInsights and Perfmon are handy tools, but you can use your preferred tools too.
+If you're dealing with a repeating pattern, you have the opportunity to collect data during the period when the issue is likely to occur next. PerfInsights and Perfmon are handy tools, but you can use your preferred tools too.
 
 PerfInsights doesn't have a scheduled run capability yet. However, Perfmon can be run and scheduled through the command line, as shared in the next section.
 
 ##### Logman command
 
-The `Logman create counter` command is used to run Perfmon collection through the command line, schedule it through Task Manager, or run it remotely.
+The `Logman create counter` command is used to run Perfmon collection through the command line. You can schedule it through Task Manager or run it remotely.
 
 Here's a command sample (includes remote collection mode):
 
@@ -300,9 +300,9 @@ After the Perfmon data is collected while the issue is occurring, the remaining 
 
 ## Conclusion
 
-For any performance issue, understanding your workload is the key to solving the problem. The options on different VM SKUs and different disk storage options have to be evaluated by keeping the focus on the production workload (use [Azure Virtual Machine selector](https://azure.microsoft.com/pricing/vm-selector/)). The process of testing solutions on different VMs can help you make the best decision.
+For any performance issue, understanding your workload is the key to solving the problem. The options for different VM SKUs and different disk storage options have to be evaluated by focusing on the production workload (use [Azure Virtual Machine selector](https://azure.microsoft.com/pricing/vm-selector/)). The process of testing solutions on different VMs can help you make the best decision.
 
-Because the user operations and amount of data varies, always keep a buffer in the memory, computing, networking, and I/O capabilities of the VM. This way, any sudden change in workload can be absorbed by this additional resource buffer you have left.
+Because the user operations and amount of data varies, always keep a buffer in the memory, computing, networking, and I/O capabilities of the VM. This way, any sudden change in workload can be absorbed by this additional resource buffer.
 
 If you expect the workload to increase soon, move to a higher VM offering or type with more compute/memory/IO capability. If the workload is memory-intensive, carefully choose VM SKUs with [higher memory-to-CPU ratios](/azure/virtual-machines/sizes-memory).
 
