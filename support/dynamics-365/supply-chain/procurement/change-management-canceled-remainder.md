@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.13
 
 ## Symptoms
 
-For a purchase order that is subject to change management, if the only change that is requested is the cancellation of a delivery remainder on one or more of the lines, the purchase order will go directly to a *Confirmed* state when it's approved, and no journal will be created.
+For a purchase order that is subject to change management, if the only change that is requested is the cancellation of a delivery remainder on one or more of the lines, the purchase order will go directly to a **Confirmed** state when it's approved, and no journal will be created.
 
 ## Resolution
 
