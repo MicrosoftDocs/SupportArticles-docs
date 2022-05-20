@@ -1,6 +1,6 @@
 ---
-title: Can't Git clone or Git push to an Azure DevOps repository
-description: This article discusses problems that may occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
+title: Git clone or Git push fails to an Azure DevOps repository
+description: This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.topic: troubleshooting 
@@ -8,15 +8,15 @@ ms.date: 05/20/2022
 ms.service: az-devops-project
 ---
 
-# [Troubleshoot] Can't Git clone or Git push to an Azure DevOps repository
+# Troubleshoot issues when Git clone or push fails to an Azure DevOps repository
 
-This article discusses problems that may occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
+This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 
 ## Issues while performing Git clone or Git push to Azure DevOps repositories
 
-When you try to clone or push a repository in GitHub, some issues with proxy configuration, SSL certificate, or credential cache may cause the Git clone operation to fail.
+When you try to clone or push a repository in GitHub, some issues with proxy configuration, SSL certificate, or credential cache might cause the Git clone operation to fail.
 
-## Troubleshooting check list
+## Troubleshooting checklist
 
 To identify the cause of the issues, follow these steps:
 
@@ -36,7 +36,7 @@ To learn more about Git environment variables, see [Git Internals - Environment 
 
 ## Cause 1: Git can't connect through the proxy server
 
-If you're using a proxy server but the Git configuration isn't set to connect through the proxy server, you may see the 407 or 502 error messages. This issue also occurs when the connection can't establish through the proxy server, and you see the errors similar to "unable to access <`your github url`\>:" or "couldn't resolve host `github.com`".
+If you're using a proxy server but the Git configuration isn't set to connect through the proxy server, you might see the 407 or 502 error messages. This issue also occurs when the connection can't establish through the proxy server, and you see the errors similar to "unable to access <`your github url`\>:" or "couldn't resolve host `github.com`".
 
 ### Solution: Configure Git to use the proxy server
 
@@ -59,7 +59,7 @@ For more information on Git configuration, see [Git Config Documentation](https:
 
 ## Cause 2: Git uses a local self-signed certificate
 
-If Git is using a local self-signed certificate, you may see the error "SSL certificate problem: unable to get local issuer certificate."
+If Git is using a local self-signed certificate, you might see the error "SSL certificate problem: unable to get local issuer certificate."
 
 ### Solution 1: Disable the TLS/SSL verification
 
@@ -132,7 +132,7 @@ If your account name or domain password has changed, or you're getting an authen
 
 ### Solution: Reset the Git credentials manager (GCM)
 
-To resolve the authentication error or credentials cache issues, begin by following the [Troubleshooting check list](#troubleshooting-check-list) to get the error information, and then follow these steps:
+To resolve the authentication error or credentials cache issues, begin by following the [Troubleshooting checklist](#troubleshooting-checklist) to get the error information, and then follow these steps:
 
 1. Run the `git config --list` command, and then check if you're using Git Credentials Manager (GCM). If the *credential.helper* is set to manager, then GCM is in use.
 
