@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-If not all BOM line items are physically available when a production order is released to a warehouse, and the **Release to warehouse** policy is set to *Require full reservation*, you receive the following error message:
+If not all BOM line items are physically available when a production order is released to a warehouse, and the **Release to warehouse** policy is set to **Require full reservation**, you receive the following error message:
 
 > Item RM could not be fully reserved. Ensure that the full quantity is available, or reserve the items manually if the Reservation field on the BOM line is set to Manual or Started. Could not release the order to warehouse because some materials could not be reserved.
 

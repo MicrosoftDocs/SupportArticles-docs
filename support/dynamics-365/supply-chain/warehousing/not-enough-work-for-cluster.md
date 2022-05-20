@@ -16,7 +16,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-When using the *System directed cluster picking* process, if you configure a cluster profile where, for example, 10 positions can be picked, the process works as planned when there is enough work to pick to 10 positions. However, if there are only eight positions to pick, you receive the following error message:
+When using the **System directed cluster picking** process, if you configure a cluster profile where, for example, 10 positions can be picked, the process works as planned when there is enough work to pick to 10 positions. However, if there are only eight positions to pick, you receive the following error message:
 
 > Not enough work can be found for cluster.
 

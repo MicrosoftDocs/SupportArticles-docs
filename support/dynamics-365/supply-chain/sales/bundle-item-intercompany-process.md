@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.20
 
 ## Symptoms
 
-The bundle item isn't available for the purchase order because, if you examine the sales order lines for the bundle item, you will notice that the quantity is *0* (zero) and the status is *Canceled*.
+The bundle item isn't available for the purchase order because, if you examine the sales order lines for the bundle item, you will notice that the quantity is **0** (zero) and the status is **Canceled**.
 
 ## Resolution
 

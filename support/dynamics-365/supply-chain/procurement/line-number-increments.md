@@ -17,7 +17,7 @@ ms.dyn365.ops.version: 10.0.13
 
 ## Symptoms
 
-By default, automatically generated line numbers for purchase order lines that are imported through the *Purchase order lines V2* data entity don't use the system line number increment that is specified in system parameters. If you manually create a purchase order and add lines through the user interface (UI), the line numbers are incremented correctly. However, if you use the data management framework (DMF), they aren't incremented correctly.
+By default, automatically generated line numbers for purchase order lines that are imported through the **Purchase order lines V2** data entity don't use the system line number increment that is specified in system parameters. If you manually create a purchase order and add lines through the user interface (UI), the line numbers are incremented correctly. However, if you use the data management framework (DMF), they aren't incremented correctly.
 
 This issue occurs because, when you import lines via DMF, if line numbers aren't already assigned in the imported entity, the system uses DMF's method for assigning them. That method always increments line numbers by one.
 

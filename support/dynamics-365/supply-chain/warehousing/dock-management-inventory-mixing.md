@@ -28,7 +28,7 @@ For the dock management profile to effectively manage the mixing of inventory, a
 In this example, our dock management profile is configured such that **Inventory types that should not be mixed** is set to **Shipment ID**, and we'll set up a work header break for it:
 
 1. Go to **Warehouse management** > **Setup** > **Work** > **Work templates**.
-1. Select the **Work order type** to edit (for example, *Purchase orders*).
+1. Select the **Work order type** to edit (for example, **Purchase orders**).
 1. Select the work template to edit.
 1. On the Action Pane, select **Edit query**.
 1. Open the **Sorting** tab and add a row with the following settings:

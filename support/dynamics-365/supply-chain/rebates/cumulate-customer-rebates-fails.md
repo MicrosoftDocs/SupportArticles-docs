@@ -19,7 +19,7 @@ KB number: 4611372
 
 ## Symptoms
 
-When you use customer rebate agreements (of the *amount* type) in combination with item rebate groups, rebates are calculated, but cumulation fails.
+When you use customer rebate agreements (of the **amount** type) in combination with item rebate groups, rebates are calculated, but cumulation fails.
 
 ## Resolution
 

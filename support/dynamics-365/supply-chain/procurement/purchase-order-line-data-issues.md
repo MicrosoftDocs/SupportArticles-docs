@@ -52,7 +52,7 @@ You can usually fix these issues by updating the purchase status, delivery remai
 
 1. If you still see inconsistencies in the remainder quantities, you can use the following fields to edit them directly as required:
 
-    - Deliver remainder
-    - Inventory deliver remainder
-    - Invoice remainder
-    - Inventory invoice remainder
+    - **Deliver remainder**
+    - **Inventory deliver remainder**
+    - **Invoice remainder**
+    - **Inventory invoice remainder**
