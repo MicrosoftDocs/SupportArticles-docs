@@ -40,7 +40,7 @@ To fix this issue, complete the following tasks:
 To cancel open work, follow these steps.
 
 1. Go to **Warehouse management** > **Periodic tasks** > **Clean up** > **Cancel work**.
-1. In the **Work ID** field, specify the ID of the work that you want to cancel, and that currently has a **Work status** value of *Open*, *In progress*, *Canceled*, *Combined*, or *Closed*.
+1. In the **Work ID** field, specify the ID of the work that you want to cancel, and that currently has a **Work status** value of **Open**, **In progress**, **Canceled**, **Combined**, or **Closed**.
 1. Select **OK**.
 1. Select **Yes** to confirm that you want to cancel the work.
 

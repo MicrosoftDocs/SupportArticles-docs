@@ -22,4 +22,4 @@ When configuring Microsoft Dynamics 365 Supply Chain Management, you may receive
 
 ## Resolution
 
-This behavior is by design. The *Inventory status change* work type is used only by system processes. It can't be configured. Because the list of work types is fixed as an enumeration, the extra entries can't be filtered out of the **Work type** drop-down menu.
+This behavior is by design. The **Inventory status change** work type is used only by system processes. It can't be configured. Because the list of work types is fixed as an enumeration, the extra entries can't be filtered out of the **Work type** drop-down menu.

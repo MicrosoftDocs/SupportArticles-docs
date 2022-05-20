@@ -25,7 +25,7 @@ If the **License plate grouping policy** field is set to **User defined** for a 
 
 ## Cause
 
-When *User defined* is used as a license plate grouping policy, the system splits the incoming inventory into separate license plates, as indicated by the unit sequence group. If batch or serial numbers are used to track the item that's being received, the quantities of each batch or serial must be specified per license plate that's registered. If the quantity that's specified for a license plate exceeds the quantity that must still be received for the current dimensions, you receive this error message.
+When **User defined** is used as a license plate grouping policy, the system splits the incoming inventory into separate license plates, as indicated by the unit sequence group. If batch or serial numbers are used to track the item that's being received, the quantities of each batch or serial must be specified per license plate that's registered. If the quantity that's specified for a license plate exceeds the quantity that must still be received for the current dimensions, you receive this error message.
 
 ## Resolution
 
