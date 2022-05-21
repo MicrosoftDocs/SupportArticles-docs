@@ -1,9 +1,0 @@
-{
-"fileMetadata": { 
-  "recommendations": { 
-    "*/**.md": true,
-    "admin/**.md": true,
-    "analysis-services/**.md": false  
-  }
- }
-}
