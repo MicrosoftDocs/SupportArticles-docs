@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 04/07/2022
+ms.date: 05/20/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
@@ -298,7 +298,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
-#### Solution: Adjust Kubernetes secret
+#### Solution: Adjust the Kubernetes secret and re-create the pods
 
 If the value of the storage account name or key in the Kubernetes secret doesn't match the value in **Access keys** in the storage account, adjust the Kubernetes secret at the Kubernetes secret level by running the following command:
 
@@ -315,6 +315,8 @@ echo -n '<storage account name>'| base64 | tr -d '\n' ; echo
 ```
 
 For more information, see [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
+
+After the Kubernetes secret `azure-storage-account-<storage-account-name>-secret` has the right values, re-create the pods. Otherwise, those pods will continue to use the old values that aren't valid anymore.
 
 ### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for storage account
 
