@@ -96,6 +96,24 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     6. In the **Public and Private Key Pair** dialog box, verify that **Use existing keys** is checked.
     7. Click **Next** two times.
     8. Accept the Certificate Database Settings default settings, click **Next**, and then click **Finish** to complete the Certificate Services installation.
+
+    > [!IMPORTANT]
+    > If the new server **has a different computer name** then follow these steps:
+
+    1. In Control Panel, double-click **Add or Remove Programs**.
+    2. Click **Add/Remove Windows Components**, click **Certificate Services** in the Windows Components Wizard, and then click **Next**.
+    3. In the **CA Type** dialog box, click the appropriate CA type.
+    4. Click **Use custom settings to generate the key pair and CA certificate**, and then click **Next**.
+    5. Click **Import**, type the path of the .P12 file in the backup folder, type the password that you chose in step 2f, and then click **OK**.
+    6. In the **Public and Private Key Pair** dialog box, verify that **Use existing keys** is checked.
+    7. Click **Next** two times.
+    8. Accept the Certificate Database Settings default settings, click **Next**, and then click **Finish** to complete the Certificate Services installation.
+    9. Modify the previously exported Registry Key in step 3 like so:
+        1. Right-click on the exported key.
+        2. Edit.
+        3. Replace the **CAServerName** value with the new Server name.
+        4. Save and Close.
+
 7. Stop the Certificate Services service.
 
 8. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is C:\\Windows in Windows Server 2003.
@@ -130,6 +148,16 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     Where C:\\Ca_Backup is the folder you chose during the Backup CA phase in step 2.
 
 10. In the Certification Authority snap-in, manually add or remove certificate templates to duplicate the Certificate Templates settings that you noted in step 1.
+
+> [!NOTE]
+    > If you encounter problems publishing new Templates or your Custom ones, follow the steps below.
+
+1. From a **Domain Controller** within the forest where you migrated the CA role start ADSI Edit.
+2. Right click on ADSI Edit -> Connect to -> In **Select a well known Naming Context** choose **Configuration** -> Ok.
+3. Navigate to CN=Configuration | CN=Services | CN=Public Key Services | CN=Enrollment Services.
+4. Right click the CA in the right pane that you want to enroll from and click **Properties**. Find the *flags* attribute; and verify that it is set to 10.
+5. If it is not, then set it to **10** and wait or manually force Active Directory replication.
+6. Close ADSI Edit and from your CA Server make sure you can now publish your new Templates.
 
 ## Back up and restore the certification authority keys and database in Windows 2000 Server
 
