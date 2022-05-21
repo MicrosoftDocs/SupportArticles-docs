@@ -34,7 +34,10 @@ The `Process` class contains a static `Start` method. Because it's a static meth
 ```csharp
 System.Diagnostics.Process.Start(target);
 ```
-
+or, on .NET Core 
+```csharp
+Process.Start(new ProcessStartInfo() { FileName = target, UseShellExecute = true });
+```
 For more information about the `Process` class, see [Process Class](/dotnet/api/system.diagnostics.process).
 
 ## Provide exception handling
