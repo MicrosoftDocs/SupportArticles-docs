@@ -1,0 +1,108 @@
+### YamlMime:Hub
+title: Microsoft troubleshooting documentation
+
+summary: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
+
+# TODO - Identify a generic Microsoft brand code, from Kurtis. (Gene)
+brand: sql-server
+
+
+metadata:
+   title: Microsoft troubleshooting documentation | Microsoft Docs
+   description: Find the documentation you need to troubleshoot issues and apply workarounds for the following commercial products from Microsoft.
+   ms.topic: hub-page  
+   ms.service: troubleshoot
+
+
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+# highlightedContent:
+
+
+productDirectory:
+  items:
+  - title: Windows
+    imageSrc: "media/hub-landing/windows.svg"
+    summary: Troubleshooting articles for Windows
+    url: windows/index.yml
+
+  - title: Microsoft Edge and Internet Explorer
+    imageSrc: "media/hub-landing/Edge.jpg"
+    summary: Troubleshooting articles for Microsoft Edge and Internet Explorer
+    url: developer/browsers/welcome-browsers.md
+      
+  - title: BizTalk Server
+    imageSrc: "media/hub-landing/biztalk.svg"
+    summary: Troubleshooting articles for BizTalk Server
+    url: developer/biztalk/welcome-biztalk-server.md
+      
+  - title: .NET
+    imageSrc: "media/hub-landing/logo_NET.svg"
+    summary: Troubleshooting articles for .NET
+    url: developer/dotnet/welcome-dotnet.md
+      
+  - title: Visual Studio
+    imageSrc: "media/hub-landing/logo_vs-ide.svg"
+    summary: Troubleshooting articles for Visual Studio
+    url: developer/visualstudio/welcome-visual-studio.yml
+      
+  - title: Host Integration Server
+    imageSrc: "media/hub-landing/his.jpeg"
+    summary: Troubleshooting articles for Host Integration Server
+    url: developer/host-integration-server/welcome-host-integration-server.md
+      
+  - title: Web Apps
+    imageSrc: "media/hub-landing/app-service-web.svg"
+    summary: Troubleshooting articles for Web Apps
+    url: developer/webapps/welcome-webapps.md
+
+  - title: SQL Server 
+    imageSrc: "media/hub-landing/sql-database-blue.svg"
+    summary: Troubleshooting articles for SQL Server
+    url: sql/welcome-sql-server.md
+
+  - title: Microsoft Endpoint Manager
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for Microsoft Endpoint Manager
+    url: mem/index.yml
+
+  - title: System Center
+    imageSrc: "media/hub-landing/logo-systemcenter.png"
+    summary: Troubleshooting articles for System Center
+    url: system-center/index.yml
+
+  - title: Azure
+    imageSrc: "https://static.docs.com/ui/media/product/azure/azure.svg"
+    summary: Troubleshooting articles for Azure 
+    url: azure/index.yml
+      
+  - title: Office
+    imageSrc: "/media/logos/logo_office.svg"
+    summary: Troubleshooting articles for Office
+    url: /office/troubleshoot
+
+  - title: Microsoft Dynamics
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for Microsoft Dynamics
+    url: dynamics/index.yml
+
+  - title: Microsoft Dynamics 365
+    imageSrc: "media/hub-landing/dynamics-365.svg"
+    summary: Troubleshooting articles for Microsoft Dynamics 365
+    url: dynamics-365/index.yml
+      
+  - title: Microsoft Power Platform
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for Microsoft Power Platform
+    url: power-platform/index.yml
+
+  - title: Previous Versions
+    imageSrc: "media/hub-landing/microsoft-logo.svg"
+    summary: Troubleshooting articles for previous versions of products
+    url: /previous-versions/troubleshoot/
+
+# conceptualContent:
+
+
+# additionalContent:
+

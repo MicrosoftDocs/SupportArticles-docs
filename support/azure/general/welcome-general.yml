@@ -1,0 +1,30 @@
+### YamlMime:Landing
+
+title: Azure troubleshooting documentation
+summary: Welcome to Azure troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Azure services. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+
+metadata:
+  title: Troubleshoot common issues with Azure services
+  description: Documentation for troubleshooting common issues with Azure services. # Required; article description that is displayed in search results. < 160 chars.
+  services: azure
+  ms.service: azure #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author: genlin  #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 12/18/2020
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Azure API Management
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Azure API is returning blank response
+            url: ./api-return-blank-response.md
+          - text: Request throttling problems and HTTP 403 - Forbidden issues
+            url: ./request-throttling-http-403.md
+          - text: Unauthorized errors 401 while invoking APIs
+            url: ./unauthorized-errors-invoke-apis.md

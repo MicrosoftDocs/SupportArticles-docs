@@ -1,0 +1,7 @@
+/support/azure/*  @genlin
+/support/windows-server/*  @Deland-Han @kaushika-msft
+/support/windows-client/*  @Deland-Han @kaushika-msft
+/support/microsoft-identity-manager/* @helenclu
+/support/mem/* @helenclu
+/support/system-center/* @helenclu
+/support/visualstudio/*  @daleche-sh @ramakoni1

@@ -1,0 +1,26 @@
+### YamlMime:Landing
+
+title: Microsoft Dynamics GP troubleshooting # < 60 chars
+summary: Welcome to Microsoft Dynamics GP troubleshooting. These articles explain how to determine, diagnose, and fix issues that you might encounter when you use Microsoft Dynamics GP. In the navigation pane on the left, browse through the article list or use the search box to find issues and solutions.
+metadata:
+  title: Microsoft Dynamics GP troubleshooting
+  description: Landing page for Microsoft Dynamics GP troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
+  ms.prod: dynamics-gp  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.topic: landing-page # Required
+  author:   #Required; your GitHub user alias, with correct capitalization.
+  ms.author:  #Required; microsoft alias of author; optional team alias.
+  ms.date:
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Developer
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: How to change the current SQL Server name
+            url: change-the-current-sql-server-name.md
+          - text: How to create a chunk file in Dexterity
+            url: create-a-chunk-file-dexterity.md

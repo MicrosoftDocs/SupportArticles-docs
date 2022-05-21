@@ -1,0 +1,32 @@
+### YamlMime:Hub
+title: System Center troubleshooting
+summary: Technical content to troubleshoot issues in System Center
+
+metadata:
+   ms.topic: hub-page
+   services: service
+   ms.service: system-center
+   ms.author: luche
+
+productDirectory:
+  items:
+  - title: Data Protection Manager
+    imageSrc: "../media/hub-landing/system-center-dpm.png"
+    summary: Troubleshooting articles for Data Protection Manager
+    url: dpm/welcome-dpm.yml
+  - title: Operations Manager
+    imageSrc: "../media/hub-landing/system-center-operations-manager.png"
+    summary: Troubleshooting articles for Operations Manager
+    url: scom/welcome-scom.yml   
+  - title: Orchestrator
+    imageSrc: "../media/hub-landing/system-center-orchestrator.png"
+    summary: Troubleshooting articles for Orchestrator
+    url: orchestrator/welcome-orchestrator.yml
+  - title: Service Manager
+    imageSrc: "../media/hub-landing/system-center-service-manager.png"
+    summary: Troubleshooting articles for Service Manager
+    url: scsm/welcome-scsm.yml
+  - title: Virtual Machine Manager
+    imageSrc: "../media/hub-landing/system-center-vmm.png"
+    summary: Troubleshooting articles for Virtual Machine Manager
+    url: vmm/welcome-vmm.yml   
