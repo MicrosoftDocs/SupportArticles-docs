@@ -55,4 +55,4 @@ _Original KB number:_ &nbsp; 2462308
 7. Select the **Yes** button to confirm.
 
 > [!NOTE]
-> The user account will be re-created by using defaults at the next time when the user signs in.
+> The user account will be re-created by using the default profile at the next time the user signs in.
