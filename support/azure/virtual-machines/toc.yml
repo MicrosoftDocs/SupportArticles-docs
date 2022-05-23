@@ -365,6 +365,8 @@
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Troubleshoot high CPU issues for Azure Windows virtual machines
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+      href: azure-windows-vm-memory-issue.md
   - name: Known performance issues
     items:
     - name: Poor performance on Windows Server 2012 R2
