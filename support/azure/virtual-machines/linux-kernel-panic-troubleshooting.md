@@ -70,7 +70,7 @@ In order to deal with this kind of kernel panic, the following approaches can be
 
 ### Method 1: Using the Azure serial console
 
-Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way, the VM will be able to boot up again and fix the specific issue with the non-booting kernel: 
+Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way, the VM will be able to boot up again, then you can use one of the following methods to fix the specific issue with the non-booting kernel:
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
