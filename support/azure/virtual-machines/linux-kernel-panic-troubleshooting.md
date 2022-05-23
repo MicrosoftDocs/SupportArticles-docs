@@ -89,9 +89,9 @@ Use the Azure serial console to interrupt the boot process and select a previous
 
 ### Method 2: Offline repair using a rescue VM
 
-In case the Azure serial console isn't available or no previous kernel is available, a rescue/repair VM can be created.
+In case the Azure serial console isn't available or no previous kernel is available, you need a rescue/repair VM to do an offline repair.
 
-The [Azure repair VM command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used to create a repair VM, along with a copy of the OS disk attached. Then [chroot](chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
+Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the target VM's OS disk attached. Then use [chroot](chroot-environment-linux.md) mount the copy of the OS file systems in the repair VM from which it's possible to: 
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
