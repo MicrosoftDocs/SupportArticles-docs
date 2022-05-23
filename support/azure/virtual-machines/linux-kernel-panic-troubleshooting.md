@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: linux
 ---
 
-# Linux kernel panic in Azure
+# Kernel panic in Azure Linux VMs
 
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
