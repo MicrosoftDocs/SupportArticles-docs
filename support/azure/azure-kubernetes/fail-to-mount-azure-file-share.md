@@ -13,7 +13,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 ## Symptoms
 
-You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
+You deploy a Kubernetes resource like Deployment, StatefulSet and so on in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
 
