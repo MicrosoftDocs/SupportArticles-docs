@@ -18,11 +18,11 @@ appliesto:
 search.appverid: MET150
 ms.date: 5/19/2022
 ---
-# Can't remove a remote shared mailbox in Exchange admin center
+# Can't remove remote shared mailbox by using EAC on Exchange Server
 
 ## Symptoms
 
-When you try to remove a remote shared mailbox by using the Exchange admin center (EAC), you receive the following error message:
+In an Exchange hybrid deployment, when you try to remove a remote shared mailbox by using the Exchange admin center (EAC) in Exchange Server, you receive the following error message:
 
 > \<Mailbox_name> isn't a mailbox user.  
 
