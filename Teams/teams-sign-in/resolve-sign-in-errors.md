@@ -1,5 +1,5 @@
 ---
-title: Resolve sign-in errors in Teams
+title: Fix Teams sign-in errors
 description: Provides troubleshooting steps if you encounter errors when trying to sign in to Microsoft Teams.
 author: v-charloz
 ms.author: v-chazhang
@@ -15,16 +15,16 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 3/31/2022
+ms.date: 05/23/2022
 ---
 # Resolve sign-in errors in Teams
 
-> [!NOTE]
-> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
->
 If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
 
-# Run the Teams Sign-in diagnostic:
+## Run the Teams Sign-in diagnostic
+
+> [!NOTE]
+> This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
     1. Select the following button to populate the diagnostic in the Microsoft 365 admin center:
         >[!div class="nextstepaction"]
@@ -32,16 +32,19 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
     1. In the **User Name or Email Address field**, enter the email address of the user who's experiencing the Teams sign-in issue.
 
 
-# Use Microsoft Support and Recovery Assistant
+## Use the Microsoft Support and Recovery Assistant (SaRA) 
 
-If there is no issue with diagnostics, but you’re still unable to sign into Teams, or if you’re not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+If the diagnostic doesn't detect any issue, but you still can't sign in to Teams, or you don't have a Microsoft 365 administrator account, select the button below to download SaRA and automatically start the tests. For more information about SaRA, see [About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f).
+
+> [!NOTE]
+> By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
 
 > [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
+> [SaRA for Teams Sign-in](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
 
-# Fix the issue manually
+## Fix the issue manually
 
-If you’d like to perform the checks and make the fixes manually, do the following:
+If you want to perform the checks and fix the issue manually, follow these steps:
 
 1. If the diagnostic detects an issue that affects the instance of Teams on the tenant, follow the provided solution to fix the issue. If the diagnostic doesn't detect an issue, check whether the user's [Teams client is running the latest update](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1). Select the **Settings and more** menu next to the user's profile picture at the top right of the Teams window, and then select **Check for updates**.
 
