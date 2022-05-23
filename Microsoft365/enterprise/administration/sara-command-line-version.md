@@ -157,6 +157,8 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|None|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
   |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|Scan initiated but not completed|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
+  |Offline Scan with Log Folder location provided |Run an Offline scan of Outlook|*66:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See the Outlook configuration details at the location specified by you.|
+  |Normal Scan with Log Folder location provided  |Run a full scan of Outlook|*67:* A Full scan was performed. See the Outlook configuration details at the location specified by you.|
 
 - `OfficeScrubScenario`
 
@@ -164,10 +166,12 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |---|---|---|
   |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
   |Office program found .exe files running:</br></br>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
-  |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
-  |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
+  |-OfficeVersion switch not used and no Office products found|Exit the scenario|*68:* We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion . For SaRA Command line users with version 17.00.8256.000 or earlier the error displayed is -*07:* No installed Office versions were found. Please use the full SaRA version.|
+  |-OfficeVersion switch not used and multiple Office versions detected as installed|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
+  |Office version provided on command line doesn’t match detected installed version|Exit the scenario|*66:* We could not find the specified Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion .|
+  |Invalid Office version specified on command line|Exit the scenario|*67:* The Office version that you have specified is invalid. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion. |
   
 - `TeamsAddinScenario`
 
