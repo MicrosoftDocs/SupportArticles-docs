@@ -258,7 +258,7 @@ Azure VMs have reliable metrics that include basic information such as memory, n
 
 When Azure VMs are created, they come with basic default metrics pre-enabled. These metrics don't need any additional configuration to enable Azure Monitoring (which installs an extension in the VMs). The capability of these basic metrics isn't as exhaustive as what Azure Monitoring provides, but they can still show basic VM resource health.
 
-The following screenshot shows how the pattern is displayed in the Azure portal under a VM's Memory metrics. This screenshot is from the same timeframe that's used earlier to share Perfinsights and Perfmon analysis.
+The following screenshot shows how the pattern is displayed in the Azure portal under a VM's Memory metrics. This screenshot is from the same timeframe that's used earlier to share PerfInsights and Perfmon analysis.
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/memory-metrics.png" alt-text="Screenshot that shows Memory metrics." lightbox="media/azure-windows-vm-memory-issue/memory-metrics.png":::
 
