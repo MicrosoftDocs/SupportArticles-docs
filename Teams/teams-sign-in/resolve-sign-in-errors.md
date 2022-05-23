@@ -27,8 +27,10 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 > This feature requires a Microsoft 365 administrator account. This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
     1. Select the following button to populate the diagnostic in the Microsoft 365 admin center:
+    
         >[!div class="nextstepaction"]
         >[Run Tests: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
+        
     1. In the **User Name or Email Address field**, enter the email address of the user who's experiencing the Teams sign-in issue.
 
 
