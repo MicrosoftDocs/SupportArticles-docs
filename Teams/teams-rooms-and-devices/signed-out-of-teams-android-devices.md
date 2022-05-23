@@ -26,7 +26,9 @@ Some Microsoft Teams devices in your environment are signed out of Teams automat
 - Teams panels
 - Teams displays
 
-Use one of the following options to sign in to Teams.
+If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Azure Active Directory menu > **Monitoring** > **Sign-in logs**.
+
+To sign in to Teams, use one of the following options.
 
 ## Option 1: Sign in from the Microsoft Teams admin center
 
@@ -67,9 +69,18 @@ Restart the Android device remotely from the Microsoft Teams admin center and th
 3. On the page for the Android device, select **Restart** to restart the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-restart.png" alt-text="Screenshot of selecting restart on the device page.":::
-4. After the device restarts, select **Sign in**.
+4. After the device restarts, check the **Username** field.
+
+- If the **Username** field displays a username, select **Actions** > **Sign out** to sign out of the device.
+
+   :::image type="content" source="media/signed-out-of-teams-android-devices/username-and-select-sign-out.png" alt-text="Screenshot of the device page with the username field populated and the sign out option selected.":::
+
+  After you're signed out, select **Sign in**.
+
+- If the **Username** field is blank, select **Sign in**.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-in.png" alt-text="Screenshot of selecting sign in on the device page.":::
+
 5. A pop-up window will display. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-instructions.png" alt-text="Screenshot of the pop-up window that provides sign in instructions.":::
@@ -91,7 +102,9 @@ Restart the Android device remotely from the Microsoft Teams admin center and th
 
    :::image type="content" source="media/signed-out-of-teams-android-devices/refresh-code.png" alt-text="Screenshot of selecting refresh code on the device.":::
 
-## Option 4: If you still can't sign in to the device, reset the device to its factory settings
+## Option 4: Reset the device
+
+If you still can't sign in to the device, reset the device to its factory settings.
 
 1. Perform a factory reset from the OEM device settings or by using the key combination that's specific to the OEM model.
 2. Use option 1, 2 or 3 to sign in to the device.
