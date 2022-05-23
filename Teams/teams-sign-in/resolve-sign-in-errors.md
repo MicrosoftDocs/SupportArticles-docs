@@ -24,20 +24,32 @@ ms.date: 3/31/2022
 >
 If your users encounter errors when they try to sign in to Microsoft Teams, use the following steps to troubleshoot the problem:
 
-1. Run the Teams Sign-in diagnostic:
+# Run the Teams Sign-in diagnostic:
 
     1. Select the following button to populate the diagnostic in the Microsoft 365 admin center:
         >[!div class="nextstepaction"]
         >[Run Tests: Teams Sign-in](https://aka.ms/TeamsSignInDiag)
     1. In the **User Name or Email Address field**, enter the email address of the user who's experiencing the Teams sign-in issue.
 
+
+# Use Microsoft Support and Recovery Assistant
+
+If there is no issue with diagnostics, but you’re still unable to sign into Teams, or if you’re not an administrator, download and run Microsoft Support and Recovery Assistant by selecting the button below. The Assistant is the recommended solution to perform automated troubleshooting steps and make the required fixes.
+
+> [!div class="nextstepaction"]
+> [Download the Assistant](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
+
+# Fix the issue manually
+
+If you’d like to perform the checks and make the fixes manually, do the following:
+
 1. If the diagnostic detects an issue that affects the instance of Teams on the tenant, follow the provided solution to fix the issue. If the diagnostic doesn't detect an issue, check whether the user's [Teams client is running the latest update](https://support.microsoft.com/en-us/office/update-microsoft-teams-535a8e4b-45f0-4f6c-8b3d-91bca7a51db1). Select the **Settings and more** menu next to the user's profile picture at the top right of the Teams window, and then select **Check for updates**.
 
     The desktop app is configured to update automatically. However, if you find that the app is missing the latest update, follow the instructions to install it, and try again to sign in. If you still see an error when you try to sign in to Teams, go to step 3.
 
-1. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the  [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
+2. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the  [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
 
-1. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
+3. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
 
     - **0xCAA82EE7** or **0xCAA82EE2**  
         Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.
@@ -49,9 +61,9 @@ If your users encounter errors when they try to sign in to Microsoft Teams, use 
 
     - **0xCAA70004** or **0xCAA70007**, or if the sign-in issue also occurs in other Office applications: See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016).
 
-1. If the sign-in error occurs only in the Teams web client, see [Microsoft Teams is stuck in a login loop](sign-in-loop.md) for resolutions that are specific to the user's preferred browser.
+4. If the sign-in error occurs only in the Teams web client, see [Microsoft Teams is stuck in a login loop](sign-in-loop.md) for resolutions that are specific to the user's preferred browser.
 
-1. If the error persists, reinstall Teams as follows:
+5. If the error persists, reinstall Teams as follows:
 
     1. [Uninstall Teams](https://support.microsoft.com/en-us/windows/uninstall-or-remove-apps-and-programs-in-windows-10-4b55f974-2cc6-2d2b-d092-5905080eaf98).
     1. Browse to the *%appdata%\Microsoft* folder on the user's computer, and delete the *Teams* folder.
