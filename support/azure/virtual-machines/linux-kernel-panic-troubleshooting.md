@@ -17,7 +17,7 @@ In general, a kernel panic is a situation when the kernel is unable to load prop
 
 ## Prerequisites
 
-Make sure the [serial console](serial-console-linux.md) is enabled and functional in the Linux VM.
+Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) is enabled and functional in the Linux VM.
 
 ## How to identify a kernel panic?
 
@@ -117,7 +117,7 @@ In order to deal with this kind of kernel panic, the following approaches can be
 
 * Review resource usage and overall system performance. The kernel panic might be related to a possible shortage of resources that could lead to a VM resize.
 * If possible, install the latest updates available in the corresponding Linux distribution repositories. The kernel panic might be related to known bugs in either the kernel or other software.
-* There's a possibility the kernel panic is related to a recent kernel change, in which case it's also advisable to boot over a previous kernel version, as explained in [Resolution 1](#method-1-using-the-azure-serial-console).
+* There's a possibility the kernel panic is related to a recent kernel change, in which case it's also advisable to boot over a previous kernel version, as explained in [Resolution for scenario 1](#method-1-using-the-azure-serial-console).
 * If the options above aren't applicable, it might be necessary to configure kdump and generate a core dump to share with support for further analysis.
 
 ## More specific kernel panic scenarios
