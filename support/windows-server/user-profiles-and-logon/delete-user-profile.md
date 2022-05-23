@@ -44,15 +44,14 @@ _Original KB number:_ &nbsp; 2462308
 > [!IMPORTANT]  
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-1. Ensure the user account that you want to remove is signed out.
-2. Open the **File Explorer** on your computer, and then go to the folder of **C:\Users**.
-3. Find the profile folder of the user account that you want to delete, right click the folder, and then select **Delete** to delete it.
-4. Press the Windows Key + R button to open the Run dialog box. In the Run dialog box, type _regedit_ and press Enter.
-5. In the Registry Editor, navigate to the following key:  
+1. Open the **File Explorer** on your computer, and then go to the folder of **C:\Users**.
+2. Find the profile folder of the user account that you want to delete, right click the folder, and then select **Delete** to delete it.
+3. Press the Windows Key + R button to open the Run dialog box. In the Run dialog box, type _regedit_ and press Enter.
+4. In the Registry Editor, navigate to the following key:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
 
-6. From the left panel, go through each subkeys under the **ProfileList** key. Find the subkey in which the **ProfileImagePath** value matches the path of the profile folder that you just deleted. Then, right click the subkey and select **Delete**.
-7. Select the **Yes** button to confirm.
+5. From the left panel, go through each subkeys under the **ProfileList** key. Find the subkey in which the **ProfileImagePath** value matches the path of the profile folder that you just deleted. Then, right click the subkey and select **Delete**.
+6. Select the **Yes** button to confirm.
 
 > [!NOTE]
 > The user account will be re-created by using the default profile at the next time the user signs in.
