@@ -1,6 +1,6 @@
 ---
 title: Can't remove a remote shared mailbox
-description: Provides a workaround for an issue in which you can't remove a remote shared mailbox in Exchange admin center (EAC) because the EAC uses the Remove-Mailbox cmdlet that can't find the specified remote object.
+description: Provides a workaround for an issue in which you can't remove a remote shared mailbox in on-premises Exchange admin center because it uses the Remove-Mailbox cmdlet that can't find the specified mailbox object.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,9 +16,9 @@ appliesto:
   - Exchange Server 2016
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 5/19/2022
+ms.date: 5/23/2022
 ---
-# Can't remove remote shared mailbox by using EAC on Exchange Server
+# Can't remove a remote shared mailbox by using the Exchange admin center on Exchange Server
 
 ## Symptoms
 
