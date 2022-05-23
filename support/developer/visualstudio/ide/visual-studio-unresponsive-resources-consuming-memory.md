@@ -68,7 +68,7 @@ This problem might result in instability of the programs such as Visual Studio.
 
     - We recommend that you let the system manage the paging file size on a disk. To do this, select the **System managed size** option.
 
-    - In some circumstances, you can customize the size of the paging file. To learn about customizing the paging file size, see example in [Manually managing the Windows page file](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#manually-managing-the-windows-pagefile).
+    - In some circumstances, you might need to customize the size of the paging file. To learn about one such example, see [Failure to automatically increase the pagefile size](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#failure-to-automatically-increase-the-pagefile-size).
 
         > [!IMPORTANT]
         > Make sure that you set the **Initial size** and **Maximum size** with the cumulative peak commit size of the applications that you typically run on the system.
