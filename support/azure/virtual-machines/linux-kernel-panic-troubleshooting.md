@@ -1,9 +1,9 @@
 ---
-title: Troubleshooting Linux Kernel Panics in Azure.
+title: Troubleshooting Linux Kernel Panics in Azure
 description: Discusses multiple conditions that can lead to a kernel panic and provides general troubleshooting guidance.
 author: divargas-msft
 ms.author: adelgadohell
-ms.topic: troubleshooting #Required.
+ms.topic: troubleshooting
 ms.date: 05/19/2022
 ms.service: virtual-machines
 ms.collection: linux
@@ -13,7 +13,7 @@ ms.collection: linux
 
 This article discusses multiple conditions that can lead to a kernel panic and provides troubleshooting guidance.
 
-Generally speaking, a kernel panic is a situation when the kernel is unable to load properly and therefore the system fails to boot. Another form of kernel panic occurs when the kernel encounters a situation it doesn't know how to handle, and protects itself by stopping.
+In general, a kernel panic is a situation when the kernel is unable to load properly, and therefore the system fails to boot. Another form of kernel panic occurs when the kernel encounters a situation it doesn't know how to handle and protects itself by stopping.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) 
 
 Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify the specific kernel panic string.
 
-A kernel panic looks similar to the output below, and will show up at the end of the serial console log:
+A kernel panic looks similar to the output below and will show up at the end of the serial console log:
 
 ```bash
 Probing EDD (edd=off to disable)... ok
@@ -36,51 +36,51 @@ Some of the most common kernel panic events:
 
 |Panic Message|Reason|
 |----------------|-------------------------------|
-| **Oops: 0000 [#1] SMP " (check log for details)** | System panicked due to dereferencing a bad address |
-| **SysRq: Trigger a crashdump** | Core dump was user initiated with sysrq-c or by echoing c into /proc/sysrq-trigger |
-| **kernel BUG at \<pathname/filename>:\<line number>!** | This format is the standard for a failed BUG check (which is just like an ASSERT but the logic is inverted). The filename and line number will indicate which BUG check failed |
-| **Kernel panic - not syncing: softlockup: hung tasks** | The soft lockup detector has found a CPU that hasn't scheduled the watchdog task within the soft lockup threshold |
+| **Oops: 0000 [#1] SMP " (check log for details)** | System panicked due to dereferencing a bad address. |
+| **SysRq: Trigger a crashdump** | Core dump was user-initiated with sysrq-c or by echoing c into /proc/sysrq-trigger. |
+| **kernel BUG at \<pathname/filename>:\<line number>!** | This format is the standard for a failed BUG check (which is just like an ASSERT, but the logic is inverted). The filename and line number will indicate which BUG check failed. |
+| **Kernel panic - not syncing: softlockup: hung tasks** | The soft lockup detector has found a CPU that hasn't scheduled the watchdog task within the soft lockup threshold. |
 | **Kernel panic - not syncing: Watchdog detected hard LOCKUP on cpu 0** | The hard lockup detector has found a CPU that hasn't received any hrtimer interrupts within the hard lockup threshold. |
-| **Kernel panic - not syncing: hung_task: blocked tasks** | The hung task watchdog has detected at least one task that has been in uninterruptible state for more than the blocked task timeout value |
-| **Kernel panic - not syncing: out of memory. panic_on_oom is selected** | The system has run out of memory and swap and has been forced to start killing processes to free up memory (not default behavior) |
+| **Kernel panic - not syncing: hung_task: blocked tasks** | The hung task watchdog has detected at least one task that has been in an uninterruptible state for more than the blocked task timeout value. |
+| **Kernel panic - not syncing: out of memory. panic_on_oom is selected** | The system has run out of memory and swap and has been forced to start killing processes to free up memory (not default behavior). |
 | **Kernel panic - not syncing: Out of memory and no killable processes...** | The system has run out of memory and swap and has been killing processes to free up memory but has run out of processes to kill off. |
 | **Kernel panic - not syncing: An NMI occurred, see the Integrated Management Log for details.** | Watchdog has intercepted an NMI (non-maskable interrupt). |
 | **Kernel panic - not syncing: NMI IOCK error: Not continuing** | The system received an IO check NMI from the hardware (not a memory parity error) and kernel.panic_on_io_nmi was set (not the default). |
-| **Kernel panic - not syncing: NMI: Not continuing** |The system received an NMI (either hardware or memory parity error) and kernel.panic_on_unrecovered_nmi was set (not the default). |
-| **Kernel panic - not syncing: nmi watchdog** | The system received an NMI and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
-| **Kernel panic - not syncing: Fatal Machine check** | A machine check exception event has been raised for a fatal condition |
+| **Kernel panic - not syncing: NMI: Not continuing** |The system received an NMI (either hardware or memory parity error), and kernel.panic_on_unrecovered_nmi was set (not the default). |
+| **Kernel panic - not syncing: nmi watchdog** | The system received an NMI, and either kernel.panic_on_timeout or kernel.panic_on_oops was set (not the default values). |
+| **Kernel panic - not syncing: Fatal Machine check** | A machine check exception event has been raised for a fatal condition. |
 | **Kernel panic - not syncing: Attempted to kill init!** | The init process is the first process to be started and should never exit. |
 
 ### Which specific kernel panic is occurring?
 
-It's key to be able to identify what type of kernel panic is happening to be able to determine more specific actions.
+It's key to be able to identify what type of kernel panic is happening to determine more specific actions.
 
 #### Is it a kernel panic at boot time?
 
-A kernel panic at boot time prevents the VM from finishing the Operating System startup process. It happens every time the virtual machine is started and it doesn't allow logging in.
+A kernel panic at boot time prevents the VM from finishing the Operating System startup process. It happens every time the virtual machine is started, and it doesn't allow logging in.
 
 #### Is it a panic happening during VM operation?
 
-This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes, and causes the VM to stop responding, preventing to log in.
+This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in.
 
 ## Scenario 1 - Kernel panic at boot time
 
-This kind of event, is commonly related but not limited to: 
-* A recent kernel upgrade.
-* A recent kernel downgrade.
-* Kernel module changes.
-* Operating system configuration changes (GRUB, sysctl, selinux).
-* Possible missing files.
-* Wrong permissions on files.
-* Missing partitions.
+This kind of event is commonly related but not limited to: 
+* A recent kernel upgrade
+* A recent kernel downgrade
+* Kernel module changes
+* Operating system configuration changes (GRUB, sysctl, and selinux)
+* Possible missing files
+* Wrong permissions on files
+* Missing partitions
 
 ## Resolution for scenario 1
 
-To deal with this kind of kernel panic, the following approaches can be used:
+In order to deal with this kind of kernel panic, the following approaches can be used:
 
 ### Method 1: Using the Azure serial console
 
-Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way the VM will be able to boot up again to be able to fix the specific issue with the non booting kernel: 
+Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way, the VM will be able to boot up again and fix the specific issue with the non-booting kernel: 
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
@@ -103,13 +103,13 @@ The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azur
 
 This kind of event, is commonly related but not limited to: 
 
-* A recent kernel upgrade.
-* A recent kernel downgrade.
-* A kernel module changes. 
-* Operating system configuration changes (sysctl).
-* Application workload changes.
-* Application development changes or bugs.
-* Performance related issues.
+* A recent kernel upgrade
+* A recent kernel downgrade
+* A kernel module changes 
+* Operating system configuration changes (sysctl)
+* Application workload changes
+* Application development changes or bugs
+* Performance related issues
 
 ## Resolution for scenario 2 
 
