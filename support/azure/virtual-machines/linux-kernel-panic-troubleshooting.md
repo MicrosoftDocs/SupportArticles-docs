@@ -85,23 +85,23 @@ Use the Azure serial console to interrupt the boot process and select a previous
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
 * Review the loaded pr missing kernel modules.
-* Review the partitions, and so on, and so forth.
+* Review the partitions.
 
 ### Method 2: Offline repair using a rescue VM
 
-In case the Azure serial console isn't available or no  previous kernel is available, a rescue/repair VM can be created.
+In case the Azure serial console isn't available or no previous kernel is available, a rescue/repair VM can be created.
 
-The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used, to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
+The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
 * Review the loaded or missing kernel modules.
 * Review the partitions.
-* Possible missing files, and so on, and so forth.
+* Recover missing files.
 
 ## Scenario 2 - Kernel panic at run time
 
-This kind of event, is commonly related but not limited to: 
+This kind of event is commonly related but not limited to: 
 
 * A recent kernel upgrade
 * A recent kernel downgrade
@@ -109,13 +109,13 @@ This kind of event, is commonly related but not limited to:
 * Operating system configuration changes (sysctl)
 * Application workload changes
 * Application development changes or bugs
-* Performance related issues
+* Performance-related issues
 
 ## Resolution for scenario 2 
 
-To deal with this kind of kernel panic, the following approaches can be used:
+In order to deal with this kind of kernel panic, the following approaches can be used:
 
-* Review resource usage and over all system performance. The kernel panic might be related to a possible shortage of resources that could lead to a VM resize.
+* Review resource usage and overall system performance. The kernel panic might be related to a possible shortage of resources that could lead to a VM resize.
 * If possible, install the latest updates available in the corresponding Linux distribution repositories. The kernel panic might be related to known bugs in either the kernel or other software.
 * There's a possibility the kernel panic is related to a recent kernel change, in which case it's also advisable to boot over a previous kernel version, as explained in [Resolution 1](#method-1-using-the-azure-serial-console).
 * If the options above aren't applicable, it might be necessary to configure kdump and generate a core dump to share with support for further analysis.
