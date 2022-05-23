@@ -1,7 +1,7 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 05/18/2022
+ms.date: 05/23/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -38,7 +38,7 @@ Windows Server 2012 R2 introduced changes to the way in which Windows evaluates 
 
 If you're using the **Effective Access** tab, the tab may display errors or warnings.
 
-:::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png" alt-text="Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource":::
+:::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png" alt-text="Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource.":::
 
  :::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/error-information-unavailable.png" alt-text="Effective permissions error: The share security information is unavailable and was not evaluated for effective access.":::
 
