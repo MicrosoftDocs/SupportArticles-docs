@@ -35,10 +35,10 @@ If you notice a program that consumes a large memory and you aren't actively usi
 
 ## Cause 2: Paging file configuration is not optimal
 
-Paging file is a file on the system disk that acts as an extension of the random-access memory (RAM). When the memory used by the applications exceeds the capacity of RAM, Windows makes space in the RAM by moving the memory contents to the paging file. The default configuration of paging file is such that Windows can support many programs at the same time.
+Paging file is a file on the system disk that acts as an extension of the random-access memory (RAM). When the memory used by the applications exceeds the capacity of RAM, Windows makes space in the RAM by moving the memory contents to the paging file. The default configuration of the paging file is such that Windows can support many programs at the same time.
 However, some configurations and circumstances can't allocate sufficient memory to support all the programs that are running on the system.
 
-This problem might result in instability in any of the programs such as Visual Studio.
+This problem might result in instability of the programs such as Visual Studio.
 
 ### Solution: Configure optimal paging file settings
 
