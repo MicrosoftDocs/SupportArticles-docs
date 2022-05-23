@@ -1,6 +1,6 @@
 ---
 title: Login errors when installing the web console
-description: Describes how to work around an issue in which host header or IP address binding causes web console login errors in System Center Operations Manager version 1801 or 1807.
+description: Describes how to work around an issue in which host header or IP address binding causes web console login errors in System Center Operations Manager version 1801, 1807, 2019, or 2022.
 ms.date: 07/06/2020
 ms.custom: sap:Web Console installation
 ms.reviewer: msadoff
@@ -36,7 +36,7 @@ Specifically, assume that you configure the following HTTP and HTTPS bindings:
 
 |Type|IP address|Port|Host name|
 |---|---|---|---|
-|HTT|\<_specific IP address_>|80||
+|HTTP|\<_specific IP address_>|80||
 |HTTPS|\<_specific IP address_>|443||
   
 In the above bindings, host name is left blank.
