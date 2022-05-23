@@ -81,7 +81,7 @@ Use the Azure serial console to interrupt the boot process and select a previous
 
 In case the Azure serial console isn't available or no previous kernel is available, you need a rescue/repair VM to do an offline repair.
 
-Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the target VM's OS disk attached. Then use [chroot](chroot-environment-linux.md) mount the copy of the OS file systems in the repair VM from which it's possible to: 
+Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the target VM's OS disk attached. Then use [chroot](chroot-environment-linux.md) mount the copy of the OS file systems in the repair VM. After that, use one of the following methods to fix the issues:
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
@@ -91,7 +91,7 @@ Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repa
 
 ## Scenario 2: Kernel panic at run time
 
-This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in. It is commonly related but not limited to: 
+This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in. It is commonly related but not limited to:
 
 * A recent kernel upgrade
 * A recent kernel downgrade
@@ -101,7 +101,7 @@ This kind of kernel panic will commonly get triggered at unpredictable times aft
 * Application development changes or bugs
 * Performance-related issues
 
-### Resolution for scenario 2 
+### Resolution for scenario 2
 
 In order to deal with this kind of kernel panic, the following approaches can be used:
 
