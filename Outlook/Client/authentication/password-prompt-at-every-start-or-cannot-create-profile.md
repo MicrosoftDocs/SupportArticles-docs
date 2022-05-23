@@ -31,8 +31,11 @@ When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft Offic
 - When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  
   **This feature has been disabled by your administrator.**
 
-- When you try to create a new Outlook profile, you receive the following error message:  
+- When you try to create a new Outlook profile, you receive one of the following error messages:  
   **We're sorry, we couldn't set up your account automatically, to set it up yourself, click Next.**
+  
+  **Something went wrong**
+  **Something went wrong and Outlook couldn't set up your account. Please try again. If the problem continues, contact your email administrator.**
 
 ## Cause
 
