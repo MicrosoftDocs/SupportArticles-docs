@@ -224,6 +224,8 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
     - name: Troubleshoot permissions are too open error
       href: troubleshoot-ssh-permissions-too-open.md
+    - name: Troubleshoot kernel panic
+      href: linux-kernel-panic-troubleshooting.md
   - name: Windows
     items:
     - name: Cannot RDP because "You must change your password before logging on the first time" error
