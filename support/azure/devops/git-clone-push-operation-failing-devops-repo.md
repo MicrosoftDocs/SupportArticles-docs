@@ -12,7 +12,9 @@ ms.service: az-devops-project
 
 This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 
-## Issues while performing Git clone or Git push to Azure DevOps repositories
+_Applies to:_ Azure DevOps Services, Azure DevOps Server
+
+## Issues while performing Git clone or Git push to the Azure DevOps repositories
 
 When you try to clone or push a repository in GitHub, some issues with proxy configuration, SSL certificate, or credential cache might cause the Git clone operation to fail.
 
@@ -101,21 +103,21 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
         > [!NOTE]
         >
-        >- In the Git for Windows 2.x series, the path will change to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86*.
-        >- When you install Git for Windows (`msysgit`) on your device, a *curl-ca-bundle.crt* file stores in your Program Files directory. This directory is the root certificate store for *git.exe* that Git trusts.
+        >- When you install Git for Windows (`msysgit`) on your device, a *curl-ca-bundle.crt* file is stored in your Program Files directory. This file is the root certificate store for git.exe that contains all the certificates that Git trusts.
         >- The *curl-ca-bundle.crt* file, which stores on a per-device basis, is private to your local Windows client. The text file has UNIX (`\n`) line endings.
+        >- In the Git for Windows 2.x series, the path will change to *C:\Program Files (x86)\Git\mingw32\ssl\certs\ca-bundle.crt* or *C:\Program Files\Git\mingw64\ssl\certs\ca-bundle.crt*. If you are using a 32-bit Windows client, you can fix the folder path such that the Program Files part doesn't appear with *x86*.
 
-    2. Copy the *curl-ca-bundle.crt* file on your user profile directory (*C:\Users\<yourname\>*). Or run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname\>` example.
+    2. Copy the *curl-ca-bundle.crt* file to your user profile directory (*C:\Users\\<yourname\>*). Or run a copy command similar to the `copy "C:\Program Files (x86)\Git\bin\curl-ca-bundle.crt" C:\Users\<yourname>` example.
 
     3. Run the following command to configure Git to use local copy of certificate store from your Windows client:
 
-        `git config --global http.sslCAInfo C:/Users/yourname/curl-ca-bundle.crt`
+        `git config --global http.sslCAInfo C:/Users/<yourname>/curl-ca-bundle.crt`
 
 1. Add the exported root certificate to the local copy of Git certificate store by following these steps:
 
     1. Open the exported root certificate in Notepad, and then copy entire contents on to the clipboard.
 
-    2. Open the *curl-ca-bundle.crt* file by going to the *C:/Users/yourname/curl-ca-bundle.crt* path in a text editor.
+    2. Open the *curl-ca-bundle.crt* file by going to the *C:/Users/\<yourname\>/curl-ca-bundle.crt* path in a text editor.
 
         > [!TIP]
         > You can use the *unix2dos* tool to change the line endings in the file from \n to \r\n and be able to open the file in Notepad.
