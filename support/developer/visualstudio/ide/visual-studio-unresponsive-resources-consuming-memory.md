@@ -70,11 +70,11 @@ This problem might result in instability of the programs such as Visual Studio.
 
     - In some circumstances, you can customize the size of the paging file. To learn about customizing the paging file size, see example in [Manually managing the Windows page file](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/#manually-managing-the-windows-pagefile).
 
-    > [!IMPORTANT]
-    > Make sure that you set the **Initial size** and **Maximum size** with the cumulative peak commit size of the applications that you typically run on the system.
-    >
-    > With this setting, the system doesn't automatically update the paging file size. Therefore, if the memory requirements increase either because the running applications consume more memory or due to the start of new applications that consume additional memory, then you should update the **Maximum size** to consider the new requirements.
-    >
-    > Ensure that the disk has enough space to accommodate the new size.
+        > [!IMPORTANT]
+        > Make sure that you set the **Initial size** and **Maximum size** with the cumulative peak commit size of the applications that you typically run on the system.
+        >
+        > With this setting, the system doesn't automatically update the paging file size. Therefore, if the memory requirements increase either because the running applications consume more memory or due to the start of new applications that consume additional memory, then you should update the **Maximum size** to consider the new requirements.
+        >
+        > Ensure that the disk has enough space to accommodate the new size.
 
     - If you have been experiencing system instability due to low system memory, we recommend that you do not select the **No paging file** option.
