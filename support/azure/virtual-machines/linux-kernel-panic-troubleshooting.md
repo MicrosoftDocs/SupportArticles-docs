@@ -51,19 +51,9 @@ Some of the most common kernel panic events:
 | **Kernel panic - not syncing: Fatal Machine check** | A machine check exception event has been raised for a fatal condition. |
 | **Kernel panic - not syncing: Attempted to kill init!** | The init process is the first process to be started and should never exit. |
 
-### Which specific kernel panic is occurring?
+## Scenario 1: Kernel panic occurs at boot time
 
-It's key to be able to identify what type of kernel panic is happening to determine more specific actions.
-
-#### Is it a kernel panic at boot time?
-
-A kernel panic at boot time prevents the VM from finishing the Operating System startup process. It happens every time the virtual machine is started, and it doesn't allow logging in.
-
-#### Is it a panic happening during VM operation?
-
-This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in.
-
-## Scenario 1 - Kernel panic at boot time
+A kernel panic at boot time prevents the VM from finishing the operating system startup process. It happens every time the virtual machine is started, and it doesn't allow logging in.
 
 This kind of event is commonly related but not limited to: 
 * A recent kernel upgrade
@@ -74,7 +64,7 @@ This kind of event is commonly related but not limited to:
 * Wrong permissions on files
 * Missing partitions
 
-## Resolution for scenario 1
+### Resolution for scenario 1
 
 In order to deal with this kind of kernel panic, the following approaches can be used:
 
@@ -99,9 +89,9 @@ Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repa
 * Review the partitions.
 * Recover missing files.
 
-## Scenario 2 - Kernel panic at run time
+## Scenario 2: Kernel panic at run time
 
-This kind of event is commonly related but not limited to: 
+This kind of kernel panic will commonly get triggered at unpredictable times after the Operating System startup process completes and causes the VM to stop responding, preventing it from logging in. It is commonly related but not limited to: 
 
 * A recent kernel upgrade
 * A recent kernel downgrade
@@ -111,7 +101,7 @@ This kind of event is commonly related but not limited to:
 * Application development changes or bugs
 * Performance-related issues
 
-## Resolution for scenario 2 
+### Resolution for scenario 2 
 
 In order to deal with this kind of kernel panic, the following approaches can be used:
 
