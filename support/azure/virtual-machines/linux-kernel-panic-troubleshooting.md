@@ -17,7 +17,7 @@ In general, a kernel panic is a situation when the kernel is unable to load prop
 
 ## Prerequisites
 
-Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) is enabled and functional in the Linux VM.
+Make sure the [serial console](serial-console-linux.md) is enabled and functional in the Linux VM.
 
 ## How to identify a kernel panic?
 
