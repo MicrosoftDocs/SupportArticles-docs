@@ -91,7 +91,7 @@ Use the Azure serial console to interrupt the boot process and select a previous
 
 In case the Azure serial console isn't available or no previous kernel is available, a rescue/repair VM can be created.
 
-The [Azure repair VM feature](/azure/virtual-machines/repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used to get a repair VM created, along with a copy of the OS disk attached. Then [chroot](/azure/virtual-machines/chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
+The [Azure repair VM command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) can be used to create a repair VM, along with a copy of the OS disk attached. Then [chroot](chroot-environment-linux.md) can be used to get the copy of the OS file systems mounted in the repair VM from which it's possible to: 
 
 * Reinstall or regenerate a missing initramfs.
 * Reinstall the problematic kernel.
@@ -126,7 +126,7 @@ Common kernel panic scenarios with specific troubleshooting/recovering instructi
 
 | Document | Scenario |
 |----------------|-------------------------------|
-|[An Azure Linux VM on a 3.10-based kernel panics after a host node upgrade](/azure/virtual-machines/linux-kernel-panics-upgrade.md)| This article discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. |
-|[How to recover an Azure Linux virtual machine from kernel-related boot issues](/azure/virtual-machines/kernel-related-boot-issues.md)|This article provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.|
+|[An Azure Linux VM on a 3.10-based kernel panics after a host node upgrade](linux-kernel-panics-upgrade.md)| This article discusses a problem that occurs when an Azure Linux VM that's running the 3.10-based kernel crashes after a host node upgrade in Azure. |
+|[How to recover an Azure Linux virtual machine from kernel-related boot issues](kernel-related-boot-issues.md)|This article provides solutions to an issue in which a Linux virtual machine (VM) can't restart after applying kernel changes.|
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
