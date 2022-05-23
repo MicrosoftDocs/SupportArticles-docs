@@ -41,26 +41,26 @@ To resolve this issue, set up the app password for the Google Workspace mailbox.
 1. Sign in to the Google Workspace mailbox.
 2. Select the mailbox account (profile), and then select **Manage your Google Account**.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/google-profile.png" alt-text="Screenshot of the account page with the Manage your Google Account button.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/google-profile.png" alt-text="Screenshot of the account page with the Manage your Google Account button." border="false":::
 
 3. Select the **Security** tab.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/google-account.png" alt-text="Screenshot of the Google Account page. The Security menu is selected.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/google-account.png" alt-text="Screenshot of the Google Account page. The Security menu is selected." border="false":::
 
 4. Under **Signing in to Google**, select **App passwords**.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/app-password.png" alt-text="Screenshot of the Signing into Google page. The App passwords option is highlighted.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/app-password.png" alt-text="Screenshot of the Signing into Google page. The App passwords option is highlighted." border="false":::
 
 5. Enter the password to sign in to your Google Workspace account.
 
 6. In the **Select app** drop-down list, select **Other *(Custom name)***.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/select-app.png" alt-text="Screenshot of the App passwords page. The Other (custom name) option is highlighted in the Select app drop-down list.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/select-app.png" alt-text="Screenshot of the App passwords page. The Other (custom name) option is highlighted in the Select app drop-down list." border="false":::
 
 7. Enter a name, such as *Migration*, and then select **GENERATE**.
 8. Make a note of the generated app password and select **DONE**.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/generate-password.png" alt-text="Screenshot of the Generated app password page with the password.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/generate-password.png" alt-text="Screenshot of the Generated app password page with the password." border="false":::
 
 9. In the CSV file for the migration, add the generated app password in the **Password** column.
 
@@ -69,10 +69,10 @@ To resolve this issue, set up the app password for the Google Workspace mailbox.
 10. Launch the migration wizard in the Exchange admin center.
 11. Locate the failed migration batch, select the affected mailbox, and then select **Resume migration**.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/resume-migration.png" alt-text="Screenshot of the migration batches page. The Resume migration button is highlighted.":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/resume-migration.png" alt-text="Screenshot of the migration batches page. The Resume migration button is highlighted." border="false":::
 
 The migration should complete successfully.
 
-:::image type="content" source="media/google-workspace-mailbox-migration-fail/migration-synced.png" alt-text="Screenshot of a successful migration example that shows the status Synced":::
+:::image type="content" source="media/google-workspace-mailbox-migration-fail/migration-synced.png" alt-text="Screenshot of a successful migration example that shows the status Synced" border="false":::
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
