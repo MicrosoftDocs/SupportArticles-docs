@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting SMB
-description: Introduces general guidance of troubleshooting scenarios related to SMB.
+title: Guidance for troubleshooting SMB
+description: Introduces general guidance for troubleshooting scenarios related to SMB.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
