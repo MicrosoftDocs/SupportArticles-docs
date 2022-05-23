@@ -19,7 +19,7 @@ In general, a kernel panic is a situation when the kernel is unable to load prop
 
 Make sure the [serial console](/azure/virtual-machines/serial-console-linux.md) is enabled and functional in the Linux VM.
 
-## Symptoms - How to identify a kernel panic?
+## How to identify a kernel panic?
 
 Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify the specific kernel panic string.
 
