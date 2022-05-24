@@ -23,8 +23,8 @@ When you set up Direct Routing, you might experience the following Session Borde
 
 - Session Initiation Protocol (SIP) options are not received.
 - Transport Layer Security (TLS) connections problems occur.
-- The SBC doesn’t respond.
-- The SBC is marked as inactive in the Teams Admin portal.
+- The SBC doesn't respond.
+- The SBC is marked as inactive in the Microsoft Teams admin center.
 
 Such issues are most likely caused by either or both of the following conditions:
 
@@ -50,7 +50,7 @@ This article lists some common issues that are related to SIP options and TLS ce
 
 - After receiving SIP options from the SIP proxy, the SBC responds by sending a **200 OK** message. This step confirms that the SBC is healthy.
 
-- As the final step, the SBC is marked as **Active** in the Teams Admin portal.
+- As the final step, the SBC is marked as **Active** in the Microsoft Teams admin center.
 
 > [!NOTE]
 > In a [hosted model](/microsoftteams/direct-routing-sbc-multiple-tenants), SIP options should be sent from only the hosted SBC. The status of SBCs that are in a derived trunk model are based on the main SBC.
@@ -138,7 +138,7 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 </details>
 
 <details>
-<summary><b>SBC doesn’t trust SIP proxy certificate</b></summary>
+<summary><b>SBC doesn't trust SIP proxy certificate</b></summary>
 
 If the SBC doesn't trust the SIP proxy certificate, download and install the Baltimore CyberTrust root certificate on the SBC. To download the certificate, see [Microsoft 365 encryption chains](/microsoft-365/compliance/encryption-office-365-certificate-chains).
 
@@ -149,9 +149,10 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 <details>
 <summary><b>SBC certificate is invalid</b></summary>
 
-If the [Health Dashboard for Direct Routing](/microsoftteams/direct-routing-health-dashboard) in the Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC.
-
-For a list of supported CAs, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+If the [Health Dashboard for Direct Routing](/microsoftteams/direct-routing-health-dashboard) in the Microsoft Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC. For a list of supported CAs, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  
+When you renew the SBC certificate, you must remove the TLS connections that were established from the SBC to Microsoft with the old certificate and re-establish them with the new certificate. Doing so will ensure that certificate expiration warnings aren't triggered in the Microsoft Teams admin center. 
+To remove the old TLS connections, restart the SBC during a time frame that has low traffic such as a maintenance window. If you can't restart the SBC, contact the vendor for instructions to force the closure of all old TLS connections.
 
 </details>
 
