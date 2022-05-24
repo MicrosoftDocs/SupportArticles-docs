@@ -26,32 +26,10 @@ _Original KB number:_ &nbsp; 2462308
 ## Using Control Panel
 
 1. Select **Start**, search for _Control Panel_, and then select **Control Panel** in the result.
-2. Select **Category** in **View by:**, and then select **User Accounts**.
-3. Select the **Remove user accounts** link.
-4. Select the account that you want to delete.
-5. On the next screen, select the **Delete the account** link.
-6. If you are asked whether you want to keep the files saved by the user, select the **Delete files** button if you don't want the files.
-
-## Using User Accounts Interface
-
-1. Press the Windows Key + R button to open the Run dialog box. In the Run dialog box, type _netplwiz_ and press Enter.
-2. On the User Accounts interface, select the **Users** tab and select the account that you want to remove.
-3. Select the **Remove** button.
-4. On the confirmation prompt, select the **Yes** button.
-
-## Using Registry Editor (for advanced users only)
-
-> [!IMPORTANT]  
-> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
-
-1. Open the **File Explorer** on your computer, and then go to the folder of **C:\Users**.
-2. Find the profile folder of the user account that you want to delete, right click the folder, and then select **Delete** to delete it.
-3. Press the Windows Key + R button to open the Run dialog box. In the Run dialog box, type _regedit_ and press Enter.
-4. In the Registry Editor, navigate to the following key:  
-   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
-
-5. From the left panel, go through each subkeys under the **ProfileList** key. Find the subkey in which the **ProfileImagePath** value matches the path of the profile folder that you just deleted. Then, right click the **ProfileImagePath** value and select **Delete**.
-6. Select the **Yes** button to confirm.
-
-> [!NOTE]
-> The user account will be re-created by using the default profile at the next time the user signs in.
+2. Select **Large icons** in **View by:**, and then select **User Accounts**.
+   >[!NOTE]
+   In Windows Server 2022, Windows 10 and 11, the Settings application opens.  
+   In Windows Server 2012 to Windows Server 2019, the classic System applet opens.
+3. Click the **Advanced System settings** link.
+4. In the dialog that opens, select **Settings** in the **User Profiles** section.
+5. In the next dialog, there is a list of profiles on the system. Select the profile that you want to remove and select **Delete**.
