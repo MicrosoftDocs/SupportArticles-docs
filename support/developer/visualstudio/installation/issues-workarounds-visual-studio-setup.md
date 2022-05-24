@@ -32,7 +32,7 @@ These errors typically occur when the Visual Studio installer experiences issues
 
 - Install Visual Studio from a different source. For example, if you installed Visual Studio from [VisualStudio.com](https://visualstudio.microsoft.com/downloads/) or [Microsoft Download Center](https://www.microsoft.com/download), try downloading Visual Studio from [MSDN](https://msdn.microsoft.com//subscriptions/securedownloads).
 
-- Install Visual Studio by using the `layout` switch or an ISO file. For more information about how to do it, see [Install Visual Studio 2015](/visualstudio/install/install-visual-studio-2015).
+- Install Visual Studio by using the `layout` switch or an ISO file. For more information about how to do it, see [Install Visual Studio 2015](/previous-versions/visualstudio/visual-studio-2015/install/install-visual-studio-2015).
 
 ## 0x80070005 - Access Denied
 
