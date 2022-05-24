@@ -15,7 +15,7 @@ ms.technology: windows-server-user-profiles
 ---
 # Delete a user profile in Windows
 
-The following methods instruct on how to delete a user's profile on a Windows-based device.
+This article introduces on how to delete a user's profile on a Windows-based device.
 
 > [!NOTE]
 > To perform these methods, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure.
