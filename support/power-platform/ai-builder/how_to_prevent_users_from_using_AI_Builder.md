@@ -7,7 +7,7 @@ ms.date: 5/24/2022
 ms.subservice: 
 ---
 
-# AI Builder actions are disabled/deactivated
+# How to prevent users from using AI Builder
 
 This article provides steps to restrict access and usage of AI Builder to certain users
 
