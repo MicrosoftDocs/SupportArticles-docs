@@ -2,6 +2,14 @@
 
 
 
+## Week of May 16, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/19/2022 | Information about Teams known issues | removed |
+
+
 ## Week of May 02, 2022
 
 
