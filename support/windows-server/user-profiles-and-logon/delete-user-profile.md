@@ -26,10 +26,10 @@ _Original KB number:_ &nbsp; 2462308
 ## Using Control Panel
 
 1. Select **Start**, search for _Control Panel_, and then select **Control Panel** in the result.
-2. Select **Large icons** in **View by:**, and then select **User Accounts**.
-   >[!NOTE]
-   In Windows Server 2022, Windows 10 and 11, the Settings application opens.  
-   In Windows Server 2012 to Windows Server 2019, the classic System applet opens.
-3. Click the **Advanced System settings** link.
+2. Select **Large icons** in **View by:**, and then select **System**.
+   > [!NOTE]
+   > In Windows Server 2022, Windows 10 and Windows 11, the **Settings** App opens.  
+   > In Windows Server 2012 to Windows Server 2019, the classic **System** applet opens.
+3. Select the **Advanced System settings** link.
 4. In the dialog that opens, select **Settings** in the **User Profiles** section.
 5. In the next dialog, there is a list of profiles on the system. Select the profile that you want to remove and select **Delete**.
