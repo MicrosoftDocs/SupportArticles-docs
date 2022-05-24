@@ -83,17 +83,17 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     4. In the **Certification Path** tab, select the upper-left certificate, which is the root certificate.
 
-    :::image type="content" source="media/git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="Selecting Certification Path tab in the Certification window.":::
+        :::image type="content" source="media/git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="Selecting Certification Path tab in the Certification window.":::
 
     5. Select **View Certificate** to open **Certificate** window for the root certificate.
 
     6. On the **Details** tab, select **Copy to File...** .
 
-    :::image type="content" source="media/git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="Selecting Details tab in the Certification window.":::
+        :::image type="content" source="media/git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="Selecting Details tab in the Certification window.":::
 
     7. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
 
-    :::image type="content" source="media/git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="Selecting file format on the Certificate Export Wizard.":::
+        :::image type="content" source="media/git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="Selecting file format on the Certificate Export Wizard.":::
 
     8. Save the root certificate on the local disk.
 
