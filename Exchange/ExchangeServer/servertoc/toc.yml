@@ -53,6 +53,8 @@
           href: ../administration/cannot-remove-accepted-domain.md
         - name: Can't remove distribution list members in outlook
           href: ../administration/error-delete-distribution-list-member-via-outlook.md
+        - name: Can't remove remote shared mailbox
+          href: ../administration/cannot-remove-remote-shared-mailbox.md
         - name: Can't reset the Local replica age limit (days) value
           href: ../administration/cannot-reset-local-replica-age-limit-days-value.md
         - name: Can't restore database from backup with MCDB enabled
