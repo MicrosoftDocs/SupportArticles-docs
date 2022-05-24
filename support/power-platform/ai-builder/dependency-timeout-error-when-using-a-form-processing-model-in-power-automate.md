@@ -15,7 +15,7 @@ _Applies to:_ &nbsp; Power Automate
 
 ## Symptoms
 
-You get the dependency timeout error, **408 - Dependency Timeout**.
+You get the dependency timeout error "408 - Dependency Timeout".
 
 ## Cause
 
@@ -25,6 +25,7 @@ When executing a form processing model in Power Automate, the file you're trying
 
 Here are some actions that can be done to improve this.
 
+- The timeout limit of form processing, invoice, receipt, and identity actions has increased from 90 seconds to 60 minutes in April 2022. The flows that contain these actions created or saved after April 2022 have the extended timeout limit of 60 minutes. If the flow was created before that date, edit and re-save the flow to extend the timeout limit.
 - If the file has multiple pages, reduce the document to just the pages you need to process. You can use the **Page range** input in Power Automate to only process the pages you need.
 
     For more information, go to [page range](/ai-builder/form-processing-model-in-flow#page-range) in Power Automate.

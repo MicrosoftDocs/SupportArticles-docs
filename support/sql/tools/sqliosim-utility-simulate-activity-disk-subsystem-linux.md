@@ -116,11 +116,11 @@ Now, you are ready to run SQLIOSim using the command:
 Sample configuration files for various tests can be downloaded from SQL Server support team's [github repo](https://github.com/microsoft/mssql-support/tree/master/sqliosim/sqliosim.cfg.linux).
 
 ```bash
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.default.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.hwcache.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.nothrottle.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.seqwrites.cfg.ini -P /tmp  
-wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.sparse.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.default.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.hwcache.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.nothrottle.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.seqwrites.cfg.ini -P /tmp
+wget https://raw.githubusercontent.com/microsoft/mssql-support/master/sqliosim/sqliosim.cfg.linux/sqliosim.sparse.cfg.ini -P /tmp
 ```
 
 > [!NOTE]

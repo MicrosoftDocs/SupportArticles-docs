@@ -4,7 +4,6 @@ description: You create an ATL ActiveX control with a Font stock property. When 
 ms.date: 04/27/2020
 ms.custom: sap:Integrated development environment (IDE)
 ms.reviewer: shorne, scotbren
-ms.technology: vs-ide
 ---
 # ATL control font stock property doesn't update in Visual Studio Resource Editor
 

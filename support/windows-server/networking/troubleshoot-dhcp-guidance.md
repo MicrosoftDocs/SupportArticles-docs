@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting DHCP
-description: Introduces general guidance of troubleshooting scenarios related to DHCP.
+title: Guidance for troubleshooting DHCP
+description: Introduces general guidance for troubleshooting scenarios related to DHCP.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan

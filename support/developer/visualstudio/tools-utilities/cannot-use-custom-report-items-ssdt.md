@@ -4,7 +4,6 @@ description: This article provides a workaround to resolve a problem that preven
 ms.date: 04/27/2020
 ms.custom: sap:Tools and utilities
 ms.reviewer: bradsy, daleche, christys
-ms.technology: vs-tools-utilities
 ---
 # Can't use Custom Report Items in SQL Server Data Tools for Visual Studio 2015 and Visual Studio 2017
 

@@ -15,7 +15,7 @@ This article provides a solution when you receive a *too many requests* error.
 
 ## Symptoms
 
-You get the error, **429 – TooManyRequests**.
+You get the error "429 – TooManyRequests".
 
 ## Cause
 

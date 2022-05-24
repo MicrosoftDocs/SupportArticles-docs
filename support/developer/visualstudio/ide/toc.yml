@@ -16,9 +16,12 @@
   href: ./release-management-client-crash.md
 - name: Screen readers can't read tool windows
   href: ./screen-readers-not-read-tool-windows.md
-- name: Visual Studio 2012 crashes with StarDist-3
-  href: ./crash-with-stardist-3.md
+- name: Visual Studio 2012 crashes with StarDict-3
+  href: ./crash-with-stardict-3.md
 - name: Help Viewer 2.0 crashes
   href: ./help-viewer-2-crashes.md
+- name: Application unresponsive due to low system memory
+  href: ./visual-studio-unresponsive-resources-consuming-memory.md
 - name: Mouse wheel events don't work in Visual Basic 6.0 IDE
   href: ../visual-basic/ide/mouse-wheel-events-do-not-work.md
+  

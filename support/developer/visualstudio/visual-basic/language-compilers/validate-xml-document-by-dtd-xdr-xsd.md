@@ -4,7 +4,6 @@ description: This article describes how to use the XmlValidatingReader class to 
 ms.date: 10/26/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Validate an XML document by using DTD, XDR, or XSD in Visual Basic  
 
