@@ -36,7 +36,8 @@ To sign in to Teams, use one of the following options.
 
 - Teams Rooms on Android: 1.0.96.2021051904
 - Teams phone devices: 1449/1.0.94.2021101205
-- Teams panels: 1449/1.0.95.2021111203
+- Teams panels: 1449/1.0.97.2021070601
+- Teams displays: 1449/1.0.95.2021111203
 
 For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
@@ -58,7 +59,8 @@ For more information, see [What's new in Microsoft Teams devices](https://suppor
 
 - Teams Rooms on Android: 1.0.96.2021051904
 - Teams phone devices: 1449/1.0.94.2021101205
-- Teams panels: 1449/1.0.95.2021111203
+- Teams panels: 1449/1.0.97.2021070601
+- Teams displays: 1449/1.0.95.2021111203
 
 For more information, see [What's new in Microsoft Teams devices](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Desk_phones).
 
@@ -79,7 +81,7 @@ Restart the Android device remotely from the Microsoft Teams admin center and th
 
 - If the **Username** field is blank, select **Sign in**.
 
-   :::image type="content" source="media/signed-out-of-teams-android-devices/select-sign-in.png" alt-text="Screenshot of selecting sign in on the device page.":::
+   :::image type="content" source="media/signed-out-of-teams-android-devices/username-and-select-sign-in.png" alt-text="Screenshot of the device page with the username field blank and the sign in option selected.":::
 
 5. A pop-up window will display. After a wait time of two to five minutes, the window will be populated with a URL, a code and instructions to sign in. Use the provided information to sign in to the device.
 
