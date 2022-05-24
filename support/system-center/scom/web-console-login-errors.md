@@ -7,14 +7,14 @@ ms.reviewer: msadoff
 ---
 # Host header or IP address binding causes web console login errors in Operations Manager
 
-This article helps you work around an issue where you receive login errors when installing the web console in System Center Operations Manager version 1801 and 1807.
+This article helps you work around an issue where you receive login errors when installing the web console in System Center Operations Manager version 1801, 1807, 2019, or 2022.
 
-_Original product version:_ &nbsp; System Center Operations Manager, version 1801, System Center Operations Manager, version 1807  
+_Original product version:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 4469591
 
 ## Symptoms
 
-When you install the web console in System Center Operations Manager version 1801 or 1807, you receive the following error message when you select the **Use Windows Authentication** sign-in option:
+When you install the web console in System Center Operations Manager, you receive the following error message when you select the **Use Windows Authentication** sign-in option:
 
 > The user credentials are invalid or user does not have permissions...
 
