@@ -50,7 +50,7 @@ _Original KB number:_ &nbsp; 2462308
 4. In the Registry Editor, navigate to the following key:  
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
 
-5. From the left panel, go through each subkeys under the **ProfileList** key. Find the subkey in which the **ProfileImagePath** value matches the path of the profile folder that you just deleted. Then, right click the subkey and select **Delete**.
+5. From the left panel, go through each subkeys under the **ProfileList** key. Find the subkey in which the **ProfileImagePath** value matches the path of the profile folder that you just deleted. Then, right click the **ProfileImagePath** value and select **Delete**.
 6. Select the **Yes** button to confirm.
 
 > [!NOTE]
