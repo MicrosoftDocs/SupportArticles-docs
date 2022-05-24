@@ -19,11 +19,11 @@ ms.date: 4/26/2022
 ---
 # Command-line version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable (run at a command line or in a PowerShell script). This version is an enterprise-ready diagnostic tool for specific client issues. It's useful when administrators have to remotely run a diagnostic tool on computers in their organization.
+The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable. It runs at a command line or in a PowerShell script. This version is an enterprise-ready diagnostic tool for specific client issues. It's useful when administrators have to remotely run a diagnostic tool on computers in their organization.
 
 ## Download and run the command-line version of SaRA
 
-1. Download SaRA by using the following link: [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles)
+1. Download SaRA from [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles)
 1. In the downloaded file, extract the files in the *DONE* folder to a folder that you can access from the user's computer on which you'll run SaRA.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
@@ -157,17 +157,21 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Outlook is running as elevated; the SaRA Command Prompt window isn't elevated|Run an Offline scan of Outlook|*01:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See \<filename> in *%localappdata%\saralogs\UploadLogs*.|
   |Outlook isn't running as elevated; the SaRA Command Prompt window is elevated|None|*04:* Outlook isn't running elevated. Don't use an elevated command-prompt.|
   |Failure to run a scan (for any reason); for example:<ol><li>Outlook isn't installed</li><li>Only one Outlook version is detected, and that version is earlier than 2007</li><li>An exception occurs during the scan</li></ol>|Scan initiated but not completed|*05:* An error occurred while performing a scan of Outlook. You might be able to perform an Offline scan if you exit Outlook and rerun this scenario. You can also try using the full SaRA version.|
+  |Offline Scan with Log Folder location provided |Run an Offline scan of Outlook|*66:* An Offline scan was performed because Outlook is either not running or it is running elevated (as Administrator). See the Outlook configuration details at the location specified by you.|
+  |Normal Scan with Log Folder location provided  |Run a full scan of Outlook|*67:* A Full scan was performed. See the Outlook configuration details at the location specified by you.|
 
 - `OfficeScrubScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
   |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
-  |Office program found .exe files running:</br></br>lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
-  |No Office products found|Exit the scenario|*07:* No installed Office versions were found. Please use the full SaRA version.|
-  |Multiple Office products found|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
+  |Office program found .exe files running: `lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams`|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
+  |-OfficeVersion switch not used and no Office products found|Exit the scenario|*68:* We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion. For SaRA Command line users with version 17.00.8256.000 or earlier the error displayed is -*07:* No installed Office versions were found. Please use the full SaRA version.|
+  |-OfficeVersion switch not used and multiple Office versions detected as installed|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
+  |Office version provided on command line doesn’t match detected installed version|Exit the scenario|*66:* We could not find the specified Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Invalid Office version specified on command line|Exit the scenario|*67:* The Office version that you have specified is invalid. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion. |
   
 - `TeamsAddinScenario`
 
@@ -179,7 +183,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Teams isn't installed|Exit the scenario|*20:* Could not find an installed version of Teams. Please see [https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b](https://support.office.com/article/how-do-i-get-access-to-microsoft-teams-fc7f1634-abd3-4f26-a597-9df16e4ca65b)|
   |Outlook 2013 or later isn't installed|Exit the scenario|*21:* Could not find an installed version of Outlook 2013, or later. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
   |Windows 7 users don't have the [Update for Universal C Runtime in Windows](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows) installed|Exit the scenario|*22:* Pre-requisites not met. Update from KB2999226 needs to be installed. See [https://go.microsoft.com/fwlink/?linkid=2129032](https://go.microsoft.com/fwlink/?linkid=2129032)|
-  |Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect <> 1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
+  |Registry issues detected: <br/><br/>LoadBehavior<>3 or add-in listed under the `DisabledItems` key or TeamsAddin.Connect<>1 under the `DoNotDisableAddinList` key|Run the registry recovery action, and then exit the scenario.|*23:* The registry was updated to address missing or incorrect values. Please exit and restart Outlook.</br></br>*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
   |None of the above conditions were detected|Run the re-register dll recovery action, and then exit the scenario.|*24:* The Microsoft.Teams.AddinLoader.dll was re-registered. Please exit and restart Teams. Then, exit and restart Outlook.|
   |Failure to complete the scenario (for any reason)|Exit the scenario|*17:* An error occurred while running this scenario. You can also try using the full SaRA version.|
 
@@ -191,7 +195,7 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |Scan completed successfully with custom location (-LogFolder)|Exit the scenario|43: A complete Outlook Calendar scan was performed. See the Outlook configuration details at the location specified by you. |
   |User doesn't include -AcceptEULA switch|Exit the scenario|01: Please provide -AcceptEula to continue with this scenario. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
   |Outlook isn’t installed|Exit the scenario|40: To run diagnostics for this scenario, please download and install Microsoft Outlook. For additional information, please visit https://aka.ms/SaRA-CalCheckDocs.|
-  |Unable to identify user’s profile |Exit the scenario|41: Unable to complete this scenario as Microsoft Outlook profile is missing. For additional information, please visit https://aka.ms/SaRA-CalCheckDocs.|
+  |Unable to identify user's profile |Exit the scenario|41: Unable to complete this scenario as Microsoft Outlook profile is missing. For additional information, please visit https://aka.ms/SaRA-CalCheckDocs.|
   |Failure to complete the scenario (for any reason)|Exit the scenario|42: An error occurred while running this scenario. You can also try using the full SaRA version. For additional information, please see this article https://aka.ms/SaRA-CalCheckDocs.|
   |If current active Outlook profile isn't the same as -P switch profile|Exit the scenario|44: Unable to complete this scenario because the profile specified using the -P switch does not match the profile currently running in Outlook. Please close the Outlook application and try again. For additional information, please see this article https://aka.ms/SaRA-CalCheckDocs.|
 
@@ -228,9 +232,9 @@ When you run a scenario by using the command-line version of SaRA, you receive n
 
 ## SaRA command-line version history
 
-Throughout the year, a new build of SaRA is available through the download link that's provided at the beginning of this article. Because each build stops working after 90 days, we recommend that you keep SaRA updated by replacing the files you have with the latest version.
+Throughout the year, a new build of SaRA is available through the download link that's provided at the beginning of this article. Because each build stops working after 90 days, we recommend you keep SaRA updated by replacing the files you have with the latest version.
 
-The following table provides the versions of SaRA that were made available on the specified date.
+The following table lists the versions of SaRA that were released on the specified date.
 
 |Release date|SaRACmd.exe version|
 |----------|-----------|
