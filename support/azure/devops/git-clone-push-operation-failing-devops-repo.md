@@ -32,7 +32,7 @@ To identify the cause of the issues, follow these steps:
 
 The level of tracing set for these variables provides more information similar to the following example about the errors that cause issue:
 
-:::image type="content" source="media/Git-clone-push-operation-failing-devops/Git-clone-cmd-verbose-checklist.png" alt-text="Git clone error information by running commands in verbose mode.":::
+:::image type="content" source="media/git-clone-push-operation-failing-devops/git-clone-cmd-verbose-checklist.png" alt-text="Git clone error information by running commands in verbose mode.":::
 
 To learn more about Git environment variables, see [Git Internals - Environment Variables](https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables).
 
@@ -77,23 +77,23 @@ If you want to continue the TLS/SSL verification that Git does, follow these ste
 
     1. Open Microsoft Edge browser and enter the URL of your TFS server in the address bar such as `https://<servername>/tfs`.
 
-    2. On the address bar, select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/lock-icon.png" alt-text="lock icon."::: icon, and then select the **Connection is secure** link.
+    2. On the address bar, select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/lock-icon.png"::: icon, and then select the **Connection is secure** link.
     
-    3. Select the :::image type="icon" source="media/Git-clone-push-operation-failing-devops/certificate-icon.png" alt-text="Certificate icon."::: icon to open the **Certification** window.
+    3. Select the :::image type="icon" source="media/git-clone-push-operation-failing-devops/certificate-icon.png"::: icon to open the **Certification** window.
 
     4. In the **Certification Path** tab, select the upper-left certificate, which is the root certificate.
 
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="Selecting Certification Path tab in the Certification window.":::
+    :::image type="content" source="media/git-clone-push-operation-failing-devops/viewing-root-certificate-path.png" alt-text="Selecting Certification Path tab in the Certification window.":::
 
     5. Select **View Certificate** to open **Certificate** window for the root certificate.
 
     6. On the **Details** tab, select **Copy to File...** .
 
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="Selecting Details tab in the Certification window.":::
+    :::image type="content" source="media/git-clone-push-operation-failing-devops/copying-certificate-details-file.png" alt-text="Selecting Details tab in the Certification window.":::
 
     7. On the **Certificate Export Wizard**, select **Next**, and then select **Base-64 encoded X.509 (.CER)** file format to export.
 
-    :::image type="content" source="media/Git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="Selecting file format on the Certificate Export Wizard.":::
+    :::image type="content" source="media/git-clone-push-operation-failing-devops/selecting-export-file-format.png" alt-text="Selecting file format on the Certificate Export Wizard.":::
 
     8. Save the root certificate on the local disk.
 
