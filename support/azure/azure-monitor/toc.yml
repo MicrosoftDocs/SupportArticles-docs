@@ -1,7 +1,7 @@
 - name: Azure Monitor
   items:
   - name: Azure Application Insights
-    href: welcome-application-insights.yml
+    href: ./application-insights/welcome-application-insights.yml
   - name: Azure Log Analytics
     href: troubleshoot-portal-connectivity.md
   - name: ../log-analytics/welcome-log-analyticsAzure Log Analytics
