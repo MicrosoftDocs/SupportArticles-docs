@@ -1,7 +1,7 @@
 ---
 title: SQL packages may fail in the local administrator account
 description: Describes an issue where SQL packages may fail when the local administrator account doesn't have certain rights when installing Visual Studio 2015.
-ms.date: 05/20/2022
+ms.date: 05/25/2022
 ms.author: v-sidong
 ---
 
@@ -16,8 +16,8 @@ When you install Visual Studio 2015 on a locked-down desktop, this operation may
 
 ## Cause
 
-These errors occur because the domain administrator removed certain rights from the local administrators account to tighten desktop security.
+These errors may occur if the domain administrator removed certain rights from the local administrators account to tighten desktop security.
 
 ## More information
 
-[SQL Server installation fails after default user rights are removed](/troubleshoot/sql/install/installation-fails-if-remove-user-right)
+For more information about how to diagnose and address these errors, see [SQL Server installation fails after default user rights are removed](/troubleshoot/sql/install/installation-fails-if-remove-user-right).
