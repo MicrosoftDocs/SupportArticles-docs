@@ -25,7 +25,7 @@ When you try to firm an order, you receive the following error message during it
 
 ## Resolution
 
-Items that have a bill of materials (BOM) or formula must be of the *Planning item*, *BOM*, or *formula* type. To change the type of an item, follow these steps.
+Items that have a bill of materials (BOM) or formula must be of the **Planning item**, **BOM**, or **formula** type. To change the type of an item, follow these steps.
 
 1. Go to **Product information management** > **Products** > **Released products**.
 1. Open the relevant product.
