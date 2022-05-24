@@ -24,7 +24,7 @@ landingContent:
             url: ./app-insights/troubleshoot-portal-connectivity.md
           - text: Troubleshooting auto-instrumentation issues
             url: ./app-insights/auto-instrumentation-troubleshoot.md
-            
+
   - title: Troubleshooting Azure Log Analytics issues
     linkLists:
       - linkListType: how-to-guide
