@@ -13,7 +13,7 @@ This article provides solutions for errors that cause the mounting of Azure disk
 
 ## Symptoms
 
-You're trying to deploy a Kubernetes resource such as Deployment and StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that should mount a PersistentVolumeClaim (PVC) referencing an Azure disk.
+You're trying to deploy a Kubernetes resource such as a Deployment and a StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that should mount a PersistentVolumeClaim (PVC) referencing an Azure disk.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors, which causes the mounting operation to fail:
 
@@ -182,7 +182,7 @@ When there's a large number of files already present in the volume, if a `securi
 
 ### Solution: Set fsGroupChangePolicy field to OnRootMismatch
 
-To resolve this error, we recommend that you set `fsGroupChangePolicy: "OnRootMismatch"` in the `securityContext` of a deployment, statefulset or pod.
+To resolve this error, we recommend that you set `fsGroupChangePolicy: "OnRootMismatch"` in the `securityContext` of a Deployment, a StatefulSet or a pod.
 
 OnRootMismatch: Only change permissions and ownership if permission and ownership of root directory doesn't match with expected permissions of the volume. This setting could help shorten the time it takes to change ownership and permission of a volume.
 
