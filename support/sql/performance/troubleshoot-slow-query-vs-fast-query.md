@@ -116,7 +116,7 @@ You can get Elapsed time and CPU time metrics of a query from multiple sources. 
 - If you can collect a query plan, examine the [Actual Execution plan properties](/sql/ssms/scripting/use-the-properties-window-in-management-studio#to-view-the-properties-of-a-showplan-operator) and locate the QueryTimeStats: **ElapsedTime** and **CpuTime** on the left-most operator in the query plan
 
 
- :::image type="content" source="media/troubleshoot-slow-query-comparison/query-time-stats-from-query-plan.png" alt-text="Query-Time-stats-from-query-plan":::
+   :::image type="content" source="media/troubleshoot-slow-query-comparison/query-time-stats-from-query-plan.png" alt-text="CPU-and-Elapsed-Time-in-query-plan":::
 
 ## Step 3. Compare times from both servers and choose a t-shooting path
 
@@ -133,7 +133,7 @@ Once you complete step 2 and have collected the CPU and Elapsed times from both 
   |Server1 |   1100          | 1000        |  90200        |
   |Server2 |   3100          | 3000        | 300000        |
 
-  If this is your scenario go to [here](#scenario-1%3A-query-is-slower-on-server-1-because-it-is-using-more-cpu-than-the-same-query-on-server-2)
+  If this is your scenario go to [here](#scenario-1-query-is-slower-on-server-1-because-its-using-more-cpu-than-the-same-query-on-server-2) 
 
 - **Scenario 2:** Query is slower on Server1 because it's waiting on bottlenecks (Waiter), while the same query on Server2 isn't waiting
 
@@ -145,7 +145,7 @@ Once you complete step 2 and have collected the CPU and Elapsed times from both 
   |Server2 |   1100          |  1000       |  90200        |
   
   
-  If this is your scenario go to [here](#scenario-2%3A-query-is-slower-on-server-1-because-it-is-waiting-on-some-bottlenecks-(waiter)%2C-while-the-same-query-on-server-2-is-not-waiting-(cpu-and-duration-are-close-in-value))
+  If this is your scenario go to [here](#scenario-2-query-is-slower-on-server-1-because-its-waiting-on-some-bottlenecks-waiter-while-the-same-query-on-server-2-is-not-waiting-cpu-and-duration-are-close-in-value)
 
 - **Scenario 3:** Query is slower on Server1 because it is waiting for some bottlenecks (Waiter), while the same query on Server2 is also waiting (Waiter) but either on different bottlenecks and/or shorter waits (Waiter).
 
@@ -156,7 +156,7 @@ Once you complete step 2 and have collected the CPU and Elapsed times from both 
   |Server1 |   8000          |  1000       |  90200        |
   |Server2 |   3000          |  1000       |  90200        |
 
-  If this is your scenario go to [here](#scenario-3%3A-query-is-slower-on-server-1-because-it-is-waiting-for-some-bottlenecks%2C-while-the-same-query-on-server-2-is-also-waiting-on-bottlenecks%2C-but-either-different-bottlenecks-and/or-shorter-waits)
+  If this is your scenario go to [here](#scenario-3-query-is-slower-on-server-1-because-it-is-waiting-for-some-bottlenecks-while-the-same-query-on-server-2-is-also-waiting-on-bottlenecks-but-either-different-bottlenecks-andor-shorter-waits)
 
 - **Scenario 4:** Query is slower on Server1 because it's using more CPU than the same query on Server2 but the additional CPU isn't caused by logical reads.
 
@@ -168,7 +168,7 @@ Once you complete step 2 and have collected the CPU and Elapsed times from both 
   |Server2 |   1000          | 1000        |  90200        |
   
   
-  If this is your scenario go to [here](#scenario-4%3A-query-is-slower-on-server-1-because-it-is-using-more-cpu-than-the-same-query-on-server-2-but-the-additional-cpu-is-not-caused-by-logical-reads)
+  If this is your scenario go to [here](#scenario-4-query-is-slower-on-server-1-because-its-using-more-cpu-than-the-same-query-on-server-2-but-the-additional-cpu-isnt-caused-by-logical-reads)
 
 ## Step 4. Follow the performance scenario that matches your environment 
 
@@ -187,6 +187,8 @@ You've established that both queries are CPU-bound (Runners) and query CPU times
 
   - You can compare execution plans visually. To display execution plans, see [Display an Actual Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan)
   - You can save the execution plans and compare them using [SQL Server Management Studio Plan Comparison feature](/sql/relational-databases/performance/compare-execution-plans)
+
+- See [Diagnose plan differences](#diagnose-query-plan-differences) for details
 
 -  Compare environments: see [Diagnose environment differences](#diagnose-environment-differences)
 
@@ -213,7 +215,7 @@ To illustrate this scenario, the slower query could be waiting on locks on Serve
 
 ### How to do it?
 
-Use the [Diagnose and Resolve waits/bottlenecks](#diagnose-and-resolve-waits/bottlenecks) section to get you started on t-shooting common bottlenecks.
+Use the [Diagnose and Resolve waits/bottlenecks](#diagnose-and-resolve-waitsbottlenecks) section to get you started on t-shooting common bottlenecks.
 
 
 ### Scenario 4: Query is slower on Server 1 because it's using more CPU than the same query on Server 2 but the additional CPU isn't caused by logical reads
@@ -341,12 +343,12 @@ The wait time is roughly calculated by subtracting the CPU time (worker time) fr
 The cause and steps to eliminate them vary with each wait type. Therefore, there's no general method to resolve all wait types. 
 Here are resources to address common wait types: 
 
-- [Understanding and Resolving Blocking issues](/troubleshoot/sql/performance/understand-resolve-blocking)
-- [Troubleshoot slow SQL Server performance caused by I/O issues](/troubleshoot/sql/performance/troubleshoot-sql-io-performance)
-- [WRITELOG waits and common causes](troubleshoot/sql/performance//troubleshoot-sql-io-performance#writelog)
-- [Resolve last-page insert PAGELATCH_EX contention in SQL Server](/troubleshoot/sql/performance/resolve-pagelatch-ex-contention)
+- [Understanding and Resolving Blocking issues](understand-resolve-blocking.md)
+- [Troubleshoot slow SQL Server performance caused by I/O issues](troubleshoot-sql-io-performance.md)
+- [WRITELOG waits and common causes](troubleshoot-sql-io-performance.md#writelog)
+- [Resolve last-page insert PAGELATCH_EX contention in SQL Server](resolve-pagelatch-ex-contention.md)
 - [Memory grants explanation and solutions](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
-- [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](/troubleshoot/sql/performance/troubleshoot-query-async-network-io)
+- [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](troubleshoot-query-async-network-io.md)
 
 ### Diagnose query plan differences
 
