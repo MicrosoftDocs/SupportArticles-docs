@@ -32,13 +32,11 @@ Use the list below to navigate to the appropriate article page for detailed trou
 - [Login failed for user](login-failed-for-user.md)
 
   Covers the following Login errors:
-  - > Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
-  - > Login failed for user '(null)'
-  - > Login failed for user is empty
-  - > Login failed for user '\<username\>'
-  - > Login failed for user '\<domain\>\\\<username\>'
-  - > Login failed for user '\<domainname\>\\\<computername$\>'
-
+  - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
+  - "Login failed for user '(null)'"
+  - "Login failed for user is empty"
+  - "Login failed for user '\<username\>'" or "Login failed for user '\<domain>\\\<username>'"
+    
 - [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](timeout-expired-error.md)
 
 - [An existing connection was forcibly closed by the remote host](tls-exist-connection-closed.md)
