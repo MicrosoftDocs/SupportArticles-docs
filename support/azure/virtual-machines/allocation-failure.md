@@ -16,6 +16,8 @@ ms.author: daberry
 # Troubleshoot allocation failures when you create, restart, or resize VMs in Azure
 
 [!div class="nextstepaction"] Open Notebook in Azure Data Studio
+
+
 When you create a virtual machine (VM), start stopped (deallocated) VMs, or resize a VM, Microsoft Azure allocates compute resources to your subscription. We are continually investing in additional infrastructure and features to make sure that we always have all VM types available to support customer demand. However, you may occasionally experience resource allocation failures because of unprecedented growth in demand for Azure services in specific regions. This problem can occur when you try to create or start VMs in a region while the VMs display the following error code and message:
 
 **Error code**: AllocationFailed or ZonalAllocationFailed
