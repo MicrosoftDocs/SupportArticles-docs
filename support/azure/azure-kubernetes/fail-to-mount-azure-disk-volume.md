@@ -122,11 +122,9 @@ To assign a Contributor role, use one of the following methods:
     az role assignment create --assignee <AKS-identity-ID> --role "Contributor" --scope /subscriptions/<subscription-ID>/resourceGroups/<disk-resource-group>/providers/Microsoft.Compute/disks/<disk name>
     ```
 
-- Assign the role [using the Azure portal](/azure/role-based-access-control/role-assignments-portal)
+- Use the Azure portal
 
-    In the Azure portal, access the disk, select **Access control (IAM)** > **Add** > **Add role assignment**. Select the **Contributor** role in the **Add role assignment** page. Select **Next**. On the **Members** tab, select the identity type of your AKS cluster (service principal or managed identity), and select **Review + assign** to perform the assignment.
-
-    If you use managed identity, use the [control plane identity](/azure/aks/use-managed-identity#summary-of-managed-identities) to manage Azure disks.
+    Refer to detailed steps that's introduced in [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal) to assign a Contributor role. If you assign the Contributor role to a managed identity, use the [control plane identity](/azure/aks/use-managed-identity#summary-of-managed-identities) to manage Azure disks.
 
 ## <a id="error3"></a>Volume is already used by pod
 
