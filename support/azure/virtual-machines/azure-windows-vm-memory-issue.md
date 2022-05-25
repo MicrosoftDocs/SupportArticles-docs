@@ -2,6 +2,8 @@
 title: Troubleshoot high memory issues on Azure virtual machines
 description: Discusses high memory usage issues that occur on Azure Windows virtual machines.
 ms.date: 05/09/2022
+author: mukeshnandams
+ms.author: genli
 ms.reviewer: mnanda, mahuss
 ms.service: virtual-machines
 ms.collection: windows
