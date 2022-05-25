@@ -78,3 +78,8 @@
   href: ./version-visual-studio-requires-april-2014-update.md
 - name: Some shortcut names still indicate preview
   href: ./issues-workarounds-visual-studio-2013-setup.md
+- name: SQL packages may fail in the local administrator account
+  href: ./packages-fail-local-administrator-not-rights.md
+- name: Invalid entries passed to switch
+  href: ./invalid-entries-passed-switch.md
+  
