@@ -294,13 +294,13 @@ First establish if the comparison between the two servers/databases is valid.
     ```
 
 
-### Diagnose and resolve Waits/bottlenecks
+## Diagnose and resolve Waits/bottlenecks
 
 To identify queries that are waiting on bottlenecks, you need to discover how long the waits are and what the bottleneck is. See [wait types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql). Once you identify the wait type, your goal is to reduce it or eliminate it completely.
 
 The wait time is roughly calculated by subtracting the CPU time (worker time) from the elapsed time of a query. The CPU time is actual execution time, the remaining part of the lifetime of the query is waiting.
 
-#### Identify the bottleneck or wait
+### Identify the bottleneck or wait
 
 - Here's a query to help identify historical long-waiting queries (>20% of overall elapsed time) since the start of SQL Server:
 
@@ -338,7 +338,7 @@ The wait time is roughly calculated by subtracting the CPU time (worker time) fr
 
 - Also if you're familiar with  [PSSDIAG](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/#readme) LightPerf or GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. 
 
-#### Eliminate or reduce the wait
+### Eliminate or reduce the wait
 
 The cause and steps to eliminate them vary with each wait type. Therefore, there's no general method to resolve all wait types. 
 Here are resources to address common wait types: 
@@ -350,7 +350,7 @@ Here are resources to address common wait types:
 - [Memory grants explanation and solutions](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
 - [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](troubleshoot-query-async-network-io.md)
 
-### Diagnose query plan differences
+## Diagnose query plan differences
 
 If you establish that query plans are different, then you can investigate why query plans are different. The following are common causes for differences in query plans:
 
