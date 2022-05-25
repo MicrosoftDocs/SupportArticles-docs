@@ -4,7 +4,7 @@ description: This article discusses problems that might occur when you try to pe
 author: Dipesh-Choubisa
 ms.author: v-dchoubisa
 ms.topic: troubleshooting 
-ms.date: 05/20/2022
+ms.date: 05/25/2022
 ms.service: az-devops-project
 ---
 
@@ -12,7 +12,7 @@ ms.service: az-devops-project
 
 This article discusses problems that might occur when you try to perform Git clone or Git push function to an Azure DevOps repository.
 
-_Applies to:_ Azure DevOps Services, Azure DevOps Server
+_Applies to:_&nbsp; Azure DevOps Services, Azure DevOps Server
 
 ## Issues while performing Git clone or Git push to the Azure DevOps repositories
 
