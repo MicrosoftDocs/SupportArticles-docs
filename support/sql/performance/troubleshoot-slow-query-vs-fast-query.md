@@ -411,34 +411,34 @@ If you establish that query plans are different, then you can investigate why qu
     ```
 
   - Hardware differences (CPU count, Memory size)
+
     ```sql
     SELECT cpu_count, physical_memory_kb/1024/1024 PhysicalMemory_GB 
     FROM sys.dm_os_sys_info
     ```
 
-   - Hardware differences according to Query optimizer. You can examine a query plan's OptimizerHardwareDependentProperties in XML element and see if SQL Server considers hardware differences significant for a plan change. 
+   - Hardware differences according to Query optimizer. You can examine a query plan's OptimizerHardwareDependentProperties in XML element and see if SQL Server considers hardware differences significant for a plan change.
 
-    ```sql
-    
-	WITH xmlnamespaces(DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/showplan')
-    SELECT
+     ```sql
+     WITH xmlnamespaces(DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/showplan')
+     SELECT
       txt.text,
       t.OptHardw.value('@EstimatedAvailableMemoryGrant', 'INT') AS EstimatedAvailableMemoryGrant , 
       t.OptHardw.value('@EstimatedPagesCached', 'INT') AS EstimatedPagesCached, 
       t.OptHardw.value('@EstimatedAvailableDegreeOfParallelism', 'INT') AS EstimatedAvailDegreeOfParallelism,
       t.OptHardw.value('@MaxCompileMemory', 'INT') AS MaxCompileMemory
-    FROM sys.dm_exec_cached_plans AS cp
-    CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle) AS qp
-    CROSS APPLY qp.query_plan.nodes('//OptimizerHardwareDependentProperties') as t(OptHardw)
-    CROSS APPLY sys.dm_exec_sql_text (CP.plan_handle) txt
-    WHERE text like '%part or all of your query here%'
-    ```
+     FROM sys.dm_exec_cached_plans AS cp
+     CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle) AS qp
+     CROSS APPLY qp.query_plan.nodes('//OptimizerHardwareDependentProperties') as t(OptHardw)
+     CROSS APPLY sys.dm_exec_sql_text (CP.plan_handle) txt
+     WHERE text like '%part or all of your query here%'
+     ```
 
   - Is there an [Optimizer timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/understanding-optimizer-timeout-and-how-complex-queries-can-be/ba-p/319188). Query optimizer can stop evaluating plan options if the query being executed is very complex. When it stops, it picks the plan with the lowest cost that's available at the time.  This can lead to an arbitrary plan choice on one server vs. another server.
   
   - SET options. Some SET options are plan-affecting. For example, see [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql#remarks). For more information on SET options that affect query plan, see [sys.dm_exec_plan_attributes](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql#set-options)
 
-  - Query Hint differences. Does one query use [query hints](sql/t-sql/queries/hints-transact-sql-query) and the other not? You have to examine query text manually to establish the presence of query hints.
+  - Query Hint differences. Does one query use [query hints](/sql/t-sql/queries/hints-transact-sql-query) and the other not? You have to examine query text manually to establish the presence of query hints.
   
   - Parameter Sensitive plans (parameter sniffing issue). Are you testing the query the exact same parameter values? If not, then you may start there. Also, could it be that a plan was compiled earlier that was based on a different parameter value than the plan on the other server? You may test the two queries using the RECOMPILE query hint to ensure there is no plan reuse taking place. See [Investigate and resolve parameter-sensitive issues](/troubleshoot/sql/performance/troubleshoot-high-cpu-usage-issues#step-5-investigate-and-resolve-parameter-sensitive-issues)  
 
