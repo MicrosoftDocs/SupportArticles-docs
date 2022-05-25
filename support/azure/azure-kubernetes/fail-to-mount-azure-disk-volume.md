@@ -54,7 +54,7 @@ To resolve this error, use one of the following solutions:
 
 To make sure the disk and node that hosts the pod are in the same availability zone, use [node affinity](https://kubernetes.io/docs/tasks/configure-pod-container/assign-pods-nodes-using-node-affinity/).
 
-Refer to the following command as an example:
+Refer to the following script as an example:
 
 ```yml
 affinity:
