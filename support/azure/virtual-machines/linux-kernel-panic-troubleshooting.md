@@ -68,7 +68,7 @@ This kind of event is commonly related but not limited to:
 
 In order to deal with this kind of kernel panic, the following approaches can be used:
 
-### Method 1: Using the Azure serial console
+#### Method 1: Using the Azure serial console
 
 Use the Azure serial console to interrupt the boot process and select a previous kernel version, if available. This way, the VM will be able to boot up again, then you can use one of the following methods to fix the specific issue with the non-booting kernel:
 
@@ -77,7 +77,7 @@ Use the Azure serial console to interrupt the boot process and select a previous
 * Review the loaded pr missing kernel modules.
 * Review the partitions.
 
-### Method 2: Offline repair using a rescue VM
+#### Method 2: Offline repair using a rescue VM
 
 In case the Azure serial console isn't available or no previous kernel is available, you need a rescue/repair VM to do an offline repair.
 
