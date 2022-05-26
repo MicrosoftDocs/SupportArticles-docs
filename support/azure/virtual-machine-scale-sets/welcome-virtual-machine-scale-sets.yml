@@ -65,4 +65,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: FAQ for Azure virtual machine scale sets
-            url: azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq
+            url: /azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq
