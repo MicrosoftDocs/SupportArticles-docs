@@ -10,7 +10,7 @@ ms.service: virtual-machines
 ms.collection: windows
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
-ms.date: 11/16/2018
+ms.date: 05/26/2022
 ms.author: genli
 
 ---
@@ -50,18 +50,28 @@ This article shows how to reset the network interface for Azure Windows VM to re
     $SubscriptionID = "<Subscription ID>"​
     $VM = "<VM Name>"
     $ResourceGroup = "<Resource Group>"
-    $VNET = "<Virtual Network>"
-    $IP = "NEWIP"
-    
+    $VNET = "<Virtual network name>"
+    $NetInter="<The Network interface of the VM>"
+    $IP = "<New IP>"
+    $subnet= "<The virtual network subnet>"
+
     #Log in to the subscription​ 
     Add-AzAccount
     Select-AzSubscription -SubscriptionId $SubscriptionId 
         
     #Check whether the new IP address is available in the virtual network.
-    Test-AzureStaticVNetIP –VNetName $VNET –IPAddress  $IP
+    Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup | Test-AzPrivateIPAddressAvailability -IPAddress $IP
     
     #Add/Change static IP. This process will not change MAC address
-    Get-AzVM -ResourceGroupName $ResourceGroup -Name $VM | Set-AzureStaticVNetIP -IPAddress $IP | Update-AzVM
+    $vnet = Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup
+
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name mysubnet -VirtualNetwork $vnet
+
+    $nic = Get-AzNetworkInterface -Name  $NetInter -ResourceGroupName  $ResourceGroup
+
+    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $IP -Subnet $subnet -Primary
+
+    $nic | Set-AzNetworkInterface
     ```
 
 3. Try to RDP to your machine. If successful, you can change the Private IP address back to the original if you would like. Otherwise, you can keep it.
@@ -82,7 +92,7 @@ To reset network interface, follow these steps:
 6. Change the **IP address** to another IP address that is available in the Subnet.
 7. Select **Save**.
 8. The virtual machine will restart to initialize the new NIC to the system.
-9. Try to RDP to your machine.    If successful, you can choose to revert the Private IP address back to the original.  
+9. Try to RDP to your machine.  If successful, you can choose to revert the Private IP address back to the original.  
 
 #### Use Azure PowerShell
 
