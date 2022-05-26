@@ -13,7 +13,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 ## Symptoms
 
-You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
+You deploy a Kubernetes resource such as a Deployment and a StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
 
@@ -390,6 +390,6 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 ## More information
 
-- If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
+If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-- If the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
