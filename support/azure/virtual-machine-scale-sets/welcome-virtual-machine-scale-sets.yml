@@ -9,9 +9,9 @@ metadata:
   services: virtual-machine-scale-sets
   ms.service: virtual-machine-scale-sets #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: jc-mackin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: v-jcmackin #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/5/2021
+  author: genlin   #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 5/27/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -24,7 +24,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Error: AllocationFailed or ZonalAllocationFailed
+          - text: Error AllocationFailed or ZonalAllocationFailed
             url: allocationfailed-or-zonalallocationfailed.md
 
    # Card
@@ -58,3 +58,11 @@ landingContent:
         links:
           - text: VM extension provisioning errors
             url: ./vm-extension-provisioning-errors.md
+  
+    # Card
+  - title: Frequently asked questions (FAQ)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: FAQ for Azure virtual machine scale sets
+            url: azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq
