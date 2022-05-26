@@ -25,7 +25,7 @@ Use the Azure portal to view the serial console log output of the VM in the boot
 
 A kernel panic looks similar to the output below and will show up at the end of the serial console log:
 
-```bash
+```output
 Probing EDD (edd=off to disable)... ok
 Memory KASLR using RDRAND RDTSC...
 [  300.206297] Kernel panic - xxxxxxxx
