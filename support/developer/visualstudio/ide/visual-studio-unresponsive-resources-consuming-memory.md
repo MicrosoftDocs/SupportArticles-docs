@@ -16,13 +16,13 @@ This article helps you mitigate unstable or unresponsive behavior in Visual Stud
 
 On your system, some applications might consume a lot of memory and might not be in active use. To check which applications can be causing this issue, follow these steps:
 
-1. Select the **Ctrl**+**Shift**+**Esc** keys to open **Task Manager**.
+1. Select Ctrl+Shift+Esc keys to open **Task Manager**.
 1. Select the **Details** tab.
 1. Right-click on a column header, and then select the **Select Columns** item.
 1. Select the **Commit size** checkbox in the **Select Columns** window, and then select **OK**.
 1. On the **Commit size** column, double-click the column header to sort the commit size by descending order.
 
-    :::image type="content" source="media/visual-studio-stop-reponding-resources-consuming-disk-space/task-manager-details-tab-1.png" alt-text="Commit size column in Details tab of Task Manager.":::
+    :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/task-manager-details-tab.png" alt-text="Viewing Commit size in the Details tab.":::
 
 ### Workaround: Close the memory consuming applications that you aren't using
 
@@ -48,21 +48,21 @@ This problem might result in instability of the programs such as Visual Studio.
 
 1. Select **Settings…** in the **Performance** section.
 
-    :::image type="content" source="media/visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-advanced-settings-1.png" alt-text="Selecting Settings in the Performance group.":::
+    :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/system-properties-advanced-settings.png" alt-text="Selecting Settings in the Performance group.":::
 
 1. On the **Performance Options** window, select the **Advanced** tab.
 
 1. Select **Change…** in the **Virtual Memory** section.
 
-    :::image type="content" source="media/visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-change-button-1.png" alt-text="Selecting Change button in Virtual Memory group.":::
+    :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/system-properties-change-button.png" alt-text="Selecting Change button in the Virtual Memory group.":::
 
 #### Step 2: Setting optimal paging file
 
 - We recommend that you let the system manage the paging file transparently for you. To do this, select the **Automatically manage paging file size for all drives** checkbox, if not checked.
 
-    :::image type="content" source="media/visual-studio-stop-reponding-resources-consuming-disk-space/system-properties-virtual-memory-1.png" alt-text="Virtual Memory window and settings.":::
+    :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/system-properties-virtual-memory.png" alt-text="Virtual Memory window and settings.":::
 
-- If you’ve configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the **Windows**+**E** keys to open the **File Explorer** window on your computer.
+- If you’ve configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the Windows+E keys to open the **File Explorer** window on your computer.
 
 - If you want to customize paging file location, uncheck the **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
 
