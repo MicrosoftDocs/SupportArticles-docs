@@ -202,7 +202,7 @@ You've established that both queries are CPU-bound (Runners) and query CPU times
 
 ### How to do it?
 
-
+Use the [Diagnose and Resolve waits/bottlenecks](#diagnose-and-resolve-waitsbottlenecks) section to get you started on t-shooting common bottlenecks.
 
 ### Scenario 3: Query is slower on Server 1 because it is waiting for some bottlenecks, while the same query on Server 2 is also waiting on bottlenecks, but either different bottlenecks and/or shorter waits
 
