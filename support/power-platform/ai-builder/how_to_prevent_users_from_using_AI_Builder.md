@@ -1,34 +1,45 @@
 ---
-title: How to prevent users from using AI Builder
-description: this article provides steps on How to prevent users from using AI Builder
-ms.reviewer: 
+title: Prevent users from using AI Builder
+description: This article provides steps on how to prevent users from using AI Builder.
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
-ms.date: 5/24/2022
+ms.date: 5/26/2022
 ms.subservice: 
 ---
 
-# How to prevent users from using AI Builder
+# Prevent users from using AI Builder
 
-This article provides steps to restrict access and usage of AI Builder to certain users
+This article provides steps to restrict access and usage of AI Builder to certain users.
 
 _Applies to:_ AI Builder
 
-## Prerequisite
+## Symptoms
 
-You need to be Administrator of your organization ID to perform this action.
+Users can access AI Builder when they should be prohibited.
+
+## Cause
+
+Users have rights to create AI models.
 
 
 ## Resolution
 
-1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments). > Environments
-2. Select your environment> Settings
-3. Select Users + permissions > Security Roles
-4. Select Environment Maker > Edit
+You need to be Administrator of your organization ID to perform this action.
 
-5. Select Custom Entities Tab> AI Model > uncheck Create
+1. Sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com/environments).
 
-:::image type="content" source="media/how-to-prevent-users-from-using-AI-Builder/security_role_environment_maker.png" alt-text="Uncheck create in the table AI Model." border="false":::
+1. On the left pane, select **Environments**.
+
+1. On the right pane, select your environment, ad then select **Settings**.
+
+1. Select **Users** + permissions > **Security Roles**.
+
+1. Select **Environment Maker** > **Edit**.
+
+1. In the **Custom Entities** tab, select **AI Model** and then uncheck the option in the **Create** column.
+
+:::image type="content" source="media/how-to-prevent-users-from-using-ai-builder/security_role_environment_maker.png" alt-text="Screenshot of the unchecked Create option in the table AI Model." border="false":::
 
 ## Resources
 
-For more information, see [Roles and security in AI Builder](https://docs.microsoft.com/ai-builder/security).
+For more information, go to [Roles and security in AI Builder](/ai-builder/security).
