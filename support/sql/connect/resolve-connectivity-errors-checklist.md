@@ -60,32 +60,32 @@ If you aren't able to run SQLCheck on your SQL Server computer, you can check th
 
    Use the following command in PowerShell to check the status of SQL Server services on the system:
   
-    ```PowerShell
+    ```powershell
     Get-Service | Where {$_.status -eq 'running' -and $_.DisplayName -match "sql server*"}
     ```
 
    Use the following command to search the error log file for the specific string "SQL Server is now ready for client connections. This is an informational message; no user action is required.":
   
-    ```PowerShell
+    ```powershell
     Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "SQL Server is now ready for client connections."
     ```
 
 1. Verify basic connectivity over IP address and check for any abnormalities: `ping -a <SQL Server machine>, ping -a <SQL Server IP address>`. If you notice any issues, work with your network administrator. Alternatively, you can use `Test-NetConnection` in PowerShell:
 
-   ```PowerShell
+   ```powershell
    $servername = "DestinationServer"
    Test-NetConnection -ComputerName $servername
    ```
 
-1. Check whether the SQL Server is listening on appropriate protocols by reviewing the error log:
+1. Check whether SQL Server is listening on appropriate protocols by reviewing the error log:
 
-   ```PowerShell
+   ```powershell
     Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Include Errorlog |select-string "Server is listening on" , "ready to accept connection on" -AllMatches
    ```
 
-1. Check whether you're able to connect to the SQL Server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the UDL test procedure, see [Test OLE DB connectivity to SQL Server by using a UDL file](test-oledb-connectivity-use-udl-file.md). Alternately, you can use the following script to create and launch a *UDL-Test.udl* file (stored in the *%TEMP%* folder):
+1. Check whether you're able to connect to SQL Server by using a UDL file. If it works, then there may be an issue with the connection string. For instructions on the UDL test procedure, see [Test OLE DB connectivity to SQL Server by using a UDL file](test-oledb-connectivity-use-udl-file.md). Alternately, you can use the following script to create and launch a *UDL-Test.udl* file (stored in the *%TEMP%* folder):
 
-    ```PowerShell
+    ```powershell
     clear
     
     $ServerName = "(local)"
@@ -97,11 +97,11 @@ If you aren't able to run SQLCheck on your SQL Server computer, you can check th
     Invoke-Expression ($env:temp + "\UDL-Test.udl")
     ```
 
-1. Check whether you're able to connect to the SQL Server from other client systems and different user logins. If you're able to, the issue could be specific to the client or login that is experiencing the issue. Check the Windows event logs on the problematic client for more pointers. Also, check whether network drivers are up to date.
+1. Check whether you're able to connect to SQL Server from other client systems and different user logins. If you're able to, the issue could be specific to the client or login that is experiencing the issue. Check the Windows event logs on the problematic client for more pointers. Also, check whether network drivers are up to date.
 
-1. If you're experiencing login failures, make sure that a login (server principal) exists and it has `CONNECT SQL` permissions to the SQL Server. In addition, make sure that the default database that's assigned to the login is correct, and that the mapped database principal has `CONNECT` permissions to the database. For more information about how to grant `CONNECT` permissions to the database principal, see [GRANT Database Permissions](/sql/t-sql/statements/grant-database-permissions-transact-sql#:~:text=CONTROL%20SERVER-,CONNECT,-CONNECT%20REPLICATION). For more information about how to grant `CONNECT SQL` permissions to the server principal, see [GRANT Server Permissions](/sql/t-sql/statements/grant-server-permissions-transact-sql#:~:text=CONTROL%20SERVER-,CONNECT%20SQL,-CONTROL%20SERVER). Use the following script to help you identify these permissions:
+1. If you're experiencing login failures, make sure that a login (server principal) exists and it has `CONNECT SQL` permissions to SQL Server. In addition, make sure that the default database that's assigned to the login is correct, and that the mapped database principal has `CONNECT` permissions to the database. For more information about how to grant `CONNECT` permissions to the database principal, see [GRANT Database Permissions](/sql/t-sql/statements/grant-database-permissions-transact-sql#:~:text=CONTROL%20SERVER-,CONNECT,-CONNECT%20REPLICATION). For more information about how to grant `CONNECT SQL` permissions to the server principal, see [GRANT Server Permissions](/sql/t-sql/statements/grant-server-permissions-transact-sql#:~:text=CONTROL%20SERVER-,CONNECT%20SQL,-CONTROL%20SERVER). Use the following script to help you identify these permissions:
 
-    ```PowerShell
+    ```powershell
     clear
     ## replace these variables with the login, user, database and server 
     $server_principal = "CONTOSO\JaneK"  
