@@ -306,9 +306,7 @@ items:
   - name: Common company resource access error codes
     href: troubleshoot-company-resource-access-problems.md
   - name: Endpoint protection common errors
-    href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
-  - name: Device-only subscription
-    href: device-licenses-introduction.md
+    href: troubleshoot-endpoint-protection-in-microsoft-intune.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md
   - name: Can't query the Intune Data Warehouse
