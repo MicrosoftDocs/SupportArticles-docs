@@ -390,6 +390,6 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 ## More information
 
-- If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
+If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-- If the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
