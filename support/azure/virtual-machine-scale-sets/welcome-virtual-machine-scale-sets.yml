@@ -20,16 +20,31 @@ landingContent:
 # Start card title with a verb
 
   # Card
-  - title: Scaling issues with the scale set
+  - title: Troubleshoot allocation failures
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error: AllocationFailed or ZonalAllocationFailed
+            url: allocationfailed-or-zonalallocationfailed.md
+
+   # Card
+  - title: Troubleshoot compute health
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resource Health shows Degraded state in VMSS
+            url:  resource-health-degraded-state.md
+   # Card
+  - title: Troubleshoot scaling errors
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./virtual-machine-scale-sets-quota-exceeded.md
+            url: virtual-machine-scale-sets-quota-exceeded.md
           - text: Resolve errors for resource quotas
             url: /azure/azure-resource-manager/templates/error-resource-quota
    # Card
-  - title: Deployment issues with the scale set
+  - title: Troubleshoot deployment errors
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -37,9 +52,9 @@ landingContent:
             url: vmss-public-ip-count-limit-exceeded.md
 
    # Card
-  - title: VM extension issues
+  - title: Troubleshoot extension issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: VM extension provisioning errors in Virtual Machine Scale Sets
+          - text: VM extension provisioning errors
             url: ./vm-extension-provisioning-errors.md
