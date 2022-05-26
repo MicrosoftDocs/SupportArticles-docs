@@ -41,7 +41,7 @@ If the diagnostic doesn't detect any issue, but you still can't sign in to Teams
 > By downloading this app, you agree to the terms of the [Microsoft Services Agreement and Privacy Statement](https://www.microsoft.com/servicesagreement).
 
 > [!div class="nextstepaction"]
-> [Resolve the Issue with SaRA](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
+> [Resolve the issue with SaRA](https://aka.ms/SaRA-TeamsSignInScenarioDocs)
 
 ## Fix the issue manually
 
