@@ -1,7 +1,7 @@
 ---
-title: VM Inspector error messages
+title: VM Inspector error messages and common solutions
 description: Review a reference table that describes the error codes for the VM Inspector for Azure virtual machines.
-ms.date: 4/18/2022
+ms.date: 5/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: mimckitt
@@ -35,14 +35,14 @@ The following table describes the error codes that the VM Inspector can return a
 |              400 | `InvalidUploadSasUri`                         | The `uploadSasUri` input parameter isn't valid. The server returned an error while it retrieved data from the blob.                                                                                |
 |              400 | `UploadSasUriExpired`                         | The `uploadSasUri` input parameter is expired. Check the value of the expiration time parameter (`se`).                                                                                            |
 |              403 | `DiskInspectForbiddenError`                   | The disk doesn't have the correct access granted to execute disk inspection. Grant the correct access and try again. 
-|              404 | `DiagnosticOperationNotFound`                 | $"Diagnostic operation with operationId: {operationId} is not found in location: {location} for subscription: {subscriptionId}. Please check subscription and location values and try again."
+|              404 | `DiagnosticOperationNotFound`                 | Diagnostic operation with operationId: {operationId} is not found in location: {location} for subscription: {subscriptionId}. Please check subscription and location values and try again.
 |              404 | `DiagnosticsMetadataNotFound`                  | Unable to get Diagnostics metadata.
 |              404 | `DiskInspectionMetadataNotFound`              | Unable to get Disk Inspection metadata.
-|              404 | `StorageAccountNotFoundInARM`                 | Unable to check access on resource of type: '{0}', resourceId: '{1}' due to resource not being found. Please check if the resource exists and try again.
-|              404 | `StorageConfigurationNotFound`                | Unable to find a storage configuration for given subscriptionId: '{0}', location: '{1}'. Please check the value and try again or invoke "registerStorageConfiguration" to add a new storage configuration.
-|              404 | `VirtualMachineNotFoundInARM`                | Unable to check access on resource of type: '{0}', resourceId: '{1}' due to resource not being found. Please check if the resource exists and try again.                                                                              |
+|              404 | `StorageAccountNotFoundInARM`                 | Storage Account '{0}' is not found. Please choose another storage account and try again. 
+|              404 | `StorageConfigurationNotFound`                | Unable to find a storage configuration for given subscriptionId: '{0}', location: '{1}'. Please check value of subscriptionId and try again or invoke "registerStorageConfiguration" to add a new storage configuration.
+|              404 | `VirtualMachineNotFoundInARM`                | Virtual machine '{0}' is not found. Please choose another virtual machine and try again.                                                                               |
 |              405 | `EncryptedDiskNotSupported`                   | Disk inspection isn't supported for the specified VM and encrypted operating system disk.
-|              405 | `ForbiddenError`                               | Caller with objectId: '{0} 'does not have access to perform action: '{1}' on resourceType: '{2}' for resourceId: '{3}'. Please check permissions and try again.                                                                                                          |
+|              405 | `ForbiddenError`                               | Caller does not have access to perform action(s): '{0}' on storage account: '{1}'. Please check the full set of required permissions.                                                                                                         |
 |              405 | `InvalidDiskStatus`                           | Disk inspection isn't supported for the specified operating system disk and provisioning state.                                                                                                    |
 |              405 | `ResourceNotSupported`                        | A specified resource isn't supported.
 |              405 | `ResourceNotSupported`                        | Disk inspection is not supported for VM '{0}' with encrypted OS disk '{1}'.
@@ -52,13 +52,40 @@ The following table describes the error codes that the VM Inspector can return a
 |              405 | `UnmanagedDiskNotSupported`                   | Disk inspection isn't supported for the specified VM and unmanaged operating system disk.
 |              500 | `DiskInspectInternalServerError`              | An unexpected internal server error occurred during disk inspection. Try again later.
 |              500 | `InternalServerError`                         | An unexpected internal server error occurred while running disk inspection.
-|              500 | `InternalServerError`                         | Failed to register a new storage configuration. Subscription: '{0}', StorageAccount: '{1}', Location: '{1}'. Please check values and try again later.
-|              500 | `InternalServerError`                         | Failed to update an existing configuration for subscriptionId: '{0}', location: '{1}'. Please try again.
-|              500 | `InternalServerError`                         | Failed to validate if a storage configuration exists. Subscription: '{0}', Location: '{1}'. Please check the subscriptionId value and try again.
-|              500 | `InternalServerError`                         | Unable to check if caller has access to perform action: '{0}' on resourceType: '{1}' for resourceId: '{2}' as incoming request does not have caller's objectId. Please try again.
-|              500 | `InternalServerError`                         | Unable to check if caller with objectId: '{0}' has access to perform action: '{1}' on resourceType: '{2}' for resourceId: '{3}' as no decision given from downstream component. Please try again.
-|              500 | `InternalServerError`                         | Unable to check if caller with objectId: '{0}' has access to perform action: '{1}' on resourceType: '{2}' for resourceId: '{3}' either due to missing action or resource information. Please try again.
+|              500 | `InternalServerError`                         | Failed to register storage account. Please try again. If problem still persists, create a support request.
+|              500 | `InternalServerError`                         | Failed to update storage account. Please try again. If problem still persists, create a support request. 
+|              500 | `InternalServerError`                         | Failed to validate if a storage configuration exists. Please try again. If problem still persists, create a support request.
+|              500 | `InternalServerError`                         | An unexpected internal server error has occurred. If problem still persists, create a support request.
 |              500 | `InternalServerError`                         | VM '{0}' metadata are invalid. Please ensure that VM was provisioned successfully and not deleted.
+
+## Common errors and solutions
+The following are common issues when using VM Inspector and known solutions. 
+
+### Error message 405 "Caller does not have access to perform action(s): '{0}' on storage account: '{1}'. Please check the full set of required permissions." 
+
+This error can occur if a user doesn't have enough permissions to run VM Inspector on the virtual machine or storage account. For example, a user with a Service Administrator role on the resources will result in a Forbidden error. Users with only classic administrator roles will also see Forbidden errors. At minimum, a user must have the following RBAC permissions assigned: 
+
+Access on the virtual machine: 
+- "Microsoft.Compute/virtualMachines/read"
+- "Microsoft.Compute/virtualMachines/write"
+- "Microsoft.Compute/virtualMachines/delete"
+- "Microsoft.Compute/virtualMachines/redeploy/action"
+- "Microsoft.Compute/virtualMachines/restart/action"
+- "Microsoft.Compute/virtualMachines/dellocate/action"
+
+The closest built-in role that can be used is VM Contributor. For more information, see [Azure built-in roles - Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor).
+
+Access on the storage account: 
+- "Microsoft.Storage/storageAccounts/read"
+- "Microsoft.Storage/storageAccounts/write" 
+- "Microsoft.Storage/storageAccounts/listkeys/action"
+- "Microsoft.Storage/storageAccounts/listServiceSas/action"
+
+The closest built-in role that can be used is Storage Account Contributor. For more information, see [Azure built-in roles - Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor).
+
+For more information on RBAC permissions and how-to guides, see [Azure RBAC Documentation](/azure/role-based-access-control/index).
+
+Custom roles can also be created to make it easier to replicate permissions across users. For more information on how to set up customer rules, see [Azure Custom Roles](/azure/role-based-access-control/custom-roles).
 
 ## Resources
 
