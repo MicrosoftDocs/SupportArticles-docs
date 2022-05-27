@@ -1,7 +1,7 @@
 ---
 title: How the proxyAddresses attribute is populated in Azure AD
 description: Describes how the proxyAddresses attribute is populated in Azure AD. Provides example scenarios.
-ms.date: 23/05/2022
+ms.date: 05/23/2022
 ms.reviewer: "willfid,riantu,nualex,reviei"
 ms.service: active-directory
 ms.subservice: enterprise-users
