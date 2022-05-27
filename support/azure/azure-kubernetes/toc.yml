@@ -170,6 +170,6 @@
   - name: The credentials in ServicePrincipalProfile were invalid
     href: invalid-service-principal-profile-credentials-or-client-secret.md
 
-- name: Errors when pulling images from ACR to AKS cluster
+- name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
 
