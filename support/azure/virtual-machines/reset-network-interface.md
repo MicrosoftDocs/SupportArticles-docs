@@ -52,23 +52,27 @@ This article shows how to reset the network interface for Azure Windows VM to re
     $NetInter="<The Network interface of the VM>"
     $VNET = "<Virtual network>"
     $subnet= "<The virtual network subnet>"
-    $IP = "<New IP>"
+    $PrivateIP = "<New Private IP>"
+
+    #You can ignore the publicIP variable if the VM doesn't have a public IP associated.
+    $publicIP =Get-AzPublicIpAddress -Name <Name of the VM's public IP> -ResourceGroupName  $ResourceGroup
  
     #Log in to the subscription​ 
     Add-AzAccount
     Select-AzSubscription -SubscriptionId $SubscriptionId 
         
     #Check whether the new IP address is available in the virtual network.
-    Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup | Test-AzPrivateIPAddressAvailability -IPAddress $IP
+    Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup | Test-AzPrivateIPAddressAvailability -IPAddress $PrivateIP
     
     #Add/Change static IP. This process will not change MAC address
     $vnet = Get-AzVirtualNetwork -Name $VNET -ResourceGroupName $ResourceGroup
 
-    $subnet = Get-AzVirtualNetworkSubnetConfig -Name mysubnet -VirtualNetwork $vnet
+    $subnet = Get-AzVirtualNetworkSubnetConfig -Name $subnet -VirtualNetwork $vnet
 
     $nic = Get-AzNetworkInterface -Name  $NetInter -ResourceGroupName  $ResourceGroup
-
-    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $IP -Subnet $subnet -Primary
+    
+    # Remove the PublicIpAddress parameter if you don't need it
+    $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $IP -Subnet $subnet -PublicIpAddress $publicIP -Primary
 
     $nic | Set-AzNetworkInterface
     ```
