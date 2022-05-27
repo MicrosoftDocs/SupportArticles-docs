@@ -45,7 +45,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
 
-    ```azurecli-interactive
+    ```powershell
     #Set the variables 
     $SubscriptionID = "<Subscription ID>"​
     $ResourceGroup = "<Resource Group>"
