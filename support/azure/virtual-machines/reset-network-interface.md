@@ -71,7 +71,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
     $nic = Get-AzNetworkInterface -Name  $NetInter -ResourceGroupName  $ResourceGroup
     
-    #Remove the PublicIpAddress parameter if you do not need it
+    #Remove the PublicIpAddress parameter if the VM does not have a public IP.
     $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $IP -Subnet $subnet -PublicIpAddress $publicIP -Primary
 
     $nic | Set-AzNetworkInterface
