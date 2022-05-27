@@ -42,7 +42,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
 #### Use Azure PowerShell
 
-1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed
+1. Make sure that you have [the latest Azure PowerShell](/powershell/azure/) installed.
 2. Open an elevated Azure PowerShell session (Run as administrator). Run the following commands:
 
     ```powershell
@@ -54,7 +54,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
     $subnet= "<The virtual network subnet>"
     $PrivateIP = "<New Private IP>"
 
-    #You can ignore the publicIP variable if the VM doesn't have a public IP associated.
+    #You can ignore the publicIP variable if the VM does not have a public IP associated.
     $publicIP =Get-AzPublicIpAddress -Name <the public IP name> -ResourceGroupName  $ResourceGroup
  
     #Log in to the subscription​ 
@@ -71,7 +71,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
 
     $nic = Get-AzNetworkInterface -Name  $NetInter -ResourceGroupName  $ResourceGroup
     
-    #Remove the PublicIpAddress parameter if you don't need it
+    #Remove the PublicIpAddress parameter if you do not need it
     $nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PrivateIpAddress $IP -Subnet $subnet -PublicIpAddress $publicIP -Primary
 
     $nic | Set-AzNetworkInterface
