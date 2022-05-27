@@ -55,7 +55,7 @@ This article shows how to reset the network interface for Azure Windows VM to re
     $PrivateIP = "<New Private IP>"
 
     #You can ignore the publicIP variable if the VM doesn't have a public IP associated.
-    $publicIP =Get-AzPublicIpAddress -Name <Name of the VM's public IP> -ResourceGroupName  $ResourceGroup
+    $publicIP =Get-AzPublicIpAddress -Name <the public IP name> -ResourceGroupName  $ResourceGroup
  
     #Log in to the subscription​ 
     Add-AzAccount
