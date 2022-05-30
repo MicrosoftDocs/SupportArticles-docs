@@ -1,7 +1,7 @@
 ---
 title: "Start default browser by the Process::Start method"
 description: Describes how to start the default Internet browser by using managed extensions for Visual C++. This article also provides a code sample to show how to do this task.
-ms.date: 04/24/2020
+ms.date: 05/30/2022
 ms.topic: how-to
 ---
 # Start the default Internet browser programmatically by using Visual C++  
