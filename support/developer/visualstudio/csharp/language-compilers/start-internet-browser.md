@@ -39,7 +39,7 @@ For more information about the `Process` class, see [Process Class](/dotnet/api/
 
 ## Provide exception handling
 
-Because you take advantage of [the default `UseShellExecute` property](https://docs.microsoft.com/dotnet/api/system.diagnostics.processstartinfo.useshellexecute#property-value) when you call the `Start` method, you don't have to explicitly query the registry to determine which browser is the default. However, if you use this approach on a computer that doesn't have a browser installed, an exception occurs. This exception must be caught so that the appropriate action can be taken.
+Because you take advantage of the [default `UseShellExecute` property](/dotnet/api/system.diagnostics.processstartinfo.useshellexecute#property-value) when you call the `Start` method, you don't have to explicitly query the registry to determine which browser is the default. However, if you use this approach on a computer that doesn't have a browser installed, an exception occurs. This exception must be caught so that the appropriate action can be taken.
 
 This example explicitly trap for an error that's generated when the necessary registry key isn't found and indicates that no browser is installed. Additionally, a general exception handler is provided for other errors that may occur. The `try...catch` block is demonstrated in the complete code listing.
 
