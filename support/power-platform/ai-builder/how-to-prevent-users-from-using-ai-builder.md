@@ -32,7 +32,7 @@ You need to be Administrator of your organization ID to perform this action.
 1. Select **Environment Maker** > **Edit**.
 1. In the **Custom Entities** tab, select **AI Model** and then uncheck the option in the **Create** column. (See the below screenshot for this step.)
 
-:::image type="content" source="media/how-to-prevent-users-from-using-ai-builder/security-role-environment-maker.png" alt-text="Screenshot of the unchecked Create option in the table AI Model.":::
+    :::image type="content" source="media/how-to-prevent-users-from-using-ai-builder/security-role-environment-maker.png" alt-text="Screenshot of the unchecked Create option in the table AI Model." lightbox="media/how-to-prevent-users-from-using-ai-builder/security-role-environment-maker.png":::
 
 ## Resources
 
