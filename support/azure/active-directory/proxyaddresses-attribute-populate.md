@@ -41,7 +41,7 @@ The following terminology is used in this article:
 
 You created an on-premises user object that has the following attributes set:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {\<not set>}
@@ -50,7 +50,7 @@ AD:userPrincipalName : user1upn@Contoso.com
 
 Next, it's synchronized to Azure AD and only the mailNickName attribute is populated by using the prefix of the UPN, because it's a mandatory attribute:
 
-``` text
+```
 AAD:mailNickName      : user1upn
 AAD:UserPrincipalName : user1upn@Contoso.com
 ```
@@ -63,7 +63,7 @@ Then, it's assigned an Exchange Online license. In this scenario, the following 
 
 The following attributes are set in Azure AD on the synchronized user object with Exchange Online license:
 
-``` text
+```
 AAD:mail              : user1upn@Contoso.com
 AAD:mailNickName      : user1upn
 AAD:proxyAddresses    : {smtp:user1upn@Contoso.onmicrosoft.com; SMTP:user1upn@Contoso.com}
@@ -74,7 +74,7 @@ AAD:userPrincipalName : user1upn@Contoso.com
 
 You created an on-premises user object that has the following attributes set:
 
-``` text
+```
 AD:mail              : user2mail@Contoso.com
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {\<not set>}
@@ -89,7 +89,7 @@ Next, it's synchronized to Azure AD and the following operations are performed d
 
 The following attributes are set in Azure AD upon initial user provisioning:
 
-``` text
+```
 AAD:mail              : user2mail@Contoso.com
 AAD:mailNickName      : user2mail
 AAD:proxyAddresses    : {SMTP:user2mail@Contoso.com}
@@ -103,7 +103,7 @@ Then, it's assigned an Exchange Online license. In this scenario, the following 
 
 The following attributes are set in Azure AD on the synchronized user object with Exchange Online license:
 
-``` text
+```
 AAD:mail              : user2mail@Contoso.com
 AAD:mailNickName      : user2mail
 AAD:proxyAddresses    : {smtp:user2upn@Contoso.com; smtp:user2mail@Contoso.onmicrosoft.com; SMTP:user2mail@Contoso.com}
@@ -114,7 +114,7 @@ AAD:userPrincipalName : user2upn@Contoso.com
 
 You created an on-premises user object that has the following attributes set:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {smtp:user3pa3@Fabrikam.microsoftonline.com, smtp:user3pa2@Contoso.onmicrosoft.com, SMTP:user3pa1@Contoso.com}
@@ -134,7 +134,7 @@ Next, it's synchronized to Azure AD and assigned an Exchange Online license. In 
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user3pa1@Contoso.com
 AAD:mailNickName      : user3pa1
 AAD:proxyAddresses    : {smtp:user3upn@Contoso.com; smtp:user3pa1@Contoso.onmicrosoft.com; SMTP:user3pa1@Contoso.com}
@@ -143,7 +143,7 @@ AAD:userPrincipalName : user3upn@Contoso.com
 
 Then, you change the values of the on-premises proxyAddresses attribute to the following ones:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {smtp:user3new3@Fabrikam.microsoftonline.com, smtp:user3new2@Contoso.onmicrosoft.com, SMTP:user3new1@Contoso.com}
@@ -163,7 +163,7 @@ In this scenario, the following operation is performed as a result of proxy calc
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user3new1@Contoso.com
 AAD:mailNickName      : user3pa1
 AAD:proxyAddresses    : {SMTP:user3new1@Contoso.com; smtp:user3upn@Contoso.com; smtp:user3pa1@Contoso.onmicrosoft.com}
@@ -174,7 +174,7 @@ AAD:userPrincipalName : user3upn@Contoso.com
 
 You created an on-premises user object that has the following attributes set:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {\<not set>}
@@ -190,7 +190,7 @@ Next, it's synchronized to Azure AD and assigned an Exchange Online license. In 
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user4upn@Contoso.com
 AAD:mailNickName      : user4upn
 AAD:proxyAddresses    : {smtp:user4upn@Contoso.onmicrosoft.com; SMTP:user4upn@Contoso.com}
@@ -203,7 +203,7 @@ Then, you remove the Exchange Online license and the following operation is perf
 - Promote the MOERA from secondary to Primary SMTP address in the proxyAddresses attribute.
 - Update the mail attribute by using the primary SMTP address in the proxyAddresses attribute(MOERA).
 
-``` text
+```
 AAD:mail              : user4upn@Contoso.onmicrosoft.com
 AAD:mailNickName      : user4upn
 AAD:proxyAddresses    : {SMTP:user4upn@Contoso.onmicrosoft.com}
@@ -212,7 +212,7 @@ AAD:userPrincipalName : user4upn@Contoso.com
 
 Then, you add a secondary smtp address in the on-premises proxyAddresses attribute:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {smtp:user4new@Contoso.com}
@@ -226,7 +226,7 @@ When the object is synchronized to Azure AD, the following operation is performe
 
 The following attributes set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user4upn@Contoso.onmicrosoft.com
 AAD:mailNickName      : user4upn
 AAD:proxyAddresses    : {smtp:user4upn@Contoso.com; smtp:user4new@Contoso.com; SMTP:user4upn@Contoso.onmicrosoft.com}
@@ -237,7 +237,7 @@ AAD:userPrincipalName : user4upn@Contoso.com
 
 You created an on-premises user object that has the following attributes set:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : \<not set>
 AD:proxyAddresses    : {\<not set>}
@@ -253,7 +253,7 @@ Next, it's synchronized to Azure AD and assigned an Exchange Online license. In 
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user5upn@Contoso.com
 AAD:mailNickName      : user5upn
 AAD:proxyAddresses    : {smtp:user5upn@Contoso.onmicrosoft.com; SMTP:user5upn@Contoso.com}
@@ -262,7 +262,7 @@ AAD:userPrincipalName : user5upn@Contoso.com
 
 Then, you change the value of the on-premises mailNickName attribute to the following:
 
-``` text
+```
 mail              : \<not set>
 AD:mailNickName      : user5new1
 AD:proxyAddresses    : {\<not set>}
@@ -277,7 +277,7 @@ In this scenario, the following operation is performed as a result of proxy calc
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user5upn@Contoso.com
 AAD:mailNickName      : user5new1
 AAD:proxyAddresses    : {smtp:user5upn@Contoso.onmicrosoft.com; SMTP:user5upn@Contoso.com}
@@ -288,14 +288,14 @@ AAD:userPrincipalName : user5upn@Contoso.com
 
 You created two on-premises user objects that have the same mailNickName value:
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : user6mnn
 AD:proxyAddresses    : {\<not set>}
 AD:userPrincipalName : user6a@Contoso.com
 ```
 
-``` text
+```
 AD:mail              : \<not set>
 AD:mailNickName      : user6mnn
 AD:proxyAddresses    : {\<not set>}
@@ -312,14 +312,14 @@ Next, they are synchronized to Office 365 and assigned an Exchange Online licens
 
 The following attributes are set in Azure AD on the synchronized user object:
 
-``` text
+```
 AAD:mail              : user6a@Contoso.com
 AAD:mailNickName      : user6mnn
 AAD:proxyAddresses    : {smtp:user6mnn@Contoso.onmicrosoft.com; SMTP:user6a@Contoso.com}
 AAD:userPrincipalName : user6a@Contoso.com
 ```
 
-``` text
+```
 AAD:mail              : user6b@Contoso.com
 AAD:mailNickName      : user6mnn
 AAD:proxyAddresses    : {smtp:user6mnn5236@Contoso.onmicrosoft.com; SMTP:user6b@Contoso.com}
