@@ -2,6 +2,14 @@
 
 
 
+## Week of May 23, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/24/2022 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
+
+
 ## Week of May 16, 2022
 
 
