@@ -22,13 +22,13 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When a user creates a new meeting in Microsoft Outlook, no conference rooms are listed in the **Choose an available room** box in the Room Finder.
+When a user creates a new meeting in Microsoft Outlook, no conference rooms are listed in the **Choose an available room** box in the Room Finder, or some conference rooms are listed and other conference rooms are missing.
 
-This issue may occur if the user doesn't select a room list. A room list must be selected before available rooms are displayed in the Room Finder.
+This issue may occur if the user doesn't select a room list. A room list must be selected before available rooms are displayed in the Room Finder. This issue may also occur if the conference room is hidden from the Global Address List (GAL).
 
 ## Solution
 
-To display available rooms, select a room list from the **Show a room list** box.
+To display available rooms, select a room list from the **Show a room list** box. If a room list is selected and the room is still not visible, verify that the room is visible in the GAL.
 
 ## More information
 
@@ -49,6 +49,12 @@ To create a room list and to add existing rooms to the room list, follow these s
     ```powershell
     Add-DistributionGroupMember <RoomListName> -Member <RoomMailbox>
     ```
+
+To verify that a room is visible in the GAL, run the following command and verify that `HiddenFromAddressListsEnabled` is set to false:
+
+```powershell
+Get-Mailbox <RoomSMTPAddress>
+```
 
 For more information, see [Create a room list distribution group](/previous-versions/office/exchange-server-2010/ee633471(v=exchg.141)) and [Create and manage room mailboxes](/Exchange/recipients/room-mailboxes).
 
