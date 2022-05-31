@@ -28,7 +28,7 @@ This issue may occur if the user doesn't select a room list. A room list must be
 
 ## Solution
 
-To display available rooms, select a room list from the **Show a room list** box. If a room list is selected and the room is still invisible, verify that the room is visible in the GAL.
+To display available rooms, select a room list from the **Show a room list** box. If a room list is selected and the room is still not visible, verify that the room is visible in the GAL.
 
 ## More information
 
