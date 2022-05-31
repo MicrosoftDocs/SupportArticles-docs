@@ -1,9 +1,9 @@
 ---
 title: SQL Server in Windows operating system
 description: This article describes how to use SQL Server in Windows 8, Windows 8.1, Windows Server 2012, and Windows Server 2012 R2 environments.
-ms.date: 12/15/2021
+ms.date: 05/30/2022
 ms.custom: sap:Installation, Patching and Upgrade
-ms.reviewer: ramakoni
+ms.reviewer: ramakoni, randolphwest
 ms.prod: sql
 ---
 
@@ -26,7 +26,7 @@ How to use this article:
 
 1. Find out the minimum requirements for the SQL Server version you are trying to install for the corresponding OS.
 
-    |Windows Version/SQL Version --> |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
+    |Windows Version/SQL Version |SQL Server 2019|SQL Server 2017|SQL Server 2016 |SQL Server 2014 |SQL Server 2012 |SQL Server 2008 R2 |SQL Server 2008|More Information/Limitations|
     |---|---|---|---|---|---|---|---|---|
     |Windows Server 2022  |Yes  (RTM) |Yes  (RTM) | Not supported | Not supported | Not supported |Not supported |Not supported |[Additional information for Windows Server 2022 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
     |Windows 11 |Yes  (RTM) |Yes  (RTM) |Not supported |Not supported |Not supported |Not supported |Not supported |[Additional information for Windows 11 environments](#minimum-sql-server-version-requirements-for-windows-server-2022-and-windows-11)|
