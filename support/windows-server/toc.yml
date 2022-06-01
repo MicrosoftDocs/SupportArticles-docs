@@ -2572,8 +2572,6 @@
       href: ./user-profiles-and-logon/user-profile-cannot-loaded-event-1509.md
     - name: Assign a Logon Script to a Profile for a Local User
       href: ./user-profiles-and-logon/assign-logon-script-profile-local-user.md
-    - name: Description of Windows Identity Foundation
-      href: ./user-profiles-and-logon/windows-identity-foundation.md
     - name: How to create security-enhanced redirected folders or home folders
       href: ./user-profiles-and-logon/create-security-enhanced-redirected-folder.md
     - name: How to delete a user profile
