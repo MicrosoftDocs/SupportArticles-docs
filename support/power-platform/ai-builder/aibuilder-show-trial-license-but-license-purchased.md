@@ -26,5 +26,4 @@ If you have purchased a premium Power Apps license, you got a small amount of AI
 
 The trial message will disapear at the end of your trial period and you will use your seeded credits instead.
 
-## Resources
 
