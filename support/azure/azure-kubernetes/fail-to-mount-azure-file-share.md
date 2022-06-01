@@ -1,7 +1,7 @@
 ---
 title: Unable to mount Azure file share
 description: Describes errors that cause the mounting of an Azure file share to fail and provides solutions.
-ms.date: 04/07/2022
+ms.date: 05/20/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
@@ -13,7 +13,7 @@ This article provides possible causes and solutions for errors that cause the mo
 
 ## Symptoms
 
-You deploy a Kubernetes resource by using a Deployment or StatefulSet in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
+You deploy a Kubernetes resource such as a Deployment and a StatefulSet, in an Azure Kubernetes Service (AKS) environment. The deployment will create a pod that mounts a PersistentVolumeClaim (PVC) referencing an Azure file share.
 
 However, the pod stays in the **ContainerCreating** status. When you run the `kubectl describe pods` command, you may see one of the following errors in the command output, which causes the mounting operation to fail:
 
@@ -298,7 +298,7 @@ If you don't have access to the AKS cluster in the Azure portal, perform Step 2 
 
     :::image type="content" source="media/fail-to-mount-azure-file-share/command-decode-storage-account-name.png" alt-text="Screenshot of command that decodes storage account name.":::
 
-#### Solution: Adjust Kubernetes secret
+#### Solution: Adjust the Kubernetes secret and re-create the pods
 
 If the value of the storage account name or key in the Kubernetes secret doesn't match the value in **Access keys** in the storage account, adjust the Kubernetes secret at the Kubernetes secret level by running the following command:
 
@@ -315,6 +315,8 @@ echo -n '<storage account name>'| base64 | tr -d '\n' ; echo
 ```
 
 For more information, see [Managing Secrets using kubectl](https://kubernetes.io/docs/tasks/configmap-secret/managing-secret-using-kubectl/).
+
+After the Kubernetes secret `azure-storage-account-<storage-account-name>-secret` has the right values, re-create the pods. Otherwise, those pods will continue to use the old values that aren't valid anymore.
 
 ### <a id="akssubnetnotallowed"></a>Cause 2: AKS's VNET and subnet aren't allowed for storage account
 
@@ -388,6 +390,6 @@ After the virtual network link is added, the FQDN should be resolved via a priva
 
 ## More information
 
-- If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
+If you experience some other mount errors, see [Troubleshoot Azure Files problems in Linux](/azure/storage/files/storage-troubleshoot-linux-file-connection-problems).
 
-- If the issue isn't resolved, [contact Azure support for assistance](/azure/azure-portal/supportability/how-to-create-azure-support-request).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
