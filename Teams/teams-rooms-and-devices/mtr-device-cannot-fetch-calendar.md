@@ -25,7 +25,7 @@ After you sign in to a Microsoft Teams Rooms (MTR) device, the following error m
 
 > Cannot fetch calendar
 
-:::image type="content" source="media/mtr-device-cannot-fetch-calendar/error.png" alt-text="Screenshot of the "Cannot fetch calendar" error.":::
+:::image type="content" source="media/mtr-device-cannot-fetch-calendar/error.png" alt-text="Screenshot of the Cannot fetch calendar error.":::
 
 And the following error is logged in the [sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins):
 
