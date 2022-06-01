@@ -149,6 +149,8 @@
 
 - name: AKS common issues
   items:
+  - name: AKS common issues FAQ
+    href: aks-common-issues-faq.yml
   - name: 429 Too Many Requests errors
     href: 429-too-many-requests-errors.md
   - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
