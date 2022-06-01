@@ -1,6 +1,6 @@
 ---
-title: Can't find Windows 10 development tools
-description: This article provides resolution to the issue where you can't find Windows 10 development tools (SDK) in Visual Studio 2015.
+title: Can't find Windows 10 developer tools
+description: This article provides resolution to the issue where you can't find Windows 10 developer tools (SDK) in Visual Studio 2015.
 ms.date: 05/18/2022
 author: jasonchlus
 ms.author: jasonchlus
@@ -9,23 +9,23 @@ ms.reviewer: terry.g.lee
 ms.topic: troubleshooting
 ---
 
-# Can't find Windows 10 development tools in Visual Studio 2015
+# Can't find Windows 10 developer tools in Visual Studio 2015
 
-This article helps you resolve the issue where you can't find Windows 10 development tools (SDK) in Visual Studio 2015.
+This article helps you resolve the issue where you can't find Windows 10 developer tools (SDK) in Visual Studio 2015.
 
 _Applies to_: Visual Studio 2015
 
 ## Symptoms
 
-You've installed Visual Studio 2015 on your Windows 10 but you're unable to find Windows 10 development tools on your system.
+You've installed Visual Studio 2015 on your Windows 10 but you're unable to find Windows 10 developer tools on your system.
 
 ## Cause
 
-If you've chosen the default installation option when installing Visual Studio 2015, custom components such as Windows 10 development tools don't install.
+If you've chosen the default installation option when installing Visual Studio 2015, custom components such as Windows 10 developer tools don't install.
 
 ## Resolution
 
-To install custom components such as Windows development tools in Visual Studio 2015, follow these steps:
+To install custom components such as Windows developer tools in Visual Studio 2015, follow these steps:
 
 1. Right-click the **Start** menu, and then select **Run**.
 
@@ -38,6 +38,6 @@ To install custom components such as Windows development tools in Visual Studio 
 1. In the **Select features** list, select the items that you want to install, and then select **Next**.
 
     > [!TIP]
-    > For installing Windows 10 development tools, select **Windows 10 SDK feature**.
+    > For installing Windows 10 developer tools, select **Windows 10 SDK feature**.
 
 1. Select **Update** to install the selected custom components.
