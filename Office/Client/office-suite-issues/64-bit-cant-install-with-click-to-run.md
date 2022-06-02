@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "This 64-bit product may not be installed with Microsoft Office Click-to-Run" when you install a 64-bit version of Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

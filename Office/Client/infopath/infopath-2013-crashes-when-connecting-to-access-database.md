@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # InfoPath 2013 crashes when you connect to an Access database
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 This article was written by [Warren Rath](https://social.technet.microsoft.com/profile/Warren_R_Msft), Support Escalation Engineer.
 
 ## Symptoms

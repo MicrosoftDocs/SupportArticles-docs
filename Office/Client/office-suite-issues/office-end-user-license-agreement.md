@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You must accept the Office End User License Agreement every time that you start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Every time that you start a Microsoft Office program, such as Microsoft Office Word, the **End User License Agreement** dialog box appears. If you click **I Accept**, the **End User License Agreement** dialog box disappears and then reappears. If you click **I Accept** again, the **End User License Agreement** dialog box disappears, and the Office program functions as expected.

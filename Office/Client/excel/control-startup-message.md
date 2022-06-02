@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 # How to control the startup message about updating linked workbooks in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This step-by-step article describes how to control the startup message about updating linked workbooks in Microsoft Office Excel.

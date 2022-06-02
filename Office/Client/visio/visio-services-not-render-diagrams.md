@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you have Microsoft Silverlight installed on a computer, Microsoft Visio Services cannot render diagrams that are hosted on servers that have International Domain Names (IDNs). Specifically, Visio Services cannot render these diagrams by using Silverlight on a Microsoft SharePoint Server site. Additionally, a JavaScript error occurs.

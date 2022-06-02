@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions CHIINV
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the CHIINV function in Microsoft Office Excel 2003 and in later versions of Excel and discusses an improvement in Excel 2003 and in later versions of Excel that can affect results in extreme cases when compared with earlier versions of Excel.

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Microsoft Update and Windows Update offer updates for Office programs that you do not have installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you visit the Microsoft Update Web site or start Windows Update to scan for updates for the Microsoft Office programs, Microsoft Update or Windows Update may offer updates to programs that you do not have installed on your computer.

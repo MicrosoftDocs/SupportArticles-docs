@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 # "(401) Rbac check failed" error when trying to manage disposition reviews
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 When you use the **Disposition** tab in **Microsoft Purview Records Management** in the Microsoft Purview compliance portal to manage [disposition reviews](/microsoft-365/compliance/disposition), you receive the following error message:

@@ -21,22 +21,19 @@ ms.date: 3/31/2022
 
 # 0x800488EE when connecting to Office 365, Azure, or Intune in the Azure AD Module for PowerShell
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 Assume that Azure Multi-Factor Authentication was disabled for your admin account because you want to use the Azure Active Directory Module for Windows PowerShell. (Admins who are enabled for Azure Multi-Factor Authentication can't use the Azure Active Directory Module for Windows PowerShell.)
 
 When you open the Azure Active Directory Module for Windows PowerShell and then run the **Connect-MsolService** cmdlet to try to connect to Microsoft Office 365, Azure, or Microsoft Intune, the cmdlet does not run as expected. Instead, you receive the following error message:
 
-```asciidoc
+```output
 Connect-MsolService : Exception of type
 'Microsoft.Online.Administration.Automation.MicrosoftOnlineException' was thrown.
 At line:1 char:1
 + Connect-MsolService
 + ~~~~~~~~~~~~~~~~~~~
-+ CategoryInfo : OperationStopped: (:) [Connect-MsolService], Mic
-rosoftOnlineException
++ CategoryInfo : OperationStopped: (:) [Connect-MsolService], MicrosoftOnlineException
 + FullyQualifiedErrorId : 0x800488EE,Microsoft.Online.Administration.Automation.ConnectMsolService
 ```
 

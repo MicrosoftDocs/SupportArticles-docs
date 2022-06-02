@@ -20,12 +20,10 @@ ms.date: 3/31/2022
 
 # Download the latest online Excel Viewer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Notice
 
 **Excel Viewer is retired**
-   
+
 > [!IMPORTANT]
 > The Microsoft Excel Viewer was retired in April, 2018. It no longer is available for download or receives security updates. To continue viewing Excel files for free, we recommend that you install the Excel mobile app or store documents on OneDrive or Dropbox, from which Excel Online can open the files in your browser. For the Excel mobile app, go tothe appropriate store for your device: 
 > - [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)    

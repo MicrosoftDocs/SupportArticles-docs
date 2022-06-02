@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to create a DSN-less connection to SQL Server for linked tables in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies only to a Microsoft Access database (.accdb and .mdb).

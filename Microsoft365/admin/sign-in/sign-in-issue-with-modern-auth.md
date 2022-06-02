@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 This article contains information about how to troubleshoot problems that affect the ability to sign in to Microsoft Office 2016 apps and Microsoft Office 2013 apps that are enabled for modern authentication. This article also contains resources for IT administrators to address reports about Active Directory Federation Services (AD FS) issues that are specific to Office for Windows platforms.

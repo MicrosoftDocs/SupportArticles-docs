@@ -151,6 +151,8 @@
           href: ../antispam-and-protection/domains-on-outlook-safe-senders-list-not-recognized.md
         - name: How to reduce malware threats via file attachment blocking
           href: ../antispam-and-protection/how-to-reduce-malware-threats-via-file-attachment-blocking.md
+        - name: Recoverable Items aren't moved to archive
+          href: ../antispam-and-protection/recoverable-items-folder-full.md
         - name: SMTPSEND.BareLineFeedsAreIllegal NDR when tracing a message
           href: ../antispam-and-protection/smtpsend-barelinefeedsareillegal-when-tracing-messages.md
         - name: User Impersonation messages are classified as phishing
@@ -205,6 +207,8 @@
           href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
     - name: Email Alias
       items:
+        - name: Recipient's address isn't autocompleted or suggested
+          href: ../email-alias/address-not-autocompleted-or-suggested.md
         - name: Remove an alias from a contact
           href: ../email-alias/remove-an-alias-from-a-contact.md
         - name: Remove an alias from a distribution list
@@ -331,6 +335,8 @@
           href: ../move-or-migrate-mailboxes/new-migrationendpoint-returns-error.md
         - name: A different type of Active Directory object already exists error
           href: ../move-or-migrate-mailboxes/different-type-of-active-directory-object-already-exists-error.md
+        - name: Can't migrate Google Workspace mailboxes
+          href: ../move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail.md
         - name: Can't migrate IMAP mailboxes
           href: ../move-or-migrate-mailboxes/imap-mailbox-migration-fails.md
         - name: Can't see free/busy information
@@ -427,6 +433,8 @@
           href: ../outlook-issues/we-cant-show-mailtips-right-now-warning.md
     - name: Outlook on the web Issues
       items:
+        - name: '"Send updates" prompt not displayed'
+          href: /outlook/troubleshoot/calendaring/send-updates-prompt-not-displayed?context=/exchange/troubleshoot/context/online-context
         - name: Can't create a new message by using OWA
           href: ../outlook-on-the-web-issues/cannot-create-new-message-in-owa.md
         - name: Can't edit an Office document directly from an email message
@@ -457,8 +465,6 @@
           href: ../outlook-on-the-web-issues/participant-must-have-email-address-and-routing-type-for-user-in-rules-error.md
         - name: Publish Calendar option is missing from Calendar settings
           href: ../outlook-on-the-web-issues/publish-calendar-option-missing-from-calendar-settings.md
-        - name: Send updates options for attendees not shown
-          href: ../outlook-on-the-web-issues/send-updates-options-for-attendees-not-displayed.md
         - name: Some folders aren't visible in Outlook on the web
           href: ../outlook-on-the-web-issues/some-folders-not-visible-in-outlook-on-the-web.md
         - name: There are multiple recipients matching the identity error
@@ -487,6 +493,8 @@
           href: ../public-folders/error-create-migration-endpoint.md
         - name: Can't delete items
           href: ../public-folders/cannot-delete-items-public-folder.md
+        - name: Can't delete mail-enabled public folder
+          href: ../public-folders/cannot-delete-public-folder.md
         - name: Can't finalize a public folder batch migration
           href: ../public-folders/cannot-finalize-migration-batch.md
         - name: Can't send email to public folder contact list

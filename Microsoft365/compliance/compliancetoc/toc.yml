@@ -75,14 +75,14 @@
       href: ../ediscovery/resolve-ediscovery-issues.md
   - name: Holds
     items:
-    - name: Can't delete messages
-      href: ../holds/cannot-delete-messages.md
     - name: Can't update calendar items from OWA or Outlook on Mac
       href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
     - name: Changes to IgnoreLegalHold
       href: ../holds/ignorelegalhold-not-available.md
     - name: Litigation Hold mailbox doesn't turn into inactive mailbox
       href: ../holds/litigation-hold-mailbox-not-turn-into-inactive.md
+    - name: eDiscovery hold errors
+      href: ../holds/resolve-ediscovery-hold-issues.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How Excel determines the current mode of calculation
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, all currently open documents use the same mode of calculation, regardless of the mode in which they were saved.

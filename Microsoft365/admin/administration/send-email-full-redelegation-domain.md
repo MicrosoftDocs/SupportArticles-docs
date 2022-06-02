@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You can't send email messages in Office 365 Small Business from a domain that's set up for full redelegation
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to send email messages in Office 365 Small Business from a domain that's set up for full redelegation, some messages aren't sent. Additionally, you may receive a nondelivery report (NDR) that resembles the following:

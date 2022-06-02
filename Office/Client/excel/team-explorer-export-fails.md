@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Unable to cast COM object..." when exporting to Excel from Team Explorer 2008
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Action
 
 Using Team Explorer 2008 you try to open a work item or collection of work items in Microsoft Excel via the menu item "Open Selection in Microsoft Excel" or "Open in Microsoft Excel".

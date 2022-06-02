@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 ---
 # Items are missing from search results when Office 365 users search their mailbox in Outlook on the web
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2835179
 
 ## Problem

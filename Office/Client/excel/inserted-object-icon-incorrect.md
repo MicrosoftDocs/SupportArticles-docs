@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Incorrect icon shows when inserting an object in Excel 2019
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Excel 2019, when you try to insert a file that's located on a OneDrive for Business locally synced folder and you select the **Display as icon** check box, the wrong icon is displayed.

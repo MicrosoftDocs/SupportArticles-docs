@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Troubleshoot why Excel doesn't save changes
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 As you work in a workbook, Microsoft Excel saves the file automatically. It gives the file a temporary file name, and puts the file into the same folder as the original version. When you manually save the workbook, the original file is deleted, and the temporary file is assigned the original file name.
 
 If this process is interrupted, the workbook might not save correctly. You might also find one or more temporary files in the folder where you tried to save your file. Additionally, you may receive one of several alerts or error messages.

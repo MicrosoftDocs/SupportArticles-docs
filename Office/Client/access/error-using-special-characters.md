@@ -27,8 +27,6 @@ ms.date: 3/31/2022
 
 This article lists the special characters to avoid using when you work with the database object names or the field names in all versions of Access.
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 826763
 
 > [!NOTE]

@@ -17,6 +17,8 @@ ms.date: 3/31/2022
 
 # Microsoft Purview troubleshooting
 
+[!include[Purview banner](../../includes/purview-rebrand.md)]
+
 Welcome to Microsoft Purview troubleshooting! Here, you will find information on how to identify and fix errors you might experience related to Microsoft Purview.
 
 Find content related to your issue by browsing the table of contents, or use the search box on the left.

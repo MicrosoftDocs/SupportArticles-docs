@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Cannot configure the default email client using Group Policy
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use Group Policy to administer the default email client, you cannot locate a setting to make this configuration.

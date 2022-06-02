@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 # File association errors opening databases by double-clicking in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2212418
 
 ## Symptoms
