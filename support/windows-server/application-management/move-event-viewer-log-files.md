@@ -82,8 +82,8 @@ Create a folder where you want to store the event logs in your local drive and a
     > 1. Select **Edit** > **Add**.
     > 2. Select **Locations**, select the local computer name, and then select **OK**.
     > 3. Type *NT SERVICE\EventLog* in **Enter the object names to select** and select **Check Names**. The name should be resolved to **EventLog**. Select **OK** to finish.
-
-    Make sure **Full Control** is selected under **Permissions for EventLog** for the **EventLog** user.
+    >
+    > Make sure **Full Control** is selected under **Permissions for EventLog** for the **EventLog** user.
 
 ## Move Event Viewer log files to another location
 
