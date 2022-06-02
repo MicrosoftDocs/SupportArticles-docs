@@ -210,9 +210,11 @@ Then the additional CPU time comes from some other CPU-bound activities. It's th
 
 #### Causes: tracing, UDFs and CLR intergration
 
+This issue may be caused by:
+
 - XEvents/SQL Server tracing, especially with filtering on text columns (database name, login name, query text, and so on). If tracing is enabled on one server but not on the other, this could be the reason for the difference.
 - User-defined functions (UDFs) or other T-SQL code that performs CPU-bound operations. This would be the cause only when other conditions are different on Server1 and Server2, such as data size, CPU clock speed, or Power plan.
-- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Agent XPs](/sql/database-engine/configure-windows/agent-xps-server-configuration-option) that may drive CPU that doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
+- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Agent XPs](/sql/database-engine/configure-windows/agent-xps-server-configuration-option) that may drive CPU but doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
 - Different built-in function logics in different versions of SQL Server
 
 #### Next step: check traces and queries
@@ -450,11 +452,10 @@ Are you testing the query the exact same parameter values? If not, then you may 
 
 ### Cause 14: Different database options/scoped configuration settings
 
-Are the same database options/scoped configuration settings used on both servers? There are database options that influence plan choices. For example, database compatibility, legacy CE versus default CE, parameter sniffing. Run the following query from one server to compare the database options used on the two servers:
+Are the same database options/scoped configuration settings used on both servers? Some database options may influence plan choices. For example, database compatibility, legacy CE versus default CE, parameter sniffing. Run the following query from one server to compare the database options used on the two servers:
 
 ```sql
 -- On Server1 add a linked server to Server2 
-
 EXEC master.dbo.sp_addlinkedserver @server = N'Server2', @srvproduct=N'SQL Server'
 
 -- Run a join between the two servers to compare settings side by side
