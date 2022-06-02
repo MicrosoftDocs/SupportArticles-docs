@@ -30,7 +30,7 @@ Consider the following scenario:
   - You connect the Thunderbolt Dock to the computer so that devices on the Thunderbolt Dock are enumerated.
   - The system enters or resumes from a Modern Standby, Hibernate (S4), or Soft Off (S5) power state. During this activity, you plug or unplug the dock.
 
-In this scenario, the devices stop working. Device Manager might show yellow exclamation points and **Code 24** or **Code 43** for those devices.
+In this scenario, the devices stop working. Device Manager might show yellow exclamation points and **Code 10**, **Code 24**, or **Code 43** for those devices.
 
 ## Workaround
 
