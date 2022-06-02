@@ -41,7 +41,7 @@ Use one of the following two methods to compare query performance on the two ser
 
 ### Scenario 1: Only one single query performs differently on the two servers
 
-If only one single query performs differently, the issue is more likely specific to the individual query, rather than to the environment. In this case, go to [Step 2: Determine if the performance issue is caused by high CPU usage or waiting on a bottleneck](#step-2-determine-if-the-performance-issue-is-caused-by-high-cpu-usage-or-waiting-on-a-bottleneck).
+If only one single query performs differently, the issue is more likely specific to the individual query, rather than to the environment. In this case, go to [Step 2: Collect data and determine the type of the performance issue](#step-2-collect-data-and-determine-the-type-of-the-performance-issue).
 
 ### Scenario 2: Multiple queries perform differently on the two servers
 
@@ -124,7 +124,7 @@ Compare the elapsed time and CPU time of the query to determine the issue type f
 If the CPU time is close, equal to, or higher than the elapsed time, then you can treat it as a CPU-bound query. For example, if the elapsed time is 3000 milliseconds (ms) and the CPU time is 2900 ms, that means the most of the elapsed time is spent on the CPU. Then we can say it's a CPU-bound query.
 
 > [!Note]
-> If the CPU time is greater than the duration, then a parallel query was being executed while multiple threads were using the CPU at the same time when the clock was ticking. For more information, see [Parallel queries - runner or waiter](#cause-3-parallel-queries---runner-or-waiter).
+> If the CPU time is greater than the duration, then a parallel query was being executed while multiple threads were using the CPU at the same time when the clock was ticking. For more information, see [Parallel queries - runner or waiter](#parallel-queries---runner-or-waiter).
 
 ### Type 2: Waiting on a bottleneck (waiter)
 
@@ -189,7 +189,7 @@ In this case, the CPU times are similar on both servers, that indicates query pl
 
 #### Next step: check wait types on both servers
 
-Address each bottleneck wait individually on each server and speed up executions on both servers. Troubleshooting this issue is labor-intensive because you need to eliminate bottlenecks on both servers and make the performance comparable. To troubleshoot common bottleneck issues, step to [Diagnose and Resolve waits/bottlenecks](#diagnose-and-resolve-waitsbottlenecks).
+Address each bottleneck wait individually on each server and speed up executions on both servers. Troubleshooting this issue is labor-intensive because you need to eliminate bottlenecks on both servers and make the performance comparable. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
 
 ### Scenario 4: The query on Server1 uses more CPU time than on Server2 but the logical reads are close
 
