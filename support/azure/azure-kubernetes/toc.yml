@@ -140,6 +140,8 @@
     href: could-not-change-permissions-azure-files.md
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
+  - name: Errors when mounting disk volume
+    href: fail-to-mount-azure-disk-volume.md
   - name: Failed to create file share on storage account
     href: create-file-share-failed-storage-account.md
   - name: Handling of small files causes high latency
