@@ -1,0 +1,6 @@
+- name: Azure Monitor
+  items:
+  - name: Azure Application Insights
+    href: ./app-insights/welcome-application-insights.yml
+  - name: Azure Log Analytics
+    href: ../log-analytics/welcome-log-analytics.yml

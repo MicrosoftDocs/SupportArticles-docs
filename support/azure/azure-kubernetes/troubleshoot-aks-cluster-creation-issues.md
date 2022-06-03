@@ -1,17 +1,17 @@
 ---
 title: Troubleshoot Azure Kubernetes Service cluster creation issues
-description: Learn about general troubleshooting methods to use when you can't create or deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/22/2022
+description: Learn about basic troubleshooting methods to use when you can't create or deploy an Azure Kubernetes Service (AKS) cluster.
+ms.date: 4/29/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi
 ms.service: container-service
-#Customer intent: As an Azure Kubernetes user, I want to take general troubleshooting measures to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
+#Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures to resolve issues that occur when I try to create or deploy an Azure Kubernetes Service (AKS) cluster.
 ---
-# General troubleshooting of AKS cluster creation issues
- 
-This article outlines the general troubleshooting methods to use if you can't create or deploy a Microsoft Azure Kubernetes Service (AKS) cluster successfully.
+# Basic troubleshooting of AKS cluster creation issues
+
+This article outlines the basic troubleshooting methods to use if you can't create or deploy a Microsoft Azure Kubernetes Service (AKS) cluster successfully.
 
 ## Prerequisites
 
@@ -158,3 +158,5 @@ Events:
 ```
 
 In the command output, you can see that the pod can't deploy to a node because no nodes are available.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

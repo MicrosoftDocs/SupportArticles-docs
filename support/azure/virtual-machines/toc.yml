@@ -224,9 +224,11 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
     - name: Troubleshoot permissions are too open error
       href: troubleshoot-ssh-permissions-too-open.md
+    - name: Troubleshoot kernel panic
+      href: linux-kernel-panic-troubleshooting.md
   - name: Windows
     items:
-    - name: Cannot RDP becasue "You must change your password before logging on the first time" error
+    - name: Cannot RDP because "You must change your password before logging on the first time" error
       href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md
@@ -365,6 +367,8 @@
       href: troubleshoot-performance-virtual-machine-linux-windows.md
     - name: Troubleshoot high CPU issues for Azure Windows virtual machines
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+      href: azure-windows-vm-memory-issue.md
   - name: Known performance issues
     items:
     - name: Poor performance on Windows Server 2012 R2

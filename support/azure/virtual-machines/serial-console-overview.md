@@ -11,7 +11,7 @@ ms.devlang: na
 ms.topic: article
 ms.tgt_pltfrm: vm
 ms.workload: infrastructure-services
-ms.date: 12/02/2021
+ms.date: 05/09/2022
 ms.author: genli
 ---
 
@@ -31,6 +31,8 @@ To access the Serial Console on your VM or virtual machine scale set instance, y
 - A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
 - The Azure account accessing Serial Console must have [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for both the VM and the [boot diagnostics](boot-diagnostics.md) storage account
 - Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
+- Serial Console is not supported when the storage account has firewall enabled.
+- Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!NOTE]
 > Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account that is in the same region as your VM and accessible from all networks. You can find the setting in the **Networking** section of the storage account **Overview** page.
@@ -67,7 +69,6 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
      :::image type="content" source="media/serial-console-overview/connect-vm-scale-sets.gif" alt-text="Animated GIF shows process of starting the connection to the serial console for VM Scale Sets.":::
 
-
 ### TLS 1.2 in Serial Console
 
 Serial Console uses TLS 1.2 end-to-end to secure all communication within the service. Serial Console has a dependency on a user-managed boot diagnostics storage account, and TLS 1.2 must be configured separately for the storage account. Instructions to do so are located [here](/azure/storage/common/transport-layer-security-configure-minimum-version).
@@ -76,10 +77,9 @@ Serial Console uses TLS 1.2 end-to-end to secure all communication within the se
 
 Aside from console access to your VM, you can also use the Azure Serial Console for the following:
 
-* Sending a [system request command to your VM](./serial-console-nmi-sysrq.md)
-* Sending a [non-maskable interrupt to your VM](./serial-console-nmi-sysrq.md)
-* Gracefully [rebooting or forcefully power-cycling your VM](./serial-console-power-options.md)
-
+- Sending a [system request command to your VM](./serial-console-nmi-sysrq.md)
+- Sending a [non-maskable interrupt to your VM](./serial-console-nmi-sysrq.md)
+- Gracefully [rebooting or forcefully power-cycling your VM](./serial-console-power-options.md)
 
 ## Next steps
 
@@ -87,3 +87,5 @@ Additional Serial Console documentation is available in the sidebar.
 
 - More information is available for [Serial Console for Linux VMs](./serial-console-linux.md).
 - More information is available for [Serial Console for Windows VMs](./serial-console-windows.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

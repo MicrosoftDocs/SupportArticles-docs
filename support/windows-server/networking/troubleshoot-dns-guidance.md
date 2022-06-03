@@ -1,6 +1,6 @@
 ---
-title: Guidance of troubleshooting DNS
-description: Introduces general guidance of troubleshooting scenarios related to DNS.
+title: Guidance for troubleshooting DNS
+description: Introduces general guidance for troubleshooting scenarios related to DNS.
 ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan

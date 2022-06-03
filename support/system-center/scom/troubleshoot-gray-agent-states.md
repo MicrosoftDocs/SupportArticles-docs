@@ -229,9 +229,9 @@ All the agents that report to a specific management server alternate intermitten
 To resolve the issue, first determine the cause of the issue. Common causes of temporary server unavailability include the following:
 
 - The parent server of the agents is temporarily offline.
-- Agents are flooding the management server with operational data, such as alerts, states, discoveries, and so on. This may cause an increased use of system resources on the OpsMgr database and on the OpsMgr servers.
+- Agents are flooding the management server with operational data, such as alerts, states, discoveries, and so on. This may cause an increased use of system resources on the Operations Manager database and on the Operations Manager servers.
 - Network outages caused a temporary communication failure between the parent server and the agents.
-- Management pack (MP) changes occurred. In the OpsMgr console, these changes require an OpsMgr configuration and an MP redistribution to the agents. If the change affects a larger agent base, this may cause increased use of system resources usage on the OpsMgr database and OpsMgr servers.
+- Management pack (MP) changes occurred. In the Operations Manager console, these changes require an Operations Manager configuration and an MP redistribution to the agents. If the change affects a larger agent base, this may cause increased use of system resources usage on the Operations Manager database and Operations Manager servers.
 
 The key to troubleshooting in these scenarios is to understand the duration of the server unavailability and the time of day during which it occurred. This will help you to quickly narrow the scope of the problem.
 
@@ -239,7 +239,7 @@ The key to troubleshooting in these scenarios is to understand the duration of t
 
 ### Management server
 
-During a configuration update burst (that is caused by MP import and discovery), the typical bottlenecks are, first, the CPU, and second, the OpsMgr installation disk I/O. The management server is responsible of forwarding configuration files to the target agents.
+During a configuration update burst (that is caused by MP import and discovery), the typical bottlenecks are, first, the CPU, and second, the Operations Manager installation disk I/O. The management server is responsible of forwarding configuration files to the target agents.
 
 For operational data collection, bottlenecks are typically caused by the CPU. The disk I/O may also be at maximum capacity, but that is not as likely. The management server is responsible for decompressing and decrypting incoming operational data, and inserting it into the Operational database. It also sends acknowledgments (ACKs) back to the agents or gateways after it receives operational data, and uses disk queuing to temporarily store these outgoing ACKs.
 
@@ -258,13 +258,13 @@ To troubleshoot the issue in this situation, collect the following information f
     > [!NOTE]
     > For more information, see [Recommendations for antivirus exclusions that relate to Operations Manager](antivirus-exclusions-recommendations.md).
 
-- RAID level (0, 1, 5, 0+1 or 1+0) for the drive that is used by the Health Service State
+- RAID level (`0`, `1`, `5`, `0+1` or `1+0`) for the drive that is used by the Health Service State
 - Number of disks used for the RAID
 - Whether battery-backed write cache is enabled on the array controller
 
 ## Troubleshooting SQL Server performance
 
-### Operational database (`OperationsManager`)
+### Operational database (OperationsManager)
 
 For the `OperationsManager` database, the most likely bottleneck is the disk array. If the disk array is not at maximum I/O capacity, the next most likely bottleneck is the CPU. The database will experience occasional slowdowns and operational data storms (high incidences of events, alerts, and performance data or state changes that persist for a relatively long time). A short burst typically does not cause any significant delay for an extended period of time.
 
@@ -309,13 +309,13 @@ To troubleshoot the issue in this situation, collect the following information f
     GO
     ```
 
-- Drive letters that contain data warehouse or Ops and Tempdb files
+- Drive letters that contain data warehouse, Operations Manager DB, and Tempdb files
 - Whether the antivirus software is configured to exclude SQL data and log files (Scanning SQL Server database files with antivirus software can degrade performance.)
-- Amount of free space on drives that contain data warehouse or Ops and Tempdb files
+- Amount of free space on drives that contain data warehouse, Operations Manager DB, and Tempdb files
 - Storage type (SAN or local)
 - RAID level (0, 1, 5, 0+1 or 1+0) for drives that are used by SQL Server
 - If SAN storage is used: number of spindles on each LUN that's used by SQL Server
-- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the Ops database and in the `EventPublisher` table in the data warehouse database
+- If the converted Exchange 2007 management pack is being used or has ever been used: number of rows in the `LocalizedText` table in the Operations Manager database and in the `EventPublisher` table in the data warehouse database
 
   To determine the row amounts, run the following commands:
 
@@ -326,11 +326,13 @@ To troubleshoot the issue in this situation, collect the following information f
 
 #### Counters to identify memory pressure
 
-- `MSSQL$\<instance>: Buffer Manager: Page life expectancy` - How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.
-- `MSSQL$\<instance>: Buffer Manager: Lazy writes/sec` - Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.
-- `Memory: Available Mbytes` - Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.
-- `Process: Private Bytes: _Total`: This is the amount of memory (physical and page) being used by all processes combined.
-- `Process: Working Set: _Total`: This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.
+|Performance counter name|Description|
+|-|-|
+|MSSQL$\<instance>:&nbsp;Buffer&nbsp;Manager:&nbsp;Page&nbsp;life&nbsp;expectancy|How long pages persist in the buffer pool. If this value is below 300 seconds, it may indicate that the server could use more memory. It could also result from index fragmentation.|
+|MSSQL$\<instance>: Buffer Manager: Lazy writes/sec|Lazy writer frees space in the buffer by moving pages to disk. Generally, the value should not consistently exceed 20 writes per second. Ideally, it would be close to zero.|
+|Memory: Available Mbytes| Values below 100 MB may indicate memory pressure. Memory pressure is clearly present when this amount is less than 10 MB.|
+|Process: Private Bytes: _Total|This is the amount of memory (physical and page) being used by all processes combined.|
+|Process: Working Set: _Total|This is the amount of physical memory being used by all processes combined. If the value for this counter is significantly below the value for `Process: Private Bytes: _Total`, it indicates that processes are paging too heavily. A difference of more than 10% is probably significant.|
 
 #### Counters to identify disk pressure
 
@@ -364,81 +366,109 @@ Capture these physical disk counters for all drives that contain SQL data or log
 
 [SQL Server performance troubleshooting guide](https://download.microsoft.com/download/d/b/d/dbde7972-1eb9-470a-ba18-58849db3eb3b/tshootperfprobs2008.docx) provide deeper insight into troubleshooting SQL Server performance.
 
-### OpsMgr performance counters
+### Operations Manager performance counters
 
-The following sections describe the performance counters that you can use to monitor and troubleshoot OpsMgr performance.
+The following sections describe the performance counters that you can use to monitor and troubleshoot Operations Manager performance.
 
 #### Gateway server role
 
-Overall performance counters: These counters indicate the overall performance of the gateway:
+##### Overall performance counters
 
-- Processor(_Total)\\% Processor Time
-- Memory\\% Committed Bytes In Use
-- Network Interface(*)\\Bytes Total/sec
-- LogicalDisk(*)\\% Idle Time
+These counters indicate the overall performance of the gateway:
 
-LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the gateway:
+|Performance counter name|
+|-|
+|Processor(\_Total)\\% Processor Time|
+|Memory\\% Committed Bytes In Use|
+|Network Interface(\*)\\Bytes Total/sec|
+|LogicalDisk(\*)\\% Idle Time|
+|LogicalDisk(\*)\\Avg. Disk Queue Length|
 
-- Process(HealthService)\\%Processor Time
-- Process(HealthService)\Private Bytes (depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes)
-- Process(HealthService)\Thread Count
-- Process(HealthService)\Virtual Bytes
-- Process(HealthService)\Working Set
-- Process(MonitoringHost*)\\% Processor Time
-- Process(MonitoringHost*)\Private Bytes
-- Process(MonitoringHost*)\Thread Count
-- Process(MonitoringHost*)\Virtual Bytes
+##### Operations Manager process generic performance counters
 
-Process(MonitoringHost*)\Working SetOpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the gateway:
+These counters indicate the overall performance of Operations Manager processes on the gateway:
 
-- Health Service\Workflow Count
-- Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
-- Health Service Management Groups(*)\Send Queue % Used: The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the management server or database is too busy or is offline.
-- OpsMgr Connector\Bytes Received: The number of network bytes received by the gateway - that is, the number of incoming bytes before decompression.
-- OpsMgr Connector\Bytes Transmitted: The number network bytes sent by the gateway - that is, the number of outgoing bytes after compression.
-- OpsMgr Connector\Data Bytes Received: The number of data bytes received by the gateway - that is, the amount of incoming data after decompression.
-- OpsMgr Connector\Data Bytes Transmitted: The number of data bytes sent by the gateway - that is, the amount of outgoing data before compression.
-- OpsMgr Connector\Open Connections: The number of connections that are open on gateway. This number should be same as the number of agents or management servers that are directly connected to the gateway.
+| Performance counter name                   | Description                                                                                                            |
+|--------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| Process(HealthService)\\% Processor Time   |                                                                                                                        |
+| Process(HealthService)\\Private Bytes      | Depending on how many agents this gateway is managing, this number may vary and could be several hundred megabytes |
+| Process(HealthService)\\Thread Count       |                                                                                                                        |
+| Process(HealthService)\\Virtual Bytes      |                                                                                                                        |
+| Process(HealthService)\\Working Set        |                                                                                                                        |
+| Process(MonitoringHost*)\\%&nbsp;Processor&nbsp;Time |                                                                                                                        |
+| Process(MonitoringHost*)\\Private Bytes    |                                                                                                                        |
+| Process(MonitoringHost*)\\Thread Count     |                                                                                                                        |
+| Process(MonitoringHost*)\\Virtual Bytes    |                                                                                                                        |
+| Process(MonitoringHost*)\\Working Set      |                                                                                                                        |
+
+##### Operations Manager specific performance counters
+
+These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the gateway:
+
+|Performance counter name|Description|
+|-|-|
+|Health Service\Workflow Count||
+|Health Service Management Groups(\*)\Active File Uploads|The number of file transfers that this gateway is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.|
+|Health&nbsp;Service&nbsp;Management&nbsp;Groups(\*)\Send&nbsp;Queue&nbsp;%&nbsp;Used|The size of persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded Operations Manager system because the management server or database is too busy or is offline.|
+|OpsMgr Connector\Bytes Received|The number of network bytes received by the gateway - that is, the number of incoming bytes before decompression.|
+|OpsMgr Connector\Bytes Transmitted|The number network bytes sent by the gateway - that is, the number of outgoing bytes after compression.|
+|OpsMgr Connector\Data Bytes Received|The number of data bytes received by the gateway - that is, the amount of incoming data after decompression.|
+|OpsMgr Connector\Data Bytes Transmitted|The number of data bytes sent by the gateway - that is, the amount of outgoing data before compression.|
+|OpsMgr Connector\Open Connections|The number of connections that are open on gateway. This number should be same as the number of agents or management servers that are directly connected to the gateway.|
 
 #### Management server role
 
-Overall performance counters: These counters indicate the overall performance of the management server:
+##### Overall performance counters
 
-- Processor(_Total)\\% Processor Time
-- Memory\\% Committed Bytes In Use
-- Network Interface(*)\Bytes Total/sec
-- LogicalDisk(*)\\% Idle Time
+These counters indicate the overall performance of the management server:
 
-LogicalDisk(*)\Avg. Disk Queue LengthOpsMgr process generic performance counters: These counters indicate the overall performance of OpsMgr processes on the management server:
+|Performance counter name|
+|-|
+|Processor(\_Total)\\% Processor Time|
+|Memory\\% Committed Bytes In Use|
+|Network Interface(\*)\\Bytes Total/sec|
+|LogicalDisk(\*)\\% Idle Time|
+|LogicalDisk(\*)\\Avg. Disk Queue Length|
 
-- Process(HealthService)\\% Processor Time
-- Process(HealthService)\Private Bytes - Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes.
-- Process(HealthService)\Thread Count
-- Process(HealthService)\Virtual Bytes
-- Process(HealthService)\Working Set
-- Process(MonitoringHost*)\\% Processor Time
-- Process(MonitoringHost*)\Private Bytes
-- Process(MonitoringHost*)\Thread Count
-- Process(MonitoringHost*)\Virtual Bytes
+##### Operations Manager process generic performance counters
 
-Process(MonitoringHost*)\Working SetOpsMgr specific performance counters: These counters are OpsMgr specific counters that indicate the performance of specific aspects of OpsMgr on the management server:
+These counters indicate the overall performance of Operations Manager processes on the management server:
 
-- Health Service\Workflow Count: The number of workflows that are running on this management server.
-- Health Service Management Groups(*)\Active File Uploads: The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.
-- Health Service Management Groups(*)\Send Queue % Used: The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded OpsMgr system because the OpsMgr system (for example, the root management server) is too busy or is offline.
-- Health Service Management Groups(*)\Bind Data Source Item Drop Rate: The number of data items that are dropped by the management server for database or data warehouse data collection write actions. When this counter value is not 0, the management server or database is overloaded because it can't handle the incoming data item fast enough or because a data item burst is occurring. The dropped data items will be resent by agents. After the overload or burst situation is finished, these data items will be inserted into the database or into the data warehouse.
-- Health Service Management Groups(*)\Bind Data Source Item Incoming Rate: The number of data items received by the management server for database or data warehouse data collection write actions.
-- Health Service Management Groups(*)\Bind Data Source Item Post Rate: The number of data items that the management server wrote to the database or data warehouse for data collection write actions.
-- OpsMgr Connector\Bytes Received: The number of network bytes received by the management server - that is, the size of incoming bytes before decompression.
-- OpsMgr Connector\Bytes Transmitted: The number of network bytes sent by the management server - that is, the size of outgoing bytes after compression.
-- OpsMgr Connector\Data Bytes Received: The number of data bytes received by the management server - that is, the size of incoming data after decompress)
-- OpsMgr Connector\Data Bytes Transmitted: The number of data bytes sent by the management server - that is, the size of outgoing data before compression)
-- OpsMgr Connector\Open Connections: The number of connections open on management server. It should be same as the number of agents or root management server that are directly connected to it.
-- OpsMgr database Write Action Modules(*)\Avg. Batch Size: The number of data items or batches that are received by database write action modules. If this number is 5,000, a data item burst is occurring.
-- OpsMgr DB Write Action Modules(*)\Avg. Processing Time: The number of seconds a database write action modules takes to insert a batch into database. If this number is often greater than 60, a database insertion performance issue is occurring.
-- OpsMgr DW Writer Module(*)\Avg. Batch Processing Time, ms: The number of milliseconds for data warehouse write action to insert a batch of data items into a data warehouse.
-- OpsMgr DW Writer Module(*)\Avg. Batch Size: The average number of data items or batches received by data warehouse write action modules.
-- OpsMgr DW Writer Module(*)\Batches/sec: The number of batches received by data warehouse write action modules per second.
-- OpsMgr DW Writer Module(*)\Data Items/sec: The number of data items received by data warehouse write action modules per second.
-- OpsMgr DW Writer Module(*)\Dropped Data Item Count: The number of data items dropped by data warehouse write action modules.
-- OpsMgr DW Writer Module(*)\Total Error Count: The number of errors that occurred in a data warehouse write action module.
+| Performance counter name                   | Description                                                                                                                         |
+|--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| Process(HealthService)\\% Processor Time   |                                                                                                                                     |
+| Process(HealthService)\Private Bytes       | Depending on how many agents this management server is managing, this number may vary, and it could be several hundred megabytes.|
+| Process(HealthService)\Thread Count        |                                                                                                                                     |
+| Process(HealthService)\Virtual Bytes       |                                                                                                                                     |
+| Process(HealthService)\Working Set         |                                                                                                                                     |
+| Process(MonitoringHost\*)\\%&nbsp;Processor&nbsp;Time|                                                                                                                                     |
+| Process(MonitoringHost\*)\Private Bytes     |                                                                                                                                     |
+| Process(MonitoringHost\*)\Thread Count      |                                                                                                                                     |
+| Process(MonitoringHost\*)\Virtual Bytes     |                                                                                                                                     |
+| Process(MonitoringHost\*)\Working Set       |                                                                                                                                     |
+
+##### Operations Manager specific performance counters
+
+These counters are Operations Manager specific counters that indicate the performance of specific aspects of Operations Manager on the management server:
+
+| Performance counter name|Description|
+|-|-|
+|Health Service\Workflow Count|The number of workflows that are running on this management server.|
+|Health Service Management Groups(\*)\Active File Uploads|The number of file transfers that this management server is handling. This represents the number of management pack files that are being uploaded to agents. If this value remains at a high level for a long time, and there is not much management pack importing at a given moment, these conditions may generate a problem that affects file transfer.|
+|Health Service Management Groups(\*)\Send Queue % Used|The size of the persistent queue. If this value remains higher than 10 for a long time, and it does not drop, this indicates that the queue is backed up. This condition is caused by an overloaded Operations Manager system because the Operations Manager system (for example, the root management server) is too busy or is offline.|
+|Health Service Management Groups(\*)\Bind Data Source Item Drop Rate|The number of data items that are dropped by the management server for database or data warehouse data collection write actions. When this counter value is not `0`, the management server or database is overloaded because it can't handle the incoming data item fast enough or because a data item burst is occurring. The dropped data items will be resent by agents. After the overload or burst situation is finished, these data items will be inserted into the database or into the data warehouse.|
+|Health&nbsp;Service&nbsp;Management&nbsp;Groups(\*)\Bind&nbsp;Data&nbsp;Source&nbsp;Item&nbsp;Incoming&nbsp;Rate|The number of data items received by the management server for database or data warehouse data collection write actions.|
+|Health Service Management Groups(\*)\Bind Data Source Item Post Rate|The number of data items that the management server wrote to the database or data warehouse for data collection write actions.|
+|OpsMgr Connector\Bytes Received|The number of network bytes received by the management server - that is, the size of incoming bytes before decompression.|
+|OpsMgr Connector\Bytes Transmitted|The number of network bytes sent by the management server - that is, the size of outgoing bytes after compression.|
+|OpsMgr Connector\Data Bytes Received|The number of data bytes received by the management server - that is, the size of incoming data after decompress.|
+|OpsMgr Connector\Data Bytes Transmitted|The number of data bytes sent by the management server - that is, the size of outgoing data before compression.|
+|OpsMgr Connector\Open Connections|The number of connections open on management server. It should be same as the number of agents or root management server that are directly connected to it.|
+|OpsMgr database Write Action Modules(\*)\Avg. Batch Size|The number of data items or batches that are received by database write action modules. If this number is 5,000, a data item burst is occurring.|
+|OpsMgr DB Write Action Modules(\*)\Avg. Processing Time|The number of seconds a database write action modules takes to insert a batch into database. If this number is often greater than 60, a database insertion performance issue is occurring.|
+|OpsMgr DW Writer Module(\*)\Avg. Batch Processing Time, ms|The number of milliseconds for data warehouse write action to insert a batch of data items into a data warehouse.|
+|OpsMgr DW Writer Module(\*)\Avg. Batch Size|The average number of data items or batches received by data warehouse write action modules.|
+|OpsMgr DW Writer Module(\*)\Batches/sec|The number of batches received by data warehouse write action modules per second.|
+|OpsMgr DW Writer Module(\*)\Data Items/sec|The number of data items received by data warehouse write action modules per second.|
+|OpsMgr DW Writer Module(\*)\Dropped Data Item Count|The number of data items dropped by data warehouse write action modules.|
+|OpsMgr DW Writer Module(\*)\Total Error Count|The number of errors that occurred in a data warehouse write action module.|

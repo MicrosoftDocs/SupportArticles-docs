@@ -52,3 +52,5 @@ If your VM doesn’t have an agent running, you can follow the steps in [Reset l
     **Note** This will ask for the password. Type the new password to set up the account.
 
 1. After you change the password, the issue should be resolved and you can use the account to log in into the VM. There is no need to restart the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

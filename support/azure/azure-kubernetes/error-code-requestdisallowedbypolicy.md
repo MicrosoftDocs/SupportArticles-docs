@@ -10,7 +10,7 @@ ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the RequestDisallowedByPolicy error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the RequestDisallowedByPolicy error code
- 
+
 This article discusses how to identify and resolve the `RequestDisallowedByPolicy` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Symptoms
@@ -42,3 +42,5 @@ To get details about the policy that blocked your cluster deployment operation, 
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

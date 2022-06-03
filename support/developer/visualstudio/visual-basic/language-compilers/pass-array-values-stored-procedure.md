@@ -4,7 +4,6 @@ description: This article describes how to pass array of values into SQL Server 
 ms.date: 10/26/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Pass array of values into SQL Server stored procedure using XML and Visual Basic .NET
 

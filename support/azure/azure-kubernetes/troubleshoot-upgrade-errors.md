@@ -36,6 +36,7 @@ To resolve this issue, follow these steps:
     ```cli
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
+
     The following screenshot shows the default rules:
 
     :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules.":::
@@ -81,6 +82,7 @@ After the quota change takes effect, try to upgrade the cluster to the same vers
 ```cli
 az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
 ```
+
 ## Error code: Quotaexceeded
 
 ### Cause
@@ -119,3 +121,5 @@ If scaling down isn't an option, and your virtual network CIDR has enough IP add
 1. Switch the original node pool to one of type system.
 1. Scale up the user node pool.
 1. Scale down the original node pool.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

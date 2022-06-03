@@ -35,6 +35,7 @@ type                    memory_node_id                     pages_kb
 MEMORYCLERK_XTP         0                                  60104496
 MEMORYCLERK_XTP         64                                 0
 ```
+
 ## Diagnose the issue
 
 To collect data to diagnose the issue, follow these steps:
@@ -91,7 +92,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 
     The DMV `tempdb.sys.dm_db_xtp_memory_consumers` shows high values for allocated and used bytes in a large object (LOB) allocator or table heap where `Object_ID`, `XTP_Object_ID` and `Index_ID` are `NULL`.
 
-    **Resolution**: The root cause has been identified and a product fix is being examined.
+    **Resolution**: Apply [SQL Server 2019 CU16](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896) for the issue [14535149](https://support.microsoft.com/topic/kb5011644-cumulative-update-16-for-sql-server-2019-74377be1-4340-4445-93a7-ff843d346896?msclkid=f1148209c24811ecbfa6aa36a20ffa89#bkmk_14535149).
 
 - Scenario 4
 
@@ -113,7 +114,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
      COMMIT
      ```
 
-     An explicitly-open transaction with DDL statements on temporary tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
+     An explicitly open transaction with DDL statements on temporary tables won't allow the table heap and lookaside heap to be freed up for subsequent transactions by using TempDB metadata.
 
      **Resolution**: Check for long-running explicit transactions involving DDL statements on temporary tables and resolve from the application side by keeping transactions short.
 
@@ -149,6 +150,7 @@ By using the DMVs to verify the cause, you may see different scenarios of the is
 These sections provide more details about some of the memory components involved in memory-optimized tempdb metadata.
 
 ### Lookaside memory allocator
+
 Lookaside in In-Memory OLTP is a thread-local memory allocator to help achieve fast transaction processing. Each thread object contains a collection of lookaside memory allocators. Each lookaside associated with each thread has a pre-defined upper limit on how much memory it can allocate. Once the limit is reached, the thread allocates memory from a spill-over shared memory pool (VARHEAP). The DMV `sys.dm_xtp_system_memory_consumers` aggregates data for each lookaside type (`memory_consumer_type_desc = 'LOOKASIDE'`) and the shared memory pool (`memory_consumer_type_desc = 'VARHEAP'` and  `memory_consumer_desc = 'Lookaside heap'`).
 
 ### System-level consumers: tempdb.sys.dm_xtp_system_memory_consumers

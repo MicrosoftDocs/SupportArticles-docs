@@ -14,10 +14,9 @@ ms.date: 02/23/2020
 ms.author: genli
 ---
 
-#  An internal error occurs when you try to connect to an Azure VM through Remote Desktop
+# An internal error occurs when you try to connect to an Azure VM through Remote Desktop
 
 This article describes an error that you may experience when you try to connect to a virtual machine (VM) in Microsoft Azure.
-
 
 ## Symptoms
 
@@ -26,7 +25,6 @@ You can't connect to an Azure VM by using the remote desktop protocol (RDP). The
 - RDP internal error
 - An internal error has occurred
 - This computer can't be connected to the remote computer. Try connecting again. If the problem continues, contact the owner of the remote computer or your network administrator
-
 
 ## Cause
 
@@ -292,3 +290,5 @@ To enable dump log and Serial Console, run the following script.
     ```
 
 5. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md), and then check whether the issue is resolved.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

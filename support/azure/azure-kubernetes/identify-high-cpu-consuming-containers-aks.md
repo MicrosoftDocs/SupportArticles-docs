@@ -76,3 +76,5 @@ Simple commands can be run on a node through Secure Shell (SSH) to help identify
 - [Resource Limits](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 - [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/)
 - [Limit Ranges](https://kubernetes.io/docs/concepts/policy/limit-range/)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

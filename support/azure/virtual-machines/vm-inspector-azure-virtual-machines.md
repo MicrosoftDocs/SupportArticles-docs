@@ -6,8 +6,8 @@ author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
 ms.topic: troubleshooting
-ms.date: 07/16/2021
-ms.author: chelche
+ms.date: 04/20/2022
+ms.author: genli
 
 ---
 # VM Inspector for Azure virtual machines (Preview)
@@ -50,8 +50,18 @@ VM Inspector is supported on the following operating systems:
 
 ## Supported regions
 
-VM Inspector is supported on the following Azure regions:
-Australia East, East US, East US2, North Europe, SouthCental US, SouthEast Asia, UK South, WestCentral US, West Europe, West US2
+VM Inspector is supported for the following Azure regions:
+
+- Australia East
+- East US
+- East US2
+- North Europe
+- SouthCental US
+- SouthEast Asia
+- UK South
+- WestCentral US
+- West Europe
+- West US2
 
 ## Unsupported scenarios
 
@@ -61,29 +71,28 @@ Australia East, East US, East US2, North Europe, SouthCental US, SouthEast Asia,
 
 ## How VM Inspector works
 
-VM Inspector uses the Microsoft Compute Diagnostic resource provider, a back-end Microsoft service that collects useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector will then make a connection to the VM managed disk in Azure blob storage, and use a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer's storage account for safe keeping.
+VM Inspector uses the Microsoft Compute Diagnostic resource provider, a back-end Microsoft service that collects useful event logs, configurations, settings, and registry keys from your VM OS disk for diagnostics. The customer starts by granting access to VM Inspector and running a diagnostic against your selected VM. VM Inspector then makes a connection to the VM-managed disk in Azure blob storage, and uses a predefined manifest to do file collection on the OS disk. After the inspection is finished, the collected files are packed into a .zip file, and returned to customer's storage account for safe keeping.
 
 For more information about the anatomy of an Azure VM on Windows, see [Run a Windows VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/windows-vm).
 
 For more information about the anatomy of an Azure VM on Linux, see [Run a Linux VM on Azure - Azure Reference Architectures](/azure/architecture/reference-architectures/n-tier/linux-vm).
 
-For general information about OS disks, see: [Introduction to Azure managed disks, OS disk](/azure/virtual-machines/managed-disks-overview#os-disk).
+For general information about OS disks, see [Introduction to Azure managed disks, OS disk](/azure/virtual-machines/managed-disks-overview#os-disk).
 
 ## Get access to VM Inspector
 
-A user with Owner-level access must grant access to VM Inspector before diagnostics can be run on the VM. The VM Inspector needs the Disk Backup Reader role at minimum to perform disk inspection against the managed OS disk on your VM. If you have Owner-level access and you're running VM Inspector for the first time on your VM, you'll be prompted to automatically grant VM Inspector the Disk Backup Reader role. If you have a lower access role such as Contributor, Reader, or User Access Administrator, you must manually update your access level to that of Owner on the VM to proceed.
+A user who has Owner-level access must grant access to VM Inspector before diagnostics can be run on the VM. The VM Inspector must have at least the Disk Backup Reader role to be able to do disk inspection of the managed OS disk on your VM. If you have Owner-level access, and you're running VM Inspector for the first time on your VM, you'll be prompted to automatically grant VM Inspector the Disk Backup Reader role. If you have a lower access role, such as Contributor, Reader, or User Access Administrator, you must manually update your access level to that of Owner on the VM to proceed.
 
-For more information on the Disk Backup Reader role, see: [Azure built-in roles - Disk Backup Reader](/azure/role-based-access-control/built-in-roles#disk-backup-reader)
+For more information about the Disk Backup Reader role, see [Azure built-in roles - Disk Backup Reader](/azure/role-based-access-control/built-in-roles#disk-backup-reader).
 
-For more information on general Azure built-in RBAC roles, see: [Azure built-in roles - All](/azure/role-based-access-control/built-in-roles#all)
-
-[Azure built-in roles - Azure RBAC](/azure/role-based-access-control/built-in-roles#general)
+For more information about general Azure built-in RBAC roles, see [Azure built-in roles - All](/azure/role-based-access-control/built-in-roles#all) and 
+[Azure built-in roles - Azure RBAC](/azure/role-based-access-control/built-in-roles#general).
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/azure-built-in-roles.png" alt-text="A list of built-in-roles for Azure, including Contributor, Owner, Reader, and User Access Administrator.":::
 
 ### Register the preview feature
 
-To register the preview feature of VM Inspector, follow the steps that are described in [set up preview features in Azure subscription](/azure/azure-resource-manager/management/preview-features?tabs=azure-portal) and select **VM Inspection**. After the registration, you will need to wait for around 30 minutes before trying out the feature.
+To register the preview feature of VM Inspector, follow the steps that are described in [set up preview features in Azure subscription](/azure/azure-resource-manager/management/preview-features?tabs=azure-portal) and select **VM Inspection**. After the registration, you have to wait for approximately 30 minutes before you try out the feature.
 
 ## Run VM Inspector on your VM
 
@@ -97,13 +106,17 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
 1. Select a storage account:
 
-   - If you want to use an existing single storage account to store reports from VM Inspector for multiple VMs, select an existing storage accounts in the list.
+   - If you want to use an existing single storage account to store reports from VM Inspector for multiple VMs, select an existing storage account in the list.
    - If you want to use a new storage account, select **Create new**, and configure the new storage account in the right-side panel.
 
       :::image type="content" source="media/vm-inspector-azure-virtual-machines/select-storage-account.png" alt-text="Screenshot of the storage account selection within the storage account creation process.":::
 
-   > [!NOTE]
-   > If the **Create new** option is not available to select, this is because you don't have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
+     > [!NOTE]
+     > If the **Create new** option isn't available to select, this is because you don't have the correct level of access to run VM Inspector. You must have at least the Contributor role to run VM Inspector successfully.
+
+   - (Preview Feature): In the public preview phase, Microsoft is offering an experience so that you don't need to select the storage account again after the first time that you use VM Inspector. This feature pins a given storage account at subscription level with regional affinity. All supported resource types within the same subscription and the same region will share the same storage account, after the account is configured. Any changes to the storage configuration entry will affect all supported resource types within the same subscription and the same region.
+
+     Unless you want to change the storage account, all diagnostic reports will be saved in the first-time storage account that you selected. As a best practice, Microsoft recommends that you choose the storage account in the same region of the compute resources.
 
 1. Select the **Run Inspector** button or **Browse Inspector Report** button:
 
@@ -133,12 +146,10 @@ VM Inspector is available to run for both Windows and Linux VMs. To run VM Inspe
 
 ## Select an analysis scenario to run
 
-The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run. For a link to the Github documentation of the full list analysis logs and information, see [Manifest Content](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md).
-
-### Windows diagnostics
+The following analysis scenarios are available to run from the Azure portal. Based on the logs and issues that you're experiencing, choose an analysis to run. For a link to the GitHub documentation of the full list analysis logs and information, see [Manifest Content](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md).
 
 <details>
-<summary>Click here to expand this list.</summary>
+<summary>Windows diagnostics</summary>
 
 |Analysis Name|File Name|
 |--|--|
@@ -323,10 +334,8 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 |diagnostic|`/Windows/servicing/sessions/sessions.xml|
 </details>
 
-### Linux diagnostics
-
 <details>
-<summary>Click here to expand this list.</summary>
+<summary>Linux diagnostics</summary>
 
 |Analysis Name|File Name|
 |--|--|
@@ -423,13 +432,13 @@ The following analysis scenarios are available to run from the Azure portal. Bas
 
 ## Change the VM Inspector settings
 
-Reopen the VM Inspector page to change a storage account to run a new VM Inspector report or to view an existing VM Inspector report that's stored in other storage accounts. Use the same storage account for multiple VMs that run VM Inspector. The old reports are not deleted when you change the storage account. However, they will no longer be displayed in the Inspector reports list view.
+Reopen the VM Inspector page to change a storage account to run a new VM Inspector report or to view an existing VM Inspector report that's stored in other storage accounts. Use the same storage account for multiple VMs that run VM Inspector. The old reports aren't deleted when you change the storage account. However, they'll no longer be displayed in the Inspector reports list view.
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/inspector-reports-list.png" alt-text="Screenshot of the dropdown list of current inspector reports within the inspector reports view.":::
 
 ## Manage and view the VM Inspector report
 
-Each VM Inspector report might contain multiple files and logs for your troubleshooting. For the complete list of all the collected VM Inspector report data, see [Windows](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#windows) or [Linux](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#linux) for more information. To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
+Each VM Inspector report might contain multiple files and logs for your troubleshooting. For more information, see the complete list of all the collected VM Inspector report data for [Windows](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#windows) or [Linux](https://github.com/Azure/azure-diskinspect-service/blob/master/docs/manifest_content.md#linux). To download and review the full diagnostics report, select the specific report, and then select **Download report** to download a .zip file that contains all the logs and files within the report.
 
 :::image type="content" source="media/vm-inspector-azure-virtual-machines/download-report.png" alt-text="Screenshot of the existing reports in the selected diagnostics storage account, including the Download Report option.":::
 
@@ -447,7 +456,7 @@ To delete one or more VM Inspector reports, select **Delete report**.
 
 **A2.** To submit feedback, select the **Feedback** button on the toolbar, and then select the **Smile** or **Frown** icon, or provide extra feedback to us.
 
-**Q3. I ran VM Inspector but I don't see any error messages.**
+**Q3. I ran VM Inspector. Why don't I see any error messages?**
 
 **A3.** If you don't see error messages when you run VM inspector, you don't have the minimum access level of **Owner** to run the tool. To get access, refer to the **Get access to VM Inspector** section.
 
@@ -455,10 +464,16 @@ To delete one or more VM Inspector reports, select **Delete report**.
 
 **A4.** The disk doesn't have the **Disk Backup Reader Access** role to enable VM Inspector to run successfully. Select the check box for **Consent to assign Disk Backup Reader access to Compute Recommendation Service** to grant access to the service for **Disk Backup Reader Access**.
 
+**Q5. Does VM Inspector use Credential Scanner to redact any secrets from the logs?**
+
+**A5.** Yes. If you want to be excluded from the redaction, submit your request or reach out to <vminspector@microsoft.com>.
+
 ## Resources
 
 - [VM Inspector error messages](vm-inspector-error-messages.md)
 
 ## Next steps
 
-If you need more help with any of the content in this article, or if you have any feedback regarding this feature, contact the Azure experts here: vminspector@microsoft.com.
+If you need more help with any of the content in this article, or if you have any feedback regarding this feature, contact the Azure experts at <vminspector@microsoft.com>.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,7 +1,7 @@
 ---
 title: Fix connection issues to an app that's hosted on an AKS cluster
 description: Learn about basic troubleshooting steps if you experience connection issues to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/17/2022
+ms.date: 4/29/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
@@ -69,7 +69,7 @@ A basic request flow to applications on an AKS cluster would resemble the flow t
 
 :::image type="content" source="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" lightbox="./media/connection-issues-application-hosted-aks-cluster/aks-cluster-app-request-flow.svg" alt-text="Diagram of a basic request flow to applications on an Azure Kubernetes Service (A K S) cluster." border="true":::
 
-## Basic troubleshooting
+## Inside-out troubleshooting
 
 Troubleshooting connectivity issues might involve many checks, but the *inside-out* approach can help find the source of the issue and identify the bottleneck. In this approach, you start at the pod itself, checking whether the application is responding on the pod's IP address. Then, check each component in turn up to the end client.
 
@@ -124,7 +124,7 @@ curl -Iv http://<pod-ip-address>:<port>
 
 For applications that listen on other protocols, you can install relevant tools inside the test pod and then check the connectivity to the application pod.
 
-For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-running-pod/).
+For more commands to troubleshoot pods, see [Debug running pods](https://kubernetes.io/docs/tasks/debug/debug-application/debug-running-pod/).
 
 ### Step 2: Check whether the application is reachable from the service
 
@@ -205,7 +205,7 @@ Does the `LoadBalancer` service IP address return a correct response? If it does
 
 1. Verify that the network security groups (NSGs) that are associated with the AKS nodes and AKS subnet allow the incoming traffic on the service port.
 
-For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-service/).
+For more commands to troubleshoot services, see [Debug services](https://kubernetes.io/docs/tasks/debug/debug-application/debug-service/).
 
 ## Scenarios that use an ingress instead of a service
 
@@ -284,5 +284,7 @@ Another possibility is that the components on top of the ingress pods, such as L
 If you receive a `Connection Timed Out` error message, check the network security group that's associated with the AKS nodes. Also, check the AKS subnet. It could be blocking the traffic from the load balancer or application gateway to the AKS nodes.
 
 For more information about how to troubleshoot ingress (such as Nginx Ingress), see [ingress-nginx troubleshooting](https://github.com/kubernetes/ingress-nginx/blob/main/docs/troubleshooting.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
