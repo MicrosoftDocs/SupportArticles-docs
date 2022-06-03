@@ -15,10 +15,10 @@ ms.technology: windows-client-deployment
 ---
 # Devices connected through a Thunderbolt Dock stop working after the computer resumes from a power state
 
-This article provides a workaround for an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state.
+This article provides a workaround for an issue in which devices that are connected through a Thunderbolt Dock stop working after the computer resumes from a power state.  
 
-_Applies to:_ &nbsp; Windows Client
-_Original KB number:_ &nbsp; 4532436
+_Applies to:_ &nbsp; Windows Client  
+_Original KB number:_ &nbsp; 4532436  
 
 ## Symptoms
 
