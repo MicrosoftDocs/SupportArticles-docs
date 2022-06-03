@@ -10,7 +10,7 @@ author: pijocoder
 ms.author: jopilov
 ---
 
-# Troubleshoot a query that shows significant performance difference on two servers
+# Troubleshoot a query that shows significant performance difference between two servers
 
 _Applies to:_ &nbsp; SQL Server
 
@@ -18,7 +18,7 @@ This article provides troubleshooting steps for a performance issue where a quer
 
 ## Symptoms
 
-Assume there are two servers with SQL Server installed. One of the SQL Server instances contains a copy of a database in the other SQL Server instance. When you run a query against the databases on both servers, the query runs slowly on one server while it runs fast on the other server.
+Assume there are two servers with SQL Server installed. One of the SQL Server instances contains a copy of a database in the other SQL Server instance. When you run a query against the databases on both servers, the query runs slower on one server while it runs faster on the other server.
 
 ## Step 1: Determine whether it's a common issue with multiple queries
 
@@ -139,7 +139,7 @@ Parallel queries may use more CPU time than the overall duration. In fact, that 
 
 ## Step 3. Compare data from both servers, figure out the scenario and troubleshoot the issue
 
-We suppose that there are two machines named Server1 and Server2. And the query runs slowly on Server1 and runs fast on Server1. Compare the times from both servers and check out the solution for your scenario.
+Let's assume that there are two machines named Server1 and Server2. And the query runs slowly on Server1 and runs fast on Server2. Compare the times from both servers and check out the solution that matches your scenario.
 
 ### Scenario 1: The query on Server1 uses more CPU time and the logical reads is higher on Server1 than on Server2
 
@@ -150,6 +150,7 @@ If the CPU time on Server1 is much greater than on Server2 and the elapsed time 
 |Server1 |   3100          | 3000        | 300000        |
 |Server2 |   1100          | 1000        |  90200        |
 
+If this matches your scenario, proceed to next step. Otherwise, examine Scenario 2.
 #### Next step: check execution plans and environments
 
 1. Compare execution plans of the query on both Servers. To do this, user one of the two methods:
@@ -213,16 +214,16 @@ Then the additional CPU time comes from some other CPU-bound activities. It's th
 This issue may be caused by:
 
 - XEvents/SQL Server tracing, especially with filtering on text columns (database name, login name, query text, and so on). If tracing is enabled on one server but not on the other, this could be the reason for the difference.
-- User-defined functions (UDFs) or other T-SQL code that performs CPU-bound operations. This would be the cause only when other conditions are different on Server1 and Server2, such as data size, CPU clock speed, or Power plan.
-- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Agent XPs](/sql/database-engine/configure-windows/agent-xps-server-configuration-option) that may drive CPU but doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
-- Different built-in function logics in different versions of SQL Server
+- User-defined functions (UDFs) or other T-SQL code that performs CPU-bound operations. This would typically be the cause when other conditions are different on Server1 and Server2, such as data size, CPU clock speed, or Power plan.
+- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Extended Stored procedures (XPs)](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming) that may drive CPU but doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
+- Difference in SQL Server functionality that is CPU-bound (e.g. string-manipulation code)"
 
 #### Next step: check traces and queries
 
 1. Check traces on both servers.
     1. If there's any trace enabled on Server1 but not on Server2.
     1. If yes, disable the trace and run the query again on Server1.
-    1. If the query runs fast this time, enable the trace back but remove text filters from it.
+    1. If the query runs fast this time, enable the trace back but remove text filters from it, if there are any.
 
 1. Check if the query uses UDFs that do string manipulations or do extensive processing on data columns in the `SELECT` list.
 1. Check if the query contains loops, function recursions or nestings.
@@ -383,7 +384,7 @@ WHERE name = 'LEGACY_CARDINALITY_ESTIMATION'
 
 ### Cause 6: Optimizer hotfixes enabled/disabled
 
-Different configurations of query optimizer hotfixes lead to different query plans. For more information, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/topic/kb974006-sql-server-query-optimizer-hotfix-trace-flag-4199-servicing-model-cd3ebf5c-465c-6dd8-7178-d41fdddccc28).
+If the query optimizer hotfixes are enabled on one server but disabled on the other, then different query plans can be generated. For more information, see [SQL Server query optimizer hotfix trace flag 4199 servicing model](https://support.microsoft.com/topic/kb974006-sql-server-query-optimizer-hotfix-trace-flag-4199-servicing-model-cd3ebf5c-465c-6dd8-7178-d41fdddccc28).
 
 To get the state of query optimizer hotfixes, run the following query:
 
