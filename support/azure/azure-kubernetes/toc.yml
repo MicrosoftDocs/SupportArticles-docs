@@ -134,14 +134,14 @@
 
 - name: Troubleshoot Azure Storage-related issues
   items:
-  - name: Can't set the uid and gid mounting options on an Azure disk
-    href: failure-setting-azure-disk-mount-options-uid-gid.md
-  - name: Could not change permissions using Azure Files
-    href: could-not-change-permissions-azure-files.md
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
   - name: Errors when mounting disk volumes
     href: fail-to-mount-azure-disk-volume.md
+  - name: Can't set the uid and gid mounting options on an Azure disk
+    href: failure-setting-azure-disk-mount-options-uid-gid.md
+  - name: Could not change permissions using Azure Files
+    href: could-not-change-permissions-azure-files.md
   - name: Failed to create file share on storage account
     href: create-file-share-failed-storage-account.md
   - name: Handling of small files causes high latency
