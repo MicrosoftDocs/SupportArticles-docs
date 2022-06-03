@@ -50,6 +50,8 @@
     href: troubleshoot-upgrade-errors.md#error-code-quotaexceeded
   - name: SubnetIsFull error
     href: troubleshoot-upgrade-errors.md#error-code-subnetisfull
+  - name: Kubernetes 1.16 upgrades fail
+    href: upgrades-to-kubernetes-fail-using-node-labels.md    
 
 - name: Troubleshoot delete operations
   items:
