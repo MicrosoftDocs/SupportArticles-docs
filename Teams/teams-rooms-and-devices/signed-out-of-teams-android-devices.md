@@ -28,7 +28,7 @@ Some Microsoft Teams devices in your environment are signed out of Teams automat
 
 If you're a tenant administrator, you can get information about the sign-in state of your devices from the [sign-in logs in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins). To access these logs, navigate to the Azure Active Directory menu > **Monitoring** > **Sign-in logs**.
 
-   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-log.png" alt-text="Screenshot of a sign-in log.":::
+   :::image type="content" source="media/signed-out-of-teams-android-devices/sign-in-log.png" alt-text="Screenshot of a sign-in log with the User sign-ins (non-interactive) tab, the Applications, Status and Resource columns and their entries highlighted.":::
 
 You can also use the information in the sign-in logs to determine whether a device in your environment is affected by this issue. In the **User sign-ins (non-interactive)** tab, check for the following entries:
 
