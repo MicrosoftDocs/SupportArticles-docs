@@ -2,6 +2,15 @@
 
 
 
+## Week of May 30, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/31/2022 | [Issues with Teams webinars](/microsoftteams/troubleshoot/meetings/issues-with-webinars) | modified |
+| 6/2/2022 | [MTR devices can't fetch calendar from Exchange Online](/microsoftteams/troubleshoot/teams-rooms-and-devices/mtr-device-cannot-fetch-calendar) | added |
+
+
 ## Week of May 23, 2022
 
 
