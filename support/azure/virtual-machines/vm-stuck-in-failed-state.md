@@ -52,7 +52,7 @@ Update the VM objects and properties by running the [Update-AzVM](/powershell/mo
 
 ```azurepowershell-interactive
 $VM = Get-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName>
-Set-AzVM -VM $VM -Reapply
+Set-AzVM -ResourceGroupName <ResourceGroup> -Name <VMName> -Reapply
 Update-AzVM -VM $VM
 
 ```
