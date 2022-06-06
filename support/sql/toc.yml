@@ -415,8 +415,8 @@
       href: performance/troubleshoot-query-async-network-io.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
-    - name: Troubleshoot a query that is slow on one server, but fast on another server
-      href: performance/troubleshoot-slow-query-vs-fast-query.md
+    - name: Different query performance between two servers
+      href: performance/troubleshoot-query-perf-between-servers.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
