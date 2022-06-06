@@ -332,7 +332,7 @@ To get the wait time roughly, subtract the CPU time (worker time) from the elaps
    AND is_user_process = 1
    ```
 
-- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time and CPU time](#collect-elapsed-time-and-cpu-time) section for detailed steps.
+- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](#collect-elapsed-time-cpu-time-and-logical-reads) section for detailed steps.
 
 - If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. Check the second method introduced in [Step 1](#step-1-determine-whether-its-a-common-issue-with-multiple-queries) section.
 
