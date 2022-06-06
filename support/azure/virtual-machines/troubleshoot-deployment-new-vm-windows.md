@@ -3,7 +3,7 @@ title: Troubleshoot Windows VM deployment in Azure | Microsoft Docs
 description: Troubleshoot Resource Manager deployment issues when you create a new Windows virtual machine in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
-author: DavidCBerry13
+author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
@@ -12,7 +12,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 ms.topic: troubleshooting
 ms.date: 06/15/2018
-ms.author: daberry
+ms.author: genli
 ms.custom: H1Hack27Feb2017
 
 ---
