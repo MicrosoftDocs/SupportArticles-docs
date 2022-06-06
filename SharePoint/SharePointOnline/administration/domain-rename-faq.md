@@ -150,7 +150,7 @@ If sync is not stopped prior to the rename, there might be issues with OneDrive 
 </details>
 <br/>
 <details>
-<summary><b>I have more than 1000 sites. When will my tenant be eligible for Tenant rename?</b></summary>
+<summary><b>I have more than 5000 sites. When will my tenant be eligible for Tenant rename?</b></summary>
 
 We are working on increasing the limits. We appreciate your patience.  
 
