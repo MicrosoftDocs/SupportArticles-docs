@@ -250,7 +250,6 @@ Check the following questions and determine whether the comparison between the t
   - Power Plans - balanced versus high performance
   - Virtual Machine (VM) versus physical (bare metal) machine
   - Hyper-V versus VMware - difference in configuration
-  - Fewer CPUs on one machine versus more on the other
   - Clock speed difference (lower clock speed versus higher clock speed). For example: 2 GHz versus 3.5 GHz can make a difference. To get the clock speed on a server, run the following PowerShell command:
 
      ```powershell
