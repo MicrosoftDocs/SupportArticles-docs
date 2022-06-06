@@ -31,9 +31,9 @@ ms.date: 6/6/2022
 
 Room Finder is a web-based feature that you can set up for your users to find available [meeting rooms](/exchange/recipients/room-mailboxes) and [workspaces](/exchange/troubleshoot/outlook-issues/create-book-workspace-outlook) that are suitable for their use. Every meeting room and workspace must be set up in Exchange Online so that it displays in Room Finder. Each of these spaces is configured with a room mailbox or a workspace mailbox respectively both of which are a specific type of resource mailbox. To reserve these spaces, users need to include the associated mailbox in their meeting request.
 
-Because rooms and workspaces are physical locations, and there can be multiple such spaces in a building, it is best to organize them into logical groups called room lists to manage them easily in Room Finder.
+Because rooms and workspaces are physical locations, and there can be multiple such spaces in a building, it's best to organize them into logical groups called room lists to manage them easily in Room Finder.
 
-Each room list is a specially designated distribution group, and its members are the resource mailboxes for each room and workspace that's part of the list. While there is no hard limit for the number of rooms and workspaces that can be added to a room list, the maximum number of rooms and workspaces that can be returned in a search on Room Finder is 100. To ensure optimal performance, it is best for each room list to have a maximum of 50 room mailboxes and workspace mailboxes.
+Each room list is a specially designated distribution group, and its members are the resource mailboxes for each room and workspace that's part of the list. While there is no hard limit for the number of rooms and workspaces that can be added to a room list, the maximum number of rooms and workspaces that can be returned in a search on Room Finder is 100. To ensure optimal performance, it's best for each room list to have a maximum of 50 room mailboxes and workspace mailboxes.
 
 Room lists can be organized by:
 
@@ -69,7 +69,7 @@ To set up rooms and workspaces correctly, you must complete the following tasks:
 1. Configure properties such as **City**, **State** and **Capacity** for the rooms and workspaces.
 1. [Create room lists and add rooms and workspaces to them](/exchange/recipients/room-mailboxes#create-a-room-list).  
 
-For example, consider that for an organization that uses *contoso.com* as the domain, you need to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle which is in the state of Washington. If Building A has a total of 50 rooms and workspaces across 3 floors, here are the tasks you will need to complete so that your users can find these spaces in Room Finder.
+For example, consider that for an organization that uses *contoso.com* as the domain, you need to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle that is in the state of Washington. If Building A has a total of 50 rooms and workspaces across three floors, here are the tasks you will need to complete so that your users can find these spaces in Room Finder.
 
 1. Create a room mailbox for each meeting room and set "Seattle" as the value for the **City** property, "Washington" as the **State** property, and a room capacity value for the **Capacity** property. If room1 has a capacity of 5, run the following cmdlets:
 
@@ -125,7 +125,7 @@ The displayed name in Room Finder will be Building A-Floor 1.
 
 ## Verify the properties for rooms and workspaces
 
-If a room or workspace that's configured doesn't display in the results in Room Finder, verify that it is configured properly.
+If a room or workspace that's configured doesn't display in the results in Room Finder, verify that it's configured properly.
 
 Run the following cmdlets on the room list that the room mailbox or workspace mailbox belongs to:
 
@@ -142,7 +142,7 @@ If you see the following results in the output from these cmdlets, then the room
 
 - All the rooms and workspaces have the same value for the **City** property.
 
-  :::image type="content" source="media/configure-room-finder-rooms-workspaces/get-place-cmdlet.png" alt-text="Screenshot of the command output. The information after the @ character in Identity and Localities and the City information are highlighted .":::
+  :::image type="content" source="media/configure-room-finder-rooms-workspaces/get-place-cmdlet.png" alt-text="Screenshot of the command output. The information after the @ character in Identity and Localities and the City information are highlighted.":::
 
 If you don't see these results for all the rooms and workspaces, then re-configure the properties only for the rooms and workspaces that don't have the same results as the others.
 
