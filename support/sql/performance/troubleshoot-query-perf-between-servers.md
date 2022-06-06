@@ -1,11 +1,11 @@
 ---
-title: Troubleshoot a query that shows different performance on two servers
+title: Troubleshoot a query that shows different performance between two servers
 description: Provides troubleshooting steps for an issue where a query shows significantly different performance on two servers.
 ms.date: 05/27/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
-ms.reviewer: shaunbe
+ms.reviewer: shaunbe, haiyingyu
 author: pijocoder
 ms.author: jopilov
 ---
@@ -63,6 +63,7 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
       , req.total_elapsed_time AS duration_ms
       , req.cpu_time AS cpu_time_ms
       , req.total_elapsed_time - req.cpu_time AS wait_time
+	    , req.logical_reads
       , SUBSTRING (REPLACE (REPLACE (SUBSTRING (ST.text, (req.statement_start_offset/2) + 1, 
          ((CASE statement_end_offset
              WHEN -1
