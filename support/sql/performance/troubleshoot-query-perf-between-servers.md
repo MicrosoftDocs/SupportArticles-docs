@@ -51,7 +51,7 @@ If multiple queries run slower on one server compared to the other, the most pro
 
 ## Step 2: Collect data and determine the type of the performance issue
 
-### Collect Elapsed time and CPU time
+### Collect Elapsed time, CPU time and Logical Reads
 
 To collect elapsed time and CPU time of the query on both servers, use one of the following methods that best fits your situation:
 
@@ -63,7 +63,7 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
       , req.total_elapsed_time AS duration_ms
       , req.cpu_time AS cpu_time_ms
       , req.total_elapsed_time - req.cpu_time AS wait_time
-	    , req.logical_reads
+      , req.logical_reads
       , SUBSTRING (REPLACE (REPLACE (SUBSTRING (ST.text, (req.statement_start_offset/2) + 1, 
          ((CASE statement_end_offset
              WHEN -1
@@ -96,17 +96,21 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
   > [!Note]
   > If `avg_wait_time` shows a negative value that means it's a [parallel query](#parallel-queries---runner-or-waiter).
 
-- If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON`.
+- If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON`. To collect Logical Reads you can use [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql)
 
    ```sql
    SET STATISTICS TIME ON
+   SET STATISTICS IO ON
    <Your Query>
+   SET STATISTICS IO OFF
    SET STATISTICS TIME OFF
    ```
 
-  Then from **Messages**, you'll see the CPU time and elapsed time like this:
+  Then from **Messages**, you'll see the CPU time, elapsed time, and logical reads like this:
 
    ```output
+    Table 'tblTest'. Scan count 1, logical reads 3, physical reads 0, page server reads 0, read-ahead reads 0, page server read-ahead reads 0, lob logical reads 0, lob physical reads 0, lob page server reads 0, lob read-ahead reads 0, lob page server read-ahead reads 0.
+
     SQL Server Execution Times:
       CPU time = 460 ms,  elapsed time = 470 ms.
    ```
@@ -146,7 +150,7 @@ Let's assume that there are two machines named Server1 and Server2. And the quer
 
 ### Scenario 1: The query on Server1 uses more CPU time and the logical reads is higher on Server1 than on Server2
 
-If the CPU time on Server1 is much greater than on Server2 and the elapsed time matches the CPU time closely on both servers, then there are no major waits or bottlenecks. The increase in CPU time on Server1 is most likely caused by an increase in logical reads. A significant change in logical reads indicates a difference in query plans. For example:
+If the CPU time on Server1 is much greater than on Server2 and the elapsed time matches the CPU time closely on both servers, then there are no major waits or bottlenecks. The increase in CPU time on Server1 is most likely caused by an increase in logical reads. A significant change in logical reads typically indicates a difference in query plans. For example:
 
 |Server  |Elapsed Time (ms)|CPU Time (ms)|Reads (logical)|
 |--------|-----------------|-------------|---------------|
@@ -176,7 +180,7 @@ If the CPU times for the query on both servers are similar but the elapsed time 
 
 Identify and eliminate the bottleneck on Server1. Examples of waits are blocking (lock waits), latch waits, disk I/O waits, network waits, memory waits. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
 
-### Scenario 3: The queries on both servers are waiters, but the wait types are different
+### Scenario 3: The queries on both servers are waiters, but the wait types or times are different
 
 For example:
 
@@ -188,7 +192,7 @@ For example:
 - Waiting time on Server1: 8000 - 1000 = 7000 ms
 - Waiting time on Server2: 3000 - 1000 = 2000 ms
 
-In this case, the CPU times are similar on both servers, that indicates query plans are likely the same. The queries would perform equally on both servers if they don't wait for the bottlenecks. So the duration differences come from the waits on different resources. For example, the query waits on locks on Server1 while it waits on I/O on Server2.
+In this case, the CPU times are similar on both servers, that indicates query plans are likely the same. The queries would perform equally on both servers if they don't wait for the bottlenecks. So the duration differences come from the different amount of wait time. For example, the query waits on locks on Server1 for 7000 ms while it waits on I/O on Server2 for 2000 ms.
 
 #### Action: Check wait types on both servers
 
@@ -206,10 +210,10 @@ For example:
 If the data matches the following conditions:
 
 - The CPU time on Server1 is much greater than on Server2
-- The elapsed time matches the CPU time closely on both servers
+- The elapsed time matches the CPU time closely on each server, which indicates no waits.
 - The logical reads, typically the highest driver of CPU time, are similar on both servers.
 
-Then the additional CPU time comes from some other CPU-bound activities. It's the least common one of all the scenarios.
+Then the additional CPU time comes from some other CPU-bound activities. This scenario is the rarest of all the scenarios.
 
 #### Causes: tracing, UDFs and CLR intergration
 
