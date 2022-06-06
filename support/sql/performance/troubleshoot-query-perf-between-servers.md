@@ -139,9 +139,9 @@ Parallel queries may use more CPU time than the overall duration. In fact, that 
 - If the elapsed time is much greater than the CPU time, consider it a waiter.
 - If the CPU time is much greater than the elapsed time, consider it a runner.
 
-## Step 3. Compare data from both servers, figure out the scenario and troubleshoot the issue
+## Step 3: Compare data from both servers, figure out the scenario and troubleshoot the issue
 
-Let's assume that there are two machines named Server1 and Server2. And the query runs slower on Server1 than on Server2. Compare the times from both servers and check out the solution that matches your scenario.
+Let's assume that there are two machines named Server1 and Server2. And the query runs slower on Server1 than on Server2. Compare the times from both servers and then follow the actions of the scenario that best matches yours from the following sections.
 
 ### Scenario 1: The query on Server1 uses more CPU time and the logical reads is higher on Server1 than on Server2
 
@@ -152,7 +152,7 @@ If the CPU time on Server1 is much greater than on Server2 and the elapsed time 
 |Server1 |   3100          | 3000        | 300000        |
 |Server2 |   1100          | 1000        |  90200        |
 
-#### Action: check execution plans and environments
+#### Action: Check execution plans and environments
 
 1. Compare execution plans of the query on both Servers. To do this, user one of the two methods:
    - Compare execution plans visually. For more information, see [Display an Actual Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan).
@@ -171,7 +171,7 @@ If the CPU times for the query on both servers are similar but the elapsed time 
 - Waiting time on Server1: 4500 - 1000 = 3500 ms
 - Waiting time on Server2: 1100 - 1000 = 100 ms
 
-#### Action: check wait types on Server1
+#### Action: Check wait types on Server1
 
 Identify and eliminate the bottleneck on Server1. Examples of waits are blocking (lock waits), latch waits, disk I/O waits, network waits, memory waits. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
 
@@ -189,7 +189,7 @@ For example:
 
 In this case, the CPU times are similar on both servers, that indicates query plans are likely the same. The queries would perform equally on both servers if they don't wait for the bottlenecks. So the duration differences come from the waits on different resources. For example, the query waits on locks on Server1 while it waits on I/O on Server2.
 
-#### Action: check wait types on both servers
+#### Action: Check wait types on both servers
 
 Address each bottleneck wait individually on each server and speed up executions on both servers. Troubleshooting this issue is labor-intensive because you need to eliminate bottlenecks on both servers and make the performance comparable. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
 
@@ -217,9 +217,9 @@ This issue may be caused by:
 - XEvents/SQL Server tracing, especially with filtering on text columns (database name, login name, query text, and so on). If tracing is enabled on one server but not on the other, this could be the reason for the difference.
 - User-defined functions (UDFs) or other T-SQL code that performs CPU-bound operations. This would typically be the cause when other conditions are different on Server1 and Server2, such as data size, CPU clock speed, or Power plan.
 - [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Extended Stored procedures (XPs)](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming) that may drive CPU but doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
-- Difference in SQL Server functionality that is CPU-bound (e.g. string-manipulation code)"
+- Difference in SQL Server functionality that is CPU-bound (e.g. string-manipulation code).
 
-#### Action: check traces and queries
+#### Action: Check traces and queries
 
 1. Check traces on both servers.
     1. If there's any trace enabled on Server1 but not on Server2.
