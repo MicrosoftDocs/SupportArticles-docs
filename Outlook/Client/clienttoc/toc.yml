@@ -57,6 +57,8 @@
           href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
+        - name: Configure rooms and workspaces for Room Finder
+          href: ../calendaring/configure-room-finder-rooms-workspaces.md
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
         - name: Create online meeting failed error
