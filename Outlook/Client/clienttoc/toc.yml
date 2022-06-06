@@ -257,7 +257,7 @@
           href: ../data-files/new-outlook-data-file-is-created-default-adding-pop3-account.md
         - name: Only some emails are synchronized
           href: ../data-files/fewer-emails-in-shared-mailboxes-or-public-folders.md
-        - name: Shared mail folders are downloaded in Cached mode
+        - name: Manage download settings for shared mail folders
           href: ../data-files/by-default-shared-mail-folders-are-downloaded-in-cashed.md
         - name: Special characters in mailbox folder names
           href: ../data-files/weird-folder-names-after-pst-migration.md
