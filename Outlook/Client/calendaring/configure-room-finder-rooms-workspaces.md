@@ -46,7 +46,8 @@ Room lists can be organized by:
 
 One of the significant advantages of using Room Finder is that you can browse for rooms and workspaces by city, and room list. Then you can further refine those results by filtering by the facilities that these spaces provide such as conferencing devices, accessibility features etc.
 
-**IMPORTANT:** For Room Finder to work effectively, it's important to configure the **City** property. The other properties can be configured as appropriate for each room and workspace.
+> [!IMPORTANT]
+> For Room Finder to work effectively, it's important to configure the **City** property. The other properties can be configured as appropriate for each room and workspace.
 
 After you set the **City** property for all the rooms and workspaces, you'll be able to browse room lists by a specific city in Room Finder. However, it's important that each room list includes rooms and workspaces from the same city only.  
 
