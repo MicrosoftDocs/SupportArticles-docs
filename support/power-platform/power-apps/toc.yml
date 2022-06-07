@@ -39,3 +39,9 @@
       href: cookies-pop-up-blocker-error.md
     - name: No response with back button
       href: no-navigation-when-selecting-button.md
+  - name: Common issues and resolutions
+    href: common-issues-and-resolutions.md
+  - name: Troubleshoot startup issues for Power Apps
+    href: troubleshooting-startup-issues.md
+  - name: Troubleshoot Power Query
+    href: troubleshoot-power-query-issues.md
