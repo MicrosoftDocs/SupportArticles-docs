@@ -24,9 +24,9 @@ Follow the following steps to troubleshoot this issue.
 
 ## Step 1: Determine whether it's a common issue with multiple queries
 
-Use one of the following two methods to compare query performance on the two servers:
+Use one of the following two methods to compare the performance for two or more queries on the two servers:
 
-- Manually test two or more queries on both servers:
+- Manually test the queries on both servers:
 
     1. Choose several queries for testing with considering the queries are:
        - Significantly faster on one server than on the other
@@ -38,8 +38,8 @@ Use one of the following two methods to compare query performance on the two ser
 
 - Analyze performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
-  1. Collect [PSSDiag/SQLdiag](https://github.com/microsoft/DiagManager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) data on the two servers.
-  1. Import the collected data files with SQL Nexus and compare queries from two servers. For more information, see [Performance Comparison between two log collections (Slow and Fast for example)](https://github.com/microsoft/SqlNexus/wiki/Reports-via-SQL-Queries#performance-comparison-between-two-log-collections-slow-and-fast-for-example).
+  1. Collect [PSSDiag/SQLdiag](https://github.com/microsoft/DiagManager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) data for the queries on the two servers.
+  1. Import the collected data files with SQL Nexus and compare the queries from two servers. For more information, see [Performance Comparison between two log collections (Slow and Fast for example)](https://github.com/microsoft/SqlNexus/wiki/Reports-via-SQL-Queries#performance-comparison-between-two-log-collections-slow-and-fast-for-example).
 
 ### Scenario 1: Only one single query performs differently on the two servers
 
