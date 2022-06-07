@@ -22,7 +22,7 @@ contributors:
 This article lists some common issues that you might encounter while using Power Apps. Where applicable, workarounds are provided.
 
 > [!NOTE]
-> - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](power-apps/maker/canvas-apps/execution-phases-data-flow) section.
+> - For help with performance problems in canvas apps, read the topics under the canvas apps [performance and optimization](/power-apps/maker/canvas-apps/execution-phases-data-flow) section.
 > - If you're having trouble accessing or starting Power Apps, read [troubleshooting startup issues](troubleshooting-startup-issues.md) section for help.
 > - See [Next steps](#next-steps) later in this article if your issue isn't listed.
 
@@ -46,7 +46,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Unable to copy paste forms into data cards** (March 2022)
 
-    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms)
+    You can't copy and paste forms into data cards. This is to prevent certain combinations of controls from being created that risk the stability and the performance of the app. To learn about how to configure forms that allow scrolling, see [scrolling screen for forms](/power-apps/maker/canvas-apps/add-scrolling-screen#scrolling-screen-for-forms)
 
 1. **Canvas apps using SharePoint connector** (February 23, 2022)
 
@@ -86,7 +86,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
     
 1. **Camera images do not contain meta-data information** (January 20, 2020)
 
-    When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this, use the [Add Picture control](power-apps/maker/canvas-apps/controls/control-add-picture.md).
+    When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this, use the [Add Picture control](/power-apps/maker/canvas-apps/controls/control-add-picture.md).
 
 1. **Images added from iOS do not contain meta-data information** (January 20, 2020)
 
@@ -141,31 +141,31 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Scanning a barcode**
 
-    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](power-apps/maker/canvas-apps/controls/control-new-barcode-scanner).
+    For information about limitations and best practices when you use a **Barcode** control, see [Scan a barcode](/power-apps/maker/canvas-apps/controls/control-new-barcode-scanner).
 
 1. **Changing a Title field in a table**
 
-    If you change the Title field for a table that other tables reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between tables](power-apps/maker/data-platform/data-platform-entity-lookup).
+    If you change the Title field for a table that other tables reference through one or more lookups, an error will occur when you try to save the change. To work around this issue, remove any lookups to the table for which you want to change the Title field, make the change, and then recreate the lookups. For more information about lookups, see [Build a relationship between tables](/power-apps/maker/data-platform/data-platform-entity-lookup).
 
 1. **Apps that connect to on-premises SharePoint**
 
-    If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in Power Apps Studio or Power Apps Mobile. For more information about shared connections, see [Share app resources](power-apps/maker/canvas-apps/share-app-resources).
+    If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they click or tap **Sign in**. To close the dialog box, click or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in Power Apps Studio or Power Apps Mobile. For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
 
 1. **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
-   To configure this field, edit the **[Items](power-apps/maker/canvas-apps/controls/properties-core)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](power-apps/maker/canvas-apps/add-gallery) describe.
+   To configure this field, edit the **[Items](/power-apps/maker/canvas-apps/controls/properties-core)** formula for the gallery, as the sections for filtering and sorting in [Add a gallery](/power-apps/maker/canvas-apps/add-gallery) describe.
 
 1. **For apps that are created from data, only the first 500 records of a data source can be accessed**.
 
-     In general, Power Apps works with any size data source by delegating operations to the data source. For operations that can't be delegated, Power Apps will give a warning at authoring time and operate on only the first 500 records of the data source.  More information: See the [Filter function](power-apps/maker/canvas-apps/functions/function-filter-lookup).
+     In general, Power Apps works with any size data source by delegating operations to the data source. For operations that can't be delegated, Power Apps will give a warning at authoring time and operate on only the first 500 records of the data source.  More information: See the [Filter function](/power-apps/maker/canvas-apps/functions/function-filter-lookup).
 
 1. **Excel data must be formatted as a table**.
 
-     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](power-apps/maker/canvas-apps/connections/cloud-storage-blob-connections).
+     For information about limitations when you use Excel as a data source, see [Cloud-storage connections](/power-apps/maker/canvas-apps/connections/cloud-storage-blob-connections).
 
 1. **Microsoft Lists is supported but not SharePoint libraries, some types of list columns, or columns that support multiple values or selections**.
 
-     For more information, see [SharePoint Online](power-apps/maker/canvas-apps/connections/connection-sharepoint-online#known-issues).
+     For more information, see [SharePoint Online](/power-apps/maker/canvas-apps/connections/connection-sharepoint-online#known-issues).
 
 1. **Co-authoring isn't supported. One author at a time, please**.
 
@@ -175,12 +175,12 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
      In some cases, a newly shared app won't be immediately available. Wait a few moments, and it should become available.
 
-1. **In the [Form control](power-apps/maker/canvas-apps/controls/control-form-detail), you can't change data by using a custom card**.
+1. **In the [Form control](/power-apps/maker/canvas-apps/controls/control-form-detail), you can't change data by using a custom card**.
 
-     The stock custom card is missing the **[Update](power-apps/maker/canvas-apps/controls/control-card)** property, which is required to write back changes. To work around this:
+     The stock custom card is missing the **[Update](/power-apps/maker/canvas-apps/controls/control-card)** property, which is required to write back changes. To work around this:
 
     * Select the form control, and insert a card by using the right-hand pane based on the field that you want the card to show.  
-    * Unlock the card, as described in [Understanding data cards](power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
+    * Unlock the card, as described in [Understanding data cards](/power-apps/maker/canvas-apps/working-with-cards#unlock-a-card).
     * Remove or rearrange controls within the card as you see fit, just as you would with the custom card.
 
 1. **Camera usage may be temporarily disabled if memory is low**.
@@ -191,7 +191,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Card gallery is deprecated**.
 
-     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Replace card galleries with the new **[Edit form](power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
+     Existing apps that use this feature will continue to run for the time being, but you can't add a card gallery. Replace card galleries with the new **[Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)** and **[Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)** controls.
   
 1. **Sign-in issue on certain Android mobile devices when using authenticator** (August 21, 2019)
 
@@ -240,7 +240,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    Power Apps for Windows app may crash if you open an app that uses a camera control. To avoid this problem, use the web player on the Windows platform. Also, multiple cameras aren't supported.
    
-1. **Improve data source experience and Microsoft Dataverse views setting is not supported on Power Apps for Windows.** More information: [Microsoft Dataverse and the improve data source experience](power-apps/maker/canvas-apps/use-native-cds-connector#how-do-i-upgrade)
+1. **Improve data source experience and Microsoft Dataverse views setting is not supported on Power Apps for Windows.** More information: [Microsoft Dataverse and the improve data source experience](/power-apps/maker/canvas-apps/use-native-cds-connector#how-do-i-upgrade)
 
 ## Next steps
 
@@ -249,8 +249,8 @@ If your issue isn't listed in this article, you can [search for more support res
 
 ### See also
 
-[Understand canvas apps execution phases and data call flow](power-apps/maker/canvas-apps/execution-phases-data-flow) <br>
-[Possible sources of slow performance for canvas apps](power-apps/maker/canvas-apps/slow-performance-sources) <br>
-[Common canvas app performance issues and resolutions](power-apps/maker/canvas-apps/common-performance-issue-resolutions) <br>
-[Tips and best practices to improve canvas apps performance](power-apps/maker/canvas-apps/performance-tips) <br>
+[Understand canvas apps execution phases and data call flow](/power-apps/maker/canvas-apps/execution-phases-data-flow) <br>
+[Possible sources of slow performance for canvas apps](/power-apps/maker/canvas-apps/slow-performance-sources) <br>
+[Common canvas app performance issues and resolutions](/power-apps/maker/canvas-apps/common-performance-issue-resolutions) <br>
+[Tips and best practices to improve canvas apps performance](/power-apps/maker/canvas-apps/performance-tips) <br>
 [Troubleshooting startup issues for Power Apps](troubleshooting-startup-issues.md)
