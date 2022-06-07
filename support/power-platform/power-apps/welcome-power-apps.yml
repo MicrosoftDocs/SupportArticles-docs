@@ -55,7 +55,7 @@ landingContent:
           - text: Debug canvas apps with Monitor
             url: /power-apps/maker/monitor-canvasapps
           - text: Debug a model-driven app
-            url: /power-apps/maker/model-driven-apps/monitor-modelapps
+            url: /power-apps/maker/monitor-modelapps
           - text: Use Monitor to debug model-driven app forms
             url: /power-apps/maker/model-driven-apps/monitor-form-checker
           - text: Troubleshoot form issues in model-driven apps
