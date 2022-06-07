@@ -26,7 +26,7 @@ Consider a scenario where the environment uses:
 - Exchange Online but doesn't have a hybrid Exchange deployment.
 - A third-party mail service and mail flow connectors to route emails out from and in to your Microsoft 365 organization. An outbound connector routes emails from the organization to the third-party mail service and an inbound connector routes emails from the third-party mail service to the organization.
 
-In this environment, when you schedule a meeting with users internal to your organization and specify a meeting room in the meeting invite, the room mailbox for the meeting room doesn't accept or decline the meeting automatically even if it is set up to do so.
+In this environment, when you schedule a meeting with users internal to your organization and specify a meeting room in the meeting invite, the room mailbox for the meeting room doesn't accept or decline the meeting automatically even if it's set up to do so.
 
 If you run the following cmdlet to verify the automated calendar processing option set up for the room mailbox, the value for the `AutomateProcessing` property in the output will display **AutoAccept**.
 
@@ -44,7 +44,7 @@ To resolve the issue, use one of the following methods:
 
 ### Method 1: Allow the room mailbox to process requests from external users
 
-This method allows users who are external to the Microsoft 365 organization to book the meeting room associated with the room mailbox. However, the risk involved to the organization is minimal because external users are not likely to know the email address of the room mailbox.
+This method allows users who are external to the Microsoft 365 organization to book the meeting room associated with the room mailbox. However, the risk involved to the organization is minimal because external users aren't likely to know the email address of the room mailbox.
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following cmdlet:
 
@@ -83,7 +83,7 @@ When this issue occurs, you can check the RBA log and the message trace as follo
 
     The timestamp for this entry will closely match the timestamp of when the meeting request was received by the mailbox.
 
-This entry indicates that the meeting invite was not processed because it was treated as an external message.
+This entry indicates that the meeting invite wasn't processed because it was treated as an external message.
 
 ### Check the message trace
 
@@ -101,4 +101,4 @@ The output will display the following values for the parameters:
 > Enabled: True  
 > TreatMessagesAsInternal: False  
 
-These values indicate that the meeting invite was not processed because it was treated as an external message.
+These values indicate that the meeting invite wasn't processed because it was treated as an external message.
