@@ -10,6 +10,8 @@ ms.author: v-sidong
 
 # Error 41131 when creating availability group
 
+This article provides resolutions for an issue where error 41131 occurs when you create an availability group in Microsoft SQL Server.
+
 _Original product version:_&nbsp;SQL Server  
 _Original KB number:_&nbsp;2847723
 
@@ -65,7 +67,7 @@ To resolve this issue, use one of the following methods:
     GO
     ```
 
-## More Information
+## More information
 
 The `[NT AUTHORITY\SYSTEM]` account is used by SQL Server AlwaysOn health detection to connect to the SQL Server computer and to monitor health. When you create an availability group and the primary replica in the availability group comes online, health detection is initiated. If the `[NT AUTHORITY\SYSTEM]` account doesn't exist or have sufficient permissions, health detection can't be initiated, and the availability group can't come online during the creation process.
 
