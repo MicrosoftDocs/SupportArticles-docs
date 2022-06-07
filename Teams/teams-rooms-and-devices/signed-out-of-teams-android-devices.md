@@ -32,9 +32,9 @@ If you're a tenant administrator, you can get information about the sign-in stat
 
 You can also use the information in the sign-in logs to determine whether a device in your environment is affected by this issue. In the **User sign-ins (non-interactive)** tab, check for the following entries:
 
-In the **Application** column: Microsoft Authentication Broker
-In the **Status** column: Failure
-In the **Resource** column: Device Registration Service
+- In the **Application** column: Microsoft Authentication Broker
+- In the **Status** column: Failure
+- In the **Resource** column: Device Registration Service
 
 These entries indicate that your device is affected by the issue.
 
