@@ -1,6 +1,6 @@
 ---
-title: Active and retired troubleshooters for Windows 10/11
-description: Introduce active and retired troubleshooters for Windows 10/11.
+title: Active and retired troubleshooters for Windows 10 and Windows 11
+description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,11 +13,11 @@ ms.reviewer: kaushika
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
-# Active and retired troubleshooters for Windows 10/11
+# Active and retired troubleshooters for Windows 10 and Windows 11
 
-This article provides a list of active and retired troubleshooters for Windows 10/11, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
+This article provides a list of active and retired troubleshooters for Windows 10 and Windows 11, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
 
-_Applies to:_ &nbsp; Windows 10; Windows 11
+_Applies to:_ &nbsp; Windows 10, Windows 11
 
 ## Windows Update troubleshooter for repairing .NET framework components
 
