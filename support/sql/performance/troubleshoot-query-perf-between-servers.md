@@ -96,7 +96,7 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
   > [!Note]
   > If `avg_wait_time` shows a negative value that means it's a [parallel query](#parallel-queries---runner-or-waiter).
 
-- If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON`. To collect Logical Reads you can use [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql)
+- If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON`and [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql) `ON`.
 
    ```sql
    SET STATISTICS TIME ON
@@ -119,7 +119,7 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
 
   1. Run the query with **Include Actual Execution Plan** on.
   1. Select the left-most operator from **Execution plan**.
-  1. From **Properties**, expand **QueryTimeStats** property
+  1. From **Properties**, expand **QueryTimeStats** property.
   1. Check **ElapsedTime** and **CpuTime**.
 
   :::image type="content" source="media/troubleshoot-slow-query-comparison/query-time-stats-from-query-plan.png" alt-text="CPU-and-Elapsed-Time-in-execution-plan":::
@@ -178,7 +178,7 @@ If the CPU times for the query on both servers are similar but the elapsed time 
 
 #### Action: Check wait types on Server1
 
-Identify and eliminate the bottleneck on Server1. Examples of waits are blocking (lock waits), latch waits, disk I/O waits, network waits, memory waits. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
+Identify and eliminate the bottleneck on Server1. Examples of waits are blocking (lock waits), latch waits, disk I/O waits, network waits, memory waits. To troubleshoot common bottleneck issues, step to [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
 
 ### Scenario 3: The queries on both servers are waiters, but the wait types or times are different
 
@@ -196,7 +196,7 @@ In this case, the CPU times are similar on both servers, that indicates query pl
 
 #### Action: Check wait types on both servers
 
-Address each bottleneck wait individually on each server and speed up executions on both servers. Troubleshooting this issue is labor-intensive because you need to eliminate bottlenecks on both servers and make the performance comparable. To troubleshoot common bottleneck issues, step to [Diagnose waits/bottlenecks](#diagnose-waitsbottlenecks).
+Address each bottleneck wait individually on each server and speed up executions on both servers. Troubleshooting this issue is labor-intensive because you need to eliminate bottlenecks on both servers and make the performance comparable. To troubleshoot common bottleneck issues, step to [Diagnose waits or bottlenecks](#diagnose-waits-or-bottlenecks).
 
 ### Scenario 4: The query on Server1 uses more CPU time than on Server2 but the logical reads are close
 
@@ -209,7 +209,7 @@ For example:
 
 If the data matches the following conditions:
 
-- The CPU time on Server1 is much greater than on Server2
+- The CPU time on Server1 is much greater than on Server2.
 - The elapsed time matches the CPU time closely on each server, which indicates no waits.
 - The logical reads, typically the highest driver of CPU time, are similar on both servers.
 
@@ -252,10 +252,10 @@ Check the following questions and determine whether the comparison between the t
 
 - Are CPU-related hardware configurations similar on both servers? For example:
 
-  - Number of CPUs varies between machines (24 CPUs on one machine versus 96 CPUs on the other)
-  - Power Plans - balanced versus high performance
-  - Virtual Machine (VM) versus physical (bare metal) machine
-  - Hyper-V versus VMware - difference in configuration
+  - Number of CPUs varies between machines (24 CPUs on one machine versus 96 CPUs on the other).
+  - Power Plans - balanced versus high performance.
+  - Virtual Machine (VM) versus physical (bare metal) machine.
+  - Hyper-V versus VMware - difference in configuration.
   - Clock speed difference (lower clock speed versus higher clock speed). For example: 2 GHz versus 3.5 GHz can make a difference. To get the clock speed on a server, run the following PowerShell command:
 
      ```powershell
@@ -291,7 +291,7 @@ Check the following questions and determine whether the comparison between the t
      SELECT @spins Spins, @time_millisecond Time_ms,  @spins / @time_millisecond Spins_Per_ms
      ```
 
-## Diagnose waits/bottlenecks
+## Diagnose waits or bottlenecks
 
 To optimize a query that is waiting on bottlenecks, identify how long the wait is and where the bottleneck is. Once the [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) is confirmed, reduce the wait time or eliminate the wait completely.
 
