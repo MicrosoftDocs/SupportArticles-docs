@@ -2394,6 +2394,11 @@
       "source_path": "support/mem/intune/device-licenses-introduction.md",
       "redirect_url": "/mem/intune/fundamentals/licenses",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
     }
   ]
 }
