@@ -25,7 +25,7 @@ ms.date: 6/2/2022
 
 In an Exchange Online mailbox that’s configured in Microsoft Outlook, either some or all Microsoft 365 Groups don't synchronize automatically.
 
-In the status bar in Outlook, the sync status displays the message “This folder has not been updated yet”.
+In the status bar in Outlook, the sync status displays the message, “This folder has not been updated yet”.
 
 ## Cause
 
