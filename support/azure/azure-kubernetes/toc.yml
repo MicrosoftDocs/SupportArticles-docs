@@ -146,8 +146,6 @@
     href: could-not-change-permissions-azure-files.md
   - name: Failed to create file share on storage account
     href: create-file-share-failed-storage-account.md
-  - name: Handling of small files causes high latency
-    href: small-file-handling-high-latency.md
   - name: Recommended and useful mountOptions settings
     href: mountoptions-settings-azure-files.md
 
