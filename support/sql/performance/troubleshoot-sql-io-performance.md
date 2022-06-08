@@ -36,6 +36,20 @@ The following flow chart describes the methodology Microsoft CSS uses to approac
 
 A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
+You can choose one of following two options to resolve the problem.
+
+### Option 1: Execute the steps directly in a notebook via Azure Data Studio
+
+> [!NOTE]
+> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-Slow-IO.ipynb)
+
+### Option 2: Follow the steps manually
+
+The methodology is outlined in these steps:
+
 ### Step 1: Is SQL Server reporting slow I/O?
 
 SQL Server may report I/O latency in several ways:
