@@ -122,7 +122,7 @@ To collect elapsed time and CPU time of the query on both servers, use one of th
   1. From **Properties**, expand **QueryTimeStats** property.
   1. Check **ElapsedTime** and **CpuTime**.
 
-  :::image type="content" source="media/troubleshoot-slow-query-comparison/query-time-stats-from-query-plan.png" alt-text="CPU-and-Elapsed-Time-in-execution-plan":::
+     :::image type="content" source="media/troubleshoot-query-perf-between-servers/query-time-stats-from-query-plan.png" alt-text="Screenshot of the SQL Server execution plan properties window with the property QueryTimeStats expanded.":::
 
 Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
 
