@@ -28,7 +28,7 @@ Use one of the following two methods to compare the performance for two or more 
 
 - Manually test the queries on both servers:
 
-    1. Choose several queries for testing with consideration placed on queries that are:
+    1. Choose several queries for testing with priority placed on queries that are:
        - Significantly faster on one server than on the other.
        - Important to the user/application.
        - Frequently executed or designed to reproduce the issue on demand.
@@ -221,14 +221,14 @@ This issue may be caused by:
 
 - XEvents/SQL Server tracing, especially with filtering on text columns (database name, login name, query text, and so on). If tracing is enabled on one server but not on the other, this could be the reason for the difference.
 - User-defined functions (UDFs) or other T-SQL code that performs CPU-bound operations. This would typically be the cause when other conditions are different on Server1 and Server2, such as data size, CPU clock speed, or Power plan.
-- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Extended Stored procedures (XPs)](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming) that may drive CPU but doesn't perform logical reads. Differences in the DLLs may lead to different CPU times.
+- [SQL Server CLR integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration) or [Extended Stored procedures (XPs)](/sql/relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming) that may drive CPU but don't perform logical reads. Differences in the DLLs may lead to different CPU times.
 - Difference in SQL Server functionality that is CPU-bound (e.g., string-manipulation code).
 
 #### Action: Check traces and queries
 
-1. Check traces on both servers.
+1. Check traces on both servers for the following:
     1. If there's any trace enabled on Server1 but not on Server2.
-    1. If yes, disable the trace and run the query again on Server1.
+    1. If any trace is enabled, disable the trace and run the query again on Server1.
     1. If the query runs faster this time, enable the trace back but remove text filters from it, if there are any.
 
 1. Check if the query uses UDFs that do string manipulations or do extensive processing on data columns in the `SELECT` list.
@@ -353,7 +353,7 @@ Here are some common causes for differences in query plans:
 
 - Data size or data values differences
 
-  Is the same database being used on both servers - using the same database backup? Has the data been modified on one server compared to the other? Data differences can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows). The type and speed of the join operation can be significantly different.
+  Is the same database being used on both servers—using the same database backup? Has the data been modified on one server compared to the other? Data differences can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows). The type and speed of the join operation can be significantly different.
 
 - Statistics differences
 
@@ -442,7 +442,7 @@ Here are some common causes for differences in query plans:
 
 - Optimizer timeout
 
-  Is there an [optimizer timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/understanding-optimizer-timeout-and-how-complex-queries-can-be/ba-p/319188). The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost available at the time. This can lead to an arbitrary plan choice on one server versus another.
+  Is there an [optimizer timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/understanding-optimizer-timeout-and-how-complex-queries-can-be/ba-p/319188)? The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost available at the time. This can lead to an arbitrary plan choice on one server versus another.
   
 - SET options
 
