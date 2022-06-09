@@ -1,5 +1,5 @@
 ---
-title: Can't delete corrupted calendar items
+title: Unable to delete calendar items
 description: You can't delete corrupted calendar items in Outlook. Even if you use the MFCMAPI or EWSEditor tool, the corrupted items are still not deleted.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -45,7 +45,7 @@ To resolve this issue, temporarily prevent the change to the calendar item from 
     Set-Mailbox <name_of_affected_mailbox> -CalendarVersionStoreDisabled $true 
     ```
 
-    Then Wait wait for the database store configuration cache to expire. This will take about two hours. Then proceed to step 3.
+    Then wait for the database store configuration cache to expire. This will take about two hours. Then proceed to step 3.
 
 1. As an alternate to waiting for the cache to expire, if the affected mailbox is on Exchange on-premises, you can use one of the following options and then proceed to step 3. However, they will cause service interruptions.
 
@@ -64,13 +64,13 @@ To resolve this issue, temporarily prevent the change to the calendar item from 
 
 ### Delete the calendar item by using the MFCMAPI tool
 
-When you open the calendar item to delete in MFCMAPI, you see a limited number of MAPI properties only. This indicates that the item is corrupted.
+When you open the calendar item to delete in [MFCMAPI](https://github.com/stephenegriffin/mfcmapi/releases/), you see a limited number of MAPI properties only. This indicates that the item is corrupted.
 
 In the following screenshot, only 21 properties are displayed for a corrupted calendar item:
 
 :::image type="content" source="media/cannot-delete-calendar-items/mfcmapi.png" alt-text="Screenshot of a Calendar item example showing in MFCMAPI, which has 21 MAPI properties." border="false":::
 
-When you right-click the item, select **Delete message**, and then from the drop-down menu for **Deletion style** you select **Permanent deletion (deletes to deleted item retention if supported)** and select **OK**, you receive the following warning message:
+When you right-click the item, select **Delete message**, and then from the drop-down menu for **Deletion style**, you select **Permanent deletion (deletes to deleted item retention if supported)** and select **OK**, you receive the following warning message:
 
 > Warning:  
 > Code: MAPI_W_PARTIAL_COMPLETION == 0x00040680  
@@ -78,7 +78,7 @@ When you right-click the item, select **Delete message**, and then from the drop
 > File D:\a\1\s\UI\Dialogs\ContentsTable\FolderDlg.cpp  
 > Line 678
 
-Alternatively, when you select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)** from the drop-down menu for **Deletion style** and select **OK**, the tool doesn't respond and the item is not deleted.
+Alternatively, when you select **Permanent delete passing DELETE_HARD_DELETE (unrecoverable)** from the drop-down menu for **Deletion style** and select **OK**, the tool doesn't respond and the item isn't deleted.
 
 ### Delete the calendar item by using the EWSEditor tool
 
@@ -94,7 +94,7 @@ If you select **OK** in the error message, the calendar item is displayed in
 When you right-click the item to delete it, you see an exception message. The following text is a snippet of the message:
 
 > Exception details:  
-> Message: Content conversion failed., Content conversion: Body conversion failed.  
+> Message: Content conversion failed. Content conversion: Body conversion failed.  
 > Type: Microsoft.Exchange.WebServices.Data.ServiceResponseException  
 > Source: Microsoft.Exchange.WebServices  
 > ErrorCode: ErrorContentConversionFailed  
