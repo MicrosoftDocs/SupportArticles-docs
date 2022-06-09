@@ -39,3 +39,7 @@
       href: cookies-pop-up-blocker-error.md
     - name: No response with back button
       href: no-navigation-when-selecting-button.md
+  - name: Dataverse Web API
+    items:
+    - name: Web API client errors
+      href: web-api-client-errors.md
