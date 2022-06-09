@@ -2,6 +2,14 @@
 
 
 
+## Week of May 30, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |
+
+
 ## Week of May 23, 2022
 
 
