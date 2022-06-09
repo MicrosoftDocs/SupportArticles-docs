@@ -334,7 +334,7 @@ To get the rough wait time, subtract the CPU time (worker time) from the elapsed
 
 - If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](#collect-elapsed-time-cpu-time-and-logical-reads) section for detailed steps.
 
-- If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. Check the second method introduced in [Step 1](#step-1-determine-whether-its-a-common-issue-with-multiple-queries) section.
+- If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. Check the second method introduced in [Step 1](#step-1-determine-whether-its-a-common-issue-with-multiple-queries).
 
 ### Resources to eliminate or reduce the wait
 
@@ -349,15 +349,15 @@ The causes and resolutions vary according to the wait types. There's no general 
 
 ## Diagnose query plan differences
 
-Here're some common causes for differences in query plans:
+Here are some common causes for differences in query plans:
 
 - Data size or data values differences
 
-  Is same database being used on both servers - using the same database backup? Has the data been modified on one server compared to the other? Data difference can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows) - the type and speed of join operation can be significantly different.
+  Is the same database being used on both servers - using the same database backup? Has the data been modified on one server compared to the other? Data differences can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows). The type and speed of the join operation can be significantly different.
 
 - Statistics differences
 
-  Have [statistics](/sql/t-sql/statements/update-statistics-transact-sql) been updated on one database and not on the other? Have statistics been updated with a different sample rate (for example 30% versus 100% - full scan)? Ensure that you update statistics on both sides with the same sample rate.
+  Have [statistics](/sql/t-sql/statements/update-statistics-transact-sql) been updated on one database and not on the other? Have statistics been updated with a different sample rate (for example, 30% versus 100% full scan)? Ensure that you update statistics on both sides with the same sample rate.
 
 - Database compatibility level differences
 
@@ -371,7 +371,7 @@ Here're some common causes for differences in query plans:
 
 - Server version/build differences
   
-  Are the versions or builds of SQL Server different between the two servers? For example, is one server SQL Server version 2014 and the other SQL Server version 2016? There could be product changes that can lead to changes of how a query plan is selected. Make sure you compare the same version and build of SQL Server.
+  Are the versions or builds of SQL Server different between the two servers? For example, is one server SQL Server version 2014 and the other SQL Server version 2016? There could be product changes that can lead to changes in how a query plan is selected. Make sure you compare the same version and build of SQL Server.
 
    ```sql
    SELECT ServerProperty('ProductVersion')
@@ -405,7 +405,7 @@ Here're some common causes for differences in query plans:
 
 - Trace flags differences
 
-  Some trace flags affect query plan selection. Check if there are trace flags enabled on one server that aren't enabled on the other. Run the following query on both servers and compare the results:
+  Some trace flags affect query plan selection. Check if trace flags are enabled on one server that aren't enabled on the other. Run the following query on both servers and compare the results:
 
    ```SQL
    -- Check at server level for trace flags
@@ -423,7 +423,7 @@ Here're some common causes for differences in query plans:
 
 - Hardware differences according to the query optimizer
 
-  Check the `OptimizerHardwareDependentProperties` of a query plan and see if hardware differences are considered significantly for different plans.
+  Check the `OptimizerHardwareDependentProperties` of a query plan and see if hardware differences are considered significant for different plans.
 
    ```sql
    WITH xmlnamespaces(DEFAULT 'http://schemas.microsoft.com/sqlserver/2004/07/showplan')
@@ -442,7 +442,7 @@ Here're some common causes for differences in query plans:
 
 - Optimizer timeout
 
-  Is there an [optimizer timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/understanding-optimizer-timeout-and-how-complex-queries-can-be/ba-p/319188). The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost that's available at the time. This can lead to an arbitrary plan choice on one server versus another server.
+  Is there an [optimizer timeout](https://techcommunity.microsoft.com/t5/sql-server-support-blog/understanding-optimizer-timeout-and-how-complex-queries-can-be/ba-p/319188). The query optimizer can stop evaluating plan options if the query being executed is too complex. When it stops, it picks the plan with the lowest cost available at the time. This can lead to an arbitrary plan choice on one server versus another.
   
 - SET options
 
@@ -454,11 +454,11 @@ Here're some common causes for differences in query plans:
   
 - Parameter-sensitive plans (parameter sniffing issue)
 
-  Are you testing the query the exact same parameter values? If not, then you may start there. Was the plan compiled earlier on one server based on a different parameter value? Test the two queries by using the RECOMPILE query hint to ensure there's no plan reuse taking place. For more information, see [Investigate and resolve parameter-sensitive issues](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues).
+  Are you testing the query with the exact same parameter values? If not, then you may start there. Was the plan compiled earlier on one server based on a different parameter value? Test the two queries by using the RECOMPILE query hint to ensure there's no plan reuse taking place. For more information, see [Investigate and resolve parameter-sensitive issues](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues).
 
 - Different database options/scoped configuration settings
 
-  Are the same database options/scoped configuration settings used on both servers? Some database options may influence plan choices. For example, database compatibility, legacy CE versus default CE, parameter sniffing. Run the following query from one server to compare the database options used on the two servers:
+  Are the same database options or scoped configuration settings used on both servers? Some database options may influence plan choices. For example, database compatibility, legacy CE versus default CE, and parameter sniffing. Run the following query from one server to compare the database options used on the two servers:
 
    ```sql
    -- On Server1 add a linked server to Server2 
