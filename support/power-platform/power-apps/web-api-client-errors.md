@@ -181,4 +181,4 @@ Template END-->
 ### See also
 
 [Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)<br />
-[Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors.md)
+[Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors)
