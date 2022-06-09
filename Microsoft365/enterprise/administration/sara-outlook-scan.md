@@ -1,16 +1,14 @@
 ---
-title: Microsoft Support and Recovery Assistant command-line version
-description: Describes the command-line version of Microsoft Support and Recovery Assistant.
-author: MaryQiu1987
-ms.author: v-maqiu
+title: Outlook san with Microsoft Support and Recovery Assistant
+description: Describes available switches and conditions when using the command-line version of Microsoft Support and Recovery Assistant to scan Outlook.
+author: helenclu    
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - CI 148047
   - CSSTroubleshoot
-  - CI 163053
 ms.reviewer: zebamehdi; brandisi
 appliesto: 
   - Office 365
