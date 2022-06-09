@@ -54,7 +54,6 @@ Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name obje
 
 The following information provides a mapping between the **objectVersion** attribute value to the Active Directory Schema commutability:
 
-
 | Version | Operating System |
 |:-----:|:-----|
 |13|Windows 2000 Server|
@@ -67,7 +66,6 @@ The following information provides a mapping between the **objectVersion** attri
 |87|Windows Server 2016|
 |88|Windows Server 2019|
 |88|Windows Server 2022|
-| | |
 
 ## How to find the current Exchange Schema Version
 
@@ -94,6 +92,7 @@ dsquery * "CN=ms-Exch-Schema-Version-Pt,cn=schema,cn=configuration,dc=contoso,dc
 ### Some "rangeUpper" attribute map
 
 The following information provides a mapping between the **rangeUpper** attribute value, to the Exchange Schema commutability:
+
 <!--- Commenting out old block
 4397 -> Exchange Server 2000 RTM  
 4406 -> Exchange Server 2000 With Service Pack 3  
@@ -125,8 +124,5 @@ The following information provides a mapping between the **rangeUpper** attribut
 |Exchange Server 2013 CU2|15281|
 |Exchange Server 2013 CU1|15254|
 |Exchange Server 2013 RTM|15137|
-| | |
-
-
 
 [!INCLUDE [Community Solutions Content Disclaimer](../../includes/community-solutions-content-disclaimer.md)]
