@@ -23,9 +23,9 @@ ms.date: 6/2/2022
 
 ## Symptoms
 
-In an Exchange Online mailbox that’s configured in Microsoft Outlook, either some or all Microsoft 365 Groups don't synchronize automatically.
+In an Exchange Online mailbox that's configured in Microsoft Outlook, either some or all Microsoft 365 Groups don't synchronize automatically.
 
-In the status bar in Outlook, the sync status displays the message, “This folder has not been updated yet”.
+In the status bar in Outlook, the sync status displays the message, "This folder has not been updated yet".
 
 ## Cause
 
@@ -40,11 +40,11 @@ To resolve this issue, use resolution 1 or resolution 2 depending on the cause o
 
 Resolution 1: If modern authentication isn't enabled for your tenant, use the following steps:
 
-1. [Enable modern authentication for Outlook in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) and wait for replication to complete. This should take a few minutes.
+1. [Enable modern authentication for Outlook in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) and wait for replication to complete, which should take a few minutes.
 2. [Create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d).
 3. Open the [Outlook Connection Status](../connectivity/description-of-the-connection-status-dialog-box.md) dialog.
 4. Verify that the entries in the **Authn** column display **Bearer***. This value confirms that Outlook is using modern authentication.
-5. Check whether the sync status in the status bar in Outlook has updated to display “This folder is up to date”.
+5. Check whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
 
 Resolution 2: If some of the Microsoft 365 groups have 100K items or more, use the following information.
 
@@ -53,10 +53,10 @@ If modern authentication is enabled for your tenant, and the item count in some 
 To reduce this time period and fix the issue, use the following steps:
 
 1. Add the following registry key:
-    **Note:** If the registry key doesn’t exist, you need to create the key before setting the DWORD value.  
+    **Note:** If the registry key doesn't exist, you need to create the key before setting the DWORD value.  
     `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode`
     DWORD = GroupsSyncWindowSetting
     Value = 3
     The value is a number that specifies the time period in months for Outlook to cache content in Office 365 groups.
 2. Restart Outlook. As an optional measure, you can also [create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d).
-3. Check  whether the sync status in the status bar in Outlook has updated to display “This folder is up to date".
+3. Check  whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
