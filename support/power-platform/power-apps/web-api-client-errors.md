@@ -16,7 +16,7 @@ contributors:
 ---
 # Troubleshoot Dataverse Web API client errors
 
-This topic describes common client errors you may encounter when using the [Dataverse Web API] and how you can avoid them.
+This topic describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
 
 ## Resource not found for the segment
 
