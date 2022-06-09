@@ -1,8 +1,8 @@
 ---
-title: Microsoft 365 Groups don't synchronize in Outlook for Windows
-description: Provides troubleshooting steps for what to do when Microsoft 365 Groups don't synchronize in Outlook for Windows.
+title: Microsoft 365 groups don't synchronize in Outlook 
+description: Provides a fix for when Microsoft 365 groups don't synchronize in Outlook.
 author: Devon-Miller
-ms.author: pedrocorreia
+ms.author: v-devmiller
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,14 +16,14 @@ appliesto:
   - Outlook for Office 365
 search.appverid: 
   - MET150
-ms.date: 6/2/2022
+ms.date: 6/9/2022
 ---
 
-# Microsoft 365 Groups don't synchronize in Outlook for Windows
+# Microsoft 365 groups don't synchronize in Outlook for Windows
 
 ## Symptoms
 
-In an Exchange Online mailbox that's configured in Microsoft Outlook, either some or all Microsoft 365 Groups don't synchronize automatically.
+In an Exchange Online mailbox that's configured in Microsoft Outlook, either some or all Microsoft 365 groups don't synchronize automatically.
 
 In the status bar in Outlook, the sync status displays the message, "This folder has not been updated yet".
 
@@ -52,11 +52,11 @@ If modern authentication is enabled for your tenant, and the item count in some 
 
 To reduce this time period and fix the issue, use the following steps:
 
-1. Add the following registry key:
-    **Note:** If the registry key doesn't exist, you need to create the key before setting the DWORD value.  
+1. Create the following registry key:
+    
     `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode`
     DWORD = GroupsSyncWindowSetting
     Value = 3
     The value is a number that specifies the time period in months for Outlook to cache content in Microsoft 365 groups.
-2. Restart Outlook. As an optional measure, you can also [create an Outlook profile](https://support.microsoft.com/office/create-an-outlook-profile-f544c1ba-3352-4b3b-be0b-8d42a540459d).
+2. Restart Outlook. 
 3. Check  whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
