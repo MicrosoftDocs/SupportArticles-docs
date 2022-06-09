@@ -33,9 +33,9 @@ When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-admin
 
 To fix this issue, install the following Cumulative Updates (CUs) as appropriate:
 
-[Cumulative Update 12 for Exchange Server 2019](https://support.microsoft.com/help/5011156) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019) for Exchange Server 2019
+[Cumulative Update 12 for Exchange Server 2019](https://support.microsoft.com/help/5011156) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019&preserve-view=true) for Exchange Server 2019
 
-[Cumulative Update 23 for Exchange Server 2016](https://support.microsoft.com/help/5011155) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2016) for Exchange Server 2016
+[Cumulative Update 23 for Exchange Server 2016](https://support.microsoft.com/help/5011155) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2016&preserve-view=true) for Exchange Server 2016
 
 ## Workaround
 
