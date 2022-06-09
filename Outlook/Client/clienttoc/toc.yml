@@ -609,7 +609,7 @@
           href: ../synchronization/email-stays-in-outbox-until-manually-send-or-receive.md
         - name: Error 0x8004010F when sending or receiving email
           href: ../synchronization/error-0x8004010f-when-sending-or-receiving-emails.md
-        - name: Microsoft 365 Groups don't synchronize in Outlook for Windows
+        - name: Microsoft 365 Groups don't synchronize in Outlook
           href: ../synchronization/Groups-dont-synchronize.md
         - name: Offline item count differs from server count
           href: ../synchronization/offline-item-count-for-folder-differs-from-server-count.md
