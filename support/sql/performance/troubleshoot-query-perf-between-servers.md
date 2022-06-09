@@ -36,7 +36,7 @@ Use one of the following two methods to compare the performance for two or more 
     1. Run the queries on the two servers.
     1. Compare the elapsed time (duration) on two servers for each query.
 
-- <a id="anchortext"></a> Analyze performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
+- Analyze performance data with <a id="analyze-performance-with-sql-nexus">[SQL Nexus](https://github.com/microsoft/SqlNexus)</a>.
 
   1. Collect [PSSDiag/SQLdiag](https://github.com/microsoft/DiagManager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) data for the queries on the two servers.
   1. Import the collected data files with SQL Nexus and compare the queries from the two servers. For more information, see [Performance Comparison between two log collections (Slow and Fast for example)](https://github.com/microsoft/SqlNexus/wiki/Reports-via-SQL-Queries#performance-comparison-between-two-log-collections-slow-and-fast-for-example).
