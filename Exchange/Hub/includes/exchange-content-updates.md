@@ -2,30 +2,35 @@
 
 
 
+## Week of May 30, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |
+
+
+## Week of May 23, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | added |
+| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
+| 5/23/2022 | [Can't remove a remote shared mailbox](/exchange/troubleshoot/administration/cannot-remove-remote-shared-mailbox) | added |
+
+
+## Week of May 16, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/19/2022 | Send updates options for attendees not shown | removed |
+
+
 ## Week of May 02, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 5/4/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | added |
-
-
-## Week of April 25, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/24/2022 | [Autocomplete and suggestions don't work for internal recipients](/exchange/troubleshoot/email-alias/address-not-autocompleted-or-suggested) | added |
-| 4/25/2022 | [Can't delete a mail-enabled public folder](/exchange/troubleshoot/public-folders/cannot-delete-public-folder) | added |
-| 4/25/2022 | [Missing items in eDiscovery search results](/exchange/troubleshoot/compliance/ediscovery-search-missing-items) | added |
-| 4/24/2022 | [Autocomplete and suggestions don't work for internal recipients](/exchange/troubleshoot/email-alias/address-not-autocompleted-or-suggested) | added |
-| 4/25/2022 | [Can't delete a mail-enabled public folder](/exchange/troubleshoot/public-folders/cannot-delete-public-folder) | added |
-| 4/25/2022 | [Missing items in eDiscovery search results](/exchange/troubleshoot/compliance/ediscovery-search-missing-items) | added |
-
-
-## Week of April 18, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 4/19/2022 | [Cannot determine group type error when checking group in Microsoft 365 admin center](/exchange/troubleshoot/groups-and-distribution-lists/cannot-determine-group-type-error) | modified |

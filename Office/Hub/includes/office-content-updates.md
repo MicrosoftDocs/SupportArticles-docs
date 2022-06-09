@@ -2,6 +2,22 @@
 
 
 
+## Week of May 16, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/19/2022 | [Block use of Office Add-ins for work or school accounts](/office/troubleshoot/mobile/prevent-office-add-in-work-account) | added |
+
+
+## Week of May 09, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/11/2022 | [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
+
+
 ## Week of May 02, 2022
 
 
