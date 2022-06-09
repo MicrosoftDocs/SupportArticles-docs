@@ -55,7 +55,7 @@ Get-ItemProperty 'AD:\CN=Schema,CN=Configuration,DC=contoso,DC=local' -Name obje
 The following information provides a mapping between the **objectVersion** attribute value to the Active Directory Schema commutability:
 
 | Version | Operating System |
-|:-----:|:-----|
+|---|---|
 |13|Windows 2000 Server|
 |30|Windows Server 2003 RTM, Windows 2003 Service Pack 1, Windows 2003 Service Pack 2| 
 |31|Windows Server 2003 R2|
@@ -102,7 +102,7 @@ The following information provides a mapping between the **rangeUpper** attribut
 11116 -> Exchange 2007 With Service Pack 1  
 --->
 | Exchange Version | rangeUpper |
-|:-----|:-----:|
+|---|---|
 |Exchange Server 2019 CU10, CU11|17003|
 |Exchange Server 2019 CU8, CU9|17002|
 |Exchange Server 2019 CU2, CU3, CU4, CU5, CU6, CU7|17001|
