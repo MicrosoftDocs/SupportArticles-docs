@@ -36,7 +36,21 @@ The following flow chart describes the methodology Microsoft CSS uses to approac
 
 A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
 
-### Step 1: Is SQL Server reporting slow I/O?
+You can choose one of following two options to resolve the problem:
+
+### Option 1: Execute the steps directly in a notebook via Azure Data Studio
+
+> [!NOTE]
+> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+
+> [!div class="nextstepaction"]
+> [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/mssql-support/master/sample-scripts/DOCs-to-Notebooks/T-shooting-SQL-Slow-IO.ipynb)
+
+### Option 2: Follow the steps manually
+
+The methodology is outlined in these steps:
+
+#### Step 1: Is SQL Server reporting slow I/O?
 
 SQL Server may report I/O latency in several ways:
 
@@ -44,7 +58,7 @@ SQL Server may report I/O latency in several ways:
 - DMV `sys.dm_io_virtual_file_stats`
 - Error log or Application Event log
 
-#### I/O wait types
+##### I/O wait types
 
 Determine if there's I/O latency reported by SQL Server wait types. The values `PAGEIOLATCH_*`, `WRITELOG`, and `ASYNC_IO_COMPLETION` and the values of several other less common wait types should generally stay below 10-15 milliseconds per I/O request. If these values are greater consistently, an I/O performance problem exists and requires further investigation. The following query may help you gather this diagnostic information on your system:
 
@@ -66,7 +80,7 @@ for ([int]$i = 0; $i -lt 100; $i++)
 }
 ```
 
-#### File stats in sys.dm_io_virtual_file_stats
+##### File stats in sys.dm_io_virtual_file_stats
 
 To view the database file-level latency as reported in SQL Server, run the following query:
 
@@ -98,7 +112,7 @@ sqlcmd -E -S $sqlserver_instance -Q "SELECT   LEFT(mf.physical_name,100),   `
 
 Look at the `AvgLatency` and `LatencyAssessment` columns to understand the latency details.
 
-#### Error 833 reported in Errorlog or Application Event log
+##### Error 833 reported in Errorlog or Application Event log
 
 In some cases, you may observe error 833 `SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file [%ls] in database [%ls] (%d)` in the error log. You can check SQL Server error logs on your system by running the following PowerShell command:
 
@@ -109,7 +123,7 @@ Get-ChildItem -Path "c:\program files\microsoft sql server\mssql*" -Recurse -Inc
 
 Also, for more information on this error, see the [MSSQLSERVER_833](/sql/relational-databases/errors-events/mssqlserver-833-database-engine-error) section.
 
-### Step 2: Do Perfmon Counters indicate I/O latency?
+#### Step 2: Do Perfmon Counters indicate I/O latency?
 
 If SQL Server reports I/O latency, refer to OS counters. You can determine if there's an I/O problem by examining the latency counter `Avg Disk Sec/Transfer`. The following code snippet indicates one way to collect this information through PowerShell. It gathers counters on all disk volumes: "_total". Change to a specific drive volume (for example, "D:"). To find which volumes host your database files, run the following query in your SQL Server:
 
@@ -175,7 +189,7 @@ For more information, see [How to choose antivirus software to run on computers 
 
 Avoid using Encrypting File System (EFS) and file-system compression because they cause asynchronous I/O to become synchronous and therefore slower. For more information, see the [Asynchronous disk I/O appears as synchronous on Windows](/troubleshoot/windows/win32/asynchronous-disk-io-synchronous#compression) article.
 
-### Step 3: Is the I/O subsystem overwhelmed beyond capacity?
+#### Step 3: Is the I/O subsystem overwhelmed beyond capacity?
 
 If SQL Server and the OS indicate that the I/O subsystem is slow, check if the cause is the system being overwhelmed beyond capacity. You can check capacity by looking at I/O counters `Disk Bytes/Sec`, `Disk Read Bytes/Sec`, or `Disk Write Bytes/Sec`. Be sure to check with your System Administrator or hardware vendor for the expected throughput specifications for your SAN (or other I/O subsystem). For example, you can push no more than 200 MB/sec of I/O through a 2 GB/sec HBA card or 2 GB/sec dedicated port on a SAN switch. The expected throughput capacity defined by a hardware manufacturer defines how you proceed from here.
 
@@ -198,7 +212,7 @@ $_.CounterSamples | ForEach-Object       {
  }
 ```
 
-### Step 4: Is SQL Server driving the heavy I/O activity?
+#### Step 4: Is SQL Server driving the heavy I/O activity?
 
 If the I/O subsystem is overwhelmed beyond capacity, find out if SQL Server is the culprit by looking at `Buffer Manager: Page Reads/Sec` (most common culprit) and `Page Writes/Sec` (a lot less common) for the specific instance. If SQL Server is the main I/O driver and I/O volume is beyond what the system can handle, then work with the Application Development teams or application vendor to:
 
