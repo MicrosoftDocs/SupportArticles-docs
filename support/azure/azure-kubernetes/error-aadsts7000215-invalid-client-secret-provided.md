@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot "AADSTS7000215: Invalid client secret is provided"'
-description: 'Troubleshoot the "AADSTS7000215: Invalid client secret is provided" error message when you try to connect to the Azure Kubernetes Service (AKS) API server.'
+title: AADSTS7000215 Invalid client secret is provided
+description: Troubleshoot the AADSTS7000215 Invalid client secret is provided error message when you try to connect to the Azure Kubernetes Service (AKS) API server.
 ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot "AADSTS7000215: Invalid client secret is provided" error message so that I can connect successfully to the Azure Kubernetes Service (AKS) API server.
 ---
-# Troubleshoot the "AADSTS7000215: Invalid client secret is provided" error when you try to use the AKS API
+# "AADSTS7000215: Invalid client secret is provided" error when you try to use the AKS API
 
 This article discusses how to troubleshoot the "AADSTS7000215: Invalid client secret is provided" error when you try to connect to the Microsoft Azure Kubernetes Service (AKS) API server.
 
