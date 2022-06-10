@@ -143,3 +143,7 @@ For Windows Server 2022, you also need to disable Storage Sense by using Group P
    **Computer Configuration** > **Administrative Templates** > **System** > **Storage Sense**
 3. Edit the **Allow Storage Sense** policy to **Disabled**.
 4. Close **Group Policy Editor**.
+
+## Reference
+
+For more information about Storage Sense, see [Manage drive space with Storage Sense](https://support.microsoft.com/windows/manage-drive-space-with-storage-sense-654f6ada-7bfc-45e5-966b-e24aded96ad5).
