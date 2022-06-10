@@ -148,7 +148,7 @@ If the data matches the following conditions:
 
 Then the additional CPU time comes from some other CPU-bound activities. This scenario is the rarest of all the scenarios.
 
-#### Causes: Tracing, UDFs and CLR intergration
+#### Causes: Tracing, UDFs and CLR integration
 
 This issue may be caused by:
 

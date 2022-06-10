@@ -13,7 +13,7 @@
 - Are CPU-related hardware configurations similar on both servers? For example:
 
   - Number of CPUs varies between machines (24 CPUs on one machine versus 96 CPUs on the other).
-  - Power Plans—balanced versus high performance.
+  - Power plans—balanced versus high performance.
   - Virtual Machine (VM) versus physical (bare metal) machine.
   - Hyper-V versus VMware—difference in configuration.
   - Clock speed difference (lower clock speed versus higher clock speed). For example, 2 GHz versus 3.5 GHz can make a difference. To get the clock speed on a server, run the following PowerShell command:
