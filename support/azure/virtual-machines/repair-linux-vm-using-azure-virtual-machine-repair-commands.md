@@ -43,7 +43,7 @@ Follow these steps to troubleshoot the VM issue:
 4. Run az vm repair run, or perform mitigation steps.
 5. Run az vm repair restore
 
-To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/ext/vm-repair/vm/repair).
+To view all available VM repair commands and parameters, see [az vm repair](/cli/azure/vm/repair).
 
 To run the commands, you need a role that can create the following types of resources in the subscription:
 
