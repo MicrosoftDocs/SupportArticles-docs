@@ -14,7 +14,6 @@ search.app:
 contributors: 
   - JimDaly
 ms.topic: troubleshooting
-ms.subservice: powerapps-dataverse-web-api
 ---
 # Troubleshoot Dataverse Web API client errors
 
