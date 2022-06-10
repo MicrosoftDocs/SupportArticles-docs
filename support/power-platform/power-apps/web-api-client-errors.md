@@ -1,6 +1,6 @@
 ---
-title: "Troubleshoot Web API client errors (Microsoft Dataverse)| Microsoft Docs"
-description: "Describes common client errors you may encounter when using the Dataverse Web API and how you can avoid them."
+title: Troubleshoot Web API client errors
+description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
 ms.date: 06/05/2022
 author: divka78
 ms.author: dikamath
@@ -13,12 +13,16 @@ search.app:
   - D365CE
 contributors: 
   - JimDaly
+ms.topic: troubleshooting
+ms.subservice: powerapps-dataverse-web-api
 ---
 # Troubleshoot Dataverse Web API client errors
 
-This topic describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
+This article describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
 
-## Resource not found for the segment
+## Error 1 - Resource not found for the segment
+
+### Symptoms
 
 **Request**
 
@@ -39,19 +43,20 @@ HTTP/1.1 404 Not Found
 }
 ```
 
-**Cause:**
+### Cause
 
 This error occurs when you use the incorrect name for a resource. That resource might be the name of an entity set, a function or an action. These resource names are case sensitive.
 
 In the example above, there is an entity set called `accounts`, but not one named `Account`.
 
-**How to avoid:**
+### How to avoid
 
-If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents.md#service-document) and it will provide a list of all the known entity set names.
+- If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) and it will provide a list of all the known entity set names.
+- If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
 
-If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents.md#csdl-metadata-document).
+## Error 2 - Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
 
-## Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
+### Symptoms
 
 **Request**
 
@@ -72,17 +77,19 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-**Cause:**
+### Cause
 
 This error occurs when you use the incorrect name for a property. Property names are case sensitive.
 
 In the example above, there is property called `name`, but not one named `Name`.
 
-**How to avoid:**
+### How to avoid
 
-Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents.md#csdl-metadata-document). More information: [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties.md)
+Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
-## No HTTP resource was found that matches the request URI
+## Error 3 - No HTTP resource was found that matches the request URI
+
+### Symptoms
 
 **Request**
 
@@ -103,22 +110,22 @@ HTTP/1.1 404 Not Found
 }
 ```
 
-**Cause:**
+### Cause
 
 This error occurs when the incorrect HTTP method is applied to a function or action. In this case, <xref:Microsoft.Dynamics.CRM.WhoAmI?text=WhoAmI Function> requires the use of `GET` but `POST` was used.
 
-**How to avoid:**
+### How to avoid
 
-Be aware of what kind of OData operation you are using and the correct HTTP method to use.
+Be aware of what kind of OData operation you are using and the correct HTTP method to use. For more information, see:
 
-More information:
+- [Web API Actions](/power-apps/developer/data-platform/webapi/web-api-actions)
+- [Use Web API actions](/power-apps/developer/data-platform/webapi/use-web-api-actions)
+- [Web API Functions](/power-apps/developer/data-platform/webapi/web-api-functions)
+- [Use Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions)
 
-- [Web API Actions](/power-apps/developer/data-platform/webapi/web-api-actions.md)
-- [Use Web API actions](/power-apps/developer/data-platform/webapi/use-web-api-actions.md)
-- [Web API Functions](/power-apps/developer/data-platform/webapi/web-api-functions.md)
-- [Use Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions.md)
+## Error 4- Invalid property {property name} was found in entity 'Microsoft.Dynamics.CRM.{entity name}'
 
-## Invalid property {property name} was found in entity 'Microsoft.Dynamics.CRM.{entity name}'
+### Symptoms
 
 **Request**
 
@@ -143,42 +150,15 @@ HTTP/1.1 400 Bad Request
 }
 ```
 
-**Cause:**
+### Cause
 
-This error is because the incorrect name for a property was used. Property names are case sensitive and `Name` was used rather than `name`.
+This error occurs because the incorrect name for a property was used. Property names are case sensitive and `Name` was used rather than `name`.
 
-**How to avoid:**
+### How to avoid
 
-Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents.md#csdl-metadata-document). More information: [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties.md)
-
-<!-- Template START
-
-## Error Text: This should be a generic form of the most distinct error string that people would search for. Use brackets for placeholders.
-
-**Request**
-
-```http
-GET [Organization URI]/api/data/v9.2/
-```
-
-**Response**
-
-```http
-
-```
-
-**Cause:**
-
-Describe cause for the error in the example.
-
-**How to avoid:**
-
-Describe how to avoid
-Include links to related content
-
-Template END-->
+Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
 ### See also
 
-[Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)<br />
-[Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors)
+- [Web API types and operations](/power-apps/developer/data-platform/webapi/web-api-types-operations)
+- [Compose HTTP requests and handle errors](/power-apps/developer/data-platform/webapi/compose-http-requests-handle-errors)
