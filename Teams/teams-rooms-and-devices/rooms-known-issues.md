@@ -62,6 +62,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |Busy on Busy feature is unavailable | The Busy on Busy feature isn't available in Teams on phones. | This feature isn't available for Teams on phones at this time. |
 |Jabra Panacast 50 doesn't display video in Teams meeting|When using Jabra Panacast 50 in a Teams meeting, if the **Whiteboard sharing mode** in Jabra Direct is set to **In separate content camera view**, the video doesn't display.|The fix for this issue is available in application version [4.12.138.0](/microsoftteams/rooms/rooms-release-note#4121380-5262022).|
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
+| Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
 
 ## Limitations
 
