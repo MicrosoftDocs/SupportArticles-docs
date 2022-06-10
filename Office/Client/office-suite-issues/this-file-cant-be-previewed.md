@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # "This file can't be previewed" error in Word, Excel, or PowerPoint
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to preview a document in the Preview pane, you receive an error message that resembles the following:

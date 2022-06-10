@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Connection to ODBC driver fails in PowerPivot for Excel 2010 or PowerPivot for Excel 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Assume that you try to connect to a database by using Microsoft OLE DB Provider for ODBC Drivers in the PowerPivot for Microsoft Excel 2010 or PowerPivot for Microsoft Excel 2013 add-in. You create the connection string by using the Table Import Wizard. The connection test is successful. However, when you click **Next**, you receive the following error message:

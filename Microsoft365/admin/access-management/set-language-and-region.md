@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to set language and region settings for Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article explains how to set the language and region settings for all Office 365 services (including OneDrive For Business, Delve, and SharePoint Online) by using Office 365 PowerShell centrally for all users.

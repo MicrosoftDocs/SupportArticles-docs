@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # "Invalid Security Code" error when you reset your admin password for Office 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem 
 
 When you try to reset your password by using the self-service password reset for administrators feature in Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message: 

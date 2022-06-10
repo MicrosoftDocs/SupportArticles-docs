@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Error messages when you try to uninstall Microsoft Office 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You receive one of the following error messages when you try to uninstall Microsoft Office 2013 or Office 365 suite.

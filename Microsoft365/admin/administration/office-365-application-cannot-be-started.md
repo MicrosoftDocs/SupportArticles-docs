@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to run a Microsoft Office 365 ClickOnce application such as Office 365 Desktop Setup or the Office 365 Desktop Readiness Tool, you receive the following error message:

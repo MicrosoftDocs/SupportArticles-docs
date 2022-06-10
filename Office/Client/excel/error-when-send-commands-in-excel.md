@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # "An error occurred when sending commands to the program" in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You receive the following error message in Microsoft Excel. This error indicates that some process that is running inside Excel will not let Excel close.

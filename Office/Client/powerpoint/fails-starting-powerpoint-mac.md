@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Microsoft PowerPoint has encountered a problem and needs to close" in PowerPoint for Mac startup
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start PowerPoint for Mac, you may receive the following error message:

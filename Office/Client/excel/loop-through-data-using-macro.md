@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to loop through a list of data on a worksheet by using macros in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you write a Microsoft Visual Basic for Applications (VBA) macro, you may have to loop through a list of data on a worksheet. There are several methods for performing this task. The "More Information" section of this article contains information about the methods that you can use to search the following types of lists: 

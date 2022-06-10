@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # PRB: "Operation must use an updateable query" When you access Excel through ODBC
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you edit an Excel worksheet through ADO and ODBC, you may receive the following error message if you use an ADO DataControl object:

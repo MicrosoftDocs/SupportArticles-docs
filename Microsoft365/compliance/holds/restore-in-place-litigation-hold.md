@@ -22,9 +22,9 @@ ms.date: 3/31/2022
 ---
 # How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2934398
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Introduction
 

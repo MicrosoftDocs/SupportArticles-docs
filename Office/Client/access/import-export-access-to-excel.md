@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Access: Errors during Import/Export to Excel xls
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Access encounters Import/Export errors when working with Excel *.xls files that have cells, which contain more than 8224 bytes of data.

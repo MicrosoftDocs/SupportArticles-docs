@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # You cannot paste any attributes into a workbook in another instance of Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

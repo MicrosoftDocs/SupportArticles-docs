@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # PRB: Error Message: 0x80004005: General Error Unable to Open Registry Key
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you access a page that connects to an Access database, you may receive the following error message in the browser:

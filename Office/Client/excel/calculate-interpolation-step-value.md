@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Method to calculate interpolation step value in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 The following Microsoft Excel formula performs linear interpolation by calculating the interpolation step value:

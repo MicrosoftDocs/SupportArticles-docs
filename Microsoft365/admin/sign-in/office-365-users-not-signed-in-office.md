@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 An Office 365 who is signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the user opens the Office app, they aren't automatically signed in. The user has to manually sign in to the Office app.

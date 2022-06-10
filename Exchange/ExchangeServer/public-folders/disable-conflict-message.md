@@ -8,6 +8,7 @@ ms.author: v-six
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
+  - CI 163890
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -15,7 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
 ms.reviewer: bilong
-ms.date: 3/31/2022
+ms.date: 5/24/2022
 ---
 # How to disable public folder Conflict Message notification
 
@@ -51,8 +52,6 @@ You can change this value programmatically, or you can use one of the tools that
 
 > [!NOTE]
 > Changing the value of the **PR_RESOLVE_METHOD** property does not resolve existing conflicts.
-
-For more information about how to programmatically change the value of the [PR_RESOLVE_METHOD](/office/client-developer/outlook/mapi/pidtagresolvemethod-canonical-property) property, go to the MSDN website to search for the [PR_RESOLVE_METHOD](https://social.msdn.microsoft.com/search/?query=pr_resolve_method%20&ac=8) property.
 
 ### How to use ExFolders to change the value of PR_RESOLVE_METHOD
 

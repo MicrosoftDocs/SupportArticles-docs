@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You receive a Microsoft account security alert email message in Office 365 Dedicated/ITAR (vNext)
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Office 365 Dedicated/ITAR (vNext), you receive an email message that has the subject "Microsoft account security alert," and you are worried that it's a phishing email message.

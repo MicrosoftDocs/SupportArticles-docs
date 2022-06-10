@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Users removed from the Enterprise Resource Pool group sync are not inactivated
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After removing users from an Active Directory security group used to synchronize user accounts in Project Web App's (PWA) 2013 Enterprise Resource Pool, resources are not inactivated.  Previous behavior in Project Web App 2010 the users were inactivated.
@@ -37,7 +35,7 @@ This is only true when using SharePoint permissions mode. Project Server 2013 an
 To remove a user's access to log into PWA, use one of the following options:
 
 **Remove the user's Project Online license**
- 
+
 1. As the Tenant Administrator log into your online tenant    
 2. Navigate to the Microsoft 365 admin center and click users and groups    
 3. Select one or multiple user accounts and click the edit icon    
@@ -55,4 +53,3 @@ To remove a user's access to log into PWA, use one of the following options:
 ## More Information
 
 Additionally, users added or synchronized to the Enterprise Resource Pool are not added to the Team Members security group on the Project Web App home page. Users must be manually added to a group on the PWA home page in order to log in. For more information, see [Plan SharePoint groups in Project Server](https://technet.microsoft.com/library/fp161360.aspx).
-

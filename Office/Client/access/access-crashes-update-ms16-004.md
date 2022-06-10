@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Error messages or Access crashes after you install security update MS16-004
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you apply security update 2881067, 2881029, 3039794, or 2920727 that are described in security bulletin MS16-004, you have problems that affect your Access database if you use certain Windows common controls. Specifically, these problems occur if you use the controls that are associated with the MSCOMCTL.OCX file that's updated in the security update. These problems may include the following:

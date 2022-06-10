@@ -19,9 +19,9 @@ ms.date: 3/31/2022
 
 # Messaging Records Management (MRM) and Retention Policies in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4032361
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Summary
 

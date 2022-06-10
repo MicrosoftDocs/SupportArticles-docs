@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # A decimal value in a column is rounded up or down to an integer value in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you enter a decimal value in a column in Microsoft Access, the decimal value is rounded up or down to an integer value.

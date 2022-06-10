@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to shut down a custom Access application remotely
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies only to a Microsoft Access database (.mdb or .accdb). 

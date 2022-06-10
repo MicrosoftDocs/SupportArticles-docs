@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Sign in to Office 365, Azure, or Intune fails after you change the federation service endpoint
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 After you change Active Directory Federation Services (AD FS) service endpoint settings in the AD FS Management Console, single sign-on (SSO) authentication to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune fails, and you experience one of the following symptoms:

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Errors when trying to activate or sign in to Office Mobile on iPhone or Office Mobile on Android
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## PROBLEM
 
 When you try to activate or sign in to Office Mobile on iPhone, available in the Apple iTunes Store as "Office Mobile for Office 365 subscribers," or Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive one of the following error messages:

@@ -26,8 +26,6 @@ ms.date: 3/31/2022
 
 # "To install and use this product..." error when you install Office 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to install Microsoft Office 2010, the installation does not finish, and you receive the following error message:

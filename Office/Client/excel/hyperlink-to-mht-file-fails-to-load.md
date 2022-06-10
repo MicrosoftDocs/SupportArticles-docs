@@ -28,9 +28,7 @@ ms.date: 3/31/2022
 
 # Hyperlink to MHT File in Office Documents Fails to Load in Internet Explorer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Consider this scenario:
 
@@ -43,12 +41,11 @@ Most likely causes:
 - There might be a typing error in the address.   
 - If you clicked on a link, it may be out of date.   
 
-
-##  Cause
+## Cause
 
 There are spaces in the path or file name in the URL.
 
-##  Resolution
+## Resolution
 
 Important: This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:
 
@@ -65,14 +62,11 @@ To work around this issue, follow these steps:
 7. Type iexplore.exe and press Enter   
 8. On the **File** menu, click **Exit** to quit Registry Editor.   
 
-
 #### Did this fix the problem?
-
 
 - Check whether the problem is fixed. If the problem is fixed, you are finished with this section. If the problem is not fixed, you can [contact support](https://support.microsoft.com/contactus).   
 - We would appreciate your feedback. To provide feedback or to report any issues with this solution, please send us an [email](mailto:fixit4me@microsoft.com?subject=kb).   
 
-
-##  More Information
+## More Information
 
 Web files (.HTM, .HTML, .ASP, .MHT, .MHTML, etc.) are most frequently stored on web servers, which are designed to use URL encoding to deal with spaces. If you access your .MHT files from a web server, they will load properly with or without spaces in the path.

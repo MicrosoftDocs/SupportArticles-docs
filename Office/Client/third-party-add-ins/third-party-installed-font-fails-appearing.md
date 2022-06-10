@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Third-party installed font does not appear in the font list in Word for Mac
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you install a font into the Fonts folder in the operating system and start Microsoft Word for Mac, the font unexpectedly is not available in the Font dialog box, in the drop-down list, or in the Formatting Palette.

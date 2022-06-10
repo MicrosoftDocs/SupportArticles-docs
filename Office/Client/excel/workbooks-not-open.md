@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Excel workbooks may not open after MS16-088 is installed
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 The Microsoft Excel team has made a change in the behavior of certain file types to increase security. This change is included in the [July 2016 security updates (MS16-088)](https://support.microsoft.com/help/3170008). 

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How the Table Analyzer Wizard works
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Novice: Requires knowledge of the user interface on single-user computers. 
 
 This article applies only to a Microsoft Access database (.mdb) or a Microsoft Office Access 2007 database (.accdb).

@@ -21,11 +21,10 @@ ms.date: 3/31/2022
 
 # How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-## Problem 
+## Problem
 
 When users sign in to a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure by using a federated user account, the connection to the Active Directory Federation Services (AD FS) service fails only when users try to do the following:
+
 - Connect from a remote Internet location
 - Use email connections to sign in
 

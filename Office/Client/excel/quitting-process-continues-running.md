@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you run a Microsoft Visual Basic for Applications (VBA) macro to programmatically exit Microsoft Excel, Excel appears to close as expected. However, an active Excel process continues to run.

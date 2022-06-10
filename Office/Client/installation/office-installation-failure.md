@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Office 2010 Installation failure: "...encountered an error during setup" CAQuietExec wevtutil.exe BCSEvents.man
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 User is attempting to install Office 2010 Professional Plus on a Dell machine with Windows 7 OS. Setup halts during installation with in the following error, and Office is not installed:

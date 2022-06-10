@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Description of digital signatures and code signing in workbooks in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Office Excel 2003 and in later versions of Excel, you can digitally sign a workbook or code sign your macro project. This ensures that you were the last person to make changes to the workbook or macro project.

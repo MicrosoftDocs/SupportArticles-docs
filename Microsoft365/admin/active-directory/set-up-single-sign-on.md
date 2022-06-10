@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Supported scenarios for using AD FS to set up single sign-on in Office 365, Azure, or Intune
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 This article provides an overview of various Active Directory Federation Services (AD FS) scenarios and their implications for single sign-on (SSO) in Office 365, Microsoft Azure, or Microsoft Intune.

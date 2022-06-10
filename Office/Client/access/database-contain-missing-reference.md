@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # Visual Basic for Applications (VBA) functions break in a database with missing references
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 283806
 
 > [!NOTE]

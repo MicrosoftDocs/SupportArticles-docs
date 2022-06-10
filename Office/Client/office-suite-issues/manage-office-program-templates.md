@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # How to manage templates in 2007 Office programs and in 2010 Office programs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 This article describes the different types and locations of templates in 2007 Microsoft Office programs and in 2010 Office programs. Additionally, this article contains information about registry settings that control where you find custom templates.

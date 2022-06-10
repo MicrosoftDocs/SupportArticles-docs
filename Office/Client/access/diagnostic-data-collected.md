@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # [SDP 3][b4abb87b-898d-4e51-b723-4151ec94c452] Microsoft Access Support Diagnostic
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2678469
 
 ## Summary

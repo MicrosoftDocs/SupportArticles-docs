@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # "There is a problem with this website's security certificate" error when a federated user signs out of Office 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When a federated user signs out of a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, the user receives the following error message on login.microsoftonline.com:

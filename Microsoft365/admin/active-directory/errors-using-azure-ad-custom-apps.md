@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Error messages when using Azure Active Directory Graph API custom applications in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to use Microsoft Azure Active Directory Graph API custom applications in Office 365, you may receive one of the following messages:

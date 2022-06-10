@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # How to programmatically create a new column in an Access report
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 812719
 
 ## Summary

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "wkresources" files in Trash after using or starting Office for Mac applications
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 The file "wkresources" gets created and moved to Trash-Recovered Files every time you open Office for Mac 2011 document or application.

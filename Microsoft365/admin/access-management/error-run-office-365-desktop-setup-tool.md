@@ -17,13 +17,11 @@ ms.date: 3/31/2022
 
 # Error message when you run the Office 365 Desktop Setup Tool: "Application configuration incomplete"
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 You receive the following error message after you enter your credentials in the Office 365 Desktop Setup Tool:
 
-```adoc
+```output
 Application configuration incomplete. 
 The information required to configure your computer for Microsoft Office 365 could not be downloaded. If the issue persists, contact Microsoft Office 365 Support.
 Learn More.

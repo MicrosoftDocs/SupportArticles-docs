@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Office has detected a problem with this file" error in Microsoft Office 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You perform one of the following actions in a Microsoft Office 2010 application:
