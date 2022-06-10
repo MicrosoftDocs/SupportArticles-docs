@@ -19,7 +19,7 @@ search.appverid:
 ms.date: 6/9/2022
 ---
 
-# Microsoft 365 groups don't synchronize in Outlook for Windows
+# Microsoft 365 groups don't synchronize in Outlook
 
 ## Symptoms
 
@@ -53,10 +53,10 @@ If modern authentication is enabled for your tenant, and the item count in some 
 To reduce this time period and fix the issue, use the following steps:
 
 1. Create the following registry key:
-    
+
     `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode`
     DWORD = GroupsSyncWindowSetting
     Value = 3
     The value is a number that specifies the time period in months for Outlook to cache content in Microsoft 365 groups.
-2. Restart Outlook. 
+2. Restart Outlook.
 3. Check  whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".
