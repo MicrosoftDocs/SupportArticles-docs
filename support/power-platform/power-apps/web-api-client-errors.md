@@ -13,7 +13,6 @@ search.app:
   - D365CE
 contributors: 
   - JimDaly
-ms.topic: troubleshooting
 ---
 # Troubleshoot Dataverse Web API client errors
 
@@ -50,7 +49,7 @@ In the example above, there is an entity set called `accounts`, but not one name
 
 ### How to avoid
 
-- If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) and it will provide a list of all the known entity set names.
+- If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which will provide a list of all the known entity set names.
 - If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
 
 ## Error 2 - Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
