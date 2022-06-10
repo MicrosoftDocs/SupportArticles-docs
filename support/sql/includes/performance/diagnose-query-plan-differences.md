@@ -2,7 +2,7 @@ Here are some common causes for differences in query plans:
 
 - Data size or data values differences
 
-  Is the same database being used on both servers—using the same database backup? Has the data been modified on one server compared to the other? Data differences can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows). The type and speed of the `join` operation can be significantly different.
+  Is the same database being used on both servers—using the same database backup? Has the data been modified on one server compared to the other? Data differences can lead to different query plans. For example, joining table T1 (1000 rows) with table T2 (2,000,000 rows) is different from joining table T1 (100 rows) with table T2 (2,000,000 rows). The type and speed of the `JOIN` operation can be significantly different.
 
 - Statistics differences
 
