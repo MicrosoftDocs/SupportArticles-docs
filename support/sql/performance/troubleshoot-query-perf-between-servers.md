@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot a query that shows different performance between two servers
 description: Provides troubleshooting steps for an issue where a query shows significantly different performance on two servers.
-ms.date: 05/27/2022
+ms.date: 06/10/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -43,7 +43,7 @@ Use one of the following two methods to compare the performance for two or more 
 
 ### Scenario 1: Only one single query performs differently on the two servers
 
-If only one query performs differently, the issue is more likely specific to the individual query rather than to the environment. In this case, go to [Step 2: Collect data and determine the type of the performance issue](#step-2-collect-data-and-determine-the-type-of-performance-issue).
+If only one query performs differently, the issue is more likely specific to the individual query rather than to the environment. In this case, go to [Step 2: Collect data and determine the type of performance issue](#step-2-collect-data-and-determine-the-type-of-performance-issue).
 
 ### Scenario 2: Multiple queries perform differently on the two servers
 
@@ -148,7 +148,7 @@ If the data matches the following conditions:
 
 Then the additional CPU time comes from some other CPU-bound activities. This scenario is the rarest of all the scenarios.
 
-#### Causes: tracing, UDFs and CLR intergration
+#### Causes: Tracing, UDFs and CLR intergration
 
 This issue may be caused by:
 
