@@ -1,7 +1,7 @@
 ---
 title: Using the PortQry command-line tool
 description: Discusses the features and functionality available in PortQry Command Line Port Scanner version 2.0.
-ms.date: 09/08/2021
+ms.date: 06/10/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -150,7 +150,7 @@ The placeholders in this syntax are explained in the following table of local mo
 
 When you troubleshoot connectivity issues between computers, you might have to type many repetitive commands. Such actions might be done more easily by using PortQry in interactive mode.
 
-Interactive mode is similar to the interactive functionality in the [Nslookup](/windows-server/administration/windows-commands/nslookup) DNS utility or in the [Nblookup](https://support.microsoft.com/topic/d493dcb3-7648-ec0f-ed52-aaa16e236d14) WINS utility.
+Interactive mode is similar to the interactive functionality in the [Nslookup](/windows-server/administration/windows-commands/nslookup) DNS utility or in the Nblookup WINS utility.
 
 To start PortQry in interactive mode, use the `-i` parameter. For example, run the following command:
 
