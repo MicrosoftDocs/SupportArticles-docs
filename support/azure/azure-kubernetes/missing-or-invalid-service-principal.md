@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot a missing or invalid service principal so that I can successfully create an Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot missing or invalid service principal when creating an AKS cluster
+# Missing or invalid service principal when creating an AKS cluster
 
 This article discusses how to troubleshoot a service principal that wasn't found or is invalid when you try to create a Microsoft Azure Kubernetes Service (AKS) cluster.
 
