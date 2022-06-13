@@ -36,7 +36,7 @@ You might experience one of the following scenarios:
 
 > Versions of this item cannot be deleted because it is on hold or retention policy.
 
-**Scenario 3:** You've excluded or removed a SharePoint site or a OneDrive site from a retention policy, or you've deleted the site from the policy. More than 24 hours after you've made these updates, when you try to delete the affected site or a version of a document on the site, you see one of the error messages displayed in scenarios 1 and 2.
+**Scenario 3:** You've excluded or removed a SharePoint site or a OneDrive site from a retention policy. More than 24 hours after you've made these updates, when you try to delete the affected site or a version of a document on the site, you see one of the error messages displayed in scenarios 1 and 2.
 
 ## Cause
 
@@ -59,7 +59,3 @@ To verify the validity of the retention policy and delete it if it's invalid, ru
 3. Select **Run Tests**.
 
 4. If the test finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy.
-
-## More information
-
-Still need help? Go to the [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
