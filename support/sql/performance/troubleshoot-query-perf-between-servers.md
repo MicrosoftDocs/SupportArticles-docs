@@ -55,7 +55,7 @@ If multiple queries run slower on one server than the other, the most probable c
 
 To collect elapsed time and CPU time of the query on both servers, use one of the following methods that best fits your situation:
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/collect-query-time-logical-reads.md)]
+[!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
 Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
 
