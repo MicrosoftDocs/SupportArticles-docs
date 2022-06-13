@@ -50,6 +50,8 @@
     href: troubleshoot-upgrade-errors.md#error-code-quotaexceeded
   - name: SubnetIsFull error
     href: troubleshoot-upgrade-errors.md#error-code-subnetisfull
+  - name: Kubernetes 1.16 upgrades fail
+    href: upgrades-to-kubernetes-fail-using-node-labels.md    
 
 - name: Troubleshoot delete operations
   items:
@@ -134,20 +136,22 @@
 
 - name: Troubleshoot Azure Storage-related issues
   items:
-  - name: Can't set the uid and gid mounting options on an Azure disk
-    href: failure-setting-azure-disk-mount-options-uid-gid.md
-  - name: Could not change permissions using Azure Files
-    href: could-not-change-permissions-azure-files.md
   - name: Errors when mounting file share
     href: fail-to-mount-azure-file-share.md
   - name: Errors when mounting disk volumes
     href: fail-to-mount-azure-disk-volume.md
+  - name: Can't set the uid and gid mounting options on an Azure disk
+    href: failure-setting-azure-disk-mount-options-uid-gid.md
+  - name: Could not change permissions using Azure Files
+    href: could-not-change-permissions-azure-files.md
   - name: Failed to create file share on storage account
     href: create-file-share-failed-storage-account.md
-  - name: Handling of small files causes high latency
-    href: small-file-handling-high-latency.md
+  - name: File share mounting failures for Azure Files
+    href: file-share-mount-failures-azure-files.md
   - name: Recommended and useful mountOptions settings
     href: mountoptions-settings-azure-files.md
+  - name: Slow attach and detach operations for an Azure disk
+    href: slow-attach-detach-operations-azure-disk.md
 
 - name: AKS common issues
   items:
@@ -155,24 +159,52 @@
     href: aks-common-issues-faq.yml
   - name: 429 Too Many Requests errors
     href: 429-too-many-requests-errors.md
+  - name: '"AADSTS7000215: Invalid client secret is provided" error'
+    href: error-aadsts7000215-invalid-client-secret-provided.md
+  - name: Argument list too long
+    href: application-fails-argument-list-too-long.md
   - name: Azure AD Pod Identity NMI returns 500 Internal Server Error
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Can't access the cluster API server using authorized IP ranges
     href: cannot-access-cluster-api-server-using-authorized-ip-ranges.md
   - name: Can't view resources in Kubernetes resource viewer on Azure portal
     href: cannot-view-resources-kubernetes-resource-viewer-portal.md
+  - name: "Changing property 'imageReference' is not allowed"
+    href: changing-property-imagereference-not-allowed.md
   - name: Cluster provisioning status changed from Ready to Failed
     href: cluster-provisioning-status-changed-ready-failed.md
+  - name: Cluster upgrading and scaling errors
+    href: upgrading-or-scaling-does-not-succeed.md
   - name: "error:invalid_client AADSTS7000215: Invalid client secret is provided"
     href: invalid-service-principal-profile-credentials-or-client-secret.md
+  - name: '"Error from server: error dialing backend: dial tcp" messages'
+    href: error-from-server-error-dialing-backend-dial-tcp.md
+  - name: Errors using features that require virtual machine scale sets
+    href: error-using-feature-requiring-virtual-machine-scale-set.md
+  - name: insufficientSubnetSize error
+    href: insufficientsubnetsize-error-advanced-networking.md
+  - name: Missing or invalid service principal
+    href: missing-or-invalid-service-principal.md
   - name: Network watch is stale after egress traffic restriction
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: node-count-is-not-in-autoscaler-min-max-range.md
+  - name: Node VM is in failed state
+    href: cluster-node-virtual-machine-failed-state.md
+  - name: Pod is stuck in CrashLoopBackOff mode
+    href: pod-stuck-crashloopbackoff-mode.md
+  - name: '"Quota exceeded" error during creation or upgrade'
+    href: quote-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
     href: errors-arfter-restricting-egress-traffic.md
+  - name: TCP time-outs such as 10250 I/O
+    href: tcp-timeouts-dial-tcp-nodeip-10250-io-timeout.md
+  - name: TCP times out when kubectl or other third-party tools connect
+    href: tcp-timeouts-kubetctl-third-party-tools-connect-api-server.md
   - name: The credentials in ServicePrincipalProfile were invalid
     href: invalid-service-principal-profile-credentials-or-client-secret.md
+  - name: '"tls: client offered only unsupported versions" messages'
+    href: tls-client-offered-unsupported-versions.md
 
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md

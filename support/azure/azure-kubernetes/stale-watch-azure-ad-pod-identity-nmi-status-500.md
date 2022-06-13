@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the provisioning status of my cluster changed from Ready to Failed, even if I didn't do an operation, so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot a stale watch or a status 500 error returned from an Azure Active Directory Pod Identity NMI
+# Stale watch or a status 500 error returned from an Azure Active Directory Pod Identity NMI
 
 If you [use Azure Firewall to restrict egress traffic](/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall), you might discover that your network watch is stale, or that the Node Managed Identity (NMI) for your Azure Active Directory (Azure AD) Pod Identity is returning an internal server error (status 500).
 

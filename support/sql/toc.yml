@@ -287,6 +287,8 @@
         href: availability-groups/troubleshooting-automatic-failover-problems.md
       - name: Troubleshooting on AlwaysOn issues
         href: availability-groups/troubleshooting-alwayson-issues.md
+      - name: Error 41131 when creating availability group
+        href: availability-groups/error-41131-create-availability-group.md
     - name: Database Mirroring
       items:
       - name: Mirrored databases are disconnected
