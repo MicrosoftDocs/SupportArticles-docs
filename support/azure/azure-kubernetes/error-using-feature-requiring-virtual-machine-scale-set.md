@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors so that I can successfully use features that require virtual machine scale sets on an Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot errors using features that require virtual machine scale sets
+# Errors using features that require virtual machine scale sets
 
 This article discusses how to troubleshoot errors that occur when you try to use a feature that requires virtual machine scale sets on a Microsoft Azure Kubernetes Service (AKS) cluster.
 
