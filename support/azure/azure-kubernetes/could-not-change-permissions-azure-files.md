@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I receive a "could not change permissions" error when I use Azure Files so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot a "could not change permissions" error while using Azure Files
+# "Could not change permissions" error while using Azure Files
 
 This article discusses how to troubleshoot a "could not change permissions" error when you use Microsoft Azure Files with your Azure Kubernetes Service (AKS) cluster.
 

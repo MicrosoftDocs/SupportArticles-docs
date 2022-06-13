@@ -146,8 +146,12 @@
     href: could-not-change-permissions-azure-files.md
   - name: Failed to create file share on storage account
     href: create-file-share-failed-storage-account.md
+  - name: File share mounting failures for Azure Files
+    href: file-share-mount-failures-azure-files.md
   - name: Recommended and useful mountOptions settings
     href: mountoptions-settings-azure-files.md
+  - name: Slow attach and detach operations for an Azure disk
+    href: slow-attach-detach-operations-azure-disk.md
 
 - name: AKS common issues
   items:
@@ -185,10 +189,12 @@
     href: stale-watch-azure-ad-pod-identity-nmi-status-500.md
   - name: Node count isn't in autoscaler min and max range
     href: node-count-is-not-in-autoscaler-min-max-range.md
+  - name: Node VM is in failed state
+    href: cluster-node-virtual-machine-failed-state.md
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'
-    href: quote-exceeded-during-creation-upgrade.md
+    href: quota-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
     href: errors-arfter-restricting-egress-traffic.md
   - name: TCP time-outs such as 10250 I/O

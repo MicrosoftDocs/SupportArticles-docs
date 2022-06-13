@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot "The credentials in ServicePrincipalProfile were invalid" or "error:invalid_client AADSTS7000215: Invalid client secret is provided"'
-description: 'Troubleshoot the "The credentials in ServicePrincipalProfile were invalid" or "error:invalid_client AADSTS7000215: Invalid client secret is provided" message'
+title: 'Credentials in ServicePrincipalProfile were invalid or AADSTS7000215: Invalid client secret'
+description: Troubleshoot the credentials in ServicePrincipalProfile were invalid or AADSTS7000215 Invalid client secret is provided message.
 ms.date: 5/25/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "The credentials in ServicePrincipalProfile were invalid" or "error:invalid_client AADSTS7000215: Invalid client secret is provided" error message so that I can work with my Azure Kubernetes Service (AKS) cluster successfully.
 ---
-# Troubleshoot the "The credentials in ServicePrincipalProfile were invalid" or "error:invalid_client AADSTS7000215: Invalid client secret is provided" error message
+# "The credentials in ServicePrincipalProfile were invalid" or "error:invalid_client AADSTS7000215: Invalid client secret is provided" error message
 
 This article discusses error messages involving the service principal profile credentials or the client secret when you try to create or manage a Microsoft Azure Kubernetes Service (AKS) cluster.
 
