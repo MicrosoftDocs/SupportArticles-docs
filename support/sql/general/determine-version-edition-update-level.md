@@ -547,7 +547,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|12.0.6439.10|SP3|CU4| [5014164](https://support.microsoft.com/help/5014164)|June 14, 2022|
+|12.0.6439.10|SP3|CU4 + GDR| [5014164](https://support.microsoft.com/help/5014164)|June 14, 2022|
 |12.0.6433.1|SP3|CU4| [4583462](https://support.microsoft.com/help/4583462)|January 12, 2021|
 |12.0.6329.1|SP3|CU4| [4500181](https://support.microsoft.com/help/4500181)|July 29, 2019|
 |12.0.6293.0|SP3|CU3 + GDR| [4505422](https://support.microsoft.com/help/4505422)|July 9, 2019|
