@@ -356,6 +356,7 @@ This type of blocking can often be identified by a SPID that is sleeping or awai
  ```sql
  CREATE TABLE #test (col1 INT);
  INSERT INTO #test SELECT 1;
+ GO
  BEGIN TRAN
  UPDATE #test SET col1 = 2 where col1 = 1;
  ```
@@ -368,7 +369,7 @@ This type of blocking can often be identified by a SPID that is sleeping or awai
  DROP TABLE #test;
  ```
 
-The output of the second query indicates that the transaction nesting level is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state. 
+The output of the second query indicates that the transaction count is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state. 
     
 Use the script earlier in this article based on `sys.dm_tran_active_transactions` to identify currently uncommitted transactions across the instance.
 
@@ -468,6 +469,26 @@ Even if a separate thread exists for each connection on the client, a variation 
 This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, this may leave a transaction open. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks or otherwise handle this situation. 
 
 In this scenario, while the execution of a SQL batch has been canceled, the SQL transaction is left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired are still retained. 
+
+To demonstrate an orphaned transaction, issue the following query, which simulates a batch-aborting error by inserting into a non-existent table:
+
+ ```sql
+ CREATE TABLE #test2 (col1 INT);
+ INSERT INTO #test2 SELECT 1;
+ go
+ BEGIN TRAN
+ UPDATE #test2 SET col1 = 2 where col1 = 1;
+ INSERT INTO #NonExistentTable values (10)
+ ```
+
+ Then, execute this query in the same window:
+    
+ ```sql
+ SELECT @@TRANCOUNT;
+ ```
+
+The output of the second query indicates that the transaction count is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. Since the batch was already aborted by the query, the application that executed it may continue running other queries on the same session but without cleaning up the transaction that's still open. In that case the lock will be held essentially until the session is killed or the SQL Server restarted.
+
 
 **Resolution**:
 
