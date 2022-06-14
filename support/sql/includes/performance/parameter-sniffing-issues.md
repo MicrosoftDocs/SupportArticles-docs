@@ -1,12 +1,9 @@
-You can use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to free plan cache and check whether this resolves the high-CPU-usage issue. If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, also known as "parameter sniffing issue"). 
+You can use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to free plan cache and check whether this resolves the high-CPU-usage issue. If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, also known as "parameter sniffing issue").
 
 > [!NOTE]
-> Using the `DBCC FREEPROCCACHE` without parameters removes all compiled plans from plan cache. This will cause new query executions to be compiled again, which will lead to one-time longer duration for each new query. The best approach is to use DBCC FREEPROCCACHE (  plan_handle | sql_handle ) to identify which query may be causing the issue and then address that individual query or queries. 
-
+> Using the `DBCC FREEPROCCACHE` without parameters removes all compiled plans from plan cache. This will cause new query executions to be compiled again, which will lead to one-time longer duration for each new query. The best approach is to use `DBCC FREEPROCCACHE (  plan_handle | sql_handle )` to identify which query may be causing the issue and then address that individual query or queries.
 
 To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
-
-
 
 - Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint. You can add a `RECOMPILE` query hint to one or more of the high-CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage). This hint helps balance the slight increase in compilation CPU usage with a more optimal performance for each query execution. For more information, see [Parameters and Execution Plan Reuse](/sql/relational-databases/query-processing-architecture-guide#PlanReuse), [Parameter Sensitivity](/sql/relational-databases/query-processing-architecture-guide#ParamSniffing) and [RECOMPILE query hint](/sql/t-sql/queries/hints-transact-sql-query/#recompile).
 
