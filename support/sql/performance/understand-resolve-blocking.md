@@ -404,39 +404,39 @@ The application must be rewritten to fetch all rows of the result to completion.
 
 If the client has multiple open connections, and a single thread of execution, the following distributed deadlock may occur. For brevity, the term `dbproc` used here refers to the client connection structure.
 
-    ```console
-    SPID1------blocked on lock------->SPID2
-      /\ (waiting to write results
-      | back to client)
-      | |
-      | | Server side
-      | ================================|==================================
-      | <-- single thread --> | Client side
-      | \/
-      dbproc1 <------------------- dbproc2
-      (waiting to fetch (effectively blocked on dbproc1, awaiting
-      next row) single thread of execution to run)
-    ```
+```console
+ SPID1------blocked on lock------->SPID2
+   /\ (waiting to write results back to client)
+   | 
+   | |
+   | | Server side
+   | ================================|==================================
+   | <-- single thread --> | Client side
+   | \/
+   dbproc1 <------------------- dbproc2
+   (waiting to fetch (effectively blocked on dbproc1, awaiting
+   next row) single thread of execution to run)
+ ```
 
    In the case shown above, a single client application thread has two open connections. It asynchronously submits a SQL operation on dbproc1. This means it does not wait on the call to return before proceeding. The application then submits another SQL operation on dbproc2, and awaits the results to start processing the returned data. When data starts coming back (whichever dbproc first responds--assume this is dbproc1), it processes to completion all the data returned on that dbproc. It fetches results from dbproc1 until SPID1 gets blocked on a lock held by SPID2 (because the two queries are running asynchronously on the server). At this point, dbproc1 will wait indefinitely for more data. SPID2 is not blocked on a lock, but tries to send data to its client, dbproc2. However, dbproc2 is effectively blocked on dbproc1 at the application layer as the single thread of execution for the application is in use by dbproc1. This results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
  #### B. Client/Server Distributed Deadlock with a Thread per Connection
 
-     Even if a separate thread exists for each connection on the client, a variation of this distributed deadlock may still occur as shown by the following.
+Even if a separate thread exists for each connection on the client, a variation of this distributed deadlock may still occur as shown by the following.
 
-    ```console
-    SPID1------blocked on lock-------->SPID2
-      /\ (waiting on net write) Server side
-      | |
-      | |
-      | INSERT |SELECT
-      | ================================|==================================
-      | <-- thread per dbproc --> | Client side
-      | \/
-      dbproc1 <-----data row------- dbproc2
-      (waiting on (blocked on dbproc1, waiting for it
-      insert) to read the row from its buffer)
-    ```
+ ```console
+ SPID1------blocked on lock-------->SPID2
+   /\ (waiting on net write) Server side
+   | |
+   | |
+   | INSERT |SELECT
+   | ================================|==================================
+   | <-- thread per dbproc --> | Client side
+   | \/
+   dbproc1 <-----data row------- dbproc2
+   (waiting on (blocked on dbproc1, waiting for it
+   insert) to read the row from its buffer)
+ ```
 
   This case is similar to Example A, except dbproc2 and SPID2 are running a `SELECT` statement with the intention of performing row-at-a-time processing and handing each row through a buffer to dbproc1 for an `INSERT`, `UPDATE`, or `DELETE` statement on the same table. Eventually, SPID1 (performing the `INSERT`, `UPDATE`, or `DELETE`) becomes blocked on a lock held by SPID2 (performing the `SELECT`). SPID2 writes a result row to the client dbproc2. Dbproc2 then tries to pass the row in a buffer to dbproc1, but finds dbproc1 is busy (it is blocked waiting on SPID1 to finish the current `INSERT`, which is blocked on SPID2). At this point, dbproc2 is blocked at the application layer by dbproc1 whose SPID (SPID1) is blocked at the database level by SPID2. Again, this results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
@@ -463,17 +463,18 @@ If the client has multiple open connections, and a single thread of execution, t
   
    To avoid this situation, do not perform large batch write operations or index creation or maintenance operations during busy hours on OLTP systems. If possible, perform such operations during periods of low activity.
 
-### 6. Blocking caused by an orphaned connection
+### 6. Blocking caused by an orphaned transaction
 
-This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, the network session to the server may not be immediately canceled under some conditions. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks. 
+This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, this may leave a transaction open. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks or otherwise handle this situation. 
 
-In this scenario, while the execution of a SQL batch has been canceled, the SQL connection and transaction are left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained. 
+In this scenario, while the execution of a SQL batch has been canceled, the SQL transaction is left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired are still retained. 
 
 **Resolution**:
 
-   The best way to prevent this condition is by improving application error handling, especially for unexpected terminations. Consider also the use of `SET XACT_ABORT ON` for the connection, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
+ - The best way to prevent this condition is by improving application error/exception handling, especially for unexpected terminations. Be sure to use a Try/Catch/ Finally constructs in the application code and roll back the transaction in the case of an exception.
+ - Consider the use of `SET XACT_ABORT ON` for the session, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error that aborts the batch, this setting will automatically roll back any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
 
-   To resolve an orphaned connection of a client application that has disconnected without appropriately cleaning up its resources, you can terminate the SPID by using the `KILL` command. For reference, see [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql). 
+- To resolve an orphaned connection of a client application that has disconnected without appropriately cleaning up its resources, you can terminate the SPID by using the `KILL` command. For reference, see [KILL (Transact-SQL)](/sql/t-sql/language-elements/kill-transact-sql). 
 
    The `KILL` command takes the SPID value as input. For example, to kill SPID 9, issue the following command:
 
