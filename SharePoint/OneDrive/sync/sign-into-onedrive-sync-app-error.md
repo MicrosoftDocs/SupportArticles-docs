@@ -47,7 +47,8 @@ To resolve this issue, remove the cached Office account identities from the regi
 3. Right-click **Identity**, and then select **Delete**.  
 
 > [!NOTE]
-> If you have [Shared Computer Activation](/deployoffice/troubleshoot-shared-computer-activation#Enabled) enabled, also remove the Identity registry entry from `HKEY_USERS\<The user SID>\Software\Microsoft\Office\16.0\Common`. To get the currently signed-in user's SID, run the `whoami /user` command in a Command Prompt window. If the issue persists, expand "**Section A: Remove Office licenses & cached accounts**" in [Clear prior activation information manually](/office/troubleshoot/activation/reset-office-365-proplus-activation-state#method-clear-prior-activation-information-manually), and then follow the steps in **Part 1: Remove previous Office activations** and **Part 3: Remove Office credentials stored in Windows Credential Manager**.
+> If you have [Shared Computer Activation](/deployoffice/troubleshoot-shared-computer-activation#Enabled) enabled, also remove the Identity registry entry from `HKEY_USERS\<The user SID>\Software\Microsoft\Office\16.0\Common`. To get the currently signed-in user's SID, run the `whoami /user` command in a Command Prompt window.  
+> If the issue persists, expand "**Section A: Remove Office licenses & cached accounts**" in [Clear prior activation information manually](/office/troubleshoot/activation/reset-office-365-proplus-activation-state#method-clear-prior-activation-information-manually), and then follow the steps in **Part 1: Remove previous Office activations** and **Part 3: Remove Office credentials stored in Windows Credential Manager**.
 
 If you still have the issue, follow these steps:
 
