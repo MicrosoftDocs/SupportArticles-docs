@@ -1,6 +1,6 @@
 ---
-title: '"insufficientSubnetSize error" while deploying an AKS cluster'
-description: 'Troubleshoot an "insufficientSubnetSize error" that occurs while you deploy an Azure Kubernetes Service (AKS) cluster with advanced networking.'
+title: Insufficient subnet size error while deploying an AKS cluster
+description: Troubleshoot an insufficientSubnetSize error that occurs while you deploy an Azure Kubernetes Service (AKS) cluster with advanced networking.
 ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want avoid an insufficient subnet size error so that I can deploy an Azure Kubernetes Service (AKS) cluster with advanced networking.
 ---
-# Troubleshoot "insufficientSubnetSize error" while deploying an AKS cluster with advanced networking
+# Insufficient subnet size error while deploying an AKS cluster with advanced networking
 
 This article discusses how to resolve an `insufficientSubnetSize` error that occurs while you try to deploy a Microsoft Azure Kubernetes Service (AKS) cluster with advanced networking. It addresses this issue for Kubernetes clusters and for Azure Container Networking Interface (CNI) clusters.
 

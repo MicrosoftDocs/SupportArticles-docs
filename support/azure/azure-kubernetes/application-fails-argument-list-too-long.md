@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot "argument list too long" application failures'
-description: 'Troubleshoot an "argument list too long" error message that causes an application to fail in Azure Kubernetes Service (AKS).'
+title: Argument list too long application failures
+description: Troubleshoot an argument list too long error message that causes an application to fail in Azure Kubernetes Service (AKS).
 ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot "argument list too long" error messages so that my application doesn't fail on Azure Kubernetes Service (AKS).
 ---
-# Troubleshoot application failures caused by the "argument list too long" error message
+# Application failures caused by the "argument list too long" error message
 
 This article discusses troubleshooting strategies for resolving application failures that are caused by the "argument list too long" error message in Microsoft Azure Kubernetes Service (AKS).
 

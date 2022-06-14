@@ -1,7 +1,7 @@
 ---
 title: VM Inspector error messages and common solutions
 description: Review a reference table that describes the error codes for the VM Inspector for Azure virtual machines.
-ms.date: 5/26/2022
+ms.date: 6/6/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: mimckitt
@@ -10,9 +10,9 @@ localization_priority: medium
 keywords:
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector error messages so that I can diagnose problems remotely on an Azure virtual machine.
 ---
-# VM Inspector error messages
+# VM Inspector error messages and solutions
 
-VM Inspector is a self-help diagnostic tool for remote users with privileged access. The tool is used on an Azure VM that runs Windows or Linux. When the Microsoft Azure VM Inspector tool discovers errors on an Azure virtual machine (VM), it returns specific error codes. The following table provides a comprehensive list of these error codes. 
+VM Inspector is a self-help diagnostic tool for remote users with privileged access. The tool is used on an Azure VM that runs Windows or Linux. When the Microsoft Azure VM Inspector tool discovers errors on an Azure virtual machine (VM), it returns specific error codes. The following table provides a comprehensive list of these error codes.
 
 ## Error messages
 
@@ -49,7 +49,9 @@ The following table describes the error codes that the VM Inspector can return a
 |              405 | `ResourceNotSupported`                        | Disk inspection is not supported for VM '{0}' with ephemeral OS disk '{1}'.
 |              405 | `ResourceNotSupported`                        | Disk inspection is not supported for the OS disk '{0}' with provisioning state '{1}'.
 |              405 | `ResourceNotSupported`                        | Disk inspection is not supported for VM '{0}' with unmanaged OS disk.
+|              405 | `UnableToCheckAccess`                         | Unable to determine permissions for clientObjectId: '{0}' on resourceId: '{1}' for actions: '{2}'. |
 |              405 | `UnmanagedDiskNotSupported`                   | Disk inspection isn't supported for the specified VM and unmanaged operating system disk.
+|              429 | `TooManyRequestsError`                        | Unable to determine permissions for clientObjectId: '{0}' on resourceId: '{1}' for actions: '{2}'. This is caused due to downstream API throttling. Please retry the request after some time. |
 |              500 | `DiskInspectInternalServerError`              | An unexpected internal server error occurred during disk inspection. Try again later.
 |              500 | `InternalServerError`                         | An unexpected internal server error occurred while running disk inspection.
 |              500 | `InternalServerError`                         | Failed to register storage account. Please try again. If problem still persists, create a support request.
@@ -59,37 +61,29 @@ The following table describes the error codes that the VM Inspector can return a
 |              500 | `InternalServerError`                         | VM '{0}' metadata are invalid. Please ensure that VM was provisioned successfully and not deleted.
 
 ## Common errors and solutions
+
 The following are common issues when using VM Inspector and known solutions. 
 
-### Error message 405 "Caller does not have access to perform action(s): '{0}' on storage account: '{1}'. Please check the full set of required permissions." 
+### You don't have a role assignment that can run diagnostics
 
-This error can occur if a user doesn't have enough permissions to run VM Inspector on the virtual machine or storage account. For example, a user with a Service Administrator role on the resources will result in a Forbidden error. Users with only classic administrator roles will also see Forbidden errors. At minimum, a user must have the following RBAC permissions assigned: 
+This error can occur when you use VM Inspector for the first time through the [Azure portal](https://portal.azure.com). As part of onboarding, the VM Inspector tool gets user consent to grant the Disk Backup reader role to the Compute Recommendation Service app. To add this role assignment, you should have Owner-level permissions.
 
-Access on the virtual machine: 
-- "Microsoft.Compute/virtualMachines/read"
-- "Microsoft.Compute/virtualMachines/write"
-- "Microsoft.Compute/virtualMachines/delete"
-- "Microsoft.Compute/virtualMachines/redeploy/action"
-- "Microsoft.Compute/virtualMachines/restart/action"
-- "Microsoft.Compute/virtualMachines/dellocate/action"
+For more information about the list of permissions that are needed to run VM Inspector, see [Get access to VM Inspector](vm-inspector-azure-virtual-machines.md#get-access-to-vm-inspector).
 
-The closest built-in role that can be used is VM Contributor. For more information, see [Azure built-in roles - Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor).
+### Error message 403 "The client 'name' with object id 'value' does not have authorization to perform action 'Microsoft.Compute/locations/diagnostics/validateStorageConfiguration/action' over scope '/subscriptions/{0}' or the scope is invalid. If access was recently granted, please refresh your credentials"
 
-Access on the storage account: 
-- "Microsoft.Storage/storageAccounts/read"
-- "Microsoft.Storage/storageAccounts/write" 
-- "Microsoft.Storage/storageAccounts/listkeys/action"
-- "Microsoft.Storage/storageAccounts/listServiceSas/action"
+This error can occur if you don't have enough permissions to invoke an API at the subscription level. The closest built-in role that you can use is [Contributor](/azure/role-based-access-control/built-in-roles#contributor) at the subscription level.
 
-The closest built-in role that can be used is Storage Account Contributor. For more information, see [Azure built-in roles - Storage Account Contributor](/azure/role-based-access-control/built-in-roles#storage-account-contributor).
+### Error message 405 "Caller does not have access to perform action(s): '{0}' on storage account: '{1}'. Please check the full set of required permissions."
 
-For more information on RBAC permissions and how-to guides, see [Azure RBAC Documentation](/azure/role-based-access-control/index).
+This error can occur if you don't have enough permissions to run VM Inspector on the virtual machine or storage account. For example, if you have a Service Administrator role or a Classic Administrator role on the resources (even if it's inherited from the subscription level), running VM Inspector will result in a Forbidden error.
 
-Custom roles can also be created to make it easier to replicate permissions across users. For more information on how to set up customer rules, see [Azure Custom Roles](/azure/role-based-access-control/custom-roles).
+For more information about the list of permissions that are needed to run VM Inspector, see [Get access to VM Inspector](vm-inspector-azure-virtual-machines.md#get-access-to-vm-inspector).
 
 ## Resources
 
 - [VM Inspector for Azure virtual machines](vm-inspector-azure-virtual-machines.md)
+
 - [Grant limited access to Azure Storage resources using SAS](/azure/storage/common/storage-sas-overview)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

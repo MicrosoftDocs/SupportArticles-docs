@@ -1,6 +1,6 @@
 ---
-title: 'Troubleshoot "Error from server: error dialing backend: dial tcp..."'
-description: 'Troubleshoot the "Error from server: error dialing backend: dial tcp…" message, which blocks you from using "kubectl logs" or connecting to the API server.'
+title: 'Error from server: error dialing backend: dial tcp...'
+description: 'Troubleshoot the Error from server: error dialing backend: dial tcp… message, which blocks you from using kubectl logs or connecting to the API server.'
 ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Error from server: error dialing backend: dial tcp…" message so that I can connect to the API server or use the `kubectl logs` command to get logs.
 ---
-# Troubleshoot "Error from server: error dialing backend: dial tcp..." messages
+# "Error from server: error dialing backend: dial tcp..." messages
 
 When you try to use the [kubectl logs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#logs) command to print the logs for a Kubernetes resource, or when you try to connect to the API server, you may receive the "Error from server: error dialing backend: dial tcp..." message. To troubleshoot the error, review the following cause and solution matrix:
 
