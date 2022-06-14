@@ -2,6 +2,16 @@
 
 
 
+## Week of June 06, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/7/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | added |
+| 6/7/2022 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
+| 6/9/2022 | [Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
+
+
 ## Week of May 30, 2022
 
 
@@ -26,11 +36,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 5/19/2022 | Send updates options for attendees not shown | removed |
-
-
-## Week of May 02, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/4/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | added |
