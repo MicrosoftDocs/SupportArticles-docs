@@ -54,28 +54,11 @@ If a scan takes more than 1 second, the XEvent will be recorded as follows when 
 
 ## Workaround
 
-There's currently no way to eliminate this problem. If an operation must finish quickly, clear the buffer pool by using the following commands before you execute it. It is likely that clearing the buffer pool is actually worse than waiting for the action to complete.
+In SQL Server 2022, buffer pool scans are parallelized by utilizing multiple cores. There will be one task per 8 million buffers (64 GB) where a serial scan will still be used if there are less than 8 million buffers. 
 
-1. Run `CHECKPOINT` on each database
+Prior to SQL Server 2022, there was no way to eliminate this problem. 
 
-    ```tsql
-    USE <DatabaseName>
-    CHECKPOINT
-    GO
-    ```
-
-    If the SQL Server hosts multiple databases, repeat the `CHECKPOINT` commands for all user databases.
-
-2. After all the databases on the server have been checkpointed, reduce the size of the buffer pool with following command:
-
-    ```tsql
-    DBCC DROPCLEANBUFFERS
-    ```
-
-    > [!WARNING]
-    > Dropping clean buffers from the buffer pool may result in a significant, but temporary, performance degradation. This command removes all unmodified database pages from memory which will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O causes queries to be slow. However, once the pages are read into cache again, SQL Server will continue to read them from there.
-
-3. Perform the operation that results in a buffer pool scan, for example, full database backup.
+It is not recommended to perform any action to clear the buffer pool as dropping clean buffers from the buffer pool may result in a significant performance degradation. Removing database pages from memory will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O causes queries to be slow. 
 
 ## More information
 
