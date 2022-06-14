@@ -57,6 +57,8 @@
           href: ../calendaring/cannot-send-meeting-on-behalf-of-managers.md
         - name: Can't add an Internet calendar
           href: ../calendaring/cannot-add-an-internet-calendar.md
+        - name: Configure rooms and workspaces for Room Finder
+          href: ../calendaring/configure-room-finder-rooms-workspaces.md
         - name: Create and book a workspace in Outlook
           href: /exchange/troubleshoot/outlook-issues/create-book-workspace-outlook?context=/outlook/troubleshoot/context/client-context
         - name: Create online meeting failed error
@@ -251,12 +253,12 @@
           href: ../data-files/cannot-add-pst-or-ost-file-on-non-local-drive.md
         - name: Limits to using .pst files over LAN and WAN links
           href: ../data-files/limits-using-pst-files-over-lan-wan.md
+        - name: Manage download settings for shared mail folders
+          href: ../data-files/by-default-shared-mail-folders-are-downloaded-in-cashed.md          
         - name: New Data File is created when adding new POP3 account
           href: ../data-files/new-outlook-data-file-is-created-default-adding-pop3-account.md
         - name: Only some emails are synchronized
           href: ../data-files/fewer-emails-in-shared-mailboxes-or-public-folders.md
-        - name: Shared mail folders are downloaded in Cached mode
-          href: ../data-files/by-default-shared-mail-folders-are-downloaded-in-cashed.md
         - name: Special characters in mailbox folder names
           href: ../data-files/weird-folder-names-after-pst-migration.md
         - name: The Mailbox Cleanup Wizard doesn't start
@@ -607,6 +609,8 @@
           href: ../synchronization/email-stays-in-outbox-until-manually-send-or-receive.md
         - name: Error 0x8004010F when sending or receiving email
           href: ../synchronization/error-0x8004010f-when-sending-or-receiving-emails.md
+        - name: Microsoft 365 groups don't synchronize in Outlook
+          href: ../synchronization/groups-dont-synchronize.md
         - name: Offline item count differs from server count
           href: ../synchronization/offline-item-count-for-folder-differs-from-server-count.md
         - name: Status bar has an upper limit of 3.99 GB

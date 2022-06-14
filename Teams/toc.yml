@@ -87,8 +87,6 @@
       href: ./teams-conferencing/teams-meetings-not-available.md
     - name: No audio while sharing content during a live event
       href: ./teams-conferencing/no-audio-when-sharing-content-in-meeting.md
-    - name: Team member maximum of 5000
-      href: ./teams-conferencing/teams-member-max-5000.md
     - name: Teams is slow during video meetings on laptops docked to 4K/HDR monitors
       href: ./teams-conferencing/teams-slow-video-meetings-laptops-4k.md
     - name: '"The following application instance is not present in BVD" error when assigning a phone number to a resource accounts'

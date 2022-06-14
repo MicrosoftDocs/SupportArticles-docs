@@ -2,6 +2,17 @@
 
 
 
+## Week of June 06, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/6/2022 | [Configure rooms and workspaces for Room Finder](/outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces) | added |
+| 6/6/2022 | [Manage download settings for shared mail folders in Cached Exchange mode in Outlook](/outlook/troubleshoot/data-files/by-default-shared-mail-folders-are-downloaded-in-cashed) | modified |
+| 6/7/2022 | [Manage download settings for shared mail folders in Cached Exchange mode in Outlook](/outlook/troubleshoot/data-files/by-default-shared-mail-folders-are-downloaded-in-cashed) | modified |
+| 6/9/2022 | [Microsoft 365 groups don't synchronize in Outlook](/outlook/troubleshoot/synchronization/groups-dont-synchronize) | added |
+
+
 ## Week of May 16, 2022
 
 
