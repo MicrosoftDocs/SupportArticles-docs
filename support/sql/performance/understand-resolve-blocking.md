@@ -336,72 +336,73 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
 ### 1. Blocking caused by a normally running query with a long execution time
     
-    In this scenarion an actively running query has acquired locks and is not releasing them (this is influenced by the transaction isolation level). As a result, the query is causing other sessions to wain on the acquired locks until those are released.
+In this scenarion an actively running query has acquired locks and is not releasing them (this is influenced by the transaction isolation level). As a result, the query is causing other sessions to wain on the acquired locks until those are released.
     
-      **Resolution**: The solution to this type of blocking problem is to look for ways to optimize the query. Actually, this class of blocking problem may just be a performance problem, and require you to pursue it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance). 
+**Resolution**: The solution to this type of blocking problem is to look for ways to optimize the query. Actually, this class of blocking problem may just be a performance problem, and require you to pursue it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance). 
 
-    Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries, suboptimal execution plans.
+Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries, suboptimal execution plans.
 
-    If you have a long-running query that is blocking other users and cannot be optimized, consider moving it from an OLTP environment to a dedicated reporting system, or use AlwaysOn availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
+If you have a long-running query that is blocking other users and cannot be optimized, consider moving it from an OLTP environment to a dedicated reporting system, or use AlwaysOn availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
 
-    > [!NOTE]
-    > Blocking during query execution could be caused by query escalation, a scenario when row or page locks escalated to table locks. Microsoft SQL Server dynamically determines when to perform lock escalation. The simplest and safest way to prevent lock escalation is to keep transactions short and to reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. For more information on detecting and preventing excessive lock escalation, see [Resolve blocking problem caused by lock escalation](resolve-blocking-problems-caused-lock-escalation.md).
+> [!NOTE]
+> Blocking during query execution could be caused by query escalation, a scenario when row or page locks escalated to table locks. Microsoft SQL Server dynamically determines when to perform lock escalation. The simplest and safest way to prevent lock escalation is to keep transactions short and to reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. For more information on detecting and preventing excessive lock escalation, see [Resolve blocking problem caused by lock escalation](resolve-blocking-problems-caused-lock-escalation.md).
     
 ### 2. Blocking caused by a sleeping SPID that has an uncommitted transaction
 
-    This type of blocking can often be identified by a SPID that is sleeping or awaiting a command, yet whose transaction nesting level (`@@TRANCOUNT`, `open_transaction_count` from `sys.dm_exec_requests`) is greater than zero. This can occur if the application experiences a query timeout, or issues a cancel without also issuing the required number of ROLLBACK and/or COMMIT statements. When a SPID receives a query timeout or a cancel, it will terminate the current query and batch, but does not automatically roll back or commit the transaction. The application is responsible for this, as SQL Server cannot assume that an entire transaction must be rolled back due to a single query being canceled. The query timeout or cancel will appear as an ATTENTION signal event for the SPID in the Extended Event session.
+This type of blocking can often be identified by a SPID that is sleeping or awaiting a command, yet whose transaction nesting level (`@@TRANCOUNT`, `open_transaction_count` from `sys.dm_exec_requests`) is greater than zero. This can occur if the application experiences a query timeout, or issues a cancel without also issuing the required number of ROLLBACK and/or COMMIT statements. When a SPID receives a query timeout or a cancel, it will terminate the current query and batch, but does not automatically roll back or commit the transaction. The application is responsible for this, as SQL Server cannot assume that an entire transaction must be rolled back due to a single query being canceled. The query timeout or cancel will appear as an ATTENTION signal event for the SPID in the Extended Event session.
 
-    To demonstrate an uncommitted explicit transaction, issue the following query:
+ To demonstrate an uncommitted explicit transaction, issue the following query:
 
-    ```sql
-    CREATE TABLE #test (col1 INT);
-    INSERT INTO #test SELECT 1;
-    BEGIN TRAN
-    UPDATE #test SET col1 = 2 where col1 = 1;
-    ```
+ ```sql
+ CREATE TABLE #test (col1 INT);
+ INSERT INTO #test SELECT 1;
+ BEGIN TRAN
+ UPDATE #test SET col1 = 2 where col1 = 1;
+ ```
 
-    Then, execute this query in the same window:
+ Then, execute this query in the same window:
     
-    ```sql
-    SELECT @@TRANCOUNT;
-    ROLLBACK TRAN
-    DROP TABLE #test;
-    ```
+ ```sql
+ SELECT @@TRANCOUNT;
+ ROLLBACK TRAN
+ DROP TABLE #test;
+ ```
 
-    The output of the second query indicates that the transaction nesting level is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state. 
+The output of the second query indicates that the transaction nesting level is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state. 
     
-    Use the script earlier in this article based on `sys.dm_tran_active_transactions` to identify currently uncommitted transactions across the instance.
+Use the script earlier in this article based on `sys.dm_tran_active_transactions` to identify currently uncommitted transactions across the instance.
 
-   **Resolutions**:
-    - Additionally, this class of blocking problem may also be a performance problem, and require you to pursue it as such. If the query execution time can be diminished, the query timeout or cancel would not occur. It is important that the application is able to handle the timeout or cancel scenarios should they arise, but you may also benefit from examining the performance of the query. 
+**Resolutions**:
+
+   - This class of blocking problem may also be a performance problem, and require you to pursue it as such. If the query execution time can be diminished, the query timeout or cancel may not occur. It is important that the application is able to handle the timeout or cancel scenarios should they arise, but you may also benefit from examining the performance of the query. 
 
    - Applications must properly manage transaction nesting levels, or they may cause a blocking problem following the cancellation of the query in this manner. Consider the following:  
 
-     *    In the error handler of the client application, execute `IF @@TRANCOUNT > 0 ROLLBACK TRAN` following any error, even if the client application does not believe a transaction is open. Checking for open transactions is required, because a stored procedure called during the batch could have started a transaction without the client application's knowledge. Certain conditions, such as canceling the query, prevent the procedure from executing past the current statement, so even if the procedure has logic to check `IF @@ERROR <> 0` and abort the transaction, this rollback code will not be executed in such cases.  
-     *    If connection pooling is being used in an application that opens the connection and runs a few queries before releasing the connection back to the pool, such as a Web-based application, temporarily disabling connection pooling may help alleviate the problem until the client application is modified to handle the errors appropriately. By disabling connection pooling, releasing the connection will cause a physical disconnect of the SQL Server connection, resulting in the server rolling back any open transactions.  
-     *    Use `SET XACT_ABORT ON` for the connection, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
+  -   In the error handler of the client application, execute `IF @@TRANCOUNT > 0 ROLLBACK TRAN` following any error, even if the client application does not believe a transaction is open. Checking for open transactions is required, because a stored procedure called during the batch could have started a transaction without the client application's knowledge. Certain conditions, such as canceling the query, prevent the procedure from executing past the current statement, so even if the procedure has logic to check `IF @@ERROR <> 0` and abort the transaction, this rollback code will not be executed in such cases.  
+  -   If connection pooling is being used in an application that opens the connection and runs a few queries before releasing the connection back to the pool, such as a Web-based application, temporarily disabling connection pooling may help alleviate the problem until the client application is modified to handle the errors appropriately. By disabling connection pooling, releasing the connection will cause a physical disconnect of the SQL Server connection, resulting in the server rolling back any open transactions.  
+  -    Use `SET XACT_ABORT ON` for the connection, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
 
-    > [!NOTE]
-    > The connection is not reset until it is reused from the connection pool, so it is possible that a user could open a transaction and then release the connection to the connection pool, but it might not be reused for several seconds, during which time the transaction would remain open. If the connection is not reused, the transaction will be aborted when the connection times out and is removed from the connection pool. Thus, it is optimal for the client application to abort transactions in their error handler or use `SET XACT_ABORT ON` to avoid this potential delay.
+> [!NOTE]
+> The connection is not reset until it is reused from the connection pool, so it is possible that a user could open a transaction and then release the connection to the connection pool, but it might not be reused for several seconds, during which time the transaction would remain open. If the connection is not reused, the transaction will be aborted when the connection times out and is removed from the connection pool. Thus, it is optimal for the client application to abort transactions in their error handler or use `SET XACT_ABORT ON` to avoid this potential delay.
 
-    > [!CAUTION]
-    > Following `SET XACT_ABORT ON`, T-SQL statements following a statement that causes an error will not be executed. This could affect the intended flow of existing code.
+ > [!CAUTION]
+ > Following `SET XACT_ABORT ON`, T-SQL statements following a statement that causes an error will not be executed. This could affect the intended flow of existing code.
 
 ### 3. Blocking caused by a SPID whose corresponding client application did not fetch all result rows to completion
 
-   After sending a query to the server, all applications must immediately fetch all result rows to completion. If an application does not fetch all result rows, locks can be left on the tables, blocking other users. If you are using an application that transparently submits SQL statements to the server, the application must fetch all result rows. If it does not (and if it cannot be configured to do so), you may be unable to resolve the blocking problem. To avoid the problem, you can restrict poorly behaved applications to a reporting or a decision-support database, separate from the main OLTP database.
+After sending a query to the server, all applications must immediately fetch all result rows to completion. If an application does not fetch all result rows, locks can be left on the tables, blocking other users. If you are using an application that transparently submits SQL statements to the server, the application must fetch all result rows. If it does not (and if it cannot be configured to do so), you may be unable to resolve the blocking problem. To avoid the problem, you can restrict poorly behaved applications to a reporting or a decision-support database, separate from the main OLTP database.
 
-   **Resolution**:
+**Resolution**:
 
-   The application must be rewritten to fetch all rows of the result to completion. This does not rule out the use of [OFFSET and FETCH in the ORDER BY clause](/sql/t-sql/queries/select-order-by-clause-transact-sql#using-offset-and-fetch-to-limit-the-rows-returned) of a query to perform server-side paging.
+The application must be rewritten to fetch all rows of the result to completion. This does not rule out the use of [OFFSET and FETCH in the ORDER BY clause](/sql/t-sql/queries/select-order-by-clause-transact-sql#using-offset-and-fetch-to-limit-the-rows-returned) of a query to perform server-side paging.
 
 ### 4. Blocking caused by a distributed client/server deadlock
 
    Unlike a conventional deadlock, a distributed deadlock is not detectable using the RDBMS lock manager. This is because only one of the resources involved in the deadlock is a SQL Server lock. The other side of the deadlock is at the client application level, over which SQL Server has no control. The following are two examples of how this can happen, and possible ways the application can avoid it.
 
-   A. Client/Server Distributed Deadlock with a Single Client Thread
+ #### A. Client/Server Distributed Deadlock with a Single Client Thread
 
-     If the client has multiple open connections, and a single thread of execution, the following distributed deadlock may occur. For brevity, the term `dbproc` used here refers to the client connection structure.
+If the client has multiple open connections, and a single thread of execution, the following distributed deadlock may occur. For brevity, the term `dbproc` used here refers to the client connection structure.
 
     ```console
     SPID1------blocked on lock------->SPID2
@@ -417,9 +418,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
       next row) single thread of execution to run)
     ```
 
-     In the case shown above, a single client application thread has two open connections. It asynchronously submits a SQL operation on dbproc1. This means it does not wait on the call to return before proceeding. The application then submits another SQL operation on dbproc2, and awaits the results to start processing the returned data. When data starts coming back (whichever dbproc first responds--assume this is dbproc1), it processes to completion all the data returned on that dbproc. It fetches results from dbproc1 until SPID1 gets blocked on a lock held by SPID2 (because the two queries are running asynchronously on the server). At this point, dbproc1 will wait indefinitely for more data. SPID2 is not blocked on a lock, but tries to send data to its client, dbproc2. However, dbproc2 is effectively blocked on dbproc1 at the application layer as the single thread of execution for the application is in use by dbproc1. This results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
+   In the case shown above, a single client application thread has two open connections. It asynchronously submits a SQL operation on dbproc1. This means it does not wait on the call to return before proceeding. The application then submits another SQL operation on dbproc2, and awaits the results to start processing the returned data. When data starts coming back (whichever dbproc first responds--assume this is dbproc1), it processes to completion all the data returned on that dbproc. It fetches results from dbproc1 until SPID1 gets blocked on a lock held by SPID2 (because the two queries are running asynchronously on the server). At this point, dbproc1 will wait indefinitely for more data. SPID2 is not blocked on a lock, but tries to send data to its client, dbproc2. However, dbproc2 is effectively blocked on dbproc1 at the application layer as the single thread of execution for the application is in use by dbproc1. This results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
-   B. Client/Server Distributed Deadlock with a Thread per Connection
+ #### B. Client/Server Distributed Deadlock with a Thread per Connection
 
      Even if a separate thread exists for each connection on the client, a variation of this distributed deadlock may still occur as shown by the following.
 
@@ -437,38 +438,38 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
       insert) to read the row from its buffer)
     ```
 
-     This case is similar to Example A, except dbproc2 and SPID2 are running a `SELECT` statement with the intention of performing row-at-a-time processing and handing each row through a buffer to dbproc1 for an `INSERT`, `UPDATE`, or `DELETE` statement on the same table. Eventually, SPID1 (performing the `INSERT`, `UPDATE`, or `DELETE`) becomes blocked on a lock held by SPID2 (performing the `SELECT`). SPID2 writes a result row to the client dbproc2. Dbproc2 then tries to pass the row in a buffer to dbproc1, but finds dbproc1 is busy (it is blocked waiting on SPID1 to finish the current `INSERT`, which is blocked on SPID2). At this point, dbproc2 is blocked at the application layer by dbproc1 whose SPID (SPID1) is blocked at the database level by SPID2. Again, this results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
+  This case is similar to Example A, except dbproc2 and SPID2 are running a `SELECT` statement with the intention of performing row-at-a-time processing and handing each row through a buffer to dbproc1 for an `INSERT`, `UPDATE`, or `DELETE` statement on the same table. Eventually, SPID1 (performing the `INSERT`, `UPDATE`, or `DELETE`) becomes blocked on a lock held by SPID2 (performing the `SELECT`). SPID2 writes a result row to the client dbproc2. Dbproc2 then tries to pass the row in a buffer to dbproc1, but finds dbproc1 is busy (it is blocked waiting on SPID1 to finish the current `INSERT`, which is blocked on SPID2). At this point, dbproc2 is blocked at the application layer by dbproc1 whose SPID (SPID1) is blocked at the database level by SPID2. Again, this results in a deadlock that SQL Server cannot detect or resolve because only one of the resources involved is a SQL Server resource.
 
-    Both examples A and B are fundamental issues that application developers must be aware of. They must code applications to handle these cases appropriately.
+  Both examples A and B are fundamental issues that application developers must be aware of. They must code applications to handle these cases appropriately.
 
-   **Resolutions**:
+ **Resolutions**:
 
    When a query timeout has been provided, if the distributed deadlock occurs, it will be broken when timeout happens. Reference your connection provider documentation for more information on using a query timeout.
 
 ### 5. Blocking caused by a session in a rollback state
 
-    A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client network session disconnecting, or when a request is selected as the deadlock victim. This can often be identified by observing the output of `sys.dm_exec_requests`, which may indicate the ROLLBACK `command`, and the `percent_complete` column may show progress. 
+  A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client network session disconnecting, or when a request is selected as the deadlock victim. This can often be identified by observing the output of `sys.dm_exec_requests`, which may indicate the ROLLBACK `command`, and the `percent_complete` column may show progress. 
     
    A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client computer restarting and its network session disconnecting. Likewise, a query selected as the deadlock victim will be rolled back. A data modification query often cannot be rolled back any faster than the changes were initially applied. For example, if a `DELETE`, `INSERT`, or `UPDATE` statement had been running for an hour, it could take at least an hour to roll back. This is expected behavior, because the changes made must be rolled back, or transactional and physical integrity in the database would be compromised. Because this must happen, SQL Server marks the SPID in a golden or rollback state (which means it cannot be KILLed or selected as a deadlock victim). This can often be identified by observing the output of `sp_who`, which may indicate the ROLLBACK command. The `status` column of `sys.dm_exec_sessions` will indicate a ROLLBACK status.
        
-    > [!Note]
-    > Lengthy rollbacks are rare when the [Accelerated Database Recovery feature](/sql/relational-databases/accelerated-database-recovery-concepts) is enabled. This feature was introduced in SQL Server 2019.
+> [!NOTE]
+> Lengthy rollbacks are rare when the [Accelerated Database Recovery feature](/sql/relational-databases/accelerated-database-recovery-concepts) is enabled. This feature was introduced in SQL Server 2019.
     
-    **Resolution**:
+ **Resolution**:
   
-      You must wait for the session to finish rolling back the changes that were made.
+  You must wait for the session to finish rolling back the changes that were made.
   
-      If the instance is shut down in the middle of this operation, the database will be in recovery mode upon restarting, and it will be inaccessible until all open transactions are processed. Startup recovery takes essentially the same amount of time per transaction as run-time recovery, and the database is inaccessible during this period. Thus, forcing the server down to fix a SPID in a rollback state will often be counterproductive. In SQL Server 2019 with Accelerated Database Recovery enabled, this should not occur. 
+  If the instance is shut down in the middle of this operation, the database will be in recovery mode upon restarting, and it will be inaccessible until all open transactions are processed. Startup recovery takes essentially the same amount of time per transaction as run-time recovery, and the database is inaccessible during this period. Thus, forcing the server down to fix a SPID in a rollback state will often be counterproductive. In SQL Server 2019 with Accelerated Database Recovery enabled, this should not occur. 
   
-      To avoid this situation, do not perform large batch write operations or index creation or maintenance operations during busy hours on OLTP systems. If possible, perform such operations during periods of low activity.
+   To avoid this situation, do not perform large batch write operations or index creation or maintenance operations during busy hours on OLTP systems. If possible, perform such operations during periods of low activity.
 
 ### 6. Blocking caused by an orphaned connection
 
-   This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, the network session to the server may not be immediately canceled under some conditions. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks. 
+This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, the network session to the server may not be immediately canceled under some conditions. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks. 
 
-   In this scenario, while the execution of a SQL batch has been canceled, the SQL connection and transaction are left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained. 
+In this scenario, while the execution of a SQL batch has been canceled, the SQL connection and transaction are left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained. 
 
-   **Resolution**:
+**Resolution**:
 
    The best way to prevent this condition is by improving application error handling, especially for unexpected terminations. Consider also the use of `SET XACT_ABORT ON` for the connection, or in any stored procedures that begin transactions and are not cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
 
