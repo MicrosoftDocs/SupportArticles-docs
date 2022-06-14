@@ -334,7 +334,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
 ## Detailed blocking scenarios
 
-1. Blocking caused by a normally running query with a long execution time
+### 1. Blocking caused by a normally running query with a long execution time
+    
+    In this scenarion an actively running query has acquired locks and is not releasing them (this is influenced by the transaction isolation level). As a result, the query is causing other sessions to wain on the acquired locks until those are released.
     
       **Resolution**: The solution to this type of blocking problem is to look for ways to optimize the query. Actually, this class of blocking problem may just be a performance problem, and require you to pursue it as such. For information on troubleshooting a specific slow-running query, see [How to troubleshoot slow-running queries on SQL Server](/troubleshoot/sql/performance/troubleshoot-slow-running-queries). For more information, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance). 
 
@@ -344,8 +346,8 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
     > [!NOTE]
     > Blocking during query execution could be caused by query escalation, a scenario when row or page locks escalated to table locks. Microsoft SQL Server dynamically determines when to perform lock escalation. The simplest and safest way to prevent lock escalation is to keep transactions short and to reduce the lock footprint of expensive queries so that the lock escalation thresholds are not exceeded. For more information on detecting and preventing excessive lock escalation, see [Resolve blocking problem caused by lock escalation](resolve-blocking-problems-caused-lock-escalation.md).
-
-2. Blocking caused by a sleeping SPID that has an uncommitted transaction
+    
+### 2. Blocking caused by a sleeping SPID that has an uncommitted transaction
 
     This type of blocking can often be identified by a SPID that is sleeping or awaiting a command, yet whose transaction nesting level (`@@TRANCOUNT`, `open_transaction_count` from `sys.dm_exec_requests`) is greater than zero. This can occur if the application experiences a query timeout, or issues a cancel without also issuing the required number of ROLLBACK and/or COMMIT statements. When a SPID receives a query timeout or a cancel, it will terminate the current query and batch, but does not automatically roll back or commit the transaction. The application is responsible for this, as SQL Server cannot assume that an entire transaction must be rolled back due to a single query being canceled. The query timeout or cancel will appear as an ATTENTION signal event for the SPID in the Extended Event session.
 
@@ -385,7 +387,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
     > [!CAUTION]
     > Following `SET XACT_ABORT ON`, T-SQL statements following a statement that causes an error will not be executed. This could affect the intended flow of existing code.
 
-3. Blocking caused by a SPID whose corresponding client application did not fetch all result rows to completion
+### 3. Blocking caused by a SPID whose corresponding client application did not fetch all result rows to completion
 
    After sending a query to the server, all applications must immediately fetch all result rows to completion. If an application does not fetch all result rows, locks can be left on the tables, blocking other users. If you are using an application that transparently submits SQL statements to the server, the application must fetch all result rows. If it does not (and if it cannot be configured to do so), you may be unable to resolve the blocking problem. To avoid the problem, you can restrict poorly behaved applications to a reporting or a decision-support database, separate from the main OLTP database.
 
@@ -393,7 +395,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
    The application must be rewritten to fetch all rows of the result to completion. This does not rule out the use of [OFFSET and FETCH in the ORDER BY clause](/sql/t-sql/queries/select-order-by-clause-transact-sql#using-offset-and-fetch-to-limit-the-rows-returned) of a query to perform server-side paging.
 
-4. Blocking caused by a distributed client/server deadlock
+### 4. Blocking caused by a distributed client/server deadlock
 
    Unlike a conventional deadlock, a distributed deadlock is not detectable using the RDBMS lock manager. This is because only one of the resources involved in the deadlock is a SQL Server lock. The other side of the deadlock is at the client application level, over which SQL Server has no control. The following are two examples of how this can happen, and possible ways the application can avoid it.
 
@@ -443,7 +445,7 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
 
    When a query timeout has been provided, if the distributed deadlock occurs, it will be broken when timeout happens. Reference your connection provider documentation for more information on using a query timeout.
 
-5. Blocking caused by a session in a rollback state
+### 5. Blocking caused by a session in a rollback state
 
     A data modification query that is KILLed, or canceled outside of a user-defined transaction, will be rolled back. This can also occur as a side effect of the client network session disconnecting, or when a request is selected as the deadlock victim. This can often be identified by observing the output of `sys.dm_exec_requests`, which may indicate the ROLLBACK `command`, and the `percent_complete` column may show progress. 
     
@@ -460,9 +462,9 @@ The `wait_type`, `open_transaction_count`, and `status` columns refer to informa
   
       To avoid this situation, do not perform large batch write operations or index creation or maintenance operations during busy hours on OLTP systems. If possible, perform such operations during periods of low activity.
 
-6. Blocking caused by an orphaned connection
+### 6. Blocking caused by an orphaned connection
 
-   This is a common problem scenario. If the client application stops or the client workstation is restarted, or there is a batch-aborting error, the network session to the server may not be immediately canceled under some conditions. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks. 
+   This is a common problem scenario and overlaps partly with [Scenario 2](#2-blocking-caused-by-a-sleeping-spid-that-has-an-uncommitted-transaction). If the client application stops or the client workstation is restarted, or there is a batch-aborting error, the network session to the server may not be immediately canceled under some conditions. This can occur if the application does not rollback the transaction in the application's CATCH or FINALLY blocks. 
 
    In this scenario, while the execution of a SQL batch has been canceled, the SQL connection and transaction are left open by the application. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired may still be retained. 
 
