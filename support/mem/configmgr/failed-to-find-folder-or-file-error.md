@@ -12,7 +12,7 @@ _Original KB number:_ &nbsp; 3189594
 
 ## Symptoms
 
-When you do site maintenance to move a Configuration Manager site database to a new standalone instance of Microsoft SQL Server, or to a new SQL Server AlwaysOn availability group, the Configuration Manager setup process fails and generates error messages that resemble the following in the ConfigMgrSetup.log.
+When you do site maintenance to move a Configuration Manager site database to a new standalone instance of Microsoft SQL Server, or to a new SQL Server Always On availability group, the Configuration Manager setup process fails and generates error messages that resemble the following in the ConfigMgrSetup.log.
 
 Error message 1
 
