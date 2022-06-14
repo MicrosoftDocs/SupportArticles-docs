@@ -194,7 +194,7 @@
   - name: Pod is stuck in CrashLoopBackOff mode
     href: pod-stuck-crashloopbackoff-mode.md
   - name: '"Quota exceeded" error during creation or upgrade'
-    href: quote-exceeded-during-creation-upgrade.md
+    href: quota-exceeded-during-creation-upgrade.md
   - name: Restricting egress traffic causes errors
     href: errors-arfter-restricting-egress-traffic.md
   - name: TCP time-outs such as 10250 I/O

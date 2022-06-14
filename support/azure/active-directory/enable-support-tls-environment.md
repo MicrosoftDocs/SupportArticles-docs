@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 05/19/2022
+ms.date: 06/14/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: dahans, abizerh
@@ -325,67 +325,67 @@ To filter and export the sign-in log entries:
 1. Save the following script to a PowerShell script (.ps1) file.
 
     ```powershell
-    $tId = "your-tenant-id" # Add tenant ID from Azure Active Directory page on portal.
-    $agoDays = 4 # Will filter the log for $agoDays from the current date and time.
-    $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd') # Get filter start date.
-    $pathForExport = "./" # The path to the local filesystem for export of the CSV file.
-    
-    Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId # Or use Directory.Read.All.
-    Select-MgProfile "beta" # Low TLS is available in Microsoft Graph preview endpoint.
-    
+    $tId = "your-tenant-id"  # Add tenant ID from Azure Active Directory page on portal.
+    $agoDays = 4  # Will filter the log for $agoDays from the current date and time.
+    $startDate = (Get-Date).AddDays(-($agoDays)).ToString('yyyy-MM-dd')  # Get filter start date.
+    $pathForExport = "./"  # The path to the local filesystem for export of the CSV file.
+
+    Connect-MgGraph -Scopes "AuditLog.Read.All" -TenantId $tId  # Or use Directory.Read.All.
+    Select-MgProfile "beta"  # Low TLS is available in Microsoft Graph preview endpoint.
+
     # Define the filtering strings for interactive and non-interactive sign-ins.
     $procDetailFunction = "x: x/key eq 'legacy tls (tls 1.0, 1.1, 3des)' and x/value eq '1'"
     $clauses = (
-    "createdDateTime ge $startDate",
-    "signInEventTypes/any(t: t eq 'nonInteractiveUser')",
-    "signInEventTypes/any(t: t eq 'servicePrincipal')",
-    "(authenticationProcessingDetails/any($procDetailFunction))"
+        "createdDateTime ge $startDate",
+        "signInEventTypes/any(t: t eq 'nonInteractiveUser')",
+        "signInEventTypes/any(t: t eq 'servicePrincipal')",
+        "(authenticationProcessingDetails/any($procDetailFunction))"
     )
-    
+
     # Get the interactive and non-interactive sign-ins based on filtering clauses.
     $signInsInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,3] -Join " and ") -All
     $signInsNonInteractive = Get-MgAuditLogSignIn -Filter ($clauses[0,1,3] -Join " and ") -All
     $signInsWorkloadIdentities = Get-MgAuditLogSignIn -Filter ($clauses[0,2,3] -Join " and ") -All
-    
-    $columnList = @{ # Enumerate the list of properties to be exported to the CSV files.
-    Property = "CorrelationId", "createdDateTime", "userPrincipalName", "userId",
-    "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
-    "ResourceDisplayName", "ResourceId", "UserAgent"
+
+    $columnList = @{  # Enumerate the list of properties to be exported to the CSV files.
+        Property = "CorrelationId", "createdDateTime", "userPrincipalName", "userId",
+                  "UserDisplayName", "AppDisplayName", "AppId", "IPAddress", "isInteractive",
+                  "ResourceDisplayName", "ResourceId", "UserAgent"
     }
-    
+
     $columnListWorkloadId = @{ #Enumerate the list of properties for workload identities to be exported to the CSV files.
-    Property = "CorrelationId", "createdDateTime", "AppDisplayName", "AppId", "IPAddress",
-    "ResourceDisplayName", "ResourceId", "ServicePrincipalId", "ServicePrincipalName"
+        Property = "CorrelationId", "createdDateTime", "AppDisplayName", "AppId", "IPAddress",
+                  "ResourceDisplayName", "ResourceId", "ServicePrincipalId", "ServicePrincipalName"
     }
-    
+
     $signInsInteractive | ForEach-Object {
-    foreach ($authDetail in $_.AuthenticationProcessingDetails)
-    {
-    if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
-    {
-    $_ | Select-Object @columnList
-    }
-    }
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | Select-Object @columnList
+            }
+        }
     } | Export-Csv -Path ($pathForExport + "Interactive_lowTls_$tId.csv") -NoTypeInformation
-    
+
     $signInsNonInteractive | ForEach-Object {
-    foreach ($authDetail in $_.AuthenticationProcessingDetails)
-    {
-    if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
-    {
-    $_ | Select-Object @columnList
-    }
-    }
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | Select-Object @columnList
+            }
+        }
     } | Export-Csv -Path ($pathForExport + "NonInteractive_lowTls_$tId.csv") -NoTypeInformation
-    
+
     $signInsWorkloadIdentities | ForEach-Object {
-    foreach ($authDetail in $_.AuthenticationProcessingDetails)
-    {
-    if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
-    {
-    $_ | Select-Object @columnListWorkloadId
-    }
-    }
+        foreach ($authDetail in $_.AuthenticationProcessingDetails)
+        {
+            if (($authDetail.Key -match "Legacy TLS") -and ($authDetail.Value -eq "True"))
+            {
+                $_ | Select-Object @columnListWorkloadId
+            }
+        }
     } | Export-Csv -Path ($pathForExport + "WorkloadIdentities_lowTls_$tId.csv") -NoTypeInformation
     ```
 

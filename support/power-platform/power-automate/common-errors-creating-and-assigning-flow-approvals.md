@@ -109,7 +109,7 @@ For non-Default Flow and Power Appsenvironments, only environment admins can dir
 - Create and run an Approvals Flow.
 - Grant environment administrator permission to the current user.
 
-### XrmInstanceProvisioningIncomplete
+### CdsInstanceProvisioningIncomplete
 
 > A Common Data Service database for this environment has not completed provisioning or does not support the requested approvals functionality. A database administrator must save a Flow using approvals in order to complete provisioning.
 

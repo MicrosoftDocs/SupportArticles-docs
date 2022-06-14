@@ -28,13 +28,11 @@ In SQL Server, things work the same way. Commonly, you look at whether SQL Serve
 If these waits exceed 10-15 milliseconds consistently, I/O is considered a bottleneck.
 
 > [!NOTE]
-> To provide context and perspective, in the world of troubleshooting SQL Server, CSS has observed cases where an I/O request took over one second and as high as 15 seconds per transfer-such I/O systems need optimization. Conversely, CSS has seen systems where the throughput is below one millisecond/transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 millisecond/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, when numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
+> To provide context and perspective, in the world of troubleshooting SQL Server, Microsoft CSS has observed cases where an I/O request took over one second and as high as 15 seconds per transfer-such I/O systems need optimization. Conversely, Microsoft CSS has seen systems where the throughput is below one millisecond/transfer. With today's SSD/NVMe technology, advertised throughput rates range in tens of microseconds per transfer. Therefore, the 10-15 millisecond/transfer figure is a very approximate threshold we selected based on collective experience between Windows and SQL Server engineers over the years. Usually, when numbers go beyond this approximate threshold, SQL Server users start seeing latency in their workloads and report them. Ultimately, the expected throughput of an I/O subsystem is defined by the manufacturer, model, configuration, workload, and potentially multiple other factors.
 
 ## Methodology
 
-The following flow chart describes the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It isn't an exhaustive or exclusive approach but has proven useful in isolating the issue and resolving it.
-
-A [flow chart](#graphical-representation-of-the-methodology) at the end of this article provides a visual representation of this methodology.
+A [flow chart](#graphical-representation-of-the-methodology) at the end of this article describes the methodology Microsoft CSS uses to approach slow I/O issues with SQL Server. It isn't an exhaustive or exclusive approach but has proven useful in isolating the issue and resolving it.
 
 You can choose one of following two options to resolve the problem:
 

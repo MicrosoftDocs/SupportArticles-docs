@@ -29,6 +29,9 @@ After following the required steps above to enable this feature, follow the step
     > [!IMPORTANT]
     > To view the failures for a mailbox, you need to be accessing the dashboard as the user who owns the mailbox. This means that if you are trying to troubleshoot why email was not automatically tracked for another user, that user would need to view the dashboard to see the details for their emails that failed to sync.
 
+    > [!NOTE]
+    > As of the Service Update 22055 for Microsoft Dataverse 9.2.0 (version number: 9.2.22055.00116), users with the default System Administrator role can now review non-synchronized emails across all mailboxes. The **Item Subject** column now shows redacted ("***") for any emails processed outside of the user's mailbox context.
+
 2. Locate and select the **Server-Side Synchronization Failures** dashboard from the dashboard list.
 
    :::image type="content" source="media/troubleshoot-item-level-server-side-synchronization-issues/server-side-synchronization-failures-option.png" alt-text="Screenshot to select the Server-Side Synchronization Failures dashboard from the dashboard list.":::
