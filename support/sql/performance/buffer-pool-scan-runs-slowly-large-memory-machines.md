@@ -1,7 +1,7 @@
 ---
 title: Operations that trigger buffer pool scan may run slowly on large-memory computers
 description: This article describes how a scan of the SQL Server buffer pool might take a long time on a large-memory computer.
-ms.date: 01/15/2021
+ms.date: 06/14/2022
 ms.custom: sap:Performance
 ms.reviewer: jopilov
 ms.topic: article
@@ -54,28 +54,9 @@ If a scan takes more than 1 second, the XEvent will be recorded as follows when 
 
 ## Workaround
 
-There's currently no way to eliminate this problem. If an operation must finish quickly, clear the buffer pool by using the following commands before you execute it. It is likely that clearing the buffer pool is actually worse than waiting for the action to complete.
+Prior to SQL Server 2022, there was no way to eliminate this problem. It is not recommended to perform any action to clear the buffer pool as dropping clean buffers from the buffer pool may result in a significant performance degradation. Removing database pages from memory will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O causes queries to be slow. 
 
-1. Run `CHECKPOINT` on each database
-
-    ```tsql
-    USE <DatabaseName>
-    CHECKPOINT
-    GO
-    ```
-
-    If the SQL Server hosts multiple databases, repeat the `CHECKPOINT` commands for all user databases.
-
-2. After all the databases on the server have been checkpointed, reduce the size of the buffer pool with following command:
-
-    ```tsql
-    DBCC DROPCLEANBUFFERS
-    ```
-
-    > [!WARNING]
-    > Dropping clean buffers from the buffer pool may result in a significant, but temporary, performance degradation. This command removes all unmodified database pages from memory which will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O causes queries to be slow. However, once the pages are read into cache again, SQL Server will continue to read them from there.
-
-3. Perform the operation that results in a buffer pool scan, for example, full database backup.
+In SQL Server 2022, this problem is mitigated because buffer pool scans are parallelized by utilizing multiple cores. There will be one task per 8 million buffers (64 GB) where a serial scan will still be used if there are less than 8 million buffers. 
 
 ## More information
 
