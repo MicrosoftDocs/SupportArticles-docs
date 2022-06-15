@@ -73,50 +73,7 @@ FROM sys.dm_exec_requests WAITFOR DELAY '00:00:05'SELECT CONVERT(DECIMAL(5,
 FROM sys.dm_exec_requests
 ```
 
-To identify the queries that are responsible for high-CPU activity currently, run the following statement:
-
-```sql
-SELECT TOP 10 s.session_id,
-           r.status,
-           r.cpu_time,
-           r.logical_reads,
-           r.reads,
-           r.writes,
-           r.total_elapsed_time / (1000 * 60) 'Elaps M',
-           SUBSTRING(st.TEXT, (r.statement_start_offset / 2) + 1,
-           ((CASE r.statement_end_offset
-                WHEN -1 THEN DATALENGTH(st.TEXT)
-                ELSE r.statement_end_offset
-            END - r.statement_start_offset) / 2) + 1) AS statement_text,
-           COALESCE(QUOTENAME(DB_NAME(st.dbid)) + N'.' + QUOTENAME(OBJECT_SCHEMA_NAME(st.objectid, st.dbid)) 
-           + N'.' + QUOTENAME(OBJECT_NAME(st.objectid, st.dbid)), '') AS command_text,
-           r.command,
-           s.login_name,
-           s.host_name,
-           s.program_name,
-           s.last_request_end_time,
-           s.login_time,
-           r.open_transaction_count
-FROM sys.dm_exec_sessions AS s
-JOIN sys.dm_exec_requests AS r ON r.session_id = s.session_id CROSS APPLY sys.Dm_exec_sql_text(r.sql_handle) AS st
-WHERE r.session_id != @@SPID
-ORDER BY r.cpu_time DESC
-```
-
-If queries aren't driving the CPU at this moment, but high CPU has happened, you can run the following statement to look for historical CPU-bound queries:
-
-```sql
-SELECT TOP 10 st.text AS batch_text,
-    SUBSTRING(st.TEXT, (qs.statement_start_offset / 2) + 1, ((CASE qs.statement_end_offset WHEN - 1 THEN DATALENGTH(st.TEXT) ELSE qs.statement_end_offset END - qs.statement_start_offset) / 2) + 1) AS statement_text,
-    (qs.total_worker_time / 1000) / qs.execution_count AS avg_cpu_time_ms,
-    (qs.total_elapsed_time / 1000) / qs.execution_count AS avg_elapsed_time_ms,
-    qs.total_logical_reads / qs.execution_count AS avg_logical_reads,
-    (qs.total_worker_time / 1000) AS cumulative_cpu_time_all_executions_ms,
-    (qs.total_elapsed_time / 1000) AS cumulative_elapsed_time_all_executions_ms
-FROM sys.dm_exec_query_stats qs
-CROSS APPLY sys.dm_exec_sql_text(sql_handle) st
-ORDER BY(qs.total_worker_time / qs.execution_count) DESC
-```
+[!INCLUDE [identify-cpu-bound-queries](../includes/performance/identify-cpu-bound-queries.md)]
 
 ## Step 3: Update statistics
 
@@ -135,159 +92,15 @@ If SQL Server is still using excessive CPU capacity, go to the next step.
 
 ## Step 4: Add missing indexes
 
-1. Run the following query to identify queries that cause high CPU usage and that contain at least one missing index in the query plan:
-
-    ```sql
-    -- Captures the Total CPU time spent by a query along with the query plan and total executions
-    SELECT
-        qs_cpu.total_worker_time / 1000 AS total_cpu_time_ms,
-        q.[text],
-        p.query_plan,
-        qs_cpu.execution_count,
-        q.dbid,
-        q.objectid,
-        q.encrypted AS text_encrypted
-    FROM
-        (SELECT TOP 500 qs.plan_handle,
-         qs.total_worker_time,
-         qs.execution_count FROM sys.dm_exec_query_stats qs ORDER BY qs.total_worker_time DESC) AS qs_cpu
-    CROSS APPLY sys.dm_exec_sql_text(plan_handle) AS q
-    CROSS APPLY sys.dm_exec_query_plan(plan_handle) p
-    WHERE p.query_plan.exist('declare namespace 
-            qplan = "http://schemas.microsoft.com/sqlserver/2004/07/showplan";
-            //qplan:MissingIndexes')=1
-    ```
-
-1. Review the execution plans for the queries that are identified, and tune the query by making the required changes. The following screenshot shows an example in which SQL Server will point out a missing index for your query. Right-click the Missing index portion of the query plan, and then select **Missing Index Details** to create the index in another window in SQL Server Management Studio.
-
-    :::image type="content" source="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png" alt-text="Screenshot of the execution plan with missing index." lightbox="media/troubleshoot-high-cpu-usage-issues/high-cpu-missing-index.png":::
-
-1. Use the following query to check for missing indexes and apply any recommended indexes that have high improvement measure values. Start with the top 5 or 10 recommendations from the output that have the highest **improvement_measure** value. Those indexes have the most significant positive effect on performance. Decide whether you want to apply these indexes and make sure that performance testing is done for the application. Then, continue to apply missing-index recommendations until you achieve the desired application performance results. For more information on this topic, see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions).
-
-    ```sql
-    SELECT CONVERT(VARCHAR(30), GETDATE(), 126) AS runtime,
-        mig.index_group_handle,
-        mid.index_handle,
-        CONVERT(DECIMAL(28, 1), migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) AS improvement_measure,
-        'CREATE INDEX missing_index_' + CONVERT(VARCHAR, mig.index_group_handle) + '_' + CONVERT(VARCHAR, mid.index_handle) + ' ON ' + mid.statement + ' (' + ISNULL(mid.equality_columns,
-            '') + CASE WHEN mid.equality_columns IS NOT NULL
-    AND mid.inequality_columns IS NOT NULL THEN ','
-    ELSE ''
-    END + ISNULL(mid.inequality_columns,
-            '') + ')' + ISNULL(' INCLUDE (' + mid.included_columns + ')',
-            '') AS create_index_statement,
-        migs.*,
-        mid.database_id,
-        mid.[object_id]
-    FROM sys.dm_db_missing_index_groups mig
-    INNER JOIN sys.dm_db_missing_index_group_stats migs ON migs.group_handle = mig.index_group_handle
-    INNER JOIN sys.dm_db_missing_index_details mid ON mig.index_handle = mid.index_handle
-    WHERE CONVERT (DECIMAL (28, 1),
-                   migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans)) > 10
-    ORDER BY migs.avg_total_user_cost * migs.avg_user_impact * (migs.user_seeks + migs.user_scans) DESC
-    ```
+[!INCLUDE [add-missing-indexes](../includes/performance/add-missing-indexes.md)]
 
 ## Step 5: Investigate and resolve parameter-sensitive issues
 
-Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command to check whether the high-CPU-usage issue is fixed.
-
-If the issue still exists, you can add a `RECOMPILE` query hint to each of the high-CPU queries that are identified in [step 2](#step-2-identify-queries-contributing-to-cpu-usage).
-
-If the issue is fixed, it's an indication of a parameter-sensitive problem (PSP, also known as "parameter sniffing issue"). To mitigate the parameter-sensitive issues, use the following methods. Each method has associated tradeoffs and drawbacks.
-
-- Use the [RECOMPILE](/sql/t-sql/queries/hints-transact-sql-query#recompile) query hint for each query execution. This hint helps balance the slight increase in compilation CPU usage with a more optimal performance for each query execution. For more information, see [Parameters and Execution Plan Reuse](/sql/relational-databases/query-processing-architecture-guide#PlanReuse), [Parameter Sensitivity](/sql/relational-databases/query-processing-architecture-guide#ParamSniffing) and [RECOMPILE query hint](/sql/t-sql/queries/hints-transact-sql-query/#recompile).
-
-  Here's an example of how you can apply this hint to your query.
-
-  ```sql
-  SELECT * FROM Person.Person 
-  WHERE LastName = 'Wood'
-  OPTION (RECOMPILE)
-  ```
-
-- Use the [OPTIMIZE FOR](/sql/t-sql/queries/hints-transact-sql-query#optimize-for--variable_name--unknown---literal_constant-_---n--) query hint to override the actual parameter value by using a typical parameter value that's good enough for most parameter value possibilities. This option requires a full understanding of optimal parameter values and associated plan characteristics. Here's an example of how to use this hint in your query.
-
-  ```sql
-  DECLARE @LastName Name = 'Frintu'
-  SELECT FirstName, LastName FROM Person.Person 
-  WHERE LastName = @LastName
-  OPTION (OPTIMIZE FOR (@LastName = 'Wood'))
-  ```
-
-- Use the [OPTIMIZE FOR UNKNOWN](/sql/t-sql/queries/hints-transact-sql-query#optimize-for-unknown) query hint to override the actual parameter value with the density vector average. You can also do this by capturing the incoming parameter values in local variables, and then using the local variables within the predicates instead of using the parameters themselves. For this fix, the average density must be good enough.
-
-- Use the [DISABLE_PARAMETER_SNIFFING](/sql/t-sql/queries/hints-transact-sql-query#use_hint) query hint to disable parameter sniffing completely. Here's an example of how to use it in a query:
-
-  ```sql
-  SELECT * FROM Person.Address  
-  WHERE City = 'SEATTLE' AND PostalCode = 98104
-  OPTION (USE HINT ('DISABLE_PARAMETER_SNIFFING'))
-  ```
-
-- Use the [KEEPFIXED PLAN](/sql/t-sql/queries/hints-transact-sql-query#keepfixed-plan) query hint to prevent recompilations in cache. This workaround assumes that the "good enough" common plan is the one that's already in cache. You can also disable automatic statistics updates to reduce the chances that the good plan will be evicted and a new bad plan will be compiled.
-
-- Use the [DBCC FREEPROCCACHE](/sql/t-sql/database-console-commands/dbcc-freeproccache-transact-sql) command as a temporary solution until the application code is fixed. You can use the `DBCC FREEPROCCACHE (plan_handle)` command to remove only the plan that is causing the issue. For example, to find query plans that reference the `Person.Person` table in AdventureWorks, you can use this query to find the query handle. Then you can release the specific query plan from cache by using the `DBCC FREEPROCCACHE (plan_handle)` that is produced in the second column of the query results.
-
-  ```sql
-  SELECT text, 'DBCC FREEPROCCACHE (0x' + CONVERT(VARCHAR (512), plan_handle, 2) + ')' AS dbcc_freeproc_command FROM sys.dm_exec_cached_plans
-  CROSS APPLY sys.dm_exec_query_plan(plan_handle)
-  CROSS APPLY sys.dm_exec_sql_text(plan_handle)
-  WHERE text LIKE '%person.person%'
-  ```
+[!INCLUDE [parameter-sniffing-issues](../includes/performance/parameter-sniffing-issues.md)]
 
 ## Step 6: Investigate and resolve SARGability issues
 
-A predicate in a query is considered SARGable (Search ARGument-able) when SQL Server engine can use an index seek to speed up the execution of the query. Many query designs prevent SARGability and lead to table or index scans and high-CPU usage. Consider the following query against the AdventureWorks database where every `ProductNumber` must be retrieved and the `SUBSTRING()` function applied to it, before it's compared to a string literal value. As you can see, you have to fetch all the rows of the table first, and then apply the function before you can make a comparison. Fetching all rows from the table means a table or index scan, which leads to higher CPU usage.
-
-```sql
-SELECT ProductID, Name, ProductNumber
-FROM [Production].[Product]
-WHERE SUBSTRING(ProductNumber, 0, 4) =  'HN-'
-```
-
-Applying any function or computation on the column(s) in the search predicate generally makes the query non-sargable and leads to higher CPU consumption. Solutions typically involve rewriting the queries in a creative way to make the SARGable. A possible solution to this example is this rewrite where the function is removed from the query predicate, another column is searched and the same results are achieved:
-
-```sql
-SELECT ProductID, Name, ProductNumber
-FROM [Production].[Product]
-WHERE Name LIKE  'Hex%'
-```
-
-Here's another example, where a sales manager may want to give 10% sales commission on large orders and wants to see which orders will have commission greater than $300. Here's the logical, but non-sargable way to do it.
-
-```sql
-SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
-FROM [Sales].[SalesOrderDetail]
-WHERE UnitPrice * 0.10 > 300
-```
-
-Here's a possible less-intuitive but SARGable rewrite of the query, in which the computation is moved to the other side of the predicate.
-
-```sql
-SELECT DISTINCT SalesOrderID, UnitPrice, UnitPrice * 0.10 [10% Commission]
-FROM [Sales].[SalesOrderDetail]
-WHERE UnitPrice > 300/0.10
-```
-
-SARGability applies not only to `WHERE` clauses, but also to `JOINs`, `HAVING`, `GROUP BY` and `ORDER BY` clauses. Frequent occurrences of SARGability prevention in queries involve `CONVERT()`, `CAST()`, `ISNULL()`, `COALESCE()` functions used in `WHERE` or `JOIN` clauses that lead to scan of columns. In the data-type conversion cases (`CONVERT` or `CAST`), the solution may be to ensure you're comparing the same data types. Here's an example where the `T1.ProdID` column is explicitly converted to the `INT` data type in a `JOIN`. The conversion defeats the use of an index on the join column. The same issue occurs with [implicit conversion](/sql/t-sql/data-types/data-type-conversion-database-engine#implicit-and-explicit-conversion) where the data types are different and SQL Server converts one of them to perform the join.
-
-```sql
-SELECT T1.ProdID, T1.ProdDesc
-FROM T1 JOIN T2 
-ON CONVERT(int, T1.ProdID) = T2.ProductID
-WHERE t2.ProductID BETWEEN 200 AND 300
-```
-
-To avoid a scan of the `T1` table, you can change the underlying data type of the `ProdID` column after proper planning and design, and then join the two columns without using the convert function `ON T1.ProdID = T2.ProductID`.
-
-Another solution is to create a computed column in `T1` that uses the same `CONVERT()` function and then create an index on it. This will allow the query optimizer to use that index without the need for you to change your query.
-
-```sql
-ALTER TABLE dbo.T1  ADD IntProdID AS CONVERT (INT, ProdID);
-CREATE INDEX IndProdID_int ON dbo.T1 (IntProdID);
-```
-
-In some cases, queries can't be rewritten easily to allow for SARGability. In those cases, see if the computed column with an index on it can help, or else keep the query as it was with the awareness that it can lead to higher CPU scenarios.
+[!INCLUDE [no-sargability-issue](../includes/performance/no-sargability-issue.md)]
 
 ## Step 7: Disable heavy tracing
 
