@@ -1,7 +1,7 @@
 ---
 title: Problems signing in to SAML-based single sign-on configured apps
 description: Guidance for the specific errors when signing into an application you have configured for SAML-based federated single sign-on with Azure Active Directory.
-ms.date: 03/15/2021
+ms.date: 06/15/2022
 ms.reviewer: bernawy
 ms.service: active-directory
 ms.subservice: app-mgmt
