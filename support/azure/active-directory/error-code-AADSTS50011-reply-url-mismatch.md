@@ -34,7 +34,7 @@ As an example, refer to the following article for detailed steps about how to co
 >[!Note]
 >The reply URL is also known as Redirect URI. These values depend on what application is being used. You should get the values from the application vendor.
 
-After you've updated the Reply URL value in Azure AD, and it matches the value that sent by the application in the SAML request, you should be able to sign in to the application.
+After you update the Reply URL value in Azure AD and it matches the value that sent by the application in the SAML request, you should be able to sign in to the application.
 
 ## More Information
 
