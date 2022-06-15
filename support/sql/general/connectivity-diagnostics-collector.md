@@ -35,14 +35,14 @@ The SQL Server Connectivity Diagnostics Collector must be run by a user who has 
 
 The SQL Server Connectivity Diagnostics Collector discovers all instances of SQL Server that are installed on the computer on which the diagnostics tool is run. As part of the data-collection process, the SQL Server Connectivity Diagnostics Collector tries to connect to each instance of SQL Server that the diagnostic tool discovers to collect information about the current SQL Server configuration and server "state". Database connections are made by using Windows authentication. For the following diagnostic collection tasks to succeed, the user who is executing the SQL Server Connectivity Diagnostics Collector must have a Windows logon that is a member of the sysadmin fixed server role:
 
-- SQL Server AlwaysOn Configuration Collection
+- SQL Server Always On Configuration Collection
 - SQLDIAG Data Collection Scripts
 
 ## Support for Windows failover clusters
 
-To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL Server connectivity, you may have to run the SQL Server Connectivity Diagnostic Collector against more than one cluster node to collect all the necessary troubleshooting information as follows:
+To diagnose SQL Server Always On Availability Group connectivity or clustered SQL Server connectivity, you may have to run the SQL Server Connectivity Diagnostic Collector against more than one cluster node to collect all the necessary troubleshooting information as follows:
 
-- Run the SQL Server Connectivity Diagnostic Collector against the cluster node that currently owns the SQL Server AlwaysOn Availability Group or SQL Server cluster resource that is experiencing the connectivity issue.
+- Run the SQL Server Connectivity Diagnostic Collector against the cluster node that currently owns the SQL Server Always On Availability Group or SQL Server cluster resource that is experiencing the connectivity issue.
 
 - Run the SQL Server Connectivity Diagnostic Collector against the node where a connectivity failure occurred previously. This enables the collection of various logs from the cluster node where the failure occurred previously.
 
@@ -268,27 +268,27 @@ To diagnose SQL Server AlwaysOn Availability Group connectivity or clustered SQL
     |---|---|
     |SQLDIAG script output| Named instance: </br>_<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.out_</br></br> Default Instance: </br>_<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.out_|
 
-- **SQL Server AlwaysOn configuration information**
+- **SQL Server Always On configuration information**
 
     > [!NOTE]
-    > The SQL Server AlwaysOn configuration information is collected only from instances of SQL Server 2012.
+    > The SQL Server Always On configuration information is collected only from instances of SQL Server 2012.
 
     | Description| File name |
     |---|---|
-    |SQL Server AlwaysOn configuration information| Named instance: </br>_<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.out_</br></br> Default Instance: </br>_<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.out_|
+    |SQL Server Always On configuration information| Named instance: </br>_<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.out_</br></br> Default Instance: </br>_<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.out_|
 
-- **SQL Server AlwaysOn health logs**
+- **SQL Server Always On health logs**
 
-    SQL Server AlwaysOn health session logs are collected from each instance of SQL Server 2012 that is installed on the destination computer. The files are collected and compressed into "instance specific" compressed archives.
+    SQL Server Always On health session logs are collected from each instance of SQL Server 2012 that is installed on the destination computer. The files are collected and compressed into "instance specific" compressed archives.
 
-    The maximum number of SQL Server AlwaysOn Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
+    The maximum number of SQL Server Always On Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
 
     | Description| File name |
     |---|---|
-    |SQL Server AlwaysOn health logs| Named instance: </br>_<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip_</br></br> Default Instance: </br>_<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip_|
+    |SQL Server Always On health logs| Named instance: </br>_<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip_</br></br> Default Instance: </br>_<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip_|
 
     > [!NOTE]
-    > When the SQL Server Connectivity Diagnostics Collector is executed against a Windows failover cluster, SQL Server AlwaysOn health logs are collected only if they are stored on a drive that is "owned" and "online" to the destination cluster node.
+    > When the SQL Server Connectivity Diagnostics Collector is executed against a Windows failover cluster, SQL Server Always On health logs are collected only if they are stored on a drive that is "owned" and "online" to the destination cluster node.
 
 - **SQL Server failover cluster health logs**
 
