@@ -17,11 +17,11 @@ ms.technology: windows-server-active-directory
 
 This article describes how to move a certification authority (CA) to a different server.
 
-_Applies to:_ &nbsp; Windows Server 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022.
 _Original KB number:_ &nbsp; 298138
 
 > [!NOTE]
-> This article applies to Windows 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019. Support for Windows 2000 ended on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. Support for Windows 2008 and 2008 R2 ended on January 14, 2020. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
+> This article applies to Windows 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022. Support for Windows 2000 ended on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. Support for Windows 2008 and 2008 R2 ended on January 14, 2020. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
 ## Summary
 
