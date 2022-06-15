@@ -69,11 +69,11 @@ To resolve this issue, use one of the following methods:
 
 ## More information
 
-The `[NT AUTHORITY\SYSTEM]` account is used by SQL Server AlwaysOn health detection to connect to the SQL Server computer and to monitor health. When you create an availability group and the primary replica in the availability group comes online, health detection is initiated. If the `[NT AUTHORITY\SYSTEM]` account doesn't exist or have sufficient permissions, health detection can't be initiated, and the availability group can't come online during the creation process.
+The `[NT AUTHORITY\SYSTEM]` account is used by SQL Server Always On health detection to connect to the SQL Server computer and to monitor health. When you create an availability group and the primary replica in the availability group comes online, health detection is initiated. If the `[NT AUTHORITY\SYSTEM]` account doesn't exist or have sufficient permissions, health detection can't be initiated, and the availability group can't come online during the creation process.
 
 Make sure that these permissions exist on each SQL Server computer that could host the primary replica of the availability group.  
 
 > [!NOTE]
 > The Resource Host Monitor Service process (RHS.exe) that hosts SQL Resource.dll can be run only under a System account.
 
-For more information, see [Troubleshooting automatic failover problems in SQL Server AlwaysOn environments](/troubleshoot/sql/availability-groups/troubleshooting-automatic-failover-problems).
+For more information, see [Troubleshooting automatic failover problems in SQL Server Always On environments](/troubleshoot/sql/availability-groups/troubleshooting-automatic-failover-problems).
