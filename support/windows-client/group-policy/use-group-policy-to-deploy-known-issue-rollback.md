@@ -48,7 +48,7 @@ To see an example of a KIR MSI file, download [Windows 10 (2004 & 20H2) Known Is
 
 A KIR policy definition has a limited lifespan (a few months, at most). After Microsoft publishes an amended update to address the original issue, the KIR is no longer necessary. The policy definition can then be removed from the Group Policy infrastructure.
 
-## Using Group Policy to apply a KIR to a single device
+## Apply KIR to a single device using Group Policy
 
 To use Group Policy to apply a KIR to a single device, follow these steps:
 
@@ -65,7 +65,7 @@ To use Group Policy to apply a KIR to a single device, follow these steps:
 
 For more information about how to use the Local Group Policy Editor, see [Working with the Administrative Template policy settings using the Local Group Policy Editor](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789184(v=ws.11)).
 
-## Using Group Policy to apply a KIR to devices in a hybrid Azure AD or AD DS domain
+## Apply a KIR to devices in a hybrid Azure AD or AD DS domain using Group Policy
 
 To apply a KIR policy definition to devices that belong to a hybrid Azure AD or AD DS domain, follow these steps:
 
@@ -151,7 +151,7 @@ Make sure that each affected device restarts after it applies the policy.
 > [!IMPORTANT]  
 > The fix that introduced the issue is disabled after the device applies the policy and then restarts.
 
-## Using Microsoft Intune ADMX policy ingestion to deploy a KIR Activation to managed devices  
+## Deploy a KIR Activation using Microsoft Intune ADMX policy ingestion to the managed devices  
 
 Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions will guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR Activation without requiring a GPO.
 
