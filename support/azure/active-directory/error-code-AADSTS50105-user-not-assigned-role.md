@@ -29,6 +29,6 @@ The user hasn't been granted access to the application in Azure AD. The user mus
 
 ## More Information
 
-For a full list of Active Directory authentication and authorization error codes see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
