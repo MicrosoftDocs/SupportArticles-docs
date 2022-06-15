@@ -8,7 +8,7 @@ ms.reviewer: chiragpa, nickoman
 ms.service: container-service
 #Customer intent: As an Azure Kubernetes user, I want to be able to set the uid and gid mounting options on an Azure disk so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
-# Troubleshoot issues caused by setting the uid and gid mounting options on an Azure disk
+# Can't set the uid and gid mounting options on an Azure disk
 
 This article discusses how to fix issues that occur on a Microsoft Azure Kubernetes Service (AKS) cluster when you try to set the mounting options for user identifier (`uid`) and group identifier (`gid`) on an Azure disk.
 
