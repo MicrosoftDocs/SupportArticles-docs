@@ -1,7 +1,7 @@
 ---
 title: A network-related or instance-specific error occurred
 description: Provides troubleshooting steps for network-related or instance-specific errors if you can't connect to an instance of the SQL Server Database Engine on a single server.
-ms.date: 11/14/2021
+ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: cobibi
 ms.author: v-yunhya
@@ -84,7 +84,7 @@ This error usually means that the client can't find the SQL Server instance. Thi
 - The TCP port number isn't specified correctly.
 
 > [!NOTE]
-> For troubleshooting connectivity issues in high availability scenarios, review the following articles:
+> For troubleshooting connectivity issues in high availability scenarios, see the following articles:
 >
 > - [Connect to an Always On availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 >
@@ -306,7 +306,7 @@ In some installations of SQL Server, connections to the Database Engine from ano
 
 ### Option 1: Using the output file from SQLCheck tool
 
-1. Search the SQLCheck output file for Details for SQL Server Instance and locate the information for your SQL Server instance.
+1. Search the SQLCheck output file for "details" for SQL Server instance and locate the information for your SQL Server instance.
 
 1. Review the values for the following table:
 
@@ -323,9 +323,9 @@ In some installations of SQL Server, connections to the Database Engine from ano
 
 ### Option 2: Use SQL Server Configuration Manager
 
-To enable connections from another computer by using SQL Server Configuration manager, follow these steps:
+To enable connections from another computer by using the SQL Server Configuration Manager, follow these steps:
 
-1. Open SQL Server Configuration Manager.
+1. Open the SQL Server Configuration Manager.
 
 1. In the left pane expand **SQL Server Network Configuration**, and then select the instance of SQL Server that you want to connect to. The right-pane lists the connection protocols available. **Shared Memory** is normally enabled. It can only be used from the same computer, so most installations leave **Shared Memory** enabled. To connect to SQL Server from another computer, use **TCP/IP**. If **TCP/IP** isn't enabled, right-click **TCP/IP**, and then select **Enable**.
 1. If you change the enabled setting for any protocol, restart the Database Engine. In the left pane, select **SQL Server Services**. In the right-pane, right-click the instance of the Database Engine, and then select **Restart**.
@@ -335,7 +335,7 @@ To enable connections from another computer by using SQL Server Configuration ma
 Connecting to SQL Server by using TCP/IP requires that Windows establish the connection. You can use the following steps to test TCP connectivity by using the ping tool.
 
 1. On the **Start** menu, select **Run**. In the **Run** window, type *cmd* and select **OK**.
-1. In the **Command prompt** window, type `ping` and the IP address of the computer that's running SQL Server. For example:
+1. In the **Command Prompt** window, type `ping` and the IP address of the computer that's running SQL Server. For example:
 
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
@@ -354,7 +354,7 @@ Before troubleshooting a connection problem from another computer, test your abi
 
 This procedure requires SQL Server Management Studio. If you don't have Management Studio installed, see [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you can't install Management Studio, you can test the connection by using the *sqlcmd.exe* utility. *Sqlcmd.exe* is installed with the Database Engine. For information about *sqlcmd.exe*, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
+If you can't install Management Studio, you can test the connection by using the *sqlcmd.exe* utility. *sqlcmd.exe* is installed with the Database Engine. For information about *sqlcmd.exe*, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 
 1. Sign in to the computer where SQL Server is installed by using a login that can access SQL Server. During installation, SQL Server requires at least one login to be specified as a SQL Server administrator. If you don't know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](/sql/database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out).
 
