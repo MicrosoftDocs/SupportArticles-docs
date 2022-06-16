@@ -137,7 +137,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     - Azure Files for shared file storage
 
     > [!NOTE]
-    > For example: SQL Server AlwaysOn availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
+    > For example: SQL Server Always On availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
 
 - Can be a third-party clustered role
 
