@@ -134,7 +134,7 @@ For more information about how to create WMI filters, see [Create WMI Filters fo
 
 ### <a id="configure"></a> 5. Configure the GPO
 
-Edit your GPO to use the KIR Activation Policy
+Edit your GPO to use the KIR activation policy:
 
 1. Right-click the GPO that you created [previously](#gpo), and then select **Edit**.
 1. In the Group Policy Editor, select ***GPOName*** > **Computer Configuration** > **Administrative Templates** > **KB&nbsp;*#######* Issue *XXX* Rollback** > **Windows 10, version *YYMM***.  
@@ -151,15 +151,15 @@ Make sure that each affected device restarts after it applies the policy.
 > [!IMPORTANT]  
 > The fix that introduced the issue is disabled after the device applies the policy and then restarts.
 
-## Deploy a KIR Activation using Microsoft Intune ADMX policy ingestion to the managed devices  
+## Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to the managed devices  
 
-Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions will guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR Activation without requiring a GPO.
+Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions will guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
 
-To perform a KIR Activation on Intune managed devices, follow these steps:  
+To perform a KIR activation on Intune managed devices, follow these steps:  
 
 1. [Download and install the KIR MSI file to get ADMX files](#1-download-and-install-the-kir-msi-file-to-get-admx-files).  
 2. [Create a custom configuration profile in Microsoft Endpoint Manager](#2-create-a-custom-configuration-profile-in-microsoft-endpoint-manager).
-3. [Monitor KIR Activation](#3-monitor-kir-activation).  
+3. [Monitor KIR activation](#3-monitor-kir-activation).  
   
 ### 1. Download and install the KIR MSI file to get ADMX files
 
@@ -167,7 +167,7 @@ To perform a KIR Activation on Intune managed devices, follow these steps:
 2. Download the required KIR policy definition .msi files on the machine you use to sign in to Microsoft Endpoint Manager.  
 
     > [!NOTE]
-    > You will need access to the contents of a KIR Activation ADMX file.  
+    > You will need access to the contents of a KIR activation ADMX file.  
 
 3. Run the `.msi` files. This action installs the KIR policy definition in the Administrative Template.  
 
@@ -182,14 +182,14 @@ To perform a KIR Activation on Intune managed devices, follow these steps:
 
 ### 2. Create a custom configuration profile in Microsoft Endpoint Manager  
 
-To configure devices to perform a KIR Activation, you need to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
+To configure devices to perform a KIR activation, you need to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
 
 1. [Select properties and add basic information of the profile](#a-select-properties-and-add-basic-information-of-the-profile).
-2. [Add custom configuration setting to ingest ADMX files for KIR Activation](#b-add-custom-configuration-setting-to-ingest-admx-files-for-kir-activation).
-3. [Add custom configuration setting to set new KIR Activation policy](#c-add-custom-configuration-setting-to-set-new-kir-activation-policy).
-4. [Assign devices to the KIR Activation custom configuration profile](#d-assign-devices-to-the-kir-activation-custom-configuration-profile).
+2. [Add custom configuration setting to ingest ADMX files for KIR activation](#b-add-custom-configuration-setting-to-ingest-admx-files-for-kir-activation).
+3. [Add custom configuration setting to set new KIR activation policy](#c-add-custom-configuration-setting-to-set-new-kir-activation-policy).
+4. [Assign devices to the KIR activation custom configuration profile](#d-assign-devices-to-the-kir-activation-custom-configuration-profile).
 5. [Use applicability rules to target devices to receive KIR custom configuration settings by OS](#e-use-applicability-rules-to-target-devices-to-receive-kir-custom-configuration-settings-by-os).
-6. [Review and create KIR Activation custom configuration profile](#f-review-and-create-kir-activation-custom-configuration-profile).
+6. [Review and create KIR activation custom configuration profile](#f-review-and-create-kir-activation-custom-configuration-profile).
 
 #### A. Select properties and add basic information of the profile
 
@@ -231,9 +231,9 @@ Here's an example of the ADMX file:
 
 Record the values for `policy name` and `parentCategory`. This information is in the "policies" node at the end of the file.
 
-#### B. Add custom configuration setting to ingest ADMX files for KIR Activation
+#### B. Add custom configuration setting to ingest ADMX files for KIR activation
 
-This configuration setting is used to install the KIR Activation policy on target devices.  Follow these steps to add the ADMX ingestion settings:
+This configuration setting is used to install the KIR activation policy on target devices.  Follow these steps to add the ADMX ingestion settings:
 
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
@@ -249,11 +249,11 @@ This configuration setting is used to install the KIR Activation policy on targe
 
 3. Select **Save**.  
 
-#### C. Add custom configuration setting to set new KIR Activation policy  
+#### C. Add custom configuration setting to set new KIR activation policy  
 
-This configuration setting is used to configure the KIR Activation policy, which is defined in the previous step.
+This configuration setting is used to configure the KIR activation policy, which is defined in the previous step.
 
-Follow these steps to add the KIR Activation configuration settings:
+Follow these steps to add the KIR activation configuration settings:
 
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
@@ -269,7 +269,7 @@ Follow these steps to add the KIR Activation configuration settings:
 3. Select **Save**.  
 4. Select **Next**.  
 
-#### D. Assign devices to the KIR Activation custom configuration profile  
+#### D. Assign devices to the KIR activation custom configuration profile  
 
 After you've defined what the custom configuration profile does, follow these steps to identify which devices you'll configure:
 
@@ -286,7 +286,7 @@ To target the devices by OS that are applicable to the GP, add an applicability 
 
 The build numbers shown in the pages are formatted as MMMMM.mmmm (M= major version and m= minor version). The OS Version properties use the major version digits. The OS Version values entered into the Applicability Rules should be formatted as "10.0.MMMMM". For example, "10.0.22000".  
 
-Follow these instructions to set the correct Applicability Rules for your KIR Activation:
+Follow these instructions to set the correct Applicability Rules for your KIR activation:
 
 1. In **Applicability Rules**, create an applicability rule by entering the following properties on the blank rule already on the page:  
 
@@ -301,13 +301,13 @@ Follow these instructions to set the correct Applicability Rules for your KIR Ac
 > Min OS version: "10.0.22000"  
 > Max OS version: "10.0.22001"  
 
-#### F. Review and create KIR Activation custom configuration profile
+#### F. Review and create KIR activation custom configuration profile
 
 Review your settings of the custom configuration profile and select **Create**.
 
-### 3. Monitor KIR Activation  
+### 3. Monitor KIR activation  
 
-Your KIR Activation should be in progress now. Follow these steps to monitor the configuration profile progress:
+Your KIR activation should be in progress now. Follow these steps to monitor the configuration profile progress:
 
 1. Go to **Devices** > **Configuration profiles**, select an existing profile. For example, select a macOS profile.  
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:  
