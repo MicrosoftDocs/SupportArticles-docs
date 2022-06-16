@@ -5,7 +5,7 @@ ms.date: 6/16/2022
 author: amolmehrotra
 ms.author: amehrot
 ms.reviewer: amehrot, rimarr
-ms.service: app-services
+ms.service: app-service
 keywords:
 #Customer intent: As an Azure App Service user, I want to troubleshoot the creation and deletion related issues.
 ---
