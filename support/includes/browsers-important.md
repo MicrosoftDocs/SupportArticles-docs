@@ -1,2 +1,6 @@
 > [!IMPORTANT]
-> The Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what's in scope, see the [FAQ](https://aka.ms/IEModeFAQ)). The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. Learn more [here](https://aka.ms/IEModeBlog).
+> The Internet Explorer 11 desktop application is [retired and out of support](https://aka.ms/IEJune15Blog) as of June 15, 2022 for certain versions of Windows 10.  
+>
+> You can still access older, legacy sites that require Internet Explorer with Internet Explorer mode in Microsoft Edge. [Learn how](https://aka.ms/IEmodewebsite).  
+>
+> The Internet Explorer 11 desktop application will progressively redirect to the faster, more secure Microsoft Edge browser, and will ultimately be disabled via Windows Update. [Disable IE today](/deployedge/edge-ie-disable-ie11).
