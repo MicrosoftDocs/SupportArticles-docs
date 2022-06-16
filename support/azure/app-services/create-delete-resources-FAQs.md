@@ -32,19 +32,19 @@ To stop all billing associated with your App Service, you need to delete the App
 
 ## I'm not able to create or delete a Web App due to a permission error. What are the permissions I need to be able to create or delete a Web App?
 
-You would need minimum Contributor access on the Resource Group to be successfully able to deploy App Services. Only with the Web plan and the web site contributor access on the Resource Group, it doesn't allow to create the app service in the Resource Group.
+You would need minimum Contributor access on the Resource Group to be successfully able to deploy App Services. If you have contributor access only on Web plan and the web site, it doesn't allow to create the app service in the Resource Group.
 You can see more on the Azure built-in roles on [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
 
 ## What if the requested SKU of the App Service Plan isn't available in the Resource Group?
 
-There are App Service deployments that do not have specific SKUs available due to internal constraints (for example, isn't available for a location or zone). If the requested SKU is not available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
+There are App Service deployments that don't have specific SKUs available due to internal constraints (for example, isn't available for a location or zone). If the requested SKU isn't available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
 
-If you want to reuse the same Resource Group and region, it is required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. **Please note:** migrate App Services originating in this Resource Group to another Resource Group won’t unblock the creation.
+If you want to reuse the same Resource Group and region, it's required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. **Please note:** migrate App Services originating in this Resource Group to another Resource Group won’t unblock the creation.
 
-## I am trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Cannot update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". What and where should I check this?
+## I'm trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". What and where should I check this?
 
 During the deletion process we calculate usage of the remaining App Service Plans, if they are above the remaining limit then this error is presented.
-The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region cannot exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group.
+The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region can't exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group.
 
 Please check this [App Service limits - Item 5](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)  and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/) for more information.
 
@@ -54,6 +54,6 @@ To get the collection of deleted Web Apps that were deleted within 30 days insid
 
 ## How do I restore a deleted Web App or a deleted App Service Plan?
 
-Once the Web App you want to restore has been identified, and it has not been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`. Please check [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore(Undelete) Deleted Web Apps - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088) for more information.
+Once the Web App you want to restore has been identified, and it hasn't been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`. Please check [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore(Undelete) Deleted Web Apps - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088) for more information.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
