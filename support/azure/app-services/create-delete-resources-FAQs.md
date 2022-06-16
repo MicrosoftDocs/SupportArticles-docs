@@ -1,4 +1,15 @@
-# Create and Delete - Frequently asked questions (FAQ) - Azure App Services (Web Apps)
+---
+title: Create or Delete Resources - Frequently asked questions (FAQ) - Azure App Services (Web Apps)
+description: Troubleshoot creation and deletion related issues in Azure App Service.
+ms.date: 6/16/2022
+author: augusto-oliveira
+ms.author: auolivei
+ms.reviewer: amehrot, rimarr
+ms.service: app-service
+keywords:
+#Customer intent: As an Azure App Service user, I want to troubleshoot the creation and deletion related issues.
+---
+# Create or Delete Resources - Frequently asked questions (FAQ) - Azure App Services (Web Apps)
 
 This article has answers to frequently asked questions (FAQs) about creating and deleting for [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
@@ -32,9 +43,9 @@ If you want to re-use the same Resource Group and region, it is required to dele
 ## I am trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Cannot update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". What and where should I check this?
 
 During the deletion process we calculate usage of the remaining App Service Plans, if they are above the remaining limit then this error is presented.
-The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region cannot exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group. 
+The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region cannot exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group.
 
-Please see this [App Service limits - Item 5](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)  and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/) for more information.
+Please check this [App Service limits - Item 5](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits)  and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/) for more information.
 
 ## Is there any way to list deleted Web Apps for my Subscription?
 
