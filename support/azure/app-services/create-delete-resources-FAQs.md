@@ -54,3 +54,5 @@ To get the collection of deleted Web Apps that were deleted within 30 days insid
 ## How do I restore a deleted Web App or a deleted App Service Plan?
 
 Once the Web App you want to restore has been identified, and it has not been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`. Please check [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore(Undelete) Deleted Web Apps - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088) for more information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
