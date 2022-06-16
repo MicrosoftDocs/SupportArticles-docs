@@ -239,7 +239,7 @@
         href: connect/using-kerberosmngr-sqlserver.md
       - name: Testing using UDL file 
         href: connect/test-oledb-connectivity-use-udl-file.md
-      - name: Using PortqryUI tool 
+      - name: Using PortQryUI tool 
         href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
