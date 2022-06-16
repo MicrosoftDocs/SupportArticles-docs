@@ -50,7 +50,7 @@ Check this article [App Service limits - Item 5](https://docs.microsoft.com/azur
 
 ## Is there any way to list deleted Web Apps for my Subscription?
 
-To get the collection of deleted Web Apps that were deleted within 30 days inside your Subscription ID you can use `Get-AzDeletedWebApp`  to retrieve the Web Apps and its details. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. Check [List deleted apps](https://docs.microsoft.com/azure/app-service/app-service-undelete#list-deleted-apps) for more information.
+To get the collection of deleted Web Apps that were deleted within 30 days inside your Subscription ID, you can use `Get-AzDeletedWebApp` to retrieve the Web Apps and its details. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. Check [List deleted apps](https://docs.microsoft.com/azure/app-service/app-service-undelete#list-deleted-apps) for more information.
 
 ## How do I restore a deleted Web App or a deleted App Service Plan?
 
