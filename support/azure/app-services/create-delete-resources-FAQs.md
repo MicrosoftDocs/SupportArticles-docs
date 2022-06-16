@@ -37,9 +37,9 @@ You can see more on the Azure built-in roles on [Azure built-in roles](https://d
 
 ## What if the requested SKU of the App Service Plan isn't available in the Resource Group?
 
-There are App Service deployment that do not have specific SKUs available due to internal constraints (for example, isn't available for a location or zone). If the requested SKU is not available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
+There are App Service deployments that do not have specific SKUs available due to internal constraints (for example, isn't available for a location or zone). If the requested SKU is not available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
 
-If you want to re-use the same Resource Group and region, it is required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. **Please note:** migrate App Services originating in this Resource Group to another Resource Group won’t unblock the creation.
+If you want to reuse the same Resource Group and region, it is required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. **Please note:** migrate App Services originating in this Resource Group to another Resource Group won’t unblock the creation.
 
 ## I am trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Cannot update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". What and where should I check this?
 
