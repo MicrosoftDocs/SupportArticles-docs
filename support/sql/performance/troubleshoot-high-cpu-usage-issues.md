@@ -193,7 +193,7 @@ If the high-CPU condition is resolved by using `T174`, enable it as a [startup p
 
 If you're using a virtual machine, ensure that you aren't overprovisioning CPUs and that they're configured correctly. For more information, see [Troubleshooting ESX/ESXi virtual machine performance issues (2001003)](https://kb.vmware.com/s/article/2001003#CPU%20constraints).
 
-## Step 10: Scale up SQL Server
+## Step 10: Scale up system to use more CPUs
 
 If individual query instances are using little CPU capacity, but the overall workload of all queries together causes high CPU consumption, consider scaling up your computer by adding more CPUs. Use the following query to find the number of queries that have exceeded a certain threshold of average and maximum CPU consumption per execution and have run many times on the system (make sure that you modify the values of the two variables to match your environment):
 
@@ -211,7 +211,6 @@ WHERE (qs.total_worker_time/execution_count > @cputime_threshold_microsec
         OR qs.max_worker_time > @cputime_threshold_microsec )
         AND execution_count > @execution_count
 ORDER BY  qs.total_worker_time DESC 
-OPTION (RECOMPILE)
 ```
 
 ## See also
