@@ -5,15 +5,15 @@ ms.date: 6/16/2022
 author: amolmehrotra
 ms.author: amehrot
 ms.reviewer: amehrot, rimarr
-ms.service: app-service
+ms.service: app-services
 keywords:
 #Customer intent: As an Azure App Service user, I want to troubleshoot the creation and deletion related issues.
 ---
 # Create or Delete Resources - Frequently asked questions (FAQ) - Azure App Services (Web Apps)
 
-This article has answers to frequently asked questions (FAQs) about creating and deleting for [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
+This article has answers to frequently asked questions (FAQs) about creating and deleting resources for [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
 
-If your Azure issue is not addressed in this article, visit the Azure forums on [MSDN and Stack Overflow](https://azure.microsoft.com/support/forums/). You can post your issue in these forums, or post to [@AzureSupport on Twitter](https://twitter.com/AzureSupport). You also can submit an Azure support request. To submit a support request, on the [Azure support](https://azure.microsoft.com/support/options/) page, select **Get support**.
+[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
 ## What if I want to create a Web App with the same name as another one?
 
