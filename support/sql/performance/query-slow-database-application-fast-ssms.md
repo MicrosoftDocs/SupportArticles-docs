@@ -11,7 +11,7 @@ ms.prod: sql
 
 ## Symptoms
 
-You may observe that a query executed from a production application runs slower than the same query executed from an application like SQL Server Management Studio (SSMS).
+You may observe that a query executed in a production application runs slower than the same query executed in an application like SQL Server Management Studio (SSMS).
 
 ## Cause
 
@@ -26,6 +26,8 @@ This issue occurs because the queries are different:
 To resolve the issue, follow these steps:
 
 ### Step 1: Verify the exact same query is being submitted with the same parameters or variables
+
+You can check the following examples to better understand what identical queries mean:
 
 - Stored procedures or functions with different values aren't the same. For example:
 
@@ -75,7 +77,7 @@ WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPAT
 GO
 ```
 
-### Step 2: Measure the execution time on the server (excluding the client fetching results)
+### Step 2: Measure the execution time on the server
 
 To exclude the time clients spend fetching results and measure the execution time on the server only, use one of the following methods:
 
