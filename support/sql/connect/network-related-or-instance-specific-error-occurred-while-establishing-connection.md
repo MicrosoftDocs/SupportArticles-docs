@@ -264,11 +264,11 @@ A default instance typically runs on port 1433. Some installations also use a no
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
 
-1. - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
+  - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
 
    - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000. Specify the server name as *MySQLServer, 2000* and see whether it works.
 
-1. - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
+  - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
 
     - If it does work, it indicates that the firewall is allowing communication through that port. You need to change your connection string in order to use the port number and your server name in the connection string of your application.
 
@@ -290,9 +290,9 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
           - The instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from the SQL Server Browser service.
 
-- Method 2: Check the connection by using the PortqryUI tool.
+- Method 2: Check the connection by using the PortQryUI tool.
 
-    Use the PortqryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
+    Use the PortQryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
 
     Determine whether the SQL Server instance is listening on dynamic or static ports. Then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
 
@@ -306,11 +306,10 @@ In some installations of SQL Server, connections to the Database Engine from ano
 
 ### Option 1: Using the output file from SQLCheck tool
 
-1. Search the SQLCheck output file for "details" for SQL Server instance and locate the information for your SQL Server instance.
+1. Search the SQLCheck output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
+1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
 
-1. Review the values for the following table:
-
-    |Attribute name |Implication|More information|
+    |Value name |Implication|More information|
     |-|-|-|
     |Shared Memory Enabled |Can either be true of false - only affects local connections. |[Creating a Valid Connection String Using Shared Memory Protocol](/sql/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol)|
     |Named Pipes Enabled |If false, both local and remote connections using Named pipes will fail |[Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))|
@@ -327,7 +326,7 @@ To enable connections from another computer by using the SQL Server Configuratio
 
 1. Open the SQL Server Configuration Manager.
 
-1. In the left pane expand **SQL Server Network Configuration**, and then select the instance of SQL Server that you want to connect to. The right-pane lists the connection protocols available. **Shared Memory** is normally enabled. It can only be used from the same computer, so most installations leave **Shared Memory** enabled. To connect to SQL Server from another computer, use **TCP/IP**. If **TCP/IP** isn't enabled, right-click **TCP/IP**, and then select **Enable**.
+1. In the left pane, expand **SQL Server Network Configuration**, and then select the instance of SQL Server that you want to connect to. The right pane lists the connection protocols available. **Shared Memory** is normally enabled. It can only be used from the same computer, so most installations leave **Shared Memory** enabled. To connect to SQL Server from another computer, use **TCP/IP**. If **TCP/IP** isn't enabled, right-click **TCP/IP**, and then select **Enable**.
 1. If you change the enabled setting for any protocol, restart the Database Engine. In the left pane, select **SQL Server Services**. In the right-pane, right-click the instance of the Database Engine, and then select **Restart**.
 
 ## Step 7: Test TCP/IP connectivity
