@@ -34,7 +34,7 @@ This tool helps you troubleshoot the following exceptions:
 - Cannot generate SSPI Context
 - Login failed for user 'NTAUTHORITY\ANONYMOUS LOGON'
 - Login failed for user '(null)'
-- Login failed for user 'empty'
+- Login failed for user (empty)
 
 > [!NOTE]
 > Before you start troubleshooting issues, we recommend that you review the prerequisites, and then go through the general checklist to troubleshoot connectivity-related errors.
