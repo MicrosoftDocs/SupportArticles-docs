@@ -106,4 +106,4 @@ To ensure that the SET options on both SSMS and application are the same to be a
 
 1. Use the same XEvent definition above.
 
-1. Compare the set options by checking `login` and `existing_connection`, and specifically the `options_text` and options columns.
+1. Compare the set options by checking the events `login` and `existing_connection`, and specifically the `options_text` and options columns.
