@@ -56,7 +56,7 @@ If a scan takes more than 1 second, the XEvent will be recorded as follows when 
 
 Prior to SQL Server 2022, there was no way to eliminate this problem. It is not recommended to perform any action to clear the buffer pool as dropping clean buffers (`DBCC DROPCLEANBUFFERS`) from the buffer pool may result in a significant performance degradation. Removing database pages from memory will cause subsequent query executions to re-read the data from the database files on disk. This process of accessing data via disk I/O causes queries to be slow. 
 
-In SQL Server 2022, this problem is mitigated because buffer pool scans are parallelized by utilizing multiple cores. There will be one task per 8 million buffers (64 GB) where a serial scan will still be used if there are less than 8 million buffers. For more information, watch [Buffer Pool Parallel Scan](shows/data-exposed/sql-server-2022-introducing-buffer-pool-parallel-scan)
+In SQL Server 2022, this problem is mitigated because buffer pool scans are parallelized by utilizing multiple cores. There will be one task per 8 million buffers (64 GB) where a serial scan will still be used if there are less than 8 million buffers. For more information, watch [Buffer Pool Parallel Scan](/shows/data-exposed/sql-server-2022-introducing-buffer-pool-parallel-scan)
 
 ## More information
 
