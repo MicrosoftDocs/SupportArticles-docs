@@ -1,6 +1,6 @@
 ---
-title: Active and retired troubleshooters for Windows 10
-description: Introduce active and retired troubleshooters for Windows 10.
+title: Active and retired troubleshooters for Windows 10 and Windows 11
+description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
 ms.date: 10/16/2020
 author: Deland-Han
 ms.author: delhan
@@ -13,11 +13,29 @@ ms.reviewer: kaushika
 ms.custom: sap:windows-troubleshooters, csstroubleshoot
 ms.technology: windows-client-troubleshooter
 ---
-# Active and retired troubleshooters for Windows 10
+# Active and retired troubleshooters for Windows 10 and Windows 11
 
-This article provides a list of active and retired troubleshooters for Windows 10, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
+This article provides a list of active and retired troubleshooters for Windows 10 and Windows 11, including a description of what the troubleshooter does, the problem that it addresses, and which devices it applies to. To learn more about troubleshooters, see [keep your device running smoothly with recommended troubleshooting](https://support.microsoft.com/help/4487232/).
 
-_Applies to:_ &nbsp; Windows 10
+_Applies to:_ &nbsp; Windows 10, Windows 11
+
+## Windows Update troubleshooter for repairing .NET framework components
+
+Text displayed in Settings:  
+Automatically repair system files and settings to fix a problem on your device
+
+### Description
+
+Some devices that installed the April 25, 2022, update KB5012643 for Windows 11, version 21H2, are unable to run .NET Framework applications. This troubleshooter repairs the device by restoring the needed .NET Framework components and re-establishes the ability to run .NET Framework applications.
+
+This troubleshooter runs automatically on devices that meet the following criteria:
+
+- Runs Windows 11, version 21H2
+- This issue has been detected
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|5/31/2022||[https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409)|
 
 ## Windows Update troubleshooter for file or metadata corruption
 
@@ -51,7 +69,7 @@ This troubleshooter runs automatically on devices running Windows 10, version 19
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|4/15/2021||[https://aka.ms/AAbk72i](https://aka.ms/AAbk72i)|
+|4/15/2021|11/2/2021|[https://aka.ms/AAbk72i](https://aka.ms/AAbk72i)|
 
 ## Files On-Demand troubleshooter
 

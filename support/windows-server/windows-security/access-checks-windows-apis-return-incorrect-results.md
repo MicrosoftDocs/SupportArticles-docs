@@ -1,7 +1,7 @@
 ---
 title: How to evaluate effective permissions for resources on remote computers
 description: Resolves an issue in which access checks for remote resources return incorrect results.
-ms.date: 05/5/2022
+ms.date: 05/23/2022
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -38,9 +38,9 @@ Windows Server 2012 R2 introduced changes to the way in which Windows evaluates 
 
 If you're using the **Effective Access** tab, the tab may display errors or warnings.
 
-![Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource](./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png)
+:::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/error-insufficient-permissions.png" alt-text="Effective permissions error: You do not have permission to evaluate effective access rights for the remote resource.":::
 
-![Effective permissions error: The share security information is unavailable and was not evaluated for effective access.](./media/access-checks-windows-apis-return-incorrect-results/error-information-unavailable.png)
+ :::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/error-information-unavailable.png" alt-text="Effective permissions error: The share security information is unavailable and was not evaluated for effective access.":::
 
 For more information about how to resolve these issues, see [Remote resources including SMB](#get-effective-permissions-on-remote-resources-including-smb-shares).
 
@@ -85,19 +85,19 @@ To resolve this issue, use one of the following methods:
 
   To do this, follow these steps to configure the **UseGroupRecursion** registry entry:
 
-  1. Open Registry Editor, and then navigate to the **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Authz** subkey.
+  1. Open Registry Editor, and then navigate to the *HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Authz* subkey.
   1. Select **Edit** > **New** > **DWORD Value**.
-  1. Enter **UseGroupRecursion**.
+  1. Enter *UseGroupRecursion*.
   1. Right-click **UseGroupRecursion**, and then select **Modify**.
-  1. Enter **1**, and then select **OK**.  
+  1. Enter *1*, and then select **OK**.  
      > [!NOTE]  
      > If the value is **0** (default value), Authz uses the Kerberos method. If the value is **1**, Authz uses AD LDAP and standalone server SAM queries.
   1. Close Registry Editor.
 
-> [!NOTE]  
->- **UseGroupRecursion** isn't effective if you use the AUTHZ_REQUIRE_S4U_LOGON flag when you create the Authz context.
->- The application user has to have **Read** permissions for the **TokenGroups** attribute and for the domain-local groups of the resource domain.
->- The application has to be able to use SAM RPC protocol when it calls the APIs. This is because server-local groups are retrieved by using SAM APIs. You can set an access control list (ACL) on the SAM RPC interface by using the **RestrictRemoteSAM** security policy.
+  > [!NOTE]  
+  >- **UseGroupRecursion** isn't effective if you use the AUTHZ_REQUIRE_S4U_LOGON flag when you create the Authz context.
+  >- The application user has to have **Read** permissions for the **TokenGroups** attribute and for the domain-local groups of the resource domain.
+  >- The application has to be able to use SAM RPC protocol when it calls the APIs. This is because server-local groups are retrieved by using SAM APIs. You can set an access control list (ACL) on the SAM RPC interface by using the **RestrictRemoteSAM** security policy.
 
 ## Get effective permissions on remote resources including SMB shares
 
@@ -105,7 +105,7 @@ Windows Server 2012 R2 added an Authz RPC interface to the LSASS process. This i
 
 This update also added the ability to evaluate permissions set at both file system and the share level. When you use this capability, you see what part of the access check is limiting access.
 
-![Information that provides details about what factors limit a users access to a resource.](./media/access-checks-windows-apis-return-incorrect-results/effective-access-limits.png)
+ :::image type="content" source="./media/access-checks-windows-apis-return-incorrect-results/effective-access-limits.png" alt-text="Information that provides details about what factors limit a users access to a resource.":::
 
 When you evaluate effective access to resources, consider the following factors:
 

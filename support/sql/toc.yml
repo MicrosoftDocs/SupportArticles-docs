@@ -273,7 +273,7 @@
       items:
       - name: 9002 error on primary replica
         href: availability-groups/error-9002-transaction-log-large.md
-      - name: AlwaysOn DB in recovery pending or suspect state
+      - name: Always On DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
       - name: Error 2767 on secondary replica
         href: availability-groups/error-2767-query-secondary-replica-fails.md
@@ -285,8 +285,10 @@
         href: availability-groups/query-performance-degradation.md
       - name: Troubleshooting automatic failover problems
         href: availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on AlwaysOn issues
+      - name: Troubleshooting on Always On issues
         href: availability-groups/troubleshooting-alwayson-issues.md
+      - name: Error 41131 when creating availability group
+        href: availability-groups/error-41131-create-availability-group.md
     - name: Database Mirroring
       items:
       - name: Mirrored databases are disconnected
@@ -415,6 +417,8 @@
       href: performance/troubleshoot-query-async-network-io.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
+    - name: Different query performance between two servers
+      href: performance/troubleshoot-query-perf-between-servers.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)

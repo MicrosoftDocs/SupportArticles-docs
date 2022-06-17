@@ -14,7 +14,7 @@ Many product features have Azure dependencies that might not be available in all
 
 - Insider risk management
 - Microsoft Threat Protection (MTP)
-- Microsoft Information Protection (MIP)
+- Microsoft Purview Information Protection
   - Auto-labeling for sensitivity labels
 - Communication compliance
 - Attack simulation
