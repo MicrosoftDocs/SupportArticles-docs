@@ -3,7 +3,7 @@ title: Create or Delete Resources - Frequently asked questions (FAQ) - Azure App
 description: Troubleshoot creation and deletion related issues in Azure App Service.
 ms.date: 6/16/2022
 author: auolivei
-ms.author: Augusto-Oliveira
+ms.author: auolivei
 ms.reviewer: amehrot, rimarr
 ms.service: app-service
 keywords:
