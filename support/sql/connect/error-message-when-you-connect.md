@@ -104,11 +104,11 @@ For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in you
 
 For more information on how to do this, review the following topics:
 
-- [Using Encryption Without Validation in SQL Server Native Client](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation?view=sql-server-ver16)
+- [Using Encryption Without Validation in SQL Server Native Client](/sql/relational-databases/native-client/features/using-encryption-without-validation?view=sql-server-ver16)
 
-- [Connecting with encryption using Microsoft JDBC driver for SQL Server](https://docs.microsoft.com/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver16)
+- [Connecting with encryption using Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver16)
 
-- [Using Encryption with Sqlclient](https://docs.microsoft.com/sql/connect/ado-net/sql/sqlclient-support-always-encrypted?view=sql-server-ver16)
+- [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted?view=sql-server-ver16)
 
 > [!NOTE]
 > If you are using SQL Server Management Studio, you can click on the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
@@ -123,4 +123,4 @@ If the configuration discussed in the previous sections of this article is unint
 
   - Disable encryption settings (if any) in your client application.
 
-  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](https://docs.microsoft.com/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver16#manage-server--client-network-protocols).
+  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver16#manage-server--client-network-protocols).
