@@ -22,7 +22,7 @@ You may need to disable the TLS 1.3 support for compatibility reasons. This arti
 
 ### LDAP server side
 
-Use **Registry Editor** to modify the following values to disable or re-enable TLS 1.3 for LDAP on the server side:
+Use **Registry Editor** to modify the following values to disable or re-enable TLS 1.3 for Lightweight Directory Access Protocol (LDAP) on the server side:
 
 - Registry key: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`
 - Registry value: **LdapDisableTLS1.3**
