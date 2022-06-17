@@ -12,7 +12,6 @@ metadata:
 title: Frequently asked questions about creating or deleting resources in Azure App Services
 summary: |
 This article provides answers to common questions about creating and deleting resources for [Web Apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
-[!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
 sections:
   - name: Access Azure and Azure Active Directory
