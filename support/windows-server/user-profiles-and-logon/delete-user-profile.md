@@ -15,20 +15,20 @@ ms.technology: windows-server-user-profiles
 ---
 # Delete a user profile in Windows
 
-This article introduces on how to delete a user's profile on a Windows-based device.
+This article introduces how to delete a user's profile on a Windows-based device.
 
 > [!NOTE]
-> To perform these methods, you must be a member of the Administrators group on the local computer, or you must have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure.
+> To perform these methods, you must be a member of the Administrators group on the local computer or have been delegated the appropriate authority. If the computer is joined to a domain, members of the Domain Admins group might be able to perform this procedure.
 
 _Applies to:_ &nbsp; Windows Server; Windows Client  
 _Original KB number:_ &nbsp; 2462308
 
 ## Using Control Panel
 
-1. Select **Start**, search for _Control Panel_, and then select **Control Panel** in the result.
+1. Select **Start**, search for _Control Panel_, and select **Control Panel** in the result.
 2. Select **Large icons** in **View by:**, and then select **System**.
    > [!NOTE]
-   > In Windows Server 2022, Windows 10 and Windows 11, the **Settings** App opens.  
+   > In Windows Server 2022, Windows 10, and Windows 11, the **Settings** App opens.  
    > In Windows Server 2012 to Windows Server 2019, the classic **System** applet opens.
 
 3. Select the **Advanced System settings** link.
