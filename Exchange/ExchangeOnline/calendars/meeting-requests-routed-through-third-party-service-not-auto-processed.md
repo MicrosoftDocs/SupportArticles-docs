@@ -21,14 +21,14 @@ ms.date: 6/7/2022
 
 ## Symptoms
 
-Consider a scenario where the environment uses:
+Consider the following scenario:
 
-- Exchange Online but doesn't have a hybrid Exchange deployment.
-- A third-party mail service and mail flow connectors to route emails out from and in to your Microsoft 365 organization. An outbound connector routes emails from the organization to the third-party mail service and an inbound connector routes emails from the third-party mail service to the organization.
+- Your environment includes Exchange Online but doesn't have a hybrid Exchange deployment.
+- Your environment uses a third-party mail service and mail flow connectors to route email messages from and to your Microsoft 365 organization. An outbound connector routes messages from the organization to the third-party mail service, and an inbound connector routes messages from the third-party mail service to the organization.
 
-In this environment, when you schedule a meeting with users internal to your organization and specify a meeting room in the meeting invite, the room mailbox for the meeting room doesn't accept or decline the meeting automatically even if it's set up to do so.
+In this scenario, when you schedule a meeting with users who are internal to your organization, and you specify a meeting room in the meeting invitation, the room mailbox for the meeting room doesn't accept or decline the meeting automatically even if it's set up to do this.
 
-If you run the following cmdlet to verify the automated calendar processing option set up for the room mailbox, the value for the `AutomateProcessing` property in the output will display **AutoAccept**.
+If you run the following cmdlet to verify the automated calendar processing option that's set for the room mailbox, the value for the `AutomateProcessing` property in the output displays as **AutoAccept**:
 
 ```powershell
 Get-CalendarProcessing -Identity <name_of_room_mailbox> | select AutomateProcessing
@@ -36,7 +36,7 @@ Get-CalendarProcessing -Identity <name_of_room_mailbox> | select AutomateProcess
 
 ## Cause
 
-This issue occurs because the room mailbox considers the invite received from the third-party mail service via the inbound connector to be an external message.
+This issue occurs because the room mailbox treats the invitation that's received from the third-party mail service through the inbound connector as an external message.
 
 ## Resolution
 
@@ -44,7 +44,7 @@ To resolve the issue, use one of the following methods:
 
 ### Method 1: Allow the room mailbox to process requests from external users
 
-This method allows users who are external to the Microsoft 365 organization to book the meeting room associated with the room mailbox. However, the risk involved to the organization is minimal because external users aren't likely to know the email address of the room mailbox.
+This method lets users who are external to the Microsoft 365 organization book the meeting room that's associated with the room mailbox. However, the risk involved to the organization is minimal because external users aren't likely to know the email address of the room mailbox.
 
 In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), run the following cmdlet:
 
@@ -52,7 +52,7 @@ In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-
 Set-CalendarProcessing -Identity <name_of_room_mailbox > -ProcessExternalMeetingMessages $True
 ```
 
-### Method 2: Set the inbound connector to treat external messages as internal
+### Method 2: Set the inbound connector to consider external messages as internal
 
 > [!WARNING]
 > This method has potential security risks because internal messages bypass antispam filtering. You must make sure that the messages that are routed through the third-party mail service are only for internal use.
@@ -67,7 +67,7 @@ Set-InboundConnector -Identity <name_of_inbound_connector > -TreatMessagesAsInte
 
 ## More information
 
-When this issue occurs, you can check the RBA log and the message trace as follows:
+When this issue occurs, you can check the RBA log and the message trace, as follows:
 
 ### Check the RBA log
 
@@ -81,15 +81,15 @@ When this issue occurs, you can check the RBA log and the message trace as follo
 
     > Message Skipping processing because user settings for processing external items is false.
 
-    The timestamp for this entry will closely match the timestamp of when the meeting request was received by the mailbox.
+    The timestamp for this entry will closely match the timestamp of the meeting request that was received by the mailbox.
 
-This entry indicates that the meeting invite wasn't processed because it was treated as an external message.
+This entry indicates that the meeting invitation wasn't processed because it was treated as an external message.
 
 ### Check the message trace
 
 1. Run an [extended message trace](/exchange/monitoring/trace-an-email-message/message-trace-modern-eac#message-trace-page).
-2. In the message trace, find the **RECEIVE** event in the **Custom** column to identify the outbound connector through which the meeting invite was routed outside the organization and the inbound connector used to route the invite back to it.
-3. Run the following cmdlet to check the details of the inbound connector that is listed in the message trace.
+2. In the message trace, find the **RECEIVE** event in the **Custom** column to identify the outbound connector through which the meeting invitation was routed outside the organization, and the inbound connector that was used to route the invitation back to the organization.
+3. Run the following cmdlet to check the details of the inbound connector that's listed in the message trace:
 
     ```powershell
     Get-InboundConnector -Identity <name_of_inbound_connector> | flConnectorType,Enabled, TreatMessagesAsInternal
@@ -101,4 +101,4 @@ The output will display the following values for the parameters:
 > Enabled: True  
 > TreatMessagesAsInternal: False  
 
-These values indicate that the meeting invite wasn't processed because it was treated as an external message.
+These values indicate that the meeting invitation wasn't processed because it was treated as an external message.
