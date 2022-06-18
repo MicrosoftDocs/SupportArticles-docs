@@ -43,3 +43,13 @@
       href: lookup-does-not-filter-entity-records.md
     - name: Required fields are missing in Dataverse records
       href: dataverse-records-missing-required-fields.md
+  - name: Isolate issues
+    items:
+    - name: Think like a debugger
+      href: isolate-common-issues.md
+    - name: Isolate issues in canvas apps
+      href: isolate-canvas-app-issues.md
+    - name: Isolate issues in model-driven apps
+      href: isolate-model-app-issues.md
+    - name: Create a minimal repro canvas app
+      href: minimal-canvas-app-repro.md
