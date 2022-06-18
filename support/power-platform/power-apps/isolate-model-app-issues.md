@@ -32,7 +32,7 @@ The following can affect normal operation. Try disabling or removing them and ch
 
 **Affects**: Form pages
 
-[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1) change a form's behavior based on the state of a record. Try disabling or simplifying the rules and check if the form still works as expected.
+[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1&preserve-view=true) change a form's behavior based on the state of a record. Try disabling or simplifying the rules and check if the form still works as expected.
 
 ### Client scripts
 

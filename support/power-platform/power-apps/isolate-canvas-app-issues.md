@@ -130,15 +130,15 @@ If the problem only happens on a particular type of control, then it's likely a 
 
 Formulas can behave differently for controls inside another control. For example, controls inside a **Gallery** can use **[ThisItem](/power-apps/maker/canvas-apps/functions/operators#thisitem-thisrecord-and-as-operators)** but those outside can't. Controls outside a **Gallery** or **Component** cannot reference the controls inside.
 
-This different visibility of identifiers is called [scope](working-with-tables#record-scope). Controls that contain other controls introduce a new scope.
+This different visibility of identifiers is called [scope](/power-apps/maker/canvas-apps/working-with-tables#record-scope). Controls that contain other controls introduce a new scope.
 
-* [Component](create-component)
+* [Component](/power-apps/maker/canvas-apps/create-component)
 * [Container](/power-apps/maker/canvas-apps/controls/control-container)
 * [Display form](/power-apps/maker/canvas-apps/controls/control-form-detail)
 * [Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail)
 * [Gallery](/power-apps/maker/canvas-apps/controls/control-gallery)
 * [Horizontal container](/power-apps/maker/canvas-apps/controls/control-horizontal-container)
-* [Scrollable screen (Fluid grid)](add-scrolling-screen)
+* [Scrollable screen (Fluid grid)](/power-apps/maker/canvas-apps/add-scrolling-screen)
 * [Vertical container](/power-apps/maker/canvas-apps/controls/control-vertical-container)
 
 If a formula is not working inside a contained control, it could be related to scoping. Try using the same formula outside the container.

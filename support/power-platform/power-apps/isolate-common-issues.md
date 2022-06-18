@@ -105,5 +105,3 @@ For model-driven apps, verify if [forms are designed for performance](/power-app
 [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
 [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
 
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
