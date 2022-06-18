@@ -28,7 +28,7 @@ These are some techniques to isolate problems in an app.
 
 ### Change one thing at a time
 
-When multiple changes are made, it's not obvious which ones contribute to a problem. Try reverting to the last known working state and make a single change. If it works fine, revert the change and make another one until the issue happens. For example, you can [restore a canvas app to a previous version](../canvas-apps/restore-an-app.md) and apply changes progressively.
+When multiple changes are made, it's not obvious which ones contribute to a problem. Try reverting to the last known working state and make a single change. If it works fine, revert the change and make another one until the issue happens. For example, you can [restore a canvas app to a previous version](/power-apps/maker/canvas-apps/restore-an-app) and apply changes progressively.
 
 If you're unable to revert an app to a working state, it's also helpful to do one thing differently while keeping everything else the same. Some examples:
 
@@ -40,11 +40,11 @@ Knowing what works is as important as knowing what doesn't. For example, if you 
 
 ### Simplify
 
-A complex app has many things that could go wrong. An effective investigator removes unnecessary details so that there are less variables to worry about. It's also easier to show the problem to others. For example, if there are [client scripts in model-driven apps](../../developer/model-driven-apps/client-scripting.md), try disabling them. Even if the problem still occurs, one can eliminate that as the cause of the problem.
+A complex app has many things that could go wrong. An effective investigator removes unnecessary details so that there are less variables to worry about. It's also easier to show the problem to others. For example, if there are [client scripts in model-driven apps](/power-apps/developer/model-driven-apps/client-scripting), try disabling them. Even if the problem still occurs, one can eliminate that as the cause of the problem.
 
 ### Start from scratch
 
-We can be blind to our own mistakes. It can be instructive to create a new app or configuration. This can be a simplified version, especially when the original is too complex to re-create. Think about the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app does not show the right records, try [re-creating the view](../../developer/model-driven-apps/customize-entity-views.md).
+We can be blind to our own mistakes. It can be instructive to create a new app or configuration. This can be a simplified version, especially when the original is too complex to re-create. Think about the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app does not show the right records, try [re-creating the view](/developer/model-driven-apps/customize-entity-views).
 
 Should the new app work, compare it with the original to find the difference. If there is no difference, the problem might have been fixed with the latest version. Or, the original app might be corrupted. Even if you are unable to upgrade your app, knowing if and how the problem was fixed will guide next steps.
 
@@ -56,7 +56,7 @@ Power Apps is based on web technologies. Different layers are involved when work
 * **Server**. Stores data and controls who can access it.
 * **Network**. Transports data between the server and the app.
 * **App**. Requests data from the server, processes it, and displays it in the app.
-* **App host**. Where the app is run. It provides infrastructure to use an app. This could be a browser, [Power Apps Mobile](../../mobile/run-powerapps-on-mobile.md), or another website that Power Apps is embedded in.
+* **App host**. Where the app is run. It provides infrastructure to use an app. This could be a browser, [Power Apps Mobile](/power-apps/mobile/run-powerapps-on-mobile), or another website that Power Apps is embedded in.
 
 Together, these layers form the tech stack of Power Apps. Isolating the layer where a problem occurs can spark ideas for solutions and workarounds. Should data not show correctly in your app, you can determine the problematic layer with these methods.
 
@@ -67,7 +67,7 @@ Together, these layers form the tech stack of Power Apps. Isolating the layer wh
   * [Check a different network.](#try-a-different-network)
   * Run the app in a different geographical region, if possible. There may be different network conditions or restrictions.
 * **App**.
-  * Use [Monitor](../monitor-overview.md) to examine the network requests made by the app. If the correct data is returned by the server, then it's a problem with the app. If the data returned is wrong, it could be a server error or the app didn't request for data correctly. See individual guides below to learn how to read network events with Monitor.
+  * Use [Monitor](/power-apps/maker/monitor-overview) to examine the network requests made by the app. If the correct data is returned by the server, then it's a problem with the app. If the data returned is wrong, it could be a server error or the app didn't request for data correctly. See individual guides below to learn how to read network events with Monitor.
 * **App host**.
   * Try a different host. For example, if you are using the Power Apps Mobile app for Android, try the one for iOS or use a desktop browser.
 
@@ -87,23 +87,23 @@ Similar to data speed, processing speed can also result in different behavior. I
 
 ## Performance issues
 
-Progressively simplifying an app is an effective technique for finding the source of performance issues. You can also use profiling tools like [Monitor](../monitor-overview.md) and [Performance insights](./performance-insights-overview.md).
+Progressively simplifying an app is an effective technique for finding the source of performance issues. You can also use profiling tools like [Monitor](/power-apps/maker/monitor-overview) and [Performance insights](/power-apps/maker/common/performance-insights-overview).
 
-For canvas apps, understand their [execution phases](../canvas-apps/execution-phases-data-flow.md) and [common sources of slow performance](../canvas-apps/slow-performance-sources.md).
+For canvas apps, understand their [execution phases](/power-apps/maker/canvas-apps/execution-phases-data-flow) and [common sources of slow performance](/power-apps/maker/canvas-apps/slow-performance-sources).
 
-For model-driven apps, verify if [forms are designed for performance](../model-driven-apps/design-performant-forms.md).
+For model-driven apps, verify if [forms are designed for performance](/power-apps/maker/model-driven-apps/design-performant-forms).
 
 
 ## Next steps
 
-[Isolate issues in canvas apps](../monitor-canvasapps.md)
-[Isolate issues in model-driven apps](../monitor-modelapps.md)
+[Isolate issues in canvas apps](isolate-canvas-app-issues.md)
+[Isolate issues in model-driven apps](isolate-model-app-issues.md)
 
 
 ### See also
 
-[Debugging canvas apps with Monitor](../monitor-canvasapps.md)
-[Debugging model-driven apps with Monitor](../monitor-modelapps.md)
+[Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+[Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
 
 
 [!INCLUDE[footer-include](../../includes/footer-banner.md)]

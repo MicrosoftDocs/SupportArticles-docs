@@ -59,19 +59,19 @@ The downloaded zip file can be opened by others.
 
 ### Power Apps in Teams
 
-1. In Microsoft Teams, go to the [Power Apps app list for your team](../../teams/manage-your-apps.md)
+1. In Microsoft Teams, go to the [Power Apps app list for your team](/power-apps/teams/manage-your-apps)
 2. Select the desired app
 3. Select the **Export solution** button in the menu bar
 ![App list screen. An app is selected and the command button for "Export package" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/teams.png)
 4. Review the exported content and select **Export as zip**
 
-The (downloaded zip file can be imported)[export-import-app.md#importing-a-canvas-app-package] by other users.
+The (downloaded zip file can be imported)[/power-apps/maker/canvas-apps/export-import-app#importing-a-canvas-app-package] by other users.
 
 ### Custom pages
 
 Only custom pages in [unmanaged solutions](/power-platform/alm/solution-concepts-alm#managed-and-unmanaged-solutions#managed-and-unmanaged-solutions) can be exported. If the custom page is in a managed solution, ask the publisher of the solution to create an unmanaged solution that contains the custom page. You can also create a new unmanaged solution and create a new custom page there.
 
-You can [export custom pages in an unmanaged solution](../data-platform/export-solutions.md) just like any other solution component. The downloaded zip file can be imported into any environment by other users.
+You can [export custom pages in an unmanaged solution](/power-apps/maker/data-platform/export-solutions) just like any other solution component. The downloaded zip file can be imported into any environment by other users.
 
 
 ## Privacy and security
@@ -93,8 +93,5 @@ Before distributing your exported app, these steps can help limit privacy and se
 
 ### See also
 
-[Debugging canvas apps with Monitor](../monitor-canvasapps.md)  
-[Debugging model-driven apps with Monitor](../monitor-modelapps.md)
-
-
-[!INCLUDE[footer-include](../../includes/footer-banner.md)]
+[Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+[Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
