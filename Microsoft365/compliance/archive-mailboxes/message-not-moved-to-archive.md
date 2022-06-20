@@ -37,11 +37,17 @@ However after you create the retention policy, the policy doesn't automatically 
 
 ## Cause 
 
-This issue occurs if the size of the mailbox in Exchange Online is less than 10 megabytes (MB). The retention policy runs automatically one time every seven days for mailboxes that are larger than 10 MB. However, the retention policy doesn't automatically run for mailboxes that are smaller than 10 MB. 
+This issue occurs if the size of the mailbox in Exchange Online is less than 10 megabytes (MB). The retention policy runs automatically one time every seven days for mailboxes that are larger than 10 MB. However, the retention policy doesn't automatically run for mailboxes that are smaller than 10 MB.
+
+This issue also occurs if the primary mailbox has an associated user account that is disabled, unless the mailbox is a Shared mailbox.  MRM does not currently support moving items to an archive mailbox in this scenario.
 
 ## Workaround 
 
 For mailboxes that are smaller than 10 MB, manually run the `Start-ManagedFolderAssistant –Identity <mailbox>` cmdlet every time that you want to move messages to the archive.
+
+## More information
+
+Microsoft is aware of the issue regarding user mailboxes associated with disabled user accounts and is working on a fix.
 
 For more information about the Managed Folder Assistant, see [Configure and run the Managed Folder Assistant](/Exchange/policy-and-compliance/mrm/configure-managed-folder-assistant?view=exchserver-2019&preserve-view=true).
 
