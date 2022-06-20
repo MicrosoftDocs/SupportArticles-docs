@@ -8,6 +8,7 @@ metadata:
   ms.technology: internet-explorer-security-privacy
 title: FAQ about Internet Explorer Enhanced Security Configuration (ESC)
 summary: |
+  [!INCLUDE [](../../../includes/browsers-important.md)]
 
 sections:
   - name: Ignored

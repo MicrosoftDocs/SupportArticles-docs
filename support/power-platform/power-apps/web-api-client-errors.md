@@ -1,11 +1,11 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 06/05/2022
-author: divka78
-ms.author: dikamath
+ms.date: 06/14/2022
+author: JimDaly
+ms.author: jdaly
 ms.reviewer: jdaly
-manager: sunilg
+manager: kvivek
 search.audienceType: 
   - developer
 search.app: 
@@ -18,7 +18,7 @@ contributors:
 
 This article describes common client errors you may encounter when using the [Dataverse Web API](/power-apps/developer/data-platform/webapi/overview) and how you can avoid them.
 
-## Error 1 - Resource not found for the segment
+## Resource not found for the segment
 
 ### Symptoms
 
@@ -52,7 +52,7 @@ In the example above, there is an entity set called `accounts`, but not one name
 - If the resource is an entity type, query the Web API [Service document](/power-apps/developer/data-platform/webapi/web-api-service-documents#service-document) which will provide a list of all the known entity set names.
 - If the resource is a function or action, verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document).
 
-## Error 2 - Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
+## Could not find a property named '{property name}' on type 'Microsoft.Dynamics.CRM.{entity name}'
 
 ### Symptoms
 
@@ -85,7 +85,7 @@ In the example above, there is property called `name`, but not one named `Name`.
 
 Verify that the name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
-## Error 3 - No HTTP resource was found that matches the request URI
+## No HTTP resource was found that matches the request URI
 
 ### Symptoms
 
@@ -121,7 +121,7 @@ Be aware of what kind of OData operation you are using and the correct HTTP meth
 - [Web API Functions](/power-apps/developer/data-platform/webapi/web-api-functions)
 - [Use Web API functions](/power-apps/developer/data-platform/webapi/use-web-api-functions)
 
-## Error 4- Invalid property {property name} was found in entity 'Microsoft.Dynamics.CRM.{entity name}'
+## Invalid property {property name} was found in entity 'Microsoft.Dynamics.CRM.{entity name}'
 
 ### Symptoms
 
