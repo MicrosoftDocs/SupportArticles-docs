@@ -14,21 +14,28 @@ summary: |
   This article provides answers to common questions about creating and deleting resources for [web apps feature of Azure App Service](https://azure.microsoft.com/services/app-service/web/).
   [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 sections:
-  - name: Access Azure and Azure Active Directory
+  - name:  Deploy a web app
     questions:
       - question: |
            What if I create a web app with the same name as another one?
         answer: |
             We cannot create a web app with a name that already exists in the Azure. The web app name is part of the web app's URL, so it must be unique among all Azure App Service web apps.
           
-          
-          
       - question: |
-          How can I create a web app in a region that currently is unavailable in the subscription?
+          How can I create a web app in a region that is unavailable in the subscription?
         answer: |
-          Certain Azure regions require customers to go through a request process in order to gain access. For more information, see the [Azure region access request process](https://docs.microsoft.com/troubleshoot/azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
+          Certain Azure regions require customers to go through a request process in order to gain access. For more information, see the [Azure region access request process](https://docs.microsoft.com/troubleshoot/azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).          
+
+      - question: |
+          What if the requested SKU of the App Service Plan isn't available in the Resource Group?
+        answer: |
+          There are App Service deployments that don't have specific SKUs available due to some constraints (for example, the SKU isn't available in a region or country). 
           
+          If the requested SKU isn't available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
           
+          If you want to reuse the same Resource Group and region, it's required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. Note that migrate App Services originating in this Resource Group to another Resource Group won't unblock the creation.
+
+  - name: Delete or restore a web app
           
       - question: |
           If I delete all my web apps, will I still be charged?
@@ -44,15 +51,6 @@ sections:
           You would need minimum Contributor access on the Resource Group to deploy App Services. If you have Contributor access only on Web plan and the web site, it won't allow you to create the app service in the Resource Group.
           
           For more information, see [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
-
-      - question: |
-          What if the requested SKU of the App Service Plan isn't available in the Resource Group?
-        answer: |
-          There are App Service deployments that don't have specific SKUs available due to some constraints (for example, the SKU isn't available in a location or zone). 
-          
-          If the requested SKU isn't available in the Resource Group, you must create a new App Service Plan in a new Resource Group in the same region or in the same Resource Group using a different region.
-          
-          If you want to reuse the same Resource Group and region, it's required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. Note that migrate App Services originating in this Resource Group to another Resource Group won't unblock the creation.
           
       - question: |
          I'm trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage?
@@ -74,7 +72,7 @@ sections:
 
         answer: |
           If the web app hasn't been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`.  For more information, see [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore Deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088) for more information.
-
+      
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
   
