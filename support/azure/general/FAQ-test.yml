@@ -36,14 +36,13 @@ sections:
           If you want to reuse the same Resource Group and region, it's required to delete all the App Services, App Service Plans, and `Microsoft.Web/Certificates` resources in this Resource Group, then create the desired SKU in this Resource Group. Note that migrate App Services originating in this Resource Group to another Resource Group won't unblock the creation.
 
   - name: Delete or restore a web app
-          
+    questions:
       - question: |
           If I delete all my web apps, will I still be charged?
         answer: |
           Yes, charges will still apply unless you choose to delete the App Service Plans along with all web apps during the delete operation.   
           
           To stop all billing associated with your App Service, you need to delete the App Service Plan or scale the App Service Plan to the free tier. For more information, see [How much does my App Service Plan cost?](https://docs.microsoft.com/azure/app-service/overview-hosting-plans#how-much-does-my-app-service-plan-cost) and [Plan and manage costs for Azure App Service](https://docs.microsoft.com/azure/app-service/overview-manage-costs).
-
           
       - question: |
           I cannot create or delete a web app due to a permission error. What are the permissions that I need to create or delete a web app?
