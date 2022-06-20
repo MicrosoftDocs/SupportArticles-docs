@@ -1,17 +1,17 @@
 ---
-title: Query is slow in production application but fast in SSMS
-description: Provides a resolution for the performance issue where query is slow in production application but fast in SSMS.
+title: Query is slow in database application but fast in SSMS
+description: Provides a resolution for the performance issue where query is slow in database application but fast in SSMS.
 ms.date: 06/16/2022
 ms.custom: sap:Performance
 ms.reviewer: 
 ms.prod: sql
 ---
 
-# Query is slow in production application but fast in SSMS
+# Query is slow in database application but fast in SSMS
 
 ## Symptoms
 
-You may observe that a query executed in a production application runs slower than the same query executed in an application like SQL Server Management Studio (SSMS).
+When you execute a query in a database application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS).
 
 ## Cause
 
@@ -25,57 +25,83 @@ This issue occurs because the queries are different:
 
 To resolve the issue, follow these steps:
 
-### Step 1: Verify the exact same query is being submitted with the same parameters or variables
+### Step 1: Verify the queries are submitted with the same parameters or variables
 
-You can check the following examples to better understand what identical queries mean:
+To compare these queries and make sure they're identical in every way, follow these steps:
 
-- Stored procedures or functions with different values aren't the same. For example:
+1. Open your SSMS and connect it to the Database Engine you're using.
 
-  - ```sql
-    SpUserProc @p1 = 100
+1. Run the following commands to [create an Extended Events session](/sql/t-sql/statements/create-event-session-transact-sql):
+
+    ```sql
+    CREATE EVENT SESSION <EventSessionName> ON SERVER
+    
+    ADD EVENT sqlserver.existing_connection(SET collect_options_text=(1)),
+    
+    ADD EVENT sqlserver.login(SET collect_options_text=(1)),
+    
+    ADD EVENT sqlserver.rpc_completed,
+    
+    ADD EVENT sqlserver.sp_statement_completed,
+    
+    ADD EVENT sqlserver.sql_batch_completed,
+    
+    ADD EVENT sqlserver.sql_statement_completed
+    
+    ADD TARGET package0.event_file(SET filename=N'<FilePath>')
+    
+    WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+    
+    GO
     ```
 
-  - ```sql
-    SpUserProc @p1 = 270
-    ```
+1. In **Object Explorer**, expand **Management** > **Extended Events** > **Sessions**.
 
-- The queries in the following example are different:
+1. Right-click the **Sessions**, select **Refresh**, and then you can see the session **EventSessionName** you created.
 
-  - ```sql
-    declare @variable1 = 123
+1. Right-click the session **EventSessionName**, select **Start Session** and then the session **EventSessionName** will start to collect data.
 
-    select * from table where c1 = @variable1   (uses avg density for cardinality estimation)
-    ```
+1. Use one of the following methods to analyze the collected data:
 
-  - ```sql
-    select * from table where c1 = 123   (uses histogram step for cardinality estimation)
-    ```
+    - Right-click the session **EventSessionName**, and then select **Watch Live Data**.
 
-- For the same reason as above, comparing the execution of a stored procedure to the execution of the equivalent ad-hoc query (using local variables) may be different. Identical statements have to be compared.
+    - Under **EventSessionName**, right-click **package0.event_file**, and then select **View Target Data...**.
 
-To compare these queries and make sure they're identical in every way, capture an XEvent trace with statement and batch completed:
+    - Find the location of the *.xel* files and read this file by using the function [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
 
-```sql
-CREATE EVENT SESSION [event_session_name] ON SERVER
+1. Compare the statement by checking the following events:
 
-ADD EVENT sqlserver.existing_connection(SET collect_options_text=(1)),
+    - `sp_statement_completed`
+    - `sql_batch_completed`
+    - `sql_statement_completed`
+    - `rpc_completed`
 
-ADD EVENT sqlserver.login(SET collect_options_text=(1)),
+    > [!NOTE]
+    > For more information about the identical queries, see the following examples:
+    >
+    > - Stored procedures or functions with different values aren't the same:
+    >
+    >   - ```sql
+    >     SpUserProc @p1 = 100
+    >     ```
+    >
+    >   - ```sql
+    >     SpUserProc @p1 = 270
+    >     ```
+    >
+    > - The following queries are different:
+    >
+    >   - ```sql
+    >     declare @variable1 = 123
+    > 
+    >     select * from table where c1 = @variable1
+    >     ```
+    >
+    >   - ```sql
+    >     select * from table where c1 = 123 
+    >     ```
 
-ADD EVENT sqlserver.rpc_completed,
-
-ADD EVENT sqlserver.sp_statement_completed,
-
-ADD EVENT sqlserver.sql_batch_completed,
-
-ADD EVENT sqlserver.sql_statement_completed
-
-ADD TARGET package0.event_file(SET filename=N'c:\temp\Xevent_trace')
-
-WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=30 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
-
-GO
-```
+For the same reason as above, comparing the execution of a stored procedure to the execution of the equivalent ad-hoc query (using local variables) may be different. Identical statements have to be compared.
 
 ### Step 2: Measure the execution time on the server
 
@@ -91,13 +117,13 @@ To exclude the time clients spend fetching results and measure the execution tim
     SET STATISTICS TIME OFF
     ```
 
-- Method 2. Use XEvent or SQL Trace to look at the Duration and Elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
+- Method 2. Use XEvent or SQL Trace to see the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
 
-The time difference between the queries could be caused by one application being located in a different network and there could be a network delay. When you compare server times, you're comparing how long the queries took to run on the server.
+The time difference between the queries could be caused by one application in a different network and there could be a network delay. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
 
 ### Step 3: Check SET options for each connection
 
-There are [SET options](/sql/t-sql/statements/set-statements-transact-sql) that are query-plan affecting, which means they can change the choice of query plan. Therefore, if a production application uses different set options from SSMS, each set option can get a different query plan. For example, ARITHABORT, NUMERIC_ROUNDABORT, ROWCOUNT, FORCEPLAN, and ANSI_NULLS. The most common difference observed is [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) is set to ON in SSMS but set to OFF is most providers. In fact, you'll find the following warning:
+There are [SET options](/sql/t-sql/statements/set-statements-transact-sql) that are query-plan affecting, which means they can change the choice of query plan. Therefore, if a database application uses different set options from SSMS, each set option can get a different query plan. For example, ARITHABORT, NUMERIC_ROUNDABORT, ROWCOUNT, FORCEPLAN, and ANSI_NULLS. The most common difference observed is [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) is set to ON in SSMS but set to OFF in most database applications. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues. And the following warning message appears after the query runs:
 
 > [!WARNING]
 > The default ARITHABORT setting for SQL Server Management Studio is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in management studio but slow in the application. When troubleshooting queries with Management Studio, always match the client ARITHABORT setting.
