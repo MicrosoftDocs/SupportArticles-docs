@@ -15,12 +15,16 @@ metadata:
 
 landingContent:
   # Card
-  - title: Common issue and resolutions
+  - title: Contact Microsoft
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-          - text: Common issues and resolutions for Power Apps
-            url: common-issues-and-resolutions.md
+          - text: Power Apps Support
+            url: https://powerapps.microsoft.com/support
+          - text: Power Apps Community Forum
+            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+          - text: Power Apps Ideas Forum
+            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
 
   # Card
   - title: Debug Power Apps with Monitor
@@ -67,9 +71,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Best practices when updating a flow
+            url: best-practices-when-updating-a-flow.md
+          - text: Common issues and resolutions for Power Apps
+            url: common-issues-and-resolutions.md
           - text: Troubleshoot startup issues for Power Apps
             url: troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
             url: troubleshoot-power-query-issues.md
-          - text: Best practices when updating a flow
-            url: best-practices-when-updating-a-flow.md
