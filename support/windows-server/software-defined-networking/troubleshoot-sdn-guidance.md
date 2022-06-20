@@ -44,9 +44,9 @@ The network controller communicates with two host agent services on the Hyper-V 
 Get-Service SlbHostAgent
 Get-Service NcHostAgent
 
-# (Re)start requires -Force flag
-Start-Service NcHostAgent -Force
-Start-Service SlbHostAgent -Force
+# Start
+Start-Service NcHostAgent
+Start-Service SlbHostAgent
 ```
 
 ### Check health of network controller
