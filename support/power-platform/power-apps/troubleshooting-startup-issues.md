@@ -57,11 +57,11 @@ This article helps fix common configuration problems that prevent [Power Apps](h
     > Client date/time: \<Client Time>Thh:mm:ss.sssZ  
     > Version: 2.0.602  
     > Session ID: xxxx-xxxxx-xxxxxxx--xxxxxxxx  
-    > description: {"error":{"detail":{"exception":{}},"colno":0,"filename":"<https://paaeuscdn.azureedge.net/v2.0.602.0/studio/openSource/modified/winjs/js/base.js?v=39de0f2edf1>...",  
+    > description: {"error":{"detail":{"exception":{}},"colno":0,"filename":"<`https://paaeuscdn.azureedge.net/v2.0.602.0/studio/openSource/modified/winjs/js/base.js?v=39de0f2edf1`>...",  
     > "lineno":0,"message":"Script error","initErrorEvent":"[function]","bubbles":false,"cancelBubble":false,"cancelable":false,"currentTarget":"[window]", "defaultPrevented":true,  
     > "eventPhase":2,"isTrusted":true,"srcElement":"[window]","target":"[window]","timeStamp":1490711965955,"type":"error","initEvent":"[function]","preventDefault":"  [function]",  
     > "stopImmediatePropagation":"[function]","stopPropagation":"[function]","AT_TARGET":2,"BUBBLING_PHASE":3,"CAPTURING_PHASE":1},"errorLine":0,"errorCharacter":0,  
-    > "errorUrl":"<https://paaeuscdn.azureedge.net/v2.0.602.0/studio/openSource/modified/winjs/js/base.js?v=39de0f2edf1>... error","setPromise":"[function]","exception":{}}  
+    > "errorUrl":"<`https://paaeuscdn.azureedge.net/v2.0.602.0/studio/openSource/modified/winjs/js/base.js?v=39de0f2edf1`>... error","setPromise":"[function]","exception":{}}  
     > stack: null  
     > errorNumber: 0  
     > errorMessage: Script error

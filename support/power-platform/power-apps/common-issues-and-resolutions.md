@@ -71,7 +71,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    This change was an intentional as the prefix did not serve any practical purpose. Existing data sources will not be affected, but any newly added SQL data sources will not include the prefix. If you need to update a large number of formulas in one of your apps, the [Power Apps Source File Pack and Unpack Utility](https://powerapps.microsoft.com/blog/source-code-files-for-canvas-apps/) can be used to do a global search-and-replace.
 
-   Starting in version 3.21054, we will automatically update broken legacy name references to the new data source name after reading the data source.
+   Starting in version 3.21054, we will automatically update broken legacy name references to the new data source name after reaading the data source.
 
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
 
