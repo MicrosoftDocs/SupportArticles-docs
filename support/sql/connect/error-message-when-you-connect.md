@@ -1,7 +1,7 @@
 ---
 title: Error message when you connect to SQL Server 
 description: This article provides resolutions for the problem that occurs when you connect to SQL Server using SSL.
-ms.date: 09/25/2020
+ms.date: 20/06/2022
 ms.custom: sap:Connection issues
 ms.reviewer: kayokon, masank
 ms.technology: sql-engine-connectionissues
@@ -104,11 +104,11 @@ For scenarios 1 and 2: Set **Trust Server Certificate** setting to _true_ in you
 
 For more information on how to do this, review the following topics:
 
-- [Using Encryption Without Validation in SQL Server Native Client](/sql/relational-databases/native-client/features/using-encryption-without-validation?view=sql-server-ver16&preserve-view=true)
+- [Using Encryption Without Validation in SQL Server Native Client](/sql/relational-databases/native-client/features/using-encryption-without-validation)
 
-- [Connecting with encryption using Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/connecting-with-ssl-encryption?view=sql-server-ver16&preserve-view=true)
+- [Connecting with encryption using Microsoft JDBC driver for SQL Server](/sql/connect/jdbc/connecting-with-ssl-encryption)
 
-- [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted?view=sql-server-ver16&preserve-view=true)
+- [Using Encryption with Sqlclient](/sql/connect/ado-net/sql/sqlclient-support-always-encrypted)
 
 > [!NOTE]
 > If you are using SQL Server Management Studio, you can click on the **Options** tab, and check the box **Trust Server certificate** option in the **Connection Properties** tab.
@@ -123,4 +123,4 @@ If the configuration discussed in the previous sections of this article is unint
 
   - Disable encryption settings (if any) in your client application.
 
-  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](/sql/relational-databases/sql-server-configuration-manager?view=sql-server-ver16#manage-server--client-network-protocols&preserve-view=true).
+  - Disable server-side encryption using SQL Server Configuration manager. For more information on how to do this, review [Configure Server](/sql/relational-databases/sql-server-configuration-manager#manage-server--client-network-protocols).
