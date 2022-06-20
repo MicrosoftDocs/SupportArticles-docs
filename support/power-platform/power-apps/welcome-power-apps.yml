@@ -60,6 +60,18 @@ landingContent:
             url: regenerate-ribbon-metadata.md
 
   # Card
+  - title: Contact Microsoft support
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Apps support
+            url: https://powerapps.microsoft.com/support
+          - text: Power Apps Community forum
+            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+          - text: Power Apps Ideas forum
+            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
+            
+   # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
@@ -68,15 +80,3 @@ landingContent:
             url: /powerapps/
           - text: Power Apps training
             url: /learn/powerplatform/power-apps
-
-  # Card
-  - title: Contact Microsoft
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Power Apps Support
-            url: https://powerapps.microsoft.com/support
-          - text: Power Apps Community Forum
-            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
-          - text: Power Apps Ideas Forum
-            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
