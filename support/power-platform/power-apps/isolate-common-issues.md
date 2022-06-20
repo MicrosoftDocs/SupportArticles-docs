@@ -1,8 +1,7 @@
 ---
-title: Think like a debugger
+title: General Power Apps debugging strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
-
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom:
@@ -17,37 +16,32 @@ contributors:
   - tahoon
 ---
 
-# Think like a debugger
+# General Power Apps debugging strategies
 
-It's common to run into issues when making apps. Having a debugging mindset will help you narrow down the cause, fix them, and find workarounds. Even if you are not able to solve an issue, others can help you more easily with the information you uncover.
+It's common to run into issues when making apps. Debugging strategies help you narrow down the cause, fix them, and find workarounds. Even if you are not able to solve an issue, you can seek help more easily with the information collected through debugging practices.
 
-These are some techniques to isolate problems in an app.
-
-
-## General strategies
-
-### Change one thing at a time
+## Isolate changes
 
 When multiple changes are made, it's not obvious which ones contribute to a problem. Try reverting to the last known working state and make a single change. If it works fine, revert the change and make another one until the issue happens. For example, you can [restore a canvas app to a previous version](/power-apps/maker/canvas-apps/restore-an-app) and apply changes progressively.
 
-If you're unable to revert an app to a working state, it's also helpful to do one thing differently while keeping everything else the same. Some examples:
+If you're unable to revert an app to a working state, it's also helpful to make one change differently while keeping everything else the same.
+Here's a few examples:
 
-* View the same app on the same device, but with a different browser.
-* If data is not displaying correctly in a control, try showing it in a different type of control.
-* If a data connection is not working, try a different one.
+- View the same app on the same device, but with a different browser.
+- If data is not displaying correctly in a control, try displaying it in a different type of control.
+- If one data connection is not working, try another.
 
-Knowing what works is as important as knowing what doesn't. For example, if you can connect to one Dataverse table but not another, the table could be misconfigured. On the other hand, if you are not able to connect to any tables at all, it could be a Dataverse outage, Power Apps bug, or a network failure. These suggest other avenues for investigation and brings you closer to the source of the error.
+Knowing what works is as important as knowing what doesn't. For example, if you can connect to one Microsoft Dataverse table but not another, the table could be misconfigured. On the other hand, if you are not able to connect to any tables at all, it could be a larger problem with the possible causes as an outage, a network failure, or possibly a bug. These possibilities suggest additional avenues for investigation and help you get closer to the source of the error.
 
 ### Simplify
 
-A complex app has many things that could go wrong. An effective investigator removes unnecessary details so that there are less variables to worry about. It's also easier to show the problem to others. For example, if there are [client scripts in model-driven apps](/power-apps/developer/model-driven-apps/client-scripting), try disabling them. Even if the problem still occurs, one can eliminate that as the cause of the problem.
+A complex app has many components that might go wrong. Remove unnecessary details so that there are less variables to worry about. It's also helpful to discuss the problem with others. For example, if there are [client scripts in model-driven apps](/power-apps/developer/model-driven-apps/client-scripting), try disabling them. Even if the problem still persists, at least you'd eliminate those scripts as the cause of the problem.
 
 ### Start from scratch
 
-We can be blind to our own mistakes. It can be instructive to create a new app or configuration. This can be a simplified version, especially when the original is too complex to re-create. Think about the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app does not show the right records, try [re-creating the view](/developer/model-driven-apps/customize-entity-views).
+It's possible to be oblivious to common mistakes. For example, consider creating a new app or configuration. This process can be broken into multiple a simplified steps and checkpoints, especially when the original version is too complex to re-create. Consider the essence of the app and experiment with what works and what doesn't. For example, if a table in a model-driven app does not show the right records, try [re-creating the view](/developer/model-driven-apps/customize-entity-views).
 
-Should the new app work, compare it with the original to find the difference. If there is no difference, the problem might have been fixed with the latest version. Or, the original app might be corrupted. Even if you are unable to upgrade your app, knowing if and how the problem was fixed will guide next steps.
-
+If the new app works, compare it with the original to find the difference. If there is no difference, the problem might be fixed with the latest version. Or, the original app have configuration problems. Even if you are unable to upgrade your app, knowing if and how the problem was fixed will guide the next steps.
 
 ## Data issues
 
