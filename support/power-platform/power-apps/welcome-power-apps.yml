@@ -14,17 +14,20 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
   # Card
-  - title: Contact Microsoft
+  - title: Troubleshoot common Power Apps issues
     linkLists:
-      - linkListType: reference
+      - linkListType: how-to-guide
         links:
-          - text: Power Apps Support
-            url: https://powerapps.microsoft.com/support
-          - text: Power Apps Community Forum
-            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
-          - text: Power Apps Ideas Forum
-            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
+          - text: Best practices when updating a flow
+            url: best-practices-when-updating-a-flow.md
+          - text: Common issues and resolutions for Power Apps
+            url: common-issues-and-resolutions.md
+          - text: Troubleshoot startup issues for Power Apps
+            url: troubleshooting-startup-issues.md
+          - text: Troubleshoot Power Query issues
+            url: troubleshoot-power-query-issues.md
 
   # Card
   - title: Debug Power Apps with Monitor
@@ -47,16 +50,6 @@ landingContent:
             url: /power-apps/maker/monitor-advanced
 
   # Card
-  - title: Documentation and training
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Power Apps documentation
-            url: /powerapps/
-          - text: Power Apps training
-            url: /learn/powerplatform/power-apps
-
-  # Card
   - title: Ribbons and commanding
     linkLists:
       - linkListType: how-to-guide
@@ -67,15 +60,23 @@ landingContent:
             url: regenerate-ribbon-metadata.md
 
   # Card
-  - title: Troubleshoot common Power Apps issues
+  - title: Documentation and training
     linkLists:
-      - linkListType: how-to-guide
+      - linkListType: reference
         links:
-          - text: Best practices when updating a flow
-            url: best-practices-when-updating-a-flow.md
-          - text: Common issues and resolutions for Power Apps
-            url: common-issues-and-resolutions.md
-          - text: Troubleshoot startup issues for Power Apps
-            url: troubleshooting-startup-issues.md
-          - text: Troubleshoot Power Query issues
-            url: troubleshoot-power-query-issues.md
+          - text: Power Apps documentation
+            url: /powerapps/
+          - text: Power Apps training
+            url: /learn/powerplatform/power-apps
+
+  # Card
+  - title: Contact Microsoft
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Apps Support
+            url: https://powerapps.microsoft.com/support
+          - text: Power Apps Community Forum
+            url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+          - text: Power Apps Ideas Forum
+            url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
