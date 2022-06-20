@@ -4,7 +4,6 @@ description: Provides resolutions for the error that occurs when you use Power Q
 author: mllopis
 manager: kfile
 ms.component: cds
-ms.topic: conceptual
 ms.date: 05/16/2018
 ms.subservice: troubleshoot
 ms.author: millopis
