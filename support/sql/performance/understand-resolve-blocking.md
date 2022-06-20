@@ -39,9 +39,9 @@ For queries executed within a transaction, the duration for which the locks are 
 
 When locking and blocking persists to the point where there's a detrimental effect on system performance, it's due to one of the following reasons:
 
-* A SPID holds locks on a set of resources for an extended period of time before releasing them. This type of blocking resolves itself over time but can cause performance degradation.
+* An SPID holds locks on a set of resources for an extended period of time before releasing them. This type of blocking resolves itself over time but can cause performance degradation.
 
-* A SPID holds locks on a set of resources and never releases them. This type of blocking doesn't resolve itself and prevents access to the affected resources indefinitely.
+* An SPID holds locks on a set of resources and never releases them. This type of blocking doesn't resolve itself and prevents access to the affected resources indefinitely.
 
 In the first scenario, the situation can be very fluid as different SPIDs cause blocking on different resources over time, creating a moving target. These situations are difficult to troubleshoot using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms) to narrow down the issue to individual queries. In contrast, the second situation results in a consistent state that can be easier to diagnose.
 
@@ -314,7 +314,7 @@ By examining the above information, you can determine the cause of most blocking
 
   * Other columns
 
-    The remaining columns in [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_exec_request](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) can provide insight into the root of a problem as well. Their usefulness varies depending on the circumstances of the problem. For example, you can determine if the problem happens only from certain clients (`hostname`), on certain network libraries (`client_interface_name`), when the last batch submitted by a SPID was `last_request_start_time` in `sys.dm_exec_sessions`, how long a request had been running using `start_time` in `sys.dm_exec_requests`, and so on.
+    The remaining columns in [sys.dm_exec_sessions](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql) and [sys.dm_exec_request](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) can provide insight into the root of a problem as well. Their usefulness varies depending on the circumstances of the problem. For example, you can determine if the problem happens only from certain clients (`hostname`), on certain network libraries (`client_interface_name`), when the last batch submitted by an SPID was `last_request_start_time` in `sys.dm_exec_sessions`, how long a request had been running using `start_time` in `sys.dm_exec_requests`, and so on.
 
 ## Common blocking scenarios
 
@@ -384,7 +384,7 @@ Use the script earlier in this article based on `sys.dm_tran_active_transactions
 
   * If connection pooling is being used in an application that opens the connection and runs a few queries before releasing the connection back to the pool, such as a Web-based application, temporarily disabling connection pooling may help alleviate the problem until the client application is modified to handle the errors appropriately. By disabling connection pooling, releasing the connection will cause a physical disconnect of the SQL Server connection, resulting in the server rolling back any open transactions.
 
-  * Use `SET XACT_ABORT ON` for the connection or for any stored procedures that begin transactions and aren't cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
+  * Use `SET XACT_ABORT ON` for the connection or in any stored procedures that begin transactions and aren't cleaning up following an error. In the event of a run-time error, this setting will abort any open transactions and return control to the client. For more information, review [SET XACT_ABORT (Transact-SQL)](/sql/t-sql/statements/set-xact-abort-transact-sql).
 
 > [!NOTE]
 > The connection isn't reset until it's reused from the connection pool, so it's possible that a user could open a transaction and then release the connection to the connection pool, but it might not be reused for several seconds, during which time the transaction would remain open. If the connection isn't reused, the transaction will be aborted when the connection times out and is removed from the connection pool. Thus, it's optimal for the client application to abort transactions in their error handler or use `SET XACT_ABORT ON` to avoid this potential delay.
@@ -463,7 +463,7 @@ A data modification query that is killed, or canceled outside of a user-defined 
 
 You must wait for the session to finish rolling back the changes that were made.
 
-If the instance is shut down in the middle of this operation, the database will be in recovery mode upon restarting, and it will be inaccessible until all open transactions are processed. Startup recovery takes essentially the same amount of time per transaction as run-time recovery, and the database is inaccessible during this period. Thus, forcing the server down to fix a SPID in a rollback state will often be counterproductive. In SQL Server 2019 with Accelerated Database Recovery enabled, this shouldn't occur.
+If the instance is shut down in the middle of this operation, the database will be in recovery mode upon restarting, and it will be inaccessible until all open transactions are processed. Startup recovery takes essentially the same amount of time per transaction as run-time recovery, and the database is inaccessible during this period. Thus, forcing the server down to fix an SPID in a rollback state will often be counterproductive. In SQL Server 2019 with Accelerated Database Recovery enabled, this shouldn't occur.
   
 To avoid this situation, don't perform large batch write operations or index creation or maintenance operations during busy hours on OLTP systems. If possible, perform such operations during periods of low activity.
 
@@ -473,7 +473,7 @@ This is a common problem scenario and overlaps partly with [Scenario 2](#scenari
 
 In this scenario, while the execution of a SQL batch has been canceled, the application leaves the SQL transaction open. From the SQL Server instance's perspective, the client still appears to be present, and any locks acquired are retained.
 
-To demonstrate an orphaned transaction, execute the following query, which simulates a batch-aborting error by inserting it into a non-existent table:
+To demonstrate an orphaned transaction, execute the following query, which simulates a batch-aborting error by inserting data into a non-existent table:
 
 ```sql
 CREATE TABLE #test2 (col1 INT);
