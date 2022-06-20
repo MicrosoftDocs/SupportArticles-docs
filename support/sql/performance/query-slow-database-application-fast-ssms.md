@@ -1,6 +1,6 @@
 ---
-title: Query is slow in database application but fast in SSMS
-description: Troubleshoots the performance issue where query is slow in database application but fast in SSMS.
+title: Query is slower in database application than in SSMS
+description: Troubleshoot the performance issue where a query is slower in a database application than in SSMS.
 ms.date: 06/20/2022
 ms.custom: sap:Performance
 ms.reviewer: jopilov
