@@ -54,7 +54,7 @@ In Power Apps, you access the Query Editor by doing the following:
 
 1. Go to the **Data** pane, expand it, and then select **Tables**.
 2. Select the ellipsis (...), and then select **Edit Queries**.
-3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.
+3. In the ribbon, select **Options**, and then select **Export Diagnostics**.
 
 ## Delete personal data
 
@@ -63,13 +63,13 @@ Most data is deleted automatically within 30 days. For data and metadata around 
 To remove mashups from Power Apps:
 
 1. Remove the Data Integrator projects, which can be removed from the namesake tab.
-2. Select the ellipsis (...), and then select the **Delete** option.
+2. Select the ellipsis (...), and then select **Delete**.
 
 If you created a mashup through the "New tables from data (Technical Preview)" feature, you can remove it by doing the following:
 
 1. Select the ellipsis (...), and then select **Edit queries**.
-2. In the ribbon, select the **Options** button.
-3. Select the **Remove all queries** button.  
+2. In the ribbon, select **Options**.
+3. Select **Remove all queries**.  
     After you confirm that you want to delete your queries, they are deleted.
 
 ## Export personal data
@@ -77,13 +77,13 @@ If you created a mashup through the "New tables from data (Technical Preview)" f
 To export personal data, users can do the following:
 
 1. Open the Query Editor.
-2. In the ribbon, select the **Options** button.
-3. Select the **Export Diagnostics** button.
+2. In the ribbon, select **Options**.
+3. Select **Export Diagnostics**.
 
 In Power Apps, you can access the Query Editor by doing the following:
 
 1. Go to the **Data** pane, expand it, and then select **Tables**.
 2. Select the ellipsis (...), and then select **Edit Queries**.
-3. In the ribbon, select the **Options** button, and then select the **Export Diagnostics** button.
+3. In the ribbon, select **Options**, and then select **Export Diagnostics**.
 
 System-generated logs about user actions on the user interface (UI) can be accessed in the Azure portal.

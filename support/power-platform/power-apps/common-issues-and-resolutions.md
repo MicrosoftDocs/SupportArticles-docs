@@ -76,7 +76,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Black box covering part of embedded canvas app** (June 11, 2020)
 
-   When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users many see a black box when scrolling covering part of the app. This issue happens with chromium-based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
+   When using embedded canvas apps such as SharePoint forms, SharePoint web parts, and model driven forms, users may see a black box when scrolling covering part of the app. This issue happens with chromium-based browsers starting with version 83. There is not a workaround at this time. The team is actively investigating to find a fix and workaround. **A workaround in Power Apps was deployed in the week of 6/21/2020. In addition, the issue is fixed for Microsoft Edge based on Chromium with version 85.**
 
 1. **Problems downloading attachments in SharePoint forms** (May 22, 2020)
 
@@ -92,7 +92,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Camera images do not contain meta-data information** (January 20, 2020)
 
-    When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this, use the [Add picture control](/power-apps/maker/canvas-apps/controls/control-add-picture).
+    When using the camera control, the image does not contain meta-data information. This is due to a limitation of how we take images with the camera. To mitigate this issue, use the [Add picture control](/power-apps/maker/canvas-apps/controls/control-add-picture).
 
 1. **Images added from iOS do not contain meta-data information** (January 20, 2020)
 
@@ -102,13 +102,13 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     If you run into a limitation when you scroll with your finger, lift it and start to scroll again.
 
-1. **Republishing apps** (Aug. 2, 2018)
+1. **Republishing apps** (August 2, 2018)
 
     If you haven't updated your app in several months, republish it to sync with the most recent version of Power Apps, which includes performance improvements and other fixes.
 
 1. **Browser running out of memory** (July 23, 2018)
 
-    If you run out of memory while using Power Apps, consider downloading a 64-bit version of Chrome or Microsoft Edge.
+    If you run out of memory while using Power Apps, consider downloading a 64-bit version of Google Chrome or Microsoft Edge.
 
 1. **Combo box controls in galleries** (May 3, 2018)
 
@@ -144,7 +144,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Scanning a barcode**
 
-    For information about limitations and best practices when you use a **Barcode** control, see [Barcode scanner control in Power Apps](/power-apps/maker/canvas-apps/controls/control-new-barcode-scanner).
+    For more information about limitations and best practices when you use a **Barcode** control, see [Barcode scanner control in Power Apps](/power-apps/maker/canvas-apps/controls/control-new-barcode-scanner).
 
 1. **Changing a Title field in a table**
 
@@ -200,11 +200,11 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     In certain devices and scenarios, you may experience sign-in failures when using authenticator. This is due to the OEM limiting this functionality. For more information, see [ADALError: BROKER_AUTHENTICATOR_NOT_RESPONDING](https://github.com/AzureAD/azure-activedirectory-library-for-android/wiki/ADALError:-BROKER_AUTHENTICATOR_NOT_RESPONDING).
 
-1. **Camera issue on Android mobile devices** (Jan. 1, 2019)
+1. **Camera issue on Android mobile devices** (January 1, 2019)
 
     If the camera control stops working on an Android device, republish your app, and reopen it on the device. The camera control was updated in response to a change in the Android operating system, and your app will benefit from the update when you republish.
 
-1. **Multiple media controls in Power Apps Mobile** (Aug. 2, 2018)
+1. **Multiple media controls in Power Apps Mobile** (August 2, 2018)
 
     Power Apps Mobile runs on various types of devices, and some of them have limitations that are specific to that platform:
 
@@ -237,7 +237,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    While offline, formula `Connection.Connected` may wrongly return **true** immediately after starting an app in the Windows app. As a workaround, delay when the logic depending on it is executed by using a **Timer** control.
 
-1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (Sep. 24, 2018)
+1. **Drawing with mouse or touch input is not smooth in Power Apps for Windows** (September 24, 2018)
 
     The pen control only has partial support for drawing using mouse or touch input in the Windows app. Strokes might be intermittent. For smooth drawing, use a pen or run the app in a browser.
 
