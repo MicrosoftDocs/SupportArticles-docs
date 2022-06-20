@@ -1,9 +1,9 @@
 ---
 title: Query is slow in database application but fast in SSMS
 description: Provides a resolution for the performance issue where query is slow in database application but fast in SSMS.
-ms.date: 06/16/2022
+ms.date: 06/20/2022
 ms.custom: sap:Performance
-ms.reviewer: 
+ms.reviewer: jopilov
 ms.prod: sql
 ---
 
@@ -133,7 +133,7 @@ There are [SET options](/sql/t-sql/statements/set-statements-transact-sql) that 
 > [!WARNING]
 > The default ARITHABORT setting for SQL Server Management Studio is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in Management Studio but slow in the application. When troubleshooting queries with Management Studio, always match the client ARITHABORT setting.
 
-For a list of all of plan-affecting options, see [Set Options](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql#set-options).
+For a list of all of plan-affecting options, see [Set options](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql#set-options).
 
 To ensure that the SET options in both SSMS and application are the same to be able to perform a valid comparison, follow these steps:
 

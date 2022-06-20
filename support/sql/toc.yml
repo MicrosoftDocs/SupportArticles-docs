@@ -431,7 +431,7 @@
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
     - name: Winsock LSP results in network or stability issues
       href: performance/winsock-lsp-network-problem.md
-    - name: Slower query in production application than SSMS
+    - name: Slower query in database application than SSMS
       href: performance/query-slow-database-application-fast-ssms.md
   - name: Replication, change tracking, change data capture
     items:
