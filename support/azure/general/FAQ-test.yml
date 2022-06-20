@@ -47,7 +47,7 @@ sections:
       - question: |
           I cannot create or delete a web app due to a permission error. What are the permissions that I need to create or delete a web app?
         answer: |
-          You would need minimum Contributor access on the Resource Group to deploy App Services. If you have Contributor access only on Web plan and the web site, it won't allow you to create the app service in the Resource Group.
+          You would need minimum Contributor access on the Resource Group to deploy App Services. If you have Contributor access only on App Service Plan and web app, it won't allow you to create the app service in the Resource Group.
           
           For more information, see [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
           
@@ -58,19 +58,19 @@ sections:
           
           The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region can't exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group.
 
-          For more information, see [App Service limits - Item 5](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/).
+          For more information, see [App Service limits - Storage](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/).
 
       - question: |
           Is there a way to list the deleted web apps for my Subscription?
 
         answer: |
-          You can run `Get-AzDeletedWebApp` to get the list of the web apps that were deleted within 30 days in your Subscription ID. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. For more information, see [List deleted apps](https://docs.microsoft.com/azure/app-service/app-service-undelete#list-deleted-apps) for more information.
+          You can run `Get-AzDeletedWebApp` to get the list of the web apps that were deleted within 30 days in your Subscription ID. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. For more information, see [List deleted apps](https://docs.microsoft.com/azure/app-service/app-service-undelete#list-deleted-apps).
 
       - question: |
           How do I restore a deleted web app or a deleted App Service Plan?
 
         answer: |
-          If the web app hasn't been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`.  For more information, see [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore Deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088) for more information.
+          If the web app hasn't been deleted after 30 days, you can restore it using `Restore-AzDeletedWebApp`.  For more information, see [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore Deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
       
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
