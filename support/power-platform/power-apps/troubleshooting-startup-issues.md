@@ -3,7 +3,6 @@ title: Troubleshoot startup issues for Power Apps
 description: Provides resolutions for the common configuration issues that prevent Power Apps from starting.
 author: wimcoor
 ms.subservice: troubleshoot
-ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 01/31/2022
@@ -45,9 +44,9 @@ This article helps fix common configuration problems that prevent [Power Apps](h
 
     **Resolution**: To solve this issue, see [Enable third-party cookies and local data](#enable-storage-of-third-party-cookies-and-local-data-in-your-browser-or-app).
 
-- When you receive a “Hmmm … We couldn’t sign you in” error message and identifier that resembles the following image:
+- When you receive a "Hmmm … We couldn't sign you in" error message and identifier that resembles the following image:
 
-    :::image type="content" source="media/troubleshooting-startup-issues/we-could-not-sign-you-in-error.png" alt-text="We couldn’t sign you in (User Intervention Needed Navigate To A a d Denied) error message.":::
+    :::image type="content" source="media/troubleshooting-startup-issues/we-could-not-sign-you-in-error.png" alt-text="We couldn't sign you in (User Intervention Needed Navigate To A a d Denied) error message.":::
 
     **Resolution**: To solve this issue, see [Resolutions for common errors](#resolutions-for-common-errors) for different error variations and resolutions.
 

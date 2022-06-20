@@ -2,7 +2,6 @@
 title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
-ms.topic: conceptual
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/11/2022
@@ -53,10 +52,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Canvas apps using SharePoint connector** (February 23, 2022)
 
-    [Power Apps](https://make.powerapps.com) won’t show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
-    - You’re the creator of the app.  
+    [Power Apps](https://make.powerapps.com) won't show canvas apps connecting to SharePoint that are only shared with **Everyone**, unless:
+    - You're the creator of the app.  
       Or
-    - You’re explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment.
+    - You're explicitly shared the app with (as a user, or as a co-owner) through a group membership, or directly through the user assignment.
 
     To play such apps, use the direct link to the app.
 
@@ -132,7 +131,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Custom connectors and Microsoft Dataverse**
 
-    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you’ll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
+    If an app created using Power Apps build 2.0.540 or earlier relies on a database in the Dataverse and at least one custom connector in a different environment, you'll need to deploy the connector to the same environment as the database and update the app to use the new connector. Otherwise, a dialog box will notify users that the API was not found. For more information, see [Environments overview](/power-platform/admin/environments-overview).
 
 1. **Column names with spaces**
 
@@ -152,7 +151,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Apps that connect to on-premises SharePoint**
 
-    If you share an app that relies on connections that aren’t automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn’t appear if you open the app in Power Apps Studio or Power Apps Mobile. For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
+    If you share an app that relies on connections that aren't automatically shared (for example, an on-premises SharePoint site), users who open the app in a browser will see a dialog box with no text when they select or tap **Sign in**. To close the dialog box, select or tap the close (X) icon in the upper-right corner. The dialog box doesn't appear if you open the app in Power Apps Studio or Power Apps Mobile. For more information about shared connections, see [Share app resources](/power-apps/maker/canvas-apps/share-app-resources).
 
 1. **When Power Apps generates an app from data, the field used for sorting and searching isn't automatically configured**.
 
@@ -172,7 +171,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
 1. **Co-authoring isn't supported. One author at a time, please**.
 
-     You can corrupt an app or over-write others’ changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
+     You can corrupt an app or over-write others' changes if more than one person modifies the same app at the same time. Close the app before someone else edits it.
 
 1. **It can sometimes take a moment before a newly shared app can be used**.
 
@@ -225,7 +224,7 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    A pop-up dialog will show the following message in this situation:
 
-   > We can’t connect to the service you need right now. Check your network connection or try again later
+   > We can't connect to the service you need right now. Check your network connection or try again later
 
    When this issue happens, consider using web player on Windows platform.
 
