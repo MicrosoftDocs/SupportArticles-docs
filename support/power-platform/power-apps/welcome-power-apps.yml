@@ -71,7 +71,7 @@ landingContent:
           - text: Power Apps Ideas forum
             url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
             
-   # Card
+  # Card
   - title: Documentation and training
     linkLists:
       - linkListType: reference
