@@ -343,7 +343,7 @@ The solution to this blocking problem is to look for ways to optimize the query.
 
 Reports built-in to SSMS from the [Query Store](/sql/relational-databases/performance/best-practice-with-the-query-store) (introduced in SQL Server 2016) are also a highly recommended and valuable tool for identifying the most costly queries and suboptimal execution plans.
 
-If you have a long-running query blocking other users and can't be optimized, consider moving it from an OLTP environment to a dedicated reporting system. You can also use Always On availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
+If you have a long-running query blocking other users and it can't be optimized, consider moving it from an OLTP environment to a dedicated reporting system. You can also use Always On availability groups to synchronize a [read-only replica of the database](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups).
 
 > [!NOTE]
 > Blocking during query execution could be caused by query escalation, a scenario when row or page locks escalated to table locks. Microsoft SQL Server dynamically determines when to perform lock escalation. The simplest and safest way to prevent lock escalation is to keep transactions short and to reduce the lock footprint of expensive queries so that the lock escalation thresholds aren't exceeded. For more information on detecting and preventing excessive lock escalation, see [Resolve blocking problem caused by lock escalation](resolve-blocking-problems-caused-lock-escalation.md).
@@ -370,7 +370,7 @@ ROLLBACK TRAN
 DROP TABLE #test;
 ```
 
-The output of the second query indicates that the transaction count is one. All the locks acquired in the transaction are still be held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state.
+The output of the second query indicates that the transaction count is one. All the locks acquired in the transaction are still held until the transaction was committed or rolled back. If applications explicitly open and commit transactions, a communication or other error could leave the session and its transaction in an open state.
 
 Use the script earlier in this article based on `sys.dm_tran_active_transactions` to identify currently uncommitted transactions across the instance.
 
