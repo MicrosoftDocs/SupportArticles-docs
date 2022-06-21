@@ -45,14 +45,14 @@ sections:
           To stop all billing associated with your App Service, you need to delete the App Service Plan or scale the App Service Plan to the free tier. For more information, see [How much does my App Service Plan cost?](https://docs.microsoft.com/azure/app-service/overview-hosting-plans#how-much-does-my-app-service-plan-cost) and [Plan and manage costs for Azure App Service](https://docs.microsoft.com/azure/app-service/overview-manage-costs).
           
       - question: |
-          I cannot create or delete a web app due to a permission error. What are the permissions that I need to create or delete a web app?
+          I cannot create or delete a web app due to a permission error. What the permissions do I need to create or delete a web app?
         answer: |
           You would need minimum Contributor access on the Resource Group to deploy App Services. If you have Contributor access only on App Service Plan and web app, it won't allow you to create the app service in the Resource Group.
           
           For more information, see [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
           
       - question: |
-         I'm trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage?
+         I'm trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage limit?
         answer: |
           During the deletion process, we calculate the usage of the remaining App Service Plans. If they are above the remaining limit, then this error appears. 
           
