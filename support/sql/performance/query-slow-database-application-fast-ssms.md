@@ -112,7 +112,7 @@ To exclude the time clients spend fetching results over the network or some appl
 
 - Use XEvent or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to see the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
 
-The time difference between the queries could be caused by one application in a different network, and there could be a network delay. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
+In some cases the time difference between the queries could be caused by one application running in a different network or the application itself. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
 
 ## Step 3: Check SET options for each connection
 
