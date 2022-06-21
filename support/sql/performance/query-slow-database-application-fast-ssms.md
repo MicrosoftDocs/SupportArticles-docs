@@ -9,7 +9,7 @@ ms author: jopilov
 ms.prod: sql
 ---
 
-# Troubleshoot query performance between database application and SSMS
+# Troubleshoot query performance difference between database application and SSMS
 
 When you execute a query in a database application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS).
 
