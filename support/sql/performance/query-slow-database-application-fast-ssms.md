@@ -83,7 +83,7 @@ For more information about the identical queries, see the following examples:
 
   - `SpUserProc @p1 = 270`
 
-- The following queries are different:
+- The following queries are different. The first query uses Average Density from the histogram for cardinality estimation, while the second query uses histogram step for cardinality estimation: 
 
   - ```sql
     declare @variable1 = 123
