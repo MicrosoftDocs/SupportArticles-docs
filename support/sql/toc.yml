@@ -432,7 +432,7 @@
     - name: Winsock LSP results in network or stability issues
       href: performance/winsock-lsp-network-problem.md
     - name: Slower query in database application than in SSMS
-      href: performance/query-slow-database-application-fast-ssms.md
+      href: performance/troubleshoot-application-slow-ssms-fast.md
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
