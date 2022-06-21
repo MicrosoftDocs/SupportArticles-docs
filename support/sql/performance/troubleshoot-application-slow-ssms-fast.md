@@ -112,11 +112,11 @@ To exclude the time clients spend fetching results over the network or some appl
 
 - Use XEvent or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to see the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
 
-In some cases the time difference between the queries could be caused by one application running in a different network or the application itself. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
+In some cases, the time difference between the queries could be caused by one application running in a different network or the application itself. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
 
 ## Step 3: Check SET options for each connection
 
-There are [SET options](/sql/t-sql/statements/set-statements-transact-sql) that are query-plan affecting, which means they can change the choice of query plan. Therefore, if a database application uses different set options from SSMS, each set option can get a different query plan. For example, ARITHABORT, NUMERIC_ROUNDABORT, ROWCOUNT, FORCEPLAN, and ANSI_NULLS. The most common difference observed is [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) is set to ON in SSMS but set to OFF in most providers. Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.
+There are [SET options](/sql/t-sql/statements/set-statements-transact-sql) that are query-plan affecting, which means they can change the choice of query plan. Therefore, if a database application uses different set options from SSMS, each set option can get a different query plan. For example, ARITHABORT, NUMERIC_ROUNDABORT, ROWCOUNT, FORCEPLAN, and ANSI_NULLS. The most common difference observed between applications SSMS and a .NET for example is [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) option. By default the option is set to ON in SSMS but set to OFF in most database applications. Based on your application needs, SET ARITHABORT to the same setting in both SSMS and application for valid comparison between the two.
 
 > [!WARNING]
 > The default ARITHABORT setting for SQL Server Management Studio is ON. Client applications setting ARITHABORT to OFF might receive different query plans, making it difficult to troubleshoot poorly performing queries. That is, the same query might execute fast in Management Studio but slow in the application. When troubleshooting queries with Management Studio, always match the client ARITHABORT setting.
