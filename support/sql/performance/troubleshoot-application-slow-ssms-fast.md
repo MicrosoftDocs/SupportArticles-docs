@@ -17,7 +17,7 @@ This issue may occur for the following reasons:
 
 - Queries use different parameters or variables.
 
-- Queries are submitted to the server over different networks.
+- Queries are submitted to the server over different networks or there is a difference how the applications process data. 
 
 - SET options in the database application and SSMS are different.
 
@@ -78,7 +78,7 @@ To compare these queries and make sure they're identical in every way, follow th
 
 For more information about the identical queries, see the following examples:
 
-- If the stored procedures or functions have different parameter values, the queries times may be different:
+- If the stored procedures or functions have different parameter values, the query times may be different:
 
   - `SpUserProc @p1 = 100`
 
@@ -99,7 +99,7 @@ For the same reason as above, comparing the execution of a stored procedure to t
 
 ## Step 2: Measure the execution time on the server
 
-To exclude the time clients spend fetching results over the network or some application-specific data processing, you can only measure the execution time on the server for accurate comparison. Use one of the following methods:
+For accurate comparison of query durations, you can exclude the network latency time or application-specific data processing time. Use one of the following methods to measure only the execution time on the SQL Server:
 
 - Run your query by using [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql):
 
@@ -111,7 +111,7 @@ To exclude the time clients spend fetching results over the network or some appl
     SET STATISTICS TIME OFF
     ```
 
-- Use XEvent or [SQL Trace](/sql/relational-databases/sql-trace/sql-trace) to see the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
+- Use the XEvent from [step 1](#step-1-verify-the-queries-are-submitted-with-the-same-parameters-or-variables) to examine the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
 
 In some cases, the time difference between the queries could be caused by one application running in a different network or the application itself. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
 
