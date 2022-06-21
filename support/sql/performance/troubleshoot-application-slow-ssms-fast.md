@@ -11,7 +11,7 @@ ms.prod: sql
 
 # Troubleshoot query performance difference between database application and SSMS
 
-When you execute a query in a production application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS).
+When you execute a query in a database application, it runs slower than the same query in an application like SQL Server Management Studio (SSMS), Azure Data Studio, or SQLCMD.
 
 This issue may occur for the following reasons:
 
@@ -52,19 +52,20 @@ To compare these queries and make sure they're identical in every way, follow th
     > [!NOTE]
     > Replace the placeholders \<EventSessionName> and \<FilePath> with the ones you want to create.
 
-1. In **Object Explorer**, expand **Management** > **Extended Events** > **Sessions**.
+1. Run the following commands to start the session **EventSessionName**:
 
-1. Right-click the **Sessions**, select **Refresh**, and then you can see the session **EventSessionName** you created.
-
-1. Right-click the session **EventSessionName**, select **Start Session**, and then the session **EventSessionName** will start to collect data.
+    ```sql
+    ALTER EVENT SESSION <EventSessionName> ON SERVER
+    STATE = START
+    ```
 
 1. Run your queries to reproduce the issue.
 
 1. Use one of the following methods to analyze the collected data:
 
-    - Right-click the session **EventSessionName**, and select **Watch Live Data**.
+    - Open Windows Explorer, find the target *.xel* file, and double-click on it. The file will be opened in another SSMS window that you can use to view and analyze.
 
-    - Under **EventSessionName**, right-click **package0.event_file**, and select **View Target Data...**.
+    - In **Object Explorer**, expand **Management** > **Extended Events** > **Sessions** > **EventSessionName**, right-click **package0.event_file**, and then select **View Target Data...**.
 
     - Find the location of the *.xel* files and read this file by using the function [sys.fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
 
@@ -83,7 +84,7 @@ For more information about the identical queries, see the following examples:
 
   - `SpUserProc @p1 = 270`
 
-- The following queries are different. The first query uses Average Density from the histogram for cardinality estimation, while the second query uses histogram step for cardinality estimation: 
+- The following queries are different. The first query uses Average Density from the histogram for cardinality estimation, while the second query uses histogram step for cardinality estimation:
 
   - ```sql
     declare @variable1 = 123
