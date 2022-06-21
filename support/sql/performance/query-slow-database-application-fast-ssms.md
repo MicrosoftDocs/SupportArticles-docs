@@ -77,7 +77,7 @@ To compare these queries and make sure they're identical in every way, follow th
 
 For more information about the identical queries, see the following examples:
 
-- If the stored procedures or functions have different parameter values, the queries are different:
+- If the stored procedures or functions have different parameter values, the queries times may be different:
 
   - `SpUserProc @p1 = 100`
 
