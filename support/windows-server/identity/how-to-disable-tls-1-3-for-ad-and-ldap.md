@@ -1,6 +1,6 @@
 ---
 title: How to disable TLS 1.3 for AD and LDAP
-description: Introduce how to disable TLS 1.3 for AD and LDAP to resolve compatibility issues.
+description: Introduces how to disable TLS 1.3 for AD and LDAP to resolve compatibility issues.
 author: Deland-Han
 ms.author: delhan
 ms.topic: troubleshooting
@@ -11,7 +11,7 @@ ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ---
 # How to disable TLS 1.3 for AD and LDAP
 
-The Windows updates KB5014668 and KB5014665 add support for Transport Layer Security (TLS) 1.3 when using LDAP over SSL or when issuing the `StartTLS` command. The updates are released on 6/21/2022.
+The Windows updates KB5014668 and KB5014665 add support for Transport Layer Security (TLS) 1.3 when using LDAP over SSL or issuing the `StartTLS` command. The updates were released on 6/21/2022.
 
 You may need to disable the TLS 1.3 support for compatibility reasons. This article introduces how to disable or re-enable the TLS 1.3 support.
 
