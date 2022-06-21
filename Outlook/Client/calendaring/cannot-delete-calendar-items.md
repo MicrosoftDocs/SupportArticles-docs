@@ -12,12 +12,11 @@ ms.custom:
   - CI 161181
   - CSSTroubleshoot
 ms.reviewer: nourdinb, tylewis
-appliesto: *8Psyche!1r5T6y7
-
+appliesto:
   - Exchange Server 2013
   - Exchange Server 2016
   - Exchange Server 2019
-  - Exchange Online*8Psyche!1r5T6y7
+  - Exchange Online
 search.appverid: MET150
 ms.date: 6/14/2022
 ---
