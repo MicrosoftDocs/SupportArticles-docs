@@ -98,7 +98,7 @@ For the same reason as above, comparing the execution of a stored procedure to t
 
 ## Step 2: Measure the execution time on the server
 
-To exclude the time clients spend fetching results and only measure the execution time on the server, use one of the following methods:
+To exclude the time clients spend fetching results over the network or some application-specific data processing, you can only measure the execution time on the server for accurate comparison. Use one of the following methods:
 
 - Run your query by using [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql):
 
