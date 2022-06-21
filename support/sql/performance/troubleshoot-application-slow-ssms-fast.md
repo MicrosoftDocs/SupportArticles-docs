@@ -111,7 +111,7 @@ For accurate comparison of query durations, you can exclude the network latency 
     SET STATISTICS TIME OFF
     ```
 
-- Use the XEvent from [step 1](#step-1-verify-the-queries-are-submitted-with-the-same-parameters-or-variables) to examine the duration and elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
+- Use the XEvent from [step 1](#step-1-verify-the-queries-are-submitted-with-the-same-parameters-or-variables) to examine the duration/elapsed time of a query (event class `SQL:StmtCompleted`, `SQL:BatchCompleted`, or `RPC:Completed`).
 
 In some cases, the time difference between the queries could be caused by one application running in a different network or the application itself. When you compare the execution on the server, you're comparing how long the queries took to run on the server.
 
