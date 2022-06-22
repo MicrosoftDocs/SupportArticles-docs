@@ -103,7 +103,7 @@ To make sure that jobs continue to run as scheduled, follow these steps on the D
 
 ## Additional steps if the upgrade installation fails
 
-If the upgrade installation fails, and the program doesn't roll back, you must restore a working version of DPM 2012 SP1 before you can try to install the upgrade again. To do this, follow these steps:
+If the upgrade installation fails, and the program doesn't roll back, you must restore a working version of DPM 20xx before you can try to install the upgrade again. To do this, follow these steps:
 
 1. Locate the backup copy of your DPMDB file that you created before you started the upgrade process.
 2. If DPM is installed, uninstall it.
@@ -111,7 +111,7 @@ If the upgrade installation fails, and the program doesn't roll back, you must r
     > [!IMPORTANT]
     > Make sure that you maintain your data. To do this, select **Retain disk-based recovery points** on the **Uninstallation Options** page.
 
-3. Install DPM 2012 SP1. If you had any updates installed, reinstall them in the same sequence that you had installed them previously.
+3. Install DPM 20xx. If you had any updates installed, reinstall them in the same sequence that you had installed them previously.
 
     > [!NOTE]
     > We recommend that you mount the database from step 1, and then run the following query on the DPM database in Administrator mode to locate the sequence in which the updates were originally applied:
