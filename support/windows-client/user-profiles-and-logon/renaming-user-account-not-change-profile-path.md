@@ -48,4 +48,4 @@ To work around this issue, use the steps below to manually rename the profile pa
    > [!NOTE]
    > Replace \<User SID\> with the SID of your user account.
 
-4. Log out and log in again by using the user whose name is changed, and the user should use the pervious profile with new path name.
+4. Log out and log in again by using the user whose name is changed, and the user should use the previous profile with new path name.
