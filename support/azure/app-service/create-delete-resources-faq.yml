@@ -52,7 +52,7 @@ sections:
           For more information, see [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
           
       - question: |
-         I'm trying to delete my App Service Plan but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage limit?
+         I'm trying to delete my App Service Plan, but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage limit?
         answer: |
           During the deletion process, we calculate the usage of the remaining App Service Plans. If they are above the remaining limit, then this error appears. 
           
