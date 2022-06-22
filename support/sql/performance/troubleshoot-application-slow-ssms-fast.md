@@ -17,7 +17,7 @@ This issue may occur for the following reasons:
 
 - Queries use different parameters or variables.
 
-- Queries are submitted to the server over different networks or there is a difference how the applications process data. 
+- Queries are submitted to the server over different networks or there's a difference how the applications process data.
 
 - SET options in the database application and SSMS are different.
 
@@ -105,9 +105,7 @@ For accurate comparison of query durations, you can exclude the network latency 
 
     ```sql
     SET STATISTICS TIME ON
-
     <YourQuery>
-
     SET STATISTICS TIME OFF
     ```
 
