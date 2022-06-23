@@ -49,4 +49,4 @@ To resolve this issue, change your regional settings.
 1. Select **OK** and when prompted, restart Windows.
 1. Open Outlook. It should start without displaying the error message.
 1. Open the **Region Settings** dialog box again, uncheck the check box for **Beta: Use Unicode UTF-8 for worldwide language support** and restart your computer.
-<br>This step is recommended to avoid potential compatibility issues between the beta option and the applications installed on your computer.
+<br> This step is recommended to avoid potential compatibility issues between the beta option and the applications installed on your computer.
