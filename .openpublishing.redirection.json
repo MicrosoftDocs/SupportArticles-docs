@@ -2451,7 +2451,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/azure/general/index.md",
+      "source_path": "support/azure/app-service/index.md",
       "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
       "redirect_document_id": false
     },
