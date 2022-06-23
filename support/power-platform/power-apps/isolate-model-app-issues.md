@@ -2,9 +2,8 @@
 title: Isolate issues in model-driven apps
 description: Learn about techniques to narrow down the cause of errors in model-driven apps.
 author: tahoon
-
 ms.subservice: troubleshoot
-ms.topic: conceptual
+ms.topic: troubleshooting
 ms.custom:
 ms.reviewer:
 ms.date: 06/15/2022
@@ -16,7 +15,6 @@ search.app:
 contributors:
   - tahoon
 ---
-
 # Isolate issues in model-driven apps
 
 Model-driven apps are driven by configuration. You can give high-level instructions to generate an app. You can also introduce custom components that affect multiple parts of the app. When an app is not behaving as expected, it may not be obvious if it is a customization error or a bug in the Power Apps system.
@@ -26,13 +24,13 @@ Here are some techniques to isolate problems in a model-driven app.
 
 ## Remove customizations
 
-The following can affect normal operation. Try disabling or removing them and check whether the problem still occurs. [Learn more about finding and disabling customizations on forms](/power-apps/developer/model-driven-apps/troubleshoot-forms#use-url-parameters-to-disable-various-form-components).
+The following features can affect normal operation. Try disabling or removing them and check whether the problem still occurs. [Learn more about finding and disabling customizations on forms](/power-apps/developer/model-driven-apps/troubleshoot-forms#use-url-parameters-to-disable-various-form-components).
 
 ### Business rules
 
 **Affects**: Form pages
 
-[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1&preserve-view=true) change a form's behavior based on the state of a record. Try disabling or simplifying the rules and check if the form still works as expected.
+[Business rules](/dynamics365/customerengagement/on-premises/customize/create-business-rules-recommendations-apply-logic-form?view=op-9-1&preserve-view=true) change a form's behavior based on the state of a record. Try disabling or simplifying the rule and check if the form still works as expected.
 
 ### Client scripts
 
@@ -60,7 +58,7 @@ Administrators can [install plugins and create processes that modify the busines
 
 ## Compare with out-of-the-box configurations
 
-Tp help determine if something is a configuration error, it can be useful to check other parts of the app.
+To help determine if something is a configuration error, it can be useful to check other parts of the app.
 
 For example, does the problem happen with a different…
 
@@ -72,7 +70,7 @@ For example, does the problem happen with a different…
 
 Ideally, compare with an out-of-the-box one that has not been customized. For example, if the issue is with a table (entity) you created, check an out-of-the-box table.
 
-If the problem does not happen elsewhere, compare the differences with how they are configured. Perhaps table relationships and permissions are set up differently. Or a table is not enabled for Unified Client.
+If the problem does not happen elsewhere, compare the differences with how they are configured. Perhaps table relationships and permissions are set up differently. Or a table is not enabled for Unified Interface.
 
 ## Re-create items
 
@@ -86,7 +84,7 @@ If any of the following are not working, try re-creating them. It can be a simpl
 * Custom script
 
 
-## Find out if an issue is with getting data or showing data
+## Find out if the issue occurs when getting data or showing data
 
 When data is not showing correctly in an app, it could either be a server issue in providing the data, or an app issue in processing and displaying it. To narrow down the cause, you can try [general methods for isolating the problematic layer](isolate-common-issues.md#data-issues).
 
@@ -101,7 +99,7 @@ Model-driven apps have a complex data flow. Here are more advanced things to try
 
 Custom scripts are an advanced feature for developers. They can be used on [forms]((/power-apps/developer/model-driven-apps/client-scripting), [custom commands](/power-apps/maker/model-driven-apps/command-designer-overview), [Power Apps components](/power-apps/developer/component-framework/overview), and [webpage (HTML) web resources](/power-apps/developer/model-driven-apps/webpage-html-web-resources). There is enormous flexibility in what scripts can do, but there is also a high chance that they can accidentally break the system.
 
-If you suspect that a script is causing an issue,
+If you suspect that a script is causing an issue, follow these steps:
 
 1. Disable all custom scripts and see if the issue still happens.
 
@@ -127,4 +125,4 @@ If you suspect that a script is causing an issue,
 
 ### See also
 
-[Think like a debugger](isolate-common-issues.md)
+[General Power Apps debugging strategies](isolate-common-issues.md)
