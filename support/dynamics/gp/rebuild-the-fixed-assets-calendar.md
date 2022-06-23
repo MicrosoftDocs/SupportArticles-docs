@@ -22,7 +22,34 @@ Steps to rebuild the Fixed Assets calendar can be used as part of the troublesho
 > [!NOTE]
 > Users can use a different fiscal calendar for Fixed Assets than is used for the Microsoft Dynamics GP calendar.
 
-## Rebuild the Fixed Assets calendar
+In Dynamics GP 2013 RTM, you can set up the FA calendar based on the Company fiscal period setup, a calendar year or an existing FA calendar setup, and also build short/long years. The FA calendar doesn't need to match the Company fiscal period calendar. You can set up an unlimited number of FA Calendar IDs, but only one can be assigned to a Book and is locked down once it has been used. If you need to change the FA calendar from a calendar year to fiscal year or vice versa, it's recommended to edit the existing calendar ID for periods going forward only. You can't change the periods for historical years or a 'reset life' will cause damaged data. Therefore, only change the periods going forward, as outlined in the example in this blog:
+
+[Guidelines for fiscal period/year changes with Fixed Assets in Microsoft Dynamics GP 10 and 2010](https://community.dynamics.com/gp/b/dynamicsgp/posts/guidelines-for-fiscal-period-year-changes-with-fixed-assets-in-dynamics-gp-10-and-2010)
+
+## Microsoft Dynamics GP 2013 and later versions
+
+The calendar doesn't need to match the Company Fiscal period calendar. To rebuild the FA calendar, perform the following steps:
+
+1. Make a current backup first, for reference if needed.
+
+2. Go to **Microsoft Dynamics GP** > **Tools** > **Setup** > **Fixed Assets** > **Calendar**.
+
+3. Pull up the **Calendar ID** being used.
+
+4. Mark the **Build Calendar** checkbox.
+
+5. If you normally build from the Fiscal Year Setup, make sure that option is marked, or choose the appropriate option. (Current company fiscal period setup, a calendar year, or an existing FA calendar setup)
+
+6. Ensure the Years are set as **1901** to **2199**.
+
+    > [!NOTE]
+    > You must rebuild all years.
+
+7. Select **Build Calendar**.
+
+8. Once complete, select **Save**.
+
+## Microsoft Dynamics GP 2010 and prior versions
 
 To rebuild the Fixed Assets calendar when it differs from the Microsoft Dynamics GP calendar, follow these steps.
 
@@ -52,7 +79,7 @@ To rebuild the Fixed Assets calendar when it differs from the Microsoft Dynamics
    - In Microsoft Dynamics GP 9.0 or in earlier versions, point to **Setup** on the **Tools** menu, point to **Company**, and then select **Fiscal Periods**.
 
         > [!NOTE]
-        > If each year in Fixed Assets is the same, you have to set up only one year because the other years are modeled after this same year. If you want a stub year or a year that has a different period setup, you must set up those years in theMicrosoft Dynamics GP calendar.
+        > If each year in Fixed Assets is the same, you have to set up only one year because the other years are modeled after this same year. If you want a stub year or a year that has a different period setup, you must set up those years in the Microsoft Dynamics GP calendar.
 5. For the appropriate year, enter the **First Day**, enter the **Last Day**, enter the **Number of Periods**, and then select **Calculate**.
 6. When you set up all the fiscal periods, select **OK**.
 7. Build the Fixed Assets calendar. To do it, follow the appropriate step:
