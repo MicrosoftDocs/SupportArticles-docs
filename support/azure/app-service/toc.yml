@@ -1,8 +1,8 @@
 - name: Azure App Service
   items:
-  - name: Azure App Service
+  - name: Troubleshoot Azure App Service
     href: ./welcome-app-service.yml
-  - name: Create or delete web apps FAQ
+  - name: Create or delete web apps FAQs
     href: ./create-delete-resources-faq.yml
   - name: Availability, performance, and application FAQs
     href: web-apps-performance-faqs.md
