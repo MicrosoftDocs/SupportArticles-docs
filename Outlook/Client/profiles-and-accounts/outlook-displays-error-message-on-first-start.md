@@ -7,7 +7,13 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
-- Outlook
+- Outlook for Office 365
+- Outlook 2021
+- Outlook 2019
+- Outlook 2016
+- Exchange Online
+- Windows 11
+- Windows 10
 author: cloud-writer
 ms.author: meerak
 search.appverid: MET150
@@ -18,7 +24,7 @@ ms.date: 6/23/2022
 
 ## Symptoms
 
-After you successfully add your email account to Microsoft Outlook, and start Outlook for the first time, the following error message is displayed:
+After you successfully add your Microsoft Exchange email account to Microsoft Outlook, and start Outlook for the first time, the following error message is displayed:
 
 > An unexpected error has occurred.
 
@@ -43,4 +49,4 @@ To resolve this issue, change your regional settings.
 1. Select **OK** and when prompted, restart Windows.
 1. Open Outlook. It should start without displaying the error message.
 1. Open the **Region Settings** dialog box again, uncheck the check box for **Beta: Use Unicode UTF-8 for worldwide language support** and restart your computer.
-This step is recommended to avoid potential compatibility issues between the beta option and the applications installed on your computer.
+<br> This step is recommended to avoid potential compatibility issues between the beta option and the applications installed on your computer.

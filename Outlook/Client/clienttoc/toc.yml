@@ -569,8 +569,6 @@
           href: ../profiles-and-accounts/outlook-displays-error-message-on-first-start.md          
         - name: Outlook doesn't connect or web services don't work after migration
           href: ../profiles-and-accounts/cannot-connect-web-service-not-working-migrated-to-office-365.md
-        - name: Outlook fails to start
-          href: ../profiles-and-accounts/starting-outlook-displays-error.md
         - name: '"Refresh Your PC without affecting your file" option deletes Outlook profile'
           href: ../profiles-and-accounts/refresh-your-pc-without-affecting-your-file-deletes-profile.md
         - name: Remove automapping for shared mailbox
