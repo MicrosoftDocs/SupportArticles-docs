@@ -110,7 +110,7 @@ Then, delete any corrupted or cached certificates. To do this, follow these step
 
 Organizations that have on-premises customer password policies may allow for passwords to exceed 16 characters. By default, the password policy in Office 365 restricts passwords to 16 characters or less. Because of the Windows Challenge/Response (NTLM) authentication mechanism in the Mac OS, passwords that are longer than 16 characters aren't recognized correctly, and this causes sign-in to fail.
 
-To work around this issue, the user should change his or her password to be 16 characters or less.
+To work around this issue, the user should change the password to be 16 characters or less.
 
 #### Lync for Mac crashes and the user receives an EXC_BAD_ACCESS error
 

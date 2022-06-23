@@ -66,7 +66,7 @@ A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP 
 
 Example:
 
-A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Office 365 (john.work@contoso.com). John has set up autoforwarding to his home email address (john.home@example.com).
+A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Office 365 (john.work@contoso.com). John has set up autoforwarding to the home email address (john.home@example.com).
 
 ||Original message|Autoforwarded message|
 |---|---|---|
@@ -90,7 +90,7 @@ bounces+SRS=<Hash>=<Timestamp>@<Default Accepted Domain>
 
 Example
 
-A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on his company's own server that is running Exchange Server. John has set up autoforwarding to his home email address (john.home@example.com).
+A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on company's own server that is running Exchange Server. John has set up auto-forwarding to the home email address (john.home@example.com).
 
 |Type|Original message|Relayed message received by Office 365|Relayed message sent from Office 365|
 |---|---|---|---|
