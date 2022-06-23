@@ -2421,8 +2421,8 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/general/web-apps-deployment-faq.md",
-      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faq",
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
       "redirect_document_id": true
     },
     {
