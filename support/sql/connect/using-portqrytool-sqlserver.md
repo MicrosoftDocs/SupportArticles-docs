@@ -47,7 +47,7 @@ To resolve connectivity issues on your computer or a remote computer, follow the
    - Exchange Server
    - Netmeeting and other services
 
-1. After you specify the information, select **Query**, and then check the output. For more information about how to decode the output that's shown by the PortQryUI tool, see the [Possible causes of SQL Server connection issues and suggested workarounds](#possible-causes-of-sql-server-connection-issues-and-suggested-workarounds) section.
+1. After you specify the information, select **Query**, and then check the output. For more information about how to decode the output that's shown by the PortQryUI tool, see the [Possible causes of SQL Server connection issues and suggested workarounds](#possible-causes-of-sql-server-connection-issues-and-suggested-workarounds) section.
 
 > [!NOTE]
 > If you have administrator access to your SQL Server-based computer, you can download and run the SQL Connectivity Settings Check tool on that computer, and review the output in conjunction with the next section.

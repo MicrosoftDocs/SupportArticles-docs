@@ -137,14 +137,14 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     - Azure Files for shared file storage
 
     > [!NOTE]
-    > For example: SQL Server AlwaysOn availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
+    > For example: SQL Server Always On availability groups. For more information, see the following MSDN article: [High availability and disaster recovery for SQL Server in Azure virtual machines](/previous-versions/azure/jj870962(v=azure.100)?redirectedfrom=MSDN).
 
 - Can be a third-party clustered role
 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt404690(v=ws.11)).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 
