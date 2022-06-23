@@ -1,0 +1,6 @@
+- name: Azure App Service
+  items:
+  - name: Azure App Service
+    href: ./welcome-app-service.yml
+  - name: Create or delete web apps FAQ
+    href: ./create-delete-resources-faq.yml
