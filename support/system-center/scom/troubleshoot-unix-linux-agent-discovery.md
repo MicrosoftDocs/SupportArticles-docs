@@ -163,6 +163,40 @@ In this situation, you typically receive an error that resembles the following:
 
 To fix this issue, verify that the management server can ping the agent host using its FQDN. Also verify that no network firewalls or host firewall is blocking TCP port 1270.
 
+### DiscoveryResult.ErrorData type. Please file bug report - Parameter Name: s
+
+**Error description**
+
+> Unexpected DiscoveryResult.ErrorData type.  Please file bug report. \
+> ErrorData: System.ArgumentNullException \
+> Value cannot be null. \
+> Parameter name: s \
+> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout) \
+> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions) \
+> at Microsoft.SystemCenter.CrossPlatform.ClientActions.DefaultDiscovery.InvokeWorkflow(IManagedObject managementActionPoint, DiscoveryTargetEndpoint criteria, IInstallableAgents installableAgents)
+
+**Cause**
+
+Sometimes this can happen because WinHTTP proxy settings have been configured on the management servers in the Unix/Linux Resource Pool, and the FQDN for the Unix/Linux agent which we are trying to discover is not included in the Bypass List.
+
+**Resolution**
+Add Unix/Linux FQDN to the WinHTTP Proxy Bypass List.
+
+Open a CMD prompt as Administrator on the management servers in the Unix/Linux Resource Pool and run the following command
+
+`netsh winhttp show proxy`
+
+If there is a WinHTTP proxy server configured, add the FQDN for the server which we are trying to discover in the Bypass List by running the following command:
+
+`netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.ourdomain.com;*.yourdomain.com*;<serverFQDN>"`
+
+Once the Bypass List has been configured, check if discovery of the agent is now successful.
+
+>[!NOTE]
+>You can disable WinHTTP Proxy by running the following command, this will remove a proxy server and configure “Direct Access”:
+>
+>`netsh winhttp reset proxy`
+
 ## SSH connectivity errors  
 
 ### Failed during SSH discovery. Exit code: -1073479162
