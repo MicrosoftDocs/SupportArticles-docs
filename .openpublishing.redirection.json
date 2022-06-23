@@ -2451,6 +2451,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/general/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
       "redirect_document_id": true
