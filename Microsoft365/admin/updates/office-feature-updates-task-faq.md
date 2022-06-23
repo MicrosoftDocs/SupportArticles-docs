@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Summary
 
-Starting in Microsoft Office ProPlus build 16.0.11220.*xxxxx* or a later build, there are two new tasks:
+Starting in Microsoft Office ProPlus build 16.0.11220.* or a later build, there are two new tasks:
 
 - Office Feature Updates
 - Office Feature Updates Logon
