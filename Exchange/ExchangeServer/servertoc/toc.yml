@@ -397,6 +397,8 @@
           href: ../client-connectivity/exchange-security-update-issues.md
         - name: Repair update messages due to TimeZoneMatchCheck failures
           href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
+        - name: RopFastTransferSourceCopyTo operation fails
+          href: ../client-connectivity/large-html-body-messages-not-save-to-pst.md
         - name: Security warning when accessing OWA or ECP
           href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
         - name: Set up OWA
@@ -495,8 +497,6 @@
           href: ../mailflow/external-user-cannot-send-email-to-distribution-group.md
         - name: Messages aren't evenly distributed
           href: ../mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls.md
-        - name: Messages with large HTML body not saved to PST file
-          href: ../mailflow/large-html-body-messages-not-save-to-pst.md
         - name: Outbound email messages aren't sent
           href: ../mailflow/outbound-email-messages-are-not-sent.md
         - name: The front-end Microsoft Exchange Transport service stops and doesn't start
