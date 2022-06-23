@@ -563,6 +563,10 @@
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
+        - name: Outlook displays error message about information service
+          href: ../profiles-and-accounts/starting-outlook-displays-error.md
+        - name: Outlook displays error message on first start
+          href: ../profiles-and-accounts/outlook-displays-error-message-on-first-start.md          
         - name: Outlook doesn't connect or web services don't work after migration
           href: ../profiles-and-accounts/cannot-connect-web-service-not-working-migrated-to-office-365.md
         - name: Outlook fails to start
