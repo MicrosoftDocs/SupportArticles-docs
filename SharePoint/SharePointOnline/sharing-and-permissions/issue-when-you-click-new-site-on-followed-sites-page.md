@@ -68,6 +68,6 @@ Add and remove users from the new group in order to grant or deny the permission
 
 ## More information
 
-This issue occurs because the user who is trying to create the site doesn't have **Create Subsites** permissions for the site collection where he or she is trying to create the site. 
+This issue occurs because the user who is trying to create the site doesn't have **Create Subsites** permissions for the site collection where the user is trying to create the site.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
