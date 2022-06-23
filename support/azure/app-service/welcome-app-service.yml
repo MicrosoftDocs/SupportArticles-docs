@@ -21,4 +21,4 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: FAQ about creating or deleting web apps
-            url: ./acreate-delete-resources-faq
+            url: ./create-delete-resources-faq
