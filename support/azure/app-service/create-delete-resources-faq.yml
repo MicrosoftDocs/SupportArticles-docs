@@ -14,7 +14,7 @@ summary: |
   This article answers common questions about creating and deleting [web apps in Azure App Service](https://azure.microsoft.com/services/app-service/web/).
   [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 sections:
-  - name:  Deploy a web app
+  - name:  Create a web app
     questions:
       - question: |
            What if I create a web app with the same name as another one?
