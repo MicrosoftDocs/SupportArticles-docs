@@ -398,7 +398,7 @@
         - name: Repair update messages due to TimeZoneMatchCheck failures
           href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
         - name: RopFastTransferSourceCopyTo operation fails
-          href: ../client-connectivity/large-html-body-messages-not-save-to-pst.md
+          href: ../client-connectivity/ropfasttransfersourcecopyto-operation-fails.md
         - name: Security warning when accessing OWA or ECP
           href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
         - name: Set up OWA
