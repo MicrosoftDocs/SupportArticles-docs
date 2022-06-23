@@ -24,7 +24,7 @@ Consider the following scenario:
 - Users use an "email as sign in" (EASI) account or a custom domain as their Microsoft account to sign in to Microsoft services. For example, they use **username**@contoso.com.
 - The domain in the users' Microsoft account is the same as the domain that Microsoft Office 365 uses.
 
-In this scenario, the users try to sign in to Skype. However, the users can't use their current Microsoft account to sign in to Skype. Instead, the users are forced to change their Microsoft account so that it uses a different domain.
+In this scenario, the users try to sign in to Skype. However, they can't use their current Microsoft account to sign in to Skype. Instead, the users are forced to change their Microsoft account so that it uses a different domain.
 
 ## Solution 
 
@@ -42,7 +42,7 @@ This issue occurs if the following conditions are true:
 - Public IM connectivity (PIC) is enabled in Skype for Business Online for Office 365 Enterprise organizations.
 - External Communications is enabled in Skype for Business Online for Office 365 Business organizations.
 
-In this scenario, when the users sign in to Skype, the users are forced to change their Microsoft account to use a domain that isn't in conflict with Office 365.
+In this scenario, when the users sign in to Skype, they are forced to change their Microsoft account to use a domain that isn't in conflict with Office 365.
 
 This issue occurs because of the way that the session initiation protocol (SIP) services are advertised. The Office 365 and Skype environments can coexist if PIC or External Communications is disabled for the Office 365 domain. However, if PIC or External Communications is enabled for the Office 365 domain, the Office 365 domain becomes the authoritative SIP domain and hosts the service. Therefore, when users try to sign in to Skype, the Microsoft account service recognizes that Office 365 controls the domain namespace and requires the users to change their Microsoft account to use a different domain.
 
