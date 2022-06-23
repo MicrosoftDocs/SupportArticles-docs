@@ -18,16 +18,18 @@ ms.date: 3/31/2022
 
 # How to upgrade your Project global template after you install Project 2013
 
-Warning Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be resolved. Modify the registry at your own risk.
+> [!WARNING]
+> Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require you to reinstall the operating system. Microsoft cannot guarantee that these problems can be resolved. Modify the registry at your own risk.
 
-##  Summary
+## Summary
 
 Assume that you install Microsoft Project 2013 on a computer on which an earlier version of Project is installed. When you first start Project 2013, you are prompted to select options for upgrading the global template.
 
-##  More Information
+## More Information
 
 ### Project 2007 is already installed on the computer
-When a user starts Project for the first time after it is installed and Project 2007 is already installed on the computer, the user is presented with the Planning Wizard. The wizard presents the following options: 
+
+When a user starts Project for the first time after it's installed and Project 2007 is already installed on the computer, the user is presented with the Planning Wizard. The wizard presents the following options: 
 
 - **Upgrade automatically. Design customization items will be copied to Microsoft Project automatically**. If the user selects this option, the global template will be upgraded. The user is then presented with the Welcome to Project screen.
 
@@ -35,7 +37,7 @@ When a user starts Project for the first time after it is installed and Project 
 
   If the user instead selects the Skip intro link, the user is presented directly with the screen that displays the dummy project plan.  
 
-  In either case, the user should close the dummy project plan, either through File/Close or by pressing the "X" in the upper-right corner. After the user does this, the user will be presented with the usual first screen whenever he or she starts Project.   
+  In either case, the user should close the dummy project plan, either through File/Close or by pressing the "X" in the upper-right corner. After the user does this, the user will be presented with the usual first screen whenever starting Project.
 - **Upgrade manually. You can choose which items you want to copy to Microsoft Project.** If the user selects this option and then clicks **OK**, the user is presented with the **Organizer** dialog box. This gives the user the opportunity to select the items that the user wants to upgrade. 
 
   Should the user click **Cancel** at any time, the user is presented with the same screens that were described earlier and should follow the same actions. However, the user's global template will not yet be upgraded with the user's previous customizations.
@@ -53,21 +55,24 @@ Notes
 - If a user wants to have a clean Global.mpt file at any time, the user's existing Global.mpt file can be deleted from the file system. (However, Project must not be running at the time.) In this situation, the next time that Project is started, it creates a new default template. However, all previous customizations will be lost. This includes any custom VBA macros. It may be prudent for the user to make a Backup copy of any Global.mpt file before deletion.   
 
 ### Project 2010 is already installed on the computer
+
 When a user starts Project the first time after it is installed and Project 2010 is already installed on the computer, the user is presented with the Planning Wizard.
 
 This is almost identical to the wizard that is presented when an upgrade from Project 2007 is performed. The main difference is that the path that contains the original Global.mpt file includes the number 14 instead of 12. (The number 12 in this path indicates the earlier version of Project.)
 
 Other than this, the process is identical to the process that is outlined in "Project 2007 is already installed on the computer."
+
 ### How to enable the Planning Wizard
+
 Important Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration ](https://support.microsoft.com/help/322756) in case problems occur.
 
-If a user is not sure whether he or she followed the instructions correctly during the first use of Project 2013, the user can force Project to start in such a way that it gives the user the same initial options that were originally presented. The user can then be guided through the Planning Wizard process. 
+If users aren't sure whether they followed the instructions correctly during the first use of Project 2013, they can force Project to start in such a way that it gives them the same initial options that were originally presented. The users can then be guided through the Planning Wizard process. 
 
-To force the Planning Wizard to reappear when Microsoft Project is started, enable or add the following registry key or registry value on the user's computer. To do this, follow these steps. 
+To force the Planning Wizard to reappear when Microsoft Project is started, enable or add the following registry key or registry value on the user's computer. To do so, follow these steps.
 
-Note These steps are the same regardless of whether this is an upgrade from Project 2007 or from Project 2010.
+**Note** These steps are the same regardless of whether this is an upgrade from Project 2007 or from Project 2010.
 
-Important Before you begin to edit the registry, you should back it up. You can back up the whole registry or only the part of it that you are changing. 
+**Important** Before you begin to edit the registry, you should back it up. You can back up the whole registry or only the part of it that you are changing. 
 
 To back up the whole registry, follow these steps:
 
@@ -100,5 +105,6 @@ To edit the registry to force the Planning Wizard to reappear when Microsoft Pro
 17. In the **Value Data** box, type 0 (zero).   
 18. Exit Registry Editor.    
 
-### No earlier version of Project is installed 
+### No earlier version of Project is installed
+
 When a user starts Project the first time after it is installed and no earlier version of Project is installed, the user is presented with the **Welcome to Project** screen. This is a dummy project plan, and you can safely close it without saving. You can do this either through **File**/**Close** or by pressing the "X" in the upper-right corner. After you do this, you will be presented with the usual first screen whenever you start Project.

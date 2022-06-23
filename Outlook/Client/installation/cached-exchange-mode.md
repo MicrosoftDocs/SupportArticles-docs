@@ -93,11 +93,11 @@ For troubleshooting tips about diagnosing and addressing performance issues in O
   
 ### Managing Outlook folder sharing
 
-By default, when Cached Exchange Mode is enabled, shared mail and nonmail folders that users access in other mailboxes are downloaded and cached in the user's local `.ost` file. Similarly, if a manager delegates access to his or her Inbox to a team member, when the team member accesses the folder, Outlook 2016 also starts caching the Inbox folder locally.
+By default, when Cached Exchange Mode is enabled, shared mail and non-mail folders that users access in other mailboxes are downloaded and cached in the user's local `.ost` file. Similarly, if a manager delegates access to the Inbox to a team member, when the team member accesses the folder, Outlook 2016 also starts caching the Inbox folder locally.
   
-You can disable caching of all shared folders for profiles that have Cached Exchange Mode enabled. To do this, configure the **Download shared non-mail folders** option in the Office Customization Tool (OCT) when you customize your Cached Exchange Mode deployment. This setting applies to both mail and nonmail folders in Outlook 2016.
+You can disable caching of all shared folders for profiles that have Cached Exchange Mode enabled. To do this, configure the **Download shared non-mail folders** option in the Office Customization Tool (OCT) when you customize your Cached Exchange Mode deployment. This setting applies to both mail and non-mail folders in Outlook 2016.
   
-If you want to disable caching of shared mail folders (like a delegated Inbox) but not shared nonmail folders (like Calendar), see [By default, shared mail folders are downloaded in Cached mode in Outlook 2010 and later versions](https://support.microsoft.com/help/982697/).
+If you want to disable caching of shared mail folders (like a delegated Inbox) but not shared non-mail folders (like Calendar), see [By default, shared mail folders are downloaded in Cached mode in Outlook 2010 and later versions](https://support.microsoft.com/help/982697/).
 
 For more information about how to configure these settings, see [Using Group Policy and the Office Customization Tool (OCT)](#using-group-policy-and-the-office-customization-tool-oct).
   

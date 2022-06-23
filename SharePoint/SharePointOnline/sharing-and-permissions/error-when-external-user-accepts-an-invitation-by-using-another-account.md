@@ -208,7 +208,7 @@ Next, you have to remove the account from Azure Active Directory:
 
 ### Clear the browser cache
 
-SharePoint Online uses browser caching in several scenarios, including the People Picker. Even though a user was fully removed from the system, he or she may still remain in the browser cache. Clearing the browser cache resolves this issue. To do so for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
+SharePoint Online uses browser caching in several scenarios, including the People Picker. Even though a user was fully removed from the system, the user may still remain in the browser cache. Clearing the browser cache resolves this issue. To do so for Internet Explorer, follow the steps given in [Viewing and deleting your browsing history](https://support.microsoft.com/help/17438).
 
 When you clear the cache, make sure that you also select the **Cookies and website data** option.
 
