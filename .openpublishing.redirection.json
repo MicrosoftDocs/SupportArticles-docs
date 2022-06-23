@@ -2448,7 +2448,7 @@
     {
       "source_path": "support/azure/general/web-apps-deployment-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
