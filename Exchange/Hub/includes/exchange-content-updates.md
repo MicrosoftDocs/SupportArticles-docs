@@ -2,6 +2,15 @@
 
 
 
+## Week of June 13, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/17/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
+| 6/17/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
+
+
 ## Week of June 06, 2022
 
 
