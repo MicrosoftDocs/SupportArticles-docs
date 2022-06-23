@@ -2420,11 +2420,7 @@
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
       "redirect_document_id": true
     },
-    {
-      "source_path": "support/azure/general/web-apps-deployment-faq.md",
-      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faq",
-      "redirect_document_id": true
-    },
+
     {
       "source_path": "support/azure/general/faqs-app-service-linux.md",
       "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
@@ -2448,6 +2444,11 @@
     {
       "source_path": "support/azure/general/web-apps-deployment-faqs.md",
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
       "redirect_document_id": false
     },
     {
