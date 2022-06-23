@@ -2401,6 +2401,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
       "redirect_document_id": true
