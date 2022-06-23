@@ -227,6 +227,8 @@
       href: connect/cannot-connect-remotely.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
+    - name: Winsock LSP results in network or stability issues
+      href: connect/winsock-lsp-network-problem.md      
     - name: Connectivity How Tos
       items:
       - name: Configuring firewalls
@@ -427,8 +429,6 @@
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Winsock LSP results in network or stability issues
-      href: performance/winsock-lsp-network-problem.md
     - name: Troubleshoot slow SSIS or ELT jobs query performance
       href: performance/slow-query-performance-ssis-etl.md      
   - name: Replication, change tracking, change data capture
