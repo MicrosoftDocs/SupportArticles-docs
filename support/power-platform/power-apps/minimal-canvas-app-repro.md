@@ -32,36 +32,50 @@ You can create a minimal repro app with one of the following methods.
 ## Power Apps
 
 1. Sign in to [Power Apps](https://make.powerapps.com/).
-2. Open the app for editing.
-3. Go to **File** > **Save as** > **This computer**.
 
-    ![Save menu in Power Apps Studio. The option "This computer" is highlighted.](media/minimal-canvas-app-repro/studio.png)
+1. Open the app for editing.
 
-The downloaded `.msapp` file can be opened by others using **File** > **Open** in [Power Apps](https://make.powerapps.com/).
+1. Go to **File** > **Save as** > **This computer**.
+
+    :::image type="content" source="media/minimal-canvas-app-repro/studio.png" alt-text="Save menu in Power Apps Studio. The option "This computer" is highlighted..":::
+
+    The downloaded `.msapp` file can be opened by others using **File** > **Open** in [Power Apps](https://make.powerapps.com/).
 
 ## Microsoft Lists
 
 1. Open the list.
+
 1. Select **Integrate** > **Power Apps** > **Customize forms**. The customized form will open in Power Apps.
-    ![Power Apps menu in Microsoft List. The option "Customize forms" is highlighted.](media/minimal-canvas-app-repro/microsoft-list.png)
+
+    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list.png" alt-text="Power Apps menu in Microsoft List. The option "Customize forms" is highlighted.":::
+
 1. Select **Share** from menu at the top. The details page with the sharing panel will open.
-    ![Editing an app in studio. The icon button for "Share" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/microsoft-list-studio.png)
+
+    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list-studio.png" alt-text="Editing an app in studio. The icon button for "Share" is highlighted in the top menu bar..":::
+
 1. Dismiss the sharing panel.
+
 1. Select **Export package** in the menu bar.
-    ![App details screen. The command button for "Export package" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/microsoft-list-maker-portal.png)
+
+    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list-maker-portal.png" alt-text="App details screen. The command button for "Export package" is highlighted in the top menu bar..":::
+
 1. Enter a name to the package. Review the exported content and select **Export**.
 
-The downloaded zip file can be opened by others.
+    The downloaded zip file can be opened by others.
 
 ## Power Apps in Teams
 
 1. In Microsoft Teams, go to the [Power Apps app list for your team](/power-apps/teams/manage-your-apps)
+
 1. Select the app.
+
 1. Select **Export solution** from the menu at the top.
-    ![App list screen. An app is selected and the command button for "Export package" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/teams.png)
+
+    :::image type="content" source="media/minimal-canvas-app-repro/teams.png" alt-text="App list screen. An app is selected and the command button for "Export package" is highlighted in the top menu bar.":::
+
 1. Review the exported content and select **Export as zip**.
 
-The downloaded zip file can be [imported](/power-apps/maker/canvas-apps/export-import-app#importing-a-canvas-app-package) by other users.
+    The downloaded zip file can be [imported](/power-apps/maker/canvas-apps/export-import-app#importing-a-canvas-app-package) by other users.
 
 ### Custom pages
 
@@ -81,10 +95,10 @@ Follow the below steps to help you limit privacy and security exposure before di
 
 ## Next steps
 
-[Ask a question with the Power Apps community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)
-[Get Microsoft support](https://powerapps.microsoft.com/support/)
+- [Ask a question with the Power Apps community](https://powerusers.microsoft.com/t5/Power-Apps-Community/ct-p/PowerApps1)
+- [Get Microsoft support](https://powerapps.microsoft.com/support/)
 
 ### See also
 
-[Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
-[Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
+- [Debugging canvas apps with Monitor](/power-apps/maker/monitor-canvasapps)
+- [Debugging model-driven apps with Monitor](/power-apps/maker/monitor-modelapps)
