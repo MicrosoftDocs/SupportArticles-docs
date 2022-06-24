@@ -57,10 +57,10 @@
       href: isolate-common-issues.md
     - name: Isolate issues in canvas apps
       href: isolate-canvas-app-issues.md
-    - name: Isolate issues in model-driven apps
-      href: isolate-model-app-issues.md
     - name: Create a minimal repro canvas app
       href: minimal-canvas-app-repro.md
+    - name: Isolate issues in model-driven apps
+      href: isolate-model-app-issues.md
   - name: Support resources
     items:
     - name: Power Apps support
