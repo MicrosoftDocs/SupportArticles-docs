@@ -261,7 +261,7 @@ This example assigns permissions for a user to access specific folders in anothe
     Add-MailboxFolderPermission -Identity <SMTP address or alias of recipient> : <Folder path>-AccessRights <Permission you want to grant the recipient> -User <SMTP address or alias of recipient to be granted access>
     ```
 
-3. This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to his access of that folder.
+3. This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to Ed's access of that folder.
 
    ```powershell
    Add-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User Ed@contoso.com -AccessRights Owner

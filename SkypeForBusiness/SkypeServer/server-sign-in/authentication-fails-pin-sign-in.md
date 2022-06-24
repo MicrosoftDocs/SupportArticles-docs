@@ -20,11 +20,11 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-A user tries to sign in to a Lync Phone Edition (PE) device by correctly entering his or her PIN. However, the user is repeatedly prompted to enter the correct PIN. Therefore, the user cannot sign in to the Lync PE device.
+A user tries to sign in to a Lync Phone Edition (PE) device by correctly entering the PIN. However, the user is repeatedly prompted to enter the correct PIN. Therefore, the user can't sign in to the Lync PE device.
 
-Additionally the Lync Server event log on the Lync Server Front End (FE) server that is the registrar for the Lync PE device displays the following error events:
+Additionally, the Lync Server event log on the Lync Server Front End (FE) server that's the registrar for the Lync PE device displays the following error events:
 
-```adoc
+```output
 Log Name: Lync Server
 Source: LS UserPin Service
 Date: mm/dd/yyyy hh:mm:ss AM|PM
@@ -43,7 +43,7 @@ Resolution:
 Please ensure that the server can be connected on the target port using telnet and then re-try.
 ```
 
-```adoc
+```output
 Log Name: Lync Server
 Source: LS UserPin Service
 Date: mm/dd/yyyy hh:mm:ss AM|PM
