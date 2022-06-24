@@ -167,35 +167,36 @@ To fix this issue, verify that the management server can ping the agent host usi
 
 **Error description**
 
-> Unexpected DiscoveryResult.ErrorData type.  Please file bug report. \
-> ErrorData: System.ArgumentNullException \
-> Value cannot be null. \
-> Parameter name: s \
-> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout) \
-> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions) \
+> Unexpected DiscoveryResult.ErrorData type. Please file bug report.  
+> ErrorData: System.ArgumentNullException  
+> Value cannot be null.  
+> Parameter name: s  
+> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)  
+> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions)  
 > at Microsoft.SystemCenter.CrossPlatform.ClientActions.DefaultDiscovery.InvokeWorkflow(IManagedObject managementActionPoint, DiscoveryTargetEndpoint criteria, IInstallableAgents installableAgents)
 
 **Cause**
 
-Sometimes this can happen because WinHTTP proxy settings have been configured on the management servers in the Unix/Linux Resource Pool, and the FQDN for the Unix/Linux agent which we are trying to discover is not included in the Bypass List.
+This error occurs because WinHTTP proxy settings have been configured on the management servers in the UNIX or Linux resource pool, and the FQDN of the UNIX or Linux agent that you're trying to discover isn't included in the bypass list.
 
 **Resolution**
-Add Unix/Linux FQDN to the WinHTTP Proxy Bypass List.
 
-Open a CMD prompt as Administrator on the management servers in the Unix/Linux Resource Pool and run the following command
+To fix this issue, add the UNIX or Linux FQDN to the WinHTTP proxy bypass list.
+
+On the management servers in the UNIX or Linux resource pool, run the following command at an elevated command prompt to verify the current proxy configuration.
 
 `netsh winhttp show proxy`
 
-If there is a WinHTTP proxy server configured, add the FQDN for the server which we are trying to discover in the Bypass List by running the following command:
+If a WinHTTP proxy server is configured, add the FQDN of the server that you're trying to discover to the bypass list by running the following command:
 
 `netsh winhttp set proxy proxy-server="<proxyserver:port>" bypass-list="*.ourdomain.com;*.yourdomain.com*;<serverFQDN>"`
 
-Once the Bypass List has been configured, check if discovery of the agent is now successful.
+Once the bypass list is configured, check if the agent discovery is successful.
 
->[!NOTE]
->You can disable WinHTTP Proxy by running the following command, this will remove a proxy server and configure “Direct Access”:
+> [!NOTE]
+> You can run the following command to disable the WinHTTP proxy. This command will remove the proxy server and configure direct access.
 >
->`netsh winhttp reset proxy`
+> `netsh winhttp reset proxy`
 
 ## SSH connectivity errors  
 
