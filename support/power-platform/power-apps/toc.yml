@@ -45,7 +45,7 @@
       href: dataverse-records-missing-required-fields.md
   - name: Isolate issues
     items:
-    - name: Think like a debugger
+    - name: General Power Apps debugging strategies
       href: isolate-common-issues.md
     - name: Isolate issues in canvas apps
       href: isolate-canvas-app-issues.md
