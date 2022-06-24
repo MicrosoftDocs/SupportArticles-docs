@@ -45,18 +45,20 @@ If the new app works, compare it with the original to find the difference. If th
 
 ## Data issues
 
-Power Apps is based on web technologies. Different layers are involved when working with cloud data.
+Power Apps is based on web technologies. Different layers are involved when working with cloud data. Some of the typical layers when working cloud data are:
 
-* **Server**. Stores data and controls who can access it.
-* **Network**. Transports data between the server and the app.
-* **App**. Requests data from the server, processes it, and displays it in the app.
-* **App host**. Where the app is run. It provides infrastructure to use an app. This could be a browser, [Power Apps Mobile](/power-apps/mobile/run-powerapps-on-mobile), or another website that Power Apps is embedded in.
+- **Server** - stores data and controls who can access it.
+- **Network** - transports data between the server and the app.
+- **App** - requests data from the server, processes it, and displays it in the app.
+- **App host** - where the app is run. The host provides infrastructure to use an app. For Power Apps, this could be a browser, [Power Apps Mobile](/power-apps/mobile/run-powerapps-on-mobile), or another website that Power Apps is embedded in.
 
-Together, these layers form the tech stack of Power Apps. Isolating the layer where a problem occurs can spark ideas for solutions and workarounds. Should data not show correctly in your app, you can determine the problematic layer with these methods.
+Together, these layers form a general technical stack for Power Apps. Isolating the layer where a problem occurs can uncover more ideas for solutions and workarounds.
 
-* **Server**. If there is a problem with the server, the same issue will happen on any website or app that accesses the data.
-  * Check if you can work with data outside of the Power Apps app. For example, with Microsoft Lists, you can view and edit records on the SharePoint website that has the list.
-  * Check if a different user experiences the same problem. Comparing the experience with an admin user might uncover permission issues.
+Some of the examples for such isolation are:
+
+- **Server** - if there is a problem with the server, the same issue will happen on any website or app that accesses the data. When this happens, check the following:
+    - Check if you can work with data outside of Power Apps. For example, with Microsoft Lists, you can view and edit records on the SharePoint site that hosts the list.
+    - Check if a different user experiences the same problem. Comparing the experience with an admin user might uncover permission issues.
 * **Network**. This is rarely a cause of mystery. When the network is down, there will be no internet access. However, there are a few subtle conditions that might affect the behavior of an app.
   * [Check a different network.](#try-a-different-network)
   * Run the app in a different geographical region, if possible. There may be different network conditions or restrictions.
