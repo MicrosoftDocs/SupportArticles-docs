@@ -79,12 +79,39 @@ Use Network Watcher's [Next hop](/azure/network-watcher/diagnose-vm-network-rout
 
 The [Azure VM Serial Console](./serial-console-linux.md) provides access to a text-based console for Linux virtual machines. You can use the console to troubleshoot your SSH connection in an interactive shell. Ensure you have met the [prerequisites](./serial-console-linux.md#prerequisites) for using Serial Console and try the commands below to further troubleshoot your SSH connectivity.
 
-### Check that SSH is running
+### Check that the SSH service is running
 
-You can use the following execution of the ss command to verify whether SSH is running on your VM, either as root or via sudo.  Note that ```ss``` is suggested here in favor of the traditional ```netstat``` command, as netstat is deprecated and not always available in modern distributions:
+The standard way to check for the service status is via the following command in most current Linux distributions.  
 
 ```console
-ss --listen --tcp --process --numeric | grep sshd
+sudo systemctl status sshd.service
+```
+
+See the following example of a normal output and note the service status in the ```Active``` line along with the log lines reporting the port and IP address(es) being listened to.
+
+```console
+user@hostname:~$ sudo systemctl status sshd.service
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: enabled)
+     Active: active (running) since Thu 2022-06-23 17:44:36 UTC; 1 day 3h ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 829 (sshd)
+      Tasks: 1 (limit: 9535)
+     Memory: 5.1M
+     CGroup: /system.slice/ssh.service
+             └─829 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+
+Jun 23 17:44:35 ubu2004 systemd[1]: Starting OpenBSD Secure Shell server...
+Jun 23 17:44:36 ubu2004 sshd[829]: Server listening on 0.0.0.0 port 22.
+Jun 23 17:44:36 ubu2004 sshd[829]: Server listening on :: port 22.
+Jun 23 17:44:36 ubu2004 systemd[1]: Started OpenBSD Secure Shell server.
+```
+
+Should this command not be available, or produce unexpected results, there are other commands available.  You can use the following execution of the ```ss``` command to verify whether SSH is running on your VM, either as root or via sudo.  Note that ```ss``` is suggested here in favor of the traditional ```netstat``` command, as netstat is deprecated and not always available in modern distributions:
+
+```console
+sudo ss --listen --tcp --process --numeric | grep sshd
 ```
 
 If there is any output, SSH is up and running.  See the following example output showing that the SSHD process 829 is listening on both IPv4 and IPv6 addresses, as well as using the shortened forms of the arguments --listen --tcp --process --numeric
