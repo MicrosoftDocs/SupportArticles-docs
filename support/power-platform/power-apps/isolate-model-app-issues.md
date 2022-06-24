@@ -42,7 +42,7 @@ The following features can affect normal operation. Try disabling or removing th
 
 **Affects**: Form pages, Table-based view pages
 
-If a problem happens after selecting a [command in the command bar](/power-apps/developer/model-driven-apps/command-bar-ribbon-presentation), check if it is a [custom command](/power-apps/maker/model-driven-apps/command-designer-overview). Custom commands can contain JavaScript code that cause unexpected behavior. Modern commands can have [custom actions defined with Power Fx](/power-apps/maker/model-driven-apps/commanding-use-powerfx). In either case, try simplifying the command to find out if there is an error in how the custom command is defined.
+If a problem happens after selecting a [command in the command bar](/power-apps/developer/model-driven-apps/command-bar-ribbon-presentation), check if it is a [custom command](/power-apps/maker/model-driven-apps/command-designer-overview). Custom commands can contain JavaScript code that causes unexpected behavior. Modern commands can have [custom actions defined with Power Fx](/power-apps/maker/model-driven-apps/commanding-use-powerfx). In either case, try simplifying the command to find out if there is an error in how the custom command is defined.
 
 ### Custom controls
 
@@ -65,7 +65,7 @@ For example, does the problem happen with a different…
 * Table (entity)
 * View
 * App with the same table
-* Form about the same table
+* Form for the same table
 * Control referencing the same column (attribute)
 
 Ideally, compare with an out-of-the-box one that has not been customized. For example, if the issue is with a table (entity) you created, check an out-of-the-box table.

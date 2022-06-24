@@ -73,7 +73,7 @@ You can [export custom pages in an unmanaged solution](/power-apps/maker/data-pl
 
 Unauthorized users won't be able to access data sources in exported apps but they can see how the data sources are used in them. They can also see the app's controls and formulas. If an entire solution zip file is provided, assets like images are also visible.
 
-Before distributing your exported app, following the below steps can help limit privacy and security exposure:
+Follow the below steps to help you limit privacy and security exposure before distributing the exported app:
 
 - Don't include private and confidential information in the app. Check names of variables, controls, and other app elements that can inadvertently give away sensitive information.
 - Create a new app from scratch instead of simplifying an existing production app. New app will also reduce the accidental exposure of sensitive information if you were to use the original app instead. Also, use of such a new app also reduces overhead for you to manually remove sensitive information fro the original app.
