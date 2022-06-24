@@ -37,7 +37,8 @@ You can create a minimal repro app with one of the following methods.
 
 1. Go to **File** > **Save as** > **This computer**.
 
-    :::image type="content" source="media/minimal-canvas-app-repro/studio.png" alt-text="Save menu in Power Apps Studio. The option "This computer" is highlighted..":::
+    > [!div class="mx-imgBorder"]
+    > ![Save menu in Power Apps Studio. The option "This computer" is highlighted.](media/minimal-canvas-app-repro/studio.png)
 
     The downloaded `.msapp` file can be opened by others using **File** > **Open** in [Power Apps](https://make.powerapps.com/).
 
@@ -47,17 +48,20 @@ You can create a minimal repro app with one of the following methods.
 
 1. Select **Integrate** > **Power Apps** > **Customize forms**. The customized form will open in Power Apps.
 
-    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list.png" alt-text="Power Apps menu in Microsoft List. The option "Customize forms" is highlighted.":::
+    > [!div class="mx-imgBorder"]
+    > ![Power Apps menu in Microsoft List. The option "Customize forms" is highlighted.](media/minimal-canvas-app-repro/microsoft-list.png)
 
 1. Select **Share** from menu at the top. The details page with the sharing panel will open.
 
-    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list-studio.png" alt-text="Editing an app in studio. The icon button for "Share" is highlighted in the top menu bar..":::
+    > [!div class="mx-imgBorder"]
+    > ![Editing an app in studio. The icon button for "Share" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/microsoft-list-studio.png)
 
 1. Dismiss the sharing panel.
 
 1. Select **Export package** in the menu bar.
 
-    :::image type="content" source="media/minimal-canvas-app-repro/microsoft-list-maker-portal.png" alt-text="App details screen. The command button for "Export package" is highlighted in the top menu bar..":::
+    > [!div class="mx-imgBorder"]
+    > ![App details screen. The command button for "Export package" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/microsoft-list-maker-portal.png)
 
 1. Enter a name to the package. Review the exported content and select **Export**.
 
@@ -71,7 +75,8 @@ You can create a minimal repro app with one of the following methods.
 
 1. Select **Export solution** from the menu at the top.
 
-    :::image type="content" source="media/minimal-canvas-app-repro/teams.png" alt-text="App list screen. An app is selected and the command button for "Export package" is highlighted in the top menu bar.":::
+    > [!div class="mx-imgBorder"]
+    > ![App list screen. An app is selected and the command button for "Export package" is highlighted in the top menu bar.](media/minimal-canvas-app-repro/teams.png)
 
 1. Review the exported content and select **Export as zip**.
 

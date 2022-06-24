@@ -31,7 +31,8 @@ A debug label is a **[Label](/power-apps/maker/canvas-apps/controls/control-text
 
 Imagine that a **Combo box** control is showing less than expected and the dropdown options are blank.
 
-:::image type="content" source="media/isolate-canvas-app-issues/empty-combobox.png" alt-text="Expanded combo box, showing empty space where options should be in the dropdown.":::
+> [!div class="mx-imgBorder"]
+> ![Expanded combo box, showing empty space where options should be in the dropdown.](media/isolate-canvas-app-issues/empty-combobox.png)
 
 Check is whether the **Combo box** is configured correctly. For example, the **Items** property is set to a complex formula below:
 
@@ -151,7 +152,8 @@ If a formula isn't working inside a contained control, it could be related to sc
 
 For example, a **Label** control inside a **Gallery** should show each record's name but no text is appearing. **Label.Text** is set to `ThisItem.Name`. **Gallery.Items** is set to `Products`.
 
-:::image type="content" source="media/isolate-canvas-app-issues/empty-gallery.png" alt-text="A gallery shows empty space instead of text. The property panel shows the formulas used for the Labels in the gallery.":::)
+> [!div class="mx-imgBorder"]
+> ![A gallery shows empty space instead of text. The property panel shows the formulas used for the Labels in the gallery.](media/isolate-canvas-app-issues/empty-gallery.png)
 
 To check if it's a scoping issue, insert a [debug label](#inspect-formulas-with-debug-labels) outside the **Gallery**, at the top-level of the app. Set its **Text** property to show the name of the first record of the dataset: `First(Products).Name`.
 
