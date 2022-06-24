@@ -39,10 +39,11 @@ Continue reading for more detailed troubleshooting steps and explanations.
 
 ## Available methods to troubleshoot SSH connection issues
 
-You can reset credentials or SSH configuration using one of the following methods:
+You can reset credentials or SSH configuration, or troubleshoot the status of the SSH service using one of the following methods:
 
 * [Azure portal](#use-the-azure-portal) - great if you need to quickly reset the SSH configuration or SSH key and you don't have the Azure tools installed.
 * [Azure VM Serial Console](./serial-console-linux.md) - the VM serial console will work regardless of the SSH configuration, and will provide you with an interactive console to your VM. In fact, "can't SSH" situations are specifically what the serial console was designed to help solve. More details below.
+* [Azure Run Command extension](#use-the-azure-portal-run-command) - Using the Azure Portal's Run Command functionality can execute basic commands and return the output to the portal.
 * [Azure CLI](#use-the-azure-cli) - if you are already on the command line, quickly reset the SSH configuration or credentials. If you are working with a classic VM, you can use the [Azure classic CLI](#use-the-azure-classic-cli).
 * [Azure VMAccessForLinux extension](#use-the-vmaccess-extension) - create and reuse json definition files to reset the SSH configuration or user credentials.
 
@@ -80,27 +81,41 @@ The [Azure VM Serial Console](./serial-console-linux.md) provides access to a te
 
 ### Check that SSH is running
 
-You can use the following command to verify whether SSH is running on your VM:
+You can use the following execution of the ss command to verify whether SSH is running on your VM, either as root or via sudo.  Note that ```ss``` is suggested here in favor of the traditional ```netstat``` command, as netstat is deprecated and not always available in modern distributions:
 
 ```console
-ps -aux | grep ssh
+ss --listen --tcp --process --numeric | grep sshd
 ```
 
-If there is any output, SSH is up and running.
+If there is any output, SSH is up and running.  See the following example output showing that the SSHD process 829 is listening on both IPv4 and IPv6 addresses, as well as using the shortened forms of the arguments --listen --tcp --process --numeric
+
+```console
+$ sudo ss -ltpn | grep sshd
+LISTEN    0         128                0.0.0.0:22               0.0.0.0:*        users:(("sshd",pid=829,fd=3))
+LISTEN    0         128                   [::]:22                  [::]:*        users:(("sshd",pid=829,fd=4))
+```
 
 ### Check which port SSH is running on
 
-You can use the following command to check which port SSH is running on:
+Examining the output from the above command will show that the sshd process is listening on port 22.  It is possible that the SSH daemon has been configured to run on another port, which would be displayed above.  To determine if this change was made in the standard configuration file, examine the default configuration file, /etc/ssh/sshd_config as follows:
 
 ```console
-sudo grep Port /etc/ssh/sshd_config
+grep -i port /etc/ssh/sshd_config
 ```
-
-Your output will look something like:
+or
+```console
+grep -i listen /etc/ssh/sshd_config
+```
+Your output could look something like this:
 
 ```output
 Port 22
 ```
+Note that any line returned which begins with # is a comment and can safely be ignored.  If nothing is returned, or the only lines returned are comments, the default configuration is used, which is to listen on port 22 to all IP addresses present on the system.
+
+## Use the Azure Portal Run Command
+
+Should a user not be available to use via serial console, such as when only SSH keys are used for authentication, the Azure Portal's Run Command feature can be used to issue commands and view output.  All of the commands described as being run from the Serial Console previously can be run non-interactively in the Azure Portal's Run Command section.  Output will be returned to the portal for examination.  Commands run in the Run Command context do not need to use sudo.
 
 ## Use the Azure CLI
 
