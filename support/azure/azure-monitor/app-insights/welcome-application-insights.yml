@@ -9,14 +9,28 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/6/2022
+  ms.date: 6/22/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
  # Card
-  - title: Troubleshooting Azure Application Insights issues
+  - title: Troubleshoot Application Insights telemetry
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot auto-instrumentation issues
+            url: ./auto-instrumentation-troubleshoot.md
+          - text: Troubleshoot Azure Application Insights in a Java web project
+            url: ./java-2x-troubleshoot.md           
+          - text: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
+            url: ./asp-net-troubleshoot-no-data.md
+          - text: Troubleshoot Azure Monitor Application Insights for Java
+            url: ./java-standalone-troubleshoot.md
+
+ # Card
+  - title: Troubleshoot Application Insights features
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -24,5 +38,21 @@ landingContent:
             url: ./troubleshoot-portal-connectivity.md
           - text: Missing CPU Total and Committed Memory metrics
             url: ./missing-cpu-total-committed-memory-metrics.md
-          - text: Troubleshooting auto-instrumentation issues
-            url: ./auto-instrumentation-troubleshoot.md
+          - text: Troubleshoot Application Insights Profiler
+            url: ./profiler-troubleshooting.md
+          - text: Troubleshoot Azure Application Insights availability monitoring
+            url: ./troubleshoot-availability.md
+          - text: Troubleshoot user behavior analytics tools in Azure Application Insights
+            url: ./usage-troubleshoot.md 
+
+ # Card
+  - title: Troubleshoot Snapshot Debugger, Status Monitor, and Change Analysis
+    linkLists:
+      - linkListType: how-to-guide
+        links:                      
+          - text: Troubleshoot Application Insights Snapshot Debugger
+            url: ./snapshot-debugger-troubleshooting.md 
+          - text: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
+            url: ./status-monitor-v2-troubleshoot.md
+          - text: Troubleshoot Azure Monitor's Change Analysis (preview)
+            url: ./change-analysis-troubleshoot.md 
