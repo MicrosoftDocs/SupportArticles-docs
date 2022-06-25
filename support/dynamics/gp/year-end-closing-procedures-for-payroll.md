@@ -49,7 +49,7 @@ To perform the year-end closing procedures, follow these steps:
 7. [Make a backup of the new file](#step-7-make-a-backup-of-the-new-file)
 8. [Verify W-2 and 1099-R statement information](#step-8-verify-w-2-and-1099-r-statement-information)
 9. [Print the W-2 statements and the W-3 Transmittal form](#step-9-print-the-w-2-statements-and-the-w-3-transmittal-form)
-10. [step-10-Print the 1099-R forms and the 1096 Transmittal form and ACA forms](#print-the-1099-r-forms-and-the-1096-transmittal-form-and-aca-forms)
+10. [Print the 1099-R forms and the 1096 Transmittal form and ACA forms](#step-10-print-the-1099-r-forms-and-the-1096-transmittal-form-and-aca-forms)
 11. [(Optional:) Create a W-2 Electronic file](#step-11-optional-create-a-w-2-electronic-file)
 12. [(Optional:) Archive inactive employee Human Resources information](#step-12-optional-archive-inactive-employee-human-resources-information)
 13. [Set up fiscal periods for 2022](#step-13-set-up-fiscal-periods-for-2022)

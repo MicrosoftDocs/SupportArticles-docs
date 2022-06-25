@@ -121,7 +121,7 @@ Follow these guidelines to generate EFT files or EFT prenote files:
 
     Use an SQL query tool to change the checkbook ID in all tables. To do it, follow these steps:
 
-      1. Start SQL Server Management Studio. To do it, see the [How to start a SQL query tool](#how-to-start-a-sql-query-tool) section.
+      1. Start SQL Server Management Studio.
       2. Run the following script to locate all tables that contain the Checkbook ID field (CHEKBKID).
 
           ```sql
