@@ -1,6 +1,6 @@
 ---
 title: Error 4323 installing DPM
-description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center 2012 R2 Data Protection Manager.
+description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center Data Protection Manager.
 ms.date: 09/11/2020
 ---
 # DPM installation fails and generates error 4323: A member could not be added
@@ -94,7 +94,7 @@ To make sure that jobs continue to run as scheduled, follow these steps on the D
 
 3. Start `DCOMCNFG.exe`, and then locate the following folder:
 
-    `Component Services\Computers\My Computer\DCOM Config\Microsoft System Center Data Protection Manager 2012 Service`
+    `Component Services\Computers\My Computer\DCOM Config\Microsoft System Center Data Protection Manager <version> Service`
 
 4. Right-click the service name, and then select **Properties**.
 5. Select the **Security** tab.
