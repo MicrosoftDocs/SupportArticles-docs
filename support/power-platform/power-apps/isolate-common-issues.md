@@ -5,7 +5,7 @@ author: tahoon
 ms.subservice: troubleshoot
 ms.topic: conceptual
 ms.custom:
-ms.reviewer:
+ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: tahoon
 search.audienceType: 

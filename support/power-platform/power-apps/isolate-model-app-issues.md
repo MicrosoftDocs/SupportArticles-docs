@@ -4,8 +4,7 @@ description: Learn about techniques to narrow down the cause of errors in model-
 author: tahoon
 ms.subservice: troubleshoot
 ms.topic: troubleshooting
-ms.custom:
-ms.reviewer:
+ms.reviewer: matp
 ms.date: 06/15/2022
 ms.author: tahoon
 search.audienceType: 
