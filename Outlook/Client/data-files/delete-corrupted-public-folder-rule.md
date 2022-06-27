@@ -39,7 +39,7 @@ To resolve this issue, use the MFCMAPI tool to find and delete the corrupted rul
 
 1. For each message that has the **IPM.Rule.Version2.Message** message class, check the properties in the pane beneath it. Find the messages for which the **Properties** pane displays **cb: 0** in the **Value** column for the **PR_EXTENDED_RULE_MSG_CONDITION** and **PR_EXTENDED_RULE_MSG_ACTIONS** properties. Additionally, these properties might display **PT_ERROR** in the **Type** column and **0x0E9A000A** in the **Tag** column. These properties indicate a corrupted rule.
 
-    :::image type="content" source="media/delete-corrupted-public-folder-rule/corrupted-rule.png" alt-text="Screenshot of the messages that have properties that show an empty value in MFCMAPI.":::
+    :::image type="content" source="media/delete-corrupted-public-folder-rule/corrupted-rule.png" alt-text="Screenshot of messages that have properties that show a value of "cb: 0" or an error in MFCMAPI.":::
 
 1. For each message whose properties indicate a corrupted rule, right-click the message, and select **Delete Message** to delete the corrupted rule.
 
