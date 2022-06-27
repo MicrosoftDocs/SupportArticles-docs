@@ -2460,6 +2460,16 @@
       "source_path": "support/azure/general/data-restore-storage.md",
       "redirect_url": "/azure/storage/blobs/data-protection-overview",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
     }
   ]
 }
