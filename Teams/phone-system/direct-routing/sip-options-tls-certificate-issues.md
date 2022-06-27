@@ -88,7 +88,9 @@ Another possible cause for this issue might be firewall rules that are preventin
 <details>
 <summary><b>SBC status is intermittently inactive</b></summary>
 
-This issue might occur if the SBC is configured to send SIP options not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP options to an inactive or unresponsive datacenter. Do the following:
+This issue might occur for two reasond:
+  
+If the SBC is configured to send SIP options not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP options to an inactive or unresponsive datacenter. Do the following:
 
 - Make sure that the SBC is discoverable and configured to send SIP options to only FQDNs.
 - Make sure that all devices in the route, such as SBCs and firewalls, are configured to allow communication to and from all Microsoft-signaling FQDNs.
@@ -103,6 +105,12 @@ This issue might occur if the SBC is configured to send SIP options not to FQDNs
 
 For more information, see [SIP Signaling: FQDNS](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
 
+If the installed root or intermediate certificate is not part of SBC certificate chain issuer. When the SBC start the three way handshake during authentication process the Teams service will not be able to validate the certificate chain on SBC and will reset the connection. The SBC might be able to authenticate again as soon as the public Root certificate is loaded again on service cache or the certificate chain is fixed on SBC.
+  
+- Make sure that the intermediate and root certificate installed on SBC is correct.
+  
+For more information about certificates, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  
 </details>
 
 <details>
