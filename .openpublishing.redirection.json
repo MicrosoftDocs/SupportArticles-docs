@@ -2461,7 +2461,6 @@
       "redirect_url": "/azure/storage/blobs/data-protection-overview",
       "redirect_document_id": false
     },
-    ,
     {
       "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
       "redirect_url": "troubleshoot/sql/connect/winsock-lsp-network-problem",
