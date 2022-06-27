@@ -27,13 +27,14 @@ Serial Console is generally available in global Azure regions and in public prev
 
 To access the Serial Console on your VM or virtual machine scale set instance, you will need the following:
 
+- Boot diagnostics must be enabled for the VM
 - A user account that uses password authentication must exist within the VM. You can create a password-based user with the [reset password](/azure/virtual-machines/extensions/vmaccess#reset-password) function of the VM access extension. Select **Reset password** from the **Help** section.
 - The Azure account accessing Serial Console must have [Virtual Machine Contributor role](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) for both the VM and the [boot diagnostics](boot-diagnostics.md) storage account
 - Classic deployments aren't supported. Your VM or virtual machine scale set instance must use the Azure Resource Manager deployment model.
 - Serial Console is not supported when the storage account has **Allow storage account key access** disabled.
 
 > [!IMPORTANT]
-> Managed Boot Diagnostics storage accounts and custom storage account firewalls are now compatible with Serial Console. 
+> Serial Console is now compatible with [Managed Boot Diagnostics storage accounts](https://docs.microsoft.com/troubleshoot/azure/virtual-machines/boot-diagnostics) and custom storage account firewalls. 
 
 ## Get started with the Serial Console
 
