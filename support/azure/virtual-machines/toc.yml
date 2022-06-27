@@ -252,7 +252,7 @@
       href: detailed-troubleshoot-rdp.md
     - name: Troubleshoot a failed trust relationship in an Azure Windows VM
       href: troubleshoot-broken-secure-channel.md
-    - name: Troubleshoot RDP error because the DHCP is disabled
+    - name: Troubleshoot RDP error because DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
       href: troubleshoot-rdp-nsg-problem.md
@@ -262,7 +262,7 @@
       href: troubleshoot-rdp-no-license-server.md
     - name: Troubleshoot remote desktop services issues
       href: troubleshoot-remote-desktop-services-issues.md
-    - name: Troubleshoot An internal error
+    - name: Troubleshoot an internal error
       href: Troubleshoot-rdp-internal-error.md
     - name: Troubleshoot RDP access is denied error 
       href: troubleshoot-rdp-access-denied.md 
@@ -272,9 +272,9 @@
       href: troubleshoot-rdp-general-error.md
     - name: Troubleshoot Azure VM RDP connection issues by Event ID
       href: event-id-troubleshoot-vm-rdp-connecton.md
-    - name: Troubleshoot RDP error in VM because of static IP
+    - name: Troubleshoot RDP error in VM due to static IP
       href: troubleshoot-rdp-static-ip.md
-    - name: Troubleshoot RDP error in VM because the NIC is disabled
+    - name: Troubleshoot RDP error in VM due to disabled NIC
       href: troubleshoot-rdp-nic-disabled.md
     - name: Troubleshoot RDP error caused by Safe Mode
       href: troubleshoot-rdp-safe-mode.md
@@ -320,7 +320,7 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
-  - name: Previous command is rerun
+  - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
     href: support-agent-extensions.md
@@ -365,7 +365,7 @@
       href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
-    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+    - name: Troubleshoot high CPU issues in Azure Windows virtual machines
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
     - name: Troubleshoot high memory issues for Azure Windows virtual machines
       href: azure-windows-vm-memory-issue.md
