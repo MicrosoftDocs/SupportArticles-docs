@@ -81,7 +81,6 @@ Make sure that the SharePoint Online URLs have been added to your Trusted sites 
    > [!NOTE]
    > We recommend that you also add the following Office 365 URLs to the Trusted sites zone:
    >
-   > - https://*.sharepoint.com
    > - https://*.microsoftonline.com
    > - https://*.microsoft.com
 

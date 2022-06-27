@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Microsoft 365
 search.appverid: MET150
-ms.date: 5/23/2022
+ms.date: 6/6/2022
 ---
 # Error during mailbox migration from Google Workspace to Microsoft 365
 

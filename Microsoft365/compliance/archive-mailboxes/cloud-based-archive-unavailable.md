@@ -39,7 +39,7 @@ A user experiences the following symptoms in a hybrid deployment of on-premises 
 
    > Your archive appears to be unavailable. Try to access it again in 10 seconds. If you see this error again, contact your Help Desk.
 
-- When the user tries to access the cloud-based archive mailbox by using Microsoft Outlook, the archive mailbox may be present in his or her profile. However, the user can't update the archive mailbox.
+- When the user tries to access the cloud-based archive mailbox by using Microsoft Outlook, the archive mailbox may be present in the profile. However, the user can't update the archive mailbox.
 
 ## Cause
 

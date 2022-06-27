@@ -9,35 +9,37 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: luche
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 164509
 appliesto: 
   - SharePoint Server 2013
-ms.date: 3/31/2022
+ms.date: 6/23/2022
 ---
 
 # Certain Microsoft SharePoint Server 2013 installation scenarios are not supported  
 
 ## Summary  
 
-This article describes Microsoft SharePoint Server 2013 installation scenarios that are not supported.   
+This article describes Microsoft SharePoint Server 2013 installation scenarios that are not supported.
 
-For information about best practices for using SharePoint 2013 in a virtual configuration, see [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](/SharePoint/administration/sharepoint-server-2016-in-microsoft-azure?f=255&mspperror=-2147217396).  
+For information about best practices for using SharePoint 2013 in a virtual configuration, see [Plan for virtualization of SharePoint Server](/sharepoint/install/deploy-sharepoint-virtual-machines).  
 
 ## Symptoms  
 
-Consider the following scenario:   
+Consider the following scenario:
 
-- You have SharePoint 2013 installed on a domain controller.   
-- You can successfully start Microsoft SharePoint Foundation Sandboxed Code Service in the following folder: Central Administration > System Settings > Services on Server   
-- When this service starts, the Services snap-in shows that SharePoint User Code Host is running, and Task Manager shows that SPUCHostService.exe is running.      
+- You have SharePoint 2013 installed on a domain controller.
+- You can successfully start Microsoft SharePoint Foundation Sandboxed Code Service in the following folder: Central Administration > System Settings > Services on Server
+- When this service starts, the Services snap-in shows that SharePoint User Code Host is running, and Task Manager shows that SPUCHostService.exe is running. 
 
-In this scenario, the following symptoms occur:   
+In this scenario, the following symptoms occur:
 
-- Instances of SPUCWorkerProcessProxy.exe are continuously created until server memory runs out or you stop SharePoint Foundation Sandboxed Code Service through SharePoint Central Administration.   
-- For every instance of SPUCWorkerProcessProxy.exe, an instance of SPUCWorkerProcess.exe starts and then stops immediately. Therefore, SPUCWorkerProcess.exe never runs.     
-Additionally, if you create a simple Visual Studio workflow solution, for example, and then you try to attach the workflow to the process, you receive the following error message:   
+- Instances of SPUCWorkerProcessProxy.exe are continuously created until server memory runs out or you stop SharePoint Foundation Sandboxed Code Service through SharePoint Central Administration.
+- For every instance of SPUCWorkerProcessProxy.exe, an instance of SPUCWorkerProcess.exe starts and then stops immediately. Therefore, SPUCWorkerProcess.exe never runs.
+Additionally, if you create a simple Visual Studio workflow solution, for example, and then you try to attach the workflow to the process, you receive the following error message:
 
-  **Unable to attach. Process 'SPUCWORKERPROCESS.exe' is not running on 'SPDEVSERVER'.**  
+  > Unable to attach. Process 'SPUCWORKERPROCESS.exe' is not running on 'SPDEVSERVER'.
 
 ## More Information  
 
@@ -53,12 +55,12 @@ The following SharePoint Server 2013 installation scenarios are not supported:
   ```
 
 - You install SharePoint Server 2013 in a workgroup.
-- You install SharePoint Server 2013 on a domain controller.   
+- You install SharePoint Server 2013 on a domain controller.
 
   **Note** This scenario is supported only for development configurations and not for production configurations.  
 
-- You install SharePoint Server 2013 on Windows Web Server.   
-- You install SharePoint Server 2013 on a virtual machine (VM) that uses the Microsoft Hyper-V Dynamic Memory feature.   
-- You disable Distributed Cache in a farm configuration.     
+- You install SharePoint Server 2013 on Windows Web Server.
+- You install SharePoint Server 2013 on a virtual machine (VM) that uses the Microsoft Hyper-V Dynamic Memory feature.
+- You disable Distributed Cache in a farm configuration.
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
