@@ -8,13 +8,11 @@ ms.reviewer: mghadial
 
 This article explains how to use diagnostic files and the Intune Management extension to help troubleshoot installation failures for Microsoft Intune-managed Win 32 apps. If a Win32 app installation fails, you will have the option to **Collect diagnostics** to further diagnose the issue. The **Collect diagnostics** option will not be enabled when the Win32 app has been successfully installed on the device.  
 
-> [!IMPORTANT]
-> Before you can collect Win32 app diagnostic information, the Intune management extension must be installed on the Windows client. The Intune management extension is installed when a PowerShell script or a Win32 app is deployed to a user or device security group. For more information, see [Intune Management extension - Prerequisites](/mem/intune/apps/intune-management-extension#prerequisites).
-
 ## Win32 app diagnostic requirements
 
 There are specific requirements that must be followed to collect diagnostic files:
 
+- Windows 11, or Windows 10 1909 or later.
 - You must specify the complete diagnostic file path.
 - You can specify environment variables for diagnostic collection, such as the following:
   *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
