@@ -31,7 +31,7 @@ When you use the Microsoft Remote Connectivity Analyzer tool to test the Outlook
 Additionally, a user may experience the following symptoms:
 
 - The user is repeatedly prompted for credentials and can't connect to Exchange Online by using Outlook Anywhere.
-- The user receives the following error message when he or she uses Microsoft Outlook 2010 or Microsoft Office Outlook 2007 to create the Outlook profile automatically:
+- The user receives the following error message when using Outlook 2010 or Outlook 2007 to create the Outlook profile automatically:
 
   > An encrypted connection to your mail server is not available. Click Next to attempt using an unencrypted connection.
 
