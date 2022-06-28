@@ -25,7 +25,7 @@ As part of routine administration activities, email messages about requests for 
 
 The email messages are sent from a mail-enabled security group such as 'no-reply@sharepointonline.com'. When a Microsoft 365 group receives a message from such a security group, it treats the address as external and blocks it. This blocking occurs because Microsoft 365 groups aren’t allowed to receive email messages from external addresses by default.
 
-To make sure that site access requests and site storage notification email messages are received, change the settings of the Microsoft 365 group to allow email from  external addresses:
+To resolve the issue of blocked email messages, change the settings of the Microsoft 365 group to allow email messages from external addresses:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com).
 
