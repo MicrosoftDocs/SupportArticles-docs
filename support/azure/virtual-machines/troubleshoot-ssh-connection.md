@@ -110,7 +110,7 @@ Jun 23 17:44:36 ubu2004 systemd[1]: Started OpenBSD Secure Shell server.
 
 If this command isn't available or returns unexpected results, use other available commands. You can use the `ss` command either as root or via the `sudo` command to verify whether the SSH service is running on your VM.
 
-Here is an example that runs the `ss` command through `sudo`.
+The following example shows how to run the `ss` command through `sudo`:
 
 ```console
 sudo ss --listen --tcp --process --numeric | grep sshd
