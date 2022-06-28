@@ -147,4 +147,4 @@ Here is all the manual settings that are introduced above:
 |Description Field|[{5CBF2787-48CF-4208-B90E-EE5E5D420294}]</br>Prop21=31,<<< Add Description Field Text Here >>>|
 |Notes Field|[{B9B4B3FC-2B51-4A42-B5D8-324146AFCF25}]</br>Prop5=31,<<< AddNotes Field Text Here >>>|
 |Star Ratings|1 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,1</br>2 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,25</br>3 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,50</br>4 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,75</br>5 Star:</br>[{64440492-4C8B-11D1-8B70-080036B11A03}]</br>Prop9=19,99|
-|||
+  

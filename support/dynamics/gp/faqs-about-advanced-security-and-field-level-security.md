@@ -351,8 +351,7 @@ Answer 34: You can combine security for two users or for two classes. However, t
 |Modified1|Denied|Modified1|
 |Modified1|Alternate2|Modifed1|
 |Modified1|Modified2|Modified1|
-||||
-
+  
 In summary, the security settings of the source entity are applied, except where it has access granted to the original. In those cases, the security settings are left with the target entity's previous setting.
 
 Question 35: Why are there check boxes on both the left pane and the right pane of Advanced Security?

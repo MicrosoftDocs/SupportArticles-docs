@@ -1,5 +1,5 @@
 ---
-title: Cannot connect remotely to Azure Virtual Machines because the DHCP is disabled| Microsoft Docs
+title: Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled| Microsoft Docs
 description: Learn how to troubleshoot RDP problem that is caused by DHCP client service is disabled in Microsoft Azure.| Microsoft Docs
 services: virtual-machines
 documentationCenter: ''
@@ -13,12 +13,12 @@ ms.workload: infrastructure
 ms.date: 11/13/2018
 ms.author: genli
 ---
-#  Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled
+# Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled
 
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after the DHCP Client service is disabled in the VM.
 
-
 ## Symptoms
+
 You cannot make an RDP connection a VM in Azure because the DHCP Client service is disabled in the VM. When you check the screenshot in the [Boot diagnostics](/azure/virtual-machines/troubleshooting/boot-diagnostics) in the Azure portal, you see the VM boots normally and waits for credentials in the login screen. You remotely view the event logs in the VM by using Event Viewer. You see that the DHCP Client Service isn't started or fails to start. The following a sample log:
 
 **Log Name**: System </br>
@@ -92,7 +92,6 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
     |1079 - ERROR_DIFERENCE_SERVICE_ACCOUNT   | [Contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.  |
     |1053 | [Contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved quickly.  |
 
-
 #### DHCP Client service is stopped because of an Access Denied error
 
 1. Connect to [Serial Console](serial-console-windows.md) and open a PowerShell instance.
@@ -105,11 +104,13 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
    $wc = New-Object System.Net.WebClient
    $wc.DownloadFile($source,$destination)
    ```
+
 3. Now start a **procmon** trace:
 
    ```
    procmon /Quiet /Minimized /BackingFile c:\temp\ProcMonTrace.PML
    ```
+
 4. Reproduce the problem by starting the service that's generating the **Access Denied** message:
 
    ```
@@ -121,6 +122,7 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
    ```
    procmon /Terminate
    ```
+
 5. Collect the **c:\temp\ProcMonTrace.PML** file:
 
     1. [Attach a data disk to the VM](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -199,7 +201,7 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
 
 1. [Attach the OS disk to a recovery VM](./troubleshoot-recovery-disks-portal-windows.md).
 2. Start a Remote Desktop connection to the recovery VM. Make sure that the attached disk is flagged as **Online** in the Disk Management console. Note the drive letter that's assigned to the attached OS disk.
-3.  Open an elevated command prompt instance (**Run as administrator**). Then run the following script. This script assumes that the drive letter that's assigned to the attached OS disk is **F**. Replace the letter as appropriate with the value in your VM.
+3. Open an elevated command prompt instance (**Run as administrator**). Then run the following script. This script assumes that the drive letter that's assigned to the attached OS disk is **F**. Replace the letter as appropriate with the value in your VM.
 
     ```
     reg load HKLM\BROKENSYSTEM F:\windows\system32\config\SYSTEM
@@ -217,6 +219,4 @@ To resolve this problem, use Serial control to enable DHCP or [reset network int
 
 4. [Detach the OS disk and recreate the VM](./troubleshoot-recovery-disks-portal-windows.md). Then check whether the problem is resolved.
 
-## Next steps
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your problem resolved.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

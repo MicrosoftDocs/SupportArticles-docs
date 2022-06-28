@@ -31,9 +31,8 @@ These amounts are defined as follows.
 |Customer Balance|The value that is in the **Balance** field|
 |Unposted Sales Amount|The value that is in the **Sales/Debits** field under **Unposted**|
 |Unposted payments and deposits|The value that is in the **Cash/Credits** field under **Unposted**|
-||||
-
-If you have a document held in a batch, orders update the On Order Amount value by using the remaining subtotal that is in the document. This remaining subtotal does not include the following amounts:
+  
+  If you have a document held in a batch, orders update the On Order Amount value by using the remaining subtotal that is in the document. This remaining subtotal does not include the following amounts:
 
 - Trade discount
 - Freight
@@ -55,7 +54,7 @@ If the remaining subtotal did include the amounts that are in this list, the On 
 
 2. Set a credit limit. To do this, select **Options** in the **Customer Maintenance** window, and then specify the following setting:
 
-   **Credit Limit**: Select the **Amount** option, and then type *$106.00* in the field that becomes active.
+   **Credit Limit**: Select the **Amount** option, and then type _$106.00_ in the field that becomes active.
 
 3. Select **OK**.
 4. Select **Save**. Then, close the **Customer Maintenance** window.

@@ -53,8 +53,7 @@ To troubleshoot specific errors, refer to the following table.
 |8614|Causes of this error (and for NTDS Replication Event 2042) include the following:<ul><li> The destination domain controller that is logging the 8614 error did not inbound-replicate a directory partition from one or more source domain controllers for Tombstone lifetime number of days.</li><li>System time on the destination domain controller moved, or jumped, Tombstone lifetime one or more days into the future after the last successful replication.</li></ul>| [Troubleshoot Active Directory replication error 8614](/troubleshoot/windows-server/identity/replication-error-8614) |
 |8545|This Active Directory replication error is logged when the source domain controller tries to send changes for a recently migrated object when the destination domain controller has the object present in a different partition.| [Active Directory replication error 8545: Replication update could not be applied](/troubleshoot/windows-server/identity/active-directory-replication-error-8545) |
 |5|This Active Directory replication error has multiple causes.| [Active Directory replication error 5 - Access is denied](/troubleshoot/windows-server/identity/replication-error-5) |
-||||
-
+  
 ## Event IDs
 
 To troubleshoot specific event IDs, refer to the following table:
@@ -67,8 +66,7 @@ To troubleshoot specific event IDs, refer to the following table:
 |Event ID 1925|Attempt to establish a replication link failed due to DNS lookup problem| [4469659](https://support.microsoft.com/help/4469659) |
 |Event ID 2087|DNS lookup failure caused replication to fail| [4469661](https://support.microsoft.com/help/4469661) |
 |Event ID 2088|DNS lookup failure occurred with replication success| [Event ID 2088: DNS lookup failure occurred with replication success](/windows-server/identity/ad-ds/manage/component-updates/event-id-2088--dns-lookup-failure-occurred-with-replication-success) |
-||||
-
+  
 ## References
 
 - [Troubleshooting Active Directory Replication Problems](/previous-versions/windows/it-pro/windows-2000-server/bb727057(v=technet.10))

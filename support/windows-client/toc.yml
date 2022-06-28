@@ -260,6 +260,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS
@@ -706,6 +708,8 @@
       href: ./performance/windows-devices-fail-boot-after-installing-kb4041676-kb4041691.md
     - name: Windows fails to start with error Missing or Corrupt ntoskrnl.exe
       href: ./performance/windows-fails-start-error-missing-corrupt-ntoskrnl.md
+    - name: Windows may hang during startup after you exclude UWF from Microsoft Defender
+      href: ./performance/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender.md
   - name: Performance monitoring tools
     items:
     - name: Cannot modify user environment variables
@@ -992,6 +996,8 @@
       href: ./system-management-components/configure-winrm-for-https.md
   - name: WMI
     items:
+    - name: Configure standalone WMI providers
+      href: ./system-management-components/configure-standalone-wmi-providers.md
     - name: Event ID 10 is logged in the Application log
       href: ./system-management-components/event-id-10-logged-application-log-after-install.md
     - name: Failed logon event when running remote WMI
@@ -1182,7 +1188,7 @@
       href: ./windows-security/tpm-device-driver-error-log.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Enable diagnostic logging for Windows Security Center
+    - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
 - name: Windows Troubleshooters
   items:
@@ -1190,3 +1196,5 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md

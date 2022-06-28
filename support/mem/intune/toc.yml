@@ -69,8 +69,6 @@ items:
     items:
     - name: Save application failed error
       href: save-application-failed-error.md
-    - name: Build software inventory using Power BI
-      href: build-software-inventory-power-bi.md
     - name: Can't sync Microsoft Store for Business apps to Intune
       href: apps-fail-sync-to-intune.md
 - name: App protection policies (APP)
@@ -78,7 +76,11 @@ items:
     - name: Troubleshoot APP deployment
       href: troubleshoot-app-protection-policy-deployment.md
     - name: Troubleshoot APP user issues
-      href: troubleshoot-mam.md   
+      href: troubleshoot-mam.md
+    - name: Troubleshoot data transfer between apps
+      href: troubleshoot-data-transfer.md
+    - name: Common data transfer issues
+      href: data-transfer-scenarios.md
     - name: Fingerprint authentication on Samsung Note 4
       href: no-prompt-for-fingerprint-identity.md
 - name: Certificates
@@ -165,8 +167,6 @@ items:
       href: users-cannot-logon-windows-multi-app-kiosk.md
     - name: Windows feature updates are not offered
       href: windows-feature-updates-never-offered.md
-    - name: Restrict USB devices with administrative templates
-      href: restrict-usb-with-administrative-template.md
   - name: iOS devices
     items:
     - name: 2016341112 iOS device is currently busy
@@ -306,9 +306,7 @@ items:
   - name: Common company resource access error codes
     href: troubleshoot-company-resource-access-problems.md
   - name: Endpoint protection common errors
-    href: troubleshoot-endpoint-protection-in-microsoft-intune.md 
-  - name: Device-only subscription
-    href: device-licenses-introduction.md
+    href: troubleshoot-endpoint-protection-in-microsoft-intune.md
   - name: Script error during Intune setup process
     href: script-error-intune-setup.md
   - name: Can't query the Intune Data Warehouse

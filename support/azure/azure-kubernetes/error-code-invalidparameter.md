@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the InvalidParameter error code
 description: Learn how to troubleshoot the InvalidParameter error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
+ms.date: 3/22/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -11,15 +11,15 @@ ms.service: container-service
 ---
 # Troubleshoot the InvalidParameter error code
 
-This article describes how to identify and resolve the `InvalidParameter` error, which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `InvalidParameter` error that occurs when you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.81 or higher. If Azure CLI is already installed, you can find the version number by entering `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.81 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
 
 ## Symptoms
 
-When you create an AKS cluster, in most cases, the provided input is validated before the cluster is created. On rare occasions, a parameter was used that passed the precreation validation, but causes errors when the resources for the AKS cluster are created. Errors that are related to invalid parameters can be similar to the example below:
+When you create an AKS cluster, the provided input is usually validated before the cluster is created. However, on rare occasions, a parameter passes the precreation validation but causes errors when the resources for the AKS cluster are created. Errors that are related to invalid parameters might resemble the following example:
 
 > Code="InvalidParameter"
 >
@@ -29,26 +29,28 @@ When you create an AKS cluster, in most cases, the provided input is validated b
 
 ## Cause
 
-When you tried to create the cluster, one of these issues occurred:
+This issue occurs because one of the following conditions is true:
 
 - The Azure Virtual Machine SKU isn't available in the selected region.
 - The service principal is invalid.
 - A virtual network, subnet, or route table is invalid.
 - An Azure CLI parameter is invalid.
 
-Or there may be other reasons why your cluster creation attempt failed.
+There might also be other reasons that your cluster creation attempt failed.
 
 ## Solution
 
-Follow the link for the appropriate troubleshooting step listed below:
+In the following table, follow the link for the appropriate troubleshooting step.
 
 | Troubleshooting step | Reference link |
 | -------------------- | -------------- |
 | Check whether the SKU is available | [Resolve errors for SKU not available](/azure/azure-resource-manager/troubleshooting/error-sku-not-available) |
 | Verify that the service principal is valid | [Service principals with AKS](/azure/aks/kubernetes-service-principal) |
-| Verify that any commands that were used to create the cluster are valid | [az aks](/cli/azure/aks#az_aks_create) (Azure CLI reference) |
+| Verify that any commands that were used to create the cluster are valid | [az aks](/cli/azure/aks#az-aks-create) (Azure CLI reference) |
 | Verify that any custom network resources that were used to create the cluster are valid | [Configure Azure CNI networking in AKS](/azure/aks/configure-azure-cni) and [Customize cluster egress with a user-defined route](/azure/aks/egress-outboundtype) |
 
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

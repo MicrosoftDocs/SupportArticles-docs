@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 11/15/2021
+ms.date: 6/7/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
@@ -32,7 +32,7 @@ aks-agentpool-34796016-vmss000002   Ready    agent   45h   v1.20.9   10.240.2.47
 
 The next step is to establish a connection to the AKS cluster node that you want to capture the network trace from. [Create an SSH connection to the Linux node](/azure/aks/ssh).
 
-If you're using a Linux virtual machine scale set but don't have your SSH key, reset the SSH key by running the [az vmss extension set](/cli/azure/vmss/extension#az_vmss_extension_set) and [az vmss update-instances](/cli/azure/vmss#az_vmss_update_instances) commands in Azure CLI:
+If you're using a Linux virtual machine scale set but don't have your SSH key, reset the SSH key by running the [az vmss extension set](/cli/azure/vmss/extension#az-vmss-extension-set) and [az vmss update-instances](/cli/azure/vmss#az-vmss-update-instances) commands in Azure CLI:
 
 ```azurecli-interactive
 CLUSTER_RESOURCE_GROUP=  # Specify the cluster resource group.
@@ -115,9 +115,4 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
 
-Output similar to the following text appears:
-
-```output
-$ kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
-tar: Removing leading `/' from member names
-```
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

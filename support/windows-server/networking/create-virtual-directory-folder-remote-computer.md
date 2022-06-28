@@ -24,10 +24,9 @@ A remote virtual directory is a directory that's not contained within the Web si
 
 | Physical location| Alias| URL path |
 |---|---|---|
-|C:\WWWroot| *home directory* <br/>(none)|`http://Sales`|
+|C:\WWWroot| _home directory_ <br/>(none)|`http://Sales`|
 |\\\RemoteServer<br/>\SalesData\ProdCustomers|Customers|`http://Sales/Customers`|
-||||
-
+  
 Both virtual directories and physical directories (directories without an alias) are listed in Internet Services Manager. A virtual directory is indicated by a folder icon that has a globe in the corner.
 
 ## How to configure a remote network share

@@ -41,8 +41,7 @@ By moving the WCF service execution to another thread pool, you may incur a smal
 |HTTP Async Module (Default in 4.x) - used in Integrated Application Pool|Apply the code solution in this article.|
 |ISAPI - used in Classic Mode Application Pool|Apply Private Thread pool. (see links following this table)|
 |`tcp.Net`|Apply the code solution in this article.|
-|||
-
+  
 If you are unable to apply the solution in this article following the above table, an example using a private thread pool can be found in an MSDN article: [Foundations: Synchronization Contexts in WCF](/archive/msdn-magazine/2007/november/foundations-synchronization-contexts-in-wcf).
 
 Steps to implement this solution that will execute the WCF service on the .NET CLR Worker thread pool:
@@ -141,8 +140,7 @@ Monitor the process hosting your WCF service. If you notice a problem scaling up
 |HTTP Service Request Queues / Arrival Rate|<ApplicationPool Hosting the WCF Service(s)>|
 |ASP.NET Apps v(4 or 2) / Requests Executing|<WCF Application Instance(s)>|
 |ASP.NET Apps v(4 or 2) / Request Execution Time|<WCF Application Instance(s)>|
-|||
-
+  
 You can use the WCF performance counters if you have them enabled as well:
 
 [WCF Performance Counters](/dotnet/framework/wcf/diagnostics/performance-counters/)

@@ -57,8 +57,7 @@ For example, the following operations use earlier-version APIs, which reply on t
 |NET GROUP|All versions|
 |NET USER|All versions|
 |NETDOM ADD, where the /ou command is either not specified or supported|All versions|
-|||
-
+  
 It's helpful to make the default container for user, computer, and security groups an OU for several reasons, including:
 
 - Group policies can be applied on OU containers but not on CN class containers, where security principals are put by default.
@@ -94,7 +93,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 3. Create the OU container where you want users who are created with earlier-version APIs to be located, if the OU container that you want doesn't exist.
 
-4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
+4. Run Redirusr.exe at the command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created user objects created by down-level APIs:
 
     ```console
     c:\windows\system32\redirusr <DN path to alternate OU>
@@ -112,7 +111,7 @@ If you're redirecting the CN=Users and CN=Computers folders, be aware of the fol
 
 3. Create the OU container where you want computers that are created with earlier-version APIs to be located, if the desired OU container doesn't exist.
 
-4. Run Redircmp.exe at a command prompt by using the following syntax. In the command, *container-dn* is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
+4. Run Redircmp.exe at a command prompt by using the following syntax. In the command, _container-dn_ is the distinguished name of the OU that will become the default location for newly created computer objects that are created by down-level APIs:
 
     ```console
     redircmp container-dn container-dn

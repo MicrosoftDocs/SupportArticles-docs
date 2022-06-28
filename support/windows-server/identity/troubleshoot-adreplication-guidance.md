@@ -1,7 +1,7 @@
 ---
-title: Guidance of troubleshooting Active Directory replication
-description: Introduces general guidance of troubleshooting scenarios related to Active Directory replication.
-ms.date: 03/03/2020
+title: Guidance for troubleshooting Active Directory replication
+description: Introduces general guidance for troubleshooting scenarios related to Active Directory replication.
+ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -101,6 +101,35 @@ This problem can be related to connectivity, DNS, or authentication issues. If t
 
 - [Active Directory replication Event ID 1925](/troubleshoot/windows-server/identity/active-directory-replication-event-id-1925-dns-lookup)
 - [Active Directory replication Event ID 2087](/troubleshoot/windows-server/identity/active-directory-replication-event-id-2087)
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+
+> [!NOTE]
+> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+>
+> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+3. Run the SDP tool to collect the logs from the source and destination nodes.
+4. Unzip the file and run the following cmdlet on both nodes:
+
+    ```PowerShell
+    TSSv2.ps1 -SDP HyperV -SkipSDPList skipBPA,skipTS
+    ```
+
+Collect all logs. Zip and upload the collection on the workspace.
 
 ## Reference
 

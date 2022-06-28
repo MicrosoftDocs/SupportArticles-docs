@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the ServicePrincipalValidationClientError error code
 description: Learn how to troubleshoot the ServicePrincipalValidationClientError error when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/10/2022
+ms.date: 3/22/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -11,15 +11,15 @@ ms.service: container-service
 ---
 # Troubleshoot the ServicePrincipalValidationClientError error code
 
-This article describes how to identify and resolve the `ServicePrincipalValidationClientError` error, which might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
+This article discusses how to identify and resolve the `ServicePrincipalValidationClientError` error that might occur if you try to create and deploy a Microsoft Azure Kubernetes Service (AKS) cluster.
 
 ## Prerequisites
 
-- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or higher. If Azure CLI is already installed, you can find the version number by entering `az --version`.
+- [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
 
 ## Symptoms
 
-When you try to deploy the cluster, you receive the following error message:
+When you try to deploy an AKS cluster, you receive the following error message:
 
 > adal: Refresh request failed. Status Code = '401'.
 >
@@ -49,21 +49,21 @@ When you try to deploy the cluster, you receive the following error message:
 
 ## Cause
 
-The secret provided for the highlighted service principal isn't valid.
+The secret that's provided for the highlighted service principal isn't valid.
 
 ## Solution 1: Reset the service principal secret
 
-Reset the secret that's used for the service principal by entering the [az ad sp credential reset](/cli/azure/ad/sp/credential#az-ad-sp-credential-reset) command:
+Reset the secret that's used for the service principal by running the [az ad sp credential reset](/cli/azure/ad/sp/credential#az-ad-sp-credential-reset) command:
 
 ```azurecli-interactive
 az ad sp credential reset --name "01234567-89ab-cdef-0123-456789abcdef" --query password --output tsv
 ```
 
-This command resets the secret and displays it as output. Then you can specify the new secret when you retry creating the new cluster.
+This command resets the secret, and displays it as output. Then, you can specify the new secret when you try again to create the new cluster.
 
 ## Solution 2: Create a new service principal
 
-You can create a new service principal and obtain the secret that's associated with it by entering the [az ad sp create-for-rbac](/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command:
+You can create a new service principal and get the secret that's associated with it by running the [az ad sp create-for-rbac](/cli/azure/ad/sp#az-ad-sp-create-for-rbac) command:
 
 ```azurecli-interactive
 az ad sp create-for-rbac --role Contributor
@@ -80,8 +80,10 @@ The output of the command should resemble the following JSON string:
 }
 ```
 
-Make note of the `appId` and `password` values that are generated. After you get these values, you can rerun the cluster creation command with the new service principal and secret.
+Note the `appId` and `password` values that are generated. After you get these values, you can rerun the cluster creation command for the new service principal and secret.
 
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -23,8 +23,7 @@ In this scenario, if you try to install x86 version of the SQL Server 2008 Repor
 |Rule|Status|
 |---|---|
 |Same architecture installation|Failed|
-|||
-
+  
 If you click on the **Failed** status, you will see the following message:
 
 > Rule "same architecture installation" failed.  

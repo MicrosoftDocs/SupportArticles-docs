@@ -26,24 +26,25 @@ This article lists the common boot errors that you may receive when you start a 
 
 ## Next steps
 
-- [VM Serial Console](serial-console-linux.md)
+* [VM Serial Console](serial-console-linux.md)
 
 Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using Azure:
 
-- [Azure VM repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md)
+* [Azure VM repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md)
 
  Disk Swap – this can be automated using either:
-- [Power Shell Recovery Scripts](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager)
-- [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
+* [Power Shell Recovery Scripts](https://github.com/Azure/azure-support-scripts/tree/master/VMRecovery/ResourceManager)
+* [bash Recovery Scripts](https://github.com/sribs/azure-support-scripts)
 
-- [CLI](troubleshoot-recovery-disks-linux.md)
-- [Azure portal](troubleshoot-recovery-disks-portal-linux.md)
+* [CLI](troubleshoot-recovery-disks-linux.md)
+* [Azure portal](troubleshoot-recovery-disks-portal-linux.md)
 
-
-## Disk Swap Video:
+## Disk Swap Video
 
 If you do not have access to GRUB watch [this](https://youtu.be/m5t0GZ5oGAc) video and see, how you can easily automate the disk swap procedure to recover your VM
 
 ## Unofficial solution
 
 Recovery of a VM can also be attempted with the unsupported BETA script [ALAR](repair-linux-vm-using-ALAR.md).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

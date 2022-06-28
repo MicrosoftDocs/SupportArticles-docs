@@ -4,7 +4,6 @@ description: Provides a Visual C++ code example that demonstrates how to use the
 ms.date: 04/27/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # Use the member functions of the STL queue class in Visual C++
 

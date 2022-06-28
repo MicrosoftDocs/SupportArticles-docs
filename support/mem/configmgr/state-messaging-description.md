@@ -63,15 +63,13 @@ To set verbose or debug logging on a Configuration Manager client or management 
 |---|---|---|
 |`HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/CCM/Logging/@Global`|LogLevel|0|
 |`KEY_LOCAL_MACHINE/SOFTWARE /Microsoft/CCM/Logging/DebugLogging`|Enabled|True|
-|||
-
+  
 On the site server, edit the following registry entry to enable verbose logging, and then restart the `SMS_Executive` service (or the state system component):
 
 |Registry subkey|DWORD name|Value data|
 |---|---|---|
 |`HKEY_LOCAL_MACHINE/SOFTWARE/Microsoft/SMS/Components/SMS_STATE_SYSTEM`|Verbose Logging|1|
-|||
-
+  
 Tracing SQL commands requires that SQL tracing is enabled for Configuration Manager components. But not much useful data can be obtained directly from the tracing. It's true even if Profiler is enabled. So we'll examine the Updatesdeployment.log and Statemessage.log files on the client. By interpreting the state messages in these logs, we can get a clear picture of what's occurring at the various steps in the process.
 
 Before we examine log code examples, we have to understand the state message format. The state message itself consists of several parts, including **Topic Type** and **State Message ID**. At some locations in the logs, the **Topic Type** seems to already be interpreted for you.
@@ -149,9 +147,8 @@ select * from v_StateNames
 |501|4|Scan is pending retry|
 |501|5|Scan failed|
 |501|6|Scan completed with errors|
-||||
-
-For more information, see [State messages in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager).
+  
+  For more information, see [State messages in Configuration Manager](/mem/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager).
 
 The following example aligns and compares the Updatesdeployment.log and Statemessage.log files. Make sure that the logs refer to the same state message by aligning the same `TopicID` (green text). It clearly indicates that the two logs are referring to the same state message. The `TopicType` is shown in light blue text. Notice that one log might show the actual number that can be interpreted from the [State messaging data](#state-messaging-data) chart. The other might show a generic value (already interpreted). The **State Message ID** (`StateId`) is shown in purple text.
 
@@ -216,19 +213,19 @@ When the next state message polling cycle occurs, all state messages are sent to
 In the Statemessage.log file, you can see that the state message information is pulled, formatted into XML, and then sent to the management point. The state message information should resemble the following example:
 
 > \<![LOG[StateMessage body: \<?xml version="1.0" encoding="UTF-16"?>  
-> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID:*GUID*\</ClientID>  
-> \<ClientVersion>*client_version_number*\</ClientVersion>\<NetBIOSName>*name*\</NetBIOSName>\<CodePage>437\</CodePage>  
+> \<Report>\<ReportHeader>\<Identification>\<Machine>\<ClientInstalled>1\</ClientInstalled>\<ClientType>1\</ClientType>\<ClientID>GUID:_GUID_\</ClientID>  
+> \<ClientVersion>_client_version_number_\</ClientVersion>\<NetBIOSName>_name_\</NetBIOSName>\<CodePage>437\</CodePage>  
 > \<SystemDefaultLCID>1033\</SystemDefaultLCID>\</Machine>\</Identification>\<ReportDetails>\<ReportContent>State Message Data\</ReportContent>  
-> \<ReportType>Full\</ReportType>\<Date>*date*\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="*time*" SerialNumber="*serial_number*">\<Topic ID="21e49ac6-a273-4a61-9794-eb675bc743e5" Type="500" IDType="3"/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>102\</Param>\</UserParameters>\</StateMessageserParameters>\</StateMessage>\</ReportBody>\</Report>  
-> ]LOG\<![LOG[CStateMsgManager::GetSignEncyptMode]LOG]!>\<time="*time*" date="*date*" component="StateMessage" context="" type="1" thread="3592" file="statemsg.cpp:1820">  
-> \<![LOG[**Successfully forwarded State Messages to the management point**]LOG]!>\<time="*time*" date="*date*" component="StateMessage" context="" type="1" thread="3592" file="statemsg.cpp:1527">
+> \<ReportType>Full\</ReportType>\<Date>_date_\</Date>\<Version>1.0\</Version>\<Format>1.0\</Format>\</ReportDetails>\</ReportHeader>\<ReportBody>\<StateMessage MessageTime="_time_" SerialNumber="_serial_number_">\<Topic ID="21e49ac6-a273-4a61-9794-eb675bc743e5" Type="500" IDType="3"/>\<State ID="2" Criticality="0"/>\<UserParameters Flags="0" Count="1">\<Param>102\</Param>\</UserParameters>\</StateMessageserParameters>\</StateMessage>\</ReportBody>\</Report>  
+> ]LOG\<![LOG[CStateMsgManager::GetSignEncyptMode]LOG]!>\<time="_time_" date="_date_" component="StateMessage" context="" type="1" thread="3592" file="statemsg.cpp:1820">  
+> \<![LOG[**Successfully forwarded State Messages to the management point**]LOG]!>\<time="_time_" date="_date_" component="StateMessage" context="" type="1" thread="3592" file="statemsg.cpp:1527">
 
 > [!NOTE]
 > This example is truncated to a single state message because of the size of the XML file.
 
-Although the *Statemessage.log* file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this operation. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
+Although the _Statemessage.log_ file records that the messages are dispatched to the management point, the state messaging system doesn't actually move data to the management point. In the following example, you can see that `CCMMessaging` does this operation. There's more that go on behind the scenes at this point. However, it's sufficient to know that `CCMMessaging` sends the data to the management point (in this case, the `MP_Relay` component).
 
-> \<![LOG[OutgoingMessage(Queue='mp_**mp_relay**endpoint', ID={A9E7A07D-223D-4F5D-93D5-15AF5B72E05C}): Delivered successfully to host '*host_name*'.]LOG]!>
+> \<![LOG[OutgoingMessage(Queue='mp_**mp_relay**endpoint', ID={A9E7A07D-223D-4F5D-93D5-15AF5B72E05C}): Delivered successfully to host '_host_name_'.]LOG]!>
 
 When the data arrives for processing at `MP_Relay`, it's processed and translated to the *`.smx`* file format, and then put into the `auth\statesys.box\incoming` folder.
 
@@ -243,23 +240,23 @@ In the `auth\statesys.box\incoming` folder, you can see the *`.smx`* files being
 
 :::image type="content" source="media/state-messaging-description/notepad-example.png" alt-text="Screenshot of an example SMX file in Notepad." border="false":::
 
-If you rename the *`.smx`* file by adding the *`.xml`* extension so that the file is named *file_name*.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
+If you rename the *`.smx`* file by adding the *`.xml`* extension so that the file is named _file_name_.smx.xml, and then you double-click the new file name, the XML file is opened in Internet Explorer and is much easier to read.
 
 The following image is an example of an XML file opened in Internet Explorer. The details of the computer and state message are highlighted. It contains the information that we've previously discussed, combined with the unique **State Message ID** value.
 
 > [!NOTE]
-> If you rename these files, first copy them to a different folder so that you don't affect the *Statesys.box* folder.
+> If you rename these files, first copy them to a different folder so that you don't affect the _Statesys.box_ folder.
 
 :::image type="content" source="media/state-messaging-description/xml.png" alt-text="Screenshot of an example .smx.xml file in Internet Explorer." border="false":::
 
-Finally, the state messages must be processed into the database. In the *Statesys.log* file, you can see such messages similar to the following example:
+Finally, the state messages must be processed into the database. In the _Statesys.log_ file, you can see such messages similar to the following example:
 
 > Found new state messages to process, starting processing thread  
 > Thread "State Message Processing Thread #0" id:5076 started  
-> CMessageProcessor - Detected parent site '*site_name*'  
+> CMessageProcessor - Detected parent site '_site_name_'  
 > CMessageProcessor - Processing file: mdlbp169.SMW  
 > CMessageProcessor - **Processed 1 records with 0 invalid records.**  
-> CMessageProcessor - Successfully replicated file "mdlbp169.SMW" to parent site *site_name*.  
+> CMessageProcessor - Successfully replicated file "mdlbp169.SMW" to parent site _site_name_.  
 > CMessageProcessor - Processed 1 message files in this batch, with 0 bad files.  
 > Thread "State Message Processing Thread #0" id:5076 terminated normally
 
@@ -287,8 +284,7 @@ select * from SC_Component_Property where ComponentID in (select ID from SC_Comp
 |Min Missing Message Age|||2880|
 |Resync Check Interval|||15|
 |Retry Config|REG_SZ|\<Config>\<Retry PatternID="0"  RetryQueue="0">7200,28800,86400\</Retry>\</Config>|0|
-|||||
-
+  
 > [!NOTE]
 >
 > - **Resync Check Interval** is set to **60** minutes. This is the schedule for checking systems that require state message resyncs.

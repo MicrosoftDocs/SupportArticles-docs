@@ -186,7 +186,6 @@ The first thing the client does is set the WSUS server that will be its update s
 |ScanAgent.log shows no policy available for an update source and no WUAHandler.log exists or no current activity within WUAHandler.log|Check the [Enable software updates on clients](/mem/configmgr/core/clients/deploy/about-client-settings#enable-software-updates-on-clients) setting.|
 |Scan Agent or Location Services doesn't receive the WSUS server location|<ul><li><p>Is a software update point (SUP) role installed for the site?</p><p>If not, install and configure a software update point and monitor SUPSetup.log for progress. For more information, see [Install and configure a software update point](/mem/configmgr/sum/get-started/install-a-software-update-point).</p></li><li><p>If a SUP role is installed, is it configured and synchronizing?</p><p>Check WCM.log, WSUSCtrl.log, and WSyncMgr.log for errors.</p><ul><li>`select * from WSUSServerLocations`</li><li>`select * from Update_SyncStatus`</li></ul></li></ul>|
 |Client receives the WSUS location but fails to configure the WSUS registry keys|<p>Did Group Policy refresh respond within the 2-minute timeout per WUAHandler.log? If so, does WUAHandler denote **Group policy settings were overwritten by a higher authority (Domain Controller)**?</p><p>For more information, see [Group Policy overrides the correct WSUS configuration information](troubleshoot-software-update-scan-failures.md#group-policy-overrides-the-correct-wsus-configuration-information).</p>|
-|||  
 
 For more information about software update scan failures troubleshooting, see [Troubleshoot software update scan failures](troubleshoot-software-update-scan-failures.md).
 
@@ -339,7 +338,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
 
                 If the port isn't accessible, telnet will return an error that resembles the following one:
 
-                > Could not open connection to the host, on port \<*PortNumber*>
+                > Could not open connection to the host, on port \<_PortNumber_>
 
                 This error suggests that the firewall rules aren't configured to allow communication for the WSUS computer. This error can also suggest that an intermediate network device is blocking that port. To verify, try the same test from a client on the same local subnet. If it works, the computers are configured correctly. However, a router or firewall between segments is blocking the port and causing the failure.
 
@@ -351,7 +350,7 @@ During a scan, the Windows Update Agent needs to communicate with the `ClientWeb
           4. On the WSUS server, open **Internet Information Services (IIS) Manager**.
           5. Expand **Web Sites**, right-click the website for the WSUS computer, then click **Properties**.
           6. Click the **Web Site** tab. The HTTP port setting is displayed in **TCP port** and the HTTPS port setting is displayed in **SSL port**.
-          7. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, then click the \<*SiteSystemName*> right-hand pane.
+          7. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Servers and Site System Roles**, then click the \<_SiteSystemName_> right-hand pane.
           8. In the bottom pane, right-click **Software Update Point** and then click **Properties**.
           9. Go to the **General** tab, specify or verify the WSUS configuration port numbers.
 
@@ -538,8 +537,7 @@ Deployment issues that occur with specific updates can be broken into the areas 
 |Areas|Installation|Supersedence|Detection|
 |---|---|---|---|
 |Components|<ul><li>WUA</li><li>Update Installer (Component-Based Servicing (CBS), MSI)</li><li>CCMExec</li></ul>|Update metadata|<ul><li>WUA</li><li>Update metadata</li><li>Update Installer (CBS, MSI)</li></ul>|
-|||||
-
+  
 ### Installation issues
 
 What is the installer (CBS, MSI, other)?

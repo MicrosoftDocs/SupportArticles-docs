@@ -55,7 +55,6 @@ This issue occurs for one of the following reasons:
     ||sAMAccountName|Equals "MSOL_AD_Sync"|
     ||sAMAccountName|Is not present|
     ||isCriticalSystemObject|Is set to "True"|
-    ||||
 
 - The user principal name (UPN) was changed after the initial synchronization and must be updated manually.
 - Exchange Online Simple Mail Transfer Protocol (SMTP) addresses of synced users aren't populated appropriately in the on-premises Active Directory schema.
@@ -101,7 +100,6 @@ To determine attribute conflicts caused by user objects that were created by usi
         |---|---|---|
         |proxyAddresses|proxyAddresses (3): x500:/o=Exchange/ou=Exchange Administrative Group (FYDIBOHF23SPDLT)/cn=Recipients/cn=1ae75fca0d3a4303802cea9ca50fcd4f-7628376; smtp:`7628376@service.contoso.com`; SMTP:`7628376@contoso.com`;|<br/> 1. The number that's displayed in parentheses next to the attribute label indicates the number of proxy address values in the multivalue attribute.<br/><br/> 2. Each distinct proxy address value is indicated by a semicolon (;).<br/><br/>3. The primary SMTP proxy address value is indicated by uppercase "SMTP:"|
         |userPrincipalName|`7628376@contoso.com`||
-        ||||
 
         > [!NOTE]
         > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the Support Tools, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
@@ -223,9 +221,8 @@ When SMTP attributes aren't synced to Exchange Online in an expected way, you ma
 |proxyAddresses|SMTP:`user1@contoso.com`<br/>smtp:`user1@sub.contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@sub.contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
 |mail|`User1@contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
 |UserPrincipalName|`User1@contoso.com`|Primary SMTP: `user1@contoso.com`<br/>Secondary SMTP: `user1@contoso.onmicrosoft.com`|
-||||
-
-The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient. You can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
+  
+  The Microsoft Online Email Routing Address (MOERA) entry that's associated with the default domain (such as `user1@contoso.onmicrosoft.com`) is an interpreted value that's based on a user account's alias. This specialty email address is inextricably linked to each Exchange Online recipient. You can't manage, delete, or create additional MOERA addresses for any recipient. However, the MOERA address can be over-ridden as the primary SMTP address by using the attributes in the on-premises Active Directory user object.
 
 > [!NOTE]
 > The presence of data in the proxyAddresses attribute completely masks data in the mail attribute for Exchange Online email address population.
@@ -243,4 +240,4 @@ The Windows PowerShell commands that are mentioned in this article require the A
 For more information about filtering directory synchronization by attributes, see the following Microsoft TechNet wiki article:  
 [List of Attributes that are Synced by the Azure Active Directory Sync Tool](https://social.technet.microsoft.com/wiki/contents/articles/19901.list-of-attributes-that-are-synced-by-the-windows-azure-active-directory-sync-tool.aspx)
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

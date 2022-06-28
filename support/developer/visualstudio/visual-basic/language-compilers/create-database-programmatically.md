@@ -4,7 +4,6 @@ description: This article describes how to use ADO.NET and Visual Basic .NET to 
 ms.date: 10/10/2020
 ms.custom: sap:Language or Compilers
 ms.topic: how-to
-ms.technology: visual-basic-language-compilers
 ---
 # Create SQL Server database programmatically by using ADO.NET and Visual Basic .NET  
 
@@ -83,8 +82,6 @@ Programmers often need to create databases programmatically. This article descri
     ```
 
 ## References
-
-- [https://msdn2.microsoft.com/library/e80y5yhx(vs.71).aspx](https://msdn2.microsoft.com/library/e80y5yhx%28vs.71%29.aspx)
 
 - [How To Create a SQL Server Database Programmatically by Using ADO.NET and Visual C++ .NET](https://support.microsoft.com/help/307402)
 

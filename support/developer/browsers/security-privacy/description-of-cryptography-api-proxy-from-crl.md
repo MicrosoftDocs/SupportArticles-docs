@@ -62,9 +62,9 @@ When trying to discover the proxy, the Crypto API uses the following logic:
 
 In Windows 10, CryptoAPI 2 (CAPI2) is updated so that it does not have its own proxy settings. The change is implemented in a [WinHttpOpen function](/windows/desktop/api/winhttp/nf-winhttp-winhttpopen) call where starting from Windows 10, CAPI2 uses the **WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY** flag.
 
-|WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY|Uses system and per-user proxy settings (including the Internet Explorer proxy configuration) to determine which proxy/proxies to use. Automatically attempts to handle failover between multiple proxies, different proxy configurations per interface, and authentication. Supported in Windows 8.1 and newer.|
+|Flag Name|Description|
 |---|---|
-|||
+|WINHTTP_ACCESS_TYPE_AUTOMATIC_PROXY|Uses system and per-user proxy settings (including the Internet Explorer proxy configuration) to determine which proxy/proxies to use. Automatically attempts to handle failover between multiple proxies, different proxy configurations per interface, and authentication. Supported in Windows 8.1 and newer.|
 
 > [!NOTE]
 > Previous Windows versions have used the **WINHTTP_ACCESS_TYPE_DEFAULT_PROXY** flag.
@@ -80,7 +80,6 @@ If you do not want to set a proxy for each logged-on user, you can set up a mach
 |---|---|
 |Type|REG DWORD|
 |Value|<br/>0: per-machine proxy<br/>1 or no value: per-user|
-|||
 
 After you set the registry key, you can configure the proxy with Internet Properties (Inetcpl.cpl). Machine-wide proxy settings can be changed by administrators or using the Group Policy.
 

@@ -78,7 +78,6 @@ _Original KB number:_ &nbsp; 2021446
     |NTDS KCC|1865|The KCC was unable to form a complete spanning tree network topology. As a result, the following list of sites can't be reached from the local site <br/><br/>|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed. <br/><br/>|
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed<br/><br/>|
-    ||||
 
 4. Domain controllers log NTDS Replication event 2087 and NTDS Replication event 2088 in their Directory Service event log:
 
@@ -110,7 +109,7 @@ _Original KB number:_ &nbsp; 2021446
     > Invalid DNS configuration may be affecting other essential operations on member computers, domain controllers, or application servers in this Active Directory Domain Services forest, including logon authentication or access to network resources.  
     >  
     > You should immediately resolve this DNS configuration error so that this domain controller can resolve the IP address of the source domain controller using DNS.
-    
+
 ## Cause
 
 Error Status 8524 maps to the following error string:
@@ -147,7 +146,7 @@ In summary, the 8524 replication status is logged when a destination DC can't re
 
 If the 8524 error/event refers to a DC that's currently offline but still valid in the forest, make it operational.
 
-If the 8524 error/event refers to an inactive DC, remove the stale metadata for that DC from the destination DCs' copy of Active Directory. An inactive DC is a DC install that no longer exists on the network, but its NTDS Settings object still exists in the destination DCs' copy of Active Directory - 
+If the 8524 error/event refers to an inactive DC, remove the stale metadata for that DC from the destination DCs' copy of Active Directory. An inactive DC is a DC install that no longer exists on the network, but its NTDS Settings object still exists in the destination DCs' copy of Active Directory -
 
 Microsoft support regularly finds stale metadata for nonexistent DCs, or stale metadata from previous promotions of a DC with the same computer name that hasn't been removed from Active Directory.  
 
@@ -211,7 +210,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
 
      `repadmin /showrepl contoso-dc2.contoso.com`
 
-     The "DSA Object GUID" field in the header of the `repadmin /SHOWREPl` command contains the objectGUID of the source DCs *current* NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow or failing. The header of the `repadmin` output will look something like:
+     The "DSA Object GUID" field in the header of the `repadmin /SHOWREPl` command contains the objectGUID of the source DCs _current_ NTDS settings object. Use the source DCs' view of its NTDS Settings Object in case replication is slow or failing. The header of the `repadmin` output will look something like:
 
     > Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
@@ -220,7 +219,7 @@ Destination DCs resolve source DCs in DNS by their fully qualified CNAME records
     <- clipboard & paste into it the PING command in  
     <- step 4  
 
-2. Locate the ObjectGUID of the source DC in the *destination* DCs' copy of Active Directory.
+2. Locate the ObjectGUID of the source DC in the _destination_ DCs' copy of Active Directory.
 
      From the console of the destination DC logging the 8524 error/event, type:
 
@@ -326,7 +325,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
 
     Notes:
 
-    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the _msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
+    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
     - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
     - Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid. The only exception is that ISP has been contracted (that is, paid), and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
     - ISP DNS Servers typically don't accept dynamic DNS updates so CNAME, Host, and SRV records may have to be manually registered.
@@ -464,7 +463,7 @@ The error message text in DS RPC Client event 2087 documents a user action for r
   
     Notes:
 
-    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. It won't resolve correctly if the _msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
+    - The SOA query for the _mscs.contoso.com zone will resolve correctly if the targeted DNS has a good forwarder or delegation or for the_msdcs.\<forest root zone>. It won't resolve correctly if the_msdcs.\<forest root zone> on the DNS Server being queried is a non-delegated subdomain of \<forest root zone> that is the zone relationship created by Windows 2000 domains.
     - CNAME records are always registered in the _msdcs.\<forest root zone>, even for DC in non-root domains.
     - Configuring the DNS client of a DC or member computer to point to an ISP DNS Server for name resolution is invalid. The only exception is that ISP has been contracted (that is, paid) and is currently hosting, forwarding, or delegating DNS queries for your Active Directory forest.
     - ISP DNS Servers typically don't accept dynamic DNS updates, so CNAME, Host, and SRV records may have to be manually registered.

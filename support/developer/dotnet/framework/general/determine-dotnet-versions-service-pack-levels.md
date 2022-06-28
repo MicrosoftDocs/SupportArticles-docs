@@ -18,7 +18,7 @@ Use the registry information below to determine which version(s) and service pac
 
 To do it, following the steps below:
 
-1. Click **Start**, type *regedit* in the **Search programs and files** box (click **Run** and type *regedit* in the **Run** dialog box in Windows XP), and then press Enter.
+1. Click **Start**, type _regedit_ in the **Search programs and files** box (click **Run** and type *regedit* in the **Run** dialog box in Windows XP), and then press Enter.
 2. In the Registry Editor, locate the registry key name listed in the **Registry keys for different .NET Framework and service packs** section below, and check the value for the related .NET Framework.
 
     :::image type="content" source="./media/determine-dotnet-versions-service-pack-levels/registry-editor.png" alt-text="Check the registry key in Registry Editor.":::
@@ -66,8 +66,7 @@ To do it, following the steps below:
 |1.0 (on supported platforms except for Windows XP Media Center and Tablet PC)|Service Pack 3|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{78705f0d-e8db-4b2d-8193-982bdda15ecd}|Name: Version<br/> Type: REG_SZ<br/> Data: 1.0.3705.3 |
 |1.0 (shipped with Windows XP Media Center 2002/2004 and Tablet PC 2004)|Service Pack 2|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}|Name: Version<br/> Type: REG_SZ<br/> Data: 1.0.3705.2 |
 |1.0 (shipped with Windows XP Media Center 2005 and Tablet PC 2005)|Service Pack 3|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}|Name: Version<br/> Type: REG_SZ<br/> Data: 1.0.3705.3 |
-|||||
-
+  
 ## Recommended deployment detection
 
 To detect the existence of a specific .NET Framework version regardless of the service pack level, or to detect a service pack level or a later service pack level of the same .NET Framework version, use the registry information that is listed in the following table.
@@ -92,8 +91,7 @@ To detect the existence of a specific .NET Framework version regardless of the s
 |1.0 (on supported platforms except for Windows XP Media Center and Tablet PC)| Service Pack 3 or Greater|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{78705f0d-e8db-4b2d-8193-982bdda15ecd}|Version >= 1.0.3705.3|
 |1.0 (shipped with Windows XP Media Center 2002/2004 and Tablet PC 2004)| Service Pack 2 or Greater|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}|Version >= 1.0.3705.2|
 |1.0 (shipped with Windows XP Media Center 2005 and Tablet PC 2005)| Service Pack 3 or Greater|HKEY_LOCAL_MACHINE\Software\Microsoft\Active Setup\Installed Components\\{FDC11A6F-17D1-48f9-9EA3-9051954BAA24}|Version >= 1.0.3705.3|
-|||||
-
+  
 ## References
 
 - [How to: Determine which .NET Framework versions are installed](/dotnet/framework/migration-guide/how-to-determine-which-versions-are-installed)

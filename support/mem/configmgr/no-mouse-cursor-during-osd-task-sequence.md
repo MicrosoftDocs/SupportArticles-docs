@@ -27,8 +27,7 @@ To resolve this issue, change the policy that suppresses the mouse cursor during
 |Value name|Value type|Values|
 |---|---|---|
 |`EnableCursorSuppression`|REG_DWORD| **1** = Enabled: Mouse cursor is suppressed (default)<br/><br/> **0** = Disabled: Mouse cursor is not suppressed|
-||||
-
+  
 To make sure that the mouse cursor is available throughout the task sequence, set this registry key during the Windows PE portion of the task sequence to the offline Windows system. This can be done at any point between the **Apply Operating System** and **Setup Windows and ConfigMgr** tasks.
 
 To make this change, use the following method to manually set the task sequence:

@@ -108,7 +108,6 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     |NTDS KCC|1865|The Knowledge Consistency Checker (KCC) was unable to form a complete spanning tree network topology. As a result, the following list of sites cannot be reached from the local site.|
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|1960|Internal event: The following domain controller received an exception from a remote procedure call (RPC) connection. The operation may have failed.|
-    ||||
 
 ## Cause
 
@@ -141,7 +140,6 @@ The OS version will determine the correct values for the source and destination 
 |Remote Procedure Call (RPC)|Started / Automatic|Started / Automatic|Started / Automatic|Started / Automatic|
 |Remote Procedure Call (RPC) Locator|Started / Automatic (Domain Controllers)<br/> <br/>Not  started / Manual(Member Servers)|Not  started / Manual|Not  started / Manual|Not  started / Manual|
 |Kerberos Key Distribution Center (KDC)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers)|Started / Automatic (Domain Controllers)<br/> <br/>Not started / Disabled(Member Servers) |
-||||||
 
 If you make any changes to match the settings above, restart the machine. Verify both the startup value and service status match the values documented in the table above.
 
@@ -153,8 +151,7 @@ If you make any changes to match the settings above, restart the machine. Verify
 | ncacn_ip_tcp| REG_SZ| rpcrt4.dll|
 | ncacn_np| REG_SZ| rpcrt4.dll|
 | ncacn_ip_udp| REG_SZ| rpcrt4.dll|
-||||
-
+  
 If the **ClientProtocols** key or any of the four default values are missing, import the key from a known good server.
 
 ### Verify DNS is working
@@ -229,7 +226,7 @@ There are a few tools to use to help identify DNS errors:
 
 - `NLTEST /DSGETDC:<netbios or DNS domain name>`
 
-    `Nltest /dsgetdc` is used to exercise the dc locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. For finding the Global Catalog, you must specify a *tree name*, which is the DNS domain name of the root domain.
+    `Nltest /dsgetdc` is used to exercise the dc locator process. Thus `/dsgetdc:<domain name>` tries to find the domain controller for the domain. Using the force flag forces domain controller location rather than using the cache. You can also specify options such as **/gc** or **/pdc** to locate a Global Catalog or a primary domain controller emulator. For finding the Global Catalog, you must specify a _tree name_, which is the DNS domain name of the root domain.
 
     Sample output:
 
@@ -327,8 +324,7 @@ The endpoint mapper (listening on port 135) tells the client which randomly assi
 |NAT-T|UDP|4500|
 |RPC|TCP|135|
 |RPC randomly allocated high TCP ports¹|TCP|1024 - 5000<br/>49152 - 65535*|
-||||
-
+  
 `*` This is the range in Windows Server 2008, Windows Vista, Windows 7, and Windows 2008 R2.
 
 Portqry can be used to identify if a port is blocked from a Dc when targeting another DC. It can be downloaded at [PortQry Command Line Port Scanner Version 2.0](https://www.microsoft.com/download/details.aspx?id=17148).

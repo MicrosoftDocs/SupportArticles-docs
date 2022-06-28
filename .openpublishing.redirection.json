@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
@@ -551,6 +556,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/restrict-usb-with-administrative-template.md",
+      "redirect_url": "/mem/intune/configuration/administrative-templates-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/troubleshoot-software-updates-in-microsoft-intune.md",
       "redirect_url": "/mem/intune/protect/windows-update-for-business-configure",
       "redirect_document_id": false
@@ -802,7 +812,7 @@
     },
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
-      "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
+      "redirect_url": "/azure/automation/troubleshoot/runbooks",
       "redirect_document_id": false
     },
     {
@@ -2356,9 +2366,110 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/build-software-inventory-power-bi.md",
+      "redirect_url": "/mem/intune/fundamentals/reports#app-install-status-report-operational",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
       "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/windows-identity-foundation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-licenses-introduction.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/app-service-compliance-wit.md",
+      "redirect_url": "/troubleshoot/azure/app-service/app-service-compliance-wit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/backing-up-restoring-and-cloning-microsoft-azure-app-services.md",
+      "redirect_url": "/troubleshoot/azure/app-service/backing-up-restoring-and-cloning-microsoft-azure-app-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/azure/general/faqs-app-service-linux.md",
+      "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-open-source-technologies-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/temporary-storage-for-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/temporary-storage-for-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-instance-related-issues-on-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/troubleshoot-instance-related-issues-on-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/data-restore-storage.md",
+      "redirect_url": "/azure/storage/blobs/data-protection-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
     }
   ]
 }

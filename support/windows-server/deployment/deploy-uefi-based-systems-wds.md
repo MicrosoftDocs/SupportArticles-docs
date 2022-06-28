@@ -28,8 +28,7 @@ _Original KB number:_ &nbsp; 2938884
 |x64 UEFI 2.3.1|Windows Server 2008 R2|Windows PE 4.0(Windows Server 2012)|2.3.1 support added in Windows Server 2012|
 |x86 UEFI|Windows Server 2012|Windows PE 4.0(Windows Server 2012)|Support for x86 UEFI added in Windows Server 2012|
 |UEFI PXE IPv6|Windows Server 2012|Windows PE 4.0(Windows Server 2012)|Support for IPv6 added in Windows Server 2012|
-|||||
-
+  
 For more information on Windows Deployment Services versions and the operating systems they support deploying, see the following article:
 
 [What's New in Windows Deployment Services in Windows Server 2012](https://technet.microsoft.com/library/hh974416.aspx)

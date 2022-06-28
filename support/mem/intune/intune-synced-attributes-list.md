@@ -28,4 +28,3 @@ The following table lists the attributes that are synced from the on-premises Ac
 | sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Azure AD account through the `sourceAnchor` value|
 | usageLocation|X||||Usage location|
 | userPrincipalName|X||X|X|UPN|
-|||||||

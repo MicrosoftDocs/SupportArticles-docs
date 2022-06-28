@@ -58,9 +58,8 @@ Set the key values as shown in the following table:
 |---|---|---|
 | MaxFieldLength| DWORD| (4/3 * T bytes) + 200|
 | MaxRequestBytes| DWORD| (4/3 * T bytes) + 200|
-||||
-
-You can also set the registry keys to their maximum values, as shown in the next table. Consider all potential security ramifications before you make any changes to the registry settings.
+  
+  You can also set the registry keys to their maximum values, as shown in the next table. Consider all potential security ramifications before you make any changes to the registry settings.
 
 |Name|Value Type|Value Data|
 |---|---|---|

@@ -100,4 +100,3 @@ Here's the release schedule for each Microsoft Store app:
 |XBOX Games|Windows 8.1|8-Jul-14|2013.1011.10.5965| [2962183](https://support.microsoft.com/help/2962183) |
 |XBOX Music|Windows 8.1|8-Jul-14|2014.321.1036.1167| [2962184](https://support.microsoft.com/help/2962184) |
 |XBOX Video|Windows 8.1|8-Jul-14|2014.326.530.5303| [2962185](https://support.microsoft.com/help/2962185) |
-||||||

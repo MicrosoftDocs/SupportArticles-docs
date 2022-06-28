@@ -65,7 +65,6 @@ Consider the following scenario.
     | Windows 10 Version 1903| [KB4541335](https://support.microsoft.com/help/4541335) |
     | Windows 10 Version 1909| [KB4541335](https://support.microsoft.com/help/4541335) |
     | Windows 10 Version 2004| [KB4571744](https://support.microsoft.com/help/4571744) |
-    |||
 
     **Registry entry:**  
 

@@ -74,6 +74,16 @@
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
         "dynamics-365/**/*.md": "David-Pack",
+        "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
+        "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/planning/*.md": "t-benebo",
+        "dynamics-365/supply-chain/procurement/*.md": "GalynaFedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanhoffmann",
+        "dynamics-365/supply-chain/products/*.md": "t-benebo",
+        "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/sales/*.md": "Henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
         "power-platform/**/*.md": "David-Pack",
         "dynamics/gp/*.md": "David-Pack"
       },
@@ -86,6 +96,16 @@
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/**/*.md": "davidpac",
+        "dynamics-365/supply-chain/costing/*.md": "yanansong",
+        "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
+        "dynamics-365/supply-chain/planning/*.md": "benebotg",
+        "dynamics-365/supply-chain/procurement/*.md": "gfedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanho",
+        "dynamics-365/supply-chain/products/*.md": "benebotg",
+        "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
+        "dynamics-365/supply-chain/sales/*.md": "henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
         "power-platform/**/*.md": "davidpac",
         "dynamics/gp/*.md": "davidpac"
       },
@@ -174,26 +194,18 @@
         "developer/browsers/stability-performance/**/*.md": "internet-explorer-stability-performance",
         "developer/visualstudio/**/*.md": "",
         "developer/visualstudio/cpp/libraries/**/*.md": "visual-cpp-libraries",
-        "developer/visualstudio/cpp/general/**/*.md": "visual-cpp-general",
-        "developer/visualstudio/cpp/installation/**/*.md": "visual-cpp-installation",
-        "developer/visualstudio/cpp/ide/**/*.md": "visual-cpp-ide",
+        "developer/visualstudio/cpp/debuggers/**/*.md": "visual-cpp-debuggers",
         "developer/visualstudio/cpp/language-compilers/**/*.md": "visual-cpp-language-compilers",
-        "developer/visualstudio/cpp/project-build/**/*.md": "visual-cpp-project-build",
-        "developer/visualstudio/csharp/debuggers/**/*.md": "csharp-debuggers",
-        "developer/visualstudio/csharp/general/**/*.md": "csharp-general",
         "developer/visualstudio/csharp/language-compilers/**/*.md": "csharp-language-compilers",
-        "developer/visualstudio/general/debuggers/**/*.md": "vs-debuggers",
-        "developer/visualstudio/general/general/**/*.md": "vs-general",
-        "developer/visualstudio/general/installation/**/*.md": "vs-installation",
-        "developer/visualstudio/general/language-compilers/**/*.md": "vs-language-compilers",
-        "developer/visualstudio/general/ide/**/*.md": "vs-ide",
-        "developer/visualstudio/general/project-build/**/*.md": "vs-project-build",
-        "developer/visualstudio/general/version-control/**/*.md": "vs-version-control",
-        "developer/visualstudio/general/third-party/**/*.md": "vs-third-party",
-        "developer/visualstudio/general/tools-utilities/**/*.md": "vs-tools-utilities",
-        "developer/visualstudio/install/general/**/*.md": "vs-installation-general",
-        "developer/visualstudio/install/install/**/*.md": "vs-installation-install",
-        "developer/visualstudio/install/third-party/**/*.md": "vs-installation-third-party",
+        "developer/visualstudio/debuggers/**/*.md": "vs-debuggers",
+        "developer/visualstudio/general/**/*.md": "vs-general",
+        "developer/visualstudio/installation/**/*.md": "vs-install",
+        "developer/visualstudio/language-compilers/**/*.md": "vs-language-compilers",
+        "developer/visualstudio/ide/**/*.md": "vs-ide",
+        "developer/visualstudio/project-build/**/*.md": "vs-project-build",
+        "developer/visualstudio/version-control/**/*.md": "vs-version-control",
+        "developer/visualstudio/third-party/**/*.md": "vs-third-party",
+        "developer/visualstudio/tools-utilities/**/*.md": "vs-tools-utilities",
         "developer/visualstudio/silverlight/**/*.md": "vs-silverlight",
         "developer/visualstudio/subscriptions/**/*.md": "vs-subscriptions",
         "developer/visualstudio/visual-basic/ide/**/*.md": "visual-basic-ide",
@@ -240,7 +252,9 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
-        "mem/intune/**/*.md": "microsoft-intune"
+        "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "mem/intune/**/*.md": "microsoft-intune",
+        "power-platform/ai-builder/*.md": "aibuilder"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
@@ -394,21 +408,16 @@
           "Troubleshoot",
           "Power Platform",
           "Power Automate"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "AI Builder"
         ]
       },
       "ms.search.scope": {
-        "dynamics-365/supply-chain/**/*.md": [
-          "Core",
-          "Operations",
-          "Supply Chain",
-          "ShowInHelp"
-        ],
-        "dynamics-365/finance/**/*.md": [
-          "Core",
-          "Operations",
-          "Finance",
-          "ShowInHelp"
-        ]
+        "dynamics-365/supply-chain/**/*.md": "Core, Operations, Supply Chain, ShowInHelp",
+        "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"
       },
       "search.app": {
         "power-platform/power-apps/*.md": [
@@ -416,6 +425,13 @@
         ],
         "power-platform/power-automate/*.md": [
           "Flow"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "PowerApps",
+          "Flow"
+        ],
+        "dynamics-365/supply-chain/**/**.*": [
+          "SCM"
         ]
       }
     },

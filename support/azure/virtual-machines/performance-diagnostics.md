@@ -30,18 +30,20 @@ You can run performance diagnostics directly from the Azure portal, where you ca
 
 ### Windows
 
+* Windows server 2022
 * Windows Server 2019
 * Windows Server 2016
 * Windows Server 2012 R2
 * Windows Server 2012
 * Windows Server 2008 R2
+* Windows 11
 * Windows 10
 * Windows 8.1
 * Windows 8
 
 ### Linux
 
-- The following distributions are currently supported:
+* The following distributions are currently supported:
 
     | Distribution               | Version                                         |
     |----------------------------|-------------------------------------------------|
@@ -135,6 +137,13 @@ After the upload, a new diagnostics report is listed in the Azure portal.
 
 Use the **Settings** toolbar button to change the storage account where the diagnostics insights and output can be stored. You can use the same storage account for multiple VMs that use performance diagnostics. When you change the storage account, the old reports and insights are not deleted. However, they will no longer be displayed in the list of diagnostics reports.
 
+> [!NOTE]
+> Performance diagnostics insights and reports are stored in your own storage account. Insights are stored in Azure Tables, and reports are stored as compressed files in a binary large object (BLOB) container that is named *azdiagextnresults*.
+>    
+> If your storage account uses [private endpoints](/azure/storage/common/storage-private-endpoints), to make sure that performance diagnostics can store insights and reports in the storage account, do the following two actions:
+> 1. Create separate private endpoints for Table and BLOB.  
+> 1. Add DNS configuration to each separate private endpoint.
+
 ## Review insights and performance diagnostics report
 
 Each diagnostic run contains a list of insights and recommendations, affected resources, log files, and other rich diagnostics information that is collected, plus a report for offline viewing. For a complete list of all the collected diagnostics data, see **What kind of information is collected by PerfInsights?** on [Windows](how-to-use-perfinsights.md#what-kind-of-information-is-collected-by-perfinsights) or [Linux](how-to-use-perfinsights-linux.md#what-kind-of-information-is-collected-by-perfinsights).
@@ -165,7 +174,6 @@ You can use the **Download report** button to download an HTML report that conta
 
 > [!NOTE]
 > Performance diagnostics reports can be downloaded from the **Performance Diagnostics** blade within 30 days after they are created. After 30 days, you may get an error when you download a report from the **Performance Diagnostics** blade. To get a report after 30 days, go to the storage account and download it from a binary large object (BLOB) container that's named azdiagextnresults. You can view the storage account information by using the **Settings** button on the toolbar.
-
 
 ## Manage performance diagnostics reports
 
@@ -216,8 +224,4 @@ Each performance diagnostics run has two stages:
 
 Currently there is no easy way to know exactly when the VM extension installation is complete. Generally it takes about 45 seconds to 1 minute to install the VM extension. After the VM extension is installed, you can run your repro steps to have the performance diagnostics capture the correct set of data for troubleshooting.
 
-## Next steps
-
-After you review the performance diagnostics insights and report, if you still cannot determine the cause of the issue and need more help, you can open a support ticket with Microsoft Customer Support.
-
-If you need more help at any point in this article, you can contact the Azure experts on the [MSDN Azure and Stack Overflow forums](https://azure.microsoft.com/support/forums/). Alternatively, you can file an Azure support incident. Go to the [Azure support site](https://azure.microsoft.com/support/options/), and select **Get support**. For information about using Azure support, read the [Microsoft Azure support FAQ](https://azure.microsoft.com/support/faq/).
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

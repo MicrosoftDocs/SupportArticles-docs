@@ -28,7 +28,7 @@ A new Option for Reminders will be available under each Workflow Step in the Wor
 where enter the Amount for X such as **1** and Y is a selection from the drop-down list such as **Hours**, in which the user would then get a reminder email 1 hour before the assigned task is due.
 
 > [!NOTE]
-> This feature is dependent on the SQL Job *Scan for Workflow Tasks For All Companies (DYNAMICS) to send reminder* which runs once every 15 minutes to send reminder emails.  If you are not receiving reminder emails, you will want to make sure that your SQL Server Agent is started.
+> This feature is dependent on the SQL Job _Scan for Workflow Tasks For All Companies (DYNAMICS) to send reminder_ which runs once every 15 minutes to send reminder emails.  If you are not receiving reminder emails, you will want to make sure that your SQL Server Agent is started.
 
 ### Table changes
 
@@ -43,4 +43,3 @@ New columns were added to the Workflow Step (WF100003), Workflow Step Instance (
 |WFI10004|Workflow_Task|WFReminderDueDate|
 |WFI10004|Workflow_Task|WFReminderDueTime|
 |WFI10004|Workflow_Task|WorkflowReminderSent|
-||||

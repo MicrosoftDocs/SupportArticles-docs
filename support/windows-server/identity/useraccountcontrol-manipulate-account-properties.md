@@ -59,8 +59,7 @@ The following table lists possible flags that you can assign. You can't set some
 |PASSWORD_EXPIRED|0x800000|8388608|
 |TRUSTED_TO_AUTH_FOR_DELEGATION|0x1000000|16777216|
 |PARTIAL_SECRETS_ACCOUNT|0x04000000|67108864|
-||||
-
+  
 > [!NOTE]
 > In a Windows Server 2003-based domain, LOCK_OUT and PASSWORD_EXPIRED have been replaced with a new attribute called ms-DS-User-Account-Control-Computed. For more information about this new attribute, see [ms-DS-User-Account-Control-Computed attribute](/windows/win32/adschema/a-msds-user-account-control-computed).
 

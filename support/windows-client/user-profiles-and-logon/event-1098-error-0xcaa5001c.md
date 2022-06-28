@@ -53,7 +53,6 @@ To resolve this issue, follow these steps:
 |Allow|Domain User Account (`user@contoso.com`)|Full Control|CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData|This key and subkeys|
 |Allow|Administrators (COMPUTER\Administrators)|Full Control|CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData|This key and subkeys|
 |Allow|CREATOR OWNER|Full Control|CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel\SystemAppData|Subkeys only|
-||||||
 
 > [!NOTE]
 > If you view the permissions of the ~\PSR registry key under HKEY_USERS\{SID}, the **Inherited from** field shows inheritance from the HKEY_USERS\{SID} path.

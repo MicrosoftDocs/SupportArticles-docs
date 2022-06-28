@@ -46,7 +46,6 @@ To fix this issue, follow these steps:
      |Value name|Value data|
      |---|---|
      |`SystemDefaultTlsVersions`|1|
-     |||
 
 4. Click **OK**.
 

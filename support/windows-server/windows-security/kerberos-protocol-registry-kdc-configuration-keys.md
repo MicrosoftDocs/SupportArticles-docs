@@ -170,7 +170,6 @@ The registry entries that are listed in this section must be added to the follow
     |DEB_TRACE_U2U|0x00200000| |
     |DEB_TRACE_LOCKS|0x01000000| |
     |DEB_USE_LOG_FILE|0x02000000|Not implemented|
-    ||||
 
 - Entry: MaxTokenSize
 
@@ -292,7 +291,7 @@ The registry entries that are listed in this section must be added to the follow
   - Possible values:
 
     - 1 (decimal) or 0x1 (hexadecimal): Audit SPN unknown errors.
-    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for *Public Key Cryptography for Initial Authentication in Kerberos*.)
+    - 2 (decimal) or 0x2 (hexadecimal): Log PKINIT errors. (PKINIT is an Internet Engineering Task Force (IETF) Internet draft for _Public Key Cryptography for Initial Authentication in Kerberos_.)
     - 4 (decimal) or 0x4 (hexadecimal): Log all KDC errors.
     - 8 (decimal) or 0x8 (hexadecimal): Log KDC warning event 25 in the system log when user asking for S4U2Self ticket doesn't have sufficient access to target user.
     - 16 (decimal) or 0x10 (hexadecimal): Log audit events on encryption type (ETYPE) and bad options errors. This value indicates what information the KDC will write to event logs and to audits.

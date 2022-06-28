@@ -32,7 +32,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 > [!NOTE]
 > You need to restart SQL Server Service after going through the following procedure for the changes to come into effect.
 
-1. Navigate to the following registry hive on your SQL Server machine and save it as *SQLMSSearch.reg*.
+1. Navigate to the following registry hive on your SQL Server machine and save it as _SQLMSSearch.reg_.
 
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSearch\CLSID`
 
@@ -43,13 +43,14 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
     For more information, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
-2. Edit *SQLMSSearch.reg* file with notepad and replace all occurrences of *xmlfilt.dll* by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
+2. Edit _SQLMSSearch.reg_ file with notepad and replace all occurrences of _xmlfilt.dll_ by `C:\Windows\system32\xmlfilter.dll` and then save the changes.
 
     > [!NOTE]
+    >
     > - This assumes your windows folder is located at `C:\Windows`.
     > - You need to enter each backslash in the new path twice!
 
-3. Click the file *SQLMSSearch.reg* to import the content into the registry.
+3. Click the file _SQLMSSearch.reg_ to import the content into the registry.
 4. Execute the following T-SQL commands to enable the new setting in SQL Server
 
     ```sql
@@ -113,7 +114,6 @@ Steps to repro:
     | 0x00760061006C00750065|value|2|1|
     | 0x0077006800650074006800650072|whether|2|1|
     | 0xFF|END OF FILE|2|1|
-    |||||
 
     These display terms appear to be restrict to:
 

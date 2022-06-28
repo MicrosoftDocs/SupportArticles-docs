@@ -34,6 +34,4 @@ To resolve this issue, manually enable the .NET Framework 3.51. To do this, foll
 2. Select **Turn Windows features on or off**.
 3. Select to select the **Microsoft NET Framework 3.51** check box, and then select **OK**.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -31,7 +31,7 @@ There are two ways to find the version of Monitoring Agent.
 
 **On the VM or on-premises server with MMA**
 
-1. Log on to the server, and then go to **Control Panel** > **System and Security**. 
+1. Log on to the server, and then go to **Control Panel** > **System and Security**.
 
 2. Select **Microsoft Monitoring Agent**, and then select the **Properties** tab. The version should be listed there.
 
@@ -59,9 +59,9 @@ When you submit a support ticket for a Monitoring Agent problem, the Microsoft s
 
 If the script doesn't work, use the following steps to collect an ETL trace manually.
 
-1. Select **Start**, enter **cmd**, and then select **Command Prompt** from the results to open a Command Prompt window.
+1. Select **Start**, enter *cmd*, and then select **Command Prompt** from the results to open a Command Prompt window.
 
-1. At the command prompt, go to the following directory: `%programfiles%\Microsoft Monitoring Agent\Agent\Tools`.
+1. At the command prompt, go to the following directory: *%programfiles%\Microsoft Monitoring Agent\Agent\Tools*.
 
 1. Run the following command to stop trace logging:
 
@@ -99,9 +99,11 @@ The default minimum value is 100 MB, and the maximum value is 1.5 GB. This setti
 - Value: **MaximumQueueSizeKb**
 - Type: **DWORD**
 - Default: **102400** (meaning 100 MB)
-    - Min Value: **5120**
-    - Max Value: **1536000**
+  - Min Value: **5120**
+  - Max Value: **1536000**
 
 **What occurs if the connection to the Log Analytics workspace isn't available?**
 
 The agent gradually backs off the retry process exponentially for up to 8.5 hours per retry. It will continue to retry every 8.5 hours indefinitely, and discard the oldest data when the buffer limit is reached. When the agent can successfully connect, it will upload data until it returns to processing the latest data.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

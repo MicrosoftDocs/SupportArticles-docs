@@ -35,6 +35,5 @@ _Original KB number:_ &nbsp; 2545685
 |November 17, 2012| [2524478](https://support.microsoft.com/help/2524478)|The network location profile changes from Domain to Public in Windows 7 or in Windows Server 2008 R2|Ncsi.dll<br/><br/>Nlaapi.dll<br/><br/>Nlasvc.dll|Prevents loss of Cluster communication.|
 |April 25, 2012| [2559392](https://support.microsoft.com/help/2559392)|The List Running Processes test fails when you run the Failover Cluster Validation Wizard on a Windows 7-based or Windows Server 2008 R2-based cluster node|Multiple Validation DLL's|Prevents Cluster Validation failure. Passing validation is required to have a Supported Cluster configuration.|
 |June 14, 2011| [2545850](https://support.microsoft.com/help/2545850)|Users cannot access an IIS-hosted website after the computer password for the server is changed in Windows 7 or in Windows Server 2008 R2|Multiple Authentication DLL's|Prevents CNO and VCO objects from failing to register in DNS because of Kerberos authentication failure after the computer password is changed.|
-||||||
 
 To see the latest list of hotfixes for Windows Server 2008 R2 Hyper-V configurations, see [Hyper-V Update List for Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff394763(v=ws.10)).

@@ -3,7 +3,6 @@ title: An update is available for Silverlight 5
 description: This article describes the Microsoft Silverlight 5 for Windows download version 5.1.40620.0.
 ms.date: 10/26/2020
 ms.custom: sap:Silverlight
-ms.technology: vs-silverlight
 ---
 # An update is available for Microsoft Silverlight 5 for Windows
 
@@ -45,11 +44,9 @@ The global version of this download has the file attributes (or later file attri
 |File name|File version|File size|Date|Time|Platform|
 |---|---|---|---|---|---|
 |Silverlight_x64.exe|5.1.40620.0|13,161,184|20-June-2015|9:57|x64|
-|||||||
 
 ## For all supported 32-bit releases of Microsoft Silverlight 5 for Windows
 
 |File name|File version|File size|Date|Time|Platform|
 |---|---|---|---|---|---|
 |Silverlight.exe|5.1.40620.0|7,018,208|20-June-2015|8:50|x86|
-|||||||

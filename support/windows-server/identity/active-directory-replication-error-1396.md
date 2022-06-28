@@ -97,7 +97,6 @@ This article describes the symptoms, cause, and resolution for resolving Active 
     |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS KCC|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed.|
     |NETLOGON|5781|Server cannot register its name in DNS|
-    ||||
 
 5. Dcpromo fails with an onscreen error:
 
@@ -193,8 +192,7 @@ This table lists other symptoms, causes, and resolutions:
 |Map a drive using net use<br/>C:\Documents and Settings\wschong>net use z: \\<server_name>\c$ System error 1396 has occurred.<br/>Logon Failure: The target account name is incorrect.<br/>In this case, the server was logging Event ID 333 and using high memory, with SQL Server using highest.|If the error appears while mapping a drive using net use, the cause could be that the Non Paged Memory or the Paged Pool Memory is temporarily insufficient. The system keeps recording such events until the computer is restarted, or the related hive is unloaded, even though the temporary memory insufficiency stops. For more information about SQL Server performance problems, see [Troubleshooting Performance Problems in SQL Server 2005](/previous-versions/sql/sql-server-2005/administrator/cc966540(v=technet.10)).|To prevent the system logging the event 333 continually in future, please apply the hotfix 970054 on the server and set the following registry value to 1:<ul><li>Location: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager`</li><li>Name: RegistryFlushErrorSubside</li><li>Type: REG_DWORD</li><li>Value: 1 or 2</li></ul>|
 |The DC time is incorrect.|The DC is a virtual machine that was set to sync time with the VMware host, caused events 1925, 1645.|unchecked the option to sync time for virtual DC from VMWare host, so that it can sync time with the PDC.|
 |Dcpromo fails with an onscreen error: Active Directory Installation Failed. The operation failed because:<br/>The Directory Service failed to create the server object for CN=NTDS Settings,CN=ServerBeingPromoted, CN=Servers,CN=Site, CN=Sites,CN=Configuration,DC=contoso, DC=com on server ReplicationSourceDC.contoso.com. Ensure the network credentials provided have sufficient access to add a replica.<br/>Logon Failure: The target account name is incorrect.<br/><br/>In this case, Event ID 1645, 1168, and 1125 are logged on the server that is being promoted.|During dcpromo, the SPN on the helper DC (the replication source DC) is not valid.|For dcpromo error where helper DC SPN is not valid, use SetSPN to create new SPN on helper DC, in format GC/serverName.contoso.com|
-||||
-
+  
 ## More information
 
 Other causes include:

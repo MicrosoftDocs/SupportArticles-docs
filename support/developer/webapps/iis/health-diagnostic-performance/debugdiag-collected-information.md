@@ -44,22 +44,19 @@ The DebugDiag 1.2 installation and data collector will install DebugDiag 1.2 to 
 |Description|File Name|
 |--|--|
 |Process Dump files|{Computername}\_SDPHangDumps_{Date}_{Time}.zip|
-|||
-
+  
 ## DebugDiag data files
 
 |Description| File Name |
 |--|--|
 |File Folder specified by user that will contain data they want to upload to Microsoft.|{Computername}\_SDPDebugDiagData_{Date}_{Time}.zip|
-|||
-
+  
 ## DebugDiag log files
 
 |Description| File Name |
 |--|--|
 |DebugDiag 1.2 Service and Rule Logs|{Computername}_DebugDiag_Logs.zip|
-|||
-
+  
 ## More information
 
 If the user selects to install DebugDiag 1.2 to the machine, it will launch the DebugDiag 1.2 installer.  After installed, this troubleshooter won't remove DebugDiag 1.2 from the machine. Use Control Panel to uninstall the program if that is desired.

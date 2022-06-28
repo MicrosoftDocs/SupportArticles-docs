@@ -28,27 +28,6 @@
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
 
-- name: Azure App Service
-  items:
-  - name: Availability, performance, and application FAQs
-    href: web-apps-performance-faqs.md
-  - name: App Service Compliance with PCI Standards 3.0 and 3.1
-    href: app-service-compliance-wit.md
-  - name: Backing up, restoring, and cloning
-    href: backing-up-restoring-and-cloning-microsoft-azure-app-services.md
-  - name: Built-in Linux containers FAQs
-    href: faqs-app-service-linux.md
-  - name: Configuration and management FAQs for Web Apps
-    href: web-apps-configuration-and-management-faqs.md
-  - name: Deployment FAQs for Web Apps
-    href: web-apps-deployment-faqs.md
-  - name: Open-source technologies FAQs for Web Apps
-    href: web-apps-open-source-technologies-faqs.md
-  - name: Troubleshoot temporary storage
-    href: temporary-storage-for-azure-app-service.md
-  - name: Troubleshoot instance-related issues
-    href: troubleshoot-instance-related-issues-on-azure-app-service.md
-    
 - name: Azure Stack
   items:
   - name: Kernel Soft Reboot error c0000034
@@ -108,8 +87,6 @@
   items:
   - name: Embedded application error when install Azure backup agent
     href: unable-to-execute-the-embedded-application-error-backup-agent.md
-  - name: Data restore scenarios for Azure Storage service
-    href: data-restore-storage.md
   - name: Request body is too large error when write to file
     href: request-body-large.md
   - name: Optimize CreateFile function

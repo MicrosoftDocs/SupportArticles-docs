@@ -3,7 +3,6 @@ title: Fscanf function doesn't read consecutive lines
 description: This article describes a problem that occurs when you read lines of text by using the Fscanf function.
 ms.date: 10/27/2020
 ms.custom: sap:C and C++ Libraries
-ms.technology: visual-cpp-libraries
 ---
 # The Fscanf function does not read consecutive lines as expected
 

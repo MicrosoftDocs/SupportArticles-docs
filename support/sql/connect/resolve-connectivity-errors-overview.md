@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot connectivity issues in SQL Server
 description: Provides an overview of common connectivity issues in SQL Server and describes the tools to troubleshoot the issues.
-ms.date: 11/14/2021
+ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: cobibi
 ms.author: v-yunhya
@@ -32,12 +32,11 @@ Use the list below to navigate to the appropriate article page for detailed trou
 - [Login failed for user](login-failed-for-user.md)
 
   Covers the following Login errors:
-  - > Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'
-  - > Login failed for user '(null)'
-  - > Login failed for user is empty
-  - > Login failed for user '\<username\>'
-  - > Login failed for user '\<domain\>\\\<username\>'
-  - > Login failed for user '\<domainname\>\\\<computername$\>'
+  - "Login failed for user 'NT AUTHORITY\ANONYMOUS LOGON'"
+  - "Login failed for user '(null)'"
+  - "Login failed for user (empty)"
+  - "Login failed for user '\<username\>'"
+  - "Login failed for user '\<domain>\\\<username>'"
 
 - [Timeout expired. The timeout period elapsed prior to completion of the operation or the server is not responding](timeout-expired-error.md)
 
@@ -59,9 +58,9 @@ The following articles provide details for various tools and procedures to troub
   
   Describes how to test connections between SQL Server and clients using UDL files.
 
-- [Use PortqryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
+- [Use PortQryUI tool with SQL Server](network-related-or-instance-specific-error-occurred-while-establishing-connection.md#named-instance-of-sql-server)
 
-  Describes how to use the PortqryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
+  Describes how to use the PortQryUI tool (a graphical user interface (GUI) port scanner) to help troubleshoot connectivity issues.
 
 - [Check whether SQL Server is listening on dynamic or static ports](static-or-dynamic-port-config.md)
 

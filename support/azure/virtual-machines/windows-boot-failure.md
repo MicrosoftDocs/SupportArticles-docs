@@ -36,7 +36,7 @@ This issue occurs for one of the following reasons:
 
 To fix the issue, stop (de-allocate) and start the VM then recheck to see if issue persists. If the issue persists, follow these steps:
 
- ## Verify if the Windows partition is marked as active
+## Verify if the Windows partition is marked as active
 
 1. Delete the virtual machine (VM). Make sure that you select the **Keep the disks** option when you do this.
 2. Attach the OS disk as a data disk to another VM (a troubleshooting VM). For more information, see [How to attach a data disk to a Windows VM in the Azure portal](/azure/virtual-machines/windows/attach-managed-disk-portal).
@@ -144,3 +144,5 @@ To fix the issue, stop (de-allocate) and start the VM then recheck to see if iss
     ```
 
 4. Detach the repaired OS disk from the troubleshooting VM. Then, create a new VM from the OS disk.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

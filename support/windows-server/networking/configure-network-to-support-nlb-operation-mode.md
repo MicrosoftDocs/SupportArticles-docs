@@ -36,7 +36,6 @@ The following table summarizes the requirements, advantages, and disadvantages o
 |Unicast|NLB must be able to change the MAC adapter address.|<ul><li>Easy to configure</li> <li>Appropriate for simple environments</li> </ul>|<ul><li>May flood other systems with network traffic, causing performance issues (you may have to use additional hardware to resolve those issues)</li> <li>Not appropriate for more complex environments</li> </ul>|
 |Multicast|The network infrastructure must use a static ARP entry and a static MAC address table entry.|<ul><li>More efficient use of bandwidth and lower risk of performance impacts than unicast mode</li> <li>Each adapter uses its built-in MAC address</li> </ul>|More complex to configure than unicast|
 |Multicast with IGMP|The network switches must be capable of IGMP snooping.|<ul><li>Same advantages as multicast</li> <li>Additional advantage of automatic configuration.</li> </ul>|Requires that the network hardware have specific capabilities that the other modes do not need|
-|||||
 
 You can configure an NLB cluster in one of three operation modes: Unicast, multicast, or IMGP multicast. All three modes work very well if your infrastructure is correctly configured. However, serious problems can develop if you haven't prepared your network infrastructure to support the mode that you are using. Each mode has different implications for the network infrastructure.
 
@@ -117,8 +116,7 @@ The articles that are listed in the following table explain clearly what you hav
 |D-Link| [D-Link Layer 3 Switch Microsoft NLB in Multicast Mode Configuration Example](https://files.dlink.com.au/Products/DGS-3620-52P/REV_A/SetupGuides/Layer_3_Switch_Microsoft_NLB_in_Multicast_Mode_Configuration_Example.pdf) |
 |Avaya| [Technical Configuration Guide for Microsoft Network Load Balancing](https://downloads.avaya.com/css/P8/documents/100123894) (download)|
 |H3C| [05-Layer 3 - IP Services Configuration Guide](https://www.h3c.com/en/Support/Resource_Center/HK/Switches/H3C_S10500/H3C_S10500/Technical_Documents/Configure/Configuration_Guide/H3C_S10500_CG-Release7536P05-6W100/05/) |
-|||
-
+  
 ### Configure virtual environments in multicast mode
 
 In a virtual environment, the network switches connect to the hypervisor host servers. In a high-availability virtual environment, a group of hypervisor hosts supports a group of virtual machines. An individual virtual machine may reside on any of the hypervisor hosts, and it may migrate to a different hypervisor host under specific circumstances. The network traffic must be able to reach the correct virtual machine regardless of which hypervisor host that virtual machine runs on.

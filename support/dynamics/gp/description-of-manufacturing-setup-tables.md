@@ -26,8 +26,7 @@ _Original KB number:_ &nbsp; 949762
 |IVR10015|Item Engineering|
 |IVR10100|Alternate Parts|
 |PC010000|MRP_Planner_Codes|
-|||
-
+  
 ## Bills of material
 
 | Table ID| Table name |
@@ -38,8 +37,7 @@ _Original KB number:_ &nbsp; 949762
 |BM010416|BOM_Revision_HIST|
 |BMPF0114|pref_bom_user|
 |BMPS0114|pref_bom_sys|
-|||
-
+  
 ### Routings
 
 | Table ID| Table name |
@@ -48,8 +46,7 @@ _Original KB number:_ &nbsp; 949762
 |RT010130|routing_line|
 |RTPS0130|pref_router_sys|
 |RTPU0130|pref_router_user|
-|||
-
+  
 ## Facility setup information
 
 > [!NOTE]
@@ -76,8 +73,7 @@ _Original KB number:_ &nbsp; 949762
 |WCPS0100|pref_workcenter_sys</br>|
 |LC010014|Labor Code Master|
 |PFH10000|pref_hdr|
-|||
-
+  
 ## Order processing setup information
 
 | Table ID| Table name |
@@ -92,8 +88,7 @@ _Original KB number:_ &nbsp; 949762
 |SOPS113B|pref_sop_sys|
 |WPPS0114|pref_wip_sys|
 |WPPU0114|pref_wip_user</br></br>|
-|||
-
+  
 ## Material requirements planning setup information
 
 | Table ID| Table name |
@@ -103,8 +98,7 @@ _Original KB number:_ &nbsp; 949762
 |MPPU0130|pref_mrp_user|
 |MRP0200|mrpScheduleHDR</br>|
 |MRP0201|mrpScheduleDetail</br></br>|
-|||
-
+  
 ## Engineering change management information
 
 | Table ID| Table name |
@@ -114,8 +108,7 @@ _Original KB number:_ &nbsp; 949762
 |EC020230|ECM_Disposition|
 |EC030030|ECM_REJECT_CODE|
 |EC020030|ECM_Routing_HDR|
-|||
-
+  
 ## Job costing information
 
 | Table ID| Table name |
@@ -125,15 +118,13 @@ _Original KB number:_ &nbsp; 949762
 |ICJC0005|ICJC_Line_Categories|
 |ICJC0006|ICJC_Revenue_Expense_Code|
 |JCPS0040|pref_jc_sys|
-|||
-
+  
 ## Capacity requirements planning information
 
 | Table ID| Table name |
 |---|---|
 |CP010530|CRP_Prefs</br></br>|
-|||
-
+  
 ## Sales configurator information
 
 | Table ID| Table name |
@@ -143,8 +134,7 @@ _Original KB number:_ &nbsp; 949762
 |OC010200|Option Category Exclusion|
 |OC010300|Option_Category_Inclusion|
 |OC010400|Option Promotion MSTR|
-|||
-
+  
 ## Quality assurance information
 
 | Table ID| Table name |
@@ -162,8 +152,7 @@ _Original KB number:_ &nbsp; 949762
 |QA140032|QA_Defect_Code|
 |QA150032|QA_Disposition_Code|
 |QA160032|QA_Item_Procedure|
-|||
-
+  
 ## More information
 
 After you copy all the setup tables, you can run the mfgfix90checkdata stored procedure to determine any potential issues with the data. To do it, follow these steps:

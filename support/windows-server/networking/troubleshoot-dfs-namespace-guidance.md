@@ -1,7 +1,7 @@
 ---
-title: Guidance of troubleshooting DFS Namespace
-description: Introduces general guidance of troubleshooting scenarios related to DFS Namespace.
-ms.date: 03/03/2022
+title: Guidance for troubleshooting DFS Namespace
+description: Introduces general guidance for troubleshooting scenarios related to DFS Namespace.
+ms.date: 03/16/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -52,6 +52,51 @@ Look for the DFS client to resolve DNS (assuming it isn't cached) and make a con
 - [Troubleshoot DFSN access failures](/troubleshoot/windows-server/networking/dfsn-access-failures)
 - [Fail to create a DFSN](/troubleshoot/windows-server/identity/namespace-not-queried-rpc-server-unavailable)
 - [DFSNs service and its configuration data](/troubleshoot/windows-server/networking/dfs-namespaces-service-configuration-data)
+
+## Data collection
+
+Before contacting Microsoft support, you can gather information about your issue.
+
+### Prerequisites
+
+1. TSSv2 must be run by accounts with administrator privileges on the local system, and EULA must be accepted (once EULA is accepted, TSSv2 won't prompt again).
+2. We recommend the local machine `RemoteSigned` PowerShell execution policy.
+
+> [!NOTE]
+> If the current PowerShell execution policy doesn't allow running TSSv2, take the following actions:
+>
+> - Set the `RemoteSigned` execution policy for the process level by running the cmdlet `PS C:\> Set-ExecutionPolicy -scope Process -ExecutionPolicy RemoteSigned`.
+> - To verify if the change takes effect, run the cmdlet `PS C:\> Get-ExecutionPolicy -List`.
+> - Because the process level permissions only apply to the current PowerShell session, once the given PowerShell window in which TSSv2 runs is closed, the assigned permission for the process level will also go back to the previously configured state.
+
+### Gather key information before contacting Microsoft support
+
+1. Download [TSSv2](https://aka.ms/getTSSv2) on all nodes and unzip it in the *C:\\tss_tool* folder.
+2. Open the *C:\\tss_tool* folder from an elevated PowerShell command prompt.
+3. Start the traces on the client and the server by using the following cmdlets:
+
+    - Client:  
+
+        ```powershell
+        TSSv2.ps1 -Start -Scenario NET_DFScli
+        ```
+
+    - Server:  
+
+        ```powershell
+        TSSv2.ps1 -Start -Scenario NET_DFSsrv
+        ```
+
+4. Accept the EULA if the traces are run for the first time on the server or the client.
+5. Allow recording (PSR or video).
+6. Reproduce the issue before entering *Y*.
+
+     > [!NOTE]
+     > If you collect logs on both the client and the server, wait for this message on both nodes before reproducing the issue.
+
+7. Enter *Y* to finish the log collection after the issue is reproduced.
+
+The traces will be stored in a zip file in the *C:\\MSDATA* folder, which can be uploaded to the workspace for analysis.
 
 ## Reference
 

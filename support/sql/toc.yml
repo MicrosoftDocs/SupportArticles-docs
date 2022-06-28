@@ -227,6 +227,8 @@
       href: connect/cannot-connect-remotely.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
+    - name: Winsock LSP results in network or stability issues
+      href: connect/winsock-lsp-network-problem.md      
     - name: Connectivity How Tos
       items:
       - name: Configuring firewalls
@@ -237,7 +239,7 @@
         href: connect/using-kerberosmngr-sqlserver.md
       - name: Testing using UDL file 
         href: connect/test-oledb-connectivity-use-udl-file.md
-      - name: Using PortqryUI tool 
+      - name: Using PortQryUI tool 
         href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
@@ -271,7 +273,7 @@
       items:
       - name: 9002 error on primary replica
         href: availability-groups/error-9002-transaction-log-large.md
-      - name: AlwaysOn DB in recovery pending or suspect state
+      - name: Always On DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
       - name: Error 2767 on secondary replica
         href: availability-groups/error-2767-query-secondary-replica-fails.md
@@ -283,8 +285,10 @@
         href: availability-groups/query-performance-degradation.md
       - name: Troubleshooting automatic failover problems
         href: availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on AlwaysOn issues
+      - name: Troubleshooting on Always On issues
         href: availability-groups/troubleshooting-alwayson-issues.md
+      - name: Error 41131 when creating availability group
+        href: availability-groups/error-41131-create-availability-group.md
     - name: Database Mirroring
       items:
       - name: Mirrored databases are disconnected
@@ -353,6 +357,8 @@
       href: install/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: install/sql-server-2008-setup-issues.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
     - name: SxS install of X64 and X86 version of SSRS 2008
@@ -411,6 +417,8 @@
       href: performance/troubleshoot-query-async-network-io.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
+    - name: Different query performance between two servers
+      href: performance/troubleshoot-query-perf-between-servers.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
@@ -421,8 +429,8 @@
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Winsock LSP results in network or stability issues
-      href: performance/winsock-lsp-network-problem.md
+    - name: Troubleshoot slow SSIS or ELT jobs query performance
+      href: performance/slow-query-performance-ssis-etl.md      
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication

@@ -248,8 +248,7 @@ The following table describes the registry entries that are changed since Window
 |AllowOnlySecureRpcCalls|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|1|0 or 1|
 |FallbackToUnsecureRPCIfNecessary|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
 |TurnOffRpcSecurity|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
-|||||
-
+  
 > [!NOTE]
 > These changes appear in the shared cluster registry on a Windows Server 2003 SP1-based server cluster.
 
