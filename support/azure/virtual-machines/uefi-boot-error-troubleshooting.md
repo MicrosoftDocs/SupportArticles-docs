@@ -47,6 +47,7 @@ In order to resolve such issue, a rescue/repair VM is required to do an offline 
 1. Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the target VM's OS disk attached. 
 
 2. After that, try following methods to fix the EfI partition issue:
+
 ```bash
 root@repair-centos7:~# gdisk /dev/sdc
 GPT fdisk (gdisk) version 1.0.3
