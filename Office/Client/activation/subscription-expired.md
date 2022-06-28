@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Apps activation Subscription expired error
 description: Troubleshooting steps for Microsoft 365 Apps activation Subscription expired error.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

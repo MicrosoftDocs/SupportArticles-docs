@@ -1,7 +1,8 @@
 ---
 title: Office for Mac activation An unknown error has occurred
 description: Troubleshooting steps when an error occurs when trying to activate Office for Mac.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
