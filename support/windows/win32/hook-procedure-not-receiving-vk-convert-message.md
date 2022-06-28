@@ -1,7 +1,7 @@
 ---
 title: Hook procedure doesn’t receive the VK_CONVERT message
 description: This article helps you resolve the problem when an application is using a keyboard hook that doesn’t receive the VK_CONVERT messages.
-ms.date: 07/28/2022
+ms.date: 06/28/2022
 author: Shweta-Sohu
 ms.author: v-shwetasohu
 manager: dcscontentpm
