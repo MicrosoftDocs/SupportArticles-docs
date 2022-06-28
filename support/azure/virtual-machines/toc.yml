@@ -394,7 +394,7 @@
   - name: Troubleshoot Azure Compute Gallery - Windows/Linux
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Backup and retore troubleshooting
+- name: Backup and restore troubleshooting
   items:
   - name: VM recovery access
     items:
