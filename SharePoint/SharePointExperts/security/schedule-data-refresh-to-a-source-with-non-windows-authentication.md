@@ -2,7 +2,8 @@
 title: Schedule data refresh to a data source with non-Windows Authentication
 description: Introduces configuration requirements and methods for scheduling PowerPivot workbooks that connect to data sources with non-Windows authentications in PowerPivot for Microsoft SharePoint (from 2010 to 2016).
 author: helenclu
-ms.author: randring
+ms.author: luche
+ms.reviewer: randring
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

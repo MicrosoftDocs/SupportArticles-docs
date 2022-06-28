@@ -2,7 +2,8 @@
 title: PowerPivot Performance Counter errors
 description: Fixes the PowerPivot Performance errors on a PowerPivot workbook in Microsoft SharePoint.
 author: helenclu
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

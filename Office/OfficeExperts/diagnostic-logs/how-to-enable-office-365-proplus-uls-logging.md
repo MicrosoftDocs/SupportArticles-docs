@@ -2,6 +2,7 @@
 title: How to enable Microsoft 365 Apps for enterprise logging
 description: There are times during troubleshooting an Office issue when the traditional log settings are not gathering enough information. This article describes how to collect more verbose logging details.
 author: helenclu
+ms.author: luche
 manager: dcscontentpm
 ms.date: 01/31/2020
 localization_priority: Normal
@@ -10,7 +11,6 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot, CI 113644
-ms.author: ericspli
 appliesto: 
   - Microsoft 365 Apps for enterprise
 ms.reviewer: ericspli

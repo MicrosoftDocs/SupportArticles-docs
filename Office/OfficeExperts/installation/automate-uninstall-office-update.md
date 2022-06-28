@@ -12,7 +12,8 @@ ms.custom:
   - sap:office-experts
   - CSSTroubleshoot
   - CI 162524
-ms.author: ericspli
+ms.reviewer: ericspli
+ms.author: v-maqiu
 appliesto: 
   - Microsoft Office
 ms.date: 3/31/2022

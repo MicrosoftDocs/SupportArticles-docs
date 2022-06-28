@@ -1,7 +1,8 @@
 ---
 title: Sign in issues when activating Microsoft 365 Apps
 description: This article will help you troubleshoot network connection issues when activating Microsoft 365 Apps.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Remove an email alias from a user
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

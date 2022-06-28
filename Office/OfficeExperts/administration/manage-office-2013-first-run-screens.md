@@ -2,6 +2,7 @@
 title: Manage the First Run screens that appear when Office 2013 is first launched
 description: Describes how to disable First Run screens by using Office Customization Tool (OCT) or Group Policy Management Editor.
 author: MaryQiu1987
+ms.author: v-maqiu
 manager: dcscontentpm
 search.appverid: 
   - MET150
@@ -9,7 +10,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.author: jalalb
+ms.reviewer: jalalb
 appliesto: 
   - Office 2013
 ms.date: 3/31/2022
