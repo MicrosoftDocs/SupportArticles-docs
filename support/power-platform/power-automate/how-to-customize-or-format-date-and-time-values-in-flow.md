@@ -46,13 +46,15 @@ See the [Resources](#resources) section in this article for more information abo
 ## Example steps
 
 1. Select the input field where you want the formatted DateTime value.
-2. Go to the expression editor (go to Add dynamic content > select the **Expression** tab).
+2. Go to the expression editor (go to **Add dynamic content** > select the **Expression** tab).
 3. Type *formatDateTime()* (or look under **Date and time** functions).
-4. Provide the value (can be dynamic content) to be formatted (surrounded by single quotes).
+4. Provide the value to be formatted and surrounded by single quotes. Dynamic content can be used, but should not be surrounded by single quotes.
 5. Provide the format string (surrounded by single quotes).
-6. The full expression should look like:
+6. The full expression should look like the following examples:
 
-   `formatDateTime('<your-value>', 'dd/MM/yyyy hh:mm tt')`
+   - `formatDateTime('<your-value>', 'dd/MM/yyyy hh:mm tt')`
+      
+   - `formatDateTime(<dynamic-content>, 'dd/MM/yyyy hh:mm tt')`
 
 7. Select **Ok**.
 
