@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
 description: Troubleshooting steps for the error AADSTS9002313 Invalid Request. Request is malformed or invalid.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Apps activation error Your account doesn’t allow editing on a Mac
 description: Troubleshooting the error Your account doesn’t allow editing on a Mac.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

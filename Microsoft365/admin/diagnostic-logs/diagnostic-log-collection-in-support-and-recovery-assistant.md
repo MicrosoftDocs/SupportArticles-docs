@@ -1,7 +1,7 @@
 ---
 title: Turn off diagnostic log collection in Support and Recovery Assistant
-ms.author: kfollis
-author: kfollis
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting

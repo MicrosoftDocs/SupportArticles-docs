@@ -1,7 +1,8 @@
 ---
 title: Searching private content in Microsoft 365 OneDrive for Business
 description: Describes changes to how OneDrive and SharePoint return search results of content that hasn't been shared with the user.
-author: knutb
+author: v-matthamer
+ms.reviewer: knutb
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

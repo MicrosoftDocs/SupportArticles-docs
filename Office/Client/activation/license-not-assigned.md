@@ -1,7 +1,8 @@
 ---
 title: You currently have not been assigned an office license that includes the Office desktop apps
 description: Troubleshoot Microsoft 365 Apps activation error You currently have not been assigned an office license that includes the Office desktop apps.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

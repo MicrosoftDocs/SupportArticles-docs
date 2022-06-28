@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: warrenr
+ms.author: v-maqiu
+ms.reviewer: warrenr
 appliesto: 
   - Excel Online
 ms.date: 3/31/2022

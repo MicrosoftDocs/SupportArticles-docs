@@ -1,7 +1,8 @@
 ---
 title: Account or subscription verification errors activating Microsoft 365 Apps
 description: Troubleshooting steps for account or subscription errors when activating Microsoft 365 Apps.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
