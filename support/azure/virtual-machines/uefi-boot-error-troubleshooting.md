@@ -215,6 +215,6 @@ fsck.fat 4.1 (2017-01-24)
 
 ### Resolution for scenario 3
 
-In case the entire /boot partition or other important contents are missing and cannot be recovered, a [restore from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) will be the only option.
+In case the entire /boot partition or other important contents are missing and cannot be recovered, a [restore from backup](/azure/backup/backup-azure-arm-restore-vms) will be the only option.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
