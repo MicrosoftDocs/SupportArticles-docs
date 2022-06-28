@@ -29,8 +29,11 @@ The Generation 2  Linux VM boot will fail and the server will be inaccessible.
 ## How to identify a UEFI Boot issue?
 
 Use the [Boot Diagnostics Screenshot](boot-diagnostics.md) to see the current state of your VM.
- The Linux VM fails to boot with the below error message in boot diagnostics screenshot section :
-<!---screenshot to be attached here --->
+ The Linux VM fails to boot with the below error message in boot diagnostics screenshot section:
+ 
+ ![Screenshot of the hyper-V error message for missing UEFI boot image](media/uefi-boot-error-troubleshooting/nobootiimage.png)
+ 
+ ![Screenshot of the transition of hyper-V error to PXE boot issue](media/uefi-boot-error-troubleshooting/pxe.png)
 
 ## Scenario 1: Missing UEFI partition in the boot image
 
