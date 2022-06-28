@@ -2,7 +2,8 @@
 title: 'SetAuthContext need to be run as sysadmin error in Power Pivot for SharePoint'
 description: Fixes an error that occurs when interacting with a PowerPivot workbook in Microsoft SharePoint.
 author: helenclu
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

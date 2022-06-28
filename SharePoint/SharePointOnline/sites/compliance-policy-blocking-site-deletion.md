@@ -2,7 +2,7 @@
 title: An invalid policy blocks a SharePoint site deletion
 description: Provides a fix for errors that occur when you try to delete a SharePoint or OneDrive site, or delete documents on them. 
 author: helenclu
-ms.author: prbalusu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 6/13/2021

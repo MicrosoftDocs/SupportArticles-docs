@@ -4,7 +4,8 @@ description: Describes an error message that you receive when you Offboard mailb
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: rrajan
+ms.author: v-six
+ms.reviewer: rrajan
 manager: dcscontentpm
 ms.custom: 
   - Exchange Hybrid
