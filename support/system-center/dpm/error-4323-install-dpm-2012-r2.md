@@ -1,18 +1,18 @@
 ---
-title: Error 4323 installing DPM 2012 R2
-description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center 2012 R2 Data Protection Manager.
-ms.date: 09/11/2020
+title: Error 4323 installing DPM
+description: Fixes an issue in which you get the DPM Setup failed to add a user to the local group error message when you install System Center Data Protection Manager.
+ms.date: 06/27/2022
 ---
-# DPM 2012 R2 installation fails and generates error 4323: A member could not be added
+# DPM installation fails and generates error 4323: A member could not be added
 
-This article helps you fix an issue in which you get the **DPM Setup failed to add a user to the local group** error message when you install System Center 2012 R2 Data Protection Manager.
+This article helps you fix an issue in which you get the **DPM Setup failed to add a user to the local group** error message when you install System Center Data Protection Manager.
 
-_Original product version:_ &nbsp; System Center 2012 R2 Data Protection Manager  
+_Original product version:_ &nbsp; System Center Data Protection Manager  
 _Original KB number:_ &nbsp; 2930276
 
 ## Symptoms
 
-When you try to install System Center 2012 R2 Data Protection Manager (DPM 2012 R2), either for the first time or as an upgrade from System Center 2012 Data Protection Manager Service Pack 1 (DPM 2012 SP1), the installation fails and you receive the following error message:
+When you try to install System Center Data Protection Manager, either for the first time or as an upgrade, the installation fails and you receive the following error message:
 
 > Error: DPM Setup failed to add a user to the local group. Review the error details, take the appropriate action, and then run DPM Setup again.  
 > ID: 4323. Details: A member could not be added to or removed from the local group because the member does not exist
@@ -20,14 +20,14 @@ When you try to install System Center 2012 R2 Data Protection Manager (DPM 2012 
 You may also see entries that resemble the following in the Setup.log file:
 
 > [10/23/2013 11:07:42 AM] Information : Start configuration.  
-> [10/23/2013 11:07:42 AM] Information : Starting Service:MSSQL$MSDPM2012 on machine:DPMServerName flag restart:False  
-> [10/23/2013 11:07:42 AM] Information : Starting Service:SQLAgent$MSDPM2012 on machine:DPMServerName flag restart:False  
-> [10/23/2013 11:07:42 AM] Information : Starting Service:ReportServer$MSDPM2012 on machine:DPMServerName flag restart:False  
+> [10/23/2013 11:07:42 AM] Information : Starting Service:MSSQL$MSDPM\<version\> on machine:DPMServerName flag restart:False  
+> [10/23/2013 11:07:42 AM] Information : Starting Service:SQLAgent$MSDPM\<version\> on machine:DPMServerName flag restart:False  
+> [10/23/2013 11:07:42 AM] Information : Starting Service:ReportServer$MSDPM\<version\> on machine:DPMServerName flag restart:False  
 > [10/23/2013 11:07:42 AM] Information : Create a registry containing sql agent account information  
-> [10/23/2013 11:07:42 AM] Information : Querying WMI Namespace: \\\\DPMServerName\root\cimv2 for query: `SELECT * FROM Win32_Service WHERE Name='SQLAgent$MSDPM2012'`  
+> [10/23/2013 11:07:42 AM] Information : Querying WMI Namespace: \\\\DPMServerName\root\cimv2 for query: `SELECT * FROM Win32_Service WHERE Name='SQLAgent$MSDPM<version>'`  
 > [10/23/2013 11:07:42 AM] Information : Sql Agent account name = contoso-old\DPMServerName$  
 > [10/23/2013 11:07:42 AM] Information : Create a registry containing the trigger job path information  
-> [10/23/2013 11:07:42 AM] Data : TriggerJobPath = D:\Microsoft System Center 2012\DPM\DPM\bin\  
+> [10/23/2013 11:07:42 AM] Data : TriggerJobPath = D:\Microsoft System Center \<version\>\DPM\DPM\bin\  
 > [10/23/2013 11:07:42 AM] Information : Add user: contoso-old\DPMServerName$ to local group: Distributed COM Users on server: DPMServerName  
 > [10/23/2013 11:07:42 AM] \* Exception : => DPM Setup failed to add a user to the local group.Review the error details, take the appropriate action, and then run DPM Setup again.Microsoft.Internal.EnterpriseStorage.Dls.Setup.Exceptions.BackEndErrorException: Exception of type 'Microsoft.Internal.EnterpriseStorage.Dls.Setup.Exceptions.BackEndErrorException' was thrown.  
 > at Microsoft.Internal.EnterpriseStorage.Dls.Setup.NativeConfigHelper.AddAccountToLocalGroup(String accountName, String localGroupName, String machineName)  
@@ -54,7 +54,7 @@ This issue can occur if the environment has a disjointed namespace (that is, the
 
 2. Locate the DPMDB database files and make sure that the new account that you identified or created in step 1 has full permissions to that directory.
 
-3. Change the **MSSQL$MSDPM2012** and **SQLAgent$MSDPM2012** services so that when they start they use the new domain user account from step 1.
+3. Change the **MSSQL$MSDPM\<version\>** and **SQLAgent$MSDPM\<version\>** services so that when they start they use the new domain user account from step 1.
 
 > [!NOTE]
 > We recommend that you use Microsoft SQL Server Configuration Manager as it provides the easiest way to make this change.
@@ -69,7 +69,7 @@ When the upgrade is complete, revert the two services that are mentioned in step
 
 2. Create a new local user account on the DPM server that has the same name MICROSOFT$DPM$Acct. Passwords don't have to match between accounts.
 
-3. Change the **MSSQL$MSDPM2012** and **SQLAgent$MSDPM2012** services so that when they start they use the new domain user account from step 1.
+3. Change the **MSSQL$MSDPM\<version\>** and **SQLAgent$MSDPM\<version\>** services so that when they start they use the new domain user account from step 1.
 
 Installation should now complete successfully. For a fresh installation, you don't have to revert the two services as mentioned in the [Upgrade](#workaround-upgrade) section as the registry will already have the correct information for the services.
 
@@ -94,7 +94,7 @@ To make sure that jobs continue to run as scheduled, follow these steps on the D
 
 3. Start `DCOMCNFG.exe`, and then locate the following folder:
 
-    `Component Services\Computers\My Computer\DCOM Config\Microsoft System Center Data Protection Manager 2012 Service`
+    `Component Services\Computers\My Computer\DCOM Config\Microsoft System Center Data Protection Manager <version> Service`
 
 4. Right-click the service name, and then select **Properties**.
 5. Select the **Security** tab.
@@ -103,7 +103,7 @@ To make sure that jobs continue to run as scheduled, follow these steps on the D
 
 ## Additional steps if the upgrade installation fails
 
-If the upgrade installation fails, and the program doesn't roll back, you must restore a working version of DPM 2012 SP1 before you can try to install the upgrade again. To do this, follow these steps:
+If the upgrade installation fails, and the program doesn't roll back, you must restore a working version of DPM before you can try to install the upgrade again. To do this, follow these steps:
 
 1. Locate the backup copy of your DPMDB file that you created before you started the upgrade process.
 2. If DPM is installed, uninstall it.
@@ -111,7 +111,7 @@ If the upgrade installation fails, and the program doesn't roll back, you must r
     > [!IMPORTANT]
     > Make sure that you maintain your data. To do this, select **Retain disk-based recovery points** on the **Uninstallation Options** page.
 
-3. Install DPM 2012 SP1. If you had any updates installed, reinstall them in the same sequence that you had installed them previously.
+3. Install DPM. If you had any updates installed, reinstall them in the same sequence that you had installed them previously.
 
     > [!NOTE]
     > We recommend that you mount the database from step 1, and then run the following query on the DPM database in Administrator mode to locate the sequence in which the updates were originally applied:
