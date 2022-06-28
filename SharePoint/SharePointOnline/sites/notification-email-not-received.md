@@ -21,11 +21,11 @@ ms.date: 6/27/2022
 
 # Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received
 
-As part of routine administration activities, it is common for email messages such as requests for access to the site and notifications about the storage limit of the site to be sent to the owners of a SharePoint site. If the SharePoint site is connected to a Microsoft 365 group, these email messages are sent to the group's email address.
+As part of routine administration activities, email messages about requests for access to the site and notifications about the storage limit of the site are sent to the owners of a SharePoint site. If the SharePoint site is connected to a Microsoft 365 group, these email messages are sent to the group's email address.
 
-The email messages are usually sent from a mail-enabled security group such as 'no-reply@sharepointonline.com'. When a Microsoft 365 group receives a message from such a security group, it treats that address as external and blocks it. This is because Microsoft 365 groups aren’t allowed to receive email messages from external addresses by default.
+The email messages are sent from a mail-enabled security group such as 'no-reply@sharepointonline.com'. When a Microsoft 365 group receives a message from such a security group, it treats the address as external and blocks it. This blocking occurs because Microsoft 365 groups aren’t allowed to receive email messages from external addresses by default.
 
-To make sure that site access requests and site storage notification email messages are received, change your Microsoft 365 group settings to allow email from  external addresses:
+To make sure that site access requests and site storage notification email messages are received, change the settings of the Microsoft 365 group to allow email from  external addresses:
 
 1. Open the [Microsoft 365 admin center](https://admin.microsoft.com).
 
@@ -41,4 +41,4 @@ To make sure that site access requests and site storage notification email messa
 
 1. Select **Save**.
 
-**Note:**: If the members of the group subscribe to receive copies of all the email messages that’re received by the group, they can see the notifications either in their **Inbox** or in their **Junk Mail** folder depending on their individual mailbox settings.
+**Note:**: If the members of the group subscribe to receive copies of all the email messages that are received by the group, they can see the notifications either in their **Inbox** or in their **Junk Mail** folder depending on their individual mailbox settings.
