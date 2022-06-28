@@ -2,9 +2,7 @@
 title: Isolate issues in canvas apps
 description: Learn about techniques to narrow down the cause of errors in canvas apps.
 author: tahoon
-
 ms.subservice: troubleshoot
-ms.topic: conceptual
 ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: tahoon
@@ -15,10 +13,9 @@ search.app:
 contributors:
   - tahoon
 ---
-
 # Isolate issues in canvas apps
 
-Canvas apps allow you to design apps with numerous different visuals and various data connections. Use [IntelliSense](/power-platform/power-fx/overview) and the [app checker](https://powerapps.microsoft.com/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/) as guards against common issues. [Monitor](/power-apps/maker/monitor-overview) and the [Variables panel](/power-apps/maker/canvas-apps/working-with-variables#use-a-context-variable) can help you with debugging.
+Canvas apps allow you to design apps with numerous different visuals and various data connections. Use [IntelliSense](/power-platform/power-fx/overview) and the [App checker](https://powerapps.microsoft.com/blog/new-app-checker-helps-you-fix-errors-and-make-accessible-apps/) as guards against common issues. [Monitor](/power-apps/maker/monitor-overview) and the [Variables panel](/power-apps/maker/canvas-apps/working-with-variables#use-a-context-variable) can help you with debugging.
 
 Here are some other techniques to isolate problems in a canvas app.
 
@@ -26,14 +23,13 @@ Here are some other techniques to isolate problems in a canvas app.
 
 Formulas can be complex. When things go wrong, it can be difficult to pinpoint which part failed. Debug labels are a useful technique to see the results of different parts of a formula.
 
-A debug label is a **[Label](/power-apps/maker/canvas-apps/controls/control-text-box)** with its **Text** property set to a formula of interest. It lets you see exactly how Power Apps treats these formulas. To avoid [scoping bugs](#try-a-different-app-structure), insert the debug label outside other controls like **Gallery** and **Form**.
+A debug label is a [Label](/power-apps/maker/canvas-apps/controls/control-text-box) with its **Text** property set to a formula of interest. It lets you see exactly how Power Apps treats these formulas. To avoid [scoping bugs](#try-a-different-app-structure), insert the debug label outside other controls like **Gallery** and **Form**.
 
 Imagine that a **Combo box** control is showing less than expected and the dropdown options are blank.
 
-> [!div class="mx-imgBorder"]
-> ![Expanded combo box, showing empty space where options should be in the dropdown.](media/isolate-canvas-app-issues/empty-combobox.png)
+:::image type="content" source="media/isolate-canvas-app-issues/empty-combobox.png" alt-text="Expanded combo box, showing an empty space where options should be in the dropdown.":::
 
-Check is whether the **Combo box** is configured correctly. For example, the **Items** property is set to a complex formula below:
+Check if the **Combo box** is configured correctly. For example, the **Items** property is set to a complex formula below:
 
 ```powerapps-dot
 AddColumns(
@@ -54,7 +50,8 @@ Start with the innermost expression `Filter( Products, Rating > 4 )`. Insert a d
 - Check results by combining their names: `Concat( Filter( Products, Rating > 4 ), ProductName & ", ")`
 
 > [!TIP]
-> When working with datasets, debug tables are useful for previewing records. The concept is similar to debug labels. Insert a **[Data table](/power-apps/maker/canvas-apps/controls/control-data-table)** with its **Items** property set to the dataset of interest.
+> When working with datasets, debug tables are useful for previewing records. The concept is similar to debug labels. Insert a [Data table](/power-apps/maker/canvas-apps/controls/control-data-table) with its **Items** property set to the dataset of interest.
+>
 > You might want to use the [FirstN and LastN functions](/power-apps/maker/canvas-apps/functions/function-first-last) for better performance with datasets.
 
 Once you've confirmed that an expression is evaluated correctly, you can move on to the next outer expression `GroupBy( Filter( Products, Rating > 4 ), "ProductType", "Details" )`. By proceeding methodically, you can find out which part of a complex expression isn't working.
@@ -77,7 +74,7 @@ First(
 
 If the result is empty, it could be:
 
-- The `ProductType` for that record really is empty. If the dataset comes from outside the app, check it outside of Power Apps.
+- The `ProductType` field for that record really is empty. If the dataset comes from outside the app, check it outside of Power Apps.
 - One or more of the expressions isn't working. Break it down as described above to narrow down. It could be a Power Apps bug or a mistake in writing the formula.
 - Data isn't reaching Power Apps. It could be a networking issue, an issue with the data source, or a Power Apps bug.
 
@@ -134,7 +131,7 @@ If the problem only happens on a particular type of control, then it's likely a 
 
 ## Try a different app structure
 
-Formulas can behave differently for controls inside another control. For example, controls inside a **Gallery** can use **[ThisItem](/power-apps/maker/canvas-apps/functions/operators#thisitem-thisrecord-and-as-operators)** but controls outside the gallery can't. Controls outside a **Gallery** or **Component** can't reference the controls inside.
+Formulas can behave differently for controls inside another control. For example, controls inside a **Gallery** can use [ThisItem](/power-apps/maker/canvas-apps/functions/operators#thisitem-thisrecord-and-as-operators) but controls outside the gallery can't. Controls outside a **Gallery** or **Component** can't reference the controls inside.
 
 This different visibility of identifiers is called [scope](/power-apps/maker/canvas-apps/working-with-tables#record-scope). Controls that contain other controls introduce a new scope.
 
@@ -151,8 +148,7 @@ If a formula isn't working inside a contained control, it could be related to sc
 
 For example, a **Label** control inside a **Gallery** should show each record's name but no text is appearing. **Label.Text** is set to `ThisItem.Name`. **Gallery.Items** is set to `Products`.
 
-> [!div class="mx-imgBorder"]
-> ![A gallery shows empty space instead of text. The property panel shows the formulas used for the Labels in the gallery.](media/isolate-canvas-app-issues/empty-gallery.png)
+:::image type="content" source="media/isolate-canvas-app-issues/empty-gallery.png" alt-text="A gallery shows an empty space instead of text. The property panel shows the formulas used for the labels in the gallery.":::
 
 To check if it's a scoping issue, insert a [debug label](#inspect-formulas-with-debug-labels) outside the **Gallery**, at the top-level of the app. Set its **Text** property to show the name of the first record of the dataset: `First(Products).Name`.
 
@@ -161,7 +157,7 @@ The debug label should have the same result as the first row of the gallery. If 
 Some possible workarounds for scoping issues:
 
 - Move controls outside of their containers
-- Refer to data in [global or context variables](/maker/canvas-apps/working-with-variables)
+- Refer to data in [global or context variables](/power-apps/maker/canvas-apps/working-with-variables)
 - Use [Patch](/power-apps/maker/canvas-apps/functions/function-patch) to avoid using an [Edit form](/power-apps/maker/canvas-apps/controls/control-form-detail) control
 
 ## Restore to an earlier version
