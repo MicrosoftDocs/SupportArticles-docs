@@ -335,6 +335,8 @@
       href: ../Sites/new-navigation-link-save-site-as-template.md
     - name: Modified dates on the SharePoint site contents page are not accurate
       href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Notifications not received by group connected to SharePoint site
+      href: ../sites/notification-email-not-received.md
     - name: Public websites is discontinued
       href: ../Sites/public-websites-be-discontinued.md
     - name: Rich Text fields don't respond
@@ -347,8 +349,6 @@
       href: ../Sites/top-navigation-bar-not-use-site-theme.md
     - name: Site is at or near the metadata limit
       href: ../sites/site-reached-metadata-limit.md
-    - name: Site storage notification emails for group-connected sites not received
-      href: ../sites/notification-email-not-received.md
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage

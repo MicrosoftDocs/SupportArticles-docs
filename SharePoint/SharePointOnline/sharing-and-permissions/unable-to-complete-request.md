@@ -39,7 +39,7 @@ Microsoft account is experiencing technical problems. Please try again later.
 
 ## Solution
 
-To work around this issue, advise the user to use the new Microsoft account that he or she created to sign in to the site, as follows:
+To work around this issue, advise the user to use the new Microsoft account that's created to sign in to the site, as follows:
 
 1. View the email invitation for the SharePoint Online resource, and then click the link to the shared content.
 
