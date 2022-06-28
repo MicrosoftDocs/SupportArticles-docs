@@ -12,7 +12,7 @@ This article explains how to use diagnostic files and the Intune Management exte
 
 There are specific requirements that must be followed to collect diagnostic files:
 
-- Windows 11, or Windows 10 1909 or later.
+- Windows 11, or Windows 10, version 1909 or later versions.
 - You must specify the complete diagnostic file path.
 - You can specify environment variables for diagnostic collection, such as the following:
   *%PROGRAMFILES%, %PROGRAMDATA% %PUBLIC%, %WINDIR%, %TEMP%, %TMP%*
