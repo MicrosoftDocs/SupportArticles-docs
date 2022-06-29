@@ -32,7 +32,7 @@ After you successfully add your Microsoft Exchange email account to Microsoft Ou
 
 This error occurs if your Windows user profile contains a unicode character as shown in the following screenshot:
 
-:::image type="content" source="media/outlook-displays-error-message-on-first-start/unicode-character-in-user-profile-name.png" alt-text="Screenshot of the path to a Windows user profile name that has unicode characters." border="false":::
+:::image type="content" source="media/outlook-displays-error-message-on-first-start/unicode-characters-in-user-profile-name.png" alt-text="Screenshot of the path to a Windows user profile name that has unicode characters." border="false":::
 
 If your Windows device is AzureAD-joined and you sign in to Windows with your AzureAD account, your Windows user profile will be built with your AzureAD display name. If your AzureAD display name includes a unicode character, it will be used in your Windows user profile name as well.
 
@@ -44,7 +44,7 @@ To resolve this issue, change your regional settings.
 1. In the **Region** dialog box on the **Administrative** tab, select **Change system locale**.
 1. In the **Region Settings** dialog box, select the check box for **Beta: Use Unicode UTF-8 for worldwide language support**.
 
-    :::image type="content" source="media/outlook-displays-error-message-on-first-start/region-settings-dialog.png" alt-text="Screenshot of the Region Settings dialog box with the check box for Beta: Use Unicode UTF-8 for worldwide language support selected." border="false":::
+    :::image type="content" source="media/outlook-displays-error-message-on-first-start/region-settings-dialog.png" alt-text="Screenshot of the Region Settings dialog box with the check box for Beta: Use Unicode UTF-8 for worldwide language support selected." border="true":::
 
 1. Select **OK** and when prompted, restart Windows.
 1. Open Outlook. It should start without displaying the error message.
