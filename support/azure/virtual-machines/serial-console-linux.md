@@ -79,7 +79,7 @@ Scenario          | Actions in the Serial Console
 :------------------|:-----------------------------------------
 Broken *FSTAB* file | Press the **Enter** key to continue and use a text editor to fix the *FSTAB* file. You might need to be in single user mode to do so. For more information, see the serial console section of [How to fix fstab issues](https://support.microsoft.com/help/3206699/azure-linux-vm-cannot-start-because-of-fstab-errors) and [Use serial console to access GRUB and single user mode](serial-console-grub-single-user-mode.md).
 Incorrect firewall rules |  If you have configured iptables to block SSH connectivity, you can use serial console to interact with your VM without needing SSH. More details can be found at the [iptables man page](https://linux.die.net/man/8/iptables).<br>Similarly, if your firewalld is blocking SSH access, you can access the VM through serial console and reconfigure firewalld. More details can be found in the [firewalld documentation](https://firewalld.org/documentation/).
-Filesystem corruption/check | Please see the serial console section of [Azure Linux VM cannot start because of file system errors](https://support.microsoft.com/en-us/help/3213321/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck) for more details on troubleshooting corrupted file systems using serial console.
+Filesystem corruption/check | Please see the serial console section of [Azure Linux VM cannot start because of file system errors](https://support.microsoft.com/help/3213321/linux-recovery-cannot-ssh-to-linux-vm-due-to-file-system-errors-fsck) for more details on troubleshooting corrupted file systems using serial console.
 SSH configuration issues | Access the serial console and change the settings. Serial console can be used regardless of the SSH configuration of a VM as it does not require the VM to have network connectivity to work. A troubleshooting guide is available at [Troubleshoot SSH connections to an Azure Linux VM that fails, errors out, or is refused](./troubleshoot-ssh-connection.md). More details are available at [Detailed SSH troubleshooting steps for issues connecting to a Linux VM in Azure](./detailed-troubleshoot-ssh-connection.md)
 Interacting with bootloader | Restart your VM from within the serial console blade to access GRUB on your Linux VM. For more details and distro-specific information, see [Use serial console to access GRUB and single user mode](serial-console-grub-single-user-mode.md).
 
@@ -98,7 +98,7 @@ Serial console uses the storage account configured for boot diagnostics in its c
 > [!NOTE]
 > To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics**, then click **Settings**.
 
-The list of IPs that need to be added to the storage account firewall are shown below. Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules)
+The list of IPs that need to be added to the storage account firewall are shown below. Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules)
 
 #### Add the Serial Console service IPs as firewall exclusions based on the geography of the VM
 
@@ -148,7 +148,7 @@ IP Address      | Regions | Geography
 > [!IMPORTANT]
 >  The IPs that need to be permitted are specific to the region the VM is located in. For example, a virtual machine deployed in the **NorthEurope** region needs to add the following IP exclusions to the storage account firewall for the Europe geography:  52.146.139.220, 20.105.209.72. Please view the table above to find the correct IPs for your region and geography.
 
-Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
+Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
 
 After these changes are successfully applied, retry the Serial Console connection to the VM. If you are still having problems connecting, verify the correct IP addresses are excluded from the storage account firewall for the region of the VM.
 
