@@ -19,11 +19,11 @@ ms.author: divargas
 
 This article discusses multiple conditions that can lead to a GRUB rescue and provides troubleshooting guidance.
 
-During the boot process, the boot loader will attempt to locate the Linux kernel and hand off the boot control. If this handoff cannot be performed, the VM will enter a GRUB rescue console. The GRUB rescue console prompt will typically not be shown in the azure serial console log, but can be seen in the [Azure boot diagnostics screenshot](/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view).
+During the boot process, the boot loader will attempt to locate the Linux kernel and hand off the boot control. If this handoff cannot be performed, the VM will enter a GRUB rescue console. The GRUB rescue console prompt will typically not be shown in the azure serial console log, but can be seen in the [Azure boot diagnostics screenshot](https://docs.microsoft.com/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view).
 
 ## How to identify a GRUB rescue issue?
 
-Use the Azure portal to [view a screenshot](/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view) of your VM using the boot diagnostics blade. This will help to diagnose the issue and determine if a similar boot error is the cause.
+Use the Azure portal to [view a screenshot](https://docs.microsoft.com/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view) of your VM using the boot diagnostics blade. This will help to diagnose the issue and determine if a similar boot error is the cause.
 
 A GRUB rescue issue looks similar to the output below:
 
@@ -40,7 +40,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 1. Use the [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Then use [chroot](chroot-environment-linux.md) to mount the copy of the OS file systems in the repair VM.
 
     > [!NOTE]
-    > In case the Repair VM command is not an option, follow _[Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux)_ to get a rescue VM manually created.
+    > In case the Repair VM command is not an option, follow _[Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](troubleshoot-recovery-disks-portal-linux)_ to get a rescue VM manually created.
 
 2. [Identify](#how-to-identify-a-grub-rescue-issue) the specific grub rescue error and follow the instructions that fit that specific error:
 
@@ -52,7 +52,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
 3. Once the corresponding GRUB rescue action plan has been followed, proceed to get the copy of the file systems unmounted from the rescue/repair VM, and use the restore option as documented in [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) article, step 5, to get the OS disk swapped using the copy disk from the rescue/repair VM and validate if the VM is able to boot up fine by taking a look at the Azure serial console or trying to connect to the VM.
 
-4. In case the entire /boot partition or other important contents are missing and they are unable to be recovered, a [restore from backup](/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
+4. In case the entire /boot partition or other important contents are missing and they are unable to be recovered, a [restore from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
 
 ### Error - Unknown filesystem
 
@@ -252,7 +252,7 @@ Calling ioctl() to re-read partition table.
 /dev/sdc1: UUID="d43acc81-83c1-446d-a69f-476aec11558b" TYPE="ext4"
 ```
 
-3. In case the /boot file system is not visible in **blkid** after recreating the partition, it means the /boot data is no longer there. You will need to recreate it (using the same UUID and file system format than in /etc/fstab /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms)
+3. In case the /boot file system is not visible in **blkid** after recreating the partition, it means the /boot data is no longer there. You will need to recreate it (using the same UUID and file system format than in /etc/fstab /boot entry) and [restore its contents from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms)
 
  > [!NOTE]
  > Replace /dev/sdX with the corresponding Operating System (OS) disk device.
@@ -326,7 +326,7 @@ The operation has completed successfully.
 /dev/sdc1: UUID="2eca58fb-edd0-4f4e-be42-4fffccaacceb" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="71f642bb-742c-49a4-a660-19190f6e54ce"
 ```
 
-3. In case the /boot file system is not visible after recreating the partition, it means the /boot data is no longer there. You will need to recreate the /boot file system (using the same UUID than in /etc/fstab /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms)
+3. In case the /boot file system is not visible after recreating the partition, it means the /boot data is no longer there. You will need to recreate the /boot file system (using the same UUID than in /etc/fstab /boot entry) and [restore its contents from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms)
 
 <!-- add here the command to recreate the /boot FS on top of the newly created partition-->
  > [!NOTE]
@@ -341,13 +341,13 @@ The operation has completed successfully.
 This kind of error will be triggered in case the GRUB configuration file is missing, in case the wrong GRUB configuration is in place or if the /boot partition or its contents are missing.
 
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
-2. Make sure the /etc/default/grub configuration file is properly configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. You can refer to the below documentation for further details:
+2. Make sure the /etc/default/grub configuration file is properly configured. The [endorsed Azure Linux images](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. You can refer to the below documentation for further details:
 
-    * [GRUB access in RHEL](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel)
-    * [GRUB access in CentOS](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-centos)
-    * [GRUB access in Ubuntu](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-ubuntu)
-    * [GRUB access in SUSE SLES](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-suse-sles)
-    * [GRUB access in Oracle Linux](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-oracle-linux)
+    * [GRUB access in RHEL](serial-console-grub-single-user-mode#grub-access-in-rhel)
+    * [GRUB access in CentOS](serial-console-grub-single-user-mode#grub-access-in-centos)
+    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode#grub-access-in-ubuntu)
+    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode#grub-access-in-suse-sles)
+    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode#grub-access-in-oracle-linux)
 
 3. Reinstall GRUB and regenerate the corresponding grub configuration file following the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file).
 
@@ -359,6 +359,6 @@ This kind of error will be triggered in case the GRUB configuration file is miss
 
 ## Next steps
 
-In case the specific boot error is not a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](/azure/virtual-machines/boot-error-troubleshoot-linux) for further troubleshooting options.
+In case the specific boot error is not a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
