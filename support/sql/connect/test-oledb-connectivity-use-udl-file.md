@@ -89,7 +89,7 @@ To test Open Database Connectivity (ODBC) drivers by using Microsoft OLE DB Prov
 
 ## Test 32-bit providers on 64-bit machines
 
-To test the connection of 32-bit providers in 64-bit operation systems, follow these steps:
+To test the connection of 32-bit providers in 64-bit operating systems, follow these steps:
 
 1. In the **Command Prompt** window, run the following command to open the 32-bit **Command Prompt**:
 
@@ -103,7 +103,7 @@ To test the connection of 32-bit providers in 64-bit operation systems, follow t
     c:\temp\test.udl
     ```
 
-1. If you can see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, that means you successfully loaded the 32-bit dialog and can now select the 32-bit provider to test the connection.
+1. If you see **Microsoft Jet 4.0 OLE DB Provider** on the **Provider** tab, that means you successfully loaded the 32-bit dialog and can now select the 32-bit provider to test the connection.
 
 ## Tips to troubleshoot connection issues
 

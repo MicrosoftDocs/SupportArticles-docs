@@ -1,7 +1,7 @@
 ---
 title: A network-related or instance-specific error occurred
 description: Provides troubleshooting steps for network-related or instance-specific errors if you can't connect to an instance of the SQL Server Database Engine on a single server.
-ms.date: 11/14/2021
+ms.date: 06/16/2022
 ms.custom: sap:Connection issues
 author: cobibi
 ms.author: v-yunhya
@@ -84,7 +84,7 @@ This error usually means that the client can't find the SQL Server instance. Thi
 - The TCP port number isn't specified correctly.
 
 > [!NOTE]
-> For troubleshooting connectivity issues in high availability scenarios, review the following articles:
+> For troubleshooting connectivity issues in high availability scenarios, see the following articles:
 >
 > - [Connect to an Always On availability group listener](/sql/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover)
 >
@@ -264,11 +264,11 @@ A default instance typically runs on port 1433. Some installations also use a no
 
 1. Determine the port your SQL instance is running on, see [Get the TCP port of the instance](#get-the-tcp-port-of-the-instance).
 
-1. - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
+  - If your SQL Server is configured to listen on port 1433, make sure that firewalls on the network between the client and the server allow traffic on that port. Review [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) and work with your network administrator to implement necessary solutions.
 
    - If your SQL Server default instance isn't using 1433, try to append the port number of SQL Server to the server name by using the format `<servername>,<portnumber>` and see whether it works. For example, your SQL instance name is *MySQLDefaultinstance* and it's running on port 2000. Specify the server name as *MySQLServer, 2000* and see whether it works.
 
-1. - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
+  - If it doesn't work, it indicates the firewall is blocking the port. You can follow the instructions at [Configure a Windows Firewall for Database Engine Access](/sql/database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access) or work with your network administrator to add the port to the firewall exclusion list.
 
     - If it does work, it indicates that the firewall is allowing communication through that port. You need to change your connection string in order to use the port number and your server name in the connection string of your application.
 
@@ -290,9 +290,9 @@ If your SQL instance is a named instance, it may be configured to use either dyn
 
           - The instance is [hidden](/sql/database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine) from the SQL Server Browser service.
 
-- Method 2: Check the connection by using the PortqryUI tool.
+- Method 2: Check the connection by using the PortQryUI tool.
 
-    Use the PortqryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
+    Use the PortQryUI tool with your named instance and observe the resulting output. You may see a message that the UDP port 1434 is filtered. This message indicates that the port is blocked on the network. For instructions on how to use the tool, see [Using the PortQryUI Tool with SQL Server](using-portqrytool-sqlserver.md).
 
     Determine whether the SQL Server instance is listening on dynamic or static ports. Then use the following method that is relevant to your scenario. If you aren't sure, see [How to check if SQL Server is listening on a dynamic port or static port](static-or-dynamic-port-config.md).
 
@@ -306,11 +306,10 @@ In some installations of SQL Server, connections to the Database Engine from ano
 
 ### Option 1: Using the output file from SQLCheck tool
 
-1. Search the SQLCheck output file for Details for SQL Server Instance and locate the information for your SQL Server instance.
+1. Search the SQLCheck output file for "Details for SQL Server instance" section and locate the information section for your SQL Server instance.
+1. In the section, find the values listed in the following table to determine if the SQL Server protocols are enabled:
 
-1. Review the values for the following table:
-
-    |Attribute name |Implication|More information|
+    |Value name |Implication|More information|
     |-|-|-|
     |Shared Memory Enabled |Can either be true of false - only affects local connections. |[Creating a Valid Connection String Using Shared Memory Protocol](/sql/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol)|
     |Named Pipes Enabled |If false, both local and remote connections using Named pipes will fail |[Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))|
@@ -323,11 +322,11 @@ In some installations of SQL Server, connections to the Database Engine from ano
 
 ### Option 2: Use SQL Server Configuration Manager
 
-To enable connections from another computer by using SQL Server Configuration manager, follow these steps:
+To enable connections from another computer by using the SQL Server Configuration Manager, follow these steps:
 
-1. Open SQL Server Configuration Manager.
+1. Open the SQL Server Configuration Manager.
 
-1. In the left pane expand **SQL Server Network Configuration**, and then select the instance of SQL Server that you want to connect to. The right-pane lists the connection protocols available. **Shared Memory** is normally enabled. It can only be used from the same computer, so most installations leave **Shared Memory** enabled. To connect to SQL Server from another computer, use **TCP/IP**. If **TCP/IP** isn't enabled, right-click **TCP/IP**, and then select **Enable**.
+1. In the left pane, expand **SQL Server Network Configuration**, and then select the instance of SQL Server that you want to connect to. The right pane lists the connection protocols available. **Shared Memory** is normally enabled. It can only be used from the same computer, so most installations leave **Shared Memory** enabled. To connect to SQL Server from another computer, use **TCP/IP**. If **TCP/IP** isn't enabled, right-click **TCP/IP**, and then select **Enable**.
 1. If you change the enabled setting for any protocol, restart the Database Engine. In the left pane, select **SQL Server Services**. In the right-pane, right-click the instance of the Database Engine, and then select **Restart**.
 
 ## Step 7: Test TCP/IP connectivity
@@ -335,7 +334,7 @@ To enable connections from another computer by using SQL Server Configuration ma
 Connecting to SQL Server by using TCP/IP requires that Windows establish the connection. You can use the following steps to test TCP connectivity by using the ping tool.
 
 1. On the **Start** menu, select **Run**. In the **Run** window, type *cmd* and select **OK**.
-1. In the **Command prompt** window, type `ping` and the IP address of the computer that's running SQL Server. For example:
+1. In the **Command Prompt** window, type `ping` and the IP address of the computer that's running SQL Server. For example:
 
     - IPv4: `ping 192.168.1.101`
     - IPv6: `ping fe80::d51d:5ab5:6f09:8f48%11`
@@ -354,7 +353,7 @@ Before troubleshooting a connection problem from another computer, test your abi
 
 This procedure requires SQL Server Management Studio. If you don't have Management Studio installed, see [Download SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms).
 
-If you can't install Management Studio, you can test the connection by using the *sqlcmd.exe* utility. *Sqlcmd.exe* is installed with the Database Engine. For information about *sqlcmd.exe*, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
+If you can't install Management Studio, you can test the connection by using the *sqlcmd.exe* utility. *sqlcmd.exe* is installed with the Database Engine. For information about *sqlcmd.exe*, see [sqlcmd Utility](/sql/tools/sqlcmd-utility).
 
 1. Sign in to the computer where SQL Server is installed by using a login that can access SQL Server. During installation, SQL Server requires at least one login to be specified as a SQL Server administrator. If you don't know an administrator, see [Connect to SQL Server When System Administrators Are Locked Out](/sql/database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out).
 

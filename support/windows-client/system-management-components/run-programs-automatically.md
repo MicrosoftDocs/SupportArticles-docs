@@ -26,14 +26,14 @@ You can apply a policy to an individual user or to a computer, and you can use a
 
 - To configure Notepad to run when any user signs in to a specific computer:
   1. Edit the following group policy:  
-      Computer Configuration\Administrative Templates\System\Run These Programs at User Logon
+      Computer Configuration\\Administrative Templates\\System\\Logon\\Run These Programs at User Logon
 
   2. Type the full path name of the program. In this example, type the following path name:  
       `c:\%windir%\system32\notepad.exe`
 
 - To configure Notepad to run when a specific user logs on (regardless of the computer he or she uses):
   1. Edit the following group policy:  
-      User Configuration\Administrative Templates\System\Run These Programs at User Logon
+      User Configuration\\Administrative Templates\\System\\Run These Programs at User Logon
 
   2. Type the full path name of the program.
 

@@ -1,6 +1,14 @@
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
   items:
+  - name: Common issues
+    items:
+    - name: Common issues and resolutions
+      href: common-issues-and-resolutions.md
+    - name: Troubleshoot startup issues for Power Apps
+      href: troubleshooting-startup-issues.md
+    - name: Troubleshoot Power Query
+      href: troubleshoot-power-query-issues.md
   - name: Connections
     items:
     - name: Best practices when updating a flow
@@ -10,7 +18,17 @@
   - name: Dataverse Web API
     items:
     - name: Web API client errors
-      href: web-api-client-errors.md  
+      href: web-api-client-errors.md
+  - name: Isolate issues
+    items:
+    - name: Create a minimal repro canvas app
+      href: minimal-canvas-app-repro.md
+    - name: General Power Apps debugging strategies
+      href: isolate-common-issues.md
+    - name: Isolate issues in canvas apps
+      href: isolate-canvas-app-issues.md
+    - name: Isolate issues in model-driven apps
+      href: isolate-model-app-issues.md
   - name: Ribbons and commanding
     items:
     - name: Ribbon issues
@@ -34,7 +52,7 @@
     - name: Cookies or pop-up blocker errors
       href: cookies-pop-up-blocker-error.md
     - name: No response with back button
-      href: no-navigation-when-selecting-button.md
+      href: no-navigation-when-selecting-button.md  
   - name: Others
     items:
     - name: Custom pages and SDK script don't load
@@ -43,3 +61,11 @@
       href: lookup-does-not-filter-entity-records.md
     - name: Required fields are missing in Dataverse records
       href: dataverse-records-missing-required-fields.md
+  - name: Support resources
+    items:
+    - name: Power Apps support
+      href: https://powerapps.microsoft.com/support
+    - name: Power Apps Community forum
+      href: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
+    - name: Power Apps Ideas forum
+      href: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
