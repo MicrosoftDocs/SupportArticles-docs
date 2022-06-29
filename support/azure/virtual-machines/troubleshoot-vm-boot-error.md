@@ -178,7 +178,7 @@ If the /boot partition is missing, you can recreate it using the following instr
  > [!NOTE]
  > Replace /dev/sdX with the corresponding Operating System (OS) disk device.
 
-3. If the partition table has **dos** as the partition table type, follow the instructions in [Recreating the /boot partition in dos systems](#recreating-the-boot-partition-in-dos-system). If the partition table has **GPT** as the partition table type, follow the instructions in [Recreating the /boot partition in GPT systems](#recreating-the-boot-partition-in-gpt-systems)
+3. If the partition table has **dos** as the partition table type, follow the instructions in [Recreating the /boot partition in dos systems](#recreating-the-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, follow the instructions in [Recreating the /boot partition in GPT systems](#recreating-the-boot-partition-in-gpt-systems)
 4. Make sure the GRUB boot loader is installed using the proper disk. You can follow the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to get it installed and configured the proper way.
 5. Proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
 
