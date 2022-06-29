@@ -42,13 +42,13 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
     > [!NOTE]
     > In case the Repair VM command is not an option, follow _[Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux)_ to get a rescue VM manually created.
 
-2. [Identify](#how-to-identify-a-grub-rescue) the specific grub rescue error and follow the instructions that fit that specific error:
+2. [Identify](#how-to-identify-a-grub-rescue-issue) the specific grub rescue error and follow the instructions that fit that specific error:
 
     * [Error - Unknown filesystem](#error---unknown-filesystem)
     * [Error - Error 15: File not found](#error---error-15-file-not-found)
     * [Error - error: file '/boot/grub2/i386-pc/normal.mod' not found](#error---error-file-bootgrub2i386-pcnormalmod-not-found)
     * [Error - No such partition](#error---no-such-partition)
-    * [Error - grub.cfg file not found and generic GRUB rescue errors](#error---grubcfg-file-not-found-and-generic-grub-rescue-errors)
+    * [Other GRUB rescue errors](#other-grub-rescue-errors)
 
 3. Once the corresponding GRUB rescue action plan has been followed, proceed to get the copy of the file systems unmounted from the rescue/repair VM, and use the restore option as documented in [**Repair VM** command](repair-linux-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) article, step 5, to get the OS disk swapped using the copy disk from the rescue/repair VM and validate if the VM is able to boot up fine by taking a look at the Azure serial console or trying to connect to the VM.
 
@@ -62,14 +62,14 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
   * /boot file system corruption.
     * Follow the instructions in  [Fixing the /boot file system corruption](#fixing-the-boot-file-system-corruption).
   * GRUB Boot loader pointing to an invalid disk or partition.
-    * Follow the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
+    * Follow the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
   * OS disk partition table issues caused by a human error.
     * Follow the instructions in [Error - No such partition](#error---no-such-partition) with recommendations to recreate the /boot partition if missing or created incorrectly.
 
 #### Fixing the /boot file system corruption
 
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) step 1 has been followed and the rescue/repair VM has been created.
-2. Follow the instructions in the [Troubleshoot file system corruption errors in Azure Linux](linux-recovery-cannot-start-file-system-errors) to attempt to fix the corruption issues in the corresponding /boot partition.
+2. Follow the instructions in the [Troubleshoot file system corruption errors in Azure Linux](/azure/virtual-machines/linux-recovery-cannot-start-file-system-errors) to attempt to fix the corruption issues in the corresponding /boot partition.
 3. Proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
 
 #### Reinstalling GRUB and regenerating the GRUB configuration file
@@ -132,7 +132,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
 2. Inspect the /boot file system contents and validate what's missing.
-3. In case the GRUB configuration file is missing, follow  [Reinstalling GRUB and regenerating the GRUB configuration file](#regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
+3. In case the GRUB configuration file is missing, follow  [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
 4. Validate the file permissions inside the /boot file system are fine. You can compare the permissions using another VM with the same Linux version.
 5. In case the entire /boot partition or other important contents are missing and they are unable to be recovered, a [restore from backup](/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
 6. Once the issue has been addressed, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
@@ -178,7 +178,7 @@ If the /boot partition is missing, you can recreate it using the following instr
  > [!NOTE]
  > Replace /dev/sdX with the corresponding Operating System (OS) disk device.
 
-3. If the partition table has **dos** as the partition table type, follow the instructions in [Recreating the /boot partition in dos systems](#recreating-teh-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, follow the instructions in [Recreating the /boot partition in GPT systems](#recreating-the-boot-partition-in-gpt-systems)
+3. If the partition table has **dos** as the partition table type, follow the instructions in [Recreating the /boot partition in dos systems](#recreating-the-boot-partition-in-dos-system). If the partition table has **GPT** as the partition table type, follow the instructions in [Recreating the /boot partition in GPT systems](#recreating-the-boot-partition-in-gpt-systems)
 4. Make sure the GRUB boot loader is installed using the proper disk. You can follow the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to get it installed and configured the proper way.
 5. Proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
 
@@ -343,7 +343,7 @@ This kind of error will be triggered in case the GRUB configuration file is miss
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
 2. Make sure the /etc/default/grub configuration file is properly configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. You can refer to the below documentation for further details:
 
-    * [GRUB access in RHEL](azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel)
+    * [GRUB access in RHEL](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel)
     * [GRUB access in CentOS](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-centos)
     * [GRUB access in Ubuntu](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-ubuntu)
     * [GRUB access in SUSE SLES](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-suse-sles)
@@ -359,6 +359,6 @@ This kind of error will be triggered in case the GRUB configuration file is miss
 
 ## Next steps
 
-In case the specific boot error is not a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux) for further troubleshooting options.
+In case the specific boot error is not a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](/azure/virtual-machines/boot-error-troubleshoot-linux) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
