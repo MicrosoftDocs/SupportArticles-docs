@@ -91,22 +91,21 @@ By default, all subscriptions have serial console access enabled. You can disabl
 
 ### Using Serial Console with a Custom Boot Diagnostics Storage Account Firewall enabled
 
-We have rearchitected Serial Console to work while a custom boot diagnostics storage account firewall is enabled with the proper firewall exclusions. The following guide explains how to enable access to Serial Console by permitting Serial Console service IPs as firewall exclusions on a custom boot diagnostics storage account.
+Serial console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions.
 
 #### Navigate to the settings of the custom boot diagnostics storage account firewall you have enabled.
 
 > [!NOTE]
-> If you cannot remember which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics**, then click **Settings**. You should now be able to see the storage account associated with the VM you are trying to access with Serial Console.
+> To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics**, then click **Settings**.
 
-From the Azure Portal Home, search ‘**Storage Account**’ and select the first result. You should see a list of the storage accounts under your subscription. Select the storage account associated with the VM you are trying to access with Serial Console. This should open an overview of that storage account. Scroll down to the **Security + networking** section of its settings and select Networking, which will open the firewall settings. 
+The list of IPs that need to be added to the storage account firewall are shown below. Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules)
 
 #### Add the Serial Console service IPs as firewall exclusions based on the geography of the VM
 
-Below is a full list of the IPs required to be permitted as firewall exclusions based on the region or geography the VM is located in. This is subset of the complete list of Serial Console IP addresses under processing for future inclusion in [service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview).
+Below is a full list of the IPs required to be permitted as firewall exclusions based on the region or geography the VM is located in. This is subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview).
 
 IP Address      | Regions | Geography
 :-----------|:--------------------|:-----------------|
-20.205.69.28 | East Asia, Southeast Asia | AsiaPacific
 20.205.69.28 | East Asia, Southeast Asia | AsiaPacific
 20.195.85.180 | East Asia, Southeast Asia | AsiaPacific
 20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia
@@ -137,6 +136,8 @@ IP Address      | Regions | Geography
 20.38.141.5 | UAE Central, UAE North | UAE
 20.90.132.144 | UK South, UK West | UnitedKingdom
 20.58.68.62 | UK South, UK West | UnitedKingdom
+51.12.72.223 | Sweden Central, Sweden South | Sweden
+51.12.22.174 | Sweden Central, Sweden South | Sweden
 20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
 20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
 20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
@@ -147,12 +148,9 @@ IP Address      | Regions | Geography
 > [!IMPORTANT]
 >  The IPs that need to be permitted are specific to the region the VM is located in. For example, a virtual machine deployed in the **NorthEurope** region needs to add the following IP exclusions to the storage account firewall for the Europe geography:  52.146.139.220, 20.105.209.72. Please view the table above to find the correct IPs for your region and geography.
 
-To add the IP addresses as exclusions to the storage account firewall, copy and paste them to the **Address range** field(s) under the **Firewall** section of the storage account firewall networking settings. Once you finish adding the IP addresses as exclusions, click **Save**.
+Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/en-us/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
 
-Check the ‘**Add your client IP address**’ box to avoid errors when trying to access the Screenshot and Serial log of the VM.
-
-You can now navigate to the Serial Console section of your VM and should be able to connect to a Serial Console session. If you are still having problems connecting to Serial Console double-check and make sure you added the right IP addresses as exclusions based on the region your VM is deployed in.
-
+After these changes are successfully applied, retry the Serial Console connection to the VM. If you are still having problems connecting, verify the correct IP addresses are excluded from the storage account firewall for the region of the VM.
 
 ### Access security
 
