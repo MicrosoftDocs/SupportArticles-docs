@@ -430,7 +430,9 @@
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
     - name: Troubleshoot slow SSIS or ELT jobs query performance
-      href: performance/slow-query-performance-ssis-etl.md      
+      href: performance/slow-query-performance-ssis-etl.md
+    - name: Slower query in database application than in SSMS
+      href: performance/troubleshoot-application-slow-ssms-fast.md      
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication

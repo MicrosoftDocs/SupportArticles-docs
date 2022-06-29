@@ -21,12 +21,12 @@
       href: web-api-client-errors.md
   - name: Isolate issues
     items:
-    - name: Create a minimal repro canvas app
-      href: minimal-canvas-app-repro.md
     - name: General Power Apps debugging strategies
       href: isolate-common-issues.md
     - name: Isolate issues in canvas apps
       href: isolate-canvas-app-issues.md
+    - name: Create a minimal repro canvas app
+      href: minimal-canvas-app-repro.md
     - name: Isolate issues in model-driven apps
       href: isolate-model-app-issues.md
   - name: Ribbons and commanding
