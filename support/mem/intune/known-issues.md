@@ -2,6 +2,7 @@
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
 ms.date: 03/17/2022
+search.appverid: MET150
 ---
 # Known issues
 

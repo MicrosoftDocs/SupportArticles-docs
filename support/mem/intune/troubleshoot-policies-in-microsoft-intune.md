@@ -3,6 +3,7 @@ title: Troubleshoot policies and configuration profiles in Microsoft Intune
 description: Learn how to use the built-in Intune troubleshooting feature, and get guidance for common problems or issues with compliance policies and configuration profiles in Microsoft Intune
 ms.date: 10/08/2021
 ms.reviewer: tscott
+search.appverid: MET150
 ---
 # Troubleshooting policies and profiles in Microsoft Intune
 

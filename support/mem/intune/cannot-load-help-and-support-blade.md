@@ -2,6 +2,7 @@
 title: Cannot load the Microsoft Intune Help and support blade
 description: Provides a solution for when the Intune Help and support blade doesn't load correctly in the Microsoft Endpoint Manager admin center.
 ms.date: 11/09/2021
+search.appverid: MET150
 ---
 # You cannot load the Microsoft Intune Help and support blade
 
