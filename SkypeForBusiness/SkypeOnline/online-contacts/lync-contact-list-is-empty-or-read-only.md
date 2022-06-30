@@ -69,7 +69,7 @@ You have 30 days to reconnect the mailbox without any consequences. The user's m
 
 ### If the mailbox disconnect was intentional and you have to restore the user's contact list for Lync
 
-To restore the user's contact list to the Lync Server, you have to temporarily reconnect the user's mailbox and then run the Skype for Business OnlineRemote PowerShell cmdlet **Invoke-CsUcsRollback** to have the user's contact list migrated from his or her Exchange mailbox to the Lync server.
+To restore the user's contact list to the Lync Server, you have to temporarily reconnect the user's mailbox and then run the Skype for Business OnlineRemote PowerShell cmdlet **Invoke-CsUcsRollback** to have the user's contact list migrated from Exchange mailbox to the Lync server.
  
 ### If you want to migrate your contacts back toSkype for Business Online
 

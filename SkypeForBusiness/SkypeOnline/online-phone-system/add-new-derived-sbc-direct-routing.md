@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 122287
-ms.author: scapero
+ms.author: v-six
 ms.reviewer: scapero
 appliesto: 
   - Skype for Business Online

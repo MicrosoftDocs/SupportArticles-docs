@@ -1,6 +1,6 @@
 ---
 title: Send updates prompt not displayed
-description: This article describes a behavior change in Outlook on the web when a meeting organizer adds users to or removes users from an existing meeting request.
+description: Describes a behavior change in Outlook on the web that occurs when a meeting organizer adds or removes users in an existing meeting request.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -25,16 +25,16 @@ ms.date: 5/19/2022
 
 _Original KB number:_ &nbsp; 3197165
 
-When a meeting organizer updates a meeting by adding or removing an attendee, the following notifications are no longer displayed in Microsoft Outlook or Outlook on the web:
+When a meeting organizer updates a meeting by adding or removing attendees, the following notifications are no longer displayed in Microsoft Outlook or Outlook on the web:
 
 - Send updates only to added or deleted attendees.
 - Send updates to all attendees.
 
 :::image type="content" source="media/send-updates-prompt-not-displayed/send-update.png" alt-text="Screenshot of the Send update to Attendees prompt with two options.":::
 
-These options were removed from Outlook clients and the code logic was moved to the server. Now when the only change made to an existing meeting is an update to the attendee list, the server automatically sends a meeting update notification to the added or deleted attendees only.
+These options were removed from Outlook clients, and the code logic was moved to the server. Now, if an update to the attendee list is the only change that's made to an existing meeting, the server automatically sends a meeting update notification to only the added or deleted attendees.
 
-This change affects clients that run Outlook for Windows with the new calendar sharing improvements enabled only. The notifications will continue to be displayed in Outlook for Windows when you edit meetings in your own calendar or when the calendar sharing improvements are disabled.
+This change affects only clients that run Outlook for Windows that has the new calendar sharing improvements enabled. The notifications will continue to be displayed in Outlook for Windows when you edit meetings in your own calendar or if the calendar sharing improvements are disabled.
 
 ## More information
 

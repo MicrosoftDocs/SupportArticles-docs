@@ -1,7 +1,8 @@
 ---
 title: Issues with shared computer activation for Microsoft 365 Apps
 description: Troubleshooting steps for issues with shared computer activation for Microsoft 365 Apps.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
@@ -21,7 +22,7 @@ ms.date: 3/31/2022
 
 If you're having problems getting shared computer activation to work when you deploy Microsoft 365 Apps to shared computers in your organization, try the following to fix the problem.
 
-If you’re encountering a specific error message, or you’re using RDS, VDI, Citrix, or FSLogix, you can go directly to the appropriate section:
+If you're encountering a specific error message, or you're using RDS, VDI, Citrix, or FSLogix, go directly to the appropriate section:
 
 - <a href="#errors">Specific error messages</a>
 
@@ -216,13 +217,13 @@ This error means that you don't have an Office 365 (or Microsoft 365) plan that 
 <details>
 <summary><b>UNLICENSED PRODUCT Most features are turned off because a shared computer license isn't available.</b></summary>
 
-This error means that a licensing token wasn't obtained from the Office Licensing Service on the internet. Office is now in reduced functionality mode. The user can view and print Office documents, but can't create or edit documents.
+This error means that a licensing token wasn't obtained from the Office Licensing Service on the internet. Office is now in reduced functionality mode. The users can view and print Office documents, but can't create or edit documents.
 
 You can try these steps to fix this problem:
 
-- [Check that the user is assigned a license](/microsoft-365/admin/manage/assign-licenses-to-users) for Microsoft 365 Apps.
+- [Check that the users are assigned a license](/microsoft-365/admin/manage/assign-licenses-to-users) for Microsoft 365 Apps.
 
-- Check that the user signs in with her user account for Office 365 if the **Activate Office** dialog box appears when the user opens an Office program.
+- Check that the users sign in with their user account for Office 365 if the **Activate Office** dialog box appears when they open an Office program.
 
 - Check that there is connectivity between the shared computer and the internet.
 <br/><br/>
@@ -231,7 +232,7 @@ You can try these steps to fix this problem:
 <details>
 <summary><b>Sorry, we cannot verify the license currently installed for this product.</b></summary>
 
-This error means that Office has a problem with the user's licensing token on the shared computer. The user should make sure to sign in to Office with his user account for Office 365 so that Office can obtain a new licensing token from the Office Licensing Service on the internet.
+This error means that Office has a problem with the users' licensing token on the shared computer. The users should make sure to sign in to Office with their user account for Office 365 so that Office can obtain a new licensing token from the Office Licensing Service on the internet.
 <br/><br/>
 </details>
 

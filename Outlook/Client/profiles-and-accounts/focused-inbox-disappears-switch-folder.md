@@ -2,7 +2,7 @@
 title: Focused Inbox disappears when you switch folders in Outlook
 description: When you switch from the inbox to other folders, the Focused Inbox option disappears. Follow this article to fix this issue.
 author: helenclu
-ms.author: geob
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

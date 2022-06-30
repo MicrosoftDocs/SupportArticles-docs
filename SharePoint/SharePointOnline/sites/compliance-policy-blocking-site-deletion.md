@@ -1,69 +1,61 @@
 ---
-title: Error A compliance policy is currently blocking this site deletion when deleting a site
-description: This article describes how to resolve an issue when there's an error when trying to delete a SharePoint site.
+title: An invalid policy blocks a SharePoint site deletion
+description: Provides a fix for errors that occur when you try to delete a SharePoint or OneDrive site, or delete documents on them. 
 author: helenclu
-ms.author: prbalusu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
-ms.date: 02/03/2021
+ms.date: 6/13/2021
 audience: Admin
 ms.topic: troubleshooting
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 162476
 search.appverid: 
   - SPO160
   - MET150
 ms.assetid: 
 appliesto: 
   - SharePoint Online
+  - OneDrive for Business
+ms.reviewer: prbalusu
 ---
 
-# "A compliance policy is currently blocking this site deletion" when deleting a SharePoint site
+# Can't delete a site because of an invalid retention policy
 
 ## Symptoms
 
-When you try to delete a SharePoint site, the following message appears:
+You might experience one of the following scenarios.
 
-**Can't delete site.**
+**Scenario 1:** When you try to delete a Microsoft SharePoint site, you receive the following error message:
 
-**A compliance policy is currently blocking this site deletion.**
+> Can't delete site.  
+> A compliance policy is currently blocking this site deletion.
 
-:::image type="content" source="media/compliance-policy-blocking-site-deletion/cant-delete-site.png" alt-text="Screenshot of the error message stating that a site can't be deleted." border="false":::
+**Scenario 2:** When you try to delete a version of a document that's on a SharePoint site or on a Microsoft OneDrive site, you receive the following error message:
+
+> Versions of this item cannot be deleted because it is on hold or retention policy.
+
+**Scenario 3:** You've excluded or removed a SharePoint site or a OneDrive site from a retention policy. More than 24 hours after you make these updates, you try to delete the affected site or a version of a document on the site. However, the attempt is unsuccessful, and you receive one of the error messages that are mentioned in scenarios 1 and 2.
 
 ## Cause
 
-There are several reasons for this error to occur:
-
-- There might be a compliance policy that is currently invalid.
-- A valid policy can be present, and the SharePoint site shouldn't be deleted. In this situation, contact your administrator to determine whether you can exclude or remove this site from the policy.
+Each of these error messages is generated when a retention policy on the affected site blocks a deletion even after you exclude or remove the site from the policy. This indicates that the retention policy might be invalid.
 
 ## Resolution
 
-To remove the **Invalid retention hold**, try one of the following methods, depending on your level of permissions.
-
-### Non-administrators
-
-If you receive the **Compliance policy** error message, contact your [Microsoft 365 Administrator](/microsoft-365/admin/add-users/about-admin-roles).
-
-### Administrators
+To verify the validity of the retention policy and delete it if it's invalid, run the following test in the Microsoft 365 admin center. You must have administrator permissions to use the following steps.
 
 > [!NOTE]
-> This feature is not available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+> This test isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-If you're an administrator, and you're unable to delete the site:
-
-1. Select **Run Tests** below, which will populate the diagnostic in the Microsoft 365 Admin Center. 
+1. Select the **Run Tests: Invalid Retention Hold** button to populate the associated test in the Microsoft 365 admin center:
 
    > [!div class="nextstepaction"]
    > [Run Tests: Invalid Retention Hold](https://aka.ms/PillarInvalidRetention)
 
-2. In the Run diagnostic section, type or paste the **SharePoint site URL**, and then select **Run Tests**.
+2. In the **Run diagnostics** section, either type or copy and paste the URL of the affected SharePoint site or OneDrive site.
 
-   :::image type="content" source="media/compliance-policy-blocking-site-deletion/run-diagnostics.png" alt-text="Screenshot of the Run diagnostics window asking for SharePoint URL information.":::
+3. Select **Run Tests**.
 
-3. If the test finds an **Invalid retention policy**, and the policy is blocking the site deletion, you may choose to remove the policy.
-
-   :::image type="content" source="media/compliance-policy-blocking-site-deletion/invalid-retention-policies-on-tenant.png" alt-text="Screenshot of the Run diagnostics window asking to update settings." border="false":::
-
-## More information
-
-Still need help? Go to the [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).
+4. If the test finds an invalid retention policy that might be blocking the deletion, you can choose to remove the policy.

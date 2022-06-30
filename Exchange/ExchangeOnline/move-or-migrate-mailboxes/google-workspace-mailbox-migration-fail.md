@@ -16,27 +16,27 @@ appliesto:
   - Exchange Online
   - Microsoft 365
 search.appverid: MET150
-ms.date: 5/23/2022
+ms.date: 6/6/2022
 ---
 # Error during mailbox migration from Google Workspace to Microsoft 365
 
 ## Symptoms
 
-When you perform a mailbox migration from Google Workspace to Microsoft 365, the migration fails with the following error message:
+When you do a mailbox migration from Google Workspace to Microsoft 365, the migration fails and returns the following error message:
 
 > Error MigrationPermanentException: Special credentials are required in order to access this IMAP account. --> Imap server reported an error during LOGIN with the following alert: 'Application-specific password required: `https://support.google.com/accounts/answer/185833` (Failure).
 
-If you generate a diagnostic report about the migration, you'll see the same error message listed in it as well.
+If you generate a diagnostic report about the migration, you'll see the same error message listed in the report.
 
 ## Cause
 
 To migrate a mailbox from Google Workspace to Microsoft 365, you must set up 2-step verification and an app password for the mailbox.
 
-If the Google Workspace mailbox isn't set up with an app password, the Microsoft 365 migration service is unable to access it during the migration and displays an error.
+If the Google Workspace mailbox isn't assigned an app password, the Microsoft 365 migration service can't access it during the migration. Instead, the service displays an error message.
 
 ## Resolution
 
-To resolve this issue, set up the app password for the Google Workspace mailbox.
+To resolve this issue, set up an app password for the Google Workspace mailbox:
 
 1. Sign in to the Google Workspace mailbox.
 2. Select the mailbox account (profile), and then select **Manage your Google Account**.
@@ -53,12 +53,12 @@ To resolve this issue, set up the app password for the Google Workspace mailbox.
 
 5. Enter the password to sign in to your Google Workspace account.
 
-6. In the **Select app** drop-down list, select **Other *(Custom name)***.
+6. In the **Select app** list, select **Other *(Custom name)***.
 
-    :::image type="content" source="media/google-workspace-mailbox-migration-fail/select-app.png" alt-text="Screenshot of the App passwords page. The Other (custom name) option is highlighted in the Select app drop-down list." border="false":::
+    :::image type="content" source="media/google-workspace-mailbox-migration-fail/select-app.png" alt-text="Screenshot of the App passwords page. The Other (custom name) option is highlighted in the Select app list." border="false":::
 
 7. Enter a name, such as *Migration*, and then select **GENERATE**.
-8. Make a note of the generated app password and select **DONE**.
+8. Note the generated app password, and then select **DONE**.
 
     :::image type="content" source="media/google-workspace-mailbox-migration-fail/generate-password.png" alt-text="Screenshot of the Generated app password page with the password." border="false":::
 
@@ -66,13 +66,13 @@ To resolve this issue, set up the app password for the Google Workspace mailbox.
 
     :::image type="content" source="media/google-workspace-mailbox-migration-fail/migration-csv.png" alt-text="Screenshot of the migration CSV file. The Password column has no app password.":::
 
-10. Launch the migration wizard in the Exchange admin center.
+10. Start the migration wizard in the Exchange admin center.
 11. Locate the failed migration batch, select the affected mailbox, and then select **Resume migration**.
 
     :::image type="content" source="media/google-workspace-mailbox-migration-fail/resume-migration.png" alt-text="Screenshot of the migration batches page. The Resume migration button is highlighted." border="false":::
 
-The migration should complete successfully.
+The migration should finish successfully.
 
-:::image type="content" source="media/google-workspace-mailbox-migration-fail/migration-synced.png" alt-text="Screenshot of a successful migration example that shows the status Synced" border="false":::
+:::image type="content" source="media/google-workspace-mailbox-migration-fail/migration-synced.png" alt-text="Screenshot of a successful migration example that shows the status as synced." border="false":::
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
