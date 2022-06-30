@@ -100,7 +100,7 @@
         href: troubleshoot-vm-boot-error.md
       - name: Linux VM does not start after an LIS upgrade
         href: linux-vm-not-start-kernel-lis.md
-      - name: Linux VM UEFI boot failures
+      - name: Troubleshoot Linux VM UEFI boot failures
         href: azure-linux-vm-uefi-boot-failures.md
     - name: Windows
       href: boot-error-troubleshoot.md
@@ -210,7 +210,7 @@
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
       href: detailed-troubleshoot-ssh-connection.md
-    - name: Linux VM UEFI boot failures
+    - name: Troubleshoot Linux VM UEFI boot failures
       href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md

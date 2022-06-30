@@ -13,7 +13,7 @@ ms.collection: linux
 
 Linux partner images in Azure Marketplace are respectively tagged and configured for both BIOS generation 1 and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
 
-When you deploy generation 2 Linux virtual machines(VMs) in Azure, you may encounter UEFI boot failures. This article discusses some scenarios where UEFI boot failures occur and provides solutions.
+When you deploy generation 2 Linux virtual machines (VMs) in Azure, you may encounter UEFI boot failures. This article discusses some scenarios where UEFI boot failures occur and provides solutions.
 
 ## Symptoms
 
@@ -39,7 +39,7 @@ If the UEFI boot loader partition is missing or deleted, the generation 2 Linux 
 
 To resolve this issue, follow these steps:
 
-1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the non-functional VM attached. For more information about creating a repair VM, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the non-functional VM attached. For more information, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 2. Recreate the partition by using the following commands:
 
@@ -112,7 +112,7 @@ To resolve this issue, follow these steps:
     > [!IMPORTANT]
     >
     > * Replace `/dev/sdc` with the corresponding copy of the operating system (OS) disk device.
-    > * The partition number choice doesn't matter as long as the sector start and end points are correct. The correct sector start and end point is chosen because the OS is able to determine the missing sectors.
+    > * The partition number choice doesn't matter as long as the sector start and end points are correct. The correct sector start and end point are chosen because the OS is able to determine the missing sectors.
     > * Choose default values to ensure that the ending sector isn't occupied by any other partition within the disk.
 
     Azure Linux partner images have the following partition number, sector start points, and sector end points:
@@ -131,7 +131,6 @@ To resolve this issue, follow these steps:
     | Ubuntu 20.04 | 15 |10240 | 227327 |
     | SLES 12 | 2| 6144 | 1054719 |
     | SLES 15 | 2| 6144 | 1054719 |
-    |  |   |  |  |
 
 3. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command.
 
@@ -139,7 +138,7 @@ To resolve this issue, follow these steps:
 
 If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to boot. To resolve this issue, follow these steps:
 
-1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the non-functional VM attached. For more information about creating a repair VM, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
+1. Use the [az vm repair create](/cli/azure/vm/repair#az-vm-repair-create) command to create a repair VM. The repair VM will have a copy of the OS disk for the non-functional VM attached. For more information, see [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 2. Clean the corrupted partition by using the following commands:
 
