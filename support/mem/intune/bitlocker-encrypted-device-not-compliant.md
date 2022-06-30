@@ -5,6 +5,7 @@ ms.author: v-dsindona
 author: dsindona88
 ms.date: 11/29/2021
 ms.reviewer: saurkosh
+search.appverid: MET150
 ms.custom: sap:Device protection
 ---
 # BitLocker-encrypted Windows 10 device shows as Not compliant in Intune

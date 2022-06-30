@@ -51,8 +51,8 @@ Inactive accounts are deleted by design in Microsoft Dynamics GP during the GL y
 
   There is new functionality in the Year-End Closing window in Microsoft Dynamics GP 2013 and later versions where you can mark the checkbox for Maintain Inactive Accounts.
 
-  - With this option marked, it will enable additional options to maintain All Inactive Accounts or just those With Budget Amounts associated with them. Mark the option you prefer.
-  - If this checkbox is not marked, then ALL inactive accounts will be deleted by design that meet the criteria outlined above, whether or not they were used in a budget.
+  - With this option marked, it will enable other options to maintain All Inactive Accounts or just those With Budget Amounts associated with them. Mark the option you prefer.
+  - If this checkbox isn't marked, then ALL inactive accounts will be deleted by design that meet the criteria outlined above, whether or not they were used in a budget.
 
 ## More information
 
