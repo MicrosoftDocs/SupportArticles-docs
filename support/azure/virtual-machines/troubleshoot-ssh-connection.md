@@ -39,11 +39,11 @@ Continue reading for more detailed troubleshooting steps and explanations.
 
 ## Available methods to troubleshoot SSH connection issues
 
-You can reset credentials or SSH configuration, or troubleshoot the status of the SSH service by using one of the following methods:
+You can reset credentials, SSH configuration, or troubleshoot the status of the SSH service by using one of the following methods:
 
 * [Azure portal](#use-the-azure-portal) - great if you need to quickly reset the SSH configuration or SSH key and you don't have the Azure tools installed.
 * [Azure VM Serial Console](./serial-console-linux.md) - the VM serial console will work regardless of the SSH configuration, and will provide you with an interactive console to your VM. In fact, "can't SSH" situations are specifically what the serial console was designed to help solve. More details below.
-* [Use Run Command through Azure portal](#runcommand) - You can execute basic commands by using the Run Command functionality through the Azure portal. The output will be returned to the portal.
+* [Use Run Command through Azure portal](#runcommand) - You can run basic commands by using the Run Command functionality through the Azure portal. The output will be returned to the portal.
 * [Azure CLI](#use-the-azure-cli) - if you are already on the command line, quickly reset the SSH configuration or credentials. If you are working with a classic VM, you can use the [Azure classic CLI](#use-the-azure-classic-cli).
 * [Azure VMAccessForLinux extension](#use-the-vmaccess-extension) - create and reuse json definition files to reset the SSH configuration or user credentials.
 
@@ -81,7 +81,7 @@ The [Azure VM Serial Console](./serial-console-linux.md) provides access to a te
 
 ### Check that SSH service is running
 
-To check the service status, use the following command that's available in most current Linux distributions:
+To check the service status, use the following command, which is available in most current Linux distributions:
 
 ```console
 sudo systemctl status sshd.service
@@ -131,7 +131,7 @@ LISTEN    0         128                   [::]:22                  [::]:*       
 
 ### Check which port SSH is running on
 
-The command output above shows that the SSHD process is listening on port 22. When the SSHD process has been configured to run on another port, the port would be displayed in the output. To check if the change was made in the standard configuration file, examine the default configuration file, */etc/ssh/sshd_config* by using one of the following commands:
+The command output above shows that the SSHD process is listening on port 22. When the SSHD process is configured to run on another port, the port will be displayed in the output. To check if the change was made in the standard configuration file, examine the default configuration file, */etc/ssh/sshd_config* by using one of the following commands:
 
 ```console
 grep -i port /etc/ssh/sshd_config
@@ -153,7 +153,7 @@ Any line that begins with `#` in the output is a comment and can be safely ignor
 
 ## <a id="runcommand">Use Run Command through Azure portal</a>
 
-If you are not able to run commands through the Serial Console, for example when only SSH keys are used for authentication, the Run Command feature can be used to issue commands and view output. All commands that are run from the Serial Console previously can be run non-interactively in the Run Command section in the Azure portal. The output will be returned to the Azure portal. There is no need to use `sudo` to run commands in the Run Command context.
+If you are not able to run commands through the Serial Console, for example when only SSH keys are used for authentication, the Run Command feature can be used to issue commands and view the output. All commands that were previously run from the Serial Console can be run non-interactively in the Run Command section in the Azure portal. The output will be returned to the Azure portal. There is no need to use `sudo` to run commands in the Run Command context.
 
 ## Use the Azure CLI
 
