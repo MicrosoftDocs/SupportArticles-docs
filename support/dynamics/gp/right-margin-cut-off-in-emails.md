@@ -25,9 +25,13 @@ It occurs with our standard Word Template, and Modified Word Templates that were
 
 ## Resolution
 
+This issue (TFS #86927) is fixed in Dynamics GP 2016. For more information, see [Microsoft Dynamics GP 2016 new feature blog series schedule](https://community.dynamics.com/gp/b/dynamicsgp/posts/microsoft-dynamics-gp-2016-new-features-blog-series-schedule).
+
+## Workaround
+
 Use the following options as workarounds:
 
-Option 1:  Use the following steps to autofit the column and leave as pdf:
+Option 1: Use the following steps to autofit the column and leave as pdf
 
 1. Select all cells in the table in the body of the document in Report Writer. (that is, highlight the **body** section of the document in the Report Layout.)
 
@@ -39,10 +43,8 @@ Option 1:  Use the following steps to autofit the column and leave as pdf:
 
 5. Assign the new template to your company and set as the default.
 
-Option 2: Send the document in .docx instead.
+Option 2: Send the document in .docx instead
 
 ## More Information
 
 This issue has also been documented in the [Word Template RM Statements Formatting when Emailing as PDF](https://community.dynamics.com/gp/b/dynamicsgp/posts/word-template-rm-statements-formatting-when-emailing-as-pdf) and includes screen prints.
-
-This issue will be considered for a fix in a future service pack. (per TFS #86927)

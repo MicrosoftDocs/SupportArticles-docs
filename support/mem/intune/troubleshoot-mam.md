@@ -2,6 +2,7 @@
 title: Troubleshoot user issues for Microsoft Intune app protection policies
 description: This article gives troubleshooting guidance for error messages and other common issues when using Intune app protection policies for mobile application management (MAM).
 ms.date: 08/02/2021
+search.appverid: MET150
 ms.custom: sap:App management
 ms.topic: troubleshooting
 ms.service: microsoft-intune

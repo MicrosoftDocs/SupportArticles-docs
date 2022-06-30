@@ -5,6 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: jesantae
 ms.date: 09/08/2021
+search.appverid: MET150
 ---
 # How to reinstall the Intune Certificate Connector
 

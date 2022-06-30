@@ -5,6 +5,7 @@ ms.author: v-dsindona
 author: dsindona88
 ms.reviewer: luker
 ms.date: 12/07/2021
+search.appverid: MET150
 --- 
 # Troubleshooting BitLocker policies from the client side
 

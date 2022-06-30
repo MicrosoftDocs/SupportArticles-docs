@@ -27,8 +27,8 @@ Even though the BLANK FORM displays **on blank paper** for the form, the SQL tab
 
 To work around this issue, your options include:
 
-1.  Open the BLANK FORM option and toggle the form setting.  Select a different form and save, and then select **on blank paper** again and save.  
-2.  Or create a brand new report option with **on blank paper** as the form.
+1. Open the BLANK FORM option and toggle the form setting. Select a different form and save, and then select **on blank paper** again and save.
+2. Or create a brand new report option with **on blank paper** as the form.
 
 ## More information
 

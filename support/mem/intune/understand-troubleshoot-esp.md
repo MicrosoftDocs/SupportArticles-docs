@@ -5,6 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: ybao
 ms.date: 12/23/2021
+search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
 # Troubleshooting the Enrollment Status Page
