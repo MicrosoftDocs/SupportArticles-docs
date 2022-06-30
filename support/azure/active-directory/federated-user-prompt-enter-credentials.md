@@ -1,7 +1,7 @@
 ---
 title: A federated user is prompted unexpectedly to enter their work or school account credentials
 description: Describes a scenario in which a federated user is prompted unexpectedly to enter their work or school account credentials when they access Office 365, Azure, or Microsoft Intune. Provides resolutions.
-ms.date: 05/11/2020
+ms.date: 06/21/2022
 ms.reviewer: 
 ms.service: active-directory
 ms.subservice: authentication
@@ -27,7 +27,6 @@ This issue may occur for internal domain clients if one or more of the following
 - An internal client resolves the Active Directory Federation Services (AD FS) endpoint to the IP address of the AD FS proxy service instead of to the IP address of the AD FS federation service.
 - The security settings in Internet Explorer are not configured for single sign-on to AD FS.
 - The proxy server settings in Internet Explorer are not configured for single sign-on to AD FS.
-- The Internet Information Services (IIS) authentication settings on the AD FS server are configured incorrectly.
 - The web browser does not support integrated Windows authentication.
 - The client computer cannot connect to the on-premises Active Directory domain.
 
@@ -81,15 +80,11 @@ Manually configure the security settings for the security zone in Internet Explo
 5. Under **Logon**, select **Automatic logon with current user name and password**.
 6. select **OK** two times.
 
-## Resolution 3: Check the IIS authentication settings for the AD FS federation service and proxy service
-
-Verify that the IIS authentication settings for the AD FS federation and proxy services are configured correctly. For more information, see [A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure or Intune](/office365/troubleshoot/sign-In/federated-user-repeatedly-prompted-for-credentials)
-
-## Resolution 4: Use Internet Explorer or a third-party web browser
+## Resolution 3: Use Internet Explorer or a third-party web browser
 
 Use Internet Explorer or a third-party web browser that supports integrated Windows authentication.
 
-## Resolution 5: Verify connectivity to Active Directory
+## Resolution 4: Verify connectivity to Active Directory
 
 Log off from the client computer and then log on as an Active Directory user. If logon is successful, verify the connectivity to Active Directory by using the Nltest command-line tool. Nltest.exe is included in the [Remote Server Administration Tools for Windows 10](https://www.microsoft.com/download/details.aspx?id=45520).
 

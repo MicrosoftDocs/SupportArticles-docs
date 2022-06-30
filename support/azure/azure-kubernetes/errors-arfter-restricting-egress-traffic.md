@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot errors after restricting egress traffic
+title: Errors after restricting egress traffic
 description: Troubleshoot errors that occur after you restrict egress traffic from an Azure Kubernetes Service (AKS) cluster.
 ms.date: 5/25/2022
 author: DennisLee-DennisLee
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors that occur after I restrict egress traffic so that I can access my Azure Kubernetes Service (AKS) cluster successfully.
 ---
-# Troubleshoot issues after restricting egress traffic in AKS
+# Errors after restricting egress traffic in AKS
 
 This article discusses how to troubleshoot issues that occur after you restrict egress traffic for cluster nodes in Microsoft Azure Kubernetes Service (AKS).
 

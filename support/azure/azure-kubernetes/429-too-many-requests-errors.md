@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot 429 Too Many Requests errors
+title: 429 Too Many Requests errors
 description: Troubleshoot why you receive 429 Too Many Requests errors on your Kubernetes clusters.
 ms.date: 5/25/2022
 author: DennisLee-DennisLee
@@ -9,7 +9,7 @@ ms.service: container-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the 429 Too Many Requests errors that I'm receiving so that I can successfully use my Kubernetes cluster configured without exceeding the assigned quota for my Azure subscription.
 ---
-# Troubleshoot 429 Too Many Requests errors
+# 429 Too Many Requests errors
 
 This article discusses how to troubleshoot failures that are caused by "429 Too Many Requests" errors on your Microsoft Azure Kubernetes Service (AKS) clusters (or clusters that use another Kubernetes implementation on Azure).
 

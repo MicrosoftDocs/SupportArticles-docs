@@ -3,6 +3,7 @@ title: App installation error codes for Microsoft Intune
 description: Use the app installation error codes to help you troubleshoot app installation issues with Intune.
 ms.date: 12/24/2020
 ms.reviewer: mghadial
+search.appverid: MET150
 ---
 # Intune app installation error reference
 

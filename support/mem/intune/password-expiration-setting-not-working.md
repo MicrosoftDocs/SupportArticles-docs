@@ -2,6 +2,7 @@
 title: Password expiration setting for devices in Intune doesn't work
 description: Describes an issue where the password expiration device restriction setting doesn't function as expected on devices that are enrolled in Microsoft Intune.
 ms.date: 10/07/2021
+search.appverid: MET150
 ms.custom: sap:Device configuration
 ---
 # Device password expiration setting doesn't work as expected
