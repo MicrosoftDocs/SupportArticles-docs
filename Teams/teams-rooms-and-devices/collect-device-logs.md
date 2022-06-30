@@ -30,8 +30,6 @@ If you experience issues when you try to use Android devices that run Microsoft 
 
    :::image type="content" source="media/collect-device-logs/history.png" alt-text="Screenshot of the History menu. The Download link is highlighted.":::
 
-4. Extract the downloaded folder and look for a file name that begins with "Skylib". This file is the media log that contains diagnostic data.
-
-   :::image type="content" source="media/collect-device-logs/skylib-file.png" alt-text="Screenshot of the extracted files. The file that has a name that begins as Skylib is highlighted.":::
+4. Zip the log files and share them with the Support team when you open a case. If you have an open Support case already, upload them to the file location your Support engineer has provided you.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
