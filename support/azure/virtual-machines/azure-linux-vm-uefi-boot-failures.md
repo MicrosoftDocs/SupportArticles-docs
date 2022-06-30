@@ -200,6 +200,6 @@ If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to 
 
 ## Scenario 3: Entire boot partition contents are deleted
 
-If the entire boot partition or other important contents are missing and can't be recovered, restore the VM from a backup will be the only option. For more information, see [How to restore Azure VM data in Azure portal]((/azure/backup/backup-azure-arm-restore-vms) ).
+If the entire boot partition or other important contents are missing and can't be recovered, restore the VM from a backup will be the only option. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
