@@ -1,6 +1,6 @@
 ---
 title: RopFastTransferSourceCopyTo operation fails on messages
-description: The RopFastTransferSourceCopyTo operation fails on the messages with a large HTML message body because input document is too complex.
+description: The RopFastTransferSourceCopyTo operation fails on messages that have a large HTML message body because the input document is too complex.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -22,16 +22,16 @@ ms.date: 6/23/2022
 
 ## Symptoms
 
-When a MAPI email client sends a [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) request to a Microsoft Exchange server, the operation might fail on messages that have a large section of HTML content such as a complex table, embedded in the message body. For example, if you're using Microsoft Outlook in online mode to copy a message that has an HTML table that includes a large number of elements, to a PST file, the copy operation might not be executed.
+When a MAPI email client sends a [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) request to a server that's running Microsoft Exchange Server, the operation fails on messages that have a large section of HTML content, such as a complex table, embedded in the message body. For example, if you're using Microsoft Outlook in online mode to copy a message that has an HTML table that includes many elements to a PST file, the copy operation is not completed.
 
-When you check the diagnostic context returned by the Exchange server for the failed operation, it lists the following reason for the failure:
+When you check the diagnostic context that's returned by the server for the failed operation, the diagnostic lists the following reason for the failure:
 
 > Microsoft.Exchange.Data.TextConverters.TextConvertersException: Input document is too complex.
 
 ## Cause
 
-This behavior is by design. When the `RopFastTransferSourceCopyTo` operation is called on the Exchange server, the server performs content conversion on the message body. If the body is a large and complex block of HTML, the Exchange server doesn't perform the conversion. This is because there are limits to the complexity of the conversion that the server will attempt to ensure that its performance isn't impacted. In this scenario, the [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) operation will fail.
+This behavior is by design. When the `RopFastTransferSourceCopyTo` operation is called by Exchange Server, the server runs a content conversion on the message body. But if the body is a large and complex block of HTML, the server skips the conversion. This is done because the complexity of conversion that the server will try to do is limited in order to make sure that the process is not affected. In this scenario, the [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) operation fails.
 
 ## Workaround
 
-Save the large HTML content to a file and attach the file as an attachment to the message instead of including it in the message body. Attachments don't need to be converted, so the `RopFastTransferSourceCopyTo` operation will succeed.
+Save the large HTML content to a file, and attach the file to the message instead of including it in the message body. Attachments don't have to be converted. If a complex conversion attempt is avoided, the `RopFastTransferSourceCopyTo` operation should succeed.
