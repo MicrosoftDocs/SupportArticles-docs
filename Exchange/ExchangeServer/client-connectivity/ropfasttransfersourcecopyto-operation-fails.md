@@ -22,7 +22,7 @@ ms.date: 6/23/2022
 
 ## Symptoms
 
-When a MAPI email client sends a [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) request to a server that's running Microsoft Exchange Server, the operation fails on messages that have a large section of HTML content, such as a complex table, embedded in the message body. For example, if you're using Microsoft Outlook in online mode to copy a message that has an HTML table that includes many elements to a PST file, the copy operation is not completed.
+When a MAPI email client sends a [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) request to a server that's running Microsoft Exchange Server, the operation fails on messages that have a large section of HTML content, such as a complex table, embedded in the message body. For example, if you're using Microsoft Outlook in online mode to copy a message that has an HTML table that includes many elements to a PST file, the copy operation isn't completed.
 
 When you check the diagnostic context that's returned by the server for the failed operation, the diagnostic lists the following reason for the failure:
 
@@ -30,7 +30,7 @@ When you check the diagnostic context that's returned by the server for the fail
 
 ## Cause
 
-This behavior is by design. When the `RopFastTransferSourceCopyTo` operation is called by Exchange Server, the server runs a content conversion on the message body. But if the body is a large and complex block of HTML, the server skips the conversion. This is done because the complexity of conversion that the server will try to do is limited in order to make sure that the process is not affected. In this scenario, the [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) operation fails.
+This behavior is by design. When the `RopFastTransferSourceCopyTo` operation is called by Exchange Server, the server runs a content conversion on the message body. But if the body is a large and complex block of HTML, the server skips the conversion to avoid errors. The server is limited in the complexity of conversion that it will try to run. In this scenario, the [RopFastTransferSourceCopyTo](/openspecs/exchange_server_protocols/ms-oxcfxics/0e419747-0420-4780-9682-3ea3d4081349) operation fails.
 
 ## Workaround
 
