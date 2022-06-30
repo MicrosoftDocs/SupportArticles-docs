@@ -1090,7 +1090,7 @@
       - name: Can't save an intercompany transaction
         href: error-save-intercompany-transaction.md
       - name: Can't send emails such as PM EFT remittances
-        href: xsend-emails-takes-long-timexx.md
+        href: send-emails-takes-long-time.md
       - name: Can't unapply a payment when you transfer payment to history tables
         href: cannot-unapply-payment-when-you-transfer-payment-to-history-tables.md
       - name: Can't reprint Payables Year-End Closing Report after year-end close
