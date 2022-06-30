@@ -343,11 +343,11 @@ This kind of error will be triggered in case the GRUB configuration file is miss
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created. Also get all the required file systems mounted, including / and /boot. Then do chroot.
 2. Make sure the /etc/default/grub configuration file is properly configured. The [endorsed Azure Linux images](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. For more information, see the following documents:
 
-    * [GRUB access in RHEL](serial-console-grub-single-user-mode#grub-access-in-rhel)
-    * [GRUB access in CentOS](serial-console-grub-single-user-mode#grub-access-in-centos)
-    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode#grub-access-in-ubuntu)
-    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode#grub-access-in-suse-sles)
-    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode#grub-access-in-oracle-linux)
+    * [GRUB access in RHEL](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel)
+    * [GRUB access in CentOS](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-centos)
+    * [GRUB access in Ubuntu](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-ubuntu)
+    * [GRUB access in SUSE SLES](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-suse-sles)
+    * [GRUB access in Oracle Linux](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-oracle-linux)
 
 3. Reinstall GRUB and regenerate the corresponding grub configuration file following the instructions in [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file).
 
@@ -359,6 +359,6 @@ This kind of error will be triggered in case the GRUB configuration file is miss
 
 ## Next steps
 
-In case the specific boot error isn't a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux) for further troubleshooting options.
+In case the specific boot error isn't a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](/troubleshoot/azure/virtual-machines/boot-error-troubleshoot-linux) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
