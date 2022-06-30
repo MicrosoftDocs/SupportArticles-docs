@@ -2,6 +2,7 @@
 title: Users can't log on to Windows 10 computers with multi-app kiosk profile assigned
 description: Explains why a user can't log on to an Azure AD joined Windows 10 computer if a multi-app kiosk profile is assigned.
 ms.date: 04/23/2021
+search.appverid: MET150
 ms.custom: sap:Configure device restrictions
 ms.reviewer: joelste, intunecic, mobazzar
 ---

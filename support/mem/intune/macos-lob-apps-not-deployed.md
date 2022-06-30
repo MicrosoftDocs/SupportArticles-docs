@@ -2,6 +2,7 @@
 title: macOS LOB apps aren't deployed in Intune
 description: Describes an issue in which macOS line-of-business (LOB) apps aren't installed on targeted devices and no error messages are shown in Intune.
 ms.date: 10/19/2021
+search.appverid: MET150
 ms.custom: sap:Manage Apps
 ---
 # macOS LOB apps aren't deployed in Microsoft Intune

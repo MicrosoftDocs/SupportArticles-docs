@@ -2,6 +2,7 @@
 title: Attributes list synced from AD DS to Microsoft Intune
 description: Describes a table that lists the attributes that are synced from the on-premises Active Directory Domain Services (AD DS) to Intune.
 ms.date: 12/20/2021
+search.appverid: MET150
 ms.custom: sap:General guidance or advisory
 ---
 # List of attributes that are synced from AD DS to Intune
