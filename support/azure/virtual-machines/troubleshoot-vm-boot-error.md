@@ -124,6 +124,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
   > [!NOTE]
   > Replace /dev/sdX with the corresponding Operating System (OS) disk device.
+  
 3. Proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
 
 ### Error - Error 15: File not found
@@ -314,7 +315,6 @@ The new table will be used at the next reboot or after you
 run partprobe(8) or kpartx(8)
 The operation has completed successfully.
 ```
-<!--Validate /boot partition mapping in different operating systems and add a mapping table here with partition number and start/end sectors-->
 2. Validate if the /boot file system is now detected by the system using the following command. You should be able to see an entry for /dev/sdX1 (the missing /boot partition)
 
 ```bash
@@ -328,7 +328,6 @@ The operation has completed successfully.
 
 3. In case the /boot file system isn't visible after recreating the partition, it means the /boot data is no longer there. You'll need to recreate the /boot file system (using the same UUID than in /etc/fstab /boot entry) and [restore its contents from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms)
 
-<!-- add here the command to recreate the /boot FS on top of the newly created partition-->
  > [!NOTE]
  > Replace /dev/sdX with the corresponding Operating System (OS) disk device.
 
