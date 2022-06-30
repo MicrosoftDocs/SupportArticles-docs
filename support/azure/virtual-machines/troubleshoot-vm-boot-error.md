@@ -23,7 +23,7 @@ During the boot process, the boot loader will attempt to locate the Linux kernel
 
 ## How to identify a GRUB rescue issue?
 
-Use the Azure portal to [view a screenshot](https://docs.microsoft.com/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view) of your VM using the boot diagnostics blade. This will help to diagnose the issue and determine if a similar boot error is the cause.
+Use the Azure portal to [view a screenshot](https://docs.microsoft.com/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view) of your VM using the boot diagnostics blade. This screenshot will help to diagnose the issue and determine if a similar boot error is the cause.
 
 A GRUB rescue issue looks similar to the output below:
 
@@ -74,7 +74,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
 #### Reinstalling GRUB and regenerating the GRUB configuration file
 
-1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
+1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created. Also get all the required file systems mounted, including / and /boot. Then do chroot.
 2. Reinstall GRUB and regenerate the corresponding GRUB configuration file:
 
     * **RHEL/CentOS/Oracle 7.x/8.x Linux VMs without UEFI (BIOS based - Gen1)**
@@ -130,18 +130,18 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
 ![grub error 15 file not found](./media/troubleshoot-vm-boot-error/grub-error15-file-not-found.png)
 
-1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
+1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created. Also get all the required file systems mounted, including / and /boot. Then do chroot.
 2. Inspect the /boot file system contents and validate what's missing.
 3. In case the GRUB configuration file is missing, follow  [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
 4. Validate the file permissions inside the /boot file system are fine. You can compare the permissions using another VM with the same Linux version.
 5. In case the entire /boot partition or other important contents are missing and they are unable to be recovered, a [restore from backup](/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
-6. Once the issue has been addressed, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
+6. Once the issue has been addressed, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery), to swap the OS disk.
 
 ### Error - error: file '/boot/grub2/i386-pc/normal.mod' not found
 
 ![grub error normal.mod not found](./media/troubleshoot-vm-boot-error/grub-normal-file-not-found.png)
 
-1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
+1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created. Also get all the required file systems mounted, including / and /boot. Then do chroot.
 2. In case you are unable to mount the /boot file system due to a corruption error, follow [Fixing the /boot file system corruption](#fixing-the-boot-file-system-corruption).
 3. Once you are inside chroot, validate the contents inside /boot/grub2/i386-pc directory, if the contents are missing, then copy the contents from /usr/lib/grub/i386-pc
 
@@ -156,7 +156,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 
 ![grub error no such partition](./media/troubleshoot-vm-boot-error/grub-no-such-partition.png)
 
-This scenario is applicable to RHEL based virtual machines (Red Hat, Oracle Linux, CentOS) where it has been manually identified the /boot partition was deleted by mistake. It is possible it was also attempted to be recreated with the wrong start and end sectors.
+This scenario is applicable to RHEL based virtual machines (Red Hat, Oracle Linux, CentOS) where it has been manually identified the /boot partition was deleted by mistake. It is possible the partition was recreated with the wrong start and end sectors.
 
 If the /boot partition is missing, you can recreate it using the following instructions:
 
@@ -184,7 +184,7 @@ If the /boot partition is missing, you can recreate it using the following instr
 
 #### Recreating the /boot partition in dos systems
 
-1. Recreate the /boot partition using the following command. Use the default values in **First** and **Last** sectors, as well as in **partition type** (83). Make sure the boot partition table is marked as bootable using the **a** option in **fdisk** as shown in the output below:
+1. Recreate the /boot partition using the following command. Use the default values in **First** and **Last** sectors, and in **partition type** (83). Make sure the boot partition table is marked as bootable using the **a** option in **fdisk** as shown in the output below:
 
 ```bash
 # fdisk /dev/sdX
@@ -259,7 +259,7 @@ Calling ioctl() to re-read partition table.
 
 #### Recreating the /boot partition in GPT systems
 
-1. Recreate the /boot partition using the following command. Use the default values in **First** and **Last** sectors, as well as in **partition type** (8300), as shown in the output below:
+1. Recreate the /boot partition using the following command. Use the default values in **First** and **Last** sectors, and in **partition type** (8300), as shown in the output below:
 
 ```bash
 # gdisk /dev/sdX
@@ -340,7 +340,7 @@ The operation has completed successfully.
 
 This kind of error will be triggered in case the GRUB configuration file is missing, in case the wrong GRUB configuration is in place or if the /boot partition or its contents are missing.
 
-1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created, all the required file systems have been mounted (including / and /boot) and do chroot.
+1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) point 1 has been followed and the rescue/repair VM has been created. Also get all the required file systems mounted, including / and /boot. Then do chroot.
 2. Make sure the /etc/default/grub configuration file is properly configured. The [endorsed Azure Linux images](https://docs.microsoft.com/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. You can refer to the below documentation for further details:
 
     * [GRUB access in RHEL](serial-console-grub-single-user-mode#grub-access-in-rhel)
@@ -355,7 +355,7 @@ This kind of error will be triggered in case the GRUB configuration file is miss
     > If the missing file is `/boot/grub/menu.lst`, this error is for older OS versions (**RHEL 6.x**, **Centos 6.x** and **Ubuntu 14.04**) so the commands will differ, as GRUB version 1 is used in those systems instead. GRUB version 1 is not covered in this document.
 
 4. In case the entire /boot partition is missing, follow the instructions in [Error - No such partition](#error---no-such-partition).
-5. Once the issue has been resolved, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
+5. Once the issue has been resolved, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery), to swap the OS disk.
 
 ## Next steps
 
