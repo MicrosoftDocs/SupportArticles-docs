@@ -1615,6 +1615,8 @@
         href: error-during-canadian-payroll-employee-import.md
       - name: Error message when you print the FUTA or SUTA report
         href: could-not-find-stored-procedure.md
+      - name: Error packing batch entry file -1
+        href: packing-batch-entry-file-1-error.md
       - name: Error when you save a future effective record
         href: fail-to-save-future-effective-record.md
       - name: Errors when selecting a batch in Build Payroll Checks
