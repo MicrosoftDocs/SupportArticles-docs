@@ -69,7 +69,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 #### Fixing the /boot file system corruption
 
 1. Make sure the [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) step 1 has been followed and the rescue/repair VM has been created.
-2. Follow the instructions in the [Troubleshoot file system corruption errors in Azure Linux](/azure/virtual-machines/linux-recovery-cannot-start-file-system-errors) to attempt to fix the corruption issues in the corresponding /boot partition.
+2. Follow the instructions in the [Troubleshoot file system corruption errors in Azure Linux](/troubleshoot/azure/virtual-machines/linux-recovery-cannot-start-file-system-errors) to attempt to fix the corruption issues in the corresponding /boot partition.
 3. Proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery) to swap the OS disk.
 
 #### Reinstalling GRUB and regenerating the GRUB configuration file
@@ -134,7 +134,7 @@ To be able to troubleshoot and fix this error, a rescue/repair VM will be requir
 2. Inspect the /boot file system contents and validate what's missing.
 3. In case the GRUB configuration file is missing, follow  [Reinstalling GRUB and regenerating the GRUB configuration file](#reinstalling-grub-and-regenerating-the-grub-configuration-file) to regenerate the GRUB configuration file with the proper settings and values.
 4. Validate the file permissions inside the /boot file system are fine. You can compare the permissions using another VM with the same Linux version.
-5. In case the entire /boot partition or other important contents are missing and they're unable to be recovered, a [restore from backup](/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
+5. In case the entire /boot partition or other important contents are missing and they're unable to be recovered, a [restore from backup](https://docs.microsoft.com/azure/backup/backup-azure-arm-restore-vms) will be the recommended option left.
 6. Once the issue has been addressed, proceed with step 3 from section [Offline troubleshooting and recovery](#offline-troubleshooting-and-recovery), to swap the OS disk.
 
 ### Error - error: file '/boot/grub2/i386-pc/normal.mod' not found
