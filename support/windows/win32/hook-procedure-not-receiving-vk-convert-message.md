@@ -18,14 +18,11 @@ _Applies to:_ &nbsp; Windows 11, Windows 10 version 20H2, Windows 10 version 21H
 
 ## Symptoms
 
-Keyboard hooks do not receive `WM_KEYDOWN` messages for the `VK_CONVERT` (0x001C) virtual key. This issue can cause unexpected behavior in the applications that call `SetWindowsHookEx`(`WH_KEYBOARD`) to set a keyboard hook which monitors the keyboard input.
+Keyboard hooks do not receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key. This issue can cause unexpected behavior in the applications that call `SetWindowsHookEx`(`WH_KEYBOARD`) to set a keyboard hook which monitors the keyboard input.
 
 ## Cause
 
 The Text Services Framework (TSF) assigns another action to the `WM_KEYDOWN` message for the `VK_CONVERT` virtual key and doesn't call the keyboard hook in this scenario.
-
-> [!NOTE]
-> Windows 10 version 2004 introduced the new version of TSF.
 
 ## Workaround
 
