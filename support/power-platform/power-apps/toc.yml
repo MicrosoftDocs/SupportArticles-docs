@@ -9,6 +9,10 @@
       href: troubleshooting-startup-issues.md
     - name: Troubleshoot Power Query
       href: troubleshoot-power-query-issues.md
+  - name: Canvas apps
+    items:
+    - name: Filter expression returns extra blank records in results 
+      href: filter-blank-records.md
   - name: Connections
     items:
     - name: Best practices when updating a flow
