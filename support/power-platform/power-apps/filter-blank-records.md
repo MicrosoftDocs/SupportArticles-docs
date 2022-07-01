@@ -22,11 +22,11 @@ Filter results sometimes have extra, unexpected, blank records in the result.
 
 ## Cause
 
-Client-side filtering can result in blank records in the result when the **Formula-level error management** app setting is turned on.  When a filter expression results in an unhandled error, blank records may be inserted in the result.
+Client-side filtering can result in blank records in the result when the **Formula-level error management** app setting is turned on. When a filter expression results in an unhandled error, blank records may be inserted in the result.
 
 ## Resolution
 
-Use a formula pattern like the following:
+Use a formula pattern as follows:
 
 ```powerapps-dot
 Filter(datasource, IfError(<query predicate>, false))
