@@ -15,9 +15,9 @@ ms.author: genli
 
 ---
 
-# Chroot environment in a Linux Rescue VM
+# Chroot environment in a Linux rescue VM
 
-This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
+This article describes how to troubleshoot the chroot environment in a rescue virtual machine (VM) in Linux. 
 
 ## Ubuntu 16.x && Ubuntu 18.x
 
