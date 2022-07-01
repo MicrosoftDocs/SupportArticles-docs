@@ -30,6 +30,6 @@ If you experience issues when you try to use Android devices that run Microsoft 
 
    :::image type="content" source="media/collect-device-logs/history.png" alt-text="Screenshot of the History menu. The Download link is highlighted.":::
 
-4. Zip the log files and share them with the Support team when you open a case. If you have an open Support case already, upload them to the file location your Support engineer has provided you.
+4. Compress the log files and share them when you create a support request with Microsoft Support. If you already have an open support request, upload the files to the location provided by the support engineer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
