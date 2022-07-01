@@ -49,6 +49,8 @@
       href: unexpected-reboots-attached-vhds.md
     - name: Understand a system reboot
       href: understand-vm-reboot.md
+    - name: Troubleshoot Windows stop error (directory service initialization failure)
+      href: troubleshoot-directory-service-initialization-failure.md
 
   - name: Planned maintenance
     items:
@@ -424,6 +426,8 @@
           href: repair-linux-vm-using-ALAR.md
         - name: Unlock the encrypted disk for offline repair
           href: unlock-encrypted-linux-disk-offline-repair.md
+        - name: Troubleshoot chroot environment for Linux rescue VM
+          href: chroot-environment-linux.md
       - name: Repair VM with Nested Hyper-V
         href: troubleshoot-vm-by-use-nested-virtualization.md
 
