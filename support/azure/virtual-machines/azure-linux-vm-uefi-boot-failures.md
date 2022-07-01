@@ -197,8 +197,8 @@ If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to 
 
 3. Once the partition is cleaned, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command.
 
-## Scenario 3: Entire boot partition contents are deleted
+## Scenario 3: Entire /boot partition contents are deleted
 
-If the entire boot partition or other important contents are missing and can't be recovered, restore the VM from a backup will be the only option. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+If the entire /boot partition or other important contents are missing and can't be recovered, restore the VM from a backup will be the only option. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
