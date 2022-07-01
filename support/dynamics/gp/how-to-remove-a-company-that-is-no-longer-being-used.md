@@ -15,14 +15,14 @@ _Original KB number:_ &nbsp; 849249
 To remove a company that is no longer being used in Microsoft Dynamics GP, follow these steps:
 
 1. Follow the appropriate step:
-   - If you are using Microsoft Dynamics GP 10.0 or later, select **Tools** on the **Microsoft Dynamics GP** menu, point to **Utilities**, point to **System**, and then select **Delete Company**.
-   - If you are using Microsoft Dynamics GP 9.0, point to **Utilities** on the **Tools** menu, point to **System**, and then select **Delete Company**.
-   - If you are using Microsoft Business Solutions - Great Plains 8.0, select **Setup** on the **Tools** menu, point to **System**, and then select **Company**.
-   - If you are using a version that is earlier than Microsoft Business Solutions - Great Plains 8.0, select **System** on the **Setup** menu, and then select **Company**.
+   - If you're using Microsoft Dynamics GP 10.0 or later, select **Tools** on the **Microsoft Dynamics GP** menu, point to **Utilities**, point to **System**, and then select **Delete Company**.
+   - If you're using Microsoft Dynamics GP 9.0, point to **Utilities** on the **Tools** menu, point to **System**, and then select **Delete Company**.
+   - If you're using Microsoft Business Solutions - Great Plains 8.0, select **Setup** on the **Tools** menu, point to **System**, and then select **Company**.
+   - If you're using a version that is earlier than Microsoft Business Solutions - Great Plains 8.0, select **System** on the **Setup** menu, and then select **Company**.
 
 2. Select the **Company Name** lookup.
 3. Select the company that you want to delete, select **Select**, and then select **Delete**.
-4. Verify that the company database was removed. To do this, follow the steps for the database that you are using with Microsoft Dynamics GP.
+4. Verify that the company database was removed. To do this, follow the steps for the database that you're using with Microsoft Dynamics GP.
 
     - Microsoft SQL Server 2005/Microsoft SQL Server 2008/Microsoft SQL Server 2008 R2/Microsoft SQL Server 2012
 
@@ -54,9 +54,9 @@ To remove a company that is no longer being used in Microsoft Dynamics GP, follo
          > [!NOTE]
          > Replace **XXX** with the database name of the company that you want to delete.
 
-5. If the database has been manually removed or removed by the DROP script mentioned in step 4-c, then there may be some references from the deleted database still within the DYNAMICS/system database. These references need to be removed. To do this, download the [ClearCompanies.sql script](https://mbs2.microsoft.com/fileexchange/?fileID=e1140f50-afc0-4a4d-83ef-e9826aff6d64) and then follow the steps:
+5. If the database has been manually removed or removed by the DROP script mentioned in step c of step 4, then there may be some references from the deleted database still within the DYNAMICS/system database. These references need to be removed. To do this, download the [ClearCompanies.sql script](https://mbs2.microsoft.com/fileexchange/downloadfile.aspx?fileid=e1140f50-afc0-4a4d-83ef-e9826aff6d64) and then follow the steps:
 
-   - Microsoft SQL Server 2005/Microsoft SQL Server 2008/Microsoft SQL Server 2008 R2/Microsoft SQL Server 2012
+   - Microsoft SQL Server 2005/Microsoft SQL Server 2008/Microsoft SQL Server 2008 R2/Microsoft SQL Server 2012/Microsoft SQL Server 2014/Microsoft SQL Server 2016/Microsoft SQL Server 2019
 
       1. Start SQL Server Management Studio.
       2. Select **New Query** from the menu bar to start a new query window.
