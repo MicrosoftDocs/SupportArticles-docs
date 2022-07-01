@@ -30,7 +30,7 @@ Updating the organization name in the Microsoft 365 admin center doesn't update 
 
 ## Resolution  
 
-To resolve this issue, unlink OneDrive. Before you do it, make sure that OneDrive is not syncing files. If OneDrive is syncing files, wait for the sync to finish or [pause the sync](https://support.microsoft.com/office/how-to-pause-and-resume-sync-in-onedrive-2152bfa4-a2a5-4d3a-ace8-92912fb4421e).  
+To resolve this issue, unlink OneDrive. Before you do it, make sure that OneDrive isn't syncing files. If OneDrive is syncing files, wait for the sync to finish or [pause the sync](https://support.microsoft.com/office/how-to-pause-and-resume-sync-in-onedrive-2152bfa4-a2a5-4d3a-ace8-92912fb4421e).  
 
 **Note** You won't lose files or data by disabling, uninstalling or unlinking OneDrive on your computer. You can always access your files by signing in to your OneDrive account online.  
 
@@ -48,7 +48,7 @@ To resolve this issue, unlink OneDrive. Before you do it, make sure that OneDriv
 
 4. When the **Set up OneDrive** window opens, close it instead of selecting **Sign in**.
 
-    :::image type="content" source="media/onedrive-local-folder-name-not-updated/set-up-onedrive-window.png" alt-text="Screenshot of the Set up OneDrive window which you need to close directly.":::
+    :::image type="content" source="media/onedrive-local-folder-name-not-updated/set-up-onedrive-window.png" alt-text="Screenshot of the Set up OneDrive window that you need to close directly.":::
 
 5. Go to your OneDrive site and select **Sync**.
 
