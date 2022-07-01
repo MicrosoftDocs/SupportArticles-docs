@@ -62,7 +62,7 @@ Issues with SharePoint choice columns have been fixed and deployed by the end of
 
 ## Resolution
 
-Review the Environment variables [documentation](https://docs.microsoft.com/power-apps/maker/data-platform/environmentvariables). Use [Monitor](https://docs.microsoft.com/power-apps/maker/monitor-overview) to investigate environment variable issues to verify if the data calls are connecting to the correct dataset or list. Lists created using Microsoft Lists are internally identified by a unique ID/GUID. You can find this value in using a trace inside Monitor. Use this value to trace what lists are being used, and where.
+Review the Environment variables [documentation](/power-apps/maker/data-platform/environmentvariables). Use [Monitor](/power-apps/maker/monitor-overview) to investigate environment variable issues to verify if the data calls are connecting to the correct dataset or list. Lists created using Microsoft Lists are internally identified by a unique ID/GUID. You can find this value in using a trace inside Monitor. Use this value to trace what lists are being used, and where.
 
 ### To avoid locally cached values that may be out of date
 
