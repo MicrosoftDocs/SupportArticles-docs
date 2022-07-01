@@ -15,6 +15,12 @@
       href: best-practices-when-updating-a-flow.md
     - name: Refresh URL isn't displayed for custom connectors
       href: custom-connectors-not-show-refresh-url.md
+  - name: Solutions
+    items:
+    - name: Required fields are missing in Dataverse records
+      href: dataverse-records-missing-required-fields.md
+    - name: Data source references not updated after solution import
+      href: dataverse-environment-variables.md
   - name: Dataverse Web API
     items:
     - name: Web API client errors
@@ -59,8 +65,6 @@
       href: custom-pages-sdk-script-not-load.md
     - name: Lookup doesn't filter records for particular entity
       href: lookup-does-not-filter-entity-records.md
-    - name: Required fields are missing in Dataverse records
-      href: dataverse-records-missing-required-fields.md
   - name: Support resources
     items:
     - name: Power Apps support
