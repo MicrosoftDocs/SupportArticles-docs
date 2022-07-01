@@ -3,6 +3,8 @@ title: Troubleshoot delivery of Simple Certificate Enrollment Protocol (SCEP) ce
 description: Troubleshoot the delivery of a certificate to a device from the CA when using SCEP certificate profiles with Intune to deploy certificates.
 ms.date: 09/09/2021
 ms.reviewer: lacranda
+search.appverid: MET150
+
 ---
 # Troubleshooting the delivery of certificates provisioned by SCEP to devices in Microsoft Intune
 

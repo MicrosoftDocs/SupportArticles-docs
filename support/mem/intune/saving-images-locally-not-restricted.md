@@ -2,6 +2,7 @@
 title: Can't prevent saving images locally using Intune app protection policy
 description: Describes an issue in which images in Outlook for iOS can be saved to local storage even if you use app protection policy to prevent such behavior.
 ms.date: 10/15/2021
+search.appverid: MET150
 ms.custom: sap:App management
 ms.reviewer: joelste, andcerat
 ---

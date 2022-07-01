@@ -5,6 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: horemaw
 ms.date: 10/06/2021
+search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
 # Troubleshooting Azure AD device registration and Windows Autopilot

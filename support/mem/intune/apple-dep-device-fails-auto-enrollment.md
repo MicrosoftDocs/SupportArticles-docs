@@ -2,6 +2,7 @@
 title: Apple ADE devices don't start auto-enrollment in Intune
 description: Describes an issue in which Microsoft Intune enrollment doesn't automatically start on Apple Automated Device Enrollment (ADE) devices when you turn on the devices.
 ms.date: 12/23/2021
+search.appverid: MET150
 ms.custom: sap:iOS/iPadOS enrollment
 ---
 # Intune enrollment process doesn't start on Apple ADE devices
