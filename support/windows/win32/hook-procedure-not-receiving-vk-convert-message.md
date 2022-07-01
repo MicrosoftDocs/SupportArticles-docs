@@ -10,7 +10,7 @@ ms.reviewer: junyoshi
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 
-# Hook procedure doesn’t receive the `VK_CONVERT` message
+# Hook procedure doesn’t receive the VK_CONVERT message
 
 This article helps you resolve the problem when an application that uses a keyboard hook doesn't receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key.
 
