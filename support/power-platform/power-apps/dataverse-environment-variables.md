@@ -37,7 +37,7 @@ Working example:
 
 In this example, the environment variables work correctly. `SPURL1` is intended to be paired with List 1 and `SPURL2` is intended to be paired with List 2. Data source environment variables `ABC` and `DEF` are different.
 
-| Data source</br>Environment variable | Source Value | Target Value |
+| Data source</br>Environment variable | Source value | Target value |
 |-------------------------|-------------------------|-------------------------|
 | SPURL1 | ABC | XYZ |
 | SPURL2 | DEF | LMN |
@@ -48,7 +48,7 @@ Non-working example:
 
 When data source environment variables for `SPURL1` and `SPURL2` (`GHI` and `GHI`) are the same, they collapse into the single `OPQ` value on import. Even though the intended values were 'OPQ'and 'RST'.
 
-| Data source</br>Environment variable | Source Value | Intended Target Value | Actual Target Value |
+| Data source</br>Environment variable | Source value | Intended target value | Actual target value |
 |-------------------------|-------------------------|-------------------------|-------------------------|
 | SPURL1 | GHI | OPQ | OPQ |
 | SPURL2 | GHI | RST | OPQ |
