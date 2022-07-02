@@ -1,6 +1,10 @@
 - name: Power Apps Troubleshooting
   href: welcome-power-apps.yml
   items:
+  - name: App creation
+    items:
+    - name: Filter expression returns extra blank records in results 
+      href: filter-blank-records.md
   - name: Common issues
     items:
     - name: Common issues and resolutions
