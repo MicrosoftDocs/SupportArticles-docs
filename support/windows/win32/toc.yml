@@ -22,6 +22,8 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
+    - name: Hook procedure doesn’t receive the VK_CONVERT message
+      href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
     - name: Three- or four-finger touch interactions doesn't work in Windows 11

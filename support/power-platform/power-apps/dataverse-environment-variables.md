@@ -23,7 +23,7 @@ References to data sources aren't updated when importing a Power Apps solution i
 
 ## Cause
 
-There are several possible causes.
+There are several possible causes:
 
 - Data source environment variables are dynamically retrieved for a data source at play/runtime. For performance reasons, once retrieved, environment variable values are cached locally in the browser. Values may take up to an hour to auto-refresh.
 
@@ -57,23 +57,23 @@ When data source environment variables for `SPURL1` and `SPURL2` (`GHI` and `GHI
 
 ### Legacy causes
 
-Issues with SharePoint choice columns have been fixed and deployed by the end of April 2022.
+Issues with SharePoint choice columns were fixed and the update was deployed at the end of April 2022.
 
 ## Resolution
 
 Review the environment variables [documentation](/power-apps/maker/data-platform/EnvironmentVariables). Use [Monitor](/power-apps/maker/monitor-overview) to investigate environment variable issues to verify if the data calls are connecting to the correct dataset or list. Lists created using Microsoft Lists are internally identified by a unique ID/GUID. You can find this value by using a trace inside Monitor. Use this value to trace what and where lists are being used.
 
-### To avoid locally cached values that may be out of date
+### Avoid locally cached values that may be out of date
 
 1. Test your solution with a new browser instance. Close all browser windows to ensure you've cleared all cached values. Environment variable values are cached at multiple levels to improve performance. Testing with a new browser instance will ensure you aren't using older cached values.
 
-1. Try reexporting/importing again. This action refreshes your data sources and environment variables.
+1. Try re-exporting and importing again. This action refreshes your data sources and environment variables.
 
-### To avoid using a default value when a current value should be used
+### Avoid using a default value when a current value should be used
 
 Check to see if you need a default value and if you're getting prompted for a current value. In most ALM scenarios, you don't need a default value unless you plan to have a default value for all environments. You won't be prompted to provide a value during the import process when you only have the default value set.
 
-### To avoid issues with SharePoint metadata in the target environment
+### Avoid issues with SharePoint metadata in the target environment
 
 1. Don't rely on Power Apps Studio for info in the target environment. The runtime will be using the correct values. If you need to double check, you can use a Monitor trace.
 
@@ -81,7 +81,7 @@ Check to see if you need a default value and if you're getting prompted for a cu
 
 1. When you want to take advantage of a change in a list (such as when using a new column), update the solution in the source environment and import to the target environment again.
 
-### To avoid issues with multiple SharePoint URLs in the same solution
+### Avoid issues with multiple SharePoint URLs in the same solution
 
 If you want the target solution to reference different SharePoint URLs in different environments, then mirror that structure in your source environment. Create separate lists so that the migration process references correct values.
 

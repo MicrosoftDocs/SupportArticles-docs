@@ -68,7 +68,7 @@ Project Server 2013 and later versions are supported.
 
 ### Microsoft SharePoint Server
 
-SharePoint Server 2010 and later versions are supported on Azure virtual machines. For more information, see the following SharePoint website: [Support and licensing for Microsoft Azure in SharePoint 2013](https://technet.microsoft.com/library/jj154957)
+SharePoint Server 2010 and later versions are supported on Azure virtual machines.
 
 ### Microsoft SQL Server
 
