@@ -191,7 +191,7 @@ To configure devices to perform a KIR activation, you need to create a custom co
 5. [Use applicability rules to target devices to receive KIR custom configuration settings by OS](#e-use-applicability-rules-to-target-devices-to-receive-kir-custom-configuration-settings-by-os).
 6. [Review and create KIR activation custom configuration profile](#f-review-and-create-kir-activation-custom-configuration-profile).
 
-#### A. Select properties and add basic information of the profile
+#### A. Select properties and add basic information about the profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Configuration profiles** > **Create profile**.  
@@ -214,7 +214,7 @@ To configure devices to perform a KIR activation, you need to create a custom co
 > [!NOTE]  
 > For more information about creating custom configuration profiles and configuration settings, see [Use custom device settings in Microsoft Intune](/mem/intune/configuration/custom-settings-configure).
 
-Before proceeding to the next two steps, open the ADMX file in a text editor (for example, Notepad) where the file was extracted. The ADMX file should be in the path *C:\Windows\PolicyDefinitions* if you installed as an MSI file.
+Before proceeding to the next two steps, open the ADMX file in a text editor (for example, Notepad) where the file was extracted. The ADMX file should be in the path *C:\Windows\PolicyDefinitions* if you installed it as an MSI file.
 
 Here's an example of the ADMX file:
 
@@ -233,7 +233,7 @@ Record the values for `policy name` and `parentCategory`. This information is in
 
 #### B. Add custom configuration setting to ingest ADMX files for KIR activation
 
-This configuration setting is used to install the KIR activation policy on target devices.  Follow these steps to add the ADMX ingestion settings:
+This configuration setting is used to install the KIR activation policy on target devices. Follow these steps to add the ADMX ingestion settings:
 
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
@@ -245,7 +245,7 @@ This configuration setting is used to install the KIR activation policy on targe
         > [!NOTE]
         > Replace \<ADMX Policy Name\> with the value of the recorded policy name from the ADMX file. For example, "KB5011563_220428_2000_1_KnownIssueRollback".  
     - **Data type**: Select **String**.  
-    - **Value**: Open the ADMX file with a text editor (for example, Notepad). Copy and paste the entire contents of the ADMX file you're intending to ingest into this field.  
+    - **Value**: Open the ADMX file with a text editor (for example, Notepad). Copy and paste the entire contents of the ADMX file you intend to ingest into this field.  
 
 3. Select **Save**.  
 
@@ -278,7 +278,7 @@ After you've defined what the custom configuration profile does, follow these st
 
 #### E. Use applicability rules to target devices to receive KIR custom configuration settings by OS  
 
-To target the devices by OS that are applicable to the GP, add an applicability rule to check the device OS Version (Build) before applying this configuration. You can look up the build numbers for supported OS on the following pages:
+To target the devices by OS that are applicable to the GP, add an applicability rule to check the device OS Version (Build) before applying this configuration. You can look up the build numbers for the supported OS on the following pages:
 
 - [Windows 11 release information](/windows/release-health/windows11-release-information)  
 - [Windows 10 release information](/windows/release-health/release-information)  
@@ -309,11 +309,11 @@ Review your settings of the custom configuration profile and select **Create**.
 
 Your KIR activation should be in progress now. Follow these steps to monitor the configuration profile progress:
 
-1. Go to **Devices** > **Configuration profiles**, select an existing profile. For example, select a macOS profile.  
+1. Go to **Devices** > **Configuration profiles**, and select an existing profile. For example, select a macOS profile.  
 2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:  
 
     - **Succeeded**: Policy is applied successfully.  
-    - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.  
+    - **Error**: The policy failed to apply. The message typically displays an error code that links to an explanation.  
     - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review the conflict.  
     - **Pending**: The device hasn't checked in with Intune to receive the policy yet.  
     - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to iOS 11.1, but the device is using iOS 10.  
