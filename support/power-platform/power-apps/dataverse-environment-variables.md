@@ -3,7 +3,7 @@ title: Data source references based on environment variables aren't updated duri
 description: Describes an issue when importing a solution to a different environment, data source references based on environment variables aren't updated.
 ms.reviewer: tapanm
 ms.date: 6/30/2022
-author: simonxjx
+author: lancedMicrosoft
 ms.author: lanced
 ms.subservice: powerapps-others
 search.audienceType: 
