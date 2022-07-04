@@ -2,6 +2,7 @@
 title: Windows failed to apply the MDM Policy settings error
 description: Information about the error message "Windows failed to apply the MDM Policy settings" when you force a Group Policy update on Intune-enrolled hybrid Azure AD-joined devices.
 ms.date: 10/06/2021
+search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
 

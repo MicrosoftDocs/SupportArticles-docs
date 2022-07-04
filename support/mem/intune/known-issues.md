@@ -2,6 +2,7 @@
 title: Known issues with Microsoft Intune
 description: Learn about known issues with Microsoft Intune, including workarounds and updated fixes.
 ms.date: 03/17/2022
+search.appverid: MET150
 ---
 # Known issues
 
@@ -55,14 +56,14 @@ Until we release a fix, you can search/filter by OS on the exported report file 
 
 ## Missing certificates after updating Samsung work profile devices to Android 12
 
-- **Status:** Active
+- **Status:** Resolved
 - **Blog post:** [Known Issue: Missing certificates after updating Samsung work profile devices to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-missing-certificates-after-updating-samsung-work/ba-p/3039834)
 
 We're aware of an issue that affects Samsung devices enrolled with a work profile. After updating to Android 12, these devices are missing certificates when a user tries to access Gmail or AnyConnect VPN. For more information and temporary workarounds, see [Known Issue: Missing certificates after updating Samsung work profile devices to Android 12](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-missing-certificates-after-updating-samsung-work/ba-p/3039834) on the Intune Customer Success blog.
 
 ## Long sync times in Intune for Managed Google Play private apps and web apps
 
-- **Status:** Active
+- **Status:** Resolved
 - **Blog post:** [Known Issue: Long sync times in Intune for Managed Google Play private apps and web apps](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795)
 
 Admins who recently published a new Managed Google Play web or line-of-business (LOB) app will notice delays for those apps to sync to Intune. After selecting Sync from either the Microsoft Endpoint Manager admin center or the Google Play console, it can take six hours or longer for the new apps to appear in the app list in Intune. For more information and workarounds, see [Known Issue: Long sync times in Intune for Managed Google Play private apps and web apps](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-long-sync-times-in-intune-for-managed-google-play/ba-p/3039795).

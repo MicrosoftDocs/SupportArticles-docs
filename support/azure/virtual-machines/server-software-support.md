@@ -68,7 +68,7 @@ Project Server 2013 and later versions are supported.
 
 ### Microsoft SharePoint Server
 
-SharePoint Server 2010 and later versions are supported on Azure virtual machines. For more information, see the following SharePoint website: [Support and licensing for Microsoft Azure in SharePoint 2013](https://technet.microsoft.com/library/jj154957)
+SharePoint Server 2010 and later versions are supported on Azure virtual machines.
 
 ### Microsoft SQL Server
 
@@ -144,7 +144,7 @@ Windows Server 2008 R2 and later versions are supported for the following roles 
     > [!NOTE]
     > Third-party clustered roles are supported by the vendor
 
-    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/azure/dn451351(v=azure.100)?redirectedfrom=MSDN).
+    For more information about licensing restrictions that are related to Remote Desktop Services in Microsoft Azure, see [Virtual machines Licensing FAQ](https://azure.microsoft.com/pricing/licensing-faq/). For technical information about how to configure Remote Desktop Services in Microsoft Azure for session hosting by using Windows Server 2012 or Windows Server 2012 R2, see [Azure Desktop Hosting - Reference Architecture and Deployment Guides](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/mt404690(v=ws.11)).
 
 The following roles are not supported on Microsoft Azure Virtual Machines:
 

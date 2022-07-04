@@ -2,6 +2,7 @@
 title: Can't save data in WIP-allowed apps on Intune Windows device
 description: Fixes an issue in which you can't save corporate data in Windows Information Protection (WIP)allowed apps on a Windows device that's enrolled in Intune through a hybrid Azure AD join or a Configuration Manager co-management.
 ms.date: 10/14/2021
+search.appverid: MET150
 ms.custom: sap:Use app protection policies
 ---
 # Corporate data unsaved in WIP-allowed apps on hybrid Azure AD join or co-management device in Intune

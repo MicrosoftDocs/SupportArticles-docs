@@ -2,6 +2,7 @@
 title: Windows 10 feature updates not offered on Intune-managed devices
 description: Helps fix error 80070426 where feature updates are never offered on Microsoft Intune-managed Windows 10 devices that run Windows 10 version 1709 or later.
 ms.date: 10/08/2021
+search.appverid: MET150
 ms.custom: sap:Windows 10 update rings
 ---
 # Feature updates are not offered on Intune-managed Windows 10 devices
