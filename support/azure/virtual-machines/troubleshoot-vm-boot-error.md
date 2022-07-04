@@ -39,7 +39,7 @@ grub rescue>
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
 
-2. [Identify GRUB rescue issue](identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issue, go to the corresponding section to resolve it:
+2. [Identify GRUB rescue issue](#identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issue, go to the corresponding section to resolve it:
 
     * [Error: unknown filesystem](#unknown-filesystem)
     * [Error 15: File not found](#error15)
@@ -381,11 +381,11 @@ To resolve this error, follow these steps:
 
 2. Make sure the */etc/default/grub* configuration file is configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. For more information, see the following articles:
 
-    * [GRUB access in RHEL](serial-console-grub-single-user-mode#grub-access-in-rhel.md)
-    * [GRUB access in CentOS](serial-console-grub-single-user-mode#grub-access-in-centos.md)
-    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode#grub-access-in-ubuntu.md)
-    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode#grub-access-in-suse-sles.md)
-    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode#grub-access-in-oracle-linux.md)
+    * [GRUB access in RHEL](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel.md)
+    * [GRUB access in CentOS](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-centos.md)
+    * [GRUB access in Ubuntu](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-ubuntu.md)
+    * [GRUB access in SUSE SLES](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-suse-sles.md)
+    * [GRUB access in Oracle Linux](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-oracle-linux.md)
 
 3. [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
 
@@ -398,6 +398,6 @@ To resolve this error, follow these steps:
 
 ## Next steps
 
-If the specific boot error isn't a GRUB rescue issue, refer to [Troubleshoot Azure Linux Virtual Machines boot errors](virtual-machines/boot-error-troubleshoot-linux.md) for further troubleshooting options.
+If the specific boot error isn't a GRUB rescue issue, refer to [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
