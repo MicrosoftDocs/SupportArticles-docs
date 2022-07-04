@@ -44,7 +44,7 @@ grub rescue>
     * [Error: unknown filesystem](#unknown-filesystem)
     * [Error 15: File not found](#error15)
     * [Error: file '/boot/grub2/i386-pc/normal.mod' not found](#normal-mod-file-not-found)
-    * [Error: No such partition](#no-such-partition)
+    * [Error: no such partition](#no-such-partition)
     * [Other GRUB rescue errors](#other-grub-rescue-errors)
 
 3. After the GRUB rescue issue is resolved, perform the following actions:
@@ -203,11 +203,11 @@ If the /boot partition is missing, recreate it by following these steps:
 
     * **Dos partition table**
 
-      ![Boot with dos type partition table](./media/troubleshoot-vm-boot-error/boot-dos01.png)
+        :::image type="content" source="./media/troubleshoot-vm-boot-error/boot-dos01.png" alt-text="Screenshot shows boot with dos type partition table.":::
 
     * **GPT partition table**
 
-      ![Boot with GPT type partition table](./media/troubleshoot-vm-boot-error/boot-gpt01.png)
+        :::image type="content" source="./media/troubleshoot-vm-boot-error/boot-gpt01.png" alt-text="Screenshot shows boot with GPT type partition table.":::
 
 3. If the partition table has **dos** as the partition table type, [recreate /boot partition in dos systems](#recreate-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, [recreate /boot partition in GPT systems](#recreate-boot-partition-in-gpt-systems).
 
@@ -217,7 +217,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 #### <a id="recreate-boot-partition-in-dos-systems">Recreate /boot partition in dos systems</a>
 
-1. Recreate the /boot partition by using the following command.
+1. Recreate the /boot partition by using the following command:
 
     ```bash
     # fdisk /dev/sdX
@@ -283,7 +283,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
     ```output
     # blkid /dev/sdc1
-    /dev/sdc1: UUID="d43acc81-83c1-446d-a69f-476aec11558b" TYPE="ext4"
+    /dev/sdc1: UUID="<UUID>" TYPE="ext4"
     ```
 
 3. If the /boot file system isn't visible in `blkid` after recreating the partition, it means the /boot data is no longer there. You'll need to recreate it (by using the same UUID and file system format than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
@@ -358,7 +358,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
     ```output
     # blkid /dev/sdc1
-    /dev/sdc1: UUID="2eca58fb-edd0-4f4e-be42-4fffccaacceb" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="71f642bb-742c-49a4-a660-19190f6e54ce"
+    /dev/sdc1: UUID="<UUID>" BLOCK_SIZE="4096" TYPE="xfs" PARTLABEL="Linux filesystem" PARTUUID="<PARTUUID>"
     ```
 
 3. If the /boot file system isn't visible after recreating the partition, it means the /boot data is no longer there. You'll need to recreate the /boot file system (by using the same UUID than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
@@ -381,18 +381,18 @@ To resolve this error, follow these steps:
 
 2. Make sure the */etc/default/grub* configuration file is configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. For more information, see the following articles:
 
-    * [GRUB access in RHEL](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-rhel.md)
-    * [GRUB access in CentOS](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-centos.md)
-    * [GRUB access in Ubuntu](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-ubuntu.md)
-    * [GRUB access in SUSE SLES](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-suse-sles.md)
-    * [GRUB access in Oracle Linux](/azure/virtual-machines/serial-console-grub-single-user-mode#grub-access-in-oracle-linux.md)
+    * [GRUB access in RHEL](serial-console-grub-single-user-mode.md#grub-access-in-rhel)
+    * [GRUB access in CentOS](serial-console-grub-single-user-mode.md#grub-access-in-centos.md)
+    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode.md#grub-access-in-ubuntu)
+    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode.md#grub-access-in-suse-sles)
+    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode.md#grub-access-in-oracle-linux)
 
 3. [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
 
     > [!NOTE]
     > If the missing file is */boot/grub/menu.lst*, this error is for older OS versions (RHEL 6.x, Centos 6.x and Ubuntu 14.04). The commands will differ because GRUB version 1 is used in those systems instead. GRUB version 1 isn't covered in this article.
 
-4. If the entire /boot partition is missing, follow the steps in [Error: No such partition](#no-such-partition).
+4. If the entire /boot partition is missing, follow the steps in [Error: no such partition](#no-such-partition).
 
 5. Once the issue is resolved, proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
