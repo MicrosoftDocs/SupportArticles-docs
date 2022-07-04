@@ -381,11 +381,11 @@ To resolve this error, follow these steps:
 
 2. Make sure the */etc/default/grub* configuration file is configured. The [endorsed Azure Linux images](/azure/virtual-machines/linux/endorsed-distros) already have the required configurations in place. For more information, see the following articles:
 
-    * [GRUB access in RHEL](serial-console-grub-single-user-mode.md#grub-access-in-rhel)
-    * [GRUB access in CentOS](serial-console-grub-single-user-mode.md#grub-access-in-centos.md)
-    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode.md#grub-access-in-ubuntu)
-    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode.md#grub-access-in-suse-sles)
-    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode.md#grub-access-in-oracle-linux)
+    * [GRUB access in RHEL](serial-console-grub-single-user-mode.md#access-for-red-hat-enterprise-linux-rhel)
+    * [GRUB access in CentOS](serial-console-grub-single-user-mode.md#access-for-centos)
+    * [GRUB access in Ubuntu](serial-console-grub-single-user-mode.md#access-for-ubuntu)
+    * [GRUB access in SUSE SLES](serial-console-grub-single-user-mode.md#access-for-suse-sles)
+    * [GRUB access in Oracle Linux](serial-console-grub-single-user-mode.md#access-for-oracle-linux)
 
 3. [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file).
 
