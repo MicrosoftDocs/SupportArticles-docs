@@ -4,6 +4,8 @@
   items:
   - name: Basic troubleshooting of Microsoft Monitoring Agent
     href: mma-troubleshoot-basics.md
+  - name: Check SSL connectivity for Microsoft Monitoring Agent
+    href: ssl-connectivity-mma-windows-powershell.md
   - name: Error code 0x80090016 - keyset doesn't exist
     href: error-code-0x80090016-keyset-does-not-exist.md
   - name: Microsoft Monitoring Agent couldn't start
