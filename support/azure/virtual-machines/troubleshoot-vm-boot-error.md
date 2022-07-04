@@ -39,7 +39,7 @@ grub rescue>
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
 
-2. [Identify GRUB rescue issue](#identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issue, go to the corresponding section to resolve it:
+2. [Identify GRUB rescue issue](#identify-grub-rescue-issue). When you encounter one of the following GRUB rescue issues, go to the corresponding section to resolve it:
 
     * [Error: unknown filesystem](#unknown-filesystem)
     * [Error 15: File not found](#error15)
@@ -184,7 +184,7 @@ The following screenshot shows the error message:
 
 :::image type="content" source="./media/troubleshoot-vm-boot-error/grub-no-such-partition.png" alt-text="Screenshot of grub error no such partition.":::
 
-This error will occurs with a RHEL based VM (Red Hat, Oracle Linux, CentOS) in one of the following scenario:
+This error will occur with a RHEL based VM (Red Hat, Oracle Linux, CentOS) in one of the following scenarios:
 
 * The /boot partition is deleted by mistake.
 * The /boot partition is recreated with the wrong start and end sectors.
@@ -223,7 +223,7 @@ If the /boot partition is missing, recreate it by following these steps:
     # fdisk /dev/sdX
     ```
 
-    Use the default values in **First** and **Last** sectors, and **partition type** (83). Make sure the /boot partition table is marked as bootable by using the `a` option in the fdisk tool, as shown in the output below:
+    Use the default values in **First** and **Last** sectors, and **partition type** (83). Make sure the /boot partition table is marked as bootable by using the `a` option in the `fdisk` tool, as shown in the output below:
 
     ```output
     # fdisk /dev/sdc
@@ -288,7 +288,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 3. If the /boot file system isn't visible in `blkid` after recreating the partition, it means the /boot data is no longer there. You'll need to recreate it (by using the same UUID and file system format than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-#### <a id="recreate-boot-partition-in-gpt-systems">Recreate /boot partition in GPT systems
+#### <a id="recreate-boot-partition-in-gpt-systems">Recreate /boot partition in GPT systems</a>
 
 1. Recreate the /boot partition by using the following command:
 
