@@ -184,7 +184,7 @@ To perform a KIR activation on Intune managed devices, follow these steps:
 
 To configure devices to perform a KIR activation, you need to create a custom configuration profile for each OS of your managed devices. To create a custom profile, follow these steps:
 
-1. [Select properties and add basic information of the profile](#a-select-properties-and-add-basic-information-of-the-profile).
+1. [Select properties and add basic information of the profile](#a-select-properties-and-add-basic-information-about-the-profile).
 2. [Add custom configuration setting to ingest ADMX files for KIR activation](#b-add-custom-configuration-setting-to-ingest-admx-files-for-kir-activation).
 3. [Add custom configuration setting to set new KIR activation policy](#c-add-custom-configuration-setting-to-set-new-kir-activation-policy).
 4. [Assign devices to the KIR activation custom configuration profile](#d-assign-devices-to-the-kir-activation-custom-configuration-profile).
