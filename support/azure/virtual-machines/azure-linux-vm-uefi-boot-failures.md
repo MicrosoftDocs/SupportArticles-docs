@@ -113,7 +113,7 @@ To resolve this issue, follow these steps:
     >
     > * Replace `/dev/sdc` with the corresponding copy of the operating system (OS) disk device.
     > * The partition number choice doesn't matter as long as the sector start and end points are correct. The correct sector start and end points are chosen because the OS is able to determine the missing sectors.
-    > * Choose default values to ensure that the ending sector isn't occupied by any other partition within the disk.
+    > * Ensure the ending sector isn't occupied by any other partition within the disk. Choosing default values should suffice here.
 
     Azure Linux partner images have the following partition number, sector start points, and sector end points:
 
@@ -132,7 +132,7 @@ To resolve this issue, follow these steps:
     | SLES 12 | 2| 6144 | 1054719 |
     | SLES 15 | 2| 6144 | 1054719 |
 
-3. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command.
+3. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 ## <a id="scenario2">Scenario 2: UEFI partition in boot image is corrupted</a>
 
@@ -195,7 +195,7 @@ If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to 
     > * Always take a backup of the OS disk and perform a dry run with the `-n` option before performing the file system check mentioned above.
     > * The `dosfsck` command can be used to perform the vfat file system check. Both commands are the same. For more information, see [fsck.vfat](https://linux.die.net/man/8/fsck.vfat).
 
-3. Once the partition is cleaned, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command.
+3. Once the partition is cleaned, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
 ## Scenario 3: Entire /boot partition contents are deleted
 
