@@ -2,6 +2,15 @@
 
 
 
+## Week of June 27, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/27/2022 | [Error AADSTS50020 when signing into OneDrive](/sharepoint/troubleshoot/sync/sign-into-onedrive-sync-app-error) | modified |
+| 6/27/2022 | [Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received](/sharepoint/troubleshoot/sites/notification-email-not-received) | modified |
+
+
 ## Week of June 20, 2022
 
 

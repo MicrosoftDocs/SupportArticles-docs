@@ -2,6 +2,19 @@
 
 
 
+## Week of June 27, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/28/2022 | [ADSTS50011 error when running HCW](/exchange/troubleshoot/hybrid-configuration-wizard-errors/error-hybrid-config-wizard) | modified |
+| 6/28/2022 | ATP notifications displayed in foreign languages | removed |
+| 6/28/2022 | Domains on Outlook Safe Senders list not recognized | removed |
+| 6/28/2022 | Reduce malware threats via file attachment blocking | removed |
+| 6/28/2022 | User Impersonation messages are classified as phishing but not as user impersonation | removed |
+| 7/1/2022 | [RopFastTransferSourceCopyTo operation fails on messages](/exchange/troubleshoot/client-connectivity/ropfasttransfersourcecopyto-operation-fails) | modified |
+
+
 ## Week of June 20, 2022
 
 
@@ -36,13 +49,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |
-
-
-## Week of May 23, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | added |
-| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
-| 5/23/2022 | [Can't remove a remote shared mailbox](/exchange/troubleshoot/administration/cannot-remove-remote-shared-mailbox) | added |
