@@ -258,7 +258,7 @@ Follow these steps to add the KIR activation configuration settings:
 1. In **Configuration settings**, select **Add**.  
 2. Enter the following properties:  
 
-    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2"  
+    - **Name**: Enter a descriptive name for the configuration setting. Name your settings so you can easily identify them later. For example, a good setting name is "KIR Activation: 04/30 KIR Activation – Windows 10 21H2".  
     - **Description**: Enter a description for the setting. This setting is optional but recommended.  
     - **OMA-URI**: Enter the string *./Device/Vendor/MSFT/Policy/Config/KIR~Policy~KnownIssueRollback~\<Parent Category\>/\<ADMX Policy Name\>*.  
         > [!NOTE]
