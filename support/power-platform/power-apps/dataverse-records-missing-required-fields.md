@@ -6,7 +6,7 @@ ms.topic: troubleshooting
 ms.date: 6/18/2021
 author: simonxjx
 ms.author: v-six
-ms.subservice: powerapps-others
+ms.subservice: powerapps-solutions
 ---
 # Dataverse records are created without required fields
 

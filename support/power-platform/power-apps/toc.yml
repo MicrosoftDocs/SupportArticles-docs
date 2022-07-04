@@ -49,6 +49,10 @@
     items:
     - name: Can't import solutions or publish changes
       href: cannot-import-solutions-publish-changes.md
+    - name: Data source references not updated after solution import
+      href: dataverse-environment-variables.md
+    - name: Required fields are missing in Dataverse records
+      href: dataverse-records-missing-required-fields.md
   - name: Unified Interface
     items:
     - name: '"Blocked a frame with origin" error'
@@ -63,8 +67,6 @@
       href: custom-pages-sdk-script-not-load.md
     - name: Lookup doesn't filter records for particular entity
       href: lookup-does-not-filter-entity-records.md
-    - name: Required fields are missing in Dataverse records
-      href: dataverse-records-missing-required-fields.md
   - name: Support resources
     items:
     - name: Power Apps support
