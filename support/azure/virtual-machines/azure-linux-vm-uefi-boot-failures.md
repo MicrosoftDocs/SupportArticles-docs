@@ -11,13 +11,13 @@ ms.collection: linux
 
 # Troubleshoot UEFI boot failures in Azure Linux virtual machines
 
-Linux partner images in Azure Marketplace are respectively tagged and configured for both BIOS generation 1 and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
+Linux partner images in Azure Marketplace are tagged and configured for both BIOS generation 1 boot and Unified Extensible Firmware Interface (UEFI) generation 2 boot.
 
 When you deploy generation 2 Linux virtual machines (VMs) in Azure, you may encounter UEFI boot failures. This article discusses some scenarios where UEFI boot failures occur and provides solutions.
 
 ## Symptoms
 
-When you deploy a generation 2 Linux VM in Azure, the boot fails and the server is inaccessible.
+When you deploy a generation 2 Linux VM in Azure, the boot fails, and the server is inaccessible.
 
 ## Identify UEFI boot errors
 
@@ -31,7 +31,7 @@ The boot diagnostics screenshot shows the following error messages:
 
 ## Before you troubleshoot
 
-To perform an offline VM repair that's required for [Scenario 1: UEFI partition in boot image is missing](#scenario1) and [Scenario 2: UEFI partition in boot image is corrupted](#scenario2), make sure that you have access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com).
+To perform the offline VM repair that's required for [Scenario 1: UEFI partition in boot image is missing](#scenario1) and [Scenario 2: UEFI partition in boot image is corrupted](#scenario2), make sure that you have access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com).
 
 ## <a id="scenario1">Scenario 1: UEFI partition in boot image is missing</a>
 
@@ -112,7 +112,7 @@ To resolve this issue, follow these steps:
     > [!IMPORTANT]
     >
     > * Replace `/dev/sdc` with the corresponding copy of the operating system (OS) disk device.
-    > * The partition number choice doesn't matter as long as the sector start and end points are correct. The correct sector start and end point are chosen because the OS is able to determine the missing sectors.
+    > * The partition number choice doesn't matter as long as the sector start and end points are correct. The correct sector start and end points are chosen because the OS is able to determine the missing sectors.
     > * Choose default values to ensure that the ending sector isn't occupied by any other partition within the disk.
 
     Azure Linux partner images have the following partition number, sector start points, and sector end points:
@@ -192,13 +192,13 @@ If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to 
     > [!IMPORTANT]
     >
     > * Replace `/dev/sdc` with the corresponding copy of the OS disk device.
-    > * Always take a backup of the OS disk, and perform a dry run with the `-n` option before performing the file system check mentioned above.
+    > * Always take a backup of the OS disk and perform a dry run with the `-n` option before performing the file system check mentioned above.
     > * The `dosfsck` command can be used to perform the vfat file system check. Both commands are the same. For more information, see [fsck.vfat](https://linux.die.net/man/8/fsck.vfat).
 
 3. Once the partition is cleaned, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command.
 
 ## Scenario 3: Entire /boot partition contents are deleted
 
-If the entire /boot partition or other important contents are missing and can't be recovered, restore the VM from a backup will be the only option. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+If the entire /boot partition or other important contents are missing and can't be recovered, restoring the VM from a backup is the only option. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
