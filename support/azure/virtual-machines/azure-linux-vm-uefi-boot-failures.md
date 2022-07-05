@@ -25,15 +25,34 @@ Check the current state of your VM by using the [Azure boot diagnostics](boot-di
 
 The boot diagnostics screenshot shows the following error messages:
 
-:::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/no-boot-image.png" alt-text="Screenshot of the hyper-V error message for missing UEFI boot image.":::
+- Error 1
 
-:::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/pxe-error.png" alt-text="Screenshot of the transition of hyper-V error to PXE boot issue.":::
+    > Virtual Machine Boot Summary
+    >
+    > 1. Unknown Device  
+    >     The boot loader did not load an operating system.
+    > 2. SCSI Disk (0,0)  
+    >    The boot loader did not load an operating system.
+    > 3. SCSI Disk (0,1)  
+    >    The boot loader did not load an operating system.
+    > 4. Network Adapter (000D3A4DD64D)  
+    >    A boot image was not found.  
+    >
+    > No operating system was loaded. Your virtual machine may be configured incorrectly. Exit and re-configure your VM or click restart to retry the current boot sequence again.
+
+    :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/no-boot-image.png" alt-text="Screenshot of the hyper-V error message for missing UEFI boot image.":::
+
+- Error 2
+
+    > Start PXE over IPv4
+
+    :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/pxe-error.png" alt-text="Screenshot of the transition of hyper-V error to PXE boot issue.":::
 
 ## Before you troubleshoot
 
 To perform the offline VM repair that's required for [Scenario 1: UEFI partition in boot image is missing](#scenario1) and [Scenario 2: UEFI partition in boot image is corrupted](#scenario2), make sure that you have access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com).
 
-## <a id="scenario1">Scenario 1: UEFI partition in boot image is missing</a>
+## <a id="scenario1"></a>Scenario 1: UEFI partition in boot image is missing
 
 If the UEFI boot loader partition is missing or deleted, the generation 2 Linux VM will fail to boot.
 
@@ -134,7 +153,7 @@ To resolve this issue, follow these steps:
 
 3. Once the partition is recreated, restore the VM by swapping the repaired OS disk with the original OS disk of the VM by using the [az vm repair restore](/cli/azure/vm/repair#az-vm-repair-restore) command. For more information, see the step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
-## <a id="scenario2">Scenario 2: UEFI partition in boot image is corrupted</a>
+## <a id="scenario2"></a>Scenario 2: UEFI partition in boot image is corrupted
 
 If the UEFI boot partition is corrupted, the generation 2 Linux VM will fail to boot. To resolve this issue, follow these steps:
 
