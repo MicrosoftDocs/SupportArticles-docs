@@ -36,8 +36,9 @@ The boot diagnostics screenshot shows the following error messages:
     > 3. SCSI Disk (0,1)  
     >    The boot loader did not load an operating system.
     > 4. Network Adapter (000D3A4DD64D)  
-    >    A boot image was not found.
-    > No operating system was loaded. Your virtual machine may be configured incorrectly. Exit and re-configure your VM or Click restart to retry the current boot sequence again.
+    >    A boot image was not found.  
+    >
+    > No operating system was loaded. Your virtual machine may be configured incorrectly. Exit and re-configure your VM or click restart to retry the current boot sequence again.
 
     :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/no-boot-image.png" alt-text="Screenshot of the hyper-V error message for missing UEFI boot image.":::
 
