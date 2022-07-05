@@ -211,7 +211,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 3. If the partition table has **dos** as the partition table type, [recreate /boot partition in dos systems](#recreate-boot-partition-in-dos-systems). If the partition table has **GPT** as the partition table type, [recreate /boot partition in GPT systems](#recreate-boot-partition-in-gpt-systems).
 
-4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-and-regenerate-grub-configuration-file) to get it installed and configured.
+4. Make sure that the GRUB boot loader is installed by using the proper disk. You can follow the steps in [Reinstall GRUB and regenerate GRUB configuration file](#reinstall-grub-regenerate-grub-configuration-file) to get it installed and configured.
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
