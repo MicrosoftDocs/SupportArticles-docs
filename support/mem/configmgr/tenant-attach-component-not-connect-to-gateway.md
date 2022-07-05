@@ -7,7 +7,7 @@ author: helenclu
 ms.author: luche
 ---
 
-# Error when running client action from Microsoft Endpoint Manager admin center
+# Mismatch certificate subject name error when running client action for Configuration Manager device
 
 This article provides a solution to an issue where Configuration Manager components for tenant attach fail to connect to the cloud management gateway.
 
