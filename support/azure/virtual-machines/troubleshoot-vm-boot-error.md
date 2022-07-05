@@ -20,7 +20,7 @@ This article discusses multiple conditions that cause GRUB rescue issues and pro
 
 During the boot process, the boot loader will try to locate the Linux kernel and hand off the boot control. If this handoff can't be performed, the virtual machine (VM) will enter a GRUB rescue console. The GRUB rescue console prompt won't be shown in the Azure serial console log, but it can be shown in the [Azure boot diagnostics screenshot](/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view).
 
-## <a id="identify-grub-rescue-issue">Identify GRUB rescue issue</a>
+## <a id="identify-grub-rescue-issue"></a>Identify GRUB rescue issue
 
 [View a boot diagnostics screenshot](/azure/virtual-machines/boot-diagnostics#boot-diagnostics-view) in the VM **Boot diagnostics** blade in the Azure portal. This screenshot will help diagnose the GRUB rescue issue and determine if a boot error causes the issue.
 
@@ -32,7 +32,7 @@ Entering rescue mode...
 grub rescue>
 ```
 
-## <a id="offline-troubleshooting">Troubleshoot GRUB rescue issue offline</a>
+## <a id="offline-troubleshooting"></a>Troubleshoot GRUB rescue issue offline
 
 1. To troubleshoot a GRUB rescue issue, a rescue/repair VM is required. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
@@ -62,7 +62,7 @@ See the following sections for detailed errors, possible causes, and solutions.
 > [!NOTE]
 > In the commands mentioned in the following sections, replace `/dev/sdX` with the corresponding Operating System (OS) disk device.
 
-## <a id="unknown-filesystem">Error: unknown filesystem</a>
+## <a id="unknown-filesystem"></a>Error: unknown filesystem
 
 The following screenshot shows the error message:
 
@@ -82,7 +82,7 @@ This error might be associated with one of the following issues:
 
   To resolve such issues, follow the steps in [Error: No such partition](#no-such-partition) with recommendations to recreate the /boot partition if missing or created incorrectly.
 
-### <a id="fix-boot-file-system-corruption">Fix /boot file system corruption</a>
+### <a id="fix-boot-file-system-corruption"></a>Fix /boot file system corruption
 
 1. Make sure that a rescue/repair VM has been created. If not, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create it.
 
@@ -90,7 +90,7 @@ This error might be associated with one of the following issues:
 
 3. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
-### <a id="reinstall-grub-regenerate-grub-configuration-file">Reinstall GRUB and regenerate GRUB configuration file</a>
+### <a id="reinstall-grub-regenerate-grub-configuration-file"></a>Reinstall GRUB and regenerate GRUB configuration file
 
 1. Make sure that a rescue/repair VM has been created. If not, follow step 1 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to create it. Mount all the required file systems, including / and /boot in the rescue/repair VM, and then do [chroot](chroot-environment-linux.md).
 
@@ -139,7 +139,7 @@ This error might be associated with one of the following issues:
   
 3. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
-## <a id="error15">Error 15: File not found</a>
+## <a id="error15"></a>Error 15: File not found
 
 The following screenshot shows the error message:
 
@@ -159,7 +159,7 @@ To resolve this issue, follow these steps:
 
 6. Once the issue is resolved, proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
-## <a id="normal-mod-file-not-found">Error: file '/boot/grub2/i386-pc/normal.mod' not found</a>
+## <a id="normal-mod-file-not-found"></a>Error: file '/boot/grub2/i386-pc/normal.mod' not found
 
 The following screenshot shows the error message:
 
@@ -178,7 +178,7 @@ The following screenshot shows the error message:
 
 4. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
-## <a id="no-such-partition">Error: no such partition</a>
+## <a id="no-such-partition"></a>Error: no such partition
 
 The following screenshot shows the error message:
 
@@ -215,7 +215,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 5. Proceed with step 3 in [Troubleshoot GRUB rescue issue offline](#offline-troubleshooting) to swap the OS disk.
 
-#### <a id="recreate-boot-partition-in-dos-systems">Recreate /boot partition in dos systems</a>
+#### <a id="recreate-boot-partition-in-dos-systems"></a>Recreate /boot partition in dos systems
 
 1. Recreate the /boot partition by using the following command:
 
@@ -288,7 +288,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 3. If the /boot file system isn't visible in `blkid` after recreating the partition, it means the /boot data is no longer there. You'll need to recreate it (by using the same UUID and file system format than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-#### <a id="recreate-boot-partition-in-gpt-systems">Recreate /boot partition in GPT systems</a>
+#### <a id="recreate-boot-partition-in-gpt-systems"></a>Recreate /boot partition in GPT systems
 
 1. Recreate the /boot partition by using the following command:
 
@@ -363,7 +363,7 @@ If the /boot partition is missing, recreate it by following these steps:
 
 3. If the /boot file system isn't visible after recreating the partition, it means the /boot data is no longer there. You'll need to recreate the /boot file system (by using the same UUID than in the */etc/fstab* /boot entry) and [restore its contents from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-## Other GRUB rescue errors
+## <a id="other-grub-rescue-errors"></a>Other GRUB rescue errors
 
 The following screenshot shows the error message:
 
