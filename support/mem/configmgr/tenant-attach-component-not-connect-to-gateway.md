@@ -3,6 +3,8 @@ title: Tenant attach components fail to connect to cloud management gateway
 description: Provides a solution to an issue where Configuration Manager components for tenant attach fail to connect to the cloud management gateway.
 ms.date: 07/05/2022
 ms.reviewer: brianhun, umaikhan
+author: helenclu
+ms.author: luche
 ---
 
 # Error when running client action from Microsoft Endpoint Manager admin center
