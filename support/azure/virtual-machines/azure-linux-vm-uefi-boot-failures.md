@@ -25,9 +25,27 @@ Check the current state of your VM by using the [Azure boot diagnostics](boot-di
 
 The boot diagnostics screenshot shows the following error messages:
 
-:::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/no-boot-image.png" alt-text="Screenshot of the hyper-V error message for missing UEFI boot image.":::
+- Error 1
 
-:::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/pxe-error.png" alt-text="Screenshot of the transition of hyper-V error to PXE boot issue.":::
+    > Virtual Machine Boot Summary
+    >
+    > 1. Unknown Device  
+    >     The boot loader did not load an operating system.
+    > 2. SCSI Disk (0,0)  
+    >    The boot loader did not load an operating system.
+    > 3. SCSI Disk (0,1)  
+    >    The boot loader did not load an operating system.
+    > 4. Network Adapter (000D3A4DD64D)  
+    >    A boot image was not found.
+    > No operating system was loaded. Your virtual machine may be configured incorrectly. Exit and re-configure your VM or Click restart to retry the current boot sequence again.
+
+    :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/no-boot-image.png" alt-text="Screenshot of the hyper-V error message for missing UEFI boot image.":::
+
+- Error 2
+
+    > Start PXE over IPv4
+
+    :::image type="content" source="./media/azure-linux-vm-uefi-boot-failures/pxe-error.png" alt-text="Screenshot of the transition of hyper-V error to PXE boot issue.":::
 
 ## Before you troubleshoot
 
