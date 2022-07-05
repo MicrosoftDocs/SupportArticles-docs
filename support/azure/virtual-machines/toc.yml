@@ -98,7 +98,7 @@
         href: troubleshoot-device-names-problems.md
       - name: Error in an Azure Linux VM - Failed to start Switch Root
         href: resolve-failed-start-switch-root-azure-linux-vm.md
-      - name: Grub Rescue
+      - name: GRUB rescue issues
         href: troubleshoot-vm-boot-error.md
       - name: Linux VM does not start after an LIS upgrade
         href: linux-vm-not-start-kernel-lis.md
