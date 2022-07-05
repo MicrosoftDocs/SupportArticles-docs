@@ -49,7 +49,7 @@ grub rescue>
 
 3. After the GRUB rescue issue is resolved, perform the following actions:
 
-    1. Unmounted the copy of the file systems from the rescue/repair VM.
+    1. Unmount the copy of the file systems from the rescue/repair VM.
 
     2. Run the `az vm repair restore` command to swap the repaired OS disk with the original OS disk of the VM. For more information, see Step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
