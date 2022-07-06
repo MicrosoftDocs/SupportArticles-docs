@@ -1,7 +1,8 @@
 ---
 title: Frequently asked questions about SharePoint Domain renames
 description: Answers questions about renaming a SharePoint domain.
-author: pramodbalusu
+author: v-matthamer
+ms.reviewer: PramodBalusu
 ms.author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal

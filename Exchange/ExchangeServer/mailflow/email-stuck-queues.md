@@ -8,7 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: sesteven
+ms.author: v-six
+ms.reviewer: sesteven
 ms.custom: 
   - CSSTroubleshoot
   - CI 124314
