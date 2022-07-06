@@ -1,7 +1,7 @@
 ---
 title: SBC connectivity issues
 description: Describes how to diagnose SIP options or TLS certificate issues with SBC.
-ms.date: 7/5/2021
+ms.date: 7/5/2022
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
