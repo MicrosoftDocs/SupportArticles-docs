@@ -15,14 +15,16 @@ _Applies to:_ &nbsp; Configuration Manager (current branch)
 
 ## Symptoms
 
-After the public certificate is changed on July 27, 2022, if you run a client action from Microsoft Endpoint Manager admin center, Configuration Manager components for tenant attach will fail to connect to the cloud management gateway with a "Mismatch certificate subject name" error.
+When you run a client action from the Microsoft Endpoint Manager admin center, Configuration Manager components for tenant attach fail to connect to the cloud management gateway with the following error:
 
-This issue can occur in all the supported Configuration Manager versions that run versions less than [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456).
+> Failed to check and load service signing certificate. System.ArgumentException: Mismatch certificate subject name
 
-Here are example entries in the *CMGatewayNotificationWorker.log* file in the top-level site in the hierarchy:
+This issue occurs in the versions less than [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456) after the change of public certificates on July 27, 2022.
+
+Here are some example entries in the *CMGatewayNotificationWorker.log* file in the top-level site in the hierarchy:
 
 ```output
-Error occured when process notification with notification Id 5d5ef2b2-fbf6-4245-8b12-9618e98d1054. Ignore the notification. SMS_SERVICE_CONNECTOR_CMGatewayNotificationWorker
+Error occured when process notification with notification Id <notification Id>. Ignore the notification. SMS_SERVICE_CONNECTOR_CMGatewayNotificationWorker
 Exception details: SMS_SERVICE_CONNECTOR_CMGatewayNotificationWorker
 [Warning][CMGatewayNotificationWorker][0][System.IO.InvalidDataException][0x80131501]
 Failed to check and load service signing certificate. System.ArgumentException: Mismatch certificate subject name
@@ -34,12 +36,14 @@ at Microsoft.ConfigurationManager.ServiceConnector.AccountOnboardingWorker.\<Ref
 
 ## Cause
 
-After July 27, 2022, **OU=Microsoft Corporation** is removed from the public certificate subject name, but the configuration manager database still has the old subject name, which causes the load check failure.
+After the change of public certificates on July 27, 2022, **OU=Microsoft Corporation** is removed from the public certificate subject name, but the configuration manager database still has the old subject name, which causes the load check failure.
 
 ## Resolution
 
-If you are running Configuration Manager version 2203, install [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456) to resolve this issue.
+To fix this issue, use one of the following methods:
 
-If you are running a previous supported version of Configuration Manager, upgrade to Configuration Manager version 2203 and install [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456).
+- If you are running Configuration Manager version 2203, install [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456).
 
-If the solutions above aren't your option, open a support ticket with the Configuration Manager support team to mitigate the issue in the supported version of Configuration Manager in your environment.
+- If you are running a previous supported version of Configuration Manager, upgrade to Configuration Manager version 2203 and install [Configuration Manager version 2203 hotfix rollup](/mem/configmgr/hotfix/2203/14244456).
+
+If the methods above aren't your option, open a support ticket with the Configuration Manager support team to mitigate the issue in the supported version of Configuration Manager in your environment.
