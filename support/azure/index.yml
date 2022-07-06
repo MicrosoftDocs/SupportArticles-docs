@@ -15,6 +15,11 @@ productDirectory:
     links:
     - url: active-directory/welcome-azure-ad.yml
       text: Troubleshooting articles for Azure Active Directory
+  - title:  Azure App Service
+    imageSrc: "https://static.docs.com/ui/media/product/azure/app-service.svg"
+    links:
+    - url: app-service/welcome-app-service.yml
+      text: Troubleshooting articles for Azure App Service
   - title: Cloud Services
     imageSrc: "https://static.docs.com/ui/media/product/azure/cloud-services.svg"
     links:
