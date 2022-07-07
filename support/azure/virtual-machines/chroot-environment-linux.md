@@ -19,7 +19,7 @@ ms.author: genli
 
 This article describes how to troubleshoot the chroot environment in the Rescue virtual machine (VM) in Linux.
 
-## Ubuntu 16.x && Ubuntu 18.x
+## Ubuntu 16.x && Ubuntu 18.x && Ubuntu 20.04
 
 1. Stop or de-allocate the affected VM.
 1. Create a rescue VM of the same generation, same OS version, in same resource group and location using managed disk.
