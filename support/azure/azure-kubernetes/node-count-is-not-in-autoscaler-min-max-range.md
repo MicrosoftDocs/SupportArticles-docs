@@ -1,18 +1,27 @@
 ---
 title: Current node count isn't in the autoscaler min and max range
-description: Troubleshoot why the current node count isn't in the autoscaler min and max range when you resume an Azure Kubernetes Service cluster after a stop operation.
-ms.date: 6/9/2022
+description: Troubleshoot why the current node count isn't in the autoscaler minimum and maximum range when you resume an Azure Kubernetes Service cluster after a stop operation.
+ms.date: 7/6/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
+editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
 ms.service: container-service
 keywords:
-#Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the current node count isn't in the autoscaler min and max range so that I can successfully resume my Azure Kubernetes Service (AKS) cluster after a stop operation.
+#Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the current node count isn't in the autoscaler "min" and "max" range so that I can successfully resume my Azure Kubernetes Service (AKS) cluster after a stop operation.
 ---
 # Current node count is outside the autoscaler min and max range
 
-If you're using the autoscaler for a Microsoft Azure Kubernetes Service (AKS) cluster, when you start your cluster back up, your current node count might not fall within the minimum and maximum range of values that you set. This behavior is expected.
+## Symptoms
 
-The cluster starts with the number of nodes that it needs to run its workloads, which isn't impacted by your autoscaler settings. When your cluster does scaling operations, the minimum and maximum values will impact your current node count. Your cluster will eventually enter and remain in that desired range until you stop your cluster.
+You're using the autoscaler for a Microsoft Azure Kubernetes Service (AKS) cluster. When you restart your cluster, your current node count doesn't fall within the minimum and maximum range of values that you set.
+
+## Cause
+
+This behavior is expected. The cluster starts by setting the number of nodes that it needs to run its workloads. These values aren't affected by your autoscaler settings. When your cluster does scaling operations, the minimum and maximum values will affect your current node count.
+
+## More information
+
+Your cluster will eventually enter and remain in the desired range until you stop the cluster.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
