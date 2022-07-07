@@ -28,7 +28,7 @@ _Original KB number:_ &nbsp;3195087
 
 Consider the following scenario:
 
-- You create a receive connector to use **Basic Authentication**, **Basic Authentication over TLS** **or NTLM Authentication (Integrated)**.
+- You create a receive connector to use **Basic Authentication**, **Basic Authentication over TLS**, or **NTLM Authentication (Integrated)**.
 - You don't use **Anonymous Users** as a permission group on this connector.
 - You send email messages to the Microsoft Exchange Front End Transport Service.
 
@@ -36,7 +36,7 @@ In this scenario, the mail flow always seems to proxy the message to the same Tr
 
 ## Cause
 
-This behavior is by design. When you require **Basic Authentication**, **Basic Authentication over TLS** **or NTLM Authentication (Integrated)**, these messages are authenticated and then are routed to the host of the active mailbox database copy where the authenticated user is located. If no mailbox exists for that user, the organization's arbitration mailbox is used.
+This behavior is by design. When you require **Basic Authentication**, **Basic Authentication over TLS**, or **NTLM Authentication (Integrated)**, these messages are authenticated and then are routed to the host of the active mailbox database copy where the authenticated user is located. If no mailbox exists for that user, the organization's arbitration mailbox is used.
 
 ## Workaround 1
 
