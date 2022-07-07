@@ -1,5 +1,5 @@
 --- 
-title: Troubleshooting no data in Application Insights for .NET
+title: Troubleshoot no data in Application Insights for .NET
 description: Review troubleshooting steps to try when you're not seeing any data in Azure Application Insights for .NET and .NET Core.
 ms.date: 6/21/2022
 author: kelleyguiney22
@@ -13,7 +13,7 @@ ms.custom: devx-track-csharp
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot issues when I can't see data in Application Insights for .NET or .NET Core so I can use it effectively.  
 ---
 
-# Troubleshooting no data - Azure Application Insights for .NET and .NET Core
+# Troubleshoot no data - Azure Application Insights for .NET and .NET Core
 
 This article provides troubleshooting information to help resolve issues when data is missing or doesn’t appear when you’re using Application Insights for .NET and .NET Core.
 
@@ -33,6 +33,15 @@ This article provides troubleshooting information to help resolve issues when da
 * Check whether you're experiencing data loss at the [telemetry channel](/azure/azure-monitor/app/telemetry-channels#does-the-application-insights-channel-guarantee-telemetry-delivery-if-not-what-are-the-scenarios-in-which-telemetry-can-be-lost).
 
 * Check for any known issues in the telemetry channel of the [GitHub repo](https://github.com/Microsoft/ApplicationInsights-dotnet/issues).
+
+>[!Note]
+>If data is missing, it’s possible that the data is being rejected by the backend. This situation can occur for various reasons, including the following causes:
+>
+>* Required fields are missing
+>* One or more fields exceed size limits
+>* SDKs are failing silently instead of throwing exceptions
+>
+>You can use a tool like [Fiddler](https://www.telerik.com/fiddler/fiddler-classic), or any other tool that will inspect http traffic, to confirm successful telemetry uploads&mdash;the backend will return a "200 OK" http status code to indicate a successful upload. Or you can use the [SDK logs](#troubleshoot-logs) to see if the backend is rejecting data.  
 
 #### I'm experiencing data loss in Console App or on Web App when the app is about to stop
 
@@ -279,7 +288,7 @@ On February 5 2018, we announced that we removed logging of the Client IP addres
 
 ## Wrong geographical data in user telemetry
 
-The city, region, and country dimensions are derived from IP addresses and aren't always accurate. These IP addresses are processed for location first and then changed to 0.0.0.0 to be stored.
+The city and country/region dimensions are derived from IP addresses and aren't always accurate. These IP addresses are processed for location first and then changed to 0.0.0.0 to be stored.
 
 ## Exception "method not found" on running in Azure Cloud Services
 
@@ -292,7 +301,7 @@ Follow these instructions to capture troubleshooting logs for your framework.
 #### .NET Framework
 
 > [!NOTE]
-> Starting in version 2.14, the [Microsoft.AspNet.ApplicationInsights.HostingStartup](https://www.nuget.org/packages/Microsoft.AspNet.ApplicationInsights.HostingStartup) package is no longer necessary, SDK logs are now collected with the [Microsoft.ApplicationInsights](https://www.nuget.org/packages/Microsoft.ApplicationInsights/) package. No additional package is required.
+> Starting in version 2.14, the [Microsoft.AspNet.ApplicationInsights.HostingStartup](https://www.nuget.org/packages/Microsoft.AspNet.ApplicationInsights.HostingStartup) package is no longer necessary. SDK logs are now collected with the [Microsoft.ApplicationInsights](https://www.nuget.org/packages/Microsoft.ApplicationInsights/) package. No additional package is required.
 
 1. Modify your *ApplicationInsights.config* file to include the following XML code:
 
