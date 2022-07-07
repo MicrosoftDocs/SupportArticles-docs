@@ -36,7 +36,7 @@ at Microsoft.ConfigurationManager.ServiceConnector.AccountOnboardingWorker.\<Ref
 
 ## Cause
 
-After the change in public certificates on July 27, 2022, **OU=Microsoft Corporation** was removed from the public certificate subject name, but the configuration manager database still has the old subject name, which causes the load check failure.
+After the change in public certificates on July 27, 2022, **OU=Microsoft Corporation** is removed from the public certificate subject name, but the configuration manager database still has the old subject name, which causes the load check failure.
 
 ## Resolution
 
