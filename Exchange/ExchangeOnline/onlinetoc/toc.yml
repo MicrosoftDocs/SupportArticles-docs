@@ -293,7 +293,7 @@
           href: ../groups-and-distribution-lists/cannot-manage-hidden-group.md
         - name: Can't remove members that exceed the limit
           href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
-        - name: Can't upgrade distribution lists to Office 365 groups
+        - name: Can't upgrade distribution lists to Microsoft 365 groups
           href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
         - name: Common tasks to manage Microsoft 365 groups
           href: ../groups-and-distribution-lists/o365-group-tasks.md
@@ -301,7 +301,7 @@
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
-        - name: Problem adding a guest user to an Office 365 group
+        - name: Problem adding a guest user to a Microsoft 365 group
           href: ../groups-and-distribution-lists/problem-adding-guest-user-to-group.md
         - name: You don't have sufficient permissions
           href: ../groups-and-distribution-lists/no-sufficient-permissions-moving-dg.md
@@ -567,7 +567,7 @@
           href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
         - name: No soft-deleted mailbox after license removal
           href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
-        - name: Office 365 groups aren't visible from a shared mailbox
+        - name: Microsoft 365 groups aren't visible from a shared mailbox
           href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md
         - name: On behalf of reply from resource delegate to meeting organizer
           href: ../user-and-shared-mailboxes/on-behalf-of-reply-from-resource-delegate-to-meeting-organizer.md

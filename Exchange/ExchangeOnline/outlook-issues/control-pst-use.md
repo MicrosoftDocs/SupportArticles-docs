@@ -44,7 +44,7 @@ To prevent users from adding new data or content to an existing .pst file, add t
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook\PST`|
    
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
+   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `PSTDisableGrow`, and then press Enter.
@@ -71,7 +71,7 @@ To prevent users from connecting a .pst file to Outlook, add the `DisablePST` re
    |Office Customization Tool (OCT)|`HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`|
    
    > [!NOTE]
-   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
+   > The *xx*.0 placeholder represents the Outlook version (16.0 = Outlook 2016 and Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007).
 
 1. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 1. Type `DisablePST`, and then press Enter.

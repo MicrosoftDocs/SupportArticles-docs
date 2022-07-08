@@ -30,4 +30,4 @@ This behavior is by design when the rule is forwarding messages to 10 or more in
 
 ## Workaround
 
-To work around this behavior, create a distribution group or an Office 365 group, and then add the individual recipients to the group. For details, see [Create an Office 365 group in the admin center](/microsoft-365/admin/create-groups/create-groups).
+To work around this behavior, create a distribution group or a Microsoft 365 group, and then add the individual recipients to the group. For details, see [Create a group in the Microsoft 365 admin center](/microsoft-365/admin/create-groups/create-groups).

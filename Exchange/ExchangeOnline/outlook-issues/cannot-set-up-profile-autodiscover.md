@@ -63,7 +63,7 @@ First, make sure that you enter the correct email address and password on the Au
 
 If you're using Outlook 2010 or an earlier version, upgrade to the latest version of Outlook. For more information, see [Download and install Office using Office 365 for business on your PC](https://support.office.com/article/download-and-install-office-using-office-365-for-business-on-your-pc-72977511-dfd1-4d8b-856f-405cfb76839c).
 
-For more information about how to set up Outlook for Office 365, see the following resources:
+For more information about how to set up Outlook for Microsoft 365, see the following resources:
 
 - [Set up email in Outlook (for Windows)](https://support.office.com/article/set-up-email-in-outlook-for-windows-6e27792a-9267-4aa4-8bb6-c84ef146101b?correlationid=623124d7-72bd-424b-9797-c596ad4d18bf)
 - [Set up an email account in Outlook 2016 for Mac](https://support.office.com/article/set-up-an-email-account-in-outlook-2016-for-mac-86bd232e-0422-49b5-9b60-d1c5f1109f40)

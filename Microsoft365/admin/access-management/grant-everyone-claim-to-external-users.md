@@ -36,7 +36,7 @@ Before this change, Office 365 shared the behavior of on-premises Active Directo
  
 Similarly, the **All Authenticated Users** and **All Forms Users** claims were added automatically to each user's security context. This included external users who have accounts in the tenant's Azure AD. These claims enable users to access any content that is shared with the **All Authenticated Users** or **All Forms Users** groups.
  
-Office 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to an Office 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
+Office 365 enables users to share and collaborate seamlessly with users inside and outside their organizations. When a user in your organization adds an external user to a Microsoft 365 group or shares content with an external user and requires authentication ("sign-in") for access, an account is automatically created in Azure AD to represent the external guest user. It isn't necessary for a delegated administrator to create the account for the external user.
  
 ### Updates to the default access for external users
 
@@ -55,9 +55,9 @@ Use the following guidelines to grant access to external users for the selected 
 
 ### Use Azure AD groups and dynamic membership instead of default claims
 
-Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Azure AD. This includes Office 365 groups.
+Although we continue to support sharing with the **Everyone**, **Everyone Except External Users**, **All Authenticated Users**, and **All Forms Users** groups, we encourage you to implement role-based access management by using customer-defined groups in Azure AD. This includes Microsoft 365 groups.
  
-Office 365 groups define the membership and access to content across Office 365 services and experiences. Many Office 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
+Microsoft 365 groups define the membership and access to content across Office 365 services and experiences. Many Office 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
  
 Dynamic groups are the best way to make sure that the appropriate users have access to the correct content. Dynamic groups let you define a group one time by using a definition that is based on rules. By having this ability, you don't have to add or remove members as your organization changes. 
 

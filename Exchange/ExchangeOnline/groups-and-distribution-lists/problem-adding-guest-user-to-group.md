@@ -1,6 +1,6 @@
 ---
-title: Can't add a guest user to an Office 365 group
-description: Fixes an issue in which you receive a There was a problem adding one or more people to the group error message when you try to add a guest user to an Office 365 group.
+title: Can't add a guest user to a Microsoft 365 group
+description: Fixes an issue in which you receive a There was a problem adding one or more people to the group error message when you try to add a guest user to a Microsoft 365 group.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 4054864
 
 ## Symptoms
 
-When you try to add a guest user to a Microsoft Office 365 group, you receive the following error message:
+When you try to add a guest user to a Microsoft 365 group, you receive the following error message:
 
 > There was a problem adding one or more people to the group. For help, contact your administrator.
 
