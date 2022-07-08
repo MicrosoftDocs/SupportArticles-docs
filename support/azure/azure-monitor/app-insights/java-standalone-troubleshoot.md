@@ -1,9 +1,10 @@
 ---
-title: Troubleshooting Azure Monitor Application Insights for Java
+title: Troubleshoot Azure Monitor Application Insights for Java
 description: This article presents troubleshooting information for the Java agent for Azure Monitor Application Insights.
 ms.topic: conceptual
 ms.date: 6/22/2022
 ms.author: v-kegui
+author: kelleyguiney22
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor
@@ -13,7 +14,7 @@ ms.custom: devx-track-java
 #Customer intent: As an Application Insights for Java user, I want to understand how to troubleshoot common issues so I can use it effectively.
 ---
 
-# Troubleshooting guide: Azure Monitor Application Insights for Java
+# Troubleshoot guide: Azure Monitor Application Insights for Java
 
 This article provides troubleshooting information to resolve common issues that might occur when you're instrumenting a Java application with the Java agent for Application Insights. Application Insights is a feature of the Azure Monitor platform service.
 
@@ -120,23 +121,23 @@ We recommend the following two steps to resolve this issue:
 
 2. Select the **View site information** (lock) icon in the browser, and then select the **Certificate** option.
 
-    :::image type="content" source="media/java-standalone-troubleshoot/certificate-icon-capture.png" alt-text="Screenshot of the Certificate option in site information on a web browser tab." lightbox="media/java-standalone-troubleshoot/certificate-icon-capture.png":::
+    :::image type="content" source="media/java-standalone-troubleshoot/certificate-icon-capture.png" alt-text="Screenshot of the Certificate option in site information on a web browser tab.":::
 
 3. Select **Certification Path**, select the root certificate, and then select **View Certificate**. This action will pop up a new certificate menu, and you can download the certificate from the new menu.
 
-    :::image type="content" source="media/java-standalone-troubleshoot/root-certificate.png" alt-text="Screenshot of how to select the root certificate in the Certificate dialog box." lightbox="media/java-standalone-troubleshoot/root-certificate.png":::
+    :::image type="content" source="media/java-standalone-troubleshoot/root-certificate.png" alt-text="Screenshot of how to select the root certificate in the Certificate dialog box.":::
 
 4. Go to the **Details** tab, and select **Copy to file**.
 5. Select **Next**, select the **Base-64 encoded X.509 (.CER)** format, and then select **Next** again.
 
-    :::image type="content" source="media/java-standalone-troubleshoot/certificate-export-wizard.png" alt-text="Screenshot of the Certificate Export Wizard, with the Bse-64 encoded X.509 certificate file format selected." lightbox="media/java-standalone-troubleshoot/certificate-export-wizard.png":::
+    :::image type="content" source="media/java-standalone-troubleshoot/certificate-export-wizard.png" alt-text="Screenshot of the Certificate Export Wizard, with the Bse-64 encoded X.509 certificate file format selected.":::
 
 6. Specify the file where you want to save the SSL certificate. Then select **Next** > **Finish**. You should see a message that says "The export was successful."
 
 > [!WARNING]
 > You'll need to repeat these steps to get the new certificate before the current certificate expires. You can find the expiration information on the **Details** tab of the **Certificate** dialog box.
 >
-> :::image type="content" source="media/java-standalone-troubleshoot/certificate-details.png" alt-text="Screenshot that shows SSL certificate details, including time stamps for the Valid from and Valid to fields." lightbox="media/java-standalone-troubleshoot/certificate-details.png":::
+> :::image type="content" source="media/java-standalone-troubleshoot/certificate-details.png" alt-text="Screenshot that shows SSL certificate details, including time stamps for the Valid from and Valid to fields.":::
 
 ## Understanding UnknownHostException
 

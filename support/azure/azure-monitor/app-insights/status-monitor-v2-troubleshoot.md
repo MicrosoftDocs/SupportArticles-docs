@@ -4,6 +4,7 @@ description: Review Application Insights Agent known issues and troubleshooting 
 ms.topic: conceptual
 ms.date: 6/21/2022
 ms.author: v-kegui
+author: kelleyguiney22
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor
@@ -11,7 +12,7 @@ ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to understand known issues for the Application Insights Agent and how to troubleshoot common issues so I can use Application Insights and the Agent effectively.
 ---
 
-# Troubleshooting Azure Application Insights Agent (formerly Status Monitor v2)
+# Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
 
 This article provides troubleshooting information to help resolve data collection issues you might experience when Application Insights monitoring is enabled.
 
@@ -87,9 +88,7 @@ We don't instrument nested applications in Internet Information Services (IIS) i
 
 The SDK configuration isn't exposed to the end user in version 1.0.
 
-## Troubleshooting  
-
-### Troubleshoot PowerShell  
+## Troubleshoot PowerShell  
 
 #### Determine which modules are available
 
@@ -99,7 +98,7 @@ You can use the `Get-Module -ListAvailable` command to determine which modules a
 
 If a module hasn't been loaded into a PowerShell session, you can manually load it by running the `Import-Module <path to psd1>` command.
 
-### Troubleshooting the Application Insights Agent module
+## Troubleshoot the Application Insights Agent module
 
 #### List the commands available in the Application Insights Agent module
 
@@ -128,7 +127,7 @@ Run the `Get-ApplicationInsightsMonitoringStatus -PowerShellModule` command to d
 
 Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-monitor/app/status-monitor-v2-api-reference#get-applicationinsightsmonitoringstatus) for a detailed description of how to use this cmdlet.
 
-### Troubleshoot running processes
+## Troubleshoot running processes
 
 You can inspect the processes on the instrumented computer to determine if all DLLs are loaded and environment variables are set.
 If monitoring is working, at least 12 DLLs should be loaded.
@@ -154,7 +153,7 @@ DOTNET_STARTUP_HOOKS=<path-to-Microsoft.ApplicationInsights.StartupHook.dll>
 
 Review the [Get-ApplicationInsightsMonitoringStatus reference](/azure/azure-monitor/app/status-monitor-v2-api-reference) for a detailed description of how to use this cmdlet.
 
-### Collect ETW logs by using PerfView
+## Collect ETW logs by using PerfView
 
 #### Setup
 
