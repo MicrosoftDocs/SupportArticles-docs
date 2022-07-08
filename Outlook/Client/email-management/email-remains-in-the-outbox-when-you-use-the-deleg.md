@@ -20,7 +20,7 @@ appliesto:
   - Microsoft Office Outlook 2003
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -64,7 +64,7 @@ If you set DelegateSentItemsStyle=0 in the registry, email messages that you sen
     `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`
 
     > [!NOTE]
-    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
+    > In this key path, the placeholder <x.0> represents 16.0 for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019, 15.0 for Outlook 2013, 14.0 for Outlook 2010, 12.0 for Outlook 2007, and 11.0 for Outlook 2003.
 
 4. Select the `DelegateSentItemsStyle` value.
 5. On the **Edit** menu, select **Modify**.
@@ -122,6 +122,6 @@ The `DelegateSentItemsStyle` registry value is stored in the following location 
 `HKEY_CURRENT_USER\Software\Microsoft\Office\<x.0>\Outlook\Preferences`
 
 > [!NOTE]
-> In this registry path, <x.0> corresponds to your version of Outlook (Outlook 2003 = 11.0, Outlook 2007 = 12.0, Outlook 2010 = 14.0, Outlook 2013 = 15.0, Outlook 2016, Outlook for Office 365 and Outlook 2019 = 16.0).
+> In this registry path, <x.0> corresponds to your version of Outlook (Outlook 2003 = 11.0, Outlook 2007 = 12.0, Outlook 2010 = 14.0, Outlook 2013 = 15.0, Outlook 2016, Outlook for Microsoft 365 and Outlook 2019 = 16.0).
 
 The functionality that is provided by the `DelegateSentItemsStyle` registry value is described in [When you send an e-mail message from a shared mailbox in Outlook 2007, the sent message is not saved in the Sent Items folder of the shared mailbox](https://support.microsoft.com/help/972148).

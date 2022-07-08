@@ -16,7 +16,7 @@ appliesto:
 - Exchange Server 2010 Standard 
 - Microsoft Exchange Server 2003 Enterprise Edition 
 - Microsoft Exchange Server 2003 Standard Edition 
-- Outlook for Office 365 Outlook 2019
+- Outlook for Microsoft 365 Outlook 2019
 search.appverid: MET150
 ms.reviewer: aruiz, randyto
 author: simonxjx

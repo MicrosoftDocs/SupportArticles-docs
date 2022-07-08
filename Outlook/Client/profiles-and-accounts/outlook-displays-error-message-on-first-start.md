@@ -7,7 +7,7 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
-- Outlook for Office 365
+- Outlook for Microsoft 365
 - Outlook 2021
 - Outlook 2019
 - Outlook 2016

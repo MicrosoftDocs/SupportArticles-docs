@@ -10,7 +10,7 @@ appliesto:
 - Outlook 2019
 - Outlook 2016
 - Outlook 2013
-- Outlook for Office 365
+- Outlook for Microsoft 365
 search.appverid: MET150
 ms.reviewer: tasitae
 author: simonxjx
