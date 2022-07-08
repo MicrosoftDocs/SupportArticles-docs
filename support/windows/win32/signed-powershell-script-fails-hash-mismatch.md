@@ -1,0 +1,101 @@
+---
+title: The signed PowerShell script fails for hash mismatch
+description: This article provides resolutions for an issue where the execution of signed PowerShell script fails with error message.
+ms.date: 07/19/2022
+ms.custom: sap:Developer Tools\Windows SDK\Windows SDK for Windows 10
+ms.reviewer: milanmil
+ms.author: v-sidong
+author: mrmilanmm
+ms.technology: windows-dev-apps-desktop-app-ui-dev
+---
+#  The signed PowerShell script fails to run due to hash mismatch
+
+## Symptom
+
+Consider the following scenario:
+
+- You have a script that contains special characters like ö, ä, ü.
+
+- You sign the script on a computer that uses one system locale (for example, en-US).
+
+- You run the signed script on a computer that uses another system locale (for example, cs-CZ).
+
+In this scenario, PowerShell displays the following error message:
+
+```Output
+The contents of file <FullPathForSignedPowerShellScript> might have been
+changed by an unauthorized user or process because the hash of the file does 
+not match the hash stored in the digital signature. The script cannot run on 
+the specified system.
+```
+
+## Cause
+
+When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, ü are differently encoded on en-US and cs-CZ computers.
+
+Some process of signature verification creates hash for PowerShell script content&ndash;the content doesn't include the signature. And the umlaut and special characters are differently interpreted on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
+
+## Resolution
+
+To make signed PowerShell scripts run independently from locale settings, follow these steps:
+
+1. Get the unsigned version of the PowerShell script.
+
+1. Replace or remove all umlaut and special characters like ö, ä, ü.
+
+1. Sign the script.
+
+1. Run the signed script.
+
+## More information
+
+To reproduce the issue, follow these steps:
+
+1. Make sure the following settings on a computer:
+
+    ```powershell
+    PS C:\Users> get-culture
+    LCID             Name             DisplayName
+    ----             ----             ----------- 
+    1033             en-US            English (United States)
+    PS C:\Users> Get-ExecutionPolicy
+    AllSigned
+    PS C:\Users> Get-WinSystemLocale 
+    LCID             Name             DisplayName  
+    ----             ----             -----------  
+    1033             en-US            English (United States)
+    ```
+
+1. On the same computer, create a PowerShell script *Install.ps1* that contains a special character "ä", and [sign the script](/powershell/module/microsoft.powershell.core/about/about_signing#sign-a-script).
+
+    > [!NOTE]
+    > When you run the signed script on the same computer, it works without problems.
+
+1. Run the same signed script on a computer that uses another system locale. For example:
+
+    ```powershell
+    PS C:\tmp> Get-Culture
+    LCID              Name             DisplayName
+    ----              ----             -----------
+    1033              en-US            English (United States)
+    PS C:\tmp > Get-ExecutionPolicy
+    AllSigned
+    PS C:\tmp > Get-WinSystemLocale
+    LCID              Name             DisplayName
+    ----              ----             -----------
+    1029              cs-CZ            Czech (Czech Republic)
+    ```
+
+    The script fails with the following messages:
+
+    ```Output
+    PS C:\tmp> .\Install.ps1  
+    .\Install.ps1 : File C:\tmp\Install.ps1 cannot be loaded. The contents of file C:\tmp\Install.ps1 might have been
+    changed by an unauthorized user or process, because the hash of the file does not match the hash stored in the digital
+    signature. The script cannot run on the specified system. For more information, run Get-Help about_Signing..  
+    At line:1 char:1  
+    + .\Install.ps1  
+            + ~~~~~~~~~~~~~  
+            + CategoryInfo : SecurityError: (:) [], PSSecurityException  
+            + FullyQualifiedErrorId : UnauthorizedAccess  
+    ```

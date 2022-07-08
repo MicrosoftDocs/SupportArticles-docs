@@ -126,6 +126,8 @@
       href: limitation-10-smart-card-readers.md
     - name: SignTool may corrupt PowerShell script file
       href: signtool-corrupts-powershell-script.md
+    - name: Signed PowerShell script fails for hash mismatch
+      href: signed-powershell-script-fails-hash-mismatch.md
   - name: System services development
     items:
     - name: Access Violation of BEX or APPCRASH occurs
