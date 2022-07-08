@@ -12,11 +12,10 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Office 2010 Installation failure: "...encountered an error during setup" CAQuietExec wevtutil.exe BCSEvents.man
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

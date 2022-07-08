@@ -14,6 +14,7 @@ appliesto:
   - Skype for Business Server 2015
   - Microsoft Lync 2013
   - Microsoft Lync 2010
+ms.date: 3/31/2022
 ---
 
 # Some clients can't connect to conferencing modalities after you install Security Bulletin MS16-065

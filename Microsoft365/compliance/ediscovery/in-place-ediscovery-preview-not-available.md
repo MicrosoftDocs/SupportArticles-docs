@@ -14,10 +14,13 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # In-Place eDiscovery preview isn't available for items in inactive Exchange Online mailboxes
 
 _Original KB number:_ &nbsp; 2989744
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Office 365 Identity Management
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # POP/IMAP client authenticate fails if X-MS-Client-Application in the AD FS claim rule is set to Microsoft.Exchange.PopImap
 

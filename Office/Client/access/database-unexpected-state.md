@@ -19,12 +19,11 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "The database is in an unexpected state" error when you open a database in Access
 
 This article fixes an issue that occurs when you use the DAO library to convert a database.
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 888634
 

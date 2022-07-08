@@ -13,11 +13,10 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Word
+ms.date: 3/31/2022
 ---
 
 # "The image part with relationship rID8 was not found" error in Microsoft Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -20,6 +20,7 @@ appliesto:
   - Outlook 2019
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2010, 2013, 2016, or Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected
 

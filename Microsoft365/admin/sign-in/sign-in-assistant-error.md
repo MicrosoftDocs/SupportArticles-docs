@@ -12,16 +12,16 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # "Microsoft Online Services Sign In Assistant Error" when you activate Office Professional Plus
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to activate Office Professional Plus on your computer, you receive the following error message:
-```adoc
+
+```output
 "Microsoft Online Services Sign In Assistant Error"
 
 The Microsoft Online Services Sign In Assistant has experienced an error. The error must be resolved before your subscription for this product can be verified.

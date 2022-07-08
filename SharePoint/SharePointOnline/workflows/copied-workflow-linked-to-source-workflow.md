@@ -12,6 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # A SharePoint Online workflow that was copied and pasted from a Workflows Site Object in SharePoint Designer is linked to the source workflow

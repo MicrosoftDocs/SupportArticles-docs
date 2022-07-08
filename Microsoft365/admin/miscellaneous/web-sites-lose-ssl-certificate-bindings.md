@@ -5,19 +5,18 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.reviewer: mgraham
-appliesto:
-- Office Web Apps Server 2013
+appliesto: 
+  - Office Web Apps Server 2013
+ms.date: 3/31/2022
 ---
 
 # Web sites lose SSL certificate bindings on Office Online Server
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

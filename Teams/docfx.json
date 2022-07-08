@@ -48,22 +48,27 @@
         "**/*.md": "msteams"
       },
       "ms.subservice": {
-        "channels/**/*.md": "channels",
-        "context/**/*.md": "",
+        "authentication/**/*.md": "authentication",
+        "channels/**/*.md": "channels",        
         "exchange-integration/**/*.md": "exchange-integration",
         "files/**/*.md": "files",
-        "known-issues/**/*.md": "",
+        "forms/**/*.md": "forms",        
         "meetings/**/*.md": "meetings",
         "mobile/**/*.md": "mobile-devices",
         "phone-system/**/*.md": "phone-system",
+        "provisioning/**/*.md": "provisioning",
+        "sites/**/*.md": "sites",
+        "tabs/**/*.md": "tabs",
         "teams-administration/**/*.md": "administration",
         "teams-conferencing/**/*.md": "conferencing",
-        "Teams-devices-and-rooms/**/*.md": "devices-and-rooms",
+        "teams-rooms-and-devices/**/*.md": "devices-and-rooms",
         "teams-im-presence/**/*.md": "im-and-presence",
+        "teams-on-linux/**/*.md": "teams-on-linux",
         "teams-on-mac/**/*.md": "teams-on-mac",
         "teams-on-windows/**/*.md": "teams-on-windows",
         "teams-onenote-integration/**/*.md": "onenote-integration",
-        "teams-sign-in/**/*.md": "sign-in"
+        "teams-sign-in/**/*.md": "sign-in",
+        "third-party-programs/**/*.md": "third-party-programs"
       }
     },
     "template": [],

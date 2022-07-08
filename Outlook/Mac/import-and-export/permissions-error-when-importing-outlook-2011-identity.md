@@ -15,6 +15,7 @@ appliesto:
   - Outlook 2016 for Mac
   - Outlook for Mac for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Permissions error when you import an Outlook 2011 identity
 

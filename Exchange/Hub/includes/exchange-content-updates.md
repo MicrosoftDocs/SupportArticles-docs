@@ -2,48 +2,50 @@
 
 
 
-## Week of January 10, 2022
+## Week of June 27, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/11/2022 | [Can't copy, move, or import more than 1,000 items to a public folder](/exchange/troubleshoot/public-folders/cannot-copy-move-import-items) | added |
-| 1/11/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
-| 1/12/2022 | [Find and fix email delivery issues as an Office 365 for business admin](/exchange/troubleshoot/email-delivery/email-delivery-issues) | modified |
-| 1/12/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
-| 1/12/2022 | [Increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | modified |
-| 1/14/2022 | [Fix Outlook connection problems in Microsoft 365](/exchange/troubleshoot/outlook-issues/outlook-connection-issues) | modified |
+| 6/28/2022 | [ADSTS50011 error when running HCW](/exchange/troubleshoot/hybrid-configuration-wizard-errors/error-hybrid-config-wizard) | modified |
+| 6/28/2022 | ATP notifications displayed in foreign languages | removed |
+| 6/28/2022 | Domains on Outlook Safe Senders list not recognized | removed |
+| 6/28/2022 | Reduce malware threats via file attachment blocking | removed |
+| 6/28/2022 | User Impersonation messages are classified as phishing but not as user impersonation | removed |
+| 7/1/2022 | [RopFastTransferSourceCopyTo operation fails on messages](/exchange/troubleshoot/client-connectivity/ropfasttransfersourcecopyto-operation-fails) | modified |
 
 
-## Week of January 03, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/6/2022 | [Messages aren't routed through on-premises in hybrid](/exchange/troubleshoot/email-delivery/hybrid-messages-not-routed-through-on-premises) | modified |
-| 1/6/2022 | [Can't finalize a public folder batch migration](/exchange/troubleshoot/public-folders/cannot-finalize-migration-batch) | added |
-
-
-## Week of December 20, 2021
+## Week of June 20, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/20/2021 | [Self-help diagnostics for issues in Exchange Online and Outlook](/exchange/troubleshoot/administration/self-help-diagnostics) | modified |
-| 12/20/2021 | [Troubleshoot migration issues in Exchange hybrid](/exchange/troubleshoot/move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid) | modified |
-| 12/21/2021 | [UsageLocation validation error about Enable-UMMailbox](/exchange/troubleshoot/administration/enable-ummailbox-cannot-be-performed-error) | modified |
-| 12/21/2021 | [550 5.7.64 TenantAttribution; Relay Access Denied SMTP when users send mails](/exchange/troubleshoot/email-delivery/relay-access-denied-smtp) | modified |
-| 12/21/2021 | [The Sent time stamp on email messages is incorrect in Outlook on the web](/exchange/troubleshoot/client-connectivity/incorrect-sent-time-stamp) | modified |
+| 6/20/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | modified |
+| 6/22/2022 | [RopFastTransferSourceCopyTo operation fails on messages](/exchange/troubleshoot/client-connectivity/ropfasttransfersourcecopyto-operation-fails) | added |
 
 
-## Week of December 13, 2021
+## Week of June 13, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/14/2021 | [Read receipt is sent from public folder mailbox](/exchange/troubleshoot/public-folders/public-folder-not-send-read-receipt) | added |
-| 12/14/2021 | [Collect ActiveSync device logs to troubleshoot sync issues for mobile devices](/exchange/troubleshoot/mobile-devices/issues-for-mobile-devices) | modified |
-| 12/15/2021 | [Read receipt is sent from public folder mailbox](/exchange/troubleshoot/public-folders/public-folder-not-send-read-receipt) | modified |
-| 12/15/2021 | [Troubleshoot ActiveSync with Exchange Server](/exchange/troubleshoot/client-connectivity/troubleshoot-activesync-with-exchange-server) | modified |
-| 12/15/2021 | [How to increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | added |
-| 12/17/2021 | [Increase or customize Exchange Online mailbox size](/exchange/troubleshoot/user-and-shared-mailboxes/increase-or-customize-mailbox-size) | modified |
+| 6/17/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
+| 6/17/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
+
+
+## Week of June 06, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/7/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | added |
+| 6/7/2022 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
+| 6/9/2022 | [Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
+
+
+## Week of May 30, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |

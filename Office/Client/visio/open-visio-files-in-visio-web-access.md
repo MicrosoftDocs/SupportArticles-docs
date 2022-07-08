@@ -16,11 +16,10 @@ appliesto:
   - Visio 2019
   - Visio 2016
   - Visio 2013
+ms.date: 3/31/2022
 ---
 
 # You can't open Visio files in Visio Web Access even if Visio Viewer is installed
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

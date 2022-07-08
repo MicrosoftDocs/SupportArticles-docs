@@ -14,6 +14,7 @@ ms.reviewer: alinastr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Office 365 groups aren't visible from a shared mailbox
 

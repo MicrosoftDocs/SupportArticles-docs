@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Word 2010
   - Word 2007
+ms.date: 3/31/2022
 ---
 
 # You are prompted to save the changes to the global template every time that you exit Word 2007 or Word 2010
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

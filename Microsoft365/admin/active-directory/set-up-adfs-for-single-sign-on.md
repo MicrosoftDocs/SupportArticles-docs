@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # Set up ADFS for Office 365 for Single Sign-On
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This video shows how to set up Active Directory Federation Service (ADFS) to work together with Office 365. It does not cover the ADFS proxy server scenario. This video discusses ADFS for Windows Server 2012 R2. However, the procedure also applies to ADFS 2.0 — except for steps 1, 3, and 7. In each of those steps, see the "Notes for ADFS 2.0" section for more information about how to use this procedure in Windows Server 2008.
 

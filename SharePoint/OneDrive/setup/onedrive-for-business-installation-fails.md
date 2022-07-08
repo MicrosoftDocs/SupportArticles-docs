@@ -15,6 +15,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # A OneDrive for Business installation fails for users confined to an internal network
 

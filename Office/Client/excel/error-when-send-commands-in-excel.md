@@ -15,11 +15,10 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # "An error occurred when sending commands to the program" in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

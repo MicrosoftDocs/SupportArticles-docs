@@ -30,6 +30,7 @@ localization_priority: Normal
 manager: dcscontentpm
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Fix Outlook connection problems for Microsoft 365 account
 
@@ -43,7 +44,7 @@ If you're using Outlook to access your Microsoft 365 email account or another Ex
 We can diagnose and fix several common Outlook connectivity issues for you. If our automated tool can't fix your issue, or you'd like to fix it yourself, see the next section.
 </br></br>
 <table>
-<tr><td><img src="media/outlook-connection-issues/support-icon.png" alt="Support icon."/></td><td><b>Let us fix your issue</b></br><a href="https://diagnostics.office.com/#/">Support and Recovery Assistant for Microsoft 365</a></td><td><img src="media/outlook-connection-issues/help-icon.png" alt="Help icon."/></td><td><b>Need more help?</b></br><a href="https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b">Contact support for business products - Admin Help</a></td></tr>
+<tr><td><img src="media/outlook-connection-issues/support-icon.png" alt="Support icon."/></td><td><b>Let us fix your issue</b></br><a href="https://aka.ms/SaRA-OutlookDisconnect-TshootDocs">Support and Recovery Assistant for Microsoft 365</a></td><td><img src="media/outlook-connection-issues/help-icon.png" alt="Help icon."/></td><td><b>Need more help?</b></br><a href="https://support.office.com/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b">Contact support for business products - Admin Help</a></td></tr>
 </table>
 
 ## Fix software update and profile issues

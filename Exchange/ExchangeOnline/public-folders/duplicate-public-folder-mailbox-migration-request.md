@@ -16,6 +16,7 @@ editor: v-jesits
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "DestinationADNotUpToDatePermanentException" error in a public folder mailbox migration request
 

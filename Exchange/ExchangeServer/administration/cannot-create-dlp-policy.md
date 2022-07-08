@@ -57,7 +57,6 @@ The following table contains more information about the affected languages:
 |Chinese (Simplified, PRC)|cn-ZH|40|All|
 |Portuguese (Portugal)|pt-PT|40|All|
 |Amharic (Ethiopia)|am-ET|40|All|
-|||||
 
 ## Cause
 

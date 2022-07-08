@@ -13,10 +13,13 @@ ms.reviewer: umeshk
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't search inactive mailboxes in Exchange Online
 
 _Original KB number:_ &nbsp; 2898413
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

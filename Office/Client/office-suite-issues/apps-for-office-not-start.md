@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Office Add-in doesn't start if you disable protected mode for the Restricted Sites zone in Internet Explorer
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

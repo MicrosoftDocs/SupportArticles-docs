@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 ms.reviewer: jalalb
 appliesto: 
   - Office 365 for Mac
+ms.date: 3/31/2022
 ---
 
 # "Office 365 Enterprise E3 setup is incomplete" error in Office 365 for Mac
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

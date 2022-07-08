@@ -67,7 +67,6 @@ The `AppsForOfficeEnabled` parameter value is stored in the `msExchProvisioningF
 |---|---|
 |$True|0|
 |$False|512 (decimal)|
-|||
 
 As the `msExchProvisioningFlags` attribute can contain several flag values for different parameters (not just the `AppsForOfficeEnabled` parameter), you may have to do some math to determine the current value of the `AppsForOfficeEnabled` parameter. Therefore, if the value of this attribute is greater than 512, you have to see whether the value is made up of several values, one of which includes 512.
 
@@ -77,4 +76,3 @@ For example:
 |---|---|---|---|
 |640|512 & 128|$False|because 512 is part of the attribute value, the `AppsForOfficeEnabled` parameter is set to **$False**. This always adds **512** to the attribute value.|
 |1280|1024 & 256|$True|because 512 is Not part of the attribute value, the `AppsForOfficeEnabled` parameter is set to **$True**. This always adds **0** to the attribute value.|
-|||||

@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - OneNote 2013
+ms.date: 3/31/2022
 ---
 
 # Warning in OneNote 2013 when a notebook is in an offline location
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

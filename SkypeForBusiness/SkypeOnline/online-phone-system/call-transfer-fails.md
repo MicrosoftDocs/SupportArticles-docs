@@ -13,6 +13,7 @@ ms.author: v-six
 ms.reviewer: landerl, nmurav, zhengni, jastark, lynnroe, cbland, kristinw, corbinm, yoren
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Call transfer fails when you use Skype for Business Cloud Connector Edition

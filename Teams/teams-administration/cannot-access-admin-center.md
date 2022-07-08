@@ -2,7 +2,7 @@
 title: Error (We can't get the activity log) when accessing the Microsoft Teams admin center
 description: Describes an issue in which you are not able to access Microsoft Teams admin center. Provides a solution.
 author: helenclu
-ms.author: scapero
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Error when accessing the Microsoft Teams admin center: We can't get the activity log

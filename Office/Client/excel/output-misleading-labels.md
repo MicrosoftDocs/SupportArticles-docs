@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Office Excel 2003
   - Excel 2004 for Mac
+ms.date: 3/31/2022
 ---
 
 # Misleading labels in the output of the Analysis ToolPak t-Test tools in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -45,9 +44,7 @@ To illustrate the t-Test tools, create a blank Excel worksheet, copy the followi
 |170|190||
 |160|180||
 |150|170||
-||||
 |t-Test: Two-Sample Assuming Unequal Variances|||
-||||
 ||Variable 1|Variable 2|
 |Mean|175|195|
 |Variance|350|350|

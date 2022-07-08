@@ -14,11 +14,10 @@ appliesto:
   - Excel 2019
   - Excel 2016
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # How to prevent files from opening automatically in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

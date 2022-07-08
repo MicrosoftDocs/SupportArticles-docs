@@ -9,16 +9,15 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.reviewer: samwilli, ctronent
-appliesto:
-- Word Web App
-- IIS Media Services 3.0
+appliesto: 
+  - Word Web App
+  - IIS Media Services 3.0
+ms.date: 3/31/2022
 ---
 
 # You cannot find any clip art when you open Microsoft Word Online or Microsoft OneNote Online and try to insert some clip art
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

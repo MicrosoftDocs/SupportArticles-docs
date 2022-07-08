@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

@@ -18,11 +18,10 @@ appliesto:
   - Access 2010
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
+ms.date: 3/31/2022
 ---
 
 # "Query must have at least one destination field" when you run an Access query
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

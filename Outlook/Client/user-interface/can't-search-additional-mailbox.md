@@ -2,7 +2,7 @@
 title: Error (Something went wrong and your search couldn't be completed) when searching from an additional mailbox in Outlook
 description: When you perform a search from a secondary mailbox that you have Full Access permissions in Outlook, the operation will fail. This is a known limitation of the Exchange Online search service.
 author: helenclu
-ms.author: aruiz
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,6 +17,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # "Something went wrong and your search couldn't be completed" error message when searching from an additional mailbox in Outlook

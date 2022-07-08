@@ -14,13 +14,14 @@ appliesto:
   - Exchange Online
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # ArchiveStatus is set to "None" for an active archive mailbox in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4486848
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

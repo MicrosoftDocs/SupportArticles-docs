@@ -13,6 +13,7 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Can't schedule Skype for Business Online meetings, see presence info, or send IMs from Outlook Web App in Office 365

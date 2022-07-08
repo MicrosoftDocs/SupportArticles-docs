@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # You cannot create a PivotTable in Excel 2013 when field names in a source range contain similar characters
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

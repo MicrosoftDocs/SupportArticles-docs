@@ -13,11 +13,10 @@ ms.author: luche
 appliesto: 
   - Office Excel 2007
   - Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # An active Excel process continues to run after using a VBA macro to programmatically quit Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -17,11 +17,10 @@ appliesto:
   - Office Professional Plus 2016
   - Visio Professional 2016
   - Project Professional 2016
+ms.date: 3/31/2022
 ---
 
 # How to prioritize the use of BITS by Office 2016 clients for downloading updates
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

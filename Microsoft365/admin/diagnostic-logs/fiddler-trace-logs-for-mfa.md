@@ -13,11 +13,10 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to use Fiddler trace logs for MFA in Office 365 and Azure AD
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

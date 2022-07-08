@@ -15,11 +15,10 @@ ms.author: luche
 ms.reviewer: mattbum
 appliesto: 
   - Access 2007
+ms.date: 3/31/2022
 ---
 
 # How to store, calculate, and compare Date/Time data in Microsoft Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -13,6 +13,7 @@ ms.reviewer: Jenl
 appliesto: 
   - Excel 2013
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Cannot locate a server to load the workbook Data Model when you refresh a PivotTable in an Excel 2013 workbook
 

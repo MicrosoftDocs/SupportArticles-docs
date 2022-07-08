@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (Get-HybridMailflowDatacenterIPs is not recognized) error when running Hybrid Configuration wizard
 

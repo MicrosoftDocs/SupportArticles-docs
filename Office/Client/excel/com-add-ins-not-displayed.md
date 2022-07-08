@@ -15,11 +15,10 @@ appliesto:
   - Power BI for Office 365
   - Excel 2016
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # COM add-ins are not displayed in the COM Add-Ins dialog box in Excel 2013 and Excel 2016
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

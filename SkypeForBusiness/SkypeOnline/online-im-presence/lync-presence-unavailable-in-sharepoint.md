@@ -14,6 +14,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Lync presence is unavailable or missing in SharePoint sites

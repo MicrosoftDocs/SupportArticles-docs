@@ -2,41 +2,29 @@
 
 
 
-## Week of January 10, 2022
+## Week of June 27, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 1/12/2022 | [Access Denied or You need permission to access this site](/sharepoint/troubleshoot/administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business) | modified |
-| 1/12/2022 | [Profile picture not showing in SharePoint Online](/sharepoint/troubleshoot/administration/profile-picture-not-showing) | modified |
-| 1/14/2022 | [SharePoint Online out of storage space](/sharepoint/troubleshoot/administration/out-of-storage) | modified |
-| 1/14/2022 | [Unable to delete a SharePoint site](/sharepoint/troubleshoot/sites/unable-to-delete-site) | modified |
+| 6/27/2022 | [Error AADSTS50020 when signing into OneDrive](/sharepoint/troubleshoot/sync/sign-into-onedrive-sync-app-error) | modified |
+| 6/27/2022 | [Notifications sent to SharePoint sites connected to Microsoft 365 groups aren’t received](/sharepoint/troubleshoot/sites/notification-email-not-received) | modified |
 
 
-## Week of January 03, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 1/5/2022 | [Database compatibility level causes low performance](/sharepoint/troubleshoot/administration/sql-database-compatibility-for-sharepoint-installation) | modified |
-| 1/5/2022 | [System Center 2016 Operations Manager APM Agent causing heap corruption in SharePoint](/sharepoint/troubleshoot/administration/system-center-2016-operations-manager-apm-agent-causing-heap-corruption) | modified |
-
-
-## Week of December 20, 2021
+## Week of June 20, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/20/2021 | [Create a default Site collection Term Set if none is present](/sharepoint/troubleshoot/administration/create-default-site-term-set) | modified |
-| 12/21/2021 | [Can't change the default language for a site](/sharepoint/troubleshoot/sites/change-default-language-site-collection) | modified |
-| 12/21/2021 | [SharePoint Online Public Websites to be discontinued](/sharepoint/troubleshoot/sites/public-websites-be-discontinued) | modified |
-| 12/22/2021 | [Unable to delete items in SharePoint and OneDrive](/sharepoint/troubleshoot/administration/unable-to-delete-files) | modified |
-| 12/23/2021 | [Users are redirected when browsing to a SharePoint or OneDrive site](/sharepoint/troubleshoot/administration/access-to-sharepoint-online-is-monitored) | modified |
+| 6/20/2022 | [An invalid policy blocks a SharePoint site deletion](/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion) | modified |
+| 6/20/2022 | [Error AADSTS50020 when signing into OneDrive](/sharepoint/troubleshoot/sync/sign-into-onedrive-sync-app-error) | added |
+| 6/23/2022 | [Error message when an external user accepts a SharePoint Online invitation by using another account](/sharepoint/troubleshoot/sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account) | modified |
+| 6/24/2022 | [Certain Microsoft SharePoint Server 2013 installation scenarios are not supported](/sharepoint/troubleshoot/installation-and-setup/certain-installation-scenarios-are-not-supported) | modified |
 
 
-## Week of December 13, 2021
+## Week of June 13, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 12/15/2021 | [The content processing pipeline failed to process the item](/sharepoint/troubleshoot/search/parser-server-failed-to-start) | added |
+| 6/14/2022 | [An invalid policy blocks a SharePoint site deletion](/sharepoint/troubleshoot/sites/compliance-policy-blocking-site-deletion) | modified |

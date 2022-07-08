@@ -2,7 +2,8 @@
 title: Configuration for Microsoft Offices Online or Office Online Server authentication with external users
 description: Describes how to avoid the authentication prompt when you configure Office Online Server to work with external users.
 author: helenclu
-ms.author: jhaak
+ms.author: luche
+ms.reviewer: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
+ms.date: 3/31/2022
 ---
 
 # Configuration for Office Online Server authentication with external users

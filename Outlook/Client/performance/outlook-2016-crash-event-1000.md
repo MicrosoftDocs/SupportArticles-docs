@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2016 crashes after you install a language pack and use that language
 
@@ -30,7 +31,6 @@ After you install a Microsoft Office 2016 language pack and then set Microsoft O
 |Outlook.exe|Outlook.exe|000260ab|
 |Outlook.exe|Outlook.exe|00026088|
 |Outlook.exe|Outlook.exe|0002605a|
-||||
 
 ## Cause
 

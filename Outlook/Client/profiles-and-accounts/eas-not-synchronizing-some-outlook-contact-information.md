@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010
   - Exchange Server 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange ActiveSync does not synchronize some Outlook contact information as expected
 
@@ -53,7 +54,6 @@ The following table summarizes the field names that will synchronize and that wi
 |Home 2|Other|
 |Home Fax|Radio|
 |Mobile|Telex|
-|||
 
 ## References
 

@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Office 2016
+ms.date: 3/31/2022
 ---
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!TIP]
 > To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).

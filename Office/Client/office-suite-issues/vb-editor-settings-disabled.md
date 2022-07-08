@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: tputt, gregli, brreich, sloanc, djess, andyfel
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Some settings for the Visual Basic Editor that you enabled in an earlier version of an Office application are disabled in Office 2010
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

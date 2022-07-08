@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel 2016
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # How to clean up an Excel workbook so that it uses less memory
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

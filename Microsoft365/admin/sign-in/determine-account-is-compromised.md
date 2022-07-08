@@ -12,11 +12,10 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to determine whether your Office 365 account has been compromised
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

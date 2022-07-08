@@ -13,6 +13,7 @@ ms.custom:
 appliesto: 
   - Skype for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Troubleshooting Skype for Business sign-in for users
 

@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Time zones that do not observe daylight saving time
 

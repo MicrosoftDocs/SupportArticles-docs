@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Error when you install Exchange Server 2013 CU1 or CU2: Error occurred while configuring Search Foundation
 

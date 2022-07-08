@@ -14,6 +14,7 @@ ms.reviewer: mchen, aruiz, gregmans, tsimon, laurentc, amkanade, doakm, randyto,
 appliesto: 
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The Contact Card in Outlook 2010 does not change when you try to customize it by using Group Policy or the Office Customization Tool (OCT)
 
@@ -70,7 +71,6 @@ Table 1: Contact Card default item line item integer values
 |E-mail|6|
 |Calendar|7|
 |Location|8|
-|||
 
 Table 2: AD DS attributes and their corresponding MAPI values
 
@@ -110,7 +110,6 @@ Table 2: AD DS attributes and their corresponding MAPI values
 |personalPager|8c68001f|PR_EMS_AB_TELEPHONE_PERSONAL_PAGER||
 |employeeType|8c69001f|PR_EMS_AB_EMPLOYEE_TYPE||
 |personalTitle|8c6b001f|PR_EMS_AB_PERSONAL_TITLE||
-|||||
 
 > [!IMPORTANT]
 > The AD DS Attributes names are case sensitive.
@@ -128,7 +127,6 @@ Table 2: AD DS attributes and their corresponding MAPI values
 |manager||Does not exist in the Address Book|
 |description|806f101f|PR_EMS_AB_DESCRIPTION|
 |postalAddress|810c101f|PR_EMS_AB_POSTAL_ADDRESS|
-||||
 
 > [!NOTE]
 > The MAPI values that you can use for the TurnOnContactTabMAPIReplace# value are listed in the Property Tag column of the table shown in the following article:

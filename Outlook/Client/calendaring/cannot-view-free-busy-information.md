@@ -2,7 +2,7 @@
 title: Error (We're checking everyone's calendars) when viewing free/busy information in Outlook
 description: Resolves an issue in which you can't view free/busy information and you receive an error message (We're checking everyone's calendars) in Outlook.
 author: helenclu
-ms.author: meshel
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Error when you view free/busy information in Outlook: We're checking everyone's calendars

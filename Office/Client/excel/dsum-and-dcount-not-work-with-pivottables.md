@@ -14,13 +14,12 @@ search.appverid:
 appliesto: 
   - Excel 2013
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # The DSUM and DCOUNT functions in Excel do not work with PivotTables
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Consider the following scenario in Microsoft Excel:
 
@@ -29,7 +28,7 @@ Consider the following scenario in Microsoft Excel:
 - You enter a formula by using either of the following database functions:
   - DCOUNT   
   - DSUM   
-   
+
 - You use the PivotTable's cell references for the database parameter of the database function. And, you use the cell reference for the column in the PivotTable for the field parameter of the database function. 
 
   For example, consider the following scenario. The PivotTable is in cells C10:F20. The targeted column is F10, and this column has the column label of "Total." The database table on which the PivotTable is based is in N1:Q10. The criteria for the function are H2:H12. The DCOUNT function parameters are as follows:
@@ -47,11 +46,11 @@ Consider the following scenario in Microsoft Excel:
 
   And, if you use the column label "Total" for the fieldparameter, the DCOUNT and DSUM functions also return the "#VALUE!" error.
 
-##  Cause
+## Cause
 
 This problem occurs because the field parameter of the DCOUNT and DSUM functions cannot use a cell reference or a column label to retrieve data from the database table. When you use the DCOUNT and the DSUM functions on a PivotTable, the field parameter can only use a number to represent the position of the column within the list. For example, the parameter can use 1 for the first column, 2 for the second column, and so on. Do not use quotation marks around the number.
 
-##  Workaround
+## Workaround
 
 To work around this issue, use either a column label or the column position value to identify the column to use in the field parameter. 
 

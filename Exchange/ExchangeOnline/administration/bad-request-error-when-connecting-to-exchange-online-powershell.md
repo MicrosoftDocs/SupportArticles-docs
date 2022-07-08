@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - MSfC O365-Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Bad Request error when you try to connect to Exchange Online PowerShell
 

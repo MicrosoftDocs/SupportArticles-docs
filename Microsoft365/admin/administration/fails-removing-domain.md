@@ -1,22 +1,21 @@
 ---
 title: You cannot remove a domain that has subdomains
-description: Describes an issue in which you receive the "Domain has associated subdomains" or "You cannot remove a domain that has subdomains" error. Provides a resolution.
+description: Describes an issue in which you receive the Domain has associated subdomains or You cannot remove a domain that has subdomains error. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
-appliesto:
-- User and Domain Management
+appliesto: 
+  - User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # "Domain has associated subdomains" when removing a domain from Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

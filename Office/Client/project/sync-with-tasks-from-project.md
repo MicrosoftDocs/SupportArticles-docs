@@ -19,15 +19,13 @@ appliesto:
   - SharePoint Server 2013
   - Project Online Desktop Client
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Sync with SharePoint tasks list from Project Professional
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
-### Overview
  The Sync with SharePointfeature lets a Project Manager share an .mpp project file with Microsoft SharePoint users. This feature is available to use with SharePoint Server 2013, SharePoint Server 2016, SharePoint Server 2019, and SharePoint Online through Project Professional 2013, Project Professional 2016, Project Professional 2019, and Project for Office 365. This feature creates a SharePoint Project site. This site contains a Project Summary and Timeline, a tasks list, and a Calendar. Synchronizing also saves the .mpp file to the site assets for future editing.
 
 > [!NOTE]

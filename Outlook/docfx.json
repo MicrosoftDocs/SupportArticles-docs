@@ -150,7 +150,7 @@
         "Mobile/add-ins/**/*.md": "add-ins",
         "Mobile/exchange-activesync/**/*.md": "exchange-activesync",
         "Mobile/exchange-connectivity/**/*.md": "exchange-connectivity",
-        "OutlookExperts/outlook-for-mac/**/*.md": ""
+        "OutlookExperts/outlook-for-mac/**/*.md": "outlook-for-mac"
       }      
     },
     "template": [],

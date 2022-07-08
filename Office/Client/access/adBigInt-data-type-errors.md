@@ -13,11 +13,10 @@ ms.author: v-maqiu
 appliesto: 
   - Access for Office 365
   - Access 2019
+ms.date: 3/31/2022
 ---
 
 # Access ADODB code errors when you use the adBigInt data type
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

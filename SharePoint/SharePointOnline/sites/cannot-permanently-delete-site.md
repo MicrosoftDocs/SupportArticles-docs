@@ -1,7 +1,8 @@
 ---
 title: Can't permanently delete a site when it's connected to a Microsoft 365 group
 description: Describes the error This site can't be permanently deleted because it's connected to a Microsoft 365 group.
-author: salarson
+author: v-matthamer
+ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -15,6 +16,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # Can't permanently delete a site when it's connected to a Microsoft 365 group

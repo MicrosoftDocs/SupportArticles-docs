@@ -15,6 +15,7 @@ ms.reviewer: batre
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Microsoft 365 Groups - common tasks
 
@@ -167,7 +168,6 @@ This table shows the size and membership limits that apply to Microsoft 365 Grou
 |Group mailbox size|50 GB|
 |Maximum email message send/receive size|35/36 MB is the default maximum send/receive limit, respectively. It can be increased by using the [Set-UnifiedGroup](/powershell/module/exchange/users-and-groups/set-unifiedgroup?view=exchange-ps&preserve-view=true) command, as necessary.|
 |Distribution Group as a member of a Microsoft 365 group|A distribution group that has more than 1,000 members cannot be added to a Microsoft 365 group. This also includes the nested distribution group members.|
-|||
 
 [Back to top](#summary)
 
@@ -440,7 +440,7 @@ Deleted Microsoft 365 groups and related services (such as Teams, SharePoint sit
 
 ### Export Microsoft 365 Groups information
 
-Use the Microsoft 365 compliance search to export email contents of a Microsoft 365 group to PST. For more information, see [Search for content using the Content Search tool](/microsoft-365/compliance/search-for-content?view=o365-worldwide&preserve-view=true).
+Use the Microsoft Purview search to export email contents of a Microsoft 365 group to PST. For more information, see [Search for content using the Content Search tool](/microsoft-365/compliance/search-for-content?view=o365-worldwide&preserve-view=true).
 
 You can run PowerShell commands to accomplish the following tasks.
 
@@ -470,7 +470,7 @@ To list all Microsoft 365 groups together with tracking information about the gr
 
 ### Microsoft 365 Group mailbox size
 
-The size limit of Microsoft 365 group mailboxes is 50 GB by default. The following information explains how to view the current size of a Microsoft 365 group mailbox, and how to increase the mailbox quota.
+The size limit of Microsoft 365 group mailboxes is 50 GB by default. The following information explains how to view the current size of a Microsoft 365 group mailbox, and how to free up space in it before it gets full.
 
 #### View the group mailbox size
 
@@ -489,20 +489,13 @@ The size limit of Microsoft 365 group mailboxes is 50 GB by default. The followi
    Get-Mailbox -GroupMailbox -ResultSize unlimited | Get-MailboxStatistics | ft DisplayName,TotalDeletedItemSize,TotalItemSize
    ```
 
-#### Increase group mailbox quota
+#### Increase space in the group mailbox
 
-1. [Connect to Exchange Online PowerShell](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps&preserve-view=true).
-2. Run the following command to change quota of a Microsoft 365 group mailbox to 100 GB:
+There's no supported way to increase the quota of a group mailbox. You must remove older email messages to free up space in the group mailbox.
 
-   ```powershell
-   Set-Mailbox <group mailbox name> -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
-   ````
+A group owner can remove older email messages by using Outlook or Outlook on the web to free up space immediately. A tenant administrator can set up a [retention policy](/microsoft-365/compliance/create-retention-policies) to clean older email messages from groups. Retention policies take longer to clean up the data though.
 
-   Example:
-
-   ```powershell
-   Set-Mailbox Marketing -GroupMailbox -ProhibitSendReceiveQuota 100GB -ProhibitSendQuota 95GB
-   ````
+Also, you can [search the content](/microsoft-365/compliance/content-search) of the group mailbox and [export the search results](/microsoft-365/compliance/export-search-results) to a PST file before removing email messages from the group mailbox.
 
 ### Microsoft 365 Group usage report
 

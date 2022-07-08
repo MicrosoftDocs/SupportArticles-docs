@@ -4,7 +4,8 @@ description: Describes an error message that you receive when you Offboard mailb
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: rrajan
+ms.author: v-six
+ms.reviewer: rrajan
 manager: dcscontentpm
 ms.custom: 
   - Exchange Hybrid
@@ -14,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 
 # Offboarding mailbox fails with error: MigrationPermanentException Target user already has a primary mailbox

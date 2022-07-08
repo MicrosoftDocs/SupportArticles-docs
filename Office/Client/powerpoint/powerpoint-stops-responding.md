@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - Microsoft PowerPoint for Mac
+ms.date: 3/31/2022
 ---
 
 # PowerPoint stops responding (spinning wheel)
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

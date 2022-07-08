@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: jgordner, sfrancis, sloanc, andyfel, djess, arykhus, mosesma, ryanwei, tomol
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # How to prevent Office 2010 from disabling printers
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 

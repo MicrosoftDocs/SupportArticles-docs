@@ -17,11 +17,10 @@ appliesto:
   - Access 2013
   - Access 2010
   - Microsoft Office Access 2007
+ms.date: 3/31/2022
 ---
 
 # Access cache formats for SharePoint lists and document libraries
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

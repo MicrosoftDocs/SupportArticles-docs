@@ -13,17 +13,20 @@ ms.reviewer: dahans
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Error message when you try to sign in to Skype for Business Online: "Cannot sign in to Lync because this sign-in address was not found"
 
 ## Problem
 
-When you try to sign in to Skype for Business Online (formerly Lync Online), you receive the following error message: Cannot sign in to Lync because this sign-in address was not found. Verify the sign-in address and try again. If the problem continues, please contact your support team.
+When you try to sign in to Skype for Business Online (formerly Lync Online), you receive the following error message:
+
+> Cannot sign in to Lync because this sign-in address was not found. Verify the sign-in address and try again. If the problem continues, please contact your support team.
 
 ## Solution
 
-To resolve this issue, first make sure that the user is licensed for Skype for Business Online in the Office 365 portal. After the user is licensed, he or she will be displayed in the Lync Admin Center.
+To resolve this issue, first make sure that the user is licensed for Skype for Business Online in the Office 365 portal. After the user is licensed, the user will be displayed in the Lync Admin Center.
 
 If you're synchronizing your on-premises Active Directory with Office 365 and the user is already licensed for Skype for Business Online but still can't sign in, make sure that the value of **msRTCSIP-UserEnabled** is **TRUE** in the on-premises Active Directory schema. Force a directory synchronization, and then wait 30 minutes. To do this, follow these steps:
 

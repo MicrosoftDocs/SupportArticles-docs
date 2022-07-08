@@ -2,7 +2,8 @@
 title: Large Publisher files open in read-only mode in SharePoint
 description: Describes an issue in which large Publisher files that are more than 50 MB open in read-only mode and can't be directly edited.
 author: helenclu
-ms.author: warrenr
+ms.author: luche
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -14,6 +15,7 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - Publisher 2013
+ms.date: 3/31/2022
 ---
 
 # Large Publisher files open in read-only mode

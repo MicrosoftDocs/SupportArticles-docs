@@ -17,6 +17,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # LinkedIn is no longer available in the Outlook Social Connector
 

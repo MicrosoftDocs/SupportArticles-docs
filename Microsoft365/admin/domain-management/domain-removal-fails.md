@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Azure Active Directory Directories, Domains, and Objects
+ms.date: 3/31/2022
 ---
 
 # "An Error Occurred" error and domain removal fails in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

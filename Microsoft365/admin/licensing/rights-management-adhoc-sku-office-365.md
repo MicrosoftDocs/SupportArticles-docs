@@ -12,11 +12,10 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
+ms.date: 3/31/2022
 ---
 
 # 50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > Microsoft Azure Information Protection was previously known as Microsoft Azure Rights Management. 

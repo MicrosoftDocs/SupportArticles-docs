@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Event ID 4999 is logged and MSExchangeServicesAppPool crashes in Exchange Server 2013
 

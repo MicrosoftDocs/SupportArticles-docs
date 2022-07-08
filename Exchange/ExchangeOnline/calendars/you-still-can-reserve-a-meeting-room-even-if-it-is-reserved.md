@@ -14,6 +14,7 @@ ms.reviewer: sathyana
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Office 365 users can reserve a meeting room even though it's already reserved for another meeting
 

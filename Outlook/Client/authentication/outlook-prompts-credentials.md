@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook continues to prompt for credentials after your domain password changes
 

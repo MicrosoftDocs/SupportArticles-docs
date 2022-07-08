@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Apps activation error Trusted Platform Module malfunctioned
 description: Troubleshooting methods for activation errors related to the TPM.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
@@ -14,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Trusted Platform Module malfunctioned”

@@ -11,6 +11,7 @@ ms.custom:
   - CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint Online troubleshooting

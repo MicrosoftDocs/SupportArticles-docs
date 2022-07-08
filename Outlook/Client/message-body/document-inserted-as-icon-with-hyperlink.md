@@ -16,6 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook for Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook inserts document as icon with hyperlink in body of message
 

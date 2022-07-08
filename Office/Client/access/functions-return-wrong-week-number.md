@@ -14,11 +14,10 @@ ms.reviewer: denniwil
 appliesto: 
   - Access
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Format or DatePart functions can return wrong week number for last Monday in Year
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!WARNING]
 > There is an issue with the use of this function. The last Monday in some calendar years can be returned as week 53 when it should be week 1. For more information and a workaround, see [Format or DatePart functions can return wrong week number for last Monday in Year](functions-return-wrong-week-number.md).

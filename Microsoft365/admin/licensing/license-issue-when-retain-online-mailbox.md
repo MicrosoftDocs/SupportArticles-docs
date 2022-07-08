@@ -13,11 +13,10 @@ ms.author: v-maqiu
 appliesto: 
   - Exchange Online
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # You receive a "One or more users need an assigned license in order to retain an Exchange Online mailbox or archive" message on the Users page of the Office 365 portal
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

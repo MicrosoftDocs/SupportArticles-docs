@@ -16,11 +16,10 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
+ms.date: 3/31/2022
 ---
 
 # How to customize the color of the spelling and grammar checker underlines in Microsoft Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!IMPORTANT]
 > This article contains information about how to modify the registry. Make sure to back up the registry before you modify it. Make sure that you know how to restore the registry if a problem occurs. For more information about how to back up, restore, and modify the registry, see [Windows registry information for advanced users](https://support.microsoft.com/help/256986).

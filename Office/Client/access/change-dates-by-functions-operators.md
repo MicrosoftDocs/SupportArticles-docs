@@ -16,11 +16,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How to make a change to dates by using functions and operators in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article applies to either a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file, and to a Microsoft Access project (.adp) file.
 

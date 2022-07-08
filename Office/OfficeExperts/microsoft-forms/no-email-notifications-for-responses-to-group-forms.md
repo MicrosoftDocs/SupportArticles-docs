@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot, CI 125260
 ms.topic: troubleshooting
-ms.author: zakirh
+ms.author: v-maqiu
+ms.reviwer: zakirh
 appliesto: 
   - Microsoft Forms
+ms.date: 3/31/2022
 ---
 # No email notifications for responses to Group Forms
 

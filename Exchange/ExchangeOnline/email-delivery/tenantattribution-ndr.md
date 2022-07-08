@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (550 5.7.64 TenantAttribution; Relay Access Denied SMTP) error when sending mail through Exchange Online Protection
 

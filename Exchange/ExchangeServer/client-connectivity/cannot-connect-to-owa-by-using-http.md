@@ -14,6 +14,7 @@ ms.reviewer:
 appliesto: 
   - Exchange Server 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Users can't connect to Outlook Web App by using the HTTP protocol in Exchange Server 2010
 

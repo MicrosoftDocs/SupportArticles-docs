@@ -17,11 +17,10 @@ appliesto:
   - Azure Backup
   - Office 365 User and Domain Management
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "Sorry, but we're having trouble signing you in" when a user signs in to Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

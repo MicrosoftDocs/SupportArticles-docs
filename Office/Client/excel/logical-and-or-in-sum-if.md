@@ -15,11 +15,10 @@ appliesto:
   - Microsoft Office Excel 2003
   - Microsoft Office Excel 2007
   - Excel 2010
+ms.date: 3/31/2022
 ---
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

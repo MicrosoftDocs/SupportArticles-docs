@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server
+ms.date: 3/31/2022
 ---
 # Exchange Service Pack upgrade fails with an unexpected error in ServiceControl.ps1
 

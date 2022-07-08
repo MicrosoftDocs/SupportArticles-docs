@@ -43,11 +43,10 @@ appliesto:
   - Microsoft Office Publisher 2003
   - Microsoft Office Publisher 2007
   - Publisher 2010Publisher 2013
+ms.date: 3/31/2022
 ---
 
 # Office programs may crash with the SendToBluetooth add-in installed
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Resolution
 

@@ -14,11 +14,10 @@ appliesto:
   - Word for Office 365
   - Word 2016
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # "Word cannot start the converter SSPDFCG_X64.cnv" error when you start Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

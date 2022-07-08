@@ -14,10 +14,13 @@ appliesto:
   - Exchange Online
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Contents of cloud-based archive are the same as contents of on-premises primary mailbox
 
 _Original KB number:_ &nbsp; 2987546
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

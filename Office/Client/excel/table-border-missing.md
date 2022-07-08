@@ -15,11 +15,10 @@ appliesto:
   - Outlook 2016 for Mac
   - Microsoft Excel for Mac 2011
   - Outlook 2011 for Mac
+ms.date: 3/31/2022
 ---
 
 # Excel/Outlook for Mac: Border missing when pasting table in email
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

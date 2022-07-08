@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: rtaylor
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # GetObject and CreateObject behavior of Office automation servers
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

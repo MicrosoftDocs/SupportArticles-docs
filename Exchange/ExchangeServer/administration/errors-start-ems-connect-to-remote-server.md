@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2016 Enterprise Edition
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Error (Method not found or Can't generate Export-Module) in Exchange Management Shell and remote PowerShell
 

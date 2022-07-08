@@ -12,11 +12,10 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appiesto: 
   - Sway
+ms.date: 3/31/2022
 ---
 
 # Office 365 Sway tile continues to appear in App Launcher even after it's disabled
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # Resource mailbox's calendar shows the organizer's name instead of the subject in an Exchange Server environment

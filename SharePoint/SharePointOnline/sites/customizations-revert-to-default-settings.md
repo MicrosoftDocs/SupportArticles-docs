@@ -13,6 +13,7 @@ ms.author: luche
 appliesto: 
   - SharePoint Online
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # Customizations to the Office 365 top navigation bar in SharePoint Online revert to the original settings

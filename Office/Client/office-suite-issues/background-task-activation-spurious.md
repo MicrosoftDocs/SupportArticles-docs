@@ -30,11 +30,10 @@ appliesto:
   - Visio Professional 2016
   - Visio Standard 2016
   - Word 2016
+ms.date: 3/31/2022
 ---
 
 # "Background task activation is spurious" when you use an Office 2016 application to access Office 365 resources
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

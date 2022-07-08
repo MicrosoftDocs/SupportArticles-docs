@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: klaw
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # You are redirected to a logon page or an error page, or you are prompted for authentication information when you click a hyperlink to a SSO Web site in an Office document
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

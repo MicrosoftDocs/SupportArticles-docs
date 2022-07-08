@@ -20,6 +20,7 @@ appliesto:
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Remote mailbox is not moved from Exchange Server 2010 to Exchange Online when move shows as Completed
 

@@ -2,7 +2,7 @@
 title: Troubleshoot Microsoft Teams and Exchange Server interaction issues
 description: Provides steps to troubleshoot interaction issues that occur between Microsoft Teams and Exchange Server.
 author: helenclu
-ms.author: chunlli
+ms.author: luche
 manager: dcscontentpm
 editor: v-jesits
 audience: ITPro
@@ -16,6 +16,7 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 # Troubleshoot Microsoft Teams and Exchange Server interaction issues
 

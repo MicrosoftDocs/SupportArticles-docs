@@ -9,9 +9,11 @@ search.appverid:
 audience: ITPro
 ms.custom: sap:office-experts, CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: thempel
+ms.author: v-maqiu
+ms.reviewer: thempel
 appliesto: 
   - Excel Online
+ms.date: 3/31/2022
 ---
 
 # How to refresh data to a SQL Azure Database in Excel Online

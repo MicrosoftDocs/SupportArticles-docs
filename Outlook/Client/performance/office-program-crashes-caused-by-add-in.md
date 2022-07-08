@@ -25,6 +25,7 @@ appliesto:
   - PowerPoint 2016
   - Word 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Office program crashes caused by Btmofficea.dll or Btmoffice.dll
 
@@ -130,4 +131,3 @@ Below is some additional information related to the `SendToBluetooth` add-in.
 | Internal Name|btmoffice.dll|
 | Legal Copyright|Copyright 2011 Motorola Solutions, Inc.|
 | Original Filename|btmoffice.dll|
-|||

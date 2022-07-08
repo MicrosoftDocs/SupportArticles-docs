@@ -10,10 +10,12 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Online
   - CSSTroubleshoot
+  - CI 162524
 search.appverid: 
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Office 365: Outlook and mobile device connectivity troubleshooting resources
 
@@ -22,10 +24,6 @@ appliesto:
 This article contains links to technical resources and support information for troubleshooting Microsoft Outlook connectivity and mobile device connectivity in Office 365.
 
 ## Cannot connect to Exchange Online by using Outlook
-
-Microsoft Knowledge Base articles
-
-- [2459968](https://support.microsoft.com/help/2459968) Outlook 2011 for Mac doesn't automatically set up your email server settings for Exchange Online in Office 365
 
 Help articles
 

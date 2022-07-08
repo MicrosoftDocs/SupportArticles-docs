@@ -13,13 +13,14 @@ ms.reviewer: alinastr, ninob
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Can't see the Calendar folder of an online archive mailbox by using Microsoft Outlook Web App
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4341449
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

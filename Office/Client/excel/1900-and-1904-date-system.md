@@ -18,11 +18,10 @@ appliesto:
   - Excel 2010
   - Office Excel 2007
   - Excel for Macintosh
+ms.date: 3/31/2022
 ---
 
 # Differences between the 1900 and the 1904 date system in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

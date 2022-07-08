@@ -16,8 +16,11 @@ appliesto:
   - O365 Modern Support
   - Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Issues that affect PST import jobs
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 When you use the Import service in the Security & Compliance Center to [import PST files](/microsoft-365/compliance/importing-pst-files-to-office-365) to user mailboxes in your organization, the last step in the procedure is to start the import job that you create. When the import process runs, you might experience issues, such as slow performance or job failure. This article lists some of the common issues that are related to PST import jobs, and provides resolutions that you can try.
 

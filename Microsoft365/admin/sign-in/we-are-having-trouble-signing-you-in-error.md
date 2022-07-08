@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365 User and Domain Management
+ms.date: 3/31/2022
 ---
 
 # "We're having trouble signing you in" error when you try to access your mail in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

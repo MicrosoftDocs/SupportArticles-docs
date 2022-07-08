@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
   - Visual Studio 2008
+ms.date: 3/31/2022
 ---
 
 # "Unable to cast COM object..." when exporting to Excel from Team Explorer 2008
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Action
 

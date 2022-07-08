@@ -8,15 +8,17 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
+  - CI 160833
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: batre
+ms.reviewer: batre, wloudermilk, ninob
 appliesto: 
   - Exchange Server 2016
   - Exchange Server 2013
   - Exchange Server 2010
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # On-premises users can't access cloud archive mailboxes with Full Access permission in Outlook
 
@@ -48,25 +50,13 @@ The primary mailbox and archive mailbox appear in Outlook in the web folder list
 
 ## Workarounds - Method 2
 
-First, reconfigure User B's mailbox permissions to grant User A Full Access permissions **without** automapping enabled. To do so, follow the steps in [How to remove automapping for a shared mailbox in Outlook for Office 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox).
-
-Then, create a new Outlook profile for the shared User B's mailbox:
-
-1. In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
-2. Select **Show Profiles** > **Add**.
-3. In the **Profile Name** box, type a name for the profile, and then select **OK**.
-4. Enter the email address for User B.
-5. When prompted, enter the credentials for User A.
-
-## Workarounds - Method 3
-
 > [!IMPORTANT]
 > Don't share your passwords with anyone. This workaround assumes User A is administering additional accounts or the shared mailbox.
 
 Create a new Outlook profile for the shared User B's mailbox, using User B's account credentials to log in. To create a profile, follow these steps:
 
-1.	In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
-2.	Select **Show Profiles** > **Add**.
-3.	In the **Profile Name** box, type a name for the profile, and then select **OK**.
-4.	Enter the email address for User B.
-5.	When prompted, enter the credentials for User B.
+1. In Outlook, select **File** > **Account Settings** > **Manage Profiles**.
+2. Select **Show Profiles** > **Add**.
+3. In the **Profile Name** box, type a name for the profile, and then select **OK**.
+4. Enter the email address for User B.
+5. When prompted, enter the credentials for User B.

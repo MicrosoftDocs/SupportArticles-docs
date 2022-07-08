@@ -18,6 +18,7 @@ appliesto:
   - Outlook 2010
   - Outlook for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook displays a Disconnected status when IPv6 is enabled
 

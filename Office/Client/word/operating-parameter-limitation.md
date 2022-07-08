@@ -16,11 +16,10 @@ appliesto:
   - Word 2016
   - Word 2013
   - Word 2010
+ms.date: 3/31/2022
 ---
 
 # Operating parameter limitations and specifications in Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This article lists the operating parameter limits of Microsoft Office Word and Microsoft Visual Basic for Applications.
 

@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - SharePoint Server 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # SharePoint People Picker stops resolving users from other domains with one-way trust
 

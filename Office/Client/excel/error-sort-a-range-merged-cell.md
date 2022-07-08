@@ -17,11 +17,10 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Excel 2007
+ms.date: 3/31/2022
 ---
 
 # You may receive an error message when you sort a range that contains merged cells in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

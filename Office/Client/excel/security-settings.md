@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Excel for Office 365
   - Excel 2019
+ms.date: 3/31/2022
 ---
 
 # Security settings for Dynamic Data Exchange in Excel Trust Center in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

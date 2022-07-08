@@ -14,12 +14,13 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # You can't start the eDiscovery PST Export Tool from the Exchange admin center in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2919825
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

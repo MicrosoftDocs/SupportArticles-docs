@@ -16,11 +16,10 @@ appliesto:
   - Visio Premium 2010
   - Visio Professional 2013
   - Visio Standard 2013
+ms.date: 3/31/2022
 ---
 
 # Visio Services does not render diagrams that are hosted on servers that have IDNs
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

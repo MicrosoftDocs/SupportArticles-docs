@@ -13,6 +13,7 @@ ms.reviewer:
 appliesto: 
   - OneDrive for Business
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Unable to open OneDrive on images using Sysprep
 

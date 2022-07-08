@@ -30,11 +30,10 @@ appliesto:
   - Visio Professional 2013
   - Access 2013
   - Project Professional 2013
+ms.date: 3/31/2022
 ---
 
 # Display issues in Office client applications
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

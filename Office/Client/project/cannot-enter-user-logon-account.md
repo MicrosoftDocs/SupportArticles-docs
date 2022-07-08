@@ -13,11 +13,10 @@ ms.author: luche
 appliesto: 
   - Project Server 2013
   - Project Online
+ms.date: 3/31/2022
 ---
 
 # Cannot enter User Logon Account for new resource
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Owners of an on-premises distribution group synced to O365 can't manage the distribution group in Exchange Online
 

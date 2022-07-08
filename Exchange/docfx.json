@@ -116,7 +116,7 @@
         "ExchangeHybrid/calendars/**/*.md": "calendars",
         "ExchangeHybrid/email-delivery/**/*.md": "email-delivery",
         "ExchangeHybrid/groups-and-distribution-lists/**/*.md": "groups-and-distribution-lists",
-        "ExchangeHybrid/hybrid-configuration-wizard-errors/**/*.md": "",
+        "ExchangeHybrid/hybrid-configuration-wizard-errors/**/*.md": "hybrid-configuration-wizard",
         "ExchangeHybrid/move-mailboxes/**/*.md": "move-or-migrate-mailboxes",
         "ExchangeHybrid/send-emails/**/*.md": "send-emails",
         "ExchangeHybrid/public-folders/**/*.md": "public-folders",

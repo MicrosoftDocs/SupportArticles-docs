@@ -20,6 +20,8 @@ ms.custom:
 ---
 # Resolve eDiscovery hold errors
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 This article discusses common issues that may occur with eDiscovery holds and how to resolve them. The article also includes recommended practices to help you mitigate or avoid these issues.
 
 ## Recommended practices
@@ -83,7 +85,7 @@ Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will 
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to click Retry option in the case hold page.":::
 
@@ -101,7 +103,7 @@ Running the `Set-CaseHoldPolicy -Identity "policyname" -RetryDistribution` will 
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 
@@ -163,7 +165,7 @@ After more storage quota has been added to the site the policy will need to be r
    Set-CaseHoldPolicy "policyname" -RetryDistribution
    ```
 
-Also in the case hold page in the Microsoft 365 compliance center, you can redeploy the policy by clicking **Retry**.
+Also in the case hold page in the Microsoft Purview compliance portal, you can redeploy the policy by clicking **Retry**.
 
 :::image type="content" source="./media/resolve-ediscovery-hold-issues/retry-case-hold.png" alt-text="Screenshot to retry a case hold.":::
 

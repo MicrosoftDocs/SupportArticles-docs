@@ -14,13 +14,14 @@ appliesto:
   - Microsoft Business Productivity Online Dedicated
   - Microsoft Business Productivity Online Suite Federal
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # Archive mailbox can't be provisioned or deprovisioned after a mailbox is migrated to Office 365 Dedicated/ITAR vNext
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4009935
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptom
 

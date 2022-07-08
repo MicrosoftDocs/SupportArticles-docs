@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # (You can't use the domain because it's not an accepted domain for your organization) error when you run the Add-RecipientPermission cmdlet
 

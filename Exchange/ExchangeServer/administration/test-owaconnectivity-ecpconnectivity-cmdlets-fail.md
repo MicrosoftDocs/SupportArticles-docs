@@ -15,6 +15,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Server 2010 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Test cmdlets fail with error: The task couldn't sign in with user extest_\<id>
 

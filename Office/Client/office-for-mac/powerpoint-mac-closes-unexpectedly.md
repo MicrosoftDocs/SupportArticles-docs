@@ -12,11 +12,10 @@ ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
   - PowerPoint for Mac
+ms.date: 3/31/2022
 ---
 
 # PowerPoint for Mac closes or quit unexpectedly when you start it or open a new presentation
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

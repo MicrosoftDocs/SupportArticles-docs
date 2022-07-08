@@ -13,10 +13,13 @@ ms.reviewer: gapart, munatara
 appliesto: 
   - Exchange Online Archiving
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Couldn't update the following event error when editing calendar items from OWA or Outlook
 
 _Original KB number:_ &nbsp; 4459263
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

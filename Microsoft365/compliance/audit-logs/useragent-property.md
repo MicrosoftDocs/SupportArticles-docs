@@ -13,13 +13,14 @@ ms.reviewer: munatara, ioana
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # UserAgent property value in the unified audit log from the Security & Compliance Center
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4487380
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Summary
 

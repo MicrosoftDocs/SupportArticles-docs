@@ -18,11 +18,10 @@ appliesto:
   - Project Standard 2010
   - Project Professional 2013
   - Project 2013 Standard
+ms.date: 3/31/2022
 ---
 
 # Gantt Chart view or Usage view print on too many pages in Project
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

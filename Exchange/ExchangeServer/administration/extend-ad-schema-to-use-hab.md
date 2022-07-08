@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Extend the Active Directory schema for the Hierarchical Address Book (HAB) on an Exchange Server 2010 server
 

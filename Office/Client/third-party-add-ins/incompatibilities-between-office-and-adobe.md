@@ -31,11 +31,10 @@ appliesto:
   - Publisher 2010
   - Visio Professional 2010
   - Visio Standard 2010
+ms.date: 3/31/2022
 ---
 
 # Incompatibilities between Office programs and Adobe Acrobat PDFMaker Office COM Add-in
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

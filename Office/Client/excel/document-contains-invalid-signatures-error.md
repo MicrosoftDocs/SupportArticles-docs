@@ -16,11 +16,10 @@ appliesto:
   - Excel 2016
   - Excel 2013Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # "This document contains invalid signatures" error when opening Excel workbooks that were digitally signed in an earlier version
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

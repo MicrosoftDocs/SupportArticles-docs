@@ -7,11 +7,12 @@ audience: ITPro
 ms.topic: landing-page
 ms.author: v-maqiu
 localization_priority: Normal
-ms.custom:
-- CSSTroubleshoot
-- CI 148980
-appliesto:
-- Microsoft 365
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 148980
+appliesto: 
+  - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Security troubleshooting

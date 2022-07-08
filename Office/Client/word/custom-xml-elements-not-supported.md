@@ -13,11 +13,10 @@ search.appverid:
 appliesto: 
   - Word 2010
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # "The file contains custom XML elements which are no longer supported by Word" when you try to open a document in Word
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

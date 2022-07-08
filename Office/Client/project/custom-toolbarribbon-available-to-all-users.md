@@ -18,17 +18,16 @@ appliesto:
   - Project Professional 2010
   - Microsoft Office Project Server 2007
   - Microsoft Office Project Professional 2003
+ms.date: 3/31/2022
 ---
 
 # Make a custom toolbar/ribbon available to all users in Project client
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction
 
 This article describes how to create a custom macro, and toolbar/ribbon that contains buttons to run macros). Additionally, this article describes how to deploy the custom objects to either the local global template (Global.mpt) or the enterprise global template if using Project Server. This allows the custom toolbar/ribbon to be available to all users of Microsoft Office Project clients whether users connect to Microsoft Office Project Server or use standalone Project clients.
 
-##  More Information
+## More Information
 
 When a project is opened it uses information in the local file, as well as the global template file, to set defaults for the plan. The global template file
 contains, views, reports, modules (macros), tables, filters, calendars, maps, fields, and groups (Toolbars are available in Project 2007 or earlier global template files but not 2010, the ribbon was introduced in 2010). Your project plan will use the defaults from the global template unless you create new or modify the existing objects . Customized objects are stored to the local project unless you take steps to copy the information to the global file. This global template can be shared with other Project client users, either by sending them the global.mpt file to save locally or share it via a network location.
@@ -76,7 +75,6 @@ To include a custom ribbon tab that has a command button to run a macro in your 
 
 The global will is automatically saved. The module and macro will now be available to all plans that use this local global template.
 
-
 ### Steps to copy the module to the enterprise global template in 2007 or 2010.
 
 
@@ -93,7 +91,6 @@ The next time a user opens any enterprise plan, the macro will be available.
 
 ### Steps to create a custom toolbar and add the macro to a button in 2007 and earlier.
 
-
 1. Start th Project client.   
 2. On the **Tools** menu, point to **Customize**, and then click **Toolbars**.   
 3. On the **Toolbars** tab, click **New**, and then type a name in the **Toolbar name** box. For example, type CustToolbar1, and then click OK.   
@@ -108,4 +105,4 @@ The next time a user opens any enterprise plan, the macro will be available.
 12. With the newly added button selected, click **Modify Selection**, and then click **Assign Macro**.   
 13. Make sure that the macro that you created appears in the **Command** box. This macro must not be a file-specific macro.   
 14. Click **Close**.   
-15. Exit Project client.   
+15. Exit Project client.

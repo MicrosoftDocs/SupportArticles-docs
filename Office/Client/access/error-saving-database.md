@@ -20,12 +20,11 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "Unable to create an MDE, ACCDE, or ADE database" error with a database that you can't compile
 
 This article fixes an issue in the VBA code that prevents you from compiling a database or project or there is a reference.
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 283788
 

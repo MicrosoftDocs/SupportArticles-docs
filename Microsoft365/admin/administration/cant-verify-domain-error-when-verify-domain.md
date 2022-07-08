@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - office 365
+ms.date: 3/31/2022
 ---
 
 # "Can't verify domain" error message when you try to verify a domain in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 

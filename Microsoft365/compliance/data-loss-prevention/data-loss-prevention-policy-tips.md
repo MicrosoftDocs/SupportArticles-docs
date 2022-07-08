@@ -1,101 +1,78 @@
 ---
-title: Troubleshooting Data Loss Prevention (DLP) policy tips
-description: Describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
+title: Issues that affect DLP policy tips
+description: Fixes some issues that occur if DLP policy tips don't work as expected.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.custom: CSSTroubleshoot
-appliesto:
-- Microsoft 365 Data Loss Prevention
+ms.reviewer: chgary, lindabr, sathyana
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 100086
+  - CI 160472
+appliesto: 
+  - Microsoft Purview Data Loss Prevention
+ms.date: 3/31/2022
 ---
 
-# Troubleshooting data loss prevention (DLP) policy tips
+# Resolve issues that affect DLP policy tips
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
-## Summary
+Data Loss Prevention (DLP) policy tip settings are configured in DLP policies. If you created DLP policies in Exchange Online, we recommend that you [migrate them to the Microsoft Purview compliance portal](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp). This is because [legacy Exchange Online data loss prevention in the Exchange admin center will be deprecated](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention). For policies that are not migrated, you might see unexpected results, such as no display of policy tips.
 
-The detection and protection of data is among the most important tasks that any business has today. As more and more organizations move their services to the cloud to store data, solutions to protect data flow and access are becoming increasingly important.
+This article describes the following common scenarios in which DLP policy tips might not work as expected, and provides resolutions that you can try:
 
-Microsoft 365 provides data loss prevention (DLP) services to help organizations comply with business standards and industry regulations. This behavior protects sensitive information and prevents its unintended disclosure.
-
-This article describes how to troubleshoot some issues that occur if DLP policy tips are not working as expected.
-
-> [!NOTE]
-> It is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
-
-## Common scenarios for troubleshooting DLP policy tips
-
-There are several reasons why DLP policy tips do not work as expected after you configure a Microsoft 365 DLP policy:
-
-- There are policy configuration errors.
-- Policy configurations are not supported (client only).
-- All policy conditions are not met.
-- MailTips are not enabled (client only).
-- Policy tips are configured in both Exchange admin center and Microsoft 365 compliance center.
-- The client doesn't support MailTips (Mac only).
-- The file-system configuration is not supported (PDFs on Windows 7 only).
-- There is invalid test data.
-
-## How to edit a DLP policy in the Microsoft 365 compliance center
-
-1. In the Microsoft 365 compliance center, locate **Data loss prevention** in the left pane.
-1. On the **Policies** tab, select the policy that requires editing, and then select **Edit policy**.
-
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png" alt-text="Screenshot of the steps of how to edit a D L P policy in the Microsoft 365 Compliance Center." lightbox="media/troubleshooting-data-loss-protection-policy-tips/edit-dlp-policy.png":::
+- Policy configuration errors occur
+- Policy configurations are not supported (client only)
+- Not all policy conditions are met
+- MailTips aren't enabled (client only)
+- Policy tips are configured both in multiple locations
+- `GetDLPPolicyTip` call is not found in Fiddler trace
+- Client doesn't support MailTips (Mac only)
+- File-system configuration is not supported (PDFs on Windows 7 only)
+- Invalid test data
 
 ## Policy configuration errors
 
-Policy is configured by using User notifications, but the status of the policy doesn't match the settings in the rule (Figure 1). A policy configuration error may also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level (Figure 2). This kind of setup is unnecessary and problematic. Only one rule is required.
+Policy is configured by using **User notifications**, but the status of the policy doesn't match the settings in the rule. Here's an example in which the policy is turned on but the policy status shows **Test it out first**.
 
-### Troubleshooting tip
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot of user notifications.":::
+
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot of the window titled Test or turn on the policy. The status titled Test it out first is highlighted in the policy status.":::
+
+A policy configuration error might also occur if the policy is configured by using two or more rules that detect the same sensitive data types that have the same **Instance count** value and confidence level.
+
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-rule.png" alt-text="Screenshot of SSN rule that is configured to have the detection based on sensitive info types.":::
+
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-content-rule.png" alt-text="Screenshot of SSN Content rule that is configured to have the detection based on sensitive info types.":::
+
+This kind of setup is unnecessary and problematic. Only one rule is required.
+
+### Resolution
 
 For these scenarios, create only one rule, and use detecting parameters that are based on the same sensitive data types.
 
-**Figure 1:** Policy configuration by using **User notifications**
+## Policy configurations not supported in Outlook 2013 and later versions
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/user-notifications.png" alt-text="Screenshot of User notifications.":::
+See [Outlook 2013 and later supports showing policy tips for only some conditions and exceptions](/microsoft-365/compliance/dlp-policy-tips-reference#outlook-2013-and-later-supports-showing-policy-tips-for-only-some-conditions-and-exceptions).
 
-Policy status
+## Not all policy conditions are met
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-status.png" alt-text="Screenshot of the option where test or turn on the policy you want to select.":::
+This scenario occurs primarily if policy tips don't work as expected in SharePoint Online and OneDrive for Business because there's an external sharing condition that's configured in a policy.
 
-**Figure 2:** Multiple rules configured to have the same detection based on Sensitive info types that share **Instance count** value and confidence level.
-
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-rule.png" alt-text="Screenshot of SSN rule that is configured to have the detection based on Sensitive info types.":::
-
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/ssn-content-rule.png" alt-text="Screenshot of SSN Content rule that is configured to have the detection based on Sensitive info types.":::
-
-## Policy configurations are not supported (Outlook 2013 and later clients only)
-
-A policy is configured by using conditions and actions that are currently not supported in Outlook 2013 or later clients.
-
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-configurations.png" alt-text="Screenshot shows policy configurations aren't supported.":::
-
-> [!NOTE]
-> All these conditions and actions work in Outlook. They will match content and enforce protective actions on content. However, policy tips are not yet supported.
-
-### Troubleshooting tip
-
-In Outlook, test conditions and actions that are supported in Outlook. Content matching and enforcement will still work.
-
-## All policy conditions are not met
-
-This reason primarily occurs if policy tips are not working as expected in SharePoint Online and OneDrive for Business because there's an external sharing condition that's configured in a policy.
-
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/external-sharing-condition.png" alt-text="Screenshot shows an external sharing condition is configured in a policy.":::
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/external-sharing-condition.png" alt-text="Screenshot shows that an external sharing condition is configured in a policy.":::
 
 > [!NOTE]
 > Currently, content is not indexed as shared externally until an external party that's located outside the organization accesses the content for the first time.
 
-## MailTips are not enabled (Outlook 2013 and later clients only)
+## MailTips are not enabled (Outlook 2013 and later version clients only)
 
-For Outlook 2013 and later clients, make sure that MailTips are enabled. To enable MailTips in Outlook, make sure that policy tips are enabled. To do this, follow these steps:
+For Outlook 2013 and later version clients, make sure that MailTips are enabled. To enable MailTips in Outlook, first make sure that policy tips are enabled. To do this, follow these steps:
 
 1. In Outlook, select **File** > **Options** > **Mail**.
 1. Scroll to the **MailTips** section, and then select **MailTips Options**.
@@ -104,65 +81,55 @@ For Outlook 2013 and later clients, make sure that MailTips are enabled. To enab
 1. Select **OK** two times to close the File window.
 1. Restart Outlook.
 
-    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enables MailTips in Outlook.":::
+    :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/mail-tips-options.png" alt-text="Screenshot of steps that enable MailTips in Outlook.":::
 
-## Policy tips are configured in multiple locations
+## Policy tips configured in multiple locations
 
-Policy tips don't work as expected if they're configured in multiple locations. You should configure or enable policy tips in only one of the following locations:
+See [Policy tips in the Exchange admin center vs. the Security & Compliance Center](/microsoft-365/compliance/use-notifications-and-policy-tips#policy-tips-in-the-exchange-admin-center-vs-the-security--compliance-center).
 
-- Exchange admin center
-- Microsoft 365 compliance center
+## `GetDLPPolicyTip` call not found in Fiddler trace
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/rule-configuration.png" alt-text="Screenshot of Policy tip that sets notify a policy in Exchange admin center rule with the Action.":::
+If DLP policy tips don't work as expected, Fiddler is a useful tool to help you diagnose the issue. Here's how to use a Fiddler trace to troubleshoot DLP policy tips.
 
-To view unified DLP policy tips in the Microsoft 365 compliance center, remove the **Notify the sender with a Policy Tip** action from all Transport rules in the Exchange admin center.
+1. Collect the Fiddler trace file when you reproduce the issue. Here's an example in which the DLP policy tip is triggered as expected.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/remove-notify-sender.png" alt-text="Screenshot to remove the Notify the sender with a Policy Tip action.":::
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/policy-tip-working.png" alt-text="Screenshot of a DLP policy tip working example when sending an email message.":::
 
-## How to edit a DLP policy in the Exchange admin center
+1. In the POST request, check whether the `GetDLPPolicyTip` call is made in the trace file. For the previous example, you can see the `GetDLPPolicyTip` call.
 
-> [!NOTE]
-> If you have DLP policies in both the Exchange admin center (EAC) and the Microsoft 365 compliance center, it is recommended that you [migrate your DLP policies to Compliance Center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp).
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/request.png" alt-text="Screenshot of a POST request in which the GetDLPPolicyTip call is highlighted.":::
 
-1. In the Exchange admin center, locate **compliance management**, and then select **data loss prevention**.
-1. Select the policy that requires editing, and then select the pencil icon or double-click the policy that has to be changed.
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/request-headers.png" alt-text="Screenshot of POST request headers in which the GetDLPPolicyTip call is highlighted.":::
 
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/open-policy-window.png" alt-text="Screenshot shows steps to open the policy window in the Exchange admin center.":::
+1. In the response, check the `DetectedClassificationIds` value. If the value field isn't empty, this indicates that the DLP policy matches the policy rule.
 
-1. In the window that opens, select the rule, and then select the pencil icon or double-click the rule that has to be changed.
+   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/response.png" alt-text="A screenshot of Response in which the DetectedClassificationIds value is highlighted.":::
 
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/rules-section.png" alt-text="Screenshot to select pencil icon in rules section.":::
+If you don't find the `GetDLPPolicyTip` call, and if the `DetectedClassificationIds` value field is empty in the response, follow these steps to resolve this issue:
 
-1. In the next window that opens, you can edit the rule.
-
-   :::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/detailed-fields.png" alt-text="Screenshot to edit the detailed fields.":::
+1. Check whether the DLP policy is enabled and configured correctly.
+2. Check whether your users enter the correct sensitive information and valid recipients or senders to trigger the policy.
 
 ## Client doesn't support MailTips
 
 There are several Outlook client licenses that don't support policy tips. [Outlook license requirements for Exchange features](https://support.microsoft.com/office/outlook-license-requirements-for-exchange-features-46b6b7c5-c3ca-43e5-8424-1e2807917c99) lists the Outlook client licenses that support DLP policy tips.
 
 > [!NOTE]
-> Policy tips are currently not supported for Outlook for Mac iOS clients. Although our Product Engineering teams know about this functionality gap between the Windows Outlook and Outlook for Mac clients, there's currently no set timeframe to add this functionality to a future release of Outlook for Mac. As a workaround, you can add text to the NDR response for your DLP policy rule that tells users to re-create their messages in the OWA client if they originally submitted the message by using Outlook for Mac. Use OWA client to expose the policy tips functionality to users and enable them to override, report a false positive, or enter a business justification (depending on the "Notify" action that's specified in the DLP Policy rule). Users can then submit messages for delivery.
+> Policy tips are currently not supported for Outlook for Mac iOS clients. As a workaround, you can add text to the NDR response for your DLP policy rule that tells users to re-create their messages in the OWA client if they originally submitted the message by using Outlook for Mac. Use the OWA client to expose the policy tips functionality to users and enable them to override, report a false positive, or enter a business justification (depending on the "Notify" action that's specified in the DLP Policy rule). Users can then submit messages for delivery.
 
-## Windows 7 and Adobe PDF
+## File-system configuration not supported
 
 No policy tip is displayed if the following conditions are true:
 
-- You are running Outlook 2013 or later clients on Windows 7.
-- You try to attach a file of Adobe PDF version 10 or later versions to an email message that should trigger a DLP policy tip.
+- You are running Outlook 2013 or later version clients on Windows 7.
+- You try to attach a file that's formatted as Adobe PDF version 10 or later versions to an email message that should trigger a DLP policy tip.
 
-### Troubleshooting tip
+### Resolution
 
 To resolve this issue, carefully follow the steps in the "Resolution" section of [Outlook doesn't display DLP policy tips for PDF attachments in Windows 7](https://support.microsoft.com/help/3001881/outlook-doesn-t-display-dlp-policy-tips-for-pdf-attachments-in-windows).
 
 ## Invalid test data
 
-When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used is not valid based on the information in [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure the test data being used is valid.
+When you evaluate the **Instance count** and confidence level of the DLP policy rule, the test data that's being used is not valid based on [Sensitive information type entity definitions](/microsoft-365/compliance/sensitive-information-type-entity-definitions). Make sure that the test data that you use is valid.
 
-:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of invalid Instance count value.":::
-
-## References
-
-- [Data loss prevention reference](/microsoft-365/compliance/data-loss-prevention-policies)
-- [Send email notifications and show policy tips for DLP policies](/microsoft-365/compliance/use-notifications-and-policy-tips)
-- [Migrate Exchange Online data loss prevention policies to Compliance center](/microsoft-365/compliance/dlp-migrate-exo-policy-to-unified-dlp)
+:::image type="content" source="media/troubleshooting-data-loss-protection-policy-tips/invalid-test-data.png" alt-text="Screenshot of an invalid instance count value.":::

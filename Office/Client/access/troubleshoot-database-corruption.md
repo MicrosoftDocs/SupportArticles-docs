@@ -16,14 +16,14 @@ appliesto:
   - Microsoft Office Access 2007
   - Microsoft Office Access 2003
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Description of troubleshooting corruption in an Office Access 2003 database
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 824271
 
 > [!NOTE]
+>
 > - This article applies only to a Microsoft Access database (.mdb and .accdb). 
 > - Novice: Requires knowledge of the user interface on single-user computers.
 > - For more information, see [Compact and repair a database](https://support.office.com/article/Compact-and-repair-a-database-6EE60F16-AED0-40AC-BF22-85FA9F4005B2).

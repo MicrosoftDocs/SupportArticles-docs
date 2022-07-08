@@ -9,18 +9,17 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 search.appverid: 
-- MET150
-appliesto:
-- Microsoft 365 Apps for enterprise
+  - MET150
+appliesto: 
+  - Microsoft 365 Apps for enterprise
+ms.date: 3/31/2022
 ---
 
 # Description of the Office Feature Updates task
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
-Starting in Microsoft Office ProPlus build 16.0.11220.*xxxxx* or a later build, there are two new tasks:
+Starting in Microsoft Office ProPlus build 16.0.11220.* or a later build, there are two new tasks:
 
 - Office Feature Updates
 - Office Feature Updates Logon

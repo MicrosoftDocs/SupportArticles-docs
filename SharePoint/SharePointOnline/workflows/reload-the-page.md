@@ -1,7 +1,8 @@
 ---
 title: SharePoint 2013 Workflow Error “To try again, reload the page and then start the workflow”
 description: Describes how to troubleshoot an error about Workflows.
-author: salarson
+author: v-matthamer
+ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -14,6 +15,7 @@ ms.custom:
 ms.author: v-matthamer
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # SharePoint 2013 Workflow Error: “To try again, reload the page and then start the workflow”

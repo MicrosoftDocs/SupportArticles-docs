@@ -18,11 +18,10 @@ appliesto:
   - Office Excel 2007 (Home and Student version)
   - Office Access 2003
   - Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Unable to create DSN for Microsoft Office System Driver on 64-bit versions of Windows
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

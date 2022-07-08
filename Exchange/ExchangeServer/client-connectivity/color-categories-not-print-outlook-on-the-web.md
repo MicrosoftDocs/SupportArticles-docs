@@ -17,6 +17,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2013 Enterprise
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Color categories in a calendar don't print in Outlook on the web
 

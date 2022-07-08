@@ -13,6 +13,7 @@ ms.reviewer: balram, jalalb
 appliesto: 
   - Microsoft 365 (Enterprise, Business, Government, Education)
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # It might be your sign-in address or logon credentials error in Skype for Business
 

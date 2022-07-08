@@ -14,11 +14,10 @@ appliesto:
   - office 365
   - Azure Information Protection
   - Azure Active Directory
+ms.date: 3/31/2022
 ---
 
 # You can't connect to the Azure Information Protection service in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Note Microsoft Azure Information Protection was previously known as Microsoft Azure Rights Management. 
 

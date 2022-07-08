@@ -14,6 +14,7 @@ appliesto:
   - SharePoint Server 2010
   - Microsoft SharePoint Foundation 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Administrative timer jobs aren't running after an upgrade
 

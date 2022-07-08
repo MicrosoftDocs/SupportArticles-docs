@@ -14,6 +14,7 @@ appliesto:
   - Lync Server 2013
   - Skype for Business Server 2015
   - Windows Server 2012 R2 Standard
+ms.date: 3/31/2022
 ---
 
 # Bug Check 0x133 DPC_WATCHDOG_VIOLATION error on Lync/Skype for Business Edge server

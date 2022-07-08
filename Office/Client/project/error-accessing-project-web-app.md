@@ -13,13 +13,12 @@ search.appverid:
 appliesto: 
   - Project Server 2013
   - Project Online
+ms.date: 3/31/2022
 ---
 
 # Error occurs when accessing Project Web App
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 When you attempt to navigate to a PWA site, you may receive one of the following error messages:
 
@@ -29,11 +28,11 @@ When you attempt to navigate to a PWA site, you may receive one of the following
 
 Subsequently, you cannot access Project Web App.
 
-##  Cause
+## Cause
 
 You do not have permissions to the root PWA site and/or you do not have group permissions.
 
-##  Resolution
+## Resolution
 
 In order for a user name to appear in the available users' list, the user must already have permissions on the PWA root site or they are a Global administrator. To Share the root PWA site using SharePoint Permissions mode:
 
@@ -49,8 +48,7 @@ Resolution when using Project Server Permissions mode:
 2. Go to Server Settings and click Manage Groups. Click on the group that you wish to modify.   
 3. User accounts can be added by synchronizing with an Active Directory Group or added manually from the available users' list   
 
-
-##  More Information
+## More Information
 
 This is by design for both Project Online (and Project Server 2013) regardless of the permissions mode on the PWA site.
 

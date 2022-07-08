@@ -12,11 +12,10 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office 2016 for Mac
+ms.date: 3/31/2022
 ---
 
 # Can't sign in to an Office 2016 for Mac app
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

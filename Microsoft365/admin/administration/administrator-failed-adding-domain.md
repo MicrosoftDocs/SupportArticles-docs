@@ -5,20 +5,19 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Office 365 User and Domain Management
-- Cloud Services (Web roles/Worker roles)
-- Microsoft Intune
+appliesto: 
+  - Office 365 User and Domain Management
+  - Cloud Services (Web roles/Worker roles)
+  - Microsoft Intune
+ms.date: 3/31/2022
 ---
 
 # An administrator can't add a domain to Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 

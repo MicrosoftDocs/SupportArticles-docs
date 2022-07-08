@@ -14,11 +14,10 @@ appliesto:
   - Office 2010
   - Office 2007
   - Office 2003
+ms.date: 3/31/2022
 ---
 
 # Error 1401, 1402 or 1406 when you install an Office program or open an Office program or document
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

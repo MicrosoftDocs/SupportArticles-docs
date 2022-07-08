@@ -17,11 +17,10 @@ appliesto:
   - Office Professional 2013
   - Office Home and Business 2013
   - Office Home and Student 2013
+ms.date: 3/31/2022
 ---
 
 # Error when opening the Click-to-Run version of an Office program or suite on a terminal server
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

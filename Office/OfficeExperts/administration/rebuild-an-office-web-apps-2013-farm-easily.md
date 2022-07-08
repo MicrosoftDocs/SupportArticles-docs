@@ -2,7 +2,8 @@
 title: Rebuild an Microsoft Office Web Apps server farm easily
 description: Describes how to rebuild Microsoft Office Web Apps server farm.
 author: helenclu
-ms.author: brbering
+ms.author: luche
+ms.reviwer: brbering
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Web Apps
+ms.date: 3/31/2022
 ---
 
 # Rebuild an Microsoft Office Web Apps server farm easily

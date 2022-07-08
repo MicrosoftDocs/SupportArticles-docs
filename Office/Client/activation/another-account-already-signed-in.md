@@ -1,7 +1,8 @@
 ---
 title: Sorry, another account from your organization is already signed in on this computer
 description: Troubleshooting steps for Microsoft 365 Apps activation error Sorry, another account from your organization is already signed in on this computer
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
@@ -16,6 +17,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Sorry, another account from your organization is already signed in on this computer”

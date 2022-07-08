@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 activation usage report issues
 description: Describes issues an admin might encounter with Microsoft 365 activation usage reports.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
@@ -15,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 activation usage report issues

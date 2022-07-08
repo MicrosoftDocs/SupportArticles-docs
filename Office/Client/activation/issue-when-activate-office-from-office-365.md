@@ -14,11 +14,10 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Microsoft Visio Pro for Office 365
   - Project Online Desktop Client
+ms.date: 3/31/2022
 ---
 
 # "Sorry, we can't connect to your account. Please try again later" error when you activate Office from Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

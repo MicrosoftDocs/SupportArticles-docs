@@ -8,19 +8,18 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 060e809d-8cb6-427b-9e2f-dab67138acae
 description: Learn how to help your users troubleshoot centralized add-ins, if they are not seeing them.
+ms.date: 3/31/2022
 ---
 
 # User not seeing add-ins
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Now that you've deployed the add-in, your end users can start using it in their Office applications. The add-in will appear on all platforms that the add-in supports.
   

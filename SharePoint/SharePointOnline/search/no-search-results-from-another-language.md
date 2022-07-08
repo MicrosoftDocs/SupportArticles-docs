@@ -13,6 +13,7 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
   - OneDrive for Business
+ms.date: 3/31/2022
 ---
 
 # Search doesn't provide results from another language in SharePoint Online or OneDrive for Business

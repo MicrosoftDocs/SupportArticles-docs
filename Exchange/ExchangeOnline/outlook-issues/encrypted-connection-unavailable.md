@@ -13,6 +13,7 @@ ms.custom:
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (Encrypted connection to your mail server is not available) error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Office 365
 
@@ -26,7 +27,7 @@ An Office 365 F plan user tries to set up a mail account for Exchange Online in 
 
 Click Next to attempt using an unencrypted connection.
 
-This error message is displayed even though the user entered his or her email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
+This error message is displayed even though the user entered the email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
 
 ## Cause
 

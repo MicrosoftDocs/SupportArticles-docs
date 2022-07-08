@@ -13,11 +13,10 @@ ms.author: luche
 appliesto: 
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Make Paste Options button disappear after you paste in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -15,6 +15,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2010
+ms.date: 3/31/2022
 ---
 # Some applications are incompatible with a Click-to-Run installation of Outlook 2010
 
@@ -37,4 +38,3 @@ For more information about extensibility support matrix for the Outlook platform
 |External applications that use simple MAPI calls other than MAPISendMail|Not supported|Not supported|Not supported|Not supported|Not supported|Not supported|
 |External applications that use extended MAPI|Not supported|Not supported|Not supported|Not supported|Not supported|Not supported|
 |Mailto protocol handler|Supported|Supported|Supported|Supported|Supported|Supported|
-||||||||

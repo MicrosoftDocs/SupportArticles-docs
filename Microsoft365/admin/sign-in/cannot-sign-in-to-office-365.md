@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Azure Active Directory
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # "We don't recognize this user ID or password" error when a user tries to sign in to the Office 365 portal
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem 
 
@@ -45,17 +44,16 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 ### Scenario: Forgot user ID or password
 
-Click the following article number to go to the article in the Microsoft Knowledge Base article: 
+See [Forgot password to sign in to Microsoft 365, Intune, or Azure](https://support.microsoft.com/help/2606983).
 
-[A user or an administrator forgot his or her password in Office 365, Azure, or Intune ](https://support.microsoft.com/help/2606983)
- 
 ### Scenario: Your organization is using password synchronization together with the Azure Active Directory Sync tool
 
-Do one of the following:
-- Have the user change his or her computer password.    
-- Reset the computer password for the user. When you reset the user's password, make sure that the **User must change password at next logon**check box isn't selected.   
+Perform one of the following actions:
 
-After Active Directory synchronization occurs, the user's computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Azure Active Directory (Azure AD). The user can then log on to the computer, and sign in to Office 365 by using the same password.
+- Have the users change their computer password.
+- Reset the computer password for the users. When you reset the users' password, make sure that the **User must change password at next logon** check box isn't selected.
+
+After Active Directory synchronization occurs, the users' computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Azure Active Directory (Azure AD). The users can then log on to the computer, and sign in to Office 365 by using the same password.
 
 ## More information
 

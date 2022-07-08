@@ -13,18 +13,17 @@ ms.author: luche
 appliesto: 
   - Word 2010
   - Word 2013
+ms.date: 3/31/2022
 ---
 
 # Performance issues with Auto-Recover location on network share
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
 You're working with a complex Word document. After an Auto-Save operation (the default interval is 10 minutes), you notice a general performance degradation when editing the document:
 
-- sluggish typing   
-- slow screen refreshes when scrolling   
+- sluggish typing
+- slow screen refreshes when scrolling
 
 ## Cause
 

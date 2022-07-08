@@ -5,44 +5,43 @@ author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.custom:
-- CSSTroubleshoot
-- CI 124941
-appliesto:
-- Word for Microsoft 365
-- Excel for Microsoft 365
-- Outlook for Microsoft 365
-- PowerPoint for Microsoft 365
-- Publisher for Microsoft 365
-- Word LTSC 2021
-- Excel LTSC 2021
-- Outlook LTSC 2021
-- PowerPoint LTSC 2021
-- Publisher LTSC 2021
-- Word 2019
-- Excel 2019
-- Outlook 2019
-- PowerPoint 2019
-- Publisher 2019
-- Word 2016
-- Excel 2016
-- Outlook 2016
-- PowerPoint 2016
-- Publisher 2016
-- Microsoft Office 2013 Service Pack 1
-- Word 2013
-- Excel 2013
-- Outlook 2013
-- PowerPoint 2013
-- Publisher 2013
+ms.custom: 
+  - CSSTroubleshoot
+  - CI 124941
+appliesto: 
+  - Word for Microsoft 365
+  - Excel for Microsoft 365
+  - Outlook for Microsoft 365
+  - PowerPoint for Microsoft 365
+  - Publisher for Microsoft 365
+  - Word LTSC 2021
+  - Excel LTSC 2021
+  - Outlook LTSC 2021
+  - PowerPoint LTSC 2021
+  - Publisher LTSC 2021
+  - Word 2019
+  - Excel 2019
+  - Outlook 2019
+  - PowerPoint 2019
+  - Publisher 2019
+  - Word 2016
+  - Excel 2016
+  - Outlook 2016
+  - PowerPoint 2016
+  - Publisher 2016
+  - Microsoft Office 2013 Service Pack 1
+  - Word 2013
+  - Excel 2013
+  - Outlook 2013
+  - PowerPoint 2013
+  - Publisher 2013
+ms.date: 3/31/2022
 ---
 # (This feature has been disabled by your administrator) error in Microsoft Office
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

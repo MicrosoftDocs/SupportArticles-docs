@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Server 2010 Service Pack 1
+ms.date: 3/31/2022
 ---
 # You can't change the ownership of a distribution group in Exchange Server 2010 SP1
 

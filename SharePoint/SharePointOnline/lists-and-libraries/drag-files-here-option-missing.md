@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # The "drag files here" option is missing for a list in SharePoint Online or SharePoint 2013 on-premises

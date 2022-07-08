@@ -13,6 +13,7 @@ ms.reviewer: rorylen, dahans, dakova, sasantra, lanac, kylas
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Skype for Business presence is unavailable on the Office 365 navigation bar

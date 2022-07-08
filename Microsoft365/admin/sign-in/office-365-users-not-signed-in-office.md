@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
+ms.date: 3/31/2022
 ---
 
 # Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

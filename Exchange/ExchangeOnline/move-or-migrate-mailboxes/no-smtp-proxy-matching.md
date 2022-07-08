@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Target mailbox doesn't have an smtp proxy matching in a mailbox migration
 
@@ -87,7 +88,7 @@ If the on-premises mailbox doesn't have an email address policy applied (that is
 
 ### Scenario 2: \<domain>.mail.onmicrosoft.com email address is stamped on the on-premises source mailbox but is missing from the cloud mail-user object (Exchange Online PowerShell)
 
-In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Office 365 admin center. For more information about how to do this, see [View directory synchronization errors in Office 365](/office365/enterprise/identify-directory-synchronization-errors).  
+In this case, you probably have a synchronization issue. Determine whether the directory synchronization works and whether you have any synchronization errors that are reported in the Azure Active Directory (Azure AD) Connect tool or Microsoft 365 admin center. For more information about how to do this, see [View directory synchronization errors in Office 365](/office365/enterprise/identify-directory-synchronization-errors).  
 
 You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped.
 

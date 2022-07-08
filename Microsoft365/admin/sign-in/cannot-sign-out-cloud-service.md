@@ -16,11 +16,10 @@ appliesto:
   - Azure Backup
   - Office 365 User and Domain Management
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Problems when signing out of Office 365, Azure, or Intune in a web browser
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

@@ -16,11 +16,10 @@ appliesto:
   - Excel 2002
   - Excel 2000
   - Excel 97
+ms.date: 3/31/2022
 ---
 
 # The result is "FALSE" when you use the ISBLANK() function in an Excel spreadsheet
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

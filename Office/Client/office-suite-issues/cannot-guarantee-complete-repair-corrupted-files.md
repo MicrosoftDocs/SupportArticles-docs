@@ -26,6 +26,7 @@ appliesto:
   - Microsoft Office Home and Student 2010
   - Microsoft Office Standard 2010
 ms.reviewer: 
+ms.date: 3/31/2022
 ---
 
 # Support Engineers can't guarantee complete repair of all corrupted Office files

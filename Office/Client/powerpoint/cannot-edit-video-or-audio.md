@@ -14,11 +14,10 @@ appliesto:
   - PowerPoint 2013
   - PowerPoint 2010
   - Microsoft Office PowerPoint 2007
+ms.date: 3/31/2022
 ---
 
 # You cannot edit video or audio in PowerPoint if Desktop Experience is not installed
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

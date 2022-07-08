@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # (You don't have sufficient permissions) error when you try to remove or make a change to a distribution group
 

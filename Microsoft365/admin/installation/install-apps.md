@@ -8,20 +8,19 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: c4f63dc5-9944-40aa-9618-3b2007f17003
 ROBOTS: NOINDEX
 description: Learn how to install Office 365 apps.
+ms.date: 3/31/2022
 ---
 
 # Install Office 365 apps
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Sometimes, things just aren't working. Here's some help for fixing administrative problems with Office 365.
   

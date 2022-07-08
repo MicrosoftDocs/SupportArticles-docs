@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # How to set language and region settings for Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

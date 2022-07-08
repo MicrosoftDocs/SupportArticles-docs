@@ -13,11 +13,10 @@ search.appverid:
   - MET150
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Office 2010 version of this article, see [2121447](https://support.microsoft.com/help/2121447).
 

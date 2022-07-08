@@ -18,6 +18,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Resource ‎CiAgeOfLastNotification‎(System)‎ is unhealthy and should not be accessed error when moving mailbox
 

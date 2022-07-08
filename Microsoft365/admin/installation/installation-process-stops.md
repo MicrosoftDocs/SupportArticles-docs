@@ -13,11 +13,10 @@ ms.author: v-maqiu
 ms.reviewer: mmaxey, tomol, doakm, trevormc, bobbied, swebster, andyfel
 appliesto: 
   - Office 2013
+ms.date: 3/31/2022
 ---
 
 # Office 365 or Office 2013 installation process stops at the "10% - Configuring" stage
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

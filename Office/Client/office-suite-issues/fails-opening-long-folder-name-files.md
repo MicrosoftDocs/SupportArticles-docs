@@ -17,11 +17,10 @@ appliesto:
   - Microsoft Access 2002
   - Microsoft Excel 2002
   - Microsoft Outlook 2002
+ms.date: 3/31/2022
 ---
 
 # Error message when you open an Office file that has a long folder name
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 For a Microsoft Office 2000 version of this article, see [325573](https://support.microsoft.com/help/325573).
 

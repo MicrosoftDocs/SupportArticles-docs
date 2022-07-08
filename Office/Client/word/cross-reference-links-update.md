@@ -17,11 +17,10 @@ appliesto:
   - Word 2013
   - Word 2010
   - Word Home and Student 2010
+ms.date: 3/31/2022
 ---
 
 # Cross-reference links do not update to the correct heading number after you insert a new heading
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -18,17 +18,16 @@ appliesto:
   - Project Professional 2010
   - Project Professional 2013
   - Project 2013 Standard
+ms.date: 3/31/2022
 ---
 
 # Importing a Task Outline Structure into Project
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 When you import files from a different application to Microsoft Project, you can include information that will allow Microsoft Project to generate a project outline structure for the imported file.
 
-##  More Information
+## More Information
 
 You cannot directly import the Outline Number field from a file saved in a format other than the standard Microsoft Project format. However, it is possible to import a different field that will correctly generate the same outline structure.
 
@@ -67,6 +66,5 @@ A comma-separated values (CSV) file contains the following text:
 |1| 2 Summary Task 3|
 |2| 2.1 Task E|
 |2| 2.2 Task F|
-|||
 
 **NOTE** The Outline Number and name indentation are shown to clearly illustrate the structure.

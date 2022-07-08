@@ -19,11 +19,10 @@ appliesto:
   - Excel 2010
   - Excel 2013
   - Excel 2016
+ms.date: 3/31/2022
 ---
 
 # Excel incorrectly assumes that the year 1900 is a leap year
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

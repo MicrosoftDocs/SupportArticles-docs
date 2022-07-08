@@ -27,11 +27,10 @@ appliesto:
   - Microsoft Office Small Business Edition 2003
   - Microsoft Office Basic Edition 2003
   - Microsoft Office Access 2003
+ms.date: 3/31/2022
 ---
 
 # How to use a setup log to troubleshoot setup problems in Office
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 This step-by-step article describes how to use the Microsoft Office installation log files to troubleshoot Office Setup issues.
 

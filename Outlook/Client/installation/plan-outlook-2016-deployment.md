@@ -16,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Outlook 2010, Outlook 2013, Outlook 2016, Office 365
+ms.date: 3/31/2022
 ---
 
 # Planning considerations for deploying Outlook 2016 for Windows
@@ -68,7 +69,7 @@ If you have an on-premises Exchange Server and plan to add Exchange Online to co
 - There is no cross-premises manager delegation. If the manager's account is connected to Exchange Online, the delegate's account must be on Exchange Online too.
 - An account that is on-premises cannot have "Send As" permissions for an account that is connected to Exchange Online.
 
-Also be aware that the user authentication method is different between an on-premises Exchange Server and Exchange Online. An Exchange Online user enters his or her email address (as the user name) and password. However, the user can decide to save the password so that the user only has to enter it one time.
+Also be aware that the user authentication method is different between an on-premises Exchange Server and Exchange Online. Exchange Online users enter their email address (as the user name) and password. However, the users can decide to save the password so that they only have to enter it once.
   
 ## Choosing when and how to install Outlook
 

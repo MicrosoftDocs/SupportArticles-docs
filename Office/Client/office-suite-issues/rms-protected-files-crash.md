@@ -14,11 +14,10 @@ appliesto:
   - Excel 2010
   - Word 2010
   - PowerPoint 2010
+ms.date: 3/31/2022
 ---
 
 # Office files that have RMS protection seem to crash
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

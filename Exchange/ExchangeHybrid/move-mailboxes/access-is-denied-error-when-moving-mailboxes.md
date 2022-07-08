@@ -14,6 +14,7 @@ ms.reviewer: hbohl, charw
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # (Access is denied) error when you try to move mailboxes to Exchange Online in a hybrid deployment
 

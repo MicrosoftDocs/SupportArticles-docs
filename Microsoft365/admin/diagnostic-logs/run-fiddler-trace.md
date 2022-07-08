@@ -16,11 +16,10 @@ appliesto:
   - Office 365
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # How to run (SaRA) Fiddler Trace
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

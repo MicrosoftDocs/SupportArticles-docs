@@ -14,6 +14,7 @@ ms.reviewer: kerbo
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't add Exchange license in Azure AD Connect for Office 365
 

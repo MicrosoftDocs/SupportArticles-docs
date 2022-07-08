@@ -14,11 +14,10 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Office 365 Business
   - Office 365 Home
+ms.date: 3/31/2022
 ---
 
 # Office 365 subscription automatic license renewal fails when sppcext.dll is missing
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

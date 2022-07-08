@@ -127,6 +127,8 @@
       href: ../../SharePointOnline/lists-and-libraries/content-organizer-not-comply-with-interval.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: Error when view or edit in Word or PowerPoint Online
       href: ../../SharePointOnline/lists-and-libraries/error-when-view-or-edit-in-browser.md?toc=/SharePoint/troubleshoot/servertoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Explorer View option isn't available on the Current View list box
+      href: ../lists-and-libraries/sharepoint-explorer-view-option-not-available.md
     - name: Feature id isn't assigned when saving a list as a template
       href: ../lists-and-libraries/feature-id-not-assigned-when-saving-a-list-as-template.md
     - name: IFilter alternative to the native PDF parser

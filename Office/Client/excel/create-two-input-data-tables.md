@@ -15,11 +15,10 @@ appliesto:
   - Excel 2003
   - Excel 2001
   - Excel 98
+ms.date: 3/31/2022
 ---
 
 # How to create and use two-input data tables in Microsoft Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

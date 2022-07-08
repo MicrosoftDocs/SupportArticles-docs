@@ -15,11 +15,10 @@ appliesto:
   - Excel 2007
   - Word 2003
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # "The document caused a serious error the last time it was opened" when you open a file
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -29,7 +28,7 @@ When you try to open a file that Microsoft Office Excel or Microsoft Office Word
 The document 'Filename' caused a serious error the last time it was opened. Would you like to continue opening it? You may receive this message every time you try to open the file.
 ```
 
-##  Cause
+## Cause
 
 This problem occurs because the file appears on the list of disabled files for the Microsoft Office program. The program adds a file to this list if the file causes a serious error, such as causing the program to quit unexpectedly (crash) during two or more tries to open it. This message allows you to avoid potential problems that may occur if you open the file.
 

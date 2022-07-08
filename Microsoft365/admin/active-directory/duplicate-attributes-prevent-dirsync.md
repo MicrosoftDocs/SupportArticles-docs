@@ -1,29 +1,28 @@
 ---
 title: Troubleshoot directory synchronization errors with event 6941
-description: Discusses an issue in which an admin receives a  "Directory Synchronization Error Report" email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
+description: Discusses an issue in which an admin receives a  Directory Synchronization Error Report email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
-- MET150
+  - MET150
 ms.custom: CSSTroubleshoot
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-appliesto:
-- Azure Active Directory
-- Office 365 Identity Management
+appliesto: 
+  - Azure Active Directory
+  - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # Duplicate or invalid attributes prevent directory synchronization in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
 In Microsoft Office 365, an administrator receives the following email message warning when directory synchronization finishes:
 
-```asciidoc
+```output
 From: [MSOnlineServicesTeam@MicrosoftOnline.com](mailto:msonlineservicesteam@microsoftonline.com)Subject: Directory Synchronization Error Report
 ```
 
@@ -49,7 +48,7 @@ Error Name: AttributeValueMustBeUnique
 Error Detail: Unable to update this object because the following attributes associated with this object have values that may already be associated with another object in your local directory services: [UserPrincipalName john@contoso.com;]. Correct or remove the duplicate values in your local directory. Please refer to https://support.microsoft.com/kb/2647098 for more information on identifying objects with duplicate attribute values.
 ```
 
-```asciidoc
+```output
 Event ID: 6941
 Log Name: Application
 Source: ADSync
@@ -101,7 +100,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       :::image type="content" source="./media/duplicate-attributes-prevent-dirsync/object-attributes.png" alt-text="Screenshot shows an example of object attributes." border="false":::
 
    6. Record the values of the userPrincipalName attribute and each SMTP address in the multivalue proxyAddresses attribute. You will need these values later.  
-     
+
       |Attribute name|Example|Notes|
       |----------|----------|----------|
       |proxyAddresses|proxyAddresses (3): x500:/o=Exchange/ou=Exchange Administrative Group (GroupName)/cn=Recipients/cn=GUID; smtp:7628376@service.contoso.com; SMTP:7628376@contoso.com;|The number that's displayed in parentheses next to the attribute label indicates the number of proxy address values in the multivalue attribute. Each distinct proxy address value is indicated by a semicolon (;). The primary SMTP proxy address value is indicated by uppercase "SMTP:"|
@@ -113,10 +112,11 @@ To determine attribute conflicts that are caused by user objects that were creat
 2. Connect to Office 365 by using the Azure Active Directory Module for Windows PowerShell. To do this, follow these steps:  
    1. Click **Start**, click **All Programs**, click **Azure Active Directory**, and then click **Azure Active Directory Module for Windows PowerShell**.
    2. Type the following commands in the order in which they are presented, and press Enter after each command:
-      
+
       ```powershell
       $cred = get-credential
       ```
+
       > [!NOTE]
       > When you are prompted, enter your Office 365 administrator credentials.
 
@@ -125,7 +125,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       ```
 
       Leave the console window open. You will have to use it in the next step.
-     
+
 3. Check for the duplicate userPrincipalName attributes in Office 365.
 
    In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and press Enter after each command:
@@ -133,6 +133,7 @@ To determine attribute conflicts that are caused by user objects that were creat
    ```powershell
    $userUPN = "<search UPN>"
    ```
+
    > [!NOTE]
    > In this command, the placeholder "search UPN" represents the UserPrincipalName attribute that you recorded in step 1f.
 
@@ -148,12 +149,13 @@ To determine attribute conflicts that are caused by user objects that were creat
    $UserCredential = Get-Credential
    Connect-ExchangeOnline -Credential $UserCredential
    ```
-     
+
 5. For each proxy address entry that you recorded in step 1f, type the following commands in the order in which they are presented, and press Enter after each command:
 
    ```powershell
    $proxyAddress = "<search proxyAddress>"
    ```
+
    > [!NOTE]
    > In this command, the placeholder"search proxyAddress" represents the value of a proxyAddresses attribute that you recorded in step 1f.
 

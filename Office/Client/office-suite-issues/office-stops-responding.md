@@ -13,11 +13,10 @@ ms.author: luche
 ms.reviewer: V-DARMAC
 appliesto: 
   - Office 2010
+ms.date: 3/31/2022
 ---
 
 # Microsoft Office stops responding when you try to open or save a file
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # HCW8004, HCW8009, HCW8016, HCW8017, HCW8029, or HCW8030 error when running the HCW
 

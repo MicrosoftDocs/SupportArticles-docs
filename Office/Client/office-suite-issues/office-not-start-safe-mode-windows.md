@@ -25,6 +25,7 @@ appliesto:
   - OneNote 2013
   - PowerPoint 2013
   - Access 2013
+ms.date: 3/31/2022
 ---
 # Office applications don't start when Windows is running in safe mode
 
@@ -103,4 +104,3 @@ To determine whether your Office installation is Click-to-Run or MSI-based, foll
     | Click-to-Run Office installation| MSI-based Office installation |
     |---|---|
     |:::image type="content" source="media/office-not-start-safe-mode-windows/update-option-for-c2r-installation.png" alt-text="Screenshot shows the Update Options item is displayed for Click-to-Run installation.":::|:::image type="content" source="media/office-not-start-safe-mode-windows/no-update-option-for-msi-installation.png" alt-text="Screenshot shows the Update Options item isn't displayed for M S I-based installation.":::|
-    ||

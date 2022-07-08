@@ -1,28 +1,29 @@
 ---
 title: Troubleshoot Remove an alias from a group
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-f1_keywords:
-- 'O365P_AdminGroups_TSAlias'
-- 'O365M_AdminGroups_TSAlias'
-- 'O365E_AdminGroups_TSAlias'
-- 'AdminGroups_TSAlias'
+  - Exchange Online
+  - CSSTroubleshoot
+f1_keywords: 
+  - 'O365P_AdminGroups_TSAlias'
+  - 'O365M_AdminGroups_TSAlias'
+  - 'O365E_AdminGroups_TSAlias'
+  - 'AdminGroups_TSAlias'
 localization_priority: None
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: d96989c4-6efc-4523-9c89-44ce06e601bf
 description: Learn how to remove the email alias from the group using Exchange Online PowerShell.
+ms.date: 3/31/2022
 ---
 # Troubleshoot: Remove an alias from a group
 

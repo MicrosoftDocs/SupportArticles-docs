@@ -12,11 +12,12 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office 365 Security & Compliance Center
+ms.date: 3/31/2022
 ---
 
 # BOXServiceAccount is added to a role in Office 365 alerts
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

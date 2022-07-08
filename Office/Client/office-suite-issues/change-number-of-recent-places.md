@@ -15,11 +15,10 @@ appliesto:
   - Word 2010
   - Excel 2010
   - PowerPoint 2010
+ms.date: 3/31/2022
 ---
 
 # Cannot change the number of places to list in Recent Places in Word 2010, in Excel 2010, or in PowerPoint 2010
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

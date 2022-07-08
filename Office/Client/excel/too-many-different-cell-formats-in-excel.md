@@ -18,11 +18,10 @@ appliesto:
   - Excel 2010
   - Microsoft Office Excel 2007
   - Microsoft Office Excel 2003
+ms.date: 3/31/2022
 ---
 
 # You receive a "Too many different cell formats" error message in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

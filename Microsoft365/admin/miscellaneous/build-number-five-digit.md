@@ -18,11 +18,10 @@ appliesto:
   - Office 365 Personal
   - Project Pro for Office 365
   - Visio Pro for Office 365
+ms.date: 3/31/2022
 ---
 
 # Office 365 is changing its build numbers to a five-digit format
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

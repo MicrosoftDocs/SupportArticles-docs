@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Outlook 2010 with Business Contact Manager
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't map custom fields when importing an XLS or CSV file in the Hebrew version of Outlook 2010
 
@@ -65,6 +66,5 @@ Here is a list of some fields and their Hebrew translation:
 |Home|בית|
 |Fax|פקס|
 |Mobile|נייד|
-|||
 
 This article also applies to any right-to-left languages, such as Arabic.

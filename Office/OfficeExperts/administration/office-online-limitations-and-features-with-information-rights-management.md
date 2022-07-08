@@ -2,7 +2,8 @@
 title: Office Online Server and Office Web Apps Server limitations and features with Information Rights Management (IRM)
 description: Describes the limitations and features with Information Rights Management in Office Online Server and Office Web Apps Server.
 author: helenclu
-ms.author: jhaak
+ms.author: luche
+ms.reviewer: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -13,6 +14,7 @@ ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
   - Office Web Apps
+ms.date: 3/31/2022
 ---
 
 # Office Online limitations and features with Information Rights Management (IRM)

@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
+ms.date: 3/31/2022
 ---
 # Event ID 1325, 1026, and 1000 after you convert OAB for Exchange Server 2010
 

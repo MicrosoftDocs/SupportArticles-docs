@@ -14,6 +14,7 @@ ms.reviewer: scottlan
 appliesto: 
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # 550 5.6.0 APPROVAL.InvalidExpiry Cannot read expiry policy when sending messages to moderated distribution group
 

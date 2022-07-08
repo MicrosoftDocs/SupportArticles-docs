@@ -2,7 +2,7 @@
 title: Unable to open EMS on an Exchange Server 2019 Edge Transport server by using LaunchEMS command
 description: This article describes an issue in which you are unable to open EMS on an Exchange Server 2019 Edge Transport server by using LaunchEMS command. Provides a resolution.
 author: simonxjx
-ms.author: cmcgurk
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2019
 search.appverid: 
   - MET150
+ms.date: 3/31/2022
 ---
 
 # Can't open EMS on an Exchange Server 2019 Edge Transport server by using the LaunchEMS command

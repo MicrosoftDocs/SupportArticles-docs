@@ -18,11 +18,10 @@ appliesto:
   - Excel 2010
   - Excel 2007
   - Excel 2003
+ms.date: 3/31/2022
 ---
 
 # Create and insert a calendar in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

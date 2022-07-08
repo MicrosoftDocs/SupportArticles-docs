@@ -15,6 +15,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2019
   - Exchange Server 2016
+ms.date: 3/31/2022
 ---
 # Error when you try to remove a mailbox database in Exchange Server 2019 or 2016
 

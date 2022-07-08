@@ -19,6 +19,7 @@ appliesto:
   - Exchange Server 2013 Enterprise Edition
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
 
@@ -27,6 +28,14 @@ _Original KB number:_ &nbsp;3054391
 ## Symptoms
 
 When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
+
+## Resolution
+
+To fix this issue, install the following Cumulative Updates (CUs) as appropriate:
+
+[Cumulative Update 12 for Exchange Server 2019](https://support.microsoft.com/help/5011156) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019&preserve-view=true) for Exchange Server 2019
+
+[Cumulative Update 23 for Exchange Server 2016](https://support.microsoft.com/help/5011155) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2016&preserve-view=true) for Exchange Server 2016
 
 ## Workaround
 
@@ -57,7 +66,3 @@ You might be able to work around this issue depending on the language settings o
 > 1. Change the logon account of the service to **Local System**.
 > 1. Revert the logon account to **Network Service**.
 > 1. Start the service.
-
-## Status
-
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the "Applies to" section.

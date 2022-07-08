@@ -20,11 +20,10 @@ appliesto:
   - Outlook 2013
   - Excel 2013
   - PowerPoint 2013
+ms.date: 3/31/2022
 ---
 
 # No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -2,7 +2,8 @@
 title: Deploy Microsoft Offices Online 2013 or Office Online Server to a security hardened drive
 description: When you install and deploy Microsoft Offices Online 2013 to a security hardened drive, Microsoft Offices Online 2013 may not work correctly.
 author: helenclu
-ms.author: jhaak
+ms.author: luche
+ms.reviewer: jhaak
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server
+ms.date: 3/31/2022
 ---
 
 # Deploy Microsoft Offices Online 2013 or Office Online Server to a security hardened drive

@@ -14,6 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Outlook 2016 hangs at Processing on the start-up screen
 
@@ -77,8 +78,7 @@ This issue was fixed in the following updates:
     |Click-to-Run|Different|C:\Program Files (x86)\Microsoft Office\root\Office16\|
     |MSI|Same|C:\Program Files\Microsoft Office\Office16\|
     |MSI|Different|C:\Programs Files (x86)\Microsoft Office\Office16\|
-    ||||
-
+    
     Same Bitness: Office 32-bit running on Windows 32-bit or Office 64-bit running on Windows 64-bit  
     Different Bitness: Office 32-bit running on Windows 64-bit
 

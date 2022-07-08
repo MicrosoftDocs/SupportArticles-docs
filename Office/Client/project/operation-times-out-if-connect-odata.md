@@ -12,11 +12,10 @@ search.appverid:
   - MET150
 appliesto: 
   - office 365
+ms.date: 3/31/2022
 ---
 
 # The operation has timed out when connecting to OData by using SSIS in Project Online
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

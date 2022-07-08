@@ -12,15 +12,12 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft Office
+ms.date: 3/31/2022
 ---
 
 # No Office entitlement found on device
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 You start up the Office on a new device and you get a message that "Office isn't entitled on this device" along with the option to try Office, enter a product key or purchase Office. 
 

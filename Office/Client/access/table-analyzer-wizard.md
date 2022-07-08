@@ -17,11 +17,10 @@ appliesto:
   - Access 2007
   - Access 2003
   - Access 2002
+ms.date: 3/31/2022
 ---
 
 # How the Table Analyzer Wizard works
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 Novice: Requires knowledge of the user interface on single-user computers. 
 

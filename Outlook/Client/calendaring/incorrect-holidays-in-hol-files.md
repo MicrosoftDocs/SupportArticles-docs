@@ -15,6 +15,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Incorrect holidays in Outlook 2007 and Outlook 2010 .hol files
 
@@ -32,7 +33,6 @@ Here is an example of two holidays which are displayed incorrectly.
 |Whit Sunday|2015/5/28|2015/5/24|
 |Pfingstmontag|2015/5/29|2015/5/25|
 |Whit Monday|2015/5/29|2015/5/25|
-||||
 
 ## Workaround
 

@@ -11,8 +11,10 @@ ms.custom:
   - Exchange Online
   - CSSTroubleshoot
 ms.reviewer: chrisbur
-appliesto: Exchange Online
+appliesto: 
+- Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # The Read status of email messages may not be updated between Exchange ActiveSync
 
@@ -104,7 +106,7 @@ To copy the contents of the original mailbox to the new mailbox, follow these st
     For example, open the *John Smith 2* mailbox, and then drag non-mail items from the *John Smith 2* mailbox to the *John Smith* mailbox.
 
 > [!IMPORTANT]
-> Any recurring meeting request in the original mailbox *could* potentially become orphaned if it leaves the Exchange store and if it's copied or moved to a .pst file. If the user has many meeting requests in his or her Calendar, the user may want to test the process by using some meetings and then confirm that the meetings can be updated correctly before he or she continues. If the links to the original meeting request are orphaned, an update from the organizer will create a new item in the recipient's calendar. However, the original item remains at the original date and time.
+> Any recurring meeting request in the original mailbox *could* potentially become orphaned if it leaves the Exchange store and if it's copied or moved to a .pst file. If the user has many meeting requests in Calendar, the user may want to test the process by using some meetings and then confirm that the meetings can be updated correctly before continuing. If the links to the original meeting request are orphaned, an update from the organizer will create a new item in the recipient's calendar. However, the original item remains at the original date and time.
 
 ## Status
 

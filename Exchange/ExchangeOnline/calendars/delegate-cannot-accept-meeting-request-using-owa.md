@@ -14,6 +14,7 @@ ms.reviewer: kellybos, mhaque
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Delegate can't accept meeting request in OWA when manager is in another forest during coexistence
 

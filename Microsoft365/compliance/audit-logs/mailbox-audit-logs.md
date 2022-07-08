@@ -15,13 +15,14 @@ appliesto:
   - Exchange Online
   - Microsoft Exchange Online Dedicated
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 
 # How to use mailbox audit logs in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;4021960
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Summary
 
@@ -227,7 +228,6 @@ The most useful columns of the .csv file are exported. Some of these columns are
 |MailboxResolvedOwnerName|Resolved name of mailbox user</br>**Note** Resolved name is in the following format:</br>Domain\SamAccountName |
 |OperationResult|Status of the operation</br>**Note** Operation results include the following: </br>- Failed </br>- PartiallySucceeded </br>- Succeeded |
 |CrossMailboxOperation|Information about whether the operation logged is a cross-mailbox operation (for example, copying or moving messages among mailboxes) |
-|||
 
 ### More information about mailbox audit logging
 

@@ -30,6 +30,7 @@ appliesto:
   - Excel for Office 365
   - PowerPoint for Office 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Can't preview Office documents in Outlook if Windows Firewall Service is disabled
 

@@ -18,11 +18,10 @@ appliesto:
   - Office Professional Plus 2013
   - Office Professional 2010
   - Office Professional Edition 2003
+ms.date: 3/31/2022
 ---
 
 # No support for multiple Office versions installed on a machine with Remote Desktop Service (RDS)
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Online
+ms.date: 3/31/2022
 ---
 
 # "External sharing is disabled for the site" error when a delegated partner administrator tries to access a client's SharePoint Online Admin Center

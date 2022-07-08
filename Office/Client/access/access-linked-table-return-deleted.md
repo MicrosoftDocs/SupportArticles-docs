@@ -15,11 +15,10 @@ appliesto:
   - Access 2019
   - Access 2016
   - Access 2013
+ms.date: 3/31/2022
 ---
 
 # Access linked table to a SharePoint list returns #Deleted
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 

@@ -17,11 +17,10 @@ appliesto:
   - Excel 2013
   - Excel 2010
   - Microsoft Office Excel 2007
+ms.date: 3/31/2022
 ---
 
 # You cannot paste any attributes into a workbook in another instance of Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

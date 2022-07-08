@@ -12,6 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - SharePoint Server 2019
+ms.date: 3/31/2022
 ---
 
 # Information about SharePoint On-Premises 2019

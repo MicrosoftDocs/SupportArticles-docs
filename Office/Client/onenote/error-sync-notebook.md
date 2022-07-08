@@ -17,10 +17,9 @@ appliesto:
   - OneNote 2013
   - OneNote 2010
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # "0xE40200B4" and "0x800700DF" errors when you sync a notebook in OneNote
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

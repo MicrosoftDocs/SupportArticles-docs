@@ -13,11 +13,10 @@ search.appverid:
 appliesto: 
   - Office Professional Plus 2016
   - Office Standard 2016
+ms.date: 3/31/2022
 ---
 
 # The Document Information Panel (DIP) is deprecated in Office 2016 applications
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

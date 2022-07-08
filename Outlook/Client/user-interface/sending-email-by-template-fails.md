@@ -18,6 +18,7 @@ appliesto:
   - Exchange Online
   - Exchange Server 2016 Standard Edition
   - Exchange Server 2013 Standard Edition
+ms.date: 3/31/2022
 ---
 # Email messages aren't sent when you use a template file in Outlook 2010
 

@@ -14,6 +14,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Exchange Online
+ms.date: 3/31/2022
 ---
 # Error viewing delegates in Outlook after a migration from on-premises to Exchange Online
 

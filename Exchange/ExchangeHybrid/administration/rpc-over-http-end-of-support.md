@@ -19,6 +19,7 @@ appliesto:
   - Outlook 2013
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
+ms.date: 3/31/2022
 ---
 # RPC over HTTP reaches end of support in Office 365 on October 31, 2017
 
@@ -108,7 +109,7 @@ To retrieve this information, enable owner access auditing for each mailbox, and
 
 Microsoft provides reporting on email application usage against Exchange Online in the Microsoft 365 admin center, as shown in the following screen shot. This reporting includes an exportable view of connections from clients that use RPC over HTTP.
 
-:::image type="content" source="media/rpc-over-http-end-of-support/email-app-usage-page.png" alt-text="Screenshot of the Email app usage page in Office 365 Admin center.":::
+:::image type="content" source="media/rpc-over-http-end-of-support/email-app-usage-page.png" alt-text="Screenshot of the Email app usage page in Microsoft 365 admin center.":::
 
 ## Why is MAPI over HTTP not backported to Outlook 2007
 

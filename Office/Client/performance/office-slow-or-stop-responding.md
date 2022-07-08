@@ -33,11 +33,10 @@ appliesto:
   - Publisher 2010
   - Microsoft Office Publisher 2007
   - Microsoft Office Publisher 2003
+ms.date: 3/31/2022
 ---
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

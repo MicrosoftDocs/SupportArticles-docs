@@ -1,6 +1,6 @@
 ---
 title: You don't have permission when activating or signing in to Office Mobile
-description: Describes an issue in which you receive a "You don't have permission to access this content" or "We're having trouble locating your account" error message when you try to activate or sign in to Office Mobile on iPhone or Office Mobile on Android. Provides a resolution.
+description: Describes an issue in which you receive a You don't have permission to access this content or We're having trouble locating your account error message when you try to activate or sign in to Office Mobile on iPhone or Office Mobile on Android. Provides a resolution.
 author: MaryQiu1987
 audience: ITPro
 ms.topic: troubleshooting
@@ -9,15 +9,14 @@ manager: dcscontentpm
 ms.custom: CSSTroubleshoot
 localization_priority: Normal
 search.appverid: 
-- MET150
-appliesto:
-- Office Mobile for iPhone
-- Office Mobile for Android
+  - MET150
+appliesto: 
+  - Office Mobile for iPhone
+  - Office Mobile for Android
+ms.date: 3/31/2022
 ---
 
 # Errors when trying to activate or sign in to Office Mobile on iPhone or Office Mobile on Android
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## PROBLEM
 

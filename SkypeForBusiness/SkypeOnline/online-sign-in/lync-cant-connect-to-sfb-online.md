@@ -15,6 +15,7 @@ appliesto:
   - Skype for Business Online
   - Lync 2013
   - Lync 2010
+ms.date: 3/31/2022
 ---
 
 # Lync 2013 or Lync 2010 can't connect to the Skype for Business Online service because a proxy is blocking connections from MSOIDSVC.exe

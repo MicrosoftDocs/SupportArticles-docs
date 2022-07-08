@@ -13,11 +13,10 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
   - Azure Active Directory
+ms.date: 3/31/2022
 ---
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

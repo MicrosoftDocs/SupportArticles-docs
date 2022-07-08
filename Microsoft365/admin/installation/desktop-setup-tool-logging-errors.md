@@ -10,9 +10,10 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
 ms.reviewer: dahans, jhayes
-appliesto:
-- Microsoft 365
+appliesto: 
+  - Microsoft 365
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Description of Microsoft 365 Desktop Setup Tool logging errors
 
@@ -142,7 +143,6 @@ The following table describes the conditions that may trigger a Microsoft 365 De
 |UserConfigurationVersionErrorTitle|This version of the application is no longer supported.|Title of the error dialog box that states that the user has to run the latest version of the application through the W Portal|
 |WarningBelowSystemRequirements|The version of Microsoft Windows or Microsoft Office you are using is not compatible with Microsoft 365.|Text for the system requirements dialog box|
 |WarningCloseApplicationsToContinueTitle|You must close the following applications before Microsoft 365 can be configured:|Title of the **You need to close** dialog box. Description is a list of application names.|
-||||
 
 ## References
 

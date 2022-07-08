@@ -13,6 +13,7 @@ ms.reviewer: ramesa, dahans, randw
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Online
+ms.date: 3/31/2022
 ---
 
 # Outlook Skype for Business "Contacts" folder doesn't sync with Skype for Business contacts

@@ -16,6 +16,7 @@ search.appverid:
 appliesto: 
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2016 Standard Edition
+ms.date: 3/31/2022
 ---
 # The modern attachment feature doesn't work when web proxy used in Exchange Server 2016
 

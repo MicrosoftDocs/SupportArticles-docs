@@ -14,11 +14,10 @@ appliesto:
   - Microsoft Office Visio Professional 2007
   - Microsoft Office Visio Standard 2003
   - Visio
+ms.date: 3/31/2022
 ---
 
 # Search for Shapes feature on the Internet is discontinued
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 

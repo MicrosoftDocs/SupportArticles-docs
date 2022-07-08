@@ -12,11 +12,10 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Office 365 Subscription Portal
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

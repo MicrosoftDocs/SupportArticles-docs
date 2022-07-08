@@ -14,6 +14,7 @@ ms.reviewer: benwinz
 appliesto: 
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Free/busy lookups fail from Exchange Online to on-premises in a hybrid deployment
 

@@ -13,11 +13,10 @@ ms.author: luche
 appliesto: 
   - Excel 2010
   - Excel 2013
+ms.date: 3/31/2022
 ---
 
 # [SDP 3][7b5791e2-2449-4351-867a-a22d34449d15] Data that is collected by the Excel Support Diagnostic
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -81,7 +80,6 @@ Events from the last 15 days are recorded in the full
 |Event log - Application|\<*ComputerName*>_evt_Application.*|.txt, .csv, .evtx|
 |Event log - System|\<*ComputerName*>_evt_System.*|.txt, .csv, .evtx|
 |Event log - OAlerts|\<*ComputerName*>_evt_OAlerts.*|.txt, .csv, .evtx|
-||||
 
 File created from the Application event logs:
 
@@ -178,10 +176,8 @@ File details include: Version, Location, Description, Size, Date, Company
 |32-bit Common VSTO Program file information|\<*ComputerName*>_sym_CommonProgramFilesx86VSTO.*|.csv, .txt |
 |Office Program information|\<*ComputerName*>_sym_ProgramFilesOffice.*|.csv, .txt |
 |Office Addins Program information|\<*ComputerName*>_sym_ProgramFilesOfficeAddins.*|.csv, .txt|
-||||
 |System 32 information|\<*ComputerName*>_sym_System32.*|.csv, .txt |
 |System 32 (64-bit) information|\<*ComputerName*>_sym_Syswow64.*|.csv, .txt |
-||||
 |64-bit Click-to-Run Program File Information|\<*ComputerName*>_sym_C2R_ProgramFilesCommonx64.*|.csv, .txt |
 |32-bit Click-to-Run Program File Information|\<*ComputerName*>_sym_C2R_ProgramFilesCommonx86.*|.csv, .txt |
 

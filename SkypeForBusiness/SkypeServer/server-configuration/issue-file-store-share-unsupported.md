@@ -14,6 +14,7 @@ appliesto:
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
   - Lync Server 2013
+ms.date: 3/31/2022
 ---
 
 # Issues when the Lync Server File Store share is in an unsupported configuration

@@ -15,6 +15,7 @@ appliesto:
   - Lync Server 2013
   - Lync Server 2010 Enterprise Edition
   - Lync Server 2010 Standard Edition
+ms.date: 3/31/2022
 ---
 
 # Enabling Lync Server enhanced presence privacy mode updates the presence status of some Lync contacts to "unavailable"

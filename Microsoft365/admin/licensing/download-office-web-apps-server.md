@@ -13,13 +13,12 @@ search.appverid:
   - MET150
 appliesto: 
   - Office Web Apps Server 2013
+ms.date: 3/31/2022
 ---
 
 # Download Microsoft Office Web Apps Server
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 Microsoft Office Web Apps Server is now available for download exclusively from the Microsoft Volume Licensing Service Center (VLSC) under Volume Licensing agreements only. For more information, visit the following Microsoft website:
 

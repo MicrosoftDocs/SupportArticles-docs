@@ -19,10 +19,9 @@ appliesto:
   - Access 2010
   - Access 2007
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Access Error: Data on the Clipboard is damaged, so Microsoft Access can't paste it
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 2221635
 

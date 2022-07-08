@@ -13,15 +13,14 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Azure Active Directory
   - Office 365
+ms.date: 3/31/2022
 ---
 
 # Grant the Everyone claim to external users in Office 365
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
-Starting on March 23, 2018, we are updating the behavior and governance of access by external users in Office 365.
+Starting on March 23, 2018, we're updating the behavior and governance of access by external users in Office 365.
 
 After this change is made, an external user will see only the content that is shared with that user or with groups to which the user belongs. External users will no longer see content that is shared to the **Everyone**, **All Authenticated Users**, or **All Forms Users** groups. By default, content that is granted permissions to these groups will be visible only to your organization's users.
 
@@ -31,7 +30,7 @@ Administrators can change the default behavior to enable external users to see c
 
 ### Background
 
-In on-premises Active Directory domains, the **Everyone** special group represents all identities in the Active Directory domain. This includes the domain's guest account, which is disabled by default. By default, the **Everyone** group includes all user accounts that are added by delegated administrators to the domain.
+In on-premises Active Directory domains, the **Everyone** special group represents all identities in the Active Directory domain. It includes the domain's guest account, which is disabled by default. By default, the **Everyone** group includes all user accounts that are added by delegated administrators to the domain.
  
 Before this change, Office 365 shared the behavior of on-premises Active Directory domains: Every user in a tenant's Azure Active Directory (Azure AD) was effectively considered a member of the **Everyone** group after you added an **Everyone** claim to the user's security context. This included external users. This claim enables a user to access any content that is shared with the **Everyone** group.
  
@@ -41,7 +40,7 @@ Office 365 enables users to share and collaborate seamlessly with users inside a
  
 ### Updates to the default access for external users
 
-To better support user-driven sharing, we are updating the behavior and governance of access by external users in Office 365.
+To better support user-driven sharing, we're updating the behavior and governance of access by external users in Office 365.
  
 Starting on March 23, 2018, external users will no longer be granted the **Everyone**, **All Authenticated Users**, or **All Forms Users** claims by default. External users will be granted access only to content that is shared with the group to which the external user belongs, and to content that is shared directly with the external user. External users will not have access to content that is shared with these three special groups.
  
@@ -60,13 +59,14 @@ Although we continue to support sharing with the **Everyone**, **Everyone Except
  
 Office 365 groups define the membership and access to content across Office 365 services and experiences. Many Office 365 services already support Azure AD dynamic groups, and these services are defined as a set of rules that are based on Azure AD properties and business logic.
  
-Dynamic groups are the best way to make sure that the appropriate users have access to the correct content. Dynamic groups let you define a group one time by using a definition that is based on rules. By having this ability, you do not have to add or remove members as your organization changes. 
+Dynamic groups are the best way to make sure that the appropriate users have access to the correct content. Dynamic groups let you define a group one time by using a definition that is based on rules. By having this ability, you don't have to add or remove members as your organization changes. 
 
 ## FAQ
 
-**Q:** **Is it currently possible to opt out your tenant from receiving this change?** 
+**Q:** **Is it currently possible to opt out your tenant from receiving the change?**
 
-**A:** Currently, there is no official "opt out" process. If you continue to use these groups to share to external users, you can run the following cmdlet in PowerShell before March 23, 2018: 
+**A:** Currently, there's no official "opt out" process. If you continue to use these groups to share to external users, you can run the following cmdlet in PowerShell before March 23, 2018:
+
 ```powershell
 Set-SPOTenant -ShowEveryoneClaim $true
 ```
@@ -74,22 +74,22 @@ Set-SPOTenant -ShowEveryoneClaim $true
 > [!NOTE]
 > By default, the **-ShowEveryoneClaim** property value is set to **True**. However, to make sure that the property value is not **null**, run this command to fully update the setting. If you want to verify that the setting is updated, please contact Microsoft Support. 
 
-## Identifying resources permissioned to all external users in the tenancy
+## Identifying resources permitted to all external users in the tenancy
 
 ### Prerequisites
 
 - Download the [**SharePoint Search Query Tool**](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Search.QueryTool).
 
   > [!NOTE]
-  > The queries in the following "Process" section can also be run in web browsers.    
-- Create a consumer account at **Outlook.com**. This account is external to your organization.This exampleassumes that the account is contoso_externaluser@outlook.com.    
+  > The queries in the following "Process" section can also be run in web browsers.
+- Create a consumer account at **Outlook.com**. This account is external to your organization. This example assumes that the account is contoso_externaluser@outlook.com.
  
 ### Assumption
 
-- YourOffice 365 organization is Contoso. Your organization uses contoso.sharepoint.com for SharePoint sites and groups, and contoso-my.sharepoint.com for OneDrive storage.    
-- You are an administrator for the organization. Youridentity isadmin@contoso.com.    
+- Your Office 365 organization is Contoso. Your organization uses contoso.sharepoint.com for SharePoint sites and groups, and contoso-my.sharepoint.com for OneDrive storage.
+- You're an administrator for the organization. Your identity isadmin@contoso.com.
  
 ### Process
 
 - Configure your tenant to grant the **Everyone** claim to external users by
-[How to determine resources to which all external users have access](https://support.office.com/article/how-to-determine-resources-to-which-all-external-users-have-access-c3c8642b-cfb3-46b7-9f5a-ce27a6cb8ea1).    
+[How to determine resources to which all external users have access](https://support.office.com/article/how-to-determine-resources-to-which-all-external-users-have-access-c3c8642b-cfb3-46b7-9f5a-ce27a6cb8ea1).

@@ -12,6 +12,7 @@ ms.author: v-six
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Skype for Business Cloud Connector Edition
+ms.date: 3/31/2022
 ---
 
 # Escalation of peer to peer PSTN call fails when you use Skype for Business Cloud Connector Edition

@@ -202,8 +202,7 @@ To open a shared calendar from the sharing invitation, select **Accept** to open
 
 To work around this problem, open directly into the shared calendar.
 
-For example, assume that your Outlook on the Web (formerly known as Outlook Web App) URL is `https://yourdomain/owa`, and that a user (user@*yourdomain*.com) shared his or her calendar with you.
-
+For example, assume that your Outlook on the Web (formerly known as Outlook Web App) URL is `https://yourdomain/owa`, and that a user (user@*yourdomain*.com) shared calendar with you.
 
 You can use the following URL to open the user's calendar:
 
@@ -270,7 +269,7 @@ If **Microsoft Exchange** does not appear before the shared calendar name, this 
 
 ### Cannot expand the mailbox of another person
 
-To work around this problem, ask the person who shared the calendar with you to grant you the Reviewer permission for his or her mailbox.
+To work around this problem, ask the users who shared the calendar with you to grant you the Reviewer permission for their mailbox.
 
 > [!IMPORTANT]
 > The following steps are performed on the computer of the person who shared the calendar with you.
@@ -296,7 +295,7 @@ To work around this problem, ask the person who shared the calendar with you to 
 
 ### You see nothing or you don't have the necessary permission to open the shared calendar
 
-Ask the person who shared the calendar with you to perform the following steps on his or her computer.
+Ask the users who shared the calendar with you to perform the following steps on their computer.
 
 **For Outlook Desktop Client:**
 

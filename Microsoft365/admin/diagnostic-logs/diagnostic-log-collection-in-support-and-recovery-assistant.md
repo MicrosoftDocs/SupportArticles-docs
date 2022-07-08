@@ -1,29 +1,28 @@
 ---
 title: Turn off diagnostic log collection in Support and Recovery Assistant
-ms.author: kfollis
-author: kfollis
+ms.author: luche
+author: helenclu
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.collection: Adm_O365
 ms.custom: CSSTroubleshoot
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 5f76de29-9ee3-47de-84ce-2d49fdc32174
-description: "Learn about diagnostic log collection in Support and Recovery Assistant for Office 365. "
+description: Learn about diagnostic log collection in Support and Recovery Assistant for Office 365. 
+ms.date: 3/31/2022
 ---
 
 # Turn off diagnostic log collection in Support and Recovery Assistant
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 By default, [Support and Recovery Assistant](https://diagnostics.office.com/#/Download/?env=SOC) collects diagnostic logs to help troubleshoot problems in the following scenarios. 
   
 - Support and Recovery Assistant sometimes collects diagnostic logs when the tool fails to solve a user's problem.
-    
+
 - Support and Recovery Assistant collects diagnostic logs when a user chooses to run advanced diagnostics. Typically this happens at the request of an admin or Microsoft support engineer.
     
     :::image type="content" source="media/diagnostic-log-collection-in-support-and-recovery-assistant/support-recovery-assistant.png" alt-text="Screenshot of Microsoft Support and Recovery Assistant page.":::

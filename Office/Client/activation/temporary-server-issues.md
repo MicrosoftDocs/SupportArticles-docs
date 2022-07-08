@@ -1,7 +1,8 @@
 ---
 title: Activation error Sorry, we are having some temporary server issues
 description: Troubleshooting methods if you're continuing to see the error Sorry, we are having some temporary server issues.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro
@@ -15,6 +16,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft 365
+ms.date: 3/31/2022
 ---
 
 # Microsoft 365 Apps activation error: “Sorry, we are having some temporary server issues”

@@ -2,7 +2,8 @@
 title: Third-party PowerPivot data refresh tools are not supported
 description: Describes third-party PowerPivot data refresh tools are not supported.
 author: helenclu
-ms.author: randring
+ms.author: luche
+ms.reviewer: randring
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,6 +13,7 @@ ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Microsoft Excel
+ms.date: 3/31/2022
 ---
 
 # Third-party PowerPivot data refresh tools are not supported

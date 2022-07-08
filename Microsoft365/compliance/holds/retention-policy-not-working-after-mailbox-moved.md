@@ -17,10 +17,13 @@ appliesto:
   - Exchange Server 2013 Enterprise
   - Exchange Server 2013 Standard Edition
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Retention policy no longer works after a mailbox is moved from the on-premises environment to Exchange Online
 
 _Original KB number:_ &nbsp; 3194755
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 

@@ -1,28 +1,29 @@
 ---
 title: Troubleshoot Remove an alias from a shared mailbox
-ms.author: kwekua
-author: kwekua
+author: simonxjx
+ms.author: v-six
 manager: dcscontentpm
 audience: Admin
 ms.topic: troubleshooting
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
-f1_keywords:
-- 'O365P_AdminSharedMbx_TSAlias'
-- 'O365M_AdminSharedMbx_TSAlias'
-- 'O365E_AdminSharedMbx_TSAlias'
-- 'AdminSharedMbx_TSAlias'
+  - Exchange Online
+  - CSSTroubleshoot
+f1_keywords: 
+  - 'O365P_AdminSharedMbx_TSAlias'
+  - 'O365M_AdminSharedMbx_TSAlias'
+  - 'O365E_AdminSharedMbx_TSAlias'
+  - 'AdminSharedMbx_TSAlias'
 localization_priority: None
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: ea585b86-76aa-4cf4-912e-f8271677d1d5
 description: Learn how to remove an email address from a shared mailbox in the admin center so that you can reuse it.
+ms.date: 3/31/2022
 ---
 # Troubleshoot: Remove an alias from a shared mailbox
 

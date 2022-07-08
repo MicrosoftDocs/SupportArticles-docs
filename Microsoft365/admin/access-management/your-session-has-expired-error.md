@@ -12,11 +12,10 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office apps for the web
+ms.date: 3/31/2022
 ---
 
 # "Your session has expired" error message in Office Online
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

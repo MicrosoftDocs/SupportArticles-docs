@@ -13,13 +13,12 @@ search.appverid:
   - MET150
 appliesto: 
   - Microsoft Project
+ms.date: 3/31/2022
 ---
 
 # "Iexplorer.exe has encountered a problem and needs to close" error when you try to view a timesheet in Project Web Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 When you try to view a timesheet in Microsoft Project Web Access, Microsoft Internet Explorer quits, and you receive the following error message:
 
@@ -33,20 +32,23 @@ When you click **more information**, you receive the following error message whe
 > ModVer: 9.0.2000.224  
 > Offset: yyyyyyy
 
-##  Cause
+## Cause
 
 This problem may occur if the Google Toolbar for Internet Explorer is installed on your computer.
 
-##  Workaround
+## Workaround
 
 To work around this problem, use one of the following methods.
+
 ### Method 1
+
 Remove the Google Toolbar for Internet Explorer. To do this, follow these steps:
 
 1. Click **Start**, click **Control Panel**, and then click **Add or Remove Programs**.   
 2. Click **Google Toolbar for Internet Explorer**, and then click **Change/Remove**.   
 
 ### Method 2
+
 Disable third-party browser extensions in Internet Explorer. To do this, follow these steps:
 
 1. Start Internet Explorer.   
@@ -55,7 +57,7 @@ Disable third-party browser extensions in Internet Explorer. To do this, follow 
 
 **Note** Both methods require that you restart Internet Explorer.
 
-##  More Information
+## More Information
 
 You may not experience this problem with a later version of the Google Toolbar. For more information about the Google Toolbar for Internet Explorer, visit the following Google Web site:
 

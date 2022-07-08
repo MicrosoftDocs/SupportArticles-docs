@@ -14,11 +14,10 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Visio Pro for Office 365
   - Project for Office 365
+ms.date: 3/31/2022
 ---
 
 # "This is not a valid win32 application" when you install Microsoft 365 Apps for enterprise, Visio Pro for Office 365, or Project for Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 

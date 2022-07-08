@@ -16,6 +16,7 @@ appliesto:
   - Exchange Server 2010 Standard
   - Exchange Online
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Exchange Online users can't access legacy on-premises public folders
 

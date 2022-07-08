@@ -14,11 +14,10 @@ search.appverid:
 appliesto: 
   - Visio Professional 2013
   - Visio Standard 2013
+ms.date: 3/31/2022
 ---
 
 # Legacy UML features are missing when you edit a UML or database diagram in Visio 2013
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Introduction 
 

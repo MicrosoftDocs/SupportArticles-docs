@@ -14,15 +14,16 @@ appliesto:
   - SharePoint Online
   - SharePoint Server 2013
   - SharePoint Server 2010
+ms.date: 3/31/2022
 ---
 
 # "Access denied" error when a user tries to approve an Approval Workflow task
 
 ## Problem
 
-In SharePoint Server 2013, SharePoint Server 2010, or SharePoint Online, you use the SharePoint 2010 Workflow platform to configure an **Approval** workflow. However, when an approver tries to approve the item, he or she receives the following error message:
+In SharePoint Server 2013, SharePoint Server 2010, or SharePoint Online, you use the SharePoint 2010 Workflow platform to configure an **Approval** workflow. However, when an approver tries to approve the item, the following error message is returned:
 
-**Access Denied**
+> **Access Denied**
 
 ## Solution
 

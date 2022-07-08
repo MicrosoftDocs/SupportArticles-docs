@@ -14,6 +14,7 @@ ms.reviewer: carlsh, suetc, digvish, stankan, jackyfan
 appliesto: 
   - Skype for Business 2015
   - Lync 2013
+ms.date: 3/31/2022
 ---
 
 # Duplicated working numbers for contacts are displayed in call drop-down menu in Skype for Business 2015 (Lync 2013)

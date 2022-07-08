@@ -7,18 +7,19 @@ audience: Admin
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-- Exchange Online
-- CSSTroubleshoot
+  - Exchange Online
+  - CSSTroubleshoot
 ms.collection: 
-- M365-subscription-management 
-- Adm_O365
-search.appverid:
-- BCS160
-- MET150
-- MOE150
+  - M365-subscription-management
+  - Adm_O365
+search.appverid: 
+  - BCS160
+  - MET150
+  - MOE150
 ms.assetid: 27deff23-8ab0-42e6-b827-5b9ce38f03f8
 ROBOTS: NOINDEX
 description: Get help for solving email connection and delivery problems.
+ms.date: 3/31/2022
 ---
 # Non-delivery report error codes
 

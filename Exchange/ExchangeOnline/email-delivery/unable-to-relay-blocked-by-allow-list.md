@@ -15,6 +15,7 @@ appliesto:
   - Exchange Online
   - Exchange Online Protection
 search.appverid: MET150
+ms.date: 3/31/2022
 ---
 # Sender receives an NDR: 5.7.1 Unable to Relay: Blocked by Customer Allow List
 

@@ -12,11 +12,10 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Office 365 Identity Management
+ms.date: 3/31/2022
 ---
 
 # You can't assign a federated domain to a user in the Microsoft 365 Admin Center
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Problem
 
