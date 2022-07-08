@@ -11,7 +11,7 @@ ms.custom:
   - CI 148047
   - CSSTroubleshoot
   - CI 163053
-ms.reviewer: zebamehdi; brandisi
+ms.reviewer: zebamehdi; gregmans
 appliesto: 
   - Office 365
 search.appverid: MET150
@@ -19,12 +19,12 @@ ms.date: 4/26/2022
 ---
 # Command-line version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained and scriptable. It runs at a command line or in a PowerShell script. This version is an enterprise-ready diagnostic tool for specific client issues. It's useful when administrators have to remotely run a diagnostic tool on computers in their organization.
+The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained, running either at a command line or through a script (for example, PowerShell). This version is an enterprise-ready diagnostic tool for specific client issues with Office, Teams, and Outlook. It's useful when administrators have to remotely run a diagnostic tool on computers in their organization.
 
 ## Download and run the command-line version of SaRA
 
-1. Download SaRA from [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles)
-1. In the downloaded file, extract the files in the *DONE* folder to a folder that you can access from the user's computer on which you'll run SaRA.
+1. Download SaRA from [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles) .
+1. In the downloaded .zip file, extract the files to a folder that you can access from the computer on which you'll run SaRA.
 1. On the user's computer, select **Start**, enter *cmd*, and then press Enter to open a Command Prompt window.
 
     **Note:** See the table in the "[Supported switches](#supported-switches)" section to determine whether an elevated Command Prompt window is required to run SaRA for the user's scenario.
@@ -45,42 +45,23 @@ The following switches are available to control SaRAcmd.exe.
 
    Use the `-S` switch to specify the scenario that you want to run. The switch can't be run on its own. It must be followed by `-AcceptEula`. For example, to run the scenario that removes the currently installed version of Office, enter `-S OfficeScrubScenario -AcceptEula`, and then press Enter.
 
-   Currently, the following scenarios are supported through the command line.
+   Currently, the following values for `Scenarioname` are supported with the `-S` switch.
 
-   |`Scenarioname` value|Scenario entry point in the full (UI) version of SaRA|Elevated Command Prompt window required|
-   |---|---|---|
-   |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook|No|
-   |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it|Yes|
-   |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook|No|
-   |`OfficeActivationScenario`|Office \ I've installed a subscription version of Office, but I can't activate it|Yes|
-   |`OutlookCalendarCheckTask`|Advance Diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues|No|
-   |`OfficeSharedComputerScenario`|Office \ I want to setup Office with shared computer activation on a computer or server in my organization|Yes|
+   |`Scenarioname` value|Equivalent scenario entry point in the full (UI) version of SaRA (for reference)|Elevated Command Prompt window required|
+   |---|---|:-:|
+   |`ExpertExperienceAdminTask`|Advanced Diagnostics \ Outlook| No |
+   |`OfficeScrubScenario`|Office \ I have Office installed, but I'm having trouble uninstalling it| Yes |
+   |`TeamsAddinScenario`|Teams \ The Teams Meeting option isn't shown, or the Teams Meeting add-in doesn't load in Outlook| No |
+   |`OfficeActivationScenario`|Office \ I've installed a subscription version of Office, but I can't activate it|      Yes |
+   |`OutlookCalendarCheckTask`|Advanced Diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues| No |
+   |`OfficeSharedComputerScenario`|Office \ I want to setup Office with shared computer activation on a computer or server in my organization| Yes |
+   |`ResetOfficeActivation`|NA: Command-line only scenario for resetting the Office Activation state.| Yes |
    
    **Note:** To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 
-2. `-CloseOutlook`
+2. `-AcceptEula`
 
-   The `-CloseOutlook` switch is required to run the TeamsAddinScenario.
-   
-   **Note**: If Outlook is running, this switch closes Outlook.
-   
-   ```console
-   SaRAcmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
-   ```
-
-3. `-CloseOffice`
-
-   The `-CloseOffice` switch is required to run the OfficeActivationScenario and OfficeSharedComputerScenario scenarios.
- 
-   **Note**: The `-CloseOffice` switch closes Office applications.
-   
-   ```console
-   SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice
-   ```
-
-4. `-AcceptEula`
-
-   The End User License Agreement (EULA) must be accepted before a scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify    the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
+   The End User License Agreement (EULA) must be accepted before any scenario can be run. If you're using `-AcceptEULA`, you must also use `-S <scenarioname>` to specify    the scenario that you want to run. For example, to uninstall Office, run the following command from an elevated Command Prompt window:
 
    ```console
    SaRAcmd.exe -S OfficeScrubScenario -AcceptEula
@@ -90,48 +71,68 @@ The following switches are available to control SaRAcmd.exe.
 
    ```console
    SaRAcmd.exe -S ExpertExperienceAdminTask -AcceptEula
-   ```
-
-5. `-DisplayEULA`
+   
+3. `-DisplayEULA`
 
    Use the `-DisplayEULA` switch to display the EULA. To save the EULA text to a file, run a command that resembles the following example:
 
    ```console
    SaRAcmd.exe -DisplayEULA > c:\temp\SaRAEula.txt
    ```
+
+   **Note**: The above example outputs the EULA as a text file called SaRAEula.txt in the C:\temp folder.
+   
+4. `-CloseOutlook`
+
+   The `-CloseOutlook` switch is required to run the **TeamsAddinScenario**.
+   
+   **Note**: If Outlook is running, this switch closes Outlook.
+   
+   ```console
+   SaRAcmd.exe -S TeamsAddinScenario -AcceptEula -CloseOutlook
+   ```
+
+5. `-CloseOffice`
+
+   The `-CloseOffice` switch is required to run the **OfficeActivationScenario**, **OfficeSharedComputerScenario**, and **ResetOfficeActivation** scenarios.
+ 
+   **Note**: The `-CloseOffice` switch closes Office applications.
+   
+   ```console
+   SaRAcmd.exe -S OfficeActivationScenario -AcceptEula -CloseOffice
+   ```
    
 6. `-LogFolder <Output Path>`
 
-   The `-LogFolder` switch is optional for the ExpertExperienceAdminTask and OutlookCalendarCheckTask scenarios. If the `-LogFolder` switch is used, it forces SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.
+   The `-LogFolder` switch is optional for the **ExpertExperienceAdminTask** and **OutlookCalendarCheckTask** scenarios. If the `-LogFolder` switch is used, it forces SaraCmd.exe to output scenario-specific logs to the folder that's specified by `Output Path`.
   
 7. `-P <Profile Name>`
   
-   The `-P` switch is optional for the OutlookCalendarCheckTask scenario. \<Profile name\> is the Outlook profile that's scanned by the OutlookCalendarCheckTask scenario.
+   The `-P` switch is optional for the **OutlookCalendarCheckTask** scenario. `Profile name` is the Outlook profile that's scanned by the OutlookCalendarCheckTask scenario.
   
-8. `RemoveSCA`
+8. `-RemoveSCA`
   
-   The `-RemoveSCA` switch is optional for OfficeActivationScenario and OfficeSharedComputerScenario. This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.
+   The `-RemoveSCA` switch is optional for **OfficeActivationScenario** and **OfficeSharedComputerScenario**. This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.
   
 9. `-HideProgress`
   
-   The `-HideProgress` switch is optional and only works with the ExpertExperienceTask and OutlookCalendarCheckTask scenarios. The default feature is to always show progress. When this switch is used, it hides the progress display for the ExpertExperienceTask and OutlookCalendarCheckTask scenarios.
+   The `-HideProgress` switch is optional and only works with the **ExpertExperienceAdminTask** and **OutlookCalendarCheckTask** scenarios. The default feature is to always show progress. When this switch is used, it hides the progress display for the ExpertExperienceAdminTask and OutlookCalendarCheckTask scenarios.
   
 10. `-OfflineScan`
   
-    The `-OfflineScan` switch is optional and only works with the ExpertExperienceAdminTask scenario. This switch forces the scan of Outlook to be an Offline scan when the Outlook application is running. 
+    The `-OfflineScan` switch is optional and only works with the **ExpertExperienceAdminTask** scenario. This switch forces the scan of Outlook to be an Offline scan when the Outlook application is running. 
   
-11. `-OfficeVersion`
+11. `-OfficeVersion <version>`
   
-    The `-OfficeVersion` switch is optional and works only with the OfficeScrubScenario scenario. Using this switch only removes the Office version that's defined in   the parameter. If you use **All** as a parameter, it removes all Office versions from your machine. For example, to uninstall only Office 2016 version, run the following command from an elevated Command Prompt window:
-  
-  ```console
-  SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion 2016
-  ```
-  
+    The `-OfficeVersion` switch is optional and works only with the **OfficeScrubScenario** scenario. Using this switch only removes the Office version that's defined in the `<version>` parameter. Allowable values for `<version>` are: All, M365, 2021, 2019, 2016, 2013, 2010, or 2007. For example, to uninstall only Office 2016, run the following command from an elevated Command Prompt window:
+   
+   ```console
+   SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion 2016
+   ```
  To uninstall all Office versions,  run the following command from an elevated Command Prompt window:
  
- ```console
- SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion All
+  ```console
+  SaRAcmd.exe -S OfficeScrubScenario -AcceptEula -Officeversion All
   ```
    
 12. `-Help`
@@ -166,8 +167,8 @@ When you run a scenario by using the command-line version of SaRA, you receive n
   |---|---|---|
   |Office removed successfully|None|*00:* Successfully completed this scenario.</br></br>**Note:** We recommend you restart the computer to finish any remaining cleanup tasks.|
   |Office program found .exe files running: `lync, winword, excel, msaccess, mstore, infopath, setlang, msouc, ois, onenote, outlook, powerpnt, mspub, groove, visio, winproj, graph, teams`|Exit the scenario|*06:* Office programs are running. Please close all open Office programs and then rerun this scenario.|
-  |-OfficeVersion switch not used and no Office products found|Exit the scenario|*68:* We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion. For SaRA Command line users with version 17.00.8256.000 or earlier the error displayed is -*07:* No installed Office versions were found. Please use the full SaRA version.|
-  |-OfficeVersion switch not used and multiple Office versions detected as installed|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
+  |No Office products found and -OfficeVersion switch not used |Exit the scenario|*68:* We could not find any Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion. <br /><br />**Note:** For SaRA Command line users with version 17.00.8256.000 or earlier, the error displayed is -*07:* No installed Office versions were found. Please use the full SaRA version.|
+  |Multiple Office versions detected as installed and -OfficeVersion switch not used|Exit the scenario|*08:* Multiple Office versions were found. Please use the full SaRA version.|
   |Failure to remove Office|Exit the scenario|*09:* Failure to remove Office. Please use the full SaRA version.|
   |SaRA isn't elevated|Exit the scenario|*10:* SaRA needs to run elevated for this scenario. Please use an elevated command-prompt.|
   |Office version provided on command line doesn’t match detected installed version|Exit the scenario|*66:* We could not find the specified Office version. Please rerun this scenario specifying the correct Office version that is installed on your machine. You can also run this scenario using the full UI version of SaRA. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
@@ -203,32 +204,48 @@ When you run a scenario by using the command-line version of SaRA, you receive n
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
-  |User doesn't include -CloseOffice switch|Exit the scenario|Result Code 01 This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
-  |Office isn't installed|Exit the scenario|Result Code: 30 Could not find an installed version of Office|
-  |Office subscription not found|Exit the scenario|Result Code: 31 Could not find a subscription version of Office. Please see https://aka.ms/SaRA-Cmdline-NoSubscriptionFound for troubleshooting information.|
-  |Device subscription detected.|Exit the scenario|Result Code: 32 Device subscription detected. See https://aka.ms/SaRA_DeviceActivationDetectedCmd for troubleshooting and configuration information.|
-  |SaRA isn't elevated|Exit the scenario|Result Code: 33 This scenario requires an elevated command-prompt.|
-  |Shared Computer Activation (SCA) is enabled for Office|Exit the scenario|Result Code: 34 Shared Computer Activation (SCA) is enabled for Office. Please use the -RemoveSCA switch if you want this scenario to remove SCA and configure non-SCA activation for Office. Otherwise, use the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
-  |Failure to complete the scenario (for any reason)|Exit the scenario|Result Code: 35 We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
-  |Scan completed successfully|Exit the scenario|Result Code: 36 Successful run. Start any Office app and sign-in to activate.|
-  |Office is already activated|Exit the scenario|Result Code: 37 It looks like Microsoft Office is already activated. If you don’t think this is correct, please run the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
-  |Failure to complete the scenario (for any reason)|Exit the scenario|Result Code: 38 `<message depends on the ReasonCode>`|
-  |Unable to activate Office|Exit the scenario|Result Code: 39 Office may not be activated. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
-  |Failure to complete the scenario|Exit the scenario|Result Code: 40 Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
+  |User doesn't include -CloseOffice switch|Exit the scenario| 01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Office isn't installed|Exit the scenario| 30: Could not find an installed version of Office|
+  |Office subscription not found|Exit the scenario| 31: Could not find a subscription version of Office. Please see https://aka.ms/SaRA-Cmdline-NoSubscriptionFound for troubleshooting information.|
+  |Device subscription detected.|Exit the scenario| 32: Device subscription detected. See https://aka.ms/SaRA_DeviceActivationDetectedCmd for troubleshooting and configuration information.|
+  |SaRA isn't elevated|Exit the scenario| 33: This scenario requires an elevated command-prompt.|
+  |Shared Computer Activation (SCA) is enabled for Office|Exit the scenario| 34: Shared Computer Activation (SCA) is enabled for Office. Please use the -RemoveSCA switch if you want this scenario to remove SCA and configure non-SCA activation for Office. Otherwise, use the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario (for any reason)|Exit the scenario| 35: We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Scan completed successfully|Exit the scenario| 36: Successful run. Start any Office app and sign-in to activate.|
+  |Office is already activated|Exit the scenario| 37: It looks like Microsoft Office is already activated. If you don’t think this is correct, please run the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario (for any reason)|Exit the scenario| 38: `<message depends on the ReasonCode>`|
+  |Unable to activate Office|Exit the scenario| 39: Office may not be activated. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-CmdLine.|
+  |Failure to complete the scenario|Exit the scenario| 40: Cannot reach all endpoints required for activation. Please run the full UI version of SaRA.|
 
 - `OfficeSharedActivationScenario`
 
   |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
   |---|---|---|
-  |Scan completed successfully|Exit the scenario|Result Code: 63 Scenario completed successfully.  Please exit and restart Windows and sign back in as an end-user that needs to use Office.|
-  |User doesn't include -CloseOffice switch|Exit the scenario|Result Code 01 This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
-  |Error closing Office application|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
-  |Failure to remove SCA|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
-  |Office isn't installed|Exit the scenario|Result Code: 60 This scenario requires an existing Office installation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
-  |Error checking if Office is installed|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared1 Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
-  |Error determining if Office is ProPlus or BusinessRetail|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
-  |Office SKU installed is not ProPlus or BusinessRetail|Exit the scenario|Result Code: 61 This scenario requires an existing Office installation that supports Shared Computer Activation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-CmdLine.|
-  |Error running recovery action|Exit the scenario|Result code: 62 We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Scan completed successfully|Exit the scenario| 63: Scenario completed successfully.  Please exit and restart Windows and sign back in as an end-user that needs to use Office.|
+  |User doesn't include -CloseOffice switch|Exit the scenario| 01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Error closing Office application|Exit the scenario| 62: We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Failure to remove SCA|Exit the scenario| 62: We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Office isn't installed|Exit the scenario| 60: This scenario requires an existing Office installation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Error checking if Office is installed|Exit the scenario| 62: We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Error determining if Office is ProPlus or BusinessRetail|Exit the scenario| 62: We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  |Office SKU installed is not ProPlus or BusinessRetail|Exit the scenario| 61: This scenario requires an existing Office installation that supports Shared Computer Activation. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-CmdLine.|
+  |Error running recovery action|Exit the scenario| 62: We ran into a problem. Please run the Office Shared Computer Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeSCA-UI.|
+  
+ - `ResetOfficeActivation`
+
+  |Condition|Action taken by the command-line version|Output shown in the command-prompt window|
+  |---|---|---|
+  |Scan completed successfully|Exit the scenario| 80: Successful run. Start any Office app and sign-in to activate.|
+  |User doesn't include -CloseOffice switch|Exit the scenario|01: This scenario requires the -CloseOffice switch. Note, if Office is running, the -CloseOffice switch closes Office applications. For additional information, please visit https://aka.ms/SaRA_CommandLineVersion.|
+  |Error performing any action(s)|Exit the scenario| 71: We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from https://aka.ms/SaRA-OfficeActivation-Cmdline.|
+  |Command-prompt not elevated|Exit the scenario| 72: The scenario requires an elevated command-prompt.|
+  |Failure to run the OLicenseCleanup script|Exit the scenario|73: We ran into a problem running OLicenseCleanup.vbs. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps.|
+  |Failure running Dsregcmd|Exit the scenario| 74: We ran into a problem running Dsregcmd. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps.|
+  |Windows build requirement not met|Exit the scenario| 75: Windows is not at least Windows 10 version 1803. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps|
+  |Failure to run the SignOutOfWamAccounts script|Exit the scenario| 76: We ran into a problem running SignOutOfWamAccounts.ps1. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps.|
+  |WPJCleanup script requirements not met|Exit the scenario| 78: WorkplaceJoined=True, but Windows 10 is not at least version 1809. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps.|
+  |Failure to run the WPJCleanup script|Exit the scenario| 79: We ran into a problem running WPJCleanup. See https://docs.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state for manual reset steps.|
+
 
 ## SaRA command-line version history
 
@@ -238,6 +255,7 @@ The following table lists the versions of SaRA that were released on the specifi
 
 |Release date|SaRACmd.exe version|
 |----------|-----------|
+|July 8, 2022|17.00.8713.001 |
 |May 18, 2022|17.00.8433.005 |
 |April 7, 2022|17.00.8256.000|
 |February 8, 2022|17.00.7971.000|
