@@ -23,10 +23,7 @@ Consider the following scenario:
 In this scenario, PowerShell displays the following error message:
 
 ```Output
-The contents of file <FullPathForSignedPowerShellScript> might have been
-changed by an unauthorized user or process because the hash of the file does 
-not match the hash stored in the digital signature. The script cannot run on 
-the specified system.
+The contents of file <FullPathForSignedPowerShellScript> might have been changed by an unauthorized user or process because the hash of the file does not match the hash stored in the digital signature. The script cannot run on the specified system.
 ```
 
 ## Cause
