@@ -143,6 +143,69 @@ By default, all subscriptions have serial console access enabled. You can disabl
 
 ## Serial console security
 
+### Using Serial Console with a Custom Boot Diagnostics Storage Account Firewall enabled
+
+Serial console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions.
+
+#### Navigate to the settings of the custom boot diagnostics storage account firewall you have enabled.
+
+> [!NOTE]
+> To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics**, then click **Settings**.
+
+The list of IPs that need to be added to the storage account firewall are shown below. Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules)
+
+#### Add the Serial Console service IPs as firewall exclusions based on the geography of the VM
+
+Below is a full list of the IPs required to be permitted as firewall exclusions based on the region or geography the VM is located in. This is subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview).
+
+IP Address      | Regions | Geography
+:-----------|:--------------------|:-----------------|
+20.205.69.28 | East Asia, Southeast Asia | AsiaPacific
+20.195.85.180 | East Asia, Southeast Asia | AsiaPacific
+20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia
+20.70.222.112 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia
+191.234.136.63 | Brazil South, Brazil Southeast | Brazil
+20.206.0.194 | Brazil South, Brazil Southeast | Brazil
+52.228.86.177 | Canada Central, Canada East | Canada
+52.242.40.90 | Canada Central, Canada East | Canada
+20.45.242.18 |  | Canary (EUAP)
+20.51.21.252 |  | Canary (EUAP)
+52.146.139.220 | North Europe, West Europe | Europe
+20.105.209.72 | North Europe, West Europe | Europe
+20.111.0.244 | France Central, France South | France
+52.136.191.10 | France Central, France South | France
+51.116.75.88 | Germany North, Germany West Central | Germany
+20.52.95.48 | Germany North, Germany West Central | Germany
+20.192.168.150 | Central India, South India, West India | India
+20.192.153.104 | Central India, South India, West India | India
+20.43.70.205 | Japan East, Japan West | Japan
+20.189.228.222 | Japan East, Japan West | Japan
+20.200.196.96 | Korea Central, Korea South | Korea
+52.147.119.29 | Korea Central, Korea South | Korea
+20.100.1.184 | Norway West, Norway East | Norway
+51.13.138.76 | Norway West, Norway East | Norway
+20.208.4.98 | Switzerland North, Switzerland West | Switzerland
+51.107.251.190 | Switzerland North, Switzerland West | Switzerland
+20.45.95.66 | UAE Central, UAE North | UAE
+20.38.141.5 | UAE Central, UAE North | UAE
+20.90.132.144 | UK South, UK West | UnitedKingdom
+20.58.68.62 | UK South, UK West | UnitedKingdom
+51.12.72.223 | Sweden Central, Sweden South | Sweden
+51.12.22.174 | Sweden Central, Sweden South | Sweden
+20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
+20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
+20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
+20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States
+20.141.10.130 | All US Government(Fairfax) cloud regions | UsGov
+52.127.55.131 | All US Government(Fairfax) cloud regions | UsGov
+
+> [!IMPORTANT]
+>  The IPs that need to be permitted are specific to the region the VM is located in. For example, a virtual machine deployed in the **NorthEurope** region needs to add the following IP exclusions to the storage account firewall for the Europe geography:  52.146.139.220, 20.105.209.72. Please view the table above to find the correct IPs for your region and geography.
+
+Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
+
+After these changes are successfully applied, retry the Serial Console connection to the VM. If you are still having problems connecting, verify the correct IP addresses are excluded from the storage account firewall for the region of the VM.
+
 ### Access security
 
 Access to the serial console is limited to users who have an access role of [Virtual Machine Contributor](/azure/role-based-access-control/built-in-roles#virtual-machine-contributor) or higher to the virtual machine. If your Azure Active Directory tenant requires multi-factor authentication (MFA), then access to the serial console will also need MFA because the serial console's access is through the [Azure portal](https://portal.azure.com).
