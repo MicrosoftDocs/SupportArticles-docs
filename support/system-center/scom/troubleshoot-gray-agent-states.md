@@ -6,7 +6,7 @@ ms.reviewer: manojpa, adoyle, jochan
 ---
 # Troubleshoot gray agent states in System Center Operations Manager
 
-This article describes how to troubleshoot problems in which an agent, a management server, or a gateway is unavailable or **grayed out** in System Center Operations Manager (OpsMgr).
+This article describes how to troubleshoot problems in which an agent, a management server, or a gateway is unavailable or **grayed out** in System Center Operations Manager (OpsMgr).1234
 
 _Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager  
 _Original KB number:_ &nbsp; 2288515
