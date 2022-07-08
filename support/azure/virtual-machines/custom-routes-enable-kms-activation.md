@@ -36,7 +36,7 @@ The IP address of the KMS server for the Azure Global cloud is 23.102.135.246. I
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global|kms.core.windows.net|23.102.135.246|
+|Azure Global|kms.core.windows.net|23.102.135.246; 40.83.235.53|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
