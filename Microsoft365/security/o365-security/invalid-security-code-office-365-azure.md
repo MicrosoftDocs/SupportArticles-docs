@@ -1,6 +1,6 @@
 ---
 title: Invalid Security Code for Office 365, Intune, or Azure
-description: Describes an issue in which you receive an error message when you try to reset your admin password for Office 365, Microsoft Intune, or Azure. Provides a resolution.
+description: Describes an issue in which you receive an error message when you try to reset your admin password for Microsoft 365, Microsoft Intune, or Azure. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,7 +19,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "Invalid Security Code" error when you reset your admin password for Office 365, Intune, or Azure
+# "Invalid Security Code" error when you reset your admin password for Microsoft 365, Intune, or Azure
 
 ## Problem 
 

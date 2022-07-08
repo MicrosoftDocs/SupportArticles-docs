@@ -14,7 +14,7 @@ search.appverid:
 appliesto: 
   - Excel for Mac for Office 365
   - OneNote for Mac for Office 365
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
   - PowerPoint for Mac for Office 365
   - Word for Mac for Office 365
 ms.date: 3/31/2022

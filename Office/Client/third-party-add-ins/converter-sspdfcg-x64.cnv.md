@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2016
   - Word 2013
 ms.date: 3/31/2022

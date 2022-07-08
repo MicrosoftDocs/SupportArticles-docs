@@ -95,7 +95,7 @@
           href: ../email-delivery/on-premises-users-not-getting-emails-from-microsoft-365.md
     - name: Groups and Distribution Lists
       items:
-        - name: Can't access Office 365 groups in Outlook
+        - name: Can't access Microsoft 365 groups in Outlook
           href: ../groups-and-distribution-lists/cannot-access-office-365-groups-in-outlook.md
         - name: Can't manage groups that's synced to Microsoft 365
           href: ../groups-and-distribution-lists/cannot-manage-group-synced-from-on-premises.md

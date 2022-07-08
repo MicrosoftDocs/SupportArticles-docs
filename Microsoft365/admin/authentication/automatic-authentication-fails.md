@@ -13,10 +13,10 @@ ms.custom:
 ms.reviewer: dthayer
 appliesto: 
   - Office 365
-  - Outlook for Office 365
-  - Word for Office 365
-  - Excel for Office 365
-  - PowerPoint for Office 365
+  - Outlook for Microsoft 365
+  - Word for Microsoft 365
+  - Excel for Microsoft 365
+  - PowerPoint for Microsoft 365
   - OneNote for Office 365
 search.appverid: MET150
 ms.date: 3/31/2022

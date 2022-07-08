@@ -61,7 +61,7 @@ You should have at least the currently recommended minimum installation of Outlo
 
 [Outlook Updates](https://support.office.com/article/Outlook-Updates-472c2322-23a4-4014-8f02-bbc09ad62213)
 
-Additionally, you may have to make sure that Outlook clients aren't using a registry key to disable MAPI over HTTP. For more information, see [Outlook 2010, 2013, 2016, or Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected](https://support.microsoft.com/help/2937684).
+Additionally, you may have to make sure that Outlook clients aren't using a registry key to disable MAPI over HTTP. For more information, see [Outlook 2010, 2013, 2016, or Outlook for Microsoft 365 doesn't connect Exchange using MAPI over HTTP as expected](https://support.microsoft.com/help/2937684).
 
 ## I'm using Office 365 with Outlook 2007 or an earlier version. What actions do I have to take
 

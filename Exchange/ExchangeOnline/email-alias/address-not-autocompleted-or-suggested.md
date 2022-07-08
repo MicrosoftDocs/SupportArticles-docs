@@ -15,7 +15,7 @@ ms.reviewer: alexaca
 appliesto: 
   - Exchange Online
   - Outlook on the web
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019 for Mac
   - Outlook 2019
   - Outlook 2016

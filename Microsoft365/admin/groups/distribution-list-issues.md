@@ -30,7 +30,7 @@ There could be a couple of issues here:
   
 - It usually takes about 60 minutes for distribution groups to be fully created and ready for management. Make sure you've waited the appropriate amount of time and try sending the email again.
 
-- Sometimes, people create an Office 365 Group instead of a distribution group. Check out your distribution group in the admin center and make sure you created a distribution group.
+- Sometimes, people create a Microsoft 365 group instead of a distribution group. Check out your distribution group in the admin center and make sure you created a distribution group.
 
 ## External members not getting emails sent to distribution group
 
