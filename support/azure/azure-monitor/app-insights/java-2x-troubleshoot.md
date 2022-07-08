@@ -3,6 +3,7 @@ title: Troubleshoot Application Insights in a Java web project
 description: Learn how to troubleshooting issues that occur when you monitor live Java apps with Application Insights.
 ms.topic: conceptual
 ms.date: 6/22/2022
+author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: aaronmax
@@ -13,7 +14,7 @@ ms.custom: devx-track-java
 #Customer intent: As an Application Insights user working in a Java web project, I want to know how to monitor live Java apps with Application Insights, and troubleshoot any problems that might arise so I can use Application Insights effectively.
 ---
 
-# Troubleshooting Azure Application Insights in a Java web project
+# Troubleshoot Azure Application Insights in a Java web project
 
 This article provides troubleshooting solutions to common issues in a Q&A format for Application Insights Java 2.x.
 
