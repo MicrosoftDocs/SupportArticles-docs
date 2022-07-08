@@ -13,20 +13,19 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
-  - Office 365
+  - Microsoft 365
   - Microsoft Intune
   - CRM Online via Office 365 E Plans
   - Azure Backup
-  - Office 365 User and Domain Management
-  - Office 365 Identity Management
+  - Microsoft 365 User and Domain Management
 ms.date: 3/31/2022
 ---
 
-# "The user name or password is incorrect" when you use connect-MSOLService to connect to Office 365
+# "The user name or password is incorrect" when you use connect-MSOLService to connect to Microsoft 365
 
 ## Problem
 
-When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft Office 365, Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
+When you try to use the connect-MSOLService cmdlet in the Microsoft Azure Active Directory Module for Windows PowerShell to connect to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune, your attempt is unsuccessful. Additionally, you may receive the following error message:
 
 **Connect-MsolService : The user name or password is incorrect. Verify your user name, and then type your password again.**
 

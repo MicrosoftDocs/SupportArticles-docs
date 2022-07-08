@@ -14,7 +14,7 @@ ms.reviewer: willfid
 appliesto: 
   - Exchange Online
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

@@ -16,7 +16,7 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
