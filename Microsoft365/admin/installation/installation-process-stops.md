@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-Assume that you access the Internet by using a proxy server. When you try to install Microsoft Office 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.
+Assume that you access the Internet by using a proxy server. When you try to install Microsoft 365 or Microsoft Office 2013 Click-to-Run, the installation process stops at the "10% - Configuring" stage.
 
 ## Cause
 

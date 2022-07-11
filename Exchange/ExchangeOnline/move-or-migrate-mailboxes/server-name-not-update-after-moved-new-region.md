@@ -16,13 +16,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Server name doesn't update after a mailbox is moved to a new region in Office 365
+# Server name doesn't update after a mailbox is moved to a new region in Microsoft 365
 
 _Original KB number:_ &nbsp; 4073426
 
 ## Symptoms
 
-After a mailbox is moved to a new region in Microsoft Office 365, the server name doesn't update when you view the mailbox properties by using Remote PowerShell.
+After a mailbox is moved to a new region in Microsoft 365, the server name doesn't update when you view the mailbox properties by using Remote PowerShell.
 
 ## Cause
 

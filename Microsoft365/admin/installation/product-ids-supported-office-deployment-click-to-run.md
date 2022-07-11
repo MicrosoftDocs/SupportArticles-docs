@@ -26,7 +26,7 @@ This article lists product IDs that are supported by the Microsoft Office Deploy
 
 ## More Information
 
-The following product IDs are supported by the Office Deployment Tool in Office 365 and Microsoft 365 deployments:
+The following product IDs are supported by the Office Deployment Tool in Microsoft 365 and Microsoft 365 deployments:
 
 - O365ProPlusRetail
 - O365BusinessRetail

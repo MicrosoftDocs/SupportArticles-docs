@@ -41,13 +41,13 @@ It could also happen because you haven't assigned a license to yourself or your 
 1. If you're not already signed in, go to [https://admin.microsoft.com](https://admin.microsoft.com) and sign in with your work or school account.
 
     > [!NOTE]
-    > If you're unable to sign in with your work or school account, you may be signing in to the wrong Office 365 service, see [Where to sign in to Office 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4).
+    > If you're unable to sign in with your work or school account, you may be signing in to the wrong Office 365 service, see [Where to sign in to Microsoft 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4).
   
 2. Select your account icon in the upper-right, and then choose **My account**.
   
 3. In the left navigation, select **Subscriptions**.
 
-   You'll see the services that you're licensed to use, such as the latest desktop version of Office, Project, Visio, SharePoint Online or OneDrive for Business, and Exchange Online. If you don't see **The latest desktop version of Office** in the list (or **Project** or **Visio** if you bought plans with those applications), see [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
+   You'll see the services that you're licensed to use, such as the latest desktop version of Office, Project, Visio, SharePoint Online or OneDrive for Business, and Exchange Online. If you don't see **The latest desktop version of Office** in the list (or **Project** or **Visio** if you bought plans with those applications), see [Assign licenses to users in Microsoft 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users).
     
 Not all Office 365 plans come with Office. If your organization has a plan that doesn't include the latest desktop version of Office, as the admin, you can [switch to a different Office 365 plan or subscription](/office365/admin/subscriptions-and-billing/switch-to-a-different-plan). 
   
@@ -107,7 +107,7 @@ To reinstall Office 2016 or Office 2013, see [Download and install or reinstall 
   
 ### I have a different problem
 
-For a detailed troubleshooting instructions, and to help your users troubleshoot potential issues, see [Troubleshoot Office installation issues in Office 365 for business](https://support.office.com/article/fbbf663b-1e76-46d2-a417-0aa78ed2fb9a).
+For a detailed troubleshooting instructions, and to help your users troubleshoot potential issues, see [Troubleshoot Office installation issues in Microsoft 365 for business](https://support.office.com/article/fbbf663b-1e76-46d2-a417-0aa78ed2fb9a).
 
 > [!NOTE]
 > If you're using Office 365 operated by 21Vianet in China, please [contact the 21Vianet support team](/office365/admin/contact-support-for-business-products).

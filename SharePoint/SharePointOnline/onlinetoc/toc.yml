@@ -155,7 +155,7 @@
       href: ../lists-and-libraries/dragging-files-using-web-browser.md
     - name: Issue when creating a calendar overlay
       href: ../lists-and-libraries/fails-creating-calendar-overlay.md
-    - name: Issue when creating documents in Office 365 portal
+    - name: Issue when creating documents in Microsoft 365 portal
       href: ../lists-and-libraries/o365-portal-fails-creating-documents.md
     - name: Issue when deleting an online list item attachment
       href: ../lists-and-libraries/list-item-fails-saving-same-attachment.md

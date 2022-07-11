@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3078572
 
 ## Symptoms
 
-After you move a mailbox from the on-premises Microsoft Exchange Server environment to Microsoft Exchange Online in Microsoft Office 365 in a hybrid deployment, you receive the following warning message:
+After you move a mailbox from the on-premises Microsoft Exchange Server environment to Microsoft Exchange Online in Microsoft 365 in a hybrid deployment, you receive the following warning message:
 
 > Warning: Target mailbox unlock operation was not replicated. If a lossy failover occurs after the target mailbox was unlocked, the target mailbox could remain inaccessible.
 >

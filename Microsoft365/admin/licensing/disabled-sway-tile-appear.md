@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem 
 
-After a Microsoft Office 365 administrator disables Sway in the Microsoft 365 admin center, the Sway tile continues to appear in the Office 365 App Launcher and on the Office 365 home page. 
+After a Microsoft 365 administrator disables Sway in the Microsoft 365 admin center, the Sway tile continues to appear in the Office 365 App Launcher and on the Office 365 home page. 
 
 ## Solution
 
@@ -28,7 +28,7 @@ Microsoft has implemented a new Sway service plan that will be used to control a
 To enable or disable Sway at a per-user level, follow the steps in the "Enable or disable Sway at a per-user level" section. 
 
 > [!NOTE]
-> It may take some time before the new Sway service plan is associated with new and existing Office 365 users.
+> It may take some time before the new Sway service plan is associated with new and existing Microsoft 365 users.
 
 Organizations that want to force the association of the new Sway service plan to users in their organization should follow the steps that are outlined in the "Workaround" section.  
 
@@ -45,7 +45,7 @@ To enable or disable Sway for a specific user in an organization, follow these s
     > To view the list of supported licenses for Office 365 Sway, see [Available licenses for Office 365 Sway](https://support.microsoft.com/help/3080969).
 5. Disable the Sway service plan by unchecking the check box that's associated with Sway. Or, enable the Sway service plan by selecting the check box that's associated with Sway.
 
-    :::image type="content" source="media/disabled-sway-tile-appear/sway-service.png" alt-text="Screenshot of the Assign License page in Office 365.":::
+    :::image type="content" source="media/disabled-sway-tile-appear/sway-service.png" alt-text="Screenshot of the Assign License page in Microsoft 365.":::
  
 
 To enable or disable Sway for one or more users in an organization or for all users in the whole organization, use the necessary Windows PowerShell scripts that are described in [Disable access to services with Office 365 PowerShell](/microsoft-365/enterprise/disable-access-to-services-with-microsoft-365-powershell).
@@ -59,7 +59,7 @@ To work around the delay of associating the new Sway Service plan to users in an
 
     > [!NOTE]
     > By toggling the **Auto Renew** setting from **Off** to **On**, you trigger the tenant-level update that manually associates the new Sway service plan for users.    
-3. Browse to **Assign licenses.** You should see that Sway is enabled. This confirms that the new Sway service plan is associated with Office 365 users.
+3. Browse to **Assign licenses.** You should see that Sway is enabled. This confirms that the new Sway service plan is associated with Microsoft 365 users.
 
     :::image type="content" source="media/disabled-sway-tile-appear/assign-license.png" alt-text="Screenshot to enable the Sway option under the Assign licenses.":::
 

@@ -1,6 +1,6 @@
 ---
-title: Determine whether Office 365 account is compromised
-description: Describes how to determine whether your Office 365 account has been compromised.
+title: Determine whether Microsoft 365 account is compromised
+description: Describes how to determine whether your Microsoft 365 account has been compromised.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,11 +15,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# How to determine whether your Office 365 account has been compromised
+# How to determine whether your Microsoft 365 account has been compromised
 
 ## Problem 
 
-You may have issues when you try to sign in to Microsoft Office 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.
+You may have issues when you try to sign in to Microsoft 365. Or, you notice that suspicious activity occurs in your account, such as large amounts of spam that originates from your account.
 
 You may also experience one or more of the following issues:
 
@@ -40,7 +40,7 @@ To help resolve these issues, you must perform all the following steps within fi
 1. Make sure that you have Windows Update turned on.
 1. If antivirus software isn't installed on your computer, we recommend that you install antivirus software and then run a scan to make sure that no malicious software is installed on the computer. You can download free anti-malware or antivirus software from Microsoft.
 
-### Step 2: Make sure that the attacker can't log on to your Office 365 account
+### Step 2: Make sure that the attacker can't log on to your Microsoft 365 account
 
 1. Change your password immediately. Make sure that the password is strong and that it contains upper and lowercase letters, at least one number, and at least one special character.
 1. Don't reuse any of your last five passwords. Even though the password history requirement lets you reuse a more recent password, you should select something that the attacker can't guess.

@@ -23,7 +23,7 @@ This article contains information about changes to the SharePoint Online Public 
 
 ## More information
 
-On March 9, 2015, Microsoft made changes to the SharePoint Online Public Websites feature by removing the ability to create a public website after the changeover date of March 9, 2015. Customers who used this feature before March 9, 2015, were provided continued access to the feature for a minimum of two years. New customers who subscribed to Office 365 after the changeover date of March 9, 2015, don't have access to this feature.
+On March 9, 2015, Microsoft made changes to the SharePoint Online Public Websites feature by removing the ability to create a public website after the changeover date of March 9, 2015. Customers who used this feature before March 9, 2015, were provided continued access to the feature for a minimum of two years. New customers who subscribed to Microsoft 365 after the changeover date of March 9, 2015, don't have access to this feature.
 
 Moving forward, Office 365 customers have access to industry-leading third-party offerings that let them have a public website that provides a complete online solution and presence. 
 
@@ -83,9 +83,9 @@ On October 2, 2017, when Microsoft deletes the public site collection in SharePo
 
 ### What does this mean for new Office 365 customers?
 
-After the changeover date of March 9, 2015, Microsoft no longer offers the SharePoint Online Public Website feature to new customers. New customers who subscribed to Office 365 after the changeover date don't have access to this feature. Instead, there is an option to subscribe to third-party solutions by using links from within Office 365.   
+After the changeover date of March 9, 2015, Microsoft no longer offers the SharePoint Online Public Website feature to new customers. New customers who subscribed to Microsoft 365 after the changeover date don't have access to this feature. Instead, there is an option to subscribe to third-party solutions by using links from within Office 365.   
 
-### How will this change be communicated to Office 365 customers?
+### How will this change be communicated to Microsoft 365 customers?
 
 All Office 365 administrators who have provisioned SharePoint Online received a notification of this change in the Office 365 Message center. 
 
@@ -128,7 +128,7 @@ No. This change is aligned with our commitment to deliver a superior productivit
 
 ### Can I use other services, or do I have to use one of the third-party solution providers that Microsoft provides links for?
 
-Customers can use any website hosting service and aren't limited to the third-party solutions that are provided in Microsoft 365. However, the third-party solutions that are available in Microsoft 365 are offered at discounted rates to Office 365 customers, where available.  
+Customers can use any website hosting service and aren't limited to the third-party solutions that are provided in Microsoft 365. However, the third-party solutions that are available in Microsoft 365 are offered at discounted rates to Microsoft 365 customers, where available.  
 
 ### What if I'm using my Public Website to share content with anonymous users?
 
