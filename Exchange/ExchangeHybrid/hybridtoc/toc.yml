@@ -35,7 +35,7 @@
           href: ../administration/rpc-over-http-end-of-support.md
         - name: Running Setup /PrepareSchema for hybrid returns error
           href: ../administration/error-when-running-setup-prepareschema.md
-        - name: Unable to cast object of type error when connecting to Office 365 domain
+        - name: Unable to cast object of type error when connecting to Microsoft 365 domain
           href: ../administration/unable-to-cast-object-of-type-error.md
         - name: User photos aren't synced to Exchange Online
           href: ../administration/user-photos-not-synced-to-exchange-online.md
@@ -229,7 +229,7 @@
           href: ../move-mailboxes/user-is-already-being-moved-error.md
         - name: Can't use OWA move items in a hybrid deployment
           href: ../move-mailboxes/cannot-move-items-using-owa.md
-        - name: Error when you move mailboxes to or from Office 365
+        - name: Error when you move mailboxes to or from Microsoft 365
           href: ../move-mailboxes/error-move-mailboxes-to-from-o365.md
         - name: Extension number can't be generated
           href: ../move-mailboxes/extension-number-not-generated-error.md

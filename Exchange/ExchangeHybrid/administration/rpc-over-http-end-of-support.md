@@ -67,7 +67,7 @@ Additionally, you may have to make sure that Outlook clients aren't using a regi
 
 MAPI over HTTP was not backported to Outlook 2007 or earlier versions. If you're using Outlook 2007, you will be in an unsupported state on October 31, 2017. If you want to continue to access Exchange Online mailboxes through the Microsoft 365 portal ([portal.office.com](https://portal.office.com/)), we recommend that you move to a current version of Outlook that is under mainstream support,or use Outlook on the web.
 
-Additionally, make sure that you don't have any Outlook add-ins or third-party apps that rely on the RPC over HTTP protocol to connect to Office 365 data.
+Additionally, make sure that you don't have any Outlook add-ins or third-party apps that rely on the RPC over HTTP protocol to connect to Microsoft 365 data.
 
 ## How can I identify which Outlook version and build number my users are connecting with
 
