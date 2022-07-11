@@ -1,7 +1,8 @@
 ---
 title: Microsoft 365 Apps activation network connection issues
 description: Troubleshooting activation issues due to network connection problems.
-author: vikkarti
+author: v-matthamer
+ms.reviewer: vikkarti
 ms.author: v-matthamer
 manager: dcscontentpm
 audience: ITPro

@@ -2,7 +2,8 @@
 title: The workbook must be checked out when run data refresh in PowerPivot
 description: Fixes an error that occurs when you run a scheduled data refresh on a PowerPivot workbook.
 author: helenclu
-ms.author: zakirh
+ms.author: luche
+ms.reviwer: zakirh
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

@@ -2,7 +2,8 @@
 title: You receive a This workbook contains external data connections or BI features that are not supported. error when you use a guest link to a workbook in Excel Online
 description: Fixes the error about external data connections or BI features when you click slicers in a Microsoft SharePoint Online PowerPivot workbook.
 author: helenclu
-ms.author: thempel
+ms.author: luche
+ms.reviewer: thempel
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

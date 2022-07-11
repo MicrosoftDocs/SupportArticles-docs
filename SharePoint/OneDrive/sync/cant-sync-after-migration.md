@@ -2,7 +2,8 @@
 title: OneDrive for Business can't sync after tenant migration
 description: Provides fix for issues syncing after tenant migration
 author: v-matthamer
-ms.author: ericspli
+ms.author: v-matthamer
+ms.reviewer: ericspli
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
