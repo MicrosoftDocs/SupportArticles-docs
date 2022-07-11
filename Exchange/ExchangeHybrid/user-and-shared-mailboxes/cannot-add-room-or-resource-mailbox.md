@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Can't add a Room or Resource mailbox in an Office 365 hybrid environment
+# Can't add a Room or Resource mailbox in a Microsoft 365 hybrid environment
 
 _Original KB number:_ &nbsp; 3161713
 

@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Summary
 
-You have telephone numbers that are assigned to users in an Office 365 tenant for your organization. You want to transfer those numbers to a different Office 365 tenant for your organization, but you can't find that option in the Skype for Business Online admin center.
+You have telephone numbers that are assigned to users in a Microsoft 365 tenant for your organization. You want to transfer those numbers to a different Office 365 tenant for your organization, but you can't find that option in the Skype for Business Online admin center.
 
 ## More information
 

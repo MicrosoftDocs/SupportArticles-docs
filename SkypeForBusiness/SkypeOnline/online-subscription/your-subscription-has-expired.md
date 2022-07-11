@@ -29,12 +29,12 @@ When you use Skype for Business Online (formerly Lync Online), you receive the f
 
 To resolve this issue, take one of the following actions: 
  
-- If you have an Office 365 Business Premium or Office 365 subscription and haven't renewed into one of the new Office 365 Business offerings, do one of the following:  
+- If you have a Microsoft 365 Business Premium or Office 365 subscription and haven't renewed into one of the new Office 365 Business offerings, do one of the following:  
    - Administrators can renew current licenses through September 30, 2015, or they can renew by using one of the new Business offerings starting October 1, 2014.    
    - After the licenses are renewed, users must reactivate Office and install Lync Basic 2013.
 
      > [!NOTE]
-     > Renewing and purchasing new subscriptions must be done by an Office 365 administrator.    
+     > Renewing and purchasing new subscriptions must be done by a Microsoft 365 administrator.    
      
 - If you already renewed into one of the new Office 365 Business offerings, you must do the following within 30 days of renewing the subscription:   
    - Reactivate Office    

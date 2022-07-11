@@ -16,7 +16,7 @@ ms.custom:
   - CI 116548
   - CSSTroubleshoot
 ms.reviewer: prbalusu
-description: What to do if you get an error when trying to change an Office 365 site logo in SharePoint.
+description: What to do if you get an error when trying to change a Microsoft 365 site logo in SharePoint.
 ---
 
 # Error when trying to change site logo on O365 group SharePoint site

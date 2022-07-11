@@ -37,7 +37,7 @@ at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(Strin
 
 ## Cause
 
-The Hybrid Configuration wizard depends on the availability of an Office 365 plan that can access the `Get-HybridMailflowDatacenterIPs` cmdlet. The error message indicates that the subscriptions that you currently have can't access this cmdlet.
+The Hybrid Configuration wizard depends on the availability of a Microsoft 365 plan that can access the `Get-HybridMailflowDatacenterIPs` cmdlet. The error message indicates that the subscriptions that you currently have can't access this cmdlet.
 
 ## Workaround
 

@@ -1,5 +1,5 @@
 ---
-title: Overview of delegation in an Office 365 hybrid environment
+title: Overview of delegation in a Microsoft 365 hybrid environment
 description: Describes the Full Access, Send As, Send on Behalf of, and Folder permissions and how they work in a hybrid deployment.
 author: simonxjx
 ms.author: v-six
@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Overview of delegation in an Office 365 hybrid environment
+# Overview of delegation in a Microsoft 365 hybrid environment
 
 ## Symptoms
 
@@ -47,14 +47,14 @@ This article describes the necessary configuration, administration details, and 
 - The following differences apply, depending on how a user tries to access an additional mailbox:
 
   - Adding as an additional mailbox requires a mailbox in another forest to be ACLable in the user's forest. For more information, see [Configure Exchange to support delegated mailbox permissions in a hybrid deployment](/exchange/hybrid-deployment/set-up-delegated-mailbox-permissions).
-  - Auto-mapping will not work until all related mailboxes are moved to Exchange Online. Any mailboxes that receive permissions from another mailbox need to be moved at the same time as the granting mailbox. If a mailbox receives permissions from multiple mailboxes, that mailbox, and all of the mailboxes granting permissions to it, need to be moved at the same time. For more information, see [Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com/help/3080561) and [Permissions in Exchange hybrid deployments](/Exchange/permissions).
+  - Auto-mapping will not work until all related mailboxes are moved to Exchange Online. Any mailboxes that receive permissions from another mailbox need to be moved at the same time as the granting mailbox. If a mailbox receives permissions from multiple mailboxes, that mailbox, and all of the mailboxes granting permissions to it, need to be moved at the same time. For more information, see [Auto-mapping doesn't work as expected in a Microsoft 365 hybrid environment](https://support.microsoft.com/help/3080561) and [Permissions in Exchange hybrid deployments](/Exchange/permissions).
   - In some scenarios, a user will see only free/busy information for a calendar to which they have additional permissions. For more information, see [Can't view cross-forest calendar data in Office 365 hybrid environment](../calendars/cannot-view-cross-forest-calendar-data.md).
   - The user cannot send on behalf of another user after they add a mailbox as an additional account. For more information, see [Can't send an email message when Full Access permission is granted to a shared mailbox in Exchange Server](../../ExchangeServer/mailflow/cannot-send-email-with-full-access.md).
 
 - Resource mailboxes have special capabilities and work differently in some scenarios if they're in another forest, as follows:
 
-  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can't add a Room or Resource mailbox in an Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox.md).
-  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can't add permissions to a room mailbox in another forest in an Office 365 hybrid environment](../user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest.md).
+  - Resource mailboxes cannot be added as additional mailboxes. For more information, see [Can't add a Room or Resource mailbox in a Microsoft 365 hybrid environment](../user-and-shared-mailboxes/cannot-add-room-or-resource-mailbox.md).
+  - Customers cannot grant permissions to a resource mailbox. For more information, see [Can't add permissions to a room mailbox in another forest in a Microsoft 365 hybrid environment](../user-and-shared-mailboxes/cannot-add-permissions-to-user-or-room-mailbox-in-another-forest.md).
 
 - Newly provisioned cloud mailboxes cannot access on-premises mailboxes. For more information, see [Can't add an on-premises mailbox as an additional mailbox in Exchange Online](https://support.microsoft.com/help/4051496).
 - A new remote mailbox that's created directly in Exchange Online is not ACLable in on-premises Active Directory. For more information, see [A remote mailbox created in on-premises AD DS is not ACLable in Exchange Online](https://support.microsoft.com/help/4051497).

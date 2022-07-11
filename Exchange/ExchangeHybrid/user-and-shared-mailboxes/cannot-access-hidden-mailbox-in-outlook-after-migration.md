@@ -44,4 +44,4 @@ This is expected behavior when you try to add a hidden mailbox.
 
 Auto-mapping enables users who have **Full Access** permissions to access a hidden mailbox. If you migrate from an on-premises environment, refer to the following article for instructions to enable auto-mapping in a hybrid environment:
 
-[Auto-mapping doesn't work as expected in an Office 365 hybrid environment](https://support.microsoft.com//help/3080561/)  
+[Auto-mapping doesn't work as expected in a Microsoft 365 hybrid environment](https://support.microsoft.com//help/3080561/)  

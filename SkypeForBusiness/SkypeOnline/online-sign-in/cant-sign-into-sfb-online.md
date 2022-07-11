@@ -24,7 +24,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When an Office 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
+When a Microsoft 365 user tries to sign in to Skype for Business Online (formerly Lync Online) by using Lync 2010 or Lync 2013, the user receives the following error message: 
 
 ```adoc
 There was a problem acquiring a personal certificate required to sign in. If the problem continues, please contact your support team.

@@ -8,7 +8,7 @@ ms.author: v-six
 ms.assetid: e7758b99-1896-41db-bf39-51e2dba21de6
 ms.reviewer: 
 description: Admins can learn how to fix email delivery issues in Exchange Online.
-title: Find and fix email delivery issues as an Office 365 for business admin
+title: Find and fix email delivery issues as a Microsoft 365 for business admin
 ms.collection: 
   - exchange-online
   - M365-email-calendar
@@ -28,7 +28,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Find and fix email delivery issues as an Office 365 for business admin
+# Find and fix email delivery issues as a Microsoft 365 for business admin
 
 When users report that they aren't receiving email, it can be challenging to determine the cause. You might run through several troubleshooting scenarios in your mind. Is something wrong with Outlook? Is the Office 365 service down? Is there a problem in the mail flow or spam filter settings? Or is the problem caused by something that's outside your control, such as that the sender is on a global block list? Fortunately, Office 365 provides powerful automated tools that can help you identify and fix a variety of problems.
 
@@ -52,7 +52,7 @@ Notice that if you're experiencing issues that affect Outlook for Mac or are hav
 
 ## If Support and Recovery Assistant doesn't fix the issue, try these admin tools
 
-As an Office 365 for business admin, you have access to several tools that can help you investigate why users are not receiving email. The following video provides a brief overview of the tools that are available to you.
+As a Microsoft 365 for business admin, you have access to several tools that can help you investigate why users are not receiving email. The following video provides a brief overview of the tools that are available to you.
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/8b10af9a-455c-410a-8c17-24d5e5be098a]
 
@@ -97,7 +97,7 @@ Sometimes, an email message gets lost in transit, or it can take a lot longer th
 
 #### Open the message trace tool
 
-If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
+If you're a Microsoft 365 Midsize Business, Office 365 Business, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
 
 1. Sign in through the appropriate link on [Where to sign in to Office 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
 
@@ -114,7 +114,7 @@ If you're an Office 365 Midsize Business, Office 365 Business, or Office 365 Ent
 
 4. Under **mail flow**, go to **message trace**.
 
-If you're an Office 365 Small Business admin, do the following to find message trace:
+If you're a Microsoft 365 Small Business admin, do the following to find message trace:
 
 1. Go to **Admin** \> **Service settings** \> **Email, calendar, and contacts**.
 

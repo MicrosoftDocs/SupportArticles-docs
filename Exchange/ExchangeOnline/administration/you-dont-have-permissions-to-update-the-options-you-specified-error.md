@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3187154
 
 ## Symptoms
 
-When an Office 365 kiosk user tries to create an inbox rule in Outlook on the web, the user receives the following error message:
+When a Microsoft 365 kiosk user tries to create an inbox rule in Outlook on the web, the user receives the following error message:
 
 > You don't have permissions to update the options you specified.
 

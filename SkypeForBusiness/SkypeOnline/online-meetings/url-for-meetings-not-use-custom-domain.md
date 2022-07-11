@@ -41,7 +41,7 @@ For more information about the **Update-CsTenantMeetingUrl** cmdlet, see [Update
 
 ## More Information
 
-The **update-CsTenantMeetingUrl** cmdlet updates the Skype for Business Online meeting URL to a simpler and more standardized format. This eliminates problems that may occasionally occur with the original meeting URL. For example, assume that an organization sets up an Office 365 domain that has the name contoso.onmicrosoft.com. In this situation, the organization meetings have URLs that resemble the following:
+The **update-CsTenantMeetingUrl** cmdlet updates the Skype for Business Online meeting URL to a simpler and more standardized format. This eliminates problems that may occasionally occur with the original meeting URL. For example, assume that an organization sets up a Microsoft 365 domain that has the name contoso.onmicrosoft.com. In this situation, the organization meetings have URLs that resemble the following:
 
 https://meet.lync.com/onmicrosoft/contoso/user1/45GZFH99
 

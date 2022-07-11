@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 4486849
 
 > [!NOTE]
-> Skype for Business isn't included in Office 365 Business but is included in Office 365 Business Premium. However, the product IDs for Office 365 Business and Office 365 Business Premium are the same. Therefore, Skype for Business is served as part of the Office 365 Business subscription. Therefore, if Office 365 Business is installed from an Office 365 portal, Skype for Business is installed together with Office 365 Business.
+> Skype for Business isn't included in Office 365 Business but is included in Office 365 Business Premium. However, the product IDs for Office 365 Business and Office 365 Business Premium are the same. Therefore, Skype for Business is served as part of the Office 365 Business subscription. Therefore, if Office 365 Business is installed from a Microsoft 365 portal, Skype for Business is installed together with Office 365 Business.
 
 ## Symptoms
 
@@ -38,7 +38,7 @@ Assume that Skype for Business is included or installed as part of Office 365 Bu
 
 ### Symptom 3
 
-A user who has the Skype for Business client app installed on their computer is assigned an Office 365 Business license only. When the user receives a Skype meeting request and tries to join the meeting, they are prompted to sign in, but sign in fails.
+A user who has the Skype for Business client app installed on their computer is assigned a Microsoft 365 Business license only. When the user receives a Skype meeting request and tries to join the meeting, they are prompted to sign in, but sign in fails.
 
 ## Cause
 

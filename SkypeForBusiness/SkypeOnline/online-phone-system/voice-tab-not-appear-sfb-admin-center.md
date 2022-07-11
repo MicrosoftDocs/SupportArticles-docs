@@ -20,11 +20,11 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When you browse the Skype for Business Admin Center in the Office 365 portal, the **Voice** tab isn't visible even though users are assigned a Cloud PBX license or an Office 365 Enterprise E5 license. 
+When you browse the Skype for Business Admin Center in the Office 365 portal, the **Voice** tab isn't visible even though users are assigned a Cloud PBX license or an Office 365 E5 license. 
 
 ## Resolution
 
-A Cloud PBX or an Office 365 Enterprise E5 license includes the ability to assign enterprise voice capabilities to Office 365 users. This can cause users to expect that a **Voice** tab will appear in the Skype for Business Admin Center. However, management of voice features online depends on which option is selected for PSTN connectivity. Use the following guidelines:
+A Cloud PBX or an Office 365 E5 license includes the ability to assign enterprise voice capabilities to Office 365 users. This can cause users to expect that a **Voice** tab will appear in the Skype for Business Admin Center. However, management of voice features online depends on which option is selected for PSTN connectivity. Use the following guidelines:
 
 - If you want to use PSTN Calling from Microsoft for a cloud-based solution, you must buy a Voice calling plan. The Voice calling plan options are PSTN Local Calling and PSTN Local and International Calling, depending on your need. For more information, see [Skype for Business add-on licensing](https://support.office.com/article/skype-for-business-online-licensing-overview-3ed752b1-5983-43f9-bcfd-760619ab40a7). 
 

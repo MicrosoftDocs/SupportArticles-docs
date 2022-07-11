@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 10054
 > [!NOTE]
 >
 > - To use this guide, you must have a Skype for Business sign-in name and password from an organization that uses [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-business?activetab=pivot%3aoverviewtab).
-> - If you're an Office 365 admin, see [Troubleshooting Skype for Business Online sign-in issues for admins](https://support.microsoft.com/help/10133).
+> - If you're a Microsoft 365 admin, see [Troubleshooting Skype for Business Online sign-in issues for admins](https://support.microsoft.com/help/10133).
 
 We'll begin by asking you questions about your installation and the symptoms you're experiencing. Then we'll take you through a series of troubleshooting steps and configuration checks that are specific to your situation.
 

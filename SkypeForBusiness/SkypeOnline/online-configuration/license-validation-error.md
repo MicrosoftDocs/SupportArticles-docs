@@ -16,7 +16,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "License validation error" when an Office 365 administrator tries to disable a Skype for Business Online user
+# "License validation error" when a Microsoft 365 administrator tries to disable a Skype for Business Online user
 
 ## Problem
 

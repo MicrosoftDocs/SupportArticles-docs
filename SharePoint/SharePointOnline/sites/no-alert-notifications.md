@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-In an Office 365 environment, users don't receive SharePoint Online alert notifications as expected. Specifically, users may experience one or more of the following symptoms:
+In a Microsoft 365 environment, users don't receive SharePoint Online alert notifications as expected. Specifically, users may experience one or more of the following symptoms:
 
 - Alert email messages aren't received after an alert is created.
 

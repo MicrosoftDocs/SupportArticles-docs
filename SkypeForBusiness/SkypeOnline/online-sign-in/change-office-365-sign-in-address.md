@@ -1,5 +1,5 @@
 ---
-title: Considerations when you change an Office 365 sign-in address
+title: Considerations when you change a Microsoft 365 sign-in address
 description: Describes how sign-in addresses and user IDs are managed in Skype for Business Online.
 author: simonxjx
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Considerations for Skype for Business Online when you change an Office 365 sign-in address
+# Considerations for Skype for Business Online when you change a Microsoft 365 sign-in address
 
 ## Introduction
 

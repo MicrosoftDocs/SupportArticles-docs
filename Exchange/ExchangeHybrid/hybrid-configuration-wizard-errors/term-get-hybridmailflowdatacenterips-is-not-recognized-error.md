@@ -40,7 +40,7 @@ at System.Management.Automation.PowerShell.CoreInvoke[TOutput](IEnumerable input
 
 ## Cause
 
-The Hybrid Configuration wizard depends on the availability of an Office 365 plan in which it can access the Get-HybridMailflowDatacenterIPs cmdlet. The error message indicates that the subscriptions that you currently have cannot access this cmdlet.
+The Hybrid Configuration wizard depends on the availability of a Microsoft 365 plan in which it can access the Get-HybridMailflowDatacenterIPs cmdlet. The error message indicates that the subscriptions that you currently have cannot access this cmdlet.
 
 ## Workaround
 

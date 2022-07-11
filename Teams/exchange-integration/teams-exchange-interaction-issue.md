@@ -122,9 +122,9 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 
 1. Navigate to [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
-2. Select the **Free/Busy** test to verify that an Office 365 mailbox can access the free/busy information of an on-premises mailbox, and vice versa.
+2. Select the **Free/Busy** test to verify that a Microsoft 365 mailbox can access the free/busy information of an on-premises mailbox, and vice versa.
 
-    You have to run this test two times by swapping the source mailbox email address with the target mailbox email address. This is because each run is unidirectional. This test doesn't necessarily have to be run by using affected accounts. Test can be run by using any pair of an on-premises mailbox and an Office 365 mailbox.
+    You have to run this test two times by swapping the source mailbox email address with the target mailbox email address. This is because each run is unidirectional. This test doesn't necessarily have to be run by using affected accounts. Test can be run by using any pair of an on-premises mailbox and a Microsoft 365 mailbox.
 
     To learn more about how to troubleshoot free/busy issues in a hybrid deployment of on-premises and Exchange Online in Office 365, see [this article](https://support.microsoft.com/help/2555008).
 

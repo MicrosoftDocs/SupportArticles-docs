@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3044155
 You set a transport rule in Office 365 to return a non-delivery report (NDR) that displays a custom message. However, the custom message in the NDR is overwritten by the standard NDR message. This issue occurs in either of the following situations:
 
 - The sender and recipient belong to different Office 365 organizations.
-- The sender has an Office 365 mailbox, and the recipient belongs to an external Exchange Server organization.
+- The sender has a Microsoft 365 mailbox, and the recipient belongs to an external Exchange Server organization.
 
 ## Cause
 

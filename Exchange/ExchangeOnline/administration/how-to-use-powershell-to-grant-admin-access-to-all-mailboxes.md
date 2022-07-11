@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2685435
 
 ## Summary
 
-This article describes how to use Windows PowerShell to grant an admin access to all user mailboxes in an Office 365 organization through Microsoft Outlook and Outlook Web App.
+This article describes how to use Windows PowerShell to grant an admin access to all user mailboxes in a Microsoft 365 organization through Microsoft Outlook and Outlook Web App.
 
 ## Resolution
 
