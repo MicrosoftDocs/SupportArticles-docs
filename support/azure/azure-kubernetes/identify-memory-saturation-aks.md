@@ -33,7 +33,7 @@ kube-system         omsagent-ddnvb                              10m             
 ## Identify memory saturation across all namespaces for all containers
 
 ```shell
-kubectl top pods -A –containers
+kubectl top pods -A –-containers
 ```
 
 The **NAME** field in the output indicates the name of the container. We recommend that you don't sort the columns. Sorting can break up the namespace order, which makes it less  than ideal to see the container view.
