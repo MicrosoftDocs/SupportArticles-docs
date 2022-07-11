@@ -39,7 +39,7 @@ For more information on how to populate a valid email address for a user account
 
 ## More information
 
-Options and steps to populate a valid email address for an Office 365 user account -
+Options and steps to populate a valid email address for a Microsoft 365 user account -
 
 **Option 1 - Update the UserPrincipalName/Username value in the Microsoft 365 admin center** 
 

@@ -43,9 +43,9 @@ Knowledge Base articles
 
 - [2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
 - [2427141](https://support.microsoft.com/help/2427141) You can't find a user in the offline address book in Office 365
-- [2429946](https://support.microsoft.com/help/2429946) How to troubleshoot the Outlook Offline Address Book in an Office 365 environment
+- [2429946](https://support.microsoft.com/help/2429946) How to troubleshoot the Outlook Offline Address Book in a Microsoft 365 environment
 - [Anonymous Authentication Enabled for Virtual Directory](/connectivity-analyzer/anonymous-authentication-enabled-virtual-directory)
-- [2710606](https://support.microsoft.com/help/2710606) Error message in the Exchange Remote Connectivity Analyzer tool when you test the Outlook Anywhere feature in an Office 365 environment: "Mutual Authentication could not be established"
+- [2710606](https://support.microsoft.com/help/2710606) Error message in the Exchange Remote Connectivity Analyzer tool when you test the Outlook Anywhere feature in a Microsoft 365 environment: "Mutual Authentication could not be established"
 
 ## Repeated password prompts in Outlook
 
@@ -59,7 +59,7 @@ Knowledge Base articles
 Knowledge Base articles
 
 - [2555008](https://support.microsoft.com/help/2555008) How to troubleshoot free/busy issues in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365
-- [2581088](https://support.microsoft.com/help/2581088) How to troubleshoot issues that prevent a user from viewing other users' free/busy information in Office Outlook 2007 and in Outlook 2010 in an Office 365 environment
+- [2581088](https://support.microsoft.com/help/2581088) How to troubleshoot issues that prevent a user from viewing other users' free/busy information in Office Outlook 2007 and in Outlook 2010 in a Microsoft 365 environment
 
 ## Cannot configure mobile devices
 

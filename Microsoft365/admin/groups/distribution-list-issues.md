@@ -44,4 +44,4 @@ There could be a couple of issues here:
 
 ## I'm an admin and I can't edit a distribution group in the admin center
 
-Make sure you have an Office 365 license. You need an Office 365 for business license before you can edit distribution groups in the admin center. Read [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) for the steps.
+Make sure you have a Microsoft 365 license. You need a Microsoft 365 for business license before you can edit distribution groups in the admin center. Read [Assign licenses to users in Office 365 for business](/office365/admin/subscriptions-and-billing/assign-licenses-to-users) for the steps.

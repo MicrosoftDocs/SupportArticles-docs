@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Connection to Microsoft Exchange is unavailable error when an Office 365 user tries to set up Outlook
+# Connection to Microsoft Exchange is unavailable error when a Microsoft 365 user tries to set up Outlook
 
 _Original KB number:_ &nbsp; 2976203
 

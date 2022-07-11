@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3191498
 
 ## Symptoms
 
-A profile for an Office 365 shared mailbox can't see any Microsoft 365 groups in Microsoft Outlook or Outlook on the web. This issue occurs even though the shared mailbox is a member of the Microsoft 365 group.
+A profile for a Microsoft 365 shared mailbox can't see any Microsoft 365 groups in Microsoft Outlook or Outlook on the web. This issue occurs even though the shared mailbox is a member of the Microsoft 365 group.
 
 ## Cause
 

@@ -45,7 +45,7 @@ When Office 365 can't deliver email you sent, you'll receive an email notificati
 
 - [Get help when email messages won't send](https://support.office.com/article/97748418-bbd5-4743-a05b-581f22a466dd.aspx)
 
-- [Find and fix email delivery issues as an Office 365 for business admin](/Exchange/fix-outlook-connection-problems-in-office-365/fix-outlook-connection-problems-in-office-365/find-and-fix-email-delivery-issues-as-an-office-365-for-business-admin)
+- [Find and fix email delivery issues as a Microsoft 365 for business admin](/Exchange/fix-outlook-connection-problems-in-office-365/fix-outlook-connection-problems-in-office-365/find-and-fix-email-delivery-issues-as-an-office-365-for-business-admin)
 
 - [Office 365 email anti-spam protection](/office365/securitycompliance/anti-spam-protection)
 

@@ -27,7 +27,7 @@ The management of Microsoft Planner licenses differs between the First Release e
 
 ## First Release
 
-Microsoft Planner requires licenses to be assigned to users before they can use the new Planner features. Therefore, it may be more convenient to use Office 365 PowerShell if you have many users in your Office 365 organization. This article discusses the prerequisites for using Office 365 PowerShell to administer an Office 365 organization, and it describes some options for assigning licenses to all users, to selected users based on metadata, and to selected users based on a list.
+Microsoft Planner requires licenses to be assigned to users before they can use the new Planner features. Therefore, it may be more convenient to use Office 365 PowerShell if you have many users in your Office 365 organization. This article discusses the prerequisites for using Office 365 PowerShell to administer a Microsoft 365 organization, and it describes some options for assigning licenses to all users, to selected users based on metadata, and to selected users based on a list.
 
 This article assumes that you're already using Office 365 PowerShell to administer Office 365. If you're not using Office 365 PowerShell, see the following Microsoft website to make sure that you have the prerequisites to run the commands that are discussed in [Connect to Office 365 PowerShell](/microsoft-365/enterprise/connect-to-microsoft-365-powershell).
 

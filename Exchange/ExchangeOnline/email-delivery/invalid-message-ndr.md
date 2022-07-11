@@ -1,6 +1,6 @@
 ---
 title: 554 5.6.0 Invalid message content in Office 365
-description: Describes an issue in which an Office 365 user receives an 554 5.6.0 Invalid message content NDR.
+description: Describes an issue in which a Microsoft 365 user receives an 554 5.6.0 Invalid message content NDR.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (554 5.6.0 Invalid message content) NDR when an Office 365 user sends a message that contains an Excel or Word attachment
+# (554 5.6.0 Invalid message content) NDR when a Microsoft 365 user sends a message that contains an Excel or Word attachment
 
 _Original KB number:_&nbsp;2984127
 

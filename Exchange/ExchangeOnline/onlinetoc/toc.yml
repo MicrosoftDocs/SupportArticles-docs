@@ -377,7 +377,7 @@
           href: ../outlook-issues/group-calendar-shows-all-user-free-busy-info.md
         - name: Blank lines are truncated
           href: ../outlook-issues/blank-lines-truncated-when-moved-to-pst-file.md
-        - name: Can't edit an Office 365 Kiosk user's calendar
+        - name: Can't edit a Microsoft 365 Kiosk user's calendar
           href: ../outlook-issues/cannot-edit-o365-kiosk-user-calendar.md
         - name: Can't set up profile with Autodiscover
           href: ../outlook-issues/cannot-set-up-profile-autodiscover.md

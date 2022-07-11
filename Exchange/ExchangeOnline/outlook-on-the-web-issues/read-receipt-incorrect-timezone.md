@@ -1,6 +1,6 @@
 ---
 title: Read receipt from Office 365 recipient displays incorrect time zone
-description: Describes an issue in which the wrong time zone info is displayed on the read receipt from an Office 365 recipient.
+description: Describes an issue in which the wrong time zone info is displayed on the read receipt from a Microsoft 365 recipient.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,11 +16,11 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Read receipt from an Office 365 recipient displays incorrect time zone information
+# Read receipt from a Microsoft 365 recipient displays incorrect time zone information
 
 ## Problem
 
-When an Office 365 user sends an email message to another Office 365 user by using Microsoft Outlook or Microsoft Outlook Web App, the message requests a read receipt. After the recipient reads the message, the read receipt that the sender receives displays a different time zone from the actual time zone setting of the sender. For example, the read receipt shows a time zone of (UTC) Monrovia, Reykjavik.
+When a Microsoft 365 user sends an email message to another Office 365 user by using Microsoft Outlook or Microsoft Outlook Web App, the message requests a read receipt. After the recipient reads the message, the read receipt that the sender receives displays a different time zone from the actual time zone setting of the sender. For example, the read receipt shows a time zone of (UTC) Monrovia, Reykjavik.
 
 ## Cause
 

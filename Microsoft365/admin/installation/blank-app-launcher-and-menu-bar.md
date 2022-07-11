@@ -26,7 +26,7 @@ In Office 365, a user experiences the following symptoms:
 
 ## Cause
 
-This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Office 365 icons are glyphs that are saved in an Office 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
+This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Office 365 icons are glyphs that are saved in a Microsoft 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
 
 ## Solution
 

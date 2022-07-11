@@ -22,7 +22,7 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# Fix authentication issues in Office applications when you try to connect to an Office 365 service
+# Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service
 
 ## Symptoms
 

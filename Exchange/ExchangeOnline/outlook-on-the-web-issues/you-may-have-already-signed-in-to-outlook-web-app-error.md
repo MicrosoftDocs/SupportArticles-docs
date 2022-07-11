@@ -33,7 +33,7 @@ When you try to open Outlook Web App in Microsoft Office 365, you receive the fo
 
 This issue occurs when the following conditions are true:
 
-- You try to open an Office 365 Outlook Web App session and an Outlook.com-based Outlook Web App session at the same time.
+- You try to open a Microsoft 365 Outlook Web App session and an Outlook.com-based Outlook Web App session at the same time.
 - The Office 365 Outlook Web App session and the Outlook.com-based Outlook Web App session share the same Outlook Web App server endpoint.
 
 The same Outlook Web App server endpoint can't be accessed through a single browser session.

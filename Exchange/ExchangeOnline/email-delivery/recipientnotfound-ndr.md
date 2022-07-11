@@ -1,6 +1,6 @@
 ---
 title: 550 5.1.10 RESOLVER.ADR.RecipientNotFound in Office 365.
-description: Describes an NDR error that an Office 365 user receives when they try to send email to on-premises Exchange users in a hybrid deployment. Provides a solution.
+description: Describes an NDR error that a Microsoft 365 user receives when they try to send email to on-premises Exchange users in a hybrid deployment. Provides a solution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (550 5.1.10 RESOLVER.ADR.RecipientNotFound) NDR error when an Office 365 user tries to send mail to on-premises users in a hybrid deployment
+# (550 5.1.10 RESOLVER.ADR.RecipientNotFound) NDR error when a Microsoft 365 user tries to send mail to on-premises users in a hybrid deployment
 
 _Original KB number:_&nbsp;3197393
 
