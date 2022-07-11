@@ -10,13 +10,13 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 #  The signed PowerShell script fails to run due to hash mismatch
 
-## Symptom
+## Symptoms
 
 Consider the following scenario:
 
-- You have a script that contains special characters like ö, ä, ü.
+- You have a PowerShell script that contains special characters like ö, ä, ü.
 
-- You sign the script on a computer that uses one system locale (for example, en-US).
+- You sign the script on a computer that uses a system locale (for example, en-US).
 
 - You run the signed script on a computer that uses another system locale (for example, cs-CZ).
 
@@ -30,27 +30,27 @@ in the digital signature. The script cannot run on the specified system.
 
 ## Cause
 
-When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, ü are differently encoded on en-US and cs-CZ computers.
+When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using the en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, ü are differently encoded on en-US and cs-CZ computers.
 
-Some process of signature verification creates hash for PowerShell script content&ndash;the content doesn't include the signature. And the umlaut and special characters are differently interpreted on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
+The process of signature verification creates hash for PowerShell script content that doesn't include the signature. And the umlaut and special characters are differently interpreted on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
 
 ## Resolution
 
-To make signed PowerShell scripts run independently from locale settings, follow these steps:
+To make a signed PowerShell script run independently from locale settings, follow these steps:
 
 1. Get the unsigned version of the PowerShell script.
 
 1. Replace or remove all umlaut and special characters like ö, ä, ü.
 
-1. Sign the script.
+1. [Sign the script](/powershell/module/microsoft.powershell.core/about/about_signing#sign-a-script).
 
 1. Run the signed script.
 
 ## More information
 
-To reproduce the issue, follow these steps:
+For an example that reproduces the issue, see the following steps:
 
-1. Make sure the following settings on a computer:
+1. You have a computer that has the following settings:
 
     ```powershell
     PS C:\Users> get-culture
