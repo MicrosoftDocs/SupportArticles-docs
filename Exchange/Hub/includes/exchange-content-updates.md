@@ -2,6 +2,14 @@
 
 
 
+## Week of July 04, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/8/2022 | [Messages aren't evenly distributed if BasicAuth, BasicAuthRequireTLS or NTLM is used in Exchange Server 2013 or later](/exchange/troubleshoot/mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls) | modified |
+
+
 ## Week of June 27, 2022
 
 
@@ -41,11 +49,3 @@
 | 6/7/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | added |
 | 6/7/2022 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
 | 6/9/2022 | [Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
-
-
-## Week of May 30, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |
