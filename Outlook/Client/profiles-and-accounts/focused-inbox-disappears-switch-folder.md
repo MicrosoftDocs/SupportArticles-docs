@@ -23,7 +23,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-You set up an Office 365 account in Microsoft Outlook. When you switch from the **Inbox** to other folders, such as the **Sent Items** folder, and then you return to **Inbox**, the **Focused Inbox** option disappears. Additionally, the option on the **View** tab to turn on or off the **Focused Inbox** also disappears.
+You set up a Microsoft 365 account in Microsoft Outlook. When you switch from the **Inbox** to other folders, such as the **Sent Items** folder, and then you return to **Inbox**, the **Focused Inbox** option disappears. Additionally, the option on the **View** tab to turn on or off the **Focused Inbox** also disappears.
 
 ## Cause
 

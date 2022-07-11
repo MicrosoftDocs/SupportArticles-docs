@@ -90,7 +90,7 @@ If these steps do not resolve the problem, go to Method 4.
 
 Try to repair your Office programs. To do this, follow the steps for your installation type and operating system.
 
-**For an Office 365 Click-to-Run installation**
+**For a Microsoft 365 Click-to-Run installation**
 
 Windows 10  
  

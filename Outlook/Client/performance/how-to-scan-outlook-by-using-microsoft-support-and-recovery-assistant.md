@@ -157,7 +157,7 @@ After you review your scan results, select **Next**. The next screen provides an
 > [!NOTE]
 > The scan file is ConfigurationDetails_{CorrelationId}.html. It's located in the ***%localappdata%\saralogs\UploadLogs*** folder, for example, *C:\users\\\<username>\AppData\Local\saralogs\UploadLogs*.
 
-#### Users who have an Office 365 account
+#### Users who have a Microsoft 365 account
 
 If you sign in to SaRA by using an account in Office 365, you also see an option to send your files to Microsoft. This option is helpful if you are working with a Microsoft support engineer. Select **Send** to have your log files securely uploaded.
 
@@ -170,7 +170,7 @@ Select **Don't send** if you don't want to upload your log files. If you have to
 > [!NOTE]
 > If you select **Send**, only the .json file is uploaded to Microsoft.
 
-#### Users who do not have an Office 365 account
+#### Users who do not have a Microsoft 365 account
 
 If you sign in to SaRA by using an account that is not in Office 365, there is no option to send your files to Microsoft.
 

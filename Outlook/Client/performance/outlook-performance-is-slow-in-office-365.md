@@ -1,6 +1,6 @@
 ---
 title: Outlook performance is slow in Office 365
-description: Describes performance issues that occur when you use Outlook in an Office 365 environment. Specifically, Outlook performs slowly when you open email messages, and mail sits for a long time in the Outbox after you send it. A resolution is provided.
+description: Describes performance issues that occur when you use Outlook in a Microsoft 365 environment. Specifically, Outlook performs slowly when you open email messages, and mail sits for a long time in the Outbox after you send it. A resolution is provided.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

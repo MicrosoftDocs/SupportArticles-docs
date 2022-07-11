@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-After [you enable modern authentication for Outlook in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) in an Office 365 tenant, Microsoft Outlook cannot connect to a mailbox if the user's primary Windows account is a Microsoft 365 account that does not match the account they use to sign in to the mailbox. The mailbox shows "Disconnected" in the status bar.
+After [you enable modern authentication for Outlook in Exchange Online](/exchange/clients-and-mobile-in-exchange-online/enable-or-disable-modern-authentication-in-exchange-online) in a Microsoft 365 tenant, Microsoft Outlook cannot connect to a mailbox if the user's primary Windows account is a Microsoft 365 account that does not match the account they use to sign in to the mailbox. The mailbox shows "Disconnected" in the status bar.
 
 ## Cause
 

@@ -30,7 +30,7 @@ Outlook 2016 provides two basic connectivity modes when you are connected to Exc
 Cached Exchange Mode gives users a seamless online and offline Outlook experience by caching the user's mailbox and the Offline Address Book (OAB) locally. With Cached Exchange Mode, which is the default setting for users, Outlook no longer depends on continuous network connectivity for access to user information. When a user is connected, Outlook continuously updates users' mailboxes so that the mailboxes are kept up to date. If a user disconnects from the network, for example, by moving to an area without Wi-Fi access, the user can continue to access the last available email data.
 
 > [!IMPORTANT]
-> We recommend always using Cached Exchange Mode with an Office 365 account.
+> We recommend always using Cached Exchange Mode with a Microsoft 365 account.
   
 Online Mode works by using information directly from the server, and, as the name implies, it requires a connection. Mailbox data is only cached in memory and never written to disk.
 

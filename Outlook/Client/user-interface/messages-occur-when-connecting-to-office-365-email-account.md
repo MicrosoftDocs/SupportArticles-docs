@@ -1,6 +1,6 @@
 ---
 title: Messages occur if connecting to office 365 email accounts
-description: Describes an issue in which you unexpectedly receive one or more email messages when connecting to an Office 365 email account.
+description: Describes an issue in which you unexpectedly receive one or more email messages when connecting to a Microsoft 365 email account.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

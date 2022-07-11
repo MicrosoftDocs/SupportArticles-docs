@@ -49,7 +49,7 @@ This issue may occur if the root certificates on the Exchange hybrid server are 
 
 To resolve this issue, update the root certificates, and then rerun the Hybrid Configuration Wizard on the hybrid server. To do this, follow these steps.
 
-These steps must be completed by an Office 365 administrator. If you are a user who is experiencing this issue, contact your administrator to resolve this issue.
+These steps must be completed by a Microsoft 365 administrator. If you are a user who is experiencing this issue, contact your administrator to resolve this issue.
 
 ### Step 1: Update the root certificates
 

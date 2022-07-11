@@ -56,7 +56,7 @@ This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead o
 
 ## More information
 
-### Autoforwarding emails for an Office 365-hosted mailbox
+### Autoforwarding emails for a Microsoft 365-hosted mailbox
 
 A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP forwarding or Mailbox Rule redirection or Transport Rule redirection have the **P1 From** address rewritten before the message leaves Office 365. The address is rewritten by using the following pattern:
 

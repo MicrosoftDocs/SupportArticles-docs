@@ -126,7 +126,7 @@ If you do not find either Office Account or Help on the File menu, then follow t
 
 #### For Outlook on the web or Outlook Web App
 
-If you are using browser to connect an Office 365 or Exchange mailbox, select **Outlook On the Web/Outlook Web App**.
+If you are using browser to connect a Microsoft 365 or Exchange mailbox, select **Outlook On the Web/Outlook Web App**.
 
 :::image type="content" source="media/how-to-open-shared-calendar/outlook-on-the-web.png" alt-text="Screenshot for the homepage of Outlook On The Web.":::
 

@@ -15,7 +15,7 @@ ms.assetid:
 appliesto: 
   - SharePoint Online
 ms.reviewer: denniwil
-description: Describes how to resolve a shared workbook error when opening an Office 365 Excel file.
+description: Describes how to resolve a shared workbook error when opening a Microsoft 365 Excel file.
 ---
 
 # "The workbook is currently open by 256 users" error when opening an Excel workbook from SharePoint or OneDrive

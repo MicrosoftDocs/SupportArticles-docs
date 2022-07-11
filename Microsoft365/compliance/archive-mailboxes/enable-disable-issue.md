@@ -33,7 +33,7 @@ When you try to enable or disable an archive mailbox for an existing Exchange On
 >
 > Mailbox '\<User Display Name>' has move status \<move status>. You can't enable or disable an archive while the mailbox is being moved.
 
-When you run the `Get-MoveRequest | fl` command to examine the move request, you verify that the request is an Office 365 datacenter move request. This is indicated by the IntraOrg flag.
+When you run the `Get-MoveRequest | fl` command to examine the move request, you verify that the request is a Microsoft 365 datacenter move request. This is indicated by the IntraOrg flag.
 
 ## Cause
 

@@ -1,6 +1,6 @@
 ---
 title: Format of the CSV file isn't correct error
-description: Describes an issue that triggers an error when an Office 365 user tries to import contacts in a CSV file. Provides a solution.
+description: Describes an issue that triggers an error when a Microsoft 365 user tries to import contacts in a CSV file. Provides a solution.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Format of the CSV file isn't correct error when an Office 365 user tries to import contacts
+# Format of the CSV file isn't correct error when a Microsoft 365 user tries to import contacts
 
 _Original KB number:_ &nbsp; 3145388
 
