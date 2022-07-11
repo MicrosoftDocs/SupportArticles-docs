@@ -10,6 +10,9 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 #  The signed PowerShell script fails to run due to hash mismatch
 
+_Original product version:_ &nbsp;Windows 10  
+_Original KB number:_ &nbsp;5016563
+
 ## Symptoms
 
 Consider the following scenario:
