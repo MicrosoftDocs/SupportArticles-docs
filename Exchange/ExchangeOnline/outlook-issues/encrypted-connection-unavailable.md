@@ -27,7 +27,7 @@ An Office 365 F plan user tries to set up a mail account for Exchange Online in 
 
 Click Next to attempt using an unencrypted connection.
 
-This error message is displayed even though the user entered his or her email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
+This error message is displayed even though the user entered the email address and password correctly on the Auto Account Setup page of the Add New Account Wizard in Outlook.
 
 ## Cause
 

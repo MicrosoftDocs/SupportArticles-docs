@@ -2,7 +2,8 @@
 title: InfoPath 2013 crashes when you connect to an Access database
 description: Describes an issue in which InfoPath 2013 crashes when you connect to the Access database, and provides a workaround.
 author: helenclu
-ms.author: warrenr
+ms.author: luche
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 

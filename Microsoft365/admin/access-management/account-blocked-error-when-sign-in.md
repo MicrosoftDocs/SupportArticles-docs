@@ -19,9 +19,9 @@ ms.date: 3/31/2022
 
 ## Problem 
 
-When a user tries to sign in to the Microsoft 365 portal, he or she receives the following error message:
+When you try to sign in to the Microsoft 365 portal, you receive the following error message:
 
-**Your account has been locked. Contact your support person to unlock it, then try again.**
+> Your account has been locked. Contact your support person to unlock it, then try again.
 
 ## Solution 
 
