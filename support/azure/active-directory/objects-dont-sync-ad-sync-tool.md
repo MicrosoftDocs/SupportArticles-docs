@@ -123,7 +123,7 @@ To determine attribute conflicts caused by user objects that were created by usi
     ```
 
     Leave the console window open. You'll use it again in the next step.
-4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, type the following commands in the order in which they are presented. Press Enter after each command:
+4. Check for duplicate proxyAddresses attributes. In the console connection that you opened in step 2, run the following command:
 
     ```powershell
     Import-Module ExchangeOnlineManagement
