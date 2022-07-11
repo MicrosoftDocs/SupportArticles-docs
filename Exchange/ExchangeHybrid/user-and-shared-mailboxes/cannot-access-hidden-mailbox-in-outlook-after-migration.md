@@ -1,6 +1,6 @@
 ---
 title: Cannot access hidden mailbox after migration
-description: Describes an issue in which users cannot access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment. Provides a resolution.
+description: Describes an issue in which users cannot access a hidden mailbox in Outlook after a migration to Microsoft 365 hybrid environment. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,13 +16,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Can't access a hidden mailbox in Outlook after a migration to Office 365 hybrid environment
+# Can't access a hidden mailbox in Outlook after a migration to Microsoft 365 hybrid environment
 
 _Original KB number:_ &nbsp; 4034273
 
 ## Symptoms
 
-After a migration to Microsoft Office 365, users cannot open a folder or add a hidden mailbox in Outlook. Also, users may receive the following error messages, depending on what they are trying to add or access.
+After a migration to Microsoft 365, users cannot open a folder or add a hidden mailbox in Outlook. Also, users may receive the following error messages, depending on what they are trying to add or access.
 
 - Additional mailbox
 

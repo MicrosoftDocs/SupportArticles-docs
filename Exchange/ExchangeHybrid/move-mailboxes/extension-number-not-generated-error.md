@@ -20,7 +20,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Extension number can‎'t be generated for the user when moving a mailbox from on-premises to Office 365
+# Extension number can‎'t be generated for the user when moving a mailbox from on-premises to Microsoft 365
   
 _Original KB number:_ &nbsp; 3142072
 

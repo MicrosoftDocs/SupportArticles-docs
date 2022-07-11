@@ -23,9 +23,9 @@ When you try to access a SharePoint Online site by using a domain that's configu
 
 ## Solution
 
-Full domain redelegation involves a domain where the name server (NS) resource records point to Office 365. To resolve this issue, follow these steps:
+Full domain redelegation involves a domain where the name server (NS) resource records point to Microsoft 365. To resolve this issue, follow these steps:
 
-1. Verify that the NS resource records point to Office 365. To do this, use the NSlookup tool. For more information about NSlookup, see [Using NSlookup.exe](https://support.microsoft.com/help/200525).
+1. Verify that the NS resource records point to Microsoft 365. To do this, use the NSlookup tool. For more information about NSlookup, see [Using NSlookup.exe](https://support.microsoft.com/help/200525).
 
    The NS resource records should point to two of the following:
 

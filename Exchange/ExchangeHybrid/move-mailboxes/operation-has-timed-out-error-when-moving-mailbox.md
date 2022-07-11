@@ -1,6 +1,6 @@
 ---
 title: Operation has timed out error when moving mailbox
-description: Describes an issue in which you receive an error message when you try to run the New-MoveRequest cmdlet to move a mailbox from Exchange Online in Office 365 to the on-premises environment in a hybrid deployment. Provides a resolution.
+description: Describes an issue in which you receive an error message when you try to run the New-MoveRequest cmdlet to move a mailbox from Exchange Online in Microsoft 365 to the on-premises environment in a hybrid deployment. Provides a resolution.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-You have a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and of your on-premises Microsoft Exchange Server environment. When you try to use the New-MoveRequest Windows PowerShell cmdlet to move or offboard a mailbox from Office 365 to the on-premises environment, the mailbox isn't moved. Additionally, you may receive an error message that resembles the following:
+You have a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and of your on-premises Microsoft Exchange Server environment. When you try to use the New-MoveRequest Windows PowerShell cmdlet to move or offboard a mailbox from Microsoft 365 to the on-premises environment, the mailbox isn't moved. Additionally, you may receive an error message that resembles the following:
 
 > The call to '`https://webmail.domain.com/EWS/mrsproxy.svc`' timed out.  
 > The operation has timed out  
@@ -51,6 +51,6 @@ The following is an example of correct syntax. (Note that this example uses sing
 
 For more information about how to use the `New-MoveRequest` cmdlet, see [Understanding Move Requests](/previous-versions/office/exchange-server-2010/dd298174(v=exchg.141)).
 
-If you experience issues when you move mailboxes to Exchange Online in Office 365, you can run the [Troubleshoot migration issues in Exchange Server hybrid environment](/exchange/troubleshoot/move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid) tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
+If you experience issues when you move mailboxes to Exchange Online in Microsoft 365, you can run the [Troubleshoot migration issues in Exchange Server hybrid environment](/exchange/troubleshoot/move-or-migrate-mailboxes/troubleshoot-migration-issues-in-exchange-hybrid) tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
