@@ -1,5 +1,5 @@
 ---
-title: The signed PowerShell script fails due to a hash mismatch
+title: Hash of the file does not match when running signed PowerShell script
 description: This article provides resolutions for an issue where the execution of a signed PowerShell script fails with an error message.
 ms.date: 07/19/2022
 ms.custom: sap:Security development
@@ -8,7 +8,7 @@ ms.author: v-sidong
 author: mrmilanmm
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
-#  The signed PowerShell script fails to run due to a hash mismatch
+#  Hash of the file does not match when running signed PowerShell script
 
 _Original product version:_ &nbsp;Windows 10  
 _Original KB number:_ &nbsp;5016563
@@ -91,8 +91,7 @@ For an example that reproduces the issue, see the following steps:
     The script fails with the following messages:
 
     ```Output
-    PS C:\tmp> .\Install.ps1  
-    .\Install.ps1 : File C:\tmp\Install.ps1 cannot be loaded. The contents of file C:\tmp\Install.ps1 might have been
+    File C:\tmp\Install.ps1 cannot be loaded. The contents of file C:\tmp\Install.ps1 might have been
     changed by an unauthorized user or process, because the hash of the file does not match the hash stored in the digital
     signature. The script cannot run on the specified system. For more information, run Get-Help about_Signing..  
     At line:1 char:1  
