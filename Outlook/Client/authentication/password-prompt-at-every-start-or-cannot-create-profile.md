@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3060280
 
 ## Symptoms
 
-When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft Office 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, you experience one of the following symptoms:
+When you connect to a Microsoft Exchange 2016, Exchange 2013, or Microsoft 365 mailbox in Microsoft Outlook 2019, Outlook 2016, Outlook, 2013 or Outlook for Microsoft 365, you experience one of the following symptoms:
 
 - You are prompted for your password every time that Outlook starts, even if you enabled the **Remember my credentials** option.
 - When you start Outlook, it is unable to connect, and it displays **Need Password** in the status bar. When you select **Need Password**, you receive the following message:  

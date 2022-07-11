@@ -58,8 +58,8 @@ Outlook 2016 for Mac is available with the following subscriptions:
 - Office 365 Home
 - Office 365 Personal
 - Office 365 University
-- Office 365 Business
-- Office 365 Business Premium
+- Microsoft 365 Apps
+- Microsoft 365 Business Standard
 - Office 365 Small Business Premium
 - Office 365 Midsize Business
 - Office 365 Enterprise E3

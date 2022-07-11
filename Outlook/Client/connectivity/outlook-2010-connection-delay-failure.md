@@ -146,7 +146,7 @@ Usually, when Outlook requires credentials to connect to a mailbox, a **Windows 
     > [!NOTE]
     > If **View by** is set to **Category**, click **User Accounts** first, and then click **Credential Manager**.
 
-2. Locate the set of credentials that are used to connect to *.outlook.com or to your Office 365 domain.
+2. Locate the set of credentials that are used to connect to *.outlook.com or to your Microsoft 365 domain.
 3. Expand the set of credentials, and then select **Remove from Vault**.
 4. Locate the set of credentials that are used to connect to the secondary mailbox.
 5. Expand the set of credentials, and then select **Remove from Vault**.

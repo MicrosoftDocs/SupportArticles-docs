@@ -38,7 +38,7 @@ To fix this issue, the calendar owner must share both the primary and the second
 
 ## More information
 
-This issue does not occur for Office 365 accounts that are using the REST protocol for Calendar.
+This issue does not occur for Microsoft 365 accounts that are using the REST protocol for Calendar.
 
 This issue is caused by a limitation in the EWS protocol that is used for Exchange on-premises accounts. Microsoft 365 accounts that use REST are no longer affected by this issue.
 
