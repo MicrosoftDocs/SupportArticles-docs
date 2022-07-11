@@ -39,8 +39,8 @@ If you want to manually configure the setting for Lync 2013, see the following O
 
 [Manually update and configure desktop applications](https://onlinehelp.microsoft.com/office365-enterprises/ff637585.aspx#bkmk_configure)
 
-If the Office 365 organization is using Directory Synchronization and has or previously had a Office Communications Server 2007 R2, Lync Server 2010, or Lync Server 2013 deployment on-premises, the SIP Address can be updated independently by populating the msRTCSIP-PrimaryUserAddress value in Active Directory. Review the following Knowledge Base article to make sure that the values in Office 365 aren't in conflict with on-premises values:
+If the Office 365 organization is using Directory Synchronization and has or previously had a Office Communications Server 2007 R2, Lync Server 2010, or Lync Server 2013 deployment on-premises, the SIP Address can be updated independently by populating the msRTCSIP-PrimaryUserAddress value in Active Directory. Review the following Knowledge Base article to make sure that the values in Microsoft 365 aren't in conflict with on-premises values:
 
-[2430520 ](https://support.microsoft.com/help/2430520) Error in the Office 365 portal: "Value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique"
+[2430520 ](https://support.microsoft.com/help/2430520) Error in the Microsoft 365 portal: "Value of msRTCSIP-PrimaryUserAddress or the SIP address in the ProxyAddresses field in your local Active Directory is not unique"
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

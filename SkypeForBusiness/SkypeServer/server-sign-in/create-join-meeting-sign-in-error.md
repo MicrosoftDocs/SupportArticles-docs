@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 4486849
 
 > [!NOTE]
-> Skype for Business isn't included in Office 365 Business but is included in Office 365 Business Premium. However, the product IDs for Office 365 Business and Office 365 Business Premium are the same. Therefore, Skype for Business is served as part of the Office 365 Business subscription. Therefore, if Office 365 Business is installed from a Microsoft 365 portal, Skype for Business is installed together with Office 365 Business.
+> Skype for Business isn't included in Microsoft 365 Business but is included in Microsoft 365 Business Premium. However, the product IDs for Office 365 Business and Office 365 Business Premium are the same. Therefore, Skype for Business is served as part of the Office 365 Business subscription. Therefore, if Office 365 Business is installed from a Microsoft 365 portal, Skype for Business is installed together with Office 365 Business.
 
 ## Symptoms
 
@@ -42,7 +42,7 @@ A user who has the Skype for Business client app installed on their computer is 
 
 ## Cause
 
-This behavior is by design if Office 365 Business is installed from your Office 365 portal.
+This behavior is by design if Office 365 Business is installed from your Microsoft 365 portal.
 
 ## Workaround
 

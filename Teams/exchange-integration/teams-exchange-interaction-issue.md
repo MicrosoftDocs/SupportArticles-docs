@@ -126,7 +126,7 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 
     You have to run this test two times by swapping the source mailbox email address with the target mailbox email address. This is because each run is unidirectional. This test doesn't necessarily have to be run by using affected accounts. Test can be run by using any pair of an on-premises mailbox and a Microsoft 365 mailbox.
 
-    To learn more about how to troubleshoot free/busy issues in a hybrid deployment of on-premises and Exchange Online in Office 365, see [this article](https://support.microsoft.com/help/2555008).
+    To learn more about how to troubleshoot free/busy issues in a hybrid deployment of on-premises and Exchange Online in Microsoft 365, see [this article](https://support.microsoft.com/help/2555008).
 
 ## Troubleshoot the Teams delegation issue
 

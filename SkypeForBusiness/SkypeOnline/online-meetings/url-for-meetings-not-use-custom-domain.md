@@ -22,8 +22,8 @@ ms.date: 3/31/2022
 
 Consider the following scenario.
 
-- You set up an account in Office 365 by using the abc.onmicrosoft.com domain. 
-- Later, you decide to use litwareinc.com as your custom domain in Office 365. 
+- You set up an account in Microsoft 365 by using the abc.onmicrosoft.com domain. 
+- Later, you decide to use litwareinc.com as your custom domain in Microsoft 365. 
 - You create a user who has a sign-in address of user1@litwareinc.com.   
 - When user1@litwareinc.com creates a Skype for Business Online (formerly Lync Online) meeting, the meeting URL still reflects the old domain (abc.onmicrosoft.com), and the meeting URL resembles the following:
 

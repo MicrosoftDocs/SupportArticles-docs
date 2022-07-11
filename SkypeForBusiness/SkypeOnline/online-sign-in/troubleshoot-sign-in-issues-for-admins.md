@@ -28,7 +28,7 @@ The amount of time you spend will depend on the type of Office 365 installation 
 
 ### Access to Office 365 on the web
 
-If the affected users can sign in to Office 365 portal at [here](https://login.microsoftonline.com), go to [Valid Skype for Business user](#valid-skype-for-business-user).
+If the affected users can sign in to Microsoft 365 portal at [here](https://login.microsoftonline.com), go to [Valid Skype for Business user](#valid-skype-for-business-user).
 
 If the users can't sign in to Office 365, see the [Can't sign in to Office 365](#cant-sign-in-to-office-365) section.
 
@@ -350,7 +350,7 @@ If the issue still exists, [contact support](#contact-support).
 
 ###### Active Directory Federation Services (AD FS) configuration
 
-Check for known Active Directory Federation Services (AD FS) issues that might prevent single sign-on from working as expected. For details, see [Enterprise single sign-on users in Office 365 can't sign in to Lync Online from inside their corporate network](https://support.microsoft.com/help/2839539).
+Check for known Active Directory Federation Services (AD FS) issues that might prevent single sign-on from working as expected. For details, see [Enterprise single sign-on users in Microsoft 365 can't sign in to Lync Online from inside their corporate network](https://support.microsoft.com/help/2839539).
 
 If this method doesn't solve this issue, go to the [Hybrid Deployment with on-premises Skype for Business Server](#hybrid-deployment-with-on-premises-skype-for-business-server) section.
 
@@ -365,7 +365,7 @@ If you have a Skype for Business Server 2015 and Skype for Business Online hybri
 Make sure the users have been:
 
 1. Enabled for Skype for Business on the on-premises Skype for Business Server.
-1. Licensed for Skype for Business in Office 365.
+1. Licensed for Skype for Business in Microsoft 365.
 1. [Moved to Skype for Business Online](/SkypeForBusiness/hybrid/move-users-between-on-premises-and-cloud?toc=/SkypeForBusiness/toc.json).
 
 If the issue still exists, [contact support](#contact-support).

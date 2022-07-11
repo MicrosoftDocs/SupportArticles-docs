@@ -51,7 +51,7 @@ If automatic discovery for mobile clients hasn't been configured, users have to 
 - External discovery address*:
 [https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root](https://webdir.online.lync.com/autodiscover/autodiscoverservice.svc/root)   
 
-*These addresses are valid only for Office 365 users and will be different for On-premises Skype for Business Server deployments.
+*These addresses are valid only for Microsoft 365 users and will be different for On-premises Skype for Business Server deployments.
 
 > [!NOTE]
 > The Sign-in address and Password fields are displayed on the sign-in screen. To access the User name, Domain, Internal discovery address, and External discovery addressfields, select Server Settings on the sign-in screen.

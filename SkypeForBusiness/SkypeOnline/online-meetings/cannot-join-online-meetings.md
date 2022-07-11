@@ -111,7 +111,7 @@ If external users (and only external users) can't join a Skype for Business Onli
   - If authenticated join doesn't work, Lync should automatically try to join as an anonymous or guest user.
 - If the user is trying to join as an anonymous user from Lync Attendee, or if the Lync Web App or is dialing in to a Skype for Business Online conference with an ACP access number:
   - For anonymous join to work, a specific DNS SRV record must be present in DNS.    
-  - For various methods of confirming your Skype for Business Online DNS records, see [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](https://support.microsoft.com/help/2566790). 
+  - For various methods of confirming your Skype for Business Online DNS records, see [Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365](https://support.microsoft.com/help/2566790). 
 
 ### Joining meetings by using the Lync Web App
 

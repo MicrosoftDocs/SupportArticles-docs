@@ -1,6 +1,6 @@
 ---
 title: License validation when Office 365 administrator disables a user
-description: Describes an issue that occurs when an administrator tries to disable a Skype for Business Online user in Office 365. Provides a solution.
+description: Describes an issue that occurs when an administrator tries to disable a Skype for Business Online user in Microsoft 365. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When a Microsoft Office 365 administrator tries to disable a Skype for Business Online (formerly Lync Online) user, the administrator receives the following error message:
+When a Microsoft 365 administrator tries to disable a Skype for Business Online (formerly Lync Online) user, the administrator receives the following error message:
 
 ```asoc
 "License validation error: the action 'Disable-UMMailbox','Identity', can't be performed on the user **<user>**, with license **<license>**

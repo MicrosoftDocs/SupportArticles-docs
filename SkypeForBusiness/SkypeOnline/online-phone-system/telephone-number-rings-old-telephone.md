@@ -30,7 +30,7 @@ In this scenario, the telephone number continues to ring the old telephone inste
 
 ## More Information 
 
-This is an expected experience when a new local number port order request is submitted. As soon as the new local number port order request is accepted by the carrier, the telephone numbers are available in the Skype for Business Online admin center. Microsoft Office 365 administrators should assign the telephone numbers to users before the porting of the new local number is complete. 
+This is an expected experience when a new local number port order request is submitted. As soon as the new local number port order request is accepted by the carrier, the telephone numbers are available in the Skype for Business Online admin center. Microsoft 365 administrators should assign the telephone numbers to users before the porting of the new local number is complete. 
 
 When a port order is submitted and accepted by the carrier from which the numbers are being transferred, the carrier will agree to a Firm Order Commitment (FOC) date. Porting requests will be executed after the FOC date. The FOC date becomes the soonest date that the transfer might occur. Depending on the carrier, a local number porting request could take several days or weeks to complete. 
 

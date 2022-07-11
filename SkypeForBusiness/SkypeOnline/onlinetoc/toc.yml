@@ -91,7 +91,7 @@
       href: ../online-im-presence/lync-presence-unavailable-in-sharepoint.md
     - name: Only the first IM received in Skype for Business 2015 when Mac hibernating 
       href: ../online-im-presence/only-first-im-received-when-locked.md
-    - name: Presence is unavailable in Office 365
+    - name: Presence is unavailable in Microsoft 365
       href: ../online-im-presence/sfb-presence-unavailable.md
   - name: Install/Uninstall
     items:
@@ -109,7 +109,7 @@
       href: ../online-meetings/special-characters-not-display-correctly.md
     - name: Invitations not sent from Outlook
       href: ../online-meetings/invitations-are-not-sent.md
-    - name: Issues when use Outlook Web App in Office 365
+    - name: Issues when use Outlook Web App in Microsoft 365
       href: ../online-meetings/schedule-online-meetings-from-owa.md
     - name: Issues when you schedule a meeting
       href: ../online-meetings/error-when-you-schedule-meeting.md

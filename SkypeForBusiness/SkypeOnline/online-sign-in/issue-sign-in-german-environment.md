@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When you try to sign in the first time to Microsoft Skype for Business in the German version of Microsoft Office 365, you receive the following error message:
+When you try to sign in the first time to Microsoft Skype for Business in the German version of Microsoft 365, you receive the following error message:
 
 > Your sign in request is being redirected to the following server:  
 > Outlook.de  

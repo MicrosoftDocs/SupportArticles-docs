@@ -31,7 +31,7 @@
       href: ../hybrid-move-sfb-online/move-csuser--hostedmigration-fault.md
     - name: "Move-CsUser:HostedMigration fault: Error=(507)"
       href: ../hybrid-move-sfb-online/move-csuser-hostedmigration-fault-507.md
-    - name: Skype for Business 2016 isn't installed in Office 365
+    - name: Skype for Business 2016 isn't installed in Microsoft 365
       href: ../hybrid-move-sfb-online/sfb-is-not-installed-office-365.md
   - name: Phone System
     items:

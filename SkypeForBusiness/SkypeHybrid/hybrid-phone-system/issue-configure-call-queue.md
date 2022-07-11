@@ -31,7 +31,7 @@ After you set a Microsoft 365 call queue in the Skype for Business admin center,
 
 This issue occurs because your tenant is configured by using a split domain that is currently not supported for Organizational Auto Attendant (OrgAA) or call queues.
 
-However, if you follow the guidance in the "Workaround" section, your call queue may work if all users who are defined as agents are working in Office 365 and are appropriately licensed.
+However, if you follow the guidance in the "Workaround" section, your call queue may work if all users who are defined as agents are working in Microsoft 365 and are appropriately licensed.
 
 ## Workaround
 
