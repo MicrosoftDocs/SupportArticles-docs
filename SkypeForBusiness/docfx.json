@@ -105,6 +105,7 @@
       "recommendations": true,
       "feedback_system": "none",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "titleSuffix": "Skype for Business",
       "searchScope": ["Skype for Business Support"] 
     },
