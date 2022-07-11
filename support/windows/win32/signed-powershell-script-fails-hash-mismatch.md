@@ -1,6 +1,6 @@
 ---
-title: The signed PowerShell script fails for hash mismatch
-description: This article provides resolutions for an issue where the execution of signed PowerShell script fails with error message.
+title: The signed PowerShell script fails due to a hash mismatch
+description: This article provides resolutions for an issue where the execution of a signed PowerShell script fails with an error message.
 ms.date: 07/19/2022
 ms.custom: sap:Security development
 ms.reviewer: milanmil
@@ -8,7 +8,7 @@ ms.author: v-sidong
 author: mrmilanmm
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
-#  The signed PowerShell script fails to run due to hash mismatch
+#  The signed PowerShell script fails to run due to a hash mismatch
 
 _Original product version:_ &nbsp;Windows 10  
 _Original KB number:_ &nbsp;5016563
@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp;5016563
 
 Consider the following scenario:
 
-- You have a PowerShell script that contains special characters like ö, ä, ü.
+- You have a PowerShell script that contains special characters like ö, ä, or ü.
 
 - You sign the script on a computer that uses a system locale (for example, en-US).
 
@@ -33,9 +33,9 @@ in the digital signature. The script cannot run on the specified system.
 
 ## Cause
 
-When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using the en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, ü are differently encoded on en-US and cs-CZ computers.
+When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using the en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, and ü are encoded differently on en-US and cs-CZ computers.
 
-The process of signature verification creates hash for PowerShell script content that doesn't include the signature. And the umlaut and special characters are differently interpreted on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
+The signature verification process creates a hash for PowerShell script content that doesn't include the signature. And the umlaut and special characters are interpreted differently on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
 
 ## Resolution
 
@@ -43,7 +43,7 @@ To make a signed PowerShell script run independently from locale settings, follo
 
 1. Get the unsigned version of the PowerShell script.
 
-1. Replace or remove all umlaut and special characters like ö, ä, ü.
+1. Replace or remove all umlaut and special characters like ö, ä, and ü.
 
 1. [Sign the script](/powershell/module/microsoft.powershell.core/about/about_signing#sign-a-script).
 
