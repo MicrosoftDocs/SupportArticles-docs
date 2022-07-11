@@ -38,7 +38,8 @@ This issue occurs because a high number of incoming connections can exhaust the 
 
 To fix this issue, decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server as follows:
 
-**Note** You may need to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of 2 to prevent limiting connections from busy sources such as email gateways. We also recommend you closely monitor the incoming mail flow and gradually increase the value if needed.
+> [!NOTE]
+> You may need to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of 2 to prevent limiting connections from busy sources such as email gateways. We also recommend you closely monitor the incoming mail flow and gradually increase the value if needed.
 
 1. Run the [Get-ReceiveConnector](/powershell/module/exchange/get-receiveconnector) cmdlet to check the current value of the `MaxInboundConnection` parameter.
 
@@ -46,7 +47,8 @@ To fix this issue, decrease the `MaxInboundConnection` limit on the Receive conn
     Get-ReceiveConnector -Server <Server Name> | Format-Table Identity,MaxInboundConnection -Auto
     ```
 
-    **Note**: The default value for this limit is 5000 concurrent connections.
+    > [!NOTE]
+    > The default value for this limit is 5000 concurrent connections.
 
 1. Run the following cmdlet to set the limit to a value of 1000 concurrent connections.
 
