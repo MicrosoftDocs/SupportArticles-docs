@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When a Microsoft Office 365 user tries to delete an item such as a calendar event in Outlook or Outlook on the Web, the user experiences the following symptoms:
+When a Microsoft 365 user tries to delete an item such as a calendar event in Outlook or Outlook on the Web, the user experiences the following symptoms:
 
 - In Outlook, the user receives the following error message:  
 

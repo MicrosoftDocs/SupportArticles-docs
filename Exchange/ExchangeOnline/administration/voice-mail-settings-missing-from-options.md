@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Voice mail settings are missing from the Options pane in Outlook on the web in Office 365
+# Voice mail settings are missing from the Options pane in Outlook on the web in Microsoft 365
 
 _Original KB number:_ &nbsp; 3216404
 

@@ -1,6 +1,6 @@
 ---
-title: Updates to Client Access Rules in Office 365
-description: Describes a procedural update to Client Access Rules in Office 365.
+title: Updates to Client Access Rules in Microsoft 365
+description: Describes a procedural update to Client Access Rules in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Updates to Client Access Rules in Office 365
+# Updates to Client Access Rules in Microsoft 365
 
 > [!IMPORTANT]
 > This article applies to Office 365 Dedicated, Office 365 D/ITAR, and select Office 365 Enterprise customers.
@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 4013974
 
 ## Summary
 
-Microsoft is making a change that affects how [Client Access Rules](https://download.microsoft.com/download/4/8/7/487093CB-2471-48CE-9B72-6695DDAED6ED/vNext/EXO-D%20Managing%20Client%20Access%20Rules%20%28Legacy%202013_vNext%29.pdf) (CARs) work in Office 365. We will be adding support for managing the REST API through Client Access Rules. Previously, the predicate for ExchangeWebServices (EWS) applied to both the EWS protocol and REST API. The upcoming updates to Exchange CARs will let you independently manage these connection types.
+Microsoft is making a change that affects how [Client Access Rules](https://download.microsoft.com/download/4/8/7/487093CB-2471-48CE-9B72-6695DDAED6ED/vNext/EXO-D%20Managing%20Client%20Access%20Rules%20%28Legacy%202013_vNext%29.pdf) (CARs) work in Microsoft 365. We will be adding support for managing the REST API through Client Access Rules. Previously, the predicate for ExchangeWebServices (EWS) applied to both the EWS protocol and REST API. The upcoming updates to Exchange CARs will let you independently manage these connection types.
 
 This update will be especially important if you want to deploy Outlook for iOS and Android because those apps use REST APIs to sync mail, calendar, and contact information with Office 365.
 
@@ -84,6 +84,6 @@ The EAS protocol is not affected by these changes. EAS is still used by Outlook 
 > [!IMPORTANT]
 > You cannot use the `AnyOfClientIPAddressesOrRanges` parameter to manage Outlook for iOS and Android by using Client Access Rules. This is because of the Office 365-based architecture that is used by Outlook for iOS and Android.
 
-## Which Office 365 users are affected by this update
+## Which Microsoft 365 users are affected by this update
 
 Office 365 Dedicated, Office 365 D/ITAR, and select Office 365 Enterprise customers.

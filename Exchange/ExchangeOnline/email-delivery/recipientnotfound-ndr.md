@@ -1,5 +1,5 @@
 ---
-title: 550 5.1.10 RESOLVER.ADR.RecipientNotFound in Office 365.
+title: 550 5.1.10 RESOLVER.ADR.RecipientNotFound in Microsoft 365.
 description: Describes an NDR error that a Microsoft 365 user receives when they try to send email to on-premises Exchange users in a hybrid deployment. Provides a solution.
 author: simonxjx
 ms.author: v-six
@@ -22,7 +22,7 @@ _Original KB number:_&nbsp;3197393
 
 ## Problem
 
-An Office 365 user is unable to send email messages to on-premises Exchange users in an Exchange hybrid deployment. The Office 365 user receives the following nondelivery report (NDR):
+A Microsoft 365 user is unable to send email messages to on-premises Exchange users in an Exchange hybrid deployment. The Microsoft 365 user receives the following nondelivery report (NDR):
 
 > Your message to <User@contoso.com> couldn't be delivered.
 >
@@ -34,7 +34,7 @@ The NDR contains the following error code:
 
 ## Cause
 
-This problem occurs if the user was created in Office 365. In this scenario, the on-premises Exchange environment has no object to reference for the user. Therefore, all queries for that SMTP address fail.
+This problem occurs if the user was created in Microsoft 365. In this scenario, the on-premises Exchange environment has no object to reference for the user. Therefore, all queries for that SMTP address fail.
 
 ## Solution
 
@@ -71,7 +71,7 @@ To resolve this problem, create a remote mailbox in the on-premises environment 
 
     For more information, see [Synchronize your directories](/azure/active-directory/hybrid/whatis-hybrid-identity).
 
-1. Make sure that the Office 365 user object is displayed as **Synced with Active Directory**.
+1. Make sure that the Microsoft 365 user object is displayed as **Synced with Active Directory**.
 
 ## More information
 

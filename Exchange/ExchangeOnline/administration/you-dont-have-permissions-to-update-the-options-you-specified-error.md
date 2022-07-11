@@ -28,7 +28,7 @@ When a Microsoft 365 kiosk user tries to create an inbox rule in Outlook on the 
 
 ## Cause
 
-This behavior is by design. Inbox rules aren't available in Office 365 kiosk plans.
+This behavior is by design. Inbox rules aren't available in Microsoft 365 kiosk plans.
 
 ## Workaround
 

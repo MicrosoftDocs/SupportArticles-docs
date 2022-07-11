@@ -1,6 +1,6 @@
 ---
 title: Use PowerShell to grant admin access to all mailboxes
-description: Describes how to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365 through Outlook and Outlook Web App.
+description: Describes how to use Windows PowerShell to grant an admin access to all user mailboxes in Microsoft 365 through Outlook and Outlook Web App.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365
+# How to use Windows PowerShell to grant an admin access to all user mailboxes in Microsoft 365
 
 _Original KB number:_ &nbsp; 2685435
 
@@ -26,7 +26,7 @@ This article describes how to use Windows PowerShell to grant an admin access to
 
 ## Resolution
 
-To grant an admin full access to all user mailboxes in Office 365 through Outlook and Outlook Web App, follow these steps:
+To grant an admin full access to all user mailboxes in Microsoft 365 through Outlook and Outlook Web App, follow these steps:
 
 1. [Connect to Exchange Online by using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 

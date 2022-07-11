@@ -62,12 +62,12 @@ The following list of tools is sorted from the simplest and quickest option to t
 
 The service health page lists the status of Office 365 services and indicates any recent service incidents.  To check the service health, follow these steps:
 
-1. Sign in through the appropriate link on [Where to sign in to Office 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
+1. Sign in through the appropriate link on [Where to sign in to Microsoft 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
 
 2. Select the app launcher icon in the upper-left corner, and select **Admin**.
 
     > [!TIP]
-    > **Admin** appears only to Office 365 administrators.
+    > **Admin** appears only to Microsoft 365 administrators.
 
     Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Office 365 apps that are available to you. From there, you can search for a specific app.
 
@@ -97,14 +97,14 @@ Sometimes, an email message gets lost in transit, or it can take a lot longer th
 
 #### Open the message trace tool
 
-If you're a Microsoft 365 Midsize Business, Office 365 Business, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
+If you're a Microsoft 365 Midsize Business, Microsoft 365 Apps, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
 
-1. Sign in through the appropriate link on [Where to sign in to Office 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
+1. Sign in through the appropriate link on [Where to sign in to Microsoft 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
 
 2. Select the app launcher icon  in the upper-left corner, and select **Admin**.
 
     > [!TIP]
-    > **Admin** appears only to Office 365 administrators.
+    > **Admin** appears only to Microsoft 365 administrators.
 
     Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Office 365 apps that are available to you. From there, you can search for a specific app.
 

@@ -21,7 +21,7 @@ ms.date: 3/31/2022
 # Outlook app access may end after June 1 if EWS application policies are not set up correctly
 
 > [!IMPORTANT]
-> This article applies to Microsoft Office 365 customers who have explicitly set up Exchange Web Services (EWS) application policies.
+> This article applies to Microsoft 365 customers who have explicitly set up Exchange Web Services (EWS) application policies.
 
 _Original KB number:_ &nbsp; 4018623
 
@@ -47,7 +47,7 @@ The EAS protocol is not affected by these changes. EAS is still used by Outlook 
 
 EWS application policies control whether applications can use the REST API. By default, an EWS application policy is not configured in an Exchange Online tenant. If you configure an EWS application policy that allows only specific applications access to your messaging environment, you must add the user-agent string for Outlook for iOS and Android to the EWS **allow** list.
 
-There are three options to set up EWS application policies to correctly enable Outlook for iOS and Android access to Office 365 mailboxes.
+There are three options to set up EWS application policies to correctly enable Outlook for iOS and Android access to Microsoft 365 mailboxes.
 
 Option 1
 

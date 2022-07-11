@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Summary
 
-This article discusses why you shouldn't bypass spam filters in Microsoft Office 365. This article applies to both users and administrators who do the following:
+This article discusses why you shouldn't bypass spam filters in Microsoft 365. This article applies to both users and administrators who do the following:
 
 - [Manage the Tenant Allow/Block List](/microsoft-365/security/office-365-security/tenant-allow-block-list?view=o365-worldwide&preserve-view=true).
 - Enable Allow or block lists in [Spam Filter policies](/microsoft-365/security/office-365-security/configure-your-spam-filter-policies?view=o365-worldwide&preserve-view=true).

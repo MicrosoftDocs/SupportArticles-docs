@@ -26,7 +26,7 @@ In Microsoft Exchange Online, some mobile devices are not quarantined as expecte
 
 For example, consider the following scenario:
 
-1. In the Office 365 tenant, Exchange ActiveSync access settings are configured to **Quarantine - Let me decide to block or allow later**. A quarantined device is then **Allowed**. When the device is allowed, the `Get-CASMailbox` cmdlet shows **Allowed** and **Blocked** devices in the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters.
+1. In the Microsoft 365 tenant, Exchange ActiveSync access settings are configured to **Quarantine - Let me decide to block or allow later**. A quarantined device is then **Allowed**. When the device is allowed, the `Get-CASMailbox` cmdlet shows **Allowed** and **Blocked** devices in the `ActiveSyncAllowedDeviceIDs` and `ActiveSyncBlockedDeviceIDs` parameters.
 
 2. Later, you want to remove the device. You can do this by using either of the following methods:
 

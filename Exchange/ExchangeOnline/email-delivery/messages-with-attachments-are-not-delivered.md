@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4014438
 
 Consider the following scenario:
 
-- An Office 365 tenant is set up to route messages to Exclaimer for signature or disclaimer services.
+- A Microsoft 365 tenant is set up to route messages to Exclaimer for signature or disclaimer services.
 - The Advanced Threat Protection (ATP) Safe Attachment feature is enabled.
 - Under the **Safe attachments unknown malware response** option, the Dynamic Delivery feature is selected.
 

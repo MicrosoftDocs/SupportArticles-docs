@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Office 365 users can reserve a meeting room even though it's already reserved for another meeting
+# Microsoft 365 users can reserve a meeting room even though it's already reserved for another meeting
 
 _Original KB number:_ &nbsp; 3066068
 
@@ -41,7 +41,7 @@ To resolve this issue, set the `AllRequestOutOfPolicy` property of the room mail
 
 ## More information
 
-For more information about the Calendar Attendant in Office 365, see:
+For more information about the Calendar Attendant in Microsoft 365, see:
 
 - [Configure the Automated Booking policies for a resource mailbox](/previous-versions/office/exchange-server-2010/bb124542(v=exchg.141))
 - [Enable or disable Automatic Booking on a resource mailbox](/previous-versions/office/exchange-server-2010/bb123495(v=exchg.141))

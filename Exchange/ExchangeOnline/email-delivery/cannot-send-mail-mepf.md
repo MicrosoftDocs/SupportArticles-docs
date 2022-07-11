@@ -1,6 +1,6 @@
 ---
-title: Error (554 5.2.2 mailbox full) when sending email to mail-enabled public folders in Office 365
-description: Email is not able to be delivered to mail-enabled public folders in Office 365 with error 554 5.2.2 mailbox full. This article provides three resolutions.
+title: Error (554 5.2.2 mailbox full) when sending email to mail-enabled public folders in Microsoft 365
+description: Email is not able to be delivered to mail-enabled public folders in Microsoft 365 with error 554 5.2.2 mailbox full. This article provides three resolutions.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,7 +18,7 @@ search.appverid:
   - MET150
 ms.date: 3/31/2022
 ---
-# Error when sending email to mail-enabled public folders in Office 365: 554 5.2.2 mailbox full
+# Error when sending email to mail-enabled public folders in Microsoft 365: 554 5.2.2 mailbox full
 
 ## Symptoms
 

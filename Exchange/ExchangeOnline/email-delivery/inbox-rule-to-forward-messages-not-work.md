@@ -16,17 +16,17 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Inbox rule to forward messages doesn't work in Office 365
+# Inbox rule to forward messages doesn't work in Microsoft 365
 
 _Original KB number:_ &nbsp; 4021948
 
 ## Symptoms
 
-Your Inbox rule that has an action forward messages doesn't work in Office 365.
+Your Inbox rule that has an action forward messages doesn't work in Microsoft 365.
 
 ## Cause
 
-This behavior is by design when the rule is forwarding messages to 10 or more individual recipients. This is a result of the forwarded limit in Office 365, which is described at [Exchange Online Limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
+This behavior is by design when the rule is forwarding messages to 10 or more individual recipients. This is a result of the forwarded limit in Microsoft 365, which is described at [Exchange Online Limits](/office365/servicedescriptions/exchange-online-service-description/exchange-online-limits).
 
 ## Workaround
 

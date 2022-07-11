@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 2845956
 Consider the following scenario:
 
 - You want to set up single sign-on (SSO).
-- You have an on-premises Microsoft Exchange Server environment but don't want a full hybrid deployment with Microsoft Exchange Online in Office 365.
+- You have an on-premises Microsoft Exchange Server environment but don't want a full hybrid deployment with Microsoft Exchange Online in Microsoft 365.
 - To implement SSO, you deploy Active Directory Federation Services (AD FS) 2.0 and then use Active Directory synchronization to sync user accounts from your on-premises Active Directory directory service to Microsoft Azure Active Directory (Azure AD).
 
 In this scenario, when you perform a staged Exchange migration to migrate mailboxes from your on-premises environment to Exchange Online, you receive the following error message:
