@@ -58,7 +58,7 @@ If you want to perform the checks and fix the issue manually, follow these steps
     - **0xCAA82EE7** or **0xCAA82EE2**  
         Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.
 
-        For information about endpoints that users should be able to reach if they're using Teams in Microsoft 365 plans, government environments, or other clouds, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+        For information about endpoints that users should be able to reach if they're using Teams in Microsoft 365 plans, government environments, or other clouds, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
     - **0xCAA20004**  
         This error occurs if an issue affects conditional access. For more information, see [Conditional Access policies for Teams](/microsoftteams/security-compliance-overview#how-conditional-access-policies-work-for-teams).

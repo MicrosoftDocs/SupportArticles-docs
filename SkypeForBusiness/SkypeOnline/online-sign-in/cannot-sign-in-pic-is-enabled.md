@@ -44,6 +44,6 @@ This issue occurs if the following conditions are true:
 
 In this scenario, when the users sign in to Skype, they are forced to change their Microsoft account to use a domain that isn't in conflict with Office 365.
 
-This issue occurs because of the way that the session initiation protocol (SIP) services are advertised. The Office 365 and Skype environments can coexist if PIC or External Communications is disabled for the Office 365 domain. However, if PIC or External Communications is enabled for the Office 365 domain, the Office 365 domain becomes the authoritative SIP domain and hosts the service. Therefore, when users try to sign in to Skype, the Microsoft account service recognizes that Office 365 controls the domain namespace and requires the users to change their Microsoft account to use a different domain.
+This issue occurs because of the way that the session initiation protocol (SIP) services are advertised. The Office 365 and Skype environments can coexist if PIC or External Communications is disabled for the Microsoft 365 domain. However, if PIC or External Communications is enabled for the Microsoft 365 domain, the Microsoft 365 domain becomes the authoritative SIP domain and hosts the service. Therefore, when users try to sign in to Skype, the Microsoft account service recognizes that Office 365 controls the domain namespace and requires the users to change their Microsoft account to use a different domain.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

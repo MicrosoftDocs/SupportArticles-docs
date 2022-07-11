@@ -36,7 +36,7 @@ When a port order is submitted and accepted by the carrier from which the number
 
 For more information, go to the following Microsoft websites: 
 
-- [Transfer phone numbers to Office 365](https://support.office.com/article/transfer-phone-numbers-over-to-skype-for-business-online-47b3af8e-4171-4dec-8333-c956f108664e)   
+- [Transfer phone numbers to Microsoft 365](https://support.office.com/article/transfer-phone-numbers-over-to-skype-for-business-online-47b3af8e-4171-4dec-8333-c956f108664e)   
 - [Assign, change, or remove a phone number for a user](https://support.office.com/article/assign-change-or-remove-a-phone-number-for-a-user-91089761-cb87-4119-885b-3713840dd9f7)   
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

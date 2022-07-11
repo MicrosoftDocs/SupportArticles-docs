@@ -39,7 +39,7 @@ You have a hybrid deployment of on-premises Exchange Server and Exchange Online 
 
 ## Cause
 
-This problem occurs if the Exchange Online organization or the on-premises organization isn't set up to promote email headers as cross-premises (that is, from Exchange Online to the on-premises server to Office 365).
+This problem occurs if the Exchange Online organization or the on-premises organization isn't set up to promote email headers as cross-premises (that is, from Exchange Online to the on-premises server to Microsoft 365).
 
 ## Solution
 
@@ -77,7 +77,7 @@ This problem occurs if the Exchange Online organization or the on-premises organ
    > [!NOTE]
    > If there's only one X-Forefront header, this resolution does not apply to your organization's configuration.
 
-3. To promote the headers from the on-premises environment back to Office 365, follow these steps:
+3. To promote the headers from the on-premises environment back to Microsoft 365, follow these steps:
    1. Verify that the headers are currently not being promoted. To do this, check whether the following line is missing in the headers:
 
       `X-MS-Exchange-Organization-Cross-Premises-Headers-Promoted: <On-premises Server Name>`

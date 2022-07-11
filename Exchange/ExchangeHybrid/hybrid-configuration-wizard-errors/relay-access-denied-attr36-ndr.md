@@ -50,7 +50,7 @@ The warning message that is mentioned in the Symptoms section is generated if on
 
 To enable your on-premises environment to send messages, use one of the following methods:
 
-- (Preferred) Add the domain that's used on the certificate to the Microsoft 365 tenant. If you own the domain, sign in to Office 365 by using administrator permissions, locate **Settings** > **Domains**, and then follow the instructions. If the certificate subject name is *hostname.subdomain.contoso.com*, you have to add only *subdomain.contoso.com*.
+- (Preferred) Add the domain that's used on the certificate to the Microsoft 365 tenant. If you own the domain, sign in to Microsoft 365 by using administrator permissions, locate **Settings** > **Domains**, and then follow the instructions. If the certificate subject name is *hostname.subdomain.contoso.com*, you have to add only *subdomain.contoso.com*.
 - Have the certificate reissued by using a different name that matches an accepted domain in the Microsoft 365 tenant. You can still any specify subject alternative names that you want. Wildcard certificates are enabled, but not required.
 
     > [!NOTE]

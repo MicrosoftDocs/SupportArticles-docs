@@ -63,7 +63,7 @@ If Lync doesn't automatically connect to EWS, Lync prompts you for credentials b
 
 If you're repeatedly prompted to enter your credentials or receive the "Access Denied" error message, see the following Microsoft Knowledge Base article:
 
-[2630976](https://support.microsoft.com/help/2630976) "Access Denied" error, or user is repeatedly prompted for credentials when trying to connect to Office 365 by using a rich client application
+[2630976](https://support.microsoft.com/help/2630976) "Access Denied" error, or user is repeatedly prompted for credentials when trying to connect to Microsoft 365 by using a rich client application
 
 ### Solutions for Lync administrators
 

@@ -40,7 +40,7 @@ A Cloud PBX or an Office 365 E5 license includes the ability to assign enterpris
 
 You can connect Cloud PBX to PSTN in the following ways:
 
-- Purchase the PSTN Calling service add-on to Office 365.   
+- Purchase the PSTN Calling service add-on to Microsoft 365.   
 - Use on-premises PSTN connectivity, in which software on-premises connects to your existing telephony infrastructure.    
 For more information, go to the following Microsoft websites:
 

@@ -28,7 +28,7 @@ When you use the Snooper tool to analyze the logs, this shows the client trying 
 
 ## Cause
 
-Skype Meeting Broadcast uses regional dedicated conferencing pools. In order to join Skype Meeting Broadcast meetings, event team members must be validated against the Office 365 tenant or the on-premises Skype for Business Server infrastructure. If the tenant or on-premises infrastructure restricts access to a list of authorized domains, the validation process fails, and you can't join the inner meeting.
+Skype Meeting Broadcast uses regional dedicated conferencing pools. In order to join Skype Meeting Broadcast meetings, event team members must be validated against the Microsoft 365 tenant or the on-premises Skype for Business Server infrastructure. If the tenant or on-premises infrastructure restricts access to a list of authorized domains, the validation process fails, and you can't join the inner meeting.
 
 ## Resolution
 

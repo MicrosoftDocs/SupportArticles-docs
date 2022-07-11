@@ -99,7 +99,7 @@ Then, in the output, look for a folder that has the following Identity:
 The External Schedule+ Free Busy folder is used in hybrid scenarios when Exchange Server 2003 or Microsoft Office Outlook 2003 is used on premises. This external folder is installed on the Exchange 2010 public folder server so that the server can do the following:
 
 - Intercept free/busy requests
-- Send the requests to Office 365 for lookup
+- Send the requests to Microsoft 365 for lookup
 
 This process is performed only for the accounts that are migrated from on-premises installations to the cloud. Exchange Server 2003 users still have calendaring functionality.
 

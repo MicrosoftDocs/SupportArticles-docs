@@ -48,7 +48,7 @@ This issue may occur if one or more of the following conditions are true:
 
 - You are running the Active Directory Sync Tool together with an on-premises Active Directory schema.   
 - You have or previously had a deployment of Lync Server 2010 or of Office Communications Server 2007, together with Active Directory schema extensions. 
-- In a previous deployment, the **msRTCSIP-UserEnabled** attribute was set to **FALSE**. This attribute value is synced to Office 365 and disables the Skype for Business Online license of the Skype for Business Online user who can't sign in. (However, the Skype for Business Online license is still displayed as enabled in the Microsoft 365 portal.)   
+- In a previous deployment, the **msRTCSIP-UserEnabled** attribute was set to **FALSE**. This attribute value is synced to Microsoft 365 and disables the Skype for Business Online license of the Skype for Business Online user who can't sign in. (However, the Skype for Business Online license is still displayed as enabled in the Microsoft 365 portal.)   
 
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

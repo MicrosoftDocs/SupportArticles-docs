@@ -1,6 +1,6 @@
 ---
 title: Error when sign in to Skype for Business in a German Office 365 environment
-description: Describes a scenario that can occur when some Skype for Business clients try to connect to the German version of Office 365. Provides a workaround.
+description: Describes a scenario that can occur when some Skype for Business clients try to connect to the German version of Microsoft 365. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -29,7 +29,7 @@ When you try to sign in the first time to Microsoft Skype for Business in the Ge
 
 ## Cause
 
-This issue occurs because some specific Skype for Business client versions are incompatible with the German version of Office 365.
+This issue occurs because some specific Skype for Business client versions are incompatible with the German version of Microsoft 365.
 
 ## Workaround
 

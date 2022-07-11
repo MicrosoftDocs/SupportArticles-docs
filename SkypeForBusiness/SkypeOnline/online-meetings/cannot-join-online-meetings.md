@@ -96,7 +96,7 @@ Skype for Business Online falls back to "anonymous join" if it can't authenticat
 
 ### Troubleshooting Identity issues
 
-This specific issue occurs when two users of the same Office 365 organization share the same user name (alias). Because of how Lync generates meeting URLs, two users on the same Office 365 organization who have the same user name will share the same meeting URLs. This causes the Skype for Business Online conference to become corrupted.
+This specific issue occurs when two users of the same Microsoft 365 organization share the same user name (alias). Because of how Lync generates meeting URLs, two users on the same Microsoft 365 organization who have the same user name will share the same meeting URLs. This causes the Skype for Business Online conference to become corrupted.
 
 To resolve this issue, change the user name of one of the users who has the duplicate user name.
 

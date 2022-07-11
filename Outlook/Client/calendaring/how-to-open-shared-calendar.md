@@ -495,7 +495,7 @@ Here are some additional resources that you may find useful:
 
 If you are using Outlook App on mobile or tablet devices, such as Windows Phone, iPhone, iPad, Android Phones, you cannot see other user's calendars on these devices as they only sync your own calendars. The workaround is that you need to use Outlook on the web or Outlook Web App to view the shared calendar, or view it when on a Desktop Outlook for Windows or Mac client.
 
-To use Outlook on the web or Outlook Web App to open the shared calendar from an invitation, sign in with your exchange or office 365 account, you will see the share invitation like this:
+To use Outlook on the web or Outlook Web App to open the shared calendar from an invitation, sign in with your exchange or Microsoft 365 account, you will see the share invitation like this:
 
 :::image type="content" source="media/how-to-open-shared-calendar/open-shared-calendar-in-owa.png" alt-text="Screenshot of a shared calendar invitation in Outlook Web App.":::
 

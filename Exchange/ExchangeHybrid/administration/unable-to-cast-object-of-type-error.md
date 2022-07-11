@@ -33,7 +33,7 @@ You have a hybrid deployment of an on-premises Microsoft Exchange server and Exc
 
 ## Cause
 
-This issue occurs if you're trying to connect to Office 365 from an on-premises hybrid server that's running Exchange Server 2010 Service Pack 1 (SP1) or Exchange Server 2010 Service Pack 2 (SP2).
+This issue occurs if you're trying to connect to Microsoft 365 from an on-premises hybrid server that's running Exchange Server 2010 Service Pack 1 (SP1) or Exchange Server 2010 Service Pack 2 (SP2).
 
 ## Resolution
 

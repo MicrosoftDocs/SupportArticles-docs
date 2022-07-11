@@ -1,6 +1,6 @@
 ---
 title: On-premises distribution group owner can't manage the group in Exchange Online
-description: Describes an issue in which the owner of a distribution group that's synced to Office 365 can no longer manage the distribution group. A resolution is provided.
+description: Describes an issue in which the owner of a distribution group that's synced to Microsoft 365 can no longer manage the distribution group. A resolution is provided.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -32,7 +32,7 @@ Distribution groups that are created in Microsoft 365 through directory synchron
 - Exchange Management Console
 - Exchange Management Shell
 
-After changes are made to the group in the on-premises environment, the changes are synced to Office 365 the next time that directory synchronization runs. Or, to see the changes immediately, you can force directory synchronization. For more info about how to force directory synchronization, go to the following Microsoft website:
+After changes are made to the group in the on-premises environment, the changes are synced to Microsoft 365 the next time that directory synchronization runs. Or, to see the changes immediately, you can force directory synchronization. For more info about how to force directory synchronization, go to the following Microsoft website:
 
 [Force directory synchronization](/azure/active-directory/hybrid/whatis-hybrid-identity#bkmk_synchronizedirectories)
 
