@@ -67,7 +67,7 @@ For more information about Microsoft 365 Apps for enterprise URLs and IP address
 
 ### Step 4. Check whether you have the appropriate license   
  
-1. Sign in to the Office 365 portal.     
+1. Sign in to the Microsoft 365 portal.     
 2. Click **Settings** :::image type="icon" source="./media/issue-when-activate-office-from-office-365/setting-icon.png"::: and then click **Office 365 settings**.    
 3. Locate the **Assigned licenses** area.    
 4. If you see **The latest desktop version of Office**, then you have an Office subscription assigned correctly.    

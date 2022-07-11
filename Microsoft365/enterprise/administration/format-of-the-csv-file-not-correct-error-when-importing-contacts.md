@@ -21,7 +21,7 @@ _Original KB number:_ &nbsp; 3145388
 
 ## Symptoms
 
-An Office 365 user wants to import contacts in a CSV file that was exported from another email application such as Outlook.com. However, when the user tries to import the CSV file through the Office 365 portal (**People** > **Manage** > **Import contacts**), they receive the following error message:
+A Microsoft 365 user wants to import contacts in a CSV file that was exported from another email application such as Outlook.com. However, when the user tries to import the CSV file through the Microsoft 365 portal (**People** > **Manage** > **Import contacts**), they receive the following error message:
 
 > The format of the CSV file isn't correct. Be sure that the file was exported in the Outlook CSV Format
 

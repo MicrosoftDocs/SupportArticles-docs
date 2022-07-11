@@ -1,6 +1,6 @@
 ---
 title: Error when you create a user name that contains a special character
-description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft Office 365.
+description: Describes an issue in which you receive an Invalid user name error message when you try to create a user name that contains special characters in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 date: 3/16/2020
@@ -19,13 +19,13 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "Invalid user name" when you try to create a user name that contains a special character in Office 365
+# "Invalid user name" when you try to create a user name that contains a special character in Microsoft 365
 
 ## Problem
 
-When you create a user name that contains a special character in Microsoft Office 365, you receive one of the following error messages: 
+When you create a user name that contains a special character in Microsoft 365, you receive one of the following error messages: 
 
-Within the Office 365 portal
+Within the Microsoft 365 portal
 
 ```adoc
 Invalid user name
@@ -62,6 +62,6 @@ However, the following exceptions apply:
 
 ## Solution
 
-When you create a new user in Office 365, make sure that you don't use any of the special characters that are listed in the "Cause" section.
+When you create a new user in Microsoft 365, make sure that you don't use any of the special characters that are listed in the "Cause" section.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,6 +1,6 @@
 ---
-title: Sender Rewriting Scheme (SRS) in Office 365
-description: Describes Sender Rewriting Scheme (SRS) in Office 365.
+title: Sender Rewriting Scheme (SRS) in Microsoft 365
+description: Describes Sender Rewriting Scheme (SRS) in Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -15,7 +15,7 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# Sender Rewriting Scheme (SRS) in Office 365
+# Sender Rewriting Scheme (SRS) in Microsoft 365
 
 _Original KB number:_&nbsp;4490129
 
@@ -33,7 +33,7 @@ This SRS change improves deliverability of applicable messages that pass Sender 
 
 SRS rewrites the **P1 From** address in the following scenario:
 
-- Messages that are autoforwarded (or redirected) in Office 365 by using any of the following methods to forward a message to an external recipient:
+- Messages that are autoforwarded (or redirected) in Microsoft 365 by using any of the following methods to forward a message to an external recipient:
   - SMTP forwarding*
   - Mailbox Rule (or Inbox rule) redirection
   - Transport Rule redirection
@@ -50,7 +50,7 @@ SRS rewrites the **P1 From** address in the following scenario:
 This change causes Non-Delivery Reports (NDRs) to return to Office 365 instead of the original sender, as they would do if SRS were not used. Therefore, part of the SRS implementation is to reroute returning NDRs to the original sender if a message cannot be delivered.  
 
 > [!NOTE]
-> SRS rewriting is used to prevent spoofing of unverified domains. Customers are advised to send messages only from domains that they own and for which they have verified their ownership through the Accepted Domains list. For more information about Accepted Domains in Office 365, see the following TechNet topic:
+> SRS rewriting is used to prevent spoofing of unverified domains. Customers are advised to send messages only from domains that they own and for which they have verified their ownership through the Accepted Domains list. For more information about Accepted Domains in Microsoft 365, see the following TechNet topic:
 >  
 > [Manage accepted domains in Exchange Online](/exchange/mail-flow-best-practices/manage-accepted-domains/manage-accepted-domains)
 
@@ -66,7 +66,7 @@ A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP 
 
 Example:
 
-A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Office 365 (john.work@contoso.com). John has set up autoforwarding to the home email address (john.home@example.com).
+A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Microsoft 365 (john.work@contoso.com). John has set up autoforwarding to the home email address (john.home@example.com).
 
 ||Original message|Autoforwarded message|
 |---|---|---|

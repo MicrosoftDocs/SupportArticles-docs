@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Outlook 2010
 ms.date: 3/31/2022
 ---
-# You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Office 365 accounts
+# You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Microsoft 365 accounts
 
 _Original KB number:_ &nbsp; 2675986
 
@@ -158,6 +158,6 @@ When you next open Outlook, a credentials prompt is displayed. By using the step
 
 ## More information
 
-For more information about how to grant and remove full access permissions, see [How to remove automapping for a shared mailbox in Office 365](/outlook/troubleshoot/domain-management/remove-automapping-for-shared-mailbox).
+For more information about how to grant and remove full access permissions, see [How to remove automapping for a shared mailbox in Microsoft 365](/outlook/troubleshoot/domain-management/remove-automapping-for-shared-mailbox).
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the **Applies to**.

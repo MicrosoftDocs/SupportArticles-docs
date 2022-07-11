@@ -109,7 +109,7 @@ Update Rollup 4 for Exchange Server 2010 Service Pack 2 introduced a new Exchang
 
 For more information about the `Set-MailboxSentItemsConfiguration` cmdlet, see [Messages sent by using the "Send As" and "Send on behalf" permissions are only copied to the Sent Items folder of the sender in an Exchange Server 2010 environment](https://support.microsoft.com/help/2632409).
 
-### Microsoft Exchange Server 2013 Cumulative Update 9 or later or Microsoft Office 365 Exchange Online
+### Microsoft Exchange Server 2013 Cumulative Update 9 or later or Microsoft 365 Exchange Online
 
 Cumulative Update 9 for Exchange Server 2013 introduced a new feature that allows administrators to configure the Sent Item folder to which a message is copied. Because this new feature is handled by the Exchange server, Outlook can be configured for online or cached Exchange mode. Note that if you enable this feature and enable the `DelegateSentItemsStyle` registry value with a cached Outlook profile at the same time, two copies of the sent item will be saved in the shared mailboxes Sent Items folder.
 

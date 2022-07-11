@@ -42,7 +42,7 @@ In the above scenario, the **Protocol** column in the **Outlook Connection Statu
 > [!NOTE]
 > MAPI/HTTP connections are designated in the **Protocol** column using the string **HTTP**.
 
-Additionally, if MAPI/HTTP is disabled, Office 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
+Additionally, if MAPI/HTTP is disabled, Microsoft 365 users receive a Basic Authentication prompt instead of a Modern Authentication prompt.
 
 ## Cause
 
