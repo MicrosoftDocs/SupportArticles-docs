@@ -46,6 +46,6 @@ To resolve this issue, follow these steps:
 
 ## More information
 
-For more information about the benefits of the latest Hybrid Configuration wizard, see [Introducing the Microsoft Office 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
+For more information about the benefits of the latest Hybrid Configuration wizard, see [Introducing the Microsoft 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

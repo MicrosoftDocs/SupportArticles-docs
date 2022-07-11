@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 2626696
 
 ## Problem
 
-In a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and your on-premises Microsoft Exchange Server 2010 environment, you experience one of the following symptoms:
+In a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and your on-premises Microsoft Exchange Server 2010 environment, you experience one of the following symptoms:
 
 - When you move a mailbox to Office 365 from your on-premises environment, you receive the following error message:
 

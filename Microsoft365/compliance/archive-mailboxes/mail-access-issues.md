@@ -33,7 +33,7 @@ _Original KB number:_&nbsp;2901386
 
 ## Problem
 
-You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Office 365:
+You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365:
 
 - When on-premises users try to send mail to a user who has a cloud-based archive, they receive a nondelivery report (NDR) that contains the following error message:
 

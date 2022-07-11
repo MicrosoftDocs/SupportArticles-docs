@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 2970120
 
 ## Problem
 
-In a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft Office 365, users can't use Outlook Web Access (OWA) to move items between their primary mailbox in Exchange Server 2010 and their cloud-based archive.
+In a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365, users can't use Outlook Web Access (OWA) to move items between their primary mailbox in Exchange Server 2010 and their cloud-based archive.
 
 ## Cause
 

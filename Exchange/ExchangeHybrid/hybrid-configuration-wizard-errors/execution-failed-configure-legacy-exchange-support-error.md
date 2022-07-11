@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 2816904
 
 ## Symptoms
 
-When you try to run the Hybrid Configuration wizard to enable a hybrid configuration in Microsoft Office 365, you receive the following error message:
+When you try to run the Hybrid Configuration wizard to enable a hybrid configuration in Microsoft 365, you receive the following error message:
 
 > Hybrid Configuration Failed with error "execution failed: Configure Legacy Exchange Support"
 

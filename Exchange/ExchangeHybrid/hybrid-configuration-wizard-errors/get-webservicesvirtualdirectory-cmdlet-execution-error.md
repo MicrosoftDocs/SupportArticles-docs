@@ -47,7 +47,7 @@ Configuration of the MRS Proxy endpoint is the last step in the wizard. You can 
 
 Verify that the MRS Proxy endpoint is enabled for all the Exchange Server 2013 and Exchange Server 2010 servers. For information about how to do this, see [Enable the MRS Proxy endpoint for remote moves](/exchange/enable-the-mrs-proxy-endpoint-for-remote-moves-exchange-2013-help).
 
-Or, you can use the [Microsoft Office 365 Hybrid Configuration Wizard stand-alone application](https://aka.ms/hybridwizard) to set up the hybrid environment.
+Or, you can use the [Microsoft 365 Hybrid Configuration Wizard stand-alone application](https://aka.ms/hybridwizard) to set up the hybrid environment.
 
 ### If you have only Exchange Server 2013 servers in your on-premises environment
 
@@ -55,7 +55,7 @@ Verify that the MRS Proxy endpoint is enabled. For information about how to do t
 
 The error message also prevents the Hybrid Configuration wizard from displaying the link to the Exchange Hybrid (OAuth) Configuration wizard after the Hybrid Configuration wizard finishes. If your topology must have Exchange OAuth authentication set up, see [Configure OAuth authentication between Exchange and Exchange Online organizations](/exchange/configure-oauth-authentication-between-exchange-and-exchange-online-organizations-exchange-2013-help).
 
-Or, you can use the [Microsoft Office 365 Hybrid Configuration Wizard stand-alone application](https://aka.ms/hybridwizard) to set up the hybrid environment.
+Or, you can use the [Microsoft 365 Hybrid Configuration Wizard stand-alone application](https://aka.ms/hybridwizard) to set up the hybrid environment.
 
 ### If you have only Exchange Server 2010 servers in your on-premises environment
 

@@ -1,6 +1,6 @@
 ---
 title: Skype for Business 2016 isn't installed in Microsoft 365 Business Premium
-description: Describes an issue in which the Skype for Business client isn't installed when you switch from Office 365 Small Business Premium to Office 365 Business Premium. Provides a solution.
+description: Describes an issue in which the Skype for Business client isn't installed when you switch from Office 365 Small Business Premium to Microsoft 365 Business Standard. Provides a solution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,14 +16,14 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Skype for Business 2016 isn't installed when you switch from Office 365 Small Business Premium to Office 365 Business Premium
+# Skype for Business 2016 isn't installed when you switch from Office 365 Small Business Premium to Microsoft 365 Business Standard
 
 ## Problem 
 
 Consider the following scenario:  
  
 - You had a subscription to the Microsoft 365 Business Premium (P2) plan.    
-- You switch to the current Office 365 Business Premium subscription and then install Microsoft Office 2016.    
+- You switch to the current Microsoft 365 Business Standard subscription and then install Microsoft Office 2016.    
  
 In this scenario, Skype for Business 2016 isn't installed on your computer.  
 
@@ -44,7 +44,7 @@ To fix this issue, manually install Skype for Business 2016. To do this, follow 
 
 ## More information
 
-Skype for Business 2016 must be installed separately from Office 2016 for customers who switch to Office 365 Business Premium.
+Skype for Business 2016 must be installed separately from Office 2016 for customers who switch to Microsoft 365 Business Standard.
 
 For more information, go to the following Microsoft website: [Get the most from Office with Office 365](https://products.office.com/compare-all-microsoft-office-products?&activetab=tab:primaryr2)  
 

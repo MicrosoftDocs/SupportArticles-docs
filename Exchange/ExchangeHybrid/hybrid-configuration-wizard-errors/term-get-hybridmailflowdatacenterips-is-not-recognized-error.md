@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3063646
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Exchange Server organization and Exchange Online in Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-HybridMailflowDatacenterIPs is not recognized** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-HybridMailflowDatacenterIPs is not recognized** error message. The full text of this message resembles the following:
 
 > ERROR:Updating hybrid configuration failed with error 'Subtask CheckPrereqs execution failed: Configure Mail Flow
 >
@@ -46,7 +46,7 @@ The Hybrid Configuration wizard depends on the availability of a Microsoft 365 p
 
 Add a trial subscription of Office 365 Enterprise E3 to your account. After you add the Office 365 Enterprise E3 plan, the Hybrid Configuration Wizard will complete successfully. To add a trial subscription, follow these steps:
 
-1. Sign in to the [Office 365 portal](https://www.office.com/?auth=2).
+1. Sign in to the [Microsoft 365 portal](https://www.office.com/?auth=2).
 2. To open the Microsoft 365 admin center, select **Admin**.
 3. In the navigation pane, expand **Billing**, select **Subscriptions**, and then select **New Subscription**.
 4. Under **Office 365 Enterprise E3**, select **Trial**, and then follow the steps that are displayed on the screen.

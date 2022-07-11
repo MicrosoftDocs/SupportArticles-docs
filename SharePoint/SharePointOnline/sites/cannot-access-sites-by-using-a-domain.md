@@ -34,7 +34,7 @@ Full domain redelegation involves a domain where the name server (NS) resource r
    ns3.bdm.microsoftonline.com
    ns4.bdm.microsoftonline.com
 
-2. If the domain was recently configured for full domain redelegation, wait 72 hours. Make sure that the SharePoint Online domain is configured from the Office 365 portal Domain management page. The SharePoint Online site should be accessed by using the address that is specified in **Your SharePoint website address is**. Click **Change Address** if the SharePoint website address is not set to your domain. If you do change this value, wait 24 hours. Then, you can access by using "www" preappended to the address. For example, if your domain is *contoso.com*, then you can access your SharePoint Online site as http://www.*contoso*.com.
+2. If the domain was recently configured for full domain redelegation, wait 72 hours. Make sure that the SharePoint Online domain is configured from the Microsoft 365 portal Domain management page. The SharePoint Online site should be accessed by using the address that is specified in **Your SharePoint website address is**. Click **Change Address** if the SharePoint website address is not set to your domain. If you do change this value, wait 24 hours. Then, you can access by using "www" preappended to the address. For example, if your domain is *contoso.com*, then you can access your SharePoint Online site as http://www.*contoso*.com.
 
 3. Perform DNS lookup on the www CNAME record for your domain. The record should resemble the following:
 

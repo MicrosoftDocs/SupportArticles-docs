@@ -35,7 +35,7 @@ at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(Strin
 
 ## Cause
 
-This can occur if proxy settings are configured incorrectly. For example, this can occur proxy settings do not allow access to the endpoints that are used by Microsoft Office 365.
+This can occur if proxy settings are configured incorrectly. For example, this can occur proxy settings do not allow access to the endpoints that are used by Microsoft 365.
 
 ## Resolution
 

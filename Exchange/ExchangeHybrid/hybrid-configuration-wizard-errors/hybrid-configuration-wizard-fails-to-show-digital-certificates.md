@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 2964920
 
 ## Symptoms
 
-You run the Hybrid Configuration Wizard to set up a hybrid deployment between your on-premises Microsoft Exchange Server environment and Exchange Online in Office 365. However, you cannot select a digital certificate because the drop-down list in the wizard is empty.
+You run the Hybrid Configuration Wizard to set up a hybrid deployment between your on-premises Microsoft Exchange Server environment and Exchange Online in Microsoft 365. However, you cannot select a digital certificate because the drop-down list in the wizard is empty.
 
 Additionally, when you try to continue, you receive the following error message:
 

@@ -33,7 +33,7 @@ _Original KB number:_ &nbsp; 2860302
 
 ## Problem
 
-A user experiences the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Office 365:
+A user experiences the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365:
 
 - When the user tries to access a cloud-based archive mailbox by using Outlook Web App, the user receives the following error message:
 

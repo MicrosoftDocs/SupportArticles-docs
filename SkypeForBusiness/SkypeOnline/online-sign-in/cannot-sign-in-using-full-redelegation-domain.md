@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 When you try to sign in to Skype for Business Online (formerly Lync Online) in Microsoft 365 as a Microsoft 365 Business customer who has a custom verified domain, you receive an error message that indicates that the server is temporarily unavailable.
 
 > [!NOTE]
-> Office 365 Business customers who have custom verified domains have those domains fully redelegated to Office 365. "Full domain redelegation" indicates a domain for which the name server (NS) resource records point to Office 365. Therefore, the Domain Name System (DNS) records that are required for Office 365 functionality are managed by Office 365.  
+> Microsoft 365 Apps customers who have custom verified domains have those domains fully redelegated to Office 365. "Full domain redelegation" indicates a domain for which the name server (NS) resource records point to Office 365. Therefore, the Domain Name System (DNS) records that are required for Office 365 functionality are managed by Office 365.  
 
 ## Solution 
 
