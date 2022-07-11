@@ -1,6 +1,6 @@
 ---
 title: Free/busy lookups stop working
-description: Discusses an issue that prevents users from looking up free/busy information of other users. Occurs in a cross-premises environment or in a hybrid deployment of Exchange Server and Exchange Online in Office 365. Provides a resolution.
+description: Discusses an issue that prevents users from looking up free/busy information of other users. Occurs in a cross-premises environment or in a hybrid deployment of Exchange Server and Exchange Online in Microsoft 365. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm

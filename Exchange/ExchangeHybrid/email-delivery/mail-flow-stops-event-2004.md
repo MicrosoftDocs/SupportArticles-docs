@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2888788
 
 ## Problem
 
-You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Office 365:
+You experience the following symptoms in a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365:
 
 - Mail flow to Exchange Online stops.
 - The following event is recorded in the Application log of the on-premises transport server that contains the connector to your Office 365 environment:

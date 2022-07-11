@@ -1,6 +1,6 @@
 ---
 title: Manage Federation Wizard can't roll to a new certificate
-description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Office 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
+description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Microsoft 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -32,7 +32,7 @@ _Original KB number:_ &nbsp; 2810692
 
 ## Symptoms
 
-Consider the following scenario in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365:
+Consider the following scenario in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365:
 
 - The current certificate that was created for the federation trust on the hybrid server is unintentionally deleted.
 - The current certificate must be replaced for the trust to work correctly.

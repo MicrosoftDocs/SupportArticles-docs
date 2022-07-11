@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 2957394
 >
 > - This diagnostic package is created specifically for customers who have a hybrid deployment of on-premises Exchange Server and Exchange Online.
 > - You have to provide global admin credentials for the Office 365 organization with which you are setting up free/busy.
-> - The SDP package asks you for the primary SMTP address of the on-premises users and the Office 365 users whose free/busy data you want to pull.
+> - The SDP package asks you for the primary SMTP address of the on-premises users and the Microsoft 365 users whose free/busy data you want to pull.
 
 ### Exchange Online-related files
 

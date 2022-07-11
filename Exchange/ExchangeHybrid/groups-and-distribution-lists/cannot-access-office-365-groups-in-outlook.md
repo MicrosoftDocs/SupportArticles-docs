@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3168347
 
 ## Symptoms
 
-You have a hybrid deployment of Exchange Online in Office 365 and on-premises Exchange Server. In this situation, your Autodiscover record resolves to an on-premises Exchange server, and users' mailboxes are in Exchange Online. When you create a Microsoft 365 group in this scenario, users can't access the group through Microsoft Outlook 2016, Outlook 2019, or Outlook for Microsoft 365. However, users can access the group through Outlook on the web.
+You have a hybrid deployment of Exchange Online in Microsoft 365 and on-premises Exchange Server. In this situation, your Autodiscover record resolves to an on-premises Exchange server, and users' mailboxes are in Exchange Online. When you create a Microsoft 365 group in this scenario, users can't access the group through Microsoft Outlook 2016, Outlook 2019, or Outlook for Microsoft 365. However, users can access the group through Outlook on the web.
 
 ## Cause
 

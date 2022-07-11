@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 3065364
 
 Consider the following scenario:
 
-- You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365.
+- You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365.
 - An on-premises user tries to schedule a meeting that uses a resource such as a meeting room or company equipment.
 
 In this scenario, the user can see availability information about the resource. However, other properties, such as capacity and description, are missing.

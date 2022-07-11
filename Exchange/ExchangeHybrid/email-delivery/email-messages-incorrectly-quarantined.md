@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 3079142
 
 ## Problem
 
-You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365. In this deployment, you use centralized mail control. This forces messages to route to the on-premises mail server before they are delivered to Exchange Online mailboxes. In this scenario, you experience one or more of the following symptoms:
+You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365. In this deployment, you use centralized mail control. This forces messages to route to the on-premises mail server before they are delivered to Exchange Online mailboxes. In this scenario, you experience one or more of the following symptoms:
 
 - Spam notifications to users are quarantined.
 - Email messages on the Allow list are quarantined.
@@ -43,7 +43,7 @@ This problem occurs if the Exchange Online organization or the on-premises organ
 
 ## Solution
 
-1. Verify that centralized mail control is enabled and is set up to promote headers in Office 365. To do this, follow these steps:
+1. Verify that centralized mail control is enabled and is set up to promote headers in Microsoft 365. To do this, follow these steps:
 
    1. Connect to Exchange Online by using a remote Windows PowerShell session. For more information, see [Connect to Exchange Online using remote PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
    2. View the configuration information of the hybrid outbound connector in the Exchange Online organization. To do this, run the following command:
@@ -71,8 +71,8 @@ This problem occurs if the Exchange Online organization or the on-premises organ
 
 2. Send an inbound test message to an Exchange Online mailbox by routing the message through the on-premises server first. Locate the following X-header lines in the message headers. This helps indicate that the message was scanned two times in transport.
 
-   - `X-Forefront-Antispam-Report-Untrusted`: This is the first pass. It occurs when the message is first received in Office 365. The connecting IP address (CIP) on that line will be an Internet IP address.
-   - `X-Forefront-Antispam-Report`: This is the second pass. It occurs when the message is returned by the on-premises server and is received for the second time in Office 365. The connecting IP address will be your organization's on-premises server IP address.
+   - `X-Forefront-Antispam-Report-Untrusted`: This is the first pass. It occurs when the message is first received in Microsoft 365. The connecting IP address (CIP) on that line will be an Internet IP address.
+   - `X-Forefront-Antispam-Report`: This is the second pass. It occurs when the message is returned by the on-premises server and is received for the second time in Microsoft 365. The connecting IP address will be your organization's on-premises server IP address.
 
    > [!NOTE]
    > If there's only one X-Forefront header, this resolution does not apply to your organization's configuration.

@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 2875125
 
 ## Symptoms
 
-You have a hybrid deployment of an on-premises Microsoft Exchange server and Exchange Online in Office 365. You try to connect to the Office 365 cloud-based domain by using the Exchange Management Console on the on-premises hybrid server. However, the connection fails, and you receive the following error message:
+You have a hybrid deployment of an on-premises Microsoft Exchange server and Exchange Online in Microsoft 365. You try to connect to the Office 365 cloud-based domain by using the Exchange Management Console on the on-premises hybrid server. However, the connection fails, and you receive the following error message:
 
 > Unable to cast object of type 'system.Runtime.Serialization.TypeLoadExceptionHolder' to type 'Microsoft.Exchange.Data.RoleEntry'
 

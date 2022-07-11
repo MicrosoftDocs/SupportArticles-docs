@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 3124148
 
 ## Symptoms
 
-Assume that you have a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365. You convert a remote user mailbox in Exchange Online to a mail user in Exchange Online. In this scenario, you can no longer sync that mail user to the cloud if that user's proxy addresses are set to use non-verified domains.
+Assume that you have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365. You convert a remote user mailbox in Exchange Online to a mail user in Exchange Online. In this scenario, you can no longer sync that mail user to the cloud if that user's proxy addresses are set to use non-verified domains.
 
 ## Cause
 

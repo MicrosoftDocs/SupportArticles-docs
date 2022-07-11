@@ -24,8 +24,8 @@ _Original KB number:_ &nbsp; 4337974
 
 You experience one of the following symptoms in a Microsoft Exchange hybrid environment when you share calendars with users:
 
-- Office 365 users in other organizations cannot accept your shared invitations.
-- Office 365 users in your same organization who are hosted in Exchange on-premises cannot accept your shared invitations.
+- Microsoft 365 users in other organizations cannot accept your shared invitations.
+- Microsoft 365 users in your same organization who are hosted in Exchange on-premises cannot accept your shared invitations.
 
 ## Cause
 

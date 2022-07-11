@@ -1,6 +1,6 @@
 ---
 title: Missing certificate from Hybrid Configuration Wizard
-description: Describes an issue in which the last page of the Hybrid Configuration Wizard is missing a certificate. Occurs when you try to set up a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365.
+description: Describes an issue in which the last page of the Hybrid Configuration Wizard is missing a certificate. Occurs when you try to set up a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2879262
 
 ## Symptoms
 
-You run the Hybrid Configuration Wizard to set up a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Office 365. However, when you get to the last page of the wizard, you discover that a certificate is missing.
+You run the Hybrid Configuration Wizard to set up a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365. However, when you get to the last page of the wizard, you discover that a certificate is missing.
 
 ## Cause
 

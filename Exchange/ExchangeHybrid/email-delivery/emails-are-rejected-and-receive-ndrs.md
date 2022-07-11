@@ -1,6 +1,6 @@
 ---
 title: Emails are rejected and NDRs are received
-description: Discusses a scenario in which email messages that are sent from cloud-based mailboxes in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365 are rejected, and nondelivery reports are received. Provides a resolution.
+description: Discusses a scenario in which email messages that are sent from cloud-based mailboxes in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365 are rejected, and nondelivery reports are received. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -28,11 +28,11 @@ _Original KB number:_ &nbsp; 2750145
 
 ## Symptoms
 
-You run the Hybrid Configuration wizard in Exchange Server 2010 to set up a shared namespace and centralized mail control configuration between your on-premises Exchange Server environment and Exchange Online in Office 365. However, eventually, you notice that email messages that are sent from cloud-based mailboxes are rejected, and senders receive nondelivery reports (NDRs). Over time, the frequency of the NDRs increase.
+You run the Hybrid Configuration wizard in Exchange Server 2010 to set up a shared namespace and centralized mail control configuration between your on-premises Exchange Server environment and Exchange Online in Microsoft 365. However, eventually, you notice that email messages that are sent from cloud-based mailboxes are rejected, and senders receive nondelivery reports (NDRs). Over time, the frequency of the NDRs increase.
 
 ## Cause
 
-This issue can occur if the IP addresses that are associated with Exchange Online Protection changed. These IP addresses aren't automatically updated in the on-premises environment. Therefore, the IP addresses that are set in the on-premises Exchange Online Protection receive connector may become invalid. When this issue occurs, mail that's routed from Office 365 users through Exchange Online Protection to the on-premises environment may be rejected.
+This issue can occur if the IP addresses that are associated with Exchange Online Protection changed. These IP addresses aren't automatically updated in the on-premises environment. Therefore, the IP addresses that are set in the on-premises Exchange Online Protection receive connector may become invalid. When this issue occurs, mail that's routed from Microsoft 365 users through Exchange Online Protection to the on-premises environment may be rejected.
 
 ## Resolution
 
@@ -47,7 +47,7 @@ To fix this issue, use the following steps:
 
 ## More information
 
-In a shared namespace and centralized mail control scenario, an Exchange Online Protection receive connector must be created on the hybrid Exchange 2010 hub transport server to make sure that the on-premises environment receives mail from Office 365 users. The Hybrid Configuration wizard creates the receive connector on the appropriate Exchange 2010 server. Then, the wizard configures the connector with the IP addresses to enable incoming Exchange Online Protection traffic from Office 365 users to be routed to the on-premises environment.
+In a shared namespace and centralized mail control scenario, an Exchange Online Protection receive connector must be created on the hybrid Exchange 2010 hub transport server to make sure that the on-premises environment receives mail from Microsoft 365 users. The Hybrid Configuration wizard creates the receive connector on the appropriate Exchange 2010 server. Then, the wizard configures the connector with the IP addresses to enable incoming Exchange Online Protection traffic from Microsoft 365 users to be routed to the on-premises environment.
 
 The following screenshot shows an example of an Exchange Online Protection receive connector that the Hybrid Configuration wizard creates.
 

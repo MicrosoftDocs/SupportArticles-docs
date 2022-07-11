@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 Consider the following scenario:
 
-- A manager, who has a delegate, has their mailbox moved to Microsoft Office 365.
+- A manager, who has a delegate, has their mailbox moved to Microsoft 365.
 - The delegate's mailbox remains in on-premises environment.
 - The manager creates a meeting on their calendar after the mailbox is migrated.
 - The delegate updates the meeting time and sends an updated version of the meeting to the invitees.

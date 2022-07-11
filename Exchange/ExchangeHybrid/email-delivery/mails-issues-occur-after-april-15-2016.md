@@ -80,9 +80,9 @@ Use the Office 365 Hybrid Configuration Wizard (HCW) to configure the Exchange 2
 
 1. If the servers that are running Exchange Server 2013 and that are handling hybrid mail flow are running Exchange Server 2013 CU8 or an earlier version, follow the instructions at [Updates for Exchange 2013](/exchange/updates-for-exchange-2013-exchange-2013-help) to install the latest cumulative update on at least one server.
 
-2. After you install the latest cumulative update, download the Office 365 Hybrid Configuration Wizard from [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard), and then run it by following the instructions at [Introducing the Microsoft Office 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
+2. After you install the latest cumulative update, download the Office 365 Hybrid Configuration Wizard from [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard), and then run it by following the instructions at [Introducing the Microsoft 365 Hybrid Configuration Wizard](https://techcommunity.microsoft.com/t5/exchange-team-blog/introducing-the-microsoft-office-365-hybrid-configuration-wizard/ba-p/604207).
 
-For information about the releases of Exchange Server that are supported in Office 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
+For information about the releases of Exchange Server that are supported in Microsoft 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
 ### Method 2 - Manually configure the servers
 
