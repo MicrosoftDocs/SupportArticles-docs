@@ -2,7 +2,7 @@
 title: The signed PowerShell script fails for hash mismatch
 description: This article provides resolutions for an issue where the execution of signed PowerShell script fails with error message.
 ms.date: 07/19/2022
-ms.custom: sap:Developer Tools\Windows SDK\Windows SDK for Windows 10
+ms.custom: sap:Security development
 ms.reviewer: milanmil
 ms.author: v-sidong
 author: mrmilanmm
