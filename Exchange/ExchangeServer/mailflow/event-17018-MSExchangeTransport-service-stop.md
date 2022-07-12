@@ -21,7 +21,7 @@ search.appverid: MET150
 
 ## Symptoms
 
-On a Microsoft Exchange server that has a high CPU core count and a high transport load, the Microsoft Exchange Transport service keeps stopping and restarting. Additionally, the following event is logged in the Application log:
+On a server that's running Microsoft Exchange Server and that has a high CPU core count and a high transport load, the Microsoft Exchange Transport service continually stops and restarts. Additionally, the following event is logged in the Application log:
 
 > Source: MSExchangeTransport  
 > Event ID: 17018  
@@ -36,10 +36,10 @@ This issue occurs because a high number of incoming connections can exhaust the 
 
 ## Resolution
 
-To fix this issue, decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server as follows:
+To fix this issue, decrease the `MaxInboundConnection` limit on the Receive connectors of each Exchange server as follows.
 
 > [!NOTE]
-> You may need to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of 2 to prevent limiting connections from busy sources such as email gateways. We also recommend you closely monitor the incoming mail flow and gradually increase the value if needed.
+> You may have to increase the `MaxInboundConnectionPercentagePerSource` parameter from the default value of **2** to prevent limiting connections from busy sources such as email gateways. We recommend that you also closely monitor the incoming mail flow and gradually increase the value as necessary.
 
 1. Run the [Get-ReceiveConnector](/powershell/module/exchange/get-receiveconnector) cmdlet to check the current value of the `MaxInboundConnection` parameter.
 
@@ -48,9 +48,9 @@ To fix this issue, decrease the `MaxInboundConnection` limit on the Receive conn
     ```
 
     > [!NOTE]
-    > The default value for this limit is 5000 concurrent connections.
+    > The default value for this limit is 5,000 concurrent connections.
 
-1. Run the following cmdlet to set the limit to a value of 1000 concurrent connections.
+1. Run the following cmdlet to set the limit to a value of 1,000 concurrent connections.
 
     ```powershell
     Get-ReceiveConnector -Server <Server Name> | Set-ReceiveConnector -MaxInboundConnection 1000
