@@ -19,9 +19,9 @@ ms.date: 4/26/2022
 ---
 # Command-line version of Microsoft Support and Recovery Assistant
 
-The command-line version of Microsoft Support and Recovery Assistant (SaRA) is self-contained, running either at a command line or through a script (for example, PowerShell). This version is an enterprise-ready diagnostic tool for specific client issues with Office, Teams, and Outlook. It's useful when administrators have to remotely run a diagnostic tool on computers in their organization.
+The command-line version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, and Outlook. This verson of the Assistant runs either at a command line or through a script such as PowerShell. It is useful when administrators need to run the Assistant on computers in their organization remotely.
 
-## Download and run the command-line version of SaRA
+## Download and run the command-line version of the Assistant
 
 1. Download SaRA from [https://aka.ms/SaRA_CommandLineVersionFiles](https://aka.ms/SaRA_CommandLineVersionFiles) .
 1. In the downloaded .zip file, extract the files to a folder that you can access from the computer on which you'll run SaRA.
