@@ -40,6 +40,7 @@
       "recommendations": true,
       "feedback_system": "none",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "titleSuffix": "Microsoft Teams",
       "searchScope": ["Teams Support"] 
     },
