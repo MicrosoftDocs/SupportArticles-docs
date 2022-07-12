@@ -41,7 +41,8 @@ The first DNS name of the KMS server for the Azure Global cloud is azkms.core.wi
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
 
-> [!NOTE] All three IP addresses for Azure Global should be added to custom route.
+> [!NOTE] 
+> All three IP addresses for Azure Global should be added to custom route.
 
 To add the custom route, follow these steps:
 
