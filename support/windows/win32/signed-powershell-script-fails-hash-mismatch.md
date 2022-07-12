@@ -57,12 +57,17 @@ For an example that reproduces the issue, see the following steps:
 
     ```powershell
     PS C:\Users> get-culture
+    
     LCID             Name             DisplayName
     ----             ----             ----------- 
     1033             en-US            English (United States)
+    
     PS C:\Users> Get-ExecutionPolicy
+    
     AllSigned
-    PS C:\Users> Get-WinSystemLocale 
+    
+    PS C:\Users> Get-WinSystemLocale
+    
     LCID             Name             DisplayName  
     ----             ----             -----------  
     1033             en-US            English (United States)
@@ -77,12 +82,17 @@ For an example that reproduces the issue, see the following steps:
 
     ```powershell
     PS C:\tmp> Get-Culture
+    
     LCID              Name             DisplayName
     ----              ----             -----------
     1033              en-US            English (United States)
+    
     PS C:\tmp > Get-ExecutionPolicy
+    
     AllSigned
+    
     PS C:\tmp > Get-WinSystemLocale
+    
     LCID              Name             DisplayName
     ----              ----             -----------
     1029              cs-CZ            Czech (Czech Republic)
