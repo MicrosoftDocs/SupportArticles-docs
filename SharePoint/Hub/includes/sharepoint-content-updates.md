@@ -2,6 +2,14 @@
 
 
 
+## Week of July 04, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/4/2022 | [OneDrive local folder name isn't updated with the changed organization name](/sharepoint/troubleshoot/sync/onedrive-local-folder-name-not-updated) | added |
+
+
 ## Week of June 27, 2022
 
 
