@@ -13,7 +13,7 @@
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
         - name: Access is denied with Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
-        - name: Azure AD Connect workflow in Office 365
+        - name: Azure AD Connect workflow in Microsoft 365
           href: ../administration/azure-ad-connect-workflow.md
         - name: Bad Request when connecting to Exchange Online PowerShell
           href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
@@ -35,7 +35,7 @@
           href: ../administration/cannot-browse-groups-in-owa.md
         - name: Can't connect to Exchange Online or create new profiles
           href: ../administration/cannot-connect-to-exchange-online-or-create-new-profiles.md
-        - name: Can't disable Facebook contact sync for Office 365 organization
+        - name: Can't disable Facebook contact sync for Microsoft 365 organization
           href: ../administration/cannot-disable-facebook-contact-sync-for-organization.md
         - name: Can't establish TLS connection to remote mail server
           href: ../administration/cannot-establish-tls-connection-to-remote-mail-server.md
@@ -51,7 +51,7 @@
           href: ../administration/cisco-unity-duplicate-voicemails-in-mailbox-hosted-in-exchange-online.md
         - name: Data in the command exceeded the maximum permitted by the session error
           href: ../administration/data-in-the-command-exceeded-the-maximum-permitted-error.md
-        - name: Description of the Files folder in Office 365
+        - name: Description of the Files folder in Microsoft 365
           href: ../administration/description-of-the-files-folder-in-office-365.md
         - name: Don't have permissions to update options specified error
           href: ../administration/you-dont-have-permissions-to-update-the-options-you-specified-error.md
@@ -543,7 +543,7 @@
       items:
         - name: Can't access a shared mailbox using OWA
           href: ../user-and-shared-mailboxes/blank-page-access-shared-mailbox.md
-        - name: Can't access mailbox after a remote mailbox move to Office 365
+        - name: Can't access mailbox after a remote mailbox move to Microsoft 365
           href: ../user-and-shared-mailboxes/cannot-access-mailbox-after-remote-mailbox-moves-to-office-365.md
         - name: Can't connect to the mailbox when running Search-Mailbox
           href: ../user-and-shared-mailboxes/cannot-connect-to-the-mailbox-error-when-running-search-mailbox.md

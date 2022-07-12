@@ -26,7 +26,7 @@ You can't use Microsoft Outlook to make changes to the calendar of another user 
 
 ## Cause
 
-This behavior is by design. The MAPI and Exchange Web Services (EWS) messaging protocols are disabled in Office 365 Kiosk plans.
+This behavior is by design. The MAPI and Exchange Web Services (EWS) messaging protocols are disabled in Microsoft 365 Kiosk plans.
 
 ## Workaround
 

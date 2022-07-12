@@ -1,6 +1,6 @@
 ---
 title: Can't set up a new profile by using Exchange Autodiscover for Online mailbox
-description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365. Resolutions are provided.
+description: Describes an issue that blocks Outlook from setting up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365. Resolutions are provided.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
+# Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
 ## Problem
 
@@ -73,13 +73,13 @@ For more information about how to set up Outlook for Microsoft 365, see the foll
 
 #### Method 3: Make sure that the Autodiscover CNAME record is set up correctly
 
-The Autodiscover CNAME record must exist and must be set up correctly. We strongly recommend that you set up Exchange Autodiscover when you are using Outlook to connect to Exchange Online mailboxes. Setting up Autodiscover and other related DNS records is required for Outlook connectivity in Exchange Online. Administrators can use the Domain Troubleshooting Wizard in Office 365 or Microsoft Remote Connectivity Analyzer to confirm that the records are set up correctly.
+The Autodiscover CNAME record must exist and must be set up correctly. We strongly recommend that you set up Exchange Autodiscover when you are using Outlook to connect to Exchange Online mailboxes. Setting up Autodiscover and other related DNS records is required for Outlook connectivity in Exchange Online. Administrators can use the Domain Troubleshooting Wizard in Microsoft 365 or Microsoft Remote Connectivity Analyzer to confirm that the records are set up correctly.
 
-**Use the Domain Troubleshooting Wizard in Office 365**
+**Use the Domain Troubleshooting Wizard in Microsoft 365**
 
-To use the Domain Troubleshooting Wizard in Office 365, follow these steps.
+To use the Domain Troubleshooting Wizard in Microsoft 365, follow these steps.
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) by using an administrator account.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) by using an administrator account.
 2. Click **Admin** to open the Microsoft 365 admin center.
 3. In the left navigation pane, click **Domains**, select the domain name that's used by the affected user, and then click **Troubleshoot** to start the wizard.
 
@@ -129,7 +129,7 @@ This method is supported and works for customers who may not plan to have their 
 
 ## More information
 
-Microsoft doesn't support manually setting up a profile in Outlook for connectivity to mailboxes in Exchange Online in Office 365. However, we can help you complete other tasks, such as setting up DNS and Autodiscover records (as discussed in Method 2). This lets you set up your account through the supported methods.
+Microsoft doesn't support manually setting up a profile in Outlook for connectivity to mailboxes in Exchange Online in Microsoft 365. However, we can help you complete other tasks, such as setting up DNS and Autodiscover records (as discussed in Method 2). This lets you set up your account through the supported methods.
 
 ## References
 
@@ -137,6 +137,6 @@ Go to [Microsoft Support and Recovery Assistant for Office 365](https://aka.ms/o
 
 For more information, see the following Microsoft Knowledge Base articles:
 
-- [2555008](https://support.microsoft.com/help/2555008) How to troubleshoot free/busy issues in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365
+- [2555008](https://support.microsoft.com/help/2555008) How to troubleshoot free/busy issues in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).
