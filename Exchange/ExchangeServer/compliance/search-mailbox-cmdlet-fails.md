@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 6/20/2022
+ms.date: 7/13/2022
 ---
 # Error when using the Search-Mailbox cmdlet
 
@@ -46,7 +46,7 @@ To work around this issue, use one of the following methods to perform the searc
 ### Method 1: Run the New-MailboxSearch cmdlet
 
 ```powershell
-New-MailboxSearch -Name mailbox1@contoso.com -SourceMailboxes mailbox1@contoso.com -TargetMailbox admin1@contoso.com -SearchQuery 'Subject:"Quarterly Results"' -LogLevel Full
+New-MailboxSearch -Name <search_name> -SourceMailboxes mailbox1@contoso.com -TargetMailbox admin1@contoso.com -SearchQuery 'Subject:"Quarterly Results"' -LogLevel Full
 ```
 
 **Note:** The [New-MailboxSearch](/powershell/module/exchange/new-mailboxsearch) cmdlet doesn't remove the search results from the source mailbox.
@@ -56,21 +56,21 @@ New-MailboxSearch -Name mailbox1@contoso.com -SourceMailboxes mailbox1@contoso.c
 1. Run the [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) cmdlet to create a compliance search:
 
     ```powershell
-    New-ComplianceSearch -Name mailbox1@contoso.com -ExchangeLocation mailbox1@contoso.com -ContentMatchQuery 'Subject:"Quarterly Results"' -LogLevel Full
+    New-ComplianceSearch -Name <search_name> -ExchangeLocation mailbox1@contoso.com -ContentMatchQuery 'Subject:"Quarterly Results"' -LogLevel Full
     ```
 
 2. Run one of the following [New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) cmdlets to create an action for the compliance search:
 
     ```powershell
-    New-ComplianceSearchAction -SearchName mailbox1@contoso.com -Preview
+    New-ComplianceSearchAction -SearchName <search_name> -Preview
     ```
 
     ```powershell
-    New-ComplianceSearchAction -SearchName mailbox1@contoso.com -Purge -PurgeType SoftDelete
+    New-ComplianceSearchAction -SearchName <search_name> -Purge -PurgeType SoftDelete
     ```
 
     ```powershell
-    New-ComplianceSearchAction -SearchName mailbox1@contoso.com -Purge -PurgeType HardDelete
+    New-ComplianceSearchAction -SearchName <search_name> -Purge -PurgeType HardDelete
     ```
 
     **Note:** Use the `Purge` parameter to remove the search results from the source mailbox.
