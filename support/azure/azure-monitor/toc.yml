@@ -1,4 +1,4 @@
-Items:
+items:
 - name: Troubleshoot Azure Monitor
   href: welcome-azure-monitor.yml
 - name: Application Insights
