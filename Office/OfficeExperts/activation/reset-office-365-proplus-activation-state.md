@@ -38,10 +38,16 @@ To complete these tasks, you need to clear prior activations of Microsoft 365 ap
 
 ## Method: Use the Microsoft Support and Recovery Assistant
 
-For a fully automated solution to reset the activation state, download and run the Assistant. Select the button below to begin.
+The Assistant fully automates all of the steps outlined in this article, and it offers two options to reset Office Activation.
 
+- **Command-line version**<br/>
+  The [command-line version of the Assistant](https://aka.ms/SaRA_CommandLineVersion) can be scripted and it is recommended if you need to reset Office Activation on more than one device.
+  > [!div class="nextstepaction"]
+> [Download cmdline version](https://aka.ms/SaRA_CommandLineVersionFiles)
+- **Interactive version**<br/>
+  The [interactive (full-UI) version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you have just one device or a small number of devices that need to reset Office Activation.
 > [!div class="nextstepaction"]
-> [Download the Assistant](https://aka.ms/SaRA-OfficeActivation-Reset)
+> [Download interactive version](https://aka.ms/SaRA-OfficeActivation-Reset)
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
