@@ -1,34 +1,27 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
-  items:
 
-  - name: Troubleshoot
-    tocHref: /troubleshoot/
-    topicHref: /troubleshoot/index
+- name: Troubleshoot
+tocHref: /troubleshoot/
+topicHref: /troubleshoot/index
+items: 
+  - name: Windows
+    tocHref: /troubleshoot/windows/
+    topicHref: /troubleshoot/windows/
     items:
-    
-    - name: Windows
-      tocHref: /troubleshoot/windows/
-      topicHref: /troubleshoot/windows/
-      items:
-      - name: Windows Server
-        tocHref: /troubleshoot/windows-server/
-        topicHref: /troubleshoot/windows-server/welcome-windows-server
-      - name: Windows Client
-        tocHref: /troubleshoot/windows-client/
-        topicHref: /troubleshoot/windows-client/welcome-windows-client
-      - name: Application Developer
-        tocHref: /troubleshoot/windows/win32
-        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
-      - name: Hardware Developer
-        tocHref: /troubleshoot/windows-hardware/drivers
-        topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
-
+    - name: Windows Server
+      tocHref: /troubleshoot/windows-server/
+      topicHref: /troubleshoot/windows-server/welcome-windows-server
+    - name: Windows Client
+      tocHref: /troubleshoot/windows-client/
+      topicHref: /troubleshoot/windows-client/welcome-windows-client
+    - name: Application Developer
+      tocHref: /troubleshoot/windows/win32
+      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+    - name: Hardware Developer
+      tocHref: /troubleshoot/windows-hardware/drivers
+      topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
     - name: Browsers
       tocHref: /troubleshoot/developer/browsers/
       topicHref: /troubleshoot/developer/browsers/welcome-browsers
-
     - name: BizTalk Server
       tocHref: /troubleshoot/developer/biztalk/
       topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
@@ -89,8 +82,8 @@
         topicHref: /troubleshoot/system-center/vmm/welcome-vmm
 
     - name: Azure
-      tocHref: /troubleshoot/azure/
-      topicHref: /troubleshoot/azure/
+      tocHref:/azure/
+      topicHref: /azure/
       items:
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
@@ -120,8 +113,8 @@
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
       - name: Azure Monitor
-        tocHref: /troubleshoot/azure/azure-monitor/
-        topicHref: /troubleshoot/azure/azure-monitor/
+        tocHref: /azure/azure-monitor/
+        topicHref:/azure/azure-monitor/
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
