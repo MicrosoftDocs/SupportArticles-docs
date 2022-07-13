@@ -10,7 +10,7 @@ ms.subservice: compliance
 
 When you are reviewing your sign-in reports, you may see an application in your sign-in report that you don't own and want to identify the application. You also may wonder how you signed into that app, as you don't remember accessing the app.
 
-Here is an example of a sign-in report:
+Here's an example of a sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
@@ -29,7 +29,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 3. In the **Application Type** drop-down menu, select **Microsoft Applications** and hit apply.  All applications listed here are owned by Microsoft.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications is selected.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications are selected.":::
 
 4. In the search box below the selectable drop-down menus, filter the list by adding a specific **Display Name** or **Application ID**.
 
