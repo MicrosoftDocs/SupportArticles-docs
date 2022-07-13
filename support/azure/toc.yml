@@ -6,7 +6,7 @@
   - name: Azure Kubernetes Services
     href: azure-kubernetes/welcome-azure-kubernetes.yml
   - name: Azure Monitor
-    href: azure-minitor/welcome-azure-monitor.yml
+    href: azure-monitor/welcome-azure-monitor.yml
   - name: Cloud Services
     href: cloud-services/welcome-cloud-services.yml
   - name: Virtual Machines
