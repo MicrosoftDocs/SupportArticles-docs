@@ -2472,13 +2472,18 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/azure-monitor/index.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/log-analytics/toc.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/azure-monitor/app-insights/toc.yml",
-      "redirect_url": "troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
       "redirect_document_id": true
     },
     {
