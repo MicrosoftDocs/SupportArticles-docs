@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/18/2020
+  ms.date: 6/29/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -36,6 +36,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Disk partition preservation
+            url: ./disk-partition-preservation.md
           - text: Roles that fail to start
             url: ./role-startup-failure.md
 
