@@ -489,6 +489,8 @@
           href: ../mailflow/cannot-add-attachment-outlook-web.md
         - name: Error when sending S/MIME encrypted mails from OWA
           href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+        - name: Event ID 17018 when Microsoft Exchange Transport service stops
+          href: ../mailflow/event-17018-MSExchangeTransport-service-stop.md
         - name: Event ID 7009 when users send or receive emails
           href: ../mailflow/event-7009-send-receive-emails.md
         - name: External or app created emails not delivered

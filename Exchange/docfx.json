@@ -90,6 +90,7 @@
       "feedback_system": "none",
       "titleSuffix": "Exchange",
       "hideEdit": true,
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "searchScope": ["Exchange Support"] 
     },
     "fileMetadata": {
