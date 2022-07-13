@@ -409,6 +409,8 @@
       href: performance/troubleshoot-blocking-caused-compile-locks.md
     - name: Troubleshoot high-CPU-usage issues
       href: performance/troubleshoot-high-cpu-usage-issues.md
+    - name: Troubleshoot queries that seem to never end
+      href: performance/troubleshoot-never-ending-query.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot SQL Server slow performance caused by IO issues
