@@ -1,6 +1,6 @@
 - name: Troubleshoot Azure Monitor
   href: welcome-azure-monitor.yml
-- name: Azure Application Insights
+- name: Application Insights
   items:
   - name: Application Insights telemetry
     items:
@@ -32,7 +32,7 @@
       href: app-insights/snapshot-debugger-troubleshooting.md
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
-- name: Azure Log Analytics
+- name: Log Analytics
   items:
   - name: Basic troubleshooting of Microsoft Monitoring Agent
     href: log-analytics/mma-troubleshoot-basics.md
