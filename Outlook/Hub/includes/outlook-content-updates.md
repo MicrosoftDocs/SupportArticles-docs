@@ -2,6 +2,14 @@
 
 
 
+## Week of June 27, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 6/27/2022 | [Unable to delete calendar items](/outlook/troubleshoot/calendaring/cannot-delete-calendar-items) | modified |
+
+
 ## Week of June 20, 2022
 
 
