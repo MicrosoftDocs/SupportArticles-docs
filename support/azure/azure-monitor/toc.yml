@@ -1,8 +1,8 @@
 - name: Welcome
   href: welcome-azure-monitor.yml
-- name: Azure Application Insights
+- name: Troubleshoot Azure Monitor
   items:
-  - name: Troubleshoot Application Insights telemetry
+  - name: Application Insights telemetry
     items:
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/auto-instrumentation-troubleshoot.md
@@ -12,7 +12,7 @@
       href: app-insights/asp-net-troubleshoot-no-data.md
     - name: Troubleshoot Azure Monitor Application Insights for Java
       href: app-insights/java-standalone-troubleshoot.md
-  - name: Troubleshoot Application Insights features
+  - name: Application Insights features
     items:
     - name: Error retrieving data in portal
       href: app-insights/troubleshoot-portal-connectivity.md
@@ -24,7 +24,7 @@
       href: app-insights/troubleshoot-availability.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: app-insights/usage-troubleshoot.md
-  - name: Troubleshoot Snapshot Debugger, Status Monitor, and Change Analysis
+  - name: Snapshot Debugger, Status Monitor, and Change Analysis
     items:
     - name: Troubleshoot Azure Monitor's Change Analysis (preview)
       href: app-insights/change-analysis-troubleshoot.md
