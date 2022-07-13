@@ -85,4 +85,4 @@ Restore full control to the **SecureStorageManager** parameter for the system us
 
 1. Select **Edit** > **Permissions**, and then reapply the default permission in **Full Control** (**Allow**) for the **SYSTEM** user and the **Administrators (*\<ComputerName>*)** group.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
