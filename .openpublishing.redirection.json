@@ -2451,6 +2451,7 @@
       "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
       "redirect_document_id": false
     },
+
     {
       "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
       "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
@@ -2469,6 +2470,11 @@
     {
       "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
       "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics",
       "redirect_document_id": true
     },
     {
