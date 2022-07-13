@@ -1,6 +1,6 @@
-- name: Welcome
-  href: welcome-azure-monitor.yml
 - name: Troubleshoot Azure Monitor
+  href: welcome-azure-monitor.yml
+- name: Azure Application Insights
   items:
   - name: Application Insights telemetry
     items:
