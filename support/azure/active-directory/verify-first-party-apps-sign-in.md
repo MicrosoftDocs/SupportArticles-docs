@@ -1,8 +1,8 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 04/02/2021
-ms.reviewer: jafritts
+ms.date: 07/12/2022
+ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
 ---
@@ -10,7 +10,7 @@ ms.subservice: compliance
 
 When you are reviewing your sign-in reports, you may see an application in your sign-in report that you don't own and want to identify the application. You also may wonder how you signed into that app, as you don't remember accessing the app.
 
-Here is an example of a sign-in report:
+Here's an example of a sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
@@ -29,7 +29,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 3. In the **Application Type** drop-down menu, select **Microsoft Applications** and hit apply.  All applications listed here are owned by Microsoft.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications is selected.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications are selected.":::
 
 4. In the search box below the selectable drop-down menus, filter the list by adding a specific **Display Name** or **Application ID**.
 
@@ -66,6 +66,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Application Name|Application IDs|
 |--|--|
 |ACOM Azure Website|23523755-3a2b-41ca-9315-f81f3f566a95|
+|Azure Advanced Threat Protection|7b7531ad-5926-4f2d-8a1d-38495ad33e17|
 |Azure Data Lake|e9f49c6b-5ce5-44c8-925d-015017e9f7ad|
 |Azure Lab Services Portal|835b2a73-6e10-4aa5-a979-21dfda45231c|
 |Azure Portal|c44b4083-3bb0-49c1-b47d-974e53cbdf3c|
@@ -87,7 +88,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
-|Microsoft Cloud App Security|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
+|Microsoft Defender for Cloud Apps|3090ab82-f1c1-4cdf-af2c-5d7a6f3e2cc7|
 |Microsoft Docs|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Dynamics ERP|00000015-0000-0000-c000-000000000000|
 |Microsoft Edge Insider Addons Prod|6253bca8-faf2-4587-8f2f-b056d80998a7|
@@ -126,7 +127,9 @@ The following table lists some, but not all, first party Microsoft applications.
 |Office.com|4b233688-031c-404b-9a80-a4f3f2351f90|
 |Office365 Shell WCSS-Client|89bee1f7-5e6e-4d8a-9f3d-ecd601259da7|
 |OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
+|OfficeHome|4765445b-32c6-49b0-83e6-1d93765276ca|
 |OfficeShredderWacClient|4d5c2d63-cf83-4365-853c-925fd1a64357|
+|OMSOctopiPROD|62256cef-54c0-4cb4-bcac-4c67989bdc40|
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
@@ -150,4 +153,6 @@ The following table lists some, but not all, first party Microsoft applications.
 
 ## More information
 
-For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report)
+For more information, please see: [Sign-in activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-sign-ins#sign-ins-report).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

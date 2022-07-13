@@ -3,6 +3,7 @@ title: Unable to connect Jamf console to Intune
 description: Resolves the Jamf console notification - Unable to connect or send inventory information to Microsoft Intune. Check the status of your Jamf license.
 ms.date: 12/06/2021
 ms.reviewer: taveil
+search.appverid: MET150
 ms.custom: sap:Mac management Jamf
 ---
 # Unable to connect (send inventory information) to Microsoft Intune in the Jamf console

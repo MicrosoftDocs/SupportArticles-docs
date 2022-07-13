@@ -2,7 +2,6 @@
 title: Error 2767 when query against the secondary replica fails
 description: Works around an issue that a query on the secondary replica fails with error 2767 - Could not locate statistics when offloading read-only workloads to a secondary replica.
 ms.date: 
-ms.prod-support-area-path: 
 ms.reviewer: 
 ms.prod: sql 
 ---
@@ -75,12 +74,10 @@ To work around the issue, use one of the following methods as required:
         |Name|Updated|
         |-|-|
         |`<StatisticsName>`|\<DateTime>|
-        |||
 
         |All density|Average Length|Columns|
         |-|-|-|
         |0.5|4|`<ColumnName>`|
-        |||
 
     1. To drop the query-generated statistics in the table `<TableName>` on the primary replica, run the following command:
 

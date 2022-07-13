@@ -62,9 +62,8 @@ To resolve this issue, configure the MSDTC service correctly both on the compute
     |No Authentication Required|Disabled|Enabled if remote machines are pre-Windows Server 2003 SP1 or pre-Windows XP SP2.|
     |Enable TIP|Disabled|Enabled if you run the BAM Portal.|
     |Enable XA Transactions|Disabled|Enabled if you create connections to an XA-based transactional system. For example, you create connections to IBM WebSphere MQ by using the MQSeries adapter.|
-    ||||
 
-    After you configure the properties page, the properties page settings resemble the settings in the following image.
+      After you configure the properties page, the properties page settings resemble the settings in the following image.
 
     :::image type="content" source="media/cannot-configure-biztalk-server/local-dtc-property-setting.png" alt-text="Screenshot of local D T C properties settings." border="false":::
 

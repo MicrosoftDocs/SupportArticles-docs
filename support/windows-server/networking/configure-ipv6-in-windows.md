@@ -14,6 +14,10 @@ ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Guidance for configuring IPv6 in Windows for advanced users
 
 Windows Vista, Windows Server 2008, and later versions of Windows implement RFC 3484 and use a prefix table to determine which address to use when multiple addresses are available for a Domain Name System (DNS) name.
@@ -56,15 +60,14 @@ The IPv6 functionality can be configured by modifying the following registry key
 |Re-enable IPv6 on all nontunnel interfaces|Binary xxx0 xxxx|
 |Re-enable IPv6 on all tunnel interfaces|Binary xxx xxx0|
 |Re-enable IPv6 on nontunnel interfaces and on IPv6 tunnel interfaces|Binary xxx0 xxx0|
-|||
-
+  
 > [!NOTE]
 >
 > - Administrators must create an .admx file to expose the registry settings of below table in a Group Policy setting.
 > - You must restart your computer for these changes to take effect.
 > - Values other than 0 or 32 causes the Routing and Remote Access service to fail after this change takes effect.
 
-By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn’t in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn’t desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
+By default, the 6to4 tunneling protocol is enabled in Windows when an interface is assigned a public IPv4 address (Public IPv4 address means any IPv4 address that isn't in the ranges 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16). 6to4 automatically assigns an IPv6 address to the 6to4 tunneling interface for each address, and 6to4 dynamically registers these IPv6 addresses on the assigned DNS server. If this behavior isn't desired, we recommend disabling the IPv6 tunnel interfaces on the affected hosts.
 
 You can also follow these steps to modify the registry key:
 
@@ -94,8 +97,7 @@ To learn which component each bit (from low to high) controls, refer to the foll
 |PreferIpv4|Prefer IPv4 in default prefix policy|
 |TunnelCp|Disable CP interfaces|
 |TunnelIpTls|Disable IP-TLS interfaces|
-|||
-
+  
 For each bit, **0** means false and **1** means true. Refer to the following table for an example.
 
 |Setting|Prefer IPv4 over IPv6 in prefix policies|Disable IPv6 on all nontunnel interfaces|Disable IPv6 on all tunnel interfaces|Disable IPv6 on nontunnel interfaces (except the loopback) and on IPv6 tunnel interface|
@@ -110,13 +112,12 @@ For each bit, **0** means false and **1** means true. Refer to the following tab
 |Disable IP-TLS interfaces|0|0|0|0|
 |Binary|0010 0000|0001 0000|0000 0001|0001 0001|
 |Hexadecimal|0x20|0x10|0x01|0x11|
-||||||
 
 ### Using the network properties GUI to disable IPv6 is not supported
 
 This registry value doesn't affect the state of the following check box. Even if the registry key is set to disable IPv6, the check box in the **Networking** tab for each interface can be selected. This is an expected behavior.
 
-:::image type="content" source="./media/configure-ipv6-in-windows/network-properties.png" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties.":::
+:::image type="content" source="./media/configure-ipv6-in-windows/network-properties.svg" alt-text="The Internet Protocol Version 6 (TCP/IPv6) option in Network properties." border="false":::
 
 ## Reference
 

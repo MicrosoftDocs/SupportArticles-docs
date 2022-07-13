@@ -14,6 +14,10 @@ ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Fix Windows Update errors by using the DISM or System Update Readiness tool
 
 _Applies to:_ &nbsp; Windows 10, version 1809 and later versions, Windows 8.1, Windows Server 2012 R2, Windows 7, Windows Server 2008 R2  
@@ -29,7 +33,7 @@ This article is intended for Support agents and IT professionals. If you are hom
 
 To resolve this problem, use the inbox Deployment Image Servicing and Management (DISM) tool. Then, install the Windows update or service pack again.
 
-1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type *Command Prompt*, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
+1. Open an elevated command prompt. To do this, open **Start** menu or **Start** screen, type _Command Prompt_, right-select **Command Prompt**, and then select **Run as administrator**. If you are prompted for an administrator password or for a confirmation, type the password, or select **Allow**.
 
 2. Type the following command, and then press Enter. It may take several minutes for the command operation to be completed.
 
@@ -45,7 +49,7 @@ To resolve this problem, use the inbox Deployment Image Servicing and Management
     ```
 
     > [!NOTE]
-    > Replace the *C:\RepairSource\Windows* placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)).
+    > Replace the _C:\RepairSource\Windows_ placeholder with the location of your repair source. For more information about using the DISM tool to repair Windows, reference [Repair a Windows Image](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824869(v=win.10)).
 
 3. Type the `sfc /scannow` command and press Enter. It may take several minutes for the command operation to be completed.
 
@@ -70,15 +74,15 @@ To resolve this problem, use the System Update Readiness tool. Then, install the
       - To install the tool later, select **Save**, and then download the installation file to your computer. When you're ready to install the tool, double-select the file.
    2. In the Windows Update Standalone Installer dialog box, select **Yes**.
 
-      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.png" alt-text="Select Yes to install hotfix for Windows KB947821 in the Windows Update Standalone Installer dialog box." border="false":::
+      :::image type="content" source="media/fix-windows-update-errors/windows-update-standalone-installer.svg" alt-text="Select Yes to install hotfix for Windows KB947821 in the Windows Update Standalone Installer dialog box." border="false":::
 
 3. When the tool is being installed, it automatically runs. Although it typically takes less than 15 minutes to run, it might take much longer on some computers. Even if the progress bar seems to stop, the scan is still running, so don't select **Cancel**.
 
-    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.png" alt-text="Download and Install updates window that shows the updates are being installed progress." border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/updates-are-being-installed-progress-window.svg" alt-text="Download and Install updates window that shows the updates are being installed progress." border="false":::
 
 4. When you see Installation complete, select **Close**.
 
-    :::image type="content" source="media/fix-windows-update-errors/installation-complete.png" alt-text="Download and install Updates window shows the installation complete." border="false":::
+    :::image type="content" source="media/fix-windows-update-errors/installation-complete.svg" alt-text="Download and install Updates window shows the installation complete." border="false":::
 
 5. Reinstall the update or service pack you were trying to install previously.
 
@@ -90,32 +94,17 @@ You can also try to directly download the update package from [Microsoft Update 
 
 For example, you may have problems when you try to install updates from Windows Update. In this situation, you can download the update package and try to install the update manually. To do this, follow these steps:
 
-1. Open [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/home.aspx) in Internet Explorer.
+1. Open [Microsoft Update Catalog page for KB3006137](https://www.catalog.update.microsoft.com/Search.aspx?q=3006137).
+2. Find the update that applies to your operating system appropriately in the search results, and then select the **Download** button.
 
-    :::image type="content" source="media/fix-windows-update-errors/microsoft-update-catalog.png" alt-text="Microsoft Update Catalog in Internet Explorer." border="false":::
+   :::image type="content" source="./media/fix-windows-update-errors/select-download-button.svg" alt-text="Microsoft Update Catalog select the Download button.":::
 
-2. In the search box, input the update number that you want to download. In this example, input 3006137. Then, select **Search**.
+3. Select the link of the file to download the update.
 
-    :::image type="content" source="media/fix-windows-update-errors/search-in-microsoft-update-catalog.png" alt-text="Search in Microsoft Update Catalog by inputting the update number. " border="false":::
+   :::image type="content" source="./media/fix-windows-update-errors/download-update-link.svg" alt-text="Microsoft Update Catalog select file download link.":::
 
-3. Find the update that applies to your operating system appropriately in the search results, and then select **Add** to add the update to your basket.
-
-    :::image type="content" source="media/fix-windows-update-errors/search-results-in-microsoft-update-catalog.png" alt-text="Microsoft Update Catalog shows the search results.":::
-
-4. Select **view basket** to open your basket.
-
-    :::image type="content" source="media/fix-windows-update-errors/view-basket.png" alt-text="Select the view basket button in Microsoft Update Catalog." border="false":::
-
-5. Select **Download** to download the update in your basket.
-
-    :::image type="content" source="media/fix-windows-update-errors/download-the-update-in-your-basket.png" alt-text="Microsoft Update Catalog shows your basket." border="false":::
-
-6. Select **Browse** to choose a location for the update you are downloading, and then select **Continue**.
-
-    :::image type="content" source="media/fix-windows-update-errors/download-options.png" alt-text="Select a location for the update you are downloading." border="false":::
-
-7. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
-8. Open the folder, and then double-select the update package to install the update.
+4. Select **Close** after the download process is done. Then, you can find a folder that contains the update package in the location that you specified.
+5. Open the folder, and then double-select the update package to install the update.
 
 If the Windows update or service pack installed successfully, you are finished. If the problem is not fixed, or if System Update Readiness Tool cannot find the cause, [contact us for more help](https://support.microsoft.com/contactus/).
 
@@ -144,8 +133,7 @@ The following table lists the possible error code with Windows Update for your r
 |0x800f0984|PSFX_E_MATCHING_BINARY_MISSING|Matching component directory exist but binary missing|
 |0x800f0986|PSFX_E_APPLY_FORWARD_DELTA_FAILED|Applying forward delta failed|
 |0x800f0982|PSFX_E_MATCHING_COMPONENT_NOT_FOUND|Can't identify matching component for hydration|
-||||
-
+  
 ## What does the System Update Readiness tool do
 
 ### Verify the integrity of resources

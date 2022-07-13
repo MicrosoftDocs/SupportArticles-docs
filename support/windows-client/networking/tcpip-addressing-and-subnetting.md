@@ -67,7 +67,10 @@ So now you know, for this example using a 255.255.255.0 subnet mask, that the ne
 
 Almost all decimal subnet masks convert to binary numbers that are all ones on the left and all zeros on the right. Some other common subnet masks are:
 
-Decimal Binary 255.255.255.192 1111111.11111111.1111111.11000000 255.255.255.224 1111111.11111111.1111111.11100000
+| Decimal          | Binary                             |
+| ---------------- | ---------------------------------- |
+| 255.255.255.192  | 1111111.11111111.1111111.11000000  |
+| 255.255.255.224  | 1111111.11111111.1111111.11100000  |
 
 Internet RFC 1878 (available from [InterNIC-Public Information Regarding Internet Domain Name Registration Services](https://www.internic.net)) describes the valid subnets and subnet masks that can be used on TCP/IP networks.
 

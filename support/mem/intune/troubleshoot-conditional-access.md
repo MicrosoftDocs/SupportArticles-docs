@@ -1,15 +1,14 @@
 ---
 title: Troubleshoot Intune Conditional Access
 description: What to do when your users fail to get access to resources through Intune Conditional Access.
-ms.date: 12/13/2021
+ms.date: 01/31/2022
+search.appverid: MET150
 ---
 # Troubleshoot Conditional Access
 
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
-With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services.
-
-This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Azure Active Directory have access to your company resources.
+With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Azure Active Directory have access to your company resources.
 
 ## Requirements for Conditional Access
 
@@ -89,3 +88,7 @@ If a device  isn't compliant but continues to have access, take the following ac
   - Use this PowerShell cmdlet to get a list of all mobile devices for a mailbox: 'Get-MobileDeviceStatistics -mailbox mbx'. If the device isn't listed, it isn't accessing Exchange. For more info, see the [Exchange PowerShell docs](/powershell/module/exchange/get-mobiledevicestatistics).
   
   - If the device is listed, use the 'Get-CASmailbox -identity:'upn' | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support. For more info, see the [Exchange PowerShell docs](/powershell/module/exchange/get-casmailbox).
+
+## Sign-in errors with app-based Conditional Access
+
+Intune app protection policies help you protect company data at the app level, even on devices that you don't manage in Intune. If your users cannot sign in to protected applications, there might be an issue with your app-based Conditional Access policies. See [Troubleshooting sign-in problems with Conditional Access](/azure/active-directory/conditional-access/troubleshoot-conditional-access) for detailed guidance.

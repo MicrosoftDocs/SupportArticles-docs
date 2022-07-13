@@ -87,7 +87,6 @@ To resolve this problem, follow these steps.
     |15|A part of the line quantity is backordered.|
     |16|The line quantity isn't correctly allocated.|
     |17|The line quantity isn't correctly fulfilled.|
-    |||
 
 4. Determine whether the errors are valid. Make corrections as appropriate. For example, if the value in the SOPLNERR field is **2**, follow these steps:
 

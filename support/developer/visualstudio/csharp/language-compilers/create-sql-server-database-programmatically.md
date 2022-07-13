@@ -5,7 +5,6 @@ ms.date: 10/26/2020
 ms.custom: sap:Language or Compilers
 ms.reviewer: malcolms
 ms.topic: how-to
-ms.technology: csharp-language-compilers
 ---
 # Create a SQL Server Database programmatically by using ADO.NET and Visual C# .NET
 

@@ -15,8 +15,7 @@ _Original KB number:_ &nbsp; 2793732
 | Description| File name |
 |---|---|
 |Compressed copy of file specified by user|{ComputerName}_filename.zip|
-|||
-
+  
 ## General information
 
 | Description| File name |
@@ -35,8 +34,7 @@ _Original KB number:_ &nbsp; 2793732
 |System information|{ComputerName}_OS_MSInfo.nfo|
 |SystemInfo output|{ComputerName}_OS_SysInfo.txt|
 |WMI quota configuration and loaded providers.|{ComputerName}_OS_WMIProviderConfig.txt|
-|||
-
+  
 ## IIS information
 
 | Description| File name |
@@ -44,8 +42,7 @@ _Original KB number:_ &nbsp; 2793732
 |IIS configuration information|{ComputerName}_IISConfiguration.zip|
 |IIS logs (last 5 days)|{ComputerName}_Logs_IIS.zip|
 |Virtual directory list and configuration|{ComputerName}_IIS_VDirInfo.txt|
-|||
-
+  
 ## Networking basic information
 
 | Description| File name |
@@ -56,8 +53,7 @@ _Original KB number:_ &nbsp; 2793732
 |Basic TCP/IP and networking configuration information, such as TCP/IP registry key and outputs from `ipconfig`, `netstat`, `nbtstat`, and `netsh` commands|{ComputerName}_OS_TCPIP-Info.txt|
 |Enabled Windows Firewall rules|{ComputerName}_OS_EnabledFirewallRules.txt|
 |Proxy configuration|{ComputerName}_OS_ProxyInfo.txt|
-|||
-
+  
 ## Registry keys
 
 | Description| File name |
@@ -70,23 +66,20 @@ _Original KB number:_ &nbsp; 2793732
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall|{ComputerName}_RegistryKey_Uninstall.txt|
 |HKEY_LOCAL_MACHINE\Software\Policies|{ComputerName}_RegistryKey_HKLMPolicies.txt|
 |HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services|{ComputerName}_RegistryKey_Services.txt|
-|||
-
+  
 ## Robust Office inventory scan output
 
 | Description| File name |
 |---|---|
 |File containing a list of all installed applications of the supported Office families.|{ComputerName}_ROIScan.log|
 |File containing a list of all installed applications of the supported Office families.|{ComputerName}_ROIScan.zip|
-|||
-
+  
 ## Server manager and server roles information
 
 | Description| File name |
 |---|---|
 |List of roles and features installed on server media (Windows Server 2008 R2 and later versions)|resultreport.xml|
-|||
-
+  
 ## Windows Update Agent information
 
 | Description| File name |
@@ -94,8 +87,7 @@ _Original KB number:_ &nbsp; 2793732
 |Windows Update Agent version, service security descriptors, and registry settings.|{ComputerName}__WUA_Summary.txt|
 |File list in `SoftwareDistribution` directory|{ComputerName}_WUA_FileList.txt|
 |File version of Windows Update Agent related EXE/DLL files|{ComputerName}_WUA_FileVersions.txt|
-|||
-
+  
 ## WSUS database information
 
 | Description| File name |
@@ -104,8 +96,7 @@ _Original KB number:_ &nbsp; 2793732
 |Dead deployments|{ComputerName}_SQL_DeadDeployments.txt|
 |Output of `tbConfiguration` tables|{ComputerName}_SQL_SUSDBConfig.txt|
 |Output of `tbSchema` tables|{ComputerName}_SQL_SUSDBSchema.txt|
-|||
-
+  
 ## WSUS server information
 
 | Description| File name |
@@ -118,8 +109,7 @@ _Original KB number:_ &nbsp; 2793732
 |WSUS basic information|{ComputerName}_WSUS_BasicInfo.txt|
 |WSUS logs|{ComputerName}_Logs_WSUS.zip|
 |WSUS setup logs (if available)|{ComputerName}_Logs_WSUSSetup.zip|
-|||
-
+  
 ## References
 
 [Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform](https://support.microsoft.com/help/2598970)

@@ -41,6 +41,9 @@ Once the Command Checker tool has been enabled, within the application in each o
 
     :::image type="content" source="media/ribbon-issues-button-hidden/new-hidden.png" alt-text="Screenshot shows the New button on the contact entity's grid page is not visible and is represented by an item labeled New (hidden).":::
 
+    > [!NOTE]
+    > If the button is still hidden when all rules evaluate to **True**, it may be due to [context sensitive commands in grids](https://support.microsoft.com/topic/1100b6b5-ab64-6047-82c5-924a2b38296a). When records are selected on a grid, all buttons without a `SelectionCountRule` element will be considered not relevant to the selected record(s). And they're hidden even if their rule evaluation is **True**. Note that flyouts aren't affected since flyout children might still have record based commands.
+ 
 1. Click the **Command Properties** tab to display the details of the command for this button. This will show the enable rules and display rules, along with the result (**True**, **False**, **Skipped**) of each rule evaluation. The following example shows the **New (hidden)** button's command to be `Mscrm.NewRecordFromGrid` and there is an enable rule named `new.contact.EnableRule.EntityRule` that has evaluated to **False**, as a result the button will be hidden.
 
     :::image type="content" source="media/ribbon-issues-button-hidden/command-properties-new-hidden.png" alt-text="Screenshot shows the Command properties details of the command for the New (hidden) button.":::

@@ -4,7 +4,7 @@ description: Discusses an issue that prevents a Windows Server-based computer fr
 ms.date: 08/09/2021
 author: v-tappelgate
 ms.author: v-tappelgate
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server

@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides information about the features and functions that are available in the offline file management tool CSCCMD 1.1.
 
-_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp;  Microsoft Windows XP, and Microsoft Windows Server 2003.
 _Original KB number:_ &nbsp; 884739
 
 ## Introduction

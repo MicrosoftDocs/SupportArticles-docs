@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -79,7 +78,7 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
    :::image type="content" source="media/boot-error-disk-read-error-occurred/detail-partition-active-yes.png" alt-text="Screenshot of the diskpart window with the output of the detail partition command, where partition 1 is set to Active: Yes.":::
 
 1. If the partition is not set to **Active**, enter **active** to change the Active flag.
-1. Enter **detail partition** to check that the status change was completed properly, and verify that the output includes **Active: Yes**. 
+1. Enter **detail partition** to check that the status change was completed properly, and verify that the output includes **Active: Yes**.
 1. Enter **exit** to close the DISKPART tool and save your configuration changes.
 
 ### Fix the disk partition
@@ -99,7 +98,7 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
 1. Run the following commands:
 
    **Enable the Serial Console**:
-   
+
    ```console
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /ems {<BOOT LOADER IDENTIFIER>} ON 
    bcdedit /store <VOLUME LETTER WHERE THE BCD FOLDER IS>:\boot\bcd /emssettings EMSPORT:1 EMSBAUDRATE:115200
@@ -138,7 +137,9 @@ Generation 1 VMs should first verify that the OS partition which holds the BCD s
    ```console
    REG UNLOAD HKLM\BROKENSYSTEM
    ```
-   
+
 ### Rebuild the VM
 
 Use [step 5 of the VM Repair Commands](./repair-windows-vm-using-azure-virtual-machine-repair-commands.md#repair-process-example) to rebuild the VM.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

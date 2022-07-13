@@ -1,3 +1,5 @@
+- name: Internet Information Services
+  href: iis-welcome.yml
 - name: Active Server Pages
   items:
   - name: Can't create objects when an application run
@@ -30,7 +32,7 @@
     href: development/add-http-response-header-web-site.md
   - name: Assign a private key to a new certificate
     href: development/assign-certificate-private-key.md
-  - name: development/Child requests generate duplicate events
+  - name: Child requests generate duplicate events
     href: development/duplicate-aspnet-events.md
   - name: Cookies aren't available
     href: development/cookie-unavailable-ihttpmodules-ihttphandler.md

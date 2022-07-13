@@ -20,7 +20,7 @@ You can reset the program settings to repair your Internet Explorer. To do this,
 
 1. Exit all programs, including Internet Explorer.
 2. Press the Windows logo key+R to open the **Run** box.
-3. Type *inetcpl.cpl* and select **OK**.
+3. Type _inetcpl.cpl_ and select **OK**.
 4. The **Internet Options** dialog box appears.
 5. Select the **Advanced** tab.
 6. Under **Reset Internet Explorer** settings, select **Reset**. Then select **Reset** again.
@@ -50,8 +50,7 @@ You can use the System File Checker tool to repair missing or corrupted system f
 |---|---|
 |Windows 7, Windows Server 2008 R2 |[Download Internet Explorer 11 (Offline installer)](https://support.microsoft.com/topic/download-internet-explorer-11-offline-installer-99d492a1-3a62-077b-c476-cf028aff9a7f)|
 |Windows Vista, Windows Server 2008 SP2|- Windows Internet Explorer 9 (64 Bit)<br/>- Windows Internet Explorer 9 (32 Bit)|
-|||
-
+  
 **Step 2:** Uninstall the version of Internet Explorer that you may have installed on top of Internet Explorer 8.0 (For Windows Vista it is Internet Explorer 7.0) that natively ships with and installed as part of the operating system.
 
 > [!NOTE]

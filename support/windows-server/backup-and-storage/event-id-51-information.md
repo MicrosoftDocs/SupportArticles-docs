@@ -95,8 +95,7 @@ The following tables describe what each offset represents:
 |0x35|3|Unused|
 |0x38|88|SCSI request block structure|
 |0x90|18|Sense data structure|
-||||
-
+  
 ## Key sections to decode
 
 Here are key sections to decode.

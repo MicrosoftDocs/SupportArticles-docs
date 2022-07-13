@@ -62,7 +62,6 @@ Review the following table and enable the trace flags in the Trace flag column a
 | You experience slow performance using query operations with spatial data types.|<ul><li>T6532</li><li>T6533</li><li> T6534</li></ul>|<ul><li>SQL Server 2012 SP3 to current SP/CU </li><li>SQL Server 2014 SP2 to current SP/CU</li><ul>| <ul><li>SQL Server 2016 RTM to current SP/CU </li><li>SQL Server 2017 RTM to current SP/CU</li><ul>| |
 | <ul><li>Queries encounter `SOS_MEMORY_TOPLEVELBLOCKALLOCATOR` and CMEMTHREAD waits. </li><li>There is low available virtual address space for the SQL Server process. </li></ul>| T8075|<ul><li>SQL Server 2012 SP2 CU8 to current SP/CU </li><li>SQL Server 2014 RTM CU10 to current SP/CU</li></ul>| <ul><li>SQL Server 2016 RTM to current SP/CU </li><li>SQL Server 2017 RTM to current SP/CU</li></ul>| [FIX: Out of memory error when the virtual address space of the SQL Server process is low in SQL Server](https://support.microsoft.com/help/4077105)  |
 | <ul><li>SQL Server is installed on a machine with large amounts of memory.</li><li> Creating new databases takes a long time.</li></ul>| T3449| <ul><li>SQL Server 2012 SP3 CU3 to current SP/CU </li><li>SQL Server 2014 RTM CU14 to current RTM CU </li><li>SQL Server 2014 SP1 CU7 to current SP/CU</li></ul>| <ul><li>SQL Server 2016 RTM to current SP/CU </li><li>SQL Server 2017 RTM to current SP/CU</li></ul>| [FIX: SQL Server database creation on a system with a large volume of memory takes longer than expected](https://support.microsoft.com/help/3158396)  |
-||||||
 
 ## Table 2. General considerations and best practices for improving performance of your instance of SQL Server
 
@@ -84,8 +83,7 @@ Review the content in the Knowledge Base article/Books Online Resource column an
 | [Database Checkpoints (SQL Server)](/sql/relational-databases/logs/database-checkpoints-sql-server)|Consider enabling indirect checkpoints on user databases to optimize I/O behavior in SQL Server 2012 and 2014. |
 | [FIX: Slow synchronization when disks have different sector sizes for primary and secondary replica log files in SQL Server AG and Logshipping environments](https://support.microsoft.com/kb/3009974) | If you have an Availability Group where the transaction log on the primary replica is on a disk with 512-byte sector size and the secondary replica's transaction log is on a drive with 4K sector size, you may have an issue where synchronization is slow. In these cases, enabling TF 1800 should correct the issue. For more information, see [Trace Flag 1800](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf1800).|
 |<ul><li> [Developers Choice: Query progress - anytime, anywhere](/archive/blogs/sql_server_team/query-progress-anytime-anywhere) </li><li>[Update to expose per-operator query execution statistics in showplan XML and Extended Event in SQL Server 2014 SP2](https://support.microsoft.com/kb/3170113)</li></ul> | If your SQL Server is not already CPU bound and a 1.5% to 2% overhead is negligible for your workloads, we recommend you enable TF 7412 as a startup trace flag. This flag enables lightweight profiling in SQL Server 2014 SP2 or later, which will give you the ability to do live query troubleshooting in production environments. |
-|||
-
+  
 ## Table 3. Performance fixes that are included in a cumulative update
 
 Review the description in the Symptoms column and apply the required updates in the Required update column in applicable environments. You can review the Knowledge Base article for more information about the respective issues. These recommendations do not require you to enable additional trace flags as startup parameters. Just applying the latest Cumulative Update or Service Pack that includes these fixes is enough to get the benefit.
@@ -109,8 +107,7 @@ Review the description in the Symptoms column and apply the required updates in 
 |High CMEMTHREAD wait type when you build an index on a spatial data type in large tables.| [SQL Server 2014 RTM CU1](https://support.microsoft.com/help/2931693) <br/> [SQL Server 2012 SP1 CU7](https://support.microsoft.com/help/2894115)| [FIX: Slow performance in SQL Server when you build an index on a spatial data type of a large table in a SQL Server 2012 or SQL Server 2014 instance](https://support.microsoft.com/help/2887888) |
 | Performance issues because of `SOS_PHYS_PAGE_CACHE` and CMEMTHREAD waits during memory allocation on large-memory computers.| [SQL Server 2014 RTM CU1](https://support.microsoft.com/help/2931693) <br/> [SQL Server 2012 SP1 CU9](https://support.microsoft.com/help/2931078)| [FIX: Performance problems occur in NUMA environments during foreign page processing in SQL Server 2012 or SQL Server 2014](https://support.microsoft.com/help/2926223)  |
 |CHECKDB command takes a long time for large databases.| [Cumulative update package 6 for SQL Server 2014](https://support.microsoft.com/help/3031047)| [FIX: DBCC CHECKDB/CHECKTABLE command may take longer in SQL Server 2012 or SQL Server 2014](https://support.microsoft.com/help/3029825)|
-||||
-
+  
 ## Important notes
 
 - If all the conditions in the Table 1 apply to you:

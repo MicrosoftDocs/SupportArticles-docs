@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot startup problems
 description: Describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
-ms.date: 09/08/2020
+ms.date: 02/09/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -455,6 +455,5 @@ To repair your installation of Windows, follow these steps.
 If you can't resolve the problem by following the steps in this article, you can use the Microsoft Support website to find a solution to your problem. The following list describes some of the services that the Microsoft Support website provides:
 
 - [Searchable Knowledge Base](https://support.microsoft.com/) - Search technical support information and self-help tools for Microsoft products.
-- [Frequently Asked Questions](https://www.microsoft.com/en-US/software-download/faq) - View product-specific frequently asked questions and support highlights.
 - [Software and Updates](https://www.microsoft.com/download/search.aspx) - Find software and updates on the Download Center.
 - [Other Support Options](https://support.microsoft.com/contactus/) - Ask a support question by using the web or telephone Microsoft Support.

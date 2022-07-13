@@ -66,9 +66,7 @@ As a work around to connect to the VM and resolve the cause, you can temporarily
 
 ```cmd
 REM Disable the Network Level Authentication
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 0
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 0
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v fAllowSecProtocolNegotiation /t REG_DWORD /d 0
 ```
 
 Then, restart the VM, and proceed to the troubleshooting section.
@@ -77,10 +75,7 @@ Once you have resolved the issue re-enable NLA, by runing the following commands
 
 ```cmd
 REG add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v disabledomaincreds /t REG_DWORD /d 0 /f
-
-REG add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v SecurityLayer /t REG_DWORD /d 1 /f
 REG add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v UserAuthentication /t REG_DWORD /d 1 /f
-REG add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v fAllowSecProtocolNegotiation /t REG_DWORD /d 1 /f
 ```
 
 ## Troubleshooting
@@ -243,3 +238,5 @@ Restart the VM so that the changes to the registry take effect.
 - [SetEncryptionLevel method of the Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting-setencryptionlevel)
 - [Configure Server Authentication and Encryption Levels](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770833(v=ws.11))
 - [Win32_TSGeneralSetting class](/windows/desktop/termserv/win32-tsgeneralsetting)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

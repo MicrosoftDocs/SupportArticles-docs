@@ -92,7 +92,7 @@ New-AzureADUser -AccountEnabled $true `
 
 ## [Azure CLI](#tab/azure-cli)
 
-To add a user in Azure CLI, run the [az ad user create](/cli/azure/ad/user#az_ad_user_create) command:
+To add a user in Azure CLI, run the [az ad user create](/cli/azure/ad/user#az-ad-user-create) command:
 
 ```azurecli-interactive
 az ad user create --display-name "<New User>" \
@@ -151,7 +151,7 @@ Remove-AzureADUser -ObjectId "<NewUser@contoso.onmicrosoft.com>"
 
 ## [Azure CLI](#tab/azure-cli)
 
-To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az_ad_user_delete) command:
+To delete a user in Azure CLI, run the [az ad user delete](/cli/azure/ad/user#az-ad-user-delete) command:
 
 ```azurecli-interactive
 az ad user delete --id "<NewUser@contoso.onmicrosoft.com>"
@@ -189,3 +189,5 @@ The following table contains a list of common error messages when you attempt to
 For the Free edition of Azure AD, you can create a maximum of 50,000 Azure AD resources in a single tenant by default. If you use at least one verified domain, the default Azure AD service quota for your organization is extended to 300,000 Azure AD resources. For organizations that are created by self-service sign-up, the Azure AD service quota remains 50,000 Azure AD resources. This limit applies even if you made an internal admin takeover and converted the organization to a managed tenant with one or more verified domains. This service limit is unrelated to the pricing tier limit of 500,000 resources on the Azure AD pricing page. To go beyond the default quota, you must contact Microsoft Support.
 
 For more information, see [Azure AD service limits and restrictions](/azure/active-directory/enterprise-users/directory-service-limits-restrictions).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -21,6 +21,8 @@
       href: uploaded-vhd-not-support.md
   - name: Image deployment and management
     items:
+    - name: Cloud-init-enabled VM takes a long time to start up
+      href: cloud-init-deployment-delay.md
     - name: Upload Hyper-V DC to Azure
       href: upload-existing-hyperv-dc-azure-ps.md
   - name: VM upgrade issues
@@ -47,6 +49,8 @@
       href: unexpected-reboots-attached-vhds.md
     - name: Understand a system reboot
       href: understand-vm-reboot.md
+    - name: Troubleshoot Windows stop error (directory service initialization failure)
+      href: troubleshoot-directory-service-initialization-failure.md
 
   - name: Planned maintenance
     items:
@@ -94,10 +98,12 @@
         href: troubleshoot-device-names-problems.md
       - name: Error in an Azure Linux VM - Failed to start Switch Root
         href: resolve-failed-start-switch-root-azure-linux-vm.md
-      - name: Grub Rescue
+      - name: GRUB rescue issues
         href: troubleshoot-vm-boot-error.md
       - name: Linux VM does not start after an LIS upgrade
         href: linux-vm-not-start-kernel-lis.md
+      - name: Troubleshoot Linux VM UEFI boot failures
+        href: azure-linux-vm-uefi-boot-failures.md
     - name: Windows
       href: boot-error-troubleshoot.md
       items:
@@ -206,6 +212,8 @@
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
       href: detailed-troubleshoot-ssh-connection.md
+    - name: Troubleshoot Linux VM UEFI boot failures
+      href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -222,9 +230,11 @@
       href: linux-virtual-machine-cannot-start-fstab-errors.md
     - name: Troubleshoot permissions are too open error
       href: troubleshoot-ssh-permissions-too-open.md
+    - name: Troubleshoot kernel panic
+      href: linux-kernel-panic-troubleshooting.md
   - name: Windows
     items:
-    - name: Cannot RDP becasue "You must change your password before logging on the first time" error
+    - name: Cannot RDP because "You must change your password before logging on the first time" error
       href: must-change-password.md
     - name: Cannot RDP into Azure VM because of authentication errors
       href: cannot-connect-rdp-azure-vm.md
@@ -248,7 +258,7 @@
       href: detailed-troubleshoot-rdp.md
     - name: Troubleshoot a failed trust relationship in an Azure Windows VM
       href: troubleshoot-broken-secure-channel.md
-    - name: Troubleshoot RDP error because the DHCP is disabled
+    - name: Troubleshoot RDP error because DHCP is disabled
       href: troubleshoot-rdp-dhcp-disabled.md
     - name: Troubleshoot RDP error because of the NSG setting
       href: troubleshoot-rdp-nsg-problem.md
@@ -258,7 +268,7 @@
       href: troubleshoot-rdp-no-license-server.md
     - name: Troubleshoot remote desktop services issues
       href: troubleshoot-remote-desktop-services-issues.md
-    - name: Troubleshoot An internal error
+    - name: Troubleshoot an internal error
       href: Troubleshoot-rdp-internal-error.md
     - name: Troubleshoot RDP access is denied error 
       href: troubleshoot-rdp-access-denied.md 
@@ -268,9 +278,9 @@
       href: troubleshoot-rdp-general-error.md
     - name: Troubleshoot Azure VM RDP connection issues by Event ID
       href: event-id-troubleshoot-vm-rdp-connecton.md
-    - name: Troubleshoot RDP error in VM because of static IP
+    - name: Troubleshoot RDP error in VM due to static IP
       href: troubleshoot-rdp-static-ip.md
-    - name: Troubleshoot RDP error in VM because the NIC is disabled
+    - name: Troubleshoot RDP error in VM due to disabled NIC
       href: troubleshoot-rdp-nic-disabled.md
     - name: Troubleshoot RDP error caused by Safe Mode
       href: troubleshoot-rdp-safe-mode.md
@@ -297,6 +307,11 @@
   - name: Application access issues
     href: troubleshoot-app-connection.md
 
+- name: Linux VM package management
+  items:
+  - name: SUSE VM connectivity and registration issues
+    href: suse-public-cloud-connectivity-registration-issues.md
+
 - name: VM extensions troubleshooting
   items:
   - name: Azure cloud-init support for Linux VMs
@@ -311,7 +326,7 @@
     href: extensions-stop-running.md
   - name: Minimum version support for agents
     href: support-extensions-agent-version.md
-  - name: Previous command is rerun
+  - name: Previous command is re-run
     href: customscript-reruns-previous-command.md
   - name: Supported extensions
     href: support-agent-extensions.md
@@ -356,8 +371,10 @@
       href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
       href: troubleshoot-performance-virtual-machine-linux-windows.md
-    - name: Troubleshoot high CPU issues for Azure Windows virtual machines
+    - name: Troubleshoot high CPU issues in Azure Windows virtual machines
       href: troubleshoot-high-cpu-issues-azure-windows-vm.md
+    - name: Troubleshoot high memory issues for Azure Windows virtual machines
+      href: azure-windows-vm-memory-issue.md
   - name: Known performance issues
     items:
     - name: Poor performance on Windows Server 2012 R2
@@ -383,7 +400,7 @@
   - name: Troubleshoot Azure Compute Gallery - Windows/Linux
     href: /azure/virtual-machines/troubleshooting-shared-images?context=/troubleshoot/azure/virtual-machines/context/context
 
-- name: Backup and retore troubleshooting
+- name: Backup and restore troubleshooting
   items:
   - name: VM recovery access
     items:
@@ -413,6 +430,8 @@
           href: repair-linux-vm-using-ALAR.md
         - name: Unlock the encrypted disk for offline repair
           href: unlock-encrypted-linux-disk-offline-repair.md
+        - name: Troubleshoot chroot environment for Linux rescue VM
+          href: chroot-environment-linux.md
       - name: Repair VM with Nested Hyper-V
         href: troubleshoot-vm-by-use-nested-virtualization.md
 
@@ -429,6 +448,8 @@
 - name: Remote troubleshooting tools
   href: remote-tools-troubleshoot-azure-vm-issues.md
   items:
+  - name: Debug scripts run by Custom Script Extension or Run Command
+    href: debug-customscriptextension-runcommand-scripts.md
   - name: VM Inspector for Azure Virtual Machines
     href: vm-inspector-azure-virtual-machines.md
   - name: VM Inspector error messages

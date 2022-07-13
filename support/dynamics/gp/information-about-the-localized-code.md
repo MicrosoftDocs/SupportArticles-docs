@@ -24,7 +24,6 @@ When you select Australia as your country/region during the installation of Micr
   |ZIP Code|Postcode|
   |Tax Registration Number|Australian Business Number (ABN)|
   |(XXX)XXX-XXXX Ext. XXXX|(XXX)XXXX-XXXX Ext. XXX|
-  |||
 
   The code modifications that are created by this chunk file are not required to use Microsoft Great Plains with an Australian company. However, these modifications make it simpler to store telephone numbers and to enter tax information into the correct fields.
 

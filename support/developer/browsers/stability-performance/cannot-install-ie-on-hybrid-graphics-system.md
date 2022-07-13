@@ -38,8 +38,7 @@ The following tables list the known computer models that are affected and includ
 |Vostro 3450|AMD Radeon HD 6630M<br/>AMD Radeon HD 7650M|None|
 |Inspiron 14 N4050|AMD Radeon HD 6470M| [8.930.0.0000, A03](http://www.dell.com/support/drivers/us/en/19/driverdetails?driverid=kk4kw) (Released 4/2012)<br/> [8.860.0.0, A01](http://www.dell.com/support/drivers/us/en/19/driverdetails?driverid=cfj09) (Released 8/2011)|
 |Vostro 1450|AMD Radeon HD 6470M<br/>AMD Radeon HD 7450M| [8.88+2342, A02](http://www.dell.com/support/drivers/us/en/19/driverdetails?driverid=2m9xt), A03 (Released 3/2012)<br/> [8.860.0.0, A01](http://www.dell.com/support/drivers/us/en/19/driverdetails?driverid=cfj09) (Released 8/2011)|
-||||
-
+  
 ### HP systems
 
 |System|Graphics hardware|Latest compatible drivers|
@@ -49,8 +48,7 @@ The following tables list the known computer models that are affected and includ
 |ProBook 4330 s, 4331 s, 4431 s 4530 s, 4730 s|AMD Radeon HD 6490M| [8.91-111013A-128465C](https://ftp.hp.com/pub/softpaq/sp55001-55500/sp55304.exe) (Released 11/2011)|
 |Pavilion dv4 (3029tx)|AMD Radeon HD 6750M|None|
 |Envy 14 (2070ez)|AMD Radeon HD 6630M|None|
-||||
-
+  
 ### Lenovo systems
 
 |System|Graphics hardware|Latest compatible drivers|
@@ -62,16 +60,14 @@ The following tables list the known computer models that are affected and includ
 |IdeaPad Y470|AMD Radeon HD 6730M|None|
 |ThinkPad Edge E420s<br/>ThinkPad Edge S420|AMD Radeon HD 6630M|None|
 |IdeaPad U400|AMD Radeon HD 6470M| [8.851.0.0](https://download.lenovo.com/UserFiles/Driver/en/Downloads%20and%20Drivers/U400/Win7%20Update/IN1VDO77WW5.exe) (Released 11/2011)|
-||||
-
+  
 ### Sony systems
 
 |System|Graphics hardware|Latest compatible drivers|
 |---|---|---|
 |Sony VPCCA1x<br/>Sony VPCCA2x<br/>Sony VPCCA3x<br/>Sony VPCCA4x<br/>Sony VPCCB1x<br/>Sony VPCCB2x<br/>Sony VPCCB3x<br/>Sony VPCCB4x|AMD Radeon HD 6630M|None|
 |Sony VPCJ2x|AMD Radeon HD 6470M|None|
-||||
-
+  
 > [!NOTE]
 > For computers for which **None** is listed in the **Latest compatible drivers** column, Microsoft is currently working with AMD to find the cause of the problem and determine the appropriate fix. If you have platform update KB 2670838 for Windows 7 installed on this computer, we recommend that you uninstall the update.
 

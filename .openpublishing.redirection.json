@@ -11,6 +11,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/active-directory/installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/active-directory/welcome-azure-ad",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/azure/virtual-machines/troubleshoot-deploy-vm-linux.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-deployment-new-vm-linux",
       "redirect_document_id": true
@@ -44,7 +49,7 @@
       "source_path": "support/dotnet/framework/manifest-definitions-dont-match-reference.md",
       "redirect_url": "/troubleshoot/dotnet/framework/manifest-definitions-do-not-match-reference",
       "redirect_document_id": true
-    },  
+    },
     {
       "source_path": "support/windows-server/networking/dns-chame-alias-cannot-access-smb-file-server-share.md",
       "redirect_url": "/troubleshoot/windows-server/networking/dns-cname-alias-cannot-access-smb-file-server-share",
@@ -534,15 +539,25 @@
       "source_path": "support/mem/intune/set-up-app-protection-policies-ios-device.md",
       "redirect_url": "/mem/intune/apps/app-protection-policies",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/mem/intune/exchange-connector-version-not-supported.md",
       "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/fails-moving-intune-exchange-connector.md",
+      "redirect_url": "/microsoft-365/enterprise/hybrid-modern-auth-overview",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/mem/intune/set-mdm-authority.md",
       "redirect_url": "/mem/intune/fundamentals/mdm-authority-set",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/restrict-usb-with-administrative-template.md",
+      "redirect_url": "/mem/intune/configuration/administrative-templates-restrict-usb",
       "redirect_document_id": false
     },
     {
@@ -584,17 +599,17 @@
       "source_path": "support/mem/intune/app-protection-options-access-denied.md",
       "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/mem/intune/configure-app-protection-access-denied.md",
       "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/mem/intune/device-enroll-intune-app-management-error.md",
       "redirect_url": "/troubleshoot/mem/intune/troubleshoot-mam",
       "redirect_document_id": false
-    }, 
+    },
     {
       "source_path": "support/mem/intune/lob-app-versioning.md",
       "redirect_url": "/mem/intune/developer/apps-lob-app-versioning",
@@ -619,7 +634,7 @@
       "source_path": "support/mem/intune/deploy-windows-update-packages-as-win32-apps.md",
       "redirect_url": "/mem/intune/apps/apps-win32-deploy-update-package",
       "redirect_document_id": false
-    },     
+    },
     {
       "source_path": "support/mem/configmgr/index.md",
       "redirect_url": "/support/mem/configmgr/welcome-configuration-manager",
@@ -797,7 +812,7 @@
     },
     {
       "source_path": "support/azure/general/capture-debug-stream.md",
-      "redirect_url": "https://docs.microsoft.com/azure/automation/troubleshoot/runbooks",
+      "redirect_url": "/azure/automation/troubleshoot/runbooks",
       "redirect_document_id": false
     },
     {
@@ -2334,7 +2349,132 @@
       "source_path": "support/dynamics-365/marketing/the-campaign-activity-can-be-distributed-only-once-error.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/the-campaign-activity-can-be-distributed-only-once-error",
       "redirect_document_id": false
-    }
+    },
+    {
+      "source_path": "support/power-platform/power-automate/sharepoint-site-not-listed-in-trigger-or-action.md",
+      "redirect_url": "/troubleshoot/power-platform/power-automate/dropdown-does-not-list-items-in-trigger-or-action",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/windows/win32/kb841927.md",
+      "redirect_url": "/troubleshoot/windows/win32/addin-components-core-os-processes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/resolving-connectivity-errors.md",
+      "redirect_url": "/troubleshoot/sql/connect/resolve-connectivity-errors-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/build-software-inventory-power-bi.md",
+      "redirect_url": "/mem/intune/fundamentals/reports#app-install-status-report-operational",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/connect/kerberos-configuration-manager-available.md",
+      "redirect_url": "/troubleshoot/sql/connect/using-kerberosmngr-sqlserver",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/istidevicecontrol-getmydeviceportname-incorrect-port-name-multiple-usb.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-from-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "/troubleshoot/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-server/user-profiles-and-logon/windows-identity-foundation.md",
+      "redirect_url": "/previous-versions/troubleshoot/dotnet/framework/windows-identity-foundation",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/device-licenses-introduction.md",
+      "redirect_url": "/mem/intune/fundamentals/licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/app-service-compliance-wit.md",
+      "redirect_url": "/troubleshoot/azure/app-service/app-service-compliance-wit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/backing-up-restoring-and-cloning-microsoft-azure-app-services.md",
+      "redirect_url": "/troubleshoot/azure/app-service/backing-up-restoring-and-cloning-microsoft-azure-app-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
+      "redirect_document_id": true
+    },
 
+    {
+      "source_path": "support/azure/general/faqs-app-service-linux.md",
+      "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-open-source-technologies-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/temporary-storage-for-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/temporary-storage-for-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-instance-related-issues-on-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/troubleshoot-instance-related-issues-on-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/data-restore-storage.md",
+      "redirect_url": "/azure/storage/blobs/data-protection-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/rdp.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
+      "redirect_document_id": false
+    }    
   ]
 }

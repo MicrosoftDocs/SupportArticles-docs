@@ -2,6 +2,7 @@
 title: 403 Forbidden error for Intune objects in Graph Explorer
 description: Troubleshoot and resolve a 403 Forbidden error when running queries in Graph Explorer to inspect or modify Microsoft Intune objects. 
 ms.date: 12/22/2021
+search.appverid: MET150
 ms.custom: sap:Intune Graph API
 ---
 # 403 Forbidden error when you query Intune objects in Graph Explorer
@@ -117,9 +118,8 @@ The following are the default user permissions that are set after you grant acce
 |Microsoft Graph|Delegated|Read and write access to user mail|User consent|
 |Microsoft Graph|Delegated|Have full access to all files that users can access|User consent|
 |Microsoft Graph|Delegated|Have full access to user calendars|User consent|
-|||||
-
-If you select **Consent on behalf of your organization**, you will have the following permissions under **Admin consent**.
+  
+  If you select **Consent on behalf of your organization**, you will have the following permissions under **Admin consent**.
 
 |API Name|Type|Permission|Granted through|
 |---|---|---|---|
@@ -135,4 +135,3 @@ If you select **Consent on behalf of your organization**, you will have the foll
 |Microsoft Graph|Delegated|Read and write access to user mail|Admin consent|
 |Microsoft Graph|Delegated|Have full access to all files that users can access|Admin consent|
 |Microsoft Graph|Delegated|Have full access to user calendars|Admin consent|
-|||||

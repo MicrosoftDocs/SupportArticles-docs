@@ -211,8 +211,7 @@ The following registry keys are checked and set:
 |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUServer|REG_SZ|The full WSUS server URL including the port. For example, `http://PS1Site.Contoso.com:8530`|
 |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate`|WUStatusServer|REG_SZ|The full WSUS server URL including the port. For example, `http://PS1Site.Contoso.com:8530`|
 |`HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate\AU`|UseWUServer|REG_DWORD|0x1|
-|||||
-
+  
 For an existing client, we could expect to see the following in WUAHandler.log to denote when content version has incremented:
 
 > Its a WSUS Update Source type ({C2D17964-BBDD-4339-B9F3-12D7205B39CC}), adding it.      WUAHandler  

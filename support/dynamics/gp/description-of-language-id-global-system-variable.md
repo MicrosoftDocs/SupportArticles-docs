@@ -75,8 +75,7 @@ The following table lists the values of the Language ID global variable and the 
 |49|Lithuanian-Lithuania|
 |50|Latvian-Latvia|
 |51|English-Thailand|
-|||
-
+  
 > [!NOTE]
 > If you specify a value for the Language ID global variable, the Language ID global variable does not indicate that a translated version of Microsoft Dynamics GP is available.
 

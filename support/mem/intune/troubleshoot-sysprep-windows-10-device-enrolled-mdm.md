@@ -5,6 +5,7 @@ author: helenclu
 ms.author: jchornbe
 ms.reviewer: jchornbe
 ms.date: 10/06/2021
+search.appverid: MET150
 ms.custom: sap:Windows enrollment
 ---
 

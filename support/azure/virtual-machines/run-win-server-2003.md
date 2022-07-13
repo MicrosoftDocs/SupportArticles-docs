@@ -35,7 +35,7 @@ Yes.
 
 Yes. You can create a Windows Server 2003 Azure VM from specialized VHD only, not from generalized (Syspreped) VHD.
 
-**Can I create a new Windows Server 2003 VM from the Azure Marketplace?** 
+**Can I create a new Windows Server 2003 VM from the Azure Marketplace?**
 
 For versions that are earlier than Windows Server 2008 R2, there is no Azure Marketplace support. you must provide your own specialized operating system VHD for new Windows Server 2003 VMs.
 
@@ -77,3 +77,5 @@ The maximum supported VM size is two virtual processors. 64-bit OS has been repo
 **Is 32-bit version of Windows Server 2003 supported on Azure?**  
 
 A: Windows Server 2003 32-bit has the same level of support as 64-bit, but both operating systems are past their end of support date. Microsoft does not support operating systems that are past their [End of Support date](https://support.microsoft.com/lifecycle/search) without a Custom Support Agreement (CSA). However, the Azure infrastructure is supported. See [Microsoft server software support for Microsoft Azure virtual machines](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines) for more information.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

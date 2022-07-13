@@ -6,7 +6,7 @@ ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
-# Troubleshooting automatic failover problems in SQL Server AlwaysOn environments
+# Troubleshooting automatic failover problems in SQL Server Always On environments
 
 This article helps you resolve the problems that occur during automatic failover in SQL Server.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2833707
 
 ## Summary  
 
-Microsoft SQL Server AlwaysOn availability groups can be configured for automatic failover. Therefore, if a health issue is detected on the instance of SQL Server that is hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica cannot always be transitioned to the primary role, instead being transitioned only to the resolving role. Unless the primary replica returns to a healthy state, there is no replica in the primary role. Additionally, the availability databases are inaccessible.
+Microsoft SQL Server Always On availability groups can be configured for automatic failover. Therefore, if a health issue is detected on the instance of SQL Server that is hosting the primary replica, the primary role can be transitioned to the automatic failover partner (secondary replica). However, the secondary replica cannot always be transitioned to the primary role, instead being transitioned only to the resolving role. Unless the primary replica returns to a healthy state, there is no replica in the primary role. Additionally, the availability databases are inaccessible.
 
 This article lists some common causes of unsuccessful automatic failover. Additionally, this article discusses the steps that you can perform in order to diagnose the cause of these failures.
 
@@ -157,7 +157,7 @@ Conclusion
 
 A successful automatic failover of the availability group requires all availability databases be in the `SYNCHRONIZED` status. For more information about availability modes, review the following link:
 
-[Availability modes in AlwaysOn availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
+[Availability modes in Always On availability groups](/sql/database-engine/availability-groups/windows/availability-modes-always-on-availability-groups)
 
 ## Case 4: Unable to failover, 'Force Protocol Encryption' configuration has been selected for the client protocols
 
@@ -172,4 +172,4 @@ To check for this configuration:
 
 Conclusion
 
-SQL Server AlwaysOn health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the S**QL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).
+SQL Server Always On health monitoring uses a local ODBC connection to monitor SQL Server health. **Force Protocol Encryption** should only be enabled in the Client Configuration section of SQL Server Configuration Manager, if SQL Server itself has been configured to Force Encryptions in SQL Server Configuration Manager under the S**QL Server Network Configuration** section. For more information, see: [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine).

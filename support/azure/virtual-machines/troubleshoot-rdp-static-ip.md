@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.collection: windows
 ms.topic: troubleshooting
@@ -15,10 +14,9 @@ ms.date: 11/08/2018
 ms.author: genli
 ---
 
-#  Cannot remote desktop to Azure Virtual Machines because of static IP
+# Cannot remote desktop to Azure Virtual Machines because of static IP
 
 This article describes a problem in which you cannot remote desktop to Azure Windows Virtual Machines (VMs) after a static IP is configured in the VM.
-
 
 ## Symptoms
 
@@ -77,3 +75,5 @@ To resolve this issue, use Serial control to enable DHCP or [reset network inter
     You don't have to restart the VM at this point. The VM will be back reachable.
 
 After that, if you want to configure the static IP for the VM, see [Configure static IP addresses for a VM](/azure/virtual-network/virtual-networks-static-private-ip-arm-pportal).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

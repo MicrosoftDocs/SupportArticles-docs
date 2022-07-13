@@ -100,7 +100,7 @@
       href: new-databases-not-automatically-added.md
     - name: Protection jobs fail with errors
       href: protection-jobs-fail-errors.md
-    - name: SQL Server AlwaysOn protection fails with error 0x80990F75
+    - name: SQL Server Always On protection fails with error 0x80990F75
       href: sql-alwayson-protection-error-0x80990F75.md
     - name: Troubleshoot scheduled backup job failures
       href: troubleshoot-scheduled-backup-job-failures.md

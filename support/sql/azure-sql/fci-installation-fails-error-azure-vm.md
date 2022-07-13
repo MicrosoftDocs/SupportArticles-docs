@@ -73,8 +73,7 @@ A new switch, **ManagementPointNetworkType**, that can be called by PowerShell c
 | **Singleton**|Uses the traditional method of DHCP or static IP address.|
 | **Distributed**|Use a Distributed Network Name by using Node IP addresses.|
 | **Automatic**|Uses detection to determine the appropriate setting. If SQL Server is running in Azure, uses **Distributed**. If SQL Server is running on-premises, uses **Singleton** (default setting).|
-|||
-
+  
 If you create the Windows cluster by using the Windows Cluster Manager Tool, the tool sets the switch parameter to **Automatic**. Because you are working on an Azure VM, the switch uses a Distributed Network Name instead.
 
 You can verify this by running the following PowerShell command:

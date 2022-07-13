@@ -1,6 +1,5 @@
 {
   "build": {
-
     "content": [
       {
         "files": [
@@ -21,7 +20,6 @@
         ]
       }
     ],
-
     "resource": [
       {
         "files": [
@@ -41,19 +39,18 @@
         ]
       }
     ],
-
     "overwrite": [],
     "externalReference": [],
-
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None", 
-      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs", 
-      "searchScope": ["Troubleshoot"],
+      "feedback_system": "None",
+      "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs",
+      "searchScope": [
+        "Troubleshoot"
+      ],
       "recommendations": true
     },
-
     "fileMetadata": {
       "feedback_system": {
         "azure/*.md": "GitHub",
@@ -62,7 +59,6 @@
       "layout": {
         "**/index.yml": "LandingPage"
       },
-
       "manager": {
         "**/*.md": "dcscontentpm"
       },
@@ -74,10 +70,21 @@
         "azure/active-directory/*.md": "genlin",
         "azure/cloud-services/*.md": "genlin",
         "azure/virtual-machines/*.md": "genlin",
+        "developer/**/*.md": "HaiyingYu",
         "mem/**/*.md": "helenclu",
-        "system-center/**/*.md":"helenclu",
-        "dynamics-365/**/*.md":"David-Pack",
-        "power-platform/**/*.md":"David-Pack",
+        "system-center/**/*.md": "helenclu",
+        "dynamics-365/**/*.md": "David-Pack",
+        "dynamics-365/supply-chain/costing/*.md": "JennySong-SH",
+        "dynamics-365/supply-chain/inventory/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/planning/*.md": "t-benebo",
+        "dynamics-365/supply-chain/procurement/*.md": "GalynaFedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanhoffmann",
+        "dynamics-365/supply-chain/products/*.md": "t-benebo",
+        "dynamics-365/supply-chain/rebates/*.md": "sherry-zheng",
+        "dynamics-365/supply-chain/sales/*.md": "Henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "Weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "Mirzaab",
+        "power-platform/**/*.md": "David-Pack",
         "dynamics/gp/*.md": "David-Pack"
       },
       "ms.author": {
@@ -85,9 +92,20 @@
         "azure/active-directory/*.md": "genli",
         "azure/cloud-services/*.md": "genli",
         "azure/virtual-machines/*.md": "genli",
+        "developer/**/*.md": "haiyingyu",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/**/*.md": "davidpac",
+        "dynamics-365/supply-chain/costing/*.md": "yanansong",
+        "dynamics-365/supply-chain/inventory/*.md": "chuzheng",
+        "dynamics-365/supply-chain/planning/*.md": "benebotg",
+        "dynamics-365/supply-chain/procurement/*.md": "gfedorova",
+        "dynamics-365/supply-chain/production/*.md": "johanho",
+        "dynamics-365/supply-chain/products/*.md": "benebotg",
+        "dynamics-365/supply-chain/rebates/*.md": "chuzheng",
+        "dynamics-365/supply-chain/sales/*.md": "henrikan",
+        "dynamics-365/supply-chain/transportation/*.md": "weijiesa",
+        "dynamics-365/supply-chain/warehousing/*.md": "mirzaab",
         "power-platform/**/*.md": "davidpac",
         "dynamics/gp/*.md": "davidpac"
       },
@@ -102,7 +120,6 @@
       "ms.topic": {
         "**/*.md": "troubleshooting"
       },
-
       "ms.prod": {
         "developer/biztalk/**/*.md": "biztalk-server",
         "developer/dotnet/**/*.md": ".net",
@@ -118,7 +135,7 @@
         "developer/visualstudio/visual-basic/**/*.md": ".net",
         "developer/visualstudio/visual-basic/ide/*.md": "visual-basic-6",
         "windows/win32/**/*.md": "windows-dev-apps",
-        "windows-hardware/drivers/**/*.md": "windows-hardware",        
+        "windows-hardware/drivers/**/*.md": "windows-hardware",
         "mem/configmgr/**/*.md": "configuration-manager",
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
@@ -126,7 +143,6 @@
         "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
-        "dotnet/**/*.md": "",
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
         "developer/dotnet/framework/general/**/*.md": "dotnet-general",
         "developer/dotnet/framework/installation/**/*.md": "dotnet-installation",
@@ -178,26 +194,18 @@
         "developer/browsers/stability-performance/**/*.md": "internet-explorer-stability-performance",
         "developer/visualstudio/**/*.md": "",
         "developer/visualstudio/cpp/libraries/**/*.md": "visual-cpp-libraries",
-        "developer/visualstudio/cpp/general/**/*.md": "visual-cpp-general",
-        "developer/visualstudio/cpp/installation/**/*.md": "visual-cpp-installation",
-        "developer/visualstudio/cpp/ide/**/*.md": "visual-cpp-ide",
+        "developer/visualstudio/cpp/debuggers/**/*.md": "visual-cpp-debuggers",
         "developer/visualstudio/cpp/language-compilers/**/*.md": "visual-cpp-language-compilers",
-        "developer/visualstudio/cpp/project-build/**/*.md": "visual-cpp-project-build",
-        "developer/visualstudio/csharp/debuggers/**/*.md": "csharp-debuggers",
-        "developer/visualstudio/csharp/general/**/*.md": "csharp-general",
         "developer/visualstudio/csharp/language-compilers/**/*.md": "csharp-language-compilers",
-        "developer/visualstudio/general/debuggers/**/*.md": "vs-debuggers",
-        "developer/visualstudio/general/general/**/*.md": "vs-general",
-        "developer/visualstudio/general/installation/**/*.md": "vs-installation",
-        "developer/visualstudio/general/language-compilers/**/*.md": "vs-language-compilers",
-        "developer/visualstudio/general/ide/**/*.md": "vs-ide",
-        "developer/visualstudio/general/project-build/**/*.md": "vs-project-build",
-        "developer/visualstudio/general/version-control/**/*.md": "vs-version-control",
-        "developer/visualstudio/general/third-party/**/*.md": "vs-third-party",
-        "developer/visualstudio/general/tools-utilities/**/*.md": "vs-tools-utilities",
-        "developer/visualstudio/install/general/**/*.md": "vs-installation-general",
-        "developer/visualstudio/install/install/**/*.md": "vs-installation-install",
-        "developer/visualstudio/install/third-party/**/*.md": "vs-installation-third-party",
+        "developer/visualstudio/debuggers/**/*.md": "vs-debuggers",
+        "developer/visualstudio/general/**/*.md": "vs-general",
+        "developer/visualstudio/installation/**/*.md": "vs-install",
+        "developer/visualstudio/language-compilers/**/*.md": "vs-language-compilers",
+        "developer/visualstudio/ide/**/*.md": "vs-ide",
+        "developer/visualstudio/project-build/**/*.md": "vs-project-build",
+        "developer/visualstudio/version-control/**/*.md": "vs-version-control",
+        "developer/visualstudio/third-party/**/*.md": "vs-third-party",
+        "developer/visualstudio/tools-utilities/**/*.md": "vs-tools-utilities",
         "developer/visualstudio/silverlight/**/*.md": "vs-silverlight",
         "developer/visualstudio/subscriptions/**/*.md": "vs-subscriptions",
         "developer/visualstudio/visual-basic/ide/**/*.md": "visual-basic-ide",
@@ -232,7 +240,7 @@
         "sql/reporting-services/**/*.md": "sql-reporting-services-ssrs",
         "sql/security/**/*.md": "sql-engine-security",
         "sql/ssms/**/*.md": "sql-tools",
-        "sql/tools/**/*.md": "sql-tools"        
+        "sql/tools/**/*.md": "sql-tools"
       },
       "ms.service": {
         "azure/active-directory/*.md": "active-directory",
@@ -244,9 +252,22 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
-        "mem/intune/**/*.md": "microsoft-intune"
+        "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
+        "mem/intune/**/*.md": "microsoft-intune",
+        "power-platform/ai-builder/*.md": "aibuilder"
       },
-
+        "ms.subservice": {
+          "dynamics-365/supply-chain/costing/**.*": "d365-scm-inventory-cost-close",
+          "dynamics-365/supply-chain/inventory/**.*": "d365-scm-inventory-manage",
+          "dynamics-365/supply-chain/planning/**.*": "d365-scm-master-planning",
+          "dynamics-365/supply-chain/procurement/**.*": "d365-scm-po-sourcing",
+          "dynamics-365/supply-chain/production/**.*": "d365-scm-product-management",
+          "dynamics-365/supply-chain/products/**.*": "d365-scm-manufacturing",
+          "dynamics-365/supply-chain/rebates/**.*": "d365-scm-rebate",
+          "dynamics-365/supply-chain/sales/**.*": "d365-scm-sales-order",
+          "dynamics-365/supply-chain/transportation/**.*": "d365-scm-transportation-manage",
+          "dynamics-365/supply-chain/warehousing/**.*": "d365-scm-warehouse"
+      },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",
         "developer/dotnet/**/*.md": ".NET",
@@ -280,7 +301,7 @@
         "azure/cloud-services/*.md": "Cloud Services",
         "azure/virtual-machines/*.md": "Virtual Machines",
         "azure/active-directory/*.md": "Active Directory",
-        "azure/devops/*.md": "Active DevOps",
+        "azure/devops/*.md": "Azure DevOps",
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
@@ -289,41 +310,145 @@
         "dynamics/gp/*.md": "Dynamics GP"
       },
       "searchScope": {
-        "developer/biztalk/**/*.md": [ "BizTalk Server" ],
-        "developer/dotnet/**/*.md": [ ".NET" ],
-        "developer/host-integration-server/**/*.md": [ "Host Integration Server" ],
-        "developer/visualstudio/**/*.md": [ "VS IDE" ],
-        "developer/webapps/iis/**/*.md": [ "IIS" ],
-        "developer/webapps/aspnet/**/*.md": [ "ASP.NET","ASP.NET Core" ],
-        "developer/webapps/aspnetcore/**/*.md": [ "ASP.NET","ASP.NET Core" ],
-        "sql/**/*.md": [ "sql" ],
-        "developer/webapps/**/*.md": [ "Web Apps" ],
-        "windows/win32/**/*.md": [ "Windows", "Desktop" ],
-        "windows-hardware/drivers/**/*.md": [ "Drivers" ],
-        "windows-server/**/*.md": [ "Windows Server" ],
-        "windows-client/**/*.md": [ "Windows Client" ],
-        "developer/browsers/**/*.md": [ "Browsers" ],
-        "azure/**/*.md": [ "Azure" ],
-        "mem/intune/**/*.md": [ "Intune" ],
-        "mem/configmgr/**/*.md": [ "ConfigMgr" ],
-        "system-center/**/*.md": [ "System Center" ],
-        "dynamics-365/supply-chain/**/*.md": [ "dynamics365-supplychain", "Dynamics 365", "Unified Operations", "Supply Chain" ],
-        "power-platform/power-apps/*.md": [ "Power Apps" ],
-        "power-platform/power-automate/*.md": [ "Power Automate" ]
+        "developer/biztalk/**/*.md": [
+          "Troubleshoot",
+          "BizTalk Server"
+        ],
+        "developer/dotnet/**/*.md": [
+          "Troubleshoot",
+          ".NET"
+        ],
+        "developer/host-integration-server/**/*.md": [
+          "Troubleshoot",
+          "Host Integration Server"
+        ],
+        "developer/visualstudio/**/*.md": [
+          "Troubleshoot",
+          "VS IDE"
+        ],
+        "developer/webapps/**/*.md": [
+          "Troubleshoot",
+          "Web Apps"
+        ],
+        "developer/webapps/iis/**/*.md": [
+          "Troubleshoot",
+          "IIS"
+        ],
+        "developer/webapps/aspnet/**/*.md": [
+          "Troubleshoot",
+          "ASP.NET",
+          "ASP.NET Core"
+        ],
+        "developer/webapps/aspnetcore/**/*.md": [
+          "Troubleshoot",
+          "ASP.NET",
+          "ASP.NET Core"
+        ],
+        "sql/**/*.md": [
+          "Troubleshoot",
+          "sql"
+        ],
+        "windows/win32/**/*.md": [
+          "Troubleshoot",
+          "Windows",
+          "Desktop"
+        ],
+        "windows-hardware/drivers/**/*.md": [
+          "Troubleshoot",
+          "Drivers"
+        ],
+        "windows-server/**/*.md": [
+          "Troubleshoot",
+          "Windows Server"
+        ],
+        "windows-client/**/*.md": [
+          "Troubleshoot",
+          "Windows Client"
+        ],
+        "developer/browsers/**/*.md": [
+          "Troubleshoot",
+          "Browsers"
+        ],
+        "azure/**/*.md": [
+          "Troubleshoot",
+          "Azure"
+        ],
+        "mem/intune/**/*.md": [
+          "Troubleshoot",
+          "Intune"
+        ],
+        "mem/configmgr/**/*.md": [
+          "Troubleshoot",
+          "ConfigMgr"
+        ],
+        "system-center/**/*.md": [
+          "Troubleshoot",
+          "System Center"
+        ],
+        "dynamics-365/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365"
+        ],
+        "dynamics-365/sales/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Sales"
+        ],
+        "dynamics-365/marketing/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Marketing"
+        ],
+        "dynamics-365/fraud-protection/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Fraud protection"
+        ],
+        "dynamics-365/supply-chain/**/*.md": [
+          "Troubleshoot",
+          "dynamics365-supplychain",
+          "Dynamics 365",
+          "Unified Operations",
+          "Supply Chain"
+        ],
+        "power-platform/power-apps/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Apps"
+        ],
+        "power-platform/power-automate/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "Power Automate"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "Troubleshoot",
+          "Power Platform",
+          "AI Builder"
+        ]
       },
-      "ms.search.scope":{
-        "dynamics-365/supply-chain/**/*.md": ["Core","Operations","Supply Chain","ShowInHelp"],
-        "dynamics-365/finance/**/*.md": ["Core","Operations", "Finance","ShowInHelp"]
+      "ms.search.scope": {
+        "dynamics-365/supply-chain/**/*.md": "Core, Operations, Supply Chain, ShowInHelp",
+        "dynamics-365/finance/**/*.md": "Core, Operations, Finance, ShowInHelp"
       },
-      "search.app":{
-        "power-platform/power-apps/*.md": ["PowerApps"],
-        "power-platform/power-automate/*.md": [ "Flow" ]
+      "search.app": {
+        "power-platform/power-apps/*.md": [
+          "PowerApps"
+        ],
+        "power-platform/power-automate/*.md": [
+          "Flow"
+        ],
+        "power-platform/ai-builder/*.md": [
+          "PowerApps",
+          "Flow"
+        ],
+        "dynamics-365/supply-chain/**/**.*": [
+          "SCM"
+        ]
       }
     },
-
     "template": [],
     "dest": "support1-docset",
     "markdownEngineName": "markdig"
-
   }
 }

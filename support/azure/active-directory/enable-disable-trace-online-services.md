@@ -123,6 +123,4 @@ To disable debug tracing for the Microsoft Online Services Sign-in Assistant, fo
 
 Log file locations depend on the specifics of the Folder registry entry that's listed earlier. In this example, the log is located in the `C:\MSOTrace` or `C:\MSOTraceLite` folder, depending on the application that performs authentication.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

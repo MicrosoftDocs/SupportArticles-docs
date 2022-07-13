@@ -5,7 +5,6 @@ services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 ms.service: virtual-machines
 ms.topic: troubleshooting
 ms.tgt_pltfrm: na
@@ -20,7 +19,7 @@ This article helps correct VHD errors when running Virtual Machine in Windows or
 
 ## Symptoms
 
-When you create a virtual machine in Microsoft Azure by using an uploaded VHD, the deployment fails and returns the following error message: 
+When you create a virtual machine in Microsoft Azure by using an uploaded VHD, the deployment fails and returns the following error message:
 
 ```
 New-AzureRmVM : Long running operation failed with status 'Failed'.
@@ -33,7 +32,7 @@ ErrorMessage: The specified cookie value in VHD footer indicates that disk 'disk
 This problem occurs for one of the following reasons:
 
 - The VHD does not comply with the 1 MB alignment (offset). The supported disk size should be 1 MB * N. For example, the disk should be 102,401 MB.
-- The VHD is corrupted or not supported. 
+- The VHD is corrupted or not supported.
 
 ## Resolution
 
@@ -59,3 +58,5 @@ Continuing problems may indicate a corrupted VHD. In this situation, we recommen
 For more information, see the following article:
 
 - [About VHD](/azure/virtual-machines/managed-disks-overview)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

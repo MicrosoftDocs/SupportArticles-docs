@@ -40,8 +40,7 @@ _Original KB number:_ &nbsp; 179442
 |1024-65535/TCP/UDP|88/TCP/UDP|Kerberos|
 |1024-65535/TCP|445/TCP|SMB|
 |1024-65535/TCP|1024-65535/TCP|FRS RPC (*)|
-||||
-
+  
 NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Windows Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 For more information about how to define RPC server ports that are used by the LSA RPC services, see:
@@ -73,8 +72,7 @@ For more information about the dynamic port range change in Windows Server 2012 
 |49152-65535/TCP/UDP|88/TCP/UDP|Kerberos|
 |49152-65535/TCP/UDP|445/TCP|SMB (**)|
 |49152-65535/TCP|49152-65535/TCP|DFSR RPC (*)|
-||||
-
+  
 NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 (*) For information about how to define RPC server ports that are used by the LSA RPC services, see:
@@ -102,8 +100,7 @@ By default, Windows Server 2003 and Windows 2000 Server DNS servers use ephemera
 |Client Ports|Server Port|Protocol|
 |---|---|---|
 |1024-65535/TCP|1723/TCP|PPTP|
-||||
-
+  
 In addition, you would have to enable IP PROTOCOL 47 (GRE).
 
 > [!NOTE]

@@ -76,3 +76,5 @@ Steps(on the test agent machine):
 7. Click **OK** in the **Internet Protocol Version 4** (TCP/IP v4) dialog box.
 
 Repeat the same steps on the test controller machine.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

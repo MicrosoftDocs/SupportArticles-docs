@@ -68,12 +68,14 @@
       href: inactive-clients-not-send-inventory.md
     - name: Clients don't receive policy data
       href: clients-not-receive-policy-data.md
-    - name: Cloud management gateway
+    - name: Cloud services
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
           href: cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
           href: cmg-communication-error-403.md
+        - name: Tenant attach components fail to connect to backend cloud service
+          href: tenant-attach-component-not-connect-to-gateway.md
     - name: Collections
       items:
         - name: Multiple instances of the Unknown computers collection
@@ -170,6 +172,8 @@
   items:
     - name: lastLogonTimestamp isn't updated as expected
       href: lastlogontimestamp-not-accurate.md
+    - name: Resource domain is changed after installing Windows updates
+      href: resource-domain-changes.md
 - name: Endpoint Protection
   items:
     - name: An incorrect Endpoint Definition status
@@ -210,6 +214,8 @@
           href: scheduled-updates-fails-error-0x800700a1.md
         - name: Unable to manage boot images
           href: error-managing-boot-images.md
+        - name: Errors when capturing Windows 11 image
+          href: windows-11-image-capture-fail.md
     - name: Configure OS deployment in System Center 2012 Configuration Manager
       href: configure-operating-system-deployment.md
     - name: Manage drivers

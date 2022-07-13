@@ -4,7 +4,6 @@ description: Describes how to know when the user clicks a check box in a TreeVie
 ms.date: 04/24/2020
 ms.custom: sap:C and C++ Libraries
 ms.topic: how-to
-ms.technology: visual-cpp-libraries
 ---
 # How to know when the user clicks a check box in a TreeView control
 

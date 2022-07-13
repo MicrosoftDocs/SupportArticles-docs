@@ -58,8 +58,7 @@ The following table lists differences in security settings in the Default Domain
 |Log on as a batch job|LOCAL SERVICE, SUPPORT_388945a0|(Empty)|
 |Log on as a service|NETWORK SERVICE|(Empty)|
 |Shut down the system|Administrators, Backup Operators, Server Operators, Print Operators|Account Operators, Administrators, Backup Operators, Server Operators, Print Operators|
-||||
-
+  
 The following settings will change after you run the Dcgpofix tool:
 
 - AuditAccountManage

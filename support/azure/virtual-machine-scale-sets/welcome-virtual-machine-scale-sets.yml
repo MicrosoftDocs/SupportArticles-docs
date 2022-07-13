@@ -9,9 +9,9 @@ metadata:
   services: virtual-machine-scale-sets
   ms.service: virtual-machine-scale-sets #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author: jc-mackin  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: v-jcmackin #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/5/2021
+  author: genlin   #Required; your GitHub user alias, with correct capitalization.
+  ms.author: genli #Required; microsoft alias of author; optional team alias.
+  ms.date: 5/27/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -20,16 +20,15 @@ landingContent:
 # Start card title with a verb
 
   # Card
-  - title: Scaling issues with the scale set
+  - title: Allocation failures
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: QuotaExceeded error when scaling virtual machine scale sets
-            url: ./virtual-machine-scale-sets-quota-exceeded.md
-          - text: Resolve errors for resource quotas
-            url: https://docs.microsoft.com/azure/azure-resource-manager/templates/error-resource-quota
+          - text: Error AllocationFailed or ZonalAllocationFailed
+            url: allocationfailed-or-zonalallocationfailed.md
+
    # Card
-  - title: Deployment issues with the scale set
+  - title: Deployment errors
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -37,9 +36,33 @@ landingContent:
             url: vmss-public-ip-count-limit-exceeded.md
 
    # Card
-  - title: VM extension issues
+  - title: Extension issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: VM extension provisioning errors in Virtual Machine Scale Sets
+          - text: VM extension provisioning errors
             url: ./vm-extension-provisioning-errors.md
+  
+    # Card
+  - title: Frequently asked questions (FAQ)
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: FAQ for Azure virtual machine scale sets
+            url: /azure/virtual-machine-scale-sets/virtual-machine-scale-sets-faq
+               # Card
+  - title: Scaling errors
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: QuotaExceeded error when scaling virtual machine scale sets
+            url: virtual-machine-scale-sets-quota-exceeded.md
+          - text: Resolve errors for resource quotas
+            url: /azure/azure-resource-manager/templates/error-resource-quota
+   # Card
+  - title: Troubleshoot compute health
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Resource Health shows Degraded state in VMSS
+            url:  resource-health-degraded-state.md

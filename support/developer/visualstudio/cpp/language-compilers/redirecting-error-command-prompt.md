@@ -3,7 +3,6 @@ title: Redirecting error from Command Prompt
 description: This article describes redirecting error messages from Command Prompt.
 ms.date: 10/28/2020
 ms.custom: sap:Language or Compilers
-ms.technology: visual-cpp-language-compilers
 ---
 # Redirecting error messages from Command Prompt: STDERR/STDOUT
 

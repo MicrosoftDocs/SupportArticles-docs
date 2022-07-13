@@ -30,7 +30,7 @@ When Snapshot Isolation is enforced, **NOLOCK** hints are ignored. The discrepan
 
 ## Resolution
 
-To fix this issue, rebuild the index on the primary replica. This operation then propagates to secondary replicas. For more information, see [Recommendations for Index Maintenance with AlwaysOn Availability Groups](/archive/blogs/alwaysonpro/recommendations-for-index-maintenance-with-alwayson-availability-groups).
+To fix this issue, rebuild the index on the primary replica. This operation then propagates to secondary replicas. For more information, see [Recommendations for Index Maintenance with Always On Availability Groups](/archive/blogs/alwaysonpro/recommendations-for-index-maintenance-with-alwayson-availability-groups).
 
 ## More information
 

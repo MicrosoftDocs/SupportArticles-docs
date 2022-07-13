@@ -5,7 +5,6 @@ services: virtual-machines
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: ''
 ms.service: virtual-machines
 ms.collection: linux
@@ -13,8 +12,8 @@ ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
 ms.devlang: azurecli
-ms.date: 10/09/2019
-ms.author: v-six
+ms.date: 5/09/2022
+ms.author: genli
 
 ---
 
@@ -105,15 +104,16 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 
 1. Connect to [the serial console](./serial-console-linux.md).
 2. Use serial console to take single user mode [single user mode](serial-console-grub-single-user-mode.md)
-3. Once the vm has booted into single user mode. Use your favorite text editor to open the fstab file. 
+3. Once the vm has booted into single user mode. Use your favorite text editor to open the fstab file.
 
    ```
-   # nano /etc/fstab
+   nano /etc/fstab
    ```
 
 4. Review the listed file systems. Each line in the fstab file indicates a file system that is mounted when the VM starts. For more information about the syntax of the fstab file, run the man fstab command. To troubleshoot a start failure, review each line to make sure that it's correct in both structure and content.
 
    > [!Note]
+   >
    > * Fields on each line are separated by tabs or spaces. Blank lines are ignored. Lines that have a number sign (#) as the first character are comments. Commented lines can remain in the fstab file, but they won't be processed. We recommend that you comment fstab lines that you're unsure about instead of removing the lines.
    > * For the VM to recover and start, the file system partitions should be the only required partitions. The VM may experience application errors about additional commented partitions. However, the VM should start without the additional partitions. You can later uncomment any commented lines.
    > * We recommend that you mount data disks on Azure VMs by using the UUID of the file system partition. For example, run the following command: ``/dev/sdc1: LABEL="cloudimg-rootfs" UUID="<UUID>" TYPE="ext4" PARTUUID="<PartUUID>"``
@@ -125,13 +125,13 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 6. Save the changes to the fstab file.
 
 7. Reboot the vm using the below command.
-   
+
    ```
-   # reboot -f
+   reboot -f
    ```
+
 > [!Note]
    > You can also use "ctrl+x" command which would also reboot the vm.
-
 
 8. If the entries comment or fix was successful, the system should reach a bash prompt in the portal. Check whether you can connect to the VM.
 
@@ -161,12 +161,13 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 5. Use your favorite text editor to open the fstab file. After the disk is mounted, run the following command for Nano:
 
    ```
-   $ nano /mnt/troubleshootingdisk/etc/fstab
+   nano /etc/fstab
    ```
 
 6. Review the listed file systems. Each line in the fstab file indicates a file system that is mounted when the VM starts. For more information about the syntax of the fstab file, run the man fstab command. To troubleshoot a start failure, review each line to make sure that it's correct in both structure and content.
 
    > [!Note]
+   >
    > * Fields on each line are separated by tabs or spaces. Blank lines are ignored. Lines that have a number sign (#) as the first character are comments. Commented lines can remain in the fstab file, but they won't be processed. We recommend that you comment fstab lines that you're unsure about instead of removing the lines.
    > * For the VM to recover and start, the file system partitions should be the only required partitions. The VM may experience application errors about additional commented partitions. However, the VM should start without the additional partitions. You can later uncomment any commented lines.
    > * We recommend that you mount data disks on Azure VMs by using the UUID of the file system partition. For example, run the following command: ``/dev/sdc1: LABEL="cloudimg-rootfs" UUID="<UUID>" TYPE="ext4" PARTUUID="<PartUUID>"``
@@ -205,12 +206,13 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 5. Use your favorite text editor to open the fstab file. After the disk is mounted, run the following command for Nano. Make sure that you're working on the fstab file that is located on the mounted disk and not the fstab file that's on the rescue VM.
 
    ```
-   $ nano /mnt/troubleshootingdisk/etc/fstab
+   nano /mnt/troubleshootingdisk/etc/fstab
    ```
 
 6. Review the listed file systems. Each line in the fstab file indicates a file system that is mounted when the VM starts. For more information about the syntax of the fstab file, run the man fstab command. To troubleshoot a start failure, review each line to make sure that it's correct in both structure and content.
 
    > [!Note]
+   >
    > * Fields on each line are separated by tabs or spaces. Blank lines are ignored. Lines that have a number sign (#) as the first character are comments. Commented lines can remain in the fstab file, but they won't be processed. We recommend that you comment fstab lines that you're unsure about instead of removing the lines.
    > * For the VM to recover and start, the file system partitions should be the only required partitions. The VM may experience application errors about additional commented partitions. However, the VM should start without the additional partitions. You can later uncomment any commented lines.
    > * We recommend that you mount data disks on Azure VMs by using the UUID of the file system partition. For example, run the following command: ``/dev/sdc1: LABEL="cloudimg-rootfs" UUID="<UUID>" TYPE="ext4" PARTUUID="<PartUUID>"``
@@ -239,3 +241,5 @@ To resolve this problem, start the VM in emergency mode by using the serial cons
 
 * [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM with the Azure CLI 2.0](./troubleshoot-recovery-disks-linux.md)
 * [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

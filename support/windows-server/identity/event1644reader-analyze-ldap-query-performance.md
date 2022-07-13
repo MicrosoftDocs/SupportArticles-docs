@@ -113,7 +113,6 @@ The following table summarizes the data that is contained in each tab:
 | **TotalSearchTime by Filters**|Lists LDAP queries in descending order of total search time. Drillthrough detail exposes the LDAP client's IP address and the date and time when each matching query was submitted.|
 | **Search time ranks**|Displays the number of LDAP queries that occurred in time-based quartiles. Slower queries are bad. Faster queries are good if they aren't issued too often. Microsoft Exchange wants LDAP queries that are issued by Exchange servers to be resolved in 50 milliseconds or less. So, the first quartile group focuses on that time "bucket."|
 | **Blank Pivot**|This is a blank pivot table that you can change as required to show the specific data for your scenario.|
-|||  
 
 ### Scenario analysis
 
@@ -132,7 +131,6 @@ The following table lists the possible optimizations for this issue.
 |Optimize the LDAP query to execute more quickly.|Query syntax may have to be restructured to execute more quickly.<br/>Moving query elements to the left or right within the filter can improve performance.<br/>Adding a double "not" may improve query performance.<br/>Consider reducing the number of objects that are visited by starting queries lower in the tree.<br/>Reduce the number of attributes that are being returned by queries.|
 |Add indexes to Active Directory attributes as required.|Adding indexes can improve query performance. This has the side effect of increasing database size and may temporarily delay Active Directory replication during index build.|
 |Determine whether a code defect exists in the query optimizer and other components.|Defects in the LDAP query optimizer and other components can reduce throughput.|
-|||  
 
 ### Known issue
 

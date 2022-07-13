@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -23,10 +22,10 @@ If you have trouble when activating Azure Windows virtual machine (VM) that is c
 
 Azure uses different endpoints for KMS (Key Management Services) activation depending on the cloud region where the VM resides. When using this troubleshooting guide, use the appropriate KMS endpoint that applies to your region.
 
-* Azure public cloud regions: kms.core.windows.net:1688
-* Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688
-* Azure Germany national cloud regions: kms.core.cloudapi.de:1688
-* Azure US Gov national cloud regions: kms.core.usgovcloudapi.net:1688
+- Azure public cloud regions: kms.core.windows.net:1688 or azkms.core.windows.net:1688
+- Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688
+- Azure Germany national cloud regions: kms.core.cloudapi.de:1688
+- Azure US Gov national cloud regions: kms.core.usgovcloudapi.net:1688
 
 ## Symptom
 
@@ -141,6 +140,4 @@ Yes.
 
 When the grace period has expired and Windows is still not activated, Windows Server 2008 R2 and later versions of Windows will show additional notifications about activating. The desktop wallpaper remains black, and Windows Update will install security and critical updates only, but not optional updates. See  the Notifications section at the bottom of the [Licensing Conditions](/previous-versions/tn-archive/ff793403(v=technet.10)) page.
 
-## Need help? Contact support
-
-If you still need help, [contact support](https://portal.azure.com/?#blade/Microsoft_Azure_Support/HelpAndSupportBlade) to get your issue resolved quickly.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

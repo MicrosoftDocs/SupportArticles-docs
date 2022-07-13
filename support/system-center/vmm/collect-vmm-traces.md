@@ -34,13 +34,13 @@ Storage traces can grow very large quickly. Therefore, make sure that you try to
 
 In the .cab file that you saved in step 5, locate the following files:
 
-- \<*ServerName*>\_VMMLog_\<*number*>.car - VMM debug log
-- \<*ServerName*>\_VMMLog_\<*number*>_error.car - VMM debug log errors only
-- \<*ServerName*>-cimxmllog.xml - CimXML debug log
-- \<*ServerName*>_StorageLog_02031445.etl - CIMXML ETL log
+- \<_ServerName_>\_VMMLog_\<_number_>.car - VMM debug log
+- \<_ServerName_>\_VMMLog_\<_number_>_error.car - VMM debug log errors only
+- \<_ServerName_>-cimxmllog.xml - CimXML debug log
+- \<_ServerName_>_StorageLog_02031445.etl - CIMXML ETL log
 
 > [!NOTE]
-> in these files, the placeholder \<*ServerName*> represents the name of the server that you are tracing, and the placeholder \<*number*> represents a date and time stamp string.
+> in these files, the placeholder \<_ServerName_> represents the name of the server that you are tracing, and the placeholder \<_number_> represents a date and time stamp string.
 
 ## Manual method
 
@@ -58,7 +58,6 @@ In the .cab file that you saved in step 5, locate the following files:
    |`LogFileName`|REG_SZ|The full path of your `CIMXMLLog`. For example, `C:\temp\cimxmllog.xml`.|
    |`LogLevel`|REG_DWORD|4|
    |`MaxLogFileSize`|REG_DWORD|0x4000000 (hexadecimal)|
-   |||
 
 6. Restart the Windows Standards-Based Storage Management service (MSStrgSvc).
 7. Reproduce your issue.

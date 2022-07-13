@@ -30,7 +30,7 @@ You will be prompted by IE to Add a trusted website.
     [HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\EscDomains\microsoft.com\*.support]
     ```
 
-If you receive an IE Security Alert saying `Your current security settings do not allow this file to be downloaded.`, then you did not add https://*.support.microsoft.com to the list of trusted sites.
+If you receive an IE Security Alert saying `Your current security settings do not allow this file to be downloaded.`, then you did not add `https://*.support.microsoft.com` to the list of trusted sites.
 
 ### Information collected
 
@@ -39,8 +39,7 @@ If you receive an IE Security Alert saying `Your current security settings do no
 | Description| File name |
 |---|---|
 |Basic System Information including machine name, service pack, computer model and processor name and speed<br/>|resultreport.xml<br/>|
-|||
-
+  
 #### LogFiles in System32 and Azure logs
 
 | Description| File name |
@@ -59,8 +58,7 @@ If you receive an IE Security Alert saying `Your current security settings do no
 |Startup Task Files from {RoleRoot}\{startup tasks=""}(get the filename from {RoleRoot}\rolemodel.xml)<br/>|{ComputerName}_StartupTaskModules.Zip<br/>|
 |Role Entry Point Binary from {RoleRoot}\{entrypoint DLL=""} (the file name obtained from {RoleRoot}\__entrypoint.txt content)<br/>|{ComputerName}_EntryPointDLL.Zip<br/>|
 |Log files from C:\Logs<br/>|{ComputerName}_Logs.Zip<br/>|
-|||
-
+  
 #### Event logs
 
 | Description| File name |
@@ -69,16 +67,14 @@ If you receive an IE Security Alert saying `Your current security settings do no
 |Application Log<br/>|{ComputerName}_evt_Application.*<br/>|
 |Microsoft Azure<br/>|{ComputerName}_evt_WindowsAzure.*<br/>|
 |All other event logs in evtx format<br/>|{ComputerName}_*evt_*.evtx<br/>|
-|||
-
+  
 #### File version information (Chksym)
 
 | Description| File name |
 |---|---|
 |File version information from processes currently running on the machine<br/>|{ComputerName}_sym_Process.*<br/>|
 |File version information from processes currently running on the machine<br/>|{ComputerName}_sym_Process.*<br/>|
-|||
-
+  
 In addition to collecting the information that is described earlier, this diagnostic package can detect one or more of the following symptoms:
 
 - Check if IntelliTrace enabled causes roles to not automatically recycle
@@ -91,3 +87,5 @@ In addition to collecting the information that is described earlier, this diagno
 For more information about the Microsoft Automated Troubleshooting Services and about the Support Diagnostics Platform, please open the following Microsoft Knowledge Base article:
 
 [2598970](https://support.microsoft.com/help/2598970) Information about Microsoft Automated Troubleshooting Services and Support Diagnostic Platform
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

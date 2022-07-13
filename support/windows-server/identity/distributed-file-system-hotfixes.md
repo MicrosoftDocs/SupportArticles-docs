@@ -58,14 +58,12 @@ You can get the latest fixes for these DFS components by installing the followin
 |---|---|---|---|---|
 |April 15, 2020| [4056895](https://support.microsoft.com/help/4056895)|January 8, 2018-KB4056895 (Monthly Rollup)|This monthly rollup contains the 6.3.9600.18895 version of Dfsc.sys. (client-side).|Included in [January 3, 2018-KB4056898 (Security-only update)](https://support.microsoft.com/help/4056898).Included in [January 8, 2018-KB4056895 (Monthly Rollup) and later](https://support.microsoft.com/help/4056895) monthly rollups.|
 |Mar 06, 2015| [3046481](https://support.microsoft.com/help/3046481)|DFS Namespaces deployment causes slow access or access time-out when you access DFS share in Windows Server 2012 R2.|This hotfix contains the most current version of Dfssvc.exe for Windows Server 2012 R2.|To install this update, you must have Windows Server 2012 R2 installed.|
-||||||
 
 #### Windows Server 2012
 
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 |April 15, 2020| [3192406](https://support.microsoft.com/help/3192406)|October 2016 Preview of Monthly Quality Rollup for Windows Server 2012|This monthly rollup contains the 6.2.9200.21968 version of Dfssvc.exe and the 6.2.9200.21976 version of Dfsc.sys for Windows Server 2012.|Included in October 2016 Preview of Monthly Quality Rollup for Windows Server 2012 and later monthly rollups.|
-||||||
 
 ### DFS replication
 
@@ -77,7 +75,6 @@ You can get the latest fixes for these DFS components by installing the followin
 ||Not applicable||This hotfix contains the most current version of Dfsrro.sys for Windows Server 2012 R2.|To install this hotfix, you must have Windows Server 2012 R2 installed.|
 ||Not applicable||This hotfix contains the most current version of Dfsrclus.dll for Windows Server 2012 R2.| |
 |August 31, 2014| [2996883](https://support.microsoft.com/help/2996883)|DFSR stops replication after an unexpected shutdown in a Windows 8.1 or Windows Server 2012 R2 environment|This hotfix contains the most current versions of Dfsrdiag.exe and Dfsrmig.exe for Windows Server 2012 R2.|To apply this hotfix, you must be running Windows Server 2012 R2 and April 2014 Update [2919355](https://support.microsoft.com/help/2919355).|
-||||||
 
 #### Windows Server 2012
 
@@ -85,14 +82,12 @@ You can get the latest fixes for these DFS components by installing the followin
 |---|---|---|---|---|
 |February 14, 2015| [2884176](https://support.microsoft.com/help/2884176)|Large backlogs on Windows-based DFSR servers|This hotfix contains the most current version of Dfsrs.exe and Dfsrress.dll for Windows Server 2012.|To install this hotfix, you must have Windows Server 2012 installed. This hotfix is available for individual download.|
 |Jan-10 2016| [3121255](https://support.microsoft.com/help/3121255)|0x00000024 Stop error in FsRtlNotifyFilterReportChange and VSS backup of PI Data server fails in Windows|This hotfix contains an update for Ntfs.sys for Windows Server 2012.|To install this hotfix, you must have Windows Server 2012 installed. This hotfix is available for individual download. This hotfix is also included in [July 11, 2017-KB4025331 (Monthly Rollup) and later](https://support.microsoft.com/help/4025331) monthly rollups.|
-||||||
 
 #### DFS replication - Sysvol migration
 
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 ||Not applicable||This hotfix contains the most current versions of Dfsrdiag.exe and Dfsrmig.exe for Windows Server 2012.|To install this hotfix, you must have Windows Server 2012 installed.|
-||||||
 
 ### Robocopy
 
@@ -101,14 +96,12 @@ You can get the latest fixes for these DFS components by installing the followin
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 |18-Nov-2014| [3000850](https://support.microsoft.com/help/3000850)|November 2014 update rollup for Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to pre-seed data for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this update rollup, you must have Windows Server 2012 R2 installed and April 2014 Update [2919355](https://support.microsoft.com/help/2919355).|
-||||||
 
 #### Windows Server 2012
 
 |Date added|Knowledge Base article|Title|Why we recommend this hotfix|Hotfix type and availability|
 |---|---|---|---|---|
 |May 16, 2014| [2962407](https://support.microsoft.com/help/2962407)|Windows RT, Windows 8, and Windows Server 2012 update rollup: June 2014|This hotfix contains the most current version of Robocopy.exe.<br/><br/>Robocopy can be used to pre-seed data for new replicated folders and is also used during the migration of Sysvol from FRS to DFSR.|To install this hotfix, you must have Windows 8 or Windows Server 2012 installed.|
-||||||
 
 #### DFS-related registry subkeys that were introduced in hotfixes or security updates
 

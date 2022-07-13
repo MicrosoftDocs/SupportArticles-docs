@@ -17,7 +17,7 @@ This article describes how to fix issues that occur when you can't get the detai
 - The Kubernetes cluster command-line tool ([kubectl](https://kubernetes.io/docs/tasks/tools/)).
 
 > [!NOTE]
-> If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az_aks_install_cli) command.
+> If you use [Azure Cloud Shell](/azure/cloud-shell/overview) to run shell commands, kubectl is already installed. If you use a local shell and already have [Azure CLI](/cli/azure/install-azure-cli) installed, you can alternatively install kubectl by running the [az aks install-cli](/cli/azure/aks#az-aks-install-cli) command.
 
 ## Symptoms
 
@@ -43,3 +43,5 @@ If AKS manages integration with Azure Active Directory (Azure AD), the user migh
 ### Solution: Have the security group admin assign the correct access level
 
 Make sure the security group's administrator has given your account an Active  or Conditional Access assignment. See [AKS-managed Azure Active Directory integration](/azure/aks/managed-aad). This article has instructions for setting either [Active assignment](/azure/aks/managed-aad#configure-just-in-time-cluster-access-with-azure-ad-and-aks) or [Conditional Access assignment](/azure/aks/managed-aad#use-conditional-access-with-azure-ad-and-aks).
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

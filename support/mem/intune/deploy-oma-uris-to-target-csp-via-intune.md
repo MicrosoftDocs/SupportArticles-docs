@@ -5,6 +5,7 @@ ms.date: 12/20/2021
 ms.reviewer: sausarka
 author: helenclu
 ms.author: sausarka
+search.appverid: MET150
 ms.custom: 
 - CI 121166
 - CSSTroubleshooting
@@ -86,8 +87,6 @@ Here's another example that uses BitLocker.
 You can use your existing Group Policy settings as a reference as you build your MDM policy configuration. If your organization wants to move to MDM to manage devices, we recommend that you prepare by analyzing the current Group Policy settings to see what is required to transition to MDM management.
 
 The MDM Migration Analysis Tool (MMAT) determines which Group Policies have been set for a targeted user or computer. Then, it generates a report that lists the level of support for each policy setting in MDM equivalents.
-
-[Download the MMAT](https://github.com/WindowsDeviceManagement/MMAT).
 
 ### Aspects of your Group Policy before and after you migrate to the cloud
 

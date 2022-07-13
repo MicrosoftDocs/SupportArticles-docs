@@ -1,9 +1,5 @@
 {
   "build_entry_point": "docs",
-  "redirection_files": [
-    ".openpublishing.redirection.json",
-    ".openpublishing.redirection.developer.json"
-  ],
   "docsets_to_publish": [
     {
       "docset_name": "support1-docset",
@@ -12,6 +8,10 @@
       "locale": "en-us",
       "monikers": [],
       "moniker_ranges": [],
+      "xref_query_tags": [
+        "/dotnet",
+        "/power-apps/developer/data-platform/webapi/reference"
+      ],
       "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content"
@@ -41,13 +41,13 @@
     {
       "path_to_root": "_themes",
       "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     },
     {
       "path_to_root": "_themes.pdf",
       "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "master",
+      "branch": "main",
       "branch_mapping": {}
     }
   ],
@@ -58,6 +58,10 @@
       "Intellisense"
     ]
   },
+  "redirection_files": [
+    ".openpublishing.redirection.json",
+    ".openpublishing.redirection.developer.json"
+  ],
   "need_generate_pdf_url_template": true,
   "targets": {
     "pdf": {

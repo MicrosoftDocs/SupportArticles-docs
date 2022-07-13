@@ -42,16 +42,14 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |-|-|
 |Elevated User:|{Computername}_EnvironmentVariables_MSDT.txt|
 |Target User:|{Computername}_EnvironmentVariables_{Username}.txt|
-|||
-
+  
 ### Event Logs
 
 |Description|File Name|
 |-|-|
 |Filtered Event Logs (.csv):|{Computername}_ApplicationLog.csv|
 |Filtered Event Logs (.csv):|{Computername}_SystemLog.csv|
-|||
-
+  
 ### Group Policy and IEAK
 
 |Description|File Name|
@@ -72,29 +70,25 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |GP User (.htm):|{Computername}_GPResult_User_{Username}.htm|
 |GP Computer (.txt):|{Computername}_GPResult_Computer.txt|
 |GP Computer (.htm):|{Computername}_GPResult_Computer.htm|
-|||
-
+  
 ### Hardware:DXDiag
 
 |Description|File Name|
 |-|-|
 |DXDiag:|{Computername}_DXDiag.txt|
-|||
-
+  
 ### IEDiag
 
 |Description|File Name|
 |-|-|
 |IEDiagcmd:|{Computername}_IEDiag.cab|
-|||
-
+  
 ### Internet Explorer Setup Log
 
 |Description|File Name|
 |-|-|
 | Internet Explorer Setup Log (.log):|{Computername}_IE9_main.log|
-|||
-
+  
 ### Installed updates/hotfixes
 
 |Description|File Name|
@@ -102,8 +96,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Update/Hotfix history:|{Computername}_Hotfixes.CSV|
 |Update/Hotfix history:|{Computername}_Hotfixes.htm|
 |Update/Hotfix history:|{Computername}_Hotfixes.TXT|
-|||
-
+  
 ### Internet Explorer Core
 
 |Description|File Name|
@@ -117,15 +110,13 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_FeatureControl.TXT|
 |HKLM:|{Computername}_reg_HKLM_InternetSettings.TXT|
 |HKLM:|{Computername}_reg_HKLM_FeatureControl.TXT|
-|||
-
+  
 ### Internet Explorer File Versions
 
 |Description|File Name|
 |-|-|
 |Version Info:|{Computername}_IE_File_Version_Info.txt|
-|||
-
+  
 ### Internet Explorer Zones
 
 |Description|File Name|
@@ -173,8 +164,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedHigh.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_Medium.TXT|
 |HKLM:|{Computername}_reg_HKLM_TemplatePolicies_MedLow.TXT|
-|||
-
+  
 ### Networking Information
 
 |Description|File Name|
@@ -182,8 +172,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |Host File:|{Computername}_hosts|
 |TCP/IP Basic Information:|{Computername}_TcpIp-Info.txt|
 |SMB Basic Information:|{Computername}_SMB-Info.txt|
-|||
-
+  
 ### Operating System Registry
 
 |Description|File Name|
@@ -209,8 +198,7 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM:|{Computername}_reg_HKLM_SSL_Ciphers.TXT|
 |HKLM:|{Computername}_reg_HKLM_Code_Store_Database.TXT|
 |HKLM:|{Computername}_reg_HKLM_Ext_PreApproved.TXT|
-|||
-
+  
 ### REG Export
 
 |Description|File Name|
@@ -226,29 +214,25 @@ When selecting the **Internet Explorer Data Collector** option, the following in
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Internet_Settings.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Policies.REG.txt|
 |HKLM Wow64:|{Computername}_HKLM_Wow6432Node_Classes.REG.txt|
-|||
-
+  
 ### Registry - IEAK
 
 |Description|File Name|
 |-|-|
 |HKLM Wow64:|{Computername}_reg_HKLM_Wow6432Node_IEAK.TXT|
-|||
-
+  
 ### Windows Setup API Logs
 
 |Description|File Name|
 |-|-|
 |Windows Setup API Log:|{Computername}_SetupAPI.app.Log|
-|||
-
+  
 ### Windows update log
 
 |Description|File Name|
 |-|-|
 |Windows Update Log File:|{Computername}_WindowsUpdate.log|
-|||
-
+  
 ## Available tasks and collected information when the Internet Explorer Troubleshooting Tasks option is selected
 
 When the user selects the **Internet Explorer Troubleshooting Tasks** option, the following tasks are available:
@@ -267,60 +251,58 @@ From the STRACE LOG, you can 'replay' a full navigation scenario using the HTTPR
 
 #### Data collected
 
-*Strace network logs*
+_Strace network logs_
 
 |Description|File Name|
 |-|-|
 |Strace Logs (.strace):|STRACE_IEXPLORE_PID_{ProcessID}_{date}_{time}.STRACE|
-|||
-
+  
 ### ProcDump a process
 
 This task will allow you to collect process dump of Internet Explorer or any other process.
 
-- If you select the **hang** option, ProcDump will collect dumps of the process you select.
+* If you select the **hang** option, ProcDump will collect dumps of the process you select.
 
-- If you select the **crash** option, Procdump will monitor the process you select for an expected crash.
+* If you select the **crash** option, Procdump will monitor the process you select for an expected crash.
 
-- If you select the **highcpu** option, Procdump will monitor the process you select and once the CPU utilization exceeds 30% for more than 10 seconds a process dump will be collected. Procdump will continue to monitor the process and collect two additional process dumps for a total of three dumps each 10 seconds apart.
+* If you select the **highcpu** option, Procdump will monitor the process you select and once the CPU utilization exceeds 30% for more than 10 seconds a process dump will be collected. Procdump will continue to monitor the process and collect two additional process dumps for a total of three dumps each 10 seconds apart.
 
   > [!NOTE]
   > The process must exceed the 30% threshold for 10 seconds otherwise the dump will not be collected. See [ProcDump v9.0](/sysinternals/downloads/procdump) for details on Procdump.
 
 #### Data collected
 
-*Memory Dump Files*
+_Memory Dump Files_
 
 |Description|File Name|
 |-|-|
 |Hangdump file(.out):|{computername}_{processname}.out|
 |MemoryDump Files:|{computername}_DumpFile_Information.txt|
 |MemoryDump Files:|{computername}_{processname}_{date}_{time}.zip|
-|||
-
+  
 ### Internet Explorer WPAD
 
-- Prompt to choose the affected user
+* Prompt to choose the affected user
 
-- Prompt for user credentials
+* Prompt for user credentials
 
-- Clear Temporary Internet Files on Internet Explorer 7 and newer, delete .pac/.dat files on Internet Explorer 6
+* Clear Temporary Internet Files on Internet Explorer 7 and newer, delete .pac/.dat files on Internet Explorer 6
 
-- Start network trace (NetSh for Win7/2k8r2, NMCap for Vista/2k8, NetCap for XP 2k3)
+* Start network trace (NetSh for Win7/2k8r2, NMCap for Vista/2k8, NetCap for XP 2k3)
   > [!NOTE]
   > It will prompt and open browser to NM3.4 download on Vista/2k8 if not already installed.
 
-- Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys
+* Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys
 
-- Save connections keys to user's desktop.
+* Save connections keys to user's desktop.
 
-- Delete Connections key contents under HKCU, HKLM and under the `Wow6432Nodes` keys for HKCU and HKLM if they exist.
+* Delete Connections key contents under HKCU, HKLM and under the `Wow6432Nodes` keys for HKCU and HKLM if they exist.
 
-- Release and renew IP address
+* Release and renew IP address
 
-- Launch Internet Explorer as selected user
+* Launch Internet Explorer as selected user
 
-- Stop and collect network traces. For more information on what is collected by the Internet Explorer WPAD task, see the Internet Explorer WPAD SDP [KB2668985](https://support.microsoft.com/help/2668985).
+* Stop and collect network traces. For more information on what is collected by the Internet Explorer WPAD task, see the Internet Explorer WPAD SDP [KB2668985](https://support.microsoft.com/help/2668985).
 
 ### Internet Explorer Simultaneous Fiddler and Netmon
 
@@ -328,23 +310,23 @@ The Internet Explorer Simultaneous Fiddler and Netmon data collection will perfo
 
 User dialog prompt to choose data collection options including:
 
-- Initial address for Internet Explorer to access upon launch
-- Select affected user
-- Run Internet Explorer as selected user
-- Collect Network Monitor trace
-- Collect Fiddler trace
-- Clear Temporary Internet Files
-- Set `TabProcGrowth` to **0** for testing
-- Reset Connection settings:
+* Initial address for Internet Explorer to access upon launch
+* Select affected user
+* Run Internet Explorer as selected user
+* Collect Network Monitor trace
+* Collect Fiddler trace
+* Clear Temporary Internet Files
+* Set `TabProcGrowth` to **0** for testing
+* Reset Connection settings:
 
-  - Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys.
+  * Prompt that includes information on the deletion of the contents of Internet Explorer Connections registry keys.
 
-  - Save connections keys to user's desktop.
+  * Save connections keys to user's desktop.
 
-  - Delete Connections key contents under HKCU, HKLM and under the `Wow6432Nodes` keys for HKCU and HKLM if they exist.
+  * Delete Connections key contents under HKCU, HKLM and under the `Wow6432Nodes` keys for HKCU and HKLM if they exist.
 
-- Release and renew the IP address
-- Launch Internet Explorer without extensions (`-extoff`)
+* Release and renew the IP address
+* Launch Internet Explorer without extensions (`-extoff`)
 
 Upon acceptance of the dialog, Internet Explorer will launch to the specified address.
 
@@ -352,28 +334,25 @@ At this time reproduce the issue and upon closing Internet Explorer tracing will
 
 #### Data collected
 
-*Autoproxy Files*
+_Autoproxy Files_
 
 |Description|File Name|
 |-|-|
 |Autoproxy File:|{computername}_{username}_Autoproxy_file_log__Date_{date}_{time}.txt|
-|||
-
-*Fiddler Capture*
+  
+_Fiddler Capture_
 
 |Description|File Name|
 |-|-|
 |Fiddler Capture File \[Password Protected](.zip):|{computername}_{username}_Fiddler__Date_{date}_{time}.zip|
-|||
-
-*Network Trace*
+  
+_Network Trace_
 
 |Description|File Name|
 |-|-|
 |NMCap Trace Log:|{computername}_{username}_NMcap_Trace_DisplayNet__Date_{date}_{time}.txt|
 |Network Monitor trace file:|{computername}_{username}_NMcap_Date_{date}_{time}.cap|
-|||
-
+  
 ### Generate an AXIS log (Windows Vista+)
 
 This task will allow you to collect an installation log during attempts to install an `ActiveX` control via the ActiveX Installer Service.
@@ -382,9 +361,9 @@ See [Implementing and Administering the ActiveX Installer Service](/previous-ver
 
 #### Data collected
 
-*AxtiveX Installer Service Logging*
+_AxtiveX Installer Service Logging_
 
 |Description|File Name|
 |-|-|
 |AXIS Event Log:|{computername}_Run_Date_{month}_{day}_{year}_Time_{time}_AxisServiceLog.evt|
-|||
+  

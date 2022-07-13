@@ -30,6 +30,4 @@ To resolve this issue, follow these steps:
    1. Select **Start**, type `services.msc`, and then press **Enter**.
    2. In the list of services, make sure that the entry in the **Status** column for **Microsoft Online Services Sign-In Assistant** is **Started**.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

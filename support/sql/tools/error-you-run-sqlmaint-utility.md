@@ -31,8 +31,7 @@ In SQL Server 2012 or a later version, SQL DMO is one of the discontinued featur
 | Category| Discontinued feature| Replacement |
 |---|---|---|
 |Programmability|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|
-||||
-
+  
 ## Resolution
 
 To resolve this problem, use one of the following methods.

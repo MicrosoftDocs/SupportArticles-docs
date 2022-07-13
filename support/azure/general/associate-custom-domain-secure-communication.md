@@ -19,3 +19,5 @@ You can associate your custom domain or website with Microsoft Azure Websites or
 The link below will navigate your web browser to a guided tutorial which will help you solve your problem:
 
 [Start guided walkthrough](https://support.microsoft.com/help/10065)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -68,7 +68,7 @@ while($True){
 
 ### Workarounds
 
-All workarounds should be executed in standard user security context. Executing scripts in an elevated security context will prevent mapped drivers from being available in the standard user context.
+All workarounds should be executed in standard user security context. Executing scripts in an elevated security context will prevent mapped drives from being available in the standard user context.
 
 #### Workaround 1: Create a startup item
 

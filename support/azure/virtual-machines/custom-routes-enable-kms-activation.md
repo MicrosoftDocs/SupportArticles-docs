@@ -5,7 +5,6 @@ services: virtual-machines, azure-resource-manager
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
-editor: ''
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
 ms.collection: windows
@@ -13,7 +12,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: troubleshooting
-ms.date: 12/20/2018
+ms.date: 07/11/2022
 ms.author: genli
 ---
 
@@ -33,23 +32,20 @@ The Azure Windows VMs need to connect to the Azure KMS server for Windows activa
 
 To resolve this problem, use the Azure custom route to route activation traffic to the Azure KMS server.
 
-The IP address of the KMS server for the Azure Global cloud is 23.102.135.246. Its DNS name is kms.core.windows.net. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+The IP address of the KMS server for the Azure Global cloud is 23.102.135.246. Its DNS name is kms.core.windows.net or azkms.core.windows.net. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global|kms.core.windows.net|23.102.135.246|
+|Azure Global|kms.core.windows.net, azkms.core.windows.net|23.102.135.246|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
-
 
 To add the custom route, follow these steps:
 
 ### For Resource Manager VMs
 
- 
-
-> [!NOTE] 
+> [!NOTE]
 > Activation uses public IP addresses and will be affected by a Standard SKU Load Balancer configuration. Carefully review [Outbound connections in Azure](/azure/load-balancer/load-balancer-outbound-connections) to learn about the requirements.
 
 1. Open Azure PowerShell, and then [sign in to your Azure subscription](/powershell/azure/authenticate-azureps).
@@ -74,6 +70,7 @@ To add the custom route, follow these steps:
 
     Set-AzVirtualNetwork -VirtualNetwork $vnet
     ```
+
 3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
 
     ```console
@@ -116,3 +113,5 @@ To add the custom route, follow these steps:
 
 - [KMS Client Setup Keys](/windows-server/get-started/kmsclientkeys)
 - [Review and Select Activation Methods](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134256(v=ws.11))
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

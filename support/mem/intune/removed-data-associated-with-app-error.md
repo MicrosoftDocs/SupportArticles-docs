@@ -2,6 +2,7 @@
 title: Your organization removed Outlook app data for Android
 description: Describes an issue in which you receive the Your organization has removed its data associated with this app error message when you open the Outlook for Android app that's managed by Intune.
 ms.date: 10/19/2021
+search.appverid: MET150
 ---
 # Your organization has removed its data associated with this app
 

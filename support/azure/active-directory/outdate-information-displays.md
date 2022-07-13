@@ -44,7 +44,6 @@ To verify that an existing Azure AD Connect server has a version compatibility i
     |---|---|
     | 1.1.614.0 (or earlier version)| 3.0.68.0 (or earlier version) 3.0.127.0 |
     | 1.1.647.0 (or later version)| 3.0.103.0 3.0.129.0 |
-    |||
 
 ## Resolution
 
@@ -95,3 +94,5 @@ To reinstall Health Agent for Sync:
 
    5. When you are prompted for credentials, provide your Azure AD Global Admin credentials.
    6. Wait about two hours, and then verify that the Health panel is showing up-to-date information about Sync.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

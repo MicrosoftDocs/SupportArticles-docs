@@ -88,7 +88,6 @@ This call returns different results depending on the collation, using supplement
     |22|wait_duration_ms|0|127|bigint|8|NULL|
     |23|wait_resource|1|231|nvarchar(50)|100|SQL_Latin1_General_CP1_CI_AS|
     |24|resource_description|1|231|nvarchar(140)|280|SQL_Latin1_General_CP1_CI_AS|
-    |||||||
 
 - Instance with a collation that uses supplementary characters:
 
@@ -108,7 +107,6 @@ This call returns different results depending on the collation, using supplement
     |21|last_wait_type|1|231|nvarchar(60)|120|SQL_Latin1_General_CP1_CI_AS|
     |23|wait_resource|1|231|nvarchar(50)|100|SQL_Latin1_General_CP1_CI_AS|
     |24|resource_description|1|231|nvarchar(280)|560|SQL_Latin1_General_CP1_CI_AS|
-    |||||||
 
 Both instances show the difference on some columns. For example,  the `wait_type` column has a system type name of **nvarchar(45)** with a max length of 90 on a standard collation. However, collations using supplementary characters have a system type name of **nvarchar(60)** with a max length of 120. The size difference causes the warning messages that are logged by the SSIS package.
 
@@ -131,7 +129,7 @@ Rebuild the system databases instance with a collation without using supplementa
 
 Create a job to remove the unnecessary warnings from the `msdb.dbo.sysssislog` table. In the following example, the job is scheduled to run every hour. You can define a different schedule as needed by changing the `@freq_subday_interval` value.
 
-For example, you can change the `@freq_subday_interval` value from *1* to *2* to run the job every two hours.
+For example, you can change the `@freq_subday_interval` value from _1_ to _2_ to run the job every two hours.
 
 ```sql
 USE [msdb]

@@ -1,7 +1,7 @@
 ---
 title: IME can't trigger PreviewKeyDown event of TextBox in WPF apps
 description: Describes the issue that some Microsoft IMEs can't trigger PreviewKeyDown event of TextBox control in WPF apps.
-ms.date: 07/14/2021
+ms.date: 02/28/2022
 Author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: hirotoh
@@ -9,15 +9,18 @@ ms.technology: dotnet-general
 ---
 # PreviewKeyDown event of TextBox control can't be triggered by Microsoft IME in WPF apps
 
+> [!NOTE]
+> The issue that is described in this article is a bug on Windows 10, version 2004/20H2/21H1/21H2 and it won't be fixed. But it has been fixed on Windows 11. So you can upgrade your system to Windows 11 to avoid the issue.
+
 This article discusses an issue that prevents [PreviewKeyDown](/dotnet/api/system.windows.forms.control.previewkeydown) events of TextBox controls from being triggered by some Microsoft  input method editors (IMEs) in Windows Presentation Foundation (WPF) applications.
 
-_Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1
+_Applies to:_ &nbsp; Windows Presentation Foundation, Windows 10, version 2004, Windows 10, version 20H2, Windows 10, version 21H1, Windows 10, version 21H2
 
 ## Symptoms
 
 Consider the following scenario:
 
-1. You run a WPF application on Windows 10, version 2004, version 20H2, or version 21H1.
+1. You run a WPF application on Windows 10, version 2004/20H2/21H1/21H2.
 1. You input in a TextBox control by using a Microsoft IME of East Asia.
 
 In this scenario, the `PreviewKeyDown` event of the control isn't triggered. Therefore, some functions of the application that depend on the `PreviewKeyDown` event handlers don't work as expected.
@@ -49,6 +52,3 @@ Turn on the **Compatibility** option to revert to the previous version of Micros
 1. Turn on the **Use previous version of \<YourIME\>** option, and then select **OK** in the window that opens.
 
     :::image type="content" source="./media/cannot-trigger-event-in-wpf-with-ime/turn-on-compatibility.png" alt-text="Turn on the compatibility mode and confirm the IME version change." border="true":::
-
-> [!Note]
-> We recommend that you don't use the compatibility setting as a permanent solution. Instead, use it as a temporary workaround for users who are affected by this issue.

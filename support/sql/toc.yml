@@ -163,6 +163,8 @@
       href: admin/logging-data-storage-algorithms.md
     - name: Manage the error log
       href: admin/manage-error-log.md
+    - name: Memory-optimized temppdb metadata out-of-memory errors
+      href: admin/memory-optimized-tempdb-out-of-memory.md
     - name: Non-yielding error if the lock pages in memory option is disabled
       href: admin/non-yielding-error-lock-pages-disable.md
     - name: Pass a variable to a linked server query
@@ -207,14 +209,38 @@
       href: connect/odbc-driver-uninstall-incomplete.md
   - name: Connection issues
     items:
-    - name: Can't connect remotely using TCP/IP
+    - name: Common Connection Issues
+      href: connect/resolve-connectivity-errors-overview.md
+    - name: Pre-reqs for connectivity troubleshooting
+      href: connect/resolve-connectivity-errors-checklist.md
+    - name: Cannot generate SSPI context
+      href: connect/cannot-generate-sspi-context-error.md
+    - name: Existing connection forcibly closed
+      href: connect/tls-exist-connection-closed.md
+    - name: Login failed for user
+      href: connect/login-failed-for-user.md
+    - name: Network-related or instance-specific error
+      href: connect/network-related-or-instance-specific-error-occurred-while-establishing-connection.md
+    - name: Timeout expired errors
+      href: connect/timeout-expired-error.md
+    - name: Token-based server access validation failed
       href: connect/cannot-connect-remotely.md
-    - name: Kerberos Configuration Manager is available
-      href: connect/kerberos-configuration-manager-available.md
-    - name: Resolving connectivity errors
-      href: connect/resolving-connectivity-errors.md
     - name: Untrusted certificate authority error
       href: connect/error-message-when-you-connect.md
+    - name: Winsock LSP results in network or stability issues
+      href: connect/winsock-lsp-network-problem.md      
+    - name: Connectivity How Tos
+      items:
+      - name: Configuring firewalls
+        href: /sql/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access?context=/troubleshoot/sql/context/context
+      - name: Dynamic vs Static ports
+        href: connect/static-or-dynamic-port-config.md
+      - name: Kerberos Configuration Manager
+        href: connect/using-kerberosmngr-sqlserver.md
+      - name: Testing using UDL file 
+        href: connect/test-oledb-connectivity-use-udl-file.md
+      - name: Using PortQryUI tool 
+        href: connect/using-portqrytool-sqlserver.md
   - name: Database Design and Development
     items:
     - name: Can't make a remote connection from a CLR trigger
@@ -247,7 +273,7 @@
       items:
       - name: 9002 error on primary replica
         href: availability-groups/error-9002-transaction-log-large.md
-      - name: AlwaysOn DB in recovery pending or suspect state
+      - name: Always On DB in recovery pending or suspect state
         href: availability-groups/alwayson-availability-databases-recovery-pending-suspect.md
       - name: Error 2767 on secondary replica
         href: availability-groups/error-2767-query-secondary-replica-fails.md
@@ -259,8 +285,10 @@
         href: availability-groups/query-performance-degradation.md
       - name: Troubleshooting automatic failover problems
         href: availability-groups/troubleshooting-automatic-failover-problems.md
-      - name: Troubleshooting on AlwaysOn issues
+      - name: Troubleshooting on Always On issues
         href: availability-groups/troubleshooting-alwayson-issues.md
+      - name: Error 41131 when creating availability group
+        href: availability-groups/error-41131-create-availability-group.md
     - name: Database Mirroring
       items:
       - name: Mirrored databases are disconnected
@@ -329,6 +357,8 @@
       href: install/issues-install-sql-server.md
     - name: SQL Server 2008 R2 and SQL Server 2008 Setup issues 
       href: install/sql-server-2008-setup-issues.md
+    - name: Troubleshoot common SQL Server Cumulative Update installation issues
+      href: install/sqlserver-patching-issues.md
     - name: SQL Server 2012 Setup issues
       href: install/sql-server-2012-setup-issues.md
     - name: SxS install of X64 and X86 version of SSRS 2008
@@ -381,10 +411,14 @@
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
-    - name: Troubleshooting SQL Server Slow Performance Caused by IO issues
+    - name: Troubleshoot SQL Server slow performance caused by IO issues
       href: performance/troubleshoot-sql-io-performance.md
+    - name: Troubleshoot ASYNC_NETWORK_IO issues
+      href: performance/troubleshoot-query-async-network-io.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
+    - name: Different query performance between two servers
+      href: performance/troubleshoot-query-perf-between-servers.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
@@ -395,8 +429,10 @@
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Winsock LSP results in network or stability issues
-      href: performance/winsock-lsp-network-problem.md
+    - name: Troubleshoot slow SSIS or ELT jobs query performance
+      href: performance/slow-query-performance-ssis-etl.md
+    - name: Slower query in database application than in SSMS
+      href: performance/troubleshoot-application-slow-ssms-fast.md      
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
@@ -618,6 +654,8 @@
     href: linux/core-dump-rhel-7-4-run-mssql-conf.md
   - name: Restore operation fails on Linux servers
     href: linux/database-restore-operation-fails-linux-server.md
+  - name: mssql-conf setup fails with python module error
+    href: linux/mssql-conf-setup-fails-with-python-module-error.md
 
 - name: Tools
   items:
@@ -647,6 +685,8 @@
       href: tools/error-message-when-you-open-configuration-manager.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
+    - name: Description of the Replay Markup Language Utilities for SQL Server
+      href: tools/replay-markup-language-utility.md
     - name: New data isn't uploaded to MDW database after configuring collection set
       href: tools/data-collector-collection-set-upload-fail.md
     - name: PowerShell issue when RemoteSigned is not set

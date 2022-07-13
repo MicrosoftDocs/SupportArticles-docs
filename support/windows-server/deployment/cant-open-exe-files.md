@@ -39,9 +39,9 @@ Corrupt registry settings or some third-party product (or virus) can change the 
 3. Type the following command lines:
 
    ```console
-   "cd\"
+   cd\
 
-   "cd \windows"
+   cd \windows
    ```
 
    Press Enter after typing each one.

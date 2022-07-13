@@ -17,6 +17,8 @@
     href: development/asp-com-objects-fail-to-print.md
   - name: Code-behind model
     href: development/code-behind-model.md
+  - name: Configure SQL Server to store session state
+    href: development/configure-sql-store-session-state.md
   - name: Create a cascading drop-down list in AJAX
     href: development/build-cascading-drop-down-list.md
   - name: Create custom error reporting pages
@@ -25,8 +27,14 @@
     href: development/datagrid-control-display-incorrectly.md
   - name: Disable ASP session state
     href: development/disable-asp-session-state.md
+  - name: Disable debugging for web applications
+    href: development/disable-debugging-application.md
+  - name: Edit the web.config file
+    href: development/edit-web-config.md
   - name: HTTP modules and handlers
     href: development/http-modules-handlers.md
+  - name: Impersonation in web applications
+    href: development/implement-impersonation.md
   - name: Inline expressions
     href: development/inline-expressions.md
   - name: Make the application configuration
@@ -75,18 +83,6 @@
     href: development/write-binary-files-browser-csharp.md
   - name: Write binary files to browser by Visual Basic
     href: development/write-binary-files-browser-vb.md
-
-- name: FTP authentication and authorization
-  items:
-  - name: Configure SQL Server to store session state
-    href: ftp-authentication-authorization/configure-sql-store-session-state.md
-  - name: Disable debugging for web applications
-    href: ftp-authentication-authorization/disable-debugging-application.md
-  - name: Edit the web.config file
-    href: ftp-authentication-authorization/edit-web-config.md
-  - name: Impersonation in web applications
-    href: ftp-authentication-authorization/implement-impersonation.md
-
 - name: Health, diagnostic, and performance features
   items:
   - name: Create web.config for an application

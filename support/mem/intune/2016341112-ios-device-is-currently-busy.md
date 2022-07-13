@@ -2,6 +2,7 @@
 title: iOS device is currently busy error when deploying a profile with Intune
 description: Describes an issue in which you receive the 2016341112 -iOS device is currently busy error message when you deploy a device profile to an iOS device with Microsoft Intune.
 ms.date: 10/07/2021
+search.appverid: MET150
 ms.custom: sap:Monitor profiles 
 ---
 # iOS device is currently busy error when you deploy a device profile to an iOS device
@@ -34,8 +35,7 @@ There are certain times when a device cannot do what the server requests. When t
 |Status value|Description|
 |---|---|
 |NotNow|The device received the command, but it cannot follow the command at this time. The device will poll the server again later.|
-|||
-
+  
 For more information about Apple's MDM protocol, see [Mobile Device Management Protocol Reference](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
