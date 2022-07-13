@@ -14,7 +14,7 @@
       href: app-insights/java-standalone-troubleshoot.md
    
     - name: Troubleshoot Application Insights features
-    items:
+      items:
     - name: Error retrieving data in portal
       href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
@@ -27,7 +27,7 @@
       href: app-insights/usage-troubleshoot.md
   
     - name: Troubleshoot Snapshot Debugger, Status Monitor, and Change Analysis
-    items:
+      items:
     - name: Troubleshoot Azure Monitor's Change Analysis (preview)
       href: app-insights/change-analysis-troubleshoot.md
     - name: Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
