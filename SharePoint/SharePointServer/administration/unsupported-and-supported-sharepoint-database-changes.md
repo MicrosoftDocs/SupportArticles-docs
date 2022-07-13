@@ -21,6 +21,8 @@ ms.date: 7/5/2022
 
 # Unsupported and supported SharePoint Server database changes
 
+_Original KB number:_ &nbsp; 841057
+
 Microsoft SharePoint Server stores data in Microsoft SQL Server databases, and it uses various stored procedures for the regular processing. Therefore, SQL Server databases are important to the successful operation of SharePoint Server. SharePoint Server is tested by using a database structure that's designed by the Microsoft SharePoint Server development team. Then, it's approved for release based on that structure. If you change the database, Microsoft can't reliably predict the effect to the operation of SharePoint Server. This article describes some unsupported and supported database changes, and what actions you need to perform.
 
 > [!WARNING]
