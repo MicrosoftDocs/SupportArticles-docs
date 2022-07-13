@@ -1,13 +1,13 @@
 ---
 title: Troubleshoot a query that seems to never complete in SQL Server
-description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
+description: This article provides a procedure to help you identify and resolve issues where a query runs for a very long time in SQL Server.
 ms.date: 07/13/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 ms.reviewer: shaunbe
 author: pijocoder
-ms.author: jopilov, shaunbe
+ms.author: jopilov
 ---
 
 # Troubleshoot a query that seems to never end in SQL Server
