@@ -1,18 +1,20 @@
 ---
-title: Troubleshoot query that seems to never complete in SQL Server
+title: Troubleshoot a query that seems to never complete in SQL Server
 description: This article provides a procedure to help you fix high-CPU-usage issues on a server that is running SQL Server.
 ms.date: 07/13/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 ms.reviewer: shaunbe
-author: pijocoder, shaunbeasley
-ms.author: jopilov
+author: pijocoder
+ms.author: jopilov, shaunbe
 ---
+
+# Troubleshoot a query that seems to never end in SQL Server
 
 ## What is a never-ending query?
 
-This article describes troubleshooting steps you can take when you have a query that seems to never complete or if you let it complete it may take many hours or days. This scenario strictly covers queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant). It's important to note that a query, if left to finish its execution, will eventually complete regardless of how long - a few seconds or several days. The term "never-ending" is used to describe the perception of a query not completing, while in fact the query will eventually complete. 
+This article describes troubleshooting steps you can take when you have a query that seems to never complete or if you let it complete it may take many hours or days. This scenario strictly covers queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant). It's important to note that a query, if left to finish its execution, will eventually complete regardless of how long - a few seconds or several days. The term "never-ending" is used to describe the perception of a query not completing, while in fact the query will eventually complete. This scenario is a query performance one.
 
 To identify whether a query is continuously executing or stuck on a bottleneck, you can use the following query:
 
@@ -109,7 +111,7 @@ On rare occasions, you may observe that the CPU is increasing continuously with 
 The Lightweight Query Profiling Infrastructure was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a very slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where the majority of the time is spent in a query. 
 This enables you to identify the slow steps in the query and take action to address it. 
 
-[Lightweight query execution statistics profiling infrastructure v1](https://docs.microsoft.com/en-us/sql/relational-databases/performance/query-profiling-infrastructure?view=sql-server-2017#lightweight-query-execution-statistics-profiling-infrastructure-v1)
+[Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1)
 
 1. Enable the query_thread_profile XEvent:
 
@@ -193,7 +195,7 @@ This enables you to identify the slow steps in the query and take action to addr
 
 ## SQL Server 2016 SP1 and later and SQL Server 2017
 
-You can use the [Lightweight query execution statistics profiling infrastructure v2](https://docs.microsoft.com/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual values for row count. This allows you to examine query operators in a query plan at run time and understand where the majority of the time is spent in a query.
+You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual values for row count. This allows you to examine query operators in a query plan at run time and understand where the majority of the time is spent in a query.
 
 
 1. To enable the Lightweight infrastructure on these versions of SQL Server you can use one of two methods
@@ -250,7 +252,7 @@ You can use the [Lightweight query execution statistics profiling infrastructure
 
 ## SQL Server 2019 and later
 
-You can use the [Lightweight query execution statistics profiling infrastructure v3](https://docs.microsoft.com/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual values for row count. This allows you to examine query operators in a query plan at run time and understand where the majority of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
+You can use the [Lightweight query execution statistics profiling infrastructure v3](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual values for row count. This allows you to examine query operators in a query plan at run time and understand where the majority of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
 
 1. Start the affected never-ending query from your application
 1. Use a command similar to this to identify the Session_id of your executing, never-ending query
@@ -281,7 +283,7 @@ You can use the [Lightweight query execution statistics profiling infrastructure
 
 This section will illustrate how to review the data once collected. It will use the multiple XML query plans (using extension *.sqlplan) collected in SQL Server 2016 SP1 and later.
 
-Follow the instructions to [Compare execution plans](https://docs.microsoft.com/en-us/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans)
+Follow the instructions to [Compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans)
 
 - Open a previously saved query execution plan file (.sqlplan)
 - Right-click in a blank area of the execution plan and select Compare Showplan
@@ -297,7 +299,7 @@ Here's an example:
 1. Ensure that statistics are updated for the tables used in the query
 2. Look for a missing index recommendation in the query plan and apply any
 3. Rewrite the query to simplify it (break it apart and select into temp tables, remove TOP to avoid row goal)
-4. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query?view=sql-server-ver16) to produce a better plan
+4. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query) to produce a better plan
    - Hash/Merge Join hint
    - Force order hint
    - Forceseek hint
