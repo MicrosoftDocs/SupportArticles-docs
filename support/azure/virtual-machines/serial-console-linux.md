@@ -98,8 +98,6 @@ Serial console uses the storage account configured for boot diagnostics in its c
 > [!NOTE]
 > To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics**, then click **Settings**.
 
-The list of IPs that need to be added to the storage account firewall are shown below. Read the following documentation for instructions on how to add IPs to the storage account firewall: [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](https://docs.microsoft.com/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules)
-
 #### Add the Serial Console service IPs as firewall exclusions based on the geography of the VM
 
 Below is a full list of the IPs required to be permitted as firewall exclusions based on the region or geography the VM is located in. This is subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](https://docs.microsoft.com/azure/virtual-network/service-tags-overview).
@@ -142,8 +140,6 @@ IP Address      | Regions | Geography
 20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
 20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates
 20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States
-20.141.10.130 | All US Government(Fairfax) cloud regions | UsGov
-52.127.55.131 | All US Government(Fairfax) cloud regions | UsGov
 
 > [!IMPORTANT]
 >  The IPs that need to be permitted are specific to the region the VM is located in. For example, a virtual machine deployed in the **NorthEurope** region needs to add the following IP exclusions to the storage account firewall for the Europe geography:  52.146.139.220, 20.105.209.72. Please view the table above to find the correct IPs for your region and geography.
