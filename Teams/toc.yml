@@ -131,6 +131,8 @@
       href: ./teams-im-presence/deleted-messages-send-notifications-with-link.md
     - name: Issues with presence status in Outlook
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
+    - name: Messages are unexpectedly deleted by retention policies
+      href: ./teams-im-presence/messages-unexpectedly-deleted-retention-policy.md 
   - name: Meetings
     items:
     - name: External users appear as Unknown
