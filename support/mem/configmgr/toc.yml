@@ -68,12 +68,14 @@
       href: inactive-clients-not-send-inventory.md
     - name: Clients don't receive policy data
       href: clients-not-receive-policy-data.md
-    - name: Cloud management gateway
+    - name: Cloud services
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
           href: cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
           href: cmg-communication-error-403.md
+        - name: Tenant attach components fail to connect to backend cloud service
+          href: tenant-attach-component-not-connect-to-gateway.md
     - name: Collections
       items:
         - name: Multiple instances of the Unknown computers collection
