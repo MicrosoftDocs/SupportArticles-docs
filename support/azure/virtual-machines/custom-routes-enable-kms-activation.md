@@ -32,7 +32,7 @@ The Azure Windows VMs need to connect to the Azure KMS server for Windows activa
 
 To resolve this problem, use the Azure custom route to route activation traffic to the Azure KMS server.
 
-The first DNS name of the KMS server for the Azure Global cloud is azkms.core.windows.net with two IP addresses: 20.118.99.244 and 40.83.235.53. The second DNS name of the KMS server for Azure Global cloud is kms.core.windows.net with an IP address of 23.102.135.246. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.244` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net` with an IP address of `23.102.135.246`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
@@ -42,7 +42,7 @@ The first DNS name of the KMS server for the Azure Global cloud is azkms.core.wi
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
 
 > [!NOTE] 
-> All three IP addresses for Azure Global should be added to custom route.
+> All the three IP addresses for the Azure Global cloud should be added to the custom route.
 
 To add the custom route, follow these steps:
 
