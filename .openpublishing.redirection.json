@@ -2477,16 +2477,6 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/log-analytics/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
-    },
-    {
-      "source_path": "support/azure/azure-monitor/app-insights/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
-      "redirect_document_id": true
-    },
-    {
       "source_path": "support/azure/virtual-machines/rdp.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
       "redirect_document_id": false
