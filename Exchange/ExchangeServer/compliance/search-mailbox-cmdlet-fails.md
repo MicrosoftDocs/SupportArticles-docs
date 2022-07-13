@@ -25,7 +25,7 @@ ms.date: 7/13/2022
 
 ## Symptoms
 
-When you run the [Search-Mailbox](/powershell/module/exchange/search-mailbox) cmdlet with the `LogLevel` parameter set to **Full**, the cmdlet fails with the following warning message:
+When you run the [Search-Mailbox](/powershell/module/exchange/search-mailbox) cmdlet by having the `LogLevel` parameter set to **Full**, the cmdlet fails and returns the following warning message:
 
 > WARNING: The Search-Mailbox cmdlet returns up to 10000 results per mailbox if a search query is specified. To return more than 10000 results, use the New-MailboxSearch cmdlet or the In-Place eDiscovery & Hold console in the Exchange Administration Center.  
 > Cannot save changes made to an item to store.  
@@ -33,15 +33,15 @@ When you run the [Search-Mailbox](/powershell/module/exchange/search-mailbox) cm
                 + FullyQualifiedErrorId   : [Server=<server_name>,RequestId=<request_id>,TimeStamp=<date_and_time>] [FailureCategory =Cmdlet-ObjectNotFoundException] 1227BC9F  
                 + PSComputerName       : server_name.contoso.com
 
-However, if you run the cmdlet with the `LogLevel` parameter set to **Basic**, the search is successful.
+However, if you run the cmdlet b having the `LogLevel` parameter set to **Basic**, the search is successful.
 
 ## Cause
 
-This issue occurs when a retention policy is set on the target mailbox that you specify in the `Search-Mailbox` cmdlet. The cmdlet creates an email message in the target mailbox when it runs with the `LogLevel` parameter specified and attaches a log file with the search results to the message. However, the retention policy modifies this email message right after it is created. So the cmdlet is unable to attach the log file and triggers the warning.
+This issue occurs if a retention policy is set on the target mailbox that you specify in the `Search-Mailbox` cmdlet. The cmdlet creates an email message in the target mailbox when it runs by having the `LogLevel` parameter specified, and it attaches to the message a log file that includes the search results. However, the retention policy modifies this email message right after it is created. Therefore, the cmdlet can't attach the log file, and this triggers the warning.
 
 ## Workaround
 
-To work around this issue, use one of the following methods to perform the search:
+To work around this issue, use one of the following methods to do the search.
 
 ### Method 1: Run the New-MailboxSearch cmdlet
 
@@ -53,13 +53,13 @@ New-MailboxSearch -Name <search_name> -SourceMailboxes mailbox1@contoso.com -Tar
 
 ### Method 2: Run both the New-ComplianceSearch and New-ComplianceSearchAction cmdlets
 
-1. Run the [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) cmdlet to create a compliance search:
+1. To create a compliance search, run the [New-ComplianceSearch](/powershell/module/exchange/new-compliancesearch) cmdlet:
 
     ```powershell
     New-ComplianceSearch -Name <search_name> -ExchangeLocation mailbox1@contoso.com -ContentMatchQuery 'Subject:"Quarterly Results"' -LogLevel Full
     ```
 
-2. Run one of the following [New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) cmdlets to create an action for the compliance search:
+2. To create an action for the compliance search, run one of the following [New-ComplianceSearchAction](/powershell/module/exchange/new-compliancesearchaction) cmdlets:
 
     ```powershell
     New-ComplianceSearchAction -SearchName <search_name> -Preview
@@ -78,15 +78,15 @@ New-MailboxSearch -Name <search_name> -SourceMailboxes mailbox1@contoso.com -Tar
 ### Method 3: Remove the retention policy from the target mailbox
 
 > [!NOTE]
-> This method may result in unexpected data loss of the mailbox.
+> This method might cause unexpected data loss for the mailbox.
 
-1. Run the following cmdlet to remove the retention policy:
+1. To remove the retention policy, run the following cmdlet:
 
     ```powershell
     Set-Mailbox admin1@contoso.com -RemoveManagedFolderAndPolicy
     ```
 
-2. Run the following cmdlet to force the Managed Folder Assistant to process the target mailbox immediately:
+2. To process the target mailbox immediately, run the following cmdlet to force the Managed Folder Assistant:
 
     ```powershell
     Start-ManagedFolderAssistant admin1@contoso.com
