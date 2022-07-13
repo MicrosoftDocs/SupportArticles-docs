@@ -108,6 +108,7 @@
       "feedback_system": "none",
       "hideEdit": true,
       "searchScope": "Office 365 Support",
+      "uhfHeaderId": "MSDocsHeader-M365-IT",
       "titleSuffix": "Office 365"
     },
     "fileMetadata": {
