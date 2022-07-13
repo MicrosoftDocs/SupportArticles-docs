@@ -1,3 +1,7 @@
+
+items:
+- name: Welcome
+  href: welcome-azure-monitor.yml
 - name: Azure Application Insights
   items:
   - name: Troubleshoot Application Insights telemetry
@@ -10,6 +14,7 @@
       href: asp-net-troubleshoot-no-data.md
     - name: Troubleshoot Azure Monitor Application Insights for Java
       href: java-standalone-troubleshoot.md
+   
     - name: Troubleshoot Application Insights features
     items:
     - name: Error retrieving data in portal
@@ -22,7 +27,8 @@
       href: troubleshoot-availability.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: usage-troubleshoot.md
-  - name: Troubleshoot Snapshot Debugger, Status Monitor, and Change Analysis
+  
+    - name: Troubleshoot Snapshot Debugger, Status Monitor, and Change Analysis
     items:
     - name: Troubleshoot Azure Monitor's Change Analysis (preview)
       href: change-analysis-troubleshoot.md
@@ -31,4 +37,22 @@
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: status-monitor-v2-troubleshoot.md
   - name: Azure Log Analytics
-    href: ./log-analytics/welcome-log-analytics.yml
+    items:
+    - name: Basic troubleshooting of Microsoft Monitoring Agent
+      href: mma-troubleshoot-basics.md
+    - name: Check SSL connectivity for Microsoft Monitoring Agent
+      href: ssl-connectivity-mma-windows-powershell.md
+    - name: Error code 0x80090016 - keyset doesn't exist
+      href: error-code-0x80090016-keyset-does-not-exist.md
+    - name: Microsoft Monitoring Agent couldn't start
+      href: windows-could-not-start-mma.md
+    - name: Missing heartbeats in the Linux agent
+      href: linux-agent-missing-heartbeats.md
+    - name: Missing Linux performance counters
+      href: linux-agent-performance-counter-missing.md
+    - name: Resolve Windows Agent installation issues
+      href: resolve-windows-agent-installation-issues.md
+    - name: Troubleshoot erased proxy settings
+      href: erased-proxy-settings-microsoft-monitoring-agent.md
+    - name: Workspace data export FAQ
+      href: workspace-data-export-faq.yml
