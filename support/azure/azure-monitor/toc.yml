@@ -9,7 +9,7 @@
     - name: Troubleshoot Azure Application Insights in a Java web project
       href: app-insights/java-2x-troubleshoot.md
     - name: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
-      href: asp-net-troubleshoot-no-data.md
+      href: app-insights/asp-net-troubleshoot-no-data.md
     - name: Troubleshoot Azure Monitor Application Insights for Java
       href: app-insights/java-standalone-troubleshoot.md
   - name: Troubleshoot Application Insights features

@@ -2474,12 +2474,12 @@
     },
     {
       "source_path": "support/azure/log-analytics/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/toc",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/",
       "redirect_document_id": true
     },
     {
       "source_path": "support/azure/azure-monitor/app-insights/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/toc",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/",
       "redirect_document_id": true
     },
     {
