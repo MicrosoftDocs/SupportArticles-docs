@@ -505,6 +505,7 @@ For more information, go to the following websites:
 |13.0.5830.85|SP2|CU14| [4564903](https://support.microsoft.com/help/4564903)|August 06, 2020|
 |13.0.5820.21|SP2|CU13| [4549825](https://support.microsoft.com/help/4549825)|May 28, 2020|
 |13.0.5698.0|SP2|CU12| [4536648](https://support.microsoft.com/help/4536648)|February 24, 2020|
+|13.0.5622.0|SP2|CU11 + GDR| [4535706](https://support.microsoft.com/help/4535706)|February 11, 2020|
 |13.0.5598.27|SP2|CU11| [4527378](https://support.microsoft.com/help/4527378)|December 09, 2019|
 |13.0.5492.2| SP2|CU10| [4524334](https://support.microsoft.com/help/4524334)|October 08, 2019|
 | 13.0.5426.0|SP2|CU8| [4505830](https://support.microsoft.com/help/4505830)|July 31, 2019|
@@ -524,7 +525,7 @@ For more information, go to the following websites:
 |13.0.4550.1|SP1| CU13| [4475775](https://support.microsoft.com/help/4475775)|January 23, 2019|
 |13.0.4541.0|SP1| CU12| [4464343](https://support.microsoft.com/help/4464343)|November 13, 2018|
 |13.0.4528.0|SP1| CU11| [4459676](https://support.microsoft.com/help/4459676)|September 17, 2018|
-|13.0.4224.16|SP1| CU10 + Security Update| [4458842](https://support.microsoft.com/help/4458842)|August 22, 2018|
+|13.0.4522.0|SP1| CU10 + Security Update| [4293808](https://support.microsoft.com/help/4293808)|August 14, 2018|
 |13.0.4514.0|SP1| CU10| [4341569](https://support.microsoft.com/help/4341569)|July 16, 2018|
 |13.0.4502.0|SP1| CU9| [4100997](https://support.microsoft.com/help/4100997)|May 30, 2018|
 |13.0.4474.0|SP1| CU8| [4077064](https://support.microsoft.com/help/4077064)|March 19, 2018|
@@ -551,7 +552,8 @@ For more information, go to the following websites:
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
 |12.0.6439.10|SP3|CU4 + GDR| [5014164](https://support.microsoft.com/help/5014164)|June 14, 2022|
-|12.0.6433.1|SP3|CU4| [4583462](https://support.microsoft.com/help/4583462)|January 12, 2021|
+|12.0.6433.1|SP3|CU4 + GDR| [4583462](https://support.microsoft.com/help/4583462)|January 12, 2021|
+|12.0.6372.1|SP3|CU4 + GDR| [4535288](https://support.microsoft.com/help/4535288)|February 11, 2020|
 |12.0.6329.1|SP3|CU4| [4500181](https://support.microsoft.com/help/4500181)|July 29, 2019|
 |12.0.6293.0|SP3|CU3 + GDR| [4505422](https://support.microsoft.com/help/4505422)|July 9, 2019|
 |12.0.6259.0|SP3|CU3| [4491539](https://support.microsoft.com/help/4491539)|April 16, 2019|
