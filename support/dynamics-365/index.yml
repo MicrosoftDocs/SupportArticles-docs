@@ -7,8 +7,8 @@ metadata:
    services: service
    ms.prod: dynamics-365
 
-conceptualContent:
-  items:
+additionalContent:
+  sections:
   - title: Dynamics 365 Fraud Protection
     summary: Troubleshooting articles for Dynamics 365 Fraud Protection
     url: fraud-protection/welcome-fraud-protection.yml
