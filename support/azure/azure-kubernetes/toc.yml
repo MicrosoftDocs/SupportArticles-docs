@@ -115,6 +115,8 @@
     href: client-ip-address-cannot-access-api-server.md
   - name: Config file isn't available when connecting
     href: config-file-is-not-available-when-connecting.md
+  - name: Tunnel connectivity issues
+    href: tunnel-connectivity-issues.md
   - name: User can't get cluster resources
     href: user-cannot-get-cluster-resources.md
 
