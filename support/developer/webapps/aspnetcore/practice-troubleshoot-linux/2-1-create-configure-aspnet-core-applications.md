@@ -152,7 +152,7 @@ sudo cp -a ~/firstwebapp/bin/Debug/net5.0/publish/ /var/firstwebapp/
 ```
 
 > [!NOTE]
-> The usage of `sudo` before the copy command. You use this because standard users don't have write permission to */var* directory. Therefore, you must run the command as a superuser.
+> Note the usage of `sudo` before the copy command. You use this because standard users don't have write permission to */var* directory. Therefore, you must run the command as a superuser.
 
 To run your application from a published folder, run the following command:
 
