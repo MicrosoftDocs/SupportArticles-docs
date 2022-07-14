@@ -64,15 +64,16 @@ To add the custom route, follow these steps:
     $RouteTable = New-AzRouteTable -Name "ArmVNet-DM-KmsDirectRoute" -ResourceGroupName "ArmVNet-DM" -Location "centralus"
 
     Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 23.102.135.246/32 -NextHopType Internet -RouteTable $RouteTable
-    Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 20.118.99.224/32 -NextHopType Internet -RouteTable $RouteTable
-    Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 40.83.235.53/32 -NextHopType Internet -RouteTable $RouteTable
+    Add-AzRouteConfig -Name "DirectRouteToAZKMS01" -AddressPrefix 20.118.99.224/32 -NextHopType Internet -RouteTable $RouteTable
+    Add-AzRouteConfig -Name "DirectRouteToAZKMS02" -AddressPrefix 40.83.235.53/32 -NextHopType Internet -RouteTable $RouteTable
+
+    Set-AzRouteTable -RouteTable $RouteTable
 
     # Next, attach the route table to the subnet that hosts the VMs
 
     Set-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $vnet -AddressPrefix "10.0.0.0/24" -RouteTable $RouteTable
 
     Set-AzVirtualNetwork -VirtualNetwork $vnet
-
     ```
 
 3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
@@ -99,10 +100,13 @@ To add the custom route, follow these steps:
 
     # Next, create a route:
     Set-AzureRoute -RouteTable $rt -RouteName "AzureKMS" -AddressPrefix "23.102.135.246/32" -NextHopType Internet
+    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS01" -AddressPrefix "20.118.99.224/32" -NextHopType Internet
+    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS02" -AddressPrefix "40.83.235.53/32" -NextHopType Internet
 
     # Apply the KMS route table to the subnet that hosts the problem VMs (in this case, we apply it to the subnet that's named Subnet-1):
     Set-AzureSubnetRouteTable -VirtualNetworkName "VNet-DM" -SubnetName "Subnet-1" 
     -RouteTableName "VNet-DM-KmsRouteTable"
+
     ```
 
 3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
