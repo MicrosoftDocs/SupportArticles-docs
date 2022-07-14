@@ -36,6 +36,8 @@
 
 - name: Troubleshooting Cloud Services (extended support)
   items:
+  - name: Disk partition preservation
+    href: disk-partition-preservation.md
   - name: Roles that fail to start
     href: role-startup-failure.md
   - name: Allocation failure
