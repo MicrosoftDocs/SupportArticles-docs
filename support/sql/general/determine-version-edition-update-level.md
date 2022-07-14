@@ -26,7 +26,7 @@ _Original KB number:_ &nbsp; 321185
   > [!NOTE]
   > The new enhanced version of the Excel file will soon replace the current version. We are offering the two versions for this transition period.
 
-- To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](https://support.microsoft.com/help/321185/#completeversion) list tables.
+- To learn what a specific version number of SQL Server maps to, or to find the KB article information for a specific cumulative update package or a service pack, search for the version number in the [SQL Server Complete Version](#sql-server-complete-version-list-tables) list tables.
 
 - To find the edition of your SQL Server instance, you can use one of the procedures in Method 2 through Method 5 in the [Determine which version and edition of SQL Server Database Engine is running](#determine-which-version-and-edition-of-sql-server-database-engine-is-running) section.
 
