@@ -85,7 +85,12 @@ param
     $ExclusionPeriod = 0
 )
 
-$file = "$PSScriptRoot\WSUS_Decline_Superseded_{0:MMddyyyy_HHmm}.log" -f (Get-Date) 
+if (-not (Test-Path -Path "$PSScriptRoot\WsusDeclineLogs"))
+{
+    New-Item -Path $PSScriptRoot -Name 'WsusDeclineLogs' -ItemType Directory -Force
+}
+
+$file = "$PSScriptRoot\WsusDeclineLogs\WSUS_Decline_Superseded_{0:MMddyyyy_HHmm}.log" -f (Get-Date) 
 
 Start-Transcript -Path $file
 
@@ -94,11 +99,6 @@ if ($SkipDecline -and $DeclineLastLevelOnly)
     Write-Output -InputObject 'Using SkipDecline and DeclineLastLevelOnly switches together is not allowed.'
     Write-Output -InputObject ''
     return
-}
-
-if (-not (Test-Path -Path "$PSScriptRoot\WsusDeclineLogs"))
-{
-    New-Item -Path $PSScriptRoot -Name 'WsusDeclineLogs' -ItemType Directory -Force
 }
 
 $outSupersededList = Join-Path -Path "$PSScriptRoot\WsusDeclineLogs" -ChildPath 'SupersededUpdates.csv'
@@ -158,7 +158,7 @@ try
 catch [System.Exception]
 {
     Write-Output -InputObject 'Failed to get updates.'
-    Write-Output -InputObject 'Error:' $_.Exception.Message
+    Write-Output -InputObject "Error: $($_.Exception.Message)"
     Write-Output -InputObject 'If this operation timed out, please decline the superseded updates from the WSUS Console manually.'
     Write-Output -InputObject ''
     return
