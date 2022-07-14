@@ -36,7 +36,7 @@ The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.w
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.244, 40.83.235.53 <br> 23.102.135.246|
+|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.224, 40.83.235.53 <br> 23.102.135.246|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
