@@ -242,7 +242,7 @@ You may encounter a specific error message when trying to connect to your VM via
 
 ## Troubleshoot sign-in issues when users RDP with Azure AD credentials
 
-You may receive the following common errors when you try to RDP with Azure AD credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following article to fix these issues:
+You may receive the following common errors when you try to RDP with Azure AD credentials: "no Azure roles assigned", "unauthorized client", or "two-factor authentication sign-in method required". Refer to the following articles to fix these issues:
 
 * [Your account is configured to prevent you from using this device. For more info, contact your system administrator](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#troubleshoot-sign-in-issues).
 * [Windows Security error: Your credentials did not work. Unauthorized client](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/active-directory/devices/howto-vm-sign-in-azure-ad-windows.md#unauthorized-client).
