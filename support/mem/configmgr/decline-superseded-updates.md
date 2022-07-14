@@ -101,8 +101,8 @@ if (-not (Test-Path -Path "$PSScriptRoot\WsusDeclineLogs"))
     New-Item -Path $PSScriptRoot -Name 'WsusDeclineLogs' -ItemType Directory -Force
 }
 
-$outSupersededList = Join-Path -Path $PSScriptRoot -ChildPath 'SupersededUpdates.csv'
-$outSupersededListBackup = Join-Path -Path $PSScriptRoot -ChildPath 'SupersededUpdatesBackup.csv'
+$outSupersededList = Join-Path -Path "$PSScriptRoot\WsusDeclineLogs" -ChildPath 'SupersededUpdates.csv'
+$outSupersededListBackup = Join-Path -Path "$PSScriptRoot\WsusDeclineLogs" -ChildPath 'SupersededUpdatesBackup.csv'
 
 Set-Content -Value 'UpdateID, RevisionNumber, Title, KBArticle, SecurityBulletin, LastLevel' -Path $outSupersededList
 
