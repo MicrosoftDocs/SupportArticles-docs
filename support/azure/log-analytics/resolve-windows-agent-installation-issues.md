@@ -6,8 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 ms.reviewer: aaronmax
 editor: v-jsitser
-ms.service: log-analytics
-ms.subservice: 
+ms.service: azure-monitor
+ms.subservice: logs
 keywords: 
 #Customer intent: As a Windows Log Analytics Agent (Windows Agent) user, I want to resolve Windows Agent installation errors so I can complete my installation successfully. 
 ---
