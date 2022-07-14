@@ -19,7 +19,7 @@ appliesto:
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2019
 search.appverid: MET150
-ms.date: 7/13/2022
+ms.date: 7/14/2022
 ---
 # Error when using the Search-Mailbox cmdlet
 
@@ -33,7 +33,7 @@ When you run the [Search-Mailbox](/powershell/module/exchange/search-mailbox) cm
                 + FullyQualifiedErrorId   : [Server=<server_name>,RequestId=<request_id>,TimeStamp=<date_and_time>] [FailureCategory =Cmdlet-ObjectNotFoundException] 1227BC9F  
                 + PSComputerName       : server_name.contoso.com
 
-However, if you run the cmdlet b having the `LogLevel` parameter set to **Basic**, the search is successful.
+However, if you run the cmdlet by having the `LogLevel` parameter set to **Basic**, the search is successful.
 
 ## Cause
 
