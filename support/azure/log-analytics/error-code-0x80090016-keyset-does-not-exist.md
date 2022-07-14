@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 ms.reviewer: irfanr
 editor: v-jsitser
-ms.service: log-analytics
+ms.service: azure-monitor
+ms.subservice: logs
 keywords: 
 #Customer intent: As a Log Analytics user, I want to resolve error code 0x80090016 "Keyset does not exist" so I can connect to my event viewer and agent logs. 
 ---
