@@ -2480,6 +2480,16 @@
       "source_path": "support/azure/virtual-machines/rdp.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "support/azure/log-analytics/welcome-log-analytics.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    }
   ]
 }
