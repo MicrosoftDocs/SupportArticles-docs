@@ -114,4 +114,4 @@ After you successfully install the Windows Agent, the agent will have a Log Anal
 
    1. If you can't determine the cause of failure, run the Agent Troubleshooter to gather a set of troubleshooting logs, as described in [Log Analytics Agent Troubleshooting Tool](/azure/azure-monitor/agents/agent-windows-troubleshoot#log-analytics-troubleshooting-tool). Then, file a support request.  
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -77,4 +77,4 @@ Observe the agent, the event logs, and your Log Analytics workspace to determine
 
 [Log Analytics Agent overview: installation options](/azure/azure-monitor/agents/log-analytics-agent#installation-options)
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

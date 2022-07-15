@@ -129,4 +129,4 @@ Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated 
 
 If the Linux agent appears, this issue is resolved. If the Linux agent doesn't appear, consider that there are different issues with it.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
