@@ -10,8 +10,7 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 #  Hash of the file does not match when running signed PowerShell script
 
-_Original product version:_ &nbsp;Windows 10  
-_Original KB number:_ &nbsp;5016563
+_Applies to:_ &nbsp;Windows 10  
 
 ## Symptoms
 
