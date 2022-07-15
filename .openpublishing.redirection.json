@@ -2490,6 +2490,51 @@
       "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-missing-heartbeats.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-missing-heartbeats",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-performance-counter-missing.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-performance-counter-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/mma-troubleshoot-basics.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/mma-troubleshoot-basics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/resolve-windows-agent-installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/resolve-windows-agent-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/windows-could-not-start-mma.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-could-not-start-mma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
+      "redirect_document_id": true
     }
   ]
 }
