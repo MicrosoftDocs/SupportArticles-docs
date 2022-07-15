@@ -2535,16 +2535,6 @@
       "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
       "redirect_document_id": true
-    },
-    {
-      "source_path": "support/azure/azure-monitor/app-insights/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/azure/log-analytics/toc.yml",
-      "redirect_url": "/troubleshoot/azure/azure-monitor/",
-      "redirect_document_id": false
     }
   ]
 }
