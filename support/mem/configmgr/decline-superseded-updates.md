@@ -123,7 +123,7 @@ try
 catch [System.Exception] 
 {
     Write-Output -InputObject 'Failed to connect.'
-    Write-Output -InputObject 'Error:' $_.Exception.Message
+    Write-Output -InputObject "Error: $($_.Exception.Message)"
     Write-Output -InputObject 'Please make sure that WSUS Admin Console is installed on this machine'
     Write-Output -InputObject ''
     $wsus = $null
