@@ -36,18 +36,18 @@ To complete these tasks, you need to clear prior activations of Microsoft 365 ap
 > - The steps below apply to Microsoft Project and Microsoft Visio also.
 > - The steps and scripts in this article apply to Windows installations of Office apps. For Office for Mac installations, see [How to remove Office license files on a Mac](https://support.microsoft.com/office/how-to-remove-office-license-files-on-a-mac-b032c0f6-a431-4dad-83a9-6b727c03b193).
 
-## Method: Use the Microsoft Support and Recovery Assistant
+## Method: Use Microsoft Support and Recovery Assistant
 
-The Assistant fully automates all of the steps outlined in this article, and it offers two options to reset Office Activation.
+The Assistant fully automates all the steps required to reset Office activation, and is available in two versions. Use the version that's appropriate for your requirement.
 
 - **Command-line version**<br/>
-  The [command-line version of the Assistant](https://aka.ms/SaRA_CommandLineVersion) can be scripted and it is recommended if you need to reset Office Activation on more than one device.
+  The [command-line version of the Assistant](https://aka.ms/SaRA_CommandLineVersion) can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
   > [!div class="nextstepaction"]
-> [Download cmdline version](https://aka.ms/SaRA_CommandLineVersionFiles)
-- **Interactive version**<br/>
-  The [interactive (full-UI) version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you have just one device or a small number of devices that need to reset Office Activation.
+> [Download command-line version](https://aka.ms/SaRA_CommandLineVersionFiles)
+- **UI version**<br/>
+  The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to reset Office activation on a single device, or on a small number of individual devices. 
 > [!div class="nextstepaction"]
-> [Download interactive version](https://aka.ms/SaRA-OfficeActivation-Reset)
+> [Download UI version](https://aka.ms/SaRA-OfficeActivation-Reset)
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
