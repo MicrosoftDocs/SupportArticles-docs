@@ -4,7 +4,6 @@ description: Lists the minimum service pack levels for Microsoft VC++ Redistribu
 ms.date: 04/15/2020
 ms.custom: sap:Installation
 ms.reviewer: myamada
-ms.technology: visual-cpp-installation
 ---
 # Minimum service pack levels for Visual C++ Redistributable Packages
 
