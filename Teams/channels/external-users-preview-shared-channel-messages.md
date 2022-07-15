@@ -22,14 +22,14 @@ ms.date: 07/15/2022
 
 ## Symptoms
 
-You share a channel with a team inside your organization that has external users. These external users don't have access to the shared channel. However, they can see a preview of the channel message in search results if the search query matches the content of the channel message.
+You share a channel with a team inside your organization that has external members. These external users don't have access to the shared channel. However, they can see a preview of the channel message in search results if the search query matches the content of the channel message.
 
 ## Resolution
 
 To prevent external users from seeing previews of channel messages, use one of the following options:
 
 - Remove the users from the team with which the channel is shared.
-- Don't share the channel with teams that have external users.
+- Don't share the channel with teams that have external members.
 
 ## More information
 
