@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: irfanr
 editor: v-jsitser
-ms.service: log-analytics
+ms.service: azure-monitor
+ms.subservice: logs
 keywords:
 #Customer intent: As an Azure Monitor user, I want to troubleshoot why the proxy settings for my Microsoft Monitoring Agent have disappeared so that I can connect to my Azure Log Analytics workspace to interact with System Center Operations Manager data.
 ---
@@ -79,4 +80,4 @@ You can remove the override of the advisor proxy setting rule so that the restor
 
 1. Return to the **Proxy Settings** tab in the **Microsoft Monitoring Agent Properties** dialog box, select the **Use a proxy server** option, and then reenter the **Proxy Server** address that you want to specify.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -33,10 +33,8 @@ productDirectory:
   - title: Azure Monitor
     imageSrc: "https://static.docs.com/ui/media/product/azure/monitor.svg"
     links:
-    - url: log-analytics/welcome-log-analytics.yml
-      text: Troubleshooting articles for Azure Log Analytics
-    - url: azure-monitor/app-insights/welcome-application-insights.yml
-      text: Troubleshooting articles for Azure Application Insights
+    - url: azure-monitor/welcome-azure-monitor.yml
+      text: Troubleshooting articles for Azure Monitor
   - title: Virtual Machines
     imageSrc: "https://static.docs.com/ui/media/product/azure/virtual-machine.svg"
     links:
