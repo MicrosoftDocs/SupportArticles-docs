@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/11/2022
+  ms.date: 7/14/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -124,6 +124,8 @@ landingContent:
             url: ./client-ip-address-cannot-access-api-server.md
           - text: Config file isn't available when connecting
             url: ./config-file-is-not-available-when-connecting.md
+          - text: Tunnel connectivity issues
+            url: ./tunnel-connectivity-issues.md
           - text: User can't get cluster resources
             url: ./user-cannot-get-cluster-resources.md
 
