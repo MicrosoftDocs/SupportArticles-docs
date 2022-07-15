@@ -6,8 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: irfanr
 editor: v-jsitser
-ms.prod: system-center
-ms.technology: operations-manager
+ms.service: azure-monitor
+ms.subservice: logs
 keywords:
 #Customer intent: As an Azure Log Analytics user, I want to make sure that the Microsoft Monitoring Agent can start on my Windows-based computer so that I can monitor computers, services, or applications at scale.
 ---
