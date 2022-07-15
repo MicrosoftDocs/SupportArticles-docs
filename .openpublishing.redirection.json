@@ -2532,7 +2532,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/azure/log-analytics/log-analytics/workspace-data-export-faq.yml",
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
       "redirect_document_id": true
     },
