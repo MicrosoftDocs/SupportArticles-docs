@@ -2,7 +2,7 @@
 title: Role instance startup failure in Azure Cloud Services
 description: Troubleshoot role instance startup failure (RoleInstanceStartupTimeoutError error) in Azure Cloud Services (extended support).
 ms.topic: article
-ms.service: cloud-services-extended-support
+ms.service: cloud-services
 author: surbhijain
 ms.author: surbhijain
 ms.reviewer: gachadw

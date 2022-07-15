@@ -12,7 +12,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: troubleshooting
-ms.date: 12/20/2018
+ms.date: 07/11/2022
 ms.author: genli
 ---
 
@@ -32,14 +32,17 @@ The Azure Windows VMs need to connect to the Azure KMS server for Windows activa
 
 To resolve this problem, use the Azure custom route to route activation traffic to the Azure KMS server.
 
-The IP address of the KMS server for the Azure Global cloud is 23.102.135.246. Its DNS name is kms.core.windows.net. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.244` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net` with an IP address of `23.102.135.246`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global|kms.core.windows.net|23.102.135.246|
+|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.244, 40.83.235.53 <br> 23.102.135.246|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
+
+> [!NOTE] 
+> All the three IP addresses for the Azure Global cloud should be added to the custom route.
 
 To add the custom route, follow these steps:
 
@@ -61,6 +64,8 @@ To add the custom route, follow these steps:
     $RouteTable = New-AzRouteTable -Name "ArmVNet-DM-KmsDirectRoute" -ResourceGroupName "ArmVNet-DM" -Location "centralus"
 
     Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 23.102.135.246/32 -NextHopType Internet -RouteTable $RouteTable
+    Add-AzRouteConfig -Name "DirectRouteToAZKMS01" -AddressPrefix 20.118.99.224/32 -NextHopType Internet -RouteTable $RouteTable
+    Add-AzRouteConfig -Name "DirectRouteToAZKMS02" -AddressPrefix 40.83.235.53/32 -NextHopType Internet -RouteTable $RouteTable
 
     Set-AzRouteTable -RouteTable $RouteTable
 
@@ -95,10 +100,13 @@ To add the custom route, follow these steps:
 
     # Next, create a route:
     Set-AzureRoute -RouteTable $rt -RouteName "AzureKMS" -AddressPrefix "23.102.135.246/32" -NextHopType Internet
+    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS01" -AddressPrefix "20.118.99.224/32" -NextHopType Internet
+    Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS02" -AddressPrefix "40.83.235.53/32" -NextHopType Internet
 
     # Apply the KMS route table to the subnet that hosts the problem VMs (in this case, we apply it to the subnet that's named Subnet-1):
     Set-AzureSubnetRouteTable -VirtualNetworkName "VNet-DM" -SubnetName "Subnet-1" 
     -RouteTableName "VNet-DM-KmsRouteTable"
+
     ```
 
 3. Go to the VM that has activation problems. Use [PsPing](/sysinternals/downloads/psping) to test if it can reach the KMS server:
