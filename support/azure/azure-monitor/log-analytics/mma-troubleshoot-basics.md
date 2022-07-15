@@ -107,4 +107,4 @@ The default minimum value is 100 MB, and the maximum value is 1.5 GB. This setti
 
 The agent gradually backs off the retry process exponentially for up to 8.5 hours per retry. It will continue to retry every 8.5 hours indefinitely, and discard the oldest data when the buffer limit is reached. When the agent can successfully connect, it will upload data until it returns to processing the latest data.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
