@@ -5,7 +5,8 @@ ms.date: 03/15/2022
 author: genlin
 ms.author: genli
 ms.reviewer: irfanr
-ms.service: log-analytics
+ms.service: azure-monitor
+ms.subservice: logs
 ---
 # Linux performance counters are missing in Log Analytics workspace
 
@@ -128,4 +129,4 @@ Perf | summarize arg_max(TimeGenerated, *) by Computer | order by TimeGenerated 
 
 If the Linux agent appears, this issue is resolved. If the Linux agent doesn't appear, consider that there are different issues with it.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]

@@ -6,8 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: irfanr
 editor: v-jsitser
-ms.prod: system-center
-ms.technology: operations-manager
+ms.service: azure-monitor
+ms.subservice: logs
 keywords:
 #Customer intent: As an Azure Log Analytics user, I want to make sure that the Microsoft Monitoring Agent can start on my Windows-based computer so that I can monitor computers, services, or applications at scale.
 ---
@@ -85,4 +85,4 @@ Restore full control to the **SecureStorageManager** parameter for the system us
 
 1. Select **Edit** > **Permissions**, and then reapply the default permission in **Full Control** (**Allow**) for the **SYSTEM** user and the **Administrators (*\<ComputerName>*)** group.
 
-[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
