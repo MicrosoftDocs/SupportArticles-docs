@@ -43,11 +43,11 @@ The Assistant fully automates all the steps required to reset Office activation,
 - **Command-line version**<br/>
   The [command-line version of the Assistant](https://aka.ms/SaRA_CommandLineVersion) can be scripted and is recommended to reset Office activation on multiple devices and on devices that you can't access immediately.
   > [!div class="nextstepaction"]
-> [Download command-line version](https://aka.ms/SaRA_CommandLineVersionFiles)
+  > [Download command-line version](https://aka.ms/SaRA_CommandLineVersionFiles)
 - **UI version**<br/>
   The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to reset Office activation on a single device, or on a small number of individual devices. 
-> [!div class="nextstepaction"]
-> [Download UI version](https://aka.ms/SaRA-OfficeActivation-Reset)
+  > [!div class="nextstepaction"]
+  > [Download UI version](https://aka.ms/SaRA-OfficeActivation-Reset)
 
 <h2 id="method2">Method: Use scripts to automate the cleanup process</h2>
 
