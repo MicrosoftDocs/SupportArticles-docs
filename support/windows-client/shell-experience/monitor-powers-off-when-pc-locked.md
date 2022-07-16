@@ -31,7 +31,7 @@ In this scenario, you may observe that the PC monitor turns off after 1 minute. 
 
 ## Cause
 
-This behavior is by design in Windows 8. By default, when the console is locked, Windows waits for 60 seconds of inactivity before powering off the display. This setting is not configurable using the Windows user interface by default.
+This behavior is by design in Windows 8 and later. By default, when the console is locked, Windows waits for 60 seconds of inactivity before powering off the display. This setting is not configurable using the Windows user interface by default.
 
 ## Resolution
 
