@@ -9,7 +9,7 @@ manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 05/17/2022
+ms.date: 07/11/2022
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
@@ -96,10 +96,10 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
     sc delete WindowsAzureTelemetryService
     ```
 
-1. Under `C:\WindowsAzure` create a folder that is named OLD.
+1. Under `C:\WindowsAzure` create a folder that is named OLD. 
 
 1. Move any folders that are named Packages or GuestAgent into the OLD folder.
-
+1. Restart the VM to complete the uninstalling process. 
 1. Download and install the latest version of the agent installation package from [here](https://go.microsoft.com/fwlink/?linkid=394789&clcid=0x409). You must have Administrator rights to complete the installation.
 
 1. Install Guest Agent by using the following command:

@@ -49,6 +49,8 @@
       href: unexpected-reboots-attached-vhds.md
     - name: Understand a system reboot
       href: understand-vm-reboot.md
+    - name: Troubleshoot Windows stop error (directory service initialization failure)
+      href: troubleshoot-directory-service-initialization-failure.md
 
   - name: Planned maintenance
     items:
@@ -96,10 +98,12 @@
         href: troubleshoot-device-names-problems.md
       - name: Error in an Azure Linux VM - Failed to start Switch Root
         href: resolve-failed-start-switch-root-azure-linux-vm.md
-      - name: Grub Rescue
+      - name: GRUB rescue issues
         href: troubleshoot-vm-boot-error.md
       - name: Linux VM does not start after an LIS upgrade
         href: linux-vm-not-start-kernel-lis.md
+      - name: Troubleshoot Linux VM UEFI boot failures
+        href: azure-linux-vm-uefi-boot-failures.md
     - name: Windows
       href: boot-error-troubleshoot.md
       items:
@@ -208,6 +212,8 @@
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
       href: detailed-troubleshoot-ssh-connection.md
+    - name: Troubleshoot Linux VM UEFI boot failures
+      href: azure-linux-vm-uefi-boot-failures.md
     - name: Network issues
       href: cannot-connect-linux-network.md
     - name: SSH connection
@@ -424,6 +430,8 @@
           href: repair-linux-vm-using-ALAR.md
         - name: Unlock the encrypted disk for offline repair
           href: unlock-encrypted-linux-disk-offline-repair.md
+        - name: Troubleshoot chroot environment for Linux rescue VM
+          href: chroot-environment-linux.md
       - name: Repair VM with Nested Hyper-V
         href: troubleshoot-vm-by-use-nested-virtualization.md
 

@@ -3,6 +3,7 @@ title: Troubleshoot reporting for SCEP certificate deployment to devices with Mi
 description: Troubleshoot the reporting by NDES and the Intune Certificate Connector about a successful deployment of certificates that were provisioned with SCEP certificate profiles. 
 ms.date: 09/10/2021
 ms.reviewer: lacranda
+search.appverid: MET150
 ---
 # Troubleshooting NDES reporting of certificate deployments in Intune
 

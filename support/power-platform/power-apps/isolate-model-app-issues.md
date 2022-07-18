@@ -92,7 +92,7 @@ Model-driven apps have a complex data flow. Here are more advanced things to try
 
 ## Simplify custom scripts
 
-Custom scripts are an advanced feature for developers. They can be used on [forms]((/power-apps/developer/model-driven-apps/client-scripting), [custom commands](/power-apps/maker/model-driven-apps/command-designer-overview), [Power Apps components](/power-apps/developer/component-framework/overview), and [webpage (HTML) web resources](/power-apps/developer/model-driven-apps/webpage-html-web-resources). There's enormous flexibility in what scripts can do, but there's also a high chance that they can accidentally break the system.
+Custom scripts are an advanced feature for developers. They can be used on [forms](/power-apps/developer/model-driven-apps/client-scripting), [custom commands](/power-apps/maker/model-driven-apps/command-designer-overview), [Power Apps components](/power-apps/developer/component-framework/overview), and [webpage (HTML) web resources](/power-apps/developer/model-driven-apps/webpage-html-web-resources). There's enormous flexibility in what scripts can do, but there's also a high chance that they can accidentally break the system.
 
 If you suspect that a script is causing an issue, follow these steps:
 

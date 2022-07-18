@@ -3,6 +3,7 @@ title: Error and status codes in Microsoft Intune - Azure | Microsoft Docs
 description: See a list of the errors, status code, descriptions, and resolutions when using MDM managed devices, getting access to company resources, errors on iOS/iPadOS devices, and OMA response errors in Microsoft Intune.
 ms.date: 03/20/2019
 ms.reviewer: tscott
+search.appverid: MET150
 ---
 # Common error codes and descriptions in Microsoft Intune
 

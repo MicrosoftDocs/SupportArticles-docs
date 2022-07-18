@@ -100,9 +100,9 @@ To troubleshoot issues with Azure virtual machines (VMs) by using the troublesho
 
 1. Select **Troubleshooting tools**, and then select the tool that fits your issue.
 
-:::image type="content" source="./media/change-analysis-troubleshoot/vm-dnsp-troubleshootingtools.png" alt-text="Screenshot of the Diagnose and solve problems tool for a virtual machine." lightbox="./media/change-analysis-troubleshoot/vm-dnsp-troubleshootingtools.png":::
+:::image type="content" source="./media/change-analysis-troubleshoot/vm-dnsp-troubleshooting-tools.png" alt-text="Screenshot of the Diagnose and solve problems tool for a virtual machine.":::
 
-:::image type="content" source="./media/change-analysis-troubleshoot/analyze-recent-changes.png" alt-text="Screenshot of the Analyze recent changes section of the Diagnose and solve problems tool for a virtual machine." lightbox="./media/change-analysis-troubleshoot/analyze-recent-changes.png":::
+:::image type="content" source="./media/change-analysis-troubleshoot/analyze-recent-changes.png" alt-text="Screenshot of the Analyze recent changes section of the Diagnose and solve problems tool for a virtual machine." border="false":::
 
 ## Next steps
 
