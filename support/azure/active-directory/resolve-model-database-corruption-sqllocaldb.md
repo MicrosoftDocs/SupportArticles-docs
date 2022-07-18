@@ -31,6 +31,9 @@ Review the guidance in the next sections to learn how to do the following tasks:
 
 You can verify that the issue is based on the following events in the Azure AD Connect server:
 
+> [!IMPORTANT]
+>The mitigation steps described at the next section should only be applied on condition that the affected Azure AD Connect application is version 2.0.x.x , it is installed with SQL LocalDB and *ALL* below symptons are present.
+
 - Event Viewer: Application, EventID 528, Source: SQLLocalDB 15.0
 
   ```output
