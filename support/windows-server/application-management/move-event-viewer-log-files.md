@@ -106,15 +106,20 @@ You can confirm that the log path has been updated by using Registry Editor. For
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System` 
 
 ## Using Powershell
-It is possible to utilize Powershell for this purpose. Target path is assumed *C:\Logs*:
+It is possible to utilize Powershell for this purpose. In the sample, *Security* event logs will be migrated to *C:\Logs*:
 ```
 $originalFolder = "$env:SystemRoot\system32\winevt\Logs"
 $targetFolder = "D:\logs\"
+$logName = "Security"
 
 $originalAcl = Get-Acl -Path $originalFolder -Audit -AllCentralAccessPolicies
 Set-Acl -Path $targetFolder -AclObject $originalAcl -ClearCentralAccessPolicy
 $targetAcl = Get-Acl -Path $targetFolder -Audit -AllCentralAccessPolicies
 $targetAcl.SetOwner([System.Security.Principal.NTAccount]::new("SYSTEM"))
+
+New-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "AutoBackupLogFiles" -Value "1" -PropertyType "DWord"
+New-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "Flags" -Value "1" -PropertyType "DWord"
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "File" -Value "$targetFolder\$logName.evtx"
 ```
     
 ## References
