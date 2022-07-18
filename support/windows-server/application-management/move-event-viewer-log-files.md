@@ -72,7 +72,7 @@ Create a folder where you want to store the event logs in your local drive and a
     > [!NOTE]
     > To create subfolders for the logs, check the **Replace all child object permission entries with inheritable permissions entries from this object** option. The permissions set at the parent level are applied to all subfolders and files.
 
-5. Adjust permissions so that the folder is assigned the correct permissions and check the **Applies to** column. These permissions should be the same as the advanced permissions of the default folder (*%SystemRoot%\\Windows\\winevt\\Logs*) that stores the Event Viewer logs. Make sure that the **Authenticated Users** only have **Read** permission for **This folder and subfolders**.
+5. Adjust permissions so that the folder is assigned the correct permissions and check the **Applies to** column. These permissions should be the same as the advanced permissions of the default folder (*%SystemRoot%\\System32\\winevt\\Logs*) that stores the Event Viewer logs. Make sure that the **Authenticated Users** only have **Read** permission for **This folder and subfolders**.
 
     :::image type="content" source="media/move-event-viewer-log-files/advanced-security-settings-logs.png" alt-text="Screenshot of the Advanced Security Settings for Logs window.":::
 
@@ -103,8 +103,20 @@ You can move the log files to the created folder by using the **Event Viewer** a
 
 You can confirm that the log path has been updated by using Registry Editor. For example, go to the following registry path and check the **Value data** of the **File** value.
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System` 
 
+## Using Powershell
+It is possible to utilize Powershell for this purpose. Target path is assumed *C:\Logs*:
+```
+$originalFolder = "$env:SystemRoot\system32\winevt\Logs"
+$targetFolder = "D:\logs\"
+
+$originalAcl = Get-Acl -Path $originalFolder -Audit -AllCentralAccessPolicies
+Set-Acl -Path $targetFolder -AclObject $originalAcl -ClearCentralAccessPolicy
+$targetAcl = Get-Acl -Path $targetFolder -Audit -AllCentralAccessPolicies
+$targetAcl.SetOwner([System.Security.Principal.NTAccount]::new("SYSTEM"))
+```
+    
 ## References
 
 For more information about how to view and manage logs in the Event Viewer, see [How to delete corrupt Event Viewer Log files](https://support.microsoft.com/help/172156). To learn more about general Event Viewer usage, select the **Action** menu in Event Viewer, and then select **Help**.
