@@ -18,7 +18,7 @@ search.appverid:
 ms.date: 07/15/2022
 ---
 
-# External authenticated members can see channel message previews of shared channels in search results
+# Externally authenticated members can see channel message previews of shared channels in search results
 
 ## Symptoms
 
