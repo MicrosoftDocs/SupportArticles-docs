@@ -16,7 +16,7 @@ appliesto:
   - SharePoint Server 2013
   - SharePoint Server 2016 
 search.appverid: MET150
-ms.date: 7/5/2022
+ms.date: 7/18/2022
 ---
 
 # Unsupported and supported SharePoint Server database changes
@@ -74,7 +74,7 @@ For some specific usage scenarios, the prohibition against the database changes 
 - Changes that are made programmatically through the SharePoint Server object model and that are in compliance with the SharePoint Server SDK documentation.
 - Activities that are in compliance with the [SharePoint Server protocols documentation](/openspecs/sharepoint_protocols/ms-spprotlp/8a50af28-2b50-43d8-9c5a-3e520255ef7e?redirectedfrom=MSDN).
 
-Microsoft SharePoint Server support agents may provide scripts that change SharePoint Server databases during a support incident. In this case, all changes are reviewed by the SharePoint Server development team. This makes sure that the operations being performed won't result in an unstable or unsupported database state. During a support incident, database changes that are made with the guidance of a Microsoft SharePoint Server support agent won't result in an unsupported database state. You may not reapply the scripts or changes that are provided by Microsoft SharePoint Server Support outside of a support incident.
+Microsoft SharePoint Server support agents may provide scripts that change SharePoint Server databases during a support incident. In this case, all changes are reviewed by the SharePoint Server development team. This makes sure that the operations being performed won't result in an unstable or unsupported database state. During a support incident, database changes that are made with the guidance of a Microsoft SharePoint Server support agent won't result in an unsupported database state. You shouldn't reapply the scripts or changes that are provided by Microsoft SharePoint Server Support outside of a support incident.
 
 ## Unsupported read operations
 
