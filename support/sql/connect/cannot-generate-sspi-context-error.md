@@ -49,6 +49,8 @@ Windows authentication is the preferred method for users to authenticate to SQL 
 
 When a SQL Server client uses integrated security over TCP/IP sockets to a remote server that's running SQL Server, the SQL Server client network library uses the SSPI API to perform security delegation. The SQL Server network client makes a call to the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) function and passes in "negotiate" for the `pszPackage` parameter. This process notifies the underlying security provider to negotiate delegation. In this context, "negotiate" means to try Kerberos or NTLM authentication on Windows-based computers. In other words, Windows uses Kerberos delegation if the destination computer running SQL Server has an associated and correctly configured SPN. Otherwise, Windows uses NTLM delegation.
 
+ [!NOTE] If the SQL Server client is connecting locally on the same machine where SQL Server resides, NTLM is always used.
+
 ### Why doesn't the connection fail over to NTLM after running into issues with Kerberos?
 
 The SQL Server driver code on the client uses the WinSock network API to resolve the fully qualified DNS of the server when the driver uses Windows authentication to connect to SQL Server. To perform this operation, the driver code calls the `gethostbyname` and `gethostbyaddr` WinSock APIs. If integrated security is used, the driver will try to resolve the server's fully qualified DNS even if an IP address or a host name is passed as the name of the server.
