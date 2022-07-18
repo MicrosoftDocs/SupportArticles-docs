@@ -154,8 +154,8 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
 **Registry Key**: HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters\
 **Registry Entry**: Allow ClearText Logon Type\
 **Type**: REG_DWORDData:\
-**0**: Don’t allow forwarding of credentials (Default)\
-**1**: Allow  forwarding of credentials for password reset
+**Data**: **0**: Don’t allow forwarding of credentials (Default)\
+          **1**: Allow  forwarding of credentials for password reset
 > - Note that the change in both cases means that the LDS server should be considered a Tier-0 device as it can start security-sensitive tasks on the Domain Controller.
 
 ## Applies to
