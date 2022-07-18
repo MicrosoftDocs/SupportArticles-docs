@@ -27,6 +27,8 @@
   items:
   - name: InvalidModel exception
     href: troubleshoot-mismatched-config.md
+  - name: No space on the E or F drive
+    href: no-space-e-f-drive.md
   - name: Role recycle threshold exceptions
     href: troubleshoot-role-recycle-swap.md
   - name: SubscriptionPolicyCountExceeded exception
