@@ -4,7 +4,7 @@ description: This is a how-to article that helps you create a statistics-only da
 ms.date: 07/18/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
-author: 
+author: ramakoni1
 ms.prod: sql
 ms.author: v-jayaramanp
 ---
@@ -25,7 +25,7 @@ Typically, you must simulate all of these types of information to reproduce the 
 
 Microsoft Customer Support Services may ask you to generate a script of the database metadata. Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
 
-[DBCC CLONEDATABASE](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use DBCC CLONEDATABASE.
+[DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use DBCC CLONEDATABASE.
 
 ## Script the whole database
 
@@ -38,12 +38,29 @@ Note If you generate a script for a database, and the metadata for the database 
 
 To script each database that is referenced by your query, follow these steps:
 
-Open SQL Server Management Studio. 
+1. Open SQL Server Management Studio.
 
-In the Object Explorer, expand Databases, and then locate the database that you want to script.
+1. In the **Object Explorer**, expand **Databases**, and then locate the database that you want to script.
 
-Right-click the database, point to Tasks, and then click Generate Scripts.
+1. Right-click the database, point to **Tasks**, and then click **Generate Scripts**.
 
-In the Script Wizard, verify that the correct database is selected. Click to select the Script entire database and all database objects, and then click Next.
+1. In the Script Wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then click **Next**.
 
-In the Choose Script Options dialog box, click on the Advanced button to change the following settings from the default value to the value that is listed in the following table. 
+1. In the **Choose Script Options** dialog box, click on the **Advanced** button to change the following settings from the default value to the value that is listed in the following table.
+
+
+|Scripting option  |Value to select  |
+|---------|---------|
+|ANSI padding     |   True      |
+|Continue Scripting on Error| True        |
+|Row3     | True      |
+|Row4     | True       |
+|Row5     | True      |
+|Row6     | True       |
+|Row7     | True       |
+|Row8     | True      |
+|Row9     | True       |
+|Row10     | True        |
+|Row11     |         |
+|Row12     |         |
+
