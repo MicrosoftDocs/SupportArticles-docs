@@ -44,6 +44,8 @@
     href: role-startup-failure.md
   - name: Allocation failure
     href: allocation-failure.md
+  - name: Application pool is crashing
+    href: application-pool-crashes.md
 
 - name: Reference
   items:
