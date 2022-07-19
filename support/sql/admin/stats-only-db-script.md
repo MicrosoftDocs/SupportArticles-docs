@@ -154,8 +154,8 @@ The following tables help explain how the query optimizer uses this information 
 
 ## See also
 
-- [Script objects in SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver15)
+- [Script objects in SQL Server Management Studio](/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver15)
 
-- [Data-tier Applications](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15)
+- [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15)
 
 - [Use PowerShell to Script SQL Database Objects](https://devblogs.microsoft.com/scripting/use-powershell-to-script-sql-database-objects/)
