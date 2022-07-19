@@ -25,7 +25,7 @@ Typically, you must simulate all of these types of information to reproduce the 
 
 Microsoft Customer Support Services may ask you to generate a script of the database metadata. Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
 
-[DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use DBCC CLONEDATABASE.
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use DBCC CLONEDATABASE.
 
 ## Script the whole database
 
@@ -60,6 +60,7 @@ To script each database that is referenced by your query, follow these steps:
 |Script Statistics      | True       |
 |Script Indexes     | True        |
 |Script Triggers     | True        |
+
 1. Please note that the **Script Logins** option and the **Script Object Level Permissions** option may not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Click **OK** to save the changes and close the **Advanced Scripting Options** page.
@@ -124,11 +125,11 @@ Therefore, we do not recommend that you script individual objects, unless the da
 
 1. Click **Finish** to start the scripting.
 
-  When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer may also request the following information:
+When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer may also request the following information:
 
-   - The hardware configuration, including the number of processors and how much physical memory exists.
+- The hardware configuration, including the number of processors and how much physical memory exists.
 
-   - The SET options that were active when you ran the query.
+- The SET options that were active when you ran the query.
 
 Note that you may have already provided this information by sending a SQLDiag report or a SQL Profiler trace. You may have also used another method to provide this information.
 
