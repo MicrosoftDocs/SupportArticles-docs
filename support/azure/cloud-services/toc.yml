@@ -27,8 +27,6 @@
   items:
   - name: InvalidModel exception
     href: troubleshoot-mismatched-config.md
-  - name: No space on the E or F drive
-    href: no-space-e-f-drive.md
   - name: Role recycle threshold exceptions
     href: troubleshoot-role-recycle-swap.md
   - name: SubscriptionPolicyCountExceeded exception
@@ -38,14 +36,16 @@
 
 - name: Troubleshooting Cloud Services (extended support)
   items:
-  - name: Disk partition preservation
-    href: disk-partition-preservation.md
-  - name: Roles that fail to start
-    href: role-startup-failure.md
   - name: Allocation failure
     href: allocation-failure.md
   - name: Application pool is crashing
     href: application-pool-crashes.md
+  - name: Disk partition preservation
+    href: disk-partition-preservation.md
+  - name: No space on the E or F drive
+    href: no-space-e-f-drive.md
+  - name: Roles that fail to start
+    href: role-startup-failure.md
 
 - name: Reference
   items:
