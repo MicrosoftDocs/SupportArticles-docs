@@ -47,19 +47,19 @@ To script each database that is referenced by your query, follow these steps:
 1. In the Script Wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then click **Next**.
 
 1. In the **Choose Script Options** dialog box, click on the **Advanced** button to change the following settings from the default value to the value that is listed in the following table.
-    
-|Scripting option  |Value to select  |
-|---------|---------|
-|Ansi padding     |   True      |
-|Continue Scripting on Error| True        |
-|Generate Script for Dependent Objects  | True      |
-|Include System Constraint Names     | True       |
-|Script Collation     | True      |
-|Script Logins     | True       |
-|Script Object Level Permissions      | True      |
-|Script Statistics      | True       |
-|Script Indexes     | True        |
-|Script Triggers     | True        |
+
+    |Scripting option  |Value to select  |
+    |---------|---------|
+    |Ansi padding     |   True      |
+    |Continue Scripting on Error| True |
+    |Generate Script for Dependent Objects  | True |
+    |Include System Constraint Names     | True  |
+    |Script Collation     | True  |
+    |Script Logins     | True  |
+    |Script Object Level Permissions      | True |
+    |Script Statistics      | True |
+    |Script Indexes     | True |
+    |Script Triggers     | True |
 
 1. Please note that the **Script Logins** option and the **Script Object Level Permissions** option may not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
@@ -101,21 +101,21 @@ Therefore, we do not recommend that you script individual objects, unless the da
 
 1. In the **Set Scripting Options** dialog box, click the **Advanced** button and change the following settings from the default value to the value that is listed in the following table in the **Advanced Scripting Options** page.
 
-|Scripting option  |Value to select  |
-|---------|---------|
-|Ansi Padding     | True        |
-|Continue Scripting on Error    |  True       |
-|Include System Constraint Names | True        |
-|Generate Script for Dependent Objects | True        |
-|Script Collation      |  True       |
-|Script Logins     |  True       |
-|Script Object Level Permissions |  True       |
-|Script Statistics     | True        |
-|Script USE DATABASE     | True        |
-|Script Indexes     | True         |
-|Script Triggers      | True        |
+    |Scripting option  |Value to select  |
+    |---------|---------|
+    |Ansi Padding     | True        |
+    |Continue Scripting on Error    |  True       |
+    |Include System Constraint Names | True        |
+    |Generate Script for Dependent Objects | True        |
+    |Script Collation      |  True       |
+    |Script Logins     |  True       |
+    |Script Object Level Permissions |  True       |
+    |Script Statistics     | True        |
+    |Script USE DATABASE     | True        |
+    |Script Indexes     | True         |
+    |Script Triggers      | True        |
 
-1. Please note that the **Script Logins** option and the **Script Object Level Permissions** option may not be required unless the schema contains objects that are owned by logins other than **dbo**.
+1. Please note that the **Script Logins** and **Script Object Level Permissions** options may not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Click **OK** to save and close the **Advanced Scripting Options** page.
 
@@ -151,7 +151,7 @@ The following tables help explain how the query optimizer uses this information 
 |Option  |Explanation  |
 |---------|---------|
 |Session SET options   | The `ANSI_NULLS` setting affects whether the `"NULL = NULL"` expression evaluates as true. Cardinality estimation for outer joins may change depending on the current setting. Additionally, ambiguous expressions may also change. For example, the `"col = NULL"` expression evaluates differently based on the setting. However, the `"col IS NULL"` expression always evaluates the same way.|
-|Hardware resources     | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism has not been disabled by using a `"MAXDOP"` hint or the max degree of parallelism configuration option. |
+|Hardware resources   | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism has not been disabled by using a `"MAXDOP"` hint or the max degree of parallelism configuration option. |
 
 ## See also
 
