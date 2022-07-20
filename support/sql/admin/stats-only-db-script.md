@@ -28,7 +28,7 @@ Microsoft Customer Support Services may ask you to generate a script of the data
 > [!NOTE]
 > The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the statistics script that is generated.
 
-The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
 ## Script the whole database
 
@@ -158,8 +158,8 @@ The following tables help explain how the query optimizer uses this information 
 
 ## See also
 
-- [Script objects in SQL Server Management Studio](/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver15)
+- [Script objects in SQL Server Management Studio](/sql/ssms/tutorials/scripting-ssms?view=sql-server-ver15&preserve-view=true)
 
-- [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15)
+- [Data-tier Applications](/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-ver15&preserve-view=true)
 
 - [Use PowerShell to Script SQL Database Objects](https://devblogs.microsoft.com/scripting/use-powershell-to-script-sql-database-objects/)
