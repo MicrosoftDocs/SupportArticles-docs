@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to move Windows Server 2016 and Windows Server 2019 Event Viewer log files to another location on the hard disk.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 315417
 
 ## Summary
@@ -105,11 +105,13 @@ You can confirm that the log path has been updated by using Registry Editor. For
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System` 
 
-## Using Powershell
-It is possible to utilize Powershell for this purpose. In the sample, *Security* event logs will be migrated to *C:\Logs*:
-```
+## Move Event Viewer log files by using Powershell
+
+It is possible to utilize Powershell for this purpose. In the sample, *Security* event logs will be migrated to *C:\\Logs*:
+
+```powershell
 $originalFolder = "$env:SystemRoot\system32\winevt\Logs"
-$targetFolder = "D:\logs\"
+$targetFolder = "C:\logs\"
 $logName = "Security"
 
 $originalAcl = Get-Acl -Path $originalFolder -Audit -AllCentralAccessPolicies
