@@ -1,9 +1,11 @@
 ---
-title: Change Windows Active Directory user password through LDAP
+title: Change Windows Active Directory and LDS user password through LDAP
 description: This article describes how to change a Windows Active Directory and LDS user password through LDAP.
-ms.date: 01/04/2021
+ms.date: 07/13/2022
 ms.custom: sap:Windows Administration and Management Development
-ms.reviewer: RRANDALL
+author: shwetasohu
+ms.author: v-shwetasohu
+ms.reviewer: RRANDALL, HerbertMauerer
 ms.topic: how-to
 ms.technology: windows-dev-apps-admin-management-dev
 ---
@@ -16,17 +18,15 @@ _Original KB number:_ &nbsp; 269190
 
 ## Summary
 
-You can set a Windows Active Directory and LDS user's password through the Lightweight Directory Access Protocol (LDAP) given certain restrictions. This article describes how to set or change the password attribute.
+Based on certain restrictions, you can set a Windows Active Directory and Lightweight Directory Services (LDS) password through the Lightweight Directory Access Protocol (LDAP). This article describes how to set or change the password attribute.
 
-These steps also apply to ADAM and LDS users and userProxy objects in the same way as done with AD users.
-
-This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
+These steps also apply to Active Directory Application Mode (ADAM) and LDS users and userProxy objects in the same way as done with AD users. See additional hints at the end of the article for details.
 
 ## More information
 
-The password is stored in the AD and LDS database on a user object in the unicodePwd attribute. This attribute can be written under restricted conditions, but it cannot be read. The attribute can only be modified; it cannot be added on object creation or queried by a search.
+The password is stored in the AD and LDS database on a user object in the **unicodePwd** attribute. This attribute can be written under restricted conditions but can't be read. The attribute can only be modified; it can't be added on object creation or queried by a search.
 
-In order to modify this attribute, the client must have a 128-bit Transport Layer Security (TLS)/Secure Socket Layer (SSL) connection to the server. An encrypted session using SSP-created session keys using NTLM or Kerberos are also acceptable as long as the minimum key length is met.
+To modify this attribute, the client must have a 128-bit Transport Layer Security (TLS)/Secure Socket Layer (SSL) connection to the server. An encrypted session using SSP-created session keys using Windows New Technology LAN Manager (NTLM) or Kerberos are also acceptable as long as the minimum key length is met.
 
 For this connection to be possible using TLS/SSL:
 
@@ -34,11 +34,11 @@ For this connection to be possible using TLS/SSL:
 - The client must trust the certificate authority (CA) that generated the server certificate.
 - Both client and server must be capable of 128-bit encryption.
 
-The syntax of the unicodePwd attribute is octet-string; however, the directory service expects that the octet-string will contain a UNICODE string (as the name of the attribute indicates). This means that any values for this attribute passed in LDAP must be UNICODE strings that are BER-encoded (Basic Encoding Rules) as an octet-string. In addition, the UNICODE string must begin and end in quotes that are not part of the desired password.
+The syntax of the **unicodePwd** attribute is octet-string; however, the directory service expects that the octet-string will contain a UNICODE string (as the name of the attribute indicates). This means that any values for this attribute passed in LDAP must be UNICODE strings that are BER-encoded (Basic Encoding Rules) as an octet-string. In addition, the UNICODE string must begin and end in quotes that aren't part of the desired password.
 
-There are two possible ways to modify the unicodePwd attribute. The first is similar to a normal **user change password** operation. In this case, the modify request must contain both a delete and an add operation. The delete operation must contain the current password with quotes around it. The add operation must contain the desired new password with quotes around it.
+There are two possible ways to modify the **unicodePwd** attribute. The first is similar to a regular user change password operation. In this case, the modify request must contain both delete and an add operation. The delete operation must contain the current password with quotes around it. The add operation must contain the desired new password with quotes around it.
 
-The second way to modify this attribute is analogous to an administrator resetting a password for a user. In order to do this, the client must bind as a user with sufficient permissions to modify another user's password. This modify request should contain a single replace operation with the new desired password surrounded by quotes. If the client has sufficient permissions, this password becomes the new password, regardless of what the old password was.
+The second way to modify this attribute is analogous to an administrator resetting a password for a user. To do this, the client must bind as a user with sufficient permissions to modify another user’s password. This modify request should contain a single replace operation with the new desired password surrounded by quotes. If the client has sufficient permissions, this password becomes the new password, regardless of what the old password was.
 
 The following two functions provide examples of these operations:
 
@@ -58,19 +58,19 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     
     // Build an array of LDAPMod.
     
-    // For setting unicodePwd, this MUST be a double op.
+    // For setting **unicodePwd**, this MUST be a double op.
     modEntry[0] = &modOldPassword;
     modEntry[1] = &modNewPassword;
     modEntry[2] = NULL;
     
-    // Build mod struct for unicodePwd Add.
+    // Build mod struct for **unicodePwd** Add.
     modNewPassword.mod_op = LDAP_MOD_ADD | LDAP_MOD_BVALUES;
-    modNewPassword.mod_type =L"unicodePwd";
+    modNewPassword.mod_type =L”unicodePwd”;
     modNewPassword.mod_vals.modv_bvals = newPwd_attr;
     
-    // Build mod struct for unicodePwd Delete.
+    // Build mod struct for **unicodePwd** Delete.
     modOldPassword.mod_op = LDAP_MOD_DELETE | LDAP_MOD_BVALUES;
-    modOldPassword.mod_type =L"unicodePwd";
+    modOldPassword.mod_type =L”unicodePwd”;
     modOldPassword.mod_vals.modv_bvals = oldPwd_attr;
     
     // Password will be single valued, so we only have one element.
@@ -80,8 +80,8 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     oldPwd_attr[1]= NULL;
     
     // Surround the passwords in quotes.
-    wsprintf(pszNewPasswordWithQuotes,L"\"%s\"",pszNewPassword);
-    wsprintf(pszOldPasswordWithQuotes,L"\"%s\"",pszOldPassword);
+    wsprintf(pszNewPasswordWithQuotes,L”\”%s\””,pszNewPassword);
+    wsprintf(pszOldPasswordWithQuotes,L”\”%s\””,pszOldPassword);
     
     // Build the BER structures with the UNICODE passwords w/quotes.
     newPwdBerVal.bv_len = wcslen(pszNewPasswordWithQuotes) * sizeof(WCHAR);
@@ -96,9 +96,9 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     );
     
     if (err == LDAP_SUCCESS )
-    wprintf(L"\nPassword succesfully changed!\n");
+    wprintf(L”\nPassword successfully changed!\n”);
     else
-    wprintf(L"\nPassword change failed!\n");
+    wprintf(L”\nPassword change failed!\n”);
     
     return err;
 }
@@ -117,9 +117,9 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     modEntry[0] = &modPassword;
     modEntry[1] = NULL;
     
-    // Build mod struct for unicodePwd. 
+    // Build mod struct for **unicodePwd**. 
     modPassword.mod_op = LDAP_MOD_REPLACE | LDAP_MOD_BVALUES;
-    modPassword.mod_type =L"unicodePwd";
+    modPassword.mod_type =L”unicodePwd”;
     modPassword.mod_vals.modv_bvals = pwd_attr;
     
     // Password will be single valued, so we only have one element.
@@ -127,7 +127,7 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     pwd_attr[1]= NULL;
     
     // Surround the password in quotes.
-    wsprintf(pszPasswordWithQuotes,L"\"%s\"",pszPassword);
+    wsprintf(pszPasswordWithQuotes,L”\”%s\””,pszPassword);
     
     // Build the BER structure with the UNICODE password.
     pwdBerVal.bv_len = wcslen(pszPasswordWithQuotes) * sizeof(WCHAR);
@@ -140,36 +140,33 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     );
     
     if (err == LDAP_SUCCESS )
-    wprintf(L"\nPassword succesfully set!\n");
+    wprintf(L”\nPassword succesfully set!\n”);
     else
-    wprintf(L"\nPassword set failed!\n");
+    wprintf(L”\nPassword set failed!\n”);
     
     return err;
 }
 ```
+> [!Tip]
+> - To configure LDS instances using UserProxy objects for password resets, you have to allow constrained delegation of the LDS service account (default: LDS computer account) to the domain controllers in case the user logon uses Kerberos.
+> - If you are using LDAP simple bind, you have to use Windows Server 2022 or a newer version and set a registry entry to forward the admin LDAP session credentials to the Active Directory Domain Controller:\
+**Registry Key**: HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters\
+**Registry Entry**: Allow ClearText Logon Type\
+**Type**: REG_DWORDData:\
+**Data**: **0**: Don’t allow forwarding of credentials (Default)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **1**: Allow  forwarding of credentials for password reset
+> - Note that the change in both cases means that the LDS server should be considered a Tier-0 device as it can start security-sensitive tasks on the Domain Controller.
 
 ## Applies to
 
-- Microsoft Windows Server 2003 Enterprise Edition (32-bit x86)
-- Microsoft Windows Server 2003 Enterprise Edition for Itanium-based Systems
-- Microsoft Windows Server 2003 Enterprise x64 Edition
-- Microsoft Windows Server 2003 Standard Edition (32-bit x86)
-- Microsoft Windows Server 2003 Standard x64 Edition
-- Windows Server 2008 Enterprise
-- Windows Server 2008 Standard
-- Windows Server 2008 R2 Enterprise
-- Windows Server 2008 R2 Standard
 - Windows Server 2012 Datacenter
 - Windows Server 2012 Standard
 - Windows Server 2012 R2 Datacenter
 - Windows Server 2012 R2 Standard
-- Microsoft Windows XP Professional
-- Windows Vista Business, Windows Vista Enterprise
-- Windows Vista Ultimate
-- Windows 7 Enterprise
-- Windows 7 Professional
-- Windows 7 Ultimate
-- Windows 8 Enterprise
-- Windows 8 Pro
+- Windows Server 2016
+- Windows Server 2019
+- Windows Server 2022
 - Windows 8.1 Enterprise
 - Windows 8.1 Pro
+- Windows 10
+- Windows 11
