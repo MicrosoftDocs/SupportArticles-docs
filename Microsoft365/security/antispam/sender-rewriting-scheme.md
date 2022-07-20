@@ -40,7 +40,7 @@ SRS rewrites the **P1 From** address in the following scenario:
   - Groups or DLs that have external members
   - Mail Contact forwarding
   - Mail User forwarding
-- Messages that are autoforwarded (or redirected) from our customer's on-premises environments and relayed through Office 365.
+- Messages that are autoforwarded (or redirected) from our customer's on-premises environments and relayed through Microsoft 365.
 
 *Some messages forwarded with SMTP Forwarding will not be rewritten with SRS as they have already been rewritten.
 
@@ -58,7 +58,7 @@ This change causes Non-Delivery Reports (NDRs) to return to Microsoft 365 instea
 
 ### Autoforwarding emails for a Microsoft 365-hosted mailbox
 
-A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP forwarding or Mailbox Rule redirection or Transport Rule redirection have the **P1 From** address rewritten before the message leaves Office 365. The address is rewritten by using the following pattern:
+A message that is autoforwarded for a hosted mailbox by mechanisms such as SMTP forwarding or Mailbox Rule redirection or Transport Rule redirection have the **P1 From** address rewritten before the message leaves Microsoft 365. The address is rewritten by using the following pattern:
 
 ```powershell
 <Forwarding Mailbox Username>+SRS=<Hash>=<Timestamp>=<Original Sender Domain>=<Original Sender Username>@<Forwarding Mailbox Domain>
@@ -79,7 +79,7 @@ A message is sent from Bob (bob@fabrikam.com) to John's mailbox in Microsoft 365
 
 ### Relaying from a customer's on-premises server
 
-A message that is relayed from a customer's on-premises server or application through Office 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Office 365. The address is rewritten by using the following pattern:
+A message that is relayed from a customer's on-premises server or application through Microsoft 365 from a non-verified domain has the **P1 From** address rewritten before it leaves Microsoft 365. The address is rewritten by using the following pattern:
 
 ```powershell
 bounces+SRS=<Hash>=<Timestamp>@<Default Accepted Domain>
@@ -92,7 +92,7 @@ Example
 
 A message is sent from Bob (bob@fabrikam.com) to John's mailbox (john.onprem@contoso.com) on company's own server that is running Exchange Server. John has set up auto-forwarding to the home email address (john.home@example.com).
 
-|Type|Original message|Relayed message received by Office 365|Relayed message sent from Microsoft 365|
+|Type|Original message|Relayed message received by Microsoft 365|Relayed message sent from Microsoft 365|
 |---|---|---|---|
 |Recipient|john.onprem@contoso.com|john.home@example.com|john.home@example.com|
 |P1 From|bob@fabrikam.com|bob@fabrikam.com|bounces+SRS=44ldt=IX@contoso.com|

@@ -53,7 +53,7 @@ This issue occurs because certain paths are reserved in SharePoint Online when y
 
 - /portals
 
-**In Office 365 Small Business:**
+**In Microsoft 365 Small Business:**
 
 - /search
 

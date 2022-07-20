@@ -35,7 +35,7 @@ This is by design. Microsoft Project Server 2013 and Project Online use the Shar
 
 **Resolution 2** for SharePoint permissions mode only:
 
-You will create a SharePoint Tasks list and assign Active Directory or Office 365 users to tasks in the list by following these steps:
+You will create a SharePoint Tasks list and assign Active Directory or Microsoft 365 users to tasks in the list by following these steps:
 
 1. Create a **SharePoint Tasks List** either on a SharePoint Project site or within Project Web App (PWA).   
 2. Create tasks and using the people picker assign users that you want to be resources with PWA and **Save** the list.   

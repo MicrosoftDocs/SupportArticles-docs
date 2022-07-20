@@ -39,7 +39,7 @@
       href: ../online-configuration/call-queues-not-redirect-to-agents.md
     - name: DNS configuration issues
       href: ../online-configuration/dns-configuration-issue.md
-    - name: Issue when Office 365 administrator disables a user
+    - name: Issue when Microsoft 365 administrator disables a user
       href: ../online-configuration/license-validation-error.md
     - name: How to set up external communication
       href: ../online-configuration/set-up-external-communication.md
@@ -207,7 +207,7 @@
       href: ../online-sign-in/error-in-xml-document-new-csonlinesession.md
     - name: Issue when sign in Skype for Business Online
       href: ../online-sign-in/cant-sign-into-sfb-online.md
-    - name: Issue when sign in to a German Office 365 environment
+    - name: Issue when sign in to a German Microsoft 365 environment
       href: ../online-sign-in/issue-sign-in-german-environment.md
     - name: Issue when sign in to Lync 2010 mobile client
       href: ../online-sign-in/sign-in-lync-2010-mobile.md

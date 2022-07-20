@@ -41,8 +41,8 @@ The following table describes the sign-in fields required for Android users:
 |-|-|-|
 |On-premises Skype for Business Server|SIP address and UPN are the same|**Sign-in address:**SIP address **User name:** Blank **Password:** Password|
 |On-premises Skype for Business Server|SIP address and UPN are different|**Sign-in address:** SIP address **User name:**UPN or domain\username **Password:** Password|
-|Office 365|SIP address and UPN are the same|**Sign-in address:** SIP address **User Name:** Blank **Password:** Password|
-|Office 365|SIP address and UPN are different|**Sign-in address:** SIP address **User name:** UPN **Password:** Password|
+|Microsoft 365|SIP address and UPN are the same|**Sign-in address:** SIP address **User Name:** Blank **Password:** Password|
+|Microsoft 365|SIP address and UPN are different|**Sign-in address:** SIP address **User name:** UPN **Password:** Password|
 
 If automatic discovery for mobile clients hasn't been configured, users have to enter the following internal and external discovery addresses in addition to the fields that are listed in the table:
 

@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 ## Introduction
 
-This article discusses how to remove automapping for shared mailboxes in Microsoft Outlook for Microsoft Office 365.
+This article discusses how to remove automapping for shared mailboxes in Microsoft Outlook for Microsoft 365.
 
 In Microsoft Outlook, Autodiscover automatically maps to any mailbox for which a user has full access permissions. Autodiscover automatically loads all mailboxes for which the user has full access permissions in the following scenarios:
 

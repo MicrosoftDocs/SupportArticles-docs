@@ -97,7 +97,7 @@ To avoid this behavior, set the value for **FirstBootStatus** to show that OneNo
 
 ### Impact to administrators
 
-- Administrators who don't manage the deployment of Office 365 clients to their users and instead let Microsoft control the installation will find that OneNote is included by default for all new installations of Office 365 Business and Office 365 ProPlus starting March 10 from all update channels.
+- Administrators who don't manage the deployment of Office 365 clients to their users and instead let Microsoft control the installation will find that OneNote is included by default for all new installations of Microsoft 365 Apps starting March 10 from all update channels.
 - Administrators who manage the deployment of Office 365 clients to their users will see no change in their deployments.
 - Administrators who decided to exclude OneNote from installations will continue to see OneNote excluded from new installs.
 - Administrators who decided to include OneNote with their installations will continue to see OneNote included with new installs.

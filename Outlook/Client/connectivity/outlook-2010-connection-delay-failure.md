@@ -44,7 +44,7 @@ If you are unable to install the Outlook 2010 hotfix package dated June 26, 2012
 
 ### How to obtain explicit permissions to the secondary mailbox
 
-Your Exchange Online administrator must connect to the Office 365 environment by using Windows PowerShell to grant your user account explicit permission to the secondary or shared mailbox.
+Your Exchange Online administrator must connect to the Microsoft 365 environment by using Windows PowerShell to grant your user account explicit permission to the secondary or shared mailbox.
 
 > [!IMPORTANT]
 > The administrator should use **Run as administrator** to start Windows PowerShell.

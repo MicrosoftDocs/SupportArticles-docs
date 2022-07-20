@@ -50,8 +50,8 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
     |-|-|-|
     |On-premises Lync server|Same|Sign-in address: SIP address; User name: Blank |
     |On-premises Lync server|Different|Sign-in address: SIP address; User name: UPN or domain\username |
-    |Office 365|Same|Sign-in address: SIP address; User Name: Blank |
-    |Office 365|Different|Sign-in address: SIP address; User name: UPN |
+    |Microsoft 365|Same|Sign-in address: SIP address; User Name: Blank |
+    |Microsoft 365|Different|Sign-in address: SIP address; User name: UPN |
 
 5. Verify whether **Autodetect server** is **On**. Lync tries to determine your Lync server based on your sign-in address. If it can't detect your Lync server, you may have to turn off **Autodetect server** and specify the Lync server manually.
 

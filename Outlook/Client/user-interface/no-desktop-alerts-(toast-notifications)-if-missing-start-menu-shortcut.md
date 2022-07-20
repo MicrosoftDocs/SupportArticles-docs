@@ -82,7 +82,7 @@ The Click-To-Run installer displays the following (notice the **Update Options**
 
 :::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/click-to-run-install-info.png" alt-text="Screenshot of Information window for Click-to-Run install.":::
 
-For information about deploying Office 365 ProPlus, which uses Click-to-Run, see [Deployment guide for Office 365 ProPlus](/deployoffice/deployment-guide-microsoft-365-apps).
+For information about deploying Microsoft 365 Apps, which uses Click-to-Run, see [Deployment guide for Microsoft 365 Apps](/deployoffice/deployment-guide-microsoft-365-apps).
 
 Now, to repair your installation of Office, follow these steps:
 

@@ -19,7 +19,7 @@ appliesto:
   - Office Standard 2016
   - Office 365 Home
   - Office 365 Personal
-  - Office 365 Business
+  - Microsoft 365 Apps
   - Access 2016
   - Excel 2016
   - OneNote 2016

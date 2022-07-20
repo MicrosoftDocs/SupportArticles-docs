@@ -1,6 +1,6 @@
 ---
-title: Outlook cannot connect or web services cannot work after migrated to Office 365
-description: Describes an issue that generates performance and connection problems for Outlook 2013. Occurs after your mailbox is migrated to Office 365. A resolution is provided.
+title: Outlook cannot connect or web services cannot work after migrated to Microsoft 365
+description: Describes an issue that generates performance and connection problems for Outlook 2013. Occurs after your mailbox is migrated to Microsoft 365. A resolution is provided.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,11 +17,11 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Outlook doesn't connect or web services don't work after migration to Office 365
+# Outlook doesn't connect or web services don't work after migration to Microsoft 365
 
 ## Symptoms
 
-After your mailbox is migrated to Office 365, you may experience the following issues:
+After your mailbox is migrated to Microsoft 365, you may experience the following issues:
 
 - Outlook cannot connect to Exchange Server.
 - You cannot use features such as Out of Office, meeting availability, mail tips, the online archive, or any other web services feature that relies on Autodiscover.

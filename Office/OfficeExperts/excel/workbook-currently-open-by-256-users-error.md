@@ -27,7 +27,7 @@ You receive the following error when opening an Excel workbook that is stored on
 The workbook will be opened read-only. You can try again later when one or more users have closed the workbook."
 
 ## Cause
-"Shared Workbooks" is a legacy sharing option that allows you to collaborate on a workbook with multiple authors. This feature has been replaced in Office 365 by the co-authoring feature. 
+"Shared Workbooks" is a legacy sharing option that allows you to collaborate on a workbook with multiple authors. This feature has been replaced in Microsoft 365 by the co-authoring feature. 
 
 ## Resolution
 To resolve this issue, select the **Review** tab of the ribbon, and within the **Protect** group select **Unshare Workbook**. 

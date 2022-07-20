@@ -42,7 +42,7 @@ To resolve this issue, take one of the following actions:
 
 ### Reactivate Office and install Lync Basic 2013
 
-1. To reactivate Office, click **Sign In** in the **Your subscription has expired** dialog box. In the **Activate Office** dialog box, enter your Office 365 email address, as shown in the following screen shot:
+1. To reactivate Office, click **Sign In** in the **Your subscription has expired** dialog box. In the **Activate Office** dialog box, enter your Microsoft 365 email address, as shown in the following screen shot:
  
     :::image type="content" source="./media/your-subscription-has-expired/active-office.png" alt-text="Screenshot that shows the the Activate Office dialog box.":::
 2. After you enter your email address and password, select a product from the list:
@@ -54,7 +54,7 @@ To resolve this issue, take one of the following actions:
  
     :::image type="content" source="./media/your-subscription-has-expired/activate-lync-message.png" alt-text="Screenshot that shows the Products we found in your account can't be used to activate Lync message.":::
 
-    Click **Help** to be directed to the Office 365 Downloads page, where you can then install Lync Basic 2013.    
+    Click **Help** to be directed to the Microsoft 365 Downloads page, where you can then install Lync Basic 2013.    
   
 ## More information
 

@@ -18,7 +18,7 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Outlook performance is slow in the Office 365 environment
+# Outlook performance is slow in the Microsoft 365 environment
 
 ## Symptoms
 
@@ -59,7 +59,7 @@ To fix this issue, follow these steps:
      > [!NOTE]
      > This diagnostic creates detailed information about your Outlook configuration and provides solutions for any known issues that are detected. It also gives you the option to upload your results to Microsoft so that a Support engineer can review them before you make a Support call.
 
-   - Disable Skype for Business Online (formerly Lync Online) integration. If Outlook is integrated with Skype for Business Online in your Office 365 environment, the integration may affect Outlook's performance. To disable Skype for Business Online integration with Outlook, follow these steps:
+   - Disable Skype for Business Online (formerly Lync Online) integration. If Outlook is integrated with Skype for Business Online in your Microsoft 365 environment, the integration may affect Outlook's performance. To disable Skype for Business Online integration with Outlook, follow these steps:
 
      1. Open Lync, select the gear icon in the upper-right corner, point to **Tools**, and then select **Options**.
      2. Select **Personal**, and then clear the check boxes in the **Personal information manager** area.

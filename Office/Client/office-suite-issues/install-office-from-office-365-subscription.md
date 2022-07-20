@@ -1,6 +1,6 @@
 ---
 title: The Installation of This Package Failed
-description: Describes an issue in which installing Office Pro Plus 2010 from Office 365 Subscription Portal fails. Provides a solution.
+description: Describes an issue in which installing Office Pro Plus 2010 from Microsoft 365 Subscription Portal fails. Provides a solution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Office 365 Subscription Portal
+# "The Installation of This Package Failed" When you install Office Pro Plus 2010 from Microsoft 365 Subscription Portal
 
 ## Symptoms
 

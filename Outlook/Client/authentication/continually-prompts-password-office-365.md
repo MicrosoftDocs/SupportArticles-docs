@@ -1,5 +1,5 @@
 ---
-title: Outlook continually prompts for password when you try to connect to Office 365
+title: Outlook continually prompts for password when you try to connect to Microsoft 365
 description: Describes an Outlook connection issue referenced in an OffCAT diagnostic rule. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
@@ -21,11 +21,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Outlook continually prompts for your password when you try to connect to Office 365
+# Outlook continually prompts for your password when you try to connect to Microsoft 365
 
 ## Symptoms
 
-When you try to create an Outlook profile or connect to a Microsoft Office 365 mailbox, you're continually prompted for credentials while the client displays a "trying to connect..." message. If you cancel the credentials prompt, you receive the following error message:
+When you try to create an Outlook profile or connect to a Microsoft 365 mailbox, you're continually prompted for credentials while the client displays a "trying to connect..." message. If you cancel the credentials prompt, you receive the following error message:
 
 > The connection to Microsoft Exchange is unavailable. Outlook must be online or connected to complete this action.
 

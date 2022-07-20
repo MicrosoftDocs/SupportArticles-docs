@@ -1,5 +1,5 @@
 ---
-title: Can't set up Office 365 account in Outlook
+title: Can't set up Microsoft 365 account in Outlook
 description: Fixes an issue in which a user can't set up a Microsoft 365 account in Outlook.
 author: helenclu
 ms.author: luche
@@ -41,7 +41,7 @@ To fix this issue, disable MFA for the account in the Microsoft 365 admin center
 > [!NOTE]
 > You might have to contact your Exchange administrator to disable the MFA .
 
-1. Browse to the [Office 365 portal](https://portal.office.com), and sign in to your Office 365 subscription by using your Global Administrator account.
+1. Browse to the [Microsoft 365 portal](https://portal.office.com), and sign in to your Office 365 subscription by using your Global Administrator account.
 2. On the main portal page, select **Admin**.
 3. In the navigation pane, select **Users** > **Active users**.
 4. In the **Active users** pane, select **More** > **Multi-factor authentication setup**.

@@ -256,7 +256,7 @@ Did this solve your problem?
 
 We're glad to hear you're back in service.
 
-To help your organization find out why Skype for Business can't automatically sign in, contact your workplace technical support-typically the person who sent you email about how to get set up with Office 365.
+To help your organization find out why Skype for Business can't automatically sign in, contact your workplace technical support-typically the person who sent you email about how to get set up with Microsoft 365.
 
 ### Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)
 
@@ -278,7 +278,7 @@ Did this solve your problem?
 
 ### Contact your workplace technical support
 
-We're sorry, but we couldn't resolve your sign-in issue. For more troubleshooting, contact your workplace technical support-typically the person who sent you email about how to get set up with Office 365.
+We're sorry, but we couldn't resolve your sign-in issue. For more troubleshooting, contact your workplace technical support-typically the person who sent you email about how to get set up with Microsoft 365.
 
 ### Enter your user ID
 

@@ -15,7 +15,7 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Outlook shows "Disconnected" after you enable modern authentication in Office 365
+# Outlook shows "Disconnected" after you enable modern authentication in Microsoft 365
 
 ## Symptoms
 
