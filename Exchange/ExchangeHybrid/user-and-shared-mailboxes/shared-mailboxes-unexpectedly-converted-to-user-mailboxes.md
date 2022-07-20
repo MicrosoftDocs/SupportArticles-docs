@@ -41,7 +41,7 @@ Additionally, when you view the properties of the shared mailboxes in the Micros
 
 ## Cause
 
-This issue occurs if the `RemoteRecipientType` attribute is set incorrectly. To be able to convert a User mailbox to a Shared mailbox and not have it be converted back to a User mailbox, the `RemoteRecipientType` attribute must reflect that the mailbox was migrated or that it is a Shared mailbox. If it does not, directory synchronization replicates the attributes to the cloud. Then, Office 365 converts the Shared mailbox to a regular `UserMailbox` object. If the user isn't licensed and if the 30-day grace period has ended, the mailbox is disconnected and converted to a `MailUser` object when license reconciliation runs.
+This issue occurs if the `RemoteRecipientType` attribute is set incorrectly. To be able to convert a User mailbox to a Shared mailbox and not have it be converted back to a User mailbox, the `RemoteRecipientType` attribute must reflect that the mailbox was migrated or that it is a Shared mailbox. If it does not, directory synchronization replicates the attributes to the cloud. Then, Microsoft 365 converts the Shared mailbox to a regular `UserMailbox` object. If the user isn't licensed and if the 30-day grace period has ended, the mailbox is disconnected and converted to a `MailUser` object when license reconciliation runs.
 
 ## Resolution
 

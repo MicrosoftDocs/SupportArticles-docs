@@ -1,6 +1,6 @@
 ---
 title: RPC over HTTP reaches end of support in Microsoft 365 on October 31, 2017
-description: Explains that RPC over HTTP in Microsoft 365 will be deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Office 365 customers may have to take.
+description: Explains that RPC over HTTP in Microsoft 365 will be deprecated on October 31, 2017. Contains information about why RPC over HTTP is being replaced by MAPI over HTTP and describes actions that Microsoft 365 customers may have to take.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -47,11 +47,11 @@ Additionally, for Office versions that support MAPI over HTTP, Microsoft may ele
 MAPI over HTTP offers the following benefits:
 
 - Improves the connection resiliency when the network drops packets in transit.
-- Enables more secure sign-in scenarios, such as [multi-factor authentication for Office 365](https://support.office.com/article/set-up-multi-factor-authentication-for-office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6).
+- Enables more secure sign-in scenarios, such as [multi-factor authentication for Microsoft 365](https://support.office.com/article/set-up-multi-factor-authentication-for-office-365-users-8f0454b2-f51a-4d9c-bcde-2c48e41621c6).
 - Provides the extensibility foundation for third-party identity providers.
 - Removes the complexity of RPC over HTTP dependency on legacy RPC technology.
 
-## I'm using Office 365 with Outlook 2016, Outlook 2013, or Outlook 2010. What actions do I have to take
+## I'm using Microsoft 365 with Outlook 2016, Outlook 2013, or Outlook 2010. What actions do I have to take
 
 Make sure that you use Outlook for Windows clients that are updated to work with MAPI over HTTP.
 
@@ -63,7 +63,7 @@ You should have at least the currently recommended minimum installation of Outlo
 
 Additionally, you may have to make sure that Outlook clients aren't using a registry key to disable MAPI over HTTP. For more information, see [Outlook 2010, 2013, 2016, or Outlook for Microsoft 365 doesn't connect Exchange using MAPI over HTTP as expected](https://support.microsoft.com/help/2937684).
 
-## I'm using Office 365 with Outlook 2007 or an earlier version. What actions do I have to take
+## I'm using Microsoft 365 with Outlook 2007 or an earlier version. What actions do I have to take
 
 MAPI over HTTP was not backported to Outlook 2007 or earlier versions. If you're using Outlook 2007, you will be in an unsupported state on October 31, 2017. If you want to continue to access Exchange Online mailboxes through the Microsoft 365 portal ([portal.office.com](https://portal.office.com/)), we recommend that you move to a current version of Outlook that is under mainstream support,or use Outlook on the web.
 

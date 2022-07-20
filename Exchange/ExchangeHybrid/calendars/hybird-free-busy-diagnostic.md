@@ -18,7 +18,7 @@ ms.date: 3/31/2022
 ---
 # Exchange Online Hybrid Free/Busy Diagnostic
 
-The Exchange Online Hybrid Free/Busy Diagnostic package collects Windows PowerShell command results that Office 365 technical support can use to troubleshoot free/busy issues in an Exchange hybrid deployment. The Support Diagnostics Platform (SDP) diagnostic tool uses this diagnostic package to collect relevant information. The SDP should be run on the hybrid server.
+The Exchange Online Hybrid Free/Busy Diagnostic package collects Windows PowerShell command results that Microsoft 365 technical support can use to troubleshoot free/busy issues in an Exchange hybrid deployment. The Support Diagnostics Platform (SDP) diagnostic tool uses this diagnostic package to collect relevant information. The SDP should be run on the hybrid server.
 
 This article lists the information that may be collected when this diagnostic package is run.
 

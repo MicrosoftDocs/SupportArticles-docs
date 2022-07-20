@@ -1,5 +1,5 @@
 ---
-title: Outlook crash or stop responding when used with Office 365
+title: Outlook crash or stop responding when used with Microsoft 365
 description: Describes how to troubleshoot issues that trigger Outlook crashes when you use Outlook in a Microsoft 365 environment.
 author: simonxjx
 audience: ITPro
@@ -22,11 +22,11 @@ appliesto:
   - Microsoft Outlook 2010
 ms.date: 3/31/2022
 ---
-# How to troubleshoot issues that cause Outlook to crash or stop responding when used with Office 365
+# How to troubleshoot issues that cause Outlook to crash or stop responding when used with Microsoft 365
 
 ## Introduction
 
-This article describes how to troubleshoot the following kinds of issues in Microsoft Outlook when it's used together with Office 365:
+This article describes how to troubleshoot the following kinds of issues in Microsoft Outlook when it's used together with Microsoft 365:
 
 - Outlook stops responding (hangs).
 - Outlook crashes even though you aren't actively using it.
@@ -60,7 +60,7 @@ To help troubleshoot Outlook issues in a Microsoft 365 environment, follow these
 
     > [!NOTE]
     > Click **Run** when you're prompted by your browser.
-2. If the tool doesn't resolve the issue, go to Windows or Look to start **Microsoft Support and Recovery Assistant for Office 365 (SaRA)**.
+2. If the tool doesn't resolve the issue, go to Windows or Look to start **Microsoft Support and Recovery Assistant**.
 3. On the first screen, select **Outlook**, and then select **Next**.
 4. Select any of the following options, as appropriate, and then select **Next**:
    - **Outlook keeps hanging or freezing**

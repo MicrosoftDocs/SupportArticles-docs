@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2813304
 
 This article describes how to manage a mailbox in the on-premises environment in the following scenario:
 
-- An Office 365 mailbox exists.
+- A Microsoft 365 mailbox exists.
 - Active Directory synchronization is enabled.
 - An on-premises mail-enabled user doesn't exist for the mailbox.
 
@@ -40,7 +40,7 @@ To manage a mailbox in the on-premises environment in the scenario that's descri
     Enable-MailUser -Identity User -ExternalEmailAddress <user>@<domain>.mail.onmicrosoft.com
     ```
 
-3. Obtain the Exchange GUID of the Office 365 mailbox. To do this, follow these steps:
+3. Obtain the Exchange GUID of the Microsoft 365 mailbox. To do this, follow these steps:
 
    1. Connect to Microsoft Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -50,7 +50,7 @@ To manage a mailbox in the on-premises environment in the scenario that's descri
       Get-Mailbox -Identity <UserAlias>
       ```
 
-4. Update the on-premises mail-enabled user to use the Exchange GUID of the Office 365 mailbox. To do this, use Exchange Management Shell to run the following command:
+4. Update the on-premises mail-enabled user to use the Exchange GUID of the Microsoft 365 mailbox. To do this, use Exchange Management Shell to run the following command:
 
     ```powershell
     Set-MailUser -Identity <UserAlias> -ExchangeGuid <Office365MailboxGUID>

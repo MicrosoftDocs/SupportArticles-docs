@@ -1,6 +1,6 @@
 ---
-title: Error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Office 365.
-description: Encrypted connection to your mail server is not available when you try to set up an Outlook profile for Exchange Online in Office 365.
+title: Error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365.
+description: Encrypted connection to your mail server is not available when you try to set up an Outlook profile for Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (Encrypted connection to your mail server is not available) error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Office 365
+# (Encrypted connection to your mail server is not available) error when Office 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365
 
 _Original KB number:_&nbsp;2826047
 
@@ -44,8 +44,8 @@ To work around this behavior, do one of the following:
 
 For more information about Office 365 F plans, see [Office 365 F1](https://products.office.com/business/office-365-f1?legRedir=true&CorrelationId=b7b7a08f-e568-40de-84d7-fb9d2faaa328).
 
-If Office 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
+If Microsoft 365 users who aren't F plan users get this error message, see the following Microsoft Knowledge Base article:
 
-> [2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365
+> [2404385](https://support.microsoft.com/help/2404385) Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

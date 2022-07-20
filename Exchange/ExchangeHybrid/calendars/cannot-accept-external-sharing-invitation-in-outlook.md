@@ -53,7 +53,7 @@ After this fix is released, Outlook clients that cannot accept cross-premises sh
 
 #### State after the server fix (August 2019)
 
-|Client| Owner: On-Premises <br>Recipient: Office 365|Owner: Office 365<br> Recipient: On-Premises|
+|Client| Owner: On-Premises <br>Recipient: Microsoft 365|Owner: Microsoft 365<br> Recipient: On-Premises|
 |---|---|---|
 | Desktop MSI| ✔ Accept button shown & working| ✔ Accept button shown & working |
 | Desktop C2R Semi-annual| ✔ Accept button shown & working| ✔ Accept button shown & working |
@@ -63,7 +63,7 @@ After this fix is released, Outlook clients that cannot accept cross-premises sh
 
 #### State after the Windows client fix (no ETA yet)
 
-|Client|Owner: On-Premises <br>Recipient: Office 365|Owner: Office 365 <br>Recipient: On-Premises |
+|Client|Owner: On-Premises <br>Recipient: Microsoft 365|Owner: Microsoft 365 <br>Recipient: On-Premises |
 |---|---|---|
 | Desktop MSI| ✔ Accept button shown & working| ✔ Accept button shown & working |
 | Desktop C2R Semi-annual| ✔ Accept button shown & working| ✔ Accept button shown & working |

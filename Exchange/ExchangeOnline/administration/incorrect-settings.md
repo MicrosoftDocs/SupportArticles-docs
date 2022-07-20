@@ -37,7 +37,7 @@ The following table lists the features, protocols, and expected server settings 
 
 |Feature and protocol|Port|Server name(correct configuration)|References|
 |-|-|-|-|
-|Autodiscover (CName Record)|443|autodiscover.outlook.com|[Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/create-dns-records-at-any-dns-hosting-provider-for-office-365-7b7b075d-79f9-4e37-8a9e-fb60c1d95166)|
+|Autodiscover (CName Record)|443|autodiscover.outlook.com|[Create DNS records at any DNS hosting provider for Microsoft 365](https://support.office.com/article/create-dns-records-at-any-dns-hosting-provider-for-office-365-7b7b075d-79f9-4e37-8a9e-fb60c1d95166)|
 |Exchange ActiveSync (EAS)|443|outlook.office365.com|[Set up a mobile device to synchronize with your account](https://support.office.com/article/set-up-a-mobile-device-to-synchronize-with-your-account-c9139caf-01ab-41a0-827c-3c06ee569ed3)|
 |POP3|995|outlook.office365.com|[POP and IMAP account settings](https://support.office.com/article/settings-for-pop-and-imap-access-for-office-365-for-business-or-microsoft-exchange-accounts-7fc677eb-2491-4cbc-8153-8e7113525f6c)|
 |IMAP4|993|outlook.office365.com|[POP and IMAP account settings](https://support.office.com/article/settings-for-pop-and-imap-access-for-office-365-for-business-or-microsoft-exchange-accounts-7fc677eb-2491-4cbc-8153-8e7113525f6c)|

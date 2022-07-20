@@ -38,7 +38,7 @@ Microsoft 365 users experience this issue even though the following conditions a
 To work around this issue, do one of the following, as appropriate for your on-premises Exchange environment.
 
 > [!NOTE]
-> After you perform either of these procedures, Office 365 mailboxes are treated as external mailboxes for the purposes of out-of-office messages. You may want to modify on-premises external out-of-office messages, if that becomes necessary.
+> After you perform either of these procedures, Microsoft 365 mailboxes are treated as external mailboxes for the purposes of out-of-office messages. You may want to modify on-premises external out-of-office messages, if that becomes necessary.
 
 ### Exchange Server 2010 - Change the out-of-office setting for the remote domain
 
@@ -52,7 +52,7 @@ For more information about how to configure this setting in Exchange 2010, see [
 
 ### Exchange Server 2013 - Use the Exchange Management Shell to change the -AllowedOOFType property of the remote domain
 
-If you have an Exchange Server 2013 hybrid server, use the `Set-RemoteDomain` cmdlet to change the `-AllowedOOFType` property of the Office 365 remote domain. Here are two examples:
+If you have an Exchange Server 2013 hybrid server, use the `Set-RemoteDomain` cmdlet to change the `-AllowedOOFType` property of the Microsoft 365 remote domain. Here are two examples:
 
 - `Set-RemoteDomain Contoso -AllowedOOFType External`
 - `Set-RemoteDomain Contoso -AllowedOOFType ExternalLegacy`

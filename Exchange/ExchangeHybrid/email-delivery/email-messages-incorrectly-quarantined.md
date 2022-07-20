@@ -62,12 +62,12 @@ This problem occurs if the Exchange Online organization or the on-premises organ
         Verify that the value of the `CloudServicesMailEnabled` property is set to **$true**.
    4. Locate the following line in the headers:
 
-      `X-MS-Exchange-Organization-Cross-Premises-Headers-Promoted: <Office 365 Server Name>`
+      `X-MS-Exchange-Organization-Cross-Premises-Headers-Promoted: <Microsoft 365 Server Name>`
 
       For example, *server.contoso.com*.
 
       > [!NOTE]
-      > If the `RouteAllMessagesViaOnPremises` property and the `CloudServicesMailEnabled` property are set to **$false**, and the `X-MS-Exchange-Organization-Cross-Premises-Headers-Promoted: <Office 365 Server Name>` header isn't found, this resolution does not apply to your organization's configuration.
+      > If the `RouteAllMessagesViaOnPremises` property and the `CloudServicesMailEnabled` property are set to **$false**, and the `X-MS-Exchange-Organization-Cross-Premises-Headers-Promoted: <Microsoft 365 Server Name>` header isn't found, this resolution does not apply to your organization's configuration.
 
 2. Send an inbound test message to an Exchange Online mailbox by routing the message through the on-premises server first. Locate the following X-header lines in the message headers. This helps indicate that the message was scanned two times in transport.
 

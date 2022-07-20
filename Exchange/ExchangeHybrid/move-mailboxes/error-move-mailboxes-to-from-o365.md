@@ -66,6 +66,6 @@ After you enable MRSProxy on the servers, you may have to correctly publish the 
 
 For more information about how to troubleshoot the error message that's mentioned in the Symptoms section, see [Exception has been thrown by the target error in a hybrid deployment](./hybrid-deployment-errors.md).
 
-If you experience issues when you move mailboxes to Exchange Online in Microsoft 365, you can run the Troubleshoot Office 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
+If you experience issues when you move mailboxes to Exchange Online in Microsoft 365, you can run the Troubleshoot Microsoft 365 Mailbox Migration tool. This diagnostic is an automated troubleshooting tool. If you're experiencing a known issue, you receive a message that states what went wrong. The message includes a link to an article that contains the solution. Currently, the tool is supported only in Internet Explorer.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](/answers/topics/office-exchange-server-itpro.html).

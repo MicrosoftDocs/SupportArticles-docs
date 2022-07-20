@@ -1,6 +1,6 @@
 ---
-title: Cautions against bypassing Office 365 spam filters.
-description: Describes cautions against bypassing Office 365 spam filters.
+title: Cautions against bypassing Microsoft 365 spam filters.
+description: Describes cautions against bypassing Microsoft 365 spam filters.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,10 +13,10 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
-# Cautions against bypassing Office 365 spam filters
+# Cautions against bypassing Microsoft 365 spam filters
 
 ## Summary
 
@@ -29,7 +29,7 @@ This article discusses why you shouldn't bypass spam filters in Microsoft 365. T
 
 If you use these lists or options, consider the following guidelines:
 
-- We recommend that you don't use these features because they may override the verdict that is set by Office 365 spam filters. Instead, we suggest that you [report junk email messages to Microsoft](/office365/SecurityCompliance/report-junk-email-messages-to-microsoft) for analysis to help reduce the number and effect of future junk email messages.
+- We recommend that you don't use these features because they may override the verdict that is set by Microsoft 365 spam filters. Instead, we suggest that you [report junk email messages to Microsoft](/office365/SecurityCompliance/report-junk-email-messages-to-microsoft) for analysis to help reduce the number and effect of future junk email messages.
 - If you have to set bypassing, you should do this carefully because Microsoft will honor your configuration request and potentially let harmful messages pass through. Additionally, bypassing should be done only on a temporary basis. This is because spam filters can evolve, and verdicts could improve over time.
 - It's important that you take the following precautions:
 

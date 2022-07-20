@@ -1,6 +1,6 @@
 ---
 title: Mutual Authentication could not be established error when testing Outlook Anywhere
-description: Describes an issue in which the Remote Connectivity Analyzer tool displays an error message when you use it to test the Outlook Anywhere feature in an Office 365 environment. Provides a resolution.
+description: Describes an issue in which the Remote Connectivity Analyzer tool displays an error message when you use it to test the Outlook Anywhere feature in a Microsoft 365 environment. Provides a resolution.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

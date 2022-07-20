@@ -27,7 +27,7 @@ _Original KB number:_ &nbsp; 2875125
 
 ## Symptoms
 
-You have a hybrid deployment of an on-premises Microsoft Exchange server and Exchange Online in Microsoft 365. You try to connect to the Office 365 cloud-based domain by using the Exchange Management Console on the on-premises hybrid server. However, the connection fails, and you receive the following error message:
+You have a hybrid deployment of an on-premises Microsoft Exchange server and Exchange Online in Microsoft 365. You try to connect to the Microsoft 365 cloud-based domain by using the Exchange Management Console on the on-premises hybrid server. However, the connection fails, and you receive the following error message:
 
 > Unable to cast object of type 'system.Runtime.Serialization.TypeLoadExceptionHolder' to type 'Microsoft.Exchange.Data.RoleEntry'
 
@@ -41,9 +41,9 @@ Upgrade your Exchange Server 2010 servers to Exchange Server 2010 Service Pack 3
 
 ## More information
 
-This issue is generally seen when Exchange 2010 servers are in a hybrid configuration with an earlier release of Office 365, and then Office 365 is upgraded to the current release. For an Exchange 2010-based hybrid deployment with the current release of Office 365, all on-premises Exchange 2010 servers must be running Exchange 2010 SP3 or a later version.
+This issue is generally seen when Exchange 2010 servers are in a hybrid configuration with an earlier release of Microsoft 365, and then Microsoft 365 is upgraded to the current release. For an Exchange 2010-based hybrid deployment with the current release of Microsoft 365, all on-premises Exchange 2010 servers must be running Exchange 2010 SP3 or a later version.
 
-For more information about how to set up a hybrid deployment with on-premises Exchange 2010 servers and the latest release of Office 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
+For more information about how to set up a hybrid deployment with on-premises Exchange 2010 servers and the latest release of Microsoft 365, see [Hybrid deployment prerequisites](/exchange/hybrid-deployment-prerequisites).
 
 For more information about Exchange 2010 SP3, see [Description of Exchange Server 2010 SP3](https://support.microsoft.com/help/2808208).
 

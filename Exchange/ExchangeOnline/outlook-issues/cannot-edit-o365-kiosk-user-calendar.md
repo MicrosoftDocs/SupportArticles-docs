@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 3203954
 
 ## Problem
 
-You can't use Microsoft Outlook to make changes to the calendar of another user who has a Microsoft 365 Kiosk license. This occurs even though you have permissions to the Office 365 Kiosk user's calendar.
+You can't use Microsoft Outlook to make changes to the calendar of another user who has a Microsoft 365 Kiosk license. This occurs even though you have permissions to the Microsoft 365 Kiosk user's calendar.
 
 ## Cause
 
