@@ -9,11 +9,13 @@ ms.prod: sql
 ms.author: v-jayaramanp
 ---
 
-# Introduction
+# How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server
 
 This article describes the steps to generate a script based on database metadata to create a statistics-only database in SQL Server.
 
 _Original product version:_ &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
+
+## Introduction
 
 The query optimizer in Microsoft SQL Server uses the following types of information to determine an optimal query plan:
 
