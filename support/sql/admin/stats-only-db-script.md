@@ -1,7 +1,7 @@
 ---
 title: How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server  
-description: This is a how-to article that helps you create a statistics-only database in SQL Server. 
-ms.date: 07/18/2022
+description: This how-to article describes about generating a script using necessary metadata and creating a statistics database in SQL Server. 
+ms.date: 07/20/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
@@ -11,7 +11,7 @@ ms.author: v-jayaramanp
 
 # Introduction
 
-This article describes the steps to generate the statistics script.
+This article describes the steps to generate a script based on database metadata to create a statistics-only database in SQL Server.
 
 _Original product version:_ &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
 
@@ -35,9 +35,9 @@ The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase
 When you generate a statistics-only clone database, it may be easier and more reliable to script the whole database instead of scripting individual objects. When you script the whole database, you receive the following benefits:
 
 - You avoid issues with missing dependent objects that are required to reproduce the issue.
-- You require significantly fewer steps to select the necessary objects.
+- You require fewer steps to select the necessary objects.
 
-Note If you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It is  recommended that you generate the script during off-peak hours or you can use the second option to generate the script for individual objects.
+Note If you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's  recommended that you generate the script during off-peak hours or you can use the second option to generate the script for individual objects.
 
 To script each database that is referenced by your query, follow these steps:
 
@@ -64,7 +64,7 @@ To script each database that is referenced by your query, follow these steps:
     |Script Indexes     | True |
     |Script Triggers     | True |
 
-1. Please note that the **Script Logins** option and the **Script Object Level Permissions** option may not be required unless the schema contains objects that are owned by logins other than **dbo**.
+1. Note that the **Script Logins** option and the **Script Object Level Permissions** option may not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Click **OK** to save the changes and close the **Advanced Scripting Options** page.
 
@@ -98,7 +98,7 @@ Therefore, it isn't recommended that you script individual objects, unless the d
 
     For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
 
-1. When you have selected all the object types that are referenced by the query, click **Next**.
+1. When you've selected all the object types that are referenced by the query, click **Next**.
 
 1. In the **Set Scripting Options** dialog box, click the **Advanced** button and change the following settings from the default value to the value that is listed in the following table in the **Advanced Scripting Options** page.
 
@@ -116,7 +116,7 @@ Therefore, it isn't recommended that you script individual objects, unless the d
     |Script Indexes     | True         |
     |Script Triggers      | True        |
 
-1. Please note that the **Script Logins** and **Script Object Level Permissions** options may not be required unless the schema contains objects that are owned by logins other than **dbo**.
+1. Note that the **Script Logins** and **Script Object Level Permissions** options may not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Click **OK** to save and close the **Advanced Scripting Options** page.
 
@@ -146,7 +146,7 @@ The following tables help explain how the query optimizer uses this information 
 |---------|---------|
 |Constraints| The query optimizer frequently uses constraints to detect contradictions between the query and the underlying schema. For example, if the query has a `"WHERE col = 5" clause and a "CHECK (col < 5)"` check constraint exists, the query optimizer knows that no rows will match. The query optimizer makes similar types of deductions about nullability. For example, the `"WHERE col IS NULL"` clause is known to be true or false depending on the nullability of the column and whether the column is from the outer table of an outer join. The presence of FOREIGN KEY constraints is useful to determine cardinality and the appropriate join order. The query optimizer can use constraint information to eliminate joins or simplify predicates. These changes may remove the requirement to access the base tables.         |
 |Statistics     |   The statistics information contains density and a histogram that shows the distribution of the leading column of the index and statistics key. Depending on the nature of the predicate, the query optimizer may use density, the histogram, or both to estimate the cardinality of a predicate. Up-to-date statistics are required for accurate cardinality estimates. The cardinality estimates are used as an input in estimating the cost of an operator. Therefore, you must have good cardinality estimates to obtain optimal query plans. |
-|Table size (number of rows and pages) | The query optimizer uses the histograms and density to calculate the probability that a given predicate is true or false. The final cardinality estimate is calculated by multiplying the probability by the number of rows that are returned by the child operator. The number of pages in the table or the index is a factor in estimating the IO cost. The table size is used to calculate the cost of a scan, and it is useful when you estimate the number of pages that will be accessed during an index seek.|
+|Table size (number of rows and pages) | The query optimizer uses the histograms and density to calculate the probability that a given predicate is true or false. The final cardinality estimate is calculated by multiplying the probability by the number of rows that are returned by the child operator. The number of pages in the table or the index is a factor in estimating the IO cost. The table size is used to calculate the cost of a scan, and it's useful when you estimate the number of pages that will be accessed during an index seek.|
 |Database options | Several database options can affect optimization. The `AUTO_CREATE_STATISTICS` and `AUTO_UPDATE_STATISTICS` options affect whether the query optimizer will create new statistics or update statistics that are out of date. The Parameterization level affects how the input query is parameterized before the input query is handed to the query optimizer. Parameterization can affect cardinality estimation and can also prevent matching against indexed views and other types of optimizations. The `DATE_CORRELATION_OPTIMIZATION` setting causes the optimizer to search for correlations between columns. This setting affects cardinality and cost estimation.          |
 
 **Environment**
