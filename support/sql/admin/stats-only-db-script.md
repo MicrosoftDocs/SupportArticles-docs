@@ -13,7 +13,7 @@ ms.author: v-jayaramanp
 
 This article describes the steps to generate the statistics script.
 
-_Original product version:_ &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise
+_Original product version:_ &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
 
 The query optimizer in Microsoft SQL Server uses the following types of information to determine an optimal query plan:
 
@@ -21,11 +21,14 @@ The query optimizer in Microsoft SQL Server uses the following types of informat
 - hardware environment
 - database session state
 
-Typically, you must simulate all of these types of information to reproduce the behavior of the query optimizer on a test system.
+Typically, you must simulate all these same types of information to reproduce the behavior of the query optimizer on a test system.
 
-Microsoft Customer Support Services may ask you to generate a script of the database metadata. Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
+Microsoft Customer Support Services may ask you to generate a script of the database metadata. The Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
 
-The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use DBCC CLONEDATABASE.
+> [!NOTE]
+> The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the statistics script that is generated.
+
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
 ## Script the whole database
 
@@ -44,7 +47,7 @@ To script each database that is referenced by your query, follow these steps:
 
 1. Right-click the database, point to **Tasks**, and then click **Generate Scripts**.
 
-1. In the Script Wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then click **Next**.
+1. In the script wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then click **Next**.
 
 1. In the **Choose Script Options** dialog box, click on the **Advanced** button to change the following settings from the default value to the value that is listed in the following table.
 
@@ -65,29 +68,27 @@ To script each database that is referenced by your query, follow these steps:
 
 1. Click **OK** to save the changes and close the **Advanced Scripting Options** page.
 
-1. Click **Save to File** and select **Single file** option under that selection.
-
-1. Review your selections and click **Next**.
+1. Click **Save to File** and select **Single file** option.
 
 1. Click **Finish**.
 
 ## Script individual objects
 
-You may only script individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created by using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table may not always be accurate. This inaccuracy may cause one of the following issues:
+You can only script the individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created by using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table may not always be accurate. This inaccuracy may cause one of the following issues:
 
-- The scripting process does not script a dependent object.
+- The scripting process doesn't script a dependent object.
 
 - The scripting process may script objects in the incorrect order. To run the script successfully, you must manually edit the generated script.
 
-Therefore, we do not recommend that you script individual objects, unless the database has many objects and scripting would otherwise take too long. If you must use script individual objects, follow these steps:
+Therefore, it isn't recommended that you script individual objects, unless the database has many objects and scripting would otherwise take too long. If you must use script individual objects, follow these steps:
 
-1. In SQL Server Management Studio, expand **Databases**, and then locate the database that you want to script.
+1. In the SQL Server Management Studio, expand **Databases**, and then locate the database that you want to script.
 
-1. Right-click the database, point to **Script Database As**, point to **CREATE to**, and then click **File**.
+1. Right-click the database, point to **Script Database As**, then point to **CREATE To**, and then click **File**.
 
 1. Enter a file name, and then click **Save**.
 
-1. The core database container will be scripted. This container includes files, file groups, the database, and properties.
+   The core database container will be scripted. This container includes files, file groups, the database, and properties.
 
 1. Right-click the database, point to **Tasks**, and then click **Generate Scripts**.
 
@@ -95,7 +96,7 @@ Therefore, we do not recommend that you script individual objects, unless the da
 
 1. In the **Choose Object Types** dialog box, select **Select specific database objects** and select all database object types that the problematic query references.
 
-1. For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
+  For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
 
 1. When you have selected all the object types that are referenced by the query, click **Next**.
 
@@ -119,17 +120,19 @@ Therefore, we do not recommend that you script individual objects, unless the da
 
 1. Click **OK** to save and close the **Advanced Scripting Options** page.
 
-1. A dialog box appears for each database object type that you selected in step 7. In each dialog box, select the specific tables, views, functions, or other database objects, and then click Next.
+  A dialog box appears for each database object type that you selected in step 7.
+
+1. In each dialog box, select the specific tables, views, functions, or other database objects, and then click **Next**.
 
 1. Click the **Script to File** option, and then specify the same file name that you entered in step 3.
 
 1. Click **Finish** to start the scripting.
 
-When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer may also request the following information:
+When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer might also request the following information:
 
-- The hardware configuration, including the number of processors and how much physical memory exists.
+- Hardware configuration, including the number of processors and how much physical memory exists.
 
-- The SET options that were active when you ran the query.
+- SET options that were active when you ran the query.
 
 Note that you may have already provided this information by sending a SQLDiag report or a SQL Profiler trace. You may have also used another method to provide this information.
 
@@ -150,8 +153,8 @@ The following tables help explain how the query optimizer uses this information 
 
 |Option  |Explanation  |
 |---------|---------|
-|Session SET options   | The `ANSI_NULLS` setting affects whether the `"NULL = NULL"` expression evaluates as true. Cardinality estimation for outer joins may change depending on the current setting. Additionally, ambiguous expressions may also change. For example, the `"col = NULL"` expression evaluates differently based on the setting. However, the `"col IS NULL"` expression always evaluates the same way.|
-|Hardware resources   | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism has not been disabled by using a `"MAXDOP"` hint or the max degree of parallelism configuration option. |
+|Session SET options   | The `ANSI_NULLS` setting affects whether the `"NULL = NULL"` expression evaluates as true. Cardinality estimation for outer joins might change depending on the current setting. Additionally, ambiguous expressions might also change. For example, the `"col = NULL"` expression evaluates differently based on the setting. However, the `"col IS NULL"` expression always evaluates the same way.|
+|Hardware resources   | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism hasn't been disabled by using a `"MAXDOP"` hint or the max degree of parallelism configuration option. |
 
 ## See also
 
