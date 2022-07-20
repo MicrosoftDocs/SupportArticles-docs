@@ -22,13 +22,13 @@ ms.date: 07/15/2022
 
 ## Symptoms
 
-You share a channel with a team inside your organization that has externally authenticated members (B2B collaboration users that have a UserType of **Member**). These externally authenticated members don't have access to the shared channel. However, they can see a preview of the channel message in search results if the search query matches the content of the channel message.
+You share a channel with a team inside your organization that has externally authenticated members (B2B collaboration users that have a UserType of **Member**). These externally authenticated members don't have access to the shared channel. However, they can see a preview of a channel message in search results if the search query matches the content of the channel message.
 
 ## Resolution
 
 To prevent externally authenticated members from seeing previews of channel messages, use one of the following options:
 
-- Remove the users from the team with which the channel is shared.
+- Remove the users from the team that the channel is shared with.
 - Don't share the channel with teams that have such users.
 
 ## More information
