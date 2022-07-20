@@ -24,7 +24,7 @@ Because drives E and F are used as the application disk drive, no application-re
 
 The storage space that's used shouldn't affect the operation of the application. After the drives are created, Azure virtual machines don't write to them unless the application code does. The application code shouldn't be writing to these drives, anyway.
 
-### Solution
+## Solution
 
 For data that an application has to read from and write to, we recommend that you use an external storage service, such as [Azure Storage](/azure/storage/common/storage-introduction) or [Azure SQL Server](https://azure.microsoft.com/services/sql-database/campaign/).
 
