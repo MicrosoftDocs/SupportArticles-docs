@@ -96,7 +96,7 @@ Therefore, it isn't recommended that you script individual objects, unless the d
 
 1. In the **Choose Object Types** dialog box, select **Select specific database objects** and select all database object types that the problematic query references.
 
-  For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
+    For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
 
 1. When you have selected all the object types that are referenced by the query, click **Next**.
 
@@ -120,7 +120,7 @@ Therefore, it isn't recommended that you script individual objects, unless the d
 
 1. Click **OK** to save and close the **Advanced Scripting Options** page.
 
-  A dialog box appears for each database object type that you selected in step 7.
+   A dialog box appears for each database object type that you selected in step 7.
 
 1. In each dialog box, select the specific tables, views, functions, or other database objects, and then click **Next**.
 
@@ -128,13 +128,13 @@ Therefore, it isn't recommended that you script individual objects, unless the d
 
 1. Click **Finish** to start the scripting.
 
-When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer might also request the following information:
+   When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer might also request the following information:
 
-- Hardware configuration, including the number of processors and how much physical memory exists.
+   - Hardware configuration, including the number of processors and how much physical memory exists.
 
-- SET options that were active when you ran the query.
+   - SET options that were active when you ran the query.
 
-Note that you may have already provided this information by sending a SQLDiag report or a SQL Profiler trace. You may have also used another method to provide this information.
+   Note that you may have already provided this information by sending a SQLDiag report or a SQL Profiler trace. You may have also used another method to provide this information.
 
 ## How the information is used
 
