@@ -64,12 +64,9 @@ To create a disk from the snapshot, follow these steps:
 
 1. In the Azure portal, begin the process of creating a new VM based on Windows Server.
 2. On the **Basics** page of the "Create a Virtual Machine" wizard, specify the same region and availability zone that you chose for the new disk you just created from the snapshot.
-3. On the **Disks** page of the "Create a Virtual Machine" wizard, beneath **Data disks**, select **Attach an existing disk**.
-
-    :::image type="content" source="media/unlock-encrypted-disk-offline/attach-existing-disk.png" alt-text="Screenshot of the disks page of the create a virtual machine wizard, with the option highlighted to attach an existing disk.":::
-
-4. In the **Data disks** list, select the disk you just created from the snapshot in the last procedure.
-5. Complete the "Create a Virtual Machine" wizard with the default settings.
+3. Complete the "Create a Virtual Machine" wizard with the default settings.
+4. Start and connect to the repair VM and ensure the repair VM is operating correctly.
+5. Attach the disk to the repair VM as a data disk.
 
 ### Repair the failed VM's OS disk
 
