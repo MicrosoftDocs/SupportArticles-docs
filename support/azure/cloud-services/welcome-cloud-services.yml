@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 7/15/2022
+  ms.date: 7/19/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -36,6 +36,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Application pool is crashing
+            url: ./application-pool-crashes.md
           - text: Disk partition preservation
             url: ./disk-partition-preservation.md
           - text: No space on the E or F drive
