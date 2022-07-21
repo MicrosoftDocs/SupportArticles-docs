@@ -1,21 +1,21 @@
 ---
-title: Prevent users from using AI Builder
-description: This article provides steps on how to prevent users from using AI Builder.
+title: Prevent users from creating AI Builder custom models
+description: This article provides steps on how to prevent users from creating AI Builder custom models 
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 5/26/2022
 ms.subservice: 
 ---
 
-# Prevent users from using AI Builder
+# Prevent users from creating AI Builder custom models
 
-This article provides steps to restrict access and usage of AI Builder to certain users.
+This article provides steps to restrict the creation of AI Builder custom models.
 
 _Applies to:_ AI Builder
 
 ## Symptoms
 
-Users can access AI Builder when they should be prohibited.
+Users can create AI Builder custom models when they should be prohibited.
 
 ## Cause
 
