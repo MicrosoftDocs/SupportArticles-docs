@@ -51,7 +51,7 @@ We'll begin by asking you questions about the Outlook version you are using and 
 ## Select your version of Outlook
 
 - [Outlook 2016](#open-a-shared-calendar-in-outlook-2016)
-- [Outlook 2016 (only for Microsoft 365 users on Monthly Channel)](#open-a-shared-calendar-in-outlook-2016-only-for-office-365-users-on-monthly-channel)
+- [Outlook 2016 (only for Microsoft 365 users on Monthly Channel)](#open-a-shared-calendar-in-outlook-2016-only-for-microsoft-365-users-on-monthly-channel)
 - [Outlook 2013](#open-a-shared-calendar-in-outlook-2013)
 - [Outlook 2010](#open-a-shared-calendar-in-outlook-2010)
 - [Outlook 2007](#open-a-shared-calendar-in-outlook-2007)
