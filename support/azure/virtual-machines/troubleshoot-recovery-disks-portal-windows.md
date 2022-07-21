@@ -66,7 +66,12 @@ To create a disk from the snapshot, follow these steps:
 2. On the **Basics** page of the "Create a Virtual Machine" wizard, specify the same region and availability zone that you chose for the new disk you just created from the snapshot.
 3. Complete the "Create a Virtual Machine" wizard with the default settings.
 4. Start and connect to the repair VM. Ensure the repair VM is operating correctly.
-5. Attach the disk to the repair VM as a data disk by using the Azure portal. For detailed steps, see [Add a data disk](/azure/virtual-machines/windows/attach-managed-disk-portal#add-a-data-disk).
+5. Attach the disk to the repair VM as a data disk.
+
+    1. On the **Virtual machine** pane, select **Disks**.
+    2. On the **Disks** pane, select **Attach existing disks**.
+    3. Under **Disk name**, select the expected disk from the drop-down menu.
+    4. Select **Save**.
 
 ### Repair the failed VM's OS disk
 
