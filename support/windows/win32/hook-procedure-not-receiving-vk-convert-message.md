@@ -21,7 +21,7 @@ Keyboard hooks do not receive 'WM_KEYDOWN' messages for the 'VK_CONVERT' virtual
 
 ## Cause
 
-The Text Services Framework (TSF) assigns another action to the 'WM_KEYDOWN' messages for the 'VK_CONVERT' virtual key and doesn't call the keyboard hook in this scenario.
+The Text Services Framework (TSF) assigns another action to the 'WM_KEYDOWN' message for the 'VK_CONVERT' virtual key and doesn't call the keyboard hook in this scenario.
 
 ## Workaround
 
