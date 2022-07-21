@@ -15,7 +15,7 @@ ms.reviewer: ezurita, batre
 appliesto: 
   - Outlook 2016
   - Outlook 2019
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook LTSC 2021
 search.appverid: MET150
 ms.date: 5/12/2022

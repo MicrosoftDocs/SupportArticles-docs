@@ -1,6 +1,6 @@
 ---
-title: Office 365 users aren't signed in to Office through AD accounts
-description: Describes an issue that prevents Office 365 users from being automatically signed in to an Office app through their Active Directory account after they sign out of the app. Provides a workaround.
+title: Microsoft 365 users aren't signed in to Office through AD accounts
+description: Describes an issue that prevents Microsoft 365 users from being automatically signed in to an Office app through their Active Directory account after they sign out of the app. Provides a workaround.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
+# Microsoft 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
 
 ## Problem
 

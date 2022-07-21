@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot Windows PowerShell issues for Exchange Online
-description: Describes how to troubleshoot issues that may occur when you try to use Windows PowerShell cmdlets for Exchange Online in Office 365.
+description: Describes how to troubleshoot issues that may occur when you try to use Windows PowerShell cmdlets for Exchange Online in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,19 +16,19 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# How to troubleshoot Windows PowerShell issues that affect Exchange Online for Office 365
+# How to troubleshoot Windows PowerShell issues that affect Exchange Online for Microsoft 365
 
 _Original KB number:_ &nbsp; 2570535
 
 ## Summary
 
-This article describes how to troubleshoot Windows PowerShell issues that affect Microsoft Exchange Online for Microsoft Office 365.
+This article describes how to troubleshoot Windows PowerShell issues that affect Microsoft Exchange Online for Microsoft 365.
 
 ## Resolution
 
 Windows PowerShell is a command-line interface that's used to run administrative commands on Windows operating systems and server products. Windows PowerShell 2.0 includes Remote Windows PowerShell functionality.
 
-Remote Windows PowerShell lets users run Windows PowerShell cmdlets on other computers or web services. This functionality relies on the Windows Remote Management service to connect to web services and to download the available cmdlets, based on the user who is currently logged in. Office 365 lets admins connect to Exchange Online by using Exchange Online remote PowerShell.
+Remote Windows PowerShell lets users run Windows PowerShell cmdlets on other computers or web services. This functionality relies on the Windows Remote Management service to connect to web services and to download the available cmdlets, based on the user who is currently logged in. Microsoft 365 lets admins connect to Exchange Online by using Exchange Online remote PowerShell.
 
 To connect to Exchange Online, you must have the following tools:
 

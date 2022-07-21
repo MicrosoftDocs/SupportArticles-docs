@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 6/6/2022
 ---
@@ -69,7 +69,7 @@ or
 
 HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
 
-The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
 Name: CacheOthersMail  
 Type: DWORD:  
@@ -102,7 +102,7 @@ To change the caching behavior for shared folders in Outlook 2013 or later versi
 3. Type **regedit.exe** and then press **OK**.
 4. Locate and select the registry key: `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook\Cached Mode`
 
-    The xx.0 placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013)
+    The xx.0 placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013)
     > [!NOTE]
     >
     > If the **Cached Mode** key does not exist, create it by following these steps:
@@ -124,19 +124,19 @@ To change the caching behavior for shared folders in Outlook 2013 or later versi
 >
 > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode`
 >
-> The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+> The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
 #### Control the registry setting by using a Group Policy
 
 The registry key value that is required to change the default shared folder caching behavior in Outlook can be configured by using a Group Policy setting. These steps are usually performed by an Active Directory administrator.
 
-The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019 and Outlook for Office 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
+The default Group Policy template files for Outlook contain the policy setting that controls this functionality. These are Outlk16.admx and Outlk16.adml for Outlook 2016, Outlook 2019 and Outlook for Microsoft 365 and Outlk15.admx and Outlk15.adml for Outlook 2013.
 
 To deploy the registry setting by using the Outlook Group Policy template, use the following steps:
 
 1. Download the appropriate template files from the Microsoft Download Center:
 
-   - For Office 2016, Office 2019, or Outlook for Office 365: [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)
+   - For Office 2016, Office 2019, or Outlook for Microsoft 365: [Administrative Template files (ADMX/ADML) and Office Customization Tool for Microsoft 365 Apps for enterprise, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030)
    - For Office 2013: [Office 2013 Administrative Template files (ADMX/ADML) and Office Customization Tool](https://www.microsoft.com/download/details.aspx?id=35554) 
 
 2. Extract the admintemplates_32bit.exe or admintemplates_64bit.exe file to a folder on your computer.
@@ -171,7 +171,7 @@ To deploy the registry setting by using the Outlook Group Policy template, use t
 
    Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\<xx.0>\Outlook\Cached Mode
 
-   The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+   The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
    Name: CacheOthersMail
    Type: DWORD:
@@ -209,7 +209,7 @@ To deploy the Shared Mail Folder Cache setting in Outlook 2013 or later versions
 >
 > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode`
 >
-> The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+> The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
 ### Settings to disable caching of shared folders
 
@@ -225,7 +225,7 @@ When the OCT is used to disable this setting, the following registry key value i
 
 Key: HKEY_CURRENT_USER\Software\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
 
-The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
 Name: DownloadSharedFolders  
 Type: DWORD  
@@ -243,7 +243,7 @@ When you use a Group Policy to disable this setting, the following registry key 
 
 Key: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\Cached Mode
 
-The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Office 365, 15.0 = Office 2013).
+The <xx.0> placeholder represents the version of Office (16.0 = Office 2016, Office 2019, or Outlook for Microsoft 365, 15.0 = Office 2013).
 
 Name: DownloadSharedFolders  
 Type: DWORD  

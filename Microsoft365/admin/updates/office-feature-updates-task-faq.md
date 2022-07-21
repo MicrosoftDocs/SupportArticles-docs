@@ -47,7 +47,7 @@ The **Office Feature Updates** task calls the "SDXHelper.exe" process in the bac
 
 **Q2: What are the pros and cons of disabling this task permanently? Is this recommended?**
 
-**A2:** For Office 365 customers, we recommend that they do not disable the Office Feature Updates task. This task makes sure that their Office features download the latest updates when the updates are available. In the future, more features will be updated through this task.
+**A2:** For Microsoft 365 customers, we recommend that they do not disable the Office Feature Updates task. This task makes sure that their Office features download the latest updates when the updates are available. In the future, more features will be updated through this task.
 
 **Q3: Is this task dependent on the Office Automatic Updates 2.0 task (or vice versa) for Office feature updates?**
 

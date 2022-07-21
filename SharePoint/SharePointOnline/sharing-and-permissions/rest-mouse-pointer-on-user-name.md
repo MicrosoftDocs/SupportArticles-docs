@@ -24,7 +24,7 @@ Consider the following scenario:
 
 - You're using Microsoft Office 2016 Click-to-Run.
 
-- You're using an Office 365 Exchange Online mailbox, with Modern Authentication enabled.
+- You're using a Microsoft 365 Exchange Online mailbox, with Modern Authentication enabled.
 
 In this scenario, you may be prompted for credentials intermittently and multiple times in SharePoint Online. This behavior may start to occur when you browse to a SharePoint Online or OneDrive for Business library, and you rest the mouse pointer on the name of a user (such as the **Modified By** user).
 

@@ -16,7 +16,7 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# "Your request couldn't be completed. Please try again" error when you try to search the audit log in Office 365
+# "Your request couldn't be completed. Please try again" error when you try to search the audit log in Microsoft 365
 
 _Original KB number:_&nbsp;3193501
 
@@ -45,6 +45,6 @@ Create a custom role group in the Exchange admin center, add the View-Only Audit
 
 ## More information
 
-For more information, see [Search the audit log in the Office 365 Security & Compliance Center](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c).
+For more information, see [Search the audit log in the compliance portal](https://support.office.com/article/0d4d0f35-390b-4518-800e-0c7ec95e946c).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

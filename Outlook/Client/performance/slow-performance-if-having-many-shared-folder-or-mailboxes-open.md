@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -86,7 +86,7 @@ To remove an automapped mailbox from Outlook, use one of the following options:
 2. Remove AutoMapping for the shared mailbox. This is a good option if you must have access to the shared mailbox, but do not want it AutoMapped in Outlook automatically.
 
    - [Disable Outlook Auto-Mapping with Full Access Mailboxes](/previous-versions/office/exchange-server-2010/hh529943(v=exchg.141))
-   - [How to remove automapping for a shared mailbox in Outlook for Office 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox)
+   - [How to remove automapping for a shared mailbox in Outlook for Microsoft 365](/outlook/troubleshoot/profiles-and-accounts/remove-automapping-for-shared-mailbox)
 
 ### Remove shared Calendar, Contacts, Tasks, or Notes folders
 

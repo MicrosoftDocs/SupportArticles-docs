@@ -52,7 +52,7 @@ To see the latest version information for click-to-run installations, click **Up
 
 For more information about click-to-run updates and to find the latest click-to-run version, go to the following Microsoft Office articles:
 
-- Office 2016: [Update history for Office 365 ProPlus (listed by date)](/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7)
+- Office 2016: [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-office365-proplus-by-date?redirectSourcePath=%252fen-us%252farticle%252fae942449-1fca-4484-898b-a933ea23def7)
 - Office 2013: [Update history for Office 2013](/officeupdates/update-history-office-2013?redirectSourcePath=%252farticle%252fupdate-history-for-office-2013-19214f38-85b7-4734-b2f8-a6a598bb0117)
 - Office 2010: [Update history for Office 2010 Click-to-Run products](/officeupdates/update-history-office-2010-click-to-run?redirectSourcePath=%252farticle%252fupdate-history-for-office-2010-click-to-run-products-ac74f68c-58f9-49b4-b7a7-75d899e4824d)
 

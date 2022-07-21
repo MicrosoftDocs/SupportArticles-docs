@@ -1,6 +1,6 @@
 ---
 title: SharePoint Online Public Websites to be discontinued
-description: This article contains information about changes to the SharePoint Online Public Websites feature in Office 365.
+description: This article contains information about changes to the SharePoint Online Public Websites feature in Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,11 +19,11 @@ ms.date: 3/31/2022
 
 ## Introduction
 
-This article contains information about changes to the SharePoint Online Public Websites feature in Office 365. We will continue to update this article as more information becomes available.
+This article contains information about changes to the SharePoint Online Public Websites feature in Microsoft 365. We will continue to update this article as more information becomes available.
 
 ## More information
 
-On March 9, 2015, Microsoft made changes to the SharePoint Online Public Websites feature by removing the ability to create a public website after the changeover date of March 9, 2015. Customers who used this feature before March 9, 2015, were provided continued access to the feature for a minimum of two years. New customers who subscribed to Office 365 after the changeover date of March 9, 2015, don't have access to this feature.
+On March 9, 2015, Microsoft made changes to the SharePoint Online Public Websites feature by removing the ability to create a public website after the changeover date of March 9, 2015. Customers who used this feature before March 9, 2015, were provided continued access to the feature for a minimum of two years. New customers who subscribed to Microsoft 365 after the changeover date of March 9, 2015, don't have access to this feature.
 
 Moving forward, Office 365 customers have access to industry-leading third-party offerings that let them have a public website that provides a complete online solution and presence. 
 
@@ -83,9 +83,9 @@ On October 2, 2017, when Microsoft deletes the public site collection in SharePo
 
 ### What does this mean for new Office 365 customers?
 
-After the changeover date of March 9, 2015, Microsoft no longer offers the SharePoint Online Public Website feature to new customers. New customers who subscribed to Office 365 after the changeover date don't have access to this feature. Instead, there is an option to subscribe to third-party solutions by using links from within Office 365.   
+After the changeover date of March 9, 2015, Microsoft no longer offers the SharePoint Online Public Website feature to new customers. New customers who subscribed to Microsoft 365 after the changeover date don't have access to this feature. Instead, there is an option to subscribe to third-party solutions by using links from within Office 365.   
 
-### How will this change be communicated to Office 365 customers?
+### How will this change be communicated to Microsoft 365 customers?
 
 All Office 365 administrators who have provisioned SharePoint Online received a notification of this change in the Office 365 Message center. 
 
@@ -95,7 +95,7 @@ No.
 
 ### Why is Microsoft making this change?
 
-As part of the evolution of the Office 365 service, we periodically evaluate the capabilities of the service to make sure that we're delivering the utmost value to customers. After careful consideration, we concluded that for public websites, Office 365 customers would be better served by third-party providers whose core competency is public websites. Therefore, we've made the difficult decision to discontinue the SharePoint Online Public Website feature so that we can focus our efforts and investments on delivering capabilities in Office 365 that will bring more value to our customers.
+As part of the evolution of the Office 365 service, we periodically evaluate the capabilities of the service to make sure that we're delivering the utmost value to customers. After careful consideration, we concluded that for public websites, Office 365 customers would be better served by third-party providers whose core competency is public websites. Therefore, we've made the difficult decision to discontinue the SharePoint Online Public Website feature so that we can focus our efforts and investments on delivering capabilities in Microsoft 365 that will bring more value to our customers.
 
 ### Overview of third-party offerings
 
@@ -124,11 +124,11 @@ Support is provided by the third-party solution providers and can be accessed by
 
 ### Will the price for affected Office 365 offers be reduced?
 
-No. This change is aligned with our commitment to deliver a superior productivity experience in Office 365 and won't affect the pricing of Office 365. The third-party solutions are offered at discounted pricing rates for Office 365 customers, where available.  
+No. This change is aligned with our commitment to deliver a superior productivity experience in Microsoft 365 and won't affect the pricing of Office 365. The third-party solutions are offered at discounted pricing rates for Office 365 customers, where available.  
 
 ### Can I use other services, or do I have to use one of the third-party solution providers that Microsoft provides links for?
 
-Customers can use any website hosting service and aren't limited to the third-party solutions that are provided in Office 365. However, the third-party solutions that are available in Office 365 are offered at discounted rates to Office 365 customers, where available.  
+Customers can use any website hosting service and aren't limited to the third-party solutions that are provided in Microsoft 365. However, the third-party solutions that are available in Microsoft 365 are offered at discounted rates to Microsoft 365 customers, where available.  
 
 ### What if I'm using my Public Website to share content with anonymous users?
 

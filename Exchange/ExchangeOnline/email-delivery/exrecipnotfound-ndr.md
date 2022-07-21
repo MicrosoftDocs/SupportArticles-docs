@@ -1,6 +1,6 @@
 ---
-title: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound NDR in Office 365
-description: Describes an issue that occurs when you send email messages by using Outlook in Office 365. Provides a resolution.
+title: 550 5.1.1 RESOLVER.ADR.ExRecipNotFound NDR in Microsoft 365
+description: Describes an issue that occurs when you send email messages by using Outlook in Microsoft 365. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -18,13 +18,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# (550 5.1.1 RESOLVER.ADR.ExRecipNotFound) NDR error message when you send email messages by using Outlook in Office 365
+# (550 5.1.1 RESOLVER.ADR.ExRecipNotFound) NDR error message when you send email messages by using Outlook in Microsoft 365
 
 _Original KB number:_ &nbsp; 2784785
 
 ## Problem
 
-When you send email messages by using Microsoft Outlook in Office 365, you may experience one or both of the following issues:
+When you send email messages by using Microsoft Outlook in Microsoft 365, you may experience one or both of the following issues:
 
 ### Symptom 1: You receive non-delivery reports (NDRs)
 
@@ -68,7 +68,7 @@ This issue most frequently occurs when messages are migrated by using a method t
 
 For more information, see the following resources:
 
-- [What are Exchange NDRs in Exchange Online and Office 365](https://support.office.com/article/what-are-exchange-ndrs-in-exchange-online-and-office-365-51daa6b9-2e35-49c4-a0c9-df85bf8533c3)
-- [Error code 5.1.1 through 5.1.20 in Exchange Online and Office 365](https://support.office.com/article/error-code-5-1-1-through-5-1-20-in-exchange-online-and-office-365-79e91ade-5c83-405b-a37d-d99c7d069b13)
+- [What are Exchange NDRs in Exchange Online and Microsoft 365](https://support.office.com/article/what-are-exchange-ndrs-in-exchange-online-and-office-365-51daa6b9-2e35-49c4-a0c9-df85bf8533c3)
+- [Error code 5.1.1 through 5.1.20 in Exchange Online and Microsoft 365](https://support.office.com/article/error-code-5-1-1-through-5-1-20-in-exchange-online-and-office-365-79e91ade-5c83-405b-a37d-d99c7d069b13)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

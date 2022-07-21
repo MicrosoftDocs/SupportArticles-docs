@@ -25,7 +25,7 @@ Consider the following scenario:
 
 - You click the gear icon, and then you click either **Site Contents** or **Site Settings**.
 
-- On the **Site Contents** or **Site Settings** page for the OneDrive for Business site, you examine the Microsoft Office 365 top navigation bar.
+- On the **Site Contents** or **Site Settings** page for the OneDrive for Business site, you examine the Microsoft 365 top navigation bar.
 
 In this scenario, the Office 365 top navigation bar displays either **Sites** or **Newsfeed**. However, you expect it to display OneDrive.
 
@@ -39,7 +39,7 @@ This behavior is expected. A **Sites** or **Newsfeed** link is displayed in the 
 
 To set the Enterprise Social Collaboration feature, follow these steps:
 
-1. Sign in to the Office 365 portal.
+1. Sign in to the Microsoft 365 portal.
 
 2. Click the **Admin** tile, click **SharePoint**, and then click **settings**.
 

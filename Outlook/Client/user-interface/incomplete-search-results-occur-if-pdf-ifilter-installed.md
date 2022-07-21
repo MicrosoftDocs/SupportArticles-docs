@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
 search.appverid: MET150

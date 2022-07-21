@@ -251,7 +251,7 @@ Now make sure everything works as expected by running the domain troubleshooter 
 
 When you see a message that says everything is set up correctly, you can continue the next step.
 
-If you have a firewall or proxy setup in your environment, make sure to configure it to exclude the [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges). If you need help with this step, contact Microsoft 365 Support.
+If you have a firewall or proxy setup in your environment, make sure to configure it to exclude the [Microsoft 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges). If you need help with this step, contact Microsoft 365 Support.
 
 #### Turn on external communications
 

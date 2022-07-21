@@ -14,7 +14,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-matthamer
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
 ms.date: 3/31/2022

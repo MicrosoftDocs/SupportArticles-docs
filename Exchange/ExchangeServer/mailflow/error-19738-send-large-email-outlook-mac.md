@@ -13,7 +13,7 @@ ms.custom:
 ms.reviewer: tasitae
 appliesto: 
   - Outlook 2016 for Mac
-  - Outlook for Mac for Office 365
+  - Outlook for Microsoft 365 for Mac
   - Exchange Server 2016 Enterprise Edition
   - Exchange Server 2013 Enterprise
   - Exchange Server 2010 Enterprise

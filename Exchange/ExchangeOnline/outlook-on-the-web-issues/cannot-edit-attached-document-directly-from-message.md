@@ -1,6 +1,6 @@
 ---
 title: Can't edit an Office document directly from an email message
-description: Provides a workaround for an issue in which an Office 365 user can't edit an Office document that's attached to an email message directly in Outlook Web App.
+description: Provides a workaround for an issue in which a Microsoft 365 user can't edit an Office document that's attached to an email message directly in Outlook Web App.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,17 +16,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Office 365 users can't edit an Office document directly from an email message in Outlook Web App
+# Microsoft 365 users can't edit an Office document directly from an email message in Outlook Web App
 
 _Original KB number:_ &nbsp; 3003659
 
 ## Problem
 
-An Office 365 user cannot edit a Microsoft Office document that's attached to an email message directly in Outlook Web App. The **Edit a copy** option is missing when the user opens the attachment directly from the email message.
+A Microsoft 365 user cannot edit a Microsoft Office document that's attached to an email message directly in Outlook Web App. The **Edit a copy** option is missing when the user opens the attachment directly from the email message.
 
 ## Cause
 
-This problem occurs if the user has an earlier version of Office installed. The document collaboration experience in Outlook Web App for Office 365 supports the ability to view and edit attachments only for Microsoft Office 2010 and later versions.
+This problem occurs if the user has an earlier version of Office installed. The document collaboration experience in Outlook Web App for Microsoft 365 supports the ability to view and edit attachments only for Microsoft Office 2010 and later versions.
 
 ## Workaround
 
@@ -48,6 +48,6 @@ The document collaboration experience provides **View only** support for the fol
 - PDF files
 - picture files
 
-For more information about the document collaboration experience in Outlook Web App for Office 365, see [Document collaboration made easy](https://www.microsoft.com/en-us/microsoft-365/blog/2014/07/02/document-collaboration-made-easy/).
+For more information about the document collaboration experience in Outlook Web App for Microsoft 365, see [Document collaboration made easy](https://www.microsoft.com/en-us/microsoft-365/blog/2014/07/02/document-collaboration-made-easy/).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

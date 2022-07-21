@@ -22,7 +22,7 @@ Below is a collection of top issues. If your issue isn't listed there, browse th
 
 ## Top Skype for Business Online troubleshooting articles
 
-- [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](./online-configuration/dns-configuration-issue.md)
+- [Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365](./online-configuration/dns-configuration-issue.md)
 - [Users can't join online meetings in Skype for Business Online](./online-meetings/cannot-join-online-meetings.md)
 - [You can't sign in to Skype for Business Online because the certificate can't be acquired or validated](./online-sign-in/cant-sign-into-sfb-online.md)
 - [Lync or Skype for Business client does not start when you click a meeting link if the default browser is Google Chrome](../SkypeServer/server-sign-in/client-not-start-click-meeting-link.md)

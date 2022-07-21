@@ -30,7 +30,7 @@ This issue occurs if you're using a federated user account and single sign-on (S
 
 ## SOLUTION
 
-Verify that SSO isn't working or that some other sign-in issue may be occurring. To do this, try to sign in to the [Office 365 portal](https://portal.office.com).
+Verify that SSO isn't working or that some other sign-in issue may be occurring. To do this, try to sign in to the [Microsoft 365 portal](https://portal.office.com).
 
 To troubleshoot SSO issues, see the following Microsoft Knowledge Base article:
 
@@ -38,7 +38,7 @@ To troubleshoot SSO issues, see the following Microsoft Knowledge Base article:
 
 To troubleshoot other sign-in issues, see the following Microsoft Knowledge Base article:
 
-[You can't sign in to Office 365, Azure, or Intune](https://support.microsoft.com/help/2412085)
+[You can't sign in to Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2412085)
 
 ## MORE INFORMATION
 

@@ -12,7 +12,7 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Office 365 Enterprise
-  - Office 365 Business
+  - Microsoft 365 Apps
   - Office 365 Home
   - Microsoft 365 Apps for enterprise
   - Office 365 Personal
@@ -25,7 +25,7 @@ ms.date: 3/31/2022
 
 ## Summary
 
-In June, 2018, Microsoft Office 365 is changing its build numbers from a four-digit to a five-digit format. This change is shown in the following table. 
+In June, 2018, Microsoft 365 is changing its build numbers from a four-digit to a five-digit format. This change is shown in the following table. 
 
 |Version| Digit mask| Example |
 |-----|----|---|

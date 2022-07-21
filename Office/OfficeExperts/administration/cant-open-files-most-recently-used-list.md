@@ -22,7 +22,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-Assume that you have Microsoft Office 365 client applications and the **RoamingSettingsDisabled** policy is enabled. When you try to open a document from SharePoint or OneDrive through the Office **Most Recently Used** document list, you receive the following error message:
+Assume that you have Microsoft 365 client applications and the **RoamingSettingsDisabled** policy is enabled. When you try to open a document from SharePoint or OneDrive through the Office **Most Recently Used** document list, you receive the following error message:
 
 **Sorry, something went wrong.**
 

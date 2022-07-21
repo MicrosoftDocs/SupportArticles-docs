@@ -1,6 +1,6 @@
 ---
 title: Enable coauthoring for OneDrive-synced files
-description: Explains how to enable coauthoring for OneDrive-synced files in Office 365 after an October 2019 change removes the feature.
+description: Explains how to enable coauthoring for OneDrive-synced files in Microsoft 365 after an October 2019 change removes the feature.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -15,11 +15,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# How to enable coauthoring for OneDrive-synced files in Office 365
+# How to enable coauthoring for OneDrive-synced files in Microsoft 365
 
 ## Summary
 
-Beginning in the October 2019 update for Microsoft Office 365, coauthoring capabilities are no longer available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
+Beginning in the October 2019 update for Microsoft 365, coauthoring capabilities are no longer available for files that are synced to a local computer through the OneDrive for Business (Groove.exe) sync client. 
 
 After this update is applied, you will see the following changes:  
  

@@ -15,7 +15,7 @@
       href: ../hybrid-exchange-integration/repeatedly-prompted-for-credentials.md
   - name: IM and Presence
     items:
-    - name: Office 365 domain user can't IM
+    - name: Microsoft 365 domain user can't IM
       href: ../hybrid-im-presence/sfb-online-users-cant-im.md
   - name: Meetings
     items:
@@ -31,13 +31,13 @@
       href: ../hybrid-move-sfb-online/move-csuser--hostedmigration-fault.md
     - name: "Move-CsUser:HostedMigration fault: Error=(507)"
       href: ../hybrid-move-sfb-online/move-csuser-hostedmigration-fault-507.md
-    - name: Skype for Business 2016 isn't installed in Office 365
+    - name: Skype for Business 2016 isn't installed in Microsoft 365
       href: ../hybrid-move-sfb-online/sfb-is-not-installed-office-365.md
   - name: Phone System
     items:
     - name: Incoming call fails in Cloud Connector Edition
       href: ../hybrid-phone-system/incoming-call-fails-cloud-connector.md
-    - name: Issue when configure Office 365 call queue
+    - name: Issue when configure Microsoft 365 call queue
       href: ../hybrid-phone-system/issue-configure-call-queue.md
     - name: Telephone contact number isn't updated
       href: ../hybrid-phone-system/phone-contact-number-not-updated.md

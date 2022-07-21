@@ -1,6 +1,6 @@
 ---
-title: Uncompiled audiences are present in SharePoint Online in Office 365 for enterprises
-description: Describes an issue in which uncompiled audiences are present in SharePoint Online in Office 365 for enterprises.
+title: Uncompiled audiences are present in SharePoint Online in Microsoft 365 for enterprises
+description: Describes an issue in which uncompiled audiences are present in SharePoint Online in Microsoft 365 for enterprises.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When you view the Manage User Profiles section of the SharePoint Online admin center in Office 365 for enterprises, you find that uncompiled audiences are present.
+When you view the Manage User Profiles section of the SharePoint Online admin center in Microsoft 365 for enterprises, you find that uncompiled audiences are present.
 
 :::image type="content" source="media/uncompiled-audiences-are-present-in-office-365-for-enterprises/uncompiled-audiences.png" alt-text="Screenshot of the Uncompiled Audiences item listed in the Manage User Profiles section.":::
 

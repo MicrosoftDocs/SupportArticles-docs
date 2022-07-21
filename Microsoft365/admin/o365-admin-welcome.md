@@ -11,7 +11,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 148976
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -23,4 +23,4 @@ Find content related to your issue by browsing the table of contents or using th
 
 ## Still need help
 
-Go to [Microsoft Community](https://answers.microsoft.com), [Office 365 Tech Community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office365), or [Office help](/office365/admin/admin-home?preserve-view=true&view=o365-worldwide).
+Go to [Microsoft Community](https://answers.microsoft.com), [Microsoft 365 Tech Community](https://techcommunity.microsoft.com/t5/office-365/ct-p/Office365), or [Office help](/office365/admin/admin-home?preserve-view=true&view=o365-worldwide).

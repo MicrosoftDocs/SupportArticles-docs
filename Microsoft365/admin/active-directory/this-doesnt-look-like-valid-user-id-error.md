@@ -12,15 +12,15 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "This doesn't look like a valid user ID" error when a user tries to sign in to Office 365
+# "This doesn't look like a valid user ID" error when a user tries to sign in to Microsoft 365
 
 ## Problem
 
-When a user tries to sign in to Office 365, the user receives the following error message:
+When a user tries to sign in to Microsoft 365, the user receives the following error message:
 
 > Sorry, that didn't work
 >

@@ -122,7 +122,7 @@ Are you behind a firewall? If you're not sure, ask your administrator. If you're
   
 Each firewall will have a different method to enable access to these URIs. Check your software's documentation for instructions or ask your administrator to do this for you.
   
-For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Office 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
+For more information about Microsoft 365 Apps for enterprise URLs and IP addresses, see the following Microsoft article: [Microsoft 365 URLs and IP address ranges](https://technet.microsoft.com/library/hh373144.aspx).
 <br/><br/>
 </details>
 
@@ -156,7 +156,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 1.	Restart the device.
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 

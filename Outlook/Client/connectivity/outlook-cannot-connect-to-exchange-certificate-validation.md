@@ -40,7 +40,7 @@ This issue occurs because Outlook doesn't support using the Windows certificate 
 
 To configure certificate authentication in Outlook 2016 and later versions, we recommend that you use Modern Authentication. For more information about how to enable Modern Authentication, see the following articles:
 
-- [Enable Modern Authentication in Office 365](https://social.technet.microsoft.com/wiki/contents/articles/36101.office-365-enable-modern-authentication.aspx)
+- [Enable Modern Authentication in Microsoft 365](https://social.technet.microsoft.com/wiki/contents/articles/36101.office-365-enable-modern-authentication.aspx)
 - [Configure on-premises Exchange to use Hybrid Modern Authentication](/office365/enterprise/configure-exchange-server-for-hybrid-modern-authentication)
 
 ## More information

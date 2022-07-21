@@ -1,6 +1,6 @@
 ---
-title: How to set automatic replies on a user's mailbox in Office 365
-description: Describes How to set automatic replies on a user's mailbox in Office 365.
+title: How to set automatic replies on a user's mailbox in Microsoft 365
+description: Describes How to set automatic replies on a user's mailbox in Microsoft 365.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,22 +16,22 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# How to set automatic replies on a user's mailbox in Office 365
+# How to set automatic replies on a user's mailbox in Microsoft 365
 
 ## Introduction
 
-This article describes four methods that administrators can use to set automatic "out of office" replies on a user's mailbox in Microsoft Office 365.
+This article describes four methods that administrators can use to set automatic "out of office" replies on a user's mailbox in Microsoft 365.
 
 ## Method 1
 
-1. Sign in to the Office 365 portal.
+1. Sign in to the Microsoft 365 portal.
 1. Locate **Users** > **Active users** (or **Groups** > **Shared mailboxes** if you set this on a shared mailbox).
 1. Select a user who has a Microsoft Exchange mailbox.
 1. On the flyout menu on the right, locate **Mail settings** > **Automatic replies** (if it's a shared mailbox, just locate **Automatic replies** on the flyout).
 
 ## Method 2
 
-1. Sign in to the Office 365 admin portal by using administrator credentials.
+1. Sign in to the Microsoft 365 admin portal by using administrator credentials.
 1. Expand **Admin Centers**, and then select **Exchange**.
 1. Click the picture in the upper-right corner, select **Another User**, and then select the user mailbox that you want to change.
 1. On the left side, select **Options**, click **Organize E-mail**, and then click **Automatic replies**.

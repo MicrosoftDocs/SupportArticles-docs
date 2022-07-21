@@ -37,7 +37,7 @@ Get-CASMailbox <Alias> -RecalculateHasActiveSyncDevicePartnership
 ```
 
 > [!NOTE]
-> The `RecalculateHasActiveSyncDevicePartnership` parameter was introduced to the `Get-CASMailbox` cmdlet in build 15.00.0980.000 of Office 365. To determine the build of Office 365 that the mailbox is on, run the following command:
+> The `RecalculateHasActiveSyncDevicePartnership` parameter was introduced to the `Get-CASMailbox` cmdlet in build 15.00.0980.000 of Microsoft 365. To determine the build of Microsoft 365 that the mailbox is on, run the following command:
 
 ```powershell
 Get-Mailbox <Mailbox> | fl AdminDisplayVersion

@@ -30,7 +30,7 @@ For example, you receive an NDR that contains the following error message:
 
 ## Cause
 
-This behavior occurs by design when you have one or more unverified domains in Office 365.
+This behavior occurs by design when you have one or more unverified domains in Microsoft 365.
 
 ## Solution
 

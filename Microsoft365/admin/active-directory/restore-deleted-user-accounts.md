@@ -1,6 +1,6 @@
 ---
-title: How to restore deleted user accounts in Office 365, Azure, and Intune
-description: Describes how to restore deleted user accounts in Office 365, Azure, and Intune.
+title: How to restore deleted user accounts in Microsoft 365, Azure, and Intune
+description: Describes how to restore deleted user accounts in Microsoft 365, Azure, and Intune.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,19 +12,19 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 ms.reviewer: v-lanac
 appliesto: 
-  - Microsoft Office 365
+  - Microsoft 365
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
-  - Office 365 User and Domain Management
+  - Microsoft 365 User and Domain Management
 ms.date: 3/31/2022
 ---
-# How to restore deleted user accounts in Office 365, Azure, and Intune
+# How to restore deleted user accounts in Microsoft 365, Azure, and Intune
 
 _Original KB number:_ &nbsp; 2619308
 
 ## Symptoms
 
-A user account that was accidentally deleted from Microsoft Office 365, Microsoft Azure, or Microsoft Intune has to be restored.
+A user account that was accidentally deleted from Microsoft 365, Microsoft Azure, or Microsoft Intune has to be restored.
 
 ## Resolution
 
@@ -32,10 +32,10 @@ A user account that was accidentally deleted from Microsoft Office 365, Microsof
 
 When users are deleted from Azure Active Directory (Azure AD), they are moved to a "deleted" state and no longer appear in the user list. However, they are not completely removed, and they can be recovered within 30 days. 
 
-Use Office 365 and the Azure Active Directory Module for PowerShell as follows to determine whether a user is eligible to be recovered from "deleted" status:
+Use Microsoft 365 and the Azure Active Directory Module for PowerShell as follows to determine whether a user is eligible to be recovered from "deleted" status:
 
-1. In the **Office 365** portal, look up user accounts that were deleted through the portal. To do this, follow these steps:
-   1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com/)) by using administrative credentials.
+1. In the **Microsoft 365** portal, look up user accounts that were deleted through the portal. To do this, follow these steps:
+   1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)) by using administrative credentials.
    1. Select **Users**, and then select **Deleted Users**.
    1. Locate the user that you want to recover.
 1. In the Azure Active Directory Module for Windows PowerShell, follow these steps:
@@ -44,15 +44,15 @@ Use Office 365 and the Azure Active Directory Module for PowerShell as follows t
       - `$cred = get-credential`
 
         > [!NOTE]
-        > When you're prompted, enter your Office 365 credentials.
+        > When you're prompted, enter your Microsoft 365 credentials.
       - `Connect-MSOLService -credential:$cred`
       - `Get-MsolUser -ReturnDeletedUsers`
 
-### Resolution 1: Recover manually deleted accounts by using Office 365 portal or the Azure Active Directory Module  
+### Resolution 1: Recover manually deleted accounts by using Microsoft 365 portal or the Azure Active Directory Module  
 
 To recover a user account that was deleted manually, use one of the following methods:
 
-- Use the Office 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
+- Use the Microsoft 365 portal to recover the user account. For more information about how to do this, [Restore a user](/microsoft-365/admin/add-users/restore-user).
 - Use the Azure Active Directory Module for Windows PowerShell to recover the user account. To do this, type the following command, and then press Enter:
 
     `Restore-MsolUser -ObjectId <Guid> -AutoReconcileProxyConflicts -NewUserPrincipalName <string>`
@@ -169,7 +169,7 @@ To recover an item that was deleted from the on-premises Active Directory schema
     - Restoring the object by using the AdRestore tool isn't an available option.
     - Active Directory authoritative restoring isn't an available option.
 
-In this situation, contact Office 365 Support for help.
+In this situation, contact Microsoft 365 Support for help.
 
 ## More information
 
@@ -196,7 +196,7 @@ To restore users who are in this state, you can correct the conflict by using th
 > [!NOTE]
 > When you use the `AutoReconcileProxyConflicts` parameter, any conflicting email addresses are removed from the deleted user so that you can continue the recovery process.
 
-The Office 365 portal shows the equivalent error messages in the form of the Windows PowerShell "error states" that were mentioned earlier. For example, you receive the following message:
+The Microsoft 365 portal shows the equivalent error messages in the form of the Windows PowerShell "error states" that were mentioned earlier. For example, you receive the following message:
 
 > User name conflict
 > The user you want to restore has the same user name.

@@ -23,7 +23,7 @@ The Picture Library Slideshow web part in Microsoft SharePoint Online lets users
 
 A familiar functionality of the web part is the "auto rotate through images" feature. This lets visitors set an interval for the webpage to automatically cycle through the library images.
 
-In a recent update to Office 365 that is currently being deployed, the ability to automatically switch to new images is being deprecated for libraries that do not have a Content Delivery Network (CDN) enabled. This means that the Auto-Play functionality for existing websites will no longer function for Picture Library Slideshow web parts.
+In a recent update to Microsoft 365 that is currently being deployed, the ability to automatically switch to new images is being deprecated for libraries that do not have a Content Delivery Network (CDN) enabled. This means that the Auto-Play functionality for existing websites will no longer function for Picture Library Slideshow web parts.
 
 > [!NOTE]
 > The manually operated **next** and **previous** buttons will continue to cycle through the images as expected regardless of whether the library is connected to a CDN-enabled Image Library.

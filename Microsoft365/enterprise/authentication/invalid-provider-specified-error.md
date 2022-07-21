@@ -19,7 +19,7 @@ appliesto:
   - Office Standard 2016
   - Office 365 Home
   - Office 365 Personal
-  - Office 365 Business
+  - Microsoft 365 Apps
   - Access 2016
   - Excel 2016
   - OneNote 2016
@@ -52,7 +52,7 @@ Consider the following scenario:
   - Word 2016
 
 - You try to use one of these applications to access Office 365 resources such as SharePoint Online or Exchange Online.
-- After you enter your Office 365 account information, you receive the following error message:  
+- After you enter your Microsoft 365 account information, you receive the following error message:  
 
   **Invalid provider specified.**
 

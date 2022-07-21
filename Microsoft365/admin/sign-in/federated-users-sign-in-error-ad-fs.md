@@ -1,6 +1,6 @@
 ---
 title: There was a problem accessing the site error from AD FS
-description: Describes an issue in which a federated user receives an error message from Active Directory Federation Services (AD FS) when the user tries to sign in to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune.
+description: Describes an issue in which a federated user receives an error message from Active Directory Federation Services (AD FS) when the user tries to sign in to a Microsoft cloud service such as Microsoft 365, Azure, or Microsoft Intune.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,15 +16,15 @@ appliesto:
   - Azure Active Directory
   - Azure Backup
   - Microsoft Intune
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "There was a problem accessing the site" error from AD FS when a federated user signs in to Office 365, Azure, or Intune
+# "There was a problem accessing the site" error from AD FS when a federated user signs in to Microsoft 365, Azure, or Intune
 
 ## Problem
 
-When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune, the user receives the following error message from Active Directory Federation Services (AD FS):
+When a federated user tries to sign in to a Microsoft cloud service such as Microsoft 365, Microsoft Azure, or Microsoft Intune, the user receives the following error message from Active Directory Federation Services (AD FS):
 
 ```adoc
 There was a problem accessing the site. Try to browse to the site again.
@@ -114,7 +114,7 @@ Regardless of whether a self-signed or CA-signed certificate is used, you should
    6. Right-click the new token-signing certificate, point to **All Tasks**, and then click **Manage Private Keys**.    
    7. Add Read access to the AD FS service account, and then click **OK**.    
    8. Exit the Certificates snap-in.    
-2. Update the new certificate's thumbprint and the date of the relying party trust with Azure AD. To do this, see the "How to update the configuration of the Office 365 federated domain" section in [How to update or repair the settings of a federated domain in Office 365, Azure, or Intune](https://support.microsoft.com/help/2647048).
+2. Update the new certificate's thumbprint and the date of the relying party trust with Azure AD. To do this, see the "How to update the configuration of the Microsoft 365 federated domain" section in [How to update or repair the settings of a federated domain in Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2647048).
 3. Re-create the AD FS proxy trust configuration. To do this, follow these steps: 
    1. Restart the AD FS Windows Service on the primary AD FS server.    
    2. Wait 10 minutes for the certificate to replicate to all the members of the federation server farm, and then restart the AD FS Windows Service on the rest of the AD FS servers.    
@@ -122,7 +122,7 @@ Regardless of whether a self-signed or CA-signed certificate is used, you should
 
 ### Scenario 2: You recently updated the client access policy through claims, and now sign-in doesn't work
 
-Check whether the client access policy was applied correctly. For more information, see [Limiting access to Office 365 services based on the location of the client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10)).
+Check whether the client access policy was applied correctly. For more information, see [Limiting access to Microsoft 365 services based on the location of the client](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/hh526961(v=ws.10)).
 
 ### Scenario 3: The federation metadata endpoint or the relying party trust may be disabled
 
@@ -155,7 +155,7 @@ To grant the "Impersonate a client after authentication" user permission to the 
 
 For more information about how to troubleshoot sign-in issues for federated users, see the following Microsoft Knowledge Base articles: 
 
-- [2530569 ](https://support.microsoft.com/help/2530569) Troubleshoot single sign-on setup issues in Office 365, Intune, or Azure   
-- [2712961 ](https://support.microsoft.com/help/2712961) How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure     
+- [2530569 ](https://support.microsoft.com/help/2530569) Troubleshoot single sign-on setup issues in Microsoft 365, Intune, or Azure   
+- [2712961 ](https://support.microsoft.com/help/2712961) How to troubleshoot AD FS endpoint connection issues when users sign in to Microsoft 365, Intune, or Azure     
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

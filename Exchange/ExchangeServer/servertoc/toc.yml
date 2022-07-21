@@ -465,7 +465,7 @@
           href: ../mailflow/cannot-send-email-with-full-access.md
         - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
           href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
-        - name: Can't view Office 365 IRM-encrypted messages
+        - name: Can't view Microsoft 365 IRM-encrypted messages
           href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
         - name: Delayed mail delivery in Exchange
           href: ../mailflow/mail-delivery-delay-exchange.md

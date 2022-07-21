@@ -1,6 +1,6 @@
 ---
-title: Office 365 users can't open or view attachments in Outlook Web App
-description: Describes an issue in which Outlook Web App attachments can't be viewed or opened in Office 365. Provides a resolution and a workaround.
+title: Microsoft 365 users can't open or view attachments in Outlook Web App
+description: Describes an issue in which Outlook Web App attachments can't be viewed or opened in Microsoft 365. Provides a resolution and a workaround.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,14 +16,14 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Office 365 users can't open or view attachments in Outlook Web App
+# Microsoft 365 users can't open or view attachments in Outlook Web App
 
 ## Problem
 
-When Office 365 users try to open or view attachments in email messages in Outlook Web App, they experience the following symptoms:
+When Microsoft 365 users try to open or view attachments in email messages in Outlook Web App, they experience the following symptoms:
 
-- In Office 365, the attachment isn't displayed in the message. Instead, a generic placeholder, such as "1 Attachment" is displayed, and this can't be opened.
-- When users try to view attachments in Office 365, they receive the following error message:   Access to attachments has been blocked. Blocked attachments: \<FileName>.
+- in Microsoft 365, the attachment isn't displayed in the message. Instead, a generic placeholder, such as "1 Attachment" is displayed, and this can't be opened.
+- When users try to view attachments in Microsoft 365, they receive the following error message:   Access to attachments has been blocked. Blocked attachments: \<FileName>.
   
 ## Cause
 
