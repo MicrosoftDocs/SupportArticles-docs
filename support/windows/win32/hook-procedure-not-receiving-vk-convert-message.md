@@ -1,6 +1,6 @@
 ---
-title: Hook procedure doesn’t receive the VK_CONVERT message
-description: This article helps you resolve the problem when an application is using a keyboard hook that doesn’t receive the VK_CONVERT messages.
+title: Hook procedure does not receive the VK_CONVERT message
+description: This article helps you resolve the problem when an application is using a keyboard hook that does not receive the VK_CONVERT messages.
 ms.date: 06/28/2022
 author: shwetasohu
 ms.author: v-shwetasohu
@@ -9,7 +9,7 @@ ms.reviewer: junyoshi
 ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 
-# Hook procedure doesn’t receive the VK_CONVERT message
+# Hook procedure does not receive the VK_CONVERT message
 
 This article helps you resolve the problem when an application that uses a keyboard hook doesn't receive 'WM_KEYDOWN' messages for the 'VK_CONVERT' virtual key.
 
