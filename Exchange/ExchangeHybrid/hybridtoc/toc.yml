@@ -23,7 +23,7 @@
           href: ../administration/federation-certificate-with-thumbprint-not-found.md
         - name: Missing certificate from Hybrid Configuration Wizard
           href: ../administration/missing-certificate-on-the-last-page-of-hybrid-configuration-wizard.md
-        - name: Mutual Authentication could not be established when testing Outlook Anywhere
+        - name: Mutual Authentication couldn't be established when testing Outlook Anywhere
           href: ../administration/mutual-authentication-could-not-be-established-error-if-testing-outlook-anywhere.md
         - name: OAuth authentication configuration fails
           href: ../administration/exchange-oauth-authentication-could-not-find-the-authorization.md
@@ -73,7 +73,7 @@
           href: ../email-delivery/delivery-has-failed-and-550-5-1-1-resolver.adr.recipnotfound.md
         - name: Can't receive mail after installing new certificate
           href: ../email-delivery/cannot-receive-mail-with-new-certificate.md
-        - name: Email from Edge Transport server appears as mail from external contacts
+        - name: Email from the Edge Transport server appears as mail from external contacts
           href: ../email-delivery/email-sent-from-edge-transport-server-appears-as-mail-from-external-contacts.md
         - name: Email messages are incorrectly quarantined
           href: ../email-delivery/email-messages-incorrectly-quarantined.md
@@ -183,35 +183,35 @@
           href: ../hybrid-configuration-wizard-errors/running-hybrid-configuration-wizard-fails.md
         - name: Same URI can't be attached to different AppId on a single day
           href: ../hybrid-configuration-wizard-errors/same-uri-not-attached-to-different-appid-on-single-day.md
-        - name: Secure Mail Certificate on server is not bound to the SMTP Service error
+        - name: Secure Mail Certificate on server isn't bound to the SMTP Service error
           href: ../hybrid-configuration-wizard-errors/secure-mail-certificate-on-server-is-not-bound-to-smtp-service-error.md
         - name: Sending mailbox server error when running HCW
           href: ../hybrid-configuration-wizard-errors/sending-mailbox-server-error-running-hcw.md
-        - name: State of runspace is not valid for this operation error
+        - name: State of runspace isn't valid for this operation error
           href: ../hybrid-configuration-wizard-errors/state-of-runspace-is-not-valid-for-this-operation-error.md
         - name: Subtask Configure execution failed
           href: ../hybrid-configuration-wizard-errors/hcw-subtask-configure-execution-failed.md
         - name: The request failed with HTTP status 403
           href: ../hybrid-configuration-wizard-errors/request-failed-with-http-status-403-forbidden.md
-        - name: The SSL certificate could not be checked
+        - name: The SSL certificate couldn't be checked
           href: ../hybrid-configuration-wizard-errors/ssl-certificate-could-not-be-checked.md
         - name: The user isn't assigned to any management roles
           href: ../hybrid-configuration-wizard-errors/user-not-assigned-to-any-management-roles.md
         - name: The pipeline has been stopped error when running Hybrid Configuration wizard
           href: ../hybrid-configuration-wizard-errors/system-management-automation-pipelinestoppedexception.md
-        - name: The term Get-OrganizationConfig is not recognized error
+        - name: The term Get-OrganizationConfig isn't recognized error
           href: ../hybrid-configuration-wizard-errors/term-get-organizationconfig-is-not-recognized-error.md
         - name: The underlying connection was closed error
           href: ../hybrid-configuration-wizard-errors/the-underlying-connection-was-closed-error.md
-        - name: The WSMan client cannot process the request error
+        - name: The WSMan client can't process the request error
           href: ../hybrid-configuration-wizard-errors/the-wsman-client-cannot-process-the-request-error.md
         - name: Unable to determine routing domain for cloud organization
           href: ../hybrid-configuration-wizard-errors/unable-to-determine-the-routing-domain-for-the-cloud-org.md
         - name: Warning occurs when running Hybrid Configuration wizard
           href: ../hybrid-configuration-wizard-errors/hcw-has-completed-but-was-not-able-to-perform-oauth.md
-        - name: Web Services External Url is not set on the On-Premises server error
+        - name: Web Services External Url isn't set on the on-premises server error
           href: ../hybrid-configuration-wizard-errors/web-services-external-url-is-not-set-on-the-on-premises-server-error.md
-        - name: WinRM client cannot complete operation within time specified error
+        - name: WinRM client can't complete operation within time specified error
           href: ../hybrid-configuration-wizard-errors/winrm-client-cannot-complete-operation-with-time-specified-error.md
     - name: Move Mailboxes
       items:

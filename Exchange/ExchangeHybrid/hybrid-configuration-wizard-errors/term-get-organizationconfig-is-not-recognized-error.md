@@ -1,6 +1,6 @@
 ---
-title: The term Get-OrganizationConfig is not recognized
-description: Describes that you receive a Get-OrganizationConfig is not recognized error when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
+title: The term Get-OrganizationConfig isn't recognized
+description: Describes that you receive a Get-OrganizationConfig isn't recognized error when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3067676
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-OrganizationConfig is not recognized** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-OrganizationConfig is not recognized** error message. The full text of this message resembles the following example:
 
 > ERROR : Subtask CheckPrereqs execution failed: Check Tenant Prerequisites  
 Execution of the Get-OrganizationConfig cmdlet has thrown an exception. This may indicate invalid parameters in your hybrid configuration settings.  
