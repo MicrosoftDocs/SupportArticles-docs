@@ -2,6 +2,7 @@
 title: Troubleshoot common errors for the Intune Exchange connector
 description: Troubleshoot and resolve common error codes for the on-premises Microsoft Intune Exchange Connector.
 ms.date: 12/13/2021
+search.appverid: MET150
 ---
 # Resolve common errors for the Intune Exchange Connector
 

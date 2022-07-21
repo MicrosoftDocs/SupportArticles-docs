@@ -2,6 +2,7 @@
 title: Factory reset protection emails not enforced in Intune for Android
 description: Describes an issue in which an Android Enterprise device can be activated by using a Google account that isn't included in the factory reset protection email message setting.
 ms.date: 10/07/2021
+search.appverid: MET150
 ms.custom: sap:Configure device restrictions
 ---
 # Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device

@@ -5,6 +5,7 @@ ms.date: 09/28/2020
 ms.reviewer: sausarka
 author: helenclu
 ms.author: sausarka
+search.appverid: MET150
 ms.custom: 
 - CI 121778
 - CSSTroubleshooting
@@ -55,7 +56,7 @@ The following diagram explains the flow that occurs behind the delivery of a Win
 
 - The complete documentation (using our tenant ASU and the relevant CDN) can be found at [Network requirements for PowerShell scripts and Win32 apps](/mem/intune/fundamentals/intune-endpoints#network-requirements-for-powershell-scripts-and-win32-apps).
 - If you want to see the contents of the `.intunewin` file after the file is created, rename its extension to `.zip`.
-- The `.intunewin` file contains two folders: **Contents** and **Metadata**. These folders contain the application package (the installer), and the `Detetection.xml` file (containing the file encryption information).
+- The `.intunewin` file contains two folders: **Contents** and **Metadata**. These folders contain the application package (the installer), and the `Detection.xml` file (containing the file encryption information).
 
 :::image type="content" source="media/develop-deliver-working-win32-app-via-intune/intunewin-folders.png" alt-text="Screenshot shows the .intunewin folders." border="false":::
 

@@ -2394,6 +2394,147 @@
       "source_path": "support/mem/intune/device-licenses-introduction.md",
       "redirect_url": "/mem/intune/fundamentals/licenses",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/small-file-handling-high-latency.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-performance-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-performance-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/app-service-compliance-wit.md",
+      "redirect_url": "/troubleshoot/azure/app-service/app-service-compliance-wit",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/backing-up-restoring-and-cloning-microsoft-azure-app-services.md",
+      "redirect_url": "/troubleshoot/azure/app-service/backing-up-restoring-and-cloning-microsoft-azure-app-services",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-configuration-and-management-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
+      "redirect_document_id": true
+    },
+
+    {
+      "source_path": "support/azure/general/faqs-app-service-linux.md",
+      "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-open-source-technologies-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-open-source-technologies-faqs",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/temporary-storage-for-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/temporary-storage-for-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/troubleshoot-instance-related-issues-on-azure-app-service.md",
+      "redirect_url": "/troubleshoot/azure/app-service/troubleshoot-instance-related-issues-on-azure-app-service",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/web-apps-deployment-faqs.md",
+      "redirect_url": "/troubleshoot/azure/app-service/web-apps-deployment-faqs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/app-service/index.md",
+      "redirect_url": "/troubleshoot/azure/app-service/welcome-app-service",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/quote-exceeded-during-creation-upgrade.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/quota-exceeded-during-creation-upgrade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/general/data-restore-storage.md",
+      "redirect_url": "/azure/storage/blobs/data-protection-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/performance/winsock-lsp-network-problem.md",
+      "redirect_url": "/troubleshoot/sql/connect/winsock-lsp-network-problem",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/sql/admin/slow-query-performance-ssis-etl.md",
+      "redirect_url": "/troubleshoot/sql/performance/slow-query-performance-ssis-etl",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-monitor/index.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/virtual-machines/rdp.md",
+      "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/welcome-log-analytics.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-missing-heartbeats.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-missing-heartbeats",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-performance-counter-missing.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-performance-counter-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/mma-troubleshoot-basics.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/mma-troubleshoot-basics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/resolve-windows-agent-installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/resolve-windows-agent-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/windows-could-not-start-mma.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-could-not-start-mma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
+      "redirect_document_id": true
     }
   ]
 }

@@ -4,6 +4,7 @@ description: This article gives troubleshooting guidance for IT Admins with issu
 ms.date: 05/12/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
+search.appverid: MET150
 ---
 
 # Troubleshooting app protection policy deployment in Intune

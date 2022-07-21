@@ -2,7 +2,7 @@
 metadata:
   title: FAQ about the end of support for Windows 7
   description: After January 14, 2020, Microsoft no longer provides security updates or support for computers that run Windows 7 for home users.
-  ms.date: 12/16/2021
+  ms.date: 06/10/2022
   author: Deland-Han
   ms.author: delhan
   manager: dcscontentpm
@@ -71,7 +71,7 @@ sections:
   
       - question: Where can I find information about the end of support for Windows Server 2008 or Windows 2008 R2
         answer: |
-          Support for Windows Server 2008 and Windows Server 2008 R2 ended on January 14, 2020. [Learn more here](https://www.microsoft.com/cloud-platform/windows-sql-server-2008).
+          Support for Windows Server 2008 and Windows Server 2008 R2 ended on January 14, 2020. [Learn more here](/azure/azure-sql/virtual-machines/windows/sql-server-extend-end-of-support).
 
       - question: What happens to Windows 7 virtual machines (VMs) that are hosted on Azure after January 2023? Will Microsoft remove them
         answer: |

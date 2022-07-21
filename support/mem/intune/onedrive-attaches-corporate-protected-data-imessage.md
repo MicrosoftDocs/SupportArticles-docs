@@ -2,6 +2,7 @@
 title: Corporate protected data is attached to an iMessage
 description: Describes an issue in which OneDrive with iMessage integration configured as a managed app lets users attach corporate protected data to an iMessage. Provides a workaround.
 ms.date: 05/11/2020
+search.appverid: MET150
 ms.custom: sap:App management
 ms.reviewer: shhodge
 ---

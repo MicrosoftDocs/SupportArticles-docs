@@ -1,6 +1,6 @@
 ---
 title: RM Statement templates can't be emailed in Microsoft Dynamics GP 2010
-description: There's an RM Statement Template available in Microsoft Dynamics GP 2010, but there are no options to e-mail it to the customer.
+description: There's an RM Statement Template available in Microsoft Dynamics GP 2010, but there are no options to email it to the customer.
 ms.reviewer: cwaswick, jakelaux
 ms.topic: troubleshooting
 ms.date: 03/31/2021
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 2441760
 
 ## Symptoms
 
-There's an "RM Statement" Word Template available in Microsoft Dynamics GP 2010, but there are no options to e-mail it to the customer. How do you email it?
+There's an "RM Statement" Word Template available in Microsoft Dynamics GP 2010, but there are no options to email it to the customer. How do you email it?
 
 ## Cause
 
@@ -28,6 +28,6 @@ The ability to email RM Customer Statements in Receivables Management in Microso
 
 For more information about emailing RM statements, see the following KB articles:
 
-[903690](https://support.microsoft.com/help/903690) How to use e-mail messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP
+- [How to use email messages to send letters, statements, and invoices to customers in Microsoft Dynamics GP](https://support.microsoft.com/help/903690)
 
-[934699](https://support.microsoft.com/help/934699) How to troubleshoot issues that occur when you send e-mail statements in Microsoft Dynamics GP
+- [How to troubleshoot issues that occur when you send email statements in Microsoft Dynamics GP](https://support.microsoft.com/help/934699)
