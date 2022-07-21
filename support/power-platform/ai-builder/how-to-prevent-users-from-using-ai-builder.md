@@ -1,6 +1,6 @@
 ---
 title: Prevent users from creating AI Builder custom models
-description: This article provides steps on how to prevent users from creating AI Builder custom models. 
+description: This article provides steps on how to prevent users from creating AI Builder custom models.
 ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 07/21/2022
