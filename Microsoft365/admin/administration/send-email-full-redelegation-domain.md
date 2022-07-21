@@ -1,6 +1,6 @@
 ---
 title: Can't send email messages from a domain that's set up for full redelegation
-description: Describes an issue in which you can't send email messages from an Office 365 Small Business environment for a domain that's set up for full redelegation. Provides a resolution.
+description: Describes an issue in which you can't send email messages from a Microsoft 365 Small Business environment for a domain that's set up for full redelegation. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,26 +12,26 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 ms.reviewer: willfid
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# You can't send email messages in Office 365 Small Business from a domain that's set up for full redelegation
+# You can't send email messages in Microsoft 365 from a domain that's set up for full redelegation
 
 ## Problem
 
-When you try to send email messages in Office 365 Small Business from a domain that's set up for full redelegation, some messages aren't sent. Additionally, you may receive a nondelivery report (NDR) that resembles the following:
+When you try to send email messages in Microsoft 365 for business from a domain that's set up for full redelegation, some messages aren't sent. Additionally, you may receive a nondelivery report (NDR) that resembles the following:
 
 "smtp; 550 SPF MAIL FROM check failed (PermError)"
 
 > [!NOTE]
-> A domain that is set up for full redelegation is a domain in which the name server (NS) resource records point to Office 365. Full domain redelegation is available only for Office 365 Small Business subscriptions and Office 365 for small businesses subscriptions.  
+> A domain that is set up for full redelegation is a domain in which the name server (NS) resource records point to Microsoft 365. Full domain redelegation is available only for Microsoft 365 for business subscriptions.  
 
 ## Solution
 
 To fix this issue, follow these steps:
 
-1. Use the NsLookup tool to check whether the NS resource records point to Office 365. To do this, follow these steps:
+1. Use the NsLookup tool to check whether the NS resource records point to Microsoft 365. To do this, follow these steps:
    1. Click **Start**, and then, in the search box, type command prompt.    
    2. In the list of results, right-click **Command Prompt**, and then click **Run as administrator**.   
    3. At the command prompt, type nslookup, and then press Enter.   

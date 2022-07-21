@@ -1,6 +1,6 @@
 ---
 title: 0x80041015 error when you start an Office program
-description: Discusses that you receive a 0x80041015 error when you try to start a Microsoft Office 2013 or Microsoft Office 365 program. Provides a resolution.
+description: Discusses that you receive a 0x80041015 error when you try to start a Microsoft Office 2013 or Microsoft 365 program. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -21,7 +21,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When you try to start a Microsoft Office 365 program, you receive the following error message:
+When you try to start a Microsoft 365 program, you receive the following error message:
 
 ```adoc
 Sorry, we ran into a problem While trying to install the product key.

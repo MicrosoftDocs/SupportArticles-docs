@@ -1,6 +1,6 @@
 ---
 title: You are operating in a split-domain (hybrid) topology when set call queue
-description: Discusses that you receive a You are operating in a split-domain (hybrid) topology warning message when you configure an Office 365 call queue in the Skype for Business admin center. Provides a workaround.
+description: Discusses that you receive a You are operating in a split-domain (hybrid) topology warning message when you configure a Microsoft 365 call queue in the Skype for Business admin center. Provides a workaround.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,11 +15,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# "You are operating in a split-domain (hybrid) topology" warning when you configure an Office 365 call queue in Skype for Business admin center
+# "You are operating in a split-domain (hybrid) topology" warning when you configure a Microsoft 365 call queue in Skype for Business admin center
 
 ## Symptoms
 
-After you set an Office 365 call queue in the Skype for Business admin center, and you add a distribution group, agents or users are not called. Additionally, when you change the call queue, you may receive the following warning message:
+After you set a Microsoft 365 call queue in the Skype for Business admin center, and you add a distribution group, agents or users are not called. Additionally, when you change the call queue, you may receive the following warning message:
 
 **Warning: you are operating in a split-domain (hybrid) topology.**
 
@@ -31,7 +31,7 @@ After you set an Office 365 call queue in the Skype for Business admin center, a
 
 This issue occurs because your tenant is configured by using a split domain that is currently not supported for Organizational Auto Attendant (OrgAA) or call queues.
 
-However, if you follow the guidance in the "Workaround" section, your call queue may work if all users who are defined as agents are working in Office 365 and are appropriately licensed.
+However, if you follow the guidance in the "Workaround" section, your call queue may work if all users who are defined as agents are working in Microsoft 365 and are appropriately licensed.
 
 ## Workaround
 

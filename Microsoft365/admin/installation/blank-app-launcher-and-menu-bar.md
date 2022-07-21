@@ -19,14 +19,14 @@ ms.date: 3/31/2022
 
 ## Problem
 
-In Office 365, a user experiences the following symptoms:
+In Microsoft 365, a user experiences the following symptoms:
 
 - Icons are missing from the tiles in the Office 365 app launcher.    
 - In Outlook on the web, the icons in the upper-right area of the page are missing. For example, the **Help** and **Settings** icon are missing.    
 
 ## Cause
 
-This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Office 365 icons are glyphs that are saved in an Office 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
+This issue occurs if the Untrusted Font Blocking feature is enabled on the computer as part of either a domain Group Policy setting or a local policy. Office 365 icons are glyphs that are saved in a Microsoft 365-designated font. When the policy setting is enabled, glyphs from the font aren't visible.
 
 ## Solution
 

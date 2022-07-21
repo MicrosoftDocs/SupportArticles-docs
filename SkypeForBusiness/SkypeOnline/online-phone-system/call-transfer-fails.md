@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 Consider the following scenario. 
 
-- Your Office 365 user account is configured to use Cloud PBX.   
+- Your Microsoft 365 user account is configured to use Cloud PBX.   
 - You have an active PSTN call using the Skype for Business client on Windows, where the voice for this call uses Skype for Business Cloud Connector Edition. 
 - You start a transfer to another phone number by selecting or entering the phone number from a list of suggested phone numbers on the transfer menu.    
 

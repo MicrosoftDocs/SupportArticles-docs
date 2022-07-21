@@ -1,6 +1,6 @@
 ---
 title: Reset activation state for Microsoft 365 Apps for enterprise
-description: Four locations must be cleared to reset the activation or install to a clean state after Office 365 users are activated.
+description: Four locations must be cleared to reset the activation or install to a clean state after Microsoft 365 users are activated.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm

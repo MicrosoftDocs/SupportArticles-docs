@@ -27,7 +27,7 @@ After you install the Microsoft .NET Framework Security Update MS16-065 on a Fro
 
 - External clients that connect from outside your corporate network through Edge servers are not affected.   
 - All clients can continue to join meetings, use instant messaging, see Presence information, and hear meeting audio.   
-- This problem affects on-premises environments. This problem does not affect the Office 365 Skype for Business Online service.   
+- This problem affects on-premises environments. This problem does not affect the Microsoft 365 Skype for Business Online service.   
 For a complete list of the .NET Framework updates that can cause this problem, see the [Microsoft Security Bulletin MS16-065 - Important](/security-updates/SecurityBulletins/2016/ms16-065) topic on the Microsoft TechNet website. 
 
 The following are the known modalities that are affected by this problem:
@@ -90,7 +90,7 @@ These fixes apply to the following Click-to-Run installations:
 - Deferred Channel (DC): Office version 16.0.6741.2048 and later versions   
 - All other channels: Office version 16.0.6965.2058 and later versions   
 - Lync 2013 (Skype for Business): Builds 15.0.4833.1001 and later versions   
-To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Office 365](/officeupdates/update-history-office-2013).
+To update Lync 2013 (Skype for Business) immediately, see [Update Office 2013 or Microsoft 365](/officeupdates/update-history-office-2013).
 
 To determine whether your Office installation is Click-to-Run or MSI-based, follow these steps:
 

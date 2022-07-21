@@ -30,7 +30,7 @@ When you run Exchange Server Setup together with the `/PrepareSchema` to update 
 
 > A hybrid deployment with Office 365 has been detected. Please ensure that you are running setup with the /TenantOrganizationConfig switch. To use the TenantOrganizationConfig switch you must first connect to your Exchange Online tenant via PowerShell and execute the following command: "Get-OrganizationConfig | Export-Clixml -Path MyTenantOrganizationConfig.XML". Once the XML file has been generated, run setup with the TenantOrganizationConfig switch as follows "/TenantOrganizationConfig MyTenantOrganizationConfig.XML".
 >
-> If you continue to see this this message then it indicates that either the XML file specified is corrupt, or you are attempting to upgrade your on-premises Exchange installation to a build that isn't compatible with the Exchange version of your Office 365 tenant. Your Office 365 tenant must be upgraded to a compatible version of Exchange before upgrading your on-premises Exchange installation.
+> If you continue to see this this message then it indicates that either the XML file specified is corrupt, or you are attempting to upgrade your on-premises Exchange installation to a build that isn't compatible with the Exchange version of your Microsoft 365 tenant. Your Microsoft 365 tenant must be upgraded to a compatible version of Exchange before upgrading your on-premises Exchange installation.
 
 When you follow the instructions in the error message to generate the XML file, and then you run `Setup /PrepareSchema` together with the `/TenantOrganizationConfig` switch, you receive the following error message:
 

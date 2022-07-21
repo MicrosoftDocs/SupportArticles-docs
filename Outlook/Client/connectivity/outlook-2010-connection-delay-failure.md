@@ -17,7 +17,7 @@ appliesto:
   - Microsoft Outlook 2010
 ms.date: 3/31/2022
 ---
-# You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Office 365 accounts
+# You may experience Outlook 2010 connection delays or failures when Outlook 2010 is configured to connect to two Microsoft 365 accounts
 
 _Original KB number:_ &nbsp; 2675986
 
@@ -44,7 +44,7 @@ If you are unable to install the Outlook 2010 hotfix package dated June 26, 2012
 
 ### How to obtain explicit permissions to the secondary mailbox
 
-Your Exchange Online administrator must connect to the Office 365 environment by using Windows PowerShell to grant your user account explicit permission to the secondary or shared mailbox.
+Your Exchange Online administrator must connect to the Microsoft 365 environment by using Windows PowerShell to grant your user account explicit permission to the secondary or shared mailbox.
 
 > [!IMPORTANT]
 > The administrator should use **Run as administrator** to start Windows PowerShell.
@@ -146,7 +146,7 @@ Usually, when Outlook requires credentials to connect to a mailbox, a **Windows 
     > [!NOTE]
     > If **View by** is set to **Category**, click **User Accounts** first, and then click **Credential Manager**.
 
-2. Locate the set of credentials that are used to connect to *.outlook.com or to your Office 365 domain.
+2. Locate the set of credentials that are used to connect to *.outlook.com or to your Microsoft 365 domain.
 3. Expand the set of credentials, and then select **Remove from Vault**.
 4. Locate the set of credentials that are used to connect to the secondary mailbox.
 5. Expand the set of credentials, and then select **Remove from Vault**.
@@ -158,6 +158,6 @@ When you next open Outlook, a credentials prompt is displayed. By using the step
 
 ## More information
 
-For more information about how to grant and remove full access permissions, see [How to remove automapping for a shared mailbox in Office 365](/outlook/troubleshoot/domain-management/remove-automapping-for-shared-mailbox).
+For more information about how to grant and remove full access permissions, see [How to remove automapping for a shared mailbox in Microsoft 365](/outlook/troubleshoot/domain-management/remove-automapping-for-shared-mailbox).
 
 Microsoft has confirmed that this is a problem in the Microsoft products that are listed in the **Applies to**.

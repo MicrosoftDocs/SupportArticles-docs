@@ -13,12 +13,12 @@ ms.custom: CSSTroubleshoot
 appliesto: 
   - Access 2016
   - Access 2013
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Excel 2013
   - Excel 2016
   - Excel 2019
-  - Excel for Office 365
+  - Excel for Microsoft 365
 ms.date: 3/31/2022
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Can't schedule meetings, see presence info, or send IMs from Outlook Web App
-description: Describes a problem in which online meeting scheduling, presence, and IM services aren't available in Outlook Web App when you use OWA in Office 365.
+description: Describes a problem in which online meeting scheduling, presence, and IM services aren't available in Outlook Web App when you use OWA in Microsoft 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -16,11 +16,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Can't schedule Skype for Business Online meetings, see presence info, or send IMs from Outlook Web App in Office 365
+# Can't schedule Skype for Business Online meetings, see presence info, or send IMs from Outlook Web App in Microsoft 365
 
 ## Problem 
 
-When you use Outlook Web App in Office 365, you may experience the following issues: 
+When you use Outlook Web App in Microsoft 365, you may experience the following issues: 
 
 - You can't schedule Skype for Business Online (formerly Lync Online) meetings in Outlook Web App because the link or button to do this is missing.   
 - You can't see presence information for contacts in Outlook Web App.   
@@ -31,7 +31,7 @@ When you use Outlook Web App in Office 365, you may experience the following iss
 ## Solution 
 
 To resolve this issue, make sure that the DNS records for your domain's DNS host are configured correctly. Specifically, the DNS SRV record for federation and the LyncDiscover DNS CNAME record are required for IM and online meeting functionality to work in Outlook Web App. For more information, see
-[Troubleshooting Skype for Business Online DNS configuration issues in Office 365](https://support.microsoft.com/help/2566790).
+[Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365](https://support.microsoft.com/help/2566790).
 
 If the DNS record is created correctly but you continue to receive the error message, contact Office 365 technical support for additional assistance. Before you contact support, try to run the Get-Mailbox cmdlet and have the results available for the support tech. To do this, follow these steps:
 

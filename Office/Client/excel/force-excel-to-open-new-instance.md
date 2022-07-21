@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2016
   - Excel 2013
 ms.date: 3/31/2022

@@ -1,6 +1,6 @@
 ---
 title: Skype for Business Online users can't communicate with external contacts
-description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft Office 365. Provides a resolution.
+description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft 365. Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -95,7 +95,7 @@ Contacts that don't use the standard domains for Microsoft Messenger, such as li
  
 Federation with external organizations requires an SRV record in DNS that directs external organizations to Skype for Business Online when they try to communicate. If that SRV record is missing or incorrectly configured, all communication with external contacts fails. To verify that the record is configured correctly, go to the following article in the Microsoft Knowledge Base:
 
-[2566790](https://support.microsoft.com/help/2566790) Troubleshooting Skype for Business Online DNS configuration issues in Office 365      
+[2566790](https://support.microsoft.com/help/2566790) Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365      
 
 ## More information
 

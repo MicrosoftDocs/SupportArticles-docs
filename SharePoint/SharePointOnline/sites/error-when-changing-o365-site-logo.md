@@ -16,14 +16,14 @@ ms.custom:
   - CI 116548
   - CSSTroubleshoot
 ms.reviewer: prbalusu
-description: What to do if you get an error when trying to change an Office 365 site logo in SharePoint.
+description: What to do if you get an error when trying to change a Microsoft 365 site logo in SharePoint.
 ---
 
 # Error when trying to change site logo on O365 group SharePoint site
 
 ## Symptoms
 
-When trying to change the site logo on an Office 365 group's SharePoint site, you see one of the following errors:
+When trying to change the site logo on a Microsoft 365 group's SharePoint site, you see one of the following errors:
 
 - An error occurred while processing this request
 - "Check to see if group property HiddenFromAddressListsEnabled is set to true, or if Address Book Policies are set on the group. Otherwise please try again later."

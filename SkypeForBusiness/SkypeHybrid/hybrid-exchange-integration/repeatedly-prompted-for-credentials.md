@@ -63,7 +63,7 @@ If Lync doesn't automatically connect to EWS, Lync prompts you for credentials b
 
 If you're repeatedly prompted to enter your credentials or receive the "Access Denied" error message, see the following Microsoft Knowledge Base article:
 
-[2630976](https://support.microsoft.com/help/2630976) "Access Denied" error, or user is repeatedly prompted for credentials when trying to connect to Office 365 by using a rich client application
+[2630976](https://support.microsoft.com/help/2630976) "Access Denied" error, or user is repeatedly prompted for credentials when trying to connect to Microsoft 365 by using a rich client application
 
 ### Solutions for Lync administrators
 
@@ -75,7 +75,7 @@ If the Exchange server or EWS is unavailable, this causes Lync to continuously p
 
 If a firewall or a proxy is preventing Lync from connecting to EWS, you may experience symptoms such as repeated credential requests, stale ABS, and intermittent Free/Busy presence issues.
 
-Ports 443, 5060, and 5061 must be open on the firewall and on proxy servers to let traffic pass freely. For more information about firewall or proxy issues in an Office 365 environment, see the following Microsoft Knowledge Base article: 
+Ports 443, 5060, and 5061 must be open on the firewall and on proxy servers to let traffic pass freely. For more information about firewall or proxy issues in a Microsoft 365 environment, see the following Microsoft Knowledge Base article: 
 
 [2409256](https://support.microsoft.com/help/2409256) You can't connect to Skype for Business Online, or certain features don't work, because an on-premises firewall blocks the connection 
 

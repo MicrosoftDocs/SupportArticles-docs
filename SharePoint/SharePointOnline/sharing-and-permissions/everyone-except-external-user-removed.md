@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-You notice that the `Everyone except external users` group is removed on a Microsoft Office 365 private group website after it is converted from a public group.
+You notice that the `Everyone except external users` group is removed on a Microsoft 365 private group website after it is converted from a public group.
 
 ## Cause
 

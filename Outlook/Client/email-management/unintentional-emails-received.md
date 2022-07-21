@@ -16,7 +16,7 @@ ms.reviewer: abarglo
 appliesto: 
   - Outlook 2019
   - Outlook 2019 for Mac
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2016 for Mac
   - Outlook 2016
   - Outlook 2013

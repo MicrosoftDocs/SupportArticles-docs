@@ -1,6 +1,6 @@
 ---
-title: Application cannot be started, contact the application vendor in Office 365
-description: Describes an issue in which you receive an Application cannot be started error when you try to run an Office 365 ClickOnce application such as Office 365 Desktop Setup or the Office 365 Desktop Readiness Tool. Provides a resolution.
+title: Application cannot be started, contact the application vendor in Microsoft 365
+description: Describes an issue in which you receive an Application cannot be started error when you try to run a Microsoft 365 ClickOnce application such as Microsoft 365 Desktop Setup or the Microsoft 365 Desktop Readiness Tool. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,15 +14,15 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Microsoft Windows XP Professional
   - Microsoft Windows XP Home Edition
-  - Office 365 User and Domain Management
+  - Microsoft 365 User and Domain Management
 ms.date: 3/31/2022
 ---
 
-# "Application cannot be started. Contact the application vendor" when run Office 365 Desktop Setup
+# "Application cannot be started. Contact the application vendor" when run Microsoft 365 Desktop Setup
 
 ## Problem
 
-When you try to run a Microsoft Office 365 ClickOnce application such as Office 365 Desktop Setup or the Office 365 Desktop Readiness Tool, you receive the following error message:
+When you try to run a Microsoft 365 ClickOnce application such as Microsoft 365 Desktop Setup or the Microsoft 365 Desktop Readiness Tool, you receive the following error message:
 
 > Application cannot be started. Contact the application vendor.
 

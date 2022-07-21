@@ -12,7 +12,7 @@ ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Business
+  - Microsoft 365 Apps
   - Office Professional Plus 2016
   - Office Standard 2016
   - Office Professional Plus 2013

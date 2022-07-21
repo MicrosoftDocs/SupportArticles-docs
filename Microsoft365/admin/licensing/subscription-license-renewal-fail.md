@@ -12,7 +12,7 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Business
+  - Microsoft 365 Apps
   - Office 365 Home
 ms.date: 3/31/2022
 ---

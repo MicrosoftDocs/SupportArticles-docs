@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2975918
 
 ## Symptoms
 
-When attempting to create an Outlook profile or connect to an Office 365 mailbox, you are continually prompted for credentials while the client displays **trying to connect...** If you cancel the credentials prompt, you receive this error:
+When attempting to create an Outlook profile or connect to a Microsoft 365 mailbox, you are continually prompted for credentials while the client displays **trying to connect...** If you cancel the credentials prompt, you receive this error:
 
 > The connection to Microsoft Exchange is unavailable. Outlook must be online or connected to complete this action.
 

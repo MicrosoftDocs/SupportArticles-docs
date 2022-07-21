@@ -19,12 +19,12 @@ metadata:
 productDirectory:
   items:
     # Card
-    - title: Office 365
+    - title: Microsoft 365
       # imageSrc should be square in ratio with no whitespace
       imageSrc: https://docs.microsoft.com/media/logos/logo_office.svg
       links:
         - url: ../enterprise/o365-enterprise-welcome.md
-          text: Office 365 Enterprise
+          text: Microsoft 365 Enterprise
         - url: ../admin/o365-admin-welcome.md
           text: Microsoft 365 admin center
         - url: ../compliance/microsoft-365-compliance-welcome.md
@@ -113,7 +113,7 @@ additionalContent:
           url: https://go.microsoft.com/fwlink/?linkid=787131
         # Card
         - title: Business owners
-          summary: Find help, training, and technical support for business owners who use Office 365.
+          summary: Find help, training, and technical support for business owners who use Microsoft 365.
           url: /office365/smallbusiness/build-your-small-business/build-your-small-business
         # Card
         - title: Educators IT

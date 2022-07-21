@@ -1,6 +1,6 @@
 ---
 title: How to specify the email message format that's used for external recipients to prevent Winmail.dat attachments
-description: Describes how Office 365 admins can change the message format so that messages that are sent from Office 365 users to external recipients don't contain the Winmail.dat attachment.
+description: Describes how Microsoft 365 admins can change the message format so that messages that are sent from Microsoft 365 users to external recipients don't contain the Winmail.dat attachment.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: how-to
@@ -19,11 +19,11 @@ ms.date: 3/31/2022
 
 ## Introduction
 
-This article describes how Microsoft Office 365 admins can change the message format so that messages that are sent from Office 365 users to external recipients don't contain Winmail.dat attachments.
+This article describes how Microsoft 365 admins can change the message format so that messages that are sent from Microsoft 365 users to external recipients don't contain Winmail.dat attachments.
 
-By default, email messages that are sent from Exchange Online in Office 365 use the Transport Neutral Encapsulation Format (TNEF) format. Messaging systems that aren't based on Microsoft Exchange may be unable to interpret messages that use this rich text format. If the recipient's messaging system can't process this format, a file attachment that's called Winmail.dat is added to the message.
+By default, email messages that are sent from Exchange Online in Microsoft 365 use the Transport Neutral Encapsulation Format (TNEF) format. Messaging systems that aren't based on Microsoft Exchange may be unable to interpret messages that use this rich text format. If the recipient's messaging system can't process this format, a file attachment that's called Winmail.dat is added to the message.
 
-Office 365 admins can use Windows PowerShell to change the message format to prevent the Winmail.dat attachment from being sent to external recipients.
+Microsoft 365 admins can use Windows PowerShell to change the message format to prevent the Winmail.dat attachment from being sent to external recipients.
 
 ## Procedure
 

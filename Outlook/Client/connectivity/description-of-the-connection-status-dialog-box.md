@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2737188
 
 ## Summary
 
-In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in an Office 365 environment.
+In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in a Microsoft 365 environment.
 
 ## More information
 

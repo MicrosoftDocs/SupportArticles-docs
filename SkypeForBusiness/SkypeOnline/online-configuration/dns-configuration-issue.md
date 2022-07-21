@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot Skype for Business Online DNS configuration issues in Office 365
-description: Contains information about how to troubleshoot Microsoft Skype for Business Online DNS configuration issues in Microsoft Office 365.
+title: Troubleshoot Skype for Business Online DNS configuration issues in Microsoft 365
+description: Contains information about how to troubleshoot Microsoft Skype for Business Online DNS configuration issues in Microsoft 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Troubleshooting Skype for Business Online DNS configuration issues in Office 365
+# Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365
 
 ## Problem 
 
@@ -64,7 +64,7 @@ CNAME records
 
 This issue occurs if all the following conditions are true: 
  
-- You use a custom domain in Office 365.  
+- You use a custom domain in Microsoft 365.  
 - DNS SRV resource records, CNAME resource records, or both kinds of records are configured incorrectly for your domain.    
  
 ### Troubleshoot Skype for Business Online DNS issues with the Lync Remote Connectivity Analyzer (RCA)
@@ -75,7 +75,7 @@ This test examines all four DNS records that are required by Skype for Business 
 
 :::image type="content" source="./media/dns-configuration-issue/examines-dns.png" alt-text="Screenshot that shows the result of the D N S test.":::
 
-If any issues are detected, check the DNS configuration with your domain registrar. For instructions about how to configure DNS for the most common DNS providers, go to the following Microsoft Office 365 website: [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-e21a9a4a-7b14-42cb-b39b-03aee92da95f) 
+If any issues are detected, check the DNS configuration with your domain registrar. For instructions about how to configure DNS for the most common DNS providers, go to the following Microsoft 365 website: [Create DNS records at any DNS hosting provider for Office 365](https://support.office.com/article/Create-DNS-records-at-any-DNS-hosting-provider-for-Office-365-e21a9a4a-7b14-42cb-b39b-03aee92da95f) 
 
 ### If you can't add SRV records through your DNS host
  

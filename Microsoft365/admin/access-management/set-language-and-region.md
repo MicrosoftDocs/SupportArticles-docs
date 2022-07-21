@@ -1,6 +1,6 @@
 ---
-title: Set language and region settings for Office 365
-description: Describes how to set language and region settings for Office 365 by using Office 365 PowerShell.
+title: Set language and region settings for Microsoft 365
+description: Describes how to set language and region settings for Microsoft 365 by using Microsoft 365 PowerShell.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,19 +11,19 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# How to set language and region settings for Office 365
+# How to set language and region settings for Microsoft 365
 
 ## Summary
 
-This article explains how to set the language and region settings for all Office 365 services (including OneDrive For Business, Delve, and SharePoint Online) by using Office 365 PowerShell centrally for all users.
+This article explains how to set the language and region settings for all Microsoft 365 services (including OneDrive For Business, Delve, and SharePoint Online) by using Microsoft 365 PowerShell centrally for all users.
 
 ## More Information
 
-For all Office 365 services (including OneDrive For Business, Delve, and SharePoint Online), you can change the language and region settings at the user level in a Cloud identity or Synchronized identity model by using Office 365 PowerShell.
+For all Microsoft 365 services (including OneDrive For Business, Delve, and SharePoint Online), you can change the language and region settings at the user level in a Cloud identity or Synchronized identity model by using Microsoft 365 PowerShell.
 
 **Note** Before you sync the settings, you should configure the alternative language settings on your SharePoint Online site. To do this, follow these steps:
 
@@ -32,7 +32,7 @@ For all Office 365 services (including OneDrive For Business, Delve, and SharePo
 3. On the **Language Settings** page, select the alternative languages that your site should support.   
 4. Click **OK**.   
 
-### For all Office 365 services except Exchange Online
+### For all Microsoft 365 services except Exchange Online
 
 #### Cloud identity model
 

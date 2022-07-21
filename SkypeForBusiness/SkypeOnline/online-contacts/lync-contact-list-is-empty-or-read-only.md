@@ -60,8 +60,8 @@ Make sure that the **Personal information manager** is set to **Microsoft Exchan
 
 ### Then, check the DNS configuration for EWS Connectivity
 
-Next, if you're using a custom domain in Office 365, and the user has an Exchange Online mailbox, but the contact list is still unavailable, verify that all the necessary Domain Name System (DNS) records for Exchange Online Autodiscover are present. Lync uses the Exchange Autodiscover service to connect to the user's mailbox. If the Autodiscover service isn't working correctly, Lync won't be able to pull the user's contact list from the Exchange Unified Contact Store (UCS). For more information about how to verify the Exchange Autodiscover service, see "Method 2" of the Solution section in
-[Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Office 365](https://support.microsoft.com/help/2404385).
+Next, if you're using a custom domain in Microsoft 365, and the user has an Exchange Online mailbox, but the contact list is still unavailable, verify that all the necessary Domain Name System (DNS) records for Exchange Online Autodiscover are present. Lync uses the Exchange Autodiscover service to connect to the user's mailbox. If the Autodiscover service isn't working correctly, Lync won't be able to pull the user's contact list from the Exchange Unified Contact Store (UCS). For more information about how to verify the Exchange Autodiscover service, see "Method 2" of the Solution section in
+[Outlook can't set up a new profile by using Exchange Autodiscover for an Exchange Online mailbox in Microsoft 365](https://support.microsoft.com/help/2404385).
 
 ### If the mailbox was accidentally disconnected or unlicensed
 

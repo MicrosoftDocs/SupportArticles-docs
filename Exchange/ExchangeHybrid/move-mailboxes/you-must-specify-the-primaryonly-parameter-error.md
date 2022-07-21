@@ -27,11 +27,11 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 3160413
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Office 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the Microsoft 365 Hybrid Configuration wizard that's available at [https://aka.ms/HybridWizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://blogs.technet.com/b/exchange/archive/2016/02/17/office-365-hybrid-configuration-wizard-for-exchange-2010.aspx).
 
 ## Symptoms
 
-You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365 in which primary mailboxes are located in the on-premises environment and archive mailboxes are located in Exchange Online. When you try to move only a primary mailbox from the on-premises environment to Exchange Online by using the Exchange admin center in Office 365, you receive the following error message.
+You have a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365 in which primary mailboxes are located in the on-premises environment and archive mailboxes are located in Exchange Online. When you try to move only a primary mailbox from the on-premises environment to Exchange Online by using the Exchange admin center in Microsoft 365, you receive the following error message.
 
 > Error: MigrationPermanentException: You must specify the PrimaryOnly parameter
 

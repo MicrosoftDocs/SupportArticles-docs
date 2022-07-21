@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4502865
 
 ## Symptoms
 
-Assume that you have a hybrid deployment of Exchange Server and Exchange Online in Office 365. When you try to move mailboxes from on-premises to Exchange Online, you receive an error message that resembles one of the following:
+Assume that you have a hybrid deployment of Exchange Server and Exchange Online in Microsoft 365. When you try to move mailboxes from on-premises to Exchange Online, you receive an error message that resembles one of the following:
 
 > Error: UserAlreadyBeingMigratedException: The user ‎'Name‎' already has a pending request. Please remove the existing request and resume the current batch or start a new batch for this user. --> Mailbox ‎'Name' is already being moved to ‎'Cloud Database Name‎'.
 >

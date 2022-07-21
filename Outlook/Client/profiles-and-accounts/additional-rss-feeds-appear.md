@@ -1,6 +1,6 @@
 ---
-title: Additional RSS feeds in Outlook after sign in to Office 365 on a new computer
-description: Describes a scenarion in which RSS feeds are added to a user's account when that user signs in to Office 365 on a different computer.
+title: Additional RSS feeds in Outlook after sign in to Microsoft 365 on a new computer
+description: Describes a scenarion in which RSS feeds are added to a user's account when that user signs in to Microsoft 365 on a different computer.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -18,11 +18,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Additional RSS feeds appear in Outlook after a user signs in to Office 365 on a new computer
+# Additional RSS feeds appear in Outlook after a user signs in to Microsoft 365 on a new computer
 
 ## Problem 
 
-Consider the following scenario. When a user signs in to Microsoft Office 365 on a new computer, the user's RSS feeds are transferred to the new computer. Additionally, the RSS feeds that are already on the new computer are also added to the user's account. If a second user signs in to Office 365 on the new computer, the second user's RSS feeds are added to the new computer. Additionally, all the RSS feeds that are available on the new computer are added to the second user's account. This includes the RSS feeds of the first user. In this scenario, the following issues may occur:
+Consider the following scenario. When a user signs in to Microsoft 365 on a new computer, the user's RSS feeds are transferred to the new computer. Additionally, the RSS feeds that are already on the new computer are also added to the user's account. If a second user signs in to Microsoft 365 on the new computer, the second user's RSS feeds are added to the new computer. Additionally, all the RSS feeds that are available on the new computer are added to the second user's account. This includes the RSS feeds of the first user. In this scenario, the following issues may occur:
 
 - If you obtain a secure RSS feed when you log on to a computer, you may be prompted for your credentials every time that you use the account.   
 - The RSS feeds may contain personal data.   

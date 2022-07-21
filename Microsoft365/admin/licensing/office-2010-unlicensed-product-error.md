@@ -52,7 +52,7 @@ To resolve this problem, use one or more of the following methods, as necessary.
 3. Select the user who has the issue.    
 4. Under **Assign Licenses**, verify that **Office Professional Plus** is selected.    
   
-### Method 2: Reactivate Office by using your Office 365 Organization ID
+### Method 2: Reactivate Office by using your Microsoft 365 organization ID
 
 To have us fix this problem for you, use the following steps:
 

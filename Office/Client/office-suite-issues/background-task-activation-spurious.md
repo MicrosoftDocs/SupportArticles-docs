@@ -14,7 +14,7 @@ appliesto:
   - Microsoft 365 Apps for enterprise
   - Office 365 Home
   - Office 365 Personal
-  - Office 365 Business
+  - Microsoft 365 Apps
   - SharePoint Online
   - Exchange Online
   - Office Professional Plus 2016

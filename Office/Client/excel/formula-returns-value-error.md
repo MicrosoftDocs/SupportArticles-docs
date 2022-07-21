@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Microsoft Excel 2016
   - Microsoft Excel 2013
   - Microsoft Excel 2010

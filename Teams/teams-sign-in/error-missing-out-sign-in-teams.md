@@ -28,7 +28,7 @@ When you sign into Microsoft Teams, you receive this error message:
 
 ## Resolution
 
-In Office 365 Education tenants, Microsoft Teams isn't enabled by default. You'll have to turn it on. Here's how to [Enable Microsoft Teams for your school](/microsoft-365/education/deploy/enable-microsoft-teams).
+In Microsoft 365 Education tenants, Microsoft Teams isn't enabled by default. You'll have to turn it on. Here's how to [Enable Microsoft Teams for your school](/microsoft-365/education/deploy/enable-microsoft-teams).
 
 ## More information
 
