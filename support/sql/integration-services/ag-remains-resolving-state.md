@@ -1,24 +1,24 @@
 ---
 title: AG remains in the resolving state
-description: This article provides a workaround for the problem where AlwaysOn Availability Group that contains the SSISDB database remains in the resolving state after a failover in SQL Server.
+description: This article provides a workaround for the problem where Always On Availability Group that contains the SSISDB database remains in the resolving state after a failover in SQL Server.
 ms.date: 09/22/2020
 ms.custom: sap:Integration Services
 ms.prod: sql
 ---
-# AlwaysOn Availability Group remains in the resolving state after a failover in SQL Server
+# Always On Availability Group remains in the resolving state after a failover in SQL Server
 
-This article helps you resolve the problem where AlwaysOn Availability Group that contains the SSISDB database remains in the resolving state after a failover in SQL Server.
+This article helps you resolve the problem where Always On Availability Group that contains the SSISDB database remains in the resolving state after a failover in SQL Server.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 3139534
 
 ## Symptoms
 
-Assume that the SSISDB database is a member of an AlwaysOn Availability Group, and that Availability Group fails over while a package from SSISDB is executing synchronously. In this situation, the Availability Group may remain in the resolving state on the (now formerly) primary replica until package execution completes.
+Assume that the SSISDB database is a member of an Always On Availability Group, and that Availability Group fails over while a package from SSISDB is executing synchronously. In this situation, the Availability Group may remain in the resolving state on the (now formerly) primary replica until package execution completes.
 
 In this scenario, the failover operation succeeds, but the Availability Group on the (newly) secondary replica remains in the resolving state until package execution completes. During this time, the SQL Server error log displays a message that resembles the following:
 
-> Nonqualified transactions are being rolled back in database SSISDB for an AlwaysOn Availability Groups state change. Estimated rollback completion: 0%. This is an informational message only. No user action is required.
+> Nonqualified transactions are being rolled back in database SSISDB for an Always On Availability Groups state change. Estimated rollback completion: 0%. This is an informational message only. No user action is required.
 
 Querying the session status shows that the session that was used to execute the job is in the KILLED/ROLLBACK state. If or when execution does complete, it may trigger errors such as the following:
 

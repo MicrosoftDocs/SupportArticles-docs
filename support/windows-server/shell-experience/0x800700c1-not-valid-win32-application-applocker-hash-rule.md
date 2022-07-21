@@ -1,7 +1,7 @@
 ---
 title: 0x800700C1 not a valid Win32 application error when you create an AppLocker hash rule for a file in Windows
 description: Describes an issue in which you can't create an AppLocker hash rule for a file in Windows.
-ms.date: 09/21/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -70,6 +70,4 @@ In this example, the AppLocker policy has two rules. The first rule ("Allow Calc
 
 ## References
 
-For more information about the Windows Authenticode Portable Executable file signature format, go to the following MSDN website:
-
-[General information about the Windows Authenticode Portable Executable file signature format](https://msdn.microsoft.com/windows/hardware/gg463180)
+For more information about the Windows Authenticode Portable Executable file signature format, see [General information about the Windows Authenticode Portable Executable file signature format](https://download.microsoft.com/download/9/c/5/9c5b2167-8017-4bae-9fde-d599bac8184a/Authenticode_PE.docx).

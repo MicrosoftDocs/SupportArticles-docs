@@ -3,6 +3,7 @@ title: Common issues when using Intune app protection policies to control data t
 description: Learn how to diagnose and troubleshoot some common issues and misconfigurations when using Microsoft Intune app protection policies (APP) to control data transfer.
 ms.date: 04/26/2022
 ms.reviewer: roblane-msft
+search.appverid: MET150
 ---
 # Common data transfer issues and scenarios
 

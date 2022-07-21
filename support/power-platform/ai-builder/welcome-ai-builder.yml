@@ -31,7 +31,7 @@ landingContent:
         links:
           - text: AI models fail to be imported in a new environment
             url: aimodels-fail-to-be-imported-in-a-new-environment.md
-          - text: Form processing isn't extracting tables
+          - text: Document processing isn't extracting tables
             url: aibuilder-form-processing-is-not-extracting-tables-that-span-across-multiple-pages.md
 
 

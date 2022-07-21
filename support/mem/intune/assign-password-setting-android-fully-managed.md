@@ -5,6 +5,7 @@ author: helenclu
 ms.author: luche
 ms.reviewer: anziob
 ms.date: 12/20/2021
+search.appverid: MET150
 ---
 # Assigning device password settings to Android Enterprise fully managed devices in Intune
 
