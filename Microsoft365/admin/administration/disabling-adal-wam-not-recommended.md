@@ -55,7 +55,7 @@ For more information about sign-in related symptoms and solutions, see the follo
 
 - [Azure Active Directory device management FAQ](/azure/active-directory/devices/faq)
 - [Troubleshooting devices using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd)
-- [How to troubleshoot non-browser apps that can't sign in-to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
-- ["Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365](/office365/troubleshoot/security/access-denied-when-connect-to-office-365)
+- [How to troubleshoot non-browser apps that can't sign in-to Microsoft 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
+- ["Access Denied", or user is repeatedly prompted for credentials when connecting to Microsoft 365](/office365/troubleshoot/security/access-denied-when-connect-to-office-365)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

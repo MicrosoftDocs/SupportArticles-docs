@@ -27,7 +27,7 @@ Users receive a "Your session has expired" error message in Microsoft Office Onl
 
 ## Cause
 
-If you're a tenant administrator and you begin IP address enforcement for OneDrive for Business in Office 365, this enforcement automatically activates a tenant parameter that's called **IPAddressWACTokenLifetime**. The default value of the **IPAddressWACTokenLifetime** parameter is 15 minutes.  
+If you're a tenant administrator and you begin IP address enforcement for OneDrive for Business in Microsoft 365, this enforcement automatically activates a tenant parameter that's called **IPAddressWACTokenLifetime**. The default value of the **IPAddressWACTokenLifetime** parameter is 15 minutes.  
 You can determine whether you're using IP address enforcement in the following two ways:  
 
 - See whether the **Allow access only from specific IP address locations** check box is selected in your OneDrive admin portal ([https://admin.onedrive.com/?v=AccessPolicySettings](https://admin.onedrive.com/?v=AccessPolicySettings)).    
@@ -64,7 +64,7 @@ Set-SPOTenant -IPAddressWACTokenLifetime 20
 For more information, see the following articles:  
 
 - [Set-SPOTenant](/powershell/module/sharepoint-online/set-spotenant)    
-- [Manage SharePoint Online with Office 365 PowerShell](/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell)    
+- [Manage SharePoint Online with Microsoft 365 PowerShell](/office365/enterprise/powershell/manage-sharepoint-online-with-office-365-powershell)    
 
 ## More Information
 
