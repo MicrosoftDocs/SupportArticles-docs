@@ -1,29 +1,28 @@
 ---
-title: AI Builder trial License that is still displayed in the top banner after that you have purchased an AI Builder License
-description: This article provides an explanation about the AI Builder trial License after being purchased
+title: AI Builder trial license still displays in the top banner after you've purchased an AI Builder license
+description: This article provides an explanation about the AI Builder trial license after being purchased.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 6/01/2022
 ms.subservice: 
 ---
 
-# AI Builder trial License that is still displayed in the top banner after that you have purchased an AI Builder License
+# AI Builder trial license still displays in the top banner after you've purchased an AI Builder license
 
-This article provides an explanation about the AI Builder trial License that is still displayed in the top banner after that you have purchased an AI Builder License.
+This article provides an explanation about the AI Builder trial license that still displays in the top banner after that you have purchased an AI Builder license.
 
 _Applies to:_ AI Builder
 
 
-## Symtom
+## Symptom
 
-I have purchased a power apps license as a user but in the app it still says trial
+I've purchased a Power Apps license as a user but in the app it still says trial.
 
 ## Cause
 
-If you have purchased a premium Power Apps license, you got a small amount of AI Builder credits.
+If you've purchased a premium Power Apps license, you got a small number of AI Builder credits.
 
 ## Resolution
 
-The trial message will disapear at the end of your trial period and you will use your seeded credits instead.
-
+The trial message will disappear at the end of your trial period, and you'll use your seeded credits instead.
 

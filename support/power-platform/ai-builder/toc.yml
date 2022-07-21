@@ -5,6 +5,8 @@
       items:
         - name: Actions are disabled or deactivated
           href: aibuilder-actions-are-disabled-deactivated.md
+        - name: AI Builder trial license still displays after you've purchased an AI Builder license
+          href: aibuilder-show-trial-license-but-license-purchased.md
         - name: Current environment doesn't meet the minimum requirements
           href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
         - name: Prevent users from creating AI Builder custom models
