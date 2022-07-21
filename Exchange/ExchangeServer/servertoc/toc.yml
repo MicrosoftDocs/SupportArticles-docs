@@ -433,6 +433,8 @@
           href: ../compliance/noderunnersexe-stops-search-not-work.md
         - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+        - name: Search-Mailbox cmdlet error
+          href: ../compliance/search-mailbox-cmdlet-fails.md
     - name: Development
       items:
         - name: Develop apps via Exchange Powershell and .NET Framework
