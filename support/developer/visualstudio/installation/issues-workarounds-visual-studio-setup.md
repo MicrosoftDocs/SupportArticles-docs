@@ -1,7 +1,7 @@
 ---
 title: Common issues in Visual Studio setup
 description: This article describes common issues during Visual Studio installation, and provides suggested workarounds.
-ms.date: 04/22/2020
+ms.date: 07/20/2022
 ms.custom: sap:Installation
 ---
 # Common issues and workarounds in Visual Studio setup
@@ -49,19 +49,9 @@ This error typically occurs when a file that is related to the installation beco
 
 ### Error when you install from an ISO or a DVD burned from an ISO
 
-If you use an ISO file for your installation of Visual Studio, or if you use a digital video disc (DVD) that was burned from an ISO file, the ISO file may become corrupted during the download process. To resolve the issue, follow these steps:
+If you use an ISO file for your installation of Visual Studio, or if you use a digital video disc (DVD) that was burned from an ISO file, the ISO file may become corrupted during the download process. If you have the Microsoft File Checksum Integrity Verifier tool installed, you can use the tool to check if the ISO file is corrupted by following these steps:
 
-1. Download and install the Microsoft File Checksum Integrity Verifier tool.
-
-    > [!NOTE]
-    > To use this tool, you must know the file path of the ISO file.
-
-2. During the installation of the tool, you're prompted to provide a directory where the files are to be extracted.
-
-    > [!NOTE]
-    > The directory for later access. For example, you can extract the files to the `C:\TEMP\fciv` location.
-
-3. In a **Command Prompt** window, type the following command, and then press **Enter**.
+1. In a **Command Prompt** window, type the following command, and then press **Enter**.
 
     ```console
     <DIRECTORY_NAME>\fciv.exe -sha1 <ISO_NAME>
@@ -70,7 +60,7 @@ If you use an ISO file for your installation of Visual Studio, or if you use a d
     > [!NOTE]
     > In this command, the _\<DIRECTORY NAME>_ placeholder is the folder to which you extracted the files, and the _\<ISO_NAME>_ placeholder is the path of the Visual Studio ISO file. For more information, see the _ReadMe.htm_ file in the extraction directory.
 
-4. Verify that the Secure Hash Algorithm 1 (SHA-1) value that is returned by the File Checksum tool matches the expected value. To determine the expected value, examine the folder to which you downloaded the ISO file.
+2. Verify that the Secure Hash Algorithm 1 (SHA-1) value that is returned by the File Checksum tool matches the expected value. To determine the expected value, examine the folder to which you downloaded the ISO file.
 
     > [!NOTE]
     > The expected SHA-1 value is different for each download source.
@@ -95,7 +85,8 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press **Enter** after each command:
 
     ```console
-    Delete /F /S *.msi Delete /F /S *.cab
+    Delete /F /S *.msi
+    Delete /F /S *.cab
     ```
 
 5. Try again to repair Visual Studio.  
