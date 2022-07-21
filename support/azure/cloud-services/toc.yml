@@ -42,6 +42,8 @@
     href: application-pool-crashes.md
   - name: Disk partition preservation
     href: disk-partition-preservation.md
+  - name: FAQ about role instance restarts due to OS upgrades
+    href: role-instance-restarts-faq.yml
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
   - name: Roles that fail to start

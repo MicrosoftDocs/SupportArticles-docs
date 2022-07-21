@@ -1,7 +1,7 @@
 ---
 title: Capture a TCP dump from a Linux node in an AKS cluster
 description: Understand how to capture a TCP dump from a Linux node within an Azure Kubernetes Service (AKS) cluster.
-ms.date: 6/7/2022
+ms.date: 7/20/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
@@ -30,28 +30,7 @@ aks-agentpool-34796016-vmss000002   Ready    agent   45h   v1.20.9   10.240.2.47
 
 ## Step 2: Connect to a Linux node
 
-The next step is to establish a connection to the AKS cluster node that you want to capture the network trace from. [Create an SSH connection to the Linux node](/azure/aks/ssh).
-
-If you're using a Linux virtual machine scale set but don't have your SSH key, reset the SSH key by running the [az vmss extension set](/cli/azure/vmss/extension#az-vmss-extension-set) and [az vmss update-instances](/cli/azure/vmss#az-vmss-update-instances) commands in Azure CLI:
-
-```azurecli-interactive
-CLUSTER_RESOURCE_GROUP=  # Specify the cluster resource group.
-SCALE_SET_NAME=  # Specify the name of the virtual machine scale set.
-
-az vmss extension set  \
-    --resource-group $CLUSTER_RESOURCE_GROUP \
-    --vmss-name $SCALE_SET_NAME \
-    --name VMAccessForLinux \
-    --publisher Microsoft.OSTCExtensions \
-    --version 1.4 \
-    --protected-settings '{"username":"azureuser", "ssh_key":"$(cat ~/.ssh/id_rsa.pub)"}'
-
-az vmss update-instances --instance-ids '*' \
-    --resource-group $CLUSTER_RESOURCE_GROUP \
-    --name $SCALE_SET_NAME
-```
-
-Update the `CLUSTER_RESOURCE_GROUP` and `SCALE_SET_NAME` definitions to match your environment. This example also uses *~/.ssh/id_rsa.pub* as the location for your SSH public key. The default user name for the AKS nodes is *azureuser*.
+The next step is to establish a connection to the AKS cluster node that you want to capture the network trace from. For more information, see [Create an interactive shell connection to a Linux node](/azure/aks/node-access#create-an-interactive-shell-connection-to-a-linux-node).
 
 ## Step 3: Make sure tcpdump is installed
 
@@ -114,5 +93,8 @@ The helper pod has a prefix of `node-debugger-aks`, as shown in the third row. R
 ```bash
 kubectl cp node-debugger-aks-nodepool1-38878740-vmss000000-jfsq2:/capture.cap capture.cap
 ```
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
+
+
