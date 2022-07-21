@@ -37,7 +37,7 @@ To resolve this issue, follow these steps:
     > [!NOTE]
     > Make sure that the **Replace with** box is blank and doesn't contain a space or any other character.
 
-3. Save the file, and then import it to Office 365.
+3. Save the file, and then import it to Microsoft 365.
 
 You receive a **<#> contacts imported successfully** message when the contacts are successfully imported.
 

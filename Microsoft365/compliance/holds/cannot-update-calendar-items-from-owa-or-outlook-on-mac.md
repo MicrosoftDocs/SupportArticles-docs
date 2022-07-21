@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 4459263
 
 Consider the following scenario:
 
-- A user has a mailbox in Microsoft Office 365.
+- A user has a mailbox in Microsoft 365.
 - In-place hold or litigation hold is enabled for the mailbox.
 - The user tries to edit calendar items from Microsoft Outlook Web App (OWA) or Microsoft Outlook.
 

@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-In Office 365, a user experiences the following symptoms:
+In Microsoft 365, a user experiences the following symptoms:
 
 - Icons are missing from the tiles in the Office 365 app launcher.    
 - In Outlook on the web, the icons in the upper-right area of the page are missing. For example, the **Help** and **Settings** icon are missing.    

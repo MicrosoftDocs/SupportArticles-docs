@@ -13,7 +13,7 @@ ms.custom:
   - CI 163053
 ms.reviewer: zebamehdi; brandisi
 appliesto: 
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 4/26/2022
 ---

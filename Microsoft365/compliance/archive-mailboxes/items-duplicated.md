@@ -42,7 +42,7 @@ If the MRM policy runs again before this condition is discovered, the re-synced 
 To fix this problem, use one of the following methods:
 
 - Disable the archiving policy until the IMAP migration process is complete.
-- Stop the migration batch to prevent more duplicate items from being created. Additionally, you must manually remove the duplicated items from the mailbox. Or, delete the mailbox, and then remigrate it to Office 365.
+- Stop the migration batch to prevent more duplicate items from being created. Additionally, you must manually remove the duplicated items from the mailbox. Or, delete the mailbox, and then remigrate it to Microsoft 365.
 
 ## More information
 

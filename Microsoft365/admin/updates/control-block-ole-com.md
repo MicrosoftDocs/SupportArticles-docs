@@ -1,6 +1,6 @@
 ---
-title: How to control the blocking of OLE/COM components in Office 365
-description: Describes how to control the blocking of OLE/COM components in Microsoft Office 365 Subscription.
+title: How to control the blocking of OLE/COM components in Microsoft 365
+description: Describes how to control the blocking of OLE/COM components in Microsoft 365 Subscription.
 author: MaryQiu1987
 audience: ITPro
 ms.topic: troubleshooting
@@ -15,7 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription
+# How to control the blocking of OLE/COM components in Microsoft 365 Subscription
 
 ## Introduction 
 
@@ -38,7 +38,7 @@ In this update, we are allowing the following components to be activated:
 > [!IMPORTANT]
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
-### How to control the blocking of OLE/COM components in Microsoft Office 365 Subscription
+### How to control the blocking of OLE/COM components in Microsoft 365 Subscription
 
 To override and allow a specific component, follow these steps:
 
