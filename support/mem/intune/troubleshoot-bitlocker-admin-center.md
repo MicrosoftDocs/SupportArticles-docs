@@ -1,8 +1,6 @@
 ---
 title: Troubleshooting BitLocker with the Intune encryption report
 description: How to troubleshoot encryption failures using the Intune encryption report from the Microsoft Endpoint Manager admin center.
-ms.author: v-dsindona
-author: dsindona88
 ms.reviewer: luker
 ms.date: 12/01/2021
 search.appverid: MET150
@@ -43,7 +41,7 @@ BitLocker encryption failures on Intune enrolled Windows 10 devices can fall int
 
 - The device hardware or software does not meet the prerequisites for enabling BitLocker.
 - The Intune BitLocker policy is misconfigured, causing Group Policy Object (GPO) conflicts.
-- The device is already encrypted, and the encryption method doesn’t match policy settings.
+- The device is already encrypted, and the encryption method doesn't match policy settings.
 
 To identify the category of a device encryption failure, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Encryption report**. The report will show a list of enrolled devices and show if a device is encrypted or ready to be encrypted, and if it has a TPM chip.
 
@@ -68,7 +66,7 @@ When you click on a device that is not encrypted, Intune displays a summary of i
 
 The messages under Status details are codes returned by the [BitLocker CSP](/windows/client-management/mdm/bitlocker-csp) status node from the device. The encryption status is in an error state because the OS volume is not encrypted. Additionally, the BitLocker policy has requirements for a TPM, which the device does not satisfy.
 
-The messages mean that the device is not encrypted because it doesn’t have a TPM present and the policy requires one.
+The messages mean that the device is not encrypted because it doesn't have a TPM present and the policy requires one.
 
 ### Scenario 2 – Device is ready but not encrypted
 
