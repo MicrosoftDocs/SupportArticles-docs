@@ -9,11 +9,11 @@ ms.prod: sql
 ms.author: v-jayaramanp
 ---
 
-# How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server
+# Generating a script to create a statistics-only database
 
 This article describes the steps to generate a script based on database metadata to create a statistics-only database in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
+*Applies to:* &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
 
 ## Introduction
 
@@ -29,6 +29,8 @@ Microsoft Customer Support Services may ask you to generate a script of the data
 
 > [!NOTE]
 > The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the statistics script that is generated.
+
+## More Information
 
 The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
@@ -72,11 +74,13 @@ To script each database that is referenced by your query, follow these steps:
 
 1. Click **Save to File** and select **Single file** option.
 
+1. Review your selections and click **Next**.
+
 1. Click **Finish**.
 
 ## Script individual objects
 
-You can only script the individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created by using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table may not always be accurate. This inaccuracy may cause one of the following issues:
+You can only script the individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table might not always be accurate. This inaccuracy might cause one of the following issues:
 
 - The scripting process doesn't script a dependent object.
 

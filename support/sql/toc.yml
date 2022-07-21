@@ -93,7 +93,7 @@
         href: admin/event-id-7000-fail-start.md
     - name: 1450 and 665 errors when running DBCC CHECKDB
       href: admin/1450-and-665-errors-running-dbcc-checkdb.md
-    - name: How to generate a script of database metadata to create a statistics-only database
+    - name: Generating a script to create a statistics-only database
       href: admin/stats-only-db-script.md
     - name: 17053 and 926 errors when running DBCC CHECK
       href: admin/17053-and-926-errors-running-dbcc-check.md
