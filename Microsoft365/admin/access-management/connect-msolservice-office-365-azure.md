@@ -1,6 +1,6 @@
 ---
 title: The user name or password is incorrect when you use connect-MSOLService
-description: Fixes an issue in which you receive an error when you use connect-MSOLService to connect to Office 365.
+description: Fixes an issue in which you receive an error when you use connect-MSOLService to connect to Microsoft 365.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -35,7 +35,7 @@ This issue may occur if the user name or password that you're using is incorrect
 
 ## Solution 
 
-To resolve this issue, see [You can't sign in to your organizational account such as Office 365, Azure, or Intune](https://support.microsoft.com/help/2412085).
+To resolve this issue, see [You can't sign in to your organizational account such as Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2412085).
 
 ## More information 
 

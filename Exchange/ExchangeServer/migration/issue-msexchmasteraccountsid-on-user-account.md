@@ -61,6 +61,4 @@ The `msExchMasterAccountSID` attribute shouldn't exist for a regular user accoun
 
 If **msExchRecipientTypeDetails = 1**, then `msExchMasterAccountSID` shouldn't exist on the account in Active Directory.
 
-For more information on possible values for the `msExchRecipientTypeDetails` attribute, see the following Office 365 blog post:
-
-[O365: Exchange and AD - How msExchRecipientDisplayType and msExchangeRecipientTypeDetails Relate to Your On-Premises](https://vermagautam85.blogspot.com/2017/08/o365-exchange-and-ad-how.html)
+For more information on possible values for the `msExchRecipientTypeDetails` attribute, see [O365: Exchange and AD - How msExchRecipientDisplayType and msExchangeRecipientTypeDetails Relate to Your On-Premises](https://vermagautam85.blogspot.com/2017/08/o365-exchange-and-ad-how.html).

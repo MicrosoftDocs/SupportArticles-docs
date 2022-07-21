@@ -40,4 +40,4 @@ This is by design. Exchange Server does not support tracing a message that's sen
 
 ## Workaround
 
-To work around this problem, run the message trace from Office 365 to get a partial trace on the cloud side. Be aware that this does not show the on-premises path.
+To work around this problem, run the message trace from Microsoft 365 to get a partial trace on the cloud side. Be aware that this does not show the on-premises path.
