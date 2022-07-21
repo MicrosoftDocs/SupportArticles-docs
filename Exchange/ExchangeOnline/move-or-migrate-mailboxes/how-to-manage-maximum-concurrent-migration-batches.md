@@ -65,6 +65,6 @@ To set the maximum number of concurrent migration batches by using Exchange Onli
 
 ## More Information
 
-For more information about migration endpoints, see the Connect Office 365 or Office 365 to your email system section of the article [Perform a staged migration of email](/exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
+For more information about migration endpoints, see the Connect Microsoft 365 or Microsoft 365 to your email system section of the article [Perform a staged migration of email](/exchange/mailbox-migration/perform-a-staged-migration/perform-a-staged-migration).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

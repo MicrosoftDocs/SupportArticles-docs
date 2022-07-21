@@ -30,7 +30,7 @@ ms.date: 3/31/2022
 ---
 # Find and fix email delivery issues as a Microsoft 365 for business admin
 
-When users report that they aren't receiving email, it can be challenging to determine the cause. You might run through several troubleshooting scenarios in your mind. Is something wrong with Outlook? Is the Office 365 service down? Is there a problem in the mail flow or spam filter settings? Or is the problem caused by something that's outside your control, such as that the sender is on a global block list? Fortunately, Office 365 provides powerful automated tools that can help you identify and fix a variety of problems.
+When users report that they aren't receiving email, it can be challenging to determine the cause. You might run through several troubleshooting scenarios in your mind. Is something wrong with Outlook? Is the Microsoft 365 service down? Is there a problem in the mail flow or spam filter settings? Or is the problem caused by something that's outside your control, such as that the sender is on a global block list? Fortunately, Microsoft 365 provides powerful automated tools that can help you identify and fix a variety of problems.
 
 ## Check whether there's a problem in Outlook or another email app
 
@@ -38,15 +38,15 @@ If only one user reports having trouble receiving email, there might be a proble
 
 ### Use Outlook on the web to look for missing messages - 5 minutes
 
-If a user is receiving email in their Outlook on the web mailbox but not on the email app that's installed on their computer, this could indicate that the issue is the user's computer or email app. Ask the user to sign in to Outlook on the web to verify that their Office 365 email account is working correctly.
+If a user is receiving email in their Outlook on the web mailbox but not on the email app that's installed on their computer, this could indicate that the issue is the user's computer or email app. Ask the user to sign in to Outlook on the web to verify that their Microsoft 365 email account is working correctly.
 
  **Instructions:** [Sign in to Outlook on the web for business](https://support.office.com/article/e08eb8ac-ac27-49f4-a400-a47311e1ee7e.aspx)
 
 ### Run Support and Recovery Assistant to fix Outlook problems or account issues - 10 minutes
 
-If a single user in your organization is having trouble receiving email, the cause could be a licensing issue, a profile problem, the wrong version of Outlook, or a mixture of other issues. Fortunately, the Microsoft Support and Recovery Assistant finds and helps you fix most issues that affect Outlook or Office 365. As a first step in troubleshooting email delivery problems for Office 365 for business, we recommend that you download and run Support and Recovery Assistant on the affected computer. 
+If a single user in your organization is having trouble receiving email, the cause could be a licensing issue, a profile problem, the wrong version of Outlook, or a mixture of other issues. Fortunately, the Microsoft Support and Recovery Assistant finds and helps you fix most issues that affect Outlook or Microsoft 365. As a first step in troubleshooting email delivery problems for Microsoft 365 for business, we recommend that you download and run Support and Recovery Assistant on the affected computer. 
 
-Notice that if you're experiencing issues that affect Outlook for Mac or are having mobile access issues, you can use the app to check your account settings. However, you have to install the app on a PC. After you sign in to the affected account, the app will check for issues. Users can typically download and run Support and Recovery Assistant without help from their Office 365 admin.
+Notice that if you're experiencing issues that affect Outlook for Mac or are having mobile access issues, you can use the app to check your account settings. However, you have to install the app on a PC. After you sign in to the affected account, the app will check for issues. Users can typically download and run Support and Recovery Assistant without help from their Microsoft 365 admin.
 
 :::image type="icon" source="./media/email-delivery-issues/get-start.png"::: **Let us fix your issue** [Download and run Microsoft Support and Recovery Assistant](https://AKA.MS/SaRASetup)
 
@@ -58,9 +58,9 @@ As a Microsoft 365 for business admin, you have access to several tools that can
 
 The following list of tools is sorted from the simplest and quickest option to the most in-depth.
 
-### Check Office 365 service health for Exchange Online issues - 5 minutes
+### Check Microsoft 365 service health for Exchange Online issues - 5 minutes
 
-The service health page lists the status of Office 365 services and indicates any recent service incidents.  To check the service health, follow these steps:
+The service health page lists the status of Microsoft 365 services and indicates any recent service incidents.  To check the service health, follow these steps:
 
 1. Sign in through the appropriate link on [Where to sign in to Microsoft 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
 
@@ -69,7 +69,7 @@ The service health page lists the status of Office 365 services and indicates an
     > [!TIP]
     > **Admin** appears only to Microsoft 365 administrators.
 
-    Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Office 365 apps that are available to you. From there, you can search for a specific app.
+    Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Microsoft 365 apps that are available to you. From there, you can search for a specific app.
 
 3. Under **Service health**, go to **View the service health**.
 
@@ -97,7 +97,7 @@ Sometimes, an email message gets lost in transit, or it can take a lot longer th
 
 #### Open the message trace tool
 
-If you're a Microsoft 365 Midsize Business, Microsoft 365 Apps, or Office 365 Enterprise admin, you access and run the message trace tool through the Exchange admin center. To get there, do the following:
+If you're a Microsoft 365 admin, you access and run the message trace tool through the Exchange admin center. To get there:
 
 1. Sign in through the appropriate link on [Where to sign in to Microsoft 365 for business](https://support.office.com/article/e9eb7d51-5430-4929-91ab-6157c5a050b4) by using your work or school account.
 
@@ -106,7 +106,7 @@ If you're a Microsoft 365 Midsize Business, Microsoft 365 Apps, or Office 365 En
     > [!TIP]
     > **Admin** appears only to Microsoft 365 administrators.
 
-    Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Office 365 apps that are available to you. From there, you can search for a specific app.
+    Can't find the app that you're looking for? From the app launcher, select **All apps** to see an alphabetical list of the Microsoft 365 apps that are available to you. From there, you can search for a specific app.
 
 3. Go to **Exchange**.
 

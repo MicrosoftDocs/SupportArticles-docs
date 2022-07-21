@@ -43,7 +43,7 @@ Additionally, when you click **Learn more**, you receive an error message that r
 
 ## Cause
 
-Office 365 can't change attributes of federated users. In this scenario, Office 365 can't change the value of the `ForceChangePassword` field from **True** to **False** in the CSV file that you created for the migration.
+Microsoft 365 can't change attributes of federated users. In this scenario, Microsoft 365 can't change the value of the `ForceChangePassword` field from **True** to **False** in the CSV file that you created for the migration.
 
 ## Solution
 

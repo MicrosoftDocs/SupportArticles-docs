@@ -32,7 +32,7 @@ In this scenario, messages may be delayed by several hours or may never be displ
 
 ## Cause
 
-Exclaimer installs a transport rule that routes mail originating inside the organization to the Exclaimer cloud through an outbound connector. As soon as the signature is applied, the message is routed back into Office 365 for delivery. Because attachment scanning begins before the message leaves Office 365, the attachment cannot be added back to the message correctly when the message returns.
+Exclaimer installs a transport rule that routes mail originating inside the organization to the Exclaimer cloud through an outbound connector. As soon as the signature is applied, the message is routed back into Microsoft 365 for delivery. Because attachment scanning begins before the message leaves Microsoft 365, the attachment cannot be added back to the message correctly when the message returns.
 
 ## Resolution
 

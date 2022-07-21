@@ -36,7 +36,7 @@ A replication delay in the service occurred. This may prevent some post-migratio
 
 ## Resolution
 
-The user may be unable to access the mailbox immediately after the migration is complete. As soon as replication is complete, the user will be able to access the mailbox. If the user continues to be unable to access the mailbox 60 minutes after the migration is complete, contact Office 365 Support.
+The user may be unable to access the mailbox immediately after the migration is complete. As soon as replication is complete, the user will be able to access the mailbox. If the user continues to be unable to access the mailbox 60 minutes after the migration is complete, contact Microsoft 365 Support.
 
 ## More information
 

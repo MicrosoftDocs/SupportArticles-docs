@@ -68,7 +68,7 @@ This issue most frequently occurs when messages are migrated by using a method t
 
 For more information, see the following resources:
 
-- [What are Exchange NDRs in Exchange Online and Office 365](https://support.office.com/article/what-are-exchange-ndrs-in-exchange-online-and-office-365-51daa6b9-2e35-49c4-a0c9-df85bf8533c3)
-- [Error code 5.1.1 through 5.1.20 in Exchange Online and Office 365](https://support.office.com/article/error-code-5-1-1-through-5-1-20-in-exchange-online-and-office-365-79e91ade-5c83-405b-a37d-d99c7d069b13)
+- [What are Exchange NDRs in Exchange Online and Microsoft 365](https://support.office.com/article/what-are-exchange-ndrs-in-exchange-online-and-office-365-51daa6b9-2e35-49c4-a0c9-df85bf8533c3)
+- [Error code 5.1.1 through 5.1.20 in Exchange Online and Microsoft 365](https://support.office.com/article/error-code-5-1-1-through-5-1-20-in-exchange-online-and-office-365-79e91ade-5c83-405b-a37d-d99c7d069b13)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

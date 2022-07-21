@@ -212,7 +212,7 @@ For more information about assigning Exchange permissions, see [Assign permissio
 
 ### I'm seeing duplicate emails
 
-If you are migrating from Gmail/Google Apps, email duplication is known to occur when [labels](https://support.google.com/mail/answer/118708?hl=en) are used in the Gmail/Google Apps mailbox and/or when a folder called **[Gmail]** is not added to the list of excluded folders when the migration batch is created (see screenshot below). This will cause the Office 365 mailbox to double, or more, in size and may prevent the user's mailbox from completely migrating. Users that have already been migrated will need to manually clean up the duplication in their Office 365 mailboxes.
+If you are migrating from Gmail/Google Apps, email duplication is known to occur when [labels](https://support.google.com/mail/answer/118708?hl=en) are used in the Gmail/Google Apps mailbox and/or when a folder called **[Gmail]** is not added to the list of excluded folders when the migration batch is created (see screenshot below). This will cause the Microsoft 365 mailbox to double, or more, in size and may prevent the user's mailbox from completely migrating. Users that have already been migrated will need to manually clean up the duplication in their Microsoft 365 mailboxes.
 
 If you have additional mailboxes that you have not yet migrated, you can use the below steps to avoid email duplication:
 
@@ -238,7 +238,7 @@ If you have additional mailboxes that you have not yet migrated, you can use the
 
 ### This mailbox is full
 
-You will run into the below error if you have exceeded the storage limit for the Office 365 mailbox.
+You will run into the below error if you have exceeded the storage limit for the Microsoft 365 mailbox.
 
 > This mailbox is full. Please free up some space so that email can be downloaded.
 
@@ -271,7 +271,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
     5. Select **Apply**.
     6. Repeat the previous five steps for each additional mailbox.
 
-3. Make room in your Office 365 mailbox by deleting the duplicate emails and the **[Gmail]** folder. To complete the removal of the duplicate emails and the **[Gmail]** folder, clear them from your Deleted Items folder.
+3. Make room in your Microsoft 365 mailbox by deleting the duplicate emails and the **[Gmail]** folder. To complete the removal of the duplicate emails and the **[Gmail]** folder, clear them from your Deleted Items folder.
 
 4. Recreate the batch, making sure to exclude the **[Gmail]** folder as shown below:
 
@@ -713,7 +713,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 2. Select the **Behavioral Intrusion Detection** tab, and then select **Configure Flood Mitigation Settings**.
 3. In the Flood Mitigation dialog box, follow these steps:
 
-   - Select the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
+   - Select the **IP Exceptions** tab, and then type the IP addresses that the Microsoft 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
 
    - Select the **Flood Mitigation** tab, and then, next to **Maximum TCP Requests per minute per IP address**, select **Edit**. In the **Custom limit** box, type a number to increase the limit.
 
@@ -730,7 +730,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 > [!NOTE]
 > You can skip this page if you don't control the IMAP system that you are migrating from.
 
-The Office 365 Network Analysis Tool is designed to help analyze networking related issues between an external network and the Office 365 services.
+The Microsoft 365 Network Analysis Tool is designed to help analyze networking related issues between an external network and the Microsoft 365 services.
 
 1. Select one of the below appropriate regional URLs.
 
@@ -747,9 +747,9 @@ The Office 365 Network Analysis Tool is designed to help analyze networking rela
 5. After the machine reboots, go back to the appropriate regional URL listed above. You will then be prompted to run the application as shown below:
 
     :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/prompted-waring-to-run-this-application.png" alt-text="Screenshot of a security warning prompted to run the application.":::
-6. Once you install the application, you will then enter the Microsoft 365 tenant name in the Office 365 Network Analysis tool as shown below:
+6. Once you install the application, you will then enter the Microsoft 365 tenant name in the Microsoft 365 Network Analysis tool as shown below:
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="Screenshot of entering the Microsoft 365 tenant name in the Office 365 Network Analysis tool.":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="Screenshot of entering the Microsoft 365 tenant name in the Microsoft 365 Network Analysis tool.":::
 
 For more information on IMAP migration performance and best practices, see [Microsoft 365 and Office 365 email migration performance and best practices](/Exchange/mailbox-migration/office-365-migration-best-practices).
 

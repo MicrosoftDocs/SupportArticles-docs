@@ -92,7 +92,7 @@ In this case, you probably have a synchronization issue. Determine whether the d
 
 You may also have a user validation error, if you already have a cloud user object on which the user@domain.mail.onmicrosoft.com email address is stamped.
 
-To see this error, you have to connect to [Office 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
+To see this error, you have to connect to [Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell) and then run one of the following commands, depending whether you connect to MSOnline (MSOL) service or Azure AD for Windows PowerShell:
 
 ```powershell
 (Get-MsolUser -UserPrincipalName <AffectedUserUPN>).Errors.ErrorDetail.ObjectErrors.ErrorRecord.ErrorDescription

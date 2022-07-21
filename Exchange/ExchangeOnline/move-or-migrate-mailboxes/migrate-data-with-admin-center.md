@@ -52,7 +52,7 @@ The cutover migration option is for customers who want to migrate their whole en
 
 #### IMAP migration
 
-IMAP migration is targeted at customers who may be using non-Exchange-based mail systems in their current hosted environment or have access to the data only by using the IMAP 4 protocol. The Office 365 migration engine uses the information that's provided by IT admins in the EAC to connect to IMAP mailboxes and download mailbox data. IT admins must provide a list of users to migrate in each batch by using a CSV file.
+IMAP migration is targeted at customers who may be using non-Exchange-based mail systems in their current hosted environment or have access to the data only by using the IMAP 4 protocol. The Microsoft 365 migration engine uses the information that's provided by IT admins in the EAC to connect to IMAP mailboxes and download mailbox data. IT admins must provide a list of users to migrate in each batch by using a CSV file.
 
 ### Offboarding migration
 

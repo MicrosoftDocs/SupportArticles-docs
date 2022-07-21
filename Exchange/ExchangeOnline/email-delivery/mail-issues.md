@@ -23,7 +23,7 @@ ms.date: 3/31/2022
 ---
 # Non-delivery report error codes
 
-When Office 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online). Find your error code for specific help with getting your email delivered:
+When Microsoft 365 can't deliver email you sent, you'll receive an email notification called a [non-delivery report](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online). Find your error code for specific help with getting your email delivered:
 
 - [Code 4.4.7](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-550-4-4-7-in-exchange-online)
 - [Code 5.7.12](/Exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/fix-error-code-5-7-12-in-exchange-online)
