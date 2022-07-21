@@ -7,7 +7,7 @@
           href: aibuilder-actions-are-disabled-deactivated.md
         - name: Current environment doesn't meet the minimum requirements
           href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
-        - name: Prevent users from using AI Builder
+        - name: Prevent users from creating AI Builder custom models
           href: how-to-prevent-users-from-using-ai-builder.md
     - name: Models
       items:
