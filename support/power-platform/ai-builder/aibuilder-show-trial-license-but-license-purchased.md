@@ -9,10 +9,9 @@ ms.subservice:
 
 # AI Builder trial license still displays in the top banner after you've purchased an AI Builder license
 
-This article provides an explanation about the AI Builder trial license that still displays in the top banner after that you have purchased an AI Builder license.
+This article explains why the AI Builder trial license still displays in the top banner after you've purchased an AI Builder license.
 
 _Applies to:_ AI Builder
-
 
 ## Symptom
 
