@@ -33,7 +33,7 @@ When you use Outlook Web App in Microsoft 365, you may experience the following 
 To resolve this issue, make sure that the DNS records for your domain's DNS host are configured correctly. Specifically, the DNS SRV record for federation and the LyncDiscover DNS CNAME record are required for IM and online meeting functionality to work in Outlook Web App. For more information, see
 [Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365](https://support.microsoft.com/help/2566790).
 
-If the DNS record is created correctly but you continue to receive the error message, contact Office 365 technical support for additional assistance. Before you contact support, try to run the Get-Mailbox cmdlet and have the results available for the support tech. To do this, follow these steps:
+If the DNS record is created correctly but you continue to receive the error message, contact Microsoft 365 technical support for additional assistance. Before you contact support, try to run the Get-Mailbox cmdlet and have the results available for the support tech. To do this, follow these steps:
 
 1. Connect to Exchange Online by using remote PowerShell. For more info about how to do this, see the following help topic: 
   
@@ -46,7 +46,7 @@ If the DNS record is created correctly but you continue to receive the error mes
 
 This issue occurs if certain DNS records are missing or misconfigured with the DNS host of the custom domain.
 
-Each DNS host is different, and each host may have different ways of adding DNS records. To identify your DNS host and to learn how to add specific DNS records, see the following Office 365 help topic:
+Each DNS host is different, and each host may have different ways of adding DNS records. To identify your DNS host and to learn how to add specific DNS records, see the following Microsoft 365 help topic:
 
 [Locate your domain registrar or DNS service provider](https://office.microsoft.com/client/15/help/home?shownav=true&lcid=1033&ns=o365entadmin&ver=15&services=rms_s_enterprise_b_pilot%2coffice_pro_plus_subscription_b_pilot%2clync_s_enterprise_b_pilot%2csharepointwac_b_pilot%2csharepoint_s_enterprise_b_pilot%2cexchange_s_enterprise_b_pilot)
 

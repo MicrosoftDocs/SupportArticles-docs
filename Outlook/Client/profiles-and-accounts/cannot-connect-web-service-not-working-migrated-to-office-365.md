@@ -50,7 +50,7 @@ DWORD: **ExcludeLastKnownGoodUrl**
 Value: 1
 
 > [!NOTE]
-> The <x.0> place holder represents your version of Office (**16.0** = Office 2016, Office 365 and Office 2019, **15.0** = Office 2013).
+> The <x.0> place holder represents your version of Office (**16.0** = Office 2016, Microsoft 365 and Office 2019, **15.0** = Office 2013).
 >
 > When the **ExcludeLastKnownGoodUrl** value is set to **1**, Outlook does _not_ use the last known working AutoDiscover URL.
 
@@ -86,7 +86,7 @@ If you prefer, you can use Group Policy to control whether Outlook uses the last
     > [!NOTE]
     > To load the Administrative Template files, download the files, and then follow the instructions for "Loading the ADMX templates" in [Use Group Policy to enforce Office 2010 settings](/previous-versions/office/office-2010/cc179081(v=office.14)). Although this article targets Office 2010, the Administrative Templates information also applies to later versions of Office.
     >
-    > The **##** placeholder represents your version of Office (**16** = Office 2016, Office 365 and Office 2019, **15** = Office 2013).
+    > The **##** placeholder represents your version of Office (**16** = Office 2016, Microsoft 365 and Office 2019, **15** = Office 2013).
 
 3. Under **User Configuration**, expand **Administrative Templates**, expand your version of **Microsoft Outlook**, expand **Account Settings**, and then select **Exchange**.
 

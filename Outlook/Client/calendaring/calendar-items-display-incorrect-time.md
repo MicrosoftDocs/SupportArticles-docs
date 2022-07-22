@@ -37,7 +37,7 @@ This issue occurs because Outlook doesn't apply time zone rules for recurring me
 
 **Option 2**: Use Outlook on the web (OWA) to view Outlook calendar items. OWA isn't affected by this issue.
 
-**Option 3**: Install the latest build of Office 365 Subscription products (version 1910 (build 12130.20410)) or a Windows Installer (MSI)-based version of Outlook 2016, and then set the **TimeZoneOverride** registry key. This workaround lets you configure the year that Outlook uses when it applies time zone rules for recurring meetings by using the **TimeZoneOverride** registry key setting.
+**Option 3**: Install the latest build of Microsoft 365 Subscription products (version 1910 (build 12130.20410)) or a Windows Installer (MSI)-based version of Outlook 2016, and then set the **TimeZoneOverride** registry key. This workaround lets you configure the year that Outlook uses when it applies time zone rules for recurring meetings by using the **TimeZoneOverride** registry key setting.
 
 **Special considerations for Brazil**
 
@@ -47,9 +47,9 @@ To apply this workaround for Brazil, follow these steps:
 
 1. Install the applicable update for Office.
     
-    **For Office 365 Subscription installations**
+    **For Microsoft 365 Subscription installations**
     
-    1. Install Office 365 version 1910 (build 12130.20410) or a later version. To do this, follow these steps:
+    1. Install Microsoft 365 version 1910 (build 12130.20410) or a later version. To do this, follow these steps:
        1. In Outlook, select **File** > **Office Account**.
        1. Select **Update Options** > **Update Now**. 
 

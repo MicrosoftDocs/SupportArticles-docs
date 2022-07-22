@@ -544,7 +544,7 @@ If the other solution doesn't work for you and you get a different error message
 3. If still doesn't work, try to turn off Cache Exchange Mode with following steps:
 
    > [!CAUTION]
-   > We do not recommend turn off cache Exchange mode, especially you are using Office 365 mailbox. If you take this action, do remember to turn it on after resolving shared calendar issue.
+   > We do not recommend turn off cache Exchange mode, especially you are using Microsoft 365 mailbox. If you take this action, do remember to turn it on after resolving shared calendar issue.
 
     1. Select the **File** tab.
     2. Select **Account Settings**, and then select **Account Settings**.

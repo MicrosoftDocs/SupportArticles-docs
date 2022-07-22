@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2675986
 
 ## Symptoms
 
-When you configure Outlook 2010 with a profile to connect to two or more Office 365 email accounts, you may experience connection delays or failures. When you start Outlook, you see that the Outlook status bar displays **Trying to connect...** or **Disconnected** when you click a folder. This behavior may occur for one or multiple Exchange Online email accounts.
+When you configure Outlook 2010 with a profile to connect to two or more Microsoft 365 email accounts, you may experience connection delays or failures. When you start Outlook, you see that the Outlook status bar displays **Trying to connect...** or **Disconnected** when you click a folder. This behavior may occur for one or multiple Exchange Online email accounts.
 
 Screenshots of both messages as shown in the Outlook status bar follow.
 
@@ -40,7 +40,7 @@ To resolve this issue, apply [KB 2598374](https://support.microsoft.com/help/259
 If you are unable to install the Outlook 2010 hotfix package dated June 26, 2012 (KB2598374), use the workaround below to prevent the symptom that is described in the [Symptoms](#symptoms) section. The workaround involves a two-step process. First, the administrator must grant your account explicit permissions to the secondary mailbox. Second, you must remove the credentials for the secondary mailbox from your local Windows workstation.
 
 > [!NOTE]
-> This workaround requires the Office 365 administrator to use Windows PowerShell to change permissions to the Exchange Online mailboxes.
+> This workaround requires the Microsoft 365 administrator to use Windows PowerShell to change permissions to the Exchange Online mailboxes.
 
 ### How to obtain explicit permissions to the secondary mailbox
 
