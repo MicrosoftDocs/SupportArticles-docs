@@ -15,7 +15,7 @@ _Applies to:_ AI Builder
 
 ## Symptom
 
-I've purchased a Power Apps license as a user but in the app it still says trial.
+You've purchased a Power Apps license as a user but in the app it still says trial.
 
 ## Cause
 
@@ -24,4 +24,3 @@ If you've purchased a premium Power Apps license, you got a small number of AI B
 ## Resolution
 
 The trial message will disappear at the end of your trial period, and you'll use your seeded credits instead.
-
