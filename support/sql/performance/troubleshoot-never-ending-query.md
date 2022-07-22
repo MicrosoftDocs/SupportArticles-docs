@@ -19,9 +19,9 @@ This article describes the troubleshooting steps for the issue where you have a 
 This article strictly covers queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant).
 
 > [!IMPORTANT]
-> If a query is left to finish its execution, the query will eventually complete regardless of how long - a few seconds or several days.
+> If a query is left to finish its execution, it will eventually complete. It could take just a few seconds, or it could take several days.
 
-The term never-ending is used to describe the perception of a query not completing, while in fact the query will eventually complete.
+The term never-ending is used to describe the perception of a query not completing when in fact, the query will eventually complete.
 
 ### Identify a query
 
@@ -76,7 +76,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 1. Check the sample output.
 
-    - If you observe an output similar to the following one where CPU is increasing proportionately with the elapsed time and there aren't waits, the troubleshooting steps in this article apply.
+    - If you observe an output similar to the following one where the CPU is increasing proportionately with the elapsed time, and there aren't waits, the troubleshooting steps in this article apply.
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
@@ -84,7 +84,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
         |56 |runnable  | 12040 |301000 |0 |NULL|
         |56 |running | 17020 |523000|0 |NULL|
 
-    - If you observe a wait scenario like the following one where CPU doesn't change and the session is waiting on a resource, this article isn't applicable.
+    - If you observe a wait scenario like the following one where the CPU doesn't change, and the session is waiting on a resource, this article isn't applicable.
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
@@ -96,7 +96,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 ### Long compilation time
 
-On rare occasions, you may observe that the CPU is increasing continuously with the passage of time. This CPU usage may be driven by an excessively long compilation (parse and compile of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform` in it. This transaction name indicates a compilation.
+On rare occasions, you may observe that the CPU is increasing continuously over time. This CPU usage may be driven by an excessively long compilation (parse and compile of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ## Collect diagnostic data
 
@@ -145,7 +145,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 1. Start the affected never-ending query from application.
 
-1. Run the following command multiple times to check the query plan operators live:
+1. Run the following command multiple times to check the run-time execution statistics for the query plan operators:
 
     ```sql
     SELECT CONVERT (varchar(30), getdate(), 126) as runtime,
@@ -184,7 +184,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
     OPTION (max_grant_percent = 3, MAXDOP 1)
     ```
 
-1. Capture 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row_count numbers for each operator over time and see which one of the operators is showing significant increase in row count (million or more).
+1. Capture 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row_count numbers for each operator over time and see which shows a significant increase in row count (million or more).
 
 1. In a new query window in SSMS, capture an estimated query plan for the problem query by running the following commands:
 
@@ -196,7 +196,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
    SET SHOWPLAN_XML OFF
    ```
 
-1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step will help understand which operator in the plan is the main cause for the long execution time.
+1. Using the node ID with the highest row count identified by the query in step 3, find the same node in the estimated query plan. This step will help understand which operator in the plan is the main cause of the long execution time.
 
 1. Stop the XEvent by running the following command:
 
@@ -210,7 +210,7 @@ You can use the [Lightweight query execution statistics profiling infrastructure
 
 To identify the slow steps in the query and solve the issue, follow these steps:
 
-1. To enable the lightweight infrastructure on these versions of SQL Server, use one of following methods:
+1. To enable the lightweight infrastructure on these versions of SQL Server, use one of the following methods:
 
    - Enable [trace flag](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) 7412 by running the following command:
 
@@ -239,7 +239,7 @@ To identify the slow steps in the query and solve the issue, follow these steps:
         ALTER EVENT SESSION [PerfStats_LWP_Plan_v2] ON SERVER STATE = START
         ```
 
-1. Start the affected never-ending query from application.
+1. Start the affected never-ending query from the application.
 
 1. Use a command similar to the following one to identify the `Session_id` of your never-ending query that is running:
 
@@ -249,7 +249,7 @@ To identify the slow steps in the query and solve the issue, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command 3-4 times spaced 1 minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing significant increase in row count (million or more). Replace `session_id` with the integer value you found in the previous step 3.
+1. Run the following command 3-4 times spaced 1 minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `session_id` with the integer value you found in the previous step 3.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
@@ -285,10 +285,10 @@ To identify the slow steps in the query and solve the issue, follow these steps:
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
     ```
 
-1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and choose Save Execution Plan As... Repeat this 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing significant increase in row count (million or more).
+1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and choose **Save Execution Plan As...**. Repeat this for 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
 
     > [!NOTE]
-    > If you are not getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
+    > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
     >
     > ```sql
     > SELECT name, value, value_for_secondary, is_value_default 
@@ -310,7 +310,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
 1. Right-click in a blank area of the execution plan and select **Compare Showplan**.
 
-1. Choose the second query plan file that you would like to compare with.
+1. Choose the second query plan file that you would like to compare.
 
 1. Look for thick arrows that indicate a large number of rows flowing between operators. Then select the operator before or after the arrow, and compare the number of **actual** rows across two plans.
 
