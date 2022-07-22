@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-When you click the Projects link from the Office 365 ribbon to get to Project Web Access, you receive one of the following errors:
+When you click the Projects link from the Microsoft 365 ribbon to get to Project Web Access, you receive one of the following errors:
 
 > Error  
 > An unexpected error has occurred.  

@@ -141,7 +141,7 @@ To repair authentication-related issues that are associated with provider-hosted
 
 In the scenario where you configure hybrid workloads that require S2S before you implement the provider-hosted add-ins or Workflow Manager, the add-ins will be registered after the `SPAuthenticationRealm` cmdlet is updated to match the Microsoft 365 tenant context ID. They'll always work because the RealmID value won't change again. If hybrid workloads are added or reconfigured, the realm ID remains the same as the Microsoft 365 tenant context ID.
 
-To create a server-to-server trust between your SharePoint on-premises environment and Office 365, run the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm).
+To create a server-to-server trust between your SharePoint on-premises environment and Microsoft 365, run the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm).
 
 > [!IMPORTANT]
 > The topic contains a "Caution" section that warns that any access tokens that are created for a specific realm won't work after you change the `SPAuthenticationRealm` value.  

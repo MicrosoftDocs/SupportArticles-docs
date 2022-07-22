@@ -36,7 +36,7 @@ When you browse to a mapped network drive, you may receive one of the following 
 
 ### Authenticate to Microsoft 365
 
-Make sure that you're authenticated to Microsoft 365. To do this, sign in to the SharePoint Online site by using your Office 365 work or school account credentials, and make sure that you select the **Stay signed in** option as seen in the following screen shot:
+Make sure that you're authenticated to Microsoft 365. To do this, sign in to the SharePoint Online site by using your Microsoft 365 work or school account credentials, and make sure that you select the **Stay signed in** option as seen in the following screen shot:
 
 :::image type="content" source="media/troubleshoot-mapped-network-drives/stay-signed-in.png" alt-text="Screenshot of the stay signed in page.":::
 
@@ -45,7 +45,7 @@ Make sure that you're authenticated to Microsoft 365. To do this, sign in to the
 
 If you previously didn't check the **Stay signed in** option and then browse to a SharePoint Online site or the Microsoft 365 portal and you're already signed in, you must first sign out, and then sign in again by using the **Stay signed in** option. To do this, follow these steps:
 
-1. In the Office 365 ribbon, select the drop-down arrow next to your user name.
+1. In the Microsoft 365 ribbon, select the drop-down arrow next to your user name.
 
 1. Select **Sign out**.
 
@@ -53,7 +53,7 @@ If you previously didn't check the **Stay signed in** option and then browse to 
 
 1. Browse to the Microsoft 365 portal.
 
-1. Select the **Stay signed in** option, enter your Office 365 work or school account credentials, and then select **Sign in** (if it's necessary).
+1. Select the **Stay signed in** option, enter your Microsoft 365 work or school account credentials, and then select **Sign in** (if it's necessary).
 
 1. Open a document library in Explorer View.
 
@@ -115,7 +115,7 @@ When you browse to a SharePoint Online document library through a mapped network
 
 - For more info about how to work with site library files in File Explorer, see [Ways to work with site library files in File Explorer](https://support.office.live.com/article/751148de-f579-42f9-bc8c-fcd80ccf0f53).
 
-- For more information about Microsoft 365 URLs, see [URLs and IP address ranges for Office 365 operated by 21Vianet](/office365/enterprise/urls-and-ip-address-ranges-21vianet).
+- For more information about Microsoft 365 URLs, see [URLs and IP address ranges for Microsoft 365 operated by 21Vianet](/office365/enterprise/urls-and-ip-address-ranges-21vianet).
 
 - [Authentication issues or failures occur when you try to use a network drive that's mapped to a SharePoint library](/sharepoint/troubleshoot/administration/authentication-errors-tls12-support#network-drive-mapped-to-a-sharepoint-library)
 

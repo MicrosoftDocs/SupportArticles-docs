@@ -65,7 +65,7 @@ DWORD: AutoProcReq
 Value: 0
 
 > [!NOTE]
-> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
+> The <x.0> placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013, 14.0 = Office 2010, 12.0 = Office 2007, 11.0 = Office 2003).
 
 > [!NOTE]
 > If the `AutoProcReq` registry value is either missing or set to a value of 1, the sniffer feature is enabled.

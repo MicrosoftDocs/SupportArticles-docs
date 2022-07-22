@@ -16,7 +16,7 @@ appliesto:
   - Outlook Mail & Calendar Apps for Windows 10
   - Outlook 2019
   - Outlook 2016
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

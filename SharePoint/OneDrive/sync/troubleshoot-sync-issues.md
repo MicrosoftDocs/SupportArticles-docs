@@ -162,7 +162,7 @@ Did this solve your problem?
 
 If you are not signed in to the SharePoint Online site, you should log in and select the **Keep me signed in** option to make sure the OneDrive for Business synchronization process works well.
 
-When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Office 365 credentials.
+When you supply credentials, be sure to use the credentials associated with the library. In most cases, this will be your Microsoft 365 credentials.
 
 Did this solve your problem?
 
@@ -194,7 +194,7 @@ Did this solve your problem?
 
 Sorry, but we cannot resolve this issue by using this guide. Here are some other ideas that might help you resolve the problem:
 
-- Use the self-help options on the [Office 365 Community website](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
+- Use the self-help options on the [Microsoft 365 Community website](https://answers.microsoft.com/msoffice/forum?sort=LastReplyDate&dir=Desc&tab=All&status=all&mod=&modAge=&advFil=&postedAfter=&postedBefore=&threadType=All&isFilterExpanded=false&page=1).
 - [Create a support incident](https://portal.office.com/Support/ServiceRequests.aspx) at Microsoft Online Services support. Ask your IT administrator to use the above link to create a new support incident.
 
 ### Repair a sync connection

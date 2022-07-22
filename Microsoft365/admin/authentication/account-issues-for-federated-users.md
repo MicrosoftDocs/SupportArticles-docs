@@ -46,7 +46,7 @@ If these issues only occur for some user accounts, this indicates that those use
 
   Access to Microsoft 365 resources for which the user account doesn't have a license is restricted. To check the license status for a user account, follow these steps:
   1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com/)) by using an Microsoft 365 admin user account. You can use a managed account if it's required.   
-  2. Click **Admin**, click **Office 365**, and then in the left navigation pane, click **users and groups**.   
+  2. Select **Admin**, and then in the left navigation pane, select **Users**.   
   3. In the list of users, locate the user accounts that you want to test, and then select **Display Name**. Check that each user account has the required licensing for the Microsoft 365 resource.   
   4. Select the **Select all items** check box.
 

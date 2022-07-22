@@ -28,7 +28,7 @@ Move-CsUser : HostedMigration fault: Error=(510), Description=(This user's tenan
 
 ## Solution
 
-Before you try to migrate an on-premises Lync user to Skype for Business Online in Microsoft 365, your Office 365 Skype for Business Online organization must be enabled for Shared Session Initiation Protocol (SIP) Address Space.
+Before you try to migrate an on-premises Lync user to Skype for Business Online in Microsoft 365, your Microsoft 365 Skype for Business Online organization must be enabled for Shared Session Initiation Protocol (SIP) Address Space.
 
 ## More Information
 

@@ -29,7 +29,7 @@ When you create an alert in a SharePoint Online list or library, you receive the
 
 ## Solution
 
-To resolve this issue, configure SharePoint Online to enable users to configure their email address within their My Site profile and configure the changes to replicate to the sites. As a Global Administrator for the Office 365 service, follow these steps:
+To resolve this issue, configure SharePoint Online to enable users to configure their email address within their My Site profile and configure the changes to replicate to the sites. As a Global Administrator for the Microsoft 365 service, follow these steps:
 
 1. Browse to the Microsoft 365 portal at https://portal.office.com.
 

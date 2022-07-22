@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -34,7 +34,7 @@ To access your mailbox, click the link to sign out, and then sign in to [https:/
 
 **Note** If you still can't sign out, follow the steps in the following Microsoft Knowledge Base article: 
  
-[2507767](https://support.microsoft.com/help/2507767) Problems when signing out of Office 365, Azure, or Intune in a web browser 
+[2507767](https://support.microsoft.com/help/2507767) Problems when signing out of Microsoft 365, Azure, or Intune in a web browser 
 
 ## More Information 
 

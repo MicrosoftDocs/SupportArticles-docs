@@ -129,7 +129,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
 
 #### For Outlook 2013 and Outlook 2016
 
-Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authentication uses Azure Active Directory Authentication Library (ADAL). By default, Outlook 2016 is enabled for Modern Authentication. Modern Authentication can be enabled for Outlook 2013. For more information about Modern Authentication, see [Updated Office 365 modern authentication](https://www.microsoft.com/microsoft-365/blog/2015/11/19/updated-office-365-modern-authentication-public-preview/).
+Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authentication uses Azure Active Directory Authentication Library (ADAL). By default, Outlook 2016 is enabled for Modern Authentication. Modern Authentication can be enabled for Outlook 2013. For more information about Modern Authentication, see [Updated Microsoft 365 modern authentication](https://www.microsoft.com/microsoft-365/blog/2015/11/19/updated-office-365-modern-authentication-public-preview/).
 
 - CID
 

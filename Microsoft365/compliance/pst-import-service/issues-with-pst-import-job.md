@@ -12,9 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: lindabr, andreza
 appliesto: 
-  - Microsoft 365 (Enterprise, Business, Government, Education)
-  - O365 Modern Support
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

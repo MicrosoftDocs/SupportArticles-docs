@@ -13,12 +13,12 @@ ms.custom:
 ms.reviewer: remcgurk
 appliesto: 
   - Word for Microsoft 365
-  - Word for Mac for Office 365
+  - Word for Microsoft 365 for Mac 
   - Word for the web
-  - PowerPoint for Mac for Office 365
+  - PowerPoint for Microsoft 365 for Mac
   - PowerPoint for Microsoft 365
   - PowerPoint for the web
-  - Excel for Mac for Office 365
+  - Excel for Microsoft 365 for Mac 
   - Excel for Microsoft 365
   - Excel for the web
   - Outlook for Microsoft 365

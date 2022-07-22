@@ -65,7 +65,7 @@ For the best experience, add your Exchange email account to Outlook, and then se
       :::image type="content" source="./media/problem-connecting-to-outlook/use-profile.png" alt-text="Screenshot that shows the profile using the verified email acount.":::
 
 
-### Solutions for Office 365 administrators
+### Solutions for Microsoft 365 administrators
 
 To resolve this issue, make sure that the Exchange account in Outlook matches the account that's used to sign in to Skype for Business Online. If the Exchange mailbox and the Lync account are both hosted by Microsoft 365, make sure that the user's Exchange primary SMTP address matches the user principal name (UPN). 
 

@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Business
+  - Microsoft 365 Business
   - Office Professional 2016
   - Office Professional Plus 2016
   - Visio Professional 2016
@@ -58,7 +58,7 @@ Registry subkey:
     - **Office version 1908 (16.0.11929.*x*)**: The policy is ineffective for both Office installations and updates on Windows 10 platforms starting at version 1709.
     - **The policy will cause installation failures for Office version 1902 (16.0.11328.*x*) and is ineffective for Office updates on Windows 10 platforms starting at version 1709.**
 
-- This policy setting applies to only Office 365 clients that are installed by using Click-to-Run (Office 2016 Click-to-Run editions). This includes Microsoft 365 Apps for enterprise, Office 365 Business, Visio Pro for Office 365, and Project Pro for Office 365. It doesn't apply to Office products that use Windows Installer (MSI).    
+- This policy setting applies to only Microsoft 365 clients that are installed by using Click-to-Run (Office 2016 Click-to-Run editions). This includes Microsoft 365 Apps for enterprise, Microsoft 365 Business, Visio Pro for Microsoft 365, and Project Pro for Microsoft 365. It doesn't apply to Office products that use Windows Installer (MSI).    
 - If the policy setting is enabled, BITS is used on devices that are downloading Office updates directly from the Office CDN.    
 - The devices won't use BITS if updates are obtained from a local Universal Naming Convention (UNC) share.    
 - BITS can be used if Microsoft 365 Apps for enterprise is updated from a local HTTP server. For more information, see the following section, "How to set up an internal HTTP site to distribute Office sources."    

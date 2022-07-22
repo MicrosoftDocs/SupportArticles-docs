@@ -48,7 +48,7 @@ Microsoft 365 creates a domain for you when you sign up (the domain name include
 
 If your current domain name ends in `.onmicrosoft.com`, you don't have a custom domain. For more information, see [Add a domain to Microsoft 365](/microsoft-365/admin/setup/add-domain).
 
-Are you using a custom domain with Office 365?
+Are you using a custom domain with Microsoft 365?
 
 - If yes, see [Custom domain status (Small Business)](#custom-domain-status-small-business).
 - If no, see [Turn on external communications](#turn-on-external-communications).

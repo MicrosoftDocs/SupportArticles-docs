@@ -1,6 +1,6 @@
 ---
 title: Domain removal fails in Microsoft 365
-description: This article provides troubleshooting steps for situations in which you receive a An Error Occurred message when using PowerShell to remove a domain Office 365.
+description: This article provides troubleshooting steps for situations in which you receive a An Error Occurred message when using PowerShell to remove a domain from Microsoft 365.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal

@@ -101,7 +101,7 @@ Outlook 2003
 
 ## Workaround
 
-If the methods provided in the Resolution section are not acceptable, and if your mailbox is located on Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later version, or Exchange Server 2013 Cumulative Update 9 or later version or Office 365 Exchange Online, the Exchange administrator can configure similar behavior on the server. These configurations do not require the `DelegateSentItemsStyle` registry key to be enabled, therefore the issue will not occur.
+If the methods provided in the Resolution section are not acceptable, and if your mailbox is located on Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later version, or Exchange Server 2013 Cumulative Update 9 or later version or Microsoft 365 Exchange Online, the Exchange administrator can configure similar behavior on the server. These configurations do not require the `DelegateSentItemsStyle` registry key to be enabled, therefore the issue will not occur.
 
 ### Microsoft Exchange Server 2010 Service Pack 2 Update Rollup 4 or later
 

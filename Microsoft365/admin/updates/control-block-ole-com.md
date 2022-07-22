@@ -11,7 +11,7 @@ localization_priority: Normal
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Introduction 
 
-After you install the March 2017 updates for Office 365 Subscription Version 1703 (Build 7967.2139), you gain the ability to block activation of OLE/COM components. In this update, we are blocking activation of components that are listed under the following registry key:
+After you install the March 2017 updates for Microsoft 365 Subscription Version 1703 (Build 7967.2139), you gain the ability to block activation of OLE/COM components. In this update, we are blocking activation of components that are listed under the following registry key:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\16.0\Common\COM Compatibility`
 

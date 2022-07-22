@@ -25,7 +25,7 @@ When you view the Manage User Profiles section of the SharePoint Online admin ce
 
 ## Solution
 
-To resolve this issue, wait for audience compilation to be completed. If more than seven full days have passed since the last audience compilation, contact Office 365 technical support.
+To resolve this issue, wait for audience compilation to be completed. If more than seven full days have passed since the last audience compilation, contact Microsoft 365 technical support.
 
 Note Audience targeting won't function correctly on SharePoint Online sites until audience compilation is completed. Additionally, if a user was added or removed for an audience, compilation must be completed before the changes are made to the audience.
 

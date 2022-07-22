@@ -29,7 +29,7 @@ When you use Skype for Business Online (formerly Lync Online), you receive the f
 
 To resolve this issue, take one of the following actions: 
  
-- If you have a Microsoft 365 Business Premium or Office 365 subscription and haven't renewed into one of the new Microsoft 365 Apps offerings, do one of the following:  
+- If you have a Microsoft 365 Business Premium or Microsoft 365 subscription and haven't renewed into one of the new Microsoft 365 Apps offerings, do one of the following:  
    - Administrators can renew current licenses through September 30, 2015, or they can renew by using one of the new Business offerings starting October 1, 2014.    
    - After the licenses are renewed, users must reactivate Office and install Lync Basic 2013.
 
@@ -60,7 +60,7 @@ To resolve this issue, take one of the following actions:
 
 This issue occurs for Skype for Business Online users when the following conditions are true: 
  
-- You're running the version of Lync 2013 that's included with Microsoft 365 Apps for enterprise, and you have a current Microsoft 365 Business Standard or Office 365 subscription.    
+- You're running the version of Lync 2013 that's included with Microsoft 365 Apps for enterprise, and you have a current Microsoft 365 Business Standard or Microsoft 365 subscription.    
 - You either haven't renewed into one of the new Microsoft 365 offerings (for example, Microsoft 365 Business Basic, Microsoft 365 Apps, or Microsoft 365 Business Standard) or you haven't installed Lync Basic 2013 after you renewed your subscription.    
  
 Lync 2013 will go into reduced functionality mode after 30 days if one of the conditions is true: 
@@ -68,6 +68,6 @@ Lync 2013 will go into reduced functionality mode after 30 days if one of the co
 - Customers have renewed their subscription by using one of the new offerings, but they didn't reactivate Office by using the new subscription and installing Lync Basic 2013.    
 - Customers didn't renew their subscriptions with the new Microsoft 365 Apps offerings before October 1, 2015.    
  
-Users who have a hybrid deployment with Lync Server 2013 may want to use their volume license product keys instead of their Office 365 subscription. In that case, users should click **Enter Key** when they receive the "Your subscription is expired" message and then enter the volume license key that's provided by their administrator.  
+Users who have a hybrid deployment with Lync Server 2013 may want to use their volume license product keys instead of their Microsoft 365 subscription. In that case, users should click **Enter Key** when they receive the "Your subscription is expired" message and then enter the volume license key that's provided by their administrator.  
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

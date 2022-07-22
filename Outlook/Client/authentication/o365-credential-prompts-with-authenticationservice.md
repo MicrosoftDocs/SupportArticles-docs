@@ -1,6 +1,6 @@
 ---
 title: O365 credential prompts with AuthenticationService value
-description: Documents a connection issue for Office 365 when the AuthenticationService registry value is configured.
+description: Documents a connection issue for Microsoft 365 when the AuthenticationService registry value is configured.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -18,7 +18,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Office 365 credential prompts with AuthenticationService registry value
+# Microsoft 365 credential prompts with AuthenticationService registry value
 
 _Original KB number:_ &nbsp; 2975918
 

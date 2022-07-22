@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-You download Microsoft Office Professional Plus from the Office 365 Subscription Portal and when you double-click the MicrosoftOffice.EXE file to install it, you receive the following error message: "The Installation of this package failed."
+You download Microsoft Office Professional Plus from the Microsoft 365 Portal and when you double-click the MicrosoftOffice.EXE file to install it, you receive the following error message: "The Installation of this package failed."
 
 ## Cause
 
@@ -33,8 +33,3 @@ For the 32-bit download: 772 MB
 For the 64-bit download: 864 MB
 
 If the file is not the correct size, try downloading the file again.
-
-## More Information
-
-Office 365 Subscription Sign-In Portal:
-https://portal.microsoftonline.com

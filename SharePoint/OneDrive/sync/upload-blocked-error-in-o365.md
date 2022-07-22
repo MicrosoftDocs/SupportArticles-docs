@@ -1,5 +1,5 @@
 ---
-title: Office 365 (Upload blocked) error when syncing between different tenants in OneDrive
+title: Microsoft 365 (Upload blocked) error when syncing between different tenants in OneDrive
 ms.author: luche
 author: helenclu
 manager: dcscontentpm

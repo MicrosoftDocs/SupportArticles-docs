@@ -45,7 +45,7 @@ To resolve this issue, follow these steps:
    2. In the left pane, select **Subscriptions**.
 
          :::image type="content" source="./media/subscription-issue-in-office-mobile/office-365-portal-subscriptions.png" alt-text="Screenshot shows after you sign in Microsoft 365 portal, select subscriptions in the left pane.":::
-   3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
+   3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition\>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
 
         > [!NOTE]
         > If you don't see a vertical scroll bar, hover the pointer over the list, press and hold the left mouse button, and then scroll.

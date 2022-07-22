@@ -72,7 +72,7 @@ To resolve this issue, follow these steps:
 
 ## More Information
 
-The SignInOptions value controls whether users can provide credentials to Office by using either their Microsoft Account ID or the user ID that was assigned by their organization (Org ID) for accessing Office 365. This setting can be configured by using the following values:
+The SignInOptions value controls whether users can provide credentials to Office by using either their Microsoft Account ID or the user ID that was assigned by their organization (Org ID) for accessing Microsoft 365. This setting can be configured by using the following values:
 
 - 0 = Both ID types allowed
 - 1 = Only Microsoft Account IDs allowed
