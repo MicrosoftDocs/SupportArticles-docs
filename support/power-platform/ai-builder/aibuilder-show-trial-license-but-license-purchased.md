@@ -3,7 +3,7 @@ title: AI Builder trial license still displays in the top banner after you've pu
 description: This article provides an explanation about the AI Builder trial license after being purchased.
 ms.reviewer: 
 ms.topic: troubleshooting
-ms.date: 6/01/2022
+ms.date: 06/01/2022
 ms.subservice: 
 ---
 
@@ -13,9 +13,9 @@ This article explains why the AI Builder trial license still displays in the top
 
 _Applies to:_ AI Builder
 
-## Symptom
+## Symptoms
 
-You've purchased a Power Apps license as a user but in the app it still says trial.
+You've purchased a Power Apps license as a user but the app still says trial.
 
 ## Cause
 
