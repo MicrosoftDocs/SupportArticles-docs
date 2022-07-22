@@ -14,12 +14,12 @@ ms.author: jopilov
 
 After upgrading your SQL Server from 2012 or earlier versions to 2014 or later versions, some queries (not all) may run slower than before. The probable cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. And the largest changes to the CE models were introduced in SQL Server 2014.
 
+In this article, we provide troubleshooting steps and resolutions for query performance issues that caused by the CE model change.
+
 > [!NOTE]
 > If all the queries run slower after the upgrade, the troubleshooting steps introduced in this article won't be fit to your situation.
 
 ## Troubleshooting: Identify if CE changes are the problem and find out the reason
-
-The following steps troubleshoot the performance issue that caused by the CE model change.
 
 #### Step 1: Identify if the default CE is used
 
