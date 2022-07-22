@@ -285,7 +285,7 @@ To identify the slow steps in the query and solve the issue, follow these steps:
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
     ```
 
-1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and choose **Save Execution Plan As...**. Repeat this for 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
+1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
 
     > [!NOTE]
     > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
