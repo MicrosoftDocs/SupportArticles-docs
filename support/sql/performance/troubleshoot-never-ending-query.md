@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot a query that seems to never complete in SQL Server
+title: Troubleshoot queries that seem to never complete in SQL Server
 description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
-ms.date: 07/13/2022
+ms.date: 07/22/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -10,7 +10,7 @@ author: pijocoder
 ms.author: jopilov
 ---
 
-# Troubleshoot a query that seems to never end in SQL Server
+# Troubleshoot queries that seem to never end in SQL Server
 
 This article describes the troubleshooting steps for the issue where you have a query that seems to never complete, or getting it to complete may take many hours or days.
 
@@ -23,7 +23,7 @@ This article strictly covers queries that continue to execute or compile, that i
 
 The term never-ending is used to describe the perception of a query not completing when in fact, the query will eventually complete.
 
-### Identify a query
+### Identify a never-ending query
 
 To identify whether a query is continuously executing or stuck on a bottleneck, follow these steps:
 
@@ -118,7 +118,7 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
 
 # [SQL Server 2014 SP2 and SQL Server 2016 (prior to SP1)](#tab/2014-2016)
 
-The [Lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
+[The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
 To identify the slow steps in the query by using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1), follow these steps:
 
@@ -145,7 +145,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 1. Start the affected never-ending query from application.
 
-1. Run the following command multiple times to check the run-time execution statistics for the query plan operators:
+1. Run the following commands multiple times to check the run-time execution statistics for the query plan operators:
 
     ```sql
     SELECT CONVERT (varchar(30), getdate(), 126) as runtime,
@@ -340,6 +340,6 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
 ## Diagnose waits or bottlenecks
 
-This section is included here as a reference in case your issue isn't a long-running CPU driving query. You can use it to troubleshoot queries that are long due to waits:
+This section is included here as a reference in case your issue isn't a long-running CPU driving query. You can use it to troubleshoot queries that are long due to waits.
 
 [!INCLUDE [collect query data and logical reads](../includes/performance/diagnose-waits-or-bottlenecks.md)]
