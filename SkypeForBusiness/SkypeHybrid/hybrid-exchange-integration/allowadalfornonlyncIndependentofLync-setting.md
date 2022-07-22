@@ -27,7 +27,7 @@ This article contains information about the **AllowAdalForNonLyncIndependentOfLy
 
 ## More information
 
-The information in this article helps IT and Office 365 administrators in the following scenarios: 
+The information in this article helps IT and Microsoft 365 administrators in the following scenarios: 
  
 - Setting up Lync 2013 and Skype for Business users to be homed on Skype for Business Server 2015 or Lync Server 2013 on-premises.    
 - Setting up mailboxes in Exchange Online in Microsoft 365 by using Modern Authentication and Multi-factor Authentication (MFA) with OAuth.    

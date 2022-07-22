@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## PROBLEM
 
-When you try to activate or sign in to Office Mobile on iPhone, available in the Apple iTunes Store as "Office Mobile for Office 365 subscribers," or Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive one of the following error messages:
+When you try to activate or sign in to Office Mobile on iPhone, or Office Mobile on Android, you receive one of the following error messages:
 
 **You don't have permission to access this content**
 
@@ -34,7 +34,7 @@ Verify that SSO isn't working or that some other sign-in issue may be occurring.
 
 To troubleshoot SSO issues, see the following Microsoft Knowledge Base article:
 
-[How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Office 365, Azure, or Intune](https://support.microsoft.com/help/2650717)
+[How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2650717)
 
 To troubleshoot other sign-in issues, see the following Microsoft Knowledge Base article:
 

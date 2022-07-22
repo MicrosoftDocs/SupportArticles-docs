@@ -314,7 +314,7 @@ If you’re using FSLogix and SSO:
 </details>
 
 <details>
-<summary><b>Office 365 Container Exclusions</b></summary>
+<summary><b>Microsoft 365 Container Exclusions</b></summary>
 
 When the FSLogix Microsoft 365 container is used with any other profile solution (except local Windows profiles) the following folders need to be excluded from handling by the profile solution:
 

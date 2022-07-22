@@ -37,7 +37,7 @@ However, if you follow the guidance in the "Workaround" section, your call queue
 
 To work around this issue, follow these steps:
 
-1. Make sure that the on-premises deployment for Skype for Business and Office 365 is configured correctly for hybrid voice.   
+1. Make sure that the on-premises deployment for Skype for Business and Microsoft 365 is configured correctly for hybrid voice.   
 2. Enable your Edge server to accept calls that are routed from sipfed.resources.lync.com (part of a typical hybrid configuration).   
 3. Configure a new hosting provider in your on-premises configuration that enables communication to the Azure services that function as part of the OrgAA and call queue infrastructure. To do this, run the following cmdlet in Remote PowerShell:
 

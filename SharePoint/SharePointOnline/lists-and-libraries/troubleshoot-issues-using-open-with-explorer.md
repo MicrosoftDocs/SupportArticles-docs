@@ -57,15 +57,15 @@ Make sure that you're authenticated to Microsoft 365. To do this, use one of the
 
 ##### Method 1: Use "Keep me signed in"
 
-Sign in to the SharePoint Online site by using your Office 365 work or school account credentials. When you do this, make sure that you select the **Keep me signed in** check box.
+Sign in to the SharePoint Online site by using your Microsoft 365 work or school account credentials. When you do this, make sure that you select the **Keep me signed in** check box.
 
    > [!NOTE]
    > If you didn't previously select this setting, you might find that you're already signed in when you browse to a SharePoint Online site or the Microsoft 365 portal. In this case, you must first sign out and then sign in again by having the **Keep me signed in* check box selected. To do this, follow these steps:
-   > 1. On the Office 365 ribbon, select the arrow next to your user name.
+   > 1. On the Microsoft 365 ribbon, select the arrow next to your user name.
    > 1. Select **Sign out**.
    > 1. Close all browser windows.
    > 1. Browse to the Microsoft 365 portal.
-   > 1. Select the **Keep me signed in** check box, enter your Office 365 work or school account credentials, and then select **Sign in** (if it is necessary).
+   > 1. Select the **Keep me signed in** check box, enter your Microsoft 365 work or school account credentials, and then select **Sign in** (if it is necessary).
    > 1. Open a document library in Explorer view.
 
 ##### Method 2: Use a persistent cookie

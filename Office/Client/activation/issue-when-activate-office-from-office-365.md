@@ -12,7 +12,7 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
   - Microsoft 365
-  - Microsoft Visio Pro for Office 365
+  - Microsoft Visio Pro for Microsoft 365
   - Project Online Desktop Client
 ms.date: 3/31/2022
 ---

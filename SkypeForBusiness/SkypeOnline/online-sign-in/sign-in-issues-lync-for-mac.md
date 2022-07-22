@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online
-description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Office 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
+description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Microsoft 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -47,7 +47,7 @@ To sign in to Skype for Business Online by using Lync for Mac, users should foll
       - Internal server name: sipdir.online.lync.com:443
       - External server name: sipdir.online.lync.com:443
 
-    - Kerberos authentication:Leave this option cleared. Office 365 uses the Microsoft Azure AD authentication system for authentication.
+    - Kerberos authentication:Leave this option cleared. Microsoft 365 uses the Microsoft Azure AD authentication system for authentication.
 
 ### If you still can't sign in
 

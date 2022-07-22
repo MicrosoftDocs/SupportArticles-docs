@@ -20,9 +20,9 @@ ms.date: 3/31/2022
 
 ## Problem
 
-You receive the following message in the Microsoft Microsoft 365 portal:
+You receive the following message in the Microsoft 365 portal:
 
-**One of your on-premises Federation Service certificates is expiring. Failure to renew the certificate and update trust properties within 13 days will result in a loss of access to all Office 365 services for all users.**
+> **One of your on-premises Federation Service certificates is expiring. Failure to renew the certificate and update trust properties within 13 days will result in a loss of access to all Office 365 services for all users.**
 
 ## Cause 
 

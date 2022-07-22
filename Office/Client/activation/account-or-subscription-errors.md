@@ -129,7 +129,7 @@ Are you behind a proxy server? If you're not sure, ask your administrator. If so
 
 You need to allow the URLs and IP addresses in [this list](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true#microsoft-365-common-and-office-online).
 
-You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
+You can also allow Microsoft 365 to bypass the proxy server by creating a PAC file. For more information about creating a PAC file, see [Managing Microsoft 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints).
 <br/><br/>
 </details>
 

@@ -1,6 +1,6 @@
 ---
 title: Another account from your organization is already signed in on this computer
-description: Fixes an error that occurs when you try to sign in to an Office 2016 for Mac app by using Office 365 credentials.
+description: Fixes an error that occurs when you try to sign in to an Office 2016 for Mac app by using Microsoft 365 credentials.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
