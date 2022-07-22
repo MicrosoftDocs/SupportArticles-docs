@@ -1,6 +1,6 @@
 ---
-title: Office 365 is changing its build numbers to a five-digit format
-description: Describes that the format of build numbers for Office 365 is changing from four digits to five digits in June, 2018.
+title: Microsoft 365 is changing its build numbers to a five-digit format
+description: Describes that the format of build numbers for Microsoft 365 is changing from four digits to five digits in June, 2018.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,17 +11,17 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Office 365 Enterprise
-  - Microsoft 365 Apps
-  - Office 365 Home
+  - Microsoft 365 Business 
+  - Microsoft 365 Apps for business
+  - Microsoft 365 Family
   - Microsoft 365 Apps for enterprise
-  - Office 365 Personal
-  - Project Pro for Office 365
-  - Visio Pro for Office 365
+  - Microsoft 365 Personal
+  - Project Pro for Microsoft 365
+  - Visio Pro for Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Office 365 is changing its build numbers to a five-digit format
+# Microsoft 365 is changing its build numbers to a five-digit format
 
 ## Summary
 
@@ -32,7 +32,7 @@ In June, 2018, Microsoft 365 is changing its build numbers from a four-digit to 
 |Old|4.4|build 1234.5678 |
 |New|5.5|build 12345.67890 |
 
-To locate the build number of an Office installation, start an Office application, select **File** > **Account**, and then look under **About \\\<ProgramName>**. 
+To locate the build number of an Office installation, start an Office application, select **File** > **Account**, and then look under **About \\\<ProgramName\>**. 
 
 ## More Information
 
