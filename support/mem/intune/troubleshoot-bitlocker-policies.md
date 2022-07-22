@@ -41,7 +41,7 @@ Collect or review the following information:
 
 **LOG** > **DeviceManagement-Enterprise-Diagnostics-Provider admin**
 
-- Location: Right-click on **Start Menu** > **Event Viewer** > **Applications and Service Logs** > **Microsoft** > **Windows** > **Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**
+- Location: Right-click on **Start Menu** > **Event Viewer** > **Applications and Service Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**
 - File system location: C:\Windows\System32\winevt\Logs\Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider%4Admin.evtx
 
 To filter this log, right-click the event log and select **Filter Current Log** > **Critical/Error/Warning**. Then search through the filtered logs for BitLocker (press F3 and enter the text).
