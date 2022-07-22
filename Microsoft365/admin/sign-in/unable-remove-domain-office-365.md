@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -34,7 +34,7 @@ At line:1 char:18
 This issue occurs if one or more of the following conditions are true: 
 
 - User accounts or groups are associated with the domain.    
-- The proxies that correspond to the domain for all mail-licensed users and for all mail-enabled groups aren't removed. Office 365 blocks the deletion of a domain until the proxies that correspond to the domain are removed.   
+- The proxies that correspond to the domain for all mail-licensed users and for all mail-enabled groups aren't removed. Microsoft 365 blocks the deletion of a domain until the proxies that correspond to the domain are removed.   
 - Skype for Business Online (formerly Lync Online) Session Initiation Protocol (SIP) addresses are used by the domain.   
 
 ## Solution

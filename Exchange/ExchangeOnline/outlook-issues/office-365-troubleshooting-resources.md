@@ -1,5 +1,5 @@
 ---
-title: Outlook and mobile device connectivity troubleshooting resource for Office 365
+title: Outlook and mobile device connectivity troubleshooting resource for Microsoft 365
 description: Lists links to technical resources and support information for troubleshooting Outlook connectivity and mobile device connectivity in Microsoft 365.
 author: simonxjx
 audience: ITPro
@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# Office 365: Outlook and mobile device connectivity troubleshooting resources
+# Microsoft 365: Outlook and mobile device connectivity troubleshooting resources
 
 ## Introduction
 
@@ -33,7 +33,7 @@ Help articles
 
 Knowledge Base articles
 
-- [2413813](https://support.microsoft.com/help/2413813) How to troubleshoot issues in which Outlook 2007 or Outlook 2010 crashes or stops responding (hangs) when it's used with Office 365
+- [2413813](https://support.microsoft.com/help/2413813) How to troubleshoot issues in which Outlook 2007 or Outlook 2010 crashes or stops responding (hangs) when it's used with Microsoft 365
 - [2441551](https://support.microsoft.com/help/2441551) Outlook performance is slow in the Microsoft 365 environment
 - [2646504](https://support.microsoft.com/help/2646504) How to remove automappping for a shared mailbox in Microsoft 365
 
@@ -66,9 +66,9 @@ Knowledge Base articles
 Knowledge Base articles
 
 - [2427193](https://support.microsoft.com/help/2427193) A mobile device can't connect to Exchange Online by using Exchange ActiveSync
-- [2679626](https://support.microsoft.com/help/2679626) Your Office 365 email account is not automatically set up on your Google Android device or on your Apple iOS-based device through the Autodiscover service
+- [2679626](https://support.microsoft.com/help/2679626) Your Microsoft 365 email account is not automatically set up on your Google Android device or on your Apple iOS-based device through the Autodiscover service
 
-Tools and Diagnostics wiki articles in the Office 365 Community
+Tools and Diagnostics wiki articles in the Microsoft 365 Community
 
 - [https://go.microsoft.com/fwlink/?linkid=2003907](https://go.microsoft.com/fwlink/?linkid=2003907)
   

@@ -16,7 +16,7 @@ appliesto:
   - Excel 2013
   - Excel for Microsoft 365
   - Microsoft Excel for Mac 2011
-  - Excel for Mac for Office 365
+  - Excel for Mac for Microsoft 365
 ms.date: 3/31/2022
 ---
 

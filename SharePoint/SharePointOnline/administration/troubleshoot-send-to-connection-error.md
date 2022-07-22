@@ -38,7 +38,7 @@ In this scenario, you receive the following error message:
 
 ## Solution
 
-To resolve this issue, contact Office 365 technical support.
+To resolve this issue, contact Microsoft 365 technical support.
 
 ## More information
 

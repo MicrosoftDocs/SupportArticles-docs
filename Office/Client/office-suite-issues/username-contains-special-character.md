@@ -15,7 +15,7 @@ ms.reviewer: timball
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -47,7 +47,7 @@ A Windows Live error occurred while provisioning for "user+invalid_characters@co
 
 ## Cause
 
-This behavior occurs because certain special characters aren't permitted in user names that you create in the Office 365. These special characters include but aren't limited to the following:
+This behavior occurs because certain special characters aren't permitted in user names that you create in the Microsoft 365. These special characters include but aren't limited to the following:
 
 | Property | UserPrincipalName requirements |
 | --- | --- |

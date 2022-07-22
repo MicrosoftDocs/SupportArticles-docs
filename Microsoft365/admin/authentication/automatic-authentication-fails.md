@@ -12,12 +12,12 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: dthayer
 appliesto: 
-  - Office 365
+  - Microsoft 365
   - Outlook for Microsoft 365
   - Word for Microsoft 365
   - Excel for Microsoft 365
   - PowerPoint for Microsoft 365
-  - OneNote for Office 365
+  - OneNote for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -29,7 +29,7 @@ ms.date: 3/31/2022
 Authentication automatically fails in some Microsoft Office applications and Outlook may go into the "Need Password" state without any interaction. Additionally, when you make a Web Account Manager API call to [FindAllAccountsAsync](/uwp/api/windows.security.authentication.web.core.webauthenticationcoremanager.findallaccountsasync), you may see error code "-2147024809" in the AAD logs or Office Client logs.
 
 > [!IMPORTANT]
-> This issue occurs only on computers that are running Windows 10, version 1703 or later, and Office 365 version 1807 or later.
+> This issue occurs only on computers that are running Windows 10, version 1703 or later, and Microsoft 365 version 1807 or later.
 
 ## Cause
 

@@ -91,7 +91,7 @@ The Microsoft Support and Recovery Assistant can resolve issues in many programs
 
    :::image type="content" source="media/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant/sign-in-using-non-office-account.png" alt-text="Sign in account example." border="false":::
 
-   Any non-Microsoft 365 account will not be authenticated through the Office 365 service. In this case, SaRA gives you an option to continue. Select the **Next** button to continue.
+   Any non-Microsoft 365 account will not be authenticated through the Microsoft 365 service. In this case, SaRA gives you an option to continue. Select the **Next** button to continue.
 
    The scan is complete when you see **We're done collecting your Outlook configuration details**.
 

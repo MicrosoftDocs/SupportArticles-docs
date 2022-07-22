@@ -14,7 +14,7 @@ appliesto:
   - Excel 2013
   - SQL Server 2012 Enterprise
   - SQL Server 2012 Standard
-  - Power BI for Office 365
+  - Power BI for Microsoft 365
 ms.date: 3/31/2022
 ---
 

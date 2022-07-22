@@ -35,7 +35,7 @@ This is by design.
 
 After a tenant administrator assigns an Exchange administrator, Skype for Business administrator, or SharePoint administrator role to a user in the Microsoft 365 portal, the Microsoft 365 portal uses a built-in account (BOXServiceAccount) to add the user to the **View-Only Organization Management** Role Based Access Control (RBAC) group.
 
-To see the actual audit log, you can either use Search similar activities in the Office 365 alert detail activity list view or do a free-text search for "BOXServiceAccount" directly from the Audit log search page.
+To see the actual audit log, you can either use Search similar activities in the Microsoft 365 alert detail activity list view or do a free-text search for "BOXServiceAccount" directly from the Audit log search page.
 
 ## More information
 

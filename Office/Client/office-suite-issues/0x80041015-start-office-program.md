@@ -12,8 +12,8 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Home
-  - Office 365 Personal
+  - Microsoft 365 Family
+  - Microsoft 365 Personal
 ms.date: 3/31/2022
 ---
 
@@ -23,7 +23,7 @@ ms.date: 3/31/2022
 
 When you try to start a Microsoft 365 program, you receive the following error message:
 
-```adoc
+```output
 Sorry, we ran into a problem While trying to install the product key.
 
 If this keeps happening, you should try repairing your office product.
@@ -36,7 +36,7 @@ System error: 0x80041015
 This problem can occur when all the following conditions are true:
 
 - An Office product was activated before the May Public Update was installed.
-- There was an attempt to add another Office product (such as Microsoft Visio, OneDrive for Business, or Office 365) or to reinstall an Office product on the same computer after the May Public Update was installed.
+- There was an attempt to add another Office product (such as Microsoft Visio, OneDrive for Business, or Microsoft 365) or to reinstall an Office product on the same computer after the May Public Update was installed.
 
 ## Resolution
 

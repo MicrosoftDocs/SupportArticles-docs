@@ -40,7 +40,7 @@ When Office 365 was upgraded in 2013, Exchange Online was configured to store Sk
 
 Since then, this feature was disabled because by default, and Skype for Business Online contact lists are now managed by Skype for Business Online. However, some users might still be using the Exchange UCS and experience no issues or problems at all. If their mailbox is unavailable through Exchange Web Services (EWS) at any time, they won't be able to change or even access their contact lists. If this becomes an issue, you may want to migrate your contacts back to Skype for Business Online.
 
-## Solutioin
+## Solution
 
 ### If you're experiencing this issue
 

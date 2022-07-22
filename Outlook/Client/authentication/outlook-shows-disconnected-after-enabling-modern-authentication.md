@@ -8,7 +8,7 @@ localization_priority: Normal
 ms.custom: CSSTroubleshoot
 appliesto:
 - Outlook
-- Office 365
+- Microsoft 365
 search.appverid: MET150
 ms.reviewer: jonl
 author: simonxjx
@@ -33,7 +33,7 @@ The most effective solution to this issue is to [re-create your Outlook profile.
 
 ## More information
 
-For **Monthly** Channel Office 365 subscribers, the fix to prevent this issue from occurring is available in builds **16.0.11901.20216** and later.
+For **Monthly** Channel Microsoft 365 subscribers, the fix to prevent this issue from occurring is available in builds **16.0.11901.20216** and later.
 
 For **Semi-Annual** Customers, the fix is included in builds **16.0.11328.20392** and later.
 

@@ -109,7 +109,7 @@ Revert the Office 2016 Click-to-Run installation to the 16.0.7070.2036 version. 
 
 10. Set a reminder in your calendar for a future date at which to check this article for a resolution for this issue. Enable automatic updates in Office again after this issue is fixed. Enabling automatic updates again will make sure that you don't miss future updates.
 
-For more information about update channels for Office 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-microsoft365-apps-by-date).
+For more information about update channels for Microsoft 365 clients, see [Update history for Microsoft 365 Apps (listed by date)](/officeupdates/update-history-microsoft365-apps-by-date).
 
 For more information about reverting to an earlier version of Office Click-to-Run, see [How to revert to an earlier version of Office](https://support.microsoft.com/help/2770432).
 

@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
-  - Office 365 Small Business
+  - Microsoft 365 for business
 ms.date: 3/31/2022
 ---
 
@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-In Microsoft 365 Small Business, you try to add an Address (A) record or a CNAME record in the Microsoft 365 portal. However, you get the following error message:
+In Microsoft 365 for business, you try to add an Address (A) record or a CNAME record in the Microsoft 365 portal. However, you get the following error message:
 
 **Another DNS record already exists with this host name. Type a different name.**
 

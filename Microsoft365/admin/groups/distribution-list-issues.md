@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 # Distribution group issues
 
-This topic discusses how to solve distribution group (also known as distribution list) issues that you may run into when using Office 365.
+This topic discusses how to solve distribution group (also known as distribution list) issues that you may run into when using Microsoft 365.
 
 > [!NOTE]
 > To find and edit existing groups, go to **Groups** \> **Groups** in the left pane, select the group you want to review or edit, and then select **Manage**.
