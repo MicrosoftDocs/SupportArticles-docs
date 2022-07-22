@@ -184,7 +184,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
     OPTION (max_grant_percent = 3, MAXDOP 1)
     ```
 
-1. Capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row_count numbers for each operator over time and see which shows a significant increase in row count (million or more).
+1. Capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the `row_count` numbers for each operator over time and see which shows a significant increase in row count (million or more).
 
 1. In a new query window in SSMS, capture an estimated query plan for the problem query by running the following commands:
 
@@ -249,7 +249,7 @@ To identify the slow steps in the query, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command three or four times spaced one minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `session_id` with the integer value you found in the previous step 3.
+1. Run the following command three or four times spaced one minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `<session_id>` with the integer value you found in the previous step 3.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
@@ -279,7 +279,7 @@ To identify the slow steps in the query, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command three or four times to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `session_id` with the integer value you found in the previous step 3.
+1. Run the following command three or four times to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `<session_id>` with the integer value you found in the previous step 3.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
