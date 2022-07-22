@@ -96,7 +96,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
 
 ### Long compilation time
 
-On rare occasions, you may observe that the CPU is increasing continuously over time. This CPU usage may be driven by an excessively long compilation (parse and compile of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
+On rare occasions, you may observe that the CPU is increasing continuously over time. This CPU usage may be driven by an excessively long compilation (the parsing and compiling of a query). In those cases, check the **transaction_name** output column and look for a value of `sqlsource_transform`. This transaction name indicates a compilation.
 
 ## Collect diagnostic data
 
