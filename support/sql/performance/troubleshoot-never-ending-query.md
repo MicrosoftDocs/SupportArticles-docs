@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot a query that seems to never complete in SQL Server
-description: Provides resolutions to help you identify and resolve issues where a query runs for a long time in SQL Server.
+description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
 ms.date: 07/13/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -120,7 +120,7 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
 
 The [Lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
-To identify the slow steps in the query by using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1) and solve the issue, follow these steps:
+To identify the slow steps in the query by using [Lightweight query execution statistics profiling infrastructure v1](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v1), follow these steps:
 
 1. Run the following commands to enable the `query_thread_profile` XEvent:
 
@@ -184,7 +184,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
     OPTION (max_grant_percent = 3, MAXDOP 1)
     ```
 
-1. Capture 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row_count numbers for each operator over time and see which shows a significant increase in row count (million or more).
+1. Capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row_count numbers for each operator over time and see which shows a significant increase in row count (million or more).
 
 1. In a new query window in SSMS, capture an estimated query plan for the problem query by running the following commands:
 
@@ -208,7 +208,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
 
 You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
-To identify the slow steps in the query and solve the issue, follow these steps:
+To identify the slow steps in the query, follow these steps:
 
 1. To enable the lightweight infrastructure on these versions of SQL Server, use one of the following methods:
 
@@ -249,7 +249,7 @@ To identify the slow steps in the query and solve the issue, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command 3-4 times spaced 1 minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `session_id` with the integer value you found in the previous step 3.
+1. Run the following command three or four times spaced one minute apart to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more). Replace `session_id` with the integer value you found in the previous step 3.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
@@ -267,7 +267,7 @@ To identify the slow steps in the query and solve the issue, follow these steps:
 
 You can use the [Lightweight query execution statistics profiling infrastructure v3](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
 
-To identify the slow steps in the query and solve the issue, follow these steps:
+To identify the slow steps in the query, follow these steps:
 
 1. Start the affected never-ending query from your application.
 
@@ -279,13 +279,13 @@ To identify the slow steps in the query and solve the issue, follow these steps:
    CROSS APPLY sys.dm_exec_sql_text (req.sql_handle) as t
    ```
 
-1. Run the following command 3-4 times to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `session_id` with the integer value you found in the previous step 3.
+1. Run the following command three or four times to examine the query plan and actual statistics in the plan. Be sure to save the query plan every time, so you can compare them and establish which query operator is consuming most of the CPU time. Replace `session_id` with the integer value you found in the previous step 3.
 
     ```sql
     SELECT * FROM sys.dm_exec_query_statistics_xml (<session_id>)
     ```
 
-1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture 3-4 snapshots spaced 1 minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
+1. Specifically, select the XML link under the **query_plan** column. Once the graphical query plan opens in a new window, right-click on it and select **Save Execution Plan As...**. Repeat the steps to capture three or four snapshots spaced one minute apart to give you sufficient data for analysis. Specifically, you can compare the row count (Actual Number of Rows) for each operator over time and see which of the operators is showing a significant increase in row count (million or more).
 
     > [!NOTE]
     > If you aren't getting any output from `sys.dm_exec_query_statistics_xml`, you can check whether the database option `LAST_QUERY_PLAN_STATS` has been disabled by running the following command:
@@ -302,11 +302,11 @@ To identify the slow steps in the query and solve the issue, follow these steps:
 
 ## Method to review the collected plans
 
-This section will illustrate how to review the collected data. It will use the multiple XML query plans (using extension *.sqlplan) collected in SQL Server 2016 SP1 and later.
+This section will illustrate how to review the collected data. It will use the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later.
 
 Follow these steps to [compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans):
 
-1. Open a previously saved query execution plan file (.sqlplan).
+1. Open a previously saved query execution plan file (*.sqlplan*).
 
 1. Right-click in a blank area of the execution plan and select **Compare Showplan**.
 
@@ -318,7 +318,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
 
    Here's an example:
 
-   :::image type="content" source="media/troubleshoot-never-ending-query/query-plan-comparison.png" alt-text="Compare query plans in SSMS":::
+   :::image type="content" source="media/troubleshoot-never-ending-query/query-plan-comparison.png" alt-text="Compare query plans in SSMS." lightbox="media/troubleshoot-never-ending-query/query-plan-comparison.png":::
 
 ## Resolution
 
@@ -334,7 +334,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
    - FORCE ORDER hint
    - FORCESEEK hint
    - RECOMPILE
-   - USE `PLAN N'<xml_plan>'`  if you have a fast query plan that you can force
+   - USE `PLAN N'<xml_plan>'` if you have a fast query plan that you can force
 
 1. Use Query Store (QDS) to force a good known plan if such a plan exists and if your SQL Server version supports Query Store.
 
