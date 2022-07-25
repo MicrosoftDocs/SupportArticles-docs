@@ -118,6 +118,7 @@ DBCC TRACESTATUS
 
 ## Frequently asked questions
 
+
 #### Q1: I'm interested in upgrading to a more recent version of SQL Server and I'm concerned about cardinality estimator performance regressions. What upgrade planning is recommended for minimizing issues?
 
 For pre-existing databases running at lower compatibility levels, the recommended workflow for upgrading the query processor to a higher compatibility level is detailed in [Change the Database Compatibility Mode and Use the Query Store and Query Store Usage Scenarios](/sql/database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store). The methodology introduced in the article applies for moves to 130 or higher for SQL Server and Azure SQL Database.
@@ -201,3 +202,7 @@ Given the unlimited number of combinations of customer schema, data, and workloa
 Changes in [CE versions](/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce), especially going from 70 to 120, include many different choices for models used. For example, when estimating filters, assume some level of correlation between the predicates, because on practice such correlation frequently exists and CE model 70 would under estimate results in such cases. While those changes were tested for many workloads and improve many queries, for some other queries the legacy CE was a better match, and thus with the default CE, performance regressions may be observed.
 
 Unfortunately, it's not considered to be a bug. In such situations, use a workaround such as tuning the query, just like you needed to do with the legacy CE if query performance isn't acceptable, or forcing a previous CE model or a specific execution plan.
+
+#### Q9: I would like to learn details about the cardinality changes in the default CE and the query performance impact
+
+You can reference the ["Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator"](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Optimizing%20Your%20Query%20Plans%20with%20the%20SQL%20Server%202014%20Cardinality%20Estimator.docx) technical article for details and read the "What Changed in SQL Server 2014?" section. 
