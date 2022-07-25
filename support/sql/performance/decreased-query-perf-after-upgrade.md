@@ -12,7 +12,7 @@ ms.author: jopilov
 
 # Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 
-After upgrading your SQL Server from 2012 or earlier versions to 2014 or later versions, some queries (not all) may run slower than before. The probable cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. And the largest changes to the CE models were introduced in SQL Server 2014.
+After you upgrade your SQL Server from 2012 or earlier versions to 2014 or later versions, some queries (not all) may run slower than before. The probable cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. And the largest changes to the CE models were introduced in SQL Server 2014.
 
 In this article, we provide troubleshooting steps and resolutions for query performance issues that caused by the CE model change.
 
@@ -23,17 +23,17 @@ In this article, we provide troubleshooting steps and resolutions for query perf
 
 #### Step 1: Identify if the default CE is used
 
-1. Choose a query that you can repro the issue.
+1. Choose a query that you can repro the issue with.
 1. Run the query and [collect the execution plan](/sql/relational-databases/performance/display-an-actual-execution-plan#to-include-an-execution-plan-for-a-query-during-execution).
 1. From the execution plan Properties window, check **CardinalityEstimationModelVersion**.
     :::image type="content" source="media/decreased-query-perf-after-upgrade/query-plan-ce-version.png" alt-text="Find CE model version from the execution plan Properties window.":::
 1. A value of 70 indicates the legacy CE and a value of 120 or higher indicates the use of the default CE.
 
-If the legacy CE is used, the CE changes are not the cause of the performance issue. If the default CE is used, go to next step.
+If the legacy CE is used, the CE changes aren't the cause of the performance issue. If the default CE is used, go to next step.
 
 #### Step 2: Identify if Query Optimizer can generate a better plan by using the legacy CE
 
-Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than using the default CE, go to next step. Else, the CE changes are not the cause.
+Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than using the default CE, go to next step. Else, the CE changes aren't the cause.
 
 #### Step 3: Find out why the query performs better with the legacy CE
 
@@ -41,23 +41,23 @@ Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-
 
 ## Resolution
 
-To resolve this kind of issue, try one of the following methods:
+To resolve the issue, try one of the following methods:
 
 - Optimize the query.
 
-  Understandably, it's not always possible. But especially when there is only a small number of (poorly written) queries, this approach should be the first choice because optimally written queries perform better regardless of CE versions.
+  Understandably, it's not always possible. But especially when there's only a few (poorly written) queries, this approach should be the first choice because optimally written queries perform better regardless of CE versions.
 - Use query hints identified in [Step 3](#step-3-find-out-why-the-query-performs-better-with-the-legacy-ce).
 
-  This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require QDS, unlike the most robust option — forcing a plan.
+  This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
 - Force a "good" plan.
 
-  This is a favorable option as a targeted approach. This could be done by using a plan guide or QDS. Using QDS is more robust but has other implications.
+  This is a favorable option as a targeted approach. It could be done by using a plan guide or QDS. Using QDS is more robust but has other implications.
 - Use [database-scoped configuration](#database-levelset-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
-  This is less preferred than a more targeted approach, but sometimes necessary when a targeted approach is not feasible. It's certainly the most easy-to-implement option.
+  This is less preferred than a more targeted approach, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
 - Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag).
 
-  This is the least-targeted approach which should only be used as a temporary mitigation when you're unable to leverage any of the other options.
+  This is the least-targeted approach that should only be used as a temporary mitigation when you're unable to apply any of the other options.
 
 ## Force to use the legacy CE
 
@@ -79,7 +79,7 @@ To resolve this kind of issue, try one of the following methods:
    OPTION (QUERYTRACEON 9481)
    ```
 
-### Database level：Set scoped configuration or compatibility level
+### Database level: Set scoped configuration or compatibility level
 
 - For SQL Server 2016 and later versions, alter database scoped configuration:
 
@@ -120,11 +120,11 @@ DBCC TRACESTATUS
 
 #### Q1: I'm interested in upgrading to a more recent version of SQL Server and I'm concerned about cardinality estimator performance regressions. What upgrade planning is recommended for minimizing issues?
 
-For pre-existing databases running at lower compatibility levels, the recommended workflow for upgrading the query processor to a higher compatibility level is detailed in [Change the Database Compatibility Mode and Use the Query Store and Query Store Usage Scenarios](/sql/database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store). Note that this article refers to compatibility level 130 and higher, but the same methodology applies for moves to 140, 150 for SQL Server and Azure SQL Database.
+For pre-existing databases running at lower compatibility levels, the recommended workflow for upgrading the query processor to a higher compatibility level is detailed in [Change the Database Compatibility Mode and Use the Query Store and Query Store Usage Scenarios](/sql/database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store). The methodology introduced in the article applies for moves to 130 or higher for SQL Server and Azure SQL Database.
 
 #### Q2: I don't have time to test for CE changes. What can I do in this case?
 
-For pre-existing applications and workloads, we don't recommend moving to the default CE until sufficient regression testing has been performed. If you still have doubts, we recommend that you still upgrade SQL Server, move to the latest available compatibility level, but as a precaution also configure the `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration `ON` until you have an opportunity to test. To do this, execute the following command within the context of your database:
+For pre-existing applications and workloads, we don't recommend moving to the default CE until sufficient regression testing has been performed. If you still have doubts, we recommend that you still upgrade SQL Server, move to the latest available compatibility level, but as a precaution, also configure the `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration `ON` until you have an opportunity to test. To do this, execute the following command within the context of your database:
 
 ```sql
 ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;
@@ -132,7 +132,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;
 
 #### Q3: Are there any disadvantages of using the legacy CE permanently?
 
-Future cardinality estimator-related improvements and fixes are centered around more recent versions. While version 70 is an acceptable intermediate state, after careful testing we recommend eventually moving to a more recent CE version in order to benefit from the most recent CE fixes. There is a high probability of query plan changes when moving from the legacy CE, so testing is strongly recommended before making changes to production systems. The changes can improve query performance in many cases, but in some cases query performance may degrade.
+Future cardinality estimator-related improvements and fixes are centered around more recent versions. While version 70 is an acceptable intermediate state, after careful testing we recommend eventually moving to a more recent CE version in order to benefit from the most recent CE fixes. There's a high probability of query plan changes when moving from the legacy CE, so test before making changes to production systems. The changes can improve query performance in many cases, but in some cases query performance may degrade.
 
 > [!IMPORTANT]
 > The default CE is the main code path that will receive future investment and deeper testing coverage over the long-term, so DON'T plan on using the legacy CE indefinitely.
@@ -142,40 +142,40 @@ Future cardinality estimator-related improvements and fixes are centered around 
 For SQL Server, enable trace flag 9481 to use the legacy CE for all databases irrespective of the compatibility level. Alternatively, execute the following query to iterate through databases. The setting will be enabled even when the database is restored or attached in another server.
 
 ```sql
-SELECT [name], 0 AS [isdone] 
-INTO #tmpDatabases  
-FROM master.sys.databases WITH (NOLOCK)  
-WHERE database_id > 4 AND source_database_id IS NULL AND is_read_only = 0 
+SELECT [name], 0 AS [isdone]
+INTO #tmpDatabases
+FROM master.sys.databases WITH (NOLOCK)
+WHERE database_id > 4 AND source_database_id IS NULL AND is_read_only = 0
+
+DECLARE @dbname sysname, @sqlcmd NVARCHAR(500);
+
+WHILE (SELECT COUNT([name]) FROM #tmpDatabases WHERE isdone = 0) > 0
+BEGIN
+    SELECT TOP 1 @dbname = [name] FROM #tmpDatabases WHERE isdone = 0
+
+    SET @sqlcmd = 'USE ' + QUOTENAME(@dbname) + '; 
+        IF (SELECT [value] FROM sys.database_scoped_configurations WHERE [name] = ''LEGACY_CARDINALITY_ESTIMATION'') = 0
+        ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;'
  
-DECLARE @dbname sysname, @sqlcmd NVARCHAR(500); 
-WHILE (SELECT COUNT([name]) FROM #tmpDatabases WHERE isdone = 0) > 0 
-BEGIN 
-SELECT TOP 1 @dbname = [name] FROM #tmpDatabases WHERE isdone = 0 
- 
-SET @sqlcmd = 'USE ' + QUOTENAME(@dbname) + '; 
-IF (SELECT [value] FROM sys.database_scoped_configurations WHERE [name] = ''LEGACY_CARDINALITY_ESTIMATION'') = 0 
-ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;' 
- 
-BEGIN TRY 
-EXECUTE sp_executesql @sqlcmd 
-END TRY 
-BEGIN CATCH 
-SELECT ERROR_NUMBER() AS ErrorNumber, ERROR_SEVERITY() AS ErrorSeverity, ERROR_STATE() AS ErrorState, ERROR_MESSAGE() AS ErrorMessage; 
-END CATCH 
- 
-UPDATE #tmpDatabases 
-SET isdone = 1 
-WHERE [name] = @dbname 
-END; 
+    BEGIN TRY
+        EXECUTE sp_executesql @sqlcmd
+    END TRY
+    BEGIN CATCH
+        SELECT ERROR_NUMBER() AS ErrorNumber, ERROR_SEVERITY() AS ErrorSeverity,
+            ERROR_STATE() AS ErrorState, ERROR_MESSAGE() AS ErrorMessage;
+    END CATCH
+
+    UPDATE #tmpDatabases
+    SET isdone = 1
+    WHERE [name] = @dbname
+END;
 ```
 
 For Azure SQL Database, you can create a support ticket to have this trace flag enabled at the subscription level, but not the server level.
 
 #### Q5: Will running with the legacy CE prevent me from getting access to new features?
 
-Even with LEGACY_CARDINALITY_ESTIMATION enabled you will still get access to the latest functionality included with the version of SQL Server and the associated database compatibility level. For example, a database with LEGACY_CARDINALITY_ESTIMATION enabled running at database compatibility level 140 on SQL Server 2017 can still benefit from the [adaptive query processing](/sql/relational-databases/performance/adaptive-query-processing) feature family.  
-
-We will document any future scenarios where new query processing features are not enabled under the legacy CE.
+Even with LEGACY_CARDINALITY_ESTIMATION enabled you'll still get access to the latest functionality included with the version of SQL Server and the associated database compatibility level. For example, a database with LEGACY_CARDINALITY_ESTIMATION enabled running at database compatibility level 140 on SQL Server 2017 can still benefit from the [adaptive query processing](/sql/relational-databases/performance/adaptive-query-processing) feature family.  
 
 #### Q6: When will the legacy CE go out of support?
 
@@ -186,18 +186,18 @@ We don't have plans to stop supporting Microsoft customers workloads legacy CE a
 A more granular alternative to the server-scoped trace flag 9481 or the LEGACY_CARDINALITY_ESTIMATION database scoped configuration is the use of the query-scoped USE HINT construct. For more information, see [USE HINT query hint argument in SQL Server 2016](https://support.microsoft.com/help/3189813/update-introduces-use-hint-query-hint-argument-in-sql-server-2016) and [USE HINT](/sql/t-sql/queries/hints-transact-sql-query#use_hint).
 
 > [!NOTE]
-> There is also a `QUERYTRACEON` option with trace flag 9481, but you should consider using the `USE HINT` instead, as it's cleaner semantically and doesn't require special permissions.
+> There's also a `QUERYTRACEON` option with trace flag 9481, but you should consider using the `USE HINT` instead, as it's cleaner semantically and doesn't require special permissions.
 
-`USE HINT FORCE_LEGACY_CARDINALITY_ESTIMATION` enables you to set the query optimizer cardinality estimation model to version 70, regardless of the compatibility level of the database. See [Query level: Use Query Hint or QUERYTRACEON option](#query-level-use-query-hint-or-querytraceon-option).
+`USE HINT FORCE_LEGACY_CARDINALITY_ESTIMATION` enables you to set the query optimizer CE model to version 70, regardless of the compatibility level of the database. See [Query level: Use Query Hint or QUERYTRACEON option](#query-level-use-query-hint-or-querytraceon-option).
 
-Alternatively, if there is only one query that is problematic with the default CE, you could force a legacy CE plan stored in Query Store, or use `FORCE_LEGACY_CARDINALITY_ESTIMATION` in conjunction with a plan guide.
+Alternatively, if there's only one query that is problematic with the default CE, you could force a legacy CE plan stored in Query Store, or use `FORCE_LEGACY_CARDINALITY_ESTIMATION` in conjunction with a plan guide.
 
 #### Q8: If query performance regressed due to a plan change related to significant over or under-estimates when using the default CE, will the issue be fixed in the product?
 
-Cardinality estimation is a complex problem, and the algorithms rely on less-than-perfect data available for estimates (statistics for tables and indexes, and no information for some out-of-model constructs like table-valued functions (TVFs) and models based on a number of assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, etc.).
+CE is a complex problem, and the algorithms rely on less-than-perfect data available for estimates (statistics for tables and indexes, and no information for some out-of-model constructs like table-valued functions (TVFs) and models based on many assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, etc.).
 
-Given the virtually unlimited number of combinations of customer schema, data, and workloads, it is almost impossible to pick models that a-priori work for all cases. While some changes in the default CE may contain bugs (like any other software can) and can be fixed, other problems are caused by a model change.
+Given the unlimited number of combinations of customer schema, data, and workloads, it's almost impossible to pick models that work for all cases. While some changes in the default CE may contain bugs (like any other software can) and can be fixed, other problems are caused by a model change.
 
-Changes in CE versions, especially going from 70 to 120, include a number of different choices for models used (for example, when estimating filters, assume some level of correlation between the predicates, because on practice such correlation frequently exists and CE model 70 would under estimate results in such cases). While those were tested for a number of workloads and improve many queries, for some other queries the legacy CE was a better match, and thus with the default CE, performance regressions may be observed.
+Changes in [CE versions](/sql/relational-databases/performance/cardinality-estimation-sql-server#versions-of-the-ce), especially going from 70 to 120, include many different choices for models used. For example, when estimating filters, assume some level of correlation between the predicates, because on practice such correlation frequently exists and CE model 70 would under estimate results in such cases. While those changes were tested for many workloads and improve many queries, for some other queries the legacy CE was a better match, and thus with the default CE, performance regressions may be observed.
 
-Unfortunately, it's not really considered to be a bug. In such situations a workaround such as tuning the query (just like you needed to do with the legacy CE if query performance was not acceptable) or forcing previous CE model or a specific execution plan can be used. This is why we will invest in features like Adaptive QP moving forward, so that we can adjust based on runtime conditions. See below for the resources where you can read more about changes between CE models.
+Unfortunately, it's not considered to be a bug. In such situations, use a workaround such as tuning the query, just like you needed to do with the legacy CE if query performance isn't acceptable, or forcing a previous CE model or a specific execution plan.
