@@ -52,7 +52,7 @@ To resolve the issue, try one of the following methods:
 - Force a good plan.
 
   This is a favorable option as a targeted approach. It could be done by using a plan guide or QDS. Using QDS is more robust but has other implications.
-- Use [database-scoped configuration](#database-levelset-scoped-configuration-or-compatibility-level) to force the legacy CE.
+- Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
   This is less preferred than a more targeted approach, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
 - Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag).
