@@ -1,7 +1,7 @@
 ---
 title: AI Builder trial license still displays in the top banner after you've purchased an AI Builder license
 description: This article provides an explanation about the AI Builder trial license after being purchased.
-ms.reviewer: 
+ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 06/01/2022
 ms.subservice: 
