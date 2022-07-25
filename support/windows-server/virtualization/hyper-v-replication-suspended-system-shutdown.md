@@ -164,7 +164,7 @@ If ([System.Diagnostics.EventLog]::SourceExists($EventSource) -eq $false)
 Write-EventLog -LogName System -Source $EventSource -EntryType Information -EventID 0 -Message "Starting script to restart replication."
 ### Wait until VMMS starts up.
 (Get-Service "vmms").WaitForStatus("Running")  ### No timeout. 
-**### Wait until replication service in VMMS gets active.
+### Wait until replication service in VMMS gets active.
 $Count = 0
 While((Get-VMReplication).count -eq 0) 
 {
