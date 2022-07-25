@@ -2660,6 +2660,8 @@
       href: ./virtualization/event-19050-32022-32032-32056-32315-32546-33680.md
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V replication is suspended at system shutdown
+      href: ./virtualization/hyper-v-replication-suspended-system-shutdown.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts
