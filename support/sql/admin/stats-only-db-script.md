@@ -1,7 +1,7 @@
 ---
-title: How to generate a script of the necessary database metadata to create a statistics-only database in SQL Server  
-description: This how-to article describes about generating a script using necessary metadata and creating a statistics database in SQL Server. 
-ms.date: 07/20/2022
+title: Create a statistics-only database using a generated statistics script  
+description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
+ms.date: 07/25/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
@@ -9,9 +9,9 @@ ms.prod: sql
 ms.author: v-jayaramanp
 ---
 
-# Generating a script to create a statistics-only database
+# How to generate a statistics script to create a statistics-only database in SQL Server
 
-This article describes the steps to generate a script based on database metadata to create a statistics-only database in SQL Server.
+In this article, you learn how to generate a statistics script using database metadata for creating a statistics-only database in SQL Server.
 
 *Applies to:* &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
 
@@ -25,14 +25,14 @@ The query optimizer in Microsoft SQL Server uses the following types of informat
 
 Typically, you must simulate all these same types of information to reproduce the behavior of the query optimizer on a test system.
 
-Microsoft Customer Support Services might ask you to generate a script of the database metadata. The Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
+Microsoft Customer Support Services might ask you to generate a script of the database metadata. Microsoft Customer Support Services uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script. It also describes how the query optimizer uses the information.
 
 > [!NOTE]
 > The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the generated statistics script.
 
-## More Information
+## More information
 
-The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate a schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
 ## Script the whole database
 
@@ -41,7 +41,7 @@ When you generate a statistics-only clone database, it might be easier and more 
 - You avoid issues with missing dependent objects that are required to reproduce the issue.
 - You require fewer steps to select the necessary objects.
 
-Note If you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's  recommended that you generate the script during off-peak hours or you can use the second option to generate the script for individual objects.
+Note that if you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's recommended that you generate the script during off-peak hours, or you can use the second option to generate the script for individual objects.
 
 To script each database that is referenced by your query, follow these steps:
 
@@ -49,11 +49,11 @@ To script each database that is referenced by your query, follow these steps:
 
 1. In the **Object Explorer**, expand **Databases**, and then locate the database that you want to script.
 
-1. Right-click the database, point to **Tasks**, and then click **Generate Scripts**.
+1. Right-click the database, point to **Tasks**, and then select **Generate Scripts**.
 
-1. In the script wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then click **Next**.
+1. In the script wizard, verify that the correct database is selected. Click to select the **Script entire database and all database objects**, and then select **Next**.
 
-1. In the **Choose Script Options** dialog box, click on the **Advanced** button to change the following settings from the default value to the value that is listed in the following table.
+1. In the **Choose Script Options** dialog, select the **Advanced** button to change the following settings from the default value to the value that is listed in the following table.
 
     |Scripting option  |Value to select  |
     |---------|---------|
@@ -70,43 +70,43 @@ To script each database that is referenced by your query, follow these steps:
 
 1. Note that the **Script Logins** option and the **Script Object Level Permissions** option might not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
-1. Click **OK** to save the changes and close the **Advanced Scripting Options** page.
+1. Select **OK** to save the changes, and close the **Advanced Scripting Options** page.
 
-1. Click **Save to File** and select **Single file** option.
+1. Select **Save to File** and select the **Single file** option.
 
-1. Review your selections and click **Next**.
+1. Review your selections and select **Next**.
 
-1. Click **Finish**.
+1. Select **Finish**.
 
 ## Script individual objects
 
-You can only script the individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table might not always be accurate. This inaccuracy might cause one of the following issues:
+You can only script the individual objects that are referenced by a particular query instead of scripting the complete database. However, unless all database objects were created using the `WITH SCHEMABINDING` clause, the dependency information in the `sys.depends` system table might not be always accurate. This inaccuracy might cause one of the following issues:
 
 - The scripting process doesn't script a dependent object.
 
 - The scripting process might script objects in the incorrect order. To run the script successfully, you must manually edit the generated script.
 
-Therefore, it isn't recommended that you script individual objects, unless the database has many objects and scripting would otherwise take too long. If you must use script individual objects, follow these steps:
+Therefore, it isn't recommended that you script individual objects unless the database has many objects and scripting would otherwise take too long. If you must use script individual objects, follow these steps:
 
 1. In the SQL Server Management Studio, expand **Databases**, and then locate the database that you want to script.
 
-1. Right-click the database, point to **Script Database As**, then point to **CREATE To**, and then click **File**.
+1. Right-click the database, point to **Script Database As**, then point to **CREATE To**, and then select **File**.
 
-1. Enter a file name, and then click **Save**.
+1. Enter a file name, and then select **Save**.
 
    The core database container will be scripted. This container includes files, file groups, the database, and properties.
 
-1. Right-click the database, point to **Tasks**, and then click **Generate Scripts**.
+1. Right-click the database, point to **Tasks**, and then select **Generate Scripts**.
 
-1. Make sure that the correct database is selected, and then click **Next**.
+1. Make sure that the correct database is selected, and then select **Next**.
 
-1. In the **Choose Object Types** dialog box, select **Select specific database objects** and select all database object types that the problematic query references.
+1. In the **Choose Object Types** dialog, choose **Select specific database objects**, and select all the database object types that the problematic query references.
 
     For example, if the query only references tables, select **Tables**. If the query references a view, select **Views and Tables**. If the problematic query uses a user-defined function, select **Functions**.
 
-1. When you've selected all the object types that are referenced by the query, click **Next**.
+1. When you've selected all the object types that are referenced by the query, select **Next**.
 
-1. In the **Set Scripting Options** dialog box, click the **Advanced** button and change the following settings from the default value to the value that is listed in the following table in the **Advanced Scripting Options** page.
+1. In the **Set Scripting Options** dialog, select the **Advanced** button and change the following settings from the default value to the value that is listed in the following table on the **Advanced Scripting Options** page.
 
     |Scripting option  |Value to select  |
     |---------|---------|
@@ -124,15 +124,15 @@ Therefore, it isn't recommended that you script individual objects, unless the d
 
 1. Note that the **Script Logins** and **Script Object Level Permissions** options might not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
-1. Click **OK** to save and close the **Advanced Scripting Options** page.
+1. Select **OK** to save and close the **Advanced Scripting Options** page.
 
-   A dialog box appears for each database object type that you selected in step 7.
+   A dialog appears for each database object type that you selected in step 7.
 
-1. In each dialog box, select the specific tables, views, functions, or other database objects, and then click **Next**.
+1. In each dialog, select the specific tables, views, functions, or other database objects, and then select **Next**.
 
-1. Click the **Script to File** option, and then specify the same file name that you entered in step 3.
+1. Select the **Script to File** option, and then specify the same file name that you entered in step 3.
 
-1. Click **Finish** to start the scripting.
+1. Select **Finish** to start the scripting.
 
    When the scripting has finished, send the script file to the Microsoft Support Engineer. The Microsoft Support Engineer might also request the following information:
 
