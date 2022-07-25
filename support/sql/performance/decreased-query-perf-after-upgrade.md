@@ -93,7 +93,7 @@ To resolve the issue, try one of the following methods:
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
    ```
 
-- Alter the compatibility level for the database:
+- You can alter the compatibility level for the database, though this change impacts more than just the cardinality estimation.
 
    ```sql
    ALTER DATABASE <YourDatabase>
