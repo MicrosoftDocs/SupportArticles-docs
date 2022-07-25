@@ -16,6 +16,9 @@ ms.date: 02/09/2021
 
 Azure Virtual Desktop users might encounter sign-in issues that result in a black screen. There are multiple possible causes for black screens, but users can be impacted from issues synchronizing with **AppReadiness**, and multiple sessions signing in or out.
 
+> [!NOTE]
+> These sign-in issues may also happen on on-premises environments in which the user profile is created newly after every sign-in, including cases in which multiple users sign-in to the system via Remote Desktop.
+
 ## Causes
 
 The following list contains known scenarios causing black screens, and the non-security fixes which address them. This list does not cover every possible reason a black screen can occur. Verify that you have the latest updates, as blank screen updates are being released on a near-monthly basis.
