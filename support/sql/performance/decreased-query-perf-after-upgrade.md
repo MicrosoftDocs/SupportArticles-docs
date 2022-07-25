@@ -54,7 +54,7 @@ To resolve the issue, try one of the following methods:
   This is a favorable option and can be used to targeted specific queries. Forcing a plan could be done by using a [plan guide](/sql/relational-databases/performance/plan-guides) or QDS. Using QDS is generally easier to use.
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
-  This is less preferred than a more targeted approach, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
+  This is less preferred approach as it is a database-wide setting and it applies to all queries against this database, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
 - Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag). You can use DBCC TRACEON or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters). 
 
   This is the least-targeted approach that should only be used as a temporary mitigation when you're unable to apply any of the other options.
