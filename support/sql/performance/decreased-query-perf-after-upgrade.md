@@ -17,7 +17,7 @@ After you upgrade your SQL Server from 2012 or earlier versions to 2014 or later
 In this article, we provide troubleshooting steps and resolutions for query performance issues that caused by the CE model change.
 
 > [!NOTE]
-> If all the queries run slower after the upgrade, the troubleshooting steps introduced in this article won't be fit to your situation.
+> If all the queries run slower after the upgrade, the troubleshooting steps introduced in this article are likely not applicable to your situation.
 
 ## Troubleshooting: Identify if CE changes are the problem and find out the reason
 
@@ -37,7 +37,7 @@ Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-o
 
 #### Step 3: Find out why the query performs better with the legacy CE
 
-Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding [trace flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql) to test the query. Find out which hints or trace flags cause the performance change.
+Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. Based on these tests determine which hints or trace flags positively impact the performance.
 
 ## Resolution
 
@@ -45,21 +45,21 @@ To resolve the issue, try one of the following methods:
 
 - Optimize the query.
 
-  Understandably, it's not always possible. But especially when there's only a few (poorly written) queries, this approach should be the first choice because optimally written queries perform better regardless of CE versions.
+  Understandably, it's not always possible to re-write queries but especially when there's only a few queries that can be re-written, this approach should be the first choice. Optimally written queries perform better regardless of CE versions.
 - Use query hints identified in [Step 3](#step-3-find-out-why-the-query-performs-better-with-the-legacy-ce).
 
   This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
 - Force a good plan.
 
-  This is a favorable option as a targeted approach. It could be done by using a plan guide or QDS. Using QDS is more robust but has other implications.
+  This is a favorable option and can be used to targeted specific queries. Forcing a plan could be done by using a [plan guide](/sql/relational-databases/performance/plan-guides) or QDS. Using QDS is generally easier to use.
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
   This is less preferred than a more targeted approach, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
-- Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag).
+- Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag). You can use DBCC TRACEON or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters). 
 
   This is the least-targeted approach that should only be used as a temporary mitigation when you're unable to apply any of the other options.
 
-## Force to use the legacy CE
+## Options to enable Legacy CE
 
 ### Query level: Use Query Hint or QUERYTRACEON option
 
