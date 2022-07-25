@@ -1,8 +1,8 @@
 ---
 title: Verify first-party Microsoft applications in sign-in reports
 description: Describes how to verify first-party Microsoft applications in sign-in reports
-ms.date: 02/09/2022
-ms.reviewer: jafritts
+ms.date: 07/12/2022
+ms.reviewer: bernaw
 ms.service: active-directory
 ms.subservice: compliance
 ---
@@ -10,7 +10,7 @@ ms.subservice: compliance
 
 When you are reviewing your sign-in reports, you may see an application in your sign-in report that you don't own and want to identify the application. You also may wonder how you signed into that app, as you don't remember accessing the app.
 
-Here is an example of a sign-in report:
+Here's an example of a sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
@@ -29,7 +29,7 @@ Though the apps listed in sign-in reports are indeed owned by Microsoft, and are
 
 3. In the **Application Type** drop-down menu, select **Microsoft Applications** and hit apply.  All applications listed here are owned by Microsoft.
 
-    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications is selected.":::
+    :::image type="content" source="media/verify-first-party-apps-sign-in/microsoft-applications-in-application-type-menu.png" alt-text="Screenshot of the Application Type drop-down menu where Microsoft Applications are selected.":::
 
 4. In the search box below the selectable drop-down menus, filter the list by adding a specific **Display Name** or **Application ID**.
 
@@ -129,6 +129,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |OfficeClientService|0f698dd4-f011-4d23-a33e-b36416dcb1e6|
 |OfficeHome|4765445b-32c6-49b0-83e6-1d93765276ca|
 |OfficeShredderWacClient|4d5c2d63-cf83-4365-853c-925fd1a64357|
+|OMSOctopiPROD|62256cef-54c0-4cb4-bcac-4c67989bdc40|
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|

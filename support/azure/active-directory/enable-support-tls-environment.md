@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 06/14/2022
+ms.date: 07/11/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: dahans, abizerh
@@ -237,6 +237,17 @@ To query for legacy TLS entries using Azure Monitor:
 
     // Non-interactive sign-ins
     AADNonInteractiveUserSignInLogs
+    | where AuthenticationProcessingDetails has "Legacy TLS"
+        and AuthenticationProcessingDetails has "True"
+    | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
+    | mv-apply JsonAuthProcDetails on (
+        where JsonAuthProcDetails.key startswith "Legacy TLS"
+        | project HasLegacyTls=JsonAuthProcDetails.value
+    )
+    | where HasLegacyTls == true
+
+    // Workload Identity (service principal) sign-ins
+    AADServicePrincipalSignInLogs
     | where AuthenticationProcessingDetails has "Legacy TLS"
         and AuthenticationProcessingDetails has "True"
     | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
