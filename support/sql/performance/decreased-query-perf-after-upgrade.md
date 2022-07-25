@@ -49,7 +49,7 @@ To resolve the issue, try one of the following methods:
 - Use query hints identified in [Step 3](#step-3-find-out-why-the-query-performs-better-with-the-legacy-ce).
 
   This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
-- Force a "good" plan.
+- Force a good plan.
 
   This is a favorable option as a targeted approach. It could be done by using a plan guide or QDS. Using QDS is more robust but has other implications.
 - Use [database-scoped configuration](#database-levelset-scoped-configuration-or-compatibility-level) to force the legacy CE.
@@ -67,7 +67,7 @@ To resolve the issue, try one of the following methods:
 
    ```sql
    SELECT * FROM Table1
-   where Col1 = 10
+   WHERE Col1 = 10
    OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));
    ```
 
@@ -75,7 +75,7 @@ To resolve the issue, try one of the following methods:
 
    ```sql
    SELECT * FROM Table1
-   where Col1 = 10
+   WHERE Col1 = 10
    OPTION (QUERYTRACEON 9481)
    ```
 
