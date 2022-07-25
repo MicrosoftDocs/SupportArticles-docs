@@ -79,34 +79,34 @@ Follow these steps on both the primary server and the replica server:
 
 4. Expand **Task Scheduler** in the left pane. Select and hold (or right-click) **Task Scheduler Library**, and then select **Create Task**. The task creation window will be displayed.
 
-5. Set the following items on the **General** tab:
+5. Set the following options on the **General** tab:
 
     - **Name**: Specify a task name (for example, *Hyper-V Replica AutoResume Task*).
     - **When running the task, use the following user account**: Specify a user account with administrator privileges (for example, *\<Domain Name>\administrator*).
-    - **Run only when user is logged on**: Unchecked
-    - **Run whether user is logged on or not**: Checked
-    - **Run with highest privileges**: Checked
+    - **Run only when user is logged on**: Uncheck the option
+    - **Run whether user is logged on or not**: Check the option
+    - **Run with highest privileges**: Check the option
 
 6. Select the **Triggers** tab and then select **New**.
 
-7. Set the following items and select **OK**:
+7. Set the following options and then select **OK**:
 
-    - **Begin the task**: **At startup**
-    - **Advanced setting**: **Enabled**: Checked
+    - **Begin the task**: Select **At startup**
+    - **Advanced settings** > **Enabled**: Check the option
 
     > [!NOTE]
-    > The other items are unchecked.
+    > The other options are unchecked.
 
 8. Select the **Actions** tab and then select **New**.
 
-9. Set the following items and select **OK**:
+9. Set the following options and then select **OK**:
 
-    - **Action**: **Start a program**
-    - **Program/script**: **powershell.exe**
-    - **Add arguments (optional)**: Full path of the auto-restart script (For example, *C:\Scripts\restartReplication.ps1*)
-    - **Start in (optional)**: Blank
+    - **Action**: Select **Start a program**
+    - **Program/script**: Type *powershell.exe*
+    - **Add arguments (optional)**: Specify the full path of the auto-restart script (For example, *C:\Scripts\restartReplication.ps1*)
+    - **Start in (optional)**: Leave the value as blank
 
-10. Leave the default settings on the **Conditions** and the **Settings** tabs, and select **OK** to complete the settings.
+10. Leave the default settings on the **Conditions** and the **Settings** tabs, and then select **OK** to complete the settings.
 
 When the authentication prompts, enter the administrator password.
 
