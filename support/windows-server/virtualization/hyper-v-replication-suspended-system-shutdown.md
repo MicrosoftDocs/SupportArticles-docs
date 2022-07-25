@@ -64,7 +64,7 @@ The script automatically restarts the replication that was paused at the time of
 
 Follow these steps on both the primary server and the replica server:
 
-1. Copy the replication automatic restart script and save it in any folder (for example, *C:\Scripts*) with the file name *restartReplication.ps1*.
+1. Copy the replication automatic restart script and save it in any folder (for example, _C:\Scripts_) with the file name _restartReplication.ps1_.
 
 2. Start PowerShell and run the following cmdlet:
 
@@ -83,8 +83,8 @@ Follow these steps on both the primary server and the replica server:
 
 5. Set the following options on the **General** tab:
 
-    - **Name**: Specify a task name (for example, *Hyper-V Replica AutoResume Task*).
-    - **When running the task, use the following user account**: Specify a user account with administrator privileges (for example, *\<Domain Name>\administrator*).
+    - **Name**: Specify a task name (for example, _Hyper-V Replica AutoResume Task_).
+    - **When running the task, use the following user account**: Specify a user account with administrator privileges (for example, _\<Domain Name>\administrator_).
     - **Run only when user is logged on**: Uncheck the option
     - **Run whether user is logged on or not**: Check the option
     - **Run with highest privileges**: Check the option
@@ -104,8 +104,8 @@ Follow these steps on both the primary server and the replica server:
 9. Set the following options and then select **OK**:
 
     - **Action**: Select **Start a program**
-    - **Program/script**: Type *powershell.exe*
-    - **Add arguments (optional)**: Specify the full path of the auto-restart script (For example, *C:\Scripts\restartReplication.ps1*)
+    - **Program/script**: Type _powershell.exe_
+    - **Add arguments (optional)**: Specify the full path of the auto-restart script (For example, _C:\Scripts\restartReplication.ps1_)
     - **Start in (optional)**: Leave the value as blank
 
 10. Leave the default settings on the **Conditions** and the **Settings** tabs, and then select **OK** to complete the settings.
@@ -152,11 +152,11 @@ If an error such as a restart failure occurs, the error content is recorded in t
 
 ## Replication automatic restart script
 
-Here's the replication automatic restart script.
+Here's the replication automatic restart script:
 
 ```powershell
 $EventSource = "Hyper-V Replica script"  ### Event source name recorded in system log. 
-$StartUpTimeout = 60                     ### Startup timout value for replication service in second.
+$StartUpTimeout = 60                     ### Startup timeout value for replication service in second.
 If ([System.Diagnostics.EventLog]::SourceExists($EventSource) -eq $false)
 {
     New-EventLog -LogName System -Source $EventSource 
@@ -176,17 +176,17 @@ While((Get-VMReplication).count -eq 0)
         Exit(1)
     }
 }
-$Message = "Replicaton service in VMMS was started succefully. It took " + $Count + " seconds after VMMS started."
+$Message = "Replication service in VMMS was started successfully. It took " + $Count + " seconds after VMMS started."
 Write-EventLog -LogName System -Source $EventSource -EntryType Information -EventID 2 -Message $Message
 ###
 ### MAIN
 ###
-$LocalVMs = Get-VMReplication   ### Get local VMs wiht replication enabled.
+$LocalVMs = Get-VMReplication   ### Get local VMs with replication enabled.
 Foreach($LocalVM in $LocalVMs) 
 {
     $PrimaryServer = $LocalVM.PrimaryServer
     $VMName = $LocalVM.Name
-    ### Get-VMRplication will access remote primary server if this VM is RecoveryVM.
+    ### Get-VMReplication will access remote primary server if this VM is RecoveryVM.
     $VM = Get-VMReplication -ComputerName $PrimaryServer | Where-Object { $_.Name -eq $VMName}
     If ($VM -eq $null -or $VM.count -eq 0) 
     {
