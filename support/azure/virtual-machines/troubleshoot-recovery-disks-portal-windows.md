@@ -19,7 +19,7 @@ The steps you should use to attach a failed OS disk to a repair VM depend on whe
 - If the OS disk is unmanaged, see [Attach an unmanaged disk to a VM for offline repair](unmanaged-disk-offline-repair.md) for instructions on attaching the disk to a repair VM. If you're unsure, see [Determine if the OS disk is managed or unmanaged](unmanaged-disk-offline-repair.md#determine-if-the-os-disk-is-managed-or-unmanaged).
 
 - If the OS disk is managed,
-  - Not encrypted, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md). This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair). If you are unsure if the OS disk is encrypted, see [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
+  - Not encrypted, see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md). This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair). If you're unsure if the OS disk is encrypted, see [Confirm that ADE is enabled on the disk](unlock-encrypted-disk-offline.md#confirm-that-ade-is-enabled-on-the-disk).
   
   - Encrypted with ADE single-pass encryption (with or without KEK), see [Repair a Windows VM by using the Azure Virtual Machine repair commands](repair-windows-vm-using-azure-virtual-machine-repair-commands.md). This is the automated (preferred) method to attach a failed OS disk to a repair VM by using [az vm repair](/cli/azure/vm/repair).
   
