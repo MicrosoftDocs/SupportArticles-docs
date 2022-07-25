@@ -40,7 +40,7 @@ Hyper-V replication is suspended when the primary server or the replica server i
     Event ID: 32022
     Level:  Error
     Description: 
-    Hyper-V could not replicate changes for virtual machine <VMname>: The operation has been canceled (0x80004004). (Virtual Machine ID <VM GUID>)
+    Hyper-V could not replicate changes for virtual machine <VM Name>: The operation has been canceled (0x80004004). (Virtual Machine ID <VM GUID>)
     ```
 
     > [!NOTE]
