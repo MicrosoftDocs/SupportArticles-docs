@@ -115,7 +115,6 @@ To add the custom route, follow these steps:
     ```console
     psping kms.core.windows.net:1688
     psping azkms.core.windows.net:1688
-
     ```
 
 4. Try to activate Windows, and see if the problem is resolved.
