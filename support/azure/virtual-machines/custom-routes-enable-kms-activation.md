@@ -44,7 +44,7 @@ The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.w
 > [!NOTE] 
 > All the three IP addresses for the Azure Global cloud should be added to the custom route.
 > 
-> <sup>*</sup> To mitigate an issue related to Network Security Group, **azkms.core.windows.net** points to **kms.core.windows.net** for now. After the issue is resolved (estimated October 3rd, 2022) **azkms.core.windows.net** will point to two new IP addresses: **20.118.99.224** and **40.83.235.53**.
+> <sup>*</sup> To mitigate an issue related to Network Security Group, **azkms.core.windows.net** points to **kms.core.windows.net** for now. After the issue is resolved (planned for October 3rd, 2022) **azkms.core.windows.net** will point to two new IP addresses: **20.118.99.224** and **40.83.235.53**.
 
 To add the custom route, follow these steps:
 
