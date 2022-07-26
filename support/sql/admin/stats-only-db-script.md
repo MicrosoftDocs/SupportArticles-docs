@@ -1,7 +1,7 @@
 ---
 title: Create a statistics-only database using a generated statistics script  
 description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
-ms.date: 07/25/2022
+ms.date: 07/26/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
