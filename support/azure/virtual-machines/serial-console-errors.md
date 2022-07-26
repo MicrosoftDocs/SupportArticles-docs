@@ -20,7 +20,7 @@ ms.author: genli
 There are a set of known errors within the Azure Serial Console. This is a list of those errors and mitigation steps for them.
 
 > [!NOTE]
-> You might receive "Web socket is closed or could not be opened" error recently. To resolve this issue, add firewall access to `*.serialconsole.azure.com`.
+> You might receive the "Web socket is closed or could not be opened" error recently. To resolve this issue, add firewall access to `*.serialconsole.azure.com`.
 
 ## Common errors
 
