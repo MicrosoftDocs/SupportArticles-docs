@@ -12,9 +12,9 @@ ms.author: jopilov
 
 # Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 
-After you upgrade your SQL Server from 2012 or earlier versions to 2014 or later versions, some queries (not all) may run slower than before. The probable cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. And the largest changes to the CE models were introduced in SQL Server 2014.
+After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there're many possible causes and contributing factors depending on the situation, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
 
-In this article, we provide troubleshooting steps and resolutions for query performance issues that caused by the CE model change.
+In this article, we provide troubleshooting steps and resolutions for query performance issues that occur when using the default CE but don't occur when using the legacy CE.
 
 > [!NOTE]
 > If all the queries run slower after the upgrade, the troubleshooting steps introduced in this article are likely not applicable to your situation.
@@ -55,7 +55,7 @@ To resolve the issue, try one of the following methods:
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
   This is less preferred approach as it is a database-wide setting and it applies to all queries against this database, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
-- Use trace flag 9841 to [force legacy CE globally](#server-level-use-trace-flag). You can use DBCC TRACEON or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters). 
+- Use trace flag 9841 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
 
   This is the least-targeted approach that should only be used as a temporary mitigation when you're unable to apply any of the other options.
 
@@ -93,17 +93,15 @@ To resolve the issue, try one of the following methods:
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
    ```
 
-- You can alter the compatibility level for the database, though this change impacts more than just the cardinality estimation.
+- Alter the compatibility level for the database. It's the only option available for SQL Server 2014. Note that this change impacts more than just the CE. To determine the impact of compatibility level changes, go to [ALTER DATABASE compatibility level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level#differences-between-compatibility-levels) and examine the "Differences" tables in it.
 
    ```sql
    ALTER DATABASE <YourDatabase>
    SET COMPATIBILITY_LEVEL = 110  -- set it to SQL Server 2012 level
    ```
 
-  To determine the impact of compatibility level changes, go to [ALTER DATABASE compatibility level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level#differences-between-compatibility-levels) and examine the Differences tables in it.
-  
-  > [!NOTE]
-  > This is the only option available for SQL Server 2014.
+> [!NOTE]
+> This change will affect all queries executing within the context of the database for which configuration is changed unless an overriding trace flag or query hint is used. Queries which perform better due to default CE may regress.
 
 ### Server level: Use trace flag
 
@@ -116,8 +114,10 @@ DBCC TRACEON(9481, -1)
 DBCC TRACESTATUS
 ```
 
-## Frequently asked questions
+> [!NOTE]
+> This change will affect all queries executing within the context of the SQL Server instance unless an overriding trace flag or query hint is used. Queries which perform better due to default CE may regress.
 
+## Frequently asked questions
 
 #### Q1: I'm interested in upgrading to a more recent version of SQL Server and I'm concerned about cardinality estimator performance regressions. What upgrade planning is recommended for minimizing issues?
 
@@ -203,6 +203,6 @@ Changes in [CE versions](/sql/relational-databases/performance/cardinality-estim
 
 Unfortunately, it's not considered to be a bug. In such situations, use a workaround such as tuning the query, just like you needed to do with the legacy CE if query performance isn't acceptable, or forcing a previous CE model or a specific execution plan.
 
-#### Q9: I would like to learn details about the cardinality changes in the default CE and the query performance impact
+#### Q9: Is there any resource to learn details about the cardinality changes in the default CE and the query performance impact?
 
-You can reference the ["Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator"](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Optimizing%20Your%20Query%20Plans%20with%20the%20SQL%20Server%202014%20Cardinality%20Estimator.docx) technical article for details and read the "What Changed in SQL Server 2014?" section. 
+See [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Optimizing%20Your%20Query%20Plans%20with%20the%20SQL%20Server%202014%20Cardinality%20Estimator.docx) for details and read the "What Changed in SQL Server 2014?" section.
