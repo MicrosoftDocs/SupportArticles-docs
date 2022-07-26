@@ -2,6 +2,15 @@
 
 
 
+## Week of July 18, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/22/2022 | [Skype for Business presence is unavailable on the Microsoft 365 navigation bar](/skypeforbusiness/troubleshoot/online-im-presence/sfb-presence-unavailable) | modified |
+| 7/22/2022 | [Cannot sign in after PIC or External Communications is enabled](/skypeforbusiness/troubleshoot/online-sign-in/cannot-sign-in-pic-is-enabled) | modified |
+
+
 ## Week of June 20, 2022
 
 

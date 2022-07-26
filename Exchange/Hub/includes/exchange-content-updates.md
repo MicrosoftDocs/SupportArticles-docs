@@ -2,6 +2,15 @@
 
 
 
+## Week of July 18, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/22/2022 | [Error when Microsoft 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365.](/exchange/troubleshoot/outlook-issues/encrypted-connection-unavailable) | modified |
+| 7/22/2022 | [Outlook and mobile device connectivity troubleshooting resource for Microsoft 365](/exchange/troubleshoot/outlook-issues/office-365-troubleshooting-resources) | modified |
+
+
 ## Week of July 11, 2022
 
 
@@ -39,12 +48,3 @@
 |------|------------|--------|
 | 6/20/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | modified |
 | 6/22/2022 | [RopFastTransferSourceCopyTo operation fails on messages](/exchange/troubleshoot/client-connectivity/ropfasttransfersourcecopyto-operation-fails) | added |
-
-
-## Week of June 13, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/17/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
-| 6/17/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |

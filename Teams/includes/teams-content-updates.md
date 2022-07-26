@@ -2,6 +2,14 @@
 
 
 
+## Week of July 18, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/18/2022 | [External member can see channel message previews of shared channels in search results](/microsoftteams/troubleshoot/channels/external-memeber-can-preview-shared-channel-messages) | added |
+
+
 ## Week of July 11, 2022
 
 
