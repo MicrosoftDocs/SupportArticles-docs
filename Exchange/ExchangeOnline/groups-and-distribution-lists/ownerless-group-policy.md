@@ -48,7 +48,9 @@ If members decline the ownership, they won't receive any further notifications. 
 
 ## What happens if the notification period ends, and members don't response to the notifications?  
 
-Assume that the notification period is four weeks. After four weeks, the notifications are no longer sent. In Microsoft Purview compliance portal, admins can see which ownerless group is unattended in the audit log by selecting the Unattended ownerless group activity. When an audit log is generated, admins can see an alert in the compliance portal. In this scenario, Microsoft 365 groups don't take any further action. Admins need to take further actions on their own to resolve the ownerless groups, such as contacting group members themselves.
+Assume that the notification period is four weeks. After four weeks, the notifications are no longer sent. In [Microsoft Purview compliance portal](https://go.microsoft.com/fwlink/p/?linkid=2077149), admins can see which ownerless group is unattended in the [audit log](/microsoft-365/compliance/set-up-basic-audit#step-3-search-the-audit-log) by selecting the **Unattended ownerless group** activity. When an audit log is generated, admins can see an alert in the compliance portal. In this scenario, Microsoft 365 groups don't take any further action. Admins need to take further actions on their own to resolve the ownerless groups, such as contacting group members themselves.
+
+:::image type="content" source="media/ownerless-group-policy/activities.png" alt-text="Screenshot of the Activities window in which the Unattended ownerless group option is selected.":::
 
 ## What happens if a member forwards a notification to someone else?
 
@@ -65,6 +67,8 @@ Yes. The user will receive notifications for all the ownerless groups where the 
 ## Is premium plan required for all scenarios of notifications?
 
 Yes. When you specify who can receive ownership notifications for an ownerless group policy, premium plan is required for creating a security group that's used for allowing or blocking the policy.
+
+:::image type="content" source="media/ownerless-group-policy/premium-plan-required.png" alt-text="Screenshot of a warning that requires you to upgrade premium plan when you specify who can receive ownership notifications.":::
 
 ## Issue: Actionable buttons (Yes or No) don't appear in a notification
 
