@@ -12,7 +12,7 @@ ms.author: jopilov
 
 # Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 
-After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there're many possible causes and contributing factors depending on the situation, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
+After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there are many possible causes and contributing factors depending on the situation, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
 
 In this article, we provide troubleshooting steps and resolutions for query performance issues that occur when using the default CE but don't occur when using the legacy CE.
 
@@ -45,7 +45,7 @@ To resolve the issue, try one of the following methods:
 
 - Optimize the query.
 
-  Understandably, it's not always possible to re-write queries but especially when there's only a few queries that can be re-written, this approach should be the first choice. Optimally written queries perform better regardless of CE versions.
+  Understandably, it's not always possible to rewrite queries but especially when there's only a few queries that can be rewritten, this approach should be the first choice. Optimally written queries perform better regardless of CE versions.
 - Use query hints identified in [Step 3](#step-3-find-out-why-the-query-performs-better-with-the-legacy-ce).
 
   This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
@@ -84,7 +84,7 @@ To resolve the issue, try one of the following methods:
 - For SQL Server 2016 and later versions, alter database scoped configuration:
 
    ```sql
-   --Force a specific database to use legacy CE
+    --Force a specific database to use legacy CE
     ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;
 
     -- Validate what databases use legacy CE
@@ -93,7 +93,7 @@ To resolve the issue, try one of the following methods:
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';
    ```
 
-- Alter the compatibility level for the database. It's the only option available for SQL Server 2014. Note that this change impacts more than just the CE. To determine the impact of compatibility level changes, go to [ALTER DATABASE compatibility level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level#differences-between-compatibility-levels) and examine the "Differences" tables in it.
+- Alter the compatibility level for the database. It's the only database-level option available for SQL Server 2014. Note that this change impacts more than just the CE. To determine the impact of compatibility level changes, go to [ALTER DATABASE compatibility level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level#differences-between-compatibility-levels) and examine the "Differences" tables in it.
 
    ```sql
    ALTER DATABASE <YourDatabase>
@@ -125,11 +125,7 @@ For pre-existing databases running at lower compatibility levels, the recommende
 
 #### Q2: I don't have time to test for CE changes. What can I do in this case?
 
-For pre-existing applications and workloads, we don't recommend moving to the default CE until sufficient regression testing has been performed. If you still have doubts, we recommend that you still upgrade SQL Server, move to the latest available compatibility level, but as a precaution, also configure the `LEGACY_CARDINALITY_ESTIMATION` database scoped configuration `ON` until you have an opportunity to test. To do this, execute the following command within the context of your database:
-
-```sql
-ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = ON;
-```
+For pre-existing applications and workloads, we don't recommend moving to the default CE until sufficient regression testing has been performed. If you still have doubts, we recommend that you still upgrade SQL Server, move to the latest available compatibility level, but as a precaution, also enable trace flag 9481 for SQL Server 2014 or configure the [LEGACY_CARDINALITY_ESTIMATION database scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) `ON` for SQL Server 2016 and later versions until you have an opportunity to test.
 
 #### Q3: Are there any disadvantages of using the legacy CE permanently?
 
@@ -140,7 +136,7 @@ Future cardinality estimator-related improvements and fixes are centered around 
 
 #### Q4: I have thousands of databases and don't want to manually turn on LEGACY_CARDINALITY_ESTIMATION for each. Is there an alternative method?
 
-For SQL Server, enable trace flag 9481 to use the legacy CE for all databases irrespective of the compatibility level. Alternatively, execute the following query to iterate through databases. The setting will be enabled even when the database is restored or attached in another server.
+For SQL Server 2014, enable trace flag 9481 to use the legacy CE for all databases irrespective of the compatibility level. For SQL Server 2016 and later versions, execute the following query to iterate through databases. The setting will be enabled even when the database is restored or attached in another server.
 
 ```sql
 SELECT [name], 0 AS [isdone]
