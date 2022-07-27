@@ -14,7 +14,7 @@ ms.author: jopilov
 
 After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there are many possible causes and contributing factors depending on the situation, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
 
-In this article, we provide troubleshooting steps and resolutions for query performance issues that occur when using the default CE but don't occur when using the legacy CE.
+This article provides troubleshooting steps and resolutions for query performance issues that occur when using the default CE but don't occur when using the legacy CE.
 
 > [!NOTE]
 > If all the queries run slower after the upgrade, the troubleshooting steps introduced in this article are likely not applicable to your situation.
@@ -23,21 +23,21 @@ In this article, we provide troubleshooting steps and resolutions for query perf
 
 #### Step 1: Identify if the default CE is used
 
-1. Choose a query that you can repro the issue with.
+1. Choose a query that you can reproduce the issue with.
 1. Run the query and [collect the execution plan](/sql/relational-databases/performance/display-an-actual-execution-plan#to-include-an-execution-plan-for-a-query-during-execution).
 1. From the execution plan Properties window, check **CardinalityEstimationModelVersion**.
     :::image type="content" source="media/decreased-query-perf-after-upgrade/query-plan-ce-version.png" alt-text="Find CE model version from the execution plan Properties window.":::
-1. A value of 70 indicates the legacy CE and a value of 120 or higher indicates the use of the default CE.
+1. A value of 70 indicates the legacy CE, and a value of 120 or higher indicates the use of the default CE.
 
-If the legacy CE is used, the CE changes aren't the cause of the performance issue. If the default CE is used, go to next step.
+If the legacy CE is used, the CE changes aren't the cause of the performance issue. If the default CE is used, go to the next step.
 
 #### Step 2: Identify if Query Optimizer can generate a better plan by using the legacy CE
 
-Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than using the default CE, go to next step. Else, the CE changes aren't the cause.
+Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than the default CE, go to the next step. If performance doesn't improve, the CE changes aren't the cause.
 
 #### Step 3: Find out why the query performs better with the legacy CE
 
-Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. Based on these tests determine which hints or trace flags positively impact the performance.
+Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. These tests determine which hints or trace flags positively impact the performance.
 
 ## Resolution
 
@@ -45,19 +45,19 @@ To resolve the issue, try one of the following methods:
 
 - Optimize the query.
 
-  Understandably, it's not always possible to rewrite queries but especially when there's only a few queries that can be rewritten, this approach should be the first choice. Optimally written queries perform better regardless of CE versions.
+  Understandably, it's not always possible to rewrite queries, but especially when there are only a few queries that can be rewritten, this approach should be the first choice. Optimally written queries perform better regardless of CE versions.
 - Use query hints identified in [Step 3](#step-3-find-out-why-the-query-performs-better-with-the-legacy-ce).
 
-  This targeted approach still allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
+  This targeted approach allows other workloads to benefit from the default CE assumptions and improvements. Additionally, it's a more robust option than creating a plan guide. And it doesn't require [Query Store](/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store) (QDS), unlike forcing a plan (the most robust option).
 - Force a good plan.
 
-  This is a favorable option and can be used to targeted specific queries. Forcing a plan could be done by using a [plan guide](/sql/relational-databases/performance/plan-guides) or QDS. Using QDS is generally easier to use.
+  This is a favorable option and can be used to target specific queries. Forcing a plan could be done by using a [plan guide](/sql/relational-databases/performance/plan-guides) or QDS. QDS is generally easier to use.
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
-  This is less preferred approach as it is a database-wide setting and it applies to all queries against this database, but sometimes necessary when a targeted approach isn't feasible. It's certainly the most easy-to-implement option.
+  This is a less preferred approach as it is a database-wide setting and applies to all queries against this database. Still, it is sometimes necessary when a targeted approach isn't feasible. It's certainly the easiest option to implement.
 - Use trace flag 9841 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
 
-  This is the least-targeted approach that should only be used as a temporary mitigation when you're unable to apply any of the other options.
+  This is the least-targeted approach and should only be used as a temporary mitigation when you're unable to apply any of the other options.
 
 ## Options to enable Legacy CE
 
@@ -101,7 +101,7 @@ To resolve the issue, try one of the following methods:
    ```
 
 > [!NOTE]
-> This change will affect all queries executing within the context of the database for which configuration is changed unless an overriding trace flag or query hint is used. Queries which perform better due to default CE may regress.
+> This change will affect all queries executing within the context of the database for which configuration is changed unless an overriding trace flag or query hint is used. Queries that perform better due to default CE may regress.
 
 ### Server level: Use trace flag
 
@@ -115,7 +115,7 @@ DBCC TRACESTATUS
 ```
 
 > [!NOTE]
-> This change will affect all queries executing within the context of the SQL Server instance unless an overriding trace flag or query hint is used. Queries which perform better due to default CE may regress.
+> This change will affect all queries executing within the context of the SQL Server instance unless an overriding trace flag or query hint is used. Queries that perform better due to default CE may regress.
 
 ## Frequently asked questions
 
