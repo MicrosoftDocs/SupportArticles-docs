@@ -85,7 +85,7 @@ The log entries above indicate a disk corruption. In certain situations, the dis
 
 To resolve the Linux VM boot issues caused by filesystem errors, recover the VM by repairing the disk corruption. To repair the disk corruption, follow these steps:
 
-1. [Determine which disk is corrupted](#determine-which-disk-is-corrupted).
+1. [Identify which disk is corrupted](#identify-which-disk-is-corrupted).
 2. [Identify filesystem type](#identify-filesystem-type).
 3. [Select recovery mode (online or offline)](#select-recovery-mode).
 4. Prepare the recovery environment according to the recovery mode you select:
@@ -133,7 +133,7 @@ In the following example, the corrupted device is `dm-2`. It's a Linux Device Ma
 [   18.014318] EXT4-fs (dm-2): VFS: Can't find ext4 filesystem
 [FAILED] Failed to mount /home.
 See 'systemctl status home.mount' for details.
-[DEPEND] Dependency failed for Local filesystems.
+[DEPEND] Dependency failed for Local File Systems.
 [DEPEND] Dependency failed for Mark the need to relabel after reboot.
 
 ```
@@ -270,7 +270,7 @@ Fix<y>? yes
 Free blocks count wrong (8211645, counted=8211646).
 Fix<y>? yes
 
-/dev/sdc1: ***** filesystem WAS MODIFIED *****
+/dev/sdc1: ***** FILE SYSTEM WAS MODIFIED *****
 /dev/sdc1: 11/2097152 files (0.0% non-contiguous), 176706/8388352 blocks
 [root@vm1dev ~]#
 ```
