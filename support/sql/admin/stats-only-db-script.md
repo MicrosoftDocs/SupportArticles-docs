@@ -1,7 +1,7 @@
 ---
 title: Create a statistics-only database using a generated statistics script  
 description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
-ms.date: 07/26/2022
+ms.date: 07/28/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
@@ -13,7 +13,8 @@ ms.author: v-jayaramanp
 
 In this article, you learn how to generate a statistics script using database metadata for creating a statistics-only database in SQL Server.
 
-**Applies to:** &nbsp; SQL Server 2014 Developer, SQL Server 2014 Enterprise, [More](https://support.microsoft.com/en-US)
+_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008
+_Original KB number:_ &nbsp;914288
 
 ## Introduction
 
@@ -41,7 +42,7 @@ When you generate a statistics-only clone database, it might be easier and more 
 - You avoid issues with missing dependent objects that are required to reproduce the issue.
 - You require fewer steps to select the necessary objects.
 
-Note that if you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's recommended that you generate the script during off-peak hours, or you can use the second option (Script Individual Objects) to generate the script for individual objects.
+Note that if you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's recommended that you generate the script during off-peak hours, or you can use the second option ([Script Individual Objects](#script-individual-objects)) to generate the script for individual objects.
 
 To script each database that is referenced by your query, follow these steps:
 
