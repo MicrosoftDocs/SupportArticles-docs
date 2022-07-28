@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot sign-in issues for Lync for Mac 2011 in Skype for Business Online
-description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Office 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
+description: Contains information about how to troubleshoot Lync for Mac issues in Skype for Business Online for Microsoft 365. Discusses how to sign in to Skype for Business Online by using Lync for Mac and how to collect log files for Lync for Mac issues.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -29,7 +29,7 @@ This article contains information about how to troubleshoot Lync for Mac issues 
 First, make sure that users follow the correct steps when they sign in to Skype for Business Online. If users are signing in to Skype for Business Online correctly and the issue persists, use one or more of the other methods later in this article to troubleshoot the issue, as appropriate for your situation.
 
 > [!NOTE]
-> To connect Lync for Mac 2011 to Skype for Business Online in Office 365, you must have Lync for Mac version 14.0.6 or a later version installed. If you use a version that's earlier than version 14.0.6, you may have problems when you sign in to Skype for Business Online because earlier versions have issues that prevent authentication to Skype for Business Online. You can find the latest update at [Update for Lync for Mac 2011](https://www.microsoft.com/download/details.aspx?id=36517).
+> To connect Lync for Mac 2011 to Skype for Business Online in Microsoft 365, you must have Lync for Mac version 14.0.6 or a later version installed. If you use a version that's earlier than version 14.0.6, you may have problems when you sign in to Skype for Business Online because earlier versions have issues that prevent authentication to Skype for Business Online. You can find the latest update at [Update for Lync for Mac 2011](https://www.microsoft.com/download/details.aspx?id=36517).
 
 #### Make sure that users follow the correct steps when they sign in to Skype for Business Online
 
@@ -47,7 +47,7 @@ To sign in to Skype for Business Online by using Lync for Mac, users should foll
       - Internal server name: sipdir.online.lync.com:443
       - External server name: sipdir.online.lync.com:443
 
-    - Kerberos authentication:Leave this option cleared. Office 365 uses the Microsoft Azure AD authentication system for authentication.
+    - Kerberos authentication:Leave this option cleared. Microsoft 365 uses the Microsoft Azure AD authentication system for authentication.
 
 ### If you still can't sign in
 
@@ -108,9 +108,9 @@ Then, delete any corrupted or cached certificates. To do this, follow these step
 
 #### Federated users synchronized from on-premises Active Directory Domain Services can't sign in by using a password that's longer than 16 characters
 
-Organizations that have on-premises customer password policies may allow for passwords to exceed 16 characters. By default, the password policy in Office 365 restricts passwords to 16 characters or less. Because of the Windows Challenge/Response (NTLM) authentication mechanism in the Mac OS, passwords that are longer than 16 characters aren't recognized correctly, and this causes sign-in to fail.
+Organizations that have on-premises customer password policies may allow for passwords to exceed 16 characters. By default, the password policy in Microsoft 365 restricts passwords to 16 characters or less. Because of the Windows Challenge/Response (NTLM) authentication mechanism in the Mac OS, passwords that are longer than 16 characters aren't recognized correctly, and this causes sign-in to fail.
 
-To work around this issue, the user should change his or her password to be 16 characters or less.
+To work around this issue, the user should change the password to be 16 characters or less.
 
 #### Lync for Mac crashes and the user receives an EXC_BAD_ACCESS error
 

@@ -24,7 +24,7 @@ appliesto:
   - Exchange Server 2013 Standard Edition
   - Exchange Server 2010 Enterprise
   - Exchange Server 2010 Standard
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---

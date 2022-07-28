@@ -7,7 +7,7 @@
           href: ../authentication/continually-prompts-password-office-365.md
         - name: Disconnected after enabling modern authentication
           href: ../authentication/outlook-shows-disconnected-after-enabling-modern-authentication.md
-        - name: Doesn't use Modern Authentication to connect Office 365
+        - name: Doesn't use Modern Authentication to connect Microsoft 365
           href: ../authentication/outlook-prompt-password-modern-authentication-enabled.md
         - name: Force Outlook to resolve proxy addresses and custom properties
           href: ../authentication/how-to-force-outlook-to-resolve-proxy-addresses-and-custom-properties.md
@@ -47,6 +47,8 @@
           href: ../calendaring/calendar-permissions-differences-in-different-versions-of-outlook.md
         - name: Calendar shows working hours as grey
           href: ../calendaring/outlook-calendar-displays-working-hours-as-grey.md
+        - name: Can't delete calendar items
+          href: ../calendaring/cannot-delete-calendar-items.md
         - name: Can't send a response to a meeting request
           href: ../calendaring/cannot-send-response-to-meeting-request.md
         - name: Can't receive tentative meeting requests or responses
@@ -493,7 +495,7 @@
           href: ../performance/outlook-shutdown-slowly-if-using-requireshutdownnotification.md
         - name: Outlook.exe.log in %Temp% consumes too much disk space
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
-        - name: Performance is slow in the Office 365
+        - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
         - name: Performance issues for too many items or folders
           href: ../performance/performance-issues-if-too-many-items-or-folders.md
@@ -531,7 +533,7 @@
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
         - name: Can't copy an appointment to an Outlook.com folder
           href: ../profiles-and-accounts/error-copy-appointment-to-outlook-com-folder.md
-        - name: Can't set up Office 365 account
+        - name: Can't set up Microsoft 365 account
           href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
@@ -561,10 +563,12 @@
           href: ../profiles-and-accounts/you-ll-need-a-new-app-to-open-this-osf-roaming-16.md
         - name: Outlook crashes when sending emails with a nonexistent delivery location setting
           href: ../profiles-and-accounts/outlook-crashes-when-sending-emails.md
+        - name: Outlook displays error message about information service
+          href: ../profiles-and-accounts/starting-outlook-displays-error.md
+        - name: Outlook displays error message on first start
+          href: ../profiles-and-accounts/outlook-displays-error-message-on-first-start.md          
         - name: Outlook doesn't connect or web services don't work after migration
           href: ../profiles-and-accounts/cannot-connect-web-service-not-working-migrated-to-office-365.md
-        - name: Outlook fails to start
-          href: ../profiles-and-accounts/starting-outlook-displays-error.md
         - name: '"Refresh Your PC without affecting your file" option deletes Outlook profile'
           href: ../profiles-and-accounts/refresh-your-pc-without-affecting-your-file-deletes-profile.md
         - name: Remove automapping for shared mailbox
@@ -745,7 +749,7 @@
           href: ../user-interface/custom-mapi-solutions-not-working.md
         - name: MAPI is the only way to change profiles
           href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
-        - name: Messages occur if connecting to office 365 email accounts
+        - name: Messages occur if connecting to Microsoft 365 email accounts
           href: ../user-interface/messages-occur-when-connecting-to-office-365-email-account.md
         - name: Missing registry data causes problems with object model
           href: ../user-interface/missing-registry-information-causes-problems-with-object-model.md
@@ -765,7 +769,7 @@
           href: ../user-interface/only-subset-items-synchronized.md
         - name: OpenSharedItem holds file handle on signed .msg files
           href: ../user-interface/openshareditem-holds-file-handle-on-signed-msg-files.md
-        - name: Out of Office doesn't function correctly in Office 365
+        - name: Out of Office doesn't function correctly in Microsoft 365
           href: ../user-interface/out-of-office-feature-not-working-correctly.md
         - name: Outlook crashes when you call IMAPIProp::GetProps
           href: ../user-interface/stale-mapiobject-causes-outlook-crashes.md

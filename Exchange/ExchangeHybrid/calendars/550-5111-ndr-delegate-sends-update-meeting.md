@@ -1,6 +1,6 @@
 ---
-title: 550 5.1.11 NDR when delegate sends update to meeting after manager moved to Office 365 hybrid environment
-description: Delegate receives an NDR when they send updates to a meeting invitee after a manager is moved to Office 365 hybrid environment.
+title: 550 5.1.11 NDR when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment
+description: Delegate receives an NDR when they send updates to a meeting invitee after a manager is moved to Microsoft 365 hybrid environment.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -14,13 +14,13 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Office 365 hybrid environment
+# "550 5.1.11 RESOLVER.ADR.ExRecipNotFound" when delegate sends update to meeting after manager moved to Microsoft 365 hybrid environment
 
 ## Symptoms
 
 Consider the following scenario:
 
-- A manager, who has a delegate, has their mailbox moved to Microsoft Office 365.
+- A manager, who has a delegate, has their mailbox moved to Microsoft 365.
 - The delegate's mailbox remains in on-premises environment.
 - The manager creates a meeting on their calendar after the mailbox is migrated.
 - The delegate updates the meeting time and sends an updated version of the meeting to the invitees.

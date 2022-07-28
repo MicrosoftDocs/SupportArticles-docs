@@ -17,7 +17,7 @@ appliesto:
   - Word 2016
   - Outlook 2013
   - Word 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -59,7 +59,7 @@ To add the `DontUseScreenDpiOnOpen` value to the registry, follow these steps:
    `HKEY_CURRENT_USER\Software\Microsoft\Office\x.0\Word\Options`
 
     > [!NOTE]
-    > The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Office 365 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010).
+    > The **x.0** placeholder represents your version of Office (16.0 = Office 2016, Microsoft 365 and Office 2019, 15.0 = Office 2013, 14.0 = Office 2010).
 
 4. On the **Edit** menu, point to **New**, and then select **DWORD Value**.
 5. Type *DontUseScreenDpiOnOpen*, and then press Enter .

@@ -1,6 +1,6 @@
 ---
 title: We don't recognize this user ID or password
-description: Describes an issue in which a user gets a We don't recognize this user ID or password error message when trying to sign in to the Office 365 portal. Provides a resolution.
+description: Describes an issue in which a user gets a We don't recognize this user ID or password error message when trying to sign in to the Microsoft 365 portal. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -13,17 +13,17 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "We don't recognize this user ID or password" error when a user tries to sign in to the Office 365 portal
+# "We don't recognize this user ID or password" error when a user tries to sign in to the Microsoft 365 portal
 
 ## Problem 
 
-When users try to sign in to the Office 365 portal, they receive the following error message:
+When users try to sign in to the Microsoft 365 portal, they receive the following error message:
 
-```adoc
+```output
 We don't recognize this user ID or password
 
 Make sure you typed the user ID assigned to you by your organization. It usually looks like someone@example.com or someone@example.onmicrosoft.com. And check to make sure you typed the correct password.This issue occurs if the wrong user ID or password is entered.
@@ -44,17 +44,16 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 ### Scenario: Forgot user ID or password
 
-Click the following article number to go to the article in the Microsoft Knowledge Base article: 
+See [Forgot password to sign in to Microsoft 365, Intune, or Azure](https://support.microsoft.com/help/2606983).
 
-[A user or an administrator forgot his or her password in Office 365, Azure, or Intune ](https://support.microsoft.com/help/2606983)
- 
 ### Scenario: Your organization is using password synchronization together with the Azure Active Directory Sync tool
 
-Do one of the following:
-- Have the user change his or her computer password.    
-- Reset the computer password for the user. When you reset the user's password, make sure that the **User must change password at next logon**check box isn't selected.   
+Perform one of the following actions:
 
-After Active Directory synchronization occurs, the user's computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Azure Active Directory (Azure AD). The user can then log on to the computer, and sign in to Office 365 by using the same password.
+- Have the users change their computer password.
+- Reset the computer password for the users. When you reset the users' password, make sure that the **User must change password at next logon** check box isn't selected.
+
+After Active Directory synchronization occurs, the users' computer password in the on-premises Active Directory Domain Services (AD DS) environment is synced to Azure Active Directory (Azure AD). The users can then log on to the computer, and sign in to Microsoft 365 by using the same password.
 
 ## More information
 

@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook LTSC 2021
 search.appverid: MET150
 ms.date: 3/31/2022
@@ -95,7 +95,7 @@ To set the `ForceOSTPath` registry entry in order to change the location of the 
 2. Locate and then select the registry subkey: `HKEY_CURRENT_USER\Software\Microsoft\Office\xx.0\Outlook`
 
    > [!NOTE]
-   > The *xx*.0 placeholder represents your version of Office (16.0 = Office 2016, Office 365, Office 2019, or Office LTSC 2021, 15.0 = Office 2013).
+   > The *xx*.0 placeholder represents your version of Office (16.0 = Office 2016, Microsoft 365, Office 2019, or Office LTSC 2021, 15.0 = Office 2013).
 
 3. Right-click **Outlook**, select **New**, and then select **Expandable String Value**.
 4. Type *ForceOSTPath*, and then press Enter.

@@ -397,6 +397,8 @@
           href: ../client-connectivity/exchange-security-update-issues.md
         - name: Repair update messages due to TimeZoneMatchCheck failures
           href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
+        - name: RopFastTransferSourceCopyTo operation fails
+          href: ../client-connectivity/ropfasttransfersourcecopyto-operation-fails.md
         - name: Security warning when accessing OWA or ECP
           href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
         - name: Set up OWA
@@ -431,6 +433,8 @@
           href: ../compliance/noderunnersexe-stops-search-not-work.md
         - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+        - name: Search-Mailbox cmdlet error
+          href: ../compliance/search-mailbox-cmdlet-fails.md
     - name: Development
       items:
         - name: Develop apps via Exchange Powershell and .NET Framework
@@ -461,7 +465,7 @@
           href: ../mailflow/cannot-send-email-with-full-access.md
         - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
           href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
-        - name: Can't view Office 365 IRM-encrypted messages
+        - name: Can't view Microsoft 365 IRM-encrypted messages
           href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
         - name: Delayed mail delivery in Exchange
           href: ../mailflow/mail-delivery-delay-exchange.md
@@ -487,6 +491,8 @@
           href: ../mailflow/cannot-add-attachment-outlook-web.md
         - name: Error when sending S/MIME encrypted mails from OWA
           href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+        - name: Event ID 17018 when Microsoft Exchange Transport service stops
+          href: ../mailflow/event-17018-MSExchangeTransport-service-stop.md
         - name: Event ID 7009 when users send or receive emails
           href: ../mailflow/event-7009-send-receive-emails.md
         - name: External or app created emails not delivered

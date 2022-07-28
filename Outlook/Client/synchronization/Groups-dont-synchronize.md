@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: pedrocorreia
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: 
   - MET150
 ms.date: 6/9/2022
@@ -55,8 +55,9 @@ To reduce this time period and fix the issue, use the following steps:
 1. Create the following registry key:
 
     `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode`
-    DWORD = GroupsSyncWindowSetting
+    DWORD = GroupsSyncWindowSetting <br>
     Value = 3
+
     The value is a number that specifies the time period in months for Outlook to cache content in Microsoft 365 groups.
 2. Restart Outlook.
 3. Check  whether the sync status in the status bar in Outlook has updated to display "This folder is up to date".

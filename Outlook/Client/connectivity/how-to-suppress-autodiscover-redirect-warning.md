@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -58,7 +58,7 @@ To configure Outlook behavior when HTTP redirection occurs, you can set or deplo
     > [!NOTE]
     > You can also use the following registry subkey:  
     > `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<xx.0>\Outlook\AutoDiscover\RedirectServers`  
-    > Where <xx.0> is 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Office 365 and Outlook 2019.
+    > Where <xx.0> is 14.0 for Outlook 2010, 15.0 for Outlook 2013, and 16.0 for Outlook 2016, Outlook for Microsoft 365 and Outlook 2019.
 
 4. Select the **Edit** menu, point to **New**, and then select **String Value**.
 

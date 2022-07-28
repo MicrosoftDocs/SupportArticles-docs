@@ -1,6 +1,6 @@
 ---
 title: Manage a mailbox in the on-premises environment
-description: Describes how to manage a mailbox in the on-premises environment in a scenario in which an Office 365 mailbox exists and directory synchronization is enabled but an on-premises mail-enabled user doesn't exist for the mailbox.
+description: Describes how to manage a mailbox in the on-premises environment in a scenario in which a Microsoft 365 mailbox exists and directory synchronization is enabled but an on-premises mail-enabled user doesn't exist for the mailbox.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Manage a mailbox when an Office 365 mailbox exists but an on-premises mail-enabled user doesn't exist
+# Manage a mailbox when a Microsoft 365 mailbox exists but an on-premises mail-enabled user doesn't exist
   
 _Original KB number:_ &nbsp; 2813304
 
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 2813304
 
 This article describes how to manage a mailbox in the on-premises environment in the following scenario:
 
-- An Office 365 mailbox exists.
+- A Microsoft 365 mailbox exists.
 - Active Directory synchronization is enabled.
 - An on-premises mail-enabled user doesn't exist for the mailbox.
 
@@ -32,7 +32,7 @@ This article describes how to manage a mailbox in the on-premises environment in
 
 To manage a mailbox in the on-premises environment in the scenario that's described in the "Introduction" section, follow these steps:
 
-1. Use SMTP matching to match the Office 365 user account with an on-premises user account. To do this, see [How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
+1. Use SMTP matching to match the Microsoft 365 user account with an on-premises user account. To do this, see [How to use SMTP matching to match on-premises user accounts to Microsoft 365 user accounts for directory synchronization](https://support.microsoft.com/help/2641663).
 
 2. Convert the on-premises user account to a mail-enabled user. To do this, use Exchange Management Shell on the on-premises Microsoft Exchange server to run the following command:
 
@@ -40,7 +40,7 @@ To manage a mailbox in the on-premises environment in the scenario that's descri
     Enable-MailUser -Identity User -ExternalEmailAddress <user>@<domain>.mail.onmicrosoft.com
     ```
 
-3. Obtain the Exchange GUID of the Office 365 mailbox. To do this, follow these steps:
+3. Obtain the Exchange GUID of the Microsoft 365 mailbox. To do this, follow these steps:
 
    1. Connect to Microsoft Exchange Online by using remote PowerShell. For more information, go to [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
@@ -50,13 +50,13 @@ To manage a mailbox in the on-premises environment in the scenario that's descri
       Get-Mailbox -Identity <UserAlias>
       ```
 
-4. Update the on-premises mail-enabled user to use the Exchange GUID of the Office 365 mailbox. To do this, use Exchange Management Shell to run the following command:
+4. Update the on-premises mail-enabled user to use the Exchange GUID of the Microsoft 365 mailbox. To do this, use Exchange Management Shell to run the following command:
 
     ```powershell
     Set-MailUser -Identity <UserAlias> -ExchangeGuid <Office365MailboxGUID>
     ```
 
-5. Move the mailbox from Office 365 to the on-premises domain. You can do this by using the Exchange Management Console or the Exchange Management Shell.
+5. Move the mailbox from Microsoft 365 to the on-premises domain. You can do this by using the Exchange Management Console or the Exchange Management Shell.
 
     For example, use the Exchange Management Shell to run the following command:
 

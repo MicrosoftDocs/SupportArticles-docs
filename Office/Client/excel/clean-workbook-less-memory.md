@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-After you upgrade to Microsoft Office 2013/2016/Office 365, you experience one or more of the following symptoms:
+After you upgrade to Office 2013/2016/Microsoft 365, you experience one or more of the following symptoms:
 
 - The computer uses more memory when you open multiple Microsoft Excel 2013 workbooks, save Excel workbooks, or make calculations in Excel workbooks.    
 - You can no longer open as many Excel workbooks in the same instance as you could before you upgraded to Excel 2013/2016.     

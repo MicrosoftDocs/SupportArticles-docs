@@ -1,6 +1,6 @@
 ---
 title: Voice mail settings missing from Options
-description: Describes an issue that makes voice mail settings go missing from the Options pane in Outlook on the web. Occurs for a user who's assigned an Office 365 plan that includes Unified Messaging (UM). Provides a resolution.
+description: Describes an issue that makes voice mail settings go missing from the Options pane in Outlook on the web. Occurs for a user who's assigned a Microsoft 365 plan that includes Unified Messaging (UM). Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Voice mail settings are missing from the Options pane in Outlook on the web in Office 365
+# Voice mail settings are missing from the Options pane in Outlook on the web in Microsoft 365
 
 _Original KB number:_ &nbsp; 3216404
 
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3216404
 
 ## Symptoms
 
-Assume that you assigned an Office 365 plan that includes Unified Messaging (UM) to a user. However, when the user opens the **Options** pane in Outlook on the web, the **Voice mail** settings are missing.
+Assume that you assigned a Microsoft 365 plan that includes Unified Messaging (UM) to a user. However, when the user opens the **Options** pane in Outlook on the web, the **Voice mail** settings are missing.
 
 ## Cause
 

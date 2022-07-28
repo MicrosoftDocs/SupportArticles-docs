@@ -54,9 +54,9 @@ This issue occurs for one of the following reasons:
 
 ## Solution
 
-To resolve this issue, use the Exchange admin center in Office 365 to add the user as a member of the administrator role group. To do this, follow these steps:
+To resolve this issue, use the Exchange admin center in Microsoft 365 to add the user as a member of the administrator role group. To do this, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. Click **Admin**, and then click **Exchange**.
 3. Click **permissions**, and then click **admin roles**.
 4. Double-click the role group to which you want to add the user. For example, if you want the user to have full access that includes Windows PowerShell, double-click **Organization Management**.

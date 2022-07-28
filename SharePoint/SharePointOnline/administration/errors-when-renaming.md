@@ -1,7 +1,8 @@
 ---
 title: Errors when you rename a SharePoint domain
 description: Explains error codes and messages that can happen, when you rename a SharePoint domain.
-author: pramodbalusu
+author: v-matthamer
+ms.reviewer: PramodBalusu
 ms.author: v-matthamer
 manager: dcscontentpm
 localization_priority: Normal

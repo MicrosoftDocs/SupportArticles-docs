@@ -45,8 +45,8 @@ You deleted the progress bar style from the Bar Styles dialog box in a Gantt Cha
 
 To verify if the progress bar style exists or has been deleted, follow these steps:
 
-1. On the men ribbon's Format tab, click the arrown in the right corner of the Chart Style section to view Bar Styles. In Project 2010, choose the Format tab, click Format, and then click Bar Styles. NOTE: In Project 2007 and earlier versons, click BarStyleson the Formatmenu.   
-2. By default, a progress bar style is listed in the Name column with Progress as the name. You can also identify a progress bar in the Bar Styles dialog box, where Actual Start is in the From column and Complete Through is in the To column.   
+1. On the menu ribbon's Format tab, click the arrown in the right corner of the Chart Style section to view Bar Styles. In Project 2010, choose the Format tab, click Format, and then click Bar Styles. NOTE: In Project 2007 and earlier versons, click Bar Styles on the Format menu.
+2. By default, a progress bar style is listed in the Name column with Progress as the name. You can also identify a progress bar in the Bar Styles dialog box, where Actual Start is in the From column and Complete Through is in the To column.
 
 ## Workaround
 
@@ -55,7 +55,7 @@ To verify if the progress bar style exists or has been deleted, follow these ste
 To work around condition 1, change the definition for the Progress bar style. To do this, follow these steps:
 
 1. On the View menu, click the Gantt Chart that you want to edit.   
-2. On the Format menu, click Bar Styles.   
+2. On the Format menu, click Bar Styles.
 3. In the Progress bar definition, change Complete Through to Stop in the To column.   
 4. Click OK.   
 
@@ -65,38 +65,38 @@ To work around condition 2, add a bar to display progress in a Gantt Chart. To d
 
 Project 2013
 
-  1. On the menu ribbon select the Format tab   
-  2. In the Chart Stylesection of the ribbon, click the arrow in bpttom right corner to display the Bar Styles dialog.   
-  3. Click the row in the BarStylesdialog where you want to insert the progress bar definition.   
-  4. Click InsertRow.   
-  5. In the Namefield for the blank row, type Progress.   
-  6. Select the Appearancefield for the Progressstyle.   
-  7. On the Barstab, under Middle, follow these steps, or choose the desired shape, pattern, and color to meet your needs:    
-  8. In the Shapelist, click the third bar shape: a medium bar width shape.   
-  9. In the Patternlist, click the first bar pattern: a solid pattern.   
-  10. In the Colorlist, click Black.   
-  11. In the Show For... Taskscolumn, type Normal.   
-  12. In the Fromcolumn, type ActualStart.   
-  13. In the Tocolumn, type CompleteThrough.   
+  1. On the menu ribbon, select the Format tab.
+  2. In the Chart Style section of the ribbon, click the arrow in bottom right corner to display the Bar Styles dialog.   
+  3. Click the row in the Bar Styles dialog where you want to insert the progress bar definition.   
+  4. Click Insert Row.
+  5. In the Name field for the blank row, type Progress.   
+  6. Select the Appearance field for the Progress style.   
+  7. On the Bars tab, under Middle, follow these steps, or choose the desired shape, pattern, and color to meet your needs:    
+  8. In the Shape list, click the third bar shape: a medium bar width shape.   
+  9. In the Pattern list, click the first bar pattern: a solid pattern.   
+  10. In the Color list, click Black.   
+  11. In the Show For... Tasks column, type Normal.   
+  12. In the From column, type ActualStart.   
+  13. In the To column, type CompleteThrough.   
   14. Click OK.   
    
 
 Project 2010
 
-1. On the Viewtab, click the Gantt Chart that you want to format.   
-2. On the Formattab, click Format, and then click BarStyles.   
-3. Click the row in the BarStylesdialog where you want to insert the progress bar definition.   
+1. On the View tab, click the Gantt Chart that you want to format.   
+2. On the Format tab, click Format, and then click BarStyles.   
+3. Click the row in the Bar Styles dialog where you want to insert the progress bar definition.   
 4. Click InsertRow.   
-5. In the Namefield for the blank row, type Progress.   
-6. Select the Appearancefield for the Progressstyle.   
-7. On the Barstab, under Middle, follow these steps, or choose the desired shape, pattern, and color to meet your needs:
-   1. In the Shapelist, click the third bar shape: a medium bar width shape.   
-   2. In the Patternlist, click the first bar pattern: a solid pattern.   
-   3. In the Colorlist, click Black.   
+5. In the Name field for the blank row, type Progress.   
+6. Select the Appearance field for the Progress style.   
+7. On the Bars tab, under Middle, follow these steps, or choose the desired shape, pattern, and color to meet your needs:
+   1. In the Shape list, click the third bar shape: a medium bar width shape.   
+   2. In the Pattern list, click the first bar pattern: a solid pattern.   
+   3. In the Color list, click Black.   
    
-8. In the Show For... Taskscolumn, type Normal.   
-9. In the Fromcolumn, type ActualStart.   
-10. In the Tocolumn, type CompleteThrough.   
+8. In the Show For... Tasks column, type Normal.   
+9. In the From column, type ActualStart.   
+10. In the To column, type CompleteThrough.   
 11. Click OK.   
 
 To do this in Project 2007 and earlier versions, follow these steps: 
@@ -111,7 +111,6 @@ To do this in Project 2007 and earlier versions, follow these steps:
    1. In the Shape list, click the third bar shape: a medium bar width shape.    
    2. In the Pattern list, click the first bar pattern: a solid pattern.   
    3. In the Color list, click Black.   
-   
 8. In the Show For ... Tasks column, type Normal.   
 9. In the From column, type Actual Start.   
 10. In the To column, type Complete Through.   

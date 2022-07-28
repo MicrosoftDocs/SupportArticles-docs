@@ -18,7 +18,7 @@ ms.date: 03/31/2022
 
 # "We encountered a problem and couldn't complete the task" error message in Office Mobile on iPhone or Office Mobile on Android
 
-When you try to access a SharePoint Online place in Office Mobile on iPhone, available in the Apple iTunes store as "Office Mobile for Office 365 subscribers," or in Office Mobile on Android, available in the Google Play store as "Office Mobile for Office 365," you receive the following error message:
+When you try to access a SharePoint Online place in Office Mobile on iPhone or in Office Mobile on Android, you receive the following error message:
 
 > We encountered a problem and couldn't complete the task.
 

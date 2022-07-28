@@ -51,14 +51,14 @@ If you want to perform the checks and fix the issue manually, follow these steps
 
     The desktop app is configured to update automatically. However, if you find that the app is missing the latest update, follow the instructions to install it, and try again to sign in. If you still see an error when you try to sign in to Teams, go to step 3.
 
-2. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the  [Office 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
+2. If you use a federated sign-in provider such as Active Directory Federation Services (AD FS), verify the AD FS sign-in configuration by using the  [Microsoft 365 Single Sign-on Test](https://testconnectivity.microsoft.com/tests/SingleSignOn/input) in the Microsoft Remote Connectivity Analyzer.
 
 3. Check the error code on the Teams sign-in screen. If the code is listed here, follow the provided guidance to fix the error. If the code isn't listed here, see [Why am I having trouble signing in to Microsoft Teams?](https://support.microsoft.com/en-us/topic/a02f683b-61a3-4008-9447-ee60c5593b0f)
 
     - **0xCAA82EE7** or **0xCAA82EE2**  
         Make sure that the user has Internet access. Then, use the [Network assessment tool](https://www.microsoft.com/en-us/download/details.aspx?id=53885) to verify that the network and network elements between the user location and the Microsoft network are configured correctly. This is necessary to enable communication to the IP addresses and ports that are required for Teams calls.
 
-        For information about endpoints that users should be able to reach if they're using Teams in Office 365 plans, government environments, or other clouds, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
+        For information about endpoints that users should be able to reach if they're using Teams in Microsoft 365 plans, government environments, or other clouds, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges).
 
     - **0xCAA20004**  
         This error occurs if an issue affects conditional access. For more information, see [Conditional Access policies for Teams](/microsoftteams/security-compliance-overview#how-conditional-access-policies-work-for-teams).

@@ -18,7 +18,7 @@ appliesto:
   - Microsoft Outlook 2010
   - Microsoft Office Outlook 2007
   - Microsoft Office Outlook 2003
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -38,7 +38,7 @@ This problem can occur if you have the option to display reminders is turned off
 
 If reminders are not being managed by Group Policy, follow these steps to re-enable reminders.
 
-- Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010, and Outlook for Office 365
+- Outlook 2019, Outlook 2016, Outlook 2013, Outlook 2010, and Outlook for Microsoft 365
   1. On the **File** tab, select **Options**.
   2. Select **Advanced** in the **Outlook Options** dialog box.
   3. In the **Reminders** section, select **Show reminders**.
@@ -64,7 +64,7 @@ DWORD: Type
 Values: 0 = do not display reminders, 1 = display reminder (default behavior of the Type value does not exist)
 
 > [!NOTE]
-> In this registry path, <x.0> represents the version of Outlook (16.0 = Outlook 2016, Outlook 2019, or Outlook for Office 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007, and 11.0 = Outlook 2003)
+> In this registry path, <x.0> represents the version of Outlook (16.0 = Outlook 2016, Outlook 2019, or Outlook for Microsoft 365, 15.0 = Outlook 2013, 14.0 = Outlook 2010, 12.0 = Outlook 2007, and 11.0 = Outlook 2003)
 
 > [!NOTE]
 > If the option to display reminders is being managed by Group Policy, the registry key path is slightly different.  

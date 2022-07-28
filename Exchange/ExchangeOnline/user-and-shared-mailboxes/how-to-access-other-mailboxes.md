@@ -202,7 +202,7 @@ You may want to perform this procedure as if an administrator in your organizati
 
 After you perform these steps, the specified user will be able to access **all** user mailboxes in Microsoft 365. The user will be able to view the contents of the mailboxes from either Outlook or Outlook Web App.
 
-For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365](https://support.microsoft.com/help/2685435).
+For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Microsoft 365](https://support.microsoft.com/help/2685435).
 
 To assign permissions to a user mailbox, run the following command:
 
@@ -261,7 +261,7 @@ This example assigns permissions for a user to access specific folders in anothe
     Add-MailboxFolderPermission -Identity <SMTP address or alias of recipient> : <Folder path>-AccessRights <Permission you want to grant the recipient> -User <SMTP address or alias of recipient to be granted access>
     ```
 
-3. This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to his access of that folder.
+3. This example assigns permissions for Ed to access Ayla's Marketing mailbox folder and applies the Owner role to Ed's access of that folder.
 
    ```powershell
    Add-MailboxFolderPermission -Identity ayla@contoso.com:\Marketing -User Ed@contoso.com -AccessRights Owner

@@ -2,7 +2,7 @@
 title: Can't delete items from public folder
 description: Items in a public folder are still present after being deleted using Outlook on the web because the public folder reaches its recoverable items quota. This article provides a resolution.
 author: simonxjx
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -27,7 +27,7 @@ The user listed as the SharePoint creator for a Microsoft Teams Group is a Share
 
 ## Cause
 
-When auditing from the SharePoint administration console, the creator for the site collection page associated with the Office 365 Group created against the team in Microsoft Teams is the SharePoint admin. 
+When auditing from the SharePoint administration console, the creator for the site collection page associated with the Microsoft 365 Group created against the team in Microsoft Teams is the SharePoint admin. 
 
 ## Resolution
 

@@ -1,6 +1,6 @@
 ---
-title: Office 365 users aren't signed in to Office through AD accounts
-description: Describes an issue that prevents Office 365 users from being automatically signed in to an Office app through their Active Directory account after they sign out of the app. Provides a workaround.
+title: Microsoft 365 users aren't signed in to Office through AD accounts
+description: Describes an issue that prevents Microsoft 365 users from being automatically signed in to an Office app through their Active Directory account after they sign out of the app. Provides a workaround.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,15 +15,15 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Office 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
+# Microsoft 365 users aren't automatically signed into an Office app through Active Directory accounts after they sign out
 
 ## Problem
 
-An Office 365 who is signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the user opens the Office app, they aren't automatically signed in. The user has to manually sign in to the Office app.
+Microsoft 365 users who are signed in to an Office app through their Active Directory account from a domain-joined computer signs out of the Office app. The next time that the users open the Office app, they aren't automatically signed in. The users have to manually sign in to the Office app.
 
 ## Cause
 
-This is the expected behavior. When a user logs on to the on-premises environment by using their Active Directory account, the user is signed in to an Office app by using the same credentials. When the user signs out of an Office app, a registry key is set that prevents the user from being signed in automatically the next time that they open the Office app.
+This behavior is expected. When a user logs on to the on-premises environment by using their Active Directory account, the user is signed in to an Office app by using the same credentials. When the user signs out of an Office app, a registry key is set that prevents the user from being signed in automatically the next time that they open the Office app.
 
 ## Workaround
 

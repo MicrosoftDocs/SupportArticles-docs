@@ -14,7 +14,7 @@ ms.custom:
   - CI 147050
 ms.author: v-matthamer
 appliesto: 
-  - Office 365
+  - Microsoft 365
   - Office 2016
   - Office 2013
   - Office 2010
@@ -37,7 +37,8 @@ Support and Recovery Assistant can be run on the following operating systems:
 - Windows 7
 
 The following Office versions can be scanned:
-- Microsoft Office 365 (2016 or 2013, 32-bit or 64-bit)
+
+- Microsoft 365
 - Microsoft Office 2016 (32-bit or 64-bit; Click-to-Run or MSI installations)
 - Microsoft Office 2013 (32-bit or 64-bit; Click-to-Run or MSI installations)
 - Microsoft Office 2010 (32-bit or 64-bit)

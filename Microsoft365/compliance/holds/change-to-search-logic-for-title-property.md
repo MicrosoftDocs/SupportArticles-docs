@@ -10,7 +10,8 @@ localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
-applies to: Office 365 Security & Compliance Center
+applies to: 
+  - Office 365 Security & Compliance Center
 ms.custom: 
   - CI 115091
   - CSSTroubleshoot

@@ -1,6 +1,6 @@
 ---
 title: Skype for Business Online users can't communicate with external contacts
-description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft Office 365. Provides a resolution.
+description: Discusses that users can't communicate with external contacts in Microsoft Skype for Business Online in Microsoft 365. Provides a resolution.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -46,12 +46,12 @@ The first step to resolve issues that affect Skype for Business Online is to sco
 
 ### Configuring external communications for Skype for Business Online  
  
-Office 365 enterprise and academic customers can configure individual access options for the following external contacts on both an organization and user level: 
+Microsoft 365 enterprise and academic customers can configure individual access options for the following external contacts on both an organization and user level: 
  
 - Other organizations that are using Skype for Business Online, Microsoft Lync Server 2010, Microsoft Lync Server 2013, or Microsoft Office Communications Server 2007 R2    
 - Public Instant Messaging (IM) contacts on Skype or Microsoft Messenger    
  
-Office 365 professional and business customers can turn external communications on or off only for all external contacts. This includes other Lync or OCS organization and public IM contacts on Skype or Microsoft Messenger. This setting can be configured at the organization or user level.
+Microsoft 365 professional and business customers can turn external communications on or off only for all external contacts. This includes other Lync or OCS organization and public IM contacts on Skype or Microsoft Messenger. This setting can be configured at the organization or user level.
 
 For help configuring external communications for your organization, go to the following Microsoft website: 
  
@@ -82,7 +82,7 @@ If the external contact's organization hasn't been configured for federation wit
 
 [Configuring Federation Support for a Skype for Business Online Customer](/previous-versions/office/lync-server-2013/lync-server-2013-configuring-federation-support-for-a-lync-online-customer) 
  
-After you verify that federation is configured correctly for the external contact's domain, Office 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact's domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
+After you verify that federation is configured correctly for the external contact's domain, Microsoft 365 for enterprises customers should examine the Lync Control Panel or Lync Admin Center to make sure that the external contact's domain is either on the allowed list of domains or not on the blocked list of domains. For guidance about how to configure external communications with other organizations, view the following Microsoft website: 
 
 [Configure external communications](https://support.microsoft.com/office/9e15aceb-8d92-4fe0-ab76-2657bd4ef804)
 
@@ -95,7 +95,7 @@ Contacts that don't use the standard domains for Microsoft Messenger, such as li
  
 Federation with external organizations requires an SRV record in DNS that directs external organizations to Skype for Business Online when they try to communicate. If that SRV record is missing or incorrectly configured, all communication with external contacts fails. To verify that the record is configured correctly, go to the following article in the Microsoft Knowledge Base:
 
-[2566790](https://support.microsoft.com/help/2566790) Troubleshooting Skype for Business Online DNS configuration issues in Office 365      
+[2566790](https://support.microsoft.com/help/2566790) Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365      
 
 ## More information
 

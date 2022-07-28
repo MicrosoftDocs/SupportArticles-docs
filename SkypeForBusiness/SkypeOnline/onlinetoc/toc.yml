@@ -39,7 +39,7 @@
       href: ../online-configuration/call-queues-not-redirect-to-agents.md
     - name: DNS configuration issues
       href: ../online-configuration/dns-configuration-issue.md
-    - name: Issue when Office 365 administrator disables a user
+    - name: Issue when Microsoft 365 administrator disables a user
       href: ../online-configuration/license-validation-error.md
     - name: How to set up external communication
       href: ../online-configuration/set-up-external-communication.md
@@ -91,7 +91,7 @@
       href: ../online-im-presence/lync-presence-unavailable-in-sharepoint.md
     - name: Only the first IM received in Skype for Business 2015 when Mac hibernating 
       href: ../online-im-presence/only-first-im-received-when-locked.md
-    - name: Presence is unavailable in Office 365
+    - name: Presence is unavailable in Microsoft 365
       href: ../online-im-presence/sfb-presence-unavailable.md
   - name: Install/Uninstall
     items:
@@ -109,7 +109,7 @@
       href: ../online-meetings/special-characters-not-display-correctly.md
     - name: Invitations not sent from Outlook
       href: ../online-meetings/invitations-are-not-sent.md
-    - name: Issues when use Outlook Web App in Office 365
+    - name: Issues when use Outlook Web App in Microsoft 365
       href: ../online-meetings/schedule-online-meetings-from-owa.md
     - name: Issues when you schedule a meeting
       href: ../online-meetings/error-when-you-schedule-meeting.md
@@ -161,7 +161,7 @@
       href: ../online-phone-system/cant-locate-city-name.md
     - name: Can't manage voice mail or customize a greeting
       href: ../online-phone-system/cannot-manage-voice-mail-or-greeting.md
-    - name: Can't transfer numbers from one Office 365 tenant
+    - name: Can't transfer numbers from one Microsoft 365 tenant
       href: ../online-phone-system/cannot-transfer-numbers-from-office-365-tenant.md
     - name: Can't use all Skype Voice features
       href: ../online-phone-system/cant-use-all-skype-voice-features.md
@@ -207,7 +207,7 @@
       href: ../online-sign-in/error-in-xml-document-new-csonlinesession.md
     - name: Issue when sign in Skype for Business Online
       href: ../online-sign-in/cant-sign-into-sfb-online.md
-    - name: Issue when sign in to a German Office 365 environment
+    - name: Issue when sign in to a German Microsoft 365 environment
       href: ../online-sign-in/issue-sign-in-german-environment.md
     - name: Issue when sign in to Lync 2010 mobile client
       href: ../online-sign-in/sign-in-lync-2010-mobile.md

@@ -47,12 +47,12 @@ To resolve this problem, use one or more of the following methods, as necessary.
 
 ### Method 1: Verify that the affected user is assigned an Office Professional Plus license on the Microsoft Online Portal
 
-1. Sign in to the Office 365 Portal as an admin user.    
-2. In the **Office 365 Admin Overview** section, click **Users**.    
+1. Sign in to the Microsoft 365 Portal as an admin user.    
+2. Select **Admin**, then select **Users**.    
 3. Select the user who has the issue.    
 4. Under **Assign Licenses**, verify that **Office Professional Plus** is selected.    
   
-### Method 2: Reactivate Office by using your Office 365 Organization ID
+### Method 2: Reactivate Office by using your Microsoft 365 organization ID
 
 To have us fix this problem for you, use the following steps:
 

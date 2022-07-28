@@ -50,13 +50,13 @@ Android smartphone devices that are supported for use with Lync 2010 for Android
     |-|-|-|
     |On-premises Lync server|Same|Sign-in address: SIP address; User name: Blank |
     |On-premises Lync server|Different|Sign-in address: SIP address; User name: UPN or domain\username |
-    |Office 365|Same|Sign-in address: SIP address; User Name: Blank |
-    |Office 365|Different|Sign-in address: SIP address; User name: UPN |
+    |Microsoft 365|Same|Sign-in address: SIP address; User Name: Blank |
+    |Microsoft 365|Different|Sign-in address: SIP address; User name: UPN |
 
 5. Verify whether **Autodetect server** is **On**. Lync tries to determine your Lync server based on your sign-in address. If it can't detect your Lync server, you may have to turn off **Autodetect server** and specify the Lync server manually.
 
     If **Autodetect server** is turned on but you still can't sign in, try manually entering the internal and external discovery addresses. This doesn't resolve the issue. However, if you can successfully sign in manually, this indicates that the **Autodetect server** option isn't set up correctly by your administrator.  
-      - For Skype for Business Online (formerly Lync Online) users in Office 365:  
+      - For Skype for Business Online (formerly Lync Online) users in Microsoft 365:  
          - Internal discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`    
          - External discovery address: `https://webdir.online.lync.com/Autodiscover/autodiscoverservice.svc/Root`         
       - For Lync on-premises users, contact your support team or system administrator for help with determining your internal and external discovery address. In most cases, the internal and external discovery address should resemble the following:  

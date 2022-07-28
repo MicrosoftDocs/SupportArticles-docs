@@ -51,6 +51,8 @@
       href: ./channels/channel-cannot-be-recreated-after-deletion.md
     - name: Channel notifications settings don't update
       href: ./channels/notifications-cannot-manage.md
+    - name: External memeber can see channel message previews of shared channels in search results
+      href: ./channels/external-memeber-can-preview-shared-channel-messages.md
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
   - name: Conferencing
@@ -131,6 +133,8 @@
       href: ./teams-im-presence/deleted-messages-send-notifications-with-link.md
     - name: Issues with presence status in Outlook
       href: ./teams-im-presence/issues-with-presence-in-outlook.md
+    - name: Messages are unexpectedly deleted by retention policies
+      href: ./teams-im-presence/messages-unexpectedly-deleted-retention-policy.md 
   - name: Meetings
     items:
     - name: External users appear as Unknown

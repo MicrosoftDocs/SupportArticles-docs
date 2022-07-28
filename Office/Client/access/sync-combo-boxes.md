@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: tado
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013

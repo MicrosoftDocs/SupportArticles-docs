@@ -1,4 +1,4 @@
-- name: Office 365 Enterprise Troubleshooting
+- name: Microsoft 365 Enterprise Troubleshooting
   href: ../o365-enterprise-welcome.md
   items:
   - name: Administration
@@ -25,7 +25,7 @@
     items:
     - name: '"Invalid provider specified" with using Office 2016'
       href: ../authentication/invalid-provider-specified-error.md
-    - name: Can't sign in Office 365 from multiple federated domains
+    - name: Can't sign in Microsoft 365 from multiple federated domains
       href: ../authentication//cant-sign-in-office-365-multiple-domain-federation.md
   - name: Miscellaneous
     items:

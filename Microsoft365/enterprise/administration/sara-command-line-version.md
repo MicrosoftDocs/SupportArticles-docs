@@ -11,9 +11,9 @@ ms.custom:
   - CI 148047
   - CSSTroubleshoot
   - CI 163053
-ms.reviewer: zebamehdi; brandisi
+ms.reviewer: zebamehdi; gregmans
 appliesto: 
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 06/09/2022
 ---

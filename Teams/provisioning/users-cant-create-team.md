@@ -27,7 +27,7 @@ Users are unable to create a team in Microsoft Teams.
 
 ## More information
 
-Your company may have set a policy restricting who can create Office 365 groups or teams. 
+Your company may have set a policy restricting who can create Microsoft 365 groups or teams. 
 
 Check with your IT admin to understand your company's policy for creating groups and teams. 
 
