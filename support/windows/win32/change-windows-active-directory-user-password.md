@@ -150,7 +150,7 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
 > [!Tip]
 > - To configure LDS instances using UserProxy objects for password resets, you have to allow constrained delegation of the LDS service account (default: LDS computer account) to the domain controllers in case the user logon uses Kerberos.
 > - If you are using LDAP simple bind, you have to use Windows Server 2022 or a newer version and set a registry entry to forward the admin LDAP session credentials to the Active Directory Domain Controller:\
-**Registry Key**: HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters\
+**Registry Key**: _HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters_\
 **Registry Entry**: Allow ClearText Logon Type\
 **Type**: REG_DWORD\
 **Data**: **0**: Don't allow forwarding of credentials (Default)\
