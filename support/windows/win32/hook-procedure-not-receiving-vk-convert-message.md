@@ -11,13 +11,13 @@ ms.technology: windows-dev-apps-desktop-app-ui-dev
 
 # Hook procedure doesn't receive the VK_CONVERT message
 
-This article helps you resolve the problem when an application that uses a keyboard hook doesn’t receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key.
+This article helps you resolve the problem when an application that uses a keyboard hook doesn't receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key.
 
-_Applies to:_ &nbsp; Windows 11, Windows 10 version 20H2, Windows 10 version 21H1, Windows 10 version 21H2
+*Applies to:* &nbsp; Windows 11, Windows 10 version 20H2, Windows 10 version 21H1, Windows 10 version 21H2
 
 ## Symptoms
 
-Keyboard hooks do not receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key. This issue can cause unexpected behavior in the applications that call 'SetWindowsHookEx'('WH_KEYBOARD') to set a keyboard hook which monitors the keyboard input.
+Keyboard hooks do not receive `WM_KEYDOWN` messages for the `VK_CONVERT` virtual key. This issue can cause unexpected behavior in the applications that call `SetWindowsHookEx`(`WH_KEYBOARD`) to set a keyboard hook which monitors the keyboard input.
 
 ## Cause
 

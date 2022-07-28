@@ -13,7 +13,7 @@ ms.technology: windows-dev-apps-admin-management-dev
 
 This article describes how to change a Windows Active Directory and LDS user password through LDAP.
 
-_Applies to:_ &nbsp; Windows Active Directory  
+*Applies to:* &nbsp; Windows Active Directory  
 _Original KB number:_ &nbsp; 269190
 
 ## Summary
