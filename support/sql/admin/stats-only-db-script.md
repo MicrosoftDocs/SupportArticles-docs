@@ -13,7 +13,8 @@ ms.author: v-jayaramanp
 
 In this article, you learn how to generate a statistics script using database metadata for creating a statistics-only database in SQL Server.
 
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008
+_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, 
+SQL Server 2008
 _Original KB number:_ &nbsp;914288
 
 ## Introduction
