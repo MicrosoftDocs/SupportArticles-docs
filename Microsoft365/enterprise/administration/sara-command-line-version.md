@@ -30,14 +30,17 @@ If you need to fix issues on a single computer, we recommend that you use the [f
 
 You can use the command-line version of the Assistant to resolve issues for the following scenarios. The Assistant requires specific switches to run these scenarios. Select a scenario to learn about the switches available for it. Then run the command-line version of the Assistant by using the appropriate switches for the scenario to resolve your issue.
 
-|Scenario|Description|Scenario path in UI version of the Assistant|
+|Command-line scenario name|Description|Scenario path in UI version of the Assistant*|
 |---|---|---|
-|<ul><li>Common name: <b>[Outlook scan](./sara-outlook-scan.md)</b></li><li>Name in the Assistant UI: <b>[ExpertExperienceAdminTask](./sara-outlook-scan.md)</b></li><li>Elevated command prompt: <b>No</b></li></ul>|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. A full or offline scan can be run.|Advanced diagnostics \| Outlook \| Create detailed report of my Outlook configuration|
-|<ul><li>Common name: <b>Office Uninstall</b></li><li>Name in the Assistant UI: <b>OfficeScrubScenario</b></li><li>Elevated command prompt: <b>Yes</b></li></ul>|Scrubs any version of Office from a device. Use when you can't fully remove Office through control panel.|Office  \| I have Office installed, but I’m having trouble uninstalling it|
-|<ul><li>Common name: <b>Office Activation</b></li><li>Name in the Assistant UI: <b>OfficeActivationScenario</b></li><li>Elevated command prompt: <b>Yes</b></li></ul>|Automated checks and recoveries to reset activation-related settings so you can successfully activate a subscription version of Office.|Office \| I have a subscription version of Office, but I can’t activate it|
-|<ul><li>Common name: <b>Office Shared Computer Activation</b></li><li>Name in the Assistant UI: <b>OfficeSharedComputerScenario</b></li><li>Elevated command prompt: <b>Yes</b></li></ul>|Automated checks and recoveries to either enable or disable Office Shared Computer Activation.|Office \| I want to setup Office with shared computer activation|
-|<ul><li>Common name: <b>Calendar scan</b></li><li>Name in the Assistant UI: <b>OutlookCalendarCheckTask</b></li><li>Elevated command prompt: <b>No</b></li></ul>|Scans your Outlook calendar with the Calendar Checking tool (CalCheck) for dozens of known problems.|Advanced diagnostics \| Outlook \| Create detailed scan of my Outlook calendar|
-|<ul><li>Common name: <b>Teams Meeting Add-in for Outlook</b></li><li>Name in the Assistant UI: <b>TeamsAddinScenario</b></li><li>Elevated command prompt: <b>No</b></li></ul>|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook up and running.|Teams \| The Teams meeting option isn’t shown in Outlook|
+|[ExpertExperienceAdminTask]|Scans Outlook for known issues and generates a comprehensive configuration report for Outlook, Office, and Windows. A full or offline scan can be run.|Advanced diagnostics \| Outlook \| Create detailed report of my Outlook configuration|
+|OfficeScrubScenario|Scrubs any version of Office from a device. Use when you can't fully remove Office through Control Panel.|Office  \| I have Office installed, but I’m having trouble uninstalling it|
+|OfficeActivationScenario|Automated checks and recoveries to reset activation-related settings so you can successfully activate a subscription version of Office.|Office \| I have a subscription version of Office, but I can't activate it|
+|OfficeSharedComputerScenario|Automated checks and recoveries to either enable or disable Office Shared Computer Activation.|Office \| I want to setup Office with shared computer activation|
+|OutlookCalendarCheckTask|Scans your Outlook calendar with the Calendar Checking tool (CalCheck) for dozens of known problems.|Advanced diagnostics \| Outlook \| Create detailed scan of my Outlook calendar|
+|TeamsAddinScenario|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook up and running.|Teams \| The Teams meeting option isn’t shown in Outlook|
+|ResetOfficeActivation|Clear prior activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state, and you can then activate them with a different Office account or change to a different license mode.|Not available in the UI version of the Assistant.|
+
+**The command-line scenarios are the same scenarios as those available in the UI version of the Assistant. The path to run these scenarios in the UI version of the Assistant is provided here as a reference point.*
 
 ## Download and run the command-line version of the Assistant
 
@@ -51,16 +54,38 @@ You can use the command-line version of the Assistant to resolve issues for the 
 1. In the Command Prompt window, navigate to the folder in which you extracted the files from step 2.
 1. Run the command-line version of the Assistant by using the appropriate switches for the scenario.
 
-Updates to the command-line version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date listed for the SaRAcmd.exe file. Use the link provided in step 1 to always download the latest version available.
+> [!IMPORTANT]
+> Updates to the command-line version of the Assistant are released on a regular basis. To make sure that you're using the latest version that has the most features and highest stability, each build of the application will stop working 90 days after the **Created** date listed for SaRAcmd.exe. Use the link provided in step 1 to download the latest version.
+
+### Available switches for all scenarios
+
+The following switches are available for the command-line version of the Assistant. They aren't case-sensitive. The switches, unless noted as **Optional**, are required to run the scenario and more than one optional switch can be used.
+
+|Switch \<parameter\>|Details|Required/Optional|Applicable scenarios|
+|---|---|---|---|
+|`-?`|Use the `-?` switch to display the functions of all the switches that are available for SaRAcmd.exe. If you use the `-?` switch along with other switches, it will override the others.|Optional|All|
+|`-Help`|The `-Help` switch displays a link to online content for additional information. If you use the `-Help` switch along with other switches, it will override all the others except the `-?` switch.|Optional|All|
+|`-DisplayEULA <file path>`|Use the `-DisplayEULA` switch to display the EULA. You can save the EULA text to a file by specifying a path to the file with the switch.|Optional|All|
+|`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run.|Required|All|
+|`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|All|
+|`-LogFolder <Output Path>`| Use the `-LogFolder` switch to force SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|ExpertExperienceAdminTask<br/>OutlookCalendarCheckTask|
+|`-HideProgress`|The default feature is to always display the progress of the scenario. Use this switch to hide the progress display for the Outlook Scan scenario.|Optional|ExpertExperienceAdminTask<br/>OutlookCalendarCheckTask|
+|`-OfflineScan`|This switch forces Outlook to be scanned as an Offline scan while the Outlook application is running.|Optional|ExpertExperienceAdminTask|
+|`-OfficeVersion`|Using this switch only removes the Office version that's defined in the parameter. If you use **All** as a parameter, it removes all Office versions from your machine.|Optional|OfficeScrubScenario|
+|`-RemoveSCA`|This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.|Optional|OfficeActivationScenario<br/>OfficeSharedComputerScenario|
+|`-CloseOffice`|Closes any opened Office apps.|Required|OfficeActivationScenario<br/>OfficeSharedComputerScenario<br/>ResetOfficeActivation|
+|`-CloseOutlook`|Closes Outlook if it's opened.|Required|TeamsAddinScenario|
+|`-P <profile name>`|\<Profile name\> is the Outlook profile that's scanned by the OutlookCalendarCheckTask scenario.|Optional|OutlookCalendarCheckTask|
 
 ## Version history of the Assistant
 
-A new build of the Assistant is available multiple times a year for download. Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing the files you have with the latest version always.
+Throughout the year, a new build of the command-line version of the Assistant is available through the download link that's provided in [Download and run the command-line version of the Assistant](#download-and-run-the-command-line-version-of-the-assistant). Because each build stops working after 90 days, we recommend that you keep the Assistant updated by replacing the files you have with the latest version.
 
 The following table provides the versions of the Assistant that were made available on the specified date.
 
 |Release date|SaRACmd.exe version|
 |----------|-----------|
+|July 8, 2022|17.00.8713.001 |
 |May 18, 2022|17.00.8433.005 |
 |April 7, 2022|17.00.8256.000|
 |February 8, 2022|17.00.7971.000|
