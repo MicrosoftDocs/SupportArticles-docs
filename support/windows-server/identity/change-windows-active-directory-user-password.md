@@ -7,6 +7,7 @@ author: shwetasohu
 ms.author: v-shwetasohu
 ms.reviewer: RRANDALL, HerbertMauerer
 ms.topic: how-to
+ms.prod: windows-server
 ms.technology: windows-server-active-directory
 ---
 # Change a Windows Active Directory and LDS user password through LDAP
