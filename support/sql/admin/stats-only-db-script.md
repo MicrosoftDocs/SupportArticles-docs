@@ -15,6 +15,7 @@ In this article, you learn how to generate a statistics script using database me
 
 _Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, 
 SQL Server 2008
+
 _Original KB number:_ &nbsp;914288
 
 ## Introduction
