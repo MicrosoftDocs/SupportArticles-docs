@@ -158,7 +158,5 @@
       href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
-    - name: Change Windows Active Directory user password through LDAP
-      href: change-windows-active-directory-user-password.md
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md
