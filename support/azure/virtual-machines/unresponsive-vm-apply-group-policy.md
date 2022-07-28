@@ -26,7 +26,7 @@ When you're using [boot diagnostics](./boot-diagnostics.md) to view a screenshot
 
 :::image type="content" source="media/unresponsive-vm-apply-group-policy/applying-group-policy-2.png" alt-text="Screenshot of Applying Group Policy Local Users and Groups policy loading in Windows Server 2012." border="false":::
 
-:::image type="content" source="media/unresponsive-vm-apply-group-policy/please-wait.png" alt-text="Screenshot of Please wait loading in Windows Server 2012." border="false":::
+:::image type="content" source="media/unresponsive-vm-apply-group-policy/please-wait.png" alt-text="Screenshot shows 'Please wait' is loading in Windows Server 2012." border="false":::
 
 ## Cause
 
