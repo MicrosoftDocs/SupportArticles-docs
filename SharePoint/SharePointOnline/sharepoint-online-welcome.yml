@@ -1,0 +1,77 @@
+### YamlMime:Landing
+
+title: SharePoint Online troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using SharePoint Online. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: SharePoint Online troubleshooting
+  description: Documentation for troubleshooting common issues with SharePoint Online.
+  ms.service: sharepoint-online
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 07/26/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Administration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Access Denied" and "You need permission to access this site" errors'
+            url: ./administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
+          - text: Troubleshoot mapped network drives
+            url: ./administration/troubleshoot-mapped-network-drives.md
+  # Card
+  - title: Sharing and permissions
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Error when accepting an online invitation with another account
+            url: ./sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md
+          - text: '"Your organization policies do not allow you to share with these users" error'
+            url: ./sharing-and-permissions/organization-policies-do-not-allow-you-to-share-with-users-error.md
+
+ # Card
+  - title: Lists and libraries
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issues with Open with Explorer
+            url: ./lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
+          - text: SharePoint files open as read-only
+            url: ./lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
+          - text: Number of items in this list exceeds the list view threshold
+            url: ./lists-and-libraries/items-exceeds-list-view-threshold.md
+ # Card
+  - title: Sites
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Classic site collection search usage reports
+            url: ./sites/classic-site-collection-search-usage-reports.md
+          - text: Public websites is discontinued
+            url: ./sites/public-websites-be-discontinued.md
+          - text: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+            url: ./sites/err-invalid-response-accessing-sharepoint-site.md          
+ # Card
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: There is a problem with your account when opening documents
+            url: ./security/problem-with-your-account.md
+ # Card
+  - title: Search
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Search results are missing
+            url: ./search/search-results-missing.md
+          - text: Search results aren't returned
+            url: ./search/search-results-not-return.md
+          - text: Search results don't appear for group owners after creating a new Microsoft 365 group
+            url: ./search/search-results-dont-appear-for-group-owners.md
+            

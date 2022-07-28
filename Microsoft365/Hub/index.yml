@@ -27,9 +27,9 @@ productDirectory:
           text: Microsoft 365 Enterprise
         - url: ../admin/o365-admin-welcome.md
           text: Microsoft 365 admin center
-        - url: ../compliance/microsoft-365-compliance-welcome.md
+        - url: ../compliance/microsoft-365-compliance-welcome.yml
           text: Microsoft Purview
-        - url: ../security/microsoft-365-security-welcome.md
+        - url: ../security/microsoft-365-security-welcome.yml
           text: Microsoft 365 Security
     # Card
     - title: Microsoft Teams

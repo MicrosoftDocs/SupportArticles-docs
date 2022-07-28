@@ -1,5 +1,5 @@
 - name: Skype for Business Online Troubleshooting
-  href: ../skype-online-welcome.md
+  href: ../skype-online-welcome.yml
   items:
   - name: Attachments
     items:
@@ -197,7 +197,7 @@
       href: ../online-sign-in/cant-sign-in-to-lync-not-support-sni.md
     - name: Can't sign-in with this version of Lync in Lync Mobile 2013
       href: ../online-sign-in/cannot-sign-in-lync-mobile-2013.md
-    - name: Considerations when change sign-in address
+    - name: Considerations when changing sign-in address
       href: ../online-sign-in/change-office-365-sign-in-address.md
     - name: 'Issue when click "Skype" in Office Online'
       href: ../online-sign-in/couldnt-sign-you-in-when-click-skype.md

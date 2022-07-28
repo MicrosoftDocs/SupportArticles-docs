@@ -1,5 +1,5 @@
 - name: SharePoint Online Troubleshooting
-  href: ../sharepoint-online-welcome.md
+  href: ../sharepoint-online-welcome.yml
   items:
   - name: SharePoint troubleshooting content updates
     href: ../sharepoint-troubleshoot-content-updates.md
