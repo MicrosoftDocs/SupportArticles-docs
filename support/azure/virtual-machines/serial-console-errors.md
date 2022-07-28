@@ -21,7 +21,7 @@ There are a set of known errors within the Azure Serial Console. This is a list 
 
 > [!NOTE]
 > The service URLs of Serial Console are changed from `*.console.azure.com` to `*.serialconsole.azure.com`.
-> If you receive the "Web socket is closed or could not be opened" error, add `*.serialconsole.azure` to the firewall allow list.
+> If you receive the "Web socket is closed or could not be opened" error, add `*.serialconsole.azure.com` to the firewall allow list.
 
 
 ## Common errors
