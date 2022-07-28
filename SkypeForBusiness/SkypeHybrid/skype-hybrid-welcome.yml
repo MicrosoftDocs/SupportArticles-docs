@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Voicemail messages are not delivered
+          - text: Voicemail messages aren't delivered
             url: ./hybrid-phone-system/voicemails-not-delivered.md
           - text: Telephone contact number isn't updated
             url: ./hybrid-phone-system/phone-contact-number-not-updated.md
@@ -33,7 +33,7 @@ landingContent:
         links:
           - text: Repeatedly prompted for Exchange credentials
             url: ./hybrid-exchange-integration/repeatedly-prompted-for-credentials.md
-          - text: AllowAdalForNonLyncIndependentOfLync setting
+          - text: The AllowAdalForNonLyncIndependentOfLync setting
             url: ./hybrid-exchange-integration/allowadalfornonlyncindependentoflync-setting.md
  # Card
   - title: Move to Skype for Business Online
@@ -60,7 +60,7 @@ landingContent:
         links:
           - text: Lync administrators can't connect to Remote PowerShell
             url: ./hybrid-conferencing/cant-connect-to-sfb-remote-powershell.md
-          - text: Issue after run New-CSHostingProvider cmdlet
+          - text: Error after running New-CSHostingProvider cmdlet
             url: ./hybrid-conferencing/there-is-a-duplicate-key-sequence.md
  # Card
   - title: Sign-in

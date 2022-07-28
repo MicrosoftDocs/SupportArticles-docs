@@ -16,7 +16,7 @@ metadata:
 landingContent:
 
  # Card
-  - title: Archive Mailboxes
+  - title: Archive mailboxes
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -38,7 +38,7 @@ landingContent:
           - text: eDiscovery search results export fails
             url: ./ediscovery/ediscovery-results-export-fails.md
  # Card
-  - title: Audit Logs
+  - title: Audit logs
     linkLists:
       - linkListType: how-to-guide
         links:
@@ -49,7 +49,7 @@ landingContent:
           - text: UserAgent property
             url: ./audit-logs/useragent-property.md
  # Card
-  - title: Message Encryption
+  - title: Message encryption
     linkLists:
       - linkListType: how-to-guide
         links:

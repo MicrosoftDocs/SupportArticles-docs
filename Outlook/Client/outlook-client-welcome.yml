@@ -64,20 +64,20 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Hyperlinks are not working
+          - text: Hyperlinks don't work
             url: ./message-body/hyperlinks-not-working-in-outlook.md
           - text: Attachment size exceeds the allowable limit error
             url: ./message-body/attachment-size-exceeds-the-allowable-limit-error.md
-          - text: he Linked image cannot be displayed error
+          - text: The Linked image cannot be displayed error
             url: ./message-body/the-linked-image-cannot-be-displayed-error.md
  # Card
   - title: Files
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Outlook not responding error or Outlook freezes
+          - text: Outlook freezes or "Outlook not responding" error
             url: ./performance/outlook-not-responding-error-or-outlook-freezes.md
-          - text: Performance issues for too many items or folders
+          - text: Performance issues with too many items or folders
             url: ./performance/performance-issues-if-too-many-items-or-folders.md
           - text: Scan by using Microsoft Support and Recovery Assistant
             url: ./performance/how-to-scan-outlook-by-using-microsoft-support-and-recovery-assistant.md

@@ -3,7 +3,7 @@
   items:
   - name: Conferencing
     items:
-    - name: Issue after run New-CSHostingProvider cmdlet
+    - name: Error after running New-CSHostingProvider cmdlet
       href: ../hybrid-conferencing/there-is-a-duplicate-key-sequence.md
     - name: Lync administrators can't connect to Remote PowerShell 
       href: ../hybrid-conferencing/cant-connect-to-sfb-remote-powershell.md

@@ -20,7 +20,7 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: '"Access Denied" and "You need permission to access this site" errors'
+          - text: '"Access Denied" error'
             url: ./administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
           - text: Troubleshoot mapped network drives
             url: ./administration/troubleshoot-mapped-network-drives.md
@@ -39,11 +39,11 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Issues with Open with Explorer
+          - text: 'Issues when using "View in File Explorer"'
             url: ./lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
           - text: SharePoint files open as read-only
             url: ./lists-and-libraries/files-open-as-read-only-and-cannot-check-in-or-out.md
-          - text: Number of items in this list exceeds the list view threshold
+          - text: Number of items exceeds the list view threshold
             url: ./lists-and-libraries/items-exceeds-list-view-threshold.md
  # Card
   - title: Sites
@@ -54,7 +54,7 @@ landingContent:
             url: ./sites/classic-site-collection-search-usage-reports.md
           - text: Public websites is discontinued
             url: ./sites/public-websites-be-discontinued.md
-          - text: '"This site cant be reached" and ERR_INVALID_RESPONSE error when accessing SharePoint site'
+          - text: '"This site cant be reached" error when accessing a SharePoint site'
             url: ./sites/err-invalid-response-accessing-sharepoint-site.md          
  # Card
   - title: Security
