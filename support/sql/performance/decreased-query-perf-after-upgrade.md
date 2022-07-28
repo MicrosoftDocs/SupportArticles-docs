@@ -12,7 +12,7 @@ ms.author: jopilov
 
 # Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later
 
-After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there are many possible causes and contributing factors depending on the situation, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
+After you upgrade SQL Server from 2012 or an earlier version to 2014 or a later version, you may encounter the following issue: most of the original queries run well, but a few of your queries run slower than in the previous version. Though there are many possible causes and contributing factors, one relatively common cause is the changes in the [Cardinality Estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) (CE) model after the upgrade. Significant changes were introduced to the CE models starting in SQL Server 2014.
 
 This article provides troubleshooting steps and resolutions for query performance issues that occur when using the default CE but don't occur when using the legacy CE.
 
@@ -23,7 +23,7 @@ This article provides troubleshooting steps and resolutions for query performanc
 
 #### Step 1: Identify if the default CE is used
 
-1. Choose a query that you can reproduce the issue with.
+1. Choose a query that runs slower after the upgrade.
 1. Run the query and [collect the execution plan](/sql/relational-databases/performance/display-an-actual-execution-plan#to-include-an-execution-plan-for-a-query-during-execution).
 1. From the execution plan Properties window, check **CardinalityEstimationModelVersion**.
     :::image type="content" source="media/decreased-query-perf-after-upgrade/query-plan-ce-version.png" alt-text="Find CE model version from the execution plan Properties window.":::
@@ -37,7 +37,7 @@ Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-o
 
 #### Step 3: Find out why the query performs better with the legacy CE
 
-Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. These tests determine which hints or trace flags positively impact the performance.
+Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), and [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. These tests determine which hints or trace flags positively impact the performance.
 
 ## Resolution
 
@@ -129,7 +129,7 @@ For pre-existing applications and workloads, we don't recommend moving to the de
 
 #### Q3: Are there any disadvantages of using the legacy CE permanently?
 
-Future cardinality estimator-related improvements and fixes are centered around more recent versions. While version 70 is an acceptable intermediate state, after careful testing, we recommend eventually moving to a more recent CE version to benefit from the most recent CE fixes. There's a high probability of query plan changes when moving from the legacy CE, so test before making changes to production systems. The changes can improve query performance in many cases, but in some cases, query performance may degrade.
+Future cardinality estimator-related improvements and fixes are centered around more recent versions. Version 70 is an acceptable intermediate state. However, after careful testing, we recommend eventually moving to a more recent CE version to benefit from the most recent CE fixes. There's a high probability of query plan changes when moving from the legacy CE, so test before making changes to production systems. The changes can improve query performance in many cases, but in some cases, query performance may degrade.
 
 > [!IMPORTANT]
 > The default CE is the main code path that will receive future investment and deeper testing coverage over the long-term, so don't plan on using the legacy CE indefinitely.
@@ -170,7 +170,7 @@ END;
 
 For Azure SQL Database, you can create a support ticket to have this trace flag enabled at the subscription level but not the server level.
 
-#### Q5: Will running with the legacy CE prevent me from getting access to new features?
+#### Q5: Will running the legacy CE prevent me from getting access to new features?
 
 Even with LEGACY_CARDINALITY_ESTIMATION enabled, you'll still get access to the latest functionality included with the version of SQL Server and the associated database compatibility level. For example, a database with LEGACY_CARDINALITY_ESTIMATION enabled running at database compatibility level 140 on SQL Server 2017 can still benefit from the [adaptive query processing](/sql/relational-databases/performance/adaptive-query-processing) feature family.  
 
@@ -178,7 +178,7 @@ Even with LEGACY_CARDINALITY_ESTIMATION enabled, you'll still get access to the 
 
 We don't have plans to stop supporting Microsoft legacy CE at this point. However, future cardinality estimator-related improvements and fixes are centered around more recent versions of the CE.
 
-#### Q7: I have only a few queries that are regressing with the default CE, but most queries are the same or even improved. What should I do?
+#### Q7: I only have a few queries regressing with the default CE, but most query performance is the same or even improved. What should I do?
 
 A more granular alternative to the server-scoped trace flag 9481 or the LEGACY_CARDINALITY_ESTIMATION database scoped configuration is the use of the query-scoped USE HINT construct. For more information, see [USE HINT query hint argument in SQL Server 2016](https://support.microsoft.com/help/3189813/update-introduces-use-hint-query-hint-argument-in-sql-server-2016) and [USE HINT](/sql/t-sql/queries/hints-transact-sql-query#use_hint).
 
@@ -191,7 +191,7 @@ Alternatively, if there's only one query that is problematic with the default CE
 
 #### Q8: If query performance regressed due to a plan change related to significant over or under-estimates when using the default CE, will the issue be fixed in the product?
 
-CE is a complex problem, and the algorithms rely on less-than-perfect data available for estimates (statistics for tables and indexes, and no information for some out-of-model constructs like table-valued functions (TVFs) and models based on many assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, etc.).
+CE is a complex problem, and the algorithms rely on the less-than-perfect data available for estimates, such as statistics for tables and indexes. There is no information for some out-of-model constructs like table-valued functions (TVFs) and models based on many assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, and so on).
 
 Given the unlimited combinations of customer schema, data, and workloads, it's almost impossible to pick models that work for all cases. While some changes in the default CE may contain bugs (like any other software can) and can be fixed, other problems are caused by a model change.
 
