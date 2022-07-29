@@ -218,7 +218,7 @@ To identify the slow steps in the query, follow these steps:
        DBCC TRACEON (7412, -1)
        ```
 
-   - Enable the `query_thread_profile` XEvent by running the following commands:
+   - Alternatively, enable the `query_thread_profile` XEvent by running the following commands:
 
         ```sql
         CREATE EVENT SESSION [PerfStats_LWP_Plan_v2] ON SERVER
