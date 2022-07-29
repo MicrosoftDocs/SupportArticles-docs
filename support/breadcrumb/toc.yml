@@ -122,14 +122,6 @@
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/
-        items:
-        - name: Application Insights
-          tocHref: /troubleshoot/azure/azure-monitor/app-insights/
-          topicHref: /troubleshoot/azure/azure-monitor/
-        - name: Log Analytics
-          tocHref: /troubleshoot/azure/azure-monitor/Log Analytics/
-          topicHref: /troubleshoot/azure/azure-monitor/
-
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/
