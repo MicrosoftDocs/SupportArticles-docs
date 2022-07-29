@@ -53,7 +53,7 @@ This error typically occurs when a file related to the installation becomes corr
 
 If you use an ISO file to install Visual Studio, or if you use a DVD that was burned from an ISO file, the ISO file may become corrupted during the download process. If you have the Microsoft File Checksum Integrity Verifier tool installed, use the tool to check if the ISO file is corrupted by following these steps:
 
-1. In a **Command Prompt** window, type the following command and then press **Enter**.
+1. In a **Command Prompt** window, type the following command and then press Enter.
 
     ```console
     <DIRECTORY_NAME>\fciv.exe -sha1 <ISO_NAME>
@@ -83,8 +83,8 @@ If the error occurs when you try to repair Visual Studio, your installation cach
 
 1. Close Visual Studio.
 2. To open an elevated **Command Prompt**, select **Start**, type _cmd_ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
-3. In the **Command Prompt** window, type _cd C:\ProgramData\Package Cache_, and then press **Enter**.
-4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press **Enter** after each command:
+3. In the **Command Prompt** window, type _cd C:\ProgramData\Package Cache_, and then press Enter.
+4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press Enter after each command:
 
     ```console
     Delete /F /S *.msi
