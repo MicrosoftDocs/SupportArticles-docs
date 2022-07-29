@@ -302,7 +302,7 @@ To identify the slow steps in the query, follow these steps:
 
 ## Method to review the collected plans
 
-This section will illustrate how to review the collected data. It will use the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later.
+This section will illustrate how to review the collected data. It will use the multiple XML query plans (using extension **.sqlplan*) collected in SQL Server 2016 SP1 and later builds and versions.
 
 Follow these steps to [compare execution plans](/sql/relational-databases/performance/compare-execution-plans#to-compare-execution-plans):
 
