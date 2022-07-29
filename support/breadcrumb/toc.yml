@@ -116,6 +116,9 @@
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
+      - name: Azure App Service
+        tocHref: /troubleshoot/azure/app-service/
+        topicHref: /troubleshoot/azure/app-service/welcome-app-service
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
