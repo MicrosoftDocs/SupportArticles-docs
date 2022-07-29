@@ -204,7 +204,7 @@ To identify the slow steps in the query by using [Lightweight query execution st
     ALTER EVENT SESSION [NodePerfStats] ON SERVER STATE = STOP
     ```
 
-# [SQL Server 2016 SP1 and later and SQL Server 2017](#tab/2016-2017)
+# [SQL Server 2016 (after SP1) and SQL Server 2017](#tab/2016-2017)
 
 You can use the [Lightweight query execution statistics profiling infrastructure v2](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v2) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
