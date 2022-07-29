@@ -33,11 +33,11 @@ If the legacy CE is used, the CE changes aren't the cause of the performance iss
 
 #### Step 2: Identify if Query Optimizer can generate a better plan by using the legacy CE
 
-Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than the default CE, go to the next step. If performance doesn't improve, the CE changes aren't the cause.
+Run the query [with the legacy CE](#query-level-use-query-hint-or-querytraceon-option). If it performs better than using the default CE, go to the next step. If performance doesn't improve, the CE changes aren't the cause.
 
 #### Step 3: Find out why the query performs better with the legacy CE
 
-Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), and [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. These tests determine which hints or trace flags positively impact the performance.
+Test the various CE-related [query-hints](/sql/t-sql/queries/hints-transact-sql-query#use_hint) for your query. For SQL Server 2014, use the corresponding trace flags [4137](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4137), [9472](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf9472), and [4139](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4139) to test the query. Determine which hints or trace flags positively impact the performance based on these tests.
 
 ## Resolution
 
@@ -170,13 +170,13 @@ END;
 
 For Azure SQL Database, you can create a support ticket to have this trace flag enabled at the subscription level but not the server level.
 
-#### Q5: Will running the legacy CE prevent me from getting access to new features?
+#### Q5: Will running with the legacy CE prevent me from getting access to new features?
 
 Even with LEGACY_CARDINALITY_ESTIMATION enabled, you'll still get access to the latest functionality included with the version of SQL Server and the associated database compatibility level. For example, a database with LEGACY_CARDINALITY_ESTIMATION enabled running at database compatibility level 140 on SQL Server 2017 can still benefit from the [adaptive query processing](/sql/relational-databases/performance/adaptive-query-processing) feature family.  
 
 #### Q6: When will the legacy CE go out of support?
 
-We don't have plans to stop supporting Microsoft legacy CE at this point. However, future cardinality estimator-related improvements and fixes are centered around more recent versions of the CE.
+We don't have plans to stop supporting the legacy CE at this point. However, future cardinality estimator-related improvements and fixes are centered around more recent versions of the CE.
 
 #### Q7: I only have a few queries regressing with the default CE, but most query performance is the same or even improved. What should I do?
 
