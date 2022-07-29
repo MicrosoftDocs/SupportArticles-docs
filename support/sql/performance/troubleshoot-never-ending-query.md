@@ -16,7 +16,7 @@ This article describes the troubleshooting steps for the issue where you have a 
 
 ## What is a never-ending query?
 
-This article strictly covers queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant).
+This document focuses on queries that continue to execute or compile, that is, their CPU continues to increase. It doesn't apply to queries that are blocked or waiting on some resource that is never released (the CPU remains constant or changes very little).
 
 > [!IMPORTANT]
 > If a query is left to finish its execution, it will eventually complete. It could take just a few seconds, or it could take several days.
