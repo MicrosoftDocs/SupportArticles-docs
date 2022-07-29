@@ -331,7 +331,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
    - Use more selective `WHERE` predicates to reduce the data processed up-front.
    - Break it apart.
    - Select some parts into temp tables, and join them later.
-   - Remove `TOP` (T-SQL) where possible to avoid row goal resulting in nested loops.
+   - Remove `TOP` (T-SQL) where possible to avoid a row goal resulting in nested loops.
    - Avoid using Common Table Expressions (CTEs) in such cases as they combine statements into a single big query.
 
 1. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query) to produce a better plan:
