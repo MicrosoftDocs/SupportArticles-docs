@@ -263,7 +263,7 @@ To identify the slow steps in the query, follow these steps:
     DBCC TRACEOFF (7412, -1)
     ```
 
-# [SQL Server 2019 and later](#tab/2019)
+# [SQL Server 2019 and later versions](#tab/2019)
 
 You can use the [Lightweight query execution statistics profiling infrastructure v3](/sql/relational-databases/performance/query-profiling-infrastructure#lightweight-query-execution-statistics-profiling-infrastructure-v3) to capture live query plans with actual values for row count. This profiling infrastructure allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query. Lightweight profiling is enabled by default on SQL Server 2019.
 
