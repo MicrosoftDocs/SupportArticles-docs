@@ -1,27 +1,34 @@
+- name: Docs
+  tocHref: /
+  topicHref: /
+  items:
 
-- name: Troubleshoot
-tocHref: /troubleshoot/
-topicHref: /troubleshoot/index
-items: 
-  - name: Windows
-    tocHref: /troubleshoot/windows/
-    topicHref: /troubleshoot/windows/
+  - name: Troubleshoot
+    tocHref: /troubleshoot/
+    topicHref: /troubleshoot/index
     items:
-    - name: Windows Server
-      tocHref: /troubleshoot/windows-server/
-      topicHref: /troubleshoot/windows-server/welcome-windows-server
-    - name: Windows Client
-      tocHref: /troubleshoot/windows-client/
-      topicHref: /troubleshoot/windows-client/welcome-windows-client
-    - name: Application Developer
-      tocHref: /troubleshoot/windows/win32
-      topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
-    - name: Hardware Developer
-      tocHref: /troubleshoot/windows-hardware/drivers
-      topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
+    
+    - name: Windows
+      tocHref: /troubleshoot/windows/
+      topicHref: /troubleshoot/windows/
+      items:
+      - name: Windows Server
+        tocHref: /troubleshoot/windows-server/
+        topicHref: /troubleshoot/windows-server/welcome-windows-server
+      - name: Windows Client
+        tocHref: /troubleshoot/windows-client/
+        topicHref: /troubleshoot/windows-client/welcome-windows-client
+      - name: Application Developer
+        tocHref: /troubleshoot/windows/win32
+        topicHref: /troubleshoot/windows/win32/welcome-windowsdeveloper    
+      - name: Hardware Developer
+        tocHref: /troubleshoot/windows-hardware/drivers
+        topicHref: /troubleshoot/windows-hardware/drivers/welcome-windowshardware
+
     - name: Browsers
       tocHref: /troubleshoot/developer/browsers/
       topicHref: /troubleshoot/developer/browsers/welcome-browsers
+
     - name: BizTalk Server
       tocHref: /troubleshoot/developer/biztalk/
       topicHref: /troubleshoot/developer/biztalk/welcome-biztalk-server
@@ -82,8 +89,8 @@ items:
         topicHref: /troubleshoot/system-center/vmm/welcome-vmm
 
     - name: Azure
-      tocHref:/azure/
-      topicHref: /azure/
+      tocHref: /troubleshoot/azure/
+      topicHref: /troubleshoot/azure/
       items:
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
@@ -118,10 +125,7 @@ items:
         items:
         - name: Application Insights
           tocHref: /troubleshoot/azure/azure-monitor/app-insights/
-          topicHref: /troubleshoot/azure/azure-monitor/
-        - name: Log Analytics
-          tocHref: /troubleshoot/azure/azure-monitor/Log Analytics/
-          topicHref: /troubleshoot/azure/azure-monitor/
+          topicHref: /troubleshoot/azure/azure-monitor/app-insights/auto-instrumentation-troubleshoot
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
