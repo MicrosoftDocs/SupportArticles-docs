@@ -39,7 +39,7 @@ The syntax of the **unicodePwd** attribute is octet-string; however, the directo
 
 There are two possible ways to modify the **unicodePwd** attribute. The first is similar to a regular user change password operation. In this case, the modify request must contain both delete and an add operation. The delete operation must contain the current password with quotes around it. The add operation must contain the desired new password with quotes around it.
 
-The second way to modify this attribute is analogous to an administrator resetting a password for a user. To do this, the client must bind as a user with sufficient permissions to modify another user’s password. This modify request should contain a single replace operation with the new desired password surrounded by quotes. If the client has sufficient permissions, this password becomes the new password, regardless of what the old password was.
+The second way to modify this attribute is analogous to an administrator resetting a password for a user. To do this, the client must bind as a user with sufficient permissions to modify another user's password. This modify request should contain a single replace operation with the new desired password surrounded by quotes. If the client has sufficient permissions, this password becomes the new password, regardless of what the old password was.
 
 The following two functions provide examples of these operations:
 
@@ -59,19 +59,19 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     
     // Build an array of LDAPMod.
     
-    // For setting **unicodePwd**, this MUST be a double op.
+    // For setting unicodePwd, this MUST be a double op.
     modEntry[0] = &modOldPassword;
     modEntry[1] = &modNewPassword;
     modEntry[2] = NULL;
     
-    // Build mod struct for **unicodePwd** Add.
+    // Build mod struct for unicodePwd Add.
     modNewPassword.mod_op = LDAP_MOD_ADD | LDAP_MOD_BVALUES;
-    modNewPassword.mod_type =L”unicodePwd”;
+    modNewPassword.mod_type =L"unicodePwd";
     modNewPassword.mod_vals.modv_bvals = newPwd_attr;
     
-    // Build mod struct for **unicodePwd** Delete.
+    // Build mod struct for unicodePwd Delete.
     modOldPassword.mod_op = LDAP_MOD_DELETE | LDAP_MOD_BVALUES;
-    modOldPassword.mod_type =L”unicodePwd”;
+    modOldPassword.mod_type =L"unicodePwd";
     modOldPassword.mod_vals.modv_bvals = oldPwd_attr;
     
     // Password will be single valued, so we only have one element.
@@ -81,8 +81,8 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     oldPwd_attr[1]= NULL;
     
     // Surround the passwords in quotes.
-    wsprintf(pszNewPasswordWithQuotes,L”\”%s\””,pszNewPassword);
-    wsprintf(pszOldPasswordWithQuotes,L”\”%s\””,pszOldPassword);
+    wsprintf(pszNewPasswordWithQuotes,L"\"%s\"",pszNewPassword);
+    wsprintf(pszOldPasswordWithQuotes,L"\"%s\"",pszOldPassword);
     
     // Build the BER structures with the UNICODE passwords w/quotes.
     newPwdBerVal.bv_len = wcslen(pszNewPasswordWithQuotes) * sizeof(WCHAR);
@@ -97,9 +97,9 @@ ULONG ChangeUserPassword(WCHAR* pszUserDN, WCHAR* pszOldPassword,WCHAR* pszNewPa
     );
     
     if (err == LDAP_SUCCESS )
-    wprintf(L”\nPassword successfully changed!\n”);
+    wprintf(L"\nPassword successfully changed!\n");
     else
-    wprintf(L”\nPassword change failed!\n”);
+    wprintf(L"\nPassword change failed!\n");
     
     return err;
 }
@@ -118,9 +118,9 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     modEntry[0] = &modPassword;
     modEntry[1] = NULL;
     
-    // Build mod struct for **unicodePwd**. 
+    // Build mod struct for unicodePwd. 
     modPassword.mod_op = LDAP_MOD_REPLACE | LDAP_MOD_BVALUES;
-    modPassword.mod_type =L”unicodePwd”;
+    modPassword.mod_type =L"unicodePwd";
     modPassword.mod_vals.modv_bvals = pwd_attr;
     
     // Password will be single valued, so we only have one element.
@@ -128,7 +128,7 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     pwd_attr[1]= NULL;
     
     // Surround the password in quotes.
-    wsprintf(pszPasswordWithQuotes,L”\”%s\””,pszPassword);
+    wsprintf(pszPasswordWithQuotes,L"\"%s\"",pszPassword);
     
     // Build the BER structure with the UNICODE password.
     pwdBerVal.bv_len = wcslen(pszPasswordWithQuotes) * sizeof(WCHAR);
@@ -141,9 +141,9 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
     );
     
     if (err == LDAP_SUCCESS )
-    wprintf(L”\nPassword succesfully set!\n”);
+    wprintf(L"\nPassword succesfully set!\n");
     else
-    wprintf(L”\nPassword set failed!\n”);
+    wprintf(L"\nPassword set failed!\n");
     
     return err;
 }
@@ -151,10 +151,10 @@ ULONG SetUserPassword(WCHAR* pszUserDN, WCHAR* pszPassword)
 > [!Tip]
 > - To configure LDS instances using UserProxy objects for password resets, you have to allow constrained delegation of the LDS service account (default: LDS computer account) to the domain controllers in case the user logon uses Kerberos.
 > - If you are using LDAP simple bind, you have to use Windows Server 2022 or a newer version and set a registry entry to forward the admin LDAP session credentials to the Active Directory Domain Controller:\
-**Registry Key**: HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters\
+**Registry Key**: _HKLM\system\currentcontrolset\services\<LDS Instance>\Parameters_\
 **Registry Entry**: Allow ClearText Logon Type\
-**Type**: REG_DWORDData:\
-**Data**: **0**: Don’t allow forwarding of credentials (Default)\
+**Type**: REG_DWORD\
+**Data**: **0**: Don't allow forwarding of credentials (Default)\
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **1**: Allow  forwarding of credentials for password reset
 > - Note that the change in both cases means that the LDS server should be considered a Tier-0 device as it can start security-sensitive tasks on the Domain Controller.
 

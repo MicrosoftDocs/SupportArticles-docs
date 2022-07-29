@@ -3,8 +3,8 @@ title: GetMyDevicePortName returns incorrect port name of a USB scanner
 description: This article discusses the issue where GetMyDevicePortName may return incorrect port name after you start Windows 11 from the sleep mode.
 ms.date: 05/02/2022
 ms.custom: sap:Print driver
-author: Dipesh-Choubisa
-ms.author: v-dchoubisa
+author: HaiyingYu
+ms.author: haiyingyu
 ms.technology: windows-hardware-print-driver
 ---
 
@@ -49,7 +49,7 @@ In this scenario, if you try to scan a document by using the scanner, the scan p
 
 ## Cause
 
-This error occurs because the WIA service doesn't update cached information of the port name when a scanner’s port name changes after the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver’s implementation.  
+This error occurs because the WIA service doesn't update cached information of the port name when a scanner's port name changes after the system resumes from the sleep state. The WIA driver might fail during initialization and report errors. The reported errors may vary depending on the driver's implementation.  
 
 ## Status
 
