@@ -45,15 +45,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Upgrade fails because of NSG rules
-            url: ./troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules        
+            url: ./upgrade-fails-because-of-nsg-rules.md        
           - text: PodDrainFailure error
-            url: ./troubleshoot-upgrade-errors.md#error-code-poddrainfailure
+            url: ./error-code-poddrainfailure.md
           - text: PublicIPCountLimitReached error
-            url: ./troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
+            url: ./error-code-publicipcountlimitreached.md
           - text: QuotaExceeded error
-            url: ./troubleshoot-upgrade-errors.md#error-code-quotaexceeded
-          - text: SubnetIsFull error
-            url: ./troubleshoot-upgrade-errors.md#error-code-subnetisfull
+            url: ./error-code-quotaexceeded.md
+          - text: SubnetIsFull error during an upgrade
+            url: ./error-code-subnetisfull-upgrade.md
           - text: Kubernetes 1.16 upgrades fail using node labels
             url: ./upgrades-to-kubernetes-fail-using-node-labels.md              
 
