@@ -2535,6 +2535,11 @@
       "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
       "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
       "redirect_document_id": true
-    }
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    }    
   ]
 }
