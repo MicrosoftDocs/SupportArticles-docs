@@ -1,1 +1,7 @@
 - name: Dynamics 365 Finance
+  href: welcome-finance.yml
+  items:
+  - name: Tax
+    items:
+    - name: Failed to set visibility
+      href: tax/tcs-troubleshooting-failed-to-set-microsoft-dataverse-virtual-table-visibility.md
