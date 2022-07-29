@@ -1,7 +1,7 @@
 ---
 title: Common issues in Visual Studio setup
 description: This article describes common issues during Visual Studio installation and provides suggested workarounds.
-ms.date: 07/20/2022
+ms.date: 07/27/2022
 author: shwetasohu
 ms.author: v-shwetasohu
 ms.custom: sap:Installation
@@ -53,7 +53,7 @@ This error typically occurs when a file related to the installation becomes corr
 
 If you use an ISO file to install Visual Studio, or if you use a DVD that was burned from an ISO file, the ISO file may become corrupted during the download process. If you have the Microsoft File Checksum Integrity Verifier tool installed, use the tool to check if the ISO file is corrupted by following these steps:
 
-1. In a **Command Prompt** window, type the following command and then press **Enter**.
+1. In a **Command Prompt** window, type the following command and then press Enter.
 
     ```console
     <DIRECTORY_NAME>\fciv.exe -sha1 <ISO_NAME>
@@ -82,9 +82,9 @@ If the expected SHA-1 value doesn't match the value that is returned by the File
 If the error occurs when you try to repair Visual Studio, your installation cache may have become corrupted. To repair the cache, follow these steps:
 
 1. Close Visual Studio.
-2. To open an elevated **Command Prompt**, select **Start**, type ‘cmd’ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
-3. In the **Command Prompt** window, type ‘cd C:\ProgramData\Package Cache’, and then press **Enter**.
-4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press **Enter** after each command:
+2. To open an elevated **Command Prompt**, select **Start**, type _cmd_ in the **Start** search box, right-click _cmd.exe_ in the results list, and then select **Run as administrator**.
+3. In the **Command Prompt** window, type _cd C:\ProgramData\Package Cache_, and then press Enter.
+4. To clear the _.msi_ and _.cab_ files from the cache, type the following commands in the **Command Prompt** window, and press Enter after each command:
 
     ```console
     Delete /F /S *.msi
@@ -105,7 +105,7 @@ When you install Visual Studio on Windows 7, you receive the following warning:
 
 > Installation errors may occur because the security certificate updates that are required to install some Visual Studio components cannot be applied to this computer.
 
-If you select **Continue** to proceed with the Visual Studio installation, you may encounter the “Unable to locate package source” errors that aren't resolved through the **Download packages from the internet** option. When the Visual Studio installation finishes, you see the following message:
+If you select **Continue** to proceed with the Visual Studio installation, you may encounter the "Unable to locate package source" errors that aren't resolved through the **Download packages from the internet** option. When the Visual Studio installation finishes, you see the following message:
 
 > Setup Completed. However, not all features are installed correctly.
 
@@ -116,7 +116,7 @@ In some cases, Visual Studio can programmatically retrieve and then apply the re
 
 - Check the group policy setting on your computer that controls automatic certificate updates. To automatically retrieve and apply the required certificates, follow these steps:
 
-    1. Open the **Local Group Policy Editor** (*gpedit.msc*).
+    1. Open the **Local Group Policy Editor** (_gpedit.msc_).
 
     1. Expand **Computer Configuration** > **Administrative Templates** > **System** > **Internet Communication Management**, and then select **Internet Communication settings**.
 
@@ -129,7 +129,7 @@ In some cases, Visual Studio can programmatically retrieve and then apply the re
 
 If you have already installed Visual Studio, try to repair Visual Studio after you've tried one or more of the preceding methods. This process tries to successfully install the features that weren't installed in the previous attempt. To repair Visual Studio, follow these steps:
 
-1. Open **Programs and Features** (*appwiz.cpl*).
+1. Open **Programs and Features** (_appwiz.cpl_).
 
 1. Right-click **Visual Studio \<VersionNumber>**, select **Change**, and then select **Repair** to initiate the repair process.
 
