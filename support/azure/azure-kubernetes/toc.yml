@@ -40,19 +40,22 @@
 
 - name: Troubleshoot upgrade operations
   items:
-  - name: NSG prevents resource download
-    href: troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules
-  - name: PodDrainFailure error
-    href: troubleshoot-upgrade-errors.md#error-code-poddrainfailure
-  - name: PublicIPCountLimitReached error
-    href: troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
-  - name: QuotaExceeded error
-    href: troubleshoot-upgrade-errors.md#error-code-quotaexceeded
-  - name: SubnetIsFull error
-    href: troubleshoot-upgrade-errors.md#error-code-subnetisfull
-  - name: Kubernetes 1.16 upgrades fail
-    href: upgrades-to-kubernetes-fail-using-node-labels.md    
 
+  - name: Troubleshoot Azure Kubernetes Service (AKS) upgrade errors
+    items:
+    - name: Upgrade fails because of NSG rules
+      href: upgrade-fails-because-of-nsg-rules.md
+    - name: PodDrainFailure error
+      href: error-code-poddrainfailure.md
+    - name: PublicIPCountLimitReached error
+      href: error-code-publicipcountlimitreached.md
+    - name: QuotaExceeded error
+      href: error-code-quotaexceeded.md   
+    - name: SubnetIsFull upgrade error
+      href: error-code-subnetisfull-upgrade.md   
+  - name: Kubernetes 1.16 upgrades fail
+    href: upgrades-to-kubernetes-fail-using-node-labels.md  
+          
 - name: Troubleshoot delete operations
   items:
   - name: CannotDeleteLoadBalancerWithPrivateLinkService error
