@@ -84,7 +84,7 @@ To identify whether a query is continuously executing or stuck on a bottleneck, 
         |56 |runnable  | 12040 |301000 |0 |NULL|
         |56 |running | 17020 |523000|0 |NULL|
 
-    - If you observe a wait scenario like the following one where the CPU doesn't change, and the session is waiting on a resource, this article isn't applicable.
+    - If you observe a wait scenario like the following one where the CPU doesn't change or changes very slightly, and the session is waiting on a resource, this article isn't applicable.
 
         session_id|status| cpu_time | logical_reads |wait_time|wait_type|
         |--|--|--|--|--|--|
