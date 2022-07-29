@@ -54,7 +54,7 @@ To resolve the issue, try one of the following methods:
   This is a favorable option and can be used to target specific queries. Forcing a plan could be done by using a [plan guide](/sql/relational-databases/performance/plan-guides) or QDS. QDS is generally easier to use.
 - Use [database-scoped configuration](#database-level-set-scoped-configuration-or-compatibility-level) to force the legacy CE.
 
-  This is a less preferred approach as it is a database-wide setting and applies to all queries against this database. Still, it is sometimes necessary when a targeted approach isn't feasible. It's certainly the easiest option to implement.
+  This is a less preferred approach as it is a database-wide setting and applies to all queries against this database. Still, it's sometimes necessary when a targeted approach isn't feasible. It's certainly the easiest option to implement.
 - Use trace flag 9841 to force legacy CE globally. To do this, use [DBCC TRACEON](#server-level-use-trace-flag) or set the trace flag as a [start-up parameter](/sql/tools/configuration-manager/sql-server-properties-startup-parameters-tab#optional-parameters).
 
   This is the least-targeted approach and should only be used as a temporary mitigation when you're unable to apply any of the other options.
@@ -191,7 +191,7 @@ Alternatively, if there's only one query that is problematic with the default CE
 
 #### Q8: If query performance regressed due to a plan change related to significant over or under-estimates when using the default CE, will the issue be fixed in the product?
 
-CE is a complex problem, and the algorithms rely on the less-than-perfect data available for estimates, such as statistics for tables and indexes. There is no information for some out-of-model constructs like table-valued functions (TVFs) and models based on many assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, and so on).
+CE is a complex problem, and the algorithms rely on the less-than-perfect data available for estimates, such as statistics for tables and indexes. There's no information for some out-of-model constructs like table-valued functions (TVFs) and models based on many assumptions (such as correlation or independence of the predicates and columns, uniform data distribution, containment, and so on).
 
 Given the unlimited combinations of customer schema, data, and workloads, it's almost impossible to pick models that work for all cases. While some changes in the default CE may contain bugs (like any other software can) and can be fixed, other problems are caused by a model change.
 
