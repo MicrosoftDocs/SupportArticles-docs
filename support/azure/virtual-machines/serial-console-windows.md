@@ -154,7 +154,7 @@ Serial Console uses the storage account configured for boot diagnostics in its c
 
 2. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
 
-    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](/azure/virtual-network/service-tags-overview).
+    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](/azure/virtual-network/service-tags-overview).
 
     |IP Address      | Regions | Geography|
     |-----------|--------------------|-----------------|
@@ -196,11 +196,11 @@ Serial Console uses the storage account configured for boot diagnostics in its c
     |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
 
     > [!IMPORTANT]
-    > The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220, 20.105.209.72. View the table above to find the correct IPs for your region and geography.
+    > The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
 
     For more information about how to add IPs to the storage account firewall, see [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
 
-After the IP addresses are successfully added to the storage account firewall, retry the Serial Console connection to the VM. If you still have connection problems, verify the correct IP addresses are excluded from the storage account firewall for the region of the VM.
+After the IP addresses are successfully added to the storage account firewall, retry the Serial Console connection to the VM. If you still have connection problems, verify that the correct IP addresses are excluded from the storage account firewall for the region of the VM.
 
 ### Access security
 
