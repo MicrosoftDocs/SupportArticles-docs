@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 5/11/2022
+  ms.date: 7/14/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -45,15 +45,15 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Upgrade fails because of NSG rules
-            url: ./troubleshoot-upgrade-errors.md#upgrade-fails-because-of-nsg-rules        
+            url: ./upgrade-fails-because-of-nsg-rules.md        
           - text: PodDrainFailure error
-            url: ./troubleshoot-upgrade-errors.md#error-code-poddrainfailure
+            url: ./error-code-poddrainfailure.md
           - text: PublicIPCountLimitReached error
-            url: ./troubleshoot-upgrade-errors.md#error-code-publicipcountlimitreached
+            url: ./error-code-publicipcountlimitreached.md
           - text: QuotaExceeded error
-            url: ./troubleshoot-upgrade-errors.md#error-code-quotaexceeded
-          - text: SubnetIsFull error
-            url: ./troubleshoot-upgrade-errors.md#error-code-subnetisfull
+            url: ./error-code-quotaexceeded.md
+          - text: SubnetIsFull error during an upgrade
+            url: ./error-code-subnetisfull-upgrade.md
           - text: Kubernetes 1.16 upgrades fail using node labels
             url: ./upgrades-to-kubernetes-fail-using-node-labels.md              
 
@@ -124,6 +124,8 @@ landingContent:
             url: ./client-ip-address-cannot-access-api-server.md
           - text: Config file isn't available when connecting
             url: ./config-file-is-not-available-when-connecting.md
+          - text: Tunnel connectivity issues
+            url: ./tunnel-connectivity-issues.md
           - text: User can't get cluster resources
             url: ./user-cannot-get-cluster-resources.md
 

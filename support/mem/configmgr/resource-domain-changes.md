@@ -29,6 +29,17 @@ January 2022 Windows updates introduced an NTLM fallback that may [block NTLM au
 
 This issue is fixed in [Configuration Manager current branch, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203).
 
+If the issue still occurs after upgrading to version 2203 and later versions, make sure that you meet the requirements for establishing the Kerberos connection from the site server to the controllers of the target domain. For example:
+
+- TCP port 88 (Kerberos) is accessible.
+- The site server can resolve service location (SRV) records for Kerberos services. For example:
+
+    ```output
+    _kerberos._tcp.contoso.com
+    _kerberos._udp.contoso.com
+    _kerberos._tcp.dc._msdcs.contoso.com
+    ```
+
 ## Workaround
 
 To work around this issue, change collection rules to include both the NetBIOS domain name and the DNS domain name. For example:
