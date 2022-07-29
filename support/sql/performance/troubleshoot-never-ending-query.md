@@ -100,7 +100,7 @@ On rare occasions, you may observe that the CPU is increasing continuously over 
 
 ## Collect diagnostic data
 
-# [SQL Server 2008 - 2014 (prior to SP2)](#tab/2008-2014)
+# [SQL Server 2008 - SQL Server 2014 (prior to SP2)](#tab/2008-2014)
 
 To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql-server-management-studio-ssms) (SSMS), follow these steps:
 
