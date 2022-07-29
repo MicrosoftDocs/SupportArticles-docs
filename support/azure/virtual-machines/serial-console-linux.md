@@ -165,7 +165,7 @@ Azure Serial Console does not review, inspect, or store any of the content which
 All access to the serial console is currently logged in the [boot diagnostics](./boot-diagnostics.md) logs of the virtual machine. Access to these logs is owned and controlled by the Azure virtual machine administrator.
 
 > [!CAUTION]
-> No access passwords for the console are logged. However, if commands run within the console contain or output passwords, secrets, user names, or any other form of personally identifiable information (PII), those will be written to the VM boot diagnostics logs. They will be written along with all other visible text as part of the implementation of the serial console's scroll back function. These logs are circular, and only individuals with read permissions to the diagnostics storage account have access to them. If you are inputting any data or commands that contain secrets or PII, we would recommend using SSH unless a serial console is absolutely necessary.
+> No access passwords for the console are logged. However, if commands run within the console contain or output passwords, secrets, user names, or any other form of personally identifiable information (PII), those will be written to the VM boot diagnostics logs. They will be written along with all other visible text as part of the implementation of the serial console's scroll back function. These logs are circular, and only individuals with read permissions to the diagnostics storage account have access to them. If you are inputting any data or commands that contain secrets or PII, we would recommend using SSH unless the serial console is absolutely necessary.
 
 ### Concurrent usage
 
