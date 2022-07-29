@@ -125,7 +125,10 @@
         items:
         - name: Application Insights
           tocHref: /troubleshoot/azure/azure-monitor/app-insights/
-          topicHref: /troubleshoot/azure/azure-monitor/app-insights/auto-instrumentation-troubleshoot
+          topicHref: /troubleshoot/azure/azure-monitor/
+        - name: Log Analytics
+          tocHref: /troubleshoot/azure/azure-monitor/Log Analytics/
+          topicHref: /troubleshoot/azure/azure-monitor/
 
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
