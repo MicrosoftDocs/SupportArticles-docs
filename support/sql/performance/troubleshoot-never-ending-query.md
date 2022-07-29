@@ -116,7 +116,7 @@ To collect diagnostic data by using [SQL Server Management Studio](/sql/ssms/sql
 
 1. If the query runs fast at any time, you can capture the "fast" executions [Actual XML Execution Plan](/sql/relational-databases/performance/display-an-actual-execution-plan) to compare.
 
-# [SQL Server 2014 SP2 and SQL Server 2016 (prior to SP1)](#tab/2014-2016)
+# [SQL Server 2014 (after SP2) and SQL Server 2016 (prior to SP1)](#tab/2014-2016)
 
 [The lightweight Query Profiling Infrastructure](/sql/relational-databases/performance/query-profiling-infrastructure#lwp) was introduced in these versions of SQL Server. It allows you to capture actual statistics during the execution of a slow query. This troubleshooting feature allows you to examine query operators in a query plan at run time and understand where most of the time is spent in a query.
 
