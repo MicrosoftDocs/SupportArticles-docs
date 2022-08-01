@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot query time-out errors
 description: This article describes how to troubleshoot the time-out errors when you run slow-running queries.
-ms.date: 07/29/2022
+ms.date: 08/01/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
