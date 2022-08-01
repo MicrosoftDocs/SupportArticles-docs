@@ -43,7 +43,7 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/support/breadcrumb/toc.json",
-      "extendBreadcrumb": true,
+      "extendBreadcrumb": false,
       "feedback_system": "None",
       "feedback_github_repo": "MicrosoftDocs/SupportArticles-docs",
       "searchScope": [

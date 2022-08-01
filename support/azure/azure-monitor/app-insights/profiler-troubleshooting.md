@@ -45,7 +45,7 @@ The following image displays two examples of searches from two AI resources:
 
 If no records are displayed, Profiler isn't running. To troubleshoot, see the troubleshooting sections for your specific app type in this article.  
 
-:::image type="content" source="./media/profiler-troubleshooting/profiler-search-telemetry.png" alt-text="Screenshots of two examples of Profiler telemetry search results." lightbox="./media/profiler-troubleshooting/profiler-search-telemetry.png":::
+:::image type="content" source="./media/profiler-troubleshooting/profiler-search-telemetry.png" alt-text="Screenshot of two examples of Profiler telemetry search results." lightbox="./media/profiler-troubleshooting/profiler-search-telemetry.png":::
 
 ### Other things to check
 

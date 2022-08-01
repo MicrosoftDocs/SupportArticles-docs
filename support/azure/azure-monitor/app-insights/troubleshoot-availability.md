@@ -11,7 +11,7 @@ ms.subservice: application-insights
 #Customer intent: As an Azure Application Insights user, I want to know how to troubleshoot various problems enabling or viewing the Application Insights Profiler so I can use it effectively.  
 ---
 
-# Troubleshooting Azure Application Insights availability monitoring
+# Troubleshoot Azure Application Insights availability monitoring
 
 This article provides troubleshooting information for  common issues that might occur when you're using Application Insights availability monitoring. It also covers how to get alerts if a website becomes unavailable or is slow to respond.
 

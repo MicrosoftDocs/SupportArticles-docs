@@ -1,4 +1,4 @@
-﻿---
+---
 title: Data source references based on environment variables aren't updated during solution import to another environment
 description: Describes an issue when importing a solution to a different environment, data source references based on environment variables aren't updated.
 ms.reviewer: tapanm
