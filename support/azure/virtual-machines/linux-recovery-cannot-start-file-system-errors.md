@@ -17,11 +17,11 @@ ms.author: genli
 ---
 # Troubleshoot Linux virtual machine boot issues due to filesystem errors
 
-This article provides guidance to troubleshoot Linux virtual machine (VM) boot issues that are caused by filesystem errors.
+This article provides guidance to troubleshoot Linux virtual machine (VM) boot issues caused by filesystem errors.
 
 ## Symptoms
 
-You can't connect to an Azure Linux virtual machine (VM) by using the Secure Shell Protocol (SSH) or the VM Agent status in the [Azure portal](https://portal.azure.com/) isn't **Ready**. When you run the [Boot diagnostics](boot-diagnostics.md) in the Azure portal or connect to the [Serial Console](serial-console-linux.md), you see log entries that resemble the following examples:
+You can't connect to an Azure Linux virtual machine (VM) by using the Secure Shell Protocol (SSH), or the VM Agent status in the [Azure portal](https://portal.azure.com/) isn't **Ready**. When you run the [Boot diagnostics](boot-diagnostics.md) in the Azure portal or connect to the [Serial Console](serial-console-linux.md), you see log entries that resemble the following examples:
 
 > [!NOTE]
 >
@@ -79,7 +79,7 @@ Give root password for maintenance
 
 ## Cause
 
-The log entries above indicate a disk corruption. In certain situations, the disk corruption will prevent the VM from fully booting. Various issues can cause the disk corruption, such as Linux kernel problems, driver errors, errors in the underlying physical or virtual hardware, and so on.
+The log entries above indicate disk corruption. In certain situations, disk corruption will prevent the VM from fully booting. Various issues can cause disk corruption, such as Linux kernel problems, driver errors, errors in the underlying physical or virtual hardware, and so on.
 
 ## Resolution
 
@@ -98,7 +98,7 @@ To resolve the Linux VM boot issues caused by filesystem errors, recover the VM 
     > [!NOTE]
     >
     > - It's important to back up critical data because data loss may occur on the recovered disk.
-    > - Before you make changes to a disk, take a snapshot to preserve the current state of the disk, even if it's in error state. Fixing the disk corruption will change the data on the disk, which will carry risk.
+    > - Before you make changes to a disk, take a snapshot to preserve the current state of the disk, even if it's in an error state. Fixing the disk corruption will change the data on the disk, which will carry risk.
 
 ### <a id="identify-which-disk-is-corrupted">Identify which disk is corrupted</a>
 
@@ -127,7 +127,7 @@ EXT4-fs warning (device sda1): ext4_clear_journal_err:4532: Marking fs in need o
 [FAILED] Failed to mount /boot.
 ```
 
-In the following example, the corrupted device is `dm-2`. It's a Linux Device Mapper device, which indicates a LVM volume.
+In the following example, the corrupted device is `dm-2`. It's a Linux Device Mapper device, which indicates an LVM volume.
 
 ```output
 [   18.014318] EXT4-fs (dm-2): VFS: Can't find ext4 filesystem
@@ -140,21 +140,21 @@ See 'systemctl status home.mount' for details.
 
 If the disk device being called out uses a name of the format "sdXN" where X is a letter from a-z and N is an optional partition number, it means that the disk is raw and can be operated on by using the */dev/sdXN* path.
 
-If the disk device being mounted uses a name such as */dev/mapper/vgname/lvname*, */dev/vgname/lvname*, or *dm-N*, it means that a LVM device is used. Take care to recognize all disk physical volumes (PVs) which may be in use.
+If the disk device being mounted uses a name such as */dev/mapper/vgname/lvname*, */dev/vgname/lvname*, or *dm-N*, it means that an LVM device is used. Take care to recognize all disk physical volumes (PVs) which may be in use.
 
-It's not supported for the LVM volume group (VG) to contain the OS disk and any number of data disks. For such scenario, there's a high risk of data loss. However, multiple data disks are permissible in a LVM VG.
+It's not supported for the LVM volume group (VG) to contain the OS disk and any number of data disks. For such a scenario, there's a high risk of data loss. However, multiple data disks are permissible in an LVM VG.
 
 When determining the mapping of OS disk references to Azure disk objects:
 
 - For marketplace images, the root filesystem (/), */boot* and */boot/efi* is located on the OS disk.
 - For LVM based images, many other system mounts may exist such as */home*, */tmp*, */usr*, */var*, */var/log*, and */opt*.
-- Extra filesystems created for applications are located on data disks, for example, */data*, */datadisk*, or */sap*. Configure them properly so that the system can boot even if there's an error. If a data disk is the device that boots into emergency mode, see [prevent boot failure](#prevent-boot-failure).
+- Extra filesystems created for applications are located on data disks, for example, */data*, */datadisk*, or */sap*. Configure them properly so that the system can boot even if there's an error. If a data disk is a device that boots into emergency mode, see [prevent boot failure](#prevent-boot-failure).
 
 ### <a id="identify-filesystem-type">Identify filesystem type</a>
 
-While doing initial identification, the only method to to determine the disk type is using the serial log as previously examined in [Identify which disk is corrupted](#identify-which-disk-is-corrupted). When the disk device is reported in the serial log, errors will be displayed from the Linux kernel module for the filesystem. Note each line where `EXT4-fs` or `XFS` is specified. For any other filesystem types, the log is in the same area. The filesystem noted in the log entries is determined by the */etc/fstab* file. Take care to verify that the specified format is correct when performing a repair.
+While doing initial identification, the only method to determine the disk type is using the serial log as previously examined in [Identify which disk is corrupted](#identify-which-disk-is-corrupted). When the disk device is reported in the serial log, errors will be displayed from the Linux kernel module for the filesystem. Note each line where `EXT4-fs` or `XFS` is specified. For any other filesystem types, the log is in the same area. The filesystem noted in the log entries is determined by the */etc/fstab* file. Take care to verify that the specified format is correct when performing a repair.
 
-Once you have access to an interactive shell, run the `lsblk` command with the `-f` flag as follows, to show devices, paths (if the filesystem is mounted), and the filesystem type that's read from the disk itself.
+Once you have access to an interactive shell, run the `lsblk` command with the `-f` flag as follows to show devices, paths (if the filesystem is mounted), and the filesystem type that's read from the disk itself.
 
 ```bash
 [root@localhost ~]# lsblk -f
@@ -180,13 +180,13 @@ sdd
 
 Here are some important points in the output:
 
-- By using the ASCII art display, you can see that there are LVM volumes present, because there's an LVM2_MEMBER FSTYPE for sda4 containing objects with names such as `rootvg-rootlv` and `rootvg-homelv`.
+- By using the ASCII art display, you can see that there are LVM volumes present because there's an LVM2_MEMBER FSTYPE for sda4 containing objects with names such as `rootvg-rootlv` and `rootvg-homelv`.
 - `rootvg-homelv` isn't mounted, which is denoted by the empty MOUNTPOINT field.
 - `rootvg-homelv` has filesystem type XFS. It's a contrast with the EXT4 mount error during booting up. If the filesystem type is inconsistent, trust the `lsblk` output rather than the contents of fstab.
 
 ### <a id="select-recovery-mode">Select recovery mode</a>
 
-You can recover a VM online through emergency mode or single user mode, or offline by using a rescue VM.
+You can recover a VM online through emergency mode or single-user mode or offline by using a rescue VM.
 
 #### Requirements for online recovery
 
@@ -194,7 +194,7 @@ You can recover a VM online through emergency mode or single user mode, or offli
 
 - If emergency mode is used, the Serial Console must display an emergency mode prompt, the root account must be unlocked, and the password must be known.
   
-- If single user mode is used, the root password isn't needed. The single user mode may be used when a filesystem other than required system partitions such as root (`/`) or `/usr` is corrupted.
+- If single-user mode is used, the root password isn't needed. The single-user mode may be used when a filesystem other than required system partitions such as root (`/`) or `/usr` is corrupted.
 
 #### Requirements for offline recovery
 
@@ -211,7 +211,7 @@ try again to Give root password for maintenance
 (or press Control-D to continue):
 ```
 
-If the root password isn't known, or the root account is locked, as in the following output, use [single user mode](serial-console-grub-single-user-mode.md):
+If the root password isn't known, or the root account is locked, as in the following output, use [single-user mode](serial-console-grub-single-user-mode.md):
 
 ```output
 Welcome to emergency mode! After logging in, typ
@@ -240,7 +240,7 @@ Before repairing the filesystem, ensure that the following steps have been compl
 
 To perform the filesystem repair, go to [Repair ext4 filesystem](#repair-ext4-filesystem) or [Repair XFS filesystem](#repair-xfs-filesystem) according to the filesystem type.
 
-No matter what recovery mode is used, the commands to perform the filesystem repair is the same. The emergency shell may have limitations. If the commands aren't available in an emergency mode environment, or there are errors about unknown filesystem types, [prepare environment for offline recovery](#prepare-environment-for-offline-recovery).
+No matter what recovery mode is used, the commands to perform the filesystem repair are the same. The emergency shell may have limitations. If the commands aren't available in an emergency mode environment, or there are errors about unknown filesystem types, [prepare environment for offline recovery](#prepare-environment-for-offline-recovery).
 
 The commands to repair the filesystem may not fix all errors. They work around disk corruptions, but data loss still may occur. Once the command output states that the filesystem is clean, reassemble the original VM with the repaired disk, and boot the VM to verify data.
 
@@ -275,7 +275,7 @@ Fix<y>? yes
 [root@vm1dev ~]#
 ```
 
-The output shows that the confirmation to modify the filesystem is requested three times. If there are many requests, press CTRL+C and restart `fsck` with the `-y` flag to assume yes to all questions. If any files are reported as being placed in `lost+found`, manually identify them and place them in proper locations.
+The output shows that the confirmation to modify the filesystem is requested three times. If there are many requests, press CTRL+C and restart `fsck` with the `-y` flag to assume "yes" to all questions. If any files are reported as being placed in `lost+found`, manually identify them and place them in proper locations.
 
 If some errors occur and are subsequently fixed, run the `fsck` command again. Repeat until the `fsck` command exits with the `clean` status. Refer to the following output as an example:
 
@@ -325,7 +325,7 @@ or
 mount /home
 ```
 
-If mounting filesystem fails to write the journaled changes, use the `-L` flag to discard the journal, and mount the filesystem as if all changes are successfully completed. When the `-L` flag is used, data loss will occur because the log shows incomplete file operations are being discarded.  
+If the journaled changes aren't written when you mount filesystems, use the `-L` flag to discard the journal and mount the filesystem as if all changes are successfully completed. When the `-L` flag is used, data loss will occur because the log shows incomplete file operations are being discarded.  
 
 ```bash
 xfs_repair -L /dev/rootvg/homelv /recovery
