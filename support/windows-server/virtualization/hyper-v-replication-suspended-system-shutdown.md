@@ -83,8 +83,8 @@ Follow these steps on both the primary server and the replica server:
 
 5. Set the following options on the **General** tab:
 
-    - **Name**: Specify a task name (for example, _Hyper-V Replica AutoResume Task_).
-    - **When running the task, use the following user account**: Specify a user account with administrator privileges (for example, _\<Domain Name>\administrator_).
+    - **Name**: Specify a task name (for example, _Hyper-V Replica AutoResume Task_)
+    - **When running the task, use the following user account**: Specify a user account with administrator privileges (for example, _\<Domain Name>\administrator_)
     - **Run only when user is logged on**: Uncheck the option
     - **Run whether user is logged on or not**: Check the option
     - **Run with highest privileges**: Check the option
