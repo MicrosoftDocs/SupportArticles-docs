@@ -25,9 +25,9 @@ To resolve this issue, enable SQL Server Service Broker. To do this, follow thes
 
 1. On the management server(s), open the `Services.msc` Microsoft Management Console (MMC) snap-in, and then stop the following services:
 
-   - **System Center Management Configuration Service**
-   - **System Center Management Service**
-   - **System Center Data Access Service**
+   - **System Center Management Configuration (cshost)**
+   - **Microsoft Monitoring Agent (HealthService)**
+   - **System Center Data Access Service (OMSDK)**
 
 2. Start Microsoft SQL Server Management Studio on the Operations Manager database server or on a computer that has the SQL Server tools installed and that can connect to the Operations Manager database server.
 3. Select **New Query**.
@@ -49,9 +49,9 @@ To resolve this issue, enable SQL Server Service Broker. To do this, follow thes
 
 8. On the management server(s), start the following services:
 
-   - **System Center Data Access Service**
-   - **System Center Management Service**
-   - **System Center Management Configuration Service**
+   - **System Center Data Access Service *(OMSDK)***
+   - **Microsoft Monitoring Agent *(HealthService)***
+   - **System Center Management Configuration *(cshost)***
 
 9. Close all open windows and dialog boxes.
 10. Test the Discovery Wizard in System Center Operations Manager.
