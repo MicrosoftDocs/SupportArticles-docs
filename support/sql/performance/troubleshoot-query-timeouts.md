@@ -63,7 +63,7 @@ By far, the most common reason for query time-outs is underperforming queries. T
         ACTION(sqlos.system_thread_id,sqlserver.context_info,sqlserver.sql_text))
     ```
 
-    For more information, see [Troubleshoot query performance difference between database application and SSMS](/troubleshoot/sql/performance/troubleshoot-application-slow-ssms-fast).
+    For more information, see [Troubleshoot query performance difference between database application and SSMS](troubleshoot-application-slow-ssms-fast.md).
 
 5. Check if the `CommandTimeout` setting is smaller than the expected query duration. If the user's setting is correct and time-outs still occur, it's because of a query performance issue. Here's an ADO.NET code example with a time-out value set to *10* seconds:
 
