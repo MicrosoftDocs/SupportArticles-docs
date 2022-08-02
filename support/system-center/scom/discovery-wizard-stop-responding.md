@@ -49,9 +49,9 @@ To resolve this issue, enable SQL Server Service Broker. To do this, follow thes
 
 8. On the management server(s), start the following services:
 
-   - **System Center Data Access Service *(OMSDK)***
-   - **Microsoft Monitoring Agent *(HealthService)***
-   - **System Center Management Configuration *(cshost)***
+   - **System Center Data Access Service (OMSDK)**
+   - **Microsoft Monitoring Agent (HealthService)**
+   - **System Center Management Configuration (cshost)**
 
 9. Close all open windows and dialog boxes.
 10. Test the Discovery Wizard in System Center Operations Manager.
