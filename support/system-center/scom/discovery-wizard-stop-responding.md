@@ -8,7 +8,7 @@ ms.reviewer: v-jomcc
 
 This article helps you fix an issue in which the Discovery Wizard in Microsoft System Center Operations Manager stops responding (hangs) during the discovery process.
 
-_Applies to:_ &nbsp; Microsoft System Center Operations Manager
+_Applies to:_ &nbsp; Microsoft System Center Operations Manager  
 _Original KB number:_ &nbsp; 941409
 
 ## Symptoms
