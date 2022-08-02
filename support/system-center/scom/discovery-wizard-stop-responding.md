@@ -23,7 +23,7 @@ This issue may occur if Microsoft SQL Server Service Broker is not running on th
 
 To resolve this issue, you will need to enable SQL Server Service Broker. To do this, follow these steps at a time when the management server services can be stopped:
 
-1. On the management server(s) in your Management Group, run `Services.msc` (Microsoft Management Console (MMC) snap-in), and stop the following services:
+1. On the management server(s) in your management group, run `Services.msc` (Microsoft Management Console (MMC) snap-in), and stop the following services:
 
    - **System Center Management Configuration (cshost)**
    - **Microsoft Monitoring Agent (HealthService)**
@@ -47,7 +47,7 @@ To resolve this issue, you will need to enable SQL Server Service Broker. To do 
 
    Check for successful completion of the TSQL command. SQL Server Service Broker is now enabled.
 
-8. On the management server(s) in your Management Group, start the following services:
+8. On the management server(s) in your management group, start the following services:
 
    - **System Center Data Access Service (OMSDK)**
    - **Microsoft Monitoring Agent (HealthService)**
