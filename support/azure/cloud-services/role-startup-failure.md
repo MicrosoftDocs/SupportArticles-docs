@@ -1,12 +1,11 @@
 ---
 title: Troubleshoot role instance startup failure in Azure Cloud Services
 description: Troubleshoot role instance startup failure (RoleInstanceStartupTimeoutError error) in Azure Cloud Services (extended support).
-ms.topic: article
 ms.service: cloud-services-extended-support
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: jaygong
-ms.date: 7/28/2022
+ms.date: 8/2/2022
 keywords: role instance, startup task, startup task script, Startup.cmd, RoleEntryPoint class
 ---
 
@@ -68,9 +67,7 @@ To view status information about a role instance in the Azure portal, follow the
 
 1. Select the name of the role instance.
 
-1. In the role instance pane, note the state of the role instance in the **Status** field. The following example screenshot displays the status as **Starting**:
-
-   :::image type="content" source="media/role-startup-failure/role-startup-failure-portal.png" alt-text="Azure portal screenshot that shows an overview pane about the WebRole1_IN_0 role instance. The Status field is shown as Starting.":::
+1. In the role instance pane, note the state of the role instance in the **Status** field.
 
 ### Option 4: Use Remote Desktop to view error information
 
@@ -92,7 +89,13 @@ To access the role and view complete error information, use the Remote Desktop P
 
 If you go to the website now, you'll see error messages that contain more information. Here's an example:
 
-:::image type="content" source="media/role-startup-failure/role-startup-failure-error-message.png" alt-text="A server error screenshot that shows the Microsoft.WindowsAzure.StorageClient assembly can't be found.":::
+> **Server Error in '/' Application.**
+>
+> *Could not load file or assembly 'Microsoft.WindowsAzure.StorageClient, Version=1.1.0.0, Culture=neutral, PublicKeyToken=\<16-digit-hexadecimal-string>' or one of its dependencies. The system cannot find the file specified.*
+>
+> **Description:** An unhandled exception occurred during the execution of the current web request. Please review the stack trace for more information about the error and where it originated in the code.
+>
+> **Exception Details:** System.IO.FileNotFoundException
   
 ### Option 5: Use the compute emulator
 
@@ -136,10 +139,10 @@ To deploy your cloud service while IntelliTrace is turned on:
 1. Expand the **Azure\Cloud Services** node.
 1. To list the role instances, expand the deployment. Then, right-click a role instance.
 1. Select **View IntelliTrace logs**.
-1. In **IntelliTrace Summary**, go to  **Exception Data**.
-1. Expand **Exception Data**, and look for a `System.IO.FileNotFoundException` error.
+1. In **IntelliTrace Summary**, go to **Exception Data** and expand that node.
+1. In the list of exceptions, look for a row that contains a **Type** column value of **System.IO.FileNotFoundException**. The corresponding **Message** column value should resemble the following text:
 
-   :::image type="content" source="media/role-startup-failure/role-startup-failure-exception-data.png" alt-text="An IntelliTrace screenshot that shows exception data about the System.IO.FileNotFoundException error, including the error message and thread ID." lightbox="media/role-startup-failure/role-startup-failure-exception-data.png":::
+   > Could not load file or assembly 'Microsoft.WindowsAzure.StorageClient, Version=1.1.0.0, Culture=neutral, PublicKeyToken=\<16-digit-hexadecimal-string>' or one of its dependencies. The system cannot find the file specified.
 
 ## Cause 1: Cloud service operation fails because of RoleInstanceStartupTimeoutError
 
@@ -156,7 +159,7 @@ To determine whether the issue is caused by a startup task, follow these steps:
 
 1. Try to [use Remote Desktop](#option-4-use-remote-desktop-to-view-error-information) to connect to the problematic role instance.
 
-1. After you connect to the role instance, select *Start**, and then search for and select **Task Manager**.
+1. After you connect to the role instance, select **Start**, and then search for and select **Task Manager**.
 
 1. To see a list of processes, select the **Details** tab in **Task Manager**.
 
@@ -191,7 +194,13 @@ Here are some symptoms of missing DLLs or assemblies:
 
 If a website is deployed in a web role and but is missing a DLL, it might display the following server runtime error message.
 
-  :::image type="content" source="media/role-startup-failure/role-startup-failure-runtime-error.png" alt-text="A screenshot of a server application error. To view error details remotely, it recommends setting the customErrors tag to Off mode in web.config.":::
+> **Server Error in '/' Application.**
+>
+> *Runtime Error*
+>
+> **Description:** An application error occurred on the server. The current custom error settings for this application prevent the details of the application error from being viewed remotely (for security reasons). It could, however, be viewed by browsers running on the local server machine.
+>
+> **Details:** To enable the details of this specific error message to be viewable on remote machine, please create a `<customErrors>` tag with a "*web.config*" configuration file located in the root directory of the current web application. This `<customErrors>` tag should then have its "`mode`" attribute set to "`Off`".
 
 ### Solution: Resolve missing DLLs and assemblies
 
