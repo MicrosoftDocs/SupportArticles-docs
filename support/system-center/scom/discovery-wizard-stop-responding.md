@@ -8,7 +8,7 @@ ms.reviewer: v-jomcc
 
 This article helps you fix an issue in which the Discovery Wizard in Microsoft System Center Operations Manager stops responding (hangs) during the discovery process.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager  
+_Applies to:_ &nbsp; Microsoft System Center Operations Manager
 _Original KB number:_ &nbsp; 941409
 
 ## Symptoms
@@ -17,11 +17,11 @@ When you run the Discovery Wizard in System Center Operations Manager, the wizar
 
 ## Cause
 
-This issue may occur if Microsoft SQL Server Service Broker is not running on the management server.
+This issue may occur if Microsoft SQL Server Service Broker is not running on the Operations Manager SQL Database.
 
 ## Resolution
 
-To resolve this issue, enable SQL Server Service Broker. To do this, follow these steps at a time when the management server services can be stopped:
+To resolve this issue, you will need to enable SQL Server Service Broker. To do this, follow these steps at a time when the management server services can be stopped:
 
 1. On the management server(s), open the `Services.msc` Microsoft Management Console (MMC) snap-in, and then stop the following services:
 
