@@ -17,7 +17,7 @@ When you run the Discovery Wizard in System Center Operations Manager, the wizar
 
 ## Cause
 
-This issue may occur if Microsoft SQL Server Service Broker is not running on the Operations Manager SQL Database.
+This issue may occur if Microsoft SQL Server Service Broker is not running on the Operations Manager SQL database.
 
 ## Resolution
 
