@@ -76,7 +76,7 @@ The following error appears in the **/var/log/waagent.log** file when the VM can
 
 To resolve this issue:
 
-* Connect to the VM by using SSH, then run following command to test the connectivity issues between the VM and the WireServer. Note that the root privilege is required to run the command:
+* Connect to the VM by using SSH, then run following command to test the connectivity between the VM and the WireServer. The root privilege is required to run the command.
 
     ```Bash 
    curl http://168.63.129.16/?comp=versions
