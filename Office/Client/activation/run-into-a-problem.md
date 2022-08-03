@@ -1,9 +1,9 @@
 ---
 title: We’ve run into a problem with your Microsoft 365 subscription
 description: Troubleshooting the Microsoft 365 Apps activation error We’ve run into a problem with your Microsoft 365 subscription.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
