@@ -1,7 +1,7 @@
 ---
 title: Resolve issues with Teams Meeting add-in for Outlook
 description: Provides steps to troubleshoot and fix issues with the Teams Meeting add-in for Outlook.
-author: v-matthamer
+author: helenclu
 ms.author: meerak
 manager: dcscontentpm
 audience: ITPro

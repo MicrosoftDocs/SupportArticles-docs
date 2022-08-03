@@ -1,9 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error Your organization has disabled this device
 description: Troubleshooting steps for the error Your organization has disabled this device
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

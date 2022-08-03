@@ -1,9 +1,9 @@
 ---
 title: Issues with shared computer activation for Microsoft 365 Apps
 description: Troubleshooting steps for issues with shared computer activation for Microsoft 365 Apps.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
