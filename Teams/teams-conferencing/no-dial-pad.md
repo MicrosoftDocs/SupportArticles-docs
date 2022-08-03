@@ -37,7 +37,7 @@ In the Teams client, the dial pad enables users to access Public Switched Teleph
 
 ## Resolution
 
-Please see [Teams dial pad configuration](https://docs.microsoft.com/en-us/microsoftteams/dial-pad-configuration) for how to configure users correctly for Teams PSTN Calling capability.
+Please see [Teams dial pad configuration](https://docs.microsoft.com/microsoftteams/dial-pad-configuration) for how to configure users correctly for Teams PSTN Calling capability.
 
 Please run one of the available diagnostic tools
 
@@ -59,28 +59,26 @@ Select the **Run Tests** link. This will populate the diagnostic in the Microsof
 ### Enterprise Voice Shows Disabled
 If a diagnostic result from one of the tools shows that the user is not enterprise voice enabled but the user account shows enabled in Teams PowerShell, then a Tenant administrator should toggle the setting off and back on to force an update to the backend as shown in the following example:
 
-    ```powershell
-    Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $False
-    ```
+```powershell
+Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $False
+```
 
-    ```powershell
-    Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $True
-    ```
+```powershell
+Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $True
+```
 
 ### Direct Routing User Missing Dial Pad
 If a diagnositic result from one of the tools noted below shows that the user is not configured correctly with a routing policy, then a Tenant administrator should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in the following example:
 
-    ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
-    ```
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
+```
 
-    ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
-    ```
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
+```
 
-    These actions force an update of the policy in the back-end environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within an hour.
-
-
+These actions force an update of the policy in the back-end environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within an hour.
 
 ## More information
 
