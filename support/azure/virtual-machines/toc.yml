@@ -367,6 +367,8 @@
         href: perfinsights-and-scale-set-vm-instances.md
   - name: Troubleshoot VM performance issues
     items:
+    - name: Configure multiple NICs in Linux VMs
+      href: linux-vm-multiple-virtual-network-interfaces-configuration.md
     - name: Isolate bottlenecks in Linux
       href: troubleshoot-performance-bottlenecks-linux.md
     - name: Troubleshoot performance issues through Monitoring
