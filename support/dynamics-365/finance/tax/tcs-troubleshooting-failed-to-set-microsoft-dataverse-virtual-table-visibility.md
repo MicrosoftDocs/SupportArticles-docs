@@ -55,17 +55,10 @@ This symptom always could be encountered when [Configure the virtual entity data
 #### Symptom 1 - InternalServerError
   1. Check the F&O internally, whether it could be login with the account same with which login to Dataverse. 
   2. Go to Dataverse > Advanced Settings > Administration > Virtual Entity Data Sources > "Finance and Operations". ([Configure the virtual entity data source](https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source)), check the Target URL could be directly open in the browser.
-  3. For Engineer Dev Env, please use the SQL query below to see if your account has the 'SysAdmin' security role. 
-`select * from SecurityUserRole join SecurityRole on SecurityUserRole.Securityrole = SecurityRole.recid where SecurityUserRole.User_ = '{yourailas}' `
-If no result, please refer [Setup FinOps env for supporting Dataverse - Detailed Steps - Step 2](https://msazure.visualstudio.com/FINOPS/_wiki/wikis/FINOPS.wiki/318230/Setup-FinOps-env-for-supporting-Dataverse?anchor=detailed-steps) to redo the role assignment.
-  4. For Customer Env, please refer [Grant app permissions in Finance and Operations apps](https://msdyneng.visualstudio.com/FinOps/_workitems/edit/694034/) to see the correct role has been assigned. 
 #### Symptom 2 - The remote name could not be resolved
   1. Double check the OAuth URL and Tenant Id that filled in Dataverse > Advanced Settings > Administration > Virtual Entity Data Sources > "Finance and Operations". ([Configure the virtual entity data source](https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source)) The correct Tenant Id could be found at the Azure Portal (login with your account the same as Dataverse and RCS) - Azure Active Directory - Your AAD instance. Both the Tenant Id or Primary Domain could be filled into the field "Tenant". And OAuth URL till June/2022 is hard code "https://login.windows.net/".
-![image.png](/.attachments/image-22ee3610-27c1-45d0-983b-7fca8276f9ac.png)
 #### Symptom 3 - Application with identifier {ApplicationId} not found
   1. For the Customer Env, double check the Application Id that filled in Dataverse > Advanced Settings > Administration > Virtual Entity Data Sources > "Finance and Operations". ([Configure the virtual entity data source](https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source)). The Application Id should be grabbed from the step [Register the app in the Azure portal](https://docs.microsoft.com/en-us/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#grant-app-permissions-in-finance-and-operations-apps)). Make sure you filled in the correct application id.
-  2. For the Engineer Dev Env, follow the [Setup FinOps env for supporting Dataverse - Detailed Steps - Step 4](https://msazure.visualstudio.com/FINOPS/_wiki/wikis/FINOPS.wiki/318230/Setup-FinOps-env-for-supporting-Dataverse?anchor=detailed-steps), redo the SignalRepeaterClient and try again.
-
 
 ## Error 401
 
@@ -81,6 +74,4 @@ The 401 Unauthorized issue could always be encountered when RCS - Connected Appl
 - Click "Check connection", the process should be successful.
 
 ### Mitigation
-If the "Check connection" process is not successful, it means the Dataverse setup is not correct. Please review [How to trouble shooting the environments for Dataverse from beginning](/Home/Services/Tax-Calculation-Service/Tax-Calculation-Service-DRI-Handbook/Dataverse-DRI-Handbook/How-to-trouble-shooting-the-environments-for-Dataverse-from-beginning) to do the specific trouble shooting.
-- For Engineer Dev Env, please doublecheck the doc: [Setup Dataverse instance for development](/Home/Services/Tax-Calculation-Service/Development/Dataverse-development/Setup-Dataverse-instance-for-development) and [Setup RCS env supported by Dataverse](/Home/Services/Tax-Calculation-Service/Development/Dataverse-development/Setup-RCS-env-supported-by-Dataverse) have all been done. 
-- For Customer Env, please refer [Enable master data lookup for tax calculation configuration](https://docs.microsoft.com/en-us/dynamics365/finance/localizations/tax-service-set-up-environment-master-data-lookup?toc=%2Fdynamics365%2Ffinance%2Ftoc.json) step 1, 2 and 3. And make sure every step has been done correctly.
+If the "Check connection" process is not successful, it means the Dataverse setup is not correct. Please refer to [Enable master data lookup for tax calculation configuration](https://docs.microsoft.com/en-us/dynamics365/finance/localizations/tax-service-set-up-environment-master-data-lookup?toc=%2Fdynamics365%2Ffinance%2Ftoc.json) step 1, 2 and 3. And make sure every step has been done correctly.
