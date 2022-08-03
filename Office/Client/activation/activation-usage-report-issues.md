@@ -43,7 +43,7 @@ Note that Microsoft 365 Apps activations can take up to 48 hours to appear in th
 
 ## Report shows anonymous user names
 
-Beginning September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
+Beginning September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/microsoft-365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
 ## Report doesn’t show device name
 

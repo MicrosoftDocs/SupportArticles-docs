@@ -46,7 +46,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 <details>
 <summary><b>Make sure Azure Active Directory Authentication Library (ADAL) and Web Account Manager (WAM) are enabled</b></summary>
 
-For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended).
+For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended).
 <br/><br/>
 </details>
 
