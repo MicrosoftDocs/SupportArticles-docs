@@ -2,8 +2,8 @@
 title: Event ID 1814 is logged in the System log
 description: This article provides resolutions for the problem where SQL Server fails to start and Event ID 1814 is logged in the System log.
 ms.date: 1/28/2020
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: ramakoni
 ---
 # Event ID 1814 and SQL Server doesn't start
@@ -12,7 +12,7 @@ _Applies to:_ &nbsp; SQL Server
 
 ## Symptoms
 
-If the Microsoft SQL Server service can’t create the Tempdb file during startup, the service doesn’t start when you use Service Control Manager, and you receive the following error message:
+If the Microsoft SQL Server service can't create the Tempdb file during startup, the service doesn't start when you use Service Control Manager, and you receive the following error message:
 
 > Windows could not start the SQL Server (MSSQLSERVER) on Local Computer. For more information, review the System Event log.  
 If this is a non-Microsoft service, contact the service vendor, and refer to service-specific error code 1814.

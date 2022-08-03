@@ -3,8 +3,8 @@ title: An existing connection was forcibly closed
 description: Describes scenarios in which an existing connection was forcibly closed by the remote host and provides resolutions for these scenarios
 ms.date: 11/14/2021
 ms.custom: sap:Connection issues
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # An existing connection was forcibly closed by the remote host
