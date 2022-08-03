@@ -171,12 +171,12 @@ This issue may be caused by:
 
 Check the following questions and determine whether the comparison between the two servers is valid.
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/diagnose-environment-differences.md)]
+[!INCLUDE [diagnose environment differences](../includes/performance/diagnose-environment-differences.md)]
 
 ## Diagnose waits or bottlenecks
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/diagnose-waits-or-bottlenecks.md)]
+[!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
 ## Diagnose query plan differences
 
-[!INCLUDE [collect query data and logical reads](../includes/performance/diagnose-query-plan-differences.md)]
+[!INCLUDE [diagnose query plan differences](../includes/performance/diagnose-query-plan-differences.md)]
