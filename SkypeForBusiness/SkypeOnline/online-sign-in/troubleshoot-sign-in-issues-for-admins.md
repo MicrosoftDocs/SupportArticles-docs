@@ -34,7 +34,7 @@ If the users can't sign in to Microsoft 365, see the [Can't sign in to Microsoft
 
 ### Can't sign in to Microsoft 365
 
-If the users can't sign in to Microsoft 365, ask them to try the troubleshooting steps suggested in [You can't sign in to Microsoft 365, Azure, or Intune](/office365/troubleshoot/sign-In/sign-in-to-office-365-azure-intune).
+If the users can't sign in to Microsoft 365, ask them to try the troubleshooting steps suggested in [You can't sign in to Microsoft 365, Azure, or Intune](/microsoft-365/troubleshoot/sign-In/sign-in-to-office-365-azure-intune).
 
 If the issue still exists, [contact support](#contact-support).
 

@@ -50,7 +50,7 @@ To work around this issue, create a configuration.xml file that can be used by t
 
 For more information about configuration.xml files, see [Configuration options for the Office Deployment Tool](/deployoffice/office-deployment-tool-configuration-options).
 
-For more information about product IDs, see [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](/office365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run).
+For more information about product IDs, see [List of Product IDs which are supported by the Office Deployment Tool for Click-to-Run](/microsoft-365/troubleshoot/installation/product-ids-supported-office-deployment-click-to-run).
 
 For example, here is content for a configuration.xml file that can be used:
 
