@@ -17,7 +17,7 @@ ms.technology: windows-client-networking
 
 This article provides a solution to an issue where default gateway route doesn't appear in the Routing Table.
 
-_Applies to:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server - all editions  
 _Original KB number:_ &nbsp; 816905
 
 ## Symptoms
@@ -59,7 +59,3 @@ Restart the remote access service. The default route for the re-added network in
 ## Workaround 3: Restart the server
 
 Restart the remote access server. The default route for the re-added network interface is added to the Windows routing table.
-
-## Status
-
-Microsoft has confirmed that this is a bug in the Microsoft products that are listed at the beginning of this article.

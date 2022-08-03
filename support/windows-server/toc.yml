@@ -162,6 +162,8 @@
     items:
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
       href: ./identity/adam-general-event-id-1161-logged-ad-lds-server.md
+    - name: Change Windows Active Directory user password through LDAP
+      href: ./identity/change-windows-active-directory-user-password.md
     - name: Hide or display InetOrgPerson object class
       href: ./identity/hide-display-inetorgperson-object-class.md
     - name: How to configure AD and LDS diagnostic event logging

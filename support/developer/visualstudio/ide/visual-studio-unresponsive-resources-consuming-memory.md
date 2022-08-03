@@ -1,8 +1,8 @@
 ---
 title: Application unresponsive due to low system memory
 description: This article provides resolution to the problem where you see errors and unstable applications because the system is about to run out of memory.
-author: Dipesh-Choubisa
-ms.author: v-dchoubisa
+author: HaiyingYu
+ms.author: haiyingyu
 ms.topic: troubleshooting
 ms.date: 05/10/2022
 ms.custom: sap:Integrated Development Environment (IDE)
@@ -62,7 +62,7 @@ This problem might result in instability of the programs such as Visual Studio.
 
     :::image type="content" source="media/visual-studio-unresponsive-resources-consuming-memory/system-properties-virtual-memory.png" alt-text="Virtual Memory window and settings.":::
 
-- If you’ve configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the Windows+E keys to open the **File Explorer** window on your computer.
+- If you've configured the paging file size such that the system manages it and you still see the errors about low memory, check in File Explorer whether the system drive has sufficient disk space. Use the Windows+E keys to open the **File Explorer** window on your computer.
 
 - If you want to customize paging file location, uncheck the **Automatically manage paging file size for all drives** checkbox, and then follow one of these options:
 
