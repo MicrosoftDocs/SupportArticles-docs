@@ -37,7 +37,7 @@ In the Teams client, the dial pad enables users to access Public Switched Teleph
 
 ## Resolution
 
-Please see [Teams dial pad configuration](https://docs.microsoft.com/microsoftteams/dial-pad-configuration) for how to configure users correctly for Teams PSTN Calling capability.
+Please see [Teams dial pad configuration](/microsoftteams/dial-pad-configuration) for how to configure users correctly for Teams PSTN Calling capability.
 
 Please run one of the available diagnostic tools
 
