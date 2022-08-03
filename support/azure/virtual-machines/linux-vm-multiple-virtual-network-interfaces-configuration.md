@@ -10,7 +10,7 @@ ms.collection: linux
 ---
 # Configure multiple NICs in Azure Linux virtual machines
 
-This article introduces how to configure multiple virtual network interfaces (NICs) in an Azure Linux virtual machine (VM) running the most common Linux distributions.
+This article introduces how to configure multiple virtual network interfaces (NICs) in Azure Linux virtual machines (VMs) running the most common Linux distributions.
 
 ## Summary
 
@@ -21,7 +21,7 @@ This article provides the required configuration for multiple NICs to work in an
 - The VM has two NICs in the same subnet.
 - Connectivity is tested from another VM in the same virtual network (VNET) or subnet.
 
-See the following screenshot:
+See the following screenshot for details:
 
 :::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Image alt text.":::
 
@@ -52,7 +52,7 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
     # sed -i '/HWADDR/,$d' /etc/sysconfig/network-scripts/ifcfg-eth1
     ```
 
-3. To make the change in step 2 persistent and applied during network stack activation, edit */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* (eth2, eth3, and so on, and so forth if the VM has more than two NICs). Change the value of `NM_CONTROLLED` from `yes` to `no`. To do this, run the following commands:
+3. To make the change persistent and applied during network stack activation, edit */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* (eth2, eth3, and so on, and so forth if the VM has more than two NICs). Change the value of `NM_CONTROLLED` from `yes` to `no`. To do this, run the following commands:
 
     ```bash
     # cp -rp /etc/sysconfig/network-scripts/ifcfg-eth0 /tmp/ifcfg-eth0.bkp
@@ -74,7 +74,7 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
 
     - Routing (the output of `ip route show`):
 
-        ```output
+        ```
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -84,13 +84,13 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
 
     - Interfaces (the output of `ip address`):
 
-        ```output
+        ```
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
         ```
 
-6. Create corresponding rule and route files and add proper rules and routes to each file. Follow these steps to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+6. Create corresponding rule and route files and add proper rules and routes to each file. Follow the steps below to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -150,13 +150,13 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
 
     ```bash
     # systemctl restart network
-    ``
+    ```
 
 The routing rules are now correctly in place and you can connect with either interface as needed.
 
 ## Configure multiple NICs for RHEL/CentOS 8.x VM
 
-1. Policy routing isn't installed by default in RHEL/CentOS 8.x. To configure multiple NICs, install and enable the policy routing. To do this, run the following commands:
+1. Policy routing isn't installed by default in Red Hat Enterprise Linux (RHEL)/CentOS 8.x. To configure multiple NICs, install and enable the policy routing. To do this, run the following commands:
 
     ```bash
     # yum install NetworkManager-dispatcher-routing-rules -y
@@ -225,7 +225,7 @@ The routing rules are now correctly in place and you can connect with either int
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
         ```
 
-    Create the corresponding files and add the proper rules and routes to each of them. Follow these steps to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+5. Create the corresponding files and add the proper rules and routes to each of them. Follow these steps to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -277,7 +277,7 @@ The routing rules are now correctly in place and you can connect with either int
         default via 10.0.1.1 dev eth1 table eth1-rt
         ```
 
-5. To apply the changes, restart the network service by running the following command:
+6. To apply the changes, restart the network service by running the following command:
 
     ```bash
     # systemctl restart NetworkManager
@@ -643,7 +643,7 @@ If you encounter some issues, reboot the VM by using the `# reboot` command, and
     # systemctl restart network
     ```
 
-    For SLES 11, use `service network restart`.
+    For SUSE Linux Enterprise Server (SLES) 11, use `service network restart`.
 
 Both IP addresses should be reachable from a VM within the same VNET now. This can be tested by using ping or SSH to both IPs.
 
