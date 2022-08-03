@@ -7,7 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry
 ms.service: cloud-services-extended-support
-ms.topic: article
+ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to get instructions about how to enable HTTPS communication so that I can make my cloud applications available to customers securely.
 ---
 
