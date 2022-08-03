@@ -49,7 +49,7 @@ sections:
       - question: |
           Why isn't Autoscale working as expected? 
         answer: |
-          If Azure Autoscale hasn't scaled in or scaled out the Web App instance as you expected, you might be running into a scenario in which we intentionally choose not to scale to avoid an infinite loop due to "flapping." This usually happens when there isn't an adequate margin between the scale-out and scale-in thresholds. To learn how to avoid "flapping" and to read about other Autoscale best practices, see [Autoscale best practices](https://docs.microsoft.com/azure/azure-monitor/autoscale/autoscale-best-practices).
+          You might be running into a scenario in which we intentionally choose not to scale to avoid an infinite loop due to "flapping." This behaviour usually happens when there isn't an adequate margin between the scale-out and scale-in thresholds. To learn how to avoid "flapping" and to read about other Autoscale best practices, see [Autoscale best practices](https://docs.microsoft.com/azure/azure-monitor/autoscale/autoscale-best-practices).
 
       - question: |
           How do I determine when an auto scale rule triggered scaling? 
@@ -59,7 +59,7 @@ sections:
       - question: |
           Why does Autoscale sometimes scale only partially?
         answer: |
-          Autoscale is triggered when metrics exceed preconfigured boundaries. Sometimes, you might notice that the capacity is only partially filled compared to what you expected. This might occur when the number of instances you want aren't available. In that scenario, Autoscale partially fills in with the available number of instances. Autoscale then runs the rebalance logic to get more capacity. It allocates the remaining instances and this might take a few minutes. If you don't see the expected number of instances after a few minutes, it might be because the partial refill was enough to bring the metrics within the boundaries. Or, Autoscale might have scaled down because it reached the lower metrics boundary.
+          Autoscale is triggered when metrics exceed preconfigured boundaries. Sometimes, you might notice that the capacity is only partially filled compared to what you expected. This behavior might occur when the number of instances you want aren't available. In that scenario, Autoscale partially fills in with the available number of instances. Autoscale then runs the rebalance logic to get more capacity. It allocates the remaining instances and this allocation might take a few minutes. If you don't see the expected number of instances after a few minutes, it might be because the partial refill was enough to bring the metrics within the boundaries. Or, Autoscale might have scaled down because it reached the lower metrics boundary.
 
       - question: |
           What should I do if I try to scale up an App Service Plan to a PremiumV3 tier and the Azure Portal presents this message “_Premium V3 is not supported for this scale unit. Please consider redeploying or cloning your app_.”? 
