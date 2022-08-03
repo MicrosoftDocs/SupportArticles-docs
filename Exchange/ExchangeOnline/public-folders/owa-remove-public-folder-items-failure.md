@@ -1,5 +1,5 @@
 ---
-title: Can't delete public folder items from OWA
+title: Can't delete public folder items from OWA search results
 description: You can't delete public folder items that you search from Microsoft Outlook on the web. 
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 8/2/2022
 ---
-# Can't delete public folder items from OWA
+# Can't delete public folder items from OWA search results
 
 ## Symptoms
 
@@ -43,5 +43,5 @@ This behavior is by design.
 
 To work around this issue, use one of the following methods:
 
-- Method 1: Use an Outlook client instead of using OWA to search for the public folder items, and then delete them. 
+- Method 1: Use an Outlook client instead of using OWA to search for the public folder items, and then delete them.
 - Method 2: Locate the public folder item instead of searching for it, and then delete it.  
