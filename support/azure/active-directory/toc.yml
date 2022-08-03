@@ -163,8 +163,6 @@
     href: user-displayed-disabled-or-enabled-mfa.md
   - name: Troubleshoot account lockout
     href: account-lockout-adfs-window-server.md
-  - name: Troubleshoot MFA issues
-    href: troubleshoot-azure-mfa-issue.md
   - name: Troubleshooting MFA issues
     href: troubleshoot-azure-mfa-issue.md
   - name: User name or password is incorrect
