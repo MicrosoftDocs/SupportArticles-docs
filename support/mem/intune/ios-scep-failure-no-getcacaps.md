@@ -2,8 +2,6 @@
 title: Intune iOS SCEP failure - no GetCACaps request generated in IIS logs
 description: Troubleshoot SCEP/NDES failures on iOS devices when the IIS logs show that no GetCACaps request is generated.
 ms.date: 11/23/2021
-author: dsindona88
-ms.author: v-dsindona
 search.appverid: MET150
 ms.custom: sap:Configure certificates
 ---
@@ -20,7 +18,7 @@ When troubleshooting NDES/SCEP issues, you check the IIS logs and see good (200 
 > May 23 14:15:42 -iPhone profiled[150] &lt;Notice&gt;: (Error) MC: Cannot retrieve SCEP identity: NSError:
 > Desc   : The Registration Authority...s response is invalid
 
-If you open the browser on the device and go to `https://<NDESurl>/?operation=GetCACaps` you may see an SSL failure. Most browsers will initially say something about the SSL cert is not trusted. In “More Details” you will see the error **ERROR_WINHTTP_SECURE_FAILURE**.
+If you open the browser on the device and go to `https://<NDESurl>/?operation=GetCACaps` you may see an SSL failure. Most browsers will initially say something about the SSL cert is not trusted. In "More Details" you will see the error **ERROR_WINHTTP_SECURE_FAILURE**.
 
 ## Causes
 
