@@ -110,7 +110,7 @@ For an example (UTF-8 encoded script with special character "ä") that reproduce
             + FullyQualifiedErrorId : UnauthorizedAccess  
     ```
 
-For more information about the PowerShell scripts running on different Windows systems, see:
+For more information about the PowerShell scripts that are encoded differently, see:
 
 ||ASCII encoded PowerShell script|UTF-8 encoded PowerShell script|UTF-16 BE BOM encoded PowerShell script|UTF-16 LE BOM encoded PowerShell script|
 |-|-|-|-|-|
