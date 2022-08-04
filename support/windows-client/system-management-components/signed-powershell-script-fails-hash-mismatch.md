@@ -24,6 +24,8 @@ Consider the following scenario:
 
 - You run the signed script on a computer that uses another system locale (for example, cs-CZ).
 
+- The script is encoded with ASCII or UTF-8.
+
 In this scenario, PowerShell displays the following error message:
 
 ```Output
@@ -34,25 +36,21 @@ in the digital signature. The script cannot run on the specified system.
 
 ## Cause
 
-When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using the en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, and ü are encoded differently on en-US and cs-CZ computers.
+When you sign the script on an en-US computer, the signing process creates the digital signature for umlaut and special characters by using the en-US code. If you run the signed script on a cs-CZ computer, the signature verification will fail because umlaut and special characters like ö, ä, and ü in ASCII or UTF-8 are encoded differently on en-US and cs-CZ computers.
 
 The signature verification process creates a hash for PowerShell script content that doesn't include the signature. And the umlaut and special characters are interpreted differently on cs-CZ and en-US computers. In this situation, a hash mismatch will occur.
 
 ## Resolution
 
-To make a signed PowerShell script run independently from locale settings, follow these steps:
+To make a signed PowerShell script run independently from locale settings, use one of the following methods:
 
-1. Get the unsigned version of the PowerShell script.
+- Replace or remove all umlaut and special characters like ö, ä, and ü before signing PowerShell scripts.
 
-1. Replace or remove all umlaut and special characters like ö, ä, and ü.
-
-1. [Sign the script](/powershell/module/microsoft.powershell.core/about/about_signing#sign-a-script).
-
-1. Run the signed script.
+- Use UTF-16 LE BOM encoding for PowerShell scripts.
 
 ## More information
 
-For an example that reproduces the issue, see the following steps:
+For an example (UTF-8 encoded script with special character "ä") that reproduces the issue, see the following steps:
 
 1. You have a computer that has the following settings:
 
@@ -112,7 +110,7 @@ For an example that reproduces the issue, see the following steps:
             + FullyQualifiedErrorId : UnauthorizedAccess  
     ```
 
-For more information about the PowerShell script running on different Windows systems, see:
+For more information about the PowerShell scripts running on different Windows systems, see:
 
 ||ASCII encoded PowerShell script|UTF-8 encoded PowerShell script|UTF-16 BE BOM encoded PowerShell script|UTF-16 LE BOM encoded PowerShell script|
 |-|-|-|-|-|
