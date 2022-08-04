@@ -20,7 +20,7 @@ You receive an alert in Resource Health or the Activity log that states, "VM is 
 
 ## Cause
 
-You might receive this alert when a virtual machine (VM) is being deleted, stopped, de-allocated, or restarted. Although the notification is sent from the platform, the operation isn't necessarily initiated by the platform. In certain cases, when the operation is finished, the platform continues to report poor health. These reports indicate that the VM was unavailable for more than 15 minutes. For more information about the different filters, see [Understand VM reboots - maintenance vs. downtime](/azure/virtual-machines/understand-vm-reboots).
+You might receive this alert when a virtual machine (VM) is being deleted, stopped, de-allocated, or restarted. Although the notification is sent from the platform, the operation isn't necessarily initiated by the platform. In certain cases, when the operation is finished, the platform continues to report poor health. These reports indicate that the VM was unavailable for more than 15 minutes. For more information about the different filters, see the "Missing VM downtimes in activity log" section of [Understand a system reboot for Azure VM](understand-vm-reboot.md#missing-vm-downtimes-in-activity-log).
 
 ## More information
 
