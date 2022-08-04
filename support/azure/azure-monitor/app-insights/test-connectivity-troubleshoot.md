@@ -1,11 +1,10 @@
 ---
 title: Test connectivity and telemetry ingestion using PowerShell or curl clients
-description: 
+description: Learn how to troubleshoot missing data by using PowerShell or curl clients.
 ms.topic: conceptual
 ms.date: 8/5/2022
-ms.author: v-kainawroth
-author: 
-editor: 
+ms.author: todd.foust
+editor: v-kainawroth
 ms.reviewer: aaronmax
 ms.service: azure-monitor
 ms.subservice: application-insights
