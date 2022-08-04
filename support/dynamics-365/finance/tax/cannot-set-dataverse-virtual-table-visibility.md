@@ -1,5 +1,5 @@
 ---
-title: Fails to set Microsoft Dataverse virtual table visibility
+title: Error 400 or 401 when setting Microsoft Dataverse virtual table visibility
 description: Provides resolutions for the error codes that occur when application users try to set Dataverse virtual table visibility.
 author: hshi
 ms.date: 07/26/2022
@@ -17,23 +17,43 @@ ms.dyn365.ops.version: 10.0.30
 
 This article describes the error codes that occur when you set Microsoft Dataverse virtual table visibility.
 
-## Error 400
-
-### Symptoms
-
-#### Symptom 1 - InternalServerError
+## Error 400 with "InternalServerError"
 
 When you set virtual table visibility or do master data lookup in tax feature setup, the following error message occurs:
 
 > Connection to Microsoft Dataverse failed. Details: The remote server returned an error: (400) Bad Request. 0x80048d0b: A token was obtained to call Finance and Operations, but Finance and Operations returned an error of type InternalServerError.
 
-#### Symptom 2 - The remote name could not be resolved
+### Cause
+
+This issue occurs when finance and operations service is down, or the finance and operations Target URL is set incorrectly.
+
+### Resolution
+
+1. Check the finance and operations internally whether you can sign in with the same account that you use to sign in to Dataverse.
+
+2. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
+
+3. Double check the Target URL whether can be directly opened in the browser. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
+
+## Error 400 with "The remote name could not be resolved"
 
 When you set virtual table visibility or do master data lookup in tax feature setup, the following error message occurs:
 
 > Connection to Microsoft Dataverse failed. Details: The remote server returned an error: (400) Bad Request. 0x80040224: TokenProvider.AcquireTokenAsync(Clientld '{ApplicationId}', Authority ‘{IncorrectURL}', Resource '00000015-0000-0000-c000-000000000000’): unhandled exception: Microsoft.IdentityModel.Clients.ActiveDirectory.AdalServiceException: Service returned error. Check InnerException for more details ---> System.Net.WebException: The remote name could not be resolved:...
 
-#### Symptom 3 - Application with identifier {ApplicationId} not found
+### Cause
+
+This issue occurs when OAuth URL or Tenant ID is incorrect. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
+
+### Resolution
+
+1. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
+
+2. Double check the OAuth URL and Tenant ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
+
+The correct Tenant ID can be found at the [Azure portal](https://portal.azure.com) (sign in with your account the same as Dataverse and Regulatory Configuration Service (RCS)) > **Azure Active Directory** > your Azure Active Directory instance. The Tenant ID or Primary domain could be filled into the field **Tenant**. And the OAuth URL until June 2022 is hard code `https://login.windows.net/`.
+
+## Error 400 with "Application with identifier {ApplicationId} not found"
 
 When you set virtual table visibility or do master data lookup in tax feature setup, the following error message occurs:
 
@@ -42,37 +62,9 @@ Request. 0x80040224: TokenProvider.AcquireTokenAsync(Clientid '{IncorrectApplica
 
 ### Cause
 
-#### Cause for Symptom 1
-
-This issue occurs when finance and operations service is down, or the finance and operations Target URL is set incorrectly.
-
-#### Cause for Symptom 2
-
-This issue occurs when OAuth URL or Tenant ID is incorrect. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
-
-#### Cause for Symptom 3
-
 This issue occurs when Application ID is incorrect. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
 ### Resolution
-
-#### Resolution for Symptom 1
-
-1. Check the finance and operations internally whether you can sign in with the same account that you use to sign in to Dataverse.
-
-2. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
-
-3. Double check the Target URL whether can be directly opened in the browser. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
-
-#### Resolution for Symptom 2
-
-1. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
-
-2. Double check the OAuth URL and Tenant ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
-
-The correct Tenant ID can be found at the [Azure portal](https://portal.azure.com) (sign in with your account the same as Dataverse and Regulatory Configuration Service (RCS)) > **Azure Active Directory** > your Azure Active Directory instance. The Tenant ID or Primary domain could be filled into the field **Tenant**. And the OAuth URL until June 2022 is hard code `https://login.windows.net/`.
-
-#### Resolution for Symptom 3
 
 1. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
 
