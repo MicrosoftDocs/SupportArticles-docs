@@ -112,9 +112,11 @@ For an example that reproduces the issue, see the following steps:
             + FullyQualifiedErrorId : UnauthorizedAccess  
     ```
 
+For more information about the PowerShell script running on different Windows systems, see:
+
 ||ASCII encoded PowerShell script|UTF-8 encoded PowerShell script|UTF-16 BE BOM encoded PowerShell script|UTF-16 LE BOM encoded PowerShell script|
 |-|-|-|-|-|
-|Windows 10|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|Windows 11|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|Windows Server 2019|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|Windows Server 2022|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
+|**Windows 10**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
+|**Windows 11**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
+|**Windows Server 2019**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
+|**Windows Server 2022**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
