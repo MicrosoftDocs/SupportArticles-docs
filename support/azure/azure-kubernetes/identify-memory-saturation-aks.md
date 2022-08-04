@@ -32,9 +32,8 @@ The **Memory (bytes)** column in the output shows the pods with the highest work
 ## Identify memory saturation across all namespaces for all containers
 
 ```console
-kubectl top pods -A –containers
+kubectl top pods -A –-containers
 ```
-
 The **Name** field in the output indicates the name of the container. We recommend that you don't sort the columns. Sorting can break up the namespace order, which makes it less  than ideal to see the container view.
 
 The **Memory** column displays the working memory set in bytes to show what’s consuming the most memory.
