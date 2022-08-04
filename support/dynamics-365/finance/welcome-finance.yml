@@ -10,13 +10,14 @@ metadata:
   author: #Required; your GitHub user alias, with correct capitalization.
   ms.author: #Required; microsoft alias of author; optional team alias.
   ms.date: 8/4/2022
+
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
   # Card
-  - title:
+  - title: Tax issues
     linkLists:
-      - linkListType:
+      - linkListType: how-to-guide
         links:
-          - text:
-            url:
+          - text: Errors 400 and 401 when setting virtual table visibility
+            url: tax/cannot-set-dataverse-virtual-table-visibility.md
