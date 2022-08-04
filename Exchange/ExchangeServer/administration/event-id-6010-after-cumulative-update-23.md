@@ -21,7 +21,7 @@ ms.date: 08/04/2022
 
 ## Symptoms
 
-After you install Cumulative Update 23 for Microsoft Exchange Server 2016, "Event ID: 6010" entries are continuously logged in the Application event log. These entries contain the following information:
+After you install Cumulative Update 23 for Microsoft Exchange Server 2016, "Event ID 6010" entries are continuously logged in the Application event log. These entries contain the following information:
 
 Event ID: 6010
 Source: MSExchangeApplicationLogic
