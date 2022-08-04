@@ -47,7 +47,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Monitors not detected|When you run Teams Rooms on a Surface Pro (Model 2017) device, monitors aren't detected.|Hold down the power button of the Surface Pro device for 20 seconds or more to restart it. This will clear the graphics cache.|
-|Changing volume level remotely turns Surface Hub volume on|When using a Surface Hub in a Coordinate meeting, the audio is turned off unless a Room remote from a mobile service is used to adjust the meeting volume. The Surface Hub audio turns on, but the microphone is muted.|Turn off proximity join on the Room remote.|
+|Changing volume level remotely turns Surface Hub volume on|When using a Surface Hub in a Coordinate meeting, the audio is turned off unless a Room remote from a mobile service is used to adjust the meeting volume. The Surface Hub audio turns on, but the microphone is muted.|Turn off proximity on the Room remote.|
 
 ## Teams Rooms on Android
 
