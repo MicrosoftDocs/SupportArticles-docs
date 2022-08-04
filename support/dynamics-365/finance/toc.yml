@@ -1,7 +1,7 @@
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
   items:
-  - name: Tax
-    items:
-    - name: Failed to set visibility
-      href: tax/tcs-troubleshooting-failed-to-set-microsoft-dataverse-virtual-table-visibility.md
+    - name: Tax
+      items:
+        - name: Errors 400 and 401 when setting virtual table visibility
+          href: cannot-set-dataverse-virtual-table-visibility.md
