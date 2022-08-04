@@ -541,6 +541,8 @@
       href: vm-cannot-upgrade-64-vcpu.md
     - name: VM stuck in failed state
       href: vm-stuck-in-failed-state.md
+    - name: VM is unavailable for 15 minutes
+      href: azure-vm-unavailable.md      
     - name: Redeploy a VM
       items:
       - name: Linux
