@@ -4,4 +4,4 @@
     - name: Tax
       items:
         - name: Errors 400 and 401 when setting virtual table visibility
-          href: cannot-set-dataverse-virtual-table-visibility.md
+          href: tax/cannot-set-dataverse-virtual-table-visibility.md

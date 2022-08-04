@@ -252,7 +252,7 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
-        "dynamics-365/finance/*.md": "dynamics-365-finance",
+        "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder"
