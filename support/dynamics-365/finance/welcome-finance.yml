@@ -19,5 +19,5 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Errors 400 and 401 when setting virtual table visibility
+          - text: Error 400 or 401 when setting Dataverse virtual table visibility
             url: tax/cannot-set-dataverse-virtual-table-visibility.md
