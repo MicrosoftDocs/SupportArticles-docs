@@ -15,27 +15,25 @@ ms.subservice: application-insights
 
 ## Missing or No Data Symptoms
 
-One of the most common problems reported is the 'missing data' or 'not finding specific telemetry records' symptom.
+If data is missing our you cannot find specific telemetry records, it can be the result of failures across every single step in the life of a telemetry record:
 
-Missing data symptoms can be the result of failures across every single step in the life of a telemetry record.
+**SDK/Codeless agents** → **Networking** → **Ingestion endpoint** → **Application Insights ingestion pipeline** → **Kusto backend** ← **Query API** ← **Azure portal**
 
-**SDK/Codeless agents** → **Networking** → **Ingestion endpoint** → **App Insights Ingestion pipeline** → **Kusto backend** ← **Query API** ← **Azure portal**
+- The SDK or Agent is misconfigured and not sending data to the ingestion endpoint.
+- The SDK or Agent is configured correctly but the networking is blocking calls to the ingestion endpoint.
+- The ingestion endpoint is dropping or throttling inbound telemetry.
+- The ingestion pipeline is dropping or severely slowing down records as part of its processing. (rare)
+- Kusto is facing problems saving the telemetry. (rare)
+- The "Draft" or Query API, at api.applicationinsights.io, has failures querying the data from Kusto.
+- The Azure portal UI code has issues pulling or rendering the records you are trying to view.
 
-1. The SDK or Agent could be misconfigured and not sending data to our ingestion endpoint
-2. The SDK or Agent could be correctly configured but the customer's, or public networking may be blocking calls to the ingestion endpoint
-3. The Ingestion Endpoint may be dropping or throttling inbound telemetry
-4. The Ingestion Pipeline may be dropping or severely slowing down some records as part of its processing (rare)
-5. Kusto could be facing some problems saving the telemetry (rare)
-6. The "Draft" or Query API, at api.applicationinsights.io, may have failures querying the data out of Kusto
-7. The Azure portal UI code may have an issue pulling and rendering the records the customer is trying to view.
-
-As you can see, 'no telemetry' or 'partial telemetry' symptoms can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers as fast as possible so that we investigate the correct step within the processing pipeline that is causing the symptoms. One tool that will drastically assist with this isolation is to send a sample telemetry record using PowerShell.
+Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers as fast as possible, so you can investigate the correct step within the processing pipeline that is causing the symptoms. One method that will drastically assist with this isolation is sending a sample telemetry record using PowerShell.
 
 ## Troubleshooting with PowerShell
 
 ### On-premises or Azure VM
 
-If you connect to the machine/VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. Doing so will not require any additional tools.
+If you connect to the machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. Doing so will not require any additional tools.
 
 ### Web App
 
@@ -43,8 +41,10 @@ If the app that is having issues sending telemetry is running on Kudu, you can u
 
 The are two caveats to running the operations from Kudu:
 
-- Prior to executing the Invoke-WebRequest command, issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"`
-- You cannot use -Verbose or -Debug. Instead, use -UseBasicParsing. This would look like the following as opposed to the examples further down:
+- Prior to executing the Invoke-WebRequest command, you have to issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"`
+- You cannot use -Verbose or -Debug. Instead, use -UseBasicParsing.
+
+This would look like the following as opposed to the examples further down:
 
 ```shell
 $ProgressPreference = "SilentlyContinue"
@@ -52,17 +52,17 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 ```
 
-After you send a telemetry record via PowerShell, then you can check to see if the sample telemetry record arrives using the Application Insights Logs tab in the Azure portal. If you see the sample record showing up, you have eliminated a large portion of the processing pipeline:
+After you send a telemetry record via PowerShell, you can check to see if the sample telemetry record arrives using the Application Insights Logs tab in the Azure portal. If you see the sample record showing up, you have eliminated a large portion of the processing pipeline:
 
 **A Sample PowerShell Record Correctly Saved and Displayed Suggests:**
 
-- The client machine/VM has DNS that resolves to correct IP address
-- The client/public network delivered the telemetry to our ingestion endpoint without blocking or dropping
-- Ingestion endpoint accepted that sample payload and processed through the ingestion pipeline
-- Kusto correctly saved the sample telemetry record
-- The Azure portal Logs tab was able to query our Draft API (api.applicaitoninsights.io) and render that record in the portal UI
+- The machine or VM has DNS that resolves to correct IP address.
+- The network delivered the telemetry to the ingestion endpoint without blocking or dropping.
+- The ingestion endpoint accepted the sample payload and processed through the ingestion pipeline.
+- Kusto correctly saved the sample telemetry record.
+- The Azure portal Logs tab was able to query the Draft API (api.applicationinsights.io) and render the record in the portal UI
 
-If the sample record does show up, then it typically means you just need to troubleshoot the Application Insights SDK or Codeless Agent. You would typically move to collect SDK Logs or PerfView traces, whichever is appropriate for the SDK/Agent version.
+If the sample record does show up, it typically means you just need to troubleshoot the Application Insights SDK or Codeless Agent. You would typically move to collect SDK Logs or PerfView traces, whichever is appropriate for the SDK/Agent version.
 
 There is still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the customer's production telemetry doesn't. You should always start investigating the SDKs or Agents if the below sample scripts correctly save and return telemetry records.
 
@@ -150,7 +150,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We are looking for an HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This means that the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-![image.png](/.attachments/image-0e46ee4c-d6e4-4605-a73f-e94f3db6c5de.png)
+![Items received matches items accepted](/.media/items-received-matches-items-accepted.png)
 
 ### PowerShell Script To Send a Request Telemetry
 
