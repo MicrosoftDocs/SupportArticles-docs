@@ -13,9 +13,9 @@ ms.search.validFrom: 2022-07-26
 ms.dyn365.ops.version: 10.0.30
 ---
 
-# Error codes that occur when you set Microsoft Dataverse virtual table visibility
+# Error codes that occur when you set Microsoft Dataverse virtual table visibility for Tax calculation service in RCS enviromnment
 
-This article describes the error codes that occur when you set Microsoft Dataverse virtual table visibility.
+This article describes the error codes that occur when you set Microsoft Dataverse virtual table visibility for Tax calculation service in RCS enviromnment.
 
 ## Error 400 with "InternalServerError"
 
@@ -31,9 +31,7 @@ This issue occurs when finance and operations service is down, or the finance an
 
 1. Check the finance and operations internally whether you can sign in with the same account that you use to sign in to Dataverse.
 
-2. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
-
-3. Double check the Target URL whether can be directly opened in the browser. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
+2. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations". Double check the Target URL whether can be directly opened in the browser. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
 ## Error 400 with "The remote name could not be resolved"
 
@@ -47,11 +45,9 @@ This issue occurs when OAuth URL or Tenant ID is incorrect. For more information
 
 ### Resolution
 
-1. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
+Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations". Double check the OAuth URL and Tenant ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
-2. Double check the OAuth URL and Tenant ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
-
-The correct Tenant ID can be found at the [Azure portal](https://portal.azure.com) (sign in with your account the same as Dataverse and Regulatory Configuration Service (RCS)) > **Azure Active Directory** > your Azure Active Directory instance. The Tenant ID or Primary domain could be filled into the field **Tenant**. And the OAuth URL until June 2022 is hard code `https://login.windows.net/`.
+The correct Tenant ID can be found at the [Azure portal](https://portal.azure.com) (sign in with your account the same as Dataverse and Regulatory Configuration Service (RCS)) > **Azure Active Directory** > your Azure Active Directory instance. The Tenant ID or Primary domain could be filled into the field **Tenant**. And the OAuth URL is hard coded `https://login.windows.net/`.
 
 ## Error 400 with "Application with identifier {ApplicationId} not found"
 
@@ -66,9 +62,7 @@ This issue occurs when Application ID is incorrect. For more information, see [C
 
 ### Resolution
 
-1. Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations".
-
-2. Double check the Application ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
+Go to **Dataverse** > **Advanced settings** > **Administration** > **Virtual Entity Data Sources** and select the data source named "finance and operations". Double check the Application ID. For more information, see [Configure the virtual entity data source](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#configure-the-virtual-entity-data-source).
 
 The Application ID should be grabbed from the step [Register the app in the Azure portal](/dynamics365/fin-ops-core/dev-itpro/power-platform/admin-reference#grant-app-permissions-in-finance-and-operations-apps). Make sure that you filled in the correct Application ID.
 
