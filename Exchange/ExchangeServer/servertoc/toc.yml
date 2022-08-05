@@ -581,6 +581,8 @@
           href: ../setup/cumulative-update-20-is-shown-not-22.md
         - name: Event ID 106 Performance counter updating error
           href: ../setup/event-106-msexchange-common.md
+        - name: Event ID 6010 logged after installing CU23
+          href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell
           href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
         - name: Instal PST Capture tool fails
