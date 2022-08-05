@@ -1,7 +1,7 @@
 ---
 title: Error 400 or 401 when setting Microsoft Dataverse virtual table visibility
 description: Provides resolutions for the error codes that occur when application users try to set Dataverse virtual table visibility.
-author: hshi
+author: hshi-ms
 ms.date: 07/26/2022
 ms.topic: troubleshooting
 ms.search.form: ERSolutionTable
