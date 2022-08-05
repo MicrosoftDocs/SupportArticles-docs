@@ -1,6 +1,6 @@
 ---
-title: Event 6010 entries fill the Application event log for Exchange Server 2016
-description: Describes an issue in which many entries of event 6010 are logged in the Application event log for Exchange Server 2016.
+title: Event 6010 entries fill the Application event log in Exchange Server 2016
+description: Describes an issue in Exchange Server 2016 in which many entries of event 6010 are logged in the Application event log.
 author: v-trisshores
 ms.author: v-trisshores
 manager: dcscontentpm
@@ -17,17 +17,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 08/04/2022
 ---
-# Event 6010 entries fill the Application event log for Exchange Server 2016
+# Event 6010 entries fill the Application event log in Exchange Server 2016
 
 ## Symptoms
 
-After you install Cumulative Update 23 for Microsoft Exchange Server 2016, "Event ID 6010" entries are continuously logged in the Application event log. These entries contain the following information:
+After you install Cumulative Update 23 for Microsoft Exchange Server 2016, event 6010 entries are continuously logged in the Application event log. These entries contain the following information:
 
 Event ID: 6010
 Source: MSExchangeApplicationLogic
 Description: Failed to read in memory manifest validation XSD schemas for version '1.1'.
 
-This issue occurs only on Exchange-based servers that aren't connected to the internet.
+This issue occurs only on Exchange 2016-based servers that aren't connected to the internet.
 
 ## Status
 
