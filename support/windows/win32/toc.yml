@@ -82,8 +82,8 @@
       href: gdi-apis-may-fail-when-large-pages-used.md
     - name: Get status of printer and print job
       href: printer-print-job-status.md
-    - name: GetICMProfile function may leak one or more handles on Windows 10
-      href: geticmprofile-may-leakone-or-more-handles-on-windows10.md      
+    - name: GetICMProfile function might leak one or more handles on Windows 10
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
