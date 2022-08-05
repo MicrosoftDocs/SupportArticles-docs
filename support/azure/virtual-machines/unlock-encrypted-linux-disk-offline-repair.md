@@ -321,7 +321,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    mount -o nouuid /dev/rescuemevg/rootlv /investigateroot/ 
    ```
 
-   Now, the root partition of the failed VM is unlocked and mounted, and you should be able to access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline).
+   Now, the root partition of the failed VM is unlocked and mounted, and you should be able to access the root partition to troubleshoot the issues. For more information, see [Troubleshoot Linux virtual machine boot issues due to filesystem errors](linux-recovery-cannot-start-file-system-errors.md#resolution).
 
    However, if you want to use the chroot utility for troubleshooting, continue by using the following steps.
 
@@ -404,7 +404,7 @@ Import the newly unlocked partition into a new volume group. In this example, we
    ls /investigateroot/ 
    ```
 
-1. Now the root partition of the failed VM is unlocked and mounted, you can access the root partition to troubleshoot the issues. For more information, see [Repair the VM offline](linux-recovery-cannot-start-file-system-errors.md#repair-the-vm-offline).
+1. Now the root partition of the failed VM is unlocked and mounted, you can access the root partition to troubleshoot the issues. For more information, see [Troubleshoot Linux virtual machine boot issues due to filesystem errors](linux-recovery-cannot-start-file-system-errors.md#resolution)..
 
       However, if you want to use the chroot utility for troubleshooting, go to the next step.
 
