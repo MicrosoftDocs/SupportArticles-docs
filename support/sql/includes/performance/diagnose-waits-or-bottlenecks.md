@@ -45,9 +45,12 @@ To get the rough wait time, subtract the CPU time (worker time) from the elapsed
 
 The causes and resolutions vary according to the wait types. There's no general method to resolve all wait types. Here are articles to troubleshoot and resolve common wait type issues:
 
-- [Understanding and resolving blocking issues](../../performance/understand-resolve-blocking.md)
-- [Troubleshoot slow SQL Server performance caused by I/O issues](../../performance/troubleshoot-sql-io-performance.md)
+- [Understanding and resolving blocking issues (LCK_M_*)](../../performance/understand-resolve-blocking.md)
+- [Troubleshoot slow SQL Server performance caused by I/O issues (PAGEIOLATCH_*, WRITELOG, IO_COMPLETION, BACKUPIO)](../../performance/troubleshoot-sql-io-performance.md)
 - [WRITELOG waits and common causes](../../performance/troubleshoot-sql-io-performance.md#writelog)
 - [Resolve last-page insert PAGELATCH_EX contention in SQL Server](../../performance/resolve-pagelatch-ex-contention.md)
-- [Memory grants explanation and solutions](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
+- [Memory grants explanation and solutions (RESOURCE_SEMAPHORE)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
 - [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](../../performance/troubleshoot-query-async-network-io.md)
+- [Troubleshooting High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://techcommunity.microsoft.com/t5/sql-server-blog/troubleshooting-high-hadr-sync-commit-wait-type-with-always-on/ba-p/385369)
+- [How It Works: CMEMTHREAD and Debugging Them](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-cmemthread-and-debugging-them/ba-p/317488)
+- [THREADPOOL wait](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#threadpool)
