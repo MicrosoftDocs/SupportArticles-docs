@@ -1,6 +1,6 @@
 ---
 title: GetICMProfile might leak one or more handles on Windows 10
-description: This article describes an issue where the GetICMProfile function doesn't close one or more registry handles on Windows 10
+description: This article describes an issue where the GetICMProfile function doesn't close one or more registry handles on Windows 10.
 ms.date: 08/05/2022
 author: 
 ms.author: v-shwetasohu
@@ -17,15 +17,15 @@ _Applies to:_ &nbsp; Windows 10 version 2004, Windows 10 version 20H2, Windows 1
 
 ## Symptoms
 
-Applications that call the [GetICMProfile](https://docs.microsoft.com/previous-versions/ms536585(v=vs.85)) Image Color Management (ICM) function might see increased handle usage counts in tools such as Task Manager or might experience unexpected error or behavior.
+Applications that call the [GetICMProfile](/previous-versions/ms536585(v=vs.85)) Image Color Management (ICM) function might see increased handle usage counts in tools such as Task Manager or might experience unexpected error or behavior.
 
 ## Cause
 
 The `GetICMProfile` function uses the Windows Registry functions to obtain color profile information from the registry but doesn't close the opened registry handles. This problem can also occur while calling other ICM or Windows Color System (WCS) functions, including:
-- [EnumICMProfiles](https://docs.microsoft.com/previous-versions/ms536595(v=vs.85))
-- [WcsGetDefaultColorProfile](https://docs.microsoft.com/previous-versions/ms536874(v=vs.85))
-- [WcsGetDefaultColorProfileSize](https://docs.microsoft.com/previous-versions/ms536875(v=vs.85))
-- [WcsGetUsePerUserProfiles](https://docs.microsoft.com/previous-versions/ms536877(v=vs.85))
+- [EnumICMProfiles](/previous-versions/ms536595(v=vs.85))
+- [WcsGetDefaultColorProfile](/previous-versions/ms536874(v=vs.85))
+- [WcsGetDefaultColorProfileSize](/previous-versions/ms536875(v=vs.85))
+- [WcsGetUsePerUserProfiles](/previous-versions/ms536877(v=vs.85))
 
 ## Status
 
