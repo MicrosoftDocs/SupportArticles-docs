@@ -15,7 +15,7 @@ ms.subservice: application-insights
 
 ## Missing or No Data Symptoms
 
-If data is missing our you cannot find specific telemetry records, it can be the result of failures across every single step in the life of a telemetry record:
+If data is missing our you cannot find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
 **SDK/Codeless agents** → **Networking** → **Ingestion endpoint** → **Application Insights ingestion pipeline** → **Kusto backend** ← **Query API** ← **Azure portal**
 
@@ -150,7 +150,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We are looking for an HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This means that the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-![Items received matches items accepted](/.media/items-received-matches-items-accepted.png)
+<a name="items-received-matches-items-accepted.png" alt="Code showing the amount of items received and items accepted"></a>
 
 ### PowerShell Script To Send a Request Telemetry
 
