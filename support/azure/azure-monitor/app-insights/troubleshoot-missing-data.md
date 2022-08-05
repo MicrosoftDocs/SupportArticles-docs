@@ -35,13 +35,16 @@ As you can see, 'no telemetry' or 'partial telemetry' symptoms can occur anywher
 
 ### On-premises or Azure VM
 
-If you connect to the machine/VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. This does not require you to install any other tool.
+If you connect to the machine/VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. Doing so will not require any additional tools.
 
 ### Web App
 
-If the app which is having issues sending telemetry is running on Kudu one, you can use the PowerShell script outlined here from Kudu's PowerShell Debug Command prompt feature in Web Apps.
+If the app that is having issues sending telemetry is running on Kudu, you can use the PowerShell script outlined here from Kudu's PowerShell Debug Command prompt feature in Web Apps.
 
-The are two caveats to running the operations from Kudu one, prior to executing the Invoke-WebRequest command, issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"` and two you cannot use -Verbose or -Debug, instead use -UseBasicParsing. This would look like following as opposed to the examples further down:
+The are two caveats to running the operations from Kudu:
+
+- Prior to executing the Invoke-WebRequest command, issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"`
+- You cannot use -Verbose or -Debug. Instead, use -UseBasicParsing. This would look like the following as opposed to the examples further down:
 
 ```shell
 $ProgressPreference = "SilentlyContinue"
@@ -75,7 +78,7 @@ This script builds a raw REST request to deliver a single Availability Test Resu
 - Ikey only: Telemetry sent to global ingestion endpoint
 - If both Connection String and Ikey parameters are supplied the script sends telemetry to the regional endpoint in the connection string
 
-It is easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
+It is easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS (virtual machine scale set) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
 
 ```shell
 # Info: Provide either the Connection String or Ikey for your Application Insights Resource
@@ -145,13 +148,13 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 ```
 
-When the above script executes, you want to review the response details. We are looking for a HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This is the ingestion endpoint informing the client, you sent one record, I accepted one record.
+When the above script executes, you want to review the response details. We are looking for an HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This means that the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
 ![image.png](/.attachments/image-0e46ee4c-d6e4-4605-a73f-e94f3db6c5de.png)
 
 ### PowerShell Script To Send a Request Telemetry
 
-If you want to test sending a single Request Telemetry record, the below script will help you format it. This telemetry type is susceptible to server-side ingestion sampling configuration, so make sure ingestion sampling is turned off to help confirm if these records are getting saved correctly.
+If you want to test sending a single Request Telemetry record, the below script will help you format it. This telemetry type is susceptible to server-side ingestion sampling configuration. Make sure ingestion sampling is turned off to help confirm if these records are getting saved correctly.
 
 ```shell
 # Info: Provide either the Connection String or Ikey for your Application Insights Resource
@@ -240,7 +243,7 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ### PowerShell Script To Send 100 Trace Messages
 
-You may also want to try and send a burst of telemetry records from the client machine to their component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the customer's machine. You can find it as part of NuGet package installation or Application Insights Agent (SMv2) installation. The below script will load the dll then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
+You can try to send a burst of telemetry records from the client machine to their component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the customer's machine. You can find it as part of NuGet package installation or Application Insights Agent (SMv2) installation. The below script will load the dll then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
 
 ```shell
 # One Parameter: Provide the Instrumentation Key
