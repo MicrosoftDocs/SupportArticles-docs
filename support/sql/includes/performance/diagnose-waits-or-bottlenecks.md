@@ -54,3 +54,5 @@ The causes and resolutions vary according to the wait types. There's no general 
 - [Troubleshooting High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://techcommunity.microsoft.com/t5/sql-server-blog/troubleshooting-high-hadr-sync-commit-wait-type-with-always-on/ba-p/385369)
 - [How It Works: CMEMTHREAD and Debugging Them](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-cmemthread-and-debugging-them/ba-p/317488)
 - [THREADPOOL wait](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#threadpool)
+
+For descriptions of many Wait types and what they indicate, see the table in [Types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes)
