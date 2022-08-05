@@ -3,7 +3,8 @@ title: Test connectivity and telemetry ingestion using PowerShell or curl client
 description: Learn how to troubleshoot missing data by using PowerShell or curl clients.
 ms.topic: conceptual
 ms.date: 8/5/2022
-ms.author: todd.foust
+ms.author: toddfous
+author: todd.foust
 editor: v-kainawroth
 ms.reviewer: aaronmax
 ms.service: azure-monitor
@@ -15,7 +16,7 @@ ms.subservice: application-insights
 
 ## Missing or No Data Symptoms
 
-One of the most common problems customers report is the 'missing data' or 'not finding specific telemetry records' symptom.
+One of the most common problems is the 'missing data' or 'not finding specific telemetry records' symptom.
 
 Missing data symptoms can be the result of failures across every single step in the life of a telemetry record.
 
@@ -298,9 +299,9 @@ add-type @"
 
 ```
 
-If the customers application defaults to the system or machine default TLS settings then you can change those default settings within the registry on Windows machines using details found in this article: [Transport Layer Security (TLS) registry settings](https://docs.microsoft.com/en-us/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
+If the customers application defaults to the system or machine default TLS settings then you can change those default settings within the registry on Windows machines using details found in this article: [Transport Layer Security (TLS) registry settings](windowsserverdocs/WindowsServerDocs/security/tls/tls-registry-settings.md#tls-dtls-and-ssl-protocol-version-settings).
 
-Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application then you can follow the official guidance here [Transport Layer Security (TLS) best practices with the .NET Framework](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/tls)
+Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application then you can follow the official guidance here [Transport Layer Security (TLS) best practices with the .NET Framework](docs/docs/framework/network-programming/tls.md)
 
 ### Next Steps
 
