@@ -19,29 +19,29 @@ One of the most common problems reported is the 'missing data' or 'not finding s
 
 Missing data symptoms can be the result of failures across every single step in the life of a telemetry record.
 
-**SDK/Codeless Agents** → **Networking** → **Ingestion Endpoint** → **App Insights Ingestion Pipeline** → **Kusto Backend** ← **Query API** ← **Azure Portal**
+**SDK/Codeless agents** → **Networking** → **Ingestion endpoint** → **App Insights Ingestion pipeline** → **Kusto backend** ← **Query API** ← **Azure portal**
 
 1. The SDK or Agent could be misconfigured and not sending data to our ingestion endpoint
 2. The SDK or Agent could be correctly configured but the customer's, or public networking may be blocking calls to the ingestion endpoint
 3. The Ingestion Endpoint may be dropping or throttling inbound telemetry
-4. The Ingestion Pipeline may possibly dropping or severely slowing down some records as part of its processing (rare)
-5. Kusto could be facing some problems saving the telemetry (very rare)
+4. The Ingestion Pipeline may be dropping or severely slowing down some records as part of its processing (rare)
+5. Kusto could be facing some problems saving the telemetry (rare)
 6. The "Draft" or Query API, at api.applicationinsights.io, may have failures querying the data out of Kusto
-7. The Azure Portal UI code may have an issue pulling and rendering the records the customer is trying to view.
+7. The Azure portal UI code may have an issue pulling and rendering the records the customer is trying to view.
 
-As you can see, 'no telemetry' or 'partial telemetry' symptoms can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers as fast as possible so that we investigate the correct step within the processing pipeline which is causing the symptoms. One tool that will drastically assist with this isolation is to send a sample telemetry record using PowerShell.
+As you can see, 'no telemetry' or 'partial telemetry' symptoms can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers as fast as possible so that we investigate the correct step within the processing pipeline that is causing the symptoms. One tool that will drastically assist with this isolation is to send a sample telemetry record using PowerShell.
 
 ## Troubleshooting with PowerShell
 
-### On-Premises or Azure VM
+### On-premises or Azure VM
 
-If you connect to the machine/VM where the customer's web application is running, then you can attempt to send a single telemetry record to the customers Applications Insights service instance using PowerShell. This does not require you to install any other tool, so it's easy to walkthrough and test with the customer.
+If you connect to the machine/VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. This does not require you to install any other tool.
 
 ### Web App
 
-It is possible using the Powershell script outlined here from Kudu's PowerShell Debug Command prompt feature in Web Apps. It is probably a good idea to test from this tool if this where the app is running that is having issues sending telemetry.
+If the app which is having issues sending telemetry is running on Kudu one, you can use the PowerShell script outlined here from Kudu's PowerShell Debug Command prompt feature in Web Apps.
 
-The are two caveats to running the operations from Kudu one, prior to executing the Invoke-WebRequest command, issue the Powershell command: ```$ProgressPreference = "SilentlyContinue"``` and two you cannot use -Verbose or -Debug, instead use -UseBasicParsing. This would look like following as opposed to the examples further down:
+The are two caveats to running the operations from Kudu one, prior to executing the Invoke-WebRequest command, issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"` and two you cannot use -Verbose or -Debug, instead use -UseBasicParsing. This would look like following as opposed to the examples further down:
 
 ```shell
 $ProgressPreference = "SilentlyContinue"
@@ -49,7 +49,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 ```
 
-After you send a telemetry record via PowerShell, then you can check to see if the sample telemetry record arrives using the Application Insights Logs tab in the Azure Portal. If you do see the sample record show up, then you have just eliminated a large portion of the processing pipeline:
+After you send a telemetry record via PowerShell, then you can check to see if the sample telemetry record arrives using the Application Insights Logs tab in the Azure portal. If you see the sample record showing up, you have eliminated a large portion of the processing pipeline:
 
 **A Sample PowerShell Record Correctly Saved and Displayed Suggests:**
 
@@ -57,15 +57,15 @@ After you send a telemetry record via PowerShell, then you can check to see if t
 - The client/public network delivered the telemetry to our ingestion endpoint without blocking or dropping
 - Ingestion endpoint accepted that sample payload and processed through the ingestion pipeline
 - Kusto correctly saved the sample telemetry record
-- The Azure Portal Logs tab was able to query our Draft API (api.applicaitoninsights.io) and render that record in the portal UI
+- The Azure portal Logs tab was able to query our Draft API (api.applicaitoninsights.io) and render that record in the portal UI
 
 If the sample record does show up, then it typically means you just need to troubleshoot the Application Insights SDK or Codeless Agent. You would typically move to collect SDK Logs or PerfView traces, whichever is appropriate for the SDK/Agent version.
 
-There are still small chances that ingestion or the backend pipeline is sampling records, or dropping a specific telemetry types, which may explain why your test record arrives but the customers production telemetry doesn't, but you should always start investigating the SDKs or Agents if the below sample scripts correctly save and return telemetry records.
+There is still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the customer's production telemetry doesn't. You should always start investigating the SDKs or Agents if the below sample scripts correctly save and return telemetry records.
 
 **Availability Test Result Telemetry Records**
 
-Availability Web Test Results are the best telemetry type to test with. The main reason is because our ingestion pipeline never samples out Availability Test records. If you were to instead send a Request Telemetry record using PowerShell, then that record could get sampled out with Ingestion Sampling, and not show up when you go to query for it. Start with a sample Availability Test Records first, then try other telemetry types as needed. 
+Availability Web Test Results are the best telemetry type to test with. The main reason is because our ingestion pipeline never samples out Availability Test records. If you instead send a Request Telemetry record using PowerShell, that record could get sampled out with Ingestion Sampling, and not show up when you go to query for it. Start with a sample Availability Test Records first, then try other telemetry types as needed.
 
 ### PowerShell Script To Send an Availability Test Telemetry
 
@@ -75,7 +75,7 @@ This script builds a raw REST request to deliver a single Availability Test Resu
 - Ikey only: Telemetry sent to global ingestion endpoint
 - If both Connection String and Ikey parameters are supplied the script sends telemetry to the regional endpoint in the connection string
 
-It is easiest to have customer run this from the PowerShell ISE environment on an IaaS or VMSS instance, you can also copy and paste the script into the App Services Kudu interface PowerShell debug console
+It is easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
 
 ```shell
 # Info: Provide either the Connection String or Ikey for your Application Insights Resource
@@ -151,7 +151,7 @@ When the above script executes, you want to review the response details. We are 
 
 ### PowerShell Script To Send a Request Telemetry
 
-If you want to test sending a single Request Telemetry record then the below script will help format a Request telemetry record. Remember, this telemetry type is susceptible to server-side ingestion sampling configuration, so make sure ingestion sampling is turned off to help confirm if these records are getting saved correctly.
+If you want to test sending a single Request Telemetry record, the below script will help you format it. This telemetry type is susceptible to server-side ingestion sampling configuration, so make sure ingestion sampling is turned off to help confirm if these records are getting saved correctly.
 
 ```shell
 # Info: Provide either the Connection String or Ikey for your Application Insights Resource
@@ -240,13 +240,13 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ### PowerShell Script To Send 100 Trace Messages
 
-You may also want to try and send a burst of telemetry records from the client machine to their component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the customers machine. You can find it as part of Nuget package installation or Application Insights Agent (SMv2) installation. The below script will load the dll then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
+You may also want to try and send a burst of telemetry records from the client machine to their component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the customer's machine. You can find it as part of NuGet package installation or Application Insights Agent (SMv2) installation. The below script will load the dll then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
 
 ```shell
 # One Parameter: Provide the Instrumentation Key
 $iKey = "{replace-with-your-ikey}"
 
-# Load App Insights dll from local Nuget package if it exists
+# Load App Insights dll from local NuGet package if it exists
 # Add-Type -Path "c:\users\{useralias}\.nuget\packages\microsoft.applicationinsights\2.17.0\lib\netstandard2.0\Microsoft.ApplicationInsights.dll";
 # Load App Insights dll from Application Insights Agent installation directory
 Add-Type -Path "C:\Program Files\WindowsPowerShell\Modules\Az.ApplicationMonitor\1.1.2\content\PowerShell\Microsoft.ApplicationInsights.dll";
@@ -298,12 +298,12 @@ add-type @"
 
 ```
 
-If the customers application defaults to the system or machine default TLS settings then you can change those default settings within the registry on Windows machines using details found in this article: [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
+If the customer's application defaults to the system or machine default TLS settings then you can change those default settings within the registry on Windows machines using details found in this article: [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
 
 Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application then you can follow the official guidance here [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
 ### Next Steps
 
-If sending telemetry via PowerShell from the customers impacted machine works then you will want to investigate their SDK or Codeless configuration for further troubleshooting.
+If sending telemetry via PowerShell from the customers impacted machine works, you will want to investigate their SDK or Codeless configuration for further troubleshooting.
 
-If sending telemetry via PowerShell also fails, then continue to isolate where the problem could be: DNS investigations, TCP connection to ingestion endpoint, look for Dropped Metrics on the Ingestion tab within ASC, etc.
+If sending telemetry via PowerShell also fails, continue to isolate where the problem could be: DNS investigations, TCP connection to ingestion endpoint, look for Dropped Metrics on the Ingestion tab within ASC, etc.
