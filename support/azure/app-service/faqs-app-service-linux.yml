@@ -241,7 +241,7 @@ sections:
           ## Web Sockets
           Web Sockets are supported on Linux apps.
           > [!IMPORTANT]
-          > Web Sockets are not currently supported for Linux apps on Free App Service Plans. We are working on removing this limitation and plan to support up to 5 web socket connections on Free App Service plans.
+          > Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans.
   - name: Pricing and SLA
     questions:
       - question: |
