@@ -4,7 +4,6 @@ description: This article describes an issue where the GetICMProfile function do
 ms.date: 08/05/2022
 author: shwetasohu
 ms.author: v-shwetasohu
-ms.prod: windows/win32/**/*.md
 ms.reviewer: mihayash, davean 
 ms.custom: sap:graphics and multimedia development
 ms.technology: windows-dev-apps-graphics-multimedia-dev
