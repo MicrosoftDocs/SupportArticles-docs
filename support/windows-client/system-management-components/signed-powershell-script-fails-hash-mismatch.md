@@ -1,7 +1,7 @@
 ---
 title: Hash of the file does not match when running signed PowerShell script
 description: This article provides resolutions for an issue where the execution of a signed PowerShell script fails with an error message.
-ms.date: 07/19/2022
+ms.date: 08/05/2022
 ms.reviewer: milanmil
 ms.author: v-sidong
 author: mrmilanmm
@@ -114,7 +114,7 @@ For more information about the PowerShell scripts that are encoded differently, 
 
 ||ASCII encoded PowerShell script|UTF-8 encoded PowerShell script|UTF-16 BE BOM encoded PowerShell script|UTF-16 LE BOM encoded PowerShell script|
 |-|-|-|-|-|
-|**Windows 10**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|**Windows 11**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|**Windows Server 2019**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
-|**Windows Server 2022**|No support for special characters|No support for special characters|n/a (Set-AuthenticodeSignature fails with UnknownError)|Can support special characters|
+|**Windows 10**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
+|**Windows 11**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
+|**Windows Server 2019**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
+|**Windows Server 2022**|Affected with HASH mismatch issue|Affected with HASH mismatch issue|n/a (Set-AuthenticodeSignature fails with UnknownError)|NOT affected with HASH mismatch issue|
