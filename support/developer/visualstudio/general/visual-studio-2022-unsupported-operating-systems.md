@@ -21,7 +21,7 @@ Visual Studio 2022 does not install on 32-bit operating systems.
 
 ## ARM-based operating systems
 
-Performance of Visual Studio 2022 on an 64-bit ARM operating system may not meet expectations.
+Performance of Visual Studio 2022 on an 64-bit ARM operating system may not meet expectations. Visual Studio 2022 version 17.3 and earlier are not supported on ARM operating systems. Visual Studio 2022 version 17.4 and later are supported only on Windows 11 on Arm.
 
 ## Application Virtualization
 
@@ -37,11 +37,12 @@ Running Visual Studio 2022 Community, Professional, or Enterprise editions in Wi
 
 ## Windows 7 and Windows Server 2008 R2
 
-When installing Visual Studio 2022 on Windows 7 or Windows Server 2008 R2, you may experience the following issues.
+When installing or using Visual Studio 2022 on Windows 7 or Windows Server 2008 R2, you may experience the following issues.
 
 - SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install SQL Server Express 2016. For more information on installation, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
 - The Diagnostic Hub requires Edge and the Chromium browser engine. [Chromium](https://cloud.google.com/blog/products/chrome-enterprise/extending-chrome-on-windows-7-to-support-enterprise-customers) and [Edge](/deployedge/microsoft-edge-supported-operating-systems) support on Windows 7 ends January 15, 2022. After this date, the browser components will no longer receive security updates. Microsoft recommends upgrading to a supported operating system.
 - Visual Studio Terminal does not work and is not supported on Windows 7 and Windows Server 2008 R2.
+- .NET 4.8.1 is not supported, and will not install.
 
 ## Windows 8
 
@@ -49,14 +50,19 @@ Visual Studio 2022 does not install on Windows 8.
 
 ## Windows 8.1, Windows Server 2012, and Windows Server 2012 R2
 
-When installing Visual Studio 2022 on Windows 8.1, Windows Server 2012, or Windows Server 2012 R2, you may experience the following issues.
+When installing or using Visual Studio 2022 on Windows 8.1, Windows Server 2012, or Windows Server 2012 R2, you may experience the following issues.
 
 - SQL development against a LocalDB, web development tools, and code maps are not available. To work around this issue, install SQL Server Express 2016. For more information on installation, see [SQL Server Express LocalDB](/sql/database-engine/configure-windows/sql-server-express-localdb).
-
+- .NET 4.8.1 is not supported, and will not install.
+ 
 ## Windows 10, version 1507 and 1511
 
 Visual Studio 2022 does not install on Windows 10, versions 1507 or 1511.
 
 ## Windows 10, versions 1607 through 1903
 
-There are no known issues or workarounds on these versions of Windows 10.
+- .NET 4.8.1 is not supported, and will not install.
+
+## Windows 10, versions 1909 through 2004
+
+- .NET 4.8.1 is not supported, and will not install.
