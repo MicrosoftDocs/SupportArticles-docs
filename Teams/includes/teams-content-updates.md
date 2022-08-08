@@ -2,6 +2,14 @@
 
 
 
+## Week of August 01, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/2/2022 | [Microsoft Teams Rooms can't open PowerPoint presentations after disabling TLS 1.0 and TLS 1.1 in Skype for Business Server 2019 and Skype for Business Server 2015](/microsoftteams/troubleshoot/teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls) | modified |
+
+
 ## Week of July 18, 2022
 
 
