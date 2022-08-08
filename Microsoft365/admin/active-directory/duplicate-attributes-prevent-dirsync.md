@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot directory synchronization errors with event 6941
-description: Discusses an issue in which an admin receives a  Directory Synchronization Error Report email message in Office 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
+description: Discusses an issue in which an admin receives a  Directory Synchronization Error Report email message in Microsoft 365 that indicates invalid attributes are preventing directory synchronization. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,15 +12,15 @@ ms.topic: troubleshooting
 ms.author: v-maqiu
 appliesto: 
   - Azure Active Directory
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Duplicate or invalid attributes prevent directory synchronization in Office 365
+# Duplicate or invalid attributes prevent directory synchronization in Microsoft 365
 
 ## Symptoms
 
-In Microsoft Office 365, an administrator receives the following email message warning when directory synchronization finishes:
+In Microsoft 365, an administrator receives the following email message warning when directory synchronization finishes:
 
 ```output
 From: [MSOnlineServicesTeam@MicrosoftOnline.com](mailto:msonlineservicesteam@microsoftonline.com)Subject: Directory Synchronization Error Report
@@ -62,13 +62,13 @@ Error Detail: Unable to update this object because the following attributes asso
 
 ## Cause
 
-This issue may occur if user objects in the on-premises Active Directory Domain Services (AD DS) schema have duplicate or invalid alias values, and if these user objects are not synced from the AD DS schema to Office 365 correctly during directory synchronization.
+This issue may occur if user objects in the on-premises Active Directory Domain Services (AD DS) schema have duplicate or invalid alias values, and if these user objects are not synced from the AD DS schema to Microsoft 365 correctly during directory synchronization.
 
-All alias values in Office 365 must be unique for a given organization. Even if you have multiple unique suffixes after the at sign (@) in the Simple Mail Transfer Protocol (SMTP) address, all alias values must be unique.
+All alias values in Microsoft 365 must be unique for a given organization. Even if you have multiple unique suffixes after the at sign (@) in the Simple Mail Transfer Protocol (SMTP) address, all alias values must be unique.
 
 In an on-premises environment, you can have alias values that are the same as long as they are unique based on the suffixes after the at sign (@) in the SMTP address.
 
-If you create objects that have duplicate alias values in the cloud for Office 365, to make the aliases unique, one alias has a unique number appended to it. (For example, if the duplicate alias values are "Albert," one of them becomes "Albert2" automatically. If "Albert2" is already being used, the alias becomes "Albert3," and so on.) However, if objects that have duplicate alias values are created in your on-premises AD DS, an object collision occurs when directory synchronization runs, and object synchronization fails.
+If you create objects that have duplicate alias values in the cloud for Microsoft 365, to make the aliases unique, one alias has a unique number appended to it. (For example, if the duplicate alias values are "Albert," one of them becomes "Albert2" automatically. If "Albert2" is already being used, the alias becomes "Albert3," and so on.) However, if objects that have duplicate alias values are created in your on-premises AD DS, an object collision occurs when directory synchronization runs, and object synchronization fails.
 
 ## Solution
 
@@ -84,11 +84,11 @@ Use the IdFix Microsoft Azure Active Directory Synchronization Tool Error Remedi
 
 To do this, see the following Microsoft Knowledge Base article:
 
-[2641663](https://support.microsoft.com/help/2641663) How to use SMTP matching to match on-premises user accounts to Office 365 user accounts for directory synchronization
+[2641663](https://support.microsoft.com/help/2641663) How to use SMTP matching to match on-premises user accounts to Microsoft 365 user accounts for directory synchronization
 
 ### Method 3: Determine attribute conflicts that are caused by objects that weren't created in Azure AD through directory synchronization
 
-To determine attribute conflicts that are caused by user objects that were created by using Office 365 management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
+To determine attribute conflicts that are caused by user objects that were created by using Microsoft 365 management tools (and that weren't created in Azure AD through directory synchronization), follow these steps:
  
 1. Determine the unique attributes of the on-premises AD DS user account. To do this, on a computer that has Windows Support Tools installed, follow these steps:  
    1. Click **Start**, click **Run**, type ldp.exe, and then click **OK**. 
@@ -109,7 +109,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       > [!NOTE]
       > Ldp.exe is included in Windows Server 2008 and in the Windows Server 2003 Support Tools. The Windows Server 2003 Support Tools are included in the Windows Server 2003 installation media. Or, to obtain the tool, go to the following Microsoft website: [Windows Server 2003 Service Pack 2 32-bit Support Tools](https://go.microsoft.com/fwlink/?linkid=100114)
 
-2. Connect to Office 365 by using the Azure Active Directory Module for Windows PowerShell. To do this, follow these steps:  
+2. Connect to Microsoft 365 by using the Azure Active Directory Module for Windows PowerShell. To do this, follow these steps:  
    1. Click **Start**, click **All Programs**, click **Azure Active Directory**, and then click **Azure Active Directory Module for Windows PowerShell**.
    2. Type the following commands in the order in which they are presented, and press Enter after each command:
 
@@ -118,7 +118,7 @@ To determine attribute conflicts that are caused by user objects that were creat
       ```
 
       > [!NOTE]
-      > When you are prompted, enter your Office 365 administrator credentials.
+      > When you are prompted, enter your Microsoft 365 administrator credentials.
 
       ```powershell
       Connect-MSOLService –credential $cred
@@ -126,7 +126,7 @@ To determine attribute conflicts that are caused by user objects that were creat
 
       Leave the console window open. You will have to use it in the next step.
 
-3. Check for the duplicate userPrincipalName attributes in Office 365.
+3. Check for the duplicate userPrincipalName attributes in Microsoft 365.
 
    In the console connection that you opened in step 2, type the following commands in the order in which they are presented, and press Enter after each command:
 

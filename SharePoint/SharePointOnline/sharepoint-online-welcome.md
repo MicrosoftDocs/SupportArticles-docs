@@ -25,7 +25,7 @@ Below is a collection of the top issues. If your issue isn't listed there, brows
 - ["Access Denied", "You need permission to access this site", or "User not found in the directory" errors in SharePoint Online and OneDrive for Business](./sharing-and-permissions/access-denied-sharepoint-error.md)
 - [Troubleshoot "Open with Explorer" issues in SharePoint Online](./lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md)
 - [Error when an external user accepts a SharePoint Online invitation by using another account](./sharing-and-permissions/error-when-external-user-accepts-an-invitation-by-using-another-account.md)
-- ["The number of items in this list exceeds the list view threshold" when you view lists in Office 365](./lists-and-libraries/items-exceeds-list-view-threshold.md)
+- ["The number of items in this list exceeds the list view threshold" when you view lists in Microsoft 365](./lists-and-libraries/items-exceeds-list-view-threshold.md)
 
 ## Other SharePoint Online content
 

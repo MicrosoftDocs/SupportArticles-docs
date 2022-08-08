@@ -1,6 +1,6 @@
 ---
 title: No confirmation after successfully scheduling a meeting
-description: Fixes an issue in which you don't receive any confirmation after you schedule a meeting or an appointment for an on-premises room mailbox in either Outlook client or Outlook Web App (OWA) in Office 365.
+description: Fixes an issue in which you don't receive any confirmation after you schedule a meeting or an appointment for an on-premises room mailbox in either Outlook client or Outlook Web App (OWA) in Microsoft 365.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -23,7 +23,7 @@ _Original KB number:_ &nbsp; 2951074
 
 ## Problem
 
-When you schedule a meeting or an appointment for an on-premises room mailbox in either Microsoft Office Outlook client or Microsoft Outlook Web App (OWA) in Microsoft Office 365, the meeting is successfully booked, and the calendar of the room mailbox is blocked or marked as **Tentative**. However, you don't receive any confirmation that states that the room mailbox is successfully booked.
+When you schedule a meeting or an appointment for an on-premises room mailbox in either Microsoft Office Outlook client or Microsoft Outlook Web App (OWA) in Microsoft 365, the meeting is successfully booked, and the calendar of the room mailbox is blocked or marked as **Tentative**. However, you don't receive any confirmation that states that the room mailbox is successfully booked.
 
 ## Cause
 

@@ -25,7 +25,7 @@ In Skype for Business Online, you are granted delegate permission for another us
 
 ## Cause
 
-This issue occurs because the delegate and delegator's data location aren't located in a same region. By default, Office 365 resources for your users are in the same geographical location as your Azure AD tenant.
+This issue occurs because the delegate and delegator's data location aren't located in a same region. By default, Microsoft 365 resources for your users are in the same geographical location as your Azure AD tenant.
 
 ## Resolution
 
@@ -41,7 +41,7 @@ To fix this issue, define the same location for the affected users by setting th
 
 - If users are hosted on an on-premises server, such as a domain controller (DC) that is running Active Directory Domain Service (AD DS), you must manually update the preferred data location value in on-premises AD, and then sync the updates to Azure AD by using Azure AD Connect. To do this, see the following article:
 
-    [Azure Active Directory Connect sync: Configure preferred data location for Office 365 resources](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
+    [Azure Active Directory Connect sync: Configure preferred data location for Microsoft 365 resources](/azure/active-directory/hybrid/how-to-connect-sync-feature-preferreddatalocation)
 
     This cmdlet sets the preferred data location property of a user whose user principal name is davidchew@contoso.com to EUR (European Union).
 

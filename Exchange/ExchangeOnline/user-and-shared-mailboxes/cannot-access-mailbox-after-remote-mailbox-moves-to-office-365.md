@@ -1,6 +1,6 @@
 ---
-title: Cannot access mailbox after remote mailbox moves to Office 365
-description: Resolves an issue that blocks a user from accessing their mailbox through Outlook after a remote mailbox move from an on-premises Exchange Server environment to Office 365.
+title: Cannot access mailbox after remote mailbox moves to Microsoft 365
+description: Resolves an issue that blocks a user from accessing their mailbox through Outlook after a remote mailbox move from an on-premises Exchange Server environment to Microsoft 365.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,11 +16,11 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# Can't access a mailbox by using Outlook after a remote mailbox move from an on-premises Exchange Server environment to Office 365
+# Can't access a mailbox by using Outlook after a remote mailbox move from an on-premises Exchange Server environment to Microsoft 365
 
 ## Symptoms
 
-After you move a user's mailbox from an on-premises Microsoft Exchange Server environment to Microsoft Office 365, the user can't access the mailbox by using Microsoft Outlook. However, the user can access the mailbox by using Outlook Web App.
+After you move a user's mailbox from an on-premises Microsoft Exchange Server environment to Microsoft 365, the user can't access the mailbox by using Microsoft Outlook. However, the user can access the mailbox by using Outlook Web App.
 
 In addition, you may see an error message in the Exchange Management Console that resembles the following after the failed remote mailbox move:
 

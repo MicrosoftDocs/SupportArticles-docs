@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 activation usage report issues
 description: Describes issues an admin might encounter with Microsoft 365 activation usage reports.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -42,7 +43,7 @@ Note that Microsoft 365 Apps activations can take up to 48 hours to appear in th
 
 ## Report shows anonymous user names
 
-Beginning September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/office365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
+Beginning September 1, 2021, user names in Microsoft 365 usage reports are anonymous by default. For more information, see [Microsoft 365 reports show anonymous user names instead of actual user names](/microsoft-365/troubleshoot/miscellaneous/reports-show-anonymous-user-name).
 
 ## Report doesn’t show device name
 

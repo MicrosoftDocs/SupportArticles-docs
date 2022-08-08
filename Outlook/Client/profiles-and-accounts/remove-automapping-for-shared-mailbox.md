@@ -1,6 +1,6 @@
 ---
 title: Remove automapping for a shared mailbox
-description: Describes how to disable automapping for a shared mailbox in Outlook for Office 365.
+description: Describes how to disable automapping for a shared mailbox in Outlook for Microsoft 365.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,15 +14,15 @@ ms.custom:
 search.appverid: 
   - MET150
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# How to remove automapping for a shared mailbox in Outlook for Office 365
+# How to remove automapping for a shared mailbox in Outlook for Microsoft 365
 
 ## Introduction
 
-This article discusses how to remove automapping for shared mailboxes in Microsoft Outlook for Microsoft Office 365.
+This article discusses how to remove automapping for shared mailboxes in Microsoft Outlook for Microsoft 365.
 
 In Microsoft Outlook, Autodiscover automatically maps to any mailbox for which a user has full access permissions. Autodiscover automatically loads all mailboxes for which the user has full access permissions in the following scenarios:
 

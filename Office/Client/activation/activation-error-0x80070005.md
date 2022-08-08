@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error 0x80070005
 description: Troubleshooting steps for activation error 0x80070005.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -81,7 +82,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 1.	Restart the device.
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 

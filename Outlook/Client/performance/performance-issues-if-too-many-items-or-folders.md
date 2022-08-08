@@ -101,11 +101,11 @@ To clear offline Calendar items, follow these steps:
 3. On the **General** tab, select **Clear Offline Items**.
 4. Select **OK**.
 
-Additionally, you can use the Support and Recovery Assistant (SaRA) for Office 365 to diagnose issues that affect Outlook. (The tool works for both programs.)
+Additionally, you can use the Microsoft Support and Recovery Assistant to diagnose issues that affect Outlook. (The tool works for both programs.)
 
 To download and install the tool, go to the following Microsoft website:
 
-[Download Microsoft Support and Recovery Assistant for Office 365](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
+[About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
 
 In the tool, run the Outlook Diagnostic under the Advanced Diagnostics section to determine the cause of the performance issue.
 

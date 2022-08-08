@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error Your organization has disabled this device
 description: Troubleshooting steps for the error Your organization has disabled this device
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -70,7 +71,7 @@ After the duplicate device is removed , delete your BrokerPlugin data and then r
 1.	Restart the device.  
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).  
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to an Office 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).  
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).  
 <br/><br/>
 </details>
 

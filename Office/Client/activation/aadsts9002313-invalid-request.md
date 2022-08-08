@@ -1,8 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error AADSTS9002313 Invalid Request
 description: Troubleshooting steps for the error AADSTS9002313 Invalid Request. Request is malformed or invalid.
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -45,7 +46,7 @@ To activate Microsoft 365 Apps, TLS 1.2 must be enabled on the operating system.
 <details>
 <summary><b>Make sure Azure Active Directory Authentication Library (ADAL) and Web Account Manager (WAM) are enabled</b></summary>
 
-For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended).
+For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended).
 <br/><br/>
 </details>
 

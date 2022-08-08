@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: pedrocorreia
 appliesto: 
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: 
   - MET150
 ms.date: 6/9/2022

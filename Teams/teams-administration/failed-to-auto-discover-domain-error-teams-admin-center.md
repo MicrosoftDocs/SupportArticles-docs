@@ -33,7 +33,7 @@ This issue can be resolved by following these steps:
 
 1. Connect to Skype for Business Online with PowerShell:
 
-   - [Manage Skype for Business Online with Office 365 PowerShell](/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell)
+   - [Manage Skype for Business Online with Microsoft 365 PowerShell](/office365/enterprise/powershell/manage-skype-for-business-online-with-office-365-powershell)
 
 2. Verify that SIPDomain is enabled by running [Get-CsOnlineSipDomain](/powershell/module/skype/get-csonlinesipdomain).
 

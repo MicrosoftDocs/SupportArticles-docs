@@ -75,9 +75,9 @@ If you can't access the site as the incorrect external user, follow these steps:
 
 ### Remove the incorrect external user account
 
-External users are managed from a site collection by site collection basis. An external user account will have to be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface or through the SharePoint Online Management Shell, depending on your version of Office 365.
+External users are managed from a site collection by site collection basis. An external user account will have to be removed from each site collection to which the account was given access. You can do so from the SharePoint Online user interface or through the SharePoint Online Management Shell, depending on your version of Microsoft 365.
 
-For Office 365 Small Business subscriptions, use the SharePoint Online UI:
+For Microsoft 365 for Business subscriptions, use the SharePoint Online UI:
 
 1. Browse to the Microsoft 365 admin center at https://portal.office.com.
 

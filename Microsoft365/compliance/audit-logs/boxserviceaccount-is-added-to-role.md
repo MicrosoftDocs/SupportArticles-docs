@@ -1,6 +1,6 @@
 ---
-title: BOXServiceAccount is added to a role in Office 365 alerts
-description: BOXServiceAccount is added to a role in Office 365 alerts.
+title: BOXServiceAccount is added to a role in Microsoft 365 alerts
+description: BOXServiceAccount is added to a role in Microsoft 365 alerts.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,13 +15,13 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# BOXServiceAccount is added to a role in Office 365 alerts
+# BOXServiceAccount is added to a role in Microsoft 365 alerts
 
 [!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 
-You receive Microsoft Office 365 security alerts (configured in the Security Compliance Center) that state that the BOXServiceAccount is added to a role.
+You receive Microsoft 365 security alerts (configured in the Security Compliance Center) that state that the BOXServiceAccount is added to a role.
 
 This is an example of such an alert:
 
@@ -33,9 +33,9 @@ This is by design.
 
 ## Resolution
 
-After a tenant administrator assigns an Exchange administrator, Skype for Business administrator, or SharePoint administrator role to a user in the Office 365 portal, the Office 365 portal uses a built-in account (BOXServiceAccount) to add the user to the **View-Only Organization Management** Role Based Access Control (RBAC) group.
+After a tenant administrator assigns an Exchange administrator, Skype for Business administrator, or SharePoint administrator role to a user in the Microsoft 365 portal, the Microsoft 365 portal uses a built-in account (BOXServiceAccount) to add the user to the **View-Only Organization Management** Role Based Access Control (RBAC) group.
 
-To see the actual audit log, you can either use Search similar activities in the Office 365 alert detail activity list view or do a free-text search for "BOXServiceAccount" directly from the Audit log search page.
+To see the actual audit log, you can either use Search similar activities in the Microsoft 365 alert detail activity list view or do a free-text search for "BOXServiceAccount" directly from the Audit log search page.
 
 ## More information
 

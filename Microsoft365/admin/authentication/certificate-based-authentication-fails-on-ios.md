@@ -12,7 +12,7 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 

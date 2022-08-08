@@ -101,7 +101,7 @@ Use the `netsh` command-line tool to open port 8080 on the proxy server. To do t
 
 For more information about eDiscovery, see [eDiscovery solutions in Microsoft 365](/microsoft-365/compliance/ediscovery?view=o365-worldwide&preserve-view=true).
 
-For more information about the latest browser requirements for Office 365, see [System requirements for Office](https://products.office.com/office-system-requirements).
+For more information about the latest browser requirements for Microsoft 365, see [System requirements for Office](https://products.office.com/office-system-requirements).
 
 The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 

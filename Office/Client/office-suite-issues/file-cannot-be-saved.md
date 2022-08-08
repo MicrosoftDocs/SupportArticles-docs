@@ -1,7 +1,8 @@
 ---
 title: Excel or PowerPoint error This file cannot be saved because some properties are missing or invalid
 description: Describes workaround for error This file cannot be saved because some properties are missing or invalid
-author: warrenr
+author: helenclu
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 158345
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.author: luche
 appliesto: 
   - Microsoft Excel
   - Microsoft PowerPoint

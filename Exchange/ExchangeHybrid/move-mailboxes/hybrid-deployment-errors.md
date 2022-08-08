@@ -1,6 +1,6 @@
 ---
 title: Hybrid deployment errors
-description: Fixes an error that occurs when you move a mailbox to Office 365 from your on-premises environment in a hybrid deployment.
+description: Fixes an error that occurs when you move a mailbox to Microsoft 365 from your on-premises environment in a hybrid deployment.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -23,13 +23,13 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 2626696
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Problem
 
-In a hybrid deployment of Microsoft Exchange Online in Microsoft Office 365 and your on-premises Microsoft Exchange Server 2010 environment, you experience one of the following symptoms:
+In a hybrid deployment of Microsoft Exchange Online in Microsoft 365 and your on-premises Microsoft Exchange Server 2010 environment, you experience one of the following symptoms:
 
-- When you move a mailbox to Office 365 from your on-premises environment, you receive the following error message:
+- When you move a mailbox to Microsoft 365 from your on-premises environment, you receive the following error message:
 
   > Exception has been thrown by the target of an invocation.
 

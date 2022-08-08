@@ -433,6 +433,8 @@
           href: ../compliance/noderunnersexe-stops-search-not-work.md
         - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+        - name: Search-Mailbox cmdlet error
+          href: ../compliance/search-mailbox-cmdlet-fails.md
     - name: Development
       items:
         - name: Develop apps via Exchange Powershell and .NET Framework
@@ -463,7 +465,7 @@
           href: ../mailflow/cannot-send-email-with-full-access.md
         - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
           href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
-        - name: Can't view Office 365 IRM-encrypted messages
+        - name: Can't view Microsoft 365 IRM-encrypted messages
           href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
         - name: Delayed mail delivery in Exchange
           href: ../mailflow/mail-delivery-delay-exchange.md
@@ -489,6 +491,8 @@
           href: ../mailflow/cannot-add-attachment-outlook-web.md
         - name: Error when sending S/MIME encrypted mails from OWA
           href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+        - name: Event ID 17018 when Microsoft Exchange Transport service stops
+          href: ../mailflow/event-17018-MSExchangeTransport-service-stop.md
         - name: Event ID 7009 when users send or receive emails
           href: ../mailflow/event-7009-send-receive-emails.md
         - name: External or app created emails not delivered
@@ -577,6 +581,8 @@
           href: ../setup/cumulative-update-20-is-shown-not-22.md
         - name: Event ID 106 Performance counter updating error
           href: ../setup/event-106-msexchange-common.md
+        - name: Event ID 6010 logged after installing CU23
+          href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell
           href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
         - name: Instal PST Capture tool fails

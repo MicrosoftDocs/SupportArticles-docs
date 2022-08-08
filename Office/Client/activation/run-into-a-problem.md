@@ -1,8 +1,9 @@
 ---
-title: We’ve run into a problem with your Office 365 subscription
-description: Troubleshooting the Microsoft 365 Apps activation error We’ve run into a problem with your Office 365 subscription.
-author: vikkarti
-ms.author: v-matthamer
+title: We’ve run into a problem with your Microsoft 365 subscription
+description: Troubleshooting the Microsoft 365 Apps activation error We’ve run into a problem with your Microsoft 365 subscription.
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -22,7 +23,7 @@ ms.date: 3/31/2022
 
 When activating Microsoft 365 apps, you might encounter the following error:
 
-> We’ve run into a problem with your Office 365 subscription and we need your help to fix it.
+> We've run into a problem with your Office 365 subscription and we need your help to fix it.
 
 Try the following troubleshooting methods to solve the problem.
 

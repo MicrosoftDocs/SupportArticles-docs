@@ -93,7 +93,7 @@ Also in the case hold page in the Microsoft Purview compliance portal, you can r
 
 If you see this error in the **ResultCode: PolicyNotifyError** and the following error message, a datacenter issue interrupted the policy sync.
 
-> Policy cannot be deployed to the content source due to a temporary Office 365 datacenter issue. The current policy is not applied to any content in the source, so there's no impact from the blocked deployment. To fix this issue, please try redeploying the policy.
+> Policy cannot be deployed to the content source due to a temporary Microsoft 365 datacenter issue. The current policy is not applied to any content in the source, so there's no impact from the blocked deployment. To fix this issue, please try redeploying the policy.
 
 ### Resolution
 
@@ -111,7 +111,7 @@ Also in the case hold page in the Microsoft Purview compliance portal, you can r
 
 If you see this error in the **ResultCode: InternalError** and the following error message, this issue has to be resolved by Microsoft.
 
-> Policy deployment has been interrupted by an unexpected Office 365 datacenter issue. Please contact Microsoft support to fix the deployment issue.
+> Policy deployment has been interrupted by an unexpected Microsoft 365 datacenter issue. Please contact Microsoft support to fix the deployment issue.
 
 ### Resolution
 

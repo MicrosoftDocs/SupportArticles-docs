@@ -58,6 +58,6 @@ To resolve this issue, follow these steps:
         Test-MigrationServerAvailability -Credentials $pscred -ExchangeOutlookAnywhere -ExchangeServer <Internal FQDN of the Exchange server> -RPCProxyServer <FQDN of the proxyserver> -Authentication Basic -EmailAddress <AdminEmail>
         ```
 
-      If the verification is successful, you can create a migration endpoint in Office 365.
+      If the verification is successful, you can create a migration endpoint in Microsoft 365.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

@@ -1,14 +1,15 @@
 ---
 title: SharePoint Online out of storage space
 description: Run a diagnostic to solve storage space issues.
-author: v-matthamer
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: prbalusu
+ms.reviewer: prbalusu
 ms.custom: 
   - CSSTroubleshoot
   - CI 157728
@@ -29,7 +30,7 @@ As a global admin, you might get an email with one of the following messages:
 
 The amount of Microsoft SharePoint storage for your organization is based on your number of licenses.
 
-Your organization has total storage of 1 TB plus 10 GB per license of eligible plan purchased, plus any Office 365 Extra File Storage add-on purchased.
+Your organization has total storage of 1 TB plus 10 GB per license of eligible plan purchased, plus any Microsoft 365 Extra File Storage add-on purchased.
 
 If you suspect you should have more storage than is displayed in the Microsoft 365 admin center, Microsoft 365 admins can run the following diagnostic tool. It will identify any issues with your SharePoint Online tenant storage quota, and show how the quota is allocated.
 

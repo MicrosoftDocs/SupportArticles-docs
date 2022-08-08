@@ -1,6 +1,6 @@
 ---
 title: There is problem with website security certificate error when federated user signs out
-description: Describes an issue in which a federated user receives an error message when the user signs out of Office 365, Microsoft Intune, or Azure. Provides a resolution.
+description: Describes an issue in which a federated user receives an error message when the user signs out of Microsoft 365, Microsoft Intune, or Azure. Provides a resolution.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,15 +16,15 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "There is a problem with this website's security certificate" error when a federated user signs out of Office 365, Intune, or Azure
+# "There is a problem with this website's security certificate" error when a federated user signs out of Microsoft 365, Intune, or Azure
 
 ## Problem
 
-When a federated user signs out of a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, the user receives the following error message on login.microsoftonline.com:
+When a federated user signs out of a Microsoft cloud service such as Microsoft 365, Microsoft Intune, or Microsoft Azure, the user receives the following error message on login.microsoftonline.com:
 
 > There is a problem with this website's security certificate
 

@@ -1,6 +1,6 @@
 ---
 title: Users can't join online meetings in Skype for Business Online
-description: Describes how to troubleshoot issues that occur when users try to join online meetings in Skype for Business Online in an Office 365 environment.
+description: Describes how to troubleshoot issues that occur when users try to join online meetings in Skype for Business Online in a Microsoft 365 environment.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -96,7 +96,7 @@ Skype for Business Online falls back to "anonymous join" if it can't authenticat
 
 ### Troubleshooting Identity issues
 
-This specific issue occurs when two users of the same Office 365 organization share the same user name (alias). Because of how Lync generates meeting URLs, two users on the same Office 365 organization who have the same user name will share the same meeting URLs. This causes the Skype for Business Online conference to become corrupted.
+This specific issue occurs when two users of the same Microsoft 365 organization share the same user name (alias). Because of how Lync generates meeting URLs, two users on the same Microsoft 365 organization who have the same user name will share the same meeting URLs. This causes the Skype for Business Online conference to become corrupted.
 
 To resolve this issue, change the user name of one of the users who has the duplicate user name.
 
@@ -111,7 +111,7 @@ If external users (and only external users) can't join a Skype for Business Onli
   - If authenticated join doesn't work, Lync should automatically try to join as an anonymous or guest user.
 - If the user is trying to join as an anonymous user from Lync Attendee, or if the Lync Web App or is dialing in to a Skype for Business Online conference with an ACP access number:
   - For anonymous join to work, a specific DNS SRV record must be present in DNS.    
-  - For various methods of confirming your Skype for Business Online DNS records, see [Troubleshooting Skype for Business Online DNS configuration issues in Office 365](https://support.microsoft.com/help/2566790). 
+  - For various methods of confirming your Skype for Business Online DNS records, see [Troubleshooting Skype for Business Online DNS configuration issues in Microsoft 365](https://support.microsoft.com/help/2566790). 
 
 ### Joining meetings by using the Lync Web App
 

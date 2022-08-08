@@ -1,5 +1,5 @@
 ---
-title: Office 365 (Upload blocked) error when syncing between different tenants in OneDrive
+title: Microsoft 365 (Upload blocked) error when syncing between different tenants in OneDrive
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -16,14 +16,14 @@ ms.custom:
   - CI 120653
   - CSSTroubleshoot
 ms.reviewer: dumitrim
-description: How to resolve an Upload blocked error in Office 365 when two different tenants sync files to OneDrive.
+description: How to resolve an Upload blocked error in Microsoft 365 when two different tenants sync files to OneDrive.
 ---
 
-# (Upload blocked) error in Office 365 when users sync files with OneDrive from different tenants
+# (Upload blocked) error in Microsoft 365 when users sync files with OneDrive from different tenants
 
 ## Symptoms
 
-When you open or edit files in Office 365 Desktop applications, you receive the following error message: 
+When you open or edit files in Microsoft 365 Desktop applications, you receive the following error message: 
 
 > UPLOAD BLOCKED: We couldn't verify you have the necessary permissions to upload the file. 
 

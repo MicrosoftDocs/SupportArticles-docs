@@ -7,7 +7,7 @@
           href: ../authentication/continually-prompts-password-office-365.md
         - name: Disconnected after enabling modern authentication
           href: ../authentication/outlook-shows-disconnected-after-enabling-modern-authentication.md
-        - name: Doesn't use Modern Authentication to connect Office 365
+        - name: Doesn't use Modern Authentication to connect Microsoft 365
           href: ../authentication/outlook-prompt-password-modern-authentication-enabled.md
         - name: Force Outlook to resolve proxy addresses and custom properties
           href: ../authentication/how-to-force-outlook-to-resolve-proxy-addresses-and-custom-properties.md
@@ -462,7 +462,7 @@
         - name: Information about the Sniffer functionality
           href: ../performance/information-about-outlook-sniffer-functionality.md
         - name: Install SaRA from network share
-          href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+          href: /microsoft-365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
         - name: Insufficient memory to display a folder
           href: ../performance/outlook-folder-fails-displaying.md
         - name: Insufficient memory errors and sent mail stuck
@@ -495,7 +495,7 @@
           href: ../performance/outlook-shutdown-slowly-if-using-requireshutdownnotification.md
         - name: Outlook.exe.log in %Temp% consumes too much disk space
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
-        - name: Performance is slow in the Office 365
+        - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
         - name: Performance issues for too many items or folders
           href: ../performance/performance-issues-if-too-many-items-or-folders.md
@@ -533,7 +533,7 @@
           href: ../profiles-and-accounts/error-when-subscribing-to-rss-feed-that-needs-authentication.md
         - name: Can't copy an appointment to an Outlook.com folder
           href: ../profiles-and-accounts/error-copy-appointment-to-outlook-com-folder.md
-        - name: Can't set up Office 365 account
+        - name: Can't set up Microsoft 365 account
           href: ../profiles-and-accounts/cannot-set-up-office-365-account-outlook.md
         - name: Can't use EAS to connect Outlook to Exchange
           href: ../profiles-and-accounts/outlook-cannot-use-activesync-connect-exchange.md
@@ -749,7 +749,7 @@
           href: ../user-interface/custom-mapi-solutions-not-working.md
         - name: MAPI is the only way to change profiles
           href: ../user-interface/mapi-is-the-only-way-to-change-profiles.md
-        - name: Messages occur if connecting to office 365 email accounts
+        - name: Messages occur if connecting to Microsoft 365 email accounts
           href: ../user-interface/messages-occur-when-connecting-to-office-365-email-account.md
         - name: Missing registry data causes problems with object model
           href: ../user-interface/missing-registry-information-causes-problems-with-object-model.md
@@ -769,7 +769,7 @@
           href: ../user-interface/only-subset-items-synchronized.md
         - name: OpenSharedItem holds file handle on signed .msg files
           href: ../user-interface/openshareditem-holds-file-handle-on-signed-msg-files.md
-        - name: Out of Office doesn't function correctly in Office 365
+        - name: Out of Office doesn't function correctly in Microsoft 365
           href: ../user-interface/out-of-office-feature-not-working-correctly.md
         - name: Outlook crashes when you call IMAPIProp::GetProps
           href: ../user-interface/stale-mapiobject-causes-outlook-crashes.md

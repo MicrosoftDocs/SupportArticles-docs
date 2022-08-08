@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: subhbasu
 appliesto: 
-  - OneNote for Office 365
+  - OneNote for Microsoft 365
   - OneNote 2016
   - OneNote 2013
   - OneNote 2010
