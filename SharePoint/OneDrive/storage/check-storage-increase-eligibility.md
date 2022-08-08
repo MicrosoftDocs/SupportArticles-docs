@@ -1,8 +1,8 @@
 ---
 title: Check OneDrive site eligibility for increased storage
 description: Check if your storage is eligible to be increased to greater than 5 TB.
-author: v-matthamer
-ms.author: v-matthamer
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 02/01/2021
