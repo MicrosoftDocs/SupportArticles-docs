@@ -28,7 +28,7 @@ An AKS cluster upgrade fails, and you receive a "PodDrainFailure" error message.
 
 This error might occur if a pod is protected by the Pod Disruption Budget (PDB) policy. In this situation, the pod resists being drained.
 
-To test this situation, run `kubelect get pdb -A`, and then check the **Allowed Disruption** value. The value should be **1** or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
+To test this situation, run `kubectl get pdb -A`, and then check the **Allowed Disruption** value. The value should be **1** or greater. For more information, see [Plan for availability using pod disruption budgets](/azure/aks/operator-best-practices-scheduler#plan-for-availability-using-pod-disruption-budgets).
 
 If the **Allowed Disruption** value is **0**, the node drain will fail during the upgrade process.
 
