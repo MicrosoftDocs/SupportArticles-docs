@@ -16,11 +16,11 @@ _Applies to:_ &nbsp; Windows 10 version 2004, Windows 10 version 20H2, Windows 1
 
 ## Symptoms
 
-Applications that call the [GetICMProfile](/previous-versions/ms536585(v=vs.85)) Image Color Management (ICM) function might see increased handle usage counts in tools such as Task Manager or might experience unexpected error or behavior.
+Applications that call the [GetICMProfile](/previous-versions/ms536585(v=vs.85)) function might see increased handle usage counts in tools such as Task Manager or experience unexpected errors or behavior.
 
 ## Cause
 
-The `GetICMProfile` function uses the Windows Registry functions to obtain color profile information from the registry but doesn't close the opened registry handles. This problem can also occur while calling other ICM or Windows Color System (WCS) functions, including:
+The `GetICMProfile` function uses the Windows Registry functions to obtain color profile information from the registry but doesn't close the opened registry handles. This problem can also occur while calling other Image Color Management (ICM) or Windows Color System (WCS) functions, including:
 - [EnumICMProfiles](/previous-versions/ms536595(v=vs.85))
 - [WcsGetDefaultColorProfile](/previous-versions/ms536874(v=vs.85))
 - [WcsGetDefaultColorProfileSize](/previous-versions/ms536875(v=vs.85))
@@ -28,7 +28,7 @@ The `GetICMProfile` function uses the Windows Registry functions to obtain color
 
 ## Status
 
-Microsoft has confirmed that this is a problem in the Microsoft products that are listed at the beginning of this article.
+Microsoft has confirmed that this is a problem.
 
 ## More information
 
