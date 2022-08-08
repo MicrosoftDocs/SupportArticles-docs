@@ -306,6 +306,7 @@
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "power-platform/power-apps/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
         "dynamics/gp/*.md": "Dynamics GP"
