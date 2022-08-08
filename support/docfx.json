@@ -252,6 +252,7 @@
         "dynamics-365/fraud-protection/*.md": "dynamics-365-fraud-protection",
         "dynamics-365/marketing/*.md": "dynamics-365-marketing",
         "dynamics-365/sales/*.md": "dynamics-365-sales",
+        "dynamics-365/finance/**/**.*": "dynamics-365-finance",
         "dynamics-365/supply-chain/**/**.*": "dynamics-365-supply-chain",
         "mem/intune/**/*.md": "microsoft-intune",
         "power-platform/ai-builder/*.md": "aibuilder"
@@ -305,6 +306,7 @@
         "dynamics-365/fraud-protection/*.md": "Dynamics 365 Fraud Protection",
         "dynamics-365/marketing/*.md": "Dynamics 365 Marketing",
         "dynamics-365/sales/*.md": "Dynamics 365 Sales",
+        "dynamics-365/finance/**/*.md": "Dynamics 365 Finance",
         "dynamics-365/supply-chain/**/*.md": "Dynamics 365 Supply Chain Management",
         "power-platform/power-apps/*.md": "Power Apps",
         "power-platform/power-automate/*.md": "Power Automate",
@@ -404,6 +406,11 @@
           "Troubleshoot",
           "Dynamics 365",
           "Fraud protection"
+        ],
+        "dynamics-365/finance/**/*.md": [
+          "Troubleshoot",
+          "Dynamics 365",
+          "Finance"
         ],
         "dynamics-365/supply-chain/**/*.md": [
           "Troubleshoot",
