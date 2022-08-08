@@ -95,7 +95,7 @@ If your credentials aren't accepted, and you're continuously prompted for creden
 
 If the time on your computer differs from the time on the server that you're trying to sign in to, your attempt to sign in may fail. Set your computer's time as close to the correct local time as possible.
 
-### Solutions for Skype for Business Online Administrators in Office 365
+### Solutions for Skype for Business Online Administrators in Microsoft 365
 
 #### Where are the users' mailboxes located?
 
@@ -103,7 +103,7 @@ Many of the deployment requirements for Exchange and Lync integration depend on 
 
 The following articles cover deployment requirements. These include DNS configuration, Exchange Server configuration, and Lync Server configuration.
 
-Is the user part of an on-premises Exchange Server organization, or are they in Office 365 Exchange Online? 
+Is the user part of an on-premises Exchange Server organization, or are they in Microsoft 365 Exchange Online? 
 
 - If the user's mailbox is located in Exchange Online, see [How to integrate Exchange Server 2013 with Lync Server 2013, Skype for Business Online, or a Lync Server 2013 hybrid deployment](https://support.microsoft.com/help/2614242).
 - If the user's mailbox is homed on an on-premises Exchange server, see [How to integrate Exchange Online with Skype for Business Online, Lync Server 2013, or a Lync Server 2013 hybrid deployment](https://support.microsoft.com/help/2614614).

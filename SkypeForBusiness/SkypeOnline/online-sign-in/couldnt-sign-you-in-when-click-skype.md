@@ -38,7 +38,7 @@ For Skype for Business Online (formerly Lync Online) chat integration to work in
 
 This issue occurs because SharePoint Online URL domains (*.sharepoint.com) are typically added to the **Trusted** or **Local intranet** zones in Internet Explorer or Microsoft Edge. For more information, see the following Microsoft website:
 
-[Office 365 URLs and IP address ranges](https://support.office.com/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
+[Microsoft 365 URLs and IP address ranges](https://support.office.com/article/office-365-urls-and-ip-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2)
 
 However, authentication into Skype for Business Online is performed by using a different OrgID URL, which resembles the following:
 

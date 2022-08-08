@@ -13,7 +13,7 @@
           href: ../administration/remote-mailbox-created-in-ad-ds-not-aclable.md
         - name: Access is denied with Windows PowerShell
           href: ../administration/access-denied-connect-powershell.md
-        - name: Azure AD Connect workflow in Office 365
+        - name: Azure AD Connect workflow in Microsoft 365
           href: ../administration/azure-ad-connect-workflow.md
         - name: Bad Request when connecting to Exchange Online PowerShell
           href: ../administration/bad-request-error-when-connecting-to-exchange-online-powershell.md
@@ -35,7 +35,7 @@
           href: ../administration/cannot-browse-groups-in-owa.md
         - name: Can't connect to Exchange Online or create new profiles
           href: ../administration/cannot-connect-to-exchange-online-or-create-new-profiles.md
-        - name: Can't disable Facebook contact sync for Office 365 organization
+        - name: Can't disable Facebook contact sync for Microsoft 365 organization
           href: ../administration/cannot-disable-facebook-contact-sync-for-organization.md
         - name: Can't establish TLS connection to remote mail server
           href: ../administration/cannot-establish-tls-connection-to-remote-mail-server.md
@@ -51,7 +51,7 @@
           href: ../administration/cisco-unity-duplicate-voicemails-in-mailbox-hosted-in-exchange-online.md
         - name: Data in the command exceeded the maximum permitted by the session error
           href: ../administration/data-in-the-command-exceeded-the-maximum-permitted-error.md
-        - name: Description of the Files folder in Office 365
+        - name: Description of the Files folder in Microsoft 365
           href: ../administration/description-of-the-files-folder-in-office-365.md
         - name: Don't have permissions to update options specified error
           href: ../administration/you-dont-have-permissions-to-update-the-options-you-specified-error.md
@@ -271,7 +271,7 @@
           href: ../email-delivery/how-to-block-message-from-being-sent-or-received.md
         - name: IMCEAEX non-delivery report
           href: ../email-delivery/imceaex-ndr.md
-        - name: Important notice for Office 365
+        - name: Important notice for Microsoft 365
           href: ../email-delivery/office-365-notice.md
         - name: Inbox rule to forward emails doesn't work
           href: ../email-delivery/inbox-rule-to-forward-messages-not-work.md
@@ -293,7 +293,7 @@
           href: ../groups-and-distribution-lists/cannot-manage-hidden-group.md
         - name: Can't remove members that exceed the limit
           href: ../groups-and-distribution-lists/cannot-remove-members-exceeding-limit.md
-        - name: Can't upgrade distribution lists to Office 365 groups
+        - name: Can't upgrade distribution lists to Microsoft 365 groups
           href: ../groups-and-distribution-lists/cannot-upgrade-distribution-lists-to-office-365-groups.md
         - name: Common tasks to manage Microsoft 365 groups
           href: ../groups-and-distribution-lists/o365-group-tasks.md
@@ -301,7 +301,7 @@
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
-        - name: Problem adding a guest user to an Office 365 group
+        - name: Problem adding a guest user to a Microsoft 365 group
           href: ../groups-and-distribution-lists/problem-adding-guest-user-to-group.md
         - name: You don't have sufficient permissions
           href: ../groups-and-distribution-lists/no-sufficient-permissions-moving-dg.md
@@ -377,7 +377,7 @@
           href: ../outlook-issues/group-calendar-shows-all-user-free-busy-info.md
         - name: Blank lines are truncated
           href: ../outlook-issues/blank-lines-truncated-when-moved-to-pst-file.md
-        - name: Can't edit an Office 365 Kiosk user's calendar
+        - name: Can't edit a Microsoft 365 Kiosk user's calendar
           href: ../outlook-issues/cannot-edit-o365-kiosk-user-calendar.md
         - name: Can't set up profile with Autodiscover
           href: ../outlook-issues/cannot-set-up-profile-autodiscover.md
@@ -543,7 +543,7 @@
       items:
         - name: Can't access a shared mailbox using OWA
           href: ../user-and-shared-mailboxes/blank-page-access-shared-mailbox.md
-        - name: Can't access mailbox after a remote mailbox move to Office 365
+        - name: Can't access mailbox after a remote mailbox move to Microsoft 365
           href: ../user-and-shared-mailboxes/cannot-access-mailbox-after-remote-mailbox-moves-to-office-365.md
         - name: Can't connect to the mailbox when running Search-Mailbox
           href: ../user-and-shared-mailboxes/cannot-connect-to-the-mailbox-error-when-running-search-mailbox.md
@@ -567,7 +567,7 @@
           href: ../user-and-shared-mailboxes/delays-provision-mailbox-sync-changes.md
         - name: No soft-deleted mailbox after license removal
           href: ../user-and-shared-mailboxes/no-soft-deleted-mailbox-after-license-removal.md
-        - name: Office 365 groups aren't visible from a shared mailbox
+        - name: Microsoft 365 groups aren't visible from a shared mailbox
           href: ../user-and-shared-mailboxes/office-365-groups-not-visible-from-shared-mail.md
         - name: On behalf of reply from resource delegate to meeting organizer
           href: ../user-and-shared-mailboxes/on-behalf-of-reply-from-resource-delegate-to-meeting-organizer.md

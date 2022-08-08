@@ -1,6 +1,6 @@
 ---
 title: MigrationPermanentException Active Directory property homeMDB is not writeable on recipient
-description: Fixes an issue in which you receive the Active Directory property homeMDB isn't writeable on recipient error when moving a mailbox to Office 365.
+description: Fixes an issue in which you receive the Active Directory property homeMDB isn't writeable on recipient error when moving a mailbox to Microsoft 365.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -17,11 +17,11 @@ author: simonxjx
 ms.author: v-six
 ms.date: 3/31/2022
 ---
-# "Active Directory property ‎'homeMDB‎' isn't writeable on recipient" error when moving a mailbox to Office 365
+# "Active Directory property ‎'homeMDB‎' isn't writeable on recipient" error when moving a mailbox to Microsoft 365
 
 ## Symptoms
 
-When you move an on-premises Exchange mailbox to Office 365, you receive the following error message:
+When you move an on-premises Exchange mailbox to Microsoft 365, you receive the following error message:
 
 > Error: MigrationPermanentException: Active Directory property ‎'homeMDB‎' isn't writeable on recipient ‎`contoso.com/Users/mailbox`. --> Active Directory property ‎'homeMDB‎' is not writeable on recipient `‎contoso.com/Users/mailbox‎‎`.
 

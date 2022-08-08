@@ -14,7 +14,7 @@ appliesto:
   - Access 2016
   - Access 2010
   - Access 2013
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
 ms.date: 3/31/2022
 ---

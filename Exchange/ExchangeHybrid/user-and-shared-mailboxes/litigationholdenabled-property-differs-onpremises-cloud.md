@@ -48,4 +48,4 @@ This behavior is by design. When the mailbox is moved from Exchange Server to Ex
 
 ## More information
 
-For more information about attributes that are written from on-premises to Office 365 and from Azure Active Directory (Azure AD) to on-premises, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).
+For more information about attributes that are written from on-premises to Microsoft 365 and from Azure Active Directory (Azure AD) to on-premises, see [Azure AD Connect sync: Attributes synchronized to Azure Active Directory](/azure/active-directory/hybrid/reference-connect-sync-attributes-synchronized).

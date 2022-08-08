@@ -1,6 +1,6 @@
 ---
 title: Federated users can't connect to Exchange Online mailbox
-description: Describes an issue in which you can't use your Office 365 federated credentials to authenticate Outlook or Exchange ActiveSync to Exchange Online services.
+description: Describes an issue in which you can't use your Microsoft 365 federated credentials to authenticate Outlook or Exchange ActiveSync to Exchange Online services.
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -69,6 +69,6 @@ Set up an AD FS 2.0 federation server proxy for the on-premises AD FS 2.0 enviro
 
 ## Resolution 2 - Troubleshoot problems with the AD FS 2.0 proxy server
 
-For more information about how to troubleshoot AD FS 2.0 proxy server issues, see [How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure](/office365/troubleshoot/active-directory/ad-fs-endpoint-connection-issue).
+For more information about how to troubleshoot AD FS 2.0 proxy server issues, see [How to troubleshoot AD FS endpoint connection issues when users sign in to Microsoft 365, Intune, or Azure](/microsoft-365/troubleshoot/active-directory/ad-fs-endpoint-connection-issue).
 
 Still need help? Go to the [Microsoft Community](https://go.microsoft.com/fwlink/?linkid=2003907) website.

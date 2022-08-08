@@ -2,47 +2,35 @@
 
 
 
-## Week of June 20, 2022
+## Week of August 01, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 6/20/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | modified |
-| 6/22/2022 | [RopFastTransferSourceCopyTo operation fails on messages](/exchange/troubleshoot/client-connectivity/ropfasttransfersourcecopyto-operation-fails) | added |
+| 8/4/2022 | [Event 6010 entries fill the Application event log in Exchange Server 2016](/exchange/troubleshoot/setup/event-id-6010-after-cumulative-update-23) | added |
 
 
-## Week of June 13, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/17/2022 | [Recoverable Items folder not emptied for mailbox on litigation or retention hold](/exchange/troubleshoot/antispam-and-protection/recoverable-items-folder-full) | modified |
-| 6/17/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
-
-
-## Week of June 06, 2022
+## Week of July 18, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 6/7/2022 | [Room mailbox can't automatically accept or decline meeting requests](/exchange/troubleshoot/calendars/meeting-requests-routed-through-third-party-service-not-auto-processed) | added |
-| 6/7/2022 | [Common tasks to manage Microsoft 365 groups](/exchange/troubleshoot/groups-and-distribution-lists/o365-group-tasks) | modified |
-| 6/9/2022 | [Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results](/exchange/troubleshoot/compliance/search-adminauditlog-mailboxauditlog-return-no-result) | modified |
+| 7/22/2022 | [Error when Microsoft 365 F plan users try to set up an Outlook profile for Exchange Online in Microsoft 365.](/exchange/troubleshoot/outlook-issues/encrypted-connection-unavailable) | modified |
+| 7/22/2022 | [Outlook and mobile device connectivity troubleshooting resource for Microsoft 365](/exchange/troubleshoot/outlook-issues/office-365-troubleshooting-resources) | modified |
 
 
-## Week of May 30, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 5/31/2022 | [Room Finder doesn't display any conference rooms when a user creates a meeting](/exchange/troubleshoot/calendars/conference-rooms-not-displayed) | modified |
-
-
-## Week of May 23, 2022
+## Week of July 11, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | added |
-| 5/23/2022 | [Can't migrate Google Workspace mailboxes to Microsoft 365](/exchange/troubleshoot/move-or-migrate-mailboxes/google-workspace-mailbox-migration-fail) | modified |
-| 5/23/2022 | [Can't remove a remote shared mailbox](/exchange/troubleshoot/administration/cannot-remove-remote-shared-mailbox) | added |
+| 7/12/2022 | [Event ID 17018 when Microsoft Exchange Transport service stops](/exchange/troubleshoot/mailflow/event-17018-msexchangetransport-service-stop) | added |
+| 7/13/2022 | [Can't search using Search-Mailbox cmdlet](/exchange/troubleshoot/compliance/search-mailbox-cmdlet-fails) | added |
+
+
+## Week of July 04, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 7/8/2022 | [Messages aren't evenly distributed if BasicAuth, BasicAuthRequireTLS or NTLM is used in Exchange Server 2013 or later](/exchange/troubleshoot/mailflow/uneven-distribution-messages-basicauth-basicauthrequiretls) | modified |

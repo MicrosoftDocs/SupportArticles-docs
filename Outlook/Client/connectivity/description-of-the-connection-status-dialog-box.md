@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2737188
 
 ## Summary
 
-In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in an Office 365 environment.
+In the June 26, 2012 hotfix packages for Microsoft Office Outlook 2007 and Microsoft Outlook 2010, the Connection Status dialog box was updated to provide additional details. Additionally, Outlook 2013 and Outlook 2016 include other columns. These are especially helpful when you connect to Microsoft Exchange Online accounts in a Microsoft 365 environment.
 
 ## More information
 
@@ -129,7 +129,7 @@ The June 26, 2012, hotfix packages for Outlook 2007 and Outlook 2010 introduced 
 
 #### For Outlook 2013 and Outlook 2016
 
-Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authentication uses Azure Active Directory Authentication Library (ADAL). By default, Outlook 2016 is enabled for Modern Authentication. Modern Authentication can be enabled for Outlook 2013. For more information about Modern Authentication, see [Updated Office 365 modern authentication](https://www.microsoft.com/microsoft-365/blog/2015/11/19/updated-office-365-modern-authentication-public-preview/).
+Outlook 2013 and Outlook 2016 support Modern Authentication. Modern Authentication uses Azure Active Directory Authentication Library (ADAL). By default, Outlook 2016 is enabled for Modern Authentication. Modern Authentication can be enabled for Outlook 2013. For more information about Modern Authentication, see [Updated Microsoft 365 modern authentication](https://www.microsoft.com/microsoft-365/blog/2015/11/19/updated-office-365-modern-authentication-public-preview/).
 
 - CID
 

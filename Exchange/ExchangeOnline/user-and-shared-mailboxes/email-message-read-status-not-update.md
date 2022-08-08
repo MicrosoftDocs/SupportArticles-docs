@@ -1,6 +1,6 @@
 ---
 title: The Read status of email messages isn't updated
-description: Describes a known issue in Office 365 in which the Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's mailbox in Exchange Online.
+description: Describes a known issue in Microsoft 365 in which the Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's mailbox in Exchange Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -22,7 +22,7 @@ _Original KB number:_ &nbsp; 2804607
 
 ## Problem
 
-The Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's Microsoft Exchange Online mailbox in Microsoft Office 365.
+The Read status of email messages may not be updated between Exchange ActiveSync on a user's mobile device and the user's Microsoft Exchange Online mailbox in Microsoft 365.
 
 ## Workaround
 
@@ -48,7 +48,7 @@ Export the contents of the existing mailbox to a .pst file for backup. To do thi
 
 To rename the existing mailbox, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. In the header, select **Admin**, and then, under **Management** in the left navigation pane, select **Users**.
 3. In the list of users, select the user whose mailbox you want to re-create, and then select **Details**. In this example, the user name is *John Smith*.
 4. In the **Display name** box, change the display name of the user, and then click **Save**. For example, change *John Smith* to *John Smith2*.

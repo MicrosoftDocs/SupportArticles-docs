@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 This article was written by [Eric Splichal](https://social.technet.microsoft.com/profile/Splic-MSFT), Support Escalation Engineer.
 
-Microsoft Office 365 updates are designed to be very network bandwidth friendly. There is Binary Delta Compression that occurs as long as the computers are staying current and Office has built in throttles to prevent every computer from trying to update at the same time. However, IT admins will sometimes still have to monitor the size of the monthly updates closely. Here are the steps about how to determine how large the update for Office ProPlus:
+Microsoft 365 updates are designed to be very network bandwidth friendly. There is Binary Delta Compression that occurs as long as the computers are staying current and Office has built in throttles to prevent every computer from trying to update at the same time. However, IT admins will sometimes still have to monitor the size of the monthly updates closely. Here are the steps about how to determine how large the update for Office ProPlus:
 
 1. Download and install [Process Monitor](/sysinternals/downloads/procmon).
 1. When you start Process Monitor, the filter menu may auto load. However, if it doesn't, select **Filter** > **filter** to open the filter menu. Also, exclude the following Event Classes:

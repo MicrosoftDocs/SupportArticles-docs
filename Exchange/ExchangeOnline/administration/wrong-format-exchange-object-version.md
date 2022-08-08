@@ -41,11 +41,11 @@ This problem causes the following conditions to occur:
 
 To work around this problem, do one or both of the following, as appropriate for your situation:
 
-- Run the [Office 365 Hybrid Configuration Wizard](https://aka.ms/hybridwizard).
+- Run the [Microsoft 365 Hybrid Configuration Wizard](https://aka.ms/hybridwizard).
 - To view the recipient properties for mailboxes in an environment that has directory synchronization enabled, use the Exchange admin center in Exchange Online or use Exchange Online PowerShell.
 
 ## More information
 
-For more information about using the Office 365 Hybrid Configuration wizard in Exchange 2010, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+For more information about using the Microsoft 365 Hybrid Configuration wizard in Exchange 2010, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Exchange TechNet Forums](https://social.technet.microsoft.com/forums/exchange/home?category=exchange2010%2cexchangeserver).

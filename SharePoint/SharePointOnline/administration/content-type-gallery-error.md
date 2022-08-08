@@ -1,7 +1,7 @@
 ---
 title: Unexpected error in SharePoint admin center Content type gallery
 description: Troubleshooting errors when accessing the Content type gallery.
-author: v-matthamer
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 158890
 ms.collection: SPO_Content
-ms.author: v-matthamer
+ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.date: 3/31/2022

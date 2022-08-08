@@ -38,7 +38,7 @@ When Outlook tries to contact the Autodiscover service on the Exchange server wi
 - HTTP redirect method
 - SRV record query
 - Cached URL in the Outlook profile (new for Outlook 2010 version 14.0.7140.5001 and later versions)
-- Direct Connect to Office 365 (new for Outlook 2016 version 16.0.6741.2017 and later versions)
+- Direct Connect to Microsoft 365 (new for Outlook 2016 version 16.0.6741.2017 and later versions)
 
 By default, Outlook will try one or more of these methods if it can't reach Autodiscover. For example, in a scenario with a machine not joined to a domain, Outlook will try to connect to the predefined URLs (such as `https://autodiscover.contoso.com/autodiscover/autodiscover.xml`) by using DNS. If it fails, Outlook will try the HTTP redirect method. If it fails too, Outlook will try to use the SRV record lookup method. If all lookup methods fail, Outlook can't obtain Outlook Anywhere configuration and URL settings.
 

@@ -38,7 +38,7 @@ By default, the following Exchange organizations use the business instance of th
 
 - Exchange 2013 (or later version) organizations that use the Enable Federation Trust wizard
 - Exchange 2010 Service Pack 1 (SP1) (or later version) organizations that use the New Federation Trust wizard
-- Exchange organizations that are hosted by Office 365, such as Exchange Online
+- Exchange organizations that are hosted by Microsoft 365, such as Exchange Online
 - Federation trusts that are configured to support hybrid deployments between Exchange 2010 organizations and Exchange Online
 
 If you are using Azure, and you have to verify which Microsoft Azure AD authentication system instance your Exchange organization is using for an existing federation trust, run the following command in the Exchange Management Shell:

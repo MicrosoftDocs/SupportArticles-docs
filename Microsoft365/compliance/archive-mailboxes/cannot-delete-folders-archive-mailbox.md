@@ -30,6 +30,6 @@ When an archive mailbox in Exchange Online is automatically expanded through the
 
 This behavior is by design for folders that are hosted on auto-expanding archives.
 
-For more information about auto-expanding archives, see [Announcing auto-expanding, highly scalable archives for Office 365 email](https://www.microsoft.com/en-us/microsoft-365/blog/2015/06/03/announcing-auto-expanding-highly-scalable-archives-for-office-365-email/).
+For more information about auto-expanding archives, see [Announcing auto-expanding, highly scalable archives for Microsoft 365 email](https://www.microsoft.com/en-us/microsoft-365/blog/2015/06/03/announcing-auto-expanding-highly-scalable-archives-for-office-365-email/).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com).

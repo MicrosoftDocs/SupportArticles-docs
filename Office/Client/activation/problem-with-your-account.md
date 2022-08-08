@@ -1,9 +1,9 @@
 ---
 title: Microsoft 365 Apps activation error There’s a problem with your account
 description: Troubleshooting the Microsoft 365 Apps activation error There’s a problem with your account.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

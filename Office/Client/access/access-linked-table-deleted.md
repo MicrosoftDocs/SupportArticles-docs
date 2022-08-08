@@ -11,7 +11,7 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access LTSC 2021
   - Access 2019
   - Access 2016

@@ -15,7 +15,7 @@ ms.reviewer: Joew, alexaca, tylewis
 appliesto: 
   - Exchange Online
   - Outlook for Windows
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook on the web
   - Outlook for Mac
   - Outlook for iOS

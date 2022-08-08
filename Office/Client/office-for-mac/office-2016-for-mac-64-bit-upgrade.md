@@ -12,18 +12,18 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel for Mac for Office 365
-  - OneNote for Mac for Office 365
-  - Outlook for Mac for Office 365
-  - PowerPoint for Mac for Office 365
-  - Word for Mac for Office 365
+  - Excel for Microsoft 365 for Mac 
+  - OneNote for Microsoft 365 for Mac 
+  - Outlook for Microsoft 365 for Mac
+  - PowerPoint for Microsoft 365 for Mac 
+  - Word for Microsoft 365 for Mac
 ms.date: 3/31/2022
 ---
 # Office 2016 for Mac 64-bit upgrade
 
 ## Summary
 
-Existing Office 2016 for Mac customers will be seamlessly upgraded to 64-bit versions of Word, Excel, PowerPoint, Outlook, and OneNote as part of the August product release (version 15.25). This affects customers of all license types: Retail, Office 365 Consumer, Office 365 Commercial, and Volume License installations.
+Existing Office 2016 for Mac customers will be seamlessly upgraded to 64-bit versions of Word, Excel, PowerPoint, Outlook, and OneNote as part of the August product release (version 15.25). This affects customers of all license types: Retail, Microsoft 365 for home, Microsoft 365 for business, and Volume License installations.
 
 ## Deployment options for the 64-bit update 
 

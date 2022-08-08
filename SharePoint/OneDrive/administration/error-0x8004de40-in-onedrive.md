@@ -1,9 +1,9 @@
 ---
 title: Error Code 0x8004de40 when signing in to OneDrive
 description: Describes how to resolve an issue when unable to sign in to OneDrive
-author: v-matthamer
+author: helenclu
 ms.reviewer: salarson
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 localization_priority: Normal
 ms.date: 05/28/2021
@@ -108,6 +108,6 @@ If you have completed all the previous steps, consider doing a [reset of OneDriv
 
 ## References
 
-- [TLS cipher suites supported by Office 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
+- [TLS cipher suites supported by Microsoft 365](/microsoft-365/compliance/technical-reference-details-about-encryption?view=o365-worldwide#tls-cipher-suites-supported-by-office-365&preserve-view=true)
 - [Preparing for TLS 1.2 in Office 365 and Office 365 GCC](/microsoft-365/compliance/prepare-tls-1.2-in-office-365?view=o365-worldwide&preserve-view=true)
 - [Authentication errors when connecting to SharePoint or OneDrive from Windows 8 or 7](../../SharePointOnline/administration/authentication-errors-windows7.md).

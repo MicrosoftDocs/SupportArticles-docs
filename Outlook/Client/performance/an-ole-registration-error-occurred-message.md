@@ -1,6 +1,6 @@
 ---
 title: An OLE registration error occurred message
-description: Describes an issue in which you receive an Outlook Object Model Run-time error when you try to access an InfoPath Forms folder in Outlook 2016, Outlook 2019 or Outlook for Office 365.
+description: Describes an issue in which you receive an Outlook Object Model Run-time error when you try to access an InfoPath Forms folder in Outlook 2016, Outlook 2019 or Outlook for Microsoft 365.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -14,7 +14,7 @@ ms.reviewer: tasitae
 appliesto: 
   - Outlook 2019
   - Outlook 2016
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Microsoft Outlook 2010
 search.appverid: MET150
 ms.date: 3/31/2022
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 3095452
 
 ## Symptoms
 
-When you try to access an InfoPath Forms folder in your mailbox in Microsoft Outlook 2016, Outlook 2019, or Outlook for Office 365, you receive the following error message in Outlook:
+When you try to access an InfoPath Forms folder in your mailbox in Microsoft Outlook 2016, Outlook 2019, or Outlook for Microsoft 365, you receive the following error message in Outlook:
 
 > Cannot display the folder. An OLE registration error occurred. The program is not correctly installed. Run Setup again for the program.
 
@@ -36,7 +36,7 @@ An OLE registration error occurred. The problem is not correctly installed. Run 
 
 ## Cause
 
-Office 2016, Office 2019, and Outlook for Office 365 do not include InfoPath desktop client. InfoPath 2013 is the last release of the desktop client.
+Office 2016, Office 2019, and Outlook for Microsoft 365 do not include InfoPath desktop client. InfoPath 2013 is the last release of the desktop client.
 
 ## Workaround
 

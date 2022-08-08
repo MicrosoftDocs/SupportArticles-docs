@@ -27,7 +27,7 @@ To work around this issue the Tenant Admin can make you the PWA Admin and you ca
 
 To set a PWA Admin the Tenant Admin needs to follow these steps:
 
-1. Log into Office 365 as the Tenant Administrator, click Admin and select SharePoint   
+1. Log into Microsoft 365 as the Tenant Administrator, click Admin and select SharePoint   
 2. Check the box to the left of the default PWA site   
 3. Click the Owners dropdown menu and select Manage Administrators   
 4. Enter the user account that will be the Site Collection Administrators and click OK 

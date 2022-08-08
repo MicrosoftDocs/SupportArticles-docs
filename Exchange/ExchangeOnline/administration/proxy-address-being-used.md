@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When you try to create a new user in Exchange Online or when you try to assign an Exchange Online license to an Office 365 user, you receive the following message:
+When you try to create a new user in Exchange Online or when you try to assign an Exchange Online license to a Microsoft 365 user, you receive the following message:
 
 > We are preparing the mailbox for this user.
 

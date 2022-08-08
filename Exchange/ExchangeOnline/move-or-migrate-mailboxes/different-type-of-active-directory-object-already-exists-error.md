@@ -34,9 +34,9 @@ This issue occurs because user objects that weren't migrated already are located
 
 To resolve this issue, remove the user objects in Exchange Online. To do this, follow these steps:
 
-1. Sign in to the Microsoft Office 365 portal as an admin.
+1. Sign in to the Microsoft 365 portal as an admin.
 2. Select **users and groups**, and then search for the users who didn't migrate.
-3. Permanently delete the users. You can do this in the Office 365 portal or by using the Microsoft Azure Active Directory Module for Windows PowerShell.
+3. Permanently delete the users. You can do this in the Microsoft 365 portal or by using the Microsoft Azure Active Directory Module for Windows PowerShell.
 
 > [!IMPORTANT]
 > Deleting a user account will also delete the associated SharePoint Online and Skype for Business Online (formerly Lync Online) information for that user.

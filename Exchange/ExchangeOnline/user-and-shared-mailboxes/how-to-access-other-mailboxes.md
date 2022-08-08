@@ -202,7 +202,7 @@ You may want to perform this procedure as if an administrator in your organizati
 
 After you perform these steps, the specified user will be able to access **all** user mailboxes in Microsoft 365. The user will be able to view the contents of the mailboxes from either Outlook or Outlook Web App.
 
-For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Office 365](https://support.microsoft.com/help/2685435).
+For more information, see [How to use Windows PowerShell to grant an admin access to all user mailboxes in Microsoft 365](https://support.microsoft.com/help/2685435).
 
 To assign permissions to a user mailbox, run the following command:
 
