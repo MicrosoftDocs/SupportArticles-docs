@@ -1,7 +1,7 @@
 ---
 title: Create a statistics-only database using a generated statistics script  
 description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
-ms.date: 07/28/2022
+ms.date: 08/09/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
@@ -48,7 +48,7 @@ Note that if you generate a script for a database, and the metadata for the data
 
 To script each database that is referenced by your query, follow these steps:
 
-1. Open SQL Server Management Studio.
+1. Open the SQL Server Management Studio.
 
 1. In the **Object Explorer**, expand **Databases**, and then locate the database that you want to script.
 
