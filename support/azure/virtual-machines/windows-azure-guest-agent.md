@@ -289,7 +289,7 @@ This is likely due to the RPC endpoint not listening, or the RPC process on the 
 
 **Solution**
 
-Check if the "CNGKEYISO" Windows service is in the list of RPC endpoints by running the following command. You can find more information on the portqry tool on https://docs.microsoft.com/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2.
+Check if the "CNGKEYISO" Windows service is in the list of RPC endpoints by running the following command. You can find more information on the portqry tool [here](https://docs.microsoft.com/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2).
 
 
 ```
