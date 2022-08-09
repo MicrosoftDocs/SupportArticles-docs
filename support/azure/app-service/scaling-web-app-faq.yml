@@ -69,7 +69,7 @@ sections:
       - question: |
           I'm unable to scale up/scale down the App Service Plan due to the "You have exceeded the maximum amount of scale changes within the past hour (XX changes and limit is XX)" error. What should I do? 
         answer: |
-          To avoid this issue, don't perform scaling operations that releases more than XX instances in an hour. Every time you release an instance during a scale down operation, the instance is rebooted to ensure the next App Service Plan can get a clean instance. When you perform too many scaling operations in quick succession, instance reboots can cause performance issues for other App Services, therefore we intentionally put a throttling mechanism for scaling that prevents you from executing scaling operations more than the acceptable limit in quick succession. 
+          To avoid this issue, don't perform scaling operations that release more than XX instances in an hour. Every time you release an instance during a scale down operation, the instance is rebooted to ensure the next App Service Plan can get a clean instance. When you perform too many scaling operations in quick succession, instance reboots can cause performance issues for other App Services, therefore we intentionally put a throttling mechanism for scaling that prevents you from executing scaling operations more than the acceptable limit in quick succession. 
 
       - question: |
           My Web App is using the Diagnostic setting "AppServiceFileAuditLogs" and I'm unable to scale the App Service Plan from Premium V2 to the Basic tier, what should I do? 
