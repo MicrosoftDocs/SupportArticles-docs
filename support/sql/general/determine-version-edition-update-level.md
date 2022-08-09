@@ -425,6 +425,7 @@ For more information, go to the following websites:
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
 |15.0.4236.7|None|CU16 + GDR| [5014353](https://support.microsoft.com/help/5014353)|June 14, 2022|
+|15.0.2095.3|None| GDR| [5014356](https://support.microsoft.com/help/5014356)|June 14, 2022|
 |15.0.4223.1|None|CU16| [5011644](https://support.microsoft.com/help/5011644)|April 18, 2022|
 |15.0.4198.2|None|CU15| [5008996](https://support.microsoft.com/help/5008996)|January 27, 2022|
 |15.0.4188.2|None|CU14| [5007182](https://support.microsoft.com/help/5007182)|November 22, 2021|
@@ -434,6 +435,7 @@ For more information, go to the following websites:
 |15.0.4123.1|None|CU10| [5001090](https://support.microsoft.com/help/5001090)|April 06, 2021|
 |15.0.4102.2|None|CU9| [5000642](https://support.microsoft.com/help/5000642)|February 11, 2021|
 |15.0.4083.2|None|CU8 + GDR| [4583459](https://support.microsoft.com/help/4583459)|January 12, 2021|
+|15.0.2080.9|None| GDR| [4583458](https://support.microsoft.com/help/4583458)|January 12, 2021|
 |15.0.4073.23|None|CU8| [4577194](https://support.microsoft.com/help/4577194)|September 30, 2020|
 |15.0.4063.15|None|CU7| [4570012](https://support.microsoft.com/help/4570012)|September 02, 2020|
 |15.0.4053.23|None|CU6| [4563110](https://support.microsoft.com/help/4563110)|August 04, 2020|
@@ -442,7 +444,7 @@ For more information, go to the following websites:
 |15.0.4023.6|None| CU3| [4538853](https://support.microsoft.com/help/4538853)|March 12, 2020|
 |15.0.4013.40|None| CU2| [4536075](https://support.microsoft.com/help/4536075)|February 13, 2020|
 |15.0.4003.23|None| CU1| [4527376](https://support.microsoft.com/help/4527376)|January 07, 2020|
-|15.0.2070.41|None| GDR1| [4517790](https://support.microsoft.com/help/4517790)|November 04, 2019|
+|15.0.2070.41|None| GDR| [4517790](https://support.microsoft.com/help/4517790)|November 04, 2019|
 |15.0.2000.5|None| RTM|NA|November 04  2019|
 
 ### SQL Server 2017
@@ -451,6 +453,7 @@ For more information, go to the following websites:
 |---|---|---|---|---|
 |14.0.3451.2|None| CU30| [5013756](https://support.microsoft.com/help/5013756)|July 13, 2022|
 |14.0.3445.2|None| CU29 + GDR| [5014553](https://support.microsoft.com/help/5014553)|June 14, 2022|
+|14.0.2042.3|None| GDR| [5014354](https://support.microsoft.com/help/5014354)|June 14, 2022|
 |14.0.3436.1|None| CU29| [5010786](https://support.microsoft.com/help/5010786)|March 30, 2022|
 |14.0.3430.2|None| CU28| [5008084](https://support.microsoft.com/help/5008084)|January 13, 2022|
 |14.0.3421.10|None| CU27| [5006944](https://support.microsoft.com/help/5006944)|October 27, 2021|
@@ -459,6 +462,7 @@ For more information, go to the following websites:
 |14.0.3391.2|None| CU24| [5001228](https://support.microsoft.com/help/5001228)|May 10, 2021|
 |14.0.3381.3|None| CU23| [5000685](https://support.microsoft.com/help/5000685)|February 24, 2021|
 |14.0.3370.1|None| CU22 + GDR| [4583457](https://support.microsoft.com/help/4583457)|January 12, 2021|
+|14.0.2037.2|None| GDR| [4583456](https://support.microsoft.com/help/4583456)|January 12, 2021|
 |14.0.3356.20|None| CU22| [4577467](https://support.microsoft.com/help/4577467)|September 10, 2020|
 |14.0.3335.7|None| CU21| [4557397](https://support.microsoft.com/help/4557397)|July 01, 2020|
 |14.0.3294.2| None| CU20| [4541283](https://support.microsoft.com/help/4541283)|April 07, 2020|
@@ -467,13 +471,16 @@ For more information, go to the following websites:
 |14.0.3238.1|None| CU17| [4515579](https://support.microsoft.com/help/4515579)|October 08, 2019|
 | 14.0.3223.3|None| CU16| [4508218](https://support.microsoft.com/help/4508218)|August 01, 2019|
 |14.0.3192.2|None| CU15 + GDR| [4505225](https://support.microsoft.com/help/4505225)|July 09, 2019|
+|14.0.2027.2|None| GDR| [4505224](https://support.microsoft.com/help/4505224)|July 09, 2019|
 |14.0.3162.1|None| CU15| [4498951](https://support.microsoft.com/help/4498951)|May 23, 2019|
 |14.0.3103.1|None| CU14 + GDR| [4494352](https://support.microsoft.com/help/4494352)|May 14, 2019|
+|14.0.2014.14|None| GDR| [4494351](https://support.microsoft.com/help/4494351)|May 14, 2019|
 |14.0.3076.1|None| CU14| [4484710](https://support.microsoft.com/help/4484710)|March 25, 2019|
 |14.0.3048.4|None| CU13| [4466404](https://support.microsoft.com/help/4466404)|December 18, 2018|
 |14.0.3045.24|None| CU12| [4464082](https://support.microsoft.com/help/4464082)|October 24, 2018|
 |14.0.3038.14|None| CU11| [4462262](https://support.microsoft.com/help/4462262)|September 20, 2018|
 |14.0.3037.1|None| CU10| [4342123](https://support.microsoft.com/help/4342123)|August 27, 2018|
+|14.0.2002.14|None| GDR| [4293803](https://support.microsoft.com/help/4293803)|August 14, 2018|
 |14.0.3035.2|None| CU9 + GDR| [4293805](https://support.microsoft.com/help/4293805)|August 14, 2018|
 |14.0.3030.27|None| CU9| [4341265](https://support.microsoft.com/help/4341265)|July 18, 2018|
 |14.0.3029.16|None| CU8| [4338363](https://support.microsoft.com/help/4338363)|June 21, 2018|
@@ -482,6 +489,7 @@ For more information, go to the following websites:
 |14.0.3023.8|None| CU5| [4092643](https://support.microsoft.com/help/4092643)|March 20, 2018|
 |14.0.3022.28|None| CU4| [4056498](https://support.microsoft.com/help/4056498)|February 20, 2018|
 |14.0.3015.40|None| CU3| [4052987](https://support.microsoft.com/help/4052987)|January 04, 2018|
+|14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
 |14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
 |14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
 
