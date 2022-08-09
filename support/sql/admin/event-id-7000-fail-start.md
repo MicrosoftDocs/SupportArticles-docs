@@ -2,8 +2,8 @@
 title: Event ID 7000 and SQL Server doesn't start
 description: This article provides resolutions for the problem where SQL Server fails to start and Event ID 7000 is logged in the System log.
 ms.date: 1/28/2020
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: ramakoni
 ---
 # Event ID 7000 and SQL Server doesn't start
@@ -12,7 +12,7 @@ _Applies to:_ &nbsp; SQL Server
 
 ## Symptoms
 
-When the Microsoft SQL Server binary file (Sqlservr.exe) is renamed on the system that’s hosting the SQL Server service, the service doesn't start, and you receive the following error message, depending on how you try to start the service:
+When the Microsoft SQL Server binary file (Sqlservr.exe) is renamed on the system that's hosting the SQL Server service, the service doesn't start, and you receive the following error message, depending on how you try to start the service:
 
 - By using the Services applet:
   
