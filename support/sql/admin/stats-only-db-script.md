@@ -28,7 +28,7 @@ The query optimizer in Microsoft SQL Server uses the following types of informat
 
 Typically, you must simulate all these same types of information to reproduce the behavior of the query optimizer on a test system.
 
-Microsoft Customer Support Services might ask you to generate a script of the database metadata and uses this script to investigate an optimizer issue. This article describes the steps to generate the statistics script and also describes how the query optimizer uses the information.
+Microsoft Customer Support Services might ask you to generate a script of the database metadata to investigate a query optimizer issue. This article describes the steps to generate the statistics script and also describes how the query optimizer uses the information.
 
 > [!NOTE]
 > The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the generated statistics script.
