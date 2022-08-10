@@ -211,7 +211,7 @@ The VM can't reach the Wireserver host server.
 
 **Solution**
 
-1. Because Wireserver is not reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: <http://168.63.129.16/?comp=versions>
+1. Because Wireserver isn't reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: <http://168.63.129.16/?comp=versions>
 1. If you can't reach the URL from step 1, check the network interface to determine whether it is set as DHCP-enabled and has DNS. To check the DHCP status, of the network interface, run the following command:  `netsh interface ip show config`.
 1. If DHCP is disabled, run the following making sure you change the value in yellow to the name of your interface: `netsh interface ip set address name="Name of the interface" source=dhcp`.
 1. Check for any issues that might be caused by a firewall, a proxy, or other source that could be blocking access to the IP address 168.63.129.16.
@@ -284,7 +284,7 @@ Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
 
 **Analysis**
 
-This is likely due to the RPC endpoint not listening, or the RPC process on the other side which is not there.
+This is likely due to the RPC endpoint not listening, or the RPC process on the other side which isn't there.
 
 
 **Solution**
@@ -303,7 +303,7 @@ If you don't see the "CNGKEYISO" process, please start it from the Windows Servi
 
 ### PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86.
 
-In this case, you can see that the Windows Guest Agent running, but Extensions are not working. You notice the following error entries in WaAppAgent.log:
+In this case, you can see that the Windows Guest Agent running, but Extensions aren't working. You notice the following error entries in WaAppAgent.log:
 
 ```Log sample
 PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
@@ -345,9 +345,9 @@ You notice the following error entries in WaAppAgent.log - and the Guest Agent i
 
 **Analysis**
 
-It is very likely that a 3rd party application has been installed on the VM, and it  has modified the behavior of 32-bits / 64-bits .Net applications.
+It's likely that a third party application has been installed on the VM, and it  has modified the behavior of 32 bits / 64 bits .Net applications.
 
-BadImageFormationException happens when a 64-bits application is loading a 32-bits DLL.
+BadImageFormationException happens when a 64 bits application is loading a 32 bits DLL.
 
 **Solution**
 
@@ -356,7 +356,7 @@ Open the registry and check the following key:
 ```
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Enable64Bit
 ```
-If it's set to 0, then 64-bits .Net application are considered as 32-bits applications. This cannot work.
+If it's set to 0, then 64 bits .Net application are considered as 32 bits applications. This can't work.
 
 The solution is to set Enable64Bit key to 1 - and reboot the VM.
 
