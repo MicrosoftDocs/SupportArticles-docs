@@ -35,7 +35,7 @@ o	RUNNING: Queries can be slow because they are running (executing) for a long t
 A query can be running for some time and waiting for some time in its lifetime (duration). However, you want to establish which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. 
 It is simple: if a query is not running, then it is waiting. Ideally, a query spends most of its elapsed time in running state and very little time waiting for resources. Also, in the best-case scenario a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
 
-[!INCLUDE [[establish runner or waiter perf type]](../includes/performance/establish-runner-waiter-perf-type.md)]
+[!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
 
 
 ### 3. Diagnose and resolve waiting queries
@@ -64,7 +64,7 @@ If CPU (worker) time is very close to the overall elapsed duration, that means t
 - Increase computing resources on the system (CPUs)
 
 ## Recommended resources
-- [Detectable types of query performance bottlenecks in SQL Server and Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues?view=azuresql)
+- [Detectable types of query performance bottlenecks in SQL Server and Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues)
 - [Performance Monitoring and Tuning Tools](/sql/relational-databases/performance/performance-monitoring-and-tuning-tools)
 - [Auto-Tuning Options in SQL Server](/sql/relational-databases/automatic-tuning/automatic-tuning)
 - [Index architecture and Design Guidelines](/sql/relational-databases/sql-server-index-design-guide#General_Design)
