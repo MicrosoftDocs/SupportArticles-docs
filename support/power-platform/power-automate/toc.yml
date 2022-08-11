@@ -19,6 +19,8 @@
       href: user-does-not-have-a-service-plan-error.md
   - name: Flows
     items:
+    - name: Known issues when using Power Apps V2 trigger
+      href: known-issues-power-apps-v2-trigger.md
     - name: Authentication failed when signing in to Microsoft Flow
       href: cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
     - name: Can't create UI Flow
