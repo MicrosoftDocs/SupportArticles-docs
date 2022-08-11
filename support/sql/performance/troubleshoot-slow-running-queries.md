@@ -28,8 +28,9 @@ To establish that you have query performance issues on your SQL Server instance,
 ### 2. Running vs. waiting: Why are queries slow?
 
 If you find queries that exceed your predefined threshold, next examine why they could be slow. The cause of performance problems can be grouped into two categories: RUNNING or WAITING
-o	WAITING: Queries can be slow because they're waiting on a bottleneck for a long time. See types of Waits.
-o	RUNNING: Queries can be slow because they're running (executing) for a long time. In other words these queries are actively using CPU resources.
+
+- **WAITING**: Queries can be slow because they're waiting on a bottleneck for a long time. See types of Waits.
+- **RUNNING**: Queries can be slow because they're running (executing) for a long time. In other words these queries are actively using CPU resources.
 A query can be running for some time and waiting for some time in its lifetime (duration). However, you want to establish which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. 
 It's simple: if a query isn't running, then it's waiting. Ideally, a query spends most of its elapsed time in running state and very little time waiting for resources. Also, in the best-case scenario, a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
 
