@@ -16,7 +16,7 @@
         1, 512)  AS statement_text  
    FROM sys.dm_exec_requests AS req
       CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST
-   ORDER BY cpu_time DESC;
+   ORDER BY total_elapsed_time DESC;
    ```
 
 - For past executions of the query, check **last_elapsed_time** and **last_worker_time** columns in [sys.dm_exec_query_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql). Run the following query to get the data:

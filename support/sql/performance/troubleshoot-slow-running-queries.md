@@ -7,20 +7,18 @@ ms.prod: sql
 ---
 # Troubleshoot slow-running queries on SQL Server
 
-## Introduction
-
-This article describes how to handle a performance issue that database applications may experience when using SQL Server: slow performance of a specific query or group of queries. If you're troubleshooting a slow performance issue, but you haven't isolated the problem to a specific query or small group of queries, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance) before you continue.
-
-Tuning database queries can be a multi-faceted endeavor. The following sections discuss common items to examine when you're investigating query performance.
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 243589
+
+## Introduction
+
+This article describes how to handle a performance issue that database applications may experience when using SQL Server: slow performance of a specific query or group of queries.
 
 ## Slow performance troubleshooting methodology
 
 ### 1. Find slow queries
 
-To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds), based on an established baseline performance. For example, for your workload the threshold may be set for queries that run longer than 300 ms. You can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the execution duration of their database queries; therefore, the focus is on execution duration.
+To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds), based on an established baseline performance. For example, in a stress testing environment you may have established  a threshold for your workload to be no longer than 300 ms and you can use this. Then, you can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the overall duration of database queries; therefore, the main focus is on execution duration. Other metrics like cpu time and logical reads are gathered to help with narrowing down the investigation.
 
 [!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
@@ -29,15 +27,17 @@ To establish that you have query performance issues on your SQL Server instance,
 
 If you find queries that exceed your predefined threshold, next examine why they could be slow. The cause of performance problems can be grouped into two categories: RUNNING or WAITING
 
-- **WAITING**: Queries can be slow because they're waiting on a bottleneck for a long time. See types of Waits.
+- **WAITING**: Queries can be slow because they're waiting on a bottleneck for a long time. See a detailed list of bottlenecks in [types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes).
 - **RUNNING**: Queries can be slow because they're running (executing) for a long time. In other words these queries are actively using CPU resources.
-A query can be running for some time and waiting for some time in its lifetime (duration). However, you want to establish which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. 
-It's simple: if a query isn't running, then it's waiting. Ideally, a query spends most of its elapsed time in running state and very little time waiting for resources. Also, in the best-case scenario, a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type for both servers.
+
+A query can be running for some time and waiting for some time in its lifetime (duration). However, your focus is to determine which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. It's simple: if a query isn't running, then it's waiting. Ideally, a query spends most of its elapsed time in a running state and very little time waiting for resources. Also, in the best-case scenario, a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type.
 
 [!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
 
 
 ### 3. Diagnose and resolve waiting queries
+
+If you established that your queries of interest are waiters and then you next step is to focus on resolving bottleneck issues. Otherwise, go to step 4  [Diagnose and resolve running queries](#4-diagnose-and-resolve-running-queries)
 
 [!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
 

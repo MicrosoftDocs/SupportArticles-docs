@@ -1,10 +1,10 @@
 To optimize a query that's waiting on bottlenecks, identify how long the wait is and where the bottleneck is. Once the [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) is confirmed, reduce the wait time or eliminate the wait completely.
 
-To get the rough wait time, subtract the CPU time (worker time) from the elapsed time of a query. Typically, the CPU time is the actual execution time, and the remaining part of the lifetime of the query is waiting.
+To calculate the approximate wait time, subtract the CPU time (worker time) from the elapsed time of a query. Typically, the CPU time is the actual execution time, and the remaining part of the lifetime of the query is waiting.
 
 ### Identify the bottleneck or wait
 
-- To identify historical long-waiting queries (>20% of the overall elapsed time) since the start of SQL Server, run the following query:
+- To identify historical long-waiting queries (for example >20% of the overall elapsed time is wait time), run the following query. This query uses statistics since the start of SQL Server for cached query plans. 
 
    ```sql
    SELECT t.text,
@@ -41,9 +41,9 @@ To get the rough wait time, subtract the CPU time (worker time) from the elapsed
 
 - If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
-### Resources to eliminate or reduce the wait
+### References to help eliminate or reduce the wait
 
-The causes and resolutions vary according to the wait types. There's no general method to resolve all wait types. Here are articles to troubleshoot and resolve common wait type issues:
+The causes and resolutions for each wait type vary. There's no one general method to resolve all wait types. Here are articles to troubleshoot and resolve common wait type issues:
 
 - [Understanding and resolving blocking issues (LCK_M_*)](../../performance/understand-resolve-blocking.md)
 - [Troubleshoot slow SQL Server performance caused by I/O issues (PAGEIOLATCH_*, WRITELOG, IO_COMPLETION, BACKUPIO)](../../performance/troubleshoot-sql-io-performance.md)
