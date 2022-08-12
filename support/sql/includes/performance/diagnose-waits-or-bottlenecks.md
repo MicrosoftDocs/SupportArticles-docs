@@ -2,6 +2,13 @@ To optimize a query that's waiting on bottlenecks, identify how long the wait is
 
 To calculate the approximate wait time, subtract the CPU time (worker time) from the elapsed time of a query. Typically, the CPU time is the actual execution time, and the remaining part of the lifetime of the query is waiting.
 
+Examples of how to calculate approximate wait duration:
+
+|Elapsed Time (ms)|CPU Time (ms)|Wait time (ms)|
+|-----------------|-------------|--------------|
+|   3200          | 3000        | 200          |
+|   7080          | 1000        | 6080         |
+
 ### Identify the bottleneck or wait
 
 - To identify historical long-waiting queries (for example >20% of the overall elapsed time is wait time), run the following query. This query uses statistics since the start of SQL Server for cached query plans. 
@@ -41,7 +48,7 @@ To calculate the approximate wait time, subtract the CPU time (worker time) from
 
 - If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
-### References to help eliminate or reduce the wait
+### References to help eliminate or reduce waits
 
 The causes and resolutions for each wait type vary. There's no one general method to resolve all wait types. Here are articles to troubleshoot and resolve common wait type issues:
 
