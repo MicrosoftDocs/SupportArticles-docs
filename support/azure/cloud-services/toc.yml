@@ -54,6 +54,8 @@
     href: read-key-vault-certificate-secrets-from-cloud-service-app.md
   - name: Roles that fail to start
     href: role-startup-failure.md
+  - name: Update or change the certificate used
+    href: update-or-change-certificate-used.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 
