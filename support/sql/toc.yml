@@ -93,6 +93,8 @@
         href: admin/event-id-7000-fail-start.md
     - name: 1450 and 665 errors when running DBCC CHECKDB
       href: admin/1450-and-665-errors-running-dbcc-checkdb.md
+    - name: Generate a script to create a statistics-only database
+      href: admin/stats-only-db-script.md
     - name: 17053 and 926 errors when running DBCC CHECK
       href: admin/17053-and-926-errors-running-dbcc-check.md
     - name: 8967 and 8921 errors when running DBCC CHECKDB
@@ -397,6 +399,8 @@
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE
       href: performance/cardinality-estimator-degrades-query-performance.md
+    - name: Decreased query performance after upgrade
+      href: performance/decreased-query-perf-after-upgrade.md
     - name: Reducing allocation contention in tempdb
       href: performance/recommendations-reduce-allocation-contention.md
     - name: Resolve blocking problems caused by lock escalation
@@ -409,6 +413,8 @@
       href: performance/troubleshoot-blocking-caused-compile-locks.md
     - name: Troubleshoot high-CPU-usage issues
       href: performance/troubleshoot-high-cpu-usage-issues.md
+    - name: Troubleshoot queries that seem to never end
+      href: performance/troubleshoot-never-ending-query.md
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
     - name: Troubleshoot SQL Server slow performance caused by IO issues

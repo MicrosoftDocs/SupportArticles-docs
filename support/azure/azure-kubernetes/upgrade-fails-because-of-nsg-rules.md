@@ -36,17 +36,17 @@ To resolve this issue, follow these steps:
 
 1. Run the following command to view the NSG rules:
 
-    ```cli
+    ```azurecli
     az network nsg rule list --resource-group <Rg name> --nsg-name <nsg name> --include-default -o table
     ```
 
     The following screenshot shows the default rules.
 
-    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules.":::
+    :::image type="content" source="./media/troubleshoot-upgrade-errors/default-nsg-rules.png" alt-text="Screenshot of the default NSG rules." lightbox="./media/troubleshoot-upgrade-errors/default-nsg-rules.png":::
 
 1. If you have the default rules, skip this step. Otherwise, revise and remove the rules that are blocking the internet traffic. Then, run the following command to upgrade the AKS cluster to the same version that you previously tried to upgrade to. This process will trigger a reconciliation.
 
-    ```cli
+    ```azurecli
     az aks upgrade --resource-group <ResourceGroupName> --name <AKSClusterName> --kubernetes-version <KUBERNETES_VERSION>
     ```
 

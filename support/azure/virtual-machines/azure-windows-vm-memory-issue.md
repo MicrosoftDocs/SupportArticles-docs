@@ -232,7 +232,7 @@ Once you add this counter, it will show the pattern for **AvailableMBytes** duri
 
 :::image type="content" source="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png" alt-text="Screenshot that shows pattern for AvailableMBytes during data capture interval." lightbox="media/azure-windows-vm-memory-issue/performance-monitor-available-mbytes.png":::
 
-But the question (which app is driving the memory consumption crazy?) remains. Tools like PerfInsights, Resource Monitor, Performance Analysis of Logs (PAL), and so on help to pinpoint these apps through friendly UI or reports.
+But the question (which app is excessively consuming the memory?) remains. Tools like PerfInsights, Resource Monitor, Performance Analysis of Logs (PAL), and so on help to pinpoint these apps through friendly UI or reports.
 
 It's a bit tedious to zero down on the process because it has to be done through manual data analysis.
 
