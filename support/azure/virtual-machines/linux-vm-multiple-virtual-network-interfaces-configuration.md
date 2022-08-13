@@ -1,6 +1,6 @@
 ---
-title: Configure multiple NICs in Azure Linux virtual machines
-description: Describes how to configure multiple NICs in Azure Linux virtual machines running the most common Linux distributions.
+title: Configure multiple network interfaces in Azure Linux virtual machines
+description: Describes how to configure multiple network interfaces in Azure Linux virtual machines running the most common Linux distributions.
 ms.date: 07/28/2022
 ms.author: genli
 author: genlin
@@ -8,35 +8,35 @@ ms.reviewer: malachma
 ms.service: virtual-machines
 ms.collection: linux
 ---
-# Configure multiple NICs in Azure Linux virtual machines
+# Configure multiple Nnetwork interfaces in Azure Linux virtual machines
 
-This article introduces how to configure multiple virtual network interfaces (NICs) in Azure Linux virtual machines (VMs) running the most common Linux distributions.
+This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) running the most common Linux distributions.
 
 ## Summary
 
-You can create an Azure VM that has multiple NICs attached to it. A common scenario is to have different subnets for front-end and back-end connectivity, or a network that's dedicated to a monitoring or backup solution.
+You can create an Azure VM that has multiple network interfaces attached to it. A common scenario is to have different subnets for front-end and back-end connectivity, or a network that's dedicated to a monitoring or backup solution.
 
-This article provides the required configuration for multiple NICs to work in an Azure Linux VM based on the following sample scenario:
+This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that'sw based on the following sample scenario:
 
-- The VM has two NICs in the same subnet.
+- The VM has two network interfaces in the same subnet.
 - Connectivity is tested from another VM in the same virtual network (VNET) or subnet.
 
-See the following screenshot for details:
+For details, see the following screenshot.
 
 :::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Image alt text.":::
 
-The configuration can also be used on a VM with more NICs on the same or different subnets in the same VNET.
+The configuration can also be used on a VM that has more network interfaces on the same or different subnets in the same VNET.
 
-## Configure guest OS for multiple NICs
+## Configure guest OS for multiple network interfaces
 
-When you add multiple NICs to a Linux VM, you need to create routing rules. These rules allow the VM to send and receive traffics that belongs to a specific NIC. Otherwise, traffics can't be processed correctly. For example, traffics that belongs to eth1 can't be processed correctly by the defined default route.
+When you add multiple network interfaces to a Linux VM, you have to create routing rules. These rules enable the VM to send and receive traffic that belongs to a specific network interface. Otherwise, traffic can't be processed correctly. For example, traffic that belongs to eth1 can't be processed correctly by the defined default route.
 
 > [!IMPORTANT]
-> Run all the commands in the following sections by using root privileges (switching to root or with `sudo`).
+> Run all the commands in the following sections by using root privileges (by switching to the root or by using the `sudo` command utility).
 
-## Configure multiple NICs for RHEL/CentOS 7.x VMs
+## Configure multiple network interfaces for RHEL/CentOS 7.*x* VMs
 
-1. Assume the VM has two NICs with the following settings:
+1. Assume that the VM has two network interfaces that have the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -62,7 +62,7 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
     echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. Make sure a configuration file exists for each network interface in the */etc/sysconfig/network-scripts/* directory. You can create new network interface configuration files based on the *ifcfg-eth0* file (modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
+1. Make sure that a configuration file exists for each network interface in the */etc/sysconfig/network-scripts/* directory. You can create new network interface configuration files based on the *ifcfg-eth0* file (by modifying the `DEVICE` line and removing the `DHCP_HOSTNAME` and `HWADDR` lines from the new file). To do this, run the following commands:
 
     ```bash
     cat /etc/sysconfig/network-scripts/ifcfg-eth0 > /etc/sysconfig/network-scripts/ifcfg-eth1
@@ -71,7 +71,7 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
     sed -i '/HWADDR/,$d' /etc/sysconfig/network-scripts/ifcfg-eth1
     ```
 
-1. To make the change persistent and applied during network stack activation, edit */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* (eth2, eth3, and so on, and so forth if the VM has more than two NICs). Change the value of `NM_CONTROLLED` from `yes` to `no`. To do this, run the following commands:
+1. To make the change persistent and applied during network stack activation, edit */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* (eth2, eth3, and so on, if the VM has more than two network interfaces). Change the value of `NM_CONTROLLED` from `yes` to `no`. To do this, run the following commands:
 
     ```bash
     cp -rp /etc/sysconfig/network-scripts/ifcfg-eth0 /tmp/ifcfg-eth0.bkp
@@ -81,15 +81,15 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
     ```
 
     > [!NOTE]
-    > Validate that the `NM_CONTROLLED=no` line is added to both */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* files. If the line isn't there, add it manually.
+    > Verify that the `NM_CONTROLLED=no` line is added to both the */etc/sysconfig/network-scripts/ifcfg-eth0* and */etc/sysconfig/network-scripts/ifcfg-eth1* files. If the line isn't there, add it manually.
 
-1. Run the following command to make sure that the network services are restarted:
+1. To make sure that the network services are restarted, run the following command:
 
     ```bash
     systemctl restart network
     ```
 
-1. Create corresponding rule and route files and add proper rules and routes to each file. Follow the steps below to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+1. Create corresponding rule and route files and add proper rules and routes to each file. Follow the steps below to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -153,9 +153,9 @@ When you add multiple NICs to a Linux VM, you need to create routing rules. Thes
 
 The routing rules are now correctly in place and you can connect with either interface as needed.
 
-## Configure multiple NICs for RHEL/CentOS 8.x VM
+## Configure multiple network interfaces for RHEL/CentOS 8.x VM
 
-1. Assume the VM has two NICs with the following settings:
+1. Assume the VM has two network interfaces with the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -174,7 +174,7 @@ The routing rules are now correctly in place and you can connect with either int
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1:
         ```
- 1. Policy routing isn't installed by default in Red Hat Enterprise Linux (RHEL)/CentOS 8.x. To configure multiple NICs, install and enable the policy routing. To do this, run the following commands:
+ 1. Policy routing isn't installed by default in Red Hat Enterprise Linux (RHEL)/CentOS 8.x. To configure multiple network interfaces, install and enable the policy routing. To do this, run the following commands:
 
     ```bash
     yum install NetworkManager-dispatcher-routing-rules -y
@@ -182,7 +182,7 @@ The routing rules are now correctly in place and you can connect with either int
     systemctl start NetworkManager-dispatcher.service
     ```
 
-1. If the `NM_CONTROLLED` setting should be set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*), make sure that a corresponding file is created for each NIC. The following are the sample configuration for network configuration files:
+1. If the `NM_CONTROLLED` setting should be set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*), make sure that a corresponding file is created for each network interface. The following are the sample configuration for network configuration files:
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
@@ -219,9 +219,9 @@ The routing rules are now correctly in place and you can connect with either int
     echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more NICs are attached to the VM, add extra routing tables (202 eth2-rt, 203, eth3-rt, and so on, and so forth).
+    If more network interfaces are attached to the VM, add extra routing tables (202 eth2-rt, 203, eth3-rt, and so on, and so forth).
 
-1. Create the corresponding files and add the proper rules and routes to each of them. Follow these steps to create one set of rule-eth# and route-eth# files per NICs. Replace the IP address and subnet information accordingly in every step. If you have more NICs, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+1. Create the corresponding files and add the proper rules and routes to each of them. Follow these steps to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -290,9 +290,9 @@ ip rule show
 
 If you encounter some issues, reboot the VM by using the `reboot` command, and repeat the previous step to validate if the routes and rules are loaded.
 
-## Configure multiple NICs for Ubuntu 18.04/20.04 VMs
+## Configure multiple network interfaces for Ubuntu 18.04/20.04 VMs
 
-1. Assume the VM has two NICs with the following settings:
+1. Assume the VM has two network interfaces with the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -331,7 +331,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     config: disabled
     ```
 
-1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml* and include the following routes and policy-routing blocks in each NIC section:
+1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml* and include the following routes and policy-routing blocks in each network interface section:
 
     ```yml
     routes:
@@ -349,7 +349,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
        table: <routingTableID>
     ```
 
-    Replace the subnet, MAC Address and IP address for each NIC (eth0 and eth1) accordingly.
+    Replace the subnet, MAC Address and IP address for each network interface (eth0 and eth1) accordingly.
 
     Here's the sample configuration file that uses the given sample details:
 
@@ -420,9 +420,9 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     ping 10.0.1.5
     ```
 
-## Configure multiple NICs for Debian 10 VMs
+## Configure multiple network interfaces for Debian 10 VMs
 
-1. Assume the VM has two NICs with the following settings:
+1. Assume the VM has two network interfaces with the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -475,9 +475,9 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     systemctl restart networking
     ```
 
-## Configure multiple NICs for SLES 11.x/12.x/15.x VMs
+## Configure multiple network interfaces for SLES 11.x/12.x/15.x VMs
 
-1. Assume the VM has two NICs with the following settings:
+1. Assume that the VM has two network interfaces that have the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -527,7 +527,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
       inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
       ```
 
-1. Run the following command to create the scripts with the routes and rules for each NIC in the */etc/sysconfig/network/scripts/* directory:
+1. To create the scripts that have the routes and rules for each network interface in the */etc/sysconfig/network/scripts/* directory, run the following command:
 
     - */etc/sysconfig/network/scripts/ifup-route.eth0*
     
@@ -558,7 +558,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
         /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
         ```
 
-    Adjust the network and IP address information accordingly. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each NIC.
+    Adjust the network and IP address information accordingly. If there are more than two Run the following commands, make sure that the corresponding IP rules and IP routes are included for each Run the following command.
 
 1. Provide execution permissions to both scripts:
 
