@@ -48,6 +48,8 @@
     href: role-instance-restarts-faq.yml
   - name: Gather log files for offline analysis and preservation
     href: gather-log-files-offline-analysis-preservation.md
+  - name: Grant a virtual network sole access to your cloud service
+    href: grant-virtual-network-sole-access.md
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
   - name: Read key vault certificate secrets from an app
