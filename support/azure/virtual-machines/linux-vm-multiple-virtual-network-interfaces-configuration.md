@@ -89,7 +89,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     systemctl restart network
     ```
 
-1. Create corresponding rule and route files and add appropriate rules and routes to each file. Use the following steps to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
+1. Create corresponding rule and route files, and add appropriate rules and routes to each file. Use the following steps to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -151,7 +151,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     systemctl restart network
     ```
 
-The routing rules are now correctly in place, and you can connect by using either interface, as necessary.
+The routing rules are now correctly configured, and you can connect by using either interface, as appropriate.
 
 ## Configure multiple network interfaces for RHEL/CentOS 8._x_ VM
 
@@ -279,7 +279,7 @@ The routing rules are now correctly in place, and you can connect by using eithe
     systemctl restart NetworkManager
     ```
 
-The routing rules are now correctly set, and connectivity should work from either network interface as necessary. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
+The routing rules are now correctly set, and connectivity should work from either network interface, as appropriate. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
 You can verify the current routes and rules by using the following commands:
 
@@ -318,7 +318,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. If Cloud-Init automation is in place (the default in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time that the system is restarted.
+1. If Cloud-Init automation is set (the default in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time that the system is restarted.
 
     Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* by using the following command and contents:
 
