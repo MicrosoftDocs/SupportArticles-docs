@@ -10,7 +10,7 @@ ms.collection: linux
 ---
 # Configure multiple Nnetwork interfaces in Azure Linux virtual machines
 
-This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) running the most common Linux distributions.
+This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) that run the most common Linux distributions.
 
 ## Summary
 
@@ -89,24 +89,24 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     systemctl restart network
     ```
 
-1. Create corresponding rule and route files and add proper rules and routes to each file. Follow the steps below to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+1. Create corresponding rule and route files and add appropriate rules and routes to each file. Use the following steps to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
-      1. Run the following command to create the rule file for eth0:
+      1. To create the rule file for eth0, run the following command:
 
           ```bash
           vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure you keep the 32 bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
 
           ```
           from 10.0.1.4/32 table eth0-rt
           to 10.0.1.4/32 table eth0-rt
           ```
 
-      3. Run the following command to create the route file for eth0:
+      3. To create the route file for eth0, run the following command:
 
         ```bash
         vi /etc/sysconfig/network-scripts/route-eth0
@@ -120,19 +120,19 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         ```
     
     - Create rules and routes for eth1:
-      1. Run the following command to create the rule file for eth1:
+      1. To create the rule file for eth1, run the following command:
     
         ```bash
         vi /etc/sysconfig/network-scripts/rule-eth1
         ```
-      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure you keep the 32 bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
     
         ```
         from 10.0.1.5/32 table eth1-rt
         to 10.0.1.5/32 table eth1-rt
         ```
     
-      3. Run the following command to create the route file for eth1:
+      3. To create the route file for eth1, run the following command:
     
         ```bash
         vi /etc/sysconfig/network-scripts/route-eth1
@@ -151,11 +151,11 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     systemctl restart network
     ```
 
-The routing rules are now correctly in place and you can connect with either interface as needed.
+The routing rules are now correctly in place, and you can connect by using either interface, as necessary.
 
-## Configure multiple network interfaces for RHEL/CentOS 8.x VM
+## Configure multiple network interfaces for RHEL/CentOS 8._x_ VM
 
-1. Assume the VM has two network interfaces with the following settings:
+1. Assume that the VM has two network interfaces that have the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -174,7 +174,7 @@ The routing rules are now correctly in place and you can connect with either int
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1:
         ```
- 1. Policy routing isn't installed by default in Red Hat Enterprise Linux (RHEL)/CentOS 8.x. To configure multiple network interfaces, install and enable the policy routing. To do this, run the following commands:
+ 1. By default, policy routing isn't installed in Red Hat Enterprise Linux (RHEL)/CentOS 8._x_. To configure multiple network interfaces, install and enable the policy routing. To do this, run the following commands:
 
     ```bash
     yum install NetworkManager-dispatcher-routing-rules -y
@@ -182,7 +182,7 @@ The routing rules are now correctly in place and you can connect with either int
     systemctl start NetworkManager-dispatcher.service
     ```
 
-1. If the `NM_CONTROLLED` setting should be set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*), make sure that a corresponding file is created for each network interface. The following are the sample configuration for network configuration files:
+1. If the `NM_CONTROLLED` setting should be set to `yes` in each network configuration file (*/etc/sysconfig/network-scripts/ifcfg-eth#*), make sure that a corresponding file is created for each network interface. The following is the sample configuration for network configuration files:
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
@@ -219,9 +219,9 @@ The routing rules are now correctly in place and you can connect with either int
     echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-    If more network interfaces are attached to the VM, add extra routing tables (202 eth2-rt, 203, eth3-rt, and so on, and so forth).
+    If more network interfaces are attached to the VM, add extra routing tables (202 eth2-rt, 203, eth3-rt, and so on).
 
-1. Create the corresponding files and add the proper rules and routes to each of them. Follow these steps to create one set of rule-eth# and route-eth# files per network interfaces. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each of them with the corresponding IP and subnet details.
+1. Create the corresponding files, and add the appropriate rules and routes to each of them. To create one set of rule-eth# and route-eth# files per network interfaces, follow these steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
 
@@ -231,7 +231,7 @@ The routing rules are now correctly in place and you can connect with either int
         vi /etc/sysconfig/network-scripts/rule-eth0
         ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure you keep the 32 bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
 
         ```
         from 10.0.1.4/32 table eth0-rt
@@ -256,7 +256,7 @@ The routing rules are now correctly in place and you can connect with either int
         ```bash
         vi /etc/sysconfig/network-scripts/rule-eth1
         ```
-      2. Add the following contents to the rule file (adjust the IP address accordingly, make sure you keep the 32 bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
         ```
         from 10.0.1.5/32 table eth1-rt
         to 10.0.1.5/32 table eth1-rt
@@ -279,20 +279,20 @@ The routing rules are now correctly in place and you can connect with either int
     systemctl restart NetworkManager
     ```
 
-The routing rules are now correctly in place and connectivity should work from either network interface as needed. You can test the connectivity by using Secure Shell (SSH) or pinging both IPs from a VM in the same VNET.
+The routing rules are now correctly set, and connectivity should work from either network interface as necessary. You can test the connectivity by using Secure Shell (SSH), or by pinging both IPs from a VM in the same VNET.
 
-You can validate the current routes and rules by using the following commands:
+You can verify the current routes and rules by using the following commands:
 
 ```bash
 ip route show
 ip rule show
 ```
 
-If you encounter some issues, reboot the VM by using the `reboot` command, and repeat the previous step to validate if the routes and rules are loaded.
+If you encounter some issues, restart the VM by using the `reboot` command, and repeat the previous step to verify that the routes and rules are loaded.
 
 ## Configure multiple network interfaces for Ubuntu 18.04/20.04 VMs
 
-1. Assume the VM has two network interfaces with the following settings:
+1. Assume that the VM has two network interfaces that have the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -318,9 +318,9 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. If Cloud-Init automation is in place (the default in the Azure Ubuntu images), make sure the network CI automation is disabled so that the file */etc/netplan/50-cloud-init.yaml* doesn't get overwritten every time the system is rebooted.
+1. If Cloud-Init automation is in place (the default in the Azure Ubuntu images), make sure that the network CI automation is disabled so that the */etc/netplan/50-cloud-init.yaml* file doesn't get overwritten every time that the system is restarted.
 
-    Create the file */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* with the following command and contents:
+    Create the */etc/cloud/cloud.cfg.d/99-disable-network-config.cfg* by using the following command and contents:
 
     ```bash
     vi /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg
@@ -331,7 +331,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     config: disabled
     ```
 
-1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml* and include the following routes and policy-routing blocks in each network interface section:
+1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml*, and include the following routes and policy-routing blocks in each network interface section:
 
     ```yml
     routes:
@@ -413,7 +413,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     netplan apply
     ```
 
-1. Ping or SSH both IPs from another VM in the same VNET to test the connectivity:
+1. To test the connectivity, ping or SSH both IPs from another VM in the same VNET:
 
     ```bash
     ping 10.0.1.4
@@ -422,7 +422,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
 
 ## Configure multiple network interfaces for Debian 10 VMs
 
-1. Assume the VM has two network interfaces with the following settings:
+1. Assume that the VM has two network interfaces that have the following settings:
 
     - Routing (the output of `ip route show`):
 
@@ -448,7 +448,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     # echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. Create or modify the file "/etc/network/interfaces.d/50-cloud-init" with the following configuration:
+1. Create or modify the "/etc/network/interfaces.d/50-cloud-init"  file by using the following configuration:
 
     ```
     auto lo
@@ -469,13 +469,13 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     up /usr/sbin/ip rule add from 10.24.1.4/32 table eth1-rt
     up /usr/sbin/ip rule add to 10.24.1.4/32 table eth1-rt
     ```
-1. Activate the new configuration
+1. Activate the new configuration:
 
     ```bash
     systemctl restart networking
     ```
 
-## Configure multiple network interfaces for SLES 11.x/12.x/15.x VMs
+## Configure multiple network interfaces for SLES 11._x_/12._x_/15._x_ VMs
 
 1. Assume that the VM has two network interfaces that have the following settings:
 
@@ -505,7 +505,7 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
 
 1. Extend the routing tables.
 
-    Assume the following routing setup in place:
+    Assume that the following routing setup is configured:
 
     - Routing:
 
@@ -567,13 +567,13 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     chmod +x /etc/sysconfig/network/scripts/ifup-route.eth1
     ```
 
-1. Modify the network configuration files for both eth0 and eth1 (*/etc/sysconfig/network/ifcfg-eth#*) and include the following line in both files pointing to the corresponding script:
+1. Modify the network configuration files for both eth0 and eth1 (*/etc/sysconfig/network/ifcfg-eth#*), and include the following line in both files to point to the corresponding script:
 
     ```
     POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth#'
     ```
     
-    For SLES 11, exclude `compat:suse` from the line: `POST_UP_SCRIPT='/etc/sysconfig/network/scripts/ifup-route.eth#'`.
+    For SLES 11, exclude `compat:suse` from the following line: `POST_UP_SCRIPT='/etc/sysconfig/network/scripts/ifup-route.eth#'`.
     
     Here's a sample of both configuration files:
     
@@ -599,13 +599,13 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
     POST_UP_SCRIPT="compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth1"
     ```
 
-    If */etc/sysconfig/network/ifcfg-eth1* doesn't exist, create it by using the same contents from */etc/sysconfig/network/ifcfg-eth0*. To do this, run the following command:
+    If */etc/sysconfig/network/ifcfg-eth1* doesn't exist, create it by using the contents from */etc/sysconfig/network/ifcfg-eth0*. To do this, run the following command:
 
     ```bash
     cp -rp /etc/sysconfig/network/ifcfg-eth0 /etc/sysconfig/network/ifcfg-eth1
     ```
 
-1. Restart network service to apply the changes:
+1. To apply the changes, restart the network service:
 
     ```bash
     systemctl restart network
@@ -613,6 +613,6 @@ If you encounter some issues, reboot the VM by using the `reboot` command, and r
 
     For SUSE Linux Enterprise Server (SLES) 11, use `service network restart`.
 
-Both IP addresses should be reachable from a VM within the same VNET now. This can be tested by using ping or SSH to both IPs.
+After you make these changes, both IP addresses should be reachable from a VM within the same VNET. You can test this by using "ping" or SSH to access both IPs.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
