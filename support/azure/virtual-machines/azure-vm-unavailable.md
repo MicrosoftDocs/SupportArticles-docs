@@ -1,6 +1,6 @@
 ---
 title: Azure virtual machine (VM) is unavailable for 15 minutes
-description: Learn what it means when you receive an alert in Resource Health or the Activity log stating that your VM is unavailable for 15 minutes. 
+description: Learn what it means when you receive an alert in Resource Health or the activity log stating that your VM is unavailable for 15 minutes. 
 ms.date: 8/3/2022
 author: kelleyguiney22
 ms.author: v-kegui
@@ -12,15 +12,15 @@ keywords:
 ---
 # Azure virtual machine (VM) is unavailable for 15 minutes
 
-This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the Activity log.
+This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the activity log.
 
 ## Symptoms
 
-You receive an alert in Resource Health or the Activity log that states, "VM is unavailable for 15 minutes."
+You receive an alert in Resource Health or the activity log that states, "VM is unavailable for 15 minutes."
 
 ## Cause
 
-You might receive this alert when a virtual machine (VM) is being deleted, stopped, de-allocated, or restarted. Although the notification is sent from the platform, the operation isn't necessarily initiated by the platform. In certain cases, when the operation is finished, the platform continues to report poor health. These reports indicate that the VM was unavailable for more than 15 minutes. For more information about the different filters, see the "Missing VM downtimes in activity log" section of [Understand a system reboot for Azure VM](understand-vm-reboot.md#missing-vm-downtimes-in-activity-log).
+You might receive this alert when a virtual machine (VM) is being deleted, stopped, de-allocated, or restarted. Although the notification is sent from the platform, the operation isn't necessarily initiated by the platform. In certain cases, when the operation is finished, the platform continues to report poor health. These reports indicate that the VM was unavailable for more than 15 minutes. For more information about activity log and Resource Health data, see the "Missing VM downtimes in activity log" section of [Understand a system reboot for Azure VM](understand-vm-reboot.md#missing-vm-downtimes-in-activity-log).
 
 ## More information
 
