@@ -99,7 +99,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
           ```
           from 10.0.1.4/32 table eth0-rt
@@ -125,7 +125,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
         ```bash
         vi /etc/sysconfig/network-scripts/rule-eth1
         ```
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
     
         ```
         from 10.0.1.5/32 table eth1-rt
@@ -231,7 +231,7 @@ The routing rules are now correctly configured, and you can connect by using eit
         vi /etc/sysconfig/network-scripts/rule-eth0
         ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
         ```
         from 10.0.1.4/32 table eth0-rt
@@ -256,7 +256,7 @@ The routing rules are now correctly configured, and you can connect by using eit
         ```bash
         vi /etc/sysconfig/network-scripts/rule-eth1
         ```
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you keep the 32-bit):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
         ```
         from 10.0.1.5/32 table eth1-rt
         to 10.0.1.5/32 table eth1-rt
@@ -558,8 +558,8 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
         /sbin/ip rule add to 10.0.1.5/32 table eth1-rt
         ```
 
-    Adjust the network and IP address information accordingly. If there are more than two Run the following commands, make sure that the corresponding IP rules and IP routes are included for each Run the following command.
-
+    Adjust the Network and IP address information accordingly. If there are more than two NICs, make sure that the corresponding IP rules and IP routes are included for each one.
+    
 1. Provide execution permissions to both scripts:
 
     ```bash
