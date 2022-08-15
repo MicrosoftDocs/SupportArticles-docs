@@ -17,7 +17,7 @@ ms.author: genli
 
 # Azure Serial Console
 
-The Serial Console in the Azure portal provides access to a text-based console for virtual machines (VMs) and virtual machine scale set instances running either Linux or Windows. This serial connection connects to the ttyS0 or COM1 serial port of the VM or virtual machine scale set instance, providing access independent of the network or operating system state. The serial console can be accessed by using the Azure portal or [Azure CLI](https://docs.microsoft.com/cli/azure/serial-console) and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
+The Serial Console in the Azure portal provides access to a text-based console for virtual machines (VMs) and virtual machine scale set instances running either Linux or Windows. Serial Console connects to the ttyS0 or COM1 serial port of the VM or virtual machine scale set instance, providing access independent of the network or operating system state. The serial console can be accessed by using the Azure portal or [Azure CLI](https://docs.microsoft.com/cli/azure/serial-console) and is allowed only for those users who have an access role of Contributor or higher to the VM or virtual machine scale set.
 
 Serial Console works in the same manner for VMs and virtual machine scale set instances. In this doc, all mentions to VMs will implicitly include virtual machine scale set instances unless otherwise stated.
 
@@ -73,7 +73,7 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 If you don't have Azure CLI installed, follow the instructions in the [How to install the Azure CLI
 ](https://docs.microsoft.com/cli/azure/install-azure-cli) documentation.
 
-After installing Azure CLI, visit [az serial-console](https://docs.microsoft.com/cli/azure/serial-console#az-serial-console-connect) for documentation on how to connect to the Serial Console of a Linux/Windows Virtual Machine or VMSS Instance in Azure CLI.
+After installing Azure CLI, visit [az serial-console](https://docs.microsoft.com/cli/azure/serial-console#az-serial-console-connect) for documentation on how to connect with Azure CLI to the serial console of a Virtual Machine or VMSS instance running Linux or Windows.
 
 ### TLS 1.2 in Serial Console
 
