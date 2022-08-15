@@ -17,7 +17,7 @@ ms.subservice: application-insights
 
 If data is missing our you cannot find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
-<a name="life-of-telemetry-record.png" alt="Graphic of where a telemetry record can go missing during ingestion and consumption"></a>
+![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/life-of-a-telemetry-record.png "Life of telemetry record")
 
 - The SDK or Agent is misconfigured and not sending data to the ingestion endpoint.
 - The SDK or Agent is configured correctly but the networking is blocking calls to the ingestion endpoint.
@@ -150,7 +150,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We are looking for an HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This means that the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-<a name="items-received-matches-items-accepted.png" alt="Code showing the amount of items received and items accepted"></a>
+![Code showing the amount of items received and items accepted](./media/items-received-matches-items-accepted.png "Items received matches items accepted")
 
 ### PowerShell Script To Send a Request Telemetry
 
