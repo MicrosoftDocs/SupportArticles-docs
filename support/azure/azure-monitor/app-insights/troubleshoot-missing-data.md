@@ -17,7 +17,7 @@ ms.subservice: application-insights
 
 If data is missing our you cannot find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
-**SDK/Codeless agents** → **Networking** → **Ingestion endpoint** → **Application Insights ingestion pipeline** → **Kusto backend** ← **Query API** ← **Azure portal**
+<a name="life-of-telemetry-record.png" alt="Graphic of where a telemetry record can go missing during ingestion and consumption"></a>
 
 - The SDK or Agent is misconfigured and not sending data to the ingestion endpoint.
 - The SDK or Agent is configured correctly but the networking is blocking calls to the ingestion endpoint.
