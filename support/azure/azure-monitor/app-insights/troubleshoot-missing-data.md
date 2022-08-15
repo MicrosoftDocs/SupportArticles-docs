@@ -15,16 +15,16 @@ ms.subservice: application-insights
 
 ## Missing or No Data Symptoms
 
-If data is missing our you cannot find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
+If data is missing or you cannot find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
-![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/life-of-a-telemetry-record.png "Life of telemetry record")
+![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/troubleshoot-missing-data/life-of-a-telemetry-record.png "Life of telemetry record")
 
 - The SDK or Agent is misconfigured and not sending data to the ingestion endpoint.
-- The SDK or Agent is configured correctly but the networking is blocking calls to the ingestion endpoint.
+- The SDK or Agent is configured correctly but the network is blocking calls to the ingestion endpoint.
 - The ingestion endpoint is dropping or throttling inbound telemetry.
 - The ingestion pipeline is dropping or severely slowing down records as part of its processing. (rare)
-- Kusto is facing problems saving the telemetry. (rare)
-- The "Draft" or Query API, at api.applicationinsights.io, has failures querying the data from Kusto.
+- Log Analytics is facing problems saving the telemetry. (rare)
+- The "Draft" or Query API, at api.applicationinsights.io, has failures querying the data from Log Analytics.
 - The Azure portal UI code has issues pulling or rendering the records you are trying to view.
 
 Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers as fast as possible, so you can investigate the correct step within the processing pipeline that is causing the symptoms. One method that will drastically assist with this isolation is sending a sample telemetry record using PowerShell.
@@ -44,7 +44,7 @@ The are two caveats to running the operations from Kudu:
 - Prior to executing the Invoke-WebRequest command, you have to issue the PowerShell command: `$ProgressPreference = "SilentlyContinue"`
 - You cannot use -Verbose or -Debug. Instead, use -UseBasicParsing.
 
-This would look like the following as opposed to the examples further down:
+This would look like the following:
 
 ```shell
 $ProgressPreference = "SilentlyContinue"
@@ -59,16 +59,16 @@ After you send a telemetry record via PowerShell, you can check to see if the sa
 - The machine or VM has DNS that resolves to correct IP address.
 - The network delivered the telemetry to the ingestion endpoint without blocking or dropping.
 - The ingestion endpoint accepted the sample payload and processed through the ingestion pipeline.
-- Kusto correctly saved the sample telemetry record.
-- The Azure portal Logs tab was able to query the Draft API (api.applicationinsights.io) and render the record in the portal UI
+- Log Analytics correctly saved the sample telemetry record.
+- The Azure portal **Logs** tab was able to query the Draft API (api.applicationinsights.io) and render the record in the portal UI.
 
-If the sample record does show up, it typically means you just need to troubleshoot the Application Insights SDK or Codeless Agent. You would typically move to collect SDK Logs or PerfView traces, whichever is appropriate for the SDK/Agent version.
+If the sample record does show up, it typically means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
 
-There is still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the customer's production telemetry doesn't. You should always start investigating the SDKs or Agents if the below sample scripts correctly save and return telemetry records.
+There is still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the customer's production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return telemetry records.
 
 **Availability Test Result Telemetry Records**
 
-Availability Web Test Results are the best telemetry type to test with. The main reason is because our ingestion pipeline never samples out Availability Test records. If you instead send a Request Telemetry record using PowerShell, that record could get sampled out with Ingestion Sampling, and not show up when you go to query for it. Start with a sample Availability Test Records first, then try other telemetry types as needed.
+Availability Web Test Results are the best telemetry type to test with. The main reason is because the ingestion pipeline never samples out Availability Test records. If you instead send a Request Telemetry record using PowerShell, that record could get sampled out with Ingestion Sampling, and not show up when you go to query for it. Start with a sample Availability Test Records first, then try other telemetry types as needed.
 
 ### PowerShell Script To Send an Availability Test Telemetry
 
@@ -150,7 +150,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We are looking for an HTTP 200 response, and as part of the response JSON payload we want to see the **itemsReceived** count **matches** the **itemsAccepted**. This means that the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-![Code showing the amount of items received and items accepted](./media/items-received-matches-items-accepted.png "Items received matches items accepted")
+![Code showing the amount of items received and items accepted](./media/troubleshoot-missing-data/items-received-matches-items-accepted.png "Items received matches items accepted")
 
 ### PowerShell Script To Send a Request Telemetry
 
