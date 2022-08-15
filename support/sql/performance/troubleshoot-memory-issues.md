@@ -60,7 +60,7 @@ The following list outlines general steps that will help in troubleshooting memo
 
 ### Diagnostic tools and capture
 
-The diagnostics tools that will allow you to collect troubleshooting data are **Performance Monitor**, **[sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**, and **[DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage)**. 
+The diagnostics tools that will allow you to collect troubleshooting data are **Performance Monitor**, **[sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)**, and **[DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)**.
 
 Configure and collect the following counters with Performance Monitor: 
   - **Memory:Available MB**
