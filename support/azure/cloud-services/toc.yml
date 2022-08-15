@@ -48,10 +48,16 @@
     href: role-instance-restarts-faq.yml
   - name: Gather log files for offline analysis and preservation
     href: gather-log-files-offline-analysis-preservation.md
+  - name: Grant a virtual network sole access to your cloud service
+    href: grant-virtual-network-sole-access.md
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
+  - name: Read key vault certificate secrets from an app
+    href: read-key-vault-certificate-secrets-from-cloud-service-app.md
   - name: Roles that fail to start
     href: role-startup-failure.md
+  - name: Update or change the certificate used
+    href: update-or-change-certificate-used.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 
