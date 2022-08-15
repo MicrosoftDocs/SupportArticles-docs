@@ -75,6 +75,9 @@ If you don't have Azure CLI installed, follow the instructions in the [How to in
 
 After installing Azure CLI, visit [az serial-console](https://docs.microsoft.com/cli/azure/serial-console#az-serial-console-connect) for documentation on how to connect with Azure CLI to the serial console of a Virtual Machine or VMSS instance running Linux or Windows.
 
+> [!NOTE]
+> The serial-console extension will automatically install the first time you run an az serial-console command. If you have already installed the serial-console extension, ensure you have the most up-to-date version by running the command `az extension add --name serial-console --upgrade`
+
 ### TLS 1.2 in Serial Console
 
 Serial Console uses TLS 1.2 end-to-end to secure all communication within the service. Serial Console has a dependency on a user-managed boot diagnostics storage account, and TLS 1.2 must be configured separately for the storage account. Instructions to do so are located [here](/azure/storage/common/transport-layer-security-configure-minimum-version).
