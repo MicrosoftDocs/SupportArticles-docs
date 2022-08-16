@@ -26,7 +26,7 @@ Serial Console is generally available in global Azure regions and in public prev
 For Serial Console documentation for Windows, see [Serial Console for Windows](./serial-console-windows.md).
 
 > [!NOTE]
-> Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account.
+> Serial Console is now compatible with a managed boot diagnostics storage account.
 
 ## Prerequisites
 
