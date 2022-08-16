@@ -7,11 +7,10 @@ ms.prod: sql
 ---
 # Join containment assumption in the New Cardinality Estimator degrades query performance
 
-_Original product version:_ &nbsp; SQL Server  
-_Original KB number:_ &nbsp; 3189675
-
 This article helps you resolve performance problems that can occur in SQL Server 2014 and later versions when you compile your queries using the new cardinality estimator.
 
+_Original product version:_ &nbsp; SQL Server  
+_Original KB number:_ &nbsp; 3189675
 
 ## Symptoms
 
