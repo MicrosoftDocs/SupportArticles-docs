@@ -158,13 +158,13 @@ All data that is sent back and forth is encrypted in transit with TLS 1.2 or a l
 
 ### Data storage and encryption
 
-Azure Serial Console doesn't review, inspect, or store any data which is transmitted in and out of the virtual machine serial port. Therefore, there is no data to encrypt at rest.
+Azure Serial Console doesn't review, inspect, or store any data that's transmitted in and out of the virtual machine serial port. Therefore, there's no data to encrypt at rest.
 
 To ensure that any in-memory data that's paged to disks by virtual machines running the service is encrypted, use the [host-based encryption](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data). The host-based encryption is enabled by default for all Azure Serial Console connections.
 
 ### Data residency
 
-The Azure portal or [az cli](/cli/azure/serial-console) act as remote terminals to the virtual machine serial port. As these terminals can't directly connect to the servers which host the virtual machine over the network, an intermediate service gateway is used to proxy the terminal traffic. Azure Serial Console doesn't store or process this customer data. The intermediate service gateway which transfers the data will reside in the geography of the virtual machine.
+The Azure portal or [Azure CLI](/cli/azure/serial-console) act as remote terminals to the virtual machine serial port. As these terminals can't directly connect to the servers which host the virtual machine over the network, an intermediate service gateway is used to proxy the terminal traffic. Azure Serial Console doesn't store or process this customer data. The intermediate service gateway that transfers the data will reside in the geography of the virtual machine.
 
 ### Audit logs
 
