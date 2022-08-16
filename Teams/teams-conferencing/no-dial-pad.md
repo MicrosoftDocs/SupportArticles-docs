@@ -49,7 +49,7 @@ Use one of the following diagnostic tools:
   > [!NOTE]
   > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-  Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+  Select the **Run Tests** link. It will populate the diagnostic in the Microsoft 365 admin center.
 
   > [!div class="nextstepaction"]
   > [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag)
@@ -78,7 +78,7 @@ Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
 Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
 ```
 
-These actions force an update of the policy in the backend environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within an hour.
+These actions force an update of the policy in the backend environment of Teams. After this change is made, the user should see the dial pad appears under **Calls** within an hour.
 
 ## More information
 
