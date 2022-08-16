@@ -1,6 +1,6 @@
 ---
 title: Azure virtual machine (VM) is unavailable for 15 minutes
-description: Learn what it means when you receive an alert in Resource Health or the Activity log stating that your VM is unavailable for 15 minutes. 
+description: Learn what it means when you receive an alert in Resource Health or the activity log stating that your VM is unavailable for 15 minutes. 
 ms.date: 8/3/2022
 author: kelleyguiney22
 ms.author: v-kegui
@@ -12,11 +12,11 @@ keywords:
 ---
 # Azure virtual machine (VM) is unavailable for 15 minutes
 
-This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the Activity log.
+This article explains why you might receive an alert that states "VM is unavailable for 15 minutes" in either Resource Health or the activity log.
 
 ## Symptoms
 
-You receive an alert in Resource Health or the Activity log that states, "VM is unavailable for 15 minutes."
+You receive an alert in Resource Health or the activity log that states, "VM is unavailable for 15 minutes."
 
 ## Cause
 
