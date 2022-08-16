@@ -218,7 +218,7 @@ To ensure that any in-memory data that's paged to disks by virtual machines runn
 
 ### Data residency
 
-The Azure portal or [az cli](/cli/azure/serial-console?view=azure-cli-latest) act as remote terminals to the virtual machine serial port. As these terminals can't directly connect to the servers which host the virtual machine over the network, an intermediate service gateway is used to proxy the terminal traffic. Azure Serial Console doesn't store or process this customer data. The intermediate service gateway which transfers the data will reside in the geography of the virtual machine.
+The Azure portal or [az cli](/cli/azure/serial-console) act as remote terminals to the virtual machine serial port. As these terminals can't directly connect to the servers which host the virtual machine over the network, an intermediate service gateway is used to proxy the terminal traffic. Azure Serial Console doesn't store or process this customer data. The intermediate service gateway which transfers the data will reside in the geography of the virtual machine.
 
 ### Audit logs
 
