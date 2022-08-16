@@ -397,7 +397,7 @@
       href: performance/decreased-perf-high-cpu-optimized-nested-loop.md
     - name: Non-yielding Resource Monitor
       href: performance/resource-monitor-nonyielding-condition.md
-    - name: Performance degradation with new CE
+    - name: Performance degradation with new CE join containment assumption
       href: performance/cardinality-estimator-degrades-query-performance.md
     - name: Decreased query performance after upgrade
       href: performance/decreased-query-perf-after-upgrade.md
