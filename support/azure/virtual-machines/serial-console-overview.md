@@ -70,7 +70,7 @@ Serial Console is available for virtual machine scale sets, accessible on each i
 
 ### Access Serial Console via Azure CLI
 
-For using Azure CLI to connect to the Serial Console of a virtual machine or Virtual Machine Scale Sets (VMSS) instance that runs Linux or Windows, see [az serial-console](/cli/azure/serial-console#az-serial-console-connect).
+For using Azure CLI to connect to the Serial Console of a virtual machine or virtual machine scale set instance that runs Linux or Windows, see [az serial-console](/cli/azure/serial-console#az-serial-console-connect).
 
 If you don't have Azure CLI installed, install it by using the instructions in [How to install the Azure CLI](/cli/azure/install-azure-cli).
 
