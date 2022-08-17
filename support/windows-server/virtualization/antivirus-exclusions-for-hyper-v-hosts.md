@@ -62,7 +62,9 @@ All directories that contain the following files:
 - Virtual Optical Disk images (`*.iso`)
 
 - Resilient Change Tracking file (`*.rct`)
-- Modified Region Table (`*.mrt`)
+
+- Modified Region Table file (`*.mrt`)
+
 - Device state file (`*.vsv`)
 
     The processes that create, open, or update the file: vmms.exe, vmwp.exe, vmcompute.exe.
@@ -71,7 +73,11 @@ All directories that contain the following files:
 
     The processes that create, open, or update the file: vmwp.exe
 
-- VM Configuration file (`*.vmcx`)
+- VM Configuration file (`*.xml`)
+
+    The processes that create, open, or update the file: vmms.exe
+
+- VM Configuration v2 file (`*.vmcx`)
 
     The processes that create, open, or update the file: vmms.exe
 

@@ -100,7 +100,7 @@ To resolve the Linux VM boot issues caused by filesystem errors, recover the VM 
     > - It's important to back up critical data because data loss may occur on the recovered disk.
     > - Before you make changes to a disk, take a snapshot to preserve the current state of the disk, even if it's in an error state. Fixing the disk corruption will change the data on the disk, which will carry risk.
 
-### <a id="identify-which-disk-is-corrupted">Identify which disk is corrupted</a>
+### <a id="identify-which-disk-is-corrupted"></a>Identify which disk is corrupted
 
 To determine which disk is corrupted, download the serial log for your VM by using the Serial Console or Boot diagnostics, examine the log entries during boot up, and then look for the specific error calling out which disk or mount is failing.
 
@@ -150,7 +150,7 @@ When determining the mapping of OS disk references to Azure disk objects:
 - For LVM based images, many other system mounts may exist such as */home*, */tmp*, */usr*, */var*, */var/log*, and */opt*.
 - Extra filesystems created for applications are located on data disks, for example, */data*, */datadisk*, or */sap*. Configure them properly so that the system can boot even if there's an error. If a data disk is a device that boots into emergency mode, see [prevent boot failure](#prevent-boot-failure).
 
-### <a id="identify-filesystem-type">Identify filesystem type</a>
+### <a id="identify-filesystem-type"></a>Identify filesystem type
 
 While doing initial identification, the only method to determine the disk type is using the serial log as previously examined in [Identify which disk is corrupted](#identify-which-disk-is-corrupted). When the disk device is reported in the serial log, errors will be displayed from the Linux kernel module for the filesystem. Note each line where `EXT4-fs` or `XFS` is specified. For any other filesystem types, the log is in the same area. The filesystem noted in the log entries is determined by the */etc/fstab* file. Take care to verify that the specified format is correct when performing a repair.
 
@@ -184,7 +184,7 @@ Here are some important points in the output:
 - `rootvg-homelv` isn't mounted, which is denoted by the empty MOUNTPOINT field.
 - `rootvg-homelv` has filesystem type XFS. It's a contrast with the EXT4 mount error during booting up. If the filesystem type is inconsistent, trust the `lsblk` output rather than the contents of fstab.
 
-### <a id="select-recovery-mode">Select recovery mode</a>
+### <a id="select-recovery-mode"></a>Select recovery mode
 
 You can recover a VM online through emergency mode or single-user mode or offline by using a rescue VM.
 
@@ -200,7 +200,7 @@ You can recover a VM online through emergency mode or single-user mode or offlin
 
 If the Serial Console requirements for online recovery can't be met, perform offline recovery by using a rescue VM. To perform offline recovery, the ability to create a VM and manage disks in Azure is required. Alternatively, you can use a functioning Linux VM with Azure-level access to the corrupted disks.
 
-### <a id="prepare-environment-for-online-recovery">Prepare environment for online recovery</a>
+### <a id="prepare-environment-for-online-recovery"></a>Prepare environment for online recovery
 
 When the emergency mode is displayed in the sign-in prompt as follows, enter the root password:
 
@@ -223,13 +223,13 @@ Press Enter to continue.
 
 If the online recovery environment is unusable, proceed to offline recovery.
 
-### <a id="prepare-environment-for-offline-recovery">Prepare environment for offline recovery</a>
+### <a id="prepare-environment-for-offline-recovery"></a>Prepare environment for offline recovery
 
 In single disk VMs, or when the failing mount is a system partition such as the root filesystem (`/`) or `/usr`, the most reliable method to repair the disk is by using a rescue VM to gain access to the disk. You can create a rescue VM automatically or manually.
 
 For automated creation of a rescue VM, see [Azure Virtual Machine Repair](repair-linux-vm-using-azure-virtual-machine-repair-commands.md). For manual creation of a rescue VM, see [creating a recovery VM](troubleshoot-recovery-disks-portal-linux.md). In either case, don't mount the volumes from the problem disk because a filesystem must not be mounted for repair utilities to operate.
 
-### <a id="perform-filesystem-repair">Perform filesystem repair</a>
+### <a id="perform-filesystem-repair"></a>Perform filesystem repair
 
 Before repairing the filesystem, ensure that the following steps have been completed:
 
@@ -246,7 +246,7 @@ The commands to repair the filesystem may not fix all errors. They work around d
 
 In the following sections, `/dev/sdc1` is the corrupted filesystem in raw mode, and the LV `homelv` in the VG `rootvg` is the LVM volume. Substitute these values for the actual corrupted filesystem in all instances.
 
-#### <a id="repair-ext4-filesystem">Repair ext4 filesystem</a>
+#### <a id="repair-ext4-filesystem"></a>Repair ext4 filesystem
 
 Use the `fsck [-y] FILESYSTEM` command to repair an ext4 filesystem. Specify the filesystem as a disk partition for a raw filesystem, for example `/dev/sdc1`, or the LVM logical volume path `/dev/rootvg/homelv`.
 
@@ -287,7 +287,7 @@ e2fsck 1.42.9 (28-Dec-2013)
 [root@vm1dev ~]#
 ```
 
-#### <a id="repair-xfs-filesystem">Repair xfs filesystem</a>
+#### <a id="repair-xfs-filesystem"></a>Repair xfs filesystem
 
 Here are commands to repair an XFS filesystem:
 
@@ -331,7 +331,7 @@ If the journaled changes aren't written when you mount filesystems, use the `-L`
 xfs_repair -L /dev/rootvg/homelv /recovery
 ```
 
-### <a id="prevent-boot-failure">Prevent boot failure</a>
+### <a id="prevent-boot-failure"></a>Prevent boot failure
 
 If the `nofail` option is specified when mounting filesystems, the corruption of a non-critical filesystem may not prevent Linux from booting fully. For more information about `nofail`, see [Mount the disk](/azure/virtual-machines/linux/attach-disk-portal#mount-the-disk). Most mounts aside from the root (`/`), `/usr`, and `/var` can be done with `nofail`.
 
