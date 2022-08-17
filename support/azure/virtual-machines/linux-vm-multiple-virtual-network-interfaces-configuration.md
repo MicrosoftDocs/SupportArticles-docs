@@ -16,7 +16,7 @@ This article discusses how to configure multiple virtual network interfaces in A
 
 You can create an Azure VM that has multiple network interfaces attached to it. A common scenario is to have different subnets for front-end and back-end connectivity, or a network that's dedicated to a monitoring or backup solution.
 
-This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that'sw based on the following sample scenario:
+This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that's based on the following sample scenario:
 
 - The VM has two network interfaces in the same subnet.
 - Connectivity is tested from another VM in the same virtual network (VNET) or subnet.
