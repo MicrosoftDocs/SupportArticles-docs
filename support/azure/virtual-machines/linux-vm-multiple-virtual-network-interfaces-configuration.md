@@ -95,26 +95,26 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       1. To create the rule file for eth0, run the following command:
 
-              ```bash
-              vi /etc/sysconfig/network-scripts/rule-eth0
-              ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/rule-eth0
+          ```
 
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
-              ```Configuration
-              from 10.0.1.4/32 table eth0-rt
-              to 10.0.1.4/32 table eth0-rt
-              ```
+          ```Configuration
+          from 10.0.1.4/32 table eth0-rt
+          to 10.0.1.4/32 table eth0-rt
+          ```
 
       3. To create the route file for eth0, run the following command:
 
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth0
-        ```
+          ```bash
+           vi /etc/sysconfig/network-scripts/route-eth0
+           ```
 
       4. Add the following contents to the route file:
-    
-            ```Configuration
+
+          ```Configuration
             10.0.1.0/24 dev eth0 table eth0-rt
             default via 10.0.1.1 dev eth0 table eth0-rt
             ```
