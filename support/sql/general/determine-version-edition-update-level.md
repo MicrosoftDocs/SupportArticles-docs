@@ -489,7 +489,8 @@ For more information, go to the following websites:
 |14.0.3025.34|None| CU6| [4101464](https://support.microsoft.com/help/4101464)|April 17, 2018|
 |14.0.3023.8|None| CU5| [4092643](https://support.microsoft.com/help/4092643)|March 20, 2018|
 |14.0.3022.28|None| CU4| [4056498](https://support.microsoft.com/help/4056498)|February 20, 2018|
-|14.0.3015.40|None| CU3| [4052987](https://support.microsoft.com/help/4052987)|January 04, 2018|
+|14.0.3015.40|None| CU3 + GDR| [4058562](https://support.microsoft.com/help/4058562)|January 03, 2018|
+|14.0.3015.40|None| CU3| [4052987](https://support.microsoft.com/help/4052987)|January 03, 2018|
 |14.0.2000.63|None| GDR| [4057122](https://support.microsoft.com/help/4057122)|January 03, 2018|
 |14.0.3008.27|None| CU2| [4052574](https://support.microsoft.com/help/4052574)|November 28, 2017|
 |14.0.3006.16|None| CU1| [4038634](https://support.microsoft.com/help/4038634)|October 24, 2017|
