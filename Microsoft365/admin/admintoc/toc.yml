@@ -135,6 +135,8 @@
       href: ../diagnostic-logs/office-sign-in-and-auth-diagnostic.md
     - name: Use Fiddler trace logs for MFA
       href: ../diagnostic-logs/fiddler-trace-logs-for-mfa.md
+    - name: Use MSOAID for authentication issues
+      href: ../diagnostic-logs/use-msoaid-for-authentication-issues.md
   - name: Domain Management
     items:
     - name: '"Add domain" option is missing'
