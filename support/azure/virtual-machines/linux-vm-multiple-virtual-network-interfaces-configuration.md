@@ -8,7 +8,7 @@ ms.reviewer: malachma
 ms.service: virtual-machines
 ms.collection: linux
 ---
-# Configure multiple Nnetwork interfaces in Azure Linux virtual machines
+# Configure multiple network interfaces in Azure Linux virtual machines
 
 This article discusses how to configure multiple virtual network interfaces in Azure Linux virtual machines (VMs) that run the most common Linux distributions.
 
@@ -16,14 +16,14 @@ This article discusses how to configure multiple virtual network interfaces in A
 
 You can create an Azure VM that has multiple network interfaces attached to it. A common scenario is to have different subnets for front-end and back-end connectivity, or a network that's dedicated to a monitoring or backup solution.
 
-This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that'sw based on the following sample scenario:
+This article provides the required configuration for multiple network interfaces to work in an Azure Linux VM that's based on the following sample scenario:
 
 - The VM has two network interfaces in the same subnet.
 - Connectivity is tested from another VM in the same virtual network (VNET) or subnet.
 
 For details, see the following screenshot.
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Image alt text.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario":::
 
 The configuration can also be used on a VM that has more network interfaces on the same or different subnets in the same VNET.
 
@@ -40,7 +40,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -50,7 +50,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
@@ -99,51 +99,51 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the configuration):
 
-          ```
+          ```Configuration
           from 10.0.1.4/32 table eth0-rt
           to 10.0.1.4/32 table eth0-rt
           ```
 
       3. To create the route file for eth0, run the following command:
 
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth0
-        ```
+          ```bash
+           vi /etc/sysconfig/network-scripts/route-eth0
+           ```
 
       4. Add the following contents to the route file:
-    
-        ```
-        10.0.1.0/24 dev eth0 table eth0-rt
-        default via 10.0.1.1 dev eth0 table eth0-rt
-        ```
+
+          ```Configuration
+            10.0.1.0/24 dev eth0 table eth0-rt
+            default via 10.0.1.1 dev eth0 table eth0-rt
+            ```
     
     - Create rules and routes for eth1:
       1. To create the rule file for eth1, run the following command:
     
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth1
-        ```
+            ```bash
+            vi /etc/sysconfig/network-scripts/rule-eth1
+            ```
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
     
-        ```
-        from 10.0.1.5/32 table eth1-rt
-        to 10.0.1.5/32 table eth1-rt
-        ```
+            ```Configuration
+            from 10.0.1.5/32 table eth1-rt
+            to 10.0.1.5/32 table eth1-rt
+            ```
     
       3. To create the route file for eth1, run the following command:
     
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth1
-        ```
+            ```bash
+            vi /etc/sysconfig/network-scripts/route-eth1
+            ```
     
       4. Add the following contents to the route file:
     
-        ```
-        10.0.1.0/24 dev eth1 table eth1-rt
-        default via 10.0.1.1 dev eth1 table eth1-rt
-        ```
+            ```Configuration
+            10.0.1.0/24 dev eth1 table eth1-rt
+            default via 10.0.1.1 dev eth1 table eth1-rt
+            ```
 
 1. To apply the changes, run the following command to restart the network service:
 
@@ -159,7 +159,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -169,7 +169,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1:
@@ -186,7 +186,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
-        ```
+        ```Configuration
         DEVICE=eth0
         ONBOOT=yes
         BOOTPROTO=dhcp
@@ -200,7 +200,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
     - */etc/sysconfig/network-scripts/ifcfg-eth1*:
     
-        ```
+        ```Configuration
         DEVICE=eth1
         ONBOOT=yes
         BOOTPROTO=dhcp
@@ -257,7 +257,8 @@ The routing rules are now correctly configured, and you can connect by using eit
         vi /etc/sysconfig/network-scripts/rule-eth1
         ```
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
-        ```
+      
+        ```Configuration
         from 10.0.1.5/32 table eth1-rt
         to 10.0.1.5/32 table eth1-rt
         ```
@@ -268,7 +269,7 @@ The routing rules are now correctly configured, and you can connect by using eit
         ```
       4. Add the following contents to the route file:
       
-        ```
+        ```Configuration
         10.0.1.0/24 dev eth1 table eth1-rt
         default via 10.0.1.1 dev eth1 table eth1-rt
         ```
@@ -296,7 +297,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -306,7 +307,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
@@ -426,7 +427,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -436,7 +437,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
@@ -450,7 +451,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
 1. Create or modify the "/etc/network/interfaces.d/50-cloud-init"  file by using the following configuration:
 
-    ```
+    ```Configuration
     auto lo
     iface lo inet loopback
 
@@ -481,7 +482,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -491,7 +492,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
@@ -509,7 +510,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Routing:
 
-      ```
+      ```Output
       default via 10.0.1.1 dev eth0 proto static metric 100
       10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
       10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -519,7 +520,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     - Interfaces:
 
-      ```
+      ```Output
       lo: inet 127.0.0.1/8 scope host lo
       eth0: link/ether 00:0d:3a:9d:60:e6 brd ff:ff:ff:ff:ff:ff
       inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
@@ -569,7 +570,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
 1. Modify the network configuration files for both eth0 and eth1 (*/etc/sysconfig/network/ifcfg-eth#*), and include the following line in both files to point to the corresponding script:
 
-    ```
+    ```Configuration
     POST_UP_SCRIPT='compat:suse:/etc/sysconfig/network/scripts/ifup-route.eth#'
     ```
     
