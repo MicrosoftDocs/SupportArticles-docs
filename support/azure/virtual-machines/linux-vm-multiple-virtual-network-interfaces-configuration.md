@@ -140,7 +140,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
     
       4. Add the following contents to the route file:
     
-        ```
+        ```content
         10.0.1.0/24 dev eth1 table eth1-rt
         default via 10.0.1.1 dev eth1 table eth1-rt
         ```
@@ -186,7 +186,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
     - */etc/sysconfig/network-scripts/ifcfg-eth0*:
 
-        ```
+        ```Content
         DEVICE=eth0
         ONBOOT=yes
         BOOTPROTO=dhcp
