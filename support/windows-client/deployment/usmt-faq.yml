@@ -3,6 +3,11 @@ metadata:
   title: 'Frequently Asked Questions (Windows 10)'
   description: 'Learn about frequently asked questions and recommended solutions for migrations using User State Migration Tool (USMT) 10.0.'
   ms.assetid: 813c13a7-6818-4e6e-9284-7ee49493241b
+  ms.prod: windows-client
+  ms.technology: windows-client-deployment
+  ms.custom: sap:usmt, csstroubleshoot
+  manager: dcscontentpm
+  ms.topic: troubleshooting
   ms.reviewer: 
   author: aczechowski
   ms.author: aaroncz
