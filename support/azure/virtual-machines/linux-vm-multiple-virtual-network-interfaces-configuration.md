@@ -23,7 +23,7 @@ This article provides the required configuration for multiple network interfaces
 
 For details, see the following screenshot.
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Image alt text.":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario":::
 
 The configuration can also be used on a VM that has more network interfaces on the same or different subnets in the same VNET.
 
@@ -40,7 +40,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - Routing (the output of `ip route show`):
 
-        ```
+        ```Output
         default via 10.0.1.1 dev eth0 proto static metric 100
         10.0.1.0/24 dev eth0 proto kernel scope link src 10.0.1.4 metric 100
         10.0.1.0/24 dev eth1 proto kernel scope link src 10.0.1.5 metric 101
@@ -50,7 +50,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
     - Interfaces (the output of `ip address show`):
 
-        ```
+        ```Output
         lo: inet 127.0.0.1/8 scope host lo
         eth0: inet 10.0.1.4/24 brd 10.0.1.255 scope global eth0    
         eth1: inet 10.0.1.5/24 brd 10.0.1.255 scope global eth1
@@ -95,16 +95,16 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       1. To create the rule file for eth0, run the following command:
 
-          ```bash
-          vi /etc/sysconfig/network-scripts/rule-eth0
-          ```
+              ```bash
+              vi /etc/sysconfig/network-scripts/rule-eth0
+              ```
 
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
-          ```
-          from 10.0.1.4/32 table eth0-rt
-          to 10.0.1.4/32 table eth0-rt
-          ```
+              ```Configuration
+              from 10.0.1.4/32 table eth0-rt
+              to 10.0.1.4/32 table eth0-rt
+              ```
 
       3. To create the route file for eth0, run the following command:
 
@@ -114,36 +114,36 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
 
       4. Add the following contents to the route file:
     
-        ```
-        10.0.1.0/24 dev eth0 table eth0-rt
-        default via 10.0.1.1 dev eth0 table eth0-rt
-        ```
+            ```Configuration
+            10.0.1.0/24 dev eth0 table eth0-rt
+            default via 10.0.1.1 dev eth0 table eth0-rt
+            ```
     
     - Create rules and routes for eth1:
       1. To create the rule file for eth1, run the following command:
     
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth1
-        ```
+            ```bash
+            vi /etc/sysconfig/network-scripts/rule-eth1
+            ```
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
     
-        ```
-        from 10.0.1.5/32 table eth1-rt
-        to 10.0.1.5/32 table eth1-rt
-        ```
+            ```Configuration
+            from 10.0.1.5/32 table eth1-rt
+            to 10.0.1.5/32 table eth1-rt
+            ```
     
       3. To create the route file for eth1, run the following command:
     
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth1
-        ```
+            ```bash
+            vi /etc/sysconfig/network-scripts/route-eth1
+            ```
     
       4. Add the following contents to the route file:
     
-        ```Configuration
-        10.0.1.0/24 dev eth1 table eth1-rt
-        default via 10.0.1.1 dev eth1 table eth1-rt
-        ```
+            ```Configuration
+            10.0.1.0/24 dev eth1 table eth1-rt
+            default via 10.0.1.1 dev eth1 table eth1-rt
+            ```
 
 1. To apply the changes, run the following command to restart the network service:
 
