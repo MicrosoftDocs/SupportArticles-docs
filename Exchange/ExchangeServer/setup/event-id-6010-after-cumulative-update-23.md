@@ -23,9 +23,11 @@ ms.date: 08/04/2022
 
 After you install Cumulative Update 23 for Microsoft Exchange Server 2016, event 6010 entries are continuously logged in the Application event log. These entries contain the following information:
 
+```output
 Event ID: 6010
 Source: MSExchangeApplicationLogic
 Description: Failed to read in memory manifest validation XSD schemas for version '1.1'.
+```
 
 This issue occurs only on Exchange 2016-based servers that aren't connected to the internet.
 
