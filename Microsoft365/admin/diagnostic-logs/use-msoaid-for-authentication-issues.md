@@ -23,7 +23,7 @@ MSOAID is a tool that you can use in Windows and macOS to diagnose authenticatio
 
 ## Download and run MSOAID
 
-1. Download [MSOAID for Windows](https://download.microsoft.com/download/b/c/0/bc0563a7-a5a2-4682-8cbb-3284fa14c666/MSOAID-Win.zip) or [MSOAID for macOS](TBD).
+1. Download [MSOAID for Windows](https://download.microsoft.com/download/b/c/0/bc0563a7-a5a2-4682-8cbb-3284fa14c666/MSOAID-Win.zip) or MSOAID for macOS.
 1. Extract the contents of the .zip file and run the executable file (MSOAID-Win.exe for Windows or MSOAID-Mac.exe for macOS).
 
    **Note** You don't need to restart Office apps before you run MSOAID.

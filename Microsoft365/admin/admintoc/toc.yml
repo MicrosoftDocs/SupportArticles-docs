@@ -173,7 +173,7 @@
       href: ../administration/setup-in-progress-office-365-portal.md
     - name: Enable or disable hyperlink warning messages
       href: ../administration/enable-disable-hyperlink-warning.md
-    - name: Issue when remove a domain
+    - name: Issue when removing a domain
       href: ../administration/error-remove-domain-from-office-365.md
     - name: SupportMultipleDomain switch when managing SSO
       href: ../administration/supportmultipledomain-switch-when-manage-sso.md
