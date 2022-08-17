@@ -16,6 +16,8 @@
     href: web-apps-configuration-and-management-faqs.md
   - name: Deployment FAQs for Web Apps
     href: web-apps-deployment-faqs.md
+  - name: FAQs about scaling web apps
+    href: ./scaling-web-app-faq.yml
   - name: Open-source technologies FAQs for Web Apps
     href: web-apps-open-source-technologies-faqs.md
   - name: Troubleshoot temporary storage

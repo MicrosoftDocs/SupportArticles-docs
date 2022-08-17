@@ -208,6 +208,8 @@
   items:
   - name: Linux
     items:
+    - name: Configure multiple NICs
+      href: linux-vm-multiple-virtual-network-interfaces-configuration.md
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
@@ -232,6 +234,7 @@
       href: troubleshoot-ssh-permissions-too-open.md
     - name: Troubleshoot kernel panic
       href: linux-kernel-panic-troubleshooting.md
+
   - name: Windows
     items:
     - name: Cannot RDP because "You must change your password before logging on the first time" error
