@@ -99,7 +99,7 @@ When you add multiple network interfaces to a Linux VM, you have to create routi
           vi /etc/sysconfig/network-scripts/rule-eth0
           ```
 
-      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
+      2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the configuration):
 
           ```Configuration
           from 10.0.1.4/32 table eth0-rt
