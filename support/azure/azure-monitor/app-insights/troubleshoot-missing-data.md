@@ -52,17 +52,17 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 ```
 
-After you send a sample telemetry record via PowerShell, you can check to see if it arrives using the Application Insights Logs tab in the Azure portal. If you see the sample record showing up, you have eliminated a large portion of the processing pipeline.
+After you send a sample telemetry record via PowerShell, you can check to see if it arrives using the Application Insights **Logs** tab in the Azure portal. If you see the sample record showing up, you have eliminated a large portion of the processing pipeline.
 
 **A sample PowerShell record correctly saved and displayed suggests:**
 
-- The machine or VM has DNS that resolves to correct IP address.
+- The machine or VM has DNS that resolves to the correct IP address.
 - The network delivered the telemetry to the ingestion endpoint without blocking or dropping.
-- The ingestion endpoint accepted the sample payload and processed through the ingestion pipeline.
+- The ingestion endpoint accepted the sample payload and processed it through the ingestion pipeline.
 - Log Analytics correctly saved the sample telemetry record.
 - The Azure portal **Logs** tab was able to query the Draft API (api.applicationinsights.io) and render the record in the portal UI.
 
-If the sample record does show up, it typically means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
+If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
 
 There is still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return telemetry records.
 
@@ -76,7 +76,8 @@ This script builds a raw REST request to deliver a single Availability Test Resu
 
 - Connection String only: Telemetry sent to regional endpoint in connection string
 - Ikey only: Telemetry sent to global ingestion endpoint
-- If both Connection String and Ikey parameters are supplied the script sends telemetry to the regional endpoint in the connection string
+
+If both Connection String and Ikey parameters are supplied, the script sends telemetry to the regional endpoint in the connection string
 
 It is easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS (virtual machine scale set) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
 
@@ -225,7 +226,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ### Curl Client To Send Availability Test Telemetry Record
 
-If you're running Linux VMs, you could rely on Curl client to send a similar REST call instead of PowerShell. Below is a Curl request to send a single Availability Web Test result record. You will need to adjust the ingestion endpoint host, the iKey value and the timestamp values.
+If you're running Linux VMs, you could rely on Curl client to send a similar REST call instead of PowerShell. Below is a Curl request to send a single Availability Web Test result record. You will need to adjust the ingestion endpoint host, the Ikey value, and the timestamp values.
 
 Curl command for **Linux/MaxOS**:
 
@@ -243,7 +244,7 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ### PowerShell Script To Send 100 Trace Messages
 
-You can try to send a burst of telemetry records from the client machine to their component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the customer's machine. You can find it as part of NuGet package installation or Application Insights agent (SMv2) installation. The below script will load the dll then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
+You can try to send a burst of telemetry records from the machine to the Application Insights component. For this approach, you will want to find a version of Microsoft.ApplicationInsights.dll loaded on the machine. You can find it as part of NuGet package installation or Application Insights agent (SMv2) installation. The below script will load the dll, then call TrackTrace 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
 
 ```shell
 # One Parameter: Provide the Instrumentation Key
@@ -268,9 +269,9 @@ read-host “Press ENTER to continue...”
 
 ### SSL/TLS Troubleshooting
 
-If you suspect the problem is between the client and our ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and our Ingestion endpoints
+If you suspect the problem is between your machine or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and our Ingestion endpoints.
 
-First is an option to control which SSL/TLS protocol is used by PowerShell to make a connection to our ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
+First is an option to control which SSL/TLS protocol is used by PowerShell to make a connection to the ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
 
 ```shell
 # Uncomment one or more of these lines to test TLS/SSL protocols other than the machine default option
@@ -303,7 +304,7 @@ add-type @"
 
 If the application defaults to the system or machine default TLS settings then you can change those default settings within the registry on Windows machines using details found in this article: [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
 
-Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application then you can follow the official guidance here [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
+Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application, you can follow the official guidance here [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
 ### Next Steps
 
