@@ -66,3 +66,10 @@ sections:
           When the OS is being updated, the Azure Fabric does a graceful shutdown of your role instance. This practice means that your ASP.NET code will receive the `Application_End` event, and the Azure service runtime will raise the `Stopping` and `OnStop` events. Your code will have five minutes to finish cleanup work in `OnStop` before the process is shut down. After your Azure host process is shut down, Windows will go through a normal graceful shutdown, which includes raising the standard `OnStop` and related events for Windows Services. 
 
           For more information about how to handle a shutdown of your instance, see [The right way to handle Azure OnStop events](https://azure.microsoft.com/blog/the-right-way-to-handle-azure-onstop-events/), [Customize the lifecycle of a Web or Worker role in .NET](/azure/cloud-services/cloud-services-role-lifecycle-dotnet), and [RoleEntryPoint.OnStop() Method](/previous-versions/azure/reference/ee772844(v=azure.100)).
+
+additionalContent: |
+  ## More information
+
+  - [Role instance restarts caused by Azure VM operating system upgrades](./role-instance-restarts-os-upgrade.md)
+  
+  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
