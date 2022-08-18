@@ -233,7 +233,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
-          ```
+          ```Configuration
           from 10.0.1.4/32 table eth0-rt
           to 10.0.1.4/32 table eth0-rt
           ```
@@ -244,13 +244,13 @@ The routing rules are now correctly configured, and you can connect by using eit
           ```
       4. Add the following contents to the route file:
         
-          ```
+          ```Configuration
           10.0.1.0/24 dev eth0 table eth0-rt
           default via 10.0.1.1 dev eth0 table eth0-rt
           ```
 
     - Create rules and routes for eth1:
-    
+
       1. Create the rule file for eth1 by running the following command:
       
           ```bash
@@ -261,7 +261,7 @@ The routing rules are now correctly configured, and you can connect by using eit
           ```Configuration
           from 10.0.1.5/32 table eth1-rt
           to 10.0.1.5/32 table eth1-rt
-        ```
+          ```
       3. Create the route file for eth1 by running the following command:
       
           ```bash
