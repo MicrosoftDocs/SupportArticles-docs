@@ -61,15 +61,12 @@ Manually reinstall Health Agent for Sync to a version that is compatible with th
 
 To reinstall Health Agent for Sync:
 
-1. Determine the version of Health Agent that is compatible with the version of Azure AD Connect Synchronization Service that you have installed:
+1. Determine the version of Health Agent that is compatible with the version of Azure AD Connect Synchronization Service that you have installed. If you have Azure AD Connect Synchronization Service version 1.1.647.0 or a later version, use Health Agent Version 3.0.129.0.
 
-    - If you have Azure AD Connect Synchronization Service version 1.1.614.0 (or an earlier version), use Health Agent Version 3.0.127.0.
-    - If you have Azure AD Connect Synchronization Service version 1.1.647.0 (or a later version, use Health Agent Version 3.0.129.0.
-2. Download a copy of the Health Agent installer (AadConnectHealthAadSyncSetup.exe) from the following Microsoft Download Center website, as appropriate:
+2. Download a copy of the Health Agent installer (AadConnectHealthAadSyncSetup.exe) from the following Microsoft Download Center website:
 
-    [Health Agent installer version 3.0.127.0](https://www.microsoft.com/download/details.aspx?id=56143)
+    [Download and install Azure AD Connect Health Agent](/azure/active-directory/hybrid/how-to-connect-install-roadmap#download-and-install-azure-ad-connect-health-agent)
 
-    [Health Agent installer version 3.0.129.0](/azure/active-directory/hybrid/how-to-connect-install-roadmap#download-and-install-azure-ad-connect-health-agent)
 3. Log on to the Azure AD Connect server by using an account that has Local Administrator rights.
 4. To uninstall the existing version of Health Agent, follow these steps:
 
