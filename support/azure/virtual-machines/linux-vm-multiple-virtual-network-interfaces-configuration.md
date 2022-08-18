@@ -449,7 +449,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     # echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. Create or modify the "/etc/network/interfaces.d/50-cloud-init"  file by using the following configuration:
+1. Create or modify the */etc/network/interfaces.d/50-cloud-init*  file by using the following configuration:
 
     ```Configuration
     auto lo
