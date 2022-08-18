@@ -224,7 +224,7 @@ The routing rules are now correctly configured, and you can connect by using eit
 1. Create the corresponding files, and add the appropriate rules and routes to each of them. To create one set of rule-eth# and route-eth# files per network interfaces, follow these steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
-
+    
       1. Create the rule file for eth0 by running the following command:
 
         ```bash
