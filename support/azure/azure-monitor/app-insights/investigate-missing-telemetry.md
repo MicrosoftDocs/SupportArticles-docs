@@ -1,5 +1,5 @@
 ---
-title: Investigating missing telemetry in Application Insights
+title: Investigate missing telemetry in Azure Monitor Application Insights
 description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl client to isolate the step in the processing pipeline that causes telemetry to go missing
 ms.topic: conceptual
 ms.date: 8/18/2022
@@ -11,7 +11,7 @@ ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
 ---
 
-# Investigating missing telemetry in Application Insights using PowerShell or curl client
+# Investigate missing telemetry in Azure Monitor Application Insights using PowerShell or curl client
 
 This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing.
 
@@ -19,7 +19,7 @@ This article provides information to help you isolate the step in the processing
 
 If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
-![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/troubleshoot-missing-telemetry/life-of-a-telemetry-record.png "Life of a telemetry record")
+![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/investigate-missing-telemetry/life-of-a-telemetry-record.png "Life of a telemetry record")
 
 - The SDK or agent is misconfigured and not sending application telemetry to the ingestion endpoint.
 - The SDK or agent is configured correctly but the network is blocking calls to the ingestion endpoint.
@@ -152,7 +152,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We're looking for an HTTP 200 response, and as part of the response JSON payload we want to see the `itemsReceived` count **matches** the `itemsAccepted`. This means the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-![Code showing the amount of items received and items accepted](./media/troubleshoot-missing-telemetry/items-received-matches-items-accepted.png "Items received matches items accepted")
+![Code showing the amount of items received and items accepted](./media/investigate-missing-telemetry/items-received-matches-items-accepted.png "Items received matches items accepted")
 
 ### PowerShell script to send a request telemetry record
 
