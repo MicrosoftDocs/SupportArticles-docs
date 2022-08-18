@@ -30,33 +30,42 @@ You might also see the following events in Windows Server:
 
 - Event ID 3210
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |System         |
-    |Event Type       |Error         |
-    |Event Source     |Netlogon           |
-    |Event ID     |3210         |
-    |Event Text      |This computer could not authenticate with [file://%3cDomain]\\\\<Domain Controller Name\>.\<Domain Name\>, a Windows domain controller for domain \<Domain Name\>, and therefore this computer might deny logon requests.<br><br>This inability to authenticate might be caused by another computer on the same network using the same name or the password for this computer account is not recognized. If this message appears again, contact your system administrator.|
+    ```output
+    Event Log: System
+    Event Type: Error
+    Event Source: Netlogon
+    Event ID: 3210
+    Event Text: 
+    This computer could not authenticate with [file://%3cDomain]\\<Domain Controller Name>.<Domain Name>, a Windows domain controller for domain <Domain Name>, and therefore this computer might deny logon requests.
+ 
+    This inability to authenticate might be caused by another computer on the same network using the same name or the password for this computer account is not recognized. If this message appears again, contact your system administrator.
+    ```
 
 - Event ID 5719
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |System         |
-    |Event Type       |Error         |
-    |Event Source     |Netlogon           |
-    |Event ID     |5719         |
-    |Event Text      |This computer was not able to set up a secure session with a domain controller in domain \<Domain Name\> due to the following:<br><br>The remote procedure call failed and did not execute.<br><br>This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.|
+    ```output
+    Event Log: System
+    Event Type: Error
+    Event Source: Netlogon
+    Event ID: 5719
+    Event Text:
+    This computer was not able to set up a secure session with a domain controller in domain <Domain Name> due to the following:
+
+    The remote procedure call failed and did not execute.
+    
+    This may lead to authentication problems. Make sure that this computer is connected to the network. If the problem persists, please contact your domain administrator.
+    ```
 
 - Event ID 7
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |System         |
-    |Event Type       |Error         |
-    |Event Source     |Microsoft-Windows-Security-Kerberos           |
-    |Event ID     |7         |
-    |Event Text      |The digitally signed Privilege Attribute Certificate (PAC) that contains the authorization information for client \<Hostname\>$ in realm \<Domain Name\> could not be validated.|
+    ```output
+    Event Log: System
+    Event Type: Error
+    Event Source: Microsoft-Windows-Security-Kerberos
+    Event ID: 7
+    Event Text:
+    The digitally signed Privilege Attribute Certificate (PAC) that contains the authorization information for client <Hostname>$ in realm <Domain Name> could not be validated.
+    ```
 
 ## Events after installing Windows preview updates June 2022
 
@@ -64,33 +73,56 @@ Windows Server 2019 [June 23, 2022—KB5014669 (OS Build 17763.3113) Preview](ht
 
 - The Netlogon service starts successfully with the given RPC backlog size.
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |System         |
-    |Event Type       |Info         |
-    |Event Source     |Netlogon           |
-    |Event ID     |5836         |
-    |Event Text      |The Netlogon service was able to bind to a TCP/IP port with the configured backlog size of \<Configured Backlog Size\>|
+    ```output
+    Event Log: System
+    Event Type: Info
+    Event Source: Netlogon
+    Event ID: 5836
+    Event Text:
+    The Netlogon service was able to bind to a TCP/IP port with the configured backlog size of <Configured Backlog Size>
+    ```
 
 - The Netlogon service related backlog size failure.
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |System         |
-    |Event Type       |Warning         |
-    |Event Source     |Netlogon           |
-    |Event ID     |5837         |
-    |Event Text      |The Netlogon service tried to bind to a TCP/IP port with the configured backlog size of \<Configured RPC Backlog Size\> but failed.<br><br>More information can be found in the following log file '*%SystemRoot%\debug\netlogon.log*' and, potentially, in the log file '*%SystemRoot%\debug\netlogon.bak*' created if the former log becomes full. For steps in enabling the log, please visit `https://go.microsoft.com/fwlink/?linkid=2163327`.|
+    ```output
+    Event Log: System
+    Event Type: Warning
+    Event Source: Netlogon
+    Event ID: 5837
+    Event Text:
+    The Netlogon service tried to bind to a TCP/IP port with the configured backlog size of <Configured RPC Backlog Size> but failed.
+
+    More information can be found in the following log file '%SystemRoot%\debug\netlogon.log' and, potentially, in the log file '%SystemRoot%\debug\netlogon.bak' created if the former log becomes full. For steps in enabling the log, please visit https://go.microsoft.com/fwlink/?linkid=2163327.
+    ```
 
 - Active Directory replication related backlog limit failure.
 
-    |  |  |
-    |---------|---------|
-    |Event Log       |Active Directory Domain Services         |
-    |Event Type       |Warning         |
-    |Event Source     |ActiveDirectory_DomainService           |
-    |Event ID     |3042         |
-    |Event Text      |Active Directory Domain Services could not configure the TCP port with the backlog limit as specified in registry.<br><br>Additional Data<br><br>TCP Port:<br><br>\<Configured Port\><br><br>Configured backlog limit:<br><br>\<Backlog Limit Configured on Port\><br><br>Registry backlog limit:<br><br>\<Backlog Limit Specified in Registry\><br><br>User Action:<br><br>Make sure the same TCP port is not being used by other services such as Netlogon and the Active Directory Domain Controller has been rebooted after configuring the backlog limit value in registry.|
+    ```output
+    Event Log: Active Directory Domain Services
+    Event Type: Warning
+    Event Source: ActiveDirectory_DomainService
+    Event ID: 3042
+    Event Text:
+    Active Directory Domain Services could not configure the TCP port with the backlog limit as specified in registry.
+
+    Additional Data
+    
+    TCP Port:
+    
+    <Configured Port>
+
+    Configured backlog limit:
+
+    <Backlog Limit Configured on Port>
+
+    Registry backlog limit:
+
+    <Backlog Limit Specified in Registry>
+
+    User Action:
+
+    Make sure the same TCP port is not being used by other services such as Netlogon and the Active Directory Domain Controller has been rebooted after configuring the backlog limit value in registry.
+    ```
 
 ## Backlog limit value is exceeded  
   
