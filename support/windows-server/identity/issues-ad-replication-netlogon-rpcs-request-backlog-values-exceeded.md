@@ -131,7 +131,7 @@ The Transmission Control Protocol/Internet Protocol (TCP/IP) ports registered fo
 ## Increase RPC backlog limit value for DRSUAPI and Netlogon
 
 > [!IMPORTANT]
-> This section contains instructions to modify the registry. Serious problems might occur if the registry is modified incorrectly. As a precaution, back up the registry before you modify it. For more information about how to back up, restore, and modify the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
+> This section contains instructions to modify the registry. Serious problems might occur if the registry is modified incorrectly. As a precaution, back up the registry before you modify it. For more information about how to back up, restore, and modify the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
   
 You can use Registry Editor to increase the RPC backlog limit values for DRSUAPI and the Netlogon service as follows:  
 
