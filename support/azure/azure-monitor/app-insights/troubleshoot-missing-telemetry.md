@@ -1,6 +1,6 @@
 ---
-title: Test connectivity and telemetry ingestion using PowerShell or curl clients
-description: Learn how to troubleshoot missing data by using PowerShell or curl clients.
+title: Troubleshoot missing telemetry in Application Insights
+description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl clients
 ms.topic: conceptual
 ms.date: 8/5/2022
 ms.author: toddfous
@@ -8,26 +8,28 @@ editor: v-kainawroth
 ms.reviewer: aaronmax
 ms.service: azure-monitor
 ms.subservice: application-insights
-#Customer intent: As an Application Insights user I want to understand known issues for the Application Insights agent and how to troubleshoot common issues so I can use Application Insights and the agent effectively.
+#Customer intent: As an Application Insights user I want to know how to troubleshoot missing telemetry so I can use Application Insights effectively.
 ---
 
-# Test connectivity and telemetry ingestion using PowerShell or curl clients
+# Troubleshoot missing telemetry in Application Insights using PowerShell or curl clients
 
-## Missing or no data symptoms
+This article provides troubleshooting information to help resolve issues when telemetry is missing or doesn’t appear in Azure portal.
 
-If data is missing or you can't find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
+## Steps in the processing pipeline which can cause missing telemetry
 
-![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/troubleshoot-missing-data/life-of-a-telemetry-record.png "Life of a telemetry record")
+If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
-- The SDK or agent is misconfigured and not sending data to the ingestion endpoint.
+![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/troubleshoot-missing-telemetry/life-of-a-telemetry-record.png "Life of a telemetry record")
+
+- The SDK or agent is misconfigured and not sending application telemetry to the ingestion endpoint.
 - The SDK or agent is configured correctly but the network is blocking calls to the ingestion endpoint.
 - The ingestion endpoint is dropping or throttling inbound telemetry.
-- The ingestion pipeline is dropping or severely slowing down records as part of its processing. (rare)
-- Log Analytics is facing problems saving the telemetry. (rare)
-- The "draft" or query API, at api.applicationinsights.io, has failures querying the data from Log Analytics.
-- The Azure portal UI code has issues pulling or rendering the records you're trying to view.
+- The ingestion pipeline is dropping or severely slowing down records as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (rare)
+- Log Analytics is facing problems saving telemetry. (rare)
+- The telemetry query API at api.applicationinsights.io has failures querying telemetry from Log Analytics.
+- The Azure portal has issues pulling or rendering the records you're trying to view.
 
-Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the symptoms. One method that will assist with this isolation is sending a sample telemetry record using PowerShell.
+Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the problem. One method that will assist with this isolation is sending a sample telemetry record using PowerShell.
 
 ## Troubleshooting with PowerShell
 
@@ -37,7 +39,7 @@ If you connect to the machine or VM where the web application is running, you ca
 
 ### Azure Web Apps
 
-If the app that is having issues sending telemetry is running on Kudu, you can use the PowerShell script outlined here from Kudu's PowerShell debug command prompt feature in Azure Web Apps.
+If the app that is having issues sending telemetry is [running on Kudu](https://docs.microsoft.com/azure/app-service/resources-kudu), you can use the PowerShell script outlined here from Kudu's PowerShell debug command prompt feature in Azure Web Apps.
 
 The are two caveats to running the operations from Kudu:
 
@@ -150,7 +152,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 When the above script executes, you want to review the response details. We're looking for an HTTP 200 response, and as part of the response JSON payload we want to see the `itemsReceived` count **matches** the `itemsAccepted`. This means the ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
-![Code showing the amount of items received and items accepted](./media/troubleshoot-missing-data/items-received-matches-items-accepted.png "Items received matches items accepted")
+![Code showing the amount of items received and items accepted](./media/troubleshoot-missing-telemetry/items-received-matches-items-accepted.png "Items received matches items accepted")
 
 ### PowerShell script to send a request telemetry
 
