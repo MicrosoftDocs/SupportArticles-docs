@@ -23,7 +23,7 @@ This article provides the required configuration for multiple network interfaces
 
 For details, see the following screenshot.
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario.":::
 
 The configuration can also be used on a VM that has more network interfaces on the same or different subnets in the same VNET.
 
