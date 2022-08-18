@@ -1,21 +1,21 @@
 ---
-title: Troubleshoot missing telemetry in Application Insights
-description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl clients
+title: Investigating missing telemetry in Application Insights
+description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl client to isolate the step in the processing pipeline that causes telemetry to go missing
 ms.topic: conceptual
-ms.date: 8/5/2022
+ms.date: 8/18/2022
 ms.author: toddfous
 editor: v-kainawroth
 ms.reviewer: aaronmax
 ms.service: azure-monitor
 ms.subservice: application-insights
-#Customer intent: As an Application Insights user I want to know how to troubleshoot missing telemetry so I can use Application Insights effectively.
+#Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
 ---
 
-# Troubleshoot missing telemetry in Application Insights using PowerShell or curl clients
+# Investigating missing telemetry in Application Insights using PowerShell or curl client
 
-This article provides troubleshooting information to help resolve issues when telemetry is missing or doesn’t appear in Azure portal.
+This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing.
 
-## Steps in the processing pipeline which can cause missing telemetry
+## Every step telemetry passes in the processing pipeline
 
 If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
 
@@ -39,7 +39,7 @@ If you connect to the machine or VM where the web application is running, you ca
 
 ### Azure Web Apps
 
-If the app that is having issues sending telemetry is [running on Kudu](https://docs.microsoft.com/azure/app-service/resources-kudu), you can use the PowerShell script outlined here from Kudu's PowerShell debug command prompt feature in Azure Web Apps.
+If the app that is having issues sending telemetry is [running on Kudu](/azure/app-service/resources-kudu), you can use the PowerShell script outlined here from Kudu's PowerShell debug command prompt feature in Azure Web Apps.
 
 The are two caveats to running the operations from Kudu:
 
@@ -154,7 +154,7 @@ When the above script executes, you want to review the response details. We're l
 
 ![Code showing the amount of items received and items accepted](./media/troubleshoot-missing-telemetry/items-received-matches-items-accepted.png "Items received matches items accepted")
 
-### PowerShell script to send a request telemetry
+### PowerShell script to send a request telemetry record
 
 If you want to test sending a single request telemetry record, the below script will help you format it. This telemetry type is susceptible to server-side ingestion sampling configuration. Make sure ingestion sampling is turned off to help confirm if these records are getting saved correctly.
 
@@ -226,7 +226,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ### Curl client to send availability test telemetry record
 
-If you're running Linux VMs, you could rely on the Curl client to send a similar REST call instead of PowerShell. Below is a Curl request to send a single availability web test result record. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
+If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability web test result record. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
 
 Curl command for **Linux/MaxOS**:
 
@@ -268,7 +268,7 @@ read-host “Press ENTER to continue...”
 
 ```
 
-### SSL/TLS troubleshooting
+## SSL/TLS troubleshooting
 
 If you suspect the problem is between your machine or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
 
@@ -307,7 +307,7 @@ If the application defaults to the system or machine default TLS settings, you c
 
 Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application, you can follow the official guidance in [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
-### Next steps
+## Next steps
 
 If sending telemetry via PowerShell from the impacted machine works, you will want to investigate the SDK or codeless configuration for further troubleshooting.
 
