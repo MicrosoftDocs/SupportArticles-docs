@@ -26,12 +26,12 @@ If telemetry is missing or you can't find specific telemetry records, it can be 
 - The ingestion endpoint is dropping or throttling inbound telemetry.
 - The ingestion pipeline is dropping or severely slowing down records as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (rare)
 - Log Analytics is facing problems saving telemetry. (rare)
-- The telemetry query API at api.applicationinsights.io has failures querying telemetry from Log Analytics.
+- The telemetry query API at `api.applicationinsights.io` has failures querying telemetry from Log Analytics.
 - The Azure portal has issues pulling or rendering the records you're trying to view.
 
 Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the problem. One method that will assist with this isolation is sending a sample telemetry record using PowerShell.
 
-## Troubleshooting with PowerShell
+## Troubleshoot with PowerShell
 
 ### On-premises or Azure VM
 
@@ -62,7 +62,7 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 - The network delivered the telemetry to the ingestion endpoint without blocking or dropping.
 - The ingestion endpoint accepted the sample payload and processed it through the ingestion pipeline.
 - Log Analytics correctly saved the sample telemetry record.
-- The Azure portal **Logs** tab was able to query the draft API (api.applicationinsights.io) and render the record in the portal UI.
+- The Azure portal **Logs** tab was able to query the API (`api.applicationinsights.io`) and render the record in the portal UI.
 
 If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
 
@@ -312,3 +312,5 @@ Alternatively, if you need to change the default TLS/SSL protocol used by a .NET
 If sending telemetry via PowerShell from the impacted machine works, you will want to investigate the SDK or codeless configuration for further troubleshooting.
 
 If sending telemetry via PowerShell also fails, continue to isolate where the problem could be: DNS investigations, TCP connection to ingestion endpoint, look for Dropped Metrics on the Ingestion tab within ASC, etc.
+
+[!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
