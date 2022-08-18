@@ -224,55 +224,55 @@ The routing rules are now correctly configured, and you can connect by using eit
 1. Create the corresponding files, and add the appropriate rules and routes to each of them. To create one set of rule-eth# and route-eth# files per network interfaces, follow these steps. Replace the IP address and subnet information accordingly in every step. If you have more network interfaces, create the same set of rule-eth# and route-eth# files for each interface by using the corresponding IP and subnet details.
 
     - Create rules and routes for eth0:
-    
+
       1. Create the rule file for eth0 by running the following command:
 
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth0
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/rule-eth0
+          ```
 
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
-        ```
-        from 10.0.1.4/32 table eth0-rt
-        to 10.0.1.4/32 table eth0-rt
-        ```
+          ```
+          from 10.0.1.4/32 table eth0-rt
+          to 10.0.1.4/32 table eth0-rt
+          ```
       3. Create the route file for eth0 by running the following command:
   
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth0
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/route-eth0
+          ```
       4. Add the following contents to the route file:
         
-        ```
-        10.0.1.0/24 dev eth0 table eth0-rt
-        default via 10.0.1.1 dev eth0 table eth0-rt
-        ```
+          ```
+          10.0.1.0/24 dev eth0 table eth0-rt
+          default via 10.0.1.1 dev eth0 table eth0-rt
+          ```
 
     - Create rules and routes for eth1:
     
       1. Create the rule file for eth1 by running the following command:
       
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth1
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/rule-eth1
+          ```
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
       
-        ```Configuration
-        from 10.0.1.5/32 table eth1-rt
-        to 10.0.1.5/32 table eth1-rt
+          ```Configuration
+          from 10.0.1.5/32 table eth1-rt
+          to 10.0.1.5/32 table eth1-rt
         ```
       3. Create the route file for eth1 by running the following command:
       
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth1
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/route-eth1
+          ```
       4. Add the following contents to the route file:
       
-        ```Configuration
-        10.0.1.0/24 dev eth1 table eth1-rt
-        default via 10.0.1.1 dev eth1 table eth1-rt
-        ```
+          ```Configuration
+          10.0.1.0/24 dev eth1 table eth1-rt
+          default via 10.0.1.1 dev eth1 table eth1-rt
+          ```
 
 6. To apply the changes, restart the network service by running the following command:
 
