@@ -13,6 +13,8 @@ old_ms.prod: w10
 ms.technology: windows-client-networking
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 old_manager: dansimp
+audience: itpro
+localization_priority: medium
 ---
  
 # Data collection for troubleshooting 802.1X authentication

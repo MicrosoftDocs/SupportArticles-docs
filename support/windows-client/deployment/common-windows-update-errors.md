@@ -13,6 +13,8 @@ old_ms.prod: w10
 ms.technology: windows-client-deployment
 ms.custom: sap:servicing, csstroubleshoot
 old_manager: dougeby
+audience: itpro
+localization_priority: medium
 ---
 
 # Windows Update common errors and mitigation

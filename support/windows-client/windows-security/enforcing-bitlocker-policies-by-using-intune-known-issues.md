@@ -19,6 +19,8 @@ old_ms.prod: m365-security
 old_ms.technology: windows-sec
 old_ms.custom: bitlocker
 old_manager: kaushika
+audience: itpro
+localization_priority: medium
 ---
 
 # Enforcing BitLocker policies by using Intune: known issues

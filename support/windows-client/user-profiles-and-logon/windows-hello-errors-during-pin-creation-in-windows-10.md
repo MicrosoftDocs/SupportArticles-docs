@@ -20,6 +20,8 @@ old_ms.prod: m365-security
 ms.technology: windows-client-user-profiles
 ms.custom: sap:hello-for-business, csstroubleshoot
 old_manager: aaroncz
+audience: itpro
+localization_priority: medium
 ---
 
 # Windows Hello errors during PIN creation

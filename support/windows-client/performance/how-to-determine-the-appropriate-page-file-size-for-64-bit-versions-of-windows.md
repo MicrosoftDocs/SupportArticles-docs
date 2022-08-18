@@ -14,6 +14,8 @@ old_ms.prod: w10
 ms.technology: windows-client-performance
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 old_manager: dansimp
+audience: itpro
+localization_priority: medium
 ---
 
 # How to determine the appropriate page file size for 64-bit versions of Windows

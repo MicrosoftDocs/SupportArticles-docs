@@ -16,6 +16,8 @@ ms.technology: windows-client-backup-and-storage
 old_ms.custom: seo-marvel-apr2020
 old_manager: dougeby
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # MBR2GPT.EXE

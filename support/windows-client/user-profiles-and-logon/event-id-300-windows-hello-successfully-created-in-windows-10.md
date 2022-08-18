@@ -19,6 +19,8 @@ ms.technology: windows-client-user-profiles
 ms.custom: sap:hello-for-business, csstroubleshoot
 old_manager: aaroncz
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # Event ID 300 - Windows Hello successfully created

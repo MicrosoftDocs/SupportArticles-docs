@@ -12,6 +12,7 @@ ms.localizationpriority: medium
 ms.reviewer: kaushika
 ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-performance
+localization_priority: medium
 ---
 
 # Push-button reset fails because language resources are missing

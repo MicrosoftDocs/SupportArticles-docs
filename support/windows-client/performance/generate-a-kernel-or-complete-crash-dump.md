@@ -14,6 +14,8 @@ old_ms.prod: w10
 ms.technology: windows-client-performance
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 old_manager: willchen
+audience: itpro
+localization_priority: medium
 ---
 
 # Generate a kernel or complete crash dump 

@@ -13,6 +13,8 @@ old_ms.prod: w10
 ms.technology: windows-client-shell-experience
 ms.custom: sap:start-menu, csstroubleshoot
 old_manager: aaroncz
+audience: itpro
+localization_priority: medium
 ---
 
 # Troubleshoot Start menu errors

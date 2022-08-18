@@ -15,6 +15,8 @@ old_ms.prod: w10
 old_ms.technology: windows
 ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 old_manager: dougeby
+audience: itpro
+localization_priority: medium
 ---
 
 # Advanced troubleshooting for stop or blue screen errors

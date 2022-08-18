@@ -14,6 +14,8 @@ old_ms.prod: w10
 ms.technology: windows-client-networking
 ms.custom: sap:tcp/ip-communications, csstroubleshoot
 old_manager: dansimp
+audience: itpro
+localization_priority: medium
 ---
 
 # Collect data using Network Monitor

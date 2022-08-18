@@ -13,6 +13,8 @@ ms.technology: windows-client-deployment
 ms.custom: sap:setup, csstroubleshoot
 old_manager: dougeby
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # Troubleshooting upgrade errors

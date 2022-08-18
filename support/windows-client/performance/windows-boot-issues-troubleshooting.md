@@ -16,6 +16,8 @@ old_ms.prod: w10
 old_ms.technology: windows
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 old_manager: dougeby
+audience: itpro
+localization_priority: medium
 ---
 
 # Advanced troubleshooting for Windows boot problems

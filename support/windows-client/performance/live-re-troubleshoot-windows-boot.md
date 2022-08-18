@@ -12,6 +12,7 @@ ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.topic: troubleshooting
 ms.date: 10/30/2021
 ms.localizationpriority: medium
+localization_priority: medium
 ---
 # Use LiveRE to troubleshoot Windows startup problems
 

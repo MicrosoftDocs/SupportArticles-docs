@@ -14,6 +14,8 @@ ms.technology: windows-client-shell-experience
 ms.custom: sap:kiosk-mode, csstroubleshoot
 old_manager: aaroncz
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # Troubleshoot kiosk mode issues

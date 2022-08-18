@@ -15,6 +15,8 @@ ms.technology: windows-client-deployment
 old_ms.custom: seo-marvel-apr2020
 old_manager: dougeby
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # Quick fixes

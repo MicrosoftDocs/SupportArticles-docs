@@ -14,6 +14,8 @@ ms.technology: windows-client-deployment
 ms.custom: sap:usmt, csstroubleshoot
 old_manager: dougeby
 old_ms.topic: article
+audience: itpro
+localization_priority: medium
 ---
 
 # Common Issues
