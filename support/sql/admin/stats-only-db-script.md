@@ -1,7 +1,7 @@
 ---
 title: Create a statistics-only database using a generated statistics script  
 description: Learn how to generate a statistic script using metadata to create a statistics-only database in SQL Server. 
-ms.date: 08/09/2022
+ms.date: 08/18/2022
 ms.custom: sap:Administration and Management
 ms.topic: how-to
 author: ramakoni1
@@ -9,7 +9,7 @@ ms.prod: sql
 ms.author: v-jayaramanp
 ---
 
-# How to: Generate a statistics script to create a statistics-only database in SQL Server
+# How to generate a statistics script to create a statistics-only database in SQL Server
 
 In this article, you learn how to generate a statistics script using database metadata for creating a statistics-only database in SQL Server.
 
@@ -19,6 +19,8 @@ SQL Server 2008
 _Original KB number:_ &nbsp;914288
 
 ## Introduction
+
+The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate a schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
 
 The query optimizer in Microsoft SQL Server uses the following types of information to determine an optimal query plan:
 
@@ -33,10 +35,6 @@ Microsoft Customer Support Services might ask you to generate a script of the da
 > [!NOTE]
 > The keys saved within this data might contain PII information. For example, if your table contains a **Phone number** column with a statistic on it, each step’s high key value will be in the generated statistics script.
 
-## More information
-
-The [DBCC CLONEDATABASE](/sql/t-sql/database-console-commands/dbcc-clonedatabase-transact-sql?view=sql-server-ver15&preserve-view=true) is the preferred method to generate a schema-only clone of a database to investigate performance issues. Use the procedure in this article only when you aren't able to use `DBCC CLONEDATABASE`.
-
 ## Script the whole database
 
 When you generate a statistics-only clone database, it might be easier and more reliable to script the whole database instead of scripting individual objects. When you script the whole database, you receive the following benefits:
@@ -44,7 +42,7 @@ When you generate a statistics-only clone database, it might be easier and more 
 - You avoid issues with missing dependent objects that are required to reproduce the issue.
 - You require fewer steps to select the necessary objects.
 
-Note that if you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's recommended that you generate the script during off-peak hours, or you can use the second option ([Script Individual Objects](#script-individual-objects)) to generate the script for individual objects.
+Note that if you generate a script for a database, and the metadata for the database contains thousands of objects, the scripting process consumes significant CPU resources. It's recommended that you generate the script during off-peak hours, or you can use the second option [Script Individual Objects](#script-individual-objects) to generate the script for individual objects.
 
 To script each database that is referenced by your query, follow these steps:
 
@@ -71,7 +69,8 @@ To script each database that is referenced by your query, follow these steps:
     |Script Indexes     | True |
     |Script Triggers     | True |
 
-1. Note that the **Script Logins** option and the **Script Object Level Permissions** option might not be required unless the schema contains objects that are owned by logins other than **dbo**.
+    > [!NOTE]
+    > Note that the **Script Logins** option and the **Script Object Level Permissions** option might not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Select **OK** to save the changes, and close the **Advanced Scripting Options** page.
 
@@ -125,7 +124,8 @@ Therefore, it isn't recommended that you script individual objects unless the da
     |Script Indexes     | True         |
     |Script Triggers      | True        |
 
-1. Note that the **Script Logins** and **Script Object Level Permissions** options might not be required unless the schema contains objects that are owned by logins other than **dbo**.
+     > [!NOTE]
+     > Note that the **Script Logins** and **Script Object Level Permissions** options might not be required unless the schema contains objects that are owned by logins other than **dbo**.
 
 1. Select **OK** to save and close the **Advanced Scripting Options** page.
 
@@ -153,7 +153,7 @@ The following tables help explain how the query optimizer uses this information 
 
 |Option  |Explanation  |
 |---------|---------|
-|Constraints| The query optimizer frequently uses constraints to detect contradictions between the query and the underlying schema. For example, if the query contains the `"WHERE col = 5"` clause and a `"CHECK (col < 5)"` constraint exists on the underlying table, the query optimizer knows that no rows will match. The query optimizer makes similar types of deductions about nullability. For example, the `"WHERE col IS NULL"` clause is known to be true or false depending on the nullability of the column and whether the column is from the outer table of an outer join. The presence of FOREIGN KEY constraints is useful to determine cardinality and the appropriate join order. The query optimizer can use constraint information to eliminate joins or simplify predicates. These changes might remove the requirement to access the base tables.         |
+|Constraints| The query optimizer frequently uses constraints to detect contradictions between the query and the underlying schema. For example, if the query contains the `WHERE col = 5` clause and a `CHECK (col < 5)` constraint exists on the underlying table, the query optimizer knows that no rows will match. The query optimizer makes similar types of deductions about nullability. For example, the `WHERE col IS NULL` clause is known to be true or false depending on the nullability of the column and whether the column is from the outer table of an outer join. The presence of FOREIGN KEY constraints is useful to determine cardinality and the appropriate join order. The query optimizer can use constraint information to eliminate joins or simplify predicates. These changes might remove the requirement to access the base tables.         |
 |Statistics     |   The statistics information contains density and a histogram that shows the distribution of the leading column of the index and statistics key. Depending on the nature of the predicate, the query optimizer might use density, the histogram, or both to estimate the cardinality of a predicate. Up-to-date statistics are required for accurate cardinality estimates. The cardinality estimates are used as an input in estimating the cost of an operator. Therefore, you must have good cardinality estimates to obtain optimal query plans. |
 |Table size (number of rows and pages) | The query optimizer uses the histograms and density to calculate the probability that a given predicate is true or false. The final cardinality estimate is calculated by multiplying the probability by the number of rows that the child operator returns. The number of pages in the table or the index is a factor in estimating the IO cost. The table size is used to calculate the cost of a scan, and it's useful when you estimate the number of pages that will be accessed during an index seek.|
 |Database options | Several database options can affect optimization. The `AUTO_CREATE_STATISTICS` and `AUTO_UPDATE_STATISTICS` options affect whether the query optimizer will create new statistics or update statistics that are out of date. The Parameterization level affects how the input query is parameterized before the input query is handed to the query optimizer. Parameterization can affect cardinality estimation and can also prevent matching against indexed views and other types of optimizations. The `DATE_CORRELATION_OPTIMIZATION` setting causes the optimizer to search for correlations between columns. This setting affects cardinality and cost estimation.          |
@@ -162,8 +162,8 @@ The following tables help explain how the query optimizer uses this information 
 
 |Option  |Explanation  |
 |---------|---------|
-|Session SET options   | The `ANSI_NULLS` setting affects whether the `"NULL = NULL"` expression evaluates as true. Cardinality estimation for outer joins might change depending on the current setting. Additionally, ambiguous expressions might also change. For example, the `"col = NULL"` expression evaluates differently based on the setting. However, the `"col IS NULL"` expression always evaluates the same way.|
-|Hardware resources   | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism hasn't been disabled by using a `"MAXDOP"` hint or the max degree of parallelism configuration option. |
+|Session SET options   | The `ANSI_NULLS` setting affects whether the `NULL = NULL` expression evaluates as true. Cardinality estimation for outer joins might change depending on the current setting. Additionally, ambiguous expressions might also change. For example, the `col = NULL` expression evaluates differently based on the setting. However, the `col IS NULL` expression always evaluates the same way.|
+|Hardware resources   | The cost for sort and hash operators depends on the relative amount of memory that is available to SQL Server. For example, if the size of the data is larger than the cache, the query optimizer knows that the data must always be spooled to disk. However, if the size of the data is much smaller than the cache, the operation is likely to be done in memory. SQL Server also considers different optimizations if the server has more than one processor and if parallelism hasn't been disabled by using a `MAXDOP` hint or the max degree of parallelism configuration option. |
 
 ## See also
 
