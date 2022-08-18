@@ -24,6 +24,8 @@ old_ms.topic: article
 - Windows 10
 - Windows 11
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Single-app kiosk issues
 
 >[!TIP]

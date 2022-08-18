@@ -46,6 +46,8 @@ The following table describes some log files and how to use them for troubleshoo
 |BlueBox.log|Down-Level:<br>Windows\Logs\Mosetup|Contains information communication between setup.exe and Windows Update.|Use during WSUS and Windows Update down-level failures or for 0xC1900107.|
 |Supplemental rollback logs:<br>Setupmem.dmp<br>setupapi.dev.log<br>Event logs (*.evtx)|$Windows.~BT\Sources\Rollback|Additional logs collected during rollback.|Setupmem.dmp: If OS bug checks during upgrade, setup will attempt to extract a mini-dump.<br>Setupapi: Device install issues - 0x30018<br>Event logs: Generic rollbacks (0xC1900101) or unexpected reboots.|
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Log entry structure
 
 A setupact.log or setuperr.log entry (files are located at C:\Windows) includes the following elements:

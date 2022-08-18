@@ -31,6 +31,8 @@ This article describes how to configure the actions that Windows takes when a sy
 >[!Note]
 > You must be logged on as an administrator or a member of the Administrators group to complete this procedure. If your computer is connected to a network, network policy settings may prevent you from completing this procedure.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Configuring system failure and recovery options
 
 > [!IMPORTANT]  

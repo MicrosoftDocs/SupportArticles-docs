@@ -24,6 +24,8 @@ This article describes how to troubleshoot freeze issues on Windows-based comput
 > [!NOTE]
 > The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Identify the problem
 
 - Which computer is freezing? For example, the affected computer is a physical server or a virtual server.

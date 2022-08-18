@@ -63,6 +63,8 @@ The saved file has captured all the traffic that is flowing to and from the sele
  
 Network traces that are collected using the **netsh** commands built in to Windows are of the extension "ETL". However, these ETL files can be opened using Network Monitor for further analysis. 
 
+_Applies to:_ &nbsp; Windows 10
+
 ## More information
 
 [Intro to Filtering with Network Monitor 3.0](/archive/blogs/netmon/intro-to-filtering-with-network-monitor-3-0)<br>

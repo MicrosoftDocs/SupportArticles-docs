@@ -22,6 +22,8 @@ This topic describes User State Migration Tool (USMT) 10.0 return codes and err
 
 Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](usmt-requirements.md).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## In This Topic
 
 [USMT Return Codes](#bkmk-returncodes)

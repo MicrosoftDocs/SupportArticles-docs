@@ -19,6 +19,8 @@ old_manager: dansimp
 
 A page file (also known as a "paging file") is an optional, hidden system file on a hard disk.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Functionality
 
 Page files have the following functionalities.

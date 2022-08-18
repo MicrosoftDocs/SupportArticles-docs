@@ -20,6 +20,8 @@ old_manager: dansimp
 
 Page file sizing depends on the system crash dump setting requirements and the peak usage or expected peak usage of the system commit charge. Both considerations are unique to each system, even for systems that are identical. This uniqueness means that page file sizing is also unique to each system and can't be generalized.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Determine the appropriate page file size
 
 Use the following considerations for page file sizing for all versions of Windows and Windows Server.

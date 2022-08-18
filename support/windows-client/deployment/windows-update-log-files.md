@@ -29,6 +29,8 @@ The following table describes the log files created by Windows Update.
 |NotificationUxBroker.etl|C:\ProgramData\USOShared\Logs|Starting Windows 10, the notification toast or the banner is triggered by NotificationUxBroker.exe. |When you want to check whether the notification was triggered or not. |
 |CBS.log|%systemroot%\Logs\CBS|This log provides insight on the update installation part in the servicing stack.|To troubleshoot the issues related to Windows Update installation.|
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Generating WindowsUpdate.log 
 To merge and convert Windows Update trace files (.etl files) into a single readable WindowsUpdate.log file, see [Get-WindowsUpdateLog](/powershell/module/windowsupdate/get-windowsupdatelog?preserve-view=tru&view=win10-ps). 
 

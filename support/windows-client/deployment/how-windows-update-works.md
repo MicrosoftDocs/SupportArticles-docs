@@ -51,6 +51,8 @@ The Windows Update workflow has four core areas of functionality:
 2. The arbiter finalizes before the restart.
 
 
+_Applies to:_ &nbsp; Windows 10
+
 ## How updating works 
 During the updating process, the Windows Update Orchestrator operates in the background to scan, download, and install updates. It does these actions automatically, according to your settings, and silently so that doesn't disrupt your computer usage. 
 

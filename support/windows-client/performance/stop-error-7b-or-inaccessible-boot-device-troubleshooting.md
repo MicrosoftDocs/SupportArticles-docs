@@ -20,6 +20,8 @@ old_manager: dansimp
 
 This article provides steps to troubleshoot **Stop error 7B: Inaccessible_Boot_Device**. This error might occur after some changes are made to the computer, or immediately after you deploy Windows on the computer.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Causes of the  Inaccessible_Boot_Device  Stop error
 
 Any one of the following factors might cause the stop error:

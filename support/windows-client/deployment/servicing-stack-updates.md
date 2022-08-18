@@ -26,6 +26,8 @@ old_ms.topic: article
 -   Windows 10
 -   Windows 11
 
+_Applies to:_ &nbsp; Windows 10
+
 ## What is a servicing stack update?
 Servicing stack updates provide fixes to the servicing stack, the component that installs Windows updates. Additionally, it contains the "component-based servicing stack" (CBS), which is a key underlying component for several elements of Windows deployment, such as DISM, SFC, changing Windows features or roles, and repairing components. The CBS is a small component that typically does not have updates released every month.
 

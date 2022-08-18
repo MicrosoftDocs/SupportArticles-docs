@@ -30,6 +30,8 @@ When a connection is being established with an application or service, client de
  
 In a scenario where the same browser is creating many connections to multiple websites, for any new connection that the browser is attempting, an ephemeral port is used. After some time, you'll notice that the connections will start to fail and one high possibility for this failure would be because the browser has used all the available ports to make connections outside and any new attempt to establish a connection will fail as there are no more ports available. When all the ports on a machine are used, we term it as *port exhaustion*. 
  
+_Applies to:_ &nbsp; Windows 10
+
 ## Default dynamic port range for TCP/IP
  
 To comply with [Internet Assigned Numbers Authority (IANA)](http://www.iana.org/assignments/port-numbers) recommendations, Microsoft has increased the dynamic client port range for outgoing connections. The new default start port is **49152**, and the new default end port is **65535**. This increase is a change from the configuration of earlier versions of Windows that used a default port range of **1025** through **5000**. 

@@ -22,6 +22,8 @@ A system crash (also known as a “bug check” or a "Stop error") occurs when W
 
 A manual kernel or complete memory dump file is useful when you troubleshoot several issues because the process captures a record of system memory at the time of a crash.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Set up page files
 
 See [Support for system crash dumps](determine-appropriate-page-file-size.md#support-for-system-crash-dumps) for the page file size requirement for system crash dump.

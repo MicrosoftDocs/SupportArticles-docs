@@ -67,6 +67,8 @@ The event will also contain links to log files that can be used to perform a det
 
 :::image type="content" source="media/windows-error-reporting/event.png" alt-text="Windows Error Reporting." border="false":::
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Related topics
 
 [Windows 10 FAQ for IT professionals](../planning/windows-10-enterprise-faq-itpro.yml)  

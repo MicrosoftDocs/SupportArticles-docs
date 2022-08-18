@@ -20,6 +20,8 @@ old_manager: dougeby
 > [!NOTE]
 > Home users: This article is intended for use by support agents and IT professionals. If you're looking for more general information about Wi-Fi problems in Windows 10, check out this [Windows 10 Wi-Fi fix article](https://support.microsoft.com/en-in/help/4000432/windows-10-fix-wi-fi-problems).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Overview
 
 This overview describes the general troubleshooting of establishing Wi-Fi connections from Windows clients.

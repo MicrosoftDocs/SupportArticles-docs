@@ -18,6 +18,8 @@ old_manager: dougeby
  
 # Advanced troubleshooting 802.1X authentication
  
+_Applies to:_ &nbsp; Windows 10
+
 ## Overview
 
 This article includes general troubleshooting for 802.1X wireless and wired clients. While troubleshooting 802.1X and wireless, it's important to know how the flow of authentication works, and then figure out where it's breaking. It involves many third-party devices and software. Most of the time, we have to identify where the problem is, and another vendor has to fix it. We don't make access points or switches, so it's not an end-to-end Microsoft solution.

@@ -25,6 +25,8 @@ Start failures can be organized into these categories:
 - **Hangs** - in Shell Experience host or related. These are the hardest issues to identify as there are few events logged, but behavior is typically intermittent or recovers with a reboot. If a background application or service hangs, Start will not have resources to respond in time. Clean boot may help identify if the issue is related to additional software. Procmon is also useful in this scenario.
 - **Other issues** - Customization, domain policies, deployment issues.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Basic troubleshooting
 	
 When troubleshooting basic Start issues (and for the most part, all other Windows apps), there are a few things to check if they are not working as expected. For issues where the Start menu or subcomponent isn't working, you can do some quick tests to narrow down where the issue may reside.

@@ -30,6 +30,8 @@ You can use User State Migration Tool (USMT) 10.0 logs to monitor your migratio
 
 [Diagnostic Log](#bkmk-diagnosticlog)
 
+_Applies to:_ &nbsp; Windows 10
+
 ## <a href="" id="bkmk-commandlineoptions"></a>Log Command-Line Options
 
 The following table describes each command-line option related to logs, and it provides the log name and a description of what type of information each log contains.

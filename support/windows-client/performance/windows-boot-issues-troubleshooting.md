@@ -25,6 +25,8 @@ old_manager: dougeby
 > [!NOTE]
 > This article is intended for use by support agents and IT professionals. If you're looking for more general information about recovery options, see [Recovery options in Windows 10](https://support.microsoft.com/windows/recovery-options-in-windows-31ce2444-7de3-818c-d626-e3b5a3024da5).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Summary
 
 There are several reasons why a Windows-based computer may have problems during startup. To troubleshoot boot problems, first determine in which of the following phases the computer gets stuck:

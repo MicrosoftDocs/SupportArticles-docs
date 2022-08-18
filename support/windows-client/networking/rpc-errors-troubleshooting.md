@@ -38,6 +38,8 @@ Before getting in to troubleshooting the <em>*RPC server unavailable</em>- error
 >[!Note]
 > A lot of the above information is used in troubleshooting, the most important is the Dynamic RPC port number you get while talking to EPM.
  
+_Applies to:_ &nbsp; Windows 10
+
 ## How the connection works
 
 Client A wants to execute some functions or wants to make use of a service running on the remote server, will first establish the connection with the Remote Server by doing a three-way handshake.  

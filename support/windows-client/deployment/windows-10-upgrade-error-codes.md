@@ -38,6 +38,8 @@ Note: If only a result code is returned, this can be because a tool is being use
 >[!TIP]
 >If you are unable to locate the result and extend error codes, you can attempt to find these codes using Event Viewer.  For more information, see [Windows Error Reporting](windows-error-reporting.md).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Result codes
 
 A result code of **0xC1900101** is generic and indicates that a rollback occurred. In most cases, the cause is a driver compatibility issue. To troubleshoot a failed upgrade that has returned a result code of 0xC1900101, analyze the extend code to determine the Windows Setup phase, and see the [Resolution procedures](resolution-procedures.md) section later in this article.

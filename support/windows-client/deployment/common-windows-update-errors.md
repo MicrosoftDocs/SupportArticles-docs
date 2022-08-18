@@ -24,6 +24,8 @@ old_manager: dougeby
 
 The following table provides information about common errors you might run into with Windows Update, as well as steps to help you mitigate them.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## 0x8024402F
 
 | Message | Description | Mitigation |

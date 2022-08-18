@@ -54,6 +54,8 @@ These phases are explained in greater detail [below](#the-windows-10-upgrade-pro
  
 If the general troubleshooting techniques described above or the [quick fixes](quick-fixes.md) detailed below do not resolve your issue, you can attempt to analyze [log files](log-files.md) and interpret [upgrade error codes](upgrade-error-codes.md). You can also [Submit Windows 10 upgrade errors using Feedback Hub](submit-errors.md) so that Microsoft can diagnose your issue.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## The Windows 10 upgrade process
 
 The **Windows Setup** application is used to upgrade a computer to Windows 10, or to perform a clean installation. Windows Setup starts and restarts the computer, gathers information, copies files, and creates or adjusts configuration settings. 

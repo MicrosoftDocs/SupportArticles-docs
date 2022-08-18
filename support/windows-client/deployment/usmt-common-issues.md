@@ -21,6 +21,8 @@ old_ms.topic: article
 
 The following sections discuss common issues that you might see when you run the User State Migration Tool (USMT) 10.0 tools. USMT produces log files that describe in further detail any errors that occurred during the migration process. These logs can be used to troubleshoot migration failures.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## In This Topic
 
 

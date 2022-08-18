@@ -47,6 +47,8 @@ Offline conversion of system disks with earlier versions of Windows installed, s
 >
 > Make sure that your device supports UEFI before attempting to convert the disk.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Disk Prerequisites
 
 Before any change to the disk is made, MBR2GPT validates the layout and geometry of the selected disk to ensure that:

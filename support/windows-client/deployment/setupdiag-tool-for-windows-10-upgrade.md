@@ -30,6 +30,8 @@ old_ms.topic: article
 :::image type="content" source="media/setupdiag-tool-for-windows-10-upgrade/download.png" alt-text="Download SetupDiag." border="false":::
 ](https://go.microsoft.com/fwlink/?linkid=870142)
 
+_Applies to:_ &nbsp; Windows 10
+
 ## About SetupDiag
 
 <I>Current downloadable version of SetupDiag: 1.6.2107.27002.</I> 

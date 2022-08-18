@@ -39,6 +39,8 @@ A network trace on the source and the destination helps you to determine the flo
  
 The following sections describe some of the scenarios when you'll see a RESET. 
  
+_Applies to:_ &nbsp; Windows 10
+
 ## Packet drops
  
 When one TCP peer is sending out TCP packets for which there's no response received from the other end, the TCP peer would end up retransmitting the data and when there's no response received, it would end the session by sending an ACK RESET (thisACK RESET means that the application acknowledges whatever data is exchanged so far, but because of packet drop, the connection is closed).  

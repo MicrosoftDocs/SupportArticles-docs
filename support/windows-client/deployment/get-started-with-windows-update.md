@@ -30,6 +30,8 @@ Use the following information to get started with Windows Update:
 - Review [other resources](windows-update-resources.md) to help you use Windows Update
 - Review [Windows IT Pro Blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/bg-p/Windows10Blog) section of Microsoft Blogs.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## Unified Update Platform (UUP) architecture 
 To understand the changes to the Windows Update architecture that UUP introduces let's start with some new key terms. 
 

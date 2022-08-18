@@ -31,6 +31,8 @@ old_ms.topic: article
 
 The following resources provide additional information about using Windows Update.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## WSUS Troubleshooting
 
 [Troubleshooting issues with WSUS client agents](/troubleshoot/mem/configmgr/troubleshoot-issues-with-wsus-client-agents)

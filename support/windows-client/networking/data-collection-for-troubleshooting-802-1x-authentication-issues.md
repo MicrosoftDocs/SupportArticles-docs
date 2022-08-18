@@ -19,6 +19,8 @@ old_manager: dansimp
 
 Use the following steps to collect data that can be used to troubleshoot 802.1X authentication issues. When you have collected data, see [Advanced troubleshooting 802.1X authentication](advanced-troubleshooting-802-authentication.md).
  
+_Applies to:_ &nbsp; Windows 10
+
 ## Capture wireless/wired functionality logs
 
 Use the following steps to collect wireless and wired logs on Windows and Windows Server:

@@ -33,6 +33,8 @@ The Microsoft Virtual Agent provided by [Microsoft Support](https://support.micr
 > [!TIP]
 > You might also wish to try a new tool available from Microsoft that helps to diagnose many Windows upgrade errors. For more information and to download this tool, see [SetupDiag](setupdiag.md). The topic is more advanced (300 level) because several advanced options are available for using the tool. However, you can now just download and then double-click the tool to run it. By default when you click Save, the tool is saved in your **Downloads** folder. Double-click the tool in the folder and wait until it finishes running (it might take a few minutes), then double-click the **SetupDiagResults.log** file and open it using Notepad to see the results of the analysis.
 
+_Applies to:_ &nbsp; Windows 10
+
 ## List of fixes
 
 1.  Remove nonessential external hardware, such as docks and USB devices. [More information](#remove-external-hardware).

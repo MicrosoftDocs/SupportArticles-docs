@@ -22,6 +22,8 @@ old_manager: dougeby
 > [!NOTE]
 > If you're not a support agent or IT professional, you'll find more helpful information about stop error ("blue screen") messages in [Troubleshoot blue screen errors](https://support.microsoft.com/sbs/windows/troubleshoot-blue-screen-errors-5c62726c-6489-52da-a372-3f73142c14ad).
 
+_Applies to:_ &nbsp; Windows 10
+
 ## What causes stop errors?
 
 A stop error is displayed as a blue screen that contains the name of the faulty driver, such as any of the following example drivers:
