@@ -13,7 +13,7 @@ ms.subservice: application-insights
 
 # Investigate missing telemetry in Azure Monitor Application Insights using PowerShell or curl
 
-This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing. This will be done by testing connectivity and telemetry ingestion using PowerShell or curl. No extra tools are needed.
+This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing by testing connectivity and telemetry ingestion using PowerShell or curl. No extra tools are needed.
 
 ## Every step telemetry passes in the processing pipeline
 
