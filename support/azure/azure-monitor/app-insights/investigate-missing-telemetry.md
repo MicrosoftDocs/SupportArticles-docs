@@ -1,6 +1,6 @@
 ---
 title: Investigate missing telemetry in Azure Monitor Application Insights
-description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl client to isolate the step in the processing pipeline that causes telemetry to go missing
+description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl to isolate the step in the processing pipeline that causes telemetry to go missing
 ms.topic: conceptual
 ms.date: 8/18/2022
 ms.author: toddfous
@@ -11,9 +11,9 @@ ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
 ---
 
-# Investigate missing telemetry in Azure Monitor Application Insights using PowerShell or curl client
+# Investigate missing telemetry in Azure Monitor Application Insights using PowerShell or curl
 
-This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing.
+This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing by testing connectivity and telemetry ingestion using PowerShell or curl. No extra tools are needed.
 
 ## Every step telemetry passes in the processing pipeline
 
@@ -29,13 +29,13 @@ If telemetry is missing or you can't find specific telemetry records, it can be 
 - The telemetry query API at `api.applicationinsights.io` has failures querying telemetry from Log Analytics.
 - The Azure portal has issues pulling or rendering the records you're trying to view.
 
-Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the problem. One method that will assist with this isolation is sending a sample telemetry record using PowerShell.
+Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the problem. One method that will assist with this isolation is sending a sample telemetry record using PowerShell or curl.
 
 ## Troubleshoot with PowerShell
 
 ### On-premises or Azure VM
 
-If you connect to the machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell. Doing so won't require any extra tools.
+If you connect to the machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell.
 
 ### Azure Web Apps
 
@@ -70,11 +70,11 @@ There's still a small chance that ingestion or the backend pipeline is sampling 
 
 #### Availability test result telemetry records
 
-Availability web test results are the best telemetry type to test with. The main reason is because the ingestion pipeline never samples out availability test records. If you instead send a request telemetry record using PowerShell, it could get sampled out with ingestion sampling, and not show up when you go to query for it. Start with a sample availability test records first, then try other telemetry types as needed.
+Availability test results are the best telemetry type to test with. The main reason is because the ingestion pipeline never samples out availability test results. If you instead send a request telemetry record using PowerShell, it could get sampled out with ingestion sampling, and not show up when you go to query for it. Start with a sample availability test result telemetry record first, then try other telemetry types as needed.
 
-### PowerShell script to send an availability test telemetry
+### PowerShell script to send an availability test result telemetry record
 
-This script builds a raw REST request to deliver a single availability test result record to the Application Insights component. You can supply the `$ConnectionString` or `$InstrumentationKey` parameters.
+This script builds a raw REST request to deliver a single availability test result telemetry record to the Application Insights component. You can supply the `$ConnectionString` or `$InstrumentationKey` parameters.
 
 - Connection String only: Telemetry sent to regional endpoint in connection string
 - Ikey only: Telemetry sent to global ingestion endpoint
@@ -224,9 +224,9 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ```
 
-### Curl client to send availability test telemetry record
+### Curl client to send availability test result telemetry record
 
-If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability web test result record. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
+If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability test result telemetry record. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
 
 Curl command for **Linux/MaxOS**:
 
@@ -235,36 +235,10 @@ Curl command for **Linux/MaxOS**:
 
 ```
 
-Curl command for **Windows** (adjust timestamp before running):
+Curl command for **Windows**:
 
 ```shell
 curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"ver\":2,\"id\":\"SampleRunId\",\"name\":\"MicrosoftSupportSampleWebtestResultUsingCurl\",\"duration\":\"00.00:00:10\",\"success\":true,\"runLocation\":\"RegionName\",\"message\":\"SampleWebtestResult\",\"properties\":{\"SampleProperty\":\"SampleValue\"}},\"baseType\":\"AvailabilityData\"},\"ver\":1,\"name\":\"Microsoft.ApplicationInsights.Metric\",\"time\":\"2021-10-05T22:00:00.0000000Z\",\"sampleRate\":100,\"ikey\":\"4c529c82-dee8-4723-b030-7b56bae7562a\",\"flags\":0} https://dc.applicationinsights.azure.com/v2/track
-
-```
-
-### PowerShell script to send 100 trace messages
-
-You can try to send a burst of telemetry records from the machine to the Application Insights component. For this approach, you'll want to find a version of Microsoft.ApplicationInsights.dll loaded on the machine. You can find it as part of NuGet package installation or Application Insights agent (SMv2) installation. The below script will load the dll, then call `TrackTrace` 100 times sending 100 telemetry records to the global ingestion endpoint at dc.services.visualstudio.com.
-
-```shell
-# One Parameter: Provide the instrumentation key
-$ikey = "{replace-with-your-ikey}"
-
-# Load Application Insights dll from local NuGet package if it exists
-# Add-Type -Path "c:\users\{useralias}\.nuget\packages\microsoft.applicationinsights\2.17.0\lib\netstandard2.0\Microsoft.ApplicationInsights.dll";
-# Load Application Insights dll from Application Insights agent installation directory
-
-Add-Type -Path "C:\Program Files\WindowsPowerShell\Modules\Az.ApplicationMonitor\1.1.2\content\PowerShell\Microsoft.ApplicationInsights.dll";
-$client = New-Object Microsoft.ApplicationInsights.TelemetryClient;
-
-$client.InstrumentationKey=$ikey;
-$i = 1;
-while ($i -le 100) {
-   $client.TrackTrace("Sample Trace Message # $i", $null);
-   $i +=1;
-}
-$client.Flush();
-read-host “Press ENTER to continue...”
 
 ```
 
@@ -309,8 +283,13 @@ Alternatively, if you need to change the default TLS/SSL protocol used by a .NET
 
 ## Next steps
 
-If sending telemetry via PowerShell from the impacted machine works, you will want to investigate the SDK or codeless configuration for further troubleshooting.
+If sending telemetry from your application's host machine via PowerShell or curl is successful, missing telemetry is likely due to Application Insights SDK or agent setup or configuration issues. Review official documentation for enabling Application Insights monitoring for your application host and programming language to verify all your configurations or code follow proper guidance and examples.
 
-If sending telemetry via PowerShell also fails, continue to isolate where the problem could be: DNS investigations, TCP connection to ingestion endpoint, look for Dropped Metrics on the Ingestion tab within ASC, etc.
+If tests using PowerShell or curl also fail to send telemetry to the ingestion endpoint, verify a few common client side related issues that may contribute to the problem:
+
+- DNS on your network fails to resolve the public ingestion endpoint to the correct IP address.
+- TCP connection from your application server to ingestion endpoint may be blocked by firewalls or gateway devices.
+- Your application may default to using TLS 1.0 or TLS 1.1, when the ingestion endpoint the SDK connects to may require TLS 1.2.
+- You may have more than one Azure Monitor Private Link impacting your private network, and it may overwrite your DNS entries to resolve to the wrong private IP address where your ingestion endpoint is listening using private endpoints.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
