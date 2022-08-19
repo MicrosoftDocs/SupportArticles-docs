@@ -46,7 +46,20 @@ Because these calendar item fields may contain personal information or details, 
 
 To use CalCheck, the Outlook calendar must reside on a computer that is running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
-### Installation
+### Method: Use Microsoft Support and Recovery Assistant
+
+The Assistant fully automates all the steps required to perform Outlook calendar check, and is available in two versions. Use the version that's appropriate for your requirement.
+- **Command-line version**<br/>
+  The [command-line version of the Assistant](https://aka.ms/SaRA_CommandLineVersion) can be scripted and is recommended to perform Outlook calender check on multiple devices and on devices that you can't access immediately.
+  > [!div class="nextstepaction"]
+  > [Download command-line version](https://aka.ms/SaRA_CommandLineVersionFiles)
+  
+- **UI version**<br/>
+  The [UI version of the Assistant](https://aka.ms/SaRA_Home) is recommended if you need to perform Outlook calender check on a single device, or on a small number of individual devices. 
+  > [!div class="nextstepaction"]
+  > [Download UI version](https://aka.ms/sara-calcheck)
+
+### Method: Manual Installation
 
 Go to the [latest release](https://github.com/rtopken/CalCheck/releases), download and install the Calendar Checking Tool for Outlook.
 
