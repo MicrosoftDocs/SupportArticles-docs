@@ -31,9 +31,9 @@ When you encounter a problem or error message during migration, you can use the 
   > [!Note]  
   > Running the ScanState and LoadState tools with the `/v:5` option creates a detailed log file. Although this option makes the log file large, the extra detail can help you determine where migration errors occurred.
 
-- Use the `/Verify` option in the UsmtUtils tool to determine whether any files in a compressed migration store are corrupted. For more information, see [Verify the Condition of a Compressed Migration Store](verify-the-condition-of-a-compressed-migration-store.md).
+- Use the `/Verify` option in the UsmtUtils tool to determine whether any files in a compressed migration store are corrupted. For more information, see [Verify the Condition of a Compressed Migration Store](/windows/deployment/usmt/verify-the-condition-of-a-compressed-migration-store).
 
-- Use the `/Extract` option in the UsmtUtils tool to extract files from a compressed migration store. For more information, see [Extract Files from a Compressed USMT Migration Store](usmt-extract-files-from-a-compressed-migration-store.md).
+- Use the `/Extract` option in the UsmtUtils tool to extract files from a compressed migration store. For more information, see [Extract Files from a Compressed USMT Migration Store](/windows/deployment/usmt/usmt-extract-files-from-a-compressed-migration-store).
 
 - Create a progress log using the `/Progress` option to monitor your migration.
 
@@ -54,7 +54,7 @@ The following sections describe common user account problems. Expand the section
 
 #### Resolution
 
-For more information about creating accounts and migrating local accounts, see [Migrate User Accounts](usmt-migrate-user-accounts.md).
+For more information about creating accounts and migrating local accounts, see [Migrate User Accounts](/windows/deployment/usmt/usmt-migrate-user-accounts).
 
 ### Not all of the user accounts were migrated to the destination computer
 
@@ -82,7 +82,7 @@ The command that you specified might have had conflicting `/ui` and `/ue` option
 
 #### Resolution
 
-For more information about how to use the `/ui` and `/ue` options together, see the examples in the [ScanState Syntax](usmt-scanstate-syntax.md) article.
+For more information about how to use the `/ui` and `/ue` options together, see the examples in the [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax) article.
 
 ### I'm using the /uel option, but many accounts are still being included in the migration
 
@@ -184,7 +184,7 @@ scanstate /genconfig:config.xml /i:migdocs.xml /i:migapp.xml /v:5 /l:scanstate.l
 
 #### Resolution
 
-You can load the XML schema (MigXML.xsd), included with USMT, into your XML authoring tool. For examples, see the [Visual Studio Development Center](https://go.microsoft.com/fwlink/p/?LinkId=74513). Then, load your .xml file in the authoring tool to see if there's a syntax error. For more information about using the XML elements, see [USMT XML Reference](usmt-xml-reference.md).
+You can load the XML schema (MigXML.xsd), included with USMT, into your XML authoring tool. For examples, see the [Visual Studio Development Center](https://go.microsoft.com/fwlink/p/?LinkId=74513). Then, load your .xml file in the authoring tool to see if there's a syntax error. For more information about using the XML elements, see [USMT XML Reference](/windows/deployment/usmt/usmt-xml-reference).
 
 ### I'm using a MigXML helper function, but the migration isn't working the way I expected it to.  How do I troubleshoot this issue?
 
@@ -208,7 +208,7 @@ There might be another rule that is including the files. If there's a more speci
 
 #### Resolution
 
-For more information, see [Conflicts and Precedence](usmt-conflicts-and-precedence.md) and the Diagnostic Log section in [Log Files](usmt-log-files.md).
+For more information, see [Conflicts and Precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence) and the Diagnostic Log section in [Log Files](usmt-log-files.md).
 
 ### I specified rules to move a folder to a specific location on the destination computer, but it hasn't migrated correctly
 
@@ -220,11 +220,11 @@ There might be an error in the XML syntax.
 
 You can use the USMT XML schema (*MigXML.xsd*) to write and validate migration .xml files. Also see the XML examples in the following articles:
 
-- [Conflicts and Precedence](usmt-conflicts-and-precedence.md)
-- [Exclude Files and Settings](usmt-exclude-files-and-settings.md)
-- [Reroute Files and Settings](usmt-reroute-files-and-settings.md)
-- [Include Files and Settings](usmt-include-files-and-settings.md)
-- [Custom XML Examples](usmt-custom-xml-examples.md)
+- [Conflicts and Precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence)
+- [Exclude Files and Settings](/windows/deployment/usmt/usmt-exclude-files-and-settings)
+- [Reroute Files and Settings](/windows/deployment/usmt/usmt-reroute-files-and-settings)
+- [Include Files and Settings](/windows/deployment/usmt/usmt-include-files-and-settings)
+- [Custom XML Examples](/windows/deployment/usmt/usmt-custom-xml-examples)
 
 ### After LoadState completes, the new desktop background doesn't appear on the destination computer
 
@@ -299,7 +299,7 @@ The following sections describe common offline migration problems. Expand the se
 
 #### Cause
 
-Some system settings, such as desktop backgrounds and network printers, aren't supported in an offline migration. For more information, see [What Does USMT Migrate?](usmt-what-does-usmt-migrate.md)
+Some system settings, such as desktop backgrounds and network printers, aren't supported in an offline migration. For more information, see [What Does USMT Migrate?](/windows/deployment/usmt/usmt-what-does-usmt-migrate)
 
 #### Resolution
 
@@ -379,7 +379,7 @@ You should also reboot the machine.
 
 ## More information
 
-- [User State Migration Tool (USMT) Troubleshooting](usmt-troubleshooting.md)
+- [User State Migration Tool (USMT) Troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
 - [Frequently Asked Questions](usmt-faq.yml)
 - [Return Codes](usmt-return-codes.md)
-- [UsmtUtils Syntax](usmt-utilities.md)
+- [UsmtUtils Syntax](/windows/deployment/usmt/usmt-utilities)

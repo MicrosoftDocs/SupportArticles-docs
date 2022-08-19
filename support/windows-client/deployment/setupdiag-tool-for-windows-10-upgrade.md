@@ -22,7 +22,7 @@ _Applies to:_ &nbsp; Windows 10
 > [!NOTE]
 > This is a 300 level topic (moderate advanced).
 >
-> See [Resolve Windows 10 upgrade errors](resolve-windows-10-upgrade-errors.md) for a full list of topics in this article.<br>
+> See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
 
 &nbsp;[
 :::image type="content" source="media/setupdiag-tool-for-windows-10-upgrade/download.png" alt-text="Download SetupDiag." border="false":::
@@ -89,8 +89,8 @@ The [Release notes](#release-notes) section at the bottom of this article has in
 
 ## Parameters
 
-| Parameter | Description |
-| --- | --- |
+|Parameter  |Description  |
+|---------|---------|
 | `/? |Displays interactive help|
 | /Output:\<path to results file\> | This optional parameter enables you to specify the output file for results. This file is where you'll find what SetupDiag was able to determine.  Only text format output is supported.  UNC paths will work, provided the context under which SetupDiag runs has access to the UNC path.  If the path has a space in it, you must enclose the entire path in double quotes (see the example section below). <br>Default: If not specified, SetupDiag will create the file *SetupDiagResults.log* in the same  directory where *SetupDiag.exe* is run.|
 | /LogsPath:\<Path to logs\> | This optional parameter tells *SetupDiag.exe* where to find the log files for an offline analysis. These log files can be in a flat folder format, or containing multiple subdirectories.  SetupDiag will recursively search all child directories.|
@@ -100,8 +100,7 @@ The [Release notes](#release-notes) section at the bottom of this article has in
 | /Verbose | This optional parameter will output much more data to a log file.  By default, SetupDiag will only produce a log file entry for serious errors.  Using `/Verbose` will cause SetupDiag to always produce another log file with debugging details. These details can be useful when reporting a problem with SetupDiag.|
 | /NoTel | This optional parameter tells *SetupDiag.exe* not to send diagnostic telemetry to Microsoft.|
 | /AddReg | This optional parameter instructs *SetupDiag.exe* to add failure information to the registry in offline mode. By default, SetupDiag will add failure information to the registry in online mode only. Registry data is added to the following location on the system where SetupDiag is run: `HKLM\SYSTEM\Setup\MoSetup\Volatile\SetupDiag`.|
-| /RegPath | This optional parameter instructs *SetupDiag.exe* to add failure information to the registry using the specified path. If this parameter isn't specified the default path is `HKLM\SYSTEM\Setup\MoSetup\Volatile\SetupDiag`.
-|
+| /RegPath | This optional parameter instructs *SetupDiag.exe* to add failure information to the registry using the specified path. If this parameter isn't specified the default path is `HKLM\SYSTEM\Setup\MoSetup\Volatile\SetupDiag`.|
 
 > [!NOTE]
 > The `/Mode` parameter is deprecated in version 1.4.0.0 of SetupDiag.
