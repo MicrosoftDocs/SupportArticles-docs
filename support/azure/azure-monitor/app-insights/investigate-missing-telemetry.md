@@ -66,7 +66,7 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 
 If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK or agent version.
 
-It is possible that your test record arrives but the production telemetry doesn't, which can happen if ingestion or the backend pipeline is sampling records or dropping specific telemetry types. You should always start investigating the SDK or agent if the below sample scripts correctly save and return records.
+It's possible that your test record arrives but the production telemetry doesn't. This can happen if ingestion or the backend pipeline is sampling records or dropping specific telemetry types. You should always start investigating the SDK or agent if the below sample scripts correctly save and return records.
 
 #### Sending availability test results
 
@@ -81,7 +81,7 @@ This script builds a raw REST request to deliver a single availability test resu
 
 If both connection string and ikey parameters are supplied, the script sends telemetry to the regional endpoint in the connection string.
 
-It's easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS (virtual machine scale set) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
+It's easiest to run the script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
 
 ```shell
 # Info: Provide either the connection string or ikey for your Application Insights resource
