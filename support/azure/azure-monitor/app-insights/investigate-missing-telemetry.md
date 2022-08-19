@@ -66,7 +66,7 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 
 If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK or agent version.
 
-It's possible that your test record arrives but the production telemetry doesn't. This can happen if ingestion or the backend pipeline is sampling records or dropping specific telemetry types. You should always start investigating the SDK or agent if the below sample scripts correctly save and return records.
+It's possible that your test record arrives but the production telemetry doesn't. The problem can be caused by ingestion or the backend pipeline sampling records or dropping specific telemetry types. You should always start investigating the SDK or agent if the below sample scripts correctly save and return records.
 
 #### Sending availability test results
 
