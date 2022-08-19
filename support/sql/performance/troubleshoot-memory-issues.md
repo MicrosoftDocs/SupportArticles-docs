@@ -170,7 +170,7 @@ The following actions may free some memory and make it available to SQL Server:
 - If you haven't configured **max server memory** especially with Locked Pages in Memory, consider setting to a particular value to allow some memory for the OS. See [Locked Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim) server configuration option. 
 
 
-#### Tune or change the workload on the system
+#### Change or move workload off the system
 
 - Check the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
 
