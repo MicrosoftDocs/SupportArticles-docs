@@ -17,15 +17,15 @@ This article provides information to help you isolate the step in the processing
 
 ## Every step telemetry passes in the processing pipeline
 
-If application telemetry is not showing in Azure portal, it can be the result of failures across every step in processing pipeline:
+If application telemetry isn't showing in Azure portal, it can be the result of failures across every step in processing pipeline:
 
 ![Graphic shows where telemetry can go missing during ingestion and consumption](./media/investigate-missing-telemetry/telemetry-processing-pipeline.png "Steps in the processing pipeline")
 
 - The SDK or agent is misconfigured and not sending application telemetry to the ingestion endpoint.
 - The SDK or agent is configured correctly but the network is blocking calls to the ingestion endpoint.
 - The ingestion endpoint is dropping or throttling inbound telemetry.
-- The ingestion pipeline is dropping or severely slowing down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (This is uncommon)
-- Log Analytics is facing service health problems when saving telemetry records. (This is uncommon)
+- The ingestion pipeline is dropping or severely slowing down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (uncommon)
+- Log Analytics is facing service health problems when saving telemetry records. (uncommon)
 - The query API at `api.applicationinsights.io` has failures querying records from Log Analytics.
 - The Azure portal has issues pulling or rendering the records you're trying to view.
 
@@ -64,9 +64,9 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 - Log Analytics correctly saved the sample record.
 - The Azure portal **Logs** tab was able to query the API (`api.applicationinsights.io`) and render the sample record in the portal UI.
 
-If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
+If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK or agent version.
 
-There's still a small chance that ingestion or the backend pipeline is sampling records or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return records.
+It is possible that your test record arrives but the production telemetry doesn't, which can happen if ingestion or the backend pipeline is sampling records or dropping specific telemetry types. You should always start investigating the SDK or agent if the below sample scripts correctly save and return records.
 
 #### Sending availability test results
 
@@ -244,9 +244,10 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ## SSL/TLS troubleshooting
 
-If you suspect the problem is between your server or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
+If you suspect the problem to be between your server or VM and the ingestion endpoint, it can be due to SSL or TLS configuration. In this case, you can adjust how PowerShell participates in the SSL or TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
 
-- Option 1: Control which SSL/TLS protocol is used by PowerShell to make a connection to the ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
+- **Option 1**<br/>
+Control which SSL or TLS protocol is used by PowerShell to make a connection to the ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
 
   ```shell
   # Uncomment one or more of these lines to test TLS/SSL protocols other than the machine default option
@@ -258,7 +259,8 @@ If you suspect the problem is between your server or VM and the ingestion endpoi
 
   ```
 
-- Option 2: Ignore any SSL Certificate validation issues. If you have a firewall or proxy server that may be doing SSL certificate offloading, you can ignore any SSL cert issues by adding this snippet just before the `Invoke-WebRequest` call:
+- **Option 2**<br/>
+Ignore any SSL certificate validation issues. If you have a firewall or proxy server that may be doing SSL certificate offloading, you can ignore any SSL cert issues by adding this snippet just before the `Invoke-WebRequest` call:
 
   ```shell
   # Ignore mismatched SSL certificate
