@@ -66,7 +66,7 @@ sections:
       - question: |
           How can I exclude a folder or a certain type of file from the migration?
         answer: |
-          You can use the **&lt;unconditionalExclude&gt;** element to globally exclude data from the migration. For example, you can use this element to exclude all MP3 files on the computer or to exclude all files from C:\\UserData. This element excludes objects regardless of any other &lt;include&gt; rules that are in the `.xml` files. For an example, see &lt;unconditionalExclude&gt; in the [Exclude Files and Settings](usmt-exclude-files-and-settings.md) article. For the syntax of this element, see [XML Elements Library](usmt-xml-elements-library.md).
+          You can use the **&lt;unconditionalExclude&gt;** element to globally exclude data from the migration. For example, you can use this element to exclude all MP3 files on the computer or to exclude all files from C:\\UserData. This element excludes objects regardless of any other &lt;include&gt; rules that are in the `.xml` files. For an example, see &lt;unconditionalExclude&gt; in the [Exclude Files and Settings](/windows/deployment/usmt/usmt-exclude-files-and-settings) article. For the syntax of this element, see [XML Elements Library](/windows/deployment/usmt/usmt-xml-elements-library).
           
       - question: |
           What happens to files that were located on a drive that doesn't exist on the destination computer?
@@ -80,10 +80,10 @@ sections:
         answer: |
           The following articles include examples of USMT `.xml` files:
           
-          -   [Exclude Files and Settings](usmt-exclude-files-and-settings.md)
-          -   [Reroute Files and Settings](usmt-reroute-files-and-settings.md)
-          -   [Include Files and Settings](usmt-include-files-and-settings.md)
-          -   [Custom XML Examples](usmt-custom-xml-examples.md)
+          -   [Exclude Files and Settings](/windows/deployment/usmt/usmt-exclude-files-and-settings)
+          -   [Reroute Files and Settings](/windows/deployment/usmt/usmt-reroute-files-and-settings)
+          -   [Include Files and Settings](/windows/deployment/usmt/usmt-include-files-and-settings)
+          -   [Custom XML Examples](/windows/deployment/usmt/usmt-custom-xml-examples)
           
       - question: |
           Can I use custom `.xml` files that were written for USMT 5.0?
@@ -123,13 +123,13 @@ sections:
       - question: |
           What happens when there are conflicting XML rules or conflicting objects on the destination computer?
         answer: |
-          For more information, see [Conflicts and Precedence](usmt-conflicts-and-precedence.md).
+          For more information, see [Conflicts and Precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence).
           
 
 additionalContent: |
 
   ## More information
 
-  - [User State Migration Tool (USMT) Troubleshooting](usmt-troubleshooting.md)
-  - [Extract Files from a Compressed USMT Migration Store](usmt-extract-files-from-a-compressed-migration-store.md)
-  - [Verify the Condition of a Compressed Migration Store](verify-the-condition-of-a-compressed-migration-store.md)
+  - [User State Migration Tool (USMT) Troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
+  - [Extract Files from a Compressed USMT Migration Store](/windows/deployment/usmt/usmt-extract-files-from-a-compressed-migration-store)
+  - [Verify the Condition of a Compressed Migration Store](/windows/deployment/usmt/verify-the-condition-of-a-compressed-migration-store)

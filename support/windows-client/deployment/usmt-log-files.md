@@ -27,7 +27,7 @@ The following table describes each command-line option related to logs, and it p
 |--- |--- |--- |
 |`/l [Path]FileName`|Scanstate.log or LoadState.log|Specifies the path and file name of the *ScanState.log* or *LoadState log*.|
 |`/progress [Path]FileName`|Specifies the path and file name of the Progress log.|Provides information about the status of the migration, by percentage complete.|
-|`/v [VerbosityLevel]`|Not applicable|See the "Monitoring Options" section in [ScanState Syntax](usmt-scanstate-syntax.md).|
+|`/v [VerbosityLevel]`|Not applicable|See the "Monitoring Options" section in [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax).|
 |`/listfiles [Path]FileName`|Specifies the path and file name of the Listfiles log.|Provides a list of the files that were migrated.|
 |Set the environment variable `MIG_ENABLE_DIAG` to a path to an XML file.|USMTDiag.xml|The diagnostic log contains detailed system environment information, user environment information, and information about the migration units (migunits) being gathered and their contents.|
 
@@ -36,7 +36,7 @@ The following table describes each command-line option related to logs, and it p
 
 ## ScanState and LoadState logs
 
-ScanState and LoadState logs are text files that are create when you run the ScanState and LoadState tools. You can use these logs to help monitor your migration. The content of the log depends on the command-line options that you use and the verbosity level that you specify. For more information about verbosity levels, see Monitoring Options in [ScanState Syntax](usmt-scanstate-syntax.md).
+ScanState and LoadState logs are text files that are create when you run the ScanState and LoadState tools. You can use these logs to help monitor your migration. The content of the log depends on the command-line options that you use and the verbosity level that you specify. For more information about verbosity levels, see Monitoring Options in [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax).
 
 ## Progress log
 
