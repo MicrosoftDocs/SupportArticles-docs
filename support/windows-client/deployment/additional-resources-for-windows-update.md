@@ -1,49 +1,34 @@
 ---
 title: Additional resources for Windows Update
-description: In this article, learn details about to troubleshooting WSUS and resetting Windows Update components manually.
+description: Describes details about to troubleshooting WSUS and resetting Windows Update components manually.
+ms.date: 08/19/2022
 ms.prod: windows-client
-ms.localizationpriority: medium
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.author: aaroncz
 author: aczechowski
 ms.collection: highpri
-old_title: Windows Update - Additional resources
-old_ms.prod: w10
 ms.technology: windows-client-deployment
 ms.custom: sap:servicing, csstroubleshoot
-old_manager: dougeby
-old_ms.topic: article
+ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-
 # Windows Update - additional resources
 
-**Applies to**:
-
-- Windows 10
-- Windows 11
-- Windows Server 2016
-- Windows Server 2019
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows 11, Windows 10
 
 > [!NOTE]
 > Windows Server 2016 supports policies available in Windows 10, version 1607. Windows Server 2019 supports policies available in Windows 10, version 1809.
 
-
 The following resources provide additional information about using Windows Update.
 
-_Applies to:_ &nbsp; Windows 10
+## WSUS troubleshooting
 
-## WSUS Troubleshooting
-
-[Troubleshooting issues with WSUS client agents](/troubleshoot/mem/configmgr/troubleshoot-issues-with-wsus-client-agents)
-
-[How to troubleshoot WSUS](/troubleshoot/mem/configmgr/troubleshoot-wsus-connection-failures)
-
-[Error 80244007 when WSUS client scans for updates](/troubleshoot/mem/configmgr/error-80244007-when-wsus-client-scans-updates)
-
-[Updates may not be installed with Fast Startup in Windows 10](/troubleshoot/windows-client/deployment/updates-not-install-with-fast-startup)
+- [Troubleshooting issues with WSUS client agents](../mem/configmgr/troubleshoot-issues-with-wsus-client-agents.md)
+- [How to troubleshoot WSUS](../mem/configmgr/troubleshoot-wsus-connection-failures.md)
+- [Error 80244007 when WSUS client scans for updates](../mem/configmgr/error-80244007-when-wsus-client-scans-updates.md)
+- [Updates may not be installed with Fast Startup in Windows 10](updates-not-install-with-fast-startup.md)
 
 ## How do I reset Windows Update components?
 
@@ -59,50 +44,57 @@ If all else fails, try resetting the Windows Update Agent by running these comma
    net start wuauserv
    ```
 
-
 ## Reset Windows Update components manually
 
-1. Open a Windows command prompt. To open a command prompt, click **Start > Run**. Copy and paste (or type) the following command and then press ENTER:
-   ``` console
-   cmd
-   ```
-2. Stop the **BITS service**, the **Windows Update service** and the **Cryptographic service**. To do this, type the following commands at a command prompt. Press ENTER after you type each command.
+1. Open a Windows command prompt. To open a command prompt, select **Start** > **Run**. Copy and paste (or type) *cmd* and then press Enter.
+
+2. Stop the BITS service, the Windows Update service and the Cryptographic service. Type the following commands at a command prompt. Press Enter after you type each command.
+
    ``` console
    net stop bits
    net stop wuauserv
    net stop cryptsvc   
    ```
-3. Delete the **qmgr\*.dat** files. To do this, type the following command at a command prompt, and then press ENTER:
+
+3. Delete the *qmgr\*.dat* files. Type the following command at a command prompt, and then press Enter:
+
    ``` console
    Del "%ALLUSERSPROFILE%\Application Data\Microsoft\Network\Downloader\qmgr*.dat"
    ```
-4. If this is your first attempt at resolving your Windows Update issues by using the steps in this article, go to step 5 without carrying out the steps in step 4. The steps in step 4 should only be performed at this point in the troubleshooting if you cannot resolve your Windows Update issues after following all steps but step 4. The steps in step 4 are also performed by the "Aggressive" mode of the Fix it Solution above.
-   1. Rename the following folders to *.BAK:
-   ``` console
-   %Systemroot%\SoftwareDistribution\DataStore
-   %Systemroot%\SoftwareDistribution\Download
-   %Systemroot%\System32\catroot2
-   ```
-   To do this, type the following commands at a command prompt. Press ENTER after you type each command.
-   ``` console
-   Ren %Systemroot%\SoftwareDistribution\DataStore DataStore.bak
-   Ren %Systemroot%\SoftwareDistribution\Download Download.bak
-   Ren %Systemroot%\System32\catroot2 catroot2.bak
-   ```
 
-      > [!IMPORTANT]
-      > The **reset** step below using sc.exe will **overwrite** your existing security ACLs on the BITS and Windows Update service and set them to default.  Skip this step unless the other steps to reset Windows Update components have not resolved the issue.
+4. If it is your first attempt at resolving your Windows Update issues by using the steps in this article, go to step 5 without carrying out the steps in step 4. The steps in step 4 should only be performed at this point in the troubleshooting if you can't resolve your Windows Update issues after following all steps but step 4. The steps in step 4 are also performed by the "Aggressive" mode of the Fix it Solution above.
 
-   2. Reset the **BITS service** and the **Windows Update service** to the default security descriptor. To do this, type the following commands at a command prompt. Press ENTER after you type each command.
-   ``` console
-   sc.exe sdset bits D:(A;CI;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)
-   sc.exe sdset wuauserv D:(A;;CCLCSWRPLORC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)
-   ```
-5. Type the following command at a command prompt, and then press ENTER:
+   1. Rename the following folders to `*.BAK`:
+
+      - *%Systemroot%\\SoftwareDistribution\\DataStore*
+      - *%Systemroot%\\SoftwareDistribution\\Download*
+      - *%Systemroot%\\System32\\catroot2*
+
+       To do this, type the following commands at a command prompt. Press Enter after you type each command.
+
+       ``` console
+       Ren %Systemroot%\SoftwareDistribution\DataStore DataStore.bak
+       Ren %Systemroot%\SoftwareDistribution\Download Download.bak
+       Ren %Systemroot%\System32\catroot2 catroot2.bak
+       ```
+
+       > [!IMPORTANT]
+       > The reset step below using *sc.exe* will overwrite your existing security ACLs on the BITS and Windows Update service and set them to default.  Skip this step unless the other steps to reset Windows Update components have not resolved the issue.
+
+   2. Reset the BITS service and the Windows Update service to the default security descriptor. To do this, type the following commands at a command prompt. Press Enter after you type each command.
+
+       ``` console
+       sc.exe sdset bits D:(A;CI;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)
+       sc.exe sdset wuauserv D:(A;;CCLCSWRPLORC;;;AU)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;SY)
+       ```
+
+5. Type the following command at a command prompt, and then press Enter:
+
    ``` console
    cd /d %windir%\system32
    ```
-6. Reregister the **BITS** files and the **Windows Update** files. To do this, type the following commands at a command prompt. Press ENTER after you type each command.
+
+6. Reregister the BITS files and the Windows Update files. To do this, type the following commands at a command prompt. Press Enter after you type each command.
 
    ``` console
    regsvr32.exe atl.dll
@@ -143,21 +135,28 @@ If all else fails, try resetting the Windows Update Agent by running these comma
    regsvr32.exe wuwebv.dll
    ```
 
-7. Reset **Winsock**. To do this, type the following command at a command prompt, and then press ENTER:
+7. Reset Winsock. Type the following command at a command prompt, and then press Enter:
+
    ``` console
    netsh winsock reset
    ```
-8. If you are running Windows XP or Windows Server 2003, you have to set the proxy settings. To do this, type the following command at a command prompt, and then press ENTER:
+
+8. If you're running Windows XP or Windows Server 2003, you have to set the proxy settings. Type the following command at a command prompt, and then press Enter:
+
    ``` console
    proxycfg.exe -d
    ```
-9. Restart the **BITS service**, the **Windows Update service** and the **Cryptographic service**. To do this, type the following commands at a command prompt. Press ENTER after you type each command.
+
+9. Restart the BITS service, the Windows Update service and the Cryptographic service. Type the following commands at a command prompt. Press Enter after you type each command.
+
    ``` console
    net start bits
    net start wuauserv   
    net start cryptsvc 
    ```
-10. If you are running Windows Vista or Windows Server 2008, clear the **BITS** queue. To do this, type the following command at a command prompt, and then press ENTER:
+
+10. If you're running Windows Vista or Windows Server 2008, clear the BITS queue. Type the following command at a command prompt, and then press Enter:
+
     ``` console
     bitsadmin.exe /reset /allusers
     ```
