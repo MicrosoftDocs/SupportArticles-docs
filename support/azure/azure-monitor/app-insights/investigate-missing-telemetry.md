@@ -46,7 +46,7 @@ The are two caveats to running the operations from Kudu:
 - Prior to executing the `Invoke-WebRequest` command, you have to issue the PowerShell command `$ProgressPreference = "SilentlyContinue"`
 - You can't use `-Verbose` or `-Debug`. Instead, use `-UseBasicParsing`.
 
-This is how the code would look:
+The code will look like the example below:
 
 ```shell
 $ProgressPreference = "SilentlyContinue"
@@ -59,14 +59,14 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 **A sample telemetry record correctly saved and displayed suggests:**
 
 - The host machine or VM has DNS that resolves to the correct IP address.
-- The network delivered the sample record to the ingestion endpoint without blocking or dropping.
+- The network delivered the sample to the ingestion endpoint without blocking or dropping.
 - The ingestion endpoint accepted the sample payload and processed it through the ingestion pipeline.
 - Log Analytics correctly saved the sample record.
 - The Azure portal **Logs** tab was able to query the API (`api.applicationinsights.io`) and render the sample record in the portal UI.
 
 If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
 
-There's still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return records.
+There's still a small chance that ingestion or the backend pipeline is sampling records or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return records.
 
 #### Sending availability test results
 
@@ -150,7 +150,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 ```
 
-When the above script executes, you want to review the response details. We're looking for an HTTP 200 response, and as part of the response JSON payload we want to see the `itemsReceived` count **matches** the `itemsAccepted`. This means the ingestion endpoint is informing the client: you sent one record, I accepted one record.
+When the above script executes, you want to review the response details. We're looking for an HTTP 200 response, and as part of the response JSON payload we want to see the `itemsReceived` count **matches** the `itemsAccepted`. The ingestion endpoint is informing the client: you sent one record, I accepted one record.
 
 ![Code showing the amount of items received and items accepted](./media/investigate-missing-telemetry/items-received-matches-items-accepted.png "Items received matches items accepted")
 
@@ -290,6 +290,6 @@ If tests using PowerShell or curl also fail to send telemetry to the ingestion e
 - DNS on your network fails to resolve the public ingestion endpoint to the correct IP address.
 - TCP connection from your application server to ingestion endpoint may be blocked by firewalls or gateway devices.
 - Your application may default to using TLS 1.0 or TLS 1.1, when the ingestion endpoint the SDK connects to may require TLS 1.2.
-- You may have more than one Azure Monitor Private Link impacting your private network, and it may overwrite your DNS entries to resolve to the wrong private IP address where your ingestion endpoint is listening using private endpoints.
+- You may have more than one [Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-security) impacting your private network, which may overwrite your DNS entries to resolve to the wrong private IP address.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
