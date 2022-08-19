@@ -17,16 +17,16 @@ This article provides information to help you isolate the step in the processing
 
 ## Every step telemetry passes in the processing pipeline
 
-If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in the life of a telemetry record:
+If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in processing pipeline:
 
-![Graphic of where a telemetry record can go missing during ingestion and consumption](./media/investigate-missing-telemetry/life-of-a-telemetry-record.png "Life of a telemetry record")
+![Graphic shows where telemetry can go missing during ingestion and consumption](./media/investigate-missing-telemetry/telemetry-processing-pipeline.png "Steps in the processing pipeline")
 
 - The SDK or agent is misconfigured and not sending application telemetry to the ingestion endpoint.
 - The SDK or agent is configured correctly but the network is blocking calls to the ingestion endpoint.
 - The ingestion endpoint is dropping or throttling inbound telemetry.
-- The ingestion pipeline is dropping or severely slowing down records as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (rare)
+- The ingestion pipeline is dropping or severely slowing down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (rare)
 - Log Analytics is facing problems saving telemetry. (rare)
-- The telemetry query API at `api.applicationinsights.io` has failures querying telemetry from Log Analytics.
+- The query API at `api.applicationinsights.io` has failures querying records from Log Analytics.
 - The Azure portal has issues pulling or rendering the records you're trying to view.
 
 Problems can occur anywhere across the service, and may be tedious to properly diagnose. The goal is to eliminate these layers, so you can investigate the correct step within the processing pipeline that is causing the problem. One method that will assist with this isolation is sending a sample telemetry record using PowerShell or curl.
@@ -35,7 +35,7 @@ Problems can occur anywhere across the service, and may be tedious to properly d
 
 ### On-premises or Azure VM
 
-If you connect to the machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell.
+If you connect to the host machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell.
 
 ### Azure Web Apps
 
@@ -56,32 +56,32 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 
 After you send a sample telemetry record via PowerShell, you can check to see if it arrives using the Application Insights **Logs** tab in the Azure portal. If you see the sample record showing up, you've eliminated a large portion of the processing pipeline.
 
-**A sample PowerShell record correctly saved and displayed suggests:**
+**A sample telemetry record correctly saved and displayed suggests:**
 
-- The machine or VM has DNS that resolves to the correct IP address.
-- The network delivered the telemetry to the ingestion endpoint without blocking or dropping.
+- The host machine or VM has DNS that resolves to the correct IP address.
+- The network delivered the sample record to the ingestion endpoint without blocking or dropping.
 - The ingestion endpoint accepted the sample payload and processed it through the ingestion pipeline.
-- Log Analytics correctly saved the sample telemetry record.
-- The Azure portal **Logs** tab was able to query the API (`api.applicationinsights.io`) and render the record in the portal UI.
+- Log Analytics correctly saved the sample record.
+- The Azure portal **Logs** tab was able to query the API (`api.applicationinsights.io`) and render the sample record in the portal UI.
 
 If the sample record does show up, it usually means you just need to troubleshoot the Application Insights SDK or codeless agent. You would typically move to collect SDK logs or PerfView traces, whichever is appropriate for the SDK/agent version.
 
-There's still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return telemetry records.
+There's still a small chance that ingestion or the backend pipeline is sampling records, or dropping specific telemetry types, which may explain why your test record arrives but the production telemetry doesn't. You should always start investigating the SDKs or agents if the below sample scripts correctly save and return records.
 
-#### Availability test result telemetry records
+#### Sending availability test results
 
-Availability test results are the best telemetry type to test with. The main reason is because the ingestion pipeline never samples out availability test results. If you instead send a request telemetry record using PowerShell, it could get sampled out with ingestion sampling, and not show up when you go to query for it. Start with a sample availability test result telemetry record first, then try other telemetry types as needed.
+Availability test results are the best telemetry type to test with. The main reason is because the ingestion pipeline never samples out availability test results. If you instead send a request telemetry record using PowerShell, it could get sampled out with ingestion sampling, and not show up when you go to query for it. Start with a sample availability test result first, then try other telemetry types as needed.
 
-### PowerShell script to send an availability test result telemetry record
+### PowerShell script to send an availability test result
 
-This script builds a raw REST request to deliver a single availability test result telemetry record to the Application Insights component. You can supply the `$ConnectionString` or `$InstrumentationKey` parameters.
+This script builds a raw REST request to deliver a single availability test result to the Application Insights component. You can supply the `$ConnectionString` or `$InstrumentationKey` parameters.
 
 - Connection String only: Telemetry sent to regional endpoint in connection string
 - Ikey only: Telemetry sent to global ingestion endpoint
 
 If both connection string and ikey parameters are supplied, the script sends telemetry to the regional endpoint in the connection string.
 
-It's easiest to run the script from the PowerShell ISE environment on an IaaS or virtual machine scale set (VMSS) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
+It's easiest to run the script from the PowerShell ISE environment on an IaaS or VMSS (virtual machine scale set) instance. You can also copy and paste it into the App Services Kudu interface PowerShell debug console.
 
 ```shell
 # Info: Provide either the connection string or ikey for your Application Insights resource
@@ -224,9 +224,9 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ```
 
-### Curl client to send availability test result telemetry record
+### Curl to send an availability test result
 
-If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability test result telemetry record. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
+If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability test result. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
 
 Curl command for **Linux/MaxOS**:
 
@@ -244,7 +244,7 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ## SSL/TLS troubleshooting
 
-If you suspect the problem is between your machine or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
+If you suspect the problem is between your host machine or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
 
 - Option 1: Control which SSL/TLS protocol is used by PowerShell to make a connection to the ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
 
@@ -277,7 +277,7 @@ If you suspect the problem is between your machine or VM and the ingestion endpo
 
   ```
 
-If the application defaults to the system or machine default TLS settings, you can change those default settings within the registry on Windows machines using details found in [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
+If the application defaults to the system or host machine default TLS settings, you can change those default settings within the registry on Windows machines using details found in [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
 
 Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application, you can follow the official guidance in [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
