@@ -1,5 +1,5 @@
 ---
-title: Investigate missing telemetry in Azure Monitor Application Insights
+title: Investigate missing application telemetry in Azure Monitor Application Insights
 description: Learn how to test connectivity and telemetry ingestion using PowerShell or curl to isolate the step in the processing pipeline that causes telemetry to go missing
 ms.topic: conceptual
 ms.date: 8/18/2022
@@ -11,21 +11,21 @@ ms.subservice: application-insights
 #Customer intent: As an Application Insights user I want to know where in the processing pipeline telemetry goes missing so I know where to troubleshoot.
 ---
 
-# Investigate missing telemetry in Azure Monitor Application Insights using PowerShell or curl
+# Investigate missing application telemetry in Azure Monitor Application Insights
 
 This article provides information to help you isolate the step in the processing pipeline that causes telemetry to go missing by testing connectivity and telemetry ingestion using PowerShell or curl. No extra tools are needed.
 
 ## Every step telemetry passes in the processing pipeline
 
-If telemetry is missing or you can't find specific telemetry records, it can be the result of failures across every step in processing pipeline:
+If application telemetry is not showing in Azure portal, it can be the result of failures across every step in processing pipeline:
 
 ![Graphic shows where telemetry can go missing during ingestion and consumption](./media/investigate-missing-telemetry/telemetry-processing-pipeline.png "Steps in the processing pipeline")
 
 - The SDK or agent is misconfigured and not sending application telemetry to the ingestion endpoint.
 - The SDK or agent is configured correctly but the network is blocking calls to the ingestion endpoint.
 - The ingestion endpoint is dropping or throttling inbound telemetry.
-- The ingestion pipeline is dropping or severely slowing down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (rare)
-- Log Analytics is facing problems saving telemetry. (rare)
+- The ingestion pipeline is dropping or severely slowing down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview). (This is uncommon)
+- Log Analytics is facing service health problems when saving telemetry records. (This is uncommon)
 - The query API at `api.applicationinsights.io` has failures querying records from Log Analytics.
 - The Azure portal has issues pulling or rendering the records you're trying to view.
 
@@ -33,9 +33,9 @@ Problems can occur anywhere across the service, and may be tedious to properly d
 
 ## Troubleshoot with PowerShell
 
-### On-premises or Azure VM
+### On-premises server or Azure VM
 
-If you connect to the host machine or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell.
+If you connect to the server or VM where the web application is running, you can attempt to send a single telemetry record to the Applications Insights service instance using PowerShell.
 
 ### Azure Web Apps
 
@@ -58,7 +58,7 @@ After you send a sample telemetry record via PowerShell, you can check to see if
 
 **A sample telemetry record correctly saved and displayed suggests:**
 
-- The host machine or VM has DNS that resolves to the correct IP address.
+- The local server or VM has DNS that resolves to the correct IP address.
 - The network delivered the sample to the ingestion endpoint without blocking or dropping.
 - The ingestion endpoint accepted the sample payload and processed it through the ingestion pipeline.
 - Log Analytics correctly saved the sample record.
@@ -224,9 +224,9 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ```
 
-### Curl to send an availability test result
+### Using curl to send availability test results
 
-If you're running Linux VMs, you could rely on the curl client to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability test result. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
+If you're running Linux VMs, you could use curl command to send a similar REST call instead of PowerShell. Below is a curl request to send a single availability test result. You'll need to adjust the ingestion endpoint host, the ikey value, and the timestamp values.
 
 Curl command for **Linux/MaxOS**:
 
@@ -244,7 +244,7 @@ curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"v
 
 ## SSL/TLS troubleshooting
 
-If you suspect the problem is between your host machine or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
+If you suspect the problem is between your server or VM and the ingestion endpoint due to SSL/TLS configuration, you can adjust how PowerShell participates in the SSL/TLS protocol. Include these snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
 
 - Option 1: Control which SSL/TLS protocol is used by PowerShell to make a connection to the ingestion endpoint. Add any one of these lines to the top of your PowerShell script to control the protocol used in the test REST request:
 
@@ -277,7 +277,7 @@ If you suspect the problem is between your host machine or VM and the ingestion 
 
   ```
 
-If the application defaults to the system or host machine default TLS settings, you can change those default settings within the registry on Windows machines using details found in [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
+If the application defaults to the system or server default TLS settings, you can change those default settings within the registry on Windows machines using details found in [Transport Layer Security (TLS) registry settings](/windows-server/security/tls/tls-registry-settings#tls-dtls-and-ssl-protocol-version-settings).
 
 Alternatively, if you need to change the default TLS/SSL protocol used by a .NET application, you can follow the official guidance in [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls).
 
