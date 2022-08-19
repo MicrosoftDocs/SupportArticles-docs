@@ -158,7 +158,7 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 The following actions may free some memory and make it available to SQL Server:  
 
-### Change memory configuration settings
+#### Change memory configuration settings
 
 - Check the following SQL Server memory configuration parameters and consider increasing **max server memory** if possible:  
   
@@ -170,16 +170,16 @@ The following actions may free some memory and make it available to SQL Server:
 - If you haven't configured **max server memory** especially with Locked Pages in Memory, consider setting to a particular value to allow some memory for the OS. See [Locked Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim) server configuration option. 
 
 
-### Tune or change the workload on the system
+#### Tune or change the workload on the system
 
 - Check the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
 
-### Ensure proper memory configuration for virtual machines
+#### Ensure proper memory configuration for virtual machines
 
 - If you're running SQL Server on a virtual machine (VM), ensure the memory for the VM isn't overcommitted. For ideas on how to configure memory for VMs, see this blog [Virtualization – Overcommitting memory and how to detect it within the VM](https://techcommunity.microsoft.com/t5/running-sap-applications-on-the/virtualization-8211-overcommitting-memory-and-how-to-detect-it/ba-p/367623) and  [Troubleshooting ESX/ESXi virtual machine performance issues (memory overcommitment)](https://kb.vmware.com/s/article/2001003#Memory) 
 
 
-### Release memory inside SQL Server 
+#### Release memory inside SQL Server 
 
 - You can run one or more of the following DBCC commands to free several SQL Server memory caches.  
   
@@ -189,17 +189,18 @@ The following actions may free some memory and make it available to SQL Server:
   
   - DBCC FREEPROCCACHE  
 
-### Consider using Resource Governor for specific scenarios
+#### Consider using Resource Governor for specific scenarios
 
 - If you're using Resource Governor, we recommend that you check the resource pool or workload group settings and see if they aren't limiting memory too drastically. 
 
 
-### Add more RAM on the physical or virtual server
+#### Add more RAM on the physical or virtual server
+
 - If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).
 
 
 
-### Diagnostic tools and capture
+## Diagnostic tools and capture
 
 The diagnostics tools that will allow you to collect troubleshooting data are:
 
