@@ -48,10 +48,10 @@ If you use Firefox, Chrome or Safari, make sure the equivalent settings in these
 2. Get the global authentication policy by running the following command:
 
    ```powershell
-   Get-ADFSGlobalAuthenticationPolicy
+   Get-ADFSGlobalAuthenticationPolicy | fl WindowsIntegratedFallbackEnabled
    ```
 
-3. Examine the value of the **WindowsIntegratedFallbackEnbaled** attribute.
+3. Examine the value of the **WindowsIntegratedFallbackEnabled** attribute.
 
 If the value is **True**, forms-based authentication is expected. This means that the authentication request comes from a browser that doesn’t support Windows Integrated Authentication. See the next section about how to get your browser supported.
 

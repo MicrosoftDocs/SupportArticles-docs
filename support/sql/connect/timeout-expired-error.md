@@ -3,8 +3,8 @@ title: Timeout expired messages when connecting to SQL Server
 description: Fixes timeout expired errors when you connect to SQL Server and helps you verify and troubleshoot the errors.
 ms.date: 11/14/2021
 ms.custom: sap:Connection issues
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # Timeout expired messages when connecting to SQL Server

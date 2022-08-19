@@ -241,7 +241,7 @@ sections:
           ## Web Sockets
           Web Sockets are supported on Linux apps.
           > [!IMPORTANT]
-          > Web Sockets are not currently supported for Linux apps on Free App Service Plans. We are working on removing this limitation and plan to support up to 5 web socket connections on Free App Service plans.
+          > Web Sockets are now supported for Linux apps on Free App Service plans. We support up to five web socket connections on Free App Service plans.
   - name: Pricing and SLA
     questions:
       - question: |
@@ -290,3 +290,5 @@ additionalContent: |
   - [Continuous Deployment with Web App for Containers](/azure/app-service/deploy-ci-cd-custom-container)
   - [Things You Should Know: Web Apps and Linux](https://techcommunity.microsoft.com/t5/apps-on-azure/things-you-should-know-web-apps-and-linux/ba-p/392472)
   - [Environment variables and app settings reference](/azure/app-service/reference-app-settings)
+  
+  [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

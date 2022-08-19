@@ -1,8 +1,6 @@
 ---
 title: Troubleshooting BitLocker policies from the client side
 description: How to troubleshoot BitLocker encryption issues on the client side for Windows devices you manage with Microsoft Intune.
-ms.author: v-dsindona
-author: dsindona88
 ms.reviewer: luker
 ms.date: 12/07/2021
 search.appverid: MET150
@@ -43,7 +41,7 @@ Collect or review the following information:
 
 **LOG** > **DeviceManagement-Enterprise-Diagnostics-Provider admin**
 
-- Location: Right-click on **Start Menu** > **Event Viewer** > **Applications and Service Logs** > **Microsoft** > **Windows** > **Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**
+- Location: Right-click on **Start Menu** > **Event Viewer** > **Applications and Service Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider** > **Admin**
 - File system location: C:\Windows\System32\winevt\Logs\Microsoft-Windows-DeviceManagement-Enterprise-Diagnostics-Provider%4Admin.evtx
 
 To filter this log, right-click the event log and select **Filter Current Log** > **Critical/Error/Warning**. Then search through the filtered logs for BitLocker (press F3 and enter the text).
@@ -106,7 +104,7 @@ If the BitLocker-API log displays the following status, it means that Windows ha
 
 ### System event log
 
-If you’re having hardware-related issues—such as problems with the TPM—errors will appear in the system event log for TPM from the TPMProvisioningService or TPM-WMI source.
+If you're having hardware-related issues—such as problems with the TPM—errors will appear in the system event log for TPM from the TPMProvisioningService or TPM-WMI source.
 
 **LOG** > **System event**
 
@@ -166,7 +164,7 @@ For a tutorial of this process, see the YouTube video [How to create an Intune M
 
 #### OS build and edition
 
-The first step in understanding why your encryption policy is not applying correctly is to check whether the Windows OS version and edition supports the settings you configured. Some CSPs were introduced on specific versions of Windows and will only work on a certain edition. For example, the bulk of BitLocker CSP settings were introduced in Windows 10, version 1703 but these settings weren’t supported on Windows 10 Pro until Windows 10, version 1809.
+The first step in understanding why your encryption policy is not applying correctly is to check whether the Windows OS version and edition supports the settings you configured. Some CSPs were introduced on specific versions of Windows and will only work on a certain edition. For example, the bulk of BitLocker CSP settings were introduced in Windows 10, version 1703 but these settings weren't supported on Windows 10 Pro until Windows 10, version 1809.
 
 Additionally, there are settings such as AllowStandardUserEncryption (added in version 1809), ConfigureRecoveryPasswordRotation (added in version 1909), RotateRecoveryPasswords (added in version 1909), and Status (added in version 1903).
 
@@ -183,7 +181,7 @@ MSINFO32 is an information tool that contains device data you can use to determi
 - Location: In the Search box, enter **msinfo32**, right-click **System Information** in the search results, and select **Run as administrator**.
 - File system location: C:\Windows\System32\Msinfo32.exe.
 
-However, if this item doesn’t meet the prerequisites, it doesn’t necessarily mean that you can’t encrypt the device using an Intune policy.
+However, if this item doesn't meet the prerequisites, it doesn't necessarily mean that you can't encrypt the device using an Intune policy.
 
 - If you have configured the BitLocker policy to encrypt silently and the device is using TPM 2.0, it is important to verify that BIOS mode is UEFI. If the TPM is 1.2, then having the BIOS mode in UEFI is not a requirement.
 - Secure boot, DMA protection, and PCR7 configuration are not required for silent encryption but might be highlighted in **Device Encryption Support**. This is to ensure support for automatic encryption. 
@@ -196,7 +194,7 @@ TPM.msc is a Microsoft Management Console (MMC) Snap-in file. You can use TPM.ms
 - Location: In the Search box, enter **tpm.msc**, and then right-click and select **Run as administrator**.
 - File system location: MMC Snap-in C:\Windows\System32\mmc.exe.
 
-TPM is not a prerequisite for BitLocker but is highly recommended due to the increased security it provides. However, TPM is required for silent and automatic encryption. If you’re trying to encrypt silently with Intune and there are TPM errors in the BitLocker-API and system event logs, TPM.msc will help you understand the problem.
+TPM is not a prerequisite for BitLocker but is highly recommended due to the increased security it provides. However, TPM is required for silent and automatic encryption. If you're trying to encrypt silently with Intune and there are TPM errors in the BitLocker-API and system event logs, TPM.msc will help you understand the problem.
 
 The following example shows a healthy TPM 2.0 status. Note the specification version 2.0 in the bottom right and that the status is ready for use.
 
@@ -220,7 +218,7 @@ In the example above, you can see that the TPM is present and active in the Powe
 
 ### Manage-bde command-line tool
 
-Manage-bde is a BitLocker encryption command-line tool included in Windows. It’s designed to help with administration after BitLocker is enabled.
+Manage-bde is a BitLocker encryption command-line tool included in Windows. It's designed to help with administration after BitLocker is enabled.
 
 - Location: In the Search box, enter **cmd**, right-click and select **Run as administrator**, and then enter **manage-bde -status**.
 - File system location: C:\Windows\System32\manage-bde.exe.
@@ -315,7 +313,7 @@ When BitLocker fails to enable on a Windows 10 device using an Intune policy, in
 - WinRE is not enabled
 - UEFI BIOS is not enabled for TPM 2.0 devices
 
-Policy misconfiguration can also cause encryption failures. Not all Windows devices can encrypt silently so think about the users and devices that you’re targeting.
+Policy misconfiguration can also cause encryption failures. Not all Windows devices can encrypt silently so think about the users and devices that you're targeting.
 
 Configuring a startup key or PIN for a policy intended for silent encryption will not work because of the user interaction required when enabling BitLocker. Keep this in mind when configuring the BitLocker policy in Intune.
 
