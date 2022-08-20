@@ -23,7 +23,7 @@ To establish that you have query performance issues on your SQL Server instance,
 [!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
 
-### 2. Running vs. waiting: Why are queries slow?
+### 2. Running vs. Waiting: why are queries slow?
 
 If you find queries that exceed your predefined threshold, next examine why they could be slow. The cause of performance problems can be grouped into two categories: RUNNING or WAITING
 
