@@ -57,6 +57,60 @@ The following graph illustrates the types of pressure that can lead to out of me
 
 :::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-pressure.svg" alt-text="Memory pressure graph":::
 
+## Diagnostic tools and capture
+
+The diagnostics tools that will allow you to collect troubleshooting data are:
+
+#### Performance Monitor
+
+Configure and collect the following counters with Performance Monitor: 
+  - **Memory:Available MB**
+  - **Process:Working Set**
+  - **Process:Private Bytes**
+  - **SQL Server:Memory Manager: (all counters)**
+  - **SQL Server:Buffer Manager: (all counters)**
+
+
+#### DMVs or DBCC MEMORYSTATUS 
+
+You can use **[sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** or **[DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)** to observe overall memory usage inside SQL Server.
+
+Collect periodic outputs of this query on the impacted SQL Server
+
+  ```sql
+  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
+  FROM sys.dm_os_memory_clerks
+  ORDER BY pages_kb DESC
+  ```
+
+#### SSMS Memory Consumption Standard Report
+
+Collect periodic outputs of this query on the impacted SQL Server
+
+  ```sql
+  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
+  FROM sys.dm_os_memory_clerks
+  ORDER BY pages_kb DESC
+  ```
+
+View Memory usage in SQL Server Management Studio
+
+1. Launch SQL Server Management Studio and connect to a server.
+1. In Object Explorer, right-click the SQL Server name (top).
+1. In the context menu select, Reports -> Standard Reports -> Memory Consumption
+
+
+### Pssdiag or SQL LogScout
+
+An alternative, automated way to capture these data points is to use tools like [PSSDIAG](https://github.com/microsoft/DiagManager/releases) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). 
+
+- If you use Pssdiag, configure to capture **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector
+- If you use SQL LogScout, configure to capture the **Memory** scenario
+
+The following sections describe more detailed steps for each scenario - external or internal memory pressure. 
+
+
+
 ## Troubleshooting Methodology
 
 If an out-of-memory error appears occasionally or for a brief period, there may be a short-lived memory issue that resolved itself. You may not need to take action in those cases. However, if the error occurs multiple times, on multiple connections and persists for periods of seconds or longer, follow the steps to troubleshoot further.
@@ -202,57 +256,3 @@ The following actions may free some memory and make it available to SQL Server:
 #### Add more RAM on the physical or virtual server
 
 - If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).
-
-
-
-## Diagnostic tools and capture
-
-The diagnostics tools that will allow you to collect troubleshooting data are:
-
-#### Performance Monitor
-
-Configure and collect the following counters with Performance Monitor: 
-  - **Memory:Available MB**
-  - **Process:Working Set**
-  - **Process:Private Bytes**
-  - **SQL Server:Memory Manager: (all counters)**
-  - **SQL Server:Buffer Manager: (all counters)**
-
-
-#### DMVs or DBCC MEMORYSTATUS 
-
-You can use **[sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)** or **[DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md)** to observe overall memory usage inside SQL Server.
-
-Collect periodic outputs of this query on the impacted SQL Server
-
-  ```sql
-  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
-  FROM sys.dm_os_memory_clerks
-  ORDER BY pages_kb DESC
-  ```
-
-#### SSMS Memory Consumption Standard Report
-
-Collect periodic outputs of this query on the impacted SQL Server
-
-  ```sql
-  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
-  FROM sys.dm_os_memory_clerks
-  ORDER BY pages_kb DESC
-  ```
-
-View Memory usage in SQL Server Management Studio
-
-1. Launch SQL Server Management Studio and connect to a server.
-1. In Object Explorer, right-click the SQL Server name (top).
-1. In the context menu select, Reports -> Standard Reports -> Memory Consumption
-
-
-### Pssdiag or SQL LogScout
-
-An alternative, automated way to capture these data points is to use tools like [PSSDIAG](https://github.com/microsoft/DiagManager/releases) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases). 
-
-- If you use Pssdiag, configure to capture **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector
-- If you use SQL LogScout, configure to capture the **Memory** scenario
-
-The following sections describe more detailed steps for each scenario - external or internal memory pressure. 
