@@ -51,6 +51,11 @@ Internal memory pressure refers to low memory availability caused by factors ins
   
 Internal memory pressure coming from components inside SQL Server Engine can also lead to out of memory errors. There are hundreds of components, tracked via [memory clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql), that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to be able to resolve this further. For example, if you find that the OBJECTSTORE_LOCK_MANAGER memory clerk is showing the large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire a large number of locks and optimize them by using indexes, or shorten transactions that hold locks for long periods, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) and their descriptions.
 
+### Visual representation of the memory pressure types
+
+The following graph illustrates the types of pressure that can lead to out of memory conditions in SQL Server
+
+:::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-pressure.svg" alt-text="Memory pressure graph":::
 
 ## Troubleshooting Methodology
 
