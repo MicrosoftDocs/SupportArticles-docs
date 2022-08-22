@@ -35,7 +35,7 @@ A query can be running for some time and waiting for some time in its lifetime (
 [!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
 
 
-### High-level visual representation of methodology
+### High-level visual representation of the methodology
 
 :::image type="content" source="media/troubleshoot-slow-queries/slow-queries.svg" alt-text="troubleshoot slow queries top level visualization":::
 
