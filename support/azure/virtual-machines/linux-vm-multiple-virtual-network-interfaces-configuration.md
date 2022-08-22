@@ -23,7 +23,7 @@ This article provides the required configuration for multiple network interfaces
 
 For details, see the following screenshot.
 
-:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario":::
+:::image type="content" source="media/linux-vm-multiple-virtual-network-interfaces-configuration/vm-two-nics-same-subnet.png" alt-text="Diagram that shows networking configuration of the sample scenario.":::
 
 The configuration can also be used on a VM that has more network interfaces on the same or different subnets in the same VNET.
 
@@ -227,52 +227,52 @@ The routing rules are now correctly configured, and you can connect by using eit
 
       1. Create the rule file for eth0 by running the following command:
 
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth0
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/rule-eth0
+          ```
 
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
 
-        ```
-        from 10.0.1.4/32 table eth0-rt
-        to 10.0.1.4/32 table eth0-rt
-        ```
+          ```Configuration
+          from 10.0.1.4/32 table eth0-rt
+          to 10.0.1.4/32 table eth0-rt
+          ```
       3. Create the route file for eth0 by running the following command:
   
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth0
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/route-eth0
+          ```
       4. Add the following contents to the route file:
         
-        ```
-        10.0.1.0/24 dev eth0 table eth0-rt
-        default via 10.0.1.1 dev eth0 table eth0-rt
-        ```
+          ```Configuration
+          10.0.1.0/24 dev eth0 table eth0-rt
+          default via 10.0.1.1 dev eth0 table eth0-rt
+          ```
 
     - Create rules and routes for eth1:
-    
+
       1. Create the rule file for eth1 by running the following command:
       
-        ```bash
-        vi /etc/sysconfig/network-scripts/rule-eth1
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/rule-eth1
+          ```
       2. Add the following contents to the rule file (adjust the IP address accordingly, and make sure that you specify the IPv4 address in the command):
       
-        ```Configuration
-        from 10.0.1.5/32 table eth1-rt
-        to 10.0.1.5/32 table eth1-rt
-        ```
+          ```Configuration
+          from 10.0.1.5/32 table eth1-rt
+          to 10.0.1.5/32 table eth1-rt
+          ```
       3. Create the route file for eth1 by running the following command:
       
-        ```bash
-        vi /etc/sysconfig/network-scripts/route-eth1
-        ```
+          ```bash
+          vi /etc/sysconfig/network-scripts/route-eth1
+          ```
       4. Add the following contents to the route file:
       
-        ```Configuration
-        10.0.1.0/24 dev eth1 table eth1-rt
-        default via 10.0.1.1 dev eth1 table eth1-rt
-        ```
+          ```Configuration
+          10.0.1.0/24 dev eth1 table eth1-rt
+          default via 10.0.1.1 dev eth1 table eth1-rt
+          ```
 
 6. To apply the changes, restart the network service by running the following command:
 
@@ -449,7 +449,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
     # echo "201 eth1-rt" >> /etc/iproute2/rt_tables
     ```
 
-1. Create or modify the "/etc/network/interfaces.d/50-cloud-init"  file by using the following configuration:
+1. Create or modify the */etc/network/interfaces.d/50-cloud-init*  file by using the following configuration:
 
     ```Configuration
     auto lo
