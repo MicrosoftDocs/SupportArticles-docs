@@ -1,7 +1,7 @@
 ---
 title: Office apps for iOS require HTTPS for server resources
 description: Beginning in version 2.57, Office apps for iOS require an HTTPS connection to server resources.
-author: v-matthamer
+author: helenclu
 ms.reviewer: dereksn
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,7 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - CI 160526

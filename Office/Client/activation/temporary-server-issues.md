@@ -1,9 +1,9 @@
 ---
 title: Activation error Sorry, we are having some temporary server issues
 description: Troubleshooting methods if you're continuing to see the error Sorry, we are having some temporary server issues.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -462,7 +462,7 @@
         - name: Information about the Sniffer functionality
           href: ../performance/information-about-outlook-sniffer-functionality.md
         - name: Install SaRA from network share
-          href: /office365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
+          href: /microsoft-365/troubleshoot/installation/install-sara-from-network-share?context=/outlook/troubleshoot/context/client-context
         - name: Insufficient memory to display a folder
           href: ../performance/outlook-folder-fails-displaying.md
         - name: Insufficient memory errors and sent mail stuck
