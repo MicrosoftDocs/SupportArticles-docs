@@ -1,4 +1,4 @@
-To optimize a query that's waiting on bottlenecks, identify how long the wait is and where the bottleneck is. Once the [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) is confirmed, reduce the wait time or eliminate the wait completely.
+To optimize a query that's waiting on bottlenecks, identify how long the wait is and where the bottleneck is (the wait type). Once the [wait type](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes) is confirmed, reduce the wait time or eliminate the wait completely.
 
 To calculate the approximate wait time, subtract the CPU time (worker time) from the elapsed time of a query. Typically, the CPU time is the actual execution time, and the remaining part of the lifetime of the query is waiting.
 
@@ -44,7 +44,7 @@ Examples of how to calculate approximate wait duration:
    AND is_user_process = 1
    ```
 
-- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](../../performance/troubleshoot-query-perf-between-servers.md#collect-elapsed-time-cpu-time-and-logical-reads) section for detailed steps.
+- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](collect-cpu-time-elapsed-time-logical-reads.md) section for detailed steps.
 
 - If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 

@@ -41,7 +41,7 @@ A query can be running for some time and waiting for some time in its lifetime (
 
 ### 3. Diagnose and resolve waiting queries
 
-If you established that your queries of interest are waiters, your next step is to focus on resolving bottleneck issues. Otherwise, go to step 4 [Diagnose and resolve running queries](#4-diagnose-and-resolve-running-queries).
+If you established that your queries of interest are waiters, your next step is to focus on resolving bottleneck issues. Otherwise, go to step 4: [Diagnose and resolve running queries](#4-diagnose-and-resolve-running-queries).
 
 [!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
