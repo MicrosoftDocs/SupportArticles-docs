@@ -22,7 +22,7 @@ To establish that you have query performance issues on your SQL Server instance,
 
 [!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
-### 2. Running vs. waiting: Why are queries slow?
+### 2. Running vs. Waiting: why are queries slow?
 
 If you find queries that exceed your predefined threshold, examine why they could be slow. The cause of performance problems can be grouped into two categories: RUNNING or WAITING
 
@@ -54,6 +54,7 @@ If CPU (worker) time is very close to the overall elapsed duration, that means t
 - Redesign or rewrite the queries
 - Identify and resolve [parameter-sensitive plans](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - Identify and resolve [SARG-ability issues](troubleshoot-high-cpu-usage-issues.md#step-6-investigate-and-resolve-sargability-issues)
+- Identify and resolve [Row goal](/archive/blogs/queryoptteam/row-goals-in-action) issues where long-running nested loops can be caused by TOP, EXISTS, IN, FAST, SET ROWCOUNT, OPTION (FAST N).  For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue) and [Showplan enhancements – Row Goal EstimateRowsWithoutRowGoal ](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839)
 - Assess and resolve [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) issues. See [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
 - Identify high CPU performance issues; see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
 - Increase computing resources on the system (CPUs)
