@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 ---
 # Information about the Calendar Checking Tool for Outlook (CalCheck)
 
-## Summary
-
 The Calendar Checking Tool for Outlook (CalCheck) is a command-line program that checks the Microsoft Outlook calendar for problems. The tool opens an Outlook messaging profile to access the Outlook calendar. It performs various checks on general settings, such as permissions, free/busy publishing, delegate configuration, and automatic booking. Then, each item in the Outlook calendar folder is checked for known problems that can cause unexpected behavior, such as meetings that seem to be missing.
 
 The CalCheck tool then generates a report that can be used to help diagnose problem items or identify trends.
@@ -42,7 +40,7 @@ The CalCheck tool then generates a report that can be used to help diagnose prob
 
 Because these calendar item fields may contain personal information or details, we recommend that you first review all items in the CalCheck report before you share your report. See the [More information](#more-information) section for additional fields that are found in CalCheck reports.
 
-## Calendar Checking Tool information
+## Perform calendar checking
 
 To use CalCheck, the Outlook calendar must reside on a computer that is running Microsoft Exchange Server. The tool doesn't work with IMAP, POP3, or other non-Exchange email accounts.
 
@@ -71,11 +69,11 @@ Go to the [latest release](https://github.com/rtopken/CalCheck/releases), downlo
 > [!NOTE]
 > The 64-bit version of this tool is for use together with only the 64-bit version of Microsoft Outlook.
 
-### Checks that are performed
+## Checks that are performed
 
 The Calendar Checking Tool performs two basic kinds of checks: Calendar-specific checks and item-level checks.
 
-#### Calendar-specific checks
+### Calendar-specific checks
 
 The following calendar-specific checks are run and then logged in the report:
 
@@ -92,7 +90,7 @@ The following calendar-specific checks are run and then logged in the report:
 
     For more information about how to regenerate the hidden free/busy information, see [You experience issues in Outlook when you try to configure free/busy information or when you try to delegate information](https://support.microsoft.com/topic/you-experience-issues-in-outlook-when-you-try-to-configure-free-busy-information-or-when-you-try-to-delegate-information-7167b76e-5a56-1a94-08b7-41186c873d9b).
 
-#### Item-level checks
+### Item-level checks
 
 The following item-level checks are run and then logged in the report.
 
@@ -164,11 +162,11 @@ The following item-level checks are run and then logged in the report.
 > [!NOTE]
 > If you prefer not to have holiday items flagged, change the _CalCheck.cfg_ file. CalCheck identifies an all-day event as a holiday if the **Keywords** named property includes the "holiday" string.
 
-### Current help and command-line switches
+## Current help and command-line switches
 
 This section describes the command-line switches that are available to customize CalCheck behavior.
 
-#### Usages
+### Usages
 
 You can edit the _CalCheck.cfg_ file to turn specific tests on or off.
 
@@ -187,7 +185,7 @@ _CalCheck -?_
 
 Running the command creates CalCheck.log and CalCheckErr.csv files that show potential problems and items to fix or remove, plus processing information.  
 
-#### Examples
+### Examples
 
 - Default - Prompt for a profile, and process the mailbox in that profile:  
     _CalCheck_
@@ -201,7 +199,7 @@ Running the command creates CalCheck.log and CalCheckErr.csv files that show pot
 - Print this message:  
     _CalCheck -?_
 
-#### Configuration file in CalCheck version 2
+### Configuration file in CalCheck version 2
 
 CalCheck version 2 (v2) now includes a _CalCheck.cfg_ file. This file is located in the same folder in which CalCheck.exe is located. If the `.cfg` file is missing, CalCheck v2 displays an error message and doesn't run. The `.cfg` file is in plain text format. You can manually edit the file to enable or disable individual tests. By default, all tests are set to **true**. By default, all tests are run.
 
