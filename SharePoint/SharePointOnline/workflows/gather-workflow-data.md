@@ -1,7 +1,7 @@
 ---
 title: Gather SharePoint 2013 Workflow troubleshooting data with ShowScopeDebugInfo
 description: Describes how to get troubleshooting information about Workflows.
-author: v-matthamer
+author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,7 +12,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 151719
-ms.author: v-matthamer
+ms.author: luche
 appliesto: 
   - SharePoint Online
 ms.date: 3/31/2022

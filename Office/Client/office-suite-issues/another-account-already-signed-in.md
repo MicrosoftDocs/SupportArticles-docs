@@ -102,7 +102,7 @@ Sign out of Microsoft Office using any Office product: Word, Excel, PowerPoint, 
 
 ## More information
 
-For more information, see [Recommendations on resolving common sign-in issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
+For more information, see [Recommendations on resolving common sign-in issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended#recommendations-on-resolving-common-sign-in-issues).
 
 In Office 2013 apps, you can access Microsoft 365 content in SharePoint Online by providing your Microsoft 365 user ID and password. If you have multiple Microsoft 365 user IDs from different organizations, you can access content from the SharePoint Online deployments of each organization.
 
