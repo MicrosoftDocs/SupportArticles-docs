@@ -50,7 +50,7 @@ If CPU (worker) time is very close to the overall elapsed duration, the query sp
 
 - [Examine the query plan of the query](/sql/relational-databases/performance/display-an-actual-execution-plan)
 - [Update Statistics](/sql/t-sql/statements/update-statistics-transact-sql)
-- Identify and apply [Missing Indexes](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql), see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions) for steps on how to identify missing indexes.
+- Identify and apply [Missing Indexes](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql), see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions) for steps on how to identify missing indexes
 - Redesign or rewrite the queries
 - Identify and resolve [parameter-sensitive plans](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - Identify and resolve [SARG-ability issues](troubleshoot-high-cpu-usage-issues.md#step-6-investigate-and-resolve-sargability-issues)
