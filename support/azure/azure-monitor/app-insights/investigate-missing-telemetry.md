@@ -4,7 +4,6 @@ description: Learn how to test connectivity and telemetry ingestion using PowerS
 ms.topic: conceptual
 ms.date: 8/18/2022
 ms.author: toddfous
-editor: v-kainawroth
 ms.reviewer: aaronmax
 ms.service: azure-monitor
 ms.subservice: application-insights
