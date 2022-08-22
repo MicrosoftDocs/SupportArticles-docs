@@ -64,7 +64,7 @@
 						x="30.6" dy="1.2em" class="st3">running?</tspan></text>		</g>
 		<g id="shape2-6" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(391.5,-310.5)">
 			<title>Process</title>
-			<desc>Query is Running long i.e. CPU is being used</desc>
+			<desc>Query is Running long (CPU is being used)</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Cost" v:type="7" v:format="@" v:langID="1033"/>
 				<v:cp v:nameU="Duration" v:lbl="Duration" v:type="2" v:langID="1033"/>
@@ -76,8 +76,8 @@
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
 			<v:textRect cx="49.5" cy="517.5" width="99" height="54"/>
 			<rect x="0" y="490.5" width="99" height="54" rx="7.2" ry="7.2" class="st4"/>
-			<text x="5.03" y="514.5" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/><v:newlineChar/>Query is Running long <v:newlineChar/><tspan
-						x="6.32" dy="1.2em" class="st3">i.e. CPU is being used </tspan> <v:newlineChar/></text>		</g>
+			<text x="5.03" y="514.35" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/>Query is Running long<v:newlineChar/><tspan
+						x="10.58" dy="1.223em" class="st3">(CPU is being used)</tspan></text>		</g>
 		<a xlink:href="Blocking_Locks.vsd" xlink:title="Blocking_Locks.vsd">
 			<g id="shape3-10" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(97.3125,-274.5)">
 				<title>Process.22</title>
@@ -202,22 +202,22 @@
 			<title>Dynamic connector.57</title>
 			<path d="M3.37 544.5 L-10.13 544.5 L-10.13 760.5 L9.11 760.5" class="st9"/>
 		</g>
-		<g id="shape18-67" v:mID="18" v:groupContext="shape" v:layerMember="2" transform="translate(207.68,-369)">
+		<g id="shape18-67" v:mID="18" v:groupContext="shape" v:layerMember="2" transform="translate(207.68,-365.543)">
 			<title>Revision cloud.85</title>
-			<desc>Compare CPU vs Duration If CPU is less than 70-80% of duratio...</desc>
+			<desc>Compare CPU vs Duration: If CPU is less than 70-80% of durati...</desc>
 			<v:userDefs>
 				<v:ud v:nameU="AntiScale" v:val="VT0(1):26"/>
 				<v:ud v:nameU="visVersion" v:val="VT0(12):26"/>
 			</v:userDefs>
 			<v:textBlock v:margins="rect(1,1,1,1)"/>
-			<v:textRect cx="84.8202" cy="514.204" width="169.65" height="60.5929"/>
-			<path d="M6.48 511.71 A21.1738 9.46159 -180 0 0 16.7 527.77 A25.8675 11.559 -180 0 0 56.44 537.81 A26.1751 11.6964 -180
-						 0 0 102.57 538.8 A31.126 13.9088 -180 0 0 150.94 527.16 A24.0363 10.7407 -180 0 0 162.1 508.87 A18.8556
-						 8.42568 -180 0 0 147.22 495.58 A32.248 14.4101 -180 0 0 91.41 490.59 A31.692 14.1617 -180 0 0 35.61 492.25
-						 A29.6849 13.2648 -180 0 0 6.48 511.71 Z" class="st11"/>
-			<text x="32.28" y="505.2" class="st12" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/>Compare CPU vs Duration<v:newlineChar/><tspan
-						x="6.43" dy="1.2em" class="st3"> </tspan>If CPU is less than 70-80% of duration, <tspan x="15.95"
-						dy="1.2em" class="st3">you likely have a Waiting problem</tspan></text>		</g>
+			<v:textRect cx="89.6601" cy="512.475" width="179.33" height="64.0504"/>
+			<path d="M6.85 509.83 A22.382 10.0015 -180 0 0 17.65 526.81 A27.3435 12.2185 -180 0 0 59.66 537.42 A27.6686 12.3638 -180
+						 0 0 108.43 538.47 A32.9021 14.7024 -180 0 0 159.55 526.17 A25.4078 11.3535 -180 0 0 171.35 506.84 A19.9315
+						 8.90646 -180 0 0 155.62 492.78 A34.0881 15.2324 -180 0 0 96.63 487.51 A33.5003 14.9697 -180 0 0 37.64 489.27
+						 A31.3787 14.0217 -180 0 0 6.85 509.83 Z" class="st11"/>
+			<text x="35.78" y="503.47" class="st12" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/>Compare CPU vs Duration:<v:newlineChar/><tspan
+						x="13.65" dy="1.2em" class="st3">If CPU is less than 70</tspan>-80% of duration<v:newlineChar/><tspan
+						x="27.88" dy="1.2em" class="st3">likely you have a Waiting issue</tspan></text>		</g>
 		<g id="shape19-72" v:mID="19" v:groupContext="shape" v:layerMember="1" transform="translate(82.125,-342)">
 			<title>Dynamic connector.65</title>
 			<path d="M3.37 544.5 L-10.13 544.5 L-10.13 801 L9.11 801" class="st9"/>
@@ -296,7 +296,7 @@
 		</g>
 		<g id="shape28-103" v:mID="28" v:groupContext="shape" v:layerMember="0" transform="translate(85.5,-315)">
 			<title>Process.3</title>
-			<desc>Query is Waiting i.e. CPU is not being used</desc>
+			<desc>Query is Waiting long (CPU is not being used)</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Cost" v:type="7" v:format="@" v:langID="1033"/>
 				<v:cp v:nameU="Duration" v:lbl="Duration" v:type="2" v:langID="1033"/>
@@ -308,9 +308,9 @@
 			<v:textBlock v:margins="rect(2,2,2,2)"/>
 			<v:textRect cx="54" cy="517.5" width="108" height="54"/>
 			<rect x="0" y="490.5" width="108" height="54" rx="7.2" ry="7.2" class="st4"/>
-			<text x="20.36" y="508.5" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/><v:newlineChar/>Query is Waiting<v:newlineChar/><tspan
-						x="12.45" dy="1.2em" class="st3"> </tspan>i.e. CPU is not being <tspan x="44.3" dy="1.2em" class="st3">used </tspan> <v:newlineChar/></text>		</g>
-		<g id="shape29-108" v:mID="29" v:groupContext="shape" v:layerMember="1" transform="translate(82.125,-342)">
+			<text x="10.46" y="514.35" class="st5" v:langID="1033"><v:paragraph v:horizAlign="1" v:bulletSize="0.166667"/><v:tabList/>Query is Waiting long<v:newlineChar/><tspan
+						x="7.01" dy="1.223em" class="st3">(CPU is not being used)</tspan></text>		</g>
+		<g id="shape29-107" v:mID="29" v:groupContext="shape" v:layerMember="1" transform="translate(82.125,-342)">
 			<title>Dynamic connector.29</title>
 			<path d="M3.37 544.5 L-10.13 544.5 L-10.13 843.75 L9.11 843.75" class="st9"/>
 		</g>
