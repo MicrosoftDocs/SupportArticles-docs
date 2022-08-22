@@ -37,7 +37,7 @@ A query can be running for some time and waiting for some time in its lifetime (
 
 ### High-level visual representation of the methodology
 
-:::image type="content" source="media/troubleshoot-slow-queries/slow-queries.svg" alt-text="troubleshoot slow queries top level visualization":::
+:::image type="content" source="media/troubleshoot-slow-queries/slow-queries-flow.svg" alt-text="troubleshoot slow queries top level visualization":::
 
 ### 3. Diagnose and resolve waiting queries
 
