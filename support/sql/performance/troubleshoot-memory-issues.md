@@ -44,7 +44,7 @@ External pressure refers to high memory utilization coming from a component outs
 
 ### Internal memory pressure, not coming from SQL Server
 
-Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. There are components that may run inside the SQL Server process that are "external" to the SQL Server engine. Examples include DLLs like linked servers, SQLCLR components, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data that come from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low-memory conditions of for components inside SQL Server, causing out of memory errors.
+Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. There are components that may run inside the SQL Server process that are "external" to the SQL Server engine. Examples include DLLs like linked servers, SQLCLR components, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data that come from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low-memory conditions of for components inside SQL Server, causing out of memory errors. Note that some of the memory that the [SQL Native Client](/sql/relational-databases/native-client/sql-server-native-client) DLL uses for linked servers is requested from SQL Server engine.
 
 
 ### Internal memory pressure, coming from SQL Server component(s)
@@ -247,6 +247,10 @@ The following actions may free some memory and make it available to SQL Server:
   - DBCC FREESESSIONCACHE  
   
   - DBCC FREEPROCCACHE  
+
+#### Restart SQL Server service
+
+- In some cases if you need to deal with a critical exhaustion of memory and SQL Server isn't able to process queries, you can consider restarting the service.
 
 #### Consider using Resource Governor for specific scenarios
 
