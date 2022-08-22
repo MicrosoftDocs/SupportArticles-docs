@@ -331,7 +331,7 @@ Follow these steps to [compare execution plans](/sql/relational-databases/perfor
    - Use more selective `WHERE` predicates to reduce the data processed up-front.
    - Break it apart.
    - Select some parts into temp tables, and join them later.
-   - Remove `TOP`, `EXISTS` and `FAST` (T-SQL) in the queries that run for a very long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
+   - Remove `TOP`, `EXISTS`, and `FAST` (T-SQL) in the queries that run for a very long time due to [optimizer row goal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue).
    - Avoid using Common Table Expressions (CTEs) in such cases as they combine statements into a single big query.
 
 1. Try using [query hints](/sql/t-sql/queries/hints-transact-sql-query) to produce a better plan:
