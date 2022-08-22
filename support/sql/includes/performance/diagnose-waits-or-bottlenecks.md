@@ -11,7 +11,7 @@ Examples of how to calculate approximate wait duration:
 
 ### Identify the bottleneck or wait
 
-- To identify historical long-waiting queries (for example >20% of the overall elapsed time is wait time), run the following query. This query uses statistics since the start of SQL Server for cached query plans. 
+- To identify historical long-waiting queries (for example, >20% of the overall elapsed time is wait time), run the following query. This query uses performance statistics for cached query plans since the start of SQL Server. 
 
    ```sql
    SELECT t.text,
