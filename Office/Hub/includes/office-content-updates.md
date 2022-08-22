@@ -2,6 +2,14 @@
 
 
 
+## Week of August 15, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/16/2022 | [Microsoft 365 Apps activation network connection issues](/office/troubleshoot/activation/network-connection-issues) | modified |
+
+
 ## Week of July 18, 2022
 
 
@@ -13,22 +21,3 @@
 | 7/22/2022 | [Error We couldn't start OneNote the last time we tried](/office/troubleshoot/onenote/couldnt-start-onenote-the-last-time-error) | modified |
 | 7/22/2022 | [This is not a valid win32 application](/office/troubleshoot/visio/not-a-valid-win32-application-error) | modified |
 | 7/22/2022 | [Microsoft 365 can't open files from the most recently used document list (MRU)](/office/troubleshoot/administration/cant-open-files-most-recently-used-list) | modified |
-
-
-## Week of July 11, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 7/15/2022 | [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) | modified |
-
-
-## Week of June 20, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 6/23/2022 | [Issues with shared computer activation for Microsoft 365 Apps](/office/troubleshoot/activation/shared-computer-activation) | modified |
-| 6/23/2022 | [Progress bars not drawn for tasks that are in progress](/office/troubleshoot/project/progress-bars-not-drawn-for-tasks) | modified |
-| 6/23/2022 | [How to upgrade your Project global template after you install Project 2013](/office/troubleshoot/project/upgrade-project-global-template) | modified |
-| 6/24/2022 | [Network Mapped Drive Hyperlinks resolve as UNC in Office Products](/office/troubleshoot/excel/network-mapped-drive-hyperlinks-unc) | modified |
