@@ -390,6 +390,8 @@
       href: ./identity/ldap-queries-run-slowly.md
     - name: How to troubleshoot high Lsass.exe CPU utilization
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
+    - name: Issues when AD replication and Netlogon RPCs request backlog values are exceeded
+      href: ./identity/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md
     - name: LDAP and Kerberos servers reset TCP sessions
       href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: Performance issues after you upgrade DCs
