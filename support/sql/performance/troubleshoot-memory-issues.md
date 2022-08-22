@@ -31,6 +31,7 @@ There are common errors that indicate low memory in SQL Server. Examples of erro
 - 8902 - failure to allocate memory during DBCC execution
 - 8318 - failure to load SQL performance counters due to insufficient memory
 - 9695 or 9695 - failure to allocate memory for Service Broker operations
+- 17890 - failure to allocate memory due to SQL memory being paged out by the OS
 - 17131 or 17132 - Server startup failure due to insufficient memory
 - 22986 or 22987 - Change data capture failures due to insufficient memory
 - 25601 - Xevent engine is out of memory
@@ -44,7 +45,7 @@ External pressure refers to high memory utilization coming from a component outs
 
 ### Internal memory pressure, not coming from SQL Server
 
-Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. There are components that may run inside the SQL Server process that are "external" to the SQL Server engine. Examples include DLLs like linked servers, SQLCLR components, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data that come from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low-memory conditions of for components inside SQL Server, causing out of memory errors. Note that some of the memory that the  DLL uses for linked servers is requested from SQL Server engine.
+Internal memory pressure refers to low memory availability caused by factors inside the SQL Server process. There are components that may run inside the SQL Server process that are "external" to the SQL Server engine. Examples include DLLs like linked servers, SQLCLR procedures or functions, extended procedures (XPs), and OLE Automation (`sp_OA*`). Others include anti-virus or other security programs that inject DLLs inside a process for monitoring purposes. An issue or poor design in any of these components could lead to large memory consumption. For example, consider a linked server caching 20 million rows of data that come from an external source into SQL Server memory. As far as SQL Server is concerned, no memory clerk will report high memory usage, but memory consumed inside the SQL Server process will be high. This memory growth from a linked server DLL, for example, would cause SQL Server to start cutting its memory usage (see above) and will create low-memory conditions of for components inside SQL Server, causing out of memory errors. Note that some of the memory that the  DLL uses for linked servers is requested from SQL Server engine.
 Note that a few Microsoft DLLs used in SQL Server process space (for example MSOLEDBSQL, [SQL Native Client](/sql/relational-databases/native-client/sql-server-native-client)) are able to interface with SQL Server memory infrastructure for reporting and allocation. You can run `select * from sys.dm_os_memory_clerks where type='MEMORYCLERK_HOST'` to get a list of them and track that memory consumption for some of their allocations.
 
 
@@ -109,7 +110,6 @@ An alternative, automated way to capture these data points is to use tools like 
 - If you use SQL LogScout, configure to capture the **Memory** scenario
 
 The following sections describe more detailed steps for each scenario - external or internal memory pressure. 
-
 
 
 ## Troubleshooting Methodology
@@ -232,7 +232,9 @@ The following actions may free some memory and make it available to SQL Server:
 
 #### Change or move workload off the system
 
-- Check the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
+- Investigate the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
+- For read-only workloads consider moving them to a read-only secondary replica in an Always On environment. For more information, see [Offload read-only workload to secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups) and [Configure read-only access to a secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server)
+- 
 
 #### Ensure proper memory configuration for virtual machines
 
@@ -260,3 +262,8 @@ The following actions may free some memory and make it available to SQL Server:
 #### Add more RAM on the physical or virtual server
 
 - If the problem continues, you'll need to investigate further, and possibly increase server resources (RAM).
+
+## Additional information on specific memory-related scenarios
+
+- [MSSQLSERVER_17890 A significant part of SQL Server process memory has been paged out.](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error)
+
