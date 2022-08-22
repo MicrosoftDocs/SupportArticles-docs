@@ -10,7 +10,7 @@
         - name: Current environment doesn't meet the minimum requirements
           href: the-current-environment-donot-meet-the-minimum-requirements-error-message.md
         - name: Prevent users from creating AI Builder custom models
-          href: how-to-prevent-users-from-using-ai-builder.md
+          href: prevent-users-from-creating-ai-builder-custom-models.md
     - name: Models
       items:
         - name: AI models fail to be imported in a new environment
