@@ -18,7 +18,7 @@ This article describes how to handle a performance issue that database applicati
 
 ### 1. Find slow queries
 
-To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds), based on an established baseline performance. For example, in a stress testing environment, you may have established a threshold for your workload to be no longer than 300 ms and you can use this. Then, you can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the overall duration of database queries; therefore, the main focus is on execution duration. Other metrics like cpu time and logical reads are gathered to help with narrowing down the investigation.
+To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds) based on an established baseline performance. For example, in a stress testing environment, you may have established a threshold for your workload to be no longer than 300 ms, and you can use this. Then, you can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the overall duration of database queries; therefore, the main focus is on execution duration. Other metrics like cpu time and logical reads are gathered to help with narrowing down the investigation.
 
 [!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
@@ -28,7 +28,7 @@ If you find queries that exceed your predefined threshold, examine why they coul
 
 - **WAITING**: Queries can be slow because they're waiting on a bottleneck for a long time. See a detailed list of bottlenecks in [types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes).
 
-- **RUNNING**: Queries can be slow because they're running (executing) for a long time. In other words these queries are actively using CPU resources.
+- **RUNNING**: Queries can be slow because they're running (executing) for a long time. In other words, these queries are actively using CPU resources.
 
 A query can be running for some time and waiting for some time in its lifetime (duration). However, your focus is to determine which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. It's simple: if a query isn't running, it's waiting. Ideally, a query spends most of its elapsed time in a running state and very little time waiting for resources. Also, in the best-case scenario, a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type.
 
@@ -42,7 +42,7 @@ If you established that your queries of interest are waiters, your next step is 
 
 ### 4. Diagnose and resolve running queries
 
-If CPU (worker) time is very close to the overall elapsed duration, that means the query spent most of its lifetime executing. Typically, when the SQL Server engine is reported to drive high CPU, the high-CPU is coming from queries that drive a large number of logical reads (the most common reason).
+If CPU (worker) time is very close to the overall elapsed duration, the query spent most of its lifetime executing. Typically, when the SQL Server engine drives high CPU usage, the high CPU usage is coming from queries that drive a large number of logical reads (the most common reason).
 
 [!INCLUDE [identify cpu bound queries](../includes/performance/identify-cpu-bound-queries.md)]
 
