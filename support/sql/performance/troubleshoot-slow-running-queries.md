@@ -34,6 +34,11 @@ A query can be running for some time and waiting for some time in its lifetime (
 
 [!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
 
+
+### High-level visual representation of methodology
+
+:::image type="content" source="media/troubleshoot-slow-queries/slow-queries.svg" alt-text="troubleshoot slow queries top level visualization":::
+
 ### 3. Diagnose and resolve waiting queries
 
 If you established that your queries of interest are waiters, your next step is to focus on resolving bottleneck issues. Otherwise, go to step 4 [Diagnose and resolve running queries](#4-diagnose-and-resolve-running-queries).
