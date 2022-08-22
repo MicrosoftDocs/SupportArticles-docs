@@ -44,7 +44,7 @@ Examples of how to calculate approximate wait duration:
    AND is_user_process = 1
    ```
 
-- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](collect-cpu-time-elapsed-time-logical-reads.md) section for detailed steps.
+- If you can collect a query plan, check the **WaitStats** from the execution plan properties. Check the last item in [Collect Elapsed time, CPU time and Logical Reads](collect-cpu-time-elapsed-time-logical-reads.md#query_timestats_from_plan) section for detailed steps.
 
 - If you're familiar with [PSSDiag/SQLdiag](https://github.com/microsoft/diagmanager#readme) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout#readme) LightPerf/GeneralPerf scenarios, consider using either of them to collect performance statistics and identify waiting queries on your SQL Server instance. You can import the collected data files and analyze the performance data with [SQL Nexus](https://github.com/microsoft/SqlNexus).
 
