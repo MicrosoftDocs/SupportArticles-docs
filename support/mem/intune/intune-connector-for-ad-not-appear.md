@@ -16,7 +16,7 @@ After you [install the Intune Connector for Active Directory](/mem/intune/enroll
 > "DiagnosticText": "We are unable to complete your request because a server-side error occurred. Please try again. [Exception Message: \\"DiagnosticException: 0x0FFFFFFF. We are unable to complete your request because a server-side error occurred. Please try again.\\"] [Exception Message: \\"Failed to get a value for Key: OdjServiceBaseUrl\\"] [Exception Message: \\"The given key was not present in the dictionary.\\"]"
 
 > [!NOTE]
-> The **ODJ Connector Service** event logs are located in the Microsoft-Intune-ODJConnectorService/Admin or Microsoft-Intune-ODJConnectorService/Operational under **Event Viewer** > **Application and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**.
+> The **ODJ Connector Service** event logs are located under **Event Viewer** > **Application and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Select **Microsoft-Intune-ODJConnectorService/Admin** or **Microsoft-Intune-ODJConnectorService/Operational**.
 
 ## Cause
 
