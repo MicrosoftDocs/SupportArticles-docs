@@ -1,26 +1,22 @@
 ---
 title: Wireless network connectivity issues troubleshooting
-ms.reviewer: 
-manager: dcscontentpm
 description: Learn how to troubleshoot Wi-Fi connections. Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine.
+ms.date: 08/23/2022
+manager: dcscontentpm
 ms.prod: windows-client
 author: aczechowski
-ms.localizationpriority: medium
 ms.author: aaroncz
 ms.topic: troubleshooting
-old_title: Advanced Troubleshooting Wireless Network Connectivity
-old_ms.prod: w10
 ms.technology: windows-client-networking
 ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
-old_manager: dougeby
+ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-
 # Advanced troubleshooting wireless network connectivity
 
 > [!NOTE]
-> Home users: This article is intended for use by support agents and IT professionals. If you're looking for more general information about Wi-Fi problems in Windows 10, check out this [Windows 10 Wi-Fi fix article](https://support.microsoft.com/en-in/help/4000432/windows-10-fix-wi-fi-problems).
+> Home users: This article is intended for use by support agents and IT professionals. If you're looking for more general information about Wi-Fi problems in Windows 10, check out this [Windows 10 Wi-Fi fix article](https://support.microsoft.com/windows/fix-wi-fi-connection-issues-in-windows-9424a1f7-6a3b-65a6-4d78-7f07eee84d2c).
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -28,6 +24,7 @@ _Applies to:_ &nbsp; Windows 10
 
 This overview describes the general troubleshooting of establishing Wi-Fi connections from Windows clients.
 Troubleshooting Wi-Fi connections requires understanding the basic flow of the Wi-Fi autoconnect state machine. Understanding this flow makes it easier to determine the starting point in a repro scenario in which a different behavior is found.
+
 This workflow involves knowledge and use of [TextAnalysisTool](https://github.com/TextAnalysisTool/Releases), an extensive text filtering tool that is useful with complex traces with numerous ETW providers such as wireless_dbg trace scenario.
 
 ## Scenarios
@@ -39,21 +36,22 @@ This article applies to any scenario in which Wi-Fi connections fail to establis
 
 Wireless ETW is incredibly verbose and calls out many innocuous errors (rather flagged behaviors that have little or nothing to do with the problem scenario). Searching for or filtering on "err", "error", and "fail" will seldom lead you to the root cause of a problematic Wi-Fi scenario. Instead it will flood the screen with meaningless logs that will obfuscate the context of the actual problem.
 
-It's  important to understand the different Wi-Fi components involved, their expected behaviors, and how the problem scenario deviates from those expected behaviors.
+It's important to understand the different Wi-Fi components involved, their expected behaviors, and how the problem scenario deviates from those expected behaviors.
 The intention of this troubleshooter is to show how to find a starting point in the verbosity of wireless_dbg ETW and home in on the responsible components that are causing the connection problem.
 
 ### Known Issues and fixes
 
 | OS version | Fixed in |
 | --- | --- |
-| **Windows 10, version 1803** | [KB4284848](https://support.microsoft.com/help/4284848) |
-| **Windows 10, version 1709** | [KB4284822](https://support.microsoft.com/help/4284822) |
-| **Windows 10, version 1703** | [KB4338827](https://support.microsoft.com/help/4338827) |
+| Windows 10, version 1803 | [KB4284848](https://support.microsoft.com/help/4284848) |
+| Windows 10, version 1709 | [KB4284822](https://support.microsoft.com/help/4284822) |
+| Windows 10, version 1703 | [KB4338827](https://support.microsoft.com/help/4338827) |
 
 Make sure that you install the latest Windows updates, cumulative updates, and rollup updates. To verify the update status, refer to the appropriate update-history webpage for your system:
+
 - [Windows 10 version 1809](https://support.microsoft.com/help/4464619)
 - [Windows 10 version 1803](https://support.microsoft.com/help/4099479)
-- [Windows 10 version 1709](https://support.microsoft.com/en-us/help/4043454)
+- [Windows 10 version 1709](https://support.microsoft.com/topic/windows-10-and-windows-server-update-history-8e779ac1-e840-d3b8-524e-91037bf7645a)
 - [Windows 10 version 1703](https://support.microsoft.com/help/4018124)
 - [Windows 10 version 1607 and Windows Server 2016](https://support.microsoft.com/help/4000825)
 - [Windows 10 version 1511](https://support.microsoft.com/help/4000824)
@@ -68,17 +66,19 @@ Make sure that you install the latest Windows updates, cumulative updates, and r
     ```console
     netsh trace start wireless_dbg capture=yes overwrite=yes maxsize=4096 tracefile=c:\tmp\wireless.etl
     ```
+
 2. Reproduce the issue.
     - If there's a failure to establish connection, try to manually connect.
     - If it's  intermittent but easily reproducible, try to manually connect until it fails. Record the time of each connection attempt, and whether it was a success or failure.
-    - If the issue is intermittent but rare, netsh trace stop command needs to be triggered automatically (or at least alerted to admin quickly) to ensure trace doesn’t overwrite the repro data.
+    - If the issue is intermittent but rare, netsh trace stop command needs to be triggered automatically (or at least alerted to admin quickly) to ensure trace doesn't overwrite the repro data.
     - If intermittent connection drops trigger stop command on a script (ping or test network constantly until fail, then netsh trace stop).
-3. Stop the trace by entering the following command: 
+3. Stop the trace by entering the following command:
 
     ```console
     netsh trace stop
     ```
-4. To convert the output file to text format: 
+
+4. To convert the output file to text format:
 
     ```console
     netsh trace convert c:\tmp\wireless.etl
@@ -109,6 +109,7 @@ The following view is a high-level one of the main wifi components in Windows.
 |Third-party wireless miniport drivers interface with the upper wireless stack to provide notifications to and receive commands from Windows.|
 
 The wifi connection state machine has the following states:
+
 - Reset
 - Ihv_Configuring
 - Configuring
@@ -154,19 +155,20 @@ An example of a failed connection setup is:
 49465 [2]0F24.17E0::‎2018‎-‎09‎-‎17 10:22:14.990 [Microsoft-Windows-WLAN-AutoConfig]FSM Transition from State: Authenticating to State: Roaming
 ```
 
-By identifying the state at which the connection fails, one can focus more specifically in the trace on logs prior to the last known good state. 
+By identifying the state at which the connection fails, one can focus more specifically in the trace on logs prior to the last known good state
 
-Examining **[Microsoft-Windows-WLAN-AutoConfig]** logs prior to the bad state change should show evidence of error. Often, however, the error is propagated up through other wireless components.
+Examining \[Microsoft-Windows-WLAN-AutoConfig\] logs prior to the bad state change should show evidence of error. Often, however, the error is propagated up through other wireless components.
 In many cases the next component of interest will be the MSM, which lies just below Wlansvc.
 
 The important components of the MSM include:
+
 - Security Manager (SecMgr) - handles all pre and post-connection security operations.
 - Authentication Engine (AuthMgr) – Manages 802.1x auth requests
 
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/msmdetails.png" alt-text="MSM details." border="false":::
+    :::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/msmdetails.png" alt-text="MSM details." border="false":::
 
 Each of these components has its own individual state machines that follow specific transitions.
-Enable the **FSM transition, SecMgr Transition,** and **AuthMgr Transition** filters in TextAnalysisTool for more detail.
+Enable the `FSM transition`, `SecMgr Transition`, and `AuthMgr Transition` filters in TextAnalysisTool for more detail.
 
 Further to the preceding example, the combined filters look like the following command example:
 
@@ -195,7 +197,7 @@ Authenticating to State: Roaming
 >\[2\] 0C34.2FF0::08/28/17-13:24:29.7512788 \[Microsoft-Windows-WLAN-AutoConfig\]Port\[13\] Peer 8A:15:14:B6:25:10 SecMgr Transition DEACTIVATE (11) --> INACTIVE (1)<br><br>
 >This transition is what eventually propagates to the main connection state machine and causes the Authenticating phase to devolve to Roaming state. As before, it makes sense to focus on tracing prior to this SecMgr behavior to determine the reason for the deactivation.
 
-Enabling the **Microsoft-Windows-WLAN-AutoConfig** filter will show more detail leading to the DEACTIVATE transition:
+Enabling the `Microsoft-Windows-WLAN-AutoConfig` filter will show more detail leading to the DEACTIVATE transition:
 
 ```console
 [3] 0C34.2FE8::08/28/17-13:24:28.902 [Microsoft-Windows-WLAN-AutoConfig]FSM Transition from State: 
@@ -213,7 +215,7 @@ Associating to State: Authenticating
 Authenticating to State: Roaming
 ```
 
-The trail backwards reveals a **Port Down** notification:
+The trail backwards reveals a Port Down notification:
 
 \[0\] 0EF8.1174:: 08/28/17-13:24:29.705 \[Microsoft-Windows-WLAN-AutoConfig\]Received IHV PORT DOWN, peer 0x186472F64FD2
 
@@ -221,7 +223,7 @@ Port events indicate changes closer to the wireless hardware. The trail can be f
 
 Below, the MSM is the native wifi stack. These drivers are Windows native wifi drivers that talk to the wifi miniport drivers. It's  responsible for converting Wi-Fi (802.11) packets to 802.3 (Ethernet) so that TCPIP and other protocols and can use it.
 
-Enable trace filter for **[Microsoft-Windows-NWifi]:**
+Enable trace filter for `[Microsoft-Windows-NWifi]`:
 
 ```console
 [3] 0C34.2FE8::08/28/17-13:24:28.902 [Microsoft-Windows-WLAN-AutoConfig]FSM Transition from State: 
@@ -246,12 +248,12 @@ In the trace above, we see the line:
 [0]0000.0000::‎08/28/17-13:24:29.127 [Microsoft-Windows-NWiFi]DisAssoc: 0x8A1514B62510 Reason: 0x4
 ```
 
-This line is followed by **PHY_STATE_CHANGE** and **PORT_DOWN** events due to a disassociate coming from the Access Point (AP), as an indication to deny the connection. This denail could be due to invalid credentials, connection parameters, loss of signal/roaming, and various other reasons for aborting a connection. The action here would be to examine the reason for the disassociate sent from the indicated AP MAC (8A:15:14:B6:25:10). This action would be done by examining internal logging/tracing from the AP.
+This line is followed by PHY_STATE_CHANGE and PORT_DOWN events due to a disassociate coming from the Access Point (AP), as an indication to deny the connection. This denail could be due to invalid credentials, connection parameters, loss of signal/roaming, and various other reasons for aborting a connection. The action here would be to examine the reason for the disassociate sent from the indicated AP MAC (8A:15:14:B6:25:10). This action would be done by examining internal logging/tracing from the AP.
 
-### Resources
+### More information
 
-[802.11 Wireless Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc755892(v%3dws.10))<br>
-[Understanding 802.1X authentication for wireless networks](/previous-versions/windows/it-pro/windows-server-2003/cc759077%28v%3dws.10%29)<br>
+- [802.11 Wireless Tools and Settings](/previous-versions/windows/it-pro/windows-server-2003/cc755892(v%3dws.10))
+- [Understanding 802.1X authentication for wireless networks](/previous-versions/windows/it-pro/windows-server-2003/cc759077%28v%3dws.10%29)
 
 ## Example ETW capture
 
@@ -300,7 +302,7 @@ C:\tmp>dir
 
 ## Wifi filter file
 
-Copy and paste all the lines below and save them into a text file named "wifi.tat." Load the filter file into the TextAnalysisTool by clicking **File > Load Filters**.
+Copy and paste all the lines below and save them into a text file named *wifi.tat*. Load the filter file into the TextAnalysisTool by selecting **File** > **Load Filters**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
