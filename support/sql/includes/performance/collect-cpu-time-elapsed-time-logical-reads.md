@@ -58,7 +58,7 @@
       CPU time = 460 ms,  elapsed time = 470 ms.
    ```
 
-- <a name="query_timestats_from_plan"></a>If you can collect a query plan, check the data from [Execution plan properties](/sql/ssms/scripting/use-the-properties-window-in-management-studio#to-view-the-properties-of-a-showplan-operator).
+- <a name="query_timestats_from_plan"></a>If you can collect a query plan, check the data from the [Execution plan properties](/sql/ssms/scripting/use-the-properties-window-in-management-studio#to-view-the-properties-of-a-showplan-operator).
 
   1. Run the query with **Include Actual Execution Plan** on.
   1. Select the left-most operator from **Execution plan**.
