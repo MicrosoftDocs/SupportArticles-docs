@@ -3,7 +3,7 @@ title: Error when you post Analytical Accounting transactions or save a Master r
 description: Describes a problem that occurs because the next value in the AAG00102 table has already been used in the applicable table that is causing the duplicate record.
 ms.reviewer:
 ms.topic: troubleshooting
-ms.date: 03/31/2021
+ms.date: 08/22/2022
 ---
 # Error when you try to post Analytical Accounting transactions or save a Master record in Microsoft Dynamics GP: Cannot insert duplicate key in object 'AAGXXXXX'
 
@@ -67,7 +67,7 @@ To work around this problem, use one of the following methods below to compare t
 
 You can download a SQL script using the link below and run it in SQL Server Management Studio against the company database to automatically update the next available number stored in the AAG00102 table as compared to the last used value in the AA table. The script will look at the following tables:
 
-AAG10000, AAG20000, AAG30000, AAG00201, AAG00400, AAG00401, AAG00500, AAG00600, AAG00900, and AAG00903
+[AAG10000, AAG20000, AAG30000, AAG00201, AAG00400, AAG00401, AAG00500, AAG00600, AAG00900, and AAG00903](https://mbs2.microsoft.com/fileexchange/?fileID=5b13dba3-4766-4c5d-8f6f-90962605302c)
 
 So it looks at most of the AA tables, but not all, and not sub-tables for a series.
 
