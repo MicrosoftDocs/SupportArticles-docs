@@ -2547,6 +2547,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
+      "redirect_url": "/mem/intune/protect/certificate-connector-install",
+      "redirect_document_id": false
+    },            
+    {
       "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
       "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
       "redirect_document_id": false
