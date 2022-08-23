@@ -61,7 +61,7 @@ The causes and resolutions for each wait type vary. There's no one general metho
 - [Troubleshoot slow SQL Server performance caused by I/O issues (PAGEIOLATCH_*, WRITELOG, IO_COMPLETION, BACKUPIO)](../../performance/troubleshoot-sql-io-performance.md)
 - [WRITELOG waits and common causes](../../performance/troubleshoot-sql-io-performance.md#writelog)
 - [Resolve last-page insert PAGELATCH_EX contention in SQL Server](../../performance/resolve-pagelatch-ex-contention.md)
-- [Memory grants explanation and solutions (RESOURCE_SEMAPHORE)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
+- [Memory grants explanations and solutions (RESOURCE_SEMAPHORE)](https://techcommunity.microsoft.com/t5/sql-server-support-blog/memory-grants-the-mysterious-sql-server-memory-consumer-with/ba-p/333994)
 - [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](../../performance/troubleshoot-query-async-network-io.md)
 - [Troubleshooting High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://techcommunity.microsoft.com/t5/sql-server-blog/troubleshooting-high-hadr-sync-commit-wait-type-with-always-on/ba-p/385369)
 - [How It Works: CMEMTHREAD and Debugging Them](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-cmemthread-and-debugging-them/ba-p/317488)
