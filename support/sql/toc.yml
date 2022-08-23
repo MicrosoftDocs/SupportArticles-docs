@@ -323,6 +323,8 @@
       href: install/understanding-dotnet-framework-requirements.md
     - name: Attempted to perform an unauthorized operation error
       href: install/error-set-up-update-instances.md
+    - name: Cannot install on Windows case-sensitive servers
+      href: sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled
     - name: Description of the Update Cache folder
       href: install/description-update-cache-folder.md
     - name: Different errors when installing SQL Server 2008 R2
