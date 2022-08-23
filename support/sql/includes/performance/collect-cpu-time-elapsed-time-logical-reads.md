@@ -37,7 +37,7 @@
    ```
 
   > [!Note]
-  > If `avg_wait_time` shows a negative value that means it's a [parallel query](../../performance/troubleshoot-query-perf-between-servers.md#parallel-queries---runner-or-waiter).
+  > If `avg_wait_time` shows a negative value, it's a [parallel query](../../performance/troubleshoot-query-perf-between-servers.md#parallel-queries---runner-or-waiter).
 
 - If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON` and [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql) `ON`.
 
