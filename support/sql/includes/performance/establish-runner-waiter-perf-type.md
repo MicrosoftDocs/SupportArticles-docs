@@ -10,7 +10,7 @@ Examples of running (CPU-bound) queries:
 |   1080          | 1000        |  90200        |
 
 > [!Note]
-> If the CPU time is greater than the duration, then a parallel query was being executed while multiple threads were using the CPU at the same time when the clock was ticking. For more information, see [Parallel queries - runner or waiter](#parallel-queries---runner-or-waiter).
+> If the CPU time is greater than the duration, a parallel query is executed while multiple threads are using the CPU at the same time when the clock is ticking. For more information, see [Parallel queries - runner or waiter](#parallel-queries---runner-or-waiter).
 
 ### Type 2: Waiting on a bottleneck (waiter)
 
