@@ -47,7 +47,7 @@ If you established that your queries of interest are waiters, your next step is 
 
 ### 4. Diagnose and resolve running queries
 
-If CPU (worker) time is very close to the overall elapsed duration, the query spent most of its lifetime executing. Typically, when the SQL Server engine drives high CPU usage, the high CPU usage is coming from queries that drive a large number of logical reads (the most common reason).
+If CPU (worker) time is very close to the overall elapsed duration, the query spends most of its lifetime executing. Typically, when the SQL Server engine drives high CPU usage, the high CPU usage is coming from queries that drive a large number of logical reads (the most common reason).
 
 [!INCLUDE [identify cpu bound queries](../includes/performance/identify-cpu-bound-queries.md)]
 
