@@ -65,6 +65,9 @@ The causes and resolutions for each wait type vary. There's no one general metho
 - [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](../../performance/troubleshoot-query-async-network-io.md)
 - [Troubleshooting High HADR_SYNC_COMMIT wait type with Always On Availability Groups](https://techcommunity.microsoft.com/t5/sql-server-blog/troubleshooting-high-hadr-sync-commit-wait-type-with-always-on/ba-p/385369)
 - [How It Works: CMEMTHREAD and Debugging Them](https://techcommunity.microsoft.com/t5/sql-server-support-blog/how-it-works-cmemthread-and-debugging-them/ba-p/317488)
+- [Making parallelism waits actionable](https://techcommunity.microsoft.com/t5/sql-server-blog/making-parallelism-waits-actionable/ba-p/385691)
+- [Understand and resolve Azure SQL Database blocking problems](/azure/azure-sql/database/understand-resolve-blocking)
+- [Understand and resolve SQL Server blocking problems](/troubleshoot/sql/performance/understand-resolve-blocking)
 - [THREADPOOL wait](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#threadpool)
 
 For descriptions of many Wait types and what they indicate, see the table in [Types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes).
