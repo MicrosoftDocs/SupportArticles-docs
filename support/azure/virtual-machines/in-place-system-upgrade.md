@@ -31,6 +31,9 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 - Windows 10 single-session, all editions, all versions
 - Windows 10 Enterprise multi-session, all versions
 
+   > [!NOTE]
+   > It's not currently possible to upgrade an existing virtual machine that's running Windows 10 Professional or Enterprise to [Windows 10 Enterprise multi-session](/azure/virtual-desktop/windows-10-multisession-faq#can-i-upgrade-a-windows-10-vm-to-windows-10-enterprise-multi-session).
+
 ### Windows versions not yet supported for in-place system upgrades (consider using a workaround)
 
 - Windows Server 2019
