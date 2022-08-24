@@ -210,8 +210,8 @@ Once the bypass list is configured, check if the agent discovery is successful.
 > ErrorData: System.ArgumentNullException  
 > Value cannot be null.  
 > Parameter name: lhs  
-> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)  
-> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions)  
+> at System.Activities.WorkflowApplication.Invoke(Activity activity, IDictionary\`2 inputs, WorkflowInstanceExtensionManager extensions, TimeSpan timeout)  
+> at System.Activities.WorkflowInvoker.Invoke(Activity workflow, IDictionary\`2 inputs, TimeSpan timeout, WorkflowInstanceExtensionManager extensions)  
 > at Microsoft.SystemCenter.CrossPlatform.ClientActions.DefaultDiscovery.InvokeWorkflow(IManagedObject managementActionPoint, DiscoveryTargetEndpoint criteria, IInstallableAgents installableAgents)
 
 **Cause**
@@ -220,7 +220,7 @@ This error occurs because of omsagent shell files in the installed kits folder.
 
 **Resolution**
 
-Navigate to the following directory in file explorer:
+Navigate to the following directory in File Explorer:
 
 *C:\Program Files\Microsoft System Center\Operations Manager\Server\AgentManagement\UnixAgents\DownloadedKits*
 
@@ -230,7 +230,10 @@ See the following screenshot for an example:
 
 :::image type="content" source="media/troubleshoot-unix-linux-agent-discovery/unix-linux-discovery-example-fix.png" alt-text="Screenshot that shows omsagent files in the DownloadedKits folder.":::
 
-Once they're moved from the *DownloadedKits* folder, retry the discovery. The discovery should succeed or fail with a different error. The error indicates that extra troubleshooting is needed, such as sudoers, connectivity, and so on.
+After they're moved from the *DownloadedKits* folder, retry the discovery. The discovery should succeed now.
+
+> [!NOTE]
+> The discovery may fail with a different error. The error indicates that more troubleshooting is needed, such as sudoers, connectivity, and so on.
 
 ## SSH connectivity errors  
 
