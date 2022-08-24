@@ -58,7 +58,6 @@ To fix the problem, unregister the device by running `dsregcmd /leave` at an ele
 **Get all pending devices, and save the returned data in a CSV file**
 
  ```powershell
-Get all pending devices and save the returned data in a CSV file:
 Get-AzureADDevice -all $true |  Where-Object{($_.DeviceTrustType -eq"ServerAd") -and ($_.ProfileType -ne"RegisteredDevice") -and (-not $_.AlternativeSecurityIds)} | select-object -Property AccountEnabled, ObjectId, DeviceId, DisplayName, DeviceOSType, DeviceOSVersion, DeviceTrustType | export-csv pendingdevicelist-summary.csv -NoTypeInformation
 ```
 
