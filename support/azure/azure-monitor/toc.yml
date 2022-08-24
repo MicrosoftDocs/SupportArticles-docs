@@ -25,12 +25,10 @@ items:
       href: app-insights/troubleshoot-availability.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: app-insights/usage-troubleshoot.md
-  - name: Snapshot Debugger, Status Monitor, and Change Analysis
+  - name: Status Monitor and Change Analysis
     items:
     - name: Troubleshoot Azure Monitor's Change Analysis (preview)
-      href: app-insights/change-analysis-troubleshoot.md
-    - name: Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
-      href: app-insights/snapshot-debugger-troubleshooting.md
+      href: app-insights/change-analysis-troubleshoot.md    
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
 - name: Log Analytics
