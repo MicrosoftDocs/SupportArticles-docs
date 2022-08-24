@@ -2,15 +2,13 @@
 title: Connectivity issues when root certificate isn't updated
 description: To fix connectivity issues, install the latest root certificate updates to make sure that the client computer is up to date and secure.
 ms.date: 05/11/2020
-ms.prod-support-area-path: Device configuration
+search.appverid: MET150
+ms.custom: sap:Device configuration
 ms.reviewer: franknov
 ---
 # Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed
 
 This article fixes connectivity issues that may occur when the Baltimore CyberTrust root certificate isn't installed.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 2831435
 
 ## Symptoms
 
@@ -19,9 +17,9 @@ Connectivity issues may occur on client computers when the following conditions 
 - The client computers use Microsoft Intune and have the automatic root certificate mechanism disabled.
 - The Baltimore CyberTrust root certificate is not installed.
 
-## Resolution
+## Solution
 
-To resolve this problem when the automatic root certificate update mechanism is disabled on a client computer, install the latest root certificates to make sure that the client computer is up to date and secure.
+If the automatic root certificate update mechanism is disabled on a client computer, install the latest root certificates to resolve this issue and make sure that the client computer is up to date and secure.
 
 You can use the [Microsoft Update Catalog](https://catalog.update.microsoft.com/v7/site/home.aspx) to find the latest root certificate updates. You can search for **root update** and then download the latest root update package. Root update packages are cumulative. Therefore, you have to install only the latest package to receive all root certificates in the program.
 

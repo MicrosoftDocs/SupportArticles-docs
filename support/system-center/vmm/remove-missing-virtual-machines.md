@@ -2,7 +2,6 @@
 title: Remove a virtual machine with the missing status
 description: Explains how to remove a virtual machine that has a status of Missing from the Virtual Machine Manager console.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ---
 # How to remove a missing virtual machine from the Virtual Machine Manager console
 
@@ -20,7 +19,7 @@ Occasionally, after a cluster failover, duplicate virtual machines may appear in
 
 ## Prepare your system
 
-To prepare your system and run the script, follow these steps:
+To prepare your system and run the script, follow these steps:
 
 1. Close the VMM Administrator Console.
 2. Stop the Windows service that is named **VMMService** on the VMM server.

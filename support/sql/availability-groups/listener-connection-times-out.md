@@ -1,21 +1,21 @@
 ---
 title: Listener connection times out
-description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment.
+description: This article provides resolutions for the timeout error that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.
 ms.date: 08/04/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery features
+ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
-# Timeout occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener
+# Timeout occurs when you connect to an Always On listener in multi-subnet environment
 
-This article helps you resolve the problem that occurs when you connect to a SQL Server 2012 AlwaysOn availability group listener in a multi-subnet environment.
+This article helps you resolve the problem that occurs when you connect to a SQL Server Always On availability group listener in a multi-subnet environment.
 
 _Original product version:_ &nbsp; SQL Server 2012 Developer, SQL Server 2012 Enterprise, SQL Server 2012 Express, SQL Server 2012 Standard, SQL Server 2012 Web, SQL Server 2012 Enterprise Core  
 _Original KB number:_ &nbsp; 2792139
 
 ## Symptoms
 
-After you configure the availability group listener for an AlwaysOn Availability Group in Microsoft SQL Server 2012, you may be unable to ping the listener or connect to it from an application.
+After you configure the availability group listener for an Always On Availability Group in Microsoft SQL Server 2012, you may be unable to ping the listener or connect to it from an application.
 
 For example, when you try to connect to a listener of SQL Server by using `SQLCMD`, the connection times out. Additionally, you receive an error message that resembles the following:
 
@@ -26,7 +26,7 @@ For example, when you try to connect to a listener of SQL Server by using `SQLCM
 
 The following screenshot shows an example of what occurs when you try to ping the listener for the availability of `aglisten`. The screenshot also shows a successful connection to SQL Server by using the `SQLCMD` command when you include the multi-subnet failover parameter `-M`.
 
-![Failure example](./media/listener-connection-times-out/ping-aglisten.jpg)
+:::image type="content" source="media/listener-connection-times-out/ping-aglisten.png" alt-text="Screenshot of the Command Prompt window when you ping the listener for the availability of aglisten.":::
 
 > [!NOTE]
 > You can use the `SQLCMD` command together with the `-M` parameter as shown in the screen shot to connect to the listener.
@@ -53,7 +53,7 @@ You can use one of the following resolutions as applicable to your case:
     Get-ClusterResource <*Your listener name*>|Set-ClusterParameter RegisterAllProvidersIP 0
     ```
 
-    ![Demo](./media/listener-connection-times-out/change-listener-registeraiiprovidersip.jpg)
+    :::image type="content" source="media/listener-connection-times-out/change-listener-registeraiiprovidersip.png" alt-text="Screenshot shows the output of an example of the command in Windows PowerShell.":::
 
 > [!NOTE]
 > After you set the `RegisterAllProvidersIP` value to **0**, the current online IP address must be un-registered from the DNS server and the offline IP address must be registered to the DNS server when a failover occurs. This may cause a connection delay for the next failover.
@@ -69,27 +69,25 @@ Behind the scenes, the listener creates a Windows cluster Client Access Point re
 Because the DNS record contains all the IP addresses, a client that tries to connect to the listener must know how to handle this situation. The `MultiSubnetFailover` parameter enables the client driver to try connections in parallel to all the listener's IP addresses. Without the `MultiSubnetFailover` parameter, the client driver will try to connect sequentially to all IP addresses for the listener. Sequential connections may cause a long logon time or logon time-outs.
 
 > [!NOTE]
-> The problem that is mentioned in this article also affects SharePoint environments that are configured to use an AlwaysOn Availability Group's secondary read-only replica. To resolve this issue, perform whichever of the following actions applies to your version of SharePoint:
+> The problem that is mentioned in this article also affects SharePoint environments that are configured to use an Always On Availability Group's secondary read-only replica. To resolve this issue, perform whichever of the following actions applies to your version of SharePoint:
 
 - For SharePoint 2007: This is classified as a legacy application. Therefore, SharePoint 2007 cannot be configured to use the `MultiSubnetFailover` parameter. Instead, you have to use the Windows PowerShell command that is described in the [Resolution](#resolution) section.
 
 - For SharePoint 2010: Cumulative update packages are now available that add support for the `MultiSubnetFailover` parameter. For more information about the update packages, see the following article:
 
-  - [An update introduces support for the AlwaysOn features in SQL Server 2012 or a later version to the .NET Framework 3.5 SP1](https://support.microsoft.com/help/2654347)
+  - [An update introduces support for the Always On features in SQL Server 2012 or a later version to the .NET Framework 3.5 SP1](https://support.microsoft.com/help/2654347)
 
   - [Description of the SharePoint Foundation 2010 hotfix package (Wss-x-none.msp): October 30, 2012](https://support.microsoft.com/help/2687557)
 
 ## References
 
-- [Connection times out when you use AlwaysOn availability group listener with MultiSubnetFailover parameter](https://support.microsoft.com/help/2870437)
+- [Connection times out when you use Always On availability group listener with MultiSubnetFailover parameter](https://support.microsoft.com/help/2870437)
 
 - [sqlcmd Utility](/sql/tools/sqlcmd-utility)
 
 - [SqlClient Support for High Availability, Disaster Recovery](/previous-versions/dotnet/netframework-4.0/hh205662(v=vs.100))
 
-- [An update introduces support for the AlwaysOn features in SQL Server 2012 or a later version to the .NET Framework 3.5 SP1](https://support.microsoft.com/help/2654347)
-
-- [SQL Server 2012 release notes](/previous-versions/sql/sql-server-15/hh995351(v=sql.15))
+- [An update introduces support for the Always On features in SQL Server 2012 or a later version to the .NET Framework 3.5 SP1](https://support.microsoft.com/help/2654347)
 
 - [Create or Configure an Availability Group Listener (SQL Server)](/previous-versions/sql/sql-server-2012/hh213080(v=sql.110))
 

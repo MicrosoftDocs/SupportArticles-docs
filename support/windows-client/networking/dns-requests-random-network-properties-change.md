@@ -3,21 +3,21 @@ title: DNS requests appear to be random after startup or after network propertie
 description: In certain circumstances, DNS client may send DNS name resolution requests that appear to be random
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # DNS requests appear to be random after startup or network properties change
 
 This article provides some information about DNS requests that appear to be random after startup or network properties change.  
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4564934
 
 ## Summary

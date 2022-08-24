@@ -3,21 +3,21 @@ title: connect to a wireless network
 description: Describes how to use the wireless networking functionality that is included.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # How to connect to a wireless network
 
 This article describes how to connect to a wireless network.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 928429
 
 >[!NOTE]
@@ -33,7 +33,7 @@ The software that you were using together with Windows XP to connect to wireless
 
 To connect to a wireless network in Windows Vista, follow these steps:  
 
-1. Click **Start**![Start button ](./media/connect-to-wireless-network/vista-start-button.jpg), and then click **Connect to**.
+1. Click **Start** :::image type="icon" source="media/connect-to-wireless-network/vista-start-button.png" border="false":::, and then click **Connect to**.
 2. Click the wireless network to which you want to connect, and then click **Connect**.  
 
     >[!NOTE]

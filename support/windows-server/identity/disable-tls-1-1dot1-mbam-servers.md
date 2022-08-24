@@ -1,39 +1,42 @@
 ---
-title: Steps to disable the TLS 1.0 and 1.1 on the MBAM Servers and force the use of TLS 1.2
-description: Describes the steps to disable the TLS 1.0 and 1.1 on the MBAM Servers and force the use of TLS 1.2.
+title: Disable Transport Layer Security (TLS) 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
+description: Describes steps to disable TLS 1.0 and 1.1 on Microsoft BitLocker Administration and Monitoring (MBAM) servers and force the use of TLS 1.2.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Transport Layer Security (TLS)
+ms.custom: sap:transport-layer-security-tls, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# Steps to disable the TLS 1.0 and 1.1 on the MBAM Servers and force the use of TLS 1.2
+# Steps to disable TLS 1.0 and 1.1 on MBAM servers and force the use of TLS 1.2
 
-This article describes the steps to disable the TLS 1.0 and 1.1 on the MBAM Servers and force the use of TLS 1.2.
+This article describes the steps to disable the Transport Layer Security (TLS) 1.0 and 1.1 on the Microsoft BitLocker Administration and Monitoring (MBAM) servers and force the use of TLS 1.2.
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4558055
 
 ## Symptoms
 
-Microsoft is planning to disable older TLS protocols, in preparation for disabling **Transport Layer Security (TLS) 1.0** and **1.1** by default. See [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/).  
+Microsoft is planning to disable older TLS protocols, in preparation for disabling **TLS 1.0** and **TLS 1.1** by default. See [Plan for change: TLS 1.0 and TLS 1.1 soon to be disabled by default](https://blogs.windows.com/msedgedev/2020/03/31/tls-1-0-tls-1-1-schedule-update-edge-ie11/).  
 
-For enterprise customers, this may require disabling TLS 1.0 and 1.1 in their environment for **Microsoft BitLocker Administration and Monitoring (MBAM) Infrastructure**.  
+For enterprise customers, it may require disabling TLS 1.0 and 1.1 in their environment for **Microsoft BitLocker Administration and Monitoring (MBAM) Infrastructure**.
 
 ## Resolution
 
-The following are the steps to disable the TLS 1.0 and 1.1 on the MBAM Servers, and force the use of TLS 1.2.
+Follow these steps to disable TLS 1.0 and 1.1 on MBAM servers, and force the use of TLS 1.2.
 
-1. Download and install the latest available version of Microsoft .NET Framework on all MBAM servers that are Web Servers running IIS roles, SQL Servers running SQL Server database Engine, and SQL Server Reporting Services.
+1. Download and install the latest available version of Microsoft .NET Framework on all MBAM servers that are：
+    - Web Servers running IIS roles
+    - SQL Servers running SQL Server database Engine, and SQL Server Reporting Services
+
     Refer to: [Microsoft .NET Framework 4.8 offline installer for Windows](https://support.microsoft.com/help/4503548/microsoft-net-framework-4-8-offline-installer-for-windows)  
-2. Execute the PowerShell Scripts below. They're used to disable TLS 1.0 and 1.1 and force the use only TLS 1.2.
-3. Reboot the servers, then test the MBAM web applications and confirm that the MBAM clients can communicate with the server to back up recovery information.
+1. Execute the PowerShell scripts below. They're used to disable TLS 1.0 and 1.1, and force the use only TLS 1.2.
+1. Reboot the servers, then test the MBAM web applications. Confirm that the MBAM clients can communicate with the server to back up recovery information.
 
 \<Tighten_DotNet.PS1>
 

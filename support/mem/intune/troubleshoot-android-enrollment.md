@@ -1,64 +1,23 @@
 ---
-title: Troubleshoot Android enterprise devices in Microsoft Intune
+title: Troubleshoot Android Enterprise device enrollment in Microsoft Intune
 description: Suggestions for troubleshooting some of the most common problems when you enroll Android devices in Intune.
-ms.date: 02/25/2020
-ms.reviewer: mghadial
+ms.date: 12/02/2021
+ms.reviewer: joelste
+search.appverid: MET150
 ---
-# Troubleshoot Android Enterprise device problems in Microsoft Intune
+# Troubleshooting Android Enterprise device enrollment in Intune
 
-This article helps Intune administrators understand and troubleshoot problems when Android Enterprise devices in Intune.
-
-## Apps on Android Enterprise devices
-
-### Managed Google Play apps that aren't deployed through Intune are displayed in the work profile
-
-System apps can be enabled in the work profile by the device OEM at the time that the work profile is created. This isn't controlled by the MDM provider.
-
-To troubleshoot, follow these steps:
-
-  1. Collect Company Portal logs.
-  2. Note apps that appear in the work profile unexpectedly.
-  3. Unenroll device from Intune and uninstall Company Portal.
-  4. Install the [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) app, which allows creation of a work profile without an EMM for testing.
-  5. Follow the instructions in [Test DPC](https://play.google.com/store/apps/details?id=com.afwsamples.testdpc) to create a work profile on the device.
-  6. Review apps that appear in the work profile.
-  7. If the same applications show in the Test DPC app, the apps are expected by the OEM for that device.
-
-### Unapproved Managed Google Play for Work store apps aren't being removed from the Client Apps page in Intune
-
-This is expected behavior.
-
-### Managed Google Play apps aren't being reported under the Discovered Apps blade in the Intune portal
-
-This is expected behavior. Only system apps installed in the Work Profile are inventoried in the Discovered Apps blade. To see installed Managed Google Play applications, use the **Managed Apps** blade.
-
-### Are Web Applications supported for work profile enrolled devices?
-
-Yes. For more information, see [Managed Google Play web links](/mem/intune/apps/apps-add-android-for-work#managed-google-play-web-links)
+This article helps administrators understand and troubleshoot common scenarios when enrolling Android Enterprise devices in Microsoft Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
 
 ## Device management
 
-### File path Internal storage/Android/Data.com.microsoft.windowsintune.companyportal/files missing on work profile enrolled devices
+### Managed Google Play Last Sync time hasn't been updated in days
 
-  **Answer**: This is expected behavior. This path is only created for the Device Admin (Legacy Android Enrollment) scenario.
+This is expected behavior. You must manually trigger a sync.
 
-  To collect Company Portal logs, follow these steps:
+### Encryption is required when a device is enrolled
 
-  1. In the Company Portal app with the badge, tap **Menu** > **Help** > **Email Support**, and then tap **Send Email & Upload logs**.
-  2. When you're prompted **Send help request with**, select one of the Email apps.
-  3. An email is generated to your IT admin with an incident ID that can be provided to Microsoft product support.
-
-### Managed Google Play Last Sync time  hasn't been updated in days
-
-This is expected behavior. The sync is only triggered when you manually do so.
-
-### Encryption is required when a device is enrolled. Can it be turned off?
-
-No, Google requires that the device be encrypted to create a work profile.
-
-### Samsung devices are blocking the use of third-party keyboards like SwiftKey
-
-Samsung began enforcing this restriction on Android 8.0+ devices. Microsoft is currently working with Samsung on this issue and will post new information when it's available.
+This is expected behavior. You cannot turn off encryption: Google requires that the device be encrypted to create a work profile.
 
 ## Remote actions
 
@@ -68,14 +27,15 @@ This is expected behavior. In the work profile scenario, the MDM provider doesn'
 
 Wipe is supported for [Android Enterprise corporate-owned with work profile devices](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll).
 
-### Is device passcode reset supported?
+### Device passcode reset not supported
 
-For work profile enrolled devices, you can only reset the work profile passcode on Android 8.0 or later devices when:
+For personally-owned work profile enrolled devices, you can only reset the work profile passcode on devices running Android 8.0 or later if the following conditions are met:
 
-- the work profile passcode is managed
-- the end user has allowed you to reset it.
+- The work profile passcode is managed.
+- The device user has allowed you to reset it.
 
-For Dedicated devices (COSU) and Fully Managed, device passcode reset is supported.
+For corporate-owned work profile enrolled devices, you can only reset the work profile passcode.
+For Android Enterprise dedicated devices and fully managed devices, device passcode reset is supported.
 
 ## Duo devices
 
@@ -83,23 +43,14 @@ For Dedicated devices (COSU) and Fully Managed, device passcode reset is support
 
 In some cases, the enrollment checklist may not be displayed as expected when users launch the Company Portal app.
 
-If users aren’t seeing the enrollment checklist, they can always navigate to it by tapping on the notification bell in the upper right of the Company Portal app and tapping the notification there, which will bring up the enrollment checklist.
+If users aren’t seeing the enrollment checklist, they can navigate to it. To bring up the enrollment checklist, tap on the notification bell in the upper-right corner of the Company Portal app and then tap the notification.
 
-### Users unable to find the Microsoft Launcher app
+### Users unable to find or launch the Microsoft Launcher app
 
-Users can't find or launch the Microsoft Launcher app the work profile.
+The Microsoft Launcher app is the default launcher app on Duo devices, so the app icon has been hidden from the apps list and in the personal and work Google Play stores. This will be fixed in a coming update.
 
-The Microsoft Launcher app is the default launcher app on Duo devices, so the app icon has been hidden from the apps list and in the personal and work Play stores. This will be fixed in a coming update.
-
-### Edge sign in prompt during enrollment
+### Edge sign-in prompt during enrollment
 
 When an unenrolled user tries to access corporate data in an app protected by conditional access (CA), the user will be guided to enroll their device. During this enrollment flow, the Edge app is launched to open the Company Portal website. In some cases, the Edge app may prompt the user to sign into Edge, which diverts the user from the enrollment flow.
 
-To avoid this entirely, tell users to enroll in the Company Portal before trying to access their organization’s data. If a user does try to access their organization’s data before enrolling, if Edge prompts the user to sign in, they should skip the Edge sign in step in order to proceed with the enrollment flow. Users can always initiate enrollment in the preinstalled Company Portal app.
-
-## Next steps
-
-- [Troubleshoot device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md)
-- [Ask a question on the Intune forum](https://social.technet.microsoft.com/Forums/%7Blang-locale%7D/home?category=microsoftintune&filter=alltypes&sort=lastpostdesc)
-- [Check the Microsoft Intune Support Team Blog](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/bg-p/IntuneCustomerSuccess)
-- [Check the Microsoft Enterprise Mobility and Security Blog](https://techcommunity.microsoft.com/t5/Azure-Active-Directory-Identity/Announcing-the-public-preview-of-Azure-AD-group-based-license/ba-p/245210)
+To avoid this entirely, tell users to enroll in the Company Portal before trying to access their organization’s data. If a user does try to access their organization’s data before enrolling, when Edge prompts the user to sign in, they should skip the Edge sign-in step in order to proceed with the enrollment flow. Users can always initiate enrollment in the preinstalled Company Portal app.

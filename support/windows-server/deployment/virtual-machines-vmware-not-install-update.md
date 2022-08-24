@@ -1,24 +1,24 @@
 ---
 title: VMware driver installation fails in Windows Server 2008 R2 SP1
 description: Resolves an issue in which you can't install drivers in virtual machines that are hosted on VMware. This issue occurs if you don't select the Allow service to interact with desktop checkbox.
-ms.date: 09/07/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: henrche, kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # VMware driver installation fails in Windows Server 2008 R2 SP1
 
 This article helps resolve an issue in which you can't install drivers in virtual machines that are hosted on VMware. This issue occurs if you don't select the "Allow service to interact with desktop" checkbox.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1  
-_Original KB number:_ &nbsp;3025586
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Original KB number:_ &nbsp; 3025586
 
 ## Symptoms
 
@@ -61,6 +61,4 @@ If it still doesn't resolve the issue, you can verify that the latest version of
 5. Any earlier versions of VMware Tools should be removed.
 6. Install the latest version of VMware Tools and then perform a restart after you verify that the setting for the Telnet Server service logon setting is set correctly.
 
-## Third-party information disclaimer  
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

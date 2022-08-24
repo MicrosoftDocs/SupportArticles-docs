@@ -2,7 +2,6 @@
 title: Disable sharing usage and connectivity data
 description: Describes how to disable diagnostic and connectivity data for Service Management Automation, Service Provider Foundation and Service Manager Self-Serve portal.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: rahulgup
 ---
 # Disable diagnostic and connectivity data for SMA, SPF, and Service Manager Self-Serve portal

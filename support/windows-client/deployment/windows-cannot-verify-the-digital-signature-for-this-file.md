@@ -4,25 +4,25 @@ description: Describes an issue in which an upgrade to Windows Storage Server 20
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb, delhan
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Error when you upgrade to Windows Storage Server 2016 or Windows Server 2016: Windows cannot verify the digital signature for this file
 
 This article provides a workaround for an issue where an error (Windows cannot verify the digital signature for this file) occurs when you upgrade to Windows Storage Server 2016 or Windows Server 2016.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3193460
 
 ## Symptoms
 
-When you try to upgrade the system to Windows Storage Server 2016 or Windows Server 2016, the process fails at 95 percent completion, and you receive the following error message:
+When you try to upgrade the system to Windows Storage Server 2016 or Windows Server 2016, the process fails at 95 percent completion, and you receive the following error message:
 
 > The following errors(s) occurred:  
 Windows cannot verify the digital signature for this file. A recent hardware or software change might have installed a file that is signed incorrectly or damaged, or that might be malicious software form an unknown source An error occurred during automated setup. You must configure your nodes(s) manually.

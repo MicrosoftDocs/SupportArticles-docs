@@ -1,24 +1,24 @@
 ---
 title: NET ADD doesn't support names exceeding 20 characters
 description: Provides a solution to an error that occurs when you use the NET.EXE /ADD command with user or group names longer than 20 characters.
-ms.date: 09/08/2020
+ms.date: 11/29/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, rolandw
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # NET.EXE /ADD command does not support names longer than 20 characters
 
 This article provides a solution to an error that occurs when you use the `NET.EXE /ADD` command with user or group names longer than 20 characters.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;324639
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 324639
 
 ## Symptoms
 
@@ -107,7 +107,10 @@ End If
 ##### script end #####
 ```
 
-### Workaround
+## Workaround
 
 To work around this issue in Windows Server 2008 and later, use the **Add-ADGroupMember** PowerShell command, as described in the following TechNet article:  
-[Add-ADGroupMember](https://technet.microsoft.com/library/ee617210.aspx)
+[Add-ADGroupMember](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617210(v=technet.10))
+
+If you are using PowerShell 5.1, use the **Add-LocalGroupMember -Group** PowerShell command, as described in the following article:  
+[Add-LocalGroupMember](/powershell/module/microsoft.powershell.localaccounts/add-localgroupmember)

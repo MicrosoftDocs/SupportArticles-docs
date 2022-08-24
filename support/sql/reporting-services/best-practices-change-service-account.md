@@ -2,7 +2,7 @@
 title: Best practices for changing the service account
 description: This article describes the best practices for changing the service account for the report server in Microsoft SQL Server Reporting Services and Power BI Report Server.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: tinadeo
 ms.prod: sql
 ---

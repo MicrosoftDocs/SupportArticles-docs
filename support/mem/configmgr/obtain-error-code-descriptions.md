@@ -2,7 +2,6 @@
 title: Obtain error code descriptions
 description: Describes how to convert error codes to a hexadecimal value to obtain an error description in Configuration Manager.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ---
 # How to obtain error code descriptions in Configuration Manager reports
 

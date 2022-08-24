@@ -2,7 +2,6 @@
 title: Can't distribute a boot image to a PXE enabled DP
 description: Describes a behavior where you can't distribute a boot image to a PXE enabled distribution point if the NO_SMS_ON_DRIVE.SMS file is on the partition that's used to host the content library.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: erinwi
 ---
 # Distribution of a boot image to a PXE enabled distribution point fails in Configuration Manager
@@ -28,6 +27,6 @@ The error message below is generated in the distmgr.log:
 
 ## More information
 
-This behavior is expected if the **NO_SMS_ON_DRIVE.SMS** file is placed on the drive after using it to host the content library.
+This behavior is expected if the **NO_SMS_ON_DRIVE.SMS** file is placed on the drive after using it to host the content library.
 
 To resolve the issue, remove the **NO_SMS_ON_DRIVE.SMS** file from the partition used to host the content library.

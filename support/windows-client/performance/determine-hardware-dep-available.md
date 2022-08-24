@@ -3,21 +3,21 @@ title: Determine hardware DEP is available
 description: Describes the requirements for using hardware-enforced DEP. Also describes how to confirm that hardware DEP is working.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, chrisw, patste, mmill
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # How to determine that hardware DEP is available and configured on your computer
 
 This article describes how to determine that hardware DEP is available and configured on your computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 912923
 
 ## Introduction
@@ -85,7 +85,6 @@ To determine the current DEP support policy, follow these steps.
     |3|OptOut|DEP is enabled for all processes. Administrators can manually create a list of specific applications that do not have DEP applied|
     |1|AlwaysOn|DEP is enabled for all processes|
     |0|AlwaysOff|DEP is not enabled for any processes|
-    ||||  
 
    > [!NOTE]
    > To verify that Windows is running with hardware DEP enabled, examine the DataExecutionPrevention_Drivers property of the Win32_OperatingSystem class. In some system configurations, hardware DEP may be disabled by using the /nopae or /execute switches in the Boot.ini file. To examine this property, type the following command at a command prompt:  
@@ -99,7 +98,7 @@ To use the graphical user interface to determine whether DEP is available, follo
 2. In the **Windows Management Instrumentation Tester** dialog box, click **Connect**.
 3. In the box at the top of the **Connect** dialog box, type root\cimv2, and then click **Connect**.
 4. Click **Enum Instances**.
-5. In the **Class Info** dialog box, type Win32_OperatingSystem 
+5. In the **Class Info** dialog box, type Win32_OperatingSystem
 in the **Enter superclass name** box, and then click **OK**.
 6. In the **Query Result** dialog box, double-click the top item.
    > [!NOTE]

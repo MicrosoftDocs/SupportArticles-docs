@@ -2,7 +2,6 @@
 title: Use a custom certificate
 description: Describes how to use a custom certificate on a BlueStripe management server.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to use a custom certificate on a BlueStripe management server
 

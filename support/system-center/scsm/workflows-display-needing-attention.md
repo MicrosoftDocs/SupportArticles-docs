@@ -2,7 +2,6 @@
 title: Service Manager workflows display Needing attention
 description: Fixes an issue where new service requests don't change status, workflows don't execute, and list item changes aren't saved in System Center 2012 Service Manager.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Service Manager workflows don't execute and list item changes aren't saved
 

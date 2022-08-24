@@ -1,23 +1,23 @@
 ---
-title: (The parameter is incorrect) error and cluster validation fails against Validate Resource status 
-description: Helps to resolve an error (The parameter is incorrect) that occurs when cluster validation fails against the Validate Resource status
+title: '"The parameter is incorrect" error and cluster validation fails against Validate Resource status'
+description: 'Helps to resolve an error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status'
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Error (The parameter is incorrect) and cluster validation fails against "Validate Resource" status
 
 This article helps to resolve the error "The parameter is incorrect" that occurs when cluster validation fails against the Validate Resource status.
 
-_Original product version:_ &nbsp; Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2016  
 _Original KB number:_ &nbsp; 4561946
 
 ## Symptoms
@@ -26,7 +26,7 @@ When you check the Active Directory organizational unit (OU), cluster validation
 
 > An error occurred while executing the test. The operation has failed. An error occurred while checking the Active Directory organizational unit for the cluster name resource. The parameter is incorrect.
 
-:::image type="content" source="./media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.jpg" alt-text="Screenshot of the error message." border="false":::
+:::image type="content" source="media/parameter-incorrect-error-cluster-validation-fails/parameter-incorrect-error.png" alt-text="An error occurred while executing the test. The operation has failed." border="false":::
 
 If you try to create the client access points, the process can still fail if the IP address used is the same as the address in the error message.  
 

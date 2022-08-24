@@ -1,28 +1,28 @@
 ---
 title: 802.1x user authentication fails when an RDS connection comes in
-description: Fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7 machine that is configured user authentication only.
+description: Fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7, Windows 8 or Windows 10 machine that is configured user authentication only.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Connecting to a session or desktop
+ms.custom: sap:connecting-to-a-session-or-desktop, csstroubleshoot
 ms.technology: windows-client-rds
 ---
 # 802.1x user authentication fails when an RDS connection comes in
 
-This article helps fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7 machine that is configured user authentication only.
+This article helps fix an issue that occurs when end user uses remote desktop connection to log on to a 802.1x secured Windows 7, Windows 8 or Windows 10 machine that is configured user authentication only.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2820847
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows 8, Windows 10  
+_Original KB number:_ &nbsp; 2820847
 
 ## Symptoms
 
-End user uses remote desktop connection to log on to a 802.1x secured Windows 7 machine that is configured user authentication only. After about one minute, the connection is lost, and the user are unable to re-establish the remote connection. A local (console) logon may resolve the issue.
+End user uses remote desktop connection to log on to a 802.1x secured Windows 7, Windows 8 or Windows 10 machine that is configured user authentication only. After about one minute, the connection is lost, and the user are unable to re-establish the remote connection. A local (console) logon may resolve the issue.
 
 ## Cause
 

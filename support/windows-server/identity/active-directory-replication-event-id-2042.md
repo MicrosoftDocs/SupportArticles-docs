@@ -4,27 +4,27 @@ description: Helps you troubleshoot Active Directory replication Event ID 2042.
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication Event ID 2042: It has been too long since this machine replicated
 
 This article helps you troubleshoot Active Directory replication Event ID 2042.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4469622
 
 ## Symptoms
 
-If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a "tombstone") is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the **tombstoneLifetime** attribute on the Directory Service object in the configuration directory partition.
+If a domain controller has not replicated with its partner for longer than a tombstone lifetime, it is possible that a lingering object problem exists on one or both domain controllers. The tombstone lifetime in an Active Directory forest determines how long a deleted object (called a "tombstone") is retained in Active Directory Domain Services (AD DS). The tombstone lifetime is determined by the value of the **tombstoneLifetime** attribute on the Directory Service object in the configuration directory partition.
 
-When the condition that causes Event ID 2042 to be logged occurs, inbound replication with the source partner is stopped on the destination domain controller and Event ID 2042 is logged in the Directory Service event log. The event identifies the source domain controller and the appropriate steps to take to either remove the outdated domain controller or remove lingering objects and restore replication from the source domain controller.
+When the condition that causes Event ID 2042 to be logged occurs, inbound replication with the source partner is stopped on the destination domain controller and Event ID 2042 is logged in the Directory Service event log. The event identifies the source domain controller and the appropriate steps to take to either remove the outdated domain controller or remove lingering objects and restore replication from the source domain controller.
 
 The following is an example of the event text:
 
@@ -63,7 +63,7 @@ Once the systems replicate once, it is recommended that you remove the key to re
 Registry Key:  
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters\Allow Replication With Divergent and Corrupt Partner`
 
-The `repadmin /showrepl` command also reports error 8416, as shown in the following example:
+The `repadmin /showrepl` command also reports error 8416, as shown in the following example:
 
 > Source: Default-First-Site-Name\DC1  
 \******* \<number> CONSECUTIVE FAILURES since \<date> \<time>  
@@ -72,9 +72,9 @@ The Active Directory Domain Services cannot replicate with this server because t
 
 ## Cause
 
-There are a few potential causes for the logging of Event ID 2042, which include the following:
+There are a few potential causes for the logging of Event ID 2042, which include the following:
 
-- Windows Server 2003 pre-Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures.
+- Windows Server 2003 pre-Service Pack 1 (SP1) domain controllers having a software issue that causes replication failures.
 - Replication failures that have existed longer than the configured tombstone lifetime value.
 - System time advance or rollback that causes objects to be deleted on some-but not all-domain controllers.
 
@@ -82,11 +82,11 @@ There are a few potential causes for the logging of Event ID 2042, which inclu
 
 The resolution of this issue depends on the actual cause or causes of the issue. To resolve this issue, check for each of the following conditions:
 
-1. Determine whether there are any Windows Server 2003 domain controllers that do not have at least SP1 applied. If you find any such domain controllers, ensure that you update them to at least SP1 to resolve this issue.
+1. Determine whether there are any Windows Server 2003 domain controllers that do not have at least SP1 applied. If you find any such domain controllers, ensure that you update them to at least SP1 to resolve this issue.
 
 2. Determine whether there are any replication failures that have been allowed to exceed the tombstone lifetime of the forest. Typically, the tombstone lifetime of the forest is 60 to 180 days by default. The event message indicates the tombstone lifetime of the forest as it is currently configured.
 
-    Run the command `repadmin /showrepl` to determine whether a replication issue exists. If you suspect that there is a replication issue, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)) for information about how to resolve the issue.
+    Run the command `repadmin /showrepl` to determine whether a replication issue exists. If you suspect that there is a replication issue, see [Monitoring and Troubleshooting Active Directory Replication Using Repadmin](/previous-versions/windows/it-pro/windows-server-2003/cc811551(v=ws.10)) for information about how to resolve the issue.
 
 3. Determine whether there are lingering objects. You can do this by running the command `repadmin /removelingeringobjects` in advisory mode, as described in the following procedure.
 
@@ -101,7 +101,7 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
 2. Run the following repadmin command in advisory mode. This makes it possible for you to assess the lingering objects without actually removing anything.
 
     ```console
-     repadmin /removelingeringobjects <DestDCName> <SourceDCGUID> <LDAPPartition> /advisory_mode
+     repadmin /removelingeringobjects <DestDCName> <SourceDCGUID> <LDAPPartition> /advisory_mode
     ```
 
     Substitute the following items for the placeholders in the command syntax:
@@ -152,7 +152,6 @@ Membership in **Domain Admins**, or equivalent, is the minimum required to compl
     |`/regkey`|Enables (+) and disables (-) the value for the **Strict Replication Consistency** registry entry in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\NTDS\Parameters`.|
     |\<hostname>|Substitute the name of a single domain controller, or use an asterisk character (*) to apply the change to all domain controllers in the forest. For the domain controller name, you can use the Domain Name System (DNS) name, the distinguished name of the domain controller computer object, or the distinguished name of the domain controller server object.|
     |`+allowDivergent`|Enables replication to start again with the replication partner that had lingering objects. You should run this command only after all the lingering objects have been removed. After replication is running properly again, use the `-allowDivergent` switch to prevent divergent replication from occurring.|
-    |||
 
 > [!NOTE]
 > If you did not use an asterisk character (*) to apply the change to all domain controllers, repeat step 2 for every domain controller on which you want to allow divergent replication.

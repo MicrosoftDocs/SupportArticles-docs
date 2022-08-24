@@ -2,7 +2,7 @@
 title: Error when the Replication Log Reader Agent fails
 description: This article describes troubleshooting steps that might help resolve problems that occur after the Replication Log Reader Agent fails in SQL Server.
 ms.date: 11/12/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: ramakoni
 ms.prod: sql
 ---

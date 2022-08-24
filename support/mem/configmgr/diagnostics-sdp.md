@@ -2,7 +2,6 @@
 title: Configuration Manager diagnostics
 description: This diagnostic package is designed to collect information used to troubleshoot most System Center 2012 Configuration Manager and Configuration Manager current branch issues.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ---
 # [SDP 3][5ee487a8-b2ed-4bc8-80ea-457f9b683c77] System Center Configuration Manager diagnostic
 
@@ -23,8 +22,7 @@ _Original KB number:_ &nbsp; 2704781
 |Software distribution execution history|{ComputerName}_CMClient_ExecutionHistory.txt|
 |State Messages from `CCM_StateMsg` WMI class|{ComputerName}_CMClient_StateMessages.txt|
 |Update Status from `CCM_UpdateStatus` WMI class|{ComputerName}_CMClient_CCMUpdateStatus.txt|
-|||
-
+  
 ## Configuration Manager logs
 
 | Description| File name |
@@ -32,8 +30,7 @@ _Original KB number:_ &nbsp; 2704781
 |SQL Server error logs|{ComputerName}_Logs_SQLError.zip|
 |Configuration Manager client, site server, and site system logs|{ComputerName}_Logs_ConfigMgr.zip|
 |Windows logs (CBS, Temp, WindowsUpdate, and so on) and Configuration Manager OSD-related logs (SMSTS, INF, Panther, DISM, UDI, Netsetup and so on)|{ComputerName}_Logs_Windows+OSD.zip|
-|||
-
+  
 ## Configuration Manager site database
 
 | Description| File name |
@@ -49,8 +46,7 @@ _Original KB number:_ &nbsp; 2704781
 |SQL Server version, security role members, and database information.|{ComputerName}_SQL_Basic.txt|
 |Top stored procedure calls by CPU, elapsed time, and so on.|{ComputerName}_SQL_TopQueries.txt|
 |Update servicing troubleshooting information|{ComputerName}_SQL_UpdateServicing.zip|
-|||
-
+  
 ## Configuration Manager site server
 
 | Description| File name |
@@ -62,15 +58,13 @@ _Original KB number:_ &nbsp; 2704781
 |Directory listing of RCM.box inbox|{ComputerName}_CMServer_RCMFileList.txt|
 |SMS_Executive service thread status from registry|{ComputerName}_CMServer_SMSExecThreads.txt|
 |SPN information for the site database|{ComputerName}_CMServer_SQLSPN.txt|
-|||
-
+  
 ## Custom uploads
 
 | Description| File name |
 |---|---|
 |Compressed copy of file specified by user|{ComputerName}_filename.zip|
-|||
-
+  
 ## General information
 
 | Description| File name |
@@ -89,8 +83,7 @@ _Original KB number:_ &nbsp; 2704781
 |System information|{ComputerName}_OS_MSInfo.nfo|
 |SystemInfo output|{ComputerName}_OS_SysInfo.txt|
 |WMI quota configuration and loaded providers|{ComputerName}_OS_WMIProviderConfig.txt|
-|||
-
+  
 ## IIS information
 
 | Description| File name |
@@ -98,8 +91,7 @@ _Original KB number:_ &nbsp; 2704781
 |IIS configuration information|{ComputerName}_IISConfiguration.zip|
 |IIS logs (last 5 days)|{ComputerName}_Logs_IIS.zip|
 |Virtual directory list and configuration|{ComputerName}_IIS_VDirInfo.txt|
-|||
-
+  
 ## Networking basic information
 
 | Description| File name |
@@ -110,8 +102,7 @@ _Original KB number:_ &nbsp; 2704781
 |Basic TCP/IP and networking configuration information, such as TCP/IP registry key and outputs from `ipconfig`, `netstat`, `nbtstat` and `netsh` commands|{ComputerName}_OS_TCPIP-Info.txt|
 |Enabled Windows Firewall rules|{ComputerName}_OS_EnabledFirewallRules.txt|
 |Proxy configuration|{ComputerName}_OS_ProxyInfo.txt|
-|||
-
+  
 ## Registry keys
 
 | Description| File name |
@@ -124,15 +115,13 @@ _Original KB number:_ &nbsp; 2704781
 |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall|{ComputerName}_RegistryKey_Uninstall.txt|
 |HKEY_LOCAL_MACHINE\Software\Policies|{ComputerName}_RegistryKey_HKLMPolicies.txt|
 |HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services|{ComputerName}_RegistryKey_Services.txt|
-|||
-
+  
 ## Server manager and server roles information
 
 | Description| File name |
 |---|---|
 |List of roles and features installed on server media (Windows Server 2008 R2 and later versions)|resultreport.xml|
-|||
-
+  
 ## Windows Update Agent information
 
 | Description| File name |
@@ -140,8 +129,7 @@ _Original KB number:_ &nbsp; 2704781
 |Windows Update Agent version, service security descriptors and registry settings.|{ComputerName}__WUA_Summary.txt|
 |File list in `SoftwareDistribution` directory|{ComputerName}_WUA_FileList.txt|
 |File version of Windows Update Agent related EXE/DLL files|{ComputerName}_WUA_FileVersions.txt|
-|||
-
+  
 ## WSUS server information
 
 | Description| File name |
@@ -154,8 +142,7 @@ _Original KB number:_ &nbsp; 2704781
 |WSUS basic information (not collected for WSUS 4.0)|{ComputerName}_WSUS_BasicInfo.txt|
 |WSUS logs|{ComputerName}_Logs_WSUS.zip|
 |WSUS setup logs (if available)|{ComputerName}_Logs_WSUSSetup.zip|
-|||
-
+  
 ## Detect symptoms
 
 In addition to collecting the information, this diagnostic package can detect one or more of the following symptoms:

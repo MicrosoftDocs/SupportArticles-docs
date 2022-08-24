@@ -2,7 +2,7 @@
 title: Logging and data storage algorithms
 description: This article discusses how SQL Server logging and data storage algorithms extend data reliability.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: rdorr, bobward
 ms.prod: sql
 ---
@@ -14,7 +14,7 @@ This article discusses how Microsoft SQL Server logging and data algorithms exte
 
 To learn more about the underlying concepts of the engines and about ARIES (Algorithm for Recovery and Isolation Exploiting Semantics), see the following ACM Transactions on Database Systems document (under Volume 17, Number 1, March 1992):
 
-[ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dblp.uni-trier.de/db/journals/tods/tods17.html#mohanhlps92)
+External link: [ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dl.acm.org/doi/10.1145/128765.128770)
 
 The lead writer of this document is C. Mohan. The document addresses the SQL Server techniques to extend data reliability and integrity as related to failures.
 
@@ -26,7 +26,6 @@ We recommend that you read the following articles in the Microsoft Knowledge Bas
 
 _Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
 _Original KB number:_ &nbsp; 230785
-
 
 ## More information
 
@@ -44,8 +43,7 @@ Before we begin the in-depth discussion, some of the terms that are used through
 |Pinned page|Page that remains in data cache and cannot be flushed to stable storage until all associated log records are secured in a stable storage location.|
 |Stable storage|Same as nonvolatile storage.|
 |Volatile storage|Any medium that will not remain intact across failures.<br/>|
-|||
-
+  
 ### Write-Ahead Logging (WAL) protocol
 
 The term protocol is an excellent way to describe WAL. It is a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state in the event of a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
@@ -76,10 +74,9 @@ Next, break down the activity into simplistic logging steps, as described in the
 |Statement|Actions performed|
 |---|---|
 |BEGIN TRANSACTION|Written to the log cache area. However, it is not necessary to flush to stable storage because the SQL Server has not made any physical changes.|
-|INSERT INTO tblTest|<br/>1. Data page 150 is retrieved into SQL Server data cache, if not already available.<br/>2. The page is *latched*, *pinned*, and *marked dirty*, and appropriate locks are obtained.<br/>3. An Insert Log record is built and added to the log cache.<br/>4. A new row is added to the data page.<br/>5. The latch is released.<br/>6. The log records associated with the transaction or page does not have to be flushed at this point because all changes remain in volatile storage.|
+|INSERT INTO tblTest|<br/>1. Data page 150 is retrieved into SQL Server data cache, if not already available.<br/>2. The page is _latched_, _pinned_, and _marked dirty_, and appropriate locks are obtained.<br/>3. An Insert Log record is built and added to the log cache.<br/>4. A new row is added to the data page.<br/>5. The latch is released.<br/>6. The log records associated with the transaction or page does not have to be flushed at this point because all changes remain in volatile storage.|
 |COMMIT TRANSACTION|<br/>1. A Commit Log record is formed and the log records associated with the transaction must be written to stable storage. The transaction is not considered committed until the log records are correctly assigned to stable storage.<br/>2. Data page 150 remains in SQL Server data cache and is not immediately flushed to stable storage. When the log records are correctly secured, recovery can redo the operation, if it is necessary.<br/>3. Transactional locks are released.|
-|||
-
+  
 Do not be confused by the terms "locking" and "logging." Although important, locking, and logging are separate issues when you deal with the WAL. In the previous example, SQL Server generally holds the latch on page 150 for the time necessary to perform the physical insert changes on the page, not the entire time of the transaction. The appropriate lock type is established to protect the row, range, page, or table as necessary. Refer to the SQL Server Books Online locking sections for more details about lock types.
 
 Looking at the example in more detail, you might ask what happens when the LazyWriter or CheckPoint processes run. SQL Server issues all appropriate flushes to stable storage for transactional log records that are associated with the dirty and pinned page. This makes sure that the WAL protocol data page can never be written to stable storage until the associated transactional log records have been flushed.
@@ -276,4 +273,3 @@ GO
 
 SQL Server requires that systems support **guaranteed delivery to stable media**, as described in the [SQL Server I/O Reliability Program Review Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf) download document. For more information about the input and output requirements for the SQL Server database engine, see
 [Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576)
-

@@ -4,21 +4,21 @@ description: Fixes an issue in which machines can't boot into the normal mode an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: No Boot (not BugChecks)
+ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Unable to boot into normal mode, machine keeps booting into safe mode
 
 This article provides steps to fix an issue in which machines can't boot into the normal mode and keep on restarting into the safe mode.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2543632
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2543632
 
 ## Symptoms
 
@@ -40,23 +40,23 @@ Using the System Configuration Tool on Windows 2003/Windows XP:
 
 **Step 3:** In the **Run** field type *msconfig* as shown in the image below.
 
-![Type msconfig](./media/cannot-boot-into-normal-mode/run-msconfig.jpg)
+:::image type="content" source="media/cannot-boot-into-normal-mode/run-msconfig.png" alt-text="Screenshot of the Run window with the msconfig input.":::
 
 **Step 4:** Press the **OK** button and the **System Configuration Utility** will start up.
  You'll then see a screen similar to image below.
 
-![Screenshot of the System Configuration Utility](./media/cannot-boot-into-normal-mode/system-config-utility-window.jpg)
+:::image type="content" source="media/cannot-boot-into-normal-mode/system-config-utility-window.png" alt-text="Screenshot of the System Configuration Utility window.":::
 
 **Step 5:** Click the **BOOT.INI** tab selected by the red box in the figure above and you'll see a screen similar to image below.
 
-![Select /SAFTBOOT](./media/cannot-boot-into-normal-mode/boot-options-safeboot.jpg)
+:::image type="content" source="media/cannot-boot-into-normal-mode/boot-options-safeboot.png" alt-text="Screenshot of the BOOT.INI tab of the System Configuration Utility window.":::
 
 **Step 6:** Uncheck the mark in the checkbox labeled **/SAFEBOOT** designated by the red box above. Then press the **OK** button and then the **OK** button again. Windows will now prompt if you would like to reboot. Press the **Yes** button and machine can boot into normal mode now.
 
 > [!NOTE]
 > With the **/SAFEBOOT** option checked, you'll notice an additional entry in Boot.ini file as seen below. If you see the box check for /SAFEBOOT, remove the check.
 
-![Entry in Boot.ini file](./media/cannot-boot-into-normal-mode/boot-dot-ini-file-entry.jpg)
+:::image type="content" source="media/cannot-boot-into-normal-mode/boot-dot-ini-file-entry.png" alt-text="Screenshot of the entry in the Boot.ini file.":::
 
 Even though this document focuses primarily on Windows 2003 Server and Windows XP, this information applies to Windows Vista, Windows Server 2008, Windows 7, and Windows Server 2008 R2.
 

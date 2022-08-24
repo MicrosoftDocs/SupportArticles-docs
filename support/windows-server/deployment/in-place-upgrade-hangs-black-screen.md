@@ -1,35 +1,36 @@
 ---
 title: Domain Controllers in-place upgrade hangs at black screen
-description: This article describes a problem where domain controllers in-place upgraded hangs at a solid black screen. 
+description: This article describes a problem where domain controllers in-place upgraded hangs at a solid black screen.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, herbertm, warrenw, kaushika, joscon
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Domain Controllers in-place upgrade hangs at black screen
 
 This article provides a resolution for the issue that Domain Controllers in-place upgrade hangs at black screen.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2843034
 
 ## Symptoms
 
 Consider the following scenario:
+
 - You have a computer that is running Windows Server 2008 R2 Server-Core edition
 - Server-Core is hosting Domain Controller role
 - On Server Core you run in-place upgrade to Windows Server 2012  
 
 In this scenario, the Windows Server 2012 setup upgrade hangs at a solid black screen with a mouse pointer as seen in image below.
 
-![Black screen](./media/in-place-upgrade-hangs-black-screen/black-screen.jpg)
+:::image type="content" source="media/in-place-upgrade-hangs-black-screen/black-screen.png" alt-text="A black screen together with a mouse pointer.":::
 
 > [!NOTE]
 > The problem described in this article is specific to server-core enabled domain controllers that are in-place upgraded to Windows Server 2012 server core. This condition does not occur on GUI or Full-DCs that are in-place upgraded to Windows Server 2012.
@@ -54,8 +55,7 @@ where the 0xc0000135 status code maps to:
 | Hex| Decimal| Symbolic| Friendly error string |
 |---|---|---|---|
 |0xc0000135|-1073741515|STATUS_DLL_NOT_FOUND|This application has failed to start because %hs was not found. Re-installing the application may fix this problem.|
-|||||
-
+  
 These binaries are installed as part of the "Active Directory Domain Services" optional role. The DirectoryServices-DomainController role is disabled by default and is not enabled because there is no role with that name on the Windows Server 2008 R2 operating system. Since there is nothing to match up among the available Windows Server 2012 manifests, the upgrade hangs.
 
 ## Resolution
@@ -88,15 +88,18 @@ Instead of in-place upgrading existing W2K8 R2 Server core DCs, promote new Wind
 
 When the upgrade hangs and you reset the machine, Windows boot loader defaults to booting "Windows Server 2012". You could trigger the rollback in the Windows boot loader by selecting the "Windows Setup Rollback" boot option. You can also boot the machine with the default setting:
 
-![Boot Manager](./media/in-place-upgrade-hangs-black-screen/boot-manager.jpg)
+:::image type="content" source="media/in-place-upgrade-hangs-black-screen/boot-manager.png" alt-text="Windows boot loader defaults to booting Windows Server 2012.":::
 
 If the "Windows Server 2012" boot option was used, SETUP detects the failed in-place upgrade and automatically triggers the rollback to the previous OS version.
 
-![Upgrade fails](./media/in-place-upgrade-hangs-black-screen/upgrade-failed-rollback-started.jpg)
+:::image type="content" source="media/in-place-upgrade-hangs-black-screen/upgrade-failed-rollback-started.png" alt-text="SETUP detects the failed in-place upgrade and automatically triggers the rollback to the previous O S version." border="false":::
 
 > [!NOTE]
 > The size and aspect ratio of screenshots depicted in this article have been modified for brevity.
 
 You might run into a problem with Internet Explorer after the rewind:
 
-![ie error](./media/in-place-upgrade-hangs-black-screen/ie-errror-on-startup.jpg)
+> There was a problem starting iernonce.dll  
+> The specified module could not be found.
+
+:::image type="content" source="media/in-place-upgrade-hangs-black-screen/ie-error-at-startup.png" alt-text="There was a problem starting iernonce.dll error occurs after the rewind." border="false":::

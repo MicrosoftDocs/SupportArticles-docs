@@ -2,7 +2,7 @@
 title: Peer-to-peer replication fails
 description: This article helps you resolve the problem that occurs when you create a peer-to-peer publication from SQL scripts in Microsoft SQL Server.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Replication, change tracking, change data capture
+ms.custom: sap:Replication, change tracking, change data capture
 ms.reviewer: daleche, chrissk
 ms.prod: sql
 ---
@@ -89,7 +89,7 @@ Corrected syntax
 
 When you add new articles to an existing peer-to-peer publication, open the **Article Properties** window, and remove the `[dbo].` schema prefix before you save the changes.
 
-![Open the Article Properties and remove the "[dbo]."](./media/peer-to-peer-replication-fails/remove-dbo-schema-prefix.png)
+:::image type="content" source="media/peer-to-peer-replication-fails/remove-dbo-schema-prefix.png" alt-text="Screenshot of the Article Properties window.":::
 
 ## Status
 

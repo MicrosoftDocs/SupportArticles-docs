@@ -2,7 +2,6 @@
 title: Recover a gateway deployed through VMM
 description: Describes how to recover gateways that are running Windows Server 2012 R2 and were deployed through Virtual Machine Manager.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ms.reviewer: scottnap
 ---
 # How to recover a gateway that was deployed through VMM and is running Windows Server 2012 R2
@@ -46,7 +45,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
    > You must install [Update Rollup 4](https://support.microsoft.com/help/2992024) before you can perform the recovery process that is described in these steps.
 
 2. In the **Fabric** workspace in VMM, select **Network Service** in the console tree under **Networking**.
-3. In the **Network Services** pane, find the listing for the gateway that you want to recover, and then record the name of the gateway. In this article, this name is known as *GATEWAY-NAME*.
+3. In the **Network Services** pane, find the listing for the gateway that you want to recover, and then record the name of the gateway. In this article, this name is known as _GATEWAY-NAME_.
 4. Right-click the listing for the gateway, and then click **Properties**.
 5. Click **Connectivity**, and then record the information that is displayed for the front end and the back end (network adapters and network sites).
 6. Close the properties page.
@@ -54,7 +53,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
 
    [RecoverGatewayScript.psm1](https://gallery.technet.microsoft.com/scvmm-hyperv-network-b8f540bf)
 
-8. Determine the MAC address of the gateway by running the following script commands. Make sure that you substitute the correct path for *PATH* and the name of the gateway (as described in step 3) for *GATEWAY-NAME*.
+8. Determine the MAC address of the gateway by running the following script commands. Make sure that you substitute the correct path for _PATH_ and the name of the gateway (as described in step 3) for _GATEWAY-NAME_.
 
    ```powershell
    Import-Module PATH\GatewayRecovery.psm1
@@ -97,7 +96,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
    2. Start the new service, and then confirm that the virtual machines enter the **Running** state.
    3. With the virtual machines still running, on the VMM server, open a command prompt as an administrator, and then type `ping`, followed by the name or IP address of the gateway itself. Press Enter, and then confirm that a response is received from the gateway. If a response is not received, review possible causes, such as DNS settings, firewall settings, and the state of the gateway cluster.
 
-7. Choose one of the new virtual machines as **primary**. Run the following Windows PowerShell  commands, substituting the name of the chosen virtual machine for *VMNAME*:
+7. Choose one of the new virtual machines as **primary**. Run the following Windows PowerShell  commands, substituting the name of the chosen virtual machine for _VMNAME_:
 
    ```PowerShell
    $vm = Get-SCVirtualMachine -Name "VMNAME"
@@ -111,9 +110,8 @@ If both of the virtual machines that make up the gateway fail, and if you have [
    |First adapter that is shown in the list:|0|
    |Second adapter that is show in the list:|1|
    |Third adapter that is shown in the list:|2|
-   |||
 
-9. Grant the MAC address that you identified in the earlier procedure to the network adapter that is not connected. To do this, run the following Windows PowerShell command. For *MACADDRESS*, substitute the MAC address, and for *NUMBER*, substitute the number (0, 1, or 2) that you identified in the previous step:
+9. Grant the MAC address that you identified in the earlier procedure to the network adapter that is not connected. To do this, run the following Windows PowerShell command. For _MACADDRESS_, substitute the MAC address, and for _NUMBER_, substitute the number (0, 1, or 2) that you identified in the previous step:
 
    ```powershell
    $mac = Grant-SCMACAddress -MACAddress MACADDRESS -MACAddressPool
@@ -121,7 +119,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
    $vm.VirtualNetworkAdapters[NUMBER]
    ```
 
-10. Make sure that the virtual machine is stopped, and then apply the MAC address to the network adapter that is not connected. To do this, run the following Windows PowerShell commands. For *NUMBER*, substitute the same number (0, 1, or 2) that you used in the previous step:
+10. Make sure that the virtual machine is stopped, and then apply the MAC address to the network adapter that is not connected. To do this, run the following Windows PowerShell commands. For _NUMBER_, substitute the same number (0, 1, or 2) that you used in the previous step:
 
     ```powershell
     Stop-SCVirtualMachine -vm $vm
@@ -132,7 +130,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
 11. Delete the old gateway configuration information so that it will not interfere with the new gateway. To do this, you will have to know the names of the hosts in the cluster that the gateway was on before it failed. (This might be the same cluster that it is currently on.) To do this, follow these steps:
 
     1. In any workspace in VMM, click **Window** on the **Home** tab, and then click **PowerShell**.
-    2. Run the following commands. For *GATEWAY-NAME*, substitute the gateway name. For *HOST1* and *HOST2*, substitute the computer names of the physical hosts that were in the host cluster when the gateway failed. Run these commands even if you are using the same cluster you were using before the gateway failed.
+    2. Run the following commands. For _GATEWAY-NAME_, substitute the gateway name. For _HOST1_ and _HOST2_, substitute the computer names of the physical hosts that were in the host cluster when the gateway failed. Run these commands even if you are using the same cluster you were using before the gateway failed.
 
        ```powershell
        $svcName = "GATEWAY-NAME"
@@ -165,7 +163,7 @@ If both of the virtual machines that make up the gateway fail, and if you have [
        - If the cluster name of the host cluster differs from what it was before, change the `VMHost=` setting.
        - If the computer name of the **primary** virtual machine differs from what it was before, change the `GatewayVM=` setting to the new name.
 
-    3. Update the connection string by running the following command. When you run the command, substitute the correct connection string for *CONNECTIONSTRING*. Make sure that you include **;Migrate=true** at the end of the string inside the quotation marks, and `-Force` at the end after the last quotation mark.
+    3. Update the connection string by running the following command. When you run the command, substitute the correct connection string for _CONNECTIONSTRING_. Make sure that you include **;Migrate=true** at the end of the string inside the quotation marks, and `-Force` at the end after the last quotation mark.
 
        ```powershell
        Set-SCNetworkService -NetworkService $ns -ConnectionString "CONNECTIONSTRING;Migrate=true" -Force

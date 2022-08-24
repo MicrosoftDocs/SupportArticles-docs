@@ -3,21 +3,21 @@ title: Cannot open EXE files
 description: Provides a resolution for the issue that you cannot open exe files.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Can't open EXE files
 
 This article provides a resolution for the issue that you get errors when opening exe files.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 555067
 
 This article was written by [Yuval Sinay](https://mvp.microsoft.com/en-US/PublicProfile/7674?fullName=Yuval%20Sinay), Microsoft MVP.
@@ -39,9 +39,9 @@ Corrupt registry settings or some third-party product (or virus) can change the 
 3. Type the following command lines:
 
    ```console
-   "cd\"
+   cd\
 
-   "cd \windows"
+   cd \windows
    ```
 
    Press Enter after typing each one.

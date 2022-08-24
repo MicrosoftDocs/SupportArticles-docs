@@ -2,13 +2,13 @@
 title: Create a dynamic subject for the Send Mail task
 description: This article discusses how to update the property of an SSIS object at runtime by creating a property expression. Provides some examples to demonstrate this feature.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.reviewer: Craigg, willchen
 ms.prod: sql
 ---
 # Create a dynamic subject or message for the Send Mail task in SQL Server Integration Services
 
-This article shows how to update the property of an SQL Server Integration Services (SSIS) object at runtime by creating a property expression.
+This article shows how to update the property of a SQL Server Integration Services (SSIS) object at runtime by creating a property expression.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 906547

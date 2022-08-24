@@ -2,7 +2,6 @@
 title: Data warehouse jobs stuck or fail
 description: Describes issues that Service Manager data warehouse jobs, such as MPSyncJob and Transform.common, stuck or fail with error Incorrect syntax near.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ---
 # Data warehouse jobs stuck or fail with errors
 
@@ -20,7 +19,7 @@ You experience one or more of the following issues:
 
     > Invalid column name '\<Column Name>'
 
-- In the Operations Manager event log, several events are logged that contain the following error message:
+- In the Operations Manager event log, several events are logged that contain the following error message:
 
     > Incorrect syntax near ')'  
 
@@ -34,25 +33,25 @@ You experience one or more of the following issues:
     > Request: Ral_ExecuteSql -- (statement=exec('IF OBJECT_ID(''[dbo].[IncidentDim]'') IS NULL  
     BEGIN  
     > CREATE TABLE [dbo].[IncidentDim]  
-    > ([Column Name]   NVARCH...), (RETURN_VALUE=102)  
-    > Class: 15  
-    > Number: 102  
-    > Message: Incorrect syntax near ')'.
+    > ([Column Name]   NVARCH...), (RETURN_VALUE=102)  
+    > Class: 15  
+    > Number: 102  
+    > Message: Incorrect syntax near ')'.
 
-    > Source: Deployment  
-    > Event ID: 33403  
-    > Level: Warning  
-    > Description:  
-    > Deployment Execution Infrastructure encountered an error while executing a deployer.  
+    > Source: Deployment  
+    > Event ID: 33403  
+    > Level: Warning  
+    > Description:  
+    > Deployment Execution Infrastructure encountered an error while executing a deployer.  
     >
-    > MP element ID: \<MP element ID>  
-    > MP name: \<MP name>  
-    > MP version: 1.0.0.1  
-    > Operation: Install  
-    > Error message: System.Data.SqlClient.SqlException: Incorrect syntax near ')'.  
-    > Incorrect syntax near ')'.  
+    > MP element ID: \<MP element ID>  
+    > MP name: \<MP name>  
+    > MP version: 1.0.0.1  
+    > Operation: Install  
+    > Error message: System.Data.SqlClient.SqlException: Incorrect syntax near ')'.  
+    > Incorrect syntax near ')'.  
     >
-    > at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action\`1 wrapCloseInAction)  
+    > at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action\`1 wrapCloseInAction)  
     > ...
 
     > Source: Data Warehouse  
@@ -87,7 +86,7 @@ You experience one or more of the following issues:
     > Message: Invalid column name '\<Column Name>'.  
     > Transaction count after EXECUTE indicates a mismatching number of BEGIN and COMMIT statements. Previous count = 0, current count = 1.  
     >
-    > Stack:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action\`1 wrapCloseInAction)  
+    > Stack:    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action\`1 wrapCloseInAction)  
     > ...
 
     > Source: DataAccessLayer  
@@ -98,7 +97,7 @@ You experience one or more of the following issues:
     > Request: Ral_ExecuteSql -- (statement=exec('IF OBJECT_ID(''[dbo].[IncidentDim]'') IS NULL  
     > BEGIN  
     > CREATE TABLE [dbo].[IncidentDim]  
-    > ([Column Name]   NVARCH...), (RETURN_VALUE=102)  
+    > ([Column Name]   NVARCH...), (RETURN_VALUE=102)  
     > Class: 15  
     > Number: 102  
     > Message: Incorrect syntax near ')'.
@@ -126,7 +125,7 @@ You experience one or more of the following issues:
 
 ## Cause
 
-The issues occur because Service Manager classes such as the `Incident` class have been extended with a new field that has a default value of a space or multiple spaces instead of **NULL**.
+The issues occur because Service Manager classes such as the `Incident` class have been extended with a new field that has a default value of a space or multiple spaces instead of **NULL**.
 
 ## Resolution
 
@@ -138,7 +137,7 @@ select managedtypepropertyname, DefaultValue from ManagedTypeProperty where mana
 order by ManagedTypePropertyName
 ```
 
-If the query returns no results, the following resolution doesn't apply to your system. Otherwise, follow these steps.
+If the query returns no results, the following resolution doesn't apply to your system. Otherwise, follow these steps.
 
 ### Step 1: Fix the issue in the management pack
 
@@ -156,7 +155,7 @@ If the query returns no results, the following resolution doesn't apply to your 
 5. In the **Tasks** pane, select **Export** under the name of the management pack.
 6. In the **Browse For Folder** dialog box, select a location for the file, and then click  **OK**.
 
-7. Open the XML-formatted management pack file by using Notepad, find the **Property ID=** that matches the value that was returned by the SQL query, and then remove the ***DefaultValue=" "*** portion from the property.
+7. Open the XML-formatted management pack file by using Notepad, find the **Property ID=** that matches the value that was returned by the SQL query, and then remove the ***DefaultValue=" "*** portion from the property.
 
 8. Find the **\<ManagementPackPublicKeyToken>** text in the XML file and remove the whole line.
 
@@ -164,8 +163,8 @@ If the query returns no results, the following resolution doesn't apply to your 
 
 10. In the Service Manager console, [import a management pack](/system-center/scsm/management-packs#import-a-management-pack).
 11. In the Service Manager console, select **Data Warehouse**, expand **Data Warehouse**, and then select **Data Warehouse Jobs**.
-12. In the **Data Warehouse Jobs** pane, right-click **MPSyncJob**, and then select **Resume** from the **Tasks** list.
-13. Periodically refresh the **Data Warehouse Job** pane until the **MPSyncJob** is completed.
+12. In the **Data Warehouse Jobs** pane, right-click **MPSyncJob**, and then select **Resume** from the **Tasks** list.
+13. Periodically refresh the **Data Warehouse Job** pane until the **MPSyncJob** is completed.
 
 ### Step 2: Fix the issue in data warehouse
 
@@ -180,11 +179,11 @@ Restore the following databases to a date before the change:
 - CMDWDataMart
 
 > [!NOTE]
-> Make Sure that the backups are within the period that's specified in **Data Retention settings**. To check Data Retention settings: In the Service Manager console, select **Administration**, and then go to **Administration > Settings**.
+> Make Sure that the backups are within the period that's specified in **Data Retention settings**. To check Data Retention settings: In the Service Manager console, select **Administration**, and then go to **Administration > Settings**.
 
 After you restore the data warehouse databases, data warehouse uses the updated management pack and the data that's stored on the Service Manager.
 
-#### Method 2: Modify the DWStagingAndConfig database
+#### Method 2: Modify the DWStagingAndConfig database
 
 > [!IMPORTANT]
 > If the management pack wasn't created by you, you may need to rebuild the data warehouse with new databases by using this method. Therefore, we recommend that you contact Microsoft support before you continue.
@@ -210,4 +209,4 @@ Update infra.workitem SET statusid = 6 WHERE BatchId = @BatchID
 
 ## More information
 
-We don't recommend you set default values for fields that are defined in a management pack. If you must set a default value, make sure that it's not a blank space or multiple blank spaces.
+We don't recommend you set default values for fields that are defined in a management pack. If you must set a default value, make sure that it's not a blank space or multiple blank spaces.

@@ -2,7 +2,6 @@
 title: A delay when you open dashboard views
 description: Fixes an issue in which a delay occurs when you use a non-English locale and open dashboard views in System Center Operations Manager.
 ms.date: 07/07/2020
-ms.prod-support-area-path: 
 ms.reviewer: delhan, adgoda
 ---
 # A delay occurs when you open dashboard views in System Center Operations Manager

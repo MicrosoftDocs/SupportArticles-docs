@@ -1,15 +1,13 @@
 ---
-title: The application could not be wrapped error
-description: Describes a problem that occurs when you try to wrap an LOB app by using the Microsoft Intune App Wrapping Tool for Android.
-ms.date: 05/13/2020
-ms.prod-support-area-path: Intune App SDK
+title: Android application could not be wrapped - Intune error
+description: Troubleshooting the error message when you try to wrap an LOB app by using the Microsoft Intune App Wrapping Tool for Android.
+ms.date: 10/19/2021
+search.appverid: MET150
+ms.custom: sap:Intune App SDK
 ---
-# The application could not be wrapped error when wrapping an LOB app
+# LOB application could not be wrapped error
 
-This article solves the error message that occurs when you try to wrap a Line of Business (LOB) app by using the Microsoft Intune App Wrapping Tool for Android.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4469909
+This article solves the error message that occurs when you try to wrap a line of business (LOB) app by using the Microsoft Intune App Wrapping Tool for Android.
 
 ## Symptoms
 
@@ -45,7 +43,7 @@ When you wrap a LOB app by using the Microsoft Intune App Wrapping Tool for Andr
 > com.microsoft.intune.mam.apppackager.AppPackager.packageApp(AppPackager.java:111)  
 > com.microsoft.intune.mam.apppackager.PackagerMain.mainInternal(PackagerMain.java:213)  
 > com.microsoft.intune.mam.apppackager.PackagerMain.main(PackagerMain.java:57)  
-> org.jf.util.ExceptionWithContext: Unsigned short value out of range: <65536 or a value that's greater than 65536>  
+> org.jf.util.ExceptionWithContext: Unsigned short value out of range: <65536 or a value that's greater than 65536>  
 > org.jf.dexlib2.writer.DexDataWriter.writeUshort(DexDataWriter.java:116)  
 > org.jf.dexlib2.writer.InstructionWriter.write(InstructionWriter.java:348)  
 > org.jf.dexlib2.writer.DexWriter.writeCodeItem(DexWriter.java:1058)
@@ -54,20 +52,16 @@ When you wrap a LOB app by using the Microsoft Intune App Wrapping Tool for Andr
 
 The problem occurs if the LOB app reaches or nearly reaches the 64K method reference limit of DEX files. In this scenario, the Microsoft Intune Wrapping Tool can't add the necessary Intune code to the app without exceeding this limit.
 
-## Resolution
+## Solution
 
-To fix this problem, follow these steps:
+To fix this problem, complete the following steps.
 
 1. Install the latest version of the [Microsoft Intune App Wrapping Tool for Android](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android).
 2. [Enable multidex](https://developer.android.com/studio/build/multidex) for your Android app.
 
-Test whether the problem is fixed. If the problem persists, try the methods that are provided in the next section.
+Test whether the problem is fixed. If the problem persists, try the following methods in the given order:
 
-## Workaround
-
-To work around this problem, try the following methods in the given order:
-
-- Examine the multidex configuration to see whether you specify any classes in the primary DEX file. You may experience problems if too many classes are added to the primary DEX file. For more information, see [https://developer.android.com/studio/build/multidex#keep](https://developer.android.com/studio/build/multidex#keep).
+- Examine the multidex configuration to see whether you specify any classes in the primary DEX file. You may experience problems if too many classes are added to the primary DEX file. For more information, see [https://developer.android.com/studio/build/multidex#keep](https://developer.android.com/studio/build/multidex#keep).
 
     To work around this problem, reduce the number of classes that are specified in the primary DEX file.
 
@@ -76,9 +70,9 @@ To work around this problem, try the following methods in the given order:
     > [!NOTE]
     > Some third-party libraries may require additional ProGuard configuration.
 
-## More Information
+## More information
 
-For more information about the 64K method reference limit of DEX files, see [Enable multidex for apps with over 64K methods](https://developer.android.com/studio/build/multidex).
+For more information about the 64K method reference limit of DEX files, see [Enable multidex for apps with over 64K methods](https://developer.android.com/studio/build/multidex).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 

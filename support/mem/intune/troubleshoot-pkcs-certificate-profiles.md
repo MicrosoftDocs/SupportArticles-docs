@@ -1,19 +1,20 @@
 ---
-title: Troubleshoot use of PKCS certificate profiles to provision certificates with Microsoft Intune | Microsoft Docs
-description: Troubleshoot the use of private and public key pair (PKCS) profiles by devices to request certificates for use with Intune.  
+title: Troubleshoot use of PKCS certificate profiles to provision certificates with Microsoft Intune
+description: Troubleshoot the use of Public Key Cryptography Standards (PKCS) profiles by devices to request certificates for use with Intune.  
 ms.date: 08/11/2020
 ms.reviewer: lacranda
+search.appverid: MET150
 ---
-# Troubleshoot PKCS certificate deployment in Microsoft Intune
+# Troubleshooting PKCS certificate deployment in Intune
 
-The information in this article can help you resolve several common issues when deploying private and public key pair (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you’ve completed the following tasks as found in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
+This article gives troubleshooting guidance for several common issues when deploying Public Key Cryptography Standards (PKCS) certificates in Microsoft Intune. Before troubleshooting, ensure you've completed the following tasks, as explained in [Configure and use PKCS certificates with Intune](/mem/intune/protect/certficates-pfx-configure#export-the-root-certificate-from-the-enterprise-ca):
 
-- Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certificates-pfx-configure#requirements)
-- Export the root certificate from the Enterprise Certification Authority (CA)
-- Configure certificate templates on the certification authority
-- Install and configure the Intune Certificate Connector
-- Create and deploy a trusted certificate profile to deploy the root certificate
-- Create and deploy a PKCS certificate profile
+- Review the [requirements for using PKCS certificate profiles](/mem/intune/protect/certificates-pfx-configure#requirements).
+- Export the root certificate from the Enterprise Certification Authority (CA).
+- Configure certificate templates on the certification authority.
+- Install and configure the Intune Certificate Connector.
+- Create and deploy a trusted certificate profile to deploy the root certificate.
+- Create and deploy a PKCS certificate profile.
 
 The most common source of problems for PKCS certificate profiles has been with the configuration of the PKCS certificate profile. Review the profiles configuration and look for typos in server names or fully qualified domain names (FQDNs), and confirm the **Certificate Authority** and **Certificate Authority Name** are correct.
 
@@ -26,18 +27,17 @@ You can use the [certutil command-line program](/windows-server/administration/w
 
 The following graphic provides a basic overview of the PKCS certificate deployment process in Intune.
 
-> [!div class="mx-imgBorder"]
-> ![PKCS certificate profile flow](./media/troubleshoot-pkcs-certificate-profiles/pkcs-overview-graphic.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pkcs-overview-graphic.png" alt-text="Screenshot of the PKCS certificate profile flow.":::
 
 1. An Admin creates a PKCS certificate profile in Intune.
-2. The Intune service requests that the on-premises Intune Certificate Connector create a new certificate for the user.
-3. The Intune Certificate Connector sends a PFX Blob and Request to your Microsoft Certification Authority.
-4. The Certification Authority issues and sends the PFX User Certificate back to the Intune Certificate Connector.
-5. The Intune Certificate Connector uploads the encrypted PFX User Certificate to Intune.
-6. Intune decrypts the PFX User Certificate and re-encrypts for the device using the Device Management Certificate.  Intune then sends the PFX User Certificate to the Device.
-7. The device reports the certificate status to Intune.
+1. The Intune service requests that the on-premises Intune Certificate Connector create a new certificate for the user.
+1. The Intune Certificate Connector sends a PFX Blob and Request to your Microsoft Certification Authority.
+1. The Certification Authority issues and sends the PFX User Certificate back to the Intune Certificate Connector.
+1. The Intune Certificate Connector uploads the encrypted PFX User Certificate to Intune.
+1. Intune decrypts the PFX User Certificate and re-encrypts for the device using the Device Management Certificate.  Intune then sends the PFX User Certificate to the Device.
+1. The device reports the certificate status to Intune.
 
-## Data and Log files
+## Log files
 
 To identify problems for the communication and certificate provisioning workflow, review log files from both the Server infrastructure, and from devices. Later sections for troubleshooting PKCS certificate profiles refer to log files referenced in this section.
 
@@ -83,7 +83,7 @@ For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
-   ![Select log options](./media/troubleshoot-pkcs-certificate-profiles/message-options.png)
+    :::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/message-options.png" alt-text="Screenshot shows the Include Info Messages and Include Debug Messages options are selected.":::
 
 3. Reproduce the problem, and then save the logs to a text file:
    1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard.
@@ -97,7 +97,7 @@ For devices that run Windows, use the Windows Event logs to diagnose enrollment 
 
 On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
 
-![Windows event logs](./media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/windows-event-log.png" alt-text="Screenshot of the Windows event logs.":::
 
 ## Antivirus exclusions
 
@@ -128,7 +128,7 @@ The following common errors are each addressed in a following section:
 
 During PFX deployment, the trusted root certificate appears on the device but the PFX certificate doesn't appear on the device. The NDESConnector_date_time.svclog log file contains the string **The RPC server is unavailable. 0x800706ba**, as seen in the first line of the following example:
 
-```
+```output
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x800706BA): CCertRequest::Submit: The RPC server is unavailable. 0x800706ba (WIN32: 1722 RPC_S_SERVER_UNAVAILABLE)
 IssuePfx -Generic Exception: System.ArgumentException: CCertRequest::Submit: The parameter is incorrect. 0x80070057 (WIN32: 87 ERROR_INVALID_PARAMETER)
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094800): The requested certificate template is not supported by this CA. (Exception from HRESULT: 0x80094800)
@@ -141,18 +141,18 @@ This issue can occur when the PKCS certificate profile specifies the wrong serve
 - Certification authority
 - Certification authority name
 
-**Resolution**:
+**Solution**:
 
 Review the following settings, and fix if they're incorrect:
 
 - The **Certification authority** property displays the internal FQDN of your CA server.
 - The **Certification authority name** property displays the name of your CA.
 
-#### Cause 2 - CA doesn’t support certificate renewal for requests signed by previous CA certificates
+#### Cause 2 - CA doesn't support certificate renewal for requests signed by previous CA certificates
 
-If the CA FQDN and name are correct in the PKCS certificate profile, review the Windows Application log that’s on the certificate authority server. Look for an **Event ID 128** that resembles the following example:
+If the CA FQDN and name are correct in the PKCS certificate profile, review the Windows Application log that's on the certificate authority server. Look for an **Event ID 128** that resembles the following example:
 
-```
+```output
 Log Name: Application:
 Source: Microsoft-Windows-CertificationAuthority
 Event ID: 128
@@ -161,9 +161,9 @@ Details:
 An Authority Key Identifier was passed as part of the certificate request 2268. This feature has not been enabled. To enable specifying a CA key for certificate signing, run: "certutil -setreg ca\UseDefinedCACertInRequest 1" and then restart the service.
 ```
 
-When the CA certificate renews, it must sign the Online Certificate Status Protocol (OCSP) Response Signing certificate. Signing enables the OCSP Response Signing certificate to validate other certificates by checking on their revocation status. This signing isn’t enabled by default.
+When the CA certificate renews, it must sign the Online Certificate Status Protocol (OCSP) Response Signing certificate. Signing enables the OCSP Response Signing certificate to validate other certificates by checking on their revocation status. This signing isn't enabled by default.
 
-**Resolution**:
+**Solution**:
 
 Manually force signing of the certificate:
 
@@ -176,7 +176,7 @@ After the Certificate Services service restarts, devices can receive certificate
 
 **An enrollment policy server cannot be located** and **0x80094015**, as seen in the following example:
 
-```
+```output
 IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015): An enrollment policy server cannot be located. (Exception from HRESULT: 0x80094015)
 ```
 
@@ -184,32 +184,30 @@ IssuePfx - COMException: System.Runtime.InteropServices.COMException (0x80094015
 
 This issue occurs if the computer that hosts the Intune Certificate Connector can't locate a certificate enrollment policy server.
 
-**Resolution**:
+**Solution**:
 
-Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pkiclient/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
+Manually configure the name of the certificate enrollment policy server on the computer that hosts the Intune Certificate Connector. To configure the name, use the [Add-CertificateEnrollmentPolicyServer](/powershell/module/pki/add-certificateenrollmentpolicyserver) PowerShell cmdlet.
 
 ### The submission is pending
 
 After you deploy a PKCS certificate profile to mobile devices, the certificates aren't acquired, and the NDESConnector_date_time.svclog log contains the string **The submission is pending**, as seen in the following example:
 
-```
+```output
 IssuePfx - The submission is pending: Taken Under Submission
 IssuePfx -Generic Exception: System.InvalidOperationException: IssuePfx - The submission is pending
 ```
 
 In addition, on the certificate authority server, you can see the PFX request in the **Pending Requests** folder:
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the Certification Authority pending requests folder](./media/troubleshoot-pkcs-certificate-profiles/pending-requests.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png" alt-text="Screenshot of the Certification Authority pending requests folder." lightbox="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png":::
 
 #### Cause - Incorrect configuration for Request Handling
 
 This issue occurs if the option **Set the request status to pending. The administrator must explicitly issue the certificate** is selected in the certificate authority **Properties** > **Policy Module** > **Properties** dialog box.
 
-> [!div class="mx-imgBorder"]
-> ![Screenshot of the Policy Module properties](./media/troubleshoot-pkcs-certificate-profiles/policy-module-properties.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/policy-module-properties.png" alt-text="Screenshot of the Policy Module properties.":::
 
-**Resolution**:
+**Solution**:
 
 Edit the Policy Module properties to set: **Follow the settings in the certificate template, if applicable. Otherwise, automatically issue the certificate.**
 
@@ -217,7 +215,7 @@ Edit the Policy Module properties to set: **Follow the settings in the certifica
 
 With the Intune Certificate Connector installed and configured successfully, devices don't receive PKCS certificates and the NDESConnector_date_time.svclog log contains the string **The parameter is incorrect. 0x80070057**, as seen in the following example:
 
-```
+```output
 CCertRequest::Submit: The parameter is incorrect. 0x80070057 (WIN32: 87 ERROR_INVALID_PARAMETER)
 ```
 
@@ -228,7 +226,7 @@ This issue occurs if the PKCS profile in Intune is misconfigured. The following 
 - The profile includes an incorrect name for the CA.
 - The Subject Alternative Name (SAN) is configured for email address, but the targeted user doesn't have a valid email address yet. This combination results in a null value for the SAN, which is invalid.
 
-**Resolution**:
+**Solution**:
 
 Verify the following configurations for the PKCS profile, and then wait for the policy to refresh on the device:
 
@@ -240,9 +238,9 @@ For more information, see [Configure and use PKCS certificates with Intune](/mem
 
 ### Denied by Policy Module
 
-When devices receive the trusted root certificate but don’t receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
+When devices receive the trusted root certificate but don't receive the PFX certificate and the NDESConnector_date_time.svclog log contains the string **The submission failed: Denied by Policy Module**, as seen in the following example:
 
-```
+```output
 IssuePfx - The submission failed: Denied by Policy Module
 IssuePfx -Generic Exception: System.InvalidOperationException: IssuePfx - The submission failed
    at Microsoft.Management.Services.NdesConnector.MicrosoftCA.GetCertificate(PfxRequestDataStorage pfxRequestData, String containerName, String& certificate, String& password)
@@ -253,22 +251,22 @@ Issuing Pfx certificate for Device ID <Device ID> failed
 
 This issue occurs when the Computer Account of the server that hosts the Intune Certificate Connector doesn't have permissions to the certificate template.
 
-**Resolution**:
+**Solution**:
 
 1. Sign in to your Enterprise CA with an account that has administrative privileges.
-2. Open the **Certification Authority** console, right-click **Certificate Templates, and select Manage**.
-3. Find the certificate template and open the **Properties** dialog box of the template.
-4. Select the **Security** tab and add the Computer Account for the server where you installed the Microsoft Intune Certificate Connector. Grant that account **Read** and **Enroll** permissions.
-5. Select **Apply** > **OK** to save the certificate template, and then close the **Certificate Templates** console.
-6. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**.
-7. Select the template that you modified, and then click **OK**.
+1. Open the **Certification Authority** console, right-click **Certificate Templates, and select Manage**.
+1. Find the certificate template and open the **Properties** dialog box of the template.
+1. Select the **Security** tab and add the Computer Account for the server where you installed the Microsoft Intune Certificate Connector. Grant that account **Read** and **Enroll** permissions.
+1. Select **Apply** > **OK** to save the certificate template, and then close the **Certificate Templates** console.
+1. In the **Certification Authority** console, right-click **Certificate Templates** > **New** > **Certificate Template to Issue**.
+1. Select the template that you modified, and then click **OK**.
 
 For more information, see [Configure certificate templates on the CA](/mem/intune/protect/certificates-pfx-configure#configure-certificate-templates-on-the-ca).
 
 ### Certificate profile stuck as Pending
 
 In the Microsoft Endpoint Manager admin center, PKCS certificate profiles fail to deploy with a state of **Pending**. There are no obvious errors in the NDESConnector_date_time.svclog log file.
-Because the cause of this problem isn’t identified clearly in logs, work through the following causes.
+Because the cause of this problem isn't identified clearly in logs, work through the following causes.
 
 #### Cause 1 - Unprocessed request files
 
@@ -277,19 +275,18 @@ Review the request files for errors that indicate why they failed to be processe
 1. On the server that hosts the Intune Certificate Connector, use File Explorer to navigate to **%programfiles%\Microsoft Intune\PfxRequest**.
 2. Review files in the **Failed** and **Processing** folders, using your favorite text editor.
 
-   > [!div class="mx-imgBorder"]
-   > ![Review the PfxRequest folder](./media/troubleshoot-pkcs-certificate-profiles/pfxrequest-folder.png)
+    :::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/pfxrequest-folder.png" alt-text="Screenshot of the the PfxRequest folder." lightbox="media/troubleshoot-pkcs-certificate-profiles/pending-requests.png":::
 
 3. In these files, look for entries that indicate errors or suggest problems. Using a web-based search, look up the error messages for clues as to why the request failed to process, and for solutions to those issues.
 
 #### Cause 2 - Misconfiguration for the PKCS certificate profile
 
-When you don’t find request files in the **Failed**, **Processing**, or **Succeed** folders, the cause might be that the wrong certificate is associated with the PKCS certificate profile. For example, a subordinate CA is associated with the profile, or the wrong root certificate is used.
+When you don't find request files in the **Failed**, **Processing**, or **Succeed** folders, the cause might be that the wrong certificate is associated with the PKCS certificate profile. For example, a subordinate CA is associated with the profile, or the wrong root certificate is used.
 
-**Resolution**:
+**Solution**:
 
-1. Review your trusted certificate profile to ensure you’ve deployed the root certificate from your Enterprise CA to devices.
-2. Review your PKCS certificate profile to ensure it references the correct CA, certificate type, and the trusted certificate profile that deploys the root certificate to devices.
+1. Review your trusted certificate profile to ensure you've deployed the root certificate from your Enterprise CA to devices.
+1. Review your PKCS certificate profile to ensure it references the correct CA, certificate type, and the trusted certificate profile that deploys the root certificate to devices.
 
 For more information, see [Use certificates for authentication in Microsoft Intune](/mem/intune/protect/certificates-configure).
 
@@ -297,37 +294,24 @@ For more information, see [Use certificates for authentication in Microsoft Intu
 
 PKCS certificates fail to deploy, and the certificate console on the issuing CA displays a message with the string **-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED**, as seen in the following example:
 
-```
-Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=” Common Name”.  Additional information: Denied by Policy Module”.
+```output
+Active Directory Certificate Services denied request abc123 because The Email name is unavailable and cannot be added to the Subject or Subject Alternate name. 0x80094812 (-2146875374 CERTSRV_E_SUBJECT_EMAIL_REQUIRED). The request was for CN=" Common Name".  Additional information: Denied by Policy Module".
 ```
 
 #### Cause - "Supply in the request" is miscongifured
 
 This issue occurs if the **Supply in the request** option isn't enabled on the **Subject Name** tab in the certificate template **Properties** dialog box.
 
-> [!div class="mx-imgBorder"]
-> ![Configure the NDES properties](./media/troubleshoot-pkcs-certificate-profiles/supply-in-the-request.png)
+:::image type="content" source="media/troubleshoot-pkcs-certificate-profiles/supply-in-the-request.png" alt-text="Screenshot of the NDES properties where the Supply in the request option is highlighted." border="false":::
 
-**Resolution**:
+**Solution**:
 
 Edit the template to resolve the configuration issue:
 
 1. Sign in to your Enterprise CA with an account that has administrative privileges.
-2. Open the **Certification Authority** console, right-click **Certificate Templates**, and select **Manage**.
-3. Open the Properties dialog box of the certificate template.
-4. On the **Subject Name** tab, select **Supply in the request**.
-5. Select **OK** to save the certificate template, and then close the **Certificate Templates** console.
-6. In the **Certification Authority** console, and right-click **Templates** > **New** > **Certificate Template to Issue**.
-7. Select the template that you modified, and then select **OK**.
-
-## Next steps
-
-If you still need a solution or you’re looking for more information about Intune, post a question in our [Microsoft Intune forum](/answers/products/mem). Many support engineers, MVPs, and members of our development team frequent the forums, so there’s a good chance that someone can help.
-
-To open a support request with the Microsoft Intune product support team, see [How to get support in Microsoft Endpoint Manager](/mem/get-support).
-
-For more information about PKCS certificate deployment, see the following articles:
-
-- [Configure and use PKCS certificates with Intune](/mem/intune/protect/certificates-pfx-configure)
-- [Configure a certificate profile for your devices in Microsoft Intune](/mem/intune/protect/certificates-configure)
-- [Remove SCEP and PKCS certificates in Microsoft Intune](/mem/intune/protect/remove-certificates)
+1. Open the **Certification Authority** console, right-click **Certificate Templates**, and select **Manage**.
+1. Open the Properties dialog box of the certificate template.
+1. On the **Subject Name** tab, select **Supply in the request**.
+1. Select **OK** to save the certificate template, and then close the **Certificate Templates** console.
+1. In the **Certification Authority** console, and right-click **Templates** > **New** > **Certificate Template to Issue**.
+1. Select the template that you modified, and then select **OK**.

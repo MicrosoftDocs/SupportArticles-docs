@@ -3,21 +3,21 @@ title: Configure Group Policies to Set Security
 description: Describes how to configure Group Policies to Set Security for System Services.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Security filtering and item-level targeting
+ms.custom: sap:security-filtering-and-item-level-targeting, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How To Configure Group Policies to Set Security for System Services
 
 This article describes how to configure Group Policies to Set Security for System Services.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 324802
 
 ## Summary

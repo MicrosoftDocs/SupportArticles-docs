@@ -2,7 +2,6 @@
 title: Can't upgrade App Controller to a licensed version
 description: Fixes a problem that prevents you from upgrading the evaluation version of System Center 2012 App Controller to the licensed version.
 ms.date: 08/18/2020
-ms.prod-support-area-path:
 ms.reviewer: sturwale, richrund
 ---
 # You can't upgrade an evaluation version of App Controller to a licensed version
@@ -30,7 +29,7 @@ To resolve this issue, follow these steps:
 4. Click **Next** > **Install** > **Close**.
 5. Run App Controller Setup, and then click **Upgrade from evaluation license**.
 
-    ![Screenshot of App Controller Setup](./media/cannot-upgrade-to-licensed-version/setup-window.png)
+    :::image type="content" source="media/cannot-upgrade-to-licensed-version/add-controller-setup-window.png" alt-text="Select the Upgrade from evaluation license in App Controller Setup." border="false":::
 
 6. Follow the steps in the wizard. On the last page of the wizard, you receive the following error message:
 
@@ -38,7 +37,7 @@ To resolve this issue, follow these steps:
 
     This is the expected behavior.
 
-    ![Error message screenshot](./media/cannot-upgrade-to-licensed-version/error.png)
+    :::image type="content" source="media/cannot-upgrade-to-licensed-version/default-cmdlet-processor-must-be-assigned-a-non-null-value.png" alt-text="Error that occurs when you run the last page of the Add Roles and Features wizard." border="false":::
 
 7. Click **OK** in response to the error message, open **IIS Manager**, and then restart the AppController website.
 

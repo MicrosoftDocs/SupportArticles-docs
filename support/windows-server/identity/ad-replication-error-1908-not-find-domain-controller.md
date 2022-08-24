@@ -3,21 +3,21 @@ title: AD Replication error 1908
 description: Provides a resolution for troubleshooting AD Replication error 1908, which is Could not find the domain controller for this domain.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Domain join issues
+ms.custom: sap:domain-join-issues, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
+# Troubleshooting AD Replication error 1908: Could not find the domain controller for this domain
 
 This article provides a resolution for troubleshooting AD Replication error 1908: Could not find the domain controller for this domain.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2712026
 
 >[!NOTE]
@@ -27,13 +27,14 @@ _Original KB number:_ &nbsp; 2712026
 
 1. REPADMIN.exe reports that replication attempt has failed with status 1908.  
 
-    REPADMIN commands that commonly cite the 1908 status include but are not limited to:  
-    · REPADMIN /ADD  
-    · REPADMIN /REPLSUM *  
-    · REPADMIN /REHOST  
-    · REPADMIN /SHOWVECTOR /LATENCY  
-    · REPADMIN /SHOWREPS  
-    · REPADMIN /SHOWREPL  
+    REPADMIN commands that commonly cite the 1908 status include but are not limited to:
+
+    - `REPADMIN /ADD`
+    - `REPADMIN /REPLSUM *`
+    - `REPADMIN /REHOST`
+    - `REPADMIN /SHOWVECTOR /LATENCY`
+    - `REPADMIN /SHOWREPS`
+    - `REPADMIN /SHOWREPL`
 
     Sample output from `repadmin /syncall` command:
 
@@ -67,7 +68,6 @@ _Original KB number:_ &nbsp; 2712026
     |NTDS KCC|Knowledge Consistency Checker|1925|Warning|The attempt to establish a replication link for the following writable directory partition failed.|
     |NTDS Replication|Replication|1943|Error|Active Directory was unable to remove all of the lingering objects on the local domain controller. However, some lingering objects might have been deleted on this domain controller before this operation stopped. All objects had their existence verified on the following source domain controller.|
     |NTDS Replication|Setup|1125|Error|The Active Directory Domain Services Installation Wizard (Dcpromo) was unable to establish connection with the following domain controller.|
-    ||||||
 
     These events will contain the following sub Error Value:  
 
@@ -139,7 +139,6 @@ c. An entirely different DC (not the source or destination DC).
         |---|---|---|---|---|---|
         |42|3/7/2012|3.6455760|10.0.1.10|10.0.1.11|LDAPMessage: Search Request, MessageID: 371 \*** This packet is a UDP LDAP call for DC Locator looking for Netlogon***|
         |43|3/7/2012|3.6455760|10.0.1.11|10.0.1.10| NetLogon:LogonSAMPauseResponseEX (SAM Response when Netlogon is paused): 24 (0x18)|
-        |||||||
 
     4. Verify that 10.10.1.11's KDC and `Netlogon` services are running.
     On discovered Domain Controller(10.0.1.11), verify the KDC and `Netlogon` service status with SC Query

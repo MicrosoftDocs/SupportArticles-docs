@@ -4,20 +4,20 @@ description: Describes how to configure your Windows Server 2003 as a file and p
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Management and Configuration: Installing Print drivers'
+ms.custom: sap:management-and-configuration:-installing-print-drivers, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # How to install and configure a file and print server
 
 This step-by-step article describes how to configure your Windows Server 2003 as a file and print server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325860
 
 ## Install File and Printer Sharing

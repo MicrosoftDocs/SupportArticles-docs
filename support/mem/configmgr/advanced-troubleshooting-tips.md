@@ -2,7 +2,6 @@
 title: Useful logs and queries
 description: Describes how to some other useful logs and queries for advanced troubleshooting content distribution-related issues.
 ms.date: 03/30/2020
-ms.prod-support-area-path: 
 ---
 # Advanced troubleshooting tips for content distribution
 
@@ -101,9 +100,9 @@ When a package is first distributed to a site, DistMgr sends a compressed copy o
 There are a few occasions where it's necessary to force a site to resend the compressed copy of a package to a specified site. Most notably, this is required when:
 
 1. Content is missing from content library (`PkgLib`, `DataLib`, or `FileLib`) on a primary or secondary site server itself.
-2. **DistMgr.log** consistently complains about the content not having arrived from the parent site (for example: '*The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*').
+2. **DistMgr.log** consistently complains about the content not having arrived from the parent site (for example: '_The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later_').
 
-In most cases, the message '*The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later*' is logged temporarily while the package content is in transit. When you see this message, review the Sender/Despooler logs to ensure that there are no issues with site communications. Review [Distribute a package to DP across sites](understand-package-actions.md#distribute-a-package-to-dp-across-sites) to understand the log flow.
+In most cases, the message '_The contents for the package CS100026 hasn't arrived from site CS1 yet, will retry later_' is logged temporarily while the package content is in transit. When you see this message, review the Sender/Despooler logs to ensure that there are no issues with site communications. Review [Distribute a package to DP across sites](understand-package-actions.md#distribute-a-package-to-dp-across-sites) to understand the log flow.
 
 ### How does DistMgr know if the current site has a copy of the package installed
 
@@ -121,7 +120,7 @@ If the content is missing in the content library on the package source site, the
 
 ### How do I force the package source site to resend the compressed copy of the package to a specific site
 
-After confirming that the package source site has the required content, it's possible to force the package source site to resend the package PCK file to a specific site by setting `SourceVersion` to 0 for the Type 1 row in `PkgStatus` for the affected site. This row can be identified by running the following SQL query on the package source site's database after replacing the *PACKAGEID* and *SITECODE* of the desired package and site:
+After confirming that the package source site has the required content, it's possible to force the package source site to resend the package PCK file to a specific site by setting `SourceVersion` to 0 for the Type 1 row in `PkgStatus` for the affected site. This row can be identified by running the following SQL query on the package source site's database after replacing the _PACKAGEID_ and _SITECODE_ of the desired package and site:
 
 ```sql
 SELECT * FROM PkgStatus WHERE Type = 1 AND ID = 'PACKAGEID' AND SiteCode = 'SITECODE'
@@ -146,9 +145,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |PackageType|0 - Regular Package<br/>3 - Driver Package<br/>4 - Task Sequence<br/>5 - Software Updates Package<br/>6 - Device Settings Package<br/>7 - Virtual App Package<br/>8 - Content Package (Application)<br/>257 - Operating System Image<br/>258 - Boot Image<br/>259 - OS Installation Package<br/>260 - VHD Package|
-  |||
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
+  |PackageType|0 - Regular Package<br/>3 - Driver Package<br/>4 - Task Sequence<br/>5 - Software Updates Package<br/>6 - Device Settings Package<br/>7 - Virtual App Package<br/>8 - Content Package (Application)<br/>257 - Operating System Image<br/>258 - Boot Image<br/>259 - OS Installation Package<br/>260 - VHD Package|
 
 - `PkgServers` - Contains a list of all the packages along with the DPs they are currently targeted to.
 
@@ -156,8 +154,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |||
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
 
 - `PkgStatus` - Contains a list of the current package status for each package for each DP.
 
@@ -165,9 +162,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each site the package is targeted to. PkgServer for this row is the site server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
-  |Status|0 - NONE<br/>1 - SENT<br/>2 - RECEIVED<br/>3 - INSTALLED<br/>4 - RETRY<br/>5 - FAILED<br/>6 - REMOVED<br/>7 - PENDING REMOVE (Not Used)<br/>8 - REMOVE FAILED<br/>9 - RETRY REMOVE|
-    |||
+  |Type|1 - SITE (MASTER)<br/>2 - DP (COPY)<br/><br/>Type 1 rows are created for each site the package is targeted to. PkgServer for this row is the site server FQDN.<br/> <br/>Type 2 rows are created for each DP the package is targeted to. PkgServer is the DP NALPATH.|
+  |Status|0 - NONE<br/>1 - SENT<br/>2 - RECEIVED<br/>3 - INSTALLED<br/>4 - RETRY<br/>5 - FAILED<br/>6 - REMOVED<br/>7 - PENDING REMOVE (Not Used)<br/>8 - REMOVE FAILED<br/>9 - RETRY REMOVE|
 
 - `DistributionJobs` - Contains a list of Package Transfer Manager Jobs along with their current state.
 
@@ -175,9 +171,8 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
-  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELED<br/>8 - SUSPENDED|
-  |||
+  |Action|0 - NONE<br/>1 - UPDATE<br/>2 - ADD<br/>3 - DELETE<br/>4 - VALIDATE<br/>5 - CANCEL|
+  |State|0 - PENDING<br/>1 - READY<br/>2 - STARTED<br/>3 - INPROGRESS<br/>4 - PENDING RESTART<br/>5 - COMPLETE<br/>6 - FAILED<br/>7 - CANCELED<br/>8 - SUSPENDED|
 
 - `DistributionPoints` - Contains a list of all the distribution points.
 
@@ -185,8 +180,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Action|0  -  NONE<br/>1  -  UPDATE<br/>2  -  ADD<br/>3  -  DELETE<br/>4  -  VALIDATE<br/>5  -  CANCEL|
-  |||
+  |Action|0  -  NONE<br/>1  -  UPDATE<br/>2  -  ADD<br/>3  -  DELETE<br/>4  -  VALIDATE<br/>5  -  CANCEL|
 
 - `PullDPResponse` - Temporarily contains the package status response sent from the pull DPs. DistMgr processes the response and updates `PkgStatus`.
 
@@ -194,8 +188,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED<br/>128 - CANCELLATION REQUESTED|
-  |||
+  |ActionState|1 - SUCCESS<br/>2 - WARNING<br/>4 - ERROR<br/>8 - DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED<br/>128 - CANCELLATION REQUESTED|
 
 - `PkgNotification` - Notification table monitored by SMSDBMON to trigger DistMgr to process a package. Type column defines the type of package notification. Rows in this table are removed after SMSDBMON triggers DistMgr.
 
@@ -203,8 +196,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |Type|0 - UNKNOWN<br/>1 - PACKAGE<br/>2 - PROGRAM<br/>4 - PACKAGE SERVER (DP)<br/>8 - PACKAGE ACCESS ACCOUNT<br/>15 - ALL|
-  |||
+  |Type|0 - UNKNOWN<br/>1 - PACKAGE<br/>2 - PROGRAM<br/>4 - PACKAGE SERVER (DP)<br/>8 - PACKAGE ACCESS ACCOUNT<br/>15 - ALL|
 
 - **Pull DP state messages** - List of state message IDs raised by pull DP
 
@@ -212,8 +204,7 @@ After resetting the `SourceVersion` to **0** for the Type 1 row, redistributing 
 
   |Column|Values|
   |---|---|
-  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED|
-  |||
+  |State ID|1  -  SUCCESS<br/>2  -  WARNING<br/>4  -  FAILURE<br/>8  -  DOWNLOAD STARTED<br/>16 - DOWNLOAD IN PROGRESS<br/>32 - DOWNLOADED<br/>64 - CANCELED|
 
   Sample State Message Report:
 

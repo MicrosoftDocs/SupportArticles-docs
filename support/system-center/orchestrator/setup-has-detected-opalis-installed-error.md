@@ -2,7 +2,6 @@
 title: Setup has detected Opalis 6.3 installed
 description: Fixes an issue where you receive the Setup has detected Opalis 6.3 installed on this computer error when installing System Center 2012 Orchestrator.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: jfanjoy
 ---
 # Setup has detected Opalis 6.3 installed on this computer error when installing System Center 2012 Orchestrator

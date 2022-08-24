@@ -2,7 +2,6 @@
 title: Can't edit the Update Application Catalog Tables maintenance task
 description: Fixes an issue that occurs when you try to edit the Update Application Catalog Tables maintenance task.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ---
 # Not found error when you try to edit Update Application Catalog Tables
 
@@ -30,16 +29,16 @@ In this scenario, you receive the following error message:
 Not found , property = DeviceName
 >
 > Stack Trace:  
-   at Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine.WqlResultObjectBase.get_Item(String name)  
-   at Microsoft.ConfigurationManagement.AdminConsole.SiteMaintenance.TaskGeneral.InitializePageControl()  
-   at Microsoft.ConfigurationManagement.AdminConsole.SmsPropertyPage.OnInitialize()  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine.WqlResultObjectBase.get_Item(String name)  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.SiteMaintenance.TaskGeneral.InitializePageControl()  
+&nbsp; &nbsp;at Microsoft.ConfigurationManagement.AdminConsole.SmsPropertyPage.OnInitialize()  
 > \-------------------------------
 
 ## Workaround
 
 To work around this issue, edit the maintenance task by using the following steps instead:
 
-1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Sites**.
+1. In the Configuration Manager console, go to **Administration** > **Site Configuration** > **Sites**.
 2. Select the site.
 3. On the **Home** tab, in the **Settings** group, select **Site Maintenance**.
 

@@ -2,7 +2,7 @@
 title: SQL Server 2012 setup and migration issues
 description: This article describes the SQL Server 2012 setup and migration issues.
 ms.date: 09/17/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -31,7 +31,7 @@ _Original KB number:_ &nbsp; 2681562
 
     For information about how to enable the .NET 3.5 Framework, review the following articles:
 
-    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+    - [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
     - [Enable .NET Framework 3.5 by using the Add Roles and Features Wizard](/windows-hardware/manufacture/desktop/enable-net-framework-35-by-using-the-add-roles-and-features-wizard)  
 
@@ -50,7 +50,7 @@ _Original KB number:_ &nbsp; 2681562
 
   An error message that resembles the following may be displayed during SQL Server 2012 installation when the .NET Framework is not enabled.
 
-  ![error message](./media/sql-server-windows-8-later-versions/error-message-image.png)
+  :::image type="content" source="media/sql-server-2012-setup-issues/dotnet-framework-not-enabled-error.png" alt-text="Screenshot of the SQL Server 2012 setup error message: Error while enabling Windows feature." border="false":::
 
   Prevention
 
@@ -75,7 +75,7 @@ _Original KB number:_ &nbsp; 2681562
 
   In this situation, users may receive an error message that resembles the following.
 
-  ![users may receive an error message that resembles the following](./media/sql-server-windows-8-later-versions/users-may-receive-an-error-message.png)
+    :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message: The following feature couldn't be installed." border="false":::
 
   Cause
 
@@ -109,11 +109,11 @@ _Original KB number:_ &nbsp; 2681562
 
   Windows Server 2012 R2 and Windows Server 2012 - Full Server
 
-  ![Windows Server 2012 R2 and Windows Server 2012 - Full Server](./media/sql-server-windows-8-later-versions/server-2012-full-server.png)
+  :::image type="content" source="media/sql-server-2012-setup-issues/install-dotnet-framework-3.5-error-full-server.png" alt-text="Screenshot of the .Net Framework 3.5 installation error message on Full Server: The following feature couldn't be installed." border="false":::
 
   Windows Server 2012 R2 and Windows Server 2012 - Server Core
 
-  ![Windows Server 2012 R2 and Windows Server 2012 - Server Core](./media/sql-server-windows-8-later-versions/server-2012-server-core.png)
+  :::image type="content" source="media/sql-server-2012-setup-issues/roles-and-features-cannot-automatically-installed.png" alt-text="Screenshot of the roles and features cannot be automatically installed via Windows Feature error." border="false":::
 
   Prevention
 
@@ -232,7 +232,7 @@ _Original KB number:_ &nbsp; 2681562
     > Operation failed with 0x8007000B  
     An attempt was made to load a program with an incorrect format.
 
-    ![An attempt was made to load a program with an incorrect format.](./media/sql-server-windows-8-later-versions/program-with-an-incorrect-format.png)
+    :::image type="content" source="media/sql-server-2012-setup-issues/error-0x8007000b.png" alt-text="Screenshot of the operation failed error message.":::
 
     Prevention
 
@@ -253,11 +253,11 @@ _Original KB number:_ &nbsp; 2681562
   
   In this scenario, the installation fails. You receive an error message that resembles the following.
   
-  ![In this scenario, the installation fails. You receive an error message that resembles the following.](./media/sql-server-windows-8-later-versions/install-a-sql-server-failover-cluster.png)
-  
+  :::image type="content" source="media/sql-server-2012-setup-issues/install-sql-server-failover-cluster-error.png" alt-text="Screenshot of the Feature Rules page, which shows Windows Server Core Supported Feature(s) Check failed." border="false":::
+
   The details of the error resemble the following.
   
-  ![The details of the error resemble the following.](./media/sql-server-windows-8-later-versions/rule-check-result.png)
+  :::image type="content" source="media/sql-server-2012-setup-issues/rule-check-result.png" alt-text="Screenshot shows details of the error in the Rule Check Result dialog." border="false":::
   
   Cause
   

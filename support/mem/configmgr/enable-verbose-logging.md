@@ -2,7 +2,6 @@
 title: Enable verbose logging and configure SQL Server Profiler
 description: Describes how to enable verbose logging and configure SQL Server Profiler for troubleshooting issue in Configuration Manager.
 ms.date: 09/16/2020
-ms.prod-support-area-path:
 ---
 # Enable verbose logging and configure SQL Server Profiler for troubleshooting
 
@@ -16,7 +15,7 @@ In Configuration Manager, client and site server components record process infor
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogLevel`
 
-- Debug logging can be enabled by creating the following registry value as **REG_SZ** with a value of **True**:
+- Debug logging can be enabled by creating the following registry value as **REG_SZ** with a value of **True**:
 
     `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\DebugLogging\Enabled`
 
@@ -29,7 +28,7 @@ In Configuration Manager, client and site server components record process infor
     `HKEY_LOCAL_MACHINE\Software\Microsoft\CCM\Logging\@GLOBAL\LogMaxHistory`
 
 > [!NOTE]
-> Restart the SMS Agent Host service to enable the changes. On the management point, you may have to restart IIS-related services for verbose logging to take effect for some logs.
+> Restart the SMS Agent Host service to enable the changes. On the management point, you may have to restart IIS-related services for verbose logging to take effect for some logs.
 
 ## Enable verbose logging for the state system component on the site server
 
@@ -38,11 +37,11 @@ To enable verbose logging for State System (StateSys), set the **REG_DWORD** val
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Components\SMS_STATE_SYSTEM\Verbose logging`
 
 > [!NOTE]
-> This registry key change doesn't require a restart of the `SMS_Executive` service or the `SMS_STATE_SYSTEM` thread.
+> This registry key change doesn't require a restart of the `SMS_Executive` service or the `SMS_STATE_SYSTEM` thread.
 
 ## Enable verbose logging for WSUS Synchronization Manager (WSYNCMGR)
 
-To enable verbose logging for WsyncMgr.log, create or modify the following registry value on the site server and set the **REG_DWORD** value to **4**:
+To enable verbose logging for WsyncMgr.log, create or modify the following registry value on the site server and set the **REG_DWORD** value to **0**:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SMS_WSUS_SYNC_MANAGER\LogLevel`
 
@@ -53,11 +52,11 @@ To enable SQL tracing, set the **REG_DWORD** value for the following registry va
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Tracing\SqlEnabled`
 
 > [!NOTE]
-> This registry change doesn't require a restart of the `SMS_Executive` service. This registry value adds SQL trace logging for all site server logs. This should only be done temporarily while troubleshooting, and should be disabled after getting the relevant logs.
+> This registry change doesn't require a restart of the `SMS_Executive` service. This registry value adds SQL trace logging for all site server logs. This should only be done temporarily while troubleshooting, and should be disabled after getting the relevant logs.
 
 ## Enable verbose logging for Windows Update Agent
 
-To enable verbose logging, create the following registry subkey with two values:
+To enable verbose logging, create the following registry subkey with two values:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Trace`
 
@@ -65,8 +64,7 @@ To enable verbose logging, create the following registry subkey with two values
 |---|---|---|
 |Flags|REG_DWORD|00000007|
 |Level|REG_DWORD|00000004|
-||||
-
+  
 This subkey turns on an extended tracing to the %systemroot%\Windowsupdate.log file, it also turns on an extended tracing to any attached debuggers.
 
 > [!NOTE]
@@ -78,10 +76,10 @@ In some circumstances, you may need to use SQL Server Profiler to find the call 
 
 To do this, configure the SQL Server Profiler as shown in the following screenshot:
 
-![Configure SQL Server Profiler to call MP_GetWSUSServerLocation](./media/enable-verbose-logging/mp_getwsusserverlocation.png)
+:::image type="content" source="media/enable-verbose-logging/mp-get-wsus-server-location.png" alt-text="Screenshot shows the configuration of SQL Server Profiler to call MP_GetWSUSServerLocation." border="false":::
 
 ## Configure SQL Server Profiler to view state message processing
 
-To do this, configure the SQL Server Profiler as shown in the following screenshot:
+To do this, configure the SQL Server Profiler as shown in the following screenshot:
 
-![Configure SQL Server Profiler to call spProcess](./media/enable-verbose-logging/spProcess.png)
+:::image type="content" source="media/enable-verbose-logging/sp-process.png" alt-text="Screenshot shows the configuration of SQL Server Profiler to call spProcess." border="false":::

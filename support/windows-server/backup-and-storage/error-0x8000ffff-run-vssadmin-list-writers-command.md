@@ -4,21 +4,21 @@ description: Resolves a problem that occurs when you use the vssadmin list write
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
-ms.technology: windows-server-backup-and-storage 
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
+ms.technology: windows-server-backup-and-storage
 ---
 # Error 0x8000FFFF when you run the vssadmin list writers command on a Windows Server 2003-based computer
 
 This article resolves a problem that occurs when you use the `vssadmin list writers` command on a Windows Server 2003-based computer. when the issue occurs, you may receive an error message, an event, or the list may be blank.
 
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;940184
+_Applies to:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 940184
 
 ## Symptoms  
 

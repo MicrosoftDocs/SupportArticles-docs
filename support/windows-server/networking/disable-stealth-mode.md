@@ -1,29 +1,29 @@
 ---
 title: How to disable stealth mode
 description: Discusses how to disable stealth mode (a Windows filtering platform feature) for a given profile.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: networking
 ---
 # Disable stealth mode in Windows
 
 This article discusses how to disable stealth mode (a Windows filtering platform feature).
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2586744
 
 ## Introduction
 
 Windows Server or Windows client computers do not send Transmission Control Protocol (TCP) reset (RST) messages or Internet Control Message Protocol (ICMP) unreachable packets across a port that does not have a listening application.
-Several applications rely on the behavior that is described in [RFC 793](http://tools.ietf.org/html/rfc793#section-3.4), "Reset Generation," Page 35f. These applications require the TCP RST packet or ICMP unreachable packet as a response if they knock on a port that has no listener. If they don't receive this response, the applications might not be able to run correctly on Windows.
+Several applications rely on the behavior that is described in [RFC 793](https://tools.ietf.org/html/rfc793#section-3.4), "Reset Generation," Page 35f. These applications require the TCP RST packet or ICMP unreachable packet as a response if they knock on a port that has no listener. If they don't receive this response, the applications might not be able to run correctly on Windows.
 Typically, the effect of this dependency is that stealth mode may cause a 20-second delay for regular TCP applications to reconnect if the remote peer loses the connection state and that notification packet doesn't reach the client.
 One example of this behavior is Lotus Notes Client. The client can be configured to use different Lotus Notes servers. If the service is not running on the first configured server, the client switches immediately to the second server if it receives a TCP RESET command. If stealth mode is enabled, no TCP RESET is received by the client. The client then waits for the last SYN retransmit to time out before it tries the next server in the list.
 
@@ -58,12 +58,12 @@ Type:  **REG_DWORD**
 Data: **0x00000000 (default - StealthMode enabled) 0x00000001 (StealthMode disabled)**  
 
 > [!Caution]
-> Stealth mode cannot be deactivated by disabling the firewall service (MpsSvc). This is an unsupported configuration. For more information, see the "[Disable Windows Defender Firewall with Advanced Security](https://docs.microsoft.com/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-administration-with-windows-powershell#disable-windows-defender-firewall-with-advanced-security)" section of "Windows Defender Firewall with Advanced Security Administration with Windows PowerShell."
+> Stealth mode cannot be deactivated by disabling the firewall service (MpsSvc). This is an unsupported configuration. For more information, see the "[Disable Windows Defender Firewall with Advanced Security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-administration-with-windows-powershell#disable-windows-defender-firewall-with-advanced-security)" section of "Windows Defender Firewall with Advanced Security Administration with Windows PowerShell."
 
 ## More information
 
-[Stealth Mode in Windows Firewall with Advanced Security](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd448557%28v=ws.10%29)  
-[Disable Stealth Mode](https://docs.microsoft.com/openspecs/windows_protocols/ms-gpfas/e0e681d3-0468-4796-b541-c5f9945041d8)  in the "[MS-GPFAS]: Group Policy: Firewall and Advanced Security Data Structure" specification  
-[Appendix B: Product Behavior](https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/1da2ee70-a6ae-4f76-b08f-fdc25c77d8a0) in "[MS-FASP]: Firewall and Advanced Security Protocol" specification (look for FW_PROFILE_CONFIG_DISABLE_STEALTH_MODE in this appendix) Third-party information disclaimer  
+[Stealth Mode in Windows Firewall with Advanced Security](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd448557%28v=ws.10%29)  
+[Disable Stealth Mode](/openspecs/windows_protocols/ms-gpfas/e0e681d3-0468-4796-b541-c5f9945041d8)  in the "[MS-GPFAS]: Group Policy: Firewall and Advanced Security Data Structure" specification  
+[Appendix B: Product Behavior](/openspecs/windows_protocols/ms-fasp/1da2ee70-a6ae-4f76-b08f-fdc25c77d8a0) in "[MS-FASP]: Firewall and Advanced Security Protocol" specification (look for FW_PROFILE_CONFIG_DISABLE_STEALTH_MODE in this appendix)
 
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

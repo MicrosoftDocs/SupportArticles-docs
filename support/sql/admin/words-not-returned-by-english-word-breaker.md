@@ -2,7 +2,7 @@
 title: Words are not returned by an English word breaker
 description: This article provides workarounds for the problem where a search by using an English word breaker does not return words that have leading decimal points in SQL Server 2017 on Windows, SQL Server 2016, 2014, and 2012.
 ms.date: 09/09/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
 # Words that have leading decimal points are not returned by an English word breaker in SQL Server
@@ -46,7 +46,6 @@ To work around this problem, use one of the following methods:
     |0x003000340036|1|0|5|Exact Match|.646|Keeps the decimal|
     |0x006E006E00340036|1|0|5|Exact Match|nn46||
     |0x007300680069006D|1|0|6|Exact Match|Platinum||
-    ||||||||
 
 3. Try to search on `.325` (including the decimal point):
 
@@ -63,7 +62,6 @@ To work around this problem, use one of the following methods:
     |---|---|---|---|---|---|---|
     |0x003300310033|1|0|1|Exact Match|325|Removes the decimal when searching and 325 <> .325, so no row returned|
     |0x006E006E003300310033|1|0|1|Exact Match|nn325||
-    ||||||||
 
     In this example, if you enter `.325` as the search value, no rows are returned. This is because we indexed the data by keeping the decimal point, but the English word breaker removes the decimal point during the search process. Therefore, we inadvertently search on 325 instead of `.325`, and no matches are found.
 
@@ -88,7 +86,6 @@ To work around this problem, use one of the following methods:
     |0x002E003000340036|1|0|5|Exact Match|.646|Keeps the decimal|
     |0x006E006E00300064003000340036|1|0|5|Exact Match|nn0d646||
     |0x007300680069006D|1|0|6|Exact Match|Platinum||
-    ||||||||
 
     Now, searching on `.325` works as expected.
 
@@ -102,5 +99,3 @@ To work around this problem, use one of the following methods:
     |---|---|---|---|---|---|---|
     |0x002E003300310033|1|0|1|Exact Match|.325||
     |0x006E006E00300064003300310033|1|0|1|Exact Match|nn0d325||
-    ||||||||
-

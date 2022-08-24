@@ -3,26 +3,26 @@ title: How to raise Active Directory domain and forest functional levels
 description: Describes how to raise Active Directory domain and forest functional levels.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to raise Active Directory domain and forest functional levels
 
 This article describes how to raise Active Directory domain and forest functional levels.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 322692
 
 ## Summary
 
-For information about Windows Server 2016 and new features in Active Directory Domain Services (AD DS), see [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services).
+For information about Windows Server 2016 and new features in Active Directory Domain Services (AD DS), see [What's new in Active Directory Domain Services for Windows Server 2016](/windows-server/identity/whats-new-active-directory-domain-services).
 
 This article discusses raising the domain and forest functional levels that are supported by Microsoft Windows Server 2003-based or newer domain controllers. There are four releases of Active Directory, and only the levels that have changed from Windows NT Server 4.0 require special consideration. Therefore, the other level changes are mentioned by using the newer, current, or older versions of the domain controller operating system, of the domain, or of the forest functional level.
 
@@ -66,7 +66,7 @@ You can set the following values for this attribute:
 
 #### Mixed mode and native mode settings
 
-The ntMixedDomain  attribute is on the naming context (NC) head for the domain, that is, DC=corp, DC=contoso, DC=com.
+The ntMixedDomain  attribute is on the naming context (NC) head for the domain, that is, DC=corp, DC=contoso, DC=com.
 
 You can set the following values for this attribute:
 
@@ -118,16 +118,23 @@ After you connect to a domain controller, the RootDSE information for the domain
     > ERROR_DS_ILLEGAL_MOD_OPERATION
 
     Additionally, the following message is logged in the Directory Services log:
-    > Active Directory could not update the functional level of the following domain because the domain is in mixed mode.
+
+    ```output
+    Active Directory could not update the functional level of the following domain because the domain is in mixed mode.
+    ```
 
     In this scenario, you can change the domain mode to native mode by using the Active Directory Users & Computers snap-in, by using the Active Directory Domains & Trusts UI MMC snap-in, or by programmatically changing the value of the ntMixedDomain attribute to 0 on the domainDNS object. When this process is used to raise the domain functional level to 2 (Windows Server 2003), the domain mode is automatically changed to native mode.
 
 - The transition from mixed mode to native mode changes the scope of the Schema Administrators security group and the Enterprise Administrators security group to universal groups. When these groups have been changed to universal groups, the following message is logged in the System log:
-    > Event Type: Information  
+
+    ```output
+    Event Type: Information  
     Event Source: SAM  
     Event ID: 16408  
     Computer:Server Name  
     Description: "Domain operation mode has been changed to Native Mode. The change cannot be reversed."
+    ```
+
 - When the Windows Server 2003 administrative tools are used to invoke the domain functional level, both the ntmixedmode attribute and the msdsBehaviorVersion attribute are modified in the correct order. However, this does not always occur. In the following scenario, the native mode is implicitly set to a value of 0 without changing the scope for the Schema Administrators security group and the Enterprise Administrators security group to universal:
   - The msdsBehaviorVersion attribute that controls the domain functional mode is manually or programmatically set to the value of 2.
   - The forest functional level is set to 2 by using any method. In this scenario, the Domain controllers block the transition to the forest functional level until all of the domains that are in the local area network are configured to native mode and the required attribute change is made in the security group scopes.

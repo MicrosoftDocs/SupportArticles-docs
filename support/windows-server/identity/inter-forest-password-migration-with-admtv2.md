@@ -4,20 +4,20 @@ description: Discusses how to troubleshoot common problems associated with the i
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, willgloy
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # How to Troubleshoot Inter-Forest Password Migration with ADMTv2
 
 This article discusses the dependencies and troubleshooting steps for common problems associated with the *inter* -forest password migration operation.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 322981
 
 ## Summary

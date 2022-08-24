@@ -2,7 +2,6 @@
 title: Invalid ObjectServer data type 
 description: Describes an issue where the activities in the Integration Pack for IBM Tivoli NetCool/OMNIbus return the Invalid ObjectServer data type error.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # NetCool/Omnibus integration pack for Orchestrator returns error Invalid ObjectServer data type
 

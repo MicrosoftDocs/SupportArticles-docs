@@ -2,22 +2,22 @@
 title: Error when creating a single partition
 description: Provides a solution to an error that occurs when you install Windows to a drive greater than 2.2 TB.
 ms.date: 10/22/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Error 0x80042468 when creating a single partition on a drive greater than 2.2 TB during install of Windows
 
 This article provides a solution to an error that occurs when you install Windows to a drive greater than 2.2 TB.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2604034
 
 ## Symptoms
@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2604034
 When installing Windows to a drive greater than 2.2TB, you receive Error 0x80042468.
 This will occur if you install Windows 7 and manually try to create one partition using "Advanced Drive Options" during setup.
 
-:::image type="content" source="./media/error-when-creating-single-partition/error-when-installing-windows.png" alt-text="Error 0x80042468 when you install Windows.":::
+:::image type="content" source="media/error-when-creating-single-partition/error-when-installing-windows.png" alt-text="Screenshot of error 0x80042468: Failed to create a new partition on the selected unused space." border="false":::
 
 ## Cause
 
@@ -51,11 +51,11 @@ To Boot a UEFI enabled system, the disk type should be changed to GPT using conv
 3. Type **Select disk 0** (It selects the disk that you want to convert to GPT.)
 4. Type **Convert GPT** (This command will convert drive to GPT.)
 
-    :::image type="content" source="./media/error-when-creating-single-partition/type-convert-gpt-command.png" alt-text="Type convert gpt command.":::
+    :::image type="content" source="media/error-when-creating-single-partition/type-convert-gpt-command.png" alt-text="Screenshot of the output of convert gpt command." border="false":::
 
 5. Just to make sure everything went fine type **list disk**. The converted disk should now have an asterix in the GPT column. (See example image below)
 
-    :::image type="content" source="./media/error-when-creating-single-partition/type-list-disk.png" alt-text="Type list disk command.":::
+    :::image type="content" source="media/error-when-creating-single-partition/type-list-disk.png" alt-text="Screenshot of the output of list disk command." border="false":::
 
 6. Type exit and exit again. It should close the command window.
 

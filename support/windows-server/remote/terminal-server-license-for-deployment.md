@@ -4,21 +4,21 @@ description: Helps you understand and successfully deploy Terminal Services on c
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote Desktop Services (Terminal Services) licensing
+ms.custom: sap:remote-desktop-services-terminal-services-licensing, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Windows Server 2003 Terminal Server licensing issues and requirements for deployment
 
 This article helps you understand and successfully deploy Terminal Services on computers that are running Microsoft Windows Server 2003.
 
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;823313
+_Applies to:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 823313
 
 ## Summary
 

@@ -3,21 +3,21 @@ title: RDS role cannot coexist with AD DS role
 description: Provides a resolution for the issue that Remote Desktop Services role cannot coexist with AD DS role.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Load Balancing and Connection Broker
+ms.custom: sap:load-balancing-and-connection-broker, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Remote Desktop Services role cannot coexist with AD DS role
 
 This article provides a resolution for the issue that Remote Desktop Services role cannot coexist with AD DS role.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2799605
 
 ## Symptoms
@@ -26,7 +26,7 @@ Consider the following scenarios:
  **Scenario 1**:  
 
 - You have a computer that is running Windows Server 2012 with Active Directory Domain Services role installed
-- You try to install Remote Desktop Connection Broker role  
+- You try to install Remote Desktop Connection Broker role  
 
 In this scenario, the installation of Remote Desktop Connection Broker may fail and you may receive the following error message:  
 >RD Connection Broker Role Service: Failed  
@@ -48,16 +48,16 @@ The Remote Desktop Management service terminated with the following service-spec
 
  **Scenario 2**:  
 
-- You have a computer that is running Windows Server 2012 with Remote Desktop Connection Broker role installed
+- You have a computer that is running Windows Server 2012 with Remote Desktop Connection Broker role installed
 - You try to install Active Directory Domain Services role  
 
-In this scenario, the installation of Active Directory Domain Services role is successful, however the Remote Desktop Connection Broker may fail and you may receive the following error message:  
+In this scenario, the installation of Active Directory Domain Services role is successful, however the Remote Desktop Connection Broker may fail and you may receive the following error message:  
 >The server pool does not match the RD Connection Broker that are in it. Errors:  
 Cannot connect to any of the specified RD Connection Broker servers. Ensure that at least one server is available and the Remote Desktop Management (rdms), RD Connection Broker (tssdis), or RemoteApp and Desktop Connection (tscpubrpc) services are running.  
 
 ## Cause
 
-It was not supported to combine Remote Desktop Services role services and Active Directory Domain Services role on Windows Server 2012 RTM.
+It was not supported to combine Remote Desktop Services role services and Active Directory Domain Services role on Windows Server 2012 RTM.
 
 ## Resolution
 

@@ -4,21 +4,21 @@ description: Provides a solution to fix an error (Access is denied) that occurs 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # "Access is denied" error when you try to create NTDS Settings object
 
 This article provides a solution to fix an error (Access is denied) that occurs when you promote new Windows Server 2012 R2 domain controllers in an existing domain.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3207962
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3207962
 
 ## Symptoms
 
@@ -68,7 +68,7 @@ DateTime[INFO] The attempted domain controller operation has completed
 
 Where the errors map to the following:
 
-:::image type="content" source="./media/access-denied-create-ntds-settings-object/error-mappings.JPG" alt-text="Error mapping.":::
+:::image type="content" source="media/access-denied-create-ntds-settings-object/error-mappings.png" alt-text="Error mappings that contain error code, symbolic name, error description, and header.":::
 
 ## Cause
 
@@ -88,7 +88,7 @@ To resolve this issue, follow these steps:
    4. On the Effective Access tab, enter the user or group name of the user who is performing the operation that's failing in DCPromo.
    5. Confirm whether the Add/remove replica in domain control access permission has been granted.
 
-      :::image type="content" source="./media/access-denied-create-ntds-settings-object/add-remove-replica-in-domain.jpg" alt-text="Screenshot of Add/remove replica in domain.":::
+      :::image type="content" source="media/access-denied-create-ntds-settings-object/add-remove-replica-in-domain.png" alt-text="Add/remove replica in domain control access permission.":::
 
 3. If the Add/Remove Replica In Domain permission is missing for the user or group, add it by using ADSIEdit.msc:  
 

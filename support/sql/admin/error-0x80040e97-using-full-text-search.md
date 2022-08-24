@@ -2,7 +2,7 @@
 title: Error when you use integrated full-text search
 description: This article provides a resolution for the problem that occurs when you index large documents by using integrated full-text search in SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: jackli, rbeene
 ms.prod: sql
 ---

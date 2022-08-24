@@ -2,7 +2,6 @@
 title: Configuration Manager clients reinstall every five hours
 description: Describes an issue in which the Configuration Manager client reinstalls itself every five hours and may cause an inadvertent client upgrade if a current branch site is already upgraded. Provides a workaround.
 ms.date: 06/01/2020
-ms.prod-support-area-path: 
 ms.reviewer: brianhun, jstewart, yohuang, brenduns, cmkbreview
 ---
 # Configuration Manager clients reinstall every five hours and may cause an inadvertent client upgrade

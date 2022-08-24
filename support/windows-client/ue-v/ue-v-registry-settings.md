@@ -2,22 +2,22 @@
 title: UE-V registry settings
 description: Describes UE-V registry settings.
 ms.date: 09/16/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.prod-support-area-path: User Experience Virtualization (UE-V)
+ms.custom: sap:user-experience-virtualization-ue-v, csstroubleshoot
 ms.technology: windows-client-user-experience-virtualization-ue-v
 ---
 # User Experience Virtualization (UE-V) registry settings
 
 This article describes UE-V registry settings.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2770042
 
 ## Summary
@@ -75,7 +75,6 @@ The following table lists the registry settings that are used by the Microsoft U
 |Install Time Stamp|Records installation data. This setting should not be manually edited.|`HKEY_LOCAL_MACHINE`|`\Software\Microsoft\UEV\Agent\Configuration`|InstallTimestamp|REG_QWORD|UE-V Agent defined| |
 |Excluded FileTypes|Identifies file types that will be excluded from settings synchronization|`HKEY_LOCAL_MACHINE`|`\Software\Microsoft\UEV\Agent\Configuration`|ExcludedFileTypes|REG_MULTI_SZ|List of file extensions| |
 |Logoff Sync timeout value|Configures the number of milliseconds that the computer waits to sync settings before timeout|`HKEY_LOCAL_MACHINE` and `HKEY_CURRENT_USER`|`\Software\Microsoft\UEV\Agent\Configuration`|LogOffWaitInterval|REG_DWORD| Specify the preferred logoff sync timeout in milliseconds|2000 milliseconds (2 seconds)|
-|||||||||
 
 ## More information
 

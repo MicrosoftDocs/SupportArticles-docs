@@ -3,21 +3,21 @@ title: LDAP to Active Directory is disabled
 description: Provides some information about the issue that anonymous LDAP operations to Active Directory are disabled on domain controllers.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Anonymous LDAP operations to Active Directory are disabled on domain controllers
 
 This article provides some information about the issue that anonymous LDAP operations to Active Directory are disabled on domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 326690
 
 ## Summary

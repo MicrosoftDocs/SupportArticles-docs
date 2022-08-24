@@ -2,8 +2,9 @@
 title: Using ADAL to authenticate from Android devices fails if additional certificate downloads are required
 description: Describes an issue in which ADAL authentication from Android devices fails if additional certificate downloads are required. Provides a resolution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Using ADAL to authenticate from Android devices fails if additional certificate downloads are required
 
@@ -38,11 +39,11 @@ To determine whether you are experiencing this issue, run the following test:
 
     If any of the SSL certificates displays the "Extra download" message, you are experiencing the issue that's described earlier in this section, per the following screenshot:
 
-    :::image type="content" source="media/adal-authenticate-android-devices-fail/3203935.png" alt-text="Screenshot of extra download." border="false":::
+    :::image type="content" source="media/adal-authenticate-android-devices-fail/extra-download-message.png" alt-text="Screenshot of the extra download message." border="false":::
 
     Here's a screenshot showing a certificate with the "Sent by server" message, illustrating successful authentication on an Android device:
 
-    :::image type="content" source="media/adal-authenticate-android-devices-fail/3203936.png" alt-text="Screenshot of Sent by server." border="false":::
+    :::image type="content" source="media/adal-authenticate-android-devices-fail/sent-by-server-message.png" alt-text="Screenshot of the Sent by server message." border="false":::
 
 ## Cause
 
@@ -57,3 +58,5 @@ To resolve this issue, configure your STS and Web Application Proxy (WAP) server
 
 > [!NOTE]
 > The certificate store of Network Load Balancers should also be updated to include the entire certificate chain.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -1,30 +1,31 @@
 ---
 title: Event ID 10 is logged in Application log
 description: Event ID 10 is logged after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2. Provides a resolution.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jamirc
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Event ID 10 is logged in the Application log after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2
 
 This article provides a script to solve the event ID 10 that's logged after you install Service Pack 1 for Windows 7 or Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2545227
 
 ## Symptoms
 
-After you install Windows 7 Service Pack 1 (SP1) or Windows Server 2008 R2 Service Pack 1 (SP1) using integrated media, you see the following WMI error is logged in the application log after every reboot:
+After you install Windows 7 Service Pack 1 (SP1) or Windows Server 2008 R2 SP1 using integrated media, the following WMI error is logged in the application log after every reboot:
 
-> Log Name - Application  
+```output
+Log Name - Application  
 Source - WMI  
 EventID - 10  
 Level - Error  
@@ -33,10 +34,11 @@ OpCode - Info
 Task Cat - None  
 Keywords - Classic  
 Details - Event filter with query "SELECT * FROM __InstanceModificationEvent WITHIN 60 WHERE TargetInstance ISA "Win32_Processor" AND TargetInstance.LoadPercentage > 99" could not be reactivated in namespace "//./root/CIMV2" because of error 0x80041003. Events cannot be delivered through this filter until the problem is corrected.
+```
 
 ## Cause
 
-This originated in the Windows 7 SP1 DVD/ISO creation process. There was an issue in the creation process that caused a WMI registration to remain in the DVD/ISO. Since the registration is designed to work only during the DVD/ISO creation process, it fails to run on a live system and causes these events. These events are not indicative of any issue in the system and can be safely ignored. If however you want to prevent these events from getting generated and want to remove this specific WMI registration manually, please follow the steps mentioned in this article for running the workaround script.
+This issue originated in the Windows 7 SP1 DVD/ISO creation process. There was an issue in the creation process that caused a WMI registration to remain in the DVD/ISO. Since the registration is designed to work only during the DVD/ISO creation process, it fails to run on a live system and causes these events. These events aren't indicative of any issue in the system and can be safely ignored. If you want to prevent these events from getting generated and want to remove this specific WMI registration manually, run the workaround script.
 
 ## Resolution
 
@@ -82,11 +84,11 @@ To resolve the issue, run a script to stop the Event ID 10 messages. To run the 
 
 7. Run the script *workaround.vbs*.
 
-After running the script, the Event ID 10 errors related to this event should stop occurring. This does not remove any of the existing entries in the Event log, they would need to be manually cleared out of the application event log.
+After running the script, the Event ID 10 errors related to this event should stop occurring. This script doesn't remove any of the existing entries in the Event log, they would need to be manually cleared out of the application event log.
 
 > [!NOTE]
-> There can be other reasons for Event ID 10 error messages, this only prevents the error message listed above from occurring.
+> There can be other reasons for Event ID 10 error messages. This workaround only prevents the error message listed above from occurring.
 
 ## More information
 
-This particular Event ID 10 error message listed above can be safely ignored, this is not indicative of a problem with the Service Pack or with the operating system.
+This particular Event ID 10 error message listed above can be safely ignored. It isn't indicative of a problem with the Service Pack or with the operating system.

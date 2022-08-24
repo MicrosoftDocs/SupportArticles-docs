@@ -1,16 +1,14 @@
 ---
-title: Managed Browser policy triggers 0x87D1FDE8 error
-description: Describes an issue in which you receive error 0x87D1FDE8 after you deploy a Managed Browser policy.
+title: Managed Browser policy triggers 0x87D1FDE8 error in Intune
+description: Describes an issue in which you receive error 0x87D1FDE8 after you deploy a Managed Browser policy in Microsoft Intune.
 ms.date: 05/11/2020
-ms.prod-support-area-path: App management
+search.appverid: MET150
+ms.custom: sap:App management
 ms.reviewer: jchornbe
 ---
 # Managed Browser policy triggers 0x87D1FDE8 error in Intune console
 
-This article describes a known issue in which you receive error 0x87D1FDE8 after you deploy a Managed Browser policy.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 3144435
+This article describes a known issue where receive error 0x87D1FDE8 after you deploy a Managed Browser policy. For the most recent guidance, see [Manage web access by using Edge for iOS and Android ](/mem/intune/apps/manage-microsoft-edge).
 
 ## Symptoms
 
@@ -28,6 +26,6 @@ In this scenario, devices that receive the policy display the following status i
 
 This is a known issue in Microsoft Intune.
 
-## Resolution
+## Solution
 
 The error in the admin console goes away after the device checks in again. This error does not affect the performance or behavior of Intune Managed Browser, and it can be safely ignored.

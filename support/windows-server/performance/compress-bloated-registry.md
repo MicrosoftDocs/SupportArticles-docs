@@ -1,23 +1,23 @@
 ---
-title: Compress large registry hives 
+title: Compress large registry hives
 description: Describes how to compress large registry hives.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: System Hang
+ms.custom: sap:system-hang, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Compress "Bloated" Registry Hives
 
 This article describes how to compress large registry hives to avoid performance issues.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2498915
 
 ## Symptoms

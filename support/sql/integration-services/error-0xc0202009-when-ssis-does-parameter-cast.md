@@ -2,7 +2,7 @@
 title: Error 0xC0202009 occurs when SSIS converts parameter
 description: This article provides resolutions for the error 0xC0202009 that occurs when SSIS does a parameter cast in SQL Server.
 ms.date: 09/02/2020
-ms.prod-support-area-path: Integration Services
+ms.custom: sap:Integration Services
 ms.reviewer: ramakoni, daleche
 ms.prod: sql
 ---

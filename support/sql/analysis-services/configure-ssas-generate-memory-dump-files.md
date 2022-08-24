@@ -2,7 +2,7 @@
 title: Configure SSAS to generate memory dump files
 description: This article describes how to configure SQL Server Analysis Services to automatically generate memory dump files.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: lisaliu
 ms.topic: how-to
 ms.prod: sql
@@ -29,8 +29,7 @@ By default, SQL Server Analysis Services automatically generates minidump files 
 |2016 |`%ProgramFiles%\Microsoft SQL Server MSAS13.InstanceName\OLAP\log` |
 |2014 |`%ProgramFiles%\Microsoft SQL Server MSAS12.InstanceName\OLAP\log` |
 |2012 |`%ProgramFiles%\Microsoft SQL Server MSAS11.InstanceName\OLAP\log` |
-|||
-
+  
 > [!NOTE]
 > InstanceName is a placeholder for the corresponding value for SQL Server Analysis Services version.
 
@@ -42,8 +41,7 @@ To determine the corresponding value for the system, determine the value of Imag
 |-|-|
 |Default Instance  |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSSQLServerOLAPService\ImagePath` |
 |Named instance |`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSOLAP$InstanceName\ImagePath`|
-|||
-
+  
 The minidump files will include the following information:
 
 - All thread stacks
@@ -85,8 +83,7 @@ The value of the CreateAndSendCrashReports setting determines whether a memory d
 |0|This value specifies that Analysis Services does not generate any memory dump file. Additionally, the value of the other settings under the Exception section is ignored.|
 |1|This default value enables the memory dump file. However, SQL Server Analysis Services does not send an error report to Microsoft.|
 |2|This value specifies that SQL Server Analysis Services generates a memory dump file and sends an error report to Microsoft.|
-|||
-
+  
 When the CreateAndSendCrashReports setting is set to 1 or 2, the other settings in the Exception section can control the type of the memory dump file and what information to include in the memory dump file.
 
 ## Configure SQL Server Analysis Services to generate a full dump file automatically
@@ -127,8 +124,7 @@ You must run this command from the Shared directory where you installed the inst
 |2016 |`%ProgramFiles%\Microsoft SQL Server\130\Shared` |
 |2014 |`%ProgramFiles%\Microsoft SQL Server\120\Shared` |
 |2012 |`%ProgramFiles%\Microsoft SQL Server\110\Shared` |
-|||
-
+  
 For example, the default directory to run sqldumper.exe for SQL Server Analysis Services 2019  is `C:\Program Files\Microsoft SQL Server\1590\Shared`.
 
 ## More Information
@@ -148,9 +144,8 @@ You can use the SQLDumperFlagsOn setting to specify the various SQLDumper�
 |SQLDUMPER_VERBOSE |0x0100|This flag can be valuable if you are not sure about the parameters that the Sqldumper.exe utility thinks are being used as input. When you use this flag, the Sqldumper.exe utility displays the parameter values and how many parameter values were specified from the command line. |
 |SQLDUMPER_WAIT_AT_EXIT |0x0200|You can use this flag to attach a debugger to the Sqldumper.exe utility. You can use this debugger to troubleshoot any problems with the Sqldumper.exe utility. These problems may especially occur when the Sqldumper.exe utility is spawned by Sqlservr.exe or by another program. When you set this flag, the Sqldumper.exe utility calls the SleepEx function for 15 seconds just before the Sqldumper.exe program exists and after all other operations are finished.|
 |SQLDUMPER_FILTERED |0x0800|You can use this flag to generate a filtered dump file. SQL Server Analysis Services does not support this flag yet. |
-||||
-
-You can use the MiniDumpFlagsOn setting to provide minidump flags. The following table lists the available minidump flags:
+  
+  You can use the MiniDumpFlagsOn setting to provide minidump flags. The following table lists the available minidump flags:
 
 |Option |Value |Description |
 |-|-|-|
@@ -168,8 +163,7 @@ You can use the MiniDumpFlagsOn setting to provide minidump flags. The follo
 |MiniDumpWithFullMemoryInfo |0x00000800|Include enumerated memory region descriptive information. |
 |MiniDumpWithThreadInfo |0x00001000|Include thread state information. |
 |MiniDumpWithCodeSegs |0x00002000|Include code and code-related sections for all the loaded modules. |
-||||
-
+  
 ## References
 
 [How to use the Sqldumper.exe utility to generate a dump file in SQL Server](https://support.microsoft.com/help/917825)

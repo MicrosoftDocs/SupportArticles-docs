@@ -4,21 +4,21 @@ description: Provides a solution to an issue where duplicate Active Directory re
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Duplicate Active Directory replication connections are created
 
 This article provides a solution to an issue where duplicate Active Directory replication connections are created for one or more domain controllers across one or more sites.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3207569
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3207569
 
 ## Symptoms
 

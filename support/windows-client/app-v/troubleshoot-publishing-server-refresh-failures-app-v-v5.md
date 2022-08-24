@@ -4,20 +4,20 @@ description: Describes how to troubleshoot publishing server refresh failures in
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, jeffpatt
-ms.prod-support-area-path: 
+ms.custom: sap:publishing-server-issue, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to troubleshoot publishing server refresh failures in App-V v5
 
 This article describes how to troubleshoot publishing server refresh failures in Microsoft Application Virtualization (App-V) v5.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2778168
 
 ## Summary

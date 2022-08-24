@@ -2,22 +2,22 @@
 title: Error 0x000006D9 when you share a printer
 description: Provides a solution to an error 0x000006D9 when you try to share a printer on a computer.
 ms.date: 10/12/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Firewall with Advanced Security (WFAS)
+ms.custom: sap:windows-firewall-with-advanced-security-wfas, csstroubleshoot
 ms.technology: networking
 ---
 # Error 0x000006D9 when you try to share a printer on a computer that is running Windows 7 or Windows Server 2008 R2
 
 This article provides a solution to an error 0x000006D9 when you try to share a printer on a computer.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2123653
 
 ## Symptoms

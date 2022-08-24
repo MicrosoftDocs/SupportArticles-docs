@@ -1,12 +1,13 @@
 ---
-title: Troubleshoot email profiles in Microsoft Intune - Azure | Microsoft Docs
-description: See common issues and solutions with email profiles in Microsoft Intune, including duplicate email profiles and errors on Samsung KNOX Standard Android devices.
-ms.date: 07/20/2020
+title: Troubleshoot common issues with email profiles in Microsoft Intune
+description: See common issues and solutions to issues with email profiles in Microsoft Intune, including duplicate email profiles and errors on Samsung KNOX Standard Android devices.
+ms.date: 10/07/2021
 ms.reviewer: tscott
+search.appverid: MET150
 ---
-# Common issues and resolutions with email profiles in Microsoft Intune
+# Troubleshooting common issues with email profiles in Microsoft Intune
 
-Review some common email profile issues, and how to troubleshoot and resolve them.
+This article gives troubleshooting guidance for common issues with email profiles in Microsoft Intune.
 
 ## Users are repeatedly prompted to enter their password
 
@@ -44,7 +45,7 @@ Samsung KNOX doesn't use hostname to identify the profile. We recommend you don'
 
 ## Error 0x87D1FDE8 for KNOX Standard device
 
-**Issue**: After creating and deploying an Exchange Active Sync email profile for Samsung KNOX Standard for different Android devices, the **0x87D1FDE8** or **remediation failed** error shows in the device's properties > policy tab.
+After creating and deploying an Exchange Active Sync email profile for Samsung KNOX Standard for different Android devices, the **0x87D1FDE8** or **remediation failed** error shows in the device's properties > policy tab.
 
 Review the configuration of your EAS profile for Samsung KNOX and source policy. The Samsung Notes sync option is no longer supported, and that option shouldn't be selected in your profile. Be sure devices have enough time to process the policy, up to 24 hours.
 
@@ -53,10 +54,6 @@ Review the configuration of your EAS profile for Samsung KNOX and source policy.
 Users who have email accounts automatically configured can't send pictures or images from their devices. This scenario can happen if **Allow e-mail to be sent from third-party applications** isn't enabled.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles**.
-3. Select your email profile > **Properties** > **Settings**.
-4. Set the **Allow e-mail to be sent from third-party applications** setting to **Enable**.
-
-## Next steps
-
-Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).
+1. Select **Devices** > **Configuration profiles**.
+1. Select your email profile > **Properties** > **Settings**.
+1. Set the **Allow e-mail to be sent from third-party applications** setting to **Enable**.

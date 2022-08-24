@@ -1,23 +1,16 @@
 ---
-title: Attributes list synced by Intune
-description: Describes a table that lists the attributes that are synced from the on-premises Active Directory Domain Services to Intune.
-ms.date: 05/11/2020
-ms.prod-support-area-path: General guidance or advisory
-ms.reviewer: colinfr
+title: Attributes list synced from AD DS to Microsoft Intune
+description: Describes a table that lists the attributes that are synced from the on-premises Active Directory Domain Services (AD DS) to Intune.
+ms.date: 12/20/2021
+search.appverid: MET150
+ms.custom: sap:General guidance or advisory
 ---
-# List of attributes that are synced by Microsoft Intune
+# List of attributes that are synced from AD DS to Intune
 
-This article documents the attributes that are synced from the on-premises Active Directory Domain Services (AD DS) to Microsoft Intune.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 3033218
-
-## Attributes synced by Microsoft Intune
-
-The following table lists the attributes that are synced from the on-premises AD DS to Microsoft Intune.
+The following table lists the attributes that are synced from the on-premises Active Directory Domain Services (AD DS) to Microsoft Intune.
 
 > [!NOTE]
-> Be aware that objects must contain values in the following attributes to be considered for sync:
+> Objects must contain values in the following attributes to be considered for sync.
 
 |Attribute name|User|Contact|Group|Intune required|Description of attribute|
 |---|---|---|---|---|---|
@@ -36,4 +29,3 @@ The following table lists the attributes that are synced from the on-premises AD
 | sourceAnchor|X|X|||Each account in your local on-premises environment will be linked to the corresponding Azure AD account through the `sourceAnchor` value|
 | usageLocation|X||||Usage location|
 | userPrincipalName|X||X|X|UPN|
-|||||||

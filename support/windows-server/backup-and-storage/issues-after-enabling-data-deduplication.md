@@ -2,22 +2,22 @@
 title: Issues after enabling data deduplication
 description: Describes some known issues that may occur after you enable data deduplication on Cluster Shared Volumes (CSV).
 ms.date: 09/24/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, vimalsh
-ms.prod-support-area-path: Deduplication
+ms.custom: sap:deduplication, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Known issues after you enable data deduplication on CSV
 
 This article describes some known issues that may occur after you enable data deduplication on CSV.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2906888
 
 ## Summary

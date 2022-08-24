@@ -4,20 +4,20 @@ description: Provides troubleshooting steps for ADFS service configuration and s
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, abizerh, maweeras, fszita, timccu
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # AD FS 2.0 service fails to start
 
 This article provides troubleshooting steps for ADFS service configuration and startup problems.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3044973
 
 ## Summary
@@ -135,7 +135,7 @@ For an AD FS server that uses SQL Server as configuration database, you must als
 
     In this command, \<Federation service name> represents the fully qualified domain name (FQDN) service name of the AD FS service endpoint. You can find the service name in the **Federation Service Properties** dialog box:
 
-    ![The screenshot for ADFS service name](./media/adfs-2-service-fails-to-start/federation-service-name.png)
+    :::image type="content" source="media/adfs-2-service-fails-to-start/federation-service-name.png" alt-text="Screenshot of the Federation Service Properties window showing the Federation Service name.":::
 
     To add or remove the SPN from the account, follow these steps:
 

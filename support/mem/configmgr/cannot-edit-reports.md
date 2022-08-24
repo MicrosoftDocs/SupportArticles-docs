@@ -2,7 +2,6 @@
 title: Editing reports fails if Internet Explorer isn't the default browser
 description: Solves an issue that you can't edit reports in System Center 2012 Configuration Manager if the default browser isn't Internet Explorer.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ---
 # Editing reports in Configuration Manager may fail when Internet Explorer isn't the default browser
 
@@ -13,7 +12,7 @@ _Original KB number:_ &nbsp; 2788371
 
 ## Symptoms
 
-When attempting to edit reports in the Administrator Console on a System Center 2012 Configuration Manager site server, you may receive this error:
+When attempting to edit reports in the Administrator Console on a System Center 2012 Configuration Manager site server, you may receive this error:
 
 > Application cannot be started. Contact the application vendor.
 
@@ -25,7 +24,7 @@ When attempting to edit reports from the Configuration Manager console installed
 
 ## Cause
 
-This may occur if Internet Explorer is not the default browser on the computer. Different limitations and requirements exist depending on which version of SQL Server is being used for the site database.
+This may occur if Internet Explorer is not the default browser on the computer. Different limitations and requirements exist depending on which version of SQL Server is being used for the site database.
 
 ## Resolution
 
@@ -37,6 +36,6 @@ To resolve this issue, install a supported browser and set it as the default. Fo
 
 ## More information
 
-The following article lists the SQL Server versions that are supported by System Center 2012 Configuration Manager:
+The following article lists the SQL Server versions that are supported by System Center 2012 Configuration Manager:
 
 [Configurations for the SQL Server Site Database](/previous-versions/system-center/system-center-2012-R2/gg682077(v=technet.10))

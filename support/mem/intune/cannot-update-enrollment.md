@@ -1,15 +1,13 @@
 ---
-title: Can't update enrollment error during enrollment in Company Portal
+title: Can't update enrollment when enrolling devices in the Intune Company Portal
 description: Fixes an issue in which you can't update enrollment when you enroll devices in Intune.
-ms.date: 04/16/2020
-ms.prod-support-area-path: Device enrollment
+ms.date: 09/29/2021
+search.appverid: MET150
+ms.custom: sap:Device enrollment
 ---
 # Can't update enrollment when you enroll devices in the Intune Company Portal
 
 This article fixes an issue in which you can't update enrollment when you enroll devices in Intune.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4020288
 
 ## Symptom
 
@@ -21,9 +19,13 @@ When you click on the notification, you see the message:
 
 > We can't update enrollment now. Try again later
 
-## Resolution
+## Cause
 
-To resolve this issue, upgrade to the latest version of the Company Portal. For more information on updating the Company Portal, see the following options.
+The devices you are trying to enroll have an outdated version of the Company Portal.
+
+## Solution
+
+Upgrade to the latest version of the Company Portal. For more information on updating the Company Portal, see the following options.
 
 ### Windows 10 users
 
@@ -31,16 +33,15 @@ See [Update the Company Portal app on your Windows device](/mem/intune/user-help
 
 ### Apple iOS users
 
-1. Open App Store.
-2. Select **updates** (lower left).
-3. Find **Company Portal** in list of **Pending updates**.
-4. Press **Update**.
-5. Enter Apple Intune store password if you're prompted, or confirm with Fingerprint if it's configured.
+1. Open the App Store.
+1. Tap your profile icon to open your Account page, and then scroll to see pending updates.
+1. Find **Company Portal** in the list of updates, and select **Update**.
+1. Enter your Apple password if prompted, or confirm with Fingerprint if it's configured.
 
 ### Android users
 
 1. Open Play Store.
-2. Press the **hamburger** menu.
-3. Select **My Apps & Games**.
-4. In the list of updates, look for **Intune Company Portal** by Microsoft Corporation.
-5. Select the **Update** option to download and install the current version of the Intune Company Portal from the Play Store.
+1. Press the **hamburger** menu.
+1. Select **My Apps & Games**.
+1. In the list of updates, look for **Intune Company Portal** by Microsoft Corporation.
+1. Select the **Update** option to download and install the current version of the Intune Company Portal from the Play Store.

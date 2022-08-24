@@ -2,7 +2,6 @@
 title: Incorrect status in a VMM library share
 description: Describes a known issue in which not all nodes show up in the Agent Status when you see the properties of a Virtual Machine Manager library share on a highly available library file server.
 ms.date: 04/26/2020
-ms.prod-support-area-path:
 ---
 # A Virtual Machine Manager library share on highly available file server displays an incorrect status
 

@@ -2,22 +2,22 @@
 title: Change AD FS 2.0 service communications
 description: Contains the steps to change the Active Directory Federation Services 2.0 service communications certificate.
 ms.date: 10/13/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, roberg, willfid
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to change the AD FS 2.0 service communications certificate after it expires
 
 This article provides the steps to change the Active Directory Federation Services 2.0 service communications certificate.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2921805
 
 ## Symptoms  

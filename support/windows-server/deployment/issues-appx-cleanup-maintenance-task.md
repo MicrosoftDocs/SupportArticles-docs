@@ -2,22 +2,22 @@
 title: Issues with AppX cleanup maintenance task
 description: Provides workarounds for known issues that involve the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2.
 ms.date: 09/24/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Known issues that affect the AppX cleanup maintenance task in Windows 8.1 and Windows Server 2012 R2
 
 This article provides solutions to known issues that involve the AppX cleanup maintenance task.
 
-_Original product version:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2928948
 
 ## Introduction

@@ -1,24 +1,24 @@
 ---
 title: Task scheduler runs tasks as background processes
 description: Provides solutions to an issue where task scheduler runs tasks as background processes after you use sysprep to create the master image.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Task Scheduler
+ms.custom: sap:task-scheduler, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # Task scheduler task only runs in the background after you use sysprep to create master image
 
 This article provides solutions to an issue where task scheduler runs tasks as background processes after you use sysprep to create the master image.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;253942
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 253942
 
 ## Symptoms
 
@@ -33,7 +33,7 @@ This behavior occurs only if you used SYSPREP to create the master image, and is
 ## Cause
 
 After running sysprep on the machine, the following registry entry will contain the path to Explorer.exe and a comma at the end of the value: "C:\Winnt\Explorer.exe,"
-`HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Winlogon\ Shell:REG_SZ:C:\Winnt\Explorer.exe,`  
+`HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ Shell:REG_SZ:C:\Winnt\Explorer.exe,`  
 
 The full path to Explorer.exe, including the command, results in this behavior.
 
@@ -41,7 +41,7 @@ The full path to Explorer.exe, including the command, results in this behavior.
 
 The options to resolve this problem are:
 
-Modify the following registry value removing the path to explorer and the trailing comma at the end of explorer as described in the Cause section above. The value should read exactly as shown here: `HKEY_LOCAL_MACHINE\Software\Microsoft\WindowsNT\CurrentVersion\Winlogon\ Shell:REG_SZ:Explorer.exe`  
+Modify the following registry value removing the path to explorer and the trailing comma at the end of explorer as described in the Cause section above. The value should read exactly as shown here: `HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\ Shell:REG_SZ:Explorer.exe`  
 
 -or-
 

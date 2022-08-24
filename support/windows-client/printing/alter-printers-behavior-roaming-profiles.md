@@ -4,20 +4,20 @@ description: Describes how to alter a behavior of printers that roams with roami
 ms.date: 09/10/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, eugenev, austinm
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-client-printing
 ---
 # How to Alter Behavior of Printers That Roam with Roaming Profiles
 
 This article describes how to alter a behavior of printers that roams with roaming profiles.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 304767
 
 > [!IMPORTANT]

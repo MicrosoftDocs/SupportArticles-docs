@@ -2,22 +2,22 @@
 title: Fail to access file shares on SOFS-configured server
 description: Describes an issue that occurs when you try to access file shares on a SMB server that has the Scale-Out File Server role configured, and provides a resolution.
 ms.date: 09/24/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle, kapilth, robhind, jgerend, kumud
-ms.prod-support-area-path: File Server Resource Manager (FSRM)
+ms.custom: sap:file-server-resource-manager-fsrm, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Error when you access file shares on a SOFS-configured server: Not enough server storage is available to process this command
 
 This article provides a solution to an issue that occurs when you access file shares on a SMB server that has the Scale-Out File Server role configured.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3101545
 
 ## Symptoms

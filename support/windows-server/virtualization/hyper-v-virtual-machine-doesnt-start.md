@@ -1,23 +1,23 @@
 ---
 title: Hyper-V virtual machine doesn't start and triggers 0x80070057 error
 description: Describes an issue that triggers an error when you try to start a virtual machine that's running in a Windows Server 2012 R2 Hyper-V environment. This issue occurs when McAfee VirusScan is installed. A workaround is provided.
-ms.date: 09/17/2020
-author: Deland-Han 
+ms.date: 07/19/2022
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Hyper-V virtual machine doesn't start and triggers 0x80070057 error
 
 This article provides a solution to a 0x80070057 error that occurs when you try to start a virtual machine.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3084322
 
 ## Symptoms  
@@ -78,6 +78,6 @@ To work around this issue, disable the mfedisk.sys driver in the registry:
 
 This issue is documented in the following McAfee KB article:
 
-[Hyper-V VMs using pass-through disks do not boot after installing VirusScan Enterprise 8.8 Patch 5](https://kc.mcafee.com/corporate/index?page=content&id=kb84987)
+[Hyper-V VMs using pass-through disks do not boot after installing VirusScan Enterprise 8.8 Patch 5](https://kcm.trellix.com/corporate/index?page=content&id=kb84987)
 
 [!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]

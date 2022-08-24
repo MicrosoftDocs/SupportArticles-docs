@@ -1,29 +1,27 @@
 ---
-title: Could not retrieve access token for Graph API
-description: Describes an issue in which you receive an error message during the configuration of Microsoft Intune Integration in Jamf Pro.
-ms.date: 05/13/2020
-ms.prod-support-area-path: Mac management Jamf
+title: Can't retrieve Graph API token when integrating Intune and Jamf Pro
+description: Troubleshoot Graph API access token error message during the configuration of Microsoft Intune Integration in Jamf Pro.
+ms.date: 12/13/2021
+search.appverid: MET150
+ms.custom: sap:Mac management Jamf
 ---
-# Could not retrieve the access token for Microsoft Graph API when configuring Microsoft Intune Integration in Jamf Pro
+# Could not retrieve the access token for Microsoft Graph API when configuring Intune integration in Jamf Pro
 
-This article solves the connection failure that occurs when you try to configure Microsoft Intune Integration in Jamf Pro.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4466334
+This article solves the connection failure that occurs when you try to integrate Microsoft Intune with Jamf Pro.
 
 ## Symptoms
 
-When you try to [configure Microsoft Intune Integration in Jamf Pro](/mem/intune/protect/conditional-access-integrate-jamf#configure-microsoft-intune-integration-in-jamf-pro), you receive the following error message that indicates a connection failure:
+When you try to [configure Microsoft Intune integration in Jamf Pro](/mem/intune/protect/conditional-access-integrate-jamf#configure-microsoft-intune-integration-in-jamf-pro), you receive the following error message that indicates a connection failure:
 
 > Could not retrieve the access token for Microsoft Graph API. Check the configuration for Microsoft Intune Integration.
 
-:::image type="content" source="media/could-not-retrieve-access-token/jamf-error.png" alt-text="screenshot of Jamf error":::
+:::image type="content" source="media/could-not-retrieve-access-token/jamf-error.png" alt-text="Screenshot of the Jamf error.":::
 
 ## Cause
 
-This issue occurs if the ports that are required for communication between Jamf Pro and Intune are blocked by your firewall or proxy server.
+This issue occurs if the ports that are required for communication between Jamf Pro and Intune are blocked by your firewall or proxy server.
 
-## Resolution
+## Solution
 
 To fix the issue, make sure that the following TCP ports aren't blocked:
 
@@ -31,7 +29,7 @@ To fix the issue, make sure that the following TCP ports aren't blocked:
 - **macOS devices**: 2195, 2196, and 5223
 - **Jamf Pro**: 80 and 5223
 
-## References
+## More information
 
 - [Support Tip: Troubleshooting issues with macOS devices when using Jamf/Intune integration](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Troubleshooting-issues-with-macOS-devices-when-using/ba-p/462912)
 - [Network endpoints for Microsoft Intune - Apple device network information](/mem/intune/fundamentals/intune-endpoints#apple-device-network-information)

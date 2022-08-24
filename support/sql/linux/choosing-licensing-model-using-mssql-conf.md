@@ -2,7 +2,7 @@
 title: Choosing a licensing model by using mssql-conf
 description: This article describes how to choose a licensing model for SQL Server on Linux.
 ms.date: 11/02/2020
-ms.prod-support-area-path: SQL Server on Linux
+ms.custom: sap:SQL Server on Linux
 ms.topic: how-to
 ms.prod: sql
 ---

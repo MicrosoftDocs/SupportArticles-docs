@@ -3,21 +3,21 @@ title: Cluster validation test fails in a multi-site cluster scenario
 description: The Active Directory configuration validation may fail in a multi-site cluster scenario. Ignore it if domain communication and DC replication are OK.
 ms.date: 12/04/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, robsim, cpuckett
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Cluster validation test on Active Directory configuration fails in a multi-site cluster scenario
 
 This article describes Active Directory configuration validation may fail in a multi-site cluster scenario.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4025260
 
 ## Symptoms
@@ -31,7 +31,7 @@ Regardless of the errors, the cluster nodes can successfully communicate with so
 
 ## More information
 
-When you start a cluster validation test on a node, the node selects a domain controller to be used for the test. During the Active Directory configuration validation, all computers that are selected as part of the validation are pointed to use this domain controller. In a multi-site cluster scenario, the network communications may be designed in way where computers are only allowed to communicate with domain controllers that are in their local site. Therefore, these computers are prevented from communications with remote domain controllers. In this scenario, computers in other sites are not able to communicate with the selected domain controller, which leads to the failure of the cluster validation test.
+When you start a cluster validation test on a node, the node selects a domain controller to be used for the test. During the Active Directory configuration validation, all computers that are selected as part of the validation are pointed to use this domain controller. In a multi-site cluster scenario, the network communications may be designed in way where computers are only allowed to communicate with domain controllers that are in their local site. Therefore, these computers are prevented from communications with remote domain controllers. In this scenario, computers in other sites are not able to communicate with the selected domain controller, which leads to the failure of the cluster validation test.
 
 If the computers can communicate to a domain controller in the domain, and the domain controllers are successfully replicating, then the functionality of your failover cluster is not impacted.
 

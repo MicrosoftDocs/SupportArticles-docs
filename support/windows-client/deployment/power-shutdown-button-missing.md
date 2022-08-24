@@ -4,20 +4,20 @@ description: The power/shutdown button's presence on the Windows 8.1 start scree
 ms.date: 09/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Power Management
+ms.custom: sap:power-management, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Power/shutdown button may be missing from the Windows 8.1 start screen
 
 This article describes an issue where the power/shutdown button is missing from the start screen after you install or upgrade to Windows 8.1.
 
-_Original product version:_ &nbsp; Windows 8.1  
+_Applies to:_ &nbsp; Windows 8.1  
 _Original KB number:_ &nbsp; 2959188
 
 ## Summary
@@ -35,7 +35,6 @@ The following table summarizes when the power/shutdown button should be present 
 |Slate|Yes|>=8.5"|No|Yes|
 |Slate|No|>=8.5"|Yes|Yes|
 |All other devices|Doesn't matter|All sizes|Yes|Yes|
-||||||
 
 > [!NOTE]
 > An entry of Slate in the **Device type** column means that the hardware reported a [Power_Platform_Role](/windows/win32/api/winnt/ne-winnt-power_platform_role) of **PlatformRoleSlate**. To determine what a system is reporting, run the `powercfg /energy` command, and then notice what is listed for **Platform Role** in the output.

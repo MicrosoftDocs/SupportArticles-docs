@@ -2,7 +2,6 @@
 title: There was a problem starting PolicyAgentProvider.dll error installing client 
 description: Fixes an issue where you receive There was a problem starting PolicyAgentProvider.dll error when installing a Configuration Manager client.
 ms.date: 08/12/2020
-ms.prod-support-area-path:
 ---
 # There was a problem starting PolicyAgentProvider.dll error when installing a Configuration Manager client
 

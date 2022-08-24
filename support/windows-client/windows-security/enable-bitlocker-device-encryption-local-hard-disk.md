@@ -4,21 +4,21 @@ description: Describes the workflow to enable BitLocker device encryption on the
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: arrenc, toddmax, manojse, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # How to enable BitLocker device encryption on Windows 8 RT
 
 This document describes the workflow to enable BitLocker device encryption on the local hard disk of a Windows Surface computer that is running Windows 8 RT.
 
-_Original product version:_ &nbsp;Windows 8  
-_Original KB number:_ &nbsp;2855131
+_Applies to:_ &nbsp; Windows 8  
+_Original KB number:_ &nbsp; 2855131
 
 ## Summary
 
@@ -42,11 +42,11 @@ To see how the BitLocker device encryption workflow works, follow these steps:
 
 2. Check the BitLocker status in Control Panel. The Guest user can't invoke BitLocker encryption.
 
-    ![Check the BitLocker status](./media/enable-bitlocker-device-encryption-local-hard-disk/bitLocker-status.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/bitLocker-status.png" alt-text="Screenshot of the BitLocker Drive Encryption page in Control Panel." border="false":::
 
 3. Create a Microsoft account, and then associate that account with the Guest account that you created in step 1.
 
-    ![associate that account with the Guest account](./media/enable-bitlocker-device-encryption-local-hard-disk/associate-accounts.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/associate-accounts.png" alt-text="Screenshot of the Your account page in PC settings.":::
 
 4. Log off.  
 
@@ -76,36 +76,36 @@ To see how the BitLocker device encryption workflow works, follow these steps:
 
 12. Log on by using the Microsoft account that is a member of the Administrators group that you originally created in step 7. Notice the text change that is displayed by the BitLocker item in Control Panel.
 
-    ![Text change displayed by the BitLocker item](./media/enable-bitlocker-device-encryption-local-hard-disk/text-change.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/text-change.png" alt-text="Screenshot of the BitLocker Drive Encryption page, which shows BitLocker is helping to protect your files." border="false":::
 
 13. The padlock icon in Windows Explorer reports that the local drive is BitLocker protected.
 
-    ![The padlock icon](./media/enable-bitlocker-device-encryption-local-hard-disk/local-drive-protected.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/local-drive-protected.png" alt-text="Screenshot of the padlock icon in Windows Explorer." border="false":::
 
 14. Notice that OneDrive never identifies the BitLocker recovery key.
 
     Even after the local drive is clearly BitLocker encrypted and the Control Panel UI says that the BitLocker recovery key is stored on the first logon of a Microsoft account that is a member of the local computer's administrative group, OneDrive doesn't show any BitLocker-related files.  
 
-    ![OneDrive doesn't show any BitLocker-related files.](./media/enable-bitlocker-device-encryption-local-hard-disk/no-bitlocker-related-files.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/no-bitlocker-related-files.png" alt-text="Screenshot of the Files page in OneDrive.":::
 
     The net result is that the OneDrive share for the administrator-enabled Microsoft account that triggered the BitLocker device encryption shows no files.  
 
 15. Notice that the TPM.MSC snap-in displays a status of "The TPM is ready for use."
 
-    !["The TPM is ready for use" status.](./media/enable-bitlocker-device-encryption-local-hard-disk/tpmmsc-snap-show-status.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/tpmmsc-snap-show-status.png" alt-text="Screenshot of the Trusted Platform Module (TPM) Management on Local Computer window.":::
 
 16. Connect to [Find my BitLocker recovery key](https://windows.microsoft.com/recoverykey). You see the following options:  
 
-    ![Send a text to phone options](./media/enable-bitlocker-device-encryption-local-hard-disk/send-text-to-phone.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/send-text-to-phone.png" alt-text="Screenshot of the Send a text to phone options in Microsoft account verification page.":::
 
 17. If you sent the recovery key by using a text message, the targeted phone will receive a text message that contains the Microsoft account security code. The text message resembles the following:
 
-    ![The text message sample](./media/enable-bitlocker-device-encryption-local-hard-disk/text-message.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/text-message.png" alt-text="Screenshot of the text message sample on the targeted phone." border="false":::
 
 18. Type the code that you received in the text message into the [Find my BitLocker recovery key](https://windows.microsoft.com/recoverykey) wizard.
 
-    ![Type the code in the text message.](./media/enable-bitlocker-device-encryption-local-hard-disk/enter-code.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/enter-code.png" alt-text="Screenshot of the code entry page of the Find my BitLocker recovery key wizard.":::
 
     The [Find my BitLocker recovery key](https://windows.microsoft.com/recoverykey)  wizard reports the BitLocker recovery key.
 
-    ![The wizard reports the BitLocker recovery key.](./media/enable-bitlocker-device-encryption-local-hard-disk/recovery-key.jpg)
+    :::image type="content" source="media/enable-bitlocker-device-encryption-local-hard-disk/recovery-key.png" alt-text="Screenshot of the page displaying the BitLocker recovery key.":::

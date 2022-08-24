@@ -2,7 +2,6 @@
 title: Software updates introduction
 description: Introduces software updates in Configuration Manager 2012 and 2012 R2.
 ms.date: 06/04/2020
-ms.prod-support-area-path:
 ms.reviewer: jchornbe
 ---
 # Software updates in Configuration Manager

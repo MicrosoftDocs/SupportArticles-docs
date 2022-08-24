@@ -4,20 +4,21 @@ description: Explains how to configure the Windows Time service in Windows Serve
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
+adobe-target: true
 ---
 # How to configure an authoritative time server in Windows Server
 
 This article describes how to configure the Windows Time service and troubleshoot when the Windows Time service doesn't work correctly.
 
-_Original product version:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
+_Applies to:_ &nbsp; Windows Server 2012 Standard, Windows Server 2012 Essentials  
 _Original KB number:_ &nbsp; 816042
 
 To configure an internal time server to synchronize with an external time source, use the following method:
@@ -27,14 +28,14 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
 1. Change the server type to NTP. To do this, follow these steps:
    1. Select **Start** > **Run**, type *regedit*, and then select **OK**.
    2. Locate and then select the following registry subkey:  
-      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters\Type`
+      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters`
 
    3. In the pane on the right, right-click **Type**, and then select **Modify**.
    4. In **Edit Value**, type *NTP* in the **Value data** box, and then select **OK**.
 
 2. Set `AnnounceFlags` to 5. To do this, follow these steps:
    1. Locate and then select the following registry subkey:
-      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\AnnounceFlags`
+      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`
 
    2. In the pane on the right, right-click **AnnounceFlags**, and then select **Modify**.
    3. In **Edit DWORD Value**, type *5* in the **Value data** box, and then select **OK**.
@@ -63,7 +64,7 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
 
 4. Configure the time correction settings. To do this, follow these steps:
    1. Locate and then click the following registry subkey:
-  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\MaxPosPhaseCorrection`
+  `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`
 
    2. In the pane on the right, right-click **MaxPosPhaseCorrection**, and then select **Modify**.
    3. In **Edit DWORD Value**, click to select **Decimal** in the **Base** box.
@@ -74,7 +75,7 @@ To configure the PDC in the root of an Active Directory forest to synchronize wi
       > The default value of **MaxPosPhaseCorrection** is 48 hours in Windows Server 2008 R2 or later.
 
    5. Locate and then click the following registry subkey:  
-      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config\MaxNegPhaseCorrection`
+      `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Config`
 
    6. In the pane on the right, right-click **MaxNegPhaseCorrection**, and then select **Modify**.
    7. In **Edit DWORD Value**, click to select **Decimal** in the **Base** box.

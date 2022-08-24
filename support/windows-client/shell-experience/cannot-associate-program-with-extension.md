@@ -4,20 +4,20 @@ description: You can't associate a program with an extension in Windows 7 becaus
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, danma
-ms.prod-support-area-path: File Associations
+ms.custom: sap:file-associations, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Sometimes you cannot associate a program with an extension in Windows 7
 
 This article provides a solution to an issue where you're unable to associate a file extension to an application in Windows 7.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2159999
 
 ## Symptoms

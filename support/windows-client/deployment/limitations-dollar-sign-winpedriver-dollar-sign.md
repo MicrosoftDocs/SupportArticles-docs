@@ -2,22 +2,22 @@
 title: Limitations of $WinPeDriver$
 description: Describes limitations of $WinPeDriver$.
 ms.date: 09/15/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Limitations of $WinPeDriver$ when used in conjunction with other driver injection methods
 
 This article provides guidance on including drivers into WinPE and the operating system to be installed so that the driver is available in the WinPE portion of installation and also ends up in the completed operating system installation.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2686316
 
 ## Summary
@@ -34,7 +34,7 @@ The $WinPEDriver$ feature is intended as a method to provide drivers at installa
 
 WinPE doesn't have a built-in mechanism to unload drivers that have been loaded into memory, so any drivers for devices that have already been loaded won't be reloaded once setup.exe starts, as there are already drivers for the device loaded. This error will cause Setup to mark the driver in the $WinPEDriver$ folder as a bad driver, even if it's newer than the driver version injected into WinPE and would otherwise outrank it. Setup has no explicit knowledge of drivers that have been loaded into the boot.wim.
 
-*This behavior is by design*; however this article will identify a method of accommodating this scenario so these drivers can still be included in the deployable operating system.
+_This behavior is by design_; however this article will identify a method of accommodating this scenario so these drivers can still be included in the deployable operating system.
 
 ## More information
 
@@ -47,8 +47,7 @@ In this document, we're going to be highlighting methods for injecting drivers a
 |If WinPE contains driver version X1 injected via Dism.exe|contains X2 version of driver with same driver name|X1 will be carried in post OS installation and X2 will be ignored|
 |If WinPE installs driver X2 using Drvload.exe from \$WinPEDriver$|contains X2 version of driver with same driver name|X2 will be carried in post OS installation|
 |if WinPE contains driver X1 that isn't boot-critical (in-box native)|contains no driver|Will use in-box native driver X1. No out of box driver will be available for that device post OS installation|
-||||
-
+  
 ## Driver Limitations
 
 Keep in mind that there are some drivers that can be included and/or loaded that may not be functional during WinPE portion of installation. This would include, but isn't limited too; video drivers, wireless adapter drivers, and audio drivers. The behavior described in this document isn't specific to BootCritical drivers (drivers need during boot-up such as controller drivers for access to hard drive) and is in effect for all drivers loaded during installation/deployment.
@@ -206,7 +205,7 @@ Folder structure can look something like this on the root of the USB device:
 
 > [!NOTE]
 > If you look in the \\Windows\\Panther\\Setupact.log you can see reference to this folder:
-    *PnPIBS: Checking for pre-configured driver paths ...*  
+    _PnPIBS: Checking for pre-configured driver paths ..._  
     *PnPIBS: Checking for pre-configured driver directory C:\$WinPEDriver$.*  
     *PnPIBS: Checking for pre-configured driver directory D:\$WinPEDriver$.*  
     *PnPIBS: Checking for pre-configured driver directory E:\$WinPEDriver$.*  

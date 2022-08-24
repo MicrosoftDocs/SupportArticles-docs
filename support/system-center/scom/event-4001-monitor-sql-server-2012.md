@@ -2,7 +2,6 @@
 title: Event 4001 is logged during SQL Server 2012 monitoring
 description: Describes an issue that event 4001 occurs when you monitor a SQL Server 2012 computer that has the System Center 2012 Operations Manager agent installed.
 ms.date: 06/23/2020
-ms.prod-support-area-path: 
 ---
 # Event 4001 in the Operations Manager log during SQL Server 2012 monitoring
 

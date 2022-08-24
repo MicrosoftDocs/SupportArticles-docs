@@ -4,20 +4,20 @@ description: Provides a solution to an issue where Windows Server backup fails b
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Volume Shadow Copy Service (VSS)
+ms.custom: sap:volume-shadow-copy-service-vss, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows Server backup may fail because of the SQL Server VSS writer
 
 This article provides a solution to an issue where Microsoft Windows Server backup fails with an error: A Volume Shadow Copy Service Operation failed.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2016  
 _Original KB number:_ &nbsp; 2615182
 
 ## Symptoms
@@ -28,18 +28,21 @@ A backup of the server may fail with the following error message:
 
 The following error message will be recorded in the application event log:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: Microsoft-Windows-Backup  
 Event ID: 521  
 Level: Error  
 Description:  
 Backup started at '*\<DateTime>*' failed as Volume Shadow copy operation failed for backup volumes with following error code '2155348129'. Please rerun backup once issue is resolved.
+```
 
 If you examine the application event log more, you will notice numerous errors from sources SQLWriter and SQLVDI.
 
 The errors will be similar to the following:
 
-> Log Name: Application
+```output
+Log Name: Application
 Source: SQLWRITER  
 Event ID: 24583  
 Level: Error  
@@ -52,8 +55,10 @@ SQLSTATE: 42000, Native Error: 3271
 Error state: 1, Severity: 16  
 Source: Microsoft SQL Server Native Client 10.0  
 Error message: A nonrecoverable I/O error occurred on file "  {DF1DD65F-F8AD-4946-A764-F62166C541E2}22:" 995(The I/O operation has been aborted because of either a thread exit or an application request.).  
+```
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: SQLVDI  
 Event ID: 1  
 Level: Error  
@@ -61,7 +66,8 @@ Keywords: Classic
 User: N/A  
 Computer: CONTOSOSERVER.contoso.local  
 Description:  
-SQLVDI: Loc=TriggerAbort. Desc=invoked. ErrorCode=(0). Process=3720. Thread=9404. Server. Instance=SBSMonitoring. VD=Global\{DF1DD65F-F8AD-4946-A764-F62166C541E2}10_SQLVDIMemoryName_0.
+SQLVDI: Loc=TriggerAbort. Desc=invoked. ErrorCode=(0). Process=3720. Thread=9404. Server. Instance=SBSMonitoring. VD=Global{DF1DD65F-F8AD-4946-A764-F62166C541E2}10_SQLVDIMemoryName_0.
+```
 
 ## Cause
 
@@ -73,12 +79,14 @@ The error is typically caused by a problem with one of the SQL Server instances.
 
 For example:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: SQLVDI  
 Event ID: 1  
 Level: Error  
 Description:  
-SQLVDI: Loc=SignalAbort. Desc=Client initiates abort. ErrorCode=(0). Process=4772. Thread=10300. Client. Instance= SBSMONITORING . VD=Global\{3AB8F080-950C-4EF9-B637-0F37B2428F17}1_SQLVDIMemoryName_0.  
+SQLVDI: Loc=SignalAbort. Desc=Client initiates abort. ErrorCode=(0). Process=4772. Thread=10300. Client. Instance= SBSMONITORING . VD=Global{3AB8F080-950C-4EF9-B637-0F37B2428F17}1_SQLVDIMemoryName_0.  
+```
 
 In this example, the SQL Server instance named *SBSMONITORING* is failing the snapshot.
 
@@ -86,7 +94,8 @@ There may also be an error message from source SQLWRITER that occurs at about th
 
 For example:
 
-> Log Name: Application  
+```output
+Log Name: Application  
 Source: SQLWRITER  
 Event ID: 24583  
 Description:  
@@ -97,7 +106,8 @@ Error message: BACKUP DATABASE is terminating abnormally.
 SQLSTATE: 42000, Native Error: 945  
 Error state: 2, Severity: 14  
 Source: Microsoft SQL Server Native Client 10.0  
-Error message: Database 'SBSMonitoring' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.  
+Error message: Database 'SBSMonitoring' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
+```
 
 In this example, the database named *SBSMonitoring* is having a problem.
 

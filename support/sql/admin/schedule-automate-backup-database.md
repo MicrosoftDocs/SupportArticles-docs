@@ -2,7 +2,7 @@
 title: Schedule and automate backups of databases
 description: This article describes how to use a Transact-SQL script and Windows Task Scheduler to automate backups of SQL Server Express databases on a scheduled basis.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ms.topic: how-to
 ---
@@ -93,7 +93,8 @@ Similarly, you can make a differential Backup of USERDB by pasting in 'D' for th
 **Step D:** Schedule a job by using Windows Task Scheduler to execute the batch file that you created in step B. To do this, follow these steps:
 
 1. On the computer that is running SQL Server Express, click **Start**, then in the text box type *task Scheduler*.
-     ![A screen shot for this step](./media/schedule-automate-backup-database/task-scheduler.PNG)
+
+     :::image type="content" source="media/schedule-automate-backup-database/task-scheduler.png" alt-text="Screenshot of the Task Scheduler Desktop app option in the search bar of Start menu." border="false":::
 1. Under **Best match**, click **Task Scheduler** to launch it.
 
 1. In Task Scheduler, right-click on **Task Schedule Library** and click on **Create Basic task…**.

@@ -2,8 +2,9 @@
 title: Get status of a printer and print job
 description: This article describes how to get the status of a printer and a print job by using the Win32 Spooler.
 ms.date: 02/28/2020
-ms.prod-support-area-path: Developer Tools
+ms.custom: sap:Developer Tools
 ms.topic: how-to
+ms.technology: windows-dev-apps-graphics-multimedia-dev
 ---
 # Get the status of a printer and a print job
 

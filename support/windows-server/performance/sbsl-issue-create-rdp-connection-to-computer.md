@@ -1,23 +1,23 @@
 ---
 title: SBSL issue when you create an RDP connection to Windows Server 2012 R2
-description: Describes an issue in which computer freezes when you create an RDP connection to Windows Server 2012 R2.
+description: Describes an issue in which computer freezes when you create an RDP connection to Windows Server 2012 R2.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, pranayav, amanjain, vineelko
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Server freezes or user logon is slow when connecting to Windows Server 2012 R2 by using RDP
 
 This article provides a solution to an issue where a computer freezes or user logon is slow when you connect to the computer by using Remote Desktop Protocol (RDP).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4021856
 
 ## Symptoms
@@ -46,7 +46,7 @@ In Windows Server 2012 R2, create the **fQueryUserConfigFromLocalMachine** regis
 
 To make the registry change, follow these steps:
 
-1. Start Registry Editor. (Press Windows logo key + R, type *regedit.exe* in the **Open** box, and then click **OK**.)
+1. Start Registry Editor. (Press Windows logo key + R, type *regedit.exe* in the **Open** box, and then click **OK**.)
 2. In Registry Editor, locate and then click one of the following registry subkeys:
 
     - `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows NT\Terminal Services`
@@ -55,9 +55,9 @@ To make the registry change, follow these steps:
     > [!NOTE]
     > By default, the value for \<Connection Name> is RDP-Tcp. This value RDP-Tcp can be renamed or configured to something else.
 
-    ![Screenshot of configuring RDP-Tcp](./media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.jpg)
+    :::image type="content" source="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" alt-text="Screenshot shows how to configure RDP-Tcp." lightbox="media/sbsl-issue-create-rdp-connection-to-computer/configure-rdp-tcp-connection.png" border="false":::
 
-3. On the **Edit** menu, select **New**, and then select **DWORD Value**.
+3. On the **Edit** menu, select **New**, and then select **DWORD Value**.
 4. Type *fQueryUserConfigFromLocalMachine*.
 5. Press and hold (or right-click **fQueryUserConfigFromLocalMachine**, and then select **Modify**.
 6. In the **Value data** box, type *1*, and then select **OK**.
@@ -66,4 +66,4 @@ To make the registry change, follow these steps:
 You can also upgrade to Windows Server 2016 to fix this issue.
 
 > [!NOTE]
-> You don't have to update registry keys in Windows Server 2016, the updated behavior is the default.
+> You don't have to update registry keys in Windows Server 2016, the updated behavior is the default.

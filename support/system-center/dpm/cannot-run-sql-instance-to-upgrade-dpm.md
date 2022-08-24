@@ -2,7 +2,6 @@
 title: Can't upgrade to DPM 2012
 description: Discusses that an upgrade to System Center Data Protection Manager 2012 fails if you use a manually installed instance of SQL Server 2008 R2. Provides a resolution.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet
 ---
 # Upgrade to DPM 2012 fails if you use a manually installed instance of SQL Server 2008 R2

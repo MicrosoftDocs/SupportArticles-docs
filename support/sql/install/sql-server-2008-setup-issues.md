@@ -2,7 +2,7 @@
 title: SQL Server 2008 setup issues
 description: This article describes the SQL Server 2008 R2 and SQL Server 2008 setup issues.
 ms.date: 09/17/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: ramakoni
 ms.prod: sql
 ---
@@ -22,7 +22,7 @@ You may receive an error message that resembles the following when you try to un
 > The following feature couldn't be installed:  
 .NET Framework 3.5 (includes .NET 2.0 and 3.0)
 
-![The following feature couldn't be installed](./media/sql-server-windows-8-later-versions/feature-could-not-be-installed.png)
+:::image type="content" source="media/sql-server-2008-setup-issues/feature-could-not-be-installed.png" alt-text="Screenshot of the error message: the following feature couldn't be installed." border="false":::
 
 Resolution
 
@@ -43,7 +43,7 @@ Symptoms
 
 When you try to install a SQL Server 2008 R2 failover cluster instance, the installation fails at the **Cluster Service verification** Rule. When you view the details, you receive an error message that resembles the following:
 
-![When you view the details, you receive an error message that resembles the following](./media/sql-server-windows-8-later-versions/rule-check-result-blue.png)
+:::image type="content" source="media/sql-server-2008-setup-issues/cluster-service-verification-rule-failed.png" alt-text="Screenshot of the Rule Check Result window, which shows Rule Cluster Service verification failed." border="false":::
 
 Cause
 

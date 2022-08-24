@@ -4,21 +4,21 @@ description: Describes how to use Windows Server cluster nodes as domain control
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # How to use Windows Server cluster nodes as domain controllers
 
 This article describes how to use Windows Server cluster nodes as domain controllers.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;281662
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 281662
 
 ## Summary
 
@@ -71,7 +71,7 @@ For more information, click the following article numbers to view the articles i
 
 [223787](https://support.microsoft.com/help/223787) Flexible single master operation transfer and seizure process  
 
-[197132](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO roles  
+[197132](/troubleshoot/windows-server/identity/fsmo-roles) Windows 2000 Active Directory FSMO roles  
 
 [223346](https://support.microsoft.com/help/223346) FSMO placement and optimization on Windows 2000 domain controllers  
 

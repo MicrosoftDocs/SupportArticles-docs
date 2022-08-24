@@ -2,7 +2,6 @@
 title: Can't edit AVIcode 5.7 templates after upgrading OpsMgr
 description: Fixes an issue where you can't edit AVIcode 5.7 templates in the Operations console after upgrading to System Center 2012 Operations Manager.
 ms.date: 07/07/2020
-ms.prod-support-area-path: 
 ---
 # You can't edit AVIcode 5.7 templates after upgrading to System Center 2012 Operations Manager
 

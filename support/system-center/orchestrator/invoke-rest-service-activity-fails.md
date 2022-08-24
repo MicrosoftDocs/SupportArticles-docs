@@ -2,7 +2,6 @@
 title: Invoke REST Service activity fails
 description: After creating Invoke REST Service activity, the runbook fails and the log history details shows Property cannot be blank.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: matthofa
 ---
 # System Center 2012 Orchestrator Invoke REST Service activity fails to run

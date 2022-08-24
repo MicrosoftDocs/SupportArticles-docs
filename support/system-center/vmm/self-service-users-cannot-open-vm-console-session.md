@@ -2,7 +2,6 @@
 title: Self-service users can't open a console session to VMs
 description: Fixes an issue in which Virtual Machine Manager 2012 self-service users can't connect to a console session of a virtual machine in Windows Server 2012.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ms.reviewer: ctimon
 ---
 # Self-service users can't open a console session to a virtual machine

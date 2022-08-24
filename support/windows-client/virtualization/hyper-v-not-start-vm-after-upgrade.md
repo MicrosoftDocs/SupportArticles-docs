@@ -1,23 +1,23 @@
 ---
 title: Hyper-V can't start VM after upgrade
 description: Address an issue in which Windows 10 Hyper-V cannot start virtual machines after a Windows 10 upgrade.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual machine performance
-ms.technology: windows-client-hyper-v  
+ms.custom: sap:virtual-machine-performance, csstroubleshoot
+ms.technology: windows-client-hyper-v
 ---
 # Hyper-V virtual machines don't start after you upgrade to Windows 10
 
 This article helps fix an issue where Windows 10 Hyper-V can't start virtual machines after a Windows 10 upgrade.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 4052082
 
 ## Symptoms
@@ -96,8 +96,8 @@ To do this, you may use some tools such as process explorer. Follow these steps:
 2. Extract the tool, and run ProcessExp64.exe, which is for 64-bit operating system.
 3. Under **View** menu, select **Show Lower Pane**, click **Lower Pane View**, and then select **DLLs**.
 
-    :::image type="content" source="./media/hyper-v-not-start-vm-after-upgrade/lower-pane-view-option.png" alt-text="Screenshot of Lower Pane View option.":::
+    :::image type="content" source="media/hyper-v-not-start-vm-after-upgrade/lower-pane-view-option.png" alt-text="Screenshot of Lower Pane View option of the View menu in Process Explorer.":::
 
 4. Select the Vmcompute.exe process, and check for non-Microsoft DLLs in the lower pane. It is fine for some entries to be blank.
 
-    :::image type="content" source="./media/hyper-v-not-start-vm-after-upgrade/vmcompute-running-result.png" alt-text="Screenshot of Process monitor results.":::
+    :::image type="content" source="media/hyper-v-not-start-vm-after-upgrade/vmcompute-running-result.png" alt-text="Screenshot of Process monitor results of Vmcompute.exe process and the DLL list in the lower pane.":::

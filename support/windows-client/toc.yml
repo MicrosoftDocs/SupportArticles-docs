@@ -46,7 +46,9 @@
     items:
     - name: 64-bit versions of Windows don't support 16-bit applications
       href: ./application-management/x64-windows-not-support-16-bit-programs.md
-    - name: Availability and description of FCIV
+    - name: Managing the Teams Chat icon on Windows 11
+      href: ./application-management/managing-teams-chat-icon-windows-11.md
+    - name: Third-party virtualization applications don't work with Hyper-V
       href: ./application-management/virtualization-apps-not-work-with-hyper-v.md
     - name: Registering OCX and DLL files as System Globals
       href: ./application-management/registering-ocx-dll-files-system-globals.md
@@ -72,6 +74,8 @@
     items:
     - name: Microsoft Store app package updates are available
       href: ./application-management/windows-81-microsoft-store-app-package-updates.md
+    - name: Modern apps or application packages are reported as vulnerable
+      href: ./application-management/modern-apps-application-packages-reported-vulnerable.md
   - name: MSI
     items:
     - name: 0x80070BC9 error when installing MSI package
@@ -256,6 +260,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
+    - name: 'Troubleshooting guidance: Windows Update'
+      href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
       href: ./deployment/dotnet-framework-1dot1-not-supported.md
     - name: 80072EE6 error when downloading an update from WSUS
@@ -268,12 +274,12 @@
       href: ./deployment/cannot-install-may-2019-update-windows-10-amd-raid-drivers.md
     - name: Cannot use the ImageX.exe tool for backup
       href: ./deployment/cannot-use-imagex-tool-backup.md
+    - name: Certificates are missing after you update a device
+      href: ./deployment/certs-missing-after-device-update.md
     - name: Command-line switches for software update packages
       href: ./deployment/command-line-switches-deploy-update-packages.md
     - name: Command-line switches supported by Self-Extractor packages
       href: ./deployment/command-switches-supported-by-self-extractor-package.md
-    - name: Compute MD5 or SHA-1 cryptographic hash values
-      href: ./deployment/compute-md5sha-1-cryptographic-hash-value.md
     - name: DISM /Apply-Image command fails with error code 5
       href: ./deployment/dism-apply-image-command-fails-error-code-5.md
     - name: Download updates from Windows Update Catalog
@@ -354,7 +360,7 @@
       href: ./deployment/customize-default-local-user-profile.md
     - name: Download and burn an ISO file from VLSC
       href: ./deployment/iso-file-on-vlsc.md
-    - name: Error 0x80042468 when creating a single partition
+    - name: Error 0x80042468 when creating a single partition
       href: ./deployment/error-when-creating-single-partition.md
     - name: Event ID 10 is logged in Application log
       href: ./deployment/event-10-is-logged-in-application-log.md
@@ -374,14 +380,14 @@
       href: ./deployment/edit-boot-ini-file-windows-2000.md
     - name: Installation File Location not behave on the Explain tab
       href: ./deployment/installation-file-location-service-pack-not-behave.md
+    - name: Language features aren't displayed in Windows 10
+      href: ./deployment/language-features-not-displayed.md
     - name: Language packs no longer available
       href: ./deployment/language-packs-no-longer-available-after-upgrade.md
     - name: MiracastView package cause sysprep error after upgrading a computer
       href: ./deployment/miracastview-cause-sysprep-error-upgrade-windows-10-1709.md
     - name: Network provider settings are removed during an in-place upgrade 
       href: ./deployment/network-provider-settings-removed-in-place-upgrade.md
-    - name: OOBE fails when you start a new computer
-      href: ./deployment/windows-oobe-fails-start-new-computer.md
     - name: Operations fail if Windows 8 is improperly identified as a WTG installation
       href: ./deployment/windows-8-incorrectly-reported-as-wtg-installation.md
     - name: Remote Server Admin Tools uninstalled during in-place upgrade
@@ -398,11 +404,11 @@
       href: ./deployment/windows-setup-log-file-locations.md
     - name: Windows SIM can't generate a catalog
       href: ./deployment/windows-sim-unable-generate-catalog-error.md
-    - name: Windows 7 Upgrade Advisor tool failed to run
+    - name: Windows 7 Upgrade Advisor tool failed to run
       href: ./deployment/upgrade-advisor-tool-failed-to-run.md
     - name: WinRE can't be built after deploying an image
       href: ./deployment/winre-cannot-built-deploy-image-captured-non-uefi-computer.md
-    - name: You can't access an EFI system partition
+    - name: You can't access an EFI system partition
       href: ./deployment/cant-access-efi-system-partition.md
 - name: Group Policy
   items:
@@ -436,6 +442,8 @@
       href: ./group-policy/fail-to-apply-group-policy-at-startup.md
     - name: Disable screen saver passwords by using policies
       href: ./group-policy/disable-screen-saver-passwords.md
+    - name: Group membership changes do not update over some VPN connections
+      href: ./group-policy/group-membership-changes-not-updating-over-some-vpn-connections.md
     - name: Group Policy is not applied to a user account
       href: ./group-policy/group-policy-not-applied-user-account-runas.md
     - name: Group Policy Screensaver setting isn't working
@@ -444,6 +452,8 @@
       href: ./group-policy/point-print-restrictions-policies-ignored.md
     - name: Save documents to OneDrive by default
       href: ./group-policy/save-documents-to-onedrive-by-default.md
+    - name: Use Group Policy to deploy a Known Issue Rollback
+      href: ./group-policy/use-group-policy-to-deploy-known-issue-rollback.md
 - name: High Availability
   items:
   - name: High Availability
@@ -464,6 +474,8 @@
       href: ./networking/access-denied-access-smb-file-share.md
     - name: Can access offline files even if the file server is removed
       href: ./networking/access-offline-files-file-server-removed-from-network.md
+    - name: Can't access shared folders from File Explorer
+      href: ./networking/cannot-access-shared-folder-file-explorer.md
     - name: Error when accessing an administrative share
       href: ./networking/cannot-logon-access-administrative-share.md
     - name: Mapped drive connection to network share is lost
@@ -486,6 +498,8 @@
       href: ./networking/dns-requests-random-network-properties-change.md
     - name: URI-encoding in UNC paths interpreted literally
       href: ./networking/url-encoding-unc-paths-not-url-decoded.md
+    - name: Support policy for DNS client-side caching
+      href: ./networking/support-policy-for-dns-client-side-caching.md
   - name: Dynamic Host Configuration Protocol (DHCP)
     items:
     - name: DHCP clients are blocked when DAI-enabled network device is used
@@ -518,10 +532,6 @@
     items:
     - name: Intranet site is identified as Internet site
       href: ./networking/intranet-site-identified-as-an-internet-site.md
-  - name: Network Load Balancing (NLB)
-    items:
-    - name: Configure network infrastructure to support NLB operation mode
-      href: ./networking/configure-network-to-support-nlb-operation-mode.md
   - name: Remote access
     items:
     - name: Change default MTU Size Settings
@@ -554,12 +564,12 @@
     items:
     - name: Additional gateways appear in persistent routes
       href: ./networking/incorrect-default-gateways-in-persistent-routes.md
+    - name: Can't install SNMP and WMI SNMP Provider
+      href: ./networking/cannot-install-snmp-wmisnmpprovider.md
     - name: Can't turn on Network Discovery
       href: ./networking/cannot-turn-on-network-discovery.md
     - name: Check Microsoft Broadband Network Adapter
-      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md
-    - name: Configure client proxy server settings
-      href: ./networking/configure-client-proxy-server-settings-by-registry-file.md
+      href: ./networking/ping-exe-check-microsoft-broadband-network-adapter.md    
     - name: Device can't connect to mobile broadband
       href: ./networking/device-cant-connect-mobile-broadband-over-the-air.md
     - name: Enterprise APN lost after SIM change or MBN adapter error
@@ -600,8 +610,6 @@
     items:
     - name: Fail to use apps that connect to Internet
       href: ./networking/use-authenticated-proxy-servers.md
-    - name: Use Group Policy to apply WinHTTP proxy settings
-      href: ./networking/use-group-policy-apply-winhttp-proxy-settings.md
   - name: WebClient and WebDAV
     items:
     - name: Can't access WebDAV Web folder
@@ -674,6 +682,8 @@
       href: ./performance/nmi-hardware-failure-error.md
     - name: Read small memory dump files
       href: ./performance/read-small-memory-dump-file.md
+    - name: Stop code when initializing PMem or NVDIMM
+      href: ./performance/stop-code-initialize-pmem-nvdimm.md
     - name: Stop error 0xE6 for a wireless device driver
       href: ./performance/stop-error-0xe6-wireless-device-driver-dmar.md
     - name: Stop error on Lenovo ThinkPad with KB4568831 update
@@ -682,8 +692,12 @@
       href: ./performance/tablet-device-creates-minidump-file.md
   - name: No Boot (not BugChecks)
     items:
+    - name: Advanced troubleshooting Windows boot problems with LiveRE tool
+      href: ./performance/live-re-troubleshoot-windows-boot.md
     - name: Can't refresh or reset your PC
       href: ./performance/cannot-refresh-reset-pc-automatic-repair-fail.md
+    - name: Can't start Windows 11 in S mode from a recovery drive
+      href: ./performance/cannot-start-windows-11-s-mode-recovery-drive.md
     - name: Changing ATA drive setting causes reboot loop
       href: ./performance/changing-bios-ata-drive-causes-reboot-loop.md
     - name: Fail to use PXE to boot clients from WDS
@@ -694,6 +708,8 @@
       href: ./performance/windows-devices-fail-boot-after-installing-kb4041676-kb4041691.md
     - name: Windows fails to start with error Missing or Corrupt ntoskrnl.exe
       href: ./performance/windows-fails-start-error-missing-corrupt-ntoskrnl.md
+    - name: Windows may hang during startup after you exclude UWF from Microsoft Defender
+      href: ./performance/windows-hangs-on-startup-after-excluding-uwf-from-microsoft-defender.md
   - name: Performance monitoring tools
     items:
     - name: Cannot modify user environment variables
@@ -707,7 +723,7 @@
     - name: Task Manager shows incorrect CPU speed
       href: ./performance/task-manager-shows-incorrect-cpu-speed.md
     - name: User-defined data collector set doesn't run as scheduled
-      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md
+      href: ../windows-server/performance/user-defined-dcs-doesnt-run-as-scheduled.md?context=/troubleshoot/windows-client/context/context
     - name: Use the System Configuration utility to troubleshoot
       href: ./performance/system-configuration-utility-troubleshoot-configuration-errors.md
     - name: Windows Experience Index shows 1.0
@@ -804,7 +820,7 @@
       href: ./remote/terminal-server-client-connection-failures.md
   - name: Virtual Desktop Infrastructure (VDI)
     items:
-    - name: Support policy for Windows Virtual Desktop and Windows 10 Enterprise multi-session
+    - name: Support policy for Azure Virtual Desktop and Windows 10 Enterprise multi-session
       href: ./remote/support-policy-windows-virtual-desktop-windows-10-enterprise-multi-session.md
 - name: Shell Experience
   items:
@@ -843,9 +859,7 @@
   - name: DPI and Display Issues
     items:
     - name: Can't open high resolution file in Photo Gallery
-      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md
-    - name: Custom display settings revert to the default
-      href: ./shell-experience/custom-display-settings-revert-to-default.md
+      href: ./shell-experience/cannot-open-high-resolution-file-photo-gallery.md    
     - name: 'Display configuration reverts to "Second screen only"'
       href: ./shell-experience/display-configuration-reverts-second-screen-only-resume-standby.md
     - name: Display issue when you use USB-attached monitor
@@ -868,6 +882,8 @@
       href: ./shell-experience/video-stabilization-resolution-limits-h-264.md
   - name: DST and Timezones
     items:
+    - name: Can't set time zone automatically in Windows 10
+      href: ./shell-experience/cannot-set-timezone-automatically.md
     - name: Changes to calendar date in BIOS are not reflected in Windows
       href: ./shell-experience/changes-calendar-date-in-bios-not-reflected.md
   - name: File Associations
@@ -926,8 +942,6 @@
       href: ./shell-experience/store-app-not-start-after-update.md
   - name: Windows Media Player
     items:
-    - name: Toggle between full screen mode and Windows mode
-      href: ./shell-experience/toggle-full-mode-and-windows-mode.md
     - name: Videos don't play in Windows Media Player 11
       href: ./shell-experience/media-player-11-not-play-video.md
     - name: Windows Media Feature Pack for Windows 7 N and for Windows 7 KN
@@ -958,6 +972,8 @@
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
       href: ./system-management-components/grant-dfsnaccess-not-change-inheritance.md
+    - name: Signed PowerShell script fails for hash mismatch
+      href: ./system-management-components/signed-powershell-script-fails-hash-mismatch.md
   - name: Server Manager
     items:
     - name: DNS server tool is missing for RSAT client
@@ -982,6 +998,8 @@
       href: ./system-management-components/configure-winrm-for-https.md
   - name: WMI
     items:
+    - name: Configure standalone WMI providers
+      href: ./system-management-components/configure-standalone-wmi-providers.md
     - name: Event ID 10 is logged in the Application log
       href: ./system-management-components/event-id-10-logged-application-log-after-install.md
     - name: Failed logon event when running remote WMI
@@ -1018,6 +1036,8 @@
       href: ./user-profiles-and-logon/slow-logon-with-blank-screen.md
   - name: Smart card logon
     items:
+    - name: Integrated Unblock screen not displayed when smart card PIN is blocked
+      href: ./user-profiles-and-logon/integrated-unblock-screen-not-displayed-smart-card-pin-blocked.md
     - name: Registry keys for smart card PIN caching options not available
       href: ./user-profiles-and-logon/registry-keys-smart-card-pin-caching-options-not-available.md
   - name: User Logon fails
@@ -1075,15 +1095,15 @@
 - name: Windows 7 End of Support (EoS) FAQ
   items:
   - name: Windows 7 EoS FAQ
-    href: ./windows-7-eos-faq/windows-7-end-support-faq.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq.yml
   - name: Windows 7 end of support
-    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.md
+    href: ./windows-7-eos-faq/windows-7-end-support-faq-general.yml
   - name: Windows 7 Extended Security Updates (ESU)
-    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.md
+    href: ./windows-7-eos-faq/windows-7-extended-security-updates-faq.yml
   - name: Windows 7 ESU offers for E5 customers
-    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.md
+    href: ./windows-7-eos-faq/windows-7-esu-offers-e5-customers-faq.yml
   - name: Troubleshoot issues in ESU
-    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.md
+    href: ./windows-7-eos-faq/troubleshoot-extended-security-updates-issues.yml
 - name: Windows Security
   items:
   - name: Windows Security
@@ -1170,7 +1190,7 @@
       href: ./windows-security/tpm-device-driver-error-log.md
   - name: Windows Firewall with Advanced Security (WFAS)
     items:
-    - name: Enable diagnostic logging for Windows Security Center
+    - name: Enable diagnostic logging for the Windows Security app
       href: ./windows-security/how-to-enable-diagnostic-logging-for-windows-security-center.md
 - name: Windows Troubleshooters
   items:
@@ -1178,3 +1198,5 @@
     href: ./windows-troubleshooters/windows-troubleshooters-overview.md
   - name: Active and retired Windows 10 troubleshooters
     href: ./windows-troubleshooters/active-and-retired-troubleshooters-windows-10.md
+  - name: Introduction to TroubleShootingScript toolset (TSSv2)
+    href: ./windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md

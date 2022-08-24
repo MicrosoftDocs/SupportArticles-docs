@@ -2,7 +2,7 @@
 title: Can't make a remote connection from a CLR trigger
 description: This article provides resolutions for problem where you may not be able to make a remote connection to SQL Server from a CLR trigger.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Database Design and Development
+ms.custom: sap:Database Design and Development
 ms.prod: sql
 ---
 # You may not be able to make a remote connection to SQL Server from a CLR trigger

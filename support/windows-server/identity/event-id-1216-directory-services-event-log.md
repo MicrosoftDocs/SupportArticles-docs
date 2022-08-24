@@ -1,23 +1,23 @@
 ---
-title: Numerous "Event ID 1216" 
+title: Numerous "Event ID 1216"
 description: Provides a resolution for the issue that numerous "Event ID 1216" Events occur in Directory Services Event Log.
 ms.date: 10/09/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Lightweight Directory Services (AD LDS) and Active Directory Application Mode (ADAM)
+ms.custom: sap:active-directory-lightweight-directory-services-ad-lds-and-active-directory-application-mode-adam, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Numerous "Event ID 1216" Events in Directory Services Event Log
 
 This article provides a resolution for the issue that numerous "Event ID 1216" Events occur in Directory Services Event Log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 246717
 
 > [!NOTE]

@@ -4,30 +4,29 @@ description: Describes steps to create a virtual directory on an existing Web si
 ms.date: 09/27/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # How to create a virtual directory on an existing Web site to a folder that resides on a remote computer  
 
 This article describes how to create, test, and remove a virtual directory on an existing Web site to a folder that resides on a remote computer.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 308150
 
 A remote virtual directory is a directory that's not contained within the Web site's home directory but appears to client browsers as though it's within the home directory. A remote virtual directory has an alias that is mapped to a Universal Naming Convention (UNC) share location. A client appends the alias to the URL of the Web site to browse the Web content in that virtual directory. The following table illustrates these mappings:
 
 | Physical location| Alias| URL path |
 |---|---|---|
-|C:\WWWroot| *home directory* <br/>(none)|`http://Sales`|
+|C:\WWWroot| _home directory_ <br/>(none)|`http://Sales`|
 |\\\RemoteServer<br/>\SalesData\ProdCustomers|Customers|`http://Sales/Customers`|
-||||
-
+  
 Both virtual directories and physical directories (directories without an alias) are listed in Internet Services Manager. A virtual directory is indicated by a folder icon that has a globe in the corner.
 
 ## How to configure a remote network share
@@ -90,27 +89,3 @@ To delete a virtual directory, follow these steps:
     1. Right-click the Web site that you want (for example, **Default Web Site**), and then click **Stop**.
     2. Right-click the Web site, and then click **Start**.
 7. Quit the Internet Information Services snap-in.
-
-## References
-
-For more information about publishing a Web, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[198523](https://support.microsoft.com/help/198523) How to publish a FrontPage Web  
-
-[205729](https://support.microsoft.com/help/205729) How to publish a FrontPage Web from a remote server to a local computer  
-
-[194093](https://support.microsoft.com/help/194093) How to publish a FrontPage Web to the Internet or an intranet  
-
-[181127](https://support.microsoft.com/help/181127) How to publish your Web to a server without FrontPage extensions  
-
-[194092](https://support.microsoft.com/help/194092) How to publish your Web to a server without FrontPage extensions in FrontPage 98  
-
-For more information about issues related to IIS, click the following article numbers to view the articles in the Microsoft Knowledge Base:
-
-[297954](https://support.microsoft.com/help/297954) How to troubleshoot the Web server in Windows 2000  
-
-[299970](https://support.microsoft.com/help/299970) How to use NTFS permissions to protect a Web Page running on IIS 4.0 or 5  
-
-[216705](https://support.microsoft.com/help/216705) How to set permissions on a FrontPage Web on IIS  
-
-[214806](https://support.microsoft.com/help/214806) How to enable pass-through authentication for UNC virtual directories

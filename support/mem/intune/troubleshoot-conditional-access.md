@@ -1,25 +1,20 @@
 ---
-title: Troubleshoot Conditional Access
+title: Troubleshoot Intune Conditional Access
 description: What to do when your users fail to get access to resources through Intune Conditional Access.
-ms.date: 07/23/2019
+ms.date: 01/31/2022
+search.appverid: MET150
 ---
 # Troubleshoot Conditional Access
 
 This article describes what to do when your users fail to get access to resources protected with Conditional Access, or when users can access protected resources but should be blocked.
 
-With Intune and Conditional Access, you can protect access to services like:
-
-- Microsoft 365 services like Exchange Online, SharePoint Online, and Skype for Business Online
-- Exchange on-premises
-- Various other services
-
-This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in the Intune admin console or Azure Active Directory have access to your company resources.
+With Intune and Conditional Access, you can protect access to Microsoft 365 services like Exchange Online and SharePoint Online, and various other services. This capability allows you to make sure that only devices that are enrolled with Intune and compliant with the Conditional Access rules that you set in Intune or Azure Active Directory have access to your company resources.
 
 ## Requirements for Conditional Access
 
 The following requirements must be met for Conditional Access to work:
 
-- The device must be enrolled into MDM and managed by Intune.
+- The device must be enrolled in mobile device management (MDM) and managed by Intune.
 
 - Both the user and the device must be compliant with the assigned Intune compliance policies.
 
@@ -48,14 +43,14 @@ You can view these conditions for each device in the Azure portal and in the dev
   - Restart the device.
   - See if the problem persists on different networks (for example, cellular, Wi-Fi, etc.).
 
-  If the problem remains, contact Microsoft Support as described in [get support in Microsoft Endpoint Manager](/mem/get-support).
+  If the problem remains, contact Microsoft Support as described in [Get support in Microsoft Endpoint Manager](/mem/get-support).
 
 - Certain Android devices might appear to be encrypted, however the Company Portal app recognizes these devices as not encrypted and marks them as noncompliant. In this scenario, the user will see a notification in the Company Portal app asking them to set a start-up passcode for the device. After tapping the notification and confirming the existing PIN or password, choose the **Require PIN to start device** option on the **Secure start-up** screen, then tap the **Check Compliance** button for the device from the Company Portal app. The device should now be detected as encrypted.
 
   > [!NOTE]
   > Some device manufacturers encrypt their devices by using a default PIN instead of a PIN set by the user. Intune views encryption that uses a default PIN as insecure and marks those devices as noncompliant until the user creates a new, non-default PIN.
 
-- An Android device that's enrolled and compliant might still be blocked and receive a quarantine notice when first trying to access corporate resources. If this occurs, make sure the Company Portal app isn't running, then select the **Get Started Now** link in the quarantine email to trigger evaluation. This should only need to be done when conditional access is first enabled.
+- An Android device that's enrolled and compliant might still be blocked and receive a quarantine notice when first trying to access corporate resources. If this occurs, make sure the Company Portal app isn't running, then select the **Get Started Now** link in the quarantine email to trigger evaluation. This should only need to be done when Conditional Access is first enabled.
 
 - An Android device that is enrolled might prompt the user with "No certificates found" and not be granted access to Microsoft 365 resources. The user must enable the *Enable Browser Access* option on the enrolled device as follows:
   1. Open the Company Portal app.
@@ -77,9 +72,9 @@ You can view these conditions for each device in the Azure portal and in the dev
 
 - If the device is selectively wiped or retired from Intune, it might continue to have access for several hours after retirement. This is because Exchange caches access rights for six hours. Consider other means of protecting data on retired devices in this scenario.
 
-- Surface Hub, Bulk-Enrolled, and DEM enrolled Windows devices can support conditional access when a user who is assigned a license for Intune is signed in. However, you must deploy the compliance policy to device groups (not user groups) for correct evaluation.
+- Surface Hub, Bulk-Enrolled, and DEM enrolled Windows devices can support Conditional Access when a user who is assigned a license for Intune is signed in. However, you must deploy the compliance policy to device groups (not user groups) for correct evaluation.
 
-- Check the assignments for your compliance policies and your conditional access policies. If a user isn't in the group that's assigned the policies, or is in a group that's excluded, the user isn't blocked. Only devices for users in an assigned group are checked for compliance.
+- Check the assignments for your compliance policies and your Conditional Access policies. If a user isn't in the group that's assigned the policies, or is in a group that's excluded, the user isn't blocked. Only devices for users in an assigned group are checked for compliance.
 
 ## Noncompliant device is not blocked
 
@@ -90,10 +85,10 @@ If a device  isn't compliant but continues to have access, take the following ac
 - Ensure the device is being discovered. Is the Exchange Connector pointing to an Exchange 2010 CAS while the user is on an Exchange 2013 server? In this case, if the default Exchange rule is Allow, even if the user is in the Target group, Intune can't be aware of the device's connection to Exchange.
 
 - Check Device Existence/Access State in Exchange:
-  - Use this PowerShell cmdlet to get a list of all mobile devices for a mailbox: 'Get-ActiveSyncDeviceStatistics -mailbox mbx'. If the device isn't listed, it isn't accessing Exchange.
+  - Use this PowerShell cmdlet to get a list of all mobile devices for a mailbox: 'Get-MobileDeviceStatistics -mailbox mbx'. If the device isn't listed, it isn't accessing Exchange. For more info, see the [Exchange PowerShell docs](/powershell/module/exchange/get-mobiledevicestatistics).
   
-  - If the device is listed, use the 'Get-CASmailbox -identity:'upn' | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support.
+  - If the device is listed, use the 'Get-CASmailbox -identity:'upn' | fl' cmdlet to get detailed information about its access state, and provide that information to Microsoft Support. For more info, see the [Exchange PowerShell docs](/powershell/module/exchange/get-casmailbox).
 
-## Next steps
+## Sign-in errors with app-based Conditional Access
 
-If this information doesn't help you, you can also [get support in Microsoft Endpoint Manager](/mem/get-support).
+Intune app protection policies help you protect company data at the app level, even on devices that you don't manage in Intune. If your users cannot sign in to protected applications, there might be an issue with your app-based Conditional Access policies. See [Troubleshooting sign-in problems with Conditional Access](/azure/active-directory/conditional-access/troubleshoot-conditional-access) for detailed guidance.

@@ -2,7 +2,7 @@
 title: Naming schema and Fix area
 description: This article describes naming schema and fix area for SQL Server software update packages.
 ms.date: 09/03/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: Arvindk
 ms.topic: article
 ms.prod: sql
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 822499
 
 Microsoft has adopted a standardized naming schema for all the software update packages for SQL Server that are created and distributed.
 
-A software update package is an executable (*.exe* or *.msi*) file that contains one or more files that may be applied to SQL Server installations to correct a specific problem. Software update packages are distributed by Customer Support Services (CSS) to customers whose computers are affected by a specific problem.
+A software update package is an executable (_.exe_ or _.msi_) file that contains one or more files that may be applied to SQL Server installations to correct a specific problem. Software update packages are distributed by Customer Support Services (CSS) to customers whose computers are affected by a specific problem.
 
 Microsoft has adopted a naming schema for software update packages for the following reasons:
 
@@ -58,7 +58,7 @@ SQL Server software update packages can be easily identified using the following
 
   Once a software update package for a feature pack has been downloaded and extracted, the file name will resemble the following:
 
-  *[feature pack file name].msi*
+  _[feature pack file name].msi_
 
   - **ProductName** This is the full product name, which includes the product version information. For SQL Server, this attribute could be one of the following:
 
@@ -84,7 +84,7 @@ SQL Server software update packages can be easily identified using the following
   - **Version** An optional field that indicates the version of the software release.
   - **Build number** An optional field that is used to indicate the SQL Server build number included in the software update.
 
-  For example, in *SQL2000-KB840223-8.00.1007-ia64-ENU.exe*, the build version of SQL Server is 8.00.1007. This will correspond to the file version of *Sqlservr.exe* and to the returned value from `@@version run` against this server instance.
+  For example, in _SQL2000-KB840223-8.00.1007-ia64-ENU.exe_, the build version of SQL Server is 8.00.1007. This will correspond to the file version of _Sqlservr.exe_ and to the returned value from `@@version run` against this server instance.
 
 ## Software update package and extracted file name mapping
 
@@ -94,59 +94,57 @@ The following tables illustrate the mapping between the Download File Name on th
 
 | Package| Software Update Package Name| Extracted SQL Server File Name |
 |---|---|---|
-|CU Package for SQL Server 2005|SQLServer2005_SPx_CUxx_kbxxxxxx_9_00_xxxx_Arch<br/>|*SQLServer2005-KBxxxxxxx-Arch-Lang.exe*|
-|CU Package for SQL Server 2008|SQLServer2008_RTM_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>SQLServer2008_SPx_CUxx_kbxxxxxx_10_00_xxxx_Arch|*SQLServer2008- KBxxxxxxx-Arch.exe*|
-|CU Package for SQL Server 2008 R2|SQLServer2008R2_RTM_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>SQLServer2008R2_SPx_CUxx_kbxxxxxx_10_50_xxxx_Arch|*SQLServer2008R2-KBxxxxxxx-Arch.exe*|
-|CU Package for SQL Server 2012|SQLServer2012_RTM_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>SQLServer2012_SPx_CUxx_kbxxxxxx_11_00_xxxx_Arch|*SQLServer2012-KBxxxxxxx-Arch.exe*|
-||||
-
+|CU Package for SQL Server 2005|SQLServer2005_SPx_CUxx_kbxxxxxx_9_00_xxxx_Arch<br/>|_SQLServer2005-KBxxxxxxx-Arch-Lang.exe_|
+|CU Package for SQL Server 2008|SQLServer2008_RTM_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>SQLServer2008_SPx_CUxx_kbxxxxxx_10_00_xxxx_Arch|_SQLServer2008- KBxxxxxxx-Arch.exe_|
+|CU Package for SQL Server 2008 R2|SQLServer2008R2_RTM_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>SQLServer2008R2_SPx_CUxx_kbxxxxxx_10_50_xxxx_Arch|_SQLServer2008R2-KBxxxxxxx-Arch.exe_|
+|CU Package for SQL Server 2012|SQLServer2012_RTM_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>SQLServer2012_SPx_CUxx_kbxxxxxx_11_00_xxxx_Arch|_SQLServer2012-KBxxxxxxx-Arch.exe_|
+  
 ## SQL Server Feature Pack
 
 | Package| Software Update Package Name| Extracted SQL Server File Name |
 |---|---|---|
-|SQL Native Client|2005_SPx_SNAC_CUxx_kbxxxxxx_9_00_xxxx_Arch<br/>2008_RTM_SNAC_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SNAC_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SNAC_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SNAC_CUxx_kbxxxxxx_10_50_xxxx_Arch|*sqlncli.msi*|
-|SQL Writer|2005_SPx_SQLWriter_CUxx_kbxxxxxx_9_00_xxxx_Arch|*SQLWriter.msi*|
-|AS OLE DB for SQL Server 2005|2005_SPx_ASOLEDB_CUxx_kbxxxxxx_9_00_xxxx_Arch|*SQLServer2005_ASOLEDB9.msi*|
-|AS OLE DB for SQL Server 2008|2008_RTM_ASOLEDB_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_ASOLEDB_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_ASOLEDB_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_ASOLEDB_CUxx_kbxxxxxx_10_50_xxxx_Arch|*SQLServer2008_ASOLEDB10.msi*|
-|AS OLE DB for SQL Server 2012|2012_RTM_ASOLEDB_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_ASOLEDB_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>|*SQL_AS_OLEDB.msi*|
-|ADMOMD.net|2005_SPx_ADMOMD_CUxx_kbxxxxxx_9_00_xxxx_Arch|*SQLServer2005_ADOMD.msi*|
-|XMO/SMO (Shared Management Objects) for SQL Server 2005|2005_SPx_XMO_CUxx_kbxxxxxx_9_00_xxxx_Arch|*SQLServer2005_XMO.msi*|
-|XMO/SMO (Shared Management Objects) for SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012|2008_RTM_SMO_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SMO_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SMO_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SMO_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2012_RTM_SMO_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_SMO_CUxx_kbxxxxxx_11_00_xxxx_Arch|*SharedManagementObjects.msi*|
-|Reporting Services for SharePoint for SQL Server 2005|2005_SPx_RSShrPnt_CUxx_KBxxxxx_9_00_xxxx_arch|*SharePointRS.msi*|
-|Reporting Services for SharePoint for SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012|2008_RTM_RSShrPnt_CUxx_KBxxxxx_10_00_xxxx_arch<br/>2008_SPx_RSShrPnt_CUxx_KBxxxxx_10_00_xxxx_arch<br/>2008R2_RTM_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_RSShrPnt_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_RSShrPnt_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*rsSharePoint.msi* (x86 and x64 only)|
-|Reporting Services for SharePoint for SQL Server 2008 R2|2008R2_RTM_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch|*rsSharePoint.msi* (x64 only)|
-|Report Builder Click Once|2008_RTM_RBClckOnc_CUxx_kbxxxxx_10_00_xxxx_Arch<br/>2008_SPx_RBClckOnc_CUxx_kbxxxxx_10_00_xxxx_Arch|*RB2ClickOnce.msi* (x86 and x64 only)|
-|Report Builder for SQL Server 2008|2008_RTM_RprtBlder_CUxx_KBxxxx_10_00_xxxx_Arch<br/>2008_SPx_RprtBlder_CUxx_KBxxxx_10_00_xxxx_Arch|*ReportBuilder.msi* (x86 only)|
-|Report Builder for SQL Server 2008 R2|2008R2_RTM_RprtBlder_CUxx_KBxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_RprtBlder_CUxx_KBxxxx_10_50_xxxx_Arch|*ReportBuilder3.msi*|
-|Sap BI|2008_RTM_SapBI_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SapBI_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SapBI_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SapBI_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2012_RTM_SapBI_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_SapBI_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>|*SapBI.msi*|
-|Stream Insight|2008R2_RTM_StrmNsght_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_StrmNsght_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_StrmNsght_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_StrmNsght_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*StreamInsightClient.msi*|
-|Synchronization|2008R2_RTM_Synch_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_Synch_CUxx_KBxxxxx_10_50_xxxx_arch|*Synchronization.msi*|
-|PowerPivot for Excel Client|2008R2_RTM_PPExcel_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_PPExcel_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_PPExcel_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_PPExcel_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*PowerPivot_for_Excel_x86.msi*|
-|Stream Insight and Server|2008R2_RTM_PPServer_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_PPServer_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_PPServer_CUxx_KBxxxxx_11_00_xxxx_arch<br/><br/>2012_SPx_PPServer_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*StreamInsight.msi*|
-|Master Data Services|2008R2_RTM_MDS_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_MDS_CUxx_KBxxxxx_10_50_xxxx_arch|*MasterDataServices.msi* (x64 only)|
-|Data-Tier Application Framework|2012_RTM_DAC_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_DAC_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*DACFramework.msi*|
-|ADOMD.NET|2012_RTM_ADMOMD_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_ADMOMD_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/><br/>|*SQL_AS_ADOMD.msi*|
-|LocalDB|2012_RTM_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/><br/><br/>|*SqlLocalDB.msi*|
-|Transact-SQL Language Service|2012_RTM_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|*TSqlLanguageService.msi*|
-||||
-
+|SQL Native Client|2005_SPx_SNAC_CUxx_kbxxxxxx_9_00_xxxx_Arch<br/>2008_RTM_SNAC_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SNAC_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SNAC_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SNAC_CUxx_kbxxxxxx_10_50_xxxx_Arch|_sqlncli.msi_|
+|SQL Writer|2005_SPx_SQLWriter_CUxx_kbxxxxxx_9_00_xxxx_Arch|_SQLWriter.msi_|
+|AS OLE DB for SQL Server 2005|2005_SPx_ASOLEDB_CUxx_kbxxxxxx_9_00_xxxx_Arch|_SQLServer2005_ASOLEDB9.msi_|
+|AS OLE DB for SQL Server 2008|2008_RTM_ASOLEDB_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_ASOLEDB_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_ASOLEDB_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_ASOLEDB_CUxx_kbxxxxxx_10_50_xxxx_Arch|_SQLServer2008_ASOLEDB10.msi_|
+|AS OLE DB for SQL Server 2012|2012_RTM_ASOLEDB_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_ASOLEDB_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>|_SQL_AS_OLEDB.msi_|
+|ADMOMD.net|2005_SPx_ADMOMD_CUxx_kbxxxxxx_9_00_xxxx_Arch|_SQLServer2005_ADOMD.msi_|
+|XMO/SMO (Shared Management Objects) for SQL Server 2005|2005_SPx_XMO_CUxx_kbxxxxxx_9_00_xxxx_Arch|_SQLServer2005_XMO.msi_|
+|XMO/SMO (Shared Management Objects) for SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012|2008_RTM_SMO_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SMO_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SMO_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SMO_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2012_RTM_SMO_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_SMO_CUxx_kbxxxxxx_11_00_xxxx_Arch|_SharedManagementObjects.msi_|
+|Reporting Services for SharePoint for SQL Server 2005|2005_SPx_RSShrPnt_CUxx_KBxxxxx_9_00_xxxx_arch|_SharePointRS.msi_|
+|Reporting Services for SharePoint for SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012|2008_RTM_RSShrPnt_CUxx_KBxxxxx_10_00_xxxx_arch<br/>2008_SPx_RSShrPnt_CUxx_KBxxxxx_10_00_xxxx_arch<br/>2008R2_RTM_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_RSShrPnt_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_RSShrPnt_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_rsSharePoint.msi_ (x86 and x64 only)|
+|Reporting Services for SharePoint for SQL Server 2008 R2|2008R2_RTM_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_RSShrPnt_CUxx_KBxxxxx_10_50_xxxx_arch|_rsSharePoint.msi_ (x64 only)|
+|Report Builder Click Once|2008_RTM_RBClckOnc_CUxx_kbxxxxx_10_00_xxxx_Arch<br/>2008_SPx_RBClckOnc_CUxx_kbxxxxx_10_00_xxxx_Arch|_RB2ClickOnce.msi_ (x86 and x64 only)|
+|Report Builder for SQL Server 2008|2008_RTM_RprtBlder_CUxx_KBxxxx_10_00_xxxx_Arch<br/>2008_SPx_RprtBlder_CUxx_KBxxxx_10_00_xxxx_Arch|_ReportBuilder.msi_ (x86 only)|
+|Report Builder for SQL Server 2008 R2|2008R2_RTM_RprtBlder_CUxx_KBxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_RprtBlder_CUxx_KBxxxx_10_50_xxxx_Arch|_ReportBuilder3.msi_|
+|Sap BI|2008_RTM_SapBI_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008_SPx_SapBI_CUxx_kbxxxxxx_10_00_xxxx_Arch<br/>2008R2_RTM_SapBI_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2008R2_SPx_SapBI_CUxx_kbxxxxxx_10_50_xxxx_Arch<br/>2012_RTM_SapBI_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_SapBI_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>|_SapBI.msi_|
+|Stream Insight|2008R2_RTM_StrmNsght_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_StrmNsght_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_StrmNsght_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_StrmNsght_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_StreamInsightClient.msi_|
+|Synchronization|2008R2_RTM_Synch_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_Synch_CUxx_KBxxxxx_10_50_xxxx_arch|_Synchronization.msi_|
+|PowerPivot for Excel Client|2008R2_RTM_PPExcel_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_PPExcel_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_PPExcel_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_PPExcel_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_PowerPivot_for_Excel_x86.msi_|
+|Stream Insight and Server|2008R2_RTM_PPServer_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_PPServer_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2012_RTM_PPServer_CUxx_KBxxxxx_11_00_xxxx_arch<br/><br/>2012_SPx_PPServer_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_StreamInsight.msi_|
+|Master Data Services|2008R2_RTM_MDS_CUxx_KBxxxxx_10_50_xxxx_arch<br/>2008R2_SPx_MDS_CUxx_KBxxxxx_10_50_xxxx_arch|_MasterDataServices.msi_ (x64 only)|
+|Data-Tier Application Framework|2012_RTM_DAC_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_DAC_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_DACFramework.msi_|
+|ADOMD.NET|2012_RTM_ADMOMD_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/>2012_SPx_ADMOMD_CUxx_kbxxxxxx_11_00_xxxx_Arch<br/><br/>|_SQL_AS_ADOMD.msi_|
+|LocalDB|2012_RTM_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_LocalDB_CUxx_KBxxxxx_11_00_xxxx_arch<br/><br/><br/>|_SqlLocalDB.msi_|
+|Transact-SQL Language Service|2012_RTM_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>2012_SPx_TSQLLAN_CUxx_KBxxxxx_11_00_xxxx_arch<br/>|_TSqlLanguageService.msi_|
+  
 Best practices As a best practice, consider providing a name that you can use to easily identify packages during downloads.
 
 ## Package descriptions
 
-This section describes each of the packages that are listed and their purposes. Installing a newer MSI package over an older MSI package removes the older version in favor of the newer version. Uninstalling a feature pack update by using an MSI package will completely remove the component. However, for the main CU package, uninstalling the *.exe* file causes a rollback to the previously installed version.
+This section describes each of the packages that are listed and their purposes. Installing a newer MSI package over an older MSI package removes the older version in favor of the newer version. Uninstalling a feature pack update by using an MSI package will completely remove the component. However, for the main CU package, uninstalling the _.exe_ file causes a rollback to the previously installed version.
 
 - **SQL Server software update package**
 
   File name
 
-  - *SQLServer2005-KBxxxxxxx-Arch-Lang.exe* (For SQL Server 2005)
+  - _SQLServer2005-KBxxxxxxx-Arch-Lang.exe_ (For SQL Server 2005)
 
-  - *SQLServer2008-KBxxxxxxx-Arch.exe* (For SQL Server 2008)
+  - _SQLServer2008-KBxxxxxxx-Arch.exe_ (For SQL Server 2008)
 
-  - *SQLServer2008R2-kbxxxxxx-Arch* (For SQL Server 2008 R2)
+  - _SQLServer2008R2-kbxxxxxx-Arch_ (For SQL Server 2008 R2)
 
-  - *SQLServer2012-kbxxxxxx-Arch* (For SQL Server 2012)
+  - _SQLServer2012-kbxxxxxx-Arch_ (For SQL Server 2012)
 
   Purpose
 
@@ -156,7 +154,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *sqlncli.msi* (For SQL Server 2005, 2008, 2008 R2, 2012)
+  _sqlncli.msi_ (For SQL Server 2005, 2008, 2008 R2, 2012)
 
   Purpose
 
@@ -166,9 +164,9 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  - *ReportBuilder.msi* (For SQL Server 2008)
+  - _ReportBuilder.msi_ (For SQL Server 2008)
 
-  - *ReportBuilder3.msi* (For SQL Server 2008 R2)
+  - _ReportBuilder3.msi_ (For SQL Server 2008 R2)
 
   Purpose
 
@@ -178,7 +176,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *RB2ClickOnce.msi* (For SQL Server 2008, SQL Server 2008 R2)
+  _RB2ClickOnce.msi_ (For SQL Server 2008, SQL Server 2008 R2)
 
   Purpose
 
@@ -188,8 +186,8 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  - *SharePointRS.msi* (For SQL Server 2005)
-  - *rsSharePoint.msi* (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
+  - _SharePointRS.msi_ (For SQL Server 2005)
+  - _rsSharePoint.msi_ (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
 
   Purpose
 
@@ -199,7 +197,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *SQLWriter.msi* (For SQL Server 2005)
+  _SQLWriter.msi_ (For SQL Server 2005)
 
   Purpose
 
@@ -209,9 +207,9 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  - *SQLServer2005_ASOLEDB9.msi* (For SQL Server 2005)
-  - *SQLServer2008_ASOLEDB10.msi* (For SQL Server 2008 and SQL Server 2008 R2)
-  - *SQL_AS_OLEDB.msi* (For SQL Server 2012)
+  - _SQLServer2005_ASOLEDB9.msi_ (For SQL Server 2005)
+  - _SQLServer2008_ASOLEDB10.msi_ (For SQL Server 2008 and SQL Server 2008 R2)
+  - _SQL_AS_OLEDB.msi_ (For SQL Server 2012)
 
   Purpose
 
@@ -224,8 +222,8 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  - *SQLServer2005_XMO.msi* (For SQL Server 2005)
-  - *SharedManagementObjects.msi* (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
+  - _SQLServer2005_XMO.msi_ (For SQL Server 2005)
+  - _SharedManagementObjects.msi_ (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
 
   Purpose
 
@@ -238,7 +236,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *SQLServer2005_ADOMD.msi* (For SQL Server 2005)
+  _SQLServer2005_ADOMD.msi_ (For SQL Server 2005)
 
   Purpose
 
@@ -248,7 +246,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *SapBI.msi* (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
+  _SapBI.msi_ (For SQL Server 2008, SQL Server 2008 R2, and SQL Server 2012)
 
   Purpose
 
@@ -258,7 +256,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *StreamInsightClient.msi* (For SQL 2008 R2 and SQL Server 2012)
+  _StreamInsightClient.msi_ (For SQL 2008 R2 and SQL Server 2012)
 
   Purpose
 
@@ -268,7 +266,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *StreamInsight.msi* (For SQL Server 2008 R2 and SQL Server 2012)
+  _StreamInsight.msi_ (For SQL Server 2008 R2 and SQL Server 2012)
 
   Purpose
 
@@ -278,7 +276,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *Synchronization.msi* (For SQL 2008 R2)
+  _Synchronization.msi_ (For SQL 2008 R2)
 
   Purpose
 
@@ -288,7 +286,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *PowerPivot_for_Excel_x86.msi* (For SQL Server 2008 R2 and SQL Server 2012)
+  _PowerPivot_for_Excel_x86.msi_ (For SQL Server 2008 R2 and SQL Server 2012)
 
   Purpose
 
@@ -298,7 +296,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *MasterDataServices.msi* (For SQL 2008 R2)
+  _MasterDataServices.msi_ (For SQL 2008 R2)
   
   Purpose Master Data Services helps enterprises standardize the data people rely on to make critical business decisions. With Master Data Services, IT organizations can centrally manage critical data assets company wide and across diverse systems, enable more people to securely manage master data directly, and ensure the integrity of information over time.
 
@@ -306,7 +304,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *DACFramework.msi* (For SQL Server 2008 R2 and SQL Server 2012)
+  _DACFramework.msi_ (For SQL Server 2008 R2 and SQL Server 2012)
 
   Purpose
 
@@ -316,9 +314,9 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  - *DB2OLEDB.msi* (For SQL Server 2008 R2)
+  - _DB2OLEDB.msi_ (For SQL Server 2008 R2)
 
-  - *DB2OLEDBV4.msi* (For SQL Server 2012)
+  - _DB2OLEDBV4.msi_ (For SQL Server 2012)
 
   Purpose
 
@@ -328,7 +326,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *SqlLocalDB.msi* (For SQL Server 2012)
+  _SqlLocalDB.msi_ (For SQL Server 2012)
 
   Purpose
 
@@ -338,7 +336,7 @@ This section describes each of the packages that are listed and their purposes. 
 
   File name
 
-  *TSqlLanguageService.msi* (For SQL Server 2012)
+  _TSqlLanguageService.msi_ (For SQL Server 2012)
 
   Purpose
 
@@ -361,8 +359,7 @@ This section describes each of the packages that are listed and their purposes. 
 |SQL security|Issues or errors for authentication, authorization, Transparent Data Encryption (TDE), Auditing, FIPS compliance, Server hardening and so on.|
 |SQL Service|Issues when you use AVS, exceptions, non-yielding schedulers, Server stops responding, DBCC checks, backup or restore operations, Database mirroring, Database recovery, memory leaks, corruption, distributed or linked server queries, Replication and so on.|
 |XML|Any issues that are related to MSXML, System.XML, XML Lite and so on.|
-|||
-
+  
 ## Frequently asked questions
 
 1. **I have SQL Server 2008. Do I need to apply both the SQL Server software update package and the SQL Server Native Client package on the server to get all SNAC fixes (for example, consider linked server scenario where server is also a client)?**  
@@ -381,9 +378,9 @@ This section describes each of the packages that are listed and their purposes. 
 
     Our KB's are currently six digits but will be going to 7 soon. The schema shown above in this doc is using the Letter's KB plus five X's for a total of seven characters to show our expected schema once we cross the 1,000,000 mark. Until such time, do continue to use the given six-digit KB.
 
-5. **How do I apply the *SQLWriter.msi* feature pack?**
+5. **How do I apply the _SQLWriter.msi_ feature pack?**
 
-    At this time, you will need to run the *SQLWriter.msi* after the CU or COD package that you have downloaded for you fix.
+    At this time, you will need to run the _SQLWriter.msi_ after the CU or COD package that you have downloaded for you fix.
 
 ## Applies to
 

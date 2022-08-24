@@ -2,7 +2,6 @@
 title: Can't launch Service Manager console in Windows 7 32-bit
 description: Describes an issue in which the System Center Service Manager console fails to launch on a system running Windows 7 32-bit.
 ms.date: 08/04/2020
-ms.prod-support-area-path: 
 ms.reviewer: manojpa, jchornbe
 ---
 # The Service Manager console fails to launch on a computer running Windows 7 32-bit
@@ -31,6 +30,6 @@ The system also has one of the following Intel GPU chipsets:
 
 ## Workaround
 
-As an alternative workaround you can disable graphics rendering hardware acceleration. For more information, see [Graphics Rendering Registry Settings](https://docs.microsoft.com/dotnet/desktop/wpf/graphics-multimedia/graphics-rendering-registry-settings?view=netframeworkdesktop-4.8&preserve-view=true).
+As an alternative workaround you can disable graphics rendering hardware acceleration. For more information, see [Graphics Rendering Registry Settings](/dotnet/desktop/wpf/graphics-multimedia/graphics-rendering-registry-settings?view=netframeworkdesktop-4.8&preserve-view=true).
 
 [!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]

@@ -2,8 +2,9 @@
 title: You can't connect to Office 365, Azure, or Intune by using the Azure Active Directory Module for Windows PowerShell
 description: Describes an issue in which you can't connect to a Microsoft cloud service such as Office 365, Azure, or Microsoft Intune by using the connect-MSOLService cmdlet. A resolution is provided.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Can't connect to Office 365, Azure, or Intune using the Azure Active Directory Module for Windows PowerShell
 
@@ -34,4 +35,4 @@ To resolve this issue, refer one of the following articles, as appropriate for y
 
 For more information about Azure Active Directory Module for Windows PowerShell, see [Manage Azure AD using Windows PowerShell](/previous-versions/azure/jj151815(v=azure.100)).
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/home) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

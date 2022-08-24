@@ -2,7 +2,6 @@
 title: Error 2931 deploying virtual machines
 description: Describes an issue in which you receive error 2931 when you deploy virtual machines to a new Hyper-V cluster.
 ms.date: 04/29/2020
-ms.prod-support-area-path:
 ---
 # Error 2931 when you deploy virtual machines in System Center Virtual Machine Manager
 
@@ -23,9 +22,9 @@ In System Center 2012 R2 Virtual Machine Manager (VMM) and later versions of the
 > This can also happen due to DNS issues. Try and see if the server (Node12.contoso.com) is reachable over the network and can be looked up in DNS. You can ping the virtualization server from VMM management server and make sure that the IP address returned matches the IP address locally obtained from the virtualization server.  
 > If the error still persists, restart the virtualization server, and then try the operation again.
 
-In VMM trace, you receive messages that are similar to the following:
+In VMM trace, you receive messages that are similar to the following:
 
-> 1492,*Date/Time*, 0x06CC,0x1304,4,CarmineObjectLock.cs,1122,0x00000000,LockableObject.LogIfNotDeletable: Object is not deletable: (FloppyDrive#1d3ac4) { objLock = (CarmineObjectLock#119e1a) { lockType = Write; objectID =*objectID*; objectType = VirtualFloppyDrive; taskID =*taskID* }; data = (FloppyDriveData#b367b6) { id =*id*; LastUpdatedTimestamp =*Date/Time*; objectType = VirtualFloppyDrive; name = "node12"; Enabled = True; Accessibility = Public; CreationTime =*Date/Time*; modifiedTime =*Date/Time*; ownerName = "" }; pendingChildAdditions = ∅; isNewObject = (bool) True },{00000000-0000-0000-0000-000000000000},1,
+> 1492,*Date/Time*, 0x06CC,0x1304,4,CarmineObjectLock.cs,1122,0x00000000,LockableObject.LogIfNotDeletable: Object is not deletable: (FloppyDrive#1d3ac4) { objLock = (CarmineObjectLock#119e1a) { lockType = Write; objectID =*objectID*; objectType = VirtualFloppyDrive; taskID =*taskID* }; data = (FloppyDriveData#b367b6) { id =*id*; LastUpdatedTimestamp =*Date/Time*; objectType = VirtualFloppyDrive; name = "node12"; Enabled = True; Accessibility = Public; CreationTime =*Date/Time*; modifiedTime =*Date/Time*; ownerName = "" }; pendingChildAdditions = ∅; isNewObject = (bool) True },{00000000-0000-0000-0000-000000000000},1,
 
 ## Cause
 

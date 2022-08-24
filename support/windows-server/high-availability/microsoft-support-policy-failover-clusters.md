@@ -3,21 +3,21 @@ title: The Microsoft support policy for Windows server failover clusters
 description: This article describes Microsoft support policy for Windows Server failover clusters.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, stevenek
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Microsoft support policy for Windows server failover clusters
 
 This article describes Microsoft support policy for Windows Server 2012 or Windows Server 2012 R2 failover clusters implementation.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2775067
 
 ## Introduction

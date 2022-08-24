@@ -2,7 +2,7 @@
 title: Rotate a table in SQL Server
 description: This article describes how to rotate a table in SQL Server.
 ms.date: 11/03/2020
-ms.prod-support-area-path: Database Design and Development
+ms.custom: sap:Database Design and Development
 ms.topic: how-to
 ms.prod: sql
 ---
@@ -29,15 +29,13 @@ This article describes how to rotate a SQL Server table. Suppose you have a tabl
 |1996| 3| 728,000.35|
 |1996| 2| 422,000.13|
 |1996| 1| 328,000.82|
-|||
-
+  
 Now, suppose you want to rotate the table so that you can see the data in the following format:
 
 |YEAR |Q1| Q2 |Q3| Q4|
 |-|-|-|-|-|
 |1995 |125,000.90 |136,000.75| 212,000.34 |328,000.82|
 |1996 |328,000.82 |422,000.13| 728,000.35 |0.00|
-||||||
 
 The query that you would use to rotate the table is in the next section of this article.
 

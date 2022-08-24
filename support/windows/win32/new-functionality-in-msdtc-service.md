@@ -2,8 +2,9 @@
 title: New functionality in MS DTC service
 description: This article describes security-related changes to the Distributed Transaction Coordinator service.
 ms.date: 03/16/2020
-ms.prod-support-area-path: Distributed transactions
+ms.custom: sap:Distributed transactions
 ms.topic: article
+ms.technology: windows-dev-apps-distributed-transactions
 ---
 # New functionality in the Distributed Transaction Coordinator service in Windows
 
@@ -247,8 +248,7 @@ The following table describes the registry entries that are changed since Window
 |AllowOnlySecureRpcCalls|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|1|0 or 1|
 |FallbackToUnsecureRPCIfNecessary|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
 |TurnOffRpcSecurity|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDTC`|Not applicable|0|0 or 1|
-|||||
-
+  
 > [!NOTE]
 > These changes appear in the shared cluster registry on a Windows Server 2003 SP1-based server cluster.
 

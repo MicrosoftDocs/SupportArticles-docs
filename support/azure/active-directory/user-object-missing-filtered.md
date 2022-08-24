@@ -2,8 +2,9 @@
 title: User object is missing or filtered from the Azure Active Directory connector in Azure Active Directory Sync
 description: Describes an issue that blocks synchronization between a user object and Azure. A resolution is provided.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: elvinf
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # User object is missing or filtered from the Azure Active Directory connector in Azure Active Directory Sync
 
@@ -32,8 +33,8 @@ For more information about user objects that are filtered, see
 This issue occurs because there is a rule for the sourceAnchor attribute. The rule is used to determine whether the value of `msexchRecipientTypeDetails` is **2**.
 
 > [!NOTE]
-> You can view this rule in the following location: *Sync Rules Configuration Editor\Inbound\In From AD\Common\Transformation*. You can also see the target sourceAnchor attribute and the expression rule as follows:
-> *IIF(IsPresent([msExchRecipientTypeDetails]),IIF([msExchRecipientTypeDetails]=2,NULL,IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID])))*
+> You can view this rule in the following location: _Sync Rules Configuration Editor\Inbound\In From AD\Common\Transformation_. You can also see the target sourceAnchor attribute and the expression rule as follows:
+> _IIF(IsPresent([msExchRecipientTypeDetails]),IIF([msExchRecipientTypeDetails]=2,NULL,IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID]))),IIF(IsString([objectGUID]),CStr([objectGUID]),ConvertToBase64([objectGUID])))_
 
 If `msExchRecipientTypeDetails` has a value of **2**, the value of sourceAnchor is set to NULL. However, if the value of sourceAnchor is NULL, the user will be filtered.
 
@@ -60,4 +61,4 @@ Therefore, with the `msExchRecipientTypeDetails` set to 2  the object is not fil
 
 In the scenario that you do not have an account-resource forest topology, and a user has `msExchRecipientTypeDetails` value is 2, changing the value to a value that is similar to a usual object will sync the user object.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

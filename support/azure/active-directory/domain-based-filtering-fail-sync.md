@@ -2,8 +2,9 @@
 title: Changes to domain-based filtering in Synchronization Service Manager fail to sync
 description: Describes an issue in which changes to domain-based filtering in the Active Directory management agent or the Active Directory Connector fail to sync. Provides a resolution.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Changes to domain-based filtering in Synchronization Service Manager fail to sync
 
@@ -55,6 +56,4 @@ This issue may occur if the run profile isn't updated.
 8. Right-click the same management agent or Connector again, and then select **Run**.
 9. Select **Full Sync**, and then select **OK**.
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

@@ -4,25 +4,28 @@ description: This article describes the tools that are available in Remote Serve
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Server Manager
+ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
+adobe-target: true
 ---
+
+<!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
+--->
+
 # Remote Server Administration Tools (RSAT) for Windows
 
-This article describes the tools that are available in Remote Server Administration Tools (RSAT) for Windows.
+RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.
 
-_Original product version:_ &nbsp; Windows 10, version 1909, Windows 10, version 1903, Windows 10, version 1809. Windows 7 Service Pack 1. Windows Server 2019. Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693643
 
 ## Introduction
-
-RSAT enables IT administrators to remotely manage roles and features in Windows Server from a computer that is running Windows 10 and Windows 7 Service Pack 1.
 
 You can't install RSAT on computers that are running Home or Standard editions of Windows. You can install RSAT only on Professional or Enterprise editions of the Windows client operating system. Unless the download page specifically states that RSAT applies to a beta, preview, or other prerelease version of Windows, you must be running a full (RTM) release of the Windows operating system to install and use RSAT. Some users have found ways of manually cracking or hacking the RSAT MSU to install RSAT on unsupported releases or editions of Windows. This behavior is a violation of the Windows end-user license agreement.
 
@@ -30,18 +33,18 @@ Installing RSAT is similar to installing Adminpak.msi in Windows 2000-based or W
 
 In the RSAT releases for Windows 10, tools are again all enabled by default. You can open **Turn Windows features on or off** to disable tools that you don't want to use for Windows 7.
 
-:::image type="content" source="./media/remote-server-administration-tools/turn-windows-features-on-or-off.png" alt-text="Turn Windows features on or off option in Windows 7.":::
+:::image type="content" source="./media/remote-server-administration-tools/turn-windows-features-on-or-off.svg" alt-text="The Turn Windows features on or off option in Windows 7." border="false":::
 
 For RSAT in Windows 7, you must enable the tools for the roles and features that you want to manage after you run the downloaded installation package.
 
 > [!NOTE]
 > You can't do the following changes for RSAT in Windows 8 or later versions.
 
-:::image type="content" source="./media/remote-server-administration-tools/enable-rsat-tools-for-roles-and-features.jpg" alt-text="Enable RSAT in Windows 7.":::
+:::image type="content" source="./media/remote-server-administration-tools/enable-rsat-tools-for-roles-and-features.svg" alt-text="Enable the tools for the roles and features that you want to manage under Remote Server Administration Tools in Windows 7.":::
 
 If you have to install management tools in Windows Server 2012 R2 for specific roles or features that are running on remote servers, you don't have to install additional software. Start the Add Roles and Features Wizard in Windows Server 2012 R2 and later versions. Then, on the **Select Features** page, expand **Remote Server Administration Tools**, and then select the tools that you want to install. Complete the wizard to install your management tools.
 
-![Complete the wizard to install your management tools.](./media/remote-server-administration-tools/select-features.jpg)
+:::image type="content" source="./media/remote-server-administration-tools/select-features.svg" alt-text="Select the tools that you want to install under Remote Server Administration Tools in Windows Server 2012 R2.":::
 
 ## Download locations for RSAT
 
@@ -75,7 +78,15 @@ If you have to install management tools in Windows Server 2012 R2 for specific r
 |**Volume Activation**|Manage Volume Activation, vmw.exe| **√**| **√**|
 |**Windows System Resource Manager tools**|Windows System Resource Manager tools include the Windows System Resource Manager snap-in and the **Wsrmc.exe** command-line tool.| **√**<br/><br/> WSRM has been deprecated in Windows Server 2012 R2. Tools for managing WSRM aren't available in RSAT for Windows 8.1 and later releases of RSAT.| |
 | **Windows Server Update Services tools**| Windows Server Update Services tools include the Windows Server Update Services snap-in, WSUS.msc, and PowerShell cmdlets.| **√**| **√** |
-|||||
+
+## RSAT for Windows 10, version 1809 or later versions
+
+> [!NOTE]
+> You can't use the Turn Windows features on and off dialog from the Control Panel
+
+Installing the RSAT Tools for Windows 10 version 1809 and later version is slightly different from earlier versions. RSAT is now part of the Operating System an can be installed via **Optional Features**.
+
+To enable the tools, click **Start**, click **Settings**, click **Apps**, and then click **Optional features**, after that click on the panel **Add a feature** and enter Remote in the search bar.
 
 ## References
 

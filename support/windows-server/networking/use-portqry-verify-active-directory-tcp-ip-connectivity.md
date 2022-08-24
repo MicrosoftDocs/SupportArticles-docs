@@ -4,20 +4,20 @@ description: Describes how to use the PortQry command-line utility to troublesho
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # How to use PortQry to troubleshoot Active Directory connectivity issues
 
 This article describes how to run PortQry to test network connectivity for any Windows component or scenario on any version of Windows.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816103
 
 ## Introduction  
@@ -157,7 +157,7 @@ UDP port 389 is LISTENING
 
 This example demonstrates how to use PortQry to determine which services or applications are registered with the target server's RPC end point mapper database. The output includes each application's Universally Unique Identifier (UUID), annotated name (if one exists), the protocol the application uses, the network address that the application is bound to, and the application's end point (port number, named pipe in square brackets). This information can be useful in troubleshooting various problems.
 
-By default, the RPC end point mapper database is configured to listen to port 185. The example call specifies the server to query using the UDP protocol:
+By default, the RPC end point mapper database is configured to listen to port 135. The example call specifies the server to query using the UDP protocol:
 
 `portqry -n <fqdn> -p udp -e 135`
 

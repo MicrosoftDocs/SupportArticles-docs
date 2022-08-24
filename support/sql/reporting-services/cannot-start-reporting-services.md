@@ -2,7 +2,7 @@
 title: You cannot start SQL Server Reporting Services
 description: This article provides workarounds for the problem that a time-out error and an issue in which event IDs 7000, 7009, and 1530 are logged when you start SSRS.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Reporting Services
+ms.custom: sap:Reporting Services
 ms.reviewer: joshger, aparnavi, ramakoni
 ms.prod: sql
 ---

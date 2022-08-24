@@ -4,20 +4,20 @@ description: Describes an issue that occurs when you try to restore a system bac
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: System Restore or resetting your computer
+ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
 ms.technology: windows-client-backup-and-storage
 ---
 # System Restore may fail with error code 0x8007045b if there is encrypted content in the restore point
 
 This article provides a workaround for an issue where System Restore may fail with error code 0x8007045b.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3074925
 
 ## Symptoms

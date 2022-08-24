@@ -3,21 +3,21 @@ title: Can't use kdump or kexec for Linux virtual machines on Hyper-V
 description: Provides a resolution for the issue that kdump or kexec cannot be used for Linux virtual machines on Hyper-V.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: abgupta, kaushika
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: windows-client-hyper-v
 ---
 # Can't use kdump or kexec for Linux virtual machines on Hyper-V
 
 This article provides a resolution to an issue where kdump or kexec can't be used for Linux virtual machines on Hyper-V.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2858695
 
 ## Symptoms
@@ -57,98 +57,13 @@ The prefer_ms_hyper_v parameter can be used to control the behavior of the stand
 
 Different Linux distributions have slightly different mechanisms to specify the value of prefer_ms_hyper_v. The following section describes how the parameter can be set for several popular Linux distributions.
 
-### Red Hat Enterprise Linux (RHEL) 5.9
+### Red Hat Enterprise Linux (RHEL)
 
-In RHEL 5.9, you have to pass the *prefer_ms_hyper_v* parameter through a kernel command-line argument to the ide_core module that's built into the RHEL 5.9 kernel. By default, this parameter is initialized to 1, and it causes the Linux virtual machine to avoid using the ide_core module if it's running in a Hyper-V environment. Administrators have to set the *prefer_ms_hyper_v* parameter value to 0 so that the ide_core driver becomes operational during the kexec kernel boot process. You can do this by changing the contents of /etc/kdump.conf.
+In RHEL 5.9, you have to pass the **prefer_ms_hyper_v** parameter through a kernel command-line argument to the **ide_core** module that's built into the RHEL 5.9 kernel. By default, this parameter is initialized to 1, and it causes the Linux virtual machine to avoid using the ide_core module if it's running in a Hyper-V environment. Administrators have to set the **prefer_ms_hyper_v** parameter value to 0 so that the ide_core driver becomes operational during the kexec kernel boot process.
 
-To change the contents of /etc/kdump.conf, follow these steps:
+In RHEL 6.4, you have to pass the **prefer_ms_hyper_v** parameter to the **ata_piix** driver module.
 
-1. Run the following command to configure kdump to write to a local directory:
-
-   ```console
-   path /var/crash`
-   ```
-
-2. Block list the Linux Integration Services drivers in /etc/kdump.conf, which prevents the drivers from loading in to the kexec kernel. To do so, run the following command:
-
-   ```console
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
-   ```
-
-3. Configure the disk time-out value by running the following command:
-
-   ```console
-   disk_timeout 100
-   ```
-
-4. After the required edits, the /etc/kdump.conf file looks like this:
-
-   ```console
-   path /var/crash  
-   core_collector makedumpfile -c--message-level 1 -d 31  
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv  
-   disk_timeout 100
-   ```
-
-5. Modify the contents of the /etc/sysconfig/kdump file as follows:
-
-   - Add or modify the following line to include the prefer_ms_hyperv=0 argument:
-
-     > KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0 "
-
-   - After the required edits, the /etc/sysconfig/kdump file looks like this:
-
-     > KDUMP_COMMANDLINE=""  
-    *# This variable lets us append arguments to the current kdump commandline*  
-    *# As taken from either KDUMP_COMMANDLINE above, or from /proc/cmdline*  
-    KDUMP_COMMANDLINE_APPEND="irqpoll maxcpus=1 reset_devices ide_core.prefer_ms_hyperv=0"
-
-### Red Hat Enterprise Linux (RHEL) 6.4
-
-In RHEL 6.4, you have to pass the prefer_ms_hyper_v parameter to the ata_piix driver module. You can do this by changing the contents of the /etc/kdump.conf file.
-
-To change the contents of /etc/kdump.conf, follow these steps:
-
-1. Configure kdump to write to a local directory:
-
-   ```console
-   path /var/crash
-   ```
-
-2. Add extra modules ata_piix,sr_mod,sd_mod:
-
-   ```console
-   extra_modules ata_piix sr_mod sd_mod
-   ```
-
-3. Block list Linux Integration Services drivers in etc/kdump.conf. This prevents the drivers from loading into the kexec kernel:
-
-   ```console
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv
-   ```
-
-4. Add options parameter to pass the parameter to the ata_piix module:
-
-   ```console
-   options ata_piix prefer_ms_hyperv=0
-   ```
-
-5. Configure the disk time-out value so that, it does not stop responding (hang):
-
-   ```console
-   disk_timeout 100
-   ```
-
-6. After the required edits, the /etc/kdump.conf file looks like:
-
-   ```console
-   path /var/crash  
-   core_collector makedumpfile -c--message-level 1 -d 31  
-   extra_modules ata_piix sr_mod sd_mod  
-   blacklist hv_vmbus hv_storvsc hv_utils hv_netvsc hid-hyperv  
-   options ata_piix prefer_ms_hyperv=0  
-   disk_timeout 100
-   ```
+To do so, change the contents of /etc/kdump.conf. See [11.10. Preventing kernel drivers from loading for kdump](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/managing_monitoring_and_updating_the_kernel/configuring-kdump-on-the-command-line_managing-monitoring-and-updating-the-kernel) for more information.
 
 ### Ubuntu 12.04(.x)
 

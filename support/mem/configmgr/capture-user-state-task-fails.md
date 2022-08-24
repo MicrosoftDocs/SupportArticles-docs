@@ -2,7 +2,6 @@
 title: Failures with the Capture User State task or task sequence
 description: Fixes an issue where Capture User State task or task sequence fails when you do a hard-link migration in System Center 2012 Configuration Manager.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: mansee, erinwi
 ---
 # Failures with the Capture User State task or task sequence when using System Center 2012 Configuration Manager
@@ -18,7 +17,7 @@ When doing hard-link migrations in System Center 2012 Configuration Manager, the
 
 ## Cause
 
-The **Capture User State** task of System Center 2012 Configuration Manager has the ability to set the USMT option of `/efs` to either `skip` or `copyraw` via the option **Skip Files that use the Encrypting File System (EFS)**. However there is no option to set it to `hardlink`. Without the ability to change the `efs` option to `hardlink`, a hard-link to the EFS file is not created and instead a full copy of the file is created.
+The **Capture User State** task of System Center 2012 Configuration Manager has the ability to set the USMT option of `/efs` to either `skip` or `copyraw` via the option **Skip Files that use the Encrypting File System (EFS)**. However there is no option to set it to `hardlink`. Without the ability to change the `efs` option to `hardlink`, a hard-link to the EFS file is not created and instead a full copy of the file is created.
 
 ## Resolution
 

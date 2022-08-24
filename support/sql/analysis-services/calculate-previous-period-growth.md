@@ -2,7 +2,7 @@
 title: Calculate previous period growth
 description: This article shows that when you calculate the previous period growth in MDX, you need to verify if the previous period exists (for example, if it is not zero or NULL). The other item you need to verify when calculating the previous period growth is to verify if you have any negative values for any of the results. If you do have negative values, you can use the procedure discussed in this article to get the correct values in your calculations.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.topic: how-to
 ms.prod: sql
 ---

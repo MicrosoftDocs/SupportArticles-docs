@@ -4,20 +4,20 @@ description: Describes how to use the at command to create and to cancel schedul
 ms.date: 09/25/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Task Scheduler
+ms.custom: sap:task-scheduler, csstroubleshoot
 ms.technology: windows-client-system-management-components
 ---
 # Use the at command to schedule tasks
 
  This article describes how to use the at command to create and to cancel scheduled tasks.
 
-_Original product version:_ &nbsp; Windows 2000  
+_Applies to:_ &nbsp; Windows 2000  
 _Original KB number:_ &nbsp; 313565
 
 > [!NOTE]

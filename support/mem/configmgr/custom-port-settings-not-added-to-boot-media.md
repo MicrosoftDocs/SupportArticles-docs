@@ -2,7 +2,6 @@
 title: Custom port settings aren't added to boot media
 description: Describes an issue in which custom port settings aren't added to boot media in Configuration Manager.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: brianhun
 ---
 # Custom port settings aren't added to boot media in Configuration Manager
@@ -18,7 +17,7 @@ Boot media that is created at a central administration site (CAS) server in a Sy
 
 Errors that resemble the following will be recorded in the Smsts.log file on the destination computer. Notice that the port reference will continue to read `:80` instead of the custom port that was previously defined for the site.
 
-> CLibSMSMessageWinHttpTransport::Send: URL: 2012-SP1.corp.contoso.com:80  GET /SMS_MP/.sms_aut?MPLOCATION&ir=192.168.1.1&ip=192.168.1.0
+> CLibSMSMessageWinHttpTransport::Send: URL: 2012-SP1.corp.contoso.com:80  GET /SMS_MP/.sms_aut?MPLOCATION&ir=192.168.1.1&ip=192.168.1.0
 >
 > Error. Status code 404 returned
 

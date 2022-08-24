@@ -2,22 +2,22 @@
 title: Error when you validate a copy of Windows
 description: Provides a solution to an error that occurs when you try to validate a copy of Windows.
 ms.date: 09/16/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: Activation
+ms.custom: sap:activation, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Error message when you try to validate a copy of Windows: The cryptographic operation failed because of a local security option setting
 
 This article provides a solution to an error that occurs when you try to validate a copy of Windows.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2715304
 
 ## Symptoms

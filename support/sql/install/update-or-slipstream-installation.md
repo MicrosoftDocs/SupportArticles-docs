@@ -2,7 +2,7 @@
 title: Update or slipstream an installation
 description: This article describes how to update or slipstream an installation of SQL Server 2008.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: bobward
 ms.topic: how-to
 ms.prod: sql
@@ -95,8 +95,6 @@ Follow the following steps to create a slipstream drop that you can use for inst
 
 1. Install the following prerequisites for SQL Server 2008.
    - .NET Framework 2.0 SP2 for SQL Server 2008 Express Edition
-
-     You can obtain the .NET Framework 2.0 SP2 from the following Web site in [Microsoft .NET Framework 2.0 Service Pack 2](https://www.microsoft.com/download/details.aspx?id=1639).
 
    - .NET Framework 3.5 SP1 for other editions
 

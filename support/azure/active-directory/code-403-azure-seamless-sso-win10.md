@@ -2,8 +2,9 @@
 title: Code 403 (Forbidden) when you use Azure Seamless Single Sign-On on Windows 10
 description: Resolves a problem in which you receive Code 403 (Forbidden) when you use Azure Seamless Single Sign-On on Windows 10.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Code 403 (Forbidden) when you use Azure Seamless Single Sign-On on Windows 10
 
@@ -32,3 +33,5 @@ To resolve this problem, follow these steps:
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\kerberos\parameters`
 3. Delete the `supportedencryptiontypes` DWORD entry if it exists.
 4. Restart the device.
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

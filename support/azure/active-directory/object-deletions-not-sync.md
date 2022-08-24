@@ -2,8 +2,9 @@
 title: Object deletions aren't synchronized to Azure AD when using the Azure Active Directory Sync tool
 description: Describes an issue in which a deleted on-premises Active Directory object isn't removed from Azure AD when directory synchronization is used in Office 365, Azure, or Microsoft Intune.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # Object deletions aren't synchronized to Azure AD when using the Azure Active Directory Sync tool
 
@@ -15,7 +16,7 @@ _Original KB number:_ &nbsp; 2709902
 Consider the following scenario:
 
 - You have an on-premises Active Directory object.
-- Directory synchronization is used to sync the Active Directory object to Microsoft Azure Active Directory (Azure AD). This creates a linked object.
+- Directory synchronization is used to sync the Active Directory object to Microsoft Azure Active Directory (Azure AD). It creates a linked object.
 - You delete the on-premises Active Directory object.
 
 In this scenario, the linked object isn't removed from Azure AD.
@@ -31,9 +32,9 @@ This issue may occur if one of the following conditions is true:
 
 To fix this issue, follow these steps:
 
-1. Force directory synchronization. For more information about how to do this, see [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories).
-2. Check that directory synchronization occurred correctly. For more information about how to do this, see [Verify directory synchronization](https://technet.microsoft.com/library/jj151797.aspx).
-3. If sync is working correctly but the Active Directory object deletion is still not propagated to Azure AD, you can manually remove the orphaned object by using one of the following Azure Active Directory Module for Windows PowerShell cmdlets:
+1. [Force directory synchronization](https://technet.microsoft.com/library/jj151771.aspx#bkmk_synchronizedirectories).
+2. Check that directory synchronization occurred correctly. For more information, see [Verify directory synchronization](https://technet.microsoft.com/library/jj151797.aspx).
+3. If sync is working correctly but the Active Directory object deletion is still not propagated to Azure AD, manually remove the orphaned object. To do so, use one of the following cmdlets in Azure Active Directory Module for Windows PowerShell:
 
     ```powershell
     Remove-MsolContact
@@ -53,6 +54,4 @@ To fix this issue, follow these steps:
      Remove-MsolUser -UserPrincipalName John.Smith@Contoso.com
      ```
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

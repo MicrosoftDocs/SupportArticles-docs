@@ -4,21 +4,21 @@ description: This article describes a DFS-R and DFS-N deployment scenario that M
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, luche
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # Information about Microsoft support policy for a DFS-R and DFS-N deployment scenario
 
 This article describes a Distributed File System Replication (DFS-R) and Distributed File System Namespace (DFS-N) deployment scenario that Microsoft does not support.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2533009
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2533009
 
 ## Unsupported scenario
 

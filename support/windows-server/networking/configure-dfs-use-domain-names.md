@@ -2,22 +2,22 @@
 title: Configure DFS to use domain names
 description: Describes how to configure a DFSN server to operate in a DNS-only environment.
 ms.date: 10/09/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: networking
 ---
 # How to configure DFS to use fully qualified domain names in referrals
 
 This article describes how to configure a DFSN server to operate in that environment.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 244380
 
 ## Summary

@@ -1,23 +1,23 @@
---- 
+---
 title: How to restore a Windows 7 installation
 description: Describes how to restore a Windows 7 installation.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, keithpe
-ms.prod-support-area-path: System Restore or resetting your computer
+ms.custom: sap:system-restore-or-resetting-your-computer, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # How to restore a Windows 7 installation
 
 This article describes how to create a system state backup on one computer and how to restore it to the same computer or to a different physical computer of the same make and model.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 249694
 
 ## Summary
@@ -60,8 +60,7 @@ The following table outlines supported and unsupported system recovery scenarios
 |System State Recovery after BMR / Full Server restore to the same hardware|Yes|
 |System State Recovery after BMR / Full Server restore to different hardware|No|
 |System State Recovery after Full Server restore (without BMR) to the same or different hardware|No|
-|||
-
+  
 > [!NOTE]
 > Windows Server Backup ensures that the system boots successfully after the BMR restore process. Applications/Roles that rely on hardware-specific identifiers like NIC address, and so on, may require additional reconfiguration or recovery to make them functional.
 
@@ -128,7 +127,7 @@ To resolve the **Stop** error or the problem where a computer stops responding, 
 
 After you finish the in-place upgrade, verify that the `ClientProtocols` registry subkey exists and is populated correctly. To do this, follow these steps:
 
-1. Select **Start**, select **Run**, type *regedit*, and then select **OK**.
+1. Select **Start**, select **Run**, type _regedit_, and then select **OK**.
 2. Locate and then right-click the following registry subkey. Verify that the values in the following list exist:
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Rpc\ClientProtocols`
 
@@ -138,7 +137,6 @@ After you finish the in-place upgrade, verify that the `ClientProtocols` registr
     |ncacn_ip_udp|REG_SZ|rpcrt4.dll|
     |ncacn_nb_tcp|REG_SZ|rpcrt4.dll|
     |ncacn_np|REG_SZ|rpcrt4.dll|
-    ||||
 
 3. If the `ClientProtocols` subkey is missing, add it under the `Rpc` subkey.
 4. If values are missing in the `ClientProtocols` subkey, follow these steps:
@@ -152,7 +150,7 @@ After you finish the in-place upgrade, verify that the `ClientProtocols` registr
 6. Restart the computer if any registry changes were made.
 
 > [!NOTE]
-> If the source computer was upgraded from Windows NT 4.0, the user profiles may be stored in the *%systemroot%\Profiles* folder instead of in the *%systemdrive%\Documents and Settings* folder. After an in-place upgrade is performed, you may have to change the following registry value back to **%systemroot%\Profiles**.
+> If the source computer was upgraded from Windows NT 4.0, the user profiles may be stored in the _%systemroot%\Profiles_ folder instead of in the _%systemdrive%\Documents and Settings_ folder. After an in-place upgrade is performed, you may have to change the following registry value back to **%systemroot%\Profiles**.
 >
 > `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList`
 >
@@ -160,4 +158,3 @@ After you finish the in-place upgrade, verify that the `ClientProtocols` registr
 > |---|---|
 > |Value Type|REG_EXPAND_SZ|
 > |Value Data|%systemroot%\Profiles|
-> |||

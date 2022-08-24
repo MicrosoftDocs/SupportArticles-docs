@@ -2,7 +2,6 @@
 title: Triggered runbook never completes
 description: Fixes an issue where a triggered runbook never completes in System Center 2012 Orchestrator.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # Triggered runbook never completes in System Center 2012 Orchestrator
 

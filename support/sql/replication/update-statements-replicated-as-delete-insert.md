@@ -2,9 +2,9 @@
 title: Update is replicated as DELETE/INSERT pairs
 description: This article describes that Update statements may be replicated as DELETE/INSERT pairs.
 ms.date: 09/21/2020
-ms.prod-support-area-path: Replication
+ms.custom: sap:Replication
 ms.reviewer: RAJUGIRD
-ms.topic: article
+ms.topic: reference-architecture
 ms.prod: sql
 ---
 # UPDATE statements may be replicated as DELETE/INSERT pairs
@@ -35,7 +35,7 @@ The only unique constraint on `TABLE1` is defined on `col1` through a primary ke
 When you execute this code:
 
 ```sql
-UPDATE TABLE1 set col1 = 3 where col2 = 'Dallas'
+UPDATE TABLE1 set col1 = 3 where col3 = 'Dallas'
 ```
 
 The `UPDATE` statement is implemented by SQL Server as a pair of `DELETE`/`INSERT` statements since you are updating `col1`, which has a unique index defined. Thus, the logreader places a pair of `DELETE`/`INSERT` calls in the distribution database. This can impact any business logic that is present in the triggers or custom stored procedures at the Subscriber. You should incorporate the additional business logic in `DELETE` and `INSERT` triggers or stored procedures to handle this situation.
@@ -44,10 +44,10 @@ If you prefer to use single logic and you want all your `UPDATE` commands replic
 
 Additionally, if you use a horizontal filter in your publication and if the updated row does not meet a filter condition, only a `DELETE` procedure call is sent to the subscribers. If the updated row previously did not meet the filter condition but meets the condition after the update, only the `INSERT` procedure call is sent through the replication process.
 
-In the preceding example, assume that you also have a horizontal filter defined on `TABLE1`: `where col2 = 'Dallas'`. If you execute this code:
+In the preceding example, assume that you also have a horizontal filter defined on `TABLE1`: `where col3 = 'Dallas'`. If you execute this code:
 
 ```sql
-UPDATE table1 set col2 = 'New York' where col1 = 3
+UPDATE table1 set col3 = 'New York' where col1 = 3
 ```
 
 the logreader agent only places a `DELETE` stored procedure call to be applied to the subscribers since the updated row does not meet the horizontal filter criteria.
@@ -55,7 +55,7 @@ the logreader agent only places a `DELETE` stored procedure call to be applied t
 Now, if you execute this code:
 
 ```sql
-UPDATE table1 set col2 = 'Dallas' where col1 = 3
+UPDATE table1 set col3 = 'Dallas' where col1 = 3
 ```
 
 the logreader generates only the `INSERT` stored procedure call, since the row did not previously meet the filter condition.

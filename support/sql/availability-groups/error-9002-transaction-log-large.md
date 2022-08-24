@@ -2,7 +2,7 @@
 title: Error 9002 when transaction log is large
 description: This article describes troubleshooting steps that may help resolve problems that occur when the transaction log becomes large or runs out of space in SQL Server.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Availability Groups
+ms.custom: sap:Availability Groups
 ms.reviewer: ramakoni, amamun
 ms.prod: sql
 ---
@@ -18,7 +18,7 @@ _Original KB number:_ &nbsp; 2922898
 Consider the following scenario:
 
 - You have Microsoft SQL Server 2012 or a later version installed on a server.
-- The instance of SQL Server is a primary replica in AlwaysOn Availability Groups environment.
+- The instance of SQL Server is a primary replica in Always On Availability Groups environment.
 - The **autogrow** option for transaction log files is set in SQL Server.
 
 In this scenario, the transaction log may become large and run out of disk space or exceed the **MaxSize** option set for the transaction log at the primary replica and you receive an error message that resembles the following:
@@ -28,7 +28,7 @@ The transaction log for database '%.*ls' is full due to 'AVAILABILITY_REPLICA'
 
 ## Cause
 
-This occurs when the logged changes at primary replica are not yet hardened on the secondary replica. For more information regarding data synchronization process in AlwaysOn environment, you can review:
+This occurs when the logged changes at primary replica are not yet hardened on the secondary replica. For more information regarding data synchronization process in Always On environment, you can review:
 
 - [Data Synchronization Process](/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups?view=sql-server-2017#data-synchronization-process&preserve-view=true)
 
@@ -48,7 +48,7 @@ There are two scenarios that can lead to log growth in an availability database 
 
     If the redo operation on any secondary replica is not able to keep up with the speed at which log blocks are hardened at that secondary replica, it will lead to log growth at the primary replica. The primary replica can only truncate and reuse its own transaction log up to the point that all secondary replica's redo threads have applied. If there is more than one secondary, compare the truncation_lsn column of the `sys.dm_hadr_database_replica_states` dynamic management view across the multiple secondaries to identify which secondary database is delaying log truncation the most.
 
-    You can use the AlwaysOn Dashboard and `sys.dm_hadr_database_replica_states` dynamic management views to help monitor the log send queue and redo queue. Some key fields are:
+    You can use the Always On Dashboard and `sys.dm_hadr_database_replica_states` dynamic management views to help monitor the log send queue and redo queue. Some key fields are:
 
     | Field| Description |
     |---|---|
@@ -58,7 +58,6 @@ There are two scenarios that can lead to log growth in an availability database 
     | redo_rate| The rate at which the log records are being redone on a given secondary database, in kilobytes (KB)/second |
     | last_redone_lsn| Actual log sequence number of the last log record that was redone on the secondary database. last_redone_lsn is always less than last_hardened_lsn |
     | last_received_lsn| Log block ID identifying the point up to which all log blocks have been received by the secondary replica that hosts this secondary database. Reflects a log-block ID padded with zeroes. It is not an actual log sequence number. |
-    |||
 
     For example, execute the following query against the primary replica in order to report the replica with the earliest truncation_lsn and is the upper bound that the primary can reclaim in its own transaction log:
 
@@ -112,7 +111,7 @@ After you identify the secondary database that makes this occur, try one or more
 
 - For more information about the `sys.dm_hadr_database_replica_states` view, see: [sys.dm_hadr_database_replica_states (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql?redirectedfrom=MSDN&view=sql-server-ver15&preserve-view=true)
 
-- For more information about how to monitor and troubleshoot logged changes that are not arriving and are not being applied in a timely manner, see: [Monitor performance for AlwaysOn availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110))
+- For more information about how to monitor and troubleshoot logged changes that are not arriving and are not being applied in a timely manner, see: [Monitor performance for Always On availability groups](/previous-versions/sql/sql-server-2012/dn135338(v=sql.110))
 
 ## Applies to
 

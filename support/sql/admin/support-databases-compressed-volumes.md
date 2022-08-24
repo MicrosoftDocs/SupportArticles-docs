@@ -2,7 +2,7 @@
 title: Support for databases on compressed volumes
 description: This article describes SQL Server's database file storage behavior on compressed drives.
 ms.date: 09/07/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: sureshka
 ms.prod: sql
 ---

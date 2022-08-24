@@ -1,36 +1,36 @@
 ---
-title: High CPU usage by WMIPRVSE.EXE process at regular intervals
-description: Provides a workaround for the issue of high CPU usage by WMIPRVSE.EXE process at regular intervals.
+title: High CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals
+description: Provides a workaround for the issue of high CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals.
 ms.date: 11/16/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, v-sanair 
-ms.prod-support-area-path: WMI 
+ms.reviewer: kaushika, v-sanair
+ms.custom: sap:wmi, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
-# High CPU usage by WMIPRVSE.EXE process at regular intervals in Windows
+# High CPU usage by the WMI Provider Host (WmiPrvSE.exe) process at regular intervals in Windows
 
-This article provides a workaround for the issue of high CPU usage by WMIPRVSE.EXE process at regular intervals.
+This article provides a workaround for the issue of high CPU usage by WmiPrvSE.exe process at regular intervals.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Window 10 - all editions  
 _Original KB number:_ &nbsp; 4483874
 
 ## Symptoms
 
 When you use a Windows-based computer, you notice that the Windows Management Instrumentation (WMI) Provider Host (WmiPrvSE.exe) process is using high CPU capacity (close to 100 percent) for several minutes every 15 to 20 minutes.
 
-When the issue occurs, use Task Manager to identify the process identifier (PID) of the WMIPRVSE.EXE process that's consuming high CPU. Then, open an elevated command prompt and run the following command:  
+When the issue occurs, use Task Manager to identify the process identifier (PID) of the WmiPrvSE.exe process that's consuming high CPU. Then, open an elevated command prompt and run the following command:  
 
 ```console
 tasklist /m wmiperfclass.dll
 ```
 
-The list of WMIPRVSE.EXE processes that have this module loaded will be displayed. ‎Usually only one process is listed. However, if you have both 32-bit and 64-bits clients, you may see two processes.‎ This is example output:  
+The list of WmiPrvSE.exe processes that have this module loaded will be displayed. ‎Usually only one process is listed. However, if you have both 32-bit and 64-bits clients, you may see two processes.‎ This is example output:  
 
 > Image Name &emsp;&emsp; PID &emsp;&emsp;&emsp;Modules  
 ==========    ========    ==========================  
@@ -44,7 +44,7 @@ This issue can be caused by either of the following factors.
 
 ### One or more processes are using a high number of handles  
 
-All the handles are stored in the kernel structure \BaseNamedObjects. The [WMIPerfClass provider](https://docs.microsoft.com/windows/win32/wmisdk/wmiperfclass-provider) must scan this structure when creating the performance class that is related to the Job objects.
+All the handles are stored in the kernel structure \BaseNamedObjects. The [WMIPerfClass provider](/windows/win32/wmisdk/wmiperfclass-provider) must scan this structure when creating the performance class that is related to the Job objects.
 
 If this structure is bloated because of the high number of handles, the operation will have high CPU usage and will take longer than normal.
 
@@ -101,7 +101,7 @@ As a workaround, you can also disable the monitoring application to prevent the 
 
 ## More information
 
-WMI provides several performance classes. For more information, see [Performance Counter Classes](https://docs.microsoft.com/windows/win32/cimwin32prov/performance-counter-classes).
+WMI provides several performance classes. For more information, see [Performance Counter Classes](/windows/win32/cimwin32prov/performance-counter-classes).
 
 These classes are created dynamically based on the Performance Counters that are available on the system. All the classes are created at the same time, not only the classes that are being queried.
 
@@ -109,4 +109,4 @@ WMIPerfClass is the module that handles creating these classes when the WMI clie
 
 These performance classes are stored in a cache that's invalidated after 15 to 20 minutes. ‎As soon as the cache is invalidated, the performance classes must be created again if a client requests them.
 
-Creating the performance classes means that the WMIPerfClass.dll module will have to be loaded inside a WMIPRVSE.EXE process and the related code executed.  
+Creating the performance classes means that the WMIPerfClass.dll module will have to be loaded inside a WmiPrvSE.exe process and the related code executed.  

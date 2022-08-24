@@ -1,24 +1,24 @@
 ---
 title: The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 description: Explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
-ms.date: 09/14/2020
+ms.date: 04/14/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: timtho, kaushika
-ms.prod-support-area-path: Group Policy management - GPMC or AGPM
+ms.custom: sap:group-policy-management-gpmc-or-agpm, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # The Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to their original state
 
 This article explains that the Dcgpofix tool doesn't restore security settings in the Default Domain Controller Policy to the same state that they were in after successfully completing Dcpromo and that it's best to use this tool only in disaster recovery scenario.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;833783
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 833783
 
 ## Symptoms
 
@@ -30,23 +30,19 @@ It's best to use the Dcgpofix tool only in disaster recovery scenarios. The Dcpr
 
 The Dcgpofix tool can't know what state the security settings were in before you run Dcpromo. Therefore, the Dcgpofix tool can't return the security settings to precisely the original state. Instead, the Dcgpofix tool recreates the two default Group Policy objects (GPOs) and creates the settings based on the operations that are performed only during Dcpromo.
 
-If you have a new installation of Microsoft Windows Server 2003 and no security changes are made to the operating system before you run Dcpromo, the recreated Default Domain Controller Policy that is created by Dcgpofix will be almost the same as the Default Domain Controller Policy just after you run Dcpromo. However, there will be some differences in the settings in the Default Domain Controller Policy in this case.
+If you have a new installation of Windows Server and no security changes are made to the operating system before you run Dcpromo, the recreated Default Domain Controller Policy that is created by Dcgpofix will be almost the same as the Default Domain Controller Policy just after you run Dcpromo. However, there will be some differences in the settings in the Default Domain Controller Policy in this case.
 
 ## Resolution
 
 For general backup and restore of the Default Domain Policy and Default Domain Controller Policy, and also for other GPOs, Microsoft recommends that you use the Group Policy Management Console (GPMC) to create regular backups of these GPOs. You can then use GPMC in conjunction with these backups to restore the exact security settings that are contained in these GPOs.
 
-For more information about the GPMC, visit the following Microsoft Web site:
-
- [https://www.microsoft.com/windowsserver2003/gpmc/default.mspx](https://www.microsoft.com/windowsserver2003/gpmc/default.mspx) 
-
 If you're in a disaster recovery scenario and you don't have any backed-up versions of the Default Domain Policy or the Default Domain Controller Policy, you may consider using the Dcgpofix tool. If you use the Dcgpofix tool, Microsoft recommends that as soon as you run it, you review the security settings in these GPOs and manually adjust the security settings to suit your requirements. A fix isn't scheduled to be released because Microsoft recommends you use GPMC to back up and restore all GPOs in your environment. The Dcgpofix tool is a disaster-recovery tool that will restore your environment to a functional state only. It is best not to use it as a replacement for a backup strategy using GPMC. It is best to use the Dcgpofix tool only when a GPO backup for the Default Domain Policy and Default Domain Controller Policy doesn't exist.
 
 ## More information
 
-The following table lists differences in security settings in the Default Domain Controller Policy after you run the Dcgpofix tool and the settings on a new installation of Windows Server 2003 after you run Dcpromo. Microsoft recommends that you adjust these security settings to match the requirements in your environment after you run the Dcgpofix tool.
+The following table lists differences in security settings in the Default Domain Controller Policy after you run the Dcgpofix tool and the settings on a new installation of Windows Server after you run Dcpromo. Microsoft recommends that you adjust these security settings to match the requirements in your environment after you run the Dcgpofix tool.
 
-|Setting in Default Domain Controller Policy|Value after running DCPromo on cleanly installed Windows Server 2003 system|Value after running DCGPOFIX|
+|Setting in Default Domain Controller Policy|Value after running DCPromo on cleanly installed Windows Server|Value after running DCGPOFIX|
 |---|---|---|
 | Audit Settings|||
 |Audit Account Management|Success|No Auditing|
@@ -62,8 +58,7 @@ The following table lists differences in security settings in the Default Domain
 |Log on as a batch job|LOCAL SERVICE, SUPPORT_388945a0|(Empty)|
 |Log on as a service|NETWORK SERVICE|(Empty)|
 |Shut down the system|Administrators, Backup Operators, Server Operators, Print Operators|Account Operators, Administrators, Backup Operators, Server Operators, Print Operators|
-||||
-
+  
 The following settings will change after you run the Dcgpofix tool:
 
 - AuditAccountManage

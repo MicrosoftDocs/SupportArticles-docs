@@ -2,9 +2,10 @@
 title: SetSystemTimeAdjustment loses time adjustment
 description: SetSystemTimeAdjustment behaves differently in Vista and Windows 7 than it did in XP.
 ms.date: 03/10/2020
-ms.prod-support-area-path: System services development
+ms.custom: sap:System services development
 ms.reviewer: Franki, jlambert
 ms.topic: article
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # SetSystemTimeAdjustment may lose adjustments less than 16
 

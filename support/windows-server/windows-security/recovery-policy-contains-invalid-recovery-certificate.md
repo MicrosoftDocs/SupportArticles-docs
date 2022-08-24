@@ -4,20 +4,20 @@ description: Describes a problem in which client computers receive an error mess
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Rajsin
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Error when client computers encrypt a file in a Windows Server 2003 domain: Recovery policy configured for this system contains invalid recovery certificate
 
 This article provides a solution to an error that occurs when client computers encrypt a file in a Microsoft Windows Server 2003 domain.
 
-_Original product version:_ &nbsp;  Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 937536
 
 ## Symptoms

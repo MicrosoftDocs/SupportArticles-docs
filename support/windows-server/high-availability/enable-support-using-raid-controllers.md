@@ -2,22 +2,22 @@
 title: Enable support for Clustered Windows Servers that use clustered RAID controllers
 description: Describes the steps required to enable a Direct Attached clustered RAID Storage Solution for Clustered Windows Servers.
 ms.date: 09/17/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Enable support for Clustered Windows Servers that use clustered RAID controllers
 
 This article provides a solution to an issue where the validation may fail when you run a cluster validation wizard for Windows Server-based Failover Cluster.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2839292
 
 ## Symptoms

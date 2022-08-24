@@ -4,20 +4,20 @@ description: Describes the 10060 Connection timed out error with proxy server or
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, carlc
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # 10060 Connection timed out error with proxy server or ISA Server on slow link
 
 This article provides help to fix Winsock timeout errors that occur on slow, congested, or high latency Internet links with Microsoft Proxy Server or ISA Server.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 191143
 
 ## Symptoms

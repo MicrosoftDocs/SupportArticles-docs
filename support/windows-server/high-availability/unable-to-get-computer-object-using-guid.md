@@ -4,25 +4,25 @@ description: Fixes an issue where a Client Access Point (CAP) in a failover clus
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dewitth, ctimon, eldenc
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
-# "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server 2008 failover cluster
+# "Unable to get Computer Object using GUID" error message when a network name request fails in a Windows Server failover cluster
 
 This article provides a solution to fix an issue where a Client Access Point (CAP) in a failover cluster does not come online as expected.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2008654
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2008654
 
 ## Symptoms
 
-A CAP in a Windows Server 2008 failover cluster does not come online as expected. In this situation, the following Error event is logged:  
+A CAP in a Windows Server failover cluster does not come online as expected. In this situation, the following Error event is logged:  
 
 > Log Name:      System  
 Source:        Microsoft-Windows-FailoverClustering  
@@ -49,5 +49,6 @@ During a cluster operation, maintenance tasks may be required on computer object
 
 To resolve this problem, provide the failover cluster access to a writeable domain controller.
 
-To learn more about the Active Directory requirements for failover clustering, visit the following Microsoft Web site:  
-[Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](https://technet.microsoft.com/library/cc731002%28WS.10%29.aspx)  
+To learn more about the Active Directory requirements for failover clustering, visit the following Microsoft Web site:
+  
+[Failover Cluster Step-by-Step Guide: Configuring Accounts in Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731002(v=ws.10))  

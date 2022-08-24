@@ -2,22 +2,22 @@
 title: Disable machine account password changes
 description: Describes how an administrator can disable automatic machine account password changes.
 ms.date: 10/09/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, davidg 
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.reviewer: kaushika, davidg
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to disable automatic machine account password changes
 
 This article describes how an administrator can disable automatic machine account password changes.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 154501
 
 ## Summary
@@ -75,5 +75,3 @@ In Windows NT version 4.0 and Windows 2000, Windows Server 2003, Windows Server 
 If you set the **RefusePasswordChange** registry entry to a value of **1**, after the workstation or member server first tries to change its machine account password, future attempts to change the password are prevented (by returning a distinct status code). A Windows NT 4.0-based computer will try to change its machine account password again in seven days, and a Windows 2000-based computer will try again in 30 days. If you set the **RefusePasswordChange** registry entry to a value of **1**, the replication traffic will stop, but not the client traffic. If you set the **DisablePasswordChange** registry entry to a value of **1**, both client and replication traffic will stop.
 
 If you disable automatic machine account password changes, you can set up two (or more) installations of Windows NT or Windows 2000 on the same computer that use the same machine account. Another possible use for this facility is virtual guests where you bring back older snapshots or disk images and you want to avoid having to rejoin the machine to a domain.
-
-For more information about the effects of machine account replication and about how to change the frequency of automatic machine account password changes, see [Effects of machine account replication on a domain](https://support.microsoft.com/help/175468).

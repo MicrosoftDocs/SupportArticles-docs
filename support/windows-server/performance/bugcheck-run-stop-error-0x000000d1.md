@@ -4,20 +4,20 @@ description: Discusses that Windows Server 2012 R2 runs a bugcheck and you recei
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jaysenb
-ms.prod-support-area-path: Blue Screen/Bugcheck
-ms.technology: windows-server-performance 
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.technology: windows-server-performance
 ---
 # Stop error 0x000000D1 and Windows Server runs a bugcheck when you enable a storage controller
 
 This article discusses an issue where Windows Server runs a bugcheck and you receive Stop error 0x000000D1 when you enable a storage controller.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2916984
 
 ## Symptoms

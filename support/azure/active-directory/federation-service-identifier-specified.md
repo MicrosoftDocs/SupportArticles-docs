@@ -2,8 +2,9 @@
 title: Error (Federation service identifier specified in the AD FS 2.0 server is already in use) when you try to set up another federated domain in Office 365, Azure, or Intune
 description: Discusses a scenario in Office 365, Azure, or Microsoft Intune  in which you receive an error message when you try to run the new-MSOLFederatedDomain command or the convert-MSOLDomainToFederated command to set up a second federated domain on an AD FS server. Provides a resolution and a workaround.
 ms.date: 06/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when you try to set up another federated domain in Office 365, Azure, or Intune: Federation service identifier specified in the AD FS 2.0 server is already in use
 
@@ -99,6 +100,4 @@ Implement an AD FS Federation Service farm to federate every cloud service domai
 
 Step-by-step implementation guidance: [Plan for and deploy Active Directory Federation Services 2.0 for use with single sign-on](https://onlinehelp.microsoft.com/office365-**enter**prises/ff652539.aspx)
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

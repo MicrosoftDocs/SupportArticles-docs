@@ -4,31 +4,31 @@ description: Fixes the System Error 126 that occurs when you start the Windows M
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
-ms.technology: windows-client-deployment 
+ms.custom: sap:servicing, csstroubleshoot
+ms.technology: windows-client-deployment
 ---
 # System Error 126 when you start the Windows Modules Installer service (TrustedInstaller): The specific module could not be found
 
 This article helps fix the System Error 126 that occurs when you start the Windows Modules Installer service.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 959077
 
 ## Symptoms
 
 When you start the Windows Modules Installer service, you receive the following error message:
 
-![Error message dialog box](./media/system-error-126-start-windows-modules-installer/error-message-dialog.jpg)
+:::image type="content" source="media/system-error-126-start-windows-modules-installer/error-message-dialog.png" alt-text="Screenshot of the Windows Modules Installer service Error 126." border="false":::
 
 You also receive an error message at the command prompt:
 
-![Error message at the command prompt](./media/system-error-126-start-windows-modules-installer/error-in-command-prompt.jpg)
+:::image type="content" source="media/system-error-126-start-windows-modules-installer/error-in-command-prompt.png" alt-text="Screenshot of the error message at the command prompt: System error 126 has occurred." border="false":::
 
 ## Cause
 
@@ -46,7 +46,7 @@ First, you have to check whether the registry subkey exists. To do this, start R
 
 2. Copy the subfolder name to the clipboard, and then paste it into Notepad for safekeeping.
 
-    ![Screenshot of the subfolder name](./media/system-error-126-start-windows-modules-installer/paste-subfolder-name-to-notepad.jpg)
+    :::image type="content" source="media/system-error-126-start-windows-modules-installer/paste-subfolder-name-to-notepad.png" alt-text="Screenshot of the subfolder name in this directory." border="false":::
 
     > [!NOTE]
     > In this example, the TrustedInstaller ID is 6.1.7601.17592.
@@ -59,7 +59,7 @@ First, you have to check whether the registry subkey exists. To do this, start R
 
 4. Copy the subfolder name to the clipboard, and then paste it into Notepad for safekeeping.
 
-    :::image type="content" source="./media/system-error-126-start-windows-modules-installer/copy-subfolder-name.jpg" alt-text="Screenshot of the subfolder name.":::
+    :::image type="content" source="media/system-error-126-start-windows-modules-installer/copy-subfolder-name.png" alt-text="Screenshot of the search result of the subfolder name In the C:\Windows\WinSxS directory.":::
 
 5. Create the registry subkey `HKLM\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\Version`.
 
@@ -71,7 +71,7 @@ First, you have to check whether the registry subkey exists. To do this, start R
     > [!NOTE]
     > In the full path, you must use `%SystemRoot%\WinSxS\folder_name` instead of `C:\Windows\WinSxS\folder_name`.
 
-    ![Screnshot of editing registry value](./media/system-error-126-start-windows-modules-installer/create-registry-key.jpg)
+    :::image type="content" source="media/system-error-126-start-windows-modules-installer/create-registry-key.png" alt-text="Screenshot of an example string value setting of the Version key.":::
 
 7. Click **OK**, and then exit Registry Editor.
 

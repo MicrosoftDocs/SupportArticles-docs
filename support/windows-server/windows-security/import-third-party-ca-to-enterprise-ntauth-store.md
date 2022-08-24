@@ -1,28 +1,28 @@
 ---
-title: Import third-party CAs into Enterprise NTAuth store
-description: Describes two methods you can use to import the certificates of third-party certification authorities (CAs) into the Enterprise NTAuth store. You can use the PKI Health Tool, or you can use Certutil.exe.
+title: Import third-party certification authorities (CAs) into Enterprise NTAuth store
+description: Describes two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. You can use the public key infrastructure (PKI) Health Tool, or Certutil.exe.
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, slight
-ms.prod-support-area-path: Certificates and public key infrastructure (PKI)
+ms.custom: sap:certificates-and-public-key-infrastructure-pki, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to import third-party certification authority (CA) certificates into the Enterprise NTAuth store
 
-This article describes two methods you can use to import the certificates of third-party certification authorities (CAs) into the Enterprise NTAuth store. This process is required if you are using a third-party CA to issue smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
+There are two methods you can use to import the certificates of third-party CAs into the Enterprise NTAuth store. This process is required if you're using a third-party CA to issue smart card logon or domain controller certificates. By publishing the CA certificate to the Enterprise NTAuth store, the Administrator indicates that the CA is trusted to issue certificates of these types. Windows CAs automatically publish their CA certificates to this store.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 295663
 
 ## More information
 
-The NTAuth store is an Active Directory directory service object that is located in the Configuration container of the forest. The Lightweight Directory Access Protocol (LDAP) distinguished name is similar to the following:
+The NTAuth store is an Active Directory directory service object that is located in the Configuration container of the forest. The Lightweight Directory Access Protocol (LDAP) distinguished name is similar to the following example:
 
 CN=NTAuthCertificates,CN=Public Key Services,CN=Services,CN=Configuration,DC=MyDomain,DC=com
 
@@ -30,11 +30,11 @@ Certificates that are published to the NTAuth store are written to the cACertifi
 
 ## Method 1 - Import a certificate by using the PKI Health Tool
 
-PKI Health Tool (PKIView) is an MMC snap-in component that displays the status of one or more Microsoft Windows certification authorities that comprise a public key infrastructure (PKI). It is available as part of the Windows Server 2003 Resource Kit Tools.
+PKI Health Tool (PKIView) is an MMC snap-in component. It displays the status of one or more Microsoft Windows CAs that comprise a PKI. It's available as part of the Windows Server 2003 Resource Kit Tools.
 
-PKIView gathers information about the CA certificates and certificate revocation lists (CRLs) from each CA in the enterprise. Then, PKIView validates the certificates and CRLs to ensure that they are working correctly. If they are not working correctly or if they are about to fail, PKIView provides a detailed warning or some error information.
+PKIView gathers information about the CA certificates and certificate revocation lists (CRLs) from each CA in the enterprise. Then it validates the certificates and CRLs to ensure that they're working correctly. If they aren't working correctly, or they're about to fail, PKIView provides a detailed warning or some error information.
 
-PKIView displays the status of Windows Server 2003 certification authorities that are installed in an Active Directory forest. You can use PKIView to discover all PKI components, including subordinate and root CAs that are associated with an enterprise CA. The tool can also manage important PKI containers, such as root CA trust and NTAuth stores, that are also contained in the configuration partition of an Active Directory forest. This article discusses this latter functionality. For more information about the PKIView, see the Microsoft Windows Server 2003 Resource Kit Tools documentation.
+PKIView displays the status of Windows Server 2003 CAs that are installed in an Active Directory forest. You can use PKIView to discover all PKI components, including subordinate and root CAs that are associated with an enterprise CA. The tool can also manage important PKI containers, such as root CA trust and NTAuth stores, that are also contained in the configuration partition of an Active Directory forest. This article discusses this latter functionality. For more information about PKIView, see the Microsoft Windows Server 2003 Resource Kit Tools documentation.
 
 > [!NOTE]
 > You can use PKIView to manage both Windows 2000 CAs and Windows Server 2003 CAs. To install the Windows Server 2003 Resource Kit Tools, your computer must be running Windows XP or later.
@@ -78,7 +78,7 @@ To import a CA certificate into the Enterprise NTAuth store, follow these steps:
 The contents of the NTAuth store are cached in the following registry location:  
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\EnterpriseCertificates\NTAuth\Certificates`
 
-This registry key should be automatically updated to reflect the certificates that are published to the NTAuth store in the Active Directory configuration container. This behavior occurs when Group Policy settings are updated and when the client-side extension that is responsible for autoenrollment executes. In certain scenarios, such as Active Directory replication latency or when the Do not enroll certificates automatically policy setting is enabled, the registry is not updated. In such scenarios, you can run the following command manually to insert the certificate into the registry location:
+This registry key should be automatically updated to reflect the certificates that are published to the NTAuth store in the Active Directory configuration container. This behavior occurs when Group Policy settings are updated and when the client-side extension that's responsible for autoenrollment executes. In certain scenarios, such as Active Directory replication latency or when the Do not enroll certificates automatically policy setting is enabled, the registry isn't updated. In such scenarios, run the following command manually to insert the certificate into the registry location:
 
 ```console
 certutil -enterprise -addstore NTAuth CA_CertFilename.cer

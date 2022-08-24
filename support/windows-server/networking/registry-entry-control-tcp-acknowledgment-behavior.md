@@ -4,20 +4,20 @@ description: Introduces the TcpAckFrequency, a new registry entry that determine
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: mkoduri, kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # New registry entry for controlling the TCP Acknowledgment (ACK) behavior in Windows
 
 This article introduces the TcpAckFrequency, a new registry entry that determines the number of TCP acknowledgments (ACKs).
 
-_Original product version:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 – all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 328890
 
 ## Summary
@@ -34,9 +34,6 @@ As specified in RFC 1122, TCP uses delayed acknowledgments to reduce the number 
 Typically, an acknowledgment is sent for every other TCP segment that is received on a connection unless the delayed ACK timer (200 milliseconds) expires. You can adjust the delayed ACK timer by editing the following registry entry.
 
 > [!IMPORTANT]
-> Before you edit this registry entry, you must first install the hotfix that is described in the following article:  
-[815230](https://support.microsoft.com/help/815230) Changing the TcpAckFrequency value to 1 does not have any effect  
->
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, click the following article number to view the article in the Microsoft Knowledge Base:  
 [322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows
   

@@ -4,36 +4,37 @@ description: Describes how to move a certification authority (CA) to a different
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, dhook
-ms.prod-support-area-path: Active Directory Certificate Services
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to move a certification authority to another server
 
 This article describes how to move a certification authority (CA) to a different server.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022  
 _Original KB number:_ &nbsp; 298138
 
 > [!NOTE]
-> This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
+> This article applies to Windows 2000, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, Windows Server 2022. Support for Windows 2000 ended on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. Support for Windows 2008 and 2008 R2 ended on January 14, 2020. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
 ## Summary
 
 Certification authorities (CAs) are the central component of the public key infrastructure (PKI) of an organization. The CAs are configured to exist for many years or decades, during which time the hardware that hosts the CA is probably upgraded.
 
-To move a CA from a server that is running Windows 2000 Server to a server that is running Windows Server 2003, you must first upgrade the CA server that is running Windows 2000 Server to Windows Server 2003. Then you can follow the steps that are outlined in this article.
+> [!NOTE]
+> To move a CA from a server that is running Windows 2000 Server to a server that is running Windows Server 2003, you must first upgrade the CA server that is running Windows 2000 Server to Windows Server 2003. Then you can follow the steps that are outlined in this article.
 
 Make sure that the %Systemroot% of the target server matches the %Systemroot% of the server from which the system state backup is taken.
 
-You must change the path of the CA files when you install the CA server components so that they match the location of the backup. For example, if you back up from the D:\\Winnt\\System32\\Certlog folder, you must restore the backup to the D:\\Winnt\\System32\\Certlog folder. You cannot restore the backup to the C:\\Winnt\\System32\\Certlog folder. After you restore the backup, you can move the CA database files to the default location.
+You must change the path of the CA files when you install the CA server components so that they match the location of the backup. For example, if you back up from the _D:\\Winnt\\System32\\Certlog_ folder, you must restore the backup to the _D:\\Winnt\\System32\\Certlog_ folder. You cannot restore the backup to the _C:\\Winnt\\System32\\Certlog_ folder. After you restore the backup, you can move the CA database files to the default location.
 
-If you try to restore the backup, and the %Systemroot% of the backup and the target server do not match, you may receive the following error message:
+If you try to restore the backup, and the _%Systemroot%_ of the backup and the target server do not match, you may receive the following error message:
 
 > Restore of an incremental image cannot be performed before you perform restore from a full image. The directory name is invalid. 0x8007010b (WIN32/HTTP:267)
 
@@ -47,7 +48,7 @@ Database format changes from the 32-bit version to the 64-bit version cause inco
 
 An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions of Windows Server 2003 that are based on the EM64T architecture or on the AMD64 architecture.
 
-## Back up and restore the certification authority keys and database in Windows Server 2003
+## Back up and restore the certification authority keys and database
 
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/help/322756).
@@ -96,6 +97,24 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
     6. In the **Public and Private Key Pair** dialog box, verify that **Use existing keys** is checked.
     7. Click **Next** two times.
     8. Accept the Certificate Database Settings default settings, click **Next**, and then click **Finish** to complete the Certificate Services installation.
+
+    > [!IMPORTANT]
+    > If the new server **has a different computer name** then follow these steps:
+
+    1. In Control Panel, double-click **Add or Remove Programs**.
+    2. Click **Add/Remove Windows Components**, click **Certificate Services** in the Windows Components Wizard, and then click **Next**.
+    3. In the **CA Type** dialog box, click the appropriate CA type.
+    4. Click **Use custom settings to generate the key pair and CA certificate**, and then click **Next**.
+    5. Click **Import**, type the path of the .P12 file in the backup folder, type the password that you chose in step 2f, and then click **OK**.
+    6. In the **Public and Private Key Pair** dialog box, verify that **Use existing keys** is checked.
+    7. Click **Next** two times.
+    8. Accept the Certificate Database Settings default settings, click **Next**, and then click **Finish** to complete the Certificate Services installation.
+    9. Modify the previously exported Registry Key in step 3 like so:
+        1. Right-click on the exported key.
+        2. Edit.
+        3. Replace the **CAServerName** value with the new Server name.
+        4. Save and Close.
+
 7. Stop the Certificate Services service.
 
 8. Locate the registry file that you saved in step 3, and then double-click it to import the registry settings. If the path that is shown in the registry export from the old CA differs from the new path, you must adjust your registry export accordingly. By default, the new path is C:\\Windows in Windows Server 2003.
@@ -122,14 +141,24 @@ An x64-based version of Windows Server 2003 R2 CD2 only updates 64-bit versions 
 
     The correct folder structure is as follows:
 
-    - C:\\Ca_Backup\\CA_NAME.p12
-    - C:\\Ca_Backup\\Database\\certbkxp.dat
-    - C:\\Ca_Backup\\Database\\edb#####.log
-    - C:\\Ca_Backup\\Database\\CA_NAME.edb
+    - _C:\\Ca_Backup\\CA_NAME.p12_
+    - _C:\\Ca_Backup\\Database\\certbkxp.dat_
+    - _C:\\Ca_Backup\\Database\\edb#####.log_
+    - _C:\\Ca_Backup\\Database\\CA_NAME.edb_
 
-    Where C:\\Ca_Backup is the folder you chose during the Backup CA phase in step 2.
+    Where _C:\\Ca_Backup_ is the folder you chose during the Backup CA phase in step 2.
 
 10. In the Certification Authority snap-in, manually add or remove certificate templates to duplicate the Certificate Templates settings that you noted in step 1.
+
+> [!NOTE]
+> If you encounter problems publishing new Templates or your Custom ones, follow the steps below.
+
+1. From a **Domain Controller** within the forest where you migrated the CA role start ADSI Edit.
+2. Right click on ADSI Edit -> Connect to -> In **Select a well known Naming Context** choose **Configuration** -> Ok.
+3. Navigate to CN=Configuration | CN=Services | CN=Public Key Services | CN=Enrollment Services.
+4. Right click the CA in the right pane that you want to enroll from and click **Properties**. Find the *flags* attribute; and verify that it is set to 10.
+5. If it is not, then set it to **10** and wait or manually force Active Directory replication.
+6. Close ADSI Edit and from your CA Server make sure you can now publish your new Templates.
 
 ## Back up and restore the certification authority keys and database in Windows 2000 Server
 

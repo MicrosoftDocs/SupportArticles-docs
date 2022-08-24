@@ -4,20 +4,20 @@ description: Describes an issue that triggers event ID 2213 in Windows 2008 or W
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: warrenw, kaushika
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # DFSR event ID 2213 in Windows Server 2008 R2
 
 This article describes an issue that triggers event ID 2213 in Windows 2008 or Windows 2012.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2846759
 
 ## Summary
@@ -44,8 +44,7 @@ Best practices for AutoRecovery based on server role, OS, and patch level:
 |Cluster Node|On|On|On|
 |Writable DFSR Server|Off|On|On|
 |Read-only DFSR Server|On|On|On|
-|||||
-
+  
 ## Disable the Stop Replication functionality in AutoRecovery
 
 To have DFSR perform AutoRecovery when a dirty database shutdown is detected, edit the following registry value after hotfix [2780453](https://support.microsoft.com/help/2780453) is installed in Windows Server 2008 R2. You can deploy this change on all versions of Windows Server 2012. If the value does not exist, you must create it.

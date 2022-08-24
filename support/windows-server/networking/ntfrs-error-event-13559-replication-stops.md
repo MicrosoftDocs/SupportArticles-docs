@@ -3,21 +3,21 @@ title: NTFRS error event 13559 intermittently and replication stops
 description: Describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # NTFRS error event 13559 intermittently and replication stops
 
 This article describes a problem where NTFRS runs into a fatal error communicating with the file system sporadically.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2768745
 
 ## Symptom
@@ -71,21 +71,21 @@ There are these work-arounds:
 
     1. In **Event Viewer**, find an event 13559 and right-Click it. There is an entry **Attach Task To This Event...**:
 
-       ![Sample Event, create Task](./media/ntfrs-error-event-13559-replication-stops/attach-task-to-this-event.jpg)
+        :::image type="content" source="media/ntfrs-error-event-13559-replication-stops/attach-task-to-this-event.png" alt-text="Screenshot of the Event Viewer window with the event 13559 selected.":::
 
     2. You will be taken to the **Create new Basic Task** wizard, and the options to run the task based on the event you have selected will be pre-populated. So you can walk many of the wizard pages.
 
     3. You need to specify the task action, to start a program:
   
-       ![Select Task action](./media/ntfrs-error-event-13559-replication-stops/start-a-program.jpg)
+        :::image type="content" source="media/ntfrs-error-event-13559-replication-stops/start-a-program.png" alt-text="Screenshot of a window with Start a program selected.":::
 
     4. As the task, have a short script that restarts NTFRS:
   
-       ![Example Script](./media/ntfrs-error-event-13559-replication-stops/example-script.jpg)
+        :::image type="content" source="media/ntfrs-error-event-13559-replication-stops/example-script-restart-ntfrs.png" alt-text="Screenshot of the restart-ntfrs file, showing the script that restarts NTFRS.":::
 
     5. Specify the script as the program to start:
 
-       ![Start action for task](./media/ntfrs-error-event-13559-replication-stops/start-action-for-task.jpg)
+        :::image type="content" source="media/ntfrs-error-event-13559-replication-stops/start-action-for-task.png" alt-text="Screenshot of the Create Basic Task Wizard window with Start a Program selected.":::
 
     6. This approach will resume the operations of NTFRS without performing an authoritative restore.
 

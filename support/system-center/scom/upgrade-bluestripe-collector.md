@@ -2,7 +2,6 @@
 title: Upgrade BlueStripe Collector
 description: Describes how to upgrade BlueStripe Collector.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to upgrade BlueStripe Collector
 

@@ -2,7 +2,6 @@
 title: No enough disk space to run a V2V conversion 
 description: Discusses that a virtual-to-virtual conversion to a cluster shared volume fails in System Center 2012 Virtual Machine Manager because of insufficient disk space. Provides resolutions and workarounds.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: dewitth, ctimon, joouten
 ---
 # Not enough disk space error when you run a V2V conversion to a CSV in Virtual Machine Manager

@@ -2,7 +2,7 @@
 title: Understand the .NET Framework requirements
 description: This article introduces that the .NET Framework requirements for various SQL versions starting with SQL Server 2005.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: uttamkp, ramakoni
 ms.topic: article
 ms.prod: sql
@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2027770
 
 ## Summary
 
-Different versions of Microsoft SQL Server have different .NET Framework versions as a prerequisite for setup, and the procedure to install the .NET Framework may be different on different operating systems. For newer versions of SQL Server, this information is covered as part of Hardware and Software Requirements topics as listed below:
+Different versions of Microsoft SQL Server have different .NET Framework versions as a prerequisite for setup, and the procedure to install the .NET Framework may be different on different operating systems. For newer versions of SQL Server, this information is covered as part of Hardware and Software Requirements articles as listed below:
 
 - [Hardware and Software Requirements for SQL Server 2019](/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server-ver15)
 
@@ -28,15 +28,22 @@ Different versions of Microsoft SQL Server have different .NET Framework version
 
 - [Hardware and Software Requirements for SQL Server 2012](/previous-versions/sql/sql-server-2012/ms143506(v=sql.110))
 
-For versions SQL Server 2008R2 and earlier, the .NET Framework requirements vary based on the edition of SQL Server that you are installing. This article describes these requirements and gives you the necessary information so that you can install the correct .NET Framework that is required.
+For versions SQL Server 2008R2 and earlier, the .NET Framework requirements vary based on the edition of SQL Server that you're installing. This article describes these requirements and gives you the necessary information so that you can install the correct .NET Framework that is required.
 
-1. Use `Table 1` in the [Microsoft DotNET Framework prerequisites for SQL Server](#microsoft-net-framework-prerequisites-for-sql-server-2008-r2-and-earlier-versions-of-sql-server) section to check the .NET Framework requirements for the version and the edition that you are installing.
+1. Use `Table 1` in the [Microsoft DotNET Framework prerequisites for SQL Server](#microsoft-net-framework-prerequisites-for-sql-server-2008-r2-and-earlier-versions-of-sql-server) section to check the .NET Framework requirements for the version and the edition that you're installing.
 2. Check whether the .NET Framework is already included as part of the operating system or whether you must download it separately from Microsoft downloads that are listed in `Table 2` in the [.NET Frameworks for SQL Server on various operating systems and download links](#net-frameworks-for-sql-server-on-windows-server-2008-r2-and-earlier-operating-systems) section.
 3. Use the last column in `Table 2` to check whether any special procedures are required to install the Framework on the target operating system. If the entry is Yes, check the later sections of this document for the necessary procedures. If the entry is No, you can download the corresponding Framework from the corresponding link in `Table 2` and install it on the target operating system.
 
+> [!NOTE]
+>
+> Support for .NET Framework 4.5.2, 4.6, and 4.6.1 ended on April 26, 2022.
+>
+> - SQL Server 2016 (13.x) and later require .NET Framework 4.6 for Database Engine, Master Data Services, or Replication (SQL Server setup automatically installs .NET Framework). You can upgrade to .NET 4.8 Framework or directly install .NET 4.8 Framework. All frameworks with major version 4 do an in-place upgrade, and they are backward compatible. For more information, check [Download .NET Framework 4.8 | Free official downloads (microsoft.com)](https://dotnet.microsoft.com/download/dotnet-framework/net48).
+> - SQL Server 2014 and SQL Server 2012 use .Net Framework 3.5 SP1, which is supported till 2029, so this retirement doesn't impact them.
+
 ## Microsoft .NET Framework prerequisites for SQL Server 2008 R2 and earlier versions of SQL Server
 
-The following table summarizes the .NET Framework version requirements for various versions and Editions of SQL Server and explains whether the product is included with setup media and whether it is installed as part of setup.
+The following table summarizes the .NET Framework version requirements for various versions and Editions of SQL Server and explains whether the product is included with setup media and whether it's installed as part of setup.
 
 Table 1:
 
@@ -46,38 +53,35 @@ Table 1:
 |SQL Server 2008 express (core)|2.0 SP2|No|No|
 |SQL Server 2008 on Windows Server 2003, (64-bit), IA-64|2.0 SP2|Yes|Yes|
 |SQL Server 2008 (all other Editions)|3.5 SP1|Yes|Yes|
-|||||
-
-For SQL Server 2008 and for SQL Server 2008 R2 Failover Cluster and Express Edition installations, the Setup program does not install the .NET Framework 3.5 Service Pack 1 on systems that run Windows Server 2008 R2 Edition. For more information about how to enable the .NET Framework 3.5 SP1 on these systems, see the [How to install or enable .NET Framework 3.5 SP1 on Windows](#how-to-install-or-enable-net-framework-35-sp1-on-windows) section.
+  
+For SQL Server 2008 and for SQL Server 2008 R2 Failover Cluster and Express Edition installations, the Setup program doesn't install the .NET Framework 3.5 Service Pack 1 on systems that run Windows Server 2008 R2 Edition. For more information about how to enable the .NET Framework 3.5 SP1 on these systems, see the [How to install or enable .NET Framework 3.5 SP1 on Windows](#how-to-install-or-enable-net-framework-35-sp1-on-windows) section.
 
 ## .NET Frameworks for SQL Server on Windows Server 2008 R2 and earlier operating systems
 
-The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you are installing is included as part of the target operating system. The table also indicates whether any additional steps are required to install or enable the Framework on the corresponding operating system and the table provides a download link for the corresponding .NET Framework redistributable files.
+The following table indicates whether the .NET Framework that is required for the SQL Edition and version that you're installing is included as part of the target operating system. The table also indicates whether any additional steps are required to install or enable the Framework on the corresponding operating system and the table provides a download link for the corresponding .NET Framework redistributable files.
 
 Table 2:
 
 | .NET version| Version number| Included with operating system| Default with operating systems| Installed with Visual Studio .NET| Redist or download link| Are special procedures required to install redist? |
 |---|---|---|---|---|---|---|
-|2.0|2.0.50727.42|Windows Server 2003 R2|None|Microsoft Visual Studio 2005| [2.0](https://www.microsoft.com/download/details.aspx?id=6523)|No|
-|2.0 SP2|2.0.50727.3053|None|None|None| [2.0 SP2](https://www.microsoft.com/download/details.aspx?id=1639)|No|
+|2.0|2.0.50727.42|Windows Server 2003 R2|None|Microsoft Visual Studio 2005| |No|
 |3.5 SP1|3.5.30729.1|Windows Server 2008 R2|None|None| [3.5 SP1](https://www.microsoft.com/download/details.aspx?id=22)|Yes, for Windows Server 2008 R2|
-||||||||
 
 ## How to install or enable .NET Framework 3.5 SP1 on Windows
 
-To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows-10).
+To install .NET Framework on Windows 8 and later versions of the operating system, review [Install the .NET Framework 3.5 on Windows 10, Windows 8.1, and Windows 8](/dotnet/framework/install/dotnet-35-windows).
 
-In Windows Server 2008 R2, the .NET Framework is a feature, and installing it is different than previous versions of the Windows operating system. The following procedure explains how to verify that the .NET Framework 3.5.1 is installed. The procedure also explains how to determine whether the .NET Framework is not installed and how you can add it in these environments.
+In Windows Server 2008 R2, the .NET Framework is a feature, and installing it's different than previous versions of the Windows operating system. The following procedure explains how to verify that the .NET Framework 3.5.1 is installed. The procedure also explains how to determine whether the .NET Framework isn't installed and how you can add it in these environments.
 
 ## How to determine whether the .NET Framework 3.5 SP1 is installed
 
 To determine whether the .NET Framework 3.5.1 is installed on Windows Server 2008 R2, follow these steps:
 
-1. Select **Start**, select **Administrative Tools**, and then select **Server Manager**.
+1. Select **Start** -\> **Administrative Tools** -\> **Server Manager**.
 2. Select **Features** to display all the installed features in the pane on the right side.
 3. Verify that .NET Framework 3.5.1  is listed as an installed feature.
 
-If .NET Framework 3.5.1 is not listed as an installed feature, use one of the following methods to install it.
+If .NET Framework 3.5.1 isn't listed as an installed feature, use one of the following methods to install it.
 
 ### Method 1: Use Server Manager  
 
@@ -88,17 +92,17 @@ If .NET Framework 3.5.1 is not listed as an installed feature, use one of the fo
     > [!NOTE]
     > If you do not expand the **.NET Framework 3.5.1 Features**  item and check it, the following Add Features Wizard  is started:
 
-    ![Add features wizard](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+    :::image type="content" source="media/understanding-dotnet-framework-requirements/add-features-wizard.png" alt-text="Screenshot of the Add Features Wizard window." border="false":::
 
     If the wizard starts, select **Cancel**, expand **.NET Framework 3.5.1 Features**, and then click to select the .NET Framework 3.5.1  check box.
 
-4. You cannot install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
+4. You can't install **.NET Framework 3.5.1 Features** unless the required role services and features are also installed.
 5. In the Confirm Installation Selections, review the selections, and then select **Install**.
 6. Let the installation process complete, and then select **Close**.
 
 ### Method 2: Use Windows PowerShell  
 
-1. Click the **Start**, select **All Programs**, and then select **Accessories**.
+1. Select **Start** -\> **All Programs** -\> **Accessories**.
 2. Expand **Windows PowerShell,**  right-click **Windows PowerShell**, and select Run as administrator. select **Yes** in the User Account Control box.
 3. At the PowerShell command prompt, type the following commands, and then press ENTER after each command:
 
@@ -110,7 +114,7 @@ Add-WindowsFeature as-net-framework
 > [!NOTE]
 > See the screen shot for more information:
 
-![PowerShell screen shot](./media/understanding-dotnet-framework-requirements/2014321a.PNG)
+:::image type="content" source="media/understanding-dotnet-framework-requirements/windows-powershell.png" alt-text="Screenshot shows the output of the command in Windows PowerShell." border="false":::
 
 ## References  
 

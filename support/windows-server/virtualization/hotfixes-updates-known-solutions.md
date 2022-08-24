@@ -2,22 +2,22 @@
 title: Updates for HNV environment
 description: Documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V Network Virtualization environments.
 ms.date: 10/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
-ms.prod-support-area-path: Installation and configuration of Hyper-V
+ms.custom: sap:installation-and-configuration-of-hyper-v, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments
 
 This article documents recommended hotfixes, product updates, and known solutions that are currently available for Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments. The updates are listed by the operating system to which they apply.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2974503
 
 ## Windows Server 2012 R2
@@ -47,8 +47,7 @@ _Original KB number:_ &nbsp; 2974503
 |August 11, 2015| [3078411](https://support.microsoft.com/help/3078411)|Tenant VMs lose network connectivity if NAT gateway VM exhausts all TCP/IP ephemeral ports in Windows Server 2012 R2|
 |November 4, 2015| [3091402](https://support.microsoft.com/help/3091402)|Site-to-site VPN goes down in Windows 8.1 or Windows Server 2012 R2|
 |April 12, 2016| [3139164](https://support.microsoft.com/help/3139164)|Tracert command doesn't receive responses when you trace resources on Internet through Windows Server 2012 R2 HNV GW|
-||||
-
+  
 ## Microsoft System Center 2012 R2 Virtual Machine Manager (VMM)
 
 |Date added| Knowledge Base article| Title |
@@ -61,26 +60,11 @@ _Original KB number:_ &nbsp; 2974503
 |July 28, 2015| [3066340](https://support.microsoft.com/help/3066340)|Update Rollup 7 for System Center 2012 R2 Virtual Machine Manager|
 |November 2, 2015| [3096389](https://support.microsoft.com/help/3096389)|Update Rollup 8 for System Center 2012 R2 Virtual Machine Manager|
 |February 13, 2016| [3129784](https://support.microsoft.com/help/3129784)|Update Rollup 9 for System Center 2012 R2 Virtual Machine Manager|
-||||
-
-## HNV troubleshooting and data collection
-
-| Knowledge Base article| Title |
-|---|---|
-| [3069275](https://support.microsoft.com/help/3069275)|Troubleshooting and data collection in Windows Server 2012 R2 Hyper-V Network Virtualization (HNV) environments|
-| [2968430](https://support.microsoft.com/help/2968430)|How to enable debug logging for Hyper-V Network Virtualization|
-|||
-
+  
 ## Other known issues and solutions
 
 | Date added| Knowledge Base article| Title |
 |---|---|---|
-|June 11, 2014| [2970306](https://support.microsoft.com/help/2970306)|Intermittent connectivity issues and dropped connections from HNV-enabled VMs to Azure resources over S2S VPN through NVGRE gateway|
-|June 11, 2014| [2974395](https://support.microsoft.com/help/2974395)|Communication over HNV Gateway fails intermittently if SkipAsSource not set|
-|June 11, 2014| [2902166](https://support.microsoft.com/help/en-us)|Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled|
-|December 5, 2014| [3003527](https://support.microsoft.com/help/3003527)|Description of support boundaries for using Windows Network Load Balancer with Hyper-V Network Virtualization networks|
-|December 5, 2014| [3021753](https://support.microsoft.com/help/3021753)|Reduced MTU size that is reported to guest virtual machines in HNV environments may not function correctly|
+|June 11, 2014| [2902166](https://support.microsoft.com/help/2902166)|Poor network performance on virtual machines on a Windows Server 2012 Hyper-V host if VMQ is enabled|
 |May 13, 2015| [2986895](https://support.microsoft.com/help/2986895)|Virtual machines lose network connectivity when you use Broadcom NetXtreme 1-gigabit network adapters|
-|May 13, 2015| [3056701](https://support.microsoft.com/help/3056701)|Can't establish site-to-site VPN between HNV Gateway and Cisco ASA in Windows Server 2012 R2|
 |January 12, 2016| [3135020](https://support.microsoft.com/help/3135020)|Recommended hotfixes, updates, and known solutions for Windows Server 2012 R2 Hyper-V environments|
-||||

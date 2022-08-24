@@ -2,7 +2,7 @@
 title: Open ADO connection and Recordset objects
 description: This article describes how to open ADO connection and Recordset objects.
 ms.date: 09/25/2020
-ms.prod-support-area-path: MDAC and ADO
+ms.custom: sap:MDAC and ADO
 ms.prod: sql
 ms.topic: how-to
 ---
@@ -192,4 +192,5 @@ Source Microsoft OLE DB Provider for ODBC Drivers
 
 ## References
 
-For more information, see [Microsoft ActiveX Data Objects (ADO)](/sql/ado/microsoft-activex-data-objects-ado).
+- [Microsoft ActiveX Data Objects (ADO)](/sql/ado/microsoft-activex-data-objects-ado)
+- [Using a Connection Object](/sql/ado/guide/data/using-a-connection-object)

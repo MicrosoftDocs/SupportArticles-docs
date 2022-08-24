@@ -4,13 +4,13 @@ description: Describes the symptoms, cause, and resolution steps for issues when
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, raviks, justintu
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8446: The replication operation failed to allocate memory
@@ -20,7 +20,7 @@ This article describes the symptoms, cause, and resolution steps for issues when
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2693500
 
 ## Symptoms
@@ -67,7 +67,6 @@ This article describes the symptoms, cause, and resolution steps for issues when
     |---|---|---|
     | NTDS Replication| 1699| The local domain controller failed to retrieve the changes requested for the following directory partition. As a result, it was unable to send the change requests to the domain controller at the following network address. 8446 The replication operation failed to allocate memory |
     | NTDS General| 1079| Active Directory could not allocate enough memory to process replication tasks. Replication might be affected until more memory is available Increase the amount of physical memory or virtual memory and restart this domain controller |
-    ||||  
 
 4. When you try to manually initiate replication using Repadmin or Active Directory Sites and Services, you get the following error message:
 
@@ -155,7 +154,7 @@ These steps are not needed for Window Server 2008 and later.
 
     Add the "Database Cache Size" counter.   In the following example, the database cache size grows at an increasing trend of Virtual Bytes and Working Set of the LSASS Process eventually consuming all 2 GB of available virtual memory allocated to the LSASS process.  You will encounter the 8446 replication failure once this virtual address space is consumed.  Refer to the " LSASS ESE Database cache is not limited by default" section of the article for detailed instructions on how to avoid this condition.  
 
-    ![Screenshot of database cache size increasing trend](./media/replication-error-8446/memory.jpg)
+    :::image type="content" source="media/replication-error-8446/memory-lsass-process.png" alt-text="Screenshot of the database cache size which grows at an increasing trend.":::
 
 ### LSASS ESE Database cache is not limited by default
 

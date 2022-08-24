@@ -4,20 +4,20 @@ description: Describes an issue that disables System Restore points after you up
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: adityah, kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # System Restore points are disabled after you upgrade to Windows 10
 
 This article discusses an issue where you can't restore the system to an earlier restore point after an upgrade to Windows 10.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3209726
 
 ## Symptoms
@@ -26,19 +26,19 @@ Assume that you have a Windows 7-based system with system restore points set, an
 
 Windows 7 Disk Size:
 
-:::image type="content" source="./media/system-restore-points-disabled/disk-size.jpg" alt-text="Screenshot of Windows 7 Disk Size.":::
+:::image type="content" source="media/system-restore-points-disabled/disk-size.png" alt-text="Screenshot of Windows 7 Disk Size in Windows Explorer.":::
 
 Restore points on Windows 7:
 
-:::image type="content" source="./media/system-restore-points-disabled/restore-points-before-upgrade.jpg" alt-text="Screenshot of restore points before upgrade.":::
+:::image type="content" source="media/system-restore-points-disabled/restore-points-before-upgrade.png" alt-text="Screenshot of restore points before upgrade.":::
 
 Restore points after you upgrade to Windows 10:
 
-:::image type="content" source="./media/system-restore-points-disabled/restore-points-after-upgrade.jpg" alt-text="Screenshot of restore points after upgrade.":::
+:::image type="content" source="media/system-restore-points-disabled/restore-points-after-upgrade.png" alt-text="Screenshot of restore points after upgrade.":::
 
 Querying the System Restore via PowerShell:  
 
-:::image type="content" source="./media/system-restore-points-disabled/query-system-restore.jpg" alt-text="Screenshot of querying System Restore.":::
+:::image type="content" source="media/system-restore-points-disabled/query-system-restore.png" alt-text="Screenshot of the output of the querying System Restore command in Windows PowerShell." border="false":::
 
 ## Cause
 
@@ -50,4 +50,4 @@ By default, System Restore should be disabled after an upgrade regardless of its
 
 You can verify this yourself by checking for a restore point after a .msi or Windows Update installation on a computer that has a disk size of greater than 128 GB.
 
-For more information about System Restore, see [How to Use System Restore in Windows 7, 8, and 10](https://support.microsoft.com/help/17085/windows-8-restore-refresh-reset-pc) and [Backup and restore in Windows 10](https://support.microsoft.com/instantanswers/62ed802d-7c8d-35d9-9b82-6cace4b08185/backup-and-restore-in-windows-10).
+For more information about System Restore, see [How to Use System Restore in Windows 7, 8, and 10](https://support.microsoft.com/help/17085/windows-8-restore-refresh-reset-pc) and [Backup and restore in Windows 10](https://support.microsoft.com/windows/backup-and-restore-in-windows-10-352091d2-bb9d-3ea3-ed18-52ef2b88cbef).

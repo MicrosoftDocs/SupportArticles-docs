@@ -1,23 +1,23 @@
 ---
 title: Renaming a network folder fails
 description: Resolves an issue where Renaming a network folder in Windows 7 Explorer fails.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: File Explorer/Windows Explorer
+ms.custom: sap:file-explorer/windows-explorer, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Renaming a network folder in Windows 7 Explorer fails with "the action can't be completed..."
 
 This article provides a solution to an issue where Renaming a network folder in Windows 7 Explorer fails.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2025703
 
 ## Symptoms

@@ -1,23 +1,23 @@
 ---
-title: RemoteFX USB redirected scanner doesn't start 
+title: RemoteFX USB redirected scanner doesn't start
 description: Fixes an issue in which RemoteFX USB redirected scanner can't open
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Redirection (not printer)
+ms.custom: sap:redirection-not-printer, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # RemoteFX USB redirected scanner doesn't start  
 
 This article helps to fix an issue in which RemoteFX USB redirected scanner can't open.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3125295
 
 ## Symptoms

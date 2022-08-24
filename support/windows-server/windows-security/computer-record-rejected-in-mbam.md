@@ -3,21 +3,21 @@ title: Computer record is rejected in MBAM
 description: Describe how to resolve the warning message "Computer Record is Rejected" in MBAM.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: manojse, kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # Computer record is rejected in MBAM
 
 This article provides a solution to an issue where you receive a warning message "computer record is rejected" when using Microsoft BitLocker Administration and Monitoring (MBAM).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 – all editions  
 _Original KB number:_ &nbsp; 2612822
 
 ## Symptoms

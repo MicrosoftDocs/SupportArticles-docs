@@ -4,21 +4,21 @@ description: Helps fix an error that you receive when managing cluster by using 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup and configuration of clustered services and applications
+ms.custom: sap:setup-and-configuration-of-clustered-services-and-applications, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Unable to manage cluster using failover cluster manager. Error Received: "Connection to the cluster is not allowed since you are not an administrator on the cluster node(s)"
 
 This article provides a solution to fix an error that you receive when managing cluster by using failover cluster management console.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2462468
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2462468
 
 ## Symptoms
 
@@ -32,8 +32,7 @@ An error occurred connecting to the cluster '.'.
 An error occurred trying to display the cluster information.  
 Connection to the cluster is not allowed since you are not an administrator on the cluster node(s) (Node name)  
 
-![error that we get when we try to manage cluster ](./media/cannot-manage-cluster-with-failover-cluster-manager/error-message-dialog.png)
-
+:::image type="content" source="media/cannot-manage-cluster-with-failover-cluster-manager/error-message-dialog.png" alt-text="Screenshot of the Error window which shows The operation has failed error message.":::
 or
 
 When you run the Cluster validation, you receive the following error:

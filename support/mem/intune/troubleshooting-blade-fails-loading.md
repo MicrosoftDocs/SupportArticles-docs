@@ -1,34 +1,32 @@
 ---
-title: No permissions to load Intune troubleshooting blade
-description: Provides a solution for the issue where Intune troubleshooting blade fails to load for help desk operators.
-ms.date: 05/18/2020
-ms.prod-support-area-path: User logon or authentication
+title: No permissions to load Intune Troubleshooting pane
+description: Provides a solution for the issue when the Microsoft Intune Troubleshoot pane fails to load for help desk operators.
+ms.date: 12/18/2021
+search.appverid: MET150
+ms.custom: sap:User logon or authentication
 ms.reviewer: joelste, intunecic
 ---
-# Intune troubleshooting blade fails to load for help desk operators
+# Intune troubleshooting portal fails to load for help desk operators
 
-This article fixes an issue in which Intune troubleshooting blade fails to load for help desk operators.
-
-_Original product version:_ &nbsp; Microsoft Intune, Commerce Intune  
-_Original KB number:_ &nbsp; 4487946
+This article helps Intune Administrators resolve an issue in which the Intune **Troubleshoot** pane fails to load for help desk operators.
 
 ## Symptoms
 
-When a user signs in to Microsoft Intune as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshooting** blade displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
+When a user signs in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a **Help Desk Operator** role member, and goes to the Intune troubleshooting portal, the **Troubleshoot** pane displays a banner that states **Account status You do not have enough permissions**, and no user or device data is displayed.
 
-:::image type="content" source="./media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade.":::
+:::image type="content" source="media/troubleshooting-blade-fails-loading/troubleshooting-blade.png" alt-text="Screenshot of troubleshooting blade showing the Account status You do not have enough permissions message.":::
 
 ## Cause
 
-The user is not licensed for Intune.
+The user is not licensed for Intune.
 
-## Resolution
+## Solution
 
-1. Sign in to [https://portal.azure.com](https://portal.azure.com/) as an Intune Administrator.
-2. On the **Intune** blade, go to **Users**  > **All Users**.
-3. Select the user for whom the **Troubleshooting** blade fails to load.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an Intune Administrator.
+2. On the **Intune** pane, go to **Users** > **All Users**.
+3. Select the user for whom the **Troubleshoot** pane fails to load.
 4. On the **Licenses** tab, select **+Assign**, and follow the wizard to assign an Intune license.
-5. Advise **Help Desk Operator** role members to access the Intune troubleshooting portal in a new browser session.
+5. Advise **Help Desk Operator** role members to access the Intune troubleshooting portal in a new browser session.
 
 ## More information
 

@@ -4,20 +4,20 @@ description: Summarizes the available hotfixes and updates for issues that occur
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Administration
+ms.custom: sap:administration, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # Available updates for Remote Desktop Services (Terminal Services) in Windows Server 2008 R2 SP1
 
 This article lists the available hotfixes and updates for issues that occur in Remote Desktop Services (Terminal Services) for Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 2601888
 
 ## Summary
@@ -37,19 +37,15 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 ## Authentication
 
-[2752618](https://support.microsoft.com/help/2752618)  RDS client computer cannot connect to the RDS server by using a remote desktop connection in Windows 7 or in Windows Server 2008 R2
+- [2752618](https://support.microsoft.com/help/2752618)  RDS client computer cannot connect to the RDS server by using a remote desktop connection in Windows 7 or in Windows Server 2008 R2
 
-[2750396](https://support.microsoft.com/help/2750396)  Windows 7-based or Windows Server 2008 R2-based Remote Desktop Services server freezes when you try to log on to or log off the server by using a smart card
+- [2548538](https://support.microsoft.com/help/2548538)  Smart card authentication does not work when you use VDI and RD Gateway for RDC client in Windows 7 or in Windows Server 2008 R2
 
-[2548538](https://support.microsoft.com/help/2548538)  Smart card authentication does not work when you use VDI and RD Gateway for RDC client in Windows 7 or in Windows Server 2008 R2
+- [2524668](https://support.microsoft.com/help/2524668)  The single sign-on feature does not work in Windows 7 or in Windows Server 2008 R2 when you try to start a full remote desktop connection through RD Web Access
 
-[2536989](https://support.microsoft.com/help/2536989)  Single Sign-On (SSO) feature does not work after you enable the RemoteFX feature in Windows Server 2008 R2
+- [2521923](https://support.microsoft.com/help/2521923)  A program that requires you to use a smart card stops responding in a remote desktop connection in Windows Server 2008, in Windows Vista, in Windows 7 or in Windows Server 2008 R2
 
-[2524668](https://support.microsoft.com/help/2524668)  The single sign-on feature does not work in Windows 7 or in Windows Server 2008 R2 when you try to start a full remote desktop connection through RD Web Access
-
-[2521923](https://support.microsoft.com/help/2521923)  A program that requires you to use a smart card stops responding in a remote desktop connection in Windows Server 2008, in Windows Vista, in Windows 7 or in Windows Server 2008 R2
-
-[2301288](https://support.microsoft.com/help/2301288)  A Remote Desktop Services session is disconnected automatically if you apply the "Interactive logon: smart card removal behavior" Group Policy setting in Windows Server 2008 R2 or in Windows 7
+- [2301288](https://support.microsoft.com/help/2301288)  A Remote Desktop Services session is disconnected automatically if you apply the "Interactive logon: smart card removal behavior" Group Policy setting in Windows Server 2008 R2 or in Windows 7
 
 ## General OS updates
 
@@ -62,20 +58,6 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 - [2831347](https://support.microsoft.com/help/2831347) Roaming user profiles are corrupted when a monitoring program executes a WMI query on a Windows Server 2008 R2 SP1-based RDS server
 
 - [2823176](https://support.microsoft.com/help/2823176) User sessions may be logged off unexpectedly when duplicate IP addresses are detected in Windows Multipoint Server 2011
-
-- [2813636](https://support.microsoft.com/help/2813636) You cannot log off an RD session in a Windows Server 2008 R2 server environment
-
-- [2809808](https://support.microsoft.com/help/2809808) Takes longer than expected to log off from a Windows Server 2008 R2 SP1-based RDS server remotely
-
-- [2800789](https://support.microsoft.com/help/2800789)  0xC0000005 Stop error when the SVCHost.exe process that hosts Remote Desktop Services crashes in Windows Server 2008 R2
-
-- [2799035](https://support.microsoft.com/help/2799035)  Certificate Propagation service crashes when you disconnect an RDS client from a Windows 7 or Windows Server 2008 R2-based RDS server
-
-- [2795616](https://support.microsoft.com/help/2795616)  Lines in EMF file don't display correctly on a remote computer that is running Windows 7 or Windows Server 2008 R2
-
-- [2786447](https://support.microsoft.com/help/2786447)0x000000AB Stop error when a Citrix client logs off from a RD Session Host that is running Windows Server 2008 R2 SP1
-
-- [2780130](https://support.microsoft.com/help/2780130)0x00000027 Stop error when you try to use a redirected smart card to log on to a Windows 7 or Windows Server 2008 R2-based remote computer
 
 - [2780102](https://support.microsoft.com/help/2780102)0x0000003B Stop error when a Remote Desktop Connection Broker and a Windows 7 SP1 or Windows Server 2008 R2 SP1-based computer are in an RDS farm
 
@@ -124,17 +106,11 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2617687](https://support.microsoft.com/help/2617687)  Applications or services that start multiple Remote Desktop Services sessions crash in Windows 7 or in Windows Server 2008 R2
 
-- [2617115](https://support.microsoft.com/help/2617115) Stop 0x000000AB (SESSION_HAS_VALID_POOL_ON_EXIT) error when a client logs off from a Remote Desktop Services session in Windows Server 2008 R2
-
 - [2615701](https://support.microsoft.com/help/2615701) Logon Process Initialization Failure error message and the logon process does not start in Windows 7 or in Windows Server 2008 R2
-
-- [2592339](https://support.microsoft.com/help/2592339)0x0000007f Stop error or system stops responding on a computer that is running Windows Server 2008 R2 or Windows 7 when you connect to it by using the RDP protocol
 
 - [2585853](https://support.microsoft.com/help/2585853)  Choppy video playback when you play a high-definition video over a remote desktop connection in Windows 7 or in Windows Server 2008 R2
 
 - [2582172](https://support.microsoft.com/help/2582172)  Remote desktop is not displayed in Full-Screen mode when the screen resolution is 1366× 768 pixels in Windows 7 or in Windows Server 2008 R2
-
-- [2579381](https://support.microsoft.com/help/2579381)  A remote desktop session does not respond to keyboard input or mouse input after it loses the focus in Windows 7 or in Windows Server 2008 R2
 
 - [2578159](https://support.microsoft.com/help/2578159)  The logon process stops responding in Windows Server 2008 R2 or in Windows 7
 
@@ -154,10 +130,6 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2446026](https://support.microsoft.com/help/2446026)  An application that uses the Remote Desktop Connection ActiveX control to provide virtualized sessions crashes in Windows Server 2008 R2 or in Windows 7
 
-- [2431799](https://support.microsoft.com/help/2431799)  Stop error 0x0000007E occurs when multiple users establish Remote Desktop Services sessions to a Windows Server 2008 R2-based computer
-
-- [2424375](https://support.microsoft.com/help/2424375)  A remote desktop session may be incorrectly disconnected when a smart card is removed in another remote desktop session in Windows Server 2008 R2
-
 ## Device Redirection and Printing
 
 - [2871131](https://support.microsoft.com/help/2871131) The size of the HKEY_USERS\.DEFAULT registry hive continuously increases on a Windows Server-based server
@@ -172,13 +144,7 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2620656](https://support.microsoft.com/help/2620656)  Invalid redirected printers may be available in a Remote Desktop Services session that connects to a RD Session Host server that is running Windows Server 2008 or Windows Server 2008 R2
 
-[2538047](https://support.microsoft.com/help/2538047)  Audio capture redirection feature does not work after a second remote desktop connection is created in Windows Server 2008 R2
-
-## Licensing
-
-- [2648662](https://support.microsoft.com/help/2648662)  You cannot install RDS CALs automatically by using Windows PowerShell in Windows Server 2008 R2
-
-- [2618115](https://support.microsoft.com/help/2618115)  You cannot activate an RD Licensing server or install RDS CALs automatically by using Windows PowerShell in Windows Server 2008 R2
+- [2538047](https://support.microsoft.com/help/2538047)  Audio capture redirection feature does not work after a second remote desktop connection is created in Windows Server 2008 R2
 
 ## RemoteApp
 
@@ -188,17 +154,7 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2798286](https://support.microsoft.com/help/2798286) RemoteApp application session disconnects from a client computer that is running Windows 7 or Windows Server 2008 R2
 
-- [2786923](https://support.microsoft.com/help/2786923) Dialog boxes and new windows displayed as blank in Office 2013 RemoteApps on a client computer that is running Windows 7 or Windows Server 2008 R2
-
-- [2727101](https://support.microsoft.com/help/2727101)  RemoteApp server starts a duplicate instance of a 32-bit RemoteApp application on a computer that is running Windows Server 2008 R2
-
-- [2716163](https://support.microsoft.com/help/2716163)  You cannot open a file that is associated with a RemoteApp program on a computer that is running Windows Server 2008 R2
-
 - [2699817](https://support.microsoft.com/help/2699817)  RemoteApp session is disconnected when the RDP encryption level is set to Low and RDP compression is disabled in Windows Server 2008 R2
-
-- [2696020](https://support.microsoft.com/help/2696020)  You are disconnected from a RemoteApp application when you minimize the main frame window of a RemoteApp application that is published in Windows Server 2008 R2
-
-- [2682814](https://support.microsoft.com/help/2682814)  Windows are displayed incorrectly when you connect to a RemoteApp program from a computer that is running Windows 7 or Windows Server 2008 R2
 
 - [2636613](https://support.microsoft.com/help/2636613)  Rdpshell.exe process leaks memory in Windows Server 2008 R2 when you move a published RemoteApp application's window on the client side
 
@@ -208,27 +164,21 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 
 - [2580346](https://support.microsoft.com/help/2580346)  Some pop-up windows of a Remote Desktop Services (Terminal Services) RemoteApp application might be hidden in Windows 7 or in Windows Server 2008 R2
 
-- [2568409](https://support.microsoft.com/help/2568409)  You cannot run an application desktop toolbar as a RemoteApp in Windows Server 2008 R2
-
 - [2526629](https://support.microsoft.com/help/2526629)  The logon message is not displayed correctly when you connect to a RemoteApp application from a computer that has multiple monitors and that is running Windows 7 or Windows Server 2008 R2
 
 - [2522762](https://support.microsoft.com/help/2522762)  RemoteApp application does not work correctly from RD Web Access in Windows 7 or in Windows Server 2008 R2
 
-- [2522743](https://support.microsoft.com/help/)  You cannot use a calendar control in a RemoteApp application when you use the RDC 7.0 client to connect to the RemoteApp application from a computer that is running Windows 7 or Windows Server 2008 R2
+- [2522743](https://support.microsoft.com/help/2522743)  You cannot use a calendar control in a RemoteApp application when you use the RDC 7.0 client to connect to the RemoteApp application from a computer that is running Windows 7 or Windows Server 2008 R2
 
 - [981156](https://support.microsoft.com/help/981156)  RemoteApp applications are displayed as black windows when you restart the applications in a Remote desktop connection in Windows Server 2008 R2
 
 ## RemoteFX
 
-- [2523676](https://support.microsoft.com/help/2523676)  GPU is not accessed leads to some VMs that use the RemoteFX feature to not start in Windows Server 2008 R2 SP1
-
-- [2519946](https://support.microsoft.com/help/2519946)  Timeout Detection and Recovery (TDR) randomly occurs in a virtual machine that uses the RemoteFX feature in Windows Server 2008 R2
+[2519946](https://support.microsoft.com/help/2519946)  Timeout Detection and Recovery (TDR) randomly occurs in a virtual machine that uses the RemoteFX feature in Windows Server 2008 R2
 
 ## Remote Desktop Connection Broker
 
-- [2536840](https://support.microsoft.com/help/2536840)  IP addresses that are used for reconnection are not listed completely in the RD Connection Broker setting in Windows Server 2008 R2 or in Windows 7
-
-- [2525608](https://support.microsoft.com/help/2525608)  The RemoteApp and Desktop Connection Management service cannot start on a computer that is in a disjointed namespace and that is running Windows Server 2008 R2
+[2536840](https://support.microsoft.com/help/2536840)  IP addresses that are used for reconnection are not listed completely in the RD Connection Broker setting in Windows Server 2008 R2 or in Windows 7
 
 ## Remote Desktop Gateway
 
@@ -243,10 +193,6 @@ VDI: Many of the hotfixes listed below are also applicable to Windows 7 machines
 - [2578133](https://support.microsoft.com/help/2578133)  The Remote Desktop Gateway service incorrectly blocks a user account whose name contains localized characters in Windows Server 2008 R2
 
 - [2497787](https://support.microsoft.com/help/2497787)  The Remote Desktop Gateway service crashes under a heavy workload in Windows Server 2008 R2
-
-## Remote Desktop Virtualization Host (VDI)
-
-[2415644](https://support.microsoft.com/help/2415644) Could not find destination computer error when you connect an assigned VDI desktop that is deployed through Remote Desktop Connection Broker in Windows Server 2008 R2
 
 ## Remote Desktop Web Access
 

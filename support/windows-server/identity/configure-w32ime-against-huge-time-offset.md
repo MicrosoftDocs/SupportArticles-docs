@@ -2,22 +2,22 @@
 title: Configure W32Time against huge time offset
 description: Discusses how to configure W32Time to help prevent large time offsets in the domain.
 ms.date: 10/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, yizhao
-ms.prod-support-area-path: Windows Time Service
+ms.custom: sap:windows-time-service, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to configure the Windows Time service against a large time offset
 
 This article describes how to configure the Windows Time service against a large time offset.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 884776
 
 ## Introduction
@@ -138,8 +138,7 @@ The `MaxPosPhaseCorrection` and `MaxNegPhaseCorrection` registry entries have a 
 |Value Type|DWORD|
 |Subkey| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient` |
 |Notes|This entry specifies the special poll interval in seconds for manual peers. When the SpecialInterval 0x1 flag is enabled, W32Time uses this poll interval instead of a poll interval that the operating system determines. The default value on domain members is 3,600. The default value on stand-alone clients and servers is 604,800.|
-|||
-
+  
 > [!NOTE]
 > We recommend that you use the Global Policy object Editor to deploy these settings. For more information about the Windows Time service in a Windows Server 2003-based forest, see [Windows Time Service (W32Time)](/windows-server/networking/windows-time-service/windows-time-service-top).
 
@@ -175,4 +174,4 @@ The `MaxAllowedClockErrInSecs` registry entry has a default value of 43,200 (12 
 |Value Type|DWORD|
 |Subkey| `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W32Time\Parameters`|
 |Notes|Specifies the maximum clock change that is enabled in seconds. When the event is logged, the time isn't adjusted based on the value. This behavior occurs to help protect against any suspicious time stamp activity. The default value for domain members is 43,200.|
-|||
+  

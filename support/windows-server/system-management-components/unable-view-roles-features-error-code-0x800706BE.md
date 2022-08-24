@@ -1,23 +1,23 @@
 ---
-title: error code 0x800706BE 
+title: error code 0x800706BE
 description: Provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Server Manager
+ms.custom: sap:server-manager, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # You are unable to view Roles and Features and receive error code 0x800706BE in Server Manager
 
 This article provides a resolution for the issue that you are unable to view Roles and Features and receive error code 0x800706BE in Server Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2461206
 
 ## Symptoms
@@ -35,30 +35,30 @@ For more information, see the event log: Diagnostics, Event Viewer, Applications
 
 At the same time, the event below is added into the Microsoft-Windows-ServerManager/Operational log:  
 
->Log Name:      Microsoft-Windows-ServerManager/Operational  
-Source:        Microsoft-Windows-ServerManager  
-Date:          \<date & time>  
-Event ID:      1601  
+>Log Name:      Microsoft-Windows-ServerManager/Operational  
+Source:        Microsoft-Windows-ServerManager  
+Date:          \<date & time>  
+Event ID:      1601  
 Task Category: None  
-Level:         Error  
+Level:         Error  
 Keywords:  
-User:          \<user name>  
-Computer:      \<computer name>  
+User:          \<user name>  
+Computer:      \<computer name>  
 Description:  
 Could not discover the state of the system. An unexpected exception was found:  
 System.Runtime.InteropServices.COMException (0x800706BE): The remote procedure call failed. (Exception from HRESULT: 0x800706BE)  
-   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)  
-   at Microsoft.Windows.ServerManager.ComponentInstaller.CreateSessionAndPackage(IntPtr& session, IntPtr& package)  
-   at Microsoft.Windows.ServerManager.ComponentInstaller.InitializeUpdateInfo()  
-   at Microsoft.Windows.ServerManager.ComponentInstaller.Initialize()  
-   at Microsoft.Windows.ServerManager.Common.Provider.RefreshDiscovery()  
-   at Microsoft.Windows.ServerManager.LocalResult.PerformDiscovery()  
-   at Microsoft.Windows.ServerManager.ServerManagerModel.CreateLocalResult(RefreshType refreshType)  
-   at Microsoft.Windows.ServerManager.ServerManagerModel.InternalRefreshModelResult(Object state)  
+   at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)  
+   at Microsoft.Windows.ServerManager.ComponentInstaller.CreateSessionAndPackage(IntPtr& session, IntPtr& package)  
+   at Microsoft.Windows.ServerManager.ComponentInstaller.InitializeUpdateInfo()  
+   at Microsoft.Windows.ServerManager.ComponentInstaller.Initialize()  
+   at Microsoft.Windows.ServerManager.Common.Provider.RefreshDiscovery()  
+   at Microsoft.Windows.ServerManager.LocalResult.PerformDiscovery()  
+   at Microsoft.Windows.ServerManager.ServerManagerModel.CreateLocalResult(RefreshType refreshType)  
+   at Microsoft.Windows.ServerManager.ServerManagerModel.InternalRefreshModelResult(Object state)  
 
 ## Cause
 
-Some catalog files, manifest files, or MUM files are corrupted on the computer.
+Some catalog files, manifest files, or MUM files are corrupted on the computer.
 
 ## Resolution
 
@@ -68,10 +68,10 @@ Here are the steps to fix the issue:
 2. Run the Microsoft Update Readiness Tool on the problematic computer.
 3. You open the %Systemroot%\\Windows\\logs\\CBS\\Checksur.log file after the scan was completed.
 4. You check corrupt information in the files. Here are some samples:  
-    > (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB978601_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name  
-    (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB979309_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name
+    > (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB978601_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name  
+    (f) CBS MUM Corrupt 0x00000000 servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  Expected file name Package_for_KB979309_server~31bf3856ad364e35~amd64\~~6.0.1.0.mum does not match the actual file name
 
-    Or  
+    Or  
 
     > (f) CBS MUM Corrupt 0x800B0100  servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.mum   servicing\\Packages\\Package_for_KB978601~31bf3856ad364e35~amd64\~~6.0.1.0.cat Package   manifest cannot be validated by the corresponding catalog
     (f) CBS MUM Corrupt 0x800B0100   servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.mum  servicing\\Packages\\Package_for_KB979309~31bf3856ad364e35~amd64\~~6.0.1.0.cat Package  manifest cannot be validated by the corresponding catalog

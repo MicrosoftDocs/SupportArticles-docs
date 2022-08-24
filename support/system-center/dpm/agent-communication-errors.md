@@ -2,7 +2,6 @@
 title: DPM agent communication errors
 description: Fixes communication issues that occur on a System Center Data Protection Manager agent.
 ms.date: 07/24/2020
-ms.prod-support-area-path:
 ms.reviewer: dewitth
 ---
 # Communication issues on a Data Protection Manager agent

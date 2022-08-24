@@ -2,7 +2,7 @@
 title: Defragmenting database disk drives
 description: This article provides some guidance regarding defragmentation of SQL Server database drives.
 ms.date: 12/02/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
 ---

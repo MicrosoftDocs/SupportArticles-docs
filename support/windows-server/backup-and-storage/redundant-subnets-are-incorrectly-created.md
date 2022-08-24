@@ -2,22 +2,22 @@
 title: Redundant subnets are incorrectly created
 description: Discusses an issue in which redundant subnets are incorrectly created in an iSCSI IPv6 network.
 ms.date: 09/25/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, Roger.Blume, winciccore
-ms.prod-support-area-path: iSCSI
+ms.custom: sap:iscsi, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Redundant subnets are incorrectly created in an iSCSI IPv6 network
 
 This article provides a solution to an issue where redundant subnets are incorrectly created in an iSCSI IPv6 network.
 
-_Original product version:_ &nbsp; Windows Server 2019  
+_Applies to:_ &nbsp; Windows Server 2019  
 _Original KB number:_ &nbsp; 4536782
 
 ## Symptoms

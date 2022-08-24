@@ -2,8 +2,9 @@
 title: An application fails to create a COM+ component
 description: This article describes a problem that might occur when a client application tries to create a COM+ component, and the client application receives an error message.
 ms.date: 05/12/2020
-ms.prod-support-area-path: Component development
+ms.custom: sap:Component development
 ms.reviewer: wmascia
+ms.technology: windows-dev-apps-component-dev
 ---
 # A client application may intermittently receive an error message when it tries to create a COM+ component
 
@@ -11,10 +12,6 @@ This article helps you resolve the problem where the client application might in
 
 _Original product version:_ &nbsp; Windows  
 _Original KB number:_ &nbsp; 911359
-
-> [!NOTE]
-> Not sure if this is the right fix? We've added this issue to our
-[memory dump diagnostic](https://home.diagnostics.support.microsoft.com/selfhelp?knowledgebasearticlefilter=2027760) which can confirm.
 
 ## Symptoms
 

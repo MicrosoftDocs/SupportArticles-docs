@@ -2,7 +2,7 @@
 title: Execution of CLR fails with TypeInitializationException
 description: This article provides workarounds for the problem where the execution of SQL Server CLR objects fails and returns a System.TypeInitializationException exception.
 ms.date: 01/15/2021
-ms.prod-support-area-path: Database Design and Development
+ms.custom: sap:Database Design and Development
 ms.technology: 
 ms.reviewer: 
 ms.topic: article
@@ -20,13 +20,13 @@ _Original KB number:_ &nbsp; 4576575
 > [!IMPORTANT]
 > This article contains information that shows you how to help lower security settings or how to turn off security features on a computer. You can make these changes to work around a specific problem. Before you make these changes, we recommend that you evaluate the risks that are associated with implementing this workaround in your particular environment. If you implement this workaround, take any appropriate additional steps to help protect the computer.
 
-After you install an applicable .NET Framework update to fix a vulnerability that is described in [CVE-2020-1147](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1147), executing [Building Database Objects with Common Language Runtime (CLR) Integration](/sql/relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration) that read XML into either [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance) objects fails. This occurs because of a **System.TypeInitializationException** exception that has a nested **FileNotFoundException** exception. This problem indicates that the **System.Drawing** assembly could not be loaded.
+After you install an applicable .NET Framework update to fix a vulnerability that is described in [CVE-2020-1147](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1147), executing [Building Database Objects with Common Language Runtime (CLR) Integration](/sql/relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration) that read XML into either [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance) objects fails. This occurs because of a **System.TypeInitializationException** exception that has a nested **FileNotFoundException** exception. This problem indicates that the **System.Drawing** assembly could not be loaded.
 
 For reference, see the following example:
 
 > Msg 6522, Level 16, State 1, Procedure [your CLR object], Line 0 [Batch Start Line 0]
 A .NET Framework error occurred during execution of user-defined routine or aggregate "your CLR object":  
-System.TypeInitializationException: The type initializer for 'Scope' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Drawing, Version=4.0.0.0, Culture=neutral,  PublicKeyToken=\<Token>' or one of its dependencies. The system cannot find the file specified.  
+System.TypeInitializationException: The type initializer for 'Scope' threw an exception. ---> System.IO.FileNotFoundException: Could not load file or assembly 'System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=\<Token>' or one of its dependencies. The system cannot find the file specified.  
 System.TypeInitializationException:  
 at System.Data.TypeLimiter.Scope.IsTypeUnconditionallyAllowed(Type type)  
 at System.Data.TypeLimiter.Scope.IsAllowedType(Type type)  
@@ -57,30 +57,30 @@ For more information, including how to obtain the patch, see [.NET Framework rep
 > [!WARNING]
 > This workaround may make a computer or a network more vulnerable to attack by malicious users or by malicious software such as viruses. We do not recommend this workaround but are providing this information so that you can implement this workaround at your own discretion. Use this workaround at your own risk.
 
-For applications that deserialize untrusted XML data into an instance of either `DataSet` or `DataTable` objects, we recommend that you use an alternative method to access the data. For applications that read only trusted XML data, you can try one of the following workarounds.
+For applications that deserialize untrusted XML data into an instance of either `DataSet` or `DataTable` objects, we recommend that you use an alternative method to access the data. For applications that read only trusted XML data, you can try one of the following workarounds.
 
 > [!NOTE]
-> Workarounds 1 and 2 are preferred because the changes are made locally. Workaround 3 is system-wide.
+> Workarounds 1 and 2 are preferred because the changes are made locally. Workaround 3 is system-wide.
 
 > [!WARNING]
-> These workarounds remove type restrictions for deserializing XML into instances of `DataSet` and `DataTable` objects. This may open a security hole if the application reads untrusted input.
+> These workarounds remove type restrictions for deserializing XML into instances of `DataSet` and `DataTable` objects. This may open a security hole if the application reads untrusted input.
 
 - Workaround 1: Call AppContext.SetSwitch
 
-    Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
+    Change the start of the SQL CLR object code to set the **Switch.System.Data.AllowArbitraryDataSetTypeInstantiation** switch to **true**. You have to do this for every applicable SQL CLR object. See the following example.
 
-    ![AppContext.SetSwitch](./media/execution-clr-fails-typeInitializationexception/code-image.png)
+    :::image type="content" source="media/execution-clr-fails-typeInitializationexception/code.png" alt-text="Screenshot shows an example of the SQL CLR object code change.":::
 
     For more information, see [DataSet and DataTable security guidance](/dotnet/framework/data/adonet/dataset-datatable-dataview/security-guidance).
 
-- Workaround 2: Create or change the *Sqlservr.exe.config* file for each applicable instance
+- Workaround 2: Create or change the _Sqlservr.exe.config_ file for each applicable instance
 
     This workaround applies only to the instance itself.
 
     > [!IMPORTANT]
-    > We cannot guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
+    > We cannot guarantee that this change will not be overwritten by SQL Server updates or instance upgrades. We recommend that you determine whether the change persists after an instance update or upgrade.
 
-    1. Locate the *Sqlservr.exe.config* file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
+    1. Locate the _Sqlservr.exe.config_ file in the [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server):
 
        `%ProgramFiles%\Microsoft SQL Server\<Instance_ID>.<Instance Name>\MSSQL\Binn\`
 
@@ -94,11 +94,11 @@ For applications that deserialize untrusted XML data into an instance of either 
 
        See the following example of a SQL Server 2016 instance.
 
-       ![Code example](./media/execution-clr-fails-typeInitializationexception/config-image.png)
+       :::image type="content" source="media/execution-clr-fails-typeInitializationexception/config.png" alt-text="Screenshot shows an example of SQL Server 2016 instance.":::
 
-- Workaround 3: Create the System.Drawing assembly
+- Workaround 3: Create the System.Drawing assembly
 
-    Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either DataSet.ReadXML or DataTable.ReadXML. For example:
+    Manually create the **System.Drawing** assembly in SQL Server from the DLL file in the **Global Assembly Cache (GAC)**, and then re-create assemblies that use either DataSet.ReadXML or DataTable.ReadXML. For example:
 
     ```sql
     CREATE ASSEMBLY [Drawing] FROM 'C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll' WITH PERMISSION_SET = UNSAFE GO
@@ -107,7 +107,7 @@ For applications that deserialize untrusted XML data into an instance of either 
 - Workaround 4: Create a registry subkey
 
     > [!IMPORTANT]
-    > Follow the steps in this workaround carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+    > Follow the steps in this workaround carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
     This workaround will affect all .NET applications on the server. Therefore, you should use this method only as a last resort if you cannot use the other workarounds.
 
@@ -117,19 +117,18 @@ For applications that deserialize untrusted XML data into an instance of either 
 
        `KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\AppContext`  
 
-    1. Create a REG_SZ value, as follows.
+    1. Create a REG_SZ value, as follows.
 
        |Name|Switch.System.Data.AllowArbitraryDataSetTypeInstantiation|
        |---|---|
        |Value|true|
-       |||
 
     1. Restart all SQL Server instances.
 
        See the following example.
 
-       ![Key example](./media/execution-clr-fails-typeInitializationexception/appcontext-image.png)
+       :::image type="content" source="media/execution-clr-fails-typeInitializationexception/appcontext.png" alt-text="Screenshot of the AppContext registry key in Registry Editor.":::
 
 ## More information
 
-This problem is caused by the action of a recent .NET Framework security update to correct the .NET Framework XML content markup validation. SQL Server CLR objects that do not read XML into instances of either `DataSet` or `DataTable` objects will not be affected.
+This problem is caused by the action of a recent .NET Framework security update to correct the .NET Framework XML content markup validation. SQL Server CLR objects that do not read XML into instances of either `DataSet` or `DataTable` objects will not be affected.

@@ -2,7 +2,6 @@
 title: Integration with OpsMgr fails with error 10218
 description: Fixes an issue where you receive error 10218 when creating the Virtual Machine Manager integration with Operations Manager
 ms.date: 07/17/2020
-ms.prod-support-area-path: 
 ms.reviewer: alvinm
 ---
 # Operations Manager integration with System Center 2012 Virtual Machine Manager fails with error 10218
@@ -29,15 +28,15 @@ When creating the integration from System Center 2012 Virtual Machine Manager (V
 
 ## Cause
 
-In this scenario, the Virtual Server 2005 R2 Management Pack was imported which imports the Microsoft Virtualization Core Library. The cause of the problem is that VMM 2012 will import a newer version of the Microsoft Virtualization Core Library Management Pack and the old version cannot be present in order for integration to complete successfully.
+In this scenario, the Virtual Server 2005 R2 Management Pack was imported which imports the Microsoft Virtualization Core Library. The cause of the problem is that VMM 2012 will import a newer version of the Microsoft Virtualization Core Library Management Pack and the old version cannot be present in order for integration to complete successfully.
 
 ## Resolution
 
-There are two potential solutions:
+There are two potential solutions:
 
 - Remove the old version of the Microsoft Virtualization Core Library and the Microsoft Virtual Server 2005 R2 Management Pack.
 
-- Configure a second Operations Management group for the VMM 2012 integration and configure the VMM 2012 server as well as the Hyper-V servers to report to this new management group.  
+- Configure a second Operations Management group for the VMM 2012 integration and configure the VMM 2012 server as well as the Hyper-V servers to report to this new management group.  
 
 ## More information
 

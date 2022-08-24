@@ -2,7 +2,6 @@
 title: SQL Server availability solutions
 description: Describes SQL Server availability solutions for the Identity Manager service (FIMService) and the Synchronization service (FIMSynchronizationService) databases.
 ms.date: 08/18/2020
-ms.prod-support-area-path: 
 ms.reviewer: jchornbe, stevekl, mwahl, midi, stlieber
 ---
 # SQL Server availability solutions for Microsoft Identity Manager services databases
@@ -18,7 +17,7 @@ High availability (HA) is supported in the following scenarios for a configurati
 
 - Failover clustering is supported.
 - Mirroring is supported on 4.4.1459.0 or later versions.
-- AlwaysOn Availability Groups is supported on 4.4.1459.0 or later versions.
+- Always On Availability Groups is supported on 4.4.1459.0 or later versions.
 - Synchronization server HA isn't supported.
 
 ## Disaster recovery
@@ -27,7 +26,7 @@ Disaster recovery is supported in the following scenarios for a configuration of
 
 - Log shipping is supported.
 - Mirroring is supported (this feature will likely be deprecated in future SQL Server versions).
-- AlwaysOn Availability Groups is supported - [Synchronous (supported on 4.4.1459.0 or later versions)/Asynchronous-Commit Availability mode]  
+- Always On Availability Groups is supported - [Synchronous (supported on 4.4.1459.0 or later versions)/Asynchronous-Commit Availability mode]  
 
 ## Known issues and findings
 

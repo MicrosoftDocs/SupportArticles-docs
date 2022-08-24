@@ -2,7 +2,7 @@
 title: Applications aren't deployed to users who are logged on to domain controllers
 description: Describes an issue in which applications aren't deployed to users who are logged on to domain controllers because user policies aren't retrieved.
 ms.date: 06/16/2020
-ms.prod-support-area-path: Client Operations
+ms.custom: sap:Client Operations
 ---
 # Applications aren't deployed to users who are logged on to domain controllers
 
@@ -17,7 +17,7 @@ When you deploy applications to a user collection in Configuration Manager, the 
 
 > Skipping request for user policy assignments for local user \<User SID>.
 
-Additionally, you may not see any applications that are deployed to user collections in **Software Center** on the domain controller.
+Additionally, you may not see any applications that are deployed to user collections in **Software Center** on the domain controller.
 
 ## Cause
 
@@ -25,7 +25,7 @@ This issue occurs because the user policies aren't retrieved on domain controlle
 
 ## Resolution
 
-To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
+To fix this issue, update to [Configuration Manager current branch version 1906](/mem/configmgr/core/plan-design/changes/whats-new-in-version-1906).
 
 ## Workaround
 

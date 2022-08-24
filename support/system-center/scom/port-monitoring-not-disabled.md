@@ -2,7 +2,6 @@
 title: The Disable Port Monitoring task doesn't work
 description: Fixes a problem that prevents port monitoring for a network port device from being disabled as expected when you run the Disable Port Monitoring task.
 ms.date: 07/06/2020
-ms.prod-support-area-path:
 ms.reviewer: robertri, lloydg
 ---
 # Port monitoring isn't disabled when you run the Disable Port Monitoring task

@@ -1,23 +1,23 @@
 ---
 title: System error 85 with NET USE command
 description: This article helps fix the system error 85 that occurs when a non-administrative user attempts to reconnect to a shared network drive that the user has already used by using the net use command.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # System error 85 with the NET USE command
 
 This article helps fix the system error 85 that occurs when a non-administrative user attempts to reconnect to a shared network drive that the user has already used by using the `net use` command.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 253821
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Discusses the manner in which Windows supports hard disks that have
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Windows support for hard disks that are larger than 2 TB
 
 This article discusses the manner in which Windows supports hard disks that have a storage capacity of more than 2 TB and explains how to initialize and partition disks to maximize space usage.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2022 Standard and Datacenter, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2581408
 
 ## Summary
@@ -28,12 +28,12 @@ This article outlines Microsoft support across all Windows versions since Window
 
 > [!NOTE]
 >
-> - This article refers to disk capacity in powers of two instead of powers of 10, which is the more common designation on storage device capacity labels. Therefore, references to *2 TB* actually refer to a product that is labeled as having *2.2 TB* of capacity.
+> - This article refers to disk capacity in powers of two instead of powers of 10, which is the more common designation on storage device capacity labels. Therefore, references to _2 TB_ actually refer to a product that is labeled as having _2.2 TB_ of capacity.
 > - The operating system-specific behavior that is noted in this article also applies to the server variants of that system. Therefore, a reference to Windows 7 includes Windows Server 2008 R2, Windows Vista includes Windows Server 2008, and Windows XP includes Windows Server 2003 and Windows Server 2003 R2.
 
 ### More information
 
-The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). It's the arrangement of the logical sectors that constitute the media. *LBA0* represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
+The management of modern storage devices is addressed by using a scheme called Logical Block Addressing (LBA). It's the arrangement of the logical sectors that constitute the media. _LBA0_ represents the first logical sector of the device, and the last LBA designation represents the last logical sector of the device, one label per sector. To determine the capacity of the storage device, you multiply the number of logical sectors within the device by the size of each logical sector. The current size standard is 512 bytes. For example, to achieve a device that has a capacity of 2 TB, you must have 3,906,250,000 512-byte sectors. However, a computer system requires 32 bits (1 s and 0 s) of information to represent this large number. Therefore, any storage capacity that is greater than what can be represented by using 32 bits would require an additional bit. That is, 33 bits.
 
 The problem in this computation is that the partitioning scheme that is used by most modern Windows-based computers is MBR (master boot record). This scheme sets a limit of 32 for the number of bits that are available to represent the number of logical sectors.
 
@@ -93,8 +93,7 @@ The following tables list Microsoft support for the various concepts that are di
 |Windows 7|Supported|Not Supported|Supported|
 |Windows Vista|Supported|Not Supported|Supported|
 |Windows XP|Supported|Not Supported|Not Supported|
-|||||
-
+  
 Hybrid-MBR is an alternative style of partitioning that isn't supported by any version of Windows.
 
 ### Table 2: Windows support for system firmware
@@ -104,7 +103,6 @@ Hybrid-MBR is an alternative style of partitioning that isn't supported by any v
 |Windows 7|Supported|Supported|
 |Windows Vista|Supported|Supported|
 |Windows XP|Supported|Not Supported|
-||||
 
 ### Table 3: Windows support for combinations of boot firmware and partitioning schemes for the boot volume
 
@@ -113,7 +111,6 @@ Hybrid-MBR is an alternative style of partitioning that isn't supported by any v
 |Windows 7|Supported|Supported; <br/>requires a 64-bit version of Windows|Boot volume not supported|Boot volume not supported|
 |Windows Vista|Supported|Supported; <br/>requires a 64-bit version of Windows|Boot volume not supported|Boot volume not supported|
 |Windows XP|Supported|Not supported|Boot volume not supported|Boot volume not supported|
-||||||
 
 ### Table 4: Windows support for large-capacity disks as non-booting data volumes
 
@@ -122,7 +119,6 @@ Hybrid-MBR is an alternative style of partitioning that isn't supported by any v
 |Windows 7|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows Vista|Supports up to 2 TB of addressable capacity**|Not Supported|Supports full capacity|
 |Windows XP|Supports up to 2 TB of addressable capacity**|Not Supported|Not Supported|
-|||||
 
 Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized by using the MBR partitioning scheme. For example, for a 3-TB single disk that is initialized by using MBR, Windows can create partitions up to the first 2 TB. However, the remaining capacity cannot be addressed and, therefore, cannot be used.
 
@@ -130,12 +126,12 @@ Capacity beyond 2 TB cannot be addressed by Windows if the disk is initialized b
 
 The following steps show how to initialize a fresh disk by using the GPT partitioning scheme to help ensure that Windows can address the maximum available storage capacity. Make sure that you back up any important data before you try these steps.
 
-1. Click **Start**, type *diskmgmt.msc* in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it's necessary, enter the credentials for a user account that has Administrator privileges.
+1. Click **Start**, type _diskmgmt.msc_ in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it's necessary, enter the credentials for a user account that has Administrator privileges.
 
     > [!NOTE]
     > When a non-initialized disk is detected by Windows, the following window opens to prompt you to initialize the disk.
 
-    ![Screenshot of the Initialize Disk dialog box](./media/support-for-hard-disks-exceeding-2-tb/initialize-disk-window.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/initialize-disk-window.png" alt-text="Initialize the disk in the Initialize Disk dialog box." border="false":::
 
 2. In the **Initialize Disk** dialog box, click **GPT (GUID Partition Table)**, and then press OK.
 
@@ -144,7 +140,7 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 
 3. Check the Disk Management window to verify that the disk is initialized. If it is, the status row for that disk at the bottom of the window should indicate that the disk is **Online**.
 
-    ![Screenshot of the Online disk status](./media/support-for-hard-disks-exceeding-2-tb/check-online-status.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/check-online-status.png" alt-text="Check whether the disk status is online." border="false":::
 
 4. After the disk is initialized, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 
@@ -152,11 +148,11 @@ The following steps show how to initialize a fresh disk by using the GPT partiti
 
 If you have previously initialized the disk by using the MBR partitioning scheme, follow these steps to initialize the disk by using the GPT scheme. Make sure that you back up any important data before you try these steps.
 
-1. Click **Start**, type *diskmgmt.msc* in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it's necessary, enter the credentials for a user account that has Administrator privileges.
+1. Click **Start**, type _diskmgmt.msc_ in the **Start search** box, right-click diskmgmt.msc, and then click **Run as Administrator**. If it's necessary, enter the credentials for a user account that has Administrator privileges.
 
-2. In the Disk Management window, examine the disk status rows at the bottom. In the following example, the user has a 3-TB disk that was previously initialized by using the MBR partitioning scheme. That device is labeled here as *Disk 1*.
+2. In the Disk Management window, examine the disk status rows at the bottom. In the following example, the user has a 3-TB disk that was previously initialized by using the MBR partitioning scheme. That device is labeled here as _Disk 1_.
 
-    ![Screenshot of the disk status in the Disk Management window](./media/support-for-hard-disks-exceeding-2-tb/disk-status-checking.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/disk-status-checking.png" alt-text="Check the disk status in the Disk Management window." border="false":::
 
 3. Disk 1 contains two separate unallocated sections. This separation indicates that the first 2 TB of the disk space can be used. However, the remaining space is non-addressable because of the 32-bit addressing space limitation of the MBR partitioning scheme. To enable the system to fully address the total capacity of the storage device, you must convert the disk to use the GPT partitioning scheme.
 
@@ -165,7 +161,7 @@ If you have previously initialized the disk by using the MBR partitioning scheme
     > [!NOTE]
     > The display should now show that the full amount of available space in unallocated.
 
-    ![Screenshot of clicking Convert to GPT Disk](./media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.jpg)
+    :::image type="content" source="media/support-for-hard-disks-exceeding-2-tb/convert-to-gpt-disk.png" alt-text="Full amount of available space in unallocated is shown." border="false":::
 
 5. Now that the disk is initialized to access the full storage capacity, you must create a partition, and then format that partition by using a file system. It's to be able to store data in that partition, and assign a name and a drive letter to that partition. To do it, right-click the unallocated space on the right side of the status row for that disk, and then click **New Simple Volume**. Follow the steps in the partition wizard to complete this process.
 

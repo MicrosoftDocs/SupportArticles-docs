@@ -3,21 +3,21 @@ title: Unattended Setup does not Use Computer Name Specified by User during OOBE
 description: Provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Setup
+ms.custom: sap:setup, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Unattended Setup does not Use Computer Name Specified by User during OOBE to Join the Domain
 
 This article provides a resolution for the issue that unattended setup does not use Computer Name Specified by User during OOBE to Join the Domain.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 944353
 
 ## Rapid Publishing

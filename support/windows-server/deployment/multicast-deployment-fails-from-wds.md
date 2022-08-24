@@ -4,20 +4,20 @@ description: Provides a solution to an issue where deploying an image from a Win
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, scottmca
-ms.prod-support-area-path: MDM
-ms.technology: windows-server-deployment 
+ms.custom: sap:mdm, csstroubleshoot
+ms.technology: windows-server-deployment
 ---
 # Multicast Deployment Fails from Windows Deployment Services
 
 This article provides a solution to an issue where deploying an image from a Windows Deployment Services (WDS) server by using multicast fails.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2582106
 
 ## Symptoms

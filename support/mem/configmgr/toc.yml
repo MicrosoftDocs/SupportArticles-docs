@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-configuration-manager.md
+  href: welcome-configuration-manager.yml
 - name: Alerts, reporting, and queries
   items:
     - name: A log with a long line is truncated in CMTrace
@@ -12,6 +12,8 @@
       href: reports-not-run-as-expected.md
     - name: Reporting stops working
       href: reporting-stops-working.md
+    - name: rsProcessingAborted error when running reports
+      href: rsprocessingaborted-error-run-reports.md
     - name: SQL query times out or slow console performance
       href: sql-query-times-out-or-console-slow-performance.md
 - name: Application management and software distribution
@@ -66,12 +68,14 @@
       href: inactive-clients-not-send-inventory.md
     - name: Clients don't receive policy data
       href: clients-not-receive-policy-data.md
-    - name: Cloud management gateway
+    - name: Cloud services
       items:
         - name: WINHTTP_CALLBACK_STATUS_FLAG_CERT_CN_INVALID
           href: cannot-download-content-from-cmg.md
         - name: Clients can't communicate with CMG
           href: cmg-communication-error-403.md
+        - name: Tenant attach components fail to connect to backend cloud service
+          href: tenant-attach-component-not-connect-to-gateway.md
     - name: Collections
       items:
         - name: Multiple instances of the Unknown computers collection
@@ -96,12 +100,18 @@
   items:
     - name: Console appears to hang when loading drivers
       href: console-stops-responding.md
+    - name: Console crashes after upgrading to version 2107
+      href: console-crash-after-upgrade.md
     - name: Internal Error 2711.LP3076
       href: internal-error-2711-lp3076-during-console-installation.md
     - name: Microsoft.ConfigurationManagement has stopped working
       href: unhandled-exception-launch-console.md
+    - name: No data in the Windows 10 servicing dashboard
+      href: windows-10-servicing-dashboard-empty.md
 - name: Content management
   items:
+    - name: Configure peer cache for Configuration Manager clients
+      href: configure-peer-cache.md
     - name: Distribution point and content distribution
       items:
         - name: A deployment property change isn't saved
@@ -156,10 +166,14 @@
   items:
     - name: Configuration Manager diagnostics
       href: diagnostics-sdp.md
+    - name: Failed devices on client health dashboard
+      href: failed-devices-client-health-dashboard.md
 - name: Discovery
   items:
     - name: lastLogonTimestamp isn't updated as expected
       href: lastlogontimestamp-not-accurate.md
+    - name: Resource domain is changed after installing Windows updates
+      href: resource-domain-changes.md
 - name: Endpoint Protection
   items:
     - name: An incorrect Endpoint Definition status
@@ -200,6 +214,8 @@
           href: scheduled-updates-fails-error-0x800700a1.md
         - name: Unable to manage boot images
           href: error-managing-boot-images.md
+        - name: Errors when capturing Windows 11 image
+          href: windows-11-image-capture-fail.md
     - name: Configure OS deployment in System Center 2012 Configuration Manager
       href: configure-operating-system-deployment.md
     - name: Manage drivers
@@ -208,7 +224,7 @@
           href: fail-to-import-drivers.md
         - name: Insufficient permissions to migrate a driver package
           href: insufficient-permissions-to-migrate-driver-package.md
-        - name: Signed drivers are displayed as unsigned
+        - name: Signed drivers are displayed as unsigned
           href: signed-drivers-shown-as-unsigned.md
     - name: PXE boot
       items:
@@ -218,7 +234,7 @@
           href: advanced-troubleshooting-pxe-boot.md
         - name: Boot from a PXE server
           href: boot-from-pxe-server.md
-        - name: Failed to get the encrypted PXE password
+        - name: Failed to get the encrypted PXE password
           href: certificate-not-updated-on-pxe-dp.md
         - name: PXE boot doesn't work
           href: pxe-boot-not-work.md
@@ -300,6 +316,8 @@
           href: management-points-fail-http-500-errors.md
         - name: Service connection point doesn't download updates
           href: service-connection-point-not-download-updates.md
+        - name: Troubleshoot state message processing performance issues
+          href: state-message-processing-performance.md
     - name: SMS Executive service
       items:
         - name: SMS_EXECUTIVE service crashes
@@ -328,13 +346,15 @@
           href: clients-automatically-upgrade.md
         - name: Error downloading the ConfigMgr.AdminUIContent.cab file
           href: service-connection-tool-not-download-updates.md
+        - name: Offline servicing a WIM image with Latest Cumulative Update fails
+          href: offline-servicing-lcu-may-fail.md
         - name: Site upgrade gets stuck at database update
           href: site-upgrade-blocked-in-database-update.md
         - name: Upgrade to System Center 2012 Configuration Manager SP1
           href: upgrade-to-configmgr-2012-sp1.md
         - name: Understand and troubleshoot Updates and Servicing
           href: understand-troubleshoot-updates-servicing.md
-    - name: Maintenance tasks default settings
+    - name: Maintenance tasks default settings
       href: maintenance-tasks-default-settings.md
 - name: Software update management
   items:
@@ -352,6 +372,8 @@
           href: error-0x800f0831-installing-update.md
         - name: .NET Framework 4.7.2 updates fail to sync
           href: dotnet-framework-updates-fail-to-sync.md
+        - name: Updates aren't downloaded when an ADR runs
+          href: adr-updates-download-failure.md
     - name: State messaging
       href: state-messaging-description.md
     - name: Understand software update management
@@ -384,6 +406,8 @@
           href: troubleshoot-software-update-deployments.md
     - name: Windows Server Update Services (WSUS)
       items:
+        - name: Decline superseded updates in WSUS
+          href: decline-superseded-updates.md
         - name: Deploy Windows Defender definition updates
           href: deploy-definition-updates-using-wsus.md
         - name: Error 80244007 when WSUS client scans for updates
@@ -392,6 +416,8 @@
           href: high-network-bandwidth-usage.md
         - name: Optimize WSUS client performance
           href: optimize-wsus-client-performance.md
+        - name: Reindex the WSUS database
+          href: reindex-the-wsus-database.md  
         - name: The spDeleteUpdate stored procedure runs slowly
           href: spdeleteupdate-slow-performance.md          
         - name: Troubleshoot issues with WSUS client agents
@@ -400,6 +426,8 @@
           href: troubleshoot-wsus-connection-failures.md
         - name: Troubleshoot WSUS high CPU usage
           href: troubleshoot-wsus-server-high-cpu-usage.md
+        - name: Troubleshoot WSUS synchronization and import issues
+          href: troubleshoot-wsus-import-sync-issues.md 
         - name: WSUS and Windows Update Agent diagnostics
           href: wsus-and-windows-update-agent-diagnostics.md
         - name: WSUS best practices

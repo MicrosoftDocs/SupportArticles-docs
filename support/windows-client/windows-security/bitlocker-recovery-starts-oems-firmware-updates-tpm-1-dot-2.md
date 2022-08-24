@@ -3,21 +3,21 @@ title: BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2
 description: Provides a workaround for the issue where BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: BitLocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2
 
 This article provides a workaround for the issue where BitLocker Recovery starts when OEMs perform firmware updates for TPM 1.2.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3184518
 
 ## Symptoms

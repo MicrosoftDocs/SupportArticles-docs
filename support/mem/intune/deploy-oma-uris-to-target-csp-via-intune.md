@@ -1,35 +1,26 @@
 ---
-title: Support tip - Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
-description: This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom mobile device management (MDM) policies are delivered to a Windows 10-based device.
-ms.date: 09/28/2020
-ms.prod-support-area-path: device configuration
+title: Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
+description: This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom mobile device management (MDM) policies are delivered to a Windows 10-based device with Microsoft Intune.
+ms.date: 12/20/2021
 ms.reviewer: sausarka
-author: v-miegge
+author: helenclu
 ms.author: sausarka
+search.appverid: MET150
 ms.custom: 
 - CI 121166
 - CSSTroubleshooting
+- sap:device configuration
 ---
 
-# Support tip - Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
+# Deploy OMA-URIs to target a CSP through Intune, and a comparison to on-premises
 
-This article describes the significance of CSPs, Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom MDM policies are delivered to a Windows 10-based device.
+This article describes the significance of Windows Configuration Service Providers (CSPs), Open Mobile Alliance – Uniform Resources (OMA-URIs), and how custom policies are delivered to a Windows 10-based device with Microsoft Intune.
 
-## Introduction
-
-By using Microsoft Intune, you can provide a modern device experience to users, and you can better support their digital migration by focusing on an internet-first device connection. Policy-based configuration is the primary method for ensuring that devices have the appropriate settings, and that the policies that are deployed through Intune can be broadly categorized as either a mobile device management (MDM) policy (device management) or mobile app management MAM policy (app protection).
-
-Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Intune portal user interface (UI). Although  many settings can be potentially configured on a Windows device, it’s not feasible to have all of them in the portal. Also, as advancements are made, it’s not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
-
-This topic explains the significance of these CSPs and Open Mobile Alliance–Uniform Resources (OMA-URIs), and also discusses how these custom MDM policies are delivered to Windows 10-based devices.
-
-## Background
-
-CSPs were introduced to the Windows 10 platform starting in Windows 10, version 1607. CSPs provide a mechanism that enables certain settings or features to be manipulated by delivering the right OMA-URI configuration to the client. CSPs are an interface that is used by MDM providers to read, set, modify, and delete configuration settings on the device. Typically, it is done through keys and values in the Windows Registry.
+Intune provides a convenient and easy-to-use interface to configure these policies. However, not all settings are necessarily available within the Microsoft Endpoint Manager admin center. Although  many settings can be potentially configured on a Windows device, it's not feasible to have all of them in the admin center. Also, as advancements are made, it's not unusual to have a certain degree of lag before a new setting gets added. In these scenarios, deploying a custom OMA-URI profile that uses a Windows Configuration Service Provider (CSP) is the answer.
 
 ## CSP scope
 
-CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Intune portal UI. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
+CSPs are an interface that is used by mobile device management (MDM) providers to read, set, modify, and delete configuration settings on the device. Typically, it is done through keys and values in the Windows Registry. CSP policies have a scope that defines the level at which a policy can be configured. It is similar to the policies that are available in the Microsoft Endpoint Manager admin center. Some policies can be configured only at the device level. These policies apply regardless of who is logged in to the device. Other policies can be configured at the user level. These policies apply to only that user. The configuration level is dictated by the platform, not by the MDM provider. When you deploy a custom policy, [you can look here](/windows/client-management/mdm/policy-configuration-service-provider) to find the scope of the CSP that you want to use.
 
 The scope of the CSP is important because it will dictate the syntax of the OMA-URI string that you should use. For example:
 
@@ -49,7 +40,7 @@ The OMA-URI is a path to a specific configuration setting that is supported by a
 
 **The OMA-URI**: It is a string that represents custom configuration for a Windows 10-based device. The syntax is determined by the CSPs on the client. You can find [details about each CSP here](/windows/client-management/mdm/policy-configuration-service-provider).
 
-**A custom policy**: It contains the OMA-URIs to deploy. It's configured in the Intune portal.
+**A custom policy**: It contains the OMA-URIs to deploy. It's configured in Intune.
 
 **Intune**: After a custom policy is created and assigned to client devices, Intune becomes the delivery mechanism that sends the OMA-URIs to those Windows clients. Intune uses the Open Mobile Alliance Device Management (OMA-DM) protocol to do this. It is a pre-defined standard that uses XML-based SyncML to push the information to the client.
 
@@ -57,15 +48,15 @@ The OMA-URI is a path to a specific configuration setting that is supported by a
 
 To summarize: The OMA-URI is the payload, the custom policy is the container, Intune is the delivery mechanism for that container, OMA-DM is the protocol that's used for delivery, and the Windows CSP reads and applies the settings that are configured in the OMA-URI payload.
 
-![Windows CSP applies OMA-URI settings](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-internet-service-to-laptop.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/internet-service-to-laptop.png" alt-text="Diagram shows the Windows CSP applies OMA-URI settings." border="false":::
 
 This is the same process that's used by Intune to deliver the standard device configuration policies that are already built into the UI. When OMA-URIs use the Intune UI, they are hidden behind user-friendly configuration interfaces. It makes the process easier and more intuitive for the administrator. Use the built-in policy settings whenever possible, and use custom OMA-URI policies only for options that are otherwise unavailable.
 
 To demonstrate this process, you can use a built-in policy to set the lock screen image on a device. You can also deploy an OMA-URI and target the relevant CSP. Both methods achieve the same result.
 
-### OMA-URIs from the portal
+### OMA-URIs from the Microsoft Endpoint Manager admin center
 
-![Device restrictions](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-device-restrictions.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/device-restrictions.png" alt-text="Screenshot shows the device restrictions.":::
 
 ### Use a custom policy
 
@@ -75,31 +66,27 @@ The same setting can be set directly by using the following OMA-URI:
 
 It is documented in the [Windows CSP reference](/windows/client-management/mdm/policy-csp-devicelock). After you determine the OMA-URI, create a custom policy for it.
 
-![OMA-URI Settings - Edit Row screen](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-edit-row.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/edit-row.png" alt-text="Screenshot of OMA-URI Settings in the Edit Row screen.":::
 
 No matter which method you use, the end result is identical.
 
-![Sign-in screen](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-sign-in-screen.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/sign-in-screen.png" alt-text="Screenshot of the sign-in screen." border="false":::
 
-Here’s another example that uses BitLocker.
+Here's another example that uses BitLocker.
 
-### Use a custom policy from the portal
+### Use a custom policy from the Microsoft Endpoint Manager admin center
 
-![Endpoint protection](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-endpoint-protection.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/endpoint-protection.png" alt-text="Screenshot of the Endpoint protection screen." border="false":::
 
 ### Using a custom policy
 
-![OMA-URI path to the CSP](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-using-custom-policy.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/oma-uri-path-to-csp.png" alt-text="Screenshot of the OMA-URI path to the CSP." border="false":::
 
 ## Relate custom OMA-URIs to the on-premises world
 
-For Windows, Group Policy provides very granular control for management. Windows Group Policy has existed since the days of Windows 2000 Server. It has evolved over the years, changing from ADM to ADMX.
-
-In the new cloud-based world, you can achieve the same result through Intune over the internet. The approach is the same in that you evaluate which settings are necessary for your devices, and then you build your MDM policy configuration from there. You can use your existing Group Policy settings as a reference. If your organization wants to move to MDM to manage devices, we recommend that you prepare by analyzing the current Group Policy settings to see what is required to transition to MDM management.
+You can use your existing Group Policy settings as a reference as you build your MDM policy configuration. If your organization wants to move to MDM to manage devices, we recommend that you prepare by analyzing the current Group Policy settings to see what is required to transition to MDM management.
 
 The MDM Migration Analysis Tool (MMAT) determines which Group Policies have been set for a targeted user or computer. Then, it generates a report that lists the level of support for each policy setting in MDM equivalents.
-
-[Download the MMAT](https://github.com/WindowsDeviceManagement/MMAT).
 
 ### Aspects of your Group Policy before and after you migrate to the cloud
 
@@ -112,7 +99,7 @@ The following table shows the different aspects of your Group Policy both before
 |Sysvol folder|Intune database/MSUs|
 |Client-side Extension to process GPO|CSPs to process the MDM policy|
 |SMB protocol used for communication|HTTPS protocol used for communication|
-|`.pol` | `.ini` file (it is usually the input)|SyncML is the input for the devices|
+|`.pol` \| `.ini` file (it is usually the input)|SyncML is the input for the devices|
 
 ## Important notes on policy behavior
 
@@ -122,11 +109,11 @@ If the policy changes on the MDM server, the updated policy is pushed to the dev
 
 To deploy a custom OMA-URI to target a CSP on a Windows device, create a custom policy. The policy must contain the path to the OMA-URI path together with the value that you want to change in the CSP (enable, disable, modify, or delete).
 
-![Create a profile](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-create-a-profile.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/create-profile.png" alt-text="Screenshot of the Create a profile page. The Custom item is highlighted." border="false":::
 
-![Custom policy](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-custom-policy.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/custom-policy.png" alt-text="Screenshot shows the name description fields to create a Custom policy.":::
 
-![Add a configuration](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-add-a-configuration.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/add-configuration.png" alt-text="Screenshot of the Configuration settings and Add Row pages." border="false" lightbox="media/deploy-oma-uris-to-target-csp-via-intune/add-configuration.png":::
 
 After the policy is created, assign it to a security group so that it will take effect.
 
@@ -141,12 +128,12 @@ If you have a policy that is not working as expected, verify whether the policy 
 
 ### MDM diagnostic logs
 
-![MDM diagnostic logs](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-mdm-diagnostic-logs.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/mdm-diagnostic-logs.png" alt-text="Screenshot of the MDM diagnostic logs." border="false":::
 
 ### The Windows event log
 
-![The Windows Event log](./media/deploy-oma-uris-to-target-csp-via-intune/intune-deploy-csp-windows-event-log.png)
+:::image type="content" source="media/deploy-oma-uris-to-target-csp-via-intune/windows-event-log.png" alt-text="Screenshot of the Windows Event log." border="false":::
 
-Both logs should contain a reference to the custom policy or OMA-URI setting that you’re trying to deploy. If you do not see this reference, it is likely that the policy was not delivered to the device. Verify that the policy is configured correctly and is targeted to the correct group.
+Both logs should contain a reference to the custom policy or OMA-URI setting that you're trying to deploy. If you do not see this reference, it is likely that the policy was not delivered to the device. Verify that the policy is configured correctly and is targeted to the correct group.
 
-If you verify that the policy is reaching the client, check the `DeviceManagement-Enterprise-Diagnostics-Provider > Admin Event log` on the client for errors. You may see an error entry that contains additional information about why the policy did not apply. The causes will vary, but there is frequently a problem in the syntax of the OMA-URI string that’s configured in the custom policy. Double-check the CSP reference, and make sure that the syntax is correct.
+If you verify that the policy is reaching the client, check the `DeviceManagement-Enterprise-Diagnostics-Provider > Admin Event log` on the client for errors. You may see an error entry that contains additional information about why the policy did not apply. The causes will vary, but there is frequently a problem in the syntax of the OMA-URI string that's configured in the custom policy. Double-check the CSP reference, and make sure that the syntax is correct.

@@ -2,22 +2,22 @@
 title: Use Device Manager to configure devices
 description: Describes how to use Device Manager to configure the hardware devices that are installed on your Windows Server 2003-based computer.
 ms.date: 09/28/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, V-LANAC
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # How to use Device Manager to configure devices in Windows Server 2003  
 
 This article describes how to use Device Manager to configure the hardware devices that are installed on your Windows Server 2003-based computer.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 323423
 
 ## Summary

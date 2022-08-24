@@ -4,20 +4,20 @@ description: Explains why unwanted wake-up events may occur when you enable WOL 
 ms.date: 10/13/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: TCP/IP communications
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Unwanted wake-up events occur when you enable the Wake On LAN feature
 
 This article explains why unwanted wake-up events occur when you enable the Wake On LAN (WOL) functionality in Windows 7 and in Windows Vista, and describes how to configure the computer to wake only in response to a Magic Packet.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 941145
 
 ## Introduction

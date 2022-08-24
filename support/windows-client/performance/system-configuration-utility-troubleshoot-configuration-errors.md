@@ -3,21 +3,21 @@ title: use the System Configuration utility
 description: Describes how to use the System Configuration utility to troubleshoot errors that may prevent from starting correctly.
 ms.date: 09/27/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Performance monitoring tools
+ms.custom: sap:performance-monitoring-tools, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # How to use the System Configuration utility to troubleshoot configuration errors
 
 This article describes how to use the System Configuration utility to troubleshoot configuration errors.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 950093
 
 ## Introduction  
@@ -81,9 +81,9 @@ The diagnostic startup option enables Windows to determine which basic device dr
 
 To perform a diagnostic startup, follow these steps:  
 
-1. Click **Start**![Start button](./media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.jpg), type `msconfig` in the **Start Search** box, and then press ENTER.
+1. Click **Start** :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.png" border="false":::, type `msconfig` in the **Start Search** box, and then press ENTER.
 
-    ![User Account Control permission](./media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.jpg)
+    :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.png" border="false":::
 If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
 
 2. On the **General** tab, click **Diagnostic startup**, and then click **OK**.
@@ -120,9 +120,9 @@ Do not click to clear this check box if you have to use a Microsoft service to t
 
 To perform a selective startup and to troubleshoot the issue, follow these steps:  
 
-1. Click **Start**![Start button](./media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.jpg), type `msconfig` in the **Start Search** box, and then press ENTER.
+1. Click **Start** :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.png" border="false":::, type `msconfig` in the **Start Search** box, and then press ENTER.
 
-   ![User Account Control permission](./media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.jpg)
+   :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.png" border="false":::
 If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
 
 2. On the **General** tab, click **Selective startup**, and then click to clear the **Load system services** and **Load startup items** check boxes.
@@ -132,9 +132,9 @@ If you can reproduce the issue after the computer restarts, the issue is not rel
 
 If you cannot reproduce the issue after the computer restarts, the issue is related to either the system services or the startup items. To determine the items to which the issue is related, follow these steps:  
 
-1. Click **Start**![Start button](./media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.jpg), type `msconfig` in the **Start Search** box, and then press ENTER.
+1. Click **Start** :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.png" border="false":::, type `msconfig` in the **Start Search** box, and then press ENTER.
 
-   ![User Account Control permission](./media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.jpg)
+   :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.png" border="false":::
 If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
 
 2. On the **General** tab, click **Selective startup**, and then click to select the **Load system services** check box.
@@ -182,9 +182,9 @@ The **Services** and **Startup** tabs in the System Configuration utility have t
 
 After you complete your troubleshooting and fix your configuration, return to a normal startup. You can follow these steps:  
 
-1. Click **Start**![Start button](./media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.jpg), type `msconfig` in the **Start Search** box, and then press ENTER.
+1. Click **Start** :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/vista-start-button.png" border="false":::, type `msconfig` in the **Start Search** box, and then press ENTER.
 
-   ![User Account Control permission](./media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.jpg)
+   :::image type="icon" source="media/system-configuration-utility-troubleshoot-configuration-errors/security-shield.png" border="false":::
 If you are prompted for an administrator password or for a confirmation, type the password, or click **Continue**.
 
 2. On the **General** tab, click **Normal startup**, and then click **OK**.

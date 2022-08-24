@@ -2,7 +2,6 @@
 title: Antivirus exclusions recommendations
 description: Describes some recommendations for antivirus exclusions that relate to Operations Manager. These exclusions include process-based exclusions, directory-specific exclusions, and file name extension-specific exclusions.
 ms.date: 06/22/2020
-ms.prod-support-area-path:
 ms.reviewer: adoyle, adoyle
 ---
 # Recommendations for antivirus exclusions that relate to Operations Manager
@@ -50,9 +49,9 @@ These exclusions include the Health Service cache, together with its queue and l
 
 - For a management server: `C:\Program Files\Microsoft System Center 2012 R2\Operations Manager\Server\Health Service State`
 
-- For a gateway server: `C:\Program Files\System Center Operations Manager\Gateway\Health Service State`
+- For a gateway server: `C:\Program Files\System Center Operations Manager\Gateway\Health Service State`
 
-- For an agent: `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State`
+- For an agent: `C:\Program Files\Microsoft Monitoring Agent\Agent\Health Service State`
 
 #### For Operations Manager 2016
 

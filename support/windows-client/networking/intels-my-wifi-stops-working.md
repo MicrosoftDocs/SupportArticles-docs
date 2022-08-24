@@ -4,20 +4,20 @@ description: Fixes an issue where Intel's My WiFi Technology stops working after
 ms.date: 09/11/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Wireless networking and 802.1X authentication
+ms.custom: sap:wireless-networking-and-802.1x-authentication, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Intel's My WiFi Technology stops working after resuming from sleep or hibernate in Windows 7
 
 This article provides help to fix an issue where Intel's My WiFi Technology stops working after your computer resumes from sleep or hibernate.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2560995
 
 ## Symptoms

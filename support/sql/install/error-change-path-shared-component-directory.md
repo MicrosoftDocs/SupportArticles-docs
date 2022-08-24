@@ -2,7 +2,7 @@
 title: Error if you change shared component directory
 description: This article provides workarounds for the problem that occurs when you change the path in the shared component directory box on the Feature Selection screen of the Install SQL Server 2008 Setup wizard.
 ms.date: 11/09/2020
-ms.prod-support-area-path: Installation, Patching and Upgrade
+ms.custom: sap:Installation, Patching and Upgrade
 ms.reviewer: amylewis, mcimfl
 ms.prod: sql
 ---
@@ -24,7 +24,7 @@ You try to install Microsoft SQL Server 2008 on a computer that is running an It
 This problem occurs because the Install SQL Server 2008 Setup wizard does not let you specify the InstallSharedWowDir folder path. This path is required to install shared components in the SQL Server 2008 installation. You can only specify the InstallSharedDir folder path.
 
 > [!NOTE]
-> For more information about the *INSTALLSHAREDDIR* parameter and the *INSTALLSHAREDWOWDIR* parameter, see the [More Information](#more-information) section.
+> For more information about the _INSTALLSHAREDDIR_ parameter and the _INSTALLSHAREDWOWDIR_ parameter, see the [More Information](#more-information) section.
 
 ## Workaround
 
@@ -50,9 +50,8 @@ When you install SQL Server 2008 on a computer that is running a 64-bit version 
 |---|---|---|
 | INSTALLSHAREDDIR|`Program Files\Microsoft SQL Server`|64-bit shared component files|
 | INSTALLSHAREDWOWDIR|`Program Files(x86)\Microsoft SQL Server`|32-bit shared component files|
-||||
-
-For more information about these and other setup parameters for the SQL Server installation, see the SQL Server Setup Help (*S10ch_setup.chm*) file. The *S10ch_setup.chm* Help file is located in the folder of the SQL Server 2008 DVD: `drive:\IA64\Help\1033`.
+  
+For more information about these and other setup parameters for the SQL Server installation, see the SQL Server Setup Help (_S10ch_setup.chm_) file. The _S10ch_setup.chm_ Help file is located in the folder of the SQL Server 2008 DVD: `drive:\IA64\Help\1033`.
 
 > [!NOTE]
 > The drive placeholder is the drive designation of your DVD drive.

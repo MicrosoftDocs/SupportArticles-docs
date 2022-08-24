@@ -2,7 +2,6 @@
 title: Configure Windows authentication
 description: Describes how to configure Windows authentication on a BlueStripe management server.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to configure Windows authentication on a BlueStripe management server
 

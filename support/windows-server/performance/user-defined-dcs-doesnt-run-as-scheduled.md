@@ -2,15 +2,15 @@
 title: User-defined data collector set doesn't run as scheduled
 description: This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
 ms.date: 12/4/2020
-author: Teresa-Motiv
-ms.author: v-tea
-manager: dscontentpm
+author: v-tappelgate
+ms.author: v-tappelgate
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 
@@ -18,7 +18,7 @@ ms.technology: windows-server-performance
 
 This article provides a workaround for an issue in which a user-defined data collector set that is configured to run on a schedule does not run.
 
-_Original product version:_ &nbsp; Windows Server 2019 - all editions, Windows 10 version 1909 - all editions, Windows 10 version 1903 - all editions, Windows 10 version 1809 - all editions, Windows 10 version 1803 - all editions, Windows 10 version 1709 - all editions, Windows 10 version 1703 - all editions
+_Applies to:_ &nbsp; Windows Server 2019 - all editions, Windows 10 version 1909 - all editions, Windows 10 version 1903 - all editions, Windows 10 version 1809 - all editions, Windows 10 version 1803 - all editions, Windows 10 version 1709 - all editions, Windows 10 version 1703 - all editions
 
 ## Symptoms
 
@@ -28,7 +28,7 @@ During the scheduled running time, you notice that Performance Monitor does not 
 
 In Task Scheduler, if you open the scheduled task and then select **Actions**, the actions list contains **Custom Handler**.
 
-:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-action.png" alt-text="The action of the scheduled task isn't configured correctly.":::
+:::image type="content" source="./media/user-defined-dcs-doesnt-run-as-scheduled/scheduled-task-actions-list.png" alt-text="The action of the scheduled task isn't configured correctly.":::
 
 The list doesn't contain the expected action, **Start a program**, which includes the specific commands and arguments.
 

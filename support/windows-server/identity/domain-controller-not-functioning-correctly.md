@@ -3,21 +3,21 @@ title: Domain controller is not functioning correctly
 description: Provides common resolutions to issues where you cannot open Active Directory snap-ins or connect to a domain controller from another computer. Additionally, discusses resolutions to errors in the DCDIAG tool.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, clandis
-ms.prod-support-area-path: Domain controller scalability or performance (including LDAP)
+ms.custom: sap:domain-controller-scalability-or-performance-including-ldap, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Domain controller is not functioning correctly
 
 This article provides common resolutions to the issue where domain controller is not functioning correctly.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 837513
 
 ## Symptoms
@@ -57,6 +57,13 @@ LDAP test. . . . . . . . . . . . . : Passed
 [WARNING] Failed to query SPN registration on DC \<hostname>\<fqdn>
 
 The following event may be logged in the system event log of the affected domain controller:
+
+```output
+Event Type: Error
+Event Source: Service Control Manager
+Event ID: 7023
+Description: The Kerberos Key Distribution Center service terminated with the following error: The security account manager (SAM) or local security authority (LSA) server was in the wrong state to perform the security operation.
+```
 
 ## Resolution
 

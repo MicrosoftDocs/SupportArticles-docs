@@ -2,7 +2,6 @@
 title: Incorrect Endpoint Definition status
 description: Describes an issue in which the v_GS_AntimalwareHealthStatus view reports incorrect Endpoint Definition status in Configuration Manager.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ---
 # v_GS_AntimalwareHealthStatus view reports incorrect Endpoint Definition status in Configuration Manager 2012
 

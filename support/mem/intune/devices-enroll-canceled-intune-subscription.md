@@ -1,15 +1,12 @@
 ---
-title: Devices try to enroll in a canceled Intune subscription
+title: Troubleshoot when devices try to enroll in a canceled Intune subscription
 description: Fixes an issue in which devices keep trying to enroll in an Intune subscription that has been canceled.
-ms.date: 04/16/2020
-ms.prod-support-area-path:
+ms.date: 09/29/2021
+search.appverid: MET150
 ---
 # Devices continue to try to enroll in a canceled Intune subscription
 
 This article fixes an issue in which devices keep trying to enroll in an Intune subscription that has been canceled.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 3182596
 
 ## Symptoms
 
@@ -18,22 +15,22 @@ Consider the following scenario:
 - A user's Intune subscription was canceled, and the Intune admin console can no longer be accessed.
 - A different MDM provider was selected. The MDM authority for the tenant is still set to Intune, Office 365, or Configuration Manager.
 
-In this scenario, the user's devices still try to enroll in Intune.
+In this scenario, the user's devices continue trying to enroll in Intune.
 
 ## Cause
 
 This issue occurs if the CNAMEs that were set as prerequisites for device enrollment are still present. As long as these CNAMEs are still present, automatic enrollment of devices without specification of an enrollment server is redirected to the Microsoft Intune servers. This behavior is by design. If the customer sets up CNAME forwarding with their domain name provider to point towards the Intune service, their devices will try to enroll in Intune. To fix this behavior, the customer should modify their CNAME records with their domain name provider.
 
-The MDM authority has no effect on another provider's MDM solution as long as devices are not redirected to Intune enrollment servers with old CNAMEs that may still be present. After the MDM authority is configured, it will remain that way unless a customer opts to change to another structure within the possible MDM configurations-for example, from Intune or Office 365 to Configuration Manager, or vice versa.
+The MDM authority has no effect on another provider's MDM solution as long as devices are not redirected to Intune enrollment servers with old CNAMEs that may still be present. After the MDM authority is configured, it will remain that way unless a customer opts to change to another structure within the possible MDM configurations&mdash;for example, from Intune or Office 365 to Configuration Manager, or vice versa.
 
-## Resolution
+## Solution
 
-If you switched your MDM provider from Microsoft Intune to another company, or if you don't want to switch to the Office 365 built-in MDM, check whether the CNAMEs that were set as prerequisites for device enrollment are no longer present.
+If you switched your MDM provider from Microsoft Intune to another company, or if you don't want to switch to the Office 365 built-in MDM, check whether there are existing CNAMEs that were set as prerequisites for device enrollment.
 
-If these CNAMEs remain present, your devices will still try to enroll in Intune MDM servers, because the enrollment and registration requests are being redirected to the Microsoft servers instead of to your new provider by the old CNAMEs' entries. To prevent this behavior while the CNAMEs are still set to Microsoft-based enrollment servers, you must override the enrollment server information in the device itself, assuming that option is available in the enrollment interface on the unit.
+If these CNAMEs remain present, your devices will continue trying to enroll in Intune MDM servers, because the enrollment and registration requests are being redirected to the Microsoft servers instead of to your new provider by the old CNAMEs' entries. To prevent this behavior while the CNAMEs are still set to Microsoft-based enrollment servers, you must override the enrollment server information in the device itself, assuming that option is available in the enrollment interface on the unit.
 
 > [!NOTE]
-> Make sure you verify that all of your domains have no CNAMEs pointing to either `manage.microsoft.com` or `EnterpriseRegistration.windows.net`.
+> Verify that **none** of your domains have CNAMEs pointing to either `manage.microsoft.com` or `EnterpriseRegistration.windows.net`. If there are existing CNAMEs, you must delete these entries from your domain registrar's site and then set new CNAMEs specified by your new provider.
 
 ### Example
 

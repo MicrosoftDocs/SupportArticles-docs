@@ -2,22 +2,22 @@
 title: Return codes used by the Robocopy utility
 description: Discusses the return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2.
 ms.date: 10/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Configuring and using Backup software
+ms.custom: sap:configuring-and-using-backup-software, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2
 
 This article discusses the return codes that are used by the Robocopy utility in Windows Server 2008 or Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 954404
 
 ## Introduction
@@ -34,10 +34,9 @@ The following table lists and describes the return codes that are used by the Ro
 |6|Additional files and mismatched files exist. No files were copied and no failures were met. Which means that the files already exist in the destination directory.|
 |7|Files were copied, a file mismatch was present, and additional files were present.|
 |8|Several files didn't copy.|
-|||
-
+  
 > [!NOTE]
-> Any value greater than 8 indicates that there was at least one failure during the copy operation.
+> Any value greater than or equal to 8 indicates that there was at least one failure during the copy operation.
 
 ## More information
 

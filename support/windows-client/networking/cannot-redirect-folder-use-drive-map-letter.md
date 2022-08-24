@@ -1,24 +1,24 @@
 ---
 title: Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
 description: Fixes an issue in which folder redirection fails to apply when redirected to mapped drive letter instead of UNC path.
-ms.date: 09/14/2020
+ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Folder redirection and Offline Files and Folders (CSC)
+ms.custom: sap:folder-redirection-and-offline-files-and-folders-csc, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Folder Redirection fails to apply when redirected to mapped drive letter, instead of UNC path
 
 This article fixes an issue in which folder redirection fails to apply when redirected to mapped drive letter instead of UNC path.
 
-_Original product version:_ &nbsp;Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2859465
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2859465
 
 ## Symptoms
 
@@ -62,7 +62,7 @@ In this scenario, folder redirection fails to apply and the following event is l
 
 ## Cause
 
-When an administrator logs on to Windows Vista or newer, the Local Security Authority (LSA) creates two access tokens. If LSA is notified that the user is a member of the Administrators group, LSA creates the second logon that has the administrator rights removed (filtered). Because LSA created the access tokens during two separate logon sessions, the access tokens contain separate logon IDs. The standard user access token is used to map the drive.
+When an administrator logs on to Windows, the Local Security Authority (LSA) creates two access tokens. If LSA is notified that the user is a member of the Administrators group, LSA creates the second logon that has the administrator rights removed (filtered). Because LSA created the access tokens during two separate logon sessions, the access tokens contain separate logon IDs. The standard user access token is used to map the drive.
 
 When the policy applies, it uses the highest token (admin token) and thus it fails to see the map drive.
 
@@ -76,7 +76,7 @@ To resolve this issue, redirect the folder using UNC path instead of using map d
 
 To work around this issue, use one of the following methods:
 
-- Use "EnableLinkedConnections" registry. This value enables Windows Vista to share network connections between the filtered access token and the full administrator access token for a member of the Administrators group. After you configure this registry value, LSA checks whether there's another access token that is associated with the current user session if a network resource is mapped to an access token. If LSA determines that there's a linked access token, it adds the network share to the linked location.
+- Use "EnableLinkedConnections" registry. This value enables Windows to share network connections between the filtered access token and the full administrator access token for a member of the Administrators group. After you configure this registry value, LSA checks whether there's another access token that is associated with the current user session if a network resource is mapped to an access token. If LSA determines that there's a linked access token, it adds the network share to the linked location.
 
     To configure the EnableLinkedConnections registry value, follow these steps:
 

@@ -3,21 +3,21 @@ title: lingering objects in AD forest
 description: Contains information about lingering objects in a forest. Specifically, it provides information about events that indicate the presence of lingering objects, the causes of lingering objects, and methods to remove lingering objects.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Information about lingering objects in a Windows Server Active Directory forest
 
 This article provides some information about lingering objects in a Windows Server Active Directory forest.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 910205
 
 ## Summary
@@ -41,7 +41,7 @@ The default value of the TSL depends on the version of the operating system that
 |Windows 2000|60 days|
 |Windows Server 2003|60 days|
 |Windows Server 2003 with Service Pack 1|180 days|
-|||
+
 > [!NOTE]
 > The existing TSL value does not change when a domain controller is upgraded to Windows Server 2003 with Service Pack 1 (SP1). The existing TSL value is maintained until you manually change it.
 
@@ -97,7 +97,6 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1864|The local domain controller has not recently received replication information from several domain controllers (summary).|
 |1311|The Knowledge Consistency Checker (KCC) was not able to build a spanning tree topology.|
 |2042|It has been too long since this server last replicated with the named source server.|
-|||
 
 #### Events that indicate that lingering objects are present in the forest
 
@@ -106,7 +105,7 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |1084|There is no such object on the server.|
 |1388|This destination system received an update for an object that should have been present locally but was not.|
 |1311|Another domain controller replicated an object not present on this domain controller.|
-|||
+
 > [!NOTE]
 > Lingering objects are not present on domain controllers that log Event ID 1988. The source domain controller contains the lingering object.
 
@@ -116,7 +115,6 @@ Even when there is no noticeable effect, the presence of lingering objects can c
 |---|---|
 |8240|There is no such object on the server.|
 |8606|Insufficient attributes were given to create an object.|
-|||
 
 ### Other indications that lingering objects are present in the forest
 

@@ -2,7 +2,6 @@
 title: Troubleshoot issues when adding a Hyper-V host
 description: Describes how to troubleshoot issues when you add a Hyper-V host in System Center 2012 Virtual Machine Manager and later versions.
 ms.date: 07/13/2020
-ms.prod-support-area-path:
 ms.reviewer: jeffpatt
 ---
 # Troubleshoot issues when you add a Hyper-V host in Virtual Machine Manager

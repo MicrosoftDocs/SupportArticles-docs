@@ -4,20 +4,20 @@ description: This article describes the behavior of the APP-V client for unpubli
 ms.date: 12/04/2020
 author: Deland-Han
 ms.author: delhan 
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, gautama
-ms.prod-support-area-path: 
+ms.custom: sap:package-conversion, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # How to remove a cached copy of an unpublished package in Microsoft App-V v5
 
 This article describes how to remove a cached copy of an unpublished package in Microsoft App-V v5.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2768945
 
 ## Summary

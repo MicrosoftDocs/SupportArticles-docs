@@ -2,7 +2,6 @@
 title: Internal Error 2711.LP3076
 description: Describes an issue that triggers an Internal Error 2711.LP3076 error that occurs during the installation of the Configuration Manager console.
 ms.date: 06/09/2020
-ms.prod-support-area-path: 
 ms.reviewer: bhaskark, yvetteo
 ---
 # Internal Error 2711.LP3076 occurs during installation of the Configuration Manager console

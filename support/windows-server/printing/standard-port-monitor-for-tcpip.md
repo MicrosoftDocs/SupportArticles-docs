@@ -4,21 +4,21 @@ description: Describes how the standard port monitor works in Windows Server 200
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-dgit
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # The standard port monitor for TCP/IP
 
 This article describes how the standard port monitor works in Microsoft Windows Server 2003 and compares it with the LPR port monitor.
 
-_Original product version:_ &nbsp;Windows Server 2003  
-_Original KB number:_ &nbsp;814586
+_Applies to:_ &nbsp; Windows Server 2003  
+_Original KB number:_ &nbsp; 814586
 
 ## Summary
 

@@ -2,7 +2,6 @@
 title: DRS performance issue after installing hotfix 3125525
 description: Describes DRS performance issues that are experienced after you install hotfix 3125525 in Configuration Manager.
 ms.date: 06/16/2020
-ms.prod-support-area-path:
 ---
 # Configuration Manager DRS performance issue after you install hotfix 3125525
 
@@ -30,18 +29,17 @@ After you install hotfix [3125525](https://support.microsoft.com/help/3125525), 
 
 To fix the issue, install the latest Cumulative Update for your SQL Server version:
 
-|SQL Server version|The latest Cumulative Update|
+|SQL Server version|The latest Cumulative Update|
 |---|---|
-|SQL Server 2012 Service Pack 3| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=50733)|
+|SQL Server 2012 Service Pack 3| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=50733)|
 |SQL Server 2014 RTM| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51187)|
 |SQL Server 2014 Service Pack 1| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=51186)|
 |SQL Server 2014 Service Pack 2| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53592)|
 |SQL Server 2016 RTM| [Download the latest cumulative update](https://www.microsoft.com/download/details.aspx?id=53338) or [Install SQL Server 2016 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276)|
-|||
-
+  
 ## More information
 
-For more information about the fixes for this issue, see the following articles:
+For more information about the fixes for this issue, see the following articles:
 
 - [CPU usage increases significantly when you execute queries that contain CHANGETABLE functions in SQL Server 2012 Service Pack 3](https://support.microsoft.com/help/3188672)
 - [FIX: Queries that use CHANGETABLE use much more CPU in SQL Server 2014 SP1 or in SQL Server 2016](https://support.microsoft.com/help/3180060)

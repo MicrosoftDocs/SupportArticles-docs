@@ -1,24 +1,24 @@
 ---
-title: You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service 
+title: You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 description: Describes a problem that occurs when the value of the RestrictRemoteClients registry entry is 2. Explains how to resolve this problem by modifying the registry or by disabling the Restrictions for Unauthenticated RPC Clients GPO.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
+ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # You receive an "access is denied" error message on a domain controller when you try to replicate the Active Directory directory service
 
 This article helps to fix the error "access is denied" on a domain controller when you try to replicate the Active Directory directory service.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 10 - all editions  
-_Original KB number:_ &nbsp;895085
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Original KB number:_ &nbsp; 895085
 
 > [!IMPORTANT]
 > This article contains information about modifying the registry. Before you modify the registry, make sure to back it up and make sure that you understand how to restore the registry if a problem occurs. For information about how to back up, restore, and edit the registry, click the following article number to view the article in the Microsoft Knowledge Base: [256986](https://support.microsoft.com/help/256986) Description of the Microsoft Windows Registry  

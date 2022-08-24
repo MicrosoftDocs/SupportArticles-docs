@@ -4,20 +4,20 @@ description: Describes a problem that may occur when you try to install Windows.
 ms.date: 09/24/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, kimnle
-ms.prod-support-area-path: Partition and volume management
-ms.technology: windows-server-backup-and-storage 
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
+ms.technology: windows-server-backup-and-storage
 ---
 # You cannot select or format a hard disk partition when you try to install Windows
 
 This article provides solutions to an issue where you fail to select or format a hard disk partition when you try to install Windows.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 927520
 
 > [!NOTE]

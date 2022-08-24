@@ -3,21 +3,21 @@ title: Current list of App-V 5.x file versions
 description: Provides current list of App-V 5.x file versions.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, markstan
-ms.prod-support-area-path: Installation and configuration
+ms.custom: sap:installation-and-configuration, csstroubleshoot
 ms.technology: windows-client-application-virtualization-app-v
 ---
 # Current list of App-V 5.x file versions
 
 This article provides current list of App-V 5.x file versions.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 2940578
 
 ## Summary
@@ -31,11 +31,11 @@ To identify the build number of the App-V client, go to the **Programs and Featu
 - Microsoft Application Virtualization (App-V) Client 5.X
 - Microsoft Application Virtualization (App-V) Client 5.X Service Pack x
 
-The version that is installed is listed in the **Version** column. The following list shows the current latest build number for each component:
+The version that is installed is listed in the **Version** column. The following list shows the current latest build number for each component:
 
-- The App-V Client (as of 03/06/2018): 5.1.134.0  (App-V 5.1 March 2018 service release).
-- The App-V Sequencer (as of 10/10/2017): 5.1.129.0  (App-V 5.1 September 2017 servicing release).
-- The App-V Server components (as of 07/01/2017): 5.1.129.0  (App-V 5.1 September 2017 servicing release).
+- The App-V Client (as of 03/06/2018): 5.1.134.0  (App-V 5.1 March 2018 service release).
+- The App-V Sequencer (as of 10/10/2017): 5.1.129.0  (App-V 5.1 September 2017 servicing release).
+- The App-V Server components (as of 07/01/2017): 5.1.129.0  (App-V 5.1 September 2017 servicing release).
 
 History of App-V release versions and dates:
 
@@ -57,4 +57,3 @@ History of App-V release versions and dates:
 |App-V 5.0 SP2 HF04|5.0.3400.0| [2956985](https://support.microsoft.com/help/2956985)|04/24/2014|
 |App-V 5.0 SP2|5.0.3361.0| [About SP2](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50-sp2)|12/02/2013|
 |App-V 5.0 RTM|5.0.285.0| [About App-V 5.0](/microsoft-desktop-optimization-pack/appv-v5/about-app-v-50)|11/1/2012|
-|||||

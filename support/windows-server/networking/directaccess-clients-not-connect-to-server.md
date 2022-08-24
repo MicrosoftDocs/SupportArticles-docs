@@ -4,21 +4,21 @@ description: Describes an issue in which DirectAccess clients encounter error co
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, ajayps
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: networking
 ---
 # DirectAccess clients may not be able to connect to DirectAccess server with error code 0x103, 0x2AFC, or 0x2AF9 when using IP-HTTPS
 
 This article provides help to fix error 0x103, 0x2AFC, or 0x2AF9 that occurs when you use IP-HTTPS to connect DirectAccess clients to the DirectAccess server.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2980635
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2980635
 
 ## Symptoms
 
@@ -27,20 +27,24 @@ DirectAccess clients may not be able to connect to DirectAccess Server by using 
 When you run the netsh interface http show interface command, the output is as follows:
 
 > Error: 0x103 or 0x2AFC or 0x2AF9
->
-> Translates to: Failed to connect to IP-HTTPS interface.
+
+Translates to:
+
+> Failed to connect to IP-HTTPS interface.
 
 ## Cause
 
-> Error: 0x103  
+```output
+Error: 0x103  
 Role: Client  
 URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x103  
 Interface Status: No usable certificate found  
 0x103 translates to:  
 ERROR_NO_MORE_ITEMS  
-\# No more data is available.  
+# No more data is available.  
 (This means no matching certificates were found)
+```
 
 This error is seen in the following scenarios:  
 
@@ -48,16 +52,18 @@ This error is seen in the following scenarios:
 - The IP-HTTPS certificate has additional unwanted information in the Subject field.
 - The IP-HTTPS certificate has the correct name in the Subject field, but incorrect values in the subject alternative name (SAN).
 
-> Error: 0x2AFC  
+```output
+Error: 0x2AFC  
 Role: Client  
 URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x2AFC  
 Interface Status: Failed to connect to IPHTTPs server; Waiting to reconnect.  
 0x2AFC translates to:  
 WSANO_DATA  
-\# The requested name is valid, but no data of the requested type was found.  
+# The requested name is valid, but no data of the requested type was found.  
 WSANO_DATA  
-\# Successfully returned a NULL value.  
+# Successfully returned a NULL value.  
+```
 
 There are several reasons this error may occur:  
 
@@ -67,16 +73,18 @@ There are several reasons this error may occur:
 - NAT device is configured incorrectly (if a behind-edge scenario is being used).
 - All connectivity is fine, but the server does not have the IPv6 prefix published, or server-side IP-HTTPS is set to disabled.
 
-> Error: 0x2AF9  
+```output
+Error: 0x2AF9  
 Role: Client  
 URL: `https://da.contoso.com/IPHTTPS`  
 Last Error Code: 0x2AF9  
 Interface Status: Failed to connect to the IPHTTPS server; waiting to reconnect  
 0x2AF9 translates to:  
 WSAHOST_NOT_FOUND  
-\# No such host is known.  
+# No such host is known.  
 WSAHOST_NOT_FOUND  
-\# Non-NULL value successfully returned.  
+# Non-NULL value successfully returned.  
+```
 
 There are several reasons this error may occur:  
 
@@ -98,15 +106,10 @@ The external name should be resolvable from the client. Try to ping the name of 
 
 If a telnet connection is successful, then look at a network trace. The SSL handshake should be successful.  
 
-Use the `netsh winhttp` command to reset the local system proxy settings. It is also possible to manipulate these settings by viewing the proxy settings in Internet Explorer. You must open Internet Explorer under the local system context rather than by using a normal account.  
+Reset the local system proxy settings. You can manipulate these settings by viewing the proxy settings in Internet Explorer. You must open Internet Explorer under the local system context rather than by using a normal account.  
 
-DirectAccess clients may be configured to reach the HTTPS site through a proxy server (which may be blocking the connection). To check, run the following command:
-
-```console
-netsh winhttp show proxy
-```
-
-The latest proxy addresses are cached in the registry. To view them, open Registry Editor (regedit) on your DirectAccess client, and then navigate to the following registry subkey: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc\Parameters\ProxyMgr`
+DirectAccess clients may be configured to reach the HTTPS site through a proxy server (which may be blocking the connection). The latest proxy addresses are cached in the registry. To view them, open Registry Editor (regedit) on your DirectAccess client, and then navigate to the following registry subkey:  
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\iphlpsvc\Parameters\ProxyMgr`
 
 Export the ProxyMgr registry subkey. If you no longer use the proxy server, remove all registry keys under this registry subkey, and then restart the DirectAccess client.
 

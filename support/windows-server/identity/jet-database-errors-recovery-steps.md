@@ -3,26 +3,26 @@ title: Jet database errors and recovery steps
 description: Introduces Jet database error messages and troubleshooting steps.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jeffbo
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshoot Jet database errors and recovery steps
 
 This article introduces Jet database error messages and troubleshooting steps.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4042791
 
 ## Summary
 
-During operating system startup, domain controller installation/uninstallation, or Active Directory Replication, you may encounter Jet error messages. This article introduces Jet error messages and their solutions.
+During operating system startup, domain controller installation/uninstallation, or Active Directory Replication, you may encounter Jet error messages. This article introduces Jet error messages and their solutions.
 
 ## Error messages  
 
@@ -30,11 +30,11 @@ During operating system startup, domain controller installation/uninstallation, 
 
 #### Cause
 
-Hardware corrupted the I/O at writing, or the hardware [lost flush](#what-is-a-lost-io--lost-flush) caused the log to become unusable. Typically the database (DB) is left in a corrupted state.
+Hardware corrupted the I/O at writing, or the hardware [lost flush](#what-is-a-lost-io--lost-flush) caused the log to become unusable. Typically the database (DB) is left in a corrupted state.
 
 #### Resolution
 
-Restore the database from a known good backup, or reinstall the domain controller (DC).
+Restore the database from a known good backup, or reinstall the domain controller (DC).
   
 ### -510 JET_errLogWriteFail / Failure writing to log file
 
@@ -42,12 +42,12 @@ Restore the database from a known good backup, or reinstall the domain controll
 
 A log write failure occurred. This issue can be caused by any of the following:
 
-- A controller, hard drive, or other hardware stopped responding to disk commands.
+- A controller, hard drive, or other hardware stopped responding to disk commands.
 - Software, such as antivirus software, created locks on Active Directory log files.
 
 #### Resolution
 
-1. A restart of the server will restore access if this is a hardware issue. If the problem happens frequently, you can upgrade firmware, replace the controller, or replace the disk, in that order.
+1. A restart of the server will restore access if this is a hardware issue. If the problem happens frequently, you can upgrade firmware, replace the controller, or replace the disk, in that order.
 2. For an issue that is due to software, stop services that create locks on the files in the file system. For example, determine whether antivirus software is causing locks on Active Directory log files. Make sure that the proper files have been added to the antivirus exclusion list. Windows Server 2016 automatically excludes certain files and folders from antivirus scanning, see [List of automatic exclusions](/windows/threat-protection/windows-defender-antivirus/configure-server-exclusions-windows-defender-antivirus#list-of-automatic-exclusions). For Windows Server 2012 R2, see:
 
     - [Virus scanning recommendations for Enterprise computers that are running currently supported versions of Windows](https://support.microsoft.com/help/822158/virus-scanning-recommendations-for-enterprise-computers)
@@ -56,7 +56,7 @@ A log write failure occurred. This issue can be caused by any of the following:
 
 If steps 1 and 2 don't fix the issue, determine whether a non-Microsoft application or service is causing the issue by disabling these. To do this, follow these steps:
 
-1. Press Windows key + R. Enter **MSCONFIG** and then click **OK**. On the **Services** tab, select **Hide all Microsoft Services**. Clear the check box for third-party services.
+1. Press Windows key + R. Enter **MSCONFIG** and then click **OK**. On the **Services** tab, select **Hide all Microsoft Services**. Clear the check box for third-party services.
 2. Disable all enabled startup items.
 3. Restart the server.
 
@@ -64,7 +64,7 @@ If steps 1 and 2 don't fix the issue, determine whether a non-Microsoft applicat
 
 #### Cause
 
-This can be due to an unexpected shutdown that was caused by a power outage or another unexpected shutdown. Other causes include administrator changes to log files (such as copying an old copy) or corrupted backup/restore software (if immediately after a restore).
+This can be due to an unexpected shutdown that was caused by a power outage or another unexpected shutdown. Other causes include administrator changes to log files (such as copying an old copy) or corrupted backup/restore software (if immediately after a restore).
 
 #### Resolution
 
@@ -94,7 +94,7 @@ Administrator modified logs or lost I/O flush on shutdown.
 
 #### Cause
 
-Disk subsystem lost an I/O, probably on a hang or unscheduled shutdown.
+Disk subsystem lost an I/O, probably on a hang or unscheduled shutdown.
 
 #### Resolution
 
@@ -136,15 +136,15 @@ Deploy the OS on server-class hardware and disk subsystem components.
 
 Databases that log this error can't be recovered or repaired by integrity checks or semantic database analysis in NTDSUTIL or ESENTUTL.
 
-Offline defrags may resolve the problem in the unlikely case that the problem is due to an index consistency problem.
+Offline defrags may resolve the problem in the unlikely case that the problem is due to an index consistency problem.
 
 Try an offline defrag. Or, restore a system state backup that predates the corruption. Or, force demote, perform a full metadata cleanup, and then repromote. Repeat until the hardware root cause is resolved.
   
-### -1021 JET_errDiskReadVerificationFailure / The OS returned ERROR_CRC from file IO
+### -1021 JET_errDiskReadVerificationFailure / The OS returned ERROR_CRC from file IO
 
-Jet error -1021 was new as of Windows Server 2008 R2. Windows versions that are earlier than Windows Server 2008 R2 return -1022 instead.
+Jet error -1021 was new as of Windows Server 2008 R2. Windows versions that are earlier than Windows Server 2008 R2 return -1022 instead.
 
--1021 identifies a -1018 error that occurred at the disk level. In other words, -1021 indicates that a disk drive returned a bad check sum error and is the specific source of the problem in the disk stack.
+-1021 identifies a -1018 error that occurred at the disk level. In other words, -1021 indicates that a disk drive returned a bad check sum error and is the specific source of the problem in the disk stack.
 
 #### Cause
 
@@ -154,11 +154,11 @@ The problem may be due to bad blocks on the hard disk that the hard drive may ke
 
 Removing and reinstalling Active Directory on the domain controller may trigger the storage of data on healthy blocks.
   
-### -1022 JET_errDiskIO / Disk IO error
+### -1022 JET_errDiskIO / Disk IO error
 
 #### Cause
 
-Generic disk error. Disk IO errors mean that the OS encountered a non-specific error in accessing the disk. This error may be logged when controllers return generic errors like "device not working." Some disks and versions of Jet return this error for CRC problems.
+Generic disk error. Disk IO errors mean that the OS encountered a non-specific error in accessing the disk. This error may be logged when controllers return generic errors like "device not working." Some disks and versions of Jet return this error for CRC problems.
 
 #### Resolution
 
@@ -176,7 +176,7 @@ This error is the same as missing/corrupt log file. This error indicates that a 
 
 Administrator modified logs or lost I/O flush on shutdown.
   
-### -1605 JET_errKeyDuplicate / Illegal duplicate key
+### -1605 JET_errKeyDuplicate / Illegal duplicate key
 
 #### Cause
 
@@ -201,7 +201,7 @@ You can use these methods to troubleshoot Jet database errors:
     Many but not all SATA and IDE drives don't support the write flush command. SAS drives do support it.
 
     Active Directory databases and log files should use SAS drives on SAS controllers DCs that have a battery backup on any write caching element.
-2. If 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) are virtual guest domain controllers that are running on Windows Server 2012 Hyper-V hosts, install corrective fixes from [Loss of consistency with IDE-attached virtual hard disks when a Hyper-V host server experiences an unplanned restart](https://support.services.microsoft.com/topic/loss-of-consistency-with-ide-attached-virtual-hard-disks-when-a-hyper-v-host-server-experiences-an-unplanned-restart-e0f0bc5b-bf04-2a75-4360-06ae11a13aa6) on hosts and guest DCs as required.
+2. If 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) are virtual guest domain controllers that are running on Windows Server 2012 Hyper-V hosts, install corrective fixes from [Loss of consistency with IDE-attached virtual hard disks when a Hyper-V host server experiences an unplanned restart](https://support.microsoft.com/topic/loss-of-consistency-with-ide-attached-virtual-hard-disks-when-a-hyper-v-host-server-experiences-an-unplanned-restart-e0f0bc5b-bf04-2a75-4360-06ae11a13aa6) on hosts and guest DCs as required.
 3. Check whether the event that preceded the LSASS 0xc00002e1 (c00002e1) and 0xc00002e2 (c00002e2) boot errors indicates one of the following issues:
 
     - Unscheduled power outage.
@@ -220,8 +220,8 @@ You can use these methods to troubleshoot Jet database errors:
     > [!Note]
     > the path to the NTDS.DIT and log files.
 
-8. Verify that the drive that hosts the NTDS.DIT or log files is available on OS startup.
-9. Open Windows Explorer and verify that the NTDS.DIT and log files are present at the log file path reported by step 7.
+8. Verify that the drive that hosts the NTDS.DIT or log files is available on OS startup.
+9. Open Windows Explorer and verify that the NTDS.DIT and log files are present at the log file path reported by step 7.
 
     If the files are present, proceed to step 10.
 
@@ -234,7 +234,7 @@ You can use these methods to troubleshoot Jet database errors:
 10. Verify file permissions for the OS version in question.
 
     > [!Note]
-    > The OS needs sufficient permissions on Windows Server 2003.
+    > The OS needs sufficient permissions on Windows Server 2003.
 
     |Account|Permissions|Inheritance|
     |---|---|---|
@@ -242,11 +242,10 @@ You can use these methods to troubleshoot Jet database errors:
     | Administrators| Full Control| This folder, subfolders and files |
     | Creator Owner| Full Control| Subfolders and Files only |
     | Local Service| Create Folders / Append Data| This folder and subfolders |
-    ||||
 
     - The root of the volume that is hosting the NTDS.DIT and NTDS log files (system requires fully control)
     - The %windir% folder (i.e., c:\\windows or c:\\winnnt) (system requires fully control)
-    - The folder that hosts the NTDS.DIT and NTDS log files (see permissions table below)
+    - The folder that hosts the NTDS.DIT and NTDS log files (see permissions table below)
     - The NTDS Log files themselves (see perms table below)
 
 11. Verify that the correct log files reside in the log file directory:
@@ -258,32 +257,32 @@ You can use these methods to troubleshoot Jet database errors:
 12. Confirm that disk or file compression is not enabled on any volume that is hosting the NTDS.DIT or log file volume.
 13. Validate the health of the database in NTDS.DIT from the bottom up.
 
-    Validate Jet database health from the bottom up. Proceed up to the next layer only when the underlying layer completes without error.
+    Validate Jet database health from the bottom up. Proceed up to the next layer only when the underlying layer completes without error.
 
     Troubleshooting any error reported by ESE logical or application logical consistency when physical consistency is still failing will lead you down an improper troubleshooting path.
 
     Equivalent NTDSUTIL and ESENTUTL commands for each later are shown below:
+
     |Layer|NTDSUTIL command|ESENTUTL equivalent command|
     |---|---|---|
-    | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
-    | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
-    | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
-    ||||
+    | 1. Physical consistency| no equivalent| `ESENTUTL /K` |
+    | 2. ESE logical consistency| NTDSUTIL FILES INTEGRITY| `ESENTUTL /G` |
+    | 3. Application logical consistency <br/>| NTDSUTIL ->Semantic database analysis<br/><br/>+<br/><br/>NTDSUTIL -> Offline Defrag| No equivalent. Run NTDSUTIL -> SDA<br/><br/>+<br/><br/>`ESENTUTL / D` |
+
 14. Look up the user action for the first failing Jet error encountered during step 13. Perform remediation if possible.
-15. Repair the Jet database:
+15. Repair the Jet database:
 
     - Some Jet database errors can be repaired by using NTDSUTIL and ESENTUTL.
-    - Some Jet database errors cannot be repaired, and any attempt to repair them will fail. In such cases, your only recourse may be to restore a system state backup that predates the corruption, or build a new server. If replica DCs are up-to-date, lead with promoting additional replicas into the domain after attempting to mitigate the root cause for any hardware or software-related errors.
+    - Some Jet database errors cannot be repaired, and any attempt to repair them will fail. In such cases, your only recourse may be to restore a system state backup that predates the corruption, or build a new server. If replica DCs are up-to-date, lead with promoting additional replicas into the domain after attempting to mitigate the root cause for any hardware or software-related errors.
 
     > [!Note]
-    > The Jet error that is returned in NTDS General event 1168 is an application layer error. Don't act on this Jet error unless the Jet Physical consistency and Application logical consistency checks, (tested in that order) pass without error.
+    > The Jet error that is returned in NTDS General event 1168 is an application layer error. Don't act on this Jet error unless the Jet Physical consistency and Application logical consistency checks, (tested in that order) pass without error.
 
 ## More Information
 
-For more information, see the following Microsoft articles:
+For more information, see the following Microsoft article:
 
-- [Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](https://support.microsoft.com/topic/domain-controller-does-not-start-c00002e2-error-occurs-or-choose-an-option-is-displayed-cb4acc41-1c1d-dc2b-95ea-9b2e424e0aa4)
-- ["Directory Services cannot start" error message when you start your Windows-based or SBS-based domain controller](https://support.microsoft.com/topic/-directory-services-cannot-start-error-message-when-you-start-your-windows-based-or-sbs-based-domain-controller-cce355c0-9fdd-65c5-3c18-b8e8728cc4a3)
+[Domain controller does not start, c00002e2 error occurs, or "Choose an option" is displayed](/troubleshoot/windows-server/identity/domain-controller-not-start-c00002e2-error)
 
 ### What is a lost IO / Lost Flush
 

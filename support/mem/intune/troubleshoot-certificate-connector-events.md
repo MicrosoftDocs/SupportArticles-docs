@@ -1,15 +1,16 @@
 ---
-title: Troubleshoot the Microsoft Intune certificate connector and event IDs  | Microsoft Docs
+title: Troubleshoot the Microsoft Intune certificate connector and event IDs
 description:  Troubleshoot the Microsoft Intune certificate connector by reviewing Event IDs and descriptions, and review diagnostic codes for the Intune connector service.
 ms.date: 05/01/2019
 ms.reviewer: lacranda
+search.appverid: MET150
 ---
 # Intune Certificate Connector events and diagnostic codes
 
-Starting with version 6.1806.x.x, the Intune Connector Service logs events in the **Event Viewer** (**Applications and Services Logs** > **Microsoft Intune Connector**). Use these events to help troubleshoot potential issues in the configuration of the Intune Connector. These events log successes and failures of an operation, and also contain diagnostic codes with messages to help the IT admin troubleshoot.
+Starting with version 6.1806.x.x, the Intune Connector Service logs events in the **Event Viewer** (**Applications and Services Logs** > **Microsoft Intune Connector**). Use these events to help troubleshoot potential issues in the configuration of the Intune Certificate Connector. These events log successes and failures of an operation, and also contain diagnostic codes with messages to help the IT admin troubleshoot.
 
 > [!TIP]  
-> To troubleshoot issues and verify the Intune Connector setup, see [Certificate Authority script samples](https://aka.ms/intuneconnectorverificationscript).
+> To troubleshoot issues and verify Intune Certificate Connector setup, see [Certificate Authority script samples](https://aka.ms/intuneconnectorverificationscript).
 
 ## Event IDs and descriptions
 
@@ -54,4 +55,4 @@ Starting with version 6.1806.x.x, the Intune Connector Service logs events in th
 
 ## Next steps
 
-For additional assistance, use the [Troubleshooting SCEP certificate profile deployment in Microsoft Intune](troubleshoot-scep-certificate-profiles.md) guide.
+For further assistance, see [Troubleshooting SCEP certificate profiles with Microsoft Intune](troubleshoot-scep-certificate-profiles.md).

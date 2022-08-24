@@ -1,10 +1,10 @@
 ---
 title: IVssBackupComponents returns a value of 0x1 or S_FALSE
-description: This article describes an issue where the IVssBackupComponents::Query method may return a value of 0x1 or S_FALSE.
+description: "This article describes an issue where the IVssBackupComponents::Query method may return a value of 0x1 or S_FALSE."
 ms.date: 01/04/2021
-ms.prod-support-area-path:
 ms.reviewer: chrit
 ms.topic: article
+ms.technology: windows-hardware-general
 ---
 # IVssBackupComponents::Query returns a value of 0x1 or S_FALSE
 

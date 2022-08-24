@@ -2,7 +2,6 @@
 title: Site system installation account is incorrectly used for database connection
 description: Describes a problem in which Configuration Manager may incorrectly try to use the site system installation account for a remote site system to connect to the SQL Server database.
 ms.date: 06/01/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi, prakask, keiththo
 ---
 # Site system installation account is incorrectly used for a remote site system to connect to SQL Server database
@@ -32,6 +31,10 @@ In Distrmg.log:
 > [28000][18452][Microsoft][ODBC SQL Server Driver][SQL Server]Login failed. The login is from an untrusted domain and cannot be used with Windows authentication.  
 > Failed to connect to the SQL Server. Cannot save the package status to the data source...
 
+## Resolution
+
+To fix this issue, update to [Configuration Manager current branch version 2010](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2010).
+
 ## Workaround
 
-On the SQL Server, create a local account that has the same name as the site system installation account that is configured for the remote site server, and grant the account access to the Configuration Managers database. Then, pass through authentication works around Configuration Manager's use of the site system installation account.
+To work around this issue without updating, on the SQL Server, create a local account that has the same name as the site system installation account that is configured for the remote site server, and grant the account access to the Configuration Managers database. Then, pass through authentication works around Configuration Manager's use of the site system installation account.

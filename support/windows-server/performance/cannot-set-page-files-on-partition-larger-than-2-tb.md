@@ -3,21 +3,21 @@ title: You cannot set page files on a partition that is larger than 2 terabytes
 description: Describes a problem that occurs when you try to set page files on a partition that is larger than 2 terabytes
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: adityah, kaushika
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # You cannot set page files on a partition that is larger than 2 terabytes
 
 This article provides a workaround for an issue that occurs when you try to set page files on a partition that is larger than 2 terabytes.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 10 - all editions  
 _Original KB number:_ &nbsp; 973423
 
 ## Symptoms
@@ -26,7 +26,7 @@ On a Windows-based computer, when you try to set a page file on a partition that
 
 > Drive **X**: is too small for the maximum paging file size specified. Please enter a smaller number.
 
-:::image type="content" source="./media/cannot-set-page-files-on-partition-larger-than-2-tb/drive-too-small.jpg" alt-text="Screenshot of System Properties.":::
+:::image type="content" source="./media/cannot-set-page-files-on-partition-larger-than-2-tb/drive-too-small.jpg" alt-text="The warning message that is shown in the System Properties." border="false":::
 
 This problem occurs when you try to set page files in the Virtual Memory user interface in the **Advanced System Settings**. This is true regardless of whether the page file is a customized page file or a system-managed page file.
 

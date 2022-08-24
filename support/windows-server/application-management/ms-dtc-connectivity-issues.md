@@ -4,20 +4,20 @@ description: Explains how to use the DTCPing tool to troubleshoot MS DTC connect
 ms.date: 12/03/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DTC startup, configuration, connectivity, and cluster
-ms.technology: windows-server-application-compatibility 
+ms.custom: sap:dtc-startup-configuration-connectivity-and-cluster, csstroubleshoot
+ms.technology: windows-server-application-compatibility
 ---
 # How to troubleshoot connectivity issues in MS DTC by using the DTCPing tool
 
 This article describes how to troubleshoot connectivity issues in Microsoft Distributed Transaction Coordinator (MS DTC) by using the DTCPing tool.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 918331
 
 ## Introduction
@@ -52,7 +52,6 @@ Microsoft scanned this file for viruses. Microsoft used the most current virus-d
 |Machineb_failure.log|Not Applicable|999|24-Nov-2003|22:55|
 |Machineb_success.log|Not Applicable|1,750|24-Nov-2003|22:31|
 |Readme.txt|Not Applicable|3,244|27-Jul-2005|15:32|
-||||||
 
 ## Troubleshooting information
 

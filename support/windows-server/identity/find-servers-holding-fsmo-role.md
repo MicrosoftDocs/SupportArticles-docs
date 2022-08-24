@@ -4,20 +4,20 @@ description: Describe how to find the servers that hold the Flexible Single Mast
 ms.date: 09/16/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, MHUNTER, dhook
-ms.prod-support-area-path: Active Directory FSMO
+ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How To Find Servers That Hold Flexible Single Master Operations Roles
 
 This article describes how to find the servers that hold the Flexible Single Master Operation (FSMO) roles in a forest.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 234790
 
 ## Summary
@@ -28,7 +28,9 @@ Active Directory defines five FSMO roles:
 - Domain naming master
 - RID master
 - PDC master
-- Infrastructure masterThe schema master and the domain naming master are per-forest roles. Therefore, there is only one schema master and one domain naming master per forest.
+- Infrastructure master
+
+The schema master and the domain naming master are per-forest roles. Therefore, there is only one schema master and one domain naming master per forest.
 
 The RID master, the PDC master, and the infrastructure master are per-domain roles. Each domain has its own RID master, PDC master, and infrastructure master. Therefore, if a forest has three domains, there are three RID masters, three PDC masters, and three infrastructures masters.
 

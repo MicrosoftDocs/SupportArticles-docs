@@ -4,25 +4,25 @@ description: Provides a solution to an issue where the Microsoft iSCSI Initiator
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, jtierney
-ms.prod-support-area-path: iSCSI
+ms.custom: sap:iscsi, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
-# The Microsoft iSCSI Initiator may fail to log in to Favorite Targets after the Initiator Name is changed on Windows Server 2008 and 2008 R2 or Windows 7
+# The Microsoft iSCSI Initiator may fail to log in to Favorite Targets after the Initiator Name is changed in Windows
 
 This article provides a solution to an issue where the Microsoft iSCSI Initiator fails to log in to Favorite Targets after the initiator name is changed.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;2500271
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 2500271
 
 ## Symptoms
 
-Consider the following scenario. On a system running Windows Server 2008 and Server 2008 R2 or Windows 7, you are connecting to iSCSI-based storage using the Microsoft iSCSI Initiator. In the iSCSI Initiator Properties, you have configured Favorite Target entries, so that the iSCSI Initiator will automatically connect to certain iSCSI targets. The iSCSI target(s) you are connecting to uses access control, and this access control uses the iSCSI Initiator Name (for example, iQN) or initiator IP address for authentication.
+Consider the following scenario. On a system running Windows, you are connecting to iSCSI-based storage using the Microsoft iSCSI Initiator. In the iSCSI Initiator Properties, you have configured Favorite Target entries, so that the iSCSI Initiator will automatically connect to certain iSCSI targets. The iSCSI target(s) you are connecting to uses access control, and this access control uses the iSCSI Initiator Name (for example, iQN) or initiator IP address for authentication.
 
 If you change the *Initiator Name* in the Configuration tab of the iSCSI Initiator Properties, you may be unable to access certain access-controlled iSCSI targets when the system is rebooted, or when connectivity to an iSCSI target is lost. By way of example:
 

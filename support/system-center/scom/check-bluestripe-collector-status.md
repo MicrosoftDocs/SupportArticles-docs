@@ -2,7 +2,6 @@
 title: Check the BlueStripe Collector status
 description: Describes how to check the status of the BlueStripe Collector on Solaris.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to check the status of the BlueStripe Collector on Solaris
 

@@ -4,20 +4,20 @@ description: This article describes how to troubleshoot Active Directory replica
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 8453: Replication access was denied
 
 This article describes how to troubleshoot a problem where Active Directory replication fails and generates error 8453: Replication access was denied.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2022387
 
 > [!NOTE]
@@ -51,7 +51,7 @@ A RODC `childdc2.child.contoso.com` doesn't replicate the `contoso.com` partitio
 2. Open a connection to the `contoso.com` domain NC (default naming context).
 3. Open the properties of the **dc=contoso,dc=com NC**, and select the **Security** tab.
 4. Select **Add**, and enter the following entry in the text box:  
-    *Contoso\Enterprise Read-Only Domain Controllers*
+    _Contoso\Enterprise Read-Only Domain Controllers_
 
     > [!NOTE]
     > This group exists only in the forest-root domain.
@@ -73,77 +73,85 @@ When this problem occurs, you experience one or more of the following symptoms:
 
 - The DCDIAG Replication test (`DCDIAG /TEST:NCSecDesc`) reports that the tested domain controller **failed test replications** and has a status of 8453: Replication access was denied:
 
-    > Starting test: Replications  
-    >    [Replications Check,<destination domain controller] A recent replication attempt failed:  
-    >       From \<source DC> to <Destination DC  
-    >       Naming Context: <DN path of failing directory partition>  
-    >       The replication generated an error (8453):  
-    >       Replication access was denied.  
-    >       The failure occurred at \<date> \<time>.  
-    >       The last success occurred at \<date> \<time>.  
-    >       %#% failures have occurred since the last success.  
-    >       The machine account for the destination \<destination DC>.  
-    >       is not configured properly.  
-    >       Check the userAccountControl field.  
-    >       Kerberos Error.  
-    >       The machine account is not present, or does not match on the.  
-    >       destination, source or KDC servers.  
-    >       Verify domain partition of KDC is in sync with rest of enterprise.  
-    >       The tool repadmin/syncall can be used for this purpose.  
-    > ......................... \<DC tested by DCDIAG> failed test Replications
+  ```output
+  Starting test: Replications  
+  [Replications Check,<destination domain controller] A recent replication attempt failed:  
+  From <source DC> to <Destination DC  
+  Naming Context: <DN path of failing directory partition>  
+  The replication generated an error (8453):  
+  Replication access was denied.  
+  The failure occurred at <date> <time>.  
+  The last success occurred at <date> <time>.  
+  %#% failures have occurred since the last success.  
+  The machine account for the destination <destination DC>.  
+  is not configured properly.  
+  Check the userAccountControl field.  
+  Kerberos Error.  
+  The machine account is not present, or does not match on the.  
+  destination, source or KDC servers.  
+  Verify domain partition of KDC is in sync with rest of enterprise.  
+  The tool repadmin/syncall can be used for this purpose.  
+  ......................... <DC tested by DCDIAG> failed test Replications
+  ```
 
 - The DCDIAG NCSecDesc test (`DCDIAG /TEST:NCSecDes`) reports that the domain controller that was tested by DCDIAG **failed test NCSecDec** and that one or more permissions are missing on the NC head of one or more directory partitions on the tested domain controller that was tested by DCDIAG:
 
-   > Starting test: NCSecDesc  
-       Error NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS doesn't have  
-       Replicating Directory Changes                               <- List of missing access  
-       Replication Synchronization                                 <- rights required for each Manage Replication Topology                                       <- security group could vary  
-       Replicating Directory Changes In Filtered Set               <- depending in missing  
-       access rights for the naming context:                          <- right in your environment  
-       DC=contoso,DC=com  
-       Error CONTOSO\Domain Controllers doesn't have  
-       Replicating Directory Changes All  
-       access rights for the naming context:  
-       DC=contoso,DC=com  
-       Error CONTOSO\Enterprise Read-Only Domain Controllers doesn't have  
-       Replicating Directory Changes  
-       access rights for the naming context:  
-       DC=contoso,DC=com  
-       ......................... CONTOSO-DC2 failed test NCSecDesc
+  ```output
+  Starting test: NCSecDesc  
+  Error NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS doesn't have  
+  Replicating Directory Changes                               <- List of missing access  
+  Replication Synchronization                                 <- rights required for each Manage Replication Topology                                       <- security group could vary  
+  Replicating Directory Changes In Filtered Set               <- depending in missing  
+  access rights for the naming context:                          <- right in your environment  
+  DC=contoso,DC=com  
+  Error CONTOSO\Domain Controllers doesn't have  
+  Replicating Directory Changes All  
+  access rights for the naming context:  
+  DC=contoso,DC=com  
+  Error CONTOSO\Enterprise Read-Only Domain Controllers doesn't have  
+  Replicating Directory Changes  
+  access rights for the naming context:  
+  DC=contoso,DC=com  
+  ......................... CONTOSO-DC2 failed test NCSecDesc
+  ```
 
 - The DCDIAG MachineAccount test (`DCDIAG /TEST:MachineAccount`) reports that the domain controller that was tested by DCDIAG **failed test MachineAccount** because the **UserAccountControl** attribute on the domain controllers computer account is missing the **SERVER_TRUST_ACCOUNT** or **TRUSTED_FOR_DELEGATION** flags:
 
-    > Starting test: MachineAccount  
-        The account CONTOSO-DC2 is not trusted for delegation . It cannot  
-        replicate.  
-        The account CONTOSO-DC2 is not a DC account. It cannot replicate.  
-        Warning: Attribute userAccountControl of CONTOSO-DC2 is:  
-        0x288 = ( HOMEDIR_REQUIRED | ENCRYPTED_TEXT_PASSWORD_ALLOWED | NORMAL_ACCOUNT )  
-        Typical setting for a DC is  
-        0x82000 = ( SERVER_TRUST_ACCOUNT | TRUSTED_FOR_DELEGATION )  
-        This may be affecting replication?  
-        ......................... CONTOSO-DC2 failed test MachineAccount
+  ```output
+  Starting test: MachineAccount  
+  The account CONTOSO-DC2 is not trusted for delegation . It cannot  
+  replicate.  
+  The account CONTOSO-DC2 is not a DC account. It cannot replicate.  
+  Warning: Attribute userAccountControl of CONTOSO-DC2 is:  
+  0x288 = ( HOMEDIR_REQUIRED | ENCRYPTED_TEXT_PASSWORD_ALLOWED | NORMAL_ACCOUNT )  
+  Typical setting for a DC is  
+  0x82000 = ( SERVER_TRUST_ACCOUNT | TRUSTED_FOR_DELEGATION )  
+  This may be affecting replication? 
+  ......................... CONTOSO-DC2 failed test MachineAccount
+  ```
 
 - The DCDIAG KCC event log test indicates the hexadecimal equivalent of Microsoft-Windows-ActiveDirectory_DomainService event 2896:
 
     B50 hex = 2896 decimal. This error may be logged every 60 seconds on the infrastructure master domain controller.
 
-    > Starting test: KccEvent  
-    >   The KCC Event log test  
-        An error event occurred. EventID: 0xC0000B50  
-        Time Generated: 06/25/2010 07:45:07
-    >
-    >   Event String:  
-        A client made a DirSync LDAP request for a directory partition. Access was denied due to the following error.
-    >
-    >   Directory partition:  
-        \<DN path of directory partition>
-    >
-    >   Error value:  
-        8453 Replication access was denied.
-    >
-    >   User Action  
-        The client may not have access for this request. If the client requires it, they should be assigned the control access right "Replicating Directory Changes" on the directory partition in question.
+  ```output
+  Starting test: KccEvent  
+  The KCC Event log test  
+  An error event occurred. EventID: 0xC0000B50  
+  Time Generated: 06/25/2010 07:45:07
+  
+  Event String:  
+  A client made a DirSync LDAP request for a directory partition. Access was denied due to the following error.
+  
+  Directory partition:  
+  <DN path of directory partition>
+  
+  Error value:  
+  8453 Replication access was denied.
+  
+  User Action  
+  The client may not have access for this request. If the client requires it, they should be assigned the control access right "Replicating Directory Changes" on the directory partition in question.
+   ```
 
 - REPADMIN.EXE reports that a replication attempt failed and returned an 8453 status.
 
@@ -160,31 +168,35 @@ When this problem occurs, you experience one or more of the following symptoms:
 
     Sample output from `REPADMIN /SHOWREPS`showing inbound replication from CONTOSO-DC2 to CONTOSO-DC1 that fail and return the **replication access was denied** error is as follows:
 
-    > Default-First-Site-Name\CONTOSO-DC1  
+    ```output
+    Default-First-Site-Name\CONTOSO-DC1  
     DSA Options: IS_GC  
     Site Options: (none)  
     DSA object GUID:  
     DSA invocationID:  
     DC=contoso,DC=com  
-      Default-First-Site-Name\CONTOSO-DC2 via RPC  
-        DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
-        Last attempt @ \<date> \<time> failed, result 8453 (0x2105):  
-         Replication access was denied.  
-        <#> consecutive failure(s).  
-        Last success @ \<date> \<time>.
+    Default-First-Site-Name\CONTOSO-DC2 via RPC  
+    DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2  
+    Last attempt @ <date> <time> failed, result 8453 (0x2105):  
+    Replication access was denied.  
+    <#> consecutive failure(s).  
+    Last success @ <date> <time>.
+    ```
 
 - The **replicate now** command in Active Directory Sites and Services (DSSITE.MSC) returns a **replication access was denied** error.
 
     Right-clicking the connection object from a source domain controller and then selecting **replicate now** fails. And a **replication access was denied** error is returned. The following error message is displayed:
 
-    > Dialog title text: Replicate Now  
-    Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller \<Source DC> to Domain Controller \<Destination DC>:  
+    ```output
+    Dialog title text: Replicate Now  
+    Dialog message text: The following error occurred during the attempt to synchronize naming context <%directory partition name%> from Domain Controller <Source DC> to Domain Controller <Destination DC>:  
     Replication access was denied  
-    >
-    > The operation will not continue  
+    
+    The operation will not continue  
     Buttons in Dialog: OK
+    ```
 
-    ![Screenshot of the error message](./media/replication-error-8453/error-message-dialog-box.png)
+    :::image type="content" source="media/replication-error-8453/replication-access-was-denied-error.png" alt-text="The Replication access was denied error that occurs after running the replicate now command." border="false":::
 
 - NTDS KCC, NTDS General, or Microsoft-Windows-ActiveDirectory_DomainService events that have the 8453 status are logged in the Active Directory Directive Services (AD DS) event log.
 
@@ -197,8 +209,7 @@ Active Directory events that commonly indicate the 8453 status include but aren'
 |NTDS General|1655|Active Directory attempted to communicate with the following global catalog and the attempts were unsuccessful.|
 |NTDS KCC|1265|The attempt to establish a replication link with parameters<br/>Partition: \<partition DN path><br/>Source DSA DN: \<DN of source DC NTDS Settings object><br/>Source DSA Address: \<source DCs fully qualified CNAME><br/>Inter-site Transport (if any): \<dn path><br/>failed with the following status:|
 |NTDS KCC|1925|The attempt to establish a replication link for the following writable directory partition failed.|
-||||
-
+  
 ## Cause
 
 Error 8453 (Replication Access was denied) has multiple root causes, including:
@@ -252,15 +263,14 @@ To resolve this problem, use the following methods.
 
 The **UserAccountControl** attribute includes a bitmask that defines the capabilities and state of a user or computer account. For more information about **UserAccountControl** flags, see [User-Account-Control attribute](/windows/win32/adschema/a-useraccountcontrol).
 
-The typical **UserAccountControl** attribute value for a *writeable* (*full*) DC computer account is 532480 decimal or 82000 hex. **UserAccountControl** values for a DC computer account can vary, but must contain the **SERVER_TRUST_ACCOUNT** and **TRUSTED_FOR_DELEGATION** flags, as shown in the following table.
+The typical **UserAccountControl** attribute value for a _writeable_ (_full_) DC computer account is 532480 decimal or 82000 hex. **UserAccountControl** values for a DC computer account can vary, but must contain the **SERVER_TRUST_ACCOUNT** and **TRUSTED_FOR_DELEGATION** flags, as shown in the following table.
 
 | Property flag| Hex value| Decimal value |
 |---|---|---|
 | **SERVER_TRUST_ACCOUNT**| 0x2000| 8192 |
 | **TRUSTED_FOR_DELEGATION**| 0x80000| 524288 |
 | **UserAccountControl Value**| 0x82000| 532480 |
-||||
-
+  
 The typical **UserAccountControl** attribute value for a read-only domain controller computer account is 83890176 decimal or 5001000 hex.
 
 | Property flag| Hex value| Decimal value |
@@ -269,8 +279,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
 | **TRUSTED_TO_AUTHENTICATE_FOR_DELEGATION**| 0x1000000| 16777216 |
 | **PARTIAL_SECRETS_ACCOUNT**| 0X4000000| 67108864 |
 | **Typical UserAccountControl Value for RODC**| 0x5001000| 83890176 |
-||||
-
+  
 - **The UserAccountControl attribute on the destination domain controller is missing the SERVER_TRUST_ACCOUNT flag**  
 
     If the DCDIAG MachineAccount test fails and returns a **failed test MachineAcccount** error message, and the **UserAccountControl** attribute on the tested domain controller is missing the **SERVER_TRUST_ACCOUNT** flag, add the missing flag in the tested domain controller's copy of Active Directory.
@@ -297,7 +306,7 @@ The typical **UserAccountControl** attribute value for a read-only domain contro
     3. Select the **Delegation** tab.
     4. On the domain controller machine account, select the **Trusted this computer for delegation to any service (Kerberos only)** option.
 
-        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="The Trusted this computer for delegation to any service option.":::
+        :::image type="content" source="./media/replication-error-8453/trusted-computer-for-delegation-to-service.png" alt-text="The Trusted this computer for delegation to any service option under the Delegation tab in the D C Properties dialog box." border="false":::
 
 ### Fix invalid default security descriptors
 
@@ -314,7 +323,7 @@ Default permissions on Active Directory partitions don't allow the following ope
 
 By design, these operations fail until default permissions or group memberships are modified.
 
-Permissions are defined at the top of each directory partition (*NC head*), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
+Permissions are defined at the top of each directory partition (_NC head_), and are inherited throughout the partition tree. Verify that explicit groups (groups that the user is directly a member of) and implicit groups (groups that explicit groups have nested membership of) have the required permissions. Also verify that Deny permissions assigned to implicit or explicit groups don't take precedence over the required permissions. For more information about default directory partitions, see [Default Security of the Configuration Directory Partition](/previous-versions/windows/it-pro/windows-2000-server/cc961739(v=technet.10)).
 
 - **Verify that default permissions exist in the top of each directory partition that is failing and returning replication access was denied**  
 
@@ -326,8 +335,8 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
 
     If a scheduled replication that's started by domain controllers in a forest is failing and returning error 8453, focus on permissions for the following security groups:
 
-    - Enterprise Domain Controllers
-    - Enterprise Read-Only Domain Controllers
+  - Enterprise Domain Controllers
+  - Enterprise Read-Only Domain Controllers
 
     If a scheduled replication is started by domain controllers on a read-only domain controller (RODC) is failing and returning error 8453, verify that the Enterprise Read-Only Domain Controllers security group is granted the required access on the NC head of each directory partition.
 
@@ -340,7 +349,6 @@ Permissions are defined at the top of each directory partition (*NC head*), and 
     | Replication Synchronization|X|
     | Replicating Directory Changes All|X|
     |Replicating Changes in Filter Set|X|
-    |||
 
     > [!NOTE]
     > The DCDIAG NcSecDesc test may report false positive errors when it's run in environments that have mixed system versions.

@@ -2,7 +2,6 @@
 title: Could not load type error
 description: Fixes an issue where you get the Could not load type error when you try to create an Exchange Connector in System Center 2016 Service Manager.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: austinm, luche
 ---
 # Could not load type error when creating an Exchange Connector in System Center 2016 Service Manager
@@ -42,7 +41,7 @@ After you install Exchange Connector 3.1, install **Microsoft.SystemCenter.Excha
 > This file isn't part of Update Rollup 2 for System Center 2016 Service Manager.
 
 1. Go to [Microsoft.SystemCenter.ExchangeConnector.dll.exe](https://www.microsoft.com/download/details.aspx?id=54655&751be11f-ede8-5a0c-058c-2ee190a24fa6=True&fa43d42b-25b5-4a42-fe9b-1634f450f5ee=True), and select **Download**.
-2. Select the **Microsoft.SystemCenter.ExchangeConnector.dll.exe** check box.
+2. Select the **Microsoft.SystemCenter.ExchangeConnector.dll.exe** check box.
 3. Select **Next**.
 4. Select **Save As** and save the file to your system.
 5. Double-click the **Microsoft.SystemCenter.ExchangeConnector.dll.exe** file and follow the instructions to install the **Microsoft.SystemCenter.ExchangeConnector.dll** file. This file should be saved in your Service Manager installation path.

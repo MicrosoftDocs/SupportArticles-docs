@@ -2,7 +2,7 @@
 title: Detours or similar techniques cause issues
 description: This article describes Microsoft support policy when you use third-party detours with SQL Server and issues that may occur when you use them.
 ms.date: 09/03/2020
-ms.prod-support-area-path: General Troubleshooting Information
+ms.custom: sap:General Troubleshooting Information
 ms.reviewer: rdorr
 ms.topic: article
 ms.prod: sql

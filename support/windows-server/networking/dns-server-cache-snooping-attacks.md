@@ -2,33 +2,33 @@
 title: DNS Server Cache snooping attacks
 description: Provides a solution to an issue where DNS Server vulnerability to DNS Server Cache snooping attacks.
 ms.date: 10/13/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, arrenc, jwesth
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS Server vulnerability to DNS Server Cache snooping attacks
 
 This article provides a solution to an issue where DNS Server vulnerability to DNS Server Cache snooping attacks.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2678371
 
 ## Symptoms
 
-[What is "DNS cache snooping" and how do I prevent it?](https://support.simpledns.plus/kb/a125/what-is-dns-cache-snooping-and-how-do-i-prevent-it.aspx) describes DNS cache snooping as:
+[What is "DNS cache snooping" and how do I prevent it?](https://simpledns.plus/kb/152/what-is-dns-cache-snooping-and-how-do-i-prevent-it) describes DNS cache snooping as:
 
 > DNS cache snooping is when someone queries a DNS server in order to find out (snoop) if the DNS server has a specific DNS record cached, and thereby deduce if the DNS server's owner (or its users) have recently visited a specific site.  
 This may reveal information about the DNS server's owner, such as what vendor, bank, service provider, etc. they use. Especially if this is confirmed (snooped) multiple times over a period.  
 This method could even be used to gather statistical information - for example at what time does the DNS server's owner typically access his net bank etc. The cached DNS record's remaining TTL value can provide very accurate data for this.
 >
-> DNS cache snooping is possible even if the DNS server is not configured to resolve recursively for 3rd parties, as long as it provides records from the cache also to 3rd parties (a.k.a. "lame requests").
+> DNS cache snooping is possible even if the DNS server is not configured to resolve recursively for 3rd parties, as long as it provides records from the cache also to third parties.
 
 Security audits may report that various DNS Server implementations are vulnerable to cache snooping attacks that allow a remote attacker to identify which domains and hosts have [recently] been resolved by a given name server.
 

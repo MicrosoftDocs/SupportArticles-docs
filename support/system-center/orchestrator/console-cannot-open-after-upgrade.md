@@ -2,7 +2,6 @@
 title: Orchestration console can't open after upgrade
 description: Fixes an issue that prevents the Orchestration web console from starting after you upgrade to System Center 2012 R2 Orchestrator.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: matthofa, dewitth
 ---
 # The Orchestration console can't be opened after upgrading to System Center 2012 R2 Orchestrator

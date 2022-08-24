@@ -1,20 +1,18 @@
 ---
-title: Error 0x80004003 signing to NDES Connector UI
-description: Describes an issue in which you receive an unexpected error and an 0x80004003 error during the sign-in process to NDES Connector UI when you configure NDES.
+title: Error 0x80004003 signing in to the Intune NDES Connector UI
+description: Troubleshoot an unexpected error and an 0x80004003 error during sign-in to the Intune Certificate NDES UI when you configure NDES.
 ms.date: 05/11/2020
-ms.prod-support-area-path: iOS app configuration profiles
+search.appverid: MET150
+ms.custom: sap:iOS app configuration profiles
 ms.reviewer: luche
 ---
-# Unexpected error and error 0x80004003 when you sign in to Intune NDES Connector UI
+# Unexpected error when you sign in to the NDES Connector UI
 
-This article fixes an issue in which you receive an unexpected error during the sign-in process to Network Device Enrollment Service (NDES) Connector UI when you configure NDES.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4024602
+This article fixes an issue in which you receive an unexpected error and and error 0x80004003 when you sign in to the Network Device Enrollment Service (NDES) Connector UI when you configure NDES.
 
 ## Symptoms
 
-When you configure NDES for Simple Certificate Enrollment Protocol (SCEP) certificate deployment in Microsoft Intune, you receive the following error message during the sign-in process to NDES Connector UI (NDESConnectorUI.exe):
+When you configure NDES for Simple Certificate Enrollment Protocol (SCEP) certificate deployment in Microsoft Intune, you receive the following error message when you sign in to the NDES Connector UI (NDESConnectorUI.exe):
 
 > An unexpected error has occurred
 
@@ -43,4 +41,4 @@ To fix the issue, assign a valid Intune license to the account that you use to s
 
 ## More information
 
-For more information about how to configure NDES for SCEP certificate deployment, see [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure).
+For more information about how to configure NDES for SCEP certificate deployment, see [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure).

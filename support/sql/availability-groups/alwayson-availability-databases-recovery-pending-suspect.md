@@ -1,12 +1,12 @@
 ---
-title: AlwaysOn DB in recovery pending or suspect state 
+title: Always On DB in recovery pending or suspect state 
 description: This article describes the errors and limitations of an availability database in Microsoft SQL Server that is in a Recovery Pending or Suspect state and how to restore the database to full functionality in an availability group.
 ms.date: 08/03/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery features
+ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: ramakoni, cmathews
 ms.prod: sql
 ---
-# Troubleshoot AlwaysOn availability databases in Recovery Pending or Suspect state in SQL Server
+# Troubleshoot Always On availability databases in Recovery Pending or Suspect state in SQL Server
 
 This article describes the errors and limitations of an availability database in Microsoft SQL Server that is in a `Recovery Pending` or `Suspect` state and how to restore the database to full functionality in an availability group.
 
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 2857849
 
 ## Summary
 
-Assume that an availability database that is defined in an AlwaysOn availability group transitions to a `Recovery Pending` or `Suspect` state in SQL Server. If this occurs on the availability group's primary replica, database availability is affected. In this situation, you can not access the database through the client applications. Additionally, you can not drop or remove the database from the availability group.
+Assume that an availability database that is defined in an Always On availability group transitions to a `Recovery Pending` or `Suspect` state in SQL Server. If this occurs on the availability group's primary replica, database availability is affected. In this situation, you can not access the database through the client applications. Additionally, you can not drop or remove the database from the availability group.
 
 For example, assume SQL Server is running and an availability database is set to the `Recovery Pending` or `Suspect` state. When you query the dynamic management views (DMVs) at the primary replica by using the following SQL script, the database might be reported in a `NOT_HEALTHY` and `RECOVERY_PENDING` state or in a `SUSPECT` state as follows:
 
@@ -38,11 +38,11 @@ database_name          synchronization_health_desc     synchronization_state_des
 (1 row(s) affected)
 ```
 
-![Screenshot of the execute result for script to check database health and sync state.](./media/alwayson-availability-databases-recovery-pending-suspect/script-db-health-sync-state.png)
+:::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/script-db-health-sync-state.png" alt-text="Screenshot of the execute result for script to check database health and sync state.":::
 
 Additionally, this database may be reported as being in the **Not Synchronizing / Recovery Pending** or **Suspect** state in SQL Server Management Studio.
 
-![Screenshot of database which is in Not Synchronizing / Recovery Pending state.](./media/alwayson-availability-databases-recovery-pending-suspect/db-notsynchronizing-recoverypending.png)
+:::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/db-not-synchronizing-recovery-pending.png" alt-text="Screenshot of database which is in Not Synchronizing / Recovery Pending state.":::
 
 When the database is defined in an availability group, the database can not be dropped or restored. Therefore, you have to take specific steps to recover the database and return it to production use.
 
@@ -168,24 +168,24 @@ This method lets you maintain the listener while dropping and re-creating the av
 2. Start Failover Cluster Manager, and then click **Roles** in the left pane. In the pane that lists the roles, select the original availability group.
 3. In the bottom-middle pane under the **Resources** tab, right-click the availability group resource, and then click **Properties**. Click the **Dependencies** tab, delete the dependency to the listener, and then click **OK**.
 
-    ![Screenshot of availability group properties Dependencies tab.](./media/alwayson-availability-databases-recovery-pending-suspect/ag-properties-dependencies-delete.png)
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/ag-properties-dependencies-delete.png" alt-text="Screenshot of availability group properties Dependencies tab.":::
 
 4. Under the resources, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
 5. In the **Assign Source to Role** dialog box, select the new availability group, and then click **OK**.
 
-    ![Screenshot of Assign Source to Role, showing to add a new availability group.](./media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-ag-test.png)
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-ag-test.png" alt-text="Screenshot of Assign Source to Role dialog box, showing the added new availability group.":::
 
 6. In the **Roles** pane, select the new availability group. In the bottom-middle pane, under the **Resources** tab, you should now see the new availability group and the listener resource. Right-click the new availability group resource, and then click **Properties**.
 
 7. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
 
-    ![Screenshot of new availability group properties Dependencies tab.](./media/alwayson-availability-databases-recovery-pending-suspect/ag-test-properties-dependencies.png)
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/ag-test-properties-dependencies.png" alt-text="Screenshot of new availability group properties Dependencies tab.":::
 
-8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group. Click **AlwaysOn High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
+8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
 
 9. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
 
-    ![Screenshot of availability group listener properties, showing the configuration of listener](./media/alwayson-availability-databases-recovery-pending-suspect/config-ag-listener.png)
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/config-ag-listener.png" alt-text="Screenshot of availability group listener properties, showing the configuration of listener." border="false":::
 
 This makes sure that applications that use the listener can still use it to connect to the instance of SQL Server that is hosting the production databases without interruption. The original availability group can now be completely removed and re-created. Or the databases and replicas can be added to the new availability group.
 
@@ -195,7 +195,7 @@ If you re-create the original availability group, you should reassign the listen
 2. In the bottom middle pane under the **Resources** tab, right-click the listener, click **More Actions**, and then click **Assign to Another Role**. In the dialog box, choose the re-created availability group, and then click **OK**.
 3. In the **Roles** pane, click the re-created availability group. In the bottom middle pane, under the **Resources** tab, you should now see the re-created availability group and the listener resource. Right-click the re-created availability group resource, and then click **Properties**.
 4. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
-5. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the re-created availability group. Click **AlwaysOn High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
+5. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the re-created availability group. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
 6. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
 
 ### Method 2: Associate the listener with an existing SQL Server Failover Clustered Instance (SQLFCI)
@@ -209,7 +209,7 @@ If you are hosting your availability group on a SQL Server Failover Clustered In
 5. In the bottom middle pane under the **Resources** tab, right-click the listener, click **More Actions**, and then click **Assign to Another Role**.
 6. In the **Assign Resource to Role** dialog box, click the SQL Server FCI instance, and then click **OK**.
 
-    ![Screenshot of Assign Resource to Role dialog box.](./media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-sqlfci.png)
+    :::image type="content" source="media/alwayson-availability-databases-recovery-pending-suspect/add-resouce-role-sqlfci.png" alt-text="Screenshot of Assign Resource to Role dialog box.":::
 
 7. In the **Roles** pane, select the SQLFCI group. In the bottom middle pane, under the **Resources** tab, you should now see the new listener resource.
 
@@ -225,7 +225,7 @@ After the availability group is re-created, reassign the listener back to the av
   6. Under the **Resources** tab, you should see the new availability group and the listener resource. Right-click the new availability group resource, and then click **Properties**.
   7. Click the **Dependencies** tab, select the listener resource from the drop-down box, and then click **OK**.
   8. In SQL Server Management Studio, use **Object Explorer** to connect to the instance of SQL Server that hosts the primary replica of the new availability group.
-  9. Click **AlwaysOn High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
+  9. Click **Always On High Availability**, click the new availability group, and then click **Availability Group Listeners**. You should find the listener.
   10. Right-click the listener, click **Properties**, type the appropriate port number for the listener, and then click **OK**.
 
 ### Method 3: Drop the availability group, and then re-create the availability group and listener with the same listener name

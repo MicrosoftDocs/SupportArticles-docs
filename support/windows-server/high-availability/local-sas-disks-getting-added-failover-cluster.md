@@ -3,21 +3,21 @@ title: Local SAS Disks Getting Added in Windows Server Failover Cluster
 description: Provides a workaround for the issue that Local SAS Disks getting added in Windows Server Failover Cluster
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, eldenc
-ms.prod-support-area-path: Cannot bring a resource online
+ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Local SAS Disks Getting Added in Windows Server Failover Cluster
 
 This article provides a workaround for the issue that Local SAS Disks getting added in Windows Server Failover Cluster.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2813005
 
 ## Symptoms
@@ -58,17 +58,16 @@ Number     Signature    BusType
 
 #### Method 2
 
-
-1. Open the Windows run box using keyboard, press Windows logo key‌ ![Windows logo key ](./media/local-sas-disks-getting-added-failover-cluster/windows-logo-key.jpg)
-+R
+1. Open the Windows run box using keyboard, press Windows logo key‌ :::image type="icon" source="media/local-sas-disks-getting-added-failover-cluster/windows-logo-key.png" border="false"::: +R
 2. Type Regedit and press enter
 3. Locate and navigate to HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices
 
-![mounted devices](./media/local-sas-disks-getting-added-failover-cluster/mounted-devices.png)
+    :::image type="content" source="media/local-sas-disks-getting-added-failover-cluster/mounted-devices.png" alt-text="Screenshot of the registry with the mounted device selected.":::
 
 4. Reading Disk Signature from above registry is little tricky, you need to read key in reverse order
 
-![disk signature](./media/local-sas-disks-getting-added-failover-cluster/disk-signature.png)  
+    :::image type="content" source="media/local-sas-disks-getting-added-failover-cluster/disk-signature-from-registry.png" alt-text="Screenshot of the disk signature from above registry.":::
+  
    6f 80 f6 f6 would be read as F6F6806F 
 
 5. Repeat same steps on all the nodes of the cluster.Note: If you are not aware of the drive letter, then you may need to compare all volume GUIDs and read data in the reverse order as mentioned in step 4 above.
@@ -79,7 +78,7 @@ A new feature enhancement in Failover Clustering for Windows Server 2012 and Win
 
 For more explicit control of which disks are clustered users can disable clustering from automatically clustering disks by unchecking "Add all eligible Storage to the Cluster" during creating wizard or Add desired disk later by using "Add Disk" in FCM.
 
-![add disk in fcm](./media/local-sas-disks-getting-added-failover-cluster/add-disk-in-fcm.png)
+:::image type="content" source="media/local-sas-disks-getting-added-failover-cluster/add-disk-in-fcm.png" alt-text="Screenshot of the Add Node Wizard window with the Add all eligible storage to the cluster checkbox selected.":::
 
 Use Cluster Validation to determine if Disk can be used in Cluster. In below example, validation clearly depicts that disk is only visible on one node that usually can happen if the disks are local SAS to the node.
 

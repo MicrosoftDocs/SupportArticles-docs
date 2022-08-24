@@ -2,7 +2,6 @@
 title: Create logical switches on Nano Servers
 description: Describes how to create logical switches on Nano Servers through System Center 2016 Virtual Machine Manager.
 ms.date: 05/07/2020
-ms.prod-support-area-path:
 ---
 # How to create the logical switch on Nano Servers through VMM 2016
 
@@ -29,7 +28,7 @@ So we need to create logical switch in SCVMM considering the above constraint:
 1. Sign in to SCVMM console, and then go to **Fabric** > **Networking** > **Logical switch**.
 2. Select **Create new logical switch**, and then provide the name for logical switch. Select **Uplink mode** as **Embedded Team**.
 
-   ![Uplink mode is selected as Embedded Team](./media/create-nano-server-logical-switches/uplink-mode.png)
+   :::image type="content" source="media/create-nano-server-logical-switches/uplink-mode.png" alt-text="Uplink mode is selected as Embedded Team in General Setting of the Nano Properties window.":::
 
 3. Go through the wizard and select the required options.
 
@@ -38,15 +37,15 @@ So we need to create logical switch in SCVMM considering the above constraint:
 
       [Remote Direct Memory Access (RDMA) and Switch Embedded Teaming (SET)](/windows-server/virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming?redirectedfrom=MSDN)
 
-      Another key difference between NIC teaming and SET is that NIC teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode.
+      Another key difference between NIC teaming and SET is that NIC teaming provides the choice of three different teaming modes, while SET supports only **Switch Independent** mode.
 
-      ![Teaming mode is selected as Switch Independent](./media/create-nano-server-logical-switches/switch-independent.png)
+      :::image type="content" source="media/create-nano-server-logical-switches/switch-independent.png" alt-text="Teaming mode is selected as Switch Independent in Uplinks option.":::
 
 4. Now we can apply the above logical switch to the Nano host managed by SCVMM.
 
 If we select other **Teaming mode** as show below e.g. LACP, we will get an error while applying to Nano host:
 
-![Teaming mode is selected as LACP](./media/create-nano-server-logical-switches/teaming-mode-lacp.png)
+:::image type="content" source="media/create-nano-server-logical-switches/teaming-mode-lacp.png" alt-text="Teaming mode is selected as L A C P in Uplinks setting of the Nano Properties window.":::
 
 > Error (2912)  
 > An internal error has occurred trying to contact the 'nano.hoster.lab' server: : .  

@@ -2,7 +2,6 @@
 title: Troubleshoot blank reports
 description: This article helps you troubleshoot five common problems about blank reports in Operations Manager.
 ms.date: 06/23/2020
-ms.prod-support-area-path: 
 ms.reviewer: adoyle
 ---
 # Troubleshoot blank reports in System Center Operations Manager

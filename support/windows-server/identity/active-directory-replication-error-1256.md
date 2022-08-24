@@ -4,25 +4,25 @@ description: Describes how to Active Directory replication error 1256.
 ms.date: 10/15/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, justintu
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error 1256: The remote system is not available
 
 This article describes the symptoms, cause, and resolution steps for cases when Active Directory replication fails with error 1256: The remote system is not available.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2200187
 
 ## Symptoms
 
-1. The DCDIAG reports that the Active Directory Replications test has failed with error 1256: The remote system is not available. 
+1. The DCDIAG reports that the Active Directory Replications test has failed with error 1256: The remote system is not available.
 
     > Starting test: Replications  
     [Replications Check, \<Destination DC>] A recent replication attempt failed:  
@@ -66,7 +66,6 @@ _Original KB number:_ &nbsp; 2200187
     |---|---|---|
     | NTDS Replication ActiveDirectory_DomainService| 1085 *| Internal event: Active Directory Domain Services could not synchronize the following directory partition with the directory service at the following network address. |
     | NTDS KCC ActiveDirectory_DomainService| 1308| The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed. The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following directory service has consistently failed. |
-    ||||
 
     > [!NOTE]
     > Event 1085 is only logged if the NTDS Diagnostics value **5 Replication Events** has been set to a value of 1 or higher.
@@ -81,7 +80,7 @@ In summary: 1256 is logged as the replication status per partition as a result o
 
 ## Resolution
 
-The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding *Troubleshooting Active Directory operations that fail with error...* article.
+The win32 error 1256 should not be the focus of troubleshooting efforts, instead find the replication status that led to the RPC bind failure and then follow the corresponding _Troubleshooting Active Directory operations that fail with error..._ article.
 
 [Diagnose Active Directory replication failures](/troubleshoot/windows-server/identity/diagnose-replication-failures).
 
@@ -110,7 +109,6 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=corp,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
-    ||||||||||  
 
 3. Initiate a manual replication sync between source and destination DCs using repadmin.
 
@@ -133,20 +131,18 @@ In order to determine the actual win32 error to troubleshoot,  use one of the fo
     | London| LONCONTOSODC| DC=corp,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
     | London| LONCONTOSODC| DC=EMEA,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:54| 1256 |
     | London| LONCONTOSODC| DC=apac,DC=Contoso,DC=com| London| LONEMEADC| 11| 6/10/2010 17:35| 6/10/2010 14:50| 1256 |
-    ||||||||||
 
 ## More information
 
 The following articles contain the troubleshooting procedures for errors typically logged with win32 error 1256:
 
-| **Win32 error**| **Article**|
+|Win32 error|Article|
 |---|---|
 | -2146893022| [Active Directory replication error -2146893022: The target principal name is incorrect](/troubleshoot/windows-server/identity/replication-error-2146893022)|
 | 5| [Active Directory replication error 5 - Access is denied](/troubleshoot/windows-server/identity/replication-error-5)|
-| 1722| [/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable](/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable)|
-| 1727| Troubleshooting Active Directory operations that fail with error 1722: The remote procedure call failed and did not execute. |
-| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](/troubleshoot/windows-server/identity/replication-error-1753)| Troubleshooting Active Directory operations that fail with error 1753: There are no more endpoints available from the endpoint mapper. |
+| 1722| [Active Directory replication error 1722: The RPC server is unavailable](/troubleshoot/windows-server/identity/replication-error-1722-rpc-server-unavailable)|
+| 1727| [Troubleshoot domain controller replication error 1727-The remote procedure call failed and did not execute](/troubleshoot/windows-server/identity/remote-procedure-call-failed-and-did-not-execute-error) |
+| 1753| [Active Directory Replication Error 1753: There are no more endpoints available from the endpoint mapper](/troubleshoot/windows-server/identity/replication-error-1753)|
 | 1908| [Troubleshooting Active Directory operations that fail with error 1908: Could not find the domain controller for this domain](https://support.microsoft.com/help/2712026)|
 | 8524| [Active Directory Replication Error 8524: The DSA operation is unable to proceed because of a DNS lookup failure](/troubleshoot/windows-server/identity/replication-error-8524)|
 | 8453| [Active Directory replication error 8453: Replication access was denied](/troubleshoot/windows-server/identity/replication-error-8453)|
-|||

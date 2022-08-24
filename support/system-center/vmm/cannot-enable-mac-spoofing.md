@@ -2,7 +2,6 @@
 title: Can't enable MAC spoofing when creating a VM template
 description: Fixes an issue where you can't enable spoofing of MAC address when you create or modify a virtual machine template.
 ms.date: 07/17/2020
-ms.prod-support-area-path:
 ms.reviewer: dewitth
 ---
 # Unable to enable MAC spoofing when creating a VM template in System Center 2012 Virtual Machine Manager

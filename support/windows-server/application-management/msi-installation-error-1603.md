@@ -4,20 +4,20 @@ description: Provides solutions to the error 1603 that occurs when you install a
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: MSI
+ms.custom: sap:msi, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # Error 1603 when you try to install a Windows Installer package: A fatal error occurred during installation
 
 This article helps fix the error 1603 that occurs when you install a Microsoft Windows Installer package.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 834484
 
 ## Symptoms

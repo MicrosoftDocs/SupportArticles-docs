@@ -1,16 +1,17 @@
 ---
-title: Troubleshoot the reporting of successful certificate deployment to devices when you use SCEP with Microsoft Intune | Microsoft Docs
-description: Troubleshoot the reporting by NDES and the connector to Intune about a successful deployment of certificates that were provisioned with SCEP certificate profiles. 
-ms.date: 01/30/2020
+title: Troubleshoot reporting for SCEP certificate deployment to devices with Microsoft Intune
+description: Troubleshoot the reporting by NDES and the Intune Certificate Connector about a successful deployment of certificates that were provisioned with SCEP certificate profiles. 
+ms.date: 09/10/2021
 ms.reviewer: lacranda
+search.appverid: MET150
 ---
-# Troubleshoot NDES reporting of certificate deployments in Microsoft Intune
+# Troubleshooting NDES reporting of certificate deployments in Intune
 
-Use the following information to confirm that NDES and the Microsoft Intune Certificate Connector successfully report to Intune that the certificate was delivered to a device. Reporting to Intune is the last phase for using SCEP certificate profiles to provision Windows devices with a certificate.
+When using SCEP certificate profiles to provision certificates to Windows devices, the last phase is that the Intune Certificate Connector reports the deployment to Intune. This article explains how to confirm that NDES and the Intune Certificate Connector are successfully reporting on certificate delivery to devices.
 
-This article applies to the step 6 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
+This article applies to the Step 6 of the [SCEP communication workflow](troubleshoot-scep-certificate-profiles.md).
 
-## Review for signs of successful reporting
+## Find reporting log entries
 
 If reporting was successful, you'll find entries that resemble the following examples on the NDES server:
 
@@ -20,7 +21,7 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **NDESPlugin.log**:
 
-  ```
+  ```output
   Calling Notifyrequest ...
   Sending request to certificate registration point.
   Exiting Notify with 0x0
@@ -28,24 +29,20 @@ If reporting was successful, you'll find entries that resemble the following exa
 
 - **CertificateRegistrationPoint.svclog**:
 
-  ![CertificateRegistrationPoint.svclog](./media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-reporting/certificate-registration-point-log.png" alt-text="Screenshot of entries in the Certificate Registration Point log.":::
 
 - **NDESConnector.svclog**:
 
-  ![Intune Certificate Connector log](./media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png)
+  :::image type="content" source="media/troubleshoot-scep-certificate-reporting/ndesconnector-log.png" alt-text="Screenshot of entries in the Intune Certificate Connector log.":::
 
 - **CertificateRequestStatus**:
 
-  Go to the *%ProgramFiles%\Microsoft Intune\CertificateRequestStatus* folder where you'll see the **Failed**, **Processing**, and **Succeed** folders that contain certificate request status files.
+  Go to the *%ProgramFiles%\Microsoft Intune\CertificateRequestStatus* folder. You'll see the Failed, Processing, and Succeed folders that contain certificate request status files.
 
-  If the certificate request is successfully processed, you'll see new files in the **Succeed** folder. You can use *Notepad.exe* to open the files and view the data that's uploaded to the Intune Service by the Intune Certificate Connector. Data that uploaded includes details like **CertificateSerialNumber**, **UserID**, **DeviceID**, and **Thumbprint**.
+  If the certificate request is successfully processed, you'll see new files in the Succeed folder. You can use *Notepad.exe* to open the files and view the data that's uploaded to the Intune Service by the Intune Certificate Connector. Data that uploaded includes details like **CertificateSerialNumber**, **UserID**, **DeviceID**, and **Thumbprint**.
 
-### Troubleshoot stuck files
+## Troubleshoot stuck files
 
-If you don't see any new files being created in the *Succeed* folder, check whether there are any files stuck in the *Processing* folder.
+If you don't see any new files being created in the %ProgramFiles%\Microsoft Intune\CertificateRequestStatus\Succeed folder, check whether there are any files stuck in the Processing folder.
 
-Verify that the Intune Connector Service is started on the NDES server, and there are no errors in Ndesconnector.svclog.
-
-## Next steps
-
-[How to get support in Microsoft Endpoint Manager](/mem/get-support)
+Verify that the Intune Connector Service is started on the NDES server. And there are no errors in Ndesconnector.svclog.

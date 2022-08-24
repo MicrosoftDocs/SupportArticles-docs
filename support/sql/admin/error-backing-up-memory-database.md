@@ -2,7 +2,7 @@
 title: Warning in the error log can be ignored
 description: This article describes a warning that occurs when backing up an in-memory database.
 ms.date: 09/15/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: yqsu, ericbu, daleche
 ms.topic: article
 ms.prod: sql

@@ -2,22 +2,22 @@
 title: Error messages when you scan for updates
 description: Describes the download behavior of Windows Update Web site and the error messages that can occur.
 ms.date: 10/10/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # "Error: 0x8004005" or "Error: 0x800C0005" error messages when you scan for updates
 
 This article provides a solution to error messages when you scan for updates.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 843499
 
 ## Symptoms

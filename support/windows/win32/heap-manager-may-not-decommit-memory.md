@@ -2,8 +2,9 @@
 title: Heap manager may not decommit memory
 description: This article describes a problem in which the Low Fragmentation Heap (LFH) may not decommit memory that was freed by using HeapFree.
 ms.date: 03/16/2020
-ms.prod-support-area-path: System services development
+ms.custom: sap:System services development
 ms.reviewer: jlambert, davean
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Heap manager may not decommit memory after memory is freed
 

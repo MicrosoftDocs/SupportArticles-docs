@@ -2,7 +2,6 @@
 title: Error 25310 when creating a cluster
 description: Fixes an issue in which you can't create a cluster with the recently created hosts and receive error 25310.
 ms.date: 04/26/2020
-ms.prod-support-area-path: 
 ---
 # Creating a cluster in System Center 2012 Virtual Machine Manager fails with error 25310
 
@@ -13,18 +12,18 @@ _Original KB number:_ &nbsp; 2680262
 
 ## Symptoms
 
-After doing a bare metal deployment using System Center 2012 Virtual Machine Manager, you are unable to create a cluster with the recently created hosts. Attempting to do so fails with the following error message:
+After doing a bare metal deployment using System Center 2012 Virtual Machine Manager, you are unable to create a cluster with the recently created hosts. Attempting to do so fails with the following error message:
 
 > Error (25310)  
 > Unable to connect to the user host process.
 
 ## Cause
 
-This occurs because the host is running out of resources to process the request. The event log will point to resource pools not available to process the request.
+This occurs because the host is running out of resources to process the request. The event log will point to resource pools not available to process the request.
 
 ## Resolution
 
-To resolve this issue, reboot the host prior to creating the cluster.
+To resolve this issue, reboot the host prior to creating the cluster.
 
 ## More Information
 

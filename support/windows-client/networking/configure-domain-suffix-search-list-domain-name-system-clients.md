@@ -3,14 +3,14 @@ title: How to configure a domain suffix search list on the Domain Name System cl
 description: Describes how to automate the process of configuring the domain suffix search list on your Domain Name System (DNS) clients.
 ms.date: 12/07/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, drewba
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # How to configure a domain suffix search list on the Domain Name System clients
@@ -20,7 +20,7 @@ This article describes how to automate the process of configuring the domain suf
 > [!Note]
 > This article applies to Windows 2000. Support for Windows 2000 ends on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 275553
 
 ## Summary

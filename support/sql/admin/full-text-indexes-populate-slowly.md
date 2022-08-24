@@ -2,7 +2,7 @@
 title: Full-text indexes populate slowly
 description: This article introduces you to issues that can occur when working with multiple full-text indexes and solutions to workaround those problems.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
 # Full-text indexes stop populating for 30 minutes in SQL Server

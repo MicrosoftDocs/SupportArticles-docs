@@ -1,23 +1,23 @@
 ---
-title: Error "An item with the same key has already been added" 
+title: Error "An item with the same key has already been added"
 description: Helps to fix the error "An item with the same key has already been added"
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Errors when running the Validation Wizard
+ms.custom: sap:errors-when-running-the-validation-wizard, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Error: "An item with the same key has already been added"
 
 This article helps to fix the error "An item with the same key has already been added".
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2002405
 
 ## Symptoms

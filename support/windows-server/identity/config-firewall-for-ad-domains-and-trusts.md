@@ -4,20 +4,20 @@ description: Describes the ports that are used when you configure a trust relati
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory domain or forest functional level updates
+ms.custom: sap:active-directory-domain-or-forest-functional-level-updates, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to configure a firewall for Active Directory domains and trusts
 
 This article describes how to configure a firewall for Active Directory domains and trusts.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 Standard, Windows Server 2012 Standard  
 _Original KB number:_ &nbsp; 179442
 
 > [!NOTE]
@@ -40,9 +40,8 @@ _Original KB number:_ &nbsp; 179442
 |1024-65535/TCP/UDP|88/TCP/UDP|Kerberos|
 |1024-65535/TCP|445/TCP|SMB|
 |1024-65535/TCP|1024-65535/TCP|FRS RPC (*)|
-||||
-
-NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Windows Server 2003 when trusts to domains are configured that support only NETBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
+  
+NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Windows Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 For more information about how to define RPC server ports that are used by the LSA RPC services, see:
 
@@ -60,22 +59,21 @@ For more information about the dynamic port range change in Windows Server 2012 
 
 |Client Port(s)|Server Port|Service|
 |---|---|---|
-|49152 -65535/UDP|123/UDP|W32Time|
-|49152 -65535/TCP|135/TCP|RPC Endpoint Mapper|
-|49152 -65535/TCP|464/TCP/UDP|Kerberos password change|
-|49152 -65535/TCP|49152-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
-|49152 -65535/TCP/UDP|389/TCP/UDP|LDAP|
-|49152 -65535/TCP|636/TCP|LDAP SSL|
-|49152 -65535/TCP|3268/TCP|LDAP GC|
-|49152 -65535/TCP|3269/TCP|LDAP GC SSL|
-|53, 49152 -65535/TCP/UDP|53/TCP/UDP|DNS|
-|49152 -65535/TCP|49152 -65535/TCP|FRS RPC (*)|
-|49152 -65535/TCP/UDP|88/TCP/UDP|Kerberos|
-|49152 -65535/TCP/UDP|445/TCP|SMB (**)|
-|49152 -65535/TCP|49152-65535/TCP|DFSR RPC (*)|
-||||
-
-NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NETBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
+|49152-65535/UDP|123/UDP|W32Time|
+|49152-65535/TCP|135/TCP|RPC Endpoint Mapper|
+|49152-65535/TCP|464/TCP/UDP|Kerberos password change|
+|49152-65535/TCP|49152-65535/TCP|RPC for LSA, SAM, NetLogon (*)|
+|49152-65535/TCP/UDP|389/TCP/UDP|LDAP|
+|49152-65535/TCP|636/TCP|LDAP SSL|
+|49152-65535/TCP|3268/TCP|LDAP GC|
+|49152-65535/TCP|3269/TCP|LDAP GC SSL|
+|53, 49152-65535/TCP/UDP|53/TCP/UDP|DNS|
+|49152-65535/TCP|49152-65535/TCP|FRS RPC (*)|
+|49152-65535/TCP/UDP|88/TCP/UDP|Kerberos|
+|49152-65535/TCP/UDP|445/TCP|SMB (**)|
+|49152-65535/TCP|49152-65535/TCP|DFSR RPC (*)|
+  
+NetBIOS ports as listed for Windows NT are also required for Windows 2000 and Server 2003 when trusts to domains are configured that support only NetBIOS-based communication. Examples are Windows NT-based operating systems or third-party Domain Controllers that are based on Samba.
 
 (*) For information about how to define RPC server ports that are used by the LSA RPC services, see:
 
@@ -89,9 +87,7 @@ NETBIOS ports as listed for Windows NT are also required for Windows 2000 and Se
 
 ### Active Directory
 
-In Windows 2000 and Windows XP, the Internet Control Message Protocol (ICMP) must be allowed through the firewall from the clients to the domain controllers so that the Active Directory Group Policy client can function correctly through a firewall. ICMP is used to determine whether the link is a slow link or a fast link.
-
-In Windows Server 2008 and later versions, the Network Location Awareness Service provides the bandwidth estimate based on traffic with other stations on the network. There is no traffic generated for the estimate.
+The Microsoft LDAP client uses ICMP ping when a LDAP request is pending for extended time and it waits for a response. It sends ping requests to verify the server is still on the network. If it does not receive ping responses, it fails the LDAP request with LDAP_TIMEOUT.
 
 The Windows Redirector also uses ICMP Ping messages to verify that a server IP is resolved by the DNS service before a connection is made, and when a server is located by using DFS. If you want to minimize ICMP traffic, you can use the following sample firewall rule:
 
@@ -104,8 +100,7 @@ By default, Windows Server 2003 and Windows 2000 Server DNS servers use ephemera
 |Client Ports|Server Port|Protocol|
 |---|---|---|
 |1024-65535/TCP|1723/TCP|PPTP|
-||||
-
+  
 In addition, you would have to enable IP PROTOCOL 47 (GRE).
 
 > [!NOTE]

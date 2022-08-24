@@ -1,23 +1,23 @@
 ---
 title: Security setting changes on folders don't appear immediately on replication partners
-description: Describes the delays on DFSR replication partners after security setting changes on folders
-ms.date: 09/21/2020
+description: Describes the delays on DFSR replication partners after security setting changes on folders.
+ms.date: 06/24/2022
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # Security setting changes on folders don't appear immediately on DFSR replication partners
 
 This article provides a workaround for the delays on DFSR replication partners after security setting changes on folders.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3212430
 
 ## Symptoms
@@ -31,7 +31,7 @@ For example, if you grant a user Modify permissions to a folder on a domain cont
 
 ## Cause
 
-This issue occurs because when you make folder security changes remotely, there's a delay before the redirector sends the **Close** statement for the parent folder. Therefore, the receiving NTFS driver doesn't immediately stamp the change with a USN Close statement in the NTFS Journal for the DFSR USN consumer.
+This issue occurs because when you make folder security changes remotely or locally, there's a delay before the redirector sends the **Close** statement for the parent folder. Therefore, the receiving NTFS driver doesn't immediately stamp the change with a USN Close statement in the NTFS Journal for the DFSR USN consumer.
 
 ## Workaround
 

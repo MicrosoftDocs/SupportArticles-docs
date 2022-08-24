@@ -1,23 +1,23 @@
 ---
 title: Access Denied when you access Server Message Block (SMB) file share
 description: Resolves an issue in which you can't access a shared folder through SMB2 protocol. This issue occurs in Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, and Windows Server 2008.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Access to remote file shares (SMB or DFS Namespace)
-ms.technology: windows-client-networking 
+ms.custom: sap:access-to-remote-file-shares-smb-or-dfs-namespace, csstroubleshoot
+ms.technology: windows-client-networking
 ---
 # Access Denied when you access an SMB file share in Windows
 
 This article helps fix the **Access Denied** error that occurs when you access a Server Message Block (SMB) file share.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2012 R2, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3035936
 
 ## Symptoms
@@ -75,7 +75,8 @@ You can use the following methods to verify and troubleshoot the issue.
 
     Then, you can see the following result that shows the SYNCHRONIZE bit is set:
 
-    > [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
+    ```output
+    [2] ACCESS_ALLOWED_ACE_TYPE: BUILTIN\Users  
     [OBJECT_INHERIT_ACE]  
     [CONTAINER_INHERIT_ACE]  
     [INHERITED_ACE]  
@@ -85,6 +86,7 @@ You can use the following methods to verify and troubleshoot the issue.
     FILE_TRAVERSE  
     SYNCHRONIZE  
     READ_CONTROL
+    ```
 
     See the [behavior of the SYNCHRONIZE bit](/openspecs/windows_protocols/ms-smb2/a64e55aa-1152-48e4-8206-edd96444e7f7) on Windows SMB2 clients.
 

@@ -4,21 +4,21 @@ description: Fixes an issue where the option to auto-install the DNS Server role
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arrenc, kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Unable to select DNS Server role when adding a domain controller into an existing Active Directory domain
 
 This article helps fix an issue where the option to auto-install the DNS Server role is disabled or grayed out in the Active Directory Installation Wizard (DCPROMO) when promoting a Windows Server 2008 or Windows Server 2008 R2 replica domain controller.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2002584
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2002584
 
 ## Symptoms
 
@@ -30,7 +30,7 @@ Text in the **Additional information** field states:
 
 A screenshot of this condition is shown below:
 
-![DCPROMODNS checkbox greyed out during replica promotion.](./media/auto-install-dns-server-role-disabled-promte-domain-controller/dcpromo-dns-check-box-greyed.jpg)
+:::image type="content" source="media/auto-install-dns-server-role-disabled-promte-domain-controller/dcpromo-dns-check-box-greyed.png" alt-text="Screenshot of the Active Directory Domain Services Installation Wizard window with the DNS server and Read-only domain controller checkbox greyed out.":::
 
 The %windir%\debug\dcpromoui.log file on the replica domain controller being promoted shows the following:  
 
@@ -86,28 +86,3 @@ Don't let the inability to auto-install the DNS Server role during DCPROMO block
     ```
 
 6. Restart DCPROMO on the replica domain controller.
-
-## More information
-
-> [!NOTE]
-> The following information is MSInternal and shouldn't be shared with customers.
-  
-Explanation from Jeff Westhead via email on 2008.10.10.
-
-Installing DNS during DCPROMO autocreates DNS application partitions
-
-If the first DC in the domain does not host DNS, then neither should any replica. The time to decide to rearchitect your DNS deployment is not while you are promoting a replica!
-
-Informal testing has shown that AD-integrated DNS may be installed on DCs other than the first DC in the domain and replicas will STILL have the option to install DNS Server role during DCPROMO. \<end Arrenc edit>
-
-I don't believe this is actually a check for a third-party DNS server. This might not be stringent enough but it most likely works well most of the time. I believe dcpromo calls Dns_DoesDomainHostDns, which performs a SOA query for the domain name and ensures that the response asserts that the start of authority for the name is the name itself rather than some parent name. This is testing that there is, on some DNS server somewhere in the infrastructure, a DNS zone that exactly matches the name of the domain.
-
-For example, if I'm promoting a replica for "`child.corp.contoso.com`" but the only zone that exists is "`corp.contoso.com`" then this check will fail and dcpromo will assume that installing DNS on this replica is the wrong thing to do.
-
-What dcpromo is trying to determine is whether or not DNS is required to support AD. If it's not, then dcpromo shouldn't offer the option to install DNS. The admin should be forced to install the DNS server role manually after dcpromo if the admin intends to run a DNS server on this DC for some purpose that's not related to serving DNS for the Active Directory domain.
-
- **Sample Customer Experience:**  
-
-SRX0808XXXXX495. 19 logs in 7.52 hours of labor. Customer type: Partner. Customer name: \<removed>. Case Title: DNS Server option is grayed out during DCPROMO. L7: Customer calls when DCPROMO doesn't give the option to install DNS. L8: EasyAssist. PSS finds customer using single-label DNS domain name. PSS says promote DC and add DNS after the fact.
-
-SRX0809XXXXX240. 6.63 hours in 16 logs. Partner. \<customer name removed>. Title: DNS Role can't be installed. Problem statement IS that checkbox to install DNS can't be enabled in DCPROMO. PSS says DNS zone for child domain resides on parent domain DNS Servers vs. delegating to DNS Servers in child domain.

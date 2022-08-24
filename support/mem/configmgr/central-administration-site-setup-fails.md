@@ -2,7 +2,6 @@
 title: Can't expand a stand-alone primary site
 description: Describes an issue in which a central administration site setup fails when you expand a stand-alone primary site. This issue occurs when the two-factor authentication is enabled in hierarchy settings.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ---
 # Attaching a central administration site to a stand-alone primary site fails when two-factor authentication is enabled
 
@@ -17,9 +16,9 @@ You have a Configuration Manager current branch version 1810 stand-alone primary
 
 When you try to expand the stand-alone primary site by installing a central administration site, the central administration site setup fails. The following errors are logged in the ConfigMgrSetup.log file:
 
-> Configuration Manager Setup    INFO: Updating primary site's site control file in CAS's database.  
-> Configuration Manager Setup    \*** insert into vSMS_SC_GlobalProperty (SiteNumber, PropertyName, Value1, Value2, Value3) values (1, N'{3B1F3900-A186-11d0-BDA9-00A0C909FDD7} Authentication', N'', N'', 0)~;select convert(BIGINT, SCOPE_IDENTITY())  
-> Configuration Manager Setup    *** [42000][50000][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert Authentication property vSMS_SC_GlobalProperty in this context : tr_vSMS_SC_GlobalProperty_ins
+> Configuration Manager Setup    INFO: Updating primary site's site control file in CAS's database.  
+> Configuration Manager Setup    \*** insert into vSMS_SC_GlobalProperty (SiteNumber, PropertyName, Value1, Value2, Value3) values (1, N'{3B1F3900-A186-11d0-BDA9-00A0C909FDD7} Authentication', N'', N'', 0)~;select convert(BIGINT, SCOPE_IDENTITY())  
+> Configuration Manager Setup    *** [42000][50000][Microsoft][SQL Server Native Client 11.0][SQL Server]Cannot insert Authentication property vSMS_SC_GlobalProperty in this context : tr_vSMS_SC_GlobalProperty_ins
 
 ## Cause
 
@@ -31,7 +30,7 @@ To fix this issue, update the stand-alone primary site to [Update Rollup 2 for C
 
 ## Workaround
 
-To work around this issue in Configuration Manager current branch version 1810:
+To work around this issue in Configuration Manager current branch version 1810:
 
 1. Change the authentication level to disable two-factor authentication:
 

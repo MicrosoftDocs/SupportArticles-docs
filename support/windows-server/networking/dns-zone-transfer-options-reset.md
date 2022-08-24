@@ -4,21 +4,21 @@ description: Address an issue in which DNS zone transfer options are reset after
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, v-jesits, kardiva, davusa, gopkr, ajayps
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # DNS zone transfer options are reset after you change zone replication scope in Windows Server 2008 R2
 
 This article provides help to solve an issue where DNS zone transfer options are reset after you change the zone replication scope.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;4050194
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 4050194
 
 ## Symptoms
 
@@ -35,7 +35,7 @@ Consider the following scenario:
 
     To all DNS servers running on domain controllers in this domain: `contoso.com`
 
-    ![Screenshot of setting the zone replication scope](./media/dns-zone-transfer-options-reset/set-zone-replication-scope.png)
+    :::image type="content" source="media/dns-zone-transfer-options-reset/set-zone-replication-scope.png" alt-text="Screenshot of setting the zone replication scope.":::
 
 - This change is replicated to **DC2**, and then the **contoso.com** zone is reloaded by the DNS service on **DC2**.
 
@@ -44,7 +44,7 @@ In this scenario, the zone transfer settings on **DC2**  are removed. The follow
 - The **Allow zone transfers**  check box is cleared.
 - The list of servers to which zone transfer was previously allowed is removed. The server values are also removed from the registry.
 
-    ![Zone Transfer settings](./media/dns-zone-transfer-options-reset/allow-zone-transfers-server-removed.png)
+    :::image type="content" source="media/dns-zone-transfer-options-reset/allow-zone-transfers-server-removed.png" alt-text="Screenshot of the properties window which shows the Allow zone transfers check box is cleared.":::
 
     > [!Note]
     > When this issue occurs, the zone transfers settings on **DC1**  are not affected.
@@ -147,23 +147,23 @@ The backup script backs up the zone transfer settings for a particular zone. (Fo
 
 The second command (highlighted) in the following screenshot takes a backup of the zone transfer settings for the zone that is named "test3.com."
 
-![Screenshot of command to take a backup of the zone transfer settings](./media/dns-zone-transfer-options-reset/command-to-backup-zone-transfer-setting.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/command-to-backup-zone-transfer-setting.png" alt-text="Screenshot of the command to take a backup of the zone transfer settings.":::
 
 ##### Where the settings are backed up to in the registry
 
-![DNS backup](./media/dns-zone-transfer-options-reset/settings-backed-up-in-resgitry.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/settings-backed-up-in-resgitry.png" alt-text="Screenshot of the Registry Editor window where the settings are backed up.":::
 
 ##### Running the script to restore the zone transfer settings (the restore script restores these two values only)
 
-![Restore script](./media/dns-zone-transfer-options-reset/script-to-restore-zone-transfer-setting.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/script-to-restore-zone-transfer-setting.png" alt-text="Screenshot of Windows PowerShell window which runs the restore script.":::
 
 ##### Zone transfer settings in the registry before the restore operation  
 
-![Registry key before restart](./media/dns-zone-transfer-options-reset/settings-in-registry-before-restore.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/settings-in-registry-before-restore.png" alt-text="Screenshot of the Registry Editor window with zone transfer settings before the restore operation.":::
 
 ##### Zone transfer settings in registry after the restore operation  
 
-![Restore key](./media/dns-zone-transfer-options-reset/settings-in-registry-after-restore.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/settings-in-registry-after-restore.png" alt-text="Screenshot of the Registry Editor window with zone transfer settings after the restore operation.":::
 
 > [!Note]
 > After you run the restore script, you must restart the DNS service to apply the changes.
@@ -183,11 +183,11 @@ The zone transfer settings are stored in the registry on the DNS server in the f
 
 #### Settings
 
-![Zone transfer setting](./media/dns-zone-transfer-options-reset/zone-transfer-setting-storage.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/zone-transfer-setting-storage.png" alt-text="Screenshot of the properties window with zone transfer settings.":::
 
 #### Registry
 
-![Zone transfer registry](./media/dns-zone-transfer-options-reset/zone-transfer-setting-storage-in-registry.png)
+:::image type="content" source="media/dns-zone-transfer-options-reset/zone-transfer-setting-storage-in-registry.png" alt-text="Screenshot of the Registry Editor window with zone transfer settings.":::
 
 > [!Note]
 > The zone transfer settings are not stored in Active Directory. Therefore, the settings don't replicate as part of Active Directory replication.  

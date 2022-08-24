@@ -2,9 +2,10 @@
 title: Guidelines for handling dates and times
 description: This article describes developer guidelines for date and time handling and includes guidelines to handle daylight saving time (DST).
 ms.date: 03/12/2020
-ms.prod-support-area-path: System services development
+ms.custom: sap:System services development
 ms.reviewer: jhornick, djanson
 ms.topic: how-to
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # Handle dates and times that include DST
 
@@ -23,7 +24,7 @@ Timestamps are values that specify a date and time combination. Applications tha
 
 Conversion from UTC time to local time can be thought of as applying two offsets. The first is the time zone offset, and the second is the DST offset. Therefore, local time is effectively UTC time plus a time zone offset, plus any applicable DST offset. The time zone offset is fairly straightforward. The computer is configured for a particular time zone, and that time zone has an offset from UTC. Determining whether a DST offset should be applied is much more complex. This activity relies on many rules that are complex and dynamic.
 
-Those complex DST rules have recently changed with DST 2007. Starting in 2007, the United States has adopted new start dates and new end dates for DST. In addition, it's common for other countries and governments to routinely change the start dates and the end dates for DST in time zones that are under their control. The following section describes the effects of the DST 2007 change on developer-related products.
+Those complex DST rules have recently changed with DST 2007. Starting in 2007, the United States has adopted new start dates and new end dates for DST. In addition, it's common for other countries/regions and governments to routinely change the start dates and the end dates for DST in time zones that are under their control. The following section describes the effects of the DST 2007 change on developer-related products.
 
 For more information about DST 2007, see [Daylight saving time help and support](https://support.microsoft.com/help/22803).
 

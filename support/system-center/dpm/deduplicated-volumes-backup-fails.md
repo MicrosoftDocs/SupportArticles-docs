@@ -2,7 +2,6 @@
 title: Can't back up deduplicated volumes on a secondary DPM server
 description: Describes a backup failure occurs on a secondary DPM 2016 server when you try to back up a deduplicated volume that's protected by the primary DPM server.
 ms.date: 07/27/2020
-ms.prod-support-area-path:
 ms.reviewer: mjacquet
 ---
 # Backup of deduplicated volumes fails on a secondary DPM 2016 server
@@ -26,4 +25,4 @@ In this scenario, you receive the following error message:
 
 ## Cause  
 
-This behavior is by design. After a deduplicated file system is protected by a primary DPM server, it's no longer supported to be protected by a secondary DPM server. For more information, see [Deduplication issues](/system-center/dpm/dpm-support-issues#BKMK_Dedup).
+This behavior is by design. After a deduplicated file system is protected by a primary DPM server, it's no longer supported to be protected by a secondary DPM server. For more information, see [Deduplication issues](/system-center/dpm/dpm-support-issues#BKMK_Dedup).

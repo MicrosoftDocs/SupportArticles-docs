@@ -3,21 +3,21 @@ title: Pre-installed Microsoft Store app is removed at first Windows logon
 description: Provides a workaround for the issue in which a pre-installed Microsoft Store App is unexpectedly removed the first time that a user logs on
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Modern, Inbox and Microsoft Store Apps
-ms.technology: windows-client-shell-experience  
+ms.custom: sap:modern-inbox-and-microsoft-store-apps, csstroubleshoot
+ms.technology: windows-client-shell-experience
 ---
 # Pre-installed Microsoft Store app is removed unexpectedly at first Windows logon
 
 This article provides a workaround for the issue in which a pre-installed Microsoft Store App is unexpectedly removed the first time that a user logs on.
 
-_Original product version:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
+_Applies to:_ &nbsp; Windows 10, version 1903, Windows 10, version 1809  
 _Original KB number:_ &nbsp; 4543142
 
 ## Symptoms

@@ -4,20 +4,20 @@ description: Provides a solution to an issue where a COM+ application stops work
 ms.date: 10/20/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: COM and COM+ performance and stability
+ms.custom: sap:com-and-com+-performance-and-stability, csstroubleshoot
 ms.technology: windows-server-application-compatibility
 ---
 # A COM+ application may stop working in Windows when a user logs off
 
 This article provides a solution to an issue where a COM+ application stops working in Windows when a user logs off.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 - all editions, Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2287297
 
 ## Symptoms
@@ -26,30 +26,30 @@ On a Windows server, you have a COM+ server application in which the identity is
 
 You may see an error that resembles the following in the Application log on the CLIENT machine. If the client executable runs on the same computer as the COM+ server application, you will see this error on the COM+ server:
 
-> Event Type:        Error  
-Event Source:    DCOM  
-Event Category:                None  
-Event ID:              10006  
-Date:                     *\<DateTime>*  
-Time:                    *\<DateTime>*  
-User:                     Domain\user  
-Computer:          *****  
+> Event Type:        Error  
+Event Source:    DCOM  
+Event Category:                None  
+Event ID:              10006  
+Date:                     *\<DateTime>*  
+Time:                    *\<DateTime>*  
+User:                     Domain\user  
+Computer:          *****  
 Description:  
 DCOM got error "Unspecified error" from the computer 'servername' when attempting to activate the server: {XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}
 
-In this case, the event message tells you that the error (E_FAIL or 80004005 or Unspecified error) is returned from the server. The CLSID of the component will be listed in the event log entry.
+In this case, the event message tells you that the error (E_FAIL or 80004005 or Unspecified error) is returned from the server. The CLSID of the component will be listed in the event log entry.
 
-You'll also see events that resemble the following in the Application log of the computer on which the COM+ application runs:
+You'll also see events that resemble the following in the Application log of the computer on which the COM+ application runs:
 
-> Log Name:      Application  
-Source:        Microsoft-Windows-User Profiles Service  
-Date:          *\<DateTime>*  
-Event ID:      1530  
+> Log Name:      Application  
+Source:        Microsoft-Windows-User Profiles Service  
+Date:          *\<DateTime>*  
+Event ID:      1530  
 Task Category: None  
-Level:         Warning  
-Keywords:      Classic  
-User:          SYSTEM  
-Computer:      SERVERNAME  
+Level:         Warning  
+Keywords:      Classic  
+User:          SYSTEM  
+Computer:      SERVERNAME  
 Description:  
 Windows detected your registry file is still in use by other applications or services. The file will be unloaded now. The applications or services that hold your registry file may not function properly afterwards.
 >
@@ -57,7 +57,7 @@ Windows detected your registry file is still in use by other applications or ser
 1 user registry handles leaked from \Registry\User\S-1-5-21-1049297961-3057247634-349289542-1004_Classes:  
 Process 2428 (\Device\HarddiskVolume1\Windows\System32\dllhost.exe) has opened key \REGISTRY\USER\S-1-5-21-1123456789-3057247634-349289542-1004_CLASSES
 
-You may see the call to create an instance of the component returns 0x800703fa.
+You may see the call to create an instance of the component returns 0x800703fa.
 
 ## Cause
 

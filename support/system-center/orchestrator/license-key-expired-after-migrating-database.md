@@ -2,7 +2,6 @@
 title: License key expired after migrating the Orchestrator database
 description: Fixes an issue where you're prompted that the license key is expired in Orchestrator Designer after you migrate an Orchestrator database from one instance of SQL Server to another.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ms.reviewer: nicholad
 ---
 # Orchestrator Designer generates a prompt for a license key after you migrate the Orchestrator database

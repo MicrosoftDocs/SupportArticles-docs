@@ -4,21 +4,21 @@ description: Describes a tool that you can use to locate and to view BitLocker r
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Bitlocker
+ms.custom: sap:bitlocker, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # How to use the BitLocker Recovery Password Viewer for Active Directory Users and Computers tool to view recovery passwords for Windows Vista
 
 This article describes a tool that you can use to locate and view BitLocker recovery passwords.
 
-_Original product version:_ &nbsp;Windows 10 - all editions, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;928202
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 928202
 
 Support for Windows Vista without any service packs installed ended on April 13, 2010. To continue receiving security updates for Windows, make sure you're running Windows Vista with Service Pack 2 (SP2). For more information, see this Microsoft web page: [Support is ending for some versions of Windows](https://windows.microsoft.com/windows/help/end-support-windows-xp-sp2-windows-vista-without-service-packs).
 
@@ -35,16 +35,12 @@ If you want to obtain the BitLocker Recovery Password Viewer tool for Windows XP
 
 You can use this tool to help locate BitLocker Drive Encryption recovery passwords for Windows Vista-based computers in Active Directory Domain Services (AD DS). The Active Directory Users and Computers Microsoft Management Console (MMC) snap-in must be installed via the Remote Server Administrator Tools (RSAT).
 
-For more information about RSAT tools, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[941314](https://support.microsoft.com/help/941314) Microsoft Remote Server Administration Tools for Windows Vista  
-
 > [!NOTE]
 > To use this tool to retrieve BitLocker Drive Encryption passwords, you must use an account that has sufficient rights. You must be a domain administrator, or you must be granted sufficient rights by a domain administrator.
 
 ## Overview
 
-The BitLocker Recovery Password Viewer lets you locate and view BitLocker recovery passwords that are stored in AD DS. You can use this tool to help recover data that's stored on a volume that has been encrypted by using BitLocker. The BitLocker Recovery Password Viewer tool is an extension for the Active Directory Users and Computers MMC snap-in. After you install this tool, you can examine the Properties dialog box of a computer object to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory *forest* (multiple domains).
+The BitLocker Recovery Password Viewer lets you locate and view BitLocker recovery passwords that are stored in AD DS. You can use this tool to help recover data that's stored on a volume that has been encrypted by using BitLocker. The BitLocker Recovery Password Viewer tool is an extension for the Active Directory Users and Computers MMC snap-in. After you install this tool, you can examine the Properties dialog box of a computer object to view the corresponding BitLocker recovery passwords. Additionally, you can right-click a domain container and then search for a BitLocker recovery password across all the domains in the Active Directory _forest_ (multiple domains).
 
 Before you can use the BitLocker Recovery Password Viewer tool to view BitLocker recovery passwords, the following conditions must be true:
 
@@ -52,13 +48,7 @@ Before you can use the BitLocker Recovery Password Viewer tool to view BitLocker
 - Windows Vista-based computers must be joined to the domain.
 - BitLocker Drive Encryption must have been enabled on the Windows Vista-based computers.
 
-## How to obtain the BitLocker Recovery Password Viewer tool
-
-### How to obtain the BitLocker Recovery Password Viewer tool for Windows Vista Enterprise, for Windows Vista Enterprise Service Pack 1, and for Windows Server 2008
-
-[Windows Vista and Windows Server 2008 for x86-based systems](https://www.microsoft.com/download/details.aspx?id=24626)  
-
-### How to obtain the BitLocker Recovery Password Viewer tool for Windows XP
+## How to obtain the BitLocker Recovery Password Viewer tool for Windows XP
 
 To obtain the BitLocker Recovery Password Viewer tool for Windows XP/Windows Server 2003, contact a Microsoft Support Professional.
 
@@ -75,15 +65,14 @@ The installation program adds the following two attributes to AD DS if these two
 |Container| **CN=**LanguageID**,CN=**DisplaySpecifier**,CN=Configuration,DC=example,DC=com** |
 |Attribute name| **adminPropertyPages** |
 |Attribute value| ****Password Viewer's GUID**** |
-|||
-
+  
 | Object type| Object value |
 |---|---|
 |Object| **CN=domainDNS-Display** |
 |Container| **CN=**LanguageID**,CN=**DisplaySpecifier**,CN=Configuration,DC=example,DC=com** |
 |Attribute name| **adminContextMenu** |
 |Attribute value| ****Password Viewer's GUID**** |
-|||
+
 > [!NOTE]
 > These tables use the following values:
 >
@@ -148,7 +137,7 @@ You may receive this error message when you try to perform a second or later ins
 
 To remove the BitLocker Recovery tool, follow these steps:
 
-1. Click **Start** > **Run**, type *appwiz.cpl*, and then click **OK**.
+1. Click **Start** > **Run**, type _appwiz.cpl_, and then click **OK**.
 2. In the **Add or Remove Programs** dialog box, click to select the **Show updates** check box.
 3. In the **Currently installed programs** list, click **BitLocker Recovery Password Viewer (for Active Directory Users and Computers)** > **Remove**.
 4. If you receive a message that states that other programs may not run correctly if you remove this update, click **Yes** to confirm the removal of this update.
@@ -158,7 +147,7 @@ To remove the BitLocker Recovery tool, follow these steps:
 
 ## Usage information
 
-The BitLocker Recovery Password Viewer tool extends the Active Directory Users and Computers MMC snap-in. To start Active Directory Users and Computers, click **Start** > **Run**, type *dsa.msc*, and then click **OK**.
+The BitLocker Recovery Password Viewer tool extends the Active Directory Users and Computers MMC snap-in. To start Active Directory Users and Computers, click **Start** > **Run**, type _dsa.msc_, and then click **OK**.
 
 The following information describes how to use the BitLocker Recovery Password Viewer tool.
 
@@ -183,7 +172,7 @@ The following information describes how to use the BitLocker Recovery Password V
 1. In Active Directory Users and Computers, right-click the domain container, and then click **Find BitLocker Recovery Password**.
 2. In the **Find BitLocker Recovery Password** dialog box, type the first eight characters of the recovery password in the **Password ID (first 8 characters)** box, and then click **Search**.
 
-    ![Find BitLocker Recovery Password dialog box](./media/bitlocker-recovery-password-viewer-tool/find-bitlocker-recover-pwd.jpg)
+    :::image type="content" source="media/bitlocker-recovery-password-viewer-tool/find-bitlocker-recover-pwd.png" alt-text="Screenshot of the Active Directory Users and Computers window with Find BitLocker Recovery Password selected.":::
 
 ## Frequently asked questions about the BitLocker Recovery Password Viewer tool
 

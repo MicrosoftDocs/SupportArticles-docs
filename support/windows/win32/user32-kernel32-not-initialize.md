@@ -2,9 +2,10 @@
 title: User32.dll or Kernel32.dll does not initialize
 description: This article describes an issue in which an application that is executed by CreateProcess or CreateProcessAsUser may fail.
 ms.date: 01/04/2021
-ms.prod-support-area-path: System Services Development
+ms.custom: sap:System Services Development
 ms.reviewer: franki
-mc.topic: article
+ms.topic: troubleshooting
+ms.technology: windows-dev-apps-system-services-dev
 ---
 # User32.dll or Kernel32.dll does not initialize
 
@@ -121,10 +122,37 @@ Desktop heap is allocated by User32.dll when a process needs user objects. If an
 
 > [!NOTE]
 > In Windows Server 2003, the specific event is logged in the System log when one of the following conditions is true:
->
-> - If the desktop heap becomes full, the following event is logged:In this case, increase the desktop heap size.
-> - If the total desktop heap becomes the system-wide buffer size, the following event is logged:  
-> In this case, decrease the desktop heap size.
+
+- If the desktop heap becomes full, the following event is logged:
+
+  ```output
+  Event Type: Warning
+  Event Source: Win32k
+  Event Category: None
+  Event ID: 243
+  Date: Date
+  Time: Time
+  User: N/A
+  Computer: ServerName
+  Description: A desktop heap allocation failed.
+  ```
+
+  In this case, increase the desktop heap size.
+- If the total desktop heap becomes the system-wide buffer size, the following event is logged:
+
+  ```output
+  Event Type: Warning
+  Event Source: Win32k
+  Event Category: None
+  Event ID: 244
+  Date: Date
+  Time: Time
+  User: N/A
+  Computer: ServerName
+  Description: Failed to create a desktop due to desktop heap exhaustion.
+  ```
+
+  In this case, decrease the desktop heap size.
 
 In Windows Server 2003, a system-wide buffer is 20 MB when one of the following conditions is true:
 

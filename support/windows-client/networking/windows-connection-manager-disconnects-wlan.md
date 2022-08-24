@@ -3,21 +3,21 @@ title: Windows Connection Manager disconnects WLAN
 description: This article describes an issue in which the WLAN is disconnected if a VPN connection is established.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote access
+ms.custom: sap:remote-access, csstroubleshoot
 ms.technology: windows-client-networking
 ---
 # Windows Connection Manager disconnects WLAN if a VPN connection is established
 
 This article provides a resolution for the issue that Windows Connection Manager disconnects WLAN if a VPN connection is established.
 
-_Original product version:_ &nbsp; Windows 8 Pro  
+_Applies to:_ &nbsp; Windows 8 Pro  
 _Original KB number:_ &nbsp; 2919900
 
 ## Symptom

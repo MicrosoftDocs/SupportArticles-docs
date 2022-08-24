@@ -4,27 +4,27 @@ description: Describes an issue that blocks you from deleting a recovery checkpo
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Snapshots, checkpoints, and differencing disks
+ms.custom: sap:snapshots-checkpoints-and-differencing-disks, csstroubleshoot
 ms.technology: hyper-v
 ---
 # You can't delete a recovery checkpoint for a virtual machine in Data Protection Manager
 
 This article describes an issue that blocks you from deleting a broken recovery checkpoint for a virtual machine in System Center 2012 Data Protection Manager.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3059372
 
 ## Symptoms
 
 After Data Protection Manager (DPM) backup fails, you can't delete broken recovery checkpoints for a virtual machine that was created by Hyper-V. When you try to do this, you discover that there's no option listed for a virtual machine in the Hyper-V Manager Console GUI.
 
-![No option listed for a virtual machine in the Hyper-V Manager Console GUI.](./media/cannot-delete-recovery-checkpoint-vm/no-vm-listed.jpg)
+:::image type="content" source="media/cannot-delete-recovery-checkpoint-vm/no-vm-listed.png" alt-text="Screenshot of the Checkpoints window, which shows that there's no option listed for a virtual machine in the Hyper-V Manager Console GUI.":::
 
 The following command returns the list of snapshots for the VM and its type:
 

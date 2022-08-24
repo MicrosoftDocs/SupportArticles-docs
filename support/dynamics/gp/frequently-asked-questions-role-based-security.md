@@ -1,0 +1,437 @@
+---
+title: Frequently asked questions about role-based security
+description: This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+ms.reviewer: kyouells
+ms.date: 03/31/2021
+---
+# Frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010
+
+This article describes answers for the frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+
+_Applies to:_ &nbsp; Microsoft Dynamics GP  
+_Original KB number:_ &nbsp; 951229
+
+## Introduction
+
+This article contains frequently asked questions about role-based security in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+
+## Overview
+
+- **Q1: Is documentation available that describes role-based security for Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
+
+   A1: The SystemSetup.pdf file describes security in Microsoft Dynamics GP 10.0. The file contains information about role-based security for Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+
+- **Q2: What are the basic components of role-based security?**
+
+  A2: The basic components are as follows:
+
+  - Operation: The Operation component is the base level element of security for windows, for reports, for posting permissions, and for document access.
+
+  - Task: The Task component is the group of operations that are needed to complete a business task. For example, the business task can be the Enter Customers task and the Post Sales Transactions task.
+
+  - Role: The Role component is the group of tasks that defines a particular job in a company. Operations are assigned to tasks. Tasks are assigned to roles. Roles are assigned to users. More than one operation can be assigned to a task. More than one task can be assigned to a role. A user can be assigned many roles.
+
+- **Q3: Is the security setup company-specific?**
+
+   A3: Yes. The roles that are assigned to each user are company-specific.
+
+- **Q4: What is the DEFAULTUSER task?**
+
+   A4: The DEFAULTUSER task is automatically assigned to each role. This task grants access to the basic areas that all users usually access, such as the User Date window.
+
+- **Q5: What is the POWERUSER role?**
+
+  A5: By default, the POWERUSER role is assigned to the sa user. The POWERUSER role grants the user access to all areas and to all modules in Microsoft Dynamics GP 10.0.
+
+- **Q6: The security tables in Microsoft Dynamics GP 9.0 and Microsoft Business Solutions - Great Plains are the SY02000 table and the SY40300 table. Do both tables exist in Microsoft Dynamics GP 10.0?**
+
+  A6: No. These tables are removed when you convert the security to Microsoft Dynamics GP 10.0. For more information, see the "Security conversion" section in this article. The following are the new security tables in Microsoft Dynamics GP 10.0:
+
+  - SY09000: Task master
+
+  - SY09100: Role master
+
+  - SY09200: Alternate or modified form and report ID master
+
+  - SY09400: Security Resource Descriptions
+
+  - SY10000: User Security
+
+  - SY10500: Role assignment master
+
+  - SY10550: DEFAULTUSER task ID assignment master
+
+  - SY10600: Tasks assignments master
+
+  - SY10700: Operations assignments master
+
+  - SY10750: DEFAULTUSER task assignment
+
+  - SY10800: Alternate or modified form and report ID assignment master
+
+## Security setup
+
+- **Q1: What are the steps to assign roles to a user?**
+
+  A1: The SystemSetup.pdf file describes how to assign roles to a user in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010.
+
+- **Q2: What are the steps to grant a user access to a SmartList object that is created by the SmartList Builder?**
+
+  A2: To grant access to a SmartList object that is created by the SmartList Builder, follow these steps:
+
+    1. Click **Microsoft Dynamics GP**, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+
+    2. In the Security Tasks Setup window, open an existing task, or create a new task to find the SmartList objects.
+
+    3. In the **Product** list, click **SmartList**.
+
+    4. In the **Type** list, click **SmartList Object**.
+
+    5. In the **Series** list, click **SmartList Objects**.
+
+    6. After the SmartList objects appear in the **Access List** pane, click to select the check boxes of the SmartList objects to which you want to grant access.
+    7. Click **Save**.
+
+- **Q3: How do I grant a user access to a custom report in Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
+
+  A3: To add the custom report to a current security task that is assigned to the security role, use Method 1. To create a new security task for the custom report, create a new security role, assign the new security task to the new security role, and grant the access to the new security role, use Method 2.
+
+  - Method 1: Add the custom report to a current security task
+
+    1. Log on to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010 as the sa user.
+
+    2. Specify the security task. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+
+       2. In the Security Task Setup window, click the lookup button next to the **Task ID** field.
+
+       3. Click the security task to which you want to add the custom report, and then click **Select**.
+
+       4. In the **Product** list, click the product for which the custom report is used.
+
+       5. In the **Type** list, click **Custom Reports**.
+
+       6. In the **Series** list, click the appropriate series.
+
+          The **Access List** area displays the reports.
+
+       7. Click to select the check boxes for the custom reports to which you want to grant access.
+
+       8. Click **Save**.
+
+       9. Close the **Security Task Setup** window.
+
+    3. Specify the security role. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Roles**.
+
+       2. In the Security Role Setup window, click the lookup button next to the **Role ID** field.
+
+       3. Click the security role that you want to use.
+
+       4. Verify that the check box for the security task that you specified in step 2 is selected. Otherwise, click to select the check box.
+
+       5. Click **Save** to save the changes to the security role.
+
+          > [!NOTE]
+          > Any users who are assigned to the security role have access to the reports that you select for the task.
+
+       6. Close the Security Roles Setup window.
+
+    4. Verify that the security role is assigned to the appropriate user. Otherwise, add the security role to the appropriate user. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **User Security**.
+
+       2. In the User Security Setup window, click the lookup button next to the **User** field, click a user who you want to use, and then click **Select**.
+
+       3. In the **Company** list, click a company that you want to use.
+
+       4. Verify that the check box for the security role that you specified in step 3 is selected. Otherwise, click to select the check box.
+
+       5. Click **Save** to assign the user to the security role.
+
+       6. Close the User Security Setup window.
+
+  - Method 2: Create a new security task and a new security role for the custom report
+
+    1. Log on to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010 as the sa user.
+    2. Create a new security task. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+
+       2. In the Security Task Setup window, type a task identifier (ID) in the **Task ID** field, type a task name in the **Task Name** field, and then type a description in the **Task Description** field.
+
+       3. In the **Category** list, select the category that you want to use for the task.
+
+       4. In the **Product** list, click the product that you want to use for the custom report.
+
+       5. In the **Type** list, click **Custom Reports**.
+
+       6. In the **Series** list, click the appropriate series.
+
+          The **Access List** area displays the custom reports.
+
+       7. Click to select the check boxes for the custom reports.
+
+       8. Click **Save**.
+
+       9. Close the Security Task Setup window.
+
+    3. Create a new security role for the security task that you created in step 2. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Roles**.
+
+       2. In the Security Role Setup window, type a role identifier (ID) in the **Role ID** field, type a role name in the **Role Name** field, and then type a description in the **Role Description** field.
+
+       3. Click the security role that you want to use.
+
+       4. Click to select the check box for the security task that you created in step 2.
+
+       5. Click **Save**.
+
+       6. Close the Security Roles Setup window.
+
+    4. Assign the security role to the user. To do this, follow these steps:
+
+       1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **User Security**.
+
+       2. In the User Security Setup window, click the lookup button next to the **User** field, click a user who you want to use, and then click **Select**.
+
+       3. In the **Company** list, click a company that you want to use.
+
+       4. Verify that the check box for the security role that you specified in step 3 is selected. Otherwise, click to select the check box.
+
+       5. Click **Save**.
+
+       6. Close the User Security Setup window.
+
+- **Q4: What are the steps to find the SECURITYRESIDs for windows and for reports?**
+
+    A4: To find the SECURITYRESIDs for windows and for reports, follow these steps:
+
+    1. Click **Microsoft Dynamics GP**, point to **Maintenance**, and then click **Clear Data** to open the Clear Data window.
+
+    2. On the **Display** menu, click **Physical**.
+
+    3. In the **Series** list, click **System**.
+
+    4. In the **Tables** pane, click the **Security Resource Descriptions** table, and then click **Insert**.
+
+    5. Click **OK**.
+
+    6. Click **Yes**.
+
+    7. In the Report Destination window, select the **Screen** check box, and then click **OK** to send the report to the screen.
+
+    8. Close the report.
+
+   The Security Resource Descriptions table is populated. You can use the table in an SQL query in Microsoft SQL Query Analyzer or in Microsoft SQL Server Management.
+
+   The following query is used to display security roles and security tasks that are associated with a specific window or with a specific report. You can specify the window or the report by changing the display name in the last line of the query.
+
+    ```sql
+    SELECT ISNULL(A.SECURITYROLEID,'') AS SECURITYROLEID, 
+    ISNULL(M.SECURITYROLENAME,'') AS SECURITYROLENAME, 
+    --ISNULL(M.SECURITYROLEDESC,'') AS SECURITYROLEDESC, 
+    ISNULL(O.SECURITYTASKID,'') AS SECURITYTASKID, 
+    ISNULL(T.SECURITYTASKNAME,'') AS SECURITYTASKNAME, 
+    --ISNULL(T.SECURITYTASKDESC,'') AS SECURITYTASKDESC, 
+    R.PRODNAME, R.TYPESTR, R.DSPLNAME, R.RESTECHNAME, R.DICTID, R.SECRESTYPE, R.SECURITYID
+    FROM DYNAMICS.dbo.SY09400 R
+    FULL JOIN DYNAMICS.dbo.SY10700 O ON R.DICTID = O.DICTID 
+    AND O.SECRESTYPE = R.SECRESTYPE AND O.SECURITYID = R.SECURITYID
+    FULL JOIN DYNAMICS.dbo.SY09000 T ON T.SECURITYTASKID = O.SECURITYTASKID
+    FULL JOIN DYNAMICS.dbo.SY10600 A ON A.SECURITYTASKID = T.SECURITYTASKID
+    FULL JOIN DYNAMICS.dbo.SY09100 M ON M.SECURITYROLEID = A.SECURITYROLEID
+    WHERE R.DSPLNAME = '<Display_Name>'
+    ```
+
+    > [!NOTE]
+    > The _<Display_Name>_ placeholder represents the actual display name. For example, the display name may be "Sales Transaction Entry."
+
+    The following table lists the result of the query for the Sales Transaction Entry object against a default installation.
+
+    |SECURITYROLEID|SECURITYROLENAME|SECURITYTASKID|SECURITYTASKNAME|PRODNAME|TYPESTR|DSPLNAME|RESTECHNAME|DICTID|SECRESTYPE|SECURITYID|
+    |---|---|---|---|---|---|---|---|---|---|---|
+    |BOOKKEEPER*|Bookkeeper|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|0|619|
+    |CUSTOMER SERVICE REP*|Customer Service Representative|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
+    |OPERATIONS MANAGER*|Operations Manager|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
+    |SHIPPING AND RECEIVING*|Shipping and Receiving|TRX_SALES_001*|Enter SOP transactions|Microsoft Dynamics GP|Windows|Sales Transaction Entry|SOP_Entry|0|2|619|
+
+    If no security roles are assigned to the security tasks, the table is blank. If no security tasks are assigned to the operation, the table is also blank.
+
+- **Q5: How can I create my own security task and assign the task to a new security role?**
+
+  A5: For information about how to create a task and to create a role, see page 33 in the SystemSetup.pdf file.
+
+- **Q6: How do I set up a security role for the navigation lists?**
+
+  A6: You can grant access to the navigation lists by using a task. The default tasks already include access. To grant access to a navigation list by using a new task, follow these steps:
+
+    1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+    2. Enter the security task that you want to use.
+    3. In the **Product** list, click **Microsoft Dynamics GP**.
+    4. In the **Type** list, click **Navigation Lists**.
+    5. In the **Series** list, click **Navigation lists**.
+    6. Click the navigation lists to which you want the task to have access.
+    7. Assign the new task to a role.
+
+    > [!NOTE]
+    > For more information about how to do this, see question 4 in the [Security setup](#security-setup) section.
+
+- **Q7: How do I grant access to the Create Return feature in the Sales Transaction Entry window?**
+
+  A7: To grant access to the Create Return feature in the Sales Transaction Entry window, follow these steps:
+
+    1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+
+    2. In the **Task ID** field, type an ID.
+
+    3. In the **Category** list, click **Sales**.
+
+    4. In the **Task Name** field, type a name.
+
+    5. In the **Product** list, click **Field Service**.
+
+    6. In the **Type** list, click **Windows**.
+
+    7. In the **Series** list, click **Project**.
+
+    8. In the **Access List** pane, click to select the following check boxes:
+
+       - **Create Return**  
+       - **Invoice Document Lookup**  
+       - **Invoice Document Lookup**  
+       - **Sales Invoice Return Item Selection**  
+
+       > [!NOTE]
+       > Two identical check boxes exist for **Invoice Document Lookup**. Click to select both check boxes.
+
+    9. Click **Save**.
+
+- **Q8: Can I copy one user's security access to another user?**
+
+  A8: Yes. The copy functionality exists with the User Security Setup window. To access this window, click **Microsoft Dynamics GP**, click **Tools**, point to **Setup**, point to **System**, and then click **User Security**. After you select the **User** and **Company** values, the **Copy** button becomes available. Click **Copy** to open the Copy User Security window. Use this window to copy the security roles and the alternative or modified forms ID for the selected user to the same user in any other company to which the user has access.
+
+## Security conversion
+
+- **Q1: What occurs if I perform the security conversion when I upgrade from Microsoft Business Solutions - Great Plains 8.0 or Microsoft Dynamics GP 9.0 to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010?**
+
+  A1: If you perform the security conversion when you upgrade to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010, the following actions occur:
+
+  - For each user in a company, a task and a role are created. The name of the task and the role is CNV_USERID_COID. For example, if you perform the security conversion for the Phyllis user in the TWO company, the task and the role are named as CNV_PHYLLIS_TWO.
+
+  - The existing security access is assigned to the CNV_USERID_COID task. Additionally, the task is assigned to the CNV_USERID_COID role.
+
+  - The CNV_USERID_COID role is assigned to the user for the company.
+
+  - All accesses to alternate forms and to modified forms are converted to an identifier (ID) of CNV_USERID_COID. The ID is assigned to the user in each company.
+
+  - The SY02000 security table and the SY40300 security table in Microsoft Business Solutions - Great Plains 8.0 or in Microsoft Dynamics GP 9.0 are removed.
+
+- **Q2: Do I have to convert the security to Microsoft Dynamics GP 10.0 and Microsoft Dynamics GP 2010?**
+
+  A2: No. You are not required to convert the security. However, if the security is not converted, non-sa users do not have access to any modules in Microsoft Dynamics GP 10.0.
+
+- **Q3: If the security is not converted when I upgrade to Microsoft Dynamics GP 10.0 or Microsoft Dynamics GP 2010, can I go back and convert the security?**
+
+  A3: No. It is difficult to go back after you upgrade to Microsoft Dynamics GP 10.0. We recommend that you convert the security when you update to Microsoft Dynamics GP 10.0.
+
+- **Q4: How can I view the records that are created when I perform the security conversion?**
+
+  A4: To view the records that are created when you perform the security conversion, you can run the following SQL script:
+
+  ```sql
+  select * from DYNAMICS.dbo.SY10700 where SECURITYTASKID like 'CNV%'
+  select * from DYNAMICS.dbo.SY09000 where SECURITYTASKID like 'CNV%'
+  
+  select * from DYNAMICS.dbo.SY10600 where SECURITYROLEID like 'CNV%'
+  select * from DYNAMICS.dbo.SY09100 where SECURITYROLEID like 'CNV%'
+  
+  select * from DYNAMICS.dbo.SY10500 where SECURITYROLEID like 'CNV%'
+  
+  select * from DYNAMICS.dbo.SY10800 where SECMODALTID like 'CNV%'
+  select * from DYNAMICS.dbo.SY09200 where SECMODALTID like 'CNV%'
+  
+  select * from DYNAMICS.dbo.SY10550 where SECMODALTID like 'CNV%'
+  ```
+
+- **Q5: When I convert the security, I receive a "The application at the location you specified is a different version than the database that you are attempting to convert. You must specify the location to the version X.0.0 application" error message. How can I resolve this problem?**
+
+  A5: To resolve this problem, review the resolution that Microsoft Knowledge Base article 935750 describes.
+
+- **Q6: How can I move security that I have set up in Microsoft Dynamics GP from my test environment to my live environment?**
+
+  A6: To move security that you have set up in Microsoft Dynamics GP from a test environment to a live environment, follow these steps:
+
+  1. Make a backup of the DYNAMICS database on both servers.
+
+  2. Export the following tables from the DYNAMICS database in the test environment, and then import the tables into the live environment:
+
+     - SY09000: Task master
+
+     - SY09100: Role master
+
+     - SY09200: Alternate or modified form and report ID master
+
+     - SY10500: Role assignment master
+
+     - SY10550: DEFAULTUSER task ID assignment master
+
+     - SY10600: Tasks assignments master
+
+     - SY10700: Operations assignments master
+
+     - SY10750: DEFAULTUSER task assignment
+
+     - SY10800: Alternate or modified form and report ID assignment master
+
+     > [!NOTE]
+     > If you use Extender:
+     >
+     > - EXT80500: PT_Extender_Tasks
+
+  For more information about how to export and import tables from one environment to another environment, see [How to transfer setup information between company databases by using Microsoft SQL Server](https://support.microsoft.com/help/874208).
+
+- **Q7: How can I remove converted security task IDs and converted security role IDs after security has been converted?**
+
+  A7: The converted security tasks and roles are created to provide a starting point for security. However, you can implement customized roles and tasks later. If you do this, you do not need the converted security tasks and roles anymore. To remove all of the converted security tasks and roles, run the following statements in Management Studio or in Query Analyzer:
+
+  ```sql
+  DELETE DYNAMICS..SY09000 WHERE SECURITYTASKID LIKE 'CNV%'
+  DELETE DYNAMICS..SY10500 WHERE SECURITYTASKID LIKE 'CNV%'
+  DELETE DYNAMICS..SY09100 WHERE SECURITYROLEID LIKE 'CNV%'
+  DELETE DYNAMICS..SY10600 WHERE SECURITYROLEID LIKE 'CNV%'
+  ```
+
+  > [!NOTE]
+  > Make sure that you have a current backup of the DYNAMICS database before you run these statements.
+
+## Troubleshooting
+
+- **Q1: Why do I receive a "You don't have security privileges to open this window. Contact your system administrator for assistance" error message when I use the Payroll Clerk security role to calculate payroll checks in Microsoft Dynamics GP?**
+
+  A1: When you assign the Payroll Clerk security role to a user, the Calculate Payroll Taxes window is not included in the TRX_PAYRL_003* task ID. To work around this problem, follow these steps:
+
+    1. On the **Microsoft Dynamics GP** menu, point to **Tools**, point to **Setup**, point to **System**, and then click **Security Tasks**.
+
+    2. In the **Task ID** list, click **TRX_PAYRL_003***.
+
+    3. In the **Product** list, click **Microsoft Dynamics GP**.
+
+    4. In the **Type** list, click **Windows**.
+
+    5. In the **Series** list, click **System**.
+
+    6. Click to select the **Payroll Calculate Taxes** check box.
+
+    7. Click **Save**.
+
+  For more information, see [Error message when you use the Payroll Clerk security role to calculate payroll checks Microsoft Dynamics GP: "You don't have security privileges to open this window"](https://support.microsoft.com/help/942007).
+
+- **Q2: When I open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0, I receive a "You don't have security privileges to open this window. Contact your system administrator for assistance" error message. How can I resolve this problem?**
+
+  A2: To resolve this problem, review the resolution that Microsoft Knowledge Base article 945957 describes.
+
+  For more information, see [Error message when you try to open the Purchase Order Entry window in Purchase Order Processing in Microsoft Dynamics GP 10.0: "You don't have security privileges to open this window"](https://support.microsoft.com/help/945957).

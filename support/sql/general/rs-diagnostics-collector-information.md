@@ -2,7 +2,6 @@
 title: RS Diagnostics Collector collects information 
 description: This article describes the information that may be collected from a computer when the SQL RS Diagnostics Collector tool is running.
 ms.date: 08/19/2020
-ms.prod-support-area-path:
 ms.reviewer: ramakoni
 ms.topic: article
 ms.prod: sql
@@ -54,8 +53,7 @@ The SQL RS Diagnostics Collector discovers all instances of reporting services t
 
     |Description|File name|
     |---|---|
-    |System event log in TXT, CSV, and EVT or EVTX formats| *<COMPUTER_NAME> _ evt_System.csv*<br> *<COMPUTER_NAME> _ evt_System.txt*<br/> *<COMPUTER_NAME> _ evt_System.(evt or evtx)*|
-    |||
+    |System event log in TXT, CSV, and EVT or EVTX formats| _<COMPUTER_NAME> _ evt_System.csv_<br> _<COMPUTER_NAME> _ evt_System.txt_<br/> _<COMPUTER_NAME> _ evt_System.(evt or evtx)_|
 
 - **Application event log**
 
@@ -64,86 +62,74 @@ The SQL RS Diagnostics Collector discovers all instances of reporting services t
 
     |Description|File name|
     |---|---|
-    |Application event log in TXT, CSV, and EVT or EVTX formats| *<COMPUTER_NAME> _evt_Application.csv*<br/> *<COMPUTER_NAME> _ evt_Application.txt*<br/> *<COMPUTER_NAME> _evt_Application.(evt or evtx)*|
-    |||
+    |Application event log in TXT, CSV, and EVT or EVTX formats| _<COMPUTER_NAME> _evt_Application.csv_<br/> _<COMPUTER_NAME> _ evt_Application.txt_<br/> _<COMPUTER_NAME> _evt_Application.(evt or evtx)_|
 
 - **Registry information that is related to reporting services configuration**
 
     |Description|File name|
     |---|---|
-    |Collect registry key and child keys under `HKLM:\System\CurrentControlSet\Services\TCPIP\Parameters`.| *<COMPUTER_NAME> _RS_Registry.XML*|
-    |Collect registry key and child keys under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`.| *<COMPUTER_NAME> _RS_Registry.XML*|
-    |||
+    |Collect registry key and child keys under `HKLM:\System\CurrentControlSet\Services\TCPIP\Parameters`.| _<COMPUTER_NAME> _RS_Registry.XML_|
+    |Collect registry key and child keys under `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa`.| _<COMPUTER_NAME> _RS_Registry.XML_|
 
 - **Information from all services that are installed on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect information about services that are installed on the destination computer.| *<COMPUTER_NAME> _MiscProperties.XML*|
-    |||
+    |Collect information about services that are installed on the destination computer.| _<COMPUTER_NAME> _MiscProperties.XML_|
 
 - **Information from the ULS logs from the SharePoint instance on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the ULS logs from the SharePoint that is installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> _Date.log*|
-    |||
+    |Collect the ULS logs from the SharePoint that is installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> _Date.log_|
 
 - **Information from the SSRS Logs from all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the SSRS logs from the SSRS instances that are installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> _ReportServerService_GUID.log*|
-    |||
+    |Collect the SSRS logs from the SSRS instances that are installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> _ReportServerService_GUID.log_|
 
 - **Information from the SSRS ReportServer.Config file from all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the *RSReportServer.Config* file from the SSRS instances that are installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> _RSReportserver.config*|
-    |||
+    |Collect the _RSReportServer.Config_ file from the SSRS instances that are installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> _RSReportserver.config_|
 
 - **Information from the Web.config file from all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the *Web.config* file from the ReportServer and ReportManager directories from all SSRS instances that are installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> _web.config*|
-    |||
+    |Collect the _Web.config_ file from the ReportServer and ReportManager directories from all SSRS instances that are installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> _web.config_|
 
 - **Information from the SSRS configuration for all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the configuration information that is stored in the SSRS Catalog database for all SSRS instances that are installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> ConfigInfo.XML*|
-    |||
+    |Collect the configuration information that is stored in the SSRS Catalog database for all SSRS instances that are installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> ConfigInfo.XML_|
 
 - **Information from the execution information for all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the execution information that is stored in the SSRS Catalog database for all SSRS instances that are installed on the destination computer.| *<COMPUTER_NAME>.<INSTANCE_NAME> ExecutionInfo.XML*|
-    |||
+    |Collect the execution information that is stored in the SSRS Catalog database for all SSRS instances that are installed on the destination computer.| _<COMPUTER_NAME>.<INSTANCE_NAME> ExecutionInfo.XML_|
 
 - **Information from the SPN configuration for all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the SPN configuration information for the SSRS service account that is running the SSRS instance. (if the server is running SharePoint)| *<COMPUTER_NAME> _RS_SPN.XML*|
-    |||
+    |Collect the SPN configuration information for the SSRS service account that is running the SSRS instance. (if the server is running SharePoint)| _<COMPUTER_NAME> _RS_SPN.XML_|
 
 - **Information from the HTTP error logs on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the HTTP error logs on the destination computer.| *<COMPUTER_NAME>.httperrX.log*|
-    |||
+    |Collect the HTTP error logs on the destination computer.| _<COMPUTER_NAME>.httperrX.log_|
 
 - **Information from the HTTP logs for all SSRS instances on the destination computer**
 
     |Description|File name|
     |---|---|
-    |Collect the HTTP logs that are generated if the attribute is turned on the SSRS *Reportserver.config* files.| *<COMPUTER_NAME>.<INSTANCE_NAME> _Http.log*|
-    |||
+    |Collect the HTTP logs that are generated if the attribute is turned on the SSRS _Reportserver.config_ files.| _<COMPUTER_NAME>.<INSTANCE_NAME> _Http.log_|
 
 ## Applies to
 

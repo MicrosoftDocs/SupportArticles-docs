@@ -4,20 +4,20 @@ description: Provides a solution to an error that occurs when a service suddenly
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Applications
+ms.custom: sap:applications, csstroubleshoot
 ms.technology: windows-client-performance
 ---
 # Error 1058 is displayed when a service suddenly stops
 
 This article provides a solution to an issue where "Error 1058" occurs when a service suddenly stops.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7, Windows Vista, Windows XP  
 _Original KB number:_ &nbsp; 241584
 
 ## Symptoms
@@ -28,43 +28,39 @@ When a service suddenly stops, you may receive the following error message:
 
 You may also receive this error message when you try to start a service.
 
+## Cause
+
 This issue can occur if the service is disabled or if the service is disabled for the hardware profile that you're currently using.
 
-## Resolution
+### Resolution for Windows 10, Windows 7 and Windows Vista
 
-To resolve this issue, follow the steps for your operating system.
+1. Click **Start**, search for *Services*, and then click **Services** in the search result.
+2. Scroll until you find the service, and then double-click the service.
 
-- Windows 7 and Windows Vista
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/service-properties-win10.png" alt-text="Screenshot of Startup type option under the General tab of the Routing and Remote Access Properties (Local Computer) dialog box." border="false":::
 
-    1. Click **Start**, type *Services* in the **Search** box, and then click **Services**.
-    2. Scroll until you find the service that is stopped or disabled.
-    3. Click the **Log On As** tab.
-    4. If the service is listed as disabled for your profile, right-click the service, and then click **Properties**.
+3. If the service is disabled, click the **Startup type** list, and then select an option other than **Disabled**.
+4. Click **Apply**.
+5. Click **Start** to try to start the service.
+6. Click **OK**.
 
-        :::image type="content" source="./media/error-1058-displayed-when-service-stops/service-properties.png" alt-text="Screenshot of service property dialog box." border="false":::
+### Resolution for Windows XP
 
-    5. Click the **Startup type** list, and then click **Automatic**.
-    6. Click **Apply**, and then click **OK**.
+1. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **Services**.
+2. Scroll until you find the service that is stopped or disabled.
+3. Double-click the service that did not start.
+4. Click the **Log On** tab.
 
-- Windows XP
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/log-on-tab-shown.png" alt-text="Screenshot of the Log On tab of the Remote Procedure Call (RPC) Locator Properties (Local Computer) dialog box." border="false":::
 
-    1. Click **Start**, point to **All Programs**, point to **Administrative Tools**, and then click **Services**.
-    2. Scroll until you find the service that is stopped or disabled.
-    3. Double-click the service that did not start.
-    4. Click the **Log On** tab.
+5. Verify that the service isn't disabled for the hardware profile that you're using. If the service is disabled for the hardware profile, click **Enable**.
 
-        :::image type="content" source="./media/error-1058-displayed-when-service-stops/log-on-tab-shown.png" alt-text="Screenshot of the Log on tab." border="false":::
+6. Click the **General** tab, and then in the **Startup Type** box, verify that the service is not disabled. If the service is disabled, click **Automatic** to have it start when you start the computer.
 
-    5. Verify that the service isn't disabled for the hardware profile that you're using. If the service is disabled for the hardware profile, click **Enable**.
+   :::image type="content" source="media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Screenshot of the startup type box in the General tab." border="false":::
 
-    6. Click the **General** tab, and then in the **Startup Type** box, verify that the service is not disabled. If the service is disabled, click **Automatic** to have it start when you start the computer.
-
-        :::image type="content" source="./media/error-1058-displayed-when-service-stops/verify-service-startup-type.png" alt-text="Verify the service Startup type." border="false":::
-
-    7. Click **OK**.
+7. Click **OK**.
 
 ## More information
 
 If a service is set to start automatically but the service is disabled for the hardware profile that you're using, the service isn't started and no error message is generated.
-
-This article applies to Windows 2000. Support for Windows 2000 ended on July 13, 2010. The Windows 2000 End-of-Support Solution Center is a starting point for planning your migration strategy from Windows 2000. For more information, see the [Microsoft Support Lifecycle Policy](/lifecycle/).

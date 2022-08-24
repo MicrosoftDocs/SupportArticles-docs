@@ -2,7 +2,7 @@
 title: Error code 1642 though update is applied
 description: This article provides more information about the 1642 error message that is reported in the application event log though the SQL Server update is applied successfully.
 ms.date: 10/23/2020
-ms.prod-support-area-path: Database Engine
+ms.custom: sap:Database Engine
 ms.reviewer: mcimfl, troymoen, sureshka, ramakoni, Daleche
 ms.prod: sql 
 ---

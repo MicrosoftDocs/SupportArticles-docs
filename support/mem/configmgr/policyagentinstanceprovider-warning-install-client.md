@@ -2,7 +2,6 @@
 title: Warnings logged installing the Configuration Manager client
 description: Describes a problem in which many warning messages for PolicyAgentInstanceProvider are logged in the Application log when you install the Configuration Manager client.
 ms.date: 05/25/2020
-ms.prod-support-area-path: 
 ms.reviewer: brshaw, keiththo, prakask, ErinWi
 ---
 # Warnings for PolicyAgentInstanceProvider are logged when installing the Configuration Manager client

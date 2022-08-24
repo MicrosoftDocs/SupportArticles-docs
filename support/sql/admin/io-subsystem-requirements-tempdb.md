@@ -2,7 +2,7 @@
 title: I/O subsystem requirements for the tempdb
 description: This article describes the I/O subsystem requirements for the tempdb database in SQL Server.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ms.reviewer: rdorr
 ms.topic: article
 ms.prod: sql
@@ -41,9 +41,8 @@ Durability maintenance remains critical for all other databases but may be relax
 | Sector rewrite|The sector can only be written in its entirety and cannot be rewritten because of a write request on a nearby sector.|\* Discouraged, only permitted if transactional|\* Discouraged, only permitted if transactional|
 | Hardened data|The expectation that when a write request or a FlushFileBuffers operation is successfully completed, data has been saved to stable media.|Required|Not applicable|
 | Physical sector alignment and size|SQL Server interrogates the data and log file storage locations. All devices are required to support sector attributes permitting SQL Server to perform writes on physical sector-aligned boundaries and in multiples of the sector size.|Required|Required|
-|||||
-
-Transactional sector rewrites involve fully logged operations by the subsystem permitting a sector to be fully moved, replaced, or rolled back to the original image. These rewrites are typically discouraged because of the additional overhead required to perform such actions. An example of this would be a `defragmentation` utility that is moving the file data. The original sector in the file cannot be replaced with the new sector location until the new sector and data are secured. The remapping of the sector must occur in a transactional manner so that any failure, including a power failure, causes the re-establishment of the original data. Make sure that you have locking mechanisms available during this kind of process to prevent invalid data access, thereby upholding the other tenants of SQL Server I/O.
+  
+  Transactional sector rewrites involve fully logged operations by the subsystem permitting a sector to be fully moved, replaced, or rolled back to the original image. These rewrites are typically discouraged because of the additional overhead required to perform such actions. An example of this would be a `defragmentation` utility that is moving the file data. The original sector in the file cannot be replaced with the new sector location until the new sector and data are secured. The remapping of the sector must occur in a transactional manner so that any failure, including a power failure, causes the re-establishment of the original data. Make sure that you have locking mechanisms available during this kind of process to prevent invalid data access, thereby upholding the other tenants of SQL Server I/O.
 
 ### Survival across outage
 
@@ -121,8 +120,7 @@ Run baselines with and without the tempdb database stored on the high-speed subs
 | Page life expectancy|A decline in page life expectancy can indicate an increase in the physical I/O requirements for a user database. The rate decrease could likely indicate that the memory taken away from the buffer pool is forcing database pages to exit the buffer pool prematurely. Combine with the other indicators and test to fully understand the parameter boundaries.|
 | Overall throughput<br/>CPU usage<br/>Scalability<br/>Response time|The primary goal of a tempdb database configuration change is to increase the overall throughput. Your testing should include a mix of repeatable workloads that can be scaled out to determine how throughput is affected.<br/><br/>Something like a compression-based RAM disk implementation may work well with 10 users. However, with increased workload, this may push CPU levels beyond desired levels and have negative effects on response time when the workloads are high. True stress tests and future load prediction tests are encouraged.|
 | Work files and work table creation actions|If moving the tempdb database to a device, such as a RAM disk, changes the query plan by increasing the number or size of work files or work tables, it indicates that the memory taken away from the buffer pool is causing increased tempdb database activity to occur. This pattern is an indication that the page life expectancy of database pages may also be affected in a negative way.|
-|||
-
+  
 #### Transactional sector rewrite example
 
 The following example elaborates the data security that is required by SQL Server databases.
@@ -218,4 +216,3 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 Microsoft, Windows, Windows Server, and SQL Server are either registered trademarks or trademarks of Microsoft Corporation in the United States and/or other countries.
 
 SQL Server requires systems to support 'guaranteed delivery to stable media' as outlined under the [SQL Server I/O Reliability Program Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576).
-

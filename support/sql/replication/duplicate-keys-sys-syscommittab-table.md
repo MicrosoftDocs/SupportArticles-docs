@@ -2,7 +2,6 @@
 title: Duplicate keys from sys.syscommittab table
 description: This article provides information about resolving a SQL Server Change Tracking issue that can result in duplicate rows in `sys.syscommittab` file.
 ms.date: 03/16/2020
-ms.prod-support-area-path:
 ms.prod: sql
 ---
 # Duplicate key rows from the sys.syscommittab table in SQL Server
@@ -71,7 +70,7 @@ If you're running SQL Server 2014, you must grant the per-Service SID full contr
 
    Then, execute the modified Transact-SQL script.
 
-7. Start SQL Server in Multi-User mode, and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
+7. [Restart SQL Server in Multi-User mode](/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services), and then verify that backup and CHECKPOINT operations against the affected database complete successfully. If step 4 was used, revert the permissions to the default values.
 
 ## Transact-SQL script
 

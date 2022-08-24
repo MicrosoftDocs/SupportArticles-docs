@@ -1,20 +1,17 @@
 ---
-title: Common endpoint protection messages in Microsoft Intune - Azure | Microsoft Docs
-description: See common messages and possible solution when using and troubleshooting endpoint protection and Microsoft Defender in Microsoft Intune.
-ms.date: 11/13/2019
+title: Common endpoint protection messages in Microsoft Intune
+description: See common messages and possible solution when using and troubleshooting endpoint protection and Microsoft Defender for Endpoint in Microsoft Intune.
+ms.date: 11/09/2021
 ms.reviewer: tscott
+search.appverid: MET150
 ---
-# Endpoint protection issues and possible solutions in Microsoft Intune
+# Endpoint protection issues and possible solutions in Intune
 
-This article lists and describes potential causes and solutions for some errors and warnings. Use the information to help solve problems when using endpoint protection.
+This article describes potential errors and solutions when using Microsoft Intune endpoint protection.
 
-## Microsoft Defender error codes
+For troubleshooting guidance specific to Microsoft Defender for Endpoint, see [Review event logs and error codes to troubleshoot issues with Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/troubleshoot-microsoft-defender-antivirus).
 
-Review event logs and error codes to [troubleshoot issues with Microsoft Defender AV](/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
-
-## Common Intune errors and possible resolutions
-
-### Endpoint Protection engine unavailable
+## Endpoint Protection engine unavailable
 
 **Potential cause**: The Intune endpoint protection engine was corrupted or deleted.
 
@@ -25,9 +22,9 @@ Review event logs and error codes to [troubleshoot issues with Microsoft Defende
 - In Control Panel > Programs, select **Microsoft Intune Endpoint Protection Agent**. Uninstall the application.
 - During the next update synchronization, the Microsoft Online Management Update Manager detects the missing program and reinstalls it at the scheduled installation time.
 
-### Features are disabled
+## Features are disabled
 
-You may get a message that some features are disabled. These messages can happen if Intune endpoint protection or Microsoft Defender is disabled by an administrator using a configuration profile. Or, it's disabled by an end user on the device. Possible messages:
+You may get a message that some features are disabled. These messages can happen if Intune endpoint protection or Microsoft Defender for Endpoint is disabled by an administrator using a configuration profile. Or, it's disabled by an end user on the device. Possible messages:
 
 `Endpoint Protection disabled`  
 `Real-time protection disabled`  
@@ -43,24 +40,20 @@ You may get a message that some features are disabled. These messages can happen
 - [Microsoft Defender Antivirus](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus)
 - [Turn on Windows Defender to access company resources](/mem/intune/user-help/turn-on-defender-windows)
 
-### Malware definitions out of date
+## Malware definitions out of date
 
 This status shows when the malware definitions on the device are out of date by 14 days or more. For example, the message may show if the device is disconnected from the Internet, or the malware definitions are outdated.
 
 **Possible solutions**: If malware definitions are out of date, update the definitions using [Microsoft Defender Antivirus](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
-### Full scan overdue or Quick scan overdue
+## Full scan overdue or quick scan overdue
 
 A full scan or quick scan hasn't completed for 14 days. This scenario can happen if the device restarts during a full scan.
 
 **Possible solutions**: If a scan is overdue, you can run a one-time scan or schedule recurring scans. See [Microsoft Defender Antivirus](/mem/intune/configuration/device-restrictions-windows-10#microsoft-defender-antivirus).
 
-### Another endpoint protection application running
+## Another endpoint protection application running
 
 Another endpoint protection application is running, and the device is healthy.
 
 **Possible solutions**: If another endpoint protection application is installed and Intune detects that application, the device may become unstable.
-
-## Next steps
-
-Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).

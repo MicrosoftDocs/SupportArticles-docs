@@ -4,20 +4,20 @@ description: Fixes an error (The requested operation cannot be performed over an
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Microsoft Management Console (MMC)
+ms.custom: sap:microsoft-management-console-mmc, csstroubleshoot
 ms.technology: windows-server-system-management-components
 ---
 # Error when enabling analytic or debug event log: The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation
 
 This article helps to fix an error that occurs when you enable analytic or debug event log.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2488055
 
 ## Symptoms
@@ -28,7 +28,7 @@ You may receive the following error when you attempt to enable or change the pro
 > One or more logs in the query have errors.  
 > The requested operation cannot be performed over an enabled direct channel. The channel must first be disabled before performing the requested operation.
 
-![The requested operation cannot be performed over an enabled direct channel](./media/error-when-enabling-analytic-debug-event-log/error-message-dialog-box.png)
+:::image type="content" source="media/error-when-enabling-analytic-debug-event-log/error-message-dialog-box.png" alt-text="Screenshot of the Query Error window which shows One or more logs in the query have errors.":::
 
 When attempting changes with the Wevtutil tool, you may receive the following error:
 

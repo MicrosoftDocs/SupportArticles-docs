@@ -4,20 +4,20 @@ description: Contains steps and examples of how to set up dynamic boot partition
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # How to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008
 
 This article contains steps and examples of how to set up dynamic boot partition mirroring on GUID partition table (GPT) disks in Windows Server 2008.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951985
 
 ## Introduction
@@ -355,14 +355,8 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
     > - Throughout this section, the former primary disk will continue to be known as disk 0, and the former secondary disk will continue to be known as disk 1. However, after you follow these steps, disk 1 will be the new primary disk, and disk 0 will be the new secondary disk.  
 
 2. Select **Windows Boot Manager Cloned** to start the computer by using the EFI partition on the secondary drive. When the Boot Manager appears, select **Microsoft Windows Server 2008 - secondary plex**.
-3. If you running a pre-R2 version of Windows Server 2008, install the hotfix that is described in the following Microsoft Knowledge Base article, and restart the computer when you're prompted.
 
-    [970686](https://support.microsoft.com/help/970686) You cannot restore mirroring for the boot partition on some GPT disks in Windows Server 2008 if you follow the instructions in Knowledge Base article 951985  
-
-    > [!NOTE]
-    > This fix is included in Windows Server 2008 R2. Therefore, you do not have to install it on computers that are running Windows Server 2008 R2. When you restart the computer after you installing this hotfix, select "Windows Boot Manager Cloned" and "Microsoft Windows Server 2008 - secondary plex" to start the system.
-
-4. Import the BCD store located on the EFI partition on disk 1. This sets the BCD store on disk 1 as the active system store, and lets it be modified. To do this, follow these steps:
+3. Import the BCD store located on the EFI partition on disk 1. This sets the BCD store on disk 1 as the active system store, and lets it be modified. To do this, follow these steps:
     1. Start DiskPart.
     2. Run the following commands to select the EFI partition on disk 1, and to assign to it drive letter "S."  
 
@@ -375,7 +369,7 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
     3. Exit DiskPart.
     4. Run the command `bcdedit /import S:\EFI\Microsoft\Boot\BCD /clean` to import the store from the EFI partition on disk 1.  
 
-5. You have to break the broken mirror. However, you must first determine which is the correct disk on which to run the diskpart break command. After you do this, select the mirror volume (Volume #), and then view the details to determine from which missing disk (m#) you have to break the mirror. To do this, follow these steps:
+4. You have to break the broken mirror. However, you must first determine which is the correct disk on which to run the diskpart break command. After you do this, select the mirror volume (Volume #), and then view the details to determine from which missing disk (m#) you have to break the mirror. To do this, follow these steps:
       1. Start DiskPart.
       2. Select the mirror volume, typically volume C (the boot volume):
 
@@ -409,7 +403,7 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
          ```  
 
       7. Exit DiskPart.
-6. Remove all stale entries from the BCD store to return the system to a known clean state. Also, rename the entries to accurately reflect the current state of the system. To do this, follow these steps:
+5. Remove all stale entries from the BCD store to return the system to a known clean state. Also, rename the entries to accurately reflect the current state of the system. To do this, follow these steps:
       1. Run the command `bcdedit /enum all /v` to determine the GUID of the entry in NVRAM that has the description "Windows Boot Manager" and that has a device parameter of *unknown* or a missing device parameter. After you determined the GUID for this entry, use the command `bcdedit /set {GUID}` device partition=s: to point the entry to disk 1.
       2. Use the output from the `bcdedit /enum all /v` command to determine the GUID of the "Windows Boot Manager Cloned" entry in NVRAM. After you determine the GUID for this entry, use the command `bcdedit /delete {GUID}` to delete the old entry for disk 1 from NVRAM.
       3. In the output for the `bcdedit /enum all /v` command, look for an entry named "Windows Resume Application" that has a device parameter of *unknown* or a missing device parameter. Delete this entry using the `bcdedit /delete {GUID}` command.
@@ -419,7 +413,7 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
       7. Look for the BCD entry that has the description, "Windows Memory Diagnostic." Use the command bcdedit /set {GUID} device partition=s: to point the entry to the memory tester that is located on disk 1.
       8. Run the command `bcdedit /enum all /v` to verify the NVRAM and BCD entries.
       9. Restart the computer. Select "Windows Boot Manager" and "Windows Server 2008" to start in disk 1.
-7. Convert the newly added disk to GPT format, and then create the partition structure. To do this, follow these steps:
+6. Convert the newly added disk to GPT format, and then create the partition structure. To do this, follow these steps:
       1. Start DiskPart.
       2. Convert disk 0 to GPT format:  
 
@@ -457,7 +451,7 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
          DISKPART> list partition  
          ```
 
-8. Convert both disks to dynamic disks if they aren't already dynamic disks:
+7. Convert both disks to dynamic disks if they aren't already dynamic disks:
 
      ```console
      DISKPART> select disk 0  
@@ -466,14 +460,14 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
      DISKPART> convert dynamic  
      ```  
 
-9. Add the new disk 0 to a mirror of the boot volume:
+8. Add the new disk 0 to a mirror of the boot volume:
 
      ```console  
      DISKPART> select volume c  
      DISKPART> add disk=0  
      ```
 
-10. While the mirror resynchronization is occurring, prepare the EFI partition on disk 0:  
+9. While the mirror resynchronization is occurring, prepare the EFI partition on disk 0:  
 
     ```console
     DISKPART> select disk 0  
@@ -483,8 +477,8 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
 
     Exit DiskPart  
 
-11. Wait for the mirror resynchronization to finish. You can use Disk Management to check on the resynchronization process.
-12. If the EFI partition on disk 0 isn't already assigned the drive letter "P," and if the EFI partition on disk 1 isn't already assigned the drive letter of "S," assign the appropriate drive letters to the EFI partitions on disk 0 and disk 1:
+10. Wait for the mirror resynchronization to finish. You can use Disk Management to check on the resynchronization process.
+11. If the EFI partition on disk 0 isn't already assigned the drive letter "P," and if the EFI partition on disk 1 isn't already assigned the drive letter of "S," assign the appropriate drive letters to the EFI partitions on disk 0 and disk 1:
       Start Diskpart.  
 
       ```console
@@ -497,16 +491,16 @@ If there's a failure of the primary drive (disk 0), you must start the computer 
        ```
 
       Exit DiskPart.
-13. Clone the boot manager entry in NVRAM for disk 1:
+12. Clone the boot manager entry in NVRAM for disk 1:
       1. Clone the boot manager entry using the `bcdedit /copy {bootmgr} /d "Windows Boot Manager Cloned"` command. Record the GUID for the new entry that is given in the output for this command.
       2. Set the device parameter in the cloned entry to point to the EFI partition on disk 0 by using the `bcdedit /set {GUID} device partition=p:` command. Use the GUID from the output of the `bcdedit /copy` command.
       3. Run the command `bcdedit /enum all /v` to verify the changes.
-14. Copy the contents of the EFI partition on disk 1 to the EFI partition on disk 0 so that you can boot from disk 0:
+13. Copy the contents of the EFI partition on disk 1 to the EFI partition on disk 0 so that you can boot from disk 0:
       1. Export the active BCD store by using the command `bcdedit /export S:\EFI\Microsoft\Boot\BCD2`  
       2. Copy the EFI partition from disk 1 to disk 0 by using the command `robocopy s:\ p:\ /e /r:0`  
       3. Rename the copied BCD store on disk 0 to BCD by using the command `rename P:\EFI\Microsoft\Boot\BCD2 BCD`.
       4. Delete the duplicate exported BCD store on disk 1 by using the command `del S:\EFI\Microsoft\Boot\BCD2`  
-15. Follow these steps:
+14. Follow these steps:
       1. Remove the drive letters that you assigned in DiskPart:  
 
          ```console

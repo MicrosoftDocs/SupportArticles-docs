@@ -1,16 +1,16 @@
 ---
-title: Troubleshoot AD Replication error 8240 There is no such object on the server  
+title: Troubleshoot AD Replication error 8240 There is no such object on the server
 description: Describes symptoms, cause, and resolution for AD operations that fail with Win32 error 8240 (There is no such object on the server).
 ms.date: 09/07/2020
-mauthor: Deland-Han
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: jaml, tonnyp, kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Troubleshooting AD Replication error 8240: There is no such object on the server
@@ -20,8 +20,8 @@ This article describes the symptoms, cause, and resolution for AD operations tha
 > [!NOTE]
 > **Home users:** This article is only intended for technical support agents and IT professionals. If you're looking for help with a problem, [ask the Microsoft Community](https://answers.microsoft.com/).
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2680976
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2680976
 
 ## Symptoms
 

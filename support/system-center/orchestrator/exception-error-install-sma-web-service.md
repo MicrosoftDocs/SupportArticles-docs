@@ -2,7 +2,6 @@
 title: Exception error installing SMA Web Service
 description: Describes an error occurs when you install the Service Management Automation Web Service feature in System Center 2012 R2 Orchestrator.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: jfanjoy
 ---
 # Exception has been thrown by the target of an invocation error installing Service Management Automation Web Service

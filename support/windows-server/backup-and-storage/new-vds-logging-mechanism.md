@@ -4,20 +4,20 @@ description: The old VDS logging mechanism is removed in Windows 8 and a new one
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, lichunli
-ms.prod-support-area-path: Partition and volume management
+ms.custom: sap:partition-and-volume-management, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Introduce the new logging mechanism for the VDS
 
 This article introduces the new logging mechanism for Virtual Disk Service (VDS) in Windows Server 2012.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2759114
 
 ## Introduction

@@ -2,7 +2,6 @@
 title: SQL query times out or the ConfigMgr console is slow
 description: Fixes an issue in which you may experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2017, SQL Server 2016, or SQL Server 2014.
 ms.date: 09/02/2020
-ms.prod-support-area-path:
 ms.reviewer: jarrettr
 ---
 # SQL query times out or console slow on certain Configuration Manager database queries
@@ -14,11 +13,11 @@ _Original KB number:_ &nbsp; 3196320
 
 ## Symptoms
 
-You experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2014, SQL Server 2016, or SQL Server 2017 on Windows.
+You experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2014, SQL Server 2016, or SQL Server 2017 on Windows.
 
 ## Cause
 
-SQL Server Cardinality Estimation (CE) changes in SQL Server 2014, SQL Server 2016, and SQL Server 2017 on Windows may cause performance issues with certain Configuration Manager queries in some environments.
+SQL Server Cardinality Estimation (CE) changes in SQL Server 2014, SQL Server 2016, and SQL Server 2017 on Windows may cause performance issues with certain Configuration Manager queries in some environments.
 
 ## Resolution
 
@@ -29,8 +28,7 @@ In affected environments, Configuration Manager may run better when the site dat
 |SQL Server 2017|140, 130, 120, 110|140|110|
 |SQL Server 2016|130, 120, 110|130|110|
 |SQL Server 2014|120, 110|110|110|
-|||||
-
+  
 Starting in Configuration Manager current branch version 1810, when the Configuration Manager database is running on SQL Server 2016 SP1 or later versions, all queries issued by the Admin console and SMS Provider will automatically add the `USE HINT 'FORCE_LEGACY_CARDINALITY_ESTIMATION'` query hint. Therefore, Admin console performance won't be affected when you change the CE Compatibility level to 110 at the database level to resolve performance issues. If you want to override this behavior, to have the Admin console and SMS Provider queries use the current SQL Server CE level instead, set the `UseLegacyCardinality` value to **0** under the following registry subkey on the computer that hosts the SMS Provider:
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\Providers`
@@ -65,12 +63,12 @@ GO
 ```
 
 > [!NOTE]
-> In the above example, replace \<CM_DB> with your Configuration Manager site database name. To change the CE compatibility level to a different level, change the value in `SET COMPATIBILITY_LEVEL`.
+> In the above example, replace \<CM_DB> with your Configuration Manager site database name. To change the CE compatibility level to a different level, change the value in `SET COMPATIBILITY_LEVEL`.
 
 ## More information
 
-When a SQL Server instance is upgraded in-place from any earlier version of SQL Server, pre-existing databases will keep their existing compatibility level if they are at the minimum allowed level for that new version of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by the new version of SQL Server.
+When a SQL Server instance is upgraded in-place from any earlier version of SQL Server, pre-existing databases will keep their existing compatibility level if they are at the minimum allowed level for that new version of SQL Server. Upgrading SQL Server with a database at a compatibility level lower than the allowed level automatically sets the database to the lowest compatibility level allowed by the new version of SQL Server.
 
-During upgrades or new installations of Configuration Manager, databases may be automatically configured to use the recommended SQL Server CE compatibility version for that version of SQL Server (as shown in the table that's mentioned in the [Resolution](#resolution) section). If you experience performance degradation after a servicing update, as a result of being reverted back to the default recommended CE level for your version of SQL Server, reassess whether you may have to manually change the CE level back to **110**.
+During upgrades or new installations of Configuration Manager, databases may be automatically configured to use the recommended SQL Server CE compatibility version for that version of SQL Server (as shown in the table that's mentioned in the [Resolution](#resolution) section). If you experience performance degradation after a servicing update, as a result of being reverted back to the default recommended CE level for your version of SQL Server, reassess whether you may have to manually change the CE level back to **110**.
 
 For more information about SQL Server CE compatibility levels, see [ALTER DATABASE (Transact-SQL) Compatibility Level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).

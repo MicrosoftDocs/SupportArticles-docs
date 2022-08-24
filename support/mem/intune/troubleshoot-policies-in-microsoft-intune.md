@@ -1,29 +1,26 @@
 ---
-title: Troubleshoot policies in Microsoft Intune - Azure | Microsoft Docs
-description: See how to use the built-in troubleshoot feature, and read about Common problems or issues and their resolutions when using compliance policies and configuration profiles in Microsoft Intune
-ms.date: 06/02/2020
+title: Troubleshoot policies and configuration profiles in Microsoft Intune
+description: Learn how to use the built-in Intune troubleshooting feature, and get guidance for common problems or issues with compliance policies and configuration profiles in Microsoft Intune
+ms.date: 10/08/2021
 ms.reviewer: tscott
+search.appverid: MET150
 ---
-# Troubleshoot policies and profiles and in Intune
+# Troubleshooting policies and profiles in Microsoft Intune
 
-Microsoft Intune includes some built-in troubleshooting features. Use these features to help troubleshoot compliance policies and configuration profiles in your environment.
+This article provides troubleshooting guidance for common issues related to policies and configuration profiles in Microsoft Intune. including instructions on how to use the built-in Intune troubleshooting feature.
 
-This article lists some common troubleshooting techniques, and describes some issues you may experience.
+## Use the built-in Troubleshoot pane
 
-## Check tenant status
+You can use the built-in troubleshooting feature to review different compliance and configuration statuses.
 
-Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm the subscription is Active. You can also view details for active incidents and advisories that may impact your policy or profile deployment.
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**.
 
-## Use built-in troubleshooting
-
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Troubleshooting + support** > **Troubleshoot**:
-
-    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/help-and-support-troubleshoot.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
+    :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/troubleshoot-plus-support.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
 2. Choose **Select user** > select the user having an issue > **Select**.
 3. Confirm that **Intune License** and **Account Status** both show green checks:
 
-    :::image type="content" source="./media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Account status and Intune license show green checks marks for the status.":::
+    :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Account status and Intune license show green checks marks for the status.":::
 
     **Helpful links**:
 
@@ -75,12 +72,11 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
         - **Pending**: The device hasn't checked into Intune to get the policy. Or, the device received the policy but hasn't reported the status to Intune.
         - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](troubleshoot-company-resource-access-problems.md).
 
-        **Helpful links**:
+## Check tenant status
 
-        - [Ways to deploy device compliance policies](/mem/intune/protect/device-compliance-get-started)
-        - [Monitor device compliance policies](/mem/intune/protect/compliance-policy-monitor)
+Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm the subscription is Active. You can also view details for active incidents and advisories that may impact your policy or profile deployment.
 
-## You're unsure if a profile is correctly applied
+## Confirm a configuration profile is correctly applied
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the device > **Device configuration**.
@@ -93,19 +89,9 @@ Check the [Tenant Status](/mem/intune/fundamentals/tenant-status) and confirm th
 
     - **Pending**: The profile is sent to the device, but hasn't reported the status to Intune. For example, encryption on Android requires the user to enable encryption, and might show as pending.
 
-**Helpful link**: [Monitor configuration device profiles](/mem/intune/configuration/device-profile-monitor)
+For more information, see [Monitor device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-monitor)
 
-> [!NOTE]
-> When two policies with different levels of restriction apply to the same device or user, the more restrictive policy applies.
-
-## Policy troubleshooting resources
-
-- [Troubleshooting iOS/iPadOS or Android policies not applying to devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-tip-Troubleshooting-iOS-or-Android-policies-not-applying/ba-p/280154) (opens another Microsoft site)
-- [Troubleshooting Windows 10 Intune policy failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures) (opens a blog)
-- [Troubleshoot CSP custom settings for Windows 10](troubleshoot-csp-custom-settings.md) (opens another Microsoft site)
-- [Windows 10 Group Policy vs Intune MDM policy](/archive/blogs/cbernier/windows-10-group-policy-vs-intune-mdm-policy-who-wins) (opens another Microsoft site)
-
-## Alert: Saving of Access Rules to Exchange has Failed
+## Saving of Access Rules to Exchange has Failed
 
 **Issue**: You receive the alert **Saving of Access Rules to Exchange has Failed**  in the admin console.
 
@@ -115,8 +101,6 @@ If you create policies in the Exchange On-Premises Policy workspace (Admin conso
 
 ## Can't change security policies for enrolled devices
 
-Windows Phone devices don't allow security policies set using MDM or EAS to be reduced in security once you've set them. For example, you set a **Minimum number of character password** to 8, and then try to reduce it to 4. The more restrictive policy is applied to the device.
-
 Windows 10 devices may not remove security policies when you unassign the policy (stop deployment). You may need to leave the policy assigned, and then change the security settings back to the default values.
 
 Depending on the device platform, if you want to change the policy to a less secure value, you may need to reset the security policies.
@@ -124,39 +108,3 @@ Depending on the device platform, if you want to change the policy to a less sec
 For example, in Windows 8.1, on the desktop, swipe in from right to open the **Charms** bar. Choose **Settings** > **Control Panel** > **User Accounts**. On the left, select **Reset Security Policies** link, and choose **Reset Policies**.
 
 Other platforms, such as Android, and iOS/iPadOS may need to be retired and re-enrolled to apply a less restrictive policy.
-
-[Troubleshoot device enrollment](troubleshoot-device-enrollment-in-intune.md) may be a good resource.
-
-## PCs using the Intune software client - classic portal
-
-> [!NOTE]
-> This section applies to the classic portal.
-
-### Microsoft Intune policy-related errors in policyplatform.log
-
-For Windows PCs managed with the Intune software client, policy errors in the `policyplatform.log` file may be from non-default settings in the Windows User Account Control (UAC) on the device. Some non-default UAC settings can affect Microsoft Intune client installations and policy execution.
-
-#### Resolve UAC issues
-
-1. Retire the computer. See [Remove devices](/mem/intune/remote-actions/devices-wipe).
-
-2. Wait 20 minutes for the client software to be removed.
-
-    > [!NOTE]
-    > Don't attempt to remove the client from Programs and Features.
-
-3. On the start menu, type **UAC** to open the User Account Control settings.
-
-4. Move the notification slider to the default setting.
-
-### ERROR: Cannot obtain the value from the computer, 0x80041013
-
-Occurs if the time on the local system is out of sync by five minutes or more. If the time on the local computer is out of sync, secure transactions fail because the time stamps are invalid.
-
-To resolve this issue, set the local system time as close as possible to Internet time. Or, set it to the time on the domain controllers on the network.
-
-## Next steps
-
-[Common issues and resolutions with email profiles](troubleshoot-email-profiles-in-microsoft-intune.md)
-
-Get [support help from Microsoft](/mem/get-support), or use the [community forums](/answers/products/mem).

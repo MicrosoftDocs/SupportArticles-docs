@@ -2,8 +2,9 @@
 title: Error (This company has exceeded the number of objects that can be synchronized) displays in a directory synchronization report
 description: Describes how to increase the Active Directory directory service quota for directory synchronization in an Office 365, Azure, or Microsoft Intune environment.
 ms.date: 07/06/2020
-ms.prod-support-area-path: 
 ms.reviewer: willfid
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # An error displays in a directory synchronization report: This company has exceeded the number of objects that can be synchronized
 
@@ -74,6 +75,6 @@ In this scenario, the online company that's performing the evaluation of the clo
 
 **Question 3:** Does having more than one verified domain mean that I can have a quota that's higher than 300,000 objects?
 
-**Answer 3**: No. You're granted a directory quota of 300,000 objects if you have one or more verified domains. You're not granted a quota of 300,000 objects for *each* verified domain that you register.
+**Answer 3**: No. You're granted a directory quota of 300,000 objects if you have one or more verified domains. You're not granted a quota of 300,000 objects for _each_ verified domain that you register.
 
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=windowsazuread) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

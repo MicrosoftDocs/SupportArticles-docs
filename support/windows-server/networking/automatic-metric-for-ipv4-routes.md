@@ -1,26 +1,25 @@
 ---
 title: The Automatic Metric feature for IPv4 routes
 description: Introduces the Automatic Metric feature in Windows for IPv4 routes.
-ms.date: 09/08/2020
+ms.date: 03/31/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
-ms.reviewer: kaushika, terryba
-ms.prod-support-area-path: TCP/IP communications
+ms.reviewer: kaushika
+ms.custom: sap:tcp/ip-communications, csstroubleshoot
 ms.technology: networking
 ---
 # An explanation of the Automatic Metric feature for IPv4 routes
 
 This article describes the Automatic Metric feature that is used in Windows for Internet Protocol IPv4 routes.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2019, Windows Server 2012 R2, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 299540
 
-## More information
+## Summary
 
 A metric is a value that's assigned to an IP route for a particular network interface. It identifies the cost that's associated with using that route. For example, the metric can be valued in terms of link speed, hop count, or time delay. Automatic Metric is a new feature in Windows that automatically configures the metric for the local routes that are based on link speed. The Automatic Metric feature is enabled by default, and it can also be manually configured to assign a specific metric.
 
@@ -29,38 +28,38 @@ The Automatic Metric feature can be useful when the routing table contains multi
 > [!NOTE]
 > Typically, Microsoft doesn't recommend that you add default gateways across disjoint networks. For example, edge servers, such as, Network Address Translation (NAT) and proxy servers, are typically configured to connect two or more disjoint networks: The public Internet and one or more private intranets. In this situation, you should not assign the default gateways on the private interfaces, as doing so may result in improper routing on your network.
 
+## Routes
+
 The following table outlines the criteria that is used by Windows to assign metrics for routes that are bound to network interfaces of various speeds.
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|5|
+|Greater than or equal to 2 Gb|5|
 |Greater than 200 Mb|10|
 |Greater than 20 Mb, and less than or equal to 200 Mb|20|
 |Greater than 4 Mb, and less than or equal to 20 Mb|30|
 |Greater than 500 kilobits (Kb), and less than or equal to 4 Mb|40|
 |Less than or equal to 500 Kb|50|
-|||
-
+  
 The following table lists the link speeds and assigned metrics for computers that run Windows XP Service Pack 2 and newer versions of Windows operating systems.
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|5|
+|Greater than or equal to 2 Gb|5|
 |Greater than 200 Mb|10|
 |Greater than 80 Mb, and less than or equal to 200 Mb|20|
 |Greater than 20 Mb, and less than or equal to 80 Mb|25|
 |Greater than 4 Mb, and less than or equal to 20 Mb|30|
 |Greater than 500 Kb, and less than or equal to 4 Mb|40|
 |Less than or equal to 500 Kb|50|
-|||
-
+  
 The following table lists the link speeds and assigned metrics for computers that run Windows 10 and newer versions of Windows operating systems:
 
 For interfaces with physical medium types NdisPhysicalMediumWirelessLan, NdisPhysicalMediumWirelessWan, NdisPhysicalMediumNative802_11:
 
 |Link Speed|Metric|
 |---|---|
-|Greater than or equal to 2 GB|25|
+|Greater than or equal to 2 Gb|25|
 |Greater than or equal to 500 Mb and less than 2 Gb|30|
 |Greater than or equal to 200 Mb and less than 500 Mb|35|
 |Greater than or equal to 150 Mb and less than 200 Mb|40|
@@ -73,8 +72,7 @@ For interfaces with physical medium types NdisPhysicalMediumWirelessLan, NdisPhy
 |Greater than or equal to 500 Kb and less than 2 Mb|75|
 |Greater than or equal to 200 Kb and less than 500 Kb|80|
 |Less than 200 Kb|85|
-|||
-
+  
 For other interfaces types:
 
 |Link Speed|Metric|
@@ -89,7 +87,8 @@ For other interfaces types:
 |Greater than or equal to 4 Mb and less than 20 Mb|55|
 |Greater than or equal to 500 Kb and less than 4 Mb|65|
 |Less than 500 Kb|75|
-|||
+  
+## More information
 
 The Automatic Metric feature is configured independently for each network interface in the network. This feature is useful in situations where you have more than one network interface of the same speed, for example, when each network interface has been assigned a default gateway. In this situation, you may want to manually configure the metric on one network interface, and enable the Automatic Metric feature to configure the metric of the other network interface. This setup can enable you to control the network interface that is used first in the routing of IP traffic.
 
@@ -107,3 +106,8 @@ To configure the Automatic Metric feature:
 3. Click Internet Protocol (TCP/IP), and then select **Properties**.
 4. On the **General** tab, select **Advanced**.
 5. To specify a metric, on the **IP Settings** tab, clear the **Automatic metric** check box, and then enter the metric that you want in the **Interface Metric** field.
+
+## References
+
+[IPv4 Routing](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732974%28v=ws.10%29)
+[Download PDF version of TCP/IP Fundamentals for Microsoft Windows](https://www.microsoft.com/en-us/download/details.aspx?id=8781)

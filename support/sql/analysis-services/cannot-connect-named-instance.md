@@ -2,7 +2,7 @@
 title: Can't connect to a named instance
 description: This article provides resolutions where you might not be able to connect to a named instance of Analysis Services that is installed on a failover cluster.
 ms.date: 07/22/2020
-ms.prod-support-area-path: Analysis Services
+ms.custom: sap:Analysis Services
 ms.reviewer: karang
 ms.prod: sql
 ---

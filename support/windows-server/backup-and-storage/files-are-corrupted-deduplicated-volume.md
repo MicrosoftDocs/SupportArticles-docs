@@ -2,22 +2,22 @@
 title: Files are corrupted on deduplicated volume that were created as NTFS-compressed
 description: Discusses that files cannot be opened and are logged as corrupted on deduplicated volumes that were created by having NTFS compression enabled. Provides a resolution.
 ms.date: 09/17/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Deduplication
+ms.custom: sap:deduplication, csstroubleshoot
 ms.technology: windows-server-backup-and-storage
 ---
 # Files are corrupted on deduplicated volumes that were created as NTFS-compressed
 
 This article provides a solution to an issue where files can't be opened and are logged as corrupted on deduplicated volumes.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 3066174
 
 ## Symptoms

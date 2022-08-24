@@ -4,32 +4,32 @@ description: Fixes an issue in which you can't add members to a DFS replication 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, takondo, fanx
-ms.prod-support-area-path: DFSR
+ms.custom: sap:dfsr, csstroubleshoot
 ms.technology: networking
 ---
 # Error "Value does not fall within the expected range" when changing a DFS replication group or namespace in Windows Server 2016 or Windows Server 2012 R2
 
 This article provides help to solve an issue where you can't add members to a Distributed File System (DFS) replication group or namespace after you install the Microsoft .NET Framework 4.7.
 
-_Original product version:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4049095
 
 ## Symptoms
 
-You install the .NET Framework 4.7 on a computer that has Windows Server 2016 or Windows Server 2012 R2 installed. When you try to do one of the following operations in the DFS Management console, you receive a "Value does not fall within the expected range." error message:
+You install the .NET Framework 4.7 on a computer that has Windows Server 2016 or Windows Server 2012 R2 installed. When you try to do one of the following operations in the DFS Management console, you receive a "Value does not fall within the expected range." error message:
 
 - Create a new replication group and add (select **Add**) servers to the new replication group.
 - Add a new member to an existing replication group and search (select **Browse**) for a server that you want to add.
 - Create or edit a new namespace and search (select **Browse**) for a server that you want to add.
 
 > [!NOTE]
-> This issue also occurs when your computer contains the CLR.dll version 4.7.2102.0, even if you have not installed the .NET Framework 4.7.
+> This issue also occurs when your computer contains the CLR.dll version 4.7.2102.0, even if you have not installed the .NET Framework 4.7.
 
 ## Resolution
 

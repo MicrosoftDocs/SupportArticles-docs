@@ -2,22 +2,22 @@
 title: Use Ntdsutil to manage AD files
 description: Describes how to manage the Active Directory database file, Ntds.dit, from the command line.
 ms.date: 10/14/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory database issues and domain controller boot failures
+ms.custom: sap:active-directory-database-issues-and-domain-controller-boot-failures, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to use Ntdsutil to manage Active Directory files from the command line in Windows Server 2003
 
 This article describes how to manage the Active Directory (AD) database file, Ntds.dit, from the command line.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 816120
 
 ## How to start your computer in Directory Services Restore mode

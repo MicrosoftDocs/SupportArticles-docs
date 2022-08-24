@@ -2,22 +2,22 @@
 title: Enable debug logging for Netlogon service
 description: Describes how to enable logging of debug information of the Netlogon service.
 ms.date: 09/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Legacy authentication (NTLM)
+ms.custom: sap:legacy-authentication-ntlm, csstroubleshoot
 ms.technology: windows-client-security
 ---
 # Enabling debug logging for the Netlogon service
 
 This article describes the steps to enable logging of the `Netlogon` service in Windows to monitor or troubleshoot authentication, DC locator, account lockout, or other domain communication-related issues.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2016, Windows Server 2019, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 109626
 
 ## More information

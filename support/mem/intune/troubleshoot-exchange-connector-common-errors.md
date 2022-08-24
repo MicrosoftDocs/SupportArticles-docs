@@ -1,11 +1,12 @@
 ---
 title: Troubleshoot common errors for the Intune Exchange connector
-description: Troubleshoot and resolve common errors for the on-premises Microsoft Intune Exchange Connector.
-ms.date: 10/02/2019
+description: Troubleshoot and resolve common error codes for the on-premises Microsoft Intune Exchange Connector.
+ms.date: 12/13/2021
+search.appverid: MET150
 ---
-# Resolve common Errors for the Intune Exchange Connector
+# Resolve common errors for the Intune Exchange Connector
 
-This article can help the Intune administrator resolve specific errors and messages about the operation of the Intune Exchange Connector.
+This article can help Intune administrators resolve specific errors and messages about the operation of the Intune Exchange Connector.
 
 ## Configuration failed and returned error code 0x0000001
 
@@ -21,8 +22,9 @@ When you try to configure the Microsoft Intune Exchange Connector, you receive t
 
 This problem can occur if the Internet proxy settings are misconfigured.
 
-**Resolution**:  
+**Solution**:  
 Configure proxy settings:
+
 1. Contact the local network administrator to make sure that the proxy settings are configured correctly.
 2. Use the **Netsh winhttp** command to configure the proxy server and add the required exclusion list. For example:  
 
@@ -41,9 +43,10 @@ When you try to configure the Microsoft Intune Exchange Connector, you receive t
    ERROR_FILE_NOT_FOUND  
    Error code: 0x000000b  
 ```
+
 This problem can occur if the account that you used to sign in to Intune isn't an Intune Global Administrator account.
 
-**Resolution**:  
+**Solution**:  
 Sign in to Intune with an account that is a Global Administrator, or add your account to the Global Admin group. For more information, see [Role-based administration control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
 ## Configuration failed and returned error code 0x0000006
@@ -51,14 +54,15 @@ Sign in to Intune with an account that is a Global Administrator, or add your ac
 **Issue**:  
 When you try to configure the Microsoft Intune Exchange Connector, you receive the following error message:  
 
-```  
+```
    The Microsoft Intune Exchange Connector cannot connect to Microsoft Intune  
    Verify that you are connected to the Internet, check the Microsoft Intune Service Status, and try to connect again.  
    Error code: 0x00000006  
-```  
+```
+
 This error can occur if a proxy server is used to connect to the Internet and is blocking traffic to the Intune Service. To determine whether a proxy is in use, go to **Control Panel** > **Internet Options**, select the **Connection** tab, and then click **LAN Settings**.
 
-**Resolution**:  
+**Solution**:  
 
 - **Option 1** - Remove the proxy settings to allow the computer to connect to the Internet without going through the proxy.  
 
@@ -69,7 +73,7 @@ This error can occur if a proxy server is used to connect to the Internet and is
 **Issue**:  
 An iOS device fails to enroll in Intune and generates one of the following error messages:  
 
-```  
+```
    Log Name:      System
    Source:            Service Control Manager
    Date:               <time>
@@ -83,7 +87,7 @@ An iOS device fails to enroll in Intune and generates one of the following error
    The service did not start because of a logon failure.
 ```  
 
-```  
+```
    Log Name:      System
    Source:            Service Control Manager
    Date:               <time>
@@ -103,7 +107,7 @@ An iOS device fails to enroll in Intune and generates one of the following error
 
 This problem can occur if the **WIEC_User** account doesn't have the **Log on as service** user right in the local policy.
 
-**Resolution**:  
+**Solution**:  
 On the computer that runs the Intune Exchange Connector, assign the **Log on as a service** user right to the **WIEC_User** service account. If the computer is a node in a cluster, make sure to assign the *Log on as a service* user right to the cluster service account on all nodes in the cluster.  
 
 To assign the **Log on as a service** user right to the **WIEC_User** service account on the computer, follow these steps:
@@ -115,14 +119,3 @@ To assign the **Log on as a service** user right to the **WIEC_User** service ac
 5. Select **Add User or Group**, add **WIEC_USER** to the policy, and then select **OK** two times.
 
 If the **Log on as a service** user right was assigned to **WIEC_User** but was later removed, contact the domain administrator to determine whether a Group Policy setting is overwriting it.  
-
-## Next steps  
-
-The following article can help resolve specific errors:
-
-- [Resolve common problems for the Intune Exchange Connector](troubleshoot-exchange-connector-common-problems.md)
-
-Seek assistance from support or the Intune community.
-
-- See [Get Support](/mem/get-support) to use the Intune Console to help troubleshoot the issue, or to open a support case with Microsoft.
-- Post your issue in the [Microsoft Intune forums](/answers/products/mem).

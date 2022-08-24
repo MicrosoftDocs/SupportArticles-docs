@@ -2,8 +2,9 @@
 title: High CPU usage in Azure Active Directory Connect Health for Sync
 description: Resolves an issue in which high CPU usage occurs in Azure Active Directory Connect Health for Sync.
 ms.date: 05/11/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: enterprise-users
 ---
 # High CPU usage in Azure AD Connect Health for Sync
 
@@ -32,8 +33,7 @@ The following .NET Framework update would cause the high CPU issue by the monito
 | KB4054542| Windows Server 2012 |
 | KB4054566| Windows Server 2012 R2 |
 | KB4054590 KB4338814 KB4338419 KB4338605 KB4345418| General |
-|||
-
+  
 ## Resolution
 
 ### For Connect Health for AD DS and AD FS
@@ -44,6 +44,4 @@ To resolve this issue for Active Directory Domain Services (AD DS) and Active 
 
 To resolve this issue for Azure AD Connect, install the [latest version of Azure AD Connect](https://go.microsoft.com/fwlink/?LinkId=615771).
 
-## More information
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/Forums) website.
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

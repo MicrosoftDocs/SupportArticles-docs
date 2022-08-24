@@ -1,9 +1,10 @@
 ---
 title: Error (This user can't sign in because this account is currently disabled) when syncing settings of Windows 10
-description: Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync. 
+description: "Describes an issue in which (Event ID 6065:80070533 This user can't sign in because this account is currently disabled) is logged when Windows 10 settings fail to sync."
 ms.date: 06/08/2020
-ms.prod-support-area-path: 
 ms.reviewer: cpuckett
+ms.service: active-directory
+ms.subservice: authentication
 ---
 # Error when Windows 10 devices settings fail to sync: This user can't sign in because this account is currently disabled
 
@@ -58,7 +59,6 @@ The tenant has not been provisioned with the RMSBASIC subscription. This happens
     |tenantname:AAD_PREMIUM|100|0|21|
     |tenantname:RIGHTSMANAGEMENT_ADHOC|1000|0|18|
     |tenantname: RMSBASIC|1000|0|18|
-    |||||
 
 4. If RMSBASIC is not present, as in the example output below, proceed with the steps in the next section.
 
@@ -69,7 +69,6 @@ The tenant has not been provisioned with the RMSBASIC subscription. This happens
     |tenantname:INTUNE_A|25|0|23|
     |tenantname:AAD_PREMIUM|100|0|21|
     |tenantname:RIGHTSMANAGEMENT_ADHOC|1000|0|18|
-    |||||
 
 ### Verify AllowAdHocSubscriptions is set to "True" on the tenant
 
@@ -108,7 +107,7 @@ After obtaining a Premium Azure AD subscription, follow these steps to enable **
 2. On the left side, select **ACTIVE DIRECTORY**, and then select the directory for which you want to enable **Enterprise State Roaming**.
 3. Go to the **CONFIGURE** tab.
 4. Scroll down the page, look for **USERS MAY SYNC SETTINGS AND ENTERPRISE APP DATA**, and verify that **ALL** or **SELECTED** is selected.
-5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-windows-enterprise-state-roaming-enable/).
+5. If **All** or **SELECTED** is already selected, select None, save, and go back to the previously selected **ALL** or **SELECTED** with the original SG option, and then save again. For a reference with screenshots, see [Enable Enterprise State Roaming in Azure Active Directory](/azure/active-directory/devices/enterprise-state-roaming-enable).
 
 ### (Optional) Set AllowAdHocSubscriptions to "False" on the tenant
 
@@ -120,8 +119,10 @@ Set-MsolCompanySettings -AllowAdHocSubscriptions $false
 
 ## More information
 
-- [Azure Active Directory PowerShell Module](https://docs.microsoft.com/powershell/module/MSOnline/?view=azureadps-1.0&redirectedfrom=msdn&preserve-view=true)
-- [Get-MsolAccountsku](https://docs.microsoft.com/powershell/module/msonline/get-msolaccountsku?view=azureadps-1.0&preserve-view=true)
-- [Set-MsolCompanySettings](https://docs.microsoft.com/powershell/module/msonline/set-msolcompanysettings?view=azureadps-1.0&preserve-view=true)
-- [How administrators can control the accounts created for RMS for individuals](https://docs.microsoft.com/azure/information-protection/rms-for-individuals)
+- [Azure Active Directory PowerShell Module](/powershell/module/MSOnline/?view=azureadps-1.0&redirectedfrom=msdn&preserve-view=true)
+- [Get-MsolAccountsku](/powershell/module/msonline/get-msolaccountsku?view=azureadps-1.0&preserve-view=true)
+- [Set-MsolCompanySettings](/powershell/module/msonline/set-msolcompanysettings?view=azureadps-1.0&preserve-view=true)
+- [How administrators can control the accounts created for RMS for individuals](/azure/information-protection/rms-for-individuals)
 - [50,000 seats are assigned to the RIGHTSMANAGEMENT_ADHOC SKU in your Office 365 organization](https://support.microsoft.com/help/2925380)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

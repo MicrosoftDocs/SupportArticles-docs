@@ -2,7 +2,6 @@
 title: Server App-V Agent installer custom actions
 description: Describes a list of the custom actions for the Server Application Virtualization (Server App-V) Agent installer package.
 ms.date: 04/29/2020
-ms.prod-support-area-path: 
 ms.reviewer: jeffpatt
 ---
 # Custom actions for the Server Application Virtualization (Server App-V) Agent installer package
@@ -35,4 +34,3 @@ _Original KB number:_ &nbsp; 2704938
 |Server App-V Agent|`SetUnregisterMOFFile`|N/A|This sets an MSI property that includes a path to the MOF file to unregister the MOF file.|
 |Server App-V Agent|`SetAVCPMon32PathProperty`|N/A|This sets an MSI property that includes the path to the avcpmon dll file.|
 |Server App-V Agent|`SetAppInit_Dll32AdditionProperty`|N/A|This sets an MSI property that includes the path to the avcpmon dll file.|
-||||

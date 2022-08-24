@@ -2,7 +2,6 @@
 title: A log with a line exceeding 8000 characters is truncated in CMTrace log viewer
 description: Fixes an issue in which a line of a log that exceeds 8000 characters causes the log to be truncated in the CMTrace log viewer.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi, mansee, jarrettr, clintk
 ---
 # A log that has a line exceeding 8000 characters is truncated in the CMTrace log viewer
@@ -18,4 +17,4 @@ In Microsoft System Center 2012 Configuration Manager, when you use the CMTrace 
 
 ## Workaround
 
-There are two workarounds to this issue. First, you can view the log file in Notepad. Viewing the log file in Notepad will allow you to see all of the content. Second, if you prefer to view the log in CMTrace you can edit the offending lines in Notepad (making them less than 8000 characters long) and then view the edited log in CMTrace.
+There are two workarounds to this issue. First, you can view the log file in Notepad. Viewing the log file in Notepad will allow you to see all of the content. Second, if you prefer to view the log in CMTrace you can edit the offending lines in Notepad (making them less than 8000 characters long) and then view the edited log in CMTrace.

@@ -1,15 +1,12 @@
 ---
-title: Script error during Intune setup process
-description: Fixes an issue in which you receive script error during Intune setup process in Configuration Manager.
-ms.date: 01/19/2021
-ms.prod-support-area-path: 
+title: Script error during Intune setup process in Configuration Manager
+description: Fixes an issue in which you receive script error when you set up Microsoft Intune in Configuration Manager.
+ms.date: 11/09/2021
+search.appverid: MET150
 ---
 # Wizard generates a script error when you configure a Microsoft Intune subscription in Configuration Manager
 
-This article helps you fix an issue in which you receive a script error during Intune setup process in Configuration Manager.
-
-_Original product version:_ &nbsp; Microsoft Intune, Configuration Manager  
-_Original KB number:_ &nbsp; 3117659
+This article helps you fix an issue in which you receive a script error during the Intune setup process in Configuration Manager.
 
 ## Symptom
 
@@ -20,8 +17,8 @@ When you try to log in during the Microsoft Intune setup process in Configuratio
 
 ## Cause
 
-This issue may occur if the login account is authorized for Delegated Administration on multiple subscriptions. Currently the multi-account console isn't supported during Microsoft Intune setup on Configuration Manager.
+This issue can occur if the login account is authorized for Delegated Administration on multiple subscriptions. Currently, the multi-account console isn't supported during Microsoft Intune setup on Configuration Manager.
 
-## Resolution
+## Solution
 
 To fix this issue, use a Global Administrator account that doesn't have Delegated Administration permissions.

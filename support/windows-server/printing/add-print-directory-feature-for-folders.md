@@ -4,21 +4,21 @@ description: Explains how to print a directory listing of the contents of a fold
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, davidg, georgev
-ms.prod-support-area-path: 'Management and Configuration: General issues'
+ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ms.technology: windows-server-printing
 ---
 # How to add the Print Directory feature for folders in Windows XP, in Windows Vista, in Windows 7
 
 This article describes how to print a directory listing of the contents of a folder by using the Print Directory feature.
 
-_Original product version:_ &nbsp;Windows 10 - all editions  
-_Original KB number:_ &nbsp;321379
+_Applies to:_ &nbsp; Windows 10 - all editions  
+_Original KB number:_ &nbsp; 321379
 
 ## Summary  
 

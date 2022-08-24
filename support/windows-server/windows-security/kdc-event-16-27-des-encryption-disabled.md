@@ -4,20 +4,20 @@ description: Describes how to enable DES encryption for Kerberos authentication 
 ms.date: 10/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: michikos, kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 # KDC event ID 16 or 27 is logged if DES for Kerberos is disabled
 
 This article describes how to enable DES encryption for Kerberos authentication in Windows 7 and in Windows Server 2008 R2.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2008 R2 Service Pack 1  
 _Original KB number:_ &nbsp; 977321
 
 ## Summary
@@ -45,8 +45,7 @@ In any of these scenarios, you may receive the following events in the Applicati
 |---|---|---|
 |27|KDCEVENT_UNSUPPORTED_ETYPE_REQUEST_TGS|While processing a TGS request for the target server %1, the account %2 did not have a suitable key for generating a Kerberos ticket (the missing key has an ID of %3). The requested etypes were %4. The accounts available etypes were %5.<br/> [Event ID 27 - KDC Encryption Type Configuration](https://technet.microsoft.com/library/cc733974%28ws.10%29.aspx) <br/>|
 |16|KDCEVENT_NO_KEY_INTERSECTION_TGS|While processing a TGS request for the target server %1, the account %2 did not have a suitable key for generating a Kerberos ticket (the missing key has an ID of %3). The requested etypes were %4. The accounts available etypes were %5. Changing or resetting the password of %6 will generate a proper key.<br/> [Event ID 16 - Kerberos Key Integrity](https://technet.microsoft.com/library/cc734142%28ws.10%29.aspx) <br/>|
-||||
-
+  
 ## Cause
 
 By default, the security settings for DES encryption for Kerberos are disabled on the following computers:
@@ -102,7 +101,7 @@ If you conclude that you're affected by this issue and that you have to turn on 
 
 1. In the Group Policy Management Console (GPMC), locate the following location:
 
-    *Computer Configuration\ Windows Settings\ Security Settings\ Local Policies\ Security Options*
+    _Computer Configuration\ Windows Settings\ Security Settings\ Local Policies\ Security Options_
 2. Click to select the Network security: Configure encryption types allowed for Kerberos option.
 3. Click to select **Define these policy settings** and all the six check boxes for the encryption types.
 4. Click **OK**. Close the GPMC.

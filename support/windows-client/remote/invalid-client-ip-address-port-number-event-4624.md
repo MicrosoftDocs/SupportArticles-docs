@@ -4,21 +4,21 @@ description: Describes an issue that generates event 4624 and an invalid client 
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-client-rds
 ---
 # Invalid client IP address in security event ID 4624 in Windows 7 and Windows Server 2008 R2
 
 This article provides a resolution to an issue where event 4624 and an invalid client IP address and port number are generated when a client computer tries to access a host computer that's running RDP 8.0.
 
-_Original product version:_ &nbsp;Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
-_Original KB number:_ &nbsp;3097467
+_Applies to:_ &nbsp; Windows Server 2008 R2 Service Pack 1, Windows 7 Service Pack 1  
+_Original KB number:_ &nbsp; 3097467
 
 ## Symptoms
 

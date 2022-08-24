@@ -4,20 +4,20 @@ description: Describes a problem that prevents the printer on a Windows 7 Servic
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 'Errors and troubleshooting: Print spooler'
+ms.custom: sap:errors-and-troubleshooting:-print-spooler, csstroubleshoot
 ms.technology: windows-client-printing
 ---
 # Print directly to the printer setting doesn't work with XPS-based print drivers
 
 This article provides a solution to an issue where the **Print directly to the printer** option doesn't work with XPS-based print drivers.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 3017432
 
 ## Symptoms

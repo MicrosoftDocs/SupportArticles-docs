@@ -4,25 +4,25 @@ description: Discusses that Windows Server 2016 RS3 no longer supports the File 
 ms.date: 12/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: FRS
+ms.custom: sap:frs, csstroubleshoot
 ms.technology: networking
 ---
 # Windows Server version 1709 no longer supports FRS
 
 This article discusses that Windows Server version 1709 no longer supports the File Replication Service (FRS).
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4025991
 
 ## Summary
 
-Windows Server version 1709 can no longer be added as an Active Directory domain controller (DC) to an existing domain that is still using File Replication Service (FRS) for replication of the SYSVOL share.
+Windows Server version 1709 can no longer be added as an Active Directory domain controller (DC) to an existing domain that is still using File Replication Service (FRS) for replication of the SYSVOL share.
 
 When you try to add a Windows Server version 1709-based server as a DC to the domain, you receive the following error message:
 
@@ -33,7 +33,7 @@ When you try to add a Windows Server version 1709-based server as a DC to the do
 
 ## Workaround
 
-The replacement for FRS is the Distributed File System Replication (DFSR). To work around this issue, migrate the existing domain to DFSR replication. The following articles describe in more detail how to make this change:
+The replacement for FRS is the Distributed File System Replication (DFSR). To work around this issue, migrate the existing domain to DFSR replication. The following articles describe in more detail how to make this change:
 
 - [Migrate SYSVOL replication to DFS Replication](/windows-server/storage/dfs-replication/migrate-sysvol-to-dfsr)
 - [Streamlined Migration of FRS to DFSR SYSVOL](https://techcommunity.microsoft.com/t5/storage-at-microsoft/streamlined-migration-of-frs-to-dfsr-sysvol/ba-p/425405)

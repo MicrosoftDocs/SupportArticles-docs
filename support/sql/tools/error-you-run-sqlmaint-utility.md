@@ -2,7 +2,7 @@
 title: Error when you run the Sqlmaint Utility
 description: This article provides a resolution for the problem that occurs when you run the Sqlmaint Utility after you upgrade from SQL Server 2000 SP4 to SQL Server 2008 or a later version.
 ms.date: 09/25/2020
-ms.prod-support-area-path: Other tools
+ms.custom: sap:Other tools
 ms.reviewer: jamestod
 ms.prod: sql
 ---
@@ -31,8 +31,7 @@ In SQL Server 2012 or a later version, SQL DMO is one of the discontinued featur
 | Category| Discontinued feature| Replacement |
 |---|---|---|
 |Programmability|SQL Server Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|
-||||
-
+  
 ## Resolution
 
 To resolve this problem, use one of the following methods.

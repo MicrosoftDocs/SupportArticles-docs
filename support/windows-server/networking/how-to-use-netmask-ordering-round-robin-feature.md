@@ -4,21 +4,21 @@ description: Describes the netmask ordering feature and the round robin feature 
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # Description of the netmask ordering feature and the round robin feature in Windows Server 2003 DNS
 
 This article describes the netmask ordering feature and the round robin feature and how to use these features together.
 
-_Original product version:_ &nbsp;Window Server 2003  
-_Original KB number:_ &nbsp;842197
+_Applies to:_ &nbsp; Window Server 2003  
+_Original KB number:_ &nbsp; 842197
 
 ## Summary
 

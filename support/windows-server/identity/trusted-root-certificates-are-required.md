@@ -4,36 +4,40 @@ description: Lists the trusted root certificates that are required by Windows op
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Certificate Services
-ms.technology: windows-server-active-directory 
+ms.custom: sap:active-directory-certificate-services, csstroubleshoot
+ms.technology: windows-server-active-directory
 ---
 # Required trusted root certificates
 
 This article lists the trusted root certificates that are required by Windows operating systems. These trusted root certificates are required for the operating system to run correctly.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 293781
 
 ## Summary
 
-As part of a public key infrastructure (PKI) trust management procedure, some administrators may decide to remove trusted root certificates from a Windows-based domain, a Windows-based server, or a Windows-based client. However, the root certificates that are listed in the [Necessary and trusted root certificates](#necessary-and-trusted-root-certificates) section in this article are required for the operating system to operate correctly. Because removal of the following certificates may limit functionality of the operating system or may cause the computer to fail, you should not remove them.
+As part of a public key infrastructure (PKI) trust management procedure, some administrators may decide to remove trusted root certificates from a Windows-based domain, server, or client. However, the root certificates that are listed in the [Necessary and trusted root certificates](#necessary-and-trusted-root-certificates) section in this article are required for the operating system to operate correctly. Removal of the following certificates may limit functionality of the operating system, or may cause the computer to fail. Don't remove them.
 
 ## Necessary and trusted root certificates
 
-The following certificates are necessary and trusted in Windows 7, in Windows Vista, in Windows Server 2008 R2, and in Windows Server 2008:
+The following certificates are necessary and trusted in:
+
+- Windows 7
+- Windows Vista
+- Windows Server 2008 R2
+- Windows Server 2008
 
 |Issued to|Issued by|Serial number|Expiration date|Intended purposes|Friendly name|Status|
 |---|---|---|---|---|---|---|
 |Microsoft Root Authority|Microsoft Root Authority|00c1008b3c3c8811d13ef663ecdf40|12/31/2020|All|Microsoft Root Authority|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-||||||||
 
 The follow certificates are necessary and trusted in Windows XP and in Windows Server 2003:
 
@@ -46,7 +50,6 @@ The follow certificates are necessary and trusted in Windows XP and in Windows S
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
 |Microsoft Root Certificate Authority|Microsoft Root Certificate Authority|79ad16a14aa0a5ad4c7358f407132e65|5/9/2021|All|Microsoft Root Certificate Authority|R|
-||||||||
 
 The follow certificates are necessary and trusted in Microsoft Windows 2000:
 
@@ -58,6 +61,5 @@ The follow certificates are necessary and trusted in Microsoft Windows 2000:
 |NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|NO LIABILITY ACCEPTED, (c)97 VeriSign, Inc.|4a19d2388c82591ca55d735f155ddca3|1/7/2004|Time Stamping|VeriSign Time Stamping CA|R|
 |VeriSign Commercial Software Publishers CA|VeriSign Commercial Software Publishers CA|03c78f37db9228df3cbb1aad82fa6710|1/7/2004|Secure E-mail, Code Signing|VeriSign Commercial Software Publishers CA|R|
 |Thawte Timestamping CA|Thawte Timestamping CA|00|12/31/2020|Time Stamping|Thawte Timestamping CA|R|
-||||||||
 
-Some certificates that are listed in the previous tables have expired. However, these certificates are necessary for backward compatibility. Even if there is an expired trusted root certificate, anything that was signed by using that certificate *before* the expiration date requires that the trusted root certificate is validated. As long as expired certificates are not revoked, they can be used to validate anything that was signed before their expiration.
+Some certificates that are listed in the previous tables have expired. However, these certificates are necessary for backward compatibility. Even if there's an expired trusted root certificate, anything that was signed by using that certificate _before_ the expiration date requires that the trusted root certificate is validated. As long as expired certificates aren't revoked, they can be used to validate anything that was signed before their expiration.

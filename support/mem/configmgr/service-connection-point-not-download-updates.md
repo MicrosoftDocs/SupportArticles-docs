@@ -2,7 +2,6 @@
 title: A service connection point doesn't download updates
 description: Fixes an issue where a service connection point in Configuration Manager doesn't download updates. This issue occurs when the Baltimore CyberTrust Root certificate is missing, expired, or corrupted.
 ms.date: 06/09/2020
-ms.prod-support-area-path:
 ---
 # Configuration Manager service connection point doesn't download updates
 
@@ -29,7 +28,7 @@ The service connection point uses the Intune service when it connects to [http:/
 
 This is a known issue for Intune, as documented in [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../intune/fix-connectivity-issues.md). However, this update is no longer displayed on the Microsoft Update Catalog.
 
-As a workaround, you can download the Baltimore CyberTrust Root certificate from [https://cacert.omniroot.com/bc2025.crt](https://cacert.omniroot.com/bc2025.crt). You can also export the certificate from the certificate authority in your environment.
+As a workaround, you can export the certificate from the certificate authority in your environment.
 
 After you've obtained the certificate, you must import it. To import the certificate, follow these steps:
 
@@ -46,7 +45,7 @@ After you've obtained the certificate, you must import it. To import the certifi
 
 You should now see an entry for Baltimore CyberTrust Root under **Trusted Root Certificate Authority**:
 
-:::image type="content" source="media/service-connection-point-not-download-updates/certificate.png" alt-text="Screenshot of Baltimore CyberTrust Root entry.":::
+:::image type="content" source="media/service-connection-point-not-download-updates/certificate.png" alt-text="Screenshot of Baltimore CyberTrust Root entry." lightbox="media/service-connection-point-not-download-updates/certificate.png":::
 
 ## More information
 

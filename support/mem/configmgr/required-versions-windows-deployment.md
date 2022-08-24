@@ -2,7 +2,6 @@
 title: Which ConfigMgr version to deploy a particular Windows version
 description: Provides an overview of the versions of Configuration Manager that correspond to particular versions of Windows in a Windows installation scenario.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: kimmar
 ---
 # Which version of Configuration Manager to deploy a particular version of Windows
@@ -24,8 +23,7 @@ The following table provides details about which version of Configuration Manage
 |---|---|
 |Windows 8|System Center 2012 SP1 Configuration Manager or later|
 |Windows 8.1|System Center 2012 R2 Configuration Manager or System Center 2012 SP1 CU3 Configuration Manager*|
-|||
-
+  
 \* CU3 (Cumulative Update 3) requires additional configuration considerations. For information about CU3 considerations, see [How to customize Windows PE boot images to use in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/dn387582(v=technet.10)?redirectedfrom=MSDN).
 
 For more information about operating system deployment prerequisites, see [Prerequisites for deploying operating systems in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg682187(v=technet.10)?redirectedfrom=MSDN).

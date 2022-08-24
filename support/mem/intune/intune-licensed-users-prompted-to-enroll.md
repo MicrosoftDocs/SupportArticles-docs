@@ -1,33 +1,31 @@
 ---
-title: Intune-licensed users prompted for enrollment
-description: Describes a behavior that causes Intune-licensed users to be prompted for enrollment when they are targeted by Office 365 MDM security policies.
-ms.date: 05/20/2020
-ms.prod-support-area-path: Create and assign Conditional Access policy
+title: Licensed user accessing Microsoft 365 prompted to enroll in Intune
+description: Describes a behavior that causes Intune-licensed users to be prompted for enrollment when they are targeted by Basic Mobility and Security for Microsoft 365 security policies.
+ms.date: 12/20/2021
+search.appverid: MET150
+ms.custom: sap:Create and assign Conditional Access policy
 ---
-# Intune-licensed users are prompted for enrollment when they are targeted by Office 365 MDM security policies
+# Intune-licensed users are prompted for enrollment when they try to access Microsoft 365 resources
 
-This article discusses a by design behavior that users are unexpectedly prompted to enroll in Microsoft Intune when they try to access Office 365 resources.
-
-_Original product version:_ &nbsp; Microsoft Intune, Mobile Device Mgmt for O365  
-_Original KB number:_ &nbsp; 4516689
+This article discusses a by design behavior that users are unexpectedly prompted to enroll in Microsoft Intune when they try to access Microsoft 365 resources and are targeted by Basic Mobility and Security for Microsoft 365 security policies.
 
 ## Symptoms
 
 Consider the following scenario:
 
-- You previously used Mobile Device Management (MDM) for Office 365 or Office 365 MDM Coexistence together with Intune.
-- You [created and deployed an Office 365 MDM security policy](https://support.office.com/article/Create-and-deploy-device-security-policies-d310f556-8bfb-497b-9bd7-fe3c36ea2fd6) to users.
+- You previously used Basic Mobility and Security for Microsoft 365 or Basic Mobility and Security for Microsoft 365 [coexistence](/mem/intune/fundamentals/mdm-authority-set#coexistence) together with Intune.
+- You [created and deployed a device security policy in Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/create-device-security-policies) to users.
 - You assign Intune licenses to users, and then assign Intune policies to the users.
 - Conditional Access in Azure isn't configured to enforce Intune MDM enrollment.
 
-In this scenario, users are unexpectedly prompted to enroll in Intune when they try to access Office 365 resources.
+In this scenario, users are unexpectedly prompted to enroll in Intune when they try to access Microsoft 365 resources.
 
 ## Cause
 
 This behavior is by design.
 
-This behavior occurs if Office 365 MDM security policies are still deployed to a group that contains the affected users. When users are targeted by Office 365 MDM security policies, Conditional Access will be evaluated by Azure AD authentication services. These services check a user's group membership. Azure AD authentication services don't check the user authority (Intune instead of Office 365 MDM) when they enforce Conditional Access.
+This behavior occurs if Basic Mobility and Security security policies are still deployed to a group that contains the affected users. When users are targeted by Basic Mobility and Security security policies, Conditional Access will be evaluated by Azure Active Directory (Azure AD) authentication services. These services check a user's group membership. Azure AD authentication services don't check the user authority (Intune instead of Microsoft 365) when they enforce Conditional Access.
 
-## Resolution
+## Solution
 
-To change this behavior, remove the affected users from any groups that are still assigned an Office 365 MDM security policy. Or, remove the Office 365 MDM security policy, if it's no longer needed.
+To change this behavior, remove the affected users from any groups that are still assigned a Basic Mobility and Security security policy. Or, remove the Basic Mobility and Security security policy if it's no longer needed.

@@ -2,22 +2,22 @@
 title: Local drive redirection isn't working
 description: Provides a solution to an issue where local drive redirection isn't working in RDP Session.
 ms.date: 10/16/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Remote desktop sessions
+ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
---- 
+---
 # Local drive redirection isn't working in RDP Session
 
 This article provides a solution to an issue where local drive redirection isn't working in RDP Session.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 2436104
 
 ## Symptoms

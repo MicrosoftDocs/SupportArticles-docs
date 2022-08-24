@@ -4,20 +4,20 @@ description: When a shared folder on a Windows Server 2008 R2-based server is ac
 ms.date: 09/17/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Blue Screen/Bugcheck
+ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # Unexpected errors are returned when a shared folder is accessed from an application
 
 This article provides a solution to unexpected errors that occur when you access a shared folder from an application.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2990989
 
 ## Symptoms
@@ -59,8 +59,6 @@ Also be aware that there is a difference between I/O to local drives and I/O to 
 
 Because of these differences, the API can return different kinds of errors. For local files, the API will not return networking errors. For networked files, the API can return file access errors like ERROR_ACCESS_DENIED and network errors like ERROR_UNEXP_NET_ERR because either kind of error can occur on a network. This behavior is by design and is documented in the Microsoft Developer Network (MSDN) Library in the following two locations:
 
-[Differences in Local and Network I/O](https://msdn.microsoft.com/library/windows/desktop/aa363942%28v=vs.85%29.aspx) 
+[Differences in Local and Network I/O](https://msdn.microsoft.com/library/windows/desktop/aa363942%28v=vs.85%29.aspx)
 
-[Description of a Network I/O Operation](https://msdn.microsoft.com/library/windows/desktop/aa363936%28v=vs.85%29.aspx) 
-
-For more information, click the following article number to view the article in the Microsoft Knowledge Base: [113996](https://support.microsoft.com/help/113996)  INFO: Mapping NT status error codes to Win32 error codes
+[Description of a Network I/O Operation](https://msdn.microsoft.com/library/windows/desktop/aa363936%28v=vs.85%29.aspx)

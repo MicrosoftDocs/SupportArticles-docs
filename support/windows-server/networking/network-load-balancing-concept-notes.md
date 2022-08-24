@@ -4,20 +4,20 @@ description: describes the Network Load Balancing.
 ms.date: 09/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Network Load Balancing (NLB)
+ms.custom: sap:network-load-balancing-nlb, csstroubleshoot
 ms.technology: networking
 ---
 # Network Load Balancing - Concept and notes
 
 This article provides the information about the Network Load Balancing.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 556067
 
 ## Summary

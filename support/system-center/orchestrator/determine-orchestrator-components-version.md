@@ -2,7 +2,6 @@
 title: Determine the version of Orchestrator components
 description: Describes how to determine the version of your current System Center Orchestrator components.
 ms.date: 08/04/2020
-ms.prod-support-area-path:
 ---
 # How to determine the version of System Center Orchestrator components
 

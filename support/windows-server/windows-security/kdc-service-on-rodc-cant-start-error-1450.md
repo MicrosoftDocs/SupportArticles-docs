@@ -2,16 +2,16 @@
 title: KDC service on an RODC can't start and generates error 1450
 description: This article resolves an issue in which the KDC service on a read-only domain controller (RODC) cannot start, and you receive an error message that refers to insufficient system resources.
 ms.date: 10/26/2020
-author: Teresa-Motiv
-ms.author: v-tea
-manager: dscontentpm
+author: v-tappelgate
+ms.author: v-tappelgate
+manager: dcscontentpm
 audience: itpro
 keywords: ad, security,KDC service, RODC, error 1450, handle invalid
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Kerberos authentication
+ms.custom: sap:kerberos-authentication, csstroubleshoot
 ms.technology: windows-server-security
 ---
 
@@ -19,7 +19,7 @@ ms.technology: windows-server-security
 
 This article resolves an issue in which the KDC service on a read-only domain controller (RODC) cannot start, and you receive an error message that refers to insufficient system resources.
 
-_Original product version:_ &nbsp; Windows Server 2016
+_Applies to:_ &nbsp; Windows Server 2016
 
 ## Symptoms
 
@@ -44,7 +44,7 @@ For information about how to identify orphan **krbtgt_*#####*** accounts, see [M
 
 ## Resolution
 
-The procedure that you use to resolve this issue depends on whether you have enabled the [AD Recycle Bin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379542(v=ws.10)) feature in Active Directory. Select one of the following methods:
+The procedure that you use to resolve this issue depends on whether you have enabled the [AD Recycle Bin](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379542(v=ws.10)) feature in Active Directory. Select one of the following methods:
 
 - [Recovery Method 1 (AD Recycle Bin feature not enabled)](#recovery-method-1-ad-recycle-bin-feature-not-enabled)
 - [Recovery Method 2 (AD Recycle Bin feature enabled)](#recovery-method-2-ad-recycle-bin-feature-enabled)
@@ -55,7 +55,7 @@ If the AD Recycle Bin feature wasn't enabled, follow these steps on a writeable 
 
 1. Restart the server. During the startup process, press F8, and then select **Directory Services Restore Mode**.
 2. Use a system state backup from before the account was removed to restore the system state of the server. This operation returns the account to the local copy of Active Directory on the server.
-3. Open an elevated Command Prompt window, and use the ntdsutil tool to do an [authoritative restore](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732211(v=ws.11)) of the account. This operation makes sure that the restored account can replicate to the other domain controllers.
+3. Open an elevated Command Prompt window, and use the ntdsutil tool to do an [authoritative restore](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732211(v=ws.11)) of the account. This operation makes sure that the restored account can replicate to the other domain controllers.
 
    For example, to restore an account that has the name **krbtgt_23530**, you would open an elevated Command Prompt window, and run the following command:
 
@@ -75,7 +75,7 @@ If the AD Recycle Bin feature wasn't enabled, follow these steps on a writeable 
 
    In this command, \<*filename*> is the file name and path of the LDIF file that was created previously. This operation links the RODC computer object in Active Directory to its corresponding account.
 
-After you finish these steps, you may have to reset the password of the RODC computer account (also known as the "machine account"). To do this, follow the steps in [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password).
+After you finish these steps, you may have to reset the password of the RODC computer account (also known as the "machine account"). To do this, follow the steps in [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password).
 
 ### Recovery Method 2 (AD Recycle Bin feature enabled)
 
@@ -111,10 +111,10 @@ If the AD Recycle Bin feature is enabled, follow these steps.
 4. Reset the password of the RODC computer account (also known as the "machine account") by running the following command:
 
    ```cmd
-   netdom resetpwd /server: <RODC_Name> /USERD: administrator /Password:*
+   netdom resetpwd /server: <RWDC_Name> /USERD: administrator /PasswordD:*
    ```
 
-   In this command, \<*RODC_Name*> represents the server name of the RODC.
+   In this command, \<*RWDC_Name*> represents the server name of the RWDC.
 
    > [!NOTE]  
    > This command prompts you for the password of the Administrator account.
@@ -122,13 +122,13 @@ If the AD Recycle Bin feature is enabled, follow these steps.
 
 ## References
 
-- [authoritative restore](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732211(v=ws.11))
-- [How to restore deleted user accounts and their group memberships in Active Directory](https://docs.microsoft.com/troubleshoot/windows-server/identity/retore-deleted-accounts-and-groups-in-ad)
-- [klist](https://docs.microsoft.com/windows-server/administration/windows-commands/klist)
+- [authoritative restore](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc732211(v=ws.11))
+- [How to restore deleted user accounts and their group memberships in Active Directory](/troubleshoot/windows-server/identity/retore-deleted-accounts-and-groups-in-ad)
+- [klist](/windows-server/administration/windows-commands/klist)
 - [LDIFDE - Export / Import data from Active Directory - LDIFDE commands](https://support.microsoft.com/help/555636)
 - [MailBag: RODCs – krbtgt_#####, Orphans, and Load Balancing RODC Connection Objects](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/mailbag-rodcs-krbtgt-orphans-and-load-balancing-rodc-connection/ba-p/256064)
-- [Notes on Kerberos kvno in Windows RODC environment](https://docs.microsoft.com/archive/blogs/openspecification/notes-on-kerberos-kvno-in-windows-rodc-environment)
-- [Repadmin /replsingleobj](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742123(v=ws.11))
-- [Repadmin /showobjmeta](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742104(v=ws.11))
-- [RODC Frequently Asked Questions](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754956(v=ws.10))
-- [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](https://docs.microsoft.com/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password)
+- [Notes on Kerberos kvno in Windows RODC environment](/archive/blogs/openspecification/notes-on-kerberos-kvno-in-windows-rodc-environment)
+- [Repadmin /replsingleobj](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742123(v=ws.11))
+- [Repadmin /showobjmeta](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc742104(v=ws.11))
+- [RODC Frequently Asked Questions](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc754956(v=ws.10))
+- [Use Netdom.exe to reset machine account passwords of a Windows Server domain controller](/troubleshoot/windows-server/windows-security/use-netdom-reset-domain-controller-password)

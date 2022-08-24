@@ -1,28 +1,28 @@
 ---
 title: Firmware update failures in Windows 8.1
 description: Describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
-ms.date: 09/14/2020
+ms.date: 04/15/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Firmware update failures in Windows 8.1
 
 This article describes how and why firmware updates occasionally fail in a Windows 8.1 environment.
 
-_Original product version:_ &nbsp;Windows 8.1  
-_Original KB number:_ &nbsp;2909710
+_Applies to:_ &nbsp; Windows 8.1  
+_Original KB number:_ &nbsp; 2909710
 
 ## Summary
 
-Computers that are running Windows 8 and Windows 8.1 may use Windows Update to update their firmware. Specifically, these computers use Windows driver packages to install firmware updates. After a firmware driver package has been installed, Windows hands off the firmware updates to UEFI system firmware for installation during your computer's next restart. UEFI system firmware is provided by your computer manufacturer and is separate from Windows. Windows itself doesn't install firmware updates but instead hands off firmware updates to the UEFI system firmware for your computer.
+Computers that are running Windows may use Windows Update to update their firmware. Specifically, these computers use Windows driver packages to install firmware updates. After a firmware driver package has been installed, Windows hands off the firmware updates to UEFI system firmware for installation during your computer's next restart. UEFI system firmware is provided by your computer manufacturer and is separate from Windows. Windows itself doesn't install firmware updates but instead hands off firmware updates to the UEFI system firmware for your computer.
 
 ## More information
 
@@ -36,8 +36,8 @@ Windows PCs that use Windows Update to install firmware updates will have "Syste
 
 To view your update history in Windows Update:
 
-1. On the **Start** screen, type *update history*, and then click **View your update history for Windows**.
-2. In the search box, enter *Windows Update*, and then select **View update history**. You can also view the error codes that are returned for a failed firmware update by selecting the failed System Firmware Update entry in your update history. The update history page in Windows Update includes a status column, and this indicates which updates failed to install successfully. You can select the entry and open it to see details about the installation, including the installation status and error details.
+1. On the **Start** screen, type _update history_, and then click **View your update history for Windows**.
+2. In the search box, enter _Windows Update_, and then select **View update history**. You can also view the error codes that are returned for a failed firmware update by selecting the failed System Firmware Update entry in your update history. The update history page in Windows Update includes a status column, and this indicates which updates failed to install successfully. You can select the entry and open it to see details about the installation, including the installation status and error details.
 
 A computer that uses UEFI to update firmware may also have entries for updatable firmware components in Device Manager. To determine whether your computer uses UEFI to update firmware, follow these steps:
 
@@ -80,13 +80,12 @@ Windows retries firmware updates as follows.
 |Transient|3|
 |Transient: power condition|No limit|
 |Non-transient|0|
-|||
-
+  
 ### Windows Update power checks
 
-Because your computer may require a certain level of battery power (for example 25 percent) to install firmware updates, Windows Update monitors your battery power level to prevent your computer from needlessly failing a firmware update during an *interactive install*.
+Because your computer may require a certain level of battery power (for example 25 percent) to install firmware updates, Windows Update monitors your battery power level to prevent your computer from needlessly failing a firmware update during an _interactive install_.
 
-During an interactive install, a user manually checks for updates from the Windows Update control panel or the Settings app and then manually starts the update process. An *automatic background install* occurs in the background, staging the new updates that are available for your PC and notifying you that your PC requires a restart. Most of your updates are installed automatically in the background.
+During an interactive install, a user manually checks for updates from the Windows Update control panel or the Settings app and then manually starts the update process. An _automatic background install_ occurs in the background, staging the new updates that are available for your PC and notifying you that your PC requires a restart. Most of your updates are installed automatically in the background.
 
 Windows Update will verify that your PC has at least 40-percent battery power before it starts firmware updates during an interactive install. During an automatic background install, Windows Update doesn't check for the 40-percent battery power threshold. This behavior occurs because Windows won't try to restart your PC until you have at least 40-percent battery power. Additionally, it will automatically retry installation of failed firmware updates when the battery charges to 40 percent or more.
 
@@ -94,8 +93,7 @@ Windows Update will verify that your PC has at least 40-percent battery power be
 |---|---|
 |Interactive Install|Battery power level must be at least 40% for all interactive install attempts. If you try to install firmware with < 40% battery, Windows Update prompts you to "Plug your PC into power, let it fully recharge, and try again."|
 |Automatic Background|None. Firmware will always be staged for the next reboot during automatic background installs. Reboot to complete the install will be enforced only when battery power is greater than 40%.|
-|||
-
+  
 #### Error codes
 
 The following table lists the LastAttemptStatus error that's reported by UEFI system firmware and the matching NTSTATUS code that's reported by Windows in both Device Manager and Windows Update history. The table also lists the number of times Windows tries to reinstall firmware for each failure code, and the expected Windows Update behavior and update history for each code.
@@ -111,7 +109,7 @@ Contact your PC manufacturer for support with failed firmware updates.
 
 | LastAttemptStatus| NTSTATUS| Code| Retries| Windows Update after Automatic Install Attempt| Status Shown in Windows Update History |
 |---|---|---|---|---|---|
-| *Success*| *STATUS_SUCCESS*| *0x00000000*| *N/A*| *None*| *None* |
+| _Success_| _STATUS_SUCCESS_| _0x00000000_| _N/A_| _None_| _None_ |
 |Error: Unsuccessful|STATUS_UNSUCCESSFUL|0xC0000001|3|Windows Update shows "updates available." Later installation attempts through Windows Update or automatic maintenance will retry the firmware installation.|Pending Restart during the first 3 attempts, then "Failed" with the associated failure code.|
 |Error: Insufficient Resources|STATUS_INSUFFICIENT_RESOURCES|0xC000009A|3|
 |Error: Incorrect Version|STATUS_REVISION_MISMATCH|0xC0000059|0|Windows Update no longer shows update as available. No other status is provided.|History shows "Failed" and the associated failure code.|
@@ -121,4 +119,3 @@ Contact your PC manufacturer for support with failed firmware updates.
 |Error: Authentication Error|STATUS_ACCESS_DENIED|0xC0000022|3|Windows Update shows "updates available." Later installation attempts through Windows Update or automatic maintenance will retry the firmware installation.|Pending restart during the first 3 attempts, then "Failed" with the associated failure code.|
 |Error: Power Event, AC Not Connected|STATUS_POWER_STATE_INVALID|0xC00002D3|No Limit|Windows Update shows "updates available." 15-minute restart timer will also start immediately after battery is recharged to >= 40%.|Pending restart|
 |Error: Power Event, Insufficient Battery|STATUS_INSUFFICIENT_POWER|0xC00002DE|No Limit|
-|||||||

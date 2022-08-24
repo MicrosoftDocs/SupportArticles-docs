@@ -2,7 +2,6 @@
 title: A deployment property change isn't saved
 description: This article provides a solution for the issue that a property change of a deployment isn't saved in System Center 2012 Configuration Manager.
 ms.date: 06/16/2020
-ms.prod-support-area-path: 
 ms.reviewer: erinwi, mansee
 ---
 # Changing a property of a deployment doesn't appear to be saved in System Center 2012 Configuration Manager
@@ -22,14 +21,14 @@ This happens only when you have selected **Make available to boot media and PXE*
 
 ## Resolution
 
-This problem is only an issue with the settings that are visible in the user interface. The change is saved correctly in the database. You can run a custom report with a SQL query to verify your settings.
+This problem is only an issue with the settings that are visible in the user interface. The change is saved correctly in the database. You can run a custom report with a SQL query to verify your settings.
 
 The below SQL query is an example that will show all task sequences with the **Access content directly from a distribution point when needed by the running task sequence** deployment option selected.
 
 ```sql
 SELECT pkg.PackageID, pkg.Name, pkg.SourceSite,
-    CASE WHEN (adv.RemoteClientFlags & 0x00000008) = 0 THEN 0 ELSE 1 END AS RunFromDPInFastNetwork,
-    CASE WHEN (adv.RemoteClientFlags & 0x00000080) = 0 THEN 0 ELSE 1 END AS RunFromDPInSlowNetwork
+    CASE WHEN (adv.RemoteClientFlags & 0x00000008) = 0 THEN 0 ELSE 1 END AS RunFromDPInFastNetwork,
+    CASE WHEN (adv.RemoteClientFlags & 0x00000080) = 0 THEN 0 ELSE 1 END AS RunFromDPInSlowNetwork
 FROM v_Advertisement AS adv
 INNER JOIN v_Package AS pkg ON pkg.PackageID = adv.PackageID AND pkg.PackageType = 4
 WHERE (adv.RemoteClientFlags & 0x00000008) <> 0 OR (adv.RemoteClientFlags & 0x00000080) <> 0

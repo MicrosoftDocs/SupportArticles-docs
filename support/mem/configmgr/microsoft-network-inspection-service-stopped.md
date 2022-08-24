@@ -2,7 +2,6 @@
 title: Microsoft Network Inspection service is stopped
 description: Describes a problem in which the Microsoft Network Inspection service may be stopped by Active Directory Group Policy.
 ms.date: 06/15/2020
-ms.prod-support-area-path:
 ms.reviewer: ErinWi, prakask, keiththo, brshaw
 ---
 # Microsoft Network Inspection service started by Configuration Manager may be stopped by AD Group Policy

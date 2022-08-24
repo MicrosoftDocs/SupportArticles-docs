@@ -2,8 +2,9 @@
 title: Error occurs when you try to sign in to an app that's set up for Azure AD B2C
 description: Describes an error that occurs when you try to sign in to an app that's set up for Azure AD B2C.
 ms.date: 05/22/2020
-ms.prod-support-area-path: 
 ms.reviewer: 
+ms.service: active-directory
+ms.subservice: B2C
 ---
 # Error occurs when you try to sign in to an app that's set up for Azure AD B2C
 
@@ -42,3 +43,5 @@ To fix this issue, follow these steps:
     <add key="ida:ClientId" value="**xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx**">
     </appSettings>
     ```
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

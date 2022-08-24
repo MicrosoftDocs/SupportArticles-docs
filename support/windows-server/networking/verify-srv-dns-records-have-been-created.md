@@ -1,34 +1,34 @@
 ---
-title: Verify that SRV DNS records have been created
+title: Verify that SRV Domain Name System (DNS) records have been created
 description: Describes how to verify Service Location (SRV) locator resource records for a domain controller after you install the Active Directory directory service.
 ms.date: 09/22/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DNS
+ms.custom: sap:dns, csstroubleshoot
 ms.technology: networking
 ---
 # How to verify that SRV DNS records have been created for a domain controller
 
 This article describes how to verify Service Location (SRV) locator resource records for a domain controller after you install the Active Directory directory service.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 816587
 
 ## Summary
 
-The SRV record is a Domain Name System (DNS) resource record that is used to identify computers that host specific services. SRV resource records are used to locate domain controllers for Active Directory. To verify SRV locator resource records for a domain controller, use one of the following methods.
+The SRV record is a Domain Name System (DNS) resource record. It's used to identify computers hosting specific services. SRV resource records are used to locate domain controllers for Active Directory. To verify SRV locator resource records for a domain controller, use one of the following methods.
 
 ## Method 1: Use DNS Manager
 
-After you install Active Directory on a server running the Microsoft DNS service, you can use the DNS Management Console to verify that the appropriate zones and resource records are created for each DNS zone.
+After you install Active Directory on a server that's running the DNS service, you can use the DNS Management Console to verify that the appropriate zones and resource records are created for each DNS zone.
 
-Active Directory creates its SRV records in the following folders, where **Domain_Name** is the name of your domain:
+Active Directory creates its SRV records in the following folders, where \<Domain_Name> is the name of your domain:
 
 - `Forward Lookup Zones/Domain_Name/_msdcs/dc/_sites/Default-First-Site-Name/_tcp`
 - `Forward Lookup Zones/Domain_Name/_msdcs/dc/_tcp`
@@ -40,30 +40,30 @@ In these locations, an SRV record should appear for the following services:
 
 ## Method 2: View Netlogon.dns
 
-If you are using non-Microsoft DNS servers to support Active Directory, you can verify SRV locator resource records by viewing Netlogon.dns. Netlogon.dns is located in the `%systemroot%\System32\Config` folder. You can use a text editor, such as Notepad, to view this file.
+If you're using non-Microsoft DNS servers to support Active Directory, you can verify SRV locator resource records by viewing Netlogon.dns. Netlogon.dns is located in the `%systemroot%\System32\Config` folder. You can use a text editor, such as Notepad, to view this file.
 
-The first record in the file is the domain controller's Lightweight Directory Access Protocol (LDAP) SRV record. This record should appear similar to the following:
+The first record in the file is the domain controller's Lightweight Directory Access Protocol (LDAP) SRV record. This record should appear similar to the following one:
 
-_ldap._tcp. **Domain_Name**
+`_ldap._tcp. <Domain_Name>`
 
-## Method 3: Use Nslookup
+## Method 3: Use `Nslookup`
 
-Nslookup is a command-line tool that displays information you can use to diagnose Domain Name System (DNS) infrastructure.
+`Nslookup` is a command-line tool that displays information you can use to diagnose Domain Name System (DNS) infrastructure.
 
-To use Nslookup to verify the SRV records, follow these steps:
+To use `Nslookup` to verify the SRV records, follow these steps:
 
-1. On your DNS, click **Start**, and then click **Run**.
+1. On your DNS, select **Start** > **Run**.
 2. In the **Open** box, type `cmd`.
 3. Type `nslookup`, and then press ENTER.
 4. Type `set type=all`, and then press ENTER.
-5. Type `_ldap._tcp.dc._msdcs. Domain_Name`, where **Domain_Name** is the name of your domain, and then press ENTER.
+5. Type `_ldap._tcp.dc._msdcs.Domain_Name`, where \<Domain_Name> is the name of your domain, and then press ENTER.
 
-Nslookup returns one or more SRV service location records that appear in the following format, where **Server_Name** is the host name of a domain controller, and where **Domain_Name** is the domain where the domain controller belongs to, and **Server_IP_Address** is the domain controller's Internet Protocol (IP) address:
+`Nslookup` returns one or more SRV service location records that appear in the following format, where \<Server_Name> is the host name of a domain controller, and where \<Domain_Name> is the domain where the domain controller belongs to, and \<Server_IP_Address> is the domain controller's Internet Protocol (IP) address:
 
 ```console
 Server: localhost
 Address: 127.0.0.1
-_ldap._tcp.dc._msdcs. Domain_Name
+_ldap._tcp.dc._msdcs.Domain_Name
 SRV service location:
 priority= 0
 weight= 100

@@ -2,22 +2,22 @@
 title: Orphaned child domain controller isn't replicated
 description: Describes an issue in which an orphaned child domain controller can't replicate information to other domain controllers in a domain, and provides a resolution.
 ms.date: 09/21/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, johnbay
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Orphaned child domain controller information is not replicated to other domain controllers
 
 This article provides a solution to an issue where an orphaned child domain controller can't be replicated to other domain controllers.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016  
 _Original KB number:_ &nbsp; 887430
 
 ## Symptoms

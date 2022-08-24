@@ -1,28 +1,28 @@
 ---
-title: A newly promoted Windows 2008 domain controller may fail to advertise after completion of DCpromo
-description: Describes an issue where a newly promoted Windows 2008 domain controller fails to advertise after completion of DCpromo.
+title: A newly promoted domain controller may fail to advertise after completion of DCpromo
+description: Describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 ms.date: 09/07/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DCPromo and the installation of domain controllers
+ms.custom: sap:dcpromo-and-the-installation-of-domain-controllers, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
-# A newly promoted Windows 2008 domain controller may fail to advertise after completion of DCpromo
+# A newly promoted domain controller may fail to advertise after completion of DCpromo
 
-This article describes an issue where a newly promoted Windows 2008 domain controller fails to advertise after completion of DCpromo.
+This article describes an issue where a newly promoted domain controller fails to advertise after completion of DCpromo.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;967336
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 967336
 
 ## Symptoms
 
-A newly promoted Windows 2008 domain controller may fail to advertise after completion of DCpromo and reboot. This issue is specific to domain controllers participating in domains at Windows 2008 functional level where Sysvol is replicated by Distributed Files System Replication (DFSR).
+A newly promoted domain controller may fail to advertise after completion of DCpromo and reboot. This issue is specific to domain controllers participating in domains at functional level where Sysvol is replicated by Distributed Files System Replication (DFSR).
 
 ## Cause
 
@@ -42,7 +42,7 @@ To resolve this problem, choose one of the following options:
 
 ## More information
 
-DFSR is a Multi master replication engine used to replicate files and folders for Distributed files system (DFS) structures and optionally the Domain System Volume in Windows 2008 functional level domains. Windows 2008 domain controllers using DFSR for sysvol will initially synchronize their Sysvol content after the DCpromo wizard has synchronized Active Directory and the computer is rebooted.
+DFSR is a Multi master replication engine used to replicate files and folders for Distributed files system (DFS) structures and optionally the Domain System Volume in functional level domains. Domain controllers using DFSR for sysvol will initially synchronize their Sysvol content after the DCpromo wizard has synchronized Active Directory and the computer is rebooted.
 
 A replica domain controller will attempt to source its sysvol content from the same server that it used to source it domain-naming context from during the Active Directory promotion by reading the "Parent Computer" registry key under: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DFSR\Parameters\SysVols\Seeding SysVols\domain.com`
 
@@ -62,7 +62,7 @@ Errors reported in the DFSR event log:
 > Description:
 >
 > The DFS Replication service failed to contact domain controller to access configuration information. Replication is stopped. The service will try again during the next configuration polling cycle, which will occur in 60 minutes. This event can be caused by TCP/IP connectivity, firewall, Active Directory Domain Services, or DNS issues.
->
+
 > Source: DFSR
 >
 > Event ID: 4612
@@ -71,8 +71,8 @@ Errors reported in the DFSR event log:
 >
 > Description:
 >
-> The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner `WIN-C0T0SC8MCEF.contoso.com`. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the sync partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
->
+> The DFS Replication service initialized SYSVOL at local path C:\\Windows\\SYSVOL\\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner `WIN-C0T0SC8MCEF.contoso.com`. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the sync partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
+
 > Source: DFSR
 >
 > Event ID: 4612
@@ -81,8 +81,8 @@ Errors reported in the DFSR event log:
 >
 > Description:
 >
-> The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner DC1.contoso.com. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the sync partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
->
+> The DFS Replication service initialized SYSVOL at local path C:\\Windows\\SYSVOL\\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner DC1.contoso.com. If the server was in the process of being promoted to a domain controller, the domain controller will not advertise and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the sync partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
+
 > Source: DFSR
 >
 > Event ID: 5008
@@ -96,7 +96,7 @@ Errors reported in the DFSR event log:
 > Additional Information:
 >
 > Error: 1722 (The RPC server is unavailable.)
->
+
 > Source: DFSR
 >
 > Event ID: 4614
@@ -105,29 +105,29 @@ Errors reported in the DFSR event log:
 >
 > Description:
 >
-> The DFS Replication service initialized SYSVOL at local path C:\Windows\SYSVOL\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner DC1.contoso.com. If the server was in the process of being promoted to a domain controller, the domain controller will not advertize and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
-
-Additional Information:
-
-Replicated Folder Name: SYSVOL Share
-
-Errors reported in the DFSR debug logs:  
-
+> The DFS Replication service initialized SYSVOL at local path C:\\Windows\\SYSVOL\\domain and is waiting to perform initial replication. The replicated folder will remain in the initial synchronization state until it has replicated with its partner DC1.contoso.com. If the server was in the process of being promoted to a domain controller, the domain controller will not advertize and function as a domain controller until this issue is resolved. This can occur if the specified partner is also in the initial synchronization state, or if sharing violations are encountered on this server or the synchronization partner. If this event occurred during the migration of SYSVOL from File Replication service (FRS) to DFS Replication, changes will not replicate out until this issue is resolved. This can cause the SYSVOL folder on this server to become out of sync with other domain controllers.
+>
+> Additional Information:
+>
+> Replicated Folder Name: SYSVOL Share
+>
+> Errors reported in the DFSR debug logs:  
+>
 > ERROR: DownstreamTransport: SetupBinding Failed
 >
 > Error: The RPC server is unavailable.
 
 References:  
 
-[Distributed File System Replication FAQ](https://technet.microsoft.com/library/cc773238.aspx)
+[Distributed File System Replication FAQ](/previous-versions/windows/it-pro/windows-server-2003/cc773238(v=ws.10))
 
-Additional information on DFSR debug Logging
+[Additional information on DFSR debug Logging](/troubleshoot/windows-server/networking/change-dfsr-debug-log-settings)
 
-[DCpromo](https://technet.microsoft.com/library/cc732887.aspx) aspx
+[DCpromo](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc732887(v=ws.11))
 
-[322756](https://support.microsoft.com/help/322756) How to back up and restore the registry in Windows XP and Windows Vista
+[How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692)
 
-[DNS Server Operations Guide](https://technet.microsoft.com/library/cc816603.aspx)
+[DNS Server Operations Guide](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc816603(v=ws.10))
 
 ## Disclaimer
 

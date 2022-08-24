@@ -1,31 +1,30 @@
 ---
-title: Troubleshoot use of SCEP certificate profiles to provision certificates with Microsoft Intune | Microsoft Docs
-description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to NDES, NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
-ms.date: 01/30/2020
+title: Troubleshoot use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles to provision certificates with Microsoft Intune
+description: Troubleshoot the use of SCEP by devices to request certificates for use with Intune, including communication from devices to Network Device Enrollment Service (NDES), NDES to certification authorities, and from the Intune Certificate Connector to the Intune service.  
+ms.date: 09/09/2021
 ms.reviewer: lacranda
+search.appverid: MET150
 ---
-# Overview for troubleshooting SCEP certificate profiles with Microsoft Intune
+# Troubleshooting SCEP certificate profiles with Intune
 
-Use of Simple Certificate Enrollment Protocol (SCEP) certificate profiles can be challenging to troubleshoot in Intune. This article is an overview that can help you resolve issues by:
+This articles gives guidance to help you troubleshoot and resolve issues with Simple Certificate Enrollment Protocol (SCEP) certificate profiles in Microsoft Intune. The following sections cover these concepts:
 
-- Explaining the architecture and the communication flow of the SCEP process
-- Helping you to narrow down where a problem exists in that communication flow
+- The architecture and the communication flow of the SCEP process
+- Narrowing down where a problem exists in that communication flow
 - Identifying the key log files that are referenced in subsequent articles for troubleshooting certificate profiles
 
-The information in this and the related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS is not available at this time.
-
-To troubleshoot Network Device Enrollment Service (NDES), see the following articles:
+The information in this article and related SCEP certificate troubleshooting articles applies to using SCEP certificate profiles with Android, iOS/iPad, and Windows devices. Similar information for macOS isn't available at this time. To troubleshoot Network Device Enrollment Service (NDES), see the following articles:
 
 - [Verify NDES configuration on-premises for SCEP certificates in Intune](verify-ndes-configuration.md)
 - [Configure infrastructure to support SCEP with Intune](/mem/intune/protect/certificates-scep-configure)
 
-Before proceeding, ensure you've meet the [prerequisites for using SCEP certificate profiles](/mem/intune/protect/certificates-scep-configure#prerequisites-for-using-scep-for-certificates), including the deployment of a root certificate through a trusted certificate profile.
+Before proceeding, ensure you've met the [prerequisites for using SCEP certificate profiles](/mem/intune/protect/certificates-scep-configure#prerequisites-for-using-scep-for-certificates), including the deployment of a root certificate through a trusted certificate profile.
 
 ## SCEP communication flow overview
 
-The following graphic demonstrates a basic overview of the SCEP communication process in Intune.
+The following image demonstrates a basic overview of the SCEP communication process in Intune. Each step includes a link to an article with more prescriptive guidance.
 
-![SCEP certificate profile flow](./media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-profiles/scep-certificate-profile-flow.png" alt-text="Screenshot shows the SCEP certificate profile flow.":::
 
 1. [Deploy a SCEP certificate profile](troubleshoot-scep-certificate-profile-deployment.md). Intune generates a challenge string, which requires a specific user, certificate purpose, and certificate type.
 
@@ -43,7 +42,7 @@ The following graphic demonstrates a basic overview of the SCEP communication pr
 
 To identify problems for the communication and certificate provisioning workflow, review log files from both the Server infrastructure, and from devices. Later sections for troubleshooting SCEP certificate profiles refer to log files referenced in this section.
 
-- [Infrastructure and Server logs](#logs-for-on-premises-infrastructure)
+- [Infrastructure and server logs](#logs-for-on-premises-infrastructure)
 
 Device logs depend on the device platform:  
 
@@ -63,7 +62,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
   This log shows communication from the Microsoft Intune Certificate Connector to the Intune cloud service. You can use the [Service Trace Viewer Tool](/dotnet/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe) to view this log file.
 
-  Related registry key: *HKLM\SW\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
+  Related registry key: *HKLM\Software\Microsoft\MicrosoftIntune\NDESConnector\ConnectionStatus*
 
   Location: On the server that hosts NDES at *%program_files%\Microsoft intune\ndesconnectorsvc\logs\logs*
 
@@ -93,7 +92,7 @@ The following list includes logs or consoles that are referenced in the subseque
 
 ### Logs for Android devices
 
-For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, enable ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
+For devices that run Android, use the **Android Company Portal** app log file, **OMADM.log**. Before you collect and review logs, ensure [Verbose Logging](/mem/intune/user-help/use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android) is enabled, and then reproduce the issue.
 
 To collect the OMADM.logs from a device, see [Upload and email logs using a USB cable](/mem/intune/user-help/send-logs-to-your-it-admin-using-cable-android).
 
@@ -107,10 +106,10 @@ For devices that run iOS/iPadOS, you use debug logs and **Xcode** that runs on a
 
 2. Under **Action**, select **Include Info Messages** and **Include Debug Messages**.
 
-   ![Select log options](./media/troubleshoot-scep-certificate-profiles/message-options.png)
+    :::image type="content" source="media/troubleshoot-scep-certificate-profiles/message-options.png" alt-text="Screenshot shows the Include Info Messages and Include Debug Messages options are selected.":::
 
 3. Reproduce the problem, and then save the logs to a text file:
-   1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard. 
+   1. Select **Edit** > **Select All** to select all the messages on the current screen, and then select **Edit** > **Copy** to copy the messages to the clipboard.
    2. Open the TextEdit application, paste the copied logs into a new text file, and then save the file.
 
 The Company Portal log for iOS and iPadOS devices doesn't contain information about SCEP certificate profiles.
@@ -119,10 +118,10 @@ The Company Portal log for iOS and iPadOS devices doesn't contain information ab
 
 For devices that run Windows, use the Windows Event logs to diagnose enrollment or device management issues for devices that you manage with Intune.
 
-On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**
+On the device, open **Event Viewer** > **Applications and Services Logs** > **Microsoft** > **Windows** > **DeviceManagement-Enterprise-Diagnostics-Provider**.
 
-![Windows event logs](./media/troubleshoot-scep-certificate-profiles/windows-event-log.png)
+:::image type="content" source="media/troubleshoot-scep-certificate-profiles/windows-event-log.png" alt-text="Screenshot of the Windows event logs in Event Viewer.":::
 
 ## Next steps
 
-Review [deployment of SCEP certificate profiles](troubleshoot-scep-certificate-profile-deployment.md)
+[Troubleshoot deployment of a SCEP certificate profile to devices in Microsoft Intune](troubleshoot-scep-certificate-profile-deployment.md)

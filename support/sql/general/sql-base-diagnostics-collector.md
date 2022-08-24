@@ -2,7 +2,7 @@
 title: SQL Base Diagnostics Collector
 description: This article describes the information that may be collected from a computer when the SQL Base Diagnostics Collector tool is running.
 ms.date: 11/11/2020
-ms.prod-support-area-path: General
+ms.custom: sap:General
 ms.reviewer: ramakoni, dansha
 ms.prod: sql
 ---
@@ -31,16 +31,16 @@ The SQL Server Base Diagnostics Collector must be run by a user who has administ
 
 The SQL Base Diagnostics Collector discovers all instances of SQL Server that are installed on the computer where the diagnostics tool is run. As part of the data collection process, the SQL Base Diagnostics Collector will try to connect to each instance of SQL Server that the diagnostic tool discovers to collect information about the current SQL Server configuration and server "state." Database connections are made by using Windows authentication. The user who is executing the SQL Base Diagnostics Collector must have a Windows logon that is a member in the sysadmin fixed server role for the following diagnostic collection tasks to succeed:
 
-- SQL Server AlwaysOn Configuration Collection
+- SQL Server Always On Configuration Collection
 - SQLDIAG Data Collection Scripts
 
 ## Support for Windows failover clusters
 
 The SQL Base Diagnostics Collector is cluster-aware and will collect cluster-specific information when the diagnostic tool is run against a Windows Server Failover Cluster.
 
-To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server cluster resource failovers, you may have to run the SQL Base Diagnostic collector against more than one cluster node to collect all the necessary troubleshooting information:
+To diagnose SQL Server Always On Availability Group failovers, or SQL Server cluster resource failovers, you may have to run the SQL Base Diagnostic collector against more than one cluster node to collect all the necessary troubleshooting information:
 
-- Run the SQL Base Diagnostic Collector against the cluster node that currently owns the SQL Server AlwaysOn Availability Group or SQL Server cluster resource that experienced the failover. This is necessary as the information that is collected for SQL Server and SQL Server AlwaysOn resides on the cluster disk resource, and is failed over with the AlwaysOn Availability Group or SQL Server cluster resource to the new owning node.
+- Run the SQL Base Diagnostic Collector against the cluster node that currently owns the SQL Server Always On Availability Group or SQL Server cluster resource that experienced the failover. This is necessary as the information that is collected for SQL Server and SQL Server Always On resides on the cluster disk resource, and is failed over with the Always On Availability Group or SQL Server cluster resource to the new owning node.
 
 - Run the SQL Base Diagnostic Collector against the node where the failure occurred. This enables the collection of the cluster log from the cluster node where the failure occurred.
 
@@ -53,8 +53,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
     |Description|File name|
     |---|---|
-    |System event log in TXT, CSV, and EVT or EVTX formats| *<COMPUTER_NAME>_ evt_System.csv*<br/> *<COMPUTER_NAME>_ evt_System.txt*<br/> *<COMPUTER_NAME>_ evt_System.(evt or evtx)*|
-    |||
+    |System event log in TXT, CSV, and EVT or EVTX formats| _<COMPUTER_NAME>_ evt_System.csv_<br/> _<COMPUTER_NAME>_ evt_System.txt_<br/> _<COMPUTER_NAME>_ evt_System.(evt or evtx)_|
 
 - Application event log  
 
@@ -63,231 +62,210 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
     |Description|File name|
     |---|---|
-    |Application event log in TXT, CSV, and EVT or EVTX formats| *<COMPUTER_NAME>_ evt_Application.csv* <br/> *<COMPUTER_NAME>_ evt_Application.txt* <br/> *<COMPUTER_NAME>_ evt_Application.(evt or evtx)* |
-    |||
+    |Application event log in TXT, CSV, and EVT or EVTX formats| _<COMPUTER_NAME>_ evt_Application.csv_ <br/> _<COMPUTER_NAME>_ evt_Application.txt_ <br/> _<COMPUTER_NAME>_ evt_Application.(evt or evtx)_ |
 
 - Registry information that is related to Session Manager and to debugging
 
     |Description|File name|
     |---|---|
-    |Collect Registry Key - HKLM\Software\Microsoft\Windows NT\CurrentVersion\AEDebug| *<COMPUTER_NAME>_Recovery_Registry.txt*|
-    |Collect Registry Key - HKLM\Software\Microsoft\DrWatson| *<COMPUTER_NAME>_Recovery_Registry.txt* |
-    |Collect Registry Key - HKLM\System\CurrentControlSet\Services\i8042prt\Parameters| *<COMPUTER_NAME>_Recovery_Registry.txt* |
-    |Collect Registry Key - HKLM\System\CurrentControlSet\Control| *<COMPUTER_NAME>_Recovery_Registry.txt* |
-    |Collect Registry Key - HKLM\System\CurrentControlSet\Control\Session Manager| *<COMPUTER_NAME>_Recovery_Registry.txt*|
-    |||
+    |Collect Registry Key - HKLM\Software\Microsoft\Windows NT\CurrentVersion\AEDebug| _<COMPUTER_NAME>_Recovery_Registry.txt_|
+    |Collect Registry Key - HKLM\Software\Microsoft\DrWatson| _<COMPUTER_NAME>_Recovery_Registry.txt_ |
+    |Collect Registry Key - HKLM\System\CurrentControlSet\Services\i8042prt\Parameters| _<COMPUTER_NAME>_Recovery_Registry.txt_ |
+    |Collect Registry Key - HKLM\System\CurrentControlSet\Control| _<COMPUTER_NAME>_Recovery_Registry.txt_ |
+    |Collect Registry Key - HKLM\System\CurrentControlSet\Control\Session Manager| _<COMPUTER_NAME>_Recovery_Registry.txt_|
 
 - Existing Dr. Watson log files and Windows error reporting memory dumps for the SQL Server process
 
     |Description|File Name|
     |---|---|
-    |Report that contains information about memory dumps and about computer settings that are related to memory dumps in htm and txt formats| *<COMPUTER_NAME>_DumpReport.htm* <br/> *<COMPUTER_NAME>_DumpReport.txt* |
-    |Windows error reporting memory dump files for SQL Server process that are at most 30 days old and less than or equal to 25 MB| *<COMPUTER_NAME>* _DMP_(Date).zip<br/><br/>|
-    |||
+    |Report that contains information about memory dumps and about computer settings that are related to memory dumps in htm and txt formats| _<COMPUTER_NAME>_DumpReport.htm_ <br/> _<COMPUTER_NAME>_DumpReport.txt_ |
+    |Windows error reporting memory dump files for SQL Server process that are at most 30 days old and less than or equal to 25 MB| _<COMPUTER_NAME>_ _DMP_(Date).zip<br/><br/>|
 
 - Information about all services that are installed on the destination computer
 
     |Description|File Name|
     |---|---|
-    |Collect information about services that are installed on the target computer| *<COMPUTER_NAME>_SC_Services_Output.txt* |
-    |||
+    |Collect information about services that are installed on the target computer| _<COMPUTER_NAME>_SC_Services_Output.txt_ |
 
 - Information about filter drivers that are installed on the destination computer
 
     |Description|File Name|
     |---|---|
-    |Upper and lower filter drivers enumerated by the fltrfind.exe utility| *<COMPUTER_NAME>* _FltrFind.txt|
-    |||
+    |Upper and lower filter drivers enumerated by the fltrfind.exe utility| _<COMPUTER_NAME>_ _FltrFind.txt|
 
 - Report of mini-filter drivers
 
     |Description|File Name|
     |---|---|
-    |Enumerate mini-filter drivers by using Fltmc.exe| *<COMPUTER_NAME>_Fltmc.TXT*|
-    |||
+    |Enumerate mini-filter drivers by using Fltmc.exe| _<COMPUTER_NAME>_Fltmc.TXT_|
 
 - Information about all the running processes and driver details together with their file versions
 
     |Description|File Name|
     |---|---|
-    |%programfiles%\*.sys| *<COMPUTER_NAME>_sym_ProgramFiles_SYS.CSV* |
-    |%programfiles%\*.sys| *<COMPUTER_NAME>_sym_ProgramFiles_SYS.TXT* |
-    |Running Drivers| *<COMPUTER_NAME>_sym_RunningDrivers.CSV* |
-    |Running Drivers| *<COMPUTER_NAME>_sym_RunningDrivers.TXT* |
-    |%windir%\system32\drivers\*.*| *<COMPUTER_NAME>_sym_Drivers.CSV*|
-    |%windir%\system32\drivers\*.*| *<COMPUTER_NAME>_sym_Drivers.TXT* |
-    |%SystemRoot%\System32\iscsi*.*| *<COMPUTER_NAME>_sym_MS_iSCSI.CSV* |
-    |%SystemRoot%\System32\iscsi*.*| *<COMPUTER_NAME>* _sym_MS_iSCSI.TXT* |
-    |Running Processes| *<COMPUTER_NAME>_sym_Process.CSV* |
-    |Running Processes| *<COMPUTER_NAME>_sym_Process.TXT* |
-    |%SystemRoot%\System32\*.DLL| *<COMPUTER_NAME>_sym_System32_DLL.CSV* |
+    |%programfiles%\*.sys| _<COMPUTER_NAME>_sym_ProgramFiles_SYS.CSV_ |
+    |%programfiles%\*.sys| _<COMPUTER_NAME>_sym_ProgramFiles_SYS.TXT_ |
+    |Running Drivers| _<COMPUTER_NAME>_sym_RunningDrivers.CSV_ |
+    |Running Drivers| _<COMPUTER_NAME>_sym_RunningDrivers.TXT_ |
+    |%windir%\system32\drivers\*.*| _<COMPUTER_NAME>_sym_Drivers.CSV_|
+    |%windir%\system32\drivers\*.*| _<COMPUTER_NAME>_sym_Drivers.TXT_ |
+    |%SystemRoot%\System32\iscsi*.*| _<COMPUTER_NAME>_sym_MS_iSCSI.CSV_ |
+    |%SystemRoot%\System32\iscsi*.*| _<COMPUTER_NAME>_ _sym_MS_iSCSI.TXT* |
+    |Running Processes| _<COMPUTER_NAME>_sym_Process.CSV_ |
+    |Running Processes| _<COMPUTER_NAME>_sym_Process.TXT_ |
+    |%SystemRoot%\System32\*.DLL| _<COMPUTER_NAME>_sym_System32_DLL.CSV_ |
     |%SystemRoot%\System32\*.DLL| <COMPUTER_NAME>_sym_System32_DLL.TXT* |
-    |%SystemRoot%\System32\*.EXE| *<COMPUTER_NAME>_sym_System32_EXE.CSV* |
-    |%SystemRoot%\System32\*.EXE| *<COMPUTER_NAME>_sym_System32_EXE.TXT* |
-    |%SystemRoot%\System32\*.SYS| *<COMPUTER_NAME>_sym_System32_SYS.CSV* |
-    |%SystemRoot%\System32\*.SYS| *<COMPUTER_NAME>_sym_System32_SYS.TXT* |
-    |%SystemRoot%\SysWOW64\*.dll| *<COMPUTER_NAME>_sym_SysWOW64_DLL.CSV* |
-    |%SystemRoot%\SysWOW64\*.dll| *<COMPUTER_NAME>_sym_SysWOW64_DLL.TXT* |
-    |%SystemRoot%\SysWOW64\*.exe| *<COMPUTER_NAME>_sym_SysWOW64_EXE.CSV* |
-    |%SystemRoot%\SysWOW64\*.exe| *<COMPUTER_NAME>_sym_SysWOW64_EXE.TXT* |
-    |%SystemRoot%\SysWOW64\*.sys| *<COMPUTER_NAME>_sym_SysWOW64_SYS.CSV* |
-    |%SystemRoot%\SysWOW64\*.sys| *<COMPUTER_NAME>_sym_SysWOW64_SYS.TXT* |
-    |||
+    |%SystemRoot%\System32\*.EXE| _<COMPUTER_NAME>_sym_System32_EXE.CSV_ |
+    |%SystemRoot%\System32\*.EXE| _<COMPUTER_NAME>_sym_System32_EXE.TXT_ |
+    |%SystemRoot%\System32\*.SYS| _<COMPUTER_NAME>_sym_System32_SYS.CSV_ |
+    |%SystemRoot%\System32\*.SYS| _<COMPUTER_NAME>_sym_System32_SYS.TXT_ |
+    |%SystemRoot%\SysWOW64\*.dll| _<COMPUTER_NAME>_sym_SysWOW64_DLL.CSV_ |
+    |%SystemRoot%\SysWOW64\*.dll| _<COMPUTER_NAME>_sym_SysWOW64_DLL.TXT_ |
+    |%SystemRoot%\SysWOW64\*.exe| _<COMPUTER_NAME>_sym_SysWOW64_EXE.CSV_ |
+    |%SystemRoot%\SysWOW64\*.exe| _<COMPUTER_NAME>_sym_SysWOW64_EXE.TXT_ |
+    |%SystemRoot%\SysWOW64\*.sys| _<COMPUTER_NAME>_sym_SysWOW64_SYS.CSV_ |
+    |%SystemRoot%\SysWOW64\*.sys| _<COMPUTER_NAME>_sym_SysWOW64_SYS.TXT_ |
 
 - Performance-related information that is captured from the destination computer
 
     |Description|File Name|
     |---|---|
-    |One-minute basic perfmon capture of overall system performance from Windows Server 2008 and later versions| *<COMPUTER_NAME>_Performance Counter.blg* |
+    |One-minute basic perfmon capture of overall system performance from Windows Server 2008 and later versions| _<COMPUTER_NAME>_Performance Counter.blg_ |
     |One-minute basic perfmon capture of overall system performance from Windows Server 2003| *<COMPUTER_NAME>_Perfmon_(DateAndTime).blg* |
-    |System performance report that is generated from the collected perfmon log| *<COMPUTER_NAME>_report.html*|
-    |||
+    |System performance report that is generated from the collected perfmon log| _<COMPUTER_NAME>_report.html_|
 
 - Information about the networking configuration of the destination computer
 
     |Description|File Name|
     |---|---|
-    |This report outputs the number of unique local TCP ports in use (above the starting port) for each IP address and process on the target computer| *<COMPUTER_NAME>_PortUsage.txt*|
-    |SMB Basic Information| *<COMPUTER_NAME>_SMB-Info.txt*|
-    |TCP/IP Basic Information| *<COMPUTER_NAME>_TcpIp-Info.txt*|
-    |DNS Client Hosts file| *<COMPUTER_NAME>_DnsClient_HostsFile.TXT*|
-    |IPCONFIG /DISPLAYDNS command output| *<COMPUTER_NAME>_DnsClient_ipconfig-displaydns.TXT*|
-    |NETSH DNSCLIENT SHOW STATE command output<br/><br/>> [!NOTE]<br/>> This command not valid on Windows Server 2003| *<COMPUTER_NAME>_DnsClient_netsh_dnsclient-show-state.TXT*|
+    |This report outputs the number of unique local TCP ports in use (above the starting port) for each IP address and process on the target computer| _<COMPUTER_NAME>_PortUsage.txt_|
+    |SMB Basic Information| _<COMPUTER_NAME>_SMB-Info.txt_|
+    |TCP/IP Basic Information| _<COMPUTER_NAME>_TcpIp-Info.txt_|
+    |DNS Client Hosts file| _<COMPUTER_NAME>_DnsClient_HostsFile.TXT_|
+    |IPCONFIG /DISPLAYDNS command output| _<COMPUTER_NAME>_DnsClient_ipconfig-displaydns.TXT_|
+    |NETSH DNSCLIENT SHOW STATE command output<br/><br/>> [!NOTE]<br/>> This command not valid on Windows Server 2003| _<COMPUTER_NAME>_DnsClient_netsh_dnsclient-show-state.TXT_|
     |DNS Client Registry Entries| *<COMPUTER_NAME>_DnsClient_reg_.TXT*|
-    |||
 
 - List of updates that are installed on the destination computer
 
     |Description|File Name|
     |---|---|
-    |List of updates that are installed on the target computer in CSV, TXT, and HTM format| *<COMPUTER_NAME>_Hotfixes.CSV*<br/> *<COMPUTER_NAME>_Hotfixes.TXT*<br/> *<COMPUTER_NAME>_Hotfixes.HTM*|
-    |||
+    |List of updates that are installed on the target computer in CSV, TXT, and HTM format| _<COMPUTER_NAME>_Hotfixes.CSV_<br/> _<COMPUTER_NAME>_Hotfixes.TXT_<br/> _<COMPUTER_NAME>_Hotfixes.HTM_|
 
-- Information about scheduled tasks that are configured on the destination computer 
+- Information about scheduled tasks that are configured on the destination computer
 
     |Description|File Name|
     |---|---|
-    |Scheduled tasks list in CSV and TXT format| *<COMPUTER_NAME>_schtasks.csv*<br/> *<COMPUTER_NAME>_schtasks.txt*|
-    |||
+    |Scheduled tasks list in CSV and TXT format| _<COMPUTER_NAME>_schtasks.csv_<br/> _<COMPUTER_NAME>_schtasks.txt_|
 
 - Boot configuration data for the destination computer
 
     |Description|File Name|
     |---|---|
-    |Output from Bcdedit.exe<br/><br/>> [!NOTE]<br/>> Only collected from Windows 7, Windows Server 2008 R2, Windows Server 2008, and Windows Vista| *<COMPUTER_NAME>_BCDEdit.TXT*|
-    |Output from Bcdedit.exe<br/><br/>> [!NOTE]<br/>> Only collected from Windows 7, Windows Server 2008 R2, Windows Server 2008, and Windows Vista| *<COMPUTER_NAME>_BCD-Backup.BKP*|
-    |Boot.ini<br/><br/>> [!NOTE]<br/>> Only collected on Windows Server 2003| *<COMPUTER_NAME>_Boot.ini*|
-    |||
+    |Output from Bcdedit.exe<br/><br/>> [!NOTE]<br/>> Only collected from Windows 7, Windows Server 2008 R2, Windows Server 2008, and Windows Vista| _<COMPUTER_NAME>_BCDEdit.TXT_|
+    |Output from Bcdedit.exe<br/><br/>> [!NOTE]<br/>> Only collected from Windows 7, Windows Server 2008 R2, Windows Server 2008, and Windows Vista| _<COMPUTER_NAME>_BCD-Backup.BKP_|
+    |Boot.ini<br/><br/>> [!NOTE]<br/>> Only collected on Windows Server 2003| _<COMPUTER_NAME>_Boot.ini_|
 
 - Registry backup and text dump files of CurrentControlSet and SQL Server registry hives
 
     |Description|File Name|
     |---|---|
-    |HKLM\System\CurrentControlSet\SessionManagers| *<COMPUTER_NAME>* _CurrentControlSet_Reg.txt|
-    |HKLM\SYSTEM\CurrentControlSet\Control\Lsa| *<COMPUTER_NAME>* _CurrentControlSet_Reg.txt|
-    |HKLM\SYSTEM\CurrentControlSet| *<COMPUTER_NAME>* _CurrentControlSet_Reg.hiv|
+    |HKLM\System\CurrentControlSet\SessionManagers| _<COMPUTER_NAME>_ _CurrentControlSet_Reg.txt|
+    |HKLM\SYSTEM\CurrentControlSet\Control\Lsa| _<COMPUTER_NAME>_ _CurrentControlSet_Reg.txt|
+    |HKLM\SYSTEM\CurrentControlSet| _<COMPUTER_NAME>_ _CurrentControlSet_Reg.hiv|
     |HKLM\SOFTWARE\Microsoft\Microsoft SQL Server|<COMPUTER_NAME>_REG_SQL.TXT|
-    |HKLM\SOFTWARE\Microsoft\MSSQLServer| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Server 2005 Redist| *<COMPUTER_NAME>_REG_SQL.TXT*|
+    |HKLM\SOFTWARE\Microsoft\MSSQLServer| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Server 2005 Redist| _<COMPUTER_NAME>_REG_SQL.TXT_|
     |HKLM\Software\Microsoft\MSFTESQLInstMap| <COMPUTER_NAME>_REG_SQL.TXT|
-    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Native Client| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\OLAP Server| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\SNAC| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\SQLXML4| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\Software\Microsoft\Vsa| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\ODBC|*<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\MSDTS| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\MSXML 6.0 Parser and SDK|*<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\MSXML60| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKCU\Software\Microsoft\Microsoft SQL Server| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Server| *<COMPUTER_NAME>_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\MSSQLServer| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
+    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Native Client| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\OLAP Server| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\SNAC| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\SQLXML4| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\Software\Microsoft\Vsa| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\ODBC|_<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\MSDTS| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\MSXML 6.0 Parser and SDK|_<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\MSXML60| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKCU\Software\Microsoft\Microsoft SQL Server| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Microsoft\Microsoft SQL Server| _<COMPUTER_NAME>_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\MSSQLServer| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
     |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server 2005 Redist| <COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Native Client| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Native Client 10.0| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\SNAC| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\SQLXML4| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\Software\Wow6432Node\Microsoft\Vsa| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\ODBC| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |HKLM\SOFTWARE\Wow6432Node\Microsoft\MSDTS| *<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT*|
-    |Backup of HKLM\SOFTWARE\Microsoft\Microsoft SQL Server key in HIV format| *<COMPUTER_NAME>_Microsoft_SQL_Server.HIV*|
-    |||
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Native Client| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Native Client 10.0| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\SNAC| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\SQLXML4| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\Software\Wow6432Node\Microsoft\Vsa| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\ODBC| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |HKLM\SOFTWARE\Wow6432Node\Microsoft\MSDTS| _<COMPUTER_NAME>_Wow6432Node_REG_SQL.TXT_|
+    |Backup of HKLM\SOFTWARE\Microsoft\Microsoft SQL Server key in HIV format| _<COMPUTER_NAME>_Microsoft_SQL_Server.HIV_|
 
 - Output of PSTAT utility
 
     |Description|File Name|
     |---|---|
-    |Output from PSTAT.EXE| *<COMPUTER_NAME>_PStat.txt*|
-    |||
+    |Output from PSTAT.EXE| _<COMPUTER_NAME>_PStat.txt_|
 
 - Windows firewall information
 
     |Description|File name|
     |---|---|
     |Windows Firewall Advanced Security event log in TXT, CSV, and EVTX formats<br/><br/>> [!NOTE]<br/>> Available only on Windows 7 and Windows Server 2008 R2| *<COMPUTER_NAME>_evt_WindowsFirewallWithAdvancedSecurity-Firewall_evt_.csv*<br/><br/> *<COMPUTER_NAME>_evt_WindowsFirewallWithAdvancedSecurity-Firewall_evt_.txt*<br/><br/> *<COMPUTER_NAME>_evt_WindowsFirewallWithAdvancedSecurity-Firewall_evt_.evtx*|
-    |Output of NETSH ADVFIREWALL SHOW command together with various options| *<COMPUTER_NAME>_Firewall_netsh_advfirewall.TXT*<br/><br/>|
-    |Output of NETSH advfirewall consec show rule name=all<br/><br/>| *<COMPUTER_NAME>_Firewall_netsh_advfirewall-consec-rules.TXT*|
-    |Output of netsh advfirewall export| *<COMPUTER_NAME>_Firewall_netsh_advfirewall-export.wfw*|
-    |Output of netsh advfirewall firewall show rule name=all<br/><br/>| *<COMPUTER_NAME>_Firewall_netsh_advfw-firewall-rules.TXT*|
+    |Output of NETSH ADVFIREWALL SHOW command together with various options| _<COMPUTER_NAME>_Firewall_netsh_advfirewall.TXT_<br/><br/>|
+    |Output of NETSH advfirewall consec show rule name=all<br/><br/>| _<COMPUTER_NAME>_Firewall_netsh_advfirewall-consec-rules.TXT_|
+    |Output of netsh advfirewall export| _<COMPUTER_NAME>_Firewall_netsh_advfirewall-export.wfw_|
+    |Output of netsh advfirewall firewall show rule name=all<br/><br/>| _<COMPUTER_NAME>_Firewall_netsh_advfw-firewall-rules.TXT_|
     |HKLM\SOFTWARE\Policies\Microsoft\WindowsFirewall| *<COMPUTER_NAME>_Firewall_reg_.TXT*|
     |HKLM\SYSTEM\CurrentControlSet\Services\BFE| *<COMPUTER_NAME>_Firewall_reg_.TXT*|
     |HKLM\SYSTEM\CurrentControlSet\Services\IKEEXT| *<COMPUTER_NAME>_Firewall_reg_.TXT*|
     |HKLM\SYSTEM\CurrentControlSet\Services\MpsSvc| *<COMPUTER_NAME>_Firewall_reg_.TXT*|
     |HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess"| *<COMPUTER_NAME>_Firewall_reg_.TXT*|
-    |||
 
 - Basic Information that is collected when the SQL Base Diagnostics Collector is run on a Windows failover cluster
 
     |Description|File name|
     |---|---|
-    |Cluster logs that are generated by Get-ClusterLog Windows PowerShell cmdlet| *<COMPUTER_NAME>_cluster.log*|
-    |Cluster Properties| *<COMPUTER_NAME>_ClusterProperties.txt*|
-    |Cluster Dependency Report| *<COMPUTER_NAME>_ag_DependencyReport.mht*|
-    |Names and versions of clustering binaries| *<COMPUTER_NAME>_sym_Cluster.CSV*|
-    |Names and versions of clustering binaries| *<COMPUTER_NAME>_sym_Cluster.TXT*|
-    |Failover Cluster Manager Administrative event log in TXT, CSV, and EVTX formats<br/><br/><br/><br/>> [!NOTE]<br/>> Available only on Windows Server 2008 R2 failover cluster nodes| *<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.csv*<br/><br/> *<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.txt*<br/><br/> *<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.evtx*|
-    |Failover Cluster Operational Eventlog in TXT, CSV, and EVTX formats<br/><br/>> [!NOTE]<br/>> Available only on Windows Server 2008 R2 failover cluster nodes| *<COMPUTER_NAME>_evt_FailoverClustering-Operational.csv*<br/><br/> *<COMPUTER_NAME>_evt_FailoverClustering-Operational.txt*<br/><br/> *<COMPUTER_NAME>_evt_FailoverClustering-Operational.evtx*<br/><br/>|
-    |||
+    |Cluster logs that are generated by Get-ClusterLog Windows PowerShell cmdlet| _<COMPUTER_NAME>_cluster.log_|
+    |Cluster Properties| _<COMPUTER_NAME>_ClusterProperties.txt_|
+    |Cluster Dependency Report| _<COMPUTER_NAME>_ag_DependencyReport.mht_|
+    |Names and versions of clustering binaries| _<COMPUTER_NAME>_sym_Cluster.CSV_|
+    |Names and versions of clustering binaries| _<COMPUTER_NAME>_sym_Cluster.TXT_|
+    |Failover Cluster Manager Administrative event log in TXT, CSV, and EVTX formats<br/><br/><br/><br/>> [!NOTE]<br/>> Available only on Windows Server 2008 R2 failover cluster nodes| _<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.csv_<br/><br/> _<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.txt_<br/><br/> _<COMPUTER_NAME>_evt_FailoverClusteringManager-Admin.evtx_|
+    |Failover Cluster Operational Eventlog in TXT, CSV, and EVTX formats<br/><br/>> [!NOTE]<br/>> Available only on Windows Server 2008 R2 failover cluster nodes| _<COMPUTER_NAME>_evt_FailoverClustering-Operational.csv_<br/><br/> _<COMPUTER_NAME>_evt_FailoverClustering-Operational.txt_<br/><br/> _<COMPUTER_NAME>_evt_FailoverClustering-Operational.evtx_<br/><br/>|
 
 - Windows cluster registry keys
 
     |Description|File name|
     |---|---|
-    |HKLM\System\CurrentControlSet\services\CluDisk| *<COMPUTER_NAME>_reg_ClusDisk.txt*|
-    |HKLM\System\CurrentControlSet\services\ClusSvc| *<COMPUTER_NAME>_reg_ClusSvc.txt*|
-    |HKLM\Cluster| *<COMPUTER_NAME>_reg_Cluster.hiv*|
-    |||
+    |HKLM\System\CurrentControlSet\services\CluDisk| _<COMPUTER_NAME>_reg_ClusDisk.txt_|
+    |HKLM\System\CurrentControlSet\services\ClusSvc| _<COMPUTER_NAME>_reg_ClusSvc.txt_|
+    |HKLM\Cluster| _<COMPUTER_NAME>_reg_Cluster.hiv_|
 
 - Information about user rights assignments on the destination computer
 
     |Description|File name|
     |---|---|
-    |Local User Rights Assignments| *<COMPUTER_NAME>_UserRights.txt*|
-    |||
+    |Local User Rights Assignments| _<COMPUTER_NAME>_UserRights.txt_|
 
 - Information about the domain the destination computer is joined to
 
     |Description|File name|
     |---|---|
-    |Information about the domain the target computer is joined to| *<COMPUTER_NAME>_DSMisc.txt*|
-    |||
+    |Information about the domain the target computer is joined to| _<COMPUTER_NAME>_DSMisc.txt_|
 
 - Information about the operating system and whether the destination computer is a VM
 
     |Description|File name|
     |---|---|
-    |Reports virtualization status of target VM| *<COMPUTER_NAME>_Virtualization.htm*|
-    |Reports virtualization status of target VM| *<COMPUTER_NAME>_Virtualization.TXT*|
-    |||
+    |Reports virtualization status of target VM| _<COMPUTER_NAME>_Virtualization.htm_|
+    |Reports virtualization status of target VM| _<COMPUTER_NAME>_Virtualization.TXT_|
 
 - Information about Active Directory Group Policies that are applied to the destination computer
 
     |Description|File name|
     |---|---|
-    |Information about group policies that are applied to the target computer| *<COMPUTER_NAME>_GPResult.txt*|
-    |Information about group policies that are applied to the target computer| *<COMPUTER_NAME>_GPResult.htm*|
-    |||
+    |Information about group policies that are applied to the target computer| _<COMPUTER_NAME>_GPResult.txt_|
+    |Information about group policies that are applied to the target computer| _<COMPUTER_NAME>_GPResult.htm_|
 
 - Autorun information
 
@@ -296,23 +274,20 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
     |Description|File name|
     |---|---|
-    |Autorun information in .htm format| *<COMPUTER_NAME>_Autoruns.htm*|
-    |Autorun information in .xml format| *<COMPUTER_NAME>_Autoruns.XML*|
-    |||
+    |Autorun information in .htm format| _<COMPUTER_NAME>_Autoruns.htm_|
+    |Autorun information in .xml format| _<COMPUTER_NAME>_Autoruns.XML_|
 
 - Kerberos tickets and TGT
 
     |Description|File name|
     |---|---|
-    |Kerberos tickets and TGT| *<COMPUTER_NAME>_ Kerberos_klist.txt*|
-    |||
+    |Kerberos tickets and TGT| _<COMPUTER_NAME>_ Kerberos_klist.txt_|
 
 - Information about the Windows Volume Shadow Copy Service configuration on the destination computer
 
     |Description|File name|
     |---|---|
-    |Windows Volume Shadow Copy Service information| *<COMPUTER_NAME>_VSSAdmin.TXT*|
-    |||
+    |Windows Volume Shadow Copy Service information| _<COMPUTER_NAME>_VSSAdmin.TXT_|
 
 - SQL Server error logs
 
@@ -323,8 +298,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |Collects SQL Server error logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ERRORLOG[.n]*<br/><br/> Default instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_ERRORLOG[.n]*|
-  |||
+  |Collects SQL Server error logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ERRORLOG[.n]_<br/><br/> Default instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_ERRORLOG[.n]_|
 
   > [!NOTE]
   > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server error logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -339,7 +313,6 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
   |Description|File name|
   |---|---|
   |Collects SQL Server Agent logs for all instances that are installed on the computer on which the diagnostic tool is executed.| Named instance: <br/> `<COMPUTER_NAME>_<INSTANCE_NAME>_1033_SQLAGENT.[OUT|n]` <br/> Default instance: <br/> `<COMPUTER_NAME>_MSSQLSERVER__1033_SQLAGENT.[OUT|n]`|
-  |||
 
   > [!NOTE]
   > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server Agent logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -357,9 +330,8 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server minidump files| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_SqlMiniDumps.zip*<br/><br/> Default instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_1033_SqlMiniDumps.zip*|
-  |A dump inventory report is generated and collected for each discovered instance of SQL Server| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log*|
-  |||
+  |SQL Server minidump files| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_SqlMiniDumps.zip_<br/><br/> Default instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_SqlMiniDumps.zip_|
+  |A dump inventory report is generated and collected for each discovered instance of SQL Server| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log_|
 
   > [!NOTE]
   > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server minidump files are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -370,32 +342,29 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQLDIAG script output| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.OUT*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.OUT*|
-  |||
+  |SQLDIAG script output| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_sp_sqldiag_Shutdown.OUT_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_sp_sqldiag_Shutdown.OUT_|
 
-- SQL Server AlwaysOn configuration information
+- SQL Server Always On configuration information
 
   > [!NOTE]
-  > The SQL Server AlwaysOn configuration information is only collected from SQL Server 2012 instances.
+  > The SQL Server Always On configuration information is only collected from SQL Server 2012 instances.
 
   |Description|File name|
   |---|---|
-  |SQL Server AlwaysOn configuration information| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.OUT*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.OUT*|
-  |||
+  |SQL Server Always On configuration information| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_AlwaysOn.OUT_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_AlwaysOn.OUT_|
 
-- SQL Server AlwaysOn health logs
+- SQL Server Always On health logs
 
-  SQL Server AlwaysOn health session logs are collected from each SQL Server 2012 instance that is installed on the destination computer. The files are collected and compressed into "instance specific" zip archives.
+  SQL Server Always On health session logs are collected from each SQL Server 2012 instance that is installed on the destination computer. The files are collected and compressed into "instance specific" zip archives.
 
-  The maximum number of SQL Server AlwaysOn Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
+  The maximum number of SQL Server Always On Health logs that will be collected for each discovered instance is 20. The files are collected in descending order, based on the creation date of the file.
 
   |Description|File name|
   |---|---|
-  |SQL Server AlwaysOn health logs| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip*|
-  |||
+  |SQL Server Always On health logs| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_AlwaysOn_health_XeLogs.zip_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_AlwaysOn_health_XeLogs.zip_|
 
   > [!NOTE]
-  > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server AlwaysOn health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
+  > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server Always On health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
 
 - SQL Server failover cluster health logs
 
@@ -405,8 +374,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server failover cluster health logs| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_FailoverCluster_health_XeLogs.zip*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_FailoverCluster_health_XeLogs.zip*|
-  |||
+  |SQL Server failover cluster health logs| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_FailoverCluster_health_XeLogs.zip_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_FailoverCluster_health_XeLogs.zip_|
 
   > [!NOTE]
   > The SQL Server failover cluster health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -417,8 +385,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server default system health logs| Named instance: <br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_system_health_XeLogs.zip*<br/><br/> Default Instance: <br/> *<COMPUTER_NAME>_MSSQLSERVER_system_health_XeLogs.zip*|
-  |||
+  |SQL Server default system health logs| Named instance: <br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_system_health_XeLogs.zip_<br/><br/> Default Instance: <br/> _<COMPUTER_NAME>_MSSQLSERVER_system_health_XeLogs.zip_|
 
   > [!NOTE]
   > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server default system health logs are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -429,8 +396,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server Analysis Services configuration file| *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_msmdsrv.ini*|
-  |||
+  |SQL Server Analysis Services configuration file| _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_msmdsrv.ini_|
 
   > [!NOTE]
   > When the SQL Base Diagnostics Collector is executed against a Windows failover cluster, SQL Server Analysis Services configuration files are only collected if they are stored on a drive that is "owned" and "online" to the target cluster node.
@@ -439,10 +405,9 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\<OLAP_INSTANCE_ROOT_KEY>| *<COMPUTER_NAME>_reg_HKLM_OLAP_IntanceRoot_all.txt*<br/>|
-  |HKCR:\MSOLAP<br/>HKCR:\MSOLAP.2<br/>HKCR:\MSOLAP.3<br/>HKCR:\MSOLAP.4| *<COMPUTER_NAME>_reg_HKCR_MSOLAP_all.txt*<br/><br/>|
-  |HKLM:\System\CurrentControlSet\Services\<OLAP_Service_Name>| *<COMPUTER_NAME>_reg_HKLM_CurrentControlSet_Services_OLAP.txt*|
-  |||
+  |HKLM:\SOFTWARE\Microsoft\Microsoft SQL Server\<OLAP_INSTANCE_ROOT_KEY>| _<COMPUTER_NAME>_reg_HKLM_OLAP_IntanceRoot_all.txt_<br/>|
+  |HKCR:\MSOLAP<br/>HKCR:\MSOLAP.2<br/>HKCR:\MSOLAP.3<br/>HKCR:\MSOLAP.4| _<COMPUTER_NAME>_reg_HKCR_MSOLAP_all.txt_<br/><br/>|
+  |HKLM:\System\CurrentControlSet\Services\<OLAP_Service_Name>| _<COMPUTER_NAME>_reg_HKLM_CurrentControlSet_Services_OLAP.txt_|
 
 - SQL Server Analysis Services log file  
 
@@ -450,8 +415,7 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server Analysis Services log file| *<COMPUTER_NAME><INSTANCE_NAME>_msmdsrv.log*|
-  |||
+  |SQL Server Analysis Services log file| _<COMPUTER_NAME><INSTANCE_NAME>_msmdsrv.log_|
 
 - SQL Server Analysis Services Flight Recorder traces  
 
@@ -459,9 +423,8 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |Current SQL Server Analysis Services Flight recorder| *<COMPUTER_NAME>-<INSTANCE_NAME>_FlightRecorderCurrent.trc*|
-  |Previous SQL Server Analysis Services Flight recorder| *<COMPUTER_NAME>-<INSTANCE_NAME>_FlightRecorderBack.trc*|
-  |||
+  |Current SQL Server Analysis Services Flight recorder| _<COMPUTER_NAME>-<INSTANCE_NAME>_FlightRecorderCurrent.trc_|
+  |Previous SQL Server Analysis Services Flight recorder| _<COMPUTER_NAME>-<INSTANCE_NAME>_FlightRecorderBack.trc_|
 
 - SQL Server Analysis Services minidump files
 
@@ -476,6 +439,5 @@ To diagnose SQL Server AlwaysOn Availability Group failovers, or SQL Server clus
 
   |Description|File name|
   |---|---|
-  |SQL Server Analysis Services minidump files|Named instance:<br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ASMiniDumps*<br/>.zip<br/><br/>Default instance:<br/> *<COMPUTER_NAME>_MSSQLSERVER_1033_ASMiniDumps .zip*|
-  |A dump inventory report is generated and collected for each discovered instance of SQL Server Analysis Services|Named instance:<br/> *<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log*<br/><br/>Default Instance:<br/> *<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log*|
-  |||
+  |SQL Server Analysis Services minidump files|Named instance:<br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_1033_ASMiniDumps_<br/>.zip<br/><br/>Default instance:<br/> _<COMPUTER_NAME>_MSSQLSERVER_1033_ASMiniDumps .zip_|
+  |A dump inventory report is generated and collected for each discovered instance of SQL Server Analysis Services|Named instance:<br/> _<COMPUTER_NAME>_<INSTANCE_NAME>_DumpInventory.log_<br/><br/>Default Instance:<br/> _<COMPUTER_NAME>_MSSQLSERVER_DumpInventory.log_|

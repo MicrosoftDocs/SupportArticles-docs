@@ -2,7 +2,6 @@
 title: Error 22528 when deploying a DAC pack
 description: Fixes an issue in which you receive error 22528 when deploying a data-tier application pack in System Center 2012 Virtual Machine Manager.
 ms.date: 04/29/2020
-ms.prod-support-area-path: 
 ms.reviewer: alvinm
 ---
 # Deploying a DAC pack in System Center 2012 Virtual Machine Manager fails if using a named SQL instance
@@ -14,7 +13,7 @@ _Original KB number:_ &nbsp; 2679704
 
 ## Symptoms
 
-When deploying a SQL data-tier application (DAC) pack using System Center 2012 Virtual Machine Manager, if the name of the SQL instance in the DAC pack is blank then the service template will fail with the following error:
+When deploying a SQL data-tier application (DAC) pack using System Center 2012 Virtual Machine Manager, if the name of the SQL instance in the DAC pack is blank then the service template will fail with the following error:
 
 > Error (22528)  
 > The connection to SQL Server on the virtual machine (*VMName*) failed for the SQL Server data-tier application (*Application Name*).  
@@ -29,4 +28,4 @@ When deploying a DAC pack or creating a SQL server using a service template, the
 
 ## Resolution
 
-Edit the DAC pack to specify the correct instance name or edit the service template to match the instance name of the original VHD.
+Edit the DAC pack to specify the correct instance name or edit the service template to match the instance name of the original VHD.

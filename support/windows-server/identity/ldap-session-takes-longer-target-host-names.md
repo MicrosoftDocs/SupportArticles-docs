@@ -1,24 +1,24 @@
 ---
 title: New sessions setup for LDAP services takes longer than expected if targeting host names
 description: Discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
-ms.date: 09/21/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: wincicadsec, herbertm, kaushika
-ms.prod-support-area-path: LDAP configuration and interoperability
+ms.custom: sap:ldap-configuration-and-interoperability, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # New sessions setup for LDAP services take longer than expected if targeting host names
 
 This article discusses a problem in which a new session setup for LDAP services takes longer than expected if it targets host names.
 
-_Original product version:_ &nbsp;Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
-_Original KB number:_ &nbsp;4559609
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 10 – all editions  
+_Original KB number:_ &nbsp; 4559609
 
 ## Symptoms
 
@@ -68,13 +68,13 @@ The delays can be observed in a network trace that shows LDAP clients running Ne
 
 ### Figure A
 
-![Network trace of Windows 7 client performing ldap_connect using ldp.exe](./media/ldap-session-takes-longer-target-host-names/ws08r2-netmon.jpg)
+:::image type="content" source="media/ldap-session-takes-longer-target-host-names/ws08r2-netmon.png" alt-text="Screenshot of the Microsoft Network Monitor window with network trace including 0x1C records.":::
 
 The network trace of a Windows Server 2003 or 2008 LDAP client showed that it directly ran the DNS lookup for the host computer without performing the NetBIOS lookup for the "<0x1C>" record.
 
 ### Figure B
 
-![Network trace of Windows Server 2003 client performing an ldap_connect using ldp.exe](./media/ldap-session-takes-longer-target-host-names/ws03-netmon.jpg)
+:::image type="content" source="media/ldap-session-takes-longer-target-host-names/ws03-netmon.png" alt-text="Screenshot of the Microsoft Network Monitor window with network trace of Windows Server 2003 or 2008 LDAP client.":::
 
 In the case of DNS, you see name queries for names that end in a DC computer name, such as the following:
 
@@ -91,7 +91,7 @@ This option is set differently depending on the programming interface that is us
 
 ### Wldap32
 
-If an Active Directory DNS server name is passed for theHostNameparameter, [ldap_set_option](https://msdn.microsoft.com/library/aa366993%28v=VS.85%29.aspx) should be called to set the LDAP_OPT_AREC_EXCLUSIVE flag before calling any LDAP function that creates the actual connection.
+If an Active Directory DNS server name is passed for theHostNameparameter, [ldap_set_option](/windows/win32/api/winldap/nf-winldap-ldap_set_option) should be called to set the LDAP_OPT_AREC_EXCLUSIVE flag before calling any LDAP function that creates the actual connection.
 
 Doing this forces an A-record lookup and bypasses any SRV record lookup when the computer resolves the host name. In some scenarios, it improves network performance. For example, in a branch office that uses a dial-up connection, using A-Record lookup can avoid forcing the dialup to query a remote DNS server for SRV records when it resolves names.
 
@@ -142,14 +142,14 @@ As an additional approach, you can turn off name resolution by using broadcastin
 
 For more information, see the following articles:  
 
-[Ldap_init function](https://docs.microsoft.com/windows/win32/api/winldap/nf-winldap-ldap_init)  
+[Ldap_init function](/windows/win32/api/winldap/nf-winldap-ldap_init)  
 
-LDAP [session options](https://docs.microsoft.com/previous-versions/windows/desktop/ldap/session-options) (see LDAP_OPT_AREC_EXCLUSIVE, 0x98)  
+LDAP [session options](/previous-versions/windows/desktop/ldap/session-options) (see LDAP_OPT_AREC_EXCLUSIVE, 0x98)  
 
-ADSI function [AdsopenObject](https://docs.microsoft.com/windows/win32/api/winldap/nf-winldap-ldap_init)  
+ADSI function [AdsopenObject](/windows/win32/api/winldap/nf-winldap-ldap_init)  
 
-ADSI [AuthenticationEnum](https://docs.microsoft.com/windows/win32/api/iads/ne-iads-ads_authentication_enum) with the ADS_SERVER_BIND value  
+ADSI [AuthenticationEnum](/windows/win32/api/iads/ne-iads-ads_authentication_enum) with the ADS_SERVER_BIND value  
 
-S.DS [AuthenticationTypes](https://docs.microsoft.com/dotnet/api/system.directoryservices.authenticationtypes) Enum with the ServerBind value
+S.DS [AuthenticationTypes](/dotnet/api/system.directoryservices.authenticationtypes) Enum with the ServerBind value
 
-S.DS.P [LdapDirectoryIdentifier](https://docs.microsoft.com/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor) constructor with the fullyQualifiedDnsHostName flag
+S.DS.P [LdapDirectoryIdentifier](/dotnet/api/system.directoryservices.protocols.ldapdirectoryidentifier.-ctor) constructor with the fullyQualifiedDnsHostName flag

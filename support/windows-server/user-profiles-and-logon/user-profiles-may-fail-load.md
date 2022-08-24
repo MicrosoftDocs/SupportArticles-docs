@@ -2,22 +2,22 @@
 title: User profiles may fail to load
 description: Describes an issue in which user profiles may fail to load after you install the Windows RT 8.1, Windows 8.1, or Windows Server 2012 R2 update that is dated April 2014.
 ms.date: 10/23/2020
-author: Deland-Han 
+author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, AJAYPS
-ms.prod-support-area-path: User Logon fails
+ms.custom: sap:user-logon-fails, csstroubleshoot
 ms.technology: windows-server-user-profiles
 ---
 # User profiles may fail to load after you install the Windows 8.1, or Windows Server 2012 R2 April 2014 update
 
 This article provides a solution to an issue where user profiles may fail to load after you install the Windows RT 8.1, Windows 8.1, or Windows Server 2012 R2 update that is dated April 2014.
 
-_Original product version:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 8.1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2985344
 
 ## Symptoms

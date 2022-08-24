@@ -1,23 +1,23 @@
 ---
 title: Can't open high-resolution file in Photo Gallery
 description: Provides a solution to an issue where users can't open high-resolution file in Windows Photo Gallery.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: DPI and Display Issues
+ms.custom: sap:dpi-and-display-issues, csstroubleshoot
 ms.technology: windows-client-shell-experience
 ---
 # Unable to open high-resolution file in Windows Photo Gallery
 
 This article provides a solution to an issue where users can't open high-resolution file in Windows Photo Gallery.
 
-_Original product version:_ &nbsp; Windows Vista  
+_Applies to:_ &nbsp; Windows Vista  
 _Original KB number:_ &nbsp; 2725211
 
 ## Symptoms
@@ -57,9 +57,3 @@ Alternately, you can override Windows Photo Gallery's image size limit by editin
 
 > [!Note]
 > Entering a value of 0 will disable the image size limit. However, this is not recommended, because if Windows Photo Gallery then attempts to open a large or corrupt file, it could potentially result in a hang or crash.
-
-## More information
-
-You may also encounter problems opening high-resolution images in Microsoft Paint. For more information, please see the following article in the Microsoft Knowledge Base:
-
-[Unable to scan or open high resolution file in Paint on Windows Vista or Windows 7](https://support.microsoft.com/help/2722535)

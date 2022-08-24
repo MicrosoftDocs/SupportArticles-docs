@@ -2,8 +2,8 @@
 title: IME may crash when processing a window message sent from another thread
 description: Describes the scenario where an Input Method Editor (IME) may crash when processing a window message sent from another thread, where the window procedure handling the message calls an Imm* function, such as ImmSetOpenStatus.
 ms.date: 
-ms.prod-support-area-path: 
 ms.reviewer: koichm, davean
+ms.technology: windows-dev-apps-desktop-app-ui-dev
 ---
 # IME crashes when processing a window message sent from another thread
 
@@ -27,16 +27,16 @@ Avoid calling `Imm*` functions while the IME is processing another window messag
 
 ## More information
 
-The [`PeekMessage`](https://docs.microsoft.com/windows/win32/api/winuser/nf-winuser-peekmessagea) documentation contains the following:
+The [`PeekMessage`](/windows/win32/api/winuser/nf-winuser-peekmessagea) documentation contains the following:
 
-During this call, the system delivers pending and non-queued messages sent to windows owned by the calling thread using the [`SendMessage`](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-sendmessage), [`SendMessageCallback`](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-sendmessagecallbacka), [`SendMessageTimeout`](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-sendmessagetimeouta), or [`SendNotifyMessage`](https://docs.microsoft.com/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) function. The first queued message matching the specified filter is retrieved. The system may also process internal events. If no filter is specified, messages are processed in this order:
+During this call, the system delivers pending and non-queued messages sent to windows owned by the calling thread using the [`SendMessage`](/windows/desktop/api/winuser/nf-winuser-sendmessage), [`SendMessageCallback`](/windows/desktop/api/winuser/nf-winuser-sendmessagecallbacka), [`SendMessageTimeout`](/windows/desktop/api/winuser/nf-winuser-sendmessagetimeouta), or [`SendNotifyMessage`](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) function. The first queued message matching the specified filter is retrieved. The system may also process internal events. If no filter is specified, messages are processed in this order:
 
 - Sent messages
 - Posted messages
 - Input (hardware) messages and system internal events
 - Sent messages (again)
-- [`WM_PAINT`](https://docs.microsoft.com/windows/desktop/gdi/wm-paint) messages
-- [`WM_TIMER`](https://docs.microsoft.com/windows/desktop/winmsg/wm-timer) messages
+- [`WM_PAINT`](/windows/desktop/gdi/wm-paint) messages
+- [`WM_TIMER`](/windows/desktop/winmsg/wm-timer) messages
 
 > [!NOTE]
 > Sent window messages are non-queued messages. The message filter specified when calling PeekMessage call doesn't apply to sent messages.

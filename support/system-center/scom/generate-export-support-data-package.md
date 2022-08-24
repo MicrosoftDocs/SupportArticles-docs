@@ -2,7 +2,6 @@
 title: Generate and export a Support Data package
 description: Describes how to generate and export a Support Data package to the BlueStripe support team.
 ms.date: 08/13/2020
-ms.prod-support-area-path: 
 ---
 # How to generate and export a Support Data package to the BlueStripe support team
 
@@ -27,7 +26,7 @@ There are two ways to generate SD using the console GUI. One way generates colle
 
 4. If you have a support case already open, include the support case number in the field provided.
 
-    ![Export Support Data Package](./media/generate-export-support-data-package/export-support-data-package.png)
+    :::image type="content" source="media/generate-export-support-data-package/create-sd-for-collectors.png" alt-text="The Export Support Data Package page that you can use to generate SD for collectors." border="false":::
 
 5. Choose **Save + Send to BlueStripe** that will automatically upload the SD to the File Transfer Protocol (FTP) server.
 
@@ -37,7 +36,7 @@ There are two ways to generate SD using the console GUI. One way generates colle
 
 2. If you have a support case already open, include the support case number in the field provided.
 
-    ![A screenshot for this step](./media/generate-export-support-data-package/screenshot-step.png)
+    :::image type="content" source="media/generate-export-support-data-package/create-sd-for-console-or-management-server.png" alt-text="The Export Support Data Package page that you can use to collect SD from the console, management server." border="false":::
 
     By default, this method will collect SD from the console, management server and all of the collectors.
 

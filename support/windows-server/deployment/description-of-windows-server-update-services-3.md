@@ -3,21 +3,21 @@ title: Description of the Windows Server Update Services 3.0 Service Pack 1 pack
 description: Describes the Windows Server Update Services 3.0 Service Pack 1 package.
 ms.date: 09/21/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, edwardr, danalb, mandarg, oscarlee, davidhen, sudheer, sivsha, bmoore, cecils
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # Description of the Windows Server Update Services 3.0 Service Pack 1 package
 
 This article provides some information about Windows Server Update Services 3.0 Service Pack 1 package.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 948014
 
 ## Introduction
@@ -30,7 +30,7 @@ Microsoft has released a service pack for Microsoft Windows Server Update Servic
 
 The following file is available for download from the Microsoft Download Center:  
 
-![Download ](./media/description-of-windows-server-update-services-3/download.gif)
+:::image type="icon" source="media/description-of-windows-server-update-services-3/download-icon.png":::
  [Download the WSUS 3.0 Service Pack 1 package now.](https://www.catalog.update.microsoft.com/Search.aspx?q=Windows%20Server%20Update%20Services%203.0%20sp2)  
 
 For more information about how to download Microsoft support files, click the following article number to view the article in the Microsoft Knowledge Base:  

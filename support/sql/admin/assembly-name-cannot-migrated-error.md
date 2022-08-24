@@ -2,7 +2,7 @@
 title: Assembly cannot be migrated to SQL Server 2017 error
 description: This article describes the Assembly cannot be migrated to SQL Server 2017 error in compatibility check for Configuration Manager database.
 ms.date: 01/15/2021
-ms.prod-support-area-path: Administration and Management
+ms.custom: sap:Administration and Management
 ---
 # Assembly cannot be migrated to SQL Server 2017 error in compatibility check for Configuration Manager database
 
@@ -13,7 +13,7 @@ _Original KB number:_ &nbsp; 4465462
 
 ## Summary
 
-In Microsoft SQL Server 2017, you use the built-in database compatibility checker to determine the upgrade compatibility of a Microsoft System Center Configuration Manager database. You also have `CLR Strict Security` enabled. When you run the check, you receive informational messages regarding the following indicated assemblies:
+In Microsoft SQL Server 2017, you use the built-in database compatibility checker to determine the upgrade compatibility of a Microsoft System Center Configuration Manager database. You also have `CLR Strict Security` enabled. When you run the check, you receive informational messages regarding the following indicated assemblies:
 
 > Assembly [DcmObjectModel_SQLCLR] cannot be migrated to SQL Server 2017. For more details, please see: Line 1, Column 1.  
 Assembly [MessageHandlerService] cannot be migrated to SQL Server 2017. For more details, please see: Line 1, Column 1.  
@@ -31,4 +31,4 @@ By default, all Configuration Manager databases should have the **Trustworthy** 
 
 To verify this setting, open the **Database Properties** window, select the **Options** page in the navigation pane, and then locate the **Trustworthy** row in the **Other options** list.
 
-![Data Properties](./media/assembly-name-cannot-migrated-error/4470352_en_3.jpg)
+:::image type="content" source="media/assembly-name-cannot-migrated-error/database-properties.png" alt-text="Screenshot of the Options page of the Database Properties window.":::

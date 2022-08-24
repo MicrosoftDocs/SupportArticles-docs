@@ -4,20 +4,20 @@ description: Describes information about using the UserAccountControl attribute 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: User, computer, group, and object management
+ms.custom: sap:user-computer-group-and-object-management, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Use the UserAccountControl flags to manipulate user account properties
 
 This article describes information about using the **UserAccountControl** attribute to manipulate user account properties.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 305144
 
 ## Summary
@@ -59,10 +59,9 @@ The following table lists possible flags that you can assign. You can't set some
 |PASSWORD_EXPIRED|0x800000|8388608|
 |TRUSTED_TO_AUTH_FOR_DELEGATION|0x1000000|16777216|
 |PARTIAL_SECRETS_ACCOUNT|0x04000000|67108864|
-||||
-
+  
 > [!NOTE]
-> In a Windows Server 2003-based domain, LOCK_OUT and PASSWORD_EXPIRED have been replaced with a new attribute called ms-DS-User-Account-Control-Computed. For more information about this new attribute, see ms-DS-User-Account-Control-Computed attribute](/windows/win32/adschema/a-msds-user-account-control-computed).
+> In a Windows Server 2003-based domain, LOCK_OUT and PASSWORD_EXPIRED have been replaced with a new attribute called ms-DS-User-Account-Control-Computed. For more information about this new attribute, see [ms-DS-User-Account-Control-Computed attribute](/windows/win32/adschema/a-msds-user-account-control-computed).
 
 ## Property flag descriptions
 

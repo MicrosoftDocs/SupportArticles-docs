@@ -1,24 +1,24 @@
 ---
 title: Troubleshoot AD FS 2.0 error (Access is denied)
 description: This article contains step-by-step instructions to troubleshoot claims rules problems.
-ms.date: 09/08/2020
+ms.date: 09/10/2021
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Federation Services (AD FS)
+ms.custom: sap:active-directory-federation-services-ad-fs, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # ADFS 2.0 error: Access is denied
 
 This article provides a solution to fix the Active Directory Federated Services (AD FS) 2.0 error.
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;3044977
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 3044977
 
 ## Summary
 
@@ -102,6 +102,4 @@ This is helpful in a scenario in which AD FS denied a token to the user. The AD 
 
 If the claim issuance requirements cannot be fulfilled by the default claim rule templates, you may need to write a custom claim. For more information, see [Understanding Claim Rule Language in AD FS 2.0 & Higher](https://social.technet.microsoft.com/wiki/contents/articles/4792.understanding-claim-rule-language-in-ad-fs-2-0-higher.aspx).
 
-## Third-party information disclaimer
-
-The third-party products that this article discusses are manufactured by companies that are independent of Microsoft. Microsoft makes no warranty, implied or otherwise, about the performance or reliability of these products.
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]

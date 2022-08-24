@@ -2,7 +2,7 @@
 title: Set up and troubleshoot a linked server to an Oracle database
 description: This article describes how to set up a linked server from a computer that is running Microsoft SQL Server to an Oracle database and provides basic troubleshooting steps for common errors you may experience when you set up a linked server to an Oracle database.
 ms.date: 12/02/2020
-ms.prod-support-area-path: Database Engine
+ms.custom: sap:Database Engine
 ms.prod: sql
 ---
 # Set up and troubleshoot a linked server to an Oracle database in SQL Server

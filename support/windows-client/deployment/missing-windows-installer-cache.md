@@ -4,48 +4,31 @@ description: Windows Installer cache (by default, c:\windows\installer) is used 
 ms.date: 10/21/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika, kelho, sureshka
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # Missing Windows Installer cache requires a computer rebuild
 
 This article discusses how to restore missing Windows Installer cache files.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows 7 Service Pack 1, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2667628
 
 ## Summary
 
-The Windows Installer Cache is used to store important files for applications that are installed by using Windows Installer. By default, this cache is located in the c:\windows\installer folder, and it should not be deleted. If the installer cache is compromised, you may not immediately see problems until you take an action such as uninstalling, repairing, or updating a product.
+The Windows Installer Cache is used to store important files for applications that are installed by using Windows Installer. By default, this cache is located in the c:\windows\installer folder, and it should not be deleted. If the installer cache is compromised, you may not immediately see problems until you take an action such as uninstalling, repairing, or updating a product.
 
-When a product is installed by using the Windows Installer, important files are stored in the Windows Installer cache that are required for uninstalling and updating applications. Missing files cannot be copied between computers because the files are unique.
-
-## Determine whether you are missing files
-
-The Windows Installer Cache Verifier Package troubleshooter is integrated with the Microsoft Support Diagnostics service. This service can run an automated diagnostic analysis to determine solutions.
-
-To run the troubleshooter, follow these steps:
-
-1. Open the link to the [Microsoft Support Diagnostics](https://home.diagnostics.support.microsoft.com/) tool.
-2. If you are prompted, sign in by using your Windows Live ID.
-3. To create a new diagnostic session, select Windows Installer Cache Diagnostic from the list.
-4. Enter a descriptive session name, then click **Create**.
-
-    > [!NOTE]
-    > You will use the name that you enter to view the analysis results later.
-5. Follow the instructions to download and run the analysis package.
-6. To view the analysis results, select Recent Sessions near the top of the page.
-7. Click the Session Name that you created to view the results. A report is also available locally. (See the [More information](#more-information) section.)
+When a product is installed by using the Windows Installer, important files are stored in the Windows Installer cache that are required for uninstalling and updating applications. Missing files cannot be copied between computers because the files are unique.
 
 ## More information
 
-If application files are missing from the Windows Installer Cache, ask the vendor or support team for the application about the missing files. You must follow the procedures or steps recommended by the application vendor to restore the files. In some cases, you may have to rebuild the operating system and reinstall the application to fix the problem.
+If application files are missing from the Windows Installer Cache, ask the vendor or support team for the application about the missing files. You must follow the procedures or steps recommended by the application vendor to restore the files. In some cases, you may have to rebuild the operating system and reinstall the application to fix the problem.
 
 Windows support engineers cannot help you recover missing application files from the Windows Installer cache.
 
@@ -59,7 +42,7 @@ If the missing installer cache files are Microsoft Office or SharePoint files, f
 
 ## Third-party recovery tools
 
-Some third-party entities claim to be able to rebuild or repair the Windows Installer cache. For legal and supportability reasons, we cannot recommend or endorse any of these entities. If you use such third-party products and recommendations, you do this at your own risk.
+Some third-party entities claim to be able to rebuild or repair the Windows Installer cache. For legal and supportability reasons, we cannot recommend or endorse any of these entities. If you use such third-party products and recommendations, you do this at your own risk.
 If you have backups for your system that were made before the file deletions, consider the following options:
 
 - System Restore points (available only on client operating systems)
@@ -67,11 +50,11 @@ If you have backups for your system that were made before the file deletions, co
 - Failure recovery methods that can restore the full system state backup
 - Reinstallation of the operating system and all applications
 
-To restore the missing files, a full system state restoration is required. It is not possible to replace only the missing files from a previous backup.
+To restore the missing files, a full system state restoration is required. It is not possible to replace only the missing files from a previous backup.
 
 ## Other error messages
 
-Other error messages might be triggered by missing Windows Installer Cache files. Many of the following messages are SQL-specific and are not limited to this issue. These entries are logged in either the Setup or MSI Verbose log.
+Other error messages might be triggered by missing Windows Installer Cache files. Many of the following messages are SQL-specific and are not limited to this issue. These entries are logged in either the Setup or MSI Verbose log.
 
 - **1612**: The installation source for this product is not available. Verify that the source exists and that you can access it.
 - **1620**: This installation package could not be opened. Contact the application vendor to verify that this is a valid Windows Installer package.
@@ -85,8 +68,8 @@ Other error messages might be triggered by missing Windows Installer Cache file
 
 ## Report availability
 
-We strongly encourage you to download this package from the portal instead of reusing a portable copy. If you submit the results, the latest diagnostic rules will be used. This package is frequently updated.
+We strongly encourage you to download this package from the portal instead of reusing a portable copy. If you submit the results, the latest diagnostic rules will be used. This package is frequently updated.
 
-The report is available immediately after you run this tool without submitting the results to Microsoft. The report is an XML file. It will be located in the user profile Temp folder in a path that resembles the following:
+The report is available immediately after you run this tool without submitting the results to Microsoft. The report is an XML file. It will be located in the user profile Temp folder in a path that resembles the following:
 
 `C:\Users\<UserName>\AppData\Local\Temp\WICFIX_MAIN_Report.xml`

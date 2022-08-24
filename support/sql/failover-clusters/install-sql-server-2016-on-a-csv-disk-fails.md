@@ -2,7 +2,7 @@
 title: Installation of SQL Server on a CSV disk fails
 description: This article provides workaround for permissions problem that occurs when you install SQL Server 2016 on a CSV disk.
 ms.date: 07/22/2020
-ms.prod-support-area-path: High Availability and Disaster Recovery features
+ms.custom: sap:High Availability and Disaster Recovery features
 ms.reviewer: Mnilson, cmathews
 ms.prod: sql
 ---

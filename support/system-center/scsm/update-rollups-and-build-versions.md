@@ -2,7 +2,6 @@
 title: System Center Service Manager build versions
 description: Lists the update rollups and build versions of System Center 2016 Service Manager and System Center 2012 R2 Service Manager.
 ms.date: 08/03/2020
-ms.prod-support-area-path: 
 ms.reviewer: luche
 ---
 # System Center Service Manager build versions
@@ -31,13 +30,12 @@ System Center 2012 R2 Service Manager update rollups are cumulative. The latest 
 |7.5.3079.315| [3009517](https://support.microsoft.com/help/3009517)|Update Rollup 5 for System Center 2012 R2 Service Manager|
 |7.5.3079.367| [3039363](https://support.microsoft.com/help/3039363)|Update Rollup 6 for System Center 2012 R2 Service Manager <br/><br/>**Note** You must install SCSM2012R2_OD_KB3064088_AMD64_7.5.3079.402.exe on your primary management server after you deploy this update.|
 |7.5.3079.402| [3039363](https://support.microsoft.com/help/3039363)|Hotfix for Update Rollup 6 for System Center 2012 R2 Service Manager <br/><br/> **Note** Don't install if you didn't install version 7.5.3079.367.|
-|7.5.3079.442| [3063263](https://support.microsoft.com/help/3063263)|Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** You must install SCSM2012R2_OD_KB3099983_AMD64_7.5.3079.504.exe on your primary management server after you deploy this update.|
+|7.5.3079.442| [3063263](https://support.microsoft.com/help/3063263)|Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** You must install SCSM2012R2_OD_KB3099983_AMD64_7.5.3079.504.exe on your primary management server after you deploy this update.|
 |7.5.3079.504| [3063263](https://support.microsoft.com/help/3063263)|Hotfix for Update Rollup 7 for System Center 2012 R2 Service Manager <br/><br/> **Note** Don't install if you didn't install version 7.5.3079.442.|
-|7.5.3079.571| [3129780](https://support.microsoft.com/help/3129780)|Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
-|7.5.3079.601| [3129780](https://support.microsoft.com/help/3129780)|Rerelease of Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
+|7.5.3079.571| [3129780](https://support.microsoft.com/help/3129780)|Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
+|7.5.3079.601| [3129780](https://support.microsoft.com/help/3129780)|Rerelease of Update Rollup 9 for System Center 2012 R2 Service Manager <br/><br/> **Note** This version was withdrawn and replaced by 7.5.3079.607.|
 |7.5.3079.607| [3129780](https://support.microsoft.com/help/3129780)|Supported release of Update Rollup 9 for System Center 2012 R2 Service Manager|
-||||
-
+  
 ## System Center 2012 R2 Service Manager self-service portal
 
 |Build version|Update article|Description|
@@ -46,8 +44,7 @@ System Center 2012 R2 Service Manager update rollups are cumulative. The latest 
 |7.5.3079.523| [3124091](https://support.microsoft.com/help/3124091)|Update 1 for System Center 2012 R2 Service Manager Self-Service Portal|
 |7.5.3079.548| [3134286](https://support.microsoft.com/help/3134286)|Update 2 for System Center 2012 R2 Service Manager Self-Service Portal|
 |7.5.3079.572| [3144617](https://support.microsoft.com/help/3144617)|Update 3 for System Center 2012 R2 Service Manager Self-Service Portal|
-||||
-
+  
 ## Determine the build version of a Service Manager update
 
 To determine the build version of an installed Service Manager update, use one of the following methods:

@@ -1,23 +1,23 @@
 ---
 title: DISM command fails with error code 87
 description: Resolves an issue in which you can't apply a Windows 10 image.
-ms.data: 09/08/2020
+ms.date: 06/21/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # DISM command fails with error code 87 when you try to apply a Windows 10 image
 
 This article provides a solution to the error 87 that occurs when you try to apply a Windows 10 image.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 3082581
 
 ## Symptoms
@@ -44,7 +44,7 @@ To apply a Windows 10 image, you must use the Windows 10 version of DISM. This v
 
 ## Resolution
 
-Use the Windows 10 version of DISM with Wofadk.sys filter driver. For more information, see [DISM Supported Platforms](https://msdn.microsoft.com/library/windows/hardware/dn898553%28v=vs.85%29.aspx ) and [Copy DISM to Another Computer](https://msdn.microsoft.com/library/windows/hardware/dn898515%28v=vs.85%29.aspx).
+Use the Windows 10 version of DISM with Wofadk.sys filter driver. For more information, see [DISM Supported Platforms](/windows-hardware/manufacture/desktop/dism-supported-platforms) and [Copy DISM to Another Computer](https://msdn.microsoft.com/library/windows/hardware/dn898515%28v=vs.85%29.aspx).
 
 ## More information
 

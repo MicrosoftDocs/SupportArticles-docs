@@ -1,23 +1,23 @@
 ---
-title: Troubleshoot AD replication error 2146893022
+title: Troubleshoot AD replication error -2146893022
 description: This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022).
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory replication
+ms.custom: sap:active-directory-replication, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Active Directory replication error -2146893022: The target principal name is incorrect
 
 This article describes how to troubleshoot a problem in which Active Directory replication fails and generates an error (-2146893022: The target principal name is incorrect).
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2090913
 
 > [!NOTE]
@@ -44,13 +44,13 @@ The destination domain controller receives a service ticket from a Kerberos Key 
     Using `repadmin`:
 
     ```console
-    Repadmin replicate destinationDC sourceDC DN_of_Domain_NC
+    Repadmin /replicate destinationDC sourceDC DN_of_Domain_NC
     ```
 
     For example, if replication is failing on `ContosoDC2.contoso.com`, run the following command on `ContosoDC1.contoso.com`:
 
     ```console
-    Repadmin replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
+    Repadmin /replicate ContosoDC2.contoso.com ContosoDC1.contoso.com "DC=contoso,DC=com"
     ```
 
 3. Start the Kerberos KDC service on the destination domain controller by running the following command:
@@ -132,7 +132,6 @@ When this problem occurs, you experience one or more of the following symptoms:
     |NTDS KCC|1308|The Knowledge Consistency Checker (KCC) has detected that successive attempts to replicate with the following domain controller has consistently failed.|
     |Microsoft-Windows-ActiveDirectory_DomainService|1926|The attempt to establish a replication link to a read-only directory partition with the following parameters failed<br/> |
     |NTDS Inter-site Messaging|1373|The Intersite Messaging service could not receive any messages for the following service through the following transport. The query for messages failed. |
-    ||||
 
 ## Cause
 
@@ -213,15 +212,13 @@ The following table shows a synopsis of network traffic that occurs when destina
 |6|KDC|DC1|KerberosV5|KerberosV5:TGS Response Cname: CONTOSO-DC1$|TGS response to destination DC contoso-dc1. This operation will not appear on the wire of destination DC uses self as KDC.|
 | **7**|DC1|DC2|MSRPC|`MSRPC:c/o Alter Cont: UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2} DRSR(DRSR) Call=0x2`|AP request|
 | **8**|DC2|DC1|MSRPC|`MSRPC:c/o Alter Cont Resp: Call=0x2 Assoc Grp=0x9E62 Xmit=0x16D0 Recv=0x16D0`|AP response.|
-|||||||
 
 |Drilldown on Frame **7**|Drilldown on Frame **8**|Comments|
 |---|---|---|
 |`MSRPC MSRPC:c/o Alter Cont: UUID{E3514235-4B06-11D1-AB04-00C04FC2DCD2} DRSR(DRSR) Call=0x2`|`MSRPC:c/o Alter Cont Resp: Call=0x2 Assoc Grp=0xC3EA43 Xmit=0x16D0 Recv=0x16D0`|DC1 connects to AD Replication Service on DC2 over the port returned by the EPM on DC2.|
-|Ipv4: Src = x.x.x.245, Dest = x.x.x.35, Next Protocol = TCP, Packet ID =, Total IP Length = 0|Ipv4: Src = x.x.x.35, Dest = x.x.x.245, Next Protocol = TCP, Packet ID = 31546, Total IP Length = 278|Verify that AD replication source DC (referred to as the *`Dest`* computer in the first column and *Src* computer in column 2 **owns** the IP address cited in the trace. It's `x.x.x.35` in this example. |
+|Ipv4: Src = x.x.x.245, Dest = x.x.x.35, Next Protocol = TCP, Packet ID =, Total IP Length = 0|Ipv4: Src = x.x.x.35, Dest = x.x.x.245, Next Protocol = TCP, Packet ID = 31546, Total IP Length = 278|Verify that AD replication source DC (referred to as the *`Dest`* computer in the first column and _Src_ computer in column 2 **owns** the IP address cited in the trace. It's `x.x.x.35` in this example. |
 |Ticket: Realm: `CONTOSO.COM`, `Sname`: E3514235-4B06-11D1-AB04-00C04FC2DCD2/6f3f96d3-dfbf-4daf-9236-4d6da6909dd2/contoso.com|ErrorCode: KRB_AP_ERR_MODIFIED (41) <br/><br/>Realm: \<verify that realm returned by the source DC matches the Kerberos realm intended by the destination DC>.<br/><br/> **`Sname`:** \<verify that the `sName` in the AP response matches contains the hostname of the intended source DC and NOT another DC that the destination incorrectly resolved to due to a bad name-to-ip mapping problem>.|In column 1, note the realm of the target Kerberos realm as `contoso.com` followed by the source domain controllers Replication SPN (`Sname`) which consists of the Active Directory replication service UUID (E351...) concatenated with object GUID of the source domain controllers NTDS Settings object.<br/><br/>The GUIDED value 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2 to the right of the E351... replication service UUID is the Object GUID for the source domain controllers NTDS settings object. It's currently defined in the destination domain controllers copy of Active Directory. Verify that this object GUID matches the value in the **DSA Object GUID** field when `repadmin /showreps` is run from the console of the source DC.<br/><br/>A `ping` or `nslookup` of the source domain controllers fully qualified CNAME concatenated with_msdcs.\<forest root DNS name> from the console of the destination DC must return the source domain controllers current IP address: <br/><br/>`ping 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.contoso.com`<br/><br/>`nslookup -type=cname 6f3f96d3-dfbf-4daf-9236-4d6da6909dd2._msdcs.<forest root domain> <DNS Server IP>`<br/><br/>In the reply shown in column 2, focus on the `Sname` field and verify that it contains the hostname of the AD replication source DC.<br/><br/>Bad name-to-IP mappings could cause the destination DC to connect to a DC in an invalid target realm causing the Realm value to be invalid as shown in this case. Bad host-to-IP mappings could cause DC1 to connect to DC3 in the same domain. It would still generate **KRB_AP_ERR_MODIFIED**, but the realm name in frame 8 would match the realm in frame 7.|
-||||
-
+  
 ### Method 2: Name-to-IP mapping verification (without using a network trace)
   
 From the console of the Source domain controller:
@@ -230,8 +227,7 @@ From the console of the Source domain controller:
 |---|---|
 |`IPCONFIG /ALL |MORE`|Note IP address of NIC used by destination domain controllers |
 |`REPADMIN /SHOWREPS |MORE`|Note value of DSA Object GUID. It denotes the object GUID for the source domain controllers NTDS Settings Object in the source domain controllers copy of active Directory. |
-|||
-
+  
 From the Console of the destination DC:
 
 |Command|Comment|
@@ -243,8 +239,7 @@ From the Console of the destination DC:
 |`NSLOOKUP -type=CNAME <object guid of source DCs NTDS Settings object>._msdcs.<forest root DNS name> <primary DNS Server IP>`<br/><br/>Repeat for each additional DNS Server IP configured on the destination DC. <br/><br/> example: `c:\>nslookup -type=cname 8a7baee5-cd81-4c8c-9c0f-b10030574016._msdcs.contoso.com 152.45.42.103`|Verify that IP returned matches the IP address of target DC listed above recorded from the console of the source DC.<br/><br/>Repeat for all DNS Servers IPs configured on destination DC.|
 |`nslookup -type=A+AAAA <FQDN of source DC> <DNS Server IP>`|Check for duplicate host A records on all DNS Server IPs configured on the destination DC.|
 |`nbtstat -A <IP address of DNS Server IP returned by nslookup>`|Should return name of the source DC.|
-|||
-
+  
 > [!NOTE]
 > A replication request that's directed to a non-domain controller (because of a bad name-to-IP mapping) or a domain controller  that doesn't currently have the E351... service UUID registered with the endpoint mapper returns error 1753: There are no more endpoints available with the endpoint mapper.
 
@@ -270,7 +265,7 @@ Kerberos tickets for the system account that are used by Active Directory replic
 
 Domain controllers can be made to use other domain controllers by stopping the KDC service on a local or remote domain controller.
 
-Use `REPADIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
+Use `REPADMIN /SHOWOBJMETA` to check for obvious version number differences in password-related attributes (dBCSPwd, UnicodePWD, NtPwdHistory, PwdLastSet, lmPwdHistory) for the source domain controller in the source domain controller's  and destination domain controller's copy of the Active Directory directory.
 
 ```console
 C:\>repadmin /showobjmeta <source DC> <DN path of source DC computer account>

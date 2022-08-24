@@ -4,21 +4,21 @@ description: Describes Windows OS running in the management partition only use u
 ms.date: 09/14/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: arichard, kaushika
-ms.prod-support-area-path: Configuration of virtual machine settings
+ms.custom: sap:configuration-of-virtual-machine-settings, csstroubleshoot
 ms.technology: hyper-v
 ---
 # Hyper-V limits the maximum number of processors in the Hyper-V host OS to 64
 
 This article describes that Windows OS running in the management partition only use up to a maximum of 64 root Virtual Processors (root VPs).
 
-_Original product version:_ &nbsp;Windows Server 2012 R2  
-_Original KB number:_ &nbsp;2812283
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 2812283
 
 ## Summary
 
@@ -34,13 +34,13 @@ Task Manager Display of Total Host System Logical Processors
 
 Task Manager does accurately display the total number of system logical processors, as illustrated below. The value *Logical processors* correctly displays 128, which is the total number of processors in the example computer system. The value *Host logical processors* reflects that the Hyper‑V host partition is only running on 64 VPs out of the total 128 system logical processors.
 
-:::image type="content" source="./media/hyper-v-limits-maximum-number-processors-host-os/task-manager.png" alt-text="Task Manager.":::
+:::image type="content" source="media/hyper-v-limits-maximum-number-processors-host-os/task-manager.png" alt-text="The details of the Performance tab of the Task Manager." border="false":::
 
 Determining the Number of Logical Processors in Performance Monitor  
 
 Windows Performance Monitor may also be used to observe the total number of system logical processors, and the number of VPs in the root partition, as illustrated below. The counter *Hyper‑V Hypervisor\\Logical Processors* indicates the total number of system logical processors that the hypervisor is using. The counter *Hyper‑V Hypervisor Root Partition\\Virtual Processors* indicates the total number of virtual processors allocated to the host partition.
 
-:::image type="content" source="./media/hyper-v-limits-maximum-number-processors-host-os/windows-performance-monitor.png" alt-text="Performance Monitor.":::
+:::image type="content" source="media/hyper-v-limits-maximum-number-processors-host-os/windows-performance-monitor.png" alt-text="Screenshot of the total number of logical and virtual processors in Performance Monitor." border="false":::
 
 NUMA Topologies
 

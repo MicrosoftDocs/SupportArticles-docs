@@ -2,7 +2,7 @@
 title: Site upgrade gets stuck at database update
 description: Describes an issue that Configuration Manager upgrade gets stuck at the Upgrade ConfigMgr Database step due to many Software Center requests.
 ms.date: 06/04/2020
-ms.prod-support-area-path: SQL Server is slow or unresponsive
+ms.custom: sap:SQL Server is slow or unresponsive
 ---
 # Configuration Manager upgrade gets stuck at Upgrade ConfigMgr Database
 
@@ -25,7 +25,7 @@ In this scenario, one of the following messages is the last log entries in CMUpd
 > INFO: Executing DropForeignKeys  
 > INFO: Drop DBMon triggers
 
-Additionally, you may experience high memory usage and SQL Server may appear unresponsive.
+Additionally, you may experience high memory usage and SQL Server may appear unresponsive.
 
 ## Cause
 
@@ -55,7 +55,7 @@ To fix the issue, follow these steps:
    ```
 
    > [!NOTE]
-   > \<Session_ID> is the session ID that's logged in CMUpdate.log.
+   > \<Session_ID> is the session ID that's logged in CMUpdate.log.
 
 2. Based on the returned application name, do one of the following:
 

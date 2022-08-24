@@ -3,21 +3,21 @@ title: Group Policy objects to Terminal Services
 description: Explains how to apply Group Policy objects to Terminal Services servers without adversely affecting other servers on the network.
 ms.date: 10/19/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: AppLocker or software restriction policies
+ms.custom: sap:applocker-or-software-restriction-policies, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to apply Group Policy objects to Terminal Services servers
 
 This article describes how to apply Group Policy objects to Terminal Services servers.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 260370
 
 ## Summary

@@ -1,5 +1,5 @@
 - name: Welcome
-  href: welcome-orchestrator.md
+  href: welcome-orchestrator.yml
 - name: Activities
   items:
     - name: Invoke REST Service activity fails

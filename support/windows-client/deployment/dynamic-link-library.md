@@ -1,23 +1,23 @@
 ---
 title: Dynamic link library (DLL)
 description: Describes what a DLL is and the various issues that occur when you use a DLL.
-ms.date: 09/22/2020
+ms.date: 04/11/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Devices and Drivers
+ms.custom: sap:devices-and-drivers, csstroubleshoot
 ms.technology: windows-client-deployment
 ---
 # What is a DLL
 
 This article describes what a dynamic link library (DLL) is and the various issues that may occur when you use DLLs. It also describes some advanced issues that you should consider when developing your own DLLs.
 
-_Original product version:_ &nbsp; Windows 10 - all editions  
+_Applies to:_ &nbsp; Windows 10 - all editions  
 _Original KB number:_ &nbsp; 815065
 
 ## Summary
@@ -182,7 +182,8 @@ LPVOID lpReserved ) // Reserved
         case DLL_THREAD_ATTACHED: // A process is creating a new thread.
         break;
         case DLL_THREAD_DETACH: // A thread exits normally.
-        break; case DLL_PROCESS_DETACH: // A process unloads the DLL.
+        break;
+        case DLL_PROCESS_DETACH: // A process unloads the DLL.
         break;
     }
     return TRUE;
@@ -350,7 +351,7 @@ The following list describes some of the features of assemblies compared to the 
 
 ## References
 
-- [Deploying and Configuring Applications](https://msdn2.microsoft.com/netframework/aa497268.aspx)
+- [Deploying and Configuring Applications](/previous-versions/aa497268(v=msdn.10))
 
 - [Assemblies](/previous-versions/dotnet/netframework-1.1/hk5f40ct(v=vs.71))
 

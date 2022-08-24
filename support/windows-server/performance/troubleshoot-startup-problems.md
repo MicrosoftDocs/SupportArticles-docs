@@ -1,23 +1,23 @@
 ---
 title: Troubleshoot startup problems
 description: Describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
-ms.date: 09/08/2020
+ms.date: 02/09/2022
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Boot is slow
+ms.custom: sap:boot-is-slow, csstroubleshoot
 ms.technology: windows-server-performance
 ---
 # How to troubleshoot startup problems in Windows Server 2003
 
 This article describes procedures that you can use to troubleshoot startup problems in Windows Server 2003.
 
-_Original product version:_ &nbsp; Windows Server 2003  
+_Applies to:_ &nbsp; Windows Server 2003  
 _Original KB number:_ &nbsp; 325375
 
 > [!NOTE]
@@ -37,32 +37,38 @@ If a problem occurs during any of these phases, Windows may not start correctly,
 - The computer stops responding (hangs).
 - You receive an error message.
 
-If a startup problem occurs after you click **Microsoft Windows Server 2003** on either the boot loader menu, or when you receive the "Please select the operating system to start" message, files that the operating system needs may be missing or damaged. Windows provides several options that you can use to troubleshoot this issue, including safe mode, the Recovery Console, and an Automated System Recovery.  
+Assume that a startup problem occurs after you select **Microsoft Windows Server 2003** on the boot loader menu, or when you receive the "Please select the operating system to start" message. In this situation, files that the operating system needs may be missing or damaged.
+
+Windows provides several options that you can use to troubleshoot this issue, including:
+
+- Safe mode
+- The Recovery Console
+- An Automated System Recovery
 
 ## How to start the computer by using the last known good configuration
 
 If the startup problem occurs immediately after you make a change to the computer (for example, after you install a new driver), try to start the computer by using the Last Known Good Configuration feature.
 
-When you use the Last Known Good Configuration feature, you start your computer by using the most recent settings that worked. This feature restores registry information and driver settings that were in effect the last time that the computer started successfully. Use this feature when you can't start Windows after you make a change to the computer (for example, after you install or upgrade a device driver).
+When you use the Last Known Good Configuration feature, you start your computer by using the most recent settings that worked. This feature restores registry information and driver settings that were in effect the last time that the computer started successfully. Use this feature when you can't start Windows after you make a change to the computer. For example, after you install or upgrade a device driver.
 
 To start the computer by using Last Known Good Configuration, follow these steps:  
 
-1. Click Start, and then click Shut Down.
-2. Click Restart, and then click OK.
+1. Select **Start** > **Shut Down**.
+2. Select **Restart**, and then select **OK**.
 3. When you see the "Please select the operating system to start" message, press the F8 key.
 4. Use the arrow keys to select **Last Known Good Configuration**, and then press Enter.
 
     > [!NOTE]
     > NUM LOCK must be off before the arrow keys on the numeric keypad will function.  
 
-5. If you're running other operating systems on the computer, click **Microsoft Windows Server 2003** on the list, and then press Enter.
+5. If you're running other operating systems on the computer, select **Microsoft Windows Server 2003** on the list, and then press Enter.
 
     > [!NOTE]
     >
     > - By selecting Last Known Good Configuration, you can recover from problems such as a newly added driver that may be incorrect for your hardware. This feature doesn't solve problems caused by corrupted or missing drivers or files.
     > - When you select Last Known Good Configuration, only the information in the following registry key is restored: `HKLM\System\CurrentControlSet` Any changes that you have made in other registry keys remain.  
 
-If you can start your computer by using the Last Known Good Configuration feature, the last change that you made to the computer (for example, the installation of a driver) may be the cause of the incorrect startup behavior. We recommend that you either remove or update the driver or program, and then test Windows to see if it starts correctly.  
+If you can start your computer by using the Last Known Good Configuration feature, the last change that you made to the computer (for example, the installation of a driver) may be the cause of the incorrect startup behavior. We recommend you either remove or update the driver or program, and then test Windows to see if it starts correctly.  
 
 ## How to start the computer in safe mode
 
@@ -72,15 +78,15 @@ If the computer starts successfully in safe mode but it doesn't start in normal 
 
 To troubleshoot startup problems in safe mode, follow these steps:  
 
-1. Click Start, and then click Shut Down.
-2. Click Restart, and then click OK.
+1. Select Start > Shut Down.
+2. Select Restart, and then select OK.
 3. When you see the "Please select the operating system to start" message, press F8.
 4. On the **Windows Advanced Option Menu**, use the arrow keys to select Safe Mode, and then press Enter.
 
     > [!NOTE]
     > Num Lock must be off before the arrow keys on the numeric keypad will function.  
 
-5. If you're running other operating systems on the computer, click **Microsoft Windows Server 2003** on the list, and then press Enter.  
+5. If you're running other operating systems on the computer, select **Microsoft Windows Server 2003** on the list, and then press Enter.  
 6. Take one of the following actions:  
 
     - If the computer doesn't start in safe mode, try starting the computer by using the Recovery Console. If you still can't start the computer, look for possible hardware problems, such as defective devices, installation problems, cabling problems, or connector problems. Remove any hardware that was added recently, and then restart the computer to see if the problem is resolved.
@@ -91,42 +97,43 @@ To troubleshoot startup problems in safe mode, follow these steps:
 View the event logs in Event Viewer for information that can help you identify and diagnose the cause of the startup problem. To view events that are recorded in the event logs, follow these steps.  
 
 1. Take one of the following actions:
-   - Click Start, point to Administrative Tools, and then click Event Viewer.
+   - Select **Start**, point to **Administrative Tools**, and then select Event Viewer.
    - Start the Event Viewer snap-in in Microsoft Management Console (MMC).
-2. In the console tree, expand Event Viewer, and then click the log that you want to view. For example, click **System log** or **Application log**.
+2. In the console tree, expand Event Viewer, and then select the log that you want to view. For example, select **System log** or **Application log**.
 3. In the details pane, double-click the event that you want to view.
 
-    To copy the details of the event, click Copy, open a new document in the program in which you want to paste the event (for example, Microsoft Word), and then click Paste on the Edit menu.
+    To copy the details of the event, select Copy, open a new document in the program in which you want to paste the event (for example, Microsoft Word), and then select Paste on the Edit menu.
 4. To view the description of the previous event or the next event, press the UP ARROW key or the DOWN ARROW key.  
 
 ## Use System Information to identify the cause of the startup problem
 
 The System Information tool displays a comprehensive view of the computer's hardware, the system components, and the software environment. Use this tool to help identify possible problem devices and device conflicts by following these steps.  
 
-1. Click Start, and then click Run.
-2. In the Open box, type msinfo32, and then click OK.
+1. Select **Start** > **Run**.
+2. In the Open box, type msinfo32, and then select **OK**.
 3. Look for problem devices or device conflicts by following these steps:
-   1. In the console tree, expand Components, and then click Problem Devices.
+   1. In the console tree, expand Components, and then select Problem Devices.
 
         > [!NOTE]
         > Any devices that are listed in the right pane.
 
-   2. In the console tree, expand Hardware Resources, and then click Conflicts/Sharing.
+   2. In the console tree, expand Hardware Resources, and then select Conflicts/Sharing.
 
         > [!NOTE]
         > Any resource conflicts that are listed in the right pane.
 
-   3. If you identify a problem device, perform the appropriate action (for example, remove, disable, or reconfigure the device, or update the driver), and then restart the computer in normal mode.
+   3. If you identify a problem device, perform the appropriate action. For example, remove, disable, or reconfigure the device, or update the driver. Then restart the computer in normal mode.
 
         You can use Device Manager to remove or disable devices and their drivers.
 
         If the computer starts correctly, that particular device may be the cause of the startup problem.
 
         If you disabled a device to resolve the problem, make sure that the device is listed on the Windows Server 2003 Hardware Compatibility List (HCL), and that it's installed correctly. Also, contact the manufacturer to report the behavior and to obtain information about possible updates that can resolve the startup problem.
+
         Microsoft provides third-party contact information to help you find technical support. This contact information may change without notice. Microsoft doesn't guarantee the accuracy of this third-party contact information.  
 
-4. If no problem devices or device conflicts are reported by the System Information tool, look for programs that start automatically when Windows starts. To do it, follow these steps:
-   1. In the console tree, expand Software Environment, and then click Startup Programs.
+4. If no problem devices or device conflicts are reported by the System Information tool, look for programs that start automatically when Windows starts. To do so, follow these steps:
+   1. In the console tree, expand Software Environment, and then select Startup Programs.
 
       Programs that start automatically when Windows starts are listed in the right pane.
    2. Disable the programs, and then restart the computer.
@@ -153,22 +160,22 @@ Device Manager displays a graphical view of the hardware that is installed on yo
 
 To start Device Manager, follow these steps.  
 
-1. Click Start, right-click My Computer, and then click Manage.
-2. Expand System Tools, and then click Device Manager.
+1. Select Start, right-click My Computer, and then select Manage.
+2. Expand System Tools, and then select Device Manager.
 
     The devices that are installed on your computer are listed in the right pane. If a symbol is displayed next to a device, there may be a problem with the device. For example, a black exclamation point (!) on a yellow field indicates that the device is in a problem state.
 
     > [!NOTE]
-    > To disable a device in Device Manager, right-click the device, and then click Disable .
-3. Investigate possible device conflicts. To do it, double-click the device in the right pane, and then click the Resources tab.
+    > To disable a device in Device Manager, right-click the device, and then select Disable .
+3. Investigate possible device conflicts. To do so, double-click the device in the right pane, and then select the Resources tab.
 
     If a device conflict exists, it's listed under **Conflicting device list**.
 
-    Note the **Use automatic settings** check box. If Windows successfully detects a device, this check box is selected, and the device functions correctly. However, if the resource settings are based on Basic Configuration **n** (where **n** is any number from 0 to 9), you may have to change the configuration. To do it, either click a different basic configuration from the list or manually change the resource settings.
+    Note the **Use automatic settings** check box. If Windows successfully detects a device, this check box is selected, and the device functions correctly. However, if the resource settings are based on Basic Configuration **n** (where **n** is any number from 0 to 9), you may have to change the configuration. To do so, either select a different basic configuration from the list or manually change the resource settings.
     > [!WARNING]
     > This procedure may require you to change the computer's complementary metal oxide semiconductor (CMOS) settings and the basic input/output system (BIOS) settings. Incorrect changes to the BIOS of the computer can result in serious problems. Change the computer's CMOS settings at your own risk.
 
-    If Windows can't resolve a resource conflict, verify that the computer is configured to allow Windows to enumerate the devices in the computer. To do it, enable the **Plug and Play OS** setting in the Setup tool of the computer's BIOS. To change the computer's BIOS settings, see the computer documentation or contact your computer manufacturer.
+    If Windows can't resolve a resource conflict, verify that the computer is configured to allow Windows to enumerate the devices in the computer. To do so, enable the **Plug and Play OS** setting in the Setup tool of the computer's BIOS. To change the computer's BIOS settings, see the computer documentation or contact your computer manufacturer.
 
 4. If you identify a problem device, disable it, and then restart the computer in normal mode.
 
@@ -176,9 +183,7 @@ To start Device Manager, follow these steps.
 
     Make sure that the device is listed on the Windows Server 2003 Hardware Compatibility List (HCL) and it's installed correctly. Also, contact the manufacturer to report the behavior and to obtain information about possible updates that can resolve the startup problem.  
 
-For additional information about how to configure devices in Device Manager, click the following article number to view the article in the Microsoft Knowledge Base:
-
-[323423](https://support.microsoft.com/help/323423) How to use Device Manager to configure devices in Windows Server 2003  
+For more information about how to configure devices in Device Manager, see [How to use Device Manager to configure devices in Windows Server 2003](https://support.microsoft.com/help/323423).   
 
 ## How to use System Configuration Utility  
 
@@ -193,46 +198,46 @@ You must be logged on as Administrator or as a member of the administrative grou
 
 To create a clean environment for troubleshooting, follow these steps.  
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK. (To use the **Run as** command, type `runas /user: administrator Path \msconfig.exe` in the Open box, and then click OK.)
-2. Click the General tab, click **Diagnostic startup - load basic devices and services only**, click OK, and then click Restart to restart your computer.
+1. Select **Start** > **Run**, type `msconfig` in the Open box, and then select OK. (To use the **Run as** command, type `runas /user: administrator Path \msconfig.exe` in the Open box, and then select OK.)
+2. Select the General tab, select **Diagnostic startup - load basic devices and services only**, select OK, and then select **Restart** to restart your computer.
 3. After Windows starts, determine whether the problem still occurs.  
 
 ## Isolate problems by using system startup options
 
 To isolate problems by using System Startup options, follow these steps.  
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the General tab, and then click Selective Startup.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the General tab, and then select Selective Startup.
 3. Clear the following check boxes:  
-    Process SYSTEM.INI File  
-    Process WIN.INI File  
-    Load System Services
+   - Process SYSTEM.INI File  
+   - Process WIN.INI File  
+   - Load System Services
 
     You'll be unable to clear the Use Original BOOT.INI check box.
 
-4. To test the software loading process, make sure that the Load Startup Items check box is selected, and then click OK.
+4. To test the software loading process, make sure that the Load Startup Items check box is selected, and then select OK.
 5. Restart the computer when you're prompted.  
 
 ## Isolate problems by using Selective Startup options
 
 To isolate problems by using the Selective Startup options, follow these steps.
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the General tab, and then click Selective Startup.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the General tab, and then select Selective Startup.
 3. Clear all the check boxes under Selective Startup. You'll be unable to clear the Use Original BOOT.INI check box.
-4. Select the Process SYSTEM.INI File check box, click OK, and then restart the computer when you're prompted.
+4. Select the Process SYSTEM.INI File check box, select OK, and then restart the computer when you're prompted.
 
     Repeat this process and select each check box one at a time. Restart your computer every time. Repeat the process until the problem occurs.
-5. When the problem occurs, click the tab that corresponds to the selected file. For example, if the problem occurs after you select the Win.ini file, click the WIN.INI tab in System Configuration Utility.  
+5. When the problem occurs, select the tab that corresponds to the selected file. For example, if the problem occurs after you select the Win.ini file, select the WIN.INI tab in System Configuration Utility.  
 
 ## Isolate problems by using the Startup tab
 
 The Startup tab lists items that load at startup from the Startup group, Win.ini load= and run=, and the registry. To isolate problems by using the Startup tab, follow these steps.
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the Startup tab.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the Startup tab.
 3. Clear all check boxes.
-4. To start troubleshooting, select the first check box, click OK, and then restart the computer when you are prompted.
+4. To start troubleshooting, select the first check box, select OK, and then restart the computer when you're prompted.
 
     Repeat this process and select each check box one at a time. Restart your computer every time. Repeat the process until the problem occurs.  
 
@@ -240,20 +245,20 @@ The Startup tab lists items that load at startup from the Startup group, Win.ini
 
 To troubleshoot System Services, follow these steps.
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the Services tab.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the Services tab.
 3. Note any services that aren't selected.
 
     > [!IMPORTANT]
     > Don't skip this step. You'll need this information later.
 
-4. Click Disable All, click OK, and then restart your computer.
-5. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-6. Click the Services tab.
-7. elect the check box of a service to turn it on, and then click OK.
+4. Select Disable All, select OK, and then restart your computer.
+5. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+6. Select the Services tab.
+7. Select the check box of a service to turn it on, and then select OK.
 8. Restart your computer, and see whether the problem occurs.
 9. Repeat steps 5 through 8 for each service until the problem occurs. When the problem occurs, you'll know that the last service that you turned on is causing the problem. Note this service, and then go to step 10.
-10. Click Enable All, the check box next to the faulty service, clear the check boxes of any other services that you noted in step 3, click OK, and then restart your computer.
+10. Select Enable All, the check box next to the faulty service, clear the check boxes of any other services that you noted in step 3, select OK, and then restart your computer.
 
     As a workaround, you can leave the faulty service turned off (not selected). Contact the manufacturer of the faulty service for more assistance.
 
@@ -264,22 +269,22 @@ To troubleshoot System Services, follow these steps.
 
 To troubleshoot the System.ini file, follow these steps.  
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the SYSTEM.INI tab.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the SYSTEM.INI tab.
 3. Note any items that aren't selected. You might have to expand some items (such as [drivers]) to determine whether any subitems aren't selected.
 
     > [!IMPORTANT]
     > Don't skip this step. You'll need this information later.
 
-4. Click Disable All, click OK, and then restart your computer.
-5. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-6. Click the SYSTEM.INI tab.
-7. Expand all items in the list, select the check box of an item to turn it on, and then click OK.
+4. Select Disable All, select OK, and then restart your computer.
+5. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+6. Select the SYSTEM.INI tab.
+7. Expand all items in the list, select the check box of an item to turn it on, and then select OK.
 8. Restart your computer, and see whether the problem occurs.
 9. Repeat steps 5 through 8 for each item until the problem occurs.
 
     When the problem occurs, you'll know that the last item that you turned on is causing the problem. Note this item, and then go to step 10.
-10. Click Enable All, clear the check box next to the faulty item, clear the check boxes of any other items that you noted in step 3, click OK, and then restart your computer.
+10. Select Enable All, clear the check box next to the faulty item, clear the check boxes of any other items that you noted in step 3, select OK, and then restart your computer.
 
     As a workaround, you can leave the faulty item turned off (not selected). If it's possible, contact the manufacturer of the faulty item for more assistance.
 
@@ -290,22 +295,22 @@ To troubleshoot the System.ini file, follow these steps.
 
 To troubleshoot the Win.ini file, follow these steps.  
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. Click the WIN.INI tab.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. Select the WIN.INI tab.
 3. Note any items that aren't selected. You might have to expand some items (such as [OLFax Ports) to determine whether any subitems aren't selected.
 
     > [!IMPORTANT]
     > Don't skip this step. You'll need this information later.
 
-4. Click Disable All, click OK, and then restart your computer.
-5. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-6. Click the WIN.INI tab.
-7. Expand all items in the list, select the check box of an item to turn it on, and then click OK.
+4. Select Disable All, select OK, and then restart your computer.
+5. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+6. Select the WIN.INI tab.
+7. Expand all items in the list, select the check box of an item to turn it on, and then select OK.
 8. Restart your computer, and see whether the problem occurs.
 9. Repeat steps 5 through 8 for each item until the problem occurs.
 
     When the problem occurs, you'll know that the last item that you turned on is causing the problem. Note this item, and then go to step 10.
-10. Click Enable All, click to clear the check box of the faulty item, click to clear the check boxes of any other items that you noted in step 3, click OK, and then restart your computer.
+10. Select Enable All, clear the check box of the faulty item, clear the check boxes of any other items that you noted in step 3, select OK, and then restart your computer.
 
     As a workaround, you can leave the faulty item turned off (not selected). If it's possible, contact the manufacturer of the faulty item for more assistance.
 
@@ -322,8 +327,8 @@ For more information, search the Microsoft Knowledge Base on the Microsoft Suppo
 
 To reset System Configuration Utility to normal startup, follow these steps.  
 
-1. Click Start, click Run, type `msconfig` in the Open box, and then click OK.
-2. On the General tab, click **Normal Startup - load all device drivers and services**, and then click OK.
+1. Select Start > Run, type `msconfig` in the Open box, and then select OK.
+2. On the General tab, select **Normal Startup - load all device drivers and services**, and then select OK.
 3. Restart your computer.  
 
 ## Use the Windows Recovery Console
@@ -338,7 +343,7 @@ To use Recovery Console, follow these steps.
     - Access the drives on your computer.
     - Enable or disable device drivers or services.
     - Copy files from the Windows Server 2003 installation CD or copy files from other removable media. For example, you can copy a file that you need that was deleted.
-    - Create a new boot sector and a new master boot record (MBR). You might have to do it if there are problems starting from the existing boot sector.  
+    - Create a new boot sector and a new master boot record (MBR). You might have to do so if there are problems starting from the existing boot sector.  
 
 ## Confirm that your hard disk or file system is not damaged
 
@@ -358,13 +363,11 @@ If Chkdsk reports that it can't fix all hard disk problems, your file system or 
 > If you repartition and reformat your hard disk, you lose all information on the disk.
 
 > [!IMPORTANT]
-> For more help, contact your computer manufacturer or a Microsoft Support professional. Only qualified personnel should try to repair your computer. If the computer repair is performed by unqualified personnel, this may nullify your computer's warranty. For additional information about how to Use Recovery Console, click the following article numbers to view the articles in the Microsoft Knowledge Base:
->
-> [326215](https://support.microsoft.com/help/326215) How to use the Recovery Console on a Windows Server 2003-based computer that doesn't start.  
+> For more help, contact your computer manufacturer or a Microsoft Support professional. Only qualified personnel should try to repair your computer. If the computer repair is performed by unqualified personnel, this may nullify your computer's warranty. For more information about how to Use Recovery Console, see [How to use the Recovery Console on a Windows Server 2003-based computer that doesn't start](https://support.microsoft.com/help/326215).  
 
-## How to use Automated System Recovery
+## How to use Automated System Recovery (ASR)
 
-To recover from a system failure by using Automated System Recovery (ASR), follow these steps.
+To recover from a system failure by using Automated System Recovery, follow these steps.
 
 1. Make sure that you have the following available before you start the recovery procedure:
    - The ASR disk that you created before.
@@ -391,11 +394,11 @@ To recover from a system failure by using Automated System Recovery (ASR), follo
 
 To use ASR, you must have an ASR disk set. To create an ASR disk set, follow these steps.
 
-1. Click Start, point to All Programs, point to Accessories, point to System Tools, and then click Backup.
+1. Select Start, point to All Programs, point to Accessories, point to System Tools, and then select Backup.
 
     The Backup or Restore Wizard starts by default, unless it's disabled. You can use the Backup or Restore Wizard to create an ASR disk set by answering **All information on this computer** in the **What do you want to backup** section. Otherwise, you can go to the next step to create an ASR disk set in Advanced Mode.
-2. Click the Advanced Mode link in the Backup or Restore Wizard.
-3. On the Tools menu, click ASR Wizard.
+2. Select the Advanced Mode link in the Backup or Restore Wizard.
+3. On the Tools menu, select ASR Wizard.
 4. Follow the instructions that appear on your screen.
 
     > [!NOTE]
@@ -414,12 +417,12 @@ You may be able to repair a damaged Windows Server 2003 installation by running 
 To repair your installation of Windows, follow these steps.  
 
 1. Insert the Windows Server 2003 CD in the CD drive or DVD drive.
-2. If the Windows CD displays the **What would you like to do** menu, click Exit.
+2. If the Windows CD displays the **What would you like to do** menu, select Exit.
 3. Turn off your computer, wait 10 seconds, and then turn your computer back on.
 4. If you're prompted to start your computer from the CD, do so.
 
     > [!NOTE]
-    > You must be able to start your computer from the Windows Server 2003 CD-ROM to run Windows Setup. Your CD drive or DVD drive must be configured to do it. For information about how to configure your computer to start from the CD drive or DVD drive, see the documentation that is included with your computer, or contact your computer manufacturer.
+    > You must be able to start your computer from the Windows Server 2003 CD-ROM to run Windows Setup. Your CD drive or DVD drive must be configured to do so. For information about how to configure your computer to start from the CD drive or DVD drive, see the documentation that is included with your computer, or contact your computer manufacturer.
 
 5. After Setup starts, press Enter to continue the setup process.
 6. Press ENTER to select the following option:
@@ -452,6 +455,5 @@ To repair your installation of Windows, follow these steps.
 If you can't resolve the problem by following the steps in this article, you can use the Microsoft Support website to find a solution to your problem. The following list describes some of the services that the Microsoft Support website provides:
 
 - [Searchable Knowledge Base](https://support.microsoft.com/) - Search technical support information and self-help tools for Microsoft products.
-- [Frequently Asked Questions](https://www.microsoft.com/en-US/software-download/faq) - View product-specific frequently asked questions and support highlights.
 - [Software and Updates](https://www.microsoft.com/download/search.aspx) - Find software and updates on the Download Center.
 - [Other Support Options](https://support.microsoft.com/contactus/) - Ask a support question by using the web or telephone Microsoft Support.

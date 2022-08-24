@@ -2,7 +2,7 @@
 title: Error message of OLE DB provider
 description: This article provides workaround for the error message of OLE DB provider SQLOLEDB was unable to begin a distributed transaction. 
 ms.date: 09/25/2020
-ms.prod-support-area-path: MDAC and ADO
+ms.custom: sap:MDAC and ADO
 ms.reviewer: rakguj
 ms.prod: sql
 ---

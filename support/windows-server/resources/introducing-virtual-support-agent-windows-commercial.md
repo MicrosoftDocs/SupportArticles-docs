@@ -3,21 +3,21 @@ title: Introducing Virtual Support Agent for Windows Commercial
 description: Describes the Virtual Support Agent for Windows Commercial that debuted on March 12, 2020.
 ms.date: 12/03/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Virtual Agent
+ms.custom: sap:virtual-agent, csstroubleshoot
 ms.technology: windows-server-resources
 ---
 # Introducing Virtual Support Agent for Windows Commercial
 
 This article provides some information about Virtual Support Agent for Windows Commercial.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4555297
 
 ## Summary
@@ -34,7 +34,7 @@ The Virtual Support Agent for Windows Commercial is currently available on the S
 - Choose the relevant product, such as Windows Server 2012 R2 or a later version of Windows Server.
 - Select a category from the list.
 - Select a problem from the list.
-- If the Virtual Support Agent has a technical solution to the selected problem category, it opens at the bottom-right corner of the screen as an option.
+- If the Virtual Support Agent has a technical solution to the selected problem category, it opens at the bottom-right corner of the screen as an option.
 
 ## References
 

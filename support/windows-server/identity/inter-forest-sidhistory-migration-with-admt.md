@@ -4,20 +4,20 @@ description: Describes how to troubleshoot inter-forest sIDHistory migration by 
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: Active Directory Migration Tool (ADMT)
+ms.custom: sap:active-directory-migration-tool-admt, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # How to troubleshoot inter-forest sIDHistory migration with ADMTv2
 
 This article describes how to troubleshoot inter-forest sIDHistory migration with Active Directory Migration Tool version 2 (ADMTv2).
 
-_Original product version:_ &nbsp;  Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 322970
 
 ## More information

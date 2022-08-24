@@ -4,20 +4,20 @@ description: Describes a workaround for an issue in which you cannot connect to 
 ms.date: 09/09/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: RDWeb
+ms.custom: sap:rdweb, csstroubleshoot
 ms.technology: windows-server-rds
 ---
 # You cannot connect to a remote computer or start a remote application when you use Terminal Services Web Access or Remote Web Workspace on a Windows XP SP3-based or Windows Small Business Server 2003 SP1-based computer
 
 This article provides workarounds for an issue where you can't connect to a remote computer or start a remote application when you use TS Web Access or Remote Web Workspace.
 
-_Original product version:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 951607
 
 ## Symptoms

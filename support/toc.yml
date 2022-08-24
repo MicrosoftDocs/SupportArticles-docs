@@ -1,13 +1,13 @@
 - name: Index
   href: index.yml
 - name: Welcome
-  href: dotnet/welcome-dotnet.md
+  href: developer/dotnet/welcome-dotnet.md
 - name: Welcome
-  href: host-integration-server/welcome-host-integration-server.md
+  href: developer/host-integration-server/welcome-host-integration-server.md
 - name: Welcome
-  href: visualstudio/welcome-visual-studio.md
+  href: developer/visualstudio/welcome-visual-studio.yml
 - name: Welcome
-  href: webapps/welcome-webapps.md
+  href: developer/webapps/welcome-webapps.md
 - name: Welcome
   href: windows/win32/welcome-windowsdeveloper.md
 - name: Welcome
@@ -19,10 +19,16 @@
 - name: System Center
   href: system-center/index.yml
 - name: Welcome
-  href: biztalk/welcome-biztalk-server.md
+  href: developer/biztalk/welcome-biztalk-server.md
 - name: Welcome
-  href: browsers/welcome-browsers.md
+  href: developer/browsers/welcome-browsers.md
 - name: Welcome
   href: azure/index.yml
 - name: Welcome
   href: sql/welcome-sql-server.md
+- name: Welcome
+  href: dynamics-365/index.yml
+- name: Welcome
+  href: power-platform/index.yml
+- name: Welcome
+  href: dynamics/index.yml

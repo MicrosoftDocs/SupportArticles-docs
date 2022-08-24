@@ -3,21 +3,21 @@ title: System Partition goes offline after installing third-party disk or Storag
 description: Provides a resolution to an issue where System Partition goes offline after installing some third-Party Disk or Storage Management Software.
 ms.date: 09/14/2020
 author: Deland-Han
-ms.author: delhan 
-manager: dscontentpm
+ms.author: delhan
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, adityah
-ms.prod-support-area-path: Servicing
+ms.custom: sap:servicing, csstroubleshoot
 ms.technology: windows-server-deployment
 ---
 # System Partition goes offline after installing some third-party disk or Storage Management Software
 
 This article provides a resolution to an issue where System Partition goes offline after installing some third-party disk or Storage Management Software.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2419286
 
 ## Symptoms

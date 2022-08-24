@@ -4,20 +4,20 @@ description: Describes how to restart DFSR on a server, either authoritatively o
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, nedpyle
-ms.prod-support-area-path: Sysvol access or replication issues
+ms.custom: sap:sysvol-access-or-replication-issues, csstroubleshoot
 ms.technology: windows-server-group-policy
 ---
 # How to force authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication
 
 This article introduces how to force an authoritative and non-authoritative synchronization for DFSR-replicated sysvol replication.
 
-_Original product version:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2218556
 
 ## Summary

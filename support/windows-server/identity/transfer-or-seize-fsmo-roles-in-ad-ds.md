@@ -4,20 +4,20 @@ description: Describes how you can use the Ntdsutil.exe utility to move or to se
 ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
 ms.prod: windows-server
 localization_priority: medium
 ms.reviewer: kaushika, herbertm
-ms.prod-support-area-path: Active Directory FSMO
+ms.custom: sap:active-directory-fsmo, csstroubleshoot
 ms.technology: windows-server-active-directory
 ---
 # Transfer or seize FSMO roles in Active Directory Domain Services
 
 This article describes when and how to transfer or seize Flexible Single Master Operations (FSMO) roles.
 
-_Original product version:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
+_Applies to:_ &nbsp; Windows Server 2019, Windows Server Standard 2016, Windows Server Essentials 2016, Windows Server Datacenter 2016  
 _Original KB number:_ &nbsp; 255504
 
 ## More information
@@ -28,11 +28,10 @@ Within an Active Directory Domain Services (AD DS) forest, there are specific ta
 |---|---|---|
 |Schema master|Forest-wide|CN=Schema,CN=configuration,DC=\<forest root domain>|
 |Domain naming master|Forest-wide|CN=configuration,DC=\<forest root domain>|
-|RID master|Domain-wide|DC=\<domain>|
 |PDC emulator|Domain-wide|DC=\<domain>|
+|RID master|Domain-wide|DC=\<domain>|
 |Infrastructure master|Domain-wide|DC=\<domain>|
-||||
-
+  
 For more information about the FSMO role holders and recommendations for placing the roles, see [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346).
 
 > [!NOTE]
@@ -110,10 +109,10 @@ For more information, see:
 
 ## Seize or transfer FSMO roles
 
-You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole).
+You can use Windows PowerShell or Ntdsutil to seize or transfer roles. For information and examples of how to use PowerShell for these tasks, see [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole).
 
 > [!IMPORTANT]
-> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
+> If you have to seize the RID master role, consider using the [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole) cmdlet instead of the Ntdsutil.exe utility.
 >
 > To avoid the risk of duplicate SIDs in the domain, Ntdsutil increments the next available RID in the pool by 10,000 when you seize the RID master role. This behavior can cause your forest to completely consume its available ranges for RID values (also known as RID burn). In contrast, if you use the PowerShell cmdlet to seize the RID master role, the next available RID is not affected.
 
@@ -125,17 +124,17 @@ To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these 
     > - We recommend that you log on to the DC to which you are assigning FSMO roles.
     > - The signed-in user should be a member of the Enterprise Administrators group to transfer Schema master or Domain naming master roles, or a member of the Domain Administrators group of the domain where the PDC emulator, RID master and the Infrastructure master roles are being transferred.
 
-2. Select **Start** > **Run**, type *ntdsutil* in the **Open** box, and then select **OK**.
-3. Type *roles*, and then press Enter.
+2. Select **Start** > **Run**, type _ntdsutil_ in the **Open** box, and then select **OK**.
+3. Type _roles_, and then press Enter.
     > [!NOTE]
-    > To see a list of available commands at any one of the prompts in the Ntdsutil utility, type *?*, and then press Enter.
+    > To see a list of available commands at any one of the prompts in the Ntdsutil utility, type _?_, and then press Enter.
 
-4. Type *connections*, and then press Enter.
+4. Type _connections_, and then press Enter.
 5. Type *connect to server \<servername>*, and then press Enter.
     > [!NOTE]
     > In this command, \<servername> is the name of the DC that you want to assign the FSMO role to.
 
-6. At the **server connections** prompt, type *q*, and then press Enter.
+6. At the **server connections** prompt, type _q_, and then press Enter.
 7. Do one of the following:
    - To transfer the role: Type *transfer \<role>*, and then press Enter.
       > [!NOTE]
@@ -145,11 +144,11 @@ To seize or transfer the FSMO roles by using the Ntdsutil utility, follow these 
       > [!NOTE]
       > In this command, \<role> is the role that you want to seize.
 
-   For example, to seize the RID master role, type *seize rid master*. The one exception is for the PDC emulator role, whose syntax is **seize pdc**, not **seize pdc emulator**.
+   For example, to seize the RID master role, type _seize rid master_. Exceptions are for the PDC emulator role, whose syntax is **seize pdc**, and the Domain naming master, whose syntax is **seize naming master**.
 
-   To see a list of roles that you can transfer or seize, type *?* at the **fsmo maintenance** prompt, and then press Enter, or see the list of roles at the start of this article.
+   To see a list of roles that you can transfer or seize, type _?_ at the **fsmo maintenance** prompt, and then press Enter, or see the list of roles at the start of this article.
 
-8. At the **fsmo maintenance** prompt, type *q*, and then press Enter to gain access to the **ntdsutil** prompt. Type *q*, and then press Enter to quit the Ntdsutil utility.
+8. At the **fsmo maintenance** prompt, type _q_, and then press Enter to gain access to the **ntdsutil** prompt. Type _q_, and then press Enter to quit the Ntdsutil utility.
 
 ## Considerations when repairing or removing previous role holders
 
@@ -190,17 +189,16 @@ The following table identifies the FMSO roles that can cause problems if a fores
 |RID master|Yes|
 |PDC emulator|No|
 |Infrastructure master|No|
-|||
-
+  
 This issue does not affect the PDC Emulator master or the Infrastructure master. These role holders do not persist operational data. Additionally, the Infrastructure master does not make changes often. Therefore, if multiple islands have these role holders, you can reintegrate the islands without causing long-term issues.
 
-The Schema master, the Domain Naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
+The Schema master, the Domain naming master, and the RID master can create objects and persist changes in Active Directory. Each island that has one of these role holders could have duplicate and conflicting schema objects, domains, or RID pools by the time that you restore replication. Before you reintegrate islands, determine which role holders to keep. Remove any duplicate Schema masters, Domain Naming masters, and RID masters by following the repair, removal, and cleanup procedures that are mentioned in this article.
 
 ## References
 
 For more information, see:
 
-- [Active Directory FSMO roles in Windows](https://docs.microsoft.com/troubleshoot/windows-server/identity/fsmo-roles)
+- [Active Directory FSMO roles in Windows](/troubleshoot/windows-server/identity/fsmo-roles)
 - [FSMO placement and optimization on Active Directory domain controllers](https://support.microsoft.com/help/223346)
 - [Flexible Single Master Operation Transfer and Seizure Process](https://support.microsoft.com/help/223787)
 - [HOW TO: Use Ntdsutil to find and clean up duplicate security identifiers in Windows Server](https://support.microsoft.com/help/816099)
@@ -211,4 +209,4 @@ For more information, see:
 - [AD Forest Recovery - Seizing an operations master role](/windows-server/identity/ad-ds/manage/ad-forest-recovery-seizing-operations-master-role)
 - [To clean up server metadata by using Ntdsutil](/windows-server/identity/ad-ds/deploy/ad-ds-metadata-cleanup#to-clean-up-server-metadata-by-using-ntdsutil)
 - [Planning Operations Master Role Placement](/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/addsadministration/move-addirectoryserveroperationmasterrole?view=win10-ps&preserve-view=true)
+- [Move-ADDirectoryServerOperationMasterRole](/powershell/module/activedirectory/move-addirectoryserveroperationmasterrole)

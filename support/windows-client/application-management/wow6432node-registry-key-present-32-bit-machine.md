@@ -1,23 +1,23 @@
 ---
 title: WOW6432Node listed in 32-bit version of Windows
 description: Fixes an issue in which a registry subkey labeled Wow6432Node is listed in system registry on x86 machines.
-ms.data: 09/08/2020
+ms.date: 09/08/2020
 author: Deland-Han
 ms.author: delhan
-manager: dscontentpm
+manager: dcscontentpm
 audience: itpro
 ms.topic: troubleshooting
 ms.prod: windows-client
 localization_priority: medium
 ms.reviewer: kaushika
-ms.prod-support-area-path: 1st Party Applications
+ms.custom: sap:1st-party-applications, csstroubleshoot
 ms.technology: windows-client-application-compatibility
 ---
 # Registry key WOW6432Node may be listed in system registry in 32 bit (x86) version of Windows 7
 
 This article fixes an issue in which a registry subkey labeled Wow6432Node is listed in system registry on x86 machines.
 
-_Original product version:_ &nbsp; Windows 7 Service Pack 1  
+_Applies to:_ &nbsp; Windows 7 Service Pack 1  
 _Original KB number:_ &nbsp; 2582176
 
 ## Symptoms
@@ -33,7 +33,7 @@ Consider the following scenario:
 
 In this scenario, you may notice a registry subkey labeled **Wow6432Node** and feel that the system may have been incorrectly installed or upgraded.
 
-![Wow6432Node registry subkey](./media/wow6432node-registry-key-present-32-bit-machine/wow6432node-registry-key.jpg)
+:::image type="content" source="media/wow6432node-registry-key-present-32-bit-machine/wow6432node-registry-key.png" alt-text="Locate the Wow6432Node registry subkey in Registry Editor." border="false":::
 
 ## Cause
 

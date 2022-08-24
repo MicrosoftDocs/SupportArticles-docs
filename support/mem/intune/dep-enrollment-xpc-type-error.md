@@ -1,19 +1,17 @@
 ---
-title: DEP enrollment error XPC_TYPE_ERROR
-description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple DEP device.
-ms.date: 03/30/2020
-ms.prod-support-area-path: iOS/iPadOS enrollment
+title: Apple Automated Device Enrollment (ADE) Intune enrollment error XPC_TYPE_ERROR
+description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple ADE device in Microsoft.
+ms.date: 12/23/2021
+search.appverid: MET150
+ms.custom: sap:iOS/iPadOS enrollment
 ---
-# DEP enrollment error 'XPC_TYPE_ERROR Connection invalid'
+# ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'
 
-This article helps you fix an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple DEP device.
-
-_Original product version:_ &nbsp; Microsoft Intune  
-_Original KB number:_ &nbsp; 4490646
+This article helps you fix an issue in which you receive error 'XPC_TYPE_ERROR Connection invalid' during enrolling an Apple [Automated Device Enrollment (ADE)](https://support.apple.com/en-us/HT204142) device.
 
 ## Symptom
 
-When you turn on an Apple [Device Enrollment Program (DEP)](https://deploy.apple.com/) device that's assigned an Intune enrollment profile, you receive an error message that resembles the following:
+When you turn on an Apple ADE device that's assigned an Intune enrollment profile, you receive an error message that resembles the following:
 
 > mobileassetd[83] \<Notice>: 0x1a49aebc0 Client connection: XPC_TYPE_ERROR Connection invalid <error: 0x1a49aebc0> { count = 1, transaction: 0, voucher = 0x0, contents = 'XPCErrorDescription' => \<string: 0x1a49aee18> { length = 18, contents = 'Connection invalid' } }  
 > iPhone mobileassetd[83] \<Notice>: Client connection invalid (Connection invalid); terminating connection  
@@ -22,10 +20,10 @@ When you turn on an Apple [Device Enrollment Program (DEP)](https://deploy.apple
 
 ## Cause
 
-This issue occurs if there's a connection problem between the device and the Apple DEP service.
+This issue occurs if there's a connection problem between the device and the Apple ADE service.
 
 ## Resolution
 
 To fix this issue, fix the connection problem, or use a different network connection to enroll the device. If the issue persists, contact [Apple support](https://support.apple.com).
 
-For more information about how to enroll DEP devices, see [Automatically enroll iOS devices with Apple's Device Enrollment Program](/mem/intune/enrollment/device-enrollment-program-enroll-ios).
+For more information about how to enroll ADE devices, see [Automatically enroll iOS/iPadOS devices](/mem/intune/enrollment/device-enrollment-program-enroll-ios).

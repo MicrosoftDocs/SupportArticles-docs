@@ -2,7 +2,6 @@
 title: ReflectionTypeLoadException error
 description: Describes an issue that triggers a ReflectionTypeLoadException error after you apply an update rollup to System Center 2012 R2 Virtual Machine Manager.
 ms.date: 07/15/2020
-ms.prod-support-area-path: 
 ms.reviewer: ctimon, markstan
 ---
 # VMM service doesn't start and returns ReflectionTypeLoadException after you apply an update rollup

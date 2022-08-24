@@ -2,7 +2,6 @@
 title: Windows Installer source list update fails
 description: Windows Installer source list doesn't update when Configuration Manager clients communicate with distribution points by using HTTPS.
 ms.date: 09/11/2020
-ms.prod-support-area-path:
 ---
 # Windows Installer source list update fails when distribution points are configured for HTTPS
 
@@ -34,7 +33,7 @@ To work around the issue, use one of the following methods:
 - Use HTTP for communication from clients to distribution points if you can.
 - For packages, enable **Copy the content in this package to a package share on distribution points** in the package properties.
 
-  For applications, add the location of the application source to the following Windows Installer source list registry subkeys:
+  For applications, add the location of the application source to the following Windows Installer source list registry subkeys:
 
   - `HKEY_CLASSES_ROOT\Installer\Products\<product code>\SourceList\Net`
   - `HKEY_CURRENT_USER\Software\Microsoft\Installer\Products\<product code>\SourceList\Net`
