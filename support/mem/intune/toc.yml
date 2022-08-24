@@ -124,9 +124,7 @@ items:
   - name: Troubleshoot PKCS certificate deployment
     href: troubleshoot-pkcs-certificate-profiles.md
   - name: Intune Certificate Connector events and diagnostic codes
-    href: troubleshoot-certificate-connector-events.md
-  - name: Reinstall the Intune Certificate Connector
-    href: reinstall-the-intune-connector.md
+    href: troubleshoot-certificate-connector-events.md  
   - name: Intune Connector Setup Wizard ended prematurely
     href: connector-setup-wizard-ends-prematurely.md
   - name: Sign in to Intune NDES Connector error 0x80004003
