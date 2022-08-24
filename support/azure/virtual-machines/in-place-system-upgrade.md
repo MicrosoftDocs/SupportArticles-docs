@@ -53,7 +53,7 @@ In-place system upgrades are supported for specific versions of Azure Windows VM
 
 This process requires 45-60 minutes to complete and for the VM to restart. To do the in-place system upgrade, follow these steps:
 
-1. Take a snapshot of the OS disk of the VM as a backup before you run in-place upgrade. For more information, see [Snapshot a disk](azure/virtual-machines/snapshot-copy-managed-disk).
+1. Take a snapshot of the OS disk of the VM as a backup before you run in-place upgrade. For more information, see [Snapshot a disk](/azure/virtual-machines/snapshot-copy-managed-disk).
 2. Verify that the Windows 10 VM doesn't use [Ephemeral OS Disk](/azure/virtual-machines/ephemeral-os-disks). This feature is currently not supported.
 3. Verify that the Windows 10 VM has at least 2 GB of RAM, and 12 GB of free disk space on the system disk.
 4. To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
@@ -73,7 +73,7 @@ If you have general questions about this procedure, post to [Microsoft Q&A](/ans
 
 To work around this issue, create an Azure VM that's running a supported version. And then either migrate the workload (Method 1, preferred), or download and upgrade the VHD of the VM (Method 2).
 
-Take a snapshot of the OS disk of the affected VM as a backup before you run in-place upgrade or migrate the workload. For more information, see [Snapshot a disk](azure/virtual-machines/snapshot-copy-managed-disk).
+Take a snapshot of the OS disk of the affected VM as a backup before you run in-place upgrade or migrate the workload. For more information, see [Snapshot a disk](/azure/virtual-machines/snapshot-copy-managed-disk).
 
 ### Method 1: Deploy a newer system and migrate the workload
 
