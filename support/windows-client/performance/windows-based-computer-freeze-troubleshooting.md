@@ -1,24 +1,19 @@
 ---
 title: Windows-based computer freeze troubleshooting
 description: Learn how to troubleshoot computer freeze issues on Windows-based computers and servers. Also, you can learn how to diagnose, identify, and fix these issues.
+ms.date: 08/24/2022
 ms.prod: windows-client
 ms.technology: windows-client-performance
 ms.topic: troubleshooting
 author: aczechowski
 ms.author: aaroncz
 manager: dcscontentpm
-ms.reviewer: 
-ms.localizationpriority: medium
 ms.collection: highpri
-old_title: Advanced troubleshooting for Windows freezes
-old_ms.prod: w10
-old_ms.technology: windows
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-old_manager: dougeby
+ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-
 # Advanced troubleshooting for Windows freezes
 
 This article describes how to troubleshoot freeze issues on Windows-based computers and servers. It also provides methods for collecting data that will help administrators or software developers diagnose, identify, and fix these issues.
@@ -46,8 +41,8 @@ If the physical computer or the virtual machine is still freezing, use one or mo
 - Try to access the computer through a remote desktop connection.
 - Use a domain account or local administrator account to sign in to the computer with the hardware manufacturer's remote access solution. For example, Dell Remote Access Card (DRAC), HP Integrated Lights-Out (iLo), or IBM Remote supervisor adapter (RSA).
 - Test ping to the computer. Look for dropped packets and high network latency.
-- Access administrative shares, for example `\\ServerName\c$`.
-- Press **Ctrl** + **Alt** + **Delete** and check the response.
+- Access administrative shares, for example *\\\\ServerName\\c$*.
+- Press Ctrl+Alt+Delete and check the response.
 - Try to use Windows remote administration tools. For example, Computer Management, Server Manager, and Wmimgmt.msc.
 
 ### For the computer that's no longer frozen
@@ -95,54 +90,47 @@ If the computer is no longer frozen and now is running in a good state, use the 
 
 1. Make sure that the computer is set up to get a complete memory dump file.
 
-    1. Go to **Run** and enter `Sysdm.cpl`, and then press enter.
+    1. Go to **Run** and enter *Sysdm.cpl*, and then press enter.
+    2. In **System Properties**, on the **Advanced** tab, select **Performance** > **Settings** > **Advanced**. Select **Change** to check or change the virtual memory.
+    3. Go back to **System Properties** > **Advanced** > **Settings** in **Startup and Recovery**.
+    4. In the **Write Debugging Information** section, select **Complete Memory Dump**.
+    5. Select **Overwrite any existing file**.
+    6. Make sure that there's a paging file (*pagefile.sys*) on the system drive and that it's at least 100 MB over the installed RAM (Initial and Maximum Size).
+    7. Make sure that there's more available space on the system drive than there's physical RAM.
 
-    1. In **System Properties**, on the **Advanced** tab, select **Performance** \> **Settings** \> **Advanced**. Select **Change** to check or change the virtual memory.
-
-    1. Go back to **System Properties** \> **Advanced** \> **Settings** in **Startup and Recovery**.
-
-    1. In the **Write Debugging Information** section, select **Complete Memory Dump**.
-
-    1. Select **Overwrite any existing file**.
-
-    1. Make sure that there's a paging file (pagefile.sys) on the system drive and that it's at least 100 MB over the installed RAM (Initial and Maximum Size).
-
-    1. Make sure that there's more available space on the system drive than there's physical RAM.
-
-1. To allow the system to generate a dump file by using the keyboard, enable the `CrashOnCtrlScroll` registry value.
+2. To allow the system to generate a dump file by using the keyboard, enable the `CrashOnCtrlScroll` registry value.
 
     1. Open the Registry Editor, and then locate the following registry keys:
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters`
-
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdhid\Parameters`
 
-    1. Create the following `CrashOnCtrlScroll` registry entry in the two registry keys:
+    2. Create the following `CrashOnCtrlScroll` registry entry in the two registry keys:
 
-        - **Value Name**: `CrashOnCtrlScroll`
-        - **Data Type**: `REG_DWORD`
-        - **Value**: `1`
+        - Value Name: `CrashOnCtrlScroll`
+        - Data Type: **REG_DWORD**
+        - Value: **1**
 
-    1. Close the Registry Editor and restart the computer.
+    3. Close the Registry Editor and restart the computer.
 
-1. On some physical computers running earlier versions of Windows, you may generate a nonmakeable interruption (NMI) from a web interface feature such as DRAC, iLo, or RSA. However, by default, this setting will stop the system without creating a memory dump.
+3. On some physical computers running earlier versions of Windows, you may generate a nonmakeable interruption (NMI) from a web interface feature such as DRAC, iLo, or RSA. However, by default, this setting will stop the system without creating a memory dump.
 
     > [!NOTE]
     > For currently supported versions of Windows, the `NMICrashDump` registry key is no longer required. An NMI causes a [Stop error that follows a memory dump data collection](/troubleshoot/windows-client/performance/nmi-hardware-failure-error).
 
-1. When the computer exhibits the problem, hold down the right **Ctrl** key, and press the **Scroll Lock** key two times to generate a memory dump file.
+4. When the computer exhibits the problem, hold down the right Ctrl key, and press the Scroll Lock key two times to generate a memory dump file.
 
     > [!NOTE]
-    > By default, the dump file is located in the following path: `%SystemRoot%\MEMORY.DMP`
+    > By default, the dump file is located in the following path: *%SystemRoot%\\MEMORY.DMP*.
 
 ### Method 2: Data sanity check
 
-Use the Dump Check Utility (Dumpchk.exe) to read a memory dump file. It can also verify that the file was created correctly and isn't corrupted or invalid.
+Use the Dump Check Utility (*Dumpchk.exe*) to read a memory dump file. It can also verify that the file was created correctly and isn't corrupted or invalid.
 
 - [Using DumpChk](/windows-hardware/drivers/debugger/dumpchk)
 - [Download DumpChk](https://developer.microsoft.com/windows/downloads/windows-10-sdk)
 
-Learn how to use Dumpchk.exe to check your dump files:
+Learn how to use *Dumpchk.exe* to check your dump files:
 
 > [!VIDEO https://www.youtube.com/embed/xN7tOfgNKag]
 
@@ -150,22 +138,22 @@ Learn how to use Dumpchk.exe to check your dump files:
 
 You can use Windows Performance Monitor to examine how programs that you run affect your computer's performance, both in real time and by collecting log data for later analysis. To create performance counter and event trace log collections on local and remote systems, run the following commands in a command prompt as administrator:
 
-```command
+```console
 Logman create counter LOGNAME_Long -u DOMAIN\USERNAME * -f bincirc -v mmddhhmm -max 500 -c "\\COMPUTERNAME\LogicalDisk(*)\*" "\\COMPUTERNAME\Memory\*" "\\COMPUTERNAME\Network Interface(*)\*" "\\COMPUTERNAME\Paging File(*)\*" "\\COMPUTERNAME\PhysicalDisk(*)\*" "\\COMPUTERNAME\Process(*)\*" "\\COMPUTERNAME\Redirector\*" "\\COMPUTERNAME\Server\*" "\\COMPUTERNAME\System\*" "\\COMPUTERNAME\Terminal Services\*" "\\COMPUTERNAME\Processor(*)\*" "\\COMPUTERNAME\Cache\*" -si 00:05:00
 ```
 
-```command
+```console
 Logman create counter LOGNAME_Short -u DOMAIN\USERNAME * -f bincirc -v mmddhhmm -max 500 -c "\\COMPUTERNAME\LogicalDisk(*)\*" "\\COMPUTERNAME\Memory\*" "\\COMPUTERNAME\Network Interface(*)\*" "\\COMPUTERNAME\Paging File(*)\*" "\\COMPUTERNAME\PhysicalDisk(*)\*" "\\COMPUTERNAME\Process(*)\*" "\\COMPUTERNAME\Redirector\*" "\\COMPUTERNAME\Server\*" "\\COMPUTERNAME\System\*" "\\COMPUTERNAME\Terminal Services\*" "\\COMPUTERNAME\Processor(*)\*" "\\COMPUTERNAME\Cache\*" -si 00:00:10
 ```
 
 Then, you can start or stop the log by running the following commands:
 
-```command
+```console
 logman start LOGNAME_Long / LOGNAME_Short
 logman stop LOGNAME_Long / LOGNAME_Short
 ```
 
-The Performance Monitor log is located in the path: `C:\PERFLOGS`
+The Performance Monitor log is located in the path: *C:\\PERFLOGS*.
 
 ### Other methods to collect data
 
@@ -186,49 +174,48 @@ If the physical computer is still running in a frozen state, follow these steps 
         > [!NOTE]
         > In case accessing the OS isn't possible, try to remotely access Registry Editor on the computer. You can then check the type of memory dump file and page file with which the computer is currently configured.
 
-    1. From a remote computer that's preferably in the same network and subnet, go to **Registry Editor** \> **Connect Network Registry**. Then, connect to the affected computer, and verify the following settings:
+    2. From a remote computer that's preferably in the same network and subnet, go to **Registry Editor** > **Connect Network Registry**. Then, connect to the affected computer, and verify the following settings:
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\CrashDumpEnabled`
 
-            Make sure that the [CrashDumpEnabled](/previous-versions/windows/it-pro/windows-2000-server/cc976050(v=technet.10)) registry entry is `1`.
+            Make sure that the [CrashDumpEnabled](/previous-versions/windows/it-pro/windows-2000-server/cc976050(v=technet.10)) registry entry is **1**.
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl\NMICrashDump`
 
-            On some physical servers, if the NMICrashDump registry entry exists and its value is `1`, you may take advantage of the NMI from the remote management provider such as DRAC, iLo, and RSA.
+            On some physical servers, if the NMICrashDump registry entry exists and its value is **1**, you may take advantage of the NMI from the remote management provider such as DRAC, iLo, and RSA.
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PagingFiles and ExistingPageFiles`
 
-            If the value of the **Pagefile** registry entry is system-managed, the size won't be reflected in the registry. For example, `?:\pagefile.sys)`
+            If the value of the `Pagefile` registry entry is system-managed, the size won't be reflected in the registry. For example, `?:\pagefile.sys)`
 
-            If the page file is customized, the size will be reflected in the registry, such as `?:\pagefile.sys 1024 1124`. In this example, `1024` is the initial size and `1124` is the max size.
+            If the page file is customized, the size will be reflected in the registry, such as `?:\pagefile.sys 1024 1124`. In this example, 1024 is the initial size and 1124 is the max size.
 
             > [!NOTE]
-            > If the size isn't reflected in the Registry, try to access an administrative share where the page file is located. For example, `\\ServerName\C$`
+            > If the size isn't reflected in the Registry, try to access an administrative share where the page file is located. For example, *\\\\ServerName\\C$*.
 
-    1. Make sure that there's a paging file (pagefile.sys) on the system drive of the computer, and it's at least 100 MB over the installed RAM.
+    3. Make sure that there's a paging file (pagefile.sys) on the system drive of the computer, and it's at least 100 MB over the installed RAM.
 
-    1. Make sure that there's more free space on the hard disk drives of the computer than there's physical RAM.
+    4. Make sure that there's more free space on the hard disk drives of the computer than there's physical RAM.
 
-1. Enable the **CrashOnCtrlScroll** registry value on the computer to allow the system to generate a dump file by using the keyboard.
+2. Enable the **CrashOnCtrlScroll** registry value on the computer to allow the system to generate a dump file by using the keyboard.
 
-    1. From a remote computer preferably in the same network and subnet, go to Registry Editor \> Connect Network Registry. Connect to the affected computer and locate the following registry keys:
+    1. From a remote computer preferably in the same network and subnet, go to **Registry Editor** > **Connect Network Registry**. Connect to the affected computer and locate the following registry keys:
 
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\i8042prt\Parameters`
-
         - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\kbdhid\Parameters`
 
-    1. Create the following `CrashOnCtrlScroll` registry entry in the two registry keys:
+    2. Create the following `CrashOnCtrlScroll` registry entry in the two registry keys:
 
-        **Value Name**: `CrashOnCtrlScroll`
-        **Data Type**: `REG_DWORD`
-        **Value**: `1`
+        Value Name: `CrashOnCtrlScroll`
+        Data Type: **REG_DWORD**
+        Value: **1**
 
-    1. Close the Registry Editor and restart the computer.
+    3. Close the Registry Editor and restart the computer.
 
-1. When the computer exhibits the problem, hold down the right **CTRL** key, and press the **Scroll Lock** key two times to generate a memory dump.
+3. When the computer exhibits the problem, hold down the right Ctrl key, and press the Scroll Lock key two times to generate a memory dump.
 
     > [!NOTE]
-    > By default, the dump file is located in the path: `%SystemRoot%\MEMORY.DMP`
+    > By default, the dump file is located in the path: *%SystemRoot%\\MEMORY.DMP*.
 
 ### Use Pool Monitor to collect data for the physical computer that is no longer frozen
 
@@ -256,11 +243,12 @@ You can use VMware snapshots or suspend state and extract a memory dump file equ
 
 #### Citrix XenServer
 
-The memory dump process occurs by pressing the RIGHT CTRL + SCROLL LOCK + SCROLL LOCK keyboard combination. For more information, see Method 1 of [How to Trigger a Memory Dump from a Windows Virtual Machine Running on XenServer](https://support.citrix.com/article/ctx123177) from Citrix.
+The memory dump process occurs by pressing the Right Ctrl+Scroll Lock+Scroll Lock keyboard combination. For more information, see Method 1 of [How to Trigger a Memory Dump from a Windows Virtual Machine Running on XenServer](https://support.citrix.com/article/ctx123177) from Citrix.
 
 ## Space limitations on the system drive in Windows Server
 
 On a Windows Server, you may not have enough free disk space to generate a complete memory dump file on the system volume.
+
 There's a second option if the system drive doesn't have sufficient space. You can use the DedicatedDumpFile registry entry. For more information, see [Configure the destination path for a memory dump](/windows-server/administration/server-core/server-core-memory-dump#step-2-configure-the-destination-path-for-a-memory-dump).
 
 For more information, see [How to use the DedicatedDumpFile registry value to overcome space limitations on the system drive](/archive/blogs/ntdebugging/how-to-use-the-dedicateddumpfile-registry-value-to-overcome-space-limitations-on-the-system-drive-when-capturing-a-system-memory-dump).

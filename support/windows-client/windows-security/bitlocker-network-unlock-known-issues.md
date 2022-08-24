@@ -1,9 +1,9 @@
 ---
 title: 'BitLocker Network Unlock: known issues'
 description: Describes several known issues that you may encounter while using network unlock, and provided guidance for addressing those issues.
+ms.date: 08/24/2022
 ms.technology: windows-client-security
 ms.prod: windows-client
-ms.localizationpriority: medium
 author: v-tappelgate
 ms.author: v-tappelgate
 manager: dcscontentpm
@@ -11,15 +11,9 @@ ms.reviewer: kaushika
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
 ms.custom: sap:bitlocker, csstroubleshoot
-old_title: BitLocker network unlock known issues
-old_ms.prod: m365-security
-old_ms.technology: windows-sec
-old_ms.custom: bitlocker
-old_manager: kaushika
 audience: itpro
 localization_priority: medium
 ---
-
 # BitLocker network unlock: known issues
 
 By using the BitLocker network unlock feature, you can manage computers remotely without having to enter a BitLocker PIN when each computer starts up. To configure this behavior, your environment needs to meet the following requirements:
@@ -29,7 +23,7 @@ By using the BitLocker network unlock feature, you can manage computers remotely
 - The internal network uses DHCP to manage IP addresses.
 - Each computer has a DHCP driver implemented in its Unified Extensible Firmware Interface (UEFI) firmware.
 
-For general guidelines about how to troubleshoot network unlock, see [How to enable network unlock: Troubleshoot network unlock](./bitlocker-how-to-enable-network-unlock.md#troubleshoot-network-unlock).
+For general guidelines about how to troubleshoot network unlock, see [How to enable network unlock: Troubleshoot network unlock](/windows/security/information-protection/bitlocker/bitlocker-how-to-enable-network-unlock#troubleshoot-network-unlock).
 
 This article describes several known issues that you may encounter when you use network unlock, and provides guidance to address these issues.
 
@@ -39,43 +33,44 @@ You can use the following steps on computers with either x64 or x32 UEFI firmwar
 
 1. Open an elevated command prompt window and run the following command:
 
-   ```cmd
+   ```console
    manage-bde -protectors -get <Drive>
    ```
-   
-   ```cmd
+
+   ```console
    manage-bde -protectors -get C:
    ```
 
    Where `<Drive>` is the drive letter, followed by a colon (`:`), of the bootable drive.
-   If the output of this command includes a key protector of type **TpmCertificate (9)**, the configuration is correct for BitLocker network unlock.
+   If the output of this command includes a key protector of type `TpmCertificate (9)`, the configuration is correct for BitLocker network unlock.
 
-1. Start Registry Editor, and verify the following settings:
-   - Entry `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE: OSManageNKP` is set to `1`.
+2. Start Registry Editor, and verify the following settings:
+
+   - Entry `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\FVE: OSManageNKP` is set to **1**.
    - Subkey `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates\FVE_NKP\Certificates` has an entry whose name matches the name of the certificate thumbprint of the network unlock key protector that you found in step 1.
 
-## 1. On a Surface Pro 4 device, BitLocker network unlock doesn't work because the UEFI network stack is incorrectly configured
+## Issue 1: On a Surface Pro 4 device, BitLocker network unlock doesn't work because the UEFI network stack is incorrectly configured
 
 You've configured BitLocker network unlock as described in [BitLocker: How to enable network unlock](/windows/device-security/bitlocker/bitlocker-how-to-enable-network-unlock). You've configured the UEFI of the device to use DHCP. However, when you restart the device, it still prompts you for the BitLocker PIN.  
 
 You test another device, such as a different type of tablet or laptop PC that's configured to use the same infrastructure. The device restarts as expected, without prompting for the BitLocker PIN. You conclude that the infrastructure is correctly configured, and the issue is specific to the device.
 
-### Cause of issue 1
+### Cause
 
 The UEFI network stack on the device was incorrectly configured.
 
-### Resolution for issue 1
+### Resolution
 
 To correctly configure the UEFI network stack of the Surface Pro 4, you have to use Microsoft Surface Enterprise Management Mode (SEMM). For information about SEMM, see [Enroll and configure Surface devices with SEMM](/surface/enroll-and-configure-surface-devices-with-semm).
 
 > [!NOTE]
 > If you cannot use SEMM, you may be able to configure the Surface Pro 4 to use BitLocker network unlock by configuring the device to use the network as its first boot option.
 
-## 2. Unable to use BitLocker network unlock feature on a Windows client computer
+## Issue 2: Unable to use BitLocker network unlock feature on a Windows client computer
 
 You have configured BitLocker network unlock as described in [BitLocker: How to enable network unlock](/windows/device-security/bitlocker/bitlocker-how-to-enable-network-unlock). You have a Windows 8 client computer that is connected to the internal network with an ethernet cable. However, when you restart the computer, it still prompts you for the BitLocker PIN.
 
-### Cause of issue 2
+### Cause
 
 A Windows 8-based or Windows Server 2012-based client computer sometimes doesn't receive or use the network unlock protector, depending on whether the client receives unrelated BOOTP replies from a DHCP server or WDS server.
 
@@ -92,6 +87,6 @@ If a DHCP server that isn't configured to support BOOTP clients receives a BOOTR
 
 For more information about DHCP and BitLocker network unlock, see [BitLocker: How to enable network unlock: network unlock sequence](/windows/device-security/bitlocker/bitlocker-how-to-enable-network-unlock#network-unlock-sequence).
 
-### Resolution for issue 2
+### Resolution
 
 To resolve this issue, change the configuration of the DHCP server by changing the **DHCP** option from **DHCP and BOOTP** to **DHCP**.

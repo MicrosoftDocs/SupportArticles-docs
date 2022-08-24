@@ -1,25 +1,19 @@
 ---
 title: Windows boot issues troubleshooting
 description: Learn to troubleshoot when Windows can't boot. This article includes advanced troubleshooting techniques intended for use by support agents and IT professionals.
+ms.date: 08/24/2022
 ms.prod: windows-client
 ms.technology: windows-client-performance
-ms.localizationpriority: medium
-ms.date: 06/02/2022
 author: aczechowski
 ms.author: aaroncz
-ms.reviewer: 
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.collection: highpri
-old_title: Advanced troubleshooting for Windows boot problems
-old_ms.prod: w10
-old_ms.technology: windows
 ms.custom: sap:no-boot-not-bugchecks, csstroubleshoot
-old_manager: dougeby
+ms.reviewer: dougeby
 audience: itpro
 localization_priority: medium
 ---
-
 # Advanced troubleshooting for Windows boot problems
 
 <p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=boot" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues.</span>
@@ -40,13 +34,10 @@ There are several reasons why a Windows-based computer may have problems during 
 |     3     |  Windows OS Loader   | %SystemRoot%\system32\winload.exe  | %SystemRoot%\system32\winload.efi |
 |     4     | Windows NT OS Kernel | %SystemRoot%\system32\ntoskrnl.exe |                                   |
 
-1. **PreBoot**: The PC's firmware initiates a power-on self test (POST) and loads firmware settings. This pre-boot process ends when a valid system disk is detected. Firmware reads the master boot record (MBR), and then starts Windows Boot Manager.
-
-2. **Windows Boot Manager**: Windows Boot Manager finds and starts the Windows loader (Winload.exe) on the Windows boot partition.
-
-3. **Windows operating system loader**: Essential drivers required to start the Windows kernel are loaded and the kernel starts to run.
-
-4. **Windows NT OS Kernel**: The kernel loads into memory the system registry hive and other drivers that are marked as BOOT_START.
+1. PreBoot: The PC's firmware initiates a power-on self test (POST) and loads firmware settings. This pre-boot process ends when a valid system disk is detected. Firmware reads the master boot record (MBR), and then starts Windows Boot Manager.
+2. Windows Boot Manager: Windows Boot Manager finds and starts the Windows loader (Winload.exe) on the Windows boot partition.
+3. Windows operating system loader: Essential drivers required to start the Windows kernel are loaded and the kernel starts to run.
+4. Windows NT OS Kernel: The kernel loads into memory the system registry hive and other drivers that are marked as BOOT_START.
 
     The kernel passes control to the session manager process (Smss.exe) which initializes the system session, and loads and starts the devices and drivers that aren't marked BOOT_START.
 
@@ -72,9 +63,7 @@ Each phase has a different approach to troubleshooting. This article provides tr
 To determine whether the system has passed the BIOS phase, follow these steps:
 
 1. If there are any external peripherals connected to the computer, disconnect them.
-
 2. Check whether the hard disk drive light on the physical computer is working. If it's not working, this dysfunction indicates that the startup process is stuck at the BIOS phase.
-
 3. Press the NumLock key to see whether the indicator light toggles on and off. If it doesn't toggle, this dysfunction indicates that the startup process is stuck at BIOS.
 
    If the system is stuck at the BIOS phase, there may be a hardware problem.
@@ -90,9 +79,9 @@ If the screen is black except for a blinking cursor, or if you receive one of th
 - Bootmgr missing or corrupted
 - Unable to boot due to system hive missing or corrupted
 
-To troubleshoot this problem, use Windows installation media to start the computer, press **Shift** + **F10** for a command prompt, and then use any of the following methods.
+To troubleshoot this problem, use Windows installation media to start the computer, press Shift+F10 for a command prompt, and then use any of the following methods.
 
-### Method 1: Startup Repair tool
+### Method 1: Startup repair tool
 
 The Startup Repair tool automatically fixes many common problems. The tool also lets you quickly diagnose and repair more complex startup problems. When the computer detects a startup problem, the computer starts the Startup Repair tool. When the tool starts, it performs diagnostics. These diagnostics include analyzing startup log files to determine the cause of the problem. When the Startup Repair tool determines the cause, the tool tries to fix the problem automatically.
 
@@ -102,32 +91,28 @@ To do this task of invoking the Startup Repair tool, follow these steps.
 > For additional methods to start WinRE, see [Windows Recovery Environment (Windows RE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference#entry-points-into-winre).
 
 1. Start the system to the installation media for the installed version of Windows. For more information, see [Create installation media for Windows](https://support.microsoft.com/windows/create-installation-media-for-windows-99a58364-8c02-206f-aa6f-40c3b507420d).
-
 2. On the **Install Windows** screen, select **Next** > **Repair your computer**.
-
 3. On the **Choose an option** screen, select **Troubleshoot**.
-
 4. On the **Advanced options** screen, select **Startup Repair**.
-
 5. After Startup Repair, select **Shutdown**, then turn on your PC to see if Windows can boot properly.
 
 The Startup Repair tool generates a log file to help you understand the startup problems and the repairs that were made. You can find the log file in the following location:
 
-`%windir%\System32\LogFiles\Srt\Srttrail.txt`
+*%windir%\\System32\\LogFiles\\Srt\\Srttrail.txt*
 
 For more information, see [Troubleshoot blue screen errors](https://support.microsoft.com/sbs/windows/troubleshoot-blue-screen-errors-5c62726c-6489-52da-a372-3f73142c14ad).
 
-### Method 2: Repair Boot Codes
+### Method 2: Repair boot codes
 
 To repair boot codes, run the following command:
 
-```command
+```console
 BOOTREC /FIXMBR
 ```
 
 To repair the boot sector, run the following command:
 
-```command
+```console
 BOOTREC /FIXBOOT
 ```
 
@@ -140,15 +125,14 @@ If you receive BCD-related errors, follow these steps:
 
 1. Scan for all the systems that are installed. To do this step, run the following command:
 
-   ```command
+   ```console
    Bootrec /ScanOS
    ```
 
 2. Restart the computer to check whether the problem is fixed.
-
 3. If the problem isn't fixed, run the following commands:
 
-    ```command
+    ```console
     bcdedit /export c:\bcdbackup
     
     attrib c:\boot\bcd -r -s -h
@@ -165,49 +149,46 @@ If you receive BCD-related errors, follow these steps:
 If methods 1, 2 and 3 don't fix the problem, replace the Bootmgr file from drive C to the System Reserved partition. To do this replacement, follow these steps:
 
 1. At a command prompt, change the directory to the System Reserved partition.
-
 2. Run the `attrib` command to unhide the file:
 
-    ```command
+    ```console
     attrib -r -s -h
     ```
 
 3. Navigate to the system drive and run the same command:
 
-    ```command
+    ```console
     attrib -r -s -h
     ```
 
-4. Rename the `bootmgr` file as `bootmgr.old`:
+4. Rename the bootmgr file as *bootmgr.old*:
 
-    ```command
+    ```console
     ren c:\bootmgr bootmgr.old
     ```
 
 5. Navigate to the system drive.
-
-6. Copy the `bootmgr` file, and then paste it to the System Reserved partition.
-
+6. Copy the bootmgr file, and then paste it to the System Reserved partition.
 7. Restart the computer.
 
 ### Method 5: Restore system hive
 
-If Windows can't load the system registry hive into memory, you must restore the system hive. To do this step, use the Windows Recovery Environment or use the Emergency Repair Disk (ERD) to copy the files from the `C:\Windows\System32\config\RegBack` directory to `C:\Windows\System32\config`.
+If Windows can't load the system registry hive into memory, you must restore the system hive. To do this step, use the Windows Recovery Environment or use the Emergency Repair Disk (ERD) to copy the files from the *C:\\Windows\\System32\\config\\RegBack* directory to *C:\\Windows\\System32\\config*.
 
 If the problem persists, you may want to restore the system state backup to an alternative location, and then retrieve the registry hives to be replaced.
 
 > [!NOTE]
-> Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder.This change is by design, and is intended to help reduce the overall disk footprint size of Windows. To recover a system with a corrupt registry hive, Microsoft recommends that you use a system restore point. For more information, see [The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803](/troubleshoot/windows-client/deployment/system-registry-no-backed-up-regback-folder).
+> Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder.This change is by design, and is intended to help reduce the overall disk footprint size of Windows. To recover a system with a corrupt registry hive, Microsoft recommends that you use a system restore point. For more information, see [The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803](../deployment/system-registry-no-backed-up-regback-folder.md).
 
-## Kernel Phase
+## Kernel phase
 
 If the system gets stuck during the kernel phase, you experience multiple symptoms or receive multiple error messages. These error messages include, but aren't limited to, the following examples:
 
 - A Stop error appears after the splash screen (Windows Logo screen).
 
 - Specific error code is displayed. For example, `0x00000C2` , `0x0000007B` , or `inaccessible boot device`.
-  - [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](./troubleshoot-inaccessible-boot-device.md)
-  - [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](troubleshoot-event-id-41-restart.md)
+  - [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](./stop-error-7b-or-inaccessible-boot-device-troubleshooting.md)
+  - [Advanced troubleshooting for Event ID 41 "The system has rebooted without cleanly shutting down first"](/windows/client-management/troubleshoot-event-id-41-restart)
 
 - The screen is stuck at the "spinning wheel" (rolling dots) "system busy" icon.
 
@@ -255,41 +236,35 @@ If the computer starts in Disable Driver Signature mode, start the computer in D
 > [!WARNING]
 > Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft can't guarantee that these problems can be solved. Modify the registry at your own risk.
 
-*Error code INACCESSIBLE_BOOT_DEVICE (STOP 0x7B)*
+> Error code INACCESSIBLE_BOOT_DEVICE (STOP 0x7B)
 
 To troubleshoot this Stop error, follow these steps to filter the drivers:
 
 1. Go to Windows Recovery Environment (WinRE) by putting an ISO disk of the system in the disk drive. The ISO should be of the same version of Windows or a later version.
-
 2. Open the registry.
-
-3. Load the system hive, and name it **test**.
-
+3. Load the system hive, and name it *test*.
 4. Under the following registry subkey, check for lower filter and upper filter items for non-Microsoft drivers:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Class`
 
 5. For each third-party driver that you locate, select the upper or lower filter, and then delete the value data.
-
 6. Search through the whole registry for similar items. Process as appropriate, and then unload the registry hive.
-
 7. Restart the server in Normal mode.
 
-For more troubleshooting steps, see [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](./troubleshoot-inaccessible-boot-device.md).
+For more troubleshooting steps, see [Advanced troubleshooting for Stop error 7B or Inaccessible_Boot_Device](./stop-error-7b-or-inaccessible-boot-device-troubleshooting.md).
 
 To fix problems that occur after you install Windows updates, check for pending updates by using these steps:
 
 1. Open a Command Prompt window in WinRE.
-
 2. Run the command:
 
-    ```command
+    ```console
     DISM /image:C:\ /get-packages
     ```
 
 3. If there are any pending updates, uninstall them by running the following commands:
 
-    ```command
+    ```console
     DISM /image:C:\ /remove-package /packagename: name of the package
 
     DISM /Image:C:\ /Cleanup-Image /RevertPendingActions
@@ -300,48 +275,36 @@ To fix problems that occur after you install Windows updates, check for pending 
 If the computer doesn't start, follow these steps:
 
 1. Open a command prompt window in WinRE, and start a text editor, such as Notepad.
-
-2. Navigate to the system drive, and search for `windows\winsxs\pending.xml`.
-
-3. If the pending.xml file is found, rename the file as `pending.xml.old`.
-
+2. Navigate to the system drive, and search for *windows\\winsxs\\pending.xml*.
+3. If the *pending.xml* file is found, rename the file as *pending.xml.old*.
 4. Open the registry, and then load the component hive in HKEY_LOCAL_MACHINE as test.
-
-5. Highlight the loaded test hive, and then search for the `pendingxmlidentifier` value.
-
-6. If the `pendingxmlidentifier` value exists, delete it.
-
+5. Highlight the loaded test hive, and then search for the pendingxmlidentifier value.
+6. If the pendingxmlidentifier value exists, delete it.
 7. Unload the test hive.
-
-8. Load the system hive, name it **test**.
-
+8. Load the system hive, name it *test*.
 9. Navigate to the following subkey:
 
     `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\TrustedInstaller`
 
-10. Change the **Start** value from `1` to `4`.
-
+10. Change the **Start** value from **1** to **4**.
 11. Unload the hive.
-
 12. Try to start the computer.
 
-If the Stop error occurs late in the startup process, or if the Stop error is still being generated, you can capture a memory dump. A good memory dump can help determine the root cause of the Stop error. For more information, see [Generate a kernel or complete crash dump](./generate-kernel-or-complete-crash-dump.md).
+If the Stop error occurs late in the startup process, or if the Stop error is still being generated, you can capture a memory dump. A good memory dump can help determine the root cause of the Stop error. For more information, see [Generate a kernel or complete crash dump](./generate-a-kernel-or-complete-crash-dump.md).
 
-For more information about page file problems in Windows 10 or Windows Server 2016, see [Introduction to page files](./introduction-page-file.md).
+For more information about page file problems in Windows 10 or Windows Server 2016, see [Introduction to page files](./introduction-to-the-page-file.md).
 
-For more information about Stop errors, see [Advanced troubleshooting for Stop error or blue screen error issue](./troubleshoot-stop-errors.md).
+For more information about Stop errors, see [Advanced troubleshooting for Stop error or blue screen error issue](./stop-error-or-blue-screen-error-troubleshooting.md).
 
-Sometimes the dump file shows an error that's related to a driver. For example, `windows\system32\drivers\stcvsm.sys` is missing or corrupted. In this instance, follow these guidelines:
+Sometimes the dump file shows an error that's related to a driver. For example, *windows\\system32\\drivers\\stcvsm.sys* is missing or corrupted. In this instance, follow these guidelines:
 
 - Check the functionality that's provided by the driver. If the driver is a third-party boot driver, make sure that you understand what it does.
-
 - If the driver isn't important and has no dependencies, load the system hive, and then disable the driver.
-
 - If the stop error indicates system file corruption, run the system file checker in offline mode.
 
   - To do this action, open WinRE, open a command prompt, and then run the following command:
 
-    ```command
+    ```console
     SFC /Scannow /OffBootDir=C:\ /OffWinDir=C:\Windows
     ```
 
@@ -349,7 +312,7 @@ Sometimes the dump file shows an error that's related to a driver. For example, 
 
   - If there's disk corruption, run the check disk command:
 
-    ```command
+    ```console
     chkdsk /f /r
     ```
 
@@ -357,9 +320,9 @@ Sometimes the dump file shows an error that's related to a driver. For example, 
 
   1. Start WinRE, and open a command prompt window.
   2. Start a text editor, such as Notepad.
-  3. Navigate to `C:\Windows\System32\Config\`.
+  3. Navigate to *C:\\Windows\\System32\\Config\\*.
   4. Rename the all five hives by appending `.old` to the name.
-  5. Copy all the hives from the `Regback` folder, paste them in the `Config` folder, and then try to start the computer in Normal mode.
+  5. Copy all the hives from the *Regback* folder, paste them in the *Config* folder, and then try to start the computer in Normal mode.
 
 > [!NOTE]
-> Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder.This change is by design, and is intended to help reduce the overall disk footprint size of Windows. To recover a system with a corrupt registry hive, Microsoft recommends that you use a system restore point. For more information, see [The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803](/troubleshoot/windows-client/deployment/system-registry-no-backed-up-regback-folder).
+> Starting in Windows 10, version 1803, Windows no longer automatically backs up the system registry to the RegBack folder.This change is by design, and is intended to help reduce the overall disk footprint size of Windows. To recover a system with a corrupt registry hive, Microsoft recommends that you use a system restore point. For more information, see [The system registry is no longer backed up to the RegBack folder starting in Windows 10 version 1803](../deployment/system-registry-no-backed-up-regback-folder.md).
