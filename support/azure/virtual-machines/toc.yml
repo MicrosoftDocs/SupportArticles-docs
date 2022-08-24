@@ -208,8 +208,6 @@
   items:
   - name: Linux
     items:
-    - name: Configure multiple NICs
-      href: linux-vm-multiple-virtual-network-interfaces-configuration.md
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting
@@ -314,6 +312,11 @@
   items:
   - name: SUSE VM connectivity and registration issues
     href: suse-public-cloud-connectivity-registration-issues.md
+
+- name: Linux VM setup and configuration
+  items:
+  - name: Configure multiple NICs
+    href: linux-vm-multiple-virtual-network-interfaces-configuration.md
 
 - name: VM extensions troubleshooting
   items:

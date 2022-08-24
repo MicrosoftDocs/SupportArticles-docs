@@ -36,7 +36,7 @@ Alternatively, the New CE uses Base Containment as the correlation. The New CE m
 
 For many practical scenarios, using the Base Containment assumption creates better estimates. This, in turn, creates more efficient query plan choices. However, in some situations, using the Simple Containment assumption may provide better results. If this occurs, you may experience less efficient query plan choice when you use the New CE instead of the Legacy CE.
 
-For more information on how to troubleshoot issues related to New CE, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](/sql/performance/decreased-query-perf-after-upgrade)
+For more information on how to troubleshoot issues related to New CE, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md).
 
 ## Resolution
 
