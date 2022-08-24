@@ -49,7 +49,7 @@ If CPU (worker) time is very close to the overall elapsed duration, the query sp
 
 [!INCLUDE [identify cpu bound queries](../includes/performance/identify-cpu-bound-queries.md)]
 
-#### Common methods to resolve long-running and CPU-bound queries
+#### Common methods to resolve long-running, CPU-bound queries
 
 - [Examine the query plan of the query](/sql/relational-databases/performance/display-an-actual-execution-plan)
 - [Update Statistics](/sql/t-sql/statements/update-statistics-transact-sql)
@@ -68,3 +68,7 @@ If CPU (worker) time is very close to the overall elapsed duration, the query sp
 - [Performance Monitoring and Tuning Tools](/sql/relational-databases/performance/performance-monitoring-and-tuning-tools)
 - [Auto-Tuning Options in SQL Server](/sql/relational-databases/automatic-tuning/automatic-tuning)
 - [Index architecture and Design Guidelines](/sql/relational-databases/sql-server-index-design-guide#General_Design)
+- [Troubleshoot query time-out errors](troubleshoot-query-timeouts.md)
+- [Troubleshoot a query that shows a significant performance difference between two servers](troubleshoot-query-perf-between-servers.md)
+- [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
+- [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
