@@ -56,4 +56,3 @@ MSOAID is a tool that you can use in Windows to diagnose authentication issues. 
 |Office Config Service cache|It's the metadata about how the Office apps access Microsoft cloud-based services in your region.|
 |Screenshots (Problem Steps Recorder) [Windows Only]|MSOAID uses the Problem Steps Recorder utility in Windows to capture screenshots when you use your mouse and keyboard. They enable Microsoft support engineers to see what you see (including multiple displays) when you reproduce the issue.|
 |Windows build version [Windows Only]|It's the exact Windows version that your computer is running.|
-|||
