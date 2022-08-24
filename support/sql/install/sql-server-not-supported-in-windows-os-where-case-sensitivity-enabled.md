@@ -1,5 +1,6 @@
 ---
-title: SQL Server is not supported on a Windows operating system on which case sensitivity is enabled
+title: SQL Server is not supported on a Windows operating system on which case sensitivity is enabled.
+description: This article describes the issue on Windows OS where case sensitivity is enabled.
 ms.date: 08/23/2021
 ms.custom: sap:Database Design and Development
 ms.author: v-shwetasohu 
@@ -10,8 +11,10 @@ ms.prod: sql
 
 # SQL Server is not supported on a Windows operating system on which case sensitivity is enabled
 
-## Introduction
 Microsoft SQL Server is not supported on Windows operating systems on which case sensitivity is enabled.
+
+_Original product version:_ &nbsp; SQL Server 20012, SQL Server 2008, SQL Server 2005 \
+_Original KB number:_ &nbsp; 2860895
 
 ## More Information
 You can disable or enable Windows kernel case insensitivity by using the following registry key:
