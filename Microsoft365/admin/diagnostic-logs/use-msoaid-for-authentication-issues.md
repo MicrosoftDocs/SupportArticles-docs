@@ -15,16 +15,17 @@ ms.custom:
 ms.author: v-maqiu
 appliesto: 
   - Microsoft 365
-ms.date: 3/31/2022
+ms.date: 8/24/2022
 ---
 # Microsoft Office Authentication/Identity Diagnostic (MSOAID)
 
-MSOAID is a tool that you can use in Windows and macOS to diagnose authentication issues. You can reproduce the issue when running MSOAID to collect logs and diagnostic information for Microsoft support engineers to analyze.
+MSOAID is a tool that you can use in Windows to diagnose authentication issues. You can reproduce the issue when running MSOAID to collect logs and diagnostic information for Microsoft support engineers to analyze.
 
 ## Download and run MSOAID
 
-1. Download [MSOAID for Windows](https://download.microsoft.com/download/b/c/0/bc0563a7-a5a2-4682-8cbb-3284fa14c666/MSOAID-Win.zip) or MSOAID for macOS.
-1. Extract the contents of the .zip file and run the executable file (MSOAID-Win.exe for Windows or MSOAID-Mac.exe for macOS).
+1. Download [MSOAID for Windows](https://download.microsoft.com/download/b/c/0/bc0563a7-a5a2-4682-8cbb-3284fa14c666/MSOAID-Win.zip).
+1. Extract the contents of the .zip file.
+1. Right-click the executable file (MSOAID-Win.exe) and select **Run as administrator**.
 
    **Note** You don't need to restart Office apps before you run MSOAID.
 
@@ -36,11 +37,11 @@ MSOAID is a tool that you can use in Windows and macOS to diagnose authenticatio
 1. Select **Next** and follow the prompts until MSOAID indicates that the diagnostic collection starts.
 1. Reproduce the issue that you need to troubleshoot in Office or Windows.  
 1. Select **Finish** and wait for MSOAID to stop collecting diagnostics.
-1. Select **Copy Path** to copy the location of the diagnostics that are collected by MSOAID. The file is usually saved under the *%TEMP%* folder in Windows or *$TMPDIR* folder in macOS.
+1. Select **Copy Path** to copy the location of the diagnostics that are collected by MSOAID. The file is usually saved under the *%TEMP%* folder in Windows.
 
     :::image type="content" source="media/use-msoaid-for-authentication-issues/copy-path.png" alt-text="Screenshot of the Microsoft Office Authentication/Identity Diagnostic window, which lists the filepath that saves the collected diagnostics." border="false":::
 
-1. Send the diagnostics to your Microsoft support contact. You can also include the msoaid.log file that's saved at *%TEMP%* in Windows or *$TMPDIR* in macOS.
+1. Send the diagnostics to your Microsoft support contact. You can also include the msoaid.log file that's saved at *%TEMP%* in Windows.
 
 ## Data collected by MSOAID
 
@@ -52,7 +53,6 @@ MSOAID is a tool that you can use in Windows and macOS to diagnose authenticatio
 |Office Identity registry hive [Windows Only]|It's the metadata about the accounts that are signed in to Office. It may include your personal information that's contained in the account that you use to sign in to Office, such as your name and email address. It may also include some URLs that Office accesses, such as Microsoft SharePoint or Exchange servers.|
 |Office Services Manager cache [Windows Only]|It's the metadata about the services that are connected to the Office apps, such as OneDrive or SharePoint. It may include the same personal information as the Office Identity registry hive.|
 |Office Roaming cache [Windows Only]|It’s the metadata about the Office settings that are shared between devices.|
-|Office registry [macOS only]|It includes the full contents of the database that Office uses to emulate the registry in macOS. It's a superset of the data that's collected by both the Office Identity registry hive and Office Services Manager cache in Windows.|
 |Office Config Service cache|It's the metadata about how the Office apps access Microsoft cloud-based services in your region.|
 |Screenshots (Problem Steps Recorder) [Windows Only]|MSOAID uses the Problem Steps Recorder utility in Windows to capture screenshots when you use your mouse and keyboard. They enable Microsoft support engineers to see what you see (including multiple displays) when you reproduce the issue.|
 |Windows build version [Windows Only]|It's the exact Windows version that your computer is running.|
