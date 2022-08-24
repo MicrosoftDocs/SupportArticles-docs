@@ -1,7 +1,7 @@
 ---
 title: SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset
 description: Troubleshoot password writeback generic error code SSPR_0029 - Your organization hasn't properly set up the on-premises configuration for password reset.
-ms.date: 4/29/2022
+ms.date: 8/17/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: jarrettr, nualex
@@ -79,10 +79,10 @@ This situation can occur if the Azure AD Connect server or the domain controller
 
 1. Open an administrative Command Prompt window, and run the following commands:
 
-    ```cmd
+    ```console
     md C:\Temp
     gpresult /h C:\Temp\GPreport.htm
-    start GPreport.htm
+    start C:\Temp\GPreport.htm
     ```
 
 1. Open the *C:\Temp\gpresult.htm* file in your web browser, and expand **Computer Details** > **Settings** > **Policies** > **Windows Settings** > **Security Settings** > **Local Policies/Security Options** > **Network Access**. Then, check whether you have a setting that's named [Network access: Restrict clients allowed to make remote calls to SAM](/windows/security/threat-protection/security-policy-settings/network-access-restrict-clients-allowed-to-make-remote-sam-calls).
@@ -120,7 +120,7 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
 
 1. Open an administrative Command Prompt window, and run the [gpupdate](/windows-server/administration/windows-commands/gpupdate) command to force a Group Policy update:
 
-    ```cmd
+    ```console
     gpupdate /force
     ```
 
@@ -136,16 +136,16 @@ Keep the **Network access: Restrict clients allowed to make remote calls to SAM*
 
 1. Open an administrative Command Prompt window, and run the [gpupdate](/windows-server/administration/windows-commands/gpupdate) command to force a Group Policy update:
 
-    ```cmd
+    ```console
     gpupdate /force
     ```
 
 1. To generate a new Group Policy result report (*GPreport.htm*), run the [gpresult](/windows-server/administration/windows-commands/gpresult) command, and then open the new report in a web browser:
 
-    ```cmd
+    ```console
     md C:\Temp
     gpresult /h C:\Temp\GPreport.htm
-    start GPreport.htm
+    start C:\Temp\GPreport.htm
     ```
 
 1. Check the report to make sure that the policy setting for **Network access: Restrict clients allowed to make remote calls to SAM** isn't defined.
