@@ -651,6 +651,8 @@
     href: reporting-services/error-unable-retrieve-application-files.md
   - name: Warning message when adding a RS assembly
     href: reporting-services/warning-message-add-reporting-services.md
+  - name:  .Net Framework assemblies in SQL 2014
+    href: reporting-services/net-framework-assemblies-sql-2014.md
 
 - name: SQL Server on Linux
   items:
