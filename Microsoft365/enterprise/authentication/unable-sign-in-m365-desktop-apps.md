@@ -100,7 +100,7 @@ To use this method, Endpoint analytics and Proactive remediations must be enable
 
 1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Reports** > **Endpoint analytics** > **Proactive remediations**, and then select the **Create script package** button.
-1. On the **Basics** tab in the **Create custom script** dialog box, enter a name for the script package.
+1. In the **Basics** step, enter a name for the script package.
 1. Save the following detection script as a .ps1 UTF-8 file:
 
    ```powershell
@@ -114,7 +114,7 @@ To use this method, Endpoint analytics and Proactive remediations must be enable
     Add-AppxPackage -Register "$env:windir\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml" -DisableDevelopmentMode -ForceApplicationShutdown
    ```
 
-1. On the **Settings** tab in the **Create custom script** dialog box, select the folder icon next to the **Detection script file** field. Browse to the location of the detection script file saved in step 4, select it, and then select **Open** to upload it.
+1. In the **Settings** step, select the folder icon next to the **Detection script file** field. Browse to the location of the detection script file saved in step 4, select it, and then select **Open** to upload it.
 1. Select the folder icon next to the **Remediation script file** field. Browse to the location of the remediation script file saved in step 5, select it, and then select **Open** to upload it.
 1. Set the **Run this script using the logged-on credentials** option to **Yes** and the **Enforce script signature check** option to **No**.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
