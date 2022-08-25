@@ -91,7 +91,7 @@ See the [example ETW capture](#example-etw-capture) at the bottom of this articl
 The following view is a high-level one of the main wifi components in Windows.
 
 |Wi-fi Components|Description|
-|--- |--- |
+|---------|---------|
 |
 :::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wcm.png" alt-text="Windows Connection Manager" border="false":::
 |The Windows Connection Manager (Wcmsvc) is closely associated with the UI controls (taskbar icon) to connect to various networks, including wireless networks. It accepts and processes input from the user and feeds it to the core wireless service.|

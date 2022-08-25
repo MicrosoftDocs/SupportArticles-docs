@@ -318,6 +318,6 @@ Your revised migration XML script excludes the files from migrating, as confirme
 
 ## More information
 
-- [XML Elements Library](usmt-xml-elements-library.md)
-- [ScanState Syntax](usmt-scanstate-syntax.md)
-- [LoadState Syntax](usmt-loadstate-syntax.md)
+- [XML Elements Library](/windows/deployment/usmt/usmt-xml-elements-library)
+- [ScanState Syntax](/windows/deployment/usmt/usmt-scanstate-syntax)
+- [LoadState Syntax](/windows/deployment/usmt/usmt-loadstate-syntax)

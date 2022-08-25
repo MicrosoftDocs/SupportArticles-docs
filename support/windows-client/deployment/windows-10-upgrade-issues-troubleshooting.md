@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Windows 10
 If a Windows 10 upgrade isn't successful, it can be helpful to understand when an error occurred in the upgrade process.
 
 > [!IMPORTANT]
-> Use the [SetupDiag](setupdiag.md) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
+> Use the [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
 
 Briefly, the upgrade process consists of four phases that are controlled by [Windows Setup](/windows-hardware/manufacture/desktop/windows-setup-technical-reference): Downlevel, SafeOS, First boot, and Second boot. The computer will reboot once between each phase. Note: Progress is tracked in the registry during the upgrade process using the following key: `HKLM\System\Setup\mosetup\volatile\SetupProgress`. This key is volatile and only present during the upgrade process; it contains a binary value in the range 0-100.
 
@@ -50,7 +50,7 @@ These phases are explained in greater detail [below](#the-windows-10-upgrade-pro
 
 4. Second boot phase: In this phase, the system is running under the target OS with new drivers. Boot failures are most commonly due to anti-virus software or filter drivers. Disconnect all peripheral devices except for the mouse, keyboard, and display. Obtain and install updated device drivers, temporarily uninstall anti-virus software, then retry the upgrade.
 
-If the general troubleshooting techniques described above or the [quick fixes](quick-fixes.md) detailed below don't resolve your issue, you can attempt to analyze [log files](log-files.md) and interpret [upgrade error codes](upgrade-error-codes.md). You can also [Submit Windows 10 upgrade errors using Feedback Hub](submit-errors.md) so that Microsoft can diagnose your issue.
+If the general troubleshooting techniques described above or the [quick fixes](windows-10-upgrade-quick-fixes.md) detailed below don't resolve your issue, you can attempt to analyze [log files](windows-10-upgrade-log-files.md) and interpret [upgrade error codes](windows-10-upgrade-error-codes.md). You can also [Submit Windows 10 upgrade errors using Feedback Hub](/windows/deployment/upgrade/submit-errors) so that Microsoft can diagnose your issue.
 
 ## The Windows 10 upgrade process
 
@@ -96,4 +96,4 @@ When performing an operating system upgrade, Windows Setup uses phases described
 - [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)
 - [Windows 10 Specifications](https://www.microsoft.com/windows/windows-10-specifications)
 - [Windows 10 IT pro forums](https://social.technet.microsoft.com/Forums/en-US/home?category=Windows10ITPro)
-- [Fix Windows Update errors by using the DISM or System Update Readiness tool](../windows-server/deployment/fix-windows-update-errors.md)
+- [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)

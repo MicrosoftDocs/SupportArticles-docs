@@ -22,7 +22,7 @@ This article helps you troubleshoot issues that you may experience if you use Mi
 
 :::image type="content" source="media/enforcing-bitlocker-policies-by-using-intune-known-issues/4509189-en-1.png" alt-text="The BitLocker status indictors on the Intune portal." border="false":::
 
-To start narrowing down the cause of the problem, review the event logs as described in [Troubleshoot BitLocker](troubleshoot-bitlocker.md). Concentrate on the Management and Operations logs in the *Applications and Services logs\\Microsoft\\Windows\\BitLocker-API* folder. The following sections provide more information about how to resolve the indicated events and error messages:
+To start narrowing down the cause of the problem, review the event logs as described in [Troubleshoot BitLocker](bitlocker-issues-troubleshooting.md). Concentrate on the Management and Operations logs in the *Applications and Services logs\\Microsoft\\Windows\\BitLocker-API* folder. The following sections provide more information about how to resolve the indicated events and error messages:
 
 - [Event ID 853: Error: A compatible Trusted Platform Module (TPM) Security Device cannot be found on this computer](#issue-1)
 - [Event ID 853: Error: BitLocker Drive Encryption detected bootable media (CD or DVD) in the computer](#issue-2)

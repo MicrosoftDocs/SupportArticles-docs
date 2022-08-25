@@ -447,7 +447,7 @@
     - name: USMT log files
       href: ./deployment/usmt-log-files.md
     - name: USMT FAQ
-      href: ./deployment/usmt-faq.md
+      href: ./deployment/usmt-faq.yml
     - name: USMT common issues
       href: ./deployment/usmt-common-issues.md
 - name: Group Policy
@@ -1153,7 +1153,7 @@
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
     - name: Windows Hello for Business FAQ
-      href: ./user-profiles-and-logon/windows-hello-for-business-faq.md
+      href: ./user-profiles-and-logon/windows-hello-for-business-faq.yml
 - name: Virtualization
   items:
   - name: Virtualization
@@ -1201,7 +1201,7 @@
   - name: Bitlocker
     items:
     - name: BitLocker FAQ
-      href: ./windows-security/bitlocker-faq.md
+      href: ./windows-security/bitlocker-faq.yml
     - name: Decode Measured Boot logs to track PCR changes
       href: ./windows-security/decode-measured-boot-logs-to-track-pcr-changes.md
     - name: 'BitLocker and TPM: other known issues'

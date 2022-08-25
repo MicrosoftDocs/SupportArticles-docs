@@ -91,7 +91,7 @@ Since outbound connections start to fail, you'll see many instances of the below
 
 - File shares are inaccessible:
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-16.png" alt-text="Screenshot of error message "Windows cannot access."" border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-16.png" alt-text="Screenshot of error message Windows cannot access." border="false":::
 
 - RDP from the affected server fails:
 

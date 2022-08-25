@@ -236,4 +236,4 @@ If you downloaded the *SetupDiag.exe* program to your computer, then copied it t
 - [Windows 10 Enterprise system requirements](https://technet.microsoft.com/windows/dn798752.aspx)
 - [Windows 10 Specifications](https://www.microsoft.com/windows/Windows-10-specifications)
 - [Windows 10 IT pro forums](https://social.technet.microsoft.com/Forums/en-US/home?category=Windows10ITPro)
-- [Fix Windows Update errors by using the DISM or System Update Readiness tool](../windows-server/deployment/fix-windows-update-errors.md)
+- [Fix Windows Update errors by using the DISM or System Update Readiness tool](../../windows-server/deployment/fix-windows-update-errors.md)

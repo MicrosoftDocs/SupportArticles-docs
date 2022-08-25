@@ -25,9 +25,9 @@ The following resources provide additional information about using Windows Updat
 
 ## WSUS troubleshooting
 
-- [Troubleshooting issues with WSUS client agents](../mem/configmgr/troubleshoot-issues-with-wsus-client-agents.md)
-- [How to troubleshoot WSUS](../mem/configmgr/troubleshoot-wsus-connection-failures.md)
-- [Error 80244007 when WSUS client scans for updates](../mem/configmgr/error-80244007-when-wsus-client-scans-updates.md)
+- [Troubleshooting issues with WSUS client agents](../../mem/configmgr/troubleshoot-issues-with-wsus-client-agents.md)
+- [How to troubleshoot WSUS](../../mem/configmgr/troubleshoot-wsus-connection-failures.md)
+- [Error 80244007 when WSUS client scans for updates](../../mem/configmgr/error-80244007-when-wsus-client-scans-updates.md)
 - [Updates may not be installed with Fast Startup in Windows 10](updates-not-install-with-fast-startup.md)
 
 ## How do I reset Windows Update components?

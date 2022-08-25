@@ -17,7 +17,7 @@ localization_priority: medium
 
 This article describes User State Migration Tool (USMT) 10.0 return codes and error messages. Also included is a table listing the USMT return codes with their associated mitigation steps. In addition, this article provides tips to help you use the logfiles to determine why you received an error.
 
-Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](usmt-requirements.md).
+Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](/windows/deployment/usmt/usmt-requirements).
 
 _Applies to:_ &nbsp; Windows 10
 
@@ -258,7 +258,7 @@ The following information lists each return code by numeric value, along with th
   - Error message:
       > The store contains one or more corrupted files
   - Troubleshooting, mitigation, workarounds:  
-      Review UsmtUtils log for details about the corrupted files. For information on how to extract the files that aren't corrupted, see [Extract Files from a Compressed USMT Migration Store](usmt-extract-files-from-a-compressed-migration-store.md).
+      Review UsmtUtils log for details about the corrupted files. For information on how to extract the files that aren't corrupted, see [Extract Files from a Compressed USMT Migration Store](/windows/deployment/usmt/usmt-extract-files-from-a-compressed-migration-store).
 
 - **61: USMT_MIGRATION_STOPPED_NONFATAL**
   - Error message:
@@ -289,5 +289,5 @@ The following information lists each return code by numeric value, along with th
 
 ## More information
 
-- [User State Migration Tool (USMT) Troubleshooting](usmt-troubleshooting.md)
+- [User State Migration Tool (USMT) Troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
 - [Log Files](usmt-log-files.md)
