@@ -72,6 +72,8 @@ If you have general questions about this procedure, post to [Microsoft Q&A](/ans
 
 To work around this issue, create an Azure VM that's running a supported version. And then either migrate the workload (Method 1, preferred), or download and upgrade the VHD of the VM (Method 2).
 
+To prevent data loss, back up the Windows 10 VM by using [Azure Backup](/azure/backup/). Or use a third-party backup solution from [Azure Marketplace Backup & Recovery](https://azuremarketplace.microsoft.com/marketplace/apps?search=Backup%20%26%20Recovery&page=1).
+
 ### Method 1: Deploy a newer system and migrate the workload
 
 Create an Azure VM that runs a supported version of the operating system, and then migrate the workload. To do so, you will use Windows Server migration tools. For instructions to migrate Windows Server roles and features, see the following article:
