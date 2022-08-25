@@ -1,5 +1,5 @@
 ---
-title: Can't sign in to Microsoft 365 desktop applications
+title: Unable to sign in to Microsoft 365 desktop applications
 author: Cloud-Writer
 ms.author: meerak
 manager: dcscontentpm
@@ -9,7 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-description: You can't sign in to Microsoft 365 desktop applications. Provides options to resolve the issue.
+description: Describes an issue when you can't sign in to Microsoft 365 desktop applications and provides options to resolve it.
 appliesto: 
   - Microsoft 365
 ms.date: 8/25/2022
