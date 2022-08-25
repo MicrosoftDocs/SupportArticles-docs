@@ -1,6 +1,6 @@
 ---
 title: Can't delete items from public folder
-description: Items in a public folder are still present after being deleted using Outlook on the web.
+description: Items in a public folder persist after you try to delete them in Outlook on the web.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -20,27 +20,27 @@ search.appverid:
 ms.date: 8/24/2022
 ---
 
-# Can't delete items from public folder
+# Can't delete items from public folder in Outlook on the web
 
 ## Symptoms
 
-When you delete items in a public folder by using Outlook on the web, the deleted items reappear after you close and reopen Outlook on the web. No error message is displayed.
+When you try to delete items in a public folder by using Outlook on the web, the deleted items reappear after you close and reopen Outlook on the web. When this issue occurs, you don't receive an error message.
 
 ## Cause
 
-The public folder mailbox hosting the public folder may have reached its recoverable items quota. Collect traces while reproducing the issue using Outlook on the web and locate the URL with words "action=DeleteItem", you may find the following response headers format:
+The public folder mailbox that hosts the public folder might have reached its recoverable items quota. You can collect traces while you reproduce the issue in Outlook on the web. Search on "action=DeleteItem" to locate the URL. You might see the following response header error message:
 
 `{"Header":{"ServerVersionInfo":{"MajorVersion":15,"MinorVersion":20,"MajorBuildNumber":2991,"MinorBuildNumber":0,"Version":"V2018_01_08"}},"Body":{"__type":"DeleteItemResponse:#Exchange","ResponseMessages":{"Items":[{"__type":"DeleteItemResponseMessage:#Exchange","MessageText":"An internal server error occurred. The operation failed.","ResponseCode":"ErrorInternalServerError","MessageXml":"<?xml version=\"1.0\"?>\r\n<XmlNodeArray xmlns:t=\"http://schemas.microsoft.com/exchange/services/2006/types\" xmlns:m=\"http://schemas.microsoft.com/exchange/services/2006/messages\">\r\n  <t:Value Name=\"InnerErrorMessageText\">Cannot delete message because the destination folder is out of quota.</t:Value>\r\n  <t:Value Name=\"InnerErrorResponseCode\">ErrorQuotaExceededOnDelete</t:Value>\r\n  <t:Value Name=\"InnerErrorDescriptiveLinkKey\">0</t:Value>\r\n</XmlNodeArray>","ResponseClass":"Error"}]}}`
 
 ## Resolution
 
-Clear deleted items from the public folder to release storage and try to delete the item again:
+Clear deleted items from the public folder to release storage, and then try again to delete the item:
 
-1. Connect to the public folder using Outlook desktop client.
-2. Go to the public folder and select **Recover deleted items** in the ribbon bar.
-3. Select items to delete, select **Purge Selected Items**, and select **Ok**.
+1. Connect to the public folder by using Outlook desktop client.
+2. Go to the public folder, and select **Recover deleted items** on the ribbon.
+3. Select items to delete, select **Purge Selected Items**, and then select **OK**.
 4. Delete those items again.
 
 ## More information
 
-If you search for specific items in a public folder by using Outlook on the web, and delete the items from the search results, the deleted items reappear after you close and reopen Outlook on the web. The delete action for search results in OWA is not supported for public folder items. Either delete the public folder item directly without searching for it or use Microsoft Outlook to delete the item.
+If you search for specific items in a public folder by using Outlook on the web, and you delete the items from the search results, the deleted items reappear after you close and reopen Outlook on the web. The delete action for search results in OWA is not supported for public folder items. Either delete the public folder item directly without searching for it or use Microsoft Outlook to delete the item.
