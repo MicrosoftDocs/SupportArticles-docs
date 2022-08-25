@@ -42,12 +42,12 @@ For instructions and more information, see [Delete a tenant](/azure/active-direc
 <details>
 <summary><b>The new domain name is already in use and taken by a different organization. Is there any way we can use that domain name?</b></summary>
 
-Microsoft doesn’t disclose any information about the tenant that has your desired domain. Domains are taken on a first-come, first-serve basis. You will need to choose a different domain name.  
+Microsoft doesn't disclose any information about the tenant that has your desired domain. Domains are taken on a first-come, first-serve basis. You'll need to choose a different domain name.  
 
 </details>
 <br/>
 <details>
-<summary><b>We already have 'fabikram.com' verified. Why do we need to verify 'fabikram.onmicrosoft.com' to rename our domain from 'contoso.sharepoint.com' to 'fabikram.sharepoint.com'? Can’t you simply use fabikram.com to rename it?</b></summary>
+<summary><b>We already have 'fabikram.com' verified. Why do we need to verify 'fabikram.onmicrosoft.com' to rename our domain from 'contoso.sharepoint.com' to 'fabikram.sharepoint.com'? Can't you simply use fabikram.com to rename it?</b></summary>
 
 To have all the SharePoint URLs renamed from 'contoso.sharepoint.com' to 'fabrikam.sharepoint.com', you must have the 'fabikram.onmicrosoft.com' domain verified.
 
@@ -56,21 +56,21 @@ To have all the SharePoint URLs renamed from 'contoso.sharepoint.com' to 'fabrik
 <details>
 <summary><b>What happens to the old domain ('contoso.onmicrosoft.com') after the rename?</b></summary>
 
-It is still tied to the tenant as the initial domain.  
+It's still tied to the tenant as the initial domain.  
 
 </details>
 <br/>
 <details>
 <summary><b>Can we change or remove the initial domain contoso.onmicrosoft.com from the tenant?</b></summary>
 
-Currently, we don’t support changing or removing the initial domain. It will remain tied to the tenant.
+Currently, we don't support changing or removing the initial domain. It'll remain tied to the tenant.
 
 </details>
 <br/>
 <details>
 <summary><b>Can we roll back or rename back to our old name in case something goes wrong?</b></summary>
 
-That is currently not supported. When the domain is renamed, we will make sure issues are addressed and the SharePoint domain 'contoso.sharepoint.com' is renamed to the new name 'fabrikam.sharepoint.com'.
+It's currently not supported. When the domain is renamed, we'll make sure issues are addressed and the SharePoint domain 'contoso.sharepoint.com' is renamed to the new name 'fabrikam.sharepoint.com'.
 
 </details>
 <br/>
@@ -84,7 +84,7 @@ No, you must schedule the rename for more than 24 hours and less than 30 days fr
 <details>
 <summary><b>Can we rename a tenant more than once?</b></summary>
 
-Yes, but only after 6 months from the previous rename.  
+Yes, but only after six months from the previous rename.  
 
 </details>
 <br/>
@@ -98,30 +98,30 @@ It depends on the number of sites and how busy the service is at that time. A do
 <details>
 <summary><b>How long does the site redirection last?</b></summary>
 
-As of today, Microsoft will not delete any redirected sites that were created as part of a tenant rename but this may change in the future.
+As of today, Microsoft won't delete any redirected sites that were created as part of a tenant rename but this may change in the future.
 
 </details>
 <br/>
 <details>
 <summary><b>What happens to our SharePoint and OneDrive data during the rename? Should we back everything up?</b></summary>
 
-Backup of your data is not required. We are not making any changes to the actual data.
+Backup of your data isn't required. We aren't making any changes to the actual data.
 
 </details>
 <br/>
 <details>
 <summary><b>Our third-party backup solutions are failing after the rename. How can we resolve this?</b></summary>
 
-You will need to contact the third-party backup providers to find out if they support the SharePoint Online Tenant rename action.
+You'll need to contact the third-party backup providers to find out if they support the SharePoint Online Tenant rename action.
 
 </details>
 <br/>
 <details>
 <summary><b>Scheduling a rename using PowerShell isn't returning anything but zeros. What am I doing wrong?</b></summary>
 
-The most common reason for this is that there are previous versions of SharePoint Online Management Shell installed on the machine and those assemblies cause this issue.
+The most common reason for this issue is that there are previous versions of SharePoint Online Management Shell installed on the machine and those assemblies cause this issue.
 
-If you have any previous versions installed of the SharePoint Online Management Shell, please uninstall them using the following command: 
+If you have any previous versions installed of the SharePoint Online Management Shell, uninstall them using the following command: 
 
 'Uninstall-Module Microsoft.Online.SharePoint.PowerShell -Force -AllVersions'
 
@@ -132,7 +132,7 @@ Then install the latest version of the [SharePoint Online Management Shell](http
 <details>
 <summary><b>Should we tell the users to stop using SharePoint during the actual rename? When can they start using again?</b></summary>
 
-The actual SharePoint Tenant rename doesn’t lead to business downtime. However, it can cause brief interruptions if someone is trying to access an individual SharePoint site while it is being renamed as part of the domain rename. We recommend keeping user activity minimal while the rename is running.
+The actual SharePoint Tenant rename doesn't lead to business downtime. However, it can cause brief interruptions if someone is trying to access an individual SharePoint site while it's being renamed as part of the domain rename. We recommend keeping user activity minimal while the rename is running.
 
 </details>
 <br/>
@@ -146,14 +146,14 @@ While the rename is happening, the OneDrive sync might fail for a user if the re
 <details>
 <summary><b>Some users are complaining that the OneDrive sync client is not working. What can we do?</b></summary>
 
-If sync is not stopped prior to the rename, there might be issues with OneDrive sync after the rename. This is due to the caching within the sync client. The users should sign out, and then sign back into OneDrive after the rename to resolve any sync issues. If that doesn’t solve the problem, they should go to OneDrive > **Settings** > **Account** and select **Unlink this PC**, then re-link the PC. Unlinking and relinking doesn’t delete ay OneDrive data.
+If sync isn't stopped prior to the rename, there might be issues with OneDrive sync after the rename. This issue is due to the caching within the sync client. The users should sign out, and then sign back into OneDrive after the rename to resolve any sync issues. If that doesn't solve the problem, they should go to OneDrive > **Settings** > **Account** and select **Unlink this PC**, then re-link the PC. Unlinking and relinking doesn’t delete ay OneDrive data.
 
 </details>
 <br/>
 <details>
-<summary><b>I have more than 5000 sites. When will my tenant be eligible for Tenant rename?</b></summary>
+<summary><b>I have more than 10,000 sites. When will my tenant be eligible for Tenant rename?</b></summary>
 
-We are working on increasing the limits. We appreciate your patience.  
+We're working on increasing the limits. We appreciate your patience.  
 
 </details>
 <br/>
