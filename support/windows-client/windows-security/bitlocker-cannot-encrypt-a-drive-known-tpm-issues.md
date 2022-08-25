@@ -1,36 +1,29 @@
 ---
 title: 'BitLocker cannot encrypt a drive: known TPM issues'
-description: Provides guidance for troubleshooting known issues that may prevent BitLocker Drive Encryption from encrypting a drive, and that you can attribute to the TPM
+description: Provides guidance for troubleshooting known issues that may prevent BitLocker Drive Encryption from encrypting a drive, and that you can attribute to the TPM.
+ms.date: 08/25/2022
 ms.reviewer: kaushika
 ms.technology: windows-client-security
 ms.prod: windows-client
-ms.localizationpriority: medium
 author: Teresa-Motiv
 ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.date: 10/18/2019
 ms.custom: sap:bitlocker, csstroubleshoot
-old_title: BitLocker cannot encrypt a drive known TPM issues
-old_ms.prod: m365-security
-old_ms.technology: windows-sec
-old_ms.custom: bitlocker
-old_manager: kaushika
 audience: itpro
 localization_priority: medium
 ---
-
 # BitLocker cannot encrypt a drive: known TPM issues
 
 This article describes common issues that affect the Trusted Platform Module (TPM) that might prevent BitLocker from encrypting a drive. This article also provides guidance to address these issues.
 
 > [!NOTE]
-> If you have determined that your BitLocker issue does not involve the TPM, see [BitLocker cannot encrypt a drive: known issues](ts-bitlocker-cannot-encrypt-issues.md).
+> If you have determined that your BitLocker issue does not involve the TPM, see [BitLocker cannot encrypt a drive: known issues](bitlocker-cannot-encrypt-a-drive-known-issues.md).
 
 ## The TPM is locked and you see "The TPM is defending against dictionary attacks and is in a time-out period"
 
-When you turn on BitLocker drive encryption, it does not start. Instead, you receive a message that resembles "The TPM is defending against dictionary attacks and is in a time-out period."
+When you turn on BitLocker drive encryption, it doesn't start. Instead, you receive a message that resembles "The TPM is defending against dictionary attacks and is in a time-out period."
 
 ### Cause
 
@@ -47,12 +40,13 @@ To resolve this issue, follow these steps:
    $ConfirmationStatus = $Tpm.GetPhysicalPresenceConfirmationStatus(22).ConfirmationStatus
    if($ConfirmationStatus -ne 4) {$Tpm.SetPhysicalPresenceRequest(22)}
    ```
-2. Restart the computer. If you are prompted at the restart screen, press F12 to agree.8
+
+2. Restart the computer. If you're prompted at the restart screen, press F12 to agree.8
 3. Retry starting BitLocker drive encryption.
 
 ## You cannot prepare the TPM, and you see "The TPM is defending against dictionary attacks and is in a time-out period"
 
-You cannot turn on BitLocker drive encryption on a device. You use the TPM management console (tpm.msc) to prepare the TPM on a device. The operation fails and you receive a message that resembles "The TPM is defending against dictionary attacks and is in a time-out period."
+You can't turn on BitLocker drive encryption on a device. You use the TPM management console (*tpm.msc*) to prepare the TPM on a device. The operation fails and you receive a message that resembles "The TPM is defending against dictionary attacks and is in a time-out period."
 
 ### Cause
 
@@ -69,7 +63,7 @@ To resolve this issue, disable and re-enable the TPM. To do this, follow these s
 3. Restart the device, and change the BIOS configuration to enable the TPM.
 4. Restart the device, and return to the TPM management console.
 
-If you still cannot prepare the TPM, clear the existing TPM keys. To do this, follow the instructions in [Troubleshoot the TPM: Clear all the keys from the TPM](../tpm/initialize-and-configure-ownership-of-the-tpm.md#clear-all-the-keys-from-the-tpm).
+If you still can't prepare the TPM, clear the existing TPM keys. To do this, follow the instructions in [Troubleshoot the TPM: Clear all the keys from the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm#clear-all-the-keys-from-the-tpm).
 
 > [!WARNING]
 > Clearing the TPM can cause data loss.
@@ -80,13 +74,13 @@ You have an environment that enforces the **Do not enable BitLocker until recove
 
 ### Cause
 
-The TPM did not have sufficient permissions on the TPM devices container in Active Directory Domain Services (AD DS). Therefore, the BitLocker recovery information could not be backed up to AD DS, and BitLocker drive encryption could not run.
+The TPM didn't have sufficient permissions on the TPM devices container in Active Directory Domain Services (AD DS). Therefore, the BitLocker recovery information couldn't be backed up to AD DS, and BitLocker drive encryption couldn't run.
 
 This issue appears to be limited to computers that run versions of Windows that are earlier than Windows 10.
 
 ### Resolution
 
-To verify that you have correctly identified this issue, use one of the following methods:
+To verify that you've correctly identified this issue, use one of the following methods:
 
 - Disable the policy or remove the computer from the domain. Then try to turn on BitLocker drive encryption again. The operation should now succeed.
 - Use LDAP and network trace tools to examine the LDAP exchanges between the client and the AD DS domain controller to identify the cause of the "Access Denied" or "Insufficient Rights" error. In this case, you should see the error when the client tries to access its object in the "CN=TPM Devices,DC=\<*domain*>,DC=com" container.
@@ -105,7 +99,7 @@ To verify that you have correctly identified this issue, use one of the followin
 
 Your domain controllers were upgraded from Windows Server 2008 R2 to Windows Server 2012 R2. A group policy object (GPO) enforces the **Do not enable BitLocker until recovery information is stored in AD DS** policy.  
 
-You cannot turn on BitLocker drive encryption on a device. You use the TPM management console (tpm.msc) to prepare the TPM on a device. The operation fails and you see a message that resembles the following:
+You can't turn on BitLocker drive encryption on a device. You use the TPM management console (tpm.msc) to prepare the TPM on a device. The operation fails and you see a message that resembles the following:
 
 > 0x80072030 There is no such object on the server when a policy to back up TPM information to active directory is enabled
 
@@ -132,5 +126,5 @@ To resolve this issue, follow these steps:
 
 For more information, see the following articles:
 
-- [Back up the TPM recovery information to AD DS](../tpm/backup-tpm-recovery-information-to-ad-ds.md)
-- [Prepare your organization for BitLocker: Planning and policies](./prepare-your-organization-for-bitlocker-planning-and-policies.md)
+- [Back up the TPM recovery information to AD DS](/windows/security/information-protection/tpm/backup-tpm-recovery-information-to-ad-ds)
+- [Prepare your organization for BitLocker: Planning and policies](/windows/security/information-protection/bitlocker/prepare-your-organization-for-bitlocker-planning-and-policies)

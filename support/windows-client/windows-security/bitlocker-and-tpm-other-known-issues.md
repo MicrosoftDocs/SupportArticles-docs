@@ -1,26 +1,19 @@
 ---
 title: 'BitLocker and TPM: other known issues'
 description: Describes common issues that relate directly to the TPM, and provides guidance for resolving those issues.
+ms.date: 08/25/2022
 ms.reviewer: kaushika
 ms.technology: windows-client-security
 ms.prod: windows-client
-ms.localizationpriority: medium
 author: Teresa-Motiv
 ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.date: 10/18/2019
 ms.custom: sap:bitlocker, csstroubleshoot
-old_title: BitLocker and TPM other known issues
-old_ms.prod: m365-security
-old_ms.technology: windows-sec
-old_ms.custom: bitlocker
-old_manager: kaushika
 audience: itpro
 localization_priority: medium
 ---
-
 # BitLocker and TPM: other known issues
 
 This article describes common issues that relate directly to the trusted platform module (TPM), and provides guidance to address these issues.
@@ -35,19 +28,21 @@ You have an Azure Active Directory (Azure AD)-joined client computer that can't 
 
 Additionally, the computer logs the following entry for Event ID 1026:
 
-> Log Name: System  
-> Source: Microsoft-Windows-TPM-WMI  
-> Date: \<Date and Time>  
-> Event ID: 1026  
-> Task Category: None  
-> Level: Information  
-> Keywords:  
-> User: SYSTEM  
-> Computer: \<Computer name\>  
-> Description:  
-> The Trusted Platform Module (TPM) hardware on this computer cannot be provisioned for use automatically.  To set up the TPM interactively use the TPM management console (Start-\>tpm.msc) and use the action to make the TPM ready.  
-> Error: The TPM is defending against dictionary attacks and is in a time-out period.  
-> Additional Information: 0x840000  
+```output
+Log Name: System  
+Source: Microsoft-Windows-TPM-WMI  
+Date: <Date and Time>  
+Event ID: 1026  
+Task Category: None  
+Level: Information  
+Keywords:  
+User: SYSTEM  
+Computer: <Computer name>  
+Description:  
+The Trusted Platform Module (TPM) hardware on this computer cannot be provisioned for use automatically.  To set up the TPM interactively use the TPM management console (Start->tpm.msc) and use the action to make the TPM ready.  
+Error: The TPM is defending against dictionary attacks and is in a time-out period.  
+Additional Information: 0x840000  
+```
 
 ### Cause
 
@@ -61,11 +56,12 @@ To verify the status of the PRT, use the [dsregcmd /status command](/azure/activ
 
 To resolve this issue, follow these steps to troubleshoot the TPM:
 
-1. Open the TPM management console (tpm.msc). To do this, select **Start**, and enter **tpm.msc** in the **Search** box.
-1. If you see a notice to either unlock the TPM or reset the lockout, follow those instructions.  
-1. If you don't see such a notice, review the BIOS settings of the computer for any setting that you can use to reset or disable the lockout.
-1. Contact the hardware vendor to determine whether there's a known fix for the issue.
-1. If you still can't resolve the issue, clear and reinitialize the TPM. To do this, follow the instructions in [Troubleshoot the TPM: Clear all the keys from the TPM](../tpm/initialize-and-configure-ownership-of-the-tpm.md#clear-all-the-keys-from-the-tpm).
+1. Open the TPM management console (*tpm.msc*). To do this, select **Start**, and enter *tpm.msc* in the **Search** box.
+2. If you see a notice to either unlock the TPM or reset the lockout, follow those instructions.  
+3. If you don't see such a notice, review the BIOS settings of the computer for any setting that you can use to reset or disable the lockout.
+4. Contact the hardware vendor to determine whether there's a known fix for the issue.
+5. If you still can't resolve the issue, clear and reinitialize the TPM. To do this, follow the instructions in [Troubleshoot the TPM: Clear all the keys from the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm#clear-all-the-keys-from-the-tpm).
+
    > [!WARNING]
    > Clearing the TPM can cause data loss.  
 
@@ -114,6 +110,6 @@ This issue may occur when the Windows operating system isn't the owner of the TP
 
 For more information about TPM issues, see the following articles:
 
-- [TPM fundamentals: Anti-hammering](../tpm/tpm-fundamentals.md#anti-hammering)
+- [TPM fundamentals: Anti-hammering](/windows/security/information-protection/tpm/tpm-fundamentals#anti-hammering)
 - [Troubleshooting hybrid Azure Active Directory-joined devices](/azure/active-directory/devices/troubleshoot-hybrid-join-windows-current)
-- [Troubleshoot the TPM](../tpm/initialize-and-configure-ownership-of-the-tpm.md)
+- [Troubleshoot the TPM](/windows/security/information-protection/tpm/initialize-and-configure-ownership-of-the-tpm)

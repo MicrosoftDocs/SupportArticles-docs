@@ -1,32 +1,26 @@
 ---
 title: Windows Hello errors during PIN creation in Windows 10
 description: When you set up Windows Hello in Windows 10/11, you may get an error during the Create a work PIN step.
+ms.date: 08/25/2022
 ms.prod: windows-client
 author: paolomatarazzo
 ms.author: paoloma
 manager: dcscontentpm
-ms.reviewer: prsriva
+ms.reviewer: prsriva, aaroncz
 ms.collection:
 - M365-identity-device-management
 - highpri
 ms.topic: troubleshooting
-ms.localizationpriority: medium
-ms.date: 05/05/2018
-appliesto:
-- ✅ <b>Windows 10</b>
-- ✅ <b>Windows 11</b>
-old_title: Windows Hello errors during PIN creation (Windows)
-old_ms.prod: m365-security
 ms.technology: windows-client-user-profiles
 ms.custom: sap:hello-for-business, csstroubleshoot
-old_manager: aaroncz
 audience: itpro
 localization_priority: medium
 ---
-
 # Windows Hello errors during PIN creation
 
-When you set up Windows Hello in Windows client, you may get an error during the **Create a PIN** step. This topic lists some of the error codes with recommendations for mitigating the problem. If you get an error code that is not listed here, contact Microsoft Support.
+When you set up Windows Hello in Windows client, you may get an error during the **Create a PIN** step. This article lists some of the error codes with recommendations for mitigating the problem. If you get an error code that isn't listed here, contact Microsoft Support.
+
+_Applies to:_ &nbsp; Windows 10, Windows 11  
 
 ## Where is the error code?
 
@@ -41,16 +35,16 @@ When a user encounters an error when creating the work PIN, advise the user to t
 1. Try to create the PIN again. Some errors are transient and resolve themselves.
 2. Sign out, sign in, and try to create the PIN again.
 3. Reboot the device and then try to create the PIN again.
-4. Unjoin the device from Azure Active Directory (Azure AD), rejoin, and then try to create the PIN again. To unjoin a device, go to **Settings** > **System** > **About** > select **Disconnect from organization**.
+4. Unjoin the device from Azure Active Directory (Azure AD), rejoin, and then try to create the PIN again. To unjoin a device, go to **Settings** > **System** > **About** > **Disconnect from organization**.
 
-If the error occurs again, check the error code against the following table to see if there is another mitigation for that error. When no mitigation is listed in the table, contact Microsoft Support for assistance.
+If the error occurs again, check the error code against the following table to see if there's another mitigation for that error. When no mitigation is listed in the table, contact Microsoft Support for assistance.
 
 | Hex        | Cause                                                              | Mitigation                                  |
 | :--------- | :----------------------------------------------------------------- | :------------------------------------------ |
 | 0x80090005 | NTE\_BAD\_DATA                                                     | Unjoin the device from Azure AD and rejoin. |
 | 0x8009000F | The container or key already exists.                               | Unjoin the device from Azure AD and rejoin. |
 | 0x80090011 | The container or key was not found.                                | Unjoin the device from Azure AD and rejoin. |
-| 0x80090029 | TPM is not set up.                                                 | Sign on with an administrator account. Click **Start**, type "tpm.msc", and select **tpm.msc Microsoft Common Console Document**. In the **Actions** pane, select **Prepare the TPM**. |
+| 0x80090029 | TPM is not set up.                                                 | Sign on with an administrator account. Select **Start**, type *"tpm.msc"*, and select **tpm.msc Microsoft Common Console Document**. In the **Actions** pane, select **Prepare the TPM**. |
 | 0x8009002A | NTE\_NO\_MEMORY                                                    | Close programs which are taking up memory and try again. |
 | 0x80090031 | NTE\_AUTHENTICATION\_IGNORED                                       | Reboot the device. If the error occurs again after rebooting, [reset the TPM](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd851452(v=ws.11)) or run [Clear-TPM](/powershell/module/trustedplatformmodule/clear-tpm). |
 | 0x80090035 | Policy requires TPM and the device does not have TPM.              | Change the Windows Hello for Business policy to not require a TPM. |
@@ -72,13 +66,11 @@ If the error occurs again, check the error code against the following table to s
 | 0x801C03ED | Multi-factor authentication is required for a 'ProvisionKey' operation, but was not performed. <br><br> -or- <br><br> Token was not found in the Authorization header. <br><br> -or- <br><br> Failed to read one or more objects. <br><br> -or- <br><br> The request sent to the server was invalid. <br><br> -or- <br><br> User does not have permissions to join to Azure AD. | Sign out and then sign in again. If that doesn't resolve the issue, unjoin the device from Azure  AD and rejoin. <br> Allow user(s) to join to Azure AD under Azure AD Device settings.
 | 0x801C03EE | Attestation failed.                                                | Sign out and then sign in again. |
 | 0x801C03EF | The AIK certificate is no longer valid.                            | Sign out and then sign in again. |
-| 0x801C03F2 | Windows Hello key registration failed.                             | ERROR\_BAD\_DIRECTORY\_REQUEST. Another object with the same value for property proxyAddresses already exists. To resolve the issue, refer to [Duplicate Attributes Prevent Dirsync](/office365/troubleshoot/administration/duplicate-attributes-prevent-dirsync). Also, if no sync conflict exists, please verify that the "Mail/Email address" in Azure Active Directory and the Primary SMTP address are the same in the proxy address.
+| 0x801C03F2 | Windows Hello key registration failed.                             | ERROR\_BAD\_DIRECTORY\_REQUEST. Another object with the same value for property proxyAddresses already exists. To resolve the issue, refer to [Duplicate Attributes Prevent Dirsync](/office365/troubleshoot/administration/duplicate-attributes-prevent-dirsync). Also, if no sync conflict exists, verify that the "Mail/Email address" in Azure Active Directory and the Primary SMTP address are the same in the proxy address.
 | 0x801C044D | Authorization token does not contain device ID.                    | Unjoin the device from Azure AD and rejoin. |
 |            | Unable to obtain user token.                                       | Sign out and then sign in again. Check network and credentials. |
 | 0x801C044E | Failed to receive user credentials input.                          | Sign out and then sign in again. |
 | 0xC00000BB | Your PIN or this option is temporarily unavailable.| The destination domain controller doesn't support the login method. Most often the KDC service doesn't have the proper certificate to support the login. Use a different login method.|
-
-
 
 ## Errors with unknown mitigation
 
@@ -108,13 +100,13 @@ For errors listed in this table, contact Microsoft Support for assistance.
 | ​0x801C044C  | There is no core window for the current thread. |
 | 0x801c004D  | DSREG_NO_DEFAULT_ACCOUNT: NGC provisioning is unable to find the default WAM account to use to request Azure Active Directory token for provisioning. Unable to enroll a device to use a PIN for login. |
 
-## Related topics
+## More information
 
-- [Windows Hello for Business](hello-identity-verification.md)
-- [How Windows Hello for Business works](hello-how-it-works.md)
-- [Manage Windows Hello for Business in your organization](hello-manage-in-organization.md)
-- [Why a PIN is better than a password](hello-why-pin-is-better-than-password.md)
-- [Prepare people to use Windows Hello](hello-prepare-people-to-use.md)
-- [Windows Hello and password changes](hello-and-password-changes.md)
-- [Event ID 300 - Windows Hello successfully created](hello-event-300.md)
-- [Windows Hello biometrics in the enterprise](hello-biometrics-in-enterprise.md)
+- [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification)
+- [How Windows Hello for Business works](/windows/security/identity-protection/hello-for-business/hello-how-it-works)
+- [Manage Windows Hello for Business in your organization](/windows/security/identity-protection/hello-for-business/hello-manage-in-organization)
+- [Why a PIN is better than a password](/windows/security/identity-protection/hello-for-business/hello-why-pin-is-better-than-password)
+- [Prepare people to use Windows Hello](/windows/security/identity-protection/hello-for-business/hello-prepare-people-to-use)
+- [Windows Hello and password changes](/windows/security/identity-protection/hello-for-business/hello-and-password-changes)
+- [Event ID 300 - Windows Hello successfully created](event-id-300-windows-hello-successfully-created-in-windows-10.md)
+- [Windows Hello biometrics in the enterprise](/windows/security/identity-protection/hello-for-business/hello-biometrics-in-enterprise)

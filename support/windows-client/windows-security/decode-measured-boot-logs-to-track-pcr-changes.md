@@ -1,25 +1,19 @@
 ---
 title: Decode Measured Boot logs to track PCR changes
-description: Provides instructions for installing and using a tool for analyzing log information to identify changes to PCRs
+description: Provides instructions for installing and using a tool for analyzing log information to identify changes to PCRs.
+ms.date: 08/25/2022
 ms.reviewer: kaushika
 ms.technology: windows-client-security
 ms.prod: windows-client
-ms.localizationpriority: medium
 author: Teresa-Motiv
 ms.author: v-tappelgate
 manager: dcscontentpm
 ms.collection: Windows Security Technologies\BitLocker
 ms.topic: troubleshooting
-ms.date: 10/17/2019
 ms.custom: sap:bitlocker, csstroubleshoot
-old_ms.prod: m365-security
-old_ms.technology: windows-sec
-old_ms.custom: bitlocker
-old_manager: kaushika
 audience: itpro
 localization_priority: medium
 ---
-
 # Decode Measured Boot logs to track PCR changes
 
 Platform Configuration Registers (PCRs) are memory locations in the Trusted Platform Module (TPM). BitLocker and its related technologies depend on specific PCR configurations. Additionally, specific change in PCRs can cause a device or computer to enter BitLocker recovery mode.  
@@ -30,8 +24,8 @@ This article describes tools that you can use to decode these logs: TBSLogGenera
 
 For more information about Measured Boot and PCRs, see the following articles:
 
-- [TPM fundamentals: Measured Boot with support for attestation](../tpm/tpm-fundamentals.md#measured-boot-with-support-for-attestation)  
-- [Understanding PCR banks on TPM 2.0 devices](../tpm/switch-pcr-banks-on-tpm-2-0-devices.md)
+- [TPM fundamentals: Measured Boot with support for attestation](/windows/security/information-protection/tpm/tpm-fundamentals#measured-boot-with-support-for-attestation)  
+- [Understanding PCR banks on TPM 2.0 devices](/windows/security/information-protection/tpm/switch-pcr-banks-on-tpm-2-0-devices)
 
 ## Use TBSLogGenerator to decode Measured Boot logs
 
@@ -47,57 +41,58 @@ To install the tool, follow these steps:
    - [Windows Hardware Lab Kit](/windows-hardware/test/hlk/)
    - Direct download link for Windows Server 2016: [Windows HLK, version 1607](https://go.microsoft.com/fwlink/p/?LinkID=404112)
 
-1. Accept the default installation path.
+2. Accept the default installation path.
 
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-1.png" alt-text="Specify Location page of the Windows Hardware Lab Kit installation wizard." border="false":::
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-1.png" alt-text="Specify Location page of the Windows Hardware Lab Kit installation wizard." border="false":::
 
-1. Under **Select the features you want to install**, select **Windows Hardware Lab Kit&mdash;Controller + Studio**.
+3. Under **Select the features you want to install**, select **Windows Hardware Lab Kit&mdash;Controller + Studio**.
 
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-2.png" alt-text="Select features page of the Windows Hardware Lab Kit installation wizard." border="false":::
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-2.png" alt-text="Select features page of the Windows Hardware Lab Kit installation wizard." border="false":::
 
-1. Finish the installation.
+4. Finish the installation.
 
 To use TBSLogGenerator, follow these steps:
 
 1. After the installation finishes, open an elevated Command Prompt window and navigate to the following folder:
 
-   **C:\\Program Files (x86)\\Windows Kits\\10\\Hardware Lab Kit\\Tests\\amd64\\NTTEST\\BASETEST\\ngscb**
+   *C:\\Program Files (x86)\\Windows Kits\\10\\Hardware Lab Kit\\Tests\\amd64\\NTTEST\\BASETEST\\ngscb*
 
    This folder contains the TBSLogGenerator.exe file.
 
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-3.png" alt-text="Properties and location of the TBSLogGenerator.exe file." border="false":::
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-3.png" alt-text="Properties and location of the TBSLogGenerator.exe file." border="false":::
 
-1. Run the following command:
+2. Run the following command:
 
    ```console
    TBSLogGenerator.exe -LF <LogFolderName>\<LogFileName>.log > <DestinationFolderName>\<DecodedFileName>.txt
    ```
 
    where the variables represent the following values:
-   - \<*LogFolderName*> = the name of the folder that contains the file to be decoded
-   - \<*LogFileName*> = the name of the file to be decoded
-   - \<*DestinationFolderName*> = the name of the folder for the decoded text file
-   - \<*DecodedFileName*> = the name of the decoded text file
 
-   For example, the following figure shows Measured Boot logs that were collected from a Windows 10 computer and put into the C:\\MeasuredBoot\\ folder. The figure also shows a Command Prompt window and the command to decode the **0000000005-0000000000.log** file:
+   - `<LogFolderName>` = the name of the folder that contains the file to be decoded
+   - `<LogFileName>` = the name of the file to be decoded
+   - `<DestinationFolderName>` = the name of the folder for the decoded text file
+   - `<DecodedFileName>` = the name of the decoded text file
+
+   For example, the following figure shows Measured Boot logs that were collected from a Windows 10 computer and put into the *C:\\MeasuredBoot\\ folder*. The figure also shows a Command Prompt window and the command to decode the *0000000005-0000000000.log* file:
 
     ```console
     TBSLogGenerator.exe -LF C:\MeasuredBoot\0000000005-0000000000.log > C:\MeasuredBoot\0000000005-0000000000.txt
     ```
 
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-4.png" alt-text="Command Prompt window that shows an example of how to use TBSLogGenerator." border="false":::
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-4.png" alt-text="Command Prompt window that shows an example of how to use TBSLogGenerator." border="false":::
 
-   The command produces a text file that uses the specified name. In the case of the example, the file is **0000000005-0000000000.txt**. The file is located in the same folder as the original .log file.
+   The command produces a text file that uses the specified name. In the case of the example, the file is *0000000005-0000000000.txt*. The file is located in the same folder as the original `.log` file.
 
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-5.png" alt-text="Windows Explorer window that shows the text file that TBSLogGenerator produces." border="false":::
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-5.png" alt-text="Windows Explorer window that shows the text file that TBSLogGenerator produces." border="false":::
 
    The content of this text file resembles the following.
-    
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-6.png" alt-text="Contents of the text file, as shown in NotePad." border="false":::
-    
+
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-6.png" alt-text="Contents of the text file, as shown in NotePad." border="false":::
+
    To find the PCR information, go to the end of the file.
-    
-:::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-7.png" alt-text="View of NotePad that shows the PCR information at the end of the text file." border="false":::
+
+    :::image type="content" source="media/decode-measured-boot-logs-to-track-pcr-changes/ts-tpm-7.png" alt-text="View of NotePad that shows the PCR information at the end of the text file." border="false":::
 
 ## Use PCPTool to decode Measured Boot logs
 
@@ -115,10 +110,11 @@ PCPTool.exe decodelog <LogFolderPath>\<LogFileName>.log > <DestinationFolderName
 ```  
 
 where the variables represent the following values:
-- \<*LogFolderPath*> = the path to the folder that contains the file to be decoded
-- \<*LogFileName*> = the name of the file to be decoded
-- \<*DestinationFolderName*> = the name of the folder for the decoded text file
-- \<*DecodedFileName*> = the name of the decoded text file
+
+- `<LogFolderPath>` = the path to the folder that contains the file to be decoded
+- `<LogFileName>` = the name of the file to be decoded
+- `<DestinationFolderName>` = the name of the folder for the decoded text file
+- `<DecodedFileName>` = the name of the decoded text file
 
 The content of the XML file resembles the following.
 
