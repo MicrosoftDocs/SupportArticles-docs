@@ -177,7 +177,7 @@ To fix this issue, verify that the management server can ping the agent host usi
 
 **Cause**
 
-This error occurs because WinHTTP proxy settings have been configured on the management servers in the UNIX or Linux resource pool. The FQDN of the UNIX or Linux agent that you're trying to discover isn't included in the WinHTTP proxy bypass list.
+This error occurs because WinHTTP proxy settings have been configured on the management servers in the UNIX or Linux resource pool, and the FQDN of the UNIX or Linux agent that you're trying to discover isn't included in the WinHTTP proxy bypass list.
 
 **Resolution**
 
