@@ -30,17 +30,5 @@ Microsoft SQL Server Reporting Services (SSRS) supports extensions by including 
 ## More Information
 
 - [Developer's Guide: Tutorials (Reporting Services)](/previous-versions/sql/sql-server-2008-r2/aa337423(v=sql.105))
-
 - [Using Custom Assemblies with Reports](/sql/reporting-services/custom-assemblies/using-custom-assemblies-with-reports)
 
-## Applies to
-
-- SQL Server 2012 Business Intelligence
-- SQL Server 2012 Developer
-- SQL Server 2012 Enterprise
-- SQL Server 2012 Standard
-- SQL Server 2014 Business Intelligence
-- SQL Server 2014 Developer
-- SQL Server 2014 Enterprise
-- SQL Server 2014 Enterprise Core
-- SQL Server 2014 Standard
