@@ -294,7 +294,7 @@ A. Your image is likely misconfigured for serial console access. For information
 
 **Q. Is the serial console available for virtual machine scale sets?**
 
-A. Yes, it is! See [Serial Console for Virtual Machine Scale Sets](./serial-console-overview.md#serial-console-for-virtual-machine-scale-sets)
+A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#get-started-with-serial-console).
 
 ## Next steps
 
