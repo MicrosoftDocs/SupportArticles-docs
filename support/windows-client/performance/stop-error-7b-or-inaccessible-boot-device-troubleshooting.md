@@ -19,7 +19,7 @@ This article provides steps to troubleshoot "Stop error 7B: Inaccessible_Boot_De
 
 _Applies to:_ &nbsp; Windows 10
 
-## Causes of the  Inaccessible_Boot_Device  Stop error
+## Causes of the Inaccessible_Boot_Device stop error
 
 Any one of the following factors might cause the stop error:
 
