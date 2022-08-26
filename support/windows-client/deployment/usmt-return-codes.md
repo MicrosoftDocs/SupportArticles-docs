@@ -17,9 +17,9 @@ localization_priority: medium
 
 This article describes User State Migration Tool (USMT) 10.0 return codes and error messages. Also included is a table listing the USMT return codes with their associated mitigation steps. In addition, this article provides tips to help you use the logfiles to determine why you received an error.
 
-Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](/windows/deployment/usmt/usmt-requirements).
-
 _Applies to:_ &nbsp; Windows 10
+
+Understanding the requirements for running USMT can help minimize errors in your USMT migrations. For more information, see [USMT Requirements](/windows/deployment/usmt/usmt-requirements).
 
 ## USMT return codes
 
@@ -117,7 +117,7 @@ The following information lists each return code by numeric value, along with th
 
 - **13: USMT_INIT_LOGFILE_FAILED**
   - Error message:
-      > Log path argument is invalid for `/l`
+      > Log path argument is invalid for /l
   - Troubleshooting, mitigation, workarounds:  
       When `/l` is specified in the ScanState command line, USMT validates the path. Verify that the drive and other information, for example file system characters, are correct.
   - Category:  
@@ -125,7 +125,7 @@ The following information lists each return code by numeric value, along with th
 
 - **14: USMT_ERROR_USE_LAC**
   - Error message:
-      > Unable to create a local account because `/lac` was not specified
+      > Unable to create a local account because /lac was not specified
   - Troubleshooting, mitigation, workarounds:  
       When creating local accounts, the command-line options `/lac` and `/lae` should be used.
   - Category:  

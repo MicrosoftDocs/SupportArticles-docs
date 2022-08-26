@@ -73,10 +73,10 @@ sections:
         answer: |
           USMT migrates the files to the %SystemDrive% while maintaining the correct folder hierarchy. For example, if *E:\\data\\File.pst* is on the source computer, but the destination computer doesn't have an *E:\\ drive*, the file will be migrated to C:\\data\\File.pst, if C:\\ is the system drive. This holds true even when &lt;locationModify&gt; rules attempt to move data to a drive that doesn't exist on the destination computer.
           
-  - name: USMT `.xml` Files
+  - name: USMT .xml Files
     questions:
       - question: |
-          Where can I get examples of USMT `.xml` files?
+          Where can I get examples of USMT .xml files?
         answer: |
           The following articles include examples of USMT `.xml` files:
           
@@ -86,17 +86,17 @@ sections:
           -   [Custom XML Examples](/windows/deployment/usmt/usmt-custom-xml-examples)
           
       - question: |
-          Can I use custom `.xml` files that were written for USMT 5.0?
+          Can I use custom .xml files that were written for USMT 5.0?
         answer: |
           Yes. You can use custom `.xml` files that were written for USMT 5.0 with USMT for Windows 10. However, in order to use new USMT functionality, you must revisit your custom USMT files and refresh them to include the new command-line options and XML elements.
 
       - question: |
-          How can I validate the `.xml` files?
+          How can I validate the .xml files?
         answer: |
           You can use the USMT XML Schema (MigXML.xsd) to write and validate migration `.xml` files.
 
       - question: |
-          Why must I list the `.xml` files with both the `ScanState` and `LoadState` commands?
+          Why must I list the .xml files with both the ScanState and LoadState commands?
         answer: |
           The `.xml` files aren't copied to the store as in previous versions of USMT. Because the ScanState and LoadState tools need the `.xml` files to control the migration, you must specify the same set of `.xml` files for the `ScanState` and `LoadState` commands. If you used a particular set of *mig\\*.xml* files in the ScanState tool, either called through the `/auto` option, or individually through the "/i" option, then you should use same option to call the exact same *mig\\*.xml* files in the LoadState tool. However, you don't have to specify the *Config.xml* file, unless you want to exclude some of the files and settings that you migrated to the store. For example, you might want to migrate the My Documents folder to the store, but not to the destination computer. To do this, modify the *Config.xml* file and specify the updated file with the `LoadState` command. `LoadState` will migrate only the files and settings that you want to migrate.
           
@@ -108,7 +108,7 @@ sections:
           You can specify the *MigUser.xml* and *MigApp.xml* files on the command line. You can modify each of these files. The migration of operating system settings is controlled by the manifests, which you can't modify. If you want to exclude certain operating-system settings or any other components, create and modify the *Config.xml* file.
 
       - question: |
-          What happens if I don't specify the `.xml` files on the command line?
+          What happens if I don't specify the .xml files on the command line?
         answer: |
           -   `ScanState`
           
