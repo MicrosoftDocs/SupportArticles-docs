@@ -26,7 +26,7 @@ Serial Console is generally available in global Azure regions and in public prev
 For Serial Console documentation for Windows, see [Serial Console for Windows](./serial-console-windows.md).
 
 > [!NOTE]
-> Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account.
+> Serial Console is compatible with a managed boot diagnostics storage account.
 
 ## Prerequisites
 
@@ -234,7 +234,7 @@ A. Your image is likely misconfigured for serial console access. For information
 
 **Q. Is the serial console available for virtual machine scale sets?**
 
-A. Yes, it is! See [Serial Console for Virtual Machine Scale Sets](serial-console-overview.md#serial-console-for-virtual-machine-scale-sets)
+A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#get-started-with-serial-console).
 
 **Q. If I set up my VM or virtual machine scale set by using only SSH key authentication, can I still use the serial console to connect to my VM/virtual machine scale set instance?**
 
