@@ -61,7 +61,7 @@ sections:
         answer: |
           If you've installed the Windows ADK on the computer, uninstalling Windows ADK will uninstall USMT. For client computers that don't have the Windows ADK installed, you can delete the USMT directory to uninstall USMT.
 
-  - name: Files and Settings
+  - name: Files and settings
     questions:
       - question: |
           How can I exclude a folder or a certain type of file from the migration?
@@ -73,7 +73,7 @@ sections:
         answer: |
           USMT migrates the files to the %SystemDrive% while maintaining the correct folder hierarchy. For example, if *E:\\data\\File.pst* is on the source computer, but the destination computer doesn't have an *E:\\ drive*, the file will be migrated to C:\\data\\File.pst, if C:\\ is the system drive. This holds true even when &lt;locationModify&gt; rules attempt to move data to a drive that doesn't exist on the destination computer.
           
-  - name: USMT .xml Files
+  - name: USMT .xml files
     questions:
       - question: |
           Where can I get examples of USMT .xml files?
@@ -118,7 +118,7 @@ sections:
           
               If you don't specify any files with the `LoadState` command, all data that is in the store is migrated. However, any target-specific migration rules that were specified in `.xml` files with the `ScanState` command won't apply. For example, if you exclude a *MigApp.xml* file that has a rerouting rule such as `MigsysHelperFunction.RelativeMove("c:\data", "%CSIDL_PERSONAL%")`, USMT won't reroute the files. Instead, it will migrate them to *C:\\data*.
           
-  - name: Conflicts and Precedence
+  - name: Conflicts and precedence
     questions:
       - question: |
           What happens when there are conflicting XML rules or conflicting objects on the destination computer?
