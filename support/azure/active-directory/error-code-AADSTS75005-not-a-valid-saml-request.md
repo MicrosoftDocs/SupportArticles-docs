@@ -32,6 +32,6 @@ The application vendor should validate that they support the Azure AD SAML imple
 
 ## More Information
 
-For more information, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
+For a full list of Active Directory Authentication and authorization error codes, see [Azure AD Authentication and authorization error codes](/azure/active-directory/develop/reference-aadsts-error-codes)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
