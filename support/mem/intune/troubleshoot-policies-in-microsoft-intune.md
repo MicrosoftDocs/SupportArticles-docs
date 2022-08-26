@@ -18,9 +18,9 @@ You can use the built-in troubleshooting feature to review different compliance 
     :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/troubleshoot-plus-support.png" alt-text="In Endpoint Management admin center and Intune, go to Troubleshooting and support.":::
 
 2. Choose **Select user** > select the user having an issue > **Select**.
-3. Confirm that **Intune License** and **Account Status** both show green checks:
+3. Confirm that **Intune license** shows the green check:
 
-    :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Account status and Intune license show green checks marks for the status.":::
+    :::image type="content" source="media/troubleshoot-policies-in-microsoft-intune/account-status-intune-license-show-green.png" alt-text="In Intune, select the user and confirm Intune license shows the green check mark for the status.":::
 
     **Helpful links**:
 
