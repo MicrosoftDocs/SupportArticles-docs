@@ -15,11 +15,11 @@ ms.custom:
 ms.author: v-maqiu
 appliesto: 
   - Microsoft 365
-ms.date: 8/24/2022
+ms.date: 8/26/2022
 ---
 # Microsoft Office Authentication/Identity Diagnostic (MSOAID)
 
-MSOAID is a Windows tool that you can use to diagnose authentication issues. You can reproduce the issue while you run MSOAID to collect logs and diagnostic information for Microsoft support engineers to analyze.
+MSOAID is a tool that you can use to diagnose authentication issues. You can reproduce the issue while you run MSOAID to collect logs and diagnostic information for Microsoft support engineers to analyze.
 
 ## Download and run MSOAID
 
@@ -41,7 +41,7 @@ MSOAID is a Windows tool that you can use to diagnose authentication issues. You
 
     :::image type="content" source="media/use-msoaid-for-authentication-issues/copy-path.png" alt-text="Screenshot of the Microsoft Office Authentication/Identity Diagnostic window that lists the filepath to which the collected diagnostics are saved." border="false":::
 
-1. Send the diagnostics to your Microsoft support contact. You can also include the Msoaid.log file that's saved in *%TEMP%* in Windows.
+1. Send the diagnostics to your Microsoft support contact. You can also include the *msoaid.log* file that's saved in *%TEMP%* in Windows.
 
 ## Data collected by MSOAID
 
