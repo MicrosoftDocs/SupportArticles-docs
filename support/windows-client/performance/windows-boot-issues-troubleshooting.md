@@ -45,7 +45,7 @@ There are several reasons why a Windows-based computer may have problems during 
 
 Here's a summary of the boot sequence, what will be seen on the display, and typical boot problems at that point in the sequence. Before you start troubleshooting, you have to understand the outline of the boot process and display status to ensure that the issue is properly identified at the beginning of the engagement. Select the thumbnail to view it larger.
 
-:::image type="content" source="media/windows-boot-issues-troubleshooting/boot-sequence-thumb.png" alt-text="Diagram of the boot sequence flowchart." border="false" lightbox="media/windows-boot-issues-troubleshooting/boot-sequence-thumb.png":::
+:::image type="content" source="media/windows-boot-issues-troubleshooting/boot-sequence-thumb.png" alt-text="Diagram of the boot sequence flowchart." border="false" lightbox="media/windows-boot-issues-troubleshooting/boot-sequence-thumb-expanded.png":::
 
 Each phase has a different approach to troubleshooting. This article provides troubleshooting techniques for problems that occur during the first three phases.
 
