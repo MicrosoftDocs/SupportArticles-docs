@@ -90,23 +90,13 @@ See the [example ETW capture](#example-etw-capture) at the bottom of this articl
 
 The following view is a high-level one of the main wifi components in Windows.
 
-|Wi-fi Components|Description|
+|Wi-fi Components  |Description  |
 |---------|---------|
-|
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wcm.png" alt-text="Windows Connection Manager" border="false":::
-|The Windows Connection Manager (Wcmsvc) is closely associated with the UI controls (taskbar icon) to connect to various networks, including wireless networks. It accepts and processes input from the user and feeds it to the core wireless service.|
-|
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wlan.png" alt-text="WLAN Autoconfig Service" border="false":::
-|The WLAN Autoconfig Service (WlanSvc) handles the following core functions of wireless networks in windows:<li> Scanning for wireless networks in range<li>Managing connectivity of wireless networks|
-|
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/msm.png" alt-text="Media Specific Module" border="false":::
-|The Media Specific Module (MSM) handles security aspects of connection being established.|
-|
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wifi-stack.png" alt-text="Native WiFi stack" border="false":::
-|The Native WiFi stack consists of drivers and wireless APIs to interact with wireless miniports and the supporting user-mode Wlansvc.|
-|
-:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/miniport.png" alt-text="Wireless miniport" border="false":::
-|Third-party wireless miniport drivers interface with the upper wireless stack to provide notifications to and receive commands from Windows.|
+|:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wcm.png" alt-text="Windows Connection Manager" border="false":::     |The Windows Connection Manager (Wcmsvc) is closely associated with the UI controls (taskbar icon) to connect to various networks, including wireless networks. It accepts and processes input from the user and feeds it to the core wireless service.         |
+|:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wlan.png" alt-text="WLAN Autoconfig Service" border="false":::     |The WLAN Autoconfig Service (WlanSvc) handles the following core functions of wireless networks in windows:<li> Scanning for wireless networks in range<li>Managing connectivity of wireless networks         |
+|:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/msm.png" alt-text="Media Specific Module" border="false":::     |The Media Specific Module (MSM) handles security aspects of connection being established.         |
+|:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/wifi-stack.png" alt-text="Native WiFi stack" border="false":::     |The Native WiFi stack consists of drivers and wireless APIs to interact with wireless miniports and the supporting user-mode Wlansvc.         |
+|:::image type="content" source="media/wireless-network-connectivity-issues-troubleshooting/miniport.png" alt-text="Wireless miniport" border="false":::     |Third-party wireless miniport drivers interface with the upper wireless stack to provide notifications to and receive commands from Windows.         |
 
 The wifi connection state machine has the following states:
 
