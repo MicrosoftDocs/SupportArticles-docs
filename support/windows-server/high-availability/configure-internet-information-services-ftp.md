@@ -91,7 +91,7 @@ On each cluster node, enable Offline Files:
     2. In the left pane, select **Features**.
     3. Select **Add Features** in the right pane.
     4. Do one of the following, as appropriate for your Windows version:
-       - For Windows Server 2016, go to the [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience) topic on the Microsoft Docs website.
+       - For Windows Server 2016, review [Install Server with Desktop Experience](/windows-server/get-started/getting-started-with-server-with-desktop-experience).
        - For Windows Server 2102 and 2012 R2, choose **Desktop Experience** under **User Interfaces and Infrastructures** in the features list
 2. Do the following:  
    For Windows Server 2012, 2012 R2 and 2016, select **Sync Center** in Control Panel, and then select **Manage offline files.**
