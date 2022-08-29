@@ -53,13 +53,13 @@ If CPU (worker) time is very close to the overall elapsed duration, the query sp
 
 - [Examine the query plan of the query](/sql/relational-databases/performance/display-an-actual-execution-plan)
 - [Update Statistics](/sql/t-sql/statements/update-statistics-transact-sql)
-- Identify and apply [Missing Indexes](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql), see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions) for steps on how to identify missing indexes
+- Identify and apply [Missing Indexes](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql). For more steps on how to identify missing indexes, see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
 - Redesign or rewrite the queries
 - Identify and resolve [parameter-sensitive plans](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues)
 - Identify and resolve [SARG-ability issues](troubleshoot-high-cpu-usage-issues.md#step-6-investigate-and-resolve-sargability-issues)
 - Identify and resolve [Row goal](/archive/blogs/queryoptteam/row-goals-in-action) issues where long-running nested loops can be caused by TOP, EXISTS, IN, FAST, SET ROWCOUNT, OPTION (FAST N). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue) and [Showplan enhancements - Row Goal EstimateRowsWithoutRowGoal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839)
-- Assess and resolve [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) issues, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
-- Identify high CPU performance issues, see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
+- Assess and resolve [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) issues. For more information, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
+- Identify high CPU performance issues. For more information, see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
 - Increase computing resources on the system (CPUs)
 
 ## Recommended resources
