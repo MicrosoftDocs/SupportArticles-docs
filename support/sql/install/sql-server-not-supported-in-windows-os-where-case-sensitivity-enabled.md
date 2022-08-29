@@ -15,7 +15,9 @@ _Original product version:_ &nbsp; SQL Server 20012, SQL Server 2008, SQL Server
 _Original KB number:_ &nbsp; 2860895
 
 You can disable or enable Windows kernel case insensitivity by using the following registry key:
-
+Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel` \
+Value name: `obcaseinsensitive` \
+Value type: `DWORD`
 `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel` \
 `DWORD "obcaseinsensitive"`
 
