@@ -91,7 +91,7 @@ The time stamp indicates the time at which the logging occurs.
 - Messages are usually in chronological order, but there may be exceptions.
 - A pause during a sync can indicate a network problem, even if the scan succeeds.
 - A long pause near the end of a scan can indicate a supersedence chain issue.
-:::image type="content" source="media/windows-update-log-files/update-time-log.png" alt-text="Windows Update time stamps." border="false":::
+:::image type="content" source="media/windows-update-log-files/update-time-log.png" alt-text="Screenshot of Windows Update time stamps." border="false":::
 
 #### Process ID and thread ID
 
@@ -100,7 +100,7 @@ The Process IDs and Thread IDs are random, and they can vary from log to log and
 - The first four-hex digits are the process ID.
 - The next four-hex digits are the thread ID.
 - Each component, such as the USO, Windows Update engine, COM API callers, and Windows Update installer handlers, has its own process ID.
-:::image type="content" source="media/windows-update-log-files/update-process-id.png" alt-text="Windows Update process and thread IDs." border="false":::
+:::image type="content" source="media/windows-update-log-files/update-process-id.png" alt-text="Screenshot of Windows Update process and thread IDs." border="false":::
 
 #### Component name
 
@@ -113,7 +113,7 @@ Search for and identify the components that are associated with the IDs. Differe
 - DataStore - Caching update data locally
 - IdleTimer - Tracking active calls, stopping service
 
-:::image type="content" source="media/windows-update-log-files/update-component-name.png" alt-text="Windows Update component name." border="false":::
+:::image type="content" source="media/windows-update-log-files/update-component-name.png" alt-text="Screenshot of Windows Update component name." border="false":::
 
 #### Update identifiers  
 
@@ -125,7 +125,7 @@ There are different identifiers for the same update in different contexts. It's 
 - Revision number: A number incremented every time that a given update (that has a given update ID) is modified and republished on a service
 - Revision numbers are reused from one update to another (not a unique identifier).
 - The update ID and revision number are often shown together as "{GUID}.revision."
-:::image type="content" source="media/windows-update-log-files/update-update-id.png" alt-text="Windows Update update identifiers." border="false":::
+:::image type="content" source="media/windows-update-log-files/update-update-id.png" alt-text="Screenshot of Windows Update update identifiers." border="false":::
 
 ##### Revision ID
 
@@ -152,7 +152,7 @@ There are different identifiers for the same update in different contexts. It's 
   - Large integers are typically revision IDs
   - Small integers (especially in Datastore) can be local IDs
 
-    :::image type="content" source="media/windows-update-log-files/update-inconsistent.png" alt-text="Windows Update inconsistent terminology." border="false":::
+    :::image type="content" source="media/windows-update-log-files/update-inconsistent.png" alt-text="Screenshot of Windows Update inconsistent terminology." border="false":::
 
 ## Windows Setup log files analysis using SetupDiag tool
 

@@ -379,7 +379,7 @@ Number Friendly Name      Serial Number        HealthStatus OperationalStatus To
 
 You can also view the partition type of a disk by opening the Disk Management tool, right-clicking the disk number, clicking **Properties**, and then clicking the **Volumes** tab. See the following example:
 
-:::image type="content" source="media/convert-mbr-partition-to-gpt/mbr2gpt-volume.png" alt-text="Volumes." border="false":::
+:::image type="content" source="media/convert-mbr-partition-to-gpt/disk-partition-type.png" alt-text="Screenshot of the properties of a disk with the Volumes tab opened, which shows the Partition style of the disk." border="false":::
 
 If Windows PowerShell and Disk Management aren't available, such as when you're using Windows PE, you can determine the partition type at a command prompt with the DiskPart tool. To determine the partition style from a command line, type `diskpart` and then type `list disk`. See the following example:
 

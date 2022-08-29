@@ -192,7 +192,7 @@ To obtain the proper firmware drivers, search for the most updated driver versio
 
 When you begin a Windows Update, the setup process will ask you to **Get important updates**. Answer **Yes** if the computer you're updating is connected to the Internet. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/update.jpg" alt-text="Get important updates." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/get-important-updates.png" alt-text="Screenshot of Window 10 Setup window which shows Get important updates." border="false":::
 
 ### Verify disk space
 
@@ -204,13 +204,13 @@ In **File Explorer**, select **Computer** or **This PC** on the left, then look 
 
 The amount of space available on the system drive will be displayed under the drive. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/drive.png" alt-text="System drive." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/system-drive-space-available.png" alt-text="Screenshot of the system drive with the amount of available space." border="false":::
 
 In the previous example, there's 703 GB of available free space on the system drive (C:).
 
 To free up more space on the system drive, begin by running Disk Cleanup. You can access Disk Cleanup by right-clicking the hard drive icon and then clicking Properties. See the following example:
 
-:::image type="content" source="media/windows-10-upgrade-quick-fixes/cleanup.png" alt-text="Disk cleanup." border="false":::
+:::image type="content" source="media/windows-10-upgrade-quick-fixes/disk-cleanup-option.png" alt-text="Screenshot of the system drive properties with the disk cleanup option on the general tab." border="false":::
 
 For instructions to run Disk Cleanup and other suggestions to free up hard drive space, see [Tips to free up drive space on your PC](https://support.microsoft.com/help/17421/windows-free-up-drive-space).
 

@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Windows 10
 > See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors) for a full list of topics in this article.
 
 &nbsp;[
-:::image type="content" source="media/setupdiag-tool-for-windows-10-upgrade/download.png" alt-text="Download SetupDiag." border="false":::
+:::image type="content" source="media/setupdiag-tool-for-windows-10-upgrade/download-setupdiag.png" alt-text="Download SetupDiag icon." border="false":::
 ](https://go.microsoft.com/fwlink/?linkid=870142)
 
 ## About SetupDiag
