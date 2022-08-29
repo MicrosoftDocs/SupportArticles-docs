@@ -18,8 +18,6 @@ You can disable or enable Windows kernel case insensitivity by using the followi
 Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel` \
 Value name: `obcaseinsensitive` \
 Value type: `DWORD`
-`HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel` \
-`DWORD "obcaseinsensitive"`
 
 SQL Server relies on the Windows default value of 1 (one) for this key.
 
