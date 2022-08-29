@@ -17,7 +17,7 @@ appliesto:
   - Exchange Online
 search.appverid: 
   - MET150
-ms.date: 8/24/2022
+ms.date: 8/29/2022
 ---
 
 # Can't delete items from public folder in Outlook on the web
