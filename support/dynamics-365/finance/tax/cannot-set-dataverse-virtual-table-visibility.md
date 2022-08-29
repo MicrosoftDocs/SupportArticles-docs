@@ -4,7 +4,7 @@ description: This article provides information about the error codes (400 and 40
 author: hshi-ms
 ms.date: 07/26/2022
 ms.topic: troubleshooting
-ms.search.form: ERSolutionTable
+ms.search.form: ERSolutionTable_RCSSetVirtualTableVisibility
 audience: Application User
 ms.reviewer: kfend
 ms.search.region: Global

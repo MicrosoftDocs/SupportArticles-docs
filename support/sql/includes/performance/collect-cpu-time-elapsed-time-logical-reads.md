@@ -16,7 +16,7 @@
         1, 512)  AS statement_text  
    FROM sys.dm_exec_requests AS req
       CROSS APPLY sys.dm_exec_sql_text(req.sql_handle) AS ST
-   ORDER BY cpu_time DESC;
+   ORDER BY total_elapsed_time DESC;
    ```
 
 - For past executions of the query, check **last_elapsed_time** and **last_worker_time** columns in [sys.dm_exec_query_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql). Run the following query to get the data:
@@ -37,7 +37,7 @@
    ```
 
   > [!Note]
-  > If `avg_wait_time` shows a negative value that means it's a [parallel query](../../performance/troubleshoot-query-perf-between-servers.md#parallel-queries---runner-or-waiter).
+  > If `avg_wait_time` shows a negative value, it's a [parallel query](../../performance/troubleshoot-query-perf-between-servers.md#parallel-queries---runner-or-waiter).
 
 - If you can execute the query on demand in SQL Server Management Studio (SSMS) or Azure Data Studio, run it with [SET STATISTICS TIME](/sql/t-sql/statements/set-statistics-time-transact-sql) `ON` and [SET STATISTICS IO](/sql/t-sql/statements/set-statistics-io-transact-sql) `ON`.
 
@@ -58,7 +58,7 @@
       CPU time = 460 ms,  elapsed time = 470 ms.
    ```
 
-- If you can collect a query plan, check the data from [Execution plan properties](/sql/ssms/scripting/use-the-properties-window-in-management-studio#to-view-the-properties-of-a-showplan-operator).
+- <a name="query_timestats_from_plan"></a>If you can collect a query plan, check the data from the [Execution plan properties](/sql/ssms/scripting/use-the-properties-window-in-management-studio#to-view-the-properties-of-a-showplan-operator).
 
   1. Run the query with **Include Actual Execution Plan** on.
   1. Select the left-most operator from **Execution plan**.
