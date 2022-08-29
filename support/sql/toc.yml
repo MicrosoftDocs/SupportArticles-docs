@@ -393,14 +393,14 @@
       href: performance/troubleshoot-query-perf-between-servers.md
     - name: Slower query in database application than in SSMS
       href: performance/troubleshoot-application-slow-ssms-fast.md      
+    - name: Decreased query performance after upgrade
+      href: performance/decreased-query-perf-after-upgrade.md
     - name: Understand and resolve blocking problems
       href: performance/understand-resolve-blocking.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
       href: performance/recommended-updates-configuration-options.md
     - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
       href: performance/recommended-updates-configuration-workloads.md
-    - name: Decreased query performance after upgrade
-      href: performance/decreased-query-perf-after-upgrade.md
     - name: Resolve last-page insert PAGELATCH_EX contention
       href: performance/resolve-pagelatch-ex-contention.md
     - name: Troubleshoot queries that seem to never end
