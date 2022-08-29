@@ -19,21 +19,21 @@ Your desktop flow fails to run.
 
 ## Cause
 
-Many errors can occur during a flow run. See below table for further information.
+Many errors can occur during a flow run. For more information, see the table below.
 
 ## Resolution
 
-If you encounter error codes that aren't listed in the table below, contact the customer support.
+Any error code not present in this table is unactionable. For those cases, contact customer support.
 
 |Error code|HTTP status code|Run mode|Mitigation Steps|
 |---|---|---|---|
-|UnsupportedRpaScriptSchemaVersion|400|Attended</br>Unattended|The selected flow was issued by a later Power Automate for desktop version. You'll need to install the latest version of Power Automate for desktop on your machine.|
-|InvalidUIFlowsCertificates|401|Attended</br>Unattended|You'll need to install the latest version of desktop flows on your machine. (The security certificate of the desktop flows app has expired.)|
+|UnsupportedRpaScriptSchemaVersion|400|Attended</br>Unattended|The selected flow was issued by a later version of Power Automate for desktop. You'll need to install the latest version of Power Automate for desktop on your machine.|
+|InvalidUIFlowsCertificates|401|Attended</br>Unattended|You'll need to install the latest version of desktop flows on your machine as the security certificate of the desktop flows app has expired.|
 |WindowsIdentityIncorrect|401|Attended</br>Unattended|Check that you can sign in to the machine using the connection credentials. Below are supported format:</br>- domain\username -> domain account (domain and Microsoft Azure Active Directory (Azure AD))</br>- username@domain... -> Azure AD account</br>- username -> local account</br>- machine name\username -> local account</br>- local\username -> local account</br>- .\username -> local account|
 |NoUnlockedActiveSessionForAttended|400|Attended|Check that you're logged in with the correct user and that the session is unlocked on the machine.|
 |SessionCreationError|400|Unattended|Check requirements for unattended scenario:</br>- The user specified in your connection is a member of the Remote Desktop Users group.</br>- Remote Desktop is enabled on the computer.|
 |SessionCreationWinLogonFailure|400|Unattended|We can't create a Windows session to run your unattended desktop flow. You need to restart your machine.|
-|SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (whatever the state of the session) on the machine.|
+|SessionExistsForTheUserWhenUnattended|400|Unattended|Check that you aren't logged in with the same user (regardless of the state of the session) on the machine.|
 |TooManyActiveSessions|400|Unattended|Windows Server only.</br>You need to sign out at least one active session on the machine.|
 |ExistingRecordingSession|400|Local|Windows Server only.</br>Check that there's no other user connected to the machine launching a recording or a test playback.|
 |LocalPlaybackOrRecordingOngoing|429|All|Check that there's no recording nor test playback ongoing on the machine for the same user session.|
@@ -44,10 +44,10 @@ If you encounter error codes that aren't listed in the table below, contact the 
 |Win10AlreadyHasActiveSession|400|Unattended|Windows 10 only. You need to sign out from the active session on the machine.|
 |UIFlowAgentNotAvailable|400|Attended</br>Unattended|You need to confirm that the service uiflowservice is up and running on your machine. If you have the following error when trying to start uiflowservice, see [Desktop flows failure](https://support.microsoft.com/help/4564550/):</br>**Windows could not start the UIFlowService service on Local Computer. Error 1069: The service did not start due to a logon failure**|
 |UnableToCallCrlEndpoint|400|Attended</br>Unattended|You need to ensure the revocation list for the certificates can be checked. Ensure that the CRL services aren't blocked on the target machine. The services that must be contacted are listed in this article: [Limits for automated, scheduled, and instant flows](/power-automate/limits-and-config#ui-flows-required-services)|
-|NoListenerConnected|404|Attended</br>Unattended|The endpoint wasn't found. There are no listeners connected for the endpoint.</br>Check that your machine is online.|
+|NoListenerConnected|404|Attended</br>Unattended|The endpoint wasn't found. There are no listeners connected to the endpoint.</br>Check that your machine is online.|
 |ConnectionNotEstablished|404|Attended</br>Unattended|The endpoint wasn't found. None of the connected listeners accepted the connection within the allowed timeout.</br>Check that your machine is online.|
 |DnsError|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.|
 |ConnectionTimeout|404|Attended</br>Unattended|This request operation didn't receive a reply within the configured timeout.</br>Check that your machine is online and can communicate with the required power automate endpoints.|
 |EndpointDoNotExist|404|Attended</br>Unattended|The endpoint wasn't found.</br>Register your machine again and schedule new runs.|
-|GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br>Add machines to the group then reschedule new runs.|
+|GroupIsEmpty|400|Attended</br>Unattended|The machine group is empty.</br>Add machines to the group, then reschedule new runs.|
 |NoCandidateMachine|400|Attended</br>Unattended|The run has exceeded the queue waiting time limit.</br>Consider allocating more machines or spreading desktop flow runs to optimize wait time in the queue.|
