@@ -24,7 +24,7 @@ When you troubleshoot Direct Routing issues, the specific cause of a call failur
 - SIP response code (CallEndReason): A three-digit response code that shows the request status. It's received from the Session Border Controller (SBC) or Direct Routing SIP interface. This code tells what happened, for example, the SBC didn't reply in a timely manner. The SIP response codes are defined in [RFC 3261](https://www.rfc-editor.org/rfc/rfc3261#page-182).
 - Microsoft response code (CallEndSubReason): A response code that's assigned by Microsoft. It's usually a six-digit code, but may be reported as 0 or more than six digits depending on the problem. This code tells why the problem occurred, for example, the certificate on the SBC has expired.
 
-These response codes are reported in the Microsoft Teams admin center, and the Power BI Quality of Experience (QER) reports for PSTN.
+These response codes are reported in the [Microsoft Teams admin center](/microsoftteams/direct-routing-health-dashboard#detailed-information-for-each-sbc), and the [Power BI Quality of Experience (QER) reports for PSTN](/microsoftteams/cqd-power-bi-query-templates).
 
 ## Microsoft response code
 
