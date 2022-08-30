@@ -54,7 +54,7 @@ Internal memory pressure refers to low memory availability caused by factors ins
 
 ### Internal memory pressure, coming from SQL Server component(s)
   
-Internal memory pressure coming from components inside SQL Server Engine can also lead to out of memory errors. There are hundreds of components, tracked via [memory clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to resolve this further. For example, if you find that the `OBJECTSTORE_LOCK_MANAGER` memory clerk is showing a large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire many locks. You can optimize these queries by using indexes, or shorten any transactions that hold locks for long time, or check if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) and their descriptions.
+Internal memory pressure coming from components inside SQL Server Engine can also lead to out of memory errors. There are hundreds of components, tracked via [memory clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) that allocate memory in SQL Server. You must identify which memory clerk(s) are responsible for the largest memory allocations to resolve this. For example, if you find that the `OBJECTSTORE_LOCK_MANAGER` memory clerk is showing a large memory allocation, you need to further understand why the Lock Manager is consuming so much memory. You may find there are queries that acquire many locks. You can optimize these queries by using indexes, shortening any transactions that hold locks for a long time, or checking if lock escalation is disabled. Each memory clerk or component has a unique way of accessing and using memory. For more information, see [memory clerk types](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) and their descriptions.
 
 ## Visual representation of the memory pressure types
 
@@ -100,21 +100,21 @@ View memory usage in SQL Server Management Studio:
 
 An alternative, automated way to capture these data points is to use tools like [PSSDIAG](https://github.com/microsoft/DiagManager/releases) or [SQL LogScout](https://github.com/microsoft/SQL_LogScout/releases).
 
-- If you use Pssdiag, configure to capture **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector.
+- If you use Pssdiag, configure it to capture the **Perfmon** collector and the **Custom Diagnostics\SQL Memory Error** collector.
 
-- If you use SQL LogScout, configure to capture the **Memory** scenario.
+- If you use SQL LogScout, configure it to capture the **Memory** scenario.
 
-The following sections describe more detailed steps for each scenario - external or internal memory pressure.
+The following sections describe more detailed steps for each scenario (external or internal memory pressure).
 
 ## Troubleshooting methodology
 
-If an out-of-memory error appears occasionally or for a brief period, there may be a short-lived memory issue that resolved itself. You may not need to take action in those cases. However, if the error occurs multiple times on multiple connections and persists for periods of seconds or longer, follow the steps to troubleshoot further.
+If an out-of-memory error occasionally appears or for a brief period, there may be a short-lived memory issue that resolves itself. You may not need to take action in those cases. However, if the error occurs multiple times on multiple connections and persists for periods of seconds or longer, follow the steps to troubleshoot further.
 
 The following list outlines general steps that will help in troubleshooting memory errors:
 
 ### External pressure: diagnostics and solutions
 
-- To diagnose low memory conditions on the system outside of SQL Server process, collect Performance Monitor counters. Investigate if applications or services other than SQL Server are consuming memory on this server by looking at these counters:
+- To diagnose low memory conditions on the system outside of the SQL Server process, collect Performance Monitor counters. Investigate if applications or services other than SQL Server are consuming memory on this server by looking at these counters:
 
   - **Memory:Available MB**
   - **Process:Working Set**
@@ -141,7 +141,7 @@ The following list outlines general steps that will help in troubleshooting memo
   }
   ```
 
-- Review the System Event log and look for memory related errors (for example, low virtual memory).
+- Review the System Event log and look for memory-related errors (for example, low virtual memory).
 - Review the Application Event log for application-related memory issues.
 
   Here's a sample PowerShell script to query the System and Application Event logs for the keyword "memory". Feel free to use other strings like "resource" for your search:
@@ -158,9 +158,9 @@ The following list outlines general steps that will help in troubleshooting memo
 
 To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server, use the following approach:
 
-- If SQL Server isn't* using [Locked Pages in Memory](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) (AWE API), then most its memory is reflected in the **Process:Private Bytes** counter (`SQLServr` instance) in Performance Monitor. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. If you find a significant difference between the value **Process:Private Bytes** and **SQL Server:Memory Manager: Total Server Memory (KB)**, then that difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example if **Private bytes** is 300 GB and **Total Server Memory** is 250 GB, then approximately 50 GB of the overall memory in the process is coming from outside SQL Server engine.
+- If SQL Server isn't using [Locked Pages in Memory](/sql/database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows) (AWE API), then most of its memory is reflected in the **Process:Private Bytes** counter (`SQLServr` instance) in Performance Monitor. The overall memory usage coming from within the SQL Server engine is reflected in the **SQL Server:Memory Manager: Total Server Memory (KB)** counter. If you find a significant difference between the value **Process:Private Bytes** and **SQL Server:Memory Manager: Total Server Memory (KB)**, then that difference is likely coming from a DLL (linked server, XP, SQLCLR, and so on). For example, if **Private bytes** is 300 GB and **Total Server Memory** is 250 GB, then approximately 50 GB of the overall memory in the process is coming from outside the SQL Server engine.
 
-- If SQL Server is using Locked Pages in Memory (AWE API), then it's more challenging to identify the issue because Performance monitor doesn't offer AWE counters that track memory usage for individual processes. The overall memory usage coming from within SQL Server engine is reflected in **SQL Server:Memory Manager: Total Server Memory (KB)** counter. Typical **Process:Private Bytes** values may vary between 300 MB and 1-2 GB overall. If you find a significant usage of **Process:Private Bytes** beyond this typical use, then the difference is likely coming from a DLL (linked server, XP, SQLCLR, etc.). For example, if **Private bytes** counter is 5-4 GB and SQL Server is using Locked Pages in Memory (AWE), then a large part of the Private bytes may be coming from outside SQL Server engine. This is an approximation technique.
+- If SQL Server is using Locked Pages in Memory (AWE API), then it's more challenging to identify the issue because the Performance monitor doesn't offer AWE counters that track memory usage for individual processes. The overall memory usage coming from within the SQL Server engine is reflected in the **SQL Server:Memory Manager: Total Server Memory (KB)** counter. Typical **Process:Private Bytes** values may vary between 300 MB and 1-2 GB overall. If you find a significant usage of **Process:Private Bytes** beyond this typical use, then the difference is likely coming from a DLL (linked server, XP, SQLCLR, and so on). For example, if **Private bytes** counter is 5-4 GB and SQL Server is using Locked Pages in Memory (AWE), then a large part of the Private bytes may be coming from outside the SQL Server engine. This is an approximation technique.
 
 - Use the Tasklist utility to identify any DLLs that are loaded inside SQL Server space:
 
@@ -168,13 +168,13 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
    tasklist /M /FI "IMAGENAME eq sqlservr.exe"
   ```
 
-- You could also use this query to examine loaded modules (DLLs) and see if something isn't expected to be there
+- You could also use this query to examine loaded modules (DLLs) and see if something isn't expected to be there.
 
   ```sql
   SELECT * FROM sys.dm_os_loaded_modules
   ```
 
-- If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling **Allow inprocess** option. See [Create Linked Servers](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine) for more information. Not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
+- If you suspect that a Linked Server module is causing significant memory consumption, then you can configure it to run out of process by disabling the **Allow inprocess** option. See [Create Linked Servers](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine) for more information. Not all linked server OLEDB providers may run out of process; contact the product manufacturer for more information.
 
 - In the rare case that OLE automation objects are used (`sp_OA*`), you may configure the object to run in a process outside SQL Server by setting *context* = 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql).
 
