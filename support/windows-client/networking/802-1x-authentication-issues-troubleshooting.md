@@ -44,52 +44,52 @@ Check the Windows Security event log on the NPS Server for NPS events that corre
 
 In the event message, scroll to the bottom, and then check the [Reason Code](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197570(v%3dws.10)) field and the text that's associated with it.
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/auditfailure.png" alt-text="example of an audit failure." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/audit-failure-event-id-6273.png" alt-text="Screenshot of event id 6273 which shows an example of audit failure." border="false":::
    Example: event ID 6273 (Audit Failure)
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/auditsuccess.png" alt-text="example of an audit success." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/audit-success-event-id-6272.png" alt-text="Screenshot of event id 6272 which shows an example of an audit success." border="false":::
    Example: event ID 6272 (Audit Success)
 
 The WLAN AutoConfig operational log lists information and error events based on conditions detected by or reported to the WLAN AutoConfig service. The operational log contains information about the wireless network adapter, the properties of the wireless connection profile, the specified network authentication, and, if connectivity problems occur, the reason for the failure. For wired network access, the Wired AutoConfig operational log is an equivalent one.
 
 On the client side, go to *Event Viewer (Local)\\Applications and Services Logs\\Microsoft\\Windows\\WLAN-AutoConfig\/Operational* for wireless issues. For wired network access issues, go to  *..\\Wired-AutoConfig\/Operational*. See the following example:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/eventviewer.png" alt-text="event viewer screenshot showing wired-autoconfig and WLAN autoconfig." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/event-viewer-network-access-issues.png" alt-text="Screenshot of the event viewer showing wired-autoconfig and WLAN autoconfig." border="false":::
 
 Most 802.1X authentication issues are because of problems with the certificate that's used for client or server authentication. Examples include invalid certificate, expiration, chain verification failure, and revocation check failure.
 
 First, validate the type of EAP method that's used:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/comparisontable.png" alt-text="eap authentication type comparison." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/eap-method-comparison-table.png" alt-text="Table of eap authentication type comparison." border="false":::
 
 If a certificate is used for its authentication method, check whether the certificate is valid. For the server (NPS) side, you can confirm what certificate is being used from the EAP property menu. In **NPS snap-in**, go to **Policies** > **Network Policies**. Select and hold (or right-click) the policy, and then select **Properties**. In the pop-up window, go to the **Constraints** tab, and then select the **Authentication Methods** section.
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/eappropertymenu.png" alt-text="Constraints tab of the secure wireless connections properties." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/eap-property-menu.png" alt-text="Screenshot of the Constraints tab of the secure wireless connections properties." border="false":::
 
 The CAPI2 event log is useful for troubleshooting certificate-related issues.
 By default, this log isn't enabled. To enable this log, expand *Event Viewer (Local)\\Applications and Services Logs\\Microsoft\\Windows\\CAPI2*, select and hold (or right-click) **Operational**, and then select **Enable Log**.
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/capi.png" alt-text="screenshot of event viewer." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/capi2-event-log.png" alt-text="Screenshot of the capi2 event log." border="false":::
 
 For information about how to analyze CAPI2 event logs, see
 [Troubleshooting PKI Problems on Windows Vista](/previous-versions/windows/it-pro/windows-vista/cc749296%28v=ws.10%29).
 
 When troubleshooting complex 802.1X authentication issues, it's important to understand the 802.1X authentication process. Here's an example of wireless connection process with 802.1X authentication:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/authenticator_flow_chart.png" alt-text="authenticator flow chart." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/authenticator-flow-chart.png" alt-text="Flow chart of the authenticator." border="false":::
 
 If you [collect a network packet capture](collect-data-using-network-monitor.md) on both the client and the server (NPS) side, you can see a flow like the one below. Type *EAPOL* in the Display Filter for a client-side capture, and *EAP* for an NPS-side capture. See the following examples:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/clientsidepacket_cap_data.png" alt-text="client-side packet capture data." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/client-side-packet-cap-data.png" alt-text="Screenshot of the client-side packet capture data." border="false":::
 *Client-side packet capture data*
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/NPS_sidepacket_capture_data.png" alt-text="NPS-side packet capture data." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/nps-side-packet-capture-data.png" alt-text="Screenshot of the NPS-side packet capture data." border="false":::
 *NPS-side packet capture data*
 
 > [!NOTE]
 > If you have a wireless trace, you can also [view ETL files with network monitor](/windows/desktop/ndf/using-network-monitor-to-view-etl-files) and apply the **ONEX_MicrosoftWindowsOneX** and **WLAN_MicrosoftWindowsWLANAutoConfig** Network Monitor filters. If you need to load the required [parser](/archive/blogs/netmon/parser-profiles-in-network-monitor-3-4), see the instructions under the **Help** menu in Network Monitor. Here's an example:
 
-:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/etl.png" alt-text="ETL parse." border="false":::
+:::image type="content" source="media/802-1x-authentication-issues-troubleshooting/etl-file-network-monitor.png" alt-text="Screenshot of microsoft network monitor window showing a wireless trace." border="false":::
 
 ## Audit policy
 

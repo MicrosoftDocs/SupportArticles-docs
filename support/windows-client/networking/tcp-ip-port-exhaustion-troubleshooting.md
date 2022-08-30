@@ -83,19 +83,19 @@ Since outbound connections start to fail, you'll see many instances of the below
 
 - Unable to sign in to the machine with domain credentials, however sign-in with local account works. Domain sign in will require you to contact the DC for authentication, which is again an outbound connection. If you've cache credentials set, then domain sign-in might still work.
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-14.png" alt-text="Screenshot of error for NETLOGON in Event Viewer." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/unable-sign-in-with-domain-credentials.png" alt-text="Screenshot of error for NETLOGON in Event Viewer." border="false":::
 
 - Group Policy update failures:
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-15.png" alt-text="Screenshot of event properties for Group Policy failure." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/group-policy-update-failure.png" alt-text="Screenshot of event properties for Group Policy failure." border="false":::
 
 - File shares are inaccessible:
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-16.png" alt-text="Screenshot of error message Windows cannot access." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/file-shares-inaccessible.png" alt-text="Screenshot of error message Windows cannot access." border="false":::
 
 - RDP from the affected server fails:
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-17.png" alt-text="Screenshot of error when Remote Desktop is unable to connect." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/rdp-from-affected-server-fails.png" alt-text="Screenshot of error when Remote Desktop is unable to connect." border="false":::
 
 - Any other application running on the machine will start to give out errors
 
@@ -109,15 +109,15 @@ If you suspect that the machine is in a state of port exhaustion:
 
     1. Event ID 4227
 
-        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-18.png" alt-text="Screenshot of event ID 4227 in Event Viewer." border="false":::
+        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/event-id-4227.png" alt-text="Screenshot of event ID 4227 in Event Viewer." border="false":::
 
     2. Event ID 4231
 
-        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-19.png" alt-text="Screenshot of event ID 4231 in Event Viewer." border="false":::
+        :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/event-id-4231.png" alt-text="Screenshot of event ID 4231 in Event Viewer." border="false":::
 
 3. Collect a `netstat -anob` output from the server. The netstat output will show you a huge number of entries for TIME_WAIT state for a single PID.
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-20.png" alt-text="Screenshot of netstate command output." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/time-wait-state-entries.png" alt-text="Screenshot of netstate command output." border="false":::
 
     After a graceful closure or an abrupt closure of a session, after a period of 4 minutes (default), the port used by the process or application would be released back to the available pool. During this 4 minutes, the TCP connection state will be TIME_WAIT state. In a situation where you suspect port exhaustion, an application or process won't be able to release all the ports that it has consumed and will remain in the TIME_WAIT state.
 
@@ -161,7 +161,7 @@ If method 1 doesn't help you identify the process (prior to Windows 10 and Windo
 1. Add a column called "handles" under details/processes.
 2. Sort the column handles to identify the process with the highest number of handles. Usually the process with handles greater than 3000 could be the culprit except for processes like System, *lsass.exe*, *store.exe*, *sqlsvr.exe*.
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-21.png" alt-text="Screenshot of handles column in Windows Task Maner." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/process-highest-number-handles.png" alt-text="Screenshot of handles column in Windows Task Manager." border="false":::
 
 3. If any other process than these processes has a higher number, stop that process and then try to sign in using domain credentials and see if it succeeds.
 
@@ -182,7 +182,7 @@ Steps to use Process explorer:
 
     File   \Device\AFD
 
-    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/tcp-ts-22.png" alt-text="Screenshot of Process Explorer." border="false":::
+    :::image type="content" source="media/tcp-ip-port-exhaustion-troubleshooting/process-explorer-higher-handle-counts.png" alt-text="Screenshot of Process Explorer with the processes sorted by handles." border="false":::
 
 9. Some are normal, but large numbers of them aren't (hundreds to thousands). Close the process in question. If that restores outbound connectivity, then you've further proven that the app is the cause. Contact the vendor of that app.
 

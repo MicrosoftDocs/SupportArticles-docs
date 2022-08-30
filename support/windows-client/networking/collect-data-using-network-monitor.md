@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Windows 10
 
 To get started, [download Network Monitor tool](https://www.microsoft.com/download/details.aspx?id=4865). When you install Network Monitor, it installs its driver and hooks it to all the network adapters installed on the device. You can see the same on the adapter properties, as shown in the following image:
 
-:::image type="content" source="media/collect-data-using-network-monitor/nm-adapters.png" alt-text="Adapters." border="false":::
+:::image type="content" source="media/collect-data-using-network-monitor/network-monitor-adapters.png" alt-text="Screenshot of the network adapters properties." border="false":::
 
 When the driver gets hooked to the network interface card (NIC) during installation, the NIC is reinitialized, which might cause a brief network glitch.
 
@@ -33,15 +33,15 @@ When the driver gets hooked to the network interface card (NIC) during installat
 
 1. Run `netmon` in an elevated status by choosing **Run as Administrator**.
 
-    :::image type="content" source="media/collect-data-using-network-monitor/nm-start.png" alt-text="Image of Start search results for Netmon." border="false":::
+    :::image type="content" source="media/collect-data-using-network-monitor/nm-start.png" alt-text="Screenshot of Start search results for Netmon." border="false":::
 
 2. Network Monitor opens with all network adapters displayed. Select the network adapters where you want to capture traffic, select **New Capture**, and then select **Start**.
 
-    :::image type="content" source="media/collect-data-using-network-monitor/tcp-ts-4.png" alt-text="Image of the New Capture option on menu." border="false":::
+    :::image type="content" source="media/collect-data-using-network-monitor/nm-new-capture.png" alt-text="Screenshot of the New Capture option on the network monitor menu." border="false":::
 
 3. Reproduce the issue, and you'll see that Network Monitor grabs the packets on the wire.
 
-    :::image type="content" source="media/collect-data-using-network-monitor/tcp-ts-5.png" alt-text="Frame summary of network packets." border="false":::
+    :::image type="content" source="media/collect-data-using-network-monitor/network-monitor-frame-summary.png" alt-text="Screenshot of the Frame summary of network packets." border="false":::
 
 4. Select **Stop**, and go to **File** > **Save as** to save the results. By default, the file will be saved as a `.cap` file.
 

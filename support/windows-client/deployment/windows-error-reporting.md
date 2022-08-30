@@ -58,7 +58,7 @@ Ten parameters are listed in the event:
 
 The event will also contain links to log files that can be used to perform a detailed diagnosis of the error.  An example of this event from a successful upgrade is shown below.
 
-:::image type="content" source="media/windows-error-reporting/event.png" alt-text="Windows Error Reporting." border="false":::
+:::image type="content" source="media/windows-error-reporting/event-example-successful-upgrade.png" alt-text="Screenshot of an event example from a successful upgrade." border="false":::
 
 ## More information
 
