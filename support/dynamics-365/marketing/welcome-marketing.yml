@@ -5,20 +5,21 @@ summary: Welcome to Microsoft Dynamics 365 Marketing troubleshooting. These arti
 metadata:
   title: Microsoft Dynamics 365 Marketing troubleshooting
   description: Landing page for Microsoft Dynamics 365 Marketing troubleshooting articles. # Required; article description that is displayed in search results. < 160 chars.
-  ms.prod: dynamics-365  #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.prod: dynamics-365 #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
-  author:   #Required; your GitHub user alias, with correct capitalization.
-  ms.author:  #Required; microsoft alias of author; optional team alias.
+  author: #Required; your GitHub user alias, with correct capitalization.
+  ms.author: #Required; microsoft alias of author; optional team alias.
   ms.date: 3/31/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
- # Card
+  # Card
   - title: Microsoft Dynamics 365 Marketing issues
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: The Campaign Activity can be distributed only once
-            url: the-campaign-activity-can-be-distributed-only-once-error.md
+          - text: Organization entitlement doesn't match your tenant
+            url: dynamics-365-marketing-entitlement-does-not-match-your-tenant.md
+          - text: Problem with deploying Marketing application
+            url: dynamics-365-marketing-problem-with-deployment.md
