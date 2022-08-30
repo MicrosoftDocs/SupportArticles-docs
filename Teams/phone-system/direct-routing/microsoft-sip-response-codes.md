@@ -19,7 +19,7 @@ ms.reviewer: rishire
 
 # Microsoft and SIP response codes
 
-When you trouble Direct Routing issues, the specific root cause of an error can be identified through a combination of the following response codes:
+When you troubleshoot Direct Routing issues, the specific cause of a call failure can be identified through a combination of the following response codes:
 
 - SIP response code (CallEndReason): A three-digit response code that shows the request status. It's received from the Session Border Controller (SBC) or Direct Routing SIP interface. This code tells what happened, for example, the SBC didn't reply in a timely manner. The SIP response codes are defined in [RFC 3261](https://www.rfc-editor.org/rfc/rfc3261#page-182).
 - Microsoft response code (CallEndSubReason): A response code that's assigned by Microsoft. It's usually a six-digit code, but may be reported as 0 or more than six digits depending on the problem. This code tells why the problem occurred, for example, the certificate on the SBC has expired.
@@ -28,7 +28,7 @@ These response codes are reported in the Microsoft Teams admin center, and the P
 
 ## Microsoft response code
 
-The structure of Microsoft response code is as follows:
+The structure of a Microsoft response code is as follows:
 
 *5\<X\>\<Y\>\<ZZZ\>*
 
@@ -111,7 +111,7 @@ This section lists combinations of Microsoft and SIP response codes, the corresp
 - SIP response code: **408**
 - Error message: **SBC indicated that the user did not respond (Request timeout)**
 - Description:  
-  When a Teams user makes an outbound call, the Direct Routing interface sends a SIP INVITE message to the SBC. The SBC routes the message accordingly and starts a timer. If no response to the INVITE is received, the SBC will generate a SIP 408 response back to the Teams service. This error may be related to the dialed number or a downstream component.
+  When a Teams user makes an outbound call, the Direct Routing interface sends a SIP INVITE message to the SBC. The SBC routes the message accordingly and starts a timer. If no response to the INVITE is received, the SBC will generate a 408 SIP response back to the Teams service. This error may be related to the dialed number or a downstream component.
 - Suggested actions:  
   Review the tenant's call records with *CallEndSubReason = 560408*. Look for trends in the called numbers, or a distribution of the failures by destination country. Patterns can be identified that would suggest a problem with a downstream component.
 
@@ -136,37 +136,3 @@ This section lists combinations of Microsoft and SIP response codes, the corresp
   Request a certificate that's signed by one of the public root certification authorities listed in [Public trusted certificate for the SBC](/microsoftteams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
 
   If you have multiple TLS profiles, check that you're using a profile with the correct certificate when connecting to the Direct Routing interface. If you have multiple TLS profiles on the SBC, make sure to select a profile that's signed with a certificate trusted by Direct Routing.
-
-## ACS-specific error codes
-
-This section lists combinations of Microsoft and SIP response codes that are specific to ACS, the corresponding error messages and detailed description, and actions you can take.
-
-### 510558 558 GetOutboundRouting ACS resource or user is not in flight
-
-- Microsoft response code: **510558**
-- SIP response code: **558**
-- Error message: **GetOutboundRouting ACS resource or user is not in flight**
-- Description:  
-  This error occurs when users don't specify the alternateId (callerId) parameter when starting a call. In this case, the system doesn't know which number to display as callerId.
-- Suggested actions:  
-  Use a number that you get as part of the ACS resource (the one from which you use the connection string), and specify it as the alternateId parameter in E164 format.
-
-### 510403 403 Get Outbound ACS routing - call blocked since resolved ResouceId is not equal to provided
-
-- Microsoft response code: **510403**
-- SIP response code: **403**
-- Error message: **Get Outbound ACS routing - call blocked since resolved ResouceId is not equal to provided**
-- Description:  
-  The number you specified as the alternateId (callerId) parameter doesn't belong to you, or it belongs to a different resource that you use in the connection string.
-- Suggested actions:  
-  Use a number that you get as part of the ACS resource (the one from which you use the connection string), and specify it as the alternateId parameter in E164 format.
-
-### 580040 040 Phone number does not have the required capability(Phone plan) to execute this action
-
-- Microsoft response code: **580040**
-- SIP response code: **040**
-- Error message: **Phone number does not have the required capability(Phone plan) to execute this action**
-- Description:  
-  The phone number that's specified as the alternateId parameter is wrong.
-- Suggested actions:  
-  Use a number that you get as part of the ACS resource (the one from which you use the connection string), and specify it as the alternateId parameter in E164 format.
