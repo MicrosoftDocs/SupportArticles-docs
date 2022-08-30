@@ -1,12 +1,12 @@
 ---
 title: Windows sessions and UI flows and attended/unattended behavior
-description: Provides resolutions for the errors that occur when running attended or unattended desktop flows.
+description: Provides mitigation steps for the errors that occur when running attended or unattended desktop flows.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
-# Troubleshoot errors running attended or unattended desktop flows
+# Errors occur when running attended or unattended desktop flows
 
 This article provides the mitigation steps for the error codes that may occur during a flow run.
 
@@ -15,15 +15,12 @@ _Original KB number:_ &nbsp; 4555406
 
 ## Symptoms
 
-Your desktop flow fails to run.
-
-## Cause
-
-Many errors can occur during a flow run. For more information, see the table below.
+You may receive many errors when running a desktop flow, which causes the desktop flow fails to run. For more information about the errors, see the table below.
 
 ## Resolution
 
-Any error code not present in this table is unactionable. For those cases, contact customer support.
+> [!NOTE]
+> If you receive the error codes that are not listed in the table below, contact [Power Automate support](https://powerautomate.microsoft.com/support/).
 
 |Error code|HTTP status code|Run mode|Mitigation Steps|
 |---|---|---|---|
