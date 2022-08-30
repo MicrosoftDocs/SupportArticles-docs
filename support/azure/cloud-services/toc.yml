@@ -31,6 +31,8 @@
     href: troubleshoot-role-recycle-swap.md
   - name: SubscriptionPolicyCountExceeded exception
     href: troubleshoot-subscription-policy.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
   - name: VIP swap failures
     href: troubleshoot-vip-swap.md
 
@@ -58,6 +60,8 @@
     href: role-instance-restarts-os-upgrade.md
   - name: Roles that fail to start
     href: role-startup-failure.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
   - name: Update or change the certificate used
     href: update-or-change-certificate-used.md
   - name: Windows PaaS compute diagnostic data
