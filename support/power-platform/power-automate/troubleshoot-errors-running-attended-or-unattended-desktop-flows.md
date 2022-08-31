@@ -1,28 +1,22 @@
 ---
-title: Windows sessions and UI flows and attended/unattended behavior
-description: Provides mitigation steps for the errors that occur when running attended or unattended desktop flows.
+title: Error code occurs when running an attended or unattended desktop flow
+description: Provides mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
-# Errors occur when running attended or unattended desktop flows
+# Error code occurs when running an attended or unattended desktop flow
 
-This article provides the mitigation steps for the error codes that may occur during a flow run.
+This article provides the mitigation steps for the error codes that occur when running attended or unattended desktop flows.
 
 _Applies to:_ &nbsp; Power Automate  
 _Original KB number:_ &nbsp; 4555406
 
-## Symptoms
-
-You may receive many errors when running a desktop flow, which causes the desktop flow fails to run. For more information about the errors, see the table below.
-
-## Resolution
-
 > [!NOTE]
-> If you receive the error codes that are not listed in the table below, contact [Power Automate support](https://powerautomate.microsoft.com/support/).
+> If the error code that you receive is not listed in the table, contact [Power Automate support](https://powerautomate.microsoft.com/support/).
 
-|Error code|HTTP status code|Run mode|Mitigation Steps|
+|Error code|HTTP status code|Run mode|Mitigation steps|
 |---|---|---|---|
 |UnsupportedRpaScriptSchemaVersion|400|Attended</br>Unattended|The selected flow was issued by a later version of Power Automate for desktop. You'll need to install the latest version of Power Automate for desktop on your machine.|
 |InvalidUIFlowsCertificates|401|Attended</br>Unattended|You'll need to install the latest version of desktop flows on your machine as the security certificate of the desktop flows app has expired.|
