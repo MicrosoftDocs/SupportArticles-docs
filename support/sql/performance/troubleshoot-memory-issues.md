@@ -60,7 +60,7 @@ Internal memory pressure coming from components inside SQL Server engine can als
 
 The following graph illustrates the types of pressure that can lead to out of memory conditions in SQL Server:
 
-:::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-pressure.svg" alt-text="Memory pressure graph":::
+:::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-pressure.svg" alt-text="Screenshot of memory pressure types.":::
 
 ## Diagnostic tools and capture
 
