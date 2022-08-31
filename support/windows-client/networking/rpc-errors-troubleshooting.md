@@ -20,7 +20,7 @@ _Applies to:_ &nbsp; Windows 10
 
 You might encounter an RPC server unavailable error when connecting to Windows Management Instrumentation (WMI), SQL Server, during a remote connection, or for some Microsoft Management Console (MMC) snap-ins. The following image is an example of an RPC error.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/rpc-error.png" alt-text="The following error has occurred: the RPC server is unavailable." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/rpc-error.png" alt-text="Screenshot of an error message window showing the following error has occurred: the RPC server is unavailable." border="false":::
 
 This message is a commonly encountered error message in the networking world and one can lose hope fast without trying to understand much, as to what is happening 'under the hood'.
 
@@ -169,13 +169,13 @@ Open the traces in [Microsoft Network Monitor 3.4](collect-data-using-network-mo
 
 - Now check if you're getting a response from the server. If you get a response, note the dynamic port number that you've been allocated to use.
 
-    :::image type="content" source="media/rpc-errors-troubleshooting/tcp-ts-23.png" alt-text="Screenshot of Network Monitor with dynamic port highlighted." border="false":::
+    :::image type="content" source="media/rpc-errors-troubleshooting/dynamic-port-number.png" alt-text="Screenshot of Network Monitor with dynamic port highlighted." border="false":::
 
 - Check if we're connecting successfully to this Dynamic port successfully.
 
 - The filter should be something like this: `tcp.port==<dynamic-port-allocated>` and `ipv4.address==<server-ip>` 
 
-    :::image type="content" source="media/rpc-errors-troubleshooting/tcp-ts-24.png" alt-text="Screenshot of Network Monitor with filter applied." border="false":::
+    :::image type="content" source="media/rpc-errors-troubleshooting/filtered-trace.png" alt-text="Screenshot of Network Monitor with filter applied." border="false":::
 
 This filter should help you verify the connectivity and isolate if any network issues are seen.
 
@@ -183,7 +183,7 @@ This filter should help you verify the connectivity and isolate if any network i
 
 The most common reason why we would see the RPC server unavailable is when the dynamic port that the client tries to connect isn't reachable. The client side trace would then show TCP SYN retransmits for the dynamic port.
 
-:::image type="content" source="media/rpc-errors-troubleshooting/tcp-ts-25.png" alt-text="Screenshot of Network Monitor with TCP SYN retransmits." border="false":::
+:::image type="content" source="media/rpc-errors-troubleshooting/tcp-syn-retransmit.png" alt-text="Screenshot of Network Monitor with TCP SYN retransmits." border="false":::
 
 The port can't be reachable due to one of the following reasons:
 

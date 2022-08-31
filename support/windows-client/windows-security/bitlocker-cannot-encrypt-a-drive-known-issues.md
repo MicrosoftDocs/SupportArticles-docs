@@ -83,11 +83,11 @@ To verify that this issue has occurred, follow these steps:
 
 3. Copy this output, and use it as part of the [ConvertFrom-SddlString](/powershell/module/microsoft.powershell.utility/convertfrom-sddlstring) command in the PowerShell window, as follows.
 
-    :::image type="content" source="media/bitlocker-cannot-encrypt-a-drive-known-issues/ts-bitlocker-usb-sddl.png" alt-text="Output of the ConvertFrom-SddlString command, showing NT AUTHORITY\\INTERACTIVE." border="false":::
+    :::image type="content" source="media/bitlocker-cannot-encrypt-a-drive-known-issues/ts-bitlocker-usb-sddl.png" alt-text="Screenshot of the output of the ConvertFrom-SddlString command, showing NT AUTHORITY\\INTERACTIVE." border="false":::
 
    If you see NT AUTHORITY\INTERACTIVE (as highlighted) in the output of this command, this is the cause of the issue. Under typical conditions, the output should resemble as follows:
 
-    :::image type="content" source="media/bitlocker-cannot-encrypt-a-drive-known-issues/ts-bitlocker-usb-default-sddl.png" alt-text="Output of the ConvertFrom-SddlString command, showing NT AUTHORITY\\Authenticated Users." border="false":::
+    :::image type="content" source="media/bitlocker-cannot-encrypt-a-drive-known-issues/ts-bitlocker-usb-default-sddl.png" alt-text="Screenshot of the output of the ConvertFrom-SddlString command, showing NT AUTHORITY\\Authenticated Users." border="false":::
 
 > [!NOTE]
 > GPOs that change the security descriptors of services have been known to cause this issue.

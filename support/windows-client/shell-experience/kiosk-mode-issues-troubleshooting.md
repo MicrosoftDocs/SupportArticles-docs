@@ -52,7 +52,7 @@ For example:
 3. Verify that the configuration XML file is authored and formatted correctly. Correct any configuration errors, then create and apply a new provisioning package. Sign out and sign in again to check the new configuration.
 4. Additional logs about configuration and runtime issues can be obtained by enabling the *Applications and Services Logs\\Microsoft\\Windows\\AssignedAccess\\Operational* channel, which is disabled by default.
 
-:::image type="content" source="media/kiosk-mode-issues-troubleshooting/enable-assigned-access-log.png" alt-text="Event Viewer, right-click Operational, select enable log." border="false":::
+:::image type="content" source="media/kiosk-mode-issues-troubleshooting/enable-assigned-access-log.png" alt-text="Screenshot of Event Viewer with Enable Log selected on the menu, which shows by right-clicking Operational." border="false":::
 
 ### Automatic logon issues
 

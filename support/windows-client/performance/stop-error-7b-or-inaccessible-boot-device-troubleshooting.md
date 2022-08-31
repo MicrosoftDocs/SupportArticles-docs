@@ -111,7 +111,7 @@ To verify the BCD entries:
    > [!NOTE]
    > If the computer is UEFI-based, the file path value that's specified in the **path** parameter of **{bootmgr}** and **{default}** contains an **.efi** extension.
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/screenshot1.png" alt-text="bcdedit." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/windows-boot-loader.png" alt-text="Screenshot of the bcdedit output with detailed information of Windows Boot Loader." border="false":::
 
 If any of the information is wrong or missing, we recommend that you create a backup of the BCD store. To do this, run `bcdedit /export C:\temp\bcdbackup`. This command creates a backup in *C:\\temp\\* that's named **bcdbackup**. To restore the backup, run `bcdedit /import C:\temp\bcdbackup`. This command overwrites all BCD settings by using the settings in **bcdbackup**.
 
@@ -168,27 +168,25 @@ Dism /Image:<Specify the OS drive>: /Get-packages
 
 After you run this command, you'll see the **Install pending** and **Uninstall Pending** packages:
 
-:::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/pendingupdate.png" alt-text="Dism output pending update." border="false":::
+:::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/pending-update.png" alt-text="Screenshot of Dism output pending update." border="false":::
 
 1. Run the `dism /Image:C:\ /Cleanup-Image /RevertPendingActions` command. Replace C: with the system partition for your computer.
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/revertpending.png" alt-text="Dism output revert pending." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/revert-pending.png" alt-text="Screenshot of Dism output revert pending." border="false":::
 
 2. Navigate to *OSdriveLetter:\\Windows\\WinSxS*, and then check whether the *pending.xml* file exists. If it does, rename it to *pending.xml.old*.
 3. To revert the registry changes, type *regedit* at the command prompt to open **Registry Editor**.
 4. Select **HKEY_LOCAL_MACHINE**, and then go to **File** > **Load Hive**.
 5. Navigate to *OSdriveLetter:\\Windows\\System32\\config*, select the file that's named *COMPONENT* (with no extension), and then select **Open**. When you're prompted, enter the name *OfflineComponentHive* for the new hive.
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/loadhive.png" alt-text="Load Hive." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/load-hive.png" alt-text="Screenshot of Registry Editor with the Load Hive window opened." border="false":::
 
 6. Expand `HKEY_LOCAL_MACHINE\OfflineComponentHive`, and check whether the **PendingXmlIdentifier** key exists. Create a backup of the **OfflineComponentHive** key, and then delete the **PendingXmlIdentifier** key.
 7. Unload the hive. To do this unloading, highlight **OfflineComponentHive**, and then select **File** > **Unload hive**.
 
-   > [!div class="mx-imgBorder"]
-   > 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unloadhive.png" alt-text="Unload Hive." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-offlinehive.png" alt-text="Screenshot of Registry Editor with the OfflineHive selected." border="false":::
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unloadhive1.png" alt-text="Unload Hive" border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/unload-hive-selected.png" alt-text="Screenshot of Registry Editor with the Unload Hive option selected." border="false":::
 
 8. Select **HKEY_LOCAL_MACHINE**, go to **File** > **Load Hive**, navigate to *OSdriveLetter:\\Windows\\System32\\config*, select the file that's named **SYSTEM** (with no extension), and then select **Open**. When you're prompted, enter the name **OfflineSystemHive** for the new hive.
 9. Expand **HKEY_LOCAL_MACHINE\OfflineSystemHive**, and then select the **Select** key. Check the data for the **Default** value.
@@ -237,9 +235,7 @@ Check whether there are any non-Microsoft upper and lower filter drivers on the 
    - `\Control\Class\{4D36E97B-E325-11CE-BFC1-08002BE10318}`
    - `\Control\Class\{71A27CDD-812A-11D0-BEC7-08002BE2092F}`
 
-   > [!div class="mx-imgBorder"]
-   > 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/controlset.png" alt-text="Registry." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/controlset-entries.png" alt-text="Screenshot of Registry Editor showing entries under ControlSet." border="false":::
 
    If an **UpperFilters** or **LowerFilters** entry is non-standard (for example, it's not a Windows default filter driver, such as PartMgr), remove the entry. To remove it, double-click it in the right pane, and then delete only that value.
 
@@ -259,10 +255,10 @@ If the computer still doesn't start, you can try to run a `chkdisk` process on t
   chkdsk /f /r OsDrive:
   ```
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/check-disk.png" alt-text="Check disk." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/check-disk.png" alt-text="Screenshot of the output of the chkdsk command." border="false":::
 
 - ```console
   sfc /scannow /offbootdir=OsDrive:\ /offwindir=OsDrive:\Windows
   ```
 
-    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/sfc-scannow.png" alt-text="SFC scannow." border="false":::
+    :::image type="content" source="media/stop-error-7b-or-inaccessible-boot-device-troubleshooting/sfc-scannow.png" alt-text="Screenshot of the output of the SFC scannow command." border="false":::

@@ -61,13 +61,16 @@ Page files extend how much "committed memory" (also known as "virtual memory") i
 
 The system commit memory limit is the sum of physical memory and all page files combined. It represents the maximum system-committed memory (also known as the "system commit charge") that the system can support.
 
-:::image type="content" source="media/introduction-to-the-page-file/task-manager.png" alt-text="Task manager." border="false":::
+:::image type="content" source="media/introduction-to-the-page-file/task-manager-system-commit-memory.png" alt-text="Screenshot of Task Manager showing the committed bytes and the commit limit." border="false":::
+
+> [!NOTE]
+> In the screenshot, the committed bytes (RAM+Pagefile in use currently) is 6.8 GB and the commit limit (RAM+Pagefile total) is 37.7 GB.
 
 The system commit charge is the total committed or "promised" memory of all committed virtual memory in the system. If the system commit charge reaches the system commit limit, the system and processes might not get committed memory. This condition can cause freezing, crashing, and other malfunctions. Therefore, make sure that you set the system commit limit high enough to support the system commit charge during peak usage.
 
-:::image type="content" source="media/introduction-to-the-page-file/out-of-memory.png" alt-text="Out of memory." border="false":::
+:::image type="content" source="media/introduction-to-the-page-file/out-of-memory.png" alt-text="Screenshot of out of memory warning." border="false":::
 
-:::image type="content" source="media/introduction-to-the-page-file/task-manager-commit.png" alt-text="Task Manager." border="false":::
+:::image type="content" source="media/introduction-to-the-page-file/task-manager-commit.png" alt-text="Screenshot of the Task Manager window with the Performance tab opened showing the system committed charge and system committed limit." border="false":::
 
 The system committed charge and system committed limit can be measured on the **Performance** tab in Task Manager or by using the "\\Memory\\Committed Bytes" and "\\Memory\\Commit Limit" performance counters. The \\Memory\\% Committed Bytes In Use counter is a ratio of \\Memory\\Committed Bytes to \\Memory\\Commit Limit values.
 

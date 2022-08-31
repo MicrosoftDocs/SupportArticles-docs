@@ -26,7 +26,7 @@ _Applies to:_ &nbsp; Windows 10, Windows 11
 
 The following image shows an example of an error during **Create a PIN**.
 
-:::image type="content" source="media/windows-hello-errors-during-pin-creation-in-windows-10/pinerror.png" alt-text="PIN error." border="false":::
+:::image type="content" source="media/windows-hello-errors-during-pin-creation-in-windows-10/pin-error.png" alt-text="Screenshot of an example of an error during creating a PIN." border="false":::
 
 ## Error mitigations
 

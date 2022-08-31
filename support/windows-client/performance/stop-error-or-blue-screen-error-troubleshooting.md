@@ -142,12 +142,12 @@ You can use the tools such as Windows Software Development Kit (SDK) and symbols
 
 6. Select **Open Crash Dump**, and then open the *memory.dmp* file that you copied.
 
-    :::image type="content" source="media/stop-error-or-blue-screen-error-troubleshooting/windbg.png" alt-text="Example output in WinDbg when opening a crash dump file." border="false":::
+    :::image type="content" source="media/stop-error-or-blue-screen-error-troubleshooting/windbg-dump-file.png" alt-text="Screenshot of an example output in WinDbg when opening a crash dump file." border="false":::
 
 7. Under **Bugcheck Analysis**, select **`!analyze -v`**. The command `!analyze -v` is entered in the prompt at the bottom of the page.
 8. A detailed bug check analysis appears.
 
-    :::image type="content" source="media/stop-error-or-blue-screen-error-troubleshooting/bugcheck-analysis.png" alt-text="An example detailed bug check analysis." border="false":::
+    :::image type="content" source="media/stop-error-or-blue-screen-error-troubleshooting/bugcheck-analysis.png" alt-text="Screenshot of a detailed bug check analysis example." border="false":::
 
 9. Scroll down to the **STACK_TEXT** section. There will be rows of numbers with each row followed by a colon and some text. That text should tell you what DLL is causing the crash. If applicable, it also says what service is crashing the DLL.
 10. For more information about how to interpret the STACK_TEXT output, see [Using the !analyze Extension](/windows-hardware/drivers/debugger/using-the--analyze-extension).
