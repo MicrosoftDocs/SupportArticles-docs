@@ -21,7 +21,7 @@ ms.date: 08/31/2022
 
 ## Symptoms
 
-When you initiate a remote move migration in the [Exchange admin center](/exchange/mailbox-migration/manage-migration-batches) (EAC), or by using the [New-MoveRequest](/powershell/module/exchange/new-moverequest) PowerShell cmdlet, the migration to the target mailbox database doesn't finish, and it returns the following error message:
+When you initiate a remote move migration by using the [Exchange admin center](/exchange/mailbox-migration/manage-migration-batches) (EAC) or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) PowerShell cmdlet, the migration to the target mailbox database doesn't finish, and it returns the following error message:
 
 ```output
 Cannot enter finalization because Data Guarantee is lagging behind by more than 00:05:00. Failure: Database GUID doesn't satisfy the constraint SecondCopy because the commit time 7/1/2022 2:35:10 PM isn't guaranteed by replication time 12/31/9999 11:59:59 PM
