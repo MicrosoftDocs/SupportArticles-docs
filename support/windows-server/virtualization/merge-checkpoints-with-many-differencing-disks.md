@@ -12,12 +12,12 @@ localization_priority: medium
 ms.reviewer: kaushika
 ms.custom: sap:snapshots-checkpoints-and-differencing-disks, csstroubleshoot
 ms.technology: hyper-v
-keywords: 
+keywords: differencing disks, avhdx, merge checkpoint, merge vhd
 ---
 
 # How to merge checkpoints that have multiple differencing disks
 
-_Applies to:_ &nbsp; 
+_Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016
 
 ## Introduction
 
@@ -27,11 +27,11 @@ This article describes methods that you can use to merge checkpoints with a virt
 
 Checkpoints that you can view in Hyper-V Manager are the simplest to deal with. Most of the time, you can use the **Delete Checkpoint** command on the context menu to delete these checkpoints.
 
-![temp](./media/title/delete-checkpoint.png)
+:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/delete-checkpoint.png" alt-text="Image of a checkpoint in Hyper-V manager, where the context menu includes the **Delete Checkpoint** command.":::
 
 In some cases, **Delete Checkpoint** does not appear on the context menu. This can happen when third-party backup software generates checkpoints but doesn't delete them after a backup operation.
 
-![temp](./media/title/checkpoint-menu.png)
+:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/checkpoint-menu-delete-missing.png" alt-text="Image of a checkpoint in Hyper-V manager, where the context menu doesn't include the **Delete Checkpoint** command.":::
 
 In these cases, you can still use the Delete key to delete the checkpoint.
 
@@ -128,24 +128,26 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
 
    This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM). The script should appear similar to the following:
 
-   ![temp](./media/title/powershell-script.png)
+   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-pasted.png" alt-text="Image of the Get-VHDChain script after it's pasted into a Powershell window.":::
 
 1. Run the following command:
 
-   ```
+   ```powershell
    Get-vhdchain -name <virtual machine name>
    ```
 
    > [!NOTE]  
    > In this command, <_virtual machine name_> represents the name of the virtual machine.
 
-   ![temp](./media/title/powershell-script-step-2.png)
+   When the script runs, you should see output that resembles the following:
+
+   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-run.png" alt-text="Image of the output of the Get-VHDChain script.":::
 
 1. Make sure that `Get-VHDChain` runs without errors.
 
    > [!IMPORTANT]  
    > If the `Get-VHDChain` output contains errors, you have to remove the affected differencing disks from the folder. In the following example, Disk 24 has generated an error and must be removed from the differencing disk folder.
-   > ![temp](media/title/powershell-script-step-2b.png)
+   > :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-error.png" alt-text="Image of the output of the Get-VHDChain script when the script generates an error.":::
 
 <a id="mergechain"></a>**Create and run merge commands**
 
@@ -176,14 +178,16 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
       }
       ```
 
-      ![temp](media/title/powershell-script-step-3.png)
+      The script should appear similar to the following:
+
+      :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergescript-pasted.png" alt-text="Image of the script after it's pasted into a Powershell window.":::
 
 1. Open `C:\temp\merge.txt`. This file contains a list of command-line commands that are grouped into pairs. Each pair of commands addresses a single differencing disk. For example, in the following file, the highlighted pair of commands address **Disk4**.
 
-   ![temp](media/title/powershell-script-step-4.png)
+   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-text-file.png" alt-text="Image of the text file that contains the merge commands.":::
 
 1. Copy the first command of the first pair, paste it at the command prompt, and then run it. Then do the same for the second command of the first pair. These operations merge the differencing disk that the commands address.
 
-   ![temp](media/title/powershell-script-step-5.png)
+   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-run.png" alt-text="Image of the merge command in progress.":::
 
 1. After the disk merges, repeat step 7 for the next differencing disk in the list. Continue for all of the differencing disks that the `merge.txt` file addresses.
