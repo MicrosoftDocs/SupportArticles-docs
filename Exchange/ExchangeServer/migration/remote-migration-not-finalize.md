@@ -15,7 +15,7 @@ ms.reviewer: haembab, ninob, meerak
 appliesto: 
   - Exchange Server
 search.appverid: MET150
-ms.date: 08/30/2022
+ms.date: 08/31/2022
 ---
 # Migration does not finalize
 
@@ -35,7 +35,7 @@ The [DataMoveReplicationConstraint](/exchange/managing-mailbox-database-copies-e
 
 Use the appropriate method, depending on the direction of the move request and whether the target mailbox is in a [database availability group](/exchange/high-availability/database-availability-groups/database-availability-groups) (DAG).
 
-For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG
+#### For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG
 
 Use one of the following methods:
 
@@ -45,18 +45,18 @@ Use one of the following methods:
 
 - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) (EMS):
 
-```powershell
-Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
-```
+   ```powershell
+   Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
+   ```
 
-For offboarding, if the target mailbox isn't in a DAG
+#### For offboarding, if the target mailbox isn't in a DAG
 
 - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
-```powershell
-Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
-```
+   ```powershell
+   Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
+   ```
 
-For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online)
+#### For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online)
 
 - Remove the review request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
