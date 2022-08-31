@@ -198,10 +198,10 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 
 - If you identify a clear offender among the memory clerks, focus on addressing the specifics of memory consumption for that component. Here are several examples:
 
-  - If MEMORYCLERK_SQLQERESERVATIONS memory clerk is consuming memory, identify queries that are using huge memory grants and optimize them via indexes, rewrite them (remove ORDER by for example), or apply memory grant query hints (see [min_grant_percent and max_grant_percent hints](https://support.microsoft.com/topic/kb3107401-new-query-memory-grant-options-are-available-min-grant-percent-and-max-grant-percent-in-sql-server-2012-74c4c363-5f65-faa2-5cba-68cc1d689cd5) ). You can also [create a resource governor pool](/sql/relational-databases/resource-governor/create-a-resource-pool) to control the usage of memory grant memory
+  - If MEMORYCLERK_SQLQERESERVATIONS memory clerk is consuming memory, identify queries that are using huge memory grants and optimize them via indexes, rewrite them (remove ORDER by, for example), or apply memory grant query hints (see [min_grant_percent and max_grant_percent hints](https://support.microsoft.com/topic/kb3107401-new-query-memory-grant-options-are-available-min-grant-percent-and-max-grant-percent-in-sql-server-2012-74c4c363-5f65-faa2-5cba-68cc1d689cd5) ). You can also [create a resource governor pool](/sql/relational-databases/resource-governor/create-a-resource-pool) to control the usage of memory grant memory.
   - If a large number of ad-hoc query plans are cached, then the `CACHESTORE_SQLCP` memory clerk would use large amounts of memory. Identify non-parameterized queries whose query plans can’t be reused and parameterize them by either converting to stored procedures, or by using sp_executesql, or by using FORCED parameterization. If you have enabled [trace flag 174](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf174), you may disable it to see if this resolves the problem.
-  - If object plan cache store `CACHESTORE_OBJCP` is consuming much memory, then do the following: identify which stored procedures, functions, or triggers are using large amounts of memory and possibly redesign the application. Commonly this may happen due to large amounts of database or schemas with hundreds of procedures in each.
-  - If the `OBJECTSTORE_LOCK_MANAGER` memory clerk is showing the large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels, or check if lock escalation is disabled.
+  - If the object plan cache store `CACHESTORE_OBJCP` is consuming too much memory, then do the following: identify which stored procedures, functions, or triggers are using large amounts of memory and possibly redesign the application. Commonly this may happen due to large amounts of databases or schemas with hundreds of procedures in each.
+  - If the `OBJECTSTORE_LOCK_MANAGER` memory clerk shows large memory allocations, identify queries that apply many locks and optimize them by using indexes. Shorten transactions that cause locks not to be released for long periods in certain isolation levels or check if lock escalation is disabled.
   - If you observe very large TokenAndPermUserStore (`select type, name, pages_kb from sys.dm_os_memory_clerks where name = 'TokenAndPermUserStore'`), you can use [trace flag 4618](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf4618) to limit the sizeof the cache.
   - If you observe memory issues with In-Memory OLTP coming from the MEMORYCLERK_XTP memory clerk, you can refer to [Monitor and Troubleshoot Memory Usage for In-Memory OLTP](/sql/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage) and [Memory-optimized tempdb metadata (HkTempDB) out of memory errors](../admin/memory-optimized-tempdb-out-of-memory.md).
 
@@ -217,14 +217,14 @@ The following actions may free some memory and make it available to SQL Server:
   - **min server memory**  
   
   > [!NOTE]
-  > Notice unusual settings. Correct them as necessary. Account for increased memory requirements. Default settings are listed in [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options).
+  > If you notice unusual settings, correct them as necessary and account for increased memory requirements. Default settings are listed in [Server memory configuration options](/sql/database-engine/configure-windows/server-memory-server-configuration-options).
   
-- If you haven't configured **max server memory**, especially with Locked Pages in Memory, consider setting to a particular value to allow some memory for the OS. See [Locked Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#lock-pages-in-memory-lpim) server configuration option.
+- If you haven't configured **max server memory**, especially with Locked Pages in Memory, consider setting it to a particular value to allow some memory for the OS. See the [Locked Pages in Memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#lock-pages-in-memory-lpim) server configuration option.
 
 ### Change or move workload off the system
 
-- Investigate the query workload: number of concurrent sessions, currently executing queries and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
-- For read-only workloads, consider moving them to a read-only secondary replica in an Always On environment. For more information, see [Offload read-only workload to secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups) and [Configure read-only access to a secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server)
+- Investigate the query workload: number of concurrent sessions, currently executing queries, and see if there are less critical applications that may be stopped temporarily or moved to another SQL Server.
+- For read-only workloads, consider moving them to a read-only secondary replica in an Always On environment. For more information, see [Offload read-only workload to secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups) and [Configure read-only access to a secondary replica of an Always On availability group](/sql/database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server).
 
 ### Ensure proper memory configuration for virtual machines
 
@@ -242,7 +242,7 @@ The following actions may free some memory and make it available to SQL Server:
 
 ### Restart SQL Server service
 
-- In some cases, if you need to deal with a critical exhaustion of memory and SQL Server isn't able to process queries, you can consider restarting the service.
+- In some cases, if you need to deal with critical exhaustion of memory and SQL Server isn't able to process queries, you can consider restarting the service.
 
 ### Consider using Resource Governor for specific scenarios
 
@@ -250,4 +250,4 @@ The following actions may free some memory and make it available to SQL Server:
 
 ### Add more RAM on the physical or virtual server
 
-- If the problem continues, you'll need to investigate further, and possibly increase server resources (RAM).
+- If the problem continues, you'll need to investigate further and possibly increase server resources (RAM).
