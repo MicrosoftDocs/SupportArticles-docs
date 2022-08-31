@@ -2724,6 +2724,8 @@
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
       href: ./virtualization/cannot-delete-recovery-checkpoint-vm.md
+    - name: Merging checkpoints that have multiple differencing disks
+      href: ./virtualization/merge-checkpoints-with-many-differencing-disks.md
   - name: Storage configuration
     items:
     - name: Can't add a second Fibre Channel adapter
