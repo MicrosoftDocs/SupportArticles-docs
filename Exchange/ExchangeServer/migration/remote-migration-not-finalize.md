@@ -51,7 +51,7 @@ Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstrain
 
 For offboarding, if the target mailbox isn't in a DAG
 
-- Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) (EMS):
+- Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
 ```powershell
 Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
