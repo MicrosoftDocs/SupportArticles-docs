@@ -12,7 +12,7 @@ ms.prod: sql
  This article describes how to transfer the logins and the passwords between different instances of SQL Server running on Windows.
 
 _Original product version:_ &nbsp; SQL Server  
-_Original KB number:_ &nbsp; 918992
+_Original KB number:_ &nbsp; 918992, 246133 
 
 ## Introduction
 
