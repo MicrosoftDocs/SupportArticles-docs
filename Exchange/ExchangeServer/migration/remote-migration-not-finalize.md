@@ -59,4 +59,4 @@ Use one of the following methods:
 
 #### For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online)
 
-- Remove the review request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
+- Remove the move request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
