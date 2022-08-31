@@ -17,7 +17,7 @@ ms.technology: windows-server-security
 
 This step-by-step article describes how to decommission a Microsoft Windows enterprise CA, and how to remove all related objects from the Active Directory directory service.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server  
 _Original KB number:_ &nbsp; 889250
 
 ## Summary
@@ -60,9 +60,20 @@ By default, an enterprise CA does not store certificate requests. However, an ad
 
 1. To stop Certificate Services, select **Start**, select **Run**, type *cmd*, and then select **OK**.
 2. At the command prompt, type *certutil -shutdown*, and then press Enter.
-3. At the command prompt, type *certutil -key*, and then press Enter.
+3. At the command prompt, type *certutil -getreg CA\CSP\Provider*, and then press Enter. Note the **Provider** value in the output. For example:
 
-    This command will display the names of all the installed cryptographic service providers (CSP) and the key stores that are associated with each provider. Listed among the listed key stores will be the name of your CA. The name will be listed several times, as shown in the following example:
+   ```output
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\Fabrikam Root CA1 G2\csp:
+
+     Provider REG_SZ = Microsoft Software Key Storage Provider
+   CertUtil: -getreg command completed successfully.
+   ```
+  
+   If the value is **Microsoft Strong Cryptographic Provider**, or **Microsoft Enhanced Cryptographic Provider v1.0**, type *CertUtil -Key* and press Enter.  
+   If the value is **Microsoft Key Storage Provider**, type *CertUtil -CSP KSP -Key* and press Enter.  
+   If the value is something else, type *CertUtil -CSP \<PROVIDER NAME\> -Key* and press Enter.
+
+   This command will display the names of all the installed cryptographic service providers (CSP) and the key stores that are associated with each provider. Listed among the listed key stores will be the name of your CA. The name will be listed several times, as shown in the following example:
 
     > (1)Microsoft Base Cryptographic Provider v1.0:  
      1a3b2f44-2540-408b-8867-51bd6b6ed413  
