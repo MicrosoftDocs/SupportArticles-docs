@@ -70,7 +70,7 @@ You can use the following diagnostic tools to collect troubleshooting data:
 
 Configure and collect the following counters with Performance Monitor:
 
-- **Memory:Available Bytes**
+- **Memory:Available MBytes**
 - **Process:Working Set**
 - **Process:Private Bytes**
 - **SQL Server:Memory Manager: (all counters)**
