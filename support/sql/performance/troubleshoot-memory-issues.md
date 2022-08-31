@@ -60,7 +60,7 @@ Internal memory pressure coming from components inside SQL Server engine can als
 
 The following graph illustrates the types of pressure that can lead to out of memory conditions in SQL Server:
 
-:::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-pressure.svg" alt-text="Screenshot of memory pressure types.":::
+:::image type="content" source="media/troubleshoot-out-of-memory/out-of-memory-issues.svg" alt-text="Screenshot of memory pressure types.":::
 
 ## Diagnostic tools to collect troubleshooting data
 
@@ -80,13 +80,6 @@ Configure and collect the following counters with Performance Monitor:
 
 You can use [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) or [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md) to observe overall memory usage inside SQL Server.
 
-Run the following query on the impacted SQL Server to collect periodic outputs:
-
-  ```sql
-  SELECT pages_kb, type, name, virtual_memory_committed_kb, awe_allocated_kb
-  FROM sys.dm_os_memory_clerks
-  ORDER BY pages_kb DESC
-  ```
 
 ### Memory Consumption Standard Report in SSMS
 
