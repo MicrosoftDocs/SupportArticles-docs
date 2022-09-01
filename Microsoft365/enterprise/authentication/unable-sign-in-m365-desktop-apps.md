@@ -138,7 +138,7 @@ To use this method, Endpoint analytics and Proactive remediations must be enable
 1. Save the following detection script as a .ps1 UTF-8 file:
 
    ```powershell
-   $broker = Get-AppxPackage -Name "Microsoft.AAD.Broker Plugin"
+   $broker = Get-AppxPackage -Name "Microsoft.AAD.BrokerPlugin"
    if ($broker -match "Microsoft.AAD.BrokerPlugin") { exit 0 } else { exit 1 }
    ```
 
