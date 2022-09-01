@@ -29,7 +29,7 @@ There are common errors that indicate low memory in SQL Server. Examples of erro
 - 8556 - failure to load MSDTC due to insufficient memory
 - [8645](/sql/relational-databases/errors-events/mssqlserver-8645-database-engine-error) - failure to execute a query due to no memory for memory grants (sorting and hashing) (For more information, see [How to troubleshoot SQL Server error 8645](https://support.microsoft.com/topic/how-to-troubleshoot-sql-server-error-8645-a1bbec30-e71e-08f7-bc35-0e3bc34bed76) )
 - 8902 - failure to allocate memory during DBCC execution
-- 9695 or 9695 - failure to allocate memory for Service Broker operations
+- 9695 or 9696 - failure to allocate memory for Service Broker operations
 - 17131 or [17132](/sql/relational-databases/errors-events/mssqlserver-17132-database-engine-error) - Server startup failure due to insufficient memory
 - [17890](/sql/relational-databases/errors-events/mssqlserver-17890-database-engine-error) - failure to allocate memory due to SQL memory being paged out by the OS
 - 22986 or 22987 - Change data capture failures due to insufficient memory
