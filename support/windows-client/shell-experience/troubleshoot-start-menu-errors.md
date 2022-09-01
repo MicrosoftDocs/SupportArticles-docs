@@ -51,7 +51,7 @@ When troubleshooting basic Start issues (and for the most part, all other Window
     get-AppXPackage -Name Microsoft.Windows.Cortana
     ```
 
-    :::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-1.png" alt-text="Example of output from cmdlets." border="false":::
+    :::image type="content" source="media/troubleshoot-start-menu-errors/get-appxpackag-output.png" alt-text="Screeshot of an example of the cmdlet output." border="false":::
 
     Failure messages will appear if they aren't installed
 
@@ -211,7 +211,7 @@ This issue was resolved in the June 2017 updates. Update Windows 10, version 160
 
 ### Symptom: Application tiles like Alarm, Calculator, and Edge are missing from Start menu and the Settings app fails to open on Windows 10, version 1709 when a local user profile is deleted
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-2.png" alt-text="Screenshots that show download icons on app tiles and missing app tiles." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/application-tiles-missing.png" alt-text="Screenshots that show download icons on app tiles and missing app tiles." border="false":::
 
 #### Cause
 
@@ -279,11 +279,11 @@ Specifically, behaviors include
 - The start button fails to respond.
 - If a new roaming user is created, the first sign-in appears normal, but on subsequent sign-ins, tiles are missing.
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-3.png" alt-text="Example of a working layout." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/working-layout-first-sign-in.png" alt-text="Screenshot of an example of a working layout." border="false":::
 
 Working layout on first sign-in of a new roaming user profile
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-4.png" alt-text="Example of a failing layout." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/failing-layout-subsequent-sign-in.png" alt-text="Screenshot of an example of a failing layout." border="false":::
 
 Failing layout on subsequent sign-ins
 
@@ -301,15 +301,18 @@ This issue has been resolved in Windows 10, versions 1703 and 1607, cumulative u
 
 Before the upgrade:
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-5.jpg" alt-text="Example of Start screen with customizations applied." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-before-upgrade.png" alt-text="Screenshot of an example of Start screen with customizations applied." border="false":::
+
+> [!NOTE]
+> In the screenshot, **Corporate Applications** and **Utilities** are group policy controlled, and the tiles under these items are user pinned.
 
 After the upgrade the user pinned tiles are missing:
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-6.png" alt-text="Example of Start screen with previously pinned tiles missing." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/user-pinned-tiles-missing.png" alt-text="Screenshot of an example of Start screen with previously pinned tiles missing." border="false":::
 
 Additionally, users may see blank tiles if sign-in was attempted without network connectivity.
 
-:::image type="content" source="media/troubleshoot-start-menu-errors/start-ts-7.png" alt-text="Example of blank tiles." border="false":::
+:::image type="content" source="media/troubleshoot-start-menu-errors/blank-tiles-sign-in-without-network.png" alt-text="Screenshot of an example of blank tiles." border="false":::
 
 #### Resolution
 
