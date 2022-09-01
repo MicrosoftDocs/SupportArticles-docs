@@ -9,7 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-description: Describes an issue when you can't sign in to Microsoft 365 desktop applications and provides options to resolve it.
+description: Describes an issue when you're unable to sign in to Microsoft 365 desktop applications and provides options to resolve it.
 appliesto: 
   - Microsoft 365
 ms.date: 8/25/2022
@@ -138,7 +138,7 @@ To use this method, Endpoint analytics and Proactive remediations must be enable
 1. Save the following detection script as a .ps1 UTF-8 file:
 
    ```powershell
-   $broker = Get-AppxPackage -Name "Microsoft.AAD.Broker Plugin"
+   $broker = Get-AppxPackage -Name "Microsoft.AAD.BrokerPlugin"
    if ($broker -match "Microsoft.AAD.BrokerPlugin") { exit 0 } else { exit 1 }
    ```
 
