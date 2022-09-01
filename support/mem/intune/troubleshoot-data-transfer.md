@@ -11,7 +11,7 @@ This article gives troubleshooting guidance for scenarios where a Microsoft Intu
 
 When you apply Intune APP for data protection, a major unexpected behavior would be seeing your users transfer data from a managed app, such as Outlook, to an unmanaged app, such as Dropbox. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](troubleshoot-app-protection-policy-deployment.md).
 
-## Confirm that you're using supported platforms, OS versions, and apps
+## Confirm you're using supported platforms, OS versions, and apps
 
 You can start by confirming that you've met the prerequisites for using app protection policies. There are some requirements for supported platforms, OS versions, and apps.
 
