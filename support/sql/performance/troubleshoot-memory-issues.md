@@ -105,7 +105,9 @@ If an out-of-memory error occasionally appears or for a brief period, there may 
 
 ### External memory pressure
 
-- To diagnose low memory conditions on the system outside of the SQL Server process, collect Performance Monitor counters. Investigate if applications or services other than SQL Server are consuming memory on this server by looking at these counters:
+To diagnose low memory conditions on the system outside of the SQL Server process, use the following methods:
+
+- Collect Performance Monitor counters. Investigate if applications or services other than SQL Server are consuming memory on this server by looking at these counters:
 
   - **Memory:Available MBytes**
   - **Process:Working Set**
@@ -170,6 +172,8 @@ To diagnose internal memory pressure caused by modules (DLLs) inside SQL Server,
 - In the rare case where OLE automation objects are used (`sp_OA*`), you may configure the object to run in a process outside SQL Server by specifying a context value of 4 (Local (.exe) OLE server only.). For more information, see [sp_OACreate](/sql/relational-databases/system-stored-procedures/sp-oacreate-transact-sql).
 
 ### Internal memory usage by SQL Server engine
+
+To diagnose internal memory pressure coming from components inside SQL Server engine, use the following methods:
 
 - Start collecting Performance Monitor counters for SQL Server: **SQL Server:Buffer Manager**, **SQL Server: Memory Manager**.  
 
