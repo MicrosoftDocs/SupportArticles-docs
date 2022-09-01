@@ -357,7 +357,7 @@ During regular operations, BitLocker drive encryption generates events such as E
 
 You can also determine whether the BitLocker recovery password has been uploaded to Azure AD by checking the device details in the Azure AD Devices section.
 
-:::image type="content" source="media/enforcing-bitlocker-policies-by-using-intune-known-issues/4509205-en-1.png" alt-text="Screenshot of the BitLocker recovery information as viewed in Azure AD." border="false":::
+:::image type="content" source="media/enforcing-bitlocker-policies-by-using-intune-known-issues/bitlocker-recovery-password.png" alt-text="Screenshot of the BitLocker recovery information as viewed in Azure AD." border="false":::
 
 On the device, check the Registry Editor to verify the policy settings on the device. Verify the entries under the following subkeys:
 
