@@ -193,7 +193,7 @@ Here are some tips and tricks for editing files by using vi:
 - In editing mode, you can use the keyboard to delete characters one at a time.
 - In editing mode, copy and paste operations work together with most of the terminals. So, you can copy the content from this article and paste it into vi.
 - To exit editing mode, press **Esc**.
-- You can delete lines more easily in normal mode. In normal mode, go to the beginning of a line that you want to delete, and enter *dd*. The `dd` command deletes the whole line. You can also type *5dd* to delete five lines at one time. However this option should be used with caution to avoid deleting extra content.
+- [You can delete lines more easily in normal mode](https://www.blogit.one/how-to-remove-files-from-linux/). In normal mode, go to the beginning of a line that you want to delete, and enter *dd*. The `dd` command deletes the whole line. You can also type *5dd* to delete five lines at one time. However this option should be used with caution to avoid deleting extra content.
 - [How to Delete Lines in Vim / Vi article](https://linuxize.com/post/vim-delete-line/) is a good one To learn how to delete multiple lines in vi.
 - To exit vi and save the changes, enter *:wq!*, and then press **Enter**. Here, the colon (`:`) means that you're running a command, `w` means write the changes, `q` means quit, and `!` means override the changes.
 - To exit without saving the changes, enter *:q!*, and then press **Enter**.
