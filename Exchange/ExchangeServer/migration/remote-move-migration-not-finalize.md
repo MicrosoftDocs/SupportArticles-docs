@@ -1,5 +1,5 @@
 ---
-title: Migration does not finalize
+title: Remote move migration doesn't finalize
 description: Describes an issue in which a remote move migration doesn't finalize because of the replication lag of a second mailbox database copy.
 author: v-trisshores
 ms.author: v-trisshores
@@ -17,7 +17,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 08/31/2022
 ---
-# Migration does not finalize
+# Remote move migration doesn't finalize
 
 ## Symptoms
 
