@@ -1,7 +1,7 @@
 ---
 title: Conditional access and multi-factor authentication in Flow
 description: Using conditional access has an unexpected effect on users who use Flow to connect to Microsoft services that are relevant to conditional access policies.
-ms.reviewer: dblyth
+ms.reviewer: sranjan, hamenon
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
@@ -49,9 +49,9 @@ The primary adverse effect of conditional access on Flow is caused by the settin
 |MaxAgeSingleFactor|Until-Revoked|This setting is same as the _MaxAgeMultiFactor_ setting, but for single-factor refresh tokens.|
 |MaxAgeSessionMultiFactor|Until-Revoked|There is no direct effect on Flow connections. This setting defines the expiration of a user session for web apps. This setting can be changed by the admins depending on how frequently they want the users to sign in to web apps before the user session expires.|
   
-  Some settings that are configured as part of enabling multi-factor may affect the Flow connection. When MFA is enabled from **Microsoft 365 admin center** and the **remember multi-factor authentication** setting is selected, the configured value overrides the default token policy settings, _MaxAgeMultiFactor_, and _MaxAgeSessionMultiFactor_. Flow connections start failing when *MaxAgeMultiFactor* expires, and it requires the user to use an explicit logon to fix the connections.
+  Some settings that are configured as part of enabling multi-factor may affect the Flow connection. When MFA is enabled from **Microsoft 365 admin center** and the **remember multi-factor authentication** setting is selected, the configured value overrides the default token policy settings, _MaxAgeMultiFactor_, and _MaxAgeSessionMultiFactor_. Flow connections start failing when _MaxAgeMultiFactor_ expires, and it requires the user to use an explicit logon to fix the connections.
 
-We recommend that you use the token policy instead of the **remember multi-factor authentication** setting to configure different values for _theMaxAgeMultiFactor_ and _MaxAgeSessionMultiFactor_ settings. The token policy lets Flow connections keep working while also controlling a user logon session for the Office 365 web apps._MaxAgeMultiFactor_ has to have a reasonably longer period - ideally, the Until-Revoked value. This is to make Flow connections keep working until the refresh token is revoked by the admin. *MaxAgeSessionMultiFactor* affects a user logon session. Tenant administrators can select the value that they want, depending on how frequently they want the users to sign in to the Office 365 web apps before the session expires.
+We recommend that you use the token policy instead of the **remember multi-factor authentication** setting to configure different values for _theMaxAgeMultiFactor_ and _MaxAgeSessionMultiFactor_ settings. The token policy lets Flow connections keep working while also controlling a user logon session for the Office 365 web apps._MaxAgeMultiFactor_ has to have a reasonably longer period - ideally, the Until-Revoked value. This is to make Flow connections keep working until the refresh token is revoked by the admin. _MaxAgeSessionMultiFactor_ affects a user logon session. Tenant administrators can select the value that they want, depending on how frequently they want the users to sign in to the Office 365 web apps before the session expires.
 
 To view Active Directory policies in your organization, you can use the following commands. The [Configurable token lifetimes in Azure Active Directory (Preview)](/azure/active-directory/develop/active-directory-configurable-token-lifetimes) document provides specific instructions to query and update the settings in your organization.
 
