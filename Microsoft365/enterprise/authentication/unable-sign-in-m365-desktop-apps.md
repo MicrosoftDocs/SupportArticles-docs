@@ -9,7 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-description: Describes an issue when you can't sign in to Microsoft 365 desktop applications and provides options to resolve it.
+description: Describes an issue when you're unable to sign in to Microsoft 365 desktop applications and provides options to resolve it.
 appliesto: 
   - Microsoft 365
 ms.date: 8/25/2022
