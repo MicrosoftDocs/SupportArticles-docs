@@ -36,7 +36,7 @@ Common issues include:
 
    - **Low physical/virtual memory** - caused by applications, drivers, or OS consuming entire memory.
 
-     **Troubleshooting:** 
+     ### Troubleshooting 
      - Check the Application event log for errors like `Your system is low on virtual memory.`
      - Use Task manager -> **Performance tab** -> **Memory** to check for memory being consumed entirely. 
      - Use Perfomon and monitor these counters:
@@ -45,7 +45,7 @@ Common issues include:
 
    - **Slow I/O** - local drives are overwhelmed with I/O beyond their capacity
 
-     **Troubleshooting:** 
+     ### Troubleshooting 
      - Use Task manager -> Performance tab -> Disk (*) to check for disks being pushed to maximum capacity. 
      - Use Perfomon and monitor these counters:
         - **Logical Disk\Disk Bytes/Sec**
@@ -59,7 +59,7 @@ For other OS performance problems, see [Windows Server performance troubleshooti
 ## Step 3. Network issues
 
   The problem could be in the network layer causing slow communication between application and SQL Server. 
- **Troubleshooting:** 
+ ### Troubleshooting 
    - One symptom of that could be ASYNC_NETWORK_IO waits on the SQL Server side. For more information see [Troubleshoot ASYNC_NETWORK_IO waits](/troubleshoot/sql/performance/troubleshoot-query-async-network-io)
   - Work with your network administrator to check for network issues (firewall, routing, etc.) 
   - Collect a Network trace and check for network reset and retransmit events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue)
@@ -95,7 +95,7 @@ For detailed troubleshooting steps see [Troubleshoot high-CPU-usage issues in SQ
 
 Another common reason for perceived overall slowness of SQL Server workloads is I/O issues. I/O slowness can impact most or all queries on the system. 
 
-**Troubleshooting:** 
+### Troubleshooting 
   
 - Check for Hardware issues: 
     - SAN misconfiguration (switch, cables, HBA, storage)
@@ -118,7 +118,7 @@ For detailed troubleshooting of I/O related issue with SQL Server, see [Troubles
 
 Low memory on the system overall or inside SQL Server can lead to slowness when queries are waiting for memory grants (RESOURCE_SEMAPHORE) or compile memory (RESOURCE_SEMAPHORE_QUERY_COMPILE).
 
-**Troubleshooting:**
+### Troubleshooting
 
 - Check for external memory at the OS level by using Perfmon counters
   - **Memory\Available MBytes**
@@ -138,7 +138,7 @@ Lock acquisition is used to protect resources in a database system. If locks are
 Short blocking happens on database systems like SQL Server all the time. But prolonged blocking and especially one where most or all queries are waiting for a lock  may result in entire server being percieved as not responding.
 
 
-**Troubleshooting:**
+### Troubleshooting
 
 - Indentify the head blocking session by looking at blocking_session_id in `sys.dm_exec_requests` DMV output or BlkBy column in `sp_who2` stored procedure output
 - Then find the query(s) that the head blocking chaing executes  (what is holding locks for a prolonged period)
@@ -155,7 +155,7 @@ Check the Errorlog for any of these messages:
 
 Non-yielding Resource Monitor
 
-**Troubleshooting:**
+### Troubleshooting
 
 
 - [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148)
