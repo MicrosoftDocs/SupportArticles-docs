@@ -21,7 +21,7 @@ Visual Studio 2022 doesn't install on 32-bit operating systems.
 
 ## Arm-based operating systems
 
-Visual Studio 2022 (x64) isn't supported on Arm-based operating systems. Visual Studio 2022 version 17.4 (Arm64) and later versions are supported only on Windows 11 on Arm.
+X64 Visual Studio 2022 is not supported on ARM operating systems; performance may not meet expectations. Arm64 Visual Studio 2022 version 17.4 and later versions are supported only on Windows 11 on Arm.
 
 ## Application Virtualization
 
