@@ -1,0 +1,7 @@
+- name: Welcome
+  href: welcome-azure-synapse.yml
+
+- name: Dedicated SQL pool
+  items:
+  - name: Troubleshoot a Slow Query on Dedicated SQL Pool
+    href: dedicated-sql/dsql-tshoot-perf-slow-query.md
