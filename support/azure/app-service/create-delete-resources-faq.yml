@@ -24,7 +24,7 @@ sections:
       - question: |
           How can I create a web app in a region that's unavailable in the subscription?
         answer: |
-          Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](https://docs.microsoft.com/troubleshoot/azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).          
+          Certain Azure regions require customers to go through a request process to gain access. For more information, see the [Azure region access request process](/troubleshoot/azure/general/region-access-request-process) and [Azure App Service available by region](https://azure.microsoft.com/global-infrastructure/services/?products=app-service&regions=all).
 
       - question: |
           What if the requested SKU of the App Service Plan isn't available in the Resource Group?
@@ -42,14 +42,14 @@ sections:
         answer: |
           Yes, charges will still apply unless you delete the App Service plan that the web app runs on and its all web apps.   
           
-          To stop all billing associated with your App Service, you need to delete the App Service Plan or scale the App Service Plan to the free tier. For more information, see [How much does my App Service Plan cost?](https://docs.microsoft.com/azure/app-service/overview-hosting-plans#how-much-does-my-app-service-plan-cost) and [Plan and manage costs for Azure App Service](https://docs.microsoft.com/azure/app-service/overview-manage-costs).
+          To stop all billing associated with your App Service, you need to delete the App Service Plan or scale the App Service Plan to the free tier. For more information, see [How much does my App Service Plan cost?](/azure/app-service/overview-hosting-plans#how-much-does-my-app-service-plan-cost) and [Plan and manage costs for Azure App Service](/azure/app-service/overview-manage-costs).
           
       - question: |
           I cannot create or delete a web app due to a permission error. What the permissions do I need to create or delete a web app?
         answer: |
           You would need minimum Contributor access on the Resource Group to deploy App Services. If you have Contributor access only on App Service Plan and web app, it won't allow you to create the app service in the Resource Group.
           
-          For more information, see [Azure built-in roles](https://docs.microsoft.com/azure/role-based-access-control/built-in-roles).
+          For more information, see [Azure built-in roles](/azure/role-based-access-control/built-in-roles).
           
       - question: |
          I'm trying to delete my App Service Plan, but I'm getting the following error "Storage usage quota exceeded. Can't update or delete a server farm. Please make sure your file system storage is below the limit of the target pricing tier". How and where do I check the file system storage limit?
@@ -58,19 +58,19 @@ sections:
           
           The storage limit is the total content size across all apps in the same App Service Plan. The total content size of all apps across all App Service Plans in a single Resource Group and region can't exceed 500 GB. The file system quota for App Service hosted apps is determined by the aggregate of App Service Plans created in a region and Resource Group.
 
-          For more information, see [App Service limits - Storage](https://docs.microsoft.com/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/).
+          For more information, see [App Service limits - Storage](/azure/azure-resource-manager/management/azure-subscription-service-limits#app-service-limits) and [App Service pricing](https://azure.microsoft.com/pricing/details/app-service/windows/).
 
       - question: |
           Is there a way to list the deleted web apps for my Subscription?
 
         answer: |
-          You can run `Get-AzDeletedWebApp` to get the list of the web apps that were deleted within the last 30 days in your Subscription ID. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. For more information, see [List deleted apps](https://docs.microsoft.com/azure/app-service/app-service-undelete#list-deleted-apps).
+          You can run `Get-AzDeletedWebApp` to get the list of the web apps that were deleted within the last 30 days in your Subscription ID. Deleted apps are purged from the system 30 days after the initial deletion. After an app is purged, it can't be recovered. For more information, see [List deleted apps](/azure/app-service/app-service-undelete#list-deleted-apps).
 
       - question: |
           How do I restore a deleted web app or a deleted App Service Plan?
 
         answer: |
-          If the web app was deleted within the last 30 days, you can restore it using `Restore-AzDeletedWebApp`.  For more information, see [Restore deleted app](https://docs.microsoft.com/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore Deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
+          If the web app was deleted within the last 30 days, you can restore it using `Restore-AzDeletedWebApp`. For more information, see [Restore deleted app](/azure/app-service/app-service-undelete#restore-deleted-app) and [Restore Deleted web apps](https://techcommunity.microsoft.com/t5/apps-on-azure-blog/restore-undelete-deleted-web-apps/ba-p/2922088).
       
           [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 

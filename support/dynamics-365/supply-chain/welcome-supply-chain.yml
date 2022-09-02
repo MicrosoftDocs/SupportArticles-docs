@@ -15,18 +15,6 @@ metadata:
 
 landingContent:
   # Card
-  - title: Product documentation and training
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Dynamics 365 Community
-            url: https://community.dynamics.com/
-          - text: Supply Chain Management documentation
-            url: /dynamics365/supply-chain/
-          - text: Supply Chain Management training
-            url: /learn/dynamics365/scm
-
-  # Card
   - title: Product management
     linkLists:
       - linkListType: how-to-guide
@@ -57,3 +45,15 @@ landingContent:
             url: /dynamics365/supply-chain/troubleshooting/warehousing/certification-path-app-connection-error
           - text: Resolve a released quantity error when updating or deleting a load line
             url: /dynamics365/supply-chain/troubleshooting/warehousing/released-qty-cannot-be-negative
+
+  # Card
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Supply Chain Management documentation
+            url: /dynamics365/supply-chain/
+          - text: Supply Chain Management training
+            url: /learn/dynamics365/scm
+          - text: Dynamics 365 Community
+            url: https://community.dynamics.com/
