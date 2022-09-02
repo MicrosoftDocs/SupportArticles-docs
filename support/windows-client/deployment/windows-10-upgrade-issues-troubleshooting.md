@@ -15,7 +15,7 @@ localization_priority: medium
 ---
 # Troubleshooting upgrade errors
 
-_Applies to:_ &nbsp; Windows 10
+<p class="alert is-flex is-primary"><span class="has-padding-left-medium has-padding-top-extra-small"><a class="button is-primary" href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806293" target='_blank'><b>Try our Virtual Agent</b></a></span><span class="has-padding-small"> - It can help you quickly identify and fix common Windows boot issues</span>
 
 > [!NOTE]
 > This is a 300 level topic (moderately advanced).
@@ -26,6 +26,10 @@ If a Windows 10 upgrade isn't successful, it can be helpful to understand when a
 
 > [!IMPORTANT]
 > Use the [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
+
+_Applies to:_ &nbsp; Windows 10
+
+## Actions performed during upgrade processes
 
 Briefly, the upgrade process consists of four phases that are controlled by [Windows Setup](/windows-hardware/manufacture/desktop/windows-setup-technical-reference): Downlevel, SafeOS, First boot, and Second boot. The computer will reboot once between each phase. Note: Progress is tracked in the registry during the upgrade process using the following key: `HKLM\System\Setup\mosetup\volatile\SetupProgress`. This key is volatile and only present during the upgrade process; it contains a binary value in the range 0-100.
 
