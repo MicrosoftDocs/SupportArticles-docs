@@ -17,7 +17,7 @@ _Original KB number:_ &nbsp; 3075609
 The Silverlight 5 for Windows version 5.1.40620.0 includes all security fixes in MS15-044 ([MS15-044: Description of the security update for Silverlight 5: May 12, 2015](https://support.microsoft.com/help/3056819)) and is functionally identical to Silverlight 5 for Windows version 5.1.40416.0. This download is an upgrade for earlier versions of Silverlight.
 
 > [!NOTE]
-> Microsoft Silverlight reached the end of support in October 2021 and the installer is no longer available for download. Learn more.
+> Microsoft Silverlight reached the end of support in October 2021 and the installer is no longer available for download. [Learn more](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).
 
 ## Integration of MSN and Bing default
 
