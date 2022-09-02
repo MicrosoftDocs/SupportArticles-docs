@@ -14,7 +14,7 @@ Here's an example of a sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
-For example, when you access **docs.microsoft.com**, the application shown in the sign-in log may say **dev-rel-auth-prod**, which is not descriptive regarding **doc.microsoft.com**.
+For example, when you access `docs.microsoft.com`, the application shown in the sign-in log may say `dev-rel-auth-prod`, which is not descriptive regarding `docs.microsoft.com`.
 
 Though the apps listed in sign-in reports are indeed owned by Microsoft, and are not suspicious applications, there is a way that you can verify whether an Azure AD service principal found in your AAD logs is owned by Microsoft.
 
