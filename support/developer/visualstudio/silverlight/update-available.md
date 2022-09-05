@@ -21,11 +21,11 @@ The Silverlight 5 for Windows version 5.1.40620.0 includes all security fixes in
 
 ## Integration of MSN and Bing default
 
-The Silverlight installer now includes options to set MSN as your default homepage and Bing as your default search engine. Automated silent installations and upgrades (for example, those performed by Microsoft Update and Windows Server Update Services) do not use the Silverlight installer user interface and will not change your homepage or search engine.
+The Silverlight installer now includes options to set MSN as your default homepage and Bing as your default search engine. Automated silent installations and upgrades (for example, those performed by Microsoft Update and Windows Server Update Services) don't use the Silverlight installer user interface and won't change your homepage or search engine.
 
 ## File information
 
-The global version of this download has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, it is converted to local time. To find the difference between UTC and local time, use the Time Zone tab in the Date and Time item in Control Panel.
+The global version of this download has the file attributes (or later file attributes) that are listed in the following table. The dates and times for these files are listed in Coordinated Universal Time (UTC). When you view the file information, its converted to local time. To find the difference between UTC and local time, use the Time Zone tab in the Date and Time item in Control Panel.
 
 ## For all supported 64-bit releases of Microsoft Silverlight 5 for Windows
 
