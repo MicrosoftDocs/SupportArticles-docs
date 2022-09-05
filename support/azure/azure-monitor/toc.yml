@@ -5,7 +5,7 @@ items:
   items:
   - name: Application Insights telemetry
     items:
-    - name: Investigate missing telemetry in Application Insights
+    - name: Troubleshoot missing telemetry in Application Insights
       href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/auto-instrumentation-troubleshoot.md
