@@ -1,105 +1,73 @@
 ---
 title: Troubleshoot slow-running queries
-description: This article describes how to handle a performance issue that applications may experience in conjunction with Microsoft SQL Server.
-ms.date: 11/18/2020
+description: This article describes how to handle a performance issue that applications may experience when using SQL Server.
+ms.date: 08/22/2022
 ms.custom: sap:Performance
 ms.prod: sql
 ---
 # Troubleshoot slow-running queries on SQL Server
 
-## Introduction
-
-This article describes how to handle a performance issue that applications may experience in conjunction with SQL Server: slow performance of a specific query or group of queries. If you are troubleshooting a performance issue, but you have not isolated the problem to a specific query or small group of queries that perform slower than expected, see [Monitor and Tune for Performance](/sql/relational-databases/performance/monitor-and-tune-for-performance) before you continue.
-
-This article assumes that you have used the article 298475 to narrow down the scope of the problem, and that you have captured a SQL Profiler trace with the specific events and data columns that are detailed in the article 224587.
-
-Tuning database queries can be a multi-faceted endeavor. The following sections discuss common items to examine when you are investigating query performance.
-
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 243589
 
-## Verify the Existence of the Correct Indexes
+## Introduction
 
-One of the first checks to perform when you are experiencing slow query execution times is an index analysis. If you are investigating a single query, you can use the Analyze Query in Database Engine Tuning Advisor option in SQL Query Analyzer; if you have a SQL Profiler trace of a large workload, you can use the Database Engine Tuning Advisor. Both methods use the SQL Server query optimizer to determine which indexes would be helpful for the specified queries. This is an efficient method for determining whether the correct indexes exist in your database.
+This article describes how to handle a performance issue that database applications may experience when using SQL Server: slow performance of a specific query or group of queries. The following methodology will help you narrow down the cause of the slow queries issue and direct you towards resolution.
 
-For information about how to use the Database Engine Tuning Advisor, see the "Start and Use the Database Engine Tuning Advisor" topic in SQL Server Books Online.
+## Find slow queries
 
-If you have upgraded your application from a previous version of SQL Server, different indexes may be more efficient in new SQL Server build because of optimizer and storage engine changes. The Database Engine Tuning Advisor helps you to determine if a change in indexing strategy would improve performance.
+To establish that you have query performance issues on your SQL Server instance, start by examining queries by their execution time (elapsed time). Check if the time exceeds a threshold you have set (in milliseconds) based on an established performance baseline. For example, in a stress testing environment, you may have established a threshold for your workload to be no longer than 300 ms, and you can use this threshold. Then, you can identify all queries that exceed that threshold, focusing on each individual query and its pre-established performance baseline duration. Ultimately, business users care about the overall duration of database queries; therefore, the main focus is on execution duration. Other metrics like CPU time and logical reads are gathered to help with narrowing down the investigation.
 
-## Remove All Query, Table, and Join Hints
+[!INCLUDE [collect query data and logical reads](../includes/performance/collect-cpu-time-elapsed-time-logical-reads.md)]
 
-Hints override query optimization and can prevent the query optimizer from choosing the fastest execution plan. Because of optimizer changes, hints that improved performance in earlier versions of SQL Server may have no effect or may adversely affect performance in later SQL Server builds. Additionally, join hints can cause performance degradation based on the following reasons:
+## Running vs. Waiting: why are queries slow?
 
-- Join hints prevent an ad hoc query from being eligible for auto-parameterization and caching of the query plan.
+If you find queries that exceed your predefined threshold, examine why they could be slow. The cause of performance problems can be grouped into two categories, running or waiting:
 
-- When you use a join hint, it implies that you want to force the join order for all tables in the query, even if those joins do not explicitly use a hint.
+- **WAITING**: Queries can be slow because they're waiting on a bottleneck for a long time. See a detailed list of bottlenecks in [types of Waits](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql#WaitTypes).
 
-If the query that you are analyzing includes any hints, remove them, and then reevaluate the performance.
+- **RUNNING**: Queries can be slow because they're running (executing) for a long time. In other words, these queries are actively using CPU resources.
 
-## Examine the Execution Plan
+A query can be running for some time and waiting for some time in its lifetime (duration). However, your focus is to determine which is the dominant category that contributes to its long elapsed time. Therefore, the first task is to establish in which category the queries fall. It's simple: if a query isn't running, it's waiting. Ideally, a query spends most of its elapsed time in a running state and very little time waiting for resources. Also, in the best-case scenario, a query runs within or below a predetermined baseline. Compare the elapsed time and CPU time of the query to determine the issue type.
 
-After you confirm that the correct indexes exist, and that no hints are restricting the optimizer's ability to generate an efficient plan, you can examine the query execution plan. You can use any of the following methods to view the execution plan for a query:
+[!INCLUDE [establish runner or waiter perf type](../includes/performance/establish-runner-waiter-perf-type.md)]
 
-- SQL Profiler
+### High-level visual representation of the methodology
 
-  If you captured the MISC: Execution Plan event in SQL Profiler, it would occur immediately before the StmtCompleted event for the query for the system process ID (SPID).
+:::image type="content" source="media/troubleshoot-slow-queries/slow-queries-flow.svg" alt-text="The screenshot shows a high-level visual representation of the methodology for troubleshooting slow queries.":::
 
-- SQL Query Analyzer: Graphical Show plan
+## Diagnose and resolve waiting queries
 
-  With the query selected in the query window, click the Query menu, and then click Display Estimated Execution Plan.
+If you established that your queries of interest are waiters, your next step is to focus on resolving bottleneck issues. Otherwise, go to step 4: [Diagnose and resolve running queries](#diagnose-and-resolve-running-queries).
 
-  > [!NOTE]
-  > If the stored procedure or batch creates and references temporary tables, you must use a SET STATISTICS PROFILE ON statement or explicitly create the temporary tables before you display the execution plan.
+[!INCLUDE [diagnose waits](../includes/performance/diagnose-waits-or-bottlenecks.md)]
 
-- `SHOWPLAN_ALL` and `SHOWPLAN_TEXT`
+## Diagnose and resolve running queries
 
-  To receive a text version of the estimated execution plan, you can use the SET SHOWPLAN_ALL and SET `SHOWPLAN_TEXT` options. See the **SET SHOWPLAN_ALL (T-SQL)** and **SET SHOWPLAN_TEXT (T-SQL)** topics in SQL Server Books Online for more details.
+If CPU (worker) time is very close to the overall elapsed duration, the query spends most of its lifetime executing. Typically, when the SQL Server engine drives high CPU usage, the high CPU usage is coming from queries that drive a large number of logical reads (the most common reason).
 
-   > [!NOTE]
-   > If the stored procedure or batch creates and references temporary tables, you must use the **SET STATISTICS PROFILE ON** option or explicitly create the temporary tables before displaying the execution plan.
+[!INCLUDE [identify cpu bound queries](../includes/performance/identify-cpu-bound-queries.md)]
 
-- STATISTICS PROFILE
+### Common methods to resolve long-running, CPU-bound queries
 
-  When you are displaying the estimated execution plan, either graphically or by using SHOWPLAN, the query is not executed. Therefore, if you create temporary tables in a batch or a stored procedure, you cannot display the estimated execution plans because the temporary tables will not exist. STATISTICS PROFILE executes the query first, and then displays the actual execution plan. See the **SET STATISTICS PROFILE (T-SQL)** topic in SQL Server Books Online for more details. When it is running in SQL Query Analyzer, this appears in graphical format on the Execution Plan tab in the results pane.
+- [Examine the query plan of the query](/sql/relational-databases/performance/display-an-actual-execution-plan)
+- [Update Statistics](/sql/t-sql/statements/update-statistics-transact-sql)
+- Identify and apply [Missing Indexes](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql). For more steps on how to identify missing indexes, see [Tune nonclustered indexes with missing index suggestions](/sql/relational-databases/indexes/tune-nonclustered-missing-index-suggestions)
+- Redesign or rewrite the queries
+- Identify and resolve [parameter-sensitive plans](troubleshoot-high-cpu-usage-issues.md#step-5-investigate-and-resolve-parameter-sensitive-issues)
+- Identify and resolve [SARG-ability issues](troubleshoot-high-cpu-usage-issues.md#step-6-investigate-and-resolve-sargability-issues)
+- Identify and resolve [Row goal](/archive/blogs/queryoptteam/row-goals-in-action) issues where long-running nested loops can be caused by TOP, EXISTS, IN, FAST, SET ROWCOUNT, OPTION (FAST N). For more information, see [Row Goals Gone Rogue](/archive/blogs/bartd/row-goals-gone-rogue) and [Showplan enhancements - Row Goal EstimateRowsWithoutRowGoal](https://techcommunity.microsoft.com/t5/sql-server-blog/more-showplan-enhancements-8211-row-goal/ba-p/385839)
+- Assess and resolve [cardinality estimation](/sql/relational-databases/performance/cardinality-estimation-sql-server) issues. For more information, see [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
+- Identify high CPU performance issues. For more information, see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
+- Increase computing resources on the system (CPUs)
 
-For more information about how to display the estimated execution plan, see the **Display the Estimated Execution Plan** topic in SQL Server Books Online.
+## Recommended resources
 
-## Examine the Showplan Output
-
-Showplan output provides much information about the execution plan that SQL Server is using for a particular query. The following are some basic aspects of the execution plan that you can view to determine whether you are using the best plan:
-
-- Correct Index Usage
-
-  The showplan output displays each table that is involved in the query and the access path that is used to obtain data from it. With graphical showplan, move the pointer over a table to see the details for each table. If an index is in use, you see Index Seek; if an index is not in use, you see either Table Scan for a heap or Clustered Index Scan for a table that has a clustered index. Clustered Index Scan indicates that the table is being scanned through the clustered index, not that the clustered index is being used to directly access individual rows.
-
-  If you determine that a useful index exists and it is not being used for the query, you can try forcing the index by using an index hint. See the **FROM (T-SQL)** topic in SQL Server Books Online for more details about index hints.
-
-- Correct Join Order
-
-  The showplan output indicates in what order tables that are involved in a query are being joined. For nested loop joins, the upper table that is listed is the outer table and it should be the smaller of the two tables. For hash joins, the upper table becomes the build input and should also be the smaller of the two tables. However, note that the order is less critical because the query processor can reverse build and probe inputs at run time if it finds that the optimizer made a wrong decision. You can determine which table returns fewer rows by checking the Row Count estimates in the showplan output.
-
-  If you determine that the query may benefit from a different join order, you can try forcing the join order with a join hint. See the **FROM (T-SQL)** topic in SQL Server Books Online for more details about join hints.
-
-  > [!NOTE]
-  > Using a join hint in a large query implicitly forces the join order for the other tables in the query as if `FORCEPLAN` was set.
-
-- Correct Join Type
-
-  SQL Server uses nested loop, hash, and merge joins. If a slow-performing query is using one join technique over another, you can try forcing a different join type. For example, if a query is using a hash join, you can force a nested loops join by using the LOOP join hint. See the "FROM (T-SQL)" topic in SQL Server Books Online for more details on join hints.
-
-  Using a join hint in a large query implicitly forces the join type for the other tables in the query as if `FORCEPLAN` was set.
-
-- Parallel Execution
-
-  If you are using a multiprocessor computer, you can also investigate whether a parallel plan is in use. If parallelism is in use, you see a PARALLELISM (Gather Streams) event. If a particular query is slow when it is using a parallel plan, you can try forcing a non-parallel plan by using the OPTION (MAXDOP 1) hint. See the "SELECT (T-SQL)" topic in SQL Server Books Online for more details.
-
-For more information about how to use Showplan execution plan output, see the following topics in SQL Server Books Online:
-
-- Save an Execution Plan in XML format
-
-- Compare and Analyze Execution Plans
-
-- Showplan Logical and Physical Operators Reference
-
-> [!CAUTION]
-> Because the query optimizer typically selects the best execution plan for a query, Microsoft recommends that you use join hints, query hints, and table hints only as a last resort, and only if you are an experienced database administrators.
+- [Detectable types of query performance bottlenecks in SQL Server and Azure SQL Managed Instance](/azure/azure-sql/managed-instance/identify-query-performance-issues)
+- [Performance Monitoring and Tuning Tools](/sql/relational-databases/performance/performance-monitoring-and-tuning-tools)
+- [Auto-Tuning Options in SQL Server](/sql/relational-databases/automatic-tuning/automatic-tuning)
+- [Index architecture and Design Guidelines](/sql/relational-databases/sql-server-index-design-guide#General_Design)
+- [Troubleshoot query time-out errors](troubleshoot-query-timeouts.md)
+- [Troubleshoot a query that shows a significant performance difference between two servers](troubleshoot-query-perf-between-servers.md)
+- [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md)
+- [Decreased query performance after upgrade from SQL Server 2012 or earlier to 2014 or later](decreased-query-perf-after-upgrade.md)
