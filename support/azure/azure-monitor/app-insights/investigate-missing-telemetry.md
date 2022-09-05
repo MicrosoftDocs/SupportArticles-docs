@@ -131,8 +131,6 @@ This script builds a raw REST request to deliver a single availability test resu
 > [!NOTE]
 > Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.application-insights-azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supply the connection string or the Ikey.
 
-[!INCLUDE [azure-monitor-log-analytics-rebrand](../../../includes/azure-monitor-instrumentation-key-deprecation.md)]
-
 It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the App Services Kudu interface PowerShell debug console and then run it.
 
 When the script is executed, look for an HTTP 200 response and review the response details. As part of the response JSON payload, the following details are expected:
