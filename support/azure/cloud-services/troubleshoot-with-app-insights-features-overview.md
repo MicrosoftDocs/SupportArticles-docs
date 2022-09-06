@@ -105,7 +105,7 @@ The data to be monitored can be configured by following points:
 4. Metric - The data which we want to generate chart for.
 5. Aggregation - Type of statistic calculated from multiple metric values. For more details, please check this document. It's strongly recommended to keep this as default value. You should only modify it when you understand well how this metrics data type is collected and understand well the difference among all aggregation types.
 
-> [!TIPS]
+> [!TIP]
 > Sometimes there will be dotted lines in the chart. It means that the data during that time range is not accurate enough or is not collected. The reason is the data during that period is not continue. Imagine that when the metrics data is collected every 2 minutes but the time difference between two points in chart is 1 minute, the data will be not accurate enough to generate the chart so it will be dotted line.
 
 ## Collected log in Application Insights
