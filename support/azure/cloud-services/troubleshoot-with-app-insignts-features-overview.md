@@ -64,7 +64,7 @@ The rules mainly contain two important parts: conditions and actions. To create 
 
 1. In the Azure portal, go to the Application Insights instance, select **Alert** under the **Monitoring** section. In this page, you can see all triggered alerts. Expand **+ Create** and then select **Alert rule**.
 
-2. Set up the conditions. The condition consists of three points: Signal, Dimension and Alert Logic. For more information, see [Types of Azure Monitor alerts](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-types)
+2. Set up the conditions. The condition consists of three points: Signal, Dimension and Alert Logic. For more information, see [Types of Azure Monitor alerts](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-types)
 
     - Signal is the type of metrics data that the alert rule will monitor. The common metrics data, such as CPU, available memory, failed requests, exceptions even the response time can be used.
     - Dimension is the one to specify the scope or filter where this alert rule will be applied. For alert rule based on Cloud Service metrics data, it will usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other choices depending on the signal.
