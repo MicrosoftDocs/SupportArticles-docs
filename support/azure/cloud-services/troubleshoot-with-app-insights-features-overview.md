@@ -38,7 +38,7 @@ You'll see the failure rate trends for your requests, how many of them are faili
 
 To review representative samples for each of these subsets of operations, select the corresponding link. As an example, to diagnose exceptions, you can select the count of a particular exception to be presented with the **End-to-end transaction details** tab.
 
-![The image that shows the End-to-end transaction details tab](./media/troubleshoot-with-app-insights-features-overview/end-to-end.png)
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/end-to-end.png" alt-text="The image that shows the End-to-end transaction details tab":::
 
 The following information in the **End-to-end transaction details** are useful for troubleshooting:
 
