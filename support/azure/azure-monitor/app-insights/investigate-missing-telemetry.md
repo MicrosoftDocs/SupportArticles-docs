@@ -138,7 +138,7 @@ It's easiest to run this script from the PowerShell ISE environment on an IaaS o
 When the script is executed, look for an HTTP 200 response and review the response details. As part of the response JSON payload, the following details are expected:
 
 - The `itemsReceived` count matches the `itemsAccepted`.
-- The ingestion endpoint is informs the client: you sent one telemetry record and we accepted one telemetry record.
+- The ingestion endpoint informs the client: you sent one telemetry record, and we accepted one telemetry record.
 
 Refer to the following screenshot as an example:
 
@@ -228,7 +228,7 @@ If the scripts above fail, troubleshoot the SSL or TLS configuration. Most inges
 
 - Option 1: Control which SSL or TLS protocol is used by PowerShell to make a connection to the ingestion endpoint.
 
-    Uncomment any of the following lines by removing the `#` character and adding them before the `Invoke-WebRequest` cmdlet in your PowerShell script to control the protocol used in the test REST request:
+    Uncomment any of the following lines by removing the `#` character and add them before the `Invoke-WebRequest` cmdlet in your PowerShell script to control the protocol used in the test REST request:
 
     ```powershell
     # Uncomment one or more of these lines to test TLS/SSL protocols other than the machine default option
@@ -265,7 +265,7 @@ If you need to change the default TLS/SSL protocol used by a .NET application, f
 
 ## <a id="troubleshoot-application-insights-sdk-agent"></a>Troubleshoot setup or configuration of Application Insights SDK or agent
 
-If sending telemetry from your application's host machine by using PowerShell or curl is successful, missing telemetry is likely due to Application Insights SDK, agent setup, or configuration issues. Enable Application Insights monitoring for your application host and programming language to verify that all your configurations or code follow proper guidance and examples.
+If sending telemetry from your application's host machine by using PowerShell or curl is successful, missing telemetry is likely due to setup or configuration issues of the Application Insights SDK or agent. Enable Application Insights monitoring for your application host and programming language to verify that all your configurations or code follow proper guidance and examples.
 
 If tests performed by using PowerShell or curl fail to send telemetry to the ingestion endpoint, verify a few common client-side related issues that may contribute to the problem:
 
