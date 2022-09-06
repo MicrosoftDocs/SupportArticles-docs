@@ -159,3 +159,5 @@ To use this method, Endpoint analytics and Proactive remediations must be enable
    :::image type="content" source="media/unable-sign-in-m365-desktop-apps/set-script-run-settings.png" alt-text="Screenshot of setting the options when running the scripts.":::
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package.
 1. In the **Review + Create** step, review the information to deploy the scripts and then select **Create** to proceed.
+
+[!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
