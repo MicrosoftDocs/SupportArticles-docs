@@ -146,7 +146,7 @@ Refer to the following screenshot as an example:
 
 #### Curl command to send availability test results
 
-If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `ikey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records that are older than 48 hours.
+If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `ikey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
 
 Here are sample curl commands that send a single availability test result:
 
@@ -164,7 +164,7 @@ Here are sample curl commands that send a single availability test result:
 
 ### Send request telemetry record
 
-To troubleshoot missing a request telemetry, use the following PowerShell script to test sending a single request telemetry record. This telemetry type is susceptible to the server-side ingestion sampling configuration. Verify that [ingestion sampling](/azure/azure-monitor/app/sampling#ingestion-sampling) is turned off to confirm if the test record is saved correctly.
+To troubleshoot missing request telemetry, use the following PowerShell script to test sending a single request telemetry record. This telemetry type is susceptible to the server-side ingestion sampling configuration. Verify that [ingestion sampling](/azure/azure-monitor/app/sampling#ingestion-sampling) is turned off to confirm if the test record is saved correctly.
 
 ```powershell
 # Info: Provide either the connection string or ikey for your Application Insights resource
@@ -224,11 +224,11 @@ Invoke-WebRequest -Uri $url -Method POST -Body $requestData -UseBasicParsing
 
 ## Troubleshoot SSL or TLS configuration
 
-If the scripts above to test sending telemetry fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose secure channel as part of the connection between the client VM and the ingestion endpoints.
+If the scripts above fail, troubleshoot the SSL or TLS configuration. Most ingestion endpoints require clients to use TLS 1.2 and specific cipher suites. In this case, adjust how PowerShell participates as a client in the SSL or TLS protocol. Include the following snippets if you need to diagnose a secure channel as part of the connection between the client VM and the ingestion endpoints.
 
 - Option 1: Control which SSL or TLS protocol is used by PowerShell to make a connection to the ingestion endpoint.
 
-    Uncomment any of the following lines by removing the `#` character and add them before the `Invoke-WebRequest` cmdlet in your PowerShell script to control the protocol used in the test REST request:
+    Uncomment any of the following lines by removing the `#` character and adding them before the `Invoke-WebRequest` cmdlet in your PowerShell script to control the protocol used in the test REST request:
 
     ```powershell
     # Uncomment one or more of these lines to test TLS/SSL protocols other than the machine default option
@@ -265,13 +265,13 @@ If you need to change the default TLS/SSL protocol used by a .NET application, f
 
 ## <a id="troubleshoot-application-insights-sdk-agent"></a>Troubleshoot setup or configuration of Application Insights SDK or agent
 
-If sending telemetry from your application's host machine by using PowerShell or curl is successful, missing telemetry is likely due to Application Insights SDK or agent setup or configuration issues. Enable Application Insights monitoring for your application host and programming language to verify that all your configurations or code follow proper guidance and examples.
+If sending telemetry from your application's host machine by using PowerShell or curl is successful, missing telemetry is likely due to Application Insights SDK, agent setup, or configuration issues. Enable Application Insights monitoring for your application host and programming language to verify that all your configurations or code follow proper guidance and examples.
 
-If tests by using PowerShell or curl fail to send telemetry to the ingestion endpoint, verify a few common client side related issues that may contribute to the problem:
+If tests performed by using PowerShell or curl fail to send telemetry to the ingestion endpoint, verify a few common client-side related issues that may contribute to the problem:
 
 - DNS on your network fails to resolve the ingestion endpoint to the correct IP address.
-- TCP connection from your application server to ingestion endpoint may be blocked by firewalls or gateway devices.
-- The ingestion endpoint that the SDK connects to may require TLS 1.2, but your application may default to use TLS 1.0 or TLS 1.1.
+- TCP connection from your application server to the ingestion endpoint may be blocked by firewalls or gateway devices.
+- The ingestion endpoint that the SDK connects to may require TLS 1.2, but your application may by default use TLS 1.0 or TLS 1.1.
 - You may have more than one [Azure Monitor Private Link](/azure/azure-monitor/logs/private-link-security) impacting your private network, which may overwrite your DNS entries to resolve the ingestion endpoint to the wrong private IP address.
 
 [!INCLUDE [Azure Help Support](../../../includes/azure-help-support.md)]
