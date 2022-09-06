@@ -152,7 +152,7 @@ Here are sample curl commands that send a single availability test result:
 
 - Curl command for Linux/MaxOS:
 
-    ```bash
+    ```
     >curl -H "Content-Type: application/json" -X POST -d '{"data":{"baseData":{"ver":2,"id":"SampleRunId","name":"MicrosoftSupportSampleWebtestResultUsingCurl","duration":"00.00:00:10","success":true,"runLocation":"RegionName","message":"SampleWebtestResult","properties":{"SampleProperty":"SampleValue"}},"baseType":"AvailabilityData"},"ver":1,"name":"Microsoft.ApplicationInsights.Metric","time":"2022-09-01T12:00:00.0000000Z","sampleRate":100,"ikey":"########-####-####-####-############","flags":0}' https://dc.applicationinsights.azure.com/v2.1/track
     ```
 
