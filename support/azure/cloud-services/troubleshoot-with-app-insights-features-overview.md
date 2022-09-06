@@ -60,7 +60,7 @@ In the **Operations** tab, the failed operations table<sup>1</sup> shows the req
 
 In the **Roles** tab, it shows the metrics data more related to the Cloud Service server, such as CPU, Available Memory, the requests handled by each instance etc.
 
-:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/performance.png" alt-text="The image that shows the End-to-end transaction details tab":::
+:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/performance.png" alt-text="The image that shows the performance page]":::
 
 ## Alert in Application Insight
 
