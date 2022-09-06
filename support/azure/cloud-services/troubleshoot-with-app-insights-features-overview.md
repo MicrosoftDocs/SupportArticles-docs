@@ -26,7 +26,7 @@ To monitor your app with Application Insights, follow these steps:
 
 For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics such as restart and performance counters.
 
- :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/enable-app-insights-for-cloud-services.png" alt-text="The image that shows how to enable the Send diagnostics data to Application Insights checkbox":::
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/Picture2.png" alt-text="The image that shows how to enable the Send diagnostics data to Application Insights checkbox":::
 
 ## Diagnose failures in Application Insights
 
