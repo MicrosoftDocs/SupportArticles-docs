@@ -93,7 +93,7 @@ The rules mainly contain two important parts: conditions and actions. To create 
 
 ## Metrics chart in Application Insights
 
-The metrics chart in application insight can be used to visualize the data change. This is quite useful to monitor the status of the service over time range such as several days or weeks.  
+The metrics chart in application insights  can be used to visualize the data change. This is quite useful to monitor the status of the service over time range such as several days or weeks.  
 
 The data to be monitored can be configured by following points:
 
@@ -110,7 +110,7 @@ The data to be monitored can be configured by following points:
 
 ## Collected log in Application Insights
 
-Almost all Application Insight features presented above are all based on the data collected as log. It's also possible for users to check these logs directly to get more detailed information that is not shown in the pages.
+Almost all Application Insights features presented above are all based on the data collected as log. It's also possible for users to check these logs directly to get more detailed information that is not shown in the pages.
 
 To view the logs, select **Logs** under the **Monitoring** section.
 
