@@ -129,9 +129,11 @@ This script builds a raw REST request to deliver a single availability test resu
 - If both connection string and ikey parameters are supplied, the script will send telemetry to the regional endpoint in the connection string.
 
 > [!NOTE]
-> Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.application-insights-azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supply the connection string or the Ikey.
+>
+> - Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.applicationinsights.azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supply the connection string or the Ikey.
+> - On March 31, 2025, support for instrumentation key ingestion will end. Instrumentation key ingestion will continue to work, but we'll no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings.md#new-capabilities).
 
-It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the App Services Kudu interface PowerShell debug console and then run it.
+It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the [App Service Kudu](/azure/app-service/resources-kudu) interface PowerShell debug console and then run it.
 
 When the script is executed, look for an HTTP 200 response and review the response details. As part of the response JSON payload, the following details are expected:
 
@@ -198,7 +200,7 @@ $requestData = @"
         "duration": "00:00:01.0000000",
         "success": true,
         "responseCode": "200",
-        "url": http://localhost:8080/requestData/sampleurl,
+        "url": "https://localhost:8080/requestData/sampleurl",
         "httpMethod": "GET"
        }
    },
