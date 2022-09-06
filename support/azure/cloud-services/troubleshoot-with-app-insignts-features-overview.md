@@ -1,6 +1,6 @@
 ---
-title:  Troubleshoot Cloud Service Application issue with Application Insights -  features overview
-description: This article provides overview for Application Insights features that you can used to troubleshoot Cloud Service Application issues
+title:  Application Insights features overview for troubleshooting Cloud Service Application issue
+description: This article provides an overview of Application Insights features that you can used to troubleshoot Cloud Service Application issues
 ms.topic: article
 ms.service: cloud-services
 author: genlin
@@ -10,35 +10,25 @@ ms.date: 09/06/2022
 ms.custom: 
 ---
 
-# Troubleshoot Cloud Service Application issue with Application Insights -  features overview
+# Troubleshoot Cloud Service app issues with Application Insights - features overview
 
-This documentation is about  Azure Monitor Application Insights integration with Cloud Service, and features introduction of application insight that are useful to troubleshoot application related issue.  
+This describes Azure Monitor Application Insights features that are useful to troubleshoot application related issues.
 
 > [!NOTE]
 > This article applies to both classic cloud service and cloud service extended support.  
 
-The following topics are covered in this article:
-
-- Application Insight Integration with Cloud Service
-- Features of application Insight  
-- Web requests metrics and summary
-- Performance View
-- Alert Setup in Application Insight  
-- Metrics chart in Application Insight
-- Collected log in Application Insight
-
-## Application Insights integration With Cloud Service
+## Configure Application Insights for Could Service apps
 
 To monitor your app with Application Insights, follow these steps:
 
 1. In Visual Studio Solution Explorer, under *Your Cloud Service* > Roles, open the properties of each role.
 1. In **Configuration**, select the **Send diagnostics data to Application Insights** check box, and then select the Application Insights instance that you created before.
 
-For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics such as restart, performance counters.
+For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics such as restart and performance counters.
 
-## Diagnose failures in Applicaiton Insignts
+## Diagnose failures in Application Insights
 
-Application Insights comes with a curated Application Performance Management experience to help you diagnose failures in your monitored applications. To view the failures in the Azure portal, go to the Application Insights instance, and then select *Failures** under **Investigate**.
+Application Insights comes with curated Application Performance Management experience to help you diagnose failures in your monitored applications. To view the failures in the Azure portal, go to the Application Insights instance, and then select *Failures** under **Investigate**.
 
 You'll see the failure rate trends for your requests, how many of them are failing, and how many users are affected. The **Overall** view shows some of the most useful distributions specific to the selected failing operation. You'll see the top three response codes, the top three exception types, and the top three failing dependency types.
 
@@ -46,7 +36,7 @@ To review representative samples for each of these subsets of operations, select
 
 If you click on a specific operation name, it returns a list of all failed response code and exception type on the right side and if we click on the failed response code or exception type, it will return a list of all failed request records mapping the condition we selected.
 
-The informaiton in the End-to-end transaction detials tag are useful for troubleshooting such as:
+The information in the **End-to-end transaction details** are useful for troubleshooting such as:
 
 - The timestamp of the request
 - The response code
@@ -55,33 +45,33 @@ The informaiton in the End-to-end transaction detials tag are useful for trouble
 - Exception Type
 - Call Stack
 
-## Diagnose performance issue in Applicaiton Insignts
+## Diagnose performance issue in Application Insights
 
-To diagnose performance issue for the web role, we can check the following data in the **Performance** page of the Applicaiton Insignts instance in the Azure portal:
+To diagnose performance issues for the web role, we can check the following data in the **Performance** page of the Application Insights instance in the Azure portal:
 
 - Web role requests response time
 - CPU, Memory, Disk IO, Network IO of web role instance
 
-In the **Operations** tab, the **Overall** table presents the request operation URL, duration AVG, request count summary. Click a operation, it will refresh the metrics chart to show the request volume and duration metrics chart.  
+In the **Operations** tab, the **Overall** table presents the request operation URL, duration AVG, request count summary. Click an operation, it will refresh the metrics chart to show the request volume and duration metrics chart.  
 
 In the **Roles** tab, it shows the metrics data more related to the Cloud Service server, such as CPU, Available Memory, the requests handled by each instance etc.
 
 ## Alert in Application Insight
 
-The Alert allows users to set custom rules to monitor the cloud service role instance status. When the monitored event happens, users can get a email notification.
+The Alert allows users to set custom rules to monitor the cloud service role instance status. When the monitored event happens, users can get an email notification.
 
-The rules mainly contain two important parts: conditions and actions. To create a alert, follow these steps:
+The rules mainly contain two important parts: conditions and actions. To create an alert, follow these steps:
 
-1. In the Azure portal, go to the Application insigns instance, select **Alert** under the **Monitoring** section. In this page, you can see all triggered alerts. Expand **+ Create** and then select **Alert rule**.
+1. In the Azure portal, go to the Application Insights instance, select **Alert** under the **Monitoring** section. In this page, you can see all triggered alerts. Expand **+ Create** and then select **Alert rule**.
 
 2. Set up the conditions. The condition consists of three points: Signal, Dimension and Alert Logic. For more information, see [Types of Azure Monitor alerts](https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-types)
 
     - Signal is the type of metrics data that the alert rule will monitor. The common metrics data, such as CPU, available memory, failed requests, exceptions even the response time can be used.
-    - Dimension is the one to specify the scope or filter where this alert rule will be applied. For alert rule based on Cloud Service metrics data, it will usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other  choices depending on the signal.
+    - Dimension is the one to specify the scope or filter where this alert rule will be applied. For alert rule based on Cloud Service metrics data, it will usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other choices depending on the signal.
 
     > [!NOTE]
     > This dimension should only be modified only when you want to set a  
-    > specific dimension, such as only want to monitor the specific instance of a role. Otherwise, it's recommended to keep it as following one:
+    > specific dimension, such as only wanting to monitor the specific instance of a role. Otherwise, it's recommended to keep it as following one:
 
     - Alert logic is the part where we should set the logic of the alert rule condition. There are several important concepts:
 
@@ -89,7 +79,7 @@ The rules mainly contain two important parts: conditions and actions. To create 
     - Operator, Aggregation type, Threshold value and Unit are easy to understand. It's like the main body of logic.
     - Aggregation granularity, also called period, is how long the metrics data in history will be evaluated. If it's 5 minutes, it means the metrics data of the last 5 minutes will be evaluated. Frequency of evaluation means how often the evaluation will be triggered.
 
-3. Set the action that Application Insight will take when the Alert rule is triggered. You either can create a new action group and add it into this alert rule, or use an existing action group.
+3. Set the action that Application Insight will take when the Alert rule is triggered. You either can create a new action group and add it into this alert rule or use an existing action group.
 
     To create a new action group, we need to:
 
@@ -101,7 +91,7 @@ The rules mainly contain two important parts: conditions and actions. To create 
     
     When the action group is created, it will also be added into the alert rule.
 
-4. In the **Details** page, select the subscription and resource group in which to save the alert rule,and set its name and severity level.
+4. In the **Details** page, select the subscription and resource group in which to save the alert rule, and set its name and severity level.
 
 ## Metrics chart in Application Insights
 
@@ -115,7 +105,7 @@ The data to be monitored can be configured by following points:
 
 4. Metric: The data which we want to generate chart for. 
 
-5. Aggregation: Type of statistic calculated from multiple metric values. For more details, please check in this document. It's strongly recommended to keep this as default value. You should only modify it when you understand well how this metrics data type is collected and understand well the difference among all aggregation types.
+5. Aggregation: Type of statistic calculated from multiple metric values. For more details, please check this document. It's strongly recommended to keep this as default value. You should only modify it when you understand well how this metrics data type is collected and understand well the difference among all aggregation types.
 
 After selecting all above options, the page will show the chart.  
 
@@ -128,7 +118,7 @@ Almost all Application Insight features presented above are all based on the dat
 
 To view the logs, select **Logs* under the "Monitoring" section. 
 
-In the log page,you need to use [Kusto Query Language (KQL)[https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/] to query or filter the collected logs and get needed information.
+In the log page, you need to use [Kusto Query Language (KQL)[https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/] to query or filter the collected logs and get needed information.
 
 There are only two points which you need to pay attention to: the time range and the query.
 
@@ -138,8 +128,15 @@ There are only two points which you need to pay attention to: the time range and
 
 Here are the usually used tables. The relationship of the data and table name is: 
 
-And there are some tables which will be responsible to save the data collected by custom Diagnostic setting. 
+And there are some tables which will be responsible to save the data collected by custom Diagnostic setting.
 
 For the condition, it mainly seems like:
 
 | where condition == "xxx"
+
+## Resources
+
+- [Find and diagnose performance issues with Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/tutorial-performance)
+- [Create new rule alert in Azure Application Insight](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
+- [Application Insights standard metrics](https://docs.microsoft.com/azure/azure-monitor/app/standard-metrics)
+- []
