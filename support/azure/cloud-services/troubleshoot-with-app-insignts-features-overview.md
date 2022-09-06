@@ -68,10 +68,6 @@ In the **Roles** tab, it shows the metrics data more related to the Cloud Servic
 
 ## Alert in Application Insight
 
-https://docs.microsoft.com/en-us/azure/azure-monitor/app/tutorial-alert#create-availability-test
-
-https://docs.microsoft.com/en-us/azure/azure-monitor/alerts/alerts-create-new-alert-rule?tabs=metric
-
 The Alert allows users to set custom rules to monitor the cloud service role instance status. When the monitored event happens, users can get a email notification.
 
 The rules mainly contain two important parts: conditions and actions. To create a alert, follow these steps:
@@ -95,14 +91,14 @@ The rules mainly contain two important parts: conditions and actions. To create 
 
 3. Set the action that Application Insight will take when the Alert rule is triggered. You either can create a new action group and add it into this alert rule, or use an existing action group.
 
-    To create a new action group, we need to: 
+    To create a new action group, we need to:
 
-        - Select the subscription and resource group where the action group resource will be created and give name and display name. 
+    - Select the subscription and resource group where the action group resource will be created and give name and display name. 
 
-        - (Optional) Select how the user will be informed when the alert rule is triggered, such as sending email to a specific email address. thumbnail image 15 captioned Create Action Group Page 2 
+    - (Optional) Select how the user will be informed when the alert rule is triggered, such as sending email to a specific email address. thumbnail image 15 captioned Create Action Group Page 2 
 
-        - (Optional) Select what action it will take. We can trigger Automation Runbook, Azure Function and other 5 service types in this option. thumbnail image 16 captioned Create Action Group Page 3Create Action Group Page 3
-
+    - (Optional) Select what action it will take. We can trigger Automation Runbook, Azure Function and other 5 service types in this option. 
+    
     When the action group is created, it will also be added into the alert rule.
 
 4. In the **Details** page, select the subscription and resource group in which to save the alert rule,and set its name and severity level.
