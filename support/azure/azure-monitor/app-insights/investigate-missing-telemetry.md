@@ -19,21 +19,21 @@ The following graphic shows steps where telemetry can be missing during ingestio
 
 :::image type="content" source="media/investigate-missing-telemetry/telemetry-processing-pipeline.png" alt-text="Steps that telemetry passes in processing pipeline.":::
 
-If application telemetry doesn't show in the Azure portal, it can be caused by failures across every step in the processing pipeline:
+If application telemetry doesn't show in the Azure portal, failures across steps in the processing pipeline could be the cause:
 
 - The Application Insights SDK or agent is misconfigured and doesn't send application telemetry to the ingestion endpoint.
-- The SDK or agent is configured correctly but the network blocks calls to the ingestion endpoint.
+- The SDK or agent is configured correctly, but the network blocks calls to the ingestion endpoint.
 - The ingestion endpoint drops or throttles inbound telemetry.
 - The ingestion pipeline drops or severely slows down telemetry as part of its processing due to [service health](https://azure.microsoft.com/get-started/azure-portal/service-health/#overview).
-- (Uncommon) Log Analytics is facing service health problems when saving telemetry records.
+- (Uncommon) Log Analytics faces service health problems when saving telemetry records.
 - (Uncommon) The query API at `api.applicationinsights.io` fails when querying records from Log Analytics.
-- The Azure portal fails to pull or render the records that you're trying to view.
+- The Azure portal fails to pull or render the records you're trying to view.
 
 ## Troubleshoot missing telemetry with PowerShell or curl
 
 Configuration problems or transient issues may occur anywhere across the Applications Insights service. To identify the step within the processing pipeline that causes symptoms of no data or missing data, send a sample telemetry record by using PowerShell or curl.
 
-If the web app runs on an on-premises server or Azure VM, connect to the server or VM and send a single telemetry record to the Applications Insights service instance by using PowerShell. If the web app that has issues sending telemetry [runs on Kudu](/azure/app-service/resources-kudu), run the following script from the Kudu's PowerShell debug console in Azure Web Apps.
+If the web app runs on an on-premises server or Azure VM, connect to the server or VM and send a single telemetry record to the Applications Insights service instance by using PowerShell. If the web app that has issues sending telemetry [runs on Kudu](/azure/app-service/resources-kudu), run the following script from Kudu's PowerShell debug console in Azure Web Apps.
 
 ```powershell
 $ProgressPreference = "SilentlyContinue"
@@ -45,7 +45,7 @@ Invoke-WebRequest -Uri $url -Method POST -Body $availabilityData -UseBasicParsin
 > - Before running the `Invoke-WebRequest` cmdlet, issue the `$ProgressPreference = "SilentlyContinue"` cmdlet.
 > - You can't use `-Verbose` or `-Debug`. Instead, use `-UseBasicParsing`.
 
-After you send a sample telemetry record by using PowerShell, navigate to the Application Insights **Logs** tab in the Azure portal and check if it arrives. If the sample telemetry record shows, a large portion of the processing pipeline is eliminated.
+After you send a sample telemetry record by using PowerShell, navigate to the Application Insights **Logs** tab in the Azure portal and check if it arrives. If the sample telemetry record is shown, then a large portion of the processing pipeline is eliminated.
 
 A sample telemetry record that's correctly saved and displayed means:
 
@@ -55,13 +55,13 @@ A sample telemetry record that's correctly saved and displayed means:
 - Log Analytics correctly saved the sample record.
 - The Azure portal **Logs** tab is able to query the API (`api.applicationinsights.io`) and render the sample record in the Azure portal.
 
-If the generated sample record arrives at your Application Insights instance and you can query for the sample record by using the **Logs resource** menu, [troubleshoot the Application Insights SDK or agent](#troubleshoot-application-insights-sdk-agent). You would proceed with collecting SDK logs, self-diagnostic logs or profiler traces, whichever is appropriate for the SDK or agent version.
+If the generated sample record arrives at your Application Insights instance and you can query for the sample record by using the **Logs resource** menu, [troubleshoot the Application Insights SDK or agent](#troubleshoot-application-insights-sdk-agent). You can then proceed with collecting SDK logs, self-diagnostic logs, or profiler traces, whichever is appropriate for the SDK or agent version.
 
-The following sections talks about sending a sample telemetry record by using PowerShell or curl.
+The following sections provide information about sending a sample telemetry record using PowerShell or curl.
 
 ### Send availability test results
 
-Availability test results are the ideal telemetry type to test with. The reason is because the ingestion pipeline never samples out availability test results. If you send a request telemetry record, it could get sampled out when you have enabled ingestion sampling. Start with a sample availability test result and then try other telemetry types as needed.
+Availability test results are the ideal telemetry type to test with. The reason is that the ingestion pipeline never samples out availability test results. If you send a request telemetry record, it could get sampled out when you have enabled ingestion sampling. Start with a sample availability test result and then try other telemetry types as needed.
 
 #### PowerShell script to send availability test result
 
@@ -130,7 +130,7 @@ This script builds a raw REST request to deliver a single availability test resu
 
 > [!NOTE]
 >
-> - Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.applicationinsights.azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supply the connection string or the Ikey.
+> - Test the connection made by your application. If you enable Application Insights in the Azure portal, you likely rely on connection strings with regional endpoints, `https://<region>.in.applicationinsights.azure.com`. If your SDK configuration only supplies the ikey, you rely on the global endpoint, `https://dc.applicationinsights.azure.com`. Make sure to populate the script parameter that matches your web application SDK configuration, either supplying the connection string or the Ikey.
 > - On March 31, 2025, support for instrumentation key ingestion will end. Instrumentation key ingestion will continue to work, but we'll no longer provide updates or support for the feature. [Transition to connection strings](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings) to take advantage of [new capabilities](/azure/azure-monitor/app/migrate-from-instrumentation-keys-to-connection-strings#new-capabilities).
 
 It's easiest to run this script from the PowerShell ISE environment on an IaaS or [Azure virtual machine scale set](/azure/virtual-machine-scale-sets/overview) instance. You can also copy and paste the script into the [App Service Kudu](/azure/app-service/resources-kudu) interface PowerShell debug console and then run it.
@@ -138,7 +138,7 @@ It's easiest to run this script from the PowerShell ISE environment on an IaaS o
 When the script is executed, look for an HTTP 200 response and review the response details. As part of the response JSON payload, the following details are expected:
 
 - The `itemsReceived` count matches the `itemsAccepted`.
-- The ingestion endpoint is informing the client: you sent one telemetry record, we accepted one telemetry record.
+- The ingestion endpoint is informs the client: you sent one telemetry record and we accepted one telemetry record.
 
 Refer to the following screenshot as an example:
 
