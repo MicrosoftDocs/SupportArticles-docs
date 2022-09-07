@@ -2,19 +2,19 @@
 title: The certificate chain was issued by an authority that isn’t trusted, error after upgrading SNAC applications.
 description: This article provides resolutions for the error that occurs when you upgrade SNAC applications.
 ms.date: 07/09/2022
-author: ramakoni
-ms.author: v-jayaraman-p
+author: ramakoni1
+ms.author: v-jayaramanp
 ms.custom: sap:Connection issues
 ms.prod: sql
 ---
 
-# "The certificate chain was issued by an authority that isn’t trusted" - error after upgrading SNAC applications
+# "The certificate chain was issued by an authority that isn’t trusted" error after upgrading SNAC applications
 
 Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - ODBC Driver for SQL Server and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - OLE DB Driver for SQL Server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use these new drivers.
 
 ## Error messages
 
-**Scenario 1:** Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server
+**Scenario 1: Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server**
 
 If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11) application to use Microsoft OLE DB Driver 19 for SQL Server (Provider=MSOLEDBSQL19), you might receive error messages that resemble the following messages:
 
@@ -26,7 +26,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11)
 
 ```
 
-**Scenario 2:** Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server
+**Scenario 2: Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server**
 
 If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
 
