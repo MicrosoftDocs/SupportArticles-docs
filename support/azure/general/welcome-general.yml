@@ -7,7 +7,7 @@ metadata:
   title: Troubleshoot common issues with Azure services
   description: Documentation for troubleshooting common issues with Azure services. # Required; article description that is displayed in search results. < 160 chars.
   services: azure
-  ms.service: azure #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-common-issues-support #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
