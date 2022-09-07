@@ -21,32 +21,32 @@ _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 20
 
 ## Introduction
 
-This article describes methods that you can use to merge checkpoints with a virtual machine (VM) when Hyper-V has generated a large number of differencing disks. The method that you use depends on the details of the situation.
+This article describes methods that you can use to merge checkpoints by using a virtual machine (VM) if Hyper-V has generated many differencing disks. The method that you use depends on the details of the situation.
 
 ## Merging checkpoints that you can view in Hyper-V Manager
 
-Checkpoints that you can view in Hyper-V Manager are the simplest to deal with. Most of the time, you can use the **Delete Checkpoint** command on the context menu to delete these checkpoints.
+Checkpoints that you can view in Hyper-V Manager are the simplest to handle. Usually, you can use the **Delete Checkpoint** command on the context menu to delete these checkpoints.
 
-:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/delete-checkpoint.png" alt-text="Screenshot of a checkpoint in Hyper-V manager, where the context menu includes the Delete Checkpoint command.":::
+:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/delete-checkpoint.png" alt-text="Screenshot of a checkpoint in Hyper-V Manager in which the context menu includes the Delete Checkpoint command.":::
 
-In some cases, **Delete Checkpoint** doesn't appear on the context menu. This can happen when third-party backup software generates checkpoints but doesn't delete them after a backup operation.
+In some cases, **Delete Checkpoint** doesn't appear on the context menu. This can occur if third-party backup software generates checkpoints but doesn't delete them after a backup operation.
 
-:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/checkpoint-menu-delete-missing.png" alt-text="Screenshot of a checkpoint in Hyper-V manager, where the context menu doesn't include the Delete Checkpoint command.":::
+:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/checkpoint-menu-delete-missing.png" alt-text="Screenshot of a checkpoint in Hyper-V Manager in which the context menu doesn't include the Delete Checkpoint command.":::
 
 In these cases, you can still use the Delete key to delete the checkpoint.
 
 In summary, to delete checkpoints in Hyper-V Manager (and merge the differencing disk files), follow these steps:
 
 1. In Hyper-V Manager, select the virtual machine.
-2. In the **Checkpoints** list, right-click the checkpoint that you want to delete, and then do one of the following:
+2. In the **Checkpoints** list, right-click the checkpoint that you want to delete, and then take one of the following actions:
    - Select **Delete Checkpoint**.
    - If **Delete Checkpoint** isn't available, select the checkpoint, and then select **Del**.
 
 ### Merging checkpoints that you can't view in Hyper-V Manager
 
-You may encounter a situation where Hyper-V Manager doesn't show checkpoints for a specific VM. At the same time, the corresponding file system folder shows a large number of differencing disk files. This can happen when third-party backup software generates checkpoints but doesn't delete them after a backup operation.
+You might encounter a situation in which Hyper-V Manager doesn't show checkpoints for a specific VM. At the same time, the corresponding file system folder shows many differencing disk files. This can occur if third-party backup software generates checkpoints but doesn't delete them after a backup operation.
 
-You can merge the differencing disk files in one of two ways, depending on whether or not you can shut down the VM.
+You can merge the differencing disk files in one of two ways, depending on whether you can shut down the VM.
 
 #### When you can shut down the VM
 
@@ -54,9 +54,9 @@ To merge the differencing disk files, shut down the VM. Typically, the differenc
 
 #### When you can't shut down the VM
 
-Merging differencing disks with an online VM is possible, but is a multi-step process that involves Windows PowerShell scripts. To do this, follow these general steps:
+You can merge differencing disks by using an online VM. However, this is a multi-step process that involves Windows PowerShell scripts. To do this, follow these general steps:
 
-1. Back up all of the differencing disk files (VHD files).
+1. Back up all the differencing disk files (VHD files).
 1. [Create and run the `Get-VHDChain` function](#getchain). This step is described in detail later in this section.
 1. [Create and run merge commands](#mergechain). This step is described in detail later in this section.
 1. Change the VM settings to point to the merged parent VHD.
@@ -64,8 +64,8 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
 
 <a id="getchain"></a>**Create and run the Get-VHDChain function**
 
-1. On the Hyper-V host server, open an administrative PowerShell command prompt window.
-1. Copy the following script, and then paste it into the PowerShell window.
+1. On the Hyper-V host server, open an administrative PowerShell Command Prompt window.
+1. Copy the following script, and then paste it into the PowerShell window:
 
    ```powershell
    function Get-VHDChain {
@@ -126,7 +126,7 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
    ==================================
    ```
 
-   This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM). The script should appear similar to the following:
+   This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM). The script should resemble the following script.
 
    :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-pasted.png" alt-text="Screenshot of the Get-VHDChain script after it's pasted into a PowerShell window.":::
 
@@ -139,19 +139,20 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
    > [!NOTE]  
    > In this command, <_virtual machine name_> represents the name of the virtual machine.
 
-   When the script runs, you should see output that resembles the following:
+   When the script runs, you should see output that resembles the following output.
 
    :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-run.png" alt-text="Screenshot of the output of the Get-VHDChain script.":::
 
 1. Make sure that `Get-VHDChain` runs without errors.
 
    > [!IMPORTANT]  
-   > If the `Get-VHDChain` output contains errors, you have to remove the affected differencing disks from the folder. In the following example, Disk 24 has generated an error and must be removed from the differencing disk folder.
+   > If the `Get-VHDChain` output contains errors, you have to remove the affected differencing disks from the folder. In the following example, Disk 24 generated an error and must be removed from the differencing disk folder.
+   >
    > :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-error.png" alt-text="Screenshot of the output of the Get-VHDChain script when the script generates an error.":::
 
 <a id="mergechain"></a>**Create and run merge commands**
 
-1. Follow these steps to create a script to merge the disks. These instructions create a script in `C:\temp\merge.txt`.
+1. The following instructions create a script in `C:\temp\merge.txt` to merge the disks. Follow these steps:
    1. On the local `C:` drive, create a folder that is named `temp`.
    1. Open an Administrative PowerShell window, and then run the following command:
 
@@ -160,7 +161,7 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
       ```
 
    1. At the command prompt, enter the virtual machine name.
-   1. Copy the following script, and then past it at the command prompt.
+   1. Copy the following script, and then paste it at the command prompt.
 
       ```powershell
       $vhds=Get-VM $vm | Select-Object -Property VMId | Get-VHD 
@@ -178,16 +179,16 @@ Merging differencing disks with an online VM is possible, but is a multi-step pr
       }
       ```
 
-      The script should appear similar to the following:
+      The script should resemble the following script:
 
       :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergescript-pasted.png" alt-text="Screenshot of the script after it's pasted into a PowerShell window.":::
 
-1. Open `C:\temp\merge.txt`. This file contains a list of command-line commands that are grouped into pairs. Each pair of commands addresses a single differencing disk. For example, in the following file, the highlighted pair of commands address **Disk4**.
+1. Open `C:\temp\merge.txt`. This file contains a list of command line commands that are grouped into pairs. Each pair of commands addresses a single differencing disk. For example, in the following file, the highlighted pair of commands address Disk4.
 
    :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-text-file.png" alt-text="Screenshot of the text file that contains the merge commands.":::
 
-1. Copy the first command of the first pair, paste it at the command prompt, and then run it. Then do the same for the second command of the first pair. These operations merge the differencing disk that the commands address.
+1. Copy the first command of the first pair, paste it at the command prompt, and then run it. Then, do the same for the second command of the first pair. These operations merge the differencing disk that the commands address.
 
    :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-run.png" alt-text="Screenshot of the merge command in progress.":::
 
-1. After the disk merges, repeat step 7 for the next differencing disk in the list. Continue for all of the differencing disks that the `merge.txt` file addresses.
+1. After the disk merges, repeat step 7 for the next differencing disk in the list. Continue for all the differencing disks that the `merge.txt` file addresses.
