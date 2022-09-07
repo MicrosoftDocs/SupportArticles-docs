@@ -17,7 +17,7 @@ ms.reviewer: kaushika
 
 ## Troubleshooting checklist
 
-Event ID 5120 indicated that there has been an interruption to communication between a cluster node and a volume in Cluster Shared Volumes (CSV). This interruption may be short enough that it isn't noticeable, or long enough that it interferes with services and applications using the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
+Event ID 5120 indicates that there has been an interruption to communication between a cluster node and a volume in Cluster Shared Volumes (CSV). This interruption may be short enough that it isn't noticeable, or long enough that it interferes with services and applications using the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
 
 1. Verify that the Cluster Shared Volume can come online. To confirm that a Cluster Shared Volume can come online:
 
@@ -37,7 +37,7 @@ Event ID 5120 indicated that there has been an interruption to communication bet
 
     2. If you run the preceding cmdlet without specifying a resource name, status is displayed for all Cluster Shared Volumes in the cluster.
 
-3. If you see a few random events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or the error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
+3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or the error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
 
 4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Do the due diligence to review the error code in the description of all logged Event ID 5120 events. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
 
@@ -106,7 +106,7 @@ To use a PowerShell cmdlet to check the status of a resource in a failover clust
 > [!NOTE]
 > If you run the preceding cmdlet without specifying a resource name, status is displayed for all CSVs in the cluster.
 
-For more information, see [Event ID 5120 — Cluster Shared Volume Functionality](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee830293(v=ws.10))."
+For more information, see [Event ID 5120 — Cluster Shared Volume Functionality](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee830293(v=ws.10)).
 
 ### Status code: STATUS_CONNECTION_RESET(c000020d)
 
