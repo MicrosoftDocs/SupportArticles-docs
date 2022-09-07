@@ -1,7 +1,7 @@
 ---
 title: Reset UI Flow service when in bad state
 description: Provides a solution to an issue where you're consistently experiencing an error when doing a UI flow run, recording, or test.
-ms.reviewer: 
+ms.reviewer: quseleba
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
@@ -30,7 +30,7 @@ Use the following methods to restart the UI flow service in the following order.
 > [!NOTE]
 > You must be an admin to restart the service.
 
-- Method 1: Restart *UIFlowService*
+- Method 1: Restart _UIFlowService_
   - Open the task manager and go to **the services tab**, then look for **UIFlowService**, right-click on it, and select **Restart**.
   
   :::image type="content" source="media/reset-ui-flow-service-when-bad-state/restart-ui-flow-service.png" alt-text="Screenshot to restart the U I flow service in task manager.":::
