@@ -42,7 +42,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server 
 
 These errors occur if both the following conditions are true:
 
-- The **Force encryption**setting for the SQL Server instance is set to **No**.
+- The **Force encryption** setting for the SQL Server instance is set to **No**.
 
 - The client connection string doesn’t explicitly specify a value for encryption property, or the **Encryption** option wasn't explicitly set or updated in the DSN.
 
@@ -75,3 +75,4 @@ For scenario 2, use one of the following solutions for short-term mitigation:
 - [Support Policies - SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16&preserve-view=true)
 
 - [SNAC lifecycle explained - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-blog/snac-lifecycle-explained/ba-p/385381)
+
