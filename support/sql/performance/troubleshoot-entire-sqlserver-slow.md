@@ -148,18 +148,56 @@ Short blocking happens on database systems like SQL Server all the time. But pro
 
 For detailed troubleshooting of blocking scenarios, please refer to [Understand and resolve SQL Server blocking problems](/sql/performance/understand-resolve-blocking#detailed-blocking-scenarios)
 
-## Step 8. Scheduler Issues (Non-yielding, Deadlocked Scheduler, Non-yielding IOCP Listener)
+## Step 8. Scheduler Issues (Non-yielding, Deadlocked Scheduler, Non-yielding IOCP Listener, Resource Monitor)
 
-
-Check the Errorlog for any of these messages:
-
-Non-yielding Resource Monitor
+SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, etc. As a result, SQL Server may seem unrensposive, partially or completely depending on how many schedulers are affected. Scheduler issues are caused by a wide range a problems from product bugs, to external drivers or filter drivers, to hardware issues. See the steps below for ideas on how to troubleshoot these issues. 
 
 ### Troubleshooting
 
+1. Check your SQL Server Error log for errors like these at the time of the reported lack of response from SQL Server:
 
-- [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148)
+```output
+ ***********************************************
+ *
+ * BEGIN STACK DUMP:
+ *   03/10/22 21:16:35 spid 22548
+ *
+ * Non-yielding Scheduler
+ *
+ ***********************************************
+```
 
-- [The Tao of a Deadlocked Scheduler](https://techcommunity.microsoft.com/t5/sql-server-support-blog/the-tao-of-a-deadlock-scheduler-in-sql-server/ba-p/333991)
+```output
+**********************************************
+*
+* BEGIN STACK DUMP:
+* 03/25/22 08:50:29 spid 355
+*
+* Deadlocked Schedulers
+*
+* ********************************************
+```
 
-- [Resource Monitor enters a non-yielding condition on a server running SQL Server](/sql/performance/resource-monitor-nonyielding-condition)
+```output
+* ********************************************
+*
+* BEGIN STACK DUMP:
+* 07/25/22 11:44:21 spid 2013
+*
+*
+* Non-yielding Resource Monitor
+*
+* ********************************************
+```
+
+1. If you locate one of these errors, find identify which version (Cumulative Update) of SQL Server you are on and see if there are any fixed issues in Cumulative updates shipped after your current CU. You can browse the SQL Server fixes starting here [Latest updates available for currently supported versions of SQL Server](/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) or to see a detailed fix list for you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx)
+
+1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas
+
+
+1. Check for heavy blocking scenarios or massive parallelism queries that can lead to deadlock schedulers. For detailed informaton see [The Tao of a Deadlocked Scheduler](https://techcommunity.microsoft.com/t5/sql-server-support-blog/the-tao-of-a-deadlock-scheduler-in-sql-server/ba-p/333991)
+ 
+1. For Non-yielding IOCP listener, check if your system is low on memory and SQL Server is being paged out. Another reason could be anti-virus or intrusion prevention software may intercept I/O API calls and slow down the thread activity. For more information see [Is the IOCP listener actually listening?](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) and [Performance and consistency issues when certain modules or filter drivers are loaded](performance-consistency-issues-filter-drivers-modules.md)
+
+1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information [Resource Monitor enters a non-yielding condition on a server running SQL Server](resource-monitor-nonyielding-condition.md)
+1. If these resource do not help, locate the memory dump created in the \LOG subdirectory and open a support ticket with Microsoft CSS by uploading the memory dump for analysis. 
