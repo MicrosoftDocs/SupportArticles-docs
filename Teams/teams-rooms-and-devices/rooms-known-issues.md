@@ -71,6 +71,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
 | App crash on Teams phone device | The Teams app on a Teams phone device crashes intermittently and the device restarts. | No workaround is available at this time. |
+|The dial pad on Yealink MP50 USB phones doesn't work.|The dial pad on Yealink MP50 USB phones intermittently stops accepting input.|When the issue occurs, use the Teams desktop client instead.
 
 ## Limitations
 
