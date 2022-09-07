@@ -1,5 +1,5 @@
 ---
-title: "The certificate chain was issued by an authority that isn’t trusted" - error after upgrading SNAC application.
+title: The certificate chain was issued by an authority that isn’t trusted, error after upgrading SNAC applications.
 description: This article provides resolutions for the error that occurs when you upgrade SNAC applications.
 ms.date: 07/09/2022
 author: ramakoni
@@ -75,4 +75,3 @@ For scenario 2, use one of the following solutions for short-term mitigation:
 - [Support Policies - SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16&preserve-view=true)
 
 - [SNAC lifecycle explained - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-blog/snac-lifecycle-explained/ba-p/385381)
-
