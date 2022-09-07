@@ -104,7 +104,7 @@ To use a PowerShell cmdlet to check the status of a resource in a failover clust
 > [!NOTE]
 > If you run the preceding cmdlet without specifying a resource name, status is displayed for all CSVs in the cluster.
 
-For more information, see [Event ID 5120 — Cluster Shared Volume Functionality](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee830293(v=ws.10))."
+For more information, see [Event ID 5120 — Cluster Shared Volume Functionality](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee830293(v=ws.10))."
 
 ### Status code: STATUS_CONNECTION_RESET(c000020d)
 
