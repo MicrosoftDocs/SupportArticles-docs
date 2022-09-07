@@ -39,13 +39,13 @@ Event ID 5120 indicated that there has been an interruption to communication bet
 
 3. If you see a few random events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or the error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
 
-4. If you see event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Be due-diligent to review the error code in the description of all the event ID 5120's logged be certain. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
+4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Do the due diligence to review the error code in the description of all logged Event ID 5120 events. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
 
 ## Common issues and solutions
 
 If you see Event ID 5120, the **Description** field of the event includes a status message that indicates the cause of the event. The following list consists of 20 status messages:
 
-### Status code: STATUS_BAD_IMPERSONATION_LEVEL (0xC00000A5)
+### Status code: STATUS_BAD_IMPERSONATION_LEVEL(0xC00000A5)
 
 Certain operations, such as renaming, that you perform on files or folders that are on a Cluster Shared Volume may fail with the error "STATUS_BAD_IMPERSONATION_LEVEL (0xC00000A5)". This issue occurs when you perform the operation on a CSV owner node by using the context of a process that doesn't have administrator permissions.  
 
@@ -56,7 +56,7 @@ To work around this issue, do one of the following operations:
 
 Microsoft is working on a resolution and will provide an update in an upcoming release, as described in [February 12, 2019—KB4487020 (OS Build 15063.1631)](https://support.microsoft.com/help/4487020/windows-10-update-kb4487020).
 
-### Status code: STATUS_BAD_NETWORK_NAME (c00000cc)
+### Status code: STATUS_BAD_NETWORK_NAME(c00000cc)
 
 1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
@@ -69,18 +69,20 @@ Check the storage configuration and multipath I/O (MPIO) settings. You can enabl
 2. Run the following cmdlets:
   
     ```powershell
-    Set-MPIOSetting -NewPathVerificationState  Enabled  
-    Set-MPIOSetting -NewPathVerificationPeriod <**_**integer**_**\>
+    Set-MPIOSetting -NewPathVerificationState Enabled
+    Set-MPIOSetting -NewPathVerificationPeriod <integer>
     ```
   
     > [!NOTE]
-    > In this cmdlet, `<**_**integer**_**\>` is the length of time for the server to verify every path (in seconds). The default is 30 seconds.
+    > In this cmdlet, `<integer>` is the length of time for the server to verify every path (in seconds). The default is 30 seconds.
 
 ### Status code: STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR(c0130021)
 
 Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
-In particular, make sure that KB 2878635, [Update is available that improves the resiliency of the cloud service provider in Windows: December 2013](https://support.microsoft.com/help/2878635/update-is-available-that-improves-the-resiliency-of-the-cloud-service), is installed on all Windows Server 2012 R2 and earlier servers.
+In particular, make sure that the following update is installed on all Windows Server 2012 R2 and earlier servers.
+
+[Update is available that improves the resiliency of the cloud service provider in Windows: December 2013 (KB2878635)](https://support.microsoft.com/help/2878635/update-is-available-that-improves-the-resiliency-of-the-cloud-service)
 
 > [!NOTE]
 > In Windows Server 2016 and later versions, the name of this status code is STATUS_CLUSTER_CSV_NO_SNAPSHOTS.
@@ -147,7 +149,7 @@ The cause of the timeout varies. It might indicate a software, configuration, or
 1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.  In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928) is installed. This update addresses an issue that occurs when restarting a node after draining the node. Event ID 5120 appears in the log with a "STATUS_IO_TIMEOUT c00000b5" message. This may slow or stop input and output (I/O) to the VMs, and sometimes the nodes may drop out of cluster membership.
 
-### Status code: STATUS_MEDIA_WRITE_PROTECTED (c00000a2)
+### Status code: STATUS_MEDIA_WRITE_PROTECTED(c00000a2)
 
 This status code indicates that there's a connectivity issue. Make sure that the Server Message Block (SMB) protocol is enabled.
 
@@ -188,7 +190,7 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 1. Check your system event log for events that indicate storage problems, network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
-## Gather key information before you contact Microsoft support
+## Gather key information before you contact Microsoft Support
 
 Before you complete your support request, we recommend that you use the Windows live dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:
 
@@ -199,7 +201,7 @@ Before you complete your support request, we recommend that you use the Windows 
 5. Run the following cmdlet once for each node of the cluster:
 
     ```powershell
-    ./Get-pssdp.ps1 Cluster  -localnodeonly
+    ./Get-pssdp.ps1 Cluster -localnodeonly
     ```
 
 Attach the live dump files to your support request.
