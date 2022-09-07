@@ -119,3 +119,5 @@
     items:
     - name: Mail contacts lose access to encrypted content
       href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md
+    - name: Sensitivity labels are missing
+      href: ../sensitivity-labels/sensitivity-labels-are-missing.md
