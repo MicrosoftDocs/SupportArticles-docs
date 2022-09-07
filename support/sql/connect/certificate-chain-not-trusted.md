@@ -1,7 +1,9 @@
 ---
-title: "The certificate chain was issued by an authority that isn’t trusted" - error after upgrading SNAC applications
-description: This article provides resolutions for the error that occurs when you upgrade  SNAC applications.
-ms.date: 09/07/2022
+title: "The certificate chain was issued by an authority that isn’t trusted" - error after upgrading SNAC application.
+description: This article provides resolutions for the error that occurs when you upgrade SNAC applications.
+ms.date: 07/09/2022
+author: ramakoni
+ms.author: v-jayaraman-p
 ms.custom: sap:Connection issues
 ms.prod: sql
 ---
@@ -24,7 +26,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11)
 
 ```
 
-**Scenario 2:** Applications upgraded to Microsoft ODBC Driver 18 for SQL Server
+**Scenario 2:** Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server
 
 If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
 
