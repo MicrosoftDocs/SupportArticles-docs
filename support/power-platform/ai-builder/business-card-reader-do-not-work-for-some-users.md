@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2022
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 # AI Builder business card reader doesn't work for some users
 
