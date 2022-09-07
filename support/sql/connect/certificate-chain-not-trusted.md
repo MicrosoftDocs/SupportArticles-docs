@@ -8,11 +8,11 @@ ms.prod: sql
 
 # "The certificate chain was issued by an authority that isn’t trusted" - error after upgrading SNAC applications
 
-Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16) - ODBC Driver for SQL Server and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - OLE DB Driver for SQL Server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use these new drivers.
+Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - ODBC Driver for SQL Server and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - OLE DB Driver for SQL Server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use these new drivers.
 
 ## Error messages
 
-**Scenario 1: Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server**
+**Scenario 1:** Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server
 
 If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11) application to use Microsoft OLE DB Driver 19 for SQL Server (Provider=MSOLEDBSQL19), you might receive error messages that resemble the following messages:
 
@@ -24,7 +24,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11)
 
 ```
 
-**Scenario 2: Applications upgraded to Microsoft ODBC Driver 18 for SQL Server**
+**Scenario 2:** Applications upgraded to Microsoft ODBC Driver 18 for SQL Server
 
 If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
 
@@ -42,7 +42,7 @@ These errors occur if both the following conditions are true:
 
 - The **Force encryption**setting for the SQL Server instance is set to **No**.
 
-- The client connection string doesn’t explicitly specify a value for encryption property, or the **Encryption** option was not explicitly set or updated in the DSN.
+- The client connection string doesn’t explicitly specify a value for encryption property, or the **Encryption** option wasn't explicitly set or updated in the DSN.
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server’s certificate and fails. When it fails, the driver displays the following error message in the [Error messages](#error-messages) section:
 
