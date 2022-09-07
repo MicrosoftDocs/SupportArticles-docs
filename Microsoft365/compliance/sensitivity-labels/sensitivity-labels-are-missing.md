@@ -83,10 +83,10 @@ In the output, verify that the following properties are configured correctly:
 - `Mode` is set to **Enforce**.
 - One of the following properties must be set:
 
-  - ExchangeLocation
-  - ExchangeLocationException
-  - ModernGroupLocation
-  - ModernGroupLocationException
+  - `ExchangeLocation`
+  - `ExchangeLocationException`
+  - `ModernGroupLocation`
+  - `ModernGroupLocationException`
 
   If `ExchangeLocation` is a distribution list or group, or if `ModernGroupLocation` is specified, make sure that the affected user is a member of the specified group.
 
