@@ -68,10 +68,10 @@ For scenario 2, use one of the following solutions for short-term mitigation:
 
 ## See also
 
-- [Enable encrypted connections - SQL Server](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver16preserve-view=true)
+- [Enable encrypted connections - SQL Server](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver16&preserve-view=true)
 
 - [The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server](error-message-when-you-connect.md)
 
-- [Support Policies - SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16preserve-view=true)
+- [Support Policies - SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16&preserve-view=true)
 
 - [SNAC lifecycle explained - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/sql-server-blog/snac-lifecycle-explained/ba-p/385381)
