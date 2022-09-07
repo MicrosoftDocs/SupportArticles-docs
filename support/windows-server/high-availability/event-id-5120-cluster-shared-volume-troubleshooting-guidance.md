@@ -190,18 +190,27 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 1. Check your system event log for events that indicate storage problems, network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
-## Gather key information before you contact Microsoft Support
 
-Before you complete your support request, we recommend that you use the Windows live dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:
+## Data collection
 
-1. Check the live dump folder (*C:\\Windows\\LiveKernelReports\\*) for previous live dump files.
+Before contacting Microsoft support, you can gather information about your issue.
+
+Refer the [prerequisites](https://docs.microsoft.com/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2#prerequisites) for the toolset to run properly.
+
+### Gather key information before you contact Microsoft support
+
+Use the Windows live dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:
+
+1. Check the live dump folder (C:\Windows\LiveKernelReports\) for previous live dump files.
 2. Make sure that the live dump feature has been enabled. For more information on enabling the feature, see [Troubleshooting Hangs Using Live Dump](https://techcommunity.microsoft.com/t5/failover-clustering/troubleshooting-hangs-using-live-dump/ba-p/372080).
-3. Download and install the PowerShell based Support Diagnostic Package (psSDP) tool from the [CSS-Windows/WindowsDiag](https://github.com/CSS-Windows/WindowsDiag/tree/master/ALL/psSDP) GitHub repository.
-4. Open an elevated PowerShell window, and then change the directory to the folder where you installed psSDP.
-5. Run the following cmdlet once for each node of the cluster:
 
-    ```powershell
-    ./Get-pssdp.ps1 Cluster -localnodeonly
+3. Download  https://aka.ms/getTSSv2 and unzip it in the C:\tss_tool folder.
+4. Open elevated version of PowerShell move it to the C:\tss_tool folder.
+5. Run SDP tool to collect the logs from the source and destination nodes.
+6. Unzip the file and run the following cmdlet on both nodes:
+
+    ```console
+    TSSv2.ps1 -SDP Cluster -SkipSDPList skipHang,skipBPA,skipSDDC
     ```
+7. Collect all logs. zip and attach the live dump files to your support request.
 
-Attach the live dump files to your support request.
