@@ -1,6 +1,6 @@
 ---
 title:  Application Insights features overview for troubleshooting Cloud Service Application issues
-description: This article provides an overview of Application Insights features that you can used to troubleshoot Cloud Service Application issues
+description: This article provides an overview of Application Insights features that you can use to troubleshoot Cloud Service Application issues
 ms.topic: article
 ms.service: cloud-services
 author: genlin
@@ -12,7 +12,7 @@ ms.custom:
 
 # Troubleshoot Cloud Service app issues with Application Insights - features overview
 
-This describes Azure Monitor Application Insights features that are useful to troubleshoot application-related issues.
+This article describes Azure Monitor Application Insights features that are useful to troubleshoot application-related issues.
 
 > [!NOTE]
 > This article applies to both classic cloud service and cloud service extended support.  
@@ -73,11 +73,11 @@ The rules mainly contain two important parts: conditions and actions. To create 
 2. Set up the conditions. The condition consists of three points: Signal, Dimension, and Alert Logic. For more information, see [Types of Azure Monitor alerts](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-types).
 
     - Signal is the type of metrics data that the alert rule will monitor. The common metrics data such as CPU, available memory, failed requests, exceptions, and response time can be used.
-    - Dimension specifies the scope or filter where this alert rule will be applied. For alert rules based on Cloud Service metrics data, it will usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other choices depending on the signal.
+    - Dimension specifies the scope or filter where this alert rule will be applied. For alert rules based on Cloud Service metrics data, they usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other choices depending on the signal.
     - Alert logic is where you should set the logic of the alert rule condition. There are several important concepts:
-     - Threshold means whether the evaluation result is dynamic or static. If it's static, then the evaluated metrics data (failed requests count in this example) will be compared to a static value, such as 5 or 10. If it's Dynamic, then the evaluated data will be compared to the same data over the last short period, such as the last 5 minutes.
+     - Threshold means whether the evaluation result is dynamic or static. If it's static, the evaluated metrics data (failed requests count in this example) will be compared to a static value, such as 5 or 10. If it's Dynamic, the evaluated data will be compared to the same data over the last short period, such as the last five minutes.
      - Operator, Aggregation type, Threshold value, and Unit are easy to understand; they represent the main body of logic.
-     - Aggregation granularity, also called "period," is how long the metrics data in history will be evaluated. If it's 5 minutes, it means the metrics data of the last 5 minutes will be evaluated. Frequency of evaluation means how often the evaluation will be triggered.
+     - Aggregation granularity, also called "period," is how long the metrics data in history will be evaluated. If it's five minutes, it means the metrics data of the last five minutes will be evaluated. Frequency of evaluation means how often the evaluation will be triggered.
 
 3. Set the action when the Alert rule is triggered. You can either create a new action group and add it to this alert rule or use an existing action group.
 
@@ -101,7 +101,7 @@ The data to be monitored can be configured by the following points:
 
 1. Chart type - The type of chart you want to see. You can select Line chart, Area chart, Bar chart, Scatter chart, and Grid.
 2. Time range - The time range of the metrics data to generate the chart (Pay attention to the difference between local time and UTC).
-3. Metric Namespace - The group of possible metrics data. Normally you only need to select between Log-based metrics and Application Insights standard metrics. All data will be collected by default, such as CPU, Memory, requests, exceptions, and so on. Some more specific data collected by customized settings, such as the processor time of the w3wp process (which can be configured in the Diagnostic setting of Cloud Service), will be included in Log-based metrics.
+3. Metric Namespace - The group of possible metrics data. Normally, you only need to select between Log-based and Application Insights standard metrics. All data will be collected by default, such as CPU, Memory, requests, exceptions, and so on. Some more specific data collected by customized settings, such as the processor time of the w3wp process (which can be configured in the Diagnostic setting of Cloud Service), will be included in Log-based metrics.
 4. Metric - The data we want to generate a chart for.
 5. Aggregation - Type of statistic calculated from multiple metric values. For more details, please check this document. It's strongly recommended to keep this as the default value. You should only modify it when you understand how this metrics data type is collected and the difference among all aggregation types.
 
@@ -118,9 +118,9 @@ On the Logs page, you need to use [Kusto Query Language (KQL)](https://docs.micr
 
 There are only two points that you need to pay attention to; the time range and the query.
 
-- The time range on the top side can set the time range of the logs which we want to check. Please remember to pay attention to the difference between local time and UTC.
+- The time range on the top side can set the time range of the logs we want to check. Please remember to pay attention to the difference between local time and UTC.
 
-- The query will be built in two parts: The table name in the first line and the condition that we use to filter the results.  
+- The query will be built in two parts: The table name in the first line and the condition we use to filter the results.  
 
 Here are the commonly used tables:
 
@@ -143,5 +143,5 @@ The data in the following tables are collected by a custom Diagnostic setting:
 ## Resources
 
 - [Find and diagnose performance issues with Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/tutorial-performance)
-- [Create new rule alert in Azure Application Insight](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
+- [Create a new rule alert in Azure Application Insight](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
 - [Application Insights standard metrics](https://docs.microsoft.com/azure/azure-monitor/app/standard-metrics)
