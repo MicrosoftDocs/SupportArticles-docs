@@ -195,9 +195,9 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 
 Before contacting Microsoft support, you can gather information about your issue.
 
-Refer the [prerequisites](https://docs.microsoft.com/troubleshoot/windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2#prerequisites) for the toolset to run properly.
+Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2#prerequisites) for the toolset to run properly.
 
-### Gather key information before you contact Microsoft support
+### Gather key information before you contact Microsoft Support
 
 Use the Windows live dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:
 
