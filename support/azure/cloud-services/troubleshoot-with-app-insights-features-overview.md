@@ -21,7 +21,7 @@ This article describes Azure Monitor Application Insights features that are usef
 
 To monitor your app with Application Insights, follow these steps:
 
-1. In Visual Studio Solution Explorer, under *Your Cloud Service* > Roles, open the properties of each role.
+1. In Visual Studio Solution Explorer, under *Your Cloud Service* > **Roles**, open the properties of each role.
 1. In **Configuration**, select the **Send diagnostics data to Application Insights** check box, and then select the Application Insights instance that you created before.
 
 For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics, such as restart and performance counters.
