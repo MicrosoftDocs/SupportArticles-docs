@@ -1,7 +1,7 @@
 ---
 title: Recorder not recording applications
 description: Recorder not recording applications.
-ms.reviewer: 
+ms.reviewer: rajeyara
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows

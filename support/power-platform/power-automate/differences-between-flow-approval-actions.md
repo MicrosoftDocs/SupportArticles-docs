@@ -1,7 +1,7 @@
 ---
 title: Differences between flow approval actions
 description: Explanation of the differences between the flow approval actions in Power Automate.
-ms.reviewer: 
+ms.reviewer: sranjan, hamenon
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
 ---
