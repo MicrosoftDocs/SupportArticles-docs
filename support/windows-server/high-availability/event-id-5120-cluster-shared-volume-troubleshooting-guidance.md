@@ -195,7 +195,7 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 
 Before contacting Microsoft support, you can gather information about your issue.
 
-Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2#prerequisites) for the toolset to run properly.
+Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for the toolset to run properly.
 
 ### Gather key information before you contact Microsoft Support
 
