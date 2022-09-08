@@ -14,7 +14,7 @@ _Applies to:_ &nbsp; Azure Synapse Analytics
 
 This article helps you identify the reasons and apply mitigations for common performance issues with queries on an Azure Synapse Analytics dedicated SQL pool.
 
-Follow the following steps to troubleshoot the issue or execute the steps in the notebook via Azure Data Studio. The first three steps walk you through collecting telemetry which describes the lifecycle of a query. The references at the end of the article help you analyze potential opportunities found in the data collected.
+Follow the steps to troubleshoot the issue or execute the steps in the notebook via Azure Data Studio. The first three steps walk you through collecting telemetry which describes the lifecycle of a query. The references at the end of the article help you analyze potential opportunities found in the data collected.
 
 > [!NOTE]
 > Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
@@ -22,7 +22,7 @@ Follow the following steps to troubleshoot the issue or execute the steps in the
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-tshoot-perf-slow-query.ipynb)
 
-> **IMPORTANT**: Most of the reported performance issues are caused by:
+> [!IMPORTANT] Most of the reported performance issues are caused by:
 >
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
@@ -62,8 +62,8 @@ To better target the slow queries, use the following tips when you run the scrip
 Run the following script to find out the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Note down the `StepIndex` of the slow step identified from the result set.
 
 | Parameter | Description |
-| --- | --- |
-| @QID | request_id obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
+| -- | ---- |
+| @QID | `request_id` obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
 | @ShowActiveOnly | 0 - Show all steps for the query<br/>1 - Show only the currently active step |
 
 ```sql
@@ -121,11 +121,11 @@ ORDER BY StepIndex;
 
 ## Step 3: Review step details
 
-Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` variable to 0 to compare all distribution timings.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to compare all distribution timings.
 
 | Parameter | Description |
-| --- | --- |
-| @QID | `request_id` obtained in [Step 1](##step-1-identify-the-request_id-aka-qid) |
+| -- | ---- |
+| @QID | `request_id` obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
 | @StepIndex | `StepIndex` identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) |
 | @ShowActiveOnly | 0 - Show all distributions for the given StepIndex<br/>1 - Show only the currently active distributions for the given StepIndex |
 
