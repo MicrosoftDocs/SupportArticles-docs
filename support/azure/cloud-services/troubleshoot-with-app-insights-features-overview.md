@@ -102,11 +102,11 @@ The data to be monitored can be configured by the following points:
 1. Chart type - The type of chart you want to see. You can select Line chart, Area chart, Bar chart, Scatter chart, and Grid.
 2. Time range - The time range of the metrics data to generate the chart (Pay attention to the difference between local time and UTC).
 3. Metric Namespace - The group of possible metrics data. Normally, you only need to select between Log-based and Application Insights standard metrics. All data will be collected by default, such as CPU, Memory, requests, exceptions, and so on. Some more specific data collected by customized settings, such as the processor time of the w3wp process (which can be configured in the Diagnostic setting of Cloud Service), will be included in Log-based metrics.
-4. Metric - The data we want to generate a chart for.
+4. Metric - The data you want to generate a chart for.
 5. Aggregation - Type of statistic calculated from multiple metric values. For more details, please check this document. It's strongly recommended to keep this as the default value. You should only modify it when you understand how this metrics data type is collected and the difference among all aggregation types.
 
 > [!TIP]
-> Sometimes, there will be dotted lines in the chart. It means that the data during that time range is not accurate enough or is not collected. The reason is that the data during that period is not continuing. Imagine that when the metrics data is collected every two minutes but the time difference between two points in the chart is one minute, the data won't be accurate enough to generate the chart, so it will be a dotted line.
+> Sometimes, there will be dotted lines in the chart. It means that the data during that time range isn't accurate enough or is not collected. The reason is that the data during that period isn't continuing. Imagine that when the metrics data is collected every two minutes but the time difference between two points in the chart is one minute, the data won't be accurate enough to generate the chart, so it will be a dotted line.
 
 ## Collected log in Application Insights
 
