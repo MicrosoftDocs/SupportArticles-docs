@@ -3,7 +3,7 @@ title: Support policy for containers and related services on Azure
 description: Describes the support options and coverage that Microsoft offers for containers and surrounding infrastructure services.
 ms.date: 08/14/2020
 ms.reviewer: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ---

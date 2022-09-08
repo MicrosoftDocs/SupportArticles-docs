@@ -2,7 +2,7 @@
 title: TLS 1.2 Protocol Support Deployment Guide for Microsoft Azure Pack
 description: Describes how to deploy the TLS 1.2 protocol in Microsoft Azure Pack.
 ms.date: 08/14/2020
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: waltero, sarathys, mtandon, mouradl, larsbe, vladimip, genli
