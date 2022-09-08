@@ -26,19 +26,19 @@ To monitor your app with Application Insights, follow these steps:
 
 For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics, such as restart and performance counters.
 
- :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/Picture2.png" alt-text="Shows how to enable the Send diagnostics data to Application Insights checkbox":::
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/Picture2.png" alt-text="Screenshot shows how to enable the Send diagnostics data to Application Insights checkbox.":::
 
 ## Diagnose failures in Application Insights
 
 Application Insights comes with curated Application Performance Management experience to help diagnose failures in your monitored applications. To view the failures in the Azure portal, go to the Application Insights instance, and then select **Failures** under **Investigate**.
 
- :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/failures0719.png" alt-text="Shows the Diagnose failures page in Application Insights":::
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/failures0719.png" alt-text="Screenshot shows the Diagnose failures page in Application Insights.":::
 
 You'll see the failure rate trends for your requests, how many of them are failing, and how many users are affected. The failed operation table<sup>1</sup>  shows the failed requests that are grouped by request URL. In Overall view<sup>2</sup>, you'll see the top three response codes, the top three exception types, and the top three failing dependency types.
 
 To review representative samples for each of these subsets of operations, select the corresponding link. As an example, to diagnose exceptions, you can select the count of a particular exception to be presented with the **End-to-end transaction details** tab.
 
- :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/end-to-end.png" alt-text="Shows the End-to-end transaction details tab":::
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/end-to-end.png" alt-text="Screenshot shows the End-to-end transaction details tab.":::
 
 The following information in the **End-to-end transaction details** is useful for troubleshooting:
 
@@ -60,7 +60,7 @@ In the **Operations** tab, the failed operations table<sup>1</sup> shows the req
 
 The **Roles** tab shows the metrics data more related to the Cloud Service server, such as CPU, Available Memory, the requests handled by each instance, and so on.
 
-:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/performance.png" alt-text="Shows the performance page]":::
+:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/performance.png" alt-text="Screenshot shows the performance page.":::
 
 ## Alert in Application Insight
 
@@ -97,7 +97,7 @@ The metrics chart in application insights can be used to visualize the data chan
 
 The data to be monitored can be configured by the following points:
 
-:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/metrics.png" alt-text="Shows the metrics page":::
+:::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/metrics.png" alt-text="Screenshot shows the metrics page.":::
 
 1. Chart type - The type of chart you want to see. You can select Line chart, Area chart, Bar chart, Scatter chart, and Grid.
 2. Time range - The time range of the metrics data to generate the chart (Pay attention to the difference between local time and UTC).
