@@ -22,7 +22,8 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-tshoot-perf-slow-query.ipynb)
 
-> [!IMPORTANT] Most of the reported performance issues are caused by:
+> [!IMPORTANT]
+> Most of the reported performance issues are caused by:
 >
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
