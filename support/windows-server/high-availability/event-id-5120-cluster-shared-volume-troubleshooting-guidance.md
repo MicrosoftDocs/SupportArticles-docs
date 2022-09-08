@@ -1,6 +1,6 @@
 ---
 title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
-description: Provides guidance for finding root cause of Event 5120 Cluster Shared Volume.
+description: Provides guidance for finding the root cause of Event 5120 Cluster Shared Volume.
 ms.date: 09/07/2022
 author: kaushika-msft
 ms.author: kaushika
@@ -15,11 +15,11 @@ ms.reviewer: kaushika
 ---
 # Event ID 5120 Cluster Shared Volume troubleshooting guidance
 
-This guidance is designed to help troubleshoot status codes that are related to Event ID 5120 Cluster Shared Volume.
+This guidance is designed to help troubleshoot status codes related to Event ID 5120 Cluster Shared Volume.
 
 ## Troubleshooting checklist
 
-Event ID 5120 indicates that there has been an interruption to communication between a cluster node and a volume in Cluster Shared Volumes (CSV). This interruption may be short enough that it isn't noticeable, or long enough that it interferes with services and applications using the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
+Event ID 5120 indicates that there has been an interruption to communication between a cluster node and a volume in Cluster Shared Volumes (CSV). This interruption may be short enough that it isn't noticeable or long enough that it interferes with services and applications using the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
 
 1. Verify that the Cluster Shared Volume can come online. To confirm that a Cluster Shared Volume can come online:
 
