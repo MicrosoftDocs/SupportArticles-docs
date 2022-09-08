@@ -152,15 +152,15 @@ FROM dists sr
    LEFT JOIN sys.dm_pdw_nodes_exec_requests owt
       ON sr.pdw_node_id = owt.pdw_node_id
          AND sr.spid = owt.session_id
-         AND (sr.source_dmv = 'sys.dm_pdw_sql_requests'
-              AND sr.status = 'Running' -- sys.dm_pdw_sql_requests status
-              OR sr.source_dmv = 'sys.dm_pdw_dms_requests'
-              AND sr.status not LIKE 'Step[CE]%') -- sys.dm_pdw_dms_workers final statuses
+         AND ((sr.source_dmv = 'sys.dm_pdw_sql_requests'
+                 AND sr.status = 'Running') -- sys.dm_pdw_sql_requests status
+              OR (sr.source_dmv = 'sys.dm_pdw_dms_requests'
+                     AND sr.status not LIKE 'Step[CE]%')) -- sys.dm_pdw_dms_workers final statuses
 WHERE sr.request_id = @QID
       AND ((sr.source_dmv = 'sys.dm_pdw_sql_requests' AND sr.status =
                CASE WHEN @ShowActiveOnly = 1 THEN 'Running' ELSE sr.status END)
            OR (sr.source_dmv = 'sys.dm_pdw_dms_workers' AND sr.status NOT LIKE
-                  CASE WHEN @ShowActiveOnly = 1 THEN 'Step[CE]%' ELSE ''END))
+                  CASE WHEN @ShowActiveOnly = 1 THEN 'Step[CE]%' ELSE '' END))
       AND sr.step_index = @StepIndex
 ORDER BY distribution_id
 ```
