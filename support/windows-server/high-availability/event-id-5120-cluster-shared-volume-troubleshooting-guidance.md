@@ -1,5 +1,5 @@
 ---
-title: Event 5120 Cluster Shared Volume troubleshooting guidance
+title: Event ID 5120 Cluster Shared Volume troubleshooting guidance
 description: Provides guidance for finding root cause of Event 5120 Cluster Shared Volume.
 ms.date: 09/07/2022
 author: kaushika-msft
@@ -13,7 +13,9 @@ ms.custom: sap:csv, csstroubleshoot
 localization_priority: medium
 ms.reviewer: kaushika
 ---
-# Event 5120 Cluster Shared Volume troubleshooting guidance
+# Event ID 5120 Cluster Shared Volume troubleshooting guidance
+
+This guidance is designed to help troubleshoot status codes that are related to Event ID 5120 Cluster Shared Volume.
 
 ## Troubleshooting checklist
 
