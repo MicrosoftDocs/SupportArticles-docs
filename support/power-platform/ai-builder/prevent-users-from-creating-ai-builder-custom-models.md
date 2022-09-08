@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 07/21/2022
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # Prevent users from creating AI Builder custom models
