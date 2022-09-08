@@ -543,6 +543,8 @@
           href: ../migration/public-folders-not-replicate.md
         - name: Error when migrating public folder batch
           href: ../migration/subscription-wasnt-found-for-user-error.md
+        - name: Remote move migration doesn't finalize
+          href: ../migration/remote-move-migration-not-finalize.md
     - name: Public Folders
       items:
         - name: Can't create modern public folders
