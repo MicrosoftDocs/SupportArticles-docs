@@ -201,16 +201,15 @@ Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduct
 
 Use the Windows live dump feature to save a snapshot of kernel memory on the affected computer. To do this, follow these steps:
 
-1. Check the live dump folder (C:\Windows\LiveKernelReports\) for previous live dump files.
+1. Check the live dump folder (*C:\\Windows\\LiveKernelReports\\*) for previous live dump files.
 2. Make sure that the live dump feature has been enabled. For more information on enabling the feature, see [Troubleshooting Hangs Using Live Dump](https://techcommunity.microsoft.com/t5/failover-clustering/troubleshooting-hangs-using-live-dump/ba-p/372080).
-
-3. Download  https://aka.ms/getTSSv2 and unzip it in the C:\tss_tool folder.
-4. Open elevated version of PowerShell move it to the C:\tss_tool folder.
-5. Run SDP tool to collect the logs from the source and destination nodes.
+3. Download https://aka.ms/getTSSv2 and unzip it in the *C:\\tss_tool* folder.
+4. Open an elevated version of PowerShell and change the directory to the *C:\\tss_tool* folder.
+5. Run the SDP tool to collect the logs from the source and destination nodes.
 6. Unzip the file and run the following cmdlet on both nodes:
 
-    ```console
+    ```powershell
     TSSv2.ps1 -SDP Cluster -SkipSDPList skipHang,skipBPA,skipSDDC
     ```
-7. Collect all logs. zip and attach the live dump files to your support request.
+7. Collect all logs. Zip and attach the live dump files to your support request.
 
