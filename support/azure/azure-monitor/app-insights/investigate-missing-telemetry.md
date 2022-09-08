@@ -33,9 +33,9 @@ If application telemetry doesn't show in the Azure portal, failures across steps
 
 Configuration problems or transient issues may occur anywhere across the Applications Insights service. To identify the step within the processing pipeline that causes symptoms of no data or missing data, send a sample telemetry record by using PowerShell or curl. For the PowerShell script or curl command, go to the following sections:
 
-- [PowerShell script to send availability test result](#a-idpowershell-script-send-availability-test-resultapowershell-script-to-send-availability-test-result)
-- [Curl command to send availability test result](#a-idcurl-command-send-availability-test-resultacurl-command-to-send-availability-test-result)
-- [PowerShell script to send request telemetry record](#a-idpowershell-script-send-request-telemetry-recordapowershell-script-to-send-request-telemetry-record)
+- [PowerShell script to send availability test result](#powershell-script-send-availability-test-result)
+- [Curl command to send availability test result](#curl-command-send-availability-test-result)
+- [PowerShell script to send request telemetry record](#powershell-script-send-request-telemetry-record)
 
 If the web app runs on an on-premises server or Azure VM, connect to the server or VM and send a single telemetry record to the Applications Insights service instance by using PowerShell. If the web app that has issues sending telemetry [runs on Kudu](/azure/app-service/resources-kudu), run the following script from Kudu's PowerShell debug console in Azure Web Apps.
 
