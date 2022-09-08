@@ -6,11 +6,11 @@ summary: Welcome to Azure Synapse Analytics troubleshooting. These articles expl
 metadata:
   title: Troubleshoot Azure Synapse Analytics issues
   description: Documentation for troubleshooting common issues with Azure Synapse Analytics. # Required; article description that is displayed in search results. < 160 chars.
-  services: az-synapse-analytics
-  ms.service: az-synapse-analytics #Required; service per approved list. service slug assigned to your service by ACOM.
+  services: synapse-analytics
+  ms.service: synapse-analytics #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: scott-epperly  #Required; your GitHub user alias, with correct capitalization.
-  ms.author: scott-epperly #Required; microsoft alias of author; optional team alias.
+  ms.author: scepperl #Required; microsoft alias of author; optional team alias.
   ms.date: 09/02/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

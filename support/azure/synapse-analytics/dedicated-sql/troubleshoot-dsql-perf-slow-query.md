@@ -1,253 +1,165 @@
-<!--
-jupyter:
-  jupytext:
-    text_representation:
-      extension: .md
-      format_name: markdown
-      format_version: '1.3'
-      jupytext_version: 1.14.1
-  kernelspec:
-    display_name: SQL
-    language: sql
-    name: SQL
--->
+---
+title: Troubleshoot slow queries on a dedicated SQL pool
+description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool. 
+ms.date: 09/06/2022
+author: HayingYu
+ms.author: haiyingyu
+ms.reviewer: scepperl
+---
 
 <!-- #region azdata_cell_guid="5c530759-ab09-4ee1-b9b1-261fd5811aa5" -->
 # Troubleshoot a Slow Query on Dedicated SQL Pool
 
+_Applies to:_ &nbsp; Azure Synapse Analytics
+
+This article helps you identify the reasons and apply mitigations for common performance issues with queries on an Azure Synapse Analytics dedicated SQL pool.
+
+Follow the following steps to troubleshoot the issue or execute the steps in the notebook via Azure Data Studio. The first three steps walk you through collecting telemetry which describes the lifecycle of a query. The references at the end of the article help you analyze potential opportunities found in the data collected.
+
 > [!NOTE]
->Before attempting to open this notebook, check that Azure Data Studio is installed on your local machine. To install, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver16).
+> Before attempting to open this notebook, make sure that Azure Data Studio is installed on your local machine. To install it, go to [Learn how to install Azure Data Studio](/sql/azure-data-studio/download-azure-data-studio).
+
 > [!div class="nextstepaction"]
 > [Open Notebook in Azure Data Studio](azuredatastudio://microsoft.notebook/open?url=https://raw.githubusercontent.com/microsoft/synapse-support/main/dedicated-sql-pool/dsql-tshoot-perf-slow-query.ipynb)
 
+> **IMPORTANT**: Most of the reported performance issues are caused by:
+>
+> - Outdated statistics
+> - Unhealthy clustered columnstore indexes (CCIs)
+>
+> To save your troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality).
 
-Use this guide to help you identify the common reasons and apply mitigations for a given query's slow execution on an Azure Synapse Analytics dedicated SQL pool.  The first three steps walk you through collecting telemetry which describes the lifecycle of a query.  Use the reference at the end of the article to help you analyze potential opportunities found in the data collected.
+## Step 1: Identify the request_id (aka QID)
 
-> **IMPORTANT**: Though more details will be given below, it's worth noting that the majority of performance issues reported to Microsoft are caused by either:
-> 
-> 1. Outdated statistics
-> 2. Unhealthy clustered columnstore indexes (CCI)
-> 
-> **Ensuring that statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality) may very well save you hours of troubleshooting.**
-<!-- #endregion -->
-<!-- #region azdata_cell_guid="3de87de0-1367-4bb9-a81a-6bb08a8ece0b" -->
-## Step 1: Identify the request\_id (aka QID)
+The `request_id` of the slow query is required to research potential reasons for a slow query. Use the following script as a starting point for identifying the query you want to troubleshoot. Once the slow query is identified, note down the `request_id`.
 
-The request\_id of the slow query is required to research potential reasons for a slow query. Use the below queries as a starting point for identifying the query you wish to research. Once identified, copy the request\_id as it will be required for subsequent steps.  Please note that it is quite likely that you will typically want to modify the query in this step to better target known problem queries.  Some helpful tips for modifying the query are:
-
-* Sort by either `submit_time DESC` or `total_elapsed_time DESC` to have the longest-running queries present at the top of the result set
-* Use `OPTION(LABEL='<your-label-here>')` in queries and then modify the query to filter on the [label] column
-* Consider filtering out any QIDs which do not have a value for [resource_allocation_percentage] when you know the statement is contained in a batch. **NOTE: be cautious with this filter as it can mask some queries which are being blocked by other sessions.
-<!-- #endregion -->
-
-```sql azdata_cell_guid="28348e05-a11e-4dda-8907-4fe080fd2e7d" tags=[] extensions={"notebookviews": {"views": []}}
+```sql
 -- Monitor active queries
 SELECT *
 FROM sys.dm_pdw_exec_requests
-WHERE status not in ('Completed','Failed','Cancelled')
-  AND session_id <> session_id()
-  --AND [label] = "your-label-here"
-  --AND resource_allocation_percentage is not NULL
+WHERE [status] NOT IN ('Completed','Failed','Cancelled')
+AND session_id <> session_id()
+-- AND [label] = '<YourLabel>'
+-- AND resource_allocation_percentage is not NULL
 ORDER BY submit_time DESC;
--- Find top 10 queries longest running queries
--- SELECT TOP 10 *
--- FROM sys.dm_pdw_exec_requests
--- ORDER BY total_elapsed_time DESC;
+
+-- Find top 10 longest running queries
+SELECT TOP 10 *
+FROM sys.dm_pdw_exec_requests
+ORDER BY total_elapsed_time DESC;
 ```
 
-<!-- #region language="sql" azdata_cell_guid="9738e7aa-5f80-456b-85e0-e537879e6bd5" -->
+To better target the slow queries, use the following tips when you run the script:
+
+- Sort by either `submit_time DESC` or `total_elapsed_time DESC` to have the longest-running queries present at the top of the result set.
+- Use `OPTION(LABEL='<YourLabel>')` in your queries and then filter the `label` column to identify them.
+- Consider filtering out any QIDs that don't have a value for `resource_allocation_percentage` when you know the target statement is contained in a batch.
+
+  **NOTE:** Be cautious with this filter as it may also filter out some queries which are being blocked by other sessions.
+
 ## Step 2: Determine where the query is taking time
 
-Having chosen a \[request\_id\] (aka QID) from Step 1, update the variables on line 1 of the script below accordingly. Change the @ShowActiveOnly variable to 1 to get the full picture of the distributed plan.
+Run the following script to find out the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Note down the `StepIndex` of the slow step identified from the result set.
 
 | Parameter | Description |
 | --- | --- |
-| @QID | request\_id obtained in Step 1 |
-| @ShowActiveOnly | 0 = Show all steps for the query<br>1 = Show only the currently active step |
+| @QID | request_id obtained in [Step 1](#step-1-identify-the-requestid-aka-qid) |
+| @ShowActiveOnly | 0 - Show all steps for the query<br/>1 - Show only the currently active step |
 
-Once ran, you may want to pause and review the common issues
-<!-- #endregion -->
-
-```sql azdata_cell_guid="feb7b1df-6ecd-4d48-b9b4-dd1e6b9e1769" tags=["hide_input"] extensions={"notebookviews": {"views": []}}
-DECLARE @QID varchar(16) = 'QIDXXXXX', @ShowActiveOnly bit = 1;
+```sql
+DECLARE @QID VARCHAR(16) = '<request_id>', @ShowActiveOnly BIT = 1; 
 -- Retrieve session_id of QID
-DECLARE @session_id varchar(16) = (SELECT session_id FROM sys.dm_pdw_exec_requests WHERE request_id = @QID);
--- Blocked by Compilation or Resrouce Allocation (Concurrency)
-SELECT @session_id AS session_id,
-       @QID AS request_id,
-       -1 AS [StepIndex],
-       'Compilation' AS [Phase],
-       'Blocked waiting on ' + max(   CASE
-                                          WHEN waiting.type = 'CompilationConcurrencyResourceType' THEN
-                                              'Compilation Concurrency'
-                                          WHEN waiting.type like 'Shared-%' THEN
-                                              ''
-                                          ELSE
-                                              'Resource Allocation (Concurrency)'
-                                      END
-                                  ) + max(   CASE
-                                                 WHEN waiting.type like 'Shared-%' THEN
-                                                     ' for ' + replace(waiting.type, 'Shared-', '')
-                                                 ELSE
-                                                     ''
-                                             END
-                                         ) AS [Description],
-       max(waiting.request_time) AS [StartTime],
-       getdate() AS [EndTime],
-       datediff(ms, max(waiting.request_time), getdate()) / 1000.0 AS [Duration],
-       NULL AS [Status],
-       NULL AS [EstimatedRowCount],
-       NULL AS [ActualRowCount],
-       NULL AS [TSQL]
+DECLARE @session_id VARCHAR(16) = (SELECT session_id FROM sys.dm_pdw_exec_requests WHERE request_id = @QID);
+-- Blocked by Compilation or Resource Allocation (Concurrency)
+SELECT @session_id AS session_id, @QID AS request_id, -1 AS [StepIndex], 'Compilation' AS [Phase],
+   'Blocked waiting on '
+       + MAX(CASE WHEN waiting.type = 'CompilationConcurrencyResourceType' THEN 'Compilation Concurrency'
+                  WHEN waiting.type LIKE 'Shared-%' THEN ''
+                  ELSE 'Resource Allocation (Concurrency)' END)
+       + MAX(CASE WHEN waiting.type LIKE 'Shared-%' THEN ' for ' + REPLACE(waiting.type, 'Shared-', '')
+             ELSE '' END) AS [Description],
+   MAX(waiting.request_time) AS [StartTime], GETDATE() AS [EndTime],
+   DATEDIFF(ms, MAX(waiting.request_time), GETDATE())/1000.0 AS [Duration],
+   NULL AS [Status], NULL AS [EstimatedRowCount], NULL AS [ActualRowCount], NULL AS [TSQL]
 FROM sys.dm_pdw_waits waiting
 WHERE waiting.session_id = @session_id
-      AND (
-              TYPE like 'Shared-%'
-              OR TYPE in ( 'ConcurrencyResourceType', 'UserConcurrencyResourceType',
-                           'CompilationConcurrencyResourceType'
-                         )
-          )
-      AND state = 'Queued'
+   AND ([type] LIKE 'Shared-%' OR
+      [type] in ('ConcurrencyResourceType', 'UserConcurrencyResourceType', 'CompilationConcurrencyResourceType'))
+   AND [state] = 'Queued'
 GROUP BY session_id 
 -- Blocked by another query
 UNION ALL
-SELECT @session_id AS session_id,
-       @QID AS request_id,
-       -1 AS [StepIndex],
-       'Compilation' AS [Phase],
-       'Blocked by ' + blocking.session_id + ':' + blocking.request_id + ' when requesting ' + waiting.type + ' on '
-       + quotename(waiting.object_type) + waiting.object_name AS [Description],
-       waiting.request_time AS [StartTime],
-       getdate() AS [EndTime],
-       datediff(ms, waiting.request_time, getdate()) / 1000.0 AS [Duration],
-       NULL AS [Status],
-       NULL AS [EstimatedRowCount],
-       NULL AS [ActualRowCount],
-       COALESCE(blocking_exec_request.command, blocking_exec_request.command2) AS [TSQL]
+SELECT @session_id AS session_id, @QID AS request_id, -1 AS [StepIndex], 'Compilation' AS [Phase],
+   'Blocked by ' + blocking.session_id + ':' + blocking.request_id + ' when requesting ' + waiting.type + ' on '
+   + QUOTENAME(waiting.object_type) + waiting.object_name AS [Description],
+   waiting.request_time AS [StartTime], GETDATE() AS [EndTime],
+   DATEDIFF(ms, waiting.request_time, GETDATE())/1000.0 AS [Duration],
+   NULL AS [Status], NULL AS [EstimatedRowCount], NULL AS [ActualRowCount],
+   COALESCE(blocking_exec_request.command, blocking_exec_request.command2) AS [TSQL]
 FROM sys.dm_pdw_waits waiting
-    INNER JOIN sys.dm_pdw_waits blocking
-        ON waiting.object_type = blocking.object_type
-           AND waiting.object_name = blocking.object_name
-    INNER JOIN sys.dm_pdw_exec_requests blocking_exec_request
-        ON blocking.request_id = blocking_exec_request.request_id
-WHERE waiting.session_id = @session_id
-      AND waiting.state = 'Queued'
-      AND blocking.state = 'Granted'
-      AND waiting.type != 'Shared' 
+   INNER JOIN sys.dm_pdw_waits blocking
+      ON waiting.object_type = blocking.object_type
+      AND waiting.object_name = blocking.object_name
+   INNER JOIN sys.dm_pdw_exec_requests blocking_exec_request
+      ON blocking.request_id = blocking_exec_request.request_id
+WHERE waiting.session_id = @session_id AND waiting.state = 'Queued'
+   AND blocking.state = 'Granted' AND waiting.type != 'Shared' 
 -- Request Steps
 UNION ALL
-SELECT @session_id AS session_id,
-       @QID AS request_id,
-       step_index AS [StepIndex],
-       'Execution' AS [Phase],
-       operation_type + ' (' + location_type + ')' AS [Description],
-       start_time AS [StartTime],
-       end_time AS [EndTime],
-       total_elapsed_time / 1000.0 AS [Duration],
-       status AS [Status],
-       CASE
-           WHEN estimated_rows > -1 THEN
-               estimated_rows
-       END AS [EstimatedRowCount],
-       CASE
-           WHEN ROW_COUNT > -1 THEN
-               ROW_COUNT
-       END AS [ActualRowCount],
+SELECT @session_id AS session_id, @QID AS request_id, step_index AS [StepIndex],
+       'Execution' AS [Phase], operation_type + ' (' + location_type + ')' AS [Description],
+       start_time AS [StartTime], end_time AS [EndTime],
+       total_elapsed_time/1000.0 AS [Duration], [status] AS [Status],
+       CASE WHEN estimated_rows > -1 THEN estimated_rows END AS [EstimatedRowCount],
+       CASE WHEN row_count > -1 THEN row_count END AS [ActualRowCount],
        command AS [TSQL]
 FROM sys.dm_pdw_request_steps
 WHERE request_id = @QID
-      AND status = CASE @ShowActiveOnly
-                       WHEN 1 THEN
-                           'Running'
-                       ELSE
-                           status
-                   END
+   AND [status] = CASE @ShowActiveOnly WHEN 1 THEN 'Running' ELSE [status] END
 ORDER BY StepIndex;
 ```
 
-<!-- #region language="sql" azdata_cell_guid="ca60e492-d0a3-412a-b478-70be188cfb37" -->
 ## Step 3: Review step details
 
-Having chosen a \[step\_index\] to review from Step 2, update the variables on line 1 of the script below accordingly. Change the @ShowActiveOnly variable to 1 to compare all distribution timings.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` variable to 0 to compare all distribution timings.
 
 | Parameter | Description |
 | --- | --- |
-| @QID | request\_id obtained in Step 1 |
-| @StepIndex | \[step\_index\] identified in Step 2 |
-| @ShowActiveOnly | 0 = Show all distributions for the given \[step\_index\]<br>1 = Show only the currently active distributions for the given \[step\_index\] |
-<!-- #endregion -->
+| @QID | `request_id` obtained in [Step 1](#step-1-identify-the-requestid-aka-qid) |
+| @StepIndex | `StepIndex` identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) |
+| @ShowActiveOnly | 0 - Show all distributions for the given StepIndex<br/>1 - Show only the currently active distributions for the given StepIndex |
 
-```sql azdata_cell_guid="2518a46a-a8e1-4e20-91da-24b1aa094e55" tags=["hide_input"]
-DECLARE @QID varchar(16) = 'QIDXXXXX', @StepIndex int = 2, @ShowActiveOnly bit = 1;
+```sql
+DECLARE @QID VARCHAR(16) = '<request_id>', @StepIndex INT = <StepIndex>, @ShowActiveOnly BIT = 1;
 WITH dists
-AS (SELECT request_id,
-           step_index,
-           'sys.dm_pdw_sql_requests' AS source_dmv,
-           distribution_id,
-           pdw_node_id,
-           spid,
-           'NativeSQL' AS [type],
-           status,
-           start_time,
-           end_time,
-           total_elapsed_time
+AS (SELECT request_id, step_index, 'sys.dm_pdw_sql_requests' AS source_dmv,
+       distribution_id, pdw_node_id, spid, 'NativeSQL' AS [type], [status],
+       start_time, end_time, total_elapsed_time
     FROM sys.dm_pdw_sql_requests
-    WHERE request_id = @QID
-          AND step_index = @StepIndex
+    WHERE request_id = @QID AND step_index = @StepIndex
     UNION ALL
-    SELECT request_id,
-           step_index,
-           'sys.dm_pdw_dms_workers' AS source_dmv,
-           distribution_id,
-           pdw_node_id,
-           sql_spid AS spid,
-           TYPE,
-           status,
-           start_time,
-           end_time,
-           total_elapsed_time
+    SELECT request_id, step_index, 'sys.dm_pdw_dms_workers' AS source_dmv,
+       distribution_id, pdw_node_id, sql_spid AS spid, [type],
+       [status], start_time, end_time, total_elapsed_time
     FROM sys.dm_pdw_dms_workers
-    WHERE request_id = @QID
-          AND step_index = @StepIndex
+    WHERE request_id = @QID AND step_index = @StepIndex
    )
-SELECT sr.step_index,
-       sr.distribution_id,
-       sr.pdw_node_id,
-       sr.spid,
-       sr.type,
-       sr.status,
-       sr.start_time,
-       sr.end_time,
-       sr.total_elapsed_time,
-       owt.wait_type,
-       owt.wait_time
+SELECT sr.step_index, sr.distribution_id, sr.pdw_node_id, sr.spid,
+       sr.type, sr.status, sr.start_time, sr.end_time,
+       sr.total_elapsed_time, owt.wait_type, owt.wait_time
 FROM dists sr
-    LEFT JOIN sys.dm_pdw_nodes_exec_requests owt
-        ON sr.pdw_node_id = owt.pdw_node_id
-           AND sr.spid = owt.session_id
-           AND (
-                   sr.source_dmv = 'sys.dm_pdw_sql_requests'
-                   AND sr.status = 'Running' -- sys.dm_pdw_sql_requests status
-                   OR sr.source_dmv = 'sys.dm_pdw_dms_requests'
-                      AND sr.status not like 'Step[CE]%'
-               ) -- sys.dm_pdw_dms_workers final statuses
+   LEFT JOIN sys.dm_pdw_nodes_exec_requests owt
+      ON sr.pdw_node_id = owt.pdw_node_id
+         AND sr.spid = owt.session_id
+         AND (sr.source_dmv = 'sys.dm_pdw_sql_requests'
+              AND sr.status = 'Running' -- sys.dm_pdw_sql_requests status
+              OR sr.source_dmv = 'sys.dm_pdw_dms_requests'
+              AND sr.status not LIKE 'Step[CE]%') -- sys.dm_pdw_dms_workers final statuses
 WHERE sr.request_id = @QID
-      AND (
-              sr.source_dmv = 'sys.dm_pdw_sql_requests'
-              AND sr.status = CASE
-                                  WHEN @ShowActiveOnly = 1 THEN
-                                      'Running'
-                                  ELSE
-                                      sr.status
-                              END
-              OR sr.source_dmv = 'sys.dm_pdw_dms_workers'
-                 AND sr.status not like CASE
-                                            WHEN @ShowActiveOnly = 1 THEN
-                                                'Step[CE]%'
-                                            ELSE
-                                                ''
-                                        END
-          )
+      AND ((sr.source_dmv = 'sys.dm_pdw_sql_requests' AND sr.status =
+               CASE WHEN @ShowActiveOnly = 1 THEN 'Running' ELSE sr.status END)
+           OR (sr.source_dmv = 'sys.dm_pdw_dms_workers' AND sr.status NOT LIKE
+                  CASE WHEN @ShowActiveOnly = 1 THEN 'Step[CE]%' ELSE ''END))
       AND sr.step_index = @StepIndex
 ORDER BY distribution_id
 ```
