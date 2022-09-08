@@ -39,7 +39,7 @@ Event ID 5120 indicates that there has been an interruption to communication bet
 
     2. If you run the preceding cmdlet without specifying a resource name, the status is displayed for all Cluster Shared Volumes in the cluster.
 
-3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
+3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or error code c0130021, they can be safely ignored. We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
 
 4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Do the due diligence to review the error code in the description of all logged Event ID 5120 events. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
 
@@ -205,7 +205,7 @@ Use the Windows live dump feature to save a snapshot of kernel memory on the aff
 
 1. Check the live dump folder (*C:\\Windows\\LiveKernelReports\\*) for previous live dump files.
 2. Make sure that the live dump feature has been enabled. For more information on enabling the feature, see [Troubleshooting Hangs Using Live Dump](https://techcommunity.microsoft.com/t5/failover-clustering/troubleshooting-hangs-using-live-dump/ba-p/372080).
-3. Download https://aka.ms/getTSSv2 and unzip it in the *C:\\tss_tool* folder.
+3. Download [TSSv2](https://aka.ms/getTSSv2) and unzip it in the *C:\\tss_tool* folder.
 4. Open an elevated version of PowerShell and change the directory to the *C:\\tss_tool* folder.
 5. Run the SDP tool to collect the logs from the source and destination nodes.
 6. Unzip the file and run the following cmdlet on both nodes:
