@@ -10,7 +10,7 @@ ms.prod: sql
 
 # "The certificate chain was issued by an authority that isn’t trusted" error after upgrading SNAC applications
 
-Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - ODBC Driver for SQL Server and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - OLE DB Driver for SQL Server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use these new drivers.
+Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - ODBC Driver for SQL Server and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) - OLE DB Driver for SQL Server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server
 
 ## Error messages
 
@@ -52,7 +52,7 @@ The error occurs because of a change in the default behavior of the client drive
 
 ## Resolutions
 
-For scenario 1, use one of the following solutions for short-term mitigation:
+For scenario 1, use one of the following solutions:
 
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for OLE DB Driver - OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
@@ -60,7 +60,7 @@ For scenario 1, use one of the following solutions for short-term mitigation:
 
 - **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
 
-For scenario 2, use one of the following solutions for short-term mitigation:
+For scenario 2, use one of the following solutions:
 
 - **Solution 1:** Use the Microsoft ODBC Driver 17 for SQL Server. You can download the driver from [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
