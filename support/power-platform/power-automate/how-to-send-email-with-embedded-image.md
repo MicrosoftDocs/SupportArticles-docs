@@ -1,7 +1,7 @@
 ---
 title: How to send an email with an embedded image
 description: Introduces how to send an email with an embedded image.
-ms.reviewer: 
+ms.reviewer: wifun
 ms.topic: how-to
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows

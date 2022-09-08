@@ -7,11 +7,11 @@ search.appverid: MET150
 ---
 # Troubleshooting data transfer between apps
 
-This article gives troubleshooting guidance for scenarios where a Microsoft Intune app protection policy (APP) designed to block data transfer doesn't work as intended. One of the most common uses of Intune APP is for data protection, to control the transfer of corporate data between Intune APP-managed apps and restrict data transfer to unmanaged apps. For example, users can transfer corporate data from the Outlook app to the Excel app (both are policy-managed apps) but not to the Dropbox app (an unmanaged app).
+This article gives troubleshooting guidance for scenarios where a Microsoft Intune app protection policy (APP) designed to block data transfer doesn't work as intended. One of the most common uses of Intune APP is for data protection, to control the transfer of corporate data between Intune APP-managed apps and restrict data transfer to unmanaged apps. For example, users can transfer corporate data from the Microsoft Outlook app to the Microsoft Excel app (both are policy-managed apps) but not to the Dropbox mobile app (an unmanaged app).
 
 When you apply Intune APP for data protection, a major unexpected behavior would be seeing your users transfer data from a managed app, such as Outlook, to an unmanaged app, such as Dropbox. In such scenarios, use the troubleshooting steps in this article to help diagnose and resolve the problem. For general APP troubleshooting, see [Troubleshooting app protection policy deployment in Intune](troubleshoot-app-protection-policy-deployment.md).
 
-## Confirm that you're using supported platforms, OS versions, and apps
+## Confirm you're using supported platforms, OS versions, and apps
 
 You can start by confirming that you've met the prerequisites for using app protection policies. There are some requirements for supported platforms, OS versions, and apps.
 

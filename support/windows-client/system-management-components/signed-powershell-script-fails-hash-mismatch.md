@@ -8,11 +8,12 @@ author: mrmilanmm
 ms.prod: windows-client
 ms.technology: windows-client-system-management-components
 ms.custom: sap:powershell, csstroubleshoot
-
+audience: itpro
+localization_priority: medium
 ---
 #  Hash of the file does not match when running signed PowerShell script
 
-_Applies to:_ &nbsp;Windows PowerShell
+_Applies to:_ &nbsp; Windows PowerShell
 
 ## Symptoms
 

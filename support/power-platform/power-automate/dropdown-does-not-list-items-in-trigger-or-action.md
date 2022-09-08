@@ -1,7 +1,7 @@
 ---
 title: Dropdown list does not load items in triggers or actions in Microsoft Flow
 description: Provides steps to solve the issue where dropdown doesn't load items in triggers or actions in Microsoft Flow.
-ms.reviewer: 
+ms.reviewer: evsung
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows
