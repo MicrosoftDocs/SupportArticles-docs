@@ -29,9 +29,13 @@ If application telemetry doesn't show in the Azure portal, failures across steps
 - (Uncommon) The query API at `api.applicationinsights.io` fails when querying records from Log Analytics.
 - The Azure portal fails to pull or render the records you're trying to view.
 
-## Troubleshoot missing telemetry with PowerShell or curl
+## Identify step by sending sample telemetry record
 
-Configuration problems or transient issues may occur anywhere across the Applications Insights service. To identify the step within the processing pipeline that causes symptoms of no data or missing data, send a sample telemetry record by using PowerShell or curl.
+Configuration problems or transient issues may occur anywhere across the Applications Insights service. To identify the step within the processing pipeline that causes symptoms of no data or missing data, send a sample telemetry record by using PowerShell or curl. For the PowerShell script or curl command, go to the following sections:
+
+- [PowerShell script to send availability test result](#a-idpowershell-script-send-availability-test-resultapowershell-script-to-send-availability-test-result)
+- [Curl command to send availability test result](#a-idcurl-command-send-availability-test-resultacurl-command-to-send-availability-test-result)
+- [PowerShell script to send request telemetry record](#a-idpowershell-script-send-request-telemetry-recordapowershell-script-to-send-request-telemetry-record)
 
 If the web app runs on an on-premises server or Azure VM, connect to the server or VM and send a single telemetry record to the Applications Insights service instance by using PowerShell. If the web app that has issues sending telemetry [runs on Kudu](/azure/app-service/resources-kudu), run the following script from Kudu's PowerShell debug console in Azure Web Apps.
 
@@ -59,11 +63,11 @@ If the generated sample record arrives at your Application Insights instance and
 
 The following sections provide information about sending a sample telemetry record using PowerShell or curl.
 
-### Send availability test results
+## <a id="powershell-script-send-availability-test-result"></a>PowerShell script to send availability test result
 
 Availability test results are the ideal telemetry type to test with. The reason is that the ingestion pipeline never samples out availability test results. If you send a request telemetry record, it could get sampled out when you have enabled ingestion sampling. Start with a sample availability test result and then try other telemetry types as needed.
 
-#### PowerShell script to send availability test result
+Here's a sample PowerShell script that sends an availability test result:
 
 ```powershell
 # Info: Provide either the connection string or ikey for your Application Insights resource
@@ -144,7 +148,7 @@ Refer to the following screenshot as an example:
 
 :::image type="content" source="media/investigate-missing-telemetry/items-received-matches-items-accepted.png" alt-text="Code that shows the amount of items received and items accepted.":::
 
-#### Curl command to send availability test results
+## <a id="curl-command-send-availability-test-result"></a>Curl command to send availability test result
 
 If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `ikey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
 
@@ -162,7 +166,7 @@ Here are sample curl commands that send a single availability test result:
     curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"ver\":2,\"id\":\"SampleRunId\",\"name\":\"MicrosoftSupportSampleWebtestResultUsingCurl\",\"duration\":\"00.00:00:10\",\"success\":true,\"runLocation\":\"RegionName\",\"message\":\"SampleWebtestResult\",\"properties\":{\"SampleProperty\":\"SampleValue\"}},\"baseType\":\"AvailabilityData\"},\"ver\":1,\"name\":\"Microsoft.ApplicationInsights.Metric\",\"time\":\"2021-10-05T22:00:00.0000000Z\",\"sampleRate\":100,\"ikey\":\"########-####-####-####-############\",\"flags\":0} https://dc.applicationinsights.azure.com/v2/track
     ```
 
-### Send request telemetry record
+## <a id="powershell-script-send-request-telemetry-record"></a>PowerShell script to send request telemetry record
 
 To troubleshoot missing request telemetry, use the following PowerShell script to test sending a single request telemetry record. This telemetry type is susceptible to the server-side ingestion sampling configuration. Verify that [ingestion sampling](/azure/azure-monitor/app/sampling#ingestion-sampling) is turned off to confirm if the test record is saved correctly.
 
