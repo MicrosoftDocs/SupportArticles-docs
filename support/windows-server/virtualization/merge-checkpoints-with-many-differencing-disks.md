@@ -1,6 +1,6 @@
 ---
 title: How to merge checkpoints that have multiple differencing disks
-description: Describes different methods of merging checkpoints and their associated differencing disks with the related virtual machine.
+description: Describes different methods of merging checkpoints and their associated differencing disks into the related virtual machine.
 ms.date: 08/31/2022
 author: v-tappelgate
 ms.author: v-tappelgate
@@ -21,7 +21,7 @@ _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 20
 
 ## Introduction
 
-This article describes methods that you can use to merge checkpoints by using a virtual machine (VM) if Hyper-V has generated many differencing disks. The method that you use depends on the details of the situation.
+This article describes methods that you can use to merge checkpoints into a virtual machine (VM) if Hyper-V has generated many differencing disks. The method that you use depends on the details of the situation.
 
 ## Merging checkpoints that you can view in Hyper-V Manager
 
@@ -54,7 +54,7 @@ To merge the differencing disk files, shut down the VM. Typically, the differenc
 
 #### When you can't shut down the VM
 
-You can merge differencing disks by using an online VM. However, this is a multi-step process that involves Windows PowerShell scripts. To do this, follow these general steps:
+You can merge differencing disks into an online VM. However, this is a multi-step process that involves Windows PowerShell scripts. To do this, follow these general steps:
 
 1. Back up all the differencing disk files (VHD files).
 1. [Create and run the `Get-VHDChain` function](#getchain). This step is described in detail later in this section.
