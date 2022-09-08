@@ -24,9 +24,9 @@ Event ID 5120 indicates that there has been an interruption to communication bet
 1. Verify that the Cluster Shared Volume can come online. To confirm that a Cluster Shared Volume can come online:
 
     1. To open the failover cluster snap-in, select **Start** > **Administrative Tools** > **Failover Cluster Manager**. If the **User Account Control** dialog box appears, confirm that the action it displays is what you want, and then select **Yes**.
-    2. In the **Failover Cluster Manager** snap-in, check whether the cluster you want to manage is displayed. If it isn't displayed, in the console tree, right-click **Failover Cluster Manager**, select **Manage a Cluster**, and then select or specify the cluster that you want.
+    2. In the **Failover Cluster Manager** snap-in, check whether the cluster you want to manage is displayed. If it isn't displayed, then in the console tree, right-click **Failover Cluster Manager**, select **Manage a Cluster**, and then select or specify the cluster you want.
     3. If the console tree is collapsed, expand the tree under the cluster you want to manage, and then select **Cluster Shared Volumes**.
-    4. In the center pane, expand the listing for the volume that you're verifying. View the status of the volume.
+    4. In the center pane, expand the listing for the volume you're verifying and view the status of the volume.
     5. If a volume is offline, bring it online by right-clicking the volume and then selecting **Bring this resource online**.
 
 2. Use a Windows PowerShell cmdlet to check the status of a resource in a failover cluster:
@@ -37,9 +37,9 @@ Event ID 5120 indicates that there has been an interruption to communication bet
         Get-ClusterSharedVolume
         ```
 
-    2. If you run the preceding cmdlet without specifying a resource name, status is displayed for all Cluster Shared Volumes in the cluster.
+    2. If you run the preceding cmdlet without specifying a resource name, the status is displayed for all Cluster Shared Volumes in the cluster.
 
-3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or the error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
+3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or error code c0130021, they can be safely ignored.  We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
 
 4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Do the due diligence to review the error code in the description of all logged Event ID 5120 events. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
 
@@ -49,7 +49,7 @@ If you see Event ID 5120, the **Description** field of the event includes a stat
 
 ### Status code: STATUS_BAD_IMPERSONATION_LEVEL(0xC00000A5)
 
-Certain operations, such as renaming, that you perform on files or folders that are on a Cluster Shared Volume may fail with the error "STATUS_BAD_IMPERSONATION_LEVEL (0xC00000A5)". This issue occurs when you perform the operation on a CSV owner node by using the context of a process that doesn't have administrator permissions.  
+Certain operations, such as renaming that you perform on files or folders on a Cluster Shared Volume, may fail with the error "STATUS_BAD_IMPERSONATION_LEVEL (0xC00000A5)". This issue occurs when you perform the operation on a CSV owner node by using the context of a process that doesn't have administrator permissions.  
 
 To work around this issue, do one of the following operations:
 
@@ -60,7 +60,7 @@ Microsoft is working on a resolution and will provide an update in an upcoming r
 
 ### Status code: STATUS_BAD_NETWORK_NAME(c00000cc)
 
-1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
+1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems, or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
 ### Status code: STATUS_BAD_NETWORK_PATH(c00000be)
@@ -91,22 +91,22 @@ In particular, make sure that the following update is installed on all Windows S
 
 ### Status code: STATUS_CONNECTION_DISCONNECTED(c000020c)
 
-Communication between a cluster node and a CSV has been interrupted. This interruption may be short enough that it isn't noticeable, or long enough that it interferes with services and applications that use the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
+Communication between a cluster node and a CSV has been interrupted. This interruption may be short enough that it isn't noticeable or long enough that it interferes with services and applications that use the volume. If the interruption persists, review other events in the System or Application event logs for information about communication between the node and the volume.
 
 In addition, confirm that the CSV can come online by using the following steps:
 
 > [!NOTE]
-> To perform the following procedures, the account that you use has to be a domain account and has to belong to the local Administrators group on each clustered server, or it has to have the equivalent authority.
+> To perform the following procedures, the account you use has to be a domain account and has to belong to the local Administrators group on each clustered server, or it has to have the equivalent authority.
 
 1. Select **Start** > **Administrative tools** > **Failover Cluster Manager**.  
-2. In the **Failover Cluster Manager** snap-in, check whether the cluster you want to manage is displayed. If it isn't displayed, in the console tree, right-click **Failover Cluster Manager**, select **Manage a Cluster**, and then select or specify the cluster that you want.
-3. In the center pane, expand the listing for the volume that you're verifying. View the status of the volume.
+2. In the **Failover Cluster Manager** snap-in, check whether the cluster you want to manage is displayed. If it isn't displayed, then in the console tree, right-click **Failover Cluster Manager**, select **Manage a Cluster**, and then select or specify the cluster you want.
+3. In the center pane, expand the listing for the volume you're verifying. View the status of the volume.
 4. If a volume is offline, bring it online by right-clicking the volume and then selecting **Bring this resource online**.
 
 To use a PowerShell cmdlet to check the status of a resource in a failover cluster, open a PowerShell Command Prompt window on a node in the cluster, and run `Get-ClusterSharedVolume`.
 
 > [!NOTE]
-> If you run the preceding cmdlet without specifying a resource name, status is displayed for all CSVs in the cluster.
+> If you run the preceding cmdlet without specifying a resource name, the status is displayed for all CSVs in the cluster.
 
 For more information, see [Event ID 5120 — Cluster Shared Volume Functionality](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee830293(v=ws.10)).
 
@@ -135,7 +135,7 @@ This status code indicates that connectivity between the cluster nodes and the s
 
 ### Status code: STATUS_FILE_NOT_AVAILABLE(c0000467)
 
-1. Check the health status of the Smart Array. Make sure that related drivers and firmware are up to date.
+1. Check the health status of Smart Array. Make sure that related drivers and firmware are up to date.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
 ### Status code: STATUS_INSUFFICIENT_RESOURCES(c000009a)
@@ -157,7 +157,7 @@ This status code indicates that there's a connectivity issue. Make sure that the
 
 ### Status code: STATUS_NETWORK_UNREACHABLE(c000023c)
 
-This status code indicates that either there is a network fault between the node and the CSV, or Disk Control Manager (DCM) has mapped an incorrect path to the volume.
+This status code indicates that either there is a network fault between the node and the CSV or Disk Control Manager (DCM) has mapped an incorrect path to the volume.
 
 Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
@@ -169,7 +169,7 @@ This status code indicates a problem in the storage system. Check the health sta
 
 This code indicates that connectivity between a node and the CSV has been lost.
 
-1. Check the network connectivity, and check the cluster exclusion in the firewall.
+1. Check the network connectivity and the cluster exclusion in the firewall.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
 ### Status code: STATUS_UNEXPECTED_NETWORK_ERROR(c00000c4)
