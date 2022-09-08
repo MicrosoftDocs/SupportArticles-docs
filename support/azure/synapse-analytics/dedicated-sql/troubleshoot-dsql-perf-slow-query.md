@@ -2,7 +2,7 @@
 title: Troubleshoot slow queries on a dedicated SQL pool
 description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool. 
 ms.date: 09/06/2022
-author: HayingYu
+author: HaiyingYu
 ms.author: haiyingyu
 ms.reviewer: scepperl
 ---
@@ -63,7 +63,7 @@ Run the following script to find out the step that may cause the performance iss
 
 | Parameter | Description |
 | --- | --- |
-| @QID | request_id obtained in [Step 1](#step-1-identify-the-requestid-aka-qid) |
+| @QID | request_id obtained in [Step 1](#step-1-identify-the-request_id-aka-qid) |
 | @ShowActiveOnly | 0 - Show all steps for the query<br/>1 - Show only the currently active step |
 
 ```sql
@@ -125,7 +125,7 @@ Run the following script to review the details of the step identified in the pre
 
 | Parameter | Description |
 | --- | --- |
-| @QID | `request_id` obtained in [Step 1](#step-1-identify-the-requestid-aka-qid) |
+| @QID | `request_id` obtained in [Step 1](##step-1-identify-the-request_id-aka-qid) |
 | @StepIndex | `StepIndex` identified in [Step 2](#step-2-determine-where-the-query-is-taking-time) |
 | @ShowActiveOnly | 0 - Show all distributions for the given StepIndex<br/>1 - Show only the currently active distributions for the given StepIndex |
 
@@ -207,7 +207,7 @@ Being blocked for Resource Allocation means that your query is waiting its turn 
 
 | Identified By | Mitigations |
 |-----------------|-------------|
-| \* Indicated by value of "Resource Allocation (Concurrency)" in \[Description\] field of Step 2 |  \* Wait for blocking session to complete<br>\* Evaluate [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class) (see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits) for more information)<br>\* [KILL](/sql/t-sql/language-elements/kill-transact-sql?view=sql-server-ver16) blocking session\_id |
+| \* Indicated by value of "Resource Allocation (Concurrency)" in \[Description\] field of Step 2 |  \* Wait for blocking session to complete<br>\* Evaluate [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class) (see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits) for more information)<br/>\* [KILL](/sql/t-sql/language-elements/kill-transact-sql) blocking session\_id |
 
 </p>
 </details>
@@ -239,7 +239,7 @@ For execution time efficiencies, the DROP TABLE and TRUNCATE TABLE statements wi
 
 | Identified By | Mitigations |
 |-----------------|-------------|
-| \* Statement in 'Running' status in Step 1, but no step information in Step 2<br>\* and Statement is a long-running DROP TABLE or TRUNCATE TABLE statement<br>\* and Statement is not being blocked | \* Identify a maintenance window, stop all workload, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql?view=sql-server-ver15) to force immediate cleanup of previously dropped/truncated tables |
+| \* Statement in 'Running' status in Step 1, but no step information in Step 2<br>\* and Statement is a long-running DROP TABLE or TRUNCATE TABLE statement<br>\* and Statement is not being blocked | \* Identify a maintenance window, stop all workload, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force immediate cleanup of previously dropped/truncated tables |
 
 </p>
 </details>
@@ -386,10 +386,10 @@ In-flight data skew is a variant of the aforementioned data skew issue.  However
 
 ### Wait Type issue indicators
 
-If none of the above common issues apply to your query, the Step 3 data set affords the opportunity to determine which wait types (in \[wait\_type\] and \[wait\_time\]) are interfering with query processing for the longest-running step. Because there are a large number of wait types and the mitigations are similar, we have grouped them into related categories using the [wait categories mapping table](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql?view=sql-server-ver16#wait-categories-mapping-table) from Query Store. To track this:
+If none of the above common issues apply to your query, the Step 3 data set affords the opportunity to determine which wait types (in \[wait\_type\] and \[wait\_time\]) are interfering with query processing for the longest-running step. Because there are a large number of wait types and the mitigations are similar, we have grouped them into related categories using the [wait categories mapping table](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table) from Query Store. To track this:
 
 1. Identify the \[wait\_type\] in Step 3 which is taking the most time
-2. Locate the wait type in [Wait Categories](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql?view=sql-server-ver16#wait-categories-mapping-table) and note the Wait Category it is part of.
+2. Locate the wait type in [Wait Categories](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table) and note the Wait Category it is part of.
 3. Locate and expand the Wait Category below to review mitigation recommendations
 
 
@@ -418,7 +418,7 @@ sqlcmd −S <servername>.database.windows.net −d <databasename> −U <username
 
 6. Open <output_file_name>.txt in a text editor to locate and copy/paste the distribution-level execution plans (lines that begin with `<ShowPlanXML>`) from the longest-running step identified in Step 2 into separate text files with a .sqlplan extension
     - NOTE: each step of the distributed plan will have recorded (typically) 60 distribution-level execution plans.  You will need to ensure you are preparing and comparing execution plans from the same distributed plan step.
-7. The Step 3 query frequently reveal a small number of distributions which take much longer than others.  Using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16), compare the distribution-level execution plans (from the .sqlplan files created) of a long-running distribution to a fast-running distribution to analyze potential causes for differences.
+7. The Step 3 query frequently reveal a small number of distributions which take much longer than others.  Using [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), compare the distribution-level execution plans (from the .sqlplan files created) of a long-running distribution to a fast-running distribution to analyze potential causes for differences.
 
 </p>
 </details>

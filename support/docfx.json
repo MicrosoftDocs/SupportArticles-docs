@@ -142,8 +142,7 @@
         "system-center/**/*.md": "system-center",
         "microsoft-identity-manager/*.md": "microsoft-identity-manager",
         "developer/browsers/**/*.md": "internet-explorer",
-        "dynamics/gp/*.md": "dynamics-gp",
-        "azure/synapse-analytics/**/*.md": "azure-synapse-analytics"
+        "dynamics/gp/*.md": "dynamics-gp"
       },
       "ms.technology": {
         "developer/dotnet/wcf/**/*.md": "dotnet-wcf",
