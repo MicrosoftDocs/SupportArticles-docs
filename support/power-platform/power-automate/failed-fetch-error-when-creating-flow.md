@@ -1,7 +1,7 @@
 ---
 title: Failed to fetch error when creating flow
 description: Provides a solution to an error that occurs when you try to create a flow and add a trigger/action from the Outlook 365 connector.
-ms.reviewer: 
+ms.reviewer: wifun
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows

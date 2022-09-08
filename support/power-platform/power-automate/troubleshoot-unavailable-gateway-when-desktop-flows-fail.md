@@ -1,7 +1,7 @@
 ---
 title: Gateway or machine is offline if desktop flows fail with gateway error
 description: Troubleshoot an unavailable gateway.
-ms.reviewer: 
+ms.reviewer: quseleba
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-flows

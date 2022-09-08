@@ -1,7 +1,7 @@
 ---
 title: How to customize or format Date and Time values in a flow
 description: Introduces how to customize or format date and time (for example, DateTime) values in a flow.
-ms.reviewer: 
+ms.reviewer: wifun
 ms.topic: how-to
 ms.date: 3/31/2021
 ms.subservice: power-automate-admin
@@ -47,7 +47,7 @@ For more information about available standard format patterns and how to constru
 
 1. Select the input field where you want the formatted DateTime value.
 2. Go to the expression editor (go to **Add dynamic content** > select the **Expression** tab).
-3. Type *formatDateTime()* (or look under **Date and time** functions).
+3. Type _formatDateTime()_ (or look under **Date and time** functions).
 4. Provide the value to be formatted and surrounded by single quotes. Dynamic content can be used, but shouldn't be surrounded by single quotes.
 5. Provide the format string (surrounded by single quotes).
 6. The full expression should look like the following examples:
