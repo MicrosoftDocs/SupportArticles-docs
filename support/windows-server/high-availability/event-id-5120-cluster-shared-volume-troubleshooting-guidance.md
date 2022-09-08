@@ -125,7 +125,7 @@ For more information, see [Event ID 5120 — Cluster Shared Volume Functionality
 
 This status code indicates that connectivity between the cluster nodes and the storage has been lost.
 
-1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems,  or disk problems.  
+1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems, or disk problems.  
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
 ### Status code: STATUS_FILE_CLOSED(c0000128)
@@ -148,7 +148,7 @@ This status code indicates that a redirected file system IO operation took longe
 
 The cause of the timeout varies. It might indicate a software, configuration, or hardware problem.  
 
-1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
+1. Check your system event log for events that indicate network connectivity problems, host bus adapter (HBA) problems, or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.  In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580)](https://support.microsoft.com/help/4462928/windows-10-update-kb4462928) is installed. This update addresses an issue that occurs when restarting a node after draining the node. Event ID 5120 appears in the log with a "STATUS_IO_TIMEOUT c00000b5" message. This may slow or stop input and output (I/O) to the VMs, and sometimes the nodes may drop out of cluster membership.
 
 ### Status code: STATUS_MEDIA_WRITE_PROTECTED(c00000a2)
@@ -189,7 +189,7 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 
 ### Status code: STATUS_VOLUME_DISMOUNTED(c000026e)
 
-1. Check your system event log for events that indicate storage problems, network connectivity problems, host bus adapter (HBA) problems,  or disk problems.
+1. Check your system event log for events that indicate storage problems, network connectivity problems, host bus adapter (HBA) problems, or disk problems.
 2. Make sure that the affected system has the latest versions of network and storage drivers and firmware installed. Additionally, make sure that Microsoft updates and hotfixes are up to date.
 
 
