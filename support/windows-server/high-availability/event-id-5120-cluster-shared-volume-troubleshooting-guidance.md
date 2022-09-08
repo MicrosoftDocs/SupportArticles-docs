@@ -193,7 +193,7 @@ In particular, make sure that [October 18, 2018—KB4462928 (OS Build 14393.2580
 
 ## Data collection
 
-Before contacting Microsoft support, you can gather information about your issue.
+Before contacting Microsoft Support, you can gather information about your issue.
 
 Refer the [prerequisites](../../windows-client/windows-troubleshooters/introduction-to-troubleshootingscript-toolset-tssv2.md#prerequisites) for the toolset to run properly.
 
