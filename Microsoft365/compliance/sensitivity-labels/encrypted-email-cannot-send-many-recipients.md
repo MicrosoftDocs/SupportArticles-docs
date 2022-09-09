@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CI 166253
   - CSSTroubleshoot
-ms.reviewer: esaggese, keschott, cabailey, jricaurt, lindabr
+ms.reviewer: esaggese, keschott, mvergara, cabailey, jricaurt, lindabr
 appliesto: 
   - Microsoft Purview
   - Azure Information Protection 
