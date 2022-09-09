@@ -47,7 +47,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Number of items exceeds the list view threshold
-            url: ./lists-and-libraries/items-exceeds-list-view-threshold.mdZzc'
+            url: ./lists-and-libraries/items-exceeds-list-view-threshold.md
           - text: 'Issues when using "View in File Explorer"'
             url: ./lists-and-libraries/troubleshoot-issues-using-open-with-explorer.md
           - text: Troubleshoot mapped network drives
