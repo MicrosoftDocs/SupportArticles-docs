@@ -33,9 +33,7 @@ The [DataMoveReplicationConstraint](/exchange/managing-mailbox-database-copies-e
 
 Use the appropriate method, depending on the direction of the move request and whether the target mailbox is in a [database availability group](/exchange/high-availability/database-availability-groups/database-availability-groups) (DAG).
 
-- For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG
-
-  Use one of the following methods:
+- For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG, use one of the following methods:
 
   - Run the [Get-MailboxDatabaseCopyStatus](/powershell/module/exchange/get-mailboxdatabasecopystatus) PowerShell cmdlet to view the [health and status](/exchange/high-availability/manage-ha/monitor-dags) of the mailbox database copies. Diagnose and fix a mailbox database copy, then restart the migration.
 
@@ -47,7 +45,7 @@ Use the appropriate method, depending on the direction of the move request and w
      Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
      ```
 
-- For offboarding, if the target mailbox isn't in a DAG
+- For offboarding, if the target mailbox isn't in a DAG:
 
   - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
@@ -55,6 +53,6 @@ Use the appropriate method, depending on the direction of the move request and w
      Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
      ```
 
-- For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online)
+- For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online):
 
   - Remove the move request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
