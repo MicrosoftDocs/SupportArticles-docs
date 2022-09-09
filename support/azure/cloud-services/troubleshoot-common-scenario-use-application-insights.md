@@ -14,7 +14,7 @@ For basic knowledge of using Application Insights with Cloud Service, see [featu
 
 ## Diagnostic setting and Application Insights
 
-When Application Insights is enabled on the Cloud Service app, the Diagnostic setting must be enabled at same time. Some metrics data and log that are collected by Diagnostic service will be sent to Application Insights. For more information, see [To view cloud service diagnostics data]https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#view-the-diagnostics-data)
+When Application Insights is enabled on the Cloud Service app, the Diagnostic setting must be enabled at same time. Some metrics data and log that are collected by Diagnostic service will be sent to Application Insights. For more information, see [view cloud service diagnostics data](https://docs.microsoft.com/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#view-the-diagnostics-data).
 
 When the Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role:
 
