@@ -80,11 +80,12 @@ To log these events, install at least the October 2021 Cumulative Update for Win
 
 If you want to temporarily disable the DCOM hardening, set the value of the `RequireIntegrityActivationAuthenticationLevel` registry key to `0x00000000`:
 
-|Path|Value Name|Type|Value Data|
-|--|--|--|--|
-|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole\AppCompat`|`RequireIntegrityActivationAuthenticationLevel`|dword|`0x00000000`|
+- Path: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole\AppCompat`
+- Value Name: `RequireIntegrityActivationAuthenticationLevel`
+- Type: dword
+- Value Data: `0x00000000`
 
-To enable the DCOM hardening, set the registry value to 0x00000001. If this registry key isn't defined, it will be enabled by default.
+To enable the DCOM hardening, set the registry value to `0x00000001`. If this registry key isn't defined, it will be enabled by default.
 
 > [!NOTE]
 > This registry key will be ignored starting from March 14, 2023. Upgrade the operating systems before this date.
