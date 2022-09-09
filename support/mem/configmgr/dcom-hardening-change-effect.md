@@ -1,14 +1,16 @@
 ---
-title: Effects of DCOM hardening changes on Configuration Manager
+title: Issues after installing June 2022 Windows security updates
 description: This article provides solutions for the issues that may occur in Configuration Manager after you install the June 2022 security updates for Windows.
 ms.date: 09/07/2022
 ms.reviewer: payur
+author: AmandaAZ
+ms.author: v-weizhu
 ---
 # Issues in Configuration Manager after installing June 2022 security updates for Windows
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
-Microsoft Endpoint Configuration Manager uses the Distributed Component Object Model (DCOM) Remote Protocol at multiple parts of functionality. With the June 2022 security updates for Windows, hardening changes in DCOM are enabled by default. This article provides solutions for the issues that may occur in Configuration Manager after the June 2022 security updates for Windows is installed.
+Microsoft Endpoint Configuration Manager uses the Distributed Component Object Model (DCOM) Remote Protocol at multiple parts of functionality. With the June 2022 security updates for Windows, [hardening changes in DCOM](#dcom-hardening-changes) are enabled by default. This article provides solutions for the issues that may occur in Configuration Manager after the June 2022 security updates for Windows are installed.
 
 ## Symptoms
 
@@ -16,14 +18,16 @@ After installing the June 2022 security updates for Windows or later, a Configur
 
 - The Configuration Manager console fails to access the SMS Provider remotely under any user account. However, under the same credential, a local connection to the SMS Provider is successful.
 
-    When the Configuration Manager administrator connects remotely to client computers, the same issue occurs for Configuration Manager Tools like Support Center or Policy Spy.
+    When the Configuration Manager administrator connects remotely to client computers, the same issue occurs for Configuration Manager tools like Support Center or Policy Spy.
 
 - Content fails to be distributed to a remote distribution point.
 
 Error codes that are recorded in the respective log files or client applications may resemble the following:
 
-- 0x80070005 - Access is Denied.
-- 0x800706ba – The RPC server is unavailable
+|Error code|Error message|
+|---|---|
+|0x80070005|Access is Denied.|
+|0x800706ba|The RPC server is unavailable.|
 
 For example, when the Configuration Manager administrator tries a connection, the *SmsAdminUI.log* file displays the following error message:
 
@@ -41,11 +45,11 @@ System.UnauthorizedAccessException
 
 To resolve these issues, install the latest cumulative update for Windows on both computers that initiate the connection (the remote console or site server) and receive it (the SMS Provider, distribution point, or remote client). Besides enhancing the security, installing the update can ensure the same level of DCOM hardening and the logging capabilities.
 
-The latest versions of Configuration Manager made security changes, so we recommend that you upgrade to [Configuration Manager, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) or a later version.
+The latest versions of Configuration Manager makes security changes, so we recommend that you upgrade to [Configuration Manager, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) or a later version.
 
-## Behavior change of DCOM hardening changes
+## DCOM hardening changes
 
-Back in 2021, the Windows DCOM Server Security Feature Bypass vulnerability was discovered and released in [CVE-2021-26414](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26414). Later, Microsoft released security updates that improve DCOM protocol hardening. However, some applications require a code change to comply with the new security level. Therefore, Microsoft addressed this vulnerability with a phased approach, which is configurable by the RequireIntegrityActivationAuthenticationLevel registry key. See the following timeline:
+Back in 2021, the Windows DCOM Server Security Feature Bypass vulnerability was discovered and released in [CVE-2021-26414](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26414). Later, Microsoft released security updates that improve DCOM protocol hardening. However, some applications require a code change to comply with the new security level. Therefore, Microsoft addressed this vulnerability with a phased approach, which is configurable by the `RequireIntegrityActivationAuthenticationLevel` registry key. See the following timeline:
 
 |Update release|Behavior change|
 |---|---|
@@ -57,29 +61,28 @@ For more information, see [KB5004442—Manage changes for Windows DCOM Server Se
 
 ## Verify DCOM hardening issue
 
-To verify the DCOM hardening issue, check the following Event IDs in the System event logs on the server and client computers. For more information, see the "New DCOM error events" section in [kb5004442](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
+To verify the DCOM hardening issue, check the following Event IDs in the System event logs on the server and client computers. For more information, see the "New DCOM error events" section in [KB5004442](https://support.microsoft.com/topic/kb5004442-manage-changes-for-windows-dcom-server-security-feature-bypass-cve-2021-26414-f1400b52-c141-43d2-941e-37ed901c769c).
 
-To log these events, install at least the October 2021 Cumulative Update for Windows on most versions. The following time-correlated events should mention Configuration Manager applications and the usernames they're running under:
+To log these events, install at least the October 2021 Cumulative Update for Windows. The following time-correlated events should mention Configuration Manager applications and the usernames they're running under:
 
 - Server-side event
 
     |Event ID|Message|
     |---|---|
-    |10036|"The server-side authentication level policy does not allow the user %1\\%2 SID (%3) from address %4 to activate DCOM server. Please raise the activation authentication level at least to RPC_C_AUTHN_LEVEL_PKT_INTEGRITY in client application." <br/><br/>(%1 – domain, %2 – user name, %3 – User SID, %4 – Client IP Address)|
+    |10036|The server-side authentication level policy does not allow the user %1\\%2 SID (%3) from address %4 to activate DCOM server. Please raise the activation authentication level at least to RPC_C_AUTHN_LEVEL_PKT_INTEGRITY in client application. <br/><br/>(%1 – domain, %2 – user name, %3 – User SID, %4 – Client IP Address)|
 
 - Client-side events
 
     |Event ID|Message|
     |---|---|
-    |10037|"Application %1 with PID %2 is requesting to activate CLSID %3 on computer %4 with explicitly set authentication level at %5. The lowest activation authentication level required by DCOM is 5(RPC_C_AUTHN_LEVEL_PKT_INTEGRITY). To raise the activation authentication level, please contact the application vendor."|
-    |10038|"Application %1 with PID %2 is requesting to activate CLSID %3 on computer %4 with default activation authentication level at %5. The lowest activation authentication level required by DCOM is 5(RPC_C_AUTHN_LEVEL_PKT_INTEGRITY). To raise the activation authentication level, please contact the application vendor."<br/><br/> (%1 – Application Path, %2 – Application PID, %3 – CLSID of the COM class the application is requesting to activate, %4 – Computer Name, %5 – Value of Authentication Level)|
+    |10037|Application %1 with PID %2 is requesting to activate CLSID %3 on computer %4 with explicitly set authentication level at %5. The lowest activation authentication level required by DCOM is 5(RPC_C_AUTHN_LEVEL_PKT_INTEGRITY). To raise the activation authentication level, please contact the application vendor.|
+    |10038|Application %1 with PID %2 is requesting to activate CLSID %3 on computer %4 with default activation authentication level at %5. The lowest activation authentication level required by DCOM is 5(RPC_C_AUTHN_LEVEL_PKT_INTEGRITY). To raise the activation authentication level, please contact the application vendor.<br/><br/> (%1 – Application Path, %2 – Application PID, %3 – CLSID of the COM class the application is requesting to activate, %4 – Computer Name, %5 – Value of Authentication Level)|
 
-If you want to temporarily disable the DCOM hardening, set the value of the RequireIntegrityActivationAuthenticationLevel registry key to 0x00000000:
+If you want to temporarily disable the DCOM hardening, set the value of the `RequireIntegrityActivationAuthenticationLevel` registry key to `0x00000000`:
 
-- Path: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole\AppCompat
-- Value Name: RequireIntegrityActivationAuthenticationLevel
-- Type: dword
-- Value Data: 0x00000000
+|Path|Value Name|Type|Value Data|
+|--|--|--|--|
+|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Ole\AppCompat`|`RequireIntegrityActivationAuthenticationLevel`|dword|`0x00000000`|
 
 To enable the DCOM hardening, set the registry value to 0x00000001. If this registry key isn't defined, it will be enabled by default.
 
