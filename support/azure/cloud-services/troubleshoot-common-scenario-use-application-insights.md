@@ -8,7 +8,7 @@ ms.service: cloud-services
 ---
 # Troubleshoot common Cloud Service Application issue with Application Insights
 
-When Azure Cloud Service is used to host website or proceed some data process, it is recommended to integrate a log system to collect more detailed information and log records. Application Insights service is designed for this purpose. This document provides common scenarios that we can benefit from application insights integration with Cloud Service.  
+When Azure Cloud Service is used to host website or proceed some data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights service is designed for this purpose. This document provides common scenarios that we can benefit from application insights integration with Cloud Service.  
 
 For basic knowledge of using Application Insights with Cloud Service, see [feature overview]
 
@@ -20,18 +20,27 @@ When the Diagnostic setting is enabled, the performance counter setting works di
 
 ### For Web Role
 
-The following 9 metrics data will be automatically collected even if the performance counter is disabled in Diagnostic Setting. These 9 metrics data will be saved in **performanceCounter** table of Application Insights. Other metrics such as `\Process(w3wp)\% Processor Time`, will be saved into **customMetrics** table when the performance counter is enabled.
+The following nine metrics data will be automatically collected even if the performance counter is disabled in Diagnostic Setting. These nine metrics data will be saved in **performanceCounter** table of Application Insights. Other metrics such as `\Process(w3wp)\% Processor Time`, will be saved into **customMetrics** table when the performance counter is enabled.
 
-- \Process(??APP_WIN32_PROC??)\% Processor Time  
-- \Memory\Available Bytes  
-- .NET CLR Exceptions(??APP_CLR_PROC??)# # of Exceps Thrown / sec
-- \Process(??APP_WIN32_PROC??)\Private Bytes  
-- \Process(??APP_WIN32_PROC??)\IO Data Bytes/sec  
-- \Processor(_Total)%  Processor time  
-- \ASP.NET Applications(??APP_W3SVC_PROC??)\Requests/sec  
-- \ASP.NET Applications(??APP_W3SVC_PROC??)\Request Execution Time  
-- \ SP.NET Applications(??APP_W3SVC_PROC??)\Requests In Application Queue  
+```
+\Process(??APP_WIN32_PROC??)\% Processor Time  
 
+\Memory\Available Bytes  
+
+.NET CLR Exceptions(??APP_CLR_PROC??)# # of Exceps Thrown / sec
+
+\Process(??APP_WIN32_PROC??)\Private Bytes  
+
+\Process(??APP_WIN32_PROC??)\IO Data Bytes/sec  
+
+\Processor(_Total)%  Processor time  
+
+\ASP.NET Applications(??APP_W3SVC_PROC??)\Requests/sec  
+
+\ASP.NET Applications(??APP_W3SVC_PROC??)\Request Execution Time  
+
+\SP.NET Applications(??APP_W3SVC_PROC??)\Requests In Application Queue  
+```
 ### For Worker Role
 
 If the performance counter is disabled in Diagnostic Setting, there will be no performance metrics data automatically collected and saved in Application Insights.
@@ -41,7 +50,7 @@ If the performance counter is disabled in Diagnostic Setting, there will be no
 The HeartBeatState metric data will be always saved into Application Insights automatically. This metric is used to identify whether the instance is still healthy at server level. It will be triggered every 15 minutes and saved into the **customMetrics** table. The other performance metric data need to be manually enabled in performance counter in Diagnostic Setting.
 
 > [!IMPORTANT]
-> Application Insights will generate record only when there is really data collected. If a Web Role never receives request, or a Worker Role does not read/write data from/into disk, or the amount of data IO is quite low, it’s possible that Application Insights will not record any information.
+> Application Insights will generate record only when there's really data collected. If a Web Role never receives request, or a Worker Role does not read/write data from/into disk, or the amount of data IO is quite low, it’s possible that Application Insights won't record any information.
 
 The following table shows mapping between the options in Diagnostic setting and table names in Application Insights logs:
 
@@ -85,7 +94,7 @@ To add a custom log into your application, follow these steps:
 
 By design of Cloud Service, the request of Web Role is automatically marked with unique ID to identify the correlation. In Worker Role, there isn’t such a system. But it’s possible to simulate the result of the Worker Role application progress as a request and record this request into Application Insights. So you can simplify the way to check the working status of the application in Worker Role. The following is a Worker Role application example. 
 
-This worker role will always keep adding trace logs into Application Insights every 30 seconds. But log will not always be added successfully because there is one changing bool variable select to make the Run function return a handled exception in every two loops. The trace log recorded into Application Insights will contain the timestamp, a fully random GUID as correlation ID to identify the relationship between request record and other records. Every loop is considered as a request, so it will generate a record of request with the start timestamp, the duration, the success status, the response code (200 for success and 500 for exception) and the correlation ID.
+This worker role will always keep adding trace logs into Application Insights every 30 seconds. But log won't always be added successfully because there's one changing bool variable select to make the Run function return a handled exception in every two loops. The trace log recorded into Application Insights will contain the timestamp, a fully random GUID as correlation ID to identify the relationship between request record and other records. Every loop is considered as a request, so it will generate a record of request with the start timestamp, the duration, the success status, the response code (200 for success and 500 for exception) and the correlation ID.
 
 According to the [document](https://docs.microsoft.com/azure/azure-monitor/app/data-model-request-telemetry), only Duration and Success status are necessary for generating a request record. The reason why the other information is kept into the request record is:
 
@@ -198,16 +207,16 @@ Pay attention to the specific lines in the above example project that are necess
 - Line 4 to 6 are to import the Application Insight SDK
 - Line 12 is to define a private TelemetryClient
 - Line 25 is to generate a RequestTelemetry. Once it’s created, all the changes should be saved into this RequestTelemetry and SDK will save this RequestTelemetry into Application Insight.
-- Line 29 to 31 are to configure the Name, Id and StartTime property of the request.
+- Line 29 to 31 are to configure the Name, ID and StartTime property of the request.
 - Line 66 to 69 are to set Success, Duration and ResponseCode property of the request, then save it into Application Insight.
 
-Except the above necessary steps, you need pay attention on how we save the custom Trace log and Exception, such as line 61 and 62. If your application uses multiple threads, the unique specific ID will be helpful for us to track the request workflow in Application Insights ..
+Except the above necessary steps, you need pay attention on how we save the custom Trace log and Exception, such as line 61 and 62. If your application uses multiple threads, the unique specific ID will be helpful for us to track the request workflow in Application Insights.
 
 ## Check the failed request and related exception of Web Role
 
 For failed request in Web Role, the unhandled exception and the handled exception (which is in try function) with `ai.TrackException` will be automatically collected into exception table. 
 
-For the example exception in the screenshot, if there isn’t `ai.TrackException` in line 47, the exception will be considered as handled exception, but it will not be recorded into Application Insight.
+For the example exception in the screenshot, if there isn’t `ai.TrackException` in line 47, the exception will be considered as handled exception, but it won't be recorded into Application Insight.
 
 There are two methods to find the exception record by a failed request record.
 
@@ -225,13 +234,13 @@ By design of Cloud Service, the request of Web Role is automatically marked with
  
 The steps will be:
 
-1.	Locate the failed request in requests table and record its id:
+1.	Locate the failed request in requests table and record its ID:
     ```
     requests
     | where resultCode == "500"
     ```
      
-2.	Find the exception with same id in exceptions table:
+2.	Find the exception with same ID in exceptions table:
 
     ```
     exceptions
@@ -276,7 +285,7 @@ In this part, there will be several common scenarios and the related guidelines 
 
 To monitor the Memory and Request status of the Web Role in Cloud Service, you just need to enable Application Insights on the role that you wants to collect metrics data from. Then It will automatically collect data for Memory usage and request status of the Web Role.
 
-To see the collected data, it’s recommended to use the Metrics page of the Application Insights. Under Application Insight standard metrics as Metric Namespace, there is Available memory under Server part for the memory. Also there is Server requests under Server part, Failed requests and exceptions under Failure part or some other metric type to monitor the request status.
+To see the collected data, it’s recommended to use the Metrics page of the Application Insights. Under Application Insight standard metrics as Metric Namespace, there's Available memory under Server part for the memory. Also there are Server requests under Server part, Failed requests and exceptions under Failure part or some other metric type to monitor the request status.
 
 If you need to view more information such as exceptions that throw by the app, go to **Failures** or **Performance** page
 
@@ -284,12 +293,12 @@ If you need to view more information such as exceptions that throw by the app, g
 
 Like WebRole, it’s also possible to monitor the memory and request status of the WorkerRole but there will be some extra limitations:
 
-1. For WorkerRole, the memory metrics data will not be automatically collected. To monitor the memory status, user needs to enable the \Memory\Available MBytes from Performance Counters of Diagnostic Setting. The collected data will be in custom metrics table of Logs page.
+1. For WorkerRole, the memory metrics data won't be automatically collected. To monitor the memory status, user needs to enable the \Memory\Available MBytes from Performance Counters of Diagnostic Setting. The collected data will be in custom metrics table of Logs page.
 1. To view the metrics chart of the collected memory data, we can switch to the Metrics page of Application Insight, select Log-based metrics in Metric Namespace and \Memory\Available MBytes under CUSTOM in Metric. The chart of the Available Memory of selected time range will be displayed.
 
 IMPORTANT 
 
-- The dotted line in the chart means that the data is not accurate enough to generate the data or the data is missed during that time range. From the Logs, the interval of collecting the Memory data is about 3 minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than 3 minutes so the collected data will not be accurate enough. Thus, it’s dotted line.
+- The dotted line in the chart means that the data isn't accurate enough to generate the data or the data is missed during that time range. From the Logs, the interval of collecting the Memory data is about 3 minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than 3 minutes so the collected data won't be accurate enough. Thus, it’s dotted line.
 - The unit of the data is billion.
 
 ### Troubleshoot performance issues such as slow response time 
@@ -298,14 +307,14 @@ For example, when a Cloud Service WebRole receives a request, it needs to get so
 
 The above is only one possible scenario as example. The design of the custom log system needs to be done by developers for different scenarios. In this part, there will only be a few tips about how to design a such kind of custom log:
 
-1. For both WorkerRole and WebRole, please check previous part The way to add custom log to save custom trace log into Application Insights. It’s recommended to save trace log at every process start step. For example, in the above example scenario, it’s possible to add trace log at following points when:
+1. For both WorkerRole and WebRole, please check previous part. The way to add custom log to save custom trace log into Application Insights. It’s recommended to save trace log at every process start step. For example, in the above example scenario, it’s possible to add trace log at following points when:
 
     - the WebRole receives the request
     - the WebRole starts to build communication with SQL server
     - the WebRole receives the data returned by SQL server and starts generating the webpage
     - the WebRole generates the webpage and returns it to user
 
-2. If the main process is an application in WorkerRole, please check previous part The way to record the function of WorkerRole application as request to add custom correlation ID into custom request record and exception record. 
+2. If the main process is an application in WorkerRole, please check previous part. The way to record the function of WorkerRole application as request to add custom correlation ID into custom request record and exception record. 
 
 Once the system is online, user can check the requests in the Performance page of Application Insights and focus on the request durations by following:
 
@@ -314,7 +323,7 @@ Once the system is online, user can check the requests in the Performance pa
 1. Select on Drill into x Samples
 1. Select one request as example and get the built-in or custom ID of this request  
 
-If the system is not quite complicated, the time spent by different steps will be displayed in the End-to-end transaction chart. If the system is complicated or we’re using a custom ID which causes it unable to display the data in chart, use following query to get all related trace logs containing same correlation ID:
+If the system isn't quite complicated, the time spent by different steps will be displayed in the End-to-end transaction chart. If the system is complicated or we’re using a custom ID which causes it unable to display the data in chart, use following query to get all related trace logs containing same correlation ID:
 
 ```
 traces
@@ -334,7 +343,7 @@ Capture the dump file. Here are some tips:
 
 User can RDP into the instance having high CPU/Memory issue and verify which process is consuming most of the CPU/Memory. If it’s WaWorkerHost, then it means that it’s the application itself consuming so much CPU/Memory.
 
-If the instances are having high CPU/Memory and the application is just with low-performance but not crashed, then user can try to RDP into the instance and capture a dump file for this. For more details about how to capture the dump file, please kindly refer to this document. For example, user can use following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least 3 seconds. 5 dump files will be captured and saved into c:\procdumps directory.
+If the instances are having high CPU/Memory and the application is just with low-performance but not crashed, then user can try to RDP into the instance and capture a dump file for this. For more details about how to capture the dump file, please kindly refer to this document. For example, user can use following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least 3 seconds. Five dump files will be captured and saved into c:\procdumps directory.
 
 ```
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
