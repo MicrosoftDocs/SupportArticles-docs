@@ -18,7 +18,7 @@ After installing the June 2022 security updates for Windows or later, a Configur
 
 - The Configuration Manager console fails to access the SMS Provider remotely under any user account. However, under the same credential, a local connection to the SMS Provider is successful.
 
-    When the Configuration Manager administrator connects remotely to client computers, the same issue occurs for Configuration Manager tools like Support Center or Policy Spy.
+- When the Configuration Manager administrator connects remotely to client computers, the same issue (under any user account, remote connection fails but local connection is successful) occurs for Configuration Manager tools like Support Center or Policy Spy.
 
 - Content fails to be distributed to a remote distribution point.
 
@@ -45,7 +45,7 @@ System.UnauthorizedAccessException
 
 To resolve these issues, install the latest cumulative update for Windows on both computers that initiate the connection (the remote console or site server) and receive it (the SMS Provider, distribution point, or remote client). Besides enhancing the security, installing the update can ensure the same level of DCOM hardening and the logging capabilities.
 
-The latest versions of Configuration Manager makes security changes, so we recommend that you upgrade to [Configuration Manager, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) or a later version.
+The latest versions of Configuration Manager make security changes, so we recommend that you upgrade to [Configuration Manager, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) or a later version.
 
 ## DCOM hardening changes
 
