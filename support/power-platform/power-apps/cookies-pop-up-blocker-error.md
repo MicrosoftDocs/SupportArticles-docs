@@ -4,7 +4,7 @@ description: Resolves the cookies or pop-up blockers errors when accessing Unifi
 ms.reviewer: rashb
 ms.topic: troubleshooting
 ms.date: 10/19/2021
-author:
+author: David-Pack
 ms.author: rashb
 ms.subservice: powerapps-unified-interface
 ---

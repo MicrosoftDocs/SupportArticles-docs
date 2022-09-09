@@ -4,7 +4,7 @@ description: Describes an issue in which custom pages, the Microsoft 365 app lau
 ms.reviewer: rashb
 ms.topic: troubleshooting
 ms.date: 10/21/2021
-author:
+author: David-Pack
 ms.author: rashb
 ms.subservice: powerapps-others
 ---
