@@ -44,9 +44,9 @@ landingContent:
         links:
           - text: Find and fix email delivery issues
             url: ./email-delivery/email-delivery-issues.md
-          - text: Fix issues with printers, scanners, and LOB applications that send email using Microsoft 365 or Office 365
+          - text: Fix issues with devices and LOB apps that send email using Microsoft 365
             url: /exchange/mail-flow-best-practices/fix-issues-with-printers-scanners-and-lob-applications-that-send-email-using-off
-          - text: Email non-delivery reports and SMTP errors in Exchange Online
+          - text: Email non-delivery reports and SMTP errors
             url: /exchange/mail-flow-best-practices/non-delivery-reports-in-exchange-online/non-delivery-reports-in-exchange-online
  # Card
   - title: Calendars
