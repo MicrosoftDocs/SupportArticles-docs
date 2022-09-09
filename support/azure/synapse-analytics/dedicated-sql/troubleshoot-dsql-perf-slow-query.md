@@ -7,7 +7,6 @@ ms.author: haiyingyu
 ms.reviewer: scepperl
 ---
 
-<!-- #region azdata_cell_guid="5c530759-ab09-4ee1-b9b1-261fd5811aa5" -->
 # Troubleshoot a Slow Query on Dedicated SQL Pool
 
 _Applies to:_ &nbsp; Azure Synapse Analytics
@@ -60,7 +59,7 @@ To better target the slow queries, use the following tips when you run the scrip
 
 ## Step 2: Determine where the query is taking time
 
-Run the following script to find out the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Note down the `StepIndex` of the slow step identified from the result set.
+Run the following script to find out the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Note down the `StepIndex`, `Phase` and `Description` of the slow step identified from the result set.
 
 | Parameter | Description |
 | -- | ---- |
@@ -122,7 +121,7 @@ ORDER BY StepIndex;
 
 ## Step 3: Review step details
 
-Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to compare all distribution timings.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to compare all distribution timings. Note down the `wait_type` value for the distribution that may cause the performance issue.
 
 | Parameter | Description |
 | -- | ---- |
@@ -165,125 +164,91 @@ WHERE sr.request_id = @QID
 ORDER BY distribution_id
 ```
 
-<!-- #region language="sql" azdata_cell_guid="68940a9b-064f-403f-b63d-92c0ae06e891" -->
-## Step 4: Look for common issues
+## Step 4: Common causes and mitigations
 
-After noting the [Phase] column in Step 2, expand the following sections of common issues to help you idenity potential mitigations:
+There're several ways to identify the possible cause of the performance issue.
 
+- According to the `Description` values obtained in [Step 2](#step-2-determine-where-the-query-is-taking-time), check the relevant section for more information from the following table.
 
+    |Description | Common Cause |
+    |-----|------------|
+    |Compilation Concurrency|[Blocked: Compilation Concurrency](#blocked-compilation-concurrency)|
+    |Resource Allocation (Concurrency)|[Blocked: Resource Allocation](#blocked-resource-allocation)|
 
-<!-- #endregion -->
+- If the query is in _Running_ status identified in [Step 1](#step-1-identify-the-request_id-aka-qid), but there's no step information in [Step 2](#step-2-determine-where-the-query-is-taking-time), check the cause that best fits your scenario to get more information from the following table.
 
-<!-- #region language="sql" azdata_cell_guid="e28356dd-1dbb-420e-b899-6c5bf8daa0c8" -->
+    |Scenario | Common Cause |
+    |-----|------------|
+    |Statement contains complex join-filter logic or performs joins in `WHERE` clause|[Complex query or older JOIN syntax](#complex-query-or-older-join-syntax)|
+    |Statement is a long-running `DROP TABLE` or `TRUNCATE TABLE` statement|[Long-running DROP TABLE or TRUNCATE TABLE](#long-running-drop-table-or-truncate-table)|
+    |CCIs have high percentage of deleted or open rows (see [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes))|[Unhealthy CCIs (generally)](#unhealthy-ccis-generally)|
+
+- Analyze the result set in the [Step 1](#step-1-identify-the-request_id-aka-qid). If one or more `CREATE STATISTICS` statements executed immediately after the slow query submission, the performance issue may be caused by [Auto-create Statistics](#auto-create-statistics) feature. Note that the `CREATE STATISTICS` statement has a timeout of 5m.
+
 ### Compilation Phase Issues
 
-<details><summary>Blocked: Compilation Concurrency</summary>
-<p>
+#### Blocked: Compilation Concurrency
 
-#### Description
+Concurrency Compilation blocks rarely occur. However, if you encounter this type of block, it signifies that a large volume of queries were submitted in a very short time and have been queued to begin compilation.
 
-Concurrency Compilation blocks rarely occur.  However, if you encounter this type of block, it signifies that a large volume of queries were submitted in very short order and have been queued to begin compilation.
+**Mitigations**
 
-#### How to identify and mitigate
+Reduce the number of queries submitted concurrently.
 
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* Indicated by value of "Compilation Concurrency" in \[Description\] field of Step 2 |  \* Reduce number of queries subimitted concurrently |
-
-</p>
-</details>
-
-<details><summary>Blocked: Resource Allocation</summary>
-<p>
-
-#### Description
+#### Blocked: Resource Allocation
 
 Being blocked for Resource Allocation means that your query is waiting its turn in line to execute based on:
 
-1. the amount of memory granted based on the resource class or workload group assignment associated to the user
-2. the amount of available memory on the system and/or workload group
-3. (optional) workload group/classifier importance
+- The amount of memory granted based on the resource class or workload group assignment associated to the user.
+- The amount of available memory on the system or workload group.
+- (Optional) The workload group/classifier importance.
 
-#### How to identify and mitigate
+**Mitigations**
 
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* Indicated by value of "Resource Allocation (Concurrency)" in \[Description\] field of Step 2 |  \* Wait for blocking session to complete<br>\* Evaluate [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class) (see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits) for more information)<br/>\* [KILL](/sql/t-sql/language-elements/kill-transact-sql) blocking session\_id |
+- Wait for the blocking session to complete.
+- Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+- [Kill the blocking session](/sql/t-sql/language-elements/kill-transact-sql).
 
-</p>
-</details>
+#### Complex query or older JOIN syntax
 
-<details><summary>Complex query or older JOIN syntax</summary>
-<p>
+You may encounter a situation where the default query optimizer methods are proven ineffective that the compilation phase takes a long time, if the query:
 
-#### Description
+- Involves a high number of joins and/or sub-queries (complex query).
+- Utilizes joiners in the `FROM` clause (not ANSI-92 style joins).
 
-Complex queries (meaning the query involves a high number of joins and/or subqueries) or queries which do not utilize an ANSI-92 style JOIN (joiners in FROM clause) can encounter situations where the default query optimizer methods are proven ineffective, causing the compilation phase to take a long time.  Though these scenarios are atypical, you have options to attempt to override the default behavior to reduce the time it takes for the query optimizer to choose a plan.
+Though these scenarios are atypical, you have options to attempt to override the default behavior to reduce the time it takes for the query optimizer to choose a plan.
 
-#### How to identify and mitigate
+**Mitigations**
 
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* Statement in 'Running' status in Step 1, but no step information in Step 2<br>\* and Statement contains complex join\\filtering logic or performs joins in WHERE clause | \* Use ANSI-92 style JOINs<br>\* Add query hints: OPTION(FORCE ORDER, USE HINT ('FORCE\_LEGACY\_CARDINALITY\_ESTIMATION'))<br>\* Break query into multiple, less complex steps |
+- Use ANSI-92 style joins.
+- Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sql/t-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performance/cardinality-estimation-sql-server).
+- Break the query into multiple, less complex steps.
 
-</p>
-</details>
+#### Long-running DROP TABLE or TRUNCATE TABLE
 
-<details><summary>Long-running DROP TABLE or TRUNCATE TABLE</summary>
-<p>
+For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statements will defer storage cleanup to a background process. However, if your workload performs a high number of `DROP`/`TRUNCATE TABLE` statements in a short time frame, it's possible that metadata becomes crowded and causes subsequent `DROP`/`TRUNCATE TABLE` statements to execute slowly.
 
-#### Description
+**Mitigations**
 
-For execution time efficiencies, the DROP TABLE and TRUNCATE TABLE statements will defer storage cleanup to a background process.  However, in the event your workload performs a high number of DROP/TRUNCATE TABLE statements in a short time frame, it's possible that metadata can become congested and cause subsequent DROP/TRUNCATE TABLE statements to execute slowly.
+Identify a maintenance window, stop all workloads, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force a immediate cleanup of previously dropped/truncated tables.
 
-#### How to identify and mitigate
+#### Unhealthy CCIs (generally)
 
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* Statement in 'Running' status in Step 1, but no step information in Step 2<br>\* and Statement is a long-running DROP TABLE or TRUNCATE TABLE statement<br>\* and Statement is not being blocked | \* Identify a maintenance window, stop all workload, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force immediate cleanup of previously dropped/truncated tables |
+Poor clustered columnstore index (CCI) health requires additional metadata which can cause the query optimizer to take additional time to determine an optimal plan. To avoid this situation, ensure that all of your CCIs are in good health.
 
-</p>
-</details>
+**Mitigations**
 
-<details><summary>Unhealthy CCIs (generally)</summary>
-<p>
+[Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression).
 
-#### Description
+#### Auto-create Statistics
 
-Poor clustered columnstore index (CCI) health requires additional metadata which can cause the query optimizer to take additional time to determine an optimal plan.  To avoid this scenario, ensure that all of your CCIs are in good health.
+The [automatic create statistics option](/sql/relational-databases/statistics/statistics#AutoUpdateStats), `AUTO_CREATE_STATISTICS` is ON by default to help ensure the query optimizer can make good distributed plan decisions. However, the auto-creation process itself can make a query take longer than subsequent executions of the same. Moreover, some development patterns may afford repeated statistics creation attempts if the target object is large.
 
-#### How to identify and mitigate
+**Mitigations**
 
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* Statement in 'Running' status in Step 1, but no step information in Step 2<br>\* and CCIs have high percentage of deleted or open rows (see [Optimizing clustered columnstore indexes](/en-us/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes)) | \* [Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression) |
-
-</p>
-</details>
-
-<details><summary>Auto-create Statistics</summary>
-<p>
-
-#### Description
-
-The auto-creation of statistics feature is enabled by default to help ensure the query optimizer can make good distributed plan decisions.  However, the auto-creation process itself can make a query appear to take longer than subsequent executions of the same.  Moreover, some development patterns may afford repeated statistics creation attempts if the target object is large.
-
-#### How to identify and mitigate
-
-| Identified By | Mitigations |
-|-----------------|-------------|
-| \* One or more CREATE STATISTCS statements executed immediately after slow query submission (discoverable in Step 1)<br>* NOTE: the CREATE STATISTICS statement has a timeout of 5m | \* Manually create the statistics instead of relying on the auto-create feature |
-
-</p>
-</details>
-
-<!-- #endregion -->
-
-<!-- #region language="sql" azdata_cell_guid="df25d73d-b0d7-4734-83cf-b2cfc48abe7a" -->
-<br>
+Manually create the statistics instead of relying on the auto-create feature.
 
 ### Execution Phase Issues
-
 
 <details><summary>Inaccurate estimates</summary>
 <p>
@@ -380,9 +345,7 @@ In-flight data skew is a variant of the aforementioned data skew issue.  However
 
 </p>
 </details>
-<!-- #endregion -->
 
-<!-- #region language="sql" azdata_cell_guid="329ffe48-f904-4425-8bf3-4c0e3f0e54ae" -->
 <br>
 
 ### Wait Type issue indicators
