@@ -2,7 +2,7 @@
 title: Troubleshoot slow queries on a dedicated SQL pool
 description: Describes the troubleshooting steps and mitigations for the common performance issues of queries run on an Azure Synapse Analytics dedicated SQL pool. 
 ms.date: 09/06/2022
-author: HaiyingYu
+author: scott-epperly
 ms.author: haiyingyu
 ms.reviewer: scepperl
 ---
