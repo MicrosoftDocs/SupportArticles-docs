@@ -11,7 +11,7 @@ ms.author: v-jayaramanp
 
 # Queries take longer to finish when the size of the TokenAndPermUserStore cache grows in SQL Server
 
-This article helps you to troubleshoot problems related to queries that take longer to complete when the size of the TokenAndPermUserStore grows. It also provides various causes and workarounds.
+This article helps you to troubleshoot problems related to queries that take longer to complete when the size of the `TokenAndPermUserStore` grows. It also provides various causes and workarounds.
 
 _Original KB number:_ &nbsp; 927396
 
@@ -65,7 +65,7 @@ The TokenAndPermUserStore cache maintains the following security token types:
   - Access Check indicates whether a given user in a particular database has permission to run a query that involves multiple objects.
   - Prior to Microsoft SQL Server 2008, ACR security caches were stored in a single cache, `TokenAndPermUserStore`.  
   - In SQL Server 2008, the ACR caches were separated and the ACR cache entries were tracked in their own individual user stores. This separation improved performance and provided   better bucket count and quota control for the caches.
-  - Currently, TokenAndPermUserStore and ACRCacheStores are the only kinds of security cache that are used. For more information on ACR caches, see [access check cache Server Configuration Options](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options?view=sql-server-ver16&preserve-view=true).
+  - Currently, `TokenAndPermUserStore` and `ACRCacheStores` are the only kinds of security cache that are used. For more information on ACR caches, see [access check cache Server Configuration Options](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options?view=sql-server-ver16&preserve-view=true).
   
 You can run the following query to get information about the different caches and their individual sizes:
 
@@ -75,7 +75,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'USERSTORE_TOKENPERM'
 ```
 
-You can run the following query to identify the kinds of tokens that are growing in the TokenAndPermUserStore:
+You can run the following query to identify the kinds of tokens that are growing in the `TokenAndPermUserStore`:
 
 ```sql
 SELECT [name] AS "SOS StoreName",[TokenName],[Class],[SubClass], count(*) as [Num Entries]
@@ -96,7 +96,7 @@ order by [Num Entries] desc
 
 ## Workaround
 
-SQL Server offers two trace flags that can be used to configure the quota of the TokenAndPermUserStore (By default, there is no quota. This  implies that there can be any number of entries  in this cache).
+SQL Server offers two trace flags that can be used to configure the quota of the `TokenAndPermUserStore` (By default, there is no quota. This  implies that there can be any number of entries  in this cache).
 
 - **TF 4618** - Limits the number of entries in `TokenAndPermUserStore` to 1024.
 - **TF 4618+TF 4610** - Limits the number of entries in `TokenAndPermUserStore` to 8192.
