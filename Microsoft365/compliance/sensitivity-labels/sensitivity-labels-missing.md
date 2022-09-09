@@ -116,7 +116,7 @@ To resolve this issue, use one or more of the following methods:
   - `HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Security\labels`
   - `HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Security\Labels`
 
-    If these registry keys are present and the `UseOfficeForLabelling` value is set to **0**, it indicates that the Office apps are prevented from using built-in labeling. In this case, set the `UseOfficeForLabelling` value to **1** to enable the Office apps to use built-in labeling.
+  If these registry keys are present and the `UseOfficeForLabelling` value is set to **0**, it indicates that the Office apps are prevented from using built-in labeling. In this case, set the `UseOfficeForLabelling` value to **1** to enable the Office apps to use built-in labeling.
 
 - Verify that the appropriate licenses are assigned to the affected users as per [Microsoft 365 guidance for security & compliance](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance).
 - Check whether there are any [known issues with sensitivity labels in the Office apps](https://support.microsoft.com/office/known-issues-with-sensitivity-labels-in-office-b169d687-2bbd-4e21-a440-7da1b2743edc).
