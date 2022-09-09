@@ -70,9 +70,10 @@ There are several common advanced ways to use Application Insights with Cloud Se
 
 To add a custom log into your application, follow these steps:
 
-1. In the Visual Studio, Right-click the Cloud Services project and select **Manage NuGet Packages...**.
-2. Make sure that **Microsoft.ApplicationInsights** is installed.
-3. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in Worker RoleName.cs.
+1. In the Visual Studio, right-click the Cloud Services project and select **Manage NuGet Packages...**.
+1. Make sure that **Microsoft.ApplicationInsights** is installed.
+ ![Image that shows the Manage NuGet Packages option](./media/troubleshoot-common-scenario-use-application-insights/install-package.png)
+1. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in Worker RoleName.cs.
 
     ```C#
     TelemetryConfiguration.Active.InstrumentationKey = RoleEnvironment.GetConfigurationSettingValue("APPINSIGHTS_INSTRUMENTATIONKEY"); 
@@ -274,6 +275,7 @@ Like Web Role, it’s also possible to monitor the memory and request status of 
 1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic Setting. The collected data will be in the `custommetrics` table of Logs page.
 1. To view the metrics chart of the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace and **Available Memory** under **Performance** in Metric. The chart of the Available Memory of selected time range will be displayed.
 
+    ![Image that shows the metrics chart](./media/troubleshoot-common-scenario-use-application-insights/view-memory-chart.png)
 ### Troubleshoot performance issues such as slow response time
 
 For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data into a web page and return it to the user. Imagine that this progress is much slower than expected but still successful, it’s reasonable that user wants to clarify whether most of time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need user to add some extra custom log to record the timestamp of each step, such as start of the progress, start of the communication with SQL Database, end of the communication with SQL Database and end of generating the webpage etc.
@@ -317,7 +319,7 @@ Capture the dump file. Here are some tips:
 
 You can RDP into the instance having high CPU/Memory issue and verify which process is consuming most of the CPU/Memory. If it’s WaWorkerHost, then it means that it’s the application itself consuming so much CPU/Memory.
 
-If the instances are having high CPU/Memory and the application is just with low-performance but not crashed, then you can try to RDP into the instance and capture a dump file for this. For more details about how to capture the dump file, please kindly refer to this document. For example, you can use following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least 3 seconds. Five dump files will be captured and saved into c:\procdumps directory.
+If the instances are having high CPU/Memory and the application is just with low-performance but not crashed, then you can try to RDP into the instance and capture a dump file for this. For more details about how to capture the dump file, please kindly refer to this document. For example, you can use following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least 3 seconds. Five dump files will be captured and saved into `c:\procdumps` directory.
 
 ```
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
