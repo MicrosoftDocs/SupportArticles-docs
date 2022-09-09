@@ -203,19 +203,19 @@ Only Duration and Success status are necessary for generating a request record. 
 > [!NOTE]
 > You can also record the Work Role requests by using custom telemetry. For more information, see the [code sample](https://github.com/MohanGsk/ApplicationInsights-Home/tree/master/Samples/AzureEmailService/Worker RoleA).
  
-## Check the failed request and related exception for Web Role
+### Check the failed request and related exception for Web Role
 
 For failed requests in Web Role, the unhandled exception and the handled exception with ai.TrackException are automatically collected into exception table.
 
 To find the exception records in the Application Insights instances, you can use one of the following methods:
 
-### View the Failures page in the Azure portal
+#### View the Failures page in the Azure portal
 
 1. Go to the Azure portal, select the Application insights instance, select **Failures**.
 2. Locate the failed request in **Operations** tab by adjusting the time range and selecting corresponding operation.
 3. Select the operation name, the failed requests with specific exception type or specific response code will be listed automatically. For more information, see [Part1]
 
-### Query Logs in the Azure portal
+#### Query Logs in the Azure portal
 
 The second method is query logs from Application Insights. It allows you to use more custom filters to look for the specific types of exception. It also provides more details information that will not be displayed in the **Failures** page.
  
@@ -237,7 +237,7 @@ The request that the Web Role received is automatically marked with unique ID to
 
 The way of tracking exceptions based on a failed request will be helpful when you want to troubleshoot an intermittent failure issue since it will contain the complete CallStack of that request.
  
-## Check the failed request and related exception for Worker Role
+### Check the failed request and related exception for Worker Role
 
 Since the unhandled exception of Worker Role may cause the whole application downtime, it is recommended to handle all the exceptions in Worker Role that means that it should be included by `try` function. As Web Role, to the handled exceptions, `ai.TrackException` is needed to record the exceptions into Application Insights.
 
