@@ -18,7 +18,7 @@ After installing the June 2022 security updates for Windows or later, a Configur
 
 - The Configuration Manager console fails to access the SMS Provider remotely under any user account. However, under the same credential, a local connection to the SMS Provider is successful.
 
-- When the Configuration Manager administrator connects remotely to client computers, the same issue (under any user account, remote connection fails but local connection is successful) occurs for Configuration Manager tools like Support Center or Policy Spy.
+- When the Configuration Manager administrator connects remotely to client computers, the same issue (under any user account, the remote connection fails but the local connection is successful) occurs for Configuration Manager tools like Support Center or Policy Spy.
 
 - Content fails to be distributed to a remote distribution point.
 
