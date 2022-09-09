@@ -41,7 +41,7 @@ Event ID 5120 indicates that there has been an interruption to communication bet
 
 3. If you see a few random Events ID 5120 with an error of STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR or error code c0130021, they can be safely ignored. We recognize it isn't optimal as they create false positive alarms and trigger alerts in management software.
 
-4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Do the due diligence to review the error code in the description of all logged Event ID 5120 events. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
+4. If you see Event ID 5120 is logged with error codes other than STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR, it's a sign of a problem. Make sure to review the error code in the description of each Event ID 5120 logged. Be careful not to dismiss the event because of a single event with STATUS_CLUSTER_CSV_AUTO_PAUSE_ERROR. If you see other errors logged, there are fixes available that need to be applied.
 
 ## Common issues and solutions
 
