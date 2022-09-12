@@ -1,5 +1,5 @@
 ---
-title: \"Multiple entries\" error when a remote move migration fails
+title: '"Multiple entries" error when a remote move migration fails'
 description: Describes an issue in which a remote move migration fails because the email address that specifies a mailbox doesn't uniquely identify it.
 author: v-trisshores
 ms.author: v-trisshores
