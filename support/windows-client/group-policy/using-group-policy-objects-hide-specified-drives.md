@@ -51,7 +51,7 @@ To make changes to this policy for one of the seven default values:
 
 1. Start the Microsoft Management Console. On the Console menu, click **Add/Remove Snap-in**.
 2. Add the Group Policy snap-in for the default domain policy. To do this, click **Browse** when you are prompted to select a Group Policy Object (GPO). The default GPO is Local Computer. You can also add GPOs for other domain partitions (specifically, Organizational Units).
-3. Open the following sections: **User Configuration**, **Administrative Templates**, **Windows Components**, and **Windows Explorer**.
+3. Open the following sections: **User Configuration**, **Administrative Templates**, **Windows Components**, and **File Explorer**.
 4. Click **Hide these specified drives in My Computer**.
 5. Click to select the **Hide these specified drives in My Computer** check box.
 6. Click the appropriate option in the drop-down box.
