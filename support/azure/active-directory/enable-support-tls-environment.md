@@ -227,35 +227,30 @@ To query for legacy TLS entries using Azure Monitor:
     // Interactive sign-ins only
     SigninLogs
     | where AuthenticationProcessingDetails has "Legacy TLS"
-        and AuthenticationProcessingDetails has "True"
     | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
     | mv-apply JsonAuthProcDetails on (
         where JsonAuthProcDetails.key startswith "Legacy TLS"
         | project HasLegacyTls=JsonAuthProcDetails.value
     )
-    | where HasLegacyTls == true
+    | summarize LegacyTLS = countif(HasLegacyTls == true), TLS12 = countif(HasLegacyTls == false) by AppDisplayName, AppId
 
     // Non-interactive sign-ins
     AADNonInteractiveUserSignInLogs
     | where AuthenticationProcessingDetails has "Legacy TLS"
-        and AuthenticationProcessingDetails has "True"
     | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
     | mv-apply JsonAuthProcDetails on (
         where JsonAuthProcDetails.key startswith "Legacy TLS"
         | project HasLegacyTls=JsonAuthProcDetails.value
     )
-    | where HasLegacyTls == true
+    | summarize LegacyTLS = countif(HasLegacyTls == true), TLS12 = countif(HasLegacyTls == false) by AppDisplayName, AppId
 
     // Workload Identity (service principal) sign-ins
     AADServicePrincipalSignInLogs
-    | where AuthenticationProcessingDetails has "Legacy TLS"
-        and AuthenticationProcessingDetails has "True"
-    | extend JsonAuthProcDetails = parse_json(AuthenticationProcessingDetails)
-    | mv-apply JsonAuthProcDetails on (
-        where JsonAuthProcDetails.key startswith "Legacy TLS"
-        | project HasLegacyTls=JsonAuthProcDetails.value
-    )
-    | where HasLegacyTls == true
+    |summarize LegacyTLS = countif(AuthenticationProcessingDetails has "Legacy TLS (TLS 1.0, 1.1, 3DES)"), TLS12 = countif(AuthenticationProcessingDetails !has "Legacy     TLS (TLS 1.0, 1.1, 3DES)") by ServicePrincipalName, ServicePrincipalId
+    
+    // To see additional details, add more columns such as UPN and Device Details to the "summarize" lines above, see the example below:
+    // | summarize LegacyTLS ... by AppDisplayName, AppId, UserPrincipalName, tostring(DeviceDetail.operatingSystem)
+    
     ```
 
 1. Select **Run** to execute the query. The log entries that match the query appear in the **Results** tab below the query definition.
