@@ -185,6 +185,10 @@ You can uninstall performance diagnostics from a VM. This action removes the VM 
 
 :::image type="content" source="media/performance-diagnostics/uninstall-button.png" alt-text="Screenshot of the Performance diagnostics blade toolbar with Uninstall button highlighted.":::
 
+## Cross region move
+
+Azure VMs, and related network/storage accounts, can be moved across regions using Azure Resource Mover. However, moving VM extensions across regions is not suppported. Azure Performance Diagnostics is a VM extension. Hence, moving Azure Performance Diagnostics VM extension across regions, is not supported. You would need to install it manually on the VM in the target region after the move is complete. For more information, see [Support matrix for moving Azure VMs between Azure regions](/azure/resource-mover/support-matrix-move-region-azure-vm).
+
 ## Frequently asked questions
 
 ### Where is the diagnostics data from my VM stored
