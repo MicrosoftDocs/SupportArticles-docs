@@ -66,7 +66,9 @@
     href: failed-update-ongoing-migration-process.md
   - name: Update or change the certificate used
     href: update-or-change-certificate-used.md
-  - name: Troubleshoot with App Insights features overview
+  - name: Troubleshoot with App Insights-features overview
+    href: troubleshoot-with-app-insights-features-overview.md
+  - name: Troubleshoot with App Insights-common scenarios
     href: troubleshoot-with-app-insights-features-overview.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md

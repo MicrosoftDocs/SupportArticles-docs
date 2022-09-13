@@ -1,22 +1,22 @@
 ---
 title: Troubleshoot common Cloud Service Application issues with Application Insights
-description: Describes common Cloud Service Application issues.
+description: Describes common scenarios that use Application Insights to troubleshoot Cloud Service Application issues.
 ms.reviewer: patcatun
-author: genlin
+author: JerryZhangMS
 ms.author: genli
 ms.service: cloud-services
 ---
-# Troubleshoot common Cloud Service Application issues with Application Insights
+# Troubleshoot Cloud Service apps with Application Insights - common scenarios
 
 When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from Application Insights' integration with Cloud Service.  
 
-To learn more about using Application Insights with Cloud Service, see [feature overview](link).
+To learn more about using Application Insights with Cloud Service, see [feature overview](troubleshoot-with-app-insights-features-overview.md).
 
 ## Diagnostic setting and Application Insights
 
-When Application Insights is enabled on Cloud Service, Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic setting will be sent to Application Insights. For more information, see https://docs.microsoft.com/en-us/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#to-view-cloud-service-diagnostics-data
+When Application Insights is enabled on Cloud Service, Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic setting will be sent to Application Insights. For more information, see [Set up diagnostics for Azure Cloud Services](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines)
 
-When Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role:
+When Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role.
 
 ### For Web Role
 
@@ -96,7 +96,7 @@ By design, the request of Web Role is automatically marked with a unique ID in C
 
 This worker role will keep adding trace logs into Application Insights every 30 seconds. But logs won't always be added successfully because there's one changing bool variable selected to make the Run function return a handled exception in every two loops. The trace log recorded into Application Insights will contain the timestamp, a fully random GUID, as a correlation ID to identify the relationship between the request record and other records. Every loop is considered a request, so it will generate a record of the request with the start timestamp, the duration, the success status, the response code (200 for success and 500 for exception), and the correlation ID.
 
-According to the [document](https://docs.microsoft.com/azure/azure-monitor/app/data-model-request-telemetry), only the Duration and Success statuses are necessary for generating a request record. The other information is kept in the request record because:
+Only the [Duration and Success statuses](/azure/azure-monitor/app/data-model-request-telemetry) are necessary for generating a request record. The other information is kept in the request record because:
 
 - The start timestamp and response code can make it a real request, and different response codes (for example, 400 and 500 for failed requests) can help when the user wants to identify different failure reasons. 
 
@@ -199,7 +199,7 @@ namespace Worker Role1
 }
 ```
 > [!NOTE ]
-> You can also do the same thing by using custom telemetry. For more information, see the [official example](https://github.com/MohanGsk/ApplicationInsights-Home/tree/master/Samples/AzureEmailService/WorkerRoleA).
+> You can also do the same thing by using custom telemetry. For more information, see the [Work Role code sample](https://github.com/wuping2004/CloudServiceSample/tree/add-cpp-sdk/Samples/AzureEmailService/WorkerRoleA).
  
 Pay attention to the specific lines in the above example project that are necessary to record requests in Application Insight:
 
@@ -263,7 +263,7 @@ In this situation, checking the Failures page is still possible, but you need to
     exceptions 
     | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
     ```
-- Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as situation 1.
+- Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as previous situation.
 - Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
     ```
@@ -283,7 +283,7 @@ This section looks at several common scenarios and the related guidelines for us
 
 To monitor the Memory and Request status of the Web Role in Cloud Service, you just need to enable Application Insights on the role you want to collect metrics data from. Then it will automatically collect data for the Memory usage and Request status of the Web Role.
 
-To see the collected data, it's recommended to use the **Metrics** page of Application Insights. For more information, see [System performance counters in Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/performance-counters).
+To see the collected data, it's recommended to use the **Metrics** page of Application Insights. For more information, see [System performance counters in Application Insights](/azure/azure-monitor/app/performance-counters).
 
 Like Web Role, it's also possible to monitor the memory and request status of Worker Role, but there are some limitations:
 
