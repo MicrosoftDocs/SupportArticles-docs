@@ -2,7 +2,7 @@
 title: Azure dependency availability by country/region
 description: Many product features have Azure dependencies that might not be available in all countries/regions".
 ms.date: 09/16/2021
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: tiffanyyu

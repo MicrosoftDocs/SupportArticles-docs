@@ -4,8 +4,8 @@ description: Works around the Blocked a frame with origin error when you use Uni
 ms.reviewer: xianc
 ms.topic: troubleshooting
 ms.date: 08/09/2021
-author: simonxjx
-ms.author: v-six
+author: xianc0908
+ms.author: xianc
 ms.subservice: powerapps-unified-interface
 ---
 # "Blocked a frame with origin" error using Unified Interface apps
