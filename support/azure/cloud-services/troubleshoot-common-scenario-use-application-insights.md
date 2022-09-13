@@ -87,7 +87,7 @@ To add a custom log to your application, follow these steps:
 
     Besides the trace log, you can also use the following method to record the handled exceptions:
 
-    ```c#
+    ```csharp
      ai.TrackException(exception);
     ```
 ### Record the running Worker Role application as a request
@@ -102,7 +102,7 @@ Only the [Duration and Success statuses](/azure/azure-monitor/app/data-model-req
 
 - If the application uses multiple threads, there can be trace logs, exceptions, and request records of different threads at the same moment, which will cause the user to be unable to track them by timestamp. A correlation ID used through all steps is important. According to the document, the ID of a request should be globally unique. To make sure the example works perfectly, we should add a function to verify if a newly generated random GUID is already used by any request records in Application Insights (this isn't implemented in the following example code). 
 
-```C#
+```csharp
 using Microsoft.WindowsAzure.ServiceRuntime;
 using System;
 using System.Diagnostics;
@@ -231,19 +231,18 @@ The second method uses the **Logs** option of Application Insights. This method 
  
 By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. To find the ID of the requests, follow these steps:
 
+1. Locate the failed request in the requests table and record its ID:
 
-1.    Locate the failed request in the requests table and record its ID:
-    ```
-    requests
-    | where resultCode == "500"
-    ```
-     
-2.    Find the exception with the same ID in the exceptions table:
+   ```kusto
+   requests
+   | where resultCode == "500"
+   ```
+2. Find the exception with the same ID in the exceptions table:
 
-    ```
-    exceptions
-    | where operation_ParentId == "8d1adf11abf73c42"
-    ```
+   ```kusto
+   exceptions
+   | where operation_ParentId == "8d1adf11abf73c42"
+   ```
 
 Tracking exceptions based on a failed request is helpful when troubleshooting an intermittent failure issue since it contains the complete CallStack of that request.
  
@@ -259,18 +258,18 @@ Here are some possible situations:
 
 In this situation, checking the Failures page is still possible, but you need to switch to the Exceptions page and check the timestamp manually. You can also check the accuracy of the data on the Logs page. The following is an example query to check exceptions between a specific time range.
 
-    ```
+    ```kusto
     exceptions 
     | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
     ```
 - Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as previous situation.
 - Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
-    ```
+    ```kusto
     requests 
     | where success == False 
     ```
-    ```
+    ```kusto
     exceptions 
     | where * contains "<request ID>" 
     ```
