@@ -46,7 +46,7 @@ productDirectory:
     - url: virtual-machine-scale-sets/welcome-virtual-machine-scale-sets.yml
       text: Troubleshooting articles for Virtual Machine Scale Sets
   - title: Azure Kubernetes
-    imageSrc: "/learn/achievements/develop-and-deploy-applications-on-kubernetes.svg"
+    imageSrc: "/training/achievements/develop-and-deploy-applications-on-kubernetes.svg"
     links:
     - url: azure-kubernetes/welcome-azure-kubernetes.yml
       text: Troubleshooting articles for Azure Kubernetes
