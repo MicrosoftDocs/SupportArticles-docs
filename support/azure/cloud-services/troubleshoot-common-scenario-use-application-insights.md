@@ -74,12 +74,12 @@ To add a custom log to your application, follow these steps:
 2. Make sure that Microsoft.ApplicationInsights is installed.
 3. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
 
-    ```C#
+    ```csharp
     TelemetryConfiguration.Active.InstrumentationKey = RoleEnvironment.GetConfigurationSettingValue("APPINSIGHTS_INSTRUMENTATIONKEY"); 
     ```
 4. Create a telemetry client and record the log context:
 
-    ```C#
+    ```csharp
     using Microsoft.ApplicationInsights; 
     TelemetryClient ai = new TelemetryClient(); 
     ai.TrackTrace("The custom log context"); 
@@ -92,15 +92,15 @@ To add a custom log to your application, follow these steps:
     ```
 ### Record the running Worker Role application as a request
 
-By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. In Worker Role, there isn't such a system. But it's possible to simulate the result of the Worker Role application progress as a request and record this request into Application Insights. So you can simplify the way to check the working status of the application in Worker Role. The following is a Worker Role application example. 
+By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. In Worker Role, there isn't such a system. But it's possible to simulate the result of the Worker Role application progress as a request and record this request into Application Insights. So you can simplify the way to check the working status of the application in Worker Role. The following is a Worker Role application example.
 
 This worker role will keep adding trace logs into Application Insights every 30 seconds. But logs won't always be added successfully because there's one changing bool variable selected to make the Run function return a handled exception in every two loops. The trace log recorded into Application Insights will contain the timestamp, a fully random GUID, as a correlation ID to identify the relationship between the request record and other records. Every loop is considered a request, so it will generate a record of the request with the start timestamp, the duration, the success status, the response code (200 for success and 500 for exception), and the correlation ID.
 
 Only the [Duration and Success statuses](/azure/azure-monitor/app/data-model-request-telemetry) are necessary for generating a request record. The other information is kept in the request record because:
 
-- The start timestamp and response code can make it a real request, and different response codes (for example, 400 and 500 for failed requests) can help when the user wants to identify different failure reasons. 
+- The start timestamp and response code can make it a real request, and different response codes (for example, 400 and 500 for failed requests) can help when the user wants to identify different failure reasons.
 
-- If the application uses multiple threads, there can be trace logs, exceptions, and request records of different threads at the same moment, which will cause the user to be unable to track them by timestamp. A correlation ID used through all steps is important. According to the document, the ID of a request should be globally unique. To make sure the example works perfectly, we should add a function to verify if a newly generated random GUID is already used by any request records in Application Insights (this isn't implemented in the following example code). 
+- If the application uses multiple threads, there can be trace logs, exceptions, and request records of different threads at the same moment, which will cause the user to be unable to track them by timestamp. A correlation ID used through all steps is important. According to the document, the ID of a request should be globally unique. To make sure the example works perfectly, we should add a function to verify if a newly generated random GUID is already used by any request records in Application Insights (this isn't implemented in the following example code).
 
 ```csharp
 using Microsoft.WindowsAzure.ServiceRuntime;
@@ -168,7 +168,7 @@ namespace Worker Role1
                     requestResult = false;
                 }
 
-                request.Success = requestResult; // the following codes set Success, Duration and ResponseCode property of the request, then save it into Application Insight.
+                request.Success = requestResult; //The following codes set Success, Duration and ResponseCode property of the request, then save it into Application Insight.
                 request.Duration = requestTimer.Elapsed;
                 request.ResponseCode = requestResult ? "200" : "500";
                 ai.TrackRequest(request);
@@ -198,26 +198,15 @@ namespace Worker Role1
     }
 }
 ```
-> [!NOTE ]
+
+> [!NOTE]
 > You can also do the same thing by using custom telemetry. For more information, see the [Work Role code sample](https://github.com/wuping2004/CloudServiceSample/tree/add-cpp-sdk/Samples/AzureEmailService/WorkerRoleA).
- 
-Pay attention to the specific lines in the above example project that are necessary to record requests in Application Insight:
 
-- Line 4 to 6 are to import the Application Insight SDK
-- Line 12 is to define a private TelemetryClient
-- Line 25 is to generate a RequestTelemetry. Once it's created, all the changes should be saved in this RequestTelemetry, and SDK will save this RequestTelemetry in Application Insight.
-- Line 29 to 31 are to configure the Name, ID, and StartTime properties of the request.
-- Line 66 to 69 are to set the Success, Duration, and ResponseCode properties of the request; then save them in Application Insight.
+## Check the failed request and related exception of Web Role
 
-Except for the above necessary steps, you need to pay attention to how to save the custom trace log and exception, such as lines 61 and 62. If your application uses multiple threads, the unique specific ID will be helpful for us to track the request workflow in Application Insights.
+For failed requests in Web Role, the unhandled exception and the handled exception (which is in the try function) with `ai.TrackException` are automatically collected in the exception table.
 
-- The start timestamp and response code can make it a real request, and different response code, for example 400 and 500 for failed requests, can help when you want to identify different failure reasons.
-
-For failed requests in Web Role, the unhandled exception and the handled exception (which is in the try function) with `ai.TrackException` are automatically collected in the exception table. 
-
-For the example exception in the screenshot, if there isn't `ai.TrackException` in line 47, the exception is considered a handled exception, but it won't be recorded into Application Insight.
-
-To find the exception records in the Application Insights instances, you can use one of the following methods:
+To find the exception records in the Application Insights instance, you can use one of the following methods:
 
 #### View the Failures page in the Azure portal
 
@@ -257,11 +246,10 @@ Here are some possible situations:
 - Worker Role doesn't include a system for recording custom requests. The only data that can be used to track the relationship between the exception record and real operation in the application is the timestamp. 
 
 In this situation, checking the Failures page is still possible, but you need to switch to the Exceptions page and check the timestamp manually. You can also check the accuracy of the data on the Logs page. The following is an example query to check exceptions between a specific time range.
-
-    ```kusto
-    exceptions 
-    | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
-    ```
+   ```kusto
+   exceptions 
+   | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
+   ```
 - Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as previous situation.
 - Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
