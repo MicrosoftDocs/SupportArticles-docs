@@ -29,7 +29,7 @@ Error codes that are recorded in the respective log files or client applications
 |0x80070005|Access is Denied.|
 |0x800706ba|The RPC server is unavailable.|
 
-For example, when the Configuration Manager administrator tries a connection, the *SmsAdminUI.log* file displays the following error message:
+For example, when the administrator tries to open a console remotely, the *SmsAdminUI.log* file displays the following error message:
 
 > Insufficient privilege to connect, error: 'Access is denied. (Exception from HRESULT: 0x80070005 (E_ACCESSDENIED))'
 System.UnauthorizedAccessException  
