@@ -26,7 +26,7 @@ To monitor your app with Application Insights, follow these steps:
 
 For web roles, this option provides performance monitoring, alerts, diagnostics, and usage analysis. For other roles, you can search and monitor Azure Diagnostics, such as restart and performance counters.
 
- :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/Picture2.png" alt-text="Screenshot shows how to enable the Send diagnostics data to Application Insights checkbox.":::
+ :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/enable-app-insights-for-cloud-services.png" alt-text="Screenshot shows how to enable the Send diagnostics data to Application Insights checkbox.":::
 
 ## Diagnose failures in Application Insights
 
@@ -62,7 +62,7 @@ The **Roles** tab shows the metrics data more related to the Cloud Service serve
 
 :::image type="content" source="./media/troubleshoot-with-app-insights-features-overview/performance.png" alt-text="Screenshot shows the performance page.":::
 
-## Alert in Application Insight
+## Alert in Application Insights
 
 The Alert allows users to set custom rules to monitor the cloud service role instance status. When the monitored event happens, users can get an email notification.
 
@@ -70,7 +70,7 @@ The rules mainly contain two important parts: conditions and actions. To create 
 
 1. In the Azure portal, go to the Application Insights instance and select **Alert** under the **Monitoring** section. On this page, you can see all triggered alerts. Expand **+ Create**, and then select **Alert rule**.
 
-2. Set up the conditions. The condition consists of three points: Signal, Dimension, and Alert Logic. For more information, see [Types of Azure Monitor alerts](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-types).
+2. Set up the conditions. The condition consists of three points: Signal, Dimension, and Alert Logic. For more information, see [Types of Azure Monitor alerts](/azure/azure-monitor/alerts/alerts-types).
 
     - Signal is the type of metrics data that the alert rule will monitor. The common metrics data such as CPU, available memory, failed requests, exceptions, and response time can be used.
     - Dimension specifies the scope or filter where this alert rule will be applied. For alert rules based on Cloud Service metrics data, they usually contain two possible dimension choices: Cloud role instance and Cloud role name. In addition to these two dimensions, there will also be some other choices depending on the signal.
@@ -114,7 +114,7 @@ Almost all Application Insights features presented above are based on the data c
 
 To view the logs, select **Logs** under the **Monitoring** section.
 
-On the Logs page, you need to use [Kusto Query Language (KQL)](https://docs.microsoft.com/en-us/azure/data-explorer/kusto/query/) to query or filter the collected logs and get the needed information.
+On the Logs page, you need to use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/) to query or filter the collected logs and get the needed information.
 
 There are only two points that you need to pay attention to; the time range and the query.
 
@@ -142,6 +142,6 @@ The data in the following tables are collected by a custom Diagnostic setting:
 
 ## Resources
 
-- [Find and diagnose performance issues with Azure Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/tutorial-performance)
-- [Create a new rule alert in Azure Application Insight](https://docs.microsoft.com/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
-- [Application Insights standard metrics](https://docs.microsoft.com/azure/azure-monitor/app/standard-metrics)
+- [Find and diagnose performance issues with Azure Application Insights](/azure/azure-monitor/app/tutorial-performance)
+- [Create a new rule alert in Azure Application Insight]/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
+- [Application Insights standard metrics](/azure/azure-monitor/app/standard-metrics)
