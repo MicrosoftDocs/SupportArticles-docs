@@ -65,6 +65,12 @@ To make sure that a particular logging statement meets the logging frameworks' c
 
 Also note that if an exception object is passed to the logger, then the log message (and exception object details)
 will show up in the Azure portal under the `exceptions` table instead of the `traces` table.
+To see the log messages across both the `traces` and `exceptions` tables, run the following Logs (Kusto) query:
+
+```Kusto
+union traces, (exceptions | extend message = outerMessage)
+| project timestamp, message, itemType
+```
 
 For more information, see the [auto-collected logging configuration](/azure/azure-monitor/app/java-standalone-config#auto-collected-logging).
 

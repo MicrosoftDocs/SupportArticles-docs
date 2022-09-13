@@ -4,8 +4,8 @@ description: Works around an issue in which you aren't returned to the previous 
 ms.reviewer: xianc
 ms.topic: troubleshooting
 ms.date: 08/10/2021
-author: simonxjx
-ms.author: v-six
+author: xianc0908
+ms.author: xianc
 ms.subservice: powerapps-unified-interface
 ---
 # No response from the back button in a Unified Interface app
