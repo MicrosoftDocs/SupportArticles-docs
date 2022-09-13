@@ -4,8 +4,8 @@ description: Describes issues in which custom connectors don't show the configur
 ms.reviewer: squassina
 ms.topic: troubleshooting
 ms.date: 6/17/2021
-author: simonxjx
-ms.author: v-six
+author: squassina
+ms.author: risquass
 ms.subservice: powerapps-connections
 ---
 # Refresh URL isn't displayed for custom connectors when using Generic Oauth 2
