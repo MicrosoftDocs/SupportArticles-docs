@@ -118,11 +118,11 @@ On the client where the GPO problem occurs, follow these steps to enable Group P
 9. Exit Registry Editor.
 10. In a command prompt window, run the `gpupdate /force` command, and then press Enter.
 
-View the *Gpsvc.log* file in the following folder: *%windir%\\debug\\usermode*
+Then, view the *Gpsvc.log* file in the following folder: *%windir%\\debug\\usermode*
 
 > [!NOTE]
 > If the *usermode* folder does not exist, create it under *%windir%\\debug*.
-> If the *usermode* folder does not exist under *%WINDIR%\\debug\\* the *gpsvc.log* file will not be created.
+> If the *usermode* folder does not exist under *%WINDIR%\\debug\\*, the *gpsvc.log* file will not be created.
 
 ## Common issues and solutions
 
@@ -202,26 +202,26 @@ The processing of Group Policy failed. Windows attempted to retrieve new Group P
 
 Check if the LDAP ports are open. If not, then make sure the ports are open on the firewall and as well locally on the client and the domain controller.
 
-- How to determine port block.
+#### How to determine port block
 
-  - Use portqueryUI tool to determine which ports are blocked. For more information, see [How to use PortQry to troubleshoot Active Directory connectivity issues](../networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md).
-  - Use [telnet](../../windows-client/networking/use-telnet-to-test-port-3389-functionality.md) for port 389 to check connectivity on the ldap port.
-  - How to [configure domain and trust ports](../identity/config-firewall-for-ad-domains-and-trusts.md).
-  - Configuring the [default outbound firewall behavior](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee215186%28v=ws.10%29).
-  - Configure [firewall port requirements for Group Policy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj572986%28v=ws.11%29).
+- Use portqueryUI tool to determine which ports are blocked. For more information, see [How to use PortQry to troubleshoot Active Directory connectivity issues](../networking/use-portqry-verify-active-directory-tcp-ip-connectivity.md).
+- Use [telnet](../../windows-client/networking/use-telnet-to-test-port-3389-functionality.md) for port 389 to check connectivity on the ldap port.
+- How to [configure domain and trust ports](../identity/config-firewall-for-ad-domains-and-trusts.md).
+- Configuring the [default outbound firewall behavior](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee215186%28v=ws.10%29).
+- Configure [firewall port requirements for Group Policy](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj572986%28v=ws.11%29).
 
-- Make sure DNS name resolution where the client is unable to resolve a host name:
+#### Make sure DNS name resolution where the client is unable to resolve a host name
 
-  - If a client can't resolve a host name, then it's best to verify the Host name resolution sequence listed above that the client should be using. If the name doesn't exist in any of the resources that the client uses, then you must decide to which resource to add it. If the name exists in one of the resources, such as a DNS server or a Windows Internet Name Service (WINS) server and the client isn't resolving the name correctly, focus your attention on troubleshooting that specific resource.
-  - Also, confirm that the client is trying to resolve a host name and not a NetBIOS name. Many applications have multiple methods that they can utilize to resolve names, this is especially true of mail and database applications. The application may be configured to connect to resources using NetBIOS. Depending on the client configuration, the client may bypass host name resolution. From there, it will be necessary to either change the connection type to TCP/IP sockets or to troubleshoot the problem as a NetBIOS issue.
+- If a client can't resolve a host name, then it's best to verify the Host name resolution sequence listed above that the client should be using. If the name doesn't exist in any of the resources that the client uses, then you must decide to which resource to add it. If the name exists in one of the resources, such as a DNS server or a Windows Internet Name Service (WINS) server and the client isn't resolving the name correctly, focus your attention on troubleshooting that specific resource.
+- Also, confirm that the client is trying to resolve a host name and not a NetBIOS name. Many applications have multiple methods that they can utilize to resolve names, this is especially true of mail and database applications. The application may be configured to connect to resources using NetBIOS. Depending on the client configuration, the client may bypass host name resolution. From there, it will be necessary to either change the connection type to TCP/IP sockets or to troubleshoot the problem as a NetBIOS issue.
 
-- Group Policy Container permission:
+#### Group Policy Container permission
 
-   Use the following [Get-GPPermission PowerShell cmdlet](/powershell/module/grouppolicy/get-gppermission) to get the permission level for all security principals on the specified GPO:
+Use the following [Get-GPPermission PowerShell cmdlet](/powershell/module/grouppolicy/get-gppermission) to get the permission level for all security principals on the specified GPO:
 
-   ```powershell
-   Get-GPPermission -Name "TestGPO" -All
-   ```
+```powershell
+Get-GPPermission -Name "TestGPO" -All
+```
 
 ### Event ID 1058
 
@@ -260,7 +260,7 @@ Correct connectivity to the Group Policy template. The Group Policy service logs
    This error code usually indicates that the computer cannot resolve the name in the provided network path. To test network path name resolution:
 
    1. Identify the domain controller used by the computer. The name of the domain controller is logged in the details of the error event.
-   2. Try to connect to the netlogon share on the domain controller using the path *\\\\\<dcName\>\\netlogon* where \<dcName\> is the name the name of the domain controller in the error event.
+   2. Try to connect to the netlogon share on the domain controller using the path *\\\\\<dcName\>\\netlogon* where \<dcName\> is the name of the domain controller in the error event.
 
 ### Event ID 1053
 
