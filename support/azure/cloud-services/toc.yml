@@ -69,7 +69,7 @@
   - name: Troubleshoot with App Insights-features overview
     href: troubleshoot-with-app-insights-features-overview.md
   - name: Troubleshoot with App Insights-common scenarios
-    href: troubleshoot-common-scenario-use-application-insights.md
+    href: troubleshoot-common-scenario-use-app-insights.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 
