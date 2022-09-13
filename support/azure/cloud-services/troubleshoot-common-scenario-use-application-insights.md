@@ -8,7 +8,7 @@ ms.service: cloud-services
 ---
 # Troubleshoot Cloud Service apps with Application Insights - common scenarios
 
-When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from Application Insights' integration with Cloud Service.  
+When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from integrating  Application Insights with Cloud Service.  
 
 To learn more about using Application Insights with Cloud Service, see [feature overview](troubleshoot-with-app-insights-features-overview.md).
 
