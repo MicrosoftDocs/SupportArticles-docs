@@ -8,19 +8,19 @@ ms.service: cloud-services
 ---
 # Troubleshoot common Cloud Service Application issues with Application Insights
 
-When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights service is designed for this purpose. This document provides common scenarios where we can benefit from application insights integration with Cloud Service.  
+When Azure Cloud Service is used to host a website or proceed with a data process, it's recommended to integrate a log system to collect more detailed information and log records. Application Insights is designed for this purpose. This document provides common scenarios where we can benefit from Application Insights' integration with Cloud Service.  
 
-For basic knowledge of using Application Insights with Cloud Service, see [feature overview](link).
+To learn more about using Application Insights with Cloud Service, see [feature overview](link).
 
 ## Diagnostic setting and Application Insights
 
-When Application Insights is enabled on Cloud Service, the Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic will be sent to Application Insights. For more information, see https://docs.microsoft.com/en-us/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#to-view-cloud-service-diagnostics-data
+When Application Insights is enabled on Cloud Service, Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic setting will be sent to Application Insights. For more information, see https://docs.microsoft.com/en-us/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#to-view-cloud-service-diagnostics-data
 
-When the Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role:
+When Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role:
 
 ### For Web Role
 
-The following nine metrics' data will be automatically collected even if the performance counter is disabled in Diagnostic Setting. Data from these nine metrics is saved in the **performanceCounter** table of Application Insights. Other metrics, such as `\Process(w3wp)\% Processor Time`, will be saved on the **customMetrics** table when the performance counter is enabled.
+The following nine metrics have data that will be automatically collected even if the performance counter is disabled in Diagnostic setting. Data from these nine metrics is saved in the **performanceCounter** table of Application Insights. Other metrics, such as `\Process(w3wp)\% Processor Time`, will be saved on the **customMetrics** table when the performance counter is enabled.
 
 ```
 \Process(??APP_WIN32_PROC??)\% Processor Time  
@@ -43,16 +43,16 @@ The following nine metrics' data will be automatically collected even if the per
 ```
 ### For Worker Role
 
-If the performance counter is disabled in Diagnostic Setting, there will be no performance metrics data automatically collected and saved in Application Insights.
+If the performance counter is disabled in Diagnostic setting, there will be no performance metrics data automatically collected and saved in Application Insights.
 
 ### For both Web Role and Worker Role
 
-The HeartBeatState metric data is always saved into Application Insights automatically. This metric is used to identify whether the instance is still healthy at the server level. It will be triggered every 15 minutes and saved into the **customMetrics** table. The other performance metric data need to be manually enabled in the performance counter in Diagnostic Setting.
+The HeartBeatState metric data is always saved in Application Insights automatically. This metric is used to identify whether the instance is still healthy at the server level. It will be triggered every 15 minutes and saved into the **customMetrics** table. The other performance metric data need to be manually enabled in the performance counter in Diagnostic setting.
 
 > [!IMPORTANT]
 > Application Insights will generate records only when there's real data collected. If a Web Role never receives a request, a Worker Role doesn't read or write data from or into a disk. If the amount of data IO is quite low, it's possible that Application Insights won't record any information.
 
-The following table shows the mapping between the options in Diagnostic Setting and table names in Application Insights logs:
+The following table shows the mapping between the options in Diagnostic setting and table names in Application Insights logs:
 
 | Table in Application insights | logs in Diagnostic setting |
 | ----------- | ----------- |
@@ -68,7 +68,7 @@ There are several common advanced ways to use Application Insights with Cloud Se
 
 ### Add custom log
 
-To add a custom log into your application, follow these steps:
+To add a custom log to your application, follow these steps:
 
 1. Right-click the role project and select **Manage NuGet Packages**.
 2. Make sure that Microsoft.ApplicationInsights is installed.
@@ -85,22 +85,22 @@ To add a custom log into your application, follow these steps:
     ai.TrackTrace("The custom log context"); 
     ```
 
-    Besides the trace log, we can also use the following method to record the handled exceptions:
+    Besides the trace log, you can also use the following method to record the handled exceptions:
 
     ```c#
      ai.TrackException(exception);
     ```
 ### Record the running Worker Role application as a request
 
-By design, the request of Web Role is automatically marked with a unique ID in Cloud service to identify the correlation. In Worker Role, there isn't such a system. But it's possible to simulate the result of the Worker Role application progress as a request and record this request into Application Insights. So you can simplify the way to check the working status of the application in Worker Role. The following is a Worker Role application example. 
+By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. In Worker Role, there isn't such a system. But it's possible to simulate the result of the Worker Role application progress as a request and record this request into Application Insights. So you can simplify the way to check the working status of the application in Worker Role. The following is a Worker Role application example. 
 
 This worker role will keep adding trace logs into Application Insights every 30 seconds. But logs won't always be added successfully because there's one changing bool variable selected to make the Run function return a handled exception in every two loops. The trace log recorded into Application Insights will contain the timestamp, a fully random GUID, as a correlation ID to identify the relationship between the request record and other records. Every loop is considered a request, so it will generate a record of the request with the start timestamp, the duration, the success status, the response code (200 for success and 500 for exception), and the correlation ID.
 
-According to the [document](https://docs.microsoft.com/azure/azure-monitor/app/data-model-request-telemetry), only Duration and Success status are necessary for generating a request record. The reason why the other information is kept in the request record is:
+According to the [document](https://docs.microsoft.com/azure/azure-monitor/app/data-model-request-telemetry), only the Duration and Success statuses are necessary for generating a request record. The other information is kept in the request record because:
 
 - The start timestamp and response code can make it a real request, and different response codes (for example, 400 and 500 for failed requests) can help when the user wants to identify different failure reasons. 
 
-- If the application uses multiple threads, there can be trace logs, exceptions, and request records of different threads at the same moment, and this will cause the user to be unable to track them by timestamp. A correlation ID used through all steps will be important. According to the document, the ID of a request should be globally unique. To make sure the example works perfectly, we should add a function to verify if a newly generated random GUID is already used by any request records in Application Insights (this isn't implemented in the following example code). 
+- If the application uses multiple threads, there can be trace logs, exceptions, and request records of different threads at the same moment, which will cause the user to be unable to track them by timestamp. A correlation ID used through all steps is important. According to the document, the ID of a request should be globally unique. To make sure the example works perfectly, we should add a function to verify if a newly generated random GUID is already used by any request records in Application Insights (this isn't implemented in the following example code). 
 
 ```C#
 using Microsoft.WindowsAzure.ServiceRuntime;
@@ -205,13 +205,13 @@ Pay attention to the specific lines in the above example project that are necess
 
 - Line 4 to 6 are to import the Application Insight SDK
 - Line 12 is to define a private TelemetryClient
-- Line 25 is to generate a RequestTelemetry. Once it's created, all the changes should be saved into this RequestTelemetry, and SDK will save this RequestTelemetry into Application Insight.
-- Line 29 to 31 are to configure the Name, ID, and StartTime property of the request.
-- Line 66 to 69 are to set Success, Duration, and ResponseCode property of the request, then save it into Application Insight.
+- Line 25 is to generate a RequestTelemetry. Once it's created, all the changes should be saved in this RequestTelemetry, and SDK will save this RequestTelemetry in Application Insight.
+- Line 29 to 31 are to configure the Name, ID, and StartTime properties of the request.
+- Line 66 to 69 are to set the Success, Duration, and ResponseCode properties of the request; then save them in Application Insight.
 
-Except for the above necessary steps, you need to pay attention to how to save the custom Trace log and Exception, such as lines 61 and 62. If your application uses multiple threads, the unique specific ID will be helpful for us to track the request workflow in Application Insights.
+Except for the above necessary steps, you need to pay attention to how to save the custom trace log and exception, such as lines 61 and 62. If your application uses multiple threads, the unique specific ID will be helpful for us to track the request workflow in Application Insights.
 
-- Start timestamp and response code can make it as a real request and different response code, for example 400 and 500 for failed requests, can help when user wants to identify different failure reasons.
+- The start timestamp and response code can make it a real request, and different response code, for example 400 and 500 for failed requests, can help when you want to identify different failure reasons.
 
 For failed requests in Web Role, the unhandled exception and the handled exception (which is in the try function) with `ai.TrackException` are automatically collected in the exception table. 
 
@@ -227,7 +227,7 @@ To find the exception records in the Application Insights instances, you can use
 
 #### Query Logs in the Azure portal
 
-The second method uses the **Logs** option of Application Insights. This method is more complicated, but it allows you to use more custom filters to look for specific types of exceptions. It also provides more details that will not be displayed in the Failures page.
+The second method uses the **Logs** option of Application Insights. This method is more complicated, but it allows you to use more custom filters to look for specific types of exceptions. It also provides more details that will not be displayed on the Failures page.
  
 By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. To find the ID of the requests, follow these steps:
 
@@ -238,7 +238,7 @@ By design, the request of Web Role is automatically marked with a unique ID in C
     | where resultCode == "500"
     ```
      
-2.    Find the exception with same ID in the exceptions table:
+2.    Find the exception with the same ID in the exceptions table:
 
     ```
     exceptions
@@ -249,11 +249,11 @@ Tracking exceptions based on a failed request is helpful when troubleshooting an
  
 ### Check the failed request and related exception for Worker Role
 
-Since the unhandled exception of Worker Role may cause the whole application to experience downtime, it's recommended to handle all the exceptions in Worker Role. That means that it should be included by the `try` function. For the handled exceptions in Web Role, `ai.TrackException` is needed to record the exceptions in Application Insights.
+Since the unhandled exception of Worker Role may cause the whole application to experience downtime, it's recommended to handle all the exceptions in Worker Role. That means that it should include the `try` function. For the handled exceptions in Web Role, `ai.TrackException` is needed to record the exceptions in Application Insights.
 
 The steps to check the exception in Worker Role are similar to the ones in Web Role. The only difference is that there isn't a built-in system to record the exceptions automatically, so some extra codes are needed to archive the goal.
 
-Here are multiple possible situations:
+Here are some possible situations:
 
 - Worker Role doesn't include a system for recording custom requests. The only data that can be used to track the relationship between the exception record and real operation in the application is the timestamp. 
 
@@ -277,7 +277,7 @@ In this situation, checking the Failures page is still possible, but you need to
 
 ## Common scenarios and guidelines
 
-In this part, there will be several common scenarios and related guidelines about how to use Application Insights to meet the requirements.
+This section looks at several common scenarios and the related guidelines for using Application Insights to meet the requirements.
 
 ### Monitor the Memory and Request status of a Web Role
 
@@ -285,18 +285,18 @@ To monitor the Memory and Request status of the Web Role in Cloud Service, you j
 
 To see the collected data, it's recommended to use the **Metrics** page of Application Insights. For more information, see [System performance counters in Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/performance-counters).
 
-Like Web Role, it's also possible to monitor the memory and request status of Worker Role, but there will be some limitations:
+Like Web Role, it's also possible to monitor the memory and request status of Worker Role, but there are some limitations:
 
-1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic Setting. The collected data will be in the `custommetrics` table of the Logs page.
-1. To view the metrics chart of the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace, and **Available Memory** under **Performance** in Metric. The chart of the Available Memory of the selected time range will be displayed.
+1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic setting. The collected data will be in the `custommetrics` table of the Logs page.
+1. To view the metrics chart for the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace, and **Available Memory** under **Performance** in Metric. The chart will display the Available Memory for the selected time range.
 
-- The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missing during that time range. From the Logs, the interval of collecting the Memory data is about three minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
-- Each unit of data is one billion.
+- The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missing during that time range. From the Logs, the interval for collecting the Memory data is about three minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
+- Each unit of data is equal to one billion.
 
 For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data on a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom log to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
 
 
-1. For both Worker Role and Web Role, it's recommended to save a trace log at every process start step. For example, in the above example codes, it's possible to add a trace log at following points when:
+1. For both Worker Role and Web Role, it's recommended to save a trace log at each starting step in the process. For example, in the above example codes, it's possible to add a trace log at the following points when:
 
 2. If the main process is the application in Worker Role, record the functions of the Worker Role application as a request to add a custom correlation ID into the custom request record and exception record. 
 
@@ -318,7 +318,7 @@ This way, it's possible for you to calculate the difference between every trace 
 
 ### Troubleshoot performance issues such as high CPU/Memory of Worker Role
 
-Sometimes you will need to identify issues such as a Worker Role consuming very high CPU/Memory. The only thing that can be observed from outside of the Cloud Service is that the Worker Role is consuming too much CPU/Memory, but you have no idea what exactly is happening in this instance.
+Sometimes you will need to identify issues such as Worker Role consuming very high CPU/Memory. The only thing that can be observed from outside of Cloud Service is that Worker Role is consuming too much CPU/Memory, but you have no idea what exactly is happening in this instance.
 
 To troubleshoot this kind of issue, there are two steps:
 
@@ -336,4 +336,4 @@ You can use the following command to capture a dump file when the CPU consumed b
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
-In the diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review this article.
+In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review this article.
