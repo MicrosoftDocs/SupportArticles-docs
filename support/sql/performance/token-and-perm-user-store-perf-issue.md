@@ -105,11 +105,11 @@ If the very low entry count of 4618 causes other performance concerns, use the t
 
 Trace flags 4610 and 4618 are documented in the Books Online topic, [DBCCC TRACEON - Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true).
 
-These trace flags should be used for scenarios in which the unbounded growth of TokenAndPermUserStore is too great for the server. This typically occurs in two kinds of environments:
+These trace flags should be used for scenarios in which the unbounded growth of `TokenAndPermUserStore` is too great for the server. This typically occurs in two kinds of environments:
 
-· Low-end or medium-end hardware for which `TokenAndPermUserStore` occupies a large amount of the available memory for the server and for which the rate of new entry creation is faster or just as fast as the rate of cache eviction. This can cause memory contention and more frequent cache invalidation for other parts of the server (for example, proc cache).
+- Low-end or medium-end hardware for which `TokenAndPermUserStore` occupies a large amount of the available memory for the server and for which the rate of new entry creation is faster or just as fast as the rate of cache eviction. This can cause memory contention and more frequent cache invalidation for other parts of the server (for example, proc cache).
 
-· Very high-end computers that have lots of memory (for example, several recent support cases involved more than 1 TB of RAM). In these environments, the cache store can grow extremely large before it experiences any memory pressure. This can cause performance degradation from long bucket chains or walks.
+- Very high-end computers that have lots of memory (for example, several recent support cases involved more than 1 TB of RAM). In these environments, the cache store can grow extremely large before it experiences any memory pressure. This can cause performance degradation from long bucket chains or walks.
 
 As a temporary mitigation, you can clear this cache periodically by using the following method:
 
@@ -121,7 +121,7 @@ Notes:
 
     `DBCC FREESYSTEMCACHE ('TokenAndPermUserStore')`
 
-1. Observe the threshold of the TokenAndPermUserStore cache size when problems start to appear.
+1. Observe the threshold of the `TokenAndPermUserStore` cache size when problems start to appear.
 1. Create a scheduled SQL Server Agent job that takes the following actions:
     - Check the size of the `TokenAndPermUserStore` cache. To do this, run the following command:
 
