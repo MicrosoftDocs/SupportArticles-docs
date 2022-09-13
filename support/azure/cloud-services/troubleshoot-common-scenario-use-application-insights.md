@@ -297,6 +297,10 @@ For example, when a Cloud Service Web Role receives a request, it needs to get s
 
 
 1. For both Worker Role and Web Role, it's recommended to save trace log at every process start step. For example, in the above example codes, it's possible to add trace log at following points when:
+    - the Web Role receives the request 
+    - the Web Role starts to build communication with SQL server 
+    - the Web Role receives the data returned by SQL server and starts generating the web page 
+    - the Web Role generates the web page and returns it to user 
 
 2. If the main process is the application in Worker Role, record the functions of Worker Role application as request to add custom correlation ID into custom request record and exception record. 
 
