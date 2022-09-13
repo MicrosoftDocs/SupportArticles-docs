@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data transfer and Intune app protection policies
 description: General steps to help troubleshoot when Microsoft Intune app protection policies (APP) to not control data transfer as expected.
-ms.date: 09/09/2022
+ms.date: 09/16/2022
 ms.reviewer: roblane-msft
 search.appverid: MET150
 ---
@@ -49,8 +49,8 @@ Check app protection policy settings in both Intune and on those configured on t
 
 In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create and manage your app protection policies under **Apps** > **App protection policies**. The **Data protection** section includes important settings for data-transfer scenarios, which you should review if you're seeing unexpected behavior. The following table lists common APP settings for data protection and their use cases.
 
-|Setting name|OS|Setting value|Use case|
-|------------|---------|-----------------|
+|Setting name   |OS   |Setting value   |Use case   |
+|------------|-----|------|-----------------|
 |Send org data to other apps|Android|Policy managed apps|Restrict data transfer to policy managed apps. Data can be transferred to unmanaged apps but the data is encrypted and can't be opened.|
 ||iOS/iPadOS|Policy managed apps with OS sharing|SData transfer may be restricted to policy managed and unmanaged apps by applying “IntuneMAMUPN” app configuration policy. Refer to [iOS/iPadOS security app configuration policies](/mem/intune/enrollment/ios-ipados-app-configuration-policies) and [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios).|
 ||iOS|Policy managed app with Open-In/Share filtering|Restrict data transfer by filtering apps displayed in sharing extensions. Sharing files with this setting restricts the available apps to those that support Intune APP only.|
