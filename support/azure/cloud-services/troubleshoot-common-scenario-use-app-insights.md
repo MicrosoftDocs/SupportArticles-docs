@@ -296,7 +296,7 @@ Once the logic is implemented, you can check the requests on the **Performance
 
 If the system isn't overly complicated, the time spent by different steps will be displayed in the End-to-end transaction chart. If the system is complicated or we're using a custom ID that causes it to be unable to display the data in the chart, use the following query to get all related trace logs containing the same correlation ID:
 
-```
+```Kusto
 traces
 | where * contains "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" 
 ```
@@ -319,7 +319,7 @@ If the instances are having high CPU/Memory issues and the application is experi
 
 You can use the following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least three seconds. Five dump files will be captured and saved into the `c:\procdumps` directory.
 
-```
+```console
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
