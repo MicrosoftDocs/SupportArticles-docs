@@ -1,8 +1,8 @@
 ---
 title: Lenovo Yoga L13 might shut down during Teams meetings
 description: This article describes an issue in which Lenovo Yoga L13 devices sometimes shut down during a Microsoft Teams meeting.
-author: v-matthamer
-ms.author: v-matthamer
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

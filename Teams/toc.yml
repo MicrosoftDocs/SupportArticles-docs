@@ -177,6 +177,8 @@
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
+      - name: Diagnose issues with Direct Routing
+        href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
       - name: Issues with LMO
@@ -185,6 +187,8 @@
         href: ./phone-system/direct-routing/issues-with-outbound-calls.md
       - name: Issues with SBC connectivity
         href: ./phone-system/direct-routing/sip-options-tls-certificate-issues.md
+      - name: Microsoft and SIP response codes
+        href: ./phone-system/direct-routing/microsoft-sip-response-codes.md
   - name: Provisioning
     items:
     - name: Can't create a team 

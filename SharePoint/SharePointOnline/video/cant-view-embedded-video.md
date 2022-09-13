@@ -1,7 +1,7 @@
 ---
 title: Can’t view embedded Stream video in Teams app
 description: Fix an issue in which you receive a To see this content, sign in to Microsoft Stream error message when you try to view an embedded video in the Teams app.
-author: v-matthamer
+author: helenclu
 ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,7 +9,7 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: v-matthamer
+ms.author: luche
 ms.custom: 
   - CSSTroubleshoot
   - CI 149683

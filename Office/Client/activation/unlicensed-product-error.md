@@ -1,9 +1,9 @@
 ---
 title: Microsoft 365 Apps activation Unlicensed product error
 description: Troubleshooting unlicensed product errors when activating Microsoft 365 Apps.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
