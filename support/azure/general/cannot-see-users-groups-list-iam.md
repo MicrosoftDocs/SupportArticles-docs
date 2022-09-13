@@ -2,7 +2,7 @@
 title: Can't see list of users/groups to add permissions in IAM in Azure portal
 description: Resolves an issue in which you can't see list of users or groups when adding permissions in Access Control (IAM) in the Azure portal.
 ms.date: 08/14/2020
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ms.reviewer: 

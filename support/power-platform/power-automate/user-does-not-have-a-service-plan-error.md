@@ -1,7 +1,7 @@
 ---
 title: User doesn't have a service plan error
 description: Provides a solution to an error that occurs when doing any of these actions on a flow that uses premium connectors.
-ms.reviewer: 
+ms.reviewer: wifun
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: power-automate-connections

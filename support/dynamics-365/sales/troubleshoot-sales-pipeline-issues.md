@@ -5,6 +5,7 @@ author: sbmjais
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
+ms.subservice: d365-sales-sales
 ---
 # Troubleshoot issues with the Sales Pipeline chart and its phases in Dynamics 365 Sales
 
