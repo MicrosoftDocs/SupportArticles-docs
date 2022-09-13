@@ -35,7 +35,7 @@ In Microsoft SQL Server, you experience the following symptoms:
 
 Performance issues such as high CPU and increased memory use, can be caused by excessive entries in `TokenAndPermUserStore` cache. By default, entries in this cache are cleaned up only when SQL Server signals internal memory pressure. On servers that have lots of RAM, internal memory pressure might not trigger often. When this cache grows, it takes longer to search for existing entries to reuse. Access to this cache is controlled by a spinlock. Only one thread at a time can do the search. This behavior eventually causes query performance to decrease and more CPU usage occurs.
 
-To monitor the size of `TokenAndPermUserStore` cache, you can use a query that resembles the following:
+To monitor the size of `TokenAndPermUserStore` cache, you can use a query that resembles the following query:
 
 ```sql
 SELECT SUM(pages_kb) AS 
@@ -117,9 +117,9 @@ As a temporary mitigation, you can clear this cache periodically by using the fo
 
 Notes:
 
-1. To do this, run the following command:
+ 1. To do this, run the following command:
 
-    `DBCC FREESYSTEMCACHE ('TokenAndPermUserStore')`
+     `DBCC FREESYSTEMCACHE ('TokenAndPermUserStore')`
 
 1. Observe the threshold of the `TokenAndPermUserStore` cache size when problems start to appear.
 1. Create a scheduled SQL Server Agent job that takes the following actions:
