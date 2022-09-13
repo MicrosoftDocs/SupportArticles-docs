@@ -14,7 +14,7 @@ To learn more about using Application Insights with Cloud Service, see [feature 
 
 ## Diagnostic setting and Application Insights
 
-When Application Insights is enabled on Cloud Service, Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic setting will be sent to Application Insights. For more information, see [Set up diagnostics for Azure Cloud Services](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines)
+When Application Insights is enabled on Cloud Service, Diagnostic setting must be enabled at the same time. Some metrics data and logs that are collected by Diagnostic setting will be sent to Application Insights. For more information, see [Set up diagnostics for Azure Cloud Services](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines).
 
 When Diagnostic setting is enabled, the **performance counters** setting works differently on Web Role and Worker Role.
 
@@ -22,7 +22,7 @@ When Diagnostic setting is enabled, the **performance counters** setting works d
 
 The following nine metrics have data that will be automatically collected even if the performance counter is disabled in Diagnostic setting. Data from these nine metrics is saved in the **performanceCounter** table of Application Insights. Other metrics, such as `\Process(w3wp)\% Processor Time`, will be saved on the **customMetrics** table when the performance counter is enabled.
 
-```
+```Output
 \Process(??APP_WIN32_PROC??)\% Processor Time  
 
 \Memory\Available Bytes  
@@ -212,7 +212,7 @@ To find the exception records in the Application Insights instance, you can use 
 
 1. Go to the Azure portal, select the Application insights instance, and then select **Failures**.
 2. Locate the failed request in the **Operations** tab by adjusting the time range and selecting the corresponding operation.
-3. Select the operation name. The failed requests with a specific exception type or response code will be listed automatically. For more information, see [Part1]
+3. Select the operation name. The failed requests with a specific exception type or response code will be listed automatically.
 
 #### Query Logs in the Azure portal
 
@@ -250,7 +250,7 @@ Here are some possible situations:
     exceptions 
     | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
     ```
-- Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as previous situation.
+- Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as the previous situation.
 - Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
     ```kusto
@@ -315,11 +315,9 @@ Add a custom log to track every step the Worker Role application will do. This i
 
 To capture the dump file. Here are some tips:
 
-You can use a remote desktop to connect to the instance having high CPU/Memory issues and verify which process is consuming most of the CPU/Memory. If it's WaWorkerHost, it means the application is consuming excessive CPU/Memory.
+You can use a remote desktop to connect to the instance having high CPU/Memory issues and verify which process is consuming most of the CPU/Memory. If the process is WaWorkerHost, it means the application is consuming excessive CPU/Memory.
 
-If the instances are having high CPU/Memory issues and the application is experiencing low-performance but hasn't crashed, then you can try to use a remote desktop to connect to the instance and capture a dump file. For more details about how to capture the dump file, review this article. 
-
-You can use the following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least three seconds. Five dump files will be captured and saved into the `c:\procdumps` directory.
+If the instances are having high CPU/Memory issues and the application is experiencing low-performance but hasn't crashed, then you can try to use a remote desktop to connect to the instance and capture a dump file. You can use [procdumps](/sysinternals/downloads/procdump) to capture a dump file when the CPU consumed by the WaWorkerHost process is higher than 85% for at least three seconds. Five dump files will be captured and saved into the `c:\procdumps` directory.
 
 ```console
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
