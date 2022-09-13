@@ -143,5 +143,5 @@ The data in the following tables are collected by a custom Diagnostic setting:
 ## Resources
 
 - [Find and diagnose performance issues with Azure Application Insights](/azure/azure-monitor/app/tutorial-performance)
-- [Create a new rule alert in Azure Application Insight]/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
+- [Create a new rule alert in Azure Application Insights](/azure/azure-monitor/alerts/alerts-create-new-alert-rule)
 - [Application Insights standard metrics](/azure/azure-monitor/app/standard-metrics)
