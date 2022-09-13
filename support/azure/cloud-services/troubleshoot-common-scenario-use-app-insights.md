@@ -199,16 +199,14 @@ namespace Worker Role1
     }
 }
 ```
-
 > [!NOTE]
 > You can also do the same thing by using custom telemetry. For more information, see the [Work Role code sample](https://github.com/wuping2004/CloudServiceSample/tree/add-cpp-sdk/Samples/AzureEmailService/WorkerRoleA).
 
-## Check the failed request and related exception of Web Role
+### Check the failed request and related exception of Web Role
 
 For failed requests in Web Role, the unhandled exception and the handled exception (which is in the try function) with `ai.TrackException` are automatically collected in the exception table.
 
 To find the exception records in the Application Insights instance, you can use one of the following methods:
-
 #### View the Failures page in the Azure portal
 
 1. Go to the Azure portal, select the Application insights instance, and then select **Failures**.
@@ -233,9 +231,7 @@ By design, the request of Web Role is automatically marked with a unique ID in C
    exceptions
    | where operation_ParentId == "8d1adf11abf73c42"
    ```
-
 Tracking exceptions based on a failed request is helpful when troubleshooting an intermittent failure issue since it contains the complete CallStack of that request.
- 
 ### Check the failed request and related exception for Worker Role
 
 Since the unhandled exception of Worker Role may cause the whole application to experience downtime, it's recommended to handle all the exceptions in Worker Role. That means that it should include the `try` function. For the handled exceptions in Web Role, `ai.TrackException` is needed to record the exceptions in Application Insights.
