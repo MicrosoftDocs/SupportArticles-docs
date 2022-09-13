@@ -245,11 +245,11 @@ Here are some possible situations:
 
 - Worker Role doesn't include a system for recording custom requests. The only data that can be used to track the relationship between the exception record and real operation in the application is the timestamp. 
 
-In this situation, checking the Failures page is still possible, but you need to switch to the Exceptions page and check the timestamp manually. You can also check the accuracy of the data on the Logs page. The following is an example query to check exceptions between a specific time range.
-   ```kusto
-   exceptions 
-   | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
-   ```
+    In this situation, checking the Failures page is still possible, but you need to switch to the Exceptions page and check the timestamp manually. You can also check the accuracy of the data on the Logs page. The following is an example query to check exceptions between a specific time range.
+    ```kusto
+    exceptions 
+    | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
+    ```
 - Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as previous situation.
 - Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
