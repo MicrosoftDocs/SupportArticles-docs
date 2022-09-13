@@ -20,7 +20,7 @@ When the Diagnostic setting is enabled, the **performance counters** setting wor
 
 ### For Web Role
 
-The following nine metrics data will be automatically collected even if the performance counter is disabled in Diagnostic Setting. Data from these nine metrics is saved in the **performanceCounter** table of Application Insights. Other metrics, such as `\Process(w3wp)\% Processor Time`, will be saved on the **customMetrics** table when the performance counter is enabled.
+The following nine metrics' data will be automatically collected even if the performance counter is disabled in Diagnostic Setting. Data from these nine metrics is saved in the **performanceCounter** table of Application Insights. Other metrics, such as `\Process(w3wp)\% Processor Time`, will be saved on the **customMetrics** table when the performance counter is enabled.
 
 ```
 \Process(??APP_WIN32_PROC??)\% Processor Time  
@@ -229,36 +229,35 @@ To find the exception records in the Application Insights instances, you can use
 
 The second method uses the **Logs** option of Application Insights. This method is more complicated, but it allows you to use more custom filters to look for specific types of exceptions. It also provides more details that will not be displayed in the Failures page.
  
-By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. The only point is how we can find them in Application Insight.
- 
-The steps will be:
+By design, the request of Web Role is automatically marked with a unique ID in Cloud Service to identify the correlation. To find the ID of the requests, follow these steps:
 
-1.    Locate the failed request in requests table and record its ID:
+
+1.    Locate the failed request in the requests table and record its ID:
     ```
     requests
     | where resultCode == "500"
     ```
      
-2.    Find the exception with same ID in exceptions table:
+2.    Find the exception with same ID in the exceptions table:
 
     ```
     exceptions
     | where operation_ParentId == "8d1adf11abf73c42"
     ```
 
-The way of tracking exceptions based on a failed request will be helpful when you want to troubleshoot an intermittent failure issue since it will contain the complete CallStack of that request.
+Tracking exceptions based on a failed request is helpful when troubleshooting an intermittent failure issue since it contains the complete CallStack of that request.
  
 ### Check the failed request and related exception for Worker Role
 
-Since the unhandled exception of Worker Role may cause the whole application downtime, it is recommended to handle all the exceptions in Worker Role that means that it should be included by `try` function. As Web Role, to the handled exceptions, `ai.TrackException` is needed to record the exceptions into Application Insights.
+Since the unhandled exception of Worker Role may cause the whole application to experience downtime, it's recommended to handle all the exceptions in Worker Role. That means that it should be included by the `try` function. For the handled exceptions in Web Role, `ai.TrackException` is needed to record the exceptions in Application Insights.
 
-Steps to check the exception in Worker Role is similar to the Web Role. The only difference is that there isn't a built-in system to record the exceptions automatically, so some extra codes are needed to archive the goal.
+The steps to check the exception in Worker Role are similar to the ones in Web Role. The only difference is that there isn't a built-in system to record the exceptions automatically, so some extra codes are needed to archive the goal.
 
 Here are multiple possible situations:
 
-- Worker Role doesn't include a system of recording custom requests, the only data that can be used to track the relationship between exception record and real operation in application is the timestamp. 
+- Worker Role doesn't include a system for recording custom requests. The only data that can be used to track the relationship between the exception record and real operation in the application is the timestamp. 
 
-  In this situation, the way of checking Failures page is still possible for user to use, but it's needed to switch to Exceptions page and check the timestamp manually.  The way to check accurate data in Logs page can also be used. The following is an example query to check exceptions between a specific time range.
+In this situation, checking the Failures page is still possible, but you need to switch to the Exceptions page and check the timestamp manually. You can also check the accuracy of the data on the Logs page. The following is an example query to check exceptions between a specific time range.
 
     ```
     exceptions 
@@ -278,35 +277,26 @@ Here are multiple possible situations:
 
 ## Common scenarios and guidelines
 
-In this part, there will be several common scenarios and the related guidelines about how to use Application Insights to meet the requirements.
+In this part, there will be several common scenarios and related guidelines about how to use Application Insights to meet the requirements.
 
 ### Monitor the Memory and Request status of a Web Role
 
-To monitor the Memory and Request status of the Web Role in Cloud Service, you just need to enable Application Insights on the role that you wants to collect metrics data from. Then It will automatically collect data for Memory usage and request status of the Web Role.
+To monitor the Memory and Request status of the Web Role in Cloud Service, you just need to enable Application Insights on the role you want to collect metrics data from. Then it will automatically collect data for the Memory usage and Request status of the Web Role.
 
-To see the collected data, it's recommended to use the Metrics page of the Application Insights. Under Application Insight standard metrics as Metric Namespace, there's Available memory under Server part for the memory. Also there are Server requests under Server part, Failed requests and exceptions under Failure part or some other metric type to monitor the request status.
+To see the collected data, it's recommended to use the **Metrics** page of Application Insights. For more information, see [System performance counters in Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/performance-counters).
 
-To monitor the Memory and Request status for the Web Role in Cloud Service, you just need to enable Application Insights on the role that you wants to collect metrics data from. Then It will automatically collect data for Memory usage and request status of the Web Role.
+Like Web Role, it's also possible to monitor the memory and request status of Worker Role, but there will be some limitations:
 
-To see the collected data, it's recommended to use the **Metrics** page of the Application Insights. For more information, see [System performance counters in Application Insights](https://docs.microsoft.com/azure/azure-monitor/app/performance-counters).
+1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic Setting. The collected data will be in the `custommetrics` table of the Logs page.
+1. To view the metrics chart of the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace, and **Available Memory** under **Performance** in Metric. The chart of the Available Memory of the selected time range will be displayed.
 
-Like WebRole, it's also possible to monitor the memory and request status of the WorkerRole but there will be some extra limitations:
+- The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missed during that time range. From the Logs, the interval of collecting the Memory data is about 3 minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
+- Each unit of the data is one billion.
 
-Like Web Role, it's also possible to monitor the memory and request status of the Worker Role but there will be some limitations:
+For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data into a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom log to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
 
-1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic Setting. The collected data will be in the `custommetrics` table of Logs page.
-1. To view the metrics chart of the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace and **Available Memory** under **Performance** in Metric. The chart of the Available Memory of selected time range will be displayed.
-
-- The dotted line in the chart means that the data isn't accurate enough to generate the data or the data is missed during that time range. From the Logs, the interval of collecting the Memory data is about 3 minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than 3 minutes so the collected data won't be accurate enough. Thus, it's dotted line.
-- The unit of the data is billion.
-
-For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data into a web page and return it to the user. Imagine that this progress is much slower than expected but still successful, it's reasonable that user wants to clarify whether most of time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need user to add some extra custom log to record the timestamp of each step, such as start of the progress, start of the communication with SQL Database, end of the communication with SQL Database and end of generating the webpage etc.
-
-For example, when a Cloud Service WebRole receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data into a web page and return it to the user. Imagine that this progress is much slower than expected but still successful, it's reasonable that user wants to clarify whether most of time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need user to add some extra custom log to record the timestamp of each step, such as start of the progress, start of the communication with SQL Database, end of the communication with SQL Database and end of generating the webpage etc.
 
 1. For both Worker Role and Web Role, it's recommended to save trace log at every process start step. For example, in the above example codes, it's possible to add trace log at following points when:
-
-1. For both WorkerRole and WebRole, please check previous part. The way to add custom log to save custom trace log into Application Insights. It's recommended to save trace log at every process start step. For example, in the above example scenario, it's possible to add trace log at following points when:
 
 2. If the main process is the application in Worker Role, record the functions of Worker Role application as request to add custom correlation ID into custom request record and exception record. 
 
@@ -323,7 +313,6 @@ If the system isn't quite complicated, the time spent by different steps will be
 traces
 | where * contains "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" 
 ```
-By this way, it's possible for user to calculate the difference between every trace log to get the time spent by every step.
 
 By this way, it's possible for you to calculate the difference between every trace log to get the time spent by every step.
 
