@@ -263,8 +263,8 @@ In this situation, checking the Failures page is still possible, but you need to
     exceptions 
     | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
     ```
-- WorkerRole includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as situation 1.
-- WorkerRole includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
+- Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as situation 1.
+- Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
 
     ```
     requests 
@@ -290,51 +290,50 @@ Like Web Role, it's also possible to monitor the memory and request status of Wo
 1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic Setting. The collected data will be in the `custommetrics` table of the Logs page.
 1. To view the metrics chart of the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace, and **Available Memory** under **Performance** in Metric. The chart of the Available Memory of the selected time range will be displayed.
 
-- The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missed during that time range. From the Logs, the interval of collecting the Memory data is about 3 minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
-- Each unit of the data is one billion.
+- The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missing during that time range. From the Logs, the interval of collecting the Memory data is about three minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
+- Each unit of data is one billion.
 
-For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data into a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom log to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
+For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data on a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom log to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
 
 
-1. For both Worker Role and Web Role, it's recommended to save trace log at every process start step. For example, in the above example codes, it's possible to add trace log at following points when:
-    - the Web Role receives the request 
-    - the Web Role starts to build communication with SQL server 
-    - the Web Role receives the data returned by SQL server and starts generating the web page 
-    - the Web Role generates the web page and returns it to user 
+1. For both Worker Role and Web Role, it's recommended to save a trace log at every process start step. For example, in the above example codes, it's possible to add a trace log at following points when:
 
-2. If the main process is the application in Worker Role, record the functions of Worker Role application as request to add custom correlation ID into custom request record and exception record. 
+2. If the main process is the application in Worker Role, record the functions of the Worker Role application as a request to add a custom correlation ID into the custom request record and exception record. 
 
-Once the logic is implemented, you can check the requests in the **Performance** page of Application Insights and focus on the request durations by following:
+Once the logic is implemented, you can check the requests on the **Performance** page of Application Insights and focus on the request durations by following:
 
-1. Select a operation which you want to check.
-1. Scale the duration distribution chart to the longest duration part
+1. Select an operation that you want to check.
+1. Scale the duration distribution chart to the longest duration part.
 1. Select **Drill into samples**.
-1. Select a request as example and get the built-in or custom ID of this request.
+1. Select a request as an example and get the built-in or custom ID of this request.
 
-If the system isn't quite complicated, the time spent by different steps will be displayed in the End-to-end transaction chart. If the system is complicated or we're using a custom ID which causes it unable to display the data in chart, use following query to get all related trace logs containing same correlation ID:
+If the system isn't overly complicated, the time spent by different steps will be displayed in the End-to-end transaction chart. If the system is complicated or we're using a custom ID that causes it to be unable to display the data in the chart, use the following query to get all related trace logs containing the same correlation ID:
 
 ```
 traces
 | where * contains "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" 
 ```
 
-By this way, it's possible for you to calculate the difference between every trace log to get the time spent by every step.
+This way, it's possible for you to calculate the difference between every trace log to get the time spent by every step.
 
 ### Troubleshoot performance issues such as high CPU/Memory of Worker Role
 
-Sometimes you will need to identify issues such as a Worker Role consuming very high CPU/Memory. The only thing which can be observed from outside of the Cloud Service is that the Worker Role is consuming much CPU/Memory but you has no idea what exactly is happening in the instance.
+Sometimes you will need to identify issues such as a Worker Role consuming very high CPU/Memory. The only thing that can be observed from outside of the Cloud Service is that the Worker Role is consuming too much CPU/Memory, but you have no idea what exactly is happening in this instance.
 
-To troubleshoot such issues, there will be mainly two steps:
+To troubleshoot this kind of issue, there are two steps:
 
-Add a custom log to track every step which the Worker Role application will do. This is very important because this step enables you to identify if the application is still running well and to compare the time spent in each step with the normal situation. This can help you to identify whether the application is affected by the high CPU/Memory issue. About how to add custom log system, please kindly refer to [add custom log](#add-custom-log).
+Add a custom log to track every step the Worker Role application will do. This is very important because this step enables you to identify if the application is still running well and to compare the time spent in each step with the normal situation. This can help you to identify whether the application is affected by the high CPU/Memory issue. For information about how to add a custom log system, refer to [add custom log](#add-custom-log).
 
-Capture the dump file. Here are some tips:
+To capture the dump file. Here are some tips:
 
-User can RDP into the instance having high CPU/Memory issue and verify which process is consuming most of the CPU/Memory. If it's WaWorkerHost, then it means that it's the application itself consuming so much CPU/Memory.
+You can use a remote desktop to connect to the instance having high CPU/Memory issues and verify which process is consuming most of the CPU/Memory. If it's WaWorkerHost, it means the application is consuming excessive CPU/Memory.
 
-If the instances are having high CPU/Memory and the application is just with low-performance but not crashed, then you can try to RDP into the instance and capture a dump file for this. For more details about how to capture the dump file, please kindly refer to this document. For example, you can use following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least 3 seconds. Five dump files will be captured and saved into `c:\procdumps` directory.
+If the instances are having high CPU/Memory issues and the application is experiencing low-performance but hasn't crashed, then you can try to use a remote desktop to connect to the instance and capture a dump file. For more details about how to capture the dump file, review this article. 
+
+You can use the following command to capture a dump file when the CPU consumed by WaWorkerHost is higher than 85 for at least three seconds. Five dump files will be captured and saved into the `c:\procdumps` directory.
 
 ```
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
-In the diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details of this part, please refer to this document.
+
+In the diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review this article.
