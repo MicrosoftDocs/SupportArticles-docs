@@ -10,7 +10,7 @@ ms.date: 09/06/2022
 ms.custom: 
 ---
 
-# Troubleshoot Cloud Service app issues with Application Insights - features overview
+# Troubleshoot Cloud Services app with Application Insights - features overview
 
 This article describes Azure Monitor Application Insights features that are useful to troubleshoot application-related issues.
 
