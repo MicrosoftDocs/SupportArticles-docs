@@ -452,7 +452,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|14.0.3456.2|None| CU31| [5016884](https://support.microsoft.com/help/5016884)|September 13, 2022|
+|14.0.3456.2|None| CU31| [5016884](https://support.microsoft.com/help/5016884)|September 20, 2022|
 |14.0.3451.2|None| CU30| [5013756](https://support.microsoft.com/help/5013756)|July 13, 2022|
 |14.0.3445.2|None| CU29 + GDR| [5014553](https://support.microsoft.com/help/5014553)|June 14, 2022|
 |14.0.2042.3|None| GDR| [5014354](https://support.microsoft.com/help/5014354)|June 14, 2022|
