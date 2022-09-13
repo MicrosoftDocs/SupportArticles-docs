@@ -63,7 +63,7 @@ If you want to perform the checks and fix the issue manually, follow these steps
     - **0xCAA20004**  
         This error occurs if an issue affects conditional access. For more information, see [Conditional Access policies for Teams](/microsoftteams/security-compliance-overview#how-conditional-access-policies-work-for-teams).
 
-    - **0xCAA70004** or **0xCAA70007**, or if the sign-in issue also occurs in other Office applications: See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/office365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016).
+    - **0xCAA70004** or **0xCAA70007**, or if the sign-in issue also occurs in other Office applications: See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](/microsoft-365/troubleshoot/authentication/connection-issue-when-sign-in-office-2016).
 
 4. If the sign-in error occurs only in the Teams web client, see [Microsoft Teams is stuck in a login loop](sign-in-loop.md) for resolutions that are specific to the user's preferred browser.
 

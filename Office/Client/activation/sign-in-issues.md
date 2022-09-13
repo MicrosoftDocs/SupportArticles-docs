@@ -1,9 +1,9 @@
 ---
 title: Sign in issues when activating Microsoft 365 Apps
 description: This article will help you troubleshoot network connection issues when activating Microsoft 365 Apps.
-author: v-matthamer
+author: helenclu
 ms.reviewer: vikkarti
-ms.author: v-matthamer
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -75,7 +75,7 @@ Microsoft 365 Apps fails to activate when opened from published apps on a Citrix
 <details>
 <summary><b>Make sure Azure Active Directory Authentication Library (ADAL) and Web Account Manager (WAM) are enabled</b></summary>
 
-For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/office365/troubleshoot/administration/disabling-adal-wam-not-recommended).
+For more information, see [Disabling ADAL or WAM not recommended for fixing Office sign-in or activation issues](/microsoft-365/troubleshoot/administration/disabling-adal-wam-not-recommended).
 <br/><br/>
 </details>
 
@@ -156,7 +156,7 @@ If the process isn’t blocked, but you still can’t activate Microsoft 365, de
 1.	Restart the device.
 1.	Download and run [the SaRA package for sign in issues](https://aka.ms/SaRA-OfficeSignInScenario).
 
-For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/office365/troubleshoot/authentication/automatic-authentication-fails).
+For manual troubleshooting for step 7, or for more information, see [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](/microsoft-365/troubleshoot/authentication/automatic-authentication-fails).
 <br/><br/>
 </details>
 

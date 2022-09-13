@@ -35,19 +35,20 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
-|Split gallery participants sharing video appear as audio-only |In a meeting that includes more than nine remote participants, the meeting is presented in dual front-of-room displays, and when content isn't being shared, the participants who are sharing video might appear as participants sharing audio-only. <br/><br/>Also, the number of participants displayed in the dual front-of-room displays as sharing audio-only is smaller than the actual number of such participants in the meeting.|No workaround is available at this time.|
 |Low meeting volume after content sharing|Teams Rooms devices on Windows 10 20H2 experience decreased media and meeting volume after you share content through in-room HDMI. This issue is caused by an audio condition in Windows 10 20H2.|To fix this issue, upgrade to version [4.9.12.0](/microsoftteams/rooms/rooms-release-note#49120-7282021) of the Teams Rooms app.|
 |Teams Rooms app out of date|The Teams Rooms console displays the **system config out of date** error.|To fix this issue, [use the Microsoft Teams Rooms recovery tool](/MicrosoftTeams/rooms/recovery-tool).|
 |Windows version on device updated to unsupported version for Teams Rooms|A Windows 10 device is updated from version 1803 to version 1809. Version 1809 isn't supported for Teams Rooms.|This issue can occur if the [Group Policy or MDM setting for the DeferFeatureUpdatesPeriodinDays parameter](/windows/deployment/update/waas-configure-wufb#configure-when-devices-receive-feature-updates) is set to 365 days, which is the maximum value. As of March 27, 2020, version 1809 is more than 365 days old. Therefore, the Windows 10 device that's running version 1803 installs version 1809 after 365 days of running version 1803. However, version 1809 isn't supported for Teams Rooms and might cause issues that affect Teams Rooms adversely.<br/><br/>To avoid this situation, remove the configuration from any Group Policy or MDM setting that's set up to defer updates. It's important to leave the policy or setting unconfigured and not set to 0. Then the device will always update to the latest version of Windows that supports Teams Rooms.|
-|Virtual keyboard missing|The virtual keyboard doesn't appear when you have to enter information in Microsoft Teams Rooms. This issue occurs in Windows 10, version 1903.|Install the April 2020 Cumulative Update for Windows 10, version 1903 for x64-based systems through Windows Update.|
+|Virtual keyboard missing|The virtual keyboard doesn't appear when you have to enter information in Teams Rooms devices. This issue occurs in Windows 10, version 1903.|Install the April 2020 Cumulative Update for Windows 10, version 1903 for x64-based systems through Windows Update.|
 |Jabra Panacast 50 doesn't display video in Teams meeting|When using Jabra Panacast 50 in a Teams meeting, if the **Whiteboard sharing mode** in Jabra Direct is set to **In separate content camera view**, the video doesn't display.|The fix for this issue is available in application version [4.12.138.0](/microsoftteams/rooms/rooms-release-note#4121380-5262022).|
 |Teams Rooms app fails to start after update|If your Teams Rooms device uses a processor (CPU) which supports Control-flow Enforcement Technology (CET), such as the 11th Gen Intel® Core™ Processor or later and you have:<ul><li>Applied cumulative update KB5013942</li><li>Not applied cumulative update KB5015020 or later</li><li>Updated the Teams Rooms app</li></ul>then you might see an error that the Teams Rooms app can't be started.|Re-image the Teams Rooms device with OEM media that uses Windows operating system version 20H2 or later.|
+|Can't access Windows Settings from the desktop right-click menu.|On Teams Rooms devices that are running app version 3.1.98.0 or later versions, any user account that has the Teams Rooms app installed will be able to access Windows Settings only by using the Start menu. If you try to access Windows Settings by using another method, the Teams Rooms app will open instead.|Use one of the following workarounds to access Windows Settings:<ul><li>Select the **Settings** option from the **Start** menu.</li><li>Uninstall the Teams Rooms app for the affected user. Locate the app on the **Start** menu, right-click it and select **Uninstall**.</li></ul>
 
 ### Hardware issues
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
 |Monitors not detected|When you run Teams Rooms on a Surface Pro (Model 2017) device, monitors aren't detected.|Hold down the power button of the Surface Pro device for 20 seconds or more to restart it. This will clear the graphics cache.|
+|During a Coordinated meeting, when the meeting volume is changed by using a room remote, the speaker on a Surface Hub or Teams Rooms device turns on.|For trusted devices such as a Surface Hub or Teams Rooms device that are set up to auto-join a Coordinated meeting when the primary device joins, the speaker turns on when the meeting volume is changed by using a room remote. This issue occurs even though their audio settings are turned off, and whether they're enabled or disabled.|Turn off proximity join and room remote capabilities on the trusted devices that auto-join a Coordinated meeting.|
 
 ## Teams Rooms on Android
 
@@ -58,7 +59,7 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 |No video for remote participants from Android Meeting Room devices| Remote participants can't get video from meeting participants who're using Teams Rooms on Android devices, such as MTRA Poly X50, X30, and Yealink A20. The issue is intermittent. | Install [Update 1449/1.0.96.2022051102 of the Teams Rooms app for Android](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-devices-eabf4d81-acdd-4b23-afa1-9ee47bb7c5e2#ID0EBD=Teams_Rooms_on_Android). This update fixes most of the issues with video not displaying on these devices. |
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
 
-### Issues with Teams phone devices
+### Issues with Teams phones
 
 | Issue  |  Description | Workaround |
 | --- | --- | --- |
@@ -71,6 +72,12 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 | Laser pointer and drawing tools in PowerPoint Live don't display for in-room participants | In-room meeting participants in a Teams meeting who're using Teams Rooms on Android devices aren't able to see the following features during a PowerPoint Live presentation: Laser pointer, pen, highlighter, and eraser. | No workaround is available at this time. |
 | App crash on Teams phone device | The Teams app on a Teams phone device crashes intermittently and the device restarts. | No workaround is available at this time. |
+
+### Issues with Teams peripherals
+
+| Issue  |  Description | Workaround |
+| --- | --- | --- |
+|The dial pad on Yealink MP50 USB phones doesn't work.|The dial pad on Yealink MP50 USB phones intermittently stops accepting input.|When the issue occurs, use the Teams desktop client instead.
 
 ## Limitations
 
@@ -89,5 +96,14 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 
   Known symptoms include a black or gray screen on the front-of-room display, or the Teams Rooms console becomes unresponsive after waking from standby mode. If you experience issues when you use consumer TVs, we recommend that you install a configurable EDID controller or EDID emulator, such as the [HD-RX-201-C-E](https://www.crestron.com/Products/Video/HDMI-Solutions/HDMI-Extenders/HD-RX-201-C-E) from Crestron, or [DR-EDID Emulator](https://fsrinc.com/fsr-products/product/dr-edid-manager-learner/category_pathway-143) from FSR Video Products Group.
 - Team Admin Center only identifies valid certified firmware. If uncertified firmware is updated on the device by means other than Teams Admin Center, Teams Admin Center will provide the old firmware. This issue may occur with Teams Rooms on Android devices and Teams IP phones.
+
+## Support for third party Teams devices
+
+For issues with Teams devices offered by third party providers, contact their individual sites for support:
+
+- Logitech: [Logitech Support](https://support.logi.com/hc/)
+- Crestron: [Crestron Support](https://support.crestron.com/)
+- Poly: [Poly Support](https://www.poly.com/us/support)
+- Yealink: [Yealink Support](https://support.yealink.com/portal/home)
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-contact-disclaimer.md)]
