@@ -25,7 +25,7 @@ _Original KB number:_ &nbsp; 2938148
 You use the Windows PowerShell cmdlet `Grant-DfsnAccess` to set permissions on DFS links in a DFS namespace in order to have the links filtered by Access Based Enumeration, as in the following example:
 
 ```powershell
-Grant-DfsnAccess -Path "\\Contoso.com\Software\Projects" -AccountName "Contoso\SarahJones"
+Grant-DfsnAccess -Path "\\Contoso.com\Software\Projects" -AccountName "Contoso\UserName"
 ```
 
 Although the command is completed successfully and the result of the cmdlet shows the correct permissions, you notice that the Access Based Enumeration filtering doesn't reflect the newly set permissions. Additionally, when you check the permissions of the link in the DFS Management Console, you notice that the **Use inherited permission from the local file System** option is still selected.
@@ -45,7 +45,7 @@ To work around this problem, use one of the following methods.
 - Use the `dfsutil property sd grant` command instead, as in the following example:
 
     ```console
-    dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\SarahJones:RX protect
+    dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\UserName:RX protect
     ```
 
 ## More information
