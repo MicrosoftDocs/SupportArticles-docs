@@ -10,7 +10,7 @@ ms.author: v-weizhu
 
 _Applies to:_ &nbsp; Configuration Manager (current branch)
 
-Microsoft Endpoint Configuration Manager uses the Distributed Component Object Model (DCOM) Remote Protocol at multiple parts of functionality. With the June 2022 security updates for Windows, [hardening changes in DCOM](#dcom-hardening-changes) are enabled by default. This article provides solutions for the issues that may occur in Configuration Manager after the June 2022 security updates for Windows are installed.
+Microsoft Endpoint Configuration Manager uses the Distributed Component Object Model (DCOM) Remote Protocol at multiple parts of functionality. With the June 2022 security updates for Windows, [hardening changes in DCOM](#dcom-hardening-changes) are enabled by default. This article provides solutions for issues that may occur in Configuration Manager after the June 2022 security updates for Windows are installed.
 
 ## Symptoms
 
@@ -18,7 +18,7 @@ After installing the June 2022 security updates for Windows or later, a Configur
 
 - The Configuration Manager console fails to access the SMS Provider remotely under any user account. However, under the same credential, a local connection to the SMS Provider is successful.
 
-- When the Configuration Manager administrator connects remotely to client computers, the same issue (under any user account, the remote connection fails but the local connection is successful) occurs for Configuration Manager tools like Support Center or Policy Spy.
+- When the Configuration Manager administrator connects remotely to client computers, the same issue (under any user account, the remote connection fails, but the local connection is successful) occurs for Configuration Manager tools like Support Center or Policy Spy.
 
 - Content fails to be distributed to a remote distribution point.
 
@@ -43,13 +43,13 @@ System.UnauthorizedAccessException
 
 ## Resolution
 
-To resolve these issues, install the latest cumulative update for Windows on both computers that initiate the connection (the remote console or site server) and receive it (the SMS Provider, distribution point, or remote client). Besides enhancing the security, installing the update can ensure the same level of DCOM hardening and the logging capabilities.
+To resolve these issues, install the latest cumulative update for Windows on both computers that initiate the connection (the remote console or site server) and receive it (the SMS Provider, distribution point, or remote client). Besides enhancing security, installing the update can ensure the same level of DCOM hardening and logging capabilities.
 
 The latest versions of Configuration Manager make security changes, so we recommend that you upgrade to [Configuration Manager, version 2203](/mem/configmgr/core/plan-design/changes/whats-new-in-version-2203) or a later version.
 
 ## DCOM hardening changes
 
-Back in 2021, the Windows DCOM Server Security Feature Bypass vulnerability was discovered and released in [CVE-2021-26414](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26414). Later, Microsoft released security updates that improve DCOM protocol hardening. However, some applications require a code change to comply with the new security level. Therefore, Microsoft addressed this vulnerability with a phased approach, which is configurable by the `RequireIntegrityActivationAuthenticationLevel` registry key. See the following timeline:
+In 2021, the Windows DCOM Server Security Feature Bypass vulnerability was discovered and released in [CVE-2021-26414](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-26414). Later, Microsoft released security updates that improved DCOM protocol hardening. However, some applications require a code change to comply with the new security level. Therefore, Microsoft addressed this vulnerability with a phased approach, which is configurable by the `RequireIntegrityActivationAuthenticationLevel` registry key. See the following timeline:
 
 |Update release|Behavior change|
 |---|---|
@@ -90,4 +90,4 @@ To enable the DCOM hardening, set the registry value to `0x00000001`. If this re
 > [!NOTE]
 > This registry key will be ignored starting from March 14, 2023. Upgrade the operating systems before this date.
 
-If the issue still persists after completing the steps above, [contact Microsoft Support](https://support.microsoft.com/contactus).
+If the issue persists after completing the steps above, [contact Microsoft Support](https://support.microsoft.com/contactus).
