@@ -48,7 +48,7 @@ To use CalCheck, the Outlook calendar must reside on a computer that is running 
 
 The Assistant fully automates all the steps required to perform Outlook calendar checking and is available in two versions. Use the version that suits your requirements.
 
-- The Eterprise (command-line) version
+- The Enterprise (command-line) version
 
   The [Enterprise version of the Assistant](https://aka.ms/SaRA_EnterpriseVersion) is a command line version that can be scripted, and is recommended to perform Outlook calender checking on multiple devices and devices that you can't access immediately.
   
