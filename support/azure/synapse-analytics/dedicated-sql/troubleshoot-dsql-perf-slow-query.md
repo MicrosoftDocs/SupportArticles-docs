@@ -275,7 +275,7 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
 
 ### Execution phase issues
 
-* When analyzing [Step 2](#step-2-determine-where-the-query-is-taking-time), use the following table to diagnose the common cause.
+- When analyzing [Step 2](#step-2-determine-where-the-query-is-taking-time), use the following table to diagnose the common cause.
 
    | Indicator | Common Cause |
    |----------|--------------|
@@ -283,8 +283,8 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | `Description` indicates BroadcastMoveOperation and T-SQL references a replicated table | [Uncached replicated tables](#uncached-replicated-tables) |
    | When `@ShowActiveOnly = 0`, you observe high or unexpected number of steps (`step_index`) and the data types of joiner columns are not identical between tables | [Mismatched data type/size](#mismatched-data-type-size) |
    | `Description` is HadoopBroadcastOperation, HadoopRoundRobinOperation, or HadoopShuffleOperation and `total_elapsed_time` of for a given `step_index` is inconsistent between executions | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
-   
-* When analyzing [Step 3](#step-3-review-step-details) you find that `total_elapsed_time` is significantly higher in a small number of distributions in given step, use the following table to diagnose the common cause.
+
+- When analyzing [Step 3](#step-3-review-step-details) you find that `total_elapsed_time` is significantly higher in a small number of distributions in given step, use the following table to diagnose the common cause.
 
    | Indicator | Common Cause |
    |----------|--------------|
@@ -292,86 +292,74 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | Tables involved in the query **do not** indicate storage skew (see Data skew (stored) for more information) | [In-flight data skew](#in-flight-data-skew) |
 
 <details><summary id="inaccurate-estimates">Inaccurate estimates</summary>
-<p>
 
-- Having your statistics up-to-date is critical to ensuring the query optimizer can generate an optimal plan.  When the telemetry indicates poor estimated rows when compared to actual counts, it is an indicator that statistics need to be maintained.
+Having your statistics up-to-date is critical to ensuring the query optimizer can generate an optimal plan.  When the telemetry indicates poor estimated rows when compared to actual counts, it is an indicator that statistics need to be maintained.
 
-   **Mitigations**
+**Mitigations**
 
-   [Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics)
+[Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
 
-</p>
 </details>
 
 <details><summary id="uncached-replicated-tables">Uncached replicated tables</summary>
-<p>
 
-- If you have created replicated tables, failure to properly warm the replicated table cache can result in unexpected poor performance due to additional data movement or the creation of a sub-optimal distributed plan.
+If you have created replicated tables, failure to properly warm the replicated table cache can result in unexpected poor performance due to additional data movement or the creation of a sub-optimal distributed plan.
 
-   **Mitigations**
+**Mitigations**
 
-   - [Warm the replicated cache](/en-us/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#rebuild-a-replicated-table-after-a-batch-load) after DML
-   - If frequent DML, change distribution of table to ROUND\_ROBIN
+- [Warm the replicated cache](/en-us/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#rebuild-a-replicated-table-after-a-batch-load) after DML
+- If frequent DML, change distribution of table to ROUND\_ROBIN
 
-</p>
 </details>
 
 <details><summary id="mismatched-data-type-size">Mismatched data type/size</summary>
-<p>
 
-- When joining tables, it is important to ensure that the data type and size of the joining columns match.  Failure to follow this guidance will result in unnecessary data movement which decreases the availability of CPU, IO, and network traffic to the remainder of the workload.
+When joining tables, it is important to ensure that the data type and size of the joining columns match.  Failure to follow this guidance will result in unnecessary data movement which decreases the availability of CPU, IO, and network traffic to the remainder of the workload.
 
-   **Mitigations**
+**Mitigations**
 
-   Correct any related table columns which do not have identical data type and size by rebuiling the tables
+Correct any related table columns which do not have identical data type and size by rebuilding the tables.
 
-</p>
 </details>
 
 <details><summary id="ad-hoc-external-table-queries">Ad hoc external table queries</summary>
-<p>
 
-- Queries over external tables were design with the intention of bulk loading data into the dedicated SQL pool.  Ad hoc queries against external tables, though functions, may suffer variable durations due to external factors such as concurrent storage container activities.
+Queries over external tables were design with the intention of bulk loading data into the dedicated SQL pool.  Ad hoc queries against external tables, though functions, may suffer variable durations due to external factors such as concurrent storage container activities.
 
-   **Mitigations**
+**Mitigations**
 
-   [Load data into the dedicated SQL pool first](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#load-then-query-external-tables) and then query the loaded data.
+[Load data into the dedicated SQL pool first](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#load-then-query-external-tables) and then query the loaded data.
 
-</p>
 </details>
 
 <details><summary id="data-skew-stored">Data skew (stored)</summary>
-<p>
 
-- Data skew means the data is not distributed evenly across the distributions.  Each step of the distributed plan requires all distributions complete before moving to the next step.  When your data is skewed, the full potential of the processing resources, such as CPU and IO, cannot be achieved, resulting in slower execution times.
+Data skew means the data is not distributed evenly across the distributions.  Each step of the distributed plan requires all distributions complete before moving to the next step.  When your data is skewed, the full potential of the processing resources, such as CPU and IO, cannot be achieved, resulting in slower execution times.
 
-   **Mitigations**
+**Mitigations**
 
-   Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column
+Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column
 
-</p>
 </details>
 
 <details><summary id="in-flight-data-skew">In-flight data skew</summary>
-<p>
 
-- In-flight data skew is a variant of the aforementioned data skew issue.  However, in this case, it's not the distribution of data on disk that is skewed.  Instead, the nature of the distributed plan for particular filters or grouped data causes a `ShuffleMoveOperation` which produces a skewed output to be consumed downstream.
+In-flight data skew is a variant of the aforementioned data skew issue.  However, in this case, it's not the distribution of data on disk that is skewed.  Instead, the nature of the distributed plan for particular filters or grouped data causes a `ShuffleMoveOperation` which produces a skewed output to be consumed downstream.
 
-   **Mitigations**
+**Mitigations**
 
-   - Change the order of your GROUP BY columns to lead with a higher cardinality column
-   - Create multi-column statistic if joins cover multiple columns
-   - Add query hint `OPTION(FORCE_ORDER)` to your query
-   - Refactoring the query
+- Change the order of your GROUP BY columns to lead with a higher cardinality column
+- Create multi-column statistic if joins cover multiple columns
+- Add query hint `OPTION(FORCE_ORDER)` to your query
+- Refactoring the query
 
-</p>
 </details>
 
 ### Wait type issues
 
 If none of the above common issues apply to your query, the [Step 3](#step-3-review-step-details) data affords the opportunity to determine which wait types (in `wait_type` and `wait_time`) are interfering with query processing for the longest-running step. There are a large number of wait types and they're grouped into related categories due to similar mitigations. Follow these steps to locate the wait category of your query step:
 
-1. Identify the `wait_type` in [Step 3](#step-3-review-step-details) which is taking the most time
+1. Identify the `wait_type` in [Step 3](#step-3-review-step-details) which is taking the most time.
 1. Locate the wait type in [wait categories mapping table](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table) and identify the wait category it included in.
 1. Expand the section related to the wait category from the following list for recommended mitigations.
 
