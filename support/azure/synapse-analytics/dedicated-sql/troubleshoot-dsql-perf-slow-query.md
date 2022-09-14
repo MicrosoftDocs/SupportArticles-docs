@@ -265,7 +265,7 @@ If you require the first execution of query that consistently requires statistic
 
 <details><summary id="auto-create-statistics-timeouts">Auto-create statistics timeouts</summary>
 
-The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. The auto-creation of statistics occurs in response to a SELECT statement and has a 5-minute threshold to complete.  If the size of data and/or the number of statistics to be created require longer than the 5 minute threshold, the auto-creation of statistics will be abandoned so that the query can continue execution.  The failure to create the statistics can negatively impact the query optimizer's ability to generate an efficient distributed execution plan, resulting in poor query performance.
+The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. The auto-creation of statistics occurs in response to a SELECT statement and has a 5-minute threshold to complete.  If the size of data and/or the number of statistics to be created require longer than the 5-minute threshold, the auto-creation of statistics will be abandoned so that the query can continue execution.  The failure to create the statistics can negatively impact the query optimizer's ability to generate an efficient distributed execution plan, resulting in poor query performance.
 
 **Mitigations**
 
@@ -310,7 +310,7 @@ Have your statistics up-to-date to ensure that the query optimizer generates an 
 
 <details><summary id="uncached-replicated-tables">Uncached replicated tables</summary>
 
-If you have created replicated tables, and you fail to properly warm the replicated table cache, unexpected poor performance will result due to extra data movements or the creation of a suboptimal distributed plan.
+If you have created replicated tables, and you fail to warm the replicated table cache properly, unexpected poor performance will result due to extra data movements or the creation of a suboptimal distributed plan.
 
 **Mitigations**
 
@@ -401,7 +401,7 @@ If the issue persists, then:
 
 <details><summary>Lock, Worker Thread</summary>
 
-- Consider changing tables which undergo frequent, small changes to utilize a row store index instead of CCI.
+- Consider changing tables that undergo frequent, small changes to utilize a row store index instead of CCI.
 - Batch up your changes and update the target with more rows on a less frequent basis.
 
 </details>
@@ -410,7 +410,7 @@ If the issue persists, then:
 
 **Unhealthy CCIs**
 
-Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in turn, negatively impacts the query performance. To mitigate this issue, try one of the these:
+Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in turn, negatively impacts the query performance. To mitigate this issue, try one of the following methods:
 
 - Run and review the output of the query listed at [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes) to get a baseline.
 - Follow the steps to [rebuild indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality) to improve segment quality, targeting the tables involved in the example problem query.
@@ -423,7 +423,7 @@ To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-
 
 **Heavy IO workloads**
 
-Your overall workload may be reading very large amounts of data. Synapse dedicated SQL pools scale resources in accordance with the DWU. In order to achieve better performance, consider either or both:
+Your overall workload may be reading large amounts of data. Synapse dedicated SQL pools scale resources in accordance with the DWU. In order to achieve better performance, consider either or both:
 
 - Utilizing a larger [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management) for your queries.
 - [Increase compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal).
