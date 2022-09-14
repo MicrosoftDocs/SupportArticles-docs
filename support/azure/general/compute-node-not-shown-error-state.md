@@ -5,6 +5,7 @@ ms.date: 9/14/2022
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: hclvteam
+ms.service: azure-common-issues-support
 ---
 # HPC compute nodes aren't shown or in error state
 
@@ -28,7 +29,7 @@ Check network and certificate errors in the HpcNodeManager service logs on the c
 
 Correct certificate mismatches if there are.
 
-To resolve network issues with the error above, configure the Network Security Group rules and firewall rules. For more information, see [Configure Network Security Group for Azure virtual network](https://docs.microsoft.com/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes?view=hpc19-ps#BKMK_nsg)
+To resolve network issues with the error above, configure the Network Security Group rules and firewall rules. For more information, see [Configure Network Security Group for Azure virtual network](/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes)
 
 ## References
 
