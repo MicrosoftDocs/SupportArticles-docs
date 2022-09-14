@@ -32,7 +32,7 @@ When you sign in to Microsoft OneDrive, you receive the following error message:
 > 
 > We can't sign into your account, please try again later 0x8004de88
 
-Error Code 0x8004de40/0x8004de88 indicates OneDrive is having trouble connecting to the cloud.  
+Error Code 0x8004de40 or 0x8004de88 indicates OneDrive is having trouble connecting to the cloud.  
 
 ## Resolution
 
