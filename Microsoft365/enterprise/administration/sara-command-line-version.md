@@ -251,6 +251,7 @@ The following table lists the versions of SaRA that were released on the specifi
 
 |Release date|SaRACmd.exe version|
 |----------|-----------|
+|September 13, 2022|17.00.9001.001 |
 |July 8, 2022|17.00.8713.001 |
 |May 18, 2022|17.00.8433.005 |
 |April 7, 2022|17.00.8256.000|
