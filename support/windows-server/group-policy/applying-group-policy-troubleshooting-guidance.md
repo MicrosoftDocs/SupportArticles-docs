@@ -20,7 +20,7 @@ This guide provides you with the fundamental concepts used to troubleshoot Group
 - How to locate new troubleshooting information.
 - How to use the Event Viewer to filter specific Group Policy information.
 - How to read and interpret event data.
-- Correct methods for locating point of failure.
+- Correct methods for locating the point of failure.
 
 ## Troubleshooting checklist
 
@@ -65,7 +65,7 @@ To create a custom view of a Group Policy instance, follow these steps:
 
 1. Open the Event Viewer.
 2. Right-click **Custom Views**, and then select **Create Custom View**.
-3. Select the **XML** tab, and then check the **Edit query manually** check box. The Event Viewer displays a dialog box that explains editing a query manually prevents you from modifying the query using the **Filter** tab. Select **Yes**.
+3. Select the **XML** tab, and then check the **Edit query manually** check box. The Event Viewer displays a dialog box explaining that manually editing a query prevents you from modifying the query using the **Filter** tab. Select **Yes**.
 4. Copy the Event Viewer query (provided at the end of this step) to the clipboard. Paste the query into the **Query** box.
 
    `<QueryList><Query Id="0" Path="Application"><Select Path="Microsoft-Windows-GroupPolicy/Operational">*[System/Correlation/@ActivityID='{INSERT ACTIVITY ID HERE}']</Select></Query></QueryList>`
@@ -81,7 +81,7 @@ To create a custom view of a Group Policy instance, follow these steps:
 > [!IMPORTANT]
 > The Group Policy service assigns a unique **ActivityID** for each instance of policy processing. For example, the Group Policy service assigns a unique **ActivityID** when user policy processing occurs during user logon. When Group Policy refreshes, the Group Policy service assigns another unique **ActivityID** to the instance of Group Policy responsible for refreshing user policy.
 
-Make sure the group policy has all the settings that you're looking for, and it's correctly linked. Below are the tabs that you have to go through. If all of them looks good, go to the problematic client machine.
+Make sure the group policy has all the settings you're looking for and it's correctly linked. Below are the tabs that you have to go through. If all of them look good, go to the problematic client machine.
 
 1. Open an elevated command prompt and run the following command.
 
@@ -89,16 +89,16 @@ Make sure the group policy has all the settings that you're looking for, and it'
    gpresult /h gp.html
    ```
 
-2. Verify the `gpresult` output that you have captured and look for the GPO that we're having issues with, it will give the error why the GPO isn't getting applied.
-3. If you have an error in the `gpresult` output, we can troubleshoot the issue based on it. Else go to the next step.
-4. Open the Event Viewer and browse to application and system event logs. The application event log will give you the details on why the group policy update fails positively,
-5. Open the operational event log for more detailed information. There are events, which has the list of applied GPOs and list of denied GPOs with the reason in it.
+2. Verify the `gpresult` output that you have captured and look for the GPO that you're having issues with. It will give the error why the GPO isn't getting applied.
+3. If you have an error in the `gpresult` output, we can troubleshoot the issue based on it. Otherwise, go to the next step.
+4. Open the Event Viewer and browse to application and system event logs. The application event log will give you the details on why the group policy update fails positively.
+5. Open the operational event log for more detailed information. There are events with the list of applied GPOs and a list of denied GPOs with the reason.
 
 Most of the GPO issues can be resolved by using these basic logs.
 
 ### Group Policy log files
 
-You can enable verbose logging and examine the resulting log files. Verbose logging can reduce performance and consume significant disk space, so as a best practice enable verbose logging only when necessary.
+You can enable verbose logging and examine the resulting log files. Verbose logging can reduce performance and consume significant disk space, so as a best practice, enable verbose logging only when necessary.
 
 #### Enable Group Policy Service (GPSvc) logging
 
@@ -138,16 +138,16 @@ When checking the event log, you may find the following event description:
 The processing of Group Policy failed because of lack of network connectivity to a domain controller. This may be a transient condition. A success message would be generated once the machine gets connected to the domain controller and Group Policy has successfully processed. If you do not see a success Message for several hours, then contact your administrator.
 ```
 
-In this case, enable gpsvc debug log. In gpsvc log, you may find the output "GetLdapHandle: Failed to connect \<DC\> with 81".
+In this case, enable the gpsvc debug log. In the gpsvc log, you may find the output "GetLdapHandle: Failed to connect \<DC\> with 81".
 
 Enable a network trace to verify:
 
-- There's a ldap query done at site level.
+- There's a ldap query done at the site level.
 - The query returns two entries for that site that hold the ldap service role.
 - For one of them, we can see a name resolution is being done.
 - Because the name resolution is successful, it tries to do an ldap bind but fails at TCP handshake as port 389 is blocked.
-- If there's no answer back from the DC for our TCP handshake on port 389, the next steps are to involve the customer network team and provide them with this information.
-- Make sure that in such scenarios you make use of all the logs specified in the above mentioned action plan, correlate them and they'll lead you to the root cause or at least narrow down the issue.
+- If there's no answer from the DC for our TCP handshake on port 389, the next steps are to involve the customer network team and provide them with this information.
+- Make sure that in such scenarios, you make use of all the logs specified in the action plan mentioned above, correlate them, and they'll lead you to the root cause or at least narrow down the issue.
 
 ### Event ID 1002
 
@@ -157,7 +157,7 @@ Here's the description of Event ID 1002:
 The processing of Group Policy failed because of a system allocation failure. Please ensure the computer is not running low on resources (memory, available disk space). Group Policy processing will be attempted at the next refresh cycle.
 ```
 
-This error event is usually resolved when the computer returns from a low resource state. Possible resolutions include:
+This error event is usually resolved when the computer returns from a low-resource state. Possible resolutions include:
 
 1. Ensure the computer isn't low on memory or available disk space.
 2. Restart the computer if it has been operating for an extended period.
@@ -174,16 +174,16 @@ This error event is usually resolved after correcting binding to the directory. 
 
 - Error code 5 (Access is denied)
 
-   This error code might indicate that the user doesn't have permission to Active Directory.
+   This error code might indicate that the user doesn't have permission to access Active Directory.
 
 - Error code 49 (Invalid credentials)
 
-   This error code might indicate that the user's password expired while the user is still logged on the computer. To correct credentials that aren't valid:
+   This error code might indicate that the user's password has expired while the user is still logged on the computer. To correct credentials that aren't valid:
 
    1. Change the user's password.
    2. Lock/unlock the workstation.
-   3. Check if there are any system services running as the user account.
-   4. Verify the password in service configuration is correct for the user account.
+   3. Check if there are any system services running on the user account.
+   4. Verify the password in the service configuration is correct for the user account.
 
 - Error code is 258 (Timeout)
 
@@ -200,7 +200,7 @@ Here's the description of Event ID 1030:
 The processing of Group Policy failed. Windows attempted to retrieve new Group Policy settings for this user or computer. Look in the Details tab for error code and description. Windows will automatically retry this operation at the next refresh cycle. Computers joined to the domain must have proper name resolution and network connectivity to a domain controller for discovery of new Group Policy objects and settings. An event will be logged when Group Policy is successful.
 ```
 
-Check if the LDAP ports are open. If not, then make sure the ports are open on the firewall and as well locally on the client and the domain controller.
+Check if the LDAP ports are open. If not, then make sure the ports are open on the firewall and locally on the client and the domain controller.
 
 #### How to determine port block
 
@@ -212,8 +212,8 @@ Check if the LDAP ports are open. If not, then make sure the ports are open on t
 
 #### Make sure DNS name resolution where the client is unable to resolve a host name
 
-- If a client can't resolve a host name, then it's best to verify the Host name resolution sequence listed above that the client should be using. If the name doesn't exist in any of the resources that the client uses, then you must decide to which resource to add it. If the name exists in one of the resources, such as a DNS server or a Windows Internet Name Service (WINS) server and the client isn't resolving the name correctly, focus your attention on troubleshooting that specific resource.
-- Also, confirm that the client is trying to resolve a host name and not a NetBIOS name. Many applications have multiple methods that they can utilize to resolve names, this is especially true of mail and database applications. The application may be configured to connect to resources using NetBIOS. Depending on the client configuration, the client may bypass host name resolution. From there, it will be necessary to either change the connection type to TCP/IP sockets or to troubleshoot the problem as a NetBIOS issue.
+- If a client can't resolve a host name, then it's best to verify the Host name resolution sequence listed above that the client should be using. If the name doesn't exist in any of the resources that the client uses, then you must decide which resource to add it. If the name exists in one of the resources, such as a DNS server or a Windows Internet Name Service (WINS) server, and the client isn't resolving the name correctly, focus your attention on troubleshooting that specific resource.
+- Also, confirm that the client is trying to resolve a host name and not a NetBIOS name. Many applications have multiple methods that they can utilize to resolve names. This is especially true of mail and database applications. The application may be configured to connect to resources using NetBIOS. Depending on the client configuration, the client may bypass host name resolution. From there, it will be necessary to either change the connection type to TCP/IP sockets or troubleshoot the problem as a NetBIOS issue.
 
 #### Group Policy Container permission
 
@@ -243,7 +243,7 @@ Correct connectivity to the Group Policy template. The Group Policy service logs
    1. Identify the domain controller used by the computer. The domain controller name is logged in the details of the error event.
    2. Identify if the failure happens during the user or computer processing. For user policy processing, the **User** field of the event will show a valid user name; for computer policy processing, the **User** field will show "SYSTEM".
    3. Compose full network path to the **gpt.ini** as *\\\\<dcName\>\\SYSVOL\\<domain\>\Policies\\<guid\>\\gpt.ini* where \<dcName\> is the name of the domain controller, \<domain\> is the name of the domain, and \<guid\> is the GUID of the policy folder. All the information appears in the event.
-   4. Verify you can read *gpt.ini* by using the full network path obtained in the previous step. To do this, open a command prompt window and type *\<file_path\>*, where \<file_path\> is the path constructed in the previous step, and press Enter.
+   4. Verify that you can read *gpt.ini* by using the full network path obtained in the previous step. To do this, open a command prompt window and type *\<file_path\>*, where \<file_path\> is the path constructed in the previous step, and press Enter.
 
       > [!NOTE]
       > You must run this command as the user or computer whose credentials previously failed.
@@ -279,11 +279,11 @@ The Group Policy service logs the name of the domain controller and the error co
    1. Change the user password.
    2. Lock/unlock the workstation.
    3. Check if there are any system services running as the user account.
-   4. Verify that the password in service configuration is correct for the user account.
+   4. Verify that the password in the service configuration is correct for the user account.
 
 - Error code 14 (Not enough storage is available to complete this operation)
 
-   This error code might indicate that Windows doesn't have enough memory to complete the task. Investigate the system event log for any other memory specific issues.
+   This error code might indicate that Windows doesn't have enough memory to complete the task. Investigate the system event log for any other memory-specific issues.
 
 - Error code 525 (The specified user doesn't exist)
 
@@ -291,7 +291,7 @@ The Group Policy service logs the name of the domain controller and the error co
 
 - Error code 1355 (The specified domain either doesn't exist or couldn't be contacted)
 
-   This error code might indicate a fault or improper configuration with name resolution (DNS). Use `nslookup` to confirm you can resolve addresses of the domain controllers in the user domain.
+   This error code might indicate a fault or improper configuration with name resolution (DNS). Use `nslookup` to confirm you can resolve the addresses of the domain controllers in the user domain.
 
 - Error code 1727 (The remote procedure call failed and didn't execute)
 
@@ -305,12 +305,12 @@ Here's the description of Event ID 1097:
 The processing of Group Policy failed. Windows could not determine the computer account to enforce Group Policy settings. This may be transient. Group Policy settings, including computer configuration, will not be enforced for this computer.
 ```
 
-Domain computers authenticate to the domain as do domain users. Windows requires the computer to log on before it can apply Group Policy to the computer. Possible resolutions include:
+Domain computers authenticate to the domain, as do domain users. Windows requires the computer to log on before it can apply Group Policy to the computer. Possible resolutions include:
 
 - Verify that the time on the computer is synchronized with the time on the domain controller.
-- Account for time zone misconfigurations if the computer is configured in a time zone different from domain controller.
+- Account for time zone misconfigurations if the computer is configured in a time zone different from the domain controller.
 - A time difference greater than five minutes between the computer and the domain controller may lead to the computer failing to authenticate with the domain. Force time synchronization against time service using the `w32tm /resync` command.
-- Restart the computer
+- Restart the computer.
 
 ## Gather key information before you contact Microsoft Support
 
@@ -324,7 +324,7 @@ Before you complete your support request, we recommend that you use the Windows 
    reg add "HKLM\Software\Microsoft\Windows NT\CurrentVersion\Diagnostics" /v GPSvcDebugLevel /t REG_DWORD /d "0x00030002"
    ```
 
-2. Refresh local and AD based Group Policy settings by using the `gpupdate /force` command.
+2. Refresh local and AD-based Group Policy settings by using the `gpupdate /force` command.
 
    > [!TIP]
    >
@@ -333,13 +333,13 @@ Before you complete your support request, we recommend that you use the Windows 
    > - `Gpupdate /force /target:computer`
    > - `Gpupdate /force /target:user`
 
-3. Save the Resultant Set of Policy (RSoP) report to HTML file by running the following command:
+3. Save the Resultant Set of Policy (RSoP) report to an HTML file by running the following command:
 
    ```console
    gpresult /h %Temp%\GPResult.htm
    ```
 
-4. Save the RSoP summary data to txt file by running the following command:
+4. Save the RSoP summary data to a txt file by running the following command:
 
    ```console
    gpresult /r >%Temp%\GPResult.txt
@@ -351,7 +351,7 @@ Before you complete your support request, we recommend that you use the Windows 
    reg export "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\GPExtensions" %Temp%\GPExtensions.reg
    ```
 
-6. Export the system, application and Group Policy operational event viewer logs by running the following commands:
+6. Export the system, application, and Group Policy operational event viewer logs by running the following commands:
 
    ```console
    wevtutil.exe export-log Application %Temp%\Application.evtx /overwrite:true
