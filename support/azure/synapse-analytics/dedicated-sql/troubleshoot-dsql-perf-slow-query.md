@@ -275,25 +275,32 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
 
 ### Execution phase issues
 
-- When analyzing [Step 2](#step-2-determine-where-the-query-is-taking-time), use the following table to diagnose the common cause.
+- Use the following table to analyze the result set in [Step 2](#step-2-determine-where-the-query-is-taking-time). Determine your scenario  and check the common cause for detailed information and the possible mitigation steps.
 
-   | Indicator | Common Cause |
-   |----------|--------------|
-   | `EstimatedRowCount` not within 25% of `ActualRowCount` | [Inaccurate estimates](#inaccurate-estimates) |
-   | `Description` indicates BroadcastMoveOperation and T-SQL references a replicated table | [Uncached replicated tables](#uncached-replicated-tables) |
-   | When `@ShowActiveOnly = 0`, you observe high or unexpected number of steps (`step_index`) and the data types of joiner columns are not identical between tables | [Mismatched data type/size](#mismatched-data-type-size) |
-   | `Description` is HadoopBroadcastOperation, HadoopRoundRobinOperation, or HadoopShuffleOperation and `total_elapsed_time` of for a given `step_index` is inconsistent between executions | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
+   | Scenario | Common Cause |
+   |-----------|-----|
+   | `EstimatedRowCount`/`ActualRowCount` < 25% | [Inaccurate estimates](#inaccurate-estimates) |
+   | `Description` indicates _BroadcastMoveOperation_ and the query references a replicated table | [Uncached replicated tables](#uncached-replicated-tables) |
+   | 1. @ShowActiveOnly = 0 <br/> 2. High or unexpected number of steps (`step_index`) are observed. <br/> 3. Data types of joiner columns are not identical between tables. | [Mismatched data type/size](#mismatched-data-type-size) |
+   | 1. `Description` indicates _HadoopBroadcastOperation_, _HadoopRoundRobinOperation_ or _HadoopShuffleOperation_. <br/> 2. `total_elapsed_time` of a given `step_index` is inconsistent between executions. | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
 
-- When analyzing [Step 3](#step-3-review-step-details) you find that `total_elapsed_time` is significantly higher in a small number of distributions in given step, use the following table to diagnose the common cause.
+- Check the `total_elapsed_time` obtained in [Step 3](#step-3-review-step-details). If it's significantly higher in a small number of distributions in a given step, follow these steps to determine the possible mitigation:
 
-   | Indicator | Common Cause |
-   |----------|--------------|
-   | `DBCC PDW_SHOWSPACEUSED(<TableName>)` for tables involved in the query have (Smallest Distribution) ÷ (Largest Distribution) \> .1 (or 10%) | [Data skew (stored)](#data-skew-stored)|
-   | Tables involved in the query **do not** indicate storage skew (see Data skew (stored) for more information) | [In-flight data skew](#in-flight-data-skew) |
+    1. Determine the table involved in the query that has the smallest distribution. Assume the table name is `min_dis_table`.
+    1. Determine the table involved in the query that has the largest distribution. Assume the table name is `max_dis_table`.
+    1. Run the following script to get the space used by the two tables. Note down the result as _space\_min_ and _space\_max_.
+
+        ```sql
+        DBCC PDW_SHOWSPACEUSED(min_dis_table); -- space_min
+        DBCC PDW_SHOWSPACEUSED(max_dis_table); -- space_max
+        ```
+
+    1. If space_min/space_max > 0.1, go to [Data skew (stored)](#data-skew-stored).
+    1. Else, go to [In-flight data skew](#in-flight-data-skew)
 
 <details><summary id="inaccurate-estimates">Inaccurate estimates</summary>
 
-Having your statistics up-to-date is critical to ensuring the query optimizer can generate an optimal plan.  When the telemetry indicates poor estimated rows when compared to actual counts, it is an indicator that statistics need to be maintained.
+Have your statistics up-to-date to ensure that the query optimizer generates an optimal plan. When the estimated row count is significantly less than the actual counts, the statistics need to be maintained.
 
 **Mitigations**
 
@@ -307,24 +314,24 @@ If you have created replicated tables, failure to properly warm the replicated t
 
 **Mitigations**
 
-- [Warm the replicated cache](/en-us/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#rebuild-a-replicated-table-after-a-batch-load) after DML
-- If frequent DML, change distribution of table to ROUND\_ROBIN
+- [Warm the replicated cache](/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#rebuild-a-replicated-table-after-a-batch-load) after DML operations.
+- If there're frequent DML operations, change the distribution of the table to `ROUND_ROBIN`.
 
 </details>
 
 <details><summary id="mismatched-data-type-size">Mismatched data type/size</summary>
 
-When joining tables, it is important to ensure that the data type and size of the joining columns match.  Failure to follow this guidance will result in unnecessary data movement which decreases the availability of CPU, IO, and network traffic to the remainder of the workload.
+When joining tables, make sure that the data type and size of the joining columns match. Otherwise, it will result in unnecessary data movements that will decrease the availability of CPU, IO, and network traffic to the remainder of the workload.
 
 **Mitigations**
 
-Correct any related table columns which do not have identical data type and size by rebuilding the tables.
+Rebuild the tables to correct the related table columns that don't have identical data type and size.
 
 </details>
 
 <details><summary id="ad-hoc-external-table-queries">Ad hoc external table queries</summary>
 
-Queries over external tables were design with the intention of bulk loading data into the dedicated SQL pool.  Ad hoc queries against external tables, though functions, may suffer variable durations due to external factors such as concurrent storage container activities.
+Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables, though functions, may suffer variable durations due to external factors, such as concurrent storage container activities.
 
 **Mitigations**
 
@@ -334,7 +341,7 @@ Queries over external tables were design with the intention of bulk loading data
 
 <details><summary id="data-skew-stored">Data skew (stored)</summary>
 
-Data skew means the data is not distributed evenly across the distributions.  Each step of the distributed plan requires all distributions complete before moving to the next step.  When your data is skewed, the full potential of the processing resources, such as CPU and IO, cannot be achieved, resulting in slower execution times.
+Data skew means the data isn't distributed evenly across the distributions. Each step of the distributed plan requires all distributions complete before moving to the next step. When your data is skewed, the full potential of the processing resources, such as CPU and IO, can't be achieved, resulting in slower execution times.
 
 **Mitigations**
 
@@ -344,14 +351,14 @@ Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-w
 
 <details><summary id="in-flight-data-skew">In-flight data skew</summary>
 
-In-flight data skew is a variant of the aforementioned data skew issue.  However, in this case, it's not the distribution of data on disk that is skewed.  Instead, the nature of the distributed plan for particular filters or grouped data causes a `ShuffleMoveOperation` which produces a skewed output to be consumed downstream.
+In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) issue. But, it's not the distribution of data on disk that is skewed. The nature of the distributed plan for particular filters or grouped data causes a `ShuffleMoveOperation` type operation. This operation produces a skewed output to be consumed downstream.
 
 **Mitigations**
 
-- Change the order of your GROUP BY columns to lead with a higher cardinality column
-- Create multi-column statistic if joins cover multiple columns
-- Add query hint `OPTION(FORCE_ORDER)` to your query
-- Refactoring the query
+- Change the order of your `GROUP BY` columns to lead with a higher-cardinality column.
+- Create multi-column statistics if joins cover multiple columns.
+- Add query hint `OPTION(FORCE_ORDER)` to your query.
+- Refactor the query.
 
 </details>
 
