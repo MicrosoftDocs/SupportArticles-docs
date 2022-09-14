@@ -4181,8 +4181,8 @@
       "redirect_document_id": true
     },
     {
-        "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
-        "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
+      "source_path": "support/developer/visualstudio/installation/issues-workarounds-visual-studio-2012-setup.md",
+      "redirect_url": "/troubleshoot/developer/visualstudio/installation/issues-workarounds-visual-studio-setup",
     },
     {
       "source_path": "support/developer/webapps/index.md",
@@ -4222,6 +4222,11 @@
     {
       "source_path": "support/developer/visualstudio/ide/crash-with-stardist-3.md",
       "redirect_url": "/troubleshoot/developer/visualstudio/ide/crash-with-stardict-3",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/power-platform/ai-builder/how-to-prevent-users-from-using-ai-builder.md",
+      "redirect_url": "/troubleshoot/power-platform/ai-builder/prevent-users-from-creating-ai-builder-custom-models",
       "redirect_document_id": true
     },
     {

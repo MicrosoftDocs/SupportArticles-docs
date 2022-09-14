@@ -12,7 +12,7 @@ ms.workload: na
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: troubleshooting
-ms.date: 07/11/2022
+ms.date: 08/25/2022
 ms.author: genli
 ---
 
@@ -32,17 +32,19 @@ The Azure Windows VMs need to connect to the Azure KMS server for Windows activa
 
 To resolve this problem, use the Azure custom route to route activation traffic to the Azure KMS server.
 
-The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.244` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net` with an IP address of `23.102.135.246`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
+The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.windows.net` with two IP addresses: `20.118.99.224` and `40.83.235.53`. The second DNS name of the KMS server for the Azure Global cloud is `kms.core.windows.net` with an IP address of `23.102.135.246`. If you use other Azure platforms such as Azure Germany, you must use the IP address of the corresponding KMS server. For more information, see the following table:
 
 |Platform| KMS DNS|KMS IP|
 |------|-------|-------|
-|Azure Global |azkms.core.windows.net<br>kms.core.windows.net|20.118.99.244, 40.83.235.53 <br> 23.102.135.246|
+|Azure Global |azkms.core.windows.net<sup>*</sup><br>kms.core.windows.net|20.118.99.224, 40.83.235.53 <br> 23.102.135.246|
 |Azure Germany|kms.core.cloudapi.de|51.4.143.248|
 |Azure US Government|kms.core.usgovcloudapi.net|23.97.0.13|
 |Azure China 21Vianet|kms.core.chinacloudapi.cn|42.159.7.249|
 
 > [!NOTE] 
 > All the three IP addresses for the Azure Global cloud should be added to the custom route.
+> 
+> <sup>*</sup> To mitigate an issue related to Network Security Group, **azkms.core.windows.net** points to **kms.core.windows.net** for now. After the issue is resolved (planned for October 3rd, 2022) **azkms.core.windows.net** will point to two new IP addresses: **20.118.99.224** and **40.83.235.53**.
 
 To add the custom route, follow these steps:
 
@@ -56,21 +58,19 @@ To add the custom route, follow these steps:
 
     ```powershell
     # First, get the virtual network that hosts the VMs that have activation problems. In this case, we get virtual network ArmVNet-DM in Resource Group ArmVNet-DM:
-
     $vnet = Get-AzVirtualNetwork -ResourceGroupName "ArmVNet-DM" -Name "ArmVNet-DM"
 
-    # Next, create a route table and specify that traffic bound to the KMS IP (23.102.135.246) will go directly out:
-
+    # Next, create a route table:
     $RouteTable = New-AzRouteTable -Name "ArmVNet-DM-KmsDirectRoute" -ResourceGroupName "ArmVNet-DM" -Location "centralus"
 
+    # Next, configure the route table:
     Add-AzRouteConfig -Name "DirectRouteToKMS" -AddressPrefix 23.102.135.246/32 -NextHopType Internet -RouteTable $RouteTable
     Add-AzRouteConfig -Name "DirectRouteToAZKMS01" -AddressPrefix 20.118.99.224/32 -NextHopType Internet -RouteTable $RouteTable
     Add-AzRouteConfig -Name "DirectRouteToAZKMS02" -AddressPrefix 40.83.235.53/32 -NextHopType Internet -RouteTable $RouteTable
 
     Set-AzRouteTable -RouteTable $RouteTable
 
-    # Next, attach the route table to the subnet that hosts the VMs
-
+    # Next, attach the route table to the subnet that hosts the VMs:
     Set-AzVirtualNetworkSubnetConfig -Name "Subnet01" -VirtualNetwork $vnet -AddressPrefix "10.0.0.0/24" -RouteTable $RouteTable
 
     Set-AzVirtualNetwork -VirtualNetwork $vnet
@@ -80,6 +80,7 @@ To add the custom route, follow these steps:
 
     ```console
     psping kms.core.windows.net:1688
+    psping azkms.core.windows.net:1688
     ```
 
 4. Try to activate Windows, and see if the problem is resolved.
@@ -98,7 +99,7 @@ To add the custom route, follow these steps:
     # Next, get the route table that was created:
     $rt = Get-AzureRouteTable -Name "VNet-DM-KmsRouteTable"
 
-    # Next, create a route:
+    # Next, create routes:
     Set-AzureRoute -RouteTable $rt -RouteName "AzureKMS" -AddressPrefix "23.102.135.246/32" -NextHopType Internet
     Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS01" -AddressPrefix "20.118.99.224/32" -NextHopType Internet
     Set-AzureRoute -RouteTable $rt -RouteName "AzureAZKMS02" -AddressPrefix "40.83.235.53/32" -NextHopType Internet
@@ -113,6 +114,7 @@ To add the custom route, follow these steps:
 
     ```console
     psping kms.core.windows.net:1688
+    psping azkms.core.windows.net:1688
     ```
 
 4. Try to activate Windows, and see if the problem is resolved.

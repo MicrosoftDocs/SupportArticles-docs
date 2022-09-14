@@ -43,5 +43,5 @@ To fix this problem, set the NDES policy module to use the new certificate. To d
       1. Under **Alternative name**, in the **Type** drop-down box, select **DNS**. In the **Value** box, enter the FQDN of the NDES server. Then select **Add**.
       1. Select **OK** to close the **Certificate Properties** dialog box.
 1. Select **Enroll**, wait until the enrollment finishes successfully, and then select **Finish**.
-1. Reinstall the Intune Certificate Connector to link it to the newly created certificate. For more information, see [How to reinstall the Intune Certificate Connector](./reinstall-the-intune-connector.md).
+1. Reinstall the Intune Certificate Connector to link it to the newly created certificate. For more information, see [Install the Certificate Connector for Microsoft Intune](/mem/intune/protect/certificate-connector-install).
 1. After you close the Certificate Connector UI, restart the Intune Connector Service and the World Wide Web Publishing Service.

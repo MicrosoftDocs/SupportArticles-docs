@@ -2,8 +2,8 @@
 title: MSDB database grows on SQL Server
 description: This article provides workarounds for the problem where MSDB database grows on SQL Server with supplementary character collations.
 ms.date: 12/28/2020
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: oliviera, sqlblt
 ---
 # MSDB database grows on SQL Server with supplementary character collations
@@ -57,7 +57,7 @@ As a result, the `msdb.dbo.sysssislog` table grows one page (8 KB) every 10 seco
 The collations using supplementary characters will change the size of some Dynamic Management View (DMV) columns. The Data Collector tool captures the content of some DMVs, for example `sys.dm_exec_requests`, and adds the results into the MDW database by using SSIS packages. In these SSIS packages, column sizes are predefined based on the size of columns for collations without using supplementary characters. When the packages run, a warning message is returned for each column whose size is bigger than the predefined size and is added to the `msdb.dbo.sysssislog` table.
 
 > [!NOTE]
-> These warning messages don’t affect the insertion of actual data from the DMV into the data collection table.
+> These warning messages don't affect the insertion of actual data from the DMV into the data collection table.
 
 ## More information
 
@@ -69,7 +69,7 @@ exec [sys].sp_describe_first_result_set N'EXEC [msdb].[dbo].[sp_syscollector_sna
 
 This call returns different results depending on the collation, using supplementary characters or not:
 
-- Instance with a collation that doesn’t use supplementary characters:
+- Instance with a collation that doesn't use supplementary characters:
 
     > [!NOTE]
     > For more clarity, only affected rows and columns are shown.

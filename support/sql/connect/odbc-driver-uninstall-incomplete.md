@@ -27,7 +27,7 @@ This problem occurs because of an ODBC 17/17.1 installer issue.
 This issue has been fixed in the ODBC 17.2 driver. To fix this issue:
 
 1. Uninstall the ODBC 17/17.1 driver.
-2. Install [ODBC 17.2 or a later version of the driver](https://www.microsoft.com/download/details.aspx?id=56567).
+2. Install [ODBC 17.2 or a later version of the driver](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
 ## Reference
 

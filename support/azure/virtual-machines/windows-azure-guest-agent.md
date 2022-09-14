@@ -108,7 +108,7 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
-    Then check whether the **Guest Agent Services** starts correctly.
+    Then check whether the **Windows Azure Guest Agent** service starts correctly.
 
     In rare cases in which Guest Agent doesn't install correctly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
 
@@ -124,6 +124,8 @@ Events for troubleshooting Azure VM Agent are recorded in the following log file
 - C:\WindowsAzure\Logs\TransparentInstaller.log
 
 The following are some common scenarios in which Azure VM Agent can enter **Not ready** status or stop working as expected.
+
+<br/>
 
 ### Windows VMs using Azure VM agent version 2.7.41491.1004 may experience issue with Sysprep
 
@@ -142,6 +144,8 @@ The issue is only with version 1004, hence you can try upgrading the agent to th
 *\\reddog\Builds\branches\git_compute_iaas_vmagent_master\2.7.41491.1005\retail-amd64\exports\IaaSVmAgentInstaller*
 
 Also, reset the Sysprep state of the VM first. This consists of [modifying a few registry keys](https://www.wintips.org/fix-sysprep-fatal-error-dwret-31-machine-invalid-state-couldnt-update-recorded-state/).
+
+<br/>
 
 ### Agent Stuck on "Starting"
 
@@ -176,6 +180,8 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
 
 1. Delete the OLD folder under C:\WindowsAzure.
   
+<br/>
+
 ### Unable to connect to WireServer IP (Host IP)
 
 You notice the following error entries in WaAppAgent.log and Telemetry.log:
@@ -205,11 +211,13 @@ The VM can't reach the Wireserver host server.
 
 **Solution**
 
-1. Because Wireserver is not reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: <http://168.63.129.16/?comp=versions>
+1. Because Wireserver isn't reachable, connect to the VM by using Remote Desktop, and then try to access the following URL from an internet browser: <http://168.63.129.16/?comp=versions>
 1. If you can't reach the URL from step 1, check the network interface to determine whether it is set as DHCP-enabled and has DNS. To check the DHCP status, of the network interface, run the following command:  `netsh interface ip show config`.
 1. If DHCP is disabled, run the following making sure you change the value in yellow to the name of your interface: `netsh interface ip set address name="Name of the interface" source=dhcp`.
 1. Check for any issues that might be caused by a firewall, a proxy, or other source that could be blocking access to the IP address 168.63.129.16.
 1. Check whether Windows Firewall or a third-party firewall is blocking access to ports 80 and 32526. For more information about why this address shouldn't be blocked,  see [What is IP address 168.63.129.16](/azure/virtual-network/what-is-ip-address-168-63-129-16).
+
+<br/>
 
 ### Guest Agent is stuck "Stopping"  
 
@@ -238,6 +246,8 @@ Azure VM Agent is stuck at the Stopping process.
 1. Make sure that WaAppAgent.exe is running on the VM. If it isn't running, restart the **rdagent** service, and wait five minutes. When WaAppAgent.exe is running, end the WindowsAzureGuest.exe process.
 2. If step 1 doesn't resolve the issue, remove the currently installed version and install the latest version of the agent manually.
 
+<br/>
+
 ### Npcap Loopback Adapter
 
 You notice the following error entries in WaAppAgent.log:
@@ -255,6 +265,104 @@ The Npcap loopback adapter is installed on the VM by Wireshark. Wireshark is an 
 **Solution**
 
 The Npcap Loopback Adapter is likely installed by WireShark. Try disabling it, and then check whether the problem is resolved.
+
+
+<br/>
+
+### RPC issues
+
+You notice the following error entries in WaAppAgent.log:
+
+```Log sample
+[00000004] [01/12/2019 00:30:47.24] [ERROR] RdCrypt Initiailization failed. Error Code: -2147023143.
+[00000004] [01/12/2019 00:30:47.24] [ERROR] Failed to get TransportCertificate. Error: System.AccessViolationException
+Microsoft.Cis.Fabric.CertificateServices.RdCertificateFactory.Shutdown()
+[00000004] [01/12/2019 00:30:47.24] [WARN]  Could not get transport certificate from agent runtime for subject name: 12345678-d7c8-4387-8cf3-d7ecf62544e5. Installing certificates in the LocalMachine store failed.
+[00000004] [01/12/2019 00:30:47.24] [WARN] Fetching certificate blob from the cert URI: http://168.63.129.16/machine/12345678-d7c8-4387-8cf3-d7ecf62544e5/12345678-d447-4b10-a5da-1ba1581cd7d7._VMName?comp=certificates&incarnation=2 failed with exception: System.NullReferenceException
+-2147023143 = 0x6d9 = EPT_S_NOT_REGISTERED
+```
+
+**Analysis**
+
+This is likely due to the RPC endpoint not listening, or the RPC process on the other side which isn't there.
+
+
+**Solution**
+
+Check if the "CNGKEYISO" Windows service is in the list of RPC endpoints by running the following command. 
+
+```
+portqry -n <VMName> -e 135
+```
+
+
+If you don't see the "CNGKEYISO" process, please start it from the Windows Services console (CNG Key Isolation = KeyIso) and then restart WaAppAgent.exe / WindowsAzureGuestAgent.exe.
+
+
+<br/>
+
+### PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86.
+
+In this case, you can see that the Windows Guest Agent running, but Extensions aren't working. You notice the following error entries in WaAppAgent.log:
+
+```Log sample
+PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86
+
+[00000003] [10/21/2020 02:37:45.98] [WARN]  Could not get transport certificate from agent runtime for subject name: 12345678-dae3-4c2f-be57-55c0ab7a44e5. Installing certificates in the LocalMachine store failed.
+[00000003] [10/21/2020 02:37:45.98] [ERROR] Installing certificates in the LocalMachine store failed with exception: Microsoft.WindowsAzure.GuestAgent.CertificateManager.CryptographyNative+PInvokeException: PInvoke PFXImportCertStore failed and null handle is returned. Error Code: 86.
+```
+
+**Analysis**
+
+This is most likely caused by lack of permissions on the Crypto folders for the SYSTEM account. Collecting a Procmon trace while restarting the GA services (RDAgent / WindowsAzureGuestAgent) should exhibit some Access Denied.
+
+
+**Solution**
+
+Ensure that the SYSTEM account has Full Control permissions on the following folders:
+
+- C:\ProgramData\Microsoft\Crypto\Keys
+
+- C:\ProgramData\Microsoft\Crypto\RSA
+
+- C:\ProgramData\Microsoft\Crypto\SystemKeys
+
+
+<br/>
+
+
+### System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+
+You notice the following error entries in WaAppAgent.log - and the Guest Agent is crashing.
+
+```Log sample
+[00000018] 2021-01-12T16:35:45Z [INFO]  Test extract the plugin zip file to the temp folder C:\TEMP\12345678-5f85-45dc-9f17-55be1fde7b10
+[00000010] 2021-01-12T16:35:45Z [ERROR] InstallPlugins() failed with exception: System.AggregateException: One or more errors occurred. ---> System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (Exception from HRESULT: 0x8007000B)
+   at Microsoft.WindowsAzure.GuestAgent.ExtensionStateMachine.PluginInstaller.PackageExpand(String packageFilePath, String destinationPath)
+   at Microsoft.WindowsAzure.GuestAgent.ExtensionStateMachine.PluginInstaller.ValidateExtensionZipFile(String pluginName, String pluginVersion, String& pluginZipFile)
+
+```
+
+**Analysis**
+
+It's likely that a third party application has been installed on the VM, and it  has modified the behavior of 32 bits / 64 bits .Net applications.
+
+BadImageFormationException happens when a 64 bits application is loading a 32 bits DLL.
+
+**Solution**
+
+Open the registry and check the following key:
+
+```
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\Enable64Bit
+```
+If it's set to 0, then 64 bits .Net application are considered as 32 bits applications. This can't work.
+
+The solution is to set Enable64Bit key to 1 - and reboot the VM.
+
+
+
+<br/>
 
 ## Next steps
 

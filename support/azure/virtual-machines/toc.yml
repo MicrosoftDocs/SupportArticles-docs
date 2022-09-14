@@ -232,6 +232,7 @@
       href: troubleshoot-ssh-permissions-too-open.md
     - name: Troubleshoot kernel panic
       href: linux-kernel-panic-troubleshooting.md
+
   - name: Windows
     items:
     - name: Cannot RDP because "You must change your password before logging on the first time" error
@@ -311,6 +312,11 @@
   items:
   - name: SUSE VM connectivity and registration issues
     href: suse-public-cloud-connectivity-registration-issues.md
+
+- name: Linux VM setup and configuration
+  items:
+  - name: Configure multiple NICs
+    href: linux-vm-multiple-virtual-network-interfaces-configuration.md
 
 - name: VM extensions troubleshooting
   items:
@@ -541,6 +547,8 @@
       href: vm-cannot-upgrade-64-vcpu.md
     - name: VM stuck in failed state
       href: vm-stuck-in-failed-state.md
+    - name: VM is unavailable for 15 minutes
+      href: azure-vm-unavailable.md      
     - name: Redeploy a VM
       items:
       - name: Linux

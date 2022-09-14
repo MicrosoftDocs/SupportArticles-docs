@@ -4,8 +4,8 @@ description: Provides resolutions for the non-yielding scheduler error that occu
 ms.date: 10/20/2021
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni, pahaefel
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # Non-yielding scheduler error in large memory server if the lock pages in memory option is disabled

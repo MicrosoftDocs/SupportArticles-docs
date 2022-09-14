@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows/win32/change-windows-active-directory-user-password.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/change-windows-active-directory-user-password",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
@@ -2472,9 +2477,84 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/azure/azure-monitor/index.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/azure/virtual-machines/rdp.md",
       "redirect_url": "/troubleshoot/azure/virtual-machines/troubleshoot-rdp-connection",
       "redirect_document_id": false
-    }    
+    },
+    {
+      "source_path": "support/azure/log-analytics/welcome-log-analytics.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/welcome-application-insights.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/welcome-azure-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/azure/log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/erased-proxy-settings-microsoft-monitoring-agent",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/error-code-0x80090016-keyset-does-not-exist.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/error-code-0x80090016-keyset-does-not-exist",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-missing-heartbeats.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-missing-heartbeats",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/linux-agent-performance-counter-missing.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/linux-agent-performance-counter-missing",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/mma-troubleshoot-basics.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/mma-troubleshoot-basics",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/resolve-windows-agent-installation-issues.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/resolve-windows-agent-installation-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/ssl-connectivity-mma-windows-powershell.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/ssl-connectivity-mma-windows-powershell",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/windows-could-not-start-mma.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/windows-could-not-start-mma",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/log-analytics/workspace-data-export-faq.yml",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/log-analytics/workspace-data-export-faq",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/azure/azure-kubernetes/troubleshoot-upgrade-errors.md",
+      "redirect_url": "/troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
+      "redirect_url": "/mem/intune/protect/certificate-connector-install",
+      "redirect_document_id": false
+    },            
+    {
+      "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
+      "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
+      "redirect_document_id": false
+    }         
   ]
 }

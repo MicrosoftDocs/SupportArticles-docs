@@ -17,7 +17,7 @@ ms.technology: windows-server-application-compatibility
 
 This article describes how to move Windows Server 2016 and Windows Server 2019 Event Viewer log files to another location on the hard disk.
 
-_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows Server 2016, Windows Server 2019  
 _Original KB number:_ &nbsp; 315417
 
 ## Summary
@@ -72,7 +72,7 @@ Create a folder where you want to store the event logs in your local drive and a
     > [!NOTE]
     > To create subfolders for the logs, check the **Replace all child object permission entries with inheritable permissions entries from this object** option. The permissions set at the parent level are applied to all subfolders and files.
 
-5. Adjust permissions so that the folder is assigned the correct permissions and check the **Applies to** column. These permissions should be the same as the advanced permissions of the default folder (*%SystemRoot%\\Windows\\winevt\\Logs*) that stores the Event Viewer logs. Make sure that the **Authenticated Users** only have **Read** permission for **This folder and subfolders**.
+5. Adjust permissions so that the folder is assigned the correct permissions and check the **Applies to** column. These permissions should be the same as the advanced permissions of the default folder (*%SystemRoot%\\System32\\winevt\\Logs*) that stores the Event Viewer logs. Make sure that the **Authenticated Users** only have **Read** permission for **This folder and subfolders**.
 
     :::image type="content" source="media/move-event-viewer-log-files/advanced-security-settings-logs.png" alt-text="Screenshot of the Advanced Security Settings for Logs window.":::
 
@@ -103,8 +103,27 @@ You can move the log files to the created folder by using the **Event Viewer** a
 
 You can confirm that the log path has been updated by using Registry Editor. For example, go to the following registry path and check the **Value data** of the **File** value.
 
-`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System`
+`HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Eventlog\System` 
 
+## Move Event Viewer log files by using Powershell
+
+It is possible to utilize Powershell for this purpose. In the sample, *Security* event logs will be migrated to *C:\\Logs*:
+
+```powershell
+$originalFolder = "$env:SystemRoot\system32\winevt\Logs"
+$targetFolder = "C:\logs\"
+$logName = "Security"
+
+$originalAcl = Get-Acl -Path $originalFolder -Audit -AllCentralAccessPolicies
+Set-Acl -Path $targetFolder -AclObject $originalAcl -ClearCentralAccessPolicy
+$targetAcl = Get-Acl -Path $targetFolder -Audit -AllCentralAccessPolicies
+$targetAcl.SetOwner([System.Security.Principal.NTAccount]::new("SYSTEM"))
+
+New-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "AutoBackupLogFiles" -Value "1" -PropertyType "DWord"
+New-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "Flags" -Value "1" -PropertyType "DWord"
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\EventLog\$logName" -Name "File" -Value "$targetFolder\$logName.evtx"
+```
+    
 ## References
 
 For more information about how to view and manage logs in the Event Viewer, see [How to delete corrupt Event Viewer Log files](https://support.microsoft.com/help/172156). To learn more about general Event Viewer usage, select the **Action** menu in Event Viewer, and then select **Help**.

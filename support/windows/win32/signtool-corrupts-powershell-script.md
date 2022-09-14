@@ -4,8 +4,8 @@ description: This article provides resolutions for the PowerShell script file co
 ms.date: 6/15/2021
 ms.custom: sap:Security development
 ms.reviewer: mstanley
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.technology: windows-dev-apps-security-dev
 ---
 

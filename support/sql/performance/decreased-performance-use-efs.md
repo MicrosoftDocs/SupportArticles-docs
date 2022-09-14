@@ -3,8 +3,8 @@ title: Decreased performance when using EFS to encrypt database files in SQL Ser
 description: Provides workarounds for the decreased performance issue in SQL Server when you use Encrypting File System to encrypt database files.
 ms.date: 12/08/2021
 ms.custom: sap:Performance
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # Decreased performance in SQL Server when you use EFS to encrypt database files

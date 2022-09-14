@@ -2,8 +2,8 @@
 title: SQL Server startup errors  
 description: This article provides resolutions for the problem where SQL Server fails to start on a standalone server.
 ms.date: 2/3/2020
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.reviewer: ramakoni
 ---
 # SQL Server startup errors on a standalone server

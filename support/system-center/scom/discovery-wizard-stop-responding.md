@@ -8,7 +8,7 @@ ms.reviewer: v-jomcc
 
 This article helps you fix an issue in which the Discovery Wizard in Microsoft System Center Operations Manager stops responding (hangs) during the discovery process.
 
-_Original product version:_ &nbsp; Microsoft System Center 2012 Operations Manager  
+_Applies to:_ &nbsp; Microsoft System Center Operations Manager  
 _Original KB number:_ &nbsp; 941409
 
 ## Symptoms
@@ -17,17 +17,17 @@ When you run the Discovery Wizard in System Center Operations Manager, the wizar
 
 ## Cause
 
-This issue may occur if Microsoft SQL Server Service Broker is not running on the management server.
+This issue may occur if Microsoft SQL Server Service Broker is not running on the Operations Manager SQL database.
 
 ## Resolution
 
-To resolve this issue, enable SQL Server Service Broker. To do this, follow these steps at a time when the management server services can be stopped:
+To resolve this issue, you will need to enable SQL Server Service Broker. To do this, follow these steps at a time when the management server services can be stopped:
 
-1. On the management server(s), open the `Services.msc` Microsoft Management Console (MMC) snap-in, and then stop the following services:
+1. On the management server(s) in your management group, run `Services.msc` (Microsoft Management Console (MMC) snap-in), and stop the following services:
 
-   - **System Center Management Configuration Service**
-   - **System Center Management Service**
-   - **System Center Data Access Service**
+   - **System Center Management Configuration (cshost)**
+   - **Microsoft Monitoring Agent (HealthService)**
+   - **System Center Data Access Service (OMSDK)**
 
 2. Start Microsoft SQL Server Management Studio on the Operations Manager database server or on a computer that has the SQL Server tools installed and that can connect to the Operations Manager database server.
 3. Select **New Query**.
@@ -47,11 +47,11 @@ To resolve this issue, enable SQL Server Service Broker. To do this, follow thes
 
    Check for successful completion of the TSQL command. SQL Server Service Broker is now enabled.
 
-8. On the management server(s), start the following services:
+8. On the management server(s) in your management group, start the following services:
 
-   - **System Center Data Access Service**
-   - **System Center Management Service**
-   - **System Center Management Configuration Service**
+   - **System Center Data Access Service (OMSDK)**
+   - **Microsoft Monitoring Agent (HealthService)**
+   - **System Center Management Configuration (cshost)**
 
 9. Close all open windows and dialog boxes.
 10. Test the Discovery Wizard in System Center Operations Manager.

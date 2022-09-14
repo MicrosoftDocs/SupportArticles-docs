@@ -151,7 +151,10 @@ Make sure that each affected device restarts after it applies the policy.
 > [!IMPORTANT]  
 > The fix that introduced the issue is disabled after the device applies the policy and then restarts.
 
-## Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to the managed devices  
+## Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to the managed devices
+
+> [!NOTE]
+> To use the solutions in this section, you must install the cumulative update that is released on [July 26, 2022](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40) or a later one on the computer.
 
 Group Policies and GPOs aren't compatible with mobile device management (MDM) based solutions, such as Microsoft Intune. These instructions will guide you through how to use [Intune custom settings](/mem/intune/configuration/custom-settings-windows-10) for [ADMX ingestion](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) and configure [ADMX backed MDM policies](/windows/client-management/mdm/understanding-admx-backed-policies) to perform a KIR activation without requiring a GPO.
 

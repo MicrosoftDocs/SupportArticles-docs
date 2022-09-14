@@ -72,7 +72,7 @@ All workarounds should be executed in standard user security context. Executing 
 
 #### Workaround 1: Create a startup item
 
-> [!Note]
+> [!NOTE]
 > This workaround works only for the device that has network access at logon. If the device has not established a network connection by the time of logon, the startup script won't automatically reconnect network drives.
 
 1. Copy the script file (MapDrives.cmd) to the following location:  
@@ -84,6 +84,9 @@ All workarounds should be executed in standard user security context. Executing 
 
 #### Workaround 2: Create a scheduled task
 
+> [!NOTE]
+> A PowerShell window flashes up when the scheduled task runs.
+
 1. Copy the script file MapDrives.ps1 to the following location:  
     %SystemDrive%\\Scripts\\  
 2. In **Task Scheduler**, select **Action** > **Create Task**.
@@ -91,9 +94,9 @@ All workarounds should be executed in standard user security context. Executing 
 4. Select **Change User or Group**, select a local user or group (such as **LocalComputer\\Users**) and then select **OK**.
 5. On the **Triggers** tab, select **New**, and then select **At log on** for the **Begin the task** field.
 6. On the **Actions** tab, select **New**, and then select **Start a program** for the **Action** field.
-7. Type *Powershell.exe* for the **Program/script** field.
+7. Type _Powershell.exe_ for the **Program/script** field.
 8. In the **Add arguments (optional)** field, type the following:  
-    *-windowsstyle hidden -command .\\MapDrives.ps1 >> %TEMP%\\StartupLog.txt 2>&1*
-9. In the **Start in (optional)** field, type the location (*%SystemDrive%\\Scripts\\*) of the script file.
+    _-windowstyle hidden -command .\\MapDrives.ps1 >> %TEMP%\\StartupLog.txt 2>&1_
+9. In the **Start in (optional)** field, type the location (_%SystemDrive%\\Scripts\\_) of the script file.
 10. On the **Conditions** tab, select the **Start only if the following network connection is available** option, select **Any connection**, and then select **OK**.
 11. Log off, and then log back on to the device to run the scheduled task.

@@ -31,17 +31,41 @@
     href: troubleshoot-role-recycle-swap.md
   - name: SubscriptionPolicyCountExceeded exception
     href: troubleshoot-subscription-policy.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
   - name: VIP swap failures
     href: troubleshoot-vip-swap.md
 
 - name: Troubleshooting Cloud Services (extended support)
   items:
-  - name: Disk partition preservation
-    href: disk-partition-preservation.md
-  - name: Roles that fail to start
-    href: role-startup-failure.md
   - name: Allocation failure
     href: allocation-failure.md
+  - name: Application pool is crashing
+    href: application-pool-crashes.md
+  - name: Disk partition preservation
+    href: disk-partition-preservation.md
+  - name: Enable HTTPS communication
+    href: enable-https-communication.md
+  - name: FAQ about role instance restarts due to OS upgrades
+    href: role-instance-restarts-faq.yml
+  - name: Gather log files for offline analysis and preservation
+    href: gather-log-files-offline-analysis-preservation.md
+  - name: Grant a virtual network sole access to your cloud service
+    href: grant-virtual-network-sole-access.md
+  - name: No space on the E or F drive
+    href: no-space-e-f-drive.md
+  - name: Read key vault certificate secrets from an app
+    href: read-key-vault-certificate-secrets-from-cloud-service-app.md
+  - name: Role instance restarts due to OS upgrades
+    href: role-instance-restarts-os-upgrade.md
+  - name: Roles that fail to start
+    href: role-startup-failure.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
+  - name: Update or change the certificate used
+    href: update-or-change-certificate-used.md
+  - name: Windows PaaS compute diagnostic data
+    href: windows-azure-paas-compute-diagnostic-data.md
 
 - name: Reference
   items:

@@ -3,8 +3,8 @@ title: Prerequisites and checklist for resolving connectivity errors
 description: Provides prerequisites and a checklist for troubleshooting SQL Server connectivity issues.
 ms.date: 05/25/2022
 ms.custom: sap:Connection issues
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # Recommended prerequisites and checklist for troubleshooting SQL Server connectivity issues

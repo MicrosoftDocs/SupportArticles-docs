@@ -26,7 +26,7 @@ Serial Console is generally available in global Azure regions and in public prev
 For serial console documentation for Linux, see [Azure Serial Console for Linux](serial-console-linux.md).
 
 > [!NOTE]
-> Serial Console is currently incompatible with a managed boot diagnostics storage account. To use Serial Console, ensure that you are using a custom storage account.
+> Serial Console is compatible with a managed boot diagnostics storage account.
 
 ## Prerequisites
 
@@ -141,7 +141,66 @@ This is useful in situations where you may want to access the boot menu without 
 
 By default, all subscriptions have serial console access enabled. You can disable the serial console at either the subscription level or VM/virtual machine scale set level. For detailed instructions, visit [Enable and disable the Azure Serial Console](./serial-console-enable-disable.md).
 
-## Serial console security
+## Serial Console security
+
+### Use Serial Console with custom boot diagnostics storage account firewall enabled
+
+Serial Console uses the storage account configured for boot diagnostics in its connection workflow. When a firewall is enabled on this storage account, the Serial Console service IPs must be added as exclusions. To do this, follow these steps:
+
+1. Navigate to the settings of the custom boot diagnostics storage account firewall you have enabled.
+
+    > [!NOTE]
+    > To determine which storage account is enabled for your VM, from the **Support + troubleshooting** section, select **Boot diagnostics** > **Settings**.
+
+2. Add Serial Console service IPs as firewall exclusions based on the VM's geography.
+
+    The following table lists the IPs that need to be permitted as firewall exclusions based on the region or geography where the VM is located. This is a subset of the complete list of Serial Console IP addresses under processing for inclusion in [service tags](/azure/virtual-network/service-tags-overview).
+
+    |IP Address      | Regions | Geography|
+    |-----------|--------------------|-----------------|
+    |20.205.69.28 | East Asia, Southeast Asia | AsiaPacific |
+    |20.195.85.180 | East Asia, Southeast Asia | AsiaPacific |
+    |20.53.53.224 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia |
+    |20.70.222.112 | Australia Central, Australia Central 2, Australia East, Australia Southeast | Australia |
+    |191.234.136.63 | Brazil South, Brazil Southeast | Brazil |
+    |20.206.0.194 | Brazil South, Brazil Southeast | Brazil |
+    |52.228.86.177 | Canada Central, Canada East | Canada|
+    |52.242.40.90 | Canada Central, Canada East | Canada|
+    |20.45.242.18 |  | Canary (EUAP)|
+    |20.51.21.252 |  | Canary (EUAP)|
+    |52.146.139.220 | North Europe, West Europe | Europe|
+    |20.105.209.72 | North Europe, West Europe | Europe|
+    |20.111.0.244 | France Central, France South | France|
+    |52.136.191.10 | France Central, France South | France|
+    |51.116.75.88 | Germany North, Germany West Central | Germany|
+    |20.52.95.48 | Germany North, Germany West Central | Germany|
+    |20.192.168.150 | Central India, South India, West India | India|
+    |20.192.153.104 | Central India, South India, West India | India|
+    |20.43.70.205 | Japan East, Japan West | Japan|
+    |20.189.228.222 | Japan East, Japan West | Japan|
+    |20.200.196.96 | Korea Central, Korea South | Korea|
+    |52.147.119.29 | Korea Central, Korea South | Korea|
+    |20.100.1.184 | Norway West, Norway East | Norway|
+    |51.13.138.76 | Norway West, Norway East | Norway|
+    |20.208.4.98 | Switzerland North, Switzerland West | Switzerland|
+    |51.107.251.190 | Switzerland North, Switzerland West | Switzerland|
+    |20.45.95.66 | UAE Central, UAE North | UAE|
+    |20.38.141.5 | UAE Central, UAE North | UAE|
+    |20.90.132.144 | UK South, UK West | UnitedKingdom|
+    |20.58.68.62 | UK South, UK West | UnitedKingdom|
+    |51.12.72.223 | Sweden Central, Sweden South | Sweden|
+    |51.12.22.174 | Sweden Central, Sweden South | Sweden|
+    |20.98.146.84 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+    |20.98.194.64 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+    |20.69.5.162 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | UnitedStates|
+    |20.83.222.102 | Central US, East US 2, East US, North Central US, South Central US, West US 2, West US 3, West Central US, West US | United States|
+
+    > [!IMPORTANT]
+    > The IPs that need to be permitted are specific to the region where the VM is located. For example, a virtual machine deployed in the North Europe region needs to add the following IP exclusions to the storage account firewall for the Europe geography: 52.146.139.220 and 20.105.209.72. View the table above to find the correct IPs for your region and geography.
+
+    For more information about how to add IPs to the storage account firewall, see [Configure Azure Storage firewalls and virtual networks: Managing IP network rules](/azure/storage/common/storage-network-security?tabs=azure-portal#managing-ip-network-rules).
+
+After the IP addresses are successfully added to the storage account firewall, retry the Serial Console connection to the VM. If you still have connection problems, verify that the correct IP addresses are excluded from the storage account firewall for the region of the VM.
 
 ### Access security
 
@@ -149,11 +208,17 @@ Access to the serial console is limited to users who have an access role of [Vir
 
 ### Channel security
 
-All data that is sent back and forth is encrypted on the wire.
+All data that is sent back and forth is encrypted in transit with TLS 1.2 or a later version.
 
-### Data Storage and Encryption
+### Data storage and encryption
 
-Azure Serial Console does not review, inspect, or store any of the content which is transmitted in and out of the virtual machine serial port.  No data is stored, therefore there is no data to encrypt.  Additionally, [host-based encryption](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data) is used to ensure that any in-memory data paged to disk by virtual machines that run the service is also encrypted. This host-based encryption occurs for all Azure Serial Console connections and is enabled by default.
+Azure Serial Console doesn't review, inspect, or store any data that's transmitted in and out of the virtual machine serial port. Therefore, there's no data to encrypt at rest.
+
+To ensure that any in-memory data that's paged to disks by virtual machines running Azure Serial Console is encrypted, use the [host-based encryption](/azure/virtual-machines/disk-encryption#encryption-at-host---end-to-end-encryption-for-your-vm-data). The host-based encryption is enabled by default for all Azure Serial Console connections.
+
+### Data residency
+
+The Azure portal or [Azure CLI](/cli/azure/serial-console) act as remote terminals to the virtual machine serial port. As these terminals can't directly connect to the servers which host the virtual machine over the network, an intermediate service gateway is used to proxy the terminal traffic. Azure Serial Console doesn't store or process this customer data. The intermediate service gateway that transfers the data will reside in the geography of the virtual machine.
 
 ### Audit logs
 
@@ -229,7 +294,7 @@ A. Your image is likely misconfigured for serial console access. For information
 
 **Q. Is the serial console available for virtual machine scale sets?**
 
-A. Yes, it is! See [Serial Console for Virtual Machine Scale Sets](./serial-console-overview.md#serial-console-for-virtual-machine-scale-sets)
+A. Yes, it is! See [Get started with Serial Console](serial-console-overview.md#get-started-with-serial-console).
 
 ## Next steps
 

@@ -972,6 +972,8 @@
     items:
     - name: Grant-DfsnAccess doesn't change inheritance mode
       href: ./system-management-components/grant-dfsnaccess-not-change-inheritance.md
+    - name: Signed PowerShell script fails for hash mismatch
+      href: ./system-management-components/signed-powershell-script-fails-hash-mismatch.md
   - name: Server Manager
     items:
     - name: DNS server tool is missing for RSAT client

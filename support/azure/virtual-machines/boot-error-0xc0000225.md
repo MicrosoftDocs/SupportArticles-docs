@@ -85,7 +85,7 @@ To fix the issue, follow these steps, based on the error message that you receiv
 6. Run the following command as an administrator, and then record the identifier of Windows Boot Loader (not Windows Boot Manager). The identifier is a 32-character code and it resembles "xxxxxxxx-xxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx." You will use this identifier in the next step.
 
     ```console
-    bcdedit /store <Boot partition>:\boot\bcd /enum
+    bcdedit /store <Boot partition>:\boot\bcd /enum /v
     ```
 
 7. Repair the Boot Configuration data by running the following commands after you replace the placeholders by the actual values:

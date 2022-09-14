@@ -1,6 +1,53 @@
-- name: Azure Monitor
+items:
+- name: Troubleshoot Azure Monitor
+  href: welcome-azure-monitor.yml
+- name: Application Insights
   items:
-  - name: Azure Application Insights
-    href: ./app-insights/welcome-application-insights.yml
-  - name: Azure Log Analytics
-    href: ../log-analytics/welcome-log-analytics.yml
+  - name: Application Insights telemetry
+    items:
+    - name: Troubleshoot auto-instrumentation issues
+      href: app-insights/auto-instrumentation-troubleshoot.md
+    - name: Troubleshoot Azure Application Insights in a Java web project
+      href: app-insights/java-2x-troubleshoot.md
+    - name: Troubleshoot no data in Azure Application Insights for .NET and .NET Core
+      href: app-insights/asp-net-troubleshoot-no-data.md
+    - name: Troubleshoot Azure Monitor Application Insights for Java
+      href: app-insights/java-standalone-troubleshoot.md
+  - name: Application Insights features
+    items:
+    - name: Error retrieving data in portal
+      href: app-insights/troubleshoot-portal-connectivity.md
+    - name: Missing CPU Total and Committed Memory metrics
+      href: app-insights/missing-cpu-total-committed-memory-metrics.md
+    - name: Troubleshoot problems enabling or viewing Application Insights Profiler
+      href: app-insights/profiler-troubleshooting.md
+    - name: Troubleshoot Azure Application Insights availability monitoring
+      href: app-insights/troubleshoot-availability.md
+    - name: Troubleshoot user behavior analytics tools in Azure Application Insights
+      href: app-insights/usage-troubleshoot.md
+  - name: Status Monitor and Change Analysis
+    items:
+    - name: Troubleshoot Azure Monitor's Change Analysis (preview)
+      href: app-insights/change-analysis-troubleshoot.md    
+    - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
+      href: app-insights/status-monitor-v2-troubleshoot.md
+- name: Log Analytics
+  items:
+  - name: Basic troubleshooting of Microsoft Monitoring Agent
+    href: log-analytics/mma-troubleshoot-basics.md
+  - name: Check SSL connectivity for Microsoft Monitoring Agent
+    href: log-analytics/ssl-connectivity-mma-windows-powershell.md
+  - name: Error code 0x80090016 - keyset doesn't exist
+    href: log-analytics/error-code-0x80090016-keyset-does-not-exist.md
+  - name: Microsoft Monitoring Agent couldn't start
+    href: log-analytics/windows-could-not-start-mma.md
+  - name: Missing heartbeats in the Linux agent
+    href: log-analytics/linux-agent-missing-heartbeats.md
+  - name: Missing Linux performance counters
+    href: log-analytics/linux-agent-performance-counter-missing.md
+  - name: Resolve Windows Agent installation issues
+    href: log-analytics/resolve-windows-agent-installation-issues.md
+  - name: Troubleshoot erased proxy settings
+    href: log-analytics/erased-proxy-settings-microsoft-monitoring-agent.md
+  - name: Workspace data export FAQ
+    href: log-analytics/workspace-data-export-faq.yml

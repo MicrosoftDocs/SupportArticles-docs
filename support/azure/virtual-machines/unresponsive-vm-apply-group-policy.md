@@ -11,7 +11,7 @@ ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.date: 05/07/2020
+ms.date: 07/26/2022
 ---
 
 # VM is unresponsive when applying Group Policy Local Users and Groups policy
@@ -20,11 +20,13 @@ This article provides steps to resolve issues where the load screen doesn't resp
 
 ## Symptoms
 
-When you're using [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM, the screen is stuck loading with the message: "Applying Group Policy Local Users and Groups policy."
+When you're using [boot diagnostics](./boot-diagnostics.md) to view a screenshot of the VM, the screen is stuck loading with the message: "Applying Group Policy Local Users and Groups policy" or "Please wait."
 
 :::image type="content" source="media//unresponsive-vm-apply-group-policy/applying-group-policy-1.png" alt-text="Screenshot of Applying Group Policy Local Users and Groups policy loading in Windows Server 2012 R2." border="false":::
 
 :::image type="content" source="media/unresponsive-vm-apply-group-policy/applying-group-policy-2.png" alt-text="Screenshot of Applying Group Policy Local Users and Groups policy loading in Windows Server 2012." border="false":::
+
+:::image type="content" source="media/unresponsive-vm-apply-group-policy/please-wait.png" alt-text="Screenshot shows 'Please wait' is loading in Windows Server 2012." border="false":::
 
 ## Cause
 
@@ -117,17 +119,17 @@ To enable memory dump collection and the serial console, run this script:
     Enable on ControlSet001:
 
     ```cmd
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet001\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
     ```
 
     Enable on ControlSet002:
 
     ```cmd
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f 
-    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f 
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v CrashDumpEnabled /t REG_DWORD /d 1 /f
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v DumpFile /t REG_EXPAND_SZ /d "%SystemRoot%\MEMORY.DMP" /f
+    REG ADD "HKLM\BROKENSYSTEM\ControlSet002\Control\CrashControl" /v NMICrashDump /t REG_DWORD /d 1 /f
     ```
 
     Unload broken OS disk:

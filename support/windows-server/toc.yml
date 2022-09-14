@@ -162,6 +162,8 @@
     items:
     - name: ADAM General Event ID 1161 is logged on an AD LDS server
       href: ./identity/adam-general-event-id-1161-logged-ad-lds-server.md
+    - name: Change Windows Active Directory user password through LDAP
+      href: ./identity/change-windows-active-directory-user-password.md
     - name: Hide or display InetOrgPerson object class
       href: ./identity/hide-display-inetorgperson-object-class.md
     - name: How to configure AD and LDS diagnostic event logging
@@ -388,6 +390,8 @@
       href: ./identity/ldap-queries-run-slowly.md
     - name: How to troubleshoot high Lsass.exe CPU utilization
       href: ./identity/troubleshoot-high-lsass.exe-cpu-utilization.md
+    - name: Issues when AD replication and Netlogon RPCs request backlog values are exceeded
+      href: ./identity/issues-ad-replication-netlogon-rpcs-request-backlog-values-exceeded.md
     - name: LDAP and Kerberos servers reset TCP sessions
       href: ./identity/ldap-kerberos-server-reset-tcp-sessions.md
     - name: Performance issues after you upgrade DCs
@@ -2660,6 +2664,8 @@
       href: ./virtualization/event-19050-32022-32032-32056-32315-32546-33680.md
     - name: Feature and performance optimization of HVR
       href: ./virtualization/feature-performance-optimization-hyper-v-replica.md
+    - name: Hyper-V replication is suspended at system shutdown
+      href: ./virtualization/hyper-v-replication-suspended-system-shutdown.md
   - name: Installation and configuration of Hyper-V
     items:
     - name: Antivirus exclusions for Hyper-V hosts

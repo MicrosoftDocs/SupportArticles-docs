@@ -22,7 +22,7 @@ The `RequestedAuthnContext` is in the SAML request. This means the app is expect
 
 `RequestedAuthnContext` is an optional value. Then, if possible, ask the application if it could be removed.
 
-Another option is to make sure the `RequestedAuthnContext` will be honored. This will be done by requesting a fresh authentication. By doing this, when the SAML request is processed, a fresh authentication will be done and the `AuthnContext` will be honored. To request a Fresh Authentication the SAML request most contain the value `forceAuthn="true"`.
+Another option is to make sure the `RequestedAuthnContext` will be honored. This will be done by requesting a fresh authentication. By doing this, when the SAML request is processed, a fresh authentication will be done and the `AuthnContext` will be honored. To request a Fresh Authentication the SAML request must contain the value `forceAuthn="true"`.
 
 ## More Information
 

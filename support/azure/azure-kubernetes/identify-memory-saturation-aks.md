@@ -1,7 +1,7 @@
 --- 
 title: Identify memory saturation in AKS clusters
 description: Learn how to identify  memory saturation in AKS clusters across namespaces and containers and how to identify the hosting node.
-ms.date: 4/28/2022
+ms.date: 7/15/2022
 author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
@@ -17,51 +17,47 @@ Run the following [Kubectl commands](https://kubernetes.io/docs/reference/genera
 
 ## Identify memory saturation across all namespaces
 
-```shell
+```console
 kubectl top pods --sort-by=memory -A
 ```
 
-The **MEMORY(bytes)** column in the output shows the pods with the highest working memory set in bytes at the top.
+The **Memory (bytes)** column in the output shows the pods with the highest working memory set in bytes at the top.
 
-```output
-NAMESPACE           NAME                                        CPU(cores)        MEMORY(bytes)
-default             memory-demo-3                               319m              1026Mi
-kube-system         omsagent-7ppjm                              11m               340Mi
-kube-system         omsagent-ddnvb                              10m               335Mi
-```
+|Namespace|Name|CPU ([cores](https://medium.com/swlh/understanding-kubernetes-resource-cpu-and-memory-units-30284b3cc866))|Memory ([bytes](https://medium.com/swlh/understanding-kubernetes-resource-cpu-and-memory-units-30284b3cc866))
+|---|---|---|---
+|`default`|`memory-demo-3`|319 m|1026 Mi
+|`kube-system`|`omsagent-7ppjm`|11 m|340 Mi
+|`kube-system`|`omsagent-ddnvb`|10 m|335 Mi
 
 ## Identify memory saturation across all namespaces for all containers
 
-```shell
-kubectl top pods -A –containers
+```console
+kubectl top pods -A –-containers
 ```
+The **Name** field in the output indicates the name of the container. We recommend that you don't sort the columns. Sorting can break up the namespace order, which makes it less  than ideal to see the container view.
 
-The **NAME** field in the output indicates the name of the container. We recommend that you don't sort the columns. Sorting can break up the namespace order, which makes it less  than ideal to see the container view.
+The **Memory** column displays the working memory set in bytes to show what’s consuming the most memory.
 
-The **MEMORY** column displays the working memory set in bytes to show what’s consuming the most memory.
-
-```output
-NAMESPACE            POD                                    NAME                                CPU(cores)    MEMORY(bytes)
-azure-arc            metrics-agent-7f5d48b7f9-d8njw         metrics-agent                       1m            3Mi
-default              memory-demo-3                          memory-demo-2-ctr                   338m          1026Mi
-gatekeeper-system    gatekeeper-audit-7dc44b8dbc-stfml      gatekeeper-audit-container          2m            50Mi
-gatekeeper-system    gatekeeper-controller-d7c45bc7d7pn24   gatekeeper-controller-container     11m           49Mi
-```
+|Namespace|Pod|Name|CPU ([cores](https://medium.com/swlh/understanding-kubernetes-resource-cpu-and-memory-units-30284b3cc866))|Memory ([bytes](https://medium.com/swlh/understanding-kubernetes-resource-cpu-and-memory-units-30284b3cc866))
+|---|---|---|---|---
+|`azure-arc`|`metrics-agent-7f5d48b7f9-d8njw`|`metrics-agent`|1 m|3 Mi
+|`default`|`memory-demo-3`|`memory-demo-2-ctr`|338 m|1026 Mi
+|`gatekeeper-system`|`gatekeeper-audit-7dc44b8dbc-stfml`|`gatekeeper-audit-container`|2 m|50 Mi
+|`gatekeeper-system`|`gatekeeper-controller-d7c45bc7d7pn24`|`gatekeeper-controller-container`|11 m|49 Mi
 
 Now that we’ve seen two ways to gather a high memory consumer, we must determine which node is hosting it.
 
 ## Identify which node is hosting the pod
 
-```shell
+```console
 kubectl get pod memory-demo-3 –o wide
 ```
 
-The **NODE** field shows you which node is hosting the pod.
+The **Node** field shows you which node is hosting the pod.
 
-```output
-NAME              READY    STATUS    RESTARTS    AGE       IP              NODE
-memory-demo-3     1/1      Running   0           2m15s     172.31.255.255  aks-agentpool-19575414-vmss000032
-```
+|Name|Ready|Status|Restarts|Age|IP|Node
+|---|---|---|---|---|---|---
+|`memory-demo-3`|1/1|Running|0|2 minutes, 15 seconds|172.31.255.255|`aks-agentpool-19575414-vmss000032`
 
 ## Identify memory saturation in an AKS cluster using Container insights
 
@@ -84,7 +80,7 @@ In the following example, a container named **myapp-maxmem** inside of the **max
 The memory working set includes both the resident memory and virtual memory (cache), so it's a total of what the application's using. Memory resident set size (RSS) shows only main memory (in other words, the resident memory). The memory RSS metric shows the actual capacity of available memory. What’s the difference between resident memory and virtual memory?
 
 * Resident memory or main memory is the actual amount of machine memory available to the nodes of the cluster.
-* Virtual memory is reserved hard disk space (cache) used by the operating system to swap data from memory to disk when it’s under memory pressure. It fetches it back to memory when needed.
+* Virtual memory is reserved hard disk space (cache) used by the operating system to swap data from the resident memory to the disk cache when it’s under memory pressure. The operating system fetches the data back to the resident memory when needed.
 
 ## What's next?
 

@@ -3,8 +3,8 @@ title: Troubleshoot connectivity issues in SQL Server
 description: Provides an overview of common connectivity issues in SQL Server and describes the tools to troubleshoot the issues.
 ms.date: 06/16/2022
 ms.custom: sap:Connection issues
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # Troubleshoot connectivity issues in SQL Server

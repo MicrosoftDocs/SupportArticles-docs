@@ -88,8 +88,6 @@ The following list helps you to identify the filter drivers and modules that can
 
     These DLL files are loaded in to the address space of SQL Server related processes if you enable the **Additional User Mode Data** prevention setting for CrowdStrike Anti-Virus/Endpoint protection programs. You might notice failures while SQL Server Agent attempts to create new processes when executing jobs. You might encounter failures while attempting to launch SQL Server Management Studio. You might also see that SQL Server fails to launch SQLDumper.exe to generate memory dumps. We recommend you contact Crowdstrike support with information related to your issue and ask if a fix is available. 
 
-- Carbon black relative dll
-
 - *perfiCrcPerfMonMgr.DLL*
 
     This DLL file is loaded into the SQL Server process if you install Trend Micro OfficeScan client. Refer to the software publisher exclusion list setting at [Recommended scan exclusion list for Trend Micro Endpoint products](https://success.trendmicro.com/solution/1059770-recommended-scan-exclusion-list-for-trend-micro-endpoint-products).

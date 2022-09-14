@@ -16,7 +16,7 @@ After you [install the Intune Connector for Active Directory](/mem/intune/enroll
 > "DiagnosticText": "We are unable to complete your request because a server-side error occurred. Please try again. [Exception Message: \\"DiagnosticException: 0x0FFFFFFF. We are unable to complete your request because a server-side error occurred. Please try again.\\"] [Exception Message: \\"Failed to get a value for Key: OdjServiceBaseUrl\\"] [Exception Message: \\"The given key was not present in the dictionary.\\"]"
 
 > [!NOTE]
-> The **ODJ Connector Service** event logs are located under **Application and Services Logs** > **ODJ Connector Service** in the Event Viewer.
+> The **ODJ Connector Service** event logs are located under **Event Viewer** > **Application and Services Logs** > **Microsoft** > **Intune** > **ODJConnectorService**. Select **Microsoft-Intune-ODJConnectorService/Admin** or **Microsoft-Intune-ODJConnectorService/Operational**.
 
 ## Cause
 
@@ -24,10 +24,9 @@ This issue usually occurs when you use a proxy server in your environment. Addit
 
 ## Solution
 
-To fix the issue, add the required proxy configuration to the following files:
+To fix the issue, add the required proxy configuration to the following file:
 
-- `%ProgramFiles%\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config`
-- `%ProgramFiles%\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config`
+`%ProgramFiles%\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config`
 
 To do this, follow these steps:
 

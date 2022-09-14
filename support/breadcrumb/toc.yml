@@ -95,9 +95,6 @@
       - name: Active Directory
         tocHref: /troubleshoot/azure/active-directory/
         topicHref: /troubleshoot/azure/active-directory/welcome-azure-ad
-      - name: Azure Log Analytics
-        tocHref: /troubleshoot/azure/log-analytics/
-        topicHref: /troubleshoot/azure/log-analytics/welcome-log-analytics
       - name: Cloud Services
         tocHref: /troubleshoot/azure/cloud-services/
         topicHref: /troubleshoot/azure/cloud-services/welcome-cloud-services
@@ -119,10 +116,12 @@
       - name: Azure Kubernetes Service
         tocHref: /troubleshoot/azure/azure-kubernetes/
         topicHref: /troubleshoot/azure/azure-kubernetes/welcome-azure-kubernetes
+      - name: Azure App Service
+        tocHref: /troubleshoot/azure/app-service/
+        topicHref: /troubleshoot/azure/app-service/welcome-app-service
       - name: Azure Monitor
         tocHref: /troubleshoot/azure/azure-monitor/
         topicHref: /troubleshoot/azure/azure-monitor/welcome-azure-monitor
-
     - name: Microsoft Dynamics 365
       tocHref: /troubleshoot/dynamics-365/
       topicHref: /troubleshoot/dynamics-365/

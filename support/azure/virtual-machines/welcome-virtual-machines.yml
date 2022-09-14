@@ -158,7 +158,9 @@ landingContent:
           - text:  Isolate bottlenecks on Linux virtual machines
             url: ./troubleshoot-performance-bottlenecks-linux.md
           - text:  Troubleshoot high-CPU issues on Azure Windows virtual machines
-            url: ./troubleshoot-high-cpu-issues-azure-windows-vm.md            
+            url: ./troubleshoot-high-cpu-issues-azure-windows-vm.md 
+          - text:  Azure VM is unavailable for 15 minutes
+            url: ./azure-vm-unavailable.md                        
        
    # Card
   - title: VM Extension issues

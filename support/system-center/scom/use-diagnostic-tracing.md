@@ -174,4 +174,4 @@ The `ViewRealTimeTracing.cmd` batch file accepts a single, optional command-line
 
 ## References
 
-For more information about diagnostic tracing, go to [Microsoft Docs](/). Then, search **Event tracing for Windows**.
+For more information about diagnostic tracing, browse to [Microsoft Docs](/). Then, search **Event tracing for Windows**.

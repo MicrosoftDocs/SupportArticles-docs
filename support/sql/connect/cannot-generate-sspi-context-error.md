@@ -3,8 +3,8 @@ title: Cannot generate SSPI context when connecting to SQL Server
 description: Troubleshoots the cannot generate SSPI context error when you connect to SQL Server. Provides frequently asked questions and steps to fix the error.
 ms.date: 06/16/2022
 ms.custom: sap:Connection issues
-author: cobibi
-ms.author: v-yunhya
+author: HaiyingYu
+ms.author: haiyingyu
 ms.prod: sql
 ---
 # "Cannot generate SSPI context" error when using Windows authentication to connect SQL Server
@@ -47,7 +47,7 @@ The format of an SPN for a default instance is the same as an SPN for a named in
 
 Windows authentication is the preferred method for users to authenticate to SQL Server. Clients that use Windows authentication are authenticated by using [NTLM](/windows-server/security/kerberos/ntlm-overview) or Kerberos.
 
-When a SQL Server client uses integrated security over TCP/IP sockets to a remote server that's running SQL Server, the SQL Server client network library uses the SSPI API to perform security delegation. The SQL Server network client makes a call to the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) function and passes in "negotiate" for the `pszPackage` parameter. This process notifies the underlying security provider to negotiate delegation. In this context, "negotiate" means to try Kerberos or NTLM authentication on Windows-based computers. In other words, Windows uses Kerberos delegation if the destination computer running SQL Server has an associated and correctly configured SPN. Otherwise, Windows uses NTLM delegation.
+When a SQL Server client uses integrated security over TCP/IP sockets to a remote server that's running SQL Server, the SQL Server client network library uses the SSPI API to perform security delegation. The SQL Server network client makes a call to the [AcquireCredentialsHandle](/windows/win32/secauthn/acquirecredentialshandle--schannel) function and passes in "negotiate" for the `pszPackage` parameter. This process notifies the underlying security provider to negotiate delegation. In this context, "negotiate" means to try Kerberos or NTLM authentication on Windows-based computers. In other words, Windows uses Kerberos delegation if the destination computer running SQL Server has an associated and correctly configured SPN. Otherwise, Windows uses NTLM delegation. If the SQL Server client is connecting locally on the same machine where SQL Server resides, NTLM is always used.
 
 ### Why doesn't the connection fail over to NTLM after running into issues with Kerberos?
 

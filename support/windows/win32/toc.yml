@@ -22,7 +22,7 @@
       href: vari8fromcy-produces-incorrect-value.md
   - name: Desktop app UI development
     items:
-    - name: Hook procedure doesn’t receive the VK_CONVERT message
+    - name: Hook procedure doesn't receive the VK_CONVERT message
       href: hook-procedure-not-receiving-vk-convert-message.md
     - name: Apps using message filters may not respond in Windows 10
       href: application-using-message-filters-unresponsive-win10.md
@@ -82,6 +82,8 @@
       href: gdi-apis-may-fail-when-large-pages-used.md
     - name: Get status of printer and print job
       href: printer-print-job-status.md
+    - name: GetICMProfile might leak one or more handles on Windows 10
+      href: geticmprofile-might-leak-one-or-more-handles-on-windows10.md      
     - name: Interoperability between GDI and GDI+
       href: mix-gdi-and-gdi-plus-drawing.md
     - name: Modify printer settings by using SetPrinter
@@ -158,7 +160,5 @@
       href: user32-kernel32-not-initialize.md
   - name: Windows administration and management development
     items:
-    - name: Change Windows Active Directory user password through LDAP
-      href: change-windows-active-directory-user-password.md
     - name: MSI packages fail to run
       href: msi-packages-wmi-queries-cannot-run.md
