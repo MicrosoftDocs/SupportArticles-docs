@@ -89,7 +89,7 @@ Make sure the group policy has all the settings you're looking for and it's corr
    gpresult /h gp.html
    ```
 
-2. Verify the `gpresult` output you have captured and look for the GPO you're having issues with. It will give the error why the GPO isn't getting applied.
+2. Verify the `gpresult` output you have captured and look for the GPO you're having issues with. It will give an error about why the GPO isn't getting applied.
 3. If you have an error in the `gpresult` output, we can troubleshoot the issue based on it. Otherwise, go to the next step.
 4. Open the Event Viewer and browse to application and system event logs. The application event log will give you the details on why the group policy update fails positively.
 5. Open the operational event log for more detailed information. There are events with the list of applied GPOs and a list of denied GPOs with the reason.
