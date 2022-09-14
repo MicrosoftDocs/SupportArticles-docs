@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # Training document isn't displayed on the document processing model details page

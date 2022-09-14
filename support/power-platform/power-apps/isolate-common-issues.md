@@ -2,7 +2,6 @@
 title: General Power Apps debugging strategies
 description: Learn about general strategies to narrow down the cause of app errors.
 author: tahoon
-ms.subservice: troubleshoot
 ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: tahoon

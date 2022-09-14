@@ -1,7 +1,7 @@
 ---
 title: 'Error from server: error dialing backend: dial tcp'
 description: 'Troubleshoot the Error from server: error dialing backend: dial tcp error that blocks you from using kubectl logs or connecting to the API server.'
-ms.date: 7/8/2022
+ms.date: 9/7/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -27,9 +27,9 @@ The required ports aren't enabled for use.
 
 Make sure that ports 22, 1194, and 9000 are open for an API server connection.
 
-## Cause 2: The tunnelfront or aks-link pod isn't running
+## Cause 2: The tunnelfront, aks-link, or konnectivity-agent pod isn't running
 
-When you run the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command to display the resources in the `kube-system` namespace (`kubectl get pods --namespace kube-system`), the `tunnelfront` or `aks-link` pod is shown to be in a non-running state.
+When you run the [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#get) command to display the resources in the `kube-system` namespace (`kubectl get pods --namespace kube-system`), the `tunnelfront`, `aks-link`, or `konnectivity-agent` pod is shown to be in a non-running state.
 
 ### Solution: Delete the non-running pod
 

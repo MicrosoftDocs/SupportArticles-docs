@@ -4,8 +4,8 @@ description: Describes an issue in which import solutions or publish changes fai
 ms.reviewer: squassina
 ms.topic: troubleshooting
 ms.date: 06/18/2021
-author: simonxjx
-ms.author: v-six
+author: squassina
+ms.author: risquass
 ms.subservice: powerapps-solutions
 ---
 # Can't import solutions or publish unmanaged changes in Power Platform

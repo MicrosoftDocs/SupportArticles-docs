@@ -102,6 +102,8 @@
       href: console-stops-responding.md
     - name: Console crashes after upgrading to version 2107
       href: console-crash-after-upgrade.md
+    - name: Issues after installing June 2022 Windows security updates
+      href: dcom-hardening-change-effect.md
     - name: Internal Error 2711.LP3076
       href: internal-error-2711-lp3076-during-console-installation.md
     - name: Microsoft.ConfigurationManagement has stopped working

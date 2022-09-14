@@ -1,17 +1,17 @@
 --- 
-title: Troubleshoot an intermittent test failure and protocol violation error
-description: This article describes how to troubleshoot an intermittent test failure and protocol violation error in Application Insights availability monitoring.
-ms.date: 8/15/2022
+title: Resolve an intermittent test failure and protocol violation error
+description: This article describes how to resolve an intermittent test failure and protocol violation error in Application Insights availability monitoring.
+ms.date: 9/12/2022
 author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: aaronmax
 ms.service: azure-monitor
 ms.subservice: application-insights
-#Customer intent: As an Azure Application Insights user, I want to understand how to troubleshoot an intermittent test failure and protocol violation error in Application Insights availability monitoring so I can effectively monitor Azure applications.  
+#Customer intent: As an Azure Application Insights user, I want to understand how to resolve an intermittent test failure and protocol violation error in Application Insights availability monitoring so I can effectively monitor Azure applications.  
 ---
 
-# Troubleshoot an intermittent test failure and protocol violation error
+# Resolve an intermittent test failure and protocol violation error
 
 This article explains how to resolve an intermittent test failure that causes a protocol violation error.
 

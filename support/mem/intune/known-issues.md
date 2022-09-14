@@ -158,4 +158,4 @@ In the Endpoint Manager admin center, we’ve disabled the "Rename device settin
 
 - **Status:** Active
 
-There is a known issue where the enrollment status of an iOS/iPadOS or macOS device may not update correctly in Microsoft Endpoint Manager if a user manually deletes the management profile. The device will be unenrolled from Intune, but it may not be reflected in Microsoft Endpoint Manager admin center for 30 days.    
+There is a known issue where the enrollment status of an iOS/iPadOS or macOS device may not update correctly in Microsoft Endpoint Manager if a user manually deletes the management profile. The device will be unenrolled from Intune, but it may not be reflected in Microsoft Endpoint Manager admin center for 30 days.

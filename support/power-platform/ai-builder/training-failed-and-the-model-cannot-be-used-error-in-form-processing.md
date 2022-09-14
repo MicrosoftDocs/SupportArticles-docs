@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # Training failed and the model can't be used in a document processing model
