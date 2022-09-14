@@ -1,7 +1,7 @@
 ---
 title: Performance issues can be caused by excessive entries in the `TokenAndPermUserStore` cache.
 description: Ths article helps you resolve performance issues that occur in the `TokenAndPermUserStore` cache. It also explains the causes an provides workarounds. 
-ms.date: 09/13/2022
+ms.date: 09/14/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -11,7 +11,7 @@ ms.author: v-jayaramanp
 
 # Queries take longer to finish when the size of the TokenAndPermUserStore cache grows in SQL Server
 
-This article helps you to troubleshoot problems related to queries that take longer to complete when the size of the `TokenAndPermUserStore` grows. It also provides various causes and workarounds.
+This article helps you troubleshoot problems related to query performance when the size of `TokenAndPermUserStore` grows. It also provides various causes and workarounds.
 
 _Original KB number:_ &nbsp; 927396
 
@@ -44,7 +44,7 @@ SELECT SUM(pages_kb) AS
    WHERE name = 'TokenAndPermUserStore'
 ```
 
-The TokenAndPermUserStore cache maintains the following security token types:
+The `TokenAndPermUserStore` cache maintains the following security token types:
 
 - LoginToken
   - One login token per server level principal.
@@ -78,7 +78,7 @@ WHERE type = 'USERSTORE_TOKENPERM'
 You can run the following query to identify the kinds of tokens that are growing in the `TokenAndPermUserStore`:
 
 ```sql
-SELECT [name] AS "SOS StoreName",[TokenName],[Class],[SubClass], count(*) as [Num Entries]
+SELECT [name] AS "SOS StoreName",[TokenName],[Class],[SubClass], count(*) AS [Num Entries]
 FROM
 (SELECT name,
 x.value('(//@name)[1]', 'varchar (100)') AS [TokenName],
@@ -90,8 +90,8 @@ FROM sys.dm_os_memory_cache_entries
 WHERE type = 'USERSTORE_TOKENPERM') 
 AS R(x,name)
 ) a
-group by a.name,a.TokenName,a.Class,a.SubClass
-order by [Num Entries] desc
+GROUP BY a.name,a.TokenName,a.Class,a.SubClass
+ORDER BY [Num Entries] desc
 ```
 
 ## Workaround
