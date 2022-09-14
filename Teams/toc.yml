@@ -50,9 +50,7 @@
     - name: A channel can't be recreated after deletion
       href: ./channels/channel-cannot-be-recreated-after-deletion.md
     - name: Channel notifications settings don't update
-      href: ./channels/notifications-cannot-manage.md
-    - name: External memeber can see channel message previews of shared channels in search results
-      href: ./channels/external-memeber-can-preview-shared-channel-messages.md
+      href: ./channels/notifications-cannot-manage.md    
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
   - name: Conferencing
