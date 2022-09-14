@@ -182,7 +182,7 @@ This error event is usually resolved after correcting binding to the directory. 
 
    1. Change the user's password.
    2. Lock/unlock the workstation.
-   3. Check if there are any system services running on the user account.
+   3. Check if there are any system services running as the user account.
    4. Verify the password in the service configuration is correct for the user account.
 
 - Error code is 258 (Timeout)
