@@ -17,7 +17,7 @@ This article provides resolution for an issue where a parent window is focused w
 If an application is made by using [Windows Forms .NET](/dotnet/desktop/winforms/overview) or [WPF .NET](/dotnet/desktop/wpf/overview), when a user selects the parent window from the preview windows on the taskbar,
 the parent window can get focused, even if it's showing a child modal window on the top level of the screen.
 
-Suppose a parent and child window is created by using the [System.Windows.Forms.Form.ShowDialog](/dotnet/api/system.windows.forms.form.showdialog) or the [System.Windows.Window.ShowDialog](/dotnet/api/system.windows.window.showdialog) method, as shown below. Usually, the parent window doesn’t get focused even if the user selects it while the child modal window is shown.
+Suppose a parent and child window are created by using the [System.Windows.Forms.Form.ShowDialog](/dotnet/api/system.windows.forms.form.showdialog) or the [System.Windows.Window.ShowDialog](/dotnet/api/system.windows.window.showdialog) method, as shown below. Usually, the parent window doesn’t get focused even if the user selects it while the child modal window is shown.
 
 :::image type="content" source="media/parent-window-focused-child-modal-window-shown/child-window-shown.png" alt-text="Screenshot of the child window that is shown.":::
 
