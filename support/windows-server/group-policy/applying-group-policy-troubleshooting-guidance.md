@@ -1,4 +1,4 @@
-﻿---
+---
 title: Applying Group Policy troubleshooting guidance
 description: Provides guidance to troubleshoot Group Policy.
 ms.date: 09/12/2022
