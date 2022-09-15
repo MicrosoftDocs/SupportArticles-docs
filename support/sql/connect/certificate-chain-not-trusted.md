@@ -14,8 +14,6 @@ Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database ap
 
 ## Error messages
 
-[Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#tab/upgraded-to-microsoft-ole-db-driver-19-for-sql-server)
-
 **Scenario 1: Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server**
 
 If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11) application to use Microsoft OLE DB Driver 19 for SQL Server (Provider=MSOLEDBSQL19), you might receive error messages that resemble the following messages:
