@@ -61,7 +61,7 @@ To resolve this issue, use one or more of the following methods:
     1. Rename the **CLP** folder to a different name, such as *CLP_old*.
     1. Restart Outlook. Then, Outlook will connect or authenticate to the Microsoft Information Protection services and download the labels or policies.
 
-## Outlook on the Web
+## Outlook on the web
 
 This issue occurs if the sensitivity labels are configured incorrectly. You might investigate this issue by using a [Fiddler or network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) while you reproduce the issue. Here’s an example of a Fiddler response. In the response, check whether the label policies are retrieved from the server.
 
