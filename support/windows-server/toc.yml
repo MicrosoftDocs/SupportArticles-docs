@@ -2850,6 +2850,8 @@
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./windows-security/decommission-enterprise-certification-authority-and-remove-objects.md
+    - name: How to expand the maximum extension size limit at AD CS
+      href: ./windows-security/expand-maximum-extension-size-limit-ad-cs.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./windows-security/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: How to install imported certificates on a Web server
