@@ -1,6 +1,6 @@
 ---
 title: A parent window is focused when its child modal window is shown
-description: Provides resolution for an issue where a parent window gets focused even its child modal window is shown.
+description: Provides resolution for an issue where a parent window gets focused when its child modal window is shown.
 ms.date: 09/15/2022
 ms.custom: sap:Desktop app UI development
 ms.reviewer: hihayak
@@ -25,7 +25,7 @@ If you hover the mouse cursor on the application icon shown on the taskbar, you�
 
 :::image type="content" source="media/parent-window-focused-child-modal-window-shown/preview-window.png" alt-text="Screenshot of the preview windows.":::
 
-Then, if you select the parent window from the preview windows, you’ll see that the parent window gets focused, as shown below.
+Then, if you select the parent window from the preview windows, you’ll see that the parent window gets focused, as shown below:
 
 :::image type="content" source="media/parent-window-focused-child-modal-window-shown/parent-window-focused.png" alt-text="Screenshot of the parent window that is focused.":::
 
