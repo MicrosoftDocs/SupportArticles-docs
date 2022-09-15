@@ -44,9 +44,12 @@ To work around this problem, use one of the following methods.
 
 - Use the `dfsutil property sd grant` command instead, as in the following example:
 
-    ```console
-    dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\UserName:RX protect
-    ```
+  ```console
+  dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\UserName:RX protect
+  ```
+
+  > [!NOTE]
+  > After running the `dfsutil` command, the **Set explicit view permissions** option will show as selected in the UI.
 
 ## More information
 
