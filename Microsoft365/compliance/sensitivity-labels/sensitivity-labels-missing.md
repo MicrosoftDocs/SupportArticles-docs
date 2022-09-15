@@ -14,7 +14,7 @@ ms.reviewer: sathyana, lindabr, gbratton
 appliesto: 
   - Microsoft Purview
 search.appverid: MET150
-ms.date: 9/7/2022
+ms.date: 9/15/2022
 ---
 # Sensitivity labels are missing in Outlook, Outlook on the web, and other Office apps
 
