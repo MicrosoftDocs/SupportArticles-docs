@@ -99,7 +99,7 @@ To enable dump log and Serial Console, run the following script.
     reg unload HKLM\BROKENSYSTEM
     ```
      > [!NOTE]
-     > If the rescue VM is created manually without the `az repair` commands, you can use [sac-os-dump-enabler.ps1]((https://github.com/Azure/repair-script-library/blob/master/src/windows/sac-os-dump-enabler.ps1) to collect dump files. If the OS disk of the faulty VM is attached to the rescue VM as a data disk and online, run this script by using the **Run command** option in the rescue VM.
+     > If the rescue VM is created manually without the `az repair` commands, you can use [sac-os-dump-enabler.ps1]((https://github.com/Azure/repair-script-library/blob/master/src/windows/sac-os-dump-enabler.ps1) to collect dump files. If the OS disk of the faulty VM is attached to the rescue VM as a data disk and is online, run this script by using the **Run command** option in the rescue VM.
 
 3. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
 4. Start the VM to reproduce the issue, then a dump file will be generated.
