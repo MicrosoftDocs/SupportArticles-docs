@@ -69,28 +69,35 @@ This issue occurs if the sensitivity labels are configured incorrectly. You migh
 
 ### Resolution 
 
-Run the following cmdlet to check the sensitivity label configuration:
+Run the following cmdlets to check the sensitivity label configuration:
 
-```powershell
-Get-labelpolicy -identity "Label_policy_name" | fl
-```
+- ```powershell
+  Get-labelpolicy -identity "Label_policy_name" | fl
+  ```
 
-In the output, verify that the following properties are configured correctly:
+  In the output, verify that the following properties are configured correctly:
 
-- `ContentType` contains **File** and **Email**.
-- `Workload` contains **Exchange**.
-- `Disabled` is set to **False**.
-- `Mode` is set to **Enforce**.
-- One of the following properties must be set:
+  - `ContentType` contains **File** and **Email**.
+  - `Disabled` is set to **False**.
 
-  - `ExchangeLocation`
-  - `ExchangeLocationException`
-  - `ModernGroupLocation`
-  - `ModernGroupLocationException`
+- ```powershell
+  Get-labelpolicy -identity "Label_policy_name" | fl
+  ```
 
-  If `ExchangeLocation` is a distribution list or group, or if `ModernGroupLocation` is specified, make sure that the affected user is a member of the specified group.
+  In the output, verify that the following properties are configured correctly:
 
-If the sensitivity labels are configured incorrectly, you can reconfigure them by running the [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) PowerShell cmdlet or following the steps in [create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
+  - `Workload` contains **Exchange**.
+  - `Mode` is set to **Enforce**.
+  - One of the following properties must be set:
+
+    - `ExchangeLocation`
+    - `ExchangeLocationException`
+    - `ModernGroupLocation`
+    - `ModernGroupLocationException`
+
+    If `ExchangeLocation` is a distribution list or group, or if `ModernGroupLocation` is specified, make sure that the affected user is a member of the specified group.
+
+If the sensitivity labels are configured incorrectly, you can reconfigure them by running the [Set-Label](/powershell/module/exchange/set-label) or [Set-LabelPolicy](/powershell/module/exchange/set-labelpolicy) PowerShell cmdlet or following the steps in [create and configure sensitivity labels and their policies](/microsoft-365/compliance/create-sensitivity-labels).
 
 ## Other Office apps
 
