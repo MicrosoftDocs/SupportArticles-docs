@@ -20,7 +20,7 @@ ms.date: 9/15/2022
 
 ## Symptoms
 
-When you use the `Connect-SPOService` cmdlet in [SharePoint Online Management Shell](/powershell/sharepoint/sharepoint-online/connect-sharepoint-online), you receive the following error message:
+When you use the `Connect-SPOService` cmdlet in SharePoint Online Management Shell, you receive the following error message:
 
 > Connect-SPOService: Could not connect to SharePoint Online.
 
