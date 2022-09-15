@@ -248,7 +248,7 @@ Here are some possible situations:
     | where timestamp between (datetime(2022-05-11 00:00) .. datetime(2022-05-13 00:00)) 
     ```
 - Worker Role includes a system to record custom requests with custom ID, but it's not included in the exception record. It will be the same as the previous situation.
-- Worker Role includes a system to record custom requests with custom ID, and it's included in the exception record, such as the line 62 of the example. The way to record the function of WorkerRole application as request, it will be the same as situation of WebRole.Y ou can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in Logs page will be like:
+- Worker Role includes a system to record custom requests with a custom ID, and it's included in the exception record, such as line 62 in the example. The way to record the function of the Worker Role application as a request will be the same as the situation of Web Role. You can check the **Failures** page or **Logs** page to find the related requests and exceptions. The query used in the Logs page will be:
 
     ```kusto
     requests 
@@ -278,13 +278,13 @@ Like Web Role, it's also possible to monitor the memory and request status of Wo
 
 ### Troubleshoot performance issues such as slow response time
 
-For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data on a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom log to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
+For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data on a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom logs to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
 
 1. For both Worker Role and Web Role, it's recommended to save a trace log at each starting step in the process. For example, in the above example codes, it's possible to add a trace log at the following points when:
-    - the WebRole receives the request
-    - the WebRole starts to build communication with SQL server
-    - the WebRole receives the data returned by SQL server and starts generating the webpage
-    - the WebRole generates the webpage and returns it to user
+    - the WebRole receives the request.
+    - the WebRole starts to build communication with SQL server.
+    - the WebRole receives the data returned by SQL server and starts generating the webpage.
+    - the WebRole generates the webpage and returns it to user.
 
 1. If the main process is the application in Worker Role, record the functions of the Worker Role application as a request to add a custom correlation ID into the custom request record and exception record.
 
