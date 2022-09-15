@@ -17,7 +17,7 @@ _Applies to:_&nbsp; all versions of .NET
 ## Symptoms
 
 If an application is made by using [Windows Forms .NET](/dotnet/desktop/winforms/overview) or [WPF .NET](/dotnet/desktop/wpf/overview), when you select the parent window from the preview windows on the taskbar,
-the parent window can get focused, even if its child window shows in front of it. For more details about the issue, see the [More information](#more-information) section.
+the parent window can get focused, even if its child window shows in front of it. For details about the issue, see the [More information](#more-information) section.
 
 ## Workaround
 
