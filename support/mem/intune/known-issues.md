@@ -164,3 +164,9 @@ There are issues with certificate-based authentication when using the Pulse Secu
 - **Blog post:** [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868)
 
 In the Endpoint Manager admin center, we’ve disabled the "Rename device setting" for Windows devices that are hybrid Azure AD joined. This is to prevent device single sign-on errors that might occur after a user changes their password. Device renaming is available for co-managed devices that are Azure AD joined. For details, see [Known issue with “Rename device” setting for Windows 10 devices in the Intune console](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-with-rename-device-setting-for-windows-10-devices-in/ba-p/390868) on the Intune Customer Success blog.
+
+## iOS/iPadOS or macOS device unenrollment through management profile deletion may not be reflected in Microsoft Endpoint Manager
+
+- **Status:** Active
+
+There is a known issue where the enrollment status of an iOS/iPadOS or macOS device may not update correctly in Microsoft Endpoint Manager if a user manually deletes the management profile. The device will be unenrolled from Intune, but it may not be reflected in Microsoft Endpoint Manager admin center for 30 days.
