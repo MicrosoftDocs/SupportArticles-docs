@@ -117,6 +117,8 @@
       href: ../pst-import-service/issues-with-pst-import-job.md
   - name: Sensitivity Labels
     items:
+    - name: Can't send encrypted email to many recipients
+      href: ../sensitivity-labels/encrypted-email-cannot-send-many-recipients.md
     - name: Mail contacts lose access to encrypted content
       href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md
     - name: Sensitivity labels are missing

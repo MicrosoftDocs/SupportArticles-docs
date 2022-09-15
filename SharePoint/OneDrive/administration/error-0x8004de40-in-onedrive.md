@@ -1,5 +1,5 @@
 ---
-title: Error Code 0x8004de40 when signing in to OneDrive
+title: Error Code 0x8004de40 or 0x8004de88 when signing in to OneDrive
 description: Describes how to resolve an issue when unable to sign in to OneDrive
 author: helenclu
 ms.reviewer: salarson
@@ -20,7 +20,7 @@ appliesto:
   - OneDrive for Business
 ---
 
-# Error Code 0x8004de40 when signing in to OneDrive
+# Error Code 0x8004de40 or 0x8004de88 when signing in to OneDrive
 
 ## Symptoms
 
@@ -29,8 +29,10 @@ When you sign in to Microsoft OneDrive, you receive the following error message:
 > OneDrive Can't sign in. Error 0x8004de40
 >
 > Login was either interrupted or unsuccessful. Please try logging in again. (Error Code: 0x8004de40)
+> 
+> We can't sign into your account, please try again later 0x8004de88
 
-Error Code 0x8004de40 indicates OneDrive is having trouble connecting to the cloud.  
+Error Code 0x8004de40 or 0x8004de88 indicates OneDrive is having trouble connecting to the cloud.  
 
 ## Resolution
 

@@ -23,9 +23,7 @@ ms.date: 08/31/2022
 
 When you initiate a remote move migration by using the [Exchange admin center](/exchange/mailbox-migration/manage-migration-batches) (EAC) or the [New-MoveRequest](/powershell/module/exchange/new-moverequest) PowerShell cmdlet, the migration to the target mailbox database doesn't finish, and it returns the following error message:
 
-```output
-Cannot enter finalization because Data Guarantee is lagging behind by more than 00:05:00. Failure: Database GUID doesn't satisfy the constraint SecondCopy because the commit time 7/1/2022 2:35:10 PM isn't guaranteed by replication time 12/31/9999 11:59:59 PM
-```
+> Cannot enter finalization because Data Guarantee is lagging behind by more than 00:05:00. Failure: Database GUID doesn't satisfy the constraint SecondCopy because the commit time 7/1/2022 2:35:10 PM isn't guaranteed by replication time 12/31/9999 11:59:59 PM
 
 ## Cause
 
@@ -33,30 +31,28 @@ The [DataMoveReplicationConstraint](/exchange/managing-mailbox-database-copies-e
 
 ## Resolution
 
-Use the appropriate method, depending on the direction of the move request and whether the target mailbox is in a [database availability group](/exchange/high-availability/database-availability-groups/database-availability-groups) (DAG).
+Use the appropriate method, depending on the direction of the move request and whether the target mailbox is in a [database availability group](/exchange/high-availability/database-availability-groups/database-availability-groups) (DAG):
 
-#### For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG
+- For [offboarding](/exchange/hybrid-deployment/move-mailboxes#move-exchange-online-mailboxes-to-the-on-premises-organization), if the target mailbox is in a DAG, use one of the following methods:
 
-Use one of the following methods:
+  - Run the [Get-MailboxDatabaseCopyStatus](/powershell/module/exchange/get-mailboxdatabasecopystatus) PowerShell cmdlet to view the [health and status](/exchange/high-availability/manage-ha/monitor-dags) of the mailbox database copies. Diagnose and fix a mailbox database copy, then restart the migration.
 
-- Run the [Get-MailboxDatabaseCopyStatus](/powershell/module/exchange/get-mailboxdatabasecopystatus) PowerShell cmdlet to view the [health and status](/exchange/high-availability/manage-ha/monitor-dags) of the mailbox database copies. Diagnose and fix a mailbox database copy, then restart the migration.
+  - Restart the remote move migration to a mailbox database that meets the Data Guarantee API criteria.
 
-- Restart the remote move migration to a mailbox database that meets the Data Guarantee API criteria.
+  - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) (EMS):
 
-- Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises [Exchange Management Shell](/powershell/exchange/open-the-exchange-management-shell) (EMS):
+     ```powershell
+     Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
+     ```
 
-   ```powershell
-   Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
-   ```
+- For offboarding, if the target mailbox is _not_ in a DAG, use the following method:
 
-#### For offboarding, if the target mailbox isn't in a DAG
+  - Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
 
-- Set the **DataMoveReplicationConstraint** to **None** by running the following command in the on-premises EMS:
+     ```powershell
+     Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
+     ```
 
-   ```powershell
-   Set-MailboxDatabase <target mailbox database GUID> -DataMoveReplicationConstraint None
-   ```
+- For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online), use the following method:
 
-#### For [onboarding](/exchange/hybrid-deployment/move-mailboxes#move-on-premises-mailboxes-to-exchange-online)
-
-- Remove the move request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
+  - Remove the move request, and then retry the migration. If the error reoccurs, contact Microsoft Support.
