@@ -36,7 +36,7 @@ The data stored in the custom extension has a limit of 4 KB, which can be confir
 certutil -schema Ext
 ```
 
-You can see the MaxLength property of ExtensionRawValue in the output.
+You can see the `MaxLength` property of `ExtensionRawValue` in the output:
 
 ```output
 C:\>certutil -schema Ext
@@ -62,7 +62,7 @@ The limit can be expanded to 16 KB after installing one of the following or subs
 
 ## Expand the limit by using Registry Editor
 
-In Registry Editor, add the 0x1000 bitmask to the following registry key. Then, restart AD CS.
+In Registry Editor, add the `0x1000` bitmask to the following registry key. Then, restart AD CS.
 
 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\CertSvc\Configuration\DBFlags`
 
@@ -71,7 +71,7 @@ In Registry Editor, add the 0x1000 bitmask to the following registry key. Then, 
 
 ## Expand the limit by using an administrative command prompt
 
-Run the following commands to add 0x1000 to the DBFlags registry key value and then restart AD CS:
+Run the following commands to add `0x1000` to the `DBFlags` registry key value and then restart AD CS:
 
 ```console
 certutil -setreg DBFlags +0x1000
@@ -87,7 +87,7 @@ net stop certsvc && net start certsvc
 
 ## Verify the limit settings
 
-To verify the limit settings, run the following command as an administrator and check the MaxLength property of ExtensionRawValue in the output:
+To verify the limit settings, run the following command as an administrator and check the `MaxLength` property of `ExtensionRawValue` in the output:
 
 ```output
 C:\>certutil -schema Ext
