@@ -1,6 +1,6 @@
 ---
 title: A parent window gets focused when its child window is shown
-description: Provides resolutions for an issue where a parent window gets focused when its child window is shown.
+description: Provides workarounds for an issue where a parent window gets focused when its child window is shown.
 ms.date: 09/15/2022
 ms.custom: sap:Desktop app UI development
 ms.reviewer: hihayak
@@ -10,37 +10,37 @@ ms.author: v-sidong
 ---
 # A parent window gets focused when its child window is shown
 
-This article provides resolutions for an issue where a parent window gets focused from the taskbar even if its child window shows in front of it.
+This article provides workarounds for an issue where a parent window gets focused from the taskbar even if its child window shows in front of it.
 
 _Applies to:_&nbsp; all versions of .NET
 
 ## Symptoms
 
-If an application is made by using [Windows Forms .NET](/dotnet/desktop/winforms/overview) or [WPF .NET](/dotnet/desktop/wpf/overview), when you select the parent window from the preview windows on the taskbar,
+If an application is made by using [Windows Forms .NET](/dotnet/desktop/winforms/overview) or [WPF .NET](/dotnet/desktop/wpf/overview), when users select the parent window from the preview windows on the taskbar,
 the parent window can get focused, even if its child window shows in front of it. For details about the issue, see the [More information](#more-information) section.
 
 ## Workaround
 
 To avoid any issues caused by the focused parent window, use one of the following methods:
 
-### Method 1: Make sure the user can't choose the parent window from the preview windows on the taskbar
+### Method 1: Make sure users can't choose the parent window from the preview windows on the taskbar
 
-Set the [System.Windows.Forms.Form.ShowInTaskbar](/dotnet/api/system.windows.forms.form.showintaskbar) property or the [System.Windows.Window.ShowInTaskbar](/dotnet/api/system.windows.window.showintaskbar) property of the parent window to `false` until the child window is closed.
+Set the [System.Windows.Forms.Form.ShowInTaskbar](/dotnet/api/system.windows.forms.form.showintaskbar) or the [System.Windows.Window.ShowInTaskbar](/dotnet/api/system.windows.window.showintaskbar) property value of the parent window to `false` until the child window is closed.
 
 ### Method 2: Make sure the parent window doesn't respond even if it gets focused
 
-Set the [System.Windows.Forms.Control.Enabled](/dotnet/api/system.windows.forms.control.enabled) property or the [System.Windows. UIElement.IsEnabled](/dotnet/api/system.windows.uielement.isenabled) property to `false` until the child window is closed.
+Set the [System.Windows.Forms.Control.Enabled](/dotnet/api/system.windows.forms.control.enabled) or the [System.Windows.UIElement.IsEnabled](/dotnet/api/system.windows.uielement.isenabled) property value of the parent window to `false` until the child window is closed.
 
 ## More information
 
-Suppose a parent and child window are created by using the [System.Windows.Forms.Form.ShowDialog](/dotnet/api/system.windows.forms.form.showdialog) or the [System.Windows.Window.ShowDialog](/dotnet/api/system.windows.window.showdialog) method. Usually, the parent window doesn't get focused even if you select it while the child window is shown in front of it, as shown below:
+Suppose a parent and its child window are created by using the [System.Windows.Forms.Form.ShowDialog](/dotnet/api/system.windows.forms.form.showdialog) or the [System.Windows.Window.ShowDialog](/dotnet/api/system.windows.window.showdialog) method. Usually, the parent window doesn't get focused even if users select it while the child window shows in front of it, as shown below:
 
 :::image type="content" source="media/parent-window-focused-child-window-shown/child-window-shown.png" alt-text="Screenshot of the child window that is shown.":::
 
-If you hover the mouse over the application icon shown on the taskbar, you'll see the following preview windows:
+If users hover the mouse over the application icon shown on the taskbar, they'll see the following preview windows:
 
 :::image type="content" source="media/parent-window-focused-child-window-shown/preview-window.png" alt-text="Screenshot of the preview windows.":::
 
-Then, if you select the parent window from the preview windows, you'll see that the parent window gets focused, as shown below:
+Then, if users select the parent window from the preview windows, they'll see that the parent window gets focused, as shown below:
 
 :::image type="content" source="media/parent-window-focused-child-window-shown/parent-window-focused.png" alt-text="Screenshot of the parent window that is focused.":::
