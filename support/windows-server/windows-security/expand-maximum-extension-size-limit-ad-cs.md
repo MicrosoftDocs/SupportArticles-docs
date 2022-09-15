@@ -51,10 +51,11 @@ Schema:
 CertUtil: -schema command completed successfully.
 ```
 
-The limit can be expanded to 16 KB after the following updates are installed in Windows Server 2019 and later versions.
+The limit can be expanded to 16 KB after installing one of the following or subsequent updates:
 
-- [July 19, 2022—KB5015879 (OS Build 20348.859) Preview](https://support.microsoft.com/topic/july-19-2022-kb5015879-os-build-20348-859-preview-be3951fb-2229-48f7-971c-830745931979) or later quality updates
-- [August 9, 2022—KB5016683 (Security-only update)](https://support.microsoft.com/topic/august-9-2022-kb5016683-security-only-update-63256731-a090-4f08-95fa-849f33ff02c0) or later security updates
+- Windows Server 2019 - [July 21, 2022—KB5015880 (OS Build 17763.3232) Preview](https://support.microsoft.com/topic/july-21-2022-kb5015880-os-build-17763-3232-preview-1c984723-cdf0-4a24-9a4f-5df11d3024a1)
+- Windows Server 20H2 - [July 26, 2022—KB5015878 (OS Builds 19042.1865, 19043.1865, and 19044.1865) Preview](https://support.microsoft.com/topic/july-26-2022-kb5015878-os-builds-19042-1865-19043-1865-and-19044-1865-preview-549f5551-fcc5-4fee-8811-c5df12e04d40)
+- Windows Server 2022 - [July 19, 2022—KB5015879 (OS Build 20348.859) Preview](https://support.microsoft.com/topic/july-19-2022-kb5015879-os-build-20348-859-preview-be3951fb-2229-48f7-971c-830745931979)
 
 > [!IMPORTANT]
 > The next two sections contain instructions to modify the registry. Serious problems might occur if the registry is modified incorrectly. As a precaution, back up the registry before you modify it. For more information about how to back up, restore, and modify the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).
