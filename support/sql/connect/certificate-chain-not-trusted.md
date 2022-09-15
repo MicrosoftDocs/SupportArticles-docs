@@ -14,7 +14,7 @@ Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database ap
 
 ## Error messages
 
-**Scenario 1: Applications upgraded to Microsoft OLE DB Driver 19 for SQL Server**
+[Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#the-certificate-chain-was-issued-by-an-authority-that-isnt-trusted-error-after-upgrading-snac-applications)
 
 If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11) application to use Microsoft OLE DB Driver 19 for SQL Server (Provider=MSOLEDBSQL19), you might receive error messages that resemble the following messages:
 
@@ -22,15 +22,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11)
 
 > [Microsoft OLE DB Driver 19 for SQL Server]: SSL Provider: The certificate chain was issued by an authority that is not trusted.
 
-**Scenario 2: Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server**
-
-If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
-
-> [Microsoft][ODBC Driver 18 for SQL Server]SSL Provider: The certificate chain was issued by an authority that is not trusted.
-
-> [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection
-
-## Cause
+**Cause**
 
 These errors occur if both the following conditions are true:
 
@@ -42,8 +34,6 @@ The error occurs because of a change in the default behavior of the client drive
 
 `The certificate chain was issued by an authority that is not trusted`
 
-## Resolutions
-
 For scenario 1, use one of the following solutions:
 
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
@@ -51,6 +41,17 @@ For scenario 1, use one of the following solutions:
 - **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation?view=sql-server-ver16&preserve-view=true).
 
 - **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
+**Scenario 2: Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server**
+
+If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
+
+> [Microsoft][ODBC Driver 18 for SQL Server]SSL Provider: The certificate chain was issued by an authority that is not trusted.
+
+> [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection
+
+## Resolutions
+
+
 
 For scenario 2, use one of the following solutions:
 
