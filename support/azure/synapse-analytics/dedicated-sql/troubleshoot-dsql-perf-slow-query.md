@@ -27,7 +27,7 @@ Follow the steps to troubleshoot the issue or execute the steps in the notebook 
 > - Outdated statistics
 > - Unhealthy clustered columnstore indexes (CCIs)
 >
-> To save your troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality).
+> To save troubleshooting time, make sure that the statistics are [created and up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics) and [CCIs have been rebuilt](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#rebuild-indexes-to-improve-segment-quality).
 
 ## Step 1: Identify the request_id (aka QID)
 
@@ -59,7 +59,7 @@ To better target the slow queries, use the following tips when you run the scrip
 
 ## Step 2: Determine where the query is taking time
 
-Run the following script to find out the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Note down the `StepIndex`, `Phase` and `Description` of the slow step identified from the result set.
+Run the following script to find the step that may cause the performance issue of the query. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to get the full picture of the distributed plan. Take note of the `StepIndex`, `Phase`, and `Description` of the slow step identified from the result set.
 
 | Parameter | Description |
 | -- | ---- |
@@ -121,7 +121,7 @@ ORDER BY StepIndex;
 
 ## Step 3: Review step details
 
-Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to compare all distribution timings. Note down the `wait_type` value for the distribution that may cause the performance issue.
+Run the following script to review the details of the step identified in the previous step. Update the variables in the script with the values described in the following table. Change `@ShowActiveOnly` to 0 to compare all distribution timings. Take note of the `wait_type` value for the distribution that may cause the performance issue.
 
 | Parameter | Description |
 | -- | ---- |
@@ -183,7 +183,7 @@ ORDER BY distribution_id
     |Statement is a long-running `DROP TABLE` or `TRUNCATE TABLE` statement|[Long-running DROP TABLE or TRUNCATE TABLE](#long-running-drop-table-or-truncate-table)|
     |CCIs have high percentage of deleted or open rows (see [Optimizing clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-index#optimizing-clustered-columnstore-indexes))|[Unhealthy CCIs (generally)](#unhealthy-ccis-generally)|
 
-- Analyze the result set in the [Step 1](#step-1-identify-the-request_id-aka-qid) for one or more `CREATE STATISTICS` statements executed immediately after the slow query submission. Check the cause that best fits your scenario from the following table.
+- Analyze the result set in [Step 1](#step-1-identify-the-request_id-aka-qid) for one or more `CREATE STATISTICS` statements executed immediately after the slow query submission. Check the cause that best fits your scenario from the following table.
 
     | Scenario | Common Cause |
     |----------|--------------|
@@ -204,7 +204,7 @@ Reduce the number of queries submitted concurrently.
 
 Being blocked for resource allocation means that your query is waiting to execute based on:
 
-- The amount of memory granted based on the resource class or workload group assignment associated to the user.
+- The amount of memory granted is based on the resource class or workload group assignment associated with the user.
 - The amount of available memory on the system or workload group.
 - (Optional) The workload group/classifier importance.
 
@@ -218,7 +218,7 @@ Being blocked for resource allocation means that your query is waiting to execut
 
 <details><summary id="complex-query-or-older-join-syntax">Complex query or older JOIN syntax</summary>
 
-You may encounter a situation where the default query optimizer methods are proven ineffective that the compilation phase takes a long time, if the query:
+You may encounter a situation where the default query optimizer methods are proven ineffective, and the compilation phase takes a long time if the query:
 
 - Involves a high number of joins and/or subqueries (complex query).
 - Utilizes joiners in the `FROM` clause (not ANSI-92 style joins).
@@ -239,7 +239,7 @@ For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statement
 
 **Mitigations**
 
-Identify a maintenance window, stop all workloads, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force an immediate cleanup of previously dropped/truncated tables.
+Identify a maintenance window, stop all workloads, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force an immediate cleanup of previously dropped or truncated tables.
 
 </details>
 
@@ -275,7 +275,7 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
 
 ### Execution phase issues
 
-- Use the following table to analyze the result set in [Step 2](#step-2-determine-where-the-query-is-taking-time). Determine your scenario  and check the common cause for detailed information and the possible mitigation steps.
+- Use the following table to analyze the result set in [Step 2](#step-2-determine-where-the-query-is-taking-time). Determine your scenario and check the common cause for detailed information and the possible mitigation steps.
 
    | Scenario | Common Cause |
    |-----------|-----|
@@ -296,7 +296,7 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
         ```
 
     1. If space_min/space_max > 0.1, go to [Data skew (stored)](#data-skew-stored).
-    1. Else, go to [In-flight data skew](#in-flight-data-skew)
+    1. Otherwise, go to [In-flight data skew](#in-flight-data-skew)
 
 <details><summary id="inaccurate-estimates">Inaccurate estimates</summary>
 
@@ -341,11 +341,11 @@ Queries against external tables are designed with the intention of bulk loading 
 
 <details><summary id="data-skew-stored">Data skew (stored)</summary>
 
-Data skew means the data isn't distributed evenly across the distributions. Each step of the distributed plan requires all distributions complete before moving to the next step. When your data is skewed, the full potential of the processing resources, such as CPU and IO, can't be achieved, resulting in slower execution times.
+Data skew means the data isn't distributed evenly across the distributions. Each step of the distributed plan requires all distributions to complete before moving to the next step. When your data is skewed, the full potential of the processing resources, such as CPU and IO, can't be achieved, resulting in slower execution times.
 
 **Mitigations**
 
-Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column
+Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column.
 
 </details>
 
@@ -364,7 +364,7 @@ In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) 
 
 ### Wait type issues
 
-If none of the above common issues apply to your query, the [Step 3](#step-3-review-step-details) data affords the opportunity to determine which wait types (in `wait_type` and `wait_time`) are interfering with query processing for the longest-running step. There are a large number of wait types and they're grouped into related categories due to similar mitigations. Follow these steps to locate the wait category of your query step:
+If none of the above common issues apply to your query, the [Step 3](#step-3-review-step-details) data affords the opportunity to determine which wait types (in `wait_type` and `wait_time`) are interfering with query processing for the longest-running step. There are a large number of wait types, and they're grouped into related categories due to similar mitigations. Follow these steps to locate the wait category of your query step:
 
 1. Identify the `wait_type` in [Step 3](#step-3-review-step-details) that is taking the most time.
 1. Locate the wait type in [wait categories mapping table](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table) and identify the wait category it included in.
@@ -372,11 +372,11 @@ If none of the above common issues apply to your query, the [Step 3](#step-3-rev
 
 <details><summary>Compilation</summary>
 
-Follow these steps to mitigate wait type issues of Compilation category:
+Follow these steps to mitigate wait type issues of the Compilation category:
 
 1. Rebuild indexes for all objects involved in the problematic query.
 1. Update statistics on all objects involved in the problematic query.
-1. Test the problematic query again to validate whether the issue still persists.
+1. Test the problematic query again to validate whether the issue persists.
 
 If the issue persists, then:
 
@@ -417,7 +417,7 @@ Unhealthy CCIs contribute to increased IO, CPU, and memory allocation, which, in
 
 **Outdated statistics**
 
-Outdated statistics can cause the generation of an unoptimized distributed plan, which involved more data movement than necessary. Unnecessary data movement increased the workload not only on your data at rest, but also on the `tempdb`. Because IO is a shared resource across all queries, performance impacts can be felt by the entire workload.
+Outdated statistics can cause the generation of an unoptimized distributed plan, which involves more data movement than necessary. Unnecessary data movement increases the workload not only on your data at rest but also on the `tempdb`. Because IO is a shared resource across all queries, performance impacts can be felt by the entire workload.
 
 To remedy this situation, ensure all [statistics are up-to-date](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics), and a maintenance plan is in place to keep them updated for user workloads.
 
