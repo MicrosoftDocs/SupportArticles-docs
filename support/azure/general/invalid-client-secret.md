@@ -32,14 +32,18 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 
    :::image type="content" source="media/invalid-client-secret/select-application-name.png" alt-text="Screenshot of an application name.":::
 
-3. Select **Certificates & Secrets** > **New client secret** to renew it. After a client secret key is added, the new secret key value will be shown under the **Key** column. Save it locally.
+3. Select **Certificates & Secrets** > **New client secret** to renew it.
 
    :::image type="content" source="media/invalid-client-secret/new-client-secret.png" alt-text="Screenshot that shows the 'New client secret' button.":::
 
-4. Go to the CycleCloud portal, select **Configure** and select the account in **Cloud Provider Accounts**, select **Credentials** > **Edit**. In the **Edit Credential** dialog, fill the password in **Application Secret** and then select **Validate**. If the validation succeeds, select **Save**.
+   After a client secret key is added, the new secret key value will be shown under the **Key** column.
+
+4. Go to the CycleCloud portal, select **Configure**. Select the account in **Cloud Provider Accounts**, and then select **Credentials** > **Edit**. In the **Edit Credential** dialog, type the password in **Application Secret** and then select **Validate**. If the validation succeeds, select **Save**.
 
 ## More information
 
 - [Microsoft identity platform application authentication certificate credentials](/azure/active-directory/develop/active-directory-certificate-credentials)
 
 - [Using Service Principal](/azure/cyclecloud/how-to/service-principals)
+
+[!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
