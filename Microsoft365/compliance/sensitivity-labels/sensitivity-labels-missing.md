@@ -72,7 +72,7 @@ This issue occurs if the sensitivity labels are configured incorrectly. You migh
 Run the following cmdlets to check the sensitivity label configuration:
 
 - ```powershell
-  Get-labelpolicy -identity "Label_policy_name" | fl
+  Get-label -identity “Label_name” | fl
   ```
 
   In the output, verify that the following properties are configured correctly:
