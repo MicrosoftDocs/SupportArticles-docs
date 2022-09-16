@@ -288,7 +288,7 @@ For example, when a Cloud Service Web Role receives a request, it needs to get s
 1. For both Worker Role and Web Role, it's recommended to save a trace log at each starting step in the process. For example, in the above example codes, it's possible to add a trace log at the following points when:
 
     - The WebRole receives the request.
-    - the WebRole starts to build communication with SQL server.
+    - The WebRole starts to build communication with SQL server.
     - The WebRole receives the data returned by SQL server and starts generating the webpage.
     - The WebRole generates the webpage and returns it to user.
 
