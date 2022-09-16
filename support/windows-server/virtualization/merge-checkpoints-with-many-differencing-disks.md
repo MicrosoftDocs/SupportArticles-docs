@@ -126,9 +126,7 @@ You can merge differencing disks into an online VM. However, this is a multi-ste
    ==================================
    ```
 
-   This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM). The script should resemble the following script.
-
-   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/get-vhdchain-pasted.png" alt-text="Screenshot of the Get-VHDChain script after it's pasted into a PowerShell window.":::
+   This script defines a `Get-VHDChain` function that identifies the VHD chain (the set of differencing disks for the VM).
 
 1. Run the following command:
 
@@ -152,8 +150,8 @@ You can merge differencing disks into an online VM. However, this is a multi-ste
 
 #### <a id="mergechain"></a>Create and run merge commands
 
-1. The following instructions create a script in *C:\temp\merge.txt* to merge the disks. Follow these steps:
-   1. On the local *C:* drive, create a folder that is named *temp*.
+1. The following instructions create a script in _C:\temp\merge.txt_ to merge the disks. Follow these steps:
+   1. On the local _C:_ drive, create a folder that is named _temp_.
    1. Open an Administrative PowerShell window, and then run the following command:
 
       ```powershell
@@ -183,12 +181,8 @@ You can merge differencing disks into an online VM. However, this is a multi-ste
 
       :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergescript-pasted.png" alt-text="Screenshot of the script after it's pasted into a PowerShell window.":::
 
-1. Open *C:\temp\merge.txt*. This file contains a list of command line commands that are grouped into pairs. Each pair of commands addresses a single differencing disk. For example, in the following file, the highlighted pair of commands address Disk4.
-
-   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-text-file.png" alt-text="Screenshot of the text file that contains the merge commands.":::
+1. Open _C:\temp\merge.txt_. This file contains a list of command line commands that are grouped into pairs. Each pair of commands defines the merge operations for a single differencing disk.
 
 1. Copy the first command of the first pair, paste it at the command prompt, and then run it. Then, do the same for the second command of the first pair. These operations merge the differencing disk that the commands address.
 
-   :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/mergecommands-run.png" alt-text="Screenshot of the merge command in progress.":::
-
-1. After the disk merges, repeat step 7 for the next differencing disk in the list. Continue for all the differencing disks that the *merge.txt* file addresses.
+1. After the disk merges, repeat step 7 for the next differencing disk in the list. Continue for all the differencing disks that the _merge.txt_ file addresses.
