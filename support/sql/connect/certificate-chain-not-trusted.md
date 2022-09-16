@@ -10,7 +10,7 @@ ms.prod: sql
 
 # "The certificate chain was issued by an authority that is not trusted" error after upgrading SNAC applications
 
-Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server.
+Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server.
 
 ## [Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#tab/ole-db-driver-19)
 
@@ -32,9 +32,9 @@ The error occurs because of a change in the default behavior of the client drive
 
 ### Solutions
 
-- **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
+- **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server).
 
-- **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation?view=sql-server-ver16&preserve-view=true).
+- **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation).
 
 - **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
 
@@ -58,18 +58,18 @@ The error occurs because of a change in the default behavior of the client drive
 
 ### Solutions
 
-- **Solution 1:** Use the Microsoft ODBC Driver 17 for SQL Server. You can download the driver from [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
+- **Solution 1:** Use the Microsoft ODBC Driver 17 for SQL Server. You can download the driver from [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server).
 
-- **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory for Encrypt** setting, change the value to **No** or **Optional**. If the value isn't already specified, add `Encrypt = Optional;`. If you're using a DSN, change the encryption setting from **Mandatory** to **Optional**. For more information, see [DSN and connection string keywords and attributes](/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-ver16&preserve-view=true).
+- **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory for Encrypt** setting, change the value to **No** or **Optional**. If the value isn't already specified, add `Encrypt = Optional;`. If you're using a DSN, change the encryption setting from **Mandatory** to **Optional**. For more information, see [DSN and connection string keywords and attributes](/sql/connect/odbc/dsn-connection-string-attribute).
 
 ---
 
 ## See also
 
-- [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine?view=sql-server-ver16&preserve-view=true)
+- [Enable encrypted connections to the Database Engine](/sql/database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine)
 
 - [The certificate received from the remote server was issued by an untrusted certificate authority error when you connect to SQL Server](error-message-when-you-connect.md)
 
-- [Support Policies for SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client?view=sql-server-ver16&preserve-view=true)
+- [Support Policies for SQL Server Native Client](/sql/relational-databases/native-client/applications/support-policies-for-sql-server-native-client)
 
 - [SNAC lifecycle explained](https://techcommunity.microsoft.com/t5/sql-server-blog/snac-lifecycle-explained/ba-p/385381)
