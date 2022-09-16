@@ -17,7 +17,7 @@ We are aware of an issue with the noncompliance messaging details that appear in
 
 The compliance policy is being enforced correctly despite the missing ranges in the remediation messaging. To make the device compliant, update the device OS build to a version within the specified acceptable range in the compliance policy.
 
-For more information about this known issue, see our blog [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
+For more information about this known issue, see our blog [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082).
 
 ## A limited number of macOS devices may be unexpectedly unenrolled from the Microsoft Intune service
 
