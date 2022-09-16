@@ -33,7 +33,7 @@ To resolve the issue, fix the instances in wrong state. To do this, follow these
 
 1. Create a text file with a .ps1 extension.
 
-2. Copy the following PowerShell script and and paste it to the .ps1 file.
+2. Copy the following PowerShell script and paste it to the .ps1 file.
 
     ```powershell
     param (
