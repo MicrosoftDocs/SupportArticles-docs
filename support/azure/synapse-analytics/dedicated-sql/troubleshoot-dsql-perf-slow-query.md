@@ -259,7 +259,7 @@ The [automatic create statistics option](/azure/synapse-analytics/sql/develop-ta
 
 **Mitigations**
 
-If you require the first execution of query that consistently requires statistics to be created, you'll need to [manually create statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-create-statistics) prior to the execution of the query.
+If the first execution of query consistently requires statistics to be created, you'll need to [manually create statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-create-statistics) prior to the execution of the query.
 
 </details>
 
@@ -331,7 +331,7 @@ Rebuild the tables to correct the related table columns that don't have identica
 
 <details><summary id="ad-hoc-external-table-queries"><b>Ad hoc external table queries</b></summary>
 
-Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables, though functions, may suffer variable durations due to external factors, such as concurrent storage container activities.
+Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables may suffer variable durations due to external factors, such as concurrent storage container activities.
 
 **Mitigations**
 
