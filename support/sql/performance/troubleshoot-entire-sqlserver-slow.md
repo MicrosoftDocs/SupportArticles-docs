@@ -78,7 +78,7 @@ The problem could be in the network layer, causing slow communication between th
 
 ## Step 4: Troubleshoot high CPU in SQL Server
 
-If CPU-intensive queries are being executed on the system, they can cause other queries to be starved of CPU capacity. More frequently, however, high-CPU coming from queries can be an indication that queries need to be optimized. Follow these steps to approach the issue:
+If CPU-intensive queries are being executed on the system, they can cause other queries to be starved of CPU capacity. More frequently, however, high CPU usage coming from queries can be an indication that queries need to be optimized. Follow these steps to approach the issue:
 
 1. First, find out if SQL Server is causing high CPU usage (using Perfmon counters).
 1. Identify queries contributing to CPU usage.
@@ -111,7 +111,7 @@ Another common reason for the perceived overall slowness of SQL Server workloads
 
 - Filter drivers: The SQL Server I/O response can be severely impacted if file-system filter drivers process heavy I/O traffic.
 
-  - Exclude data folders from anti-virus scanning and have filter driver issues corrected by software vendors to prevent the impact on I/O performance.
+  - Exclude data folders from anti-virus scanning and have filter driver issues corrected by software vendors to prevent an impact on I/O performance.
 
 - Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This issue can be caused by other applications running on other machines but sharing the same SAN with this SQL Server machine. Work with your SAN administrator to balance I/O traffic (see "Check for hardware issues" above).
   
@@ -143,7 +143,7 @@ Use the following methods to troubleshoot the issue:
 
 - Identify the head blocking session by looking at `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or BlkBy column in `sp_who2` stored procedure output.
 - Then, find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period).
-- If no queries are actively running on the head blocking session, then there could have been an orphaned transaction due to application issues.
+- If no queries are actively running on the head blocking session, there could have been an orphaned transaction due to application issues.
 - Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
 - Examine the transaction isolation used in the query and adjust.
 
@@ -151,7 +151,7 @@ For detailed troubleshooting of blocking scenarios, see [Understand and resolve 
 
 ## Step 8: Troubleshoot scheduler issues (non-yielding, deadlocked scheduler, non-yielding IOCP listener, resource monitor)
 
-SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, and so on. As a result, SQL Server may seem unresponsive, partially or completely, depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems, from product bugs, to external drivers or filter drivers, to hardware issues.
+SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, and so on. As a result, SQL Server may seem unresponsive, partially or completely, depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems, including product bugs, external and filter drivers, and hardware issues.
 
 Follow these steps to troubleshoot these issues:
 
