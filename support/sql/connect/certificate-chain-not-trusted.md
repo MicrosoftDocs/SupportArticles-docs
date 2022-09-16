@@ -28,7 +28,7 @@ These errors occur if both the following conditions are true:
 
 - The client connection string doesn't explicitly specify a value for encryption property, or the **Encryption** option wasn't explicitly set or updated in the DSN.
 
-The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails. When it fails, the driver displays the following error message in the [Error messages](#error-messages) section:
+The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails. When it fails, the driver displays the following error message:
 
 `The certificate chain was issued by an authority that is not trusted`
 
