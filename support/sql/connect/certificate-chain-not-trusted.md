@@ -20,7 +20,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11)
 
 > [Microsoft OLE DB Driver 19 for SQL Server]: SSL Provider: The certificate chain was issued by an authority that is not trusted.
 
-**Cause**
+### Cause
 
 These errors occur if both the following conditions are true:
 
@@ -29,6 +29,8 @@ These errors occur if both the following conditions are true:
 - The client connection string doesn't explicitly specify a value for encryption property, or the **Encryption** option wasn't explicitly set or updated in the DSN.
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails.
+
+### Solutions
 
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
@@ -44,7 +46,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server 
 
 > [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection
 
-**Cause**
+### Cause
 
 These errors occur if both the following conditions are true:
 
@@ -54,7 +56,7 @@ These errors occur if both the following conditions are true:
 
 The error occurs because of a change in the default behavior of the client drivers. Older versions of client drivers are designed to assume that data encryption is **OFF** by default. The new drivers assume this setting to be **ON** by default. Because data encryption is set to **ON**, the driver tries to validate the server's certificate and fails.
 
-Use one of the following solutions:
+### Solutions
 
 - **Solution 1:** Use the Microsoft ODBC Driver 17 for SQL Server. You can download the driver from [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
