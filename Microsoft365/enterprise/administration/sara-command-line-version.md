@@ -19,7 +19,7 @@ ms.date: 4/26/2022
 ---
 # Enterprise version of Microsoft Support and Recovery Assistant
 
-The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook and Advance Diagnostics. This verson of the Assistant runs either at a command-line or through a script such as PowerShell. It is useful when administrators need to run the Assistant on computers in their organization remotely.
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook and Advance Diagnostics. This version of the Assistant runs either at a command-line or through a script such as PowerShell. It is useful when administrators need to run the Assistant on computers in their organization remotely.
 
 ## Download and run the Enterprise version of the Assistant
 
