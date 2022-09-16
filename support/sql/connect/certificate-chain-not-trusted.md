@@ -38,7 +38,7 @@ The error occurs because of a change in the default behavior of the client drive
 
 - **Solution 3:** Add `;Trust Server Certificate=true` to the connection string. This will force the client to trust the certificate without validation.
 
-## [Applications upgraded to Microsoft ODBC Driver 18.*x* for SQL Server](#tab/odbc-driver-18x)
+## [Upgraded to Microsoft ODBC Driver 18.*x* for SQL Server](#tab/odbc-driver-18x)
 
 If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server Native Client 11.0}) application to Microsoft ODBC Driver 18 for SQL Server (Driver={ODBC Driver 18 for SQL Server}), you might receive error messages that resemble the following messages:
 
@@ -61,6 +61,7 @@ The error occurs because of a change in the default behavior of the client drive
 - **Solution 1:** Use the Microsoft ODBC Driver 17 for SQL Server. You can download the driver from [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
 - **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory for Encrypt** setting, change the value to **No** or **Optional**. If the value isn't already specified, add `Encrypt = Optional;`. If you're using a DSN, change the encryption setting from **Mandatory** to **Optional**. For more information, see [DSN and connection string keywords and attributes](/sql/connect/odbc/dsn-connection-string-attribute?view=sql-server-ver16&preserve-view=true).
+
 
 ## See also
 
