@@ -190,17 +190,17 @@ ORDER BY distribution_id
     | Statistics created unexpectedly | [Delay from auto-create statistics](#delay-from-auto-create-statistics) |
     | Statistics creation failed after 5 minutes | [Auto-create statistics timeouts](#auto-create-statistics-timeouts) |
 
-<details><summary id="blocked-compilation-concurrency"><b>Blocked: Compilation Concurrency</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="blocked-compilation-concurrency">Blocked: Compilation Concurrency</summary>
 
 Concurrency Compilation blocks rarely occur. However, if you encounter this type of block, it signifies that a large volume of queries were submitted in a short time and have been queued to begin compilation.
 
 **Mitigations**
 
 Reduce the number of queries submitted concurrently.
-
+<br/><br/>
 </details>
 
-<details><summary id="blocked-resource-allocation"><b>Blocked: resource allocation</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="blocked-resource-allocation">Blocked: resource allocation</summary>
 
 Being blocked for resource allocation means that your query is waiting to execute based on:
 
@@ -213,10 +213,10 @@ Being blocked for resource allocation means that your query is waiting to execut
 - Wait for the blocking session to complete.
 - Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouseresource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
 - Evaluate if it's preferable to [Kill the blocking session](/sql/t-sql/language-elements/kill-transact-sql).
-
+<br/><br/>
 </details>
 
-<details><summary id="complex-query-or-older-join-syntax"><b>Complex query or older JOIN syntax</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="complex-query-or-older-join-syntax">Complex query or older JOIN syntax</summary>
 
 You may encounter a situation where the default query optimizer methods are proven ineffective as the compilation phase takes a long time. It may occur if the query:
 
@@ -230,40 +230,40 @@ Though these scenarios are atypical, you have options to attempt to override the
 - Use ANSI-92 style joins.
 - Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sqlt-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performancecardinality-estimation-sql-server).
 - Break the query into multiple, less complex steps.
-
+<br/><br/>
 </details>
 
-<details><summary id="long-running-drop-table-or-truncate-table"><b>Long-running DROP TABLE or TRUNCATE TABLE</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="long-running-drop-table-or-truncate-table">Long-running DROP TABLE or TRUNCATE TABLE</summary>
 
 For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statements will defer storage cleanup to a background process. However, if your workload performs a high number of `DROP`/`TRUNCATE TABLE` statements in a short time frame, it's possible that metadata becomes crowded and causes subsequent `DROP`/`TRUNCATE TABLE` statements to execute slowly.
 
 **Mitigations**
 
 Identify a maintenance window, stop all workloads, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force an immediate cleanup of previously dropped or truncated tables.
-
+<br/><br/>
 </details>
 
-<details><summary id="unhealthy-ccis-generally"><b>Unhealthy CCIs (generally)</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="unhealthy-ccis-generally">Unhealthy CCIs (generally)</summary>
 
 Poor clustered columnstore index (CCI) health requires extra metadata, which can cause the query optimizer to take more time to determine an optimal plan. To avoid this situation, ensure that all of your CCIs are in good health.
 
 **Mitigations**
 
 [Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression).
-
+<br/><br/>
 </details>
 
-<details><summary id="delay-from-auto-create-statistics"><b>Delay from auto-create statistics</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="delay-from-auto-create-statistics">Delay from auto-create statistics</summary>
 
 The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. However, the auto-creation process itself can make an initial query take longer than subsequent executions of the same.
 
 **Mitigations**
 
 If the first execution of query consistently requires statistics to be created, you'll need to [manually create statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-create-statistics) prior to the execution of the query.
-
+<br/><br/>
 </details>
 
-<details><summary id="auto-create-statistics-timeouts"><b>Auto-create statistics timeouts</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="auto-create-statistics-timeouts">Auto-create statistics timeouts</summary>
 
 The [automatic create statistics option](/azure/synapse-analytics/sql/develop-tables-statistics#automatic-creation-of-statistics), `AUTO_CREATE_STATISTICS` is `ON` by default to help ensure the query optimizer can make good distributed plan decisions. The auto-creation of statistics occurs in response to a SELECT statement and has a 5-minute threshold to complete.  If the size of data and/or the number of statistics to be created require longer than the 5-minute threshold, the auto-creation of statistics will be abandoned so that the query can continue execution.  The failure to create the statistics can negatively impact the query optimizer's ability to generate an efficient distributed execution plan, resulting in poor query performance.
 
@@ -280,7 +280,7 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
    | Scenario | Common Cause |
    |-----------|-----|
    | `EstimatedRowCount`/`ActualRowCount` < 25% | [Inaccurate estimates](#inaccurate-estimates) |
-   | The `Description` value indicates `BroadcastMoveOperation` and the query references a replicated table | [Uncached replicated tables](#uncached-replicated-tables) |
+   | The `Description` value indicates `BroadcastMoveOperation` and the query references a replicated table. | [Uncached replicated tables](#uncached-replicated-tables) |
    | 1. `@ShowActiveOnly` = 0 <br/> 2. High or unexpected number of steps (`step_index`) is observed. <br/> 3. Data types of joiner columns aren't identical between tables. | [Mismatched data type/size](#mismatched-data-type-size) |
    | 1. The `Description` value indicates `HadoopBroadcastOperation`, `HadoopRoundRobinOperation` or `HadoopShuffleOperation`. <br/> 2. The `total_elapsed_time` value of a given `step_index` is inconsistent between executions. | [Ad hoc external table queries](#ad-hoc-external-table-queries) |
 
@@ -297,18 +297,19 @@ Manually [create the statistics](/azure/synapse-analytics/sql/develop-tables-sta
 
     1. If `space_min`/`space_max` > 0.1, go to [Data skew (stored)](#data-skew-stored).
     1. Otherwise, go to [In-flight data skew](#in-flight-data-skew).
+<br/><br/>
 
-<details><summary id="inaccurate-estimates"><b>Inaccurate estimates</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="inaccurate-estimates">Inaccurate estimates</summary>
 
 Have your statistics up-to-date to ensure that the query optimizer generates an optimal plan. When the estimated row count is significantly less than the actual counts, the statistics need to be maintained.
 
 **Mitigations**
 
 [Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
-
+<br/><br/>
 </details>
 
-<details><summary id="uncached-replicated-tables"><b>Uncached replicated tables</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="uncached-replicated-tables">Uncached replicated tables</summary>
 
 If you have created replicated tables, and you fail to warm the replicated table cache properly, unexpected poor performance will result due to extra data movements or the creation of a suboptimal distributed plan.
 
@@ -316,40 +317,40 @@ If you have created replicated tables, and you fail to warm the replicated table
 
 - [Warm the replicated cache](/azure/synapse-analytics/sql-data-warehouse/design-guidance-for-replicated-tables#rebuild-a-replicated-table-after-a-batch-load) after DML operations.
 - If there are frequent DML operations, change the distribution of the table to `ROUND_ROBIN`.
-
+<br/><br/>
 </details>
 
-<details><summary id="mismatched-data-type-size"><b>Mismatched data type/size</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="mismatched-data-type-size">Mismatched data type/size</summary>
 
 When joining tables, make sure that the data type and size of the joining columns match. Otherwise, it will result in unnecessary data movements that will decrease the availability of CPU, IO, and network traffic to the remainder of the workload.
 
 **Mitigations**
 
 Rebuild the tables to correct the related table columns that don't have identical data type and size.
-
+<br/><br/>
 </details>
 
-<details><summary id="ad-hoc-external-table-queries"><b>Ad hoc external table queries</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="ad-hoc-external-table-queries">Ad hoc external table queries</summary>
 
 Queries against external tables are designed with the intention of bulk loading data into the dedicated SQL pool. Ad hoc queries against external tables may suffer variable durations due to external factors, such as concurrent storage container activities.
 
 **Mitigations**
 
 [Load data into the dedicated SQL pool first](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#load-then-query-external-tables) and then query the loaded data.
-
+<br/><br/>
 </details>
 
-<details><summary id="data-skew-stored"><b>Data skew (stored)</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="data-skew-stored">Data skew (stored)</summary>
 
 Data skew means the data isn't distributed evenly across the distributions. Each step of the distributed plan requires all distributions to complete before moving to the next step. When your data is skewed, the full potential of the processing resources, such as CPU and IO, can't be achieved, resulting in slower execution times.
 
 **Mitigations**
 
 Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column.
-
+<br/><br/>
 </details>
 
-<details><summary id="in-flight-data-skew"><b>In-flight data skew</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;" id="in-flight-data-skew">In-flight data skew</summary>
 
 In-flight data skew is a variant of the [data skew (stored)](#data-skew-stored) issue. But, it's not the distribution of data on disk that is skewed. The nature of the distributed plan for particular filters or grouped data causes a `ShuffleMoveOperation` type operation. This operation produces a skewed output to be consumed downstream.
 
@@ -369,8 +370,9 @@ If none of the above common issues apply to your query, the [Step 3](#step-3-rev
 1. Identify the `wait_type` in [Step 3](#step-3-review-step-details) that is taking the most time.
 1. Locate the wait type in [wait categories mapping table](/sql/relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql#wait-categories-mapping-table) and identify the wait category it included in.
 1. Expand the section related to the wait category from the following list for recommended mitigations.
+<br/><br/>
 
-<details><summary><b>Compilation</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">Compilation</summary>
 
 Follow these steps to mitigate wait type issues of the Compilation category:
 
@@ -396,17 +398,17 @@ If the issue persists, then:
 
     **Note:** Each step of the distributed plan will typically have recorded 60 distribution-level execution plans. Make sure that you're preparing and comparing execution plans from the same distributed plan step.
 1. The [Step 3](#step-3-review-step-details) query frequently reveals a few distributions that take much longer than others. In [SQL Server Management Studio](/sql/ssms/download-sql-server-management-studio-ssms), compare the distribution-level execution plans (from the _.sqlplan_ files created) of a long-running distribution to a fast-running distribution to analyze potential causes for differences.
-
+<br/><br/>
 </details>
 
-<details><summary><b>Lock, Worker Thread</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">Lock, Worker Thread</summary>
 
 - Consider changing tables that undergo frequent, small changes to utilize a row store index instead of CCI.
 - Batch up your changes and update the target with more rows on a less frequent basis.
-
+<br/><br/>
 </details>
 
-<details><summary><b>Buffer IO, Other Disk IO, Tran Log IO</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">Buffer IO, Other Disk IO, Tran Log IO</summary>
 
 **Unhealthy CCIs**
 
@@ -427,10 +429,10 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 
 - Utilizing a larger [resource class](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management) for your queries.
 - [Increase compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal).
-
+<br/><br/>
 </details>
 
-<details><summary><b>CPU, Parallelism</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">CPU, Parallelism</summary>
 
 | Scenario | Mitigation |
 |----------|------------|
@@ -438,10 +440,10 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 | User queries contain transformations | Move all formatting and other transformation logic into ETL processes so the formatted versions are stored |
 | Workload improperly prioritized | Implement [workload isolation](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-isolation) |
 | Insufficient DWU for workload | Consider [increasing compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal) |
-
+<br/><br/>
 </details>
 
-<details><summary><b>Network IO</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">Network IO</summary>
 
 If the issue occurs during a `RETURN` operation in [Step 2](#step-2-determine-where-the-query-is-taking-time),
 
@@ -452,11 +454,11 @@ For all other data movement operations, it's probable that the network issues ap
 
 1. Scale your dedicated SQL pool to DW100c
 1. Scale back to your desired DWU level
-
+<br/><br/>
 </details>
 
-<details><summary><b>SQL CLR</b></summary>
+<details><summary style="font-size:1.25rem;font-weight:600;">SQL CLR</summary>
 
 Avoid frequent use of the `FORMAT()` function by implementing an alternate way of transforming the data (for example, `CONVERT()` with style).
-
+<br/><br/>
 </details>
