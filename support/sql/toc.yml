@@ -445,6 +445,8 @@
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
+    - name: Troubleshoot SQL Server or database application is slow
+      href: performance/troubleshoot-entire-sqlserver-slow.md
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
