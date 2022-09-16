@@ -13,7 +13,7 @@ This article provides a solution for an issue where HPC Management Service fails
 
 ## Symptoms
 
-After you restore a corrupted HPC management database, HPC management service fails to initialize. When you reboot the computer multiple times, all other services are in running status. However, HPC Management Service still doesn't start.
+After you restore a corrupted HPC management database, HPC Management Service fails to initialize. When you reboot the computer multiple times, all other services are in running status. However, HPC Management Service still doesn't start.
 
 The following error is shown in HPC Management event logs.
 
@@ -25,20 +25,52 @@ Check HPC Management event logs:
 
 :::image type="content" source="media/hpc-management-service-not-start/instancecacheloadexception.png" alt-text="Screenshot that shows HPC Management event logs.":::
 
-HPC Management Service crashed with "InstanceCacheLoadException". The instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, 2), but in your HPCManagement  database, there are tens of instances with 2 or 3 version in "Current" state.
+HPC Management Service crashed with "InstanceCacheLoadException". The instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, 2), but in your HPCManagement  database, there are tens of instances with two or three versions in "Current" state.
 
 ## Resolution
 
-To resolve the issue, run the PowerShell script [FixInstanceErrorState.ps1](https://microsoft-my.sharepoint.com/:t:/p/zanawab/ERUPyvekYd1BhWCjAZt-8r0BBvLxbDYDjvCeTJUMjllgaw?e=hpo1Lc). To do this, follow these steps:
+To resolve the issue, fix the instances in wrong state. To do this, follow these steps:
 
-1. Run PowerShell as an Administrator.
+1. Create a text file with a .ps1 extension.
 
-2. Run the following command:
+2. Copy the following PowerShell script and and paste it to the .ps1 file.
 
     ```powershell
-    .\FixInstanceErrorState.ps1 -ServerInstance SQLserver -Database HpcManagement
+    param (
+        [Parameter(Mandatory=$true)]
+        [string] $ServerInstance,
+
+        [Parameter(Mandatory=$false)]
+        [string] $Database = "HpcManagement"
+    )
+
+    $dupInstances = Invoke-Sqlcmd -ServerInstance $ServerInstance -Database $Database -Query "SELECT instanceId, count(*) as Number FROM Instances where instanceState = 2 group by instanceId having count(*) > 1"
+    $instanceIds = $dupInstances.instanceId
+    $idsString = $instanceIds -join "','"
+    $instanceEntries = Invoke-Sqlcmd -ServerInstance $ServerInstance -Database $Database -Query "SELECT * FROM Instances Where instanceId IN ('$idsString') and instanceState = 2"
+    $sortedEntries = $instanceEntries | Sort-Object -Property @{Expression="instanceId"; Descending=$true},@{Expression="instanceVersion"; Descending=$true}
+    $idMap = @{}
+    foreach($entry in $sortedEntries)
+    {
+        if($idMap[$entry.instanceId])
+        {
+            Invoke-Sqlcmd -ServerInstance $ServerInstance -Database $Database -Query "Update Instances set instanceState = 3 where instanceId = '$($entry.instanceId)' and instanceVersion = $($entry.instanceVersion)"
+        }
+        else
+        {
+            $idMap[$entry.instanceId] = $true
+        }
+    }
     ```
 
-3. Restart the HPC SDM and HPC Management service.
+3. Run PowerShell as an Administrator.
+
+4. Run the following command:
+
+    ```powershell
+    .\<filename>.ps1 -ServerInstance SQLserver -Database HpcManagement
+    ```
+
+5. Restart the HPC SDM Store Service and HPC Management Service.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
