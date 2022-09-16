@@ -23,7 +23,7 @@ In this scenario, a user can't receive files from unmanaged apps. For example, f
 
 - Check the settings for **Open data into org documents** select *Allow users to open data from selected services* to restrict the data source you block or allow.
 
-    :::image type="content" source="media/data-transfer-scenarios/open-data-from-services.png" alt-text="Dropdown options for 'Allow users to open data from selected services' in the admin center.":::
+    :::image type="content" source="media/data-transfer-scenarios/open-data-from-services-options.png" alt-text="Dropdown options for 'Allow users to open data from selected services' in the admin center.":::
 
 ## User needs to transfer corporate data to unmanaged apps
 
@@ -36,6 +36,7 @@ In this scenario, a user needs to transfer files to unmanaged apps even though y
 ## Users cannot save corporate files to local storage
 
 In this scenario, a user can't save files to local storage. Typically, this occurs because either (or both) of the settings below are configured.
+
 - **Send org data to other apps** is set to *None* in app protection policies.
 - The **Allow user to save copies to selected services** is not set to *local storage* in app protection policies.
 
@@ -72,8 +73,8 @@ On Android work profile and fully managed devices, there are some considerations
 If the Microsoft Edge app is not installed on your device, clicking on URLs from policy managed apps won’t work. In the case of Android Enterprise WorkProfile scenarios, the app needs to be installed in the WorkProfile region on the device. If the Microsoft Edge app is not present, you will see an error message indicating your organization requires the application to view the link.
 
 - iOS/iPadOS
-PLACEHOLDER FOR IMAGE
-Alt text: The Microsoft Edge Required error message that displays on iOS devices when clicking URLs from policy managed apps.
+
+:::image type="content" source="media/data-transfer-scenarios/MS-Edge-required-message-iOS.png" alt-text="The Microsoft Edge Required error message that displays on iOS devices when clicking URLs from policy managed apps.":::
+
 - Android
-PLACEHOLDER FOR IMAGE
-Alt text: The Get Microsoft Edge error message that displays on Android devices when clicking URLs from policy managed apps.
+:::image type="content" source="media/data-transfer-scenarios/MS-Edge-required-message-Android.png" alt-text="The Get Microsoft Edge error message that displays on Android devices when clicking URLs from policy managed apps.":::
