@@ -15,7 +15,7 @@ When you run queries against a SQL Server instance or a particular application, 
 
 ## Step 1: Troubleshoot the application issues
 
-Check the application layer. Take a query from the application and run it manually on a SQL Server instance and see how it runs. Test several queries in this way. If queries are faster on the SQL Server instance, the problem could be on the application or application servers' layer.
+Check the application layer. Take a query from the application, run it manually on a SQL Server instance, and see how it runs. Test several queries this way. If queries are faster on the SQL Server instance, the problem could be on the application or application servers' layer.
 
 > [!NOTE]
 > Be mindful of the [query performance differences between database application and SSMS](/troubleshoot/sql/performance/troubleshoot-application-slow-ssms-fast).
@@ -24,19 +24,19 @@ If the application is running on a different server, check the performance of th
 
 ## Step 2: Troubleshoot the OS issues
 
-Check if the operating system where SQL Server is running is slow in its response. For example, the mouse moves slowly, and windows don't respond for long periods of time.  
+Check if the operating system where SQL Server is running is slow in its response. For example, the mouse moves slowly, and windows don't respond for long periods.  
 
-Common issues include [High CPU across all CPUs](#high-cpu-across-all-cpus), [Low physical/virtual memory](#low-physicalvirtual-memory), and [Slow I/O](#slow-io):
+Common issues include [High CPU across all CPUs](#high-cpu-across-all-cpus), [Low physical/virtual memory](#low-physicalvirtual-memory), and [Slow I/O](#slow-io).
 
 ### High CPU across all CPUs
 
 This issue could be caused by other applications, the OS, or drivers running on the system.
 
-To troubleshoot this issue, use Task Manager, Performance Monitor or Resource Monitor to identify this issue. For more information, see [High CPU usage troubleshooting guidance](/troubleshoot/windows-server/performance/troubleshoot-high-cpu-usage-guidance).
+To troubleshoot this issue, use Task Manager, Performance Monitor, or Resource Monitor to identify this issue. For more information, see [High CPU usage troubleshooting guidance](/troubleshoot/windows-server/performance/troubleshoot-high-cpu-usage-guidance).
 
 ### Low physical/virtual memory
 
-This issue could be caused by applications, drivers, or OS consuming entire memory. Use the following methods to troubleshoot this issue:
+This issue could be caused by applications, drivers, or OS consuming the entire memory. Use the following methods to troubleshoot this issue:
 
 - Check the Application event log for errors like "Your system is low on virtual memory".
 - Open **Task manager**, select **Performance** > **Memory** to check for memory being consumed entirely.
@@ -55,19 +55,19 @@ Local drives are overwhelmed with I/O beyond their capacity. Use the following m
   - **Logical Disk\Disk Bytes/Sec**
   - **Logical Disk\Avg. Disk sec/Transfer**
 
-- Caused by another service/app - perfmon
+- Caused by another service/app - perfmon.
 - Check if a Power Plan configuration is causing CPU underperformance. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
 ## Step 3: Troubleshoot the network issues
 
-The problem could be in the network layer causing slow communication between application and SQL Server. Use the following methods to troubleshoot this issue:
+The problem could be in the network layer, causing slow communication between the application and SQL Server. Use the following methods to troubleshoot this issue:
 
 - One symptom of that could be ASYNC_NETWORK_IO waits on the SQL Server side. For more information, see [Troubleshoot ASYNC_NETWORK_IO waits](/troubleshoot/sql/performance/troubleshoot-query-async-network-io).
-- Work with your network administrator to check for network issues (firewall, routing, etc.).
-- Collect a Network trace and check for network reset and retransmit events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).
-- Enable Perfmon counters to check network performance at the network interface level (NIC). There should be zero discarded and error packets. Check the network interface bandwidth:
+- Work with your network administrator to check for network issues (firewall, routing, and so on).
+- Collect a Network trace and check for a network reset and retransmit events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).
+- Enable Perfmon counters to check network performance at the network interface level (NIC). There should be zero discarded packets and error packets. Check the network interface bandwidth:
 
   - **Network Interface\Packets Received Discarded**
   - **Network Interface\Packets Received Errors**
@@ -80,24 +80,24 @@ The problem could be in the network layer causing slow communication between app
 
 If CPU-intensive queries are being executed on the system, they can cause other queries to be starved of CPU capacity. More frequently, however, high-CPU coming from queries can be an indication that queries need to be optimized. Follow these steps to approach the issue:
 
-1. First, found out if SQL Server is causing high CPU usage (using Perfmon counters)
-1. Identify queries contributing to CPU usage
-1. Update statistics
-1. Add missing indexes
-1. Investigate and resolve parameter-sensitive issues
-1. Investigate and resolve SARGability issues
-1. Disable heavy tracing
-1. Fix `SOS_CACHESTORE` spinlock contention
-1. Configure your virtual machine
-1. Scale up system by adding more CPUs
+1. First, find out if SQL Server is causing high CPU usage (using Perfmon counters).
+1. Identify queries contributing to CPU usage.
+1. Update statistics.
+1. Add missing indexes.
+1. Investigate and resolve parameter-sensitive issues.
+1. Investigate and resolve SARGability issues.
+1. Disable heavy tracing.
+1. Fix `SOS_CACHESTORE` spinlock contention.
+1. Configure your virtual machine.
+1. Scale up the system by adding more CPUs.
 
 For detailed troubleshooting steps, see [Troubleshoot high-CPU-usage issues in SQL Server](/sql/performance/troubleshoot-high-cpu-usage-issues).
 
 ## Step 5: Troubleshoot excessive I/O causing slowness in SQL Server
 
-Another common reason for perceived overall slowness of SQL Server workloads is I/O issues. I/O slowness can impact most or all queries on the system.
+Another common reason for the perceived overall slowness of SQL Server workloads is I/O issues. I/O slowness can impact most or all queries on the system.
 
-- Check for Hardware issues:
+- Check for hardware issues:
 
   - SAN misconfiguration (switch, cables, HBA, storage)
   - Exceeded I/O capacity (unbalanced throughout the entire SAN network, not just back-end storage, check I/O throughput of all servers sharing the SAN)
@@ -105,17 +105,17 @@ Another common reason for perceived overall slowness of SQL Server workloads is 
 
 - Check for suboptimal SQL Server queries that are causing lots of I/O and saturating disk volumes with I/O requests.
 
-  - Find the queries that are causing a high number of logical reads (or writes) and tune those queries to minimize disk I/O-using appropriate indexes is the first step to do that
+  - Find the queries that are causing a high number of logical reads (or writes) and tune those queries to minimize disk I/O—using appropriate indexes is the first step.
   - Keep statistics updated as they provide the query optimizer with sufficient information to choose the best plan.
   - Redesigning queries and sometimes tables may help with improved I/O.
 
 - Filter drivers: The SQL Server I/O response can be severely impacted if file-system filter drivers process heavy I/O traffic.
 
-  - Exclude data folders from anti-virus scanning and have filter driver issues be corrected by software vendors to prevent the impact on I/O performance.
+  - Exclude data folders from anti-virus scanning and have filter driver issues corrected by software vendors to prevent the impact on I/O performance.
 
-- Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This issue can be caused by other applications running on other machines but sharing the same SAN with this SQL Server machine. Work with your SAN administrator to balance I/O traffic (see check for hardware issues above).
+- Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This issue can be caused by other applications running on other machines but sharing the same SAN with this SQL Server machine. Work with your SAN administrator to balance I/O traffic (see "Check for hardware issues" above).
   
-For detailed troubleshooting of I/O related issue with SQL Server, see [Troubleshoot slow SQL Server performance caused by I/O issues](/sql/performance/troubleshoot-sql-io-performance).
+For detailed troubleshooting of I/O-related issues with SQL Server, see [Troubleshoot slow SQL Server performance caused by I/O issues](/sql/performance/troubleshoot-sql-io-performance).
   
 ## Step 6: Troubleshoot memory issues
 
@@ -135,23 +135,23 @@ For detailed troubleshooting steps, see [Troubleshoot an out of memory or low me
 
 ## Step 7: Troubleshoot blocking issues
 
-Lock acquisition is used to protect resources in a database system. If locks are acquired for a long time and other sessions end up waiting for those locks, you're faced with a blocking scenario.
+Lock acquisition is used to protect resources in a database system. If locks are acquired for a long time, and other sessions end up waiting for those locks, you're faced with a blocking scenario.
 
-Short blocking happens on database systems like SQL Server all the time. But prolonged blocking and especially one where most or all queries are waiting for a lock may result in entire server being perceived as not responding.
+Short blocking happens on database systems like SQL Server all the time. But prolonged blocking, especially when most or all queries are waiting for a lock, may result in the entire server being perceived as not responding.
 
 Use the following methods to troubleshoot the issue:
 
-- Identify the head blocking session by looking at `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or BlkBy column in `sp_who2` stored procedure output
-- Then find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period)
-- If no queries are actively running on the head blocking session, then there could have been an orphaned transaction due to application issues
-- Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction
-- Examine the transaction isolation used in the query and adjust
+- Identify the head blocking session by looking at `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or BlkBy column in `sp_who2` stored procedure output.
+- Then, find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period).
+- If no queries are actively running on the head blocking session, then there could have been an orphaned transaction due to application issues.
+- Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
+- Examine the transaction isolation used in the query and adjust.
 
 For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](/sql/performance/understand-resolve-blocking#detailed-blocking-scenarios).
 
 ## Step 8: Troubleshoot scheduler issues (non-yielding, deadlocked scheduler, non-yielding IOCP listener, resource monitor)
 
-SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, etc. As a result, SQL Server may seem unresponsive, partially or completely depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems from product bugs, to external drivers or filter drivers, to hardware issues.
+SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, and so on. As a result, SQL Server may seem unresponsive, partially or completely, depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems, from product bugs, to external drivers or filter drivers, to hardware issues.
 
 Follow these steps to troubleshoot these issues:
 
@@ -197,7 +197,7 @@ Follow these steps to troubleshoot these issues:
 
 1. Check for heavy blocking scenarios or massive parallelism queries that can lead to deadlock schedulers. For detailed information, see [The Tao of a Deadlocked Scheduler](https://techcommunity.microsoft.com/t5/sql-server-support-blog/the-tao-of-a-deadlock-scheduler-in-sql-server/ba-p/333991).
 
-1. For non-yielding IOCP listener, check if your system is low on memory and SQL Server is being paged out. Another reason could be anti-virus or intrusion prevention software intercepts I/O API calls and slows the thread activity down. For more information, see [Is the IOCP listener actually listening?](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) and [Performance and consistency issues when certain modules or filter drivers are loaded](performance-consistency-issues-filter-drivers-modules.md).
+1. For a non-yielding IOCP listener, check if your system is low on memory and SQL Server is being paged out. Another reason could be anti-virus or intrusion prevention software intercepts I/O API calls and slows the thread activity down. For more information, see [Is the IOCP listener actually listening?](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) and [Performance and consistency issues when certain modules or filter drivers are loaded](performance-consistency-issues-filter-drivers-modules.md).
 
 1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information [Resource Monitor enters a non-yielding condition on a server running SQL Server](resource-monitor-nonyielding-condition.md).
 
