@@ -328,7 +328,7 @@ Before you complete your support request, we recommend that you use the Windows 
 
    > [!TIP]
    >
-   > use one of the below commands if you troubleshoot a particular user or computer missing settings:
+   > Use one of the below commands if you troubleshoot a particular user or computer missing settings:
    >
    > - `Gpupdate /force /target:computer`
    > - `Gpupdate /force /target:user`
