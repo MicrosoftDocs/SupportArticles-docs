@@ -29,9 +29,7 @@ Checkpoints that you can view in Hyper-V Manager are the simplest to handle. Usu
 
 :::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/delete-checkpoint.png" alt-text="Screenshot of a checkpoint in Hyper-V Manager in which the context menu includes the Delete Checkpoint command.":::
 
-In some cases, **Delete Checkpoint** doesn't appear on the context menu. This can occur if third-party backup software generates checkpoints but doesn't delete them after a backup operation.
-
-:::image type="content" source="./media/merge-checkpoints-with-many-differencing-disks/checkpoint-menu-delete-missing.png" alt-text="Screenshot of a checkpoint in Hyper-V Manager in which the context menu doesn't include the Delete Checkpoint command.":::
+In some cases, **Delete Checkpoint** and **Delete Checkpoint Subtree** don't appear on the context menu. This can occur if third-party backup software generates checkpoints but doesn't delete them after a backup operation.
 
 In these cases, you can still use the Delete key to delete the checkpoint.
 
