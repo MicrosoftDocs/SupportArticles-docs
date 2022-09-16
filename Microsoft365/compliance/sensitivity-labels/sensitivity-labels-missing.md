@@ -65,7 +65,7 @@ To resolve this issue, use one or more of the following methods:
 
 ## Outlook on the web
 
-This issue occurs if the sensitivity labels are configured incorrectly. You can investigate this issue by using a [Fiddler or network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) while you reproduce the issue. Here’s an example of a Fiddler response. In the response, check whether the label policies are retrieved from the server.
+This issue occurs if the sensitivity labels are configured incorrectly. You can investigate this issue by using a [Fiddler or network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) while you reproduce the issue. Here's an example of a Fiddler response. In the response, check whether the label policies are retrieved from the server.
 
 :::image type="content" source="media/sensitivity-labels-missing/fiddler-trace-sample.png" alt-text="Screenshot of an example of a Fiddler response in which the label information is highlighted.":::
 
@@ -74,7 +74,7 @@ This issue occurs if the sensitivity labels are configured incorrectly. You can 
 Run the following cmdlets to check the sensitivity label configuration:
 
 - ```powershell
-  Get-label -identity “Label_name” | fl
+  Get-label -identity "Label_name" | fl
   ```
 
   In the output, verify that the following properties are configured correctly:
@@ -110,7 +110,7 @@ This issue occurs for one or more of the following reasons:
 - There's no valid subscription to the Office edition.
 - Office file types aren't supported.
 - Office built-in labeling is turned off through Group Policy.
-- The licenses aren’t assigned to the affected users.
+- The licenses aren't assigned to the affected users.
 
 ### Resolution
 
