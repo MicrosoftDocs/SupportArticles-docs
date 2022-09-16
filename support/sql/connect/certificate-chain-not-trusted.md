@@ -12,9 +12,7 @@ ms.prod: sql
 
 Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver16&preserve-view=true) and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true)). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server.
 
-## Error messages
-
-# [Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#tab/Upgraded to Microsoft OLE DB Driver 19 for SQL Server)
+## [Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#tab/upgraded-to-microsoft-ole-db-driver 19)
 
 If you recently upgraded your SQL Server Native Client 11.0 (Provider=SQLNCLI11) application to use Microsoft OLE DB Driver 19 for SQL Server (Provider=MSOLEDBSQL19), you might receive error messages that resemble the following messages:
 
@@ -34,8 +32,6 @@ The error occurs because of a change in the default behavior of the client drive
 
 `The certificate chain was issued by an authority that is not trusted`
 
-For scenario 1, use one of the following solutions:
-
 - **Solution 1:** Use Microsoft OLE DB Driver for SQL Server 18.x. You can download the driver from [Release notes for the Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/release-notes-for-oledb-driver-for-sql-server?view=sql-server-ver16&preserve-view=true).
 
 - **Solution 2:** If the application connection string property already specifies a value of **Yes** or **Mandatory** for the **Encrypt/Use Encryption for Data setting**, change the value to **No** or **Optional**. For example, **Use Encryption for Data=Optional**. If the connection string doesn't specify any value for **Encrypt/Use Encryption for Data**, add **Use Encryption for Data=Optional** to the connection string. For more information, see [Encryption and certificate validation](/sql/connect/oledb/features/encryption-and-certificate-validation?view=sql-server-ver16&preserve-view=true).
@@ -49,7 +45,7 @@ If you recently upgraded your SQL Server Native Client 11.0 (Driver={SQL Server 
 
 > [Microsoft][ODBC Driver 18 for SQL Server]Client unable to establish connection
 
-## Resolutions
+
 
 
 
