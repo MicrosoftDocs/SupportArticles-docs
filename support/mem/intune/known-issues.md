@@ -11,13 +11,13 @@ This page lists recent known issues with Microsoft Intune. For a list of weekly 
 ## Remediation message doesn't list all valid builds in Company Portal for Windows 10/11
 
 **Status:** Active
-**Blog Post:** [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
+**Blog Post:** [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
 
 We are aware of an issue with the noncompliance messaging details that appear in Company Portal for Windows 10/11 devices. When a device is identified as noncompliant due to having a Windows build outside the ranges an admin specifies in the Intune compliance policy, a remediation message is displayed in the Company Portal indicating the operating system (OS) needs updating along with a valid range of OS versions. However, when multiple OS ranges are specified in the policy by configuring the [**Valid operating system builds**](/mem/intune/protect/compliance-policy-create-windows#device-properties) compliance setting, the message in the Company Portal will only display the first OS build range rather than all acceptable ranges.
 
 The compliance policy is being enforced correctly despite the missing ranges in the remediation messaging. To make the device compliant, update the device OS build to a version within the specified acceptable range in the compliance policy.
 
-For more information about this known issue, see our blog [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
+For more information about this known issue, see our blog [Remediation message doesn't list all valid builds in Company Portal for Windows 10/11](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-remediation-message-doesn-t-list-all-valid-builds-in/ba-p/3622082)
 
 ## A limited number of macOS devices may be unexpectedly unenrolled from the Microsoft Intune service
 
