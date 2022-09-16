@@ -197,7 +197,8 @@ Concurrency Compilation blocks rarely occur. However, if you encounter this type
 **Mitigations**
 
 Reduce the number of queries submitted concurrently.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="blocked-resource-allocation"><b>Blocked: resource allocation</b></summary>
@@ -240,7 +241,8 @@ For execution time efficiencies, the `DROP TABLE` and `TRUNCATE TABLE` statement
 **Mitigations**
 
 Identify a maintenance window, stop all workloads, and run [DBCC SHRINKDATABASE](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql) to force an immediate cleanup of previously dropped or truncated tables.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="unhealthy-ccis-generally"><b>Unhealthy CCIs (generally)</b></summary>
@@ -250,7 +252,8 @@ Poor clustered columnstore index (CCI) health requires extra metadata, which can
 **Mitigations**
 
 [Rebuild clustered columnstore indexes](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-memory-optimizations-for-columnstore-compression).
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="delay-from-auto-create-statistics"><b>Delay from auto-create statistics</b></summary>
@@ -260,7 +263,8 @@ The [automatic create statistics option](/azure/synapse-analytics/sql/develop-ta
 **Mitigations**
 
 If the first execution of query consistently requires statistics to be created, you'll need to [manually create statistics](/azure/synapse-analytics/sql/develop-tables-statistics#examples-create-statistics) prior to the execution of the query.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="auto-create-statistics-timeouts"><b>Auto-create statistics timeouts</b></summary>
@@ -305,7 +309,8 @@ Have your statistics up-to-date to ensure that the query optimizer generates an 
 **Mitigations**
 
 [Create/Update statistics](/azure/synapse-analytics/sql/develop-tables-statistics#update-statistics).
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="uncached-replicated-tables"><b>Uncached replicated tables</b></summary>
@@ -326,7 +331,8 @@ When joining tables, make sure that the data type and size of the joining column
 **Mitigations**
 
 Rebuild the tables to correct the related table columns that don't have identical data type and size.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="ad-hoc-external-table-queries"><b>Ad hoc external table queries</b></summary>
@@ -336,7 +342,8 @@ Queries against external tables are designed with the intention of bulk loading 
 **Mitigations**
 
 [Load data into the dedicated SQL pool first](/azure/synapse-analytics/sql/best-practices-dedicated-sql-pool#load-then-query-external-tables) and then query the loaded data.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="data-skew-stored"><b>Data skew (stored)</b></summary>
@@ -346,7 +353,8 @@ Data skew means the data isn't distributed evenly across the distributions. Each
 **Mitigations**
 
 Review our [guidance for distributed tables](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-distribute) to assist your choice of a more appropriate distribution column.
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary id="in-flight-data-skew"><b>In-flight data skew</b></summary>
@@ -438,7 +446,8 @@ Your overall workload may be reading large amounts of data. Synapse dedicated SQ
 | User queries contain transformations | Move all formatting and other transformation logic into ETL processes so the formatted versions are stored |
 | Workload improperly prioritized | Implement [workload isolation](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-workload-isolation) |
 | Insufficient DWU for workload | Consider [increasing compute resources](/azure/synapse-analytics/sql-data-warehouse/quickstart-scale-compute-portal) |
-<br/><br/>
+
+<br/>
 </details>
 
 <details><summary><b>Network IO</b></summary>
@@ -458,5 +467,6 @@ For all other data movement operations, it's probable that the network issues ap
 <details><summary><b>SQL CLR</b></summary>
 
 Avoid frequent use of the `FORMAT()` function by implementing an alternate way of transforming the data (for example, `CONVERT()` with style).
-<br/><br/>
+
+<br/>
 </details>
