@@ -72,8 +72,10 @@ To add a custom log to your application, follow these steps:
 
 1. Right-click the role project and select **Manage NuGet Packages**.
 2. Make sure that Microsoft.ApplicationInsights is installed.
-    :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package":::
-3. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
+
+    :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/install-package.png" alt-text="Screenshot shows the installed Microsoft ApplicationInsights package.":::
+
+1. Add the following code in the startup function of your role. The startup function of Web Role can normally be `Application_Start()` in Global.asax. For Worker Role, it can be `OnStart()` in WorkerRoleName.cs.
 
     ```csharp
     TelemetryConfiguration.Active.InstrumentationKey = RoleEnvironment.GetConfigurationSettingValue("APPINSIGHTS_INSTRUMENTATIONKEY"); 
@@ -272,19 +274,23 @@ To see the collected data, it's recommended to use the **Metrics** page of Appli
 Like Web Role, it's also possible to monitor the memory and request status of Worker Role, but there are some limitations:
 
 1. For Worker Role, the memory metrics data won't be automatically collected by default. To monitor the memory status, you need to enable the `\Memory\Available MBytes` from Performance Counters of Diagnostic setting. The collected data will be in the `custommetrics` table of the Logs page.
-   :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/enable-performance-counters.png" alt-text="Screenshot shows how to enable performance counters in Visual Studio":::
+
+   :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/enable-performance-counters.png" alt-text="Screenshot shows how to enable performance counters in Visual Studio.":::
+
 1. To view the metrics chart for the collected memory data, go to the **Metrics** page in Application Insights, select **Log-based metrics** in Metric Namespace, and **Available Memory** under **Performance** in Metric. The chart will display the Available Memory for the selected time range. The dotted line in the chart means that the data isn't accurate enough to generate the data, or the data is missing during that time range. From the Logs, the interval for collecting the Memory data is about three minutes. In the chart above, since the time range is set to Last hour, the time difference between every two points will be less than three minutes, so the collected data won't be accurate enough. Thus, it's a dotted line.
-    :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/view-memory-chart.png" alt-text="Screenshot shows how to memory chart in the Azure portal":::
+
+    :::image type="content" source="./media/troubleshoot-common-scenario-use-app-insights/view-memory-chart.png" alt-text="Screenshot shows how to memory chart in the Azure portal.":::
 
 ### Troubleshoot performance issues such as slow response time
 
 For example, when a Cloud Service Web Role receives a request, it needs to get some data from a remote server, such as SQL Database, then generate the data on a web page and return it to the user. Imagine that this progress is much slower than expected but still successful. It's reasonable that the user wants to clarify whether most of the time spent is during the communication with SQL Database or during the progress inside the Cloud Service. For that, it will need the user to add some extra custom logs to record the timestamp of each step, such as the start of the progress, the start of the communication with SQL Database, the end of the communication with SQL Database, and the end of generating the webpage, and so on.
 
 1. For both Worker Role and Web Role, it's recommended to save a trace log at each starting step in the process. For example, in the above example codes, it's possible to add a trace log at the following points when:
-    - the WebRole receives the request.
+
+    - The WebRole receives the request.
     - the WebRole starts to build communication with SQL server.
-    - the WebRole receives the data returned by SQL server and starts generating the webpage.
-    - the WebRole generates the webpage and returns it to user.
+    - The WebRole receives the data returned by SQL server and starts generating the webpage.
+    - The WebRole generates the webpage and returns it to user.
 
 1. If the main process is the application in Worker Role, record the functions of the Worker Role application as a request to add a custom correlation ID into the custom request record and exception record.
 
@@ -322,4 +328,4 @@ If the instances are having high CPU/Memory issues and the application is experi
  procdump.exe -accepteula -c 85 -s 3 -n 5 WaWorkerHost.exe c:\procdumps
 ```
 
-In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review this article.
+In the Diagnostic setting page of Cloud Service, you can also set the crash dump file auto-generation. For more details, review [this article](/visualstudio/azure/vs-azure-tools-diagnostics-for-cloud-services-and-virtual-machines?toc=%2Fazure%2Fcloud-services%2Ftoc.json&view=vs-2022#crash-dumps).
