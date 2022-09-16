@@ -213,6 +213,8 @@
     items:
     - name: Common Connection Issues
       href: connect/resolve-connectivity-errors-overview.md
+    - name: The certificate chain was issued by an authority that isn’t trusted
+      href: connect/certificate-chain-not-trusted.md
     - name: Pre-reqs for connectivity troubleshooting
       href: connect/resolve-connectivity-errors-checklist.md
     - name: Cannot generate SSPI context

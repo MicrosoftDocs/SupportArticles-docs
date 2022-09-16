@@ -5,7 +5,7 @@ summary: Troubleshooting articles for Azure
 metadata:
    ms.topic: hub-page
    services: service
-   ms.service: azure
+   ms.service: azure-common-issues-support
    ms.author: genlin
 
 productDirectory:

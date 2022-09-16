@@ -4,7 +4,7 @@ description: Describes an issue that User receives WebUI Oops error message in S
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.reviewer: 
 ---
 # StorSimple: User receives WebUI "Oops" error message
