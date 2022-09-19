@@ -555,17 +555,11 @@ Refer to "https://learn.microsoft.com/windows/desktop/Debug/system-error-codes" 
         "UpgradeEndTime":"\/Date(1559884909000-0700)\/",
         "UpgradeStartTime":"\/Date(1559881150000-0700)\/"
     },
-    "LogErrorLine":"2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[
-        gle=0x00000057
-    ]",
+    "LogErrorLine":"2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[gle=0x00000057]",
     "FailureData":[
         "\u000aError: SetupDiag reports Fatal Error.\u000aLast Setup Phase = Downlevel\u000aLast Setup Operation: Gather data, scope: EVERYTHING\u000aError: 0x00000057",
-        "LogEntry: 2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[
-            gle=0x00000057
-        ]",
-        "LogEntry: 2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[
-            gle=0x00000057
-        ]",
+        "LogEntry: 2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[gle=0x00000057]",
+        "LogEntry: 2019-06-06 21:47:11, Error                 SP     Error converting install time 5\/2\/2019 to structure[gle=0x00000057]",
         "\u000aRefer to \"https:\/\/learn.microsoft.com\/en-us\/windows\/desktop\/Debug\/system-error-codes\" for error information."
     ],
     "FailureDetails":"Err = 0x00000057, LastOperation = Gather data, scope: EVERYTHING, LastPhase = Downlevel",
