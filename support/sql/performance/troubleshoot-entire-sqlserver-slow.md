@@ -94,7 +94,7 @@ If CPU-intensive queries are being executed on the system, they can cause other 
 1. Configure your virtual machine.
 1. Scale up the system by adding more CPUs.
 
-For detailed troubleshooting steps, see [Troubleshoot high-CPU-usage issues in SQL Server](/sql/performance/troubleshoot-high-cpu-usage-issues).
+For detailed troubleshooting steps, see [Troubleshoot high-CPU-usage issues in SQL Server](troubleshoot-high-cpu-usage-issues.md).
 
 ## Step 5: Troubleshoot excessive I/O causing slowness in SQL Server
 
@@ -118,7 +118,7 @@ Another common reason for the perceived overall slowness of SQL Server workloads
 
 - Other application(s): Another application on the same machine with SQL Server can saturate the I/O path with excessive read or write requests. This situation may push the I/O subsystem beyond capacity limits and cause I/O slowness for SQL Server. Identify the application and tune it or move it elsewhere to eliminate its effect on the I/O stack. This issue can be caused by other applications running on other machines but sharing the same SAN with this SQL Server machine. Work with your SAN administrator to balance I/O traffic (see "Check for hardware issues" above).
   
-For detailed troubleshooting of I/O-related issues with SQL Server, see [Troubleshoot slow SQL Server performance caused by I/O issues](/sql/performance/troubleshoot-sql-io-performance).
+For detailed troubleshooting of I/O-related issues with SQL Server, see [Troubleshoot slow SQL Server performance caused by I/O issues](troubleshoot-sql-io-performance.md).
   
 ## Step 6: Troubleshoot memory issues
 
@@ -134,7 +134,7 @@ Low memory on the system overall or inside SQL Server can lead to slowness when 
 
 - Check the SQL Server error log for [701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error) errors.
 
-For detailed troubleshooting steps, see [Troubleshoot an out of memory or low memory issues in SQL Server](/sql/performance/troubleshoot-memory-issues).
+For detailed troubleshooting steps, see [Troubleshoot an out of memory or low memory issues in SQL Server](troubleshoot-memory-issues.md).
 
 ## Step 7: Troubleshoot blocking issues
 
@@ -152,7 +152,7 @@ Use the following steps to troubleshoot the issue:
 1. Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
 1. Examine the transaction isolation used in the query and adjust.
 
-For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](/sql/performance/understand-resolve-blocking#detailed-blocking-scenarios).
+For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](understand-resolve-blocking.md#detailed-blocking-scenarios).
 
 ## Step 8: Troubleshoot scheduler issues (non-yielding, deadlocked scheduler, non-yielding IOCP listener, resource monitor)
 
