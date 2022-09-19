@@ -85,6 +85,7 @@ We recommend that you add the following real-time protection exclusions to preve
 
 - *Client installation folder*\\*.sdf
 - *Client installation folder*\ServiceData
+- *Client installation folder*\ScriptStore
 - C:\Windows\CCMCache
 - C:\Windows\CCMSetup
 - *Client installation folder*\Logs

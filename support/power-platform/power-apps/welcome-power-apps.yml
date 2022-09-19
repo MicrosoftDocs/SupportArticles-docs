@@ -14,7 +14,6 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
-
   # Card
   - title: Troubleshoot common Power Apps issues
     linkLists:
@@ -24,6 +23,12 @@ landingContent:
             url: best-practices-when-updating-a-flow.md
           - text: Common issues and resolutions for Power Apps
             url: common-issues-and-resolutions.md
+          - text: General Power Apps debugging strategies
+            url: isolate-common-issues.md
+          - text: Isolate issues in canvas apps
+            url: isolate-canvas-app-issues.md
+          - text: Isolate issues in model-driven app
+            url: isolate-model-app-issues.md
           - text: Troubleshoot startup issues for Power Apps
             url: troubleshooting-startup-issues.md
           - text: Troubleshoot Power Query issues
@@ -40,7 +45,17 @@ landingContent:
             url: regenerate-ribbon-metadata.md
 
   # Card
-  - title: Contact Microsoft support
+  - title: Documentation and training
+    linkLists:
+      - linkListType: reference
+        links:
+          - text: Power Apps documentation
+            url: /power-apps/
+          - text: Power Apps training
+            url: /learn/powerplatform/power-apps
+
+  # Card
+  - title: Support Resources
     linkLists:
       - linkListType: reference
         links:
@@ -50,13 +65,3 @@ landingContent:
             url: https://powerusers.microsoft.com/t5/Forums/ct-p/PA_Comm_Forums
           - text: Power Apps Ideas forum
             url: https://powerusers.microsoft.com/t5/Power-Apps-Ideas/idb-p/PowerAppsIdeas
-            
-  # Card
-  - title: Documentation and training
-    linkLists:
-      - linkListType: reference
-        links:
-          - text: Power Apps documentation
-            url: /power-apps/
-          - text: Power Apps training
-            url: /learn/powerplatform/power-apps

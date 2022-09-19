@@ -1,7 +1,7 @@
 ---
 title: Fix time-out errors caused by a custom NSG that blocks traffic
 description: Troubleshoot time-out errors that occur because a custom network security group (NSG) blocks traffic to an app hosted on an Azure Kubernetes Service cluster.
-ms.date: 4/18/2022
+ms.date: 8/23/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
@@ -77,7 +77,7 @@ $ kubectl get pods -o wide  # Get the pod IP address.
 NAME                             READY   STATUS    RESTARTS   AGE     IP            NODE                                
 my-deployment-66648877fc-v78jm   1/1     Running   0          7m45s   172.25.0.93   aks-agentpool-42617579-vmss000000  
 
-$ kubectl run -it --rm aks-ssh --image=debian  # Launch the test pod.
+$ kubectl run -it --rm aks-ssh --image=debian:stable  # Launch the test pod.
 If you don't see a command prompt, try pressing enter.
 $ root@aks-ssh:
 

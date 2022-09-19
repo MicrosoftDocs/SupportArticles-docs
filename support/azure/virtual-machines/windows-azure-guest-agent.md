@@ -108,7 +108,7 @@ The Azure VM Agent has an auto-update feature. It will automatically check for n
     msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
-    Then check whether the **Guest Agent Services** starts correctly.
+    Then check whether the **Windows Azure Guest Agent** service starts correctly.
 
     In rare cases in which Guest Agent doesn't install correctly, you can [Install the VM agent offline](./install-vm-agent-offline.md).
 

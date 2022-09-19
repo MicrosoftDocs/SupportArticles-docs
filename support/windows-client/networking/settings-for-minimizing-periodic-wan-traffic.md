@@ -150,8 +150,9 @@ Entry: SyncIntervalInSeconds
 Type: DWORD  
 Default value (seconds): 3,600 (1 hour)
 
-Also review the following Microsoft Docs topic on DFS volume settings:
- [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
+Also review the following technical article on DFS volume settings:
+
+- [Change the amount of time that clients cache referrals](/windows-server/storage/dfs-namespaces/change-the-amount-of-time-that-clients-cache-referrals)
 
 ### The Knowledge Consistency Checker (KCC) replication topology update
 

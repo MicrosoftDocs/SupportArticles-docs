@@ -77,7 +77,7 @@ To switch a Terminal Services server into Execute mode, follow these steps:
 2. In the **Open** box, type cmd, and then click **OK**.
 
 3. At the command prompt, type `change user /execute`, and then press ENTER. The following message appears:  
-User session is ready to install applications.
+User session is ready to execute applications.
 
 4. Type exit, and then press ENTER.
 

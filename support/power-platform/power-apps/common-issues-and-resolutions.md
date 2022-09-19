@@ -5,7 +5,6 @@ author: KumarVivek
 ms.custom: canvas
 ms.reviewer: tapanm
 ms.date: 04/11/2022
-ms.subservice: troubleshoot
 ms.author: kvivek
 search.audienceType: 
   - maker

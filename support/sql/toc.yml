@@ -213,6 +213,8 @@
     items:
     - name: Common Connection Issues
       href: connect/resolve-connectivity-errors-overview.md
+    - name: The certificate chain was issued by an authority that isn’t trusted
+      href: connect/certificate-chain-not-trusted.md
     - name: Pre-reqs for connectivity troubleshooting
       href: connect/resolve-connectivity-errors-checklist.md
     - name: Cannot generate SSPI context
@@ -323,6 +325,8 @@
       href: install/understanding-dotnet-framework-requirements.md
     - name: Attempted to perform an unauthorized operation error
       href: install/error-set-up-update-instances.md
+    - name: Cannot install on Windows case-sensitive servers
+      href: install/sql-server-not-supported-in-windows-os-where-case-sensitivity-enabled.md
     - name: Description of the Update Cache folder
       href: install/description-update-cache-folder.md
     - name: Different errors when installing SQL Server 2008 R2
@@ -381,10 +385,46 @@
       href: machine-learning/inconsistent-results-mkl-computations-missing-variable.md
   - name: Performance
     items:
-    - name: Blocked column is populated for latch waits
-      href: performance/blocked-column-populated-latch-waits.md
+    - name: Troubleshoot slow-running queries
+      href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot high-CPU-usage issues
+      href: performance/troubleshoot-high-cpu-usage-issues.md
+    - name: Troubleshoot SQL Server slow performance caused by IO
+      href: performance/troubleshoot-sql-io-performance.md
+    - name: Troubleshoot query time-out errors
+      href: performance/troubleshoot-query-timeouts.md
+    - name: Different query performance between two SQL Servers
+      href: performance/troubleshoot-query-perf-between-servers.md
+    - name: Slower query in database application than in SSMS
+      href: performance/troubleshoot-application-slow-ssms-fast.md      
+    - name: Decreased query performance after upgrade
+      href: performance/decreased-query-perf-after-upgrade.md
+    - name: Understand and resolve blocking problems
+      href: performance/understand-resolve-blocking.md
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
+      href: performance/recommended-updates-configuration-options.md
+    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
+      href: performance/recommended-updates-configuration-workloads.md
+    - name: Resolve last-page insert PAGELATCH_EX contention
+      href: performance/resolve-pagelatch-ex-contention.md
+    - name: Troubleshoot out of memory issues in SQL Server
+      href: performance/troubleshoot-memory-issues.md
+    - name: Troubleshoot queries that seem to never end
+      href: performance/troubleshoot-never-ending-query.md
+    - name: Troubleshoot ASYNC_NETWORK_IO issues
+      href: performance/troubleshoot-query-async-network-io.md
     - name: Operations that trigger buffer pool scan may run slowly on large-memory computers
       href: performance/buffer-pool-scan-runs-slowly-large-memory-machines.md
+    - name: Reducing allocation contention in tempdb
+      href: performance/recommendations-reduce-allocation-contention.md
+    - name: Troubleshoot blocking caused by compile locks
+      href: performance/troubleshoot-blocking-caused-compile-locks.md
+    - name: Resolve blocking problems caused by lock escalation
+      href: performance/resolve-blocking-problems-caused-lock-escalation.md
+    - name: Blocked column is populated for latch waits
+      href: performance/blocked-column-populated-latch-waits.md
+    - name: Troubleshoot slow SSIS or ELT jobs query performance
+      href: performance/slow-query-performance-ssis-etl.md      
     - name: Decreased performance when using EFS to encrypt database files
       href: performance/decreased-performance-use-efs.md
     - name: Decreased performance when querying view across linked servers
@@ -399,46 +439,12 @@
       href: performance/resource-monitor-nonyielding-condition.md
     - name: Performance degradation with new CE join containment assumption
       href: performance/cardinality-estimator-degrades-query-performance.md
-    - name: Decreased query performance after upgrade
-      href: performance/decreased-query-perf-after-upgrade.md
-    - name: Reducing allocation contention in tempdb
-      href: performance/recommendations-reduce-allocation-contention.md
-    - name: Resolve blocking problems caused by lock escalation
-      href: performance/resolve-blocking-problems-caused-lock-escalation.md
-    - name: Resolve last-page insert PAGELATCH_EX contention
-      href: performance/resolve-pagelatch-ex-contention.md
     - name: SchemaMgr Store entries degrade performance 
       href: performance/schemamgr-store-degrades-performance.md
-    - name: Troubleshoot blocking caused by compile locks
-      href: performance/troubleshoot-blocking-caused-compile-locks.md
-    - name: Troubleshoot high-CPU-usage issues
-      href: performance/troubleshoot-high-cpu-usage-issues.md
-    - name: Troubleshoot queries that seem to never end
-      href: performance/troubleshoot-never-ending-query.md
-    - name: Troubleshoot slow-running queries
-      href: performance/troubleshoot-slow-running-queries.md
-    - name: Troubleshoot SQL Server slow performance caused by IO issues
-      href: performance/troubleshoot-sql-io-performance.md
-    - name: Troubleshoot ASYNC_NETWORK_IO issues
-      href: performance/troubleshoot-query-async-network-io.md
-    - name: Troubleshoot query time-out errors
-      href: performance/troubleshoot-query-timeouts.md
-    - name: Different query performance between two servers
-      href: performance/troubleshoot-query-perf-between-servers.md
-    - name: Understand and resolve blocking problems
-      href: performance/understand-resolve-blocking.md
-    - name: Updates and configuration options for high-performance workloads (SQL Server 2014 and 2012)
-      href: performance/recommended-updates-configuration-options.md
-    - name: Updates and configuration options for high-performance workloads (SQL Server 2017 and 2016)
-      href: performance/recommended-updates-configuration-workloads.md
     - name: Upgrading compatibility level degrades performance for spatial queries
       href: performance/upgrade-compatibility-level-degrades-performance.md
     - name: Use DBCC MEMORYSTATUS to monitor memory usage
       href: performance/dbcc-memorystatus-monitor-memory-usage.md
-    - name: Troubleshoot slow SSIS or ELT jobs query performance
-      href: performance/slow-query-performance-ssis-etl.md
-    - name: Slower query in database application than in SSMS
-      href: performance/troubleshoot-application-slow-ssms-fast.md      
   - name: Replication, change tracking, change data capture
     items:
     - name: 102 and incorrect syntax error with peer-to-peer replication
@@ -651,6 +657,8 @@
     href: reporting-services/error-unable-retrieve-application-files.md
   - name: Warning message when adding a RS assembly
     href: reporting-services/warning-message-add-reporting-services.md
+  - name: .Net Framework assemblies in SQL 2014
+    href: reporting-services/net-framework-assemblies-sql-2014.md
 
 - name: SQL Server on Linux
   items:
@@ -713,4 +721,3 @@
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
-

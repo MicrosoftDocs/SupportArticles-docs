@@ -62,6 +62,9 @@ az resource update --resource-group <resource-group-name> \
 
 Also verify that your DNS server is configured correctly for your private cluster, as described earlier.
 
+> [!NOTE]
+> Conditional Forwarding doesn't support subdomains.
+
 ## More information
 
 - [General troubleshooting of AKS cluster creation issues](troubleshoot-aks-cluster-creation-issues.md)

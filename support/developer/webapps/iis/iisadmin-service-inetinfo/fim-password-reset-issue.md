@@ -65,7 +65,7 @@ To secure the Administrative accounts in the Active Directory, there is a proces
 - Enterprise Admins
 - Cert Publishers
 
-How and why this process is in place is important to understand before making any changes to the permissions on these objects via a change in the Security Descriptor of the AdminSDHolder object. There are many good articles published on the Microsoft website. Simply search for AdminSDHolder from [Microsoft Docs](/.).
+How and why this process is in place is important to understand before making any changes to the permissions on these objects via a change in the Security Descriptor of the AdminSDHolder object. There are many good articles published on the Microsoft website. Simply [search our technical documentation](/) for *AdminSDHolder*.
 
 ### Granting permissions on the AdminSDHolder Object
 
@@ -82,7 +82,7 @@ dsacls "cn=adminsdholder,cn=system,dc=mydomain,dc=com" /G "mydomain\svc_fimadma:
 
 ### References
 
-- [AdminSDHolder, Protected Groups and SDPROP](/previous-versions/technet-magazine/ee361593(v=msdn.10))
+- [AdminSDHolder, Protected Groups, and SDPROP](/previous-versions/technet-magazine/ee361593(v=msdn.10))
 
 - [Delegated permissions are not available and inheritance is automatically disabled](https://support.microsoft.com/help/817433)
 

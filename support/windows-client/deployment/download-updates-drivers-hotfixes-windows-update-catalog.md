@@ -145,11 +145,9 @@ For more information about how to install multiple updates or multiple hotfixes 
 
 ### Microsoft security resources
 
-For the latest Microsoft security resources such as security tools, security bulletins, virus alerts, and general security guidance, visit the following Microsoft Web site:  
-[Microsoft Docs](https://www.microsoft.com/TechNet/Security/)
+For the latest Microsoft security resources such as security tools, security bulletins, virus alerts, and general security guidance, see [Security documentation](/security/).
 
-For more information about the Microsoft Baseline Security Analyzer tool (MBSA), visit the following Microsoft Web site:  
-[What is Microsoft Baseline Security Analyzer and its uses?](/windows/security/threat-protection/mbsa-removal-and-guidance)
+For more information about the Microsoft Baseline Security Analyzer tool (MBSA), see [What is Microsoft Baseline Security Analyzer and its uses?](/windows/security/threat-protection/mbsa-removal-and-guidance).
 
 ### The Microsoft Download Center
 

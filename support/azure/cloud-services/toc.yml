@@ -31,6 +31,8 @@
     href: troubleshoot-role-recycle-swap.md
   - name: SubscriptionPolicyCountExceeded exception
     href: troubleshoot-subscription-policy.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
   - name: VIP swap failures
     href: troubleshoot-vip-swap.md
 
@@ -52,14 +54,22 @@
     href: grant-virtual-network-sole-access.md
   - name: No space on the E or F drive
     href: no-space-e-f-drive.md
+  - name: RDP connections fail occasionally
+    href: intermittent-connection-failures-rdp.md
   - name: Read key vault certificate secrets from an app
     href: read-key-vault-certificate-secrets-from-cloud-service-app.md
   - name: Role instance restarts due to OS upgrades
     href: role-instance-restarts-os-upgrade.md
   - name: Roles that fail to start
     href: role-startup-failure.md
+  - name: Update failed during migration from classic to extended support
+    href: failed-update-ongoing-migration-process.md
   - name: Update or change the certificate used
     href: update-or-change-certificate-used.md
+  - name: Troubleshoot with App Insights-features overview
+    href: troubleshoot-with-app-insights-features-overview.md
+  - name: Troubleshoot with App Insights-common scenarios
+    href: troubleshoot-common-scenario-use-app-insights.md
   - name: Windows PaaS compute diagnostic data
     href: windows-azure-paas-compute-diagnostic-data.md
 

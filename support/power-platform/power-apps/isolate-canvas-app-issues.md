@@ -2,7 +2,6 @@
 title: Isolate issues in canvas apps
 description: Learn about techniques to narrow down the cause of errors in canvas apps.
 author: tahoon
-ms.subservice: troubleshoot
 ms.reviewer: tapanm
 ms.date: 06/24/2022
 ms.author: tahoon

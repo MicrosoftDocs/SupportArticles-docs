@@ -5,6 +5,8 @@ items:
   items:
   - name: Application Insights telemetry
     items:
+    - name: Troubleshoot missing telemetry in Application Insights
+      href: app-insights/investigate-missing-telemetry.md
     - name: Troubleshoot auto-instrumentation issues
       href: app-insights/auto-instrumentation-troubleshoot.md
     - name: Troubleshoot Azure Application Insights in a Java web project
@@ -14,7 +16,17 @@ items:
     - name: Troubleshoot Azure Monitor Application Insights for Java
       href: app-insights/java-standalone-troubleshoot.md
   - name: Application Insights features
-    items:
+    items:    
+    - name: Troubleshoot Azure Application Insights availability monitoring
+      items:
+      - name: Availability monitoring common issues FAQ
+        href: app-insights/availability-monitoring-common-issues-faq.yml  
+      - name: Diagnose ping test failures
+        href: app-insights/diagnose-ping-test-failure.md              
+      - name: Intermittent test failure and protocol violation error
+        href: app-insights/intermittent-test-failure-protocol-error.md
+      - name: Use availability tests on an internal server behind a firewall
+        href: app-insights/internal-server-availability-tests-firewall.md     
     - name: Error retrieving data in portal
       href: app-insights/troubleshoot-portal-connectivity.md
     - name: Missing CPU Total and Committed Memory metrics
@@ -25,12 +37,10 @@ items:
       href: app-insights/troubleshoot-availability.md
     - name: Troubleshoot user behavior analytics tools in Azure Application Insights
       href: app-insights/usage-troubleshoot.md
-  - name: Snapshot Debugger, Status Monitor, and Change Analysis
+  - name: Status Monitor and Change Analysis
     items:
     - name: Troubleshoot Azure Monitor's Change Analysis (preview)
-      href: app-insights/change-analysis-troubleshoot.md
-    - name: Troubleshoot problems enabling Application Insights Snapshot Debugger or viewing snapshots
-      href: app-insights/snapshot-debugger-troubleshooting.md
+      href: app-insights/change-analysis-troubleshoot.md    
     - name: Troubleshoot Azure Application Insights Agent (formerly Status Monitor v2)
       href: app-insights/status-monitor-v2-troubleshoot.md
 - name: Log Analytics

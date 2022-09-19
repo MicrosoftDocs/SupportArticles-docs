@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 06/01/2022
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # AI Builder trial license still displays in the top banner after you've purchased an AI Builder license

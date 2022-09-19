@@ -20,6 +20,8 @@ landingContent:
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Diagnose common problems that cause your ping tests to fail in availability monitoring
+            url: ./app-insights/diagnose-ping-test-failure.md
           - text: Error retrieving data in portal
             url: ./app-insights/troubleshoot-portal-connectivity.md
           - text: Troubleshooting auto-instrumentation issues
