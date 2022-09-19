@@ -67,7 +67,7 @@ For other OS performance problems, see [Windows Server performance troubleshooti
 
 The problem could be in the network layer, causing slow communication between the application and SQL Server. Use the following methods to troubleshoot this issue:
 
-- One symptom of that could be `ASYNC_NETWORK_IO` waits on the SQL Server side. For more information, see [Troubleshoot ASYNC_NETWORK_IO waits](/troubleshoot/sql/performance/troubleshoot-query-async-network-io).
+- One symptom of that could be `ASYNC_NETWORK_IO` waits on the SQL Server side. For more information, see [Troubleshoot slow queries that result from ASYNC_NETWORK_IO wait type](/troubleshoot/sql/performance/troubleshoot-query-async-network-io).
 - Work with your network administrator to check for network issues (firewall, routing, and so on).
 - Collect a [network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and check for the network reset and retransmission events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).
 - Enable Perfmon counters to check network performance at the network interface level (NIC). There should be zero discarded packets and error packets. Check the network interface bandwidth:
