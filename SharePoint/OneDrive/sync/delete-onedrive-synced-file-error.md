@@ -38,7 +38,7 @@ To fix this issue, use [chkdsk](/windows-server/administration/windows-commands/
 
 **Note** Chkdsk may take several hours to complete on large drives. Therefore, we recommend that you run chkdsk outside of active hours, such as at night or on weekends.  
   
-1. Select Start, type cmd, right-click Command Prompt and select Run as administrator.  
+1. Select **Start**, type *cmd*, right-click **Command Prompt** and select **Run as administrator**.  
 2. Run the `chkdsk <volume> /R /F` command.
 
    If the drive can't be locked, you'll be prompted with the following message:  
