@@ -2547,6 +2547,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/azure/azure-monitor/app-insights/troubleshoot-availability.md",
+      "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/diagnose-ping-test-failure",
+      "redirect_document_id": false
+    },
+    {        
       "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
       "redirect_url": "/mem/intune/protect/certificate-connector-install",
       "redirect_document_id": false

@@ -3,7 +3,7 @@ title: Email address domains used by Microsoft support professionals
 description: Describes the email address domains used by Microsoft support agents to communicate with our customers.
 ms.date: 06/07/2021
 ms.reviewer: 
-ms.service: azure
+ms.service: azure-common-issues-support
 ms.author: genli
 author: genlin
 ---

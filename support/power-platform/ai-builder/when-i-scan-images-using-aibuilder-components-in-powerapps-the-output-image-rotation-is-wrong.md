@@ -5,6 +5,8 @@ ms.reviewer: angiendrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # When I scan images using AI Builder components in Power Apps, the output image rotation is wrong

@@ -27,8 +27,7 @@ Microsoft SQL Server Reporting Services (SSRS) supports extensions by including 
 >
 > - SQL Server Data Tools (SSDT) is a Microsoft Visual Studio environment that's included in SQL Server 2012. Report Designer in SSDT uses PreviewProcessingService.exe to render reports. Because PreviewProcessingService.exe uses the .NET Framework 4.0, you may encounter differences in behavior between design time and deployment to a Report Server.
 
-## More Information
+## More information
 
 - [Developer's Guide: Tutorials (Reporting Services)](/previous-versions/sql/sql-server-2008-r2/aa337423(v=sql.105))
 - [Using Custom Assemblies with Reports](/sql/reporting-services/custom-assemblies/using-custom-assemblies-with-reports)
-

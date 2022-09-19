@@ -213,6 +213,8 @@
     items:
     - name: Common Connection Issues
       href: connect/resolve-connectivity-errors-overview.md
+    - name: The certificate chain was issued by an authority that isn’t trusted
+      href: connect/certificate-chain-not-trusted.md
     - name: Pre-reqs for connectivity troubleshooting
       href: connect/resolve-connectivity-errors-checklist.md
     - name: Cannot generate SSPI context
@@ -405,6 +407,8 @@
       href: performance/recommended-updates-configuration-workloads.md
     - name: Resolve last-page insert PAGELATCH_EX contention
       href: performance/resolve-pagelatch-ex-contention.md
+    - name: Troubleshoot out of memory issues in SQL Server
+      href: performance/troubleshoot-memory-issues.md
     - name: Troubleshoot queries that seem to never end
       href: performance/troubleshoot-never-ending-query.md
     - name: Troubleshoot ASYNC_NETWORK_IO issues
@@ -717,4 +721,3 @@
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
-

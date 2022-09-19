@@ -5,6 +5,8 @@ ms.reviewer: angieandrews
 ms.topic: troubleshooting
 ms.date: 3/31/2021
 ms.subservice: 
+ms.author: angieandrews
+author: v-aangie
 ---
 
 # The current environment doesn't meet the minimum requirements
