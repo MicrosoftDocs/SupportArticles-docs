@@ -19,7 +19,7 @@ HPC management service failed to start. The [HPC service log](/powershell/high-p
 
 ## Cause
 
-This issue occurs if the HPC management database contains more than one instance records that are in current state(instanceState is 2). normally, each instance should have only one record in the current state.
+This issue occurs if the HPC management database contains more than one instance records that are in current state(instanceState is 2). Normally, each instance should have only one record in the current state.
 
 You can run the following query on HPC management database to check the state of the instances:
 
