@@ -23,7 +23,7 @@ This issue occurs because the scheduler service is busy.
 
 To resolve this issue, increase the Database transaction unit (DTU) to 200 for the scheduler database in Azure.
 
-To change DTU to 200, the compute size should be at least changed to S4:
+When you set the DTU to 200, the compute size should be at least set to S4. 
 
 **Standard service tier (continued)**
 
@@ -36,13 +36,13 @@ To change DTU to 200, the compute size should be at least changed to S4:
 |Max concurrent workers|	400|	800|	1600|	3200|	6000|
 |Max concurrent sessions|	4800|	9600	|19200	|30000|	30000|
 
-Go to the Azure SQL database in the Azure portal, select **Settings** > **Configure**, and then adjust the DTU to 200.
+To change the DTU to 200, go to the Azure SQL database in the Azure portal, select **Settings** > **Configure**, and then adjust the DTU to 200.
 
-[Image]
+:::image type="content" source="media/job-stuck-canceling-mode/adjust-dtus-azure-sql-database.png" alt-text="Screenshot that shows how to adjust Database transaction unit in Azure portal.":::
 
 After that, you'll see that the **Pricing tier** has been changed to **Standard S4: 200 DTUs**.
 
-[Image]
+:::image type="content" source="media/job-stuck-canceling-mode/pricing-tier-standard-s4-200-dtus.png" alt-text="Screenshot of the Pricing tier value.":::
 
 ## Database transaction unit
 
@@ -58,7 +58,7 @@ For HPC scheduler databases, the minimum initial DTU is 100. See the following t
 |Diagnostics|	>= 10|
 |Monitoring|	>= 20|
 
-We recommend setting it higher than 100 depending on the workload of the HPC server. If the workload is high, set the DTU higher.
+We recommend that you always set it higher than 100 depending on the workload of the HPC server. If the workload is high, set the DTU higher.
 
 ## References
 
