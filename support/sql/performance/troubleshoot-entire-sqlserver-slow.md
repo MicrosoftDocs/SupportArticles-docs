@@ -18,7 +18,7 @@ Check the application layer. Take a query from the application, run it manually 
 > [!NOTE]
 > Be mindful of the [query performance differences between database application and SSMS](/troubleshoot/sql/performance/troubleshoot-application-slow-ssms-fast).
 
-If the application is running on a different server, check the performance of the application server (see [Step 2: Troubleshoot the OS issues](#step-2-troubleshoot-the-os-issues) for troubleshooting). You may need to engage the application development team to check for any issues with the application.
+If the application is running on a different server, check the performance of the application server (see [Step 2: Troubleshoot the OS issues](#step-2-troubleshoot-os-issues) for troubleshooting). You may need to engage the application development team to check for any issues with the application.
 
 ## Step 2: Troubleshoot OS issues
 
