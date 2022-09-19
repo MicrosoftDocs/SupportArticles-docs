@@ -66,9 +66,9 @@ Yes. The user will receive notifications for all the ownerless groups of which t
 
 ## Is a premium plan required for all scenarios of notifications?
 
-Yes. When you specify who can receive ownership notifications for an ownerless group policy, a premium plan is required to create a security group that's used to allow or block the policy.
+Yes. In the policy for an ownerless group, when you specify who can receive ownership notifications, a premium plan is required to create a security group that's used to allow or block the policy.
 
-:::image type="content" source="media/ownerless-group-policy/premium-plan-required.png" alt-text="Screenshot of a warning that requires you to upgrade premium plan when you specify who can receive ownership notifications.":::
+:::image type="content" source="media/ownerless-group-policy/premium-plan-required.png" alt-text="Screenshot of a warning that requires you to upgrade to a premium plan when you specify who can receive ownership notifications.":::
 
 ## Issue: Actionable buttons (Yes or No) don't appear in a notification
 
@@ -82,8 +82,8 @@ To view the actionable buttons, use the following options:
 - Double-click the email message to open it in Full Screen mode.
 - Make sure that the sender's UPN is the same as the primary email address. For more information, see [Change a user name and email address](/microsoft-365/admin/add-users/change-a-user-name-and-email-address).
 
-## Issue: The ownerless group policy is configured, but none of the members have received the notification
+## Issue: The ownerless group is configured in Group Policy, but no member received the notification
 
-Make sure that the sender that's configured on the group policy are either a user mailbox or a group mailbox. If you configure any sender other than a user  mailbox or group mailbox, the notification email is not sent out.
+Make sure that the sender that's configured in Group Policy is either a user mailbox or a group mailbox. If you configure any sender other than a user mailbox or group mailbox, the notification is not sent.
 
-If you have configured the supported sender (a user or group mailbox), check the audit log to trace if group email notifications were sent out.
+If you configured the supported sender (as a user mailbox or group mailbox), check the audit log to trace whether group email notifications were sent.
