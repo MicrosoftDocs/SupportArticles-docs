@@ -26,37 +26,42 @@ If the application is running on a different server, check the performance of th
 
 Check if the operating system where SQL Server is running is slow in its response. For example, the mouse moves slowly, and windows don't respond for long periods.  
 
-Common issues include [High CPU across all CPUs](#high-cpu-across-all-cpus), [Low physical/virtual memory](#low-physicalvirtual-memory), and [Slow I/O](#slow-io).
+Common issues include:
 
-### High CPU across all CPUs
+### [High CPU across all CPUs](#tab/high-cpu)
 
 This issue could be caused by other applications, the OS, or drivers running on the system.
 
 To troubleshoot this issue, use Task Manager, Performance Monitor, or Resource Monitor to identify this issue. For more information, see [High CPU usage troubleshooting guidance](/troubleshoot/windows-server/performance/troubleshoot-high-cpu-usage-guidance).
 
-### Low physical/virtual memory
+### [Low physical or virtual memory](#tab/low-physical-or-virtual-memory)
 
 This issue could be caused by applications, drivers, or OS consuming the entire memory. Use the following methods to troubleshoot this issue:
 
 - Check the Application event log for errors like "Your system is low on virtual memory".
 - Open **Task manager**, select **Performance** > **Memory** to check for memory being consumed entirely.
-- Use Perfomon and monitor these counters:
+- Use Perfmon and monitor these counters:
 
   - **Process\Working Set** - to check individual apps' memory usage
-  - **Memory\Available Memory (MB)** - to check overall memory usage
+  - **Memory\Available MBytes** - to check overall memory usage
 
-### Slow I/O
+### [Slow I/O](#tab/slow-io)
 
 Local drives are overwhelmed with I/O beyond their capacity. Use the following methods to troubleshoot this issue:
 
 - Open **Task Manager**, select **Performance** > **Disk (*)** to check for disks being pushed to maximum capacity.
-- Use Perfomon and monitor these counters:
+- Use Perfmon and monitor these counters:
 
-  - **Logical Disk\Disk Bytes/Sec**
-  - **Logical Disk\Avg. Disk sec/Transfer**
+  - **LogicalDisk\Disk Bytes/sec**
+  - **LogicalDisk\Avg. Disk sec/Transfer**
 
-- Caused by another service/app - perfmon.
-- Check if a Power Plan configuration is causing CPU underperformance. For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).
+### [Power Plan configuration is causing CPU underperformance](#tab/power-plan-configuration-is-causing-cpu-underperformance)
+
+For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).
+
+---
+
+This issue can also be caused by another service or application. Use perfmon to troubleshoot.
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
@@ -64,9 +69,9 @@ For other OS performance problems, see [Windows Server performance troubleshooti
 
 The problem could be in the network layer, causing slow communication between the application and SQL Server. Use the following methods to troubleshoot this issue:
 
-- One symptom of that could be ASYNC_NETWORK_IO waits on the SQL Server side. For more information, see [Troubleshoot ASYNC_NETWORK_IO waits](/troubleshoot/sql/performance/troubleshoot-query-async-network-io).
+- One symptom of that could be `ASYNC_NETWORK_IO` waits on the SQL Server side. For more information, see [Troubleshoot ASYNC_NETWORK_IO waits](/troubleshoot/sql/performance/troubleshoot-query-async-network-io).
 - Work with your network administrator to check for network issues (firewall, routing, and so on).
-- Collect a Network trace and check for a network reset and retransmit events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).
+- Collect a [network trace](/azure/azure-web-pubsub/howto-troubleshoot-network-trace) and check for the network reset and retransmission events. For troubleshooting ideas, see [Intermittent or Periodic Network Issue]( https://github.com/microsoft/CSS_SQL_Networking_Tools/wiki/0300-Intermittent-or-Periodic-Network-Issue).
 - Enable Perfmon counters to check network performance at the network interface level (NIC). There should be zero discarded packets and error packets. Check the network interface bandwidth:
 
   - **Network Interface\Packets Received Discarded**
@@ -95,7 +100,7 @@ For detailed troubleshooting steps, see [Troubleshoot high-CPU-usage issues in S
 
 ## Step 5: Troubleshoot excessive I/O causing slowness in SQL Server
 
-Another common reason for the perceived overall slowness of SQL Server workloads is I/O issues. I/O slowness can impact most or all queries on the system.
+Another common reason for the perceived overall slowness of SQL Server workloads is I/O issues. I/O slowness can impact most or all queries on the system. Use the following methods to troubleshoot the issue:
 
 - Check for hardware issues:
 
@@ -127,7 +132,7 @@ Low memory on the system overall or inside SQL Server can lead to slowness when 
   - **Process(*)\Working Set** (all instances)
   - **Process(*)\Private Bytes**  (all instances)
 
-- For internal memory pressure use SQL Server queries to query [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) or use [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md).
+- For internal memory pressure, use SQL Server queries to query [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) or use [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md).
 
 - Check the SQL Server error log for [701](/sql/relational-databases/errors-events/mssqlserver-701-database-engine-error) errors.
 
@@ -139,29 +144,31 @@ Lock acquisition is used to protect resources in a database system. If locks are
 
 Short blocking happens on database systems like SQL Server all the time. But prolonged blocking, especially when most or all queries are waiting for a lock, may result in the entire server being perceived as not responding.
 
-Use the following methods to troubleshoot the issue:
+Use the following steps to troubleshoot the issue:
 
-- Identify the head blocking session by looking at `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or BlkBy column in `sp_who2` stored procedure output.
-- Then, find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period).
-- If no queries are actively running on the head blocking session, there could have been an orphaned transaction due to application issues.
-- Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
-- Examine the transaction isolation used in the query and adjust.
+1. Identify the head blocking session by looking at the column `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or the column `BlkBy` in `sp_who2` stored procedure output.
+1. Find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period).
+
+    If no queries are actively running on the head blocking session, there could have been an orphaned transaction due to application issues.
+
+1. Redesign or tune the head blocking query to run faster, or reduce the number of queries inside a transaction.
+1. Examine the transaction isolation used in the query and adjust.
 
 For detailed troubleshooting of blocking scenarios, see [Understand and resolve SQL Server blocking problems](/sql/performance/understand-resolve-blocking#detailed-blocking-scenarios).
 
 ## Step 8: Troubleshoot scheduler issues (non-yielding, deadlocked scheduler, non-yielding IOCP listener, resource monitor)
 
-SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, then SQL Server threads may stop processing queries, logins, logouts, and so on. As a result, SQL Server may seem unresponsive, partially or completely, depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems, including product bugs, external and filter drivers, and hardware issues.
+SQL Server uses a cooperative scheduling mechanism (Schedulers) to expose its threads to the OS for scheduling on the CPU. If there are issues related to SQL schedulers, SQL Server threads may stop processing queries, logins, logouts, and so on. As a result, SQL Server may seem unresponsive, partially or completely, depending on how many schedulers are affected. Scheduler issues are caused by a wide range of problems, including product bugs, external and filter drivers, and hardware issues.
 
 Follow these steps to troubleshoot these issues:
 
-1. Check your SQL Server Error log for errors like these at the time of the reported lack of response from SQL Server:
+1. Check your SQL Server Error log for errors like the following ones at the time of the reported lack of response from SQL Server:
 
     - ```output
       ***********************************************
       *
       * BEGIN STACK DUMP:
-      *   03/10/22 21:16:35 spid 22548
+      * 03/10/22 21:16:35 spid 22548
       *
       * Non-yielding Scheduler
       *
@@ -185,13 +192,12 @@ Follow these steps to troubleshoot these issues:
       * BEGIN STACK DUMP:
       * 07/25/22 11:44:21 spid 2013
       *
-      *
       * Non-yielding Resource Monitor
       *
       * ********************************************
       ```
 
-1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on and see if there are any fixed issues in Cumulative updates shipped after your current CU. You can browse the SQL Server fixes starting here [Latest updates available for currently supported versions of SQL Server](/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server) or to see a detailed fix list for you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx).
+1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx).
 
 1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas.
 
@@ -199,6 +205,6 @@ Follow these steps to troubleshoot these issues:
 
 1. For a non-yielding IOCP listener, check if your system is low on memory and SQL Server is being paged out. Another reason could be anti-virus or intrusion prevention software intercepts I/O API calls and slows the thread activity down. For more information, see [Is the IOCP listener actually listening?](https://techcommunity.microsoft.com/t5/sql-server-support-blog/is-the-iocp-listener-actually-listening/ba-p/333989) and [Performance and consistency issues when certain modules or filter drivers are loaded](performance-consistency-issues-filter-drivers-modules.md).
 
-1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information [Resource Monitor enters a non-yielding condition on a server running SQL Server](resource-monitor-nonyielding-condition.md).
+1. For Resource Monitor issues, you may not necessarily be concerned with this issue in some cases. For more information, see [Resource Monitor enters a non-yielding condition on a server running SQL Server](resource-monitor-nonyielding-condition.md).
 
 1. If these resources don't help, locate the memory dump created in the \LOG subdirectory and open a support ticket with Microsoft CSS by uploading the memory dump for analysis.
