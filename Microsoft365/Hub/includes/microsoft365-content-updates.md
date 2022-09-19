@@ -2,6 +2,15 @@
 
 
 
+## Week of September 12, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/12/2022 | [Can't send an encrypted email to many recipients](/microsoft-365/troubleshoot/sensitivity-labels/encrypted-email-cannot-send-many-recipients) | added |
+| 9/15/2022 | [Sensitivity labels are missing](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) | added |
+
+
 ## Week of August 29, 2022
 
 
