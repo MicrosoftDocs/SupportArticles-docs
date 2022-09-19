@@ -171,7 +171,7 @@ BEGIN
         CLOSE get_command
         DEALLOCATE get_command
 
-        SELECT 'Follow https://docs.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
+        SELECT 'Follow https://learn.microsoft.com/troubleshoot/sql/performance/resolve-pagelatch-ex-contention for resolution recommendations that fits your environment best' Step3_Apply_KB_article
         
     END
     ELSE
