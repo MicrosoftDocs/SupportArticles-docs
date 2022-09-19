@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/16/2022
+ms.date: 09/19/2022
 ---
 
 # Hybrid Configuration wizard doesn't connect to Office 365
@@ -73,11 +73,11 @@ Additionally, run `inetcpl.cpl` to make sure that TLS 1.2 is enabled on the **Ad
 
 The HCW returns an error message if the [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession) cmdlet can't connect to the `outlook.office365.com endpoint`. The `New-PSSession` cmdlet uses WinHTTP to make the connection. The error occurs if TLS 1.2 isn't enabled in the WinHTTP component. You can reproduce the error by using the HCW Diagnostic Tools. In HCW, press **F12** to open the Diagnostic Tools pane, and then select the **Open Exchange Online PowerShell** option.
 
-:::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/hybrid-configuration-wizard-diagnostics.png" border="true" alt-text="Screenshot of the Open Exchange Online PowerShell option in the Diagnostic Tools pane of HCW.":::
+:::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/hybrid-configuration-wizard-diagnostics.png" border="true" alt-text="Screenshot of the Open Exchange Online PowerShell option in the Diagnostic Tools pane of HCW." lightbox="./media/hybrid-configuration-wizard-not-connect-to-office-365/hybrid-configuration-wizard-diagnostics-lrg.png":::
 
 You receive the following error message.
 
-:::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/winhttp-shell.png" border="true" alt-text="Screenshot of the PSSession error message in the Exchange Online PowerShell window.":::
+:::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/winhttp-shell.png" border="true" alt-text="Screenshot of the PSSession error message in the Exchange Online PowerShell window." lightbox="./media/hybrid-configuration-wizard-not-connect-to-office-365/winhttp-shell-lrg.png":::
 
 If the WinHTTP component has only TLS 1.0 or TLS 1.1 enabled, `New-PSSession` won't connect to the Office 365 endpoint or any other endpoint that has only TLS 1.2 enabled. You can use [netsh](/windows-server/networking/technologies/netsh/netsh) to determine the TLS version that's used by WinHTTP:
 
@@ -93,7 +93,7 @@ If the WinHTTP component has only TLS 1.0 or TLS 1.1 enabled, `New-PSSession` wo
 
 1. Use [NetworkMonitor](/windows/win32/ndf/using-network-monitor-to-view-etl-files) to open the trace file, and then filter on `description.contains("EnabledProtocols")` to view the enabled protocols, as follows.
 
-    :::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/network-monitor.png" border="true" alt-text="Screenshot of netsh trace output in NetworkMonitor for a search filter that specifies EnabledProtocols in the description field.":::
+    :::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/network-monitor.png" border="true" alt-text="Screenshot of netsh trace output in NetworkMonitor for a search filter that specifies EnabledProtocols in the description field." lightbox="./media/hybrid-configuration-wizard-not-connect-to-office-365/network-monitor-lrg.png":::
 
 ## Related articles
 
