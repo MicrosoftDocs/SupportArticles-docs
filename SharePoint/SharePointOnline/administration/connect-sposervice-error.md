@@ -1,6 +1,6 @@
 ---
 title: Can't connect to SharePoint Online
-description: Fixes an issue in which you receive the "Could not connect to SharePoint Online" error when you use the Connect-SPOService cmdlet in SharePoint Online Management Shell.
+description: Fixes an issue in which you receive a "Could not connect to SharePoint Online" error message when you use the Connect-SPOService cmdlet in SharePoint Online Management Shell.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,17 +16,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 9/15/2022
 ---
-# Error "Connect-SPOService: Could not connect to SharePoint Online"
+# "Could not connect to SharePoint Online" error when you run Connect-SPOService
 
 ## Symptoms
 
-When you use the `Connect-SPOService` cmdlet in SharePoint Online Management Shell, you receive the following error message:
+When you run the `Connect-SPOService` cmdlet in SharePoint Online Management Shell, you receive the following error message:
 
 > Connect-SPOService: Could not connect to SharePoint Online.
 
 ## Cause
 
-The `Connect-SPOService` cmdlet uses the legacy authentication by default. This issue might occur if you add an Active Directory Federation Services (AD FS) claim rule to block legacy authentication requests that don't originate from your expected IP range.
+By default, the `Connect-SPOService` cmdlet uses the legacy authentication. This issue might occur if you add an Active Directory Federation Services (AD FS) claim rule to block legacy authentication requests that don't originate from your expected IP range.
 
 ## Resolution
 
@@ -39,6 +39,6 @@ $creds = Get-Credential
 Connect-SPOService -Credential $creds -Url https://tenant-admin.sharepoint.com -ModernAuth $true -AuthenticationUrl https://login.microsoftonline.com/organizations 
 ```
 
-**Note** Setting `AuthenticationUrl` to `https://login.microsoftonline.com/organizations` will handle the redirection for federated tenants.
+**Note** Setting `AuthenticationUrl` to `https://login.microsoftonline.com/organizations` handles the redirection for federated tenants.
 
-If the issue remains, follow the steps in [Errors when connecting to SharePoint Online Management Shell](/sharepoint/troubleshoot/administration/errors-connecting-to-management-shell).  
+If the issue persists, follow the steps in [Errors when connecting to SharePoint Online Management Shell](/sharepoint/troubleshoot/administration/errors-connecting-to-management-shell).  
