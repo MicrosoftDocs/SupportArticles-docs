@@ -13,7 +13,7 @@ This article provides a solution for an issue where HPC Management Service fails
 
 ## Symptoms
 
-HPC management service failed to start. The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc&preserve-view=true ) shows the following error:
+HPC management service fails to start. The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc&preserve-view=true ) shows the following error:
 
 > Store corruption due to duplicate instance ids.
 
@@ -27,7 +27,7 @@ You can run the following query on HPC management database to check the state of
 
 ## Resolution
 
-To resolve the issue, run the following script repair the instances:
+To resolve the issue, run the following script to repair the instances:
 
 1. Save following PowerShell script as FixInstanceStateError.ps1 file.
 
