@@ -1,7 +1,7 @@
 ---
 title: Considerations for the autogrow and autoshrink
 description: This article provides information regarding what happens when you select the autogrow and autoshrink for your environment.
-ms.date: 11/10/2020
+ms.date: 09/19/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
@@ -24,10 +24,10 @@ Here are some things to consider if you decide to tune your autogrow and autoshr
 1. You can configure or modify the autogrow and autoshrink settings by using one of the following:
 
    - [SQL Server Management Studio](/sql/relational-databases/databases/database-properties-options-page)
-   - An ALTER DATABASE statement
+   - An `ALTER DATABASE` statement
 
      - Use [File and Filegroup options](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) to modify auto growth settings
-     - Use [SET options](/sql/t-sql/statements/alter-database-transact-sql-set-options) to configure AUTO_SHRINK settings.
+     - Use [SET options](/sql/t-sql/statements/alter-database-transact-sql-set-options) to configure `AUTO_SHRINK` settings.
 
    > [!NOTE]
    > For more information about how to set these settings at database file level, review [Add Data or Log Files to a Database](/sql/relational-databases/databases/add-data-or-log-files-to-a-database).
@@ -44,17 +44,17 @@ Here are some things to consider if you decide to tune your autogrow and autoshr
 
 ## Considerations for AUTO_SHRINK
 
-AUTO_SHRINK is a database option in SQL Server. When you enable this option for a database, this database becomes eligible for shrinking by a background task. This background task evaluates all databases that satisfy the criteria for Shrinking and shrink the data or log files.
+AUTO_SHRINK is a database option in SQL Server. When you enable this option for a database, this database becomes eligible for shrinking by a background task. This background task evaluates all databases that satisfy the criteria for shrinking and shrink the data or log files.
 
-You have to carefully evaluate setting this option for the databases in a SQL Server instance. Frequent grow and shrink operations can lead to various performance problems.
+You have to carefully evaluate setting this option for the databases in a SQL Server instance. Frequent grow and shrink operations can lead to various performance problems.
 
-1. If multiple databases undergo frequent shrink and grow operations, then this will easily lead to file system level fragmentation. This can have a severe impact on performance. This is true whether you use the automatic settings or whether you manually grow and shrink the files frequently
+- If multiple databases undergo frequent shrink and grow operations, then this will easily lead to file system level fragmentation. This can have a severe impact on performance. This is true whether you use the automatic settings or whether you manually grow and shrink the files frequently.
 
-1. After AUTO_SHRINK successfully shrinks the data or log file, a subsequent DML or DDL operation can slow down significantly if space is required and the files need to grow.
+- After AUTO_SHRINK successfully shrinks the data or log file, a subsequent DML or DDL operation can slow down significantly if space is required and the files need to grow.
 
-1. The AUTO_SHRINK background task can take up resources when there are many databases that need shrinking.
+- The AUTO_SHRINK background task can take up resources when there are many databases that need shrinking.
 
-1. The AUTO_SHRINK background task will need to acquire locks and other synchronization that can conflict with other regular application activity.
+- The AUTO_SHRINK background task will need to acquire locks and other synchronization that can conflict with other regular application activity.
 
 Consider setting databases to a required size and pre-grow them. Leave the unused space in the database files if you think the application usage patterns will need them again. This can prevent frequent shrink and growth of the database files.
 
@@ -93,9 +93,9 @@ In SQL Server, you can enable [instant file initialization](/sql/relational-data
 
 - Unplanned growth of data or log files can take space that other applications expect to be available and might cause those other applications to experience problems.
 
-- The growth increment of your transaction log must be large enough to stay ahead of the needs of your transaction units. Even with autogrow turned on, you can receive a message that the transaction log is full, if it cannot grow fast enough to satisfy the needs of your query.
+- The growth increment of your transaction log must be large enough to stay ahead of the needs of your transaction units. Even with autogrow turned on, you can receive a message that the transaction log is full, if it can't grow fast enough to satisfy the needs of your query.
 
-- SQL Server does not constantly test for databases that have hit the configured threshold for autoshrink. Instead, it looks at the available databases and finds the first one that is configured to autoshrink. It checks that database and shrinks that database if needed. Then, it waits several minutes before checking the next database that is configured for autoshrink. In other words, SQL Server does not check all databases at once and shrink them all at once. It will work through the databases in a round robin fashion to stagger out the load over a period of time. Therefore, depending on how many databases on a particular SQL Server instance you have configured to autoshrink, it might take several hours from the time the database hits the threshold until it actually shrinks.
+- SQL Server doesn't constantly test for databases that have hit the configured threshold for autoshrink. Instead, it looks at the available databases and finds the first one that is configured to autoshrink. It checks that database and shrinks that database if needed. Then, it waits several minutes before checking the next database that is configured for autoshrink. In other words, SQL Server does not check all databases at once and shrink them all at once. It will work through the databases in a round robin fashion to stagger out the load over a period of time. Therefore, depending on how many databases on a particular SQL Server instance you have configured to autoshrink, it might take several hours from the time the database hits the threshold until it actually shrinks.
 
 ## References
 

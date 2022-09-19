@@ -1,7 +1,7 @@
 ---
 title: Back up a database using a VSS backup application
 description: This article provides a resolution for the problem that occurs when you use Volume Shadow Copy Services (VSS) based applications to back up your SQL Server databases.
-ms.date: 09/25/2020
+ms.date: 09/19/2022
 ms.custom: sap:Database Engine
 ms.prod: sql
 ---
@@ -22,9 +22,9 @@ The same problem may also occur when you try to back up a volume that contains o
 
 VSS based backup applications use `SQLServerWriter` (SQLWriter) to query Writer Metadata Component information to determine which database files need to be backed up. The Writer Metadata Component is created by SQLWriter using VSS API and contains three sets of data:
 
-1. Writer identification and classification information
-2. Writer-level specifications
-3. Component data
+- Writer identification and classification information
+- Writer-level specifications
+- Component data
 
 When a database name contains leading or trailing spaces or non-printable characters, this document may not be created successfully. As a result, VSS-based applications will not be able to back up these databases or any volumes that contain these databases.
 
@@ -33,12 +33,12 @@ When a database name contains leading or trailing spaces or non-printable charac
 Rename all databases that contain either leading or trailing spaces or unprintable characters in their names. You can use the following query to locate the presence of such characters in front or at end of the names:  
 
 ```sql
-SELECT database_id as DatabaseID, '##'+name+'##' as DatabaseName from sys.databases  
+SELECT database_id AS DatabaseID, '##'+name+'##' AS DatabaseName FROM sys.databases  
 ```
 
 Example output:
 
-```console
+```output
 DatabaseID         DatabaseName
 8                  ##AdventureWorks##          -- DB name is fine
 15                 ## DBWithLeadingSpace##     -- DB name contains leading spaces

@@ -1,11 +1,12 @@
 ---
 title: Error when you run CLR object or create assembly
 description: This article helps you resolve two different problems that can occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
-ms.date: 10/29/2020
+ms.date: 09/19/2022
 ms.custom: sap:Administration and Management  
 ms.reviewer: jackli
 ms.prod: sql
 ---
+
 # Error when you run an existing CLR object or create an assembly
 
 This article helps you resolve two different problems that can occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
@@ -36,16 +37,16 @@ The issues occur even if you have already set the **Trustworthy** database prope
 
 ## Cause
 
-This problem occurs because the login that you use to create the database on Server A is not in the instance of SQL Server on Server B. This login could be either the Microsoft Windows login or the SQL Server login.
+This problem occurs because the login that you use to create the database on Server A isn't in the instance of SQL Server on Server B. This login could be either the Microsoft Windows login or the SQL Server login.
 
 ## Workaround
 
 To work around this problem, use one of the following methods.
 
 > [!NOTE]
-> Before you use the following methods, make sure that you enable the Trustworthy database property.
+> Before you use the following methods, make sure that you enable the **Trustworthy** database property.
 
-- Use the `sp_changedbowner` stored procedure to change the database owner to sa or to an available login on Server B. For example, you may use the following statement to change the database owner to **sa**:
+- Use the `sp_changedbowner` stored procedure to change the database owner to **sa** or to an available login on Server B. For example, you may use the following statement to change the database owner to **sa**:
 
     ```sql
     USE <DatabaseName>
