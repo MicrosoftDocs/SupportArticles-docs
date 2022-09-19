@@ -1,19 +1,17 @@
 ---
-title: Troubleshoot SQL Server or database application is slow 
-description: This article describes how to troubleshoot a situation when the entire SQL Server seems to be slow.
+title: Troubleshoot SQL Server or database application that is slow 
+description: This article describes how to troubleshoot a situation where the entire SQL Server seems to be slow.
 ms.date: 09/01/2022
 ms.custom: sap:Performance
 author: pijocoder
 ms.author: jopilov
 ---
 
-# Entire SQL Server or database application is slow
-
-## Symptoms
+# Troubleshoot entire SQL Server or database application that is slow
 
 When you run queries against a SQL Server instance or a particular application, all the queries are slow. To solve the issue, follow these steps:
 
-## Step 1: Troubleshoot the application issues
+## Step 1: Troubleshoot application issues
 
 Check the application layer. Take a query from the application, run it manually on a SQL Server instance, and see how it runs. Test several queries this way. If queries are faster on the SQL Server instance, the problem could be on the application or application servers' layer.
 
@@ -22,13 +20,13 @@ Check the application layer. Take a query from the application, run it manually 
 
 If the application is running on a different server, check the performance of the application server (see [Step 2: Troubleshoot the OS issues](#step-2-troubleshoot-the-os-issues) for troubleshooting). You may need to engage the application development team to check for any issues with the application.
 
-## Step 2: Troubleshoot the OS issues
+## Step 2: Troubleshoot OS issues
 
 Check if the operating system where SQL Server is running is slow in its response. For example, the mouse moves slowly, and windows don't respond for long periods.  
 
 Common issues include:
 
-### [High CPU across all CPUs](#tab/high-cpu)
+### [High CPU usage across all CPUs](#tab/highcpu)
 
 This issue could be caused by other applications, the OS, or drivers running on the system.
 
@@ -55,7 +53,7 @@ Local drives are overwhelmed with I/O beyond their capacity. Use the following m
   - **LogicalDisk\Disk Bytes/sec**
   - **LogicalDisk\Avg. Disk sec/Transfer**
 
-### [Power Plan configuration is causing CPU underperformance](#tab/power-plan-configuration-is-causing-cpu-underperformance)
+### [Power plan configuration is causing CPU underperformance](#tab/power-plan-configuration-is-causing-cpu-underperformance)
 
 For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).
 
@@ -65,7 +63,7 @@ This issue can also be caused by another service or application. Use perfmon to 
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
-## Step 3: Troubleshoot the network issues
+## Step 3: Troubleshoot network issues
 
 The problem could be in the network layer, causing slow communication between the application and SQL Server. Use the following methods to troubleshoot this issue:
 
@@ -81,9 +79,9 @@ The problem could be in the network layer, causing slow communication between th
   - **Network Interface\Bytes Total/Sec**
   - **Network Interface\Current Bandwidth**
 
-## Step 4: Troubleshoot high CPU in SQL Server
+## Step 4: Troubleshoot high CPU usage in SQL Server
 
-If CPU-intensive queries are being executed on the system, they can cause other queries to be starved of CPU capacity. More frequently, however, high CPU usage coming from queries can be an indication that queries need to be optimized. Follow these steps to approach the issue:
+If CPU-intensive queries are being executed on the system, they can cause other queries to be starved of CPU capacity. More frequently, however, high CPU usage coming from queries can be an indication that queries need to be optimized. Follow these steps to troubleshoot the issue:
 
 1. First, find out if SQL Server is causing high CPU usage (using Perfmon counters).
 1. Identify queries contributing to CPU usage.
@@ -130,7 +128,7 @@ Low memory on the system overall or inside SQL Server can lead to slowness when 
 
   - **Memory\Available MBytes**
   - **Process(*)\Working Set** (all instances)
-  - **Process(*)\Private Bytes**  (all instances)
+  - **Process(*)\Private Bytes** (all instances)
 
 - For internal memory pressure, use SQL Server queries to query [sys.dm_os_memory_clerks](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql) or use [DBCC MEMORYSTATUS](dbcc-memorystatus-monitor-memory-usage.md).
 
@@ -147,7 +145,7 @@ Short blocking happens on database systems like SQL Server all the time. But pro
 Use the following steps to troubleshoot the issue:
 
 1. Identify the head blocking session by looking at the column `blocking_session_id` in [sys.dm_exec_requests](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql) DMV output or the column `BlkBy` in `sp_who2` stored procedure output.
-1. Find the query(s) that the head blocking chain executes  (what is holding locks for a prolonged period).
+1. Find the query(s) that the head blocking chain executes (what is holding locks for a prolonged period).
 
     If no queries are actively running on the head blocking session, there could have been an orphaned transaction due to application issues.
 
@@ -197,7 +195,7 @@ Follow these steps to troubleshoot these issues:
       * ********************************************
       ```
 
-1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx).
+1. If you locate one of these errors, identify which version (Cumulative Update) of SQL Server you are on, and see if there are any fixed issues in Cumulative updates shipped after your current CU. For the SQL Server fixes, see [Latest updates available for currently supported versions of SQL Server](/troubleshoot/sql/general/determine-version-edition-update-level#latest-updates-available-for-currently-supported-versions-of-sql-server). For a detailed fix list, you can download this [Excel file](https://download.microsoft.com/download/d/6/5/d6583d78-9956-45c1-901d-eff8b5270896/SQL%20Server%20Builds%20V4.xlsx).
 
 1. Use [Troubleshooting SQL Server Scheduling and Yielding](https://techcommunity.microsoft.com/t5/sql-server-support-blog/troubleshooting-sql-server-scheduling-and-yielding/ba-p/319148) for more ideas.
 
