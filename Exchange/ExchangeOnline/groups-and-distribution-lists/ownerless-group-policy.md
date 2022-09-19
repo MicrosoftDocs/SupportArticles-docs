@@ -82,7 +82,7 @@ To view the actionable buttons, use the following options:
 - Double-click the email message to open it in Full Screen mode.
 - Make sure that the sender's UPN is the same as the primary email address. For more information, see [Change a user name and email address](/microsoft-365/admin/add-users/change-a-user-name-and-email-address).
 
-## Issue: The ownerless group is configured in Group Policy, but no member received the notification
+## Issue: The policy for the ownerless group is configured, but no member receives the notification
 
 Make sure that the sender that's configured in Group Policy is either a user mailbox or a group mailbox. If you configure any sender other than a user mailbox or group mailbox, the notification is not sent.
 
