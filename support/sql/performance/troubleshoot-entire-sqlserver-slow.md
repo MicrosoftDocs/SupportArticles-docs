@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot SQL Server or database application that is slow 
+title: Troubleshoot entire SQL Server or database application that is slow 
 description: This article describes how to troubleshoot a situation where the entire SQL Server seems to be slow.
 ms.date: 09/01/2022
 ms.custom: sap:Performance
@@ -59,7 +59,7 @@ For more information, see [Slow performance on Windows Server when using the Bal
 
 ---
 
-This issue can also be caused by another service or application. Use perfmon to troubleshoot.
+This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
