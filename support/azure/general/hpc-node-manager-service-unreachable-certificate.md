@@ -8,13 +8,13 @@ author: genlin
 ms.reviewer: hclvteam
 ---
 
-# "Node management service unreachable" error in HPC
+# Node error "Node management service unreachable"
 
-This article provides a solution for an issue where HPC Management console shows "Node management service unreachable".
+This article provides a solution for an issue where HPC Management console shows the "HPC Node Manager Service Unreachable" error.
 
 ## Symptoms
 
-A compute node's health is error, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
+A compute node's heathl in the error state, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
 
 :::image type="content" source="./media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachable.png" alt-text="Image show the HPC Node Manager Service Unreachable error.":::
 
@@ -39,7 +39,7 @@ To generate a new self-signed certificate, follow these steps:
     ```
 1. Open **certmgr.msc** > **Personal** > **Certificates**, locate the certificate named **HPC Pack Communication**.
 1. Right click the certificate, select **All Tasks** > **Export** > **Next**.
-1. In the **Export private Key** section, select **Yes, export the private Key** checkbox:  
+1. In the **Export private Key** section, select **Yes, export the private Key** checkbox.
 1. In the **Export file format** section, make sure the following settings are selected:
     -  Personal Information Exchange - PKC #12 (.PFC)
     - Include all certificates in the certification path if possible
