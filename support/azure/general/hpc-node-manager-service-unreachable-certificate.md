@@ -1,6 +1,6 @@
 ---
-title: Node management service unreachable error in HPC
-description: Provides a solution for an issue where HPC Management shows the "Node management service unreachable" error.
+title: HPC Node Manager Service Unreachable error
+description: Provides a solution for an issue where HPC Management console shows the "HPC Node Manager Service Unreachable" error.
 ms.date: 09/19/2022
 ms.service: azure-common-issues-support
 ms.author: genli
@@ -8,7 +8,7 @@ author: genlin
 ms.reviewer: hclvteam
 ---
 
-# Node error "Node management service unreachable"
+# Node error "HPC Node Manager Service Unreachable"
 
 This article provides a solution for an issue where HPC Management console shows the "HPC Node Manager Service Unreachable" error.
 
