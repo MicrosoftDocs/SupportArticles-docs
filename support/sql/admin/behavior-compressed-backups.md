@@ -22,7 +22,7 @@ This article supplements that documentation and provides more information on the
 
 ## More information
 
-When you append a compressed backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets, you may end up with a Backup in a different compression state than expected.
+When you append a compressed backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets you may end up with a Backup in a different compression state than expected.
 
 This is true only under the following circumstances:
 
@@ -121,7 +121,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     restore headeronly from DISK = N'E:\testbackup.bak'
     ```
 
-- Another limitation is that Compressed backups cannot oexist with NT Backups:
+- Another limitation is that Compressed backups can't coexist with NT Backups:
 
     ```sql
     -- Take an NT Backup
