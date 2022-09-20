@@ -23,8 +23,6 @@
       href: ../authentication/invalid-provider-specified-error.md
     - name: Can't sign in Microsoft 365 from multiple federated domains
       href: ../authentication//cant-sign-in-office-365-multiple-domain-federation.md
-    - name: Unable to sign in to Microsoft 365 desktop applications
-      href: ../authentication/unable-sign-in-m365-desktop-apps.md
   - name: Miscellaneous
     items:
     - name: Can't find or insert any clipart
