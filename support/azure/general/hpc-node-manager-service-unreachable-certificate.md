@@ -18,7 +18,7 @@ A compute node's health is error, and you see the "HPC Node Manager Service Unre
 
 :::image type="content" source="/media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachabl.png" alt-text="Image show the HPC Node Manager Service Unreachable error.":::
 
-The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc) shows the following error:
+The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc&preserve-view=true) shows the following error:
 
 > Can not find cert with thumbprint < thumbprint -id> in store My, LocalMachine
 
