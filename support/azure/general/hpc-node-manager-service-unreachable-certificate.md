@@ -16,7 +16,7 @@ This article provides a solution for an issue where HPC Management console shows
 
 A compute node's health is error, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
 
-:::image type="content" source="/media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachabl.png" alt-text="Image show the "HPC Node Manager Service Unreachable" error":::
+:::image type="content" source="/media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachabl.png" alt-text="Image show the HPC Node Manager Service Unreachable error":::
 
 The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc) shows the following error:
 
@@ -28,7 +28,7 @@ This issue occurs if the certificates installed on the head node and compute nod
 
 ## Resolution
 
-To resolve the issue, you can either export the certificate from the head node, then import it to compute node. Or generate a new self-signed certificate, then install it on both head node and compute node.
+To resolve the issue, you can either export the certificate from the head node, then import it to the compute node. Or generate a new self-signed certificate, then install it on both head node and compute node.
 
 To generate a new self-signed certificate, follow these steps:
 
