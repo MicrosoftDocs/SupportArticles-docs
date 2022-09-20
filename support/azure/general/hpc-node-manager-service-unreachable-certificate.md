@@ -36,9 +36,9 @@ To generate a new self-signed certificate, follow these steps:
 1. Run the following command to generate the self-signed certificate:
 
     ```powershell
-    New-SelfSignedCertificate -Subject "CN=HPC Pack 2019 Communication" -KeySpec KeyExchange -KeyLength 2048 -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -CertStoreLocation cert:\CurrentUser\My -KeyExportPolicy Exportable -HashAlgorithm SHA256 -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" -NotAfter (Get-Date).AddYears(5) -NotBefore (Get-Date).AddDays(-1)
+    New-SelfSignedCertificate -Subject "CN=HPC Pack Communication" -KeySpec KeyExchange -KeyLength 2048 -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -CertStoreLocation cert:\CurrentUser\My -KeyExportPolicy Exportable -HashAlgorithm SHA256 -Provider "Microsoft Enhanced RSA and AES Cryptographic Provider" -NotAfter (Get-Date).AddYears(5) -NotBefore (Get-Date).AddDays(-1)
     ```
-1. Open **certmgr.msc** > **Personal** > **Certificates**, located the certificate you just created.
+1. Open **certmgr.msc** > **Personal** > **Certificates**, located the certificate named **HPC Pack Communication**.
 1. Right click the certificate, select **All Tasks** > **Export** > **Next**.
 1. In the **Export private Key** section, select **Yes, export the private Key** checkbox:  
 1. In the **Export file format** section, make sure the following settings are selected:
