@@ -59,6 +59,8 @@
           href: ../administration/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on.md
         - name: Email items missing on Exchange ActiveSync client
           href: ../administration/items-missing-on-exchange-activesync-client.md
+        - name: Error when recovering inactive mailboxes
+          href: ../administration/recover-inactive-mailboxes-error.md
         - name: Event ID 1014 when connecting to Exchange Online mailbox
           href: ../administration/event-id-1014-when-connecting-to-exchange-online-mailbox.md
         - name: Federated users can't connect to an online mailbox
