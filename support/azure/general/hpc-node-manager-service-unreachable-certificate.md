@@ -24,7 +24,7 @@ The [HPC service log](/powershell/high-performance-computing/using-service-log-f
 
 ## Cause
 
-This issue occurs if the certificate installed on the head node and compute node are not matched.
+This issue occurs if the certificates installed on the head node and compute node aren't matched.
 
 ## Resolution
 
