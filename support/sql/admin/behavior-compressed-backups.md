@@ -150,7 +150,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    After executing the sql script, you may receive: [3098 and 3013 error message](#3098-and-3013-error-message)
+    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages)
 
 ### 3098 and 3013 error messages
 
