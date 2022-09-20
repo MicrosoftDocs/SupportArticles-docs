@@ -18,7 +18,7 @@ appliesto:
   - Exchange Server
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/19/2022
+ms.date: 09/20/2022
 ---
 
 # Hybrid Configuration wizard doesn't connect to Office 365
@@ -61,7 +61,7 @@ To enable TLS 1.2 in the WinHTTP component, follow these steps:
 
     1. Add a DWORD entry that's named `DefaultSecureProtocols`. To enable TLS 1.2, set the DWORD value to `0x00000800` (hexadecimal) or `2048` (decimal). Or, to enable TLS 1.2, TLS 1.1, and TLS 1.0, set the DWORD value to `0x00000A80` (hexadecimal) or `2688` (decimal).
 
-    1. On x64-based computers, also add `DefaultSecureProtocols` by giving it the same value as for the `Wow6432Node` path:         `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`.
+    1. On x64-based computers, also add the `DefaultSecureProtocols` entry (use the same value for `DefaultSecureProtocols` as in the previous step) to the `Wow6432Node` path: `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Internet Settings\WinHttp`.
 
 To enable TLS 1.2 at the OS level, follow the procedures that are described in [Configuring Schannel protocols in the Windows Registry](/dotnet/framework/network-programming/tls#configuring-schannel-protocols-in-the-windows-registry) and [SystemDefaultTlsVersions](/dotnet/framework/network-programming/tls#systemdefaulttlsversions).
 
