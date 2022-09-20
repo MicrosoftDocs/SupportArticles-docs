@@ -1,6 +1,5 @@
 ---
 title: Node management service unreachable error in HPC
-ID
 description: Provides a solution for an issue where HPC Management shows the "Node management service unreachable" error.
 ms.date: 09/19/2022
 ms.service: azure-common-issues-support
