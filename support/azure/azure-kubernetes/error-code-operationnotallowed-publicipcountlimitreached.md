@@ -33,7 +33,7 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > (Minimum) New Limit Required: 208.
 >
-> Submit a request for Quota increase at `https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/<parameter-id>` by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at `https://docs.microsoft.com/azure/azure-supportability/per-vm-quota-requests`"
+> Submit a request for Quota increase at `https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/<parameter-id>` by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at `https://learn.microsoft.com/azure/azure-supportability/per-vm-quota-requests`"
 
 Or, you receive the following error message:
 
