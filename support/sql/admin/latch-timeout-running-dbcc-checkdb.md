@@ -19,7 +19,7 @@ Consider the following scenario:
 
 - You have a database that contains one or more very large tables.
 - The tables are typically several hundred gigabytes (GB) in size.
-- You run the DBCC CHECKDB statement on the database in SQL Server.
+- You run the `DBCC CHECKDB` statement on the database in SQL Server.
 
 In this scenario, an error message that resembles the following is written to the SQL Server error log:
 

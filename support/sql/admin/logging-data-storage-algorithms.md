@@ -12,7 +12,7 @@ ms.prod: sql
 
 This article discusses how Microsoft SQL Server logging and data algorithms extend data reliability and integrity.
 
-To learn more about the underlying concepts of the engines and about ARIES (Algorithm for Recovery and Isolation Exploiting Semantics), see the following ACM Transactions on Database Systems document (under Volume 17, Number 1, March 1992):
+To learn more about the underlying concepts of the engines and about Algorithm for Recovery and Isolation Exploiting Semantics (ARIES), see the following ACM Transactions on Database Systems document (under Volume 17, Number 1, March 1992):
 
 External link: [ARIES: A Transaction Recovery method Supporting Fine-Granularity Locking and Partial Rollbacks Using Write-Ahead Logging](https://dl.acm.org/doi/10.1145/128765.128770)
 
@@ -95,12 +95,11 @@ This option allows SQL Server to detect incomplete I/O operations caused by powe
 
 Although SQL Server database pages are 8 KB, disks perform I/O operations by using a 512-byte sector. Therefore, 16 sectors are written per database page. A torn page can occur if the system fails (for example, because of a power failure) between the time that the operating system writes the first 512-byte sector to disk and the completion of the 8-KB I/O operation. If the first sector of a database page is successfully written before the failure, the database page on disk will appear as updated, although it may not have succeeded.
 
-By using battery-backed disk controller caches, you can make sure that data is successfully written to disk or not written at all. In this situation, do not set torn page detection to "true" because this is not necessary.
+By using battery-backed disk controller caches, you can make sure that data is successfully written to disk or not written at all. In this situation, don't set torn page detection to "true" because this isn't necessary.
 
 > [!NOTE]
-> Torn page detection is not enabled by default in SQL Server. For more information, see the following MSDN website:
-
-[ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)
+> Torn page detection isn't enabled by default in SQL Server. For more information, see 
+[ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
 
 ### Log parity
 
@@ -108,21 +107,19 @@ Log parity checking is similar to torn page detection. Each 512-byte sector cont
 
 ### Performance impacts
 
-All versions of SQL Server open the log and data files by using the Win32 CreateFile function. The dwFlagsAndAttributes member includes the `FILE_FLAG_WRITE_THROUGH` option when they are opened by SQL Server.
+All versions of SQL Server open the log and data files by using the Win32 CreateFile function. The dwFlagsAndAttributes member includes the `FILE_FLAG_WRITE_THROUGH` option when they're opened by SQL Server.
 
-`FILE_FLAG_WRITE_THROUGH`
-
-Instructs the system to write through any intermediate cache and go directly to disk. The system can still cache write operations, but cannot lazily flush them.
+`FILE_FLAG_WRITE_THROUGH` instructs the system to write through any intermediate cache and go directly to disk. The system can still cache write operations, but can't lazily flush them.
 
 The `FILE_FLAG_WRITE_THROUGH` option makes sure that when a write operation returns a successful completion, the data is correctly stored in stable storage. This aligns with the WAL protocol that ensures the data.
 
-Many disk drives (SCSI and IDE) contain onboard caches of 512 KB, 1 MB, or larger. However, the drive caches usually rely on a capacitor and not a battery-backed solution. These caching mechanisms cannot guarantee writes across a power cycle or similar failure point. They only guarantee the completion of the sector write operations. This is specifically why the torn write and log parity detection were built into SQL Server 7.0 and later versions. As the drives continue to grow in size, the caches become larger, and they can expose larger amounts of data during a failure.
+Many disk drives (SCSI and IDE) contain onboard caches of 512 KB, 1 MB, or larger. However, the drive caches usually rely on a capacitor and not a battery-backed solution. These caching mechanisms can't guarantee writes across a power cycle or similar failure point. They only guarantee the completion of the sector write operations. This is specifically why the torn write and log parity detection were built into SQL Server 7.0 and later versions. As the drives continue to grow in size, the caches become larger, and they can expose larger amounts of data during a failure.
 
 Many hardware vendors provide battery-backed disk controller solutions. These controller caches can maintain the data in the cache for several days and even allow the caching hardware to be placed in a second computer. When power is correctly restored, the unwritten data is flushed before the further data access is allowed. Many of them allow a percentage of read versus write cache to be established for optimal performance. Some contain large memory storage areas. In fact, for a specific segment of the market, some hardware vendors provide high-end battery-backed disk caching controller systems with 6 GB of cache. These can significantly improve database performance.
 
 Advanced caching implementations will handle the `FILE_FLAG_WRITE_THROUGH` request by not disabling the controller cache because they can provide true rewrite capabilities in the event of a system reset, power failure, or other failure point.
 
-I/O transfers without the use of a cache can be longer because of to the mechanical time that is required to move the drive heads, spin rates, and other limiting factors.
+I/O transfers without the use of a cache can be longer because of the mechanical time that's required to move the drive heads, spin rates, and other limiting factors.
 
 ### Sector ordering
 
@@ -137,7 +134,7 @@ For discussion purposes, assume that all sectors of the data page are sorted to 
 When you evaluate the optimal performance factors for a database server, there are many factors to consider. The most important of these is, "Does my system allow valid `FILE_FLAG_WRITE_THROUGH` capabilities?"
 
 > [!NOTE]
-> Any cache that you are using must fully support a battery-backed solution. All other caching mechanisms are suspect to data corruption and data loss. SQL Server makes every effort to ensure the WAL by enabling `FILE_FLAG_WRITE_THROUGH`.
+> Any cache that you're using must fully support a battery-backed solution. All other caching mechanisms are suspected to have data corruption and data loss. SQL Server makes every effort to ensure the WAL by enabling `FILE_FLAG_WRITE_THROUGH`.
 
 Testing has shown that many disk drive configurations may contain write caching without the appropriate battery Backup. SCSI, IDE, and EIDE drives take full advantage of write caches. For more information about how SSDs work together with SQL Server, see the following CSS SQL Server Engineers Blog article:
 
@@ -157,7 +154,7 @@ A disk write task begins to store the host data to disk. Host write commands con
 
 ### Automatic Write Reallocation (AWR)
 
-Another common technique that is used to protect data is to detect bad sectors during data manipulation. The following explanation comes from a leading IDE drive manufacturer's website:
+Another common technique that's used to protect data is to detect bad sectors during data manipulation. The following explanation comes from a leading IDE drive manufacturer's website:
 
 This feature is part of the write cache and reduces the risk of data loss during deferred write operations. If a disk error occurs during the disk write process, the disk task stops and the suspect sector is reallocated to a pool of alternate sectors that are located at the end of the drive. Following the reallocation, the disk write task continues until it is complete.
 
@@ -272,4 +269,4 @@ GO
 ```
 
 SQL Server requires that systems support **guaranteed delivery to stable media**, as described in the [SQL Server I/O Reliability Program Review Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf) download document. For more information about the input and output requirements for the SQL Server database engine, see
-[Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576)
+[Microsoft SQL Server Database Engine Input/Output Requirements](https://support.microsoft.com/help/967576).
