@@ -16,7 +16,7 @@ This article provides a solution for an issue where HPC Management console shows
 
 A compute node's health is error, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
 
-:::image type="content" source="/media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachable.png" alt-text="Image show the HPC Node Manager Service Unreachable error.":::
+:::image type="content" source="./media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachable.png" alt-text="Image show the HPC Node Manager Service Unreachable error.":::
 
 The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc&preserve-view=true) shows the following error:
 
