@@ -14,7 +14,7 @@ This article provides a solution for an issue where HPC Management console shows
 
 ## Symptoms
 
-A compute node's heathl in the error state, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
+A compute node's health in the error state, and you see the "HPC Node Manager Service Unreachable" error in the HPC management console.
 
 :::image type="content" source="./media/hpc-node-manager-service-unreachable-certificate/node-manager-service-unreachable.png" alt-text="Image show the HPC Node Manager Service Unreachable error.":::
 
