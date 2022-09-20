@@ -71,7 +71,7 @@ Additionally, run `inetcpl.cpl` to make sure that TLS 1.2 is enabled on the **Ad
 
 ## More information
 
-The HCW returns an error message if the [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession) cmdlet can't connect to the `outlook.office365.com endpoint`. The `New-PSSession` cmdlet uses WinHTTP to make the connection. The error occurs if TLS 1.2 isn't enabled in the WinHTTP component. You can reproduce the error by using the HCW Diagnostic Tools. In HCW, press **F12** to open the Diagnostic Tools pane, and then select the **Open Exchange Online PowerShell** option.
+The HCW returns an error message if the [New-PSSession](/powershell/module/microsoft.powershell.core/new-pssession) cmdlet can't connect to the `outlook.office365.com` endpoint. The `New-PSSession` cmdlet uses WinHTTP to make the connection. The error occurs if TLS 1.2 isn't enabled in the WinHTTP component. You can reproduce the error by using the HCW Diagnostic Tools. In HCW, press **F12** to open the Diagnostic Tools pane, and then select the **Open Exchange Online PowerShell** option.
 
 :::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/hybrid-configuration-wizard-diagnostics.png" border="true" alt-text="Screenshot of the Open Exchange Online PowerShell option in the Diagnostic Tools pane of HCW." lightbox="./media/hybrid-configuration-wizard-not-connect-to-office-365/hybrid-configuration-wizard-diagnostics-lrg.png":::
 
