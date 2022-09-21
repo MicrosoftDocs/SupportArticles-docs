@@ -78,6 +78,78 @@ $subscription=(Get-AzContext).Subscription.Id
 Invoke-AzResourceAction -Action enableConsole -ResourceId /subscriptions/$subscription/providers/Microsoft.SerialConsole/consoleServices/default -ApiVersion 2018-05-01
 ```
 
+## Enabling least privilege access to Serial console using RBAC
+
+To enable least privilege access to Serial console, you need to create an Azure role with the required permissions that has rights to the virtual machine's (the virtual machine you need to access Serial console on) resource group or the subscription the VM is in. You can assign this Azure role to users that need to access Serial console.
+
+The role you create will need the following Azure Actions permissions:
+
+```Actions
+"Microsoft.Compute/virtualMachines/start/action",
+"Microsoft.Compute/virtualMachines/read",
+"Microsoft.Compute/virtualMachines/write",
+"Microsoft.Resources/subscriptions/resourceGroups/read",
+"Microsoft.Storage/storageAccounts/listKeys/action",
+"Microsoft.Storage/storageAccounts/read",
+"Microsoft.SerialConsole/serialPorts/connect/action"
+```
+
+The table below explains what each Azure action does:
+
+| Azure Action | Description  |
+|---|---|
+| "Microsoft.Compute/virtualMachines/start/action" | Starts the virtual machine |
+| "Microsoft.Compute/virtualMachines/read" | Get the properties of a virtual machine |
+| "Microsoft.Compute/virtualMachines/write" | Creates a new virtual machine or updates an existing virtual machine |
+| "Microsoft.Resources/subscriptions/resourceGroups/read | Gets or lists resource groups |
+| "Microsoft.Storage/storageAccounts/listKeys/action" | Returns the access keys for the specified storage account
+| "Microsoft.Storage/storageAccounts/read" | Returns the list of storage accounts or gets the properties for the specified storage account |
+| "Microsoft.SerialConsole/serialPorts/connect/action" | Connect to a serial port |
+
+The JSON below can be used to define a custom role with least privilege access to VM's in a subscription AND VM's in a resource group in a subscription.
+
+If you'd like to only assign access to VM's in a resource group, then delete the first value ` "/subscriptions/<subscriptionID>/"` in the `assignableScopes` property below.
+
+If you'd like to assign access to VM's in a subscription, then delete the second value ` "/subscriptions/<subscriptionID>/resourceGroups/<resourceGroup>"` in the `assignableScopes` property below.
+
+```json
+"properties": {
+    "roleName": "Azure Serial Console Access Role",
+    "description": "Serial Console access with least privilege.",
+    "assignableScopes": [
+        "/subscriptions/<subscriptionID>/"
+        "/subscriptions/<subscriptionID>/resourceGroups/<resourceGroup>"
+    ],
+    "permissions": [
+        {
+            "actions": [
+                "Microsoft.Compute/virtualMachines/start/action",
+                "Microsoft.Compute/virtualMachines/read",
+                "Microsoft.Compute/virtualMachines/write",
+                "Microsoft.Resources/subscriptions/resourceGroups/read",
+                "Microsoft.Storage/storageAccounts/listKeys/action",
+                "Microsoft.Storage/storageAccounts/read",
+                "Microsoft.SerialConsole/serialPorts/connect/action"
+            ],
+            "notActions": [],
+            "dataActions": [],
+            "notDataActions": []
+        }
+    ]
+}
+```
+
+For instructions on how to use Azure portal to create a custom role for least privilege access to Serial console, read the following documentation [Create or update Azure custom roles using the Azure portal
+](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal).
+
+For [Step 1: Determine the permissions you need](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal#step-1-determine-the-permissions-you-need) the permissions you need for the role are the Azure actions shown above.
+
+For [Step 5: Assignable scope](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal#step-5-assignable-scopes) set the scope to be the VM's resource group if you only want the user with the role to have access to a particular VM's Serial console OR set the scope to be the subscription if you want the user to have Serial console access to any VM in the subscription.
+
+For instructions on how to use Azure portal to assign roles, read the following documentation [Assign Azure roles using the Azure portal
+](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?tabs=current)
+
+
 ## Next steps
 
 * Learn more about the [Azure Serial Console for Linux VMs](./serial-console-linux.md)
