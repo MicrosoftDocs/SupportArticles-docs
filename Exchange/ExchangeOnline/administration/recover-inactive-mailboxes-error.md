@@ -15,7 +15,7 @@ ms.reviewer: malgzetsky, lindabr
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 9/20/2022
+ms.date: 9/21/2022
 ---
 # "The mailbox has additional shards that need recovery" error when recovering inactive mailboxes
 
@@ -27,7 +27,7 @@ You're an administrator in an organization and have sufficient permissions. When
   
 ## Cause  
 
-This issue occurs if the inactive mailboxes have `AuxPrimary` shards in addition to `Primary` and `MainArchive` shards.  
+This issue occurs if the inactive mailboxes have `AuxPrimary` shards in addition to `Primary` shards.  
 
 To see which inactive mailboxes are affected by multiple shards, you can check the mailbox location information by running the following cmdlet in Exchange Online PowerShell:  
   
