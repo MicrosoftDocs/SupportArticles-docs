@@ -8,14 +8,14 @@ audience: ITPro
 ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
-  - Exchange Online
+  - Exchange Hybrid
   - CSSTroubleshoot
   - CI 165704
 ms.reviewer: haembab, ninob, meerak
 appliesto: 
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/12/2022
+ms.date: 09/21/2022
 ---
 # "Multiple entries" error when a remote move migration fails
 

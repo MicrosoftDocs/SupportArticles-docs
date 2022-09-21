@@ -251,6 +251,8 @@
           href: ../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md
         - name: Operation has timed out when using New-MoveRequest
           href: ../move-mailboxes/operation-has-timed-out-error-when-moving-mailbox.md
+        - name: '"Multiple entries" error when a remote move migration fails'
+          href: ../move-mailboxes/migration-fails-multiple-entries-error.md
     - name: Public folders
       items:
         - name: Can't access legacy on-premises public folders
