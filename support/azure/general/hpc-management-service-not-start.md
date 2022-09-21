@@ -25,15 +25,13 @@ Check HPC Management event logs:
 
 :::image type="content" source="media/hpc-management-service-not-start/instancecacheloadexception.png" alt-text="Screenshot that shows HPC Management event logs.":::
 
-HPC Management Service crashed with "InstanceCacheLoadException". The instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, 2), but in your HPCManagement  database, there are tens of instances with two or three versions in "Current" state.
+HPC Management Service crashed with "InstanceCacheLoadException". The instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, instanceState is 2), but in your HPCManagement database, there are tens of instances with two or three versions in "Current" state.
 
 ## Resolution
 
 To resolve the issue, fix the instances in wrong state. To do this, follow these steps:
 
-1. Create a text file with a .ps1 extension.
-
-2. Copy the following PowerShell script and paste it to the .ps1 file.
+1. Save the following PowerShell script as FixInstanceStateError.ps1 file.
 
     ```powershell
     param (
@@ -63,14 +61,14 @@ To resolve the issue, fix the instances in wrong state. To do this, follow these
     }
     ```
 
-3. Run PowerShell as an Administrator.
+2. Run PowerShell as an Administrator.
 
-4. Run the following command:
+3. Run the following command:
 
     ```powershell
-    .\<filename>.ps1 -ServerInstance SQLserver -Database HpcManagement
+    .\FixInstanceStateError.ps1 -ServerInstance SQLserver -Database HpcManagement
     ```
 
-5. Restart the HPC SDM Store Service and HPC Management Service.
+4. Restart the HPC SDM Store Service and HPC Management Service.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
