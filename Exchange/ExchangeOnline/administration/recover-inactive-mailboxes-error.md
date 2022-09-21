@@ -32,7 +32,7 @@ This issue occurs if the inactive mailboxes have `AuxPrimary` shards in addition
 To see which inactive mailboxes are affected by multiple shards, you can check the mailbox location information by running the following cmdlet in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):  
   
 ```powershell
-Get-Mailbox -InactiveMailboxOnly | select -expand mailboxlocations
+Get-Mailbox -InactiveMailboxOnly | Format-List UserPrincipalName,MailboxLocations
 ```
 
 In the following example output, the mailbox shard location type has `AuxPrimary` and `Primary`, which means the mailbox has `AuxPrimary` shards:
