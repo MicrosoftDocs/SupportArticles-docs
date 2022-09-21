@@ -59,13 +59,15 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: Error when deleting OneDrive synced file locally
+      href: ../sync/delete-onedrive-synced-file-error.md
     - name: Sign into OneDrive sync app error AADSTS50020
       href: ../sync/sign-into-onedrive-sync-app-error.md
     - name: OneDrive for Business can't sync after tenant migration
       href: ../sync/cant-sync-after-migration.md
     - name: OneDrive local folder name isn't updated
       href: ../sync/onedrive-local-folder-name-not-updated.md
-    - name: Sync error “Sorry, OneDrive can’t add your folder right now” 
+    - name: Sync error “Sorry, OneDrive can't add your folder right now” 
       href: ../sync/cant-add-folder-right-now.md
     - name: Troubleshoot sync issues
       href: ../sync/troubleshoot-sync-issues.md
