@@ -31,11 +31,11 @@ To solve the issue, follow these steps:
 
 1. - If you use a `System.Windows.Forms.Form` object to display a modal dialog with an owner window, set the Form object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
 
-   - If you use a `System.Windows.Window` object to display a modal dialog with an owner window, set the Window object's `ShowInTaskbar` property to `false` prior to calling the `ShowDialog` method.
+   - If you use a `System.Windows.Window` object to display a modal dialog with an owner window, set the Window object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
 
 1. Create a single taskbar button for windows in a window ownership group, which includes the top-level window and any owned windows.
 
-When users select the taskbar button, the system will activate the correct window in the ownership group.
+When the taskbar button is selected, the system will activate the correct window in the ownership group.
 
 ## More information
 
