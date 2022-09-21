@@ -29,7 +29,7 @@ You're an administrator in an organization and have sufficient permissions. When
 
 This issue occurs if the inactive mailboxes have `AuxPrimary` shards in addition to `Primary` and `MainArchive` shards.  
 
-To see which inactive mailboxes are affected by the shards, you can check the mailbox location information by running the following cmdlet in Exchange Online PowerShell:  
+To see which inactive mailboxes are affected by multiple shards, you can check the mailbox location information by running the following cmdlet in Exchange Online PowerShell:  
   
 ```powershell
 Get-Mailbox -InactiveMailboxOnly | select -expand mailboxlocations
