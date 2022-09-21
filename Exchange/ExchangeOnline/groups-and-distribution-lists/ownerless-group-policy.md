@@ -34,7 +34,7 @@ The activities in the group are used to identify active members. If there are no
 
 ## Will notifications be limited if a tenant has more than 10,000 ownerless groups?  
 
-In Exchange Online, each mailbox has a limit of 10,000 messages to be sent per day. Since ownerless group notification messages are sent by one sender, the sender will be throttled for a tenant that has a large number of ownerless groups. Therefore, the account that's used to send the notification messages can't send more than 10,000 messages per day.  
+In Exchange Online, each mailbox has a limit of 10,000 messages to be sent per day. Because ownerless group notification messages are sent by one sender, the sender will be throttled for a tenant that has many ownerless groups. Therefore, the account that's used to send the notification messages can't send more than 10,000 messages per day.  
 
 ## How do I customize an ownership notification?  
 
@@ -48,7 +48,7 @@ If members decline the ownership, they won't receive any further notifications. 
 
 ## What occurs if the notification period ends, and members don't respond?  
 
-Assume that the notification period is four weeks. After four weeks, the notifications are no longer sent. In [Microsoft Purview compliance portal](https://go.microsoft.com/fwlink/p/?linkid=2077149), admins can see which ownerless group is unattended in the [audit log](/microsoft-365/compliance/set-up-basic-audit#step-3-search-the-audit-log) by selecting the **Unattended ownerless group** activity. If an audit log is generated, admins can see an alert in the compliance portal. In this scenario, Microsoft 365 groups don't take any further action. Admins have to take further action on their own to resolve the ownerless groups, such as contacting group members directly.
+Assume that the notification period is four weeks. After four weeks, the notifications are no longer sent. In [Microsoft Purview compliance portal](https://go.microsoft.com/fwlink/p/?linkid=2077149), admins can see which ownerless group is unattended in the [audit log](/microsoft-365/compliance/set-up-basic-audit#step-3-search-the-audit-log) by selecting the **Unattended ownerless group** activity. If an audit log is generated, admins can see an alert in the compliance portal. In this scenario, Microsoft 365 groups don't take any further action. Admins have to take further action on their own to resolve the status of ownerless groups, such as contacting group members directly.
 
 :::image type="content" source="media/ownerless-group-policy/activities.png" alt-text="Screenshot of the Activities window in which the Unattended ownerless group option is selected.":::
 
