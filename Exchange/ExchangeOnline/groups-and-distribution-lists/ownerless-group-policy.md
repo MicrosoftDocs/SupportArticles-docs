@@ -16,17 +16,17 @@ appliesto:
   - Exchange Online via Office 365 E Plans
   - Exchange Online via Office 365 P Plans
 search.appverid: MET150
-ms.date: 7/26/2022
+ms.date: 9/21/2022
 ---
 # Microsoft 365 ownerless group policy
 
-Ownerless group policies apply to Microsoft 365 groups or teams. Only Global administrators can [set or edit the policy](/microsoft-365/admin/create-groups/ownerless-groups-teams). The policy queries active members of an ownerless group about whether they'll accept the group ownership. Notifications are sent weekly starting within 24 hours of the policy creation. This article answers questions that you might have about ownerless groups and their policies.
+The policy for ownerless groups applies to Microsoft 365 groups or teams. Only Global administrators can [set or edit the policy](/microsoft-365/admin/create-groups/ownerless-groups-teams). The policy queries active members of an ownerless group about whether they'll accept the group ownership. Notifications are sent weekly starting within 24 hours of the policy creation. This article answers questions that you might have about ownerless groups and their policies.
 
-## Does the ownerless group policy apply to Yammer, SharePoint, Stream and so on?
+## Does the policy for ownerless groups apply to Yammer, SharePoint, Stream and so on?
 
-For Yammer: If a tenant is in Native mode, Yammer groups are identified as Microsoft 365 groups. In this scenario, the ownerless group policy works as expected.  
+For Yammer: If a tenant is in Native mode, Yammer groups are identified as Microsoft 365 groups. In this scenario, the policy for ownerless groups works as expected.  
 
-For SharePoint, Stream, and other applications: Not all groups can be identified as Microsoft 365 groups. Therefore, the ownerless group policy might not work.
+For SharePoint, Stream, and other applications: Not all groups can be identified as Microsoft 365 groups. Therefore, the policy for ownerless groups might not work.
 
 ## How are the active members in an ownerless group identified?
 
@@ -38,7 +38,7 @@ In Exchange Online, each mailbox has a limit of 10,000 messages to be sent per d
 
 ## How do I customize an ownership notification?  
 
-The ownership notification text can be customized when you configure the ownerless group policy. However, the customization options, such as setting a language based on a country or providing a customized URL, are not possible.
+The ownership notification text can be customized when you configure the policy for an ownerless group. However, the customization options, such as setting a language based on a country or providing a customized URL, are not possible.
 
 ## What occurs if group members accept or decline the ownership in a notification?
 
