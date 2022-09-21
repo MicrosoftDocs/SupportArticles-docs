@@ -19,14 +19,14 @@
     href: apim-troubleshooting-series.md
   - name: Blank response is returned
     href: api-return-blank-response.md
-  - name: HTTP 403 - Forbidden issues
-    href: request-throttling-http-403.md
   - name: HTTP 404 and 500 status codes
     href: soap-based-api-return-404-http-code.md
-  - name: Performance issues in API calls
-    href: performance-hit-api-calls.md
   - name: Unauthorized errors (401)
     href: unauthorized-errors-invoke-apis.md
+  - name: Performance issues in API calls
+    href: performance-hit-api-calls.md
+  - name: HTTP 403 - Forbidden issues
+    href: request-throttling-http-403.md
 
 - name: Azure Stack
   items:
@@ -67,7 +67,7 @@
   - name: Update 2.1 for Cloud Platform System Premium
     href: update-2.1-for-cloud-platform-system-premium.md
 
-- name: Azure information Protection
+- name: Azure Information Protection
   items:
   - name: Troubleshoot Azure Information Protection policy issues
     href: troubleshoot-aip-issues.md
@@ -82,7 +82,6 @@
   - name: Azure Service Fabric troubleshooter
     href: fabric-logs.md
 
-
 - name: Azure Storage
   items:
   - name: Embedded application error when install Azure backup agent
@@ -93,6 +92,24 @@
     href: optimize-createfile-function.md
   - name: Troubleshoot high CPU or disk usage issues
     href: diagnose-high-cpu-disk-perfinsights.md
+
+- name: HPC    
+  items:
+  - name: Azure Batch
+    items:
+    - name: Azure Batch content coming soon
+      href: welcome-general.yml
+      items:
+  - name: CycleCloud
+    items:
+    - name: CycleCloud content coming soon
+      href: welcome-general.yml
+      items:
+  - name: HPC Pack
+    items:
+    - name: HPC Pack content coming soon
+      href: welcome-general.yml
+      items:
 
 - name: General
   items:
