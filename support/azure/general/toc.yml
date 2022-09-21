@@ -97,8 +97,8 @@
   items:
   - name: Azure Batch
     items:
-    - name: Azure Batch content coming soon
-      href: welcome-general.yml
+    - name: AccountEncryptionKeyUnavailable error message
+      href: error-accountencryptionkeyunavailable.md
       items:
   - name: CycleCloud
     items:
