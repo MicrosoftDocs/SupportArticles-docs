@@ -1,6 +1,6 @@
 ---
 title: Performance issues can be caused by excessive entries in the TokenAndPermUserStore cache
-description: Ths article helps you resolve performance issues that occur in the TokenAndPermUserStore cache. It also explains the causes an provides workarounds. 
+description: Ths article helps you resolve performance issues that occur in the TokenAndPermUserStore cache. It also explains the causes and provides workarounds. 
 ms.date: 09/21/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -49,7 +49,7 @@ The `TokenAndPermUserStore` cache maintains the following security token types:
 - LoginToken
   - One login token per server level principal.
 - TokenPerm
-  - Records all permissions for a securable object for a UserToken and SecContextToken
+  - Records all permissions for a securable object for a UserToken and SecContextToken.
   - Each entry in this cache is a single permission on a specific securable. For example, a select permission granted on table t1 to user u1.
   - This token entry is different from entries in Access Check Results (ACR) cache. ACR entries mainly indicate whether a user or login has permission to run an entire query.
 - UserToken
@@ -96,7 +96,7 @@ ORDER BY [Num Entries] desc
 
 ## Workaround
 
-SQL Server offers two trace flags that can be used to configure the quota of the `TokenAndPermUserStore` (By default, there is no quota. This  implies that there can be any number of entries  in this cache).
+SQL Server offers two trace flags that can be used to configure the quota of the `TokenAndPermUserStore` (By default, there is no quota. This implies that there can be any number of entries in this cache).
 
 - **TF 4618** - Limits the number of entries in `TokenAndPermUserStore` to 1024.
 - **TF 4618+TF 4610** - Limits the number of entries in `TokenAndPermUserStore` to 8192.
