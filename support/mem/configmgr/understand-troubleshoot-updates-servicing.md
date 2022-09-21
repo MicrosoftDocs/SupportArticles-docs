@@ -1031,8 +1031,8 @@ The following are the state codes and the states that they represent:
 - Don't manually clean up the CMUStaging folder without verifying the correct state and content library for the Easy Setup package.
 - Don't restore the Configuration Manager database and Configuration Manager site server if there's an error in `CMUpdate`. In particular, never attempt to restore from a Virtual Machine snapshot as well. Fix the issue, and retry installation.
 - Don't reinstall Service Connection Point if an update is in process.
-- Don't use files from `cd.latest` to install a standalone primary site.
-- Don't use `cd.latest` folder to upgrade a site that's running version 1511, or sites that are running 2012 R2 SP1 or earlier versions.
+- Don't use files from the `CD.Latest` folder to install a standalone primary site.
+- Don't use the `CD.Latest` folder to upgrade a site that's running version 1511, or sites that are running 2012 R2 SP1 or earlier versions.
 - Don't manually clean up or change values in any Cm_Update\* tables.
 - Don't restart the `CMUpdate` service during installation.
 - Don't keep the CMUStaging\\\<GUID> folder open during the installation.  
