@@ -1,6 +1,6 @@
 ---
-title: Invalid reparse points affect OneDrive synced file deletion
-description: Fixes an issue in which you can't delete a OneDrive synced file locally because of invalid reparse points.
+title: Invalid reparse points affect OneDrive-synced file deletion
+description: Fixes an issue in which you can't delete a OneDrive-synced file locally because of invalid reparse points.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -16,7 +16,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 9/19/2022
 ---
-# Error 0x80071128 or 0x80071129 when deleting a OneDrive synced file locally
+# Error 0x80071128 or 0x80071129 when deleting a OneDrive-synced file locally
 
 ## Symptoms  
 
@@ -30,26 +30,26 @@ When you try to delete a file from a local folder that's synced with OneDrive, y
 
 ## Cause  
 
-When Files on Demand is enabled in OneDrive, all synced files and folders are implemented as reparse points. When you unlink OneDrive or stop syncing a library, OneDrive removes all the reparse points. If some reparse points are invalid, OneDrive can't remove them and will return the error.
+When Files on Demand is enabled in OneDrive, all synced files and folders are implemented as reparse points. When you unlink OneDrive or stop syncing a library, OneDrive removes all the reparse points. If some reparse points are invalid, OneDrive can't remove them, and it will return the error.
   
 ## Resolution  
 
 To fix this issue, use [chkdsk](/windows-server/administration/windows-commands/chkdsk) to remove invalid reparse points.
 
-**Note** Chkdsk may take several hours to complete on large drives. Therefore, we recommend that you run chkdsk outside of active hours, such as at night or on weekends.  
+**Note** Chkdsk may take several hours to complete its process on large drives. Therefore, we recommend that you run chkdsk outside active hours, such as at night or on weekends.  
   
-1. Select **Start**, type *cmd*, right-click **Command Prompt** and select **Run as administrator**.  
+1. Select **Start**, type *cmd*, right-click **Command Prompt**, and then select **Run as administrator**.  
 2. Run the `chkdsk <volume> /R /F` command.
 
-   If the drive can't be locked, you'll be prompted with the following message:  
+   If the drive can't be locked, you'll be prompted by the following message:  
 
    > Chkdsk cannot run because the volume is in use by another process. Would you like to schedule this volume to be checked the next time the system restarts? (Y/N)  
 
-   In this case, Type *Y* and press Enter. Then restart the computer and `chkdsk` will run.  
+   In this case, enter *Y*, and then press Enter. Then, restart the computer to run `chkdsk`.  
 
 ## More information
 
 A reparse point contains the following components:
 
-- Reparse point tag - The reparse tag uniquely identifies the owner of the reparse point. The owner is the implementer of the file system filter driver that's associated with a reparse tag. For more information, see [Reparse Point Tags](/windows/win32/fileio/reparse-point-tags).
-- Reparse data - The data is used by the owner to do some sort of work. In the case of the Windows Cloud Files Filter Driver (CldFlt), the data contains file IDs and so on, which are required to ask OneDrive to process the specific file. For more information, see [Reparse Points](/windows/win32/fileio/reparse-points).  
+- Reparse point tag: The reparse tag uniquely identifies the owner of the reparse point. The owner is the implementer of the file system filter driver that's associated with a reparse tag. For more information, see [Reparse Point Tags](/windows/win32/fileio/reparse-point-tags).
+- Reparse data: The data is used by the owner to do some kind of work. In the case of the Windows Cloud Files Filter Driver (CldFlt), the data contains file IDs and other information that's required for OneDrive to process the specific file. For more information, see [Reparse Points](/windows/win32/fileio/reparse-points).  
