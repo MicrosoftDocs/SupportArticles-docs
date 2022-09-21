@@ -52,6 +52,8 @@
       href: warning-1946-when-you-install-installer-package.md
     - name: Parent window gets focused when child window is shown
       href: parent-window-focused-child-window-shown.md
+    - name: Owner window gets activated when taskbar buttons are created
+      href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
     items:
     - name: Can't start transactions
