@@ -22,7 +22,7 @@ This article supplements that documentation and provides more information on the
 
 ## More information
 
-When you append a compressed backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets you may end up with a Backup in a different compression state than expected.
+When you append a compressed backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets you might end up with a Backup in a different compression state than expected.
 
 This is true only under the following circumstances:
 
@@ -35,7 +35,7 @@ Backups taken to an existing media set can coexist only if the compression setti
 
 - SQL Server's configuration option - [Backup compression default](/previous-versions/sql/sql-server-2008-r2/bb677250(v=sql.105))
 - Backup Set Options - [COMPRESSION or NO_COMPRESSION](/sql/t-sql/statements/backup-transact-sql)
-- Whether you are appending to an existing media set or writing the Backup to a new media set. For existing media, an additional factor to consider is whether the media set currently contains a compressed or an uncompressed Backup.
+- Whether you're appending to an existing media set or writing the Backup to a new media set. For existing media, an additional factor to consider is whether the media set currently contains a compressed or an uncompressed Backup.
 
 The following table summarizes the behavior of compressed backups based on the above three factors.
 
@@ -46,7 +46,7 @@ The following table summarizes the behavior of compressed backups based on the a
 | Backup statement level with `NO_COMPRESSION` clause|Success Backup - uncompressed|Error|Success|
 | Back up statement without statement level compression clause|Success Compression depends on sp_configure `backup compression` setting|Success Backup will be compressed|Success Backup will be uncompressed|
   
-As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. , if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
+As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
 
 > [!NOTE]
 > You can find the current setting for `backup compression` default option by running `sp_configure` command in the SQL Server Management Studio. If you are appending to existing media you can get the header information using restore `headeronly` command. For more information, see the Examples section later in this article.

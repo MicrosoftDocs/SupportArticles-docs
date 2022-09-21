@@ -44,7 +44,7 @@ You might also see the same behavior when using `Openquery` or when executing a 
 
 ## Cause
 
-Transact-SQL job step runs as the owner of the job step if the owner of the job step isn't a member of the `sysadmin` fixed server role. SQL Agent uses `Execute as Login` to execute the job step under the context of the owner of the job step. You can't use the `EXECUTE AS` statement across server boundaries. This behavior is by design. For more information, see the following topics in SQL Server Books Online:
+Transact-SQL job step runs as the owner of the job step if the owner of the job step isn't a member of the *sysadmin* fixed server role. SQL Agent uses `Execute as Login` to execute the job step under the context of the owner of the job step. You can't use the `EXECUTE AS` statement across server boundaries. This behavior is by design. For more information, see the following topics in SQL Server Books Online:
 
 - [EXECUTE AS (Transact-SQL)](/sql/t-sql/statements/execute-as-transact-sql)
 - [Extending Database Impersonation by Using EXECUTE AS](/previous-versions/sql/sql-server-2008-r2/ms188304(v=sql.105))
@@ -57,7 +57,7 @@ Transact-SQL job step runs as the owner of the job step if the owner of the job 
 > [!IMPORTANT]
 > The following workaround requires you to define an explicit local server login to remote server login mappings using the Security page under Properties of the linked server object. Since the Remote User column must be a SQL Server Authentication login on the remote server, the remote server's authentication mode should either already be set to Mixed mode or should be changed to Mixed mode before using the workaround.
 
-If a T-SQL job step is owned by a user that isn't part of *sysadmin* server role and if the step contains a distributed query, perform the following steps to ensure the jobs or queries don't fail:
+If a T-SQL job step is owned by a user that isn't part of the *sysadmin* server role and if the step contains a distributed query, perform the following steps to ensure the jobs or queries don't fail:
 
 1. Create a mapping for each of the job-step owner on the local server to an existing or new login on the remote server.
 2. Ensure that the login has sufficient privileges to execute various modules on the remote server that are accessed in the distributed query. For more information, see [Linked Server Properties (Security Page)](/previous-versions/sql/sql-server-2008-r2/ms188477(v=sql.105)).
@@ -77,7 +77,7 @@ Steps to reproduce the behavior
     @useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL
     ```
 
-2. Execute the following query in SSMS using a login that is a member of *sysadmin* server role and ensure it works fine.
+2. Execute the following query in SSMS using a login that's a member of *sysadmin* server role and ensure it works fine.
 
     ```sql
     SELECT * FROM <servername>.master.sys.sysobjects

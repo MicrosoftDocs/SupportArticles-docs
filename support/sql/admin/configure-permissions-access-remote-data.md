@@ -1,7 +1,7 @@
 ---
 title: Configuring permissions to access remote data
 description: This article describes how to disable ad hoc queries that use the OPENROWSET or the OPENDATASOURCE functionality in SQL Server.
-ms.date: 09/19/2022
+ms.date: 09/21/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ericbu
 ms.prod: sql
@@ -26,15 +26,15 @@ This article provides additional details on configuring **DisallowAdhocAccess** 
 
 You can disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the procedures below:
 
-- Specify the `DisallowAdHocAccess` property for the provider in SQL Server Management Studio (SSMS):
+- Specify the **DisallowAdHocAccess** property for the provider in SQL Server Management Studio (SSMS):
 
-1. Open SSMS and expand **Providers** under **Linked Servers**.
+ 1. Open SSMS and expand **Providers** under **Linked Servers**.
 
-1. Click to select the OLE DB provider you want to use, and then click the **Provider Options** button.
+ 1. Click to select the OLE DB provider you want to use, and then click the **Provider Options** button.
 
-1. Scroll down and select the **Disallow adhoc access** property check box and click **OK**. 
+ 1. Scroll down and select the **Disallow adhoc access** property check box and click **OK**.
 
-- Manually modify the Registry and add the `DisallowAdHocAccess` value.
+- Manually modify the registry and add the **DisallowAdHocAccess** value.
 
 > [!NOTE]
 > The two illustrations are just examples of how you can change the OLE DB provider for both ODBC and for the SQL Server OLE DB provider. If you want to use a different OLE DB provider, then you must modify that provider's entry.  
@@ -44,16 +44,16 @@ You can disable Transact-SQL statements that use ad-hoc connection strings with 
 
 ## Specify the DisallowAdHocAccess property when you create a linked server
 
-When you create a linked server on a computer that's running SQL Server, you can specify the `DisallowAdHocAccess` property for the OLE DB provider. To do this, follow these steps:
+When you create a linked server on a computer that's running SQL Server, you can specify the **DisallowAdHocAccess** property for the OLE DB provider. To do this, follow these steps:
 
-1. Open SQL Server Enterprise Manager, and then click to select the Security folder of the server in question.
-2. Right-click the Linked Servers entry, and then click **New Linked Server**.
+1. Open SQL Server Enterprise Manager, and then click to select the **Security** folder of the server in question.
+2. Right-click the **Linked Servers** entry, and then click **New Linked Server**.
 3. Click to select the OLE DB provider you want to use, and then click the **Provider Options** button.
 4. Scroll down and select the **Disallow adhoc access** property check box. Continue to finish the creation of your linked server entry.
 
 ## Manually modify the registry, and add the DisallowAdHocAccess value
 
-After a linked server is saved, the `DisallowAdHocAccess` property can be set only through a registry setting.
+After a linked server is saved, the **DisallowAdHocAccess** property can be set only through a registry setting.
 
 > [!NOTE]
 > The two illustrations are just examples of how you can change the OLE DB provider for both ODBC and for the SQL Server OLE DB provider. If you want to use a different OLE DB provider, you must modify that provider's entry.
@@ -63,7 +63,7 @@ After a linked server is saved, the `DisallowAdHocAccess` property can be set on
 
 ## Add the DisallowAdHocAccess value
 
-To add the `DisallowAdHocAccess` value, follow these steps:
+To add the **DisallowAdHocAccess** value, follow these steps:
 
 1. Start Registry Editor.
 2. Locate and then click the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
@@ -85,12 +85,12 @@ To add the `DisallowAdHocAccess` value, follow these steps:
 
 ## Enable ad-hoc remote access
 
-After ensuring **Ad Hoc Distributed Queries** advanced configuration option is enabled, you need to `DisallowAdhocAccess` registry option is explicitly set to **0** for the specified provider.
+After ensuring **Ad Hoc Distributed Queries** advanced configuration option is enabled, you need to **DisallowAdhocAccess** registry option is explicitly set to **0** for the specified provider.
 
-To modify an existing `DisallowAdHocAccess` value, follow these steps:
+To modify an existing **DisallowAdHocAccess** value, follow these steps:
 
 1. Start Registry Editor.
-2. Locate and then click the `DisallowAdHocAccess` value under the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
+2. Locate and then click the **DisallowAdHocAccess** value under the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
 
    Example
 
@@ -103,12 +103,12 @@ To modify an existing `DisallowAdHocAccess` value, follow these steps:
 
 > [!NOTE]
 >
-> - A change of the value of `DisallowAdHocAscess` from **1** to **0** wouldn't require a restart of the SQL Service, whereas a change from **0** to **1** would require a restart of the SQL Service for the change to take effect.
-> - With the `DisallowAdHocAccess` property set to **1**, SQL Server doesn't allow ad hoc access through the `OPENROWSET` and the `OPENDATASOURCE` functions against the specified OLE DB provider. If you try to call these functions in ad hoc queries, you receive an error message that resembles the following:
+> - A change of the value of **DisallowAdHocAscess** from **1** to **0** wouldn't require a restart of the SQL Service, whereas a change from **0** to **1** would require a restart of the SQL Service for the change to take effect.
+> - With the **DisallowAdHocAccess** property set to **1**, SQL Server doesn't allow ad hoc access through the `OPENROWSET` and the `OPENDATASOURCE` functions against the specified OLE DB provider. If you try to call these functions in ad hoc queries, you receive an error message that resembles the following:
 
   > Server: Msg 7415, Level 16, State 1, Line 1 Ad hoc access to OLE DB provider 'Microsoft.Jet.OLEDB.4.0' has been denied. You must access this provider through a linked server.
 
-In other words, with the `DisallowAdHocAccess` property set to **1** for a specific OLE DB provider, you must use a predefined linked server setup for the specific OLE DB provider. You can no longer pass in an ad hoc connection string that references that provider to the `OPENROWSET` or the `OPENDATASOURCE` function.
+In other words, with the **DisallowAdHocAccess** property set to **1** for a specific OLE DB provider, you must use a predefined linked server setup for the specific OLE DB provider. You can no longer pass in an ad hoc connection string that references that provider to the `OPENROWSET` or the `OPENDATASOURCE` function.
 
 ## See Also
 
