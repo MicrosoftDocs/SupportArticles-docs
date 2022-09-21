@@ -1,7 +1,7 @@
 ---
-title: Performance issues can be caused by excessive entries in the `TokenAndPermUserStore` cache.
-description: Ths article helps you resolve performance issues that occur in the `TokenAndPermUserStore` cache. It also explains the causes an provides workarounds. 
-ms.date: 09/14/2022
+title: Performance issues can be caused by excessive entries in the TokenAndPermUserStore cache
+description: Ths article helps you resolve performance issues that occur in the TokenAndPermUserStore cache. It also explains the causes an provides workarounds. 
+ms.date: 09/21/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -65,7 +65,7 @@ The `TokenAndPermUserStore` cache maintains the following security token types:
   - Access Check indicates whether a given user in a particular database has permission to run a query that involves multiple objects.
   - Prior to Microsoft SQL Server 2008, ACR security caches were stored in a single cache, `TokenAndPermUserStore`.  
   - In SQL Server 2008, the ACR caches were separated and the ACR cache entries were tracked in their own individual user stores. This separation improved performance and provided   better bucket count and quota control for the caches.
-  - Currently, `TokenAndPermUserStore` and `ACRCacheStores` are the only kinds of security cache that are used. For more information on ACR caches, see [access check cache Server Configuration Options](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options?view=sql-server-ver16&preserve-view=true).
+  - Currently, `TokenAndPermUserStore` and `ACRCacheStores` are the only kinds of security cache that are used. For more information on ACR caches, see [access check cache Server Configuration Options](/sql/database-engine/configure-windows/access-check-cache-server-configuration-options).
   
 You can run the following query to get information about the different caches and their individual sizes:
 
@@ -103,7 +103,7 @@ SQL Server offers two trace flags that can be used to configure the quota of the
 
 If the very low entry count of 4618 causes other performance concerns, use the traceflags 4610 and 4618 together.
 
-Trace flags 4610 and 4618 are documented in the Books Online topic, [DBCCC TRACEON - Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true).
+Trace flags 4610 and 4618 are documented in the Books Online topic, [DBCCC TRACEON - Trace Flags](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).
 
 These trace flags should be used for scenarios in which the unbounded growth of `TokenAndPermUserStore` is too great for the server. This typically occurs in two kinds of environments:
 
@@ -125,12 +125,12 @@ Notes:
 1. Create a scheduled SQL Server Agent job that takes the following actions:
     - Check the size of the `TokenAndPermUserStore` cache. To do this, run the following command:
 
-     ```sql
-    SELECT SUM(pages_kb) AS 
+      ```sql
+      SELECT SUM(pages_kb) AS 
        "CurrentSizeOfTokenCache(kb)" 
        FROM sys.dm_os_memory_clerks 
        WHERE name = 'TokenAndPermUserStore'
-     ```
+      ```
 
    - If the cache size is bigger than the observed threshold, run the following command:
 
