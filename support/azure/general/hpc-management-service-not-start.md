@@ -21,11 +21,11 @@ The following error is shown in HPC Management event logs.
 
 ## Cause
 
-Check HPC Management event logs:
+HPC Management Service crashed with "InstanceCacheLoadException". See the following HPC Management event log:
 
 :::image type="content" source="media/hpc-management-service-not-start/instancecacheloadexception.png" alt-text="Screenshot that shows HPC Management event logs.":::
 
-HPC Management Service crashed with "InstanceCacheLoadException". The instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, instanceState is 2), but in your HPCManagement database, there are tens of instances with two or three versions in "Current" state.
+The problematic instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, instanceState is 2), but in your HPCManagement database, there are tens of instances with two or three versions in "Current" state.
 
 ## Resolution
 
