@@ -121,3 +121,5 @@
       href: ../sensitivity-labels/encrypted-email-cannot-send-many-recipients.md
     - name: Mail contacts lose access to encrypted content
       href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md
+    - name: Sensitivity labels are missing
+      href: ../sensitivity-labels/sensitivity-labels-missing.md
