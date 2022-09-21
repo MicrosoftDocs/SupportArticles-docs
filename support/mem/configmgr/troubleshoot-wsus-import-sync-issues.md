@@ -27,7 +27,7 @@ Currently WSUS uses the following endpoints to synchronize metadata:
   
 - `https://fe2.update.microsoft.com`
   
-  This old endpoint is decommissioned, connections to it will fail.
+  This old endpoint is decommissioned as a WSUS synchronization endpoint, and connections to it will fail. However, Windows Update clients configured to synchronize with Microsoft Update may continue to use this endpoint.
 
 When you experience WSUS synchronization or manual import problems, first check which endpoint you're synchronizing with:
 

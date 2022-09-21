@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error code (52)
 description: Learn how to troubleshoot the K8SAPIServerDNSLookupFailVMExtensionError error (52) when you try to create and deploy an Azure Kubernetes Service (AKS) cluster.
-ms.date: 3/23/2022
+ms.date: 9/21/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
@@ -15,7 +15,7 @@ This article discusses how to identify and resolve the `K8SAPIServerDNSLookupFai
 
 ## Prerequisites
 
-- The [nslookup](/windows-server/administration/windows-commands/nslookup) command-line tool.
+- The [nslookup](/windows-server/administration/windows-commands/nslookup) DNS lookup tool for Windows nodes or the [dig](https://linuxize.com/post/how-to-use-dig-command-to-query-dns-in-linux/) tool for Linux nodes.
 
 - [Azure CLI](/cli/azure/install-azure-cli), version 2.0.59 or a later version. If Azure CLI is already installed, you can find the version number by running `az --version`.
 
@@ -37,15 +37,16 @@ When you try to create an AKS cluster, you receive the following error message:
 
 ## Cause
 
-The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Enter the `nslookup` command on the failed cluster node to find DNS resolutions that are valid.
+The cluster nodes can't resolve the cluster's fully qualified domain name (FQDN) in Azure DNS. Run the following DNS lookup command on the failed cluster node to find DNS resolutions that are valid.
 
-```shell
-nslookup <cluster-fqdn>
-```
+| Node OS | Command                   |
+| ------- | ------------------------- |
+| Linux   | `dig <cluster-fqdn>`      |
+| Windows | `nslookup <cluster-fqdn>` |
 
 ## Solution
 
-On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` command and apply any necessary fixes. For help to configure your custom DNS server, review the following articles:
+On your DNS servers and firewall, make sure that nothing blocks the resolution to your cluster's FQDN. Your custom DNS server might be incorrectly configured if something is blocking even after you run the `nslookup` or `dig` command and apply any necessary fixes. For help to configure your custom DNS server, review the following articles:
 
 - [Create a private AKS cluster](/azure/aks/private-clusters)
 - [Private Azure Kubernetes service with custom DNS server](https://github.com/Azure/terraform/tree/00d15e09c54f25fb6387330c36aa4366122c5aaa/quickstart/301-aks-private-cluster)
