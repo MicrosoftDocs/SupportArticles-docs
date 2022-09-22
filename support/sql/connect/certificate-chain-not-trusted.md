@@ -10,7 +10,7 @@ ms.prod: sql
 
 # "The certificate chain was issued by an authority that is not trusted" error after upgrading SNAC applications
 
-Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server.
+Support for the SQL Server Native Client 11.0 (SNAC) as a driver for database applications ended on July 12, 2022. Any applications that use the SNAC 11.0 must be updated to use newer versions of the drivers (see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server) and [Download Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/download-oledb-driver-for-sql-server)). This article describes an issue that occurs when you upgrade your SNAC 11.0 application to use either Microsoft OLE DB Driver 19 for SQL Server or Microsoft ODBC Driver 18.*x* for SQL Server.
 
 ## [Upgraded to Microsoft OLE DB Driver 19 for SQL Server](#tab/ole-db-driver-19)
 
