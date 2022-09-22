@@ -3,9 +3,9 @@ title: The owner window gets activated when taskbar buttons are created
 description: Provides resolution for an issue where the owner window of a modal dialog can get activated when taskbar buttons are created for both windows.
 ms.date: 09/15/2022
 ms.custom: sap:Desktop app UI development
-ms.reviewer: hihayak
+ms.reviewer: hihayak, davean
 ms.technology: windows-dev-apps-desktop-app-ui-dev
-auhtor: hihayak
+author: sevend2
 ms.author: v-sidong
 ---
 # The owner window of a modal dialog can get activated when taskbar buttons are created for both windows
@@ -27,15 +27,13 @@ In this scenario, the owner window can be activated by selecting its associated 
 
 ## Resolution
 
-To solve the issue, follow these steps:
+Use the following steps to create a single taskbar button for windows in a window ownership group, which includes the top-level window and any owned windows:
 
-1. - If you use a `System.Windows.Forms.Form` object to display a modal dialog with an owner window, set the Form object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
+- If you use a `System.Windows.Forms.Form` object to display a modal dialog with an owner window, set the Form object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
 
-   - If you use a `System.Windows.Window` object to display a modal dialog with an owner window, set the Window object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
+- If you use a `System.Windows.Window` object to display a modal dialog with an owner window, set the Window object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
 
-1. Create a single taskbar button for windows in a window ownership group, which includes the top-level window and any owned windows.
-
-When the taskbar button is selected, the system will activate the correct window in the ownership group.
+Then, when the taskbar button is selected, the system will activate the correct window in the ownership group.
 
 ## More information
 
