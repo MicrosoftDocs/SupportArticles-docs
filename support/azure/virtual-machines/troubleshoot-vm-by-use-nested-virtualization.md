@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure | Microsoft Docs
+title: Troubleshoot a faulty Azure VM by using nested virtualization in Azure
 description: How to troubleshoot a problem Azure VM by using nested virtualization in Azure
 services: virtual-machines
 documentationcenter: ''
