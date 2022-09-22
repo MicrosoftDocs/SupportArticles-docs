@@ -1,6 +1,6 @@
 ---
-title: Windows reboot loop on an Azure VM | Microsoft Docs
-description: Learn how to troubleshoot Windows reboot loop | Microsoft Docs
+title: Windows reboot loop on an Azure VM
+description: Learn how to troubleshoot Windows reboot loop.
 services: virtual-machines
 documentationCenter: ''
 author: genlin

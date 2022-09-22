@@ -1,5 +1,5 @@
 ---
-title: Performance diagnostics for Azure virtual machines| Microsoft Docs
+title: Performance diagnostics for Azure virtual machines
 description: Introduces Azure Performance Diagnostics for Windows.
 services: virtual-machines
 documentationcenter: ''

@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console for Linux | Microsoft Docs
+title: Azure Serial Console for Linux
 description: Bi-Directional Serial Console for Azure Virtual Machines and Virtual Machine Scale Sets using a Linux example.
 services: virtual-machines
 documentationcenter: ''
