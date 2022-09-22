@@ -97,6 +97,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
 |Microsoft Intune Windows Agent|fc0f3af4-6835-4174-b806-f7db311fd2f3|
+|Microsoft Learn|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Office|d3590ed6-52b3-4102-aeff-aad2292ab01c|
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|
