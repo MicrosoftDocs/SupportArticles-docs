@@ -1,5 +1,5 @@
 ---
-title: Repair a Linux VM automatically with the help of ALAR | Microsoft Docs
+title: Repair a Linux VM automatically with the help of ALAR
 description: This article describes how to autorepair a non-bootable VM with the  Azure Linux Auto Repair scripts (ALAR).
 services: virtual-machines-linux
 documentationcenter: ''

@@ -1,5 +1,5 @@
 ﻿---
-title: Azure VM Guest OS firewall is blocking inbound traffic | Microsoft Docs
+title: Azure VM Guest OS firewall is blocking inbound traffic
 description: Learn how to fix the Remote Desktop Portal (RDP) connection issue that the guest operating system firewall is blocking inbound traffic.
 services: virtual-machines
 documentationcenter: ''

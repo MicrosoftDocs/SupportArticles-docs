@@ -1,5 +1,5 @@
 ---
-title: Specific RDP error messages for Azure VMs | Microsoft Docs
+title: Specific RDP error messages for Azure VMs
 description: Understand specific error messages that you may receive when trying use Remote Desktop connection to a Windows virtual machine in Azure
 keywords: Remote desktop error,remote desktop connection error,cannot connect to VM,remote desktop troubleshooting
 services: virtual-machines

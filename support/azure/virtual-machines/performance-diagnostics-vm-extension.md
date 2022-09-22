@@ -1,5 +1,5 @@
 ---
-title: Azure Performance Diagnostics VM Extension for Windows| Microsoft Docs
+title: Azure Performance Diagnostics VM Extension for Windows
 description: Introduces Azure Performance Diagnostics VM Extension for Windows.
 services: virtual-machines
 documentationcenter: ''

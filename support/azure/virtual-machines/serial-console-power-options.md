@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console Power Options | Microsoft Docs
+title: Azure Serial Console Power Options
 description: VM power options available within the Azure Serial Console
 services: virtual-machines
 documentationcenter: ''
