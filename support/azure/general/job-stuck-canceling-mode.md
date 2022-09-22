@@ -5,7 +5,7 @@ ms.date: 09/16/2022
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: azure-common-issues-support
-ms.reviewer: hclvteam
+ms.reviewer: hclvteam, cargonz
 ---
 # HPC jobs are stuck in canceling mode and new jobs don't start
 
@@ -44,8 +44,6 @@ When you change the DTU to 200, the compute size should be at least changed to S
 | Max concurrent workers | 400 | 800 | 1600 | 3200 |6000 |
 | Max concurrent sessions |4800 | 9600 | 19200 | 30000 |30000 |
 
-
-
 ## Database transaction unit
 
 A DTU can be defined as horse power for Azure SQL. Microsoft currently offers Azure SQL DB in two models, the DTU model and the vCore model. The DTU model is based on the Database Transaction Unit, and is a blended mix of CPU, I/O and memory (RAM) capabilities based on a benchmark OLTP workload called ASDB. The vCore model is based on the number of virtual CPU cores you require, and this can be scaled up as your workload increases. The DTU model works well if you have pricing constraints or have a fairly stable workload. It's also scalable, as you're able to upgrade the tier or grade of your Azure DB in the future. However, in the DTU model CPU capabilities and storage capabilities are closely coupled.
@@ -60,8 +58,6 @@ For HPC scheduler databases, the minimum initial DTU is 100. The following table
 |Diagnostics|	>= 10|
 |Monitoring|	>= 20|
 
-
-
 ## References
 
 - [Compare vCore and DTU-based purchasing models of Azure SQL Database](/azure/azure-sql/database/purchasing-models)
@@ -69,6 +65,3 @@ For HPC scheduler databases, the minimum initial DTU is 100. The following table
 - [Resource limits for single databases using the DTU purchasing model - Azure SQL Database](/azure/azure-sql/database/resource-limits-dtu-single-databases)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
-
-
-
