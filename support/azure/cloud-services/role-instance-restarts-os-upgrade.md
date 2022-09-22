@@ -155,7 +155,7 @@ public class WebRole : RoleEntryPoint {
     public override bool OnStart () {
         // For information about handling configuration changes, see the article
         // "Customize the Lifecycle of a Web or Worker role in .NET" at
-        // https://docs.microsoft.com/azure/cloud-services/cloud-services-role-lifecycle-dotnet.
+        // https://learn.microsoft.com/azure/cloud-services/cloud-services-role-lifecycle-dotnet.
         IPHostEntry ipEntry = Dns.GetHostEntry (Dns.GetHostName ());
         string ip = null;
         foreach (IPAddress ipaddress in ipEntry.AddressList) {
