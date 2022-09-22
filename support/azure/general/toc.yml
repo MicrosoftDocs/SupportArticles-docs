@@ -97,8 +97,8 @@
   items:
   - name: Azure Batch
     items:
-    - name: Access denied when executing Azure Batch jobs
-      href: access-denied-execute-azure-batch-job.md
+    - name: AccountEncryptionKeyUnavailable error message
+      href: error-accountencryptionkeyunavailable.md
       items:
   - name: CycleCloud
     items:
