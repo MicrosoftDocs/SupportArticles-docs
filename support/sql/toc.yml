@@ -391,6 +391,8 @@
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot SQL Server slow performance caused by IO
       href: performance/troubleshoot-sql-io-performance.md
+    - name: TokenAndPermUserStore related performance issues
+      href: performance/token-and-perm-user-store-perf-issue.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Different query performance between two SQL Servers

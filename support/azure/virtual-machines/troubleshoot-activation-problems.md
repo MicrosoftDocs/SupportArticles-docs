@@ -23,7 +23,7 @@ If you have trouble when activating Azure Windows virtual machine (VM) that is c
 Azure uses different endpoints for KMS (Key Management Services) activation depending on the cloud region where the VM resides. When using this troubleshooting guide, use the appropriate KMS endpoint that applies to your region.
 
 - Azure public cloud regions: kms.core.windows.net:1688 or azkms.core.windows.net:1688
-- Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688
+- Azure China 21Vianet national cloud regions: kms.core.chinacloudapi.cn:1688 or azkms.core.chinacloudapi.cn:1688
 - Azure Germany national cloud regions: kms.core.cloudapi.de:1688
 - Azure US Gov national cloud regions: kms.core.usgovcloudapi.net:1688
 
