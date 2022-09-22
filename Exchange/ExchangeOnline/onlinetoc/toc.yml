@@ -301,6 +301,8 @@
           href: ../groups-and-distribution-lists/o365-group-tasks.md
         - name: Mail-enabled groups aren't synced to O365
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
+        - name: Ownerless group policy questions
+          href: ../groups-and-distribution-lists/ownerless-group-policy.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
         - name: Problem adding a guest user to a Microsoft 365 group
