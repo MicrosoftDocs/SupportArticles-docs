@@ -4,7 +4,7 @@ description: Provides a solution for certificate and network errors that occur w
 ms.date: 9/14/2022
 author: AmandaAZ
 ms.author: v-weizhu
-ms.reviewer: hclvteam
+ms.reviewer: hclvteam, cargonz
 ms.service: azure-common-issues-support
 ---
 # HPC compute nodes aren't shown or in error state
@@ -29,12 +29,10 @@ Check network and certificate errors in the HpcNodeManager service logs on the c
 
 Correct certificate mismatches if there are.
 
-To resolve network issues with the error above, configure the Network Security Group rules and firewall rules. For more information, see [Configure Network Security Group for Azure virtual network](/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes)
+To resolve network issues with the error above, configure the Network Security Group rules and firewall rules. For more information, see the"Configure Network Security Group for Azure virtual network" section in [Burst to Azure IaaS VM from an HPC Pack Cluster](/powershell/high-performance-computing/hpcpack-burst-to-azure-iaas-nodes).
 
-## References
+## Reference
 
-- Slide 11 of [Microsoft HPC Pack Support Training.pptx](https://supportability.visualstudio.com/78a7ff76-f175-4f9e-8e72-04fdfd3daeaa/_apis/git/repositories/e867a613-d78e-4a79-9cfe-26b87fa45571/Items?path=/.attachments/Microsoft%20HPC%20Pack%20Support%20Training-0d3a9b9c-9462-48e0-a91c-e4cfe99f1780.pptx&download=false&resolveLfs=true&%24format=octetStream&api-version=5.0-preview.1&sanitize=true&versionDescriptor.version=wikiMaster)
-- [HPC Pack Video 1: HPC Pack Support](https://web.microsoftstream.com/video/8f13a1ff-0400-b9eb-b644-f1eb2a149498)
-- [Manage Certificates for HPC Pack 2019 Cluster](/powershell/high-performance-computing/manage-hpc-pack-certificates)
+[Manage Certificates for HPC Pack 2019 Cluster](/powershell/high-performance-computing/manage-hpc-pack-certificates)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
