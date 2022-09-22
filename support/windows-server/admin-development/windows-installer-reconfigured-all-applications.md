@@ -79,6 +79,9 @@ If you have an application that uses the previous class, contact the vendor to g
 
 To narrow down the application that causes the problem, you can follow the *Clean boot* troubleshooting method.
 
+> [!NOTE]
+> Using `Win32Reg_AddRemovePrograms` requires System Center Configuration Manager (SCCM) client to be installed. If SCCM is not installed, use the [StdRegProv](/previous-versions/windows/desktop/regprov/stdregprov) class instead.
+
 ## More information
 
 `Win32_product` class isn't query optimized. Queries such as `select * from Win32_Product where (name like 'Sniffer%')` require WMI to use the MSI provider to enumerate all of the installed products and then parse the full list sequentially to handle the `where` clause. This process also starts a consistency check of packages installed, verifying, and repairing the install. An account with only user privileges may cause delay in application launch and an event 11708 stating an installation failure, as the user account may not have access to quite a few locations.
