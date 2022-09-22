@@ -294,7 +294,7 @@ Another possible cause for this error is that the Autopilot object's associated 
 
 **Solution 2:**
 
-If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30312 is logged within the ODJ Connector Service log. Event 30312 resembles the following event:
+If the issue persists, on the server that hosts the Offline Domain Join Intune Connector, check to see if Event ID 30132 is logged within the ODJ Connector Service log. Event 30132 resembles the following event:
 
 ```output
 Log Name:      ODJ Connector Service
