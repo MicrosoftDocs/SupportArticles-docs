@@ -247,6 +247,8 @@
           href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md
         - name: Move mailbox operation fails
           href: ../move-mailboxes/hybrid-move-fails.md
+        - name: '"Multiple entries" error when a remote move migration fails'
+          href: ../move-mailboxes/migration-fails-multiple-entries-error.md
         - name: Offboarding mailbox fails with error
           href: ../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md
         - name: Operation has timed out when using New-MoveRequest
