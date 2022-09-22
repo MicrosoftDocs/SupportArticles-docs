@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows virtual machine activation problems in Azure| Microsoft Docs
+title: Troubleshoot Windows virtual machine activation problems in Azure
 description: Provides the troubleshoot steps for fixing Windows virtual machine activation problems in Azure
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''

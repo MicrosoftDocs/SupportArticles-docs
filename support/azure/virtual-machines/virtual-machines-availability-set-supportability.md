@@ -1,5 +1,5 @@
 ---
-title: Supportability of adding Azure VMs to an existing availability set | Microsoft Docs
+title: Supportability of adding Azure VMs to an existing availability set
 description: This article provides a supportability matrix about which VM series you can mix in the same availability set
 documentationcenter: ''
 author: genlin

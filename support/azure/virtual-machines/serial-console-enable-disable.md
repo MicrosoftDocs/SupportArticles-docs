@@ -1,5 +1,5 @@
 ---
-title: Enable and disable the Azure Serial Console | Microsoft Docs
+title: Enable and disable the Azure Serial Console
 description: How to enable and disable the Azure Serial Console service
 services: virtual-machines
 documentationcenter: ''

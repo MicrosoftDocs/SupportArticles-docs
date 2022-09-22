@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot VM application access in Azure | Microsoft Docs
+title: Troubleshoot VM application access in Azure
 description: Use these detailed troubleshooting steps to isolate issues in connecting to applications running on virtual machines in Azure.
 services: virtual-machines
 documentationcenter: ''
