@@ -133,6 +133,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |OneDrive SyncEngine|ab9b8c07-8f02-4f72-87fa-80105867a763|
 |OneNote|2d4d3d8e-2be3-4bef-9f87-7875a61c29de|
 |Outlook Mobile|27922004-5251-4030-b22d-91ecd9a37ea4|
+|Partner Customer Delegated Admin Offline Processor|a3475900-ccec-4a69-98f5-a65cd5dc5306|
 |Power BI Service|00000009-0000-0000-c000-000000000000|
 |SharedWithMe|ffcb16e8-f789-467c-8ce9-f826a080d987|
 |SharePoint Online Web Client Extensibility|08e18876-6177-487e-b8b5-cf950c1e598c|
