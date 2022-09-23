@@ -39,7 +39,7 @@ To fix this issue, [delete the newly created user](/azure/active-directory/funda
 
 If you can't restore the original user and the issue persists, follow these steps to create a support request:
 
-1. As an administrator, select [OneDrive Site User ID Mismatch](https://admin.microsoft.com/AdminPortal/?searchSolutions=OneDrive%20Site%20User%20ID%20Mismatch), and it'll populate a help query in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
+1. As an administrator, select [OneDrive Site User ID Mismatch](https://admin.microsoft.com/AdminPortal/?searchSolutions=OneDrive%20Site%20User%20ID%20Mismatch), and it will populate a help query in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 2. At the bottom of the pane, select **Contact Support** > **New Service Request**.  
 3. Leave the description blank.
 4. After the ticket is opened, provide the support agent with the UPN and OneDrive URL that have the issue.
