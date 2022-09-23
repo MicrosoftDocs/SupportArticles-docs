@@ -7,9 +7,9 @@ ms.author: genli
 author: genlin
 ms.reviewer: hclvteam 
 ---
-# HPC Management Service fails to start because of duplicate instance ID
+# HPC Management Service fails to start because of a duplicate instance ID
 
-This article provides a solution for an issue where HPC Management Service fails to start because of duplicate instance ID.
+This article provides a solution for an issue where HPC Management Service fails to start because of a duplicate instance ID.
 
 ## Symptoms
 
@@ -19,9 +19,9 @@ HPC management service fails to start. The [HPC service log](/powershell/high-pe
 
 ## Cause
 
-This issue occurs if the HPC management database contains more than one instance records that are in current state(instanceState is 2). Normally, each instance should have only one record in the current state.
+This issue occurs if the HPC management database contains more than one instance record in the current state (instanceState is 2). Normally, each instance should have only one record in the current state.
 
-You can run the following query on HPC management database to check the state of the instances:
+You can run the following query on the HPC management database to check the state of the instances:
 
 `SELECT instanceId, count() as Number FROM Instances where instanceState = 2 group by instanceId having count() > 1`
 
