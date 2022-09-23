@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Azure VM allocation failures in classic deployment model| Microsoft Docs
+title: Troubleshooting Azure VM allocation failures in classic deployment model
 description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure
 services: azure-service-management
 documentationcenter: ''

@@ -1,5 +1,5 @@
 ---
-title: Azure Serial Console errors | Microsoft Docs
+title: Azure Serial Console errors
 description: Common errors within the Azure Serial Console
 services: virtual-machines
 documentationcenter: ''
