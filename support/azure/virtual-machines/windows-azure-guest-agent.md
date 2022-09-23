@@ -171,7 +171,7 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
 1. Install Guest Agent by using the following MSI command:
 
     ```
-    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log`
+    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
 1. Verify that the RD Agent, Azure VM Agent, and Windows Azure Telemetry services are now running.
