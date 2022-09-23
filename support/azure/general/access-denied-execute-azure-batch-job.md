@@ -9,11 +9,11 @@ ms.reviewer: biny
 ---
 # Access denied when executing Azure Batch jobs
 
-The Azure Storage Account is a necessary dependent component for Azure Batch account to store resource files, application packages and output files. In many cases, you use Azure Storage Account with a firewall to enhance its security. However, Azure Storage Account with a firewall may cause errors when you execute Azure Batch jobs. This article provides solutions for such issues.
+The Azure Storage Account is a necessary dependent component for the Azure Batch account to store resource files, application packages, and output files. In many cases, you use Azure Storage Account with a firewall to enhance its security. However, Azure Storage Account with a firewall may cause errors when you execute Azure Batch jobs. This article provides solutions for such issues.
 
 ## Symptoms
 
-When executing Azure Batch jobs, you may encounter errors that are related to the associated Azure storage account.
+When executing Azure Batch jobs, you may encounter errors related to the associated Azure storage account.
 
 Here is an error example:
 
@@ -32,15 +32,15 @@ If the storage account and the Batch pool are in the same region, no matter if t
 To resolve the issue, manage the Batch pool and the storage account configurations based on your scenarios.
 
 > [!NOTE]
-> If you need to upload application packages, all the following solutions won't work. The storage account must not configure any firewall. For more information, see [Link a storage account](/azure/batch/batch-application-packages#link-a-storage-account).
+> If you need to upload application packages, none of following solutions will work. The storage account must not configure any firewall. For more information, see [Link a storage account](/azure/batch/batch-application-packages#link-a-storage-account).
 
-### Scenario 1: Batch pool and storage account are in same region, and Batch pool has virtual network
+### Scenario 1: The Batch pool and storage account are in the same region, and the Batch pool has a virtual network
 
-1. Check **Subnet information** under **Network Configuration** from the Azure portal > **Batch Account** > **Pool** > **Properties**. Write it down.
+1. Check **Subnet information** under **Network Configuration** from the Azure portal > **Batch Account** > **Pool** > **Properties**. Take note and write the information down.
 
     :::image type="content" source="media/access-denied-execute-azure-batch-job/azure-batch-pool-subnet.png" alt-text="Screenshot of the Azure Batch pool subnet information." lightbox="media/access-denied-execute-azure-batch-job/azure-batch-pool-subnet.png":::
 
-2. Navigate to the storage account, select **Networking**. In the **Firewalls and virtual networks** setting, select **Enable from selected virtual networks and IP addresses** for **Public network access**. Add the Batch pool's subnet in the firewall allowlist.
+2. Navigate to the storage account, and select **Networking**. In the **Firewalls and virtual networks** setting, select **Enable from selected virtual networks and IP addresses** for **Public network access**. Add the Batch pool's subnet in the firewall allowlist.
 
     :::image type="content" source="media/access-denied-execute-azure-batch-job/add-subnet-to-firewall-allow-list.png" alt-text="Screenshot that shows how to add subnet to firewall allowlist." lightbox="media/access-denied-execute-azure-batch-job/add-subnet-to-firewall-allow-list.png":::
 
@@ -64,7 +64,7 @@ After you complete the configurations above, the Batch nodes in the pool can acc
 
 3. Assign the public IP address to the Batch pool public Load Balancer's IP.
 
-    After that, check your Batch pool's properties. It will be like the following screenshot:
+    After that, check your Batch pool's properties. They will be like the ones in the following screenshot:
 
     :::image type="content" source="media/access-denied-execute-azure-batch-job/azure-batch-pool-properties.png" alt-text="Screenshot of Batch pool's properties." lightbox="media/access-denied-execute-azure-batch-job/azure-batch-pool-properties.png":::
 
@@ -74,6 +74,6 @@ After you complete the configurations above, the Batch nodes in the pool can acc
 
     :::image type="content" source="media/access-denied-execute-azure-batch-job/add-public-ip-to-firewall-allow-list.png" alt-text="Screenshot that shows the public IP address is added to allowlist." lightbox="media/access-denied-execute-azure-batch-job/add-public-ip-to-firewall-allow-list.png":::
 
-5. Run the Batch jobs with the new-created Batch pool.
+5. Run the Batch jobs with the newly created Batch pool.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
