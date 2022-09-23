@@ -1,6 +1,6 @@
 ---
-title: Cannot connect remotely to Azure Virtual Machines because the NIC is disabled | Microsoft Docs
-description: Learn how to troubleshoot a problem in which RDP fails because the NIC is disabled in Azure VM| Microsoft Docs
+title: Cannot connect remotely to Azure Virtual Machines because the NIC is disabled
+description: Learn how to troubleshoot a problem in which RDP fails because the NIC is disabled in Azure VM.
 services: virtual-machines
 documentationCenter: ''
 author: genlin

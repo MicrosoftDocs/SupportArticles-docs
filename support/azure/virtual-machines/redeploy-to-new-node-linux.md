@@ -1,5 +1,5 @@
 ---
-title: Redeploy Linux Virtual Machines in Azure | Microsoft Docs
+title: Redeploy Linux Virtual Machines in Azure
 description: How to redeploy Linux virtual machines in Azure to mitigate SSH connection issues.
 services: virtual-machines
 documentationcenter: virtual-machines

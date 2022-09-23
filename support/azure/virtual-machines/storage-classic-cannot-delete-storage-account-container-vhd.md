@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot errors when you delete Azure classic storage accounts, containers, or VHDs | Microsoft Docs
+title: Troubleshoot errors when you delete Azure classic storage accounts, containers, or VHDs
 description: How to troubleshoot problems when deleting storage resources containing attached VHDs.
 services: storage
 author: AngshumanNayakMSFT

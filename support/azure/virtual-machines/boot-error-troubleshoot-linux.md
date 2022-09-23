@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshoot boot errors in Azure Linux Virtual Machines | Microsoft Docs'
+title: 'Troubleshoot boot errors in Azure Linux Virtual Machines'
 description: This article helps link you to articles to troubleshoot boot errors in Azure Linux Virtual Machines.
 services: virtual-machines
 documentationCenter: ''
