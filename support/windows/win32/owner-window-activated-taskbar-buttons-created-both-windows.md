@@ -27,7 +27,7 @@ In this scenario, the owner window can be activated by selecting its associated 
 
 ## Resolution
 
-Use the following steps to create a single taskbar button for windows in a window ownership group, which includes the top-level window and any owned windows:
+Use the following method corresponding to your situation to create a single taskbar button for windows in a window ownership group, which includes the top-level window and any owned windows:
 
 - If you use a `System.Windows.Forms.Form` object to display a modal dialog with an owner window, set the Form object's `ShowInTaskbar` property value to `false` prior to calling the `ShowDialog` method.
 
