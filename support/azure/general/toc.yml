@@ -109,7 +109,7 @@
     items:
     - name: HPC Pack content coming soon
       href: welcome-general.yml
-    - name:  HPC compute nodes aren't shown or in error state
+    - name:  HPC compute nodes aren't shown or are in error state
       href: compute-node-not-shown-error-state.md
       items:
 

@@ -1,5 +1,5 @@
 --- 
-title: HPC compute nodes aren't shown or are in an error state
+title: HPC compute nodes aren't shown or are in error state
 description: Provides a solution for certificate and network errors that occur when you deploy an HPC Pack cluster on Azure.
 ms.date: 9/14/2022
 author: AmandaAZ
@@ -7,7 +7,7 @@ ms.author: v-weizhu
 ms.reviewer: hclvteam, cargonz
 ms.service: azure-common-issues-support
 ---
-# HPC compute nodes aren't shown or are in an error state
+# HPC compute nodes aren't shown or are in error state
 
 This article provides a solution for an issue in which compute nodes aren't shown or are in an error state when you deploy a high-performance computing (HPC) cluster on Azure.
 
