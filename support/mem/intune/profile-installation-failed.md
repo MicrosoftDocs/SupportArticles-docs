@@ -53,7 +53,7 @@ The device is already enrolled with another MDM provider.
 
 **Solution:**
 
-1. Open **Settings** on the iOS/iPadOS device, go to **General > Device Management**.
+1. Open **Settings** on the iOS/iPadOS device, go to **General** > **VPN & Device Management**.
 1. Remove any existing management profile.
 1. Re-enroll the device.
 
@@ -72,6 +72,6 @@ The user who is trying to enroll the device does not have a Microsoft Intune lic
 
 This error indicates a management profile is already installed on the device. Complete the following steps to remove the existing management profile.
 
-1. Open **Settings** on the iOS/iPadOS device > **General** > **Device Management**.
+1. Open **Settings** on the iOS/iPadOS device > **General** > **VPN & Device Management**.
 2. Tap the existing management profile, and tap **Remove Management**.
 3. Re-enroll the device.
