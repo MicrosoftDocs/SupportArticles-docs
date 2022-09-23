@@ -1,7 +1,7 @@
 ---
-title: Log off all Terminal Server Session Users
-description: Provides some information about how to log off all Terminal Server Session Users from a Command Prompt.
-ms.date: 10/09/2020
+title: Log off all Remote Desktop Session Users
+description: Provides some information about how to log off all Remote Desktop Session Users from a Command Prompt.
+ms.date: 09/23/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -13,23 +13,47 @@ ms.reviewer: kaushika
 ms.custom: sap:remote-desktop-sessions, csstroubleshoot
 ms.technology: windows-server-rds
 ---
-# How to Log off all Terminal Server Session Users from a Command Prompt
+# How to Log off all Remote Desktop Session Users from a Command Prompt
 
-This article provides some information about how to log off all Terminal Server Session Users from a Command Prompt.
+This article provides some information about how to log off all Remote Desktop Session Users from a Command Prompt.
 
 _Applies to:_ &nbsp; Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 259436
 
 ## Summary
 
-Under some conditions, an administrator may want to force a logoff of all users currently logged on to a Windows NT 4.0 Server, Terminal Server Edition-based computer. You can do so by creating a batch file that calls two Terminal Server specific commands, QUERY, and LOGOFF.
+Under some conditions, an administrator may want to force a logoff of all users currently logged on to a Remote Desktop server. You can do so by using a batch file, or a PowerShell script.
 
 > [!WARNING]
-> Performing the following procedure logs off all users currently logged onto the Terminal Server. This may result in a loss of unsaved data. Because of this, extreme caution is advised.
+> Performing the following procedure logs off all users currently logged onto the Remote Desktop server. This may result in a loss of unsaved data. Because of this, extreme caution is advised.
 
-## More information
+## Using PowerShell
 
-To create a batch file that calls these two Terminal Server specific commands, place the following information into a batch (.bat) file:  
+To log off all user sessions, run the following Powershell cmdlets on the Connection Broker:
+
+```powershell
+$sessions = Get-RDUserSession
+
+foreach($session in $sessions)
+{
+    Invoke-RDUserLogoff -HostServer $session.HostServer -UnifiedSessionID $session.UnifiedSessionId -Force
+}
+```
+
+To log off only disconnected user sessions, run the following Powershell cmdlets on the Connection Broker:
+
+```powershell
+$sessions = Get-RDUserSession |  ? {$_.SessionState -eq "STATE_DISCONNECTED"}
+
+foreach($session in $sessions)
+{
+    Invoke-RDUserLogoff -HostServer $session.HostServer -UnifiedSessionID $session.UnifiedSessionId -Force
+}
+```
+
+## Using batch file
+
+Place the following information into a batch (.bat) file:  
 
 ```console
 query session >session.txt  
@@ -37,16 +61,18 @@ for /f "skip=1 tokens=3," %%i in (session.txt) DO logoff %%i
 del session.txt  
 ```
 
-This batch file may be run at any time the Administrator desires to force the logoff of all users that are not logged on to the Terminal Server console.
+This batch file may be run at any time the Administrator desires to force the logoff of all users that are not logged on to the Remote Desktop server console.
 
-Query is a multi-purpose command found within the Terminal Server environment. In this case, Query Session creates a list of all sessions running on the Terminal Server, complete with Session ID numbers. Within the batch file, this output is redirected to a text file. The FOR statement then parses each line of the text file, skipping the first line, and looking for the Session ID number found in the third column. It then places this variable into Logoff, resulting in that session being logged off.
+Query is a multi-purpose command found within the Remote Desktop server environment. In this case, Query Session creates a list of all sessions running on the Remote Desktop server, complete with Session ID numbers. Within the batch file, this output is redirected to a text file. The FOR statement then parses each line of the text file, skipping the first line, and looking for the Session ID number found in the third column. It then places this variable into Logoff, resulting in that session being logged off.
 
-It is not uncommon to receive an error message when you run this batch file. If a user is logged on to the Terminal Server console, the following error message is generated:
+It is not uncommon to receive an error message when you run this batch file. If a user is logged on to the Remote Desktop server console, the following error message is generated:
 
->Could not logoff session ID 0 from session Console, Error code 5  
-Error [5]: Access is denied.  
+```output
+Could not logoff session ID 0 from session Console, Error code 5
+Error [5]: Access is denied.
+```
 
-It is due to a limitation of the Logoff command. It cannot force the logoff of the console session. A work-around to this issue would be to modify the batch file to read:  
+It is due to a limitation of the `Logoff` command. It cannot force the logoff of the console session. A workaround to this issue would be to modify the batch file to read:  
 
 ```console
 query session >session.txt  
