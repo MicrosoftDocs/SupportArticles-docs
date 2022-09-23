@@ -101,7 +101,7 @@ When users start scanning in Windows Update through the Settings panel, the foll
 
 #### Proxy behavior
 
-For Windows Update (WU) scans URLs that are used for update detection ([MS-WUSP]: SimpleAuth Web Service | Microsoft Docs, [MS-WUSP]: Client Web Service | Microsoft Docs):
+For Windows Update (WU) scans URLs that are used for update detection ([MS-WUSP]: SimpleAuth Web Service | Microsoft Learn, [MS-WUSP]: Client Web Service | Microsoft Learn):
 
 - System proxy is attempted (set using the `netsh` command).
 - If WUA fails to reach the service due to a certain proxy, service, or authentication error code, then user proxy is attempted (generally it's the logged-in user).
