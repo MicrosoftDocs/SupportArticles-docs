@@ -1,5 +1,5 @@
 ---
-title: Common VM error codes in Azure | Microsoft Docs
+title: Common VM error codes in Azure
 description: Understand some of the common error codes encountered when you provision and manage virtual machines in Azure
 services: virtual-machines
 documentationcenter: ''

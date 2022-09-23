@@ -1,5 +1,5 @@
 ---
-title: How to reset network interface for Azure Windows VM| Microsoft Docs
+title: How to reset network interface for Azure Windows VM
 description: Shows how to reset network interface for Azure Windows VM
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''

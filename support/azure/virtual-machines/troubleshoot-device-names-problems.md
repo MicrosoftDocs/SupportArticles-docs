@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Linux VM device name changes in Azure | Microsoft Docs
+title: Troubleshoot Linux VM device name changes in Azure
 description: Explains why Linux VM device names change and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''

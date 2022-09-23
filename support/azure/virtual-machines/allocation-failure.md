@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting Azure VM allocation failures | Microsoft Docs
+title: Troubleshooting Azure VM allocation failures
 description: Troubleshoot allocation failures when you create, restart, or resize a VM in Azure
 services: virtual-machines
 documentationcenter: ''
