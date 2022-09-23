@@ -35,22 +35,22 @@ Before we begin the in-depth discussion, some of the terms that are used through
 |---|---|
 |Battery-backed|Separate and localized battery Backup facility directly available and controlled by the caching mechanism to prevent data loss.<br/> This isn't an uninterruptible power supply (UPS). A UPS doesn't guarantee any write activities and can be disconnected from the caching device.|
 |Cache|Intermediary storage mechanism used to optimize physical I/O operations and improve performance.|
-|Dirty Page|Page containing data modifications that're yet to be flushed to stable storage. For more information about dirty page buffers, see the "[Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105))" topic at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
+|Dirty Page|Page containing data modifications that are yet to be flushed to stable storage. For more information about dirty page buffers, see the [Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105)) topic at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
 |Failure|Anything that might cause an unexpected outage of the SQL Server process. Examples include: power outage, computer reset, memory errors, other hardware issues, bad sectors, drive outages, system failures, and so on.|
 |Flush|Forcing of a cache buffer to stable storage.|
 |Latch|Synchronization object used to protect physical consistency of a resource.|
 |Nonvolatile storage|Any medium that remains available across system failures.|
 |Pinned page|Page that remains in data cache and can't be flushed to stable storage until all associated log records are secured in a stable storage location.|
 |Stable storage|Same as nonvolatile storage.|
-|Volatile storage|Any medium that will not remain intact across failures.<br/>|
+|Volatile storage|Any medium that won't remain intact across failures.<br/>|
   
 ### Write-Ahead Logging (WAL) protocol
 
-The term protocol is an excellent way to describe WAL. It is a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state in the event of a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
+The term protocol is an excellent way to describe WAL. It's a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state in the event of a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
 
 The ARIES document defines the WAL as follows:
 
-The WAL protocol asserts that the log records representing changes to some data must already be in stable storage before the changed data is allowed to replace the previous version of the data in nonvolatile storage. That is, the system is not allowed to write an updated page to the nonvolatile storage version of the page until at least the undo portions of the log records, which describe the updates to the page have been written to stable storage.
+The WAL protocol asserts that the log records representing changes to some data must already be in stable storage before the changed data is allowed to replace the previous version of the data in nonvolatile storage. That is, the system isn't allowed to write an updated page to the nonvolatile storage version of the page until at least the undo portions of the log records, which describe the updates to the page have been written to stable storage.
 
 For more information about write-ahead logging, see the [Write-Ahead Transaction Log](/previous-versions/sql/sql-server-2008-r2/ms186259(v=sql.105)) topic at SQL Server Books Online.
 
@@ -61,7 +61,7 @@ SQL Server uses the WAL protocol. To make sure that a transaction is correctly c
 To clarify this situation, consider the following specific example.
 
 > [!NOTE]
-> For this example, assume that there is no index and that the affected page is page 150.
+> For this example, assume that there's no index and that the affected page is page 150.
 
 ```sql
 BEGIN TRANSACTION
@@ -73,11 +73,11 @@ Next, break down the activity into simplistic logging steps, as described in the
 
 |Statement|Actions performed|
 |---|---|
-|BEGIN TRANSACTION|Written to the log cache area. However, it is not necessary to flush to stable storage because the SQL Server has not made any physical changes.|
-|INSERT INTO tblTest|<br/>1. Data page 150 is retrieved into SQL Server data cache, if not already available.<br/>2. The page is _latched_, _pinned_, and _marked dirty_, and appropriate locks are obtained.<br/>3. An Insert Log record is built and added to the log cache.<br/>4. A new row is added to the data page.<br/>5. The latch is released.<br/>6. The log records associated with the transaction or page does not have to be flushed at this point because all changes remain in volatile storage.|
-|COMMIT TRANSACTION|<br/>1. A Commit Log record is formed and the log records associated with the transaction must be written to stable storage. The transaction is not considered committed until the log records are correctly assigned to stable storage.<br/>2. Data page 150 remains in SQL Server data cache and is not immediately flushed to stable storage. When the log records are correctly secured, recovery can redo the operation, if it is necessary.<br/>3. Transactional locks are released.|
+|BEGIN TRANSACTION|Written to the log cache area. However, it's not necessary to flush to stable storage because the SQL Server hasn't made any physical changes.|
+|INSERT INTO tblTest|<br/>1. Data page 150 is retrieved into SQL Server data cache, if not already available.<br/>2. The page is _latched_, _pinned_, and _marked dirty_, and appropriate locks are obtained.<br/>3. An Insert Log record is built and added to the log cache.<br/>4. A new row is added to the data page.<br/>5. The latch is released.<br/>6. The log records associated with the transaction or page doesn't have to be flushed at this point because all changes remain in volatile storage.|
+|COMMIT TRANSACTION|<br/>1. A Commit Log record is formed and the log records associated with the transaction must be written to stable storage. The transaction isn't considered committed until the log records are correctly assigned to stable storage.<br/>2. Data page 150 remains in SQL Server data cache and isn't immediately flushed to stable storage. When the log records are correctly secured, recovery can redo the operation, if it's necessary.<br/>3. Transactional locks are released.|
   
-Do not be confused by the terms "locking" and "logging." Although important, locking, and logging are separate issues when you deal with the WAL. In the previous example, SQL Server generally holds the latch on page 150 for the time necessary to perform the physical insert changes on the page, not the entire time of the transaction. The appropriate lock type is established to protect the row, range, page, or table as necessary. Refer to the SQL Server Books Online locking sections for more details about lock types.
+Don't be confused by the terms "locking" and "logging." Although important, locking, and logging are separate issues when you deal with the WAL. In the previous example, SQL Server generally holds the latch on page 150 for the time necessary to perform the physical insert changes on the page, not the entire time of the transaction. The appropriate lock type is established to protect the row, range, page, or table as necessary. Refer to the SQL Server Books Online locking sections for more details about lock types.
 
 Looking at the example in more detail, you might ask what happens when the LazyWriter or CheckPoint processes run. SQL Server issues all appropriate flushes to stable storage for transactional log records that are associated with the dirty and pinned page. This makes sure that the WAL protocol data page can never be written to stable storage until the associated transactional log records have been flushed.
 
@@ -134,7 +134,7 @@ For discussion purposes, assume that all sectors of the data page are sorted to 
 When you evaluate the optimal performance factors for a database server, there are many factors to consider. The most important of these is, "Does my system allow valid `FILE_FLAG_WRITE_THROUGH` capabilities?"
 
 > [!NOTE]
-> Any cache that you're using must fully support a battery-backed solution. All other caching mechanisms are suspected to have data corruption and data loss. SQL Server makes every effort to ensure the WAL by enabling `FILE_FLAG_WRITE_THROUGH`.
+> Any cache that you're using must fully support a battery-backed solution. All other caching mechanisms are prone to data corruption and data loss. SQL Server makes every effort to ensure the WAL by enabling `FILE_FLAG_WRITE_THROUGH`.
 
 Testing has shown that many disk drive configurations may contain write caching without the appropriate battery Backup. SCSI, IDE, and EIDE drives take full advantage of write caches. For more information about how SSDs work together with SQL Server, see the following CSS SQL Server Engineers Blog article:
 
@@ -158,7 +158,7 @@ Another common technique that's used to protect data is to detect bad sectors du
 
 This feature is part of the write cache and reduces the risk of data loss during deferred write operations. If a disk error occurs during the disk write process, the disk task stops and the suspect sector is reallocated to a pool of alternate sectors that are located at the end of the drive. Following the reallocation, the disk write task continues until it is complete.
 
-This can be a powerful feature if battery Backup is provided for the cache. This provides appropriate modification upon restart. It is preferable to detect the disk errors, but the data security of the WAL protocol would again require this to be done real time and not in a deferred manner. Within the WAL parameters, the AWR technique cannot account for a situation in which a log write fails because of a sector error but the drive is full. The database engine must immediately know about the failure so the transaction can be correctly aborted, the administrator can be alerted, and correct steps taken to secure the data and correct the media failure situation.
+This can be a powerful feature if battery Backup is provided for the cache. This provides appropriate modification upon restart. It is preferable to detect the disk errors, but the data security of the WAL protocol would again require this to be done real time and not in a deferred manner. Within the WAL parameters, the AWR technique can't account for a situation in which a log write fails because of a sector error but the drive is full. The database engine must immediately know about the failure so the transaction can be correctly aborted, the administrator can be alerted, and correct steps taken to secure the data and correct the media failure situation.
 
 ### Data safety
 
@@ -170,10 +170,10 @@ There are several precautions that a database administrator should take to ensur
 - Make sure that your caching device:
   - Has integrated battery Backup
   - Can reissue writes on power-up
-  - Can be fully disabled if it is necessary
+  - Can be fully disabled if it's necessary
   - Handles bad sector remapping in real time
 - Enable torn page detection. (This has little effect on performance.)
-- Configure RAID drives allowing for a hot swap of a bad disk drive, if it is possible.
+- Configure RAID drives allowing for a hot swap of a bad disk drive, if it's possible.
 - Use newer caching controllers that let you add more disk space without restarting the OS. This can be an ideal solution.
 
 ### Testing drives
@@ -197,7 +197,7 @@ In all but non-logged situations, SQL Server will require only the log records t
 
 The data pages can remain in cache until the LazyWriter or CheckPoint process flushes them to stable storage. Using the WAL protocol to make sure that the log records are correctly stored makes sure that recovery can recover a data page to a known state.
 
-This does not mean that it is advisable to place data files on a cached drive. When the SQL Server flushes the data pages to stable storage, the log records can be truncated from the transaction log. If the data pages are stored on volatile cache, it is possible to truncate log records that would be used to recover a page in the event of a failure. Make sure that both your data and log devices accommodate stable storage correctly.
+This doesn't mean that it is advisable to place data files on a cached drive. When the SQL Server flushes the data pages to stable storage, the log records can be truncated from the transaction log. If the data pages are stored on volatile cache, it's possible to truncate log records that would be used to recover a page in the event of a failure. Make sure that both your data and log devices accommodate stable storage correctly.
 
 ### Increasing performance
 
@@ -211,7 +211,7 @@ Many online transaction processing (OLTP) systems require a high transaction rat
 
 To observe significant performance changes that occur in SQL Server on a caching drive, the transaction rate was increased by using small transactions.
 
-Testing shows that high writes activity of buffers that is less than 512 KB or greater than 2 MB can cause slow performance.
+Testing shows that high writes activity of buffers that's less than 512 KB or greater than 2 MB can cause slow performance.
 
 Consider the following example:
 
@@ -237,14 +237,14 @@ IDE(5200 RPM) 14 seconds (Drive cache enabled)
 IDE(5200 RPM) 160 seconds
 ```
 
-The process of wrapping the entire series of `INSERT` operations into a single transaction runs in approximately four seconds in all configurations. This is because of the number of log flushes that are required. If you do not create a single transaction, every `INSERT` is processed as a separate transaction. Therefore, all the log records for the transaction must be flushed. Each flush is 512 bytes in size. This requires significant mechanical drive intervention.
+The process of wrapping the entire series of `INSERT` operations into a single transaction runs in approximately four seconds in all configurations. This is because of the number of log flushes that are required. If you don't create a single transaction, every `INSERT` is processed as a separate transaction. Therefore, all the log records for the transaction must be flushed. Each flush is 512 bytes in size. This requires significant mechanical drive intervention.
 
 When a single transaction is used, the log records for the transaction can be bundled, and a single, larger write can be used to flush the gathered log records. This significantly reduces the mechanical intervention.
 
 > [!WARNING]
-> We recommend that you do not increase your transaction scope. Long-running transactions can cause excessive and unwanted blocking and increased overhead. Use the SQL Server:Databases SQL Server performance counters to view the transaction log-based counters. Specifically, Log Bytes Flushed/sec can indicate many small transactions that can cause high mechanical disk activity.
+> We recommend that you don't increase your transaction scope. Long-running transactions can cause excessive and unwanted blocking and increased overhead. Use the SQL Server:Databases SQL Server performance counters to view the transaction log-based counters. Specifically, Log Bytes Flushed/sec can indicate many small transactions that can cause high mechanical disk activity.
 
-Examine the statements that are associated with the log flush to determine whether the Log Bytes Flushed/sec value can be reduced. In the previous example, a single transaction was used. However, in many scenarios, this can cause undesired locking behavior. Examine the design of the transaction. You can use code similar to the following to run batches to reduce the frequent and small log flush activity:
+Examine the statements that are associated with the log flush to determine whether the Log Bytes Flushed/sec value can be reduced. In the previous example, a single transaction was used. However, in many scenarios, this can cause undesired locking behavior. Examine the design of the transaction. You can use code similar to the following code to run batches to reduce the frequent and small log flush activity:
 
 ```sql
 BEGIN TRAN

@@ -1,14 +1,14 @@
 ---
 title: Assertion when you execute Bulk Insert or BCP 
 description: This article provides a workaround for the problem that occurs when you try to execute a BULK INSERT or BCP operation.
-ms.date: 09/19/2022
+ms.date: 09/23/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: nathansc
 ms.prod: sql
 ---
 # SQL Server assertion error when you try to execute a Bulk Insert or BCP statement
 
-This article helps you resolve the problem that occurs when you try to execute a `Bulk Insert` or `BCP` operation.
+This article helps you resolve the problem that occurs when you try to execute a `BULK INSERT` or `BCP` operation.
 
 _Original product version:_ &nbsp; SQL Server 2008 R2 Enterprise, SQL Server 2008 Enterprise  
 _Original KB number:_ &nbsp; 2700641
