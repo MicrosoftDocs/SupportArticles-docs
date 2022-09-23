@@ -40,7 +40,7 @@ Generally, Azure VM activation issues occur if the Windows VM is not configured 
 ## Solution
 
 >[!NOTE]
->If you are using a site-to-site VPN and forced tunneling, see [Use Azure custom routes to enable KMS activation with forced tunneling](/azure/vpn-gateway/vpn-gateway-about-forced-tunneling).
+>If you are using a site-to-site VPN and forced tunneling, see [Use Azure custom routes to enable KMS activation with forced tunneling](custom-routes-enable-kms-activation.md).
 >
 >If you are using ExpressRoute and you have a default route published, see [Can I block Internet connectivity to virtual networks connected to ExpressRoute circuits?](/azure/expressroute/expressroute-faqs).
 
