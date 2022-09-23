@@ -1,7 +1,7 @@
 ---
 title: Defragmenting database disk drives
 description: This article provides some guidance regarding defragmentation of SQL Server database drives.
-ms.date: 12/02/2020
+ms.date: 09/23/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -19,7 +19,7 @@ That depends on the fragmentation state of the current drives. Generally, it doe
 
 ## More information
 
-A disk defragmenter moves all files, including the database file, into contiguous clusters on a hard disk. This optimizes and speeds up file access. With the exception of the Windows NT operating system, if you do not defragment your hard disk, the operating system may have to go to several physical locations on the disk to retrieve the database file, making file access slower.
+A disk defragmenter moves all files, including the database file, into contiguous clusters on a hard disk. This optimizes and speeds up file access. Except for Windows NT operating system, if you don't defragment your hard disk, the operating system may have to go to several physical locations on the disk to retrieve the database file, making file access slower.
 
 Because physical data access is the most expensive part of an I/O request, defragmentation can provide performance gains for SQL Server and other applications. Positioning-related chunks of data close to each other reduces I/O operation requirements.
 
@@ -33,13 +33,13 @@ When you evaluate a defragmentation utility for use with SQL Server, make sure t
 
 - The utility protects against a system failure, such as a power outage, in a safe way that keeps the files logically and physically intact. To guarantee data integrity, a pull-the-plug test is highly recommended when a defragmentation utility is running on a SQL Server-based file.
 
-- The Write-Ahead Logging (WAL) protocol requires the prevention of sector rewrites to avoid data loss. The utility must maintain the physical integrity of the file as long as it is performing any data movement. The utility should work on sector boundaries in a transactional way to keep the SQL Server files intact.
+- The Write-Ahead Logging (WAL) protocol requires the prevention of sector rewrites to avoid data loss. The utility must maintain the physical integrity of the file as long as it's performing any data movement. The utility should work on sector boundaries in a transactional way to keep the SQL Server files intact.
 
-- The utility should provide appropriate locking mechanisms to guarantee that the file retains a consistent image for any modifications. For example, the utility should ensure that the original sector cannot be modified when it's copied to a new location. If modifications were allowed, the defragmentation utility could lose the write.
+- The utility should provide appropriate locking mechanisms to guarantee that the file retains a consistent image for any modifications. For example, the utility should ensure that the original sector can't be modified when it's copied to a new location. If modifications were allowed, the defragmentation utility could lose the write.
 
-Critical Disk defragmenters that don't provide these transactional data capabilities shouldn't be used unless the SQL Server instance using the disks to be defragmented has been shut down so that you are not defragmenting open database files.
+Critical disk defragmenters that don't provide these transactional data capabilities shouldn't be used unless the SQL Server instance using the disks to be defragmented has been shut down so that you're not defragmenting open database files.
 
-Open-file defragmentation raises several possible issues that closed-file defragmentation typically does not:
+Open-file defragmentation raises several possible issues that closed-file defragmentation typically doesn't:
 
 - Open-file defragmenting affects performance. Defragmentation utilities may lock sections of the file, preventing SQL Server from completing a read or write operation. This may affect the concurrency of the server that's running SQL Server. Contact the manufacturer of the defragmentation tool to learn how files are locked and how this could affect SQL Server concurrency.
 
