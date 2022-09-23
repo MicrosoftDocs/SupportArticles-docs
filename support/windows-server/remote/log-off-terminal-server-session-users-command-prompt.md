@@ -15,17 +15,13 @@ ms.technology: windows-server-rds
 ---
 # How to Log off all Remote Desktop Session Users from a Command Prompt
 
-This article provides some information about how to log off all Remote Desktop Session Users from a Command Prompt.
-
-_Applies to:_ &nbsp; Windows Server 2012 R2  
-_Original KB number:_ &nbsp; 259436
-
-## Summary
-
 Under some conditions, an administrator may want to force a logoff of all users currently logged on to a Remote Desktop server. You can do so by using a batch file, or a PowerShell script.
 
 > [!WARNING]
 > Performing the following procedure logs off all users currently logged onto the Remote Desktop server. This may result in a loss of unsaved data. Because of this, extreme caution is advised.
+
+_Applies to:_ &nbsp; Windows Server 2012 R2  
+_Original KB number:_ &nbsp; 259436
 
 ## Using PowerShell
 
