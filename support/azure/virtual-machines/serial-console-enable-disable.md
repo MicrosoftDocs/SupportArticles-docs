@@ -140,14 +140,14 @@ If you'd like to assign access to VM's in a subscription, then delete the second
 ```
 
 For instructions on how to use Azure portal to create a custom role for least privilege access to Serial console, read the following documentation [Create or update Azure custom roles using the Azure portal
-](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal).
+](https://docs.microsoft.com/azure/role-based-access-control/custom-roles-portal).
 
-For [Step 1: Determine the permissions you need](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal#step-1-determine-the-permissions-you-need) the permissions you need for the role are the Azure actions shown above.
+For [Step 1: Determine the permissions you need](https://docs.microsoft.com/azure/role-based-access-control/custom-roles-portal#step-1-determine-the-permissions-you-need) the permissions you need for the role are the Azure actions shown above.
 
-For [Step 5: Assignable scope](https://docs.microsoft.com/en-us/azure/role-based-access-control/custom-roles-portal#step-5-assignable-scopes) set the scope to be the VM's resource group if you only want the user with the role to have access to a particular VM's Serial console OR set the scope to be the subscription if you want the user to have Serial console access to any VM in the subscription.
+For [Step 5: Assignable scope](https://docs.microsoft.com/azure/role-based-access-control/custom-roles-portal#step-5-assignable-scopes) set the scope to be the VM's resource group if you only want the user with the role to have access to a particular VM's Serial console OR set the scope to be the subscription if you want the user to have Serial console access to any VM in the subscription.
 
 For instructions on how to use Azure portal to assign roles, read the following documentation [Assign Azure roles using the Azure portal
-](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal?tabs=current)
+](https://learn.microsoft.com/azure/role-based-access-control/role-assignments-portal?tabs=current)
 
 
 ## Next steps
