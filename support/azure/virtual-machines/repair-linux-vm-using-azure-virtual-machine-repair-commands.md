@@ -1,5 +1,5 @@
 ---
-title: Repair a Linux VM by using the Azure Virtual Machine repair commands | Microsoft Docs
+title: Repair a Linux VM by using the Azure Virtual Machine repair commands
 description: This article details how to use Azure Virtual Machine repair commands to connect the disk to another Linux VM to fix any errors, then rebuild your original VM.
 services: virtual-machines
 documentationcenter: ''

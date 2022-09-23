@@ -1,7 +1,7 @@
 ---
 
-title: Checking file system when booting an Azure VM| Microsoft Docs
-description: Learn how to resolve the issue that VM show Checking file system when booting| Microsoft Docs
+title: Checking file system when booting an Azure VM
+description: Learn how to resolve the issue that VM show Checking file system when booting.
 services: virtual-machines
 documentationCenter: ''
 author: genlin

@@ -22,11 +22,11 @@ _Original KB number:_ &nbsp; 931937
 
 ## References for Windows 10 environments
 
-- To access your phone on your PCs, use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Docs](/windows-insider/apps/your-phone#march-12-2019).
+- To access your phone on your PCs, use Your Phone application on your system. For more information review [Your Phone app help & learning - Microsoft Support](https://support.microsoft.com/your-phone-app) and [Your Phone updates - Windows Insider Program | Microsoft Learn](/windows-insider/apps/your-phone#march-12-2019).
 
-- To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Docs](/windows/client-management/mdm/).
+- To learn more about mobile device management on Windows 10 review [Mobile device management - Windows Client Management | Microsoft Learn](/windows/client-management/mdm/).
 
-- To configure Windows 10 mobile devices, see [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Docs](/windows/configuration/mobile-devices/configure-mobile).
+- To configure Windows 10 mobile devices, see [Configure Windows 10 Mobile devices - Configure Windows | Microsoft Learn](/windows/configuration/mobile-devices/configure-mobile).
 
 ## Introduction of Windows Mobile Device Center
 

@@ -1,5 +1,5 @@
 ---
-title: Use Azure custom routes to enable KMS activation with forced tunneling | Microsoft Docs
+title: Use Azure custom routes to enable KMS activation with forced tunneling
 description: Shows how to use Azure custom routes to enable KMS activation when using forced tunneling in Azure.
 services: virtual-machines, azure-resource-manager
 documentationcenter: ''
@@ -42,7 +42,7 @@ The first DNS name of the KMS server for the Azure Global cloud is `azkms.core.w
 |Azure China 21Vianet|azkms.core.chinacloudapi.cn<br>kms.core.chinacloudapi.cn|159.27.28.100, 163.228.64.161<br>42.159.7.249|
 
 > [!NOTE] 
-> All the three IP addresses for the Azure Global cloud and Azure China should be added to the custom route.
+> All the three IP addresses for the Azure Global cloud and the Azure China cloud should be added to the custom route for the respective cloud.
 > 
 > <sup>*</sup> To mitigate an issue related to Network Security Group, **azkms.core.windows.net** points to **kms.core.windows.net** for now. After the issue is resolved (planned for October 3rd, 2022) **azkms.core.windows.net** will point to two new IP addresses: **20.118.99.224** and **40.83.235.53**.
 

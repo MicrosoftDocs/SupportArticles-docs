@@ -1,5 +1,5 @@
 ---
-title: Understand a system reboot for an Azure VM | Microsoft Docs
+title: Understand a system reboot for an Azure VM
 description: Lists the events that can cause a VM to reboot
 services: virtual-machines
 documentationcenter: ''
