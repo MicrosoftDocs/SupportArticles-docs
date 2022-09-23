@@ -20,7 +20,7 @@ Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate
 
 After Azure VM Agent is successfully installed, you can see following services listed in services.msc on the VM:
 
-- Windows Azure Guest Agent - This service is the service that is responsible for all the logging in WAppAgent.log. This service is responsible for configuring various extensions and communication from Guest to Host.
+- Windows Azure Guest Agent - This service is the service that is responsible for all the logging in WAppAgent.log. It's responsible for configuring various extensions and communication from Guest to Host.
 - Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
 - RDAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
