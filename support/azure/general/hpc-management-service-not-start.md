@@ -7,7 +7,7 @@ ms.author: v-weizhu
 author: AmandaAZ
 ms.reviewer: hclvteam 
 ---
-# HPC Management Service fails to start after restoring the database
+# HPC Management Service fails to start after restoring database
 
 This article provides a solution for an issue where HPC Management Service fails to start after you restore a corrupted database.
 
