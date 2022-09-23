@@ -13,19 +13,31 @@ This article provides a solution for an issue where HPC Management Service fails
 
 ## Symptoms
 
-After you restore a corrupted HPC management database, HPC Management Service fails to initialize. When you reboot the computer multiple times, all other services are in running status. However, HPC Management Service still doesn't start.
+After you restore a corrupted HPC management database, HPC Management Service fails to initialize. Even though you reboot the head node and verify that all other HPC services are in running status, HPC Management Service still can't be started.
 
 The following error is shown in HPC Management event logs.
 
-> Level Date and Time Source Event ID Task Category Error 7/13/2020 14:06 Microsoft-HPC-Management 6106 Initialization The HPC Management Service failed to initialize correctly: The instance collection of ids cannot be resolved in the current instance view.
+> The HPC Management Service failed to initialize correctly: The instance collection of ids cannot be resolved in the current instance view.
 
 ## Cause
 
-HPC Management Service crashed with "InstanceCacheLoadException". See the following HPC Management event log:
+HPC Management Service crashed with "InstanceCacheLoadException".
 
-:::image type="content" source="media/hpc-management-service-not-start/instancecacheloadexception.png" alt-text="Screenshot that shows HPC Management event logs.":::
+Here is the error message in the HPC Management event log:
 
-The problematic instances are sql instances. Many instances are in wrong state. For each instance, there's only one version in "Current" state (for example, instanceState is 2), but in your HPCManagement database, there are tens of instances with two or three versions in "Current" state.
+> [HPCManagement] Exception: Microsoft.SystemDefinitionModelInstanceCacheLoadException: The instance collection of ids cannot be resolved in the current instance view.
+
+This issue occurs because many instances are in wrong state. For each instance, there should be only one version in "Current" state (instanceState value is 2). When the issue occurs, there are instances with two or three versions that are in "Current" state(instanceState value is 2). To verify the number of the instance versions in "Current" state, run the following SQL query against an HPC Management Database:
+
+```sql
+SELECT instanceId, count(*) as Number FROM Instances where instanceState = 2 group by instanceId having count(*) > 1
+```
+
+For each instanceId returned by the SQL query above, run the following SQL query:
+
+```sql
+SELECT Instances.instanceId, Instances.changeId, Instances.instanceVersion, Instances.instanceName, Instances.instanceState, Changes.changeName, Changes.changeState FROM Instances INNER JOIN Changes on Instances.changeId = Changes.changeId Where Instances.instanceId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' and Instances.instanceState <> 3 Order by Instances.instanceVersion DESC
+```
 
 ## Resolution
 
