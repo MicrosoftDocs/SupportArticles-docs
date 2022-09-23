@@ -61,6 +61,8 @@
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
     - name: Error when deleting OneDrive synced file locally
       href: ../sync/delete-onedrive-synced-file-error.md
+    - name: Sign into OneDrive error 0x8004dec5
+      href: ../sync/sign-into-onedrive-error-0x8004dec5.md
     - name: Sign into OneDrive sync app error AADSTS50020
       href: ../sync/sign-into-onedrive-sync-app-error.md
     - name: OneDrive for Business can't sync after tenant migration
