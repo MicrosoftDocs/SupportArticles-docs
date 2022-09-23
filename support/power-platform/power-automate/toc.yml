@@ -117,8 +117,8 @@
           href: ui-flows-fails-uiaelementmismatch.md
         - name: UI flows UIAElementNotFound
           href: issue-with-ui-flows-error-uiaelementnotfound.md
-      - name: Flows - Desktop Flows
-        items:
+    - name: Flows - Desktop Flows
+      items:
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
         - name: Can't interact with web elements on runtime
@@ -149,19 +149,19 @@
           href: desktop-flow-runs-list-not-updated.md
         - name: Desktop flow fails with the SessionCreationTimeout error code
           href: sessioncreationtimeout-error-code.md
-        - name: "Failed to deserialize Flow" error
+        - name: '"Failed to deserialize Flow" error'
           href: failed-to-deserialize-flow-error.md
         - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
           href: failed-to-assume-control-of-edge-chrome-firefox-error.md
-        - name: 'Failed to get element/window' or 'Element/Window wasn't found' error
+        - name: Failed to get element/window or Element/Window wasn't found error
           href: ui-automation-action-fails-errors.md
         - name: Focus window action can't bring a window to focus
           href: focus-window-action-not-working.md
         - name: How to get Power Automate for desktop installer logs
           href: how-to-get-power-automate-desktop-installer-logs.md
-        - name: "Invalid Private key file" error in Open secure FTP connection action
+        - name: '"Invalid Private key file" error in Open secure FTP connection action'
           href: invalid-private-key-file-error.md
-        - name: "Module or action wasn't found" error
+        - name: Module or action wasn't found error
           href: module-action-wasnt-found-error.md
         - name: Power Automate for desktop console doesn't show any flows
           href: console-not-show-desktop-flows.md
