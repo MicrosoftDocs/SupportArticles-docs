@@ -28,4 +28,4 @@ This issue occurs if the certificates installed on the head node and compute nod
 
 To resolve the issue, verify if the certificate on head node and compute node matches the [requirements](/powershell/high-performance-computing/manage-hpc-pack-certificates?view=hpc19-ps). Then, import the certificate from the head node to the compute node. You can find the certificate with public key from the HPC file share on head node `\\<<headnode>>\REMINST\Certificates`.
 
-Alternatively, you may generate a new self-signed certificate, then rotate the certificate in the cluster. For more information, see [Manage HPC Pack certificates - HPC Pack](/powershell/high-performance-computing/manage-hpc-pack-certificates?view=hpc19-ps#rotate-hpc-pack-node-communication-certificates).
+Alternatively, you may generate a new self-signed certificate, then rotate the certificate in the cluster. For more information, see [Rotate HPC Pack Node communication certificates](/powershell/high-performance-computing/manage-hpc-pack-certificates?view=hpc19-ps#rotate-hpc-pack-node-communication-certificates).
