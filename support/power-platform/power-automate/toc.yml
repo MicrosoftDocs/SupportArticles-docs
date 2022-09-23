@@ -117,7 +117,6 @@
           href: ui-flows-fails-uiaelementmismatch.md
         - name: UI flows UIAElementNotFound
           href: issue-with-ui-flows-error-uiaelementnotfound.md
-      items:
       - name: Flows - Desktop Flows
         items:
         - name: Can't automate webpage with iframes
@@ -152,7 +151,7 @@
           href: sessioncreationtimeout-error-code.md
         - name: "Failed to deserialize Flow" error
           href: failed-to-deserialize-flow-error.md
-        - name: "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
+        - name: '"Failed to assume control of Microsoft Edge/Chrome/Firefox" error'
           href: failed-to-assume-control-of-edge-chrome-firefox-error.md
         - name: 'Failed to get element/window' or 'Element/Window wasn't found' error
           href: ui-automation-action-fails-errors.md
