@@ -17,11 +17,11 @@ appliesto:
 search.appverid: MET150
 ms.date: 9/21/2022
 ---
-# "The mailbox has additional shards that need recovery" error when recovering inactive mailboxes
+# "The mailbox has additional shards that need recovery" error when recovering an inactive mailbox
 
 ## Symptoms
 
-You're an administrator in an organization and have sufficient permissions. When you try to [recover inactive mailboxes](/microsoft-365/compliance/recover-an-inactive-mailbox), you receive the following error message about multiple component shards:  
+When you try to [recover an inactive mailbox](/microsoft-365/compliance/recover-an-inactive-mailbox) in Exchange Online, you receive the following error message about multiple component shards:  
 
 > The inactive mailbox '\<identity of the inactive mailbox>' cannot be recovered because the mailbox has additional shards that need recovery.
   
@@ -35,10 +35,10 @@ To see which inactive mailboxes are affected by multiple shards, you can check t
 Get-Mailbox -InactiveMailboxOnly | fl UserPrincipalName,MailboxLocations
 ```
 
-In the following example output, the mailbox shard location type has `AuxPrimary` and `Primary`, which means the mailbox has `AuxPrimary` shards:
+In the following example output, the mailbox shard location type is shown as `AuxPrimary` and `Primary`. This means that the mailbox has `AuxPrimary` shards.
 
 :::image type="content" source="media/recover-inactive-mailboxes-error/shards.png" alt-text="Screenshot of an example output in which AuxPrimary is highlighted.":::
 
 ## Resolution  
 
-To resolve this issue, [restore the inactive mailboxes](/microsoft-365/compliance/restore-an-inactive-mailbox) instead of recovering them.  
+To resolve this issue, [restore the inactive mailbox](/microsoft-365/compliance/restore-an-inactive-mailbox) instead of recovering it.  
