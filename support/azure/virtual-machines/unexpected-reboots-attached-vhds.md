@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot unexpected reboots of VMs with attached VHDs on Azure VMs | Microsoft Docs
+title: Troubleshoot unexpected reboots of VMs with attached VHDs on Azure VMs
 description: How to troubleshoot unexpected reboots of VMs.
 keywords: ssh connection refused, ssh error, azure ssh, SSH connection failed
 services: virtual-machines

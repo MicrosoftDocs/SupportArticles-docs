@@ -83,9 +83,9 @@ The rules mainly contain two important parts: conditions and actions. To create 
 
     To create a new action group, follow these steps:
 
-    - Select the subscription and resource group where the action group resource will be created and give a name and display name.
-    - (Optional) Select how the user will be informed when the alert rule is triggered, such as sending an email to a specific email address.
-    - (Optional) Select what action it will take. We can trigger Automation Runbook, Azure Function, and five other service types in this option.
+    1. Select the subscription and resource group where the action group resource will be created and give a name and display name.
+    2. Optional) Select how the user will be informed when the alert rule is triggered, such as sending an email to a specific email address.
+    3. (Optional) Select what action it will take. We can trigger Automation Runbook, Azure Function, and five other service types in this option.
     
     When the action group is created, it will also be added to the alert rule.
 

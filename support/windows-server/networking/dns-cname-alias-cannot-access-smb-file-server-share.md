@@ -142,7 +142,7 @@ To collect a network trace, follow these steps:
    2. To delete the NetBIOS cache, type the following command, and then press Enter:
 
       ```console
-      NBTSTAT RR
+      NBTSTAT /RR
       ```
 
    3. To delete the Kerberos cache, type the following command, and then press Enter:

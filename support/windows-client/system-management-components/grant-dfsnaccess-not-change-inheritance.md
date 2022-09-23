@@ -44,10 +44,10 @@ To work around this problem, use one of the following methods.
 
 - Use the `dfsutil property sd grant` command instead, as in the following example:
 
-    ```console
-    dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\UserName:RX protect
-    ```
+  ```console
+  dfsutil property sd grant \\Contoso.com\Software\Projects Contoso\UserName:RX protect
+  ```
 
 ## More information
 
-In order to administer DFS namespaces, several Windows PowerShell cmdlets were created as replacement for the command-line utilities such as dfsutil.exe. One of the administrative tasks that is automated is the granting of permissions to DFS links for ABE filtering. By default, DFS namespaces inherit the permission from the DFS root down to the links. This is represented in the Microsoft Management Console (MMC) user interface as use inherited permissions from the local file system. However, for certain links to be displayed while other links aren't, the administrator has to select the **Set explicit view permissions on the DFS folder** option and then set the Configure View permissions for the individual users or groups.
+In order to administer DFS namespaces, several Windows PowerShell cmdlets were created as replacement for the command-line utilities such as dfsutil.exe. One of the administrative tasks that is automated is the granting of permissions to DFS links for ABE filtering. By default, DFS namespaces inherit the permission from the DFS root down to the links. This is represented in the Microsoft Management Console (MMC) user interface as use inherited permissions from the local file system. However, for certain links to be displayed while other links aren't, the administrator has to select the **Set explicit view permissions on the DFS folder** option and then set the **Configure View permissions** for the individual users or groups.

@@ -14,7 +14,7 @@ Here's an example of a sign-in report:
 
 :::image type="content" source="media/verify-first-party-apps-sign-in/sign-in-report.png" alt-text="Screenshot of a sign-in report in Azure Active Directory.":::
 
-For example, when you access `docs.microsoft.com`, the application shown in the sign-in log may say `dev-rel-auth-prod`, which is not descriptive regarding `docs.microsoft.com`.
+For example, when you access `learn.microsoft.com`, the application shown in the sign-in log may say `dev-rel-auth-prod`, which is not descriptive regarding `learn.microsoft.com`.
 
 Though the apps listed in sign-in reports are indeed owned by Microsoft, and are not suspicious applications, there is a way that you can verify whether an Azure AD service principal found in your AAD logs is owned by Microsoft.
 
@@ -85,6 +85,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Approval Management|65d91a3d-ab74-42e6-8a2f-0add61688c74<br>38049638-cc2c-4cde-abe4-4479d721ed44|
 |Microsoft Authentication Broker|29d9ed98-a469-4536-ade2-f981bc1d605e|
 |Microsoft Azure CLI|04b07795-8ddb-461a-bbee-02f9e1bf7b46|
+|Microsoft Azure PowerShell|1950a258-227b-4e31-a9cf-717495945fc2|
 |Microsoft Bing Search|cf36b471-5b44-428c-9ce7-313bf84528de|
 |Microsoft Bing Search for Microsoft Edge|2d7f3606-b07d-41d1-b9d2-0d0c9296a6e8|
 |Microsoft Bing Default Search Engine|1786c5ed-9644-47b2-8aa0-7201292175b6|
@@ -97,6 +98,7 @@ The following table lists some, but not all, first party Microsoft applications.
 |Microsoft Graph|00000003-0000-0000-c000-000000000000|
 |Microsoft Intune Web Company Portal|74bcdadc-2fdc-4bb3-8459-76d06952a0e9|
 |Microsoft Intune Windows Agent|fc0f3af4-6835-4174-b806-f7db311fd2f3|
+|Microsoft Learn|18fbca16-2224-45f6-85b0-f7bf2b39b3f3|
 |Microsoft Office|d3590ed6-52b3-4102-aeff-aad2292ab01c|
 |Microsoft Office 365 Portal|00000006-0000-0ff1-ce00-000000000000|
 |Microsoft Office Web Apps Service|67e3df25-268a-4324-a550-0de1c7f97287|

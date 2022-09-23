@@ -55,7 +55,7 @@ landingContent:
           - text: Visual Studio IDE documentation 
             url: /visualstudio/ide
           - text: Learning paths and resources
-            url: /learn/browse/?products=vs
+            url: /training/browse/?products=vs
           - text: Support resources 
             url: https://visualstudio.microsoft.com/vs/support/#talktous
 
