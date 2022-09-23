@@ -59,9 +59,7 @@ Go to the VM properties page in Azure portal, and check the **Agent status**. If
 
   - WindowsAzureGuestAgent.exe: Azure VM Agent service
   - WaAppAgent.exe: RD Agent service
-  - WindowsAzureNetAgent.exe: Windows Azure Network Agent service
-  - WindowsAzureTelemetryService.exe: Windows Azure Telemetry Service
-
+  
    If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
 
 - Check the Program and Feature
