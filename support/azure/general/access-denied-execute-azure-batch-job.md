@@ -34,7 +34,7 @@ To resolve the issue, manage the Batch pool and the storage account configuratio
 > [!NOTE]
 > If you need to upload application packages, none of following solutions will work. The storage account must not configure any firewall. For more information, see [Link a storage account](/azure/batch/batch-application-packages#link-a-storage-account).
 
-### Scenario 1: The Batch pool and storage account are in the same region, and the Batch pool has a virtual network
+### Scenario 1: Batch pool and storage account are in the same region, and Batch pool has a virtual network
 
 1. Check **Subnet information** under **Network Configuration** from the Azure portal > **Batch Account** > **Pool** > **Properties**. Take note and write the information down.
 
