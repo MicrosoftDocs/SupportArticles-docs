@@ -13,21 +13,19 @@ This article provides a solution for an issue where HPC Management Service fails
 
 ## Symptoms
 
-After you restore a corrupted HPC management database, HPC Management Service fails to initialize. Even though you reboot the head node and verify that all other HPC services are in running status, HPC Management Service still can't be started.
+After you restore a corrupted HPC management database, HPC Management Service fails to initialize. You reboot the head node and verify that all other HPC services are in running status, howerver HPC Management Service still can't be started.
 
-The following error is shown in HPC Management event logs.
+The following error is shown in HPC Management event logs:
 
 > The HPC Management Service failed to initialize correctly: The instance collection of ids cannot be resolved in the current instance view.
 
 ## Cause
 
-HPC Management Service crashed with "InstanceCacheLoadException".
-
-Here is the error message in the HPC Management event log:
+HPC Management Service crashed with "InstanceCacheLoadException". Here is the error message in the HPC Management event log:
 
 > [HPCManagement] Exception: Microsoft.SystemDefinitionModelInstanceCacheLoadException: The instance collection of ids cannot be resolved in the current instance view.
 
-This issue occurs because many instances are in wrong state. For each instance, there should be only one version in "Current" state (instanceState value is 2). When the issue occurs, there are instances with two or three versions that are in "Current" state(instanceState value is 2). To verify the number of the instance versions in "Current" state, run the following SQL query against an HPC Management Database:
+This issue occurs because many instances are in wrong state. For each instance, there should be only one version in "Current" state (instanceState value is 2). When the issue occurs, there are instances with two or three versions that are in "Current" state (instanceState value is 2). To verify the number of the instance versions in "Current" state, run the following SQL query against an HPC Management Database:
 
 ```sql
 SELECT instanceId, count(*) as Number FROM Instances where instanceState = 2 group by instanceId having count(*) > 1
@@ -36,7 +34,7 @@ SELECT instanceId, count(*) as Number FROM Instances where instanceState = 2 gro
 For each instanceId returned by the SQL query above, run the following SQL query:
 
 ```sql
-SELECT Instances.instanceId, Instances.changeId, Instances.instanceVersion, Instances.instanceName, Instances.instanceState, Changes.changeName, Changes.changeState FROM Instances INNER JOIN Changes on Instances.changeId = Changes.changeId Where Instances.instanceId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' and Instances.instanceState <> 3 Order by Instances.instanceVersion DESC
+SELECT Instances.instanceId, Instances.changeId, Instances.instanceVersion, Instances.instanceName, Instances.instanceState, Changes.changeName, Changes.changeState FROM Instances INNER JOIN Changes on Instances.changeId = Changes.changeId Where Instances.instanceId = '<instanceId>' and Instances.instanceState <> 3 Order by Instances.instanceVersion DESC
 ```
 
 ## Resolution
