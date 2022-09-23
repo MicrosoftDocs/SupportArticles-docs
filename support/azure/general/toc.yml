@@ -109,6 +109,8 @@
     items:
     - name: HPC Pack content coming soon
       href: welcome-general.yml
+    - name: HPC jobs are stuck in canceling mode, and new jobs don't start
+      href: job-stuck-canceling-mode.md
       items:
 
 - name: General
