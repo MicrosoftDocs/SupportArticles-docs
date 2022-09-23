@@ -33,14 +33,14 @@ Before we begin the in-depth discussion, some of the terms that are used through
 
 |Term|Definition|
 |---|---|
-|Battery-backed|Separate and localized battery Backup facility directly available and controlled by the caching mechanism to prevent data loss.<br/> This is not an uninterruptible power supply (UPS). A UPS does not guarantee any write activities and can be disconnected from the caching device.|
+|Battery-backed|Separate and localized battery Backup facility directly available and controlled by the caching mechanism to prevent data loss.<br/> This isn't an uninterruptible power supply (UPS). A UPS doesn't guarantee any write activities and can be disconnected from the caching device.|
 |Cache|Intermediary storage mechanism used to optimize physical I/O operations and improve performance.|
-|Dirty Page|Page containing data modifications that have yet to be flushed to stable storage. For more information about dirty page buffers, see the "[Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105))" topic at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
+|Dirty Page|Page containing data modifications that're yet to be flushed to stable storage. For more information about dirty page buffers, see the "[Writing Pages](/previous-versions/sql/sql-server-2008-r2/aa337560(v=sql.105))" topic at SQL Server Books Online.<br/>The content also applies to Microsoft SQL Server 2012 and later versions.|
 |Failure|Anything that might cause an unexpected outage of the SQL Server process. Examples include: power outage, computer reset, memory errors, other hardware issues, bad sectors, drive outages, system failures, and so on.|
 |Flush|Forcing of a cache buffer to stable storage.|
 |Latch|Synchronization object used to protect physical consistency of a resource.|
 |Nonvolatile storage|Any medium that remains available across system failures.|
-|Pinned page|Page that remains in data cache and cannot be flushed to stable storage until all associated log records are secured in a stable storage location.|
+|Pinned page|Page that remains in data cache and can't be flushed to stable storage until all associated log records are secured in a stable storage location.|
 |Stable storage|Same as nonvolatile storage.|
 |Volatile storage|Any medium that will not remain intact across failures.<br/>|
   

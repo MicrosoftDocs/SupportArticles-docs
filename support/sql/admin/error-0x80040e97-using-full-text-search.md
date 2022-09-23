@@ -41,9 +41,9 @@ EXEC sp_fulltext_service 'ft_timeout', 1200000
 
 ## More information
 
-When SQL Server indexes data types such as **varbinary, varbinary (max), image,** or **xml**, SQL Server sends data to the filter daemon process (*FDHOST.exe*). At any point during the indexing process, SQL Server will not wait for more than 60 seconds for the *FDHOST.exe* process to respond.
+When SQL Server indexes data types such as **varbinary**, **varbinary (max)**, **image**, or **xml**, SQL Server sends data to the filter daemon process (*FDHOST.exe*). At any point during the indexing process, SQL Server will not wait for more than 60 seconds for the *FDHOST.exe* process to respond.
 
-For large XML documents, the XML Filter that is hosted by the *FDHOST.exe* process reads in all the data from SQL Server and stores the data in a temporary file. Then *FDHOST.exe* processes the XML content for filtering and word-breaking. If this process takes more than 60 seconds, SQL Server stops the batch and retries the operation by using a smaller batch size. If an XML document is large, and the FDHOST.exe process takes more than 60 seconds to filter and break the words, then you can experience error that's mentioned in the [Symptoms](#symptoms) section.
+For large XML documents, the XML Filter that is hosted by the *FDHOST.exe* process reads in all the data from SQL Server and stores the data in a temporary file. Then *FDHOST.exe* processes the XML content for filtering and word-breaking. If this process takes more than 60 seconds, SQL Server stops the batch and retries the operation by using a smaller batch size. If an XML document is large, and the *FDHOST.exe* process takes more than 60 seconds to filter and break the words, then you can experience error that's mentioned in the [Symptoms](#symptoms) section.
 
 > [!NOTE]
 > The issue can occur with any iFilter that writes data to a temporary file.

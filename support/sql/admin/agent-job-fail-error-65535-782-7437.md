@@ -6,7 +6,7 @@ ms.custom: sap:Administration and Management
 ms.reviewer: vencher, vasilp
 ms.prod: sql
 ---
-# SQL Agent job that executes a distributed query may fail with 65535, 782 or 7437 error messages
+# SQL Agent job that executes a distributed query may fail with 65535, 782, or 7437 error messages
 
 This article helps you resolve the problem where the SQL Agent job that executes a distributed query might fail with 65535, 782, or 7437 error messages.
 
@@ -55,7 +55,7 @@ Transact-SQL job step runs as the owner of the job step if the owner of the job 
 ## Workaround
 
 > [!IMPORTANT]
-> The following workaround requires you to define an explicit local server login to remote server login mappings using the Security page under Properties of the linked server object. Since the Remote User column must be a SQL Server Authentication login on the remote server, the remote server's authentication mode should either already be set to Mixed mode or should be changed to Mixed mode before using the workaround.
+> The following workaround requires you to define an explicit local server login to remote server login mappings using the Security page under Properties of the linked server object. Because the Remote User column must be a SQL Server Authentication login on the remote server, the remote server's authentication mode should either already be set to Mixed mode or should be changed to Mixed mode before using the workaround.
 
 If a T-SQL job step is owned by a user that isn't part of the *sysadmin* server role and if the step contains a distributed query, perform the following steps to ensure the jobs or queries don't fail:
 
