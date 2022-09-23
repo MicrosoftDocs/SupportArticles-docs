@@ -1,5 +1,5 @@
 ---
-title: HPC jobs are stuck in canceling mode and new jobs don't start
+title: HPC jobs are stuck in canceling mode, and new jobs don't start
 description: Provides a solution for an issue where performance computing (HPC) jobs are stuck in canceling mode.
 ms.date: 09/16/2022
 author: AmandaAZ
@@ -7,13 +7,13 @@ ms.author: v-weizhu
 ms.service: azure-common-issues-support
 ms.reviewer: hclvteam, cargonz
 ---
-# HPC jobs are stuck in canceling mode and new jobs don't start
+# HPC jobs are stuck in canceling mode, and new jobs don't start
 
-This article provides a solution for issues where performance computing (HPC) jobs are stuck in canceling mode and new jobs are in queued state.
+This article provides a solution for issues where performance computing (HPC) jobs are stuck in canceling mode, and new jobs are in a queued state.
 
 ## Symptoms
 
-You have an HPC cluster that's created with Microsoft HPC Pack 2016. The cluster has one single head node and five compute nodes in Azure. When you cancel running jobs, they're stuck. In this case, when you submit new jobs, they are in queued state even though enough compute nodes are online. Restarting all nodes doesn't help.
+You have an HPC cluster that's created with Microsoft HPC Pack 2016. The cluster has one head node and five compute nodes in Azure. When you cancel running jobs, they're stuck. In this case, when you submit new jobs, they are in a queued state even though enough compute nodes are online. Restarting all nodes doesn't help.
 
 ## Cause
 
@@ -31,7 +31,7 @@ After that, you'll see that the **Pricing tier** has been changed to **Standard 
 
 :::image type="content" source="media/job-stuck-canceling-mode/pricing-tier-standard-s4-200-dtus.png" alt-text="Screenshot of the Pricing tier value." lightbox="media/job-stuck-canceling-mode/pricing-tier-standard-s4-200-dtus.png":::
 
-When you change the DTU to 200, the compute size should be at least changed to S4. The following table shows the resources available for a single database at each service tier and compute size:
+When you change the DTU to 200, the compute size should be changed to at least S4. The following table shows the resources available for a single database at each service tier and compute size:
 
 **Standard service tier (continued)**
 
@@ -46,9 +46,9 @@ When you change the DTU to 200, the compute size should be at least changed to S
 
 ## Database transaction unit
 
-A DTU can be defined as horse power for Azure SQL. Microsoft currently offers Azure SQL DB in two models, the DTU model and the vCore model. The DTU model is based on the Database Transaction Unit, and is a blended mix of CPU, I/O and memory (RAM) capabilities based on a benchmark OLTP workload called ASDB. The vCore model is based on the number of virtual CPU cores you require, and this can be scaled up as your workload increases. The DTU model works well if you have pricing constraints or have a fairly stable workload. It's also scalable, as you're able to upgrade the tier or grade of your Azure DB in the future. However, in the DTU model CPU capabilities and storage capabilities are closely coupled.
+A DTU can be defined as horsepower for Azure SQL. Microsoft currently offers Azure SQL DB in two models, the DTU model and the vCore model. The DTU model is based on the Database Transaction Unit and is a blended mix of CPU, I/O, and memory (RAM) capabilities based on a benchmark OLTP workload called ASDB. The vCore model is based on the number of virtual CPU cores you require, and this can be scaled up as your workload increases. The DTU model works well if you have pricing constraints or have a fairly stable workload. It's also scalable, as you're able to upgrade the tier or grade of your Azure DB in the future. However, in the DTU model, CPU capabilities and storage capabilities are closely coupled.
 
-For HPC scheduler databases, the minimum initial DTU is 100. The following table is the minimum initial DTUs required for each HPC databases. We recommend that you always set it higher than 100 depending on the workload of the HPC server. For more information, see the "Azure SQL Databases" section in [Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers).
+For HPC scheduler databases, the minimum initial DTU is 100. The following table shows the minimum initial DTUs required for each HPC database. We recommend that you set it higher than 100, depending on the workload of the HPC server. For more information, see the "Azure SQL Databases" section in [Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers).
 
 |HPC database|	Initial DTUs|
 |--|--|
