@@ -30,7 +30,7 @@ Here are some things to consider if you decide to tune your autogrow and autoshr
      - Use [SET options](/sql/t-sql/statements/alter-database-transact-sql-set-options) to configure `AUTO_SHRINK` settings.
 
    > [!NOTE]
-   > For more information about how to set these settings at database file level, review [Add Data or Log Files to a Database](/sql/relational-databases/databases/add-data-or-log-files-to-a-database).
+   > For more information about how to set these settings at database file level, see [Add Data or Log Files to a Database](/sql/relational-databases/databases/add-data-or-log-files-to-a-database).
 
    You can also configure the autogrow option when you create a database.
 

@@ -46,7 +46,7 @@ DatabaseID         DatabaseName
 ```
 
 > [!NOTE]
-> In the above query, if the database name contains unprintable characters they may either be printed out as spaces or some junk.
+> In the preceding query, if the database name contains unprintable characters they may either be printed out as spaces or some junk.
 
 ## More information
 

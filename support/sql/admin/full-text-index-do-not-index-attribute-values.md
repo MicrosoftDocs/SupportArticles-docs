@@ -37,7 +37,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSearch\CLSID`
 
     > [!NOTE]
-    > Replace the "\<instance>" in the path above with the relevant instance ID of SQL Server/SQL Server.
+    > Replace the "\<instance>" in the path with the relevant instance ID of SQL Server/SQL Server.
 
     > For example, "MSQL10.MSSQLSERVER" for a default instance or "MSSQL10.KATMAI" for a named instance "Katmai".
 

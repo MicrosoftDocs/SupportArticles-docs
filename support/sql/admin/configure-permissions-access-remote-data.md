@@ -22,9 +22,9 @@ This article provides additional details on configuring `DisallowAdhocAccess` th
 ## Disable Transact-SQL statements
 
 > [!NOTE]
-> Ad hoc access of remote OLE BD data sources using `OPENROWSET` and `OPENDATASOURCE` is disabled by default and no additional configuration is necessary. You need to use the procedures below only if this remote access has previously been explicitly enabled.
+> Ad hoc access of remote OLE BD data sources using `OPENROWSET` and `OPENDATASOURCE` is disabled by default and no additional configuration is necessary. You need to use the following procedures only if this remote access has previously been explicitly enabled.
 
-You can disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the procedures below:
+You can disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the following procedures:
 
 - Specify the `DisallowAdHocAccess` property for the provider in SQL Server Management Studio (SSMS):
 
