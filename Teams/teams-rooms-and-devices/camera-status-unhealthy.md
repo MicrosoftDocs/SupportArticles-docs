@@ -24,7 +24,7 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
-- The tile that shows a preview of the room's camera isn't presented in the front-of-room display.
+- The tile that shows a preview of the room's camera isn't presented in the Front of Room display.
 
 Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. The entry resembles the following entry:
 
