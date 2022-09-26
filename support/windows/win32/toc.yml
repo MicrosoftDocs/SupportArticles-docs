@@ -50,6 +50,8 @@
       href: screen-saver-command-line.md
     - name: Warning 1946 when you install an Installer package
       href: warning-1946-when-you-install-installer-package.md
+    - name: Owner window gets activated when taskbar buttons are created
+      href: owner-window-activated-taskbar-buttons-created-both-windows.md
   - name: Distributed transactions
     items:
     - name: Can't start transactions

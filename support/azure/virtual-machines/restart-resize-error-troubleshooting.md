@@ -1,5 +1,5 @@
 ---
-title: VM restarting or resizing issues in Azure | Microsoft Docs
+title: VM restarting or resizing issues in Azure
 description: Troubleshoot Resource Manager deployment issues with restarting or resizing an existing Virtual Machine in Azure
 services: virtual-machines
 documentationcenter: ''

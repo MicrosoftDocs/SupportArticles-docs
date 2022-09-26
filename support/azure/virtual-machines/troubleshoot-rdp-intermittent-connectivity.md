@@ -1,5 +1,5 @@
 ---
-title: Remote Desktop disconnects frequently in Azure VM| Microsoft Docs
+title: Remote Desktop disconnects frequently in Azure VM
 description: Learn how to troubleshoot frequent disconnections of Remote Desktop in Azure VM.
 services: virtual-machines
 documentationCenter: ''
