@@ -1,6 +1,6 @@
 ---
 title: Unable to use the Access ODBC, OLEDB or DAO interfaces outside Office Click-to-Run applications
-description: Fixes an issue in which you cannot create an ODBC DSN for drivers provided by Access in the Data Sources ODBC Administrator if you use an Office C2R installation.
+description: You can't create an ODBC DSN for drivers provided by Access in the Data Sources ODBC Administrator if you use an Office C2R installation.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -52,7 +52,7 @@ Click-to-Run installations of Office run in an isolated virtual environment on t
 
 Beginning with Microsoft 365 Apps for Enterprise Version 2009, work has been completed to [break ACE out of the C2R virtualization bubble](https://techcommunity.microsoft.com/t5/access-blog/breaking-ace-out-of-the-bubble/ba-p/1167712) so that applications outside of Office are able to locate the ODBC, OLEDB and DAO interfaces provided by the Access Database Engine within the C2R installation.
 
-Use the following table to understand if additional components are necessary to access these intefaces within your environment:
+Use the following table to understand if additional components are necessary to access these interfaces within your environment:
 
 | Current Office Installation |    Additional components needed |    Recommended Additional Installation |
 |:----------------------------|:----------------------------:|:-----------------------------------:|
@@ -66,13 +66,6 @@ Use the following table to understand if additional components are necessary to 
 > - The [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/download/details.aspx?id=54920) is not provided as a recommended installation because both the Access Database Engine 2016 and Microsoft 365 Apps use the same major version identifier (16.0) which may introduce unexpected behaviors. Office side-by-side detection will also prevent the installation from proceeding if this scenario is detected.
 
 
-### Additional information for creating ODBC connections 
+### More information about creating ODBC connections 
 
 All Click-to-Run instances of Office are unable to create Machine/System datasource names from within an Office application or from the Data Sources ODBC Administrator. 
-
-
-
-
- 
-
- 
