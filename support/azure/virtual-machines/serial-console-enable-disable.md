@@ -144,7 +144,7 @@ For instructions on how to use the Azure portal to create a custom role for leas
 
 For [Step 1: Determine the permissions you need](/azure/role-based-access-control/custom-roles-portal#step-1-determine-the-permissions-you-need), the permissions you need for the role are the Azure actions shown above.
 
-For [Step 5: Assignable scopes](https://docs.microsoft.com/azure/role-based-access-control/custom-roles-portal#step-5-assignable-scopes), set the scope to be the VM's resource group if you only want the user with the role to have access to a particular VM's Serial Console. You can also set the scope to be the subscription if you want the user to have Serial Console access to any VM in the subscription.
+For [Step 5: Assignable scopes](/azure/role-based-access-control/custom-roles-portal#step-5-assignable-scopes), set the scope to be the VM's resource group if you only want the user with the role to have access to a particular VM's Serial Console. You can also set the scope to be the subscription if you want the user to have Serial Console access to any VM in the subscription.
 
 For instructions on how to use the Azure portal to assign roles, read the following documentation [Assign Azure roles using the Azure portal
 ](/azure/role-based-access-control/role-assignments-portal?tabs=current).
