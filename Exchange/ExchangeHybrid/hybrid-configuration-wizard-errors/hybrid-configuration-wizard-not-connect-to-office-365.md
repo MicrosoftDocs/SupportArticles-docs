@@ -13,12 +13,12 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 165936
-ms.reviewer: iserrano76, ninob, kaushika-msft, meerak
+ms.reviewer: igserr, ninob, kaushika, meerak
 appliesto: 
   - Exchange Server
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/20/2022
+ms.date: 09/26/2022
 ---
 
 # Hybrid Configuration wizard doesn't connect to Office 365
