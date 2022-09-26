@@ -4,7 +4,7 @@ description: Provides information to help you fast and secure transfer files wit
 ms.date: 05/17/2022
 author: genlin
 ms.author: genli
-ms.service: data-transfers
+ms.service: azure-common-issues-support
 ms.reviewer: 
 ---
 # How to securely transfer files to Microsoft Support

@@ -2,7 +2,7 @@
 title: HPC Management Service fails to initialize
 description: Provides a solution for an issue where HPC Management Service fails to start after you restore a corrupted database
 ms.date: 09/14/2022
-ms.service: azure-common-issues-support
+ms.service: hpcpack
 ms.author: v-weizhu
 author: AmandaAZ
 ms.reviewer: hclvteam 
