@@ -109,12 +109,12 @@
       items:
   - name: HPC Pack
     items:
-    - name: HPC Pack content coming soon
-      href: welcome-general.yml
     - name: HPC Management Service fails to start after restoring database
       href: hpc-management-service-not-start.md
     - name: HPC compute nodes aren't shown or are in error state
       href: compute-node-not-shown-error-state.md
+    - name: HPC node manager service unreachable
+      href: hpc-node-manager-service-unreachable-certificate.md
       items:
 
 - name: General
