@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot data transfer and Intune app protection policies
 description: General steps to help troubleshoot when Microsoft Intune app protection policies (APP) to not control data transfer as expected.
-ms.date: 09/16/2022
+ms.date: 09/28/2022
 ms.reviewer: roblane-msft
 search.appverid: MET150
 ---
@@ -77,7 +77,7 @@ Run Intune diagnostics in Microsoft Edge to check APP setting applied to each ma
 Open Microsoft Edge on the device and enter the URL, about:intunehelp. **Intune Diagnostics** will open, as shown in the examples below. 
 Tap **View Intune App Status** (iOS/iPad) or **VIEW APP INFO** (Android) to see APP settings applied to each app on the device. Compare setting values in this view with those configured in Endpoint Manager. For an explanation of these settings' values, see [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log).
 
-:::image type="content" source="media/troubleshoot-data-transfer/intune-diagnostics.png" alt-text="Side-by-side screenshots of Intune Diagnostics on an iOS/iPadOS device (left) and an Android device (right).":::
+:::image type="content" source="media/troubleshoot-data-transfer/Intune Diagnostics_iOS and Android.png" alt-text="Side-by-side screenshots of Intune Diagnostics on an iOS/iPadOS device (left) and an Android device (right).":::
 
 Note: You can also verify the app version and the Intune App SDK version in this view.
 
