@@ -1,5 +1,5 @@
 ---
-title: The Meeting app status of an MTR device is unhealthy
+title: The Meeting app status of an MTR device is Unhealthy
 description: Resolve the issue that causes the Meeting app signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
 ms.reviewer: 
 ms.topic: troubleshooting
