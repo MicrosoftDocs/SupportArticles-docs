@@ -115,7 +115,7 @@
       href: hpc-management-service-not-start.md
     - name: HPC compute nodes aren't shown or are in error state
       href: compute-node-not-shown-error-state.md
-    - name: HPC hode manager service unreachable
+    - name: HPC node manager service unreachable
       href: hpc-node-manager-service-unreachable-certificate.md
       items:
 
