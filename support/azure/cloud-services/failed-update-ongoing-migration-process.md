@@ -7,7 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu, piw, prpillai
 ms.service: cloud-services
-ms.subservice: cs-troubleshoot-deployment-classic
+ms.subservice: troubleshoot-deployment-classic
 #Customer intent: As a cloud service user, I want to resolve a cloud service update failure that occurs when I migrate from Azure Cloud Services (classic) to Azure Cloud Services (extended support) so that I can avoid or reduce downtime.
 ---
 

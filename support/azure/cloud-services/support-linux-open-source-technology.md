@@ -6,7 +6,7 @@ ms.reviewer: patcatun
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: cs-reference
+ms.subservice: reference
 ---
 # Support for Linux and open-source technology in Azure
 

@@ -6,7 +6,7 @@ ms.reviewer:
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: cs-troubleshoot-connections
+ms.subservice: troubleshoot-connections
 ---
 # Remote Desktop Protocol not working for classic cloud service resource
 

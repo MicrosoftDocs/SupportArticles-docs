@@ -6,7 +6,7 @@ ms.reviewer:
 author: genlin
 ms.author: genli
 ms.service: cloud-services
-ms.subservice: cs-reference
+ms.subservice: reference
 ---
 # Install .NET Core on Linux by using an Azure Batch start task
 
