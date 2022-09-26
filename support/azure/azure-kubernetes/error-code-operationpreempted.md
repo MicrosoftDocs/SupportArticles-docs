@@ -7,6 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationPreempted error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the OperationPreempted error code

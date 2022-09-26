@@ -4,6 +4,7 @@ description: Describes how to identify the containers consuming high CPU in an A
 ms.date: 07/08/2021
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-cluster-performance
 ---
 # Identify the containers consuming high CPU in an AKS cluster
 

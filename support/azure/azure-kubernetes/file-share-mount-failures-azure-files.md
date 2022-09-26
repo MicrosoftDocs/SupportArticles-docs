@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-azure-storage-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why my file share fails to mount so that I can successfully use Azure Files for storage on my Azure Kubernetes Service (AKS) clusters.
 ---

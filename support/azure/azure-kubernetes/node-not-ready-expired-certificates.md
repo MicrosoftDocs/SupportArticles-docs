@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: rissing, chiragpa, momajed
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to fix expired certificates so that they don't cause Node Not Ready failures within an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot Node Not Ready failures if there are expired certificates

@@ -7,6 +7,7 @@ ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot the failed Kubernetes 1.16 upgrade when I'm using node labels with a kubernetes.io prefix so I can successfully upgrade to Kubernetes 1.16.
 ---
 

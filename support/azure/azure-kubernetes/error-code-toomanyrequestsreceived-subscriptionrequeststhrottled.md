@@ -7,6 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-delete-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the TooManyRequestsReceived or SubscriptionRequestsThrottled error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the TooManyRequestsReceived or SubscriptionRequestsThrottled error code
@@ -23,7 +24,7 @@ When you try to delete an AKS cluster, you receive the following error message:
 >
 > {
 >
-> message: "Number of read requests for subscription '.....'’' exceeded the limit of '....' for time interval 'XX:XX:XX'. Please try again after '.....' seconds."
+> message: "Number of read requests for subscription '.....''' exceeded the limit of '....' for time interval 'XX:XX:XX'. Please try again after '.....' seconds."
 >
 > }
 

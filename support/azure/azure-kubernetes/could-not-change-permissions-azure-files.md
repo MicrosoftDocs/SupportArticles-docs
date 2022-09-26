@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-azure-storage-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why I receive a "could not change permissions" error when I use Azure Files so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---

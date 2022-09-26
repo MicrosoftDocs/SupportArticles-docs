@@ -7,6 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
+ms.subservice: aks-common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why a stale watch or an HTTP status 500 error is returned by an Azure Active Directory (Azure AD) Pod Identity Node Managed identity (NMI) so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---

@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: rissing, chiragpa, momajed
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can avoid Node Not Ready issues in Azure Kubernetes Service (AKS) cluster nodes.
 ---
 # Basic troubleshooting of Node Not Ready failures

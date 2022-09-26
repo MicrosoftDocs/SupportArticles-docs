@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
+ms.subservice: aks-common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the inability to view resources in the Kubernetes resource viewer on the Azure portal so that I can use authorized IP address ranges to access my Azure Kubernetes Service (AKS) cluster configured with an API server.
 ---

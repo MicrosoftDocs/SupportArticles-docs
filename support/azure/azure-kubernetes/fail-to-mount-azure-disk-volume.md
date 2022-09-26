@@ -6,6 +6,7 @@ author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
 ms.service: azure-kubernetes-service
+ms.subservice: aks-troubleshoot-azure-storage-issues
 ---
 # Errors when mounting Azure disk volumes
 
@@ -36,8 +37,8 @@ code = Unknown
 desc = Attach volume "/subscriptions/<subscription-ID>/resourceGroups/<disk-resource-group>/providers/Microsoft.Compute/disks/<disk/PV name>" to instance "<AKS node name>" failed with Retriable: false, RetryAfter: 0s, HTTPStatusCode: 400, 
 RawError: 
 {
- 	 "error": 
-	{
+      "error": 
+    {
 "code": "BadRequest",
 "message": "Disk /subscriptions/<subscription-ID>/resourceGroups/<disk-resource-group>/providers/Microsoft.Compute/disks/<disk/PV name > cannot be attached to the VM because it is not in the same zone as the VM. VM zone: 'X'. Disk zone: 'Y'. "
   }
