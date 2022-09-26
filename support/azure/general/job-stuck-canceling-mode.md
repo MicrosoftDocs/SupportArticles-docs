@@ -9,59 +9,26 @@ ms.reviewer: hclvteam, cargonz
 ---
 # HPC jobs are stuck in canceling mode, and new jobs don't start
 
-This article provides a solution for issues where performance computing (HPC) jobs are stuck in canceling mode, and new jobs are in a queued state.
+This article provides a solution for issues with running jobs stuck in canceling mode, and new jobs can't turn into running status when an Azure SQL database is in use for an HPC PACK remote database.
 
 ## Symptoms
 
-You have an HPC cluster that's created with Microsoft HPC Pack 2016. The cluster has one head node and five compute nodes in Azure. When you cancel running jobs, they're stuck. In this case, when you submit new jobs, they are in a queued state even though enough compute nodes are online. Restarting all nodes doesn't help.
+When you cancel the running jobs, they're stuck in canceling mode, and new jobs submitted are still in queue while there are compute nodes available to run the jobs. Restarting the nodes doesn't help.
+
+Meanwhile, the platform as a service (PaaS) database is hitting 100% and you see the following error message in the HPC scheduler log:
+
+> The scheduler server is busy. It can not handle the client request now. Please try again later.
 
 ## Cause
 
-This issue occurs because the scheduler service is busy.
+This issue occurs because the head node is over stressed because of the PaaS database is hitting its performance limit.
 
 ## Resolution
 
-To resolve this issue, increase the Database transaction unit (DTU) to 200 for the scheduler database in Azure.
-
-To change the DTU to 200, go to the Azure SQL database in the Azure portal, select **Settings** > **Configure**, and then adjust the DTU to 200.
-
-:::image type="content" source="media/job-stuck-canceling-mode/adjust-dtus-azure-sql-database.png" alt-text="Screenshot that shows how to adjust Database transaction unit in Azure portal." lightbox="media/job-stuck-canceling-mode/adjust-dtus-azure-sql-database.png":::
-
-After that, you'll see that the **Pricing tier** has been changed to **Standard S4: 200 DTUs**.
-
-:::image type="content" source="media/job-stuck-canceling-mode/pricing-tier-standard-s4-200-dtus.png" alt-text="Screenshot of the Pricing tier value." lightbox="media/job-stuck-canceling-mode/pricing-tier-standard-s4-200-dtus.png":::
-
-When you change the DTU to 200, the compute size should be changed to at least S4. The following table shows the resources available for a single database at each service tier and compute size:
-
-**Standard service tier (continued)**
-
-| **Compute size** | **S4** | **S6** | **S7** | **S9** | **S12** |
-| :--- |---:| ---:|---:|---:|---:|
-| Max DTUs | 200 | 400 | 800 | 1600 | 3000 |
-| Included storage (GB)| 250 | 250 | 250 | 250 | 250 |
-| Max storage (GB) | 1024 | 1024 | 1024 | 1024 | 1024 |
-| Max in-memory OLTP storage (GB) | N/A | N/A | N/A | N/A |N/A |
-| Max concurrent workers | 400 | 800 | 1600 | 3200 |6000 |
-| Max concurrent sessions |4800 | 9600 | 19200 | 30000 |30000 |
-
-## Database transaction unit
-
-A DTU can be defined as horsepower for Azure SQL. Microsoft currently offers Azure SQL DB in two models, the DTU model and the vCore model. The DTU model is based on the Database Transaction Unit and is a blended mix of CPU, I/O, and memory (RAM) capabilities based on a benchmark OLTP workload called ASDB. The vCore model is based on the number of virtual CPU cores you require, and this can be scaled up as your workload increases. The DTU model works well if you have pricing constraints or have a fairly stable workload. It's also scalable, as you're able to upgrade the tier or grade of your Azure DB in the future. However, in the DTU model, CPU capabilities and storage capabilities are closely coupled.
-
-For HPC scheduler databases, the minimum initial DTU is 100. The following table shows the minimum initial DTUs required for each HPC database. We recommend that you set it higher than 100, depending on the workload of the HPC server. For more information, see the "Azure SQL Databases" section in [Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers).
-
-|HPC database|	Initial DTUs|
-|--|--|
-|Cluster management|	>= 20|
-|Job scheduling	|>= 100|
-|Reporting|	>= 20|
-|Diagnostics|	>= 10|
-|Monitoring|	>= 20|
+To resolve this issue, increase the Database transaction unit (DTU) to a higher SKU for the scheduler database in Azure that matches your workload. The minimum initial DTU required for HPC scheduler database is 100 DTU.
 
 ## References
 
-- [Compare vCore and DTU-based purchasing models of Azure SQL Database](/azure/azure-sql/database/purchasing-models)
-
-- [Resource limits for single databases using the DTU purchasing model - Azure SQL Database](/azure/azure-sql/database/resource-limits-dtu-single-databases)
+[Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers)
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
