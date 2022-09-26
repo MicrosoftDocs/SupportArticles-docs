@@ -5,7 +5,7 @@ ms.date: 05/17/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ---
 # Errors when mounting Azure disk volumes
 

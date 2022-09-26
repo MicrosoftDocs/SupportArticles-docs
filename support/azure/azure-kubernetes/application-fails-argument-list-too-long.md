@@ -5,7 +5,7 @@ ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot "argument list too long" error messages so that my application doesn't fail on Azure Kubernetes Service (AKS).
 ---

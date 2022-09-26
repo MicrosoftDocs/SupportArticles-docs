@@ -5,7 +5,7 @@ ms.date: 11/15/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ---
 # Capture a TCP dump from a Windows node in an AKS cluster
 

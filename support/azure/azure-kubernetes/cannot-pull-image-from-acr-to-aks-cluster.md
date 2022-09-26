@@ -5,7 +5,7 @@ ms.date: 5/27/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar
-ms.service: container-service
+ms.service: azure-kubernetes-service
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
