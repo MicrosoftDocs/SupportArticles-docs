@@ -1,6 +1,6 @@
 ---
-title: The HDMI Ingest status of an MTR device is unhealthy
-description: Resolve the issue that the HDMI Ingest signal of a Microsoft Teams Rooms (MTR) device is Unhealthy.
+title: The HDMI Ingest status of an MTR device is Unhealthy
+description: Resolve the issue that causes the HDMI Ingest signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 9/23/2022
@@ -16,55 +16,55 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167102
 ---
-# The HDMI Ingest status is unhealthy
+# The HDMI Ingest status is Unhealthy
 
 ## Symptoms
 
-You experience one or more of the following issues, and the **HDMI Ingest** signal of a Microsoft Teams Rooms (MTR) device is **Unhealthy** in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/):
+You experience one or more of the following issues, and the **HDMI Ingest** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy** in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/):
 
-- You can't present content from an external source, such as a laptop, into the room display or meeting through HDMI input signal (HDMI Ingest using HDMI/USB-C cables).
-- You can't complete the initial setup of a new MTR system and the setup wizard returns the following error:  
+- You can't present content from an external source, such as a laptop, in the room display or meeting through an HDMI input signal (HDMI Ingest by using HDMI or USB-C cables).
+- You can't complete the initial setup of a new MTR system, and the Setup wizard returns the following error message:  
   > Connect the room console to the dock.
 - The MTR device isn't listed in the Microsoft Teams admin center.
 
-Besides, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. Below is an example:
+Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
 
 > {"Description":"Conference Microphone status : Healthy. Conference Speaker status : Healthy. Default Speaker status : Healthy. Camera status : Healthy. Front of Room Display status : Unhealthy. Motion Sensor status : Healthy. **HDMI Ingest status : Unhealthy.** Content Camera status : Healthy. ","ResourceState":"Unhealthy","OperationName":"HardwareCheckEngine","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"lab@contoso.com ","DisplayName":"Lenovo Hub 500 - Rally Plus - 2FoR","AppVersion":"4.13.132.0","IPv4Address":"1.2.3.4","IPv6Address":""}
 
 ## Cause
 
-The Microsoft Teams Room app checks if one of the HDMI Ingest modules included in the certified MTR system is detected by using a set of corresponding device peripheral VID/PID (Vendor ID + Product ID) as a reference.
+The Microsoft Teams Room app checks whether one of the HDMI Ingest modules that's included in the certified MTR system is detected. It does this by using a set of corresponding device peripheral VID/PID (Vendor ID + Product ID) as a reference.
 
-The HDMI Ingest signal is reported as unhealthy and these issues can occur for the following reasons:
+The HDMI Ingest signal is reported as Unhealthy. These issues can occur for the following reasons:
 
-- The HDMI input (ingest) for most MTR devices is located on the touchscreen console, which is connected to the compute module with a cable. Cable issues can cause a disconnect between the touchscreen console and the compute module.
-- A small set of MTR device models have HDMI video input/ingest function supported by an additional hardware module, which isn't part of the touchscreen console or directly from the compute module. If this HDMI Ingest module is disconnected, you'll experience the issues that are listed in the [Symptoms](#symptoms) section.
-- Issues with older versions of software or firmware.
+- The HDMI input (ingest) for most MTR devices is located on the touchscreen console. The console is connected to the compute module by using a cable. Cable issues can cause a disconnection between the touchscreen console and the compute module.
+- A small set of MTR device models have HDMI video input and ingest functions that are supported directly from the compute module or by an additional hardware module that isn't part of the touchscreen console. If this HDMI Ingest module is disconnected, you'll experience the issues that are listed in the [Symptoms](#symptoms) section.
+- Issues that affect older versions of software or firmware.
 
 ## Resolution
 
 To fix the issue, follow these steps:
 
-1. Find the OEM and model of the affected MTR device in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/). To do so, locate and select the affected device, select the **Settings** tab, then select the **Device** submenu.
-2. Refer to the OEM documentation to verify if a distinct module is used for HDMI video input (ingest). If so, go to step 4; otherwise, go to step 3.
-3. Check if the touchscreen console is working correctly. For example, check if the MTR app content is displayed correctly, and the touchscreen responds to user input as expected. If so, go to step 5. Otherwise, refer to the OEM documentation for further troubleshooting, such as:
+1. Find the OEM and model of the affected MTR device in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/). To do this, locate and select the affected device, select the **Settings** tab, and then select the **Device** submenu.
+2. Refer to the OEM documentation to verify that a distinct module is used for HDMI video input (ingest). If it is, go to step 4. Otherwise, go to step 3.
+3. Check whether the touchscreen console is working correctly. For example, check whether the MTR app content is displayed correctly and the touchscreen responds to user input as expected. If both conditions are true, go to step 5. Otherwise, refer to the OEM documentation for further troubleshooting, such as the following steps:
 
-   - Some consoles require external power. In this case, make sure the power supply is connected.
-   - Some consoles use hybrid fiber/copper USB cables to connect to the compute module. As with all fiber optic cables, these cables can be damaged and cause intermittent connections. In this case, replace the cable.
-
-   If the issue persists, go to step 5.
-
-4. Refer to the OEM documentation to verify that the HDMI Ingest module is in place and configured correctly. Also try the following options:
-
-   - If cables are used to connect the HDMI Ingest module, make sure that all cables used are the original cables that came with the hardware module.
-   - Power off the compute unit, reseat the HDMI Ingest module or the cables that connect from/to it, and then power on the system.
-   - For some MTR device models, the HDMI Ingest module is integrated within the compute module. If the HDMI Ingest status is unhealthy, it may be a faulty module or a firmware issue. In this case, contact your OEM for further troubleshooting.
+   - Some consoles require external power. In this case, make sure that the power supply is connected.
+   - Some consoles use hybrid fiber or copper USB cables to connect to the compute module. As for all fiber optic cables, these cables can be damaged and cause intermittent disconnections. In this situation, replace the cable.
 
    If the issue persists, go to step 5.
 
-5. Sign in to the MTR device as an administrator, open the **Windows Update** setting and check for updates. Install the latest updates if available. If the issue persists, go to step 6.
-6. Confirm with your OEM that your MTR system has the recommended firmware version installed.
+4. Refer to the OEM documentation to verify that the HDMI Ingest module is in place and configured correctly. Also, try the following options:
+
+   - If cables are used to connect the HDMI Ingest module, make sure that all cables that are used are the original cables that came together with the hardware module.
+   - Power off the compute unit, reseat the HDMI Ingest module or the cables that connect to it, and then power on the system.
+   - For some MTR device models, the HDMI Ingest module is integrated within the compute module. If the HDMI Ingest status is unhealthy, this might be caused by a faulty module or a firmware issue. In this case, contact your OEM for further troubleshooting.
+
+   If the issue persists, go to step 5.
+
+5. Sign in to the MTR device as an administrator, open the **Windows Update** setting, and then check for updates. Install the latest updates, if any are available. If the issue persists, go to step 6.
+6. Verify with your OEM that your MTR system has the recommended firmware version installed.
 
 ## More information
 
-You can also experience the issues when the HDMI ingest cable connected to the external video source is unplugged, faulty or inconsistent, but the HDMI Ingest status isn't reported as unhealthy. In this case, reseat the cable at both ends, including the external device acting as a video source and the HDMI video input port. If the issues persist, try replacing the cable.
+You can also experience these issues if the HDMI ingest cable that's connected to the external video source is unplugged, faulty, or inconsistent, but the HDMI Ingest status isn't reported as **Unhealthy**. In this case, reseat the cable at both ends, including the external device that's acting as a video source. and the HDMI video input port. If the issues persist, try to replace the cable.
