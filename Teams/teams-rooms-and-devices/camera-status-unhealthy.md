@@ -1,6 +1,6 @@
 ---
 title: The Camera status of an MTR device is unhealthy
-description: Resolve the issue that causes the Camera signal of a Microsoft Teams Rooms (MTR) to show the device as unhealthy.
+description: Resolve the issue that causes the Camera signal of a Microsoft Teams Rooms (MTR) to show as unhealthy.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 9/23/2022
