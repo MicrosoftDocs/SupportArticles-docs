@@ -59,6 +59,8 @@
           href: ../administration/eac-slow-to-display-recipients-if-powershell-transcription-is-turned-on.md
         - name: Email items missing on Exchange ActiveSync client
           href: ../administration/items-missing-on-exchange-activesync-client.md
+        - name: Error when recovering inactive mailboxes
+          href: ../administration/recover-inactive-mailboxes-error.md
         - name: Event ID 1014 when connecting to Exchange Online mailbox
           href: ../administration/event-id-1014-when-connecting-to-exchange-online-mailbox.md
         - name: Federated users can't connect to an online mailbox
@@ -299,6 +301,8 @@
           href: ../groups-and-distribution-lists/o365-group-tasks.md
         - name: Mail-enabled groups aren't synced to O365
           href: ../groups-and-distribution-lists/mail-enabled-groups-not-synchronized.md
+        - name: Ownerless group policy questions
+          href: ../groups-and-distribution-lists/ownerless-group-policy.md
         - name: Prevent users from creating and managing group
           href: ../groups-and-distribution-lists/prevent-users-create-manage-dg.md
         - name: Problem adding a guest user to a Microsoft 365 group
@@ -493,6 +497,8 @@
           href: ../public-folders/cannot-finalize-migration-batch.md
         - name: Can't send email to public folder contact list
           href: ../public-folders/cannot-send-email-to-contact-list-public-folder.md
+        - name: Can't send emails to mail-enabled public folder
+          href: ../public-folders/send-emails-to-mail-enabled-public-folder-error.md
         - name: Duplicate PF mailbox migration requests
           href: ../public-folders/duplicate-public-folder-mailbox-migration-request.md
         - name: Emails with the "HierarchySync_" subject

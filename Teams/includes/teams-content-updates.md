@@ -2,6 +2,14 @@
 
 
 
+## Week of September 12, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/14/2022 | External member can see channel message previews of shared channels in search results | removed |
+
+
 ## Week of September 05, 2022
 
 

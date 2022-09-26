@@ -2,6 +2,25 @@
 
 
 
+## Week of September 19, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/19/2022 | [SaRA Enterprise version](/microsoft-365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/20/2022 | Unable to sign in to Microsoft 365 desktop applications | removed |
+| 9/20/2022 | Can't find clip art when you open Office Online | removed |
+
+
+## Week of September 12, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/12/2022 | [Can't send an encrypted email to many recipients](/microsoft-365/troubleshoot/sensitivity-labels/encrypted-email-cannot-send-many-recipients) | added |
+| 9/15/2022 | [Sensitivity labels are missing](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) | added |
+
+
 ## Week of August 29, 2022
 
 
