@@ -1,7 +1,7 @@
 ---
 title: Cannot access run queue of a gateway
 description: Provides a resolution for the issue that you can't access the run queue of a gateway in Power Automate.
-ms.reviewer: 
+ms.reviewer: pefelesk
 ms.topic: troubleshoot
 ms.date: 9/13/2022
 ms.subservice: power-automate-flows

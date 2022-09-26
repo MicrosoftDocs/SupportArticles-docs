@@ -1,7 +1,7 @@
 ---
 title: Desktop flow runs list is not updated
 description: Provides a resolution for the issue that the list of desktop flow runs doesn't update even though you run a new desktop flow in Power Automate.
-ms.reviewer: 
+ms.reviewer: pefelesk
 ms.topic: troubleshoot
 ms.date: 9/21/2022
 ms.subservice: power-automate-flows
