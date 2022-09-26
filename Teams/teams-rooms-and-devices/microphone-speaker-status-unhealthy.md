@@ -37,24 +37,26 @@ Additionally, Event ID 3001 is logged under **Applications and Services Logs** >
 
 > {"Description":"**Conference Microphone status : Unhealthy. Conference Speaker status : Unhealthy. Default Speaker status : Unhealthy.** Camera status : Healthy. Front of Room Display status : Healthy. Motion Sensor status : Healthy. HDMI Ingest status : Healthy. Content Camera status : Healthy. ","ResourceState":"Unhealthy","OperationName":"HardwareCheckEngine","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"lab@contoso.com ","DisplayName":"Lenovo Hub 500 - Rally Plus - 2FoR","AppVersion":"4.13.132.0","IPv4Address":"1.2.3.4","IPv6Address":""}
 
+## Resolution
+
 Audio peripheral issues can occur for different reasons. Try the following options to fix common issues.
 
-## Make sure the power supply is connected
+### Make sure the power supply is connected
 
 Most audio peripherals require external power beyond what's available through the USB bus. In this case, make sure the power supply is connected and the peripheral is turned on.
 
-## Check the USB cable connection
+### Check the USB cable connection
 
 Issues can occur when the USB cable is unplugged, faulty, or inconsistent. In this case, reseat the cable at both ends. If the issue persists, try replacing the cable.
 
-## Check firmware issues
+### Check firmware issues
 
 Try the following options:
 
 - If the peripheral has been updated recently, the firmware update might not be completed, so that the device is in an unusable state. Try to reset the power of the device. Some devices may have a reset button to reset the devices.
 - Confirm with your peripheral manufacturer that the device is running the latest version of firmware. Or work with them to fix any known issues.
 
-## Check issues with USB extenders if you use them
+### Check issues with USB extenders if you use them
 
 Avoid using USB extenders for audio and video equipment if possible. If you must, use a USB extender that's supported by the peripheral device and meets the requirements, such as length and USB specification. For more information, verify with your peripheral manufacturer.
 
