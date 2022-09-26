@@ -1,6 +1,6 @@
 ---
-title: The Camera status of an MTR device is unhealthy
-description: Resolve the issue that causes the Camera signal of a Microsoft Teams Rooms (MTR) to show as unhealthy.
+title: The Camera status of an MTR device is Unhealthy
+description: Resolve the issue that causes the Camera signal of a Microsoft Teams Rooms (MTR) to appear as Unhealthy.
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 9/23/2022
@@ -16,11 +16,11 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167249
 ---
-# The Camera status is unhealthy
+# The Camera status is Unhealthy
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Camera** signal of a Microsoft Teams Rooms (MTR) device is displayed as **Unhealthy**. Additionally, users experience the following issues during a Teams meeting:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Camera** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**. Additionally, users experience the following issues during a Teams meeting:
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
