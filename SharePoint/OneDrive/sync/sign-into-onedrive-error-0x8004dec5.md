@@ -10,12 +10,12 @@ localization_priority: Normal
 ms.custom: 
   - CI 167247
   - CSSTroubleshoot
-ms.reviewer: salarson
+ms.reviewer: salarson, prbalusu
 appliesto: 
   - OneDrive for Business
 search.appverid: 
   - MET150
-ms.date: 9/23/2022
+ms.date: 9/26/2022
 ---
 # Error 0x8004dec5 when signing in to OneDrive
 
