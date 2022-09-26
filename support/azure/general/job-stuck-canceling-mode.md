@@ -29,6 +29,6 @@ To resolve this issue, increase the Database transaction unit (DTU) to a higher 
 
 ## References
 
-[Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers)
+For more information, see [Step 1: Prepare the Remote Databases](/powershell/high-performance-computing/step-1-prepare-the-remote-database-servers).
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
