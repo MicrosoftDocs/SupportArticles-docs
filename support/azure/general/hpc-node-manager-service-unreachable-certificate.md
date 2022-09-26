@@ -1,6 +1,6 @@
 ---
 title: HPC Node Manager Service Unreachable error
-description: Provides a solution for an issue where HPC Management console shows the "HPC Node Manager Service Unreachable" error.
+description: Provides a solution for an issue where HPC Management console shows the HPC Node Manager Service Unreachable error.
 ms.date: 09/19/2022
 ms.service: hpcpack
 ms.author: genli
@@ -14,11 +14,11 @@ This article provides a solution for an issue where the HPC Management console s
 
 ## Symptoms
 
-A compute node's health is in an error state, and the note connectivity shows the "HPC Node Manager Service Unreachable" error in the HPC management console.
+A compute node's health is in an error state, and the node connectivity shows the "HPC Node Manager Service Unreachable" error in the HPC management console.
 
 The [HPC service log](/powershell/high-performance-computing/using-service-log-files-for-hpc-pack?view=hpc19-ps#BKMK_loc&preserve-view=true) shows the following error:
 
-> Can not find cert with thumbprint < thumbprint -id> in store My, LocalMachine.
+> Can not find cert with thumbprint &lt;thumbprint-id&gt; in store My, LocalMachine.
 
 ## Cause
 
