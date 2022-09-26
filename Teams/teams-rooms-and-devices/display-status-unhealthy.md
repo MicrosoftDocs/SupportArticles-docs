@@ -35,32 +35,34 @@ Additionally, Event ID 3001 is logged under **Applications and Services Logs** >
 >
 > This signal should remain healthy even when MTR allows the displays to *sleep* after the default value of 10 minutes of no activity.
 
+## Resolution
+
 Display issues can occur for different reasons, try the following options to fix common issues.
 
-## Check HDMI cable connection
+### Check HDMI cable connection
 
 Issues can occur when HDMI cable is unplugged, faulty, or inconsistent. In this case, reseat the cable at both ends. If the issues persist, try replacing the cable.
 
-## Make sure the display is powered on
+### Make sure the display is powered on
 
 For most displays, this won't affect the display's health status, but it depends on the display's power state.
 
 Verify that the display is powered on. It's not recommended to leave the display remote control in the room. If your building uses smart green power management, the outlet the display is plugged into may be turned off outside of business hours.
 
-## Check issues with HDMI extenders if you use them
+### Check issues with HDMI extenders if you use them
 
 - Verify that the HDMI extenders are suitable for enterprise or professional AV grade, and you aren't extending them beyond their rated length.
 - Verify if the HDMI extender is working correctly. Replace each end as needed.
 
-## Check video adapters
+### Check video adapters
 
 If possible, use the native HDMI output of your device. Otherwise, choose the most stable option for your specific compute and display combination. You may need to try various high-quality adapters to make a choice. Avoid using video adapters that don't meet industry standards.
 
-## Check issues with EDID minders
+### Check issues with EDID minders
 
 If EDID control/emulator devices are used, they may be faulty or incorrectly configured. Some HDMI extenders also emulate EDID. Verify that the EDID device is working correctly. Bypass the device as a test if possible. If necessary, replace the EDID device.
 
-## Check if the room console is disconnected
+### Check if the room console is disconnected
 
 See the OEM documentation to find out how the room console is connected, such as using cables. Cable issues can cause a disconnect between the touchscreen console and the compute module. For example, some consoles use hybrid fiber/copper USB cables to connect to the compute module. As with all fiber optic cables, these cables can be damaged and cause intermittent connections. In this case, replace the cable.
 
