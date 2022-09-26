@@ -20,7 +20,7 @@ ms.custom: CI167249
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Camera** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**. Additionally, users experience the following issues during a Teams meeting:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Camera** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**. Users also experience the following issues during a Teams meeting:
 
 - The camera icon on the room console is unavailable.
 - The video of in-room participants is unavailable to remote participants.
