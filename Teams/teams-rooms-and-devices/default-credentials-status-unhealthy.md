@@ -1,5 +1,5 @@
 ---
-title: The Default Credentials status of an MTR device is unhealthy
+title: The Default Credentials status of an MTR device is Unhealthy
 description: Resolve the issue that causes the Default Credentials signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
 ms.reviewer: 
 ms.topic: troubleshooting
