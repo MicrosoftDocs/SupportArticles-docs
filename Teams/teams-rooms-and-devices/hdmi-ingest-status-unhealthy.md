@@ -20,7 +20,7 @@ ms.custom: CI167102
 
 ## Symptoms
 
-You experience one or more of the following issues, and the **HDMI Ingest** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy** in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/):
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **HDMI Ingest** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**, and you experience one or more of the following issues:
 
 - You can't present content from an external source, such as a laptop, in the room display or meeting through an HDMI input signal (HDMI Ingest by using HDMI or USB-C cables).
 - You can't complete the initial setup of a new MTR system, and the Setup wizard returns the following error message:  
