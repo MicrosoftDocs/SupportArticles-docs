@@ -84,13 +84,13 @@ If you cannot sign in to your Wrapped Mobile App please verify that
 SignInFail_1.png 
 
 
-- Ensure that admin Add-AdminAllowedThirdPartyApps script was run successfully. See Allow registered apps in your environment. 
+- Ensure that admin **Add-AdminAllowedThirdPartyApps** script was run successfully. See [Allow registered apps in your environment](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment) for more information. 
 
  
 
 - Verify your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
 
-- Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see these steps. 
+- Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see [these steps](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#redirect-uri-format). 
 
  
 
