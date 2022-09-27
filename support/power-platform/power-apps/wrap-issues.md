@@ -8,13 +8,13 @@ ms.subservice:
 ---
 # Troubleshooting wrap issues in Power Apps
 
-This guide helps you resolve issues that affect build in wrap in Power App.
+This guide helps you resolve warp issues in Power Apps.
 
 ## Wrap Build is failing
 
 ### Verify your images are in a PNG format 
 
-Ensure you have not manually renamed the file extension of an image, e.g. JPEG, and mark it as a .png, as that will fail the build. Use an image converter or ensure your original image is a real PNG instead. 
+Ensure your images are in a PNG format. Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNg format. Using images in any format other than .PNG will cause the wrap build to fail. Please use an image converter tool or ensure your original image is in a PNG format instead. 
 
 ### Verify your App Center is correctly configured 
 Ensure your App Center link is created as an App within an Org, and not a standalone App. 
@@ -24,29 +24,27 @@ Ensure your App Center link is created as an App within an Org, and not a standa
 
 Ensure the access token you created is correct. 
 
-Correct: Click on your created App -> Settings -> App API Tokens 
+- Correct: Click on your created App -> Settings -> App API Tokens 
 
-Incorrect: Account Settings -> User API Tokens 
+- Incorrect: Account Settings -> User API Tokens 
 
 Ensure your iOS or Android App created has the right settings configurations. 
 
-iOS: OS=Custom 
+- iOS: OS=Custom 
 
-Android: OS=Android, Platform=React Native 
+- Android: OS=Android, Platform=React Native 
 
  
 For more information, refer to Steps 8 and 9 here. 
 
 ### Verify your Keyvault configuration is correct 
-Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
+- Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
 
-Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
+- Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
 
-iOS: 2 Tags, 1 Certificate, 1 Secret  
+-- iOS: 2 Tags, 1 Certificate, 1 Secret  
 
-Android: 1 Tag, 1 Certificate 
-
- 
+-- Android: 1 Tag, 1 Certificate 
 
 For more information, see this link. 
 
