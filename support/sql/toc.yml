@@ -69,6 +69,8 @@
     items:
     - name: SQL Server startup issues
       items:
+      - name: Restore issues with Azure connector
+        href: admin/error-33111-restore-issues-sql-connector.md
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
