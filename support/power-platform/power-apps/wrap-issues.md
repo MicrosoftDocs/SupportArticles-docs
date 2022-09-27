@@ -52,7 +52,7 @@ For more information, see this link.
 If after retries and proper configuration, the build fails, please reach out to our support alias. See details at the end of this document. 
 
 ## Cannot save my project or trigger a Build 
--Please update to latest Wrap solution version and try again. 
+- Please update to latest Wrap solution version and try again. 
 
 - Please ensure there are no UI validation errors blocking Save or Build submission 
 
@@ -61,9 +61,9 @@ Ensure you have signed the outputted application. You can do so by configuring a
 
 Setup Keyvault for Automated Signing 
 
-Code sign for iOS 
+- Code sign for iOS 
 
-Code sign for Android 
+- Code sign for Android 
 
 Ensure your mobile device meets these minimum requirements. 
 
@@ -73,20 +73,20 @@ Ensure your mobile device meets these minimum requirements.
 If you cannot sign in to your Wrapped Mobile App, please verify that your AAD app is properly configured and 
 
 
-All API permissions have been added correctly. Refer to the below and/or see Configure API Permissions 
+- All API permissions have been added correctly. Refer to the below and/or see Configure API Permissions 
 
 
 SignInFail_1.png 
 
  
 
-Ensure that admin Add-AdminAllowedThirdPartyApps script was run successfully. See Allow registered apps in your environment. 
+- Ensure that admin Add-AdminAllowedThirdPartyApps script was run successfully. See Allow registered apps in your environment. 
 
  
 
-Verify your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
+- Verify your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
 
-Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see these steps. 
+- Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see these steps. 
 
  
 
@@ -95,8 +95,8 @@ Ensure the proper Redirect URI’s have been created for iOS and/or Android. For
 
 For other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired like so: 
 
- 
 
-Login Screen: Bottom Right Gear Icon -> Session Details 
 
-App Opened:  Shake Device -> Session Details 
+- Login Screen: Bottom Right Gear Icon -> Session Details 
+
+- App Opened:  Shake Device -> Session Details 
