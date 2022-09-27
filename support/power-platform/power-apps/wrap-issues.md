@@ -38,13 +38,13 @@ Ensure your iOS or Android App created has the right settings configurations.
 For more information, refer to Steps 8 and 9 here. 
 
 ### Verify your Keyvault configuration is correct 
-- Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
+Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
 
-- Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
+Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
 
--- iOS: 2 Tags, 1 Certificate, 1 Secret  
+- iOS: 2 Tags, 1 Certificate, 1 Secret  
 
--- Android: 1 Tag, 1 Certificate 
+- Android: 1 Tag, 1 Certificate 
 
 For more information, see this link. 
 
@@ -52,9 +52,9 @@ For more information, see this link.
 If after retries and proper configuration, the build fails, please reach out to our support alias. See details at the end of this document. 
 
 ## Cannot save my project or trigger a Build 
-Please update to latest Wrap solution version and try again. 
+-Please update to latest Wrap solution version and try again. 
 
-Please ensure there are no UI validation errors blocking Save or Build submission 
+- Please ensure there are no UI validation errors blocking Save or Build submission 
 
 ## Cannot install a Wrapped Mobile App on a device 
 Ensure you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details, see: 
