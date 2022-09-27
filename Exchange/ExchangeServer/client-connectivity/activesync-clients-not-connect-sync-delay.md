@@ -39,7 +39,7 @@ This is a known issue that occurs when Exchange ActiveSync Ping commands become 
 
 ## Workaround
 
-For Exchange Server 2013, to work around this issue, periodically cycle the Exchange ActiveSync application pool for all the servers to release the stranded commands. For more information about how to configure an application pool to automatically recycle at regular intervals, see the [Recycling Settings for an Application Pool \<recycling>](/iis/configuration/system.applicationhost/applicationpools/add/recycling/) topic on the Microsoft Docs website.
+For Exchange Server 2013, to work around this issue, periodically cycle the Exchange ActiveSync application pool for all the servers to release the stranded commands. For more information about how to configure an application pool to automatically recycle at regular intervals, see [Recycling Settings for an Application Pool \<recycling>](/iis/configuration/system.applicationhost/applicationpools/add/recycling/).
 
 ## Resolution
 
