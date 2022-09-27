@@ -42,7 +42,7 @@ Ensure your iOS or Android App created has the right settings configurations.
 For more information, refer to Steps 8 and 9 in [Create an App Center container for your mobile app](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
 ### Verify your Keyvault configuration is correct 
-Ensure Azure Service Principal was created and role added (Steps 1-2 [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)) 
+Ensure Azure Service Principal was created and role added (Steps 1-2 in [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)) 
 
 Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
 
@@ -50,7 +50,7 @@ Ensure your Keyvault contains all necessary certificates, secrets and tags for i
 
 - Android: 1 Tag, 1 Certificate 
 
-For more information, see this link. 
+For more information, please refer to [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing). 
 
 ### If you have all the proper configurations, try again. 
 If after retries and proper configuration, the build fails, please reach out to our support alias. See details at the end of this document. 
