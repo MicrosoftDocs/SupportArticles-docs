@@ -39,7 +39,7 @@ Ensure your iOS or Android App created has the right settings configurations.
 - Android: OS=Android, Platform=React Native 
 
  
-For more information, refer to Steps 8 and 9 in [here](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
+For more information, refer to Steps 8 and 9 in [Create an App Center container for your mobile app](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
 ### Verify your Keyvault configuration is correct 
 Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
