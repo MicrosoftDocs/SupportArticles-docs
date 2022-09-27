@@ -38,7 +38,7 @@ To create a backup snapshot, follow the steps in [Snapshot a disk](/azure/virtua
 
 ### Connect to the VM remotely
 
-To connect to the VM remotely , use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues).
+To connect to the VM remotely , use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 ### Group policy client service
 
