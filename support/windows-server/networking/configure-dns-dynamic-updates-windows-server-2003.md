@@ -233,7 +233,7 @@ By default, when you use standard zone storage, the DNS Server service does not 
 > [!NOTE]
 > The secure dynamic update functionality is supported only for Active Directory-integrated zones. If you configure a different zone type, change the zone type, and then integrate the zone before you secure it for DNS updates. Dynamic update is an RFC-compliant extension to the DNS standard. The DNS update process is defined in RFC 2136, "Dynamic Updates in the Domain Name System (DNS UPDATE)".
 
-#### Security considerations when DHCP does the dynamic update on behalf of the clients
+#### Security considerations when the DHCP server does the dynamic update on behalf of the clients
 
 You can configure a Windows Server-based DHCP server so that it dynamically registers host A and PTR resource records on behalf of DHCP clients. If you use secure dynamic updates in this configuration with Windows Server-based DNS servers, resource records may become stale.
 
