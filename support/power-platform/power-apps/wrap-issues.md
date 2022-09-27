@@ -74,15 +74,15 @@ Ensure your mobile device meets these [minimum requirements](https://docs.micros
 
 ## Cannot sign in to a Wrapped Mobile App or cannot see data  
 
-If you cannot sign in to your Wrapped Mobile App, please verify that your AAD app is properly configured and 
+If you cannot sign in to your Wrapped Mobile App please verify that 
 
+- Your AAD app is properly configured 
 
-- All API permissions have been added correctly. Refer to the below and/or see Configure API Permissions 
+- All API permissions have been added correctly. Refer to the below and/or see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions). 
 
 
 SignInFail_1.png 
 
- 
 
 - Ensure that admin Add-AdminAllowedThirdPartyApps script was run successfully. See Allow registered apps in your environment. 
 
