@@ -81,7 +81,7 @@ If you cannot sign in to your Wrapped Mobile App please verify that
 - All API permissions for the App have been added correctly. Refer to the image below and/or see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions) on how to see and configure API permissions for the App. 
 
 
-:::image type="content" source="media/wrap-issues/SignInFail_1.png" alt-text="Screenshot API permissions for the App.":::
+:::image type="content" source="media/wrap-issues/SignInFail_1.png" alt-text="Screenshot of API permissions for the App.":::
 
 
 
