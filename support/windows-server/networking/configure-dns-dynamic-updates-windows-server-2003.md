@@ -221,16 +221,6 @@ By default, when you use standard zone storage, the DNS Server service does not 
 > [!IMPORTANT]
 > The DHCP Server service can perform proxy registration and update of DNS records for legacy clients that do not support dynamic updates. For more information, see the "Using DNS servers with DHCP" topic in Windows Server Help.
 
-If you use multiple Windows Server-based DHCP servers on your network and if you configure your zones to enable secure dynamic updates only, use the Active Directory Users and Computers snap-in to add your DHCP server computers to the built-in DnsUpdateProxy group. When you do this, all your DHCP servers have the secure rights to perform proxy updates for any one of your DHCP clients. For more information, see the "Using DNS servers with DHCP" topic or the "Manage groups" topic in Windows Server Help.
-
-> [!CAUTION]
-> The secure dynamic updates functionality can be compromised if the following conditions are true:
->
-> - You run a DHCP server on a Windows Server-based domain controller
-> - The DHCP server is configured to perform registration of DNS records on behalf of its clients. To avoid this issue, deploy DHCP servers and domain controllers on separate computers, or configure the DHCP server to use a dedicated user account for dynamic updates. For more information, see the "Using DNS servers with DHCP" topic in Windows Server Help.
-
-For more information, see the "Security considerations when you use the DnsUpdateProxy group" section.
-
 #### Enable only secure dynamic updates
 
 1. Click **Start**, point to **Administrative Tools**, and then click **DNS**.
@@ -243,7 +233,7 @@ For more information, see the "Security considerations when you use the DnsUpdat
 > [!NOTE]
 > The secure dynamic update functionality is supported only for Active Directory-integrated zones. If you configure a different zone type, change the zone type, and then integrate the zone before you secure it for DNS updates. Dynamic update is an RFC-compliant extension to the DNS standard. The DNS update process is defined in RFC 2136, "Dynamic Updates in the Domain Name System (DNS UPDATE)".
 
-### Use the DnsUpdateProxy security group
+#### Security considerations when DHCP does the dynamic update on behalf of the clients
 
 You can configure a Windows Server-based DHCP server so that it dynamically registers host A and PTR resource records on behalf of DHCP clients. If you use secure dynamic updates in this configuration with Windows Server-based DNS servers, resource records may become stale.
 
@@ -255,25 +245,12 @@ For example, consider the following scenario:
 
 In some circumstances, this scenario may cause problems. For example, if DHCP1 fails and a second backup DHCP server comes online, the backup server cannot update the client name because the server is not the owner of the name.
 
-In another example, assume that the DHCP server performs dynamic updates for legacy clients. If you upgrade those clients to a version supporting dynamic updates, the upgraded client cannot take ownership or update its DNS records.
+In another example, you may have configured multiple DHCP server or use the DHCP Failover functionality where different DHCP servers are responsible for the dynamic update of a single client. 
 
-To solve this problem, a built-in security group named DnsUpdateProxy is provided. If all DHCP servers are added to the DnsUpdateProxy group, the records of one server can be updated by another server if the first server fails. Also, all the objects that are created by the members of the DnsUpdateProxy group are not secured. Therefore, the first user who is not a member of the DnsUpdateProxy group and that modifies the set of records that is associated with a DNS name becomes its owner. When legacy clients are upgraded, they can take ownership of their name records at the DNS server. If every DHCP server that registers resource records for legacy clients is a member of the DnsUpdateProxy group, many problems are eliminated.
+To help protect against nonsecure or stale records, follow these steps:
 
-#### Add members to the DnsUpdateProxy group
-
-Use the Active Directory Users and Computers snap-in to configure the DnsUpdateProxy security group.
-
-> [!NOTE]
-> If you are using multiple DHCP servers for fault tolerance and secure dynamic updates, add each server to the DnsUpdateProxy global security group.
-
-#### Security considerations when you use the DnsUpdateProxy group
-
-DNS domain names that are registered by the DHCP server are not secure if the DHCP server is a member of the DnsUpdateProxy group. The host (A) resource record for the DHCP server itself is an example of such a record. Also, objects that are created by the members of the DnsUpdateProxy group are not secure. Therefore, you cannot use this group effectively in an Active Directory-integrated zone that enables only secure dynamic updates unless you take additional steps to enable records that are created by members of the group to be secured.
-
-To help protect against nonsecure records or to enable members of the DnsUpdateProxy group to register records in zones that enable only secured dynamic updates, follow these steps:
-
-1. Create a dedicated user account.
-2. Configure DHCP servers to perform DNS dynamic updates with the user account credentials. (These credentials are the user name, the password, and the domain.)
+1. Create a dedicated user account in the Active Directory Users and Computers snap-in.
+2. Configure every DHCP server to perform DNS dynamic updates with the user account credentials of the created dedicated account. (These credentials are the user name, the password, and the domain.)
 
 The credentials of one dedicated user account can be used by multiple DHCP servers.
 
@@ -333,6 +310,14 @@ To configure DNS dynamic update for a Windows Server-based DHCP server, follow t
     > By default, this check box is selected.
 5. To enable DNS dynamic update for DHCP clients that do not support it, click to select the **Dynamically update DNS A and PTR records for DHCP clients that do not request for updates (for example, clients that are running Windows NT 4.0)** check box.
 6. Click **OK**.
+
+To configure the DHCP server to use a dedicated user account for the dynamic update, follow the steps below:
+
+1. Click **Start**, point to **Administrative Tools**, and then click **DHCP**.
+2. Right-click the appropriate DHCP server, IPv4 or IPv6 and then click **Properties**.
+3. Click **Advanced** and **Credentials** .
+4. Add the **User name**, **Domain** and **Password** of the created dedicated user account
+5. Click **OK**.
 
 #### Enable DNS dynamic updates to a DNS server
 
