@@ -14,7 +14,11 @@ This guide helps you resolve warp issues in Power Apps.
 
 ### Verify your images are in a PNG format 
 
-Ensure your images are in a PNG format. Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNg format. Using images in any format other than .PNG will cause the wrap build to fail. Please use an image converter tool or ensure your original image is in a PNG format instead. 
+Ensure your images are in a PNG format. Using images in any format other than .PNG will cause the wrap build to fail. Please use an image converter tool or ensure your original image is in a PNG format instead. 
+
+> [!IMPORTANT]
+> Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNG format.
+
 
 ### Verify your App Center is correctly configured 
 Ensure your App Center link is created as an App within an Org, and not a standalone App. 
@@ -35,7 +39,7 @@ Ensure your iOS or Android App created has the right settings configurations.
 - Android: OS=Android, Platform=React Native 
 
  
-For more information, refer to Steps 8 and 9 here. 
+For more information, refer to Steps 8 and 9 in [here](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
 ### Verify your Keyvault configuration is correct 
 Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
