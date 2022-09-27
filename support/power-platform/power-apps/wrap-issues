@@ -1,135 +1,32 @@
 ---
-title: Troubleshooting wrap issues in Power Apps
-description: Provides a resolution for wrap issues in Power Apps.
-ms.reviewer: 
+title: Troubleshooting ribbon issues in Power Apps
+description: Provides a resolution for ribbon issues in Power Apps.
+ms.reviewer: krgoldie, srihas
 ms.topic: troubleshooting
-ms.date: 09/28/2022
-
-
+ms.date: 05/15/2021
+ms.subservice: powerapps-ribbons-commanding
+---
 # Troubleshooting ribbon issues in Power Apps
 
-## Build is failing in wrap
+This guide helps you resolve issues that affect a ribbon command bar button in a Power Apps model-driven app or a customer engagement app (Dynamics 365 Sales, Customer Service, Field Service, or Marketing).
 
-### Verify your images are in PNG format 
+_Applies to:_ &nbsp; Power Apps  
+_Original KB number:_ &nbsp; 4552163
 
-Ensure that the images you are uploading in warp are in PNG format. Note that manually chnaging your image extnsion from JPEG or other to .PNG does not automatically re-format your images
-into the PNG format. Use an image converter tool or ensure your original image is a real PNG instead. 
+> [!IMPORTANT]
+> This ribbon troubleshooting information is applicable to only [Unified Interface apps](/powerapps/user/unified-interface). It isn't applicable to the legacy web client interface.
 
+## Identify the issue
 
-### Verify your App Center is correctly configured 
+This is a companion guide for an in-app tool, Command Checker, that lets you inspect the ribbon component definitions to help us determine what might be causing issues.
 
-Ensure your App Center link is created as an App within an Org, and not a standalone App.
+When you run the tool, you're asked to identify or choose one of the items in the following list of the most common kinds of ribbon command bar issues. Select the appropriate link to learn more about how to troubleshoot that issue:
 
-[BuildFail_1.png] 
+- [A button on the command bar is hidden when it should be visible](ribbon-issues-button-hidden.md)
 
-Graphical user interface, text, application, chat or text message
+- [A button on the command bar is visible when it should be hidden](ribbon-issues-button-visible.md)
 
-Description automatically generated 
+- [A button on the command bar is not working correctly](ribbon-issues-button-not-working-correctly.md)
 
-Ensure the access token you created is correct. 
-
-Correct: Click on your created App -> Settings -> App API Tokens 
-
-Incorrect: Account Settings -> User API Tokens 
-
-Ensure your iOS or Android App created has the right settings configurations. 
-
-iOS: OS=Custom 
-
-Android: OS=Android, Platform=React Native 
-
- 
-
-For more information, refer to Steps 8 and 9 here. 
-
- 
-
-Verify your Keyvault configuration is correct 
-
-Ensure Azure Service Principal was created and role added (Steps 1-2 here) 
-
-Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
-
-iOS: 2 Tags, 1 Certificate, 1 Secret  
-
-Android: 1 Tag, 1 Certificate 
-
- 
-
-For more information, see this link. 
-
- 
-
-If you have all the proper configuration, try again. 
-
-If after retries and proper configuration, the build fails, please reach out to our support alias. See details at the end of this document. 
-
- 
-
-I can’t Save my project or trigger a Build 
-
- 
-
-Please update to latest Wrap solution version and try again. 
-
-Please ensure there are no UI validation errors blocking Save or Build submission 
-
-I can’t install my Wrapped Mobile App on my device 
-
- 
-
-Ensure you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details, see: 
-
-Setup Keyvault for Automated Signing 
-
-Code sign for iOS 
-
-Code sign for Android 
-
-Ensure your mobile device meets these minimum requirements. 
-
-I can’t sign in to my Wrapped Mobile App / I can’t see data in my app 
-
- 
-
-Verify your AAD app is properly configured: 
-
- 
-
-All API permissions have been added correctly. Refer to the below and/or see Configure API Permissions 
-
- 
-
-SignInFail_1.png 
-
-Graphical user interface, text, application, table
-
-Description automatically generated 
-
- 
-
- 
-
-Ensure admin Add-AdminAllowedThirdPartyApps script was run successfully. See Allow registered apps in your environment. 
-
- 
-
-Verify your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant” 
-
-Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see these steps. 
-
- 
-
- 
-
- 
-
- 
-
-For other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired like so: 
-
- 
-
-Login Screen: Bottom Right Gear Icon -> Session Details 
-
-App Opened:  Shake Device -> Session Details 
+> [!IMPORTANT]
+> These issues are often caused by missing or incorrect ribbon metadata. Typically, this situation can be resolved by regenerating all ribbon metadata. Command Checker has a feature that enables you to [trigger the regeneration of all ribbon metadata](regenerate-ribbon-metadata.md). Only system administrators, system customizers, and makers have the permissions to regenerate metadata.
