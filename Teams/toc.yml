@@ -243,10 +243,10 @@
       href: ./teams-rooms-and-devices/sip-gateway-issues.md
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
-    - name: MTR devices can't fetch calendar
-      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
     - name: Signed out of Teams Android devices
       href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
+    - name: Teams Rooms devices can't fetch calendar
+      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux

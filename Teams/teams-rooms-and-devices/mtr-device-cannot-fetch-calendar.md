@@ -1,5 +1,5 @@
 ---
-title: MTR devices can't fetch calendar from Exchange Online
+title: Teams Rooms devices can't fetch calendar from Exchange Online
 description: Resolves an issue that a Microsoft Teams Rooms (MTR) device can't fetch calendar from Exchange Online.
 ms.date: 05/31/2022
 author: helenclu
@@ -17,11 +17,11 @@ ms.custom: CI163362
 ms.reviewer: subansal, meerak, scapero
 ---
 
-# MTR devices can't fetch calendar from Exchange Online
+# Teams Rooms devices can't fetch calendar from Exchange Online
 
 ## Symptoms
 
-After you sign in to a Microsoft Teams Rooms (MTR) device, the following error message is displayed:
+After you sign in to a Microsoft Teams Rooms device, the following error message is displayed:
 
 > Cannot fetch calendar
 
@@ -50,14 +50,14 @@ status": {
 
 ## Cause
 
-This issue occurs if modern authentication isn't enabled on Microsoft Teams Rooms, and your organization uses a Conditional Access policy to block basic authentication.
+This issue occurs if modern authentication isn't enabled for Teams Rooms, and your organization uses a Conditional Access policy to block basic authentication.
 
 To find out which Conditional Access policy is applied, review the [Azure AD sign-in events](/azure/active-directory/conditional-access/troubleshoot-conditional-access#azure-ad-sign-in-events).
 
 ## Resolution
 
-To fix the issue, enable the client-side setting for modern authentication on Microsoft Teams Rooms:
+To fix the issue, enable the client-side setting for modern authentication on Teams Rooms:
 
-1. On Microsoft Teams Rooms, go to **More (...)**.
-2. Select **Settings**, and then enter the device administrator username and password.
-3. Go to the **Account** tab, turn on **Modern Authentication**, and then select **Save and exit**.
+1. In Teams Rooms, select the **More (...)** button.
+2. Select **Settings**, and then enter the username and password for the device administrator.
+3. On the **Account** tab, turn on the **Modern Authentication** switch, and then select **Save and exit**.
