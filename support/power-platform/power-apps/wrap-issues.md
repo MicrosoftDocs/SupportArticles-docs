@@ -58,18 +58,18 @@ If after retries and proper configuration, the build fails, please reach out to 
 ## Cannot save my project or trigger a Build 
 - Please update to latest Wrap solution version and try again. 
 
-- Please ensure there are no UI validation errors blocking Save or Build submission 
+- Please ensure there are no UI validation errors blocking Save or Build submission. 
 
 ## Cannot install a Wrapped Mobile App on a device 
-Ensure you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details, see: 
+Ensure you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details, please refer to: 
 
-Setup Keyvault for Automated Signing 
+- [Setup Keyvault for Automated Signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
 
-- Code sign for iOS 
+- [Code sign for iOS](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-ios)
 
-- Code sign for Android 
+- [Code sign for Android](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android) 
 
-Ensure your mobile device meets these minimum requirements. 
+Ensure your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
 
 
 ## Cannot sign in to a Wrapped Mobile App or cannot see data  
