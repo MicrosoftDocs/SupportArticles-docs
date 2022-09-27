@@ -1,16 +1,24 @@
-My Build is Failing 
+---
+title: Troubleshooting wrap issues in Power Apps
+description: Provides a resolution for wrap issues in Power Apps.
+ms.reviewer: 
+ms.topic: troubleshooting
+ms.date: 09/28/2022
+ms.subservice: 
+---
+# Troubleshooting ribbon issues in Power Apps
 
- 
+## Build is failing in wrap
 
-Verify your images are real PNGs 
+### Verify your images are in PNG format 
 
-Ensure you have not manually renamed the file extension of an image, e.g. JPEG, and mark it as a .png, as that will fail the build. Use an image converter or ensure your original image is a real PNG instead. 
+Ensure that the images you are uploading in warp are in PNG format. Note that manually chnaging your image extnsion from JPEG or other to .PNG does not automatically re-format your images
+into the PNG format. Use an image converter tool or ensure your original image is a real PNG instead. 
 
- 
 
-Verify your App Center is correctly configured 
+### Verify your App Center is correctly configured 
 
-Ensure your App Center link is created as an App within an Org, and not a standalone App 
+Ensure your App Center link is created as an App within an Org, and not a standalone App.
 
 [BuildFail_1.png] 
 
