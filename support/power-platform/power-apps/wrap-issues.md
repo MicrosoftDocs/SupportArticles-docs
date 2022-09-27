@@ -97,7 +97,7 @@ SignInFail_1.png
  
 ## Other issues in wrap
 
-For other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired like so: 
+For other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired in the following ways: 
 
 
 
