@@ -15,7 +15,7 @@ This article can help you troubleshoot authentication errors that occur when you
 You capture a screenshot of an Azure VM that shows the Welcome screen and indicates that the operating system is running. However, when you try to connect to the VM by using Remote Desktop Connection, you receive one of the following error messages:
 
 - An authentication error has occurred. The Local Security Authority cannot be contacted.
-- The remote computer that you are trying to connect to requires Network Level Authentication (NLA), but your Windows domain controller cannot be contacted to perform NLA. If you are an administrator on the remote computer, you can disable NLA by using the options on the Remote tab of the System Properties dialog box.
+- The remote computer that you are trying to connect to require Network Level Authentication (NLA), but your Windows domain controller cannot be contacted to perform NLA. If you are an administrator on the remote computer, you can disable NLA by using the options on the Remote tab of the System Properties dialog box.
 - This computer can't connect to the remote computer. Try connecting again, if the problem continues, contact the owner of the remote computer or your network administrator.
 
 ## Cause
@@ -27,7 +27,7 @@ There are multiple reasons why NLA might block the RDP access to a VM:
   - The VM has an old copy of the account password and the DC has a newer copy.
   - The DC that this VM is connecting to is unhealthy.
 - The encryption level of the VM is higher than the one that's used by the client computer.
-- The TLS 1.0, 1.1, or 1.2 (server) protocols are disabled on the VM.The VM was set up to disable logging on by using domain credentials, and the Local Security Authority (LSA) is set up incorrectly.
+- The TLS 1.0, 1.1, or 1.2 (server) protocols are disabled on the VM. The VM was set up to disable logging on by using domain credentials, and the Local Security Authority (LSA) is set up incorrectly.
 - The VM was set up to accept only Federal Information Processing Standard (FIPS)-compliant algorithm connections. This is usually done by using Active Directory policy. This is a rare configuration, but FIPS can be enforced for Remote Desktop connections only.
 
 ## Before you troubleshoot
@@ -38,7 +38,7 @@ To create a backup snapshot, follow the steps in [Snapshot a disk](/azure/virtua
 
 ### Connect to the VM remotely
 
-To connect to the VM remotely , use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](/azure/virtual-machines/troubleshooting/remote-tools-troubleshoot-azure-vm-issues).
+To connect to the VM remotely, use one of the methods in [How to use remote tools to troubleshoot Azure VM issues](remote-tools-troubleshoot-azure-vm-issues.md).
 
 ### Group policy client service
 
@@ -62,7 +62,7 @@ If the change is reverted, it means that an Active Directory policy is causing t
 
 ### Workaround
 
-As a work around to connect to the VM and resolve the cause, you can temporarily disable NLA. To disable NLA please use the below commands, or use the `DisableNLA` script in [Run Command](/azure/virtual-machines/windows/run-command#azure-portal).
+As a workaround to connect to the VM and resolve the cause, you can temporarily disable NLA. To disable NLA please use the below commands, or use the `DisableNLA` script in [Run Command](/azure/virtual-machines/windows/run-command#azure-portal).
 
 ```cmd
 REM Disable the Network Level Authentication
@@ -71,7 +71,7 @@ reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-T
 
 Then, restart the VM, and proceed to the troubleshooting section.
 
-Once you have resolved the issue re-enable NLA, by runing the following commands, and then restarting the VM:
+Once you have resolved the issue re-enable NLA, by running the following commands, and then restarting the VM:
 
 ```cmd
 REG add "HKLM\SYSTEM\CurrentControlSet\Control\Lsa" /v disabledomaincreds /t REG_DWORD /d 0 /f
@@ -154,7 +154,7 @@ If the key is set to 1, this means that the server was set up not to allow domai
 
 #### Check MinEncryptionLevel
 
-In an CMD instance, run the following command to query the **MinEncryptionLevel** registry value:
+In a CMD instance, run the following command to query the **MinEncryptionLevel** registry value:
 
 ```cmd
 reg query "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v MinEncryptionLevel
