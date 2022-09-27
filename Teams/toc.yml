@@ -168,7 +168,9 @@
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Phone System
-    items: 
+    items:
+    - name: Issues when using SIP devices
+      href: ./phone-system/sip-gateway-issues.md
     - name: Dial Plans
       items: 
       - name: Errors when trying to manage dial plans
@@ -238,9 +240,7 @@
   - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
-      href: ./teams-rooms-and-devices/collect-device-logs.md
-    - name: Issues when using SIP devices
-      href: ./teams-rooms-and-devices/sip-gateway-issues.md
+      href: ./teams-rooms-and-devices/collect-device-logs.md  
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
     - name: Signed out of Teams Android devices
