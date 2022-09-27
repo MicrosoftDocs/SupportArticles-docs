@@ -424,7 +424,7 @@ For more information, go to the following websites:
 
 |Build number or version|Service pack|Update|KB article|Release date|
 |---|---|---|---|---|
-|15.0.4261.1|None|CU18| [5017593](https://support.microsoft.com/help/5017593)|September 26, 2022|
+|15.0.4261.1|None|CU18| [5017593](https://support.microsoft.com/help/5017593)|September 28, 2022|
 |15.0.4249.2|None|CU17| [5016394](https://support.microsoft.com/help/5016394)|August 11, 2022|
 |15.0.4236.7|None|CU16 + GDR| [5014353](https://support.microsoft.com/help/5014353)|June 14, 2022|
 |15.0.2095.3|None| GDR| [5014356](https://support.microsoft.com/help/5014356)|June 14, 2022|
