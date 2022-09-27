@@ -68,6 +68,6 @@ The application runs with more elevated privileges than Power Automate for deskt
 
 Both the application and Power Automate for desktop should run with the same privileges.
 
-Power Automate Desktop doesn't run elevated by default. Hence, uncheck the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
+Power Automate for desktop doesn't run elevated by default. Hence, uncheck the **Run this program as an administrator** checkbox in the **Compatibility** section of the application's **Properties** window.
 
 Another option is to set Power Automate for desktop to run as admin as well.

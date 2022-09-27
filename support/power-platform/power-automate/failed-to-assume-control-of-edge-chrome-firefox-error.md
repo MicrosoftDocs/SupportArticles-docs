@@ -46,7 +46,7 @@ Execution of a desktop flow with one of the respective actions fails with the er
 
 ## Resolution for cause 1
 
-1. Install the respective web extension from the Power Automate Desktop designer.
+1. Install the respective web extension from the Power Automate for desktop designer.
 
    :::image type="content" source="media/failed-to-assume-control-of-edge-chrome-firefox-error/browser-extensions.png" alt-text="Select to install the web extension from the list.":::
 

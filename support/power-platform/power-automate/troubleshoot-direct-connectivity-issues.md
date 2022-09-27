@@ -54,7 +54,7 @@ If the machine and Power Automate service have reliable access to the network, t
 
 ## Enable WCF tracing
 
-In the Power Automate for desktop install folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file, this requires running your text editor as administrator.
+In the installation folder (typically _C:\Program Files (x86)\Power Automate Desktop_), edit the _UIFlowService.exe.config_ file, this requires running your text editor as administrator.
 
 Add this config section:
 
