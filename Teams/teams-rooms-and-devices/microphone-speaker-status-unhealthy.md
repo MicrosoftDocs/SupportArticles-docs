@@ -1,7 +1,7 @@
 ---
-title: The microphone or speaker status of an MTR device is unhealthy
-description: Fixes the issue that causes the microphone or speaker signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
-ms.reviewer: 
+title: The microphone or speaker status of a Teams Rooms device is unhealthy
+description: Fixes the issue that causes the microphone or speaker signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+ms.reviewer: lamos
 ms.topic: troubleshooting
 ms.date: 9/23/2022
 author: helenclu
@@ -20,7 +20,7 @@ ms.custom: CI167310
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms (MTR) device are shown as **Unhealthy**:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), one or more of the following signals of a Microsoft Teams Rooms device are shown as **Unhealthy**:
 
 - Conference microphone
 - Conference speaker
@@ -62,14 +62,14 @@ If possible avoid using USB extenders for audio and video equipment. If you must
 
 ## More information
 
-These signals are handled differently in the MTR Pro Management portal and the Microsoft Teams admin center.
+These signals are handled differently in the Teams Rooms Pro Management portal and the Microsoft Teams admin center.
 
 **Microsoft Teams admin center**: The portal reports the signal as **Unhealthy** in the following situations:
 
-- The MTR app has a specific audio peripheral configured in **Settings** and the peripheral is no longer available.
+- The Teams Rooms app has a specific audio peripheral configured in **Settings** and the peripheral is no longer available.
 - There is no audio peripheral available.
 
-**MTR Pro Management portal**: If the configured audio peripheral isn't available, the next available microphone or speaker is automatically selected. The portal reports the signal as **Unhealthy** if the following conditions are met:
+**Teams Rooms Pro Management portal**: If the configured audio peripheral isn't available, the next available microphone or speaker is automatically selected. The portal reports the signal as **Unhealthy** if the following conditions are met:
 
 - The configured default peripheral is missing.
 - There is no available certified integrated audio, such as the Lenovo Hub, Lenovo Hub 500, or HP Slice integrated audio.

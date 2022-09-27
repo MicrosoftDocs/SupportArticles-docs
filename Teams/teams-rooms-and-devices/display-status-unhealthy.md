@@ -1,7 +1,7 @@
 ---
-title: The Display status of an MTR device is Unhealthy
-description: Resolve the issue that causes the Display signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
-ms.reviewer: 
+title: The Display status of a Teams Rooms device is Unhealthy
+description: Resolve the issue that causes the Display signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+ms.reviewer: lamos
 ms.topic: troubleshooting
 ms.date: 9/26/2022
 author: helenclu
@@ -20,10 +20,10 @@ ms.custom: CI167102
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**, and users experience one or more of the following issues:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Display** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and users experience one or more of the following issues:
 
-- One or more Front of Room displays show nothing or show "No Signal."
-- The room console shows nothing or shows "No Signal."
+- One or more Front of Room displays show nothing or show "No Signal".
+- The room console shows nothing or shows "No Signal".
 - The room console shows a warning banner at the top that indicates that a display was disconnected.
 
 Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
@@ -33,7 +33,7 @@ Additionally, Event ID 3001 is logged under **Applications and Services Logs** >
 > [!NOTE]
 > Although the event log shows the signal as **Front of Room Display**, the room console status is also monitored. The count of available displays is checked against the expected count. This value depends on whether dual monitor mode is enabled. If dual monitor mode is enabled, the expected count is three: one for the room console and two for the Front of Room displays. Otherwise, the expected count is two.
 >
-> This signal should remain as **Healthy** even when MTR allows the displays to *sleep* after 10 minutes (default value) of no activity.
+> This signal should remain as **Healthy** even when Teams Rooms allows the displays to *sleep* after 10 minutes (default value) of no activity.
 
 ## Resolution
 
@@ -41,7 +41,7 @@ Display issues can occur for different reasons. To fix common issues, try the fo
 
 ### Check HDMI cable connections
 
-Issues can occur is an HDMI cable is unplugged, faulty, or inconsistent. In this situation, reseat the cable at both ends. If the issues persist, try to replace the cable.
+Issues can occur if an HDMI cable is unplugged, faulty, or inconsistent. In this situation, reseat the cable at both ends. If the issues persist, try to replace the cable.
 
 ### Make sure the display is powered on
 
@@ -52,7 +52,7 @@ Verify that the display is powered on. We recommend that you do not leave the di
 ### Check for issues in HDMI extenders
 
 - Verify that the HDMI extenders are suitable for enterprise or professional AV grade, and that you aren't extending them beyond their rated length.
-- Verify that theI extender is working correctly. Replace each end as necessary
+- Verify that the HDMI extender is working correctly. Replace each end as necessary.
 
 ### Check video adapters
 
@@ -76,7 +76,7 @@ In these situations, try the following options:
 
 - Verify that the display power settings are configured correctly.
 
-  Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported through a USB flash drive.
+  Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported to a USB flash drive.
 - Check whether the display supports the "wake on signal" feature.
 
-  Most consumer TVs, and even many commercial displays, don't automatically wake up when the MTR device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. A consumer TV that's used as a Front of Room display has to support the CEC feature of HDMI. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
+  Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).

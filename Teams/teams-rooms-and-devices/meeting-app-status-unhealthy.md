@@ -1,7 +1,7 @@
 ---
-title: The Meeting app status of an MTR device is Unhealthy
-description: Resolve the issue that causes the Meeting app signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
-ms.reviewer: 
+title: The Meeting app status of a Teams Rooms device is Unhealthy
+description: Resolve the issue that causes the Meeting app signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+ms.reviewer: rafilipe
 ms.topic: troubleshooting
 ms.date: 9/26/2022
 author: helenclu
@@ -18,7 +18,7 @@ ms.custom: CI167273
 ---
 # The Meeting app status is Unhealthy
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Meeting app** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**, and the incident severity value is shown as **Critical**.
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Meeting app** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and the incident severity value is shown as **Critical**.
 
 Users might also experience the following issues on the device.
 
@@ -77,9 +77,9 @@ To fix this issue, try these options:
 
 The Teams Rooms app isn't started, and users see the following privacy setting prompt:
 
-:::image type="content" source="media/meeting-app-status-unhealthy/privacy-prompt.png" alt-text="Screenshot of the privacy setting prompt shown on the MTR device console.":::
+:::image type="content" source="media/meeting-app-status-unhealthy/privacy-prompt.png" alt-text="Screenshot of the privacy setting prompt shown on the Teams Rooms device console.":::
 
-This is a known issue that occurs after you install the Windows 10 20H2 feature update or a later update on MTR devices that are running Windows 10, version 1909 or an earlier version.
+This is a known issue that occurs after you install the Windows 10 20H2 feature update or a later update on Teams Rooms devices that are running Windows 10, version 1909 or an earlier version.
 
 To fix the issue, select **Accept** to accept the settings.
 
@@ -88,7 +88,7 @@ To fix the issue, select **Accept** to accept the settings.
 This issue occurs in the following situations:
 
 - The *SkypeRoomSystem.exe* or *DesktopAPIService.exe* process isn't running or crashes.
-- The device isn't running a supported edition of Windows 10. MTR devices require the Windows 10 IoT Enterprise or Windows 10 Enterprise SKUs under Semi-Annual Channel servicing options. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
+- The device isn't running a supported edition of Windows 10. Teams Rooms devices require the Windows 10 IoT Enterprise or Windows 10 Enterprise SKUs under Semi-Annual Channel servicing options. For more information, see [Windows 10 release support](/microsoftteams/rooms/rooms-lifecycle-support#windows-10-release-support).
 
 To fix the issue, try these options:
 
@@ -150,4 +150,4 @@ To fix the issue, follow these steps:
 
 ## More information
 
-The Teams Rooms app logs a heartbeat event to the Skype Room System Windows event log every five minutes. The MTR Pro agent uses this information to check the status of the app and other signals. If this heartbeat event isn't logged for some time, this indicates that an issue is affecting the app, and the app isn't in a healthy state.
+The Teams Rooms app logs a heartbeat event to the Skype Room System Windows event log every five minutes. The Teams Rooms Pro agent uses this information to check the status of the app and other signals. If this heartbeat event isn't logged for some time, this indicates that an issue is affecting the app, and the app isn't in a healthy state.

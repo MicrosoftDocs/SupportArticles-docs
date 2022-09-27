@@ -1,7 +1,7 @@
 ---
-title: The HDMI Ingest status of an MTR device is Unhealthy
-description: Resolve the issue that causes the HDMI Ingest signal of a Microsoft Teams Rooms (MTR) device to appear as Unhealthy.
-ms.reviewer: 
+title: The HDMI Ingest status of a Teams Rooms device is Unhealthy
+description: Resolve the issue that causes the HDMI Ingest signal of a Microsoft Teams Rooms device to appear as Unhealthy.
+ms.reviewer: joolive
 ms.topic: troubleshooting
 ms.date: 9/23/2022
 author: helenclu
@@ -20,12 +20,12 @@ ms.custom: CI167102
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **HDMI Ingest** signal of a Microsoft Teams Rooms (MTR) device is shown as **Unhealthy**, and you experience one or more of the following issues:
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **HDMI Ingest** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**, and you experience one or more of the following issues:
 
 - You can't present content from an external source, such as a laptop, in the room display or meeting through an HDMI input signal (HDMI Ingest by using HDMI or USB-C cables).
-- You can't complete the initial setup of a new MTR system, and the Setup wizard returns the following error message:  
+- You can't complete the initial setup of a new Teams Rooms system, and the Setup wizard returns the following error message:  
   > Connect the room console to the dock.
-- The MTR device isn't listed in the Microsoft Teams admin center.
+- The Teams Rooms device isn't listed in the Microsoft Teams admin center.
 
 Additionally, Event ID 3001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
 
@@ -33,21 +33,21 @@ Additionally, Event ID 3001 is logged under **Applications and Services Logs** >
 
 ## Cause
 
-The Microsoft Teams Room app checks whether one of the HDMI Ingest modules that's included in the certified MTR system is detected. It does this by using a set of corresponding device peripheral VID/PID (Vendor ID + Product ID) as a reference.
+The Microsoft Teams Room app checks whether one of the HDMI Ingest modules that's included in the certified Teams Rooms system is detected. It does this by using a set of corresponding device peripheral VID/PID (Vendor ID + Product ID) as a reference.
 
 The HDMI Ingest signal is reported as Unhealthy. These issues can occur for the following reasons:
 
-- The HDMI input (ingest) for most MTR devices is located on the touchscreen console. The console is connected to the compute module by using a cable. Cable issues can cause a disconnection between the touchscreen console and the compute module.
-- A small set of MTR device models have HDMI video input and ingest functions that are supported directly from the compute module or by an additional hardware module that isn't part of the touchscreen console. If this HDMI Ingest module is disconnected, you'll experience the issues that are listed in the [Symptoms](#symptoms) section.
-- Issues that affect older versions of software or firmware.
+- The HDMI input (ingest) for most Teams Rooms devices is located on the touchscreen console. The console is connected to the compute module by using a cable. Cable issues can cause a disconnection between the touchscreen console and the compute module.
+- A small set of Teams Rooms device models have HDMI video input and ingest functions that are supported directly from the compute module or by an additional hardware module that isn't part of the touchscreen console. If this HDMI Ingest module is disconnected, you'll experience the issues that are listed in the [Symptoms](#symptoms) section.
+- Issues that are caused by older versions of software or firmware.
 
 ## Resolution
 
 To fix the issue, follow these steps:
 
-1. Find the OEM and model of the affected MTR device in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/). To do this, locate and select the affected device, select the **Settings** tab, and then select the **Device** submenu.
+1. Find the OEM and model of the affected Teams Rooms device in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/). To do this, locate and select the affected device, select the **Settings** tab, and then select the **Device** submenu.
 2. Refer to the OEM documentation to verify that a distinct module is used for HDMI video input (ingest). If it is, go to step 4. Otherwise, go to step 3.
-3. Check whether the touchscreen console is working correctly. For example, check whether the MTR app content is displayed correctly and the touchscreen responds to user input as expected. If both conditions are true, go to step 5. Otherwise, refer to the OEM documentation for further troubleshooting, such as the following steps:
+3. Check whether the touchscreen console is working correctly. For example, check whether the Teams Rooms app content is displayed correctly and the touchscreen responds to user input as expected. If both conditions are true, go to step 5. Otherwise, refer to the OEM documentation for further troubleshooting, such as the following steps:
 
    - Some consoles require external power. In this case, make sure that the power supply is connected.
    - Some consoles use hybrid fiber or copper USB cables to connect to the compute module. As for all fiber optic cables, these cables can be damaged and cause intermittent disconnections. In this situation, replace the cable.
@@ -58,12 +58,12 @@ To fix the issue, follow these steps:
 
    - If cables are used to connect the HDMI Ingest module, make sure that all cables that are used are the original cables that came together with the hardware module.
    - Power off the compute unit, reseat the HDMI Ingest module or the cables that connect to it, and then power on the system.
-   - For some MTR device models, the HDMI Ingest module is integrated within the compute module. If the HDMI Ingest status is unhealthy, this might be caused by a faulty module or a firmware issue. In this case, contact your OEM for further troubleshooting.
+   - For some Teams Rooms device models, the HDMI Ingest module is integrated within the compute module. If the HDMI Ingest status is unhealthy, this might be caused by a faulty module or a firmware issue. In this case, contact your OEM for further troubleshooting.
 
    If the issue persists, go to step 5.
 
-5. Sign in to the MTR device as an administrator, open the **Windows Update** setting, and then check for updates. Install the latest updates, if any are available. If the issue persists, go to step 6.
-6. Verify with your OEM that your MTR system has the recommended firmware version installed.
+5. Sign in to the Teams Rooms device as an administrator, open the **Windows Update** setting, and then check for updates. Install the latest updates, if any are available. If the issue persists, go to step 6.
+6. Verify with your OEM that your Teams Rooms system has the recommended firmware version installed.
 
 ## More information
 

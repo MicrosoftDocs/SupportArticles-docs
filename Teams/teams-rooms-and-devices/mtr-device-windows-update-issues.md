@@ -1,7 +1,7 @@
 ---
-title: Troubleshoot Windows Update issues on MTR Pro devices
-description: Fix common Windows Update issues on a Microsoft Teams Rooms (MTR) Pro device.
-ms.reviewer: 
+title: Troubleshoot Windows Update issues on Teams Rooms Pro devices
+description: Fix common Windows Update issues on a Microsoft Teams Rooms Pro device.
+ms.reviewer: joolive
 ms.topic: troubleshooting
 ms.date: 9/26/2022
 author: helenclu
@@ -16,9 +16,9 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167275
 ---
-# Troubleshoot Windows Update issues on MTR Pro devices
+# Troubleshoot Windows Update issues on Teams Rooms Pro devices
 
-You may experience one or more of the following Windows Update issues on Microsoft Teams Rooms (MTR) Pro devices:
+You may experience one or more of the following Windows Update issues on Microsoft Teams Rooms Pro devices:
 
 - Updates can't be installed successfully.
 - The system is not at the current update level, but Windows Update can't find available updates.
@@ -47,7 +47,7 @@ Make sure that the date and time settings are correct, and that the time offset 
 
 Your organization might use Group Policy settings, mobile device management (MDM), or the registry to configure Windows client update experience.
 
-For example, automatic restarts are prevented when a user is signed in if the `NoAutoRebootWithLoggedOnUsers` registry value under the `HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\AU` subkey is set to **1**. Because MTR Pro devices always have a *Skype* user signed in, such policies prevent the installation of updates that require an automatic restart, such as feature updates.
+For example, automatic restarts are prevented when a user is signed in if the `NoAutoRebootWithLoggedOnUsers` registry value under the `HKLM\Software\Policies\Microsoft\Windows\WindowsUpdate\AU` subkey is set to **1**. Because Teams Rooms Pro devices always have a *Skype* user signed in, such policies prevent the installation of updates that require an automatic restart, such as feature updates.
 
 "Active hours" configuration might also affect update installation. It might take eight days or more to install the monthly cumulative updates, depending on active hours configuration and the level of activity on the device. If your device is two or more cumulative update levels behind, you might experience other issues that prevent updates from being installed.
 
@@ -73,10 +73,10 @@ For more information, see [Issues related to HTTP/Proxy](/windows/deployment/upd
 
    - Failed to pin deployment while resolving Update: Microsoft-Client-License-Platform-Upgrade-Subscription-Package~31bf3856ad364e35~amd64~ar-SA~10.0.19041.1.32a8fd17d1cd1fd6bf373b77ccc23825 from file: (null) [HRESULT = 0x80073701 - ERROR_SXS_ASSEMBLY_MISSING]
    - Failed to resolve package 'Microsoft-Windows-Printing-PrintToPDFServices-Package~31bf3856ad364e35~amd64~it-IT~10.0.18362.1' [HRESULT = 0x800f0831 - CBS_E_STORE_CORRUPTION]
-3. In the sample entry, if the referenced package version ends in "*.1*", such as *it-IT~10.0.18362.1*, you can restore the missing language files by using DISM and the language pack .cab file for the language that's referenced in the package.
+3. In the log entry, if the referenced package version ends in "*.1*", such as *it-IT~10.0.18362.1*, you can restore the missing language files by using DISM and the language pack .cab file for the language that's referenced in the package.
 
    1. Download the [language pack ISO](/azure/virtual-desktop/language-packs#prerequisites) for your current Windows version.
-   1. Go to the *x64\langpacks* folder within the downloaded ISO, copy the *.cab* file for the language that's referenced in the missing package to the local computer. For example, copy *D:\x64\langpacks\Microsoft-Windows-Client-Language-Pack_x64_it-it.cab* to *C:\temp\\*.
+   1. Go to the *x64\langpacks* folder within the downloaded ISO, copy the *.cab* file for the language that's referenced in the missing package to the local device. For example, copy *D:\x64\langpacks\Microsoft-Windows-Client-Language-Pack_x64_it-it.cab* to *C:\temp\\*.
    1. Run a command that resembles the following example in an elevated Command Prompt window to restore all files that are associated with the missing language:
 
       ```console
