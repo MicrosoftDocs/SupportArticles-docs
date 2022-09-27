@@ -23,7 +23,7 @@ Ensure your images are in a PNG format. Using images in any format other than .P
 ### Verify your App Center is correctly configured 
 Ensure your App Center link is created as an App within an Org, and not a standalone App. 
 
-[BuildFail_1.png] 
+   :::image type="content" source="media/wrap-issues/BuildFail_1.png" alt-text="Screenshot of how to add a new Organization in App Center.":::
 
 
 Ensure the access token you created is correct. 
@@ -78,10 +78,11 @@ If you cannot sign in to your Wrapped Mobile App please verify that
 
 - Your AAD app is properly configured 
 
-- All API permissions have been added correctly. Refer to the below and/or see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions). 
+- All API permissions for the App have been added correctly. Refer to the image below and/or see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions) on how to see and configure API permissions for the App. 
 
 
-SignInFail_1.png 
+:::image type="content" source="media/wrap-issues/SignInFail_1.png" alt-text="Screenshot API permissions for the App.":::
+
 
 
 - Ensure that admin **Add-AdminAllowedThirdPartyApps** script was run successfully. See [Allow registered apps in your environment](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment) for more information. 
