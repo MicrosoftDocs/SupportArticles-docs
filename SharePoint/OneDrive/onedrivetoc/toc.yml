@@ -5,8 +5,6 @@
     items:
     - name: Error when accessing OneDrive or Sharepoint
       href: ../administration/error-accessing-onedrive-sharepoint.md
-    - name: Error Code 0x8004de40 when signing in to OneDrive
-      href: ../administration/error-0x8004de40-in-onedrive.md
   - name: List and Libraries
     items:
     - name: 401 error when Graph API access OneDrive data
@@ -59,16 +57,20 @@
       href: ../sync/onedrive-for-business-sync-returns-error.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
+    - name: Error Code 0x8004de40 when signing in to OneDrive
+      href: ../sync/error-0x8004de40-in-onedrive.md
     - name: Error when deleting OneDrive synced file locally
       href: ../sync/delete-onedrive-synced-file-error.md
-    - name: Sign into OneDrive error 0x8004dec5
-      href: ../sync/sign-into-onedrive-error-0x8004dec5.md
-    - name: Sign into OneDrive sync app error AADSTS50020
-      href: ../sync/sign-into-onedrive-sync-app-error.md
     - name: OneDrive for Business can't sync after tenant migration
       href: ../sync/cant-sync-after-migration.md
     - name: OneDrive local folder name isn't updated
       href: ../sync/onedrive-local-folder-name-not-updated.md
+    - name: Sign into OneDrive error 0x8004dec5
+      href: ../sync/sign-into-onedrive-error-0x8004dec5.md
+    - name: Sign into OneDrive error 0x8004e4d0
+      href: ../sync/sign-into-onedrive-error-0x8004e4d0.md
+    - name: Sign into OneDrive sync app error AADSTS50020
+      href: ../sync/sign-into-onedrive-sync-app-error.md
     - name: Sync error “Sorry, OneDrive can't add your folder right now” 
       href: ../sync/cant-add-folder-right-now.md
     - name: Troubleshoot sync issues
