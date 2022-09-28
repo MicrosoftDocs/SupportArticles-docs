@@ -3,12 +3,13 @@ metadata:
   title: Role instance restarts from Azure VM OS upgrades FAQ
   description: Get answers to frequently asked questions about role instance restarts that are caused by operating system upgrades on an Azure virtual machine.
   ms.topic: faq
-  ms.date: 7/19/2022
+  ms.date: 09/26/2022
   author: DennisLee-DennisLee
   ms.author: v-dele
   editor: v-jsitser
   ms.reviewer: v-maallu
-  ms.service: cloud-services-extended-support
+  ms.service: cloud-services
+  ms.subservice: troubleshoot-extended-support
 
 title: Frequently asked questions about role instance restarts caused by VM OS upgrades
 summary: This article answers frequently asked questions (FAQ) about role instance restarts that are caused by upgrades to the Windows operating system (OS) on a Microsoft Azure platform as a service (PaaS) virtual machine (VM).

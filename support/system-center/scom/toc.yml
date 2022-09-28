@@ -204,6 +204,8 @@
     href: management-server-installation-error-0x80131604.md
   - name: Install OpsMgr console and Service Manager console on the same server
     href: install-opsmgr-service-manager-consoles-on-same-server.md
+  - name: Reporting Services installation fails
+    href: reporting-services-installation-fails.md
   - name: Setup cannot be completed
     href: setup-not-completed-error.md
   - name: Troubleshoot OMS onboarding issues
