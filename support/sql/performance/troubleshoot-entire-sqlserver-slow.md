@@ -22,7 +22,7 @@ If the application is running on a different server, check the performance of th
 
 ## Step 2: Troubleshoot OS issues
 
-Check if the operating system where SQL Server is running is slow in its response. For example, the mouse moves slowly, and windows don't respond for long periods.  
+Check if the operating system where SQL Server is running is responding slowly. For example, the mouse moves slowly, windows don't respond for long periods, remote desktop access to the server is slow, connecting to a share on the server is slow.
 
 Common issues include:
 
