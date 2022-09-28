@@ -20,7 +20,7 @@ This issue occurs because there's misconfiguration of the **Data Warehouse Repor
 
 ## Resolution
 
-To fix the issue, reconfigure the profiles as follows. You can also [reconfigure profiles by using PowerShell automatically](#reconfigure-profiles-by-using-powershell-automatically).
+To fix the issue, reconfigure the profiles as follows. You can also [reconfigure profiles by using PowerShell automatically](#reconfigure-profiles-using-powershell-automatically).
 
 ### Step 1: Data Warehouse Report Deployment Account profile
 
