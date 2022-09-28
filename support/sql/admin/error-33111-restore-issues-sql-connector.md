@@ -152,4 +152,3 @@ Because of this change, you might experience problems when you try to restore da
     
     ENCRYPTION BY SERVER ASYMMETRIC KEY KeyName1050Version
     ```
-    
