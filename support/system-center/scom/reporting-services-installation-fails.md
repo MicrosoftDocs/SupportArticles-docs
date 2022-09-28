@@ -45,4 +45,4 @@ To fix the issue, reconfigure the profiles as follows:
 After the reconfiguration, you can install Reporting Services successfully by using the Data Warehouse Report Deployment account.
 
 > [!NOTE]
-> If you are still having issues verify the System Center Operations Manager database (OperationsManager and OperationsManagerDW) permissions are set correctly.
+> If you are still having issues verify the System Center Operations Manager database (*OperationsManager* and *OperationsManagerDW*) permissions are set correctly.
