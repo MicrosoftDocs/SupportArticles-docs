@@ -62,7 +62,6 @@ For more information, see [Slow performance on Windows Server when using the Bal
 ---
 
 
-For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
 ## Step 3: Troubleshoot network issues
 
