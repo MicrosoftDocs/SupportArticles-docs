@@ -15,7 +15,7 @@ This article discusses an error that  occurs when you try to restore a Transpare
 
 ## Symptoms
 
-You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Microsoft Azure Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for Microsoft Azure Key Vault 1.0.5.0.
+You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for Microsoft Azure Key Vault 1.0.5.0.
 
 Assume that you deploy the following instances of Microsoft SQL Server:
 
@@ -95,11 +95,11 @@ Because of this change, you might experience problems when you try to restore da
 
 1. Run the following query on the sql2 server to change the CRYPTOGRAPHIC PROVIDER to version 1.0.4.0:
 
- ```sql
- ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider
- FROM FILE =
- 'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.4.0\Microsoft.AzureKeyVaultService.EKM.dll'
-```
+     ```sql
+     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider
+     FROM FILE =
+     'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.4.0\Microsoft.AzureKeyVaultService.EKM.dll'
+    ```
 
   1. Restart SQL Server.
 
@@ -117,38 +117,39 @@ Because of this change, you might experience problems when you try to restore da
 
 1. You can confirm the existence of both the asymmetric keys by using the following query:
 
-```sql
-SELECT thumbprint,* FROM master.sys.asymmetric_keys
-```
+    ```sql
+    SELECT thumbprint,* FROM master.sys.asymmetric_keys
+    ```
 
 1. Add credentials to asymmetric-key mapped login (TDE_Login in the following example) by using a query similar to the following query:
 
-```sql
-ALTER LOGIN [Contoso\DomainUser] DROP CREDENTIAL sysadmin_ekm_cred; 
-
-ALTER LOGIN TDE_Login ADD CREDENTIAL sysadmin_ekm_cred;
-```
+    ```sql
+    ALTER LOGIN [Contoso\DomainUser] DROP CREDENTIAL sysadmin_ekm_cred; 
+    
+    ALTER LOGIN TDE_Login ADD CREDENTIAL sysadmin_ekm_cred;
+    ```
 
 1. You should now be able to restore the backup.
 
 1. Run the following query on sql2 to revert the CRYPTOGRAPHIC PROVIDER to version 1.0.5.0:
 
-```sql
-
-ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider 
-
-FROM FILE =
-
-'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.5.0\Microsoft.AzureKeyVaultService.EKM.dll'
-
-```
+    ```sql
+    
+    ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider 
+    
+    FROM FILE =
+    
+    'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.5.0\Microsoft.AzureKeyVaultService.EKM.dll'
+    
+    ```
 
 1. Restart SQL Server.
 
 1. To  use the new thumbprint, run the following query by using either the same asymmetric key or the new version asymmetric key.
 
-```sql
-ALTER DATABASE ENCRYPTION KEY
-
-ENCRYPTION BY SERVER ASYMMETRIC KEY KeyName1050Version
-```
+    ```sql
+    ALTER DATABASE ENCRYPTION KEY
+    
+    ENCRYPTION BY SERVER ASYMMETRIC KEY KeyName1050Version
+    ```
+    
