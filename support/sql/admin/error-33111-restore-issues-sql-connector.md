@@ -25,27 +25,27 @@ Assume that you deploy the following instances of Microsoft SQL Server:
 
 - Use the following query to deploy an asymmetric key from the same asymmetric key source in Key Vault:
 
-```sql
-
-CREATE ASYMMETRIC KEY TDE_KEY 
-
-FROM PROVIDER AzureKeyVaultProvider 
-
-WITH PROVIDER_KEY_NAME = 'key1', 
-
-CREATION_DISPOSITION = OPEN_EXISTING
-
-```
+    ```sql
+    
+    CREATE ASYMMETRIC KEY TDE_KEY 
+    
+    FROM PROVIDER AzureKeyVaultProvider 
+    
+    WITH PROVIDER_KEY_NAME = 'key1', 
+    
+    CREATION_DISPOSITION = OPEN_EXISTING
+    
+    ```
 
 If you review the value of thumbprints on both servers, you will notice that the thumbprint lengths differ though they're created from the same source. The version 1.0.5.0 thumbprint is longer than version 1.0.4.0.
 
 Example of 1.0.4.0 thumbprint:
 
-0x2C5677D76F76D77F80
+`0x2C5677D76F76D77F80`
 
 Example of 1.0.5.0 thumbprint:
 
-0x373B314B78E8D59A0925494558FEF14B726216C5
+`0x373B314B78E8D59A0925494558FEF14B726216C5`
 
 The change causes problems to occur during backup and restore operations.
 
