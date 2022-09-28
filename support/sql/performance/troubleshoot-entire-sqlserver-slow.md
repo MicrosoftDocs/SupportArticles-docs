@@ -23,6 +23,7 @@ If the application is running on a different server, check the performance of th
 ## Step 2: Troubleshoot OS issues
 
 Check if the operating system where SQL Server is running is responding slowly. For example, the mouse moves slowly, windows don't respond for long periods, remote desktop access to the server is slow, connecting to a share on the server is slow.
+
 This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
@@ -60,8 +61,6 @@ Local drives are overwhelmed with I/O beyond their capacity. Use the following m
 For more information, see [Slow performance on Windows Server when using the Balanced power plan](/troubleshoot/windows-server/performance/slow-performance-when-using-power-plan).
 
 ---
-
-
 
 ## Step 3: Troubleshoot network issues
 
@@ -182,17 +181,18 @@ Follow these steps to troubleshoot these issues:
       * Deadlocked Schedulers
       *
       * ********************************************
-      ```
-* *******************************************************************************                                
-*                                                                                                                
-* BEGIN STACK DUMP:                                                                                              
-*   09/07/22 23:01:04 spid 0                                                                                     
-*                                                                                                                
-* Non-yielding IOCP Listener                                                                                     
-*                                                                                                                
-* *******************************************************************************   
+     
+    - ```output
+      * *******************************************************************************                                
+      *                                                                                                                
+      * BEGIN STACK DUMP:                                                                                              
+      * 09/07/22 23:01:04 spid 0                                                                                     
+      *                                                                                                                
+      * Non-yielding IOCP Listener                                                                                     
+      *                                                                                                                
+      * *******************************************************************************   
 
-    - ```Output
+    - ```output
       * ********************************************
       *
       * BEGIN STACK DUMP:
