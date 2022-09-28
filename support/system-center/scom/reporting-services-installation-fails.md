@@ -1,6 +1,6 @@
 ---
 title: Can't install Reporting Services in System Center Operations Manager
-description: Troubleshoot the "Data Reader account provided is not same" error when installing Reporting Services in System Center Operations Manager.
+description: Troubleshoot the error, Data Reader account provided is not same, which occurs when installing Reporting Services in System Center Operations Manager.
 ms.reviewer: blakedrumm, luisferreira, alexkre, jarrettr, msadoff
 ms.date: 09/26/2022
 ---
@@ -16,7 +16,7 @@ When you try to install Reporting Services in System Center Operations Manager, 
 
 ## Cause
 
-This issue occurs because there's misconfiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles, which causes problems with data warehouse workflows. Data Warehouse maintenance and running of reports will fail if the default action account doesn't have necessary SQL Server permissions.
+This issue occurs because there's misconfiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles, which causes problems with data warehouse workflows. Data Warehouse maintenance and running of reports will fail if the default action account doesn't have the necessary SQL Server permissions.
 
 ## Resolution
 
