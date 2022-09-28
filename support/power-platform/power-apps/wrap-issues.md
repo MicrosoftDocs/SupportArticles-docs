@@ -14,7 +14,7 @@ This guide helps you resolve the most common warp issues in Power Apps.
 
 ### Verify that your images are in a PNG format 
 
-Ensure that the images your are using in wrap are in a PNG format. Using images in any format other than PNG will cause the wrap build to fail. Please use an image converter to save your images as .PNG files or ensure that your original image files are in a PNG format instead. 
+Ensure that the images your are using in wrap are in a PNG format. Using images in any format other than PNG in wrap will cause the build to fail. Please use an image converter to save your images as .PNG files or ensure that your original image files are in a PNG format instead. 
 
 > [!IMPORTANT]
 > Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNG format.
