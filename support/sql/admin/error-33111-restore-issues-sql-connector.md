@@ -11,9 +11,11 @@ ms.author: v-jayaramanp
 
 _Original KB number:_ &nbsp;  4470999
 
+This article discusses an error that  occurs when you try to restore a Transparent Data Encryption (TDE) backup that's made on servers that use older versions of SQL Server Connector for the Microsoft Azure Key Vault.
+
 ## Symptoms
 
-You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for  Key Vault 1.0.5.0.
+You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for Key Vault 1.0.5.0.
 
 Assume that you deploy the following instances of Microsoft SQL Server:
 
@@ -21,7 +23,7 @@ Assume that you deploy the following instances of Microsoft SQL Server:
 
 - SQL Server instance sql2 has SQL Server Connector for Key Vault 1.0.5.0 deployed.
 
-- Use the following query to deploy an asymmetric key from the same asymmetric key in Key Vault:
+- Use the following query to deploy an asymmetric key from the same asymmetric key source in Key Vault:
 
 ```sql
 
@@ -35,7 +37,7 @@ CREATION_DISPOSITION = OPEN_EXISTING
 
 ```
 
-If you review the value of thumbprints on both servers, you will notice that the thumbprint lengths differ though they’re created from the same source. The version 1.0.5.0 thumbprint is longer than version 1.0.4.0.
+If you review the value of thumbprints on both servers, you will notice that the thumbprint lengths differ though they're created from the same source. The version 1.0.5.0 thumbprint is longer than version 1.0.4.0.
 
 Example of 1.0.4.0 thumbprint:
 
@@ -45,7 +47,7 @@ Example of 1.0.5.0 thumbprint:
 
 0x373B314B78E8D59A0925494558FEF14B726216C5
 
-The change causes problems to occur during backup and restore operations. 
+The change causes problems to occur during backup and restore operations.
 
 Example:
 
@@ -53,7 +55,7 @@ You have a database backup that is encrypted by an asymmetric key in Key Vault i
 
 The sql2 instance has an asymmetric key created.
 
-If you try to restore the backup of the sql2 instance, the restore fails and returns an error message that resembles the following messages:
+If you try to restore the backup of the sql2 instance, the operation fails and returns an error message that resembles the following message:
 
 > Msg 33111, Level 16, State 4, Line LineNumber
 
@@ -79,7 +81,7 @@ ak.thumbprint=ddek.encryptor_thumbprint
 
 ## Cause
 
-An update was introduced in version 1.0.5.0 of SQL Server Connector for  Key Vault that changes the way that the program calculates thumbprints. In version 1.0.5.0, this calculation matches the logic that‘s used by the program engine to support the following migration scenario:
+An update was introduced in version 1.0.5.0 of SQL Server Connector for Key Vault that changes the way that the program calculates thumbprints. In version 1.0.5.0, this calculation matches the logic that's used by the program engine to support the following migration scenario:
 
 From: On-premises Microsoft SQL Server that uses Extensible Key Management (EKM)
 
@@ -89,7 +91,7 @@ Because of this change, you might experience problems when you try to restore da
 
 ## Resolution
 
-1. Copy the SQL Server Connector for  Key Vault 1.0.4.0 or an earlier version to the sql2 instance server.
+1. Copy the SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to the sql2 instance server.
 
 1. Run the following query on the sql2 server to change the CRYPTOGRAPHIC PROVIDER to version 1.0.4.0:
 
@@ -100,7 +102,7 @@ Because of this change, you might experience problems when you try to restore da
 ```
 
   1. Restart SQL Server.
-    
+
   1. Create a new asymmetric key by using - CRYPTOGRAPHIC PROVIDER 1.0.4.0.
 
      ```sql
