@@ -16,7 +16,7 @@ When you try to install Reporting Services in System Center Operations Manager, 
 
 ## Cause
 
-This issue occurs because there is misconfiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles, which causes problems with data warehouse workflows. Data Warehouse Maintenance and running of reports will fail if the default action account doesn’t have necessary SQL permissions.
+This issue occurs because there is misconfiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles, which causes problems with data warehouse workflows. Data Warehouse maintenance and running of reports will fail if the default action account doesn't have necessary SQL Server permissions.
 
 ## Resolution
 
@@ -45,4 +45,4 @@ To fix the issue, reconfigure the profiles as follows:
 After the reconfiguration, you can install Reporting Services successfully by using the Data Warehouse Report Deployment account.
 
 > [!NOTE]
-> If you are still having issues verify the System Center Operations Manager database (*OperationsManager* and *OperationsManagerDW*) permissions are set correctly.
+> If the issue remains, verify the System Center Operations Manager database (**OperationsManager** and **OperationsManagerDW**) permissions are set correctly.
