@@ -2,7 +2,7 @@
 title: Invalid Private key file error
 description: Provides a resolution to correct the private key file format in Power Automate for desktop.
 ms.reviewer: adija
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.date: 9/20/2022
 ms.subservice: power-automate-flows
 ---

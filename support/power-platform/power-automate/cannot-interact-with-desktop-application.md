@@ -2,7 +2,7 @@
 title: Can't interact with desktop application
 description: Provides a resolution for the issue that you can't interact with the desktop application in Power Automate.
 ms.reviewer: pefelesk
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.date: 9/20/2022
 ms.subservice: power-automate-flows
 ---

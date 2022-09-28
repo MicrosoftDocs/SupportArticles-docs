@@ -2,7 +2,7 @@
 title: Module or action wasn't found error
 description: You should update Power Automate for desktop to version 2.14.00351.21293 or higher to avoid the Module or action wasn't found error.
 ms.reviewer: dipapa
-ms.topic: troubleshoot
+ms.topic: troubleshooting
 ms.date: 9/21/2022
 ms.subservice: power-automate-flows
 ---
