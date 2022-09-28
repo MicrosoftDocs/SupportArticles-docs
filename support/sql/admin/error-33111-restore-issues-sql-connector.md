@@ -101,19 +101,19 @@ Because of this change, you might experience problems when you try to restore da
      'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.4.0\Microsoft.AzureKeyVaultService.EKM.dll'
     ```
 
-  1. Restart SQL Server.
+      1. Restart SQL Server.
 
-  1. Create a new asymmetric key by using - CRYPTOGRAPHIC PROVIDER 1.0.4.0.
+      1. Create a new asymmetric key by using - CRYPTOGRAPHIC PROVIDER 1.0.4.0.
 
-     ```sql
-       CREATE ASYMMETRIC KEY TDE_KEY_1040 
-    
-       FROM PROVIDER AzureKeyVaultProvider 
-    
-       WITH PROVIDER_KEY_NAME = ‘key1’, 
-    
-       CREATION_DISPOSITION = OPEN_EXISTING
-     ```
+         ```sql
+           CREATE ASYMMETRIC KEY TDE_KEY_1040 
+        
+           FROM PROVIDER AzureKeyVaultProvider 
+        
+           WITH PROVIDER_KEY_NAME = ‘key1’, 
+        
+           CREATION_DISPOSITION = OPEN_EXISTING
+         ```
 
 1. You can confirm the existence of both the asymmetric keys by using the following query:
 
