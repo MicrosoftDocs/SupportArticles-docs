@@ -2,7 +2,6 @@
 title: Cannot establish connection to Access Database Engine OLE DB
 description: Provides a resolution for the issue that you can't establish a connection with database actions to Access Database Engine OLE DB in Power Automate for desktop.
 ms.reviewer: adija
-ms.topic: troubleshoot
 ms.date: 9/21/2022
 ms.subservice: power-automate-flows
 ---

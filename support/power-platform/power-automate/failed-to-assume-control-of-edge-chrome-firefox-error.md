@@ -2,7 +2,6 @@
 title: Failed to assume control of Edge or Chrome or Firefox error
 description: Provides a resolution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo
-ms.topic: troubleshooting
 ms.date: 9/21/2022
 ms.subservice: power-automate-flows
 ---
