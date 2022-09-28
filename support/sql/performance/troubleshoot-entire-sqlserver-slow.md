@@ -61,7 +61,6 @@ For more information, see [Slow performance on Windows Server when using the Bal
 
 ---
 
-This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
 
