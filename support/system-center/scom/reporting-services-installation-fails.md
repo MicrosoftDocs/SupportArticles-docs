@@ -24,23 +24,23 @@ To fix the issue, reconfigure the profiles as follows. You can also [reconfigure
 
 ### Step 1: Data Warehouse Report Deployment Account profile
 
-1. Set the Data Warehouse Report Deployment account to be used for the following classes:
+Set the Data Warehouse Report Deployment account to be used for the following classes:
 
-    - Collection Server
-    - Data Warehouse Synchronization Server
+- Collection Server
+- Data Warehouse Synchronization Server
 
-    :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-report-deployment-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Report Deployment account.":::
+:::image type="content" source="media/reporting-services-installation-fails/data-warehouse-report-deployment-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Report Deployment account.":::
 
 ### Step 2: Data Warehouse Account profile
 
-1. Set the Data Warehouse Action account to be used for the following classes:
+Set the Data Warehouse Action account to be used for the following classes:
 
-    - Collection Server
-    - Data Warehouse Synchronization Server
-    - Data Set
-    - Operations Manager APM Data Transfer Service
+- Collection Server
+- Data Warehouse Synchronization Server
+- Data Set
+- Operations Manager APM Data Transfer Service
 
-    :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-action-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Action account.":::
+:::image type="content" source="media/reporting-services-installation-fails/data-warehouse-action-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Action account.":::
 
 After the reconfiguration, you can install Reporting Services successfully by using the Data Warehouse Report Deployment account.
 
