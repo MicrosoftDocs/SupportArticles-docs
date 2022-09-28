@@ -47,7 +47,7 @@ After the reconfiguration, you can install Reporting Services successfully by us
 > [!NOTE]
 > If the issue remains, verify the System Center Operations Manager database (**OperationsManager** and **OperationsManagerDW**) permissions are set correctly.
 
-### Reconfigure profiles by using PowerShell automatically
+### Reconfigure profiles using PowerShell automatically
 
 > [!TIP]
 > Before running the following PowerShell script, we suggest removing all Run As accounts from the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles.
