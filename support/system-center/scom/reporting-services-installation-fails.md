@@ -16,7 +16,7 @@ When you try to install Reporting Services in System Center Operations Manager, 
 
 ## Cause
 
-This issue occurs because of the profile misconfiguration, which causes problems with data warehouse workflows.
+This issue occurs because there is miscofiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** runas profiles, which causes problems to data warehouse workflows.
 
 ## Resolution
 
