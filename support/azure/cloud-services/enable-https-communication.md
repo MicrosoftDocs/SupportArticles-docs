@@ -1,12 +1,13 @@
 ---
 title: Enable HTTPS communication in Azure Cloud Services
 description: Learn how to enable HTTPS communication in Azure Cloud Services (extended support). 
-ms.date: 7/29/2022
+ms.date: 09/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry
-ms.service: cloud-services-extended-support
+ms.service: cloud-services
+ms.subservice: troubleshoot-extended-support
 ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to get instructions about how to enable HTTPS communication so that I can make my cloud applications available to customers securely.
 ---
