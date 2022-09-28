@@ -22,12 +22,16 @@ This issue occurs because there is miscofiguration of the **Data Warehouse Repor
 
 To fix the issue, reconfigure the profiles as follows:
 
+### Data Warehouse Report Deployment Account Profile
+
 1. Set the Data Warehouse Report Deployment account to be used for the following classes:
 
     - Collection Server
     - Data Warehouse Synchronization Server
 
     :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-report-deployment-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Report Deployment account.":::
+
+### Data Warehouse Account Profile
 
 1. Set the Data Warehouse Action account to be used for the following classes:
 
