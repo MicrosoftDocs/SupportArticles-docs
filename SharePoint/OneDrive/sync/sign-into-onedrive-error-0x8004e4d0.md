@@ -10,13 +10,13 @@ localization_priority: Normal
 ms.custom: 
   - CSSTroubleshoot
   - CI 167187
-ms.reviewer: salarson
+ms.reviewer: salarson, prbalusu
 appliesto: 
   - OneDrive for Business
 search.appverid: MET150
-ms.date: 9/23/2022
+ms.date: 9/28/2022
 ---
-# Error 0x8004e4d0 when signing in to OneDrive  
+# Error 0x8004e4d0 when signing in to OneDrive
 
 ## Symptoms  
 
@@ -28,7 +28,7 @@ Users in your organization can't sign in to Microsoft OneDrive, and they receive
 
 This error might be caused by a permissions issue that affects the OneDrive site that's being synchronized.  
 
-This issue most frequently occurs if a user account is deleted in the Microsoft 365 admin center or in Active Directory (in directory synchronization scenarios),  and the account is then re-created by using the same user principal name (UPN) but a different ID value. When the user tries to access a site collection or OneDrive, the user has an incorrect ID. 
+This issue most frequently occurs if a user account is deleted in the Microsoft 365 admin center or in Active Directory (in directory synchronization scenarios), and the account is then re-created by using the same user principal name (UPN) but a different ID value. When the user tries to access a site collection or OneDrive, the user has an incorrect ID.
 
 A second scenario involves directory synchronization with an Active Directory organizational unit (OU). This issue might occur if a user has already signed in to SharePoint, and then is moved to a different OU and resynced with SharePoint.
 
