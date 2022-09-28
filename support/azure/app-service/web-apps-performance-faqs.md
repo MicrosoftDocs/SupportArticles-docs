@@ -3,7 +3,7 @@ title: Application performance FAQs
 description: Get answers to frequently asked questions about availability, performance, and application issues in Azure App Service.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: app-service
 ms.date: 03/09/2022
 ms.reviewer: msangapu, toan, shrahman
 ---
