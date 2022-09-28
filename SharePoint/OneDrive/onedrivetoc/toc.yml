@@ -65,6 +65,8 @@
       href: ../sync/cant-sync-after-migration.md
     - name: OneDrive local folder name isn't updated
       href: ../sync/onedrive-local-folder-name-not-updated.md
+    - name: Sign into OneDrive error 0x8004dec5
+      href: ../sync/sign-into-onedrive-error-0x8004dec5.md
     - name: Sign into OneDrive error 0x8004e4d0
       href: ../sync/sign-into-onedrive-error-0x8004e4d0.md
     - name: Sign into OneDrive sync app error AADSTS50020
