@@ -72,7 +72,7 @@ Make sure that you have signed the outputted application. You can do so by confi
 
 - [Code sign for Android](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android) 
 
-verify that your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
+Verify that your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
 
 
 ## Cannot sign in to a wrapped Mobile App or cannot see data  
