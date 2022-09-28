@@ -19,7 +19,7 @@ When you index large or complex documents by using integrated full-text search i
 
 > 2010-06-07 15:02:44.64 spid10s Error '0x80040e97' occurred during full-text index population for table or indexed view '[db1].[dbo].[Images]' (table or indexed view ID '622625261', database ID '171'), full-text key value '2375057'. Attempt will be made to reindex it.
 
-Additionally, SQL Server may restart the *FDHOST.exe* process. When this issue occurs, an error message that resembles the following is displayed in the SQL Server error log:
+Additionally, SQL Server may restart the *FDHOST.exe* process. 
 
 ## Cause
 

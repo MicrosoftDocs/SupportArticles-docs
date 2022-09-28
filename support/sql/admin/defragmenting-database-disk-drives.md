@@ -1,7 +1,7 @@
 ---
 title: Defragmenting database disk drives
 description: This article provides some guidance regarding defragmentation of SQL Server database drives.
-ms.date: 09/23/2022
+ms.date: 09/28/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ramakoni
 ms.prod: sql
@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 3195161
 
 ## Should SQL Server disks be defragmented at the operating system layer?
 
-That depends on the fragmentation state of the current drives. Generally, it doesn't hurt and it may help, assuming you follow the precautions that are described in the **Precautions when defragmenting SQL Server database drives** section. **The only negative is that you must shut down SQL Server** unless the defragmentation tool supports transactional data capabilities. The good news is that, after you've run the defrag, you don't really have to do it again unless you have many Autogrowth and other files moving on and off the disks. Make sure that you understand any write-caching strategies that the utility uses. Caching by such a utility might involve a non-battery-backed cache, and this could violate WAL protocol requirements.
+That depends on the fragmentation state of the current drives. Generally, it doesn't hurt and it may help, assuming you follow the precautions that are described in the [Precautions when defragmenting SQL Server database drives](#precautions-when-you-defragment-sql-server-database-drives) section. **The only negative is that you must shut down SQL Server** unless the defragmentation tool supports transactional data capabilities. The good news is that, after you've run the defrag, you don't really have to do it again unless you have many Autogrowth and other files moving on and off the disks. Make sure that you understand any write-caching strategies that the utility uses. Caching by such a utility might involve a non-battery-backed cache, and this could violate WAL protocol requirements.
 
 ## More information
 

@@ -30,7 +30,7 @@ In this scenario, you notice the following errors reported in the SQL Server Err
 
 > The operating system returned error 665(The requested operation could not be completed due to a file system limitation) to SQL Server during a write at offset 0x00002a3ef96000 in file 'Sam.mdf:MSSQL_DBCC18'
 
-In addition to these errors, you may also notice **Latch Timeout** errors as shown below:
+In addition to these errors, you may also notice the following **Latch Timeout** errors:
 
 - > Timeout occurred while waiting for latch: class *'DBCC_MULTIOBJECT_SCANNER'*, id 000000002C61DF40, type 4, Task 0x00000000038089B8 : 16, waittime 600, flags 0x1a, owning task 0x0000000006A09828. Continuing to wait.  
 
@@ -40,7 +40,7 @@ Additionally, you may also notice blocking when you view various dynamic managem
 
 ## Cause
 
-This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NFTS. This behavior is explained in following KB article:
+This problem occurs if a large number of `ATTRIBUTE_LIST_ENTRY` instances are needed to maintain a heavily fragmented file in NFTS. This behavior is explained in the following KB article:
 
 [A heavily fragmented file in an NTFS volume may not grow beyond a certain size](https://support.microsoft.com/help/967351)
 
@@ -56,7 +56,7 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 - [How Database Snapshots Work](/sql/relational-databases/databases/database-snapshots-sql-server)
 
-- [DBCC CHECKDB (Transact-SQL) [See "Internal Database Snapshot" section]](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)
+- [DBCC CHECKDB (Transact-SQL) [See "Internal Database Snapshot" section]](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)
 
 - [New extended event to track writes to the snapshot sparse file](/archive/blogs/psssql/new-extended-event-to-track-writes-to-the-snapshot-sparse-file)  
 
@@ -64,18 +64,18 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 1. Break up the large database into smaller files. For example, if you have one 8-TB data file you can break it up into eight 1-TB data files. High-level these are the steps to accomplish this:
    1. Add the 7 new 1 TB files to the same file group.
-   2. Rebuild the clustered indexes of the existing tables and this will automatically spread the data of each table among the 8 files. If a table does not have a clustered index, then create one and then drop it to accomplish the same.
+   2. Rebuild the clustered indexes of the existing tables and this will automatically spread the data of each table among the 8 files. If a table doesn't have a clustered index, then create one and then drop it to accomplish the same.
    3. Shrink the original 8 TB file down, now that is about 12-15% full.
-2. Consider placing the database files on ReFS volume which does not have the same ATTRIBUTE_LIST_ENTRY limits that NTFS presents. You must reformat the current NTFS volume using ReFS.
+2. Consider placing the database files on ReFS volume which doesn't have the same `ATTRIBUTE_LIST_ENTRY` limits that NTFS presents. You must reformat the current NTFS volume using ReFS.
 3. Consider defragmenting the volume where the database files reside. For more information, see [Operating System Error (665 - File System Limitation) Not just for DBCC Anymore](/archive/blogs/psssql/operating-system-error-665-file-system-limitation-not-just-for-dbcc-anymore).
 4. Format the volume by using the **/L** option to obtain large FRS.
 
     > [!NOTE]
-    > For systems running Windows Server 2008 R2 and Vista, you first need to apply the hotfix from the KB article 967351 before using the /L option with format command.
+    > For systems running Windows Server 2008 R2 and Vista, you first need to apply the hotfix from the KB article 967351 before using the `/L` option with format command.
 
 5. [FIX: OS error 665 when you execute DBCC CHECKDB command for database that contains columnstore index in SQL Server 2014](https://support.microsoft.com/kb/3029977/EN-US)
 
-6. Reduce the lifetime of DBCC CHECK commands by using the performance enhancements and consequently avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571)
+6. Reduce the lifetime of `DBCC CHECK` commands by using the performance enhancements and consequently avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571)
 
 Under certain conditions, you might still encounter the above mentioned errors even after applying these fixes. In that scenario, you can evaluate some of the workarounds discussed in the following blog post:
 
