@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting wrap issues in Power Apps
-description: Provides a resolution for wrap issues in Power Apps.
+description: Provides possible resolutions for wrap issues in Power Apps
 ms.reviewer: 
 ms.topic: troubleshooting
 ms.date: 09/28/2022
@@ -8,31 +8,31 @@ ms.subservice:
 ---
 # Troubleshooting wrap issues in Power Apps
 
-This guide helps you resolve warp issues in Power Apps.
+This guide helps you resolve the most common warp issues in Power Apps.
 
 ## Wrap Build is failing
 
-### Verify your images are in a PNG format 
+### Verify that your images are in a PNG format 
 
-Ensure your images are in a PNG format. Using images in any format other than .PNG will cause the wrap build to fail. Please use an image converter tool or ensure your original image is in a PNG format instead. 
+Ensure that the images your are using in wrap are in a PNG format. Using images in any format other than PNG will cause the wrap build to fail. Please use an image converter to save your images as .PNG files or ensure that your original image files are in a PNG format instead. 
 
 > [!IMPORTANT]
 > Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNG format.
 
 
-### Verify your App Center is correctly configured 
-Ensure your App Center link is created as an App within an Org, and not a standalone App. 
+### Verify that your App Center is correctly configured 
+Your App Center link must be created as an App within an Org, and not a standalone App. 
 
    :::image type="content" source="media/wrap-issues/BuildFail_1.png" alt-text="Screenshot of how to add a new Organization in App Center.":::
 
 
-Ensure the access token you created is correct. 
+Check that the access token you have created is correct. 
 
 - Correct: Click on your created App -> Settings -> App API Tokens 
 
 - Incorrect: Account Settings -> User API Tokens 
 
-Ensure your iOS or Android App created has the right settings configurations. 
+Verify that your iOS or Android App created has the right settings configurations. 
 
 - iOS: OS=Custom 
 
@@ -41,8 +41,8 @@ Ensure your iOS or Android App created has the right settings configurations.
  
 For more information, refer to Steps 8 and 9 in [Create an App Center container for your mobile app](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
-### Verify your Keyvault configuration is correct 
-Ensure Azure Service Principal was created and role added (Steps 1-2 in [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)) 
+### Verify that your Keyvault configuration is correct 
+Make sure that Azure Service Principal was created and the role added correctly. Refer to Steps 1-2 in [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing) for the details.
 
 Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
 
@@ -53,15 +53,18 @@ Ensure your Keyvault contains all necessary certificates, secrets and tags for i
 For more information, please refer to [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing). 
 
 ### If you have all the proper configurations, try again. 
-If after retries and proper configuration, the build fails, please reach out to our support alias. See details at the end of this document. 
+If wrap build keeps failing after have you have verified that your wrap project has all the proper configurations, please reach out to our support alias. See details at the end of this document. 
 
-## Cannot save my project or trigger a Build 
-- Please update to latest Wrap solution version and try again. 
+## Wrap button is disabled for my App
+You can only wrap Apps that you have **Edit** permissions for. Please make sure you have **Edit** permisions for the App you want to wrap and try again.
+
+## Cannot save my project or trigger a wrap Build 
+- Please update to latest wrap solution version and try again. 
 
 - Please ensure there are no UI validation errors blocking Save or Build submission. 
 
-## Cannot install a Wrapped Mobile App on a device 
-Ensure you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details, please refer to: 
+## Cannot install a wrapped Mobile App on a device 
+Make sure that you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details on code signing, please please refer to: 
 
 - [Setup Keyvault for Automated Signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
 
@@ -69,36 +72,36 @@ Ensure you have signed the outputted application. You can do so by configuring a
 
 - [Code sign for Android](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android) 
 
-Ensure your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
+verify that your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
 
 
-## Cannot sign in to a Wrapped Mobile App or cannot see data  
+## Cannot sign in to a wrapped Mobile App or cannot see data  
 
-If you cannot sign in to your Wrapped Mobile App please verify that 
+If you cannot sign in to your wrapped Mobile App, please verify that: 
 
 - Your AAD app is properly configured 
 
-- All API permissions for the App have been added correctly. Refer to the image below and/or see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions) on how to see and configure API permissions for the App. 
+- All API permissions for the App have been added correctly. Please refer to the image below and see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions) for more details on how to see and configure API permissions for the App. 
 
 
 :::image type="content" source="media/wrap-issues/SignInFail_1.png" alt-text="Screenshot of API permissions for the App.":::
 
 
 
-- Ensure that admin **Add-AdminAllowedThirdPartyApps** script was run successfully. See [Allow registered apps in your environment](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment) for more information. 
+- Verify that admin **Add-AdminAllowedThirdPartyApps** script was run successfully. See [Allow registered apps in your environment](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment) for more information. 
 
  
 
-- Verify your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
+- Make sure your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
 
-- Ensure the proper Redirect URI’s have been created for iOS and/or Android. For Android, ensure the hash is provided correctly. For more info, see [these steps](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#redirect-uri-format). 
+- Ensure that the proper Redirect URIs have been created for iOS and Android. For Android, please check that the hash is provided correctly. For more information on Redirect URIs, please see [these steps](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#redirect-uri-format). 
 
  
 
  
 ## Other issues in wrap
 
-For other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired in the following ways: 
+For all other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired in the following ways: 
 
 
 
