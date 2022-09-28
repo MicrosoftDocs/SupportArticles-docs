@@ -1,13 +1,13 @@
 ---
-title: Troubleshoot entire SQL Server or database application that is slow 
-description: This article describes how to troubleshoot a situation where the entire operation system seems to be slow.
+title: Troubleshoot entire SQL Server or database application that appears to be slow 
+description: This article describes how to troubleshoot a situation where the entire SQL Server or operating system appears to be slow.
 ms.date: 09/01/2022
 ms.custom: sap:Performance
 author: pijocoder
 ms.author: jopilov
 ---
 
-# Troubleshoot entire SQL Server or database application that is slow
+# Troubleshoot entire SQL Server or database application that appears to be slow
 
 When you run queries against a SQL Server instance or a particular application, all the queries are slow. To solve the issue, follow these steps:
 
@@ -22,7 +22,7 @@ If the application is running on a different server, check the performance of th
 
 ## Step 2: Troubleshoot OS issues
 
-Check if the operating system where SQL Server is running is responding slowly. For example, the mouse moves slowly, windows don't respond for long periods, remote desktop access to the server is slow, and connecting to a share on the server is slow.
+Check if the operating system where SQL Server is running is responding slowly. For example, the mouse moves slowly, windows don't respond for long periods, remote desktop access to the server is slow, or connecting to a share on the server is slow.
 
 This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
