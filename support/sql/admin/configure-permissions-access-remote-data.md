@@ -32,7 +32,7 @@ You can disable Transact-SQL statements that use ad-hoc connection strings with 
 
  1. Click to select the OLE DB provider you want to use, and then click the **Provider Options** button.
 
- 1. Scroll down and select the **Disallow adhoc access** property check box and click **OK**.
+ 1. Scroll down and select the **Disallow adhoc access** property checkbox and click **OK**.
 
 1. Manually modify the registry and add the `DisallowAdHocAccess` value.
 
@@ -49,7 +49,7 @@ When you create a linked server on a computer that's running SQL Server, you can
 1. Open SQL Server Enterprise Manager, and then click to select the **Security** folder of the server in question.
 2. Right-click the **Linked Servers** entry, and then click **New Linked Server**.
 3. Click to select the OLE DB provider you want to use, and then click the **Provider Options** button.
-4. Scroll down and select the **Disallow adhoc access** property check box. Continue to finish the creation of your linked server entry.
+4. Scroll down and select the **Disallow adhoc access** property checkbox. Continue to finish the creation of your linked server entry.
 
 ## Manually modify the registry, and add the `DisallowAdHocAccess` value
 

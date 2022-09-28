@@ -83,13 +83,13 @@ In SQL Server, you can enable [instant file initialization](/sql/relational-data
 
 - Your autogrow increment must be large enough to avoid the performance penalties listed in the previous section. The exact value to use in your configuration setting and the choice between a percentage growth and a specific MB size growth depends on many factors in your environment. A general rule of thumb you can use for testing is to set your autogrow setting to about one-eight the size of the file.
 
-- Turn on the \<MAXSIZE> setting for each file to prevent any one file from growing to a point where it uses up all available disk space.
+- Turn on the `\<MAXSIZE>` setting for each file to prevent any one file from growing to a point where it uses up all available disk space.
 
 - Keep the size of your transactions as small as possible to prevent unplanned file growth.
 
 ## Why do I have to worry about disk space if size settings are automatically controlled
 
-- The autogrow setting can't grow the database size beyond the limits of the available disk space on the drives for which files are defined. Therefore, if you rely on the autogrow functionality to size your databases, you must still independently check your available hard disk space. The autogrow setting is also limited by the MAXSIZE parameter you select for each file. To reduce the possibility of running out of space, you can monitor the Performance Monitor counter SQL Server: Databases Object: Data File(s) Size (KB) and set up an alert when the database reaches a certain size.
+- The autogrow setting can't grow the database size beyond the limits of the available disk space on the drives for which files are defined. Therefore, if you rely on the autogrow functionality to size your databases, you must still independently check your available hard disk space. The autogrow setting is also limited by the `MAXSIZE` parameter you select for each file. To reduce the possibility of running out of space, you can monitor the Performance Monitor counter SQL Server: Databases Object: Data File(s) Size (KB) and set up an alert when the database reaches a certain size.
 
 - Unplanned growth of data or log files can take space that other applications expect to be available and might cause those other applications to experience problems.
 
