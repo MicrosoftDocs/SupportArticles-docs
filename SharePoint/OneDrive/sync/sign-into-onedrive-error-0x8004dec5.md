@@ -15,7 +15,7 @@ appliesto:
   - OneDrive for Business
 search.appverid: 
   - MET150
-ms.date: 9/26/2022
+ms.date: 9/28/2022
 ---
 # Error 0x8004dec5 when signing in to OneDrive
 
