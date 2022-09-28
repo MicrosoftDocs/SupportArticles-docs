@@ -16,13 +16,13 @@ When you try to install Reporting Services in System Center Operations Manager, 
 
 ## Cause
 
-This issue occurs because there is miscofiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** runas profiles, which causes problems to data warehouse workflows.
+This issue occurs because there is miscofiguration of the **Data Warehouse Report Deployment Account** and **Data Warehouse Account** Run As profiles, which causes problems to data warehouse workflows.
 
 ## Resolution
 
 To fix the issue, reconfigure the profiles as follows:
 
-### Data Warehouse Report Deployment Account Profile
+### Step 1: Data Warehouse Report Deployment Account profile
 
 1. Set the Data Warehouse Report Deployment account to be used for the following classes:
 
@@ -31,7 +31,7 @@ To fix the issue, reconfigure the profiles as follows:
 
     :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-report-deployment-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Report Deployment account.":::
 
-### Data Warehouse Account Profile
+### Step 2: Data Warehouse Account profile
 
 1. Set the Data Warehouse Action account to be used for the following classes:
 
