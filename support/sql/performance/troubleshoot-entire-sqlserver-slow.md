@@ -27,6 +27,7 @@ Check if the operating system where SQL Server is running is responding slowly. 
 This issue can also be caused by another service or application. Use Perfmon to troubleshoot.
 
 For other OS performance problems, see [Windows Server performance troubleshooting documentation](/troubleshoot/windows-server/performance/performance-overview).
+
 Common issues include:
 
 ### [High CPU usage across all CPUs](#tab/highcpu)
