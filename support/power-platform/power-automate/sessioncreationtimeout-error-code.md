@@ -2,7 +2,7 @@
 title: Desktop flow fails with SessionCreationTimeout error code
 description: Provides a resolution for the issue that desktop flow unattended runs fail with error code SessionCreationTimeout in Power Automate.
 ms.reviewer: moelaabo
-ms.topic: troubleshooting
+ms.topic: troubleshoot
 ms.date: 9/21/2022
 ms.subservice: power-automate-flows
 ---

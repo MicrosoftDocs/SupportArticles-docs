@@ -2,7 +2,7 @@
 title: Cannot access the parent flow
 description: Provides a resolution for the issue that the parent flow can't be accessed in Power Automate.
 ms.reviewer: pefelesk
-ms.topic: troubleshooting
+ms.topic: troubleshoot
 ms.date: 9/13/2022
 ms.subservice: power-automate-flows
 ---
