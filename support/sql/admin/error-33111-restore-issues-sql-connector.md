@@ -15,7 +15,7 @@ This article discusses an error that  occurs when you try to restore a Transpare
 
 ## Symptoms
 
-You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for Key Vault 1.0.5.0.
+You experience problems when you try to restore a database backup from SQL Server that uses SQL Server Connector for Microsoft Azure Key Vault 1.0.4.0 or an earlier version to SQL Server Connector for Microsoft Azure Key Vault 1.0.5.0.
 
 Assume that you deploy the following instances of Microsoft SQL Server:
 
