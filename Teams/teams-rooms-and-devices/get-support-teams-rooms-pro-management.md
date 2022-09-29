@@ -27,31 +27,31 @@ To reduce the time required to gather information when you open a support reques
 > [!NOTE]
 > This may not be a complete list of information that will be requested but includes the most common items.
 
-- [x] Specify whether it's a Teams Rooms device (Teams Rooms on Windows or Teams Rooms on Android), or Teams Rooms Pro Management portal issue.
-- [x] Information required for all issues:
-  - [x] Steps to reproduce the issue. If it's a Teams Rooms issue, include a video if possible.
-  - [x] The time, date, and time zone of the last time the issue occurred.
-  - [x] If the issue recurs, the reoccurrence rate.
-  - [x] Errors or messages when the issue occurs. If possible, include text or screenshots of any errors or messages related to the issue.
-  - [x] If available, the Teams Rooms Pro Management support case number.
-- [x] Additional information for Teams Rooms issues:
-  - [x] Steps already tried in the referenced troubleshooting guide.
-  - [x] Logs that have been collected. You can collect logs in the Teams Rooms Pro Management portal, or [locally by using PowerShell](/MicrosoftTeams/rooms/rooms-operations#collecting-logs-on-microsoft-teams-rooms).
-  - [x] Active signals in Teams Rooms Pro Management portal.
-  - [x] Whether the issue affects all devices, some devices, or only a single device.
-  - [x] The following system information, which can be found under **Settings** tab in the Teams Rooms Pro Management portal:
-    - [x] Windows version
-    - [x] The Teams Rooms app version
-    - [x] Device model and manufacturer
-    - [x] Attached peripherals
-    - [x] Number of displays
-  - [x] Room account information:
-    - [x] Account UPN
-    - [x] Room name
-- [x] Additional information for calling or meeting issues:
-  - [x] Meeting link for the affected meeting
-  - [x] PSTN number, if it's a PSTN call.
-  - [x] Caller and callee UPN, if it's a One-to-One call.
+- Specify whether it's a Teams Rooms device (Teams Rooms on Windows or Teams Rooms on Android), or Teams Rooms Pro Management portal issue.
+- Information required for all issues:
+  - Steps to reproduce the issue. If it's a Teams Rooms issue, include a video if possible.
+  - The time, date, and time zone of the last time the issue occurred.
+  - If the issue recurs, the reoccurrence rate.
+  - Errors or messages when the issue occurs. If possible, include text or screenshots of any errors or messages related to the issue.
+  - If available, the Teams Rooms Pro Management support case number.
+- Additional information for Teams Rooms issues:
+  - Steps already tried in the referenced troubleshooting guide.
+  - Logs that have been collected. You can collect logs in the Teams Rooms Pro Management portal, or [locally by using PowerShell](/MicrosoftTeams/rooms/rooms-operations#collecting-logs-on-microsoft-teams-rooms).
+  - Active signals in Teams Rooms Pro Management portal.
+  - Whether the issue affects all devices, some devices, or only a single device.
+  - The following system information, which can be found under **Settings** tab in the Teams Rooms Pro Management portal:
+    - Windows version
+    - The Teams Rooms app version
+    - Device model and manufacturer
+    - Attached peripherals
+    - Number of displays
+  - Room account information:
+    - Account UPN
+    - Room name
+- Additional information for calling or meeting issues:
+  - Meeting link for the affected meeting
+  - PSTN number, if it's a PSTN call.
+  - Caller and callee UPN, if it's a One-to-One call.
 
 ## Collect logs
 
