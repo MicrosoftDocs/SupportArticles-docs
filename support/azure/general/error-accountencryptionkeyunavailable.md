@@ -6,7 +6,7 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: biny
-ms.service: azure-common-issues-support
+ms.service: batch
 #Customer intent: As an Azure Batch user, I want to understand how to proceed when I receive an AccountEncryptionKeyUnavailable error message that prevents me from listing pools so that I can use Azure Batch effectively.
 ---
 
