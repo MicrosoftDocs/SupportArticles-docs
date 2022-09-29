@@ -5,9 +5,15 @@ ms.date: 09/29/2022
 ms.service: app-service
 ms.author: hepiet
 author: HelenePietz-MS
-ms.reviewer: amymcel, amehrot, jugonza, madsd 
+ms.reviewer: amymcel, amehrot, jugonza
 ---
 ##Troubleshoot VNet Integration on Windows and Linux Apps
+
+Troubleshooting network connectivity issues on Azure App Service using VNet Integration can be a bit tricky, as some of the tools that you would normally use when on-premise won't work or give misleading results.
+In addition, some of the tools available in native Windows Apps are different that the ones you will use on Linux Apps.
+
+Let's take a look at the different tools available for troubleshooting and when to use them.
+
 
 
 > [!NOTE]
@@ -16,6 +22,8 @@ ms.reviewer: amymcel, amehrot, jugonza, madsd
 #Troubleshoot VNet Integration on Windows Apps
 
 In natives Windows Apps, the tools **ping, nslookup,** and **tracert** won't work trough the console because of security constraints (they work in [custom Windows containers](../articles/app-service/quickstart-custom-container.md)).
+
+To reach the Kudu console from your app, go to **Tools > Kudu**. You can also reach the Kudu console at [sitename].scm.azurewebsites.net/DebugConsole. 
 
 
 To test DNS functionality, you can use **nameresolver.exe**. The syntax is:
@@ -83,11 +91,11 @@ To check connection issues on Windows Apps, you can use the **Connection issues*
 
 To check configuration issues, you can use the **Configuration issues** flow. This troubleshooter will check if your subnet is valid for VNet Integration.
 
-:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter04.png" alt-text="Image that show Network Troubleshooter configuration issues.":::
+:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter04.png" alt-text="Image that show Network Troubleshooter connection issues.":::
 
 To check Subnet/VNet deletion issues, you can use the ** Subnet/VNet** deletion issue** flow. This troubleshooter will check if your subnet has any locks and if has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
 
-:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter06.png" alt-text="Image that show VNet/subnet deletion issue.":::
+:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter06.png" alt-text="Image that show Network Troubleshooter connection issues.":::
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
