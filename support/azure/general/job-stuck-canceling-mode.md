@@ -4,7 +4,7 @@ description: Provides a solution for an issue where performance computing (HPC) 
 ms.date: 09/16/2022
 author: AmandaAZ
 ms.author: v-weizhu
-ms.service: azure-common-issues-support
+ms.prod: hpcpack
 ms.reviewer: hclvteam, cargonz
 ---
 # HPC jobs are stuck in canceling mode, and new jobs don't start
