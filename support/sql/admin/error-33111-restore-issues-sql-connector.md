@@ -66,7 +66,7 @@ Notes:
 The query to retrieve the thumbprint of each key is as follows:
 
 ```sql
-SELECT thumbprint,* FROM master.sys.asymmetric_keys
+SELECT thumbprint, * FROM master.sys.asymmetric_keys
 ```
 
 The query to retrieve the thumbprint of each TDE database is as follows:
