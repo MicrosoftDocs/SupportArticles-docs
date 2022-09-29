@@ -83,11 +83,11 @@ To check connection issues on Windows Apps, you can use the **Connection issues*
 
 To check configuration issues, you can use the **Configuration issues** flow. This troubleshooter will check if your subnet is valid for VNet Integration.
 
-:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter04.png" alt-text="Image that show Network Troubleshooter connection issues.":::
+:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter04.png" alt-text="Image that show Network Troubleshooter configuration issues.":::
 
 To check Subnet/VNet deletion issues, you can use the ** Subnet/VNet** deletion issue** flow. This troubleshooter will check if your subnet has any locks and if has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
 
-:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter06.png" alt-text="Image that show Network Troubleshooter connection issues.":::
+:::image type="content" source="./media/vnet-integration-tsg/networktroubleshooter06.png" alt-text="Image that show VNet/subnet deletion issue.":::
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
