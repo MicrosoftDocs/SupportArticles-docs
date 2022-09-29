@@ -73,7 +73,7 @@ The query to retrieve the thumbprint of each TDE database is as follows:
 
 ```sql
 SELECT DatabaseName(ddek.database_id) AS DatabaseName,ak.name
-AS[Asymmetric key Name], ak.thumbprint FROM
+AS [Asymmetric key Name], ak.thumbprint FROM
 sys.dm_database_encryption_keys ddek INNER JOIN
 master.sys.asymmetric_keys ak ON
 ak.thumbprint = ddek.encryptor_thumbprint
