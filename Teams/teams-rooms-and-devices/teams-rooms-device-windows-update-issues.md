@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Windows Update issues on Teams Rooms Pro devices
+title: Resolve Windows Update issues on Teams Rooms Pro devices
 description: Fix common Windows Update issues on a Microsoft Teams Rooms Pro device.
 ms.reviewer: joolive
 ms.topic: troubleshooting
@@ -16,12 +16,12 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167275
 ---
-# Troubleshoot Windows Update issues on Teams Rooms Pro devices
+# Resolve Windows Update issues on Teams Rooms Pro devices
 
 You may experience one or more of the following Windows Update issues on Microsoft Teams Rooms Pro devices:
 
 - Updates can't be installed successfully.
-- The system is not at the current update level, but Windows Update can't find available updates.
+- The system isn't at the current update level, but Windows Update can't find available updates.
 - If Microsoft Defender for Endpoint integration is enabled in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Security KBs** or **Vulnerabilities** signal of the device is shown as **Unhealthy**.
 
 Windows Update issues can occur for different reasons. The following options can help you fix common issues that affect Windows Update.

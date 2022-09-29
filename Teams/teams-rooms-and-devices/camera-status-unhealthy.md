@@ -44,7 +44,7 @@ Camera issues can occur for different reasons. To fix common issues that affect 
 
 ### Check the camera configuration
 
-Check whether the camera is mistakenly configured as a content camera. A content camera is used to stream a traditional whiteboard into meetings. In this case, set content camera to none in Teams Rooms app settings. 
+Check whether the camera is mistakenly configured as a content camera. A content camera is used to stream a traditional whiteboard into meetings. In this case, set content camera to none in Teams Rooms app settings.
 
 ### Check whether the default camera instance is changed
 

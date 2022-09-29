@@ -249,22 +249,22 @@
       href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
     - name: Teams Rooms Pro Management
       items:
-      - name: The Camera status is unhealthy
+      - name: Camera status is unhealthy
         href: ./teams-rooms-and-devices/camera-status-unhealthy.md
-      - name: The Default Credentials status is unhealthy
+      - name: Default Credentials status is unhealthy
         href: ./teams-rooms-and-devices/default-credentials-status-unhealthy.md
-      - name: The Disk Space status of an MTR device is unhealthy
+      - name: Disk Space status is unhealthy
         href: ./teams-rooms-and-devices/disk-space-status-unhealthy.md
-      - name: The Display status is unhealthy
+      - name: Display status is unhealthy
         href: ./teams-rooms-and-devices/display-status-unhealthy.md
-      - name: The HDMI Ingest status is unhealthy
+      - name: HDMI ingest status is unhealthy
         href: ./teams-rooms-and-devices/hdmi-ingest-status-unhealthy.md
-      - name: The Meeting app status is unhealthy
+      - name: Meeting app status is unhealthy
         href: ./teams-rooms-and-devices/meeting-app-status-unhealthy.md  
-      - name: The microphone or speaker status is unhealthy
+      - name: Microphone or speaker status is unhealthy
         href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
-      - name: Troubleshoot Windows Update issues on MTR Pro devices
-        href: ./teams-rooms-and-devices/mtr-device-windows-update-issues.md
+      - name: Resolve Windows Update issues on Teams Rooms Pro devices
+        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux
