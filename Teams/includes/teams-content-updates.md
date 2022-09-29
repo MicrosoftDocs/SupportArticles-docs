@@ -2,6 +2,23 @@
 
 
 
+## Week of September 12, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/14/2022 | External member can see channel message previews of shared channels in search results | removed |
+
+
+## Week of September 05, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 9/6/2022 | [Known issues in Teams Rooms and devices](/microsoftteams/troubleshoot/teams-rooms-and-devices/rooms-known-issues) | modified |
+| 9/8/2022 | [Diagnose issues with Direct Routing](/microsoftteams/troubleshoot/phone-system/direct-routing/diagnose-direct-routing-issues) | added |
+
+
 ## Week of August 29, 2022
 
 
@@ -17,11 +34,3 @@
 | Published On |Topic title | Change |
 |------|------------|--------|
 | 8/16/2022 | [Dial pad in missing in Teams](/microsoftteams/troubleshoot/teams-conferencing/no-dial-pad) | modified |
-
-
-## Week of August 01, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 8/2/2022 | [Microsoft Teams Rooms can't open PowerPoint presentations after disabling TLS 1.0 and TLS 1.1 in Skype for Business Server 2019 and Skype for Business Server 2015](/microsoftteams/troubleshoot/teams-conferencing/teams-room-cant-open-powerpoint-presentations-tls) | modified |
