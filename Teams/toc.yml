@@ -263,6 +263,8 @@
         href: ./teams-rooms-and-devices/meeting-app-status-unhealthy.md  
       - name: Microphone or speaker status is unhealthy
         href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
+      - name: OS Edition status is Unhealthy
+        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md
       - name: Resolve Windows Update issues on Teams Rooms Pro devices
         href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
   - name: Teams on Linux

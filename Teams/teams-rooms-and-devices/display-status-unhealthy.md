@@ -76,7 +76,7 @@ In these situations, try the following options:
 
 - Verify that the display power settings are configured correctly.
 
-  Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported to a USB flash drive.
+  Investigate and test all power-related settings on the Front of Room displays. Each display, manufacturer, and model can be different. Therefore, field testing of various power settings might be necessary. We recommend that you standardize the display brand, model, and settings as much as possible. Many commercial displays allow configuration profiles to be imported and exported through a USB flash drive.
 - Check whether the display supports the "wake on signal" feature.
 
   Most consumer TVs, and even many commercial displays, don't automatically wake up when the Teams Rooms device wakes up and sends a video signal. In these cases, Consumer Electronics Control (CEC) must be supported on the display, and additional hardware might be required to send these CEC signals. For more information, see [Front of Room display settings](/microsoftteams/rooms/rooms-operations#front-of-room-display-settings).
