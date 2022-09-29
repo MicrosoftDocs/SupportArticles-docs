@@ -1,6 +1,6 @@
 ---
 title: Hybrid Configuration wizard doesn't connect to Office 365
-description: Describes an issue in which the Hybrid Configuration wizard doesn't connect to Office 365 because TLS 1.2 is disabled on the client.
+description: Describes an issue in which the Hybrid Configuration wizard doesn't connect to Office 365 and provides a resolution to fix the issue.
 author: v-trisshores
 ms.author: v-trisshores
 manager: dcscontentpm
@@ -13,12 +13,12 @@ ms.custom:
   - Exchange Hybrid
   - CSSTroubleshoot
   - CI 165936
-ms.reviewer: igserr, ninob, kaushika, meerak
+ms.reviewer: igserr, janogu, ninob, kaushika, meerak
 appliesto: 
   - Exchange Server
   - Exchange Online
 search.appverid: MET150
-ms.date: 09/26/2022
+ms.date: 09/29/2022
 ---
 
 # Hybrid Configuration wizard doesn't connect to Office 365
@@ -35,7 +35,7 @@ The following screenshot shows the error message in the HCW.
 
 ## Cause
 
-Office 365 supports only TLS 1.2 connections. Therefore, the Windows system that runs HCW must have TLS 1.2 enabled in the [WinHTTP](/windows/win32/winhttp/about-winhttp) component and at the operating system (OS) level. The following table shows TLS 1.2 support in different Windows systems.
+[Office 365 supports only TLS 1.2 connections](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365). Therefore, the Windows system that runs HCW must have TLS 1.2 enabled in the [WinHTTP](/windows/win32/winhttp/about-winhttp) component and at the operating system (OS) level. The following table shows TLS 1.2 support in different Windows systems.
 
 | Windows OS | TLS 1.2 in OS | TLS 1.2 in WinHTTP |
 |-|-|-|
@@ -94,11 +94,3 @@ If the WinHTTP component has only TLS 1.0 or TLS 1.1 enabled, `New-PSSession` wo
 1. Use [NetworkMonitor](/windows/win32/ndf/using-network-monitor-to-view-etl-files) to open the trace file, and then filter on `description.contains("EnabledProtocols")` to view the enabled protocols, as follows.
 
     :::image type="content" source="./media/hybrid-configuration-wizard-not-connect-to-office-365/network-monitor.png" border="true" alt-text="Screenshot of netsh trace output in NetworkMonitor for a search filter that specifies EnabledProtocols in the description field." lightbox="./media/hybrid-configuration-wizard-not-connect-to-office-365/network-monitor-lrg.png":::
-
-## Related articles
-
-- [Transport Layer Security (TLS) best practices with the .NET Framework](/dotnet/framework/network-programming/tls)
-
-- [Update to enable TLS 1.1 and TLS 1.2 as default secure protocols in WinHTTP in Windows](https://support.microsoft.com/topic/update-to-enable-tls-1-1-and-tls-1-2-as-default-secure-protocols-in-winhttp-in-windows-c4bd73d2-31d7-761e-0178-11268bb10392)
-
-- [Disabling TLS 1.0 and 1.1 for Microsoft 365](/microsoft-365/compliance/tls-1.0-and-1.1-deprecation-for-office-365)
