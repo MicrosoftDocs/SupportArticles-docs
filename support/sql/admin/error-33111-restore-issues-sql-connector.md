@@ -76,7 +76,7 @@ SELECT DatabaseName(ddek.database_id) AS DatabaseName,ak.name
 AS[Asymmetric key Name], ak.thumbprint FROM
 sys.dm_database_encryption_keys ddek INNER JOIN
 master.sys.asymmetric_keys ak ON
-ak.thumbprint=ddek.encryptor_thumbprint
+ak.thumbprint = ddek.encryptor_thumbprint
 ```
 
 ## Cause
