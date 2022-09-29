@@ -5,7 +5,7 @@ ms.date: 09/29/2022
 ms.service: app-service
 ms.author: hepiet
 author: HelenePietz-MS
-ms.reviewer:amymcel, amehrot, jugonza, madsd 
+ms.reviewer: amymcel, amehrot, jugonza, madsd 
 ---
 ##Troubleshoot VNet Integration on Windows and Linux Apps
 
