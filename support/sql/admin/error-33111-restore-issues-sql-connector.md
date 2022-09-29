@@ -11,7 +11,7 @@ ms.author: v-jayaramanp
 
 _Original KB number:_ &nbsp;  4470999
 
-This article discusses an error that  occurs when you try to restore a Transparent Data Encryption (TDE) backup that's made on servers that use older versions of SQL Server Connector for the Microsoft Azure Key Vault.
+This article discusses an error that occurs when you try to restore a Transparent Data Encryption (TDE) backup that's made on servers that use older versions of SQL Server Connector for the Microsoft Azure Key Vault.
 
 ## Symptoms
 
