@@ -49,7 +49,7 @@ The following table summarizes the behavior of compressed backups based on the a
 As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
 
 > [!NOTE]
-> You can find the current setting for `backup compression` default option by running `sp_configure` command in the SQL Server Management Studio. If you are appending to existing media you can get the header information using restore `headeronly` command. For more information, see the Examples section later in this article.
+> You can find the current setting for `backup compression` default option by running the `sp_configure` command in SQL Server Management Studio. If you are appending to existing media you can get the header information using restore the `headeronly` command. For more information, see the Examples section later in this article.
 
 Examples: Here is a sample script to demonstrate the behavior for various cases. The behavior is the same whether the Backup is to a tape or a disk.
 
@@ -71,7 +71,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages)
+    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages).
 
 - Turn on default Backup Compression at the server level.
 

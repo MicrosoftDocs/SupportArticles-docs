@@ -15,7 +15,7 @@ _Original KB number:_ &nbsp; 327489
 
 ## Summary
 
-You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the `DisallowAdHocAccess` registry option is explicitly set to 0 for the specified provider, and the **Ad Hoc Distributed Queries** advanced configuration option is enabled. When these options aren't set, the default behavior doesn't allow for ad hoc access.
+You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL Server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the `DisallowAdHocAccess` registry option is explicitly set to 0 for the specified provider, and the **Ad Hoc Distributed Queries** advanced configuration option is enabled. When these options aren't set, the default behavior doesn't allow for ad hoc access.
 
 This article provides additional details on configuring `DisallowAdhocAccess` through registry settings as well as SQL Server Management Studio and the default behavior.
 
@@ -85,7 +85,7 @@ To add the `DisallowAdHocAccess` value, follow these steps:
 
 ## Enable ad-hoc remote access
 
-After ensuring **Ad Hoc Distributed Queries** advanced configuration option is enabled, you need to **DisallowAdhocAccess** registry option is explicitly set to **0** for the specified provider.
+After ensuring **Ad Hoc Distributed Queries** advanced configuration option is enabled, you must **DisallowAdhocAccess** registry option is explicitly set to **0** for the specified provider.
 
 To modify an existing **DisallowAdHocAccess** value, follow these steps:
 
