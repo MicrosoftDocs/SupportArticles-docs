@@ -6,6 +6,7 @@ ms.custom: sap:Administration and Management
 ms.reviewer: ericbu
 ms.prod: sql
 ---
+
 # Configuring permissions to access remote data from an OLEDB datasource in SQL Server
 
 This article describes how to disable ad hoc queries that use the `OPENROWSET` or the `OPENDATASOURCE` functionality in SQL Server.
@@ -15,15 +16,15 @@ _Original KB number:_ &nbsp; 327489
 
 ## Summary
 
-You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL Server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior does not allow for ad hoc access.
+You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL Server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior doesn't allow for ad hoc access.
 
 This article provides additional details on configuring **DisallowAdhocAccess** through SQL Server Management Studio and registry settings as well as the default behavior.
 
 ## Disabling ad hoc access using SQL Server Management Studio
 
-You can  disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the procedures below:
+You can disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the procedures below:
 
-Specify the `DisallowAdHocAccess` Property for the provider in SQL Server Management Studio (SSMS)
+Specify the `DisallowAdHocAccess` property for the provider in SQL Server Management Studio (SSMS)
 
 1. Open SSMS and expand **Providers** under **Linked Servers**.
 
