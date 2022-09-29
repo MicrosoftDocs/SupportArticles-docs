@@ -5,7 +5,7 @@ ms.date: 9/14/2022
 author: AmandaAZ
 ms.author: v-weizhu
 ms.reviewer: hclvteam, cargonz
-ms.service: azure-common-issues-support
+ms.prod: hpcpack
 ---
 # HPC compute nodes aren't shown or are in error state
 
