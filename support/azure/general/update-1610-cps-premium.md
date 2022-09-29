@@ -4,7 +4,7 @@ description: Describes Update 1610 for Cloud Platform System (CPS) Premium and p
 ms.date: 08/14/2020
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.reviewer: ashtons
 ---
 # Update 1610 for Cloud Platform System (CPS) Premium
