@@ -44,7 +44,7 @@ If you still see the issue after you install the appropriate cumulative update, 
 
 For example, the following screenshot shows the language format for system accounts set to a secondary language, German (Switzerland), instead of the primary language, German (Germany).
 
-:::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-new-user-accounts-settings.png" alt-text="Screenshot that shows the Welcome screen and new user accounts settings dialog box with the language format setting for the welcome screen highlighted.":::
+:::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-new-user-accounts-settings.png" alt-text="Screenshot of the Welcome screen and new user accounts settings dialog box with the language format for the welcome screen highlighted.":::
 
 If a secondary regional language is set as the language format, update the format for the system and network service accounts to one of the following primary languages:
 
