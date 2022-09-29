@@ -1,5 +1,5 @@
 ---
-title: Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+title: Search-AdminAuditLog and Search-MailboxAuditLog with parameters return empty results
 description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters.
 author: cloud-writer
 ms.author: meerak
@@ -22,13 +22,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+# Search-AdminAuditLog and Search-MailboxAuditLog with parameters return empty results
 
 _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-In Exchange Management Shell, you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets  together with a **Cmdlets** or **Parameters** parameter to search a mailbox and filter the search results. In this scenario, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
+In Exchange Management Shell, you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets together with a **Cmdlets** or **Parameters** parameter to search a mailbox and filter the search results. In this scenario, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
 
 ## Resolution
 
