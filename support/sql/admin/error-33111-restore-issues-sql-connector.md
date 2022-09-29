@@ -110,7 +110,7 @@ Because of this change, you might experience problems when you try to restore da
         
        FROM PROVIDER AzureKeyVaultProvider 
         
-       WITH PROVIDER_KEY_NAME = ‘key1’, 
+       WITH PROVIDER_KEY_NAME = 'key1', 
         
        CREATION_DISPOSITION = OPEN_EXISTING
     ```
