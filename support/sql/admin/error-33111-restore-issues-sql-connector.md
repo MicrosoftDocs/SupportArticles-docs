@@ -145,7 +145,7 @@ Because of this change, you might experience problems when you try to restore da
 
 1. Restart SQL Server.
 
-1. To  use the new thumbprint, run the following query by using either the same asymmetric key or the new version asymmetric key.
+1. To use the new thumbprint, run the following query by using either the same asymmetric key or the new version asymmetric key.
 
     ```sql
     ALTER DATABASE ENCRYPTION KEY
