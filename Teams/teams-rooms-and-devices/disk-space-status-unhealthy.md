@@ -20,7 +20,7 @@ ms.custom: CI167274
 
 ## Symptoms
 
-In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Disk Space** signal of a Teams Rooms device is shown as **Unhealthy**.
+In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com/), the **Disk Space** signal of a Microsoft Teams Rooms device is shown as **Unhealthy**.
 
 Depending on the amount of disk space available, you may experience slowness, an inability to download files, an update failure, an unresponsive system, and so on. Typically, the amount of available disk space is exhausted after you install a Windows feature update.
 

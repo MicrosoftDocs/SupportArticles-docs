@@ -249,6 +249,8 @@
       href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
     - name: Teams Rooms Pro Management
       items:
+      - name: Get support for Teams Rooms Pro Management
+        href: ./teams-rooms-and-devices/get-support-teams-rooms-pro-management.md
       - name: Camera status is unhealthy
         href: ./teams-rooms-and-devices/camera-status-unhealthy.md
       - name: Default Credentials status is unhealthy
