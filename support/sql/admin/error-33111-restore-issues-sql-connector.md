@@ -1,7 +1,7 @@
 ---
 title: Restore issues using SQL connector
-description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server
-ms.date: 09/27/2022
+description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server.
+ms.date: 09/29/2022
 ms.custom: sap:Administration and Management
 author: ramakoni1
 ms.author: v-jayaramanp
@@ -26,16 +26,11 @@ Assume that you deploy the following instances of Microsoft SQL Server:
 - Use the following query to deploy an asymmetric key from the same asymmetric key source in Key Vault:
 
     ```sql
-    
     CREATE ASYMMETRIC KEY TDE_KEY 
-    
     FROM PROVIDER AzureKeyVaultProvider 
-    
     WITH PROVIDER_KEY_NAME = 'key1', 
-    
     CREATION_DISPOSITION = OPEN_EXISTING
-    
-    ```
+   ```
 
 If you review the value of thumbprints on both servers, you will notice that the thumbprint lengths differ though they're created from the same source. The version 1.0.5.0 thumbprint is longer than version 1.0.4.0.
 
@@ -107,11 +102,8 @@ Because of this change, you might experience problems when you try to restore da
 
      ```sql
        CREATE ASYMMETRIC KEY TDE_KEY_1040 
-        
        FROM PROVIDER AzureKeyVaultProvider 
-        
        WITH PROVIDER_KEY_NAME = 'key1', 
-        
        CREATION_DISPOSITION = OPEN_EXISTING
     ```
 
@@ -125,7 +117,6 @@ Because of this change, you might experience problems when you try to restore da
 
     ```sql
     ALTER LOGIN [Contoso\DomainUser] DROP CREDENTIAL sysadmin_ekm_cred; 
-    
     ALTER LOGIN TDE_Login ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
@@ -134,14 +125,10 @@ Because of this change, you might experience problems when you try to restore da
 1. Run the following query on `sql2` to revert the CRYPTOGRAPHIC PROVIDER to version 1.0.5.0:
 
     ```sql
-    
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider 
-    
     FROM FILE =
-    
     'FilePath\FileName\SQL Server Connector for Microsoft Azure Key Vault\1.0.5.0\Microsoft.AzureKeyVaultService.EKM.dll'
-    
-    ```
+   ```
 
 1. Restart SQL Server.
 
