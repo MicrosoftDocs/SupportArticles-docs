@@ -1,13 +1,14 @@
 ---
-title: Troubleshoot VNet Integration Troubleshooting Guide
+title: VNet Integration Troubleshooting Guide
 description: How to troubleshoot VNet Integration on Windows and Linux Apps
 ms.date: 09/29/2022
 ms.service: app-service
 ms.author: hepiet
-author:HelenePietz-MS
+author: HelenePietz-MS
 ms.reviewer:amymcel, amehrot, jugonza, madsd 
 ---
-##Troubleshooting 
+##Troubleshoot VNet Integration on Windows and Linux Apps
+
 
 > [!NOTE]
 > * Virtual network integration isn't supported for Docker Compose scenarios in App Service. Access restrictions are ignored if a private endpoint is present.
