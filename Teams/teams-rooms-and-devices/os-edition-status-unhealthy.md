@@ -38,4 +38,4 @@ These issues occur when the Teams Rooms Pro agent detects that the device isn't 
 
 ## More information
 
-All certified Teams Rooms devices are pre-installed with an IoT Enterprise or the binary-equivalent Enterprise edition of Windows 10. You can also choose to upgrade an existing IoT Enterprise edition to the full Enterprise edition using Bring Your Own License (BYOL).
+All certified Teams Rooms devices are pre-installed together with an IoT Enterprise or the binary-equivalent Enterprise edition of Windows 10. You can also choose to upgrade an existing IoT Enterprise edition to the full Enterprise edition using Bring Your Own License (BYOL).
