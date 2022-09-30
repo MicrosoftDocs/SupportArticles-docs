@@ -1,12 +1,10 @@
 - name: Dynamics 365 Finance
   href: welcome-finance.yml
   items:
-    - name: Tax
+    - name: Tax Calculation service
       items:
         - name: Error 400 or 401 when setting Dataverse virtual table visibility
           href: tax/cannot-set-dataverse-virtual-table-visibility.md
-    - name: Tax Calculation service
-      items: 
         - name: Failed to access tax service
           href: tax/tcs-troubleshooting-failed-access-tax-service.md
         - name: Empty tax feature list in Tax calculation parameters
@@ -17,4 +15,18 @@
           href: tax/tcs-troubleshooting-no-matching-result.md
         - name: Enable debug mode in the Tax Calculation service
           href: tax/tcs-troubleshooting-enable-debug-mode.md
+    - name: Sales tax
+      items:
+        - name: Tax isn't calculated or the tax amount is zero
+          href: sales-tax-troubleshooting-tax-not-calculated-amount-zero
+        - name: Tax calculation performance affects transactions
+          href: sales-tax-troubleshooting-tax-calculation-bad-performance 
+        - name:
+          href: 
+        - name: 
+          href: 
+        - name:
+          href: 
+        - name: 
+          href: 
     
