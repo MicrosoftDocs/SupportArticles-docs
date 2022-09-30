@@ -72,7 +72,7 @@
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
     - name: Unable to access SharePoint Online
-      href: ../sharing-and-permissions/sharepoint-online-inaccessible.md  
+      href: ../administration/sharepoint-online-inaccessible.md  
     - name: Using relative URLs isn't supported
       href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
@@ -200,7 +200,7 @@
     - name: The URL <file name> is invalid when uploading a file
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
     - name: Troubleshoot mapped network drives
-      href: ../administration/troubleshoot-mapped-network-drives.md
+      href: ../lists-and-libraries/troubleshoot-mapped-network-drives.md
   - name: Migration Tool
     items:
     - name: Information about manual migration
@@ -216,7 +216,7 @@
     - name: '"Not all terms were imported successfully" error with importing term set'
       href: ../search/troubleshoot-error-when-importing-a-term-set.md
     - name: Classic site collection search usage reports
-      href: ../Sites/classic-site-collection-search-usage-reports.md  
+      href: ../search/classic-site-collection-search-usage-reports.md  
     - name: Document preview and content type icon aren't displayed
       href: ../Search/content-type-icon-not-display.md
     - name: Items are missing from online search results
@@ -294,7 +294,7 @@
     - name: Required permissions for managing Secure Store Service
       href: ../sharing-and-permissions/managing-secure-store-service-app-permissions.md
     - name: Sharing options are greyed out when sharing from SharePoint Online or OneDrive
-      href: ../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
+      href: ../sharing-and-permissions/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
     - name: SSL certificate authentication issues 
       href: ../sharing-and-permissions/ssl-certificate-authentication.md    
     - name: Unable to reach the server when sharing files
