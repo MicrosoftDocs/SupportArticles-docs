@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 2297053
 
 ## Summary
 
-One of the main restrictions with compressed backups is that compressed and uncompressed backups can't co-exist in a media set. This restriction is documented in: [Backup Compression (SQL Server)](https://learn.microsoft.com/sql/relational-databases/backup-restore/backup-compression-sql-server?view=sql-server-linux-ver16).
+One of the main restrictions with compressed backups is that compressed and uncompressed backups can't co-exist in a media set. This restriction is documented in: [Backup Compression (SQL Server)](/sql/relational-databases/backup-restore/backup-compression-sql-server?view=sql-server-linux-ver16&preserve-view=true).
 
 This article supplements that documentation and provides more information on the expected behavior of compressed backups in relation to Backup compression default server configuration setting.
 

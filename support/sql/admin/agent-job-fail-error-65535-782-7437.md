@@ -60,7 +60,7 @@ Transact-SQL job step runs as the owner of the job step if the owner of the job 
 If a T-SQL job step is owned by a user that isn't part of the *sysadmin* server role and if the step contains a distributed query, perform the following steps to ensure the jobs or queries don't fail:
 
 1. Create a mapping for each of the job-step owner on the local server to an existing or new login on the remote server.
-2. Ensure that the login has sufficient privileges to execute various modules on the remote server that are accessed in the distributed query. For more information, see [Linked Server Properties (Security Page)](https://learn.microsoft.com/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine?view=sql-server-ver16#edit-the-security-page-for-the-linked-server-properties).
+2. Ensure that the login has sufficient privileges to execute various modules on the remote server that are accessed in the distributed query. For more information, see [Linked Server Properties (Security Page)](/sql/relational-databases/linked-servers/create-linked-servers-sql-server-database-engine?view=sql-server-ver16&preserve-view=true).
 
 ## More information
 
