@@ -16,7 +16,7 @@ _Original KB number:_ &nbsp; 327489
 
 ## Summary
 
-You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL Server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options are not set, the default behavior doesn't allow for ad hoc access.
+You can use `OPENROWSET` or `OPENDATASOURCE` statements in SQL Server as an ad hoc method to connect and access data from a remote OLEDB provider including a remote SQL Server instance. These statements can be used to access remote data from OLE DB data sources only when the **DisallowAdhocAccess** registry option is explicitly set to 0 for the specified provider, and the Ad Hoc Distributed Queries advanced configuration option is enabled. When these options aren't set, the default behavior doesn't allow for ad hoc access.
 
 This article provides additional details on configuring **DisallowAdhocAccess** through SQL Server Management Studio and registry settings as well as the default behavior.
 
@@ -37,7 +37,7 @@ Specify the `DisallowAdHocAccess` property for the provider in SQL Server Manage
 > [!IMPORTANT]
 > This section, method, or task contains steps that tell you how to modify the registry. However, serious problems might occur if you modify the registry incorrectly. Therefore, make sure that you follow these steps carefully. For added protection, back up the registry before you modify it. Then, you can restore the registry if a problem occurs. For more information about how to back up and restore the registry, see [How to back up and restore the registry in Windows](https://support.microsoft.com/en-us/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692).  
 
-After a linked server is saved, the **DisallowAdHocAccess** property can be set only through a registry setting.
+After a linked server is saved, the `DisallowAdHocAccess` property can be set only through a registry setting.
 
 ## Add the DisallowAdHocAccess value
 
@@ -47,7 +47,7 @@ To add the **DisallowAdHocAccess** value, follow these steps:
 2. Locate and then click the key in the registry: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\<ProviderName>**  
 
    Example
-   If you are trying to change this for Microsoft OLEDB Provider for ODBC Drivers, the key will be:
+   If you're trying to change this for Microsoft OLEDB Provider for ODBC Drivers, the key will be:
 
    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Providers\MSDASQL`
 
