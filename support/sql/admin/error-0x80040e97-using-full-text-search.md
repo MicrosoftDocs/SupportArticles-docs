@@ -1,7 +1,7 @@
 ---
 title: Error when you use integrated full-text search
 description: This article provides a resolution for the problem that occurs when you index large documents by using integrated full-text search in SQL Server.
-ms.date: 09/19/2022
+ms.date: 09/30/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: jackli, rbeene
 ms.prod: sql
@@ -15,11 +15,11 @@ _Original KB number:_ &nbsp; 2270849
 
 ## Symptoms
 
-When you index large or complex documents by using integrated full-text search in Microsoft SQL Server, you may receive time-out errors that resemble the following:
+When you index large or complex documents by using integrated full-text search in Microsoft SQL Server, you may receive time-out errors that resemble the following message:
 
 > 2010-06-07 15:02:44.64 spid10s Error '0x80040e97' occurred during full-text index population for table or indexed view '[db1].[dbo].[Images]' (table or indexed view ID '622625261', database ID '171'), full-text key value '2375057'. Attempt will be made to reindex it.
 
-Additionally, SQL Server may restart the *FDHOST.exe* process. 
+Additionally, SQL Server may restart the *FDHOST.exe* process.
 
 ## Cause
 
@@ -27,7 +27,7 @@ This issue occurs if it takes longer than 60 seconds for the *FDHOST.exe* proces
 
 ## Resolution
 
-To resolve this problem, increase the full-text indexing time-out value. To do this, call the `sp_fulltext_service` stored procedure that has the `'ft_timeout'` parameter. For example, the following increases the full-text indexing time-out to 20 minutes for any document:
+To resolve this problem, increase the full-text indexing time-out value. To do this, call the `sp_fulltext_service` stored procedure that has the `'ft_timeout'` parameter. For example, the following code increases the full-text indexing time-out to 20 minutes for any document:
 
 ```sql
 EXEC sp_fulltext_service 'ft_timeout', 1200000
