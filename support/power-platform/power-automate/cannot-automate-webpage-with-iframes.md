@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 4599053
 
 ## Symptoms
 
-Web automation actions can't interact with a web element that is inside a cross-domain iframe. The element may be captured successfully during authoring. However, during runtime you receive an error message that resembles the following:
+Web automation actions can't interact with a web element that is inside a cross-domain iframe. The element may be captured successfully during authoring. However, during runtime you receive an error message that resembles the following message:
 
 > Click link on web page failed.
 
@@ -28,7 +28,7 @@ To verify that the web element is indeed inside a cross-domain iframe, follow th
 4. Within the DOM Explorer window, locate its parent iframe element.
 5. Check the domain that hosts the iframe element.
 
-The domain should be different than that of the webpage.
+The domain should be different than webpage's domain.
 
 ## Workaround
 
