@@ -1,5 +1,5 @@
 - name: Microsoft Purview Troubleshooting
-  href: ../microsoft-365-compliance-welcome.md
+  href: ../microsoft-365-compliance-welcome.yml
   items:
   - name: Archive Mailboxes
     items:
