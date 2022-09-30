@@ -1,12 +1,13 @@
 ---
 title: Update or change the certificate used in Azure Cloud Services
 description: Learn how to update or change the certificate that's used in Azure Cloud Services (extended support). 
-ms.date: 8/9/2022
+ms.date: 09/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu, zhangjerry
-ms.service: cloud-services-extended-support
+ms.service: cloud-services
+ms.subservice: troubleshoot-extended-support
 ms.topic: how-to
 #Customer intent: As an Azure Cloud Services (extended support) user, I want to get instructions about how to update or change the certificate that's used so that my cloud application is available to customers with zero or minimal downtime.
 ---

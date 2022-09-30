@@ -3,7 +3,7 @@ title: How to enable BitLocker in Cloud Platform System (CPS)
 description: Describes how to enable BitLocker on Cloud Platform System (CPS) in Windows Server 2012. Includes the scripts to automate this process.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
 ms.reviewer: fiseraci
 ---

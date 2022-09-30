@@ -1,6 +1,6 @@
 ---
-title: Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled| Microsoft Docs
-description: Learn how to troubleshoot RDP problem that is caused by DHCP client service is disabled in Microsoft Azure.| Microsoft Docs
+title: Cannot RDP to Azure Virtual Machines because the DHCP Client service is disabled
+description: Learn how to troubleshoot RDP problem that is caused by DHCP client service is disabled in Microsoft Azure.
 services: virtual-machines
 documentationCenter: ''
 author: genlin

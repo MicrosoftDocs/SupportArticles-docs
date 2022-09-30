@@ -3,7 +3,7 @@ title: Update 2.1 for Cloud Platform System Premium
 description: Describes the steps to install Update 2.1 for Cloud Platform System Premium.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
 ms.reviewer: 
 ---

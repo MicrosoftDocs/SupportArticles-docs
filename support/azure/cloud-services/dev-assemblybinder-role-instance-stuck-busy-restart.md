@@ -1,11 +1,12 @@
 ---
 title: AssemblyBinder role instance is stuck between Busy and Restarting state
 description: Provides information about troubleshoot issues in which AssemblyBinder role instance of Compressor application is stuck between Busy and Restarting state and throwing System.IO.IOException exception.
-ms.date: 06/22/2020
+ms.date: 09/26/2022
 ms.reviewer: 
 author: genlin
 ms.author: genli
 ms.service: cloud-services
+ms.subservice: troubleshoot-dev
 ---
 # AssemblyBinder role instance is throwing System.IO.IOException exception
 
