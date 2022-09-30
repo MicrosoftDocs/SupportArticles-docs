@@ -104,7 +104,7 @@ To create a support request, follow these steps:
 1. In the **Contact support** pane, specify the following information:
 
    - **Title**: Enter "_MTR Pro –_" followed by the signal that's reported in the Teams Rooms Pro Management portal, such as Meeting app. Or, enter "_MTR Pro – other_" if no signal is reported.
-   - **Description**: Enter the information that's listed in the [Collect necessary information](#collect-necessary-information) section.
+   - **Description**: Enter the information that's listed in the [Collect required information](#collect-required-information) section.
    - Confirm your contact number, email address, and preferred contact method.
    - **Attachments**: Select **Add a file**, and then upload the collected logs, screenshots, and videos.
    - Complete the regional settings.

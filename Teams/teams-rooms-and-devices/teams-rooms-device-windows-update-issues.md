@@ -16,7 +16,7 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167275
 ---
-# Troubleshoot Windows Update issues on Teams Rooms Pro devices
+# Resolve Windows Update issues on Teams Rooms Pro devices
 
 You may experience one or more of the following Windows Update issues on Microsoft Teams Rooms Pro devices:
 
