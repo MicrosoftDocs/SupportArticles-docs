@@ -38,7 +38,7 @@ Additionally, Event ID 2001 is logged under **Applications and Services Logs** >
 >
 > - **Exchange status** indicates the sign-in status of the resource account in Exchange Online, or Exchange Server if mailboxes are hosted on-premises.
 > - **Signin status** indicates the sign-in status of the resource account in Skype for Business Server. It's displayed as **NotApplicable** in Teams only mode.
-> - **Teams Signin** status indicates the sign-in status of the resource account in Microsoft Teams. It's displayed as **NotApplicable** in Skype for Business only mode.
+> - **Teams Signin status** indicates the sign-in status of the resource account in Microsoft Teams. It's displayed as **NotApplicable** in Skype for Business only mode.
 
 ## Resolution
 
