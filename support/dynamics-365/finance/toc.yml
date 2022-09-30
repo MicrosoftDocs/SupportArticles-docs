@@ -5,3 +5,16 @@
       items:
         - name: Error 400 or 401 when setting Dataverse virtual table visibility
           href: tax/cannot-set-dataverse-virtual-table-visibility.md
+    - name: Tax Calculation service
+      items: 
+        - name: Failed to access tax service
+          href: tax-calculation/tcs-troubleshooting-failed-access-tax-service.md
+        - name: Empty tax feature list in Tax calculation parameters
+          href: tax-calculation/tcs-troubleshooting-tax-feature-list-empty-tax-calculation-parameter.md
+        - name: Tax code cannot be determined
+          href: tax-calculation/tcs-troubleshooting-tax-code-cannot-be-determined.md
+        - name: No matching result could be found
+          href: tax-calculation/tcs-troubleshooting-no-matching-result.md
+        - name: Enable debug mode in the Tax Calculation service
+          href: tax-calculation/tcs-troubleshooting-enable-debug-mode.md
+    
