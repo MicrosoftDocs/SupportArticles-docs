@@ -4,6 +4,7 @@ description: Describes a sign-out problem that occurs when you try to sign out o
 ms.date: 07/06/2020
 ms.reviewer: willfid
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # Error when signing out of online services: Sorry, but we're having trouble signing you out
 
