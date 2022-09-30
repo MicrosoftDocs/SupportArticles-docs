@@ -1,5 +1,5 @@
 ---
-title: Actions not available or visible
+title: Actions are unavailable or invisible
 description: Provides a resolution for the issue that some actions aren't visible in Power Automate for desktop.
 ms.reviewer: dipapa
 ms.date: 9/21/2022
@@ -14,7 +14,7 @@ _Original KB number:_ &nbsp; 5001122
 
 ## Symptoms
 
-In Power Automate for desktop, some actions of  appear to be missing or aren't visible.
+In Power Automate for desktop, some actions appear to be missing or aren't visible.
 
 ## Cause
 
