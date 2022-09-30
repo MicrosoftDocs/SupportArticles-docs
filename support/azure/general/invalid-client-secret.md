@@ -21,7 +21,7 @@ When you validate the credential in the CycleCloud portal, you see the following
 
 > Invalid Azure credentials provided: AADSTS7000215: Invalid client secret is provided. Trace ID 6c8dbfc3-51c9-4a9a-b667-9b827e3c0200 Correlation ID: \<Correlation ID> Timestamp: 2020-10-27 22:39:49Z
 
-:::image type="content" source="media/invalid-client-secret/validate-client-secret.png" alt-text="Screenshot that shows the error message when validation fails.":::
+:::image type="content" source="media/invalid-client-secret/validate-client-secret.png" alt-text="Screenshot that shows the error message when validation fails."lightbox="media/invalid-client-secret/validate-client-secret.png":::
 
 ## Resolution
 
@@ -30,11 +30,11 @@ To resolve this issue, reset the client secret keys in the Azure portal.
 1. Sign in the Azure portal and navigate to the Azure Active Directory service.
 2. Select the application name under the **App Registrations**.
 
-   :::image type="content" source="media/invalid-client-secret/select-application-name.png" alt-text="Screenshot of an application name.":::
+   :::image type="content" source="media/invalid-client-secret/select-application-name.png" alt-text="Screenshot of an application name." lightbox="media/invalid-client-secret/select-application-name.png":::
 
 3. Select **Certificates & Secrets** > **New client secret** to renew it.
 
-   :::image type="content" source="media/invalid-client-secret/new-client-secret.png" alt-text="Screenshot that shows the 'New client secret' button.":::
+   :::image type="content" source="media/invalid-client-secret/new-client-secret.png" alt-text="Screenshot that shows the 'New client secret' button." lightbox="media/invalid-client-secret/new-client-secret.png":::
 
    After a client secret key is added, the new secret key value will be shown under the **Key** column.
 
