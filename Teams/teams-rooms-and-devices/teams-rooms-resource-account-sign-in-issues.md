@@ -1,6 +1,6 @@
 ---
 title: Fix Teams Rooms resource account sign-in issues
-description: Helps you troubleshoot common sign-in issues when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
+description: Troubleshoot common sign-in issues that occur when Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business.
 ms.reviewer: matart
 ms.topic: troubleshooting
 ms.date: 9/30/2022
@@ -16,25 +16,25 @@ appliesto:
   - Microsoft Teams
 ms.custom: CI167672
 ---
-# Resolve Teams Rooms resource account sign-in issues
+# Fix Teams Rooms resource account sign-in issues
 
-Microsoft Teams Rooms signs in to Exchange, and Microsoft Teams or Skype for Business, to fetch calendar and join meetings. These interactions are monitored by using different signals in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com), such as **Sign in (Exchange)** and **Sign in (Teams)**. This article helps you troubleshoot common sign-in issues and issues related to specific signals.
+Microsoft Teams Rooms signs in to Microsoft Exchange Online and Microsoft Teams or Skype for Business to fetch calendar information and join meetings. These interactions are monitored by using different signals in the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com), such as **Sign in (Exchange)** and **Sign in (Teams)**. This article helps you troubleshoot common sign-in issues and issues that are related to specific signals.
 
 ## Symptoms
 
-In the [Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com), one or more signals that are related to sign-in are shown as **Unhealthy**. Users also experience one or more of the following issues on the Teams Rooms device:
+In the [Teams Rooms Pro Management portal](https://portal.rooms.microsoft.com), one or more signals that are related to the sign-in process are shown as **Unhealthy**. Users also experience one or more of the following issues on the Teams Rooms device:
 
-- The room console shows a banner at the top indicating that the sign-in fails.
+- The room console shows a banner at the top that indicates that the sign-in fails.
 - Scheduled meetings aren't listed on the room console. This usually indicates an Exchange sign-in failure.
 - The room's display name is missing.
-- Although scheduled meetings are listed on the room console, the **Join** button is unavailable. And you can't start an unscheduled meeting. This usually indicates a Teams or Skype for Business sign-in failure.
+- Although scheduled meetings are listed on the room console, the **Join** button is unavailable and you can't start an unscheduled meeting. This usually indicates a Teams or Skype for Business sign-in failure.
 
 Additionally, Event ID 2001 is logged under **Applications and Services Logs** > **Skype Room System** in **Event Viewer**. For example, the following event is logged:
 
 > {"Description":"Network status : Healthy. **Exchange status : 80131500 : AADSTS50076. Signin status: NotApplicable. Teams Signin status: Unhealthy.**","ResourceState":"Unhealthy","OperationName":"Heartbeat","OperationResult":"Fail","OS":"Windows 10","OSVersion":"10.0.19044.1889","Alias":"","DisplayName":"","AppVersion":"4.13.132.0","IPv4Address":"192.168.0.53","IPv6Address":""}
 
 > [!NOTE]
-> Every five minutes, Teams Rooms checks that it's signed into Microsoft Teams or Skype for Business, and has network and Exchange connectivity. If one or more factors aren't true, a 2001 event is logged.
+> Every five minutes, Teams Rooms checks whether it's signed in to Microsoft Teams or Skype for Business, and whether it has network and Exchange connectivity. If one or more factors aren't true, a "2001" event is logged.
 >
 > - **Exchange status** indicates the sign-in status of the resource account in Exchange Online, or Exchange Server if mailboxes are hosted on-premises.
 > - **Signin status** indicates the sign-in status of the resource account in Skype for Business Server. It's displayed as **NotApplicable** in Teams only mode.
@@ -50,7 +50,7 @@ Sign-in issues can occur for different reasons. The following options can help y
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error code **AADSTS50076** or **AADSTS50079**, it means that MFA is enabled on the resource account.
 
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see a **Failure** status with error code **50079** or **50076**, and the error description says "Due to a configuration change made by your administrator, or because you moved to a new location, you must enroll in multi-factor authentication to access.", it means that MFA is enabled on the resource account.
@@ -66,20 +66,20 @@ To check whether sign-in is blocked by Conditional Access policies, use one of t
   1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
   1. Look for Event ID 1098. If you see error **AADSTS53003**, it means that sign-in is blocked by Conditional Access policies.
 
-- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see an **Interrupted** status with error code **53003**, and the error description says "Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.", it means that sign-in is blocked by Conditional Access policies.
+- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see an **Interrupted** status with error code **53003**, and the error description says, "Access has been blocked by Conditional Access policies. The access policy does not allow token issuance.", this means that the sign-in is blocked by Conditional Access policies.
 
 For more information about supported Conditional Access assignments for Teams Rooms resource accounts, see [Conditional Access and Intune compliance for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices). To fix the issue, contact your identity management team or see [Configure Azure Active Directory Conditional Access](/appcenter/general/configuring-aad-conditional-access) for more information.
 
 ### Check whether the resource account's password has expired
 
-If a Teams Rooms resource account's password is set to expire after a period of time, it may cause sign-in failures.
+If a Teams Rooms resource account's password is set to expire after some time, it may cause sign-in failures.
 
-To check whether the password of the resource account has expired, use one of the following options:
+To check whether the password of the resource account is expired, use one of the following options:
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
-  1. Look for Event ID 1098. If you see error code **AADSTS50055**, it means the password has expired.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. Look for Event ID 1098. If you see error code **AADSTS50055**, this means that the password is expired.
 
 - In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see an **Interrupted** status, and the additional details contain the following message, it means the password has expired.
 
@@ -87,33 +87,33 @@ To check whether the password of the resource account has expired, use one of th
 
 To fix this issue, reset the password by using one of the following methods, then update the password in **Settings** on the device.
 
-- Sign in to the account in a web browser, then reset the password.
-- Ask an admin to [reset the password](/microsoft-365/admin/add-users/reset-passwords).
+- Sign in to the account in a web browser, and then reset the password.
+- Ask an administrator to [reset the password](/microsoft-365/admin/add-users/reset-passwords).
 
-To avoid having to reset the resource account's password and then signing in to each Teams Rooms device again, you can [turn off password expiration](/microsoftteams/rooms/with-office-365#turn-off-password-expiration) for the account.
+To avoid having to reset the resource account password and then sign in to each Teams Rooms device again, you can [turn off password expiration](/microsoftteams/rooms/with-office-365#turn-off-password-expiration) for the account.
 
 ### Verify that you use the correct credentials
 
-Incorrect username or password can also cause sign-in failures.
+An incorrect username or password can also cause sign-in failures.
 
 To check whether an incorrect username or password is used, use one the following options:
 
 - Review the device log file.
 
-  1. On the Teams Rooms device, in Event Viewer, go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
-  1. Look for Event ID 1098. If you see error code **AADSTS50126**, it means that the username or password is incorrect.
-- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see a **Failure** status with error code **50126**, and the error description says "Error validating credentials due to invalid username or password.", it means that the username or password is incorrect.
+  1. On the Teams Rooms device, open Event Viewer, and then go to **Applications and Services Log** > **Microsoft** > **Windows** > **AAD** > **Operational**. Or, [download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs), extract the downloaded .zip file to a folder, and then open the _Windows\EventLog\Microsoft-Windows-AAD_Operational.evtx_ file.
+  1. Look for Event ID 1098. If you see error code **AADSTS50126**, this means that the username or password is incorrect.
+- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), if you see a **Failure** status that shows code **50126**, and the error description says "Error validating credentials due to invalid username or password," this means that the username or password is incorrect.
 
 > [!NOTE]
-> You may also receive these errors after the resource account's password has expired for a period of time.
+> You may also receive these errors after the resource account password is expired for some time.
 
 To fix this issue, make sure that you use the correct credentials. You can also [reset the password](/microsoft-365/admin/add-users/reset-passwords), and then update the password in **Settings** on the device.
 
-### Check network connection
+### Check network connectivity
 
 Teams Rooms must have access to all [standard Microsoft 365 endpoints](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true) and meet the [network requirements](/microsoftteams/rooms/rooms-prep#check-network-availability). Teams Rooms doesn't support proxy authentication.
 
-If you don't see any sign-in attempts in [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), the connection to the Azure sign-in endpoints might be blocked. In this case, verify that you're using the correct username and check for network connectivity issues.
+If you don't see any sign-in attempts in [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), the connection to the Azure sign-in endpoints might be blocked. In this case, verify that you're using the correct username, and check for network connectivity issues.
 
 If you see successful sign-in in [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), but the resource account sign-in still fails, try the following options:
 
@@ -124,7 +124,7 @@ To troubleshoot network connectivity issues, you can use [Network Monitor](/wind
 
 ### Check whether the room mailbox exists
 
-Teams Rooms resource accounts must have a mailbox that's hosted on Exchange Online or Exchange Server. Otherwise, Exchange service reports that no mailbox exists for the user during discovery.
+Teams Rooms resource accounts must have a mailbox that's hosted on Exchange Online or Exchange Server. Otherwise, the Exchange service reports that no mailbox exists for the user during discovery.
 
 To check whether a room mailbox exists, use one the following options:
 
@@ -148,16 +148,16 @@ Teams Rooms devices must have a [Teams Rooms Pro or Teams Rooms Basic license](/
   1. [Download the device's diagnostic log files](/microsoftteams/rooms/rooms-manage#download-device-logs).
   1. Extract the downloaded .zip file to a folder, then go to the _App\Microsoft\Teams_ subfolder.
   1. Open the _Logs.txt_ file.
-  1. If you see the following error, it means a license isn't assigned.
+  1. If you see the following error message, this means that a license isn't assigned.
 
      > errorCode: FailedAuthentication, errorStep: get_skype_license, errorState: licenseError
 
-- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), you see a **Success** status, but sign-in fails when using the acquired token to register Teams service.
-- Open a web browser, sign in to Teams by using the resource account. If you receive the following error, it means a license isn't assigned.
+- In [sign-in logs on the Azure portal](/azure/active-directory/reports-monitoring/concept-sign-ins#where-can-you-find-it-in-the-azure-portal), you see a **Success** status, but the sign-in fails when the process uses the acquired token to register the Teams service.
+- Open a web browser, and sign in to Teams by using the resource account. If you receive the following error message, this means that a license isn't assigned.
 
   > You're missing out! Ask your admin to enable Microsoft Teams for \<Account Name\>
 
-To fix this issue, make sure a [Teams Rooms Pro or Teams Rooms Basic license](/microsoftteams/rooms/rooms-licensing) is assigned to the account, and Microsoft Teams app is also applied based on the license. For more information about license assignment, see [Assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts).
+To fix this issue, make sure that a [Teams Rooms Pro or Teams Rooms Basic license](/microsoftteams/rooms/rooms-licensing) is assigned to the account, and that Microsoft Teams app is also applied, based on the license. For more information about license assignment, see [Assign Microsoft 365 licenses to user accounts](/microsoft-365/enterprise/assign-licenses-to-user-accounts).
 
 ## References
 
