@@ -99,6 +99,8 @@
     items:
     - name: AccountEncryptionKeyUnavailable error message
       href: error-accountencryptionkeyunavailable.md
+    - name: Access to storage account is denied
+      href: access-denied-execute-azure-batch-job.md
       items:
   - name: CycleCloud
     items:
@@ -107,13 +109,14 @@
       items:
   - name: HPC Pack
     items:
-    - name: HPC Pack content coming soon
-      href: welcome-general.yml
+    - name: HPC jobs are stuck in canceling mode, and new jobs don't start
+      href: job-stuck-canceling-mode.md
     - name: HPC Management Service fails to start after restoring database
       href: hpc-management-service-not-start.md
     - name: HPC compute nodes aren't shown or are in error state
       href: compute-node-not-shown-error-state.md
-      items:
+    - name: HPC node manager service unreachable
+      href: hpc-node-manager-service-unreachable-certificate.md
 
 - name: General
   items:

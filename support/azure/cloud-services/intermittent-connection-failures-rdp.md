@@ -1,12 +1,13 @@
 ---
 title: Intermittent connection failures using Remote Desktop Protocol
 description: Resolve intermittent failures to connect to Azure Cloud Services (extended support) when you use the Remote Desktop Protocol (RDP).
-ms.date: 9/1/2022
+ms.date: 09/26/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: v-maallu
-ms.service: cloud-services-extended-support
+ms.service: cloud-services
+ms.subservice: troubleshoot-extended-support
 #Customer intent: As an Azure Cloud Services administrator, I want to be able to prevent intermittent failures that occur when I use Remote Desktop Protocol (RDP) so that my customers can connect to my cloud services apps without experiencing connection problems.
 ---
 
