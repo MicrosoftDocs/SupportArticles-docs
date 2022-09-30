@@ -9,6 +9,8 @@ ms.author: jopilov
 
 # Troubleshoot entire SQL Server or database application that appears to be slow
 
+_Applies to:_ &nbsp; SQL Server
+
 When you run queries against a SQL Server instance or a particular application, all the queries are slow. To solve the issue, follow these steps:
 
 ## Step 1: Troubleshoot application issues
