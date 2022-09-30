@@ -2,7 +2,7 @@
 title: Can't access elements of a Java application
 description: Provides resolutions for the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
-ms.date: 9/21/2022
+ms.date: 9/30/2022
 ms.subservice: power-automate-flows
 ---
 # Can't access the elements of a Java application
@@ -52,7 +52,7 @@ Follow the below steps to check the installed Java version and installation path
 1. Type _Configure Java_ in the Search bar of Windows.
 1. Open Java control panel and go to the **Java** tab.
 1. Select **View**.
-1. Check values in the **Path** column. The row with **Architecture** equal to x86 refers to 32-bit Java installation, while the row with value x86x64 refers to 64-bit Java installation.
+1. Check values in the **Path** column. The row with **Architecture** equal to x86 refers to 32-bit Java installation, while the row with value x64 refers to 64-bit Java installation.
 
 You may check the below files:
 
@@ -65,7 +65,7 @@ You may check the below files:
 
 - For 32-bit Java installation:
 
-  Same actions for the same files (instead '64' wait for '32') as above but in folder path _C:\Program Files (x86) \Java…_.
+  Same actions for the same files as above but in folder path _C:\Program Files (x86) \Java…_.
 
 - Make sure there isn't an _.accessibility.properties_ file present in your user folder.
 - Check _C:\Users\user_ if a file with name _.accessibility.properties_ is present. If yes, rename it.
