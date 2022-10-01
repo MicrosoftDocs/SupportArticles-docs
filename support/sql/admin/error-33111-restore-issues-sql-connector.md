@@ -23,7 +23,7 @@ Assume that you deploy the following instances of Microsoft SQL Server:
 
 - SQL Server instance `sql2` has SQL Server Connector for Key Vault 1.0.5.0 deployed.
 
-- Use the following query to deploy an asymmetric key from the same asymmetric key source in Key Vault:
+- Use the following query to deploy an asymmetric key on both sql1 and sql2 instances from the same asymmetric key source in Key Vault:
 
     ```sql
     CREATE ASYMMETRIC KEY TDE_KEY 
@@ -50,7 +50,7 @@ You have a database backup that is encrypted by an asymmetric key in Key Vault i
 
 The `sql2` instance has an asymmetric key created.
 
-If you try to restore the backup of the `sql2` instance, the operation fails and returns an error message that resembles the following message:
+If you try to restore the backup on the `sql2` instance, the operation fails and returns an error message that resembles the following message:
 
 > Msg 33111, Level 16, State 4, Line LineNumber
 
