@@ -1,7 +1,7 @@
 ---
 title: Configuring permissions to access remote data
 description: This article describes how to disable ad hoc queries that use the OPENROWSET or the OPENDATASOURCE functionality in SQL Server.
-ms.date: 09/30/2022
+ms.date: 10/01/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: ericbu
 ms.prod: sql
@@ -89,7 +89,6 @@ Ad hoc access of remote OLE BD data sources using `OPENROWSET` and `OPENDATASOUR
 
 > [!NOTE]
 > With the default setting, if you try to call these functions in ad hoc queries, you receive an error message that resembles the following message:
-
 > Server: Msg 7415, Level 16, State 1, Line 1 Ad hoc access to OLE DB provider 'Microsoft.Jet.OLEDB.4.0' has been denied. You must access this provider through a linked server.
 
 In other words, with the `DisallowAdHocAccess` property set to **1** for a specific OLE DB provider, you must use a predefined linked server setup for the specific OLE DB provider. You can no longer pass in an ad hoc connection string that references that provider to the `OPENROWSET` or the `OPENDATASOURCE` function.
