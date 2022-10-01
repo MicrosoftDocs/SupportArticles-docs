@@ -1,7 +1,7 @@
 ---
 title: Restore issues using SQL connector
 description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server.
-ms.date: 09/29/2022
+ms.date: 10/01/2022
 ms.custom: sap:Administration and Management
 author: ramakoni1
 ms.author: v-jayaramanp
@@ -136,5 +136,5 @@ Because of this change, you might experience problems when you try to restore da
 
     ```sql
     ALTER DATABASE ENCRYPTION KEY
-    ENCRYPTION BY SERVER ASYMMETRIC KEY KeyName1050Version
+    ENCRYPTION BY SERVER ASYMMETRIC KEY <KeyName_1.0.5.0_version>
     ```
