@@ -219,3 +219,19 @@
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
 
+- name: Troubleshoot outbound connections
+  items:
+  - name: Basic network flow and troubleshooting
+    href: basic-troubleshooting-outbound-connections.md
+  - name: Scenario-based troubleshooting
+    items:
+    - name: Can't connect to pods and services in same cluster
+      href: troubleshoot-connection-pods-services-same-cluster.md
+    - name: Can't connect to endpoints in same virtual network
+      href: troubleshoot-connections-endpoints-same-virtual-network.md
+    - name: Can't connect to endpoints outside virtual network (public internet)
+      href: troubleshoot-connections-endpoints-outside-virtual-network.md
+    - name: DNS resolution failure from within pod but not from worker node
+      href: troubleshoot-dns-failure-from-pod-but-not-from-worker-node.md
+    - name: Traffic between node pools is blocked by custom NSG
+      href: traffic-between-node-pools-is-blocked.md
