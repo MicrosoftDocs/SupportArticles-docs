@@ -211,6 +211,11 @@
   - name: '"tls: client offered only unsupported versions" messages'
     href: tls-client-offered-unsupported-versions.md
 
+- name: Extensions and add-ons
+  items:
+  - name: Troubleshoot the KEDA add-on
+    href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
+
 - name: Can't pull images from container registry to cluster
   href: cannot-pull-image-from-acr-to-aks-cluster.md
 
