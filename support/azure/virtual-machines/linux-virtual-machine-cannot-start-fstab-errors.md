@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM boot issues due to fstab errors | Microsoft Docs
 description: Explains why Linux VM cannot start and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
-author: genlin, saimsh-msft
+author: genlin,saimsh-msft
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
@@ -116,14 +116,14 @@ az vm repair restore --verbose -g centos7 -n cent7
 
 Alternatively, once a repair vm is created, the changes can also be implemented by manually logging into the repair vm, mounting the attached copy of OS disk and making changes to its fstab file. Follow the steps here: 
  * Create a repair VM using the `az vm repair create` command.
- * In order to correctly mount and chroot to the filesystems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](https://learn.microsoft.com/troubleshoot/azure/virtual-machines/chroot-environment-linux) document.
+ * In order to correctly mount and chroot to the filesystems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions] (./chroot-environment-linux) document.
  * Next, follow the same [fstab troubleshooting steps](#fstab-troubleshooting-steps) as above.
  * Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM. 
 
 #### Use Manual Method
 
 If both serial console and ALAR approach is not possible or fails , the repair has to be performed manually. Follow the steps here to manually attach the OS disk to a recovery VM and swap the OS disk back to the original VM:
-* [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recover-disks-portal-linux.md)
+* [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
 Once the OS disk is successfully attached to the recovery VM, follow the [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropiate changes to the fstab file.
