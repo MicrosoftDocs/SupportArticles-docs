@@ -3,7 +3,7 @@ title: Troubleshoot Linux VM boot issues due to fstab errors | Microsoft Docs
 description: Explains why Linux VM cannot start and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
-author: genlin,saimsh-msft
+author: saimsh-msft
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
