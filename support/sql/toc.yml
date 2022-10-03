@@ -69,6 +69,8 @@
     items:
     - name: SQL Server startup issues
       items:
+      - name: Restore issues with Azure connector
+        href: admin/error-33111-restore-issues-sql-connector.md
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
@@ -465,7 +467,7 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
-    - name: ASCII funtion returns different results
+    - name: ASCII function returns different results
       href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
@@ -691,7 +693,7 @@
       href: ssms/exception-you-execute-query.md
     - name: Saving changes is not permitted error message
       href: ssms/error-when-you-save-table.md
-    - name: Unable to mody table - Timeout Expired
+    - name: Unable to modify table - Timeout Expired
       href: ssms/error-modify-large-table-using-ssms.md
     - name: Uninstall SQL Server Management Studio
       href: ssms/uninstall-management-studio.md
