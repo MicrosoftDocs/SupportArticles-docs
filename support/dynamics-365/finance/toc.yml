@@ -29,4 +29,18 @@
           href: sales-tax/sales-tax-troubleshooting-voucher-not-generated.md
         - name: Tax is posted to the wrong ledger account in the voucher
           href: sales-tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
+    - name: Budgeting
+      items:
+        - name: Position budgeting troubleshooting
+          href: budgeting/position-budgeting-set-up-issues.md
+    - name: India Goods and services tax (GST)
+      items:
+        - name: Setoff rule error when a tax settlement is run 
+          href: india-gst/apac-ind-GST-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
+        - name: Tax transaction ID is incorrect
+          href: india-gst/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
+        - name: Records and fields don't appear on the GSTR report
+          href: india-gst/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
+        - name:
+          href: 
     
