@@ -22,8 +22,6 @@ This article provides additional details on configuring **DisallowAdhocAccess** 
 
 ## Disabling ad hoc access using SQL Server Management Studio
 
-You can disable Transact-SQL statements that use ad-hoc connection strings with specific OLE DB providers in the `OPENROWSET` and `OPENDATASOURCE` functions using one of the procedures below:
-
 Specify the `DisallowAdHocAccess` property for the provider in SQL Server Management Studio (SSMS)
 
 1. Open SSMS and expand **Providers** under **Linked Servers**.
@@ -39,7 +37,7 @@ Specify the `DisallowAdHocAccess` property for the provider in SQL Server Manage
 
 After a linked server is saved, the `DisallowAdHocAccess` property can be set only through a registry setting.
 
-## Add the DisallowAdHocAccess value
+### Add the DisallowAdHocAccess value
 
 To add the **DisallowAdHocAccess** value, follow these steps:
 
