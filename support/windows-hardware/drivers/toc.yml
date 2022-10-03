@@ -69,9 +69,6 @@
   - name: Unowned driver updates are installed unexpectedly
     href: unowned-driver-updates-installed-unexpectedly.md
 
-- name: Scanner Driver
-  items:
-
 - name: Print Driver
   items:
   - name: Recurring icon is black when printing a calendar
