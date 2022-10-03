@@ -25,8 +25,8 @@
           href: sales-tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
         - name: TaxTrans record isn't generated
           href: sales-tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
-        - name:
-          href: 
-        - name: 
-          href: 
+        - name: Voucher isn't generated
+          href: sales-tax/sales-tax-troubleshooting-voucher-not-generated.md
+        - name: Tax is posted to the wrong ledger account in the voucher
+          href: sales-tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
     
