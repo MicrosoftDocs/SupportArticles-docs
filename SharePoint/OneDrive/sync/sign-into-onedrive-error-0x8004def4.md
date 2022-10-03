@@ -27,10 +27,7 @@ You can't sign in to Microsoft OneDrive, and you receive the following error mes
 
 ## Cause
 
-This issue might occur for different reasons, such as the following situations:
-
-- Folder name conflict
-- Synchronizing an existing [OneNote notebook](https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa#onenotenotebooks) with the OneDrive sync app without going through the OneNote application  
+This issue might occur for different reasons. This includes conditions such as a folder name conflict, or situations such as synchronizing an existing [OneNote notebook](https://support.microsoft.com/office/restrictions-and-limitations-in-onedrive-and-sharepoint-64883a5d-228e-48f5-b3d2-eb39e07630fa#onenotenotebooks) with the OneDrive sync app without going through the OneNote application.  
 
 ## Resolution
 
@@ -39,10 +36,10 @@ To fix issues that are caused by folder name conflicts or OneNote notebook synch
 1. Download and install [Microsoft 365 Support and Recovery Assistant](https://aka.ms/SaRA-FirstScreen).
 2. Select **OneDrive for Business** > **Next**.
 
-    :::image type="content" source="media/sign-into-onedrive-error-0x8004def4/select-problematic-app.png" alt-text="Screenshot of a list from which to select the app that is experiencing issues in which OneDrive for Business is highlighted.":::
+    :::image type="content" source="media/sign-into-onedrive-error-0x8004def4/select-problematic-app.png" alt-text="Screenshot of a list of apps that might be experiencing issues that shows OneDrive for Business as highlighted.":::
 
 3. Select **I need help syncing my OneDrive files**, and then select **Next**.
 
-    :::image type="content" source="media/sign-into-onedrive-error-0x8004def4/select-issue.png" alt-text="Screenshot of the page to select the issue that you are experiencing on which syncing OneDrive files is highlighted.":::
+    :::image type="content" source="media/sign-into-onedrive-error-0x8004def4/select-issue.png" alt-text="Screenshot of the page to select the issue that you are experiencing that shows syncing Drive files as highlighted.":::
 
-If the Assistant can't resolve the issue, the cause might not be sync conflicts. In this case, try to [Reset OneDrive](https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c#ID0EBH=Windows). If the issue persists, [uninstall OneDrive](https://support.microsoft.com/office/turn-off-disable-or-uninstall-onedrive-f32a17ce-3336-40fe-9c38-6efb09f944b0), and then [reinstall it](https://www.microsoft.com/microsoft-365/onedrive/download).
+If the Assistant can't resolve the issue, the cause might be something other than sync conflicts. In this case, try to [Reset OneDrive](https://support.microsoft.com/office/reset-onedrive-34701e00-bf7b-42db-b960-84905399050c#ID0EBH=Windows). If the issue persists, [uninstall OneDrive](https://support.microsoft.com/office/turn-off-disable-or-uninstall-onedrive-f32a17ce-3336-40fe-9c38-6efb09f944b0), and then [reinstall it](https://www.microsoft.com/microsoft-365/onedrive/download).
