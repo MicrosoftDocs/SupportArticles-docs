@@ -21,10 +21,10 @@
           href: sales-tax-troubleshooting-tax-not-calculated-amount-zero
         - name: Tax calculation performance affects transactions
           href: sales-tax-troubleshooting-tax-calculation-bad-performance 
-        - name:
-          href: 
-        - name: 
-          href: 
+        - name: Incorrect field value in TaxTrans
+          href: sales-tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
+        - name: TaxTrans record isn't generated
+          href: sales-tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
         - name:
           href: 
         - name: 
