@@ -1,7 +1,7 @@
 ---
 title: OS errors 1450 and 665 are reported
 description: This article provides resolutions for the problem where OS errors 1450 and 665 are reported for database files during DBCC CHECKDB or Database Snapshot Creation.
-ms.date: 09/25/2020
+ms.date: 10/01/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
@@ -62,7 +62,7 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 ## Resolution
 
-1. Break up the large database into smaller files. For example, if you have one 8-TB data file you can break it up into eight 1-TB data files. High-level these are the steps to accomplish this:
+1. Break up the large database into smaller files. For example, if you have one 8-TB data file you can break it up into eight 1-TB data files. Following are high-level steps to accomplish this:
    1. Add the 7 new 1 TB files to the same file group.
    2. Rebuild the clustered indexes of the existing tables and this will automatically spread the data of each table among the 8 files. If a table doesn't have a clustered index, then create one and then drop it to accomplish the same.
    3. Shrink the original 8 TB file down, now that is about 12-15% full.
@@ -77,7 +77,7 @@ For a complete background of how SQL Server Engine uses NTFS sparse files and al
 
 6. Reduce the lifetime of `DBCC CHECK` commands by using the performance enhancements and consequently avoid the 665 errors: [Improvements for the DBCC CHECKDB command may result in faster performance when you use the PHYSICAL_ONLY option](https://support.microsoft.com/kb/2634571)
 
-Under certain conditions, you might still encounter the above mentioned errors even after applying these fixes. In that scenario, you can evaluate some of the workarounds discussed in the following blog post:
+Under certain conditions, you might still encounter the previously mentioned errors even after applying these fixes. In that scenario, you can evaluate some of the workarounds discussed in the following blog post:
 
 [Sparse File Errors: 1450 or 665 due to file fragmentation: Fixes and Workarounds](/archive/blogs/psssql/sparse-file-errors-1450-or-665-due-to-file-fragmentation-fixes-and-workarounds)
 
