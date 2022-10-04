@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PublicIPCountLimitReached error so that I can upgrade the cluster successfully.
 ---
 
