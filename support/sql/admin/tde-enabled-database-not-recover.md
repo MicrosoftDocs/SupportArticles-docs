@@ -43,7 +43,7 @@ To resolve the issue, enable automatic decryption of the master key. To do this,
 ```sql
 USE MASTER
 GO
-OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
+OPEN MASTER KEY DECRYPTION BY PASSWORD = '<password>'
 ```
 
 ```sql
