@@ -16,6 +16,14 @@ This article has answers to frequently asked questions (FAQs) about application 
 
 [!INCLUDE [support-disclaimer](../../includes/support-disclaimer.md)]
 
+## Why is my App Service Plan displaying CPU/Memory usage even when all Web Apps are stopped?
+
+Azure App Service requires continuous system processes that handle several platform operations and features, such as security updates, availability of the SCM console, application monitoring, authentication, and many other vital features of your Web App.
+
+System processes will run on App Service Plans even if there are no Web Apps running or if the App Service Plan contains no Web Apps.
+
+The platform processes will consume a minimum amount of resources (such as CPU, Memory and Disk space), and the same should be accounted during the capacity planning, monitoring, and auto-scaling trigger configuration of an App Service Plan.
+
 ## Why is my app slow?
 
 Multiple factors might contribute to slow app performance. For detailed troubleshooting steps, see [Troubleshoot slow web app performance](/azure/app-service/troubleshoot-performance-degradation).
