@@ -5,7 +5,8 @@ ms.date: 7/20/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: data-collection-guide
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster
 

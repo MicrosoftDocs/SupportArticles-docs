@@ -7,7 +7,7 @@ metadata:
   title: Troubleshoot Azure Kubernetes Services issues
   description: Documentation for troubleshooting common issues with Azure Kubernetes Services. # Required; article description that is displayed in search results. < 160 chars.
   services: cloud-services
-  ms.service: cloud-services #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.service: azure-kubernetes-service #Required; service per approved list. service slug assigned to your service by ACOM.
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
@@ -16,6 +16,14 @@ metadata:
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
+
+# Card
+  - title: Learn how to use AKS with these quickstarts, tutorials, and samples
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: AKS documentation
+            url: /azure/aks/   
 
  # Card
   - title: Troubleshoot create operations
@@ -150,6 +158,7 @@ landingContent:
             url: ./identify-high-cpu-consuming-containers-aks.md
           - text: Identify memory saturation in AKS clusters
             url: ./identify-memory-saturation-aks.md
+     
 
 
 

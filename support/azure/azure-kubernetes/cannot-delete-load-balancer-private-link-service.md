@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-delete-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the CannotDeleteLoadBalancerWithPrivateLinkService or PrivateLinkServiceWithPrivateEndpointConnectionsCannotBeDeleted error code
