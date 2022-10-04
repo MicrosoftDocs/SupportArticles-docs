@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-aks-cluster-through-api-server
+ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting measures so that I can avoid cluster connectivity issues with the API server.
 ---
 # Basic troubleshooting of cluster connection issues with the API server

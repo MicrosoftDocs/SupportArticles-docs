@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-app-on-aks-cluster
+ms.subservice: cannot-connect-to-app-on-cluster
 #Customer intent: As an Azure Kubernetes user, I want to get HTTP response codes by using the Client ULR (cURL) command or a browser so that I can analyze the behavior of an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
 # Get and analyze HTTP response codes

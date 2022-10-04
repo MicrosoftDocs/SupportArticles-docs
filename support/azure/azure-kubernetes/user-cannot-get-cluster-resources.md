@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-aks-cluster-through-api-server
+ms.subservice: cannot-connect-to-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes administrator, I want fix RBAC or security group assignments so that users can access their cluster resources.
 ---
 # User can't get cluster resources

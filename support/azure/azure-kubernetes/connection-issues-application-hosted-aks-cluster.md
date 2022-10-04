@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, pkc, rissing
 ms.service: azure-kubernetes-service
-ms.subservice: cannot-connect-to-app-on-aks-cluster
+ms.subservice: cannot-connect-to-app-on-cluster
 #Customer intent: As an Azure Kubernetes user, I want to take basic troubleshooting steps so that I can successfully connect to an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot connection issues to an app that's hosted on an AKS cluster
