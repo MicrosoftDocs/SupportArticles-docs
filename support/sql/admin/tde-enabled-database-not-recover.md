@@ -25,9 +25,9 @@ In Microsoft SQL Server 2008 and in Microsoft SQL Server 2008 R2, a database tha
 This issue occurs when service master key encryption for the database master key in the master database is removed when the following command is run:
 
 ```sql
-Use master
+USE MASTER
 GO
-ALTER master key drop encryption BY service master key
+ALTER MASTER KEY DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
 
 When a database master key (DMK) is first created, it's automatically encrypted with the SMK.
@@ -41,21 +41,21 @@ Database recovery occurs on system sessions. If these sessions can't open the ce
 To resolve the issue, enable automatic decryption of the master key. To do this, run the following commands:
 
 ```sql
-USE master
+USE MASTER
 GO
-OPEN master key DECRYPTION BY PASSWORD = 'password'
+OPEN MASTER KEY DECRYPTION BY PASSWORD = 'password'
 ```
 
 ```sql
-ALTER master key add encryption BY service master key
+ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY
 ```
 
-Take the database offline and bring it online using the `Alter Database <databasename> Set ONLINE` command.
+Take the database offline and bring it online using the `ALTER DATABASE <databasename> SET ONLINE` command.
 
 Use the following query to determine whether automatic decryption of the master key by the service master key was disabled for the master database:
 
 ```sql
-SELECT is_master_key_encrypted_by_server FROM sys.databases WHERE name = 'master'
+SELECT is_master_key_encrypted_by_server FROM sys.databases WHERE NAME = 'master'
 ```
 
 If this query returns a value of 0, automatic decryption of the master key by the service master key was disabled.
