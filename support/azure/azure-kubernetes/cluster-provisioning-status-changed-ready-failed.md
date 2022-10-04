@@ -5,7 +5,8 @@ ms.date: 5/25/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the provisioning status of my cluster changed from Ready to Failed, even if I didn't do an operation, so that I can successfully use my Azure Kubernetes Service (AKS) cluster.
 ---
