@@ -5,7 +5,7 @@ ms.date: 07/08/2021
 ms.author: genli
 author: y2kdread
 ms.service: azure-kubernetes-service
-ms.subservice: aks-data-collection-guide
+ms.subservice: data-collection-guide
 ---
 # Capture TCP packets from a pod on an AKS cluster
 

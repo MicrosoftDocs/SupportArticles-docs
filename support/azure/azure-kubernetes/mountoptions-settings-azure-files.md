@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-azure-storage-issues
+ms.subservice: troubleshoot-azure-storage-issues
 #Customer intent: As an Azure Kubernetes user, I want to learn about mount option settings so that I can set up my Azure Files storage class object optimally on my Azure Kubernetes Service (AKS) cluster.
 ---
 # Use mountOptions settings in Azure Files

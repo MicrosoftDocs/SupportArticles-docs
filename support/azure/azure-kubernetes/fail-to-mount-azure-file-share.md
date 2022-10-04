@@ -6,7 +6,7 @@ author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-azure-storage-issues
+ms.subservice: troubleshoot-azure-storage-issues
 ---
 # Errors when mounting an Azure file share
 

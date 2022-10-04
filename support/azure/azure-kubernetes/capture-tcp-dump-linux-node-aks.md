@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: erbookbi
 ms.service: azure-kubernetes-service
-ms.subservice: aks-data-collection-guide
+ms.subservice: data-collection-guide
 ---
 # Capture a TCP dump from a Linux node in an AKS cluster
 

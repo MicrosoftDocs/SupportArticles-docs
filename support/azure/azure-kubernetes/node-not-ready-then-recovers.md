@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: rissing, chiragpa, momajed
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-node-not-ready
+ms.subservice: troubleshoot-node-not-ready
 #Customer intent: As an Azure Kubernetes user, I want to prevent the Node Not Ready status for nodes that later recover so that I can avoid future errors within an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot Node Not Ready failures that are followed by recoveries

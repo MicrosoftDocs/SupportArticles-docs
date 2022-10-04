@@ -8,7 +8,7 @@ metadata:
   ms.author: v-dele
   ms.reviewer: chiragpa, nickoman
   ms.service: azure-kubernetes-service
-  ms.subservice: aks-common-issues
+  ms.subservice: common-issues
 
 title: Azure Kubernetes Service (AKS) common issues FAQ
 summary: This article answers frequently asked questions (FAQ) about common issues that can occur when you're working with an Azure Kubernetes Service (AKS) cluster.

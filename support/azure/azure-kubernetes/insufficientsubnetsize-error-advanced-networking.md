@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
-ms.subservice: aks-common-issues
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want avoid an insufficient subnet size error so that I can deploy an Azure Kubernetes Service (AKS) cluster with advanced networking.
 ---

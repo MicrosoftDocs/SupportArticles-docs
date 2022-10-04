@@ -6,7 +6,7 @@ author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-cant-pull-images-from-acr-to-cluster
+ms.subservice: troubleshoot-cant-pull-images-from-acr-to-cluster
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 

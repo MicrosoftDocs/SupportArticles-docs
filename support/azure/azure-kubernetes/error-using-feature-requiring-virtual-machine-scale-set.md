@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
 ms.service: azure-kubernetes-service
-ms.subservice: aks-common-issues
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot errors so that I can successfully use features that require virtual machine scale sets on an Azure Kubernetes Service (AKS) cluster.
 ---

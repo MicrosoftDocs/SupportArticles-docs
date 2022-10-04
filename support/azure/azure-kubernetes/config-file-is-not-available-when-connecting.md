@@ -6,7 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: "rissing,chiragpa"
 ms.service: azure-kubernetes-service
-ms.subservice: aks-cannot-connect-to-aks-cluster-through-api-server
+ms.subservice: cannot-connect-to-aks-cluster-through-api-server
 #Customer intent: As an Azure Kubernetes user, I want to fix or restore my config file so that I can successfully connect to my AKS cluster.
 ---
 # Config file isn't available when connecting

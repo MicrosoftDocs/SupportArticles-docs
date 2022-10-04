@@ -7,7 +7,7 @@ ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-upgrade-operations
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a QuotaExceeded error code so that I can upgrade the cluster successfully.
 ---
 

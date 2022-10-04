@@ -7,7 +7,7 @@ ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, edneto
 ms.service: azure-kubernetes-service
-ms.subservice: aks-troubleshoot-delete-operations
+ms.subservice: troubleshoot-delete-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code so that I can successfully delete an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the PublicIPAddressCannotBeDeleted, InUseSubnetCannotBeDeleted, or InUseNetworkSecurityGroupCannotBeDeleted error code
