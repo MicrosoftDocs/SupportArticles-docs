@@ -5,7 +5,8 @@ ms.date: 5/27/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, andbar
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-cant-pull-images-from-acr-to-cluster
 ---
 # Fail to pull images from Azure Container Registry to Azure Kubernetes Service cluster
 
@@ -166,7 +167,7 @@ If you pull an image by using an [image pull secret](https://kubernetes.io/docs/
 
 1. In the **Access keys** page for the container registry, compare the container registry values with the values in the Kubernetes secret.
 
-1. If the values don’t match, then update or re-create the Kubernetes secret accordingly.
+1. If the values don't match, then update or re-create the Kubernetes secret accordingly.
 
 > [!NOTE]
 > If a **Regenerate** password operation happened, an operation that's named "Regenerate Container Registry Login Credentials" will be displayed in the **Activity log** page of the container registry. The **Activity log** has a [90-day retention period](/azure/azure-monitor/essentials/activity-log#retention-period).

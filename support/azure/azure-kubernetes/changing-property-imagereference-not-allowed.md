@@ -5,7 +5,8 @@ ms.date: 6/1/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Changing property 'imageReference' is not allowed" error message so that I can upgrade or scale my Azure Kubernetes Service (AKS) cluster successfully.
 ---
