@@ -4,6 +4,7 @@ description: Describes how to enable and disable a trace for the Microsoft Onlin
 ms.date: 06/22/2020
 ms.reviewer: dahans
 ms.service: active-directory
+ms.subservice: aad-general
 ---
 # How to enable and disable a trace for the Microsoft Online Services Sign-in Assistant
 
