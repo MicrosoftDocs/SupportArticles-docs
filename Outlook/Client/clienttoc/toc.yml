@@ -1,5 +1,5 @@
 - name: Outlook for Windows Troubleshooting
-  href: ../outlook-client-welcome.md
+  href: ../outlook-client-welcome.yml
   items:
     - name: Authentication
       items:
@@ -497,7 +497,7 @@
           href: ../performance/outlook-exe-log-file-in-temp-folder-consumes-too-much-space.md
         - name: Performance is slow in Microsoft 365
           href: ../performance/outlook-performance-is-slow-in-office-365.md
-        - name: Performance issues for too many items or folders
+        - name: Performance issues with too many items or folders
           href: ../performance/performance-issues-if-too-many-items-or-folders.md
         - name: Performance issues if UseLowPriorityConfiguration is set to 0
           href: ../performance/performance-issues-if-uselowpriorityconfiguration-is-0.md
