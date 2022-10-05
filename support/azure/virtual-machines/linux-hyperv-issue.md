@@ -10,9 +10,9 @@ ms.service: virtual-machines
 ms.collection: linux
 ---
 
-# Troubleshoot Linux virtual machine boot and network issues due to Hyper-v driver associated errors
+# Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver associated errors
 
-Azure runs on the Hyper-V hypervisor and linux systems requires certain Hyper-v kernel modules to run on Azure. These kernel modules are bundled into the Linux Integration Services (LIS) drivers for Hyper-V and Azure that Microsoft contributes directly to the upstream linux kernel.
+Azure runs on the Hyper-V hypervisor and linux systems requires certain Hyper-V kernel modules to run on Azure. These kernel modules are bundled into the Linux Integration Services (LIS) drivers for Hyper-V and Azure that Microsoft contributes directly to the upstream linux kernel.
 
 This article discusses multiple conditions where one or more disabled Hyper-V drivers could lead to linux virtual machine boot and networking issues.
 
@@ -22,7 +22,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify missing Hyper-V driver issue?
 
-Use the Azure portal to view the serial console log of the VM in the boot-diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). This way, you can identify if your VM is failing to boot due to missing hyper-v drivers.
+Use the Azure portal to view the serial console log of the VM in the boot-diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). This way, you can identify if your VM is failing to boot due to missing Hyper-V drivers.
 
 You can find the sample outputs of failures, in each of the corresponding sections below.
 
@@ -31,7 +31,7 @@ You can find the sample outputs of failures, in each of the corresponding sectio
 To troubleshoot [Scenario 1: Network Hyper-V driver disabled](#network-hyperv-disabled) and [Scenario 2: NIC mac address has changed or doesn't match](#macaddress-issue)
 
 * You'll need [serial console](./serial-console-linux.md) access for your linux virtual machine.
-* If you do not have serial console access, follow the [offline approach](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to access the contents of the problematic OS disk from a rescue virtual machine. Access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com) is required for offline approach.
+* If you don't have serial console access, follow the [offline approach](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to access the contents of the problematic OS disk from a rescue virtual machine. Access to Azure CLI or [Azure Cloud Shell](https://shell.azure.com) is required for offline approach.
 
 To troubleshoot [Scenario 3: Other Hyper-V drivers disabled](#hyperv-drivers-disabled) offline approach is the only option to resolve the issue.
 
@@ -59,7 +59,7 @@ OR
 
 ### Symptom
 
-You won't be able SSH as the networking services are unavailable. You should still be able to log in via [serial console](./serial-console-overview.md) from the azure portal.
+You won't be able SSH as the networking services are unavailable. You should still be able to log in via [serial console](./serial-console-overview.md) from the Azure portal.
 
 ### <a id="reenable-hv_netvsc-online"></a>**Enable the Hyper-V network driver using the Serial Console method**
 
@@ -136,7 +136,7 @@ Similar error logs can also be presented if the Network Interface Card MAC addre
 
 ### Symptom
 
-The symptoms are also identical. You won't be able SSH as the networking services are unavailable. You should still be able to log in via [serial console](./serial-console-overview.md) from the azure portal.
+The symptoms are also identical. You won't be able SSH as the networking services are unavailable. You should still be able to log in via [serial console](./serial-console-overview.md) from the Azure portal.
 
 If the Hyper-V network driver is enabled and the issue continues, follow the steps below to validate the OS NIC configuration, and resolve the issue:
 
@@ -150,7 +150,7 @@ If the Hyper-V network driver is enabled and the issue continues, follow the ste
     * `91-azure_datasource.cfg` for RHEL based distribution.
     * `90_dpkg.cfg` for Debian and Ubuntu based distribution.
 6. Set the `apply_network_config` parameter to `true`, if set to false. If nothing is specified, the default value it set to `true`. This setting will ensure that the new MAC address is applied to the networking config on the next reboot.
-7. Generally, a NIC mac address would only change if there is NIC deletion/addition by the administrator or a NIC update in the backend. If network configuration via cloud-init is not desired, and the `apply_network_config` parameter needs to be set to `false`, then delete the `/var/lib/cloud/instance/obj.pkl` file and reboot the system.
+7. Generally, a NIC mac address would only change if there's NIC deletion/addition by the administrator or a NIC update in the backend. If network configuration via cloud-init isn't desired, and the `apply_network_config` parameter needs to be set to `false`, then delete the `/var/lib/cloud/instance/obj.pkl` file and reboot the system.
 
 ```bash
 # rm /var/lib/cloud/instance/obj.pkl
@@ -169,7 +169,10 @@ Follow the steps below to resolve the issue using offline method:
 
 ## <a id="hyperv-drivers-disabled"></a>Scenario 3: Other Hyper-V drivers disabled
 
-If you're unable to SSH to a virtual machine and observe the following errors in the serial console, or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've likely landed to other Hyper-V driver associated issues:
+You will likely experience some of the following issues if you're experiencing no boot associated issues with other Hyper-V drivers:
+
+* You're unable to SSH to a virtual machine.
+* You also observe the following errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal:
 
 ```output
  dracut-initqueue[455]: Warning: dracut-initqueue timeout - starting timeout scripts
@@ -204,7 +207,7 @@ Enter 'help' for a list of built-in commands.
 ```
 
 ### Symptom:
-You won't be able SSH as the networking services are unavailable. You'll also be dropped to a dracut shell. This issue can be viewed via [serial console](./serial-console-overview.md) from the azure portal.
+You won't be able SSH as the networking services are unavailable. You'll also be dropped to a dracut shell. This issue can be viewed via [serial console](./serial-console-overview.md) from the Azure portal.
 
 ### Enabling Hyper-V drivers
 
@@ -213,7 +216,7 @@ Follow the steps below to reenable the required drivers and resolve the issue:
 
 1. Follow the [az vm repair](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) documentation to access the contents of the problematic OS disk from a rescue virtual machine.
 2. In order to correctly mount and chroot to the file systems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) document.
-3. After entering the chroot environment, to `/etc/modprobe.d` directory and look for any line that might be disabling the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` drivers.
+3. Once in the chroot environment, go to the `/etc/modprobe.d` directory and look for any line that might be disabling the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` drivers.
     1. Execute the following command to identify the file(s) that are disabling the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` drivers, and the corresponding line number(s).
 
     ```bash
@@ -234,7 +237,7 @@ Follow the steps below to reenable the required drivers and resolve the issue:
 > Please beware those are reserved words used to disable drivers, defined by the Linux Operating System, not by Microsoft.
 
 >[!NOTE]
-> Replace **_disable.conf_** with the corresponding file name where the hyper-v drivers are being disabled.
+> Replace **_disable.conf_** with the corresponding file name where the Hyper-V drivers are being disabled.
 
 4. Rebuild the initial ramdisk image for the currently loaded kernel:
 
