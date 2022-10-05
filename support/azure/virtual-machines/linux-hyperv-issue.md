@@ -22,7 +22,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify missing Hyper-V driver issue?
 
-Use the Azure portal to view the serial console log of the VM in the boot-diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). This way, you can identify if your VM is failing to boot due to missing Hyper-V drivers.
+Use the Azure portal to view the serial console log of the VM in the boot-diagnostics pane, serial console pane, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). This way, you can identify if your VM is failing to boot due to missing Hyper-V drivers.
 
 You can find the sample outputs of failures, in each of the corresponding sections below.
 
@@ -37,7 +37,7 @@ To troubleshoot [Scenario 3: Other Hyper-V drivers disabled](#hyperv-drivers-dis
 
 ## <a id="network-hyperv-disabled"></a> Scenario 1: Network Hyper-V driver disabled
 
-If you're unable to SSH to a virtual machine and observe the following types of errors, in the serial console, or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've most likely landed to a network Hyper-V driver (hv_netvsc) associated issue:
+If you're unable to SSH to a virtual machine and observe the following types of errors, in the serial console, or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) pane in the Azure portal, you've most likely landed to a network Hyper-V driver (hv_netvsc) associated issue:
 
 ```output
  cloud-init[807]: Cloud-init v. 19.4 running 'init-local' at Tue, xx Aug 20XX 20:41:53 +0000. Up 5.83 seconds.
@@ -172,7 +172,7 @@ Follow the steps below to resolve the issue using offline method:
 You will likely experience some of the following issues if you're experiencing no boot associated issues with other Hyper-V drivers:
 
 * You're unable to SSH to a virtual machine.
-* You also observe the following errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal:
+* You also observe the following errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) pane in the Azure portal:
 
 ```output
  dracut-initqueue[455]: Warning: dracut-initqueue timeout - starting timeout scripts
