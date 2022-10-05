@@ -69,13 +69,6 @@
   - name: Unowned driver updates are installed unexpectedly
     href: unowned-driver-updates-installed-unexpectedly.md
 
-- name: Scanner Driver
-  items:
-  - name: GetMyDevicePortName returns incorrect port name of a USB scanner
-    href: getmydeviceportname-returns-incorrect-port-name-usb-scanner.md
-  - name: Can't scan documents from a USB scanner after Windows 11 restarts
-    href: cant-scan-usb-scanner-after-win11-restarts.md
-
 - name: Print Driver
   items:
   - name: Recurring icon is black when printing a calendar
