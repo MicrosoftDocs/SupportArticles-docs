@@ -1,6 +1,6 @@
 ---
 title: How to recover Azure Linux VM from a no boot scenario due to VFAT disabled
-description: Provides solutions to an issue in which a Linux virtual machine (VM) cannot boot after disabling VFAT
+description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after disabling VFAT
 author: divargas-msft
 ms.author: divargas
 ms.date: 04/10/2022
@@ -16,7 +16,7 @@ This article provides solutions to an issue in which a Linux virtual machine (VM
 
 The VFAT file system type is required by the [Endorsed Linux distributions on Azure](/azure/virtual-machines/linux/endorsed-distros) VMs, to get the _/boot/efi_ file system mounted. The _/boot/efi_ file system is needed by the Linux Gen2 VMs (UEFI based), but it's also included in the Gen1 (BIOS Based) Linux images.
 
-VFAT is also required by the Azure Linux VMs when they are encrypted using [Azure Disk Encryption(ADE)](/azure/virtual-machines/linux/disk-encryption-overview), for both OS and data disks encryption.
+VFAT is also required by the Azure Linux VMs when they're encrypted using [Azure Disk Encryption(ADE)](/azure/virtual-machines/linux/disk-encryption-overview), for both OS and data disks encryption.
 
 Disabling VFAT will cause a no boot situation in the Azure Linux VMs. Several hardening tools disable VFAT. Make sure VFAT is excluded from the hardening and preserved enabled, to avoid this kind of issue.
 
@@ -26,9 +26,9 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-vfat-disabled-boot-issue"></a>How to identify a no boot caused by disabling VFAT?
 
-Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify the any of the following outputs.
+Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify any of the following outputs.
 
-When VFAT has been disabled, you will face any of the following issues, or even both:
+When VFAT has been disabled, you'll face any of the following issues, or even both:
 
 ### The /boot/efi file system failing to get mounted
 
@@ -103,7 +103,7 @@ See 'systemctl status boot-efi.mount' for details.
 
 ### ADE Encrypted VM unable to access the root volume
 
-A VM with the OS encrypted and failing to boot because VFAT has been disabled, looks similar to the outputs below. After timing out, the dracut shell will show up at the end of the serial console log.
+A VM with the OS encrypted and failing to boot because VFAT has been disabled, looks similar to the outputs below. After the system times out, the dracut/initramfs shell will show up at the end of the serial console log.
 
 * Ubuntu VM with the OS disk encrypted and VFAT disabled:
 
@@ -163,7 +163,7 @@ See 'systemctl status bek.mount' for details.
 See 'systemctl status bek.mount' for details.
 ```
 
-* In some old systems you may also see the following error in the Azure serial console:
+* In some old systems, you may also see the following error in the Azure serial console:
 
 ```output
 unknown file system type ‘vfat’ error.
@@ -205,14 +205,14 @@ Enter 'help' for a list of built-in commands.
 ```
 
 >[!IMPORTANT]
-> In case the OS disk is not encrypted and only the data file systems were encrypted using ADE, then you will experience issues to get the data disks mounted. The same action plan should be followed when the ADE encrypted data disks failed to get mounted because VFAT has been disabled.
+> In case the OS disk isn't encrypted and only the data file systems were encrypted using ADE, then you'll experience issues to get the data disks mounted. The same action plan should be followed when the ADE encrypted data disks failed to get mounted because VFAT has been disabled.
 
 ## <a id="online-troubleshooting"></a>Online troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM prior disabling VFAT, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM prior disabling VFAT, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-The serial console is the fastest method to resolve this issue. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you have met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
+The serial console is the fastest method to resolve this issue. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you've met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
 
 ### <a id="online-troubleshooting-nonencrypted"></a> Non-encrypted VMs failing to get /boot/efi mounted
 
@@ -235,7 +235,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
     3. Restart the system.
 
 >[!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the /boot/efi entry from /etc/fstab, as /boot/efi is not actually needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the /boot/efi entry from /etc/fstab, as /boot/efi isn't actually needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="online-troubleshooting-encrypted"></a>ADE encrypted VMs not booting up
 
@@ -252,9 +252,9 @@ The serial console is the fastest method to resolve this issue. It allows you to
 ## <a id="offline-troubleshooting"></a>Offline troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM prior disabling VFAT, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM prior disabling VFAT, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-In case the [Azure serial console](serial-console-linux.md) isn't working in the specific VM or is not an option in your subscription, this issue can also be troubleshooted using a rescue/repair VM.
+In case the [Azure serial console](serial-console-linux.md) isn't working in the specific VM or isn't an option in your subscription, you can also troubleshoot this issue using a rescue/repair VM.
 
 ### <a id="offline-troubleshooting-nonencrypted"></a>Non-encrypted VMs failing to get /boot/efi mounted
 
@@ -274,12 +274,12 @@ In case the [Azure serial console](serial-console-linux.md) isn't working in the
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
 >[!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the /boot/efi entry from /etc/fstab, as /boot/efi is not actually needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the /boot/efi entry from /etc/fstab, as /boot/efi isn't actually needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="offline-troubleshooting-encrypted"></a>ADE encrypted VMs not booting up
 
 1. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached.
-2. When the VM is encrypted using ADE, the [Azure vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) takes care of unlocking and mounting the encrypted file systems for you. You will see the encrypted file systems mounted as `/investigateroot/*` and `/investigateboot`. You can login to the repair VM and re-mount the file systems to the desired mount points by using the [chroot](chroot-environment-linux.md) document as a reference.
+2. When the VM is encrypted using ADE, the [Azure vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) takes care of unlocking and mounting the encrypted file systems for you. You'll see the encrypted file systems mounted as `/investigateroot/*` and `/investigateboot`. You can log in to the repair VM and remount the file systems to the desired mount points by using the [chroot](chroot-environment-linux.md) document as a reference.
 
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal and attaching the copy of the encrypted OS disk at VM creation time. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
