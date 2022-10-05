@@ -222,7 +222,7 @@ Follow the steps below to reenable the required drivers and resolve the issue:
 
     2. Modify the corresponding file and comment out or delete the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` entries. The entries will most commonly be any of the following (or both):
 
-        :::image type="content" source="media/linux-hyperv-issue/hv_disabled-01.png" alt-text="Image shows the possible configuration file contents used to disable kernel modules/drivers.":::
+        :::image type="content" source="media/linux-hyperv-issue/hv_disabled-01.png" alt-text="Image shows the possible configuration file contents used to disable kernel modules/drivers using the install option.":::
 
         :::image type="content" source="media/linux-hyperv-issue/hv_disabled-02.png" alt-text="Image shows the possible configuration file contents used to disable kernel modules/drivers.":::
 
