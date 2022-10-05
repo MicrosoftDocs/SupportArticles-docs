@@ -78,7 +78,7 @@ Follow the steps below to resolve the issue:
 
     2. Modify the corresponding file and comment out or delete the hv_netvsc entries. The entries will most commonly be any of the following (or both):
 
-          :::image type="content" source="media/linux-hyperv-issue/hv_netvsc_disabled-01.png" alt-text="Image shows the possible configuration file contents used to disable kernel modules/drivers.":::
+          :::image type="content" source="media/linux-hyperv-issue/hv_netvsc_disabled-01.png" alt-text="Image shows the possible configuration file contents used to disable network drivers.":::
 
     ```bash
     vi /etc/modprobe.d/disable.conf
@@ -211,7 +211,7 @@ You won't be able SSH as the networking services are unavailable. You'll also be
 If the VM is inaccessible due to other Hyper-V drivers being disabled, an offline approach is required to reenable the drivers as the initramfs can't be loaded.
 Follow the steps below to reenable the required drivers and resolve the issue:
 
-1. Follow the [az vm repair](./repair-linux-vm-using-azure-virtual-machine-repair-commands) documentation to access the contents of the problematic OS disk from a rescue virtual machine.
+1. Follow the [az vm repair](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) documentation to access the contents of the problematic OS disk from a rescue virtual machine.
 2. In order to correctly mount and chroot to the file systems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) document.
 3. After entering the chroot environment, to `/etc/modprobe.d` directory and look for any line that might be disabling the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` drivers.
     1. Execute the following command to identify the file(s) that are disabling the `hv_utils`, `hv_vmbus`, `hv_storvsc` and/or `hv_netvsc` drivers, and the corresponding line number(s).
@@ -261,6 +261,6 @@ Follow the steps below to reenable the required drivers and resolve the issue:
 
 ## Next steps
 
-In case the specific boot error isn't a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](boot-error-troubleshoot-linux) for further troubleshooting options.
+In case the specific boot error isn't a GRUB rescue issue, refer to the [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
