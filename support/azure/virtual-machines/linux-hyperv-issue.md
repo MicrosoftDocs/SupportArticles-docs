@@ -22,7 +22,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify missing Hyper-V driver issue?
 
-Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify if your VM is failing to boot due to missing hyper-v drivers.
+Use the Azure portal to view the serial console log of the VM in the boot-diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). This way, you can identify if your VM is failing to boot due to missing hyper-v drivers.
 
 You can find the sample outputs of failures, in each of the corresponding sections below.
 
@@ -37,7 +37,7 @@ To troubleshoot [Scenario 3: Other Hyper-V drivers disabled](#hyperv-drivers-dis
 
 ## <a id="network-hyperv-disabled"></a> Scenario 1: Network Hyper-V driver disabled
 
-If you're unable to SSH to a virtual machine and observe the following types of errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've most likely landed to a network Hyper-V driver (hv_netvsc) associated issue:
+If you're unable to SSH to a virtual machine and observe the following types of errors, in the serial console, or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've most likely landed to a network Hyper-V driver (hv_netvsc) associated issue:
 
 ```output
  cloud-init[807]: Cloud-init v. 19.4 running 'init-local' at Tue, xx Aug 20XX 20:41:53 +0000. Up 5.83 seconds.
@@ -126,7 +126,7 @@ Follow the steps below to resolve the issue using offline method:
 
 1. Follow the [az vm repair](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) documentation to access the contents of the affected OS disk from a rescue virtual machine.
 2. In order to correctly mount and chroot to the file systems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) document.
-3. Once the content of the affected OS disk is accessed, follow the steps 4 and 5 from[previous section](#reenable-hv_netvsc-offline) to reenable the drivers and rebuild the initial ramdisk image. Switching to chroot environment is necessary before rebuilding the initial ramdisk image. The full path of the image must be provided.
+3. Once the content of the affected OS disk is accessed, follow the steps 4, and 5 from[previous section](#reenable-hv_netvsc-offline) to reenable the drivers and rebuild the initial ramdisk image. Switching to chroot environment is necessary before rebuilding the initial ramdisk image. The full path of the image must be provided.
 
 4. Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM and reboot the system.
 
@@ -138,7 +138,7 @@ Similar error logs can also be presented if the Network Interface Card MAC addre
 
 The symptoms are also identical. You won't be able SSH as the networking services are unavailable. You should still be able to log in via [serial console](./serial-console-overview.md) from the azure portal.
 
-If the Hyper-V network driver is not disabled and the issue still persists, follow the steps below to validate the OS NIC configuration and resolve the issue:
+If the Hyper-V network driver is enabled and the issue continues, follow the steps below to validate the OS NIC configuration, and resolve the issue:
 
 ### <a id="macaddress-mismatch-online"></a>**Fixing the NIC MAC address mismatch using the Serial Console method**
 
@@ -150,7 +150,7 @@ If the Hyper-V network driver is not disabled and the issue still persists, foll
     * `91-azure_datasource.cfg` for RHEL based distribution.
     * `90_dpkg.cfg` for Debian and Ubuntu based distribution.
 6. Set the `apply_network_config` parameter to `true`, if set to false. If nothing is specified, the default value it set to `true`. This setting will ensure that the new MAC address is applied to the networking config on the next reboot.
-7. Generally, a NIC mac address would only change if there is NIC deletion/addition by the administrator or a NIC update in the backend. If network configuration via cloud-init is not desired and the `apply_network_config` parameter needs to be set to `false`, delete the `/var/lib/cloud/instance/obj.pkl` file and reboot the system.
+7. Generally, a NIC mac address would only change if there is NIC deletion/addition by the administrator or a NIC update in the backend. If network configuration via cloud-init is not desired, and the `apply_network_config` parameter needs to be set to `false`, then delete the `/var/lib/cloud/instance/obj.pkl` file and reboot the system.
 
 ```bash
 # rm /var/lib/cloud/instance/obj.pkl
@@ -169,7 +169,7 @@ Follow the steps below to resolve the issue using offline method:
 
 ## <a id="hyperv-drivers-disabled"></a>Scenario 3: Other Hyper-V drivers disabled
 
-If you're unable to SSH to a virtual machine and observe the following errors in the serial console or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've likely landed to other Hyper-V driver (hv_vmbus, hv_storvsc, hv_utils, etc.) associated issues:
+If you're unable to SSH to a virtual machine and observe the following errors in the serial console, or latest serial log within the [Boot Diagnostics](./boot-diagnostics.md) blade in the Azure portal, you've likely landed to other Hyper-V driver associated issues:
 
 ```output
  dracut-initqueue[455]: Warning: dracut-initqueue timeout - starting timeout scripts
@@ -204,7 +204,7 @@ Enter 'help' for a list of built-in commands.
 ```
 
 ### Symptom:
-You won't be able SSH as the networking services are unavailable. You'll also be dropped to a dracut shell. This can be viewed via [serial console](./serial-console-overview.md) from the azure portal.
+You won't be able SSH as the networking services are unavailable. You'll also be dropped to a dracut shell. This issue can be viewed via [serial console](./serial-console-overview.md) from the azure portal.
 
 ### Enabling Hyper-V drivers
 
