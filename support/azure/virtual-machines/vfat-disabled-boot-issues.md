@@ -26,7 +26,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-vfat-disabled-boot-issue"></a>How to identify a no boot caused by disabling VFAT?
 
-Use the Azure portal to view the serial console log output of the VM in the boot diagnostics blade, serial console blade, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify any of the following outputs.
+Use the Azure portal to view the serial console log output of the VM in the boot diagnostics pane, serial console pane, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) to identify any of the following outputs.
 
 When VFAT has been disabled, you'll face any of the following issues, or even both:
 
