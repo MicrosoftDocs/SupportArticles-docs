@@ -1,6 +1,6 @@
 ---
 title: How to recover Azure Linux VM from kernel-related boot issues
-description: Provides solutions to an issue in which a Linux virtual machine (VM) cannot boot after applying kernel changes.
+description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 author: divargas-msft
 ms.author: divargas
 ms.date: 03/10/2022
@@ -33,14 +33,14 @@ Memory KASLR using RDRAND RDTSC...
 ## <a id="online-troubleshooting"></a>Online troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-The serial console is the fastest method to resolve this issue. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you have met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
+The serial console is the fastest method to resolve this issue. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you've met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
 
 1. [Identify the specific kernel related boot issue](#identify-kernel-boot-issue).
-2. Using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux) interrupt your VM in the GRUB menu and choose any previous kernel and boot the system using that previous kernel version (not the most recent one). Follow the detailed instructions in [Booting the system on an older kernel version](#bootingup-differentkernel-ASC) for further information.
+2. Using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux), interrupt your VM in the GRUB menu and choose any previous kernel and boot the system using that previous kernel version (not the most recent one). Follow the detailed instructions in [Booting the system on an older kernel version](#bootingup-differentkernel-ASC) for further information.
 
-3. The VM will boot up fine over the previous kernel version. At this point, the issue is not yet fixed. Go to the corresponding section and follow the provided instructions to resolve your specific issue:
+3. The VM will boot up fine over the previous kernel version. At this point, the issue isn't yet fixed. Go to the corresponding section and follow the provided instructions to resolve your specific issue:
 
     * [Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)](#missing-initramfs)
     * [Kernel panic - not syncing: Attempted to kill init!](#attempted-tokill-init)
@@ -50,9 +50,9 @@ The serial console is the fastest method to resolve this issue. It allows you to
 ## <a id="offline-troubleshooting"></a>Offline troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-1. In case the [Azure serial console](serial-console-linux.md) is not working in the specific VM or is not an option in your subscription, this issue can also be troubleshooted using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
+1. In case the [Azure serial console](serial-console-linux.md) isn't working in the specific VM or isn't an option in your subscription, you can also troubleshoot this issue using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
@@ -72,7 +72,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
-4. If there are important kernel related contents, the entire /boot partition, or other important contents are missing, and can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+4. If there're important kernel related contents, the entire /boot partition, or other important contents are missing, and they can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 See the following sections for detailed errors, possible causes, and solutions.
 
@@ -83,7 +83,7 @@ See the following sections for detailed errors, possible causes, and solutions.
 1. Restart the VM using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux):
     1. Use the `shutdown` button at the top of the serial console window
     2. Choose `Restart VM (Hard)` option.
-2. Once the serial console connection resumes you will see a countdown counter at the top left corner of the serial console screen. Start pressing the `Escape` key to interrupt your VM at the GRUB menu.
+2. Once the serial console connection resumes, you'll see a countdown counter at the top left corner of the serial console screen. Start pressing the `Escape` key to interrupt your VM at the GRUB menu.
 3. Use the `down arrow key` to select any previous kernel version.
 
 :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel-01.gif" alt-text="Animated GIF shows the process of interrupting the boot process at GRUB menu level to choose an older kernel to boot the system on.":::
@@ -93,7 +93,7 @@ See the following sections for detailed errors, possible causes, and solutions.
 
 ### <a id="bootingup-differentkernel-ARVMALAR"></a>Using the Azure repair VM (ALAR scripts)
 
-1. Using the [Azure cloud shell](/azure/cloud-shell/overview), Bash Option, get a repair VM created using the instructions in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - kernel option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#kernel), also shown below.
+1. Using the [Azure Cloud Shell](/azure/cloud-shell/overview), Bash Option, get a repair VM created using the instructions in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - kernel option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#kernel), also shown below.
 
 ```azurecli
 az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username rescue --repair-password 'password!234' --copy-disk-name repairdiskcopy
@@ -108,7 +108,7 @@ az vm repair restore --verbose -g $RGNAME -n $VMNAME
 ```
 
 > [!NOTE]
-> If there is only one kernel version installed in the system, then it will be needed to follow the [Offline Troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue getting all the file systems mounted from a repair VM.
+> If there is only one kernel version installed in the system, then it will be needed to follow the [Offline Troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue mounting all the file systems from a repair VM.
 
 ### <a id="bootingup-differentkernel-ARVMManual"></a>Changing the default kernel version manually
 
@@ -116,7 +116,7 @@ You could also modify the default kernel from a repair VM (inside chroot) using 
 
 >[!NOTE]
 > This same process could be used to change the default kernel version on a running VM.
-> In case of a kernel downgrade rollback, you will want to choose the most recent kernel version instead of the older one.
+> If a kernel downgrade rollback, you'll want to choose the most recent kernel version instead of the older one.
 
 * **RHEL 7, Oracle Linux 7 and CentOS 7**
 
@@ -190,7 +190,7 @@ grubby --default-kernel
     cat /boot/efi/EFI/*/grub.cfg | grep menuentry
     ```
 
-2. Set the new default kernel modifying the GRUB_DEFAULT value in the /etc/default/grub file. The value of 0 is the default value for the most recent kernel version installed in the system. The next available kernel is usually set to "1>2"
+2. Set the new default kernel modifying the GRUB_DEFAULT value in the /etc/default/grub file. The value of 0 is the default value for the most recent kernel version installed in the system. The next available kernel is set to "1>2"
 
 ```bash
 vi /etc/default/grub
@@ -204,8 +204,8 @@ GRUB_DEFAULT="1>2"
 
 ## <a id="missing-initramfs"></a>Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
 
-This error is caused by a recent system update (kernel). It is most commonly seen in RHEL based distributions.
-You can [identify this issue from the Azure serial console](#identify-kernel-boot-issue). You will see any of the following messages:
+This error is caused by a recent system update (kernel). It's most commonly seen in RHEL based distributions.
+You can [identify this issue from the Azure serial console](#identify-kernel-boot-issue). You'll see any of the following messages:
 
 1. _Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)_
 
@@ -269,14 +269,14 @@ az vm repair run --verbose -g $RGNAME -n $VMNAME --run-id linux-alar2 --paramete
 az vm repair restore --verbose -g $RGNAME -n $VMNAME
 ```
 
-3. Once the restore command has been executed, then restart the original VM and validate it was able to boot up.
+3. Once the restore command has been executed, then restart the original VM, and validate it was able to boot up.
 
 ### <a id="missing-initramfs-manual"></a>Regenerate the missing initramfs manually
 
 This method can be used in case you were able to get the virtual machine booted-up using a previous kernel version or inside chroot from the repair/rescue VM.
 
 >[!IMPORTANT]
-> If you are following this process from a repair VM, make sure the [Offline Troubleshooting](#offline-troubleshooting) step 1 has been already followed and these commands are executed inside [chroot](chroot-environment-linux.md).
+> If you're following this process from a repair VM, make sure the [Offline Troubleshooting](#offline-troubleshooting) step 1 has been already followed and these commands are executed inside [chroot](chroot-environment-linux.md).
 
 1. Identify the specific kernel version having issues to boot. You can extract that information from the corresponding kernel panic error, as highlighted in the image below
 
@@ -320,7 +320,7 @@ This method can be used in case you were able to get the virtual machine booted-
 
 ## <a id="attempted-tokill-init"></a>Kernel panic - not syncing: Attempted to kill init!
 
-You can [identify this issue from the Azure serial console](#identify-kernel-boot-issue). You will see the following similar output:
+You can [identify this issue from the Azure serial console](#identify-kernel-boot-issue). You'll see the following similar output:
 
 ```output
 dracut Warning: Boot has failed. To debug this issue add "rdshell" to the kernel command line.
@@ -356,7 +356,7 @@ Below are the detailed possible causes, make sure the commands are executed from
 
 Linux important files and directories are missing, due to a human error, like files accidentally deleted, or file system corruption.
 
-1. Validate the OS disk contents after attaching the copy of the OS disk to a repair VM, and getting the corresponding file systems mounted using the [chroot](chroot-environment-linux.md) article instructions. You can compare the outputs with the ones from a working VM running the same OS version.
+1. Validate the OS disk contents after attaching the copy of the OS disk to a repair VM, and mounting the corresponding file systems using the [chroot](chroot-environment-linux.md) article instructions. You can compare the outputs with the ones from a working VM running the same OS version.
 
 ```bash
 ls -l /
@@ -365,7 +365,7 @@ ls -l /usr/lib64
 ls -lR / | more
 ```
 
-2. You will need to restore the missing files from a backup. For more information see [Recover files from Azure virtual machine backup](/azure/backup/backup-azure-restore-files-from-vm). Depending on the amount of missing files, it might be better to do a full VM restore. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+2. You'll need to restore the missing files from a backup. For more information, see [Recover files from Azure virtual machine backup](/azure/backup/backup-azure-restore-files-from-vm). Depending on the number of missing files, it might be better to do a full VM restore. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 ### <a id="attempted-tokill-init-missinglibraries"></a>Missing important system core libraries and packages
 
@@ -390,7 +390,7 @@ Wrong system wide file permissions were modified by a human error (like someone 
 > [!NOTE]
 > The following process works in Red Hat/CentOS VMs. In the rest of Linux distributions the initial recommendation it's a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-1. To attempt to restore the file permissions, execute the following command after attaching the copy of the OS disk to a repair VM and getting the corresponding file systems mounted using the [chroot](chroot-environment-linux.md) article instructions.
+1. To attempt to restore the file permissions, execute the following command after attaching the copy of the OS disk to a repair VM, and mounting the corresponding file systems using the [chroot](chroot-environment-linux.md) article instructions.
 
 ```bash
 rpm -a --setperms
@@ -409,7 +409,7 @@ chmod 644 *.pub
 
 In cases where `/usr`, `/opt`, `/var`, `/home`, `/tmp` and `/` file systems are spread across different partitions, it's possible the data is inaccessible because of issues at partitions level, which might be caused by mistakes during partition resize operations, or others.
 
-In this scenario, if you have documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and **no further modifications were done on the system**, like new file systems creation, you can try to recreate the partitions using the same original layout with tools like **fdisk** (for MBR partition tables) or **gdisk** (for GPT partition tables) to gain access to the missing file system.
+In this scenario, if you've documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and **no further modifications were done on the system**, like new file systems creation, you can try to recreate the partitions using the same original layout with tools like **fdisk** (for MBR partition tables) or **gdisk** (for GPT partition tables) to gain access to the missing file system.
 
 If that approach doesn't work, the recommended option left, is to perform a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
@@ -428,23 +428,23 @@ touch /.autorelabel
 
 ## <a id="other-kernel-boot-issues"></a>Other kernel related boot issues
 
-There are several kernel panics not being specifically covered in this article. We tried to cover the most common Linux kernel panics we have identified in Azure. For more information about kernel panic scenarios, see the following document [Kernel panic in Azure Linux VMs - Common kernel panic events](/azure/virtual-machines/linux-kernel-panic-troubleshooting#how-to-identify-a-kernel-panic).
+There are several kernel panics not being covered in this article. We tried to cover the most common Linux kernel panics we've identified in Azure. For more information about kernel panic scenarios, see the following document [Kernel panic in Azure Linux VMs - Common kernel panic events](/azure/virtual-machines/linux-kernel-panic-troubleshooting#how-to-identify-a-kernel-panic).
 
-However, in this section, we will address, other important possible kernel panics that might cause no boot or no SSH scenarios.
+However, in this section, we'll address, other important possible kernel panics that might cause no boot or no SSH scenarios.
 
-Make sure any commands are executed from a repair VM, inside a chroot environment as instructed in [Offline Troubleshooting](#offline-troubleshooting), or from the original VM using root privileges or sudo, if you were able to boot it up over a previous kernel version as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
+Make sure you execute any commands from a repair VM, inside a chroot environment, as instructed in [Offline Troubleshooting](#offline-troubleshooting). If you were able to boot the system up over a previous kernel version, these commands can also be executed from the original VM using root privileges or sudo, as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
 
 ### <a id="other-kernel-boot-issues-kernelupgrade"></a> Recent kernel upgrade
 
 If the kernel panics started after a recent kernel upgrade, follow the instructions in [Booting an older kernel version](#bootingup-differentkernel) to boot the VM over the previous kernel version.
 
-You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For further details about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
+You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For more information about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
 ### <a id="other-kernel-boot-issues-kerneldowngrade"></a> Recent kernel downgrade
 
 If the kernel panics started after a recent kernel downgrade process, the recommendation is to return to the latest installed kernel. You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For further details about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
-To get the system booted over the most recent kernel version, you can follow the instructions in section [Changing the default kernel version manually](#bootingup-differentkernel-ARVMManual), but selecting the first kernel listed in the GRUB menu. In case of a manual modification, you could set the GRUB_DEFAULT value to 0 and regenerate the corresponding GRUB configuration file.
+To get the system booted over the most recent kernel version, you can follow the instructions in section [Changing the default kernel version manually](#bootingup-differentkernel-ARVMManual), but selecting the first kernel listed in the GRUB menu. In a manual modification, you could set the GRUB_DEFAULT value to 0 and regenerate the corresponding GRUB configuration file.
 
 ### <a id="other-kernel-boot-issues-kernelmodulechanges"></a> Kernel module changes
 
@@ -485,7 +485,7 @@ cat /etc/modprobe.d/*.conf
 >[!IMPORTANT]
 > Replace **_5.4.0-1077-azure_** with the corresponding kernel version.
 
-In case you need to remove any specific kernel module, the following command can be used, and you can follow also the instructions to [regenerate the initramfs](#missing-initramfs-manual), if needed.
+In case you need to remove any specific kernel module, the following command can be used. Also, follow the instructions to [regenerate the initramfs](#missing-initramfs-manual), if needed.
 
 ```bash
 rmmod <kernel_module_name>
@@ -516,15 +516,15 @@ sysctl -a
 
 ### <a id="other-kernel-boot-issues-missingfiles"></a> Possible missing files
 
-For more information about this kind of issue, refer to [Missing important files and directories](#attempted-tokill-init-missingfilesdirs).
+For more information about this kind of issue, see [Missing important files and directories](#attempted-tokill-init-missingfilesdirs).
 
 ### <a id="other-kernel-boot-issues-wrongfilespermission"></a> Wrong permissions on files
 
-For more information about this kind of issue, refer to [Wrong file permissions](#attempted-tokill-init-wrongpermissions).
+For more information about this kind of issue, see [Wrong file permissions](#attempted-tokill-init-wrongpermissions).
 
 ### <a id="other-kernel-boot-issues-missingpartitions"></a> Missing partitions
 
-For more information about this kind of issue, refer to [Missing partitions](#attempted-tokill-init-missingpartitions).
+For more information about this kind of issue, see [Missing partitions](#attempted-tokill-init-missingpartitions).
 
 ### <a id="other-kernel-boot-issues-kernelbugs"></a> Kernel bugs
 
@@ -535,14 +535,14 @@ You can [identify this issue from the Azure serial console](#identify-kernel-boo
 [5275698.017004] invalid opcode: 0000 [#1] SMP
 ```
 
-This kind of kernel panics are associated with kernel bugs or third party kernel bugs.
+This kind of kernel panic is associated with kernel bugs or third party kernel bugs.
 
-The recommendation in this kind of scenario, is do a search in the vendor KBs, look for known issues in the corresponding kernel version your system is running, and include in your search the kernel BUG string. Below some important vendor resources:
+The recommendation in this kind of scenario, is to do a search in the vendor Knowledge Base, look for known issues in the corresponding kernel version your system is running, and include in your search the kernel BUG string. Below some important vendor resources:
 
 * [Red Hat Kernel Oops Analyzer](https://access.redhat.com/labs/kerneloopsanalyzer/).
-  * This tool is designed to help you diagnose a kernel crash. When you input a text or vmcore-dmesg.txt or a file including one or more kernel oops messages, we will walk you through diagnosing the kernel crash issue.
+  * This tool is designed to help you diagnose a kernel crash. When you input a text or vmcore-dmesg.txt or a file including one or more kernel oops messages, we'll walk you through diagnosing the kernel crash issue.
 * [Red Hat knowledge base](https://access.redhat.com/search/#/).
-  * To get access to the Red Hat resources, it is required to link your Microsoft Azure and Red Hat accounts. For more information, see [How Microsoft Azure Customers Can Access the Red Hat Customer Portal
+  * To get access to the Red Hat resources, it's required to link your Microsoft Azure and Red Hat accounts. For more information, see [How Microsoft Azure Customers Can Access the Red Hat Customer Portal
 ](https://access.redhat.com/articles/3189332).
 * [SUSE knowledge base](https://www.suse.com/es-es/support/kb/help/).
 * [Ubuntu knowledge base](https://wiki.ubuntu.com/KnowledgeBase).
@@ -576,7 +576,7 @@ In general terms, it's always recommended to keep all your systems up to date, t
     apt install linux-azure
     ```
 
-* In case you need to reinstall a specific kernel version, the following command can be used, but you have to make sure you are not booted over the same kernel version you are trying to reinstall. Refer to [Booting the system on an older kernel version](#bootingup-differentkernel) to get further instructions.
+* In case you need to reinstall a specific kernel version, the following command can be used. Make sure you aren't booted over the same kernel version you're trying to reinstall. Refer to [Booting the system on an older kernel version](#bootingup-differentkernel) to get further instructions.
 
   * **RHEL/CentOS/Oracle Linux**
 
@@ -629,7 +629,11 @@ In general terms, it's always recommended to keep all your systems up to date, t
     apt upgrade
     ```
 
-For more information about kernel panics that might be related to application workload changes, application development or application bugs, and performance related issues, see [Kernel panics at run time](/troubleshoot/azure/virtual-machines/linux-kernel-panic-troubleshooting#scenario-2-kernel-panic-at-run-time).
+For more information about kernel panics, that might be related to any of the following items, see [Kernel panics at run time](/troubleshoot/azure/virtual-machines/linux-kernel-panic-troubleshooting#scenario-2-kernel-panic-at-run-time).
+
+* Application workload changes.
+* Application development or application bugs.
+* Performance related issues, etc.
 
 ## Next steps
 
