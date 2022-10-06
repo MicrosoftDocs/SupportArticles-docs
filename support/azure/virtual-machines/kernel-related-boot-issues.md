@@ -57,7 +57,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
 
-2. [Identify the specific kernel related boot issue](#how-to-identify-a-kernel-related-boot-issue). Go to the corresponding section and follow the provided instructions to resolve your specific issue:
+2. [Identify the specific kernel related boot issue](#identify-kernel-boot-issue). Go to the corresponding section and follow the provided instructions to resolve your specific issue:
 
     * [Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)](#missing-initramfs)
     * [Kernel panic - not syncing: Attempted to kill init!](#attempted-tokill-init)
@@ -388,7 +388,7 @@ rpm --verify --all
 Wrong system wide file permissions were modified by a human error (like someone running chmod 777 on / or other important OS file systems).
 
 > [!NOTE]
-> The following process works in Red Hat/CentOS VMs. In the rest of Linux distributions the initial recommendation it's a [restore from backup]((/azure/backup/backup-azure-arm-restore-vms)).
+> The following process works in Red Hat/CentOS VMs. In the rest of Linux distributions the initial recommendation it's a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 1. To attempt to restore the file permissions, execute the following command after attaching the copy of the OS disk to a repair VM and getting the corresponding file systems mounted using the [chroot](chroot-environment-linux.md) article instructions.
 
@@ -403,7 +403,7 @@ chmod 644 *.pub
 >[!NOTE]
 > Please avoid running this command on running production systems.
 
-2. If the issues continue after trying to manually recover the corresponding file permissions, the recommendation is to perform a [restore from backup]((/azure/backup/backup-azure-arm-restore-vms)).
+2. If the issues continue after trying to manually recover the corresponding file permissions, the recommendation is to perform a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 ### <a id="attempted-tokill-init-missingpartitions"></a> Missing partitions
 
@@ -444,7 +444,7 @@ You could also check if there's already a newer kernel version released by the L
 
 If the kernel panics started after a recent kernel downgrade process, the recommendation is to return to the latest installed kernel. You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For further details about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
-To get the system booted over the most recent kernel version, you can follow the instructions in section [Changing the default kernel version manually](#bootingup-differentkernel-arvmmanual), but selecting the first kernel listed in the GRUB menu. In case of a manual modification, you could set the GRUB_DEFAULT value to 0 and regenerate the corresponding GRUB configuration file.
+To get the system booted over the most recent kernel version, you can follow the instructions in section [Changing the default kernel version manually](#bootingup-differentkernel-ARVMManual), but selecting the first kernel listed in the GRUB menu. In case of a manual modification, you could set the GRUB_DEFAULT value to 0 and regenerate the corresponding GRUB configuration file.
 
 ### <a id="other-kernel-boot-issues-kernelmodulechanges"></a> Kernel module changes
 
