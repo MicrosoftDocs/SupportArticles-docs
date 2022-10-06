@@ -397,7 +397,8 @@ rpm -a --setperms
 rpm --setugids --all
 chmod u+s /bin/sudo
 chmod 660 /etc/sudoers.d/*
-chmod 644 *.pub
+chmod 644 /etc/ssh/*.pub
+chmod 640 /etc/ssh/*.key
 ```
 
 >[!NOTE]
