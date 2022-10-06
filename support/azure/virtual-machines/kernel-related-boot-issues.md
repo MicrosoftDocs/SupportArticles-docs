@@ -38,7 +38,7 @@ Memory KASLR using RDRAND RDTSC...
 The serial console is the fastest method to resolve this issue. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you've met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
 
 1. [Identify the specific kernel related boot issue](#identify-kernel-boot-issue).
-2. Using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux), interrupt your VM in the GRUB menu and choose any previous kernel and boot the system using that previous kernel version (not the most recent one). Follow the detailed instructions in [Booting the system on an older kernel version](#bootingup-differentkernel-ASC) for further information.
+2. Using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux), interrupt your VM at the GRUB menu and choose any previous kernel to boot it up. Follow the detailed instructions in [Booting the system on an older kernel version](#bootingup-differentkernel-ASC) for further information.
 
 3. The VM will boot up fine over the previous kernel version. At this point, the issue isn't yet fixed. Go to the corresponding section and follow the provided instructions to resolve your specific issue:
 
@@ -72,7 +72,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
-4. If there're important kernel related contents, the entire /boot partition, or other important contents are missing, and they can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
+4. If there are important kernel related contents, the entire /boot partition, or other important contents are missing, and they can't be recovered, we recommend restoring the VM from a backup. For more information, see [How to restore Azure VM data in Azure portal](/azure/backup/backup-azure-arm-restore-vms).
 
 See the following sections for detailed errors, possible causes, and solutions.
 
@@ -255,7 +255,7 @@ In this kind of event, the initramfs file it's not properly generated or the GRU
 
 ### <a id="missing-initramfs-alar"></a>Regenerate the missing initramfs using the Azure Repair VM ALAR scripts
 
-1. Using the [Azure cloud shell](/azure/cloud-shell/overview), Bash Option, get a repair VM created using the instructions in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#initrd), also shown below.
+1. Using the [Azure Cloud Shell](/azure/cloud-shell/overview), Bash Option, get a repair VM created using the instructions in [Use Azure Linux Auto Repair (ALAR) to fix a Linux VM - initrd option](/troubleshoot/azure/virtual-machines/repair-linux-vm-using-alar#initrd), also shown below.
 
 ```azurecli
 az vm repair create --verbose -g $RGNAME -n $VMNAME --repair-username rescue --repair-password 'password!234' --copy-disk-name repairdiskcopy
@@ -432,7 +432,7 @@ There are several kernel panics not being covered in this article. We tried to c
 
 However, in this section, we'll address, other important possible kernel panics that might cause no boot or no SSH scenarios.
 
-Make sure you execute any commands from a repair VM, inside a chroot environment, as instructed in [Offline Troubleshooting](#offline-troubleshooting). If you were able to boot the system up over a previous kernel version, these commands can also be executed from the original VM using root privileges or sudo, as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
+Make sure you execute any commands from a repair VM, inside a chroot environment, as instructed in [Offline Troubleshooting](#offline-troubleshooting). If you the system is already booted up over a previous kernel version, these commands can also be executed from the original VM using root privileges or sudo, as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
 
 ### <a id="other-kernel-boot-issues-kernelupgrade"></a> Recent kernel upgrade
 
@@ -442,7 +442,7 @@ You could also check if there's already a newer kernel version released by the L
 
 ### <a id="other-kernel-boot-issues-kerneldowngrade"></a> Recent kernel downgrade
 
-If the kernel panics started after a recent kernel downgrade process, the recommendation is to return to the latest installed kernel. You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For further details about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
+If the kernel panics started after a recent kernel downgrade process, the recommendation is to return to the latest installed kernel. You could also check if there's already a newer kernel version released by the Linux distribution vendor and install it. For more information about how to install the latest kernel version, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
 To get the system booted over the most recent kernel version, you can follow the instructions in section [Changing the default kernel version manually](#bootingup-differentkernel-ARVMManual), but selecting the first kernel listed in the GRUB menu. In a manual modification, you could set the GRUB_DEFAULT value to 0 and regenerate the corresponding GRUB configuration file.
 
@@ -629,7 +629,7 @@ In general terms, it's always recommended to keep all your systems up to date, t
     apt upgrade
     ```
 
-For more information about kernel panics, that might be related to any of the following items, see [Kernel panics at run time](/troubleshoot/azure/virtual-machines/linux-kernel-panic-troubleshooting#scenario-2-kernel-panic-at-run-time).
+For more information about kernel panics that might be related to any of the following items, see [Kernel panics at run time](/troubleshoot/azure/virtual-machines/linux-kernel-panic-troubleshooting#scenario-2-kernel-panic-at-run-time).
 
 * Application workload changes.
 * Application development or application bugs.
