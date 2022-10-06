@@ -116,7 +116,7 @@ You may see an error for **The user name or password is incorrect** when attempt
   winrm set winrm/config/client/auth @{Basic="true"}
   ```
   > [!NOTE]
-  > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client`
+  > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client` \
   > **AllowBasic** allows either `1` (*Enabled*) or `0` (*Disabled*) decimal values.
 
 ## Network name resolution errors
