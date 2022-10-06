@@ -432,7 +432,7 @@ There are several kernel panics not being covered in this article. We tried to c
 
 However, in this section, we'll address, other important possible kernel panics that might cause no boot or no SSH scenarios.
 
-Make sure you execute any commands from a repair VM, inside a chroot environment, as instructed in [Offline Troubleshooting](#offline-troubleshooting). If you the system is already booted up over a previous kernel version, these commands can also be executed from the original VM using root privileges or sudo, as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
+Make sure you execute any commands from a repair VM, inside a chroot environment, as instructed in [Offline Troubleshooting](#offline-troubleshooting). If the system is already booted up over a previous kernel version, these commands can also be executed from the original VM using root privileges or sudo, as instructed in the [Online Troubleshooting](#online-troubleshooting) section.
 
 ### <a id="other-kernel-boot-issues-kernelupgrade"></a> Recent kernel upgrade
 
