@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UNIX/Linux agent discovery
 description: This article helps troubleshoot common errors that may be encountered during the discovery process of UNIX or Linux computers.
-ms.date: 06/22/2020
+ms.date: 10/06/2022
 ---
 # Troubleshoot UNIX/Linux agent discovery in Operations Manager
 
@@ -99,6 +99,25 @@ When certificate verification fails, you typically receive an error that resembl
 **Resolution**
 
 To fix the issue, verify the user account by inspecting the StdErr output in the error details to identify the cause of the failure. Also verify the sudo privilege configuration for the account used for certificate signing.
+
+## The user name or password is incorrect
+
+You may see an error for **The user name or password is incorrect** when attempting to discover UNIX/Linux Agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
+
+  **Possible Causes**
+  
+  - This may be due to Basic Authentication being set to `false` on one or more Management Servers in the UNIX/Linux Resource Pool when the UNIX/Linux Agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings with the following command: `winrm get winrm/config/client`
+  - Verify you are typing the username or password correctly.
+
+  **Resolution**
+  
+  You can update the WinRM configuration to allow Basic Authentication with the following command, or via Group Policy:
+  ```cmd
+  winrm set winrm/config/client/auth @{Basic="true"}
+  ```
+  > [!NOTE]
+  > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client`
+  > **AllowBasic** allows either `1` (*Enabled*) or `0` (*Disabled*) decimal values.
 
 ## Network name resolution errors
 
