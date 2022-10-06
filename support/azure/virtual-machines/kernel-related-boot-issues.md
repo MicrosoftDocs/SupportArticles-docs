@@ -220,7 +220,7 @@ You can [identify this issue from the Azure serial console](#identify-kernel-boo
 [  301.027122]  [<ffffffff8298b7f6>] mount_root+0x53/0x56
 [  301.027122]  [<ffffffff8298b935>] prepare_namespace+0x13c/0x174
 [  301.027122]  [<ffffffff8298b412>] kernel_init_freeable+0x222/0x249
-[  301.027122]  [<ffffffff8298ab28>] ? initcall_blacklist+0xb0/0xb0
+[  301.027122]  [<ffffffff8298ab28>] ? initcall_blcklist+0xb0/0xb0
 [  301.027122]  [<ffffffff82372350>] ? rest_init+0x80/0x80
 [  301.027122]  [<ffffffff8237235e>] kernel_init+0xe/0x100
 [  301.027122]  [<ffffffff82395df7>] ret_from_fork_nospec_begin+0x21/0x21
