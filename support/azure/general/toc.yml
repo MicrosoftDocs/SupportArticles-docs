@@ -109,6 +109,8 @@
       items:
   - name: HPC Pack
     items:
+    - name: Failed Linux compute node agent extension installation
+      href: troubleshoot-install-failure-hpc-pack-linux-node-agent.md
     - name: HPC jobs are stuck in canceling mode, and new jobs don't start
       href: job-stuck-canceling-mode.md
     - name: HPC Management Service fails to start after restoring database
