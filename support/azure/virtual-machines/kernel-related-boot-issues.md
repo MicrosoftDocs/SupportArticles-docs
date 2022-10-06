@@ -86,7 +86,7 @@ See the following sections for detailed errors, possible causes, and solutions.
 2. Once the serial console connection resumes you will see a countdown counter at the top left corner of the serial console screen. Start pressing the `Escape` key to interrupt your VM at the GRUB menu.
 3. Use the `down arrow key` to select any previous kernel version.
 
-:::image type="content" source="media/kernel-related-boot-issues/GettingtoGrub-01.gif" alt-text="Animated GIF shows the process of interrupting the boot process at GRUB menu level to choose an older kernel to boot the system on.":::
+:::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel-01.gif" alt-text="Animated GIF shows the process of interrupting the boot process at GRUB menu level to choose an older kernel to boot the system on.":::
 
 > [!NOTE]
 > If there's only one kernel version listed in the GRUB menu, then it will be needed to follow the [Offline Troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue from a repair VM.
