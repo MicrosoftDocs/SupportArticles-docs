@@ -4,6 +4,7 @@ description: VM Agent fails to process extensions, causing some extensions to st
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: linux
 ---
 # Azure Linux VM extensions stop running

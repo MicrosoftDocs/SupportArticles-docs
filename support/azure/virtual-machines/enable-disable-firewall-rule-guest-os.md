@@ -6,8 +6,8 @@ documentationcenter: ''
 author: Deland-Han
 manager: dcscontentpm
 tags: ''
-
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.topic: troubleshooting
 ms.collection: windows
 ms.workload: infrastructure-services

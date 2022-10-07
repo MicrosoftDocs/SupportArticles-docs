@@ -8,6 +8,7 @@ manager: dcscontentpm
 editor: v-jesits
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-performance
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
