@@ -88,19 +88,8 @@ When certificate verification fails, you typically receive an error that resembl
   To verify this, confirm that all management servers in the resource pool used for discovery trust each other server's certificate.
 
   For more information about how to manage resource pools for UNIX and Linux computers, see [Managing Resource Pools for UNIX and Linux Computers](/previous-versions/system-center/system-center-2012-R2/hh287152(v=sc.12)).
-
-### Certificate signing operation was not successful
-
-**Possible causes**
-
-- The user account specified for discovery has insufficient privileges to perform file operations involved in signing.
-- Sudo elevation privileges for the user account specified for discovery wasn't correctly configured.
-
-**Resolution**
-
-To fix the issue, verify the user account by inspecting the StdErr output in the error details to identify the cause of the failure. Also verify the sudo privilege configuration for the account used for certificate signing.
-
-## The user name or password is incorrect
+  
+  ## The user name or password is incorrect
 
 You may see an error for **The user name or password is incorrect** when attempting to discover UNIX/Linux Agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
 
@@ -118,6 +107,17 @@ You may see an error for **The user name or password is incorrect** when attempt
   > [!NOTE]
   > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client` \
   > **AllowBasic** allows either `1` (*Enabled*) or `0` (*Disabled*) decimal values.
+
+### Certificate signing operation was not successful
+
+**Possible causes**
+
+- The user account specified for discovery has insufficient privileges to perform file operations involved in signing.
+- Sudo elevation privileges for the user account specified for discovery wasn't correctly configured.
+
+**Resolution**
+
+To fix the issue, verify the user account by inspecting the StdErr output in the error details to identify the cause of the failure. Also verify the sudo privilege configuration for the account used for certificate signing.
 
 ## Network name resolution errors
 
