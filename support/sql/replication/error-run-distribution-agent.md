@@ -23,9 +23,16 @@ On an instance of Microsoft SQL Server that is installed on a Windows Server -ba
 
 ## Cause
 
-When you use the `Distribution Profile for OLEDB streaming` profile for the Distribution Agent or you use OLEDB streaming in a custom profile, the Distribution Agent creates temporary files in the following directory:
+When you use the `Distribution Profile for OLEDB streaming` profile for the Distribution Agent or you use OLEDB streaming in a custom profile, Prior to SQL Server 2019, the Distribution Agent creates temporary files in the following directory:
 
 `C:\Program Files\Microsoft SQL Server\<nnn>\COM`
+
+>[!NOTE] In SQL Server 2019 and higher, these temporary files are now created under the account that is running 
+> the  Distribution Agent, so instead of C:\Program Files\Microsoft SQL Server\<nnn>\COM, 
+> the files would instead be in C:\Users\DistributionAgentAccount\AppData\Temp
+> were DistributionAgentAccount is the account under which the Distrbution Agent is running.
+
+
 
 If the account that is running SQL Server Agent does not have write access to the COM folder, the Distribution Agent will fail when it is running as a job. If you run the Distribution Agent from a command line by using an account that does not have write access to the COM folder, the same failure will occur.
 
