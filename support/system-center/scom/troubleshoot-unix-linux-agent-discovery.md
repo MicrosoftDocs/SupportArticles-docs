@@ -91,22 +91,22 @@ When certificate verification fails, you typically receive an error that resembl
   
   ## The user name or password is incorrect
 
-You may see an error for **The user name or password is incorrect** when attempting to discover UNIX/Linux Agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
+  You may see an error for **The user name or password is incorrect** when attempting to discover UNIX/Linux Agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
 
-  **Possible Causes**
-  
-  - This may be due to Basic Authentication being set to `false` on one or more Management Servers in the UNIX/Linux Resource Pool when the UNIX/Linux Agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings with the following command: `winrm get winrm/config/client`
-  - Verify you are typing the username or password correctly.
+    **Possible Causes**
 
-  **Resolution**
-  
-  You can update the WinRM configuration to allow Basic Authentication with the following command, or via Group Policy:
-  ```cmd
-  winrm set winrm/config/client/auth @{Basic="true"}
-  ```
-  > [!NOTE]
-  > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client` \
-  > **AllowBasic** allows either `1` (*Enabled*) or `0` (*Disabled*) decimal values.
+    - This may be due to Basic Authentication being set to `false` on one or more Management Servers in the UNIX/Linux Resource Pool when the UNIX/Linux Agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings with the following command: `winrm get winrm/config/client`
+    - Verify you are typing the username or password correctly.
+
+    **Resolution**
+
+    You can update the WinRM configuration to allow Basic Authentication with the following command, or via Group Policy:
+    ```cmd
+    winrm set winrm/config/client/auth @{Basic="true"}
+    ```
+    > [!NOTE]
+    > The above command sets a **DWORD (32-bit) Value** (*AllowBasic*) in the following registry key: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client` \
+    > **AllowBasic** allows either `1` (*Enabled*) or `0` (*Disabled*) decimal values.
 
 ### Certificate signing operation was not successful
 
