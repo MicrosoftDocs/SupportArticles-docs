@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a SubnetIsFull error so that I can upgrade the cluster successfully.
 ---
 
@@ -16,7 +17,7 @@ This article discusses how to identify and resolve the "SubnetIsFull" error that
 
 Here's an example of the error message:
 
->Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message=’\<SUBNET NAME>\ with address prefix \<PREFIX>\ doesn't have enough capacity for IP addresses.' Details=[]
+>Failed to scale node pool \<AGENT POOL NAME>\' in Kubernetes service '\<NAME>\'. Error: VMSSAgentPoolReconciler retry failed: Code='SubnetIsFull' Message='\<SUBNET NAME>\ with address prefix \<PREFIX>\ doesn't have enough capacity for IP addresses.' Details=[]
 
 ## Prerequisites
 
@@ -30,7 +31,7 @@ An AKS cluster upgrade fails, and you receive a "SubnetIsFull" error message.
 
 ## Cause
 
-This error occurs if your cluster doesn’t have enough IP addresses to create a new node.
+This error occurs if your cluster doesn't have enough IP addresses to create a new node.
 
 When you plan to do an upgrade or scaling operation, consider the number of required IP addresses. If the IP address range that you configured in the cluster supports only a fixed number of nodes, the upgrade or scaling operation will fail. For more information, see the "Plan IP addressing for the cluster" section of [Configure Azure CNI networking in Azure Kubernetes Service (AKS)](/azure/aks/configure-azure-cni#plan-ip-addressing-for-your-cluster).
 

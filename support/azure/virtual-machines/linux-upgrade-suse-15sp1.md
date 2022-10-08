@@ -7,6 +7,7 @@ author: amkarmak
 manager: dcscontentpm
 tags: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

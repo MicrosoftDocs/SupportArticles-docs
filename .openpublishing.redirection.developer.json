@@ -3606,6 +3606,16 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/windows-hardware/drivers/getmydeviceportname-returns-incorrect-port-name-usb-scanner.md",
+      "redirect_url": "https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-hardware/drivers/cant-scan-usb-scanner-after-win11-restarts.md",
+      "redirect_url": "https://support.microsoft.com/topic/september-20-2022-kb5017383-os-build-22000-1042-preview-62753265-68e9-45d2-adcb-f996bf3ad393",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/deployment/unknown-device-vmbus-virtual-machine.md",
       "redirect_url": "/troubleshoot/windows-server/virtualization/unknown-device-vmbus-virtual-machine",
       "redirect_document_id": true

@@ -5,7 +5,8 @@ ms.date: 5/25/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the 429 Too Many Requests errors that I'm receiving so that I can successfully use my Kubernetes cluster configured without exceeding the assigned quota for my Azure subscription.
 ---

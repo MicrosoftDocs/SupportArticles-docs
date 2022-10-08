@@ -38,6 +38,12 @@ The following guide provides guidance for migration of domains by using the Acti
 
 ## Known issues and limitations
 
+- The Password Migration notification package _PWMIG.DLL_ is not compatible with LSA Protection.
+
+    Consider a scenario where a customer uses the ADMT tool for migrating the users from one domain to another domain. The user's migration works if uses the option with "Generate complex passwords", however it fails with below error for the option "Migrate passwords".
+
+    Cause: The Password Migration notification package is not compatible with [LSA Protection](/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection) (RunAsPPL=1).
+
 - Installing PES on Windows Server 2012 and later
 
     Old ADMT guides don't mention the need to run the pedmig.msi file at an elevated command prompt. The latest ADMT guide mentions this requirement. The latest guide is dated February 26, 2018, and is available from the Microsoft Download Center.

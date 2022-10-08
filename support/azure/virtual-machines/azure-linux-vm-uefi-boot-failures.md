@@ -6,6 +6,7 @@ ms.author: saimsh
 ms.topic: troubleshooting
 ms.date: 06/27/2022
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ---
 

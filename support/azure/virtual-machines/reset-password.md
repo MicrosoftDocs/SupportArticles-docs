@@ -8,6 +8,7 @@ manager: dcscontentpm
 editor: 'v-jesits'
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

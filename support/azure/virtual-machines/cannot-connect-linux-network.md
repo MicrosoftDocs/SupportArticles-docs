@@ -5,6 +5,7 @@ ms.date: 07/21/2020
 author: genlin
 ms.author: genli
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: linux
 ms.reviewer: 
 ---

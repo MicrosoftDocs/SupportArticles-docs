@@ -5,7 +5,8 @@ ms.date: 6/10/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-azure-storage-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why attach and detach operations are slow so that I can successfully use an Azure disk for storage on my Azure Kubernetes Service (AKS) clusters.
 ---

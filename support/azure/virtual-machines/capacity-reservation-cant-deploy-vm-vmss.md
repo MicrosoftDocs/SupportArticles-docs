@@ -4,6 +4,7 @@ description: The following article discusses why you may not be able to deploy v
 ms.date: 08/26/2021
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-capacity-reservation
 ms.collection: windows
 ---
 
