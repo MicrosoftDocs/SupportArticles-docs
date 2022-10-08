@@ -181,7 +181,7 @@ If the parameter was set to **EnforceAllowList**, only clients listed in **EwsAl
 Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this command to add it:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="*SchedulingService*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -199,7 +199,7 @@ If the parameter was set to **EnforceAllowList**, only clients listed in **EwsAl
 Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this Exchange PowerShell command to add it:
 
 ```powershell
-Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
+Set-CASMailbox <delegator's UserPrincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -257,7 +257,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run this command to add them:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing EWS.
@@ -275,7 +275,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run this Exchange PowerShell command to add them:
 
 ```powershell
-Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
+Set-CASMailbox <UserPincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing EWS.
@@ -334,7 +334,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this command to add it:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -352,7 +352,7 @@ If the parameter was set to **EnforceAllowList**, only the clients that are list
 Make sure **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this Exchange PowerShell command to add it:
 
 ```powershell
-Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
+Set-CASMailbox <user's UserPrincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.
