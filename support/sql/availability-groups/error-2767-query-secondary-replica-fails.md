@@ -52,7 +52,7 @@ To work around the issue, use one of the following methods as required:
     
 - Azure SQL Managed Instance
 
-    If the issue occurs in a Business Critical service tier Azure SQL Managed Instance, run the [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/invoke-azsqlinstancefailover) cmdlet to failover to a read only secondary node:
+    If the issue occurs in a Business Critical service tier Azure SQL Managed Instance, run the [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/invoke-azsqlinstancefailover) cmdlet to fail over to a read only secondary node:
 
     ```powershell
     Invoke-AzSqlInstanceFailover -ResourceGroupName "<ResourceGroupName>" -Name "<ManagedInstanceName>" -ReadableSecondary
