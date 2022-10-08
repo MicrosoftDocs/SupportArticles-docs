@@ -7,6 +7,7 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: linux
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-linux

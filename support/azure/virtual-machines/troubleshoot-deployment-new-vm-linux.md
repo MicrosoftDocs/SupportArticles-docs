@@ -8,6 +8,7 @@ author: srijang
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.collection: linux
 ms.workload: na
 ms.tgt_pltfrm: vm-linux
