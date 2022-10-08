@@ -70,6 +70,8 @@
     items:
     - name: AAC audio isn't playing for MPEG-2 TS file in Windows 8.1
       href: AAC-audio-not-playing-for-MPEG-2-TS-file-Windows-8-1.md
+    - name: Converting PDF file to Bitmap image misses part of the image
+      href: converting-pdf-file-to-bitmap-image.md
     - name: Can't print to XPS Document Writer
       href: print-app-xps-document-writer.md
     - name: DirectShow doesn't connect to a downstream filter
