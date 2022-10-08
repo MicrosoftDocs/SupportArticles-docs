@@ -46,18 +46,18 @@ To resolve this issue, unlink OneDrive. Before you do this, make sure that OneDr
 
 3. On the **Account** tab, select **Unlink this PC** > **Unlink account**.
 
-> [!IMPORTANT]
-> At this point you should consider deleting OneDrive cached credentials.
-> Select the Start button, type "credentials," and then select Credentials Manager > Select the Windows Credentials tab > Under Generic Credentials, remove any entries containing “OneDrive Cached Credentials”
-> 
-> You may also consider removing the OneDrive folder via the registry before proceeding with re-linking the account. 
-> Before you modify the regsitry, [back up the registry](https://support.microsoft.com/en-us/help/322756) for restoration in case problems occur.
-> 1. Start Registry Editor.  
-> 2. Locate the following registry entry:  
-
-    `HKEY_CURRENT_USER\Software\Microsoft\OneDrive`
-
-> 3.Right-click **OneDrive**, and then select **Delete**.  
+   > [!IMPORTANT]
+   > At this point you should consider deleting OneDrive cached credentials.
+   >
+   > 1. Select **Start**, type *credentials*, and then select **Credential Manager** from the results.
+   > 2. Select the **Windows Credentials** tab. Under **Generic Credentials**, remove any entries that contain *OneDrive Cached Credentials*.
+   > 
+   > You may also consider removing the OneDrive folder through the registry before re-linking the account. 
+   > Before you modify the regsitry, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+   >
+   > 1. Start Registry Editor.  
+   > 2. Locate the `HKEY_CURRENT_USER\Software\Microsoft\OneDrive` registry key.
+   > 3. Right-click **OneDrive**, and then select **Delete**.  
 
 4. When the **Set up OneDrive** window opens, close it instead of selecting **Sign in**.
 
