@@ -56,7 +56,7 @@ If your wrap build still fails after you've verified that your wrap project has 
 
 ## Issue 2 - Wrap button is disabled for my app
 
-You can only wrap apps that you have **Edit** permissions for. Make sure the you have **Edit** permissions for the app you want to wrap and try again.
+You can only wrap apps that you have **Edit** permissions for. Make sure that you have **Edit** permissions for the app you want to wrap and try again.
 
 ## Issue 3 - Can't save my project or trigger a wrap build
 
