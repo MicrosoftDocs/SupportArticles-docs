@@ -8,13 +8,6 @@ search.appverid: MET150
 # Troubleshooting Windows device enrollment errors in Intune
 
 This article helps Intune administrators understand and troubleshoot error messages when enrolling Windows devices in Microsoft Intune. See [Troubleshoot device enrollment in Microsoft Intune](troubleshoot-device-enrollment-in-intune.md) for additional, general troubleshooting scenarios.
-
-> [!IMPORTANT]
-> The following scenario isn't supported:
-> 
-> - Your organizaion has two on-premises domains, Domain A and Domain B. There is no connection between Domain A and Domain B.
-> - Domain B is connected to your Azure AD tenant through Azure AD Connect.
-> - You have devices that are joined to Domain A. You try to join these devices by using Device Registration Service (DRS) or Workplace Join and set up MDM enrollment in domain B.
  
 ## Error hr 0x8007064c: The machine is already enrolled
 
