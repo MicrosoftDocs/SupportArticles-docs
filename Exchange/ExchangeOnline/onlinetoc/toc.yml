@@ -1,5 +1,5 @@
 - name: Exchange Online Troubleshooting
-  href: ../exchange-online-welcome.md
+  href: ../exchange-online-welcome.yml
   items:
     - name: Administration
       items:

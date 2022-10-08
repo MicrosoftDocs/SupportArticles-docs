@@ -1,8 +1,8 @@
 ---
-title: Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+title: Search-AdminAuditLog and Search-MailboxAuditLog with parameters return empty results
 description: Workaround for an issue that returns empty results when you run Search-AdminAuditLog and Search-MailboxAuditLog cmdlets with parameters.
-author: simonxjx
-ms.author: v-six
+author: cloud-writer
+ms.author: meerak
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -10,7 +10,8 @@ localization_priority: Normal
 ms.custom: 
   - Exchange Server
   - CSSTroubleshoot
-ms.reviewer: excontent, dkhrebin, genli, christys
+  - CI 165075
+ms.reviewer: batre, dkhrebin, nourdinb
 appliesto: 
   - Exchange Server 2019 Enterprise Edition
   - Exchange Server 2019 Standard Edition
@@ -21,17 +22,17 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Search-AdminAuditLog and Search-MailboxAuditLog with parameter return empty results
+# Search-AdminAuditLog and Search-MailboxAuditLog with parameters return empty results
 
 _Original KB number:_ &nbsp;3054391
 
 ## Symptoms
 
-When you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets in Exchange Management Shell together with a **Cmdlets** or **Parameters** parameter to filter the results, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
+In Exchange Management Shell, you run the [Search-AdminAuditLog](/powershell/module/exchange/search-adminauditlog) or [Search-MailboxAuditLog](/powershell/module/exchange/search-mailboxauditlog) cmdlets together with a **Cmdlets** or **Parameters** parameter to search a mailbox and filter the search results. In this scenario, an empty or incomplete result set is returned. Even if you run the `Search-AdminAuditLog` cmdlet without parameters, the full results might not be returned as expected.
 
 ## Resolution
 
-To fix this issue, install the following Cumulative Updates (CUs) as appropriate:
+To fix this issue, install the following cumulative updates (CUs), as appropriate:
 
 [Cumulative Update 12 for Exchange Server 2019](https://support.microsoft.com/help/5011156) or [a later cumulative update](/Exchange/new-features/build-numbers-and-release-dates?view=exchserver-2019&preserve-view=true) for Exchange Server 2019
 
@@ -39,30 +40,37 @@ To fix this issue, install the following Cumulative Updates (CUs) as appropriate
 
 ## Workaround
 
-You might be able to work around this issue depending on the language settings on the server where the searched mailbox is located (active copy of database containing the mailbox you are running search for). On the server, open the **Welcome screen and new user accounts settings** dialog box in the **Region** settings and check the **Format** setting for **Welcome screen**. If **Format** is not set to **English (United States)**, follow these steps to set the language and regional settings for the system and network service accounts:
+If you still see the issue after you install the appropriate cumulative update, check the language format for system accounts. You might have a secondary regional language set as the language format on the server that contains the mailbox that you’re searching.
 
-1. Set English (United States) as the primary language.
-    1. In **Control Panel**, open the **Language** item.
-    1. Add the language of **English (United States)**.
-    1. Select **Options** for the added language.
-    1. Select **Download and install language pack** if this option is available.
-    1. Select **Make this the primary language**.
-1. Copy the regional settings.
-    1. In **Control Panel**, open the **Region** item.
-    1. Select **English (United States)** in the **Format** list.
-    1. Open the **Administrative** tab, and select **Copy settings**.
-    1. In the **Welcome screen and new user accounts settings** dialog box, select **Welcome screen and system accounts**, and then select **OK**.
+For example, the following screenshot shows the language format for system accounts set to a secondary language, German (Switzerland), instead of the primary language, German (Germany).
 
-        > [!NOTE]
-        >
-        > - The system accounts include the network service account.
-        > - You can revert the **Format** setting for **Current user** to the original value as long as **Format** for **Welcome screen** is set to **English (United States)**.
+:::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-new-user-accounts-settings.png" alt-text="Screenshot of the Welcome screen and new user accounts settings dialog box with the language format for the welcome screen highlighted.":::
 
-        :::image type="content" source="media/search-adminauditlog-mailboxauditlog-return-no-result/welcome-screen-user-accounts-settings.png" alt-text="Screenshot that shows the Welcome screen and system accounts option is selected.":::
+If a secondary regional language is set as the language format, update the format for the system and network service accounts to one of the following primary languages:
 
-> [!NOTE]
-> The MSExchangeDelivery service may not start together with Exchange Server. If the service doesn't start, follow these steps:
->
-> 1. Change the logon account of the service to **Local System**.
-> 1. Revert the logon account to **Network Service**.
-> 1. Start the service.
+- Arabic (United Arab Emirates)
+- English (United States)
+- German (Germany)
+- French (France)
+- Korean (Korea)
+- Spanish (Spain)
+
+**Note**: This workaround has been determined to work for these languages only. It doesn’t work for the primary languages Italian (Italy) and Korean (North Korea).
+
+To update the language format, follow these steps:
+
+1. In Control Panel, select **Region**.  
+1. On the **Formats** tab, select a primary regional language format, and then select **Apply**.
+1. On the **Administrative** tab, select **Copy settings**.
+1. In the **Welcome screen and new user accounts settings** dialog box, select **Welcome screen and system accounts**, and then select **OK**.
+
+After you complete this step, you don’t have to restart the server or any processes or services.
+
+**Notes**:
+
+- The system account includes the network service account. Therefore, these updates apply to both accounts.  
+- If you want, you can revert the format of the language setting for Current user to its original value. However, the format of the language setting for Welcome screen must remain set to one of the primary languages that are compatible with this workaround.
+- Usually, the MSExchangeDelivery service starts together with Exchange Server. If the service doesn’t start, follow these steps:
+  1. Change the logon account of the service to Local System.
+  1. Revert the logon account to Network Service.
+  1. Start the service.
