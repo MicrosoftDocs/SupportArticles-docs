@@ -7,6 +7,7 @@ documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.collection: windows
 ms.devlang: azurecli
 ms.topic: troubleshooting

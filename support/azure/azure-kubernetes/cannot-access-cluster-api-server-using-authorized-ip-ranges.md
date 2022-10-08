@@ -5,7 +5,8 @@ ms.date: 6/8/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot access issues to the cluster API server when I use authorized IP address ranges so that I can work with my Azure Kubernetes Service (AKS) cluster successfully.
 ---

@@ -8,6 +8,7 @@ manager: noambi
 editor: v-jsitser
 tags: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux

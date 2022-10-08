@@ -5,7 +5,8 @@ ms.date: 05/20/2022
 author: genlin
 ms.author: genli
 ms.reviewer: chiragpa, akscsscic
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-azure-storage-issues
 ---
 # Errors when mounting an Azure file share
 

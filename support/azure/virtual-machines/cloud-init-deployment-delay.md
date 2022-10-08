@@ -5,6 +5,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.date: 2/3/2022
 ms.reviewer: srijangupta
 ---

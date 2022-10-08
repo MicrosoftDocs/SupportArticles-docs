@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a PodDrainFailure error so that I can upgrade the cluster successfully.
 ---
 
@@ -46,7 +47,7 @@ To resolve this issue, use one of the following solutions.
 
 ## Solution 3: Delete the pods that can't be drained
 
-1. Delete the pods that can’t be drained. **Note**: If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
+1. Delete the pods that can't be drained. **Note**: If the pods were created by a deployment or StatefulSet, they'll be controlled by a ReplicaSet. If that's the case, you might have to delete the deployment or StatefulSet. Before you do that, we recommend that you make a backup: `kubectl get <kubernetes-object> <name> -n <namespace> -o yaml > backup.yaml`.
 
 2. Try again to upgrade the AKS cluster to the same version that you tried to upgrade to previously. This process will trigger a reconciliation.
 

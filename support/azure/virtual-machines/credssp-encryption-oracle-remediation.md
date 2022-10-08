@@ -4,6 +4,7 @@ description: Fixes an issue that you receive a CredSSP encryption oracle remedia
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ---
 

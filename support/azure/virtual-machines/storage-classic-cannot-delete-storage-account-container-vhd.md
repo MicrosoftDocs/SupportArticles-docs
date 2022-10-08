@@ -5,6 +5,7 @@ services: storage
 author: AngshumanNayakMSFT
 tags: top-support-issue,azure-service-management
 ms.service: virtual-machines
+ms.subservice: vm-disk
 ms.topic: troubleshooting
 ms.date: 01/11/2019
 ms.author: annayak

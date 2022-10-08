@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "AADSTS7000215: Invalid client secret is provided" error message so that I can connect successfully to the Azure Kubernetes Service (AKS) API server.
 ---
