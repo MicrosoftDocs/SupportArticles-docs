@@ -15,11 +15,11 @@ This article provides a solution for a "Client secret key is expired" error that
 
 When deploying or terminating VMs, you may encounter an error like the following:
 
-> Azure.Cell.CreateLoadBalancerCreating load balancer (AADSTS7000222: **The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security**: `https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials` Trace ID: b7ec8707-eb15-42b8-a565-dd39ba303200 Correlation ID: \<Correlation ID> Timestamp: 2020-10-26 10:44:49Z
+> Azure.Cell.CreateLoadBalancerCreating load balancer (AADSTS7000222: **The provided client secret keys are expired. Visit the Azure Portal to create new keys for your app, or consider using certificate credentials for added security**: `https://docs.microsoft.com/azure/active-directory/develop/active-directory-certificate-credentials` Trace ID: \<Trace ID> Correlation ID: \<Correlation ID> Timestamp: \<Date Time>
 
 When you validate the credential in the CycleCloud portal, you see the following error message:
 
-> Invalid Azure credentials provided: AADSTS7000215: Invalid client secret is provided. Trace ID 6c8dbfc3-51c9-4a9a-b667-9b827e3c0200 Correlation ID: \<Correlation ID> Timestamp: 2020-10-27 22:39:49Z
+> Invalid Azure credentials provided: AADSTS7000215: Invalid client secret is provided. Trace ID \<Trace ID> Correlation ID: \<Correlation ID> Timestamp: \<Date Time>
 
 :::image type="content" source="media/invalid-client-secret/validate-client-secret.png" alt-text="Screenshot that shows the error message when validation fails."lightbox="media/invalid-client-secret/validate-client-secret.png":::
 
