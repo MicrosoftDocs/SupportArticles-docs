@@ -88,7 +88,7 @@ If you can't sign in to your wrapped mobile App, verify that:
 
 ## Other issues in wrap
 
-For all other issues, or if your issue persists after following these steps, reach out to [Power Apps Mobile Support](pamobsup@microsoft.com), include a repro video and/or screenshots, and a session ID, which can be acquired in the following ways:
+For all other issues, or if your issue persists after following these steps, reach out to Power Apps Mobile Support (pamobsup@microsoft.com), include a repro video and/or screenshots, and a session ID, which can be acquired in the following ways:
 
 - On the sign-in screen, go to lower right to select the gear icon, and then select **Session Details**.
 - In an opened app, you can shake your device, and then select **Session Details**.
