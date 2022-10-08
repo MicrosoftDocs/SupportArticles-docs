@@ -15,7 +15,7 @@ appliesto:
   - OneDrive for Business
 search.appverid: 
   - MET150
-ms.date: 9/29/2022
+ms.date: 10/8/2022
 ---
 # Error 0x8004def4 when signing in to OneDrive
 
