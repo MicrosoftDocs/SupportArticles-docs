@@ -16,9 +16,6 @@ ms.date: 09/10/2022
 ms.author: saimsh
 
 ---
-
-<!---Recommended: Remove all the comments in this template before you sign-off or merge to the main branch.--->
-
 # Troubleshoot Linux VM boot issues due to fstab errors <!-- Write a title descriptive enough to cover the specific issue to troubleshoot. This H1 is required and is the only one to exist. -->
 The Linux filesystem table, fstab is a configuration table which is designed to configure rules where specific file systems are detected and mounted in an orderly manner during the system boot process. 
 This article discusses multiple conditions where a wrong fstab configuration can lead to boot issue and provides troubleshooting guidance.
