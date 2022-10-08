@@ -93,7 +93,7 @@ When certificate verification fails, you typically receive an error that resembl
 
 You may see the error when trying to discover UNIX/Linux agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
 
-**Possible Causes**
+**Possible causes**
 
 - Basic authentication is set to `false` on one or more management servers in the UNIX/Linux resource pool when the UNIX/Linux agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings by running the following command: `winrm get winrm/config/client`.
 - The username or password is incorrect.
