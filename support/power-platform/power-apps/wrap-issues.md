@@ -1,110 +1,94 @@
 ---
-title: Troubleshooting wrap issues in Power Apps
-description: Provides possible resolutions for wrap issues in Power Apps
-ms.reviewer: 
+title: Troubleshoot wrap issues
+description: Provides resolutions for wrap issues in Power Apps.
+ms.reviewer: makolomi
 ms.topic: troubleshooting
-ms.date: 09/28/2022
+ms.date: 10/08/2022
 ms.subservice: 
 ---
-# Troubleshooting wrap issues in Power Apps
+# Troubleshoot wrap issues in Power Apps
 
-This guide helps you resolve the most common warp issues in Power Apps.
+This article helps you resolve the most common warp issues in Microsoft Power Apps.
 
-## Wrap Build is failing
+## Wrap build is failing
 
-### Verify that your images are in a PNG format 
+#### Verify that your images are in a PNG format
 
-Ensure that the images your are using in wrap are in a PNG format. Using images in any format other than PNG in wrap will cause the build to fail. Please use an image converter to save your images as .PNG files or ensure that your original image files are in a PNG format instead. 
+Ensure that the images you're using in wrap are in a PNG format. Using images in any format other than PNG in wrap will cause the build to fail. Use an image converter to save your images as .png files or ensure that your original image files are in a PNG format instead.
 
 > [!IMPORTANT]
-> Note that manually changing your image file extension from .JPEG or any other formats to a .PNG will not automaticallt re-format the image to a PNG format.
+> Manually changing your image file extension from .jpeg or any other formats to .png will not automatically reformat the image to a PNG format.
 
+#### Verify that your App Center is correctly configured
 
-### Verify that your App Center is correctly configured 
-Your App Center link must be created as an App within an Org, and not a standalone App. 
+Your App Center link must be created as an App within an organization, and not a standalone App.
 
-   :::image type="content" source="media/wrap-issues/BuildFail_1.png" alt-text="Screenshot of how to add a new Organization in App Center.":::
+   :::image type="content" source="media/wrap-issues/add-new-organization.png" alt-text="Screenshot of how to add a new organization in App Center.":::
 
+Check that the access token you've created is correct.
 
-Check that the access token you have created is correct. 
+- Correct: Select your created **App** > **Settings** > **App API Tokens**
+- Incorrect: **Account Settings** > **User API Tokens**
 
-- Correct: Click on your created App -> Settings -> App API Tokens 
+Verify that your iOS or Android App created has the right settings configurations.
 
-- Incorrect: Account Settings -> User API Tokens 
+- iOS: OS=Custom
+- Android: OS=Android, Platform=React Native
 
-Verify that your iOS or Android App created has the right settings configurations. 
+For more information, see steps 8 and 9 in [Create an App Center container for your mobile app](/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
-- iOS: OS=Custom 
+#### Verify that your Keyvault configuration is correct
 
-- Android: OS=Android, Platform=React Native 
+Make sure that Azure Service Principal was created and the role was added correctly. For more information, see steps 1 and 2 in [Set up KeyVault for automated signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
 
- 
-For more information, refer to Steps 8 and 9 in [Create an App Center container for your mobile app](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
+Ensure that your Keyvault contains all necessary certificates, secrets, and tags for iOS and/or Android:
 
-### Verify that your Keyvault configuration is correct 
-Make sure that Azure Service Principal was created and the role added correctly. Refer to Steps 1-2 in [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing) for the details.
+- iOS: two tags, one certificate, and one secret
+- Android: one tag and one certificate
 
-Ensure your Keyvault contains all necessary certificates, secrets and tags for iOS and/or Android: 
+For more information, see [/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
 
-- iOS: 2 Tags, 1 Certificate, 1 Secret  
+#### Try again if you have all the proper configurations
 
-- Android: 1 Tag, 1 Certificate 
-
-For more information, please refer to [Set up KeyVault for automated signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing). 
-
-### If you have all the proper configurations, try again. 
-If wrap build keeps failing after have you have verified that your wrap project has all the proper configurations, please reach out to our support alias. See details at the end of this document. 
+If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to our support alias. See details at the end of this article.
 
 ## Wrap button is disabled for my App
-You can only wrap Apps that you have **Edit** permissions for. Please make sure you have **Edit** permisions for the App you want to wrap and try again.
 
-## Cannot save my project or trigger a wrap Build 
-- Please update to latest wrap solution version and try again. 
+You can only wrap Apps that you have **Edit** permissions for. Make sure you have **Edit** permissions for the App you want to wrap and try again.
 
-- Please ensure there are no UI validation errors blocking Save or Build submission. 
+## Can't save my project or trigger a wrap build
 
-## Cannot install a wrapped Mobile App on a device 
-Make sure that you have signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more details on code signing, please please refer to: 
+To resolve this issue, you can:
 
-- [Setup Keyvault for Automated Signing](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
+- Update to latest wrap solution version and try again.
+- Ensure that no UI validation errors block the Save or Build submission.
 
-- [Code sign for iOS](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-ios)
+## Can't install a wrapped mobile App on a device
 
-- [Code sign for Android](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/code-sign-android) 
+Make sure that you've signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more information on code signing, see:
 
-Verify that your mobile device meets these [minimum requirements](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/overview#software-and-device-requirements). 
+- [Setup Keyvault for Automated Signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
+- [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
+- [Code sign for Android](/power-apps/maker/common/wrap/code-sign-android)
 
+Verify that your mobile device meets these [minimum requirements](/power-apps/maker/common/wrap/overview#software-and-device-requirements).
 
-## Cannot sign in to a wrapped Mobile App or cannot see data  
+## Can't sign in to a wrapped mobile App or can't see data
 
-If you cannot sign in to your wrapped Mobile App, please verify that: 
+If you can't sign in to your wrapped mobile App, verify that:
 
-- Your AAD app is properly configured 
+- Your Microsoft Azure Active Directory (AAD) app is properly configured.
+- All API permissions for the App have been added correctly. For more information on how to see and configure API permissions for the App, see the below screenshot and [Configure API Permissions](/power-apps/maker/common/wrap/how-to#configure-api-permissions).
 
-- All API permissions for the App have been added correctly. Please refer to the image below and see [Configure API Permissions](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#configure-api-permissions) for more details on how to see and configure API permissions for the App. 
+  :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot of API permissions for the App." lightbox="media/wrap-issues/api-permissions.png":::
 
+- Verify that admin `Add-AdminAllowedThirdPartyApps` script was run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment).
+- Make sure that your AAD app type is Multi-tenant. Under your AAD app's Authentication tab, Supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant**.
+- Ensure that the proper Redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information on Redirect URIs, see [these steps](/power-apps/maker/common/wrap/how-to#redirect-uri-format).
 
-:::image type="content" source="media/wrap-issues/SignInFail_1.png" alt-text="Screenshot of API permissions for the App.":::
-
-
-
-- Verify that admin **Add-AdminAllowedThirdPartyApps** script was run successfully. See [Allow registered apps in your environment](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment) for more information. 
-
- 
-
-- Make sure your AAD app type is Multi-tenant. Under your AAD app’s Authentication tab, Supported account types should be “Accounts in any organizational directory (Any Azure AD directory – Multitenant”. 
-
-- Ensure that the proper Redirect URIs have been created for iOS and Android. For Android, please check that the hash is provided correctly. For more information on Redirect URIs, please see [these steps](https://docs.microsoft.com/en-us/power-apps/maker/common/wrap/how-to#redirect-uri-format). 
-
- 
-
- 
 ## Other issues in wrap
 
-For all other issues, or if your issue persists after following these steps, please reach out to support alias pamobsup@microsoft.com, include a repro video and/or screenshots, as well as a session id, which can be acquired in the following ways: 
+For all other issues, or if your issue persists after following these steps, reach out to [Power Apps Mobile Support](pamobsup@microsoft.com), include a repro video and/or screenshots, and a session ID, which can be acquired in the following ways:
 
-
-
-- Login Screen: Bottom Right Gear Icon -> Session Details 
-
-- App Opened:  Shake Device -> Session Details 
+- On the sign-in screen, go to lower right to select the gear icon, and then select **Session Details**.
+- In an opened app, you can shake your device, and then select **Session Details**.
