@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot UNIX/Linux agent discovery
 description: This article helps troubleshoot common errors that may be encountered during the discovery process of UNIX or Linux computers.
-ms.date: 06/22/2020
+ms.date: 10/06/2022
 ---
 # Troubleshoot UNIX/Linux agent discovery in Operations Manager
 
@@ -88,6 +88,30 @@ When certificate verification fails, you typically receive an error that resembl
   To verify this, confirm that all management servers in the resource pool used for discovery trust each other server's certificate.
 
   For more information about how to manage resource pools for UNIX and Linux computers, see [Managing Resource Pools for UNIX and Linux Computers](/previous-versions/system-center/system-center-2012-R2/hh287152(v=sc.12)).
+  
+### The user name or password is incorrect
+
+You may see the error when trying to discover UNIX/Linux agents. The failure may occur during the certificate verification step while discovering a UNIX/Linux machine.
+
+**Possible causes**
+
+- Basic authentication is set to `false` on one or more management servers in the UNIX/Linux resource pool when the UNIX/Linux agent is not domain joined and cannot utilize Kerberos authentication. You can verify the current [WinRM](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management) settings by running the following command: `winrm get winrm/config/client`.
+- The username or password is incorrect.
+
+**Resolution**
+
+You can update the WinRM configuration to allow Basic authentication by running the following command, or via Group Policy:
+
+```cmd
+winrm set winrm/config/client/auth @{Basic="true"}
+```
+
+> [!NOTE]
+> The above command sets a DWORD (32-bit) registry value (**AllowBasic**) in the following registry key:
+>
+> `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WinRM\Client`
+>
+> **AllowBasic** allows either `1` (Enabled) or `0` (Disabled) decimal values.
 
 ### Certificate signing operation was not successful
 
