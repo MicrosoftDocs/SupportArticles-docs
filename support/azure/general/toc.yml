@@ -104,8 +104,8 @@
       items:
   - name: CycleCloud
     items:
-    - name: CycleCloud content coming soon
-      href: welcome-general.yml
+    - name: Error "Client secret key is expired"
+      href: invalid-client-secret.md
       items:
   - name: HPC Pack
     items:
