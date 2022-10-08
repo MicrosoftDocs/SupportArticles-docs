@@ -16,59 +16,98 @@ metadata:
 landingContent:
 
  # Card
-  - title: HTTP Status Code
+  - title: Common HTTP Error Codes
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: HTTP status code list
             url: www-administration-management/http-status-code.md
-          - text: HTTP 400 - Bad Request
-            url: www-administration-management/http-bad-request-response-kerberos.md
-          - text: HTTP Error 403.14 - Forbidden
-            url: health-diagnostic-performance/http-403-14-forbidden-webpage.md
-          - text: HTTP 404 - File Not Found
+          - text: HTTP error 500.19 - Internal Server Error
+            url: health-diagnostic-performance/http-error-500-19-webpage.md            
+          - text: HTTP error 404 - File Not Found
             url: health-diagnostic-performance/troubleshoot-404-file-not-found-error.md
-          - text: HTTP Error 405.0 - Method Not Allowed
+          - text: HTTP error 405.0 - Method Not Allowed
             url: health-diagnostic-performance/http-error-405-website.md
-          - text: HTTP Error 500.0 - Internal Server Error
+          - text: HTTP error 501 - Not Implemented
+            url: health-diagnostic-performance/http-error-501-not-implemented.md
+          - text: HTTP error 403.6
+            url: development/403-6-forbidden-error.md
+          - text: HTTP error 500.0 - Internal Server Error
             url: www-administration-management/http-error-500-when-you-visit-web-site.md
-          - text: HTTP Error 500.19 - Internal Server Error
-            url: health-diagnostic-performance/http-error-500-19-webpage.md
-
-  - title: Development
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Recover a private key of a deleted certificate
-            url: development/assign-certificate-private-key.md
-          - text: Add a custom HTTP response header to a web site
-            url: development/add-http-response-header-web-site.md
-          - text: Make a GET request in C#
-            url: development/make-get-request.md
-
-  - title: Authentication and Authorization
-    linkLists:
-      - linkListType: how-to-guide
-        links:
-          - text: Default permissions and user rights
-            url: www-authentication-authorization/default-permissions-user-rights.md
-          - text: Can't import SSL private key certificate file
-            url: www-authentication-authorization/cannot-import-ssl-pfx-local-certificate.md
-          - text: Troubleshoot Kerberos failures
-            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
-          - text: Understand application pool identities
-            url: www-authentication-authorization/understanding-identities.md
-          - text: Configure intermediate certificates
-            url: www-authentication-authorization/configure-intermediate-certificates.md
 
   - title: Administration and Management
     linkLists:
       - linkListType: how-to-guide
         links:
-          - text: Configure the default document
-            url: www-administration-management/configure-default-document-iis.md
-          - text: Fail to request access to remote resources
-            url: www-administration-management/remote-resources-fails-requested-iis.md
-          - text: Enable SSL for customers
-            url: www-administration-management/enable-ssl-all-customers.md
-            
+          - text: Add a custom HTTP response header to a web site
+            url: development/add-http-response-header-web-site.md
+          - text: Failed to generate the certificate request
+            url: site-behavior-performance/failed-generate-certificate-request.md
+          - text: Processor affinity doesn't work on NUMA
+            url: iisadmin-service-inetinfo/processor-affinity-not-work.md
+
+  - title: Authentication and Authorization
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Kerberos failures
+            url: www-authentication-authorization/troubleshoot-kerberos-failures-ie.md
+          - text: Kerberos double-hop authentication with Microsoft Edge (Chromium)
+            url: www-authentication-authorization/kerberos-double-hop-authentication-edge-chromium.md
+          - text: Configure Many-to-One client certificate mappings
+            url: www-authentication-authorization/configure-many-to-one-client-mappings.md
+          - text: IIS authenticates browser clients
+            url: www-authentication-authorization/iis-authenticates-browser-client.md
+
+  - title: SSL Certificates
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Recover a private key of a deleted certificate
+            url: development/assign-certificate-private-key.md
+          - text: Configure intermediate certificates
+            url: www-authentication-authorization/configure-intermediate-certificates.md
+
+  - title: IIS Server Configuration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Default permissions and user rights
+            url: www-authentication-authorization/default-permissions-user-rights.md
+          - text: Http.sys registry settings for Windows
+            url: iisadmin-service-inetinfo/httpsys-registry-windows.md
+
+  - title: Event Tracing for Windows
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: IIS ETW logs diagnostic
+            url: health-diagnostic-performance/etw-log-diagnostic.md
+
+  - title: WinHTTP Tracing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: WinHTTP SDP package information
+            url: www-service-svchost/disable-winhttp-tracing-sdp.md
+
+  - title: IIS Express
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Impersonation fails when UAC is enabled
+            url: www-authentication-authorization/impersonation-fails-uac-enabled.md
+
+  - title: FTP Service
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Changes in Microsoft FTP 7.5
+            url: ftp-service-svchost-inetinfo/changes-in-ftp-7-5.md
+
+  - title: Development
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Upload files to a WebDav directory with the WinINet API
+            url: development/upload-to-webdav-directory-fails.md
