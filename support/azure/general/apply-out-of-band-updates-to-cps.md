@@ -3,7 +3,7 @@ title: Apply out-of-band updates to the Microsoft Cloud Platform System Standard
 description: Describes the procedures to manually update the Microsoft Cloud Platform System Standard solution.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
 ms.reviewer: justini, paulcha, chengwei, jarrettr, twooley
 ---

@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-upgrade-operations
 #Customer intent: As an Azure Kubernetes Services (AKS) user, I want to troubleshoot an Azure Kubernetes Service cluster upgrade that failed because of a QuotaExceeded error code so that I can upgrade the cluster successfully.
 ---
 
@@ -30,7 +31,7 @@ An AKS cluster upgrade fails, and you receive a "QuotaExceeded" error message.
 
 ## Cause
 
-The issue occurs if the quota is reached. Your subscription doesn’t have available resources that are required for upgrading.
+The issue occurs if the quota is reached. Your subscription doesn't have available resources that are required for upgrading.
 
 ## Solution
 

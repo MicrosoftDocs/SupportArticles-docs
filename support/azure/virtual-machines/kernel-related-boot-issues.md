@@ -4,6 +4,7 @@ description: Provides solutions to an issue in which a Linux virtual machine (VM
 ms.date: 04/29/2022
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ---
 # How to recover an Azure Linux virtual machine from kernel-related boot issues

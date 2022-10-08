@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: rissing, chiragpa, erbookbi
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-create-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error code so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 # Troubleshoot the OperationNotAllowed or PublicIPCountLimitReached quota error
@@ -33,7 +34,7 @@ When you try to create an AKS cluster, you receive the following error message:
 >
 > (Minimum) New Limit Required: 208.
 >
-> Submit a request for Quota increase at `https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/<parameter-id>` by specifying parameters listed in the ‘Details’ section for deployment to succeed. Please read more about quota limits at `https://learn.microsoft.com/azure/azure-supportability/per-vm-quota-requests`"
+> Submit a request for Quota increase at `https://aka.ms/ProdportalCRP/#blade/Microsoft_Azure_Capacity/UsageAndQuota.ReactView/Parameters/<parameter-id>` by specifying parameters listed in the 'Details' section for deployment to succeed. Please read more about quota limits at `https://learn.microsoft.com/azure/azure-supportability/per-vm-quota-requests`"
 
 Or, you receive the following error message:
 
@@ -55,7 +56,7 @@ You've exhausted the quota for a resource in an SKU's region.
 
 Typically, these error messages provide a link to create a support ticket to increase the quota for that SKU. In most cases, these requests are approved automatically, and the increased quota will be available in a short time.
 
-If you don’t have the link to request a quota increase, make the request in the Azure portal, as follows:
+If you don't have the link to request a quota increase, make the request in the Azure portal, as follows:
 
 1. In the [Azure portal](https://portal.azure.com), search for and select **Quotas**.
 
