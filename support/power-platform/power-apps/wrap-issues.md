@@ -14,14 +14,14 @@ This article helps you resolve the most common wrap issues in Microsoft Power Ap
 
 If your wrap build fails, you can take the following steps to solve the issue.
 
-#### Verify that your images are in a PNG format
+#### Step 1: Verify that your images are in a PNG format
 
 Ensure that the images you're using in wrap are in a PNG format. Using images in any format other than PNG in wrap will cause the build to fail. Use an image converter to save your images as .png files or ensure that your original image files are in a PNG format instead.
 
 > [!IMPORTANT]
 > Manually changing your image file extension from .jpeg or any other formats to .png will not automatically reformat the image to a PNG format.
 
-#### Verify that your App Center is correctly configured
+#### Step 2: Verify that your App Center is correctly configured
 
 Your App Center link must be created as an app within an organization, and not a standalone app. The following screenshot shows how to create a new organization.
 
@@ -39,7 +39,7 @@ Verify that the iOS or Android app that you created has the right settings confi
 
 For more information, see steps 8 and 9 in [Create an App Center container for your mobile app](/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
-#### Verify that your Keyvault configuration is correct
+#### Step 3: Verify that your Keyvault configuration is correct
 
 Make sure that Azure Service Principal was created and the role was added correctly. For more information, see steps 1 and 2 in [Set up KeyVault for automated signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
 
@@ -48,9 +48,9 @@ Ensure that your Keyvault contains all necessary certificates, secrets, and tags
 - iOS: two tags, one certificate, and one secret
 - Android: one tag and one certificate
 
-For more information, see [/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
+For more information, see [Set up KeyVault for automated signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
 
-#### Try again if you have all the proper configurations
+#### Step 4: Try again if you have all the proper configurations
 
 If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to our support alias. See details at the end of this article.
 
