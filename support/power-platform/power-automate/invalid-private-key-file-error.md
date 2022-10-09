@@ -43,7 +43,7 @@ To correct the private key file format (OpenSSH Format), make sure that the text
 ----END ___ PRIVATE KEY----
 ```
 
-You can also use PuTTY Key Generator (PuttyGen.exe) to convert the key file to the OpenSSH format. To do that:
+You can also use PuTTY Key Generator (_PuttyGen.exe_) to convert the key file to the OpenSSH format. To do that:
 
 1. Load your existing private key file in PuTTY Key Generator.
 2. Select **Conversions** > **Export OpenSSH key** (not the **force new file format** option).
