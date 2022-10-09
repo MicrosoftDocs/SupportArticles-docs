@@ -420,7 +420,7 @@ If this approach doesn't work, perform a [restore from backup](/azure/backup/bac
 
 Wrong SELinux permissions might prevent the system to access important files. To resolve this issue, follow these steps:
 
-1. To verify if the system has issues due to wrong SELinux permissions, start the system with SELinux disabled by adding the **selinux=0** kernel option to the GRUB Linux16 line.
+1. To verify if the system has issues due to wrong SELinux permissions, start the system with SELinux disabled by adding the **selinux=0** kernel option to the GRUB linux16 line.
 
 2. If the system is able to boot up, run the following command to trigger a SELinux relabel at boot time and reboot the system:
 
