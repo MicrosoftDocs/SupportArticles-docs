@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ---
-# How to recover an Azure Linux virtual machine from kernel-related boot issues
+# Azure Linux virtual machine fails to boot after applying kernel changes
 
 This article provides solutions to an issue in which a Linux virtual machine (VM) can't boot after applying kernel changes.
 
@@ -39,13 +39,13 @@ The serial console is the fastest method to resolve the boot issue. It allows yo
 
 1. [Identify the specific kernel-related boot issue](#identify-kernel-boot-issue).
 
-2. Use the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux) to interrupt your VM at the GRUB menu and select any previous kernel to boot it up. For more information, see [Boot the system on an older kernel version](#bootingup-differentkernel-ASC).
+2. Use the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux) to interrupt your VM at the GRUB menu and select any previous kernel to boot it up. For more information, see [Boot system on older kernel version](#bootingup-differentkernel-ASC).
 
 3. Go to the corresponding section to resolve the specific kernel-related boot issue:
 
     - [Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)](#missing-initramfs)
     - [Kernel panic - not syncing: Attempted to kill init!](#attempted-tokill-init)
-    - [Other kernel related boot issues](#other-kernel-boot-issues)
+    - [Other kernel-related boot issues](#other-kernel-boot-issues)
 
 4. After the kernel-related boot issue is resolved, restart the VM so it can boot over the latest kernel version.
 
@@ -67,7 +67,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
     - [Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)](#missing-initramfs)
     - [Kernel panic - not syncing: Attempted to kill init!](#attempted-tokill-init)
-    - [Other kernel related boot issues](#other-kernel-boot-issues)
+    - [Other kernel-related boot issues](#other-kernel-boot-issues)
 
 4. After the kernel-related boot issue is resolved, perform the following actions:
 
