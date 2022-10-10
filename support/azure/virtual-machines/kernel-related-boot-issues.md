@@ -208,7 +208,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
 
 ## <a id="missing-initramfs"></a>Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)
 
-This error occurs because of a recent system update (kernel). It's most commonly seen in RHEL based distributions.
+This error occurs because of a recent system update (kernel). It's most commonly seen in RHEL-based distributions.
 You can [identify this issue from the Azure serial console](#identify-kernel-boot-issue). You'll see any of the following error messages:
 
 1. "Kernel panic - not syncing: VFS: Unable to mount root fs on unknown-block(0,0)"
@@ -236,7 +236,7 @@ You can [identify this issue from the Azure serial console](#identify-kernel-boo
 
     > error: file '/initramfs-3.10.0-1160.36.2.el7.x86_64.img' not found.
 
-This kind of error indicates that the initramfs file isn't generated or the GRUB configuration file has the initrd entry missing after a patching process or a GRUB manual misconfiguration.
+This kind of error indicates that the initramfs file isn't generated, the GRUB configuration file has the initrd entry missing after a patching process, or a GRUB manual misconfiguration.
 
 Before rebooting a server, we recommend validating the GRUB configuration and `/boot` contents if there's a kernel update by running one of the following commands. It's important to ensure the update is done and there are no missing initramfs files.
 
@@ -361,7 +361,7 @@ See the following sections for cause details and solutions. Make sure that the c
 
 Important Linux files and directories are missing due to a human error. For example, files are accidentally deleted or file system corruption.
 
-1. Validate the OS disk contents after attaching the copy of the OS disk to a repair VM, and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md). You can compare the outputs with the ones from a working VM running the same OS version.
+1. Validate the OS disk contents after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md). You can compare the outputs with the ones from a working VM running the same OS version.
 
     ```bash
     ls -l /
@@ -540,7 +540,7 @@ For more information about this kind of issue, see [Missing partitions](#attempt
 
 This kind of kernel panic is associated with kernel bugs or third-party kernel bugs.
 
-To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG string, and look for known issues in the corresponding kernel version your system is running. Here are some important vendor resources:
+To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG string and look for known issues in the corresponding kernel version your system is running. Here are some important vendor resources:
 
 - [Red Hat Kernel Oops Analyzer](https://access.redhat.com/labs/kerneloopsanalyzer/)
 
