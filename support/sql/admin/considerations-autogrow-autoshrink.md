@@ -1,7 +1,7 @@
 ---
 title: Considerations for the autogrow and autoshrink
 description: This article provides information regarding what happens when you select the autogrow and autoshrink for your environment.
-ms.date: 09/19/2022
+ms.date: 10/10/2022
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
@@ -95,7 +95,7 @@ In SQL Server, you can enable [instant file initialization](/sql/relational-data
 
 - The growth increment of your transaction log must be large enough to stay ahead of the needs of your transaction units. Even with autogrow turned on, you can receive a message that the transaction log is full, if it can't grow fast enough to satisfy the needs of your query.
 
-- SQL Server doesn't constantly test for databases that have hit the configured threshold for autoshrink. Instead, it looks at the available databases and finds the first one that is configured to autoshrink. It checks that database and shrinks that database if needed. Then, it waits several minutes before checking the next database that is configured for autoshrink. In other words, SQL Server doesn't check all databases at once and shrink them;all at once. It will work through the databases in a round robin fashion to stagger out the load over a period of time. Therefore, depending on how many databases you have configured to autoshrink on a particular SQL Server instance, it might take several hours from the time the database hits the threshold until it actually shrinks.
+- SQL Server doesn't constantly test for databases that have hit the configured threshold for autoshrink. Instead, it looks at the available databases and finds the first one that is configured to autoshrink. It checks that database and shrinks that database if needed. Then, it waits several minutes before checking the next database that is configured for autoshrink. In other words, SQL Server doesn't check all databases at once and shrink them all at once. It will work through the databases in a round robin fashion to stagger out the load over a period of time. Therefore, depending on how many databases you have configured to autoshrink on a particular SQL Server instance, it might take several hours from the time the database hits the threshold until it actually shrinks.
 
 ## References
 
