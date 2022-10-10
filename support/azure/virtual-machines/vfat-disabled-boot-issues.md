@@ -29,11 +29,11 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-vfat-disabled-boot-issue"></a>How to identify boot issue
 
-Use the Azure portal to view the serial console log output of the VM in the boot diagnostics pane, serial console pane, or [AZ CLI](/cli/azure/serial-console#az-serial-console-connect). If VFAT is disabled, you'll experience the following issues:
+To identify a boot issue, use the [AZ CLI](/cli/azure/serial-console#az-serial-console-connect) or Azure portal to view the serial console log output of the VM in the boot diagnostics pane, serial console pane. If VFAT is disabled, you'll experience the following issues:
 
 ### Failed to mount /boot/efi
 
-When the */boot/efi* file system fails to get mounted, the following one or more outputs are displayed:
+When the */boot/efi* file system fails to get mounted, one or more of the following outputs are displayed:
 
 - Output 1
 
@@ -321,57 +321,57 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 3. Regenerate the initramfs file by using the following corresponding command:
 
-- Run the command from the Azure serial console:
-
-  - **RHEL/CentOS/Oracle Linux 7/8**
-
-    ```bash
-    dracut -f /boot/initramfs-$(uname -r).img $(uname -r)
-    ```
-
-  - **SLES 12/15**
-
-    ```bash
-    dracut -f /boot/initrd-$(uname -r) $(uname -r)
-    ```
-
-  - **Ubuntu 18.04**
-
-    ```bash
-    mkinitramfs -k -o /boot/initrd.img-$(uname -r)
-    ```
-
-- Run the command from a repair/rescue VM:
-
-    > [!IMPORTANT]
-    > Make sure the step 1 in [Offline troubleshooting](#offline-troubleshooting) is followed and these commands are executed inside [chroot](chroot-environment-linux.md).
-
-  - **RHEL/CentOS/Oracle Linux 7/8**
-
-    ```bash
-    dracut -f /boot/initramfs-3.10.0-1160.59.1.el7.x86_64.img 3.10.0-1160.59.1.el7.x86_64
-    ```
-
-    > [!IMPORTANT]
-    > Replace `3.10.0-1160.59.1.el7.x86_64` with the corresponding kernel version.
-
-  - **SLES 12/15**
-
-    ```bash
-    dracut -f /boot/initrd-5.3.18-150300.38.53-azure 5.3.18-150300.38.53-azure
-    ```
-
-    > [!IMPORTANT]
-    > Replace `5.3.18-150300.38.53-azure` with the corresponding kernel version.
-
-  - **Ubuntu 18.04**
-
-    ```bash
-    mkinitramfs -k -o /boot/initrd.img-5.4.0-1077-azure
-    ```
-
-    > [!IMPORTANT]
-    > Replace `5.4.0-1077-azure` with the corresponding kernel version.
+    - Run the command from the Azure serial console:
+    
+      - **RHEL/CentOS/Oracle Linux 7/8**
+    
+        ```bash
+        dracut -f /boot/initramfs-$(uname -r).img $(uname -r)
+        ```
+    
+      - **SLES 12/15**
+    
+        ```bash
+        dracut -f /boot/initrd-$(uname -r) $(uname -r)
+        ```
+    
+      - **Ubuntu 18.04**
+    
+        ```bash
+        mkinitramfs -k -o /boot/initrd.img-$(uname -r)
+        ```
+    
+    - Run the command from a repair/rescue VM:
+    
+        > [!IMPORTANT]
+        > Make sure the step 1 in [Offline troubleshooting](#offline-troubleshooting) is followed and these commands are executed inside [chroot](chroot-environment-linux.md).
+    
+      - **RHEL/CentOS/Oracle Linux 7/8**
+    
+        ```bash
+        dracut -f /boot/initramfs-3.10.0-1160.59.1.el7.x86_64.img 3.10.0-1160.59.1.el7.x86_64
+        ```
+    
+        > [!IMPORTANT]
+        > Replace `3.10.0-1160.59.1.el7.x86_64` with the corresponding kernel version.
+    
+      - **SLES 12/15**
+    
+        ```bash
+        dracut -f /boot/initrd-5.3.18-150300.38.53-azure 5.3.18-150300.38.53-azure
+        ```
+    
+        > [!IMPORTANT]
+        > Replace `5.3.18-150300.38.53-azure` with the corresponding kernel version.
+    
+      - **Ubuntu 18.04**
+    
+        ```bash
+        mkinitramfs -k -o /boot/initrd.img-5.4.0-1077-azure
+        ```
+    
+        > [!IMPORTANT]
+        > Replace `5.4.0-1077-azure` with the corresponding kernel version.
 
 ## Next steps
 
