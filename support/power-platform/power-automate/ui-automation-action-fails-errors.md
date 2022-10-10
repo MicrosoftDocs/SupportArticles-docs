@@ -3,7 +3,7 @@ title: Failed to get element or window or element or window wasn't found error
 description: Provides a resolution to solve the error message that you receive when a UI automation action fails in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 9/21/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # UI automation action fails with "Failed to get element/window" or "Element/Window wasn't found" error
 
