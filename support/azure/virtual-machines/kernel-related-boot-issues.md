@@ -390,7 +390,7 @@ Important system core libraries, files, or packages are deleted from the system 
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
-Wrong system-wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
 
