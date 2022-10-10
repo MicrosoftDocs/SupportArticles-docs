@@ -557,7 +557,10 @@ To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG str
 
 We recommend keeping all your systems up to date to rule out any possible bugs already fixed in the most recent kernel versions. For more information, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
-If further analysis is required, configure and enable kdump to generate a core dump.
+If further analysis is required from the vendor, configure and enable kdump to generate a core dump:
+* [Kdump configuration in Red Hat based VMs](https://access.redhat.com/solutions/3091051).
+* [Kernel crash dump configuration in Ubuntu VMs](https://ubuntu.com/server/docs/kernel-crash-dump).
+* [Kernel core dump configuration in SLES VMs](https://www.suse.com/support/kb/doc/?id=000016171)
 
 ### <a id="other-kernel-boot-issues-kernelupdate"></a> Kernel update process
 
