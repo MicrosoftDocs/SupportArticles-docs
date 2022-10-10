@@ -553,7 +553,7 @@ To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG str
 
 - [SUSE knowledge base](https://www.suse.com/support/kb/help/)
 
-- [Ubuntu knowledge base](https://wiki.ubuntu.com/KnowledgeBase)
+- [Ubuntu knowledge base](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupdate)
 
 We recommend keeping all your systems up to date to rule out any possible bugs already fixed in the most recent kernel versions. For more information, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
