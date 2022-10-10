@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot wrap issues
-description: Provides resolutions for the issues that are related to the wrap feature in Power Apps.
+description: Provides resolutions for issues related to the wrap feature in Power Apps.
 ms.reviewer: makolomi
 ms.topic: troubleshooting
 ms.date: 10/08/2022
@@ -19,20 +19,20 @@ If your wrap build fails, you can take the following steps to solve the issue.
 Ensure that the images you're using in wrap are in a PNG format. Using images in any format other than PNG in wrap will cause the build to fail. Use an image converter to save your images as .png files or ensure that your original image files are in a PNG format instead.
 
 > [!IMPORTANT]
-> Manually changing your image file extension from .jpeg or any other formats to .png will not automatically reformat the image to a PNG format.
+> Manually changing your image file extension from .jpeg or any other format to .png will not automatically reformat the image to a PNG format.
 
 #### Step 2: Verify that your App Center is correctly configured
 
-Your App Center link must be created as an app within an organization, and not a standalone app. The following screenshot shows how to create a new organization.
+Your App Center link must be created as an app within an organization and not a standalone app. The following screenshot shows how to create a new organization.
 
    :::image type="content" source="media/wrap-issues/add-new-organization.png" alt-text="Screenshot of how to add a new organization in App Center.":::
 
 Check that the access token you've created is correct.
 
-- The correct way to check the access token: Select the app that your created, select **Settings**, and then select **App API Tokens**.
+- The correct way to check the access token: Select the app you created, and then select **Settings** > **App API Tokens**.
 - The incorrect way to check the access token: **Account Settings** > **User API Tokens**.
 
-Verify that the iOS or Android app that you created has the right configurations.
+Verify that the iOS or Android app you created has the right configurations.
 
 - iOS: OS = Custom
 - Android: OS = Android, Platform = React Native
@@ -56,7 +56,7 @@ If your wrap build still fails after you've verified that your wrap project has 
 
 ## Issue 2 - Wrap button is disabled for my app
 
-You can only wrap apps that you have **Edit** permissions for. Make sure that you have **Edit** permissions for the app you want to wrap and try again.
+You can only wrap apps you have edit permissions for. Make sure you have edit permissions for the app you want to wrap and try again.
 
 ## Issue 3 - Can't save my project or trigger a wrap build
 
@@ -67,7 +67,7 @@ To resolve this issue, you can:
 
 ## Issue 4 - Can't install a wrapped mobile app on a device
 
-Make sure that you've signed the outputted application. You can sign it by configuring a key vault and providing it at build trigger time, or manually signing. For more information on code signing, see:
+Make sure that you've signed the outputted application. You can sign it by configuring a key vault and providing it at build trigger time or manually signing. For more information on code signing, see:
 
 - [Setup Keyvault for Automated Signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
 - [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
@@ -92,5 +92,5 @@ If you can't sign in to your wrapped mobile app, verify that:
 
 For all other issues, or if your issue persists after following these steps, reach out to Power Apps Mobile Support (pamobsup@microsoft.com). You need to provide a repro video and/or screenshots together with a session ID that can be acquired in the following ways:
 
-- On the sign-in screen, go to lower right to select the gear icon, and then select **Session Details**.
+- On the sign-in screen, go to the lower right to select the gear icon, and then select **Session Details**.
 - In an opened app, shake your device, and then select **Session Details**.
