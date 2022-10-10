@@ -85,7 +85,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 1. Restart the VM by using the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).
 
     1. Select the **shutdown** button at the top of the serial console window.
-    2. Select **Restart VM (Hard)** option.
+    2. Select the **Restart VM (Hard)** option.
 
 2. Once the serial console connection resumes, you'll see a countdown counter at the left top corner of the serial console window. Press the **ESCAPE** key to interrupt your VM at the GRUB menu.
 
@@ -122,7 +122,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
 > [!NOTE]
 > If a kernel downgrade rollback is done, select the most recent kernel version instead of the older one.
 
-- **RHEL 7, Oracle Linux 7 and CentOS 7**
+- **RHEL 7, Oracle Linux 7, and CentOS 7**
 
     1. Validate the list of available kernels in the GRUB configuration file by running one of the following commands:
     
@@ -147,7 +147,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         > [!NOTE]
         > Replace `Red Hat Enterprise Linux Server, with Linux 3.10.0-123.el7.x86_64` with the corresponding menu entry title.
     
-    3. Validate the new default kernel is the desired one by running the following command:
+    3. Validate that the new default kernel is the desired one by running the following command:
     
         ```bash
         grub2-editenv list
@@ -172,7 +172,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         > [!NOTE]
         > Replace `4.18.0-372.19.1.el8_6.x86_64` with the corresponding kernel version.
     
-    3. Validate the new default kernel is the desired one by running the following command:
+    3. Validate that the new default kernel is the desired one by running the following command:
     
         ```bash
         grubby --default-kernel
@@ -202,7 +202,7 @@ To modify the default kernel version from a repair VM (inside chroot) or on a ru
         ```
     
         > [!NOTE]
-        > For more information about how to configure the `GRUB_DEFAULT` variable, see [SUSE Boot Loader GRUB2](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-grub2.html) and [Ubuntu Grub2/Setup](https://help.ubuntu.com/community/Grub2/Setup). As a reference: the top level menuentry value is 0, the first top level submenu value is 1 and each nested menuentry value starts with 0. For example, "1>2" is the third menuentry from the first submenu.
+        > For more information about how to configure the `GRUB_DEFAULT` variable, see [SUSE Boot Loader GRUB2](https://documentation.suse.com/sles/12-SP4/html/SLES-all/cha-grub2.html) and [Ubuntu Grub2/Setup](https://help.ubuntu.com/community/Grub2/Setup). As a reference: the top level menuentry value is 0, the first top level submenu value is 1, and each nested menuentry value starts with 0. For example, "1>2" is the third menuentry from the first submenu.
 
     3. Regenerate the GRUB configuration file to apply the changes. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation.
 
@@ -236,9 +236,9 @@ You can [identify this issue from the Azure serial console](#identify-kernel-boo
 
     > error: file '/initramfs-3.10.0-1160.36.2.el7.x86_64.img' not found.
 
-This kind of error indicates that the initramfs file isn't generated or the GRUB configuration file has the initrd entry missing, after a patching process or a GRUB manual misconfiguration.
+This kind of error indicates that the initramfs file isn't generated or the GRUB configuration file has the initrd entry missing after a patching process or a GRUB manual misconfiguration.
 
-Before rebooting a server, we recommend validating the GRUB configuration and `/boot` contents if there's a kernel update by running one of the following commands. It's important to ensure the update is done, and there are no missing initramfs files.
+Before rebooting a server, we recommend validating the GRUB configuration and `/boot` contents if there's a kernel update by running one of the following commands. It's important to ensure the update is done and there are no missing initramfs files.
 
 - **BIOS based - Gen1 systems**
 
@@ -270,16 +270,16 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
     az vm repair restore --verbose -g $RGNAME -n $VMNAME
     ```
 
-3. Once the restore command has been executed, restart the original VM and validate it's able to boot up.
+3. Once the restore command has been executed, restart the original VM and validate that it's able to boot up.
 
 ### <a id="missing-initramfs-manual"></a>Regenerate missing initramfs manually
 
 > [!IMPORTANT]
 >
 > - If you're able to boot the VM up by using a previous kernel version or inside chroot from the repair/rescue VM, regenerate missing initramfs manually.
-> - To regenerate missing initramfs manually from a repair VM, make sure that the step 1 in [Offline troubleshooting](#offline-troubleshooting) has been already followed and those commands are executed inside [chroot](chroot-environment-linux.md).
+> - To regenerate missing initramfs manually from a repair VM, make sure that step 1 in [Offline troubleshooting](#offline-troubleshooting) has already been followed, and those commands are executed inside [chroot](chroot-environment-linux.md).
 
-1. Identify the specific kernel version that has issues to boot. You can extract the version information from the corresponding kernel panic error.
+1. Identify the specific kernel version that has issues with booting. You can extract the version information from the corresponding kernel panic error.
 
     Refer to the following screenshot as an example. The kernel panic error shows that the kernel version is "3.10.0-1160.59.1.el7.x86_64":
 
@@ -319,13 +319,13 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
 
 3. Regenerate the GRUB configuration file. Follow the instructions in [Reinstall GRUB and regenerate GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file) for the corresponding Linux distribution and VM generation
 
-4. If the steps above are performed from a repair VM, follow the step 3 in [Offline troubleshooting](#offline-troubleshooting). If the steps above are performed from the Azure Serial console, follow the [Online troubleshooting](#online-troubleshooting) method.
+4. If the steps above are performed from a repair VM, follow step 3 in [Offline troubleshooting](#offline-troubleshooting). If the steps above are performed from the Azure Serial console, follow the [Online troubleshooting](#online-troubleshooting) method.
 
 5. Reboot your VM over the most recent kernel version.
 
 ## <a id="attempted-tokill-init"></a>Kernel panic - not syncing: Attempted to kill init
 
-[Identify this issue from the Azure serial console](#identify-kernel-boot-issue). You'll see the output like the following:
+[Identify this issue from the Azure serial console](#identify-kernel-boot-issue). You'll see output like the following:
 
 ```output
 dracut Warning: Boot has failed. To debug this issue add "rdshell" to the kernel command line.
