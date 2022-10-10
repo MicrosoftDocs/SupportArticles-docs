@@ -4,6 +4,7 @@ description: This article helps you troubleshoot a problem in which you are unab
 ms.author: genli
 ms.date: 05/07/2021
 ms.service: virtual-machines
+ms.subservice: vm-disk
 ms.collection: windows
 ms.topic: troubleshooting
 title: Cannot extend an encrypted OS volume in Windows

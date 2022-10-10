@@ -4,6 +4,7 @@ description: Fixes error 0xc0000221, which occurs when you try to boot an Azure 
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error 0xc0000221 on an Azure VM

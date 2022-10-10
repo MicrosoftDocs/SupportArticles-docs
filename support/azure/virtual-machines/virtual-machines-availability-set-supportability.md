@@ -5,6 +5,7 @@ documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-deploy
 ms.topic: troubleshooting
 ms.date: 12/07/2021
 ms.author: genli

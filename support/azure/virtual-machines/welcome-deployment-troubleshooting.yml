@@ -8,6 +8,7 @@ metadata:
   description: Documentation for troubleshooting common issues with deploying an Azure Virtual Machine.
   services: virtual-machines
   ms.service: virtual-machines #Required; service per approved list. service slug assigned to your service by ACOM.
+  ms.subservice: vm-deploy
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: Travis.Maier #Required; microsoft alias of author; optional team alias.
