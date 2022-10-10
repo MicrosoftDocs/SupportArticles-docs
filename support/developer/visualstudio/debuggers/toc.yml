@@ -1,13 +1,9 @@
-- name: Visual Studio crashes when IDebugAddress.GetAddress() is invoked
-  href: ./idebugaddress-getaddress-crash.md
 - name: Expand a pointer in Visual C++ debugger Watch window
   href: ../cpp/debuggers/expand-pointer-debugger-watch-window.md
 - name: .NET source code debugging
   href: ./dotnet-source-code-debug.md
 - name: Can't use Windows Simulator
   href: ./windows-simulator-needs-credentials.md
-- name: Prevent lost kernel and user mode events
-  href: ./concurrency-visualizer-lost-kernel-user-mode-event.md
 - name: Information collected by Remote Debugger
   href: ./remote-debugger-collect-information.md
 - name: Debugger doesn't stop on breakpoints
