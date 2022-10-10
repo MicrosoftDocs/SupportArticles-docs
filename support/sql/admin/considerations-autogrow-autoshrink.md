@@ -15,8 +15,6 @@ _Original KB number:_ &nbsp; 315512
 
 The default autogrow and autoshrink settings are appropriate on many SQL Server systems. However, there are environments where you may have to adjust the autogrow and autoshrink parameters. This article provides some background information to guide you when to select these settings for your environment.
 
-## Terms used in this article
-
 Here are some things to consider if you decide to tune your autogrow and autoshrink parameters.
 
 ## How do I configure the settings

@@ -1,12 +1,15 @@
 ---
 title: Logging and data storage algorithms
 description: This article discusses how SQL Server logging and data storage algorithms extend data reliability.
-ms.date: 09/25/2020
+ms.date: 10/10/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: rdorr, bobward
 ms.prod: sql
 ---
 # Description of logging and data storage algorithms that extend data reliability in SQL Server
+
+_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
+_Original KB number:_ &nbsp; 230785
 
 ## Summary
 
@@ -24,10 +27,7 @@ We recommend that you read the following articles in the Microsoft Knowledge Bas
 
 - [Information about using disk drive caches with SQL Server that every database administrator should know](https://support.microsoft.com/help/234656)  
 
-_Original product version:_ &nbsp; SQL Server 2014, SQL Server 2012, SQL Server 2008, SQL Server 2005  
-_Original KB number:_ &nbsp; 230785
-
-## More information
+## Terms used in this article
 
 Before we begin the in-depth discussion, some of the terms that are used throughout this article are defined in the following table.
 
@@ -44,7 +44,7 @@ Before we begin the in-depth discussion, some of the terms that are used through
 |Stable storage|Same as nonvolatile storage.|
 |Volatile storage|Any medium that won't remain intact across failures.<br/>|
   
-### Write-Ahead Logging (WAL) protocol
+## Write-Ahead Logging (WAL) protocol
 
 The term protocol is an excellent way to describe WAL. It's a specific and defined set of implementation steps necessary to make sure that data is stored and exchanged correctly and can be recovered to a known state in the event of a failure. Just as a network contains a defined protocol to exchange data in a consistent and protected manner, so too does the WAL describe the protocol to protect data.
 
@@ -54,7 +54,7 @@ The WAL protocol asserts that the log records representing changes to some data 
 
 For more information about write-ahead logging, see the [Write-Ahead Transaction Log](/previous-versions/sql/sql-server-2008-r2/ms186259(v=sql.105)) topic at SQL Server Books Online.
 
-### SQL Server and the WAL
+## SQL Server and the WAL
 
 SQL Server uses the WAL protocol. To make sure that a transaction is correctly committed, all log records that are associated with the transaction must be secured in stable storage.
 
@@ -81,7 +81,7 @@ Don't be confused by the terms "locking" and "logging." Although important, lock
 
 Looking at the example in more detail, you might ask what happens when the LazyWriter or CheckPoint processes run. SQL Server issues all appropriate flushes to stable storage for transactional log records that are associated with the dirty and pinned page. This makes sure that the WAL protocol data page can never be written to stable storage until the associated transactional log records have been flushed.
 
-### SQL Server and stable storage
+## SQL Server and stable storage
 
 SQL Server enhances log and data page operations by including the knowledge of disk sector sizes (commonly 4,096 bytes or 512 bytes).
 
@@ -89,7 +89,7 @@ To maintain the ACID properties of a transaction, the SQL Server must account fo
 
 SQL Server uses 8-KB data pages and the log (if flushed) on multiples of the sector size. (Most disk drives use 512 bytes as the default sector size.) In the case of a failure, SQL Server can account for write operations larger than a sector by employing log parity and torn write techniques.
 
-### Torn page detection
+## Torn page detection
 
 This option allows SQL Server to detect incomplete I/O operations caused by power failures or other system outages. When true, it causes a bit to be flipped for each 512-byte sector in an 8 kilobyte (KB) database page whenever the page is written to disk. If a bit is in the wrong state when the page is later read by SQL Server, then the page was written incorrectly; a torn page is detected. Torn pages are detected during recovery because any page that was written incorrectly is likely to be read by recovery.
 
@@ -101,11 +101,11 @@ By using battery-backed disk controller caches, you can make sure that data is s
 > Torn page detection isn't enabled by default in SQL Server. For more information, see 
 [ALTER DATABASE SET Options (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).
 
-### Log parity
+## Log parity
 
 Log parity checking is similar to torn page detection. Each 512-byte sector contains parity bits. These parity bits are always written with the log record and evaluated when the log record is retrieved. By forcing log writes on a 512-byte boundary, SQL Server can make sure that committal operations are written to the physical disk sectors.
 
-### Performance impacts
+## Performance impacts
 
 All versions of SQL Server open the log and data files by using the Win32 CreateFile function. The dwFlagsAndAttributes member includes the `FILE_FLAG_WRITE_THROUGH` option when they're opened by SQL Server.
 
@@ -121,7 +121,7 @@ Advanced caching implementations will handle the `FILE_FLAG_WRITE_THROUGH` reque
 
 I/O transfers without the use of a cache can be longer because of the mechanical time that's required to move the drive heads, spin rates, and other limiting factors.
 
-### Sector ordering
+## Sector ordering
 
 A common technique used to increase I/O performance is sector ordering. To avoid mechanical head movement the read/write requests are sorted, allowing a more consistent motion of the head to retrieve or store data.
 
@@ -144,7 +144,7 @@ In many configurations, the only way to correctly disable the write caching of a
 
 SCSI drives also have write caches. However, these caches can commonly be disabled by the operating system. If there is any question, contact the drive manufacturer for appropriate utilities.
 
-### Write Cache Stacking
+## Write Cache Stacking
 
 Write Cache Stacking is similar to Sector Ordering. The following definition was taken directly from a leading IDE drive manufacturer's website:
 
@@ -152,7 +152,7 @@ Normally, this mode is active. Write cache mode accepts the host write data into
 
 A disk write task begins to store the host data to disk. Host write commands continue to be accepted and data transferred to the buffer until either the write command stack is full or the data buffer is full. The drive may reorder write commands to optimize drive throughput.
 
-### Automatic Write Reallocation (AWR)
+## Automatic Write Reallocation (AWR)
 
 Another common technique that's used to protect data is to detect bad sectors during data manipulation. The following explanation comes from a leading IDE drive manufacturer's website:
 
@@ -160,7 +160,7 @@ This feature is part of the write cache and reduces the risk of data loss during
 
 This can be a powerful feature if battery Backup is provided for the cache. This provides appropriate modification upon restart. It is preferable to detect the disk errors, but the data security of the WAL protocol would again require this to be done real time and not in a deferred manner. Within the WAL parameters, the AWR technique can't account for a situation in which a log write fails because of a sector error but the drive is full. The database engine must immediately know about the failure so the transaction can be correctly aborted, the administrator can be alerted, and correct steps taken to secure the data and correct the media failure situation.
 
-### Data safety
+## Data safety
 
 There are several precautions that a database administrator should take to ensure the safety of the data.
 
@@ -176,7 +176,7 @@ There are several precautions that a database administrator should take to ensur
 - Configure RAID drives allowing for a hot swap of a bad disk drive, if it's possible.
 - Use newer caching controllers that let you add more disk space without restarting the OS. This can be an ideal solution.
 
-### Testing drives
+## Testing drives
 
 To fully secure your data, you should make sure that all data caching is correctly handled. In many situations, you must disable the write caching of the disk drive.
 
@@ -191,7 +191,7 @@ For more information about the `SQLIOSim` utility, see the following article in 
 
 Many computer manufacturers order the drives by having the write cache disabled. However, testing shows that this may not always be the case. Therefore, always test completely.
 
-### Data devices
+## Data devices
 
 In all but non-logged situations, SQL Server will require only the log records to be flushed. When doing non-logged operations, the data pages must also be flushed to stable storage; there are no individual log records to regenerate the actions in the case of a failure.
 
@@ -199,7 +199,7 @@ The data pages can remain in cache until the LazyWriter or CheckPoint process fl
 
 This doesn't mean that it is advisable to place data files on a cached drive. When the SQL Server flushes the data pages to stable storage, the log records can be truncated from the transaction log. If the data pages are stored on volatile cache, it's possible to truncate log records that would be used to recover a page in the event of a failure. Make sure that both your data and log devices accommodate stable storage correctly.
 
-### Increasing performance
+## Increasing performance
 
 The first question that might occur to you is: "I have an IDE drive that was caching. But when I disabled it, my performance became less than expected. Why?"
 
