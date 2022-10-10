@@ -3,7 +3,7 @@ title: Cannot record in VDI environments Citrix or RDP
 description: Provides a resolution for the issue that you can't record in a VDI environment such as Citrix or RDP.
 ms.reviewer: pefelesk
 ms.date: 9/13/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Can't record in a VDI environment such as Citrix or RDP
 

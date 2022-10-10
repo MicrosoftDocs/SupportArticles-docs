@@ -26,8 +26,8 @@ To fix the issue, reconfigure the profiles as follows. You can also [reconfigure
 
 Set the Data Warehouse Report Deployment account to be used for the following classes:
 
-- Collection Server
-- Data Warehouse Synchronization Server
+- `Collection Server`
+- `Data Warehouse Synchronization Server`
 
 :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-report-deployment-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Report Deployment account.":::
 
@@ -35,17 +35,17 @@ Set the Data Warehouse Report Deployment account to be used for the following cl
 
 Set the Data Warehouse Action account to be used for the following classes:
 
-- Collection Server
-- Data Warehouse Synchronization Server
-- Data Set
-- Operations Manager APM Data Transfer Service
+- `Collection Server`
+- `Data Warehouse Synchronization Server`
+- `Data Set`
+- `Operations Manager APM Data Transfer Service`
 
 :::image type="content" source="media/reporting-services-installation-fails/data-warehouse-action-account-profile.png" alt-text="Screenshot shows the configuration of the Data Warehouse Action account.":::
 
 After the reconfiguration, you can install Reporting Services successfully by using the Data Warehouse Report Deployment account.
 
 > [!NOTE]
-> If the issue remains, verify the System Center Operations Manager database (**OperationsManager** and **OperationsManagerDW**) permissions are set correctly.
+> If the issue remains, verify the permissions of the System Center Operations Manager databases (**OperationsManager** and **OperationsManagerDW**) are set correctly.
 
 ### Reconfigure profiles using PowerShell automatically
 
