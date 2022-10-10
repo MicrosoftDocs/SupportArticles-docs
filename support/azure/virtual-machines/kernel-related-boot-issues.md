@@ -355,11 +355,11 @@ This kind of kernel panic occurs due to the following possible causes:
 
 - [SELinux issues](#attempted-tokill-init-selinuxissues)
 
-See the following sections for cause details and solutions. Make sure that the commands are executed from a repair/rescue VM, inside a chroot environment as instructed in [Offline troubleshooting](#offline-troubleshooting).
+See the following sections for cause details and solutions. Make sure that the commands are executed from a repair/rescue VM inside a chroot environment as instructed in [Offline troubleshooting](#offline-troubleshooting).
 
 ### <a id="attempted-tokill-init-missingfilesdirs"></a> Missing important files and directories
 
-Linux important files and directories are missing due to a human error, for example, files are accidentally deleted, or file system corruption.
+Important Linux files and directories are missing due to a human error. For example, files are accidentally deleted or file system corruption.
 
 1. Validate the OS disk contents after attaching the copy of the OS disk to a repair VM, and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md). You can compare the outputs with the ones from a working VM running the same OS version.
 
@@ -374,9 +374,9 @@ Linux important files and directories are missing due to a human error, for exam
 
 ### <a id="attempted-tokill-init-missinglibraries"></a>Missing important system core libraries and packages
 
-Important system core libraries, files or packages are deleted from the system or got corrupted. To resolve this issue, follow these steps:
+Important system core libraries, files, or packages are deleted from the system or got corrupted. To resolve this issue, follow these steps:
 
-1. Look for the glibc package by running the following command. Make sure it's installed and all their files are still present in the system.
+1. Look for the glibc package by running the following command. Make sure it's installed, and all their files are still present in the system.
 
     ```bash
     rpm -qa | grep glibc
@@ -390,9 +390,9 @@ Important system core libraries, files or packages are deleted from the system o
 
 ### <a id="attempted-tokill-init-wrongpermissions"></a> Wrong file permissions
 
-Wrong system wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
+Wrong system-wide file permissions are modified due to a human error (for example, someone runs `chmod 777` on */* or other important OS file systems). To resolve this issue, restore the file permissions. The solution works in Red Hat/CentOS VMs. For other Linux distributions, we recommend [restoring the VM from backup](/azure/backup/backup-azure-arm-restore-vms).
 
-To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM, and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
+To restore the file permissions, run the following command after attaching the copy of the OS disk to a repair VM and mounting the corresponding file systems by using [chroot](chroot-environment-linux.md):
 
 ```bash
 rpm -a --setperms
@@ -410,7 +410,7 @@ If the issue still exists after manually recovering the corresponding file permi
 
 ### <a id="attempted-tokill-init-missingpartitions"></a> Missing partitions
 
-In cases where `/usr`, `/opt`, `/var`, `/home`, `/tmp` and `/` file systems are spread across different partitions, the data may be inaccessible because of issues at partitions level, which might be caused by mistakes during partition resize operations, or others.
+In cases where `/usr`, `/opt`, `/var`, `/home`, `/tmp`, and `/` file systems are spread across different partitions, the data may be inaccessible because of issues at the partitions level, which might be caused by mistakes during partition resize operations or others.
 
 In this scenario, if you document the original partition table layout, with the exact start and end sectors for each of the original partitions, and no further modifications are done on the system, like new file systems creation, recreate the partitions by using the same original layout with tools like **fdisk** (for MBR partition tables) or **gdisk** (for GPT partition tables) to gain access to the missing file system.
 
@@ -418,7 +418,7 @@ If this approach doesn't work, perform a [restore from backup](/azure/backup/bac
 
 ### <a id="attempted-tokill-init-selinuxissues"></a> SELinux issues
 
-Wrong SELinux permissions might prevent the system to access important files. To resolve this issue, follow these steps:
+Wrong SELinux permissions might prevent the system from accessing important files. To resolve this issue, follow these steps:
 
 1. To verify if the system has issues due to wrong SELinux permissions, start the system with SELinux disabled by adding the **selinux=0** kernel option to the GRUB linux16 line.
 
@@ -538,13 +538,13 @@ For more information about this kind of issue, see [Missing partitions](#attempt
 [5275698.017004] invalid opcode: 0000 [#1] SMP
 ```
 
-This kind of kernel panic is associated with kernel bugs or third party kernel bugs.
+This kind of kernel panic is associated with kernel bugs or third-party kernel bugs.
 
-To fix kernel bugs, do a search in the vendor Knowledge Base by using the kernel BUG string, look for known issues in the corresponding kernel version your system is running. Here are some important vendor resources:
+To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG string, and look for known issues in the corresponding kernel version your system is running. Here are some important vendor resources:
 
 - [Red Hat Kernel Oops Analyzer](https://access.redhat.com/labs/kerneloopsanalyzer/)
 
-    This tool is designed to help you diagnose a kernel crash. When you input a text, *vmcore-dmesg.txt* or a file including one or more kernel oops messages, it will walk you through diagnosing the kernel crash issue.
+    This tool is designed to help you diagnose a kernel crash. When you input a text, *vmcore-dmesg.txt*, or a file including one or more kernel oops messages, it will walk you through diagnosing the kernel crash issue.
 
 - [Red Hat knowledge base](https://access.redhat.com/search/#/)
   
@@ -639,7 +639,7 @@ Kernel panics might be related to any of the following items. For more informati
 
 - Application workload changes.
 - Application development or application bugs.
-- Performance related issues, and so on.
+- Performance-related issues, and so on.
 
 ## Next steps
 
