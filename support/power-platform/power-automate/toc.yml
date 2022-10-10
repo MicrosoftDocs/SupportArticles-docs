@@ -17,7 +17,7 @@
           href: ../power-apps/custom-connectors-not-show-refresh-url.md?context=/troubleshoot/power-platform/power-automate/context/context
         - name: User doesn't have service plan adequate for non-Standard connection
           href: user-does-not-have-a-service-plan-error.md
-    - name: Flows
+    - name: Cloud flows
       items:
         - name: Authentication failed when signing in to Microsoft Flow
           href: cannot-sign-in-to-microsoft-flow-due-to-authentication-failed.md
@@ -117,7 +117,7 @@
           href: ui-flows-fails-uiaelementmismatch.md
         - name: UI flows UIAElementNotFound
           href: issue-with-ui-flows-error-uiaelementnotfound.md
-    - name: Flows - Desktop Flows
+    - name: Desktop flows
       items:
         - name: Can't automate webpage with iframes
           href: cannot-automate-webpage-with-iframes.md
