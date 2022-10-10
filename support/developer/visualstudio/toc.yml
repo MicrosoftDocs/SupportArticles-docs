@@ -54,7 +54,3 @@
     href: ./tools-utilities/nuget-based-package-manager-missing.md
 - name: Silverlight
   href: ./silverlight/toc.yml
-- name: Subscriptions
-  items:
-  - name: Opt out of dev essentials
-    href: ./subscriptions/opt-out-of-dev-essentials.md

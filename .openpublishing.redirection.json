@@ -2650,6 +2650,11 @@
       "source_path": "support/developer/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/subscriptions/opt-out-of-dev-essentials",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": false
     }
   ]
 }
