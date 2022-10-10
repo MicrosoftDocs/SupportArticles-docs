@@ -32,18 +32,18 @@ Check that the access token you've created is correct.
 - The correct way to check the access token: Select the app that your created, select **Settings**, and then select **App API Tokens**.
 - The incorrect way to check the access token: **Account Settings** > **User API Tokens**.
 
-Verify that the iOS or Android app that you created has the right settings configurations.
+Verify that the iOS or Android app that you created has the right configurations.
 
 - iOS: OS = Custom
 - Android: OS = Android, Platform = React Native
 
 For more information, see steps 8 and 9 in [Create an App Center container for your mobile app](/power-apps/maker/common/wrap/how-to#create-an-app-center-container-for-your-mobile-app).
 
-#### Step 3: Verify that your Keyvault configuration is correct
+#### Step 3: Verify that your key vault configuration is correct
 
 Make sure that Azure Service Principal was created and the role was added correctly. For more information, see steps 1 and 2 in [Set up KeyVault for automated signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing).
 
-Ensure that your Keyvault contains all necessary certificates, secrets, and tags for iOS and/or Android:
+Ensure that your key vault contains all necessary certificates, secrets, and tags for iOS and/or Android:
 
 - iOS: two tags, one certificate, and one secret
 - Android: one tag and one certificate
@@ -67,7 +67,7 @@ To resolve this issue, you can:
 
 ## Issue 4 - Can't install a wrapped mobile app on a device
 
-Make sure that you've signed the outputted application. You can do so by configuring a Keyvault and providing it at build trigger time, or manually signing. For more information on code signing, see:
+Make sure that you've signed the outputted application. You can sign it by configuring a key vault and providing it at build trigger time, or manually signing. For more information on code signing, see:
 
 - [Setup Keyvault for Automated Signing](/power-apps/maker/common/wrap/how-to#set-up-keyvault-for-automated-signing)
 - [Code sign for iOS](/power-apps/maker/common/wrap/code-sign-ios)
@@ -85,7 +85,7 @@ If you can't sign in to your wrapped mobile app, verify that:
   :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot of API permissions for the app." lightbox="media/wrap-issues/api-permissions.png":::
 
 - Verify that the `Add-AdminAllowedThirdPartyApps` script was run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment).
-- Make sure that your AAD app type is Multi-tenant. Under your AAD app's **Authentication** tab, Supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant)**.
+- Make sure that your AAD app type is Multi-tenant. Under your AAD app's **Authentication** tab, supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant)**.
 - Ensure that the proper Redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information on Redirect URIs, see [these steps](/power-apps/maker/common/wrap/how-to#redirect-uri-format).
 
 ## Other issues in wrap
