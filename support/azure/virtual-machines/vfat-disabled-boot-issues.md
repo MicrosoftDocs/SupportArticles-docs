@@ -223,7 +223,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
     To boot the VM in single-user mode, interrupt the boot process at the GRUB menu level and edit the main kernel entry to add the *init=/bin/bash* kernel option in the linux16 GRUB line.
 
-    :::image type="content" source="media/vfat-disabled-boot-issues/boot-singleuser-01.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to boot the system in single-user mode.":::
+    :::image type="content" source="media/vfat-disabled-boot-issues/boot-singleuser.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to boot the system in single-user mode.":::
 
 2. Make sure all the required file systems are mounted and the root is in read and write mode.
 
@@ -247,7 +247,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
   When the OS disk is encrypted, it isn't possible to troubleshoot this issue from the Azure serial console.
 
-* **VM with only data disks encrypted fails to boot due to /etc/fstab issues:**
+- **VM with only data disks encrypted fails to boot due to /etc/fstab issues:**
 
   1. If only VM data disks are encrypted (the OS disk isn't encrypted), to boot up the system, add the **_nofail_** mount option to the corresponding entries in */etc/fstab* [from single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) by using the Azure serial console. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
