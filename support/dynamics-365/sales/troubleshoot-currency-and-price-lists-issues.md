@@ -48,7 +48,7 @@ You can change the currency and price list for the entities in the following sta
 || Canceled | No | No |
 || Fulfilled | No | No |
 || Invoiced | No | No |
-| **Invoice** | Active | Yes, but only if there are no associated Quote Product records. | Yes, but this can cause an error with the Invoice record if the associated Order Product records aren't part of the selected price list. |
+| **Invoice** | Active | No | Yes, but this can cause an error if the associated Invoice Product records aren't part of the selected price list. |
 || Paid | No | No |
 || Canceled | No | No |
 
