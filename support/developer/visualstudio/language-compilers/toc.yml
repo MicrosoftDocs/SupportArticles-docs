@@ -1,12 +1,6 @@
-- name: Referenced project doesn't exist
-  href: ./building-solution-with-multiple-projects-fails.md
 - name: Can't use the Scale-140 logo
   href: ./cannot-use-scale-140-badge-logo.md
 - name: Deploy web applications with Xcopy
   href: ./deploy-aspnet-app-xcopy-command.md
 - name: Instrumenting an signed assembly would throw warning message
   href: ./instrumenting-signed-assembly-throw-warning-message.md
-- name: LNK1102 error when you build projects
-  href: ./linker-fatal-error-out-of-memory.md
-- name: Fail to compile a 32-bit app on a x64 machine
-  href: ./cannot-compile-32-bit-app-x64-machine.md

@@ -1,14 +1,14 @@
 ---
 title: Operations Manager reports fail to deploy
 description: Describes an issue in which a DeploymentException error occurs when you deploy Operations Manager reports together with SQL Server Reporting Services.
-ms.date: 06/23/2020
+ms.date: 10/10/2022
 ms.custom: sap:Reporting server installation
 ---
-# Operations Manager 2019 and 1807 reports fail to deploy
+# Operations Manager reports fail to deploy
 
-This article helps you fix an issue in which deploying Operations Manager reports fails with event 31567 in Operations Manager 2019 and version 1807.
+This article helps you fix an issue in which deploying Operations Manager reports fails with event ID 31567.
 
-_Original product version:_ &nbsp; System Center 2019 Operations Manager, System Center Operations Manager, version 1807  
+_Applies to:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 4519161
 
 ## Symptoms
@@ -28,7 +28,7 @@ User:          N/A
 Computer:      \<FQDN>  
 Description:  
 Failed to deploy reporting component to the SQL Server Reporting Services server. The operation will be retried.
-Exception 'DeploymentException': Failed to deploy reports for management pack with version dependent id '\<ID>'. System.Web.Services.Protocols.SoapException: Uploading or saving files with .CustomConfiguration extension is not allowed. Contact your administrator if you have any questions. --->  
+Exception 'DeploymentException': Failed to deploy reports for management pack with version dependent id '\<ID>'. System.Web.Services.Protocols.SoapException: <mark>**Uploading or saving files with .CustomConfiguration extension is not allowed.**</mark> Contact your administrator if you have any questions. --->  
 Microsoft.ReportingServices.Diagnostics.Utilities.ResourceFileFormatNotAllowedException: Uploading or saving files with .CustomConfiguration extension is not allowed. Contact your administrator if you have any questions.  
    at Microsoft.ReportingServices.Library.ReportingService2005Impl.CreateResource(String Resource, String Parent, Boolean Overwrite, Byte[] Contents, String MimeType, Property[] Properties, Guid batchId)  
    at Microsoft.ReportingServices.WebServer.ReportingService2005.CreateResource(String Resource, String Parent, Boolean Overwrite, Byte[] Contents, String MimeType, Property[] Properties)  
@@ -47,92 +47,107 @@ SSRS 2017 version 14.0.600.1274 and later versions include a new advanced settin
 
 ## Resolution 1
 
-Add \*.\* to the list of extensions. To do this, follow these steps:
+Add `*.*` to the list of authorized extensions. To do this, follow these steps:
 
 1. Start SQL Server Management Studio, and then connect to a report server instance that Operations Manager uses.
-2. Right-click the report server name, select **Properties**, and then select **Advanced**.
-3. Locate the **AllowedResourceExtensionsForUpload** setting, add \*.\* to the list of extensions, and then select **OK**.
+2. Right-click the report server instance name, select **Properties**, and then select **Advanced**.
+3. Locate the **AllowedResourceExtensionsForUpload** setting, add `*.*` to the list of extensions, and then select **OK**.
 4. Restart SSRS.
 
 ## Resolution 2
 
 Use PowerShell script to add the extensions. To do this, run the following PowerShell script:
 
-```powershell
-$ExtensionAdd = @(
+> [!NOTE]
+> You need to restart SSRS after running this script.
 
-    'CustomConfiguration'
-    'Report'
-    'AvailabilityMonitor'
-    'TopNApplications'
-    'Settings'
-    'License'
-    'ServiceLevelTrackingSummary'
-    'CustomPerformance'
-    'MostCommonEvents'
-    'PerformanceTop'
-    'Detail'
-    'DatabaseSettings'
-    'ServiceLevelObjectiveDetail'
-    'PerformanceDetail'
-    'ConfigurationChange'
-    'TopNErrorGroupsGrowth'
-    'AvailabilityTime'
-    'rpdl'
-    'mp'
-    'TopNErrorGroups'
-    'Downtime'
-    'TopNApplicationsGrowth'
-    'DisplayStrings'
-    'Space'
-    'Override'
-    'Performance'
-    'AlertDetail'
-    'ManagementPackODR'
-    'AlertsPerDay'
-    'EventTemplate'
-    'ManagementGroup'
-    'Alert'
-    'EventAnalysis'
-    'MostCommonAlerts'
-    'Availability'
-    'AlertLoggingLatency'
-    'PerformanceTopInstance'
-    'rdl'
-    'PerformanceBySystem'
-    'InstallUpdateScript'
-    'PerformanceByUtilization'
-    'DropScript'
+```powershell
+$ServiceAddress = 'http://localhost'
+
+$ExtensionAdd = @(
+	'*'
+	'CustomConfiguration'
+	'Report'
+	'AvailabilityMonitor'
+	'TopNApplications'
+	'Settings'
+	'License'
+	'ServiceLevelTrackingSummary'
+	'CustomPerformance'
+	'MostCommonEvents'
+	'PerformanceTop'
+	'Detail'
+	'DatabaseSettings'
+	'ServiceLevelObjectiveDetail'
+	'PerformanceDetail'
+	'ConfigurationChange'
+	'TopNErrorGroupsGrowth'
+	'AvailabilityTime'
+	'rpdl'
+	'mp'
+	'TopNErrorGroups'
+	'Downtime'
+	'TopNApplicationsGrowth'
+	'DisplayStrings'
+	'Space'
+	'Override'
+	'Performance'
+	'AlertDetail'
+	'ManagementPackODR'
+	'AlertsPerDay'
+	'EventTemplate'
+	'ManagementGroup'
+	'Alert'
+	'EventAnalysis'
+	'MostCommonAlerts'
+	'Availability'
+	'AlertLoggingLatency'
+	'PerformanceTopInstance'
+	'rdl'
+	'PerformanceBySystem'
+	'InstallUpdateScript'
+	'PerformanceByUtilization'
+	'DropScript'
 )
 
-Write-Verbose -Message '***'
-$Message = 'Step 12 of 12.  Allowed Resource Extensions for Upload'
-Write-Verbose -Message $Message
+Write-Output 'Setting Allowed Resource Extensions for Upload'
+$error.clear()
+try
+{
+	$Uri = [System.Uri]"$ServiceAddress/ReportServer/ReportService2010.asmx"
+	$Proxy = New-WebServiceProxy -Uri $Uri -UseDefaultCredential
+	$Type = $Proxy.GetType().Namespace + '.Property'
+	
+	$Property = New-Object -TypeName $Type
+	$Property.Name = 'AllowedResourceExtensionsForUpload'
 
-$Uri = [System.Uri]"https://$ServiceAddress/ReportServer/ReportService2010.asmx"
+	$ValueAdd = $ExtensionAdd | ForEach-Object -Process {
+		"*.$psItem"
+	}	
 
-$Proxy = New-WebServiceProxy -Uri $Uri -UseDefaultCredential
+	$Current = $Proxy.GetSystemProperties($Property)
+	if ($Current)
+    {
+	$ValueCurrent = $Current.Value -split ','
+	$ValueSet = $ValueCurrent + $ValueAdd | Sort-Object -Unique
+	}
+	else
+    {
+        $ValueSet = $ValueAdd | Sort-Object -Unique
+    }
 
-$Type = $Proxy.GetType().Namespace + '.Property'
-
-$Property = New-Object -TypeName $Type
-$Property.Name = 'AllowedResourceExtensionsForUpload'
-
-$Current = $Proxy.GetSystemProperties( $Property )
-
-$ValueCurrent = $Current.Value -split ','
-
-$ValueAdd = $ExtensionAdd | ForEach-Object -Process {
-
-    "*.$psItem"
+	
+	$Property.Value = $ValueSet -join ','
+	
+	$Proxy.SetSystemProperties($Property)
+    Write-Output '  Successfully set property to: *.*'
 }
-
-$ValueSet = $ValueCurrent + $ValueAdd | Sort-Object -Unique
-
-$Property.Value = $ValueSet -join ','
-
-$Proxy.SetSystemProperties( $Property )
+catch
+{
+	Write-Warning "Failure occurred: $error"
+}
+Write-Output 'Script completed!'
 ```
 
 > [!NOTE]
-> You have to populate the `$ServiceAddress` variable by using a valid address of your report service for HTTPS. If you don't use HTTPS at all, change the script to use HTTP. The list of extensions in the script may not be exhaustive. Include your own extensions as appropriate.
+> You may need to update the `$ServiceAddress` variable using a valid web address to your report service. The list of extensions in the script may not be exhaustive. Include your own extensions as appropriate.

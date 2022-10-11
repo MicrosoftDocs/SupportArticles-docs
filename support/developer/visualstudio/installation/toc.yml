@@ -52,8 +52,6 @@
   href: ./secondary-installer-third-party-app.md
 - name: Setup crashes due to certain fonts
   href: ./fonts-cause-setup-crash.md
-- name: Setup issues Readme file
-  href: ./setup-issues-readme-file.md
 - name: Uninstall third-party applications
   href: ./uninstall-third-party-app.md
 - name: Uninstall Visual Studio 2012
@@ -68,8 +66,6 @@
   href: ./visual-studio-2012-update-4.md
 - name: Known issues when you install Release Management
   href: ./release-management-installation-issues.md
-- name: Visual Studio 2010 SP1 known issues
-  href: ./known-issues-in-windows-8.md
 - name: Visual Studio 2013 known issues
   href: ./known-issues-visual-studio-2013.md
 - name: Warnings about an untrusted certificate
