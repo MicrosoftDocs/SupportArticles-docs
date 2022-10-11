@@ -2560,6 +2560,101 @@
       "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
       "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
       "redirect_document_id": false
-    }         
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/atl-service-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/atl-service-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/idebugaddress-getaddress-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/idebugaddress-getaddress-crash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/language-compilers/no-warning-event-obsolete.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/no-warning-event-obsolete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-enable-tablet-press-and-hold-gesture.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/mfc-enable-tablet-press-and-hold-gesture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/cpp-2010-support-dotnet-4-target.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/cpp-2010-support-dotnet-4-target",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/bi-project-not-open-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/bi-project-not-open-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/help-viewer-power-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/help-viewer-power-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/windows-automation-api-3-improve-visual-studio.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/windows-automation-api-3-improve-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/linker-fatal-error-out-of-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/linker-fatal-error-out-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/building-solution-with-multiple-projects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/building-solution-with-multiple-projects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/adjust-visual-experience-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/adjust-visual-experience-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/atl-control-font-stock-not-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/atl-control-font-stock-not-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/setup-project-depend-dotnet-framework.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/setup-project-depend-dotnet-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-in-windows-8.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-in-windows-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/setup-issues-readme-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/setup-issues-readme-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/subscriptions/opt-out-of-dev-essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": false
+    }
   ]
 }

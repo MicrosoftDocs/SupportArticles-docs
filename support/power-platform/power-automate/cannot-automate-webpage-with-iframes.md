@@ -3,7 +3,7 @@ title: Cannot automate webpage with iframes
 description: Provides a workaround to make sure that web automation actions can interact with a web element that's inside a cross-domain iframe in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 9/21/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Can't automate webpage with iframes
 
