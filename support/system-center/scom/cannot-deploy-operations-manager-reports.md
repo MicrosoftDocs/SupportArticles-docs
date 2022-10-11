@@ -6,7 +6,7 @@ ms.custom: sap:Reporting server installation
 ---
 # Operations Manager reports fail to deploy
 
-This article helps you fix an issue in which deploying Operations Manager reports fails with event id 31567.
+This article helps you fix an issue in which deploying Operations Manager reports fails with event ID 31567.
 
 _Applies to:_ &nbsp; System Center Operations Manager
 _Original KB number:_ &nbsp; 4519161
@@ -56,7 +56,10 @@ Add `*.*` to the list of authorized extensions. To do this, follow these steps:
 
 ## Resolution 2
 
-Use PowerShell script to add the extensions. To do this, run the following PowerShell script (you will need to restart SSRS after running this script):
+Use PowerShell script to add the extensions. To do this, run the following PowerShell script:
+
+> [!NOTE]
+> You need to restart SSRS after running this script.
 
 ```powershell
 $ServiceAddress = 'http://localhost'
