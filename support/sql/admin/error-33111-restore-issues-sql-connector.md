@@ -1,5 +1,5 @@
 ---
-title: Can't restore backups from SQL Server that use SQL Server Connector for Key Vault
+title: Can't restore backups from SQL Server that uses SQL Server Connector for Key Vault
 description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server.
 ms.date: 10/11/2022
 ms.custom: sap:Administration and Management
@@ -7,7 +7,7 @@ author: ramakoni1
 ms.author: v-jayaramanp
 ---
 
-# Can't restore backups from SQL Server that uses SQL Server Connector for Key Vault
+# Error 33111 when restoring backups from older versions of SQL Server Connector for Microsoft Azure Key Vault
 
 _Original KB number:_ &nbsp;  4470999
 
@@ -98,7 +98,7 @@ Because of this change, you might experience problems when you try to restore da
 
    1. Restart SQL Server.
 
-   1. Create a new asymmetric key by using CRYPTOGRAPHIC PROVIDER 1.0.4.0.
+   1. Create a new asymmetric key by using `CRYPTOGRAPHIC PROVIDER` 1.0.4.0.
 
          ```sql
            CREATE ASYMMETRIC KEY TDE_KEY_1040 
