@@ -2656,6 +2656,47 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "support/windows-client/deployment/how-windows-update-works.md",
+      "redirect_url": "/windows/deployment/update/how-windows-update-works",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-update-log-files.md",
+      "redirect_url": "/windows/deployment/update/windows-update-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/windows-update-issues-troubleshooting.md",
+      "redirect_url": "/windows/deployment/update/windows-update-troubleshooting",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/common-windows-update-errors.md",
+      "redirect_url": "/windows/deployment/update/windows-update-errors",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/windows-client/deployment/get-started-with-windows-update.md",
+      "redirect_url": "/windows/deployment/update/windows-update-overview",
+      "redirect_document_id": false
+    },    {
+      "source_path": "support/windows-client/deployment/servicing-stack-updates.md",
+      "redirect_url": "/windows/deployment/update/servicing-stack-updates",
+      "redirect_document_id": false
+    },    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-issues-troubleshooting.md",
+      "redirect_url": "/windows/deployment/upgrade/troubleshoot-upgrade-errors",
+      "redirect_document_id": false
+    },    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-error-codes.md",
+      "redirect_url": "/windows/deployment/upgrade/upgrade-error-codes",
+      "redirect_document_id": false
+    },    {
+      "source_path": "support/windows-client/deployment/windows-10-upgrade-log-files.md",
+      "redirect_url": "/windows/deployment/upgrade/log-files",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
       "redirect_document_id": false

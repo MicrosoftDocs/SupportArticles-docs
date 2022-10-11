@@ -262,20 +262,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
-    - name: Servicing stack updates
-      href: ./deployment/servicing-stack-updates.md
-    - name: Get started with Windows Update
-      href: ./deployment/get-started-with-windows-update.md
     - name: Additional resources for Windows Update
       href: ./deployment/additional-resources-for-windows-update.md
-    - name: Common Windows Update errors
-      href: ./deployment/common-windows-update-errors.md
-    - name: Windows Update issues troubleshooting
-      href: ./deployment/windows-update-issues-troubleshooting.md
-    - name: Windows Update log files
-      href: ./deployment/windows-update-log-files.md
-    - name: How Windows Update works
-      href: ./deployment/how-windows-update-works.md
     - name: 'Troubleshooting guidance: Windows Update'
       href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
@@ -362,14 +350,8 @@
     items:
     - name: Windows 10 upgrade resolution procedures
       href: ./deployment/windows-10-upgrade-resolution-procedures.md
-    - name: Windows 10 upgrade log files
-      href: ./deployment/windows-10-upgrade-log-files.md
-    - name: Windows 10 upgrade error codes
-      href: ./deployment/windows-10-upgrade-error-codes.md
     - name: Windows error reporting
       href: ./deployment/windows-error-reporting.md
-    - name: Windows 10 upgrade issues troubleshooting
-      href: ./deployment/windows-10-upgrade-issues-troubleshooting.md
     - name: SetupDiag tool for Windows 10 upgrade
       href: ./deployment/setupdiag-tool-for-windows-10-upgrade.md
     - name: Windows 10 upgrade quick fixes
