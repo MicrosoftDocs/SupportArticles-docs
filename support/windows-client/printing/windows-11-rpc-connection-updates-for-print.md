@@ -11,7 +11,7 @@ ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 ---
 # RPC connection updates for print in Windows 11
 
-_applies to:_   Windows 11, version 22H2 and later versions of Windows
+_Applies to:_ &nbsp; Windows 11, version 22H2 and later versions of Windows
 
 Windows 11, version 22H2 introduces print components changes that modify how Windows machines communicate with each other during printing or print related operations. 
 For example, the changes come into effect when you print to a printer shared out by a print server or another computer on the network. These changes were made to further improve the overall security of printing in Windows.
