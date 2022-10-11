@@ -127,9 +127,10 @@ The following settings can be configured through either Group Policy or directly
 
 Max port: 65535
 
-* Enforce Kerberos authentication
-  * Enable via Group Policy:  
-    Path: Computer Configuration > Administrative Templates > Printers > Configure RPC listener settings  
-    Enable and set the authentication protocol allowed to be used to Kerberos.
-  * Enable the setting via the registry  
-    Run `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /v ForceKerberosForRpc /t REG_DWORD /d 1 /f`
+### Enforce Kerberos authentication
+
+* Enable via Group Policy:  
+  Path: Computer Configuration > Administrative Templates > Printers > Configure RPC listener settings  
+  Enable and set the authentication protocol allowed to be used to Kerberos.
+* Enable the setting via the registry  
+  Run `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /v ForceKerberosForRpc /t REG_DWORD /d 1 /f`
