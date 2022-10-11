@@ -52,7 +52,7 @@ The `sql2` instance has an asymmetric key created.
 
 If you try to restore the backup on the `sql2` instance, the operation fails and returns an error message that resembles the following message:
 
-> Msg 33111, Level 16, State 4, Line LineNumber
+> Msg 33111, Level 16, State 4, <Line LineNumber>
 >
 > Cannot find server asymmetric key with thumbprint '0x2C5677D76F76D77F80'.
 
