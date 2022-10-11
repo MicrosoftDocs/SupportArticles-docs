@@ -113,7 +113,6 @@ When a VM with the OS encrypted and VFAT disabled fails to boot, the correspondi
 - Ubuntu VM with the OS disk encrypted and VFAT disabled:
     
     ```output
-    ...
         [   24.062228] dracut-initqueue[261]: +++ '[' -z 0 ']'
         [   24.065039] dracut-initqueue[261]: + luksname=osencrypt
         [   24.068026] dracut-initqueue[261]: + ask_passphrase=1
@@ -139,7 +138,6 @@ When a VM with the OS encrypted and VFAT disabled fails to boot, the correspondi
         [   24.134614] dracut-initqueue[261]: + sleep 1 
         [   24.817478] dracut-initqueue[261]: + info 'No key found for /dev/sda2.  Will try 1 time(s) more later.'
         [   24.823243] dracut-initqueue[261]: + check_quiet
-    ...
     ```
 
 - RHEL 7.x VM with the OS disk encrypted and VFAT disabled:
@@ -269,7 +267,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
 
-2. [re-enable VFAT](#reenable-vfat).
+2. [Re-enable VFAT](#reenable-vfat).
 
 3. After the VFAT is re-enabled, perform the following actions:
 
