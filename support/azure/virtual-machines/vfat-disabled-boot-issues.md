@@ -241,7 +241,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
     3. Restart the system.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, comment out the */boot/efi* entry from */etc/fstab* as */boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the */boot/efi* entry from */etc/fstab* as */boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="online-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot up
 
@@ -280,7 +280,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, comment out the */boot/efi* entry from */etc/fstab* as /*boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the */boot/efi* entry from */etc/fstab* as /*boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="offline-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot
 
@@ -300,7 +300,6 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     2. Run the `az vm repair restore` command to swap the repaired OS disk with the original OS disk of the VM. For more information, see Step 5 in [Repair a Linux VM by using the Azure Virtual Machine repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md).
 
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
-...
 
 ## <a id="reenable-vfat"></a>Re-enable VFAT
 
