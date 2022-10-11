@@ -1,12 +1,12 @@
 ---
 title: Error when you run the DBCC CHECKDB statement
 description: This article describes a problem where you receive an error message when you try to run the DBCC CHECKDB statement on a database that contains a large table in SQL Server.
-ms.date: 09/02/2020
+ms.date: 10/11/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: keithelm
 ms.prod: sql
 ---
-# Error message when you run the DBCC CHECKDB statement on a database that contains one or more very large tables in SQL Server: Timeout occurred while waiting for latch
+# "Timeout occurred while waiting for latch" error when running `DBCC CHECKDB` statement on a database
 
 This article introduces a problem where you receive an error message when you try to run the `DBCC CHECKDB` statement on a database that contains a large table in SQL Server.
 
