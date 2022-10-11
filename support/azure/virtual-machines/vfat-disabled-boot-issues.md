@@ -9,7 +9,7 @@ ms.service: virtual-machines
 ms.collection: linux
 ms.topic: troubleshooting
 ---
-# Azure Linux virtual machine fails to boot after the VFAT file system type is disabled
+# Azure Linux virtual machine fails to boot after VFAT file system type is disabled
 
 This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot after disabling the virtual file allocation table (VFAT) file system type.
 
