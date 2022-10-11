@@ -47,7 +47,7 @@ For more information on the different ports, and their usage by system services,
 
 This configuration isn't recommended. However, it can be used if RPC over TCP isn't an option in the current environment.
 
-* To enable a Windows 11, version 22H2 computer to use RPC over Named Pipes instead of RPC over TCP for communication, see the [Use RPC over Named Pipes for client - server communication](#Use-RPC-over-Named-Pipes-for-client-–-server-communication) section.
+* To enable a Windows 11, version 22H2 computer to use RPC over Named Pipes instead of RPC over TCP for communication, see the [Use RPC over Named Pipes for client - server communication](#use-rpc-over-named-pipes-for-client--server-communication) section.
 * To enable a Windows 11, version 22H2 computer to listen for incoming connections via RPC over Named Pipes and RPC over TCP, see the [Enable listening for incoming connections on RPC over Named Pipes](#enable-listening-for-incoming-connections-on-rpc-over-named-pipes) section
 
 The following additional configurations might also be needed to properly support RPC over Named Pipes in the environment.
