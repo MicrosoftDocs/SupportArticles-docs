@@ -8,7 +8,7 @@ ms.subservice:
 ---
 # Troubleshoot issues with the wrap feature in Power Apps
 
-This article helps you resolve the most common wrap issues in Microsoft Power Apps.
+This article helps you resolve the most common issues with **wrap** feature in Microsoft Power Apps.
 
 ## Issue 1 - Wrap build is failing
 
@@ -52,7 +52,7 @@ For more information, see [Set up KeyVault for automated signing](/power-apps/ma
 
 #### Step 4: Try again if you have all the proper configurations
 
-If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to Power Apps Mobile Support (pamobsup@microsoft.com). For details, see the [Other issues in wrap](#other-issues-in-wrap) section of this article.
+If your wrap build still fails after you've verified that your wrap project has all the proper configurations, reach out to <pamobsup@microsoft.com>. For details, see the [Other issues in wrap](#other-issues-in-wrap) section of this article.
 
 ## Issue 2 - Wrap button is disabled for my app
 
@@ -84,13 +84,13 @@ If you can't sign in to your wrapped mobile app, verify that:
 
   :::image type="content" source="media/wrap-issues/api-permissions.png" alt-text="Screenshot of API permissions for the app." lightbox="media/wrap-issues/api-permissions.png":::
 
-- Verify that the `Add-AdminAllowedThirdPartyApps` script was run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment).
-- Make sure that your AAD app type is Multi-tenant. Under your AAD app's **Authentication** tab, supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant)**.
-- Ensure that the proper Redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information on Redirect URIs, see [these steps](/power-apps/maker/common/wrap/how-to#redirect-uri-format).
+- The `Add-AdminAllowedThirdPartyApps` script was run successfully. For more information, see [Allow registered apps in your environment](/power-apps/maker/common/wrap/how-to#allow-registered-apps-in-your-environment).
+- Your AAD app type is Multi-tenant. Under your AAD app's **Authentication** tab, supported account types should be **Accounts in any organizational directory (Any Azure AD directory – Multitenant)**.
+- The proper Redirect URIs have been created for iOS and Android. For Android, check that the hash is provided correctly. For more information on Redirect URIs, see [these steps](/power-apps/maker/common/wrap/how-to#redirect-uri-format).
 
 ## Other issues in wrap
 
-For all other issues, or if your issue persists after following these steps, reach out to Power Apps Mobile Support (pamobsup@microsoft.com). You need to provide a repro video and/or screenshots together with a session ID that can be acquired in the following ways:
+For all other issues, or if your issue persists after following these steps, reach out to <pamobsup@microsoft.com>. You need to provide a repro video and/or screenshots together with a session ID that can be acquired in the following ways:
 
 - On the sign-in screen, go to the lower right to select the gear icon, and then select **Session Details**.
 - In an opened app, shake your device, and then select **Session Details**.
