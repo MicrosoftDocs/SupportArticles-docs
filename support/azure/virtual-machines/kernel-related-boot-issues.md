@@ -92,7 +92,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 3. Press the down arrow key to select any previous kernel version.
 
-    :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel-01.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to select an older kernel to boot the system on." lightbox="media/kernel-related-boot-issues/boot-previous-kernel-01.gif":::
+    :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to select an older kernel to boot the system on." lightbox="media/kernel-related-boot-issues/boot-previous-kernel.gif":::
 
 > [!NOTE]
 > If there's only one kernel version listed in the GRUB menu, follow the [Offline troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue from a repair VM.
@@ -284,7 +284,7 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
 
     Refer to the following screenshot as an example. The kernel panic error shows that the kernel version is "3.10.0-1160.59.1.el7.x86_64":
 
-    :::image type="content" source="media/kernel-related-boot-issues/missing-initramfs-01.png" alt-text="Screenshot shows how to identify the specific kernel version that has the missing initramfs image.":::
+    :::image type="content" source="media/kernel-related-boot-issues/missing-initramfs.png" alt-text="Screenshot that shows how to identify the specific kernel version that has the missing initramfs image.":::
 
 2. Regenerate the missing initramfs file by running one of the following commands:
 
