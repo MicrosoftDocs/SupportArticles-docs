@@ -163,6 +163,13 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 1. Scroll down to **Edge**.
 1. Toggle on **Allow Cross-Website Tracking**.
 
+## Clear your browser cache
+The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Below are instructions for doing so for the different browsers.
+
+- [Microsoft Edge](https://www.microsoft.com/en-us/microsoft-365-life-hacks/privacy-and-safety/how-to-clear-cache)
+- [Google Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
+- [Safari on iOS](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/16.0/mac/11.0)
+
 ## Azure Active Directory Errors
 
 Azure Active Directory (Azure AD) is the technology on which the Power Apps relies for user authentication and authorization.
