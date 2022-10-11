@@ -33,8 +33,10 @@ When downloading a network resource using a client HTTP Stack, Silverlight tries
 
 ## Resolution
 
-A patch has been released to fix the issue. You can download it from
- [here](https://www.microsoft.com/getsilverlight/get-started/install/default.aspx). The corresponding Security Update for Microsoft Silverlight can be found [here](https://www.microsoft.com/download/details.aspx?id=36946).
+This issue has been fixed in later versions of Silverlight.
+
+> [!NOTE]
+> Microsoft Silverlight reached the end of support in October 2021 and the installer is no longer available for download. [Learn more](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788).
 
 ## More information
 
