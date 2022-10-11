@@ -553,7 +553,7 @@ To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG str
 
 - [SUSE knowledge base](https://www.suse.com/support/kb/help/)
 
-- [Ubuntu knowledge base](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#other-kernel-boot-issues-kernelupdate)
+- [Ubuntu knowledge base](https://bugs.launchpad.net/ubuntu/+source/linux/+bugs)
 
 We recommend keeping all your systems up to date to rule out any possible bugs already fixed in the most recent kernel versions. For more information, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
@@ -647,6 +647,6 @@ Kernel panics might be related to any of the following items. For more informati
 
 ## Next steps
 
-If the specific boot error isn't a GRUB rescue issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
+If the specific boot error isn't a kernel related boot issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
