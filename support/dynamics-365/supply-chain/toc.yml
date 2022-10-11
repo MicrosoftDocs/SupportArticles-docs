@@ -319,8 +319,6 @@
           href: warehousing/one-label-printed-for-multiple-work-headers-receipt.md
         - name: Print a delivery note or packing content by warehouse or site
           href: warehousing/print-documents-by-warehouse.md
-        - name: Processing issues occur after installing a scale unit warehouse workload
-          href: warehousing/scale-unit-warehouse-workload-installation-issues.md
         - name: Picking work isn't generated immediately when outbound load is released
           href: warehousing/generate-work-immediately-load-release.md
         - name: Packing station doesn't show product notes
