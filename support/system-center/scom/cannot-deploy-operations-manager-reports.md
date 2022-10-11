@@ -8,7 +8,7 @@ ms.custom: sap:Reporting server installation
 
 This article helps you fix an issue in which deploying Operations Manager reports fails with event ID 31567.
 
-_Applies to:_ &nbsp; System Center Operations Manager
+_Applies to:_ &nbsp; System Center Operations Manager  
 _Original KB number:_ &nbsp; 4519161
 
 ## Symptoms
