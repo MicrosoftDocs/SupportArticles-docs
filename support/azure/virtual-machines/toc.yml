@@ -232,6 +232,8 @@
       href: troubleshoot-ssh-permissions-too-open.md
     - name: Troubleshoot kernel panic
       href: linux-kernel-panic-troubleshooting.md
+    - name: VM fails to boot after VFAT is disabled
+      href: vfat-disabled-boot-issues.md
 
   - name: Windows
     items:
