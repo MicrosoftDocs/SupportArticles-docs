@@ -2555,47 +2555,7 @@
       "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
       "redirect_url": "/mem/intune/protect/certificate-connector-install",
       "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/backup-and-storage/convert-mbr-partition-to-gpt.md",
-      "redirect_url": "/windows/deployment/mbr-to-gpt",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/deployment/setupdiag-tool-for-windows-10-upgrade.md",
-      "redirect_url": "/windows/deployment/upgrade/setupdiag",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/deployment/windows-error-reporting.md",
-      "redirect_url": "/windows/deployment/upgrade/windows-error-reporting",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/deployment/usmt-faq.yml",
-      "redirect_url": "/windows/deployment/usmt/usmt-faq",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/deployment/usmt-log-files.md",
-      "redirect_url": "/windows/deployment/usmt/usmt-log-files",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/deployment/usmt-return-codes.md",
-      "redirect_url": "/windows/deployment/usmt/usmt-return-codes",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/user-profiles-and-logon/windows-hello-for-business-faq.yml",
-      "redirect_url": "/windows/security/identity-protection/hello-for-business/hello-faq",
-      "redirect_document_id": false
-    },
-    {
-      "source_path": "support/windows-client/windows-security/bitlocker-faq.yml",
-      "redirect_url": "/windows/security/information-protection/bitlocker/bitlocker-frequently-asked-questions",
-      "redirect_document_id": false
-    },            
+    },          
     {
       "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
       "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
