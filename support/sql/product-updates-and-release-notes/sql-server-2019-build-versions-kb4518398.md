@@ -9,7 +9,7 @@ appliesto:
 ---
 # KB4518398 - SQL Server 2019 build versions
 
-This article lists the Microsoft SQL Server 2017 builds that were released after SQL Server 2017 was released.
+This article lists the Microsoft SQL Server 2019 builds that were released after SQL Server 2019 was released.
 
 ## SQL Server 2019 Cumulative Update (CU) builds
 
