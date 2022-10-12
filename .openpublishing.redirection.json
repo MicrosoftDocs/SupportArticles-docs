@@ -2700,6 +2700,46 @@
       "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/application-exception-0xc0000094-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/application-exception-0xc0000094-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/drm-protected-subtitles-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/drm-protected-subtitles-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/playback-protected-video-content-fail-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/playback-protected-video-content-fail-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/run-configuration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/run-configuration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/silverlight-not-work-google-chrome.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/silverlight-not-work-google-chrome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/slsvcutil-tool-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/slsvcutil-tool-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/update-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
+      "redirect_document_id": false
     }
   ]
 }
