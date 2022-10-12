@@ -27,7 +27,7 @@ When you receive a Google Calendar event invitation in Outlook, the **Reminder**
 
 ## Cause
 
-The sender of the Google Calendar event used the default notification time. In this scenario, Google Calendar doesn't add an event reminder in the ICS file that's attached to the emailed invitation.
+The sender of the Google Calendar event used the default notification time. In this scenario, Google Calendar doesn't add an event reminder in the ICS file that's attached to the invitation email.
 
 Outlook adds the event to your calendar based on the information in the ICS file.
 
@@ -36,7 +36,7 @@ Outlook adds the event to your calendar based on the information in the ICS file
 
 ## Workaround
 
-In the following examples, Google Calendar successfully adds a reminder. Senders of Google Calendar event invitations can use these techniques to add a reminder to external invitations.
+In the following examples, Google Calendar successfully adds a reminder. Google Calendar users can use these techniques to add a reminder to external invitations.
 
 - The default Google Calendar event notification time is 30 minutes but a Google Calendar user manually changes the notification time to 25 minutes. The Google Calendar invitation will contain a 25&ndash;minute reminder entry in the ICS file. When Outlook adds the event to your calendar, the new meeting will have a 25&ndash;minute reminder.
 
