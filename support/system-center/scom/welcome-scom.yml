@@ -9,17 +9,53 @@ metadata:
   ms.topic: landing-page
   author: helenclu
   ms.author: luche
-  ms.date: 02/01/2021
+  ms.date: 10/10/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
 landingContent:
 
- # Card
+ # Card 1
   - title: Agents
     linkLists:
       - linkListType: how-to-guide
         links:
+          - text: Troubleshoot agent connectivity issues in Operations Manager
+            url: troubleshoot-agent-connectivity-issues.md
           - text: Troubleshoot gray agent states
             url: troubleshoot-gray-agent-states.md
+          - text: Troubleshoot UNIX/Linux agent discovery in Operations Manager
+            url: troubleshoot-unix-linux-agent-discovery.md
+
+ # Card 2
+  - title: Setup or deployment
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot Operations Management Suite onboarding issues
+            url: troubleshoot-oms-onboarding-issues.md
             
+ # Card 3
+  - title: Operations or infrastructure
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Troubleshoot SQL Server Service Broker issues in Operations Manager
+            url: troubleshoot-sql-server-service-broker-issues.md
+
+ # Card 4
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Recommendations for antivirus exclusions that relate to Operations Manager
+            url: antivirus-exclusions-recommendations.md
+            
+ # Card 5
+  - title: Reports
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Reporting installation or upgrade fails with error 0xffffffff
+            url: reporting-installation-error-0xffffffff.md
+

@@ -1,5 +1,5 @@
 ---
-title: 'Troubleshoot boot errors in Azure Linux Virtual Machines | Microsoft Docs'
+title: 'Troubleshoot boot errors in Azure Linux Virtual Machines'
 description: This article helps link you to articles to troubleshoot boot errors in Azure Linux Virtual Machines.
 services: virtual-machines
 documentationCenter: ''
@@ -7,6 +7,7 @@ author: vilibert
 manager: dcscontentpm
 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 
 ms.topic: troubleshooting

@@ -1,9 +1,5 @@
 - name: Visual Studio crashes at startup
   href: ./visual-studio-2013-startup-crashes.md
-- name: Adjust visual experience settings
-  href: ./adjust-visual-experience-settings.md
-- name: ATL control font stock property doesn't update
-  href: ./atl-control-font-stock-not-update.md
 - name: Can't dismiss developer license notifications
   href: ./developer-license-notification-not-dismiss.md
 - name: Can't switch between organizational accounts
@@ -24,4 +20,3 @@
   href: ./visual-studio-unresponsive-resources-consuming-memory.md
 - name: Mouse wheel events don't work in Visual Basic 6.0 IDE
   href: ../visual-basic/ide/mouse-wheel-events-do-not-work.md
-  

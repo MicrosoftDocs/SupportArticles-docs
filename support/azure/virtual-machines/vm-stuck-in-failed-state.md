@@ -6,6 +6,7 @@ author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.date: 10/4/2021
 ms.author: mimckitt

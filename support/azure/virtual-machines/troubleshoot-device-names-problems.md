@@ -1,5 +1,5 @@
 ---
-title: Troubleshoot Linux VM device name changes in Azure | Microsoft Docs
+title: Troubleshoot Linux VM device name changes in Azure
 description: Explains why Linux VM device names change and how to solve the problem.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: ''
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: linux
 ms.topic: troubleshooting
 ms.workload: infrastructure-services

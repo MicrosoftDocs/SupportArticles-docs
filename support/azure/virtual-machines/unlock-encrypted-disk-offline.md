@@ -4,6 +4,7 @@ description: This article describes how to unlock an encrypted disk attached to 
 ms.author: genli
 ms.date: 07/16/2021
 ms.service: virtual-machines
+ms.subservice: vm-backup-restore
 ms.topic: troubleshooting
 title: Unlocking an encrypted disk for offline repair
 ---

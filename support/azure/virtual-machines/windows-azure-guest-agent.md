@@ -3,13 +3,14 @@ title: Troubleshooting Azure Windows VM Agent
 description: Troubleshoot the Azure Windows VM Agent isn't working issues
 services: virtual-machines
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: windows
 author: dkdiksha
 manager: dcscontentpm
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
 ms.workload: infrastructure
-ms.date: 07/11/2022
+ms.date: 09/23/2022
 ms.author: genli
 ---
 # Troubleshooting Azure Windows VM Agent
@@ -20,18 +21,12 @@ Azure VM Agent is a virtual machine (VM) agent. It enables the VM to communicate
 
 After Azure VM Agent is successfully installed, you can see following services listed in services.msc on the VM:
 
-- Azure VM Agent Service
-- Telemetry Service
-- RD Agent service
-
-**Azure VM Agent Service**: This service is the service that is responsible for all the logging in WAppAgent.log. This service is responsible for configuring various extensions and communication from Guest to Host.
-
-**Telemetry Service**: This service is responsible for sending the telemetry data of the VM to the backend server.
-
-**RD Agent Service**: This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
+- Windows Azure Guest Agent - This service is responsible for configuring various extensions and communication from Guest to Host. It's also responsible for collecting logs into WAppAgent.log.
+- Telemetry Service - This service is responsible for sending the telemetry data of the VM to the backend server.
+- RDAgent - This service is responsible for the Installation of Guest Agent. Transparent Installer is also a component of Rd Agent that helps to upgrade other components and services of Guest Agent. RD Agent is also responsible for sending heartbeats from Guest VM to Host Agent on the physical server.
 
 > [!NOTE]
-> Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the RD Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
+> Starting in version 2.7.41491.971 of the VM Guest Agent, the Telemetry component is included in the Windows Azure Guest Agent service, Therefore, you might not see this Telemetry service listed in newly created VMs.
 
 ## Checking agent status and version
 
@@ -59,9 +54,8 @@ Go to the VM properties page in Azure portal, and check the **Agent status**. If
 
   - WindowsAzureGuestAgent.exe: Azure VM Agent service
   - WaAppAgent.exe: RD Agent service
-  - WindowsAzureNetAgent.exe: Windows Azure Network Agent service
   - WindowsAzureTelemetryService.exe: Windows Azure Telemetry Service
-
+  
    If you can't find these processes and services, this indicates that you don't have Azure VM Agent installed.
 
 - Check the Program and Feature
@@ -171,7 +165,7 @@ Manually uninstall the Azure VM Agent, and then reinstall it by following these 
 1. Install Guest Agent by using the following MSI command:
 
     ```
-    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log`
+    msiexec.exe /i c:\VMAgentMSI\WindowsAzureVmAgent.2.7.<version>.fre.msi /quiet /L*v c:\VMAgentMSI\msiexec.log
     ```
 
 1. Verify that the RD Agent, Azure VM Agent, and Windows Azure Telemetry services are now running.

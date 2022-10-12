@@ -1,12 +1,13 @@
 ---
 
-title: Blue screen errors when booting an Azure VM| Microsoft Docs
-description: Learn how to troubleshoot the issue that the blue screen error is received when booting| Microsoft Docs
+title: Blue screen errors when booting an Azure VM
+description: Learn how to troubleshoot the issue that the blue screen error is received when booting.
 services: virtual-machines
 documentationCenter: ''
 author: genlin
 manager: dcscontentpm
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ms.topic: troubleshooting
 ms.tgt_pltfrm: vm-windows
@@ -98,6 +99,8 @@ To enable dump log and Serial Console, run the following script.
 
     reg unload HKLM\BROKENSYSTEM
     ```
+     > [!NOTE]
+     > If the rescue VM is created manually without the `az repair` commands, you can use [sac-os-dump-enabler.ps1]((https://github.com/Azure/repair-script-library/blob/master/src/windows/sac-os-dump-enabler.ps1) to collect dump files. If the OS disk of the faulty VM is attached to the rescue VM as a data disk and is online, run this script by using the **Run command** option in the rescue VM.
 
 3. [Detach the OS disk and then Re-attach the OS disk to the affected VM](./troubleshoot-recovery-disks-portal-windows.md).
 4. Start the VM to reproduce the issue, then a dump file will be generated.

@@ -69,6 +69,8 @@
     items:
     - name: SQL Server startup issues
       items:
+      - name: Restore issues with Azure connector
+        href: admin/error-33111-restore-issues-sql-connector.md
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
@@ -213,6 +215,8 @@
     items:
     - name: Common Connection Issues
       href: connect/resolve-connectivity-errors-overview.md
+    - name: The certificate chain was issued by an authority that isn’t trusted
+      href: connect/certificate-chain-not-trusted.md
     - name: Pre-reqs for connectivity troubleshooting
       href: connect/resolve-connectivity-errors-checklist.md
     - name: Cannot generate SSPI context
@@ -385,10 +389,14 @@
     items:
     - name: Troubleshoot slow-running queries
       href: performance/troubleshoot-slow-running-queries.md
+    - name: Troubleshoot entire SQL Server or application appears slow
+      href: performance/troubleshoot-entire-sqlserver-slow.md
     - name: Troubleshoot high-CPU-usage issues
       href: performance/troubleshoot-high-cpu-usage-issues.md
     - name: Troubleshoot SQL Server slow performance caused by IO
       href: performance/troubleshoot-sql-io-performance.md
+    - name: TokenAndPermUserStore related performance issues
+      href: performance/token-and-perm-user-store-perf-issue.md
     - name: Troubleshoot query time-out errors
       href: performance/troubleshoot-query-timeouts.md
     - name: Different query performance between two SQL Servers
@@ -459,7 +467,7 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
-    - name: ASCII funtion returns different results
+    - name: ASCII function returns different results
       href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
@@ -685,7 +693,7 @@
       href: ssms/exception-you-execute-query.md
     - name: Saving changes is not permitted error message
       href: ssms/error-when-you-save-table.md
-    - name: Unable to mody table - Timeout Expired
+    - name: Unable to modify table - Timeout Expired
       href: ssms/error-modify-large-table-using-ssms.md
     - name: Uninstall SQL Server Management Studio
       href: ssms/uninstall-management-studio.md

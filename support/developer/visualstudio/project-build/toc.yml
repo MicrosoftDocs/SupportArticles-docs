@@ -1,10 +1,6 @@
 - name: Can't save file settings in a C++ project
   href: ./file-setting-not-save.md
-- name: Visual C++ 2010 supports .NET 4 as target
-  href: ./cpp-2010-support-dotnet-4-target.md
 - name: Build errors when you delete the debug configuration
   href: ./build-errors-delete-debug-configuration.md
 - name: Building a Windows 10 driver fails
   href: ./building-windows-10-driver-fails.md
-- name: Setup projects have dependencies on .NET Framework
-  href: ./setup-project-depend-dotnet-framework.md

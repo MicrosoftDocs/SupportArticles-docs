@@ -6,6 +6,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "support/dynamics-365/supply-chain/warehousing/scale-unit-warehouse-workload-installation-issues.md",
+      "redirect_url": "/dynamics365/supply-chain/cloud-edge/cloud-edge-landing-page",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "support/windows-server/networking/portqry-exe-command-line-utility.md",
       "redirect_url": "/troubleshoot/windows-server/networking/portqry-command-line-port-scanner-v2",
       "redirect_document_id": true
@@ -2425,7 +2430,6 @@
       "redirect_url": "/troubleshoot/azure/app-service/web-apps-configuration-and-management-faqs",
       "redirect_document_id": true
     },
-
     {
       "source_path": "support/azure/general/faqs-app-service-linux.md",
       "redirect_url": "/troubleshoot/azure/app-service/faqs-app-service-linux",
@@ -2551,15 +2555,150 @@
       "redirect_url": "/troubleshoot/azure/azure-monitor/app-insights/diagnose-ping-test-failure",
       "redirect_document_id": false
     },
-    {        
+    {
       "source_path": "support/mem/intune/reinstall-the-intune-connector.md",
       "redirect_url": "/mem/intune/protect/certificate-connector-install",
       "redirect_document_id": false
-    },          
+    },
     {
       "source_path": "support/azure/azure-monitor/app-insights/snapshot-debugger-troubleshooting.md",
       "redirect_url": "/azure/azure-monitor/snapshot-debugger/snapshot-debugger-troubleshoot",
       "redirect_document_id": false
-    }         
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/libraries/atl-service-not-start.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/cpp/libraries/atl-service-not-start",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/idebugaddress-getaddress-crash.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/idebugaddress-getaddress-crash",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/csharp/language-compilers/no-warning-event-obsolete.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/no-warning-event-obsolete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/cpp/language-compilers/mfc-enable-tablet-press-and-hold-gesture.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/mfc-enable-tablet-press-and-hold-gesture",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/cpp-2010-support-dotnet-4-target.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/cpp-2010-support-dotnet-4-target",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/debuggers/concurrency-visualizer-lost-kernel-user-mode-event",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/bi-project-not-open-after-upgrade.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/bi-project-not-open-after-upgrade",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/help-viewer-power-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/help-viewer-power-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/windows-automation-api-3-improve-visual-studio.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/windows-automation-api-3-improve-visual-studio",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/cannot-compile-32-bit-app-x64-machine",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/linker-fatal-error-out-of-memory.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/linker-fatal-error-out-of-memory",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/language-compilers/building-solution-with-multiple-projects-fails.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/language-compilers/building-solution-with-multiple-projects-fails",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/adjust-visual-experience-settings.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/adjust-visual-experience-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/ide/atl-control-font-stock-not-update.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/ide/atl-control-font-stock-not-update",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/project-build/setup-project-depend-dotnet-framework.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/project-build/setup-project-depend-dotnet-framework",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/known-issues-in-windows-8.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/known-issues-in-windows-8",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/installation/setup-issues-readme-file.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/install/setup-issues-readme-file",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/subscriptions/opt-out-of-dev-essentials.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/subscriptions/opt-out-of-dev-essentials",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/general/vsa-tlb-not-loaded.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/general/vsa-tlb-not-loaded",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/application-exception-0xc0000094-vmware.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/application-exception-0xc0000094-vmware",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/drm-protected-subtitles-not-supported.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/drm-protected-subtitles-not-supported",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/playback-protected-video-content-fail-error.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/playback-protected-video-content-fail-error",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/run-configuration-tool.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/run-configuration-tool",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/silverlight-not-work-google-chrome.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/silverlight-not-work-google-chrome",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/slsvcutil-tool-crashes.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/slsvcutil-tool-crashes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/type-characters-into-silverlight-textbox-richtextbox",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "support/developer/visualstudio/silverlight/update-available.md",
+      "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
+      "redirect_document_id": false
+    }
   ]
 }

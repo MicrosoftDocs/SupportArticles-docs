@@ -1,13 +1,13 @@
 ---
-title: Troubleshooting Azure VM allocation failures in classic deployment model| Microsoft Docs
+title: Troubleshooting Azure VM allocation failures in classic deployment model
 description: Troubleshoot allocation failures when you create, restart, or resize a classic VM in Azure
 services: azure-service-management
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm
 tags: top-support-issue,azure-resource-manager,azure-service-management
-
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 11/01/2018
 ms.author: genli

@@ -1,5 +1,5 @@
 ---
-title: Reset Remote Desktop Services or its administrator password in a Windows VM | Microsoft Docs
+title: Reset Remote Desktop Services or its administrator password in a Windows VM
 description: Learn how to reset an account password or Remote Desktop Services on a Windows VM by using the Azure portal or Azure PowerShell.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-cannot-connect
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows

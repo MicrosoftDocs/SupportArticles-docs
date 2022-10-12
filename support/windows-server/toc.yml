@@ -1184,6 +1184,8 @@
       href: ./group-policy/adm-template-disable-drivers.md
   - name: Problems applying Group Policy objects to users or computers
     items:
+    - name: 'Troubleshooting guidance: Applying Group Policy'
+      href: ./group-policy/applying-group-policy-troubleshooting-guidance.md
     - name: '"Namespace is already defined" error when editing a policy'
       href: ./group-policy/microsoft-policies-sensors-windowslocationprovider-defined.md
     - name: '"Set roaming profile path for all users logging onto this computer" setting applies to local accounts'
@@ -1308,6 +1310,10 @@
       href: ./high-availability/troubleshoot-cluster-service-account.md
     - name: Troubleshoot Cluster service startup issues
       href: ./high-availability/troubleshoot-cluster-service-startup-issues.md
+  - name: Cluster Shared Volume (CSV)
+    items:
+    - name: 'Troubleshooting guidance: Event ID 5120 Cluster Shared Volume'
+      href: ./high-availability/event-id-5120-cluster-shared-volume-troubleshooting-guidance.md
   - name: Cluster-Aware Updating (CAU)
     items:
     - name: Recommended updates for Windows Server 2012-based failover clusters
@@ -2844,6 +2850,8 @@
       href: ./windows-security/event-id-4107-or-event-id-11-is-logged.md
     - name: How to decommission Windows enterprise CA and remove related objects
       href: ./windows-security/decommission-enterprise-certification-authority-and-remove-objects.md
+    - name: How to expand the maximum extension size limit at AD CS
+      href: ./windows-security/expand-maximum-extension-size-limit-ad-cs.md
     - name: How to import third-party CAs into Enterprise NTAuth store
       href: ./windows-security/import-third-party-ca-to-enterprise-ntauth-store.md
     - name: How to install imported certificates on a Web server

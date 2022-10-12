@@ -6,7 +6,8 @@ author: kelleyguiney22
 ms.author: v-kegui
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: troubleshoot-scale-operations
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the failed to fix group sizes error so that I can successfully create and deploy an Azure Kubernetes Service (AKS) cluster.
 ---
 

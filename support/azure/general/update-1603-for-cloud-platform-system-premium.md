@@ -3,7 +3,7 @@ title: Update 1603 for Cloud Platform System Premium
 description: Describes Update 1603 for Cloud Platform System Premium and provides installation steps.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: cloud-platform-system
 ms.date: 08/14/2020
 ms.reviewer: 
 ---

@@ -4,8 +4,8 @@ description: Describes an issue in which custom pages, the Microsoft 365 app lau
 ms.reviewer: rashb
 ms.topic: troubleshooting
 ms.date: 10/21/2021
-author: simonxjx
-ms.author: v-six
+author: David-Pack
+ms.author: rashb
 ms.subservice: powerapps-others
 ---
 # Custom pages and client SDK script don't load for Power Apps

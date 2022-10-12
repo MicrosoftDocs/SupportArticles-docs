@@ -1,5 +1,5 @@
 ---
-title: Install the Azure VM Agent in offline mode | Microsoft Docs
+title: Install the Azure VM Agent in offline mode
 description: Learn how to install the Azure VM Agent in offline mode.
 services: virtual-machines
 documentationcenter: ''
@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-extensions-not-operating
 ms.collection: windows
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows

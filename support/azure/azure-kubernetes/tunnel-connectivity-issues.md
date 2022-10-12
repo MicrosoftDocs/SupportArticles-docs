@@ -5,7 +5,8 @@ ms.date: 7/14/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa, andbar
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: cannot-connect-to-cluster-through-api-server
 keywords: Azure Kubernetes Service, AKS cluster, Kubernetes cluster, tunnels, connectivity, tunnel-front, aks-link
 #Customer intent: As an Azure Kubernetes user, I want to avoid tunnel connectivity issues so that I can use an Azure Kubernetes Service (AKS) cluster successfully.
 ---
@@ -177,7 +178,7 @@ To address your exact or potential scenario, we recommend that you check the [ip
 
 Are there any egress traffic restrictions, such as from an AKS firewall? If there are, port 9000 is required in order to enable correct functionality of the `tunnel-front` pod. Similarly, port 1194 is required for the `aks-link` pod.
 
-Konnectivity relies on port 443. By default, this port is open. Therefore, you don’t have to worry about connectivity issues on that port.
+Konnectivity relies on port 443. By default, this port is open. Therefore, you don't have to worry about connectivity issues on that port.
 
 ### Solution 4: Open port 1194 or 9000
 

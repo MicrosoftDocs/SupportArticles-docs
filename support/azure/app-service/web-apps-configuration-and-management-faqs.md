@@ -3,7 +3,7 @@ title: Configuration and management FAQs for Web Apps
 description: Answers frequently asked questions about configuration and management issues for Azure App Service.
 author: genlin
 ms.author: genli
-ms.service: cloud-services
+ms.service: app-service
 ms.date: 03/09/2022
 ms.reviewer: msangapu, toan, shrahman
 ---
