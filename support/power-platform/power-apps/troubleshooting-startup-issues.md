@@ -165,7 +165,7 @@ To enable this setting for the Power Apps and Dynamics 365 mobile apps for iOS y
 
 ## Clear your browser cache
 
-The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Below are instructions for different browsers:
+The browser cache is stored on your device's hard drive. When you visit a website, your browser downloads certain information that allows it to load faster when you revisit the same website in the future. Some Power Apps features use the browser cache to provide a faster user experience. In some cases, you may want to clear your browser cache. Here are the instructions for different browsers:
 
 - [Microsoft Edge](https://www.microsoft.com/en-US/microsoft-365-life-hacks/privacy-and-safety/how-to-clear-cache)
 - [Google Chrome](https://support.google.com/accounts/answer/32050?hl=en&co=GENIE.Platform%3DDesktop)
