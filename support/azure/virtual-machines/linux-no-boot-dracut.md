@@ -231,7 +231,7 @@ From a rescue/repair VM:
 
 It's possible the root file system is inaccessible because of issues at partition level, which might be caused by mistakes during partition resize operations, or others.
 
-In this scenario, if you've documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and **no further modifications were done on the system**, like new file systems creation, you can try to recreate the partitions using the same original layout with tools like **fdisk** (for MBR partition tables) or **gdisk** (for GPT partition tables) to gain access to the inaccessible file system.
+In this scenario, if you've documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and **no further modifications were done on the system**, like new file systems creation, you can try to recreate the partitions using the same original layout with tools like `fdisk` (for MBR partition tables) or `gdisk` (for GPT partition tables) to gain access to the inaccessible file system.
 
 > [!IMPORTANT]
 > This recovery operation will need to be followed from a repair/rescue VM, for more information, see the [Offline troubleshooting](#offline-troubleshooting) section.
