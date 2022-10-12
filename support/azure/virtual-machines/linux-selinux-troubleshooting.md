@@ -15,7 +15,7 @@ ms.collection: linux
 
 This article lists commonly seen issues connecting to Linux VMs on Azure over SSH, caused by SELinux misconfiguration.
 
-SELinux implements mandatory access control for Linux using kernel modules and user space tools. Mandatory Access Control (MAC), compared to Discretionary Access Control (DAC), provides a more controlled environment for resource access and, when properly configured, removes the ability of the root user to access all resources on the operating system without restrictions and mitigates multiple kinds of security risks based on the traditional Unix security model.
+The Unix security model is based on Discretionary Access Control (DAC). SELinux implements Mandatory Access Control (MAC) for Linux using kernel modules and user space tools. MAC provides a more controlled environment for resource access and removes the ability of the root user to access all resources on the operating system without restrictions. It also mitigates multiple kinds of security risks based on the traditional Unix security model.
 
 Different distributions include SELinux out of the box or provide a straightforward way to activate kernel support and install user space tools. For reference, the following are links to SELinux documentation from some of the major Linux providers:
 
@@ -26,11 +26,11 @@ Different distributions include SELinux out of the box or provide a straightforw
 * [Debian](https://wiki.debian.org/SELinux)
 * [CentOS](https://wiki.centos.org/HowTos/SELinux)
 
-Ubuntu has a [page](https://wiki.ubuntu.com/SELinux) about using SELinux, but there is a warning about its unmaintained state on that distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
+Ubuntu has a [page](https://wiki.ubuntu.com/SELinux) about using SELinux, but there's a warning about its unmaintained state on that distribution. Ubuntu implements a different solution for MAC, called [AppArmor](https://help.ubuntu.com/community/AppArmor).
 
-Red Hat based images on Azure come with SELinux enabled. Other distributions do not.
+Red Hat based images on Azure come with SELinux enabled; other distributions, don't.
 
-Managing the SELinux configuration is not trivial, and requires system administrator skills. Studying and practicing with SELinux is recommended before implementing it. The following scenarios have been observed on Azure VMs, and are provided as a reference.
+Managing the SELinux configuration isn't trivial, and requires system administrator skills. Studying and practicing with SELinux is recommended before implementing it. The following scenarios have been observed on Azure VMs, and are provided as a reference.
 
 ## Prerequisites
 
@@ -38,11 +38,11 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## SELinux misconfiguration stops boot from completing
 
-An improperly configured SELinux may result in the OS being unable to load the SELinux policy. This will stop the operating system from completing the boot. Using the Serial console from the portal or through azure cli, the following message appears near the end of the output:
+An improperly configured SELinux may result in the OS being unable to load the SELinux policy. This will stop the operating system from completing the boot. Use the Serial console from the portal or through Azure CLI. The following message appears near the end of the output:
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-01.png" alt-text="screenshot of serial console with SELinux failing to load policy":::
 
-The reason for the failure will not be called out explicitly in the output.
+The specific reason for the failure won't be called out explicitly in the output.
 
 ### Resolution
 
