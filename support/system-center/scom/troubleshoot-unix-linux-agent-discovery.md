@@ -100,7 +100,7 @@ You may see the error when trying to discover UNIX/Linux agents. The failure may
 
 **Resolution**
 
-You can update the WinRM configuration on the Management Server(s) in the UNIX/Linux resource pool to allow Basic authentication by running the following command, or you can set the configuration via Group Policy:
+You can update the WinRM configuration on the management servers in the UNIX/Linux resource pool to allow Basic authentication by running the following command, or you can set the configuration via Group Policy:
 
 ```cmd
 winrm set winrm/config/client/auth @{Basic="true"}
