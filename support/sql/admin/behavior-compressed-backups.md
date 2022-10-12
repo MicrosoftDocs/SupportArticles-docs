@@ -1,7 +1,7 @@
 ---
 title: Behavior of compressed backups
 description: This article describes the behavior of compressed backups when appending backups to an existing media set. 
-ms.date: 07/22/2020
+ms.date: 09/19/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: denzilr
 ms.topic: article
@@ -16,26 +16,26 @@ _Original KB number:_ &nbsp; 2297053
 
 ## Summary
 
-One of the main restrictions with compressed backups is that compressed and uncompressed backups cannot co-exist in a media set. This restriction is documented in: [Backup Compression (SQL Server)](/previous-versions/sql/sql-server-2008/bb964719(v=sql.100)).
+One of the main restrictions with compressed backups is that compressed and uncompressed backups can't co-exist in a media set. This restriction is documented in: [Backup Compression (SQL Server)](/sql/relational-databases/backup-restore/backup-compression-sql-server?view=sql-server-linux-ver16&preserve-view=true).
 
 This article supplements that documentation and provides more information on the expected behavior of compressed backups in relation to Backup compression default server configuration setting.
 
 ## More information
 
-When you append a compressed Backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets you may end up with a Backup in a different compression state than expected.
+When you append a compressed backup to an existing media, it inherits the compression setting from the media set. If you rely on the Backup compression's `sp_configure` setting and are appending to existing media sets, you might end up with a Backup in a different compression state than expected.
 
 This is true only under the following circumstances:
 
 - You append the Backup to an existing media set.
-- You rely on the sp_configure `backup compression default` option and do not specify the Backup statement level `WITH COMPRESSION` option.
+- You rely on the sp_configure `backup compression default` option and don't specify the Backup statement level `WITH COMPRESSION` option.
 
 When a media set is created, information on whether this media set is for a compressed Backup or a normal Backup is written to the media header file.
 
 Backups taken to an existing media set can coexist only if the compression setting of these backups is the same as that of the media set. The following three factors affect the behavior of compressed Backups:
 
-1. SQL Server's configuration option - [Backup compression default](/previous-versions/sql/sql-server-2008-r2/bb677250(v=sql.105))
-2. Backup Set Options - [COMPRESSION or NO_COMPRESSION](/sql/t-sql/statements/backup-transact-sql)
-3. Whether you are appending to an existing media set or writing the Backup to a new media set. For existing media, an additional factor to consider is whether the media set currently contains a compressed or an uncompressed Backup.
+- SQL Server's configuration option - [Backup compression default](/previous-versions/sql/sql-server-2008-r2/bb677250(v=sql.105))
+- Backup Set Options - [COMPRESSION or NO_COMPRESSION](/sql/t-sql/statements/backup-transact-sql)
+- Whether you're appending to an existing media set or writing the Backup to a new media set. For existing media, an additional factor to consider is whether the media set currently contains a compressed or an uncompressed Backup.
 
 The following table summarizes the behavior of compressed backups based on the above three factors.
 
@@ -46,10 +46,10 @@ The following table summarizes the behavior of compressed backups based on the a
 | Backup statement level with `NO_COMPRESSION` clause|Success Backup - uncompressed|Error|Success|
 | Back up statement without statement level compression clause|Success Compression depends on sp_configure `backup compression` setting|Success Backup will be compressed|Success Backup will be uncompressed|
   
-As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
+As you can see from the above table, when we use the default compression setting at the server and append to an existing media set, the Backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the `COMPRESSION` or `NO_COMPRESSION` options in your Backup statement, an error will be raised if there is a mismatch between the Backup stored in the media set and the current Backup being taken in terms of the compression setting.
 
 > [!NOTE]
-> You can find the current setting for `backup compression` default option by running `sp_configure` command in the SQL Server Management Studio. If you are appending to existing media you can get the header information using restore `headeronly` command. For more information, see the Examples section later in this article.
+> You can find the current setting for `backup compression` default option by running the `sp_configure` command in SQL Server Management Studio. If you are appending to existing media you can get the header information using restore the `headeronly` command. For more information, see the Examples section later in this article.
 
 Examples: Here is a sample script to demonstrate the behavior for various cases. The behavior is the same whether the Backup is to a tape or a disk.
 
@@ -71,7 +71,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    After executing the sql script, you may receive: [3098 and 3013 error message](#3098-and-3013-error-message)
+    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages).
 
 - Turn on default Backup Compression at the server level.
 
@@ -121,7 +121,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     restore headeronly from DISK = N'E:\testbackup.bak'
     ```
 
-- Another limitation is that Compressed backups cannot Coexist with NT Backups:
+- Another limitation is that Compressed backups can't coexist with NT Backups:
 
     ```sql
     -- Take an NT Backup
@@ -133,7 +133,7 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    After executing the sql script, you may receive: [3098 and 3013 error message](#3098-and-3013-error-message)
+    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages)
 
 - Back up to the same media set without initializing and NO compression.
 
@@ -150,9 +150,9 @@ Examples: Here is a sample script to demonstrate the behavior for various cases.
     GO
     ```
 
-    After executing the sql script, you may receive: [3098 and 3013 error message](#3098-and-3013-error-message)
+    After executing the sql script, you may receive: [3098 and 3013 error messages](#3098-and-3013-error-messages)
 
-### 3098 and 3013 error message
+### 3098 and 3013 error messages
 
 - 3098 error message
 
