@@ -63,7 +63,7 @@ To give it a try, using the [Azure serial console](/azure/virtual-machines/linux
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-02.png" alt-text="screenshot of /etc/selinux/config with a wrong value of disabled for the SELINUX key":::
 
-Notice that the last line, `SELINUXTYPE=disabled`, should have one of the three values detailed in the lines above (`targeted`, `minimum` or `mls`), rather than disabled. The following is the corrected version of the same configuration:
+Notice that the last line, `SELINUXTYPE=disabled`, should have one of the three values detailed in the lines above (`targeted`, `minimum` or `mls`), rather than disabled. The following screenshot is the corrected version of the same configuration:
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-03.png" alt-text="screenshot the default configuration of /etc/selinux/config":::
 
