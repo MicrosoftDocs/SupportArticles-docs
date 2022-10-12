@@ -1,11 +1,12 @@
 ---
 title: Error when you run CLR object or create assembly
 description: This article helps you resolve two different problems that can occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
-ms.date: 10/29/2020
+ms.date: 09/19/2022
 ms.custom: sap:Administration and Management  
 ms.reviewer: jackli
 ms.prod: sql
 ---
+
 # Error when you run an existing CLR object or create an assembly
 
 This article helps you resolve two different problems that can occur when working with CLR objects on a database that has been moved from a different instance of SQL Server.
@@ -32,20 +33,20 @@ at System.Reflection.Assembly.Load(String assemblyString)
   > Server: Msg 10327, Level 14, State 1, Line 1  
 CREATE ASSEMBLY for assembly 'AssemblyName' failed because assembly 'AssemblyName' is not authorized for PERMISSION_SET = EXTERNAL_ACCESS. The assembly is authorized when either of the following is true: the database owner (DBO) has EXTERNAL ACCESS ASSEMBLY permission and the database has the TRUSTWORTHY database property on; or the assembly is signed with a certificate or an asymmetric key that has a corresponding login with EXTERNAL ACCESS ASSEMBLY permission.
 
-The issues occur even if you have already set the **Trustworthy** database property to **ON**.
+The issues occur even if you have already set the `Trustworthy` database property to **ON**.
 
 ## Cause
 
-This problem occurs because the login that you use to create the database on Server A is not in the instance of SQL Server on Server B. This login could be either the Microsoft Windows login or the SQL Server login.
+This problem occurs because the login that you use to create the database on Server A isn't in the instance of SQL Server on Server B. This login could be either the Microsoft Windows login or the SQL Server login.
 
 ## Workaround
 
 To work around this problem, use one of the following methods.
 
 > [!NOTE]
-> Before you use the following methods, make sure that you enable the Trustworthy database property.
+> Before you use the following methods, make sure that you enable the `Trustworthy` database property.
 
-- Use the `sp_changedbowner` stored procedure to change the database owner to sa or to an available login on Server B. For example, you may use the following statement to change the database owner to **sa**:
+- Use the `sp_changedbowner` stored procedure to change the database owner to **sa** or to an available login on Server B. For example, you may use the following statement to change the database owner to **sa**:
 
     ```sql
     USE <DatabaseName>
