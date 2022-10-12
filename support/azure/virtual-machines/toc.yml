@@ -59,8 +59,6 @@
 
   - name: VM restart issues
     items:
-    - name: Can't restart after applying kernel changes
-      href: kernel-related-boot-issues.md
     - name: Fail to access Generation 2 Linux VM
       href: unable-access-g2-linux-vm-reboot.md
     - name: Fail to restart or be provisioned
@@ -208,6 +206,8 @@
   items:
   - name: Linux
     items:
+    - name: Can't restart after applying kernel changes
+      href: kernel-related-boot-issues.md
     - name: Debian Linux VM
       href: cannot-connect-debian-linux.md
     - name: Detailed SSH troubleshooting

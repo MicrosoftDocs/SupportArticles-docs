@@ -92,7 +92,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 3. Press the down arrow key to select any previous kernel version.
 
-    :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel-01.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to select an older kernel to boot the system on." lightbox="media/kernel-related-boot-issues/boot-previous-kernel-01.gif":::
+    :::image type="content" source="media/kernel-related-boot-issues/boot-previous-kernel.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to select an older kernel to boot the system on." lightbox="media/kernel-related-boot-issues/boot-previous-kernel.gif":::
 
 > [!NOTE]
 > If there's only one kernel version listed in the GRUB menu, follow the [Offline troubleshooting](#offline-troubleshooting) approach to troubleshoot this issue from a repair VM.
@@ -284,7 +284,7 @@ Before rebooting a server, we recommend validating the GRUB configuration and `/
 
     Refer to the following screenshot as an example. The kernel panic error shows that the kernel version is "3.10.0-1160.59.1.el7.x86_64":
 
-    :::image type="content" source="media/kernel-related-boot-issues/missing-initramfs-01.png" alt-text="Screenshot shows how to identify the specific kernel version that has the missing initramfs image.":::
+    :::image type="content" source="media/kernel-related-boot-issues/missing-initramfs.png" alt-text="Screenshot that shows how to identify the specific kernel version that has the missing initramfs image.":::
 
 2. Regenerate the missing initramfs file by running one of the following commands:
 
@@ -553,11 +553,14 @@ To fix kernel bugs, search the vendor Knowledge Base by using the kernel BUG str
 
 - [SUSE knowledge base](https://www.suse.com/support/kb/help/)
 
-- [Ubuntu knowledge base](https://wiki.ubuntu.com/KnowledgeBase)
+- [Ubuntu knowledge base](https://bugs.launchpad.net/ubuntu/+source/linux/+bugs)
 
 We recommend keeping all your systems up to date to rule out any possible bugs already fixed in the most recent kernel versions. For more information, see [Kernel update process](#other-kernel-boot-issues-kernelupdate).
 
-If further analysis is required, configure and enable kdump to generate a core dump.
+If further analysis is required from the vendor, configure and enable kdump to generate a core dump:
+* [Kdump configuration in Red Hat based VMs](https://access.redhat.com/solutions/3091051).
+* [Kernel crash dump configuration in Ubuntu VMs](https://ubuntu.com/server/docs/kernel-crash-dump).
+* [Kernel core dump configuration in SLES VMs](https://www.suse.com/support/kb/doc/?id=000016171)
 
 ### <a id="other-kernel-boot-issues-kernelupdate"></a> Kernel update process
 
@@ -644,6 +647,6 @@ Kernel panics might be related to any of the following items. For more informati
 
 ## Next steps
 
-If the specific boot error isn't a GRUB rescue issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
+If the specific boot error isn't a kernel related boot issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
