@@ -307,7 +307,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     grep -nr vfat /etc/modprobe.d/
     ```
 
-2. Modify the corresponding file and comment out or delete the VFAT entry. The entry will most commonly be: *install vfat /bin/true*.
+2. Modify the corresponding file and comment out or delete the VFAT entry. The entry will most commonly be: `install vfat /bin/true`.
 
     ```bash
     vi /etc/modprobe.d/disable.conf
