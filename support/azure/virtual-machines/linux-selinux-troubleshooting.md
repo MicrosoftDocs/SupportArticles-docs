@@ -38,7 +38,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## SELinux misconfiguration stops boot from completing
 
-An improperly configured SELinux may result in the OS being unable to load the SELinux policy. This will stop the operating system from completing the boot. Use the Serial console from the portal or through Azure CLI. The following message appears near the end of the output:
+An improperly configured SELinux may result in the OS being unable to load the SELinux policy, which will stop the operating system from completing the boot. Use the Serial console from the portal or through Azure CLI. The following message appears near the end of the output:
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-01.png" alt-text="screenshot of serial console with SELinux failing to load policy":::
 
@@ -63,7 +63,7 @@ To give it a try, using the [Azure serial console](/azure/virtual-machines/linux
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-02.png" alt-text="screenshot of /etc/selinux/config with a wrong value of disabled for the SELINUX key":::
 
-Notice that the last line, `SELINUXTYPE=disabled`, should have one of the three values detailed in the lines above (targeted, minimum or mls), rather than disabled. This is the corrected version of the same configuration:
+Notice that the last line, `SELINUXTYPE=disabled`, should have one of the three values detailed in the lines above (`targeted`, `minimum` or `mls`), rather than disabled. The following is the corrected version of the same configuration:
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/selinux-misconfiguration-03.png" alt-text="screenshot the default configuration of /etc/selinux/config":::
 
@@ -75,7 +75,7 @@ Notice that the last line, `SELINUXTYPE=disabled`, should have one of the three 
 1. In case the [Azure serial console](serial-console-linux.md) isn't working in the specific VM or isn't an option in your subscription, you can also troubleshoot this issue using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
-2. Validate and correct the SELinux configuration in `/etc/selinux/config`. An example of this is available in [the previous section](#selinux-misconfiguration-example).
+2. Validate and correct the SELinux configuration in `/etc/selinux/config`. An example is available in [the previous section](#selinux-misconfiguration-example).
 3. After the SELinux configuration has been corrected, perform the following actions:
     1. Exit chroot.
     2. Unmount the copy of the file systems from the rescue/repair VM.
