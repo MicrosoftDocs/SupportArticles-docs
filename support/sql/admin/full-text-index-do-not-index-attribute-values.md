@@ -1,28 +1,28 @@
 ---
 title: Full-text index doesn't index attribute values
 description: This article provides resolutions for the problem where SQL Server full-text index on XML column does not index attribute values for the inner nodes.
-ms.date: 01/15/2021
+ms.date: 09/19/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: joaol
 ---
 # SQL Server full-text index on XML column doesn't index attribute values for the inner nodes
 
-This article helps you resolve the problem where SQL Server full-text index on XML column doesesn't index attribute values for the inner nodes.
+This article helps you resolve the problem where SQL Server full-text index on XML column doesn't index attribute values for the inner nodes.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 2513181
 
 ## Symptoms
 
-In Microsoft SQL Server when indexing an XML column using full-text only node values and attribute values for the top node are indexed. Attribute values for any of the inner nodes are not indexed.
+In Microsoft SQL Server, when indexing an XML column using full-text, only node values and attribute values for the top node are indexed. Attribute values for any of the inner nodes aren't indexed.
 
 ## Cause
 
-This behavior happens because the XML word breaker that is shipped with SQL Server does not return attribute values for any of the inner nodes (xmlfilt.dll - Version: 12.0.9735.0).
+This behavior happens because the XML word breaker that is shipped with SQL Server doesn't return attribute values for any of the inner nodes (*xmlfilt.dll* - Version: 12.0.9735.0).
 
 ## Resolution
 
-This issue can be resolved using the XML word breaker that ships with Windows operating system when SQL Server is running on either Windows 7 or Windows Server 2008 R2 (version shipped with Windows use different file name - xmlfilter.dll). If you are running SQL Server on a lower version of Windows, you first need to upgrade to these operating systems and then use the following procedure to resolve this issue.
+This issue can be resolved using the XML word breaker that ships with Windows operating system when SQL Server is running on either Windows 7 or Windows Server 2008 R2 (version shipped with Windows use different file name - *xmlfilter.dll*). If you are running SQL Server on a lower version of Windows, you first need to upgrade to these operating systems and then use the following procedure to resolve this issue.
 
 Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R2 and Windows 7 environments:
 
@@ -37,9 +37,9 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance>\MSSearch\CLSID`
 
     > [!NOTE]
-    > Replace the "\<instance>" in the path above with the relevant instance ID of SQL Server/SQL Server.
+    > Replace the "\<instance>" in the path with the relevant instance ID of SQL Server/SQL Server.
 
-    For example, "MSQL10.MSSQLSERVER" for a default instance or "MSSQL10.KATMAI" for a named instance "Katmai"
+    > For example, "MSQL10.MSSQLSERVER" for a default instance or "MSSQL10.KATMAI" for a named instance "Katmai".
 
     For more information, see [File Locations for Default and Named Instances of SQL Server](/sql/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server).
 
@@ -47,17 +47,17 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
 
     > [!NOTE]
     >
-    > - This assumes your windows folder is located at `C:\Windows`.
+    > - This assumes your Windows folder is located at `C:\Windows`.
     > - You need to enter each backslash in the new path twice!
 
 3. Click the file _SQLMSSearch.reg_ to import the content into the registry.
-4. Execute the following T-SQL commands to enable the new setting in SQL Server
+4. Execute the following T-SQL commands to enable the new setting in SQL Server:
 
     ```sql
-    exec sp_fulltext_service 'load_os_resources', 1
-    exec sp_fulltext_service 'verify_signature ', 0 
-    exec sp_fulltext_service 'update_languages'
-    exec sp_fulltext_service 'restart_all_fdhosts'
+    EXEC sp_fulltext_service 'load_os_resources', 1
+    EXEC sp_fulltext_service 'verify_signature ', 0 
+    EXEC sp_fulltext_service 'update_languages'
+    EXEC sp_fulltext_service 'restart_all_fdhosts'
     ```
 
 5. Check the availability of the new settings with this T-SQL command:
@@ -67,7 +67,7 @@ Procedure to resolve the problem on SQL Servers running on Windows Server 2008 R
     ```
 
     > [!NOTE]
-    > You need to adapt the above command to suit the correct Windows system path on your system. Also ensure that all the languages (respectively their lcid), that should show the new behaviour are listed in the column "componentname" in the output.
+    > You need to adapt the above command to suit the correct Windows system path on your system. Also, ensure that all the languages (respectively their lcid), that should show the new behavior are listed in the column "componentname" in the output.
 
 ## More information
 
@@ -84,7 +84,7 @@ Steps to repro:
 3. Insert one record on that table, as follows:
 
     ```sql
-    insert into testFTS (idField, xmlField) values
+    INSERT INTO testFTS (idField, xmlField) values
     (1, '<TopNode TopFirstAtt="TopAttValue" TopSecondAtt="Second Value">
     <MiddleNode FirstAtt="ValueOne" SecondAtt="ValueTwo" ThirdAtt="ValueThree">
     <BottomNode BottomAtt="BottomValue">

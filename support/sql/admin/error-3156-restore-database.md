@@ -8,6 +8,8 @@ ms.reviewer: jolamber, sqlblt
 ---
 # Error 3156 when restoring a database with a memory-optimized filegroup in SQL Server
 
+This article provides a workaround for the 3156 error, which occurs when you try to restore a database that has a memory-optimized filegroup in SQL Server.
+
 _Applies to:_ &nbsp; SQL Server  
 
 ## Symptoms
