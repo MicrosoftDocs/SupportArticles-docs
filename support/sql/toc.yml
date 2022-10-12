@@ -69,8 +69,6 @@
     items:
     - name: SQL Server startup issues
       items:
-      - name: Restore issues with Azure connector
-        href: admin/error-33111-restore-issues-sql-connector.md
       - name: SQL Server startup errors
         href: admin/sql-server-startup-errors.md
       - name: Access is denied error and SQL Server doesn't start
@@ -207,6 +205,8 @@
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
+    - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
+      href: admin/error-33111-restore-issues-sql-connector.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
