@@ -4,7 +4,8 @@ description: This article lists cumulative update and GDR builds for SQL Server 
 ms.date: 10/12/2022
 ms.custom: sap:Product Updates and Release Notes
 ms.prod: sql
-appliesto: SQL Server 2017
+appliesto:
+- SQL Server 2017
 ---
 # KB4047329 - SQL Server 2017 build versions
 

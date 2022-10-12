@@ -4,7 +4,8 @@ description: This article lists cumulative update builds for SQL Server 2016.
 ms.date: 10/12/2022
 ms.custom: sap:Product Updates and Release Notes
 ms.prod: sql
-appliesto: SQL Server 2016
+appliesto:
+- SQL Server 2016
 ---
 # KB3177312 - SQL Server 2016 build versions
 

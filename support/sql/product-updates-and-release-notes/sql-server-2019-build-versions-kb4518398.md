@@ -4,7 +4,8 @@ description: This article lists cumulative update and GDR builds for SQL Server 
 ms.date: 10/12/2022
 ms.custom: sap:Product Updates and Release Notes
 ms.prod: sql
-appliesto: SQL Server 2019
+appliesto:
+- SQL Server 2019
 ---
 # KB4518398 - SQL Server 2019 build versions
 
