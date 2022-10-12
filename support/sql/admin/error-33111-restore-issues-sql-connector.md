@@ -1,7 +1,7 @@
 ---
-title: Restore issues using SQL connector
+title: Can't restore backups from SQL Server that uses SQL Server Connector for Key Vault
 description: This article helps you resolve the error 33111 while restoring backups from the previous versions of SQL Server.
-ms.date: 10/01/2022
+ms.date: 10/11/2022
 ms.custom: sap:Administration and Management
 author: ramakoni1
 ms.author: v-jayaramanp
@@ -23,7 +23,7 @@ Assume that you deploy the following instances of Microsoft SQL Server:
 
 - SQL Server instance `sql2` has SQL Server Connector for Key Vault 1.0.5.0 deployed.
 
-- Use the following query to deploy an asymmetric key on both sql1 and sql2 instances from the same asymmetric key source in Key Vault:
+- Use the following query to deploy an asymmetric key on both `sql1` and `sql2` instances from the same asymmetric key source in Key Vault:
 
     ```sql
     CREATE ASYMMETRIC KEY TDE_KEY 
@@ -52,8 +52,8 @@ The `sql2` instance has an asymmetric key created.
 
 If you try to restore the backup on the `sql2` instance, the operation fails and returns an error message that resembles the following message:
 
-> Msg 33111, Level 16, State 4, Line LineNumber
-
+> Msg 33111, Level 16, State 4, Line \<LineNumber>
+>
 > Cannot find server asymmetric key with thumbprint '0x2C5677D76F76D77F80'.
 
 Notes:
@@ -88,7 +88,7 @@ Because of this change, you might experience problems when you try to restore da
 
 1. Copy the SQL Server Connector for Key Vault 1.0.4.0 or an earlier version to the `sql2` instance server.
 
-1. Run the following query on the `sql2` server to change the CRYPTOGRAPHIC PROVIDER to version 1.0.4.0:
+1. Run the following query on the `sql2` server to change the `CRYPTOGRAPHIC PROVIDER` to version 1.0.4.0:
 
      ```sql
      ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider
@@ -98,14 +98,14 @@ Because of this change, you might experience problems when you try to restore da
 
    1. Restart SQL Server.
 
-   1. Create a new asymmetric key by using - CRYPTOGRAPHIC PROVIDER 1.0.4.0.
+   1. Create a new asymmetric key by using `CRYPTOGRAPHIC PROVIDER` 1.0.4.0.
 
-     ```sql
-       CREATE ASYMMETRIC KEY TDE_KEY_1040 
-       FROM PROVIDER AzureKeyVaultProvider 
-       WITH PROVIDER_KEY_NAME = 'key1', 
-       CREATION_DISPOSITION = OPEN_EXISTING
-    ```
+         ```sql
+           CREATE ASYMMETRIC KEY TDE_KEY_1040 
+           FROM PROVIDER AzureKeyVaultProvider 
+           WITH PROVIDER_KEY_NAME = 'key1', 
+           CREATION_DISPOSITION = OPEN_EXISTING
+        ```
 
 1. You can confirm the existence of both the asymmetric keys by using the following query:
 
@@ -122,7 +122,7 @@ Because of this change, you might experience problems when you try to restore da
 
 1. You should now be able to restore the backup.
 
-1. Run the following query on `sql2` to revert the CRYPTOGRAPHIC PROVIDER to version 1.0.5.0:
+1. Run the following query on `sql2` to revert the `CRYPTOGRAPHIC PROVIDER` to version 1.0.5.0:
 
     ```sql
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVaultProvider 
