@@ -133,7 +133,7 @@ This scenario has been covered in the [How to recover an Azure Linux virtual mac
 
 The Hyper-V drivers are already included in the Linux kernel of all modern Linux distributions.
 
-If they've been disabled, they'll need to be re-enabled, and the initramfs or initrd image will need to be regenerated. This scenario has been covered in the [Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver associated errors - Scenario 3: Other Hyper-V drivers disabled](troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled) document. Follow the instructions to troubleshoot and fix this specific issue.
+If they've been disabled, they'll need to be re-enabled, and the initramfs or initrd image will need to be regenerated. This scenario has been covered in the [Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver associated errors - Scenario 3: Other Hyper-V drivers disabled](/troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled) document. Follow the instructions to troubleshoot and fix this specific issue.
 
 If the VM is Red Hat and has been migrated from on-premises, refer to [The Hyper-V driver could not be included in the initial RAM disk when using a non-Hyper-V hypervisor](/azure/virtual-machines/linux/redhat-create-upload-vhd#the-hyper-v-driver-could-not-be-included-in-the-initial-ram-disk-when-using-a-non-hyper-v-hypervisor). You'll find information about how to enable the required Hyper-V drivers in the initramfs image.
 
