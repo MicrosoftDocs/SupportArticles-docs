@@ -22,9 +22,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 ## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify missing Hyper-V driver issue
 
-To identify if your VM fails to boot due to missing Hyper-V drivers, use the Azure portal to view the serial console log of the VM in the boot-diagnostics pane, serial console pane or [Azure CLI](/cli/azure/serial-console#az-serial-console-connect).
-
-The sample outputs of failures are displayed in the corresponding sections below.
+To identify if your VM fails to boot due to missing Hyper-V drivers, use [Azure CLI](/cli/azure/serial-console#az-serial-console-connect), or the Azure portal to view the serial console log of the VM in the boot-diagnostics pane or serial console pane. The sample outputs of failures are displayed in the corresponding sections below.
 
 ## Before you troubleshoot
 
@@ -79,7 +77,7 @@ Or
 
         > [!NOTE]
         >
-        > - Those are reserved words used to disable drivers, defined by the Linux Operating System, not by Microsoft.
+        > - The `blacklist` is a reserved word used to disable drivers, defined by the Linux Operating System, not by Microsoft.
         > - Replace `disable.conf` with the corresponding file name where the hv_netvsc driver is disabled.
 
 5. Rebuild the initial RAMdisk image for the currently loaded kernel:
@@ -124,7 +122,7 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
 
 2. Mount and chroot to the file systems of the attached OS disk in the rescue VM by following [chroot instructions](./chroot-environment-linux.md).
 
-3. Once the content of the affected OS disk is accessed, follow the step 4 and 5 in [previous section](#reenable-hv_netvsc-offline) to reenable the drivers and rebuild the initial RAMdisk image.
+3. Once the content of the affected OS disk is accessed, follow the step 4 and 5 in [Solution 1: Enable Hyper-V network driver by using serial console](#reenable-hv_netvsc-online) to reenable the drivers and rebuild the initial RAMdisk image.
 
     Before the initial RAMdisk image is rebuilt, switch to chroot environment. The full path of the image must be provided.
 
@@ -227,7 +225,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
 
     > [!IMPORTANT]
     >
-    > - Those are reserved words used to disable drivers, defined by the Linux Operating System, not by Microsoft.
+    > - The `blacklist` is a reserved word used to disable drivers, defined by the Linux Operating System, not by Microsoft.
     > - Replace `disable.conf` with the corresponding file name where the Hyper-V drivers are disabled.
 
 4. Rebuild the initial RAMdisk image for the currently loaded kernel:
@@ -248,11 +246,8 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
 
 Always take a backup of the original initial RAMdisk image to facilitate the rollback if needed.
 
-If the issue is still not resolved, follow the _How to recover an Azure Linux virtual machine getting stuck at dracut_ documentation to further investigate the cause and solution for dracut errors.
-<!-- This article is in the process of getting published as well within few days, we will come back and add the link to the document when ready (PR)-->
-
 ## Next steps
 
-In case the specific boot error isn't a GRUB rescue issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
+In case the specific boot error isn't a Hyper-V issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
