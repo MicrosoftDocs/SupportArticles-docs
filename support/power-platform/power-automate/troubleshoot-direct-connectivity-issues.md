@@ -3,7 +3,7 @@ title: Direct connectivity issues in Power Automate for desktop
 description: Provides more information about how to solve the direct connectivity issues in Power Automate for desktop.
 ms.reviewer: guco
 ms.date: 9/20/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Direct connectivity issues in Power Automate for desktop
 
@@ -74,7 +74,7 @@ Add this config section:
 </system.diagnostics>
 ```
 
-- You can substitute the **c:\logs\PADwcfTraces.svclog** value with any valid path you'd like but the folder (**c:\logs** in this example) must exist, otherwise it won't be created and logs won't be written.
+- You can substitute the `c:\logs\PADwcfTraces.svclog` value with any valid path you'd like but the folder (`c:\logs` in this example) must exist, otherwise it won't be created and logs won't be written.
 - The Power Automate service must have permission to write in the chosen folder, granting the 'Everyone' user full control over the folder works. You can get the service user's Sid by running `sc showsid UIFlowService` in a command line if you want to give permissions to only that user.
 
 This config section needs to be added between \</system.net> and \<appSettings>, see the following screenshot:

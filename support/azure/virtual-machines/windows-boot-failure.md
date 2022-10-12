@@ -4,6 +4,7 @@ description: Provides a solution to an issue where Windows VM doesn't start with
 ms.date: 07/21/2020
 ms.reviewer: 
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Windows boot error INACCESSIBLE_BOOT_DEVICE in an Azure VM

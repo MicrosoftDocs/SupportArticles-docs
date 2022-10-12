@@ -4,6 +4,7 @@ description: Describes a Winload.exe error (0xc0000605) that occurs on an Azure 
 ms.date: 07/21/2020
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 # Winload.exe error code 0xc0000605 on an Azure VM

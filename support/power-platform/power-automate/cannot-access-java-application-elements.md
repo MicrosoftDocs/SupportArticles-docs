@@ -3,7 +3,7 @@ title: Can't access elements of a Java application
 description: Provides resolutions for the issue that Power Automate for desktop can't access the elements of a Java desktop application.
 ms.reviewer: pefelesk
 ms.date: 9/30/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # Can't access the elements of a Java application
 
@@ -20,15 +20,9 @@ Microsoft Power Automate for desktop can't access the elements of a Java desktop
 
 Make sure that you aren't able to capture an element of the application by using either the Recorder or the "Add UI element" action in the Designer.
 
-## Cause
+## Cause 1: Java isn't installed on your machine
 
-Cause 1: Java isn't installed on your machine.
-
-Cause 2: Java Access Bridge is enabled.
-
-Cause 3: Some files aren't available in the Java folder(s) of the machine after the Power Automate for desktop installation.
-
-## Resolution for cause 1
+### Resolution
 
 To solve this issue, make sure that you have Java installed. You can check this by:
 
@@ -37,13 +31,17 @@ To solve this issue, make sure that you have Java installed. You can check this 
 
   > 'java' is not recognized as an internal or external command, operable program or batch file.
 
-## Resolution for cause 2
+## Cause 2: Java Access Bridge is enabled
+
+### Resolution
 
 To solve this issue, make sure that you've disabled the Java Access Bridge in Control Panel.
 
 Go to **Control Panel** > **Ease of Access** > **Optimize visual display** > **Java Access Bridge from Oracle, Inc. Providing Assistive Technology access to Java applications**, and then disable (uncheck) the **Enable Java Access Bridge** option.
 
-## Resolution for cause 3
+## Cause 3: Some files aren't available in the Java folder(s) of the machine after you install Power Automate for desktop
+
+### Resolution
 
 Specific files should exist in the Java folder(s) of the machine after the Power Automate for desktop installation.
 

@@ -4,6 +4,7 @@ description: Fixes error 0xC0000102 (Status File Corrupt) that occurs on an Azur
 ms.date: 12/8/2020
 ms.reviewer: jarrettr
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.collection: windows
 ---
 

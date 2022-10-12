@@ -29,7 +29,7 @@ Internet Information Services (IIS) log files include the same type of entries f
 
    Review the status code near the end of this request:
    - **Status code of 200**: This status indicates the connection with the NDES server is successful.
-   - **Status code of 500**: The IIS_IURS group might lack correct permissions. See [Troubleshoot status code 500](#troubleshoot-status-code-500), later in this article.
+   - **Status code of 500**: The IIS_IUSRS group might lack correct permissions. See [Troubleshoot status code 500](#troubleshoot-status-code-500), later in this article.
    - If the status code isn't 200 or 500:
 
      - See [Test and troubleshoot the SCEP server URL](#test-and-troubleshoot-the-scep-server-url) later in this article to help validate the configuration.
@@ -113,7 +113,7 @@ To open the log:
 
 ## Troubleshoot status code 500
 
-Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IURS group on the NDES server. The status value of **500** appears at the end:
+Connections that resemble the following example, with a status code of 500, indicate the *Impersonate a client after authentication* user right isn't assigned to the IIS_IUSRS group on the NDES server. The status value of **500** appears at the end:
 
 ```output
 2017-08-08 20:22:16 IP_address GET /certsrv/mscep/mscep.dll operation=GetCACert&message=SCEP%20Authority 443 - 10.5.14.22 profiled/1.0+CFNetwork/811.5.4+Darwin/16.6.0 - 500 0 1346 31
@@ -124,7 +124,7 @@ Complete the following steps to fix this issue:
 1. On the NDES server, run **secpol.msc** to open the Local Security Policy.
 2. Expand **Local Policies**, and then select **User Rights Assignment**.
 3. Double-click **Impersonate a client after authentication** in the right pane.
-4. Select **Add User or Group…**, enter **IIS_IURS** in the **Enter the object names to select box**, and then select **OK**.
+4. Select **Add User or Group…**, enter **IIS_IUSRS** in the **Enter the object names to select box**, and then select **OK**.
 5. Select **OK**.
 6. Restart the computer, and then try the connection from the device again.
 

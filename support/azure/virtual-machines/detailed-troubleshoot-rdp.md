@@ -2,6 +2,7 @@
 title: Detailed remote desktop troubleshooting in Azure
 description: Review detailed troubleshooting steps for remote desktop errors where you cannot to a Windows virtual machines in Azure
 services: virtual-machines
+ms.subservice: vm-cannot-connect
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm

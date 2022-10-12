@@ -3,6 +3,7 @@ title: Troubleshoot SSH connection issues to an Azure VM
 description: How to troubleshoot issues such as 'SSH connection failed' or 'SSH connection refused' for an Azure VM running Linux.
 keywords: ssh connection refused, ssh error, azure ssh, SSH connection failed
 services: virtual-machines
+ms.subservice: vm-cannot-connect
 documentationcenter: ''
 author: genlin
 manager: dcscontentpm

@@ -3,7 +3,7 @@ title: Failed to assume control of Edge or Chrome or Firefox error
 description: Provides a resolution to the error that occurs when running a desktop flow that has a "Launch browser" action in Power Automate.
 ms.reviewer: nimoutzo
 ms.date: 9/21/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # "Failed to assume control of Microsoft Edge/Chrome/Firefox" error
 
@@ -22,13 +22,9 @@ When you run a desktop flow that has a "Launch Edge", "Launch Chrome", or "Launc
 
 > Failed to assume control of Firefox (Internal error or communication failure)
 
-## Cause 1
+## Cause 1: Web extension isn't installed properly or enabled
 
 The Microsoft Edge, Google Chrome, or Firefox web extension isn't installed properly or enabled.
-
-## Cause 2
-
-Launch of the browser takes longer than the default timeout (30 seconds) of the action. The automation tries to assume control of the browser before opening and as a result the "Launch browser" action fails.
 
 ## Verifying issue for cause 1
 
@@ -39,11 +35,7 @@ Launch of the browser takes longer than the default timeout (30 seconds) of the 
 
 - Note that the web extension might seem to be installed and enabled in the extension repository of the specific browser but the execution to be unsuccessful.
 
-## Verifying issue for cause 2
-
-Execution of a desktop flow with one of the respective actions fails with the error message. This behavior might not be consistent (some executions could be successful).
-
-## Resolution for cause 1
+### Resolution
 
 1. Install the respective web extension from the Power Automate for desktop designer.
 
@@ -52,7 +44,15 @@ Execution of a desktop flow with one of the respective actions fails with the er
 2. Even if the extension seems installed and enabled, you need to remove it and reinstall it.
 3. Restart the browser.
 
-## Resolution for cause 2
+## Cause 2: Launch browser action takes longer than the default timeout
+
+Launch of the browser takes longer than the default timeout (30 seconds) of the action. The automation tries to assume control of the browser before opening and as a result the "Launch browser" action fails.
+
+## Verifying issue for cause 2
+
+Execution of a desktop flow with one of the respective actions fails with the error message. This behavior might not be consistent (some executions could be successful).
+
+### Resolution
 
 1. Insert a new "Launch new browser" action as:
     - Launch new Edge

@@ -8,8 +8,6 @@
   href: ./create-database-programmatically.md
 - name: Do basic file I/O operations
   href: ./basic-file-io-operation.md
-- name: Enable Tablet press-and-hold gesture in MFC
-  href: ./mfc-enable-tablet-press-and-hold-gesture.md
 - name: LNK1000 error when you use /WHOLEARCHIVE switch
   href: ./lnk1000-error-wholearchive-switch.md
 - name: MFC applications can't redraw controls
