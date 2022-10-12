@@ -1,6 +1,6 @@
 ---
 title: How to recover Azure Linux VMs from a no boot scenario when the OS file system isn't accessible from initramfs
-description: Provides solutions to an issue in which a Linux virtual machine (VM) cannot boot because the OS file system isn't accessible from initramfs
+description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from initramfs
 author: divargas-msft
 ms.author: divargas
 ms.date: 10/10/2022
@@ -67,9 +67,9 @@ Enter 'help' for a list of built-in commands.
 ## <a id="online-troubleshooting"></a>Online troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
-The serial console is the fastest method to resolve issues. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you have met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
+The serial console is the fastest method to resolve issues. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you've met the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
 
 1. [Identify if your VM is actually landing at the Dracut emergency shell](#identify-dracut-boot-issue).
 2. Not every issue causing the VM to land into Dracut would be able to be addressed using the Azure serial console.
@@ -97,14 +97,14 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 ## <a id="offline-troubleshooting"></a>Offline troubleshooting
 
 > [!TIP]
-> If you have a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
+> If you've a recent backup of the VM, you may try [restoring the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot problem.
 
 1. In case the [Azure serial console](serial-console-linux.md) isn't working in the specific VM or isn't an option in your subscription, you can also troubleshoot this issue using a rescue/repair VM. Use [vm repair commands](repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to create a repair VM that has a copy of the affected VM's OS disk attached. Mount the copy of the OS file systems in the repair VM by using [chroot](chroot-environment-linux.md).
 
     > [!NOTE]
     > Alternatively, you can create a rescue VM manually by using the Azure portal. For more information, see [Troubleshoot a Linux VM by attaching the OS disk to a recovery VM using the Azure portal](/troubleshoot/azure/virtual-machines/troubleshoot-recovery-disks-portal-linux).
 
-2. Review each of the following sections, that will help you to determine what specific issue are you facing and its resolution:
+2. Review each of the following sections that will help you to determine what specific issue you're facing and its resolution:
 
     * [ADE Encrypted VM unable to boot caused by disabling VFAT](#dracut-ade-without-vfat).
     * [Hyper-V drivers missing](#dracut-hyperv-drivers-disabled).
@@ -133,9 +133,9 @@ This scenario has been covered in the [How to recover an Azure Linux virtual mac
 
 The Hyper-V drivers are already included in the Linux kernel of all modern Linux distributions.
 
-If they've been disabled, they will need to be re-enabled and the initramfs or initrd image will need to be regenerated. This scenario has been covered in the [Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver associated errors - Scenario 3: Other Hyper-V drivers disabled](troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled) document. Please follow the instructions to troubleshoot and fix this specific issue.
+If they've been disabled, they'll need to be re-enabled, and the initramfs or initrd image will need to be regenerated. This scenario has been covered in the [Troubleshoot Linux virtual machine boot and network issues due to Hyper-V driver associated errors - Scenario 3: Other Hyper-V drivers disabled](troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled) document. Follow the instructions to troubleshoot and fix this specific issue.
 
-In case the VM is Red Hat and it's has been migrated from on-premises, please refer to [The Hyper-V driver could not be included in the initial RAM disk when using a non-Hyper-V hypervisor](/azure/virtual-machines/linux/redhat-create-upload-vhd#the-hyper-v-driver-could-not-be-included-in-the-initial-ram-disk-when-using-a-non-hyper-v-hypervisor), for further information about how to re-enable the required Hyper-V drivers in the initramfs image.
+If the VM is Red Hat and has been migrated from on-premises, refer to [The Hyper-V driver could not be included in the initial RAM disk when using a non-Hyper-V hypervisor](/azure/virtual-machines/linux/redhat-create-upload-vhd#the-hyper-v-driver-could-not-be-included-in-the-initial-ram-disk-when-using-a-non-hyper-v-hypervisor). You'll find information about how to enable the required Hyper-V drivers in the initramfs image.
 
 ## <a id="dracut-grub-misconf"></a>GRUB misconfiguration
 
@@ -153,16 +153,16 @@ Validate the GRUB configuration. Look for the root path `root=/dev/***` and make
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line and look for the  `root=` parameter and fix it.
-    3. Then press `CTRL+x` to boot the VM with these non persistent modification.
-    4. Once the VM successfully boots, the changes need to be done persistently: 
+    3. Then press `CTRL+x` to boot the VM with this non persistent modification.
+    4. Once the VM successfully boots, the changes need to be done persistently:
         1. Modify the `/etc/default/grub` file accordingly, fixing the root parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
 
 A few things to have in consideration during this validation:
 
 * In ubuntu VMs with OS encryption, make sure the device name is `/dev/mapper/osencrypt`
 * In VMs with LVM in the OS disk, the root volume is `/dev/mapper/rootvg-rootlv`. This same path is used in RHEL VMs with ADE OS disk encrypted.
-* Make sure no device names in the form of `/dev/sdX` are used, as they will change across reboots, they aren't persistent in Linux. For more information, see [Troubleshoot Linux VM device name changes](/troubleshoot/azure/virtual-machines/troubleshoot-device-names-problems).
-* If UUIDs are used, make sure the proper root file system UUID is used and the proper syntax has been used as well: `root=UUID=xxx-yyy-zzz`
+* Make sure no device names in the form of `/dev/sdX` are used, as they'll change across reboots, they aren't persistent in Linux. For more information, see [Troubleshoot Linux VM device name changes](/troubleshoot/azure/virtual-machines/troubleshoot-device-names-problems).
+* If UUIDs are used, make sure the proper root file system UUID is used, and the proper syntax has been used as well: `root=UUID=xxx-yyy-zzz`
 
 ### <a id="dracut-grub-misconf-dup-params"></a>Duplicated parameters in the GRUB configuration file
 
@@ -175,8 +175,8 @@ Validate the GRUB configuration. Look for duplicated parameters:
     4. Update the GRUB configuration file, for more information, see [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
-    2. Validate the `linux16` line, look for duplicated parameters and get remove them.
-    3. Then press `CTRL+x` to boot the VM with these non persistent modification.
+    2. Validate the `linux16` line, look for duplicated parameters and remove them.
+    3. Then press `CTRL+x` to boot the VM with this non persistent modification.
     4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fixing the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file)
 
 ## <a id="dracut-rootfs-corruption"></a>Root file system corruption
@@ -188,14 +188,14 @@ To fix the root file system corruption, follow the instructions in [Troubleshoot
 ## <a id="dracut-lvm-issues"></a>Issues with Logical Volume Manager (LVM) activation
 <!--Issue getting the LVM VG activated-->
 
-It's possible there're issues trying to access the LVM physical volume (PV), volume group (VG) and/or logical volume (LV).
+It's possible there are issues trying to access the LVM physical volume (PV), volume group (VG) and/or logical volume (LV).
 
 This process isn't possible to be address from the Azure Serial console. A repair/rescue VM will be required.
 
 From a rescue/repair VM:
 
 1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
-2. Run the following commands and identify any issue by taking a look a the following outputs:
+2. Run the following commands and identify any issue by taking a look at the following outputs:
     1. Identify which device corresponds to the OS disk. Also, verify if it's detected as a PV, by taking a look at the outputs
 
     ```bash
@@ -220,9 +220,9 @@ From a rescue/repair VM:
     Below some common LVM errors causing issues to access the root volume:
 
     * **Unknown PV, when the rootvg VG has only a single PV (this is the standard Azure configuration)**
-      * The partition holding the PV has been deleted by mistake, incorrectly resized or created wrong. This could be caused by a human error or during errors trying to perform partition resize operations. For further information, see [Root partition missing](#dracut-rootpart-missing).
+      * The partition holding the PV has been deleted by mistake, incorrectly resized or created wrong. This issue could be caused by a human error or during errors trying to perform partition resize operations. For more information, see [Root partition missing](#dracut-rootpart-missing).
     * **Unknown PV, when the rootvg VG has been modified and it has been split across more than one disk.**
-      * Please keep in mind this isn't a recommended configuration.
+      * Keep in mind having 2 PVs in rootvg isn't a recommended configuration.
       * In this scenario, it's possible the data disk was detached from the virtual machine and the rootvg logical volumes are no longer accessible. To resolve this issue, reattach the original disk to the VM and restart it.
 4. If the PV is unrecoverable, perform a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
@@ -234,13 +234,13 @@ It's possible the root file system is inaccessible because of issues at partitio
 In this scenario, if you've documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and **no further modifications were done on the system**, like new file systems creation, you can try to recreate the partitions using the same original layout with tools like **fdisk** (for MBR partition tables) or **gdisk** (for GPT partition tables) to gain access to the inaccessible file system.
 
 > [!IMPORTANT]
-> This recovery operation will need to be followed from a repair/rescue VM, for further details, see the [Offline troubleshooting](#offline-troubleshooting) section.
+> This recovery operation will need to be followed from a repair/rescue VM, for more information, see the [Offline troubleshooting](#offline-troubleshooting) section.
 
 If that approach doesn't work, the recommended option left, is to perform a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 ## <a id="dracut-initramfs-corruption"></a>Initrd or initramfs corruption
 
-It's possible the initrd/initramfs image has some level of corruption causing issues to mount the root volume and start the OS start up process.
+It's possible the initrd/initramfs image has some level of corruption causing issues to mount the root volume and start the OS startup process.
 
 * From inside chroot in a repair/rescue VM:
     1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
