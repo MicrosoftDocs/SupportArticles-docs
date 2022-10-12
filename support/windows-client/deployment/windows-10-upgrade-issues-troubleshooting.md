@@ -25,7 +25,7 @@ localization_priority: medium
 If a Windows 10 upgrade isn't successful, it can be helpful to understand when an error occurred in the upgrade process.
 
 > [!IMPORTANT]
-> Use the [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
+> Use the [SetupDiag](/windows/deployment/upgrade/setupdiag) tool before you begin manually troubleshooting an upgrade error. SetupDiag automates log file analysis, detecting and reporting details on many different types of known upgrade issues.
 
 _Applies to:_ &nbsp; Windows 10
 
