@@ -27,7 +27,7 @@ This article provides some common causes and solutions that are associated with 
 
 ## 0xC1900101
 
-A frequently observed [result code](windows-10-upgrade-error-codes.md#result-codes) is 0xC1900101. This result code can be thrown at any stage of the upgrade process, with the exception of the downlevel phase. 0xC1900101 is a generic rollback code, and usually indicates that an incompatible driver is present. The incompatible driver can cause blue screens, system hangs, and unexpected reboots. Analysis of supplemental log files is often helpful, such as:  
+A frequently observed [result code](/windows/deployment/upgrade/upgrade-error-codes#result-codes) is 0xC1900101. This result code can be thrown at any stage of the upgrade process, with the exception of the downlevel phase. 0xC1900101 is a generic rollback code, and usually indicates that an incompatible driver is present. The incompatible driver can cause blue screens, system hangs, and unexpected reboots. Analysis of supplemental log files is often helpful, such as:  
 
 - The minidump file: *$Windows.~bt\\Sources\\Rollback\\setupmem.dmp*
 - Event logs: *$Windows.~bt\\Sources\\Rollback\*.evtx*
