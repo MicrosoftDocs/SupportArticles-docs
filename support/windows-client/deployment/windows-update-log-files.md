@@ -156,4 +156,4 @@ There are different identifiers for the same update in different contexts. It's 
 
 ## Windows Setup log files analysis using SetupDiag tool
 
-SetupDiag is a diagnostic tool that can be used for analysis of logs related to installation of Windows Updates. For detailed information, see [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md).
+SetupDiag is a diagnostic tool that can be used for analysis of logs related to installation of Windows Updates. For detailed information, see [SetupDiag](/windows/deployment/upgrade/setupdiag).
