@@ -20,7 +20,7 @@ This article discusses multiple conditions where one or more disabled Hyper-V dr
 
 Make sure the [serial console](serial-console-linux.md) is enabled and functional in the Linux VM.
 
-## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify a missing Hyper-V driver issue
+## <a id="identify-hyperv-drivers-disabled-boot-issue"></a>How to identify missing Hyper-V driver issue
 
 To identify if your VM fails to boot due to missing Hyper-V drivers, use [Azure CLI](/cli/azure/serial-console#az-serial-console-connect) or the Azure portal to view the serial console log of the VM in the boot-diagnostics pane or serial console pane. The sample outputs of failures are displayed in the corresponding sections below.
 
@@ -54,7 +54,7 @@ Or
  cloud-init[799]: 2022-XX-2XX 19:04:10,277 - azure.py[WARNING]: IMDS network metadata has incomplete configuration: None
 ```
 
-### <a id="reenable-hv_netvsc-online"></a>Solution 1: Enable the Hyper-V network driver by using the serial console
+### <a id="reenable-hv_netvsc-online"></a>Solution 1: Enable Hyper-V network driver by using serial console
 
 1. Access the serial console of the VM. The networking is down, but the login prompt is still available.
 2. Sign in to the VM with the correct credentials.
@@ -116,13 +116,13 @@ Always take a backup of the original initial RAMdisk image to facilitate the rol
     # cp /boot/initrd.img-<kernelVersion> /boot/initrd.img-<kernelVersion>.bak
     ```
 
-### <a id="reenable-hv_netvsc-offline"></a>Solution 2: Enable the Hyper-V network driver offline
+### <a id="reenable-hv_netvsc-offline"></a>Solution 2: Enable Hyper-V network driver offline
 
 1. Use [az vm repair](./repair-linux-vm-using-azure-virtual-machine-repair-commands.md) to access the contents of the affected OS disk from a rescue VM.
 
 2. Mount and chroot to the file systems of the attached OS disk in the rescue VM by following [chroot instructions](./chroot-environment-linux.md).
 
-3. Once the content of the affected OS disk is accessed, follow steps 4 and 5 in [Solution 1: Enable the Hyper-V network driver by using the serial console](#reenable-hv_netvsc-online) to reenable the drivers and rebuild the initial RAMdisk image.
+3. Once the content of the affected OS disk is accessed, follow steps 4 and 5 in [Solution 1: Enable Hyper-V network driver by using serial console](#reenable-hv_netvsc-online) to reenable the drivers and rebuild the initial RAMdisk image.
 
     Before the initial RAMdisk image is rebuilt, switch to chroot environment. The full path of the image must be provided.
 
