@@ -23,7 +23,7 @@ _Applies to:_ &nbsp; Windows 10
 >  
 > See [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors.md) for a full list of topics in this article.
 
-This article provides some common causes and solutions that are associated with specific upgrade error codes. If a Windows 10 upgrade fails, you can write down the error code that is displayed, or find the error code in the Windows [Event Log](windows-error-reporting.md) or in the Windows Setup [log files](windows-10-upgrade-log-files.md) (ex: *setuperr.log*) and review the cause and solutions provided here. You should also try running the free [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool provided by Microsoft, which can automatically find the reason for an upgrade failure.
+This article provides some common causes and solutions that are associated with specific upgrade error codes. If a Windows 10 upgrade fails, you can write down the error code that is displayed, or find the error code in the Windows [Event Log](/windows/deployment/upgrade/windows-error-reporting) or in the Windows Setup [log files](windows-10-upgrade-log-files.md) (ex: *setuperr.log*) and review the cause and solutions provided here. You should also try running the free [SetupDiag](setupdiag-tool-for-windows-10-upgrade.md) tool provided by Microsoft, which can automatically find the reason for an upgrade failure.
 
 ## 0xC1900101
 

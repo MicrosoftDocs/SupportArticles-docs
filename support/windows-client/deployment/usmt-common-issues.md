@@ -24,7 +24,7 @@ _Applies to:_ &nbsp; Windows 10
 
 When you encounter a problem or error message during migration, you can use the following general guidelines to help determine the source of the problem:
 
-- Examine the ScanState, LoadState, and UsmtUtils logs to obtain the exact USMT error messages and Windows&reg; application programming interface (API) error messages. For more information about USMT return codes and error messages, see [Return Codes](usmt-return-codes.md). For more information about Windows API error messages, type `nethelpmsg` on the command line.
+- Examine the ScanState, LoadState, and UsmtUtils logs to obtain the exact USMT error messages and Windows&reg; application programming interface (API) error messages. For more information about USMT return codes and error messages, see [Return Codes](/windows/deployment/usmt/usmt-return-codes). For more information about Windows API error messages, type `nethelpmsg` on the command line.
 
   In most cases, the ScanState and LoadState logs indicate why a USMT migration is failing. We recommend that you use the `/v:5` option when testing your migration. This verbosity level can be adjusted in a production migration; however, reducing the verbosity level might make it more difficult to diagnose failures that are encountered during production migrations. You can use a verbosity level higher than 5 if you want the log files output to go to a debugger.
 
@@ -208,7 +208,7 @@ There might be another rule that is including the files. If there's a more speci
 
 #### Resolution
 
-For more information, see [Conflicts and Precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence) and the Diagnostic Log section in [Log Files](usmt-log-files.md).
+For more information, see [Conflicts and Precedence](/windows/deployment/usmt/usmt-conflicts-and-precedence) and the Diagnostic Log section in [Log Files](/windows/deployment/usmt/usmt-log-files).
 
 ### I specified rules to move a folder to a specific location on the destination computer, but it hasn't migrated correctly
 
@@ -380,6 +380,6 @@ You should also reboot the machine.
 ## More information
 
 - [User State Migration Tool (USMT) Troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
-- [Frequently Asked Questions](usmt-faq.yml)
-- [Return Codes](usmt-return-codes.md)
+- [Frequently Asked Questions](/windows/deployment/usmt/usmt-faq)
+- [Return Codes](/windows/deployment/usmt/usmt-return-codes)
 - [UsmtUtils Syntax](/windows/deployment/usmt/usmt-utilities)
