@@ -82,7 +82,7 @@ Or
 
 5. Rebuild the initial RAMdisk image for the currently loaded kernel:
 
-    - For RHEL/SLES based images
+    - For RHEL/SLES-based images
 
         ```bash
         # dracut -f -v
@@ -148,7 +148,7 @@ If the issue continues even though the Hyper-V network driver is enabled, use on
 
 6. If the `apply_network_config` parameter is set to false, then set it to true. If nothing is specified, the default value is set to true. This setting will ensure that the new MAC address is applied to the networking configuration on the next reboot.
 
-7. Generally, a NIC MAC address would only change if a NIC is deleted/added by the administrator or a NIC is updated in the backend. If network configuration via cloud-init isn't desired, and the `apply_network_config` parameter needs to be set to false, delete the */var/lib/cloud/instance/obj.pkl* file and reboot the system.
+7. Generally, a NIC MAC address would only change if a NIC is deleted or added by the administrator or a NIC is updated in the backend. If network configuration via cloud-init isn't desired, and the `apply_network_config` parameter needs to be set to false, delete the */var/lib/cloud/instance/obj.pkl* file and reboot the system.
 
     ```bash
     # rm /var/lib/cloud/instance/obj.pkl
