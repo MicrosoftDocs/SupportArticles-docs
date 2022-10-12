@@ -727,3 +727,13 @@
       href: tools/sqliosim-utility-simulate-activity-disk-subsystem-linux.md
     - name: Visual Studio 2010 Shell is installed with SQL Server 2014 and 2012
       href: tools/visual-studio-2010-shell-installed-sql-server-2014-2012.md
+- name: Product Updates and Release Notes
+  items:
+  - name: SQL Server 2019 build versions (KB4518398)
+    href: product-updates-and-release-notes/sql-server-2019-build-versions-kb4518398.md
+  - name: SQL Server 2017 build versions (KB4047329)
+    href: product-updates-and-release-notes/sql-server-2017-build-versions-kb4047329.md
+  - name: SQL Server 2016 build versions (KB3177312)
+    href: product-updates-and-release-notes/sql-server-2016-build-versions-kb3177312.md
+  - name: SQL Server 2014 build versions (KB2936603)
+    href: product-updates-and-release-notes/sql-server-2014-build-versions-kb2936603.md
