@@ -77,7 +77,7 @@ Or
 
         > [!NOTE]
         >
-        > - The `blacklist` is a reserved word used to disable drivers, defined by the Linux Operating System, not by Microsoft.
+        > - The entries that disable drivers are defined by the Linux Operating System, not by Microsoft.
         > - Replace `disable.conf` with the corresponding file name where the hv_netvsc driver is disabled.
 
 5. Rebuild the initial RAMdisk image for the currently loaded kernel:
@@ -225,7 +225,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
 
     > [!IMPORTANT]
     >
-    > - The `blacklist` is a reserved word used to disable drivers, defined by the Linux Operating System, not by Microsoft.
+    > - The entries that disable drivers are defined by the Linux Operating System, not by Microsoft.
     > - Replace `disable.conf` with the corresponding file name where the Hyper-V drivers are disabled.
 
 4. Rebuild the initial RAMdisk image for the currently loaded kernel:
