@@ -16,7 +16,7 @@ appliesto:
   - Exchange Online
   - Outlook
 search.appverid: MET150
-ms.date: 8/31/2022
+ms.date: 10/13/2022
 ---
 # Unable to copy or move public folders in Outlook
 
@@ -48,3 +48,7 @@ To make a copy of a public folder in the same path as the source public folder, 
 1. Copy the public folder under **Favorites**.
 
 To make a copy of a public folder and its subfolder in the same path as the source public folder, make sure you have **Owner** permissions for the source public folder and its parent folder. For example, if PF1 is a parent folder with *PF2\PF3* as subfolders nested in it, then to make a copy of *PF2\PF3*, you should have **Owner** permissions for both *PF1* and *PF2*.
+
+## Related content
+
+[Can't copy, move, or import more than 1,000 items to public folders in Outlook](cannot-copy-move-import-items.md)
