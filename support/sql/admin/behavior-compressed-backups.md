@@ -45,7 +45,7 @@ Backups taken to an existing media set can co-exist only if the compression sett
 
 The following table summarizes the behavior of compressed backups based on the three factors above.
 
-|Backup statement| New media set| Append to an existing media set that has compressed backup)| Append to existing media set that has uncompressed backup) |
+|Backup statement| New media set| Append to an existing media set that has a compressed backup| Append to an existing media set that has an uncompressed backup |
 |---|---|---|---|
 |Statement level clause `WITH COMPRESSION`|The backup is successful and will be compressed|Success|Error|
 |Statement level clause `WITH NO_COMPRESSION`|The backup is successful and will be uncompressed|Error|Success|
