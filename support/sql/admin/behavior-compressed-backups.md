@@ -54,7 +54,7 @@ The following table summarizes the behavior of compressed backups based on the t
 As you can see from the table above, when you use the option `backup compression default` on the server and append the compressed backup to an existing media set, the backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the clause `WITH COMPRESSION` or `WITH NO_COMPRESSION` in your backup statement, an error will be raised if there's a mismatch between the backup stored in the media set and the current backup being taken, in terms of the compression setting.
 
 > [!NOTE]
-> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` inSQL Server Management Studio. If you are appending a compressed backup to an existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t- sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
+> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` in SQL Server Management Studio. If you are appending a compressed backup to an existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t- sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
 
 ### Examples
 
