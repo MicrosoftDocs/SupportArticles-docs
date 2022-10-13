@@ -221,13 +221,13 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
 1. Use the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux) to boot the VM in single-user mode. For more information, see [Use Serial Console to access GRUB and single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode).
 
-    To boot the VM in single-user mode, interrupt the boot process at the GRUB menu level and edit the main kernel entry to add the *init=/bin/bash* kernel option in the linux16 GRUB line.
+    To boot the VM in single-user mode, interrupt the boot process at the GRUB menu level and edit the main kernel entry to add the `init=/bin/bash` kernel option in the linux16 GRUB line.
 
     :::image type="content" source="media/vfat-disabled-boot-issues/boot-singleuser.gif" alt-text="Animated GIF that shows the process of interrupting the boot process at GRUB menu level to boot the system in single-user mode.":::
 
 2. Make sure all the required file systems are mounted and the root is in read and write mode.
 
-    1. If you boot the system by using the *init=/bin/bash* kernel option, prepare the required file systems by running the following commands:
+    1. If you boot the system by using the `init=/bin/bash` kernel option, prepare the required file systems by running the following commands:
 
         ```bash
         mount -o rw,remount /
@@ -239,7 +239,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
     3. Restart the system.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the */boot/efi* entry from */etc/fstab* as */boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="online-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot up
 
@@ -249,7 +249,7 @@ The serial console is the fastest method to resolve this issue. It allows you to
 
 - **VM with only data disks encrypted fails to boot due to /etc/fstab issues:**
 
-  1. If only VM data disks are encrypted (the OS disk isn't encrypted), to boot up the system, add the **_nofail_** mount option to the corresponding entries in */etc/fstab* [from single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) by using the Azure serial console. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+  1. If only VM data disks are encrypted (the OS disk isn't encrypted), to boot up the system, add the `nofail` mount option to the corresponding entries in */etc/fstab* [from single-user mode](/troubleshoot/azure/virtual-machines/serial-console-grub-single-user-mode) by using the Azure serial console. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
   2. Once the VM is booted up, [re-enable VFAT](#reenable-vfat) and restart the VM.
 
@@ -278,7 +278,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     3. Validate if the VM is able to boot up by taking a look at the Azure serial console or by trying to connect to the VM.
 
 > [!NOTE]
-> If the VM is Gen1 and it's not encrypted, you could also simply comment out the */boot/efi* entry from */etc/fstab* as /*boot/efi* isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
+> If the VM is Gen1 and it's not encrypted, you could also simply comment out the `/boot/efi` entry from */etc/fstab* as `/boot/efi` isn't needed in Gen1 VMs. For more information, see [Troubleshoot Linux VM starting issues due to fstab errors](/azure/virtual-machines/linux-virtual-machine-cannot-start-fstab-errors).
 
 ### <a id="offline-troubleshooting-encrypted"></a>ADE encrypted VMs fail to boot
 
@@ -307,7 +307,7 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
     grep -nr vfat /etc/modprobe.d/
     ```
 
-2. Modify the corresponding file and comment out or delete the VFAT entry. The entry will most commonly be: *install vfat /bin/true*.
+2. Modify the corresponding file and comment out or delete the VFAT entry. The entry will most commonly be: `install vfat /bin/true`.
 
     ```bash
     vi /etc/modprobe.d/disable.conf
@@ -372,6 +372,6 @@ If the [Azure serial console](serial-console-linux.md) doesn't work in the speci
 
 ## Next steps
 
-If the specific boot error isn't a GRUB rescue issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
+If the specific boot error isn't a VFAT disabled issue, see [Troubleshoot Azure Linux Virtual Machines boot errors](./boot-error-troubleshoot-linux.md) for further troubleshooting options.
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
