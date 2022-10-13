@@ -33,28 +33,28 @@ In this scenario, you notice that the backup is successful but may end up in a d
 
 When you append a backup to an existing media set, the backup inherits the compression setting from the media set.
 
-When a media set is created, information on compression setting of this media set is written to the media header file.
+When a media set is created, information on the compression setting of this media set is written to the media header file.
 
-Backups taken to an existing media set can co-exist only if the compression setting of these backups is the same as the setting of the media set. The following three factors affect the behavior of compressed backups:
+Backups taken to an existing media set can only co-exist if the compression setting of these backups is the same as that of the media set. The following three factors affect the behavior of compressed backups:
 
 - SQL Server's configuration option - [Backup compression default](/previous-versions/sql/sql-server-2008-r2/bb677250(v=sql.105))
 
 - Backup Set Options - [COMPRESSION or NO_COMPRESSION](/sql/t-sql/statements/backup-transact-sql)
 
-- For existing media, the important factor to consider is whether the media set currently contains a compressed or an uncompressed backup.
+- For existing media, the most important factor to consider is whether the media set currently contains a compressed or an uncompressed backup.
 
-The following table summarizes the behavior of compressed backups based on the three factors above.
+The following table summarizes the behavior of compressed backups based on the three factors above:
 
 |Backup statement| New media set| Append to an existing media set that has a compressed backup| Append to an existing media set that has an uncompressed backup |
 |---|---|---|---|
 |Statement level clause `WITH COMPRESSION`|The backup is successful and will be compressed|Success|Error|
 |Statement level clause `WITH NO_COMPRESSION`|The backup is successful and will be uncompressed|Error|Success|
-| Back up statement without statement level compression clause|The backup is successful and the compression depends on the option `backup compression default` of the system stored procedure `sp_configure`|The backup is successful and will be compressed|The backup is successful and will be uncompressed|
+| Back up statement without statement level compression clause|The backup is successful, and the compression depends on the option `backup compression default` of the system stored procedure `sp_configure`|The backup is successful and will be compressed|The backup is successful and will be uncompressed|
   
 As you can see from the table above, when you use the option `backup compression default` on the server and append the compressed backup to an existing media set, the backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the clause `WITH COMPRESSION` or `WITH NO_COMPRESSION` in your backup statement, an error will be raised if there's a mismatch between the backup stored in the media set and the current backup being taken, in terms of the compression setting.
 
 > [!NOTE]
-> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` in the SQL Server Management Studio. If you are appending a compressed backup to a existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
+> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` inSQL Server Management Studio. If you are appending a compressed backup to an existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t- sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
 
 ### Examples
 
@@ -93,7 +93,7 @@ Here are some script examples to demonstrate the behavior for various cases. The
         GO
         ```
 
-        After executing the sql script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
+        After executing the SQL script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
 
 - Example 2: Append a backup to the same media set when setting the value of option `backup compression default` to `1`:
 
@@ -118,7 +118,7 @@ Here are some script examples to demonstrate the behavior for various cases. The
         GO
         ```
 
-        After executing the sql script, you can see the following output:
+        After executing the SQL script, you can see the following output:
 
         ```Output
         Processed two pages for database `test`, file _test_log_ on file 2.
@@ -178,7 +178,7 @@ Here are some script examples to demonstrate the behavior for various cases. The
         RESTORE HEADERONLY FROM DISK = N'E:\testbackup.bak'
         ```
 
-- Example 4: Compressed backups can't coexist with NT backups that have uncompressed setting:
+- Example 4: Compressed backups can't co-exist with NT backups that have an uncompressed setting:
 
     1. Take an NT backup and verify the backup header:
 
@@ -196,9 +196,9 @@ Here are some script examples to demonstrate the behavior for various cases. The
         GO
         ```
 
-        After executing the sql script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
+        After executing the SQL script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
 
-- Example 5: Non-compressed backups and NT backups that have uncompressed setting can co-exist:
+- Example 5: Non-compressed backups and NT backups that have an uncompressed setting can co-exist:
 
     1. Back up the database `test` to the same media set without initializing and no compression:
 
@@ -224,7 +224,7 @@ Here are some script examples to demonstrate the behavior for various cases. The
         GO
         ```
 
-        After executing the sql script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
+        After executing the SQL script, you may receive [Error messages 3098 and 3013](#error-messages-3098-and-3013).
 
 ### Error messages 3098 and 3013
 
