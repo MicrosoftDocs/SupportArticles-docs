@@ -35,13 +35,13 @@ When you append a backup to an existing media set, the backup inherits the compr
 
 When a media set is created, information on the compression setting of this media set is written to the media header file.
 
-Backups taken to an existing media set can only co-exist if the compression setting of these backups is the same as that of the media set. The following three factors affect the behavior of compressed backups:
+Backups taken to an existing media set can co-exist only if the compression setting of these backups is the same as that of the media set. The following three factors affect the behavior of compressed backups:
 
 - SQL Server's configuration option - [Backup compression default](/previous-versions/sql/sql-server-2008-r2/bb677250(v=sql.105))
 
 - Backup Set Options - [COMPRESSION or NO_COMPRESSION](/sql/t-sql/statements/backup-transact-sql)
 
-- For existing media, the most important factor to consider is whether the media set currently contains a compressed or an uncompressed backup.
+- For existing media, an important factor to consider is whether the media set currently contains a compressed or an uncompressed backup.
 
 The following table summarizes the behavior of compressed backups based on the three factors above:
 
@@ -54,7 +54,7 @@ The following table summarizes the behavior of compressed backups based on the t
 As you can see from the table above, when you use the option `backup compression default` on the server and append the compressed backup to an existing media set, the backup will never fail due to a mismatch in compression settings. It works but inherits the setting in the header of the media set. However, if you specify the clause `WITH COMPRESSION` or `WITH NO_COMPRESSION` in your backup statement, an error will be raised if there's a mismatch between the backup stored in the media set and the current backup being taken, in terms of the compression setting.
 
 > [!NOTE]
-> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` in SQL Server Management Studio. If you are appending a compressed backup to an existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t- sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
+> You can find the current setting for the option `backup compression default` by running the system stored procedure `sp_configure` in SQL Server Management Studio. If you are appending a compressed backup to an existing media, you can get the header information by using the statement [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql). For more information, see the [Examples](#examples) section.
 
 ### Examples
 
