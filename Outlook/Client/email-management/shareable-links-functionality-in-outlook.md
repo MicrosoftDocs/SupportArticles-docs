@@ -65,7 +65,7 @@ You can choose to skip the remaining checks and send the email message anyway or
 
 If you choose not to send the message, and you wait for the checks to finish, Outlook displays the results of the checks.
 
-#### Result: All recipients can access the link
+### Result: All recipients can access the link
 
 If Outlook confirms that the links can be accessed by all recipients, you'll see the following confirmation message:
 
@@ -73,7 +73,7 @@ If Outlook confirms that the links can be accessed by all recipients, you'll see
 
 :::image type="content" source="media/shareable-links-functionality-in-outlook/link-permission-checking-complete.png" alt-text="Screenshot of the message that recipients can access links in your message.":::
 
-#### Result: One or more recipients can't access the link
+### Result: One or more recipients can't access the link
 
 If Outlook determines that one or more recipients can't access the shareable link, it changes the color of the shareable link to red, and displays a red exclamation mark in the upper-right corner of the link text. When you left-click the link, you'll see information about the cause of the access issue.
 
@@ -93,7 +93,7 @@ If you don't left-click the link to see the cause of the access issue, you won't
 
 This provides you an opportunity to fix your recipient list before you send the message to make sure that everyone can access the link.
 
-#### Result: Recipient access can't be verified
+### Result: Recipient access can't be verified
 
 If Outlook can't verify whether recipients have access to the link, it will display the following warning:
 

@@ -50,9 +50,7 @@
     - name: A channel can't be recreated after deletion
       href: ./channels/channel-cannot-be-recreated-after-deletion.md
     - name: Channel notifications settings don't update
-      href: ./channels/notifications-cannot-manage.md
-    - name: External memeber can see channel message previews of shared channels in search results
-      href: ./channels/external-memeber-can-preview-shared-channel-messages.md
+      href: ./channels/notifications-cannot-manage.md    
     - name: Logon re-enabled user doesn't see previous joined teams
       href: ./channels/logon-reenabled-user-not-see-previous-joined-teams.md
   - name: Conferencing
@@ -170,13 +168,17 @@
     - name: Temporary change to file size download limit in OneNote
       href: /office/troubleshoot/onenote/temp-change-onenote-file-size-download?context=/MicrosoftTeams/troubleshoot/context/context
   - name: Phone System
-    items: 
+    items:
+    - name: Issues when using SIP devices
+      href: ./phone-system/sip-gateway-issues.md
     - name: Dial Plans
       items: 
       - name: Errors when trying to manage dial plans
         href: ./phone-system/dial-plans/errors-managing-dial-plans.md
     - name: Direct Routing
       items:
+      - name: Diagnose issues with Direct Routing
+        href: ./phone-system/direct-routing/diagnose-direct-routing-issues.md
       - name: Issues with call transfers
         href: ./phone-system/direct-routing/issues-with-call-transfers.md
       - name: Issues with LMO
@@ -238,15 +240,37 @@
   - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
-      href: ./teams-rooms-and-devices/collect-device-logs.md
-    - name: Issues when using SIP devices
-      href: ./teams-rooms-and-devices/sip-gateway-issues.md
+      href: ./teams-rooms-and-devices/collect-device-logs.md  
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
-    - name: MTR devices can't fetch calendar
-      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
     - name: Signed out of Teams Android devices
       href: ./teams-rooms-and-devices/signed-out-of-teams-android-devices.md
+    - name: Teams Rooms devices can't fetch calendar
+      href: ./teams-rooms-and-devices/mtr-device-cannot-fetch-calendar.md
+    - name: Teams Rooms Pro Management
+      items:
+      - name: Get support for Teams Rooms Pro Management
+        href: ./teams-rooms-and-devices/get-support-teams-rooms-pro-management.md
+      - name: Camera status is unhealthy
+        href: ./teams-rooms-and-devices/camera-status-unhealthy.md
+      - name: Default Credentials status is unhealthy
+        href: ./teams-rooms-and-devices/default-credentials-status-unhealthy.md
+      - name: Disk Space status is unhealthy
+        href: ./teams-rooms-and-devices/disk-space-status-unhealthy.md
+      - name: Display status is unhealthy
+        href: ./teams-rooms-and-devices/display-status-unhealthy.md
+      - name: HDMI ingest status is unhealthy
+        href: ./teams-rooms-and-devices/hdmi-ingest-status-unhealthy.md
+      - name: Meeting app status is unhealthy
+        href: ./teams-rooms-and-devices/meeting-app-status-unhealthy.md  
+      - name: Microphone or speaker status is unhealthy
+        href: ./teams-rooms-and-devices/microphone-speaker-status-unhealthy.md
+      - name: OS Edition status is Unhealthy
+        href: ./teams-rooms-and-devices/os-edition-status-unhealthy.md
+      - name: Resolve Teams Rooms resource account sign-in issues
+        href: ./teams-rooms-and-devices/teams-rooms-resource-account-sign-in-issues.md
+      - name: Resolve Windows Update issues on Teams Rooms Pro devices
+        href: ./teams-rooms-and-devices/teams-rooms-device-windows-update-issues.md
   - name: Teams on Linux
     items: 
     - name: Known issues on Linux

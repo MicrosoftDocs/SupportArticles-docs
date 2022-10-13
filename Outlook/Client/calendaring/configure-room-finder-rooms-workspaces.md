@@ -47,9 +47,9 @@ Room lists can be organized by the following elements:
 One of the significant advantages of using Room Finder is that you can browse for rooms and workspaces by city and room list. Then, you can further refine those results by filtering by the facilities that these spaces provide, such as conferencing devices and accessibility features.
 
 > [!IMPORTANT]
-> For Room Finder to work effectively, it's important to configure the **City** property. The other properties can be configured as appropriate for each room and workspace.
+> For Room Finder to work effectively, it's important to configure the attributes for rooms and workspaces. Make sure that you configure the **City**, **Floor**, and **Capacity** properties. The other attributes can be configured as appropriate for each room and workspace.
 
-After you set the **City** property for all the rooms and workspaces, you'll be able to browse room lists by a specific city in Room Finder. However, it's important that each room list includes rooms and workspaces from the same city only.  
+After you set the **City**, **Floor**, and **Capacity** properties for all the rooms and workspaces, you'll be able to browse room lists by a specific city in Room Finder, and filter rooms and workspaces by capacity and floor level on which they're located. Optionally, you can also set the **FloorLabel** property to provide a friendly name for the floor information such as Ground, Basement, Lobby etc. However, it's important that each room list includes rooms and workspaces from the same city only.  
 
 If the rooms and workspaces in a room list are from different cities, then the room list will display in the results only when you filter by the city in which the majority of its rooms and workspaces are located. For example, if a room list includes Room1 in City A, Room2 in City A, and Room 3 in City B, the room list will display only when you filter for rooms in City A.
 
@@ -67,25 +67,27 @@ To set up rooms and workspaces correctly, you must complete the following tasks:
 
    If you have to set up room mailboxes in a hybrid environment, see the [More information](#more-information) section.
 
-1. Configure properties such as **City**, **State**, and **Capacity** for the rooms and workspaces.
+1. Configure properties such as **CountryOrRegion**, **State**, **City**, **Building**, **Floor**, **FloorLabel**, and **Capacity** for the rooms and workspaces.
 1. [Create room lists and add rooms and workspaces to them](/exchange/recipients/room-mailboxes#create-a-room-list).  
 
-For example, consider that for an organization that uses *contoso.com* as the domain, you have to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle that is in the state of Washington. If Building A has a total of 50 rooms and workspaces across three floors, you must complete the following tasks so that your users can find these spaces in Room Finder:
+For example, consider that for an organization that uses *contoso.com* as the domain, you have to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle that is in the state of Washington in the country United States of America. If Building A has a total of 50 rooms and workspaces across three floors, you must complete the following tasks so that your users can find these spaces in Room Finder:
 
-1. Create a room mailbox for each meeting room, and set "Seattle" as the **City**, "Washington" as the **State**, and a room capacity value for the **Capacity** property. If room1 has a capacity of 5, run the following cmdlets:
+1. Create a room mailbox for each meeting room, and set "Seattle" as the **City**, "Washington" as the **State**, "United States of America" as the **CountryorRegion**, a room capacity value for the **Capacity** property, and values for the **Floor** and **FloorLabel** properties. If room1 is on floor 1 and has a capacity of 5, run the following cmdlets:
 
     ```powershell
     New-Mailbox -Organization contoso.com -Name room1 -DisplayName "Conference Room 1" -Room
     
-    Set-Place room1@contoso.com -State "Washington" -City "Seattle" -Capacity 5
+    Set-Place room1@contoso.com -CountryOrRegion "United States of America" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel “Ground” -Capacity 5
     ```
 
-1. Create a workspace mailbox for each workspace in the building, and set "Seattle" as the **City**, "Washington" as the **State**, and a workspace capacity value for the **Capacity** property. If workspace1 has a capacity of 5, run the following cmdlets:
+**Note**: In the Set-Place cmdlet,use the **Floor** property to specify the floor where a room or workspace is located. In the Places API room resource type, use the **FloorNumber** parameter.
+
+1. Create a workspace mailbox for each workspace in the building, and set "Seattle" as the **City**, "Washington" as the **State**, "United States of America" as the **CountryOrRegion**, a workspace capacity value for the **Capacity** property, and values for the **Floor** and **FloorLabel** properties. If workspace1 is on floor 1 and has a capacity of 5, run the following cmdlets:
 
     ```powershell
     New-Mailbox -Organization contoso.com -Name workspace1 -DisplayName "Workspace 1" -Room | Set-Mailbox -Type Workspace 
     
-    Set-Place workspace1@contoso.com -State "Washington" -City Seattle -Capacity 5
+    Set-Place workspace1@contoso.com -CountryOrRegion "United States of America" -State "Washington" -City "Seattle" -Floor 1 -FloorLabel "Ground" -Capacity 5
     ```
 
     Also, you can set up automatic workspace capacity evaluation by running the following cmdlet:
@@ -143,7 +145,7 @@ If you see the following results in the output from these cmdlets, then the room
 
 - All rooms and workspaces have the same value for the **City** property.
 
-  :::image type="content" source="media/configure-room-finder-rooms-workspaces/get-place-cmdlet.png" alt-text="Screenshot of the command output. Highlighted text shows the city information and the segment of the SMTP address that follows the @ character in Identity and Localities.":::
+ :::image type="content" source="media/configure-room-finder-rooms-workspaces/get-place-cmdlet.png" alt-text="Screenshot of the command output. Highlighted text shows the city, capacity, floor, and floor label information, and the segment of the SMTP address that follows the @ character in Identity and Localities.":::
 
 If you don't see these results for all the rooms and workspaces, reconfigure the properties only for the rooms and workspaces that don't have the same results as the others.
 

@@ -1,0 +1,34 @@
+### YamlMime:Landing
+
+title: Microsoft 365 security troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Microsoft 365 security. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Microsoft 365 security troubleshooting
+  description: Documentation for troubleshooting common issues with Microsoft 365 security.
+  ms.service: microsoft-365-security
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 07/26/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Security
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Account security alert email message
+            url: ./o365-security/account-security-alert-email.md
+          - text: Issue with connect-MSOLService cmdlet
+            url: ./o365-security/access-denied-office-365-azure.md
+  # Card
+  - title: Antispam
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Sender Rewriting Scheme
+            url: ./antispam/sender-rewriting-scheme.md
+            
