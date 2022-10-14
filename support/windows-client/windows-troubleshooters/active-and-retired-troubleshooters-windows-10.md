@@ -19,6 +19,26 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
+## ## Access work or school troubleshooter for restoring access to M365 desktop applications
+
+Text displayed in Settings:  
+The troubleshooter checks if the Microsoft.AAD.BrokerPlugin package is missing. If so, it installs the package.
+
+### Description
+
+Some users are unable to sign-in to Microsoft 365 desktop applications. This includes: Teams, Outlook, OneDrive for Business, Excel, PowerPoint, and Word.
+
+This troubleshooter runs automatically on devices to meet the following criteria:
+
+- Runs Windows 10, 20H1
+- Enterprise and Pro SKUs of Microsoft 365
+- Missing the package Microsoft.AAD.BrokerPlugin.
+
+|Activation date|Retirement date|More information|
+|---|---|---|
+|8/24/2022||[https://aka.ms/AAhs34y]([https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://aka.ms/AAhs34y)|
+
+
 ## Windows Update troubleshooter for repairing .NET framework components
 
 Text displayed in Settings:  
@@ -30,7 +50,7 @@ Some devices that installed the April 25, 2022, update KB5012643 for Windows 11,
 
 This troubleshooter runs automatically on devices that meet the following criteria:
 
-- Runs Windows 11, version 21H2
+- Runs Windows 10 11, version 21H2
 - This issue has been detected
 
 |Activation date|Retirement date|More information|
