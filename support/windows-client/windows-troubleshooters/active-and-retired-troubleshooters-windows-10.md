@@ -19,7 +19,7 @@ This article provides a list of active and retired troubleshooters for Windows 1
 
 _Applies to:_ &nbsp; Windows 10, Windows 11
 
-## ## Access work or school troubleshooter for restoring access to M365 desktop applications
+## Access work or school troubleshooter for restoring access to M365 desktop applications
 
 Text displayed in Settings:  
 The troubleshooter checks if the Microsoft.AAD.BrokerPlugin package is missing. If so, it installs the package.
@@ -36,7 +36,7 @@ This troubleshooter runs automatically on devices to meet the following criteria
 
 |Activation date|Retirement date|More information|
 |---|---|---|
-|8/24/2022||[https://aka.ms/AAhs34y]([https://go.microsoft.com/fwlink/?linkid=2196115&clcid=0x409](https://aka.ms/AAhs34y)|
+|8/24/2022||[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
 
 
 ## Windows Update troubleshooter for repairing .NET framework components
