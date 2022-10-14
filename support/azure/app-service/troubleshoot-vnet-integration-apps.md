@@ -4,10 +4,9 @@ description: How to troubleshoot VNet Integration on Windows and Linux Apps
 ms.date: 10/14/2022
 ms.service: app-service
 ms.author: hepiet
-author: HelenePietz-MS
 ms.reviewer: amymcel, amehrot, jugonza
 ---
-##Troubleshoot VNet Integration on Windows and Linux Apps
+# Troubleshoot VNet Integration on Windows and Linux Apps
 
 Troubleshooting network connectivity issues on Azure App Service using VNet Integration can be a bit tricky, as some of the tools that you would normally use when on-premise won't work or give misleading results.
 In addition, some of the tools available in native Windows Apps are different that the ones you will use on Linux Apps.
