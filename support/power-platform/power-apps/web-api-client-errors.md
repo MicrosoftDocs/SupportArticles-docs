@@ -143,7 +143,9 @@ HTTP/1.1 400 Bad Request
 {
  "error": {
   "code": "0x0",
-  "message": "An error occurred while validating input parameters: Microsoft.Crm.CrmException: Invalid property 'Name' was found in entity 'Microsoft.Dynamics.CRM.account'. ---> Microsoft.OData.ODataException: Does not support untyped value in non-open type.<truncated for brevity>"
+  "message": "An error occurred while validating input parameters: 
+    Microsoft.Crm.CrmException: Invalid property 'Name' was found in entity 'Microsoft.Dynamics.CRM.account'. 
+    ---> Microsoft.OData.ODataException: Does not support untyped value in non-open type.<truncated for brevity>"
  }
 }
 ```
@@ -180,7 +182,11 @@ HTTP/1.1 400 Bad Request
 {
     "error": {
         "code": "0x80048d19",
-        "message": "Error identified in Payload provided by the user for Entity :'contacts'  ---->  InnerException : Microsoft.OData.ODataException: An undeclared property 'parentcustomerid' which only has property annotations in the payload but no property value was found in the payload. In OData, only declared navigation properties and declared named streams can be represented as properties without values <truncated for brevity>".
+        "message": "Error identified in Payload provided by the user for Entity :'contacts'  ---->  
+        InnerException : Microsoft.OData.ODataException: An undeclared property 'parentcustomerid' 
+        which only has property annotations in the payload but no property value was found in the payload. 
+        In OData, only declared navigation properties and declared named streams can be represented as 
+        properties without values <truncated for brevity>".
     }
 }
 ```
