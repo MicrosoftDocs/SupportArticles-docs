@@ -97,6 +97,7 @@ productDirectory:
           text: OneDrive for Business
    # Card
     - title: Microsoft Viva
+      imageSrc: ../../media/microsoft-logo.svg
       links:
         - url: /viva/learning/
           text: Microsoft Viva Learning
@@ -104,6 +105,7 @@ productDirectory:
           text: Microsoft Viva Connections       
     # Card
     - title: Microsoft Endpoint Manager
+      imageSrc: ../../media/microsoft-logo.svg
       links:
         - url: /troubleshoot/mem/configmgr/welcome-configuration-manager
           text: Configuration Manager
