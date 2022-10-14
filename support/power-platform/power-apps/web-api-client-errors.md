@@ -156,7 +156,7 @@ This error occurs because the incorrect name for a property was used. Property n
 
 Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
 
-## Error identified in Payload provided by the user for Entity '`<entity name>`'
+## Error identified in Payload provided by the user for Entity '{entity name}'
 
 ### Symptoms
 
