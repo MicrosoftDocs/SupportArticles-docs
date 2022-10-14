@@ -63,7 +63,7 @@ productDirectory:
       links:
         - url: ../ExchangeServer/exchange-server-welcome.md
           text: Exchange Server
-        - url: ../ExchangeOnline/exchange-online-welcome.md
+        - url: ../ExchangeOnline/exchange-online-welcome.yml
           text: Exchange Online
         - url: ../ExchangeHybrid/exchange-hybrid-welcome.md
           text: Exchange Hybrid
