@@ -15,7 +15,7 @@ This article helps you resolve a problem that causes a partial loss of image dat
 
 ## Symptoms
 
-Parts of a PDF document are missing after you convert the PDF file to a bitmap image by using the classes of the [Windows.Data.Pdf namespace](https://learn.microsoft.com/uwp/api/windows.data.pdf?view=winrt-22621). For example, if a PDF file contains a dashed line (also known as a line dash pattern), part of the table that contains the dashed line will be missing from the bitmap image.
+Parts of a PDF document are missing after you convert the PDF file to a bitmap image by using the classes of the [Windows.Data.Pdf namespace](/uwp/api/windows.data.pdf?view=winrt-22621). For example, if a PDF file contains a dashed line (also known as a line dash pattern), part of the table that contains the dashed line will be missing from the bitmap image.
 
 ## Cause
 
