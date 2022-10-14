@@ -2,6 +2,7 @@
 title: Troubleshoot issues with currency and price lists
 description: Provides resolutions for the known issues that are related to currency and price lists in Dynamics 365 Sales.
 author: sbmjais
+ms.reviewer: lavanyakr01
 ms.author: shjais
 ms.topic: troubleshooting
 ms.date: 02/28/2022
