@@ -2696,6 +2696,8 @@
       href: ./virtualization/scvmm-p2v-fails-with-error-2910.md
     - name: Specifications for supported emulated and synthetic hardware
       href: ./virtualization/emulated-synthetic-hardware-specification.md
+    - name: Support and installation instructions for AMD EPYC 9004 Series server processors
+      href: ./virtualization/support-and-installation-instructions-for-amd-epyc-9004-series-server-processors.md
     - name: Support Policy for NIC Teaming with Hyper-V
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Upgrade computers with Hyper-V role installed
