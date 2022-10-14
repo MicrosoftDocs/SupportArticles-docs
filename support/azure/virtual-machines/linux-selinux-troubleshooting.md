@@ -1,6 +1,6 @@
 ---
 title: Fail to connect to Azure Linux VM through SSH due to SELinux misconfiguration
-description: Provides a solution to an issue where you fail to connect to an Azure virtual machine (VM) through Secure Shell (SSH), which occur due to SELinux misconfiguration.
+description: Provides a solution to an issue where you fail to connect to an Azure virtual machine (VM) through Secure Shell (SSH), which occurs due to SELinux misconfiguration.
 author: adelgadohell
 ms.author: adelgadohell
 ms.reviewer: divargas
@@ -41,7 +41,7 @@ Check the serial console from the Azure portal or through the Azure CLI. The fol
 
 :::image type="content" source="./media/linux-selinux-troubleshooting/error-message.png" alt-text="Screenshot that shows 'Failed to load SELinux policy' error in serial console log":::
 
-The SELinux configuration is managed by the system administrator. Ask the system administrator to resolve this issue by using one of the following methods.
+The SELinux configuration is managed by the system administrator. The system administrator can resolve this issue by using one of the following methods.
 
 ## <a id ="solution1"></a>Solution 1: Start VM with SELinux turned off by using serial console
 
@@ -54,11 +54,11 @@ The SELinux configuration is managed by the system administrator. Ask the system
 
 5. Validate and correct the SELinux configuration in `/etc/selinux/config`.
 
-    For example, one common mistake is setting `SELINUXTYPE` key to one of the values that's used for the `SELINUX` key. See the following screenshot as an example:
+    For example, one common mistake is setting the `SELINUXTYPE` key to one of the values that's used for the `SELINUX` key. See the following screenshot as an example:
 
     :::image type="content" source="./media/linux-selinux-troubleshooting/wrong-selinux-configuration.png" alt-text="Screenshot that shows the SELINUXTYPE key is incorrectly set to disabled":::
 
-    Notice the last line, `SELINUXTYPE=disabled`. The `SELINUXTYPE` should be set to `targeted`, `minimum` or `mls`, rather than `disabled`. The following screenshot shows the correct configuration:
+    Notice the last line, `SELINUXTYPE=disabled`. The `SELINUXTYPE` key should be set to `targeted`, `minimum` or `mls`, rather than `disabled`. The following screenshot shows the correct configuration:
 
     :::image type="content" source="./media/linux-selinux-troubleshooting/correct-selinux-configuration.png" alt-text="Screenshot that shows the correct configuration of /etc/selinux/config":::
 
