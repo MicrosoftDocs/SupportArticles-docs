@@ -13,7 +13,7 @@ ms.custom: sap:management-and-configuration:-general-issues, csstroubleshoot
 
 _Applies to:_ &nbsp; Windows 11, version 22H2 and later versions of Windows
 
-Windows 11, version 22H2 introduces print components changes that modify how Windows machines communicate with each other during printing or print related operations. 
+Windows 11, version 22H2 introduces changes to print components that modify how Windows machines communicate with each other during printing or print related operations. 
 For example, the changes come into effect when you print to a printer shared out by a print server or another computer on the network. These changes were made to further improve the overall security of printing in Windows.
 The default configuration of the RPC connection settings enforces newer and more secure communication methods. Home users and enterprise administrators can also customize the settings for their environment.
 
