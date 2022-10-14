@@ -47,7 +47,7 @@ Once we have established that the VNet integration is successful, then we can pr
 
 #Troubleshoot outbound connectivity on Windows Apps
 
-In natives Windows Apps, the tools **ping, nslookup,** and **tracert** won't work trough the console because of security constraints (they work in [custom Windows containers](../articles/app-service/quickstart-custom-container.md)).
+In natives Windows Apps, the tools **ping, nslookup,** and **tracert** won't work trough the console because of security constraints (they work in custom Windows Containers).
 
 To reach the Kudu console from your app, go to **Tools > Kudu**. You can also reach the Kudu console at [sitename].scm.azurewebsites.net/DebugConsole. 
 
