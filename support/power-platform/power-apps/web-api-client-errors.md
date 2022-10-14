@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot Web API client errors
 description: Provides resolutions for the common client errors that occur when you use the Dataverse Web API.
-ms.date: 06/14/2022
+ms.date: 10/14/2022
 author: JimDaly
 ms.author: jdaly
 ms.reviewer: jdaly
@@ -155,6 +155,50 @@ This error occurs because the incorrect name for a property was used. Property n
 ### How to avoid
 
 Verify that the property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Properties](/power-apps/developer/data-platform/webapi/web-api-properties).
+
+## Error identified in Payload provided by the user for Entity '`<entity name>`'
+
+### Symptoms
+
+**Request**
+
+```http
+POST [Organization URI]/api/data/v9.0/contacts HTTP/1.1
+
+{
+  "firstname":"test",
+  "lastname":"contact",
+  "parentcustomerid@odata.bind": "accounts(a779956b-d748-ed11-bb44-6045bd01152a)"
+}
+```
+
+**Response**
+
+```http
+HTTP/1.1 400 Bad Request
+
+{
+    "error": {
+        "code": "0x80048d19",
+        "message": "Error identified in Payload provided by the user for Entity :'contacts'  ---->  InnerException : Microsoft.OData.ODataException: An undeclared property 'parentcustomerid' which only has property annotations in the payload but no property value was found in the payload. In OData, only declared navigation properties and declared named streams can be represented as properties without values <truncated for brevity>".
+    }
+}
+```
+
+### Cause
+
+There is no single-valued navigation property in the contact entity type named `parentcustomerid`. See [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact?view=dataverse-latest#single-valued-navigation-properties).
+
+`parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don’t always match the corresponding single-valued navigation property name.
+
+In this case, the `parentcustomerid` column is a customer lookup type that may link to either the Account or Contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property to use in this case is `parentcustomerid_account`.
+
+
+
+### How to avoid
+
+Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [web-api-navigation-properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties). Note the section on [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups).
+
 
 ### See also
 
