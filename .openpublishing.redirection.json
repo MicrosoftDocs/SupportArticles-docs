@@ -2699,6 +2699,11 @@
       "source_path": "support/developer/visualstudio/silverlight/update-available.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/sql/general/determine-version-edition-update-level.md",
+      "redirect_url": "/troubleshoot/sql/versions-updates/download-and-install-latest-updates",
+      "redirect_document_id": true
     }
   ]
 }
