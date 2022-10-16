@@ -1,5 +1,5 @@
 ---
-title: Azure Linux virtual machine fails to boot and lands in dracut emergency shell
+title: Azure Linux virtual machine boot enters dracut emergency shell
 description: Provides solutions to an issue in which a Linux virtual machine (VM) can't boot because the OS file system isn't accessible from RAMdisk.
 author: divargas-msft
 ms.author: divargas
@@ -10,9 +10,9 @@ ms.collection: linux
 ms.topic: troubleshooting
 ---
 
-# Azure Linux virtual machine fails to boot and lands in dracut emergency shell
+# Azure Linux virtual machine fails to boot and enters dracut emergency shell
 
-This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot because the operating system (OS) file system isn't accessible from the RAMdisk. The VM lands in the dracut or initramfs emergency shell.
+This article provides solutions to an issue in which an Azure Linux virtual machine (VM) can't boot because the operating system (OS) file system isn't accessible from the RAMdisk. The VM lands in the dracut emergency shell.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ Make sure the [serial console](serial-console-linux.md) is enabled and functiona
 
 To identify a dracut boot issue, use the Azure portal to view the serial console log output of the VM in the boot diagnostics pane, serial console pane, or use [AZ CLI](/cli/azure/serial-console#az-serial-console-connect).
 
-All the VMs with the dracut boot issue will land at the dracut or initramfs emergency shell, and will show up at the end of the serial console log:
+All the VMs with the boot issue will land in the dracut or initramfs emergency shell, and will show up at the end of the serial console log:
 
 * **RHEL/CentOS/SLES/Oracle Linux:**
 
@@ -69,7 +69,7 @@ All the VMs with the dracut boot issue will land at the dracut or initramfs emer
 > [!TIP]
 > If you have a recent backup of the VM, [restore the VM from the backup](/azure/backup/backup-azure-arm-restore-vms) to fix the boot issue.
 
-The serial console is the fastest method to resolve issues. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you' meet the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
+The serial console is the fastest method to resolve issues. It allows you to directly fix the issue without having to present the system disk to a recovery VM. Make sure you meet the necessary prerequisites for your distribution. For more information, see [Virtual machine serial console for Linux](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).  
 
 1. [Identify if your VM lands in the dracut emergency shell](#identify-dracut-boot-issue).
 
@@ -78,7 +78,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
     > [!NOTE]
     > Not every issue can be addressed by using the Azure serial console.
 
-    1. Trigger **_Restart VM (Hard)_** from the serial console.
+    1. Trigger **Restart VM (Hard)** from the serial console.
     2. Interrupt your VM at the GRUB menu with the `ESC` key.
     3. Press `e` to modify the first kernel entry in the GRUB menu.
     4. Go to the `linux16` line, validate and correct [GRUB misconfiguration](#dracut-grub-misconf) as follows:
@@ -187,7 +187,7 @@ Some issues may occur when you access the LVM physical volume (PV), volume group
 They can't be addressed from the Azure Serial console. To resolve them, use a repair/rescue VM.
 
 1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
-2. To identify any issues, run the following commands and take look at the command outputs.
+2. To identify the issues, run the following commands and take look at the command outputs.
     1. Identify which device corresponds to the OS disk and verify if it's detected as a PV:
 
         ```bash
@@ -213,7 +213,7 @@ They can't be addressed from the Azure Serial console. To resolve them, use a re
 
         The partition holding the PV is incorrectly deleted, resized or created. To resolve this issue, see [Root partition is missing](#dracut-rootpart-missing).
 
-    * **Unknown PV when the rootvg VG is modified and it's split across more than one disk**
+    * **Unknown PV when the rootvg VG is modified and split across more than one disk**
 
         Having 2 PVs in the rootvg VG isn't a recommended configuration. In this scenario, the data disk may be detached from the virtual machine and the rootvg logical volumes are no longer accessible. To resolve this issue, reattach the original disk to the VM and restart it.
 
@@ -225,7 +225,7 @@ The root file system may be inaccessible because of some issues that occur at pa
 
 In this scenario, if you've documented the original partition table layout, with the exact start and end sectors for each of the original partitions, and no further modifications are done on the system, like new file systems creation, recreate the partitions by using the same original layout with tools like `fdisk` (for MBR partition tables) or `gdisk` (for GPT partition tables) to gain access to the inaccessible file system. Follow this recovery operation from a repair/rescue VM. For more information, see the [Offline troubleshooting](#offline-troubleshooting) section.
 
-If that approach doesn't work, we recommend performing a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
+If this approach doesn't work, we recommend performing a [restore from backup](/azure/backup/backup-azure-arm-restore-vms).
 
 ## <a id="dracut-initramfs-corruption"></a>Initrd or initramfs corruption
 
