@@ -236,6 +236,8 @@
       href: linux-hyperv-issue.md
     - name: VM fails to boot after VFAT is disabled
       href: vfat-disabled-boot-issues.md
+    - name: VM fails to boot and lands in dracut emergency shell
+      href: linux-no-boot-dracut.md.md
 
   - name: Windows
     items:
