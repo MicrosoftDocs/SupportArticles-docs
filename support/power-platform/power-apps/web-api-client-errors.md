@@ -193,18 +193,15 @@ HTTP/1.1 400 Bad Request
 
 ### Cause
 
-There is no single-valued navigation property in the contact entity type named `parentcustomerid`. See [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
+This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
-`parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don’t always match the corresponding single-valued navigation property name.
+`parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
-In this case, the `parentcustomerid` column is a customer lookup type that may link to either the Account or Contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property to use in this case is `parentcustomerid_account`.
-
-
+In this case, the `parentcustomerid` column is a customer lookup type that may link to either the account or contact tables. To support this customer lookup, there are two separate relationships and each has a different single-valued navigation property. The correct single-valued navigation property in this case is `parentcustomerid_account`.
 
 ### How to avoid
 
-Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [web-api-navigation-properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties). Note the section on [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups).
-
+Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see the [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) section in the article [Web API Navigation Properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties).
 
 ### See also
 
