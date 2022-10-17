@@ -107,7 +107,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 2. Go to the following sections to resolve specific issues:
 
     * [ADE encrypted VM fails to boot because VFAT is disabled](#dracut-ade-without-vfat).
-    * [Hyper-V drivers is missing](#dracut-hyperv-drivers-disabled).
+    * [Hyper-V drivers are missing](#dracut-hyperv-drivers-disabled).
     * [GRUB misconfiguration](#dracut-grub-misconf).
         * [Wrong root device path in the GRUB configuration file](#dracut-grub-misconf-wrong-root).
         * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
@@ -127,7 +127,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
 
 For more information,see [ADE encrypted VMs fail to boot](/troubleshoot/azure/virtual-machines/vfat-disabled-boot-issues#offline-troubleshooting-encrypted).
 
-## <a id="dracut-hyperv-drivers-disabled"></a>Hyper-V drivers is missing
+## <a id="dracut-hyperv-drivers-disabled"></a>Hyper-V drivers are missing
 
 If the Hyper-V drivers included in the Linux kernel of all modern Linux distributions are disabled, re-enable them and regenerate the initramfs/initrd image. For more information, see [Scenario 3: Other Hyper-V drivers are disabled](/troubleshoot/azure/virtual-machines/linux-hyperv-issue#hyperv-drivers-disabled).
 
