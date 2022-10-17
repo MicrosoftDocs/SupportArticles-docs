@@ -83,14 +83,14 @@ The serial console is the fastest method to resolve issues. It allows you to dir
     3. Press `e` to modify the first kernel entry in the GRUB menu.
     4. Go to the `linux16` line, and then validate and correct [GRUB misconfiguration](#dracut-grub-misconf) as follows:
         * [Wrong root device path in the GRUB configuration file](#dracut-grub-misconf-wrong-root), wrong UUID or root volume name.
-        * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params)
+        * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
         * Any obvious typo.
 
 3. After manually modifying the GRUB settings, press `CTRL+x` to boot the VM.
 
     Any modification done at this stage is a non-persistent modification. If the VM is able to boot, resolve this issue in the GRUB configuration file, or it will reoccur.
 
-4. Once the VM is back online, fix the configuration issues in the `/etc/default/grub` configuration file and update the GRUB configuration. To do this, see [Reinstall GRUB and regenerate GRUB configuration file](/troubleshoot/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
+4. Once the VM is back online, fix the configuration issues in the `/etc/default/grub` configuration file and update the GRUB configuration. To do this, see [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 5. Reboot the VM to ensure it's able to boot up without any manual intervention.
 
@@ -144,7 +144,7 @@ Validate if the root path `root=/dev/***` in the GRUB configuration file is corr
 * If you're inside chroot in a repair/rescue VM:
     1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
     2. Validate the `/etc/default/grub` file, the `GRUB_CMDLINE_LINUX` entry, and look for the `root=` parameter in case it's hardcoded in the configuration file.
-    3. [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
+    3. [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
@@ -167,19 +167,19 @@ Validate if there are duplicated parameters in the GRUB configuration file:
     1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
     2. Validate the `/etc/default/grub` file and the `GRUB_CMDLINE_LINUX` entry.
     3. Look for duplicated parameters and remove them.
-    4. Update the GRUB configuration file. For more information, see [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
+    4. Update the GRUB configuration file. For more information, see [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, look for duplicated parameters and remove them.
     3. Press `CTRL+x` to boot the VM.
-    4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
+    4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 ## <a id="dracut-rootfs-corruption"></a>Root file system corruption
 
 When the root file system is corrupted, it's unable to be mounted from the initrd/initramfs image.
 
-To fix the root file system corruption, follow the instructions in [Troubleshoot Linux virtual machine boot issues due to filesystem errors - Perform filesystem repair](/troubleshoot/azure/virtual-machines/linux-recovery-cannot-start-file-system-errors#perform-filesystem-repair).
+To fix the root file system corruption, follow the instructions in [Troubleshoot Linux virtual machine boot issues due to filesystem errors - Perform filesystem repair](linux-recovery-cannot-start-file-system-errors.md#perform-filesystem-repair).
 
 ## <a id="dracut-lvm-issues"></a>Issues with LVM activation
 
@@ -234,7 +234,7 @@ The initrd/initramfs image has some level of corruption which causes mounting th
 To resolve this issue, follow these steps from inside chroot in a repair/rescue VM:
 
 1. Follow step 1 in [Offline troubleshooting](#offline-troubleshooting).
-2. [Regenerate missing initramfs manually](/troubleshoot/azure/virtual-machines/kernel-related-boot-issues#missing-initramfs-manual).
+2. [Regenerate missing initramfs manually](kernel-related-boot-issues.md#missing-initramfs-manual).
 3. Restart the VM to confirm if it's able to boot.
 
 ## Next steps
