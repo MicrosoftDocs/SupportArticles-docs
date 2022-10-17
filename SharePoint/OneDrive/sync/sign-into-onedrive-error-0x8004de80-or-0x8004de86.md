@@ -26,13 +26,13 @@ You can't sign in to Microsoft OneDrive and receive error code 0x8004de80 or 0x8
 
 ## Cause  
 
-This issue may occur if there is a problem with your OneDrive account or configuration.
+This issue may occur if there's a problem with your OneDrive account or configuration.
 
 To resolve this issue, try the following solutions.
 
-## Solution 1: Unlink and re-link OneDrive  
+## Solution 1: Unlink and relink OneDrive  
 
-If you've added a different or old account to OneDrive, unlink the account and re-link it with a correct account. For more information, see [Unlink and re-link OneDrive](https://support.microsoft.com/office/unlink-and-re-link-onedrive-3c4680bf-cc36-4204-9ca5-e7b24cdd23ea).
+If you've added a different or old account to OneDrive, unlink the account and relink it with a correct account. For more information, see [Unlink and relink OneDrive](https://support.microsoft.com/office/unlink-and-re-link-onedrive-3c4680bf-cc36-4204-9ca5-e7b24cdd23ea).
 
 ## Solution 2: Uninstall and reinstall OneDrive  
 
