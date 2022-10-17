@@ -193,7 +193,7 @@ HTTP/1.1 400 Bad Request
 
 ### Cause
 
-This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
+This error occurs because there is no single-valued navigation property in the contact entity type named `parentcustomerid`. For more information, see [contact EntityType > Single-valued navigation properties](/power-apps/developer/data-platform/webapi/reference/contact#single-valued-navigation-properties).
 
 `parentcustomerid` is the logical name of a lookup column in the contact table. All lookups are represented by single-valued navigation properties in OData. The names of the lookup properties don't always match the corresponding single-valued navigation property name.
 
