@@ -201,7 +201,7 @@ In this case, the `parentcustomerid` column is a customer lookup type that may l
 
 ### How to avoid
 
-Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see the [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) section in the article [Web API Navigation Properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties).
+Verify that the navigation property name you use exists in the [CSDL $metadata document](/power-apps/developer/data-platform/webapi/web-api-service-documents#csdl-metadata-document). For more information, see [Web API Navigation Properties](/power-apps/developer/data-platform/webapi/web-api-navigation-properties), especially the [Multi-table lookups](/power-apps/developer/data-platform/webapi/web-api-navigation-properties#multi-table-lookups) section.
 
 ### See also
 
