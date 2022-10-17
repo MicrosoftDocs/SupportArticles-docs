@@ -16,7 +16,7 @@ This article provides a solution to an issue where the Secure Shell (SSH) connec
 
 ## Background
 
-The Unix security model is based on Discretionary Access Control (DAC). Security-Enhanced Linux (SELinux) implements Mandatory Access Control (MAC) for Linux by using kernel modules and user space tools. MAC provides a more controlled environment for resource access and removes the ability of the root user to access all resources on the operating system (OS) without restrictions. It also mitigates multiple kinds of security risks based on the traditional Unix security model.
+The Unix security model is based on Discretionary Access Control (DAC). Security-Enhanced Linux (SELinux) implements Mandatory Access Control (MAC) for Linux by using kernel modules and user space tools. MAC provides a more controlled environment for resource access and removes the ability of the root user to access all resources on the operating system (OS) without restrictions. It also mitigates multiple kinds of security risks by utilizing the traditional Unix security model.
 
 Different distributions include SELinux out of the box or provide a straightforward way to activate kernel support and install user space tools. For more information, see the following SELinux articles from some of the major Linux providers:
 
