@@ -173,7 +173,7 @@ Validate if there are duplicated parameters in the GRUB configuration file:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, look for duplicated parameters and remove them.
     3. Press `CTRL+x` to boot the VM.
-    4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file)
+    4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](/azure/virtual-machines/troubleshoot-vm-boot-error#reinstall-grub-regenerate-grub-configuration-file).
 
 ## <a id="dracut-rootfs-corruption"></a>Root file system corruption
 
