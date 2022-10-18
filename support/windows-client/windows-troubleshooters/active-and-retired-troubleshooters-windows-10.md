@@ -1,7 +1,7 @@
 ---
 title: Active and retired troubleshooters for Windows 10 and Windows 11
 description: Introduce active and retired troubleshooters for Windows 10 and Windows 11.
-ms.date: 10/16/2020
+ms.date: 10/18/2022
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
@@ -38,7 +38,6 @@ This troubleshooter runs automatically on devices to meet the following criteria
 |---|---|---|
 |8/24/2022||[https://aka.ms/AAhs34y](https://aka.ms/AAhs34y)|
 
-
 ## Windows Update troubleshooter for repairing .NET framework components
 
 Text displayed in Settings:  
@@ -50,7 +49,7 @@ Some devices that installed the April 25, 2022, update KB5012643 for Windows 11,
 
 This troubleshooter runs automatically on devices that meet the following criteria:
 
-- Runs Windows 10 11, version 21H2
+- Runs Windows 10, version 21H2 and Windows 11, version 21H2
 - This issue has been detected
 
 |Activation date|Retirement date|More information|
