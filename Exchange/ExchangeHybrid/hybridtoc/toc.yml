@@ -161,6 +161,8 @@
           href: ../hybrid-configuration-wizard-errors/hcw8100-hcw8084-or-hcw8083-error.md
         - name: Hybrid Configuration Wizard can't show digital certificates
           href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-fails-to-show-digital-certificates.md
+        - name: Hybrid Configuration wizard doesn't connect to Office 365
+          href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-not-connect-to-office-365.md
         - name: Hybrid domain isn't an accepted domain for cloud organization error
           href: ../hybrid-configuration-wizard-errors/hybrid-domain-domain-isnt-accepted-domain-for-cloud-organization-error.md
         - name: Legacy Email Address Policy isn't automatically updated
