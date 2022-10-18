@@ -729,13 +729,13 @@
 - name: Product Updates and Release Notes
   items:
   - name: Latest updates and version history
-    href: versions-updates/download-and-install-latest-updates.md
+    href: releases/download-and-install-latest-updates.md
   - name: Version and edition of SQL Server engine
-    href: versions-updates/find-my-sql-version.md
+    href: releases/find-my-sql-version.md
   - name: Version and edition of SQL components
-    href: versions-updates/components-client-tools-versions.md
+    href: releases/components-client-tools-versions.md
   - name: Frequently asked questions and acronyms
-    href: versions-updates/faq-acronyms.md
+    href: releases/faq-acronyms.md
   - name: SQL Server on Linux Release History
     items:
     - name: SQL Server 2022 Preview
