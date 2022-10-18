@@ -10,7 +10,7 @@ localization_priority: Normal
 ms.custom: 
   - CI 167727
   - CSSTroubleshoot
-ms.reviewer: prbalusu
+ms.reviewer: prbalusu, salarson
 appliesto: 
   - OneDrive for Business
 search.appverid: 
@@ -26,7 +26,10 @@ You can't sign in to Microsoft OneDrive and receive error code 0x8004de80 or 0x8
 
 ## Cause  
 
-This issue may occur if there's a problem with your OneDrive account or configuration.
+This issue may occur for the following reasons:
+
+- There's a problem with your OneDrive account or configuration.
+- There are identity problems between multiple accounts.
 
 To resolve this issue, try the following solutions.
 
@@ -45,3 +48,7 @@ If you've added a different or old account to OneDrive, unlink the account and r
 1. Open the downloaded file and follow the prompts to sign in and get started.
 
 For more information, see [Reinstall OneDrive](https://support.microsoft.com/office/reinstall-onedrive-0660f354-6a69-46eb-b817-7f4e0d7b45b5).
+
+## Solution 3: Clear out multiple identities
+
+To clear out multiple identities, [remove the cached Office account identities from the registry](sign-into-onedrive-error-0x8004dec5.md#resolution).
