@@ -48,17 +48,17 @@ Use the following steps to fix this problem and enable the macOS LOB app to corr
 
 2. Open the InstalledApps.txt file in a text editor:
 
-      <img width="500" alt="image" src="https://user-images.githubusercontent.com/57767769/196536786-0bc12413-46ae-4f35-90f5-04eb5de09823.png">
+      <img width="500" alt="text editor" src="https://user-images.githubusercontent.com/57767769/196536786-0bc12413-46ae-4f35-90f5-04eb5de09823.png">
 
 3. Go to the affected app in Intune > Properties > App information > Edit:
 
-      <img width="500" alt="image" src="https://user-images.githubusercontent.com/57767769/196536881-90947e35-5f73-466b-9cee-b5446a7b3672.png">
+      <img width="500" alt="included apps" src="https://user-images.githubusercontent.com/57767769/196536881-90947e35-5f73-466b-9cee-b5446a7b3672.png">
 
 4.	Compare the list of included apps in Intune to the apps listed in the InstalledApps.txt, and remove any apps that are not showing in the text file:
 
-      <img width="500" alt="image" src="https://user-images.githubusercontent.com/57767769/196536939-b7356dab-3b3d-4c88-babb-eaa44b096084.png">
+      <img width="500" alt="included apps text file" src="https://user-images.githubusercontent.com/57767769/196536939-b7356dab-3b3d-4c88-babb-eaa44b096084.png">
 
-      <img width="500" alt="image" src="https://user-images.githubusercontent.com/57767769/196537126-790db738-53fc-432d-932a-0081a7a0d8ed.png">
+      <img width="500" alt="delete an included app" src="https://user-images.githubusercontent.com/57767769/196537126-790db738-53fc-432d-932a-0081a7a0d8ed.png">
 
 5.	Review and save the application, and then sync the device to retrieve the latest app installation status:
 
