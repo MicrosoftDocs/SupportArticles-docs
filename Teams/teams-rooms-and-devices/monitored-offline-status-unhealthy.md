@@ -55,7 +55,9 @@ The Teams Rooms Pro agent relies on Trusted Platform Module (TPM) to uniquely id
 
 To check current status of TPM, run the following command in an elevated PowerShell command prompt on the device:
 
-`Get-Tpm | Select-Object TpmPresent,TpmReady,TpmEnabled,TpmActivated`
+```powershell
+ Get-Tpm | Select-Object TpmPresent,TpmReady,TpmEnabled,TpmActivated
+```
 
 If it returns an error, or if the value of the `TpmPresent` or `TpmReady` property is **false**, [enable TPM on the device](https://support.microsoft.com/windows/1fd5a332-360d-4f46-a1e7-ae6b0c90645c#bkmk_enable_tpm). Refer to the OEM documentation if needed.
 
