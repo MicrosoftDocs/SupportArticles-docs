@@ -44,7 +44,7 @@ The resolution for the second error is to [check for and remove any conflicting 
 
 Use the appropriate resolution depending on the error message you received. Then retry assigning the proxy address.
 
-### Check for and remove any conflicting proxy address in Exchange Online
+#### Check for and remove any conflicting proxy address in Exchange Online
 
 The following steps search for existing mail-enabled objects in Exchange Online that use the conflicting proxy address.
 
@@ -64,7 +64,7 @@ The following steps search for existing mail-enabled objects in Exchange Online 
 
 3. A proxy address can only be assigned to one object at a time. After you determine which object is in conflict, remove or change the proxy address that's associated with that object.
 
-### Check for and remove any conflicting proxy address in Azure AD
+#### Check for and remove any conflicting proxy address in Azure AD
 
 The following steps check for and remove any MEPFs with the conflicting proxy address from Azure AD. The steps require an on-premises server with Azure AD Connect version 2.0 or higher.
 
@@ -121,4 +121,4 @@ The following steps check for and remove any MEPFs with the conflicting proxy ad
 6. Rerun the step 4 search in Azure AD. This time, the search results shouldn't return any MEPFs.
 
 > [!NOTE]
-> The resolution requires an on-premises server with Azure AD Connect installed. If your on-premises infrastructure is decommissioned, contact [Microsoft Support](https://support.microsoft.com/).
+> This resolution requires an on-premises server with Azure AD Connect installed. If your on-premises infrastructure is decommissioned, contact [Microsoft Support](https://support.microsoft.com/).
