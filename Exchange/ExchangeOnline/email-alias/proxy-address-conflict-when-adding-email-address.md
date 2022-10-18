@@ -90,7 +90,7 @@ The following steps check for and remove any MEPFs with the conflicting proxy ad
 
    The sync should remove the conflicting SMTP address from Azure AD.
 
-4. If you didn't find the conflicting SMTP address in any on-premises MEPF, or the sync didn't remove the conflicting SMTP address from Azure AD, search for MEPFs with the conflicting SMTP address in Azure AD. To search MEPFs in Azure AD use the [Get-ADSyncToolsAadObject](/azure/active-directory/hybrid/reference-connect-adsynctools#example-1-12) PowerShell cmdlet on the Azure AD Connect server. The search is case-insensitive. Include the smtp: prefix when specifying the SMTP address:
+4. If you didn't find the conflicting SMTP address in any on-premises MEPF, or the sync didn't remove the conflicting SMTP address from Azure AD, search for MEPFs with the conflicting SMTP address in Azure AD. To search MEPFs in Azure AD, use the [Get-ADSyncToolsAadObject](/azure/active-directory/hybrid/reference-connect-adsynctools#example-1-12) PowerShell cmdlet on the Azure AD Connect server. The search is case-insensitive. Include the smtp: prefix when specifying the SMTP address:
 
    ```powershell
    $mailEnabledPublicFolders = Get-ADSyncToolsAadObject -SyncObjectType "PublicFolder" -Credential (Get-Credential)
