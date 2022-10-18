@@ -17,7 +17,7 @@ ms.technology: windows-server-rds
 
 This article describes Microsoft support for Nesting Remote Desktop Connections.
 
-_Applies to:_ &nbsp; Windows 10/11 - all editions, Windows Server 2012 R2  
+_Applies to:_ &nbsp; Windows 11 - all editions, Windows 10 - all editions, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 2754550
 
 ## Summary
@@ -26,7 +26,7 @@ Running a Remote Desktop Connection session within another Remote Desktop Connec
 
 |Client Computer version|Remote Desktop version|Nested Remote Desktop version|Supported RDP feature for the nested Remote Desktop connection|Supported Remote Desktop connection type|
 |---|---|---|---|---|
-|<ul><li>Windows 10/11 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 10/11 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 10/11 </li> <li>Windows Server 2012 </li>|<ul><li>Basic graphics (Display) </li> <li>Keyboard and mouse input</li>|<ul><li>Full Remote Desktop</li> <li>RemoteApp</li>|
+|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Windows 11 </li><li>Windows 10 </li> <li>Windows Server 2012 </li>|<ul><li>Basic graphics (Display) </li> <li>Keyboard and mouse input</li>|<ul><li>Full Remote Desktop</li> <li>RemoteApp</li>|
 
 For example, the following scenarios are supported for basic graphics and keyboard and mouse input:
 
