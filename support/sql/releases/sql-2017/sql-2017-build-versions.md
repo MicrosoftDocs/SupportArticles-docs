@@ -2,6 +2,7 @@
 title: SQL Server 2017 build versions (KB4047329)
 description: This article lists cumulative update and GDR builds for SQL Server 2017.
 ms.date: 10/12/2022
+ms.custom: KB4047329
 appliesto:
 - SQL Server 2017
 ---

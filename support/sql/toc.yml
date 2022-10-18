@@ -732,16 +732,16 @@
   - name: Updates for SQL Server 2019
     items:
     - name: SQL Server 2019 build versions
-      href: versions-updates/sql-2019/sql-2019-build-versions.md
+      href: releases/sql-2019/sql-2019-build-versions.md
   - name: Updates for SQL Server 2017
     items:
     - name: SQL Server 2017 build versions
-      href: versions-updates/sql-2017/sql-2017-build-versions.md
+      href: releases/sql-2017/sql-2017-build-versions.md
   - name: Updates for SQL Server 2016
     items:
     - name: SQL Server 2016 build versions
-      href: versions-updates/sql-2016/sql-2016-build-versions.md
+      href: releases/sql-2016/sql-2016-build-versions.md
   - name: Updates for SQL Server 2014
     items:
     - name: SQL Server 2014 build versions
-      href: versions-updates/sql-2014/sql-2014-build-versions.md
+      href: releases/sql-2014/sql-2014-build-versions.md
