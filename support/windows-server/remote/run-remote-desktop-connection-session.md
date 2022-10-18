@@ -31,7 +31,7 @@ Running a Remote Desktop Connection session within another Remote Desktop Connec
 For example, the following scenarios are supported for basic graphics and keyboard and mouse input:
 
 1. Users connecting to a Windows Server 2012 Remote Desktop Session Host (RD Session Host) server for their desktop environment, and then connecting to another Windows Server 2012 RD Session Host server for RemoteApp programs.
-2. Users connecting to a Windows 10/11 virtual desktop for their desktop environment, and then connecting to a Windows Server 2012 RD Session Host server for RemoteApp programs.
+2. Users connecting to a Windows 11 or Windows 10 virtual desktop for their desktop environment, and then connecting to a Windows Server 2012 RD Session Host server for RemoteApp programs.
 
 ## More information
 
