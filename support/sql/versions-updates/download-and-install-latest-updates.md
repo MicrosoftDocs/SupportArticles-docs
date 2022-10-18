@@ -1,5 +1,5 @@
 ---
-title: Latest updates for SQL Server
+title: Latest updates and version history for SQL Server
 description: This article lists various builds or updates that are available for different versions of SQL Server.
 ms.date: 10/15/2022
 ms.custom: sap:Installation, Patching and Upgrade
@@ -10,7 +10,7 @@ ms.prod: sql
 <!---Internal note: The screenshots in the article are being or were already updated. Please contact "gsprad" and "christys" for triage before making the further changes to the screenshots.
 --->
 
-# Latest updates for SQL Server
+# Latest updates and version history for SQL Server
 
 This article lists various builds or updates that are available for different versions of SQL Server.
 

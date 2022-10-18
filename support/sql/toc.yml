@@ -728,7 +728,7 @@
 
 - name: Product Updates and Release Notes
   items:
-  - name: Latest updates for SQL Server
+  - name: Latest updates and version history
     href: versions-updates/download-and-install-latest-updates.md
   - name: Version and edition of SQL Server engine
     href: versions-updates/find-my-sql-version.md
