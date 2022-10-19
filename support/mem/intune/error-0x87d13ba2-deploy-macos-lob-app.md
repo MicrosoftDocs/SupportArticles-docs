@@ -23,7 +23,7 @@ You publish a macOS LOB app using Intune. When you select the app in the [Micros
 
 Here's an example of Microsoft Teams:
 
- ![image](https://user-images.githubusercontent.com/57767769/196536372-d2244378-31e2-41e1-9c31-f897bb3672eb.png)
+:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error-0x87d13ba2.png" alt-text="Screenshot of error 0x87D13BA2 in Microsoft Teams.":::
 
 This problem can occur even if the app is successfully installed on the device.
 
@@ -32,7 +32,7 @@ This problem can occur even if the app is successfully installed on the device.
 This problem occurs under the following conditions:
 
 - Multiple applications are included in a macOS app package.
-- The installation status of all individual applications that are included in the package aren’t reported back to Intune.
+- The installation status of all individual applications that are included in the package aren't reported back to Intune.
 
 Any app that has multiple components, such as Microsoft Teams, can generate this error message.
 
@@ -46,25 +46,20 @@ Use the following steps to fix this problem and enable the macOS LOB app to corr
    sudo /usr/libexec/mdmclient QueryInstalledApps > InstalledApps.txt
    ```
 
-2. Open the InstalledApps.txt file in a text editor:
+2. Open the *InstalledApps.txt* file in a text editor:
 
-      <img width="500" alt="text editor" src="https://user-images.githubusercontent.com/57767769/196536786-0bc12413-46ae-4f35-90f5-04eb5de09823.png">
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/installedapps.png" alt-text="Screenshot of the InstalledApps.txt file.":::
 
-3. Go to the affected app in Intune > Properties > App information > Edit:
+3. Go to the affected app in Intune by selecting **Properties** > **App information** > **Edit**:
 
-      <img width="500" alt="included apps" src="https://user-images.githubusercontent.com/57767769/196536881-90947e35-5f73-466b-9cee-b5446a7b3672.png">
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/edit-application.png" alt-text="Screenshot of the Edit application page.":::
 
-4.	Compare the list of included apps in Intune to the apps listed in the InstalledApps.txt, and remove any apps that are not showing in the text file:
+4. Compare the list of included apps in Intune with the apps listed in the *InstalledApps.txt* file, and remove any apps that are not showing in the text file:
 
-      <img width="500" alt="included apps text file" src="https://user-images.githubusercontent.com/57767769/196536939-b7356dab-3b3d-4c88-babb-eaa44b096084.png">
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/included-apps-intune.png" alt-text="List of included apps in Intune.":::
 
-      <img width="500" alt="delete an included app" src="https://user-images.githubusercontent.com/57767769/196537126-790db738-53fc-432d-932a-0081a7a0d8ed.png">
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/included-apps-text-file.png" alt-text="List of included apps in the text file.":::
 
-5.	Review and save the application, and then sync the device to retrieve the latest app installation status:
+5. Review and save the application, and then sync the device to retrieve the latest app installation status:
 
-     ![Screen Shot 2022-10-18 at 4 19 45 PM](https://user-images.githubusercontent.com/57767769/196538620-dc9c15e0-62eb-4a01-a4c7-3bd30ee4ecef.png)
-
-
-
-
-
+   :::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/latest-app-installation-status.png" alt-text="Screenshot of the latest app installation status.":::
