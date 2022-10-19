@@ -247,7 +247,7 @@ If the VM is inaccessible due to other Hyper-V drivers being disabled, use an of
 Always take a backup of the original initial RAMdisk image to facilitate the rollback if needed.
 
 > [!IMPORTANT] 
-> If the issue is still not resolved, follow the [Azure Linux virtual machine fails to boot and enters dracut emergency shell](/troubleshoot/azure/virtual-machines/linux-no-boot-dracut) documentation to further investigate the cause and solution for Dracut errors.
+> If the issue is still not resolved, refer to [Azure Linux virtual machine fails to boot and enters dracut emergency shell](/troubleshoot/azure/virtual-machines/linux-no-boot-dracut) to investigate dracut issues.
 
 ## Next steps
 
