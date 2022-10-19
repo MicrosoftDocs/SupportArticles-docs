@@ -117,6 +117,8 @@
     href: compute-node-not-shown-error-state.md
   - name: HPC node manager service unreachable
     href: hpc-node-manager-service-unreachable-certificate.md
+  - name: HPC Pack Excel offloading job is stalled
+    href: hpc-pack-excel-offloading-job-stalled.md
   - name: HPC reporting database connection problem
     href: hpc-management-reporting-database-connection-issue.md
   - name: HPC reporting database permission problem
