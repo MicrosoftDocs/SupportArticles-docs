@@ -115,7 +115,7 @@ Follow these steps to check for and remove from Azure AD any MEPFs that use the 
    $mailEnabledPublicFolders | Where-Object {$_.ProxyAddresses -icontains $conflictingSmtpAddress} | Select SourceAnchor
    ```
 
-   The search results provide the [SourceAnchor](https://microsoft-my.sharepoint.com/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchor) for each MEPF that meets the search criteria.
+   The search results provide the [SourceAnchor](/azure/active-directory/hybrid/plan-connect-design-concepts#sourceanchor) for each MEPF that meets the search criteria.
 
 5. For each MEPF that's identified in step 4, remove the MEPF from Azure AD by using the [Remove-ADSyncToolsAadObject](/azure/active-directory/hybrid/reference-connect-adsynctools#remove-adsynctoolsaadobject) cmdlet. Supply the `SourceAnchor` value of the MEPF in Base64 format.
 
