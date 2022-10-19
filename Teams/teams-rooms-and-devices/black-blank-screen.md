@@ -70,6 +70,7 @@ Attach a USB keyboard to the device. Press the Windows key five times in quick s
       - Microsoft.SkypeRoomSystem.exe
       - DesktopAPIService.exe
       - Teams.exe (multiple)
+
       If the value is **Skype**, it means that the Teams Rooms app may be frozen in an unexpected state.
    1. Open Event Viewer, select **Windows Logs** > **Application**. Check for any **Critical** or **Error** events from the following sources in the last 24 hours that indicate that one of the processes listed in step 3 has crashed:
 
