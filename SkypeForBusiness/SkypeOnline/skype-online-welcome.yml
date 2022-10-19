@@ -1,0 +1,89 @@
+### YamlMime:Landing
+
+title: Skype for Business Online troubleshooting
+summary: This library of articles provides guidance to troubleshoot and fix errors that you may experience when using Skype for Business Online. For a complete list of articles, browse the navigation pane on the left, or use the search box above the pane to filter by keywords and find help with a specific issue.
+metadata:
+  title: Skype for Business Online troubleshooting
+  description: Documentation for troubleshooting common issues with Skype for Business Online.
+  ms.service: skype-for-business-online
+  ms.topic: landing-page
+  author: helenclu
+  ms.author: luche
+  ms.date: 07/26/2022
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+
+ # Card
+  - title: Meetings
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Invitations not sent from Outlook
+            url: ./online-meetings/invitations-are-not-sent.md
+          - text: Can't join online meetings
+            url: ./online-meetings/cannot-join-online-meetings.md
+          - text: Troubleshoot recording online meetings
+            url: ./online-meetings/troubleshoot-recording-online-meetings.md
+  # Card
+  - title: Configuration
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: DNS configuration issues
+            url: ./online-configuration/dns-configuration-issue.md
+          - text: Outlook email address not match sign-in address
+            url: ./online-configuration/problem-connecting-to-outlook.md
+          - text: msRTCSIP-PrimaryUserAddress or SIP address not unique
+            url: ./online-configuration/msrtcsip-primaryuseraddress-proxyaddaddress.md
+ # Card
+  - title: Sign-in
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Issue when signing in
+            url: ./online-sign-in/cant-sign-into-sfb-online.md
+          - text: Troubleshoot user sign-in issues
+            url: ./online-sign-in/troubleshoot-sign-in-issues-for-users.md
+          - text: Considerations when changing sign-in address
+            url: ./online-sign-in/change-office-365-sign-in-address.md
+ # Card
+  - title: Contacts
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Contacts are offline or aren't searchable
+            url: ./online-contacts/contacts-offline-not-searchable.md
+          - text: Telephone number not visible in contact card
+            url: ./online-contacts/telephone-number-not-visible.md
+          - text: Outlook Skype for Business Contacts folder not sync
+            url: ./online-contacts/outlook-contacts-folder-not-sync.md          
+ # Card
+  - title: Conferencing
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: '"Share your desktop" displays black screen'
+            url: ./online-conferencing/sharing-display-black-screen.md
+          - text: Audio/video not start in a conference 
+            url: ./online-conferencing/audio-or-video-not-start.md
+          - text: Can't share presentations from Lync
+            url: ./online-conferencing/cant-share-presentations.md
+ # Card
+  - title: Attachments
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Can't send or receive files from Lync
+            url: ./online-attachments/cant-send-receive-files-attachments.md
+ # Card
+  - title: Exchange-integration
+    linkLists:
+      - linkListType: how-to-guide
+        links:           
+          - text: Chat app in Outlook for Mac defaults to Teams instead of Skype for Business
+            url: ./online-exchange-integration/outlook-for-mac-chat-app-defaults-to-teams.md
+          - text: UM-enabled mailbox migration fails
+            url: ./online-exchange-integration/um-enabled-mailbox-migration-fails.md
+            

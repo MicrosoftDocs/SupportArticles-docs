@@ -1,7 +1,7 @@
 ---
 title: Mailbox recovery in Exchange Online
 description: Help Tenant Administrator to recover a user and mailbox in Exchange online with PowerShell cmdlets.
-ms.date: 08/13/2020
+ms.date: 10/05/2022
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -74,23 +74,23 @@ Based on the outcome in the steps above, select one of the following:
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#online-account-present-online-mailbox-present)
 - [Mailbox Soft Deleted](#online-account-present-online-mailbox-soft-deleted)
@@ -100,23 +100,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#azure-ad-account-soft-deleted-online-mailbox-present)
 - [Mailbox Soft Deleted](#azure-ad-account-soft-deleted-exchange-online-mailbox-soft-deleted)
@@ -126,23 +126,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present-hard-deleted)
 - [Mailbox Soft Deleted](#online-account-hard-deleted-online-mailbox-soft-deleted)
@@ -324,23 +324,23 @@ Based on the outcome in the steps above, select one of the following:
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#azure-ad-account-present-exchange-online-mailbox-present)
 - [Mailbox Soft Deleted](#azure-ad-account-present-exchange-online-mailbox-soft-deleted)
@@ -350,23 +350,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#azure-ad-account-soft-deleted-exchange-online-mailbox-present)
 - [Mailbox Soft Deleted](#online-account-soft-deleted-online-mailbox-soft-deleted)
@@ -376,23 +376,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#azure-ad-account-hard-deleted-online-mailbox-present)
 - [Mailbox Soft Deleted](#azure-ad-account-hard-deleted-exchange-online-mailbox-soft-deleted)
@@ -715,23 +715,23 @@ Based on the outcome in the steps above, select one of the following:
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#ad-user-account-deleted-online-account-present-online-mailbox-present)
 - [Mailbox Soft Deleted](#ad-account-deleted-azure-ad-account-present-soft-deleted-online-mailbox-soft-deleted)
@@ -741,23 +741,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#ad-user-account-deleted-azure-ad-account-soft-deleted-online-mailbox-present)
 - [Mailbox Soft Deleted](#ad-account-deleted-online-account-soft-deleted-online-mailbox-soft-deleted)
@@ -767,23 +767,23 @@ Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange
 
 Connect to [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) and verify the status of the Exchange Online Mailbox using the instructions below:
 
-1. Select **Start** > **All Programs** > **Accessories** > **Windows PowerShell** > **Windows PowerShell**.
+1. Ensure the [Exchange Online PowerShell module](/powershell/exchange/exchange-online-powershell-v2) is [installed](/powershell/exchange/connect-to-exchange-online-powershell#connect-to-exchange-online-powershell-using-modern-authentication-with-or-without-mfa).
 
-2. Type `$Cred = Get-Credential`.
+2. Connect to Exchange Online by running the command:
 
-    > [!NOTE]
-    > When prompted for credentials, type your Microsoft 365 administration account credentials.
+   ```powershell
+   Connect-ExchangeOnline
+   ```
 
-3. Type $Session = New-PSSession -ConfigurationName *Microsoft.Exchange* -ConnectionUri `https://outlook.office365.com/powershell/` -Credential $Cred -Authentication Basic –AllowRedirection.
+   When prompted, enter the credentials for your Microsoft 365 admin account. If the account has multifactor authentication (MFA) enabled, you'll also need to enter a security code.
 
-4. Type `Import-PSSession $Session`.
-5. Run `Get-Mailbox -Identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 6.
+3. Run `Get-Mailbox -Identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX PRESENT** option should be selected. If not, go to step 4.
 
-6. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
-   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 7.
+4. Run `Get-Mailbox -SoftDeletedMailbox -identity <user Alias>`.  
+   If the mailbox is returned, the **MAILBOX SOFT DELETED** option should be selected. If not, go to step 5.
 
-7. If nothing is returned from steps 5 & 6 above, select the **MAILBOX NOT PRESENT** option.
+5. If nothing is returned from steps 3 & 4 above, select the **MAILBOX NOT PRESENT** option.
 
 - [Mailbox Present](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-present)
 - [Mailbox Soft Deleted](#ad-user-account-deleted-azure-ad-account-hard-deleted-online-mailbox-soft-deleted)
