@@ -1,5 +1,5 @@
 - name: Skype for Business Experts
-  href: ../skype-experts-welcome.md
+  href: ../skype-experts-welcome.yml
   items:
   - name: Performance issues
     items:
