@@ -14,15 +14,14 @@ ms.custom:
 ms.reviewer: alexaca, batre, nualex, meerak
 appliesto: 
   - Exchange Online
-  - Azure Active Directory
 search.appverid: MET150
-ms.date: 10/18/2022
+ms.date: 10/19/2022
 ---
 # Proxy address conflict when adding an email address in Exchange Online
 
 ## Symptoms
 
-When you try to assign a proxy address to a new or existing mail recipient in Exchange Online, you receive an error message that resembles one of the following messages.
+When you try to assign a proxy address to a new or existing mail recipient in Exchange Online, you receive an error message that resembles one of the following examples.
 
 **Error 1**
 
