@@ -125,7 +125,7 @@ If both serial console and ALAR approach is not possible or fails , the repair h
 * [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
-Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk and implement [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropiate changes to the fstab file of the problematic OS disk.
+Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk and implement [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropriate changes to the fstab file of the problematic OS disk.
 
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
