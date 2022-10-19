@@ -1,6 +1,6 @@
 ---
 title: Error 0x8004de80 or 0x8004de86 when signing in to OneDrive
-description: Fixes an issue in which you can't sign in to OneDrive and you receive error code 0x8004de80 or 0x8004de86.
+description: Fixes an issue in which you can't sign in to OneDrive and you receive Stop error code 0x8004de80 or 0x8004de86.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -18,34 +18,34 @@ search.appverid:
 ms.date: 10/17/2022
 ---
 
-# Error 0x8004de80 or 0x8004de86 when signing in to OneDrive
+# Stop error 0x8004de80 or 0x8004de86 when signing in to OneDrive
 
 ## Symptoms
 
-You can't sign in to Microsoft OneDrive and receive error code 0x8004de80 or 0x8004de86.
+When you try to sign in to Microsoft OneDrive, you can't sign in, and you receive Stop error code 0x8004de80 or 0x8004de86.
 
 ## Cause  
 
-This issue may occur for the following reasons:
+This issue might occur for the following reasons:
 
-- There's a problem with your OneDrive account or configuration.
-- There are identity problems between multiple accounts.
+- A problem affects your OneDrive account or configuration.
+- Identity problems exist between multiple accounts.
 
 To resolve this issue, try the following solutions.
 
 ## Solution 1: Unlink and relink OneDrive  
 
-If you've added a different or old account to OneDrive, unlink the account and relink it with a correct account. For more information, see [Unlink and relink OneDrive](https://support.microsoft.com/office/unlink-and-re-link-onedrive-3c4680bf-cc36-4204-9ca5-e7b24cdd23ea).
+If you've added a different account or old account to OneDrive, unlink the account and relink OneDrive to a correct account. For more information, see [Unlink and relink OneDrive](https://support.microsoft.com/office/unlink-and-re-link-onedrive-3c4680bf-cc36-4204-9ca5-e7b24cdd23ea).
 
 ## Solution 2: Uninstall and reinstall OneDrive  
 
-**Note** You won't lose any data by resetting or uninstalling OneDrive.
+**Note:** You won't lose any data by resetting or uninstalling OneDrive.
 
-1. Select the Windows key (:::image type="icon" source="media/sign-into-onedrive-error-0x8004de80-or-0x8004de86/windows-icon.png":::) and type *Programs* in the search box, and then select **Add or remove programs**.
+1. Select the Windows logo key (:::image type="icon" source="media/sign-into-onedrive-error-0x8004de80-or-0x8004de86/windows-icon.png":::), type *Programs* in the search box, and then select **Add or remove programs**.
 1. Under **Apps & features**, find and select **Microsoft OneDrive**.
 1. Select **Uninstall**.
 1. Download the [Microsoft OneDrive app](https://www.microsoft.com/microsoft-365/onedrive/download) from the website.
-1. Open the downloaded file and follow the prompts to sign in and get started.
+1. Open the downloaded file, and follow the prompts to sign in and get started.
 
 For more information, see [Reinstall OneDrive](https://support.microsoft.com/office/reinstall-onedrive-0660f354-6a69-46eb-b817-7f4e0d7b45b5).
 
