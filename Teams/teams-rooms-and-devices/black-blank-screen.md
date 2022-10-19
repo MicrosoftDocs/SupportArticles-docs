@@ -89,7 +89,7 @@ This issue usually occurs during the first use of the day, after a nightly resta
   - Active video source selection
   - Incorrect EDID information that's communicated to the Teams Rooms device
 
-  This behavior is expected when consumer TVs are used as the Front of Room display. For more information, see [Known issues in Teams Rooms](rooms-known-issues#expected-behavior.md).
+  This behavior is expected when consumer TVs are used as the Front of Room display. For more information, see [Known issues in Teams Rooms](rooms-known-issues.md#expected-behavior).
 - If the current time shown on the display isn't frozen, check if only the touchscreen input is affected.
 
   To verify, attach a USB keyboard to the Teams Rooms device, press the Tab key to navigate through the menu of the Teams Rooms app. If the app responds to keyboard input, it means that the app isn't frozen. To restore the functionality, consider power cycling the console, or restart the Teams Rooms device.
