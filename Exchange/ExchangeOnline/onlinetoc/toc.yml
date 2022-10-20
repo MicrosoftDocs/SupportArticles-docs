@@ -203,8 +203,6 @@
           href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
     - name: Email Alias
       items:
-        - name: Proxy address conflict when adding an email address in Exchange Online
-          href: ../email-alias/proxy-address-conflict-when-adding-email-address.md
         - name: Recipient's address isn't autocompleted or suggested
           href: ../email-alias/address-not-autocompleted-or-suggested.md
         - name: Remove an alias from a contact
