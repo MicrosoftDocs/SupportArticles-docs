@@ -4,8 +4,6 @@ description: This article gives troubleshooting guidance for error messages and 
 ms.date: 08/02/2021
 search.appverid: MET150
 ms.custom: sap:App management
-ms.topic: troubleshooting
-ms.service: microsoft-intune
 ms.reviewer: mghadial
 ---
 
