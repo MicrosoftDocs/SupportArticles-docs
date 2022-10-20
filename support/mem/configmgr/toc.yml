@@ -420,9 +420,9 @@ items:
         - name: Optimize WSUS client performance
           href: update-management/optimize-wsus-client-performance.md
         - name: Reindex the WSUS database
-          href: update-management/reindex-the-wsus-database.md  
+          href: update-management/reindex-the-wsus-database.md
         - name: The spDeleteUpdate stored procedure runs slowly
-          href: update-management/spdeleteupdate-slow-performance.md          
+          href: update-management/spdeleteupdate-slow-performance.md
         - name: Troubleshoot issues with WSUS client agents
           href: update-management/troubleshoot-issues-with-wsus-client-agents.md
         - name: Troubleshoot WSUS connection failures

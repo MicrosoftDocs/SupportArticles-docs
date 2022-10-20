@@ -6,7 +6,7 @@ items:
 - name: App management
   items:
   - name: App management overview
-    href: app-management/app-management.yml   
+    href: app-management/app-management.yml
   - name: App installation
     items:
     - name: App installation error codes
@@ -40,7 +40,7 @@ items:
     - name: macOS LOB apps aren't deployed
       href: app-management/macos-lob-apps-not-deployed.md
     - name: Error 0x87D13BA2 when you deploy a macOS LOB app
-      href: app-management/error-0x87d13ba2-deploy-macos-lob-app.md  
+      href: app-management/error-0x87d13ba2-deploy-macos-lob-app.md
     - name: Can't install apps and run shell scripts in macOS
       href: app-management/cannot-install-macos-apps-and-run-shell-scripts.md
   - name: Android apps
@@ -124,7 +124,7 @@ items:
   - name: Troubleshoot PKCS certificate deployment
     href: certificates/troubleshoot-pkcs-certificate-profiles.md
   - name: Intune Certificate Connector events and diagnostic codes
-    href: certificates/troubleshoot-certificate-connector-events.md  
+    href: certificates/troubleshoot-certificate-connector-events.md
   - name: Intune Connector Setup Wizard ended prematurely
     href: certificates/connector-setup-wizard-ends-prematurely.md
   - name: Sign in to Intune NDES Connector error 0x80004003
