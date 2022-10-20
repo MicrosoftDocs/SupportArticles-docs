@@ -74,6 +74,6 @@ Test whether the problem is fixed. If the problem persists, try the following me
 
 For more information about the 64K method reference limit of DEX files, see [Enable multidex for apps with over 64K methods](https://developer.android.com/studio/build/multidex).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

@@ -34,6 +34,6 @@ To resolve this issue, contact [Jamf Software](https://www.jamf.com/) for assist
 
 You may also notice that the connection status for Jamf is inactive or shows **Terminated** in the Intune Admin console. This is expected behavior once the connector is disabled between Jamf Pro and Intune.
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

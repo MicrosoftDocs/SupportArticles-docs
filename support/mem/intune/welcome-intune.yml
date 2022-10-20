@@ -21,85 +21,85 @@ landingContent:
       - linkListType: overview
         links:
           - text: App management overview
-            url: app-management.yml
+            url: app-management/app-management.yml
           - text: App installation error reference
-            url: app-install-error-codes.md
+            url: app-management/app-install-error-codes.md
  # Card
   - title: App protection policies (APP)
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting APP deployment
-            url: troubleshoot-app-protection-policy-deployment.md
+            url: app-protection-policies/troubleshoot-app-protection-policy-deployment.md
           - text: Troubleshooting APP user issues
-            url: troubleshoot-mam.md
+            url: app-protection-policies/troubleshoot-mam.md
  # Card
   - title: Certificates
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting SCEP certificate profiles
-            url: troubleshoot-scep-certificate-profiles.md
+            url: certificates/troubleshoot-scep-certificate-profiles.md
           - text: Troubleshooting SCEP profile deployment
-            url: troubleshoot-scep-certificate-profile-deployment.md
+            url: certificates/troubleshoot-scep-certificate-profile-deployment.md
           - text: Troubleshooting the NDES policy module
-            url: troubleshoot-scep-certificate-ndes-policy-module.md          
+            url: certificates/troubleshoot-scep-certificate-ndes-policy-module.md          
       - linkListType: reference
         links:
           - text: Certificate Connector events and diagnostic codes
-            url: troubleshoot-certificate-connector-events.md
+            url: certificates/troubleshoot-certificate-connector-events.md
  # Card
   - title:  Co-management with Configuration Manager
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot co-management auto-enroll
-            url: troubleshoot-co-management-auto-enrolling.md
+            url: comanage-configmgr/troubleshoot-co-management-auto-enrolling.md
           - text: Troubleshoot co-management bootstrap
-            url: troubleshoot-co-management-bootstrap.md
+            url: comanage-configmgr/troubleshoot-co-management-bootstrap.md
           - text: Troubleshoot co-management workloads
-            url: troubleshoot-co-management-workloads.md
+            url: comanage-configmgr/troubleshoot-co-management-workloads.md
 # Card
   - title: Device configuration
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting Wi-Fi device configuration profiles
-            url: troubleshoot-wi-fi-profiles.md
+            url: device-configuration/troubleshoot-wi-fi-profiles.md
           - text: Windows - Troubleshooting CSP custom settings
-            url: troubleshoot-csp-custom-settings.md
+            url: device-configuration/troubleshoot-csp-custom-settings.md
           - text: Android - Factory reset protection emails setting isn't enforced
-            url: factory-reset-protection-emails-not-enforced.md
+            url: device-configuration/factory-reset-protection-emails-not-enforced.md
 # Card
   - title: Device enrollment
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting device enrollment
-            url: troubleshoot-device-enrollment-in-intune.md
+            url: device-enrollment/troubleshoot-device-enrollment-in-intune.md
           - text: Troubleshooting Android Enterprise device enrollment
-            url: troubleshoot-android-enrollment.md
+            url: device-enrollment/troubleshoot-android-enrollment.md
           - text: Troubleshooting Windows device enrollment errors
-            url: troubleshoot-windows-enrollment-errors.md
+            url: device-enrollment/troubleshoot-windows-enrollment-errors.md
           - text: Troubleshooting the Enrollment Status Page (ESP)
-            url: understand-troubleshoot-esp.md
+            url: device-enrollment/understand-troubleshoot-esp.md
 # Card
   - title: Device management
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshooting device actions
-            url: troubleshoot-device-actions.md
+            url: device-management/troubleshoot-device-actions.md
           - text: Windows 10 devices can't sync with Intune
-            url: cannot-sync-windows-10-devices.md
+            url: device-management/cannot-sync-windows-10-devices.md
 # Card
   - title: Device protection
     linkLists:
       - linkListType: how-to-guide
         links:
           - text: Troubleshoot Conditional Access
-            url: troubleshoot-conditional-access.md
+            url: device-protection/troubleshoot-conditional-access.md
           - text: Troubleshooting BitLocker from the client side
-            url: troubleshoot-bitlocker-policies.md
+            url: device-protection/troubleshoot-bitlocker-policies.md
           - text: Troubleshooting BitLocker with the Intune encryption report
-            url: troubleshoot-bitlocker-admin-center.md
+            url: device-protection/troubleshoot-bitlocker-admin-center.md

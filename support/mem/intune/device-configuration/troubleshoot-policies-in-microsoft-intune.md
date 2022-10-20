@@ -70,7 +70,7 @@ You can use the built-in troubleshooting feature to review different compliance 
         - **Not Applicable**: This policy isn't supported on this platform. For example, iOS/iPadOS policies don't work on Android. Samsung KNOX policies don't work on Windows devices.
         - **Conflict**: There's an existing setting on the device that Intune can't override. Or, you deployed two policies with the same setting using different values.
         - **Pending**: The device hasn't checked into Intune to get the policy. Or, the device received the policy but hasn't reported the status to Intune.
-        - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](troubleshoot-company-resource-access-problems.md).
+        - **Errors**: Look up errors and possible resolutions at [Troubleshoot company resource access problems](../general/troubleshoot-company-resource-access-problems.md).
 
 ## Check tenant status
 
@@ -97,7 +97,7 @@ For more information, see [Monitor device profiles in Microsoft Intune](/mem/int
 
 If you create policies in the Exchange On-Premises Policy workspace (Admin console), but are using Microsoft 365, then the configured policy settings aren't enforced by Intune. In the alert, note the policy source. Under the Exchange On-premises Policy workspace, delete the legacy rules. The legacy rules are Global Exchange rules within Intune for on-premises Exchange, and aren't relevant to Microsoft 365. Then, create new policy for Microsoft 365.
 
-[Troubleshoot the Intune on-premises Exchange connector](troubleshoot-exchange-connector.md) may be a good resource.
+[Troubleshoot the Intune on-premises Exchange connector](../device-protection/troubleshoot-exchange-connector.md) may be a good resource.
 
 ## Can't change security policies for enrolled devices
 

@@ -11,9 +11,9 @@ This article helps troubleshoot an enrollment failure during the out-of-box expe
 
 This issue can occur during device setup when the user chooses **Set up for work or school** and then signs in with an organization-linked Azure Active Directory (Azure AD) account. The enrollment fails and you might see associated error code 80180014.
 
-:::image type="content" source="media/windows-work-school-enroll/windows-setup.png" alt-text="Windows setup screen showing options for setting up the device":::
+:::image type="content" source="media/troubleshoot-windows-work-school/windows-setup.png" alt-text="Windows setup screen showing options for setting up the device":::
 
-:::image type="content" source="media/windows-work-school-enroll/windows-setup-2.png" alt-text="Windows sign-in screen for setting up a work or school account.":::
+:::image type="content" source="media/troubleshoot-windows-work-school/windows-setup-2.png" alt-text="Windows sign-in screen for setting up a work or school account.":::
 
 ## Cause
 
@@ -25,14 +25,14 @@ To fix this issue, you can allow personal enrollment of Windows devices either f
 
 To allow personal device enrollment, sign-in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.
 
-:::image type="content" source="media/windows-work-school-enroll/enrollment-restrictions.png" alt-text="Enrollment device platform restrictions option in Intune.":::
+:::image type="content" source="media/troubleshoot-windows-work-school/enrollment-restrictions.png" alt-text="Enrollment device platform restrictions option in Intune.":::
 
 Select **Windows restrictions** > **Create restriction** and give the restriction an informative name. On the **Platform settings** page, make sure to set **Personally owned devices** to **Allow**.
 
-:::image type="content" source="media/windows-work-school-enroll/allow-personal.png" alt-text="Allow personally owned devices in Intune.":::
+:::image type="content" source="media/troubleshoot-windows-work-school/allow-personal.png" alt-text="Allow personally owned devices in Intune.":::
 
 Assign the restriction to the group(s) you want to let enroll personal devices.
 
-:::image type="content" source="media/windows-work-school-enroll/select-groups.png" alt-text="Assign the restriction to Azure AD groups.":::
+:::image type="content" source="media/troubleshoot-windows-work-school/select-groups.png" alt-text="Assign the restriction to Azure AD groups.":::
 
 Review and create the restriction.

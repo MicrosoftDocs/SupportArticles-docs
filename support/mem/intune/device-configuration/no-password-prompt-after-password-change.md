@@ -25,4 +25,4 @@ To work around this issue, enable Open Authentication (OAuth) in the email profi
 > [!IMPORTANT]
 > When you use OAuth, make sure that your email solution supports OAuth before it targets this profile. Office 365 Exchange Online supports OAuth, but on-premises Exchange and other third-party solutions may not. If the email profile uses OAuth and the email service does not support it, the **Re-Enter Password** option may be broken. For example, nothing happens when you select the **Re-Enter Password** option in **Settings** on the iOS device. Make sure that you understand all the ramifications of enabling OAuth before you do this in a production environment.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

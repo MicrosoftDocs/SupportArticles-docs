@@ -38,6 +38,6 @@ There are certain times when a device cannot do what the server requests. When t
   
 For more information about Apple's MDM protocol, see [Mobile Device Management Protocol Reference](https://developer.apple.com/business/documentation/MDM-Protocol-Reference.pdf).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

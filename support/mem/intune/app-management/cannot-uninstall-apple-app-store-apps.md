@@ -33,4 +33,4 @@ To work around this issue, follow these steps:
 
 To prevent access to the App Store on supervised devices, see [App Store, Doc Viewing, Gaming](/mem/intune/configuration/device-restrictions-ios#app-store-doc-viewing-gaming).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

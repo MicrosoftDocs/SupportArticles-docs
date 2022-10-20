@@ -273,7 +273,17 @@
         "dynamics-365/supply-chain/rebates/**.*": "d365-scm-rebate",
         "dynamics-365/supply-chain/sales/**.*": "d365-scm-sales-order",
         "dynamics-365/supply-chain/transportation/**.*": "d365-scm-transportation-manage",
-        "dynamics-365/supply-chain/warehousing/**.*": "d365-scm-warehouse"
+        "dynamics-365/supply-chain/warehousing/**.*": "d365-scm-warehouse",
+        "mem/intune/app-management/*.md": "intune-app-management",
+        "mem/intune/app-protection-policies/*.md": "intune-app-protection-policies",
+        "mem/intune/certificates/*.md": "intune-certificates",
+        "mem/intune/comanage-configmgr/*.md": "intune-comanage-configmgr",
+        "mem/intune/device-configuration/*.md": "intune-device-configuration",
+        "mem/intune/device-enrollment/*.md": "intune-device-enrollment",
+        "mem/intune/device-management/*.md": "intune-device-management",
+        "mem/intune/device-protection/*.md": "intune-device-protection",
+        "mem/intune/general/*.md": "intune-general",
+        "mem/intune/get-support/*.md": "intune-get"
       },
       "titleSuffix": {
         "developer/biztalk/**/*.md": "BizTalk Server",

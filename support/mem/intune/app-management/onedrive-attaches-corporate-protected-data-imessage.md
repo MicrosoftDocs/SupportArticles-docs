@@ -33,4 +33,4 @@ OneDrive continues to protect corporate data when it is managed. The recipient i
 > [!NOTE]
 > This applies to all file types that are managed (links that are made to resemble real files). A file shows a thumbnail only if it is originating from an unmanaged or consumer account.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

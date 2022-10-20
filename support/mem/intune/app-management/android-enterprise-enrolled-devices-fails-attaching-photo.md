@@ -31,4 +31,4 @@ Then navigate to the application, and click the **Attach** icon to attach photos
 > [!NOTE]
 > Each app has a different attaching process. For example, when configuring it through Outlook, select the **three horizontal lines** menu in the top left and then select **more**. Then, an option is provided for you to select photos to attach.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
