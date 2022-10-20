@@ -4,7 +4,7 @@
 title: Voucher isn't generated
 description: This article provides troubleshooting information that can help when a voucher should be generated but isn't.
 author: qire
-ms.date: 104/03/2022
+ms.date: 10/03/2022
 ms.topic: article
 ms.prod: 
 ms.technology: 
