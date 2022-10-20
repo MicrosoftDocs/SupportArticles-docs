@@ -1,6 +1,6 @@
 ---
 title: Error 0x8004de80 or 0x8004de86 when signing in to OneDrive
-description: Fixes an issue in which you can't sign in to OneDrive and you receive Stop error code 0x8004de80 or 0x8004de86.
+description: Fixes an issue in which you can't sign in to OneDrive and you receive error code 0x8004de80 or 0x8004de86.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -18,11 +18,11 @@ search.appverid:
 ms.date: 10/17/2022
 ---
 
-# Stop error 0x8004de80 or 0x8004de86 when signing in to OneDrive
+# Error 0x8004de80 or 0x8004de86 when signing in to OneDrive
 
 ## Symptoms
 
-When you try to sign in to Microsoft OneDrive, you can't sign in, and you receive Stop error code 0x8004de80 or 0x8004de86.
+When you try to sign in to Microsoft OneDrive, you can't sign in, and you receive error code 0x8004de80 or 0x8004de86.
 
 ## Cause  
 
