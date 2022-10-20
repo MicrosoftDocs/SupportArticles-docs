@@ -11,7 +11,7 @@ This article solves the error message that occurs when you try to wrap a line of
 
 ## Symptoms
 
-When you wrap a LOB app by using the Microsoft Intune App Wrapping Tool for Android, the tool crashes, and you receive an error message that resembles the following:
+When you wrap a LOB app by using the Microsoft Intune App Wrapping Tool for Android, the tool crashes, and you receive an error message that resembles as follows:
 
 > DBG [APKTool] Finish encoding directory into APK file:\<path of .apk>  
 > WRN Verbose logs can be found at: \<path of .apk logfile>.  
