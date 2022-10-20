@@ -44,7 +44,7 @@ In the following examples, Google Calendar successfully adds a reminder. Google 
 
 If a reminder isn't set in a Google Calendar invitation that you receive in Outlook, you can set a reminder manually in Outlook.
 
-## More Information
+## More information
 
 To check for an event reminder in an invitation ICS file, open the ICS file in a text editor and look for a [VALARM](https://www.rfc-editor.org/rfc/rfc9074.html#section-7.2) entry. Google Calendar event invitations that have no reminder have no ICS VALARM entry. The following example VALARM entry specifies a 30&ndash;minute reminder:
 
