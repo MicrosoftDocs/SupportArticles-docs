@@ -24,7 +24,7 @@ The following Windows Server releases are supported for AMD EPYC 9004 Series pro
 
 ## AMD EPYC Processor SKU support
 
-AMD offers a wide range of AMD EPYC 9004 Series Processors. You can determine the specific processor model SKUs in [AMD EPYC 9004 Series Processors](http://www.amd.com/en/processors/epyc-9004-series).
+AMD offers a wide range of AMD EPYC 9004 Series Processors. You can determine the specific processor model SKUs in [AMD EPYC 9004 Series Processors](https://www.amd.com/en/processors/epyc-9004-series).
 
 ## Install Windows Server on a computer that uses AMD EPYC 9004 Series processors
 
