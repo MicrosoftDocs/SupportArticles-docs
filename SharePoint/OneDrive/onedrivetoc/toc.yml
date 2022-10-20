@@ -67,6 +67,8 @@
       href: ../sync/onedrive-local-folder-name-not-updated.md
     - name: Sign into OneDrive error 0x8004dec5
       href: ../sync/sign-into-onedrive-error-0x8004dec5.md
+    - name: Sign into OneDrive error 0x8004de80 or 0x8004de86
+      href: ../sync/sign-into-onedrive-error-0x8004de80-or-0x8004de86.md
     - name: Sign into OneDrive error 0x8004def4
       href: ../sync/sign-into-onedrive-error-0x8004def4.md
     - name: Sign into OneDrive error 0x8004def7
