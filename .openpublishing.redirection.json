@@ -2699,6 +2699,656 @@
       "source_path": "support/developer/visualstudio/silverlight/update-available.md",
       "redirect_url": "/previous-versions/troubleshoot/visualstudio/silverlight/update-available",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "support/mem/intune/app-management.yml",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-install-error-codes.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-install-error-codes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-win32-app-install.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-win32-app-install",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/app-installation-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/app-installation-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-appear-unavailable.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-appear-unavailable",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/develop-deliver-working-win32-app-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/develop-deliver-working-win32-app-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/corporate-data-unsaved-in-wip-allowed-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/corporate-data-unsaved-in-wip-allowed-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-uninstall-apple-app-store-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-uninstall-apple-app-store-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/onedrive-attaches-corporate-protected-data-imessage.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/onedrive-attaches-corporate-protected-data-imessage",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mismatch-error-configuration-value-ampersand.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/mismatch-error-configuration-value-ampersand",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/saving-images-locally-not-restricted.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/saving-images-locally-not-restricted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/macos-lob-apps-not-deployed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/macos-lob-apps-not-deployed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x87d13ba2-deploy-macos-lob-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/error-0x87d13ba2-deploy-macos-lob-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-install-macos-apps-and-run-shell-scripts.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/cannot-install-macos-apps-and-run-shell-scripts",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/application-could-not-be-wrapped.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/application-could-not-be-wrapped",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/removed-data-associated-with-app-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/removed-data-associated-with-app-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/discovered-apps-list-personal-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/discovered-apps-list-personal-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/android-enterprise-enrolled-devices-fails-attaching-photo.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/android-enterprise-enrolled-devices-fails-attaching-photo",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/creating-message-action-not-allowed.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/creating-message-action-not-allowed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-google-apps.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/troubleshoot-google-apps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/invalid-address-open-web-app.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/invalid-address-open-web-app",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/managed-browser-policy-triggers-error-0x87d1fde8.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/managed-browser-policy-triggers-error-0x87d1fde8",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/only-one-app-policy-applied-edge-managed-browser.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/only-one-app-policy-applied-edge-managed-browser",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/save-application-failed-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/save-application-failed-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apps-fail-sync-to-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-management/apps-fail-sync-to-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-app-protection-policy-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-app-protection-policy-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-mam.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-mam",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-data-transfer.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/troubleshoot-data-transfer",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/data-transfer-scenarios.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/data-transfer-scenarios",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-prompt-for-fingerprint-identity.md",
+      "redirect_url": "/troubleshoot/mem/intune/app-protection-policies/no-prompt-for-fingerprint-identity",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-profile-deployment.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-profile-deployment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-delivery.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-delivery",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-assign-scep-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/cannot-assign-scep-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-scep-failure-no-getcacaps.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ios-scep-failure-no-getcacaps",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/certificateregistrationsvc-verify-request-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/certificateregistrationsvc-verify-request-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-receive-scep-certificates-error-0x80094800.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/devices-receive-scep-certificates-error-0x80094800",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-deployment-to-win10-devices-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-deployment-to-win10-devices-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-0x80090014-installing-ndes-certificate.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/error-0x80090014-installing-ndes-certificate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/fix-connectivity-issues.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/fix-connectivity-issues",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/scep-certificate-request-fails.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/scep-certificate-request-fails",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-device-to-ndes.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-device-to-ndes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-ndes-policy-module.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-ndes-policy-module",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-scep-certificate-reporting.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-scep-certificate-reporting",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/verify-ndes-configuration.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/verify-ndes-configuration",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-pkcs-certificate-profile.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-pkcs-certificate-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-certificate-connector-events.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-certificate-connector-events",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/connector-setup-wizard-ends-prematurely.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/connector-setup-wizard-ends-prematurely",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ndes-connector-signin-error-80004003.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/ndes-connector-signin-error-80004003",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-for-ad-not-appear.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-for-ad-not-appear",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-connector-signin-unexpected-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/certificates/intune-connector-signin-unexpected-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-auto-enrolling.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-auto-enrolling",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-bootstrap.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-bootstrap",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-co-management-workloads.md",
+      "redirect_url": "/troubleshoot/mem/intune/comanage-configmgr/troubleshoot-co-management-workloads",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-policies-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-policies-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-email-profiles-in-microsoft-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-email-profiles-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-wi-fi-profiles.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-wi-fi-profiles",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/password-expiration-setting-not-working.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/password-expiration-setting-not-working",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-csp-custom-settings.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/troubleshoot-csp-custom-settings",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/deploy-oma-uris-to-target-csp-via-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/deploy-oma-uris-to-target-csp-via-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-configuration-profile-reports-error-2016281112.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/device-configuration-profile-reports-error-2016281112",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/enterprise-mode-site-list-not-deployed-win10.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/enterprise-mode-site-list-not-deployed-win10",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/users-cannot-logon-windows-multi-app-kiosk.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/users-cannot-logon-windows-multi-app-kiosk",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-feature-updates-never-offered.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/windows-feature-updates-never-offered",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/2016341112-ios-device-is-currently-busy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/restriction-policy-not-blocking-personal-hotspot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/restriction-policy-not-blocking-personal-hotspot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-password-prompt-after-password-change.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/no-password-prompt-after-password-change",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/factory-reset-protection-emails-not-enforced.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/factory-reset-protection-emails-not-enforced",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/sip-address-password-not-saved.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/sip-address-password-not-saved",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/assign-password-setting-android-fully-managed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-configuration/assign-password-setting-android-fully-managed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-enrollment-in-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-device-enrollment-in-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-update-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-update-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/devices-enroll-canceled-intune-subscription.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/devices-enroll-canceled-intune-subscription",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-android-certificates.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-android-certificates",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-ownership-changed-to-corporate.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-ownership-changed-to-corporate",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/configure-android-enterprise-devices-intune.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/configure-android-enterprise-devices-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-ios-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/ios-devices-inactive.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/ios-devices-inactive",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/device-stuck-in-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/device-stuck-in-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/profile-installation-failed.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/profile-installation-failed",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/apple-dep-device-fails-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/apple-dep-device-fails-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/dep-enrollment-xpc-type-error.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/dep-enrollment-xpc-type-error",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-macos-vm-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-macos-vm-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/keychain-error-enrolling-macos-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/keychain-error-enrolling-macos-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/understand-troubleshoot-esp.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/understand-troubleshoot-esp",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/azure-ad-device-registration-autopilot.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/azure-ad-device-registration-autopilot",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/import-windows-autopilot-device-csv-files-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/import-windows-autopilot-device-csv-files-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-delete-autopilot-deployment-profile.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/cannot-delete-autopilot-deployment-profile",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-enrollment-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-user-cannot-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-user-cannot-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-work-school.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-work-school",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-windows-auto-enrollment.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-auto-enrollment",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows10-enroll-error-80180002b.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows10-enroll-error-80180002b",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/no-permission-to-enroll-windows-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/no-permission-to-enroll-windows-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/mdm-enrollment-error-0xcaa9001f.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/mdm-enrollment-error-0xcaa9001f",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-sysprep-windows-10-device-enrolled-mdm.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/troubleshoot-sysprep-windows-10-device-enrolled-mdm",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/windows-failed-to-apply-mdm-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-enrollment/windows-failed-to-apply-mdm-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-device-actions.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/troubleshoot-device-actions",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remove-duplicate-mobile-device-management.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remove-duplicate-mobile-device-management",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/orphaned-device-upn-shown-as-none.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/orphaned-device-upn-shown-as-none",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/help-desk-operator-fails-remote-tasks.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/help-desk-operator-fails-remote-tasks",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-managed-ios-device-backup-encrypted.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/intune-managed-ios-device-backup-encrypted",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/remotewipe-fails-sending-dowipe-command.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/remotewipe-fails-sending-dowipe-command",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-sync-windows-10-devices.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-management/cannot-sync-windows-10-devices",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-conditional-access.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-conditional-access",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-exchange-connector-common-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-exchange-connector-common-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/could-not-retrieve-access-token.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/could-not-retrieve-access-token",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-jamf.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-jamf",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/unable-to-connect-send-inventory-information.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/unable-to-connect-send-inventory-information",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-policies.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-policies",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-bitlocker-admin-center.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/troubleshoot-bitlocker-admin-center",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/bitlocker-encrypted-device-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/bitlocker-encrypted-device-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/secure-boot-enabled-device-shows-not-compliant.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/secure-boot-enabled-device-shows-not-compliant",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/win10-devices-show-incorrect-compliance-status.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/win10-devices-show-incorrect-compliance-status",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-access-company-resources-on-dep.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/cannot-access-company-resources-on-dep",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-deploying-password-policy.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/error-deploying-password-policy",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-licensed-users-prompted-to-enroll.md",
+      "redirect_url": "/troubleshoot/mem/intune/device-protection/intune-licensed-users-prompted-to-enroll",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/intune-synced-attributes-list.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/intune-synced-attributes-list",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-company-resource-access-problems.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-company-resource-access-problems",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intunexxx.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-endpoint-protection-in-microsoft-intune",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/script-error-intune-setup.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/script-error-intune-setup",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/error-query-intune-data-warehouse.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/error-query-intune-data-warehouse",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/403-error-graph-explorer-query.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/403-error-graph-explorer-query",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/nac-integration-errors.md",
+      "redirect_url": "/troubleshoot/mem/intune/general/nac-integration-errors",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/before-you-call-intune-support.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/before-you-call-intune-support",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/cannot-load-help-and-support-blade.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/cannot-load-help-and-support-blade",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "support/mem/intune/troubleshooting-blade-fails-loading.md",
+      "redirect_url": "/troubleshoot/mem/intune/get-support/troubleshooting-blade-fails-loading",
+      "redirect_document_id": true
     }
   ]
 }
