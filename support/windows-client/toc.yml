@@ -824,6 +824,8 @@
       href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Printing from Modern App creates large spool file
       href: ./printing/print-modern-app-creates-large-file.md
+    - name: Windows 11 RPC connection updates for print
+      href: ./printing/windows-11-rpc-connection-updates-for-print.md
   - name: 'Management and Configuration: Installing Print drivers'
     items:
     - name: Error message 0x0000052e when you try to install a network printer
