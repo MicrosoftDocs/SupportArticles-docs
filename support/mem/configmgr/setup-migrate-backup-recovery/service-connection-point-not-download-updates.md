@@ -26,7 +26,7 @@ The service connection point uses the Intune service when it connects to [http:/
 
 ## Resolution
 
-This is a known issue for Intune, as documented in [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../intune/fix-connectivity-issues.md). However, this update is no longer displayed on the Microsoft Update Catalog.
+This is a known issue for Intune, as documented in [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../../intune/certificates/fix-connectivity-issues.md). However, this update is no longer displayed on the Microsoft Update Catalog.
 
 As a workaround, you can export the certificate from the certificate authority in your environment.
 
@@ -51,4 +51,4 @@ You should now see an entry for Baltimore CyberTrust Root under **Trusted Root C
 
 The Intune Connector experiences connectivity issues if the Baltimore CyberTrust Root certificate is not installed, is expired, or is corrupted on the computer that's using Intune.
 
-For more information about this issue, see [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../intune/fix-connectivity-issues.md).
+For more information about this issue, see [Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed](../../intune/certificates/fix-connectivity-issues.md).

@@ -65,4 +65,4 @@ By default, the client health dashboard displays the health information of clien
 
 [MMS: ConfigMgr State and Status Messages](https://mms2014.sched.com/event/Z78Zmr/configmgr-state-and-status-messages-under-the-hood)
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

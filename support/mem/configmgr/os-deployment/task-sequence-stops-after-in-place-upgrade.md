@@ -56,4 +56,4 @@ For more information about how to import task sequences, see [Process to import 
 > [!IMPORTANT]
 > These steps only prevent the issue on devices going forward. These steps don't fix any devices that have experienced this issue. For devices that have experienced this issue, we recommend that you completely reimage the device to fix the WMI corruption.
 
-[!INCLUDE [Virus scan claim](../../includes/virus-scan-claim.md)]
+[!INCLUDE [Virus scan claim](../../../includes/virus-scan-claim.md)]

@@ -15,8 +15,8 @@ _Original KB number:_ &nbsp; 4508653
 
 Consider the following scenario:
 
-- You configure a remote content library for the site server on another server in the same domain, *CONTOSO.COM*.
-- You have a remote site system server as a DP that's in an untrusted domain, *FABRIKAM.COM*.
+- You configure a remote content library for the site server on another server in the same domain, _CONTOSO.COM_.
+- You have a remote site system server as a DP that's in an untrusted domain, _FABRIKAM.COM_.
 - You select the **Use another account for installing this site system** option for the remote site system, and you specify an account that has local administrative rights on that server.
 
 In this scenario, distributing packages to the remote DP fails, and you receive the following error messages in the PkgXferMgr.log file on the site server:
@@ -64,4 +64,4 @@ To work around this issue, follow these steps:
 
 This action enables pass-through authentication to work around the distribution failure that occurs because Configuration Manager incorrectly uses the **Site System Installation Account**.
 
-If you notice error entries for Microsoft SQL Server authentication in the DistMgr.log file, follow the steps in [Site system installation account is incorrectly used for a remote site system to connect to SQL Server database](site-system-installation-account-used-for-db-connection.md) to work around the issue.
+If you notice error entries for Microsoft SQL Server authentication in the DistMgr.log file, follow the steps in [Site system installation account is incorrectly used for a remote site system to connect to SQL Server database](../setup-migrate-backup-recovery/site-system-installation-account-used-for-db-connection.md) to work around the issue.

@@ -37,4 +37,4 @@ For more information about the endorsed Linux distributions for Azure Virtual Ma
 
 For more information about supported Microsoft server software in the Azure Virtual Machine environment, see [Microsoft server software support for Microsoft Azure Virtual Machines](https://support.microsoft.com/help/2721672).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

@@ -22,8 +22,8 @@ This behavior occurs if Internet Information Services (IIS) client authenticatio
 
 ## Resolution
 
-To resolve this issue, update the **Trusted Root Certification Authorities** list on the **Client Computer Communication** tab in the **Site Properties** dialog box to include the issuer of the public key infrastructure (PKI) certificate. System Center 2012 Configuration Manager SP1 uses this list of trusted certificate authorities as the basis for its trusted issuer list. For example, if Mac clients have PKI certificates that are issued by the corporate root *CA1*, add or import *CA1* to the list as one of the trusted issuers.
+To resolve this issue, update the **Trusted Root Certification Authorities** list on the **Client Computer Communication** tab in the **Site Properties** dialog box to include the issuer of the public key infrastructure (PKI) certificate. System Center 2012 Configuration Manager SP1 uses this list of trusted certificate authorities as the basis for its trusted issuer list. For example, if Mac clients have PKI certificates that are issued by the corporate root _CA1_, add or import _CA1_ to the list as one of the trusted issuers.
 
 This issue is also documented at [Planning for Security in Configuration Manager](/previous-versions/system-center/system-center-2012-R2/gg712284(v=technet.10)?redirectedfrom=MSDN).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]

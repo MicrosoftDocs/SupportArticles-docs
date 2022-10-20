@@ -160,7 +160,7 @@ The most common issues that occur during this phase are driver-related. Overall,
 - Import only the drivers that you need for the boot image.
 - Consider adding only NIC or mass storage drivers. Other drivers aren't required.
 
-The SMSTS.log file (located in \<*SystemDrive*>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you don't see a log entry that has a valid IP address and resembles the following entry, you're probably experiencing a driver issue:
+The SMSTS.log file (located in \<_SystemDrive_>:\Windows\temp\SMSTS) is the most useful resource to troubleshoot these issues. (Remember to enable the command prompt during startup so that you can examine this file.) If you don't see a log entry that has a valid IP address and resembles the following entry, you're probably experiencing a driver issue:
 
 ```output
 SMSTS.log  
@@ -210,6 +210,6 @@ You can try the following troubleshooting steps:
 
 For more help to resolve this issue, see our [TechNet support forum](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd&filter=alltypes&sort=lastpostdesc) or [contact Microsoft Support](https://support.microsoft.com/).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]

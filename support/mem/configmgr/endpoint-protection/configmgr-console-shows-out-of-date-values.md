@@ -47,7 +47,7 @@ Register-CimProvider -ProviderName ProtectionManagement -Namespace root\Microsof
 ```
 
 > [!NOTE]
-> In this command, \<*path of ProtectionManagement.dll*> is the placeholder for the path of ProtectionManagement.dll. For example:  
+> In this command, \<_path of ProtectionManagement.dll_> is the placeholder for the path of ProtectionManagement.dll. For example:  
 C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.1907.4-0\ProtectionManagement.dll
 
 After you run this command, the following conditions are true:
@@ -64,4 +64,4 @@ Windows Defender logs can help you identify the root cause of this issue. For ex
 
 To collect diagnostic logs for Windows Defender, follow the steps in [Collect Update Compliance diagnostic data for Windows Defender AV Assessment](/windows/security/threat-protection/windows-defender-antivirus/collect-diagnostic-data-update-compliance).
 
-[!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party disclaimer](../../../includes/third-party-disclaimer.md)]

@@ -124,7 +124,7 @@ To troubleshoot web service issues, follow these steps:
 
 If you're using SSL, verify the following settings:
 
-- Verify that the certificate configured for the WSUS website is configured with the correct FQDN. If the certificate doesn't have the correct FQDN, see [Add a subject alternative name to a secure LDAP certificate](../../windows-server/windows-security/add-san-to-secure-ldap-certificate.md).
+- Verify that the certificate configured for the WSUS website is configured with the correct FQDN. If the certificate doesn't have the correct FQDN, see [Add a subject alternative name to a secure LDAP certificate](../../../windows-server/windows-security/add-san-to-secure-ldap-certificate.md).
 - Verify that the certificate hasn't expired.
 - Verify that WSUS is correctly configured for SSL. For more information, see [Check SSL configuration](troubleshoot-software-update-scan-failures.md#check-ssl-configuration).
 
@@ -132,7 +132,7 @@ If you're using SSL, verify the following settings:
 
 Synchronization issues can often be traced back to issues relating to the End User Licensing Agreement (EULA). To verify whether it's your issue, follow these steps:
 
-1. Review the SoftwareDistribution.log file on the WSUS server to find out why the EULAs aren't getting downloaded. Look for *.txt* in the log to find relevant entries.
+1. Review the SoftwareDistribution.log file on the WSUS server to find out why the EULAs aren't getting downloaded. Look for `.txt` in the log to find relevant entries.
 2. Verify that the firewall is configured to allow communication with Microsoft Update. For more information, see [Connection from the WSUS server to the Internet](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#211-connection-from-the-wsus-server-to-the-internet).
 3. Verify the [proxy server settings](software-update-point-installation-configuration.md#configure-proxy-setting-for-the-software-update-point).
 4. Run the following command from a Command Prompt to have WSUS download the missing content again, including EULAs:

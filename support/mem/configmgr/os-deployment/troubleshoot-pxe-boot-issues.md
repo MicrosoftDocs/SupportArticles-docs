@@ -94,6 +94,6 @@ For more help with troubleshooting PXE boot issues, see [Advanced troubleshootin
 
 For more help to resolve this issue, see our [TechNet support forum](https://social.technet.microsoft.com/Forums/home?forum=configmanagerosd&filter=alltypes&sort=lastpostdesc) or [contact Microsoft Support](https://support.microsoft.com/).
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
+[!INCLUDE [Third-party information disclaimer](../../../includes/third-party-disclaimer.md)]
 
-[!INCLUDE [Third-party contact disclaimer](../../includes/third-party-contact-disclaimer.md)]
+[!INCLUDE [Third-party contact disclaimer](../../../includes/third-party-contact-disclaimer.md)]
