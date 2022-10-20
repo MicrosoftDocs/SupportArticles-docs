@@ -49,4 +49,4 @@ These articles will walk you through the resources you need to troubleshoot Wind
 - [Advanced troubleshooting for Windows boot problems](./windows-boot-issues-troubleshooting.md)
 - [Advanced troubleshooting for Stop error or blue screen error](./stop-error-or-blue-screen-error-troubleshooting.md)
 - [Advanced troubleshooting for Windows-based computer freeze issues](./windows-based-computer-freeze-troubleshooting.md)
-- [Stop error occurs when you update the in-box Broadcom network adapter driver](troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Stop error occurs when you update the in-box Broadcom network adapter driver](stop-error-broadcom-network-driver-update.md)
