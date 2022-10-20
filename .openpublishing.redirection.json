@@ -2931,7 +2931,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/mem/intune/troubleshoot-pkcs-certificate-profile.md",
+      "source_path": "support/mem/intune/troubleshoot-pkcs-certificate-profiles.md",
       "redirect_url": "/troubleshoot/mem/intune/certificates/troubleshoot-pkcs-certificate-profiles",
       "redirect_document_id": true
     },
@@ -3311,7 +3311,7 @@
       "redirect_document_id": true
     },
     {
-      "source_path": "support/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intunexxx.md",
+      "source_path": "support/mem/intune/troubleshoot-endpoint-protection-in-microsoft-intune.md",
       "redirect_url": "/troubleshoot/mem/intune/general/troubleshoot-endpoint-protection-in-microsoft-intune",
       "redirect_document_id": true
     },
