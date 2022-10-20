@@ -69,12 +69,6 @@ This article lists the known issues for the Microsoft Teams Rooms app when it's 
 | Signed out of Teams on Android devices | Teams Rooms on Android, Teams phone devices, Teams panels, and Teams displays are signed out of Teams automatically. | Follow the instructions provided in [Signed out of Teams on Android devices](./signed-out-of-teams-android-devices.md).|
 | Can't resume a call after using **Consult first** option on Teams phones | After using the **Consult first** option in the **Transfer** menu when you select the **Resume** option to resume the call, the call fails. | No workaround is available at this time.|
 
-### Issues with Teams peripherals
-
-| Issue  |  Description | Workaround |
-| --- | --- | --- |
-|The dial pad on Yealink MP50 USB phones doesn't work.|The dial pad on Yealink MP50 USB phones intermittently stops accepting input.|When the issue occurs, use the Teams desktop client instead.
-
 ## Limitations
 
 - Front row requires 1920 × 1080 resolution for a 16:9 display or 2560 × 1080 resolution for a 21:9 display. These displays are set to 100 percent scaling. If the chat panel on your front-of-room display shows unreadable UI, see [Change scale and resolution for front-of-room](/microsoftteams/rooms/rooms-operations#scale-and-resolution) to adjust your display settings.
