@@ -15,16 +15,16 @@ You [add a macOS line-of-business (LOB) app to Microsoft Intune](/mem/intune/app
 
 ## Cause
 
-The issue occurs if your .pkg package doesn't contain the following information in its package info file:
+The issue occurs if your `.pkg` package doesn't contain the following information in the package info file:
 
 - The package `version` and `CFBundleVersion` strings
 - The correct `install-location`
 
 This information is required so that Intune can deploy the app on targeted devices.
 
-Use the following steps to check whether your .pkg package contains the required information.
+Use the following steps to check whether your `.pkg` package contains the required information.
 
-1. Run the following command to extract the pkg-info file from your .pkg package:
+1. Run the following command to extract the pkg-info file from your `.pkg` package:
 
     `xar -x -f <.pkg file path> -C <Output folder>`
 
@@ -35,11 +35,11 @@ Use the following steps to check whether your .pkg package contains the required
 
 ## Solution
 
-To fix the issue, contact your app developer to rebuild the .pkg package to include the required information. For Apple-specific developer documentation, see [https://developer.apple.com/](https://developer.apple.com/).
+To fix the issue, contact your app developer to rebuild the `.pkg` package to include the required information. For Apple-specific developer documentation, see [https://developer.apple.com/](https://developer.apple.com/).
 
 ## More information
 
-Currently, support for macOS app deployment is limited to simple .pkg apps that are installed in the **/Applications** folder and [Office 365 apps for macOS](/mem/intune/apps/apps-add-office365-macOS).
+Currently, support for macOS app deployment is limited to simple `.pkg` apps that are installed in the **/Applications** folder and [Office 365 apps for macOS](/mem/intune/apps/apps-add-office365-macOS).
 
 [!INCLUDE [Third-party disclaimer](../../includes/third-party-disclaimer.md)]
 
