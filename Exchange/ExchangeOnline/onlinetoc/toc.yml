@@ -105,8 +105,6 @@
           href: ../administration/outlook-cannot-connect-via-proxy-set-by-pac.md
         - name: POP/IMAP client authenticate fails
           href: ../administration/pop-imap-auth-fails-if-x-ms-client-application-is-microsoft-exchange-popimap.md
-        - name: Proxy address is already being used
-          href: ../administration/proxy-address-being-used.md
         - name: Repeated calls against the same folder are slow
           href: ../administration/slow-repeated-calls-against-same-folder.md
         - name: Self-help diagnostics
@@ -203,8 +201,8 @@
           href: ../development/pox-autodiscover-not-supported-oauth-client-credentials-grant.md
     - name: Email Alias
       items:
-        - name: Proxy address conflict when adding an email address in Exchange Online
-          href: ../email-alias/proxy-address-conflict-when-adding-email-address.md
+        - name: Proxy address conflict when adding an email address
+          href: ../email-alias/proxy-address-being-used.md
         - name: Recipient's address isn't autocompleted or suggested
           href: ../email-alias/address-not-autocompleted-or-suggested.md
         - name: Remove an alias from a contact
