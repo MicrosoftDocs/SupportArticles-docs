@@ -67,11 +67,15 @@
       },
       "author": {
         "**/*.md": "ramakoni1",
-        "azure/active-directory/*.md": "genlin",
-        "azure/cloud-services/*.md": "genlin",
-        "azure/virtual-machines/*.md": "genlin",
+        "azure/**/*.md": "genlin",
+        "azure/devops/**/*.md": "HaiyingYu",       
         "azure/synapse-analytics/**/*.md": "HaiyingYu",
         "developer/**/*.md": "HaiyingYu",
+        "sql/**/*.md": "HaiyingYu",
+        "windows/win32/**/*.md": "HaiyingYu",
+        "windows-hardware/drivers/**/*.md": "HaiyingYu",
+        "windows-client/**/*.md": "Deland-Han",
+        "windows-server/**/*.md": "Deland-Han",
         "mem/**/*.md": "helenclu",
         "system-center/**/*.md": "helenclu",
         "dynamics-365/**/*.md": "David-Pack",
@@ -90,11 +94,15 @@
       },
       "ms.author": {
         "**/*.md": "ramakoni",
-        "azure/active-directory/*.md": "genli",
-        "azure/cloud-services/*.md": "genli",
-        "azure/virtual-machines/*.md": "genli",
+        "azure/**/*.md": "genli",
+        "azure/devops/**/*.md": "haiyingyu",       
         "azure/synapse-analytics/**/*.md": "haiyingyu",
         "developer/**/*.md": "haiyingyu",
+        "sql/**/*.md": "haiyingyu",
+        "windows/win32/**/*.md": "haiyingyu",
+        "windows-hardware/drivers/**/*.md": "haiyingyu",
+        "windows-client/**/*.md": "delhan",
+        "windows-server/**/*.md": "delhan",
         "mem/**/*.md": "luche",
         "system-center/**/*.md": "luche",
         "dynamics-365/**/*.md": "davidpac",
@@ -113,11 +121,6 @@
       },
       "ms.localizationpriority": {
         "**/*.md": "medium"
-      },
-      "ms.reviewer": {
-        "**/*.md": "DEV_Triage, DaleChe, RamaKoni, DelHan, SureshKa, SueHar",
-        "mem/**/*.md": "",
-        "system-center/**/*.md": ""
       },
       "ms.topic": {
         "**/*.md": "troubleshooting"
