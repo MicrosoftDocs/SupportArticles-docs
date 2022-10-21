@@ -106,12 +106,17 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 > [!NOTE]
 > The **connection issues** scenario doesn't support Linux or Container-based apps yet.
 
-**Connection issues** - It will check the status of the virtual network integration, including checking if the Private IP has been assigned to all instances of the App Service Plan and the DNS settings. If a custom DNS isn't configured, default Azure DNS will be applied.
+**Connection issues** - It will check the status of the virtual network integration, including checking if the Private IP has been assigned to all instances of the App Service Plan and the DNS settings. If a custom DNS isn't configured, default Azure DNS will be applied. You can also run tests against a specific endpoint that you want to test connectivity to.
+
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/conntection-issue.png" alt-text="Screenshot that shows run troubleshooter for connection issues.":::
 
 **Configuration issues** - This troubleshooter will check if your subnet is valid for virtual network Integration.
 
-**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that 
-might be blocking the deletion of the VNet/subnet.
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/configuration-issue.png" alt-text="Screenshot that shows how to run  troubleshooter for configuration issues in the Azure portal.":::
+
+**Subnet/VNet deletion issue** - This troubleshooter will check if your subnet has any locks and if it has any unused Service Association Links that might be blocking the deletion of the VNet/subnet.
+
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/deletion-issue.png" alt-text="Screenshot that shows how to run troubleshooter for subnet or virtual network deletion issues.":::
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
