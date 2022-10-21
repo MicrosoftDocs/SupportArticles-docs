@@ -45,9 +45,9 @@ The SELinux configuration is managed by the system administrator. The system adm
 
 ## <a id ="solution1"></a>Solution 1: Start VM with SELinux turned off by using serial console
 
-1. Trigger a **_Restart VM (Hard)_** from the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).
-2. Interrupt your VM at the GRUB menu with the `ESC` key.
-3. Press `e` to modify the first kernel entry in the GRUB menu.
+1. Trigger **_Restart VM (Hard)_** from the [Azure serial console](/azure/virtual-machines/linux/serial-console#access-serial-console-for-linux).
+2. Interrupt your VM at the GRUB menu with the <kbd>ESC</kbd> key.
+3. Select <kbd>E</kbd> to modify the first kernel entry in the GRUB menu.
 4. Go to the `linux16` line and add `selinux=0` to disable SELinux temporarily.
 
     :::image type="content" source="media/linux-selinux-troubleshooting/disable-selinux-grub.gif" alt-text="Animated GIF that shows the process of interrupting boot at the GRUB menu level to disable SELinux temporarily.":::
