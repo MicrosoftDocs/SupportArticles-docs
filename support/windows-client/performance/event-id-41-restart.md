@@ -94,7 +94,7 @@ For help when troubleshooting an unresponsive computer, see [Windows Help](https
 This scenario includes the following circumstances:
 
 - You shut off power to an unresponsive computer, and then you restart the computer.  
-   To verify that a computer is unresponsive, press the Caps lock key on the keyboard. If the Caps lock light on the keyboard doesn't change when you press the Caps lock key, the computer might be unresponsive (also known as a hard hang).  
+   To verify that a computer is unresponsive, press the <kbd>Caps lock</kbd> key on the keyboard. If the <kbd>Caps lock</kbd> light on the keyboard doesn't change when you press the <kbd>Caps lock</kbd> key, the computer might be unresponsive (also known as a hard hang).  
 - The computer restarts, but it doesn't generate Event ID 41.
 - The computer restarts and generates Event ID 41, but the **BugcheckCode** and **PowerButtonTimestamp** values are zero.
 
