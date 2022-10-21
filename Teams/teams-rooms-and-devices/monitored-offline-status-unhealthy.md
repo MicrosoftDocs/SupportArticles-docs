@@ -48,7 +48,7 @@ If the **Monitored** signal is **Unhealthy**, you can use the Teams Rooms Pro ag
 After the agent test tool finishes, it generates the following items:
 
 - A summary of the tool's results in the PowerShell console. You should review the summary and address any failures that are reported.
-- The following file: *c:\rigel\MTRProAgentTestTool\AgentCheckResults.zip*. This file contains additional information that's required by Microsoft Support during investigation.
+- The following file: *c:\rigel\Downloads\AgentCheckResults.zip*. This file contains additional information that's required by Microsoft Support during investigation.
 
 ### Check whether TPM is enabled
 
