@@ -120,9 +120,4 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]
 
-## Reference
-
-- [Integrate your app with an Azure virtual network](https://github.com/MicrosoftDocs/azure-docs/blob/main/articles/app-service/overview-vnet-integration.md)
-
-
 
