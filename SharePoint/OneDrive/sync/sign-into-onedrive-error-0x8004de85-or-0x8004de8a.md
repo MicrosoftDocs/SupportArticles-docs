@@ -67,4 +67,4 @@ Depending on how your organization purchased OneDrive for users, you may no long
 4. Expand the **Licenses** section, and make sure that a OneDrive for Business license is assigned to the user.
 
 > [!NOTE]
-> If multiple users experience the issue, the subscription may have expired. To check the subscription status, select **Billing** > **Your products** in the Microsoft 365 admin center.
+> If multiple users experience the issue, the subscription may have expired. To check the subscription status, select **Billing** > **Your products** in the [Microsoft 365 admin center](https://admin.microsoft.com/AdminPortal/Home#/subscriptions).
