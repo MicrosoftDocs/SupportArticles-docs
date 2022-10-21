@@ -209,7 +209,7 @@ $requestData = @"
        }
    },
    "ver": 1,
-   "ikey": "$ikey",
+   "iKey": "$ikey",
    "name": "Microsoft.ApplicationInsights.Request",
    "time": "$time",
    "sampleRate": 100,
