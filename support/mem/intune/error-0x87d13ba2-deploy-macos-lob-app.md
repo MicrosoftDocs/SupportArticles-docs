@@ -23,7 +23,7 @@ You publish a macOS LOB app using Intune. When you select the app in the [Micros
 
 Here's an example of Microsoft Teams:
 
-:::image type="content" source="media/error-0x87d13ba2-deploy-macos-lob-app/error-0x87d13ba2.png" alt-text="Screenshot of error 0x87D13BA2 in Microsoft Teams.":::
+![teams](https://user-images.githubusercontent.com/57767769/197227183-dd1c20ab-2a39-4e34-a1f8-6c0f95bf72fd.png)
 
 This problem can occur even if the app is successfully installed on the device.
 
