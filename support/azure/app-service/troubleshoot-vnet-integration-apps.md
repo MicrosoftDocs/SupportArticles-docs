@@ -22,11 +22,13 @@ To do this, use one of the following methods:
 
 ### Check the private IP in Kudu Debug console
 
-To access the Kudu console, select the app service in the Azure portal, go to **Development Tools**, select **Advanced Tools**, and then select **Go**. In the Kudu service page, select **Tools** > **Debug Console** > **CMD**. You can also go to the Kudu Debug console directly by the url `[sitename].scm.azurewebsites.net/DebugConsole’.
+To access the Kudu console, select the app service in the Azure portal, go to **Development Tools**, select **Advanced Tools**, and then select **Go**. In the Kudu service page, select **Tools** > **Debug Console** > **CMD**. 
 
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-kudu.png" alt-text="Image that shows how to open Kudu service page in the Azure portal.":::
 
-Run one of the following commands:
+You can also go to the Kudu Debug console directly by the url `[sitename].scm.azurewebsites.net/DebugConsole`.
+
+In the Debug console, run one of the following commands:
 
 **Windows OS based apps**
 
