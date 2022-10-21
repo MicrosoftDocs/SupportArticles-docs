@@ -16,7 +16,7 @@ This article describes tools you can use to troubleshoot connection issues in Az
 
 ## Verify virtual network integration
 
-To troubleshoot the connection issues, you must first to verify whether the virtual network integration is configured correctly and whether the private IP is assigned to all instances of the App Service Plan.
+To troubleshoot the connection issues, you must first verify whether the virtual network integration is configured correctly and whether the private IP is assigned to all instances of the App Service Plan.
 
 To do this, use one of the following methods:
 
@@ -88,7 +88,7 @@ nslookup hostname [optional:DNS Server]
 Depending on the above results, you can check if there's something misconfigured on your DNS server.
 
 > [!NOTE]
-> The nameresolver.exe tool currently doesn't work in Linux Apps.
+> The nameresolver.exe tool currently doesn't work in Linux apps.
 
 To test connectivity, you can use the **Curl** command. The syntax is:
 
@@ -104,7 +104,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 :::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-network-troubleshooter.png" alt-text="Screenshot that shows how to open network troubleshooter in the Azure portal.":::
 
 > [!NOTE]
-> The **connection issues** scenario doesn't support Linux or Container based Apps yet.
+> The **connection issues** scenario doesn't support Linux or Container-based apps yet.
 
 **Connection issues** - It will check the status of the virtual network integration, including checking if the Private IP has been assigned to all instances of the App Service Plan and the DNS settings. If a custom DNS isn't configured, default Azure DNS will be applied.
 
