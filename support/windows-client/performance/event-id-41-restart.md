@@ -8,7 +8,10 @@ author: Teresa-Motiv
 ms.author: dougeby
 manager: dcscontentpm
 ms.technology: windows-client-performance
-ms.custom: sap:blue-screen/bugcheck, csstroubleshoot
+ms.custom: 
+- CI 111437
+- csstroubleshooting
+- sap:blue-screen/bugcheck
 ms.reviewer: kaushika
 audience: itpro
 localization_priority: medium
@@ -91,7 +94,7 @@ For help when troubleshooting an unresponsive computer, see [Windows Help](https
 This scenario includes the following circumstances:
 
 - You shut off power to an unresponsive computer, and then you restart the computer.  
-   To verify that a computer is unresponsive, press the CAPS LOCK key on the keyboard. If the CAPS LOCK light on the keyboard doesn't change when you press the CAPS LOCK key, the computer might be unresponsive (also known as a *hard hang*).  
+   To verify that a computer is unresponsive, press the Caps lock key on the keyboard. If the Caps lock light on the keyboard doesn't change when you press the Caps lock key, the computer might be unresponsive (also known as a hard hang).  
 - The computer restarts, but it doesn't generate Event ID 41.
 - The computer restarts and generates Event ID 41, but the **BugcheckCode** and **PowerButtonTimestamp** values are zero.
 
