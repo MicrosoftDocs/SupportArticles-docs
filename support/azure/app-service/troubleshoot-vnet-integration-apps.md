@@ -16,7 +16,7 @@ This article describes tools that you can use to troubleshoot connection issues 
 
 ## Verify virtual network integration
 
-To troubleshoot the virtual network connection issues, we need to first verify whether the virtual network integration is configured correctly, and whether the private IP has been assigned to all instances of the App Service Plan.
+To troubleshoot the connection issues, you need to first verify whether the virtual network integration is configured correctly, and the private IP is assigned to all instances of the App Service Plan.
 
 To do this, use one of the following methods:
 
@@ -24,7 +24,7 @@ To do this, use one of the following methods:
 
 To access the Kudu console, select the app service in the Azure portal, go to **Development Tools**, select **Advanced Tools**, and then select **Go**. In the Kudu service page, select **Tools** > **Debug Console** > **CMD**. You can also go to the Kudu Debug console directly by the url `[sitename].scm.azurewebsites.net/DebugConsole’.
 
-:::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-kudu.png" alt-text="Image that show how to open Kudu service page in the Azure portal.":::
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-kudu.png" alt-text="Image that shows how to open Kudu service page in the Azure portal.":::
 
 Run one of the following commands:
 
@@ -33,7 +33,7 @@ Run one of the following commands:
 ```console
 SET WEBSITE_PRIVATE_IP
 ```
-If the private IP is assigned successfully, you will get the following output:
+If the private IP is assigned successfully, you'll get the following output:
 
 ```output
 WEBSITE_PRIVATE_IP=<IP address>
@@ -49,7 +49,7 @@ set| egrep --color 'WEBSITE_PRIVATEIP'
 
 Go to Kudu environment at `[sitename].scm.azurewebsites.net/Env` and search for `WEBSITE_PRIVATE_IP`.
 
-Once we have established that the virtual network integration is configured successfully, then we can proceed with connectivity test.
+Once we've established that the virtual network integration is configured successfully, then we can proceed with connectivity test.
 
 ## Troubleshoot outbound connectivity on Windows Apps
 
@@ -83,7 +83,7 @@ To test DNS functionality, you can use the command **nslookup**. The syntax is:
 nslookup hostname [optional:DNS Server]
 ```
 
-Depending on the results of the above, you can check if there is something misconfigured on your DNS server.
+Depending on the results of the above, you can check if there's something misconfigured on your DNS server.
 
 > [!NOTE]
 > The nameresolver.exe tool currently doesn't work in Linux Apps.
@@ -97,14 +97,14 @@ curl hostname:[port]
 
 ## Network troubleshooter
 
-You can also leverage the Network troubleshooter to troubleshoot the connection issues for the apps in the App Service. To open the network troubleshooter, go to the app service in the Azure portal. Select **Diagnostic and solve problem**, and then search for **Network troubleshooter**.
+You can also use the Network troubleshooter to troubleshoot the connection issues for the apps in the App Service. To open the network troubleshooter, go to the app service in the Azure portal. Select **Diagnostic and solve problem**, and then search for **Network troubleshooter**.
 
-:::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-network-troubleshooter.png" alt-text="Image that show how to open network troubleshooter in the Azure portal.":::
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/open-network-troubleshooter.png" alt-text="Image that shows how to open network troubleshooter in the Azure portal.":::
 
 > [!NOTE]
 > The **connection issues** scenario doesn't support Linux or Container based Apps yet.
 
-**Connection issues** - It will check the status of the virtual network integration including check if the Private IP has been assigned to all instances of the App Service Plan, and the DNS settings. If a custom DNS is not configured, default Azure DNS will be applied.
+**Connection issues** - It will check the status of the virtual network integration including check if the Private IP has been assigned to all instances of the App Service Plan, and the DNS settings. If a custom DNS isn't configured, default Azure DNS will be applied.
 
 **Configuration issues** - This troubleshooter will check if your subnet is valid for virtual network Integration.
 
