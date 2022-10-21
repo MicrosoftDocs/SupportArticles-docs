@@ -39,9 +39,9 @@ Complete the steps in this article if after posting tax there are records missin
 ## Check tax configuration
 
 1. Check the posting profile of the expected measure. Select the posting type in the **Debit/Credit** column, and then select **Edit**. 
-2. In the **Posting type** page that openes, check the value in the **Tax accounting provider** field.
+2. In the **Posting type** page that opens, check the value in the **Tax accounting provider** field.
 
- The following is the rule for posting tax transactions and vouchers that are decided by the tax accounting provider. Correct the configuration if it's not working as expected.
+ The following table lists the rule for posting tax transactions and vouchers that are decided by the tax accounting provider. Correct the configuration if it's not working as expected.
 
    |   Tax accounting provider   |   Posting tax transaction   |   Posting voucher   |
    | --------------------------- | --------------------------- | ------------------- |
