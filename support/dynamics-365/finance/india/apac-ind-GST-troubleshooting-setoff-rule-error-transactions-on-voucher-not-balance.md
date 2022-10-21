@@ -42,7 +42,7 @@ When you run a tax settlement, you might receive an error message. Follow the st
 2. Select the setoff rule that is currently used.
 3. On the **Versions** FastTab, select **View** to determine which sales tax hierarchies are used.
 4. Select **Setoff rules for sales tax hierarchies**.
-5. Determine whether the **Recoverable** and **Payable** nodes are selected according to the setoff. If the nodes are not marked as defined, there might be a posting issue. In this case, contact Microsoft. 
+5. Determine whether the **Recoverable** and **Payable** nodes are selected according to the setoff. If the nodes aren't marked as defined, there might be a posting issue. In this case, contact Microsoft. 
 
 ## Determine whether customization exists
 
