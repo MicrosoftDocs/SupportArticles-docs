@@ -39,7 +39,7 @@ A SELinux misconfiguration may result in the OS being unable to load the SELinux
 
 Check the serial console from the Azure portal or through the Azure CLI. The following message appears near the end of the output:
 
-:::image type="content" source="./media/linux-selinux-troubleshooting/error-message.png" alt-text="Screenshot that shows the 'Failed to load SELinux policy' error in the serial console log":::
+:::image type="content" source="./media/linux-selinux-troubleshooting/error-message.png" alt-text="Screenshot that shows the 'Failed to load SELinux policy' error in the serial console log.":::
 
 The SELinux configuration is managed by the system administrator. The system administrator can resolve this issue by using one of the following methods.
 
@@ -56,7 +56,7 @@ The SELinux configuration is managed by the system administrator. The system adm
 
     For example, one common mistake is setting the `SELINUXTYPE` key to one of the values used for the `SELINUX` key. See the following screenshot as an example:
 
-    :::image type="content" source="./media/linux-selinux-troubleshooting/wrong-selinux-configuration.png" alt-text="Screenshot that shows the SELINUXTYPE key is incorrectly set to disabled":::
+    :::image type="content" source="./media/linux-selinux-troubleshooting/wrong-selinux-configuration.png" alt-text="Screenshot that shows the SELINUXTYPE key is incorrectly set to disabled.":::
 
     Notice the last line, `SELINUXTYPE=disabled`. The `SELINUXTYPE` key should be set to `targeted`, `minimum`, or `mls` rather than `disabled`. The following screenshot shows the correct configuration:
 
