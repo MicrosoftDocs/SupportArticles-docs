@@ -247,6 +247,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
    For more information, see [Microsoft Dataverse and the improve data source experience](/power-apps/maker/canvas-apps/use-native-cds-connector#how-do-i-upgrade).
 
+1. **Next link not working for Action based connectors bound to a Gallery or Grid**
+
+   Next links are not yet supported for Action-based connectors in Power Apps.  This means that when you use an action based connector it will retrieve data up to the delegable limit and then stop. To get paging behavior with an Action based connection use a Power Automate flow and bind it to the gallery. 
+
 ## Next steps
 
 If your issue isn't listed in this article, you can [search for more support resources](https://powerapps.microsoft.com/support), or contact [Microsoft support](https://admin.powerplatform.microsoft.com/support). For more information, [Get Help + Support](/power-platform/admin/get-help-support).
