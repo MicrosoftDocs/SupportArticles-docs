@@ -99,6 +99,8 @@
     href: error-accountencryptionkeyunavailable.md
   - name: Access to storage account is denied
     href: access-denied-execute-azure-batch-job.md
+  - name: Batch pool deletion failure
+    href: azure-batch-pool-deletion-failure.md
 
 - name: CycleCloud
   items:

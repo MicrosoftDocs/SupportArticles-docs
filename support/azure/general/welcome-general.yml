@@ -11,7 +11,7 @@ metadata:
   ms.topic: landing-page # Required
   author: genlin  #Required; your GitHub user alias, with correct capitalization.
   ms.author: genli #Required; microsoft alias of author; optional team alias.
-  ms.date: 12/18/2020
+  ms.date: 10/19/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -50,6 +50,8 @@ landingContent:
             url: ./error-accountencryptionkeyunavailable.md
           - text: Access denied when executing Azure Batch jobs
             url: ./access-denied-execute-azure-batch-job.md
+          - text: Batch pool deletion failure
+            url: ./azure-batch-pool-deletion-failure.md
 
 # Card
   - title: Azure Information Protection
