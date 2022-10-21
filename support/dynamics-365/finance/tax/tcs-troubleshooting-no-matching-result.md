@@ -27,7 +27,7 @@ ms.dyn365.ops.version: Version 10.0.21
 
 # No matching result could be found
 
-This article explains the troubleshooting steps that you can take if you receive the erros, "No matching result could be found" in the Tax Calculation service.
+This article explains the troubleshooting steps that you can take if you receive the error, "No matching result could be found" in the Tax Calculation service.
 
 ## Symptom
 
