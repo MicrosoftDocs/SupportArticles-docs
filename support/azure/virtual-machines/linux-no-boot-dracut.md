@@ -86,7 +86,7 @@ The serial console is the fastest method to resolve issues. It allows you to dir
         * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
         * Any obvious typo.
 
-3. After manually modifying the GRUB settings, select <kbd>Ctrl</kbd> + <kbd>X</kbd> to boot the VM.
+3. After manually modifying the GRUB settings, select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
 
     Any modification done at this stage is a non-persistent modification. If the VM is able to boot, resolve this issue in the GRUB configuration file, or it will reoccur.
 
@@ -149,7 +149,7 @@ Validate if the root path `root=/dev/***` in the GRUB configuration file is corr
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, and then look for the `root=` parameter and fix it.
-    3. Select <kbd>Ctrl</kbd> + <kbd>X</kbd> to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots, modify the `/etc/default/grub` file, fix the `root` parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 During this validation, make sure the following things:
@@ -172,7 +172,7 @@ Validate if there are duplicated parameters in the GRUB configuration file:
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, look for duplicated parameters and remove them.
-    3. Select <kbd>Ctrl</kbd> + <kbd>X</kbd> to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 ## <a id="dracut-rootfs-corruption"></a>Root file system corruption

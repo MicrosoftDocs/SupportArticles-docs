@@ -60,7 +60,7 @@ The SELinux configuration is managed by the system administrator. The system adm
 
     Notice the last line, `SELINUXTYPE=disabled`. The `SELINUXTYPE` key should be set to `targeted`, `minimum`, or `mls` rather than `disabled`. The following screenshot shows the correct configuration:
 
-    :::image type="content" source="./media/linux-selinux-troubleshooting/correct-selinux-configuration.png" alt-text="Screenshot that shows the correct configuration of /etc/selinux/config":::
+    :::image type="content" source="./media/linux-selinux-troubleshooting/correct-selinux-configuration.png" alt-text="Screenshot that shows the correct configuration of /etc/selinux/config.":::
 
 ## Solution 2: Repair SELinux misconfiguration by using a rescue VM
 
