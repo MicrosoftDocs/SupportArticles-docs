@@ -18,9 +18,9 @@
     - name: Sales tax
       items:
         - name: Tax isn't calculated or the tax amount is zero
-          href: sales-tax-troubleshooting-tax-not-calculated-amount-zero
+          href: sales-tax/sales-tax-troubleshooting-tax-not-calculated-amount-zero
         - name: Tax calculation performance affects transactions
-          href: sales-tax-troubleshooting-tax-calculation-bad-performance 
+          href: sales-tax/sales-tax-troubleshooting-tax-calculation-bad-performance 
         - name: Incorrect field value in TaxTrans
           href: sales-tax/sales-tax-troubleshooting-field-value-taxtrans-incorrect.md
         - name: TaxTrans record isn't generated
