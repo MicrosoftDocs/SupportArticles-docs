@@ -86,7 +86,7 @@ When debug mode is turned on, you can find the selected posting profiles in the 
 
 ### Incorrect tax rate/tax component
 
-To work correctly, the tax engine relies on input from taxable documents, such as sales and purchase invoices. If you extend the configuration by adding new fields, fields might be incorrectly mapped, or the writing to the data provider might be incorrect. To identify the issue, set the **Check model mapping discrepancies** option to **Yes**. You can view an additional section to show the discrepancies.
+To work correctly, the tax engine relies on input from taxable documents, such as sales and purchase invoices. If you extend the configuration by adding new fields, fields might be incorrectly mapped, or the writing to the data provider might be incorrect. To identify the issue, set the **Check model mapping discrepancies** option to **Yes**. You can view another section to show the discrepancies.
 
 ### Incorrect tax component
 
@@ -100,7 +100,7 @@ If you don't see the expected tax rate, check the field values that are used in 
 
 You might receive an error message that resembles the following message:
 
-*Unable to find \#\# in the setoff hierarchy \#\# version \#\#, please check and try again.*
+*Unable to find \#\# in the setoff hierarchy \#\# version \#\#, check and try again.*
 
 Typically, this error occurs because the configuration was extended by adding a new tax component or modifying the credit pool.
 
