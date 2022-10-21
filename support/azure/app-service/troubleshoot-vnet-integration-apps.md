@@ -108,7 +108,7 @@ You can also use the Network troubleshooter to troubleshoot the connection issue
 
 **Connection issues** - It will check the status of the virtual network integration, including checking if the Private IP has been assigned to all instances of the App Service Plan and the DNS settings. If a custom DNS isn't configured, default Azure DNS will be applied. You can also run tests against a specific endpoint that you want to test connectivity to.
 
-:::image type="content" source="./media/troubleshoot-vnet-integration-apps/connection-issue" alt-text="Screenshot that shows run troubleshooter for connection issues.":::
+:::image type="content" source="./media/troubleshoot-vnet-integration-apps/connection-issue.png" alt-text="Screenshot that shows run troubleshooter for connection issues.":::
 
 **Configuration issues** - This troubleshooter will check if your subnet is valid for virtual network Integration.
 
