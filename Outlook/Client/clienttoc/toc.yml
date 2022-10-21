@@ -387,6 +387,8 @@
           href: ../junk-email/outlook-error-over-junk-emial-list-limit.md
     - name: Message Body
       items:
+        - name: Accept and Decline buttons missing in a task request
+          href: ../message-body/accept-decline-buttons-missing-in-task-request.md
         - name: Attachment doesn't show in a Plain Text message
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
@@ -407,8 +409,6 @@
           href: ../message-body/url-multiple-slashes-become-single-slash.md
         - name: No subject or content in automatically emails
           href: ../message-body/no-subject-content-in-automatically-email.md
-        - name: Outlook doesn't show the Accept and Decline buttons in a task request
-          href: ../message-body/task-request-message-has-no-accept-decline-buttons.md
         - name: Pictures are not shown but displayed as red X
           href: ../message-body/pictures-not-displayed-and-shown-as-red-x.md
         - name: Strange characters in message body

@@ -1,5 +1,5 @@
 ---
-title: Outlook doesn't show the Accept and Decline buttons in a task request
+title: Accept and Decline buttons missing in a task request
 description: Describes an issue in which Outlook doesn't show the Accept and Decline buttons in a task request.
 author: v-trisshores
 ms.author: v-trisshores
@@ -20,9 +20,9 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
 search.appverid: MET150
-ms.date: 10/20/2022
+ms.date: 10/21/2022
 ---
-# Outlook doesn't show the Accept and Decline buttons in a task request
+# Accept and Decline buttons missing in a task request
 
 ## Symptoms
 
@@ -30,11 +30,11 @@ When you send a task request message in Outlook, the recipient's task request do
 
 For example, the recipient's task request might resemble the following example.
 
-:::image type="content" source="media/task-request-message-has-no-accept-decline-buttons/task-tnef-disabled.png" alt-text="Screenshot of a task request message that doesn't contain the Accept and Decline buttons or have legible task details.":::
+:::image type="content" source="media/accept-decline-buttons-missing-in-task-request/task-tnef-disabled.png" alt-text="Screenshot of a task request message that doesn't contain the Accept and Decline buttons or have legible task details.":::
 
 The next screenshot shows what the task request should look like.
 
-:::image type="content" source="media/task-request-message-has-no-accept-decline-buttons/task-tnef-enabled.png" alt-text="Screenshot of a task request message that does contain the Accept and Decline buttons and has legible task details.":::
+:::image type="content" source="media/accept-decline-buttons-missing-in-task-request/task-tnef-enabled.png" alt-text="Screenshot of a task request message that does contain the Accept and Decline buttons and has legible task details.":::
 
 ## Cause
 
