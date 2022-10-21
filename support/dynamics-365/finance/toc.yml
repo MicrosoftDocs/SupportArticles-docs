@@ -33,14 +33,34 @@
       items:
         - name: Position budgeting troubleshooting
           href: budgeting/position-budgeting-set-up-issues.md
-    - name: India Goods and services tax (GST)
+    - name: India
       items:
-        - name: Setoff rule error when a tax settlement is run 
-          href: india-gst/apac-ind-GST-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
+        - name: Troubleshoot GTE
+          href: india/tax-engine-trouble-shooting.md
+        - name: Incorrect tax amount after calculation
+          href: india/apac-ind-GST-troubleshooting-tax-amount-wrong-after-calculation.md
+        - name: Tax configuration errors
+          href: india/apac-ind-GST-troubleshooting-tax-configuration-errors.md
+        - name: Tax isn't calculated
+          href: india/apac-ind-GST-troubleshooting-tax-not-calculated.md
+        - name: Activating the setoff rule takes longer than expected
+          href: india/apac-ind-GST-troubleshooting-setoff-rule-activate-take-long-time.md
+        - name: TaxTrans or voucher isn't generated
+          href: india/apac-ind-GST-troubleshooting-taxtrans-or-voucher-not-generated.md
         - name: Tax transaction ID is incorrect
-          href: india-gst/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
+          href: india/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md   
+        - name: Incorrect field values on the GSTR report
+          href: india/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md
+        - name: Incorrect field value in an invoice journal or voucher
+          href: india/apac-ind-GST-troubleshooting-invoice-journal-wrong.md
+        - name: Incorrect ledger account in the voucher
+          href: india/apac-ind-GST-troubleshooting-ledger-account-voucher-wrong.md
+        - name: Open the designer for the current tax configuration
+          href: india/apac-ind-GST-troubleshooting-open-designer-current-used-tax-configuration.md
         - name: Records and fields don't appear on the GSTR report
-          href: india-gst/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
-        - name:
-          href: 
+          href: india/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report.md
+        - name: Setoff rule error when a tax settlement is run
+          href: india/apac-ind-GST-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
+        - name: Default field value in tax information isn't as expected
+          href: india/apac-ind-GST-troubleshooting-default-value-in-tax-information-not-expected.md
     
