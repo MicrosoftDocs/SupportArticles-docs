@@ -53,7 +53,7 @@ Review the call stack to determine whether tax calculation is called multiple ti
 Review the call stack timeline to determine whether the following issues exist. If they do, enable the flighting for **TaxUncommittedDoIsolateScopeFlighting** to fix the issue.
 
 - The transaction causes the system to stop responding until the session ends. Therefore, the transaction can't calculate the tax result. 
-- The **TaxUncommitted** methods take more time than other methods. For example, the **TaxUncommitted::updateTaxUncommitted()** method could 43,347.42 seconds, but other methods take 0.09 seconds.
+- The **TaxUncommitted** methods take more time than other methods. For example, the **TaxUncommitted::updateTaxUncommitted()** method could take 43,347.42 seconds, but other methods take 0.09 seconds.
 
 ## Customizing and calling tax calculation
 
