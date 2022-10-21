@@ -89,7 +89,7 @@ If the WinHTTP component has only TLS 1.0 or TLS 1.1 enabled, `New-PSSession` wo
 
 1. Open HCW, and try to connect to the Office 365 endpoint.
 
-1. Stop the trace session by running `netsh trace stop`. By default, the trace process saves the trace file to `%LOCALAPPDATA%\Temp\NetTraces\NetTrace.etl`.
+1. Stop the trace session by running `netsh trace stop`. By default, the trace process saves the trace file to _%LOCALAPPDATA%\Temp\NetTraces\NetTrace.etl_.
 
 1. Use [NetworkMonitor](/windows/win32/ndf/using-network-monitor-to-view-etl-files) to open the trace file, and then filter on `description.contains("EnabledProtocols")` to view the enabled protocols, as follows.
 
