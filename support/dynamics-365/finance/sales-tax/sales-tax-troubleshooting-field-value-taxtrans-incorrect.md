@@ -36,7 +36,7 @@ The following list shows how **TaxTrans**, **TaxUncommitted**, and **TmpTaxWorkT
   - **TaxUncommitted** is the intermediate calculated tax result persisted in the database (if applicable), which will be used later in posting.
   - **TmpTaxWorkTrans** is the temporary calculated tax result in the in-memory table (Table Type = InMemory).
 
-If you find the root cause of an incorrect **TaxTrans** column, you've also found the root cause of an incorrect **TaxUncommitted** or **TmpTaxWorkTrans** column. This is because the three columns are copied from each other.
+If you find the root cause of an incorrect **TaxTrans** column, you've also found the root cause of an incorrect **TaxUncommitted** or **TmpTaxWorkTrans** column as the three columns are copied from each other.
 
 Typically, during tax calculation, **TmpTaxWorkTrans** is generated, and then, if applicable, **TaxUncommitted** is generated. During tax posting, **TaxTrans** is generated.
 
@@ -104,7 +104,7 @@ To add breakpoints, complete the following steps:
         
         ```
 
-2. Alternatively, you can add breakpoints directly when **TaxUncommitted** is not included.
+2. Alternatively, you can add breakpoints directly when **TaxUncommitted** isn't included.
 
      - *TaxTrans.insert()*, *TaxTrans.update()*
      - *TmpTaxWorkTrans.insert()*, *TmpTaxWorkTrans.update()*
@@ -118,4 +118,4 @@ After the breakpoints are set, every data persistency change is visible during d
 - What happens in between those two points.
 
 ## Determine whether customization exists
-If you've completed the steps in the previous sections but have not been able to resolve the issue, determine whether customization exists. If no customization exists, contact Microsoft Support for assistance.
+If you've completed the steps in the previous sections but haven't been able to resolve the issue, determine whether customization exists. If no customization exists, contact Microsoft Support for assistance.
