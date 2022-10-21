@@ -15,7 +15,6 @@ ms.reviewer: pedrocorreia, arindamt, meerak
 appliesto: 
   - Outlook for Microsoft 365
   - Exchange Online
-  - Microsoft 365 Apps
   - Outlook 2021
   - Outlook 2019
   - Outlook 2016
