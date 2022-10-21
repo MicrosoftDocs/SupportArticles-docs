@@ -79,14 +79,14 @@ The serial console is the fastest method to resolve issues. It allows you to dir
     > Not every issue can be addressed by using the Azure serial console.
 
     1. Trigger **Restart VM (Hard)** from the serial console.
-    2. Interrupt your VM at the GRUB menu with the `ESC` key.
-    3. Press `e` to modify the first kernel entry in the GRUB menu.
+    2. Interrupt your VM at the GRUB menu with the <kbd>ESC</kbd> key.
+    3. Select <kbd>E</kbd> to modify the first kernel entry in the GRUB menu.
     4. Go to the `linux16` line, and then validate and correct [GRUB misconfiguration](#dracut-grub-misconf) as follows:
         * [Wrong root device path in the GRUB configuration file](#dracut-grub-misconf-wrong-root), wrong UUID or root volume name.
         * [Duplicated parameters in the GRUB configuration file](#dracut-grub-misconf-dup-params).
         * Any obvious typo.
 
-3. After manually modifying the GRUB settings, press `CTRL+x` to boot the VM.
+3. After manually modifying the GRUB settings, select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
 
     Any modification done at this stage is a non-persistent modification. If the VM is able to boot, resolve this issue in the GRUB configuration file, or it will reoccur.
 
@@ -149,7 +149,7 @@ Validate if the root path `root=/dev/***` in the GRUB configuration file is corr
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, and then look for the `root=` parameter and fix it.
-    3. Press `CTRL+x` to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots, modify the `/etc/default/grub` file, fix the `root` parameter, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 During this validation, make sure the following things:
@@ -172,7 +172,7 @@ Validate if there are duplicated parameters in the GRUB configuration file:
 * If you're in the Azure serial console:
     1. Follow step 3 in [Online troubleshooting](#online-troubleshooting).
     2. Validate the `linux16` line, look for duplicated parameters and remove them.
-    3. Press `CTRL+x` to boot the VM.
+    3. Select <kbd>Ctrl</kbd>+<kbd>X</kbd> to boot the VM.
     4. Once the VM successfully boots up, modify the `/etc/default/grub` file accordingly, fix the configuration issues previously identified, and update the GRUB configuration file, as instructed in [Reinstall GRUB and regenerate GRUB configuration file](troubleshoot-vm-boot-error.md#reinstall-grub-regenerate-grub-configuration-file).
 
 ## <a id="dracut-rootfs-corruption"></a>Root file system corruption
