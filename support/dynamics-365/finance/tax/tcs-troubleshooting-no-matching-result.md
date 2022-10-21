@@ -2,7 +2,7 @@
 # required metadata
 
 title: No matching result could be found
-description: This article explains how to troubleshoot the "No matching result could be found" error in the Tax Calculation serivce.
+description: This article explains how to troubleshoot the "No matching result could be found" error in the Tax Calculation service.
 author: hangwan
 ms.date: 09/30/2022
 ms.topic: troubleshooting
@@ -27,7 +27,7 @@ ms.dyn365.ops.version: Version 10.0.21
 
 # No matching result could be found
 
-This article explains the troubleshooting steps that you can take if you receive a "No matching result could be found" error in the Tax Calculation service.
+This article explains the troubleshooting steps that you can take if you receive the erros, "No matching result could be found" in the Tax Calculation service.
 
 ## Symptom
 
@@ -105,7 +105,7 @@ The issue occurs when the feature setup in Regulatory Configuration Service (RCS
     | Journal                 |                     |                           | Group A   |
     | Sales                   |                     | 30160                     | Group B   |
 
-    According to the Tax service calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of applicability rules in RCS. Because there is no matching line, the error occurs.
+    According to the Tax service calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of applicability rules in RCS. Because there's no matching line, the error occurs.
 
     > [!NOTE]
     > If the value in the applicability rule is blank, the rule is applicable to any value.
