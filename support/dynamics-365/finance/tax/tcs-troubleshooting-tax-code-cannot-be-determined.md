@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tax code cannot be determined
+title: Tax code can't be determined
 description: This article explains how to troubleshoot the "Tax code cannot be determined" error in the Tax Calculation service.
 author: hangwan
 ms.date: 09/30/2022
@@ -24,7 +24,7 @@ ms.search.validFrom: 03/23/2022
 ms.dyn365.ops.version: Version 10.0.21
 ---
 
-# Tax code cannot be determined
+# Tax code can't be determined
 
 This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the Tax Calculation service.
 
@@ -69,9 +69,9 @@ The issue is probably occurring because the tax group and the item tax group don
 
 Follow these steps to troubleshoot the issue.
 
-1. In the troubleshooting file, verify that tax group and item tax group have been determined. If the values for **Tax Group** and **Item Tax Group** are blank, the tax group and item tax group haven't been determined. If they have been determined, the results might be incorrect.
+1. In the troubleshooting file, verify that tax group and item tax group have been determined. If the values for **Tax Group** and **Item Tax Group** are blank, the tax group and item tax group haven't been determined. If they've been determined, the results might be incorrect.
 
-    Here is an example of a troubleshooting file.
+    Here's an example of a troubleshooting file.
 
     ```json
     ======================Tax service calculation result JSON:===========================
@@ -105,7 +105,7 @@ Follow these steps to troubleshoot the issue.
     - If it's enabled, tax codes are determined by the **Tax group** and **Item tax group** values that you enter on the transaction line. Verify that these values are entered correctly.
     - If it isn't enabled, verify that correct values have been set for the **Tax group applicability** and **Item tax group applicability** fields. For more information, see [No matching result be found](tcs-troubleshooting-no-matching-result.md) to.
 
-3. If the tax group and item tax group have been determined correctly, determine whether there is any intersection for them.
+3. If the tax group and item tax group have been determined correctly, determine whether there's any intersection for them.
 
     1. In RCS, go to **Tax features** > **Tax codes and groups** > **Tax group**.
 
@@ -119,12 +119,12 @@ Follow these steps to troubleshoot the issue.
         |---------------------|-----------|
         | Group B             | B         |
 
-    If there is no intersection for the tax group and the item tax group, the tax code won't be determined.
+    If there's no intersection for the tax group and the item tax group, the tax code won't be determined.
 
 ## Mitigation
 
 1. Go through each step in the [Troubleshoot](#troubleshoot) section of this article, and fix the setup as required. If the tax group and item tax group haven't been determined correctly, see [No matching result be found](tcs-troubleshooting-no-matching-result.md).
-2. If there is no intersection for the tax group and the item tax group, create a new feature version in RCS, and fix the setup.
+2. If there's no intersection for the tax group and the item tax group, create a new feature version in RCS, and fix the setup.
 
     - Go to **Tax features** > **Tax codes and groups** > **Item tax group**.
 
