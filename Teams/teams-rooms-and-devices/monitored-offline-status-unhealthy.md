@@ -3,7 +3,7 @@ title: The Monitored or Offline status of a Teams Rooms device is Unhealthy
 description: Resolve the issue that causes the Monitored or Offline signal of a Microsoft Teams Rooms device to appear as Unhealthy.
 ms.reviewer: joolive
 ms.topic: troubleshooting
-ms.date: 9/26/2022
+ms.date: 10/18/2022
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -23,7 +23,7 @@ In the [Microsoft Teams Rooms Pro Management portal](https://portal.rooms.micros
 - If the **Offline** signal is unhealthy, the room system is completely deactivated. If the system was powered on, the system might stop responding and generate a stop error during startup. In other cases, the console works correctly, but a message in a purple window might appear on the console and indicate that the system has no network connection.
 - If the **Monitored** signal is unhealthy, the Teams Rooms functionality might still work correctly.
 
-If a device is unmonitored or offline, the Teams Rooms Pro Management portal can't report the health of the device or send a notification about unhealthy signals. Additionally, the following issues might occur:
+If a device is unmonitored or offline, the Teams Rooms Pro Management portal can't report the health of the device or notify you of unhealthy signals. Additionally, the following issues might occur:
 
 - Scheduled updates won't be installed.
 - Automatic remediation won't be scheduled to be run.
@@ -87,7 +87,7 @@ Open Task Scheduler, and verify that both tasks are listed and enabled. If eithe
 
 The Teams Rooms Pro agent uses the Teams sign-in information of the Teams Rooms app to handle the initial onboarding process. To successfully onboard a device to the Teams Rooms Pro Management portal, the Teams Rooms app must be signed in to Teams successfully.
 
-If the agent (ServicePortalAgent.exe) is running correctly, check whether Teams sign-in fails. If so, [fix Teams Rooms resource account sign-in issues](./teams-rooms-resource-account-sign-in-issues.md).
+If the agent (ServicePortalAgent.exe) is running correctly, check whether Teams sign-in fails. If so, [fix Teams Rooms resource account sign-in issues](teams-rooms-resource-account-sign-in-issues.md).
 
 ### Check connection to the Teams Rooms Pro Management endpoints
 
@@ -112,14 +112,14 @@ If the agent (ServicePortalAgent.exe) is running correctly, check whether Teams 
   - Use Web Proxy Auto-Discovery (WPAD) supported by DHCP or DNS to enable automatic discovery of a Proxy auto-config (PAC) script that's hosted on a server in the corporate network. When you use this method, work together with your network team to make sure that the following conditions are met:
 
     - The DHCP service or DNS server that's used by the Teams Rooms device doesn't advertise the URL of the wpad file.
-    - The server that hosts the PAC file, including port, must be reachable by the Teams Rooms device. For example, `http://wpad.contoso.com/wpad.dat`.
+    - The server (including port) that hosts the PAC file must be reachable by the Teams Rooms device. For example, `http://wpad.contoso.com/wpad.dat`.
     - The PAC file that's hosted on the server, such as *wpad.dat* in the example, must include the appropriate rules (DIRECT or a specific proxy server host+port) for the URLs that are used by the Teams Rooms Pro agent.
     - The **WinHTTP Web Proxy Auto-Discovery Service** isn't disabled.
     - If any explicit proxy configuration was done previously for the [Teams Room app (Skype user)](/microsoftteams/rooms/rooms-prep#proxy) or the [Teams Rooms Pro agent (Local System)](/microsoftteams/rooms/enroll-a-device#adding-proxy-settings-optional), restore the configuration to the default settings so that the proxy settings are configured to automatically detect the proxy.
   - Use an explicit proxy server IP or hostname and port configuration. When you use this method, work together with your network team to make sure that the appropriate proxy server IP or host and port are configured for both the [Teams Room app (Skype user)](/microsoftteams/rooms/rooms-prep#proxy) and the [Teams Rooms Pro agent (Local System)](/microsoftteams/rooms/enroll-a-device#adding-proxy-settings-optional).
   - Use an explicit PAC script configuration that's hosted on a server in your corporate network. When you use this approach, work together with your network team to make sure that the following conditions are met:
 
-    - The server that hosts the PAC file, including port, must be reachable by the Teams Rooms device. For example, `http://proxypacserver.contoso.com/MyProxyFile.pac`.
+    - The server (including port) that hosts the PAC file must be reachable by the Teams Rooms device. For example, `http://proxypacserver.contoso.com/MyProxyFile.pac`.
     - The PAC file that's hosted on the server must include the appropriate rules (DIRECT or a specific Proxy server host+port) for the URLs that are used by the Teams Rooms Pro agent.
     - The appropriate proxy PAC is configured for both the [Teams Room app (Skype user)](/microsoftteams/rooms/rooms-prep#proxy) (AutoConfigURL) and [Teams Rooms Pro agent (Local System)](/microsoftteams/rooms/enroll-a-device#adding-proxy-settings-optional) (autoscript setting).
   - Use transparent proxy deployment in the corporate network. Unlike traditional web proxies, this method doesn't require configurations on Windows (explicit or default auto-discovery). This is because the network infrastructure makes sure that all HTTP traffic is forced to go through the proxy. In this case, work together with your network team to make sure that the following conditions are met:
@@ -147,7 +147,7 @@ The following log files provide additional information about monitoring issues:
 For additional help, follow these steps:
 
 1. [Run the Teams Rooms Pro agent test tool](#run-the-teams-rooms-pro-agent-test-tool).
-2. [Create a support request](./get-support-teams-rooms-pro-management.md#create-a-support-request), and make sure that you attach the *AgentCheckResults.zip* file that's collected in step 1.
+2. [Create a support request](get-support-teams-rooms-pro-management.md#create-a-support-request), and make sure that you attach the *AgentCheckResults.zip* file that's collected in step 1.
 
 ## Resolve offline status
 
@@ -192,7 +192,7 @@ If a Teams Rooms device gets stuck during startup (for example, it keeps stoppin
      - `http://www.msftconnecttest.com/connecttest.txt`
      - `http://ipv6.msftconnecttest.com/connecttest.txt`
 
-     If these return **Microsoft Connect Test**, this means that internet access is available.
+     If these URLs return **Microsoft Connect Test**, it means that internet access is available.
 
   If NCSI isn't registering your internet connection, consider setting it to use global DNS:
 
@@ -207,6 +207,6 @@ If a Teams Rooms device gets stuck during startup (for example, it keeps stoppin
 
 ## More information
 
-Communication between the Teams Rooms Pro Management portal and the Teams Rooms Pro agent running on a Teams Rooms device is done through Azure IoT Hub by using [a set of predefined endpoints](/microsoftteams/rooms/enroll-a-device#urls-required-for-communication) that have HTTP protocol through SSL (port 443). Whenever Azure IoT Hub triggers a disconnection event, the Teams Rooms Pro Management portal waits for one hour to determine whether the device's **Monitored** signal is unhealthy.
+Communication between the Teams Rooms Pro Management portal and the Teams Rooms Pro agent running on a Teams Rooms device is done through Azure IoT Hub by using [a set of predefined endpoints](/microsoftteams/rooms/enroll-a-device#urls-required-for-communication) with HTTP protocol through SSL (port 443). Whenever Azure IoT Hub triggers a disconnection event, the Teams Rooms Pro Management portal waits for one hour to determine whether the device's **Monitored** signal is unhealthy.
 
 The Teams Rooms Pro Management portal also monitors the status of the connection that's tracked by the Microsoft Teams service. Whenever both connection statuses (Teams service and Teams Rooms Pro Management portal) report that the system has not connected recently, the device is reported as **Offline**. In this situation, the device is unmonitored, and it might not be available for calls and meetings.

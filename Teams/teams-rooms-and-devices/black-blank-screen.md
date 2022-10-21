@@ -25,7 +25,7 @@ On a Microsoft Teams Rooms device, users experience one or more of the following
 
 ## A specific display shows a black or blank screen
 
-This issue occurs if the display isn't detected by the Teams Rooms device. To fix the issue, follow the instructions in [The Display status is Unhealthy](./display-status-unhealthy.md).
+This issue occurs if the display isn't detected by the Teams Rooms device. To fix the issue, follow the instructions in [The Display status is Unhealthy](display-status-unhealthy.md).
 
 ## All displays and the touchscreen console show a black or blank screen and don't respond
 
@@ -50,15 +50,15 @@ Start an ad hoc meeting from another device that has Microsoft Teams installed, 
        **Note** Whenever a display is disconnected or connected, the image of the Teams logo will be shown on all existing displays while the Teams Rooms app is repositioning all windows in the background.
    1. If the issue persists, try to power cycle the device, see if the system recovers after a restart.
    1. If the issue repeats multiple times, [contact Microsoft Support](get-support-teams-rooms-pro-management.md).
-- If the call doesn't ring, check whether the Teams Rooms app starts correctly. For more information, see [The Meeting app status is Unhealthy](./meeting-app-status-unhealthy.md). If the issue persists, go to the next method.
+- If the call doesn't ring, check whether the Teams Rooms app starts correctly. For more information, see [The Meeting app status is Unhealthy](meeting-app-status-unhealthy.md). If the issue persists, go to the next method.
 
 ### Check whether the core Windows components are functioning correctly
 
 Attach a USB keyboard to the device. Press the Windows logo key five times in quick succession to see whether this opens the Windows logon screen.
 
-- If the Windows logon screen doesn't open, this means that some core Windows components aren't functioning.
+- If the Windows logon screen doesn't open, it means that some core Windows components aren't functioning.
 
-   1. To check whether this is s a transient Windows failure, power cycle the device. See if the system recovers after a restart.
+   1. To check whether this is a transient Windows failure, power cycle the device. See if the system recovers after a restart.
    1. If the issue repeats multiple times but affects only a specific device, there might be inconsistencies or corruption in the core Windows components or drivers on that device. In this case, consider reimaging the compute module, as described in the OEM documentation.
    1. If the issue persists after reimaging, or if it's observed on multiple devices, [contact Microsoft Support](get-support-teams-rooms-pro-management.md).
 - If the Windows logon screen does open, the Skype sign-in session will become disconnected but remain signed in, and all existing processes will continue to run. For further diagnosis, check whether the Teams Rooms app processes are running correctly:
@@ -71,12 +71,12 @@ Attach a USB keyboard to the device. Press the Windows logo key five times in qu
       - DesktopAPIService.exe
       - Teams.exe (multiple)
 
-      If the value is **Skype**, this means that the Teams Rooms app might be frozen in an unexpected state.
-   1. Open Event Viewer, and select **Windows Logs** > **Application**. Check for any **Critical** or **Error** events from the following sources in the last 24 hours that indicate that one of the processes that is listed in step 3 stopped responding:
+      If the value is **Skype**, it means that the Teams Rooms app might be frozen in an unexpected state.
+   1. Open Event Viewer, and select **Windows Logs** > **Application**. Check for any **Critical** or **Error** events from the following sources in the last 24 hours that indicate that one of the processes that's listed in step 3 stopped responding:
 
       - Application Error
       - Windows Error Reporting
-   1. Regardless of whether the Teams Rooms app processes are still running but unresponsive, or have stoped responding, restart the device to determine whether this is a transient failure of the app or of the app that interacts with Windows components. Check whether the system recovers.
+   1. Regardless of whether the Teams Rooms app processes are still running but unresponsive, or have crashed, restart the device to determine whether this is a transient failure of the app or of the app that interacts with Windows components. Check whether the system recovers.
    1. If the issue repeats multiple times but affects only a specific device, there might be inconsistencies or corruption in the core Windows components or the Teams Rooms app. In this case, consider reimaging the compute module, as described in the OEM documentation.
    1. If the issue persists after reimaging or is observed on multiple devices, [contact Microsoft Support](get-support-teams-rooms-pro-management.md).
 
@@ -90,10 +90,10 @@ This issue usually occurs during the first use of the day after a nightly restar
   - Active video source selection
   - Incorrect EDID information that's communicated to the Teams Rooms device
 
-  This behavior is expected if a consumer television monitor is used as the Front of Room display. For more information, see [Known issues in Teams Rooms](rooms-known-issues.md#expected-behavior).
+  This behavior is expected if a consumer TV is used as the Front of Room display. For more information, see [Known issues in Teams Rooms](rooms-known-issues.md#expected-behavior).
 - If the current time that's shown on the display isn't frozen, check whether only the touchscreen input is affected.
 
-  To verify this situation, attach a USB keyboard to the Teams Rooms device, and then press the Tab key to navigate through the menu of the Teams Rooms app. If the app responds to keyboard input, this means that the app isn't frozen. To restore the functionality, consider power cycling the console, or restart the Teams Rooms device.
+  To verify this situation, attach a USB keyboard to the Teams Rooms device, and then press the Tab key to navigate through the menu of the Teams Rooms app. If the app responds to keyboard input, it means that the app isn't frozen. To restore the functionality, consider power cycling the console, or restart the Teams Rooms device.
 
   If this touchscreen input issue occurs frequently on a specific console that's connected through a USB port or extenders, try reseating the USB connectors on the compute module and the console. Or, consider replacing the cable or the console to determine whether the issue still occurs.
 
