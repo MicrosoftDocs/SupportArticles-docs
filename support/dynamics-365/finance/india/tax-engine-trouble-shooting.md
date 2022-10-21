@@ -25,8 +25,6 @@ ms.dyn365.ops.version: 7.3
 
 # Troubleshoot GTE
 
-[!include [banner](../includes/banner.md)]
-
 The tax engine is a highly configurable engine that handles tax applicability, calculation, posting, and settlement. This article lists issues that users typically encounter while they use the tax engine, and it explains how to fix those issues.
 
 > [!NOTE]
