@@ -46,8 +46,8 @@ You should first review the tax document to determine whether the tax calculatio
 Follow these steps to determine whether the tax amount in the tax document is correct.
 
 1. On the **Tax document** page, on the **Tax details** FastTab, review the field values on the **Overview** and **Details** tabs.
-2. In the **Lines** view, select **View tax input** to review the values of additional fields, such as **Transaction date**, **Invoice date**, and **Tax direction**.
-3. If the tax document is incorrect, see [Tax amount is wrong after calculation](apac-ind-GST-troubleshooting-tax-amount-wrong-after-calculation.md) If it's correct, move on to the next section..
+2. In the **Lines** view, select **View tax input** to review the values of other fields, such as **Transaction date**, **Invoice date**, and **Tax direction**.
+3. If the tax document is incorrect, see [Tax amount is wrong after calculation](apac-ind-GST-troubleshooting-tax-amount-wrong-after-calculation.md) If it's correct, move on to the next section.
 
 ## Review the voucher
 
