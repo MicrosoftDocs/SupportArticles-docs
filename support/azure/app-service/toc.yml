@@ -25,5 +25,5 @@
   - name: Troubleshoot instance-related issues
     href: troubleshoot-instance-related-issues-on-azure-app-service.md
   - name: Troubleshoot virtual network integration
-    href: troubleshoot-instance-related-issues-on-azure-app-service.md
+    href: troubleshoot-vnet-integration-apps.md
     
