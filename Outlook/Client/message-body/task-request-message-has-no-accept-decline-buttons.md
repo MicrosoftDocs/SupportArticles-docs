@@ -9,13 +9,16 @@ ms.topic: troubleshooting
 localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
-  - Exchange Online
   - CSSTroubleshoot
   - CI 167428
 ms.reviewer: pedrocorreia, arindamt, meerak
 appliesto: 
   - Outlook for Microsoft 365
   - Exchange Online
+  - Microsoft 365 Apps
+  - Outlook 2021
+  - Outlook 2019
+  - Outlook 2016
 search.appverid: MET150
 ms.date: 10/20/2022
 ---
