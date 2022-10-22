@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance issues with narrow and wide plans in SQL Server
-description: Provides steps to help you identify and resolve issues where a query runs for a long time in SQL Server.
+description: Provides information to understand and troubleshoot UPDATEs that use wide or narrow query plans
 ms.date: 10/22/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -169,7 +169,7 @@ update mytable2 set c1=c1 where c2<260 option(querytraceon 8790)-- trace flag 87
 update mytable2 set c1=c1 where c2<260 option(querytraceon 2338)-- trace flag 2338 will force Narrow plan
 ```
 
-For more information, see Trace flag [8790](https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) 
+For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) 
 
 The query with wide plan takes 0.136 second, while the query with narrow plan only takes 0.112 second.  The two durations are very close because the data is already in buffer before the UPDATE was executed and renders the Per-Index update (wide plan) less beneficial.
 
@@ -259,7 +259,7 @@ INSERT mytable4 VALUES(1,1,1,1)
 
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_cluster_index_unique.png" alt-text="wide plan used when cluster index unique":::
 
-For more details, review this blog post [Maintaining Unique Indexes](https://docs.microsoft.com/en-us/archive/blogs/craigfr/maintaining-unique-indexes)
+For more details, review this blog post [Maintaining Unique Indexes](/archive/blogs/craigfr/maintaining-unique-indexes)
 
 2. Cluster index column is also specified in partition scheme.
 
@@ -324,5 +324,5 @@ create index c4 on mytable6(c4)
 1. Wide Plans boost performance at the expense of consuming additional memory.
 1. If the expected query plan isn't used, it may be due to the stale statistics (not reporting correct data size), Max Server Memory setting or other unrelated issues like parameter sensitive plans.
 1. The duration of UPDATEs using a wide plan depends on several factors and in some cases it may take longer than narrow plans.
-1. Trace flag [8790](https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force Wide plan;trace flag [2338](https://learn.microsoft.com/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force Narrow plan
+1. Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force Wide plan;trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force Narrow plan
 
