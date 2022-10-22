@@ -4,7 +4,8 @@ description: Download, install, and run PerfInsights to troubleshoot problematic
 ms.date: 11/17/2021
 author: DennisLee-DennisLee
 ms.author: v-dele
-ms.service: virtual-machine-scale-sets
+ms.service: virtual-machines
+ms.subservice: vm-performance
 ---
 # PerfInsights and scale set VM instances
 

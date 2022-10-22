@@ -205,6 +205,8 @@
       href: admin/virtual-host-driver-lead-data-consistency.md
     - name: Words are not returned by an English word breaker
       href: admin/words-not-returned-by-english-word-breaker.md
+    - name: Error 33111 when restoring backups that use SQL Server Connector for Key Vault
+      href: admin/error-33111-restore-issues-sql-connector.md
   - name: Client Application Development
     items:
     - name: Can't uninstall ODBC driver completely
@@ -465,7 +467,7 @@
       href: replication/error-replication-monitor.md
     - name: Apply SQL hotfixes in a replication topology
       href: replication/apply-hotfix-sql-replication-topology.md
-    - name: ASCII funtion returns different results
+    - name: ASCII function returns different results
       href: replication/ascii-function-returns-different-results-publisher-subscriber.md
     - name: Cannot use rowguidcol in filter definition in merge replication
       href: replication/rowguidcol-not-supported-merge-replication.md
@@ -691,7 +693,7 @@
       href: ssms/exception-you-execute-query.md
     - name: Saving changes is not permitted error message
       href: ssms/error-when-you-save-table.md
-    - name: Unable to mody table - Timeout Expired
+    - name: Unable to modify table - Timeout Expired
       href: ssms/error-modify-large-table-using-ssms.md
     - name: Uninstall SQL Server Management Studio
       href: ssms/uninstall-management-studio.md

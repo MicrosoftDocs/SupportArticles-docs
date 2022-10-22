@@ -3,8 +3,6 @@
   href: ./minimum-service-pack-levels.md
 - name: Redistributable Package installation fails
   href: ./runtime-installation-fails.md
-- name: ATL service doesn't start
-  href: ./atl-service-not-start.md
 - name: C2653 or C2039 error when you reference a STD function
   href: ./c2653-c2039-error-reference-function.md
 - name: Call Run() method of a Script control

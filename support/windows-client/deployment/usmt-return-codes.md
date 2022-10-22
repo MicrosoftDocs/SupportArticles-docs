@@ -290,4 +290,4 @@ The following information lists each return code by numeric value, along with th
 ## More information
 
 - [User State Migration Tool (USMT) Troubleshooting](/windows/deployment/usmt/usmt-troubleshooting)
-- [Log Files](usmt-log-files.md)
+- [Log Files](/windows/deployment/usmt/usmt-log-files)

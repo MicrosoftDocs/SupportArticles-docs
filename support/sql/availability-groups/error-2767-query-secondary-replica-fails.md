@@ -8,7 +8,7 @@ ms.prod: sql
 
 # Error 2767 "Could not locate statistics" when query against the secondary replica fails
 
-_Applies to:_&nbsp; SQL Server, Azure SQL Database
+_Applies to:_&nbsp; SQL Server, Azure SQL Database, Azure SQL Managed Instance
 
 This article provides workarounds for the issue that a query against the secondary replica fails with error 2767 "Could not locate statistics".
 
@@ -49,8 +49,17 @@ To work around the issue, use one of the following methods as required:
     ```
 
     This cmdlet fails over the readable secondary replica of the database named `<DatabaseName>` on the server named `<ServerName>`.
+    
+- Azure SQL Managed Instance
 
-- SQL Server or Azure SQL Database
+    If the issue occurs in a Business Critical service tier Azure SQL Managed Instance, run the [Invoke-AzSqlInstanceFailover](/powershell/module/az.sql/invoke-azsqlinstancefailover) cmdlet to fail over to a read only secondary node:
+
+    ```powershell
+    Invoke-AzSqlInstanceFailover -ResourceGroupName "<ResourceGroupName>" -Name "<ManagedInstanceName>" -ReadableSecondary
+    ```
+    This cmdlet fails over the readable secondary replica of the Managed Instance named `<ManagedInstanceName>`.
+
+- SQL Server, Azure SQL Database, and Azure SQL Managed Instance
 
     For a more permanent workaround, replace the query-generated statistics with the permanent statistics. Follow these steps:
 

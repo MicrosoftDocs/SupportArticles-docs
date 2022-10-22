@@ -7,10 +7,10 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue, azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-windows-activation
 ms.collection: windows
 ms.workload: na
 ms.tgt_pltfrm: vm-windows
-
 ms.topic: troubleshooting
 ms.date: 08/25/2022
 ms.author: genli
