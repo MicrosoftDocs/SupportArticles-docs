@@ -6,8 +6,8 @@ ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
 ms.reviewer: shaunbe
-author: pijocoder
-ms.author: jopilov
+author: liwei-yin
+ms.author: liweiyin
 ---
 
 # Troubleshoot UPDATE performance issues with narrow and wide plans in SQL Server
@@ -31,18 +31,18 @@ Here's a screenshot of Narrow and Wide Plans:
 
 :::image type="content" source="media/understand-wide-narrow-plans/narrow_wide_plans_initial.png" alt-text="narrow and wide plans illustrated":::
 
-## When will SQL Server choose a wide Plan?
+## When does SQL Server choose a wide Plan?
 
 There are two criteria that must be met for SQL Server to choose a wide plan:
 
  - The number of rows impacted is greater than 250.
  - The size of leaf-level of the non-clustered indexes (index page count * 8 KB) is at least 1/1000 of the max server memory setting.
 
-## More information
+
+## Examples:
 
 The following examples illustrate how narrow and wide plans work
 
-### Examples:
 
 Environment: SQL Server 2019 CU11, Max Server Memory = 1500 MB
 
