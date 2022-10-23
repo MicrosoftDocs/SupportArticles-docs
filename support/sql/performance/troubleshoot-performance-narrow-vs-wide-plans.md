@@ -5,7 +5,7 @@ ms.date: 10/22/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
-ms.reviewer: shaunbe
+ms.reviewer: jopilov, shaunbe
 author: liwei-yin
 ms.author: liweiyin
 ---
@@ -176,7 +176,7 @@ The query with wide plan takes 0.136 second, while the query with narrow plan on
 
 :::image type="content" source="media/understand-wide-narrow-plans/wide_narrow_plan_data_in_buffer_pool.png" alt-text="wide and narrow plans when data is cache in buffer pool":::
 
-#### The Data isn't cached in the buffer pool
+#### Data isn't cached in the buffer pool
 
 When you do the test, make sure yours is the only workload in SQL Server, and the disks are dedicated to SQL Server.
 
@@ -205,9 +205,9 @@ The query with Wide plan takes 3.554 seconds, while the query with Narrow Plan t
 :::image type="content" source="media/understand-wide-narrow-plans/narrow_plan_data_not_in_bpool.png" alt-text="narrow plan when data is not cached in buffer pool":::
 
 
-## Is wide plan query always faster than narrow query plan when data isn't in buffer? 
+## Is the wide plan query always faster than narrow query plan when data isn't in buffer? 
 
-The answer is "Not always". To illustrate, let's try something that isn't common: 
+The answer is "not always". To illustrate, let's try something that isn't common: 
 
 ```sql
   SELECT c1,c1 AS c2, c1 AS C3,c1 AS c4, c1 AS C5 INTO mytable3 FROM mytable2
@@ -242,9 +242,9 @@ The duration of both queries is reduced significantly! The wide plan takes 0.304
 
 ## Scenarios where wide plan is applied
 
-Here are the other scenarios where the wide plan is also applied 
+Here are the other scenarios where the wide plan is also applied: 
 
-1. The clustered index column also has unique/primary key, Wide Update Plan is used if multiple rows are updated.
+### The clustered index column also has unique/primary key, wide plan used if multiple rows are updated
 
 ```sql
 CREATE TABLE mytable4(c1 INT primary key ,c2 INT,c3 INT,c4 INT)
@@ -261,7 +261,7 @@ INSERT mytable4 VALUES(1,1,1,1)
 
 For more details, review this blog post [Maintaining Unique Indexes](/archive/blogs/craigfr/maintaining-unique-indexes)
 
-2. Cluster index column is also specified in partition scheme.
+### Cluster index column is also specified in partition scheme
 
 ```sql
 CREATE TABLE mytable5(c1 INT, c2 INT, c3 INT, c4 INT)
@@ -290,15 +290,17 @@ UPDATE mytable5 SET c1=c1 WHERE  c1=1
 
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_clustered_column_in_partition_scheme.png" alt-text="wide plan used when clustered column in partition scheme":::
 
-A subscenario here: If the clustered index column isn't part of the partition scheme, the wide plan is used as long as the partition scheme column is updated in T-SQL. Here's an example 
+###  Clustered index column isn't part of the partition scheme, the wide plan used if partition scheme column is updated 
+
+Here's an example 
 
 ```sql
-create table mytable6(c1 int,c2 int , c3 int,c4 int)
+CREATE TABLE mytable6(c1 INT,c2 INT , c3 INT,c4 INT)
 go
-if exists(select* from sys.partition_schemes where name='PS2')
+if exists(select* from sys.partition_schemes WHERE name='PS2')
 	DROP PARTITION SCHEME PS2
 go
-if exists(select* from sys.partition_functions where name='PF2')
+IF EXISTS (SELECT * FROM sys.partition_functions WHERE name='PF2')
 	DROP PARTITION FUNCTION PF2
 go
 CREATE PARTITION FUNCTION PF2(int) AS 
@@ -310,8 +312,8 @@ CREATE PARTITION SCHEME PS2 AS
   ([PRIMARY]) 
 go 
 CREATE CLUSTERED INDEX c1 on mytable6(c1) on PS2(c2) -- on c2 column
-create index c3 on mytable6(c3)
-create index c4 on mytable6(c4)
+CREATE INDEX c3 on mytable6(c3)
+CREATE INDEX c4 on mytable6(c4)
 ```
 
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_part_scheme_column_update.png" alt-text="wide plan part used when partition scheme column updated":::
