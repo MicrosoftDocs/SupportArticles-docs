@@ -54,8 +54,7 @@ You can use the built-in troubleshooting feature to review different compliance 
         - To force check-in:
             - On the Android device, open the Company Portal app > **Devices** > Choose the device from list > **Check Device Settings**.
             - On the iOS/iPadOS device, open the Company portal app > **Devices** > Choose the device from list > **Check Settings**.
-
-        - On a Windows device, open **Settings** > **Accounts** > **Access Work or School** > Select the account or MDM enrollment > **Info** > **Sync**.
+            - On a Windows device, open **Settings** > **Accounts** > **Access Work or School** > Select the account or MDM enrollment > **Info** > **Sync**.
 
     - Select the device to see policy-specific information.
 
