@@ -14,7 +14,7 @@ ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-windows
 
 ms.topic: troubleshooting
-ms.date: 9/20/2018
+ms.date: 10/24/2022
 ms.author: anandh
 
 ---
@@ -68,7 +68,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 1. From the list of VM names, select the VM that you want to run diagnostics on.
 1. In the **Help** section, select **Performance diagnostics**.
 
-    :::image type="content" source="media/performance-diagnostics/open-performance-diag。png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
+    :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
 
     > [!NOTE]
     > In this screenshot, the blade of VM names is hidden.
@@ -76,11 +76,9 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     If you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account by clicking the **Settings** button in the toolbar. Click the **OK** button once you select the storage account.
 
+    :::image type="content" source="media/performance-diagnostics/storage-account-settings.png" alt-text="Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted.":::
+
     If you do not specify a storage account, a new storage account will be created by default.
-
-    :::image type="content" source="media/performance-diagnostics/settings-button.png" alt-text="Screenshot of Performance diagnostics blade, with Settings toolbar button highlighted.":::
-
-    :::image type="content" source="media/performance-diagnostics/select-storage-account.png" alt-text="Screenshot of storage account selection from Performance diagnostics settings blade.":::
 
 1. Select the **Install performance diagnostics** button.
 1. Select the **Run diagnostics** check box if you want to run a diagnostic after the installation is completed. If you make this selection, you will be able to choose the performance analysis scenario and related options.
