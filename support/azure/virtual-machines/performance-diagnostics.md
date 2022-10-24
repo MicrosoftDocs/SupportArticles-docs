@@ -78,7 +78,7 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     If you do not specify a storage account, a new storage account will be created by default.
 
-1. Select the **Install performance diagnostics** button. Select the **Run diagnostics** check box if you want to run a diagnostic after the installation is completed. If you make this selection, you will be able to choose the performance analysis scenario and related options.
+1. Select the **Install performance diagnostics** button. If you want to run a diagnostic after the installation is completed, select the **Run diagnostics after the installation finishes** check box. If you make this selection, you will be able to choose the performance analysis scenario and related options.
 
     :::image type="content" source="media/performance-diagnostics/install-diagnostics-button.png" alt-text="Screenshot of Performance diagnostics install button. The Run diagnostics after installation finishes option is checked.":::
 
