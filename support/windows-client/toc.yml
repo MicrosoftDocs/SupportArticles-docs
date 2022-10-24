@@ -700,10 +700,14 @@
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
+      href: ./performance/event-id-41-restart.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
       href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
     - name: Stop error or blue screen error troubleshooting
       href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
+    - name: Stop error when updating in-box Broadcom network adapter driver
+      href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Generate a kernel or complete crash dump
       href: ./performance/generate-a-kernel-or-complete-crash-dump.md
     - name: Configure system failure and recovery options
@@ -726,6 +730,8 @@
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
+    - name: Windows start-up issues advanced troubleshooting
+      href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
     items:
     - name: Windows-based computer freeze troubleshooting
