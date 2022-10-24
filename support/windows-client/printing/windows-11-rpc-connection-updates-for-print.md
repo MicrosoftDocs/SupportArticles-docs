@@ -104,7 +104,7 @@ The following settings can be configured through either Group Policy or directly
 ### Use RPC over Named Pipes for client – server communication
 
 * Enable by using Group Policy:  
-    Path: Computer Configuration > Administrative Templates > Printers > Configure RPC connection Settings  
+    Path: **Computer Configuration** > **Administrative Templates** > **Printers** > **Configure RPC connection Settings**  
     Enable and set to **RpcOverNamedPipes**.
 * Enable the setting by using the registry:  
     Run `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /v RpcUseNamedPipeProtocol /t REG_DWORD /d 1 /f`
@@ -120,7 +120,7 @@ The following settings can be configured through either Group Policy or directly
 ### Use a specific port for RPC over TCP communication
 
 * Enable via Group Policy:  
-  Path: Computer Configuration > Administrative Templates > Printers > Configure RPC over TCP port
+  Path: **Computer Configuration** > **Administrative Templates** > **Printers** > **Configure RPC over TCP port**
   Enable and set the port number
 * Enable the setting via the registry  
   Run `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /v RpcTcpPort /t REG_DWORD /d <port number> /f`
@@ -130,7 +130,7 @@ Max port: 65535
 ### Enforce Kerberos authentication
 
 * Enable via Group Policy:  
-  Path: Computer Configuration > Administrative Templates > Printers > Configure RPC listener settings  
+  Path: **Computer Configuration** > **Administrative Templates** > **Printers** > **Configure RPC listener settings**  
   Enable and set the authentication protocol allowed to be used to Kerberos.
 * Enable the setting via the registry  
   Run `reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Printers\RPC" /v ForceKerberosForRpc /t REG_DWORD /d 1 /f`
