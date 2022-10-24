@@ -4,6 +4,7 @@ description: Discusses the support policy for Microsoft server software in a Mic
 ms.date: 07/21/2020
 ms.reviewer: drewm, coreysa
 ms.service: virtual-machines
+ms.subservice: vm-support-statements
 ms.collection: windows
 ---
 # Microsoft server software support for Azure virtual machines

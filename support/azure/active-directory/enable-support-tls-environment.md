@@ -1,7 +1,7 @@
 ---
 title: Enable TLS 1.2 support as Azure AD TLS 1.0/1.1 is deprecated
 description: This article describes how to enable support for TLS 1.2 in your environment, in preparation for upcoming Azure AD TLS 1.0/1.1 deprecation.
-ms.date: 07/11/2022
+ms.date: 10/3/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: dahans, abizerh
@@ -79,6 +79,11 @@ You can configure those values to add TLS 1.2 and TLS 1.1 to the default secure 
 
 For more information, see [How to enable TLS 1.2 on clients](/mem/configmgr/core/plan-design/security/enable-tls-1-2-client).
 
+> [!NOTE]
+> By default, an OS that supports TLS 1.2 (for example, Windows 10) also supports legacy versions of the TLS protocol. When a connection is made by using TLS 1.2 and it doesn’t get a timely response, or when the connection is reset, the OS might try to connect to the target web service by using an older TLS protocol (such as TLS 1.0 or 1.1). This usually occurs if the network is busy, or if a packet drops in the network. After the temporary fallback to the legacy TLS, the OS will try again to make a TLS 1.2 connection.
+>
+> What will be the status of such fallback traffic after Microsoft stops supporting the legacy TLS? The OS might still try to make a TLS connection by using the legacy TLS protocol. But if the Microsoft service is no longer supporting the older TLS protocol, the legacy TLS-based connection won’t succeed. This will force the OS to try the connection again by using TLS 1.2 instead.
+
 ### Identify and reduce dependency on clients that don't support TLS 1.2
 
 Update the following clients to provide uninterrupted access:
@@ -122,7 +127,7 @@ For more information, see [Handshake Simulation for various clients connecting t
 
 To manually configure and enable TLS 1.2 at the operating system level, you can add the following DWORD values.
 
-For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values are not required unless they were set with different values.
+For Windows 2012 R2, Windows 8.1, and later OS, TLS 1.2 is enabled by default. Thus, the following registry values aren't required unless they were set with different values.
 
 - **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client**
   - "DisabledByDefault": **00000000**

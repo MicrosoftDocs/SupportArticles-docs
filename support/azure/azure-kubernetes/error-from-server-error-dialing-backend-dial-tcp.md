@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot the "Error from server: error dialing backend: dial tcp" error so that I can connect to the API server or use the `kubectl logs` command to get logs.
 ---

@@ -83,6 +83,8 @@
 
 - name: Troubleshoot scale operations
   items:
+  - name: Common issues with running or scaling large AKS clusters
+    href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
 

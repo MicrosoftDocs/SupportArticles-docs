@@ -11,8 +11,8 @@ keywords: cannot start application, program won't open, listen port blocked, una
 ms.service: virtual-machines
 ms.workload: infrastructure-services
 ms.tgt_pltfrm: vm-linux
-
 ms.topic: troubleshooting
+ms.subservice: vm-cannot-connect
 ms.date: 10/31/2018
 ms.author: genli
 

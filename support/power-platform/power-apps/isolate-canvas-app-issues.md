@@ -81,7 +81,7 @@ If the result has text, then it's likely a Power Apps bug with the control. You 
 
 ## Try a different control
 
-To find out if the issue is with a specific control, try using a different control that has the same [type](/power-apps/maker/canvas-apps/functions/data-types) of input or output.
+To find out if the issue is with a specific control, try using a different control that has the same [data type](/power-platform/power-fx/data-types) of input or output.
 
 ### Boolean
 

@@ -3,7 +3,7 @@ title: Failed to get element or window or element or window wasn't found error
 description: Provides a resolution to solve the error message that you receive when a UI automation action fails in Power Automate.
 ms.reviewer: pefelesk
 ms.date: 9/21/2022
-ms.subservice: power-automate-flows
+ms.subservice: power-automate-desktop-flows
 ---
 # UI automation action fails with "Failed to get element/window" or "Element/Window wasn't found" error
 
@@ -25,11 +25,11 @@ A UI automation action fails with one of the following error messages in Microso
 
 The first time that the element was captured during authoring of the desktop flow, Power Automate for desktop was able to interact with the element successfully.
 
-## Cause 1
+## Cause 1: Application's window name or element's underlying structure has changed
 
 Either the window name of the application or the underlying structure of the element has changed. Therefore, the UI selector initially used to locate the element is no longer applicable.
 
-## Resolution for cause 1
+### Resolution
 
 Edit the UI selector of the element to create a new more robust UI selector. It will be able to locate the element even if the window name or the underlying structure of the element is dynamic. Any parts of the selector that are dynamic should be removed.
 
@@ -59,11 +59,11 @@ In general, the below methods could be followed:
 
 Surface automation can be used as an alternative way to automate the application. For best practices, see [How to automate with Mouse, Keyboard and OCR](https://support.microsoft.com/topic/how-to-automate-with-mouse-keyboard-and-ocr-e1c09a7f-7bf6-40a9-bf83-8ebb5a2e935c).
 
-## Cause 2
+## Cause 2: More elevated privileges are running
 
 The application runs with more elevated privileges than Power Automate for desktop.
 
-## Resolution for cause 2
+### Resolution
 
 Both the application and Power Automate for desktop should run with the same privileges.
 

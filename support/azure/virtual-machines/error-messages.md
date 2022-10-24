@@ -6,8 +6,8 @@ documentationcenter: ''
 author: xujing-ms
 manager: dcscontentpm 
 tags: azure-resource-manager
-
 ms.service: virtual-machines
+ms.subservice: vm-common-errors-issues
 ms.topic: troubleshooting
 ms.workload: infrastructure
 ms.date: 5/22/2017

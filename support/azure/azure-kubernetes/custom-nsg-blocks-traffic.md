@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: chiragpa
 editor: v-jsitser
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: cannot-connect-to-app-on-cluster
 #Customer intent: As an Azure Kubernetes user, I want to fix custom network security group (NSG) configuration issues so that I don't get time-out errors when trying to access an application that's hosted on an Azure Kubernetes Service (AKS) cluster.
 ---
 # A custom network security group blocks traffic

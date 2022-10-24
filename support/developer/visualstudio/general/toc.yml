@@ -2,8 +2,6 @@
   href: ./_stat-family-cannot-support-symbolic-directory-link.md
 - name: Alternate credentials don't work for Online accounts
   href: ./alternate-credentials-stop-working.md
-- name: BI projects don't open after an upgrade
-  href: ./bi-project-not-open-after-upgrade.md
 - name: Can't find resources in XAML or WPF designer
   href: ./cannot-find-resource-named-error.md
 - name: Can't sign in when JavaScript is disabled
@@ -14,17 +12,11 @@
   href: ./release-management-not-have-https-protocol.md
 - name: Files can't be saved when you use Resource Editor
   href: ./resource-editor-cannot-save-file.md
-- name: Help Viewer Power Tool
-  href: ./help-viewer-power-tool.md
-- name: Microsoft.Vsa.tlb could not be loaded
-  href: ./vsa-tlb-not-loaded.md
 - name: Subscriptions administrator migration
   href: ./subscription-administrator-migration.md
 - name: Use AssemblyVersion and AssemblyFileVersion
   href: ./assembly-version-assembly-file-version.md
 - name: VBScript runtime error when you do a numeric comparison
   href: ./vbs-type-mismatch-error.md
-- name: Windows Automation API 3.0 improves performance
-  href: ./windows-automation-api-3-improve-visual-studio.md
 - name: Workarounds for Visual Studio 2022 on unsupported operating systems
   href: ./visual-studio-2022-unsupported-operating-systems.md

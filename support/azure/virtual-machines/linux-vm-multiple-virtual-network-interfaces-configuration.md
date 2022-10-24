@@ -329,7 +329,7 @@ If you encounter some issues, restart the VM by using the `reboot` command, and 
 
     ```yml
     network:
-    config: disabled
+       config: disabled
     ```
 
 1. Modify the netplan configuration file */etc/netplan/50-cloud-init.yaml*, and include the following routes and policy-routing blocks in each network interface section:

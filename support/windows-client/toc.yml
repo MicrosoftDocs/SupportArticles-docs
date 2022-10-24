@@ -142,8 +142,6 @@
       href: ./backup-and-storage/system-image-restore-failed-error-0x80070002.md
   - name: Partition and volume management
     items:
-    - name: Convert MBR partition to GPT
-      href: ./backup-and-storage/convert-mbr-partition-to-gpt.md
     - name: Access is denied error message
       href: ./backup-and-storage/access-denied-error-appears-permissions-are-correct.md
     - name: Event ID 8 is logged in Application log
@@ -262,20 +260,8 @@
       href: ./deployment/updates-not-install-with-fast-startup.md
   - name: Servicing
     items:
-    - name: Servicing stack updates
-      href: ./deployment/servicing-stack-updates.md
-    - name: Get started with Windows Update
-      href: ./deployment/get-started-with-windows-update.md
     - name: Additional resources for Windows Update
       href: ./deployment/additional-resources-for-windows-update.md
-    - name: Common Windows Update errors
-      href: ./deployment/common-windows-update-errors.md
-    - name: Windows Update issues troubleshooting
-      href: ./deployment/windows-update-issues-troubleshooting.md
-    - name: Windows Update log files
-      href: ./deployment/windows-update-log-files.md
-    - name: How Windows Update works
-      href: ./deployment/how-windows-update-works.md
     - name: 'Troubleshooting guidance: Windows Update'
       href: ./deployment/troubleshoot-windows-update-issues.md
     - name: .NET Framework 1.1 isn't supported
@@ -362,16 +348,6 @@
     items:
     - name: Windows 10 upgrade resolution procedures
       href: ./deployment/windows-10-upgrade-resolution-procedures.md
-    - name: Windows 10 upgrade log files
-      href: ./deployment/windows-10-upgrade-log-files.md
-    - name: Windows 10 upgrade error codes
-      href: ./deployment/windows-10-upgrade-error-codes.md
-    - name: Windows error reporting
-      href: ./deployment/windows-error-reporting.md
-    - name: Windows 10 upgrade issues troubleshooting
-      href: ./deployment/windows-10-upgrade-issues-troubleshooting.md
-    - name: SetupDiag tool for Windows 10 upgrade
-      href: ./deployment/setupdiag-tool-for-windows-10-upgrade.md
     - name: Windows 10 upgrade quick fixes
       href: ./deployment/windows-10-upgrade-quick-fixes.md
     - name: .NET Framework 4.5.1 (web installer)
@@ -442,12 +418,6 @@
       href: ./deployment/cant-access-efi-system-partition.md
   - name: USMT
     items:
-    - name: USMT return codes
-      href: ./deployment/usmt-return-codes.md
-    - name: USMT log files
-      href: ./deployment/usmt-log-files.md
-    - name: USMT FAQ
-      href: ./deployment/usmt-faq.yml
     - name: USMT common issues
       href: ./deployment/usmt-common-issues.md
 - name: Group Policy
@@ -730,10 +700,14 @@
       href: ./performance/issues-when-calls-createwindowex-32-bit-applications.md
   - name: Blue Screen/Bugcheck
     items:
+    - name: Event ID 41 "The system has rebooted without cleanly shutting down first"
+      href: ./performance/event-id-41-restart.md
     - name: Stop error 7B or Inaccessible_Boot_Device troubleshooting
       href: ./performance/stop-error-7b-or-inaccessible-boot-device-troubleshooting.md
     - name: Stop error or blue screen error troubleshooting
       href: ./performance/stop-error-or-blue-screen-error-troubleshooting.md
+    - name: Stop error when updating in-box Broadcom network adapter driver
+      href: ./performance/stop-error-broadcom-network-driver-update.md
     - name: Generate a kernel or complete crash dump
       href: ./performance/generate-a-kernel-or-complete-crash-dump.md
     - name: Configure system failure and recovery options
@@ -756,6 +730,8 @@
       href: ./performance/stop-error-lenovo-thinkpad-kb4568831-uefi.md
     - name: Tablet device creates only a minidump file
       href: ./performance/tablet-device-creates-minidump-file.md
+    - name: Windows start-up issues advanced troubleshooting
+      href: ./performance/windows-startup-issues-troubleshooting.md
   - name: No Boot (not BugChecks)
     items:
     - name: Windows-based computer freeze troubleshooting
@@ -854,6 +830,8 @@
       href: ./printing/errors-connect-to-shared-printer-cname-record.md
     - name: Printing from Modern App creates large spool file
       href: ./printing/print-modern-app-creates-large-file.md
+    - name: Windows 11 RPC connection updates for print
+      href: ./printing/windows-11-rpc-connection-updates-for-print.md
   - name: 'Management and Configuration: Installing Print drivers'
     items:
     - name: Error message 0x0000052e when you try to install a network printer
@@ -1152,8 +1130,6 @@
       href: ./user-profiles-and-logon/event-id-300-windows-hello-successfully-created-in-windows-10.md
     - name: Windows Hello errors during PIN creation in Windows 10
       href: ./user-profiles-and-logon/windows-hello-errors-during-pin-creation-in-windows-10.md
-    - name: Windows Hello for Business FAQ
-      href: ./user-profiles-and-logon/windows-hello-for-business-faq.yml
 - name: Virtualization
   items:
   - name: Virtualization
@@ -1200,8 +1176,6 @@
       href: ./windows-security/access-computer-after-administrator-disabled.md
   - name: Bitlocker
     items:
-    - name: BitLocker FAQ
-      href: ./windows-security/bitlocker-faq.yml
     - name: Decode Measured Boot logs to track PCR changes
       href: ./windows-security/decode-measured-boot-logs-to-track-pcr-changes.md
     - name: 'BitLocker and TPM: other known issues'

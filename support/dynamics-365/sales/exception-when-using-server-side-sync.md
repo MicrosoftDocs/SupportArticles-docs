@@ -13,6 +13,9 @@ This article provides a solution to an error that occurs when you use Server-Sid
 _Applies to:_ &nbsp; Microsoft Dynamics 365  
 _Original KB number:_ &nbsp; 3212785
 
+> [!IMPORTANT]
+> If you are using Exchange Online and this error occurs after October 1st, 2022, this may be caused by Basic authentication being disabled. For more information about how to temporarily enable Basic authentication again for a limited time, see [Use of Basic authentication with Exchange Online](/power-platform/admin/use-basic-authentication-exchange-online).
+
 ## Symptoms
 
 When you use Server-Side Synchronization in Dynamics 365, you receive one of the following errors:

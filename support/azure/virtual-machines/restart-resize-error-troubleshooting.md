@@ -7,6 +7,7 @@ author: genlin
 manager: dcscontentpm
 tags: top-support-issue
 ms.service: virtual-machines
+ms.subservice: vm-cannot-start-stop
 ms.topic: troubleshooting
 ms.date: 11/16/2021
 ms.author: genli

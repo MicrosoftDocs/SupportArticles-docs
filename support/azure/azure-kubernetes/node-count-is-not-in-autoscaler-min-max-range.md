@@ -6,7 +6,8 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 editor: v-jsitser
 ms.reviewer: chiragpa, nickoman
-ms.service: container-service
+ms.service: azure-kubernetes-service
+ms.subservice: common-issues
 keywords:
 #Customer intent: As an Azure Kubernetes user, I want to troubleshoot why the current node count isn't in the autoscaler "min" and "max" range so that I can successfully resume my Azure Kubernetes Service (AKS) cluster after a stop operation.
 ---

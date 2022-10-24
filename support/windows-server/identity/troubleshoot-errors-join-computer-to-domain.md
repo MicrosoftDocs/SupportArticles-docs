@@ -37,11 +37,11 @@ When you type the domain name, make sure that you type the Domain Name System (D
 Additionally, verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server is configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
 ```console
-nltest /dsgetdc:<netbios domain name>/force
+nltest /dsgetdc:<netbios domain name> /force
 ```
 
 ```console
-nltest /dsgetdc:<DNS domain name>/force
+nltest /dsgetdc:<DNS domain name> /force
 ```
 
 ### Error 2
@@ -55,11 +55,11 @@ When you type the domain name, make sure that you type the DNS name and not the 
 Additionally, verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server is configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
 ```console
-nltest /dsgetdc:<netbios domain name>/force
+nltest /dsgetdc:<netbios domain name> /force
 ```
 
 ```console
-nltest /dsgetdc:<DNS domain name>/force
+nltest /dsgetdc:<DNS domain name> /force
 ```
 
 ### Error 3
@@ -90,11 +90,11 @@ When you type the domain name, make sure that you type the DNS name and not the 
 Verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server has been configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
 ```console
-nltest /dsgetdc:<netbios domain name>/force
+nltest /dsgetdc:<netbios domain name> /force
 ```
 
 ```console
-nltest /dsgetdc:<DNS domain name>/force
+nltest /dsgetdc:<DNS domain name> /force
 ```
 
 When you type the domain name, make sure that you type the DNS name and not the NetBIOS name.
@@ -124,11 +124,11 @@ The error may be transient. Try again later. If the issue persists, verify the s
 Verify that the computer can reach a DNS server that hosts the DNS zone of the target domain or can resolve DNS names in that domain. Make sure that the correct DNS server has been configured on this client as the preferred DNS, and that the client has connectivity to that server. To verify this, you can run one of the following commands:
 
 ```console
-nltest /dsgetdc:<netbios domain name>/force
+nltest /dsgetdc:<netbios domain name> /force
 ```
 
 ```console
-nltest /dsgetdc:<DNS domain name>/force
+nltest /dsgetdc:<DNS domain name> /force
 ```
 
 When you type the domain name, make sure that you type the DNS name and not the NetBIOS name. Make sure that you have the most up-to-date drivers installed for the client computer's network adapter. Verify connectivity between the client that is being joined and the target DC over the required ports and protocols. Disable the **TCP** **Chimney**  offload feature and IP offloading.

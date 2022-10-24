@@ -212,7 +212,7 @@ Being blocked for resource allocation means that your query is waiting to execut
 **Mitigations**
 
 - Wait for the blocking session to complete.
-- Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouseresource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
+- Evaluate the [resource class choice](/azure/synapse-analytics/sql-data-warehouse/resource-classes-for-workload-management#example-code-for-finding-the-best-resource-class). For more information, see [concurrency limits](/azure/synapse-analytics/sql-data-warehouse/memory-concurrency-limits).
 - Evaluate if it's preferable to [Kill the blocking session](/sql/t-sql/language-elements/kill-transact-sql).
 
 </details>
@@ -229,7 +229,7 @@ Though these scenarios are atypical, you have options to attempt to override the
 **Mitigations**
 
 - Use ANSI-92 style joins.
-- Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sqlt-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performancecardinality-estimation-sql-server).
+- Add query hints: `OPTION(FORCE ORDER, USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'))`. For more information, see [FORCE ORDER](/sql/t-sql/queries/hints-transact-sql-query#force-order) and [Cardinality Estimation (SQL Server)](/sql/relational-databases/performance/cardinality-estimation-sql-server).
 - Break the query into multiple, less complex steps.
 
 </details>
