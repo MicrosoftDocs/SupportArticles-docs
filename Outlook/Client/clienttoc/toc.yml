@@ -387,6 +387,8 @@
           href: ../junk-email/outlook-error-over-junk-emial-list-limit.md
     - name: Message Body
       items:
+        - name: Accept and Decline buttons missing in a task request
+          href: ../message-body/accept-decline-buttons-missing-in-task-request.md
         - name: Attachment doesn't show in a Plain Text message
           href: ../message-body/attachment-does-not-appear-in-plain-text-message.md
         - name: Attachment size exceeds the allowable limit error
