@@ -25,7 +25,7 @@ ms.date: 10/21/2022
 
 ## Symptoms
 
-When you send a task request message in Outlook, the recipient's task request doesn't contain the **Accept** and **Decline** buttons or have legible task details. This issue can occur for recipients who are internal or external to your Microsoft Exchange Server organization.
+When you send a task request message in Outlook, the recipient's task request doesn't contain the **Accept** and **Decline** buttons or have legible task details. This issue can occur for recipients who are internal or external to your Microsoft Exchange organization.
 
 For example, the recipient's task request might resemble the following example.
 
