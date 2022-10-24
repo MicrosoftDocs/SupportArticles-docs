@@ -70,8 +70,6 @@ Performance diagnostics installs a VM extension that runs a diagnostics tool tha
 
     :::image type="content" source="media/performance-diagnostics/open-performance-diag.png" alt-text="Screenshot of Azure portal, with Install performance diagnostics button highlighted.":::
 
-    > [!NOTE]
-    > In this screenshot, the blade of VM names is hidden.
 1. Select a storage account (optional)
 
     If you want to use a single storage account to store the performance diagnostics results for multiple VMs, you can select a storage account by clicking the **Settings** button in the toolbar. Click the **OK** button once you select the storage account.
