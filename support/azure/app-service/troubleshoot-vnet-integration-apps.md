@@ -44,7 +44,7 @@ WEBSITE_PRIVATE_IP=<IP address>
 **Linux OS-based apps**
 
 ```console
-set| egrep --color 'WEBSITE_PRIVATEIP'
+set| egrep --color 'WEBSITE_PRIVATE_IP'
 ```
 
 ### Check the private IP in the Kudu environment
