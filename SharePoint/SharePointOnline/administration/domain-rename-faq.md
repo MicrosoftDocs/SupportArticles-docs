@@ -84,7 +84,7 @@ No, you must schedule the rename for more than 24 hours and less than 30 days fr
 <details>
 <summary><b>Can we rename a tenant more than once?</b></summary>
 
-Yes, but only after six months from the previous rename.  
+No, you can rename a tenant only once. If you have a need for additional renames, please submit a support request by selecting the following link: [Rename a Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20Tenant%20more%20than%20once). 
 
 </details>
 <br/>
@@ -98,7 +98,7 @@ It depends on the number of sites and how busy the service is at that time. A do
 <details>
 <summary><b>How long does the site redirection last?</b></summary>
 
-As of today, Microsoft won't delete any redirected sites that were created as part of a tenant rename but this may change in the future.
+In the past we haven't deleted any redirected sites that were created as part of a tenant rename but as we indicated that this might change in the future, the site redirection will last for 1 year from the time your rename completes. Please ensure all uses of the old domain URL are removed within that period.
 
 </details>
 <br/>
