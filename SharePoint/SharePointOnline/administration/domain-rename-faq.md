@@ -84,7 +84,7 @@ No, you must schedule the rename for more than 24 hours and less than 30 days fr
 <details>
 <summary><b>Can we rename a tenant more than once?</b></summary>
 
-No, you can rename a tenant only once. If you have a need for additional renames, please submit a support request by selecting the following link: [Rename a Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20Tenant%20more%20than%20once). 
+No, you can rename a tenant only once. If you have a need for additional renames, please submit a support request by selecting the following link: [Rename a Tenant more than once](https://admin.microsoft.com/AdminPortal/?searchSolutions=Rename%20a%20SharePoint%20Tenant%20more%20than%20once). 
 
 </details>
 <br/>
