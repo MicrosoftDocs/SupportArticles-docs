@@ -15,54 +15,70 @@ appliesto:
   - Microsoft Teams
 search.appverid: 
   - MET150
-ms.date: 3/31/2022
+ms.date: 8/16/2022
 ---
 
 # Dial pad is missing in Teams
-
-## Symptoms
 
 Microsoft Teams user can't make outbound calls because the dial pad in the **Calls** screen in Teams is missing.
 
 ## Cause
 
-Here are the four possible causes of this issue:
+In the Teams client, the dial pad enables users to access Public Switched Telephone Network (PSTN) functionality. The dial pad is available for users with a Phone System license, provided they're configured properly. All of the following conditions must be met for the dial pad to appear:
 
-- The user hasn't assigned a Teams license.
-- The user hasn't assigned a Calling Plan.
-- The user hasn't enabled Enterprise Voice.
-- The user is in **Islands** mode.
-- The **OnlineVoiceRoutingPolicy** value isn't set correctly for the user.
+- The user has a Teams license assigned.
+- The user has a Teams Phone System (MCOEV) license assigned.
+- The user has Microsoft Calling Plan, Operator Connect, or is enabled for Direct Routing.
+- The user has Enterprise Voice enabled.
+- The user is homed online and not in Skype for Business on-premises.
+- The user has Teams Calling Policy enabled with AllowPrivateCalling = True.
 
 ## Resolution
 
-- Make sure that the user has been assigned a [Teams license](/microsoftteams/teams-add-on-licensing/assign-teams-add-on-licenses).
-- Make sure that the user has been assigned a [Calling Plan](/microsoftteams/calling-plan-landing-page).
-- Enable the user for [Enterprise Voice](/skypeforbusiness/skype-for-business-hybrid-solutions/plan-your-phone-system-cloud-pbx-solution/enable-users-for-enterprise-voice-online-and-phone-system-voicemail).
-- For more information about Islands mode, see [Understand Microsoft Teams and Skype for Business coexistence and interoperability](/microsoftteams/teams-and-skypeforbusiness-coexistence-and-interoperability).
-- Teams administrators should remove the user's **OnlineVoiceRoutingPolicy** value and set the correct value for the policy as shown in the following example:
+See [Dial pad Configuration](/microsoftteams/dial-pad-configuration) to learn how to configure users correctly for Teams PSTN calling.
 
-    ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
-    ```
+Use one of the following diagnostic tools:
 
-    ```powershell
-    Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
-    ```
+- Microsoft Remote Connectivity Analyzer tool
 
-    These actions force an update of the policy in the back-end environment of Teams. After this change is made, the user should see the dial pad appear under **Calls** within four hours.
+  Microsoft 365 admin users can run the [Teams PSTN Calling Dial Pad](https://testconnectivity.microsoft.com/tests/TeamsDialpadMissing/input) test in the context of the user experiencing the symptom. 
+- Microsoft 365 support self-diagnostics tool
 
-### Run a self-diagnostics tool
+  Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect the dial pad.
 
-Microsoft 365 admin users have access to diagnostic tools that they can run within the tenant to verify possible issues that affect the dial pad.
+  > [!NOTE]
+  > This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
 
-> [!NOTE]
-> This feature isn't available for Microsoft 365 Government, Microsoft 365 operated by 21Vianet, or Microsoft 365 Germany.
+  Select the **Run Tests** link. It will populate the diagnostic in the Microsoft 365 admin center.
 
-Select the **Run Tests** link. This will populate the diagnostic in the Microsoft 365 admin center.
+  > [!div class="nextstepaction"]
+  > [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag)
 
-> [!div class="nextstepaction"]
-> [Run Tests: Teams Dial Pad Missing](https://aka.ms/TeamsDialPadMissingDiag)
+### Enterprise Voice shows Disabled
+
+If the diagnostic result from one of the tools shows that the user isn't enabled for Enterprise Voice, but the user account shows that it's enabled in Teams PowerShell, the tenant administrator must toggle the setting off and back on to force an update to the backend as shown in the following example:
+
+```powershell
+Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $False
+```
+
+```powershell
+Set-CsPhoneNumberAssignment -Identity "Ken Myer" -EnterpriseVoiceEnabled $True
+```
+
+### Direct Routing-enabled users missing dial pad
+
+If the diagnositic result from one of the tools shows that the user isn't configured correctly with a routing policy, the tenant administrator must remove the user's **OnlineVoiceRoutingPolicy** value, and then set the correct value for the policy as shown in the following example:
+
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName $Null
+```
+
+```powershell
+Grant-CsOnlineVoiceRoutingPolicy -Identity "Ken Myer" -PolicyName "RedmondOnlineVoiceRoutingPolicy"
+```
+
+These actions force an update of the policy in the backend environment of Teams. After this change is made, the user should see the dial pad appears under **Calls** within an hour.
 
 ## More information
 

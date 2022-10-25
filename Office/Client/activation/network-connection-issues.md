@@ -2,7 +2,7 @@
 title: Microsoft 365 Apps activation network connection issues
 description: Troubleshooting activation issues due to network connection problems.
 author: helenclu
-ms.reviewer: vikkarti
+ms.reviewer: vikkarti, tfairman
 ms.author: luche
 manager: dcscontentpm
 audience: ITPro
@@ -12,6 +12,7 @@ ms.custom:
   - CSSTroubleshoot
   - CI 157765
   - CI 162387
+  - CI 166312
 search.appverid: 
   - MET150
 appliesto: 
@@ -190,15 +191,6 @@ If NCSI isn't registering your internet connection, try setting it to use Global
 1. Right-click the registry value and select **New**, then select **DWORD**.
 1. Name the DWORD `UseGlobalDNS`, and set the value to 1.
 1. Try activating Microsoft 365 again.
-
-If you still can't activate, try temporarily disabling IPv4 Checksum Offload:
-
-1. From Start, type *`powershell`*, and then select **Windows PowerShell** from the search results.
-1. At the command prompt, type the following command, and then press Enter:  
-`Disable-NetAdapterChecksumOffload -Name "*" -TcpIPv4`
-1. Try activating again.
-
-If you're still unable to activate, try temporarily disabling NCSI. For instructions, see the **Workaround** section of [An Internet Explorer or Edge window opens when your computer connects to a corporate network or a public network](/troubleshoot/windows-client/networking/internet-explorer-edge-open-connect-corporate-public-network#workaround).
 
 </details>
 

@@ -14,7 +14,9 @@ ms.reviewer: xiaojhua
 appliesto: 
   - SharePoint Foundation 2013
   - SharePoint Server 2013
-  - SharePoint Server 2016 
+  - SharePoint Server 2016
+  - SharePoint Server 2019
+  - SharePoint Server Subscription Edition
 search.appverid: MET150
 ms.date: 7/18/2022
 ---
@@ -70,7 +72,7 @@ If a database change is necessary, you should contact [Microsoft Support](http
 For some specific usage scenarios, the prohibition against the database changes has the following exceptions:
 
 - Operations that are initiated from the SharePoint Server administrative user interface.
-- SharePoint Server-specific tools (such as Ststadm.exe) that are provided directly by Microsoft.
+- SharePoint Server-specific tools (such as SharePoint PowerShell cmdlet) that are provided directly by Microsoft.
 - Changes that are made programmatically through the SharePoint Server object model and that are in compliance with the SharePoint Server SDK documentation.
 - Activities that are in compliance with the [SharePoint Server protocols documentation](/openspecs/sharepoint_protocols/ms-spprotlp/8a50af28-2b50-43d8-9c5a-3e520255ef7e?redirectedfrom=MSDN).
 
