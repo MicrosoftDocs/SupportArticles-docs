@@ -70,7 +70,7 @@ To set up rooms and workspaces correctly, you must complete the following tasks:
 1. Configure properties such as **CountryOrRegion**, **State**, **City**, **Building**, **Floor**, **FloorLabel**, and **Capacity** for the rooms and workspaces.
 1. [Create room lists and add rooms and workspaces to them](/exchange/recipients/room-mailboxes#create-a-room-list).  
 
-For example, consider that for an organization that uses *contoso.com* as the domain, you have to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle that is in the state of Washington in the country United States of America. If Building A has a total of 50 rooms and workspaces across three floors, you must complete the following tasks so that your users can find these spaces in Room Finder:
+For example, consider that for an organization that uses *contoso.com* as the domain, you have to set up meeting rooms and workspaces in Building A. This building is located in the city of Seattle that is in the state of Washington in the United States of America. If Building A has a total of 50 rooms and workspaces across three floors, you must complete the following tasks so that your users can find these spaces in Room Finder:
 
 1. Create a room mailbox for each meeting room, and set "Seattle" as the **City**, "Washington" as the **State**, "United States of America" as the **CountryorRegion**, a room capacity value for the **Capacity** property, and values for the **Floor** and **FloorLabel** properties. If room1 is on floor 1 and has a capacity of 5, run the following cmdlets:
 
