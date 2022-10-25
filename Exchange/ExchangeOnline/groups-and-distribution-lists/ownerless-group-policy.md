@@ -38,7 +38,7 @@ In Exchange Online, each mailbox has a limit of 10,000 messages to be sent per d
 
 ## How do I customize an ownership notification?  
 
-The ownership notification text can be customized when you configure the policy for an ownerless group. However, the customization options, such as setting a language based on a country or providing a customized URL, are not possible.
+The ownership notification text can be customized when you configure the policy for an ownerless group. However, the customization options, such as setting a language based on a country/region or providing a customized URL, are not possible.
 
 ## What occurs if group members accept or decline the ownership in a notification?
 
