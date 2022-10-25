@@ -118,6 +118,8 @@ landingContent:
             url: ./connection-issues-application-hosted-aks-cluster.md
           - text: Custom NSG blocks traffic
             url: ./custom-nsg-blocks-traffic.md
+          - text: Failures in the "az aks command invoke" command
+            url: ./resolve-az-aks-command-invoke-failures.md
           - text: Get and analyze HTTP response codes
             url: ./get-and-analyze-http-response-codes.md
           - text: Intermittent timeouts or server issues
