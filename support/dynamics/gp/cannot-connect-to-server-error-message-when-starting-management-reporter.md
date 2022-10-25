@@ -5,6 +5,7 @@ ms.reviewer: gbyer, kevogt
 ms.topic: troubleshooting
 ms.date: 03/31/2021
 ---
+
 # "Can't connect to the Management Reporter server" error when you start Microsoft Management Reporter 2012
 
 This article provides resolutions for the errors that may occur when you start Microsoft Management Reporter 2012.
@@ -200,6 +201,21 @@ setspn -S HTTP/MRservername.fullyqualifieddomainname domain\customAccountName
 > - "MRservername.FullyQualifiedDomainName" should be replaced with the fully qualified domain name of the MR server where the MR Application Service is installed.
 > - "domain\customAccountName" should be replaced with the domain account running the MR Services.
 
+When running the SETSPN commands, you may receive an error:
+Registering ServicePrincipalNames for CN=MSADynamicsGP,OU=Services,OU=Accounts,DC=contoso,DC=com 
+HTTP/myserver.contoso.com 
+Failed to assign SPN on account 'CN=MSADynamicsGP,OU=Services,OU=Accounts,DC=contoso,DC=com', error 0x21c7/8647 -> **The operation failed because SPN value provided for addition/modification is not unique forest-wide.** 
+This can happen if the domain is locked down and uses delegated admin accounts.  Confirm this server has not been moved between domains and it truly is unique.  Creating a new account that is unique and then running the commands should also correct this issue.   
+ To get a list of all SPNs to verify it is unique for a server type the following command:
+`Setspn -l <servername>` 
+If the above does not correct this issue running the command as a full domain admin allows the SETSPN to run successfully and corrected the issues with the client connectivity. 
+To check group membership at a command prompt on the server type the following command 
+`Net user /domain <username>` 
+The area you want to review is the "Local Group memberships" and the "Global Group memberships" 
+Here is an example: 
+![](media/cannot-connect-to-server-error-message-when-starting-management-reporter/getimage.png)
+To run setspn successfully, you must be logged in as a full domain administrator. This needs to return the *Domain Admins group. 
+`net user /domain generatoruser` 
 ### Resolution 10
 
 On the MR server, open Server Manager and then select **Dashboard**. On the right side, select **Add roles and Features**. This will open a wizard. Select **Next** until you get to the **Features** section. Expand .NET Framework 4.6 Features (or whatever the highest version available is). Select **Named Pipes Activation**. Select **Next** and finish the wizard.
@@ -207,3 +223,4 @@ On the MR server, open Server Manager and then select **Dashboard**. On the righ
 ## More information
 
 If you still receive error messages after making changes contact Microsoft Management Reporter support with the errors including details from Event Viewer.
+
