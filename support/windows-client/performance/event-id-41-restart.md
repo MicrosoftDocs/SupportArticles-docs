@@ -1,6 +1,6 @@
 ---
-title: Advanced troubleshooting for Event ID 41 - "The system has rebooted without cleanly shutting down first"
-description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue
+title: Event ID 41 The system has rebooted without cleanly shutting down first
+description: Describes the circumstances that cause a computer to generate Event ID 41, and provides guidance for troubleshooting the issue.
 ms.date: 10/20/2022
 ms.prod: windows-client
 ms.topic: troubleshooting
