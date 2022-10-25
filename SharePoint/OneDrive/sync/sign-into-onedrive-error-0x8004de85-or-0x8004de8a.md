@@ -16,7 +16,7 @@ appliesto:
   - Microsoft OneDrive
 search.appverid: 
   - MET150
-ms.date: 10/21/2022
+ms.date: 10/25/2022
 ---
 # Error 0x8004de85 or 0x8004de8a when signing in to OneDrive
 
@@ -26,7 +26,7 @@ When you try to sign in to Microsoft OneDrive, you can't sign in, and you receiv
 
 ## Cause
 
-This issue might occur if a problem is affecting your OneDrive account, such as a missing account, or a mismatch if you sign in by using a personal Microsoft account and a work or school account.
+This issue might occur if a problem is affecting your OneDrive account, such as a missing account, or a mismatch if you try to sign in to a personal Microsoft account by using the credentials for a work or school account (or vice-versa).
 
 To resolve this issue, try the following solutions.
 
