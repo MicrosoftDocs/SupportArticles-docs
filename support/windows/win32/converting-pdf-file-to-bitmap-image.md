@@ -24,5 +24,5 @@ This problem is known to affect some PDF files, depending on the implementation 
 
 ## Workaround
 
-If this problem occurs, you might be able to fix it by regenerating the PDF file to eliminate any elements that seem to cause the data loss. For the line dash pattern example given in the [Symptoms](#symptoms) section, remove the dashed lines in the source file before you create the PDF file, and then try again to convert the PDF file to a bitmap image.
-If your application can be modified, consider using the same features as the new Chromium-based Microsoft Edge. The new Microsoft Edge is implemented by using the open source PDFium library. For more information, see https://pdfium.googlesource.com/pdfium/.
+If this problem occurs, you might be able to fix it by regenerating the PDF file to eliminate any elements that seem to cause the data loss. For the line dash pattern example given in the "Symptoms" section above, remove the dashed lines in the source file before you create the PDF file, and then try again to convert the PDF file to a bitmap image.
+If your application can be modified, consider using the same features as the new Chromium-based Microsoft Edge. The new Microsoft Edge is implemented by using the open source [PDFium](https://pdfium.googlesource.com/pdfium/) library.

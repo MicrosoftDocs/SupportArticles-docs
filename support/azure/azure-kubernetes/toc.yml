@@ -107,6 +107,8 @@
     href: connection-issues-application-hosted-aks-cluster.md
   - name: Custom NSG blocks traffic
     href: custom-nsg-blocks-traffic.md
+  - name: Failures in the "az aks command invoke" command
+    href: resolve-az-aks-command-invoke-failures.md
   - name: Get and analyze HTTP response codes
     href: get-and-analyze-http-response-codes.md
   - name: Intermittent timeouts or server issues
