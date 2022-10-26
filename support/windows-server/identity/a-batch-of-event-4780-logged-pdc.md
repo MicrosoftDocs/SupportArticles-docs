@@ -17,7 +17,7 @@ ms.technology: windows-server-active-directory
 
 This article helps to resolve the issue in which you see a batch of Event ID 4780 logged in the primary domain controller (PDC) security event log.
 
-You have changed the audit or system access control list (SACL) of container type objects (organizational units and containers) in Active Directory where admin users and groups are located. When you check the security event log, you see a batch of Event ID 4780 logged in the PDC every hour.
+You've changed the audit or system access control list (SACL) of container type objects (organizational units and containers) in Active Directory where admin users and groups are located. When you check the security event log, you see a batch of Event ID 4780 logged in the PDC every hour.
 
 Here's an example of Event ID 4780:
 
@@ -41,7 +41,7 @@ Additional Information:
        Privileges:         -
 ```
 
-The reported accounts are all members of administrator-type groups. They are protected by the AdminSDHolder task, and the Security Descriptor (SD) is overwritten from the template SD.
+The reported accounts are all members of administrator-type groups. They're protected by the AdminSDHolder task, and the Security Descriptor (SD) is overwritten from the template SD.
 
 When you inspect the discretionary access control list (DACL) of the reported users, it's the same as AdminSDHolder DACL and the DACL of admin users that aren't reported in Event ID 4780.
 
