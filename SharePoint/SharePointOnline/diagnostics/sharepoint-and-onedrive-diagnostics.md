@@ -1,5 +1,5 @@
 ---
-title: Use diagnostics to troubleshoot issues in SharePoint Online and OneDrive
+title: Self-help diagnostics for SharePoint Online and OneDrive administrators
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -20,7 +20,7 @@ ms.reviewer: salarson
 description: SharePoint Online and OneDrive Diagnostics
 ---
 
-# How to troubleshoot issues in SharePoint Online and OneDrive using diagnostics
+# Self-help diagnostics for SharePoint Online and OneDrive administrators
 
 ## Summary
 

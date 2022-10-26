@@ -161,6 +161,8 @@
           href: ../hybrid-configuration-wizard-errors/hcw8100-hcw8084-or-hcw8083-error.md
         - name: Hybrid Configuration Wizard can't show digital certificates
           href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-fails-to-show-digital-certificates.md
+        - name: Hybrid Configuration wizard doesn't connect to Office 365
+          href: ../hybrid-configuration-wizard-errors/hybrid-configuration-wizard-not-connect-to-office-365.md
         - name: Hybrid domain isn't an accepted domain for cloud organization error
           href: ../hybrid-configuration-wizard-errors/hybrid-domain-domain-isnt-accepted-domain-for-cloud-organization-error.md
         - name: Legacy Email Address Policy isn't automatically updated
@@ -247,6 +249,8 @@
           href: ../move-mailboxes/you-must-specify-the-primaryonly-parameter-error.md
         - name: Move mailbox operation fails
           href: ../move-mailboxes/hybrid-move-fails.md
+        - name: '"Multiple entries" error when a remote move migration fails'
+          href: ../move-mailboxes/migration-fails-multiple-entries-error.md
         - name: Offboarding mailbox fails with error
           href: ../move-mailboxes/offboarding-mailbox-fails-homemdb-homemta.md
         - name: Operation has timed out when using New-MoveRequest
