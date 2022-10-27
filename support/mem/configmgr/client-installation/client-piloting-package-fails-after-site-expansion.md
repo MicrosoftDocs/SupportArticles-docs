@@ -2,6 +2,7 @@
 title: Client piloting package fails after a site expansion
 description: After you perform site expansion, the Configuration Manager client piloting package fails. Provides a resolution.
 ms.date: 06/16/2020
+ms.reviewer: kaushika
 ---
 # Client piloting package fails after a site expansion in Configuration Manager
 

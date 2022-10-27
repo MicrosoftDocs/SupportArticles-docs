@@ -2,6 +2,7 @@
 title: Offline servicing a WIM image with Latest Cumulative Update fails with error 0x80004001 "Applicability check not supported".
 description: Describes how to correct a failed process if you use Microsoft Endpoint Configuration Manager to do Offline Servicing on a .wim file after you install the latest cumulative update for Windows 10.
 ms.date: 05/19/2021
+ms.reviewer: kaushika
 ---
 
 # Error 0x80004001 "Applicability check not supported" when offline servicing a WIM image with the Latest Cumulative Update
@@ -42,7 +43,7 @@ Used together with the following LCUs:
 - 2021-03 Cumulative Update for Windows 10
 
   > [!NOTE]
-  > This problem does not occur if you do offline servicing by using an earlier version LCU (such as "2021-02 Cumulative Update for Windows 10”).
+  > This problem does not occur if you do offline servicing by using an earlier version LCU (such as "2021-02 Cumulative Update for Windows 10").
 
 ## Resolution
 
@@ -51,9 +52,9 @@ The issue is resolved in current Windows 10 releases.
 We recommend that you use one of the following Windows versions to do offline servicing:
 
 - Windows 10 21H1 (updated June 2021) or a later version
--	Windows 10 20H2 (updated May 2021) or a later version
--	Windows 10 20H1 (updated May 2021) or a later version
--	Windows 10 2004 (updated May 2021) or a later version
+-    Windows 10 20H2 (updated May 2021) or a later version
+-    Windows 10 20H1 (updated May 2021) or a later version
+-    Windows 10 2004 (updated May 2021) or a later version
 
 The issue is resolved in any .wim image that is on Build 985 (or a later build). Make sure that you use the appropriate build level by using an already updated image, such as Windows 10 21H1 (updated June 2021), or a later version. Alternatively, update your custom .wim image (one time) to Build 985 (or a later build) by using the workaround in the next section.
 

@@ -4,6 +4,7 @@ description: Describes a behavior that the Microsoft Intune discovered apps list
 ms.date: 10/19/2021
 search.appverid: MET150
 ms.custom: sap:Monitor apps 
+ms.reviewer: kaushika
 ---
 # Intune discovered apps list seems to list personal apps on Android work profile devices
 

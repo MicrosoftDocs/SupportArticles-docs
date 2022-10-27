@@ -4,6 +4,7 @@ description: Describes an issue in which you can't delete a Windows Autopilot de
 ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
+ms.reviewer: kaushika
 ---
 
 # You can't delete a Windows Autopilot deployment profile in Intune

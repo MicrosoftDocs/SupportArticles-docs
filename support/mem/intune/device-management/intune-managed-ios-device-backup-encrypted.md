@@ -4,6 +4,7 @@ description: Describes a behavior that causes the automatic encryption of a back
 ms.date: 09/22/2021
 search.appverid: MET150
 ms.custom: sap:Configure certificates
+ms.reviewer: kaushika
 ---
 # iTunes automatically encrypts backup of Intune-managed iOS devices
 

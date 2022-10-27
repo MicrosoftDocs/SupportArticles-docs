@@ -4,7 +4,7 @@ description: Fixes a connectivity issue in which the DigiCert Global Root G2 roo
 ms.date: 10/22/2020
 author: helenclu
 ms.author: vinpa
-ms.reviewer: vinpa
+ms.reviewer: kaushika, vinpa
 ---
 
 # Connectivity issues if the DigiCert Global Root G2 root certificate is not installed

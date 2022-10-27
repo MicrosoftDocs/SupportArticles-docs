@@ -4,6 +4,7 @@ description: Troubleshoot when you don't have the right privileges to enroll a W
 ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
+ms.reviewer: kaushika
 ---
 # You can't enroll a Windows device in Intune with a non-administrator account
 

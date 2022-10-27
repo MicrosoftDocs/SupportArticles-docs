@@ -3,7 +3,7 @@ title: Tips for assigning device password settings to Android Enterprise fully m
 description: Describes different behavior when a device restrictions profile that includes password settings is assigned to Android Enterprise fully managed devices before and after enrollment. 
 author: helenclu
 ms.author: luche
-ms.reviewer: anziob
+ms.reviewer: kaushika, anziob
 ms.date: 12/20/2021
 search.appverid: MET150
 ---

@@ -3,6 +3,7 @@ title: iOS or iPadOS device stuck on Intune enrollment screen
 description: Resolves an issue where iOS/iPadOS devices are stuck on an enrollment screen during Microsoft Intune enrollment.
 ms.date: 09/30/2021
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 
 # iOS or iPadOS device is stuck on an enrollment screen

@@ -4,7 +4,7 @@ description: Provides a solution for the issue when the Microsoft Intune Trouble
 ms.date: 12/18/2021
 search.appverid: MET150
 ms.custom: sap:User logon or authentication
-ms.reviewer: joelste, intunecic
+ms.reviewer: kaushika, joelste, intunecic
 ---
 # Intune troubleshooting portal fails to load for help desk operators
 

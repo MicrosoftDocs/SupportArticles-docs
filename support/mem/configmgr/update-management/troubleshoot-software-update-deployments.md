@@ -2,6 +2,7 @@
 title: Troubleshoot software update deployments
 description: Describes how to troubleshoot software update deployments that don't run successfully. For example, updates fail to download and there are unexpected reboots during update installation.
 ms.date: 05/25/2020
+ms.reviewer: kaushika
 ---
 # Troubleshoot software update deployments in Configuration Manager
 

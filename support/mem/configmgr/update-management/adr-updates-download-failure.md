@@ -3,7 +3,7 @@ title: Automatic deployment rule (ADR) fails to download updates
 description: Fixes an issue in which updates aren't downloaded when you run an ADR. This issue is caused by excessive zero-byte .tmp files.
 author: helenclu
 ms.author: luche
-ms.reviewer: lamosley
+ms.reviewer: kaushika, lamosley
 ms.date: 03/18/2021
 ---
 # Updates aren't downloaded when you run an ADR

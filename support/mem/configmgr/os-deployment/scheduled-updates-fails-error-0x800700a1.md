@@ -3,7 +3,7 @@ title: Scheduled Updates fails with error 0x800700a1
 description: Discusses an issue in which Scheduled Updates fails if Configuration Manager SMS Provider server is running on Windows Server 2012 R2 or Windows Server 2012.
 ms.date: 06/09/2020
 ms.custom: sap:Build and capture reference image
-ms.reviewer: frankroj, lamosley
+ms.reviewer: kaushika, frankroj, lamosley
 ---
 # Scheduled Updates fails if Configuration Manager SMS Provider server is on Windows Server 2012 R2 or Windows Server 2012
 

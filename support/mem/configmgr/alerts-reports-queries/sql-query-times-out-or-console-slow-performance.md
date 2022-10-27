@@ -2,7 +2,7 @@
 title: SQL query times out or the ConfigMgr console is slow
 description: Fixes an issue in which you may experience slow Configuration Manager console performance or unusual SQL query timeouts for certain Configuration Manager database queries in environments running SQL Server 2017, SQL Server 2016, or SQL Server 2014.
 ms.date: 09/02/2020
-ms.reviewer: jarrettr
+ms.reviewer: kaushika, jarrettr
 ---
 # SQL query times out or console slow on certain Configuration Manager database queries
 

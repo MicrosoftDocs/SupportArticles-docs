@@ -2,6 +2,7 @@
 title: No mouse cursor during an OSD task sequence
 description: Fixes an issue in which no mouse cursor appears during a Configuration Manager OSD task sequence. This issue is caused by a design change in Windows 10 in which the mouse cursor is suppressed during Windows Setup.
 ms.date: 06/04/2020
+ms.reviewer: kaushika
 ---
 # No mouse cursor appears during a Configuration Manager OSD task sequence
 

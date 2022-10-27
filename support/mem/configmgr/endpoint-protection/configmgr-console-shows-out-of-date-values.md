@@ -3,6 +3,7 @@ title: Configuration Manager console shows out-of-date values
 description: Describes an issue in which Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time while the clients have the latest version of definition installed.
 ms.date: 06/01/2020
 ms.custom: sap:Definition updates
+ms.reviewer: kaushika
 ---
 # Configuration Manager console displays out-of-date Endpoint Protection Definition version and last update time
 

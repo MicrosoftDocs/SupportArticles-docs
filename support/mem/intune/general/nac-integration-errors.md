@@ -3,6 +3,7 @@ title: Troubleshooting 503 errors for Microsoft Intune NAC integration
 description: Troubleshoot 503 errors that network access control (NAC) partners receive from Intune, and learn about the four-hour throttle window for unfiltered queries.
 ms.date: 03/01/2022
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 # Troubleshooting 503 errors for Intune NAC integration
 
@@ -16,4 +17,4 @@ NAC partner solutions typically send two different types of queries to Intune to
 
 The four-hour throttle window starts after the first unfiltered call to Intune (and after the previous throttle has expired, if this isn't the first call). Unfiltered compliance calls can be repeated for the first 60 minutes without throttling. After the 60-minute interval has passed, it is followed by three hours of 503 responses. So, the four-hour window includes one hour of unlimited compliance calls and three hours of 503 throttle. Therefore, we recommend that the interval for unfiltered NAC queries be greater than four hours.
 
-It’s important to understand that a new four-hour throttle timer doesn’t start until the first unfiltered compliance call *after* the previous throttle has expired.
+It's important to understand that a new four-hour throttle timer doesn't start until the first unfiltered compliance call *after* the previous throttle has expired.

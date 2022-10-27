@@ -4,6 +4,7 @@ description: Troubleshooting the error message when you try to wrap an LOB app b
 ms.date: 10/19/2021
 search.appverid: MET150
 ms.custom: sap:Intune App SDK
+ms.reviewer: kaushika
 ---
 # LOB application could not be wrapped error
 

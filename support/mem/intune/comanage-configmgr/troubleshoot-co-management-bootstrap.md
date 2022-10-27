@@ -4,7 +4,7 @@ description: Helps you understand and troubleshoot issues that you may encounter
 ms.date: 04/16/2020
 search.appverid: MET150
 ms.custom: sap:Co-management with Configuration Manager
-ms.reviewer: luche
+ms.reviewer: kaushika, luche
 ---
 # Troubleshoot co-management: Bootstrap with modern provisioning
 

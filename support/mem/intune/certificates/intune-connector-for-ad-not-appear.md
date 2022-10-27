@@ -4,6 +4,7 @@ description: Describes an issue in which the Intune Connector for Active Directo
 ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
+ms.reviewer: kaushika
 ---
 # Intune Connector for Active Directory is installed but doesn't appear in Intune
 

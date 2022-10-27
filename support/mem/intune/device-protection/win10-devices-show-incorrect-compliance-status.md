@@ -4,6 +4,7 @@ description: Describes an issue in which Windows 10 devices that have firewall e
 ms.date: 06/22/2020
 search.appverid: MET150
 ms.custom: sap:Create Windows policy
+ms.reviewer: kaushika
 ---
 # Incorrect compliance status reported for Windows 10 devices with firewall enabled
 

@@ -4,6 +4,7 @@ description: Information about the error message "Windows failed to apply the MD
 ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
+ms.reviewer: kaushika
 ---
 
 # Windows failed to apply the MDM Policy settings on hybrid Azure AD-joined devices

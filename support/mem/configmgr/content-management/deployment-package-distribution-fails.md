@@ -2,6 +2,7 @@
 title: Can't distribute deployment packages
 description: Fixes an issue in which you receive the Source directory does not exist error when you distribute deployment packages.
 ms.date: 06/04/2020
+ms.reviewer: kaushika
 ---
 # Source directory does not exist error when deployment package distribution fails
 

@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting BitLocker policies from the client side
 description: How to troubleshoot BitLocker encryption issues on the client side for Windows devices you manage with Microsoft Intune.
-ms.reviewer: luker
+ms.reviewer: kaushika, luker
 ms.date: 12/07/2021
 search.appverid: MET150
 --- 

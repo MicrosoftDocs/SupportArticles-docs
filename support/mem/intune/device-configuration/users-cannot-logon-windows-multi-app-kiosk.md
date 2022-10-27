@@ -4,7 +4,7 @@ description: Explains why a user can't log on to an Azure AD joined Windows 10 c
 ms.date: 04/23/2021
 search.appverid: MET150
 ms.custom: sap:Configure device restrictions
-ms.reviewer: joelste, intunecic, mobazzar
+ms.reviewer: kaushika, joelste, intunecic, mobazzar
 ---
 # Users can't log on to Windows if a multi-app kiosk profile is assigned
 

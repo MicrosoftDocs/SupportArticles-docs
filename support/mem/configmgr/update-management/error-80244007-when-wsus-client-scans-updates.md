@@ -2,6 +2,7 @@
 title: Error 80244007 when a Windows Server Update Services (WSUS) client scans for updates
 description: Describes an issue in which WSUS clients can't scan for updates.
 ms.date: 08/12/2020
+ms.reviewer: kaushika
 ---
 # Error 80244007 when a WSUS client scans for updates
 

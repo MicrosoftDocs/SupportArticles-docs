@@ -4,7 +4,7 @@ description: Fixes a problem in which a device becomes orphaned/unidentifiable i
 ms.date: 09/22/2021
 search.appverid: MET150
 ms.custom: sap:Remove devices
-ms.reviewer: patlewis
+ms.reviewer: kaushika, patlewis
 ---
 
 # How to remove a disabled Azure AD user's device from Intune

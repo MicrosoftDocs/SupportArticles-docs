@@ -2,6 +2,7 @@
 title: Upgrade Readiness data is downloaded continuously
 description: Describes an issue in which Upgrade Readiness data is downloaded continuously in Configuration Manager, and the download interval becomes 0 minutes.
 ms.date: 06/15/2020
+ms.reviewer: kaushika
 ---
 # Upgrade Readiness data is downloaded continuously in Configuration Manager
 

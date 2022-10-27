@@ -4,6 +4,7 @@ description: Describes a table that lists the attributes that are synced from th
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:General guidance or advisory
+ms.reviewer: kaushika
 ---
 # List of attributes that are synced from AD DS to Intune
 

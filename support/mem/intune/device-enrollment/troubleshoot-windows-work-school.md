@@ -3,6 +3,7 @@ title: Troubleshoot "Set up for work or school" enrollment in Intune
 description: Troubleshoot blocked Microsoft Intune enrollment for Windows devices when the user chooses "Set up for work or school" and signs in with Azure AD. The device is recognized as a personal device and the tenant doesn't allow for this device type.
 ms.date: 01/31/2022
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 
 # Unblock Windows "Set up for work or school" enrollment

@@ -4,7 +4,7 @@ description: Resolves the slow performance issue when executing the `spDeleteUpd
 ms.date: 11/04/2020
 author: helenclu
 ms.author: luche
-ms.reviewer: lamosley
+ms.reviewer: kaushika, lamosley
 ---
 # The spDeleteUpdate stored procedure runs slowly
 

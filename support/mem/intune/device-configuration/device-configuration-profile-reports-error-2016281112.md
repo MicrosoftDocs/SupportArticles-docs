@@ -4,7 +4,7 @@ description: Fixes a problem that occurs in a custom VPN profile after you creat
 ms.date: 12/18/2021
 search.appverid: MET150
 ms.custom: sap:Configure VPN settings
-ms.reviewer: Joelste, intunecic, chhahn
+ms.reviewer: kaushika, Joelste, intunecic, chhahn
 ---
 # 2016281112 (Remediation Failed) error in a custom VPN profile in the Intune admin portal
 

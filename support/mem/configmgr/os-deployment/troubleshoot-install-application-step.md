@@ -2,6 +2,7 @@
 title: Troubleshoot the Install Application task sequence step
 description: Describes the Install Application task sequence step and how to troubleshoot common problems.
 ms.date: 01/13/2021
+ms.reviewer: kaushika
 ---
 # Troubleshoot the Install Application task sequence step in Configuration Manager
 

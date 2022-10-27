@@ -4,7 +4,7 @@ description: To fix connectivity issues, install the latest root certificate upd
 ms.date: 05/11/2020
 search.appverid: MET150
 ms.custom: sap:Device configuration
-ms.reviewer: franknov
+ms.reviewer: kaushika, franknov
 ---
 # Connectivity issues may occur when the Baltimore CyberTrust root certificate is not installed
 

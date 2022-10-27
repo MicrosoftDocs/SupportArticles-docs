@@ -4,6 +4,7 @@ description: Describes an issue in which SCEP certificates can't be deployed to 
 ms.date: 09/10/2021
 search.appverid: MET150
 ms.custom: sap:Microsoft Intune
+ms.reviewer: kaushika
 ---
 # SCEP deployment to Windows 10 devices fails after you renew the CA certificate
 

@@ -4,7 +4,7 @@ description: Discusses an issue in which applications don't synchronize from Mic
 ms.date: 05/18/2020
 search.appverid: MET150
 ms.custom: sap:Work with volume-purchased apps and books
-ms.reviewer: intunecic, waluja
+ms.reviewer: kaushika, intunecic, waluja
 ---
 # Apps don't synchronize from Microsoft Store for Business to Intune
 

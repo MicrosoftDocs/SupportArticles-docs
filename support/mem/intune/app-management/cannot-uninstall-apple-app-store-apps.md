@@ -4,6 +4,7 @@ description: Gives a workaround solution to help uninstall apps that are install
 ms.date: 10/15/2021
 search.appverid: MET150
 ms.custom: sap:Add apps
+ms.reviewer: kaushika
 ---
 # Intune can't uninstall apps that are installed from Apple App Store
 

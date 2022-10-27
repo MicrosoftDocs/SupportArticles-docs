@@ -3,7 +3,7 @@ title: .NET Framework 4.7.2 updates fail to sync
 description: Address an issue in which August 2019 .NET 4.7.2 updates fail to synchronize in Configuration Manager.
 ms.date: 06/04/2020
 ms.custom: sap:Boot images
-ms.reviewer: umaikhan, sccmcsscontent
+ms.reviewer: kaushika, umaikhan, sccmcsscontent
 ---
 # August 2019 .NET Framework 4.7.2 updates fail to synchronize in Configuration Manager
 

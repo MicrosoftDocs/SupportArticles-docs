@@ -4,6 +4,7 @@ description: Describes an issue in which you receive the ZtdDeviceAlreadyAssigne
 ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment
+ms.reviewer: kaushika
 ---
 # Error 806 or 808 when you import Windows Autopilot device CSV files in Intune
 

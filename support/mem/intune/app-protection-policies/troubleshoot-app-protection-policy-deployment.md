@@ -3,6 +3,7 @@ title: Troubleshoot Microsoft Intune app protection policy deployment
 description: This article gives troubleshooting guidance for IT Admins with issues when deploying Intune app protection policies. 
 ms.date: 05/12/2022
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 
 # Troubleshooting app protection policy deployment in Intune

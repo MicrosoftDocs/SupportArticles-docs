@@ -4,6 +4,7 @@ description: Describes an issue in which you receive the 2016341112 -iOS device 
 ms.date: 10/07/2021
 search.appverid: MET150
 ms.custom: sap:Monitor profiles 
+ms.reviewer: kaushika
 ---
 # iOS device is currently busy error when you deploy a device profile to an iOS device
 

@@ -2,7 +2,7 @@
 title: Remote control fails with error C000012
 description: Fixes an issue in which remote control fails with error C0000120 in System Center 2012 Configuration Manager.
 ms.date: 06/15/2020
-ms.reviewer: erinwi
+ms.reviewer: kaushika, erinwi
 ---
 # Remote control fails with error C000012 in System Center 2012 Configuration Manager
 

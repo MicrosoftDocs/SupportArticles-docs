@@ -4,6 +4,7 @@ description: Fixes an issue in which you receive error 'XPC_TYPE_ERROR Connectio
 ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:iOS/iPadOS enrollment
+ms.reviewer: kaushika
 ---
 # ADE enrollment error 'XPC_TYPE_ERROR Connection invalid'
 

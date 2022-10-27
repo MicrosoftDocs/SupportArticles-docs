@@ -4,7 +4,7 @@ description: Resolves a known issue in which applications don't install and shel
 ms.date: 06/16/2021
 search.appverid: MET150
 ms.custom: sap:App management
-ms.reviewer: markstan
+ms.reviewer: kaushika, markstan
 author: simonxjx
 ms.author: v-six
 ---

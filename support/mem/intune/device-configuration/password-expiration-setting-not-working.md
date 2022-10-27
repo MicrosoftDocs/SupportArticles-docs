@@ -4,6 +4,7 @@ description: Describes an issue where the password expiration device restriction
 ms.date: 10/07/2021
 search.appverid: MET150
 ms.custom: sap:Device configuration
+ms.reviewer: kaushika
 ---
 # Device password expiration setting doesn't work as expected
 

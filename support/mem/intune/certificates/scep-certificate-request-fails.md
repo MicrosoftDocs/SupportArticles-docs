@@ -4,7 +4,7 @@ description: Fixes an issue in which the SCEP certificate request fails during t
 ms.date: 09/09/2021
 search.appverid: MET150
 ms.custom: sap:Configure certificates
-ms.reviewer: joelste, intunecic, kolldhee
+ms.reviewer: kaushika, joelste, intunecic, kolldhee
 ---
 # SCEP certificate request fails during the verification phase on the CRP
 

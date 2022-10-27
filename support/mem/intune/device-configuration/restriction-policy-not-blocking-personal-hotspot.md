@@ -4,6 +4,7 @@ description: Describes a default behavior in Microsoft Intune where an active de
 ms.date: 12/18/2021
 search.appverid: MET150
 ms.custom: sap:Configure device restrictions
+ms.reviewer: kaushika
 ---
 # Intune device restriction policy to block iOS Personal Hotspot doesn't prevent users from enabling it
 

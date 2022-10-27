@@ -2,6 +2,7 @@
 title: Useful logs and queries
 description: Describes how to some other useful logs and queries for advanced troubleshooting content distribution-related issues.
 ms.date: 03/30/2020
+ms.reviewer: kaushika
 ---
 # Advanced troubleshooting tips for content distribution
 

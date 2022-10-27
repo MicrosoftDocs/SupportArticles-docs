@@ -2,7 +2,7 @@
 title: An error occurred when loading the task sequence 
 description: Fixes an issue where you can't create a Microsoft Deployment Toolkit task sequence in Configuration Manager.
 ms.date: 08/12/2020
-ms.reviewer: markstan
+ms.reviewer: kaushika, markstan
 ---
 # An error occurred when loading the task sequence when you create an MDT task sequence
 

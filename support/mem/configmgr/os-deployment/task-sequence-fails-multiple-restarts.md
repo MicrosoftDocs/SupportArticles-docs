@@ -2,7 +2,7 @@
 title: Task sequence fails if software updates ask restarts
 description: Lists known Windows updates that require dual restarts, and discusses problem mitigation strategies.
 ms.date: 05/25/2020
-ms.reviewer: frankroj, mikecure
+ms.reviewer: kaushika, frankroj, mikecure
 ---
 # Task sequence fails in Configuration Manager if software updates require multiple restarts
 

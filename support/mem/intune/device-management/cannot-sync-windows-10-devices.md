@@ -4,6 +4,7 @@ description: Gives the resolution for when a Windows 10 device can't sync with M
 ms.date: 09/06/2021
 search.appverid: MET150
 ms.custom: sap:device management
+ms.reviewer: kaushika
 ---
 # Windows 10 devices can't sync with Intune after enrollment
 

@@ -4,6 +4,7 @@ description: Describes an issue in which Microsoft Intune enrollment doesn't aut
 ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:iOS/iPadOS enrollment
+ms.reviewer: kaushika
 ---
 # Intune enrollment process doesn't start on Apple ADE devices
 

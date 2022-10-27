@@ -4,6 +4,7 @@ description: Describes an issue in which you receive the App installation failed
 ms.date: 10/11/2021
 search.appverid: MET150
 ms.custom: sap:Assign apps
+ms.reviewer: kaushika
 ---
 # App installation failed error after an Android APK app is updated
 

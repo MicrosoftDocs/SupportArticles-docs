@@ -2,6 +2,7 @@
 title: Apply Driver Package task fails with error 80070057
 description: The Apply Driver Package task fails with error 80070057 after you upgrade to Configuration Manager current branch version 1706 or a later version.
 ms.date: 06/09/2020
+ms.reviewer: kaushika
 ---
 # The Apply Driver Package task fails with 80070057 in Configuration Manager
 

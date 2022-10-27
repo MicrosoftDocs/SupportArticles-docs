@@ -4,7 +4,7 @@ description: Fixes an issue in which creating email in Outlook mobile fails and 
 ms.date: 10/18/2021
 search.appverid: MET150
 ms.custom: sap:Use app protection policies
-ms.reviewer: joelste, intunecic, waluja
+ms.reviewer: kaushika, joelste, intunecic, waluja
 ---
 # Unable to create a message in Outlook for Android
 

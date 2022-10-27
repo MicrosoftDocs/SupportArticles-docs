@@ -4,7 +4,7 @@ description: Describes an issue in which OneDrive with iMessage integration conf
 ms.date: 05/11/2020
 search.appverid: MET150
 ms.custom: sap:App management
-ms.reviewer: shhodge
+ms.reviewer: kaushika, shhodge
 ---
 # OneDrive with iMessage integration as a managed app attaches corporate protected data to an iMessage
 

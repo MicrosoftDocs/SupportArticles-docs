@@ -3,7 +3,7 @@ title: Error 0x87D13BA2 deploying a macOS LOB app in Intune
 description: Fixes the 0x87D13BA2 error when you deploy a macOS LOB app that contains multiple components in Microsoft Intune.
 author: helenclu
 ms.author: luche
-ms.reviewer: markstan
+ms.reviewer: kaushika, markstan
 ms.date: 10/18/2021
 search.appverid: MET150
 ms.custom: sap:App management

@@ -4,7 +4,7 @@ description: Gives the resolution for an issue where the NDES connector for Micr
 ms.date: 05/11/2020
 search.appverid: MET150
 ms.custom: sap:Device protection
-ms.reviewer: jchornbe, joelste, anziob, luche
+ms.reviewer: kaushika, jchornbe, joelste, anziob, luche
 ---
 # Installing NDES connector for Intune fails to install NDES certificate
 

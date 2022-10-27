@@ -4,6 +4,7 @@ description: Describes an issue in which the ownership of an Android Enterprise 
 ms.date: 10/06/2021
 search.appverid: MET150
 ms.custom: sap:Android enrollment
+ms.reviewer: kaushika
 ---
 # Ownership of an Android Enterprise work profile device is automatically changed to Corporate after enrollment
 

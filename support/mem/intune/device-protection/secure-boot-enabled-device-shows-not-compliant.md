@@ -4,6 +4,7 @@ description: Describes a behavior that a Windows 10 device that has secure boot 
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:Create Windows policy
+ms.reviewer: kaushika
 ---
 # Windows 10 device with secure boot enabled shows as Not Compliant in Intune
 

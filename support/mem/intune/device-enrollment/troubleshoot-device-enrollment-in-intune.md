@@ -2,7 +2,7 @@
 title: Troubleshoot device enrollment in Intune
 description: Suggestions for troubleshooting device enrollment issues in Microsoft Intune.
 ms.date: 10/01/2021
-ms.reviewer: damionw
+ms.reviewer: kaushika, damionw
 search.appverid: MET150
 ---
 # Troubleshooting device enrollment in Intune

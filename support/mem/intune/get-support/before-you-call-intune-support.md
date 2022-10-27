@@ -4,6 +4,7 @@ description: Describes methods to try before you call Microsoft Intune support t
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:General guidance or advisory
+ms.reviewer: kaushika
 ---
 # Make your Intune support call more effective
 

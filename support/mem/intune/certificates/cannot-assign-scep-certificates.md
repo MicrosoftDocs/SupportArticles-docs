@@ -4,7 +4,7 @@ description: Fixes an issue in which you can't assign SCEP certificates to devic
 ms.date: 09/09/2021
 search.appverid: MET150
 ms.custom: sap:Device protection
-ms.reviewer: joelste, shhodge
+ms.reviewer: kaushika, joelste, shhodge
 ---
 # You can't assign SCEP certificates to devices in Intune after a certificate renewal
 

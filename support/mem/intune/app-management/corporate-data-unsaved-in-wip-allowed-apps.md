@@ -4,6 +4,7 @@ description: Fixes an issue in which you can't save corporate data in Windows In
 ms.date: 10/14/2021
 search.appverid: MET150
 ms.custom: sap:Use app protection policies
+ms.reviewer: kaushika
 ---
 # Corporate data unsaved in WIP-allowed apps on hybrid Azure AD join or co-management device in Intune
 

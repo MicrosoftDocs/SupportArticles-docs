@@ -2,6 +2,7 @@
 title: Warnings are repeatedly logged in Smsdbmon.log
 description: Describes an issue in which Smsdbmon.log continuously reports warnings for multiple triggers such as Unable to send update on component PolicyTargetEvalNotify_iud after updating to Configuration Manager version current branch 1810.
 ms.date: 06/15/2020
+ms.reviewer: kaushika
 ---
 # Unable to send update on component warnings are repeatedly logged in Smsdbmon.log
 

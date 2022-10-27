@@ -2,7 +2,7 @@
 title: Recommended antivirus exclusions for Configuration Manager
 description: Lists the recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients.
 ms.date: 03/25/2022
-ms.reviewer: jarrettr, jrosse, keiththo
+ms.reviewer: kaushika, jarrettr, jrosse, keiththo
 ---
 # Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients
 

@@ -2,7 +2,7 @@
 title: Can't import drivers into Configuration Manager
 description: Fixes an issue that prevents administrators from importing drivers into Configuration Manager. The problem concerns a newer signing method that isn't supported without first installing this hotfix.
 ms.date: 06/04/2020
-ms.reviewer: frankroj
+ms.reviewer: kaushika, frankroj
 ---
 # Can't import drivers into Configuration Manager
 

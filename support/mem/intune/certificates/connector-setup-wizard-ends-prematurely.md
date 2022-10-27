@@ -4,6 +4,7 @@ description: Resolves an issue in which the Microsoft Intune Connector Setup Wiz
 ms.date: 09/09/2021
 search.appverid: MET150
 ms.custom: sap:NDES configuration
+ms.reviewer: kaushika
 ---
 # The Microsoft Intune Connector Setup Wizard ends prematurely
 

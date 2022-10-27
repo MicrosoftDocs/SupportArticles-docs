@@ -4,6 +4,7 @@ description: Helps fix error 80070426 where feature updates are never offered on
 ms.date: 10/08/2021
 search.appverid: MET150
 ms.custom: sap:Windows 10 update rings
+ms.reviewer: kaushika
 ---
 # Feature updates are not offered on Intune-managed Windows 10 devices
 

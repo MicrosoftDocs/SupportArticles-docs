@@ -4,7 +4,7 @@ description: Fixes an issue in which you can't open a web app on an iOS device w
 ms.date: 10/20/2021
 search.appverid: MET150
 ms.custom: sap:App management
-ms.reviewer: joelste, intunecic, stephgil
+ms.reviewer: kaushika, joelste, intunecic, stephgil
 ---
 # Address is invalid error when opening a web app on iOS
 

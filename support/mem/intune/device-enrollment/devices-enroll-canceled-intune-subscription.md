@@ -3,6 +3,7 @@ title: Troubleshoot when devices try to enroll in a canceled Intune subscription
 description: Fixes an issue in which devices keep trying to enroll in an Intune subscription that has been canceled.
 ms.date: 09/29/2021
 search.appverid: MET150
+ms.reviewer: kaushika
 ---
 # Devices continue to try to enroll in a canceled Intune subscription
 

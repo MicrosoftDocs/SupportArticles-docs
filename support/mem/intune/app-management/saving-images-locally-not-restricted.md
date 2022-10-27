@@ -4,7 +4,7 @@ description: Describes an issue in which images in Outlook for iOS can be saved 
 ms.date: 10/15/2021
 search.appverid: MET150
 ms.custom: sap:App management
-ms.reviewer: joelste, andcerat
+ms.reviewer: kaushika, joelste, andcerat
 ---
 # App protection policy doesn't restrict saving images locally in Outlook for iOS
 

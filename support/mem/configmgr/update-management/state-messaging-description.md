@@ -2,7 +2,7 @@
 title: State messaging in Configuration Manager
 description: Describes the state messaging system in Configuration Manager.
 ms.date: 05/25/2020
-ms.reviewer: nacmasdpod, jarrettr
+ms.reviewer: kaushika, nacmasdpod, jarrettr
 ---
 # Description of state messaging in Configuration Manager
 

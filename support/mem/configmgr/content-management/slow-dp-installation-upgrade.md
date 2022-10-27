@@ -2,7 +2,7 @@
 title: DP installations or upgrades take longer than expected
 description: Describes a performance issue when installing or upgrading DPs on Configuration Manager sites that have many standard or pull distribution points.
 ms.date: 06/15/2020
-ms.reviewer: brianhun, DAVSTEW, mikecure
+ms.reviewer: kaushika, brianhun, DAVSTEW, mikecure
 ---
 # Distribution point installations or upgrades take longer than expected in System Center 2012 Configuration Manager
 

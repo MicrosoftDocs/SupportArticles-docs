@@ -4,6 +4,7 @@ description: Troubleshoot an issue in which Conditional Access fails on an Apple
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:Create and assign conditional access policy
+ms.reviewer: kaushika
 ---
 # You cannot access company resources on an Intune-enrolled ADE device
 

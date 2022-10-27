@@ -4,6 +4,7 @@ description: Fixes an issue in which you can't update enrollment when you enroll
 ms.date: 09/29/2021
 search.appverid: MET150
 ms.custom: sap:Device enrollment
+ms.reviewer: kaushika
 ---
 # Can't update enrollment when you enroll devices in the Intune Company Portal
 

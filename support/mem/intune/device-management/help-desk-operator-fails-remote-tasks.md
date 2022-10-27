@@ -4,6 +4,7 @@ description: Describes an Initiating Factory reset failed error that occurs when
 ms.date: 09/02/2021
 search.appverid: MET150
 ms.custom: sap:Device management
+ms.reviewer: kaushika
 ---
 # Initiating Factory reset failed error when help desk operators perform remote tasks in Intune
 

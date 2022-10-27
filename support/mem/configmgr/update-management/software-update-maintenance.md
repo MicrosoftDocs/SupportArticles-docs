@@ -2,6 +2,7 @@
 title: Software updates maintenance
 description: Describes the maintenance processes for software updates in Configuration Manager.
 ms.date: 06/04/2020
+ms.reviewer: kaushika
 ---
 # Software updates maintenance in Configuration Manager
 

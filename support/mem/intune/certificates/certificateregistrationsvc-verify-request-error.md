@@ -4,7 +4,7 @@ description: Fixes an issue in which the certificate registration point (CRP) ap
 ms.date: 09/09/2021
 search.appverid: MET150
 ms.custom: sap:Device protection
-ms.reviewer: joelste, intunecic, alra
+ms.reviewer: kaushika, joelste, intunecic, alra
 ---
 # HTTP 500 errors on CertificateRegistrationSvc verify request in Intune
 

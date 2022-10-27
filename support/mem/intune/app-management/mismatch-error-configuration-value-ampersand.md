@@ -4,6 +4,7 @@ description: Provides the resolution to solve the mismatch between the value typ
 ms.date: 10/15/2021
 search.appverid: MET150
 ms.custom: sap:iOS app configuration profiles
+ms.reviewer: kaushika
 ---
 # Mismatch error when configuration value has an ampersand in Intune
 

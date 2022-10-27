@@ -4,6 +4,7 @@ description: Describes an issue in which macOS line-of-business (LOB) apps aren'
 ms.date: 10/19/2021
 search.appverid: MET150
 ms.custom: sap:Manage Apps
+ms.reviewer: kaushika
 ---
 # macOS LOB apps aren't deployed in Microsoft Intune
 

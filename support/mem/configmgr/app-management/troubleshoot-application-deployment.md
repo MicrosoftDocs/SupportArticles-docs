@@ -2,6 +2,7 @@
 title: Troubleshoot tips for app deployments
 description: Tips for troubleshooting application deployment problems in Configuration Manager
 ms.date: 05/29/2019
+ms.reviewer: kaushika
 ---
 # Troubleshooting tips for application deployments
 

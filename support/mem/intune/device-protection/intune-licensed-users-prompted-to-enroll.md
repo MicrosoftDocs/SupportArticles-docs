@@ -4,6 +4,7 @@ description: Describes a behavior that causes Intune-licensed users to be prompt
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:Create and assign Conditional Access policy
+ms.reviewer: kaushika
 ---
 # Intune-licensed users are prompted for enrollment when they try to access Microsoft 365 resources
 

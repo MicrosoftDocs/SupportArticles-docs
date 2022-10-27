@@ -5,7 +5,7 @@ keywords:
 author: helenclu
 ms.author: luche
 ms.date: 3/4/2020
-ms.reviewer: mandia
+ms.reviewer: kaushika, mandia
 search.appverid: MET150
 ms.custom: 
 - intune-azure

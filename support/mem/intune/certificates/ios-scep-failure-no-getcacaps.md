@@ -4,6 +4,7 @@ description: Troubleshoot SCEP/NDES failures on iOS devices when the IIS logs sh
 ms.date: 11/23/2021
 search.appverid: MET150
 ms.custom: sap:Configure certificates
+ms.reviewer: kaushika
 ---
 # iOS SCEP failure and no GetCACaps request is generated
 

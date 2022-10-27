@@ -4,6 +4,7 @@ description: Fixes an issue in which RemoteWipe fails to execute on Windows 10 c
 ms.date: 09/02/2021
 search.appverid: MET150
 ms.custom: sap:Device management
+ms.reviewer: kaushika
 ---
 # The request is not supported when RemoteWipe fails to execute on Windows 10 client
 

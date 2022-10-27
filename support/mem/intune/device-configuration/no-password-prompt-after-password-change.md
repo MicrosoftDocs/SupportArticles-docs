@@ -4,7 +4,7 @@ description: Fixes an issue in which there is no password prompt for iOS email p
 ms.date: 10/07/2021
 search.appverid: MET150
 ms.custom: sap:Configure device profiles
-ms.reviewer: intunecic, waluja
+ms.reviewer: kaushika, intunecic, waluja
 ---
 # No password prompt for iOS email profiles in Intune after password change
 

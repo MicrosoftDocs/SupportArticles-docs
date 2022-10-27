@@ -2,7 +2,7 @@
 title: Troubleshoot device actions in Microsoft Intune
 description: Get answers to common questions and troubleshooting guidance for device action issues in Intune.
 ms.date: 09/02/2021
-ms.reviewer: coferro
+ms.reviewer: kaushika, coferro
 search.appverid: MET150
 ---
 # Troubleshooting device actions in Intune

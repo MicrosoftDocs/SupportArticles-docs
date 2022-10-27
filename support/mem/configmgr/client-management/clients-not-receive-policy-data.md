@@ -2,6 +2,7 @@
 title: ConfigMgr clients don't receive policy data
 description: Fixes an issue that occurs if a recovery that's made from a central administration site doesn't reset session IDs in SQL Server.
 ms.date: 09/02/2020
+ms.reviewer: kaushika
 ---
 # Configuration Manager clients don't receive policy data after you recover a primary site from a CAS
 

@@ -4,6 +4,7 @@ description: Describes an issue in which an Android Enterprise device can be act
 ms.date: 10/07/2021
 search.appverid: MET150
 ms.custom: sap:Configure device restrictions
+ms.reviewer: kaushika
 ---
 # Factory reset protection emails setting isn't enforced after you reset an Android Enterprise device
 

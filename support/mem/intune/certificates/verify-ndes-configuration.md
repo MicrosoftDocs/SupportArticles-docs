@@ -4,7 +4,7 @@ description: Gives a troubleshooting procedure to help you verify your on-premis
 ms.date: 09/10/2021
 search.appverid: MET150
 ms.custom: sap:Device protection
-ms.reviewer: saurkosh, cajenk, intunecic
+ms.reviewer: kaushika, saurkosh, cajenk, intunecic
 ---
 # Verify on-premises NDES configuration for SCEP certificates in Intune
 

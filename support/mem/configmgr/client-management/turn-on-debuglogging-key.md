@@ -2,6 +2,7 @@
 title: Turn on the DebugLogging key
 description: Describes how to turn on the DebugLogging key on Configuration Manager clients and management points.
 ms.date: 08/12/2020
+ms.reviewer: kaushika
 ---
 # Turn on the DebugLogging key on Configuration Manager clients and management points
 

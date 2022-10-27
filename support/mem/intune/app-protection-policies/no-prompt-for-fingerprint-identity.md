@@ -4,6 +4,7 @@ description: Describes an issue where users aren't prompted for fingerprint when
 search.appverid: MET150
 ms.custom: sap:App management
 ms.date: 12/20/2021
+ms.reviewer: kaushika
 ---
 # Users aren't prompted for fingerprint identity for managed apps on Samsung Note 4
 

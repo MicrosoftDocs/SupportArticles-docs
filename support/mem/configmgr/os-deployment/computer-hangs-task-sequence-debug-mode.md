@@ -3,6 +3,7 @@ title: Computer hangs in an OSD task sequence debug mode
 description: Fixes an issue in which a computer appears to hang during an OSD task sequence running in debug mode.
 ms.date: 06/01/2020
 ms.custom: sap:Deployments and deployment operations
+ms.reviewer: kaushika
 ---
 # Computer hangs at the Just a moment screen in a debug deployment of an OSD task sequence
 

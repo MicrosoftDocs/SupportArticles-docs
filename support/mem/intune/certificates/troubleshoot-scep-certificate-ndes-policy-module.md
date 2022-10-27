@@ -2,7 +2,7 @@
 title: Troubleshoot the NDES policy module that installs the Intune Certificate Connector
 description: Troubleshooting the operation of the Network Device Enrollment Service (NDES) policy module when the module processes a certificate request when you use SCEP certificate profiles to deploy certificates with Microsoft Intune.
 ms.date: 09/10/2021
-ms.reviewer: lacranda
+ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ---
 # Troubleshooting the NDES policy module in Microsoft Intune

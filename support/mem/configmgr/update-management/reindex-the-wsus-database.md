@@ -3,7 +3,7 @@ title: Reindex the Windows Server Update Services (WSUS) database
 description: Provides a T-SQL script that can be used to reindex and defragment WSUS databases.
 author: helenclu
 ms.author: luche
-ms.reviewer: vinpa
+ms.reviewer: kaushika, vinpa
 ms.date: 02/09/2021
 ms.custom: sap:WSUS
 ---

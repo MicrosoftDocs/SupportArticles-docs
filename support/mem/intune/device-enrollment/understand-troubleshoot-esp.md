@@ -3,7 +3,7 @@ title: Troubleshoot the Enrollment Status Page (ESP)
 description: General troubleshooting guide for the Enrollment Status Page (ESP) for Windows Autopilot or OOBE for Azure AD Join.
 author: helenclu
 ms.author: luche
-ms.reviewer: ybao
+ms.reviewer: kaushika, ybao
 ms.date: 12/23/2021
 search.appverid: MET150
 ms.custom: sap:Windows enrollment

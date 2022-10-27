@@ -4,6 +4,7 @@ description: Helps resolve an issue when devices can't obtain SCEP certificates 
 ms.date: 09/09/2021
 search.appverid: MET150
 ms.custom: sap:Configure certificates
+ms.reviewer: kaushika
 ---
 # 0x80094800 error and Event ID 31 when devices fail to receive SCEP certificates
 

@@ -4,7 +4,7 @@ description: Gives a workaround for the issue where Android Enterprise enrolled 
 ms.date: 10/18/2021
 search.appverid: MET150
 ms.custom: sap:Use app protection policies
-ms.reviewer: kakimble, intunecic, joelste
+ms.reviewer: kaushika, kakimble, intunecic, joelste
 ---
 # Can't attach photos to applications on Android Enterprise work profile enrolled devices
 

@@ -2,6 +2,7 @@
 title: Understand and troubleshoot Updates and Servicing
 description: This article helps administrators understand Updates and Servicing and troubleshoot some common issues in Configuration Manager.
 ms.date: 05/25/2020
+ms.reviewer: kaushika
 ---
 # Understand and troubleshoot Updates and Servicing in Configuration Manager
 

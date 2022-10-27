@@ -2,7 +2,7 @@
 title: Resource domain is changed after installing January 2022 Windows updates
 description: Troubleshoot an issue in which domain of discovered resources changes after installing January 2022 Windows updates if the NetBIOS domain is different than FQDN.
 ms.date: 03/16/2022
-ms.reviewer: jarrettr, brianhun, payur
+ms.reviewer: kaushika, jarrettr, brianhun, payur
 ---
 # Domain name of resource is changed after installing January 2022 Windows updates
 

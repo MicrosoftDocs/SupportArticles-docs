@@ -2,6 +2,7 @@
 title: Troubleshoot WSUS connection failures
 description: Introduce several methods to troubleshoot WSUS issues.
 ms.date: 05/25/2020
+ms.reviewer: kaushika
 ---
 # How to troubleshoot WSUS connection failures
 

@@ -3,7 +3,7 @@ title: Set up peer cache for Configuration Manager clients
 description: Describes and illustrates through log file examples how to configure peer cache for Configuration Manager clients.
 author: helenclu
 ms.author: naghura
-ms.reviewer: vinpa,brianhun
+ms.reviewer: kaushika, vinpa,brianhun
 ms.date: 04/16/2021
 ---
 # Configure peer cache for Configuration Manager clients

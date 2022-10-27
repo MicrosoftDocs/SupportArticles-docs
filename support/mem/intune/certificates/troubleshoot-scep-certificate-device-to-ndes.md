@@ -2,7 +2,7 @@
 title: Troubleshoot managed device to Network Device Enrollment Service (NDES) communication in Microsoft Intune
 description: Troubleshoot managed device to NDES server communication when using Simple Certificate Enrollment Protocol (SCEP) certificate profiles to deploy certificates with Intune.
 ms.date: 09/10/2021
-ms.reviewer: lacranda
+ms.reviewer: kaushika, lacranda
 search.appverid: MET150
 ---
 # Troubleshooting device to NDES server communication for SCEP certificate profiles in Microsoft Intune

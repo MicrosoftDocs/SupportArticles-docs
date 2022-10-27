@@ -4,6 +4,7 @@ description: Fixes an issue in which you receive error 'The reply url specified 
 ms.date: 12/10/2021
 search.appverid: MET150
 ms.custom: sap:Intune Data Warehouse
+ms.reviewer: kaushika
 ---
 # Error AADSTS50011 when you query the Intune Data Warehouse
 

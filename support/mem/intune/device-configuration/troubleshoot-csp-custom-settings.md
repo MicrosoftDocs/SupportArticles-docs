@@ -4,6 +4,7 @@ description: Troubleshooting guidance for CSP custom setting issues for Windows 
 ms.date: 05/11/2020
 search.appverid: MET150
 ms.custom: sap:Device configuration
+ms.reviewer: kaushika
 ---
 # Troubleshooting CSP custom settings for Windows 10 computers enrolled in Intune
 

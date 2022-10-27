@@ -2,6 +2,7 @@
 title: DRS performance issue after installing hotfix 3125525
 description: Describes DRS performance issues that are experienced after you install hotfix 3125525 in Configuration Manager.
 ms.date: 06/16/2020
+ms.reviewer: kaushika
 ---
 # Configuration Manager DRS performance issue after you install hotfix 3125525
 

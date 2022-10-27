@@ -4,7 +4,7 @@ description: Fixes an issue in which Skype for Business on a Microsoft Intune su
 ms.date: 12/20/2021
 search.appverid: MET150
 ms.custom: sap:Add apps
-ms.reviewer: joelste, intunecic, a-eyalhu
+ms.reviewer: kaushika, joelste, intunecic, a-eyalhu
 ---
 # Skype for Business on Android Enterprise doesn't save SIP address and password
 

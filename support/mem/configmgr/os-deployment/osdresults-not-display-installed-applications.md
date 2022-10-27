@@ -2,6 +2,7 @@
 title: OSDResults doesn't display applications installed by UDI
 description: Describes an issue in which applications installed by a Configuration Manager UDI task sequence aren't displayed in the Deployment Complete dialog box.
 ms.date: 06/09/2020
+ms.reviewer: kaushika
 ---
 # OSDResults doesn't display applications installed by a UDI task sequence in Configuration Manager
 

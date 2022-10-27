@@ -4,7 +4,7 @@ description: Fixes an issue in which only one Microsoft Intune app configuration
 ms.date: 05/18/2020
 search.appverid: MET150
 ms.custom: sap:iOS app configuration profiles
-ms.reviewer: intunecic, Announ.Diall
+ms.reviewer: kaushika, intunecic, Announ.Diall
 ---
 # Only one Intune app configuration policy is applied to Edge or Managed Browser
 

@@ -3,6 +3,7 @@ title: ConfigMgr PXE boot doesn't work
 description: Fixes a problem in which a Configuration Manager PXE boot process doesn't work because a self-signed certificate is not created.
 ms.date: 09/02/2020
 ms.custom: sap:PXE boot
+ms.reviewer: kaushika
 ---
 # PXE boot doesn't work because a self-signed certificate isn't created
 

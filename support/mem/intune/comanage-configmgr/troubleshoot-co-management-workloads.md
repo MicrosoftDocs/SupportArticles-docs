@@ -4,7 +4,7 @@ description: Helps you understand and troubleshoot issues that you may encounter
 ms.date: 04/28/2021
 search.appverid: MET150
 ms.custom: sap:Co-management with Configuration Manager
-ms.reviewer: luche
+ms.reviewer: kaushika, luche
 ---
 # Troubleshoot co-management workloads
 

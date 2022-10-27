@@ -2,6 +2,7 @@
 title: Deploy Windows Defender definition updates using WSUS
 description: Describes how to use Windows Server Update Services to deploy definition updates to computers that are running Windows Defender.
 ms.date: 08/12/2020
+ms.reviewer: kaushika
 ---
 # Use WSUS to deploy definition updates to computers that are running Windows Defender
 
