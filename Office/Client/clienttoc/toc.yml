@@ -451,6 +451,8 @@
           href: ../excel/data-collected-by-excel-support-diagnostic.md
         - name: Excel data doesn't retain formatting in mail merge
           href: ../excel/excel-data-not-retain-formatting-mail-merge.md  
+        - name: Excel workbook shows old property values
+          href: ../excel/excel-workbook-shows-old-property-values.md
         - name: Date format is incorrect when converting a CSV text file with macros
           href: ../excel/incorrect-date-format-converted-csv-file.md
         - name: Delete cells with a "For Each...Next" loop
