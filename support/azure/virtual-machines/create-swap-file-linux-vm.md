@@ -8,9 +8,10 @@ ms.collection: linux
 ms.author: mabicca
 author: mabicca
 ---
+
 # Create SWAP file for Azure Linux VM
 
-To create SWAP file on Linux VMs on Azure, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is usually mounted under `/mnt`. It’s a is located on the physical server where the Azure VM is hosted. It's not recommended to create SWAP partitions on osDisks or Datadisks that may cause disk latency and impact the performance of operating system and apps. It is also important to remember that SWAP or cache files are the only things that we recommend using the resource disk. This’s because when a VM is stopped, moved to a different container or host, all data on the resource disk will be lost. So it's ideal for temporary caches and SWAP files.
+To create SWAP file on Linux VMs on Azure, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Azure VM is hosted. It's not recommended to create SWAP partitions on OS disks or data disks that may cause disk latency and impact the performance of operating system and apps. It's also important to remember that SWAP or cache files are the only things that we recommend using the resource disk. This’s because when a VM is stopped, moved to a different container or host, all data on the resource disk will be lost. So it's ideal for temporary caches and SWAP files.
 
 ## Disable SWAP creation in waagent configuration
 
@@ -60,7 +61,7 @@ To create SWAP file on Linux VMs on Azure, you need to set up cloud-init to auto
 
 ## Create SWAP file under a custom path
 
-1. Create a file namaed 99-resource-disk.cfg under `/etc/cloud/cloud.cfg.d/`
+1. Create a file named 99-resource-disk.cfg under `/etc/cloud/cloud.cfg.d/`
 
     ```bash
     #cloud-config
@@ -75,7 +76,7 @@ To create SWAP file on Linux VMs on Azure, you need to set up cloud-init to auto
     mounts:
     - ["ephemeral0", "/azure/resource", "auto", "defaults,nofail", "0", "0"]
     ```
-2.	Proceed with the same steps to create the script, but you should notice the different path, instead of /mnt, we are using as an example `/azure/resource` as well as the df calculation for 30% of available space is looking for the same:
+2.	Proceed with the same steps to create the script, but you should notice the different path, instead of /mnt, we're using as an example `/azure/resource` and the df calculation for 30% of available space is looking for the same:
 
     ```bash
     #!/bin/sh
