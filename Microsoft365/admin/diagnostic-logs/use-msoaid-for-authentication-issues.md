@@ -23,7 +23,7 @@ MSOAID is a tool that you can use to diagnose authentication issues. You can rep
 
 ## Download and run MSOAID
 
-1. Download [MSOAID for Windows](https://download.microsoft.com/download/b/c/0/bc0563a7-a5a2-4682-8cbb-3284fa14c666/MSOAID-Win.zip).
+1. Download [MSOAID for Windows](https://aka.ms/msoaid).
 1. Extract the contents of the .zip file.
 1. Right-click the executable file (MSOAID-Win.exe), and select **Run as administrator**.
 
