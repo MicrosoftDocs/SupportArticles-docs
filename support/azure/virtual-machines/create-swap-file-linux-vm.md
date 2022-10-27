@@ -1,6 +1,6 @@
 ---
-title: Create SWAP file for Azure Linux VM
-description: Describes how to create  SWAP file for Azure Linux VM.
+title: Create a SWAP file for Azure Linux VM
+description: Describes how to create a SWAP file for Azure Linux VM.
 ms.date: 10/27/2022
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -9,15 +9,15 @@ ms.author: mabicca
 author: mabicca
 ---
 
-# Create SWAP file for Azure Linux VM
+# Create a SWAP file for Azure Linux VM
 
-To create SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and it has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of operating system and apps. It's also important to remember that SWAP or cache files are the only things that we recommend using the resource disk. This’s because when a VM is stopped, moved to a different container or host, all data on the resource disk will be lost. So it's ideal for temporary caches and SWAP files.
+To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It's also important to remember that SWAP or cache files are the only things we recommend using the resource disk for. This is because when a VM is stopped or moved to a different container or host, all data on the resource disk will be lost. So it's ideal for temporary caches and SWAP files.
 
 ## Disable SWAP creation in waagent configuration
 
 If the SWAP creation is configured in waagent.config, you need to disable it.
 
-1. Disable resource disk formatting and SWAP configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
+1. Disable resource disk formatting and SWAP configuration within waagent configuration, as this task is now handled by Cloud-Init. Set the parameters as follows:
 
     ```Config
     # Format if unformatted. If 'n', resource disk will not be mounted.
@@ -37,7 +37,7 @@ If the SWAP creation is configured in waagent.config, you need to disable it.
 
 Then, create the SWAP file under the resource disk path or a custom path.
 
-## Create SWAP file under the resource disk path
+## Create a SWAP file under the resource disk path
 
 1. Create a new file named SWAP.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
 
@@ -53,7 +53,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     SWAPon -a;
     ```
 
-    The script will be executed on every boot and it will allocate 30% of the available space in the resource disk. You can customize the values based on your situation.
+    The script will be executed on every boot and allocates 30% of the available space in the resource disk. You can customize the values based on your situation.
 
 2. Make sure the file is executable.
 
@@ -61,9 +61,9 @@ Then, create the SWAP file under the resource disk path or a custom path.
     chmod +x /var/lib/cloud/scripts/pert-boot/SWAP.sh
     ```
 
-3.Stop and start the VM. This is necessary just the first time after you create the SWAP file.
+3.Stop and start the VM. This is only necessary the first time after you create the SWAP file.
 
-## Create SWAP file under a custom path
+## Create a SWAP file under a custom path
 
 1. Create a file named 99-resource-disk.cfg under `/etc/cloud/cloud.cfg.d/`
 
@@ -80,7 +80,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     mounts:
     - ["ephemeral0", "/azure/resource", "auto", "defaults,nofail", "0", "0"]
     ```
-2.	Proceed with the same steps to create the script, but you should notice the different path. Instead of `/mnt`, we use `/azure/resource` as an the custom path. You can change the path or SWAPsize based on your situation.
+2.	Proceed with the same steps to create the script, but you should notice a different path. Instead of `/mnt`, we use `/azure/resource` as the custom path. You can change the path or SWAPsize based on your situation.
 
     ```bash
     #!/bin/sh
@@ -99,5 +99,5 @@ Then, create the SWAP file under the resource disk path or a custom path.
     ```bash
     chmod +x /var/lib/cloud/scripts/pert-boot/SWAP.sh
     ```
-5. Stop and start the VM. This is necessary just the first time after that you create the SWAP file.
+5. Stop and start the VM. This is only necessary the first time after you create the SWAP file.
 
