@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to the Management Reporter server error when starting Microsoft Management Reporter 2012
 description: Describes an error you may receive when you start Microsoft Management Reporter 2012. Provides a resolution.
-ms.reviewer: gbyer, kevogt
+ms.reviewer: gbyer, kevogt, lanced
 ms.topic: troubleshooting
 ms.date: 03/31/2021
 ---
@@ -137,11 +137,11 @@ Verify the time on the client and server. Change the time that is incorrect. The
 
 Set up an exception in your Firewall program. Steps will vary depending on the Firewall program used but here are high-level steps.
 
-- Select **Start** and then select **Run**. Type *WF.MSC* and then press Enter.
+- Select **Start** and then select **Run**. Type _WF.MSC_ and then press Enter.
 - Select **Inbound Rules**.
 - Select **New Rule**.
 - Select **Port** and then select **Next**.
-- Select Specific local ports and then type *4712*. If you are not using the default port of 4712, you will need to type that here. Select **Next**.
+- Select Specific local ports and then type _4712_. If you are not using the default port of 4712, you will need to type that here. Select **Next**.
 - Select Allow the connection and then select **Next**.
 - Select **Domain**, **Private**, and **Public**. Select **Next**.
 - Type Management Reporter as the Name and then select **Finish**.
@@ -169,10 +169,10 @@ Remove the computer from the domain and then add it back to the domain.
 > [!WARNING]
 > A local administrator account will need to be used to logon to the computer one time after it is removed from the domain.
 
-- Select **Start**, select **Run** and type *sysdm.cpl* to open System Properties.
+- Select **Start**, select **Run** and type _sysdm.cpl_ to open System Properties.
 - Select **Change** and make a note of the Domain name.
 - Select **Workgroup**, type a name (that is, workgroup), select **OK** to accept changes and then restart the computer.
-- After restarting, select **Start**, select **Run** and type *sysdm.cpl* to open System Properties.
+- After restarting, select **Start**, select **Run** and type _sysdm.cpl_ to open System Properties.
 - Select Change and then select **Domain**.
 - Enter the domain noted above, select **OK** to accept changes and then restart the computer.
 
