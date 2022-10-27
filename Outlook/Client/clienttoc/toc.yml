@@ -759,6 +759,8 @@
           href: ../user-interface/missing-registry-information-causes-problems-with-object-model.md
         - name: Missing Weather Bar and Weather settings
           href: ../user-interface/weather-bar-and-weather-settings-are-missing.md
+        - name: Navigate to public folders in new Outlook for Windows
+          href: ../user-interface/navigate-to-public-folders-in-new-outlook.md
         - name: No notifications if Outlook Start menu shortcut is missing
           href: ../user-interface/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut.md
         - name: No search results or content shown in favorites
