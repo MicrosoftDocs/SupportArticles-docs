@@ -7,7 +7,7 @@ localization_priority: Normal
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.reviewer: warrenr
+ms.reviewer: warrenr, jhaak
 ms.custom: 
 - CSSTroubleshoot
 - CI 167550
@@ -27,7 +27,7 @@ You have a Microsoft Excel workbook that's stored in a SharePoint Online or Shar
 
 ## Cause
 
-This issue might occur if the Excel workbook already exists in the app local cache of the Excel desktop app. Currently, it's a product limitation.
+This is a known issue in Excel. This issue might occur if the workbook already exists in the app local cache of the Excel desktop app.
 
 ## Workaround
 
