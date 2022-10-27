@@ -19,7 +19,7 @@ If the SWAP creation is configured in waagent.config, you need to disable it.
 
 1. Disable resource disk formatting and SWAP configuration within waagent configuration because this task is now handled by Cloud-Init. Set the parameters as follows:
 
-    ```config
+    ```Config
     # Format if unformatted. If 'n', resource disk will not be mounted.
     ResourceDisk.Format=n
 
@@ -67,7 +67,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
 1. Create a file named 99-resource-disk.cfg under `/etc/cloud/cloud.cfg.d/`
 
-    ```bash
+    ```YAML
     #cloud-config
     disk_setup:
     ephemeral0:
