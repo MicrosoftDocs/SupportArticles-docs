@@ -1,0 +1,79 @@
+---
+title: OneDrive files or folders incorrectly show as syncing
+description: Fixes an issue in which files or folders in the OneDrive folder still show as syncing even if the OneDrive icon in the taskbar notification area shows up to date. 
+author: MaryQiu1987
+ms.author: v-maqiu
+manager: dcscontentpm
+audience: ITPro
+ms.topic: troubleshooting
+localization_priority: Normal
+ms.custom: 
+  - CI 168012
+  - CSSTroubleshoot
+ms.reviewer: bpeterse
+appliesto: 
+  - OneDrive for Business
+  - Microsoft OneDrive
+search.appverid: 
+  - MET150
+ms.date: 10/27/2022
+---
+# The OneDrive sync status icon incorrectly shows as "syncing" in File Explorer  
+
+The OneDrive icon in the taskbar notification area shows the "**Up to date**" status. However, some or all of the files and folders in the OneDrive folder still show as "syncing". This article provides possible solutions that you can use to solve these issues.  
+
+## Some files and folders show the "syncing" status  
+
+This issue may occur for the following reasons:
+
+- There are hidden and temporary files in the OneDrive folder. By default, hidden and temporary files show the "syncing" status, but they aren't synced by OneDrive. Therefore, they don't affect the "**Up to date**" status.
+- Incorrect cached status in the Windows Search index. This may cause unexpected sync status in some files and folders.  
+
+### Resolution  
+
+To resolve this issue, first check if there are hidden and temporary files and folders and remove them:  
+
+1. [Show hidden files and folders in File Explorer](https://support.microsoft.com/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).  
+2. Remove all hidden files and folders that aren't associated with the files that you're currently editing.
+3. [Search for temporary Office files](/office/troubleshoot/word/recover-lost-unsaved-corrupted-document#searching-for-temporary-files). To remove these files, close any open Office files, and then [clear the Office document cache](https://support.microsoft.com/topic/delete-your-office-document-cache-b1d3765e-d71b-4bb8-99ca-acd22c42995d).
+4. If clearing the Office document cache doesn't remove any temporary Office files that are still syncing, determine whether the files can be manually deleted.
+
+   > [!WARNING]
+   > Warning This may cause data loss of the Office document. Therefore, make sure that the deletion is safe.
+
+5. If the files aren't temporary Office files, determine whether they can be safely removed. If they can't be removed, move them out of the OneDrive folder to see whether the issue is resolved.
+
+If there are no hidden or temporary files that cause the sync status to be incorrect, check if this issue is caused by Windows Search index.  
+
+1. Select the Windows (start) icon, and type *Services* to launch the Service application.
+2. Double-click **Windows Search**, and then change the **Startup type** to **Disabled**.
+3. In **Service status**, select **Stop**.
+4. Select **OK**.
+5. Refresh the File Explorer window. If the issue is resolved, this issue is caused by the cached search index.
+6. Go back to the Services application, and then change the **Startup type** of the **Windows Search** service back to **Automatic (Delayed Start)**.
+7. Rebuild the Windows Search index to resolve this issue:  
+
+    1. Select the Windows (start) icon, type *Indexing*, and then select **Indexing Options**.
+    1. Select **Advanced** > **Rebuild**.
+
+    > [!NOTE]
+    > This process may take some time to complete and will complete faster when the computer isn't in use. Therefore, we recommend that you rebuild the index outside active hours, such as at night or on weekends. If the issue isn't resolved, there may be a problem in the indexing layer. For more information, see [Fix problems in Windows Search](/troubleshoot/windows-client/shell-experience/fix-problems-in-windows-search).
+
+## All files and folders show the "syncing" status
+
+This issue may occur if the `UseFindFirstFileEnumeration` Windows policy is set to true. This policy is designed for legacy file systems and it's not compatible with OneDrive Files on Demand. If this policy is set to true, File Explorer can't read the reparse tag on files and folders. Therefore, all files and folders are set to the default status of "syncing".
+
+### Resolution
+
+To resolve this issue, follow these steps to remove the `UseFindFirstFileEnumeration` registry value or change its value to **0**.
+
+> [!IMPORTANT]
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692) in case problems occur.
+  
+1. Select the Windows (start) icon, and then type *regedit* to open Registry Editor.
+2. Locate the following registry subkey:
+
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Explorer`
+
+3. Right-click `UseFindFirstFileEnumeration`, and then select **Delete**. Or, select **Modify**, and then set the value to **0**.  
+4. Restart File Explorer.  
