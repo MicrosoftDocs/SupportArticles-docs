@@ -92,7 +92,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     chmod 0600 /azure/resource/SWAPfile
     mkSWAP /azure/resource/SWAPfile
     SWAPon /azure/resource/SWAPfile
-    SWAPon -a;
+    SWAPon -a
     ```
 4.	Make sure the file is executable:
 
