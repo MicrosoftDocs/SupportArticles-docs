@@ -7,14 +7,14 @@ ms.reviewer: svccauto
 ms.prod: sql
 ---
 
-# SQL Server diagnostics added to detect unreported I/O problems due to stale reads or lost writes
+# SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 826433
 
 ## Symptoms
 
-If operating system, driver, or hardware problems cause lost write conditions or *stale read* conditions, you may see data integrity-related error messages such as Errors 605, 823, 3448, 3456. You may receive error messages that are similar to the following examples:
+If operating system, driver, or hardware problems cause lost write conditions or *stale read* conditions, you may see data integrity-related error messages such as errors 605, 823, 3448, 3456. You may receive error messages that are similar to the following examples:
 
 >2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
 2003-07-24 16:43:04.57 spid63 pageno is/should be: objid is/should be:
@@ -52,7 +52,7 @@ To enable additional diagnostics for these types of problems, SQL Server has add
 `DBCC TRACEON(818, -1)`
 ```
 
-Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile IOs. When errors such as Error 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous IO. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
+Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile IOs. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
 
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
@@ -66,7 +66,7 @@ Contact the hardware vendor and consider disabling caching mechanisms to correct
 
 Starting with SQL Server 2005, the error message will be reported as:
 
-> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a <<Read/Write>> of page <<PAGEID>> in database ID <<DBID>> at offset <<PHYSICAL OFFSET>> in file <<FILE NAME>>. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
+> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a \<<Read/Write>\> of page \<<PAGEID>\> in database ID <<DBID>> at offset <<PHYSICAL OFFSET>> in file <<FILE NAME>>. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
 At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a Lost Write or a Stale Read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
