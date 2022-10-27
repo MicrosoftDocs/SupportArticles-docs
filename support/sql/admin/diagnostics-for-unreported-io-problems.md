@@ -66,7 +66,7 @@ Contact the hardware vendor and consider disabling caching mechanisms to correct
 
 Starting with SQL Server 2005, the error message will be reported as:
 
-> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a \<<Read/Write>\> of page \<<PAGEID>\> in database ID <<DBID>> at offset <<PHYSICAL OFFSET>> in file <<FILE NAME>>. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
+> SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a \<<Read/Write>\> of page \<<PAGEID>\> in database ID \<<DBID>\> at offset \<<PHYSICAL OFFSET>\> in file \<<FILE NAME>\>. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
 At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a Lost Write or a Stale Read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
