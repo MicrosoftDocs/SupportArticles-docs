@@ -24,7 +24,7 @@ ms.date: 10/26/2022
 
 The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook and Advance Diagnostics. This version of the Assistant runs at a command-line or through a script such as PowerShell. It's useful when administrators need to run the Assistant on computers in their organization remotely.
 
-To fix issues on a single computer, we recommend that you use the [full UI version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, the Enterprise version of the Assistant is helpful.
+To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, the Enterprise version of the Assistant is helpful.
 
 ## Supported scenarios
 
@@ -38,7 +38,7 @@ You can use the Enterprise version of the Assistant to resolve issues for the fo
 |[Office Shared Computer Activation](assistant-office-shared-computer-activation.md)|Automated checks and recoveries to either enable or disable Office Shared Computer Activation.|`OfficeSharedComputerScenario`|
 |[Outlook Calendar Scan](assistant-outlook-calendar-scan.md)|Scans your Outlook calendar with the Calendar Checking tool (CalCheck) for dozens of known problems.|`OutlookCalendarCheckTask`|
 |[Teams Meeting Add-in for Outlook](assistant-teams-meeting-add-in-outlook.md)|Automated checks and recoveries to help you get the Teams Meeting Add-in for Outlook up and running.|`TeamsAddinScenario`|
-|[Reset Office Activation](assistant-reset-office-activation.md)ResetOfficeActivation|Clear prior activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state and you can then activate them with a different Office account or change to a different license mode.|`ResetOfficeActivation`|
+|[Reset Office Activation](assistant-reset-office-activation.md)|Clear prior activations of Microsoft 365 Apps for Enterprise to remove related licenses and cached Office account information. This resets Office applications to a clean state and you can then activate them with a different Office account or change to a different license mode.|`ResetOfficeActivation`|
 
 ## Download and run the Enterprise version of the Assistant
 
