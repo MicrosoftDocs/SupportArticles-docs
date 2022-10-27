@@ -217,6 +217,10 @@ If you're running into issues using Power Apps, try these common troubleshooting
 
     An app that contains a camera control might crash if you open the app on a Windows Phone that's running build 10.0.10586.107. To avoid this problem, upgrade to the most recent build (for example, by running the [Upgrade Advisor](https://www.microsoft.com/store/p/upgrade-advisor/9nblggh0f5g4).
 
+1. **Automatic Next links for galleries and grids do not work for action-based connectors.**
+
+    Next links (the property on a query result that enables a gallery or grid to automatically page in the next set of results of a query) are not yet supported for [action-based connectors](/power-apps/maker/canvas-apps/connections-list) in Power Apps. This means that when you use an action-based connector, it will retrieve data up to the delegable limit and then stop. To get paging behaviors by using a gallery or grid and an action-based connection, use a Power Automate flow.
+
 ## Power Apps for Windows
 
 1. **Power Apps mobile app for Windows platform doesn't support Dropbox connector.** (December 15, 2020)
