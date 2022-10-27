@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 10/25/2022
 ---
-## Scenario: Office Activation
+# Scenario: Office Activation
 
 The Office Activation scenario automates checks and recoveries to reset activation-related settings to successfully activate a subscription version of Office.
 

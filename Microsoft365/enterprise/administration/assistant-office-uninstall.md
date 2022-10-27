@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 10/25/2022
 ---
-## Scenario: Office Uninstall
+# Scenario: Office Uninstall
 
 The Office Uninstall scenario removes any version of Office from a device. This scenario automates all of the steps that are described and provided in [Uninstall Office from a PC](https://support.microsoft.com/office/9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
 

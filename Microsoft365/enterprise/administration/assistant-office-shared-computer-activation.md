@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 10/25/2022
 ---
-## Scenario: Office Shared Computer Activation
+# Scenario: Office Shared Computer Activation
 
 The Office Shared Computer Activation scenario automates checks and recoveries to enable or disable shared computer activation configuration on a device. For more information, see [Overview of shared computer activation for Microsoft 365 Apps](/deployoffice/overview-shared-computer-activation).
 

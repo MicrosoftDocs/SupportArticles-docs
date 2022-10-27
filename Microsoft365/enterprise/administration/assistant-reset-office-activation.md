@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 10/25/2022
 ---
-## Scenario: Reset Office Activation
+# Scenario: Reset Office Activation
 
 The Reset Office Activation scenario automates all of the checks and scripts that are described and provided in [Reset activation state for Microsoft 365 Apps for enterprise](/office/troubleshoot/activation/reset-office-365-proplus-activation-state).
 

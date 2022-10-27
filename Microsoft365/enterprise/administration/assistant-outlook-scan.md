@@ -15,7 +15,7 @@ appliesto:
 search.appverid: MET150
 ms.date: 10/25/2022
 ---
-## Scenario: Outlook Scan
+# Scenario: Outlook Scan
 
 The Outlook Scan scenario scans and creates a detailed report of Outlook, Office, Windows and mailbox configurations.
 
