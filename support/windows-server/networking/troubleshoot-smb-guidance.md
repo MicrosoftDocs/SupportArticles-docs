@@ -15,6 +15,9 @@ ms.technology: networking
 ---
 # SMB troubleshooting guidance
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806211" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common SMB issues.
+
 This article is designed to help you troubleshooting Server Message Block (SMB) issues. Most users are able to resolve their issue by using the solutions that are provided here.
 
 ## Introduction of SMB
