@@ -22,17 +22,17 @@ When you execute an UPDATE against a clustered index column, SQL Server updates 
 
 SQL Server has two options to do the update:
 
-- **Narrow plan**: Do the non-clustered index update along with the clustered index key update. This straightforward approach is easy to understand; update the clustered index and then update all non-clustered indexes at the same time. SQL Server will update one row and move to the next until all is complete. This approach is called a narrow plan update or a Per-Row update. However, this operation is relatively expensive because the order of non-clustered index data that will be updated may not be in the order of clustered index data. If many index pages are involved in the update, when the data is on disk, a large number of random I/O requests may occur.
+- **Narrow plan**: Do the non-clustered index update along with the clustered index key update. This straightforward approach is easy to understand; update the clustered index and then update all non-clustered indexes at the same time. SQL Server will update one row and move to the next until all are complete. This approach is called a narrow plan update or a Per-Row update. However, this operation is relatively expensive because the order of non-clustered index data that will be updated may not be in the order of clustered index data. If many index pages are involved in the update, when the data is on disk, a large number of random I/O requests may occur.
 
 - **Wide plan**: To optimize performance and reduce random I/O, SQL Server may choose a wide plan. It doesn't do the non-clustered indexes update along with the clustered index update together. Instead, it sorts all non-clustered index data in memory first and then updates all indexes in that order. This approach is called a wide plan (also called a Per-Index update).
 
-Here's a screenshot of Narrow and Wide Plans:
+Here's a screenshot of narrow and wide plans:
 
 :::image type="content" source="media/understand-wide-narrow-plans/narrow_wide_plans_initial.png" alt-text="Screenshot of narrow and wide plans.":::
 
 ## When does SQL Server choose a wide plan?
 
-There are two criteria that must be met for SQL Server to choose a wide plan:
+Two criteria must be met for SQL Server to choose a wide plan:
 
 - The number of rows impacted is greater than 250.
 - The size of the leaf-level of the non-clustered indexes (index page count * 8 KB) is at least 1/1000 of the max server memory setting.
@@ -90,7 +90,7 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
     As expected, the query optimizer chooses a narrow plan for the first two queries because the number of impacted rows is less than 250. A wide plan is used for the third query because the impacted row count is 251, which is greater than 250.
 
-1. Examine the results based on the second criterion (the memory of leaf index size is at least 1/1000 of the max server memory setting).
+1. Examine the results based on the second criterion (the memory of the leaf index size is at least 1/1000 of the max server memory setting).
 
     Here is a screenshot for the results based on the second criterion:
 
@@ -178,7 +178,7 @@ To test if a wide plan is faster than a narrow plan when the data is in a buffer
 
     For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
 
-    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close because the data is already in the buffer before the UPDATE was executed, and renders the Per-Index update (wide plan) less beneficial.
+    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close because the data is already in the buffer before the UPDATE was executed, and this renders the Per-Index update (wide plan) less beneficial.
 
     The following screenshot shows wide and narrow plans when data is cached in the buffer pool:
 
@@ -253,9 +253,9 @@ The answer is "not always." To test if the wide plan query is always faster than
 
     The duration of both queries is reduced significantly! The wide plan takes 0.304 seconds, which is a bit slower than the narrow plan this time.
 
-    Here is a screenshot of comparing performance when wide and narrow are used:
+    The following screenshot shows the comparing of performance when wide and narrow are used:
 
-    :::image type="content" source="media/understand-wide-narrow-plans/wide_and_narrow_plan_which_is_faster.png" alt-text="Screenshot of comparing performance when wide and narrow are used.":::
+    :::image type="content" source="media/understand-wide-narrow-plans/wide_and_narrow_plan_which_is_faster.png" alt-text="Screenshot that shows the comparing of performance when wide and narrow are used.":::
 
 ## Scenarios where the wide plan is applied
 
