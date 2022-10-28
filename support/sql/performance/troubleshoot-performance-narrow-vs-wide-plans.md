@@ -226,10 +226,10 @@ The answer is "not always." To test if the wide plan query is always faster than
     SELECT c1,c1 AS c2,c1 AS C3,c1 AS c4,c1 AS C5 INTO mytable3 FROM mytable2
     GO
     CREATE CLUSTERED INDEX IC1 ON mytable3(C1)
-    CREATE  INDEX IC2 ON mytable3(C2)
-    CREATE  INDEX IC3 ON mytable3(C3)
-    CREATE  INDEX IC4 ON mytable3(C4)
-    CREATE  INDEX IC5 ON mytable3(C5)
+    CREATE INDEX IC2 ON mytable3(C2)
+    CREATE INDEX IC3 ON mytable3(C3)
+    CREATE INDEX IC4 ON mytable3(C4)
+    CREATE INDEX IC5 ON mytable3(C5)
     GO
     ```
 
@@ -301,7 +301,7 @@ CREATE PARTITION FUNCTION PF1(INT) AS
 GO
 CREATE PARTITION SCHEME PS1 AS 
   PARTITION PF1 all TO 
-  (   [PRIMARY] ) 
+  ([PRIMARY]) 
 GO 
 CREATE CLUSTERED INDEX c1 ON mytable5(c1) ON PS1(c1)
 CREATE INDEX c2 ON mytable5(c2)
