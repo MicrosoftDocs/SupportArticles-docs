@@ -132,7 +132,7 @@ You must configure SSL on the server and install certificates before you can use
 
 You could also modify the config files to turn off Encryption by taking the following steps (make a backup copy of the files before you modify them).
 
-1. In Windows Explorer, go to the Management Reporter installation folder (the default installation file is: _C:\Program Files\Microsoft Dynamics ERP\Management Reporter\2.1_
+1. In Windows Explorer, go to the Management Reporter installation folder (the default installation file is: _C:\Program Files\Microsoft Dynamics ERP\Management Reporter\2.1_)
 2. In the Application Service folder, find the web.config file and right-click the file to open it in Notepad.
 3. Locate the \<connectionstrings> and change the setting Encrypt= from **True** to **False**.
 4. Save the changes.
