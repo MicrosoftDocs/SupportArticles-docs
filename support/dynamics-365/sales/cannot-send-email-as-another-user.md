@@ -4,6 +4,7 @@ description: Fixes an issue in which you get the You cannot send email as the se
 ms.reviewer: dmartens
 ms.topic: troubleshooting
 ms.date: 10/28/2022
+ms.subservice: d365-sales-email-office-integration
 ---
 # "You cannot send email as the selected user" error when sending an email as another user
 
