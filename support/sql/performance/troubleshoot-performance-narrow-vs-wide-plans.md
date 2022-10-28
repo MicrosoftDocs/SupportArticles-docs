@@ -117,27 +117,27 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
     In this case, 159 x 8/(1200 x 1024) = 0.00103515625 > 1/1000. After this change, the `ic3` appears in the plan.
 
-    :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_uses_all_indexes_after_memory_change.png" alt-text="Screenshot of the wide plan that uses all indexes when memory threshold reached.":::
+    :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_uses_all_indexes_after_memory_change.png" alt-text="Screenshot of the wide plan that uses all indexes when memory threshold is reached.":::
 
-## Is a wide plan faster than narrow plan?
+## Is a wide plan faster than a narrow plan?
 
 The answer is that it depends on whether the data and index pages are cached in the buffer pool or not.
 
 ### Data is cached in the buffer pool
 
-If the data is already in buffer pool, the query with wide plan doesn't offer other performance benefit, because the wide plan is designed to improve the I/O performance (physical reads not logical reads).
+If the data is already in the buffer pool, the query with the wide plan doesn't offer other performance benefits because the wide plan is designed to improve the I/O performance (physical reads, not logical reads).
 
-To test if a wide plan is faster than narrow plan when the data is in buffer pool, follow these steps under the following environment:
+To test if a wide plan is faster than a narrow plan when the data is in a buffer pool, follow these steps in the following environment:
 
 - SQL Server 2019 CU11
 - Max server memory: 30,000 MB
-- The data size is 64 MB, while index size is around 127 MB.
-- Database files are in two different physical disks:
+- The data size is 64 MB, while the index size is around 127 MB.
+- Database files are on two different physical disks:
 
   - *I:\sql19\dbWideplan.mdf*  
   - *H:\sql19\dbWideplan.ldf*
 
-1. Create another table `mytable2` by running the following commands:
+1. Create another table, `mytable2`, by running the following commands:
 
     ```sql
     CREATE TABLE mytable2(C1 INT,C2 INT,C3 INT,C4 INT,C5 INT)
@@ -172,13 +172,13 @@ To test if a wide plan is faster than narrow plan when the data is in buffer poo
 
     For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
 
-    The query with wide plan takes 0.136 second, while the query with narrow plan only takes 0.112 second. The two durations are very close because the data is already in buffer before the UPDATE was executed and renders the Per-Index update (wide plan) less beneficial.
+    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close because the data is already in the buffer before the UPDATE was executed, and renders the Per-Index update (wide plan) less beneficial.
 
-    :::image type="content" source="media/understand-wide-narrow-plans/wide_narrow_plan_data_in_buffer_pool.png" alt-text="Screenshot of wide and narrow plans when data is cached in buffer pool.":::
+    :::image type="content" source="media/understand-wide-narrow-plans/wide_narrow_plan_data_in_buffer_pool.png" alt-text="Screenshot of wide and narrow plans when data is cached in the buffer pool.":::
 
 ### Data isn't cached in the buffer pool
 
-To test if a wide plan is faster than narrow plan when the data isn't in buffer pool, run the following queries:
+To test if a wide plan is faster than a narrow plan when the data isn't in the buffer pool, run the following queries:
 
 > [!NOTE]
 > When you do the test, make sure yours is the only workload in SQL Server, and the disks are dedicated to SQL Server.
@@ -198,17 +198,17 @@ WAITFOR DELAY '00:00:02' --wait for 1~2 SECONDS
 UPDATE mytable2 SET c1=c1 WHERE c2 < 260 OPTION (QUERYTRACEON 2338) --force Narrow plan
 ```
 
-The query with Wide plan takes 3.554 seconds, while the query with Narrow Plan takes 6.701 seconds. The wide plan query runs faster this time.
+The query with a wide plan takes 3.554 seconds, while the query with a narrow plan takes 6.701 seconds. The wide plan query runs faster this time.
 
-:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_data_not_in_bpool.png" alt-text="Screenshot of the wide plan when data isn't cached in buffer pool.":::
+:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_data_not_in_bpool.png" alt-text="Screenshot of the wide plan when data isn't cached in the buffer pool.":::
 
-:::image type="content" source="media/understand-wide-narrow-plans/narrow_plan_data_not_in_bpool.png" alt-text="Screenshot of the narrow plan when data isn't cached in buffer pool.":::
+:::image type="content" source="media/understand-wide-narrow-plans/narrow_plan_data_not_in_bpool.png" alt-text="Screenshot of the narrow plan when data isn't cached in the buffer pool.":::
 
-## Is the wide plan query always faster than narrow query plan when data isn't in buffer?
+## Is the wide plan query always faster than the narrow query plan when data isn't in the buffer?
 
-The answer is "not always". To test if the wide plan query is always faster than narrow query plan when data isn't in buffer, follow these steps:
+The answer is "not always." To test if the wide plan query is always faster than the narrow query plan when data isn't in the buffer, follow these steps:
 
-1. Create another table `mytable2` by running the following commands:
+1. Create another table, `mytable2`, by running the following commands:
 
     ```sql
     SELECT c1,c1 AS c2,c1 AS C3,c1 AS c4,c1 AS C5 INTO mytable3 FROM mytable2
@@ -221,7 +221,7 @@ The answer is "not always". To test if the wide plan query is always faster than
     GO
     ```
 
-    The `mytable3` is the same as `mytable2`, except the data. `mytable3` has all five columns with the same value, which makes the order of non-clustered indexes follow the order of clustered index. This sorting of the data will minimize the advantage of wide plan.
+    The `mytable3` is the same as `mytable2`, except for the data. `mytable3` has all five columns with the same value, which makes the order of non-clustered indexes follow the order of the clustered index. This sorting of the data will minimize the advantage of the wide plan.
 
 1. Execute the following commands to compare the query plans:
 
@@ -239,11 +239,11 @@ The answer is "not always". To test if the wide plan query is always faster than
     UPDATE mytable3 SET c1=c1 WHERE c2<12 OPTION(QUERYTRACEON 2338) --tf 2338 will force Narrow plan
     ```
 
-    The duration of both queries is reduced significantly! The wide plan takes 0.304 second, which is a bit slower than the narrow plan this time.
+    The duration of both queries is reduced significantly! The wide plan takes 0.304 seconds, which is a bit slower than the narrow plan this time.
 
     :::image type="content" source="media/understand-wide-narrow-plans/wide_and_narrow_plan_which_is_faster.png" alt-text="Screenshot of comparing performance when wide and narrow are used.":::
 
-## Scenarios where wide plan is applied
+## Scenarios where the wide plan is applied
 
 Here are the other scenarios where the wide plan is also applied:
 
@@ -260,11 +260,11 @@ INSERT mytable4 VALUES(0,0,0,0)
 INSERT mytable4 VALUES(1,1,1,1)
 ```
 
-:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_cluster_index_unique.png" alt-text="Screenshot of the wide plan that is used when cluster index has a unique key.":::
+:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_cluster_index_unique.png" alt-text="Screenshot of the wide plan that is used when the cluster index has a unique key.":::
 
 For more details, review [Maintaining Unique Indexes](/archive/blogs/craigfr/maintaining-unique-indexes).
 
-### Cluster index column is specified in partition scheme
+### Cluster index column is specified in the partition scheme
 
 ```sql
 CREATE TABLE mytable5(c1 INT,c2 INT,c3 INT,c4 INT)
@@ -291,7 +291,7 @@ GO
 UPDATE mytable5 SET c1=c1 WHERE c1=1 
 ```
 
-:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_clustered_column_in_partition_scheme.png" alt-text="wide plan used when clustered column in partition scheme.":::
+:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_clustered_column_in_partition_scheme.png" alt-text="Screenshot that shows that the wide plan is used when there's a clustered column in the partition scheme.":::
 
 ### Clustered index column isn't part of the partition scheme, and the partition scheme column is updated
 
@@ -319,7 +319,7 @@ CREATE INDEX c3 ON mytable6(c3)
 CREATE INDEX c4 ON mytable6(c4)
 ```
 
-:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_part_scheme_column_update.png" alt-text="Screenshot of wide plan part that is used when partition scheme column updated.":::
+:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_part_scheme_column_update.png" alt-text="Screenshot of the wide plan part that is used when the partition scheme column is updated.":::
 
 ## Conclusion
 
@@ -329,6 +329,6 @@ CREATE INDEX c4 ON mytable6(c4)
   - The memory of leaf index is at least 1/1000 of the max server memory setting.
 
 - Wide plans boost performance at the expense of consuming extra memory.
-- If the expected query plan isn't used, it may be due to the stale statistics (not reporting correct data size), max server memory setting, or other unrelated issues like parameter sensitive plans.
-- The duration of updates using a wide plan depends on several factors and in some cases it may take longer than narrow plans.
-- Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force wide plan; trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force narrow plan.
+- If the expected query plan isn't used, it may be due to stale statistics (not reporting correct data size), max server memory setting, or other unrelated issues like parameter-sensitive plans.
+- The duration of updates using a wide plan depends on several factors, and in some cases, it may take longer than narrow plans.
+- Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force a wide plan; trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force a narrow plan.
