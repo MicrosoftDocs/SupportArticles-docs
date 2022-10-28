@@ -55,6 +55,8 @@
     items:
     - name: Can't connect to the specified SharePoint site
       href: ../sync/onedrive-for-business-sync-returns-error.md
+    - name: Can't sync a shortcut folder with OneDrive
+      href: ../sync/cannot-sync-shortcut-folder.md
     - name: Enable co-authoring for OneDrive-synced files
       href: ../sync/enable-co-authoring-for-onedrive-synced-file.md
     - name: Error Code 0x8004de40 when signing in to OneDrive
