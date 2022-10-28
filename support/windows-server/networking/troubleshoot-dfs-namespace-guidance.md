@@ -15,6 +15,9 @@ ms.technology: networking
 ---
 # DFS Namespace troubleshooting guidance
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31941548" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common DFS-Namespace issues.
+
 Distributed File System (DFS) Namespace is a Windows technology designed to provide distributed namespace access to file shares across an enterprise.
 
 ## Troubleshooting checklist
