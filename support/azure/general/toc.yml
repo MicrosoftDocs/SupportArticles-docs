@@ -95,10 +95,12 @@
 
 - name: Azure Batch
   items:
-  - name: AccountEncryptionKeyUnavailable error message
-    href: error-accountencryptionkeyunavailable.md
   - name: Access to storage account is denied
     href: access-denied-execute-azure-batch-job.md
+  - name: AccountEncryptionKeyUnavailable error message
+    href: error-accountencryptionkeyunavailable.md
+  - name: Batch node creation delays when restarting or reimaging
+    href: batch-node-creation-delay-restart-reimage.md
   - name: Batch pool deletion failure
     href: azure-batch-pool-deletion-failure.md
 
