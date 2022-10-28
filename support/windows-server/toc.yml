@@ -472,6 +472,8 @@
     items:
     - name: '"This property is limited to 64 values" error'
       href: ./identity/this-property-limited-64-values.md
+    - name: A batch of Event ID 4780 are logged in the PDC
+      href: ./identity/a-batch-of-event-4780-logged-pdc.md
     - name: Access denied after logging on to a local administrator account
       href: ./identity/access-denied-log-on-administrator-domain-account.md
     - name: ACCESS DENIED with NetUser and NetGroup APIs

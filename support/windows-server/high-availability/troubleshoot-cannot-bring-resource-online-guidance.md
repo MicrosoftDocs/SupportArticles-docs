@@ -1,7 +1,7 @@
 ---
 title: Can't bring a clustered resource online troubleshooting guidance
 description: Provides guidance for when a clustered resource fails to come online in a Windows-based failover cluster
-ms.date: 04/18/2022
+ms.date: 10/29/2022
 author: kaushika-msft
 ms.author: kaushika
 manager: dcscontentpm
@@ -14,6 +14,9 @@ ms.custom: sap:cannot-bring-a-resource-online, csstroubleshoot
 ms.technology: windows-server-high-availability
 ---
 # Can't bring a clustered resource online troubleshooting guidance
+
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806238" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common issues when a resource fails to come online.
 
 This guidance is designed to get you started on troubleshooting issues where clustered resources can't be brought online in a Windows-based cluster environment.
 
