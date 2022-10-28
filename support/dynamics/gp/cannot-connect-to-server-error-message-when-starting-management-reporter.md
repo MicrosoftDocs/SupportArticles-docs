@@ -1,7 +1,7 @@
 ---
 title: Cannot connect to the Management Reporter server error when starting Microsoft Management Reporter 2012
 description: Describes an error you may receive when you start Microsoft Management Reporter 2012. Provides a resolution.
-ms.reviewer: gbyer, kevogt, lanced
+ms.reviewer: gbyer, kevogt
 ms.topic: troubleshooting
 ms.date: 03/31/2021
 ---
