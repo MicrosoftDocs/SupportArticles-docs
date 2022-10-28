@@ -1,7 +1,7 @@
 ---
 title: Troubleshoot performance issues with narrow and wide plans in SQL Server
 description: Provides information to understand and troubleshoot updates that use wide or narrow query plans.
-ms.date: 10/22/2022
+ms.date: 10/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
 ms.prod: sql
@@ -22,9 +22,9 @@ When you execute an UPDATE against a clustered index column, SQL Server updates 
 
 SQL Server has two options to do the update:
 
-- Do the non-clustered index update along with the clustered index key update. This straightforward approach is easy to understand; update the clustered index and then update all non-clustered indexes at the same time. SQL Server will update one row and move to the next until all is complete. This approach is called a **narrow plan** update or a Per-Row update. However, this operation is relatively expensive because the order of non-clustered index data that will be updated may not be in the order of clustered index data. If many index pages are involved in the update, when the data is on disk, a large number of random I/O requests may occur.
+- **Narrow plan**: Do the non-clustered index update along with the clustered index key update. This straightforward approach is easy to understand; update the clustered index and then update all non-clustered indexes at the same time. SQL Server will update one row and move to the next until all is complete. This approach is called a narrow plan update or a Per-Row update. However, this operation is relatively expensive because the order of non-clustered index data that will be updated may not be in the order of clustered index data. If many index pages are involved in the update, when the data is on disk, a large number of random I/O requests may occur.
 
-- To optimize performance and reduce random I/O, SQL Server may choose a wide plan. It doesn't do the non-clustered indexes update along with the clustered index update together. Instead, it sorts all non-clustered index data in memory first and then updates all indexes in that order. This approach is called a **wide plan** (also called a Per-Index update).
+- **Wide plan**: To optimize performance and reduce random I/O, SQL Server may choose a wide plan. It doesn't do the non-clustered indexes update along with the clustered index update together. Instead, it sorts all non-clustered index data in memory first and then updates all indexes in that order. This approach is called a wide plan (also called a Per-Index update).
 
 Here's a screenshot of Narrow and Wide Plans:
 
@@ -84,15 +84,19 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
 1. Examine the results based on the first criterion (the threshold of the affected number of rows is 250).
 
-    As expected, the query optimizer chooses a narrow plan for the first two queries because the number of impacted rows is less than 250. A wide plan is used for the third query because the impacted row count is 251, which is greater than 250.
+    Here is a screenshot for the results based on the first criterion:
 
     :::image type="content" source="media/understand-wide-narrow-plans/narrow_first2_wide_third.png" alt-text="Screenshot of the wide and narrow plans based on size of index.":::
 
+    As expected, the query optimizer chooses a narrow plan for the first two queries because the number of impacted rows is less than 250. A wide plan is used for the third query because the impacted row count is 251, which is greater than 250.
+
 1. Examine the results based on the second criterion (the memory of leaf index size is at least 1/1000 of the max server memory setting).
 
-    A wide plan is selected for the third `UPDATE` query. But the index `ic3` (on column `c3`) isn't seen in the plan. The issue occurs because the second criterion isn't met - leaf pages index size in comparison to the max memory setting.
+    Here is a screenshot for the results based on the second criterion:
 
     :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_missing_third_index.png" alt-text="Screenshot of the wide plan not using index due to size.":::
+
+    A wide plan is selected for the third `UPDATE` query. But the index `ic3` (on column `c3`) isn't seen in the plan. The issue occurs because the second criterion isn't met - leaf pages index size in comparison to the max memory setting.
 
     The data type of column `c2`, `c4` and `c4` is `char(30)`, while the data type of column `c3` is `char(20)`. The size of each row of index `ic3` is less than others, so the number of leaf pages is less than others.
 
@@ -116,6 +120,8 @@ To understand how narrow and wide plans work, follow these steps in the followin
     > The option `max server memory` is an advanced option. When using the system stored procedure `sp_configure` to change the setting, you can change it only when `show advanced options` is set to `1`. These settings take effect immediately without a server restart.
 
     In this case, 159 x 8/(1200 x 1024) = 0.00103515625 > 1/1000. After this change, the `ic3` appears in the plan.
+
+    The following screenshot shows that the wide plan uses all indexes when the memory threshold is reached:
 
     :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_uses_all_indexes_after_memory_change.png" alt-text="Screenshot of the wide plan that uses all indexes when memory threshold is reached.":::
 
@@ -174,6 +180,8 @@ To test if a wide plan is faster than a narrow plan when the data is in a buffer
 
     The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close because the data is already in the buffer before the UPDATE was executed, and renders the Per-Index update (wide plan) less beneficial.
 
+    The following screenshot shows wide and narrow plans when data is cached in the buffer pool:
+
     :::image type="content" source="media/understand-wide-narrow-plans/wide_narrow_plan_data_in_buffer_pool.png" alt-text="Screenshot of wide and narrow plans when data is cached in the buffer pool.":::
 
 ### Data isn't cached in the buffer pool
@@ -200,7 +208,11 @@ UPDATE mytable2 SET c1=c1 WHERE c2 < 260 OPTION (QUERYTRACEON 2338) --force Narr
 
 The query with a wide plan takes 3.554 seconds, while the query with a narrow plan takes 6.701 seconds. The wide plan query runs faster this time.
 
+The following screenshot shows the wide plan when data isn't cached in the buffer pool:
+
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_data_not_in_bpool.png" alt-text="Screenshot of the wide plan when data isn't cached in the buffer pool.":::
+
+The following screenshot shows the narrow plan when data isn't cached in the buffer pool:
 
 :::image type="content" source="media/understand-wide-narrow-plans/narrow_plan_data_not_in_bpool.png" alt-text="Screenshot of the narrow plan when data isn't cached in the buffer pool.":::
 
@@ -241,6 +253,8 @@ The answer is "not always." To test if the wide plan query is always faster than
 
     The duration of both queries is reduced significantly! The wide plan takes 0.304 seconds, which is a bit slower than the narrow plan this time.
 
+    Here is a screenshot of comparing performance when wide and narrow are used:
+
     :::image type="content" source="media/understand-wide-narrow-plans/wide_and_narrow_plan_which_is_faster.png" alt-text="Screenshot of comparing performance when wide and narrow are used.":::
 
 ## Scenarios where the wide plan is applied
@@ -248,6 +262,8 @@ The answer is "not always." To test if the wide plan query is always faster than
 Here are the other scenarios where the wide plan is also applied:
 
 ### The clustered index column has a unique or primary key, and multiple rows are updated
+
+Here is an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable4(c1 INT primary key,c2 INT,c3 INT,c4 INT)
@@ -260,11 +276,15 @@ INSERT mytable4 VALUES(0,0,0,0)
 INSERT mytable4 VALUES(1,1,1,1)
 ```
 
+The following screenshot shows that the wide plan is used when the cluster index has a unique key:
+
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_cluster_index_unique.png" alt-text="Screenshot of the wide plan that is used when the cluster index has a unique key.":::
 
 For more details, review [Maintaining Unique Indexes](/archive/blogs/craigfr/maintaining-unique-indexes).
 
 ### Cluster index column is specified in the partition scheme
+
+Here is an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable5(c1 INT,c2 INT,c3 INT,c4 INT)
@@ -291,11 +311,13 @@ GO
 UPDATE mytable5 SET c1=c1 WHERE c1=1 
 ```
 
+The following screenshot shows that the wide plan is used when there's a clustered column in the partition scheme:
+
 :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_clustered_column_in_partition_scheme.png" alt-text="Screenshot that shows that the wide plan is used when there's a clustered column in the partition scheme.":::
 
 ### Clustered index column isn't part of the partition scheme, and the partition scheme column is updated
 
-Here's an example:
+Here is an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable6(c1 INT,c2 INT,c3 INT,c4 INT)
@@ -319,7 +341,9 @@ CREATE INDEX c3 ON mytable6(c3)
 CREATE INDEX c4 ON mytable6(c4)
 ```
 
-:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_part_scheme_column_update.png" alt-text="Screenshot of the wide plan part that is used when the partition scheme column is updated.":::
+The following screenshot shows that the wide plan is used when the partition scheme column is updated:
+
+:::image type="content" source="media/understand-wide-narrow-plans/wide_plan_part_scheme_column_update.png" alt-text="Screenshot of the wide plan that is used when the partition scheme column is updated.":::
 
 ## Conclusion
 
