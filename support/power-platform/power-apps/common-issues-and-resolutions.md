@@ -3,7 +3,7 @@ title: Common issues and resolutions for Power Apps
 description: A list of common issues and resolutions within Power Apps.
 author: KumarVivek
 ms.custom: canvas
-ms.reviewer: tapanm
+ms.reviewer: tapanm, lanced
 ms.date: 04/11/2022
 ms.author: kvivek
 search.audienceType: 

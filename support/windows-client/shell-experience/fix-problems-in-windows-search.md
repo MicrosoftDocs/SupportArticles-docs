@@ -15,6 +15,9 @@ ms.technology: windows-client-shell-experience
 ---
 # Fix problems in Windows Search
 
+> [!div class="nextstepaction"]
+> <a href="https://vsa.services.microsoft.com/v1.0/?partnerId=7d74cf73-5217-4008-833f-87a1a278f2cb&flowId=DMC&initialQuery=31806433" target='_blank'>Try our Virtual Agent</a> - It can help you quickly identify and fix common Windows Search issues.
+
 If Windows Search is unresponsive or the search results don't appear as expected, try any of the following solutions in this article.
 
 If you're running Windows 10 May 2019 Update (version 1903) or later versions and Windows can detect a problem, we'll run the Search troubleshooter automatically. This troubleshooter will reset Windows Search back to the default experience. View your troubleshooter history under **Settings** > **Update & Security** > **Troubleshoot** > **View History**. Follow the steps below if your issue is still not resolved.
