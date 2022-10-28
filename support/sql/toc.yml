@@ -93,6 +93,8 @@
         href: admin/event-id-7000-fail-start.md
     - name: 1450 and 665 errors when running DBCC CHECKDB
       href: admin/1450-and-665-errors-running-dbcc-checkdb.md
+    - name: Diagnostics for unreported I/O problems
+      href: admin/diagnostics-for-unreported-io-problems.md
     - name: Generate a script to create a statistics-only database
       href: admin/stats-only-db-script.md
     - name: 17053 and 926 errors when running DBCC CHECK

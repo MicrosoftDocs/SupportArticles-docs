@@ -1,7 +1,7 @@
 ---
-title: SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
-description: This article explains about detecting unreported input or output problems due to  stale reads or lost writes.
-ms.date: 10/27/2022
+title: SQL Server diagnostics are added to detect unreported input/output (I/O) problems due to stale reads or lost writes
+description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server diagnostics.
+ms.date: 10/28/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: svccauto
 ms.prod: sql
@@ -9,12 +9,16 @@ ms.prod: sql
 
 # SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
 
+_Applies to_: SQL Server 2008, SQL Server 2012, SQL Server 2014
+
+This article explains about how SQL Server diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
+
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 826433
 
 ## Symptoms
 
-If operating system, driver, or hardware problems cause *Lost Write* or *Stale Read* conditions, you may see data integrity-related error messages such as errors 605, 823, 3448, and 3456. You may receive error messages that are similar to the following examples:
+If operating system, driver, or hardware problems cause lost write or stale read conditions, you may see data integrity-related error messages such as errors 605, 823, 3448, and 3456. You may receive error messages that are similar to the following examples:
 
 > 2003-07-24 16:43:04.57 spid63 Getpage: bstat=0x9, sstat=0x800, cache
 2003-07-24 16:43:04.57 spid63 pageno is/should be: objid is/should be:
@@ -31,7 +35,7 @@ If operating system, driver, or hardware problems cause *Lost Write* or *Stale R
 > 2003-07-09 14:31:35.92 spid66 Error: 823, Severity: 24, State: 2
 2003-07-09 14:31:35.92 spid66 I/O error (bad page ID) detected during read at offset 0x00000016774000 in file 'h:\sql\MSSQL\data\tempdb.mdf'..
 
->2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
+> 2010-02-06 15:57:24.14 spid17s Error: 3456, Severity: 21, State: 1.
 2010-02-06 15:57:24.14 spid17s Could not redo log record (58997:5252:28), for transaction ID (0:109000187), on page (1:480946), database 'MyDatabase' (database ID 17). Page: LSN = (58997:5234:17), type = 3. Log: OpCode = 2, context 5, PrevPageLSN: (58997:5243:17). Restore from a backup of the database, or repair the database.
 
 ## More information
@@ -44,7 +48,7 @@ If you receive any of the error messages that are mentioned in the [Symptoms](#s
 
 - *Stale Read*: A successful call to the ReadFile API, but the operating system, a driver, or the caching controller incorrectly returns an older version of the data.
 
-For example, Microsoft has confirmed scenarios where a `WriteFile API` call returns as successful, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never actually written to the physical disk.
+For example, Microsoft has confirmed scenarios where a WriteFile API call returns as successful, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never actually written to the physical disk.
 
 To enable additional diagnostics for these types of problems, SQL Server has added trace flag 818. You can specify trace flag 818 as a startup parameter, -T818, for the computer that is running SQL Server, or you can run the following statement:
 
@@ -54,7 +58,7 @@ To enable additional diagnostics for these types of problems, SQL Server has add
 
 Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
 
-The following message indicates that SQL Server didn't receive an error from the `WriteFile API` call or the `ReadFile API`call. However, when the LSN was reviewed, the value wasn't correct:
+The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
 ```
 SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
@@ -64,15 +68,15 @@ LSN returned (63361:16876:181), LSN expected (63361:16876:500)
 Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
 ```
 
-Starting with SQL Server 2005, the error message will be reported as:
+Starting with SQL Server 2005, the error message will be displayed as:
 
 > SQL Server detected a logical consistency-based I/O error: Stale Read. It occurred during a `<<Read/Write>>` of page `<<PAGEID>>` in database ID `<<DBID>>` at offset `<<PHYSICAL OFFSET>>` in file `<<FILE NAME>>`. Additional messages in the SQL Server error log or system event log may provide more detail. This is a severe error condition that threatens database integrity and must be corrected immediately. Complete a full database consistency check (DBCC CHECKDB). This error can be caused by many factors. For more information, see SQL Server Books Online.
 
-At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a Lost Write or a Stale Read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
+At this point, either the read cache contains an older version of the page, or the data wasn't correctly written to the physical disk. In either case (a lost write or a stale read), SQL Server reports an external problem with the operating system, the driver, or the hardware layers.
 
 If error 3448 occurs when you try to rollback a transaction that has error 605 or 823, the computer running SQL Server automatically closes the database and tries to open and recover the database. The first page that experiences error 605 or 823 is considered a bad page, and the page ID is kept by the computer running SQL Server. During recovery (before the redo phase) when the bad page ID is read, the primary details about the page header are logged in the SQL Server error log. This action is important because it helps to distinguish between Lost Write and Stale Read scenarios.
 
-You may see the following two common behaviors in Stale Read scenarios:
+You may see the following two common behaviors in stale read scenarios:
 
 - If the database files are closed and then opened, the correct and most recently written data is returned during recovery.
 
@@ -82,7 +86,7 @@ The behaviors mentioned in the preceding paragraph indicate a read caching probl
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
-Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same Stale Read or Lost Write activity. In some instances, a page appears to be updated two times but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated two times with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
+Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated two times but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated two times with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
 
 > Error: 3456, Severity: 21, State: 1 Could not redo log record (276666:1664:19), for transaction ID (0:825853240), on page (1:1787100), database 'authors' (7). Page: LSN = (276658:4501:9), type = 1. Log: OpCode = 4, context 2, PrevPageLSN: (275565:3959:31)..
 
@@ -110,9 +114,9 @@ LSN SequenceAction
 7Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
 ```
 
-SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they have already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
+SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
 
-Microsoft has noted that the root cause for the following sort read failures is generally a *Stale Read* or a *Lost Write*:
+Microsoft has noted that the root cause for the following sort read failures is generally a stale read or a lost write:
 
 ```
 2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
@@ -131,17 +135,18 @@ Microsoft has noted that the root cause for the following sort read failures is 
 * 004FC5FB Module(sqlservr+000FC5FB) (getsorted+00000021)
 ```
 
-Because a *Stale Read* or a *Lost Write* results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
+Because a stale read or a lost write results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
 
 >Error 644 Severity Level 21 Message Text Could not find the index entry for RID '%.*hs' in index page %S_PGID, index ID %d, database '%.*ls'.
 
 >Error 625 Severity Level 21 Message Text Cannot retrieve row from page %S_PGID by RID because the slotid (%d) is not valid.
 
-Some customers have reported missing rows after they perform row count activities. This problem occurs because of a *Lost Write*. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
+Some customers have reported missing rows after they perform row count activities. This problem occurs because of a Lost Write. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
 
 > [!IMPORTANT]
 > If you experience any of the behaviors, or if you are suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
-Note Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a *Stale Read*. If the extended diagnostics indicate a possible *Stale Read* or *Lost Write* condition, contact your hardware vendor for immediate follow up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
+Note Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
 SQL Server requires systems to support guaranteed delivery to stable media as outlined under the [SQL Server I/O Reliability Program Requirements](https://support.microsoft.com/topic/kb826433-sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to-stale-reads-or-lost-writes-ca3f00af-2ee2-04e3-e6dc-e09169328982?preview=true). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](database-engine-input-output-requirements.md).
+
