@@ -106,6 +106,8 @@
   items:
   - name: Error "Client secret key is expired"
     href: invalid-client-secret.md
+  - name: Error "Invalid Azure credentials provided" 
+    href: error-invalid-azure-credentials-cycle-cloud.md
 
 - name: HPC Pack
   items:
