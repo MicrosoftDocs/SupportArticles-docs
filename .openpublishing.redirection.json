@@ -1366,11 +1366,6 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "support/dynamics-365/sales/cannot-send-email-as-another-user.md",
-      "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-send-email-as-another-user",
-      "redirect_document_id": false
-    },
-    {
       "source_path": "support/dynamics-365/sales/cannot-track-emails-in-crm-app-for-outlook.md",
       "redirect_url": "/previous-versions/troubleshoot/dynamics/crm/cannot-track-emails-in-crm-app-for-outlook",
       "redirect_document_id": false
