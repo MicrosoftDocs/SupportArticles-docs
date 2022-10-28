@@ -57,7 +57,7 @@ Here's a list of errors received when you select **Test Connection** and the pos
   - See [Cause 7: The computer can't communicate or authenticate with the domain](#cause-7-the-computer-cant-communicate-or-authenticate-with-the-domain)
 - > Message: System.ServiceModel.ProtocolException: The remote server returned an unexpected response: (405) Method Not Allowed. ---> System.Net.WebException: The remote returned an error: (405) Method Not Allowed.
   - See [Cause 8: WCF HTTP Activation isn't installed on the Management Reporter server](#cause-8-wcf-http-activation-isnt-installed-on-the-management-reporter-server)
-- > Message:Microsoft.Dynamics.Performance.Common.ReportingServerNotFoundException: The server could not be found. Make sure the server address is correct.
+- > Message: Microsoft.Dynamics.Performance.Common.ReportingServerNotFoundException: The server could not be found. Make sure the server address is correct.
   - See [Cause 5: Port isn't set up as an exclusion in Firewall](#cause-5-port-isnt-set-up-as-an-exclusion-in-firewall)
 - > Message: An error occurred while receiving the HTTP response to server_name\InformationService.svc. This could be due to the service endpoint binding not using the HTTP protocol. This could also be due to an HTTP request context being aborted by the server (possibly due to the service shutting down).
   - See [Cause 10: Named Pipes isn't enabled on the Management Reporter server](#cause-10-named-pipes-isnt-enabled-on-the-management-reporter-server)
@@ -132,7 +132,7 @@ You must configure SSL on the server and install certificates before you can use
 
 You could also modify the config files to turn off Encryption by taking the following steps (make a backup copy of the files before you modify them).
 
-1. In Windows Explorer, go to the Management Reporter installation folder (the default installation file is: _C:\Program Files\Microsoft Dynamics ERP\Management Reporter\2.1_)
+1. In Windows Explorer, go to the Management Reporter installation folder (the default installation file is: _C:\Program Files\Microsoft Dynamics ERP\Management Reporter\2.1_
 2. In the Application Service folder, find the web.config file and right-click the file to open it in Notepad.
 3. Locate the \<connectionstrings> and change the setting Encrypt= from **True** to **False**.
 4. Save the changes.
