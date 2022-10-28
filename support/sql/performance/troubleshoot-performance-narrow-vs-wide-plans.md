@@ -84,7 +84,7 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
 1. Examine the results based on the first criterion (the threshold of the affected number of rows is 250).
 
-    Here is a screenshot for the results based on the first criterion:
+    The following screenshot shows the results based on the first criterion:
 
     :::image type="content" source="media/understand-wide-narrow-plans/narrow_first2_wide_third.png" alt-text="Screenshot of the wide and narrow plans based on size of index.":::
 
@@ -92,11 +92,11 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
 1. Examine the results based on the second criterion (the memory of the leaf index size is at least 1/1000 of the max server memory setting).
 
-    Here is a screenshot for the results based on the second criterion:
+    The following screenshot shows the results based on the second criterion:
 
     :::image type="content" source="media/understand-wide-narrow-plans/wide_plan_missing_third_index.png" alt-text="Screenshot of the wide plan not using index due to size.":::
 
-    A wide plan is selected for the third `UPDATE` query. But the index `ic3` (on column `c3`) isn't seen in the plan. The issue occurs because the second criterion isn't met - leaf pages index size in comparison to the max memory setting.
+    A wide plan is selected for the third `UPDATE` query. But the index `ic3` (on column `c3`) isn't seen in the plan. The issue occurs because the second criterion isn't met - leaf pages index size in comparison to the setting max server memory.
 
     The data type of column `c2`, `c4` and `c4` is `char(30)`, while the data type of column `c3` is `char(20)`. The size of each row of index `ic3` is less than others, so the number of leaf pages is less than others.
 
@@ -178,7 +178,7 @@ To test if a wide plan is faster than a narrow plan when the data is in a buffer
 
     For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
 
-    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close because the data is already in the buffer before the UPDATE was executed, and this renders the Per-Index update (wide plan) less beneficial.
+    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close, and the Per-Index update (wide plan) is less beneficial because the data is already in the buffer before the UPDATE was executed.
 
     The following screenshot shows wide and narrow plans when data is cached in the buffer pool:
 
@@ -263,7 +263,7 @@ Here are the other scenarios where the wide plan is also applied:
 
 ### The clustered index column has a unique or primary key, and multiple rows are updated
 
-Here is an example to reproduce the scenario:
+Here's an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable4(c1 INT primary key,c2 INT,c3 INT,c4 INT)
@@ -284,7 +284,7 @@ For more details, review [Maintaining Unique Indexes](/archive/blogs/craigfr/mai
 
 ### Cluster index column is specified in the partition scheme
 
-Here is an example to reproduce the scenario:
+Here's an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable5(c1 INT,c2 INT,c3 INT,c4 INT)
@@ -317,7 +317,7 @@ The following screenshot shows that the wide plan is used when there's a cluster
 
 ### Clustered index column isn't part of the partition scheme, and the partition scheme column is updated
 
-Here is an example to reproduce the scenario:
+Here's an example to reproduce the scenario:
 
 ```sql
 CREATE TABLE mytable6(c1 INT,c2 INT,c3 INT,c4 INT)
