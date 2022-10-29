@@ -1,6 +1,6 @@
 ---
 title: OneDrive files or folders incorrectly show as syncing
-description: Fixes an issue in which files or folders in the OneDrive folder still show as syncing even if the OneDrive icon in the taskbar notification area shows up to date. 
+description: Fixes an issue in which OneDrive shows files or folders in File Explorer as still syncing but on the taskbar as fully synced. 
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -18,20 +18,20 @@ search.appverid:
   - MET150
 ms.date: 10/27/2022
 ---
-# The OneDrive sync status icon incorrectly shows as "syncing" in File Explorer  
+# The OneDrive sync status icon incorrectly shows "syncing" in File Explorer 
 
-The OneDrive icon in the taskbar notification area shows the "**Up to date**" status. However, some or all of the files and folders in the OneDrive folder still show as "syncing". This article provides possible solutions that you can use to solve these issues.  
+After you sync files or folders to OneDrive, the OneDrive icon in the taskbar notification area shows an "**Up to date**" status for files or folders that are fully synced. However, some or all of the files and folders in the OneDrive folder in File Explorer still show as "syncing." This article provides possible solutions that you can use to solve these issues.  
 
 ## Some files and folders show the "syncing" status  
 
-This issue may occur for the following reasons:
+This issue might occur for the following reasons:
 
 - There are hidden and temporary files in the OneDrive folder. By default, hidden and temporary files show the "syncing" status, but they aren't synced by OneDrive. Therefore, they don't affect the "**Up to date**" status.
-- Incorrect cached status in the Windows Search index. This may cause unexpected sync status in some files and folders.  
+- There's an incorrect cached status in the Windows Search index. This can cause an unexpected sync status in some files and folders.  
 
 ### Resolution  
 
-To resolve this issue, first check if there are hidden and temporary files and folders and remove them:  
+To resolve this issue, first check whether there are hidden or temporary files and folders in the OneDrive folder. Remove any that you find:  
 
 1. [Show hidden files and folders in File Explorer](https://support.microsoft.com/windows/view-hidden-files-and-folders-in-windows-97fbc472-c603-9d90-91d0-1166d1d9f4b5).  
 2. Remove all hidden files and folders that aren't associated with the files that you're currently editing.
@@ -39,11 +39,11 @@ To resolve this issue, first check if there are hidden and temporary files and f
 4. If clearing the Office document cache doesn't remove any temporary Office files that are still syncing, determine whether the files can be manually deleted.
 
    > [!WARNING]
-   > Warning This may cause data loss of the Office document. Therefore, make sure that the deletion is safe.
+   > Warning This may cause data loss of the Office document. Therefore, make sure that the files can be safely deleted.
 
 5. If the files aren't temporary Office files, determine whether they can be safely removed. If they can't be removed, move them out of the OneDrive folder to see whether the issue is resolved.
 
-If there are no hidden or temporary files that cause the sync status to be incorrect, check if this issue is caused by Windows Search index.  
+If there are no hidden or temporary files that cause the sync status to be incorrect, check whether this issue is caused by Windows Search index:  
 
 1. Select the Windows (start) icon, and type *Services* to launch the Service application.
 2. Double-click **Windows Search**, and then change the **Startup type** to **Disabled**.
