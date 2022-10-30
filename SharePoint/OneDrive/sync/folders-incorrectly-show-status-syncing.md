@@ -57,10 +57,10 @@ If there are no hidden or temporary files that cause the sync status to be incor
 
     1. Select **Start**, enter *Indexing*, and then select **Indexing Options** in the search results.
     1. Select **Advanced** > **Rebuild**.
-
-    > [!NOTE]
-    >
-    > This process can take some time to finish. It runs faster if the computer isn't in use. Therefore, we recommend that you rebuild the index outside active hours, such as at night or on weekends. If the issue isn't resolved, there might be a problem in the indexing layer. For more information, see [Fix problems in Windows Search](/troubleshoot/windows-client/shell-experience/fix-problems-in-windows-search).
+    
+       > [!NOTE]
+       >
+       > This process can take some time to finish. It runs faster if the computer isn't in use. Therefore, we recommend that you rebuild the index outside active hours, such as at night or on weekends. If the issue isn't resolved, there might be a problem in the indexing layer. For more information, see [Fix problems in Windows Search](/troubleshoot/windows-client/shell-experience/fix-problems-in-windows-search).
 
 ## Issue 2: All files and folders show the "syncing" status
 
