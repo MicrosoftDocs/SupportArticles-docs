@@ -1,5 +1,5 @@
 ---
-title: Planning considerations for deploying Outlook for Windows
+title: Planning considerations to deploy Outlook for Windows
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -8,6 +8,7 @@ audience: ITPro
 ms.topic: troubleshooting
 ms.custom: 
   - Outlook for Windows
+  - CI 167136
   - CSSTroubleshoot
 localization_priority: Normal
 ms.collection: Ent_Office_Outlook
@@ -19,11 +20,12 @@ appliesto:
   - Outlook 2016
   - Outlook 2019
   - Outlook 2021
+  - Outlook for Microsoft 365
   - Microsoft 365
-ms.date: 10/28/2022
+ms.date: 10/31/2022
 ---
 
-# Planning considerations for deploying Outlook for Windows
+# Planning considerations to deploy Outlook for Windows
 
 A close review of the organization's messaging requirements will help you plan your Outlook deployment to users in your enterprise.
 
