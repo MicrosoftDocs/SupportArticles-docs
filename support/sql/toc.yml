@@ -687,8 +687,6 @@
       href: ssms/error-you-try-to-read-error-log.md
     - name: Failed to retrieve data for this request 
       href: ssms/error-click-databases-node.md
-    - name: Invalid password error or slow response
-      href: ssms/invalid-password-type-password-slowssms-sql-authentication.md
     - name: Object Explorer intermittently crashes
       href: ssms/object-explorer-intermittently-crashes.md
     - name: OutofMemoryException when executing a query
@@ -705,6 +703,8 @@
     items:
     - name: Cannot connect to WMI provider error in Configuration manager
       href: tools/error-message-when-you-open-configuration-manager.md
+    - name: Invalid password error or slow response
+      href: tools/invalid-password-type-password-slowssms-sql-authentication.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
     - name: Description of the Replay Markup Language Utilities for SQL Server
