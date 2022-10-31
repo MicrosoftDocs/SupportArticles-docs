@@ -12,6 +12,7 @@ ms.prod: sql
 _Applies to_: SQL Server Management Studio
 
 _Original product version:_ &nbsp; SQL Server
+
 _Original KB number:_ &nbsp; 4038457
 
 This article describes an issue that occurs at password input in SQL Server Management Studio (SSMS) with SQL Server authentication.
