@@ -102,7 +102,7 @@ To understand how narrow and wide plans work, follow these steps in the followin
 
     With the help of the dynamic management function (DMF) `sys.dm_db_database_page_allocations`, you can calculate the number of pages for each index. For indexes `ic2`, `ic4`, and `ic5`, each index has 214 pages, and 209 of them are leaf pages (results can vary slightly). The memory consumed by leaf pages is 209x8 = 1,672 KB. Therefore, the ratio is 1672/(1500 x 1024) = 0.00108854101, which is greater than 1/1000. However, the `ic3` only has 161 pages; 159 of them are leaf pages. The ratio is 159 x 8/(1500 x 1024) = 0.000828125, which is less than 1/1000 (0.001).
 
-    If you insert more rows or reduce the [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#max_server_memory) to meet the criterion, the plan will change. To make the index leaf-level size greater than 1/1000, you can lower the max server memory setting a bit to 1200 by running the following commands.
+    If you insert more rows or reduce the [max server memory](/sql/database-engine/configure-windows/server-memory-server-configuration-options#max_server_memory) to meet the criterion, the plan will change. To make the index leaf-level size greater than 1/1000, you can lower the max server memory setting a bit to 1200 by running the following commands:
 
     ```sql
     sp_configure 'show advanced options', 1;
@@ -116,10 +116,9 @@ To understand how narrow and wide plans work, follow these steps in the followin
     UPDATE mytable1 SET c1=c1 WHERE c1=50001 OPTION(RECOMPILE) --251 rows are updated.
     ```
 
-    > [!NOTE]
-    > The option `max server memory` is an advanced option. When using the system stored procedure `sp_configure` to change the setting, you can change it only when `show advanced options` is set to `1`. These settings take effect immediately without a server restart.
-
     In this case, 159 x 8/(1200 x 1024) = 0.00103515625 > 1/1000. After this change, the `ic3` appears in the plan.
+
+    For more information about `show advanced options`, see [Use Transact-SQL](/sql/database-engine/configure-windows/server-memory-server-configuration-options#use-transact-sql).
 
     The following screenshot shows that the wide plan uses all indexes when the memory threshold is reached:
 
