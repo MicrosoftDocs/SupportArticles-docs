@@ -51,7 +51,7 @@ If there are no hidden or temporary files that cause the sync status to be incor
 2. Double-click **Windows Search**, and then change the **Startup type** to **Disabled**.
 3. In **Service status**, select **Stop**.
 4. Select **OK**.
-5. Refresh the File Explorer window. If the issue is resolved, it was caused by the cached search index. If it's not resolved, go to the next step.
+5. Refresh the File Explorer window. If the issue is resolved, it was caused by the cached search index. To resolve this issue, follow next steps.
 6. Return to the Services application, and revert the **Startup type** of the **Windows Search** service to **Automatic (Delayed Start)**.
 7. Rebuild the Windows Search index:  
 
@@ -66,7 +66,7 @@ If there are no hidden or temporary files that cause the sync status to be incor
 
 ### Cause
 
-This issue might occur if the `UseFindFirstFileEnumeration` Windows policy is set to true. This policy is designed for legacy file systems. It's not compatible with OneDrive Files on Demand. If this policy is set to true, File Explorer can't read the reparse tag on files and folders. Therefore, all files and folders are set to the default status of "syncing".
+This issue might occur if the `UseFindFirstFileEnumeration` Windows policy is set to **True**. This policy is designed for legacy file systems. It's not compatible with OneDrive Files on Demand. If this policy is set to **True**, File Explorer can't read the reparse tag on files and folders. Therefore, all files and folders are set to the default status of "syncing".
 
 ### Resolution
 
