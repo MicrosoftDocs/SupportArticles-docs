@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Cannot modify the oData connections in an Excel 2013 PowerPivot workbook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to modify the oData connections in a Microsoft Excel 2103 PowerPivot workbook, you receive the following error message:

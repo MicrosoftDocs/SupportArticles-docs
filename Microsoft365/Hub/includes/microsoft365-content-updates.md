@@ -2,41 +2,37 @@
 
 
 
-## Week of April 04, 2022
+## Week of September 19, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 4/5/2022 | [Office apps for iOS require HTTPS for server resources](/office365/troubleshoot/administration/office-ios-requires-https) | modified |
-| 4/6/2022 | [Mail contacts lose access to encrypted content](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content) | added |
-| 4/6/2022 | [Mail contacts lose access to encrypted content](/office365/troubleshoot/sensitivity-labels/mail-contacts-lose-access-encrypted-content) | modified |
-| 4/8/2022 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/19/2022 | [SaRA Enterprise version](/microsoft-365/troubleshoot/administration/sara-command-line-version) | modified |
+| 9/20/2022 | Unable to sign in to Microsoft 365 desktop applications | removed |
+| 9/20/2022 | Can't find clip art when you open Office Online | removed |
 
 
-## Week of March 21, 2022
-
-
-| Published On |Topic title | Change |
-|------|------------|--------|
-| 3/21/2022 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 3/23/2022 | [Description of Desktop Setup Tool logging errors](/office365/troubleshoot/installation/desktop-setup-tool-logging-errors) | modified |
-| 3/23/2022 | [Install and maintain SaRA tool from a network share](/office365/troubleshoot/installation/install-sara-from-network-share) | modified |
-| 3/23/2022 | [How to use mailbox audit logs in Office 365](/office365/troubleshoot/audit-logs/mailbox-audit-logs) | modified |
-| 3/23/2022 | [SaRA command-line version](/office365/troubleshoot/administration/sara-command-line-version) | modified |
-
-
-## Week of March 14, 2022
+## Week of September 12, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/15/2022 | [Issues that affect DLP policy tips](/office365/troubleshoot/data-loss-prevention/data-loss-prevention-policy-tips) | modified |
+| 9/12/2022 | [Can't send an encrypted email to many recipients](/microsoft-365/troubleshoot/sensitivity-labels/encrypted-email-cannot-send-many-recipients) | added |
+| 9/15/2022 | [Sensitivity labels are missing](/microsoft-365/troubleshoot/sensitivity-labels/sensitivity-labels-missing) | added |
 
 
-## Week of March 07, 2022
+## Week of August 29, 2022
 
 
 | Published On |Topic title | Change |
 |------|------------|--------|
-| 3/7/2022 | [Unable to access applications from iOS devices](/office365/troubleshoot/o365-security/cannot-access-application-from-ios-device) | added |
-| 3/11/2022 | Troubleshoot eDiscovery hold errors | removed |
+| 8/29/2022 | [Unable to sign in to Microsoft 365 desktop applications](/microsoft-365/troubleshoot/authentication/unable-sign-in-m365-desktop-apps) | modified |
+| 9/2/2022 | [Office troubleshooting for admins and IT professionals # < 60 chars](/microsoft-365/troubleshoot/index) | modified |
+
+
+## Week of August 22, 2022
+
+
+| Published On |Topic title | Change |
+|------|------------|--------|
+| 8/25/2022 | [Unable to sign in to Microsoft 365 desktop applications](/microsoft-365/troubleshoot/authentication/unable-sign-in-m365-desktop-apps) | added |

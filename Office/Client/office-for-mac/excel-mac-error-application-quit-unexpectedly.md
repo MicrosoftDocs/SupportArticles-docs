@@ -9,7 +9,7 @@ ms.custom: CSSTroubleshoot
 appliesto:
 - Excel for Mac 2011
 - Excel 2016 for Mac
-- Excel for Mac for Office 365
+- Excel for Microsoft 365 for Mac
 search.appverid: MET150
 ms.reviewer: 
 author: simonxjx

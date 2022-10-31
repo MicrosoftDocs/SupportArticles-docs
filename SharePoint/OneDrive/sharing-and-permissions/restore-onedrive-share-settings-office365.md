@@ -1,5 +1,5 @@
 ---
-title: How to restore Office 365 admin center Sharing settings for OneDrive
+title: How to restore Microsoft 365 admin center Sharing settings for OneDrive
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -16,14 +16,14 @@ ms.custom:
   - CI 117857
   - CSSTroubleshoot
 ms.reviewer: paulpa
-description: Describes how to restore the Sharing setting for OneDrive in the Office 365 admin center.
+description: Describes how to restore the Sharing setting for OneDrive in the Microsoft 365 admin center.
 ---
 
-# Restore the OneDrive Sharing settings in Office 365 admin center
+# Restore the OneDrive Sharing settings in Microsoft 365 admin center
 
 ## Symptoms
 
-When users select the user details in the [Office 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users), the **OneDrive Sharing** option is no longer available to them.
+When users select the user details in the [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/users), the **OneDrive Sharing** option is no longer available to them.
 
 :::image type="content" source="media/restore-onedrive-share-settings-office365/onedrive-sharing-option.png" alt-text="Screenshot of the Sharing option in the admin center.":::
  
@@ -59,7 +59,7 @@ For more information, see the article about the [Set-SPOSite cmdlet](/powershell
 
 #### Option 1
 
-1.	Go to the **Office 365 admin center**.
+1.	Go to the **Microsoft 365 admin center**.
 2.	Select **Active user** > **Account details** > **OneDrive**.
 3.	Under **Get access to files**, select **Create link to files** to see the user's **MySite** URL.
 

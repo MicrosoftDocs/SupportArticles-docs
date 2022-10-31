@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 
 # Access: Linked table "connection failed" messages when using Azure AD interactive authentication
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

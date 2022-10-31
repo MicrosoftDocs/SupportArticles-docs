@@ -88,17 +88,17 @@ To avoid this behavior, set the value for **FirstBootStatus** to show that OneNo
 
 ## More information
 
-- In April 2018, Microsoft announced that OneNote for Windows Desktop would no longer be included in the default installation of Office 365 client products.
-- Starting in August 2018, OneNote was removed for customers who installed Office 365 client products on Windows 10. See [OneNote 2016 is missing after installing Office 365 or Office 2019](https://support.office.com/article/onenote-2016-is-missing-after-installing-office-365-or-office-2019-1844ba87-7248-4bd8-a735-66a52f98e6e5) for more information.
+- In April 2018, Microsoft announced that OneNote for Windows Desktop would no longer be included in the default installation of Microsoft 365 client products.
+- Starting in August 2018, OneNote was removed for customers who installed Microsoft 365 client products on Windows 10. See [OneNote 2016 is missing after installing Microsoft 365 or Office 2019](https://support.office.com/article/onenote-2016-is-missing-after-installing-office-365-or-office-2019-1844ba87-7248-4bd8-a735-66a52f98e6e5) for more information.
 - The preferred version of OneNote for Windows 10 devices is the "Universal" version of OneNote known as OneNote for Windows 10 (store app).
-- Since many corporate customers preferred to use OneNote for Windows Desktop, Microsoft announced in November 2019 during Ignite that OneNote would be added back into the installation of Office 365 client subscriptions.
-- Starting March 10, 2020, OneNote Win32 was added to the default installation of Office 365 for all licenses with client apps and Office 2019.
+- Since many corporate customers preferred to use OneNote for Windows Desktop, Microsoft announced in November 2019 during Ignite that OneNote would be added back into the installation of Microsoft 365 client subscriptions.
+- Starting March 10, 2020, OneNote Win32 was added to the default installation of Microsoft 365 for all licenses with client apps and Office 2019.
 - There are no plans to retire the separate (standalone) download at this time. OneNote will continue to be available [here](https://www.onenote.com/download).
 
 ### Impact to administrators
 
-- Administrators who don't manage the deployment of Office 365 clients to their users and instead let Microsoft control the installation will find that OneNote is included by default for all new installations of Office 365 Business and Office 365 ProPlus starting March 10 from all update channels.
-- Administrators who manage the deployment of Office 365 clients to their users will see no change in their deployments.
+- Administrators who don't manage the deployment of Microsoft 365 clients to their users and instead let Microsoft control the installation will find that OneNote is included by default for all new installations of Microsoft 365 Apps starting March 10 from all update channels.
+- Administrators who manage the deployment of Microsoft 365 clients to their users will see no change in their deployments.
 - Administrators who decided to exclude OneNote from installations will continue to see OneNote excluded from new installs.
 - Administrators who decided to include OneNote with their installations will continue to see OneNote included with new installs.
 

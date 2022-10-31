@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to use a logical AND or OR in a SUM+IF statement in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, when you use the logical functions AND and/or OR inside a SUM+IF statement to test a range for more than one condition, it may not work as expected. A nested IF statement provides this functionality; however, this article discusses a second, easier method that uses the following formulas.

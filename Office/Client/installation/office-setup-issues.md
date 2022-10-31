@@ -32,8 +32,6 @@ ms.date: 3/31/2022
 
 # How to use a setup log to troubleshoot setup problems in Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 This step-by-step article describes how to use the Microsoft Office installation log files to troubleshoot Office Setup issues.
 
 Occasionally a problem occurs with Office Setup and you may not receive an error message. Even if you receive an error message, you may have to use an installation log file as one of your tools to determine the issue.
@@ -44,7 +42,7 @@ Many articles in the Microsoft Knowledge Base that relate to installation errors
 
 ## How to create a log file
 
-Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Microsoft 365 Apps for enterprise ULS logging](/office365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
+Office Setup automatically creates log files in your \Temp folder. The logs will be stored under %temp% for Sign-in or Activation issues. For installation or patching issues, they use the system account, so you will also want to collect the logs from %windir%\temp. For more information, see [How to enable Microsoft 365 Apps for enterprise ULS logging](/microsoft-365/troubleshoot/authentication/how-to-enable-office-365-proplus-uls-logging).
 
 |Log file for|Log file name
 |---|---|

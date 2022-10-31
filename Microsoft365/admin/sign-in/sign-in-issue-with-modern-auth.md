@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Troubleshoot sign-in issues with Office modern authentication when you use AD FS
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 This article contains information about how to troubleshoot problems that affect the ability to sign in to Microsoft Office 2016 apps and Microsoft Office 2013 apps that are enabled for modern authentication. This article also contains resources for IT administrators to address reports about Active Directory Federation Services (AD FS) issues that are specific to Office for Windows platforms.
@@ -39,9 +37,9 @@ If you have an issue that's not listed in this article, go to the following Micr
 
 ### Issue: "An error occurred. Contact your administrator" when you try to sign in to an Office 2016 or Office 2013 modern authentication app
 
-Users can't sign in if the Office 365 organization uses AD FS and forms-based authentication is turned off on the AD FS server. In this situation, users receive the following error message:
+Users can't sign in if the Microsoft 365 organization uses AD FS and forms-based authentication is turned off on the AD FS server. In this situation, users receive the following error message:
 
-```asciidoc
+```output
 An error occurred 
 
 An error occurred. Contact your administrator for more information. 
@@ -82,7 +80,7 @@ Follow these steps:
 
 ### Issue: Desktop single sign-on (SSO) with AD FS fails
 
-Desktop SSO is the process that's used to obtain seamless sign-in to Office 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Microsoft 365 Apps for enterprise or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
+Desktop SSO is the process that's used to obtain seamless sign-in to Microsoft 365 resources through AD FS from a domain-joined computer that's inside a company network. When desktop SSO fails, users may be unable to activate Microsoft 365 Apps for enterprise or users may be prompted for forms-based logon even though they are using domain joined-computers from inside the company network. 
 
 Modern authentication (ADAL) with AD FS requires the /adfs/services/trust/13/windowstransport endpoint to be enabled.
 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Custom function may not calculate expected value in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you calculate your worksheet, some cells may appear to have calculated the wrong value.

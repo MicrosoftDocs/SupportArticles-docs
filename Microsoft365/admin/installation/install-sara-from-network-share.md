@@ -20,12 +20,10 @@ ms.date: 3/31/2022
 ---
 # How to install and maintain Microsoft Support and Recovery Assistant (SaRA) from a network share
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 If you want to install and start Microsoft Support and Recovery Assistant (SaRA) from a shared location on a network instead of the default internet location, don't use the download link in the [About the Microsoft Support and Recovery Assistant](https://support.office.com/article/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f) article. Instead, follow these steps.
 
 > [!NOTE]
-> If you're an enterprise customer, you can also run [the command-line version of Microsoft Support and Recovery Assistant](/office365/troubleshoot/administration/sara-command-line-version).
+> If you're an enterprise customer, you can also run [the command-line version of Microsoft Support and Recovery Assistant](/microsoft-365/troubleshoot/administration/sara-command-line-version).
 
 ## Installing SaRA
 
@@ -94,6 +92,12 @@ The following table provides the versions of SaRA that were made available on th
 
 |Release date|SaRA version|
 |--------|--------|
+|October 20, 2022|17.00.9167.015|
+|September 20, 2022|17.00.9001.010|
+|August 25, 2022|17.00.8900.012|
+|July 7, 2022|17.00.8713.001|
+|May 20, 2022|17.00.8433.013|
+|April 15, 2022|17.00.8291.010|
 |March 17, 2022|17.00.8149.012|
 |February 25, 2022|17.00.8006.010|
 |January 13, 2022|17.00.7792.012|

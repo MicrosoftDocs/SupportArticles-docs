@@ -1,7 +1,7 @@
 ---
 title: SBC connectivity issues
 description: Describes how to diagnose SIP options or TLS certificate issues with SBC.
-ms.date: 2/5/2021
+ms.date: 7/5/2022
 author: cloud-writer
 ms.author: meerak
 manager: dcscontentpm
@@ -23,8 +23,8 @@ When you set up Direct Routing, you might experience the following Session Borde
 
 - Session Initiation Protocol (SIP) options are not received.
 - Transport Layer Security (TLS) connections problems occur.
-- The SBC doesn’t respond.
-- The SBC is marked as inactive in the Teams Admin portal.
+- The SBC doesn't respond.
+- The SBC is marked as inactive in the Microsoft Teams admin center.
 
 Such issues are most likely caused by either or both of the following conditions:
 
@@ -50,7 +50,7 @@ This article lists some common issues that are related to SIP options and TLS ce
 
 - After receiving SIP options from the SIP proxy, the SBC responds by sending a **200 OK** message. This step confirms that the SBC is healthy.
 
-- As the final step, the SBC is marked as **Active** in the Teams Admin portal.
+- As the final step, the SBC is marked as **Active** in the Microsoft Teams admin center.
 
 > [!NOTE]
 > In a [hosted model](/microsoftteams/direct-routing-sbc-multiple-tenants), SIP options should be sent from only the hosted SBC. The status of SBCs that are in a derived trunk model are based on the main SBC.
@@ -88,21 +88,27 @@ Another possible cause for this issue might be firewall rules that are preventin
 <details>
 <summary><b>SBC status is intermittently inactive</b></summary>
 
-This issue might occur if the SBC is configured to send SIP options not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP options to an inactive or unresponsive datacenter. Do the following:
+This issue might occur in the following situations:
+  
+- The SBC is configured to send SIP options not to FQDNs but to the specific IP addresses that they resolve to. During maintenance or outages, these IP addresses might change to a different datacenter. Therefore, the SBC will be sending SIP options to an inactive or unresponsive datacenter. Do the following:
 
-- Make sure that the SBC is discoverable and configured to send SIP options to only FQDNs.
-- Make sure that all devices in the route, such as SBCs and firewalls, are configured to allow communication to and from all Microsoft-signaling FQDNs.
-- To provide a failover option when the connection from an SBC is made to a datacenter that's experiencing an issue, the SBC must be configured to use all three SIP proxy FQDNs:
+   - Make sure that the SBC is discoverable and configured to send SIP options to only FQDNs.
+   - Make sure that all devices in the route, such as SBCs and firewalls, are configured to allow communication to and from all Microsoft-signaling FQDNs.
+   - To provide a failover option when the connection from an SBC is made to a datacenter that's experiencing an issue, the SBC must be configured to use all three SIP proxy FQDNs:
 
-  - sip.pstnhub.microsoft.com
-  - sip2.pstnhub.microsoft.com
-  - sip3.pstnhub.microsoft.com
+     - sip.pstnhub.microsoft.com
+     - sip2.pstnhub.microsoft.com
+     - sip3.pstnhub.microsoft.com
 
-  > [!NOTE]
-  > Devices that support DNS names can use sip-all.pstnhub.microsoft.com to resolve to all possible IP addresses.
+     > [!NOTE]
+     > Devices that support DNS names can use sip-all.pstnhub.microsoft.com to resolve to all possible IP addresses.
 
-For more information, see [SIP Signaling: FQDNS](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
+   For more information, see [SIP Signaling: FQDNS](/microsoftteams/direct-routing-plan#sip-signaling-fqdns).
 
+- The installed root or intermediate certificate isn't part of the SBC certificate chain issuer. When the SBC starts the three-way handshake during the authentication process, the Teams service won't be able to validate the certificate chain on the SBC and will reset the connection. The SBC may be able to authenticate again as soon as the public Root certificate is loaded again on the service cache or the certificate chain is fixed on the SBC. Make sure that the intermediate and root certificate installed on the SBC are correct.
+  
+  For more information about certificates, see [Public trusted certificate for the SBC](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  
 </details>
 
 <details>
@@ -138,7 +144,7 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 </details>
 
 <details>
-<summary><b>SBC doesn’t trust SIP proxy certificate</b></summary>
+<summary><b>SBC doesn't trust SIP proxy certificate</b></summary>
 
 If the SBC doesn't trust the SIP proxy certificate, download and install the Baltimore CyberTrust root certificate on the SBC. To download the certificate, see [Microsoft 365 encryption chains](/microsoft-365/compliance/encryption-office-365-certificate-chains).
 
@@ -149,9 +155,10 @@ For a list of supported CAs, see the **Public trusted certificate for the SBC** 
 <details>
 <summary><b>SBC certificate is invalid</b></summary>
 
-If the [Health Dashboard for Direct Routing](/microsoftteams/direct-routing-health-dashboard) in the Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC.
-
-For a list of supported CAs, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+If the [Health Dashboard for Direct Routing](/microsoftteams/direct-routing-health-dashboard) in the Microsoft Teams admin center indicates that the SBC certificate is expired or revoked, request or renew the certificate from a trusted Certificate Authority (CA). Then, install it on the SBC. For a list of supported CAs, see the **Public trusted certificate for the SBC** section of [Plan Direct Routing](/MicrosoftTeams/direct-routing-plan#public-trusted-certificate-for-the-sbc).
+  
+When you renew the SBC certificate, you must remove the TLS connections that were established from the SBC to Microsoft with the old certificate and re-establish them with the new certificate. Doing so will ensure that certificate expiration warnings aren't triggered in the Microsoft Teams admin center. 
+To remove the old TLS connections, restart the SBC during a time frame that has low traffic such as a maintenance window. If you can't restart the SBC, contact the vendor for instructions to force the closure of all old TLS connections.
 
 </details>
 

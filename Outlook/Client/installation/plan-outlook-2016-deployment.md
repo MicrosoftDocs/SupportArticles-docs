@@ -15,7 +15,10 @@ description: Helps IT Pros learn about what they should consider when they deplo
 search.appverid: 
   - MET150
 appliesto: 
-  - Outlook 2010, Outlook 2013, Outlook 2016, Office 365
+  - Outlook 2010
+  - Outlook 2013
+  - Outlook 2016
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
@@ -34,7 +37,7 @@ The organization's messaging environment helps shape the Outlook 2016 deployment
   
 ### MSI versus Click-to-Run deployment methods
 
-There are two primary installation technologies for Office: Windows Installer (MSI) and Click-to-Run. Volume licensed versions of Office, such as Office Standard 2016, use Windows Installer (MSI). Office that comes with Office 365 enterprise plans uses Click-to-Run. For example, Outlook that's included in [Microsoft 365 Apps for enterprise](/DeployOffice/about-office-365-proplus-in-the-enterprise) uses Click-to-Run.
+There are two primary installation technologies for Office: Windows Installer (MSI) and Click-to-Run. Volume licensed versions of Office, such as Office Standard 2016, use Windows Installer (MSI). Office that comes with Microsoft 365 enterprise plans uses Click-to-Run. For example, Outlook that's included in [Microsoft 365 Apps for enterprise](/DeployOffice/about-office-365-proplus-in-the-enterprise) uses Click-to-Run.
   
 The MSI and Click-to-Run versions of Office and Outlook 2016 have different configuration options and administration tools. For MSI-based deployments, use the [Office Customization Tool (OCT)](/deployoffice/oct/oct-2016-help-overview) before installation to set your users' default settings, install Outlook 2016, then enforce those settings and prevent users changing them after installation by using [Group Policy](https://www.microsoft.com/download/details.aspx?id=49030). For Click-to-Run deployments, first use the [Office Deployment Tool](/DeployOffice/overview-of-the-office-2016-deployment-tool) to set a small number of settings, install Outlook, then set the full range of customization settings and prevent users changing them after installation by using [Group Policy](https://www.microsoft.com/download/details.aspx?id=49030).
 
@@ -69,7 +72,7 @@ If you have an on-premises Exchange Server and plan to add Exchange Online to co
 - There is no cross-premises manager delegation. If the manager's account is connected to Exchange Online, the delegate's account must be on Exchange Online too.
 - An account that is on-premises cannot have "Send As" permissions for an account that is connected to Exchange Online.
 
-Also be aware that the user authentication method is different between an on-premises Exchange Server and Exchange Online. An Exchange Online user enters his or her email address (as the user name) and password. However, the user can decide to save the password so that the user only has to enter it one time.
+Also be aware that the user authentication method is different between an on-premises Exchange Server and Exchange Online. Exchange Online users enter their email address (as the user name) and password. However, the users can decide to save the password so that they only have to enter it once.
   
 ## Choosing when and how to install Outlook
 

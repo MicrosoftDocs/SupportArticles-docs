@@ -15,7 +15,7 @@ appliesto:
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Windows Server 2012 Standard
   - Windows Server 2012 R2 Standard
   - Windows 8
@@ -29,7 +29,7 @@ _Original KB number:_ &nbsp; 3014833
 
 ## Symptoms
 
-If you have Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Office 365 running on Windows Server 2012 or Windows 8, you no longer receive new email desktop alerts (toast notifications). Additionally, Outlook is no longer listed under **Search and Apps Notifications**.
+If you have Microsoft Outlook 2013, Outlook 2016, Outlook 2019, or Outlook for Microsoft 365 running on Windows Server 2012 or Windows 8, you no longer receive new email desktop alerts (toast notifications). Additionally, Outlook is no longer listed under **Search and Apps Notifications**.
 
 ## Cause
 
@@ -39,7 +39,7 @@ This issue may occur for one of the following reasons:
 
     Outlook 2013: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office 2013
 
-    Outlook 2016, Outlook 2019 or Outlook for Office 365: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\
+    Outlook 2016, Outlook 2019 or Outlook for Microsoft 365: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\
 
     Desktop applications that send toast notifications must have a shortcut installed to the Start screen or in the Apps view.
 
@@ -82,7 +82,7 @@ The Click-To-Run installer displays the following (notice the **Update Options**
 
 :::image type="content" source="media/no-desktop-alerts-(toast-notifications)-if-missing-start-menu-shortcut/click-to-run-install-info.png" alt-text="Screenshot of Information window for Click-to-Run install.":::
 
-For information about deploying Office 365 ProPlus, which uses Click-to-Run, see [Deployment guide for Office 365 ProPlus](/deployoffice/deployment-guide-microsoft-365-apps).
+For information about deploying Microsoft 365 Apps, which uses Click-to-Run, see [Deployment guide for Microsoft 365 Apps](/deployoffice/deployment-guide-microsoft-365-apps).
 
 Now, to repair your installation of Office, follow these steps:
 

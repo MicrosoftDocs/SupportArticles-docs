@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Formula errors in Excel when list separator is not set correctly
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When entering a formula an error will occur if trying to use a symbol that is not the default 'list separator' in the Windows Regional settings.

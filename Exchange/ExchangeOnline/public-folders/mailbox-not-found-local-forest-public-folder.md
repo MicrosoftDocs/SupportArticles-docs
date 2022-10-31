@@ -1,8 +1,8 @@
 ---
 title: The mailbox is not found in the local forest error when you access public folders
-description: When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error The mailbox is not found in the local forest.
+description: When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error "The mailbox is not found in the local forest".
 author: simonxjx
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 ## Symptom
 
-When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error message that resembles the following:
+When you try to access public folders by using EAC or Exchange Online PowerShell, you receive an error message that resembles the following example:
 
 > The mailbox 'Mailbox GUID' is not found in the local forest. Please connect using ConnectionUri as `https://outlook.office365.com/powershell-liveid?email=<emailaddressofthemailbox>` while running New-PSSession
 
@@ -52,4 +52,4 @@ Microsoft is researching this problem and will post more information in this art
 
 ## More information
 
-In this situation, it's possible that either the administrator's mailbox or public folder mailbox was redistributed among different forests. This may have been done as part of the [go-local](/microsoft-365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.
+In this situation, it's possible that either the administrator's mailbox or public folder mailbox was redistributed among different forests. It may have been done as part of the [go-local](/microsoft-365/enterprise/moving-data-to-new-datacenter-geos) initiative or to load balance mailboxes. Currently, there's no option available in EAC to administer the public folders that are in different forests.

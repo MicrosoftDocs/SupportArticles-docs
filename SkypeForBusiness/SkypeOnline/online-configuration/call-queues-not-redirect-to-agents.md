@@ -1,5 +1,5 @@
 ---
-title: Calls to call queues are not redirected to agents in Office 365
+title: Calls to call queues are not redirected to agents in Microsoft 365
 description: Describes how to fix an issue in which the calls to the call queues are not redirected to agents.
 author: simonxjx
 manager: dcscontentpm
@@ -15,11 +15,11 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Calls to call queues are not redirected to agents in Office 365
+# Calls to call queues are not redirected to agents in Microsoft 365
 
 ## Symptoms
 
-Calls to the call queues are not redirected to agents in Microsoft Office 365.  
+Calls to the call queues are not redirected to agents in Microsoft 365.  
 
 ## Cause
 
@@ -29,7 +29,7 @@ This is a known issue.
 
 To resolve this issue, follow these steps: 
  
-1. Sign in to the Office 365 portal.    
+1. Sign in to the Microsoft 365 portal.    
 2. Locate **Skype admin center** -> **Organization** -> **External Communications**.     
 3. Under **external access**, select **On only for allowed domains**.    
 4. Add the tenant domain name to the **blocked or allowed domains** list.    

@@ -1,8 +1,8 @@
 ---
 title: Items that are deleted from a shared mailbox go to the wrong folder in Outlook
 description: Deleting items from a shared mailbox  go to your own Deleted Items instead of the mailbox owner's.
-author: v-matthamer
-ms.author: aruiz
+author: helenclu
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.custom:
   - Outlook for Windows
   - CI 148804
   - CSSTroubleshoot
-ms.reviewer: Meera Krishna
+ms.reviewer: aruiz
 appliesto: 
   - Outlook LTSC 2021
   - Outlook 2019
@@ -51,7 +51,7 @@ To change this registry setting, follow these steps:
 
     **HKEY_CURRENT_USER\Software\Microsoft\Office\\<x.0>\Outlook\Options\General**
 
-    **Note:** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013).
+    **Note:** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013).
 
 1. Right-click the *DelegateWastebasketStyle* value, and then select **Modify**.
 
@@ -90,7 +90,7 @@ If you determine that the "DelegateWasteBasketStyle" value exists in the followi
 
 **HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\\<x.0>\Outlook\Options\General**
 
-**Note** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Office 365, 15.0 = Office 2013).
+**Note** The *<x.0>* placeholder represents your version of Office (16.0 = Office 2016, Office 2019, Office LTSC 2021, or Microsoft 365, 15.0 = Office 2013).
 
 To review Group Policy settings that apply to your user or computer account, contact your Active Directory administrator.
 

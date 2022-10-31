@@ -12,19 +12,19 @@ ms.custom: CSSTroubleshoot
 ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2019
   - Word 2016
   - Word 2013
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
   - Outlook 2019
   - Outlook 2016
   - Outlook 2013
-  - PowerPoint for Office 365
+  - PowerPoint for Microsoft 365
   - PowerPoint 2019
   - PowerPoint 2016
   - PowerPoint 2013
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
@@ -38,8 +38,6 @@ appliesto:
 ---
 
 # Error message when selecting hyperlink in Office: "Cannot locate the Internet server or proxy server"
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

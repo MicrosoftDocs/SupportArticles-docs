@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 # Connection error when using CurrentProject.Connection or CurrentDB.Connection in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2459087
 
 ## Symptoms

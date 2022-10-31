@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to delete every other row on an Excel worksheet
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains a sample Microsoft Visual Basic for Applications macro that you can use to delete every other row in a selected range on a Microsoft Excel worksheet. 

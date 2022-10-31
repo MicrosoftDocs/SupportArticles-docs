@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # How to use the Attributes property for TableDef objects in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 210362
 
 > [!NOTE]

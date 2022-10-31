@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to convert Excel column numbers into alphabetical characters
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 This article discusses how to use the Microsoft Visual Basic for Applications (VBA) function in Microsoft Excel to convert column numbers into their corresponding alphabetical character designator for the same column.

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # You cannot use the "Convert bibliography to static text" option in Word 2007 and Word 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You cannot use the **Convert bibliography to static text** option in Microsoft Office Word 2007 or Word 2010.

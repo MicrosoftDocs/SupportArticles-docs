@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Windows cannot access specified device, path, or file" error launching Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to launch an Office in the Microsoft Store app, you receive the following error:

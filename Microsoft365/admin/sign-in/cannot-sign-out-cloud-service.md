@@ -1,6 +1,6 @@
 ---
-title: Problems when signing out of Office 365, Azure, or Intune in a web browser
-description: Describes an issue in which users can't sign out of a Microsoft cloud service such as Office 365, Microsoft Intune, or Azure in a web browser. Provides a resolution.
+title: Problems when signing out of Microsoft 365, Azure, or Intune in a web browser
+description: Describes an issue in which users can't sign out of a Microsoft cloud service such as Microsoft 365, Microsoft Intune, or Azure in a web browser. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,23 +14,20 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 User and Domain Management
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Problems when signing out of Office 365, Azure, or Intune in a web browser
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Problems when signing out of Microsoft 365, Azure, or Intune in a web browser
 
 ## Problem
 
-Users experience issues when they try to sign out of Office 365, Microsoft Intune, or Microsoft Azure in a web browser. For example, users may experience one of the following issues:
+Users experience issues when they try to sign out of Microsoft 365, Microsoft Intune, or Microsoft Azure in a web browser. For example, users may experience one of the following issues:
 
 - When a user signs out of one of the portals or signs out of Microsoft Outlook Web App, the user isn't signed out of Microsoft SharePoint Online.    
 - When a user signs out of SharePoint Online, the user isn't signed out of the portal or Outlook Web App.    
 - When a user clicks **Sign out**, the user isn't signed out. Instead, the web browser reloads the current webpage.   
-- If your Microsoft account ends in the ".edu" domain extension and is managed by your university domain administrator, or if your Microsoft account was registered or is still registered in Office 365, you may see one of the following messages:
+- If your Microsoft account ends in the ".edu" domain extension and is managed by your university domain administrator, or if your Microsoft account was registered or is still registered in Microsoft 365, you may see one of the following messages:
 
     ```adoc
     Sorry, but we're having trouble signing you out"
@@ -50,7 +47,7 @@ To resolve this issue, use one of the following methods.
 
 ### Method 1: Sign out and then sign in to [https://mail.office365.com](https://mail.office365.com/) to access your mailbox
   
-If you're receiving the "We're having trouble signing you in" error message, see ["We're having trouble signing you in" message when you try to access your mail in Office 365](https://support.microsoft.com/help/2912643). 
+If you're receiving the "We're having trouble signing you in" error message, see ["We're having trouble signing you in" message when you try to access your mail in Microsoft 365](https://support.microsoft.com/help/2912643). 
 
 ### Method 2: Close and reopen all web browsers
   
@@ -91,10 +88,10 @@ Microsoft provides third-party contact information to help you find technical su
 
 ## More information
 
-This behavior is by design. Azure Active Directory-based services (including Office 365, Azure, and Intune) use cookies to remember who you are and to automatically sign you in. 
+This behavior is by design. Azure Active Directory-based services (including Microsoft 365, Azure, and Intune) use cookies to remember who you are and to automatically sign you in. 
 
 The sign-out process for services forces the session cookies to expire. These session cookies are used to maintain your sign-in state when you use these services. However, because the web browser is still running and may not be updated to handle cookies correctly, you may have a cookie that is not updated to expire and finish the sign-out process. By default, these cookies are valid for eight hours or are set to expire when you close all web browsers.
 
-To prevent session cookies from inadvertently being re-used, it is recomended to close all browsers after signing out of any Office 365 web application.
+To prevent session cookies from inadvertently being re-used, it is recomended to close all browsers after signing out of any Microsoft 365 web application.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.

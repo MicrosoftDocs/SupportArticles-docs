@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to link a Visio drawing to a specific region in an Excel worksheet
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how to embed a link in a Microsoft Office Visio drawing to a named region within a Microsoft Office Excel Worksheet.

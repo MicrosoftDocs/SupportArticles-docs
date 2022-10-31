@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Files necessary to run the Office Customization Tool were not found" when you open the tool
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You use the Office Customization Tool to customize an installation of the 2007 Microsoft Office system. You try to open the Office Customization Tool by typing the following command at a command prompt:

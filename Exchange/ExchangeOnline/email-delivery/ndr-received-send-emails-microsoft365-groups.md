@@ -2,7 +2,7 @@
 title: NDR received when sending emails to Microsoft 365 Groups
 description: Provides a workaround to an issue in which an NDR is received when sending emails to Microsoft 365 Groups.
 author: simonxjx
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

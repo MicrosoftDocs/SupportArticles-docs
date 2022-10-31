@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # Access errors publishing or exporting to SharePoint when attachment file name is invalid
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2711562
 
 ## Symptoms

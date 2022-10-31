@@ -58,7 +58,7 @@ The following table shows the supported database compatibility levels to use for
 | SharePoint Server 2019| 130 |
 | SharePoint Server Subscription Edition| 150 |
 
-For more information about database compatibility during version upgrades and a list of default and supported database compatibility levels for each version of SQL Server, see [ALTER DATABASE (Transact-SQL) compatibility level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) on the Microsoft Docs website.
+For more information about database compatibility during version upgrades and a list of default and supported database compatibility levels for each version of SQL Server, see [ALTER DATABASE (Transact-SQL) compatibility level](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ## References
 

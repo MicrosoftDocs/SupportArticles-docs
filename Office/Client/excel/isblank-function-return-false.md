@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # The result is "FALSE" when you use the ISBLANK() function in an Excel spreadsheet
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use the **ISBLANK()** function in a Microsoft Excel spreadsheet, the result is "FALSE". This behavior occurs even though the cell appears to be empty. Additionally, this behavior occurs even though the formula bar may show that nothing is in the cell.

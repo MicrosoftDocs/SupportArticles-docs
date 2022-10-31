@@ -20,9 +20,11 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2987546
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
-Assume that you have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Office 365. When you view the cloud-based archive mailbox of a user, archived items are not displayed. Instead, the contents of the cloud-based archive mailbox are the same as the contents of the user's on-premises primary mailbox.
+Assume that you have a hybrid deployment of on-premises Microsoft Exchange Server and Exchange Online in Microsoft 365. When you view the cloud-based archive mailbox of a user, archived items are not displayed. Instead, the contents of the cloud-based archive mailbox are the same as the contents of the user's on-premises primary mailbox.
 
 ## Cause
 

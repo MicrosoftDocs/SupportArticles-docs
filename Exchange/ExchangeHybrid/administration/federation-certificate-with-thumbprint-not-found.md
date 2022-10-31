@@ -1,6 +1,6 @@
 ---
 title: Manage Federation Wizard can't roll to a new certificate
-description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Office 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
+description: Fixes an issue in which the Manage Federation Wizard doesn't update the certificate in Microsoft 365 after you select the Roll certificate to make the next certificate as the current certificate check box.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -28,11 +28,11 @@ ms.date: 3/31/2022
 _Original KB number:_ &nbsp; 2810692
 
 > [!NOTE]
-> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Office 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Office 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
+> The Hybrid Configuration wizard that's included in the Exchange Management Console in Microsoft Exchange Server 2010 is no longer supported. Therefore, you should no longer use the old Hybrid Configuration wizard. Instead, use the [Microsoft 365 Hybrid Configuration wizard](https://aka.ms/hybridwizard). For more information, see [Microsoft 365 Hybrid Configuration wizard for Exchange 2010](https://techcommunity.microsoft.com/t5/exchange-team-blog/office-365-hybrid-configuration-wizard-for-exchange-2010/ba-p/604541).
 
 ## Symptoms
 
-Consider the following scenario in a hybrid deployment of on-premises Exchange Server and Exchange Online in Office 365:
+Consider the following scenario in a hybrid deployment of on-premises Exchange Server and Exchange Online in Microsoft 365:
 
 - The current certificate that was created for the federation trust on the hybrid server is unintentionally deleted.
 - The current certificate must be replaced for the trust to work correctly.

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Inquire COM add-in options do not respond in Excel 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you enable the Inquire COM add-in in Microsoft Excel 2013, the **INQUIRE** tab is displayed as expected. However, there is no response when you click any option (such as the **Clean Excess Cell Formatting** or **Compare Files** option) on the **INQUIRE** tab. When this issue occurs, you do not receive an error message. 

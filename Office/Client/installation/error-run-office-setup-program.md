@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Error 1919. Error configuring ODBC data source" when you run the Setup program for Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you run the Setup program for any of the programs listed in the "Applies to" section, you may receive the following error message:

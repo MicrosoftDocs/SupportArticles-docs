@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "The image part with relationship rID8 was not found" error in Microsoft Word
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you save and then open a Microsoft Word document into which you imported an image, you see the following message displayed in the place of the picture:

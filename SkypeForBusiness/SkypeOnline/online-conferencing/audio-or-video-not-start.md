@@ -62,7 +62,7 @@ To resolve this issue, follow these steps:
       1. If the issue is reproducible with only one contact, determine whether anyone else can reproduce the issue with the same contact.    
       2. If the issue occurs with multiple contacts, check for commonalities among the group of contacts.   
    
-9. Important This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
+9. **Important** This step doesn't apply to Office 365 dedicated subscription plans. Don't use this step to troubleshoot this issue if you have an Office 365 dedicated plan.
 
     Verify that the network meets the requirements for connecting to Skype for Business Online. For more information, go to the following Microsoft Knowledge Base article: 
 

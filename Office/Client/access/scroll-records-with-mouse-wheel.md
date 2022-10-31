@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You cannot use the mouse wheel to scroll through records in an Access 2007 or Access 2010 form
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Form View in Microsoft Office Access 2007 or in Microsoft Access 2010, when you try to use the mouse wheel to move through records in a form, nothing happens. However, you can use the mouse wheel to move records up and down when you switch the form to Datasheet View.

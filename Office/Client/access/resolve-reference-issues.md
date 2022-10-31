@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 # How to resolve reference issues in an Access database
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 310803
 
 ## Summary

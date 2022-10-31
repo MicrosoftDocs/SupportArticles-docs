@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions: LOGEST
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the LOGEST function in Microsoft Office Excel 2003 and in later versions of Excel. It illustrates how the function is used, and it compares the results of the function in Excel 2003 and in later versions of Excel with the results of the function in earlier versions of Excel.

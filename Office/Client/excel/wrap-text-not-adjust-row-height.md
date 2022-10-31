@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Wrap text does not adjust row height in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Excel, if you manually modify the height of a row and then format a cell in that row to wrap text, Excel does not change the height of the row to fit all the text in the cell. 

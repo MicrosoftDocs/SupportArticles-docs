@@ -14,7 +14,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: jchishol, acc12b
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 
 # A decimal value in a column is rounded up or down to an integer value in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

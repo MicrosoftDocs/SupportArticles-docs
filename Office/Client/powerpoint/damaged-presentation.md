@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to troubleshoot a damaged presentation in PowerPoint
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 You may experience unexpected behavior when you work with a Microsoft PowerPoint presentation. This behavior may occur because the presentation is damaged. This article contains step-by-step methods that may help you partly or fully restore your presentation. 

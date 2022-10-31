@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "This record has been changed by another user" error when you save an edited record in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 837937
 
 > [!NOTE]

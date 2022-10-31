@@ -14,7 +14,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.reviewer: acckb12
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -24,8 +24,6 @@ ms.date: 3/31/2022
 ---
 
 # The ID field is increment by one every time that you add a field to a new table in Datasheet view in Access
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

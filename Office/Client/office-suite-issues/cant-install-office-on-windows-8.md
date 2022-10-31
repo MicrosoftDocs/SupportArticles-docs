@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You can't install Office Starter 2010 on Windows 8
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you upgrade a Windows 7 PC that came with Microsoft Office Starter 2010 to Windows 8, a compatibility error will occur when you click **Use** to install Office Starter 2010:

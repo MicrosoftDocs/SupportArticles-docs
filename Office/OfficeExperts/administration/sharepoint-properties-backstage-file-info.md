@@ -9,7 +9,8 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.custom: sap:office-experts, CSSTroubleshoot
-ms.author: warrenr
+ms.author: v-maqiu
+ms.reviewer: warrenr
 appliesto: 
   - Microsoft 365
   - Office LTSC 2021

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How fiscal dates are shown on a timescaled view
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original version:_ 2011
 
 _Original KB number:_  86287

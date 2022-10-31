@@ -19,6 +19,8 @@ ms.date: 3/31/2022
 
 # A mailbox that's on Litigation Hold or assigned to a retention policy doesn't turn into an inactive mailbox after license removal
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 Assume that you synchronize accounts from your local Active Directory Domain Services (AD DS) to Azure Active Directory (Azure AD) by using Azure AD Connect. After the Microsoft Exchange Server license is removed from a Microsoft 365 account, which has a mailbox that's placed on Litigation Hold or assigned to a retention policy, the mailbox doesn't turn into an inactive mailbox, as expected. Additionally, when you view the account information in the Microsoft 365 admin center, you see the following error message:

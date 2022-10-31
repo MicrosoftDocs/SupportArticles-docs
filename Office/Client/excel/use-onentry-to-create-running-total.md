@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Use the OnEntry macro to create a running total in a cell comment in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel you can avoid circular references when you create a running total by storing the result in a non-calculating part of a worksheet. This article contains a sample Microsoft Visual Basic for Applications procedure that does this by storing a running total in a cell comment. 

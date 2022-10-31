@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # You receive an error message when you run a query in Microsoft Access because of a double-byte Arabic number
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Access 2010, Microsoft Access 2007, or in Microsoft Office Access 2003, you experience one of the following symptoms:

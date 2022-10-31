@@ -86,6 +86,6 @@ The diagnostic performs a large range of verifications for internal users or gue
 
 ## More information
 
-["The number of items in this list exceeds the list view threshold" when you view lists in Office 365](../lists-and-libraries/items-exceeds-list-view-threshold.md)
+["The number of items in this list exceeds the list view threshold" when you view lists in Microsoft 365](../lists-and-libraries/items-exceeds-list-view-threshold.md)
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

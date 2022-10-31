@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Document files in the Office Document Cache are not deleted when you run the Windows Disk Cleanup utility on a computer that is running a 64-bit version of Windows
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

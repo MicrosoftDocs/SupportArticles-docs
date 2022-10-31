@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Compile Error: Procedure too large" when you try to run a VBA macro in a 32-bit version of an Office 2010 program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to run a Visual Basic for Applications (VBA) macro in a 32-bit version of a Microsoft Office 2010 program, you receive the following error message:

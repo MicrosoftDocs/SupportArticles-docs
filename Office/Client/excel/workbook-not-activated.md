@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Excel workbook is not activated when you run a macro that calls the Workbook.Activate method
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms 
 
 When you run a macro that calls the [Workbook.Activate](https://msdn.microsoft.com/library/office/ff821837.aspx) method in a Microsoft Excel 2013 workbook, the workbook is not activated if the [ScreenUpdating](https://msdn.microsoft.com/library/office/ff193498.aspx) property is set to False.

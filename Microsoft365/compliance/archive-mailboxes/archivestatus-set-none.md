@@ -1,6 +1,6 @@
 ---
 title: ArchiveStatus is set to None for an active archive mailbox
-description: In some scenarios, the ArchiveStatus property may be set to None even though you enabled an active archive for a user's mailbox in Office 365.
+description: In some scenarios, the ArchiveStatus property may be set to None even though you enabled an active archive for a user's mailbox in Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -17,15 +17,15 @@ search.appverid: MET150
 ms.date: 3/31/2022
 ---
 
-# ArchiveStatus is set to "None" for an active archive mailbox in Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# ArchiveStatus is set to "None" for an active archive mailbox in Microsoft 365
 
 _Original KB number:_&nbsp;4486848
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
-Office 365 Online archives allow for additional storage of users' email messages. However, in some scenarios, the **ArchiveStatus** property may be set to "None" even though you enabled an active archive for a user's mailbox in Office 365.
+Microsoft 365 Online archives allow for additional storage of users' email messages. However, in some scenarios, the **ArchiveStatus** property may be set to "None" even though you enabled an active archive for a user's mailbox in Microsoft 365.
 
 For example, when you run the following cmdlet in Exchange Online PowerShell to check the archive status, the status shows as "None" instead of "Active":
 
@@ -43,11 +43,11 @@ The output of the cmdlet resembles the following:
 One of the following scenarios may cause the **ArchiveStatus** to be displayed as "None."
 
 - A user is re-licensed for an archive mailbox.
-- Move a primary and archive mailbox from on-premises to Office 365.
+- Move a primary and archive mailbox from on-premises to Microsoft 365.
 
 ## Resolution
 
-You should not use the **ArchiveStatus** property value to check the status of the archive unless this is a cross-premises scenario where the primary mailbox is on-premises and the archive mailbox exists in Office 365 (that is, cross-premises archive). In all other scenarios, you should use both of the following properties to confirm the status of the archive:
+You should not use the **ArchiveStatus** property value to check the status of the archive unless this is a cross-premises scenario where the primary mailbox is on-premises and the archive mailbox exists in Microsoft 365 (that is, cross-premises archive). In all other scenarios, you should use both of the following properties to confirm the status of the archive:
 
 - **ArchiveDatabase**  
 - **ArchiveGuid**

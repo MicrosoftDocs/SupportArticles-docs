@@ -1,7 +1,7 @@
 ---
 title: SharePoint files open as read-only
 author: helenclu
-ms.author: warrenr
+ms.author: luche
 ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal

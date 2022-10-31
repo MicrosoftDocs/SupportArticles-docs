@@ -1,5 +1,5 @@
 ---
-title: Search logic change to Title property in the Security and Compliance Centerx
+title: Search logic change to Title property in the Security and Compliance Center
 description: Describes a change to the Title property when conducting eDiscovery searches in the Security and Compliance Center.
 ms.author: v-maqiu
 author: MaryQiu1987
@@ -10,7 +10,8 @@ localization_priority: Normal
 search.appverid: 
   - SPO160
   - MET150
-applies to: Office 365 Security & Compliance Center
+applies to: 
+  - Office 365 Security & Compliance Center
 ms.custom: 
   - CI 115091
   - CSSTroubleshoot
@@ -20,7 +21,7 @@ ms.date: 3/31/2022
 
 # Change to search logic for the "Title" property in the Security and Compliance Center
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 If you use the Security & Compliance Center to create content searches and eDiscovery holds (especially if you use the [Query Based Hold](/microsoft-365/compliance/ediscovery-cases?preserve-view=true&view=o365-worldwide#step-4-place-content-locations-on-hold) feature), you should be aware of a change coming to the way that the Title property is handled.
 

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Description of the limitations for working with arrays in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In the versions of Microsoft Excel that are listed in the "Applies to" section, the "Calculation Specifications" Help topic lists the limitations for working with an array. This article describes the limitations of arrays in Excel.

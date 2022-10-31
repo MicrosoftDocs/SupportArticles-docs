@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Edit the Windows registry to clear the list of most recently used files in Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 You can edit a single registry entry to clear the most recently used files list that appears in most Microsoft Office programs.

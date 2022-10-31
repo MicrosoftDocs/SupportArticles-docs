@@ -11,15 +11,13 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2016
   - Excel 2013
 ms.date: 3/31/2022
 ---
 
 # How to force Excel to open in a new instance by default
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 
@@ -52,8 +50,8 @@ To change the default setting, install the latest version of Office (build numbe
 
 |Version|Release date|Build number|
 |----|---|---|
-|Office 365 for 2016 (Current Channel Subscribers)|May 3, 2016|Build 16.0.6868.2060|
-|[Office 365 for 2013](https://support.microsoft.com/gp/office-2013-365-update)|June 7, 2016|Build 15.0.4833.1001|
+|Office 2016 (Current Channel Subscribers)|May 3, 2016|Build 16.0.6868.2060|
+|[Office 2013](https://support.microsoft.com/gp/office-2013-365-update)|June 7, 2016|Build 15.0.4833.1001|
 |[Excel 2013 (MSI)](https://support.microsoft.com/help/3115162)|June 7, 2016|Build 15.0.4833.1000|
 |[Excel 2016 (MSI)](https://support.microsoft.com/help/3115139)|June 7, 2016|Build 16.0.4393.1000 |
 

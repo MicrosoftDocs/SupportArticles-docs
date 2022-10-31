@@ -1,5 +1,5 @@
 - name: SharePoint Online Troubleshooting
-  href: ../sharepoint-online-welcome.md
+  href: ../sharepoint-online-welcome.yml
   items:
   - name: SharePoint troubleshooting content updates
     href: ../sharepoint-troubleshoot-content-updates.md
@@ -11,6 +11,8 @@
       href: ../administration/access-denied-or-need-permission-error-sharepoint-online-or-onedrive-for-business.md
     - name: '"API access" does not appear in the Modern admin center'
       href: ../administration/api-access-does-not-appear.md
+    - name: '"Could not connect to SharePoint Online" error'
+      href: ../administration/connect-sposervice-error.md
     - name: Temporary changes in process schedule for SharePoint Online services 
       href: ../administration/temporary-adjustments-in-sharepoint-online.md
     - name: '"Sync to Outlook" button and "Task" link are missing'
@@ -23,7 +25,7 @@
       href: ../administration/automatic-exif-property-import-unsupported.md
     - name: Create a default Site collection Term Set if none is present
       href: ../administration/create-default-site-term-set.md
-    - name: Creation of team site from SharePoint Home doesn’t complete
+    - name: Creation of team site from SharePoint Home doesn't complete
       href: ../administration/team-site-creation-stops.md
     - name: Deleting a content type from the SharePoint Content Type Hub
       href: ../administration/deleting-content-type-from-hub.md
@@ -53,16 +55,14 @@
       href: ../administration/information-about-uls-log-access.md
     - name: Presence information doesn't show
       href: ../administration/presence-information-fails-showing.md
-    - name: Profile picture not showing in SharePoint Online
+    - name: Profile picture not shown in SharePoint Online
       href: ../administration/profile-picture-not-showing.md
     - name: Remove assembly reference from Sandbox solution
       href: ../../SharePointServer/administration/change-sandbox-solution.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
     - name: SharePoint Online out of storage spacet
       href: ../administration/out-of-storage.md
     - name: Third-party tools changes support
-      href: ../administration/third-party-tools-change-support.md
-    - name: Troubleshoot mapped network drives
-      href: ../administration/troubleshoot-mapped-network-drives.md
+      href: ../administration/third-party-tools-change-support.md    
     - name: Troubleshoot site collection upgrade issues
       href: ../administration/troubleshoot-site-collection-upgrade-issue.md
     - name: Unable to delete items in SharePoint and OneDrive
@@ -71,6 +71,8 @@
       href: ../administration/content-type-gallery-error.md
     - name: Uncompiled audiences are present in SharePoint Online
       href: ../administration/uncompiled-audiences-are-present-in-office-365-for-enterprises.md
+    - name: Unable to access SharePoint Online
+      href: ../administration/sharepoint-online-inaccessible.md  
     - name: Using relative URLs isn't supported
       href: ../lists-and-libraries/relative-url-across-site-collection-not-supported.md
   - name: Diagnostics
@@ -155,7 +157,7 @@
       href: ../lists-and-libraries/dragging-files-using-web-browser.md
     - name: Issue when creating a calendar overlay
       href: ../lists-and-libraries/fails-creating-calendar-overlay.md
-    - name: Issue when creating documents in Office 365 portal
+    - name: Issue when creating documents in Microsoft 365 portal
       href: ../lists-and-libraries/o365-portal-fails-creating-documents.md
     - name: Issue when deleting an online list item attachment
       href: ../lists-and-libraries/list-item-fails-saving-same-attachment.md
@@ -197,6 +199,8 @@
       href: ../lists-and-libraries/template-generated-list-incorrect-data.md
     - name: The URL <file name> is invalid when uploading a file
       href: ../lists-and-libraries/url-invalid-upload-file-to-list.md
+    - name: Troubleshoot mapped network drives
+      href: ../lists-and-libraries/troubleshoot-mapped-network-drives.md
   - name: Migration Tool
     items:
     - name: Information about manual migration
@@ -211,6 +215,8 @@
     items:
     - name: '"Not all terms were imported successfully" error with importing term set'
       href: ../search/troubleshoot-error-when-importing-a-term-set.md
+    - name: Classic site collection search usage reports
+      href: ../search/classic-site-collection-search-usage-reports.md  
     - name: Document preview and content type icon aren't displayed
       href: ../Search/content-type-icon-not-display.md
     - name: Items are missing from online search results
@@ -225,7 +231,7 @@
       href: ../Search/search-results-missing.md
     - name: Search results aren't returned
       href: ../Search/search-results-not-return.md
-    - name: Search results don't appear for group owners after creating a new Office 365 group
+    - name: Search results don't appear for group owners after creating a new Microsoft 365 group
       href: ../search/search-results-dont-appear-for-group-owners.md
   - name: Security
     items:
@@ -288,11 +294,9 @@
     - name: Required permissions for managing Secure Store Service
       href: ../sharing-and-permissions/managing-secure-store-service-app-permissions.md
     - name: Sharing options are greyed out when sharing from SharePoint Online or OneDrive
-      href: ../administration/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
+      href: ../sharing-and-permissions/sharing-options-grayed-out-when-sharing-from-sharepoint-online-or-onedrive.md
     - name: SSL certificate authentication issues 
-      href: ../sharing-and-permissions/ssl-certificate-authentication.md
-    - name: Unable to access SharePoint Online
-      href: ../sharing-and-permissions/sharepoint-online-inaccessible.md
+      href: ../sharing-and-permissions/ssl-certificate-authentication.md    
     - name: Unable to reach the server when sharing files
       href: ../sharing-and-permissions/share-file-unable-reach-server.md
     - name: You are not allowed to create team sites
@@ -314,9 +318,7 @@
     - name: Can't find specified web in the given URL
       href: ../Sites/cannot-find-specified-web-given-url.md
     - name: Can't permanently delete a site when it's connected to a Microsoft 365 group
-      href: ../Sites/cannot-permanently-delete-site.md
-    - name: Classic site collection search usage reports
-      href: ../Sites/classic-site-collection-search-usage-reports.md
+      href: ../Sites/cannot-permanently-delete-site.md    
     - name: Customizations of the top navigation bar is reverted
       href: ../Sites/customizations-revert-to-default-settings.md
     - name: Error when trying to change site logo on O365 group SharePoint site
@@ -335,6 +337,8 @@
       href: ../Sites/new-navigation-link-save-site-as-template.md
     - name: Modified dates on the SharePoint site contents page are not accurate
       href: ../../SharePointServer/lists-and-libraries/modified-date-site-contents-not-accurate.md?toc=/SharePoint/troubleshoot/onlinetoc/toc.json&bc=/SharePoint/troubleshoot/breadcrumb/toc.json
+    - name: Notifications not received by group connected to SharePoint site
+      href: ../sites/notification-email-not-received.md
     - name: Public websites is discontinued
       href: ../Sites/public-websites-be-discontinued.md
     - name: Rich Text fields don't respond
@@ -347,14 +351,14 @@
       href: ../Sites/top-navigation-bar-not-use-site-theme.md
     - name: Site is at or near the metadata limit
       href: ../sites/site-reached-metadata-limit.md
-    - name: Site storage notification emails for group-connected sites not received
-      href: ../sites/notification-email-not-received.md
     - name: Top navigation bar displays either Sites or Newsfeed instead of OneDrive
       href: ../sites/office-365-top-navigation-bar-displays-either-sites-or-newsfeed.md
     - name: Troubleshooting guide to OneDrive for Business sites stopped at provisioning stage
       href: ../sites/troubleshooting-guide-for-sites-stopped-at-provisioning.md
     - name: Unable to delete a SharePoint site
       href: ../sites/unable-to-delete-site.md
+    - name: Unable to schedule page publishing after changing a content type 
+      href: ../sites/cant-schedule-publish.md
   - name: Synchronization
     items:
     - name: A synchronized file is moved to the recycle bin

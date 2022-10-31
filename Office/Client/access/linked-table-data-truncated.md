@@ -13,7 +13,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 ---
 
 # The data in a linked Excel spreadsheet column is truncated to 255 characters in an Access database
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 _Original KB number:_ &nbsp; 839785
 

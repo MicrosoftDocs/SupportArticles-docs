@@ -2,7 +2,7 @@
 title: Empty managed folders disappear in Exchange Online
 description: Provides information about an issue in which empty folders in Managed Folders keep being deleted.
 author: MaryQiu1987
-ms.author: lindabr
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -18,6 +18,8 @@ ms.date: 3/31/2022
 ---
 
 # Empty managed folders disappear in Exchange Online
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 If you use managed folders in Exchange Online, you notice that some of the empty subfolders have disappeared. This behavior is by design. When the **Managed Folder Assistant** runs, it deletes any empty subfolders of a managed folder.  
 

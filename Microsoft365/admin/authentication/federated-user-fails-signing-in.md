@@ -1,6 +1,6 @@
 ---
 title: A federated user has trouble signing in with error code 80048163
-description: Describes an issue in which a federated users receive an error message when they try to sign in to Office 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com."
+description: Describes an issue in which a federated users receive an error message when they try to sign in to Microsoft 365, Azure, or Microsoft Intune from a sign-in webpage whose URL starts with "https://login.microsoftonline.com."
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -13,22 +13,20 @@ ms.author: v-maqiu
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
-  - Office 365
+  - Microsoft 365
   - Microsoft Intune
   - CRM Online via Office 365 E Plans
-  - Azure Backup, Office 365 Identity Management
+  - Azure Backup
 ms.date: 3/31/2022
 ---
 
-# Error 80048163 when a federated user tries to sign in to Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Error 80048163 when a federated user tries to sign in to Microsoft 365, Azure, or Intune
 
 ## Problem
 
-When a federated user tries to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com, authentication for that user is unsuccessful. The user gets the following error message:
+When a federated user tries to sign in to a Microsoft cloud service such as Microsoft 365, Microsoft Azure, or Microsoft Intune from a sign-in webpage whose URL starts with https://login.microsoftonline.com, authentication for that user is unsuccessful. The user gets the following error message:
 
-```asciidoc
+```output
 Sorry, but we're having trouble signing you in
 
 Please try again in a few minutes. If this doesn't work, you might want to contact your admin and report the following error:
@@ -78,9 +76,9 @@ LsaLookupCacheMaxSize reconfiguration can affect sign-in performance, and this r
 
 ### Resolution 2: Update the relying party trust with Azure AD
 
-To update the relying party trust, see the "How to update the configuration of the Office 365 federated domain" section of the following Microsoft article:
+To update the relying party trust, see the "How to update the configuration of the Microsoft 365 federated domain" section of the following Microsoft article:
 
-[How to update or repair the settings of a federated domain in Office 365, Azure, or Intune](https://support.microsoft.com/help/2647048/)
+[How to update or repair the settings of a federated domain in Microsoft 365, Azure, or Intune](https://support.microsoft.com/help/2647048/)
 
 ## More information
 

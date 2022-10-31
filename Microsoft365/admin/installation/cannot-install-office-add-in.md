@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # "We can't start this app..." error installing an Office add-in
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you attempt to install an Office Add-in from the Office Store you receive the following error:

@@ -16,19 +16,17 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
 # "You first must install one of the following versions of .NET Framework" when you run the IdFix tool
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
 When you try to run the IdFix DirSync Error Remediation Tool in your on-premises Active Directory Domain Services (AD DS) environment, you receive the following error message:
 
-```adoc
+```output
 To run this application, you first must install one of the following versions of .NET Framework. 
 ```
 

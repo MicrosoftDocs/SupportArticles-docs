@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Sounds missing after a PowerPoint presentation is saved as video
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you save a Microsoft PowerPoint 2010 presentation as a video, any slide transition sounds that were used in the presentation are missing. When you view the video, there are no slide transition sounds.

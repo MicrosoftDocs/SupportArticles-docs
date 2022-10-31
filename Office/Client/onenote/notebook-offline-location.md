@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Warning in OneNote 2013 when a notebook is in an offline location
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When Microsoft OneNote 2013 detects a notebook that's in an offline location (for example, an offline folder that's created by IntelliMirror), you receive the following message in the information bar:

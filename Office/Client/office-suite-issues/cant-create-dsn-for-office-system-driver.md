@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Unable to create DSN for Microsoft Office System Driver on 64-bit versions of Windows
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When attempting to create ODBC connections that utilize the Microsoft Office System Driver, such as connections to Access or Excel, on a 64-bit Operating system like Windows 7, the drivers are not visible. They are not visible in the standard ODBC Administrator dialog that is launched from the Administrative Tools dialog in the Control Panel.

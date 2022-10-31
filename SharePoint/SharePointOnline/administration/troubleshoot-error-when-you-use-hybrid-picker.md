@@ -24,9 +24,9 @@ When you use the SharePoint Hybrid Picker, you receive the following error messa
 
 ## Solution
 
-To resolve this issue, grant permissions to the **Everyone except external users** group so that users can create personal sites in Office 365, and then browse to the OneDrive for Business page as the administrator. To do this, follow these steps:
+To resolve this issue, grant permissions to the **Everyone except external users** group so that users can create personal sites in Microsoft 365, and then browse to the OneDrive for Business page as the administrator. To do this, follow these steps:
 
-1. With an account that has the Global administrator or SharePoint administrator role, browse to the SharePoint admin center for your Office 365 subscription.
+1. With an account that has the Global administrator or SharePoint administrator role, browse to the SharePoint admin center for your Microsoft 365 subscription.
 
 2. Click **user profiles**, and then click **Manage User Permissions**.
 

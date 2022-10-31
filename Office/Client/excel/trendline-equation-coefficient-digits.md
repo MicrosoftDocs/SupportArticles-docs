@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Display more digits in trendline equation coefficients in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 When you add a trendline to a chart, and then display the equation and R-squared value for the trendline, the equation shows only the first five digits of each coefficient. For some purposes, this may not be a sufficient number of significant figures. This article explains how to display more digits in the coefficients.

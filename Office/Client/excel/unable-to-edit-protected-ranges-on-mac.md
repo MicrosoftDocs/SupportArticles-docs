@@ -1,7 +1,7 @@
 ---
 title: Can’t edit certain cells in a protected worksheet using Excel for Mac
 description: If editing permissions are restricted on a range of cells in a protected workbook, you can’t edit those cells in Excel for Mac.
-author: v-matthamer
+author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.custom: 
   - CSSTroubleshoot
   - CI 150452
-ms.author: v-matthamer
+ms.author: luche
 appliesto: 
   - Excel for Mac
 ms.date: 3/31/2022

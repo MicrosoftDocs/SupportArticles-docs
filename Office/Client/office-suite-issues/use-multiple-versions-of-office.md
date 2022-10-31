@@ -18,11 +18,9 @@ ms.date: 3/31/2022
 
 # How to use Office 2013 suites and programs (MSI deployment) on a computer running another version of Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 For a Microsoft Office 2010 version of this article, see [2121447](https://support.microsoft.com/help/2121447).
 
-For a Microsoft Office 365 client version of this article, see [Install and use different versions of Office on the same PC](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6ebb44ce-18a3-43f9-a187-b78c513788bf). 
+For a Microsoft 365 client version of this article, see [Install and use different versions of Office on the same PC](https://support.office.com/article/Install-and-use-different-versions-of-Office-on-the-same-PC-6ebb44ce-18a3-43f9-a187-b78c513788bf). 
 
 ## Introduction
 

@@ -1,6 +1,6 @@
 ---
-title: We could not verify your account when reset admin password in Office 365
-description: Describes a scenario where you receive an error message when you try to reset your admin password in Office 365, Microsoft Intune, or Azure.
+title: We could not verify your account when reset admin password in Microsoft 365
+description: Describes a scenario where you receive an error message when you try to reset your admin password in Microsoft 365, Microsoft Intune, or Azure.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,18 +15,16 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365
+  - Microsoft 365
   - User and Domain Management
 ms.date: 3/31/2022
 ---
 
-# "We could not verify your account" error when you try to reset your admin password in Office 365, Intune, or Azure
+# "We could not verify your account" error when you try to reset your admin password in Microsoft 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+## Problem
 
-## Problem 
-
-When you try to reset your admin password for a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure, you receive the following error message:
+When you try to reset your admin password for a Microsoft cloud service such as Microsoft 365, Microsoft Intune, or Microsoft Azure, you receive the following error message:
 
 **We could not verify your account**
 
@@ -52,9 +50,9 @@ Work with another admin to set your mobile phone number. Or, after you're able t
 
 ### Method 2: Set your user location
 
-Work with another admin to set your user location. Or, after you're able to sign in, set your user location in the Office 365 portal. To do this, follow these steps:
+Work with another admin to set your user location. Or, after you're able to sign in, set your user location in the Microsoft 365 portal. To do this, follow these steps:
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)).
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)).
 2. Go to **users and groups**, and then select the admin account.   
 3. Go to **settings**.   
 4. Under **Set user location**, select the region where you're located.    

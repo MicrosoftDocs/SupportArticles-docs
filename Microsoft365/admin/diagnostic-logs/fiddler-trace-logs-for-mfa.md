@@ -1,6 +1,6 @@
 ---
-title: How to use Fiddler trace logs for MFA in Office 365 and Azure AD
-description: Describes how to use the Fiddler tool to trace multifactor authentication (MFA) scenarios in Office 365.
+title: How to use Fiddler trace logs for MFA in Microsoft 365 and Azure AD
+description: Describes how to use the Fiddler tool to trace multifactor authentication (MFA) scenarios in Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -12,13 +12,11 @@ search.appverid:
   - MET150
 appliesto: 
   - Azure Active Directory
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# How to use Fiddler trace logs for MFA in Office 365 and Azure AD
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# How to use Fiddler trace logs for MFA in Microsoft 365 and Azure AD
 
 ## Summary
 
@@ -34,7 +32,7 @@ This article introduces the Fiddler trace log for the following multifactor auth
 
 If a user account is federated, the user is redirected to the Service Token Server (STS) for authentication and to login.microsoftonline.com, and the SAML token is issued by the STS. If the user is managed, login.microsoftonline.com authenticates the user by way of the user's password.
 
-MFA starts after the user's password has been verified by Azure AD or STS. The `SANeeded=1` cookie will be set if the user is enabled for MFA authentication in Office 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
+MFA starts after the user's password has been verified by Azure AD or STS. The `SANeeded=1` cookie will be set if the user is enabled for MFA authentication in Microsoft 365 or Azure directory. The communication between the client and login.microsoftonline.com after the user password authentication resembles the following:
 
 > POST `https://login.microsoftonline.com/login.srf` HTTP/1.1  
 > Host: login.microsoftonline.com
@@ -81,7 +79,7 @@ If the user is blocked, ResultValue will be set as UserIsBlocked. At the first q
 
 Solution: In an Azure MFA scenario with an Azure subscription, you can unblock by first logging on to manage.windowsazure.com. Then, select **Directory > Users** and **Manage Multi factor Authentication** > **Service Settings**. At the end of the page, select **Go to portal**. Now, select **Block/Unblock Users** to find the list of blocked users.
 
-If MFA is enabled through Office 365, open a support case with Microsoft to unblock it.
+If MFA is enabled through Microsoft 365, open a support case with Microsoft to unblock it.
 
 ### Scenario 5: MFA for managed accounts
 

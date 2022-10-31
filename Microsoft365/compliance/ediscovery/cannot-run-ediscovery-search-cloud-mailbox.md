@@ -2,7 +2,7 @@
 title: Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
 description: When run In-Place eDiscovery search for Exchange Online mailbox in the on-premises server, it fails and you may receive an error message.
 author: MaryQiu1987
-ms.author: akashb
+ms.author: v-maqiu
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting
@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 # Can't run In-Place eDiscovery search for Exchange Online mailbox in Exchange Server 2019 or 2016 by using EAC
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Symptoms
 
@@ -30,19 +30,19 @@ In a Microsoft Exchange hybrid deployment environment, when you try to run In-Pl
 
 ### Scenario 1
 
-You are trying to search a remote mailbox that does not have an online archive enabled. In this scenario, you receive an error message that resembles the following:
+You're trying to search a remote mailbox that doesn't have an online archive enabled. In this scenario, you receive an error message that resembles the following example:
 
 `Export failed with error type: 'FailedToSearchMailboxes'. Details: The underlying connection was closed: An unexpected error occurred on a receive. Endpoint: https://mail.contoso.com:444/EWS/Exchange.asmx`
 
 ### Scenario 2
 
-You are trying to search a remote mailbox that has an online archive enabled. The estimate of search results succeeds. However, when you try to copy the results to a discovery mailbox, the attempt fails and returns an error message that resembles the following:
+You're trying to search a remote mailbox that has an online archive enabled. The estimate of search results succeeds. However, when you try to copy the results to a discovery mailbox, the attempt fails and returns an error message that resembles the example:
 
 `Failed Search or Export, Mailbox:UserOne@contoso.com::Item:::DocumentId:::ItemId: with error: [FailedToGetRootFolders] Export failed with error type: 'FailedToGetRootFolders'. Message: ErrorNonExistentMailbox : No mailbox with such guid. Endpoint: https://mail.contoso.com:444/EWS/Exchange.asmx`
 
 ## Workarounds
 
-This is a known issue in Exchange Server 2019 and 2016. To work around this issue, use either of the following methods:
+It's a known issue in Exchange Server 2019 and 2016. To work around this issue, use either of the following methods:
 
 ### Method 1
 

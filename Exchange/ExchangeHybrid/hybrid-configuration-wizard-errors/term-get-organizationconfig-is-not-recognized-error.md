@@ -1,6 +1,6 @@
 ---
-title: The term Get-OrganizationConfig is not recognized
-description: Describes that you receive a Get-OrganizationConfig is not recognized error when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
+title: The term Get-OrganizationConfig isn't recognized
+description: Describes that you receive a Get-OrganizationConfig isn't recognized error when you run the Hybrid Configuration wizard to set up a hybrid deployment between your on-premises Exchange Server environment and Exchange Online.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 3067676
 
 ## Symptoms
 
-You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Office 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-OrganizationConfig is not recognized** error message. The full text of this message resembles the following:
+You want to set up a hybrid deployment between your on-premises Microsoft Exchange Server organization and Exchange Online in Microsoft 365. However, when you run the Hybrid Configuration wizard, the wizard doesn't complete successfully, and you receive a **Get-OrganizationConfig is not recognized** error message. The full text of this message resembles the following example:
 
 > ERROR : Subtask CheckPrereqs execution failed: Check Tenant Prerequisites  
 Execution of the Get-OrganizationConfig cmdlet has thrown an exception. This may indicate invalid parameters in your hybrid configuration settings.  
@@ -37,14 +37,14 @@ at Microsoft.Exchange.Management.Hybrid.RemotePowershellSession.RunCommand(Strin
 
 ## Cause
 
-The Hybrid Configuration wizard depends on the availability of an Office 365 plan that can access the `Get-HybridMailflowDatacenterIPs` cmdlet. The error message indicates that the subscriptions that you currently have can't access this cmdlet.
+The Hybrid Configuration wizard depends on the availability of a Microsoft 365 plan that can access the `Get-HybridMailflowDatacenterIPs` cmdlet. The error message indicates that the subscriptions that you currently have can't access this cmdlet.
 
 ## Workaround
 
-Add a trial subscription of Office 365 Enterprise E3 to your account. After you add the Office 365 Enterprise E3 plan, the Hybrid Configuration wizard will complete successfully. To add a trial subscription, follow these steps:
+Add a trial subscription of Office 365 E3 to your account. After you add the Office 365 E3 plan, the Hybrid Configuration wizard will complete successfully. To add a trial subscription, follow these steps:
 
-1. Sign in to the [Office 365 portal](https://www.office.com/?auth=2).
-2. Select **Admin** to open the Office 365 admin center.
+1. Sign in to the [Microsoft 365 portal](https://www.office.com/?auth=2).
+2. Select **Admin** to open the Microsoft 365 admin center.
 3. In the navigation pane, expand **Billing**, select **Subscriptions**, and then select **New Subscription**.
 4. Under **Office 365 Enterprise E3**, select **Trial**, and then follow the steps that are displayed on the screen.For more help to work around this issue, contact [Microsoft Support](https://support.microsoft.com/contactus/).
 

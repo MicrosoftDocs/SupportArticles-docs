@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # You cannot import attribute-centric XML in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills.
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

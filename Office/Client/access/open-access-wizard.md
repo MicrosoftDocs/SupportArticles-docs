@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # "This feature isn't installed, or has been disabled" when you open a wizard in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You enable the **Disable all macros except digitally signed macros** option in the **Macro Settings** pane of the **Trust Center Settings** and the **Disable all Trusted Locations** option in the **Trusted Locations** pane in Microsoft Access. When you try to open any wizard, you receive the following error message:

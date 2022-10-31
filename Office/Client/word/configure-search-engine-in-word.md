@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to configure the default search engine in Word 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 Microsoft Word 2013 includes a feature that lets you use a search engine to search for a word in a Word document. By default, the search is performed by Bing. However, you can configure the feature to use a different search engine.

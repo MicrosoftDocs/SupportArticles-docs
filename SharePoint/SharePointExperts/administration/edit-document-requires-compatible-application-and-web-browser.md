@@ -2,7 +2,8 @@
 title: 'Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser error when you open documents from SharePoint'
 description: Describes an issue that occurs when you try to open documents from SharePoint by using Office applications.
 author: helenclu
-ms.author: warrenr
+ms.author: luche
+ms.reviewer: warrenr
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -21,7 +22,7 @@ This article was written by [Warren Rath](https://social.technet.microsoft.com/p
 
 ## Symptoms
 
-Assume that you have the Click-to-Run version of Office 365 and Microsoft Application Virtualization (App-V) 5 Service Pack 2 (SP2) installed on the same computer. When you try to open documents from SharePoint by using Office applications, you receive the following error message:
+Assume that you have the Click-to-Run version of Microsoft 365 and Microsoft Application Virtualization (App-V) 5 Service Pack 2 (SP2) installed on the same computer. When you try to open documents from SharePoint by using Office applications, you receive the following error message:
 
 > Edit Document requires a Microsoft SharePoint Foundation compatible application and web browser.
 

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # How to prevent files from opening automatically in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how to prevent files from automatically opening when you start Microsoft Excel.

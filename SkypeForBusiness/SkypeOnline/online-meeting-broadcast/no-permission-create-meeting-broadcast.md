@@ -57,7 +57,7 @@ For more information about how to assign licenses, see [Assign licenses to users
 
 This error message can be caused by one of the following conditions: 
 
-- The Office 365 organization isn't enabled for Skype Meeting Broadcast.   
+- The Microsoft 365 organization isn't enabled for Skype Meeting Broadcast.   
 - The user doesn't have an assigned Skype for Business Online plan that grants this capability.    
 
 For more information about Skype Meeting Broadcast, go to the following Microsoft websites:

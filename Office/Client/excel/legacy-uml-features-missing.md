@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Legacy UML features are missing when you edit a UML or database diagram in Visio 2013
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 Assume that you try to edit a UML or database diagram that was created in Visio 2010 or in an earlier version of Visio by using Microsoft Visio 2013. However, the legacy UML features are missing. Additionally, you receive the following message in the message bar and in the information pane: 

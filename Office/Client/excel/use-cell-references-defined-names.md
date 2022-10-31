@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How to use cell references and defined names in criteria in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, criteria can be set by typing the exact value that is desired in the criteria cells, or by using cell references or defined names.

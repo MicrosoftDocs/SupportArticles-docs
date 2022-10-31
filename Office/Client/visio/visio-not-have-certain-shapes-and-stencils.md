@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Visio 2010 or 2013 does not have certain shapes and stencils included with the product
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction 
 
 With each release of Microsoft Visio, we evaluate the set of shapes that are included in Visio. We then make additions, replacements, and deletions, based on usage data on the different shapes, together with customer feedback about the shapes. For Microsoft Visio 2010, the following stencils were removed:

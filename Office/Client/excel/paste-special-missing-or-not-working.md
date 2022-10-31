@@ -19,11 +19,9 @@ ms.date: 3/31/2022
 
 # Paste Special option is missing or not working in Microsoft Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 The **Paste Special** option can make the task of pasting text go more smoothly by letting you choose which formatting you want to keep (source or destination) or by stripping all the formatting and just pasting the text. If you are having issues with the **Paste Special** option, continue on to the resolutions below.
 
-##  Resolution
+## Resolution
 
 To see if the **Paste Special** option is enabled: 
  

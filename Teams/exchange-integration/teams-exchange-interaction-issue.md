@@ -2,7 +2,7 @@
 title: Troubleshoot Microsoft Teams and Exchange Server interaction issues
 description: Provides steps to troubleshoot interaction issues that occur between Microsoft Teams and Exchange Server.
 author: helenclu
-ms.author: chunlli
+ms.author: luche
 manager: dcscontentpm
 editor: v-jesits
 audience: ITPro
@@ -69,7 +69,7 @@ To integrate the Microsoft Teams service with your installation of Exchange Serv
 > [!NOTE]
 > An example of Microsoft identity platform and OAuth 2.0 usage can be found [here](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) 
 
-- You should configure your internet-facing firewall or reverse proxy server to allow Microsoft Teams to access the servers that are running Exchange Server by adding the URLs and IP address ranges for Skype for Business Online and Microsoft Teams into the allow list. For more information, see the "Skype for Business Online and Microsoft Teams" section of [Office 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
+- You should configure your internet-facing firewall or reverse proxy server to allow Microsoft Teams to access the servers that are running Exchange Server by adding the URLs and IP address ranges for Skype for Business Online and Microsoft Teams into the allow list. For more information, see the "Skype for Business Online and Microsoft Teams" section of [Microsoft 365 URLs and IP address ranges](/office365/enterprise/urls-and-ip-address-ranges#skype-for-business-online-and-microsoft-teams).
 
 - Exchange Autodiscover V2 is required to allow the Teams service to perform an unauthenticated discovery against the user's mailbox that's located in Exchange Server. Autodiscover V2 is fully supported in Exchange Server 2013 Cumulative Update 19 or later. This is good enough to enable Teams delegation to work correctly. However, Teams Calendar App requires Exchange Server 2016 Cumulative Update 3 or later to be installed. Therefore, for full feature support, Exchange Server 2016 Cumulative Update 3 or later is required.
 
@@ -122,11 +122,11 @@ Additionally, run the **Free/Busy** connectivity test that is available in the M
 
 1. Navigate to [Microsoft Remote Connectivity Analyzer](https://testconnectivity.microsoft.com/tests/o365).
 
-2. Select the **Free/Busy** test to verify that an Office 365 mailbox can access the free/busy information of an on-premises mailbox, and vice versa.
+2. Select the **Free/Busy** test to verify that a Microsoft 365 mailbox can access the free/busy information of an on-premises mailbox, and vice versa.
 
-    You have to run this test two times by swapping the source mailbox email address with the target mailbox email address. This is because each run is unidirectional. This test doesn't necessarily have to be run by using affected accounts. Test can be run by using any pair of an on-premises mailbox and an Office 365 mailbox.
+    You have to run this test two times by swapping the source mailbox email address with the target mailbox email address. This is because each run is unidirectional. This test doesn't necessarily have to be run by using affected accounts. Test can be run by using any pair of an on-premises mailbox and a Microsoft 365 mailbox.
 
-    To learn more about how to troubleshoot free/busy issues in a hybrid deployment of on-premises and Exchange Online in Office 365, see [this article](https://support.microsoft.com/help/2555008).
+    To learn more about how to troubleshoot free/busy issues in a hybrid deployment of on-premises and Exchange Online in Microsoft 365, see [this article](https://support.microsoft.com/help/2555008).
 
 ## Troubleshoot the Teams delegation issue
 
@@ -181,7 +181,7 @@ If the parameter was set to **EnforceAllowList**, only clients listed in **EwsAl
 Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this command to add it:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="*SchedulingService*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -199,7 +199,7 @@ If the parameter was set to **EnforceAllowList**, only clients listed in **EwsAl
 Make sure that **\*SchedulingService\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this Exchange PowerShell command to add it:
 
 ```powershell
-Set-CASMailbox <delegator's UserPrincipalName> -EwsAllowList @{Add="*SchedulingService*"}
+Set-CASMailbox <delegator's UserPrincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*SchedulingService*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -257,7 +257,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run this command to add them:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing EWS.
@@ -275,7 +275,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **MicrosoftNinja/\***, **\*Teams/\***, and **SkypeSpaces/\*** are listed as array members of the **EwsAllowList** parameter. If they aren't, run this Exchange PowerShell command to add them:
 
 ```powershell
-Set-CASMailbox <UserPincipalName> -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
+Set-CASMailbox <UserPincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="MicrosoftNinja/*","*Teams/*","SkypeSpaces/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will also be blocked from accessing EWS.
@@ -334,7 +334,7 @@ If the parameter was set to **EnforceAllowList**, only clients that are listed i
 Make sure that **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this command to add it:
 
 ```powershell
-Set-OrganizationConfig -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
+Set-OrganizationConfig -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="*Microsoft.Skype.Presence.App/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True** or **Null** (blank). Otherwise, the Teams service will be blocked from accessing the EWS.
@@ -352,7 +352,7 @@ If the parameter was set to **EnforceAllowList**, only the clients that are list
 Make sure **\*Microsoft.Skype.Presence.App/\*** is listed as an array member of the **EwsAllowList** parameter. If not, run this Exchange PowerShell command to add it:
 
 ```powershell
-Set-CASMailbox <user's UserPrincipalName> -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
+Set-CASMailbox <user's UserPrincipalName> -EwsApplicationAccessPolicy EnforceAllowList -EwsAllowList @{Add="* Microsoft.Skype.Presence.App/*"}
 ```
 
 If the **EwsEnabled** parameter is set to **False**, you have to set it to **True**. Otherwise, the Teams service will be blocked from accessing the EWS.

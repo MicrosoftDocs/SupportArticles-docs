@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel 2013 does not recognize data as Date type data after you import the data from a SQL Server data source to an Excel workbook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

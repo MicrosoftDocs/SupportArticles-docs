@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to print a Gantt Chart view without table information
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 It is possible to print a Gantt Chart view without any table information. To do this, you must apply a table that has all the column widths set to zero. Note that a Gantt Chart view always requires some table to be applied.

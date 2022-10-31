@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Description of formulas to count the occurrences of text, characters, and words in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains and describes formulas that calculate the following:

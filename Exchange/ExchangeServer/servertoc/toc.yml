@@ -53,6 +53,8 @@
           href: ../administration/cannot-remove-accepted-domain.md
         - name: Can't remove distribution list members in outlook
           href: ../administration/error-delete-distribution-list-member-via-outlook.md
+        - name: Can't remove remote shared mailbox
+          href: ../administration/cannot-remove-remote-shared-mailbox.md
         - name: Can't reset the Local replica age limit (days) value
           href: ../administration/cannot-reset-local-replica-age-limit-days-value.md
         - name: Can't restore database from backup with MCDB enabled
@@ -395,6 +397,8 @@
           href: ../client-connectivity/exchange-security-update-issues.md
         - name: Repair update messages due to TimeZoneMatchCheck failures
           href: ../client-connectivity/repair-update-messages-triggered-by-timezonematchcheck.md
+        - name: RopFastTransferSourceCopyTo operation fails
+          href: ../client-connectivity/ropfasttransfersourcecopyto-operation-fails.md
         - name: Security warning when accessing OWA or ECP
           href: ../client-connectivity/owa-and-ecp-unavailable-users-get-security-warning.md
         - name: Set up OWA
@@ -421,12 +425,16 @@
           href: ../compliance/mailbox-database-content-index-shows-failed.md
         - name: Items are removed by MRM 2.0 unexpectedly
           href: ../compliance/items-are-removed-by-mrm-2-0-unexpectedly.md
+        - name: Missing items in eDiscovery search results
+          href: ../compliance/ediscovery-search-missing-items.md
         - name: MRM doesn't process items in the Sync Issues folder
           href: ../compliance/mrm-not-process-sync-issues-folder.md
         - name: Search doesn't work if NodeRunner.exe stops
           href: ../compliance/noderunnersexe-stops-search-not-work.md
         - name: Search-AdminAuditLog or Search-MailboxAuditLog returns empty result
           href: ../compliance/search-adminauditlog-mailboxauditlog-return-no-result.md
+        - name: Search-Mailbox cmdlet error
+          href: ../compliance/search-mailbox-cmdlet-fails.md
     - name: Development
       items:
         - name: Develop apps via Exchange Powershell and .NET Framework
@@ -451,11 +459,13 @@
           href: ../mailflow/attachments-dropped-during-imail-conversion.md
         - name: Blank emails after installing ESET NOD32 4.x
           href: /outlook/troubleshoot/user-interface/empty-email-body-esetnod32-4x-installed
+        - name: Can't attach large files in OWA
+          href: ../mailflow/owa-cannot-attach-large-files.md
         - name: Can't send an email with full access
           href: ../mailflow/cannot-send-email-with-full-access.md
         - name: Can't send or receive emails behind a Cisco PIX or ASA firewall
           href: ../mailflow/cannot-send-receive-email-behind-cisco-firewall.md
-        - name: Can't view Office 365 IRM-encrypted messages
+        - name: Can't view Microsoft 365 IRM-encrypted messages
           href: ../mailflow/cannot-open-irm-email-dynamic-distribution-group.md
         - name: Delayed mail delivery in Exchange
           href: ../mailflow/mail-delivery-delay-exchange.md
@@ -481,6 +491,8 @@
           href: ../mailflow/cannot-add-attachment-outlook-web.md
         - name: Error when sending S/MIME encrypted mails from OWA
           href: ../mailflow/cannot-send-smime-encrypted-mail-owa.md
+        - name: Event ID 17018 when Microsoft Exchange Transport service stops
+          href: ../mailflow/event-17018-MSExchangeTransport-service-stop.md
         - name: Event ID 7009 when users send or receive emails
           href: ../mailflow/event-7009-send-receive-emails.md
         - name: External or app created emails not delivered
@@ -531,6 +543,8 @@
           href: ../migration/public-folders-not-replicate.md
         - name: Error when migrating public folder batch
           href: ../migration/subscription-wasnt-found-for-user-error.md
+        - name: Remote move migration doesn't finalize
+          href: ../migration/remote-move-migration-not-finalize.md
     - name: Public Folders
       items:
         - name: Can't create modern public folders
@@ -569,6 +583,8 @@
           href: ../setup/cumulative-update-20-is-shown-not-22.md
         - name: Event ID 106 Performance counter updating error
           href: ../setup/event-106-msexchange-common.md
+        - name: Event ID 6010 logged after installing CU23
+          href: ../setup/event-id-6010-after-cumulative-update-23.md
         - name: Exchange Server 2019 setup does not run correctly using PowerShell
           href: ../setup/ex2019-setup-does-not-run-correctly-started-powershell.md
         - name: Instal PST Capture tool fails

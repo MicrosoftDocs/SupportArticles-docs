@@ -1,5 +1,5 @@
 - name: Skype for Business Online Troubleshooting
-  href: ../skype-online-welcome.md
+  href: ../skype-online-welcome.yml
   items:
   - name: Attachments
     items:
@@ -11,7 +11,7 @@
       href: ../online-conferencing/sharing-display-black-screen.md
     - name: Audio/video connections fail in Lync Mobile 2013
       href: ../online-conferencing/audio-or-video-connections-fail.md
-    - name: Audio/video not start in a conference 
+    - name: Audio/video not started in a conference 
       href: ../online-conferencing/audio-or-video-not-start.md
     - name: Can't share presentations from Lync
       href: ../online-conferencing/cant-share-presentations.md
@@ -39,13 +39,13 @@
       href: ../online-configuration/call-queues-not-redirect-to-agents.md
     - name: DNS configuration issues
       href: ../online-configuration/dns-configuration-issue.md
-    - name: Issue when Office 365 administrator disables a user
+    - name: Issue when Microsoft 365 administrator disables a user
       href: ../online-configuration/license-validation-error.md
     - name: How to set up external communication
       href: ../online-configuration/set-up-external-communication.md
     - name: msRTCSIP-PrimaryUserAddress or SIP address not unique
       href: ../online-configuration/msrtcsip-primaryuseraddress-proxyaddaddress.md
-    - name: Outlook email address not match sign-in address
+    - name: Outlook email address doesn't match sign-in address
       href: ../online-configuration/problem-connecting-to-outlook.md
     - name: SharePoint Skill search isn't supported
       href: ../online-configuration/sharepoint-skill-search-not-supported.md
@@ -63,7 +63,7 @@
       href: ../online-contacts/lync-contact-list-is-empty-or-read-only.md
     - name: Maximum Followers Reached
       href: ../online-contacts/maximum-followers-reached.md
-    - name: Outlook Skype for Business Contacts folder not sync
+    - name: Outlook Skype for Business Contacts folder not synced
       href: ../online-contacts/outlook-contacts-folder-not-sync.md
     - name: Telephone number not visible in contact card
       href: ../online-contacts/telephone-number-not-visible.md
@@ -91,7 +91,7 @@
       href: ../online-im-presence/lync-presence-unavailable-in-sharepoint.md
     - name: Only the first IM received in Skype for Business 2015 when Mac hibernating 
       href: ../online-im-presence/only-first-im-received-when-locked.md
-    - name: Presence is unavailable in Office 365
+    - name: Presence is unavailable in Microsoft 365
       href: ../online-im-presence/sfb-presence-unavailable.md
   - name: Install/Uninstall
     items:
@@ -109,13 +109,13 @@
       href: ../online-meetings/special-characters-not-display-correctly.md
     - name: Invitations not sent from Outlook
       href: ../online-meetings/invitations-are-not-sent.md
-    - name: Issues when use Outlook Web App in Office 365
+    - name: Issues when use Outlook Web App in Microsoft 365
       href: ../online-meetings/schedule-online-meetings-from-owa.md
     - name: Issues when you schedule a meeting
       href: ../online-meetings/error-when-you-schedule-meeting.md
     - name: Troubleshoot recording online meetings
       href: ../online-meetings/troubleshoot-recording-online-meetings.md
-    - name: URL for online meetings not use custom domain
+    - name: URL for online meetings not uses custom domain
       href: ../online-meetings/url-for-meetings-not-use-custom-domain.md
     - name: Users removed from a meeting
       href: ../online-meetings/user-removed-meeting-sfb-ucwa-application.md
@@ -141,7 +141,7 @@
       href: ../online-meeting-broadcast/event-team-members-repeatedly-prompted.md
     - name: Issue after click Skype Meeting Broadcast portal
       href: ../online-meeting-broadcast/click-hyperlink-skype-meeting-broadcast.md
-    - name: Issue when join a meeting broadcast
+    - name: Issue when joining a meeting broadcast
       href: ../online-meeting-broadcast/issue-join-meeting-broadcast.md
     - name: No permission to create Meeting Broadcast
       href: ../online-meeting-broadcast/no-permission-create-meeting-broadcast.md
@@ -161,7 +161,7 @@
       href: ../online-phone-system/cant-locate-city-name.md
     - name: Can't manage voice mail or customize a greeting
       href: ../online-phone-system/cannot-manage-voice-mail-or-greeting.md
-    - name: Can't transfer numbers from one Office 365 tenant
+    - name: Can't transfer numbers from one Microsoft 365 tenant
       href: ../online-phone-system/cannot-transfer-numbers-from-office-365-tenant.md
     - name: Can't use all Skype Voice features
       href: ../online-phone-system/cant-use-all-skype-voice-features.md
@@ -175,7 +175,7 @@
       href: ../online-phone-system/incoming-lync-to-phone-calls-not-transferred.md
     - name: Mailbox rules not applied to Cloud PBX voice mails
       href: ../online-phone-system/rule-not-applied-to-cloud-pbx-voice-mail.md
-    - name: Phone numbers exceeds the number of PSTN Calling licenses
+    - name: Phone numbers exceed the number of PSTN Calling licenses
       href: ../online-phone-system/phone-number-exceed-PSTN-calling-license.md
     - name: PSTN call shows wrong caller number
       href: ../online-phone-system/pstn-call-shows-wrong-caller-number.md
@@ -193,11 +193,11 @@
       href: ../online-sign-in/cannot-sign-in-using-full-redelegation-domain.md
     - name: Can't sign in by using Lync Mobile 2013
       href: ../online-sign-in/cant-sign-in-to-sfb-online.md
-    - name: Can't sign in on devices that doesn't support SNI
+    - name: Can't sign in on devices that don't support SNI
       href: ../online-sign-in/cant-sign-in-to-lync-not-support-sni.md
     - name: Can't sign-in with this version of Lync in Lync Mobile 2013
       href: ../online-sign-in/cannot-sign-in-lync-mobile-2013.md
-    - name: Considerations when change sign-in address
+    - name: Considerations when changing sign-in address
       href: ../online-sign-in/change-office-365-sign-in-address.md
     - name: 'Issue when click "Skype" in Office Online'
       href: ../online-sign-in/couldnt-sign-you-in-when-click-skype.md
@@ -205,11 +205,11 @@
       href: ../online-sign-in/conversation-history-user-presence-unavailable.md
     - name: Issue when run New-CsOnlineSession cmdlet
       href: ../online-sign-in/error-in-xml-document-new-csonlinesession.md
-    - name: Issue when sign in Skype for Business Online
+    - name: Issue when signing in Skype for Business Online
       href: ../online-sign-in/cant-sign-into-sfb-online.md
-    - name: Issue when sign in to a German Office 365 environment
+    - name: Issue when signing in to a German Microsoft 365 environment
       href: ../online-sign-in/issue-sign-in-german-environment.md
-    - name: Issue when sign in to Lync 2010 mobile client
+    - name: Issue when signing in to Lync 2010 mobile client
       href: ../online-sign-in/sign-in-lync-2010-mobile.md
     - name: Lync can't connect to Skype for Business Online
       href: ../online-sign-in/lync-cant-connect-to-sfb-online.md

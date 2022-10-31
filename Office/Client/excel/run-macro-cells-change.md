@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to run a macro when certain cells change in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, you can create a macro that is called only when a value is entered into a cell in a particular sheet or in any sheet that is currently open.

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Create application-level event handlers in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 If you want a particular event handler to run whenever a certain event is triggered, you can write an event handler for the Application object. Event handlers for the Application object are global, which means that as long as Microsoft Excel is open, the event handler will run when the appropriate event occurs, regardless of which workbook is active when the event occurs.

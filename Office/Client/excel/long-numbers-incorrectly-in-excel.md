@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Long numbers are displayed incorrectly in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you enter a long number (such as a credit card number) in an Excel cell, the number is not displayed correctly in Excel. For example,

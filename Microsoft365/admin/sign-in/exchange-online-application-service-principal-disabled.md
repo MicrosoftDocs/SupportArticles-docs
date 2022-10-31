@@ -1,6 +1,6 @@
 ---
-title: Unable to sign in to Office 365 portal
-description: You can't sign in to Office 365 portal when Exchange Online application service principal is disabled.
+title: Unable to sign in to Microsoft 365 portal
+description: You can't sign in to Microsoft 365 portal when Exchange Online application service principal is disabled.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -11,17 +11,15 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# "Sorry, but we're having trouble signing you in" error when signing in to Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# "Sorry, but we're having trouble signing you in" error when signing in to Microsoft 365
 
 ## Symptoms
 
-When you try to sign in to the Office 365 portal, you receive the following error message:
+When you try to sign in to the Microsoft 365 portal, you receive the following error message:
 
 **Sorry, but we're having trouble signing you in.**
 
@@ -37,9 +35,9 @@ This issue occurs if the Service Principal for the Exchange Online application i
 
 Before you follow these steps, make sure that the following prerequisites are met:
 
-- Install the Azure Active Directory Module for Windows PowerShell. For more information, go to [Connect to Office 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell
+- Install the Azure Active Directory Module for Windows PowerShell. For more information, go to [Connect to Microsoft 365 PowerShell](/office365/enterprise/powershell/connect-to-office-365-powershell
 ).
-- The steps are performed by an Office 365 global administrator.
+- The steps are performed by a Microsoft 365 global administrator.
 
 To resolve this issue, follow these steps:
 

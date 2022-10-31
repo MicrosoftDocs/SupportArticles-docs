@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Columns and rows are labeled numerically in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Your column labels are numeric rather than alphabetic. For example, instead of seeing A, B, and C at the top of your worksheet columns, you see 1, 2, 3, and so on.

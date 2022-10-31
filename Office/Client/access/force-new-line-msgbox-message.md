@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to force a new line in a MsgBox message in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills. 
 
 This article applies to either a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file, and to a Microsoft Access project (.adp) file.

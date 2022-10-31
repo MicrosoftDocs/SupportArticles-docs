@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Can't Verify Subscription" or "No Subscription Found" error messages in Office Mobile
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you use Office Mobile for iPhone, you receive one of the following error messages:  
@@ -39,15 +37,15 @@ This issue occurs because a previously activated version of Office Mobile exists
 
 To resolve this issue, follow these steps:
 
-1. Verify that you have a license assigned to youin the Office 365 portal. To do this, follow these steps:
+1. Verify that you have a license assigned to youin the Microsoft 365 portal. To do this, follow these steps:
 
     > [!NOTE]
     > If you cannot sign in or do not see the **Settings** button, then you may not have administrative permissions or may not have a license assigned to you.
-   1. Sign in to the [Office 365 portal](https://portal.office.com/account/#subscriptions).
+   1. Sign in to the [Microsoft 365 portal](https://portal.office.com/account/#subscriptions).
    2. In the left pane, select **Subscriptions**.
 
-         :::image type="content" source="./media/subscription-issue-in-office-mobile/office-365-portal-subscriptions.png" alt-text="Screenshot shows after you sign in Office 365 portal, select subscriptions in the left pane.":::
-   3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
+         :::image type="content" source="./media/subscription-issue-in-office-mobile/office-365-portal-subscriptions.png" alt-text="Screenshot shows after you sign in Microsoft 365 portal, select subscriptions in the left pane.":::
+   3. In the list of subscriptions and licenses, scroll down to the **Office 365 \<edition\>** section, and then look for **The latest desktop version of Office**. If you see this entry in the list, you have an Office subscription that's assigned correctly.
 
         > [!NOTE]
         > If you don't see a vertical scroll bar, hover the pointer over the list, press and hold the left mouse button, and then scroll.

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to enforce or disable the startup options in an Access database
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 This article applies only to a Microsoft Access project (.adp). 
 
 Moderate: Requires basic macro, coding, and interoperability skills. 

@@ -1,6 +1,6 @@
 ---
-title: Cannot continue error when you start the Office 365 Desktop Setup Tool
-description: Describes a scenario in which you receive an error message when you try to start the Office 365 Desktop Setup Tool. Provides a resolution.
+title: Cannot continue error when you start the Microsoft 365 Desktop Setup Tool
+description: Describes a scenario in which you receive an error message when you try to start the Microsoft 365 Desktop Setup Tool. Provides a resolution.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -12,21 +12,19 @@ ms.custom: CSSTroubleshoot
 search.appverid: 
   - MET150
 appliesto: 
-  - Office 365 User and Domain Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Cannot continue error when you start the Office 365 Desktop Setup Tool
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Cannot continue error when you start the Microsoft 365 Desktop Setup Tool
 
 ## Problem
 
-When you try to start the Office 365 Desktop Setup Tool, you receive the following error message:
+When you try to start the Microsoft 365 Desktop Setup Tool, you receive the following error message:
 
 > Cannot continue. The application is improperly formatted. Contact the application vendor for assistance.
 
-:::image type="content" source="media/error-when-start-desktop-setup-tool/start-app-error.png" alt-text="Screenshot of the error message when attempting to start the Office 365 Desktop Setup Tool.":::
+:::image type="content" source="media/error-when-start-desktop-setup-tool/start-app-error.png" alt-text="Screenshot of the error message when attempting to start the Microsoft 365 Desktop Setup Tool.":::
 
 If you click **Details** in the dialog box, you receive a detailed error message that's like the following:
 
@@ -97,9 +95,9 @@ To do this, follow these steps:
 
     :::image type="content" source="media/error-when-start-desktop-setup-tool/security-level.png" alt-text="Screenshot shows steps to set the security level to Medium-high." border="false":::
 
-### Method 2: Enable Internet Explorer to run signed programs, and then add the Office 365 application server to the Trusted sites list 
+### Method 2: Enable Internet Explorer to run signed programs, and then add the Microsoft 365 application server to the Trusted sites list 
 
-If the security level of the Internet zone in Internet Explorer is set higher than the Medium-high level and you don't want to change it, add the Office 365 application server to the **Trusted sites** list, and then enable Internet Explorer to run signed applications. To do this, follow these steps: 
+If the security level of the Internet zone in Internet Explorer is set higher than the Medium-high level and you don't want to change it, add the Microsoft 365 application server to the **Trusted sites** list, and then enable Internet Explorer to run signed applications. To do this, follow these steps: 
 
 1. Start Internet Explorer, and then click **Internet options** on the **Tools** menu.    
 2. Click the **Security** tab, and then select the **Trusted sites** zone.   

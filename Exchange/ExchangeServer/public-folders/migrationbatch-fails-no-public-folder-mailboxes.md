@@ -9,7 +9,7 @@ ms.custom:
   - Exchange Server
   - CSSTroubleshoot
 ms.topic: troubleshooting
-ms.author: batre
+ms.author: v-six
 search.appverid: 
   - MET150
 appliesto: 

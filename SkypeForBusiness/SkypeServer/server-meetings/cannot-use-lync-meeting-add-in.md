@@ -30,33 +30,31 @@ Assume that a Microsoft Lync-enabled user account is configured by using one of 
 - Remote call control only   
 
 > [!NOTE]
-> This article does not address similar issues that occur when Lync user accounts are configured by using a telephony setting of Enterprise Voice.
+> This article doesn't address similar issues that occur when Lync user accounts are configured by using a telephony setting of Enterprise Voice.
 
 In this situation, the following two symptoms occur. These symptoms are caused by the following two separate configuration issues.
 
 ### Issue 1
 
-- The Lync meeting administrative delegate receives the following error message when he or she tries to use the Lync Meeting add-in in Microsoft Outlook to create a meeting for his or her Lync meeting manager: 
+- The Lync meeting administrative delegate receives the following error message when trying to use the Lync Meeting add-in in Microsoft Outlook to create a meeting for the Lync meeting manager: 
 
-    ```adoc
-    You do not have permissions to schedule Lync Meetings on behalf of the owner of this account. Please contact the owner of the account to get delegate permissions in Microsoft Lync.
-    ```
-- The Lync meeting administrative delegate does not list her or his Lync meeting manager as a contact in the **People I Manage Calls For** contact group of her or his Lync client.   
-- The Lync meeting manager lists his or her Lync meeting administrative delegate as a contact in the **Delegates** contact group of his or her Lync client.
+   > You do not have permissions to schedule Lync Meetings on behalf of the owner of this account. Please contact the owner of the account to get delegate permissions in Microsoft Lync.
+- The Lync meeting administrative delegate doesn't list the Lync meeting manager as a contact in the **People I Manage Calls For** contact group of the Lync client.
+- The Lync meeting manager lists the Lync meeting administrative delegate as a contact in the **Delegates** contact group of the Lync client.
 
 ### Issue 2
 
-The Lync meeting administrative delegate does not receive a response from the Lync Meeting add-in in Outlook when the delegate tries to create a meeting for his or her Lync meeting manager.   
+The Lync meeting administrative delegate does not receive a response from the Lync Meeting add-in in Outlook when the delegate tries to create a meeting for the Lync meeting manager.
 
 ## Cause
 
 **Issue 1**
 
-The Lync meeting manager cannot complete the configuration process that is required to enable his or her selected Lync meeting delegate. This can be caused by timing issues that exist between the two Lync clients that will be participating in the Lync meeting delegation relationship.
+The Lync meeting manager can't complete the configuration process that's required to enable the selected Lync meeting delegate. This problem can be caused by timing issues that exist between the two Lync clients that will be participating in the Lync meeting delegation relationship.
 
 **Issue 2**
 
-The Lync meeting manager removed his or her Lync meeting delegate from the Calendar Access configuration on the **File** tab's **Account Settings** section of his or her Outlook client.
+The Lync meeting manager removed the Lync meeting delegate from the Calendar Access configuration on the **File** tab's **Account Settings** section of the Outlook client.
 
 ## Resolution
 

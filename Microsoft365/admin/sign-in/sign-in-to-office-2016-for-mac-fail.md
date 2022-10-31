@@ -1,6 +1,6 @@
 ---
 title: Another account from your organization is already signed in on this computer
-description: Fixes an error that occurs when you try to sign in to an Office 2016 for Mac app by using Office 365 credentials.
+description: Fixes an error that occurs when you try to sign in to an Office 2016 for Mac app by using Microsoft 365 credentials.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -17,11 +17,9 @@ ms.date: 3/31/2022
 
 # Can't sign in to an Office 2016 for Mac app
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Problem
 
-When you try to sign in to an Office 2016 for Mac app by using your Office 365 user ID and password, you receive the following error message:
+When you try to sign in to an Office 2016 for Mac app by using your Microsoft 365 user ID and password, you receive the following error message:
 
 > Sorry, another account from your organization is already signed in on this computer.
 
@@ -38,7 +36,7 @@ To resolve this issue, use the Keychain Access app to delete any password entrie
 
 ## More information
 
-This behavior is expected. It occurs if you're already signed in to Office 2016 for Mac through a different Office 365 user account in the same organization.
+This behavior is expected. It occurs if you're already signed in to Office 2016 for Mac through a different Microsoft 365 user account in the same organization.
 
 [!INCLUDE [Third-party information disclaimer](../../../includes/third-party-information-disclaimer.md)]
 

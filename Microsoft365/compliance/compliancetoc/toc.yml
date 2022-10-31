@@ -1,5 +1,5 @@
-- name: Microsoft 365 Compliance Troubleshooting
-  href: ../microsoft-365-compliance-welcome.md
+- name: Microsoft Purview Troubleshooting
+  href: ../microsoft-365-compliance-welcome.yml
   items:
   - name: Archive Mailboxes
     items:
@@ -75,14 +75,14 @@
       href: ../ediscovery/resolve-ediscovery-issues.md
   - name: Holds
     items:
-    - name: Can't delete messages
-      href: ../holds/cannot-delete-messages.md
     - name: Can't update calendar items from OWA or Outlook on Mac
       href: ../holds/cannot-update-calendar-items-from-owa-or-outlook-on-mac.md
     - name: Changes to IgnoreLegalHold
       href: ../holds/ignorelegalhold-not-available.md
     - name: Litigation Hold mailbox doesn't turn into inactive mailbox
       href: ../holds/litigation-hold-mailbox-not-turn-into-inactive.md
+    - name: eDiscovery hold errors
+      href: ../holds/resolve-ediscovery-hold-issues.md
     - name: Restore In-Place and Litigation Hold
       href: ../holds/restore-in-place-litigation-hold.md
     - name: Retention policy no longer works after a mailbox is moved
@@ -103,7 +103,7 @@
       href: ../retention/managed-folders-disappear.md
     - name: MRM and retention policies
       href: ../retention/mrm-and-retention-policy.md
-  - name: Office Message Encryption (OME)
+  - name: Microsoft Purview Message Encryption
     items:
     - name: Can't display message
       href: ../office-message-encryption/cannot-display-message.md
@@ -117,5 +117,9 @@
       href: ../pst-import-service/issues-with-pst-import-job.md
   - name: Sensitivity Labels
     items:
+    - name: Can't send encrypted email to many recipients
+      href: ../sensitivity-labels/encrypted-email-cannot-send-many-recipients.md
     - name: Mail contacts lose access to encrypted content
       href: ../sensitivity-labels/mail-contacts-lose-access-encrypted-content.md
+    - name: Sensitivity labels are missing
+      href: ../sensitivity-labels/sensitivity-labels-missing.md

@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
   - Access 2016
   - Access 2013
@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 
 # Access linked table to a SharePoint list returns #Deleted
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptom
 

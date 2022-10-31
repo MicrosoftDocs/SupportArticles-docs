@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Mobile viewing PDF files with Office Web Apps
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you open a PDF file on a mobile device by using Microsoft SharePoint and Office Web Apps or Office Online Server, the mobile browser displays the following error message:

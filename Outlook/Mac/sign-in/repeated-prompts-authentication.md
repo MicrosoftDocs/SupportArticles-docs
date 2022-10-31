@@ -22,7 +22,7 @@ ms.date: 3/31/2022
 
 ## Symptoms
 
-In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Office 365 account.
+In Microsoft Outlook 2016 for Mac, you are repeatedly prompted for authentication while you're connected to your Microsoft 365 account.
 
 ## Cause
 

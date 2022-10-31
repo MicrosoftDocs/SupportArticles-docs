@@ -23,9 +23,7 @@ ms.date: 3/31/2022
 
 # Definition of Microsoft Project constraints
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Summary
+## Summary
 
 Each constraint type in Microsoft Project can be defined as a formula using the following conventions:
 
@@ -43,7 +41,7 @@ SF = Scheduled Finish of the activity
 
 CD = Constraint Date
 
-##  More Information
+## More Information
 
 The following are definitions of Microsoft Project constraints.
 

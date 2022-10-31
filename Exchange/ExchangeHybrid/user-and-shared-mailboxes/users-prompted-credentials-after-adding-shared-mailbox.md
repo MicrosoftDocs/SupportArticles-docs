@@ -30,7 +30,7 @@ _Original KB number:_ &nbsp; 3184064
 
 Consider the following scenario:
 
-- You have a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Office 365.
+- You have a hybrid deployment of on-premises Microsoft Exchange Server and Microsoft Exchange Online in Microsoft 365.
 - You configured legacy on-premises public folders for a hybrid deployment.
 - You create a shared mailbox that's located in Exchange Online.
 - You assign Full Access permissions to one or more users.

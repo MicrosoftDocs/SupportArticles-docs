@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 # "Error in loading DLL" error when you run a Microsoft Access wizard
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 833220
 
 > [!NOTE]

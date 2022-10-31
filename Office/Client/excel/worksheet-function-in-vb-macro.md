@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Using a worksheet function in a Visual Basic macro in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 You can call most built-in Microsoft Excel worksheet functions directly from a Microsoft Visual Basic for Applications macro. This article describes how to use a built-in worksheet function in a macro.

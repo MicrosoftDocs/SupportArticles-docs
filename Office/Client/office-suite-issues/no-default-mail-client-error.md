@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "No default mail client" error when sending files from Office programs
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you attempt to send a file from Microsoft Excel, Microsoft  Word, or Microsoft PowerPoint using email, you receive the following error:

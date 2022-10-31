@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Microsoft 365 reports show anonymous user names instead of actual user names
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Microsoft 365 reports show anonymous user names instead of the actual user names in the following reports:

@@ -12,7 +12,7 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: hirsin, tspring
 appliesto: 
-  - Office 365
+  - Microsoft 365
   - Azure Active Directory
   - Azure
 search.appverid: MET150
@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 
 # Effect on customer websites and Microsoft services and products in Chrome version 80 or later
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 > [!NOTE]
 > Previously, this article referenced Google Chrome Beta version 79. Google is scheduled to release a cookie behavior in Chrome Stable version 80.

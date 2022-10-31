@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -54,7 +54,7 @@ This issue occurs if the delivery report has a corrupted or incorrect URL, or if
    `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\x.0\Common\Internet\`
 
     > [!NOTE]
-    > The *x.0* placeholder represents the version number (Outlook 2010 is 14.0, Outlook 2013 is 15.0, Outlook 2016, Outlook for Office 365 and Outlook 2019 is 16.0).
+    > The *x.0* placeholder represents the version number (Outlook 2010 is 14.0, Outlook 2013 is 15.0, Outlook 2016, Outlook for Microsoft 365 and Outlook 2019 is 16.0).
 
 4. In the **Details** pane, select and hold (or right-click) **UseRWHlinkNavigation**, and then select **Modify**.
 5. In the **Value data** box, clear the value, and then select **OK**.

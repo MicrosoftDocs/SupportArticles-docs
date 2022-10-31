@@ -1,5 +1,5 @@
 ---
-title: Removing sensitivity label does not remove headers and footers in Word for Office 365
+title: Removing sensitivity label does not remove headers and footers in Word for Microsoft 365
 ms.author: luche
 author: helenclu
 manager: dcscontentpm
@@ -11,19 +11,19 @@ search.appverid:
   - SPO160
   - MET150
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
 ms.custom: 
   - CI 122599
   - CSSTroubleshoot
 ms.reviewer: amdey
-description: Describes a resolution an issue where header and footer artifacts remain after changing the sensitivity label in a Word for Office 365 document.
+description: Describes a resolution an issue where header and footer artifacts remain after changing the sensitivity label in a Word for Microsoft 365 document.
 ---
 
-# Headers and footers remain after removing sensitivity label in Word for Office 365
+# Headers and footers remain after removing sensitivity label in Word for Microsoft 365
 
 ## Symptoms
 
-After removing a sensitivity label from a Word for Office 365 document,  the **Sensitivity** dropdown displays the correct sensitivity level, but the headers, footers, and other artifacts of the previous level remain. 
+After removing a sensitivity label from a Word for Microsoft 365 document,  the **Sensitivity** dropdown displays the correct sensitivity level, but the headers, footers, and other artifacts of the previous level remain. 
 
 ## Resolution
 

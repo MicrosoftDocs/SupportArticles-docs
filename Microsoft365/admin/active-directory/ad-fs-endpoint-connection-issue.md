@@ -1,6 +1,6 @@
 ---
 title: AD FS endpoint connection issues during sign-in.
-description: Describes how to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure.
+description: Describes how to troubleshoot AD FS endpoint connection issues when users sign in to Microsoft 365, Intune, or Azure.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,25 +15,24 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# How to troubleshoot AD FS endpoint connection issues when users sign in to Office 365, Intune, or Azure
+# How to troubleshoot AD FS endpoint connection issues when users sign in to Microsoft 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+## Problem
 
-## Problem 
+When users sign in to a Microsoft cloud service such as Microsoft 365, Microsoft Intune, or Microsoft Azure by using a federated user account, the connection to the Active Directory Federation Services (AD FS) service fails only when users try to do the following:
 
-When users sign in to a Microsoft cloud service such as Office 365, Microsoft Intune, or Microsoft Azure by using a federated user account, the connection to the Active Directory Federation Services (AD FS) service fails only when users try to do the following:
 - Connect from a remote Internet location
 - Use email connections to sign in
 
 This situation also causes SSO testing that the Remote Connectivity Analyzer conducts to fail. 
 
-For more information about how to run the Remote Connectivity Analyzer to test SSO authentication in Office 365, see the following articles in the Microsoft Knowledge Base:
+For more information about how to run the Remote Connectivity Analyzer to test SSO authentication in Microsoft 365, see the following articles in the Microsoft Knowledge Base:
 
-- [2650717](https://support.microsoft.com/help/2650717) How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Office 365, Azure, or Intune
+- [2650717](https://support.microsoft.com/help/2650717) How to use Remote Connectivity Analyzer to troubleshoot single sign-on issues for Microsoft 365, Azure, or Intune
 - [2466333](https://support.microsoft.com/help/2466333) Federated users can't connect to an Exchange Online mailbox
 
 ## Cause
@@ -60,7 +59,7 @@ To do this, follow these steps:
 
 1. Troubleshoot SSL certificate problems on the AD FS Federation Service (not the Proxy Service) by using the following Microsoft Knowledge Base article:
 
-    [2523494](https://support.microsoft.com/help/2523494) You receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Intune 
+    [2523494](https://support.microsoft.com/help/2523494) You receive a certificate warning from AD FS when you try to sign in to Microsoft 365, Azure, or Intune 
 1. If the AD FS Federation Service SSL certificate is functioning correctly, update the SSL certificate on the AD FS proxy server by using the certificate export and import functions. For more info, see the following Microsoft Knowledge Base article:  
     [179380](https://support.microsoft.com/help/2523494) How to remove, import, and export digital certificates
 
@@ -68,7 +67,7 @@ To do this, follow these steps:
 
 To do this, follow the steps that are described in Resolution 1 of the following Microsoft Knowledge Base article for the AD FS proxy server:
 
-[2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Office 365, Azure, or Intune
+[2461628](https://support.microsoft.com/help/2461628) A federated user is repeatedly prompted for credentials during sign-in to Microsoft 365, Azure, or Intune
 
 ### Method 3: Rerun the AD FS Proxy Configuration wizard
 

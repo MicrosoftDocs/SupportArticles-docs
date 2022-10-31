@@ -28,8 +28,6 @@ ms.date: 3/31/2022
 
 # Automatic updating for Microsoft Office is not enabled
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 By default, installations of Microsoft Office are configured to automatically update your Office installation when new updates are made publicly available. However, if you examine the Account section of the backstage, you may see that updates are disabled or that the command to manage updates is disabled or hidden. For example, the following figure indicates that updates are disabled in the backstage.

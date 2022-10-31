@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Use the left, right, mid, and len functions in Visual Basic for Applications in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains examples of how to manipulate text strings using the Left, Right, Mid, and Len functions in Microsoft Visual Basic for Applications in Microsoft Excel.

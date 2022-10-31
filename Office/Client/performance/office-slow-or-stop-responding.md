@@ -38,8 +38,6 @@ ms.date: 3/31/2022
 
 # An Office program is slow or may stop responding (hang) when you open a file from a network location
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a file from a network location in one of the Microsoft Office programs such as PowerPoint 2003 , Excel 2003, Publisher 2003 or a later version of them, the Office program may run very slowly or may appear to stop responding (hang).

@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to use SetOption to disable warning messages in an Access Application
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies only to a Microsoft Access database (.mdb or .accdb).

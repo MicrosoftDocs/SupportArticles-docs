@@ -1,7 +1,8 @@
 ---
 title: Profile picture not showing in SharePoint Online
 description: Your profile picture is not shown in SharePoint Online.
-author: salarson
+author: helenclu
+ms.reviewer: salarson
 manager: dcscontentpm
 localization_priority: Normal
 search.appverid: 
@@ -93,8 +94,11 @@ If a user is encountering this problem, check that the Picture profile property 
 
 When you’ve confirmed the Picture property is user editable, have the user retry the steps in the above sections. If the picture still isn’t showing, contact Microsoft support.
 
-**Note** For Exchange Online users, it will still take 24 hours for the sync to occur and update the SharePoint picture.
-    
+> [!NOTE]
+>
+> - For Exchange Online users, it will still take 24 hours for the sync to occur and update the SharePoint picture.
+> - For Exchange Online users, changing **Picture Exchange Sync State** to **0** and uploading a user picture directly to SharePoint would be a temporary change **only**. The next time a picture sync occurs from Exchange Online, the user's previously uploaded SharePoint picture will be overwritten by the profile picture that exists in Exchange Online.
+
 </details>
 
 ## References

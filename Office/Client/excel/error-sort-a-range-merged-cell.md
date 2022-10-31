@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 ---
 
 # You may receive an error message when you sort a range that contains merged cells in Excel
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

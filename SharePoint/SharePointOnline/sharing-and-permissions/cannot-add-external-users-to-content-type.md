@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-Assume that you try to grant an external user permission to an External Content Type in the Office 365 SharePoint admin center. However, when you try to locate the user by using the Check Names feature or the **Select People and Groups** dialog box, the process doesn't work.
+Assume that you try to grant an external user permission to an External Content Type in the Microsoft 365 SharePoint admin center. However, when you try to locate the user by using the Check Names feature or the **Select People and Groups** dialog box, the process doesn't work.
 
 Specifically, when you try to add the external user, you may receive one of the following messages, depending on your specific scenario:
 

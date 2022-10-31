@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Excel/Outlook for Mac: Border missing when pasting table in email
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you create a table in Microsoft Excel for Mac and copy it into a new email message in Microsoft Outlook for Mac, the table is pasted into the email without any borders.

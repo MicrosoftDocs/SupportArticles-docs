@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Cannot pass the Welcome Screen in Office for Mac
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you start any Office for Mac application such as Microsoft Word for Mac, PowerPoint for Mac, Excel for Mac or Outlook for Mac, the Welcome screen does not have any buttons such as OK or Close to continue.

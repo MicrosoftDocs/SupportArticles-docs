@@ -1,6 +1,6 @@
 ---
-title: How to update contact information in Exchange Online in Office 365
-description: Describes the kind of contact information that administrators and users can change by using the Exchange admin center in Office 365. Also describes how administrators can limit the kind of contact information that users can change.
+title: How to update contact information in Exchange Online in Microsoft 365
+description: Describes the kind of contact information that administrators and users can change by using the Exchange admin center in Microsoft 365. Also describes how administrators can limit the kind of contact information that users can change.
 author: simonxjx
 audience: ITPro
 ms.topic: troubleshooting
@@ -16,11 +16,11 @@ appliesto:
   - Exchange Online
 ms.date: 3/31/2022
 ---
-# How to update contact information in Exchange Online in Office 365
+# How to update contact information in Exchange Online in Microsoft 365
 
 ## Introduction
 
-This article describes how administrators and users can update personal contact information by using the Exchange admin center in Microsoft Office 365. It also discusses how administrators can limit the kind of contact information that users can update.
+This article describes how administrators and users can update personal contact information by using the Exchange admin center in Microsoft 365. It also discusses how administrators can limit the kind of contact information that users can update.
 
 ## More information
 
@@ -63,7 +63,7 @@ To update contact information, see [View and update your profile in Delve](https
 
 ### How administrators can update users' contact information
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. Click **Admin**, and then click **Exchange**.
 3. In the left navigation pane, click **Recipients**, and then click **Mailboxes**.
 4. Double-click the user whose contact information you want to change.
@@ -74,7 +74,7 @@ To update contact information, see [View and update your profile in Delve](https
 
 This procedure must be applied to all user role policies in an organization.
 
-1. Sign in to the Office 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
+1. Sign in to the Microsoft 365 portal ([https://portal.office.com](https://portal.office.com)) as an administrator.
 2. Click **Admin**, and then click **Exchange**.
 3. In the left navigation pane, click **permissions**, and then click **user roles**.
 4. Select the role that's assigned to the user. By default, the Default Role Assignment Policy is assigned to all users.

@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 10054
 > [!NOTE]
 >
 > - To use this guide, you must have a Skype for Business sign-in name and password from an organization that uses [Microsoft 365 Apps for business](https://www.microsoft.com/microsoft-365/business/microsoft-365-apps-for-business?activetab=pivot%3aoverviewtab).
-> - If you're an Office 365 admin, see [Troubleshooting Skype for Business Online sign-in issues for admins](https://support.microsoft.com/help/10133).
+> - If you're a Microsoft 365 admin, see [Troubleshooting Skype for Business Online sign-in issues for admins](https://support.microsoft.com/help/10133).
 
 We'll begin by asking you questions about your installation and the symptoms you're experiencing. Then we'll take you through a series of troubleshooting steps and configuration checks that are specific to your situation.
 
@@ -256,7 +256,7 @@ Did this solve your problem?
 
 We're glad to hear you're back in service.
 
-To help your organization find out why Skype for Business can't automatically sign in, contact your workplace technical support-typically the person who sent you email about how to get set up with Office 365.
+To help your organization find out why Skype for Business can't automatically sign in, contact your workplace technical support-typically the person who sent you email about how to get set up with Microsoft 365.
 
 ### Configure Skype for Business Online connection settings manually (Skype for Business for mobile devices)
 
@@ -278,7 +278,7 @@ Did this solve your problem?
 
 ### Contact your workplace technical support
 
-We're sorry, but we couldn't resolve your sign-in issue. For more troubleshooting, contact your workplace technical support-typically the person who sent you email about how to get set up with Office 365.
+We're sorry, but we couldn't resolve your sign-in issue. For more troubleshooting, contact your workplace technical support-typically the person who sent you email about how to get set up with Microsoft 365.
 
 ### Enter your user ID
 

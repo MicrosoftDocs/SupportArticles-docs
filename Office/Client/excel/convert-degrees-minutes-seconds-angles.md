@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to convert degrees/minutes/seconds angles to or from decimal angles in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Angular measurements are commonly expressed in units of degrees, minutes, and seconds (DMS). 1 degree equals 60 minutes, and one minute equals 60 seconds. To simplify some mathematical calculations, you may want to express angular measurements in degrees and decimal fractions of degrees.

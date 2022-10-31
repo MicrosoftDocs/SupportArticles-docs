@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Project Server Sync Jobs take a long time to complete and users get Access Denied
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Part of the Project Security model includes checking user permissions to access the Project Web App (PWA) home page and the Project sites (workspaces) associated with project plans.  Whenever a category, group or individual user is modified, Project Server will validate a user's access.  Depending on the number of users and the number of project sites within your PWA instance, the jobs that check user permissions may take a very long time to complete or fail to complete.  Additionally users may see "Access Denied" errors when attempting to access PWA or Project site/workspace. 

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to use SQLConfigDataSource to create an Access system DSN
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies to a Microsoft Access database (.mdb or accdb) and to a Microsoft Access project (.adp).

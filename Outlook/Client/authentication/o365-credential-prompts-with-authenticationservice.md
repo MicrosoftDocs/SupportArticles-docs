@@ -1,6 +1,6 @@
 ---
 title: O365 credential prompts with AuthenticationService value
-description: Documents a connection issue for Office 365 when the AuthenticationService registry value is configured.
+description: Documents a connection issue for Microsoft 365 when the AuthenticationService registry value is configured.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -18,13 +18,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Office 365 credential prompts with AuthenticationService registry value
+# Microsoft 365 credential prompts with AuthenticationService registry value
 
 _Original KB number:_ &nbsp; 2975918
 
 ## Symptoms
 
-When attempting to create an Outlook profile or connect to an Office 365 mailbox, you are continually prompted for credentials while the client displays **trying to connect...** If you cancel the credentials prompt, you receive this error:
+When attempting to create an Outlook profile or connect to a Microsoft 365 mailbox, you are continually prompted for credentials while the client displays **trying to connect...** If you cancel the credentials prompt, you receive this error:
 
 > The connection to Microsoft Exchange is unavailable. Outlook must be online or connected to complete this action.
 

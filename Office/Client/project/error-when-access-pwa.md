@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Project Online, You receive an error when accessing Project Web App
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptom 
 
 After you successfully sign into your Online tenant and click the Projects link or navigate to a PWA site, you may receive one of the following error messages:

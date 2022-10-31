@@ -22,9 +22,9 @@ ms.date: 3/31/2022
 ---
 # How to restore In-Place Hold and Litigation Hold settings in an Exchange hybrid deployment
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2934398
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Introduction
 
@@ -39,7 +39,7 @@ This article describes how to restore In-Place Hold and Litigation Hold settings
 To restore In-Place Hold settings, follow these steps:
 
 1. On the Exchange server, open the Exchange Admin Center by using on-premises admin credentials.
-1. If your organization is enabled for a hybrid deployment with Microsoft Exchange Online in Office 365, click the **Enterprise**  tab in the navigation bar.
+1. If your organization is enabled for a hybrid deployment with Microsoft Exchange Online in Microsoft 365, click the **Enterprise**  tab in the navigation bar.
 
    :::image type="content" source="media/restore-in-place-litigation-hold/navigation-bar.png" alt-text="Screenshot of the navigation bar in the Exchange Admin Center.":::
 

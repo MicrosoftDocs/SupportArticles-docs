@@ -50,6 +50,6 @@ To resolve this issue, increase the size limit for rules in the mailbox. To do t
 
 ## More Information
 
-Tenant admins can also increase the size limit of the rules for their users in a Microsoft Office 365 environment. For more information, see [Ask the Microsoft Community](https://answers.microsoft.com/msoffice/forum).
+Tenant admins can also increase the size limit of the rules for their users in a Microsoft 365 environment. For more information, see [Ask the Microsoft Community](https://answers.microsoft.com/msoffice/forum).
 
-If you are in a dedicated or an ITAR Microsoft Office 365 environment and experiencing this issue, members of the Limited Recipient Management self-service group can increase rules quota by using the commands in the Resolution section (12.3 version of the service and later versions).  You may also escalate to Microsoft Online Services Support.
+If you are in a dedicated or an ITAR Microsoft 365 environment and experiencing this issue, members of the Limited Recipient Management self-service group can increase rules quota by using the commands in the Resolution section (12.3 version of the service and later versions).  You may also escalate to Microsoft Online Services Support.

@@ -20,12 +20,10 @@ ms.date: 3/31/2022
 
 # Download the latest online Excel Viewer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Notice
 
 **Excel Viewer is retired**
-   
+
 > [!IMPORTANT]
 > The Microsoft Excel Viewer was retired in April, 2018. It no longer is available for download or receives security updates. To continue viewing Excel files for free, we recommend that you install the Excel mobile app or store documents on OneDrive or Dropbox, from which Excel Online can open the files in your browser. For the Excel mobile app, go tothe appropriate store for your device: 
 > - [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.office.excel)    
@@ -45,7 +43,7 @@ The latest version of Microsoft Excel Viewer can read the file formats of all ve
 **Other options for free viewing of Excel workbooks**
 
 - **Excel Online:** Excel Online is available through OneDrive or deployed as part of Microsoft SharePoint. Excel Online can view, edit and print Excel workbooks. For more information about Excel Online, see the [Office Online overview](https://office.microsoft.com/fx100996074.aspx).    
-- **Office 365 Trial:** Downloading the trial version gives you access to the full capabilities of Microsoft Office 2013. For more information, see [Office 365 Home](https://office.microsoft.com/office365home).    
+- **Microsoft 365 Trial:** Downloading the trial version gives you access to the full capabilities of Microsoft Office 2013. For more information, see [https://www.microsoft.com/microsoft-365/try](https://www.microsoft.com/microsoft-365/try).    
 - **Office Mobile applications:** Download the trial for mobile applications that are available on iPhone, Android phone, or Windows Phone. For more information, see [Office on mobile devices](https://office.microsoft.com/mobile).    
  
 > [!NOTE]

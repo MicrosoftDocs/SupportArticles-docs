@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Security Update MS12-060 Impairs Functionality of Access Database
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After applying security update MS12-060 you may experience problems with your Access database if you are using any of the Windows Common Controls associated with the MSCOMCTL.OCX file updated in the patch. Problems may include hanging on opening an object that includes one of the controls, or error messages indicating that events have been cancelled. Example error messages may include (but aren't limited to) the following:

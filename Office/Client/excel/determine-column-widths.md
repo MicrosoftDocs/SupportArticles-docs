@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Description of how column widths are determined in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 The standard column width in Microsoft Excel 2000 is 8.43 characters; however, the actual width that you see on the screen varies, depending on the width of the font defined for the Normal style of your workbook. Changing the default font also changes the column width. This behavior occurs because of the way that Excel stores the column width information for individual fonts. This article discusses how column widths are determined. 

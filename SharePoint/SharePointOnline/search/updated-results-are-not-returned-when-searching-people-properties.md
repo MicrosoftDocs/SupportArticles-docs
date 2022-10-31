@@ -41,7 +41,7 @@ To resolve this issue, use one of the following methods, as appropriate for your
 
 The managed property that you mapped to People:LastName wasn't set to the people index. To change this setting, follow these steps:
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
 
 2. Click **Admin**, click **SharePoint**, and then click **search** in the SharePoint admin center.
 
@@ -53,13 +53,13 @@ The managed property that you mapped to People:LastName wasn't set to the people
 
 6. Click **OK**, and then click **OK** at the bottom of the page.
 
-When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Office 365 technical support.
+When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Microsoft 365 technical support.
 
 ### Scenario 2 solution: Change the search schema at the site collection level
 
 The search schema change was made for a specific site collection and not at the organization level. To resolve this issue, make the change at the organization level. To do this, follow these steps:
 
-1. Sign in to the Office 365 admin center.
+1. Sign in to the Microsoft 365 admin center.
 
 2. Click **Admin**, click **SharePoint**, and then click **search** in the SharePoint admin center,
 
@@ -67,13 +67,13 @@ The search schema change was made for a specific site collection and not at the 
 
 4. Configure the search schema change that was made at the site collection level.
 
-When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Office 365 technical support.
+When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Microsoft 365 technical support.
 
 ### Solution for scenario 3: Update the user profiles
 
 The changed property was not re-crawled after search schema changes were made.
 
-When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Office 365 technical support.
+When you change the search schema in the people categories, the change is applied only after you update a user profile. If you have to apply the change to all user profiles, you should contact Microsoft 365 technical support.
 
 ## More information
 

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to troubleshoot damaged drawings in Visio
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses how to troubleshoot damaged drawings in Microsoft Office Visio 2013, Visio 2010, Visio 2007, Microsoft Office Visio 2003, and Microsoft Visio 2002. This article describes some symptoms that may indicate that the drawing that you are working with in Visio is damaged. 

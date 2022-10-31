@@ -42,6 +42,6 @@ This problem occurs if the credentials that were entered to connect to the on-pr
 
 ## Resolution
 
-Rerun the Hybrid Configuration wizard, and make sure that you enter the correct credentials for the Microsoft Office 365 admin account and for the on-premises admin account. The wizard checks that the accounts have the appropriate credentials and can connect to the Microsoft Exchange Online and on-premises organizations.
+Rerun the Hybrid Configuration wizard, and make sure that you enter the correct credentials for the Microsoft 365 admin account and for the on-premises admin account. The wizard checks that the accounts have the appropriate credentials and can connect to the Microsoft Exchange Online and on-premises organizations.
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Microsoft Q&A](/answers/products/?WT.mc_id=msdnredirect-web-msdn).

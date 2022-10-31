@@ -13,15 +13,13 @@ ms.custom:
   - SaRA-Assisted
 ms.reviewer: akit
 appliesto: 
-  - Office 365
+  - Microsoft 365
 search.appverid: 
   - MET150
 ms.date: 3/31/2022
 ---
 
 # How to run (SaRA) Fiddler Trace
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Summary
 
@@ -50,7 +48,7 @@ To install and run the Fiddler Trace scenario in the Microsoft Support and Recov
 
 6. Enter the passcode provided by Microsoft Support in the box, and then select **Next**.
 
-   :::image type="content" source="media/run-fiddler-trace/input-passcode.png" alt-text="Enter the passcode in the Microsoft Support and Recovery Assistant for Office 365 page." border="false":::
+   :::image type="content" source="media/run-fiddler-trace/input-passcode.png" alt-text="Enter the passcode in the Microsoft Support and Recovery Assistant for Microsoft 365 page." border="false":::
 
 7. In the **Security Warning** window, select **Yes** and then select **Next**.
 

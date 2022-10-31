@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # Office applications open blank from SharePoint WebDAV or sites
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 When this problem occurs, you may also experience the following additional symptoms: 
  
 - You do not receive a Basic authentication password prompt when you try to open or download the file.

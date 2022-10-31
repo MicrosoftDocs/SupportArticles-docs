@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions: RSQ
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the RSQ function in Microsoft Office Excel 2003 and in later versions of Excel. This article discusses how the function is used and compares the results of RSQ in these later versions of Excel with the results of RSQ in earlier versions of Excel.

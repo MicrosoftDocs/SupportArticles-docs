@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Memory usage in the 32-bit edition of Excel 2013 and 2016
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After you upgrade to Microsoft Office 2013 or 2016, you experience one or more of the following symptoms:  

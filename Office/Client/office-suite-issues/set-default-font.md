@@ -12,25 +12,23 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: vikartha, bhamv, subhbasu
 appliesto: 
-  - Word for Office 365
+  - Word for Microsoft 365
   - Word 2016
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2016
-  - PowerPoint for Office 365
+  - PowerPoint for Microsoft 365
   - PowerPoint 2016
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
 # How to set the default font for Word, Excel, and PowerPoint
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 This article provides detailed steps for administrators to set the default font for Microsoft Office applications, such as Microsoft Word, Microsoft Excel, and Microsoft PowerPoint.
 
 ## Set the default font for Word
 
 > [!NOTE]
-> There are no direct Group Policy Objects (GPOs) to set the default font in Word (for both Office 365 and 2016).
+> There are no direct Group Policy Objects (GPOs) to set the default font in Word (for both Microsoft 365 and 2016).
 
 1. Create a blank file that is configured by using the font and styles that you want to set as the default.
 2. Select **File** > **Save As**.
@@ -43,7 +41,7 @@ For more information, see [Change the default settings for new documents](https:
 
 ## Set the default font for Excel
 
-- **Set a cloud policy (for Office 365):**
+- **Set a cloud policy (for Microsoft 365):**
 
   1. Create a font policy from [Policy Management](https://config.office.com/officeSettings/officepolicies).
   2. Apply the cloud policy to a security group that target users are members of.
@@ -58,7 +56,7 @@ For more information, see [Change the default settings for new documents](https:
 
   :::image type="content" source="media/set-default-font/gpo-font.svg" alt-text="Screenshot to set Font Group Policy Object in Excel 2016." border="false":::
 
-## Set the default font for PowerPoint (for both Office 365 and Office 2016)
+## Set the default font for PowerPoint (for both Microsoft 365 and Office 2016)
 
 To set default font for PowerPoint, set a default theme, and save it as a .potx file.
 

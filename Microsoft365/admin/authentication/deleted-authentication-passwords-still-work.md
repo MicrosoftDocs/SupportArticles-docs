@@ -15,13 +15,11 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# Deleted app passwords for Multi-Factor Authentication still work in Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Deleted app passwords for Multi-Factor Authentication still work in Microsoft 365, Azure, or Intune
 
 ## PROBLEM
 

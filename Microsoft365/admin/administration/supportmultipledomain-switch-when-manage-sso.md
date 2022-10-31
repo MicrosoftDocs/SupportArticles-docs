@@ -1,6 +1,6 @@
 ---
-title: SupportMultipleDomain switch when managing single sign-on (SSO) to Office 365
-description: SupportMultipleDomain switch when managing SSO to Office 365.
+title: SupportMultipleDomain switch when managing single sign-on (SSO) to Microsoft 365
+description: SupportMultipleDomain switch when managing SSO to Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -10,19 +10,17 @@ localization_priority: Normal
 ms.custom: CSSTroubleshoot
 ms.reviewer: 
 appliesto: 
-  - office 365
+  - Microsoft 365
 search.appverid: 
   - MET150
 ms.date: 3/31/2022
 ---
 
-# SupportMultipleDomain switch when managing SSO to Office 365
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# SupportMultipleDomain switch when managing SSO to Microsoft 365
 
 ## Summary
 
-### Use of SupportMultipleDomain switch, when managing SSO to Office 365 using ADFS
+### Use of SupportMultipleDomain switch, when managing SSO to Microsoft 365 using ADFS
 
 When an SSO is enabled for O365 via ADFS, you should see the Relying Party (RP) trust created for O365.
 
@@ -40,17 +38,17 @@ The RP trust created above came with two claims rules
 
 `Get-MsolFederationProperty -DomainName <domain>` on the federated domains shows that the "FederationServiceIdentifier" was the same for source ADFS and O365,  which is `http://stsname/adfs/Services/trust`.
 
-Earlier before the ADFS [Rollup 1](https://support.microsoft.com/kb/2607496) and [Rollup 2](https://support.microsoft.com/kb/2681584) updates, Microsoft Office 365 customers who utilize single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers.
+Earlier before the ADFS [Rollup 1](https://support.microsoft.com/kb/2607496) and [Rollup 2](https://support.microsoft.com/kb/2681584) updates, Microsoft 365 customers who utilize single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers.
 
 ### With the ADFS rollup 1 update, we added the following functionality
 
 #### Multiple Issuer Supports
 
-"Previously, Microsoft Office 365 customers who require single sign-on (SSO) by using AD FS 2.0 and use multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.us or @contoso.de) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix. After you install this Update Rollup on all the AD FS 2.0 federation servers in the farm and follow the instructions of using this feature with Office 365, new claim rules will be set to dynamically generate token issuer IDs based on the UPN suffixes of the Office 365 users. As a result, you don't have to set up multiple instances of AD FS 2.0 federation server to support SSO for multiple top-level domains in Office 365."
+"Previously, Microsoft 365 customers who require single sign-on (SSO) by using AD FS 2.0 and use multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.us or @contoso.de) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix. After you install this Update Rollup on all the AD FS 2.0 federation servers in the farm and follow the instructions of using this feature with Microsoft 365, new claim rules will be set to dynamically generate token issuer IDs based on the UPN suffixes of the Microsoft 365 users. As a result, you don't have to set up multiple instances of AD FS 2.0 federation server to support SSO for multiple top-level domains in Microsoft 365."
 
 #### Support for Multiple Top-Level Domains
 
-"Currently, Microsoft Office 365 customers who use single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers."
+"Currently, Microsoft 365 customers who use single sign-on (SSO) through AD FS 2.0 and have multiple top-level domains for users' user principal name (UPN) suffixes within their organization (for example, @contoso.com or @fabrikam.com) are required to deploy a separate instance of AD FS 2.0 Federation Service for each suffix.  There is now a rollup for AD FS 2.0 ([https://support.microsoft.com/kb/2607496](https://support.microsoft.com/kb/2607496)) that works in conjunction with the "SupportMultipleDomain" switch to enable the AD FS server to support this scenario without requiring additional AD FS 2.0 servers."
 
 ### Commands that would create the RP trust for O365 are below
 

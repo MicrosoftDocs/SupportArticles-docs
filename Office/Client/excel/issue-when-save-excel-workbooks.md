@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 ---
 
 # Troubleshoot why Excel doesn't save changes
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 As you work in a workbook, Microsoft Excel saves the file automatically. It gives the file a temporary file name, and puts the file into the same folder as the original version. When you manually save the workbook, the original file is deleted, and the temporary file is assigned the original file name.
 

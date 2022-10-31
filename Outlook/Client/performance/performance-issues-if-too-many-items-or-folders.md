@@ -1,6 +1,6 @@
 ---
 title: Performance issues for too many items or folders
-description: Describes a performance issue that occurs when there are too many items or too many folders in a cached mode .ost file or .pst file folders. Provides a resolution.
+description: Describes a performance issue that occurs if there are too many items or too many folders in a cached mode .ost file or .pst file folders. Provides a resolution.
 author: helenclu
 ms.author: luche
 manager: dcscontentpm
@@ -10,7 +10,8 @@ localization_priority: Normal
 ms.custom: 
   - Outlook for Windows
   - CSSTroubleshoot
-ms.reviewer: gregmans, gbratton
+  - CI 163089
+ms.reviewer: gregmans, gbratton, tasitae
 appliesto: 
   - Outlook for Microsoft 365
   - Outlook 2019
@@ -18,21 +19,21 @@ appliesto:
   - Outlook 2013
   - Outlook 2010
 search.appverid: MET150
-ms.date: 3/31/2022
+ms.date: 5/11/2022
 ---
-# Outlook performance issues when there are too many items or folders in a cached mode .ost or .pst file
+# Outlook performance issues if there are too many items or folders in a cached mode .ost or .pst file
 
 _Original KB number:_ &nbsp; 2768656
 
 ## Symptoms
 
-If you have lots of items in any single folder, you may experience symptoms such as the following in Microsoft Outlook:
+If you have lots of items in any single folder, you might experience symptoms such as the following in Microsoft Outlook:
 
-- When you use Cached Exchange Mode or an Outlook data (.pst) file, you notice performance issues when you perform certain actions.
-- You experience decreased performance in Outlook if the Inbox, Calendar, Tasks, Sent Items, and Deleted Items folders contain lots of items.
-- Calendar performance is inconsistent. For example, meeting updates may not be reflected in the primary, shared or delegated Calendar.
+- When you use Cached Exchange Mode or an Outlook data (.pst) file, you notice performance issues when you do certain actions.
+- You experience decreased performance in Outlook if the Inbox, Calendar, Tasks, Sent Items, or Deleted Items folders contain lots of items.
+- Calendar performance is inconsistent. For example, meeting updates might not be reflected in the primary, shared, or delegated calendar.
 
-If you have lots of mail folders, you may experience performance issues such as the following:
+If you have lots of mail folders, you might experience performance issues such as the following:
 
 - Folders are not displayed correctly, or they take a long time to appear, especially in cached mode.
 - If your Outlook profile has shared mailboxes and has caching enabled (**Download Shared Folders** is selected), folder synchronization issues, performance issues, and other problems occur if the number of shared folders per mailbox exceeds 500, as described in [Performance and synchronization problems when you work with folders in a secondary mailbox in Outlook](https://support.microsoft.com/help/3115602). Additionally, errors are logged in the Sync Issues folder and "9646" events are logged in the Application log.
@@ -40,7 +41,7 @@ If you have lots of mail folders, you may experience performance issues such as 
 
 ## Cause
 
-This problem may occur if you have folders that exceed the limit for the number of items per folder or if you have too many folders total. The limits for Outlook 2019, Outlook 2016, Outlook 2013, and Outlook 2010 are as follows:
+This problem might occur if you have folders that exceed the limit for the number of items per folder or if you have too many folders total. The limits for Outlook 2019, Outlook 2016, Outlook 2013, and Outlook 2010 are as follows:
 
 - 100,000 items per folder
 - 5,000 items per Calendar folder
@@ -71,24 +72,25 @@ In Sync Window Settings, adjust the number of months of data that are synced for
 
 |Description|Setting to enable Calendar Sync window|
 |---|---|
-|Registry Path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
+|Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
 |Name|CalendarSyncWindowSetting|
 |Type|REG_DWORD|
 |Value|Value = 0 Inactive<br/>Value = 1 Primary Calendar folder<br/>Value = 2 All Calendar folders<br/>Defaults to 0 if not set|
 
 |Description|Setting to control the number of months in the Calendar Sync window|
 |---|---|
-|Registry Path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
+|Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
 |Name|CalendarSyncWindowSettingMonths|
 |Type|REG_DWORD|
-|Value|Value = Choose decimal value to select how many months in the Calendar sync window such as 1, 3, 6, or 12<br/>Defaults to 6 if not set|
+|Value|Value = Choose decimal value to select the number of months in the Calendar sync window, such as 1, 3, 6, or 12<br/>Defaults to 6 if not set|
 
 |Description|Setting to control whether to keep all recurring items instead of filtering them|
 |---|---|
-|Registry Path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
+|Registry path|HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode|
 |Name|CalendarSyncWindowAllRecurring|
 |Type|REG_DWORD|
-|Value|0|
+|Value|Value = 0 - Only recurring meeting series that have an end date that is either in the future or falls within the current calendar sync window setting will be synced. <br/>Value = 1 - All recurring meeting series will be synced, regardless of the end date. <br/>Defaults to 0 if not set|
+|Explanation|By default (if the value isn't set or is set to 0), recurring meeting series that have an end date that is either in the future or falls within the current calendar sync window setting will be synced. For example, if today's date is May 3, 2022, and the calendar sync window is set to 1 month, all recurring meeting series that have an end date on or after April 3, 2022, will be synced. If the end date falls outside the sync window setting, the recurring meeting series will be removed from the .ost file.<br/>To sync all recurring meeting series regardless of the end date, set the `CalendarSyncWindowAllRecurring` value to **1**.|
 
 These registry keys update the sync restriction so that the Cached Mode client downloads fewer Calendar items, even for a Calendar that has multiple years of history on the server. These keys don't clean up older Calendar content that was already downloaded. However, this method can be effective if you're willing to *clear offline items* and resync your Calendar (instead of bulk deleting old items). If you already have the Calendar in the profile, you have to clear the Offline Items after you set the registry keys and restart Outlook.
 
@@ -99,11 +101,11 @@ To clear offline Calendar items, follow these steps:
 3. On the **General** tab, select **Clear Offline Items**.
 4. Select **OK**.
 
-Additionally, you can use the Support and Recovery Assistant (SaRA) for Office 365 to diagnose issues that affect Outlook. (The tool works for both programs.)
+Additionally, you can use the Microsoft Support and Recovery Assistant to diagnose issues that affect Outlook. (The tool works for both programs.)
 
 To download and install the tool, go to the following Microsoft website:
 
-[Download Microsoft Support and Recovery Assistant for Office 365](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
+[About the Microsoft Support and Recovery Assistant](https://support.microsoft.com/office/about-the-microsoft-support-and-recovery-assistant-e90bb691-c2a7-4697-a94f-88836856c72f)
 
 In the tool, run the Outlook Diagnostic under the Advanced Diagnostics section to determine the cause of the performance issue.
 
@@ -119,6 +121,6 @@ To do this, follow these steps:
 4. Select the **Synchronization** tab.
 5. View the count under **View statistics for this folder**.
 
-Outlook uses an `.ost` file only if the Exchange email account is configured to use Cached Exchange Mode. When Outlook is configured to connect to the Exchange mailbox in online mode, an `.ost` file is not used. If your Outlook client is connected to Exchange in online mode, and you do not have high item-count folders in a .pst file, the performance issue may be occurring on the server.
+Outlook uses an `.ost` file only if the Exchange email account is configured to use Cached Exchange Mode. When Outlook is configured to connect to the Exchange mailbox in online mode, an `.ost` file is not used. If your Outlook client is connected to Exchange in online mode, and you do not have high-item-count folders in a .pst file, the performance issue might be occurring on the server.
 
 For more information about Outlook performance issues, see [You may experience application pauses if you have a large Outlook data file](https://support.microsoft.com/help/2759052/).

@@ -19,9 +19,7 @@ ms.date: 3/31/2022
 
 # Image DPI is changed after you print to PDF from Word 2013 or Word 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Assume that you convert the documents to PDF files by using PDF printer (for example, Adobe Acrobat or PDF Creator)in Microsoft Word 2013 or Word 2010. In this situation, you notice that the dots per inch (DPI) of some images may change from the original DPI in the document.
 

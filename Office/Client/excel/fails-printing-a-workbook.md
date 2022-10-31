@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Margins do not fit page size" error when you print an Excel workbook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In a Microsoft Office Excel workbook, you select the **Fit to** option in the **Page Setup** dialog box. However, when you print this workbook or when you use the print preview feature to view the workbook, you receive the following error message:

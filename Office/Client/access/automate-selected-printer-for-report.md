@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to automate the process of selecting the printer for a report in Microsoft Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Novice: Requires knowledge of the user interface on single-user computers.
 
 This article applies to a Microsoft Access database (.mdb) or Microsoft Access database (.accdb) file.

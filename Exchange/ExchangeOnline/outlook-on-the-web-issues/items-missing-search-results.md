@@ -1,6 +1,6 @@
 ---
-title: Items are missing from search results when Office 365 users search their mailbox in Outlook on the web
-description: Describes an issue in which items are missing in the search results when Office 365 users search their mailbox by using the search box in Outlook on the web. Provides a resolution.
+title: Items are missing from search results when Microsoft 365 users search their mailbox in Outlook on the web
+description: Describes an issue in which items are missing in the search results when Microsoft 365 users search their mailbox by using the search box in Outlook on the web. Provides a resolution.
 author: simonxjx
 ms.author: v-six
 manager: dcscontentpm
@@ -16,15 +16,13 @@ appliesto:
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
-# Items are missing from search results when Office 365 users search their mailbox in Outlook on the web
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Items are missing from search results when Microsoft 365 users search their mailbox in Outlook on the web
 
 _Original KB number:_&nbsp;2835179
 
 ## Problem
 
-When Microsoft Office 365 users search their mailbox in Outlook on the web (formerly known as Outlook Web App), they notice that lots of messages are missing from the search results. Additionally, gaps may be present in the date range of items that are returned in the search results.
+When Microsoft 365 users search their mailbox in Outlook on the web (formerly known as Outlook Web App), they notice that lots of messages are missing from the search results. Additionally, gaps may be present in the date range of items that are returned in the search results.
 
 ## Cause
 

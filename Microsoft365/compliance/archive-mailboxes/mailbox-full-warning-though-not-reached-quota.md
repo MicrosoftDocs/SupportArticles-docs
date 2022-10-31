@@ -18,6 +18,8 @@ ms.date: 3/31/2022
 ---
 # "Mailbox is full" warning even if the mailbox hasn't reached the storage limit
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 A user experiences one of the following symptoms.

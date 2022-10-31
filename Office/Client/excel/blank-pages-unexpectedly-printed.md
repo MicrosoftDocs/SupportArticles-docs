@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # Blank pages are unexpectedly printed in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 In Microsoft Excel, when you print a worksheet, pages that are completely blank may be unexpectedly printed.

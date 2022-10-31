@@ -12,13 +12,13 @@ ms.custom:
   - CSSTroubleshoot
 ms.reviewer: lindabr, andreza
 appliesto: 
-  - Microsoft 365 (Enterprise, Business, Government, Education)
-  - O365 Modern Support
-  - Office 365
+  - Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
 # Issues that affect PST import jobs
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 When you use the Import service in the Security & Compliance Center to [import PST files](/microsoft-365/compliance/importing-pst-files-to-office-365) to user mailboxes in your organization, the last step in the procedure is to start the import job that you create. When the import process runs, you might experience issues, such as slow performance or job failure. This article lists some of the common issues that are related to PST import jobs, and provides resolutions that you can try.
 
@@ -60,7 +60,7 @@ To fix the skipped items, do the following:
 
 The "MapiExceptionShutoffQuotaExceeded" error occurs if the size of the data that's imported is greater than the space that's available in the target mailbox when the import job is run.
 
-If the target mailbox is an archive mailbox, you can import up to 100 GB of data from PST files into it. However, you can't enable the archive mailbox for auto-expansion because the auto-expansion feature doesn't support PST import and migration scenarios. For more information about auto-expanding archives, see [Overview of unlimited archiving in Office 365](/microsoft-365/compliance/unlimited-archiving).  
+If the target mailbox is an archive mailbox, you can import up to 100 GB of data from PST files into it. However, you can't enable the archive mailbox for auto-expansion because the auto-expansion feature doesn't support PST import and migration scenarios. For more information about auto-expanding archives, see [Overview of unlimited archiving in Microsoft 365](/microsoft-365/compliance/unlimited-archiving).  
 
 If you experience the "MapiExceptionShutoffQuotaExceeded" error for the current import job, contact [Microsoft Support](https://support.microsoft.com/contactus) to have the scenario evaluated.
 

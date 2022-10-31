@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # You cannot embed an Adobe OpenType font in a document in an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to embed fonts in a Microsoft Office document, Adobe OpenType fonts that have the ".otf" extension are not embedded.

@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # Method to determine whether a year is a leap year
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes how to determine whether the year in a date that is used in a Microsoft Excel document is a leap year. 

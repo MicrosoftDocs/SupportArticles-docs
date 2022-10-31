@@ -20,7 +20,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When you use remote Windows PowerShell to connect to Exchange Online in Microsoft Office 365, you receive the following error message:
+When you use remote Windows PowerShell to connect to Exchange Online in Microsoft 365, you receive the following error message:
 
 > [outlook.office365.com] Connecting to remote server failed with the following error message:  
 > The WinRM client cannot process the request because the server name cannot be resolved. For more information, see the about_Remote_Troubleshooting Help topic.

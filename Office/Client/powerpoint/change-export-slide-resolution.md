@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # How to export high-resolution (high-dpi) slides from PowerPoint
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 You can change the export resolution in Microsoft PowerPoint by saving a slide in a picture format. There are two steps to this process: Use the system registry to change the default resolution setting for exported slides, and then save the slide as a picture at the new resolution.
 
 ## Step 1: Change the export resolution setting

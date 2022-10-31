@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Error 25090" error message when you start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start a Microsoft Office 2007 or Microsoft Office 2003 program, you may receive the following error message or an error message that is similar to the following:

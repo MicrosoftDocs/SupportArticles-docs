@@ -1,6 +1,6 @@
 ---
-title: 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired NDR in Office 365
-description: Describes an issue that triggers a 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired nondelivery report when external users try to send mail to mail-enabled public folders in Office 365.
+title: 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired NDR in Microsoft 365
+description: Describes an issue that triggers a 5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired nondelivery report when external users try to send mail to mail-enabled public folders in Microsoft 365.
 author: MaryQiu1987
 ms.author: v-maqiu
 manager: dcscontentpm
@@ -17,13 +17,11 @@ ms.date: 3/31/2022
 
 # Error when external users send mail to mail-enabled public folders
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2984402
 
 ## Problem
 
-When external users try to send email messages to mail-enabled public folders in Office 365, they receive a nondelivery report (NDR) that contains the following error code:
+When external users try to send email messages to mail-enabled public folders in Microsoft 365, they receive a nondelivery report (NDR) that contains the following error code:
 
 > Remote Server returned '\<xxxxxxxx> #5.7.1 smtp;550 5.7.1 RESOLVER.RST.AuthRequired; authentication required [Stage: CreateMessage]>'
 
@@ -50,6 +48,6 @@ To change the behavior so that mail-enabled public folders can accept mail from 
 
 ## More information
 
-For more information about mail-enabled public folders and Office 365, see [Mail-enable or mail-disable a public folder](/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder).
+For more information about mail-enabled public folders and Microsoft 365, see [Mail-enable or mail-disable a public folder](/exchange/collaboration-exo/public-folders/enable-or-disable-mail-for-public-folder).
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

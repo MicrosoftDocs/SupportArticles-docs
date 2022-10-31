@@ -1,8 +1,9 @@
 ---
 title: The products we found in your account can't be used to activate
 description: Troubleshooting Microsoft 365 activation error The products we found in your account can't be used to activate
-author: vikkarti
-ms.author: v-matthamer
+author: helenclu
+ms.reviewer: vikkarti
+ms.author: luche
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Could not deploy package" or "Script execution error" when you deploy DACPAC files from Access web app package
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 As part of the retirement process for Access web apps, apps are packaged into an Access app package as they are retired. These packages are stored in a newly created document library that is given the same name as the app.

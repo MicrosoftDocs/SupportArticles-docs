@@ -8,7 +8,8 @@ search.appverid:
   - MET150
 audience: ITPro
 ms.topic: troubleshooting
-ms.author: arhinesm
+ms.author: luche
+ms.reviewer: arhinesm
 ms.custom: sap:office-experts, CSSTroubleshoot
 appliesto: 
   - Office Online Server

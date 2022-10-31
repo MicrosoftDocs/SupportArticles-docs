@@ -1,6 +1,6 @@
 ---
-title: Certificate warning from AD FS when sign in to Office 365, Azure, or Intune
-description: Describes an issue in which you receive a certificate warning from AD FS when you try to sign in to Office 365, Azure, or Microsoft Intune by using a federated account. A resolution is provided.
+title: Certificate warning from AD FS when sign in to Microsoft 365, Azure, or Intune
+description: Describes an issue in which you receive a certificate warning from AD FS when you try to sign in to Microsoft 365, Azure, or Microsoft Intune by using a federated account. A resolution is provided.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -15,17 +15,15 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# You receive a certificate warning from AD FS when you sign in to Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# You receive a certificate warning from AD FS when you sign in to Microsoft 365, Azure, or Intune
 
 ## Problem
 
-When you try to sign in to a Microsoft cloud service such as Office 365, Microsoft Azure, or Microsoft Intune by using a federated account, you receive a certificate warning from the AD FS web service in your browser.
+When you try to sign in to a Microsoft cloud service such as Microsoft 365, Microsoft Azure, or Microsoft Intune by using a federated account, you receive a certificate warning from the AD FS web service in your browser.
 
 ## Cause 
 
@@ -93,7 +91,7 @@ You can resolve issuing certification authority (CA) trust issues by performing 
 - Request that the certificate issuer enroll in the Microsoft Root Certificate Program. For more information about the Root Certificate Program and the operation of root certificates in Windows, see [Microsoft Root Certificate Program](/previous-versions//cc751157(v=technet.10)).     
  
 > [!WARNING]
-> We don't recommend that AD FS use an internal CA when it's leveraged for SSO with Office 365. Using a certificate chain that's not trusted by the Office 365 data center will cause Microsoft Outlook connectivity to Microsoft Exchange Online to fail when Outlook is used with SSO features. 
+> We don't recommend that AD FS use an internal CA when it's leveraged for SSO with Microsoft 365. Using a certificate chain that's not trusted by the Microsoft 365 data center will cause Microsoft Outlook connectivity to Microsoft Exchange Online to fail when Outlook is used with SSO features. 
 
 ## More information
 

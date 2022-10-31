@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Use a macro to apply cell shading format to every other row in a selected range in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Excel automatically formats new data that you type at the end of a list to match the previous rows. You can also format a list programmatically. This article contains a sample Microsoft Visual Basic for Applications procedure to shade every other row in a selection.

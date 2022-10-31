@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to convert data values of the Text data type to the proper case format in Microsoft Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills.
 
 This article applies to a Microsoft Access database (.mdb) file or to a Microsoft Access database (.accdb) file.

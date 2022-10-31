@@ -26,7 +26,7 @@ ms.date: 3/31/2022
 
 Outlook on the web (formerly known as Outlook Web App or Outlook Web Access) is a browser-based email client. Outlook on the web lets you access your Microsoft Exchange Server mailbox from almost any web browser.
 
-If you are a Microsoft Office 365 user, click the following link to access Office 365 Outlook Web App:
+If you are a Microsoft 365 user, click the following link to access Microsoft 365 Outlook Web App:
 
 [Outlook.Office365.com](https://outlook.office365.com)
 

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Save a file to a network drive programmatically in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, you can save a file to any drive to which you have write and delete privileges. Additionally, you can use a Microsoft Visual Basic for Applications macro to save the active workbook and use a variable for the file name. You can use variables from the ActiveWorkbook.Nameproperty, from input box data, or from a cell reference.

@@ -23,6 +23,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 3194755
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 When you move a mailbox from the on-premises Exchange environment to Exchange Online in a hybrid deployment, the retention policy that's applied to the mailbox no longer works.

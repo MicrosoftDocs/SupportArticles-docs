@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to prevent Office 2010 from disabling printers
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Introduction
 
 This article introduces a method to prevent Microsoft Office 2010 from disabling printers when Office 2010 detects the problems with printers.

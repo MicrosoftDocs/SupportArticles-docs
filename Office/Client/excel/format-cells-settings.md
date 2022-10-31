@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # How to control and understand settings in the Format Cells dialog box in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Excel lets you change many of the ways it displays data in a cell. For example, you can specify the number of digits to the right of a decimal point, or you can add a pattern and border to the cell. You can access and modify the majority of these settings in the Format Cells dialog box (on the Format menu, click Cells).

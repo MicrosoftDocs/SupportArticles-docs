@@ -2,7 +2,7 @@
 title: An item with the specified id wasn't found in the store error when adding reviewer permission to public folder calendar
 description: This article provides three workarounds that help you fix an issue where you are unable to add Reviewer permission by using PowerShell commands.
 author: simonxjx
-ms.author: batre
+ms.author: v-six
 manager: dcscontentpm
 audience: ITPro
 ms.topic: troubleshooting

@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # ODBC Data Source Administrator crashes when you add a system DSN
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:

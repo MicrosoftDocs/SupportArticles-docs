@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Access data connections are slow to refresh in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you open an Excel file from a file server and that Excel file contains data connections to an Access database which are also stored on a file server, you experience a slow Access data refresh rate. 

@@ -12,13 +12,11 @@ ms.author: luche
 ms.custom: CSSTroubleshoot
 ms.reviewer: lauraho
 appliesto: 
-  - Excel for Mac for Office 365
+  - Excel for Mac for Microsoft 365
 ms.date: 3/31/2022
 ---
 
 # Excel 2016 for Mac crashes when you click the From Database option
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
 
 ## Symptoms
 

@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Loss of image quality after you save in Word, Excel, or PowerPoint 2007
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 After saving a document, spreadsheet, or presentation which contains an image, a loss of image quality such as blur may occur.

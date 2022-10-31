@@ -39,6 +39,6 @@ If you use SharePoint Online to host assets in a custom solution, and people try
 
 For more information about how to use CDNs in SharePoint Online, see the following articles:   
 - [Using content delivery networks with SharePoint Online](https://support.office.com/en-us/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)    
-- [Use the Office 365 content delivery ntework with SharePoint Online](https://support.office.com/en-us/article/Use-the-Office-365-content-delivery-network-with-SharePoint-Online-BEBB285F-1D54-4F79-90A5-94985AFC6AF8)      
+- [Use the Microsoft 365 content delivery ntework with SharePoint Online](https://support.office.com/en-us/article/Use-the-Office-365-content-delivery-network-with-SharePoint-Online-BEBB285F-1D54-4F79-90A5-94985AFC6AF8)      
 
 Still need help? Go to [SharePoint Community](https://techcommunity.microsoft.com/t5/sharepoint/ct-p/SharePoint).

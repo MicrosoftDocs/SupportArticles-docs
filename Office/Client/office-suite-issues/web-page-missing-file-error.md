@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "The page cannot be found" or "Missing file" error when you view or change an Office document
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you save a Microsoft Word document, a Microsoft Excel document, or a Microsoft PowerPoint presentation as a Web page and then you upload the Web page to the document library of your Microsoft Windows SharePoint Services Web site, you may experience one or more of the following symptoms:

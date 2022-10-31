@@ -14,30 +14,28 @@ appliesto:
   - Access 2016
   - Access 2010
   - Access 2013
-  - Access for Office 365
+  - Access for Microsoft 365
   - Access 2019
 ms.date: 3/31/2022
 ---
 
 # "Cannot update. Database or object is read-only" error in linked SharePoint list in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 When you work in a Microsoft Access table that is linked to a Microsoft SharePoint list that contains a hidden metadata column, you receive the following error message:
 
 > Cannot update. Database or object is read-only
 
-##  Cause
+## Cause
 
 This error is caused by a known issue in Microsoft Access that occurs when a table is linked to a SharePoint list that has hidden metadata.
 
-##  Workaround
+## Workaround
 
 To work around this problem, re-create the list without the metadata columns.
 
-##  More Information
+## More Information
 
 The problem is not resolved even after you remove the managed metadata column from the existing list.
 

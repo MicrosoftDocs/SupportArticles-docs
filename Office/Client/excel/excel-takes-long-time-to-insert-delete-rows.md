@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel 2013 takes a very long time to insert or delete rows after a custom sort on many named columns
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 You try to insert or delete rows in a Microsoft Excel 2013 worksheet. You do this after you sort a range that contains defined names that refer to whole columns. In this scenario, it takes a very long time to insert or delete rows.

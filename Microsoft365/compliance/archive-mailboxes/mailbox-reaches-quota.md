@@ -18,6 +18,8 @@ ms.date: 3/31/2022
 ---
 # Your mailbox reaches its quota even if the Archive feature is enabled
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Symptoms
 
 The Archive feature is enabled on your mailbox, but the mailbox reaches its quota.

@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 ---
 # Access causes an error when you export fields with data type single or double to Oracle
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 301915
 
 > [!NOTE]

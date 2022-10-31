@@ -1,6 +1,6 @@
 ---
 title: A child domain doesn't inherit parent domain changes
-description: Describes an issue in which changes that are made to a parent domain aren't inherited by the child domain in Office 365, Azure, or Microsoft Intune. Provides a resolution.
+description: Describes an issue in which changes that are made to a parent domain aren't inherited by the child domain in Microsoft 365, Azure, or Microsoft Intune. Provides a resolution.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -14,17 +14,15 @@ appliesto:
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# A child domain doesn't inherit parent domain changes in Office 365, Azure, or Intune
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# A child domain doesn't inherit parent domain changes in Microsoft 365, Azure, or Intune
 
 ## PROBLEM
 
-When you make a change to a parent (top-level) domain that's verified in Office 365, Microsoft Azure, or Microsoft Intune, a child domain that's also verified doesn't inherit the changes. This issue may occur when you do one of the following:
+When you make a change to a parent (top-level) domain that's verified in Microsoft 365, Microsoft Azure, or Microsoft Intune, a child domain that's also verified doesn't inherit the changes. This issue may occur when you do one of the following:
 
 - Change the domain from standard to federated
 - Change the domain from federated to standard
@@ -43,7 +41,7 @@ To resolve this issue, delete the child domain, add and verify the parent domain
 
 This issue may occur if the child domain is verified before the parent domain is verified. When the child domain is verified first, verification and its settings are managed independently of the parent domain.
 
-For example, you verify the **corp.constoso.com** domain. Later, you verify the **contoso.com** domain. When you verify **corp.contoso.com**, and ownership is proven, the namespace is created in Office 365 as a domain that's completely independent of **contoso.com**. Therefore, when you later verify **contoso.com**, any changes that are made to this new domain don't affect **corp.contoso.com**.
+For example, you verify the **corp.constoso.com** domain. Later, you verify the **contoso.com** domain. When you verify **corp.contoso.com**, and ownership is proven, the namespace is created in Microsoft 365 as a domain that's completely independent of **contoso.com**. Therefore, when you later verify **contoso.com**, any changes that are made to this new domain don't affect **corp.contoso.com**.
 
 In certain cases, you may want to manage the child domain properties independent of the parent domain.
 

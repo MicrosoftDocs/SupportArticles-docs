@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Some Office applications are not responding
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Office applications stop responding in some common usage scenarios.

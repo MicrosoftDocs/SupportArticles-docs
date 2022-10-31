@@ -19,7 +19,7 @@ ms.date: 3/31/2022
 
 ## Problem
 
-When an existing user in an organization tries to access a SharePoint Online resource in Office 365 for enterprises and the user doesn't have permission to the resource, they receive one of the following error messages:
+When an existing user in an organization tries to access a SharePoint Online resource in Microsoft 365 for enterprises and the user doesn't have permission to the resource, they receive one of the following error messages:
 
 - **Sorry, this site hasn't been shared with you.**
 - **Error: Access Denied**

@@ -11,21 +11,19 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
-  - Office 365
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
 # How to open Support cases for GCC High and DoD
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
-Office 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Office 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Office 365 admin center to manage your user accounts and define who has permissions to contact support.
+Microsoft 365 Support is available only to users with Administrator roles associated with a valid email address.  Therefore, only user accounts marked in the Microsoft 365 admin center as an administrator will be able to contact support and/or create a support incident.  Visit your Microsoft 365 admin center to manage your user accounts and define who has permissions to contact support.
 
 If a user does not need any specialized administrative access you can grant them the role of Service Administrator, which will provide them view-only access and the ability to contact support to create an incident.
 
-To create a new service request, browse to the [Microsoft Office 365 Admin Portal](https://portal.office365.us/adminportal). After login, navigate to **Show all** > **Support** > **New Service Request**, and use the subject to briefly describe the problem for the new service request.
+To create a new service request, browse to the [Microsoft 365 Admin Portal](https://portal.office365.us/adminportal). After login, navigate to **Show all** > **Support** > **New Service Request**, and use the subject to briefly describe the problem for the new service request.
 
 > [!NOTE]
 > Users cannot change their own account permissions and their account needs to be updated by another administrator.
@@ -41,17 +39,17 @@ For more information on how to populate a valid email address for a user account
 
 ## More information
 
-Options and steps to populate a valid email address for an Office 365 user account -
+Options and steps to populate a valid email address for a Microsoft 365 user account -
 
-**Option 1 - Update the UserPrincipalName/Username value in the Office 365 admin center** 
+**Option 1 - Update the UserPrincipalName/Username value in the Microsoft 365 admin center** 
 
-1. Log into the Office 365 admin center and look up the user.
+1. Log into the Microsoft 365 admin center and look up the user.
 
-   :::image type="content" source="media/support-cases-for-gcc-high-dod/look-up-o365-user.png" alt-text="Screenshot to look up the user after logging into the Office 365 admin center.":::
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/look-up-o365-user.png" alt-text="Screenshot to look up the user after logging into the Microsoft 365 admin center.":::
 
 1. Next to Username select Edit. 
 
-   :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-o365-user.png" alt-text="Screenshot to select the Edit option to edit the Office 365 Username.":::
+   :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-o365-user.png" alt-text="Screenshot to select the Edit option to edit the Microsoft 365 Username.":::
 
 1. Under Aliases, type in a new email address and use the drop-down to select the desired domain. Click Add. Then select Set as primary. 
 
@@ -72,10 +70,10 @@ Options and steps to populate a valid email address for an Office 365 user accou
    :::image type="content" source="media/support-cases-for-gcc-high-dod/desired-address-show.png" alt-text="Screenshot of the desired address in the Admin center.":::
 
 **Option 2 - Add an alternate email address to the existing administrator user** 
-1. Log into the Office 365 admin center and look up the user.  
+1. Log into the Microsoft 365 admin center and look up the user.  
 1. Edit the user and go the Roles section. Select Edit. 
 
-    :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for an office 365 user.":::
+    :::image type="content" source="media/support-cases-for-gcc-high-dod/edit-role.png" alt-text="Screenshot shows steps to edit the roles for an Microsoft 365 user.":::
 
 1. Scroll down and under Alternative email address, input the desired address. 
 

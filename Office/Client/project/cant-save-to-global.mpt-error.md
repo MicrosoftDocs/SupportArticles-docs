@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # "Cannot save to Global.mpt" when exiting Microsoft Project
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you exit Microsoft Project while the Global.mpt template is opened as read-only, you receive the following error message:

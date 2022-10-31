@@ -62,8 +62,8 @@ The configuration requirements vary, depending on the Outlook version. The follo
 
   HKEY_CURRENT_USER\Software\Microsoft\Exchange\AlwaysUseMSOAuthForAutoDiscover
 
-  For more information, see [Outlook prompts for password and doesn't use Modern Authentication to connect to Office 365](/outlook/troubleshoot/authentication/outlook-prompt-password-modern-authentication-enabled).
-- MAPI/HTTP cannot be disabled. For more information, see [Outlook 2010, 2013, 2016, or Outlook for Office 365 doesn't connect Exchange using MAPI over HTTP as expected](/outlook/troubleshoot/connectivity/outlook-not-connect-exchange-use-mapi-over-http).
+  For more information, see [Outlook prompts for password and doesn't use Modern Authentication to connect to Microsoft 365](/outlook/troubleshoot/authentication/outlook-prompt-password-modern-authentication-enabled).
+- MAPI/HTTP cannot be disabled. For more information, see [Outlook 2010, 2013, 2016, or Outlook for Microsoft 365 doesn't connect Exchange using MAPI over HTTP as expected](/outlook/troubleshoot/connectivity/outlook-not-connect-exchange-use-mapi-over-http).
 
 ### Skype for Business or Lync 2013
 

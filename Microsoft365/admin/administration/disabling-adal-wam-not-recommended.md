@@ -45,17 +45,17 @@ Authentication issues during sign-in or activation typically manifest as one of 
 If you experience sign-in issues, consider the following recommendations:
 
 1. [Manually sign-out](https://support.office.com/article/sign-out-of-office-5a20dc11-47e9-4b6f-945d-478cb6d92071) of all accounts in the Office app, then restart the app and sign-in again.
-2. [Reset the Office activation state](/office365/troubleshoot/activation/reset-office-365-proplus-activation-state).
+2. [Reset the Office activation state](/microsoft-365/troubleshoot/activation/reset-office-365-proplus-activation-state).
 3. If you experience device issues, for example, the device is deleted or disabled, [follow these recommendations](../authentication/connection-issue-when-sign-in-office-2016.md#symptom-2).
 4. If the investigation suggests that an authentication process is experiencing network or connectivity issues, then [these steps](../authentication/connection-issue-when-sign-in-office-2016.md#symptom-1) will be helpful. Additionally, you can reset Internet Explorer Options, and then try signing into Office again (go to **Tools** > **Internet Options** > **Advanced** > **Reset Internet Explorer Settings**). After resetting Internet Explorer Settings, you will lose any custom settings.
-5. In some cases, Microsoft Azure Active Directory, or MSA WAM plugins may be missing on the device that blocks user from signing into Office. Follow the steps in [Fix authentication issues in Office applications when you try to connect to an Office 365 service](../authentication/automatic-authentication-fails.md) to restore the plugins and avoid removing them in future.
+5. In some cases, Microsoft Azure Active Directory, or MSA WAM plugins may be missing on the device that blocks user from signing into Office. Follow the steps in [Fix authentication issues in Office applications when you try to connect to a Microsoft 365 service](../authentication/automatic-authentication-fails.md) to restore the plugins and avoid removing them in future.
 6. See [Connection issues in sign-in after update to Office 2016 build 16.0.7967](../authentication/connection-issue-when-sign-in-office-2016.md) on Windows 10 for information about troubleshooting other commonly occurring sign-in issues.
 
 For more information about sign-in related symptoms and solutions, see the following articles:
 
 - [Azure Active Directory device management FAQ](/azure/active-directory/devices/faq)
 - [Troubleshooting devices using the dsregcmd command](/azure/active-directory/devices/troubleshoot-device-dsregcmd)
-- [How to troubleshoot non-browser apps that can't sign in-to Office 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
-- ["Access Denied", or user is repeatedly prompted for credentials when connecting to Office 365](/office365/troubleshoot/security/access-denied-when-connect-to-office-365)
+- [How to troubleshoot non-browser apps that can't sign in-to Microsoft 365, Azure, or Intune](https://support.office.com/article/how-to-troubleshoot-non-browser-apps-that-can-t-sign-in-to-office-365-azure-or-intune-3ba1b268-66f6-462c-b0e5-070f5c2603c1)
+- ["Access Denied", or user is repeatedly prompted for credentials when connecting to Microsoft 365](/microsoft-365/troubleshoot/security/access-denied-when-connect-to-office-365)
 
 Still need help? Go to [Microsoft Community](https://answers.microsoft.com/).

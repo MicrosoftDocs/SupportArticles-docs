@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Connection issues in sign-in after update to Office 2016 build 16.0.7967 on Windows 10
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 > [!TIP]
 > To diagnose and automatically fix several common Office sign-in issues, you can download and run the [Microsoft Support and Recovery Assistant](https://aka.ms/SaRA-OfficeSignInScenario).
 
@@ -111,7 +109,7 @@ When you try to open or save a document in Microsoft SharePoint Online, OneDrive
 
     **Description: AADSTS70002: Error validating credentials. AADSTS135011: Device used during the authentication is disabled.**
 
-    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Azure Active Directory (Azure AD). For information about how to manage devices in Azure AD, see the [Device management tasks](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic on the Microsoft Docs website.
+    To resolve this issue, we recommend that the Enterprise administrator enable the device in Active Directory or Azure Active Directory (Azure AD). For information about how to manage devices in Azure AD, see the [Device management tasks](/azure/active-directory/devices/device-management-azure-portal#device-management-tasks) section of the "How to manage devices using the Azure portal" topic.
 
 - The Enterprise administrator or a policy deleted a device because of a security reason or by mistake. To verify that you are experiencing this issue, follow these steps:  
   1. Open Event viewer.

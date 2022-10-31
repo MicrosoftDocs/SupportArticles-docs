@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # [SDP 3][7b5791e2-2449-4351-867a-a22d34449d15] Data that is collected by the Excel Support Diagnostic
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This Support Diagnostics Platform (SDP) manifest file collects relevant log files, registry keys, client networking configuration, application event logs, and important file details that are used by the following Microsoft Office applications:

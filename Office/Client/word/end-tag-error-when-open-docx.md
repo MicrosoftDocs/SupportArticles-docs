@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # (end tag) error occurs when you open a DOCX file in Word 2013, 2010, or 2007
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a Microsoft Word 2007, 2010 or 2013 document, you may receive this error message:

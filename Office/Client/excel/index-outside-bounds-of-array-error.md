@@ -14,15 +14,13 @@ appliesto:
   - Excel 2013
   - SQL Server 2012 Enterprise
   - SQL Server 2012 Standard
-  - Power BI for Office 365
+  - Power BI for Microsoft 365
 ms.date: 3/31/2022
 ---
 
 # "Index was outside the bounds of the array" error when you import data from multiple tables in a SQL Server database to an Excel 2013 workbook
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 Consider the following scenario in which you try to import data from a Microsoft SQL Server 2012 database to a Microsoft Excel 2013 workbook: 
 
@@ -34,13 +32,13 @@ In this scenario, you receive the following error message:
 
 > We couldn't get data from the Data Model. Here's the error we got: Index was outside the bounds of the array.
 
-##  Cause
+## Cause
 
 This issue occurs when one of the selected table names ends with a string that matches a schema name in the database. The Data Connection Wizard only uses the table names instead of the fully qualified table names when you import data from multiple tables. 
 
 Note This issue does not occur when you use the Data Connection Wizard to import data from a single table. In this situation, the Data Connection Wizard uses the fully qualified table name.
 
-##  Workaround
+## Workaround
 
 To work around this issue, use one of the following methods:
 
@@ -51,4 +49,3 @@ To work around this issue, use one of the following methods:
   2. Click the **Definition** tab.   
   3. In the Command Text box, change the table names to fully qualified table names by using the following format:
   Database.Schema.TableName
-   

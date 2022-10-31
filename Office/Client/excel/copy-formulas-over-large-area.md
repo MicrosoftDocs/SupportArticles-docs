@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # "Not enough memory" when you copy formulas over large area in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 If you fill or copy formulas into a large area of a worksheet, or you add formulas to a large worksheet, you receive error messages that are similar to the following: 

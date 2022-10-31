@@ -23,9 +23,7 @@ ms.date: 3/31/2022
 
 # Circular Relationship error When indenting task
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 In Microsoft Project, if two tasks are linked in a predecessor/successor relationship and you indent the successor to make it a subtask and the predecessor of a summary task, you may receive the following error message:
 
@@ -35,10 +33,10 @@ In Microsoft Project, if two tasks are linked in a predecessor/successor relatio
 >
 > Check the task dependencies for the tasks from which you are indenting, and then try again.
 
-##  Cause
+## Cause
 
 This problem occurs when the predecessor task has a cross-project link as a predecessor and the task you are trying to subordinate is its successor. For example, let's say you have two tasks (A and B). They are linked by a Finish to Start relationship and Task A has a cross-project link to a task in another project. If you indent task B under Task A, you will receive this error message.
 
-##  Workaround
+## Workaround
 
 To work around this problem, remove the predecessor and successor link between the tasks and then indent the task.

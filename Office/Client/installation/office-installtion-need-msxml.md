@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "The installation of Microsoft Office 2010 requires that MSXML version 6.10.1129.0 be installed on your computer" when you install Office 2010 on a Windows 7-based computer
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you install Office 2010 on a Windows 7-based computer, you may receive the following error message: 

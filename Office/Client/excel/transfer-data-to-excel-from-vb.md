@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Methods for transferring data to Excel from Visual Basic
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses numerous methods for transferring data to Microsoft Excel from your Microsoft Visual Basic application. This article also presents the advantages and the disadvantages for each method so that you can choose the solution that works best for you.

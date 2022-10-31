@@ -11,6 +11,8 @@ ms.topic: troubleshooting
 ms.author: luche
 ms.custom: CSSTroubleshoot
 appliesto: 
+  - SharePoint Server Subscription Edition
+  - SharePoint Server 2019
   - SharePoint Server 2016
   - SharePoint Server 2013
 ms.date: 3/31/2022
@@ -29,7 +31,7 @@ In this scenario, when you access these PHAs after you configure SharePoint hybr
 
 ## Cause  
 
-Configuring SharePoint hybrid features for SharePoint 2013 or SharePoint 2016 disrupts server-to-server (S2S) trusts that are created before you configure hybrid features. When you try to establish an S2S trust by using the Cloud SSA on-boarding script or the Hybrid Picker, the on-premises farm's authentication realm is updated to match the Office 365 tenant context ID. The script sets the authentication realm by using the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm) cmdlet. After the authentication realm is changed, existing SharePoint add-ins fail to authenticate.
+Configuring SharePoint hybrid features for SharePoint 2013 or SharePoint 2016 disrupts server-to-server (S2S) trusts that are created before you configure hybrid features. When you try to establish an S2S trust by using the Cloud SSA on-boarding script or the Hybrid Picker, the on-premises farm's authentication realm is updated to match the Microsoft 365 tenant context ID. The script sets the authentication realm by using the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm) cmdlet. After the authentication realm is changed, existing SharePoint add-ins fail to authenticate.
 
 This authentication failure occurs because of how provider-hosted add-ins are authorized to access SharePoint. SharePoint add-ins are associated with `SPTrustedSecurityTokenIssuers` by using the `IssuerId` value. On request, an add-in tries to get a token from the Secure Token Service issuer (STS). The token issuers are tied to the authentication realm. After the realm is changed, the SharePoint add-ins can no longer authenticate successfully. The trusted token issuer that has the correct issuer ID still exists in the farm. However, it is associated with the previous authentication realm. The actual `RegisteredIssuerName` value is `IssuerId@OldAuthRealmGuid`, in which the `oldAuthRealmGuid` value no longer matches the current `AuthRealmGuid` value. The add-in fails to authenticate because the STS can't find a matching token issuer.
 
@@ -139,9 +141,9 @@ To repair authentication-related issues that are associated with provider-hosted
 
 ## More Information  
 
-In the scenario where you configure hybrid workloads that require S2S before you implement the provider-hosted add-ins or Workflow Manager, the add-ins will be registered after the `SPAuthenticationRealm` cmdlet is updated to match the Office 365 tenant context ID. They'll always work because the RealmID value won't change again. If hybrid workloads are added or reconfigured, the realm ID remains the same as the Office 365 tenant context ID.
+In the scenario where you configure hybrid workloads that require S2S before you implement the provider-hosted add-ins or Workflow Manager, the add-ins will be registered after the `SPAuthenticationRealm` cmdlet is updated to match the Microsoft 365 tenant context ID. They'll always work because the RealmID value won't change again. If hybrid workloads are added or reconfigured, the realm ID remains the same as the Microsoft 365 tenant context ID.
 
-To create a server-to-server trust between your SharePoint on-premises environment and Office 365, run the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm).
+To create a server-to-server trust between your SharePoint on-premises environment and Microsoft 365, run the [Set-SPAuthenticationRealm](/powershell/module/sharepoint-server/Set-SPAuthenticationRealm).
 
 > [!IMPORTANT]
 > The topic contains a "Caution" section that warns that any access tokens that are created for a specific realm won't work after you change the `SPAuthenticationRealm` value.  

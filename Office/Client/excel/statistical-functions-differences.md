@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Differences between the Excel statistical functions STDEVPA and STDEVP
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article discusses the differences between the STDEVPA function in Microsoft Excel and the closely related STDEVP function. In particular, it discusses how the results of the STDEVPA function for Microsoft Office Excel 2007 and for Microsoft Office Excel 2003 may differ from the results of STDEVPA in earlier versions of Excel.

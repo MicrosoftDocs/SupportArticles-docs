@@ -11,7 +11,7 @@ ms.topic: troubleshooting
 ms.custom: CSSTroubleshoot
 ms.author: luche
 appliesto: 
-  - Excel for Office 365
+  - Excel for Microsoft 365
   - Excel 2019
   - Excel 2016
   - Excel 2013
@@ -20,11 +20,10 @@ ms.date: 3/31/2022
 
 # Error message when you update external links that contain a three-dimensional reference
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario:
+
 - You create a workbook (workbook A) and save it as an .xlsx file in Microsoft Excel.
 - You create a defined name under the **Formulas** tab that refers to a three-dimensional reference.
 - You save workbook A.

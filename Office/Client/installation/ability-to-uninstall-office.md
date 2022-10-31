@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Information about the ability to uninstall Office updates
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains more information about the following topics that are related to the removal of Office updates:

@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "Access can't start because there is no license for it on this machine" error when launching Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 2656028
 
 ## Symptoms

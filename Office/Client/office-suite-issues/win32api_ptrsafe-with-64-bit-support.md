@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Office 2010 Help Files: Win32API_PtrSafe with 64-bit Support
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 The file Win32_PtrSafe.txt contains Windows API Declarations and Constants for Visual Basic (Updated for the 64-bit version of Microsoft Office 2010) provides declarations for Microsoft Visual Basic programmers who want to call Windows API routines. This file updates and replaces Win32API.txt to include calls to the 64-bit version of Microsoft Office 2010.

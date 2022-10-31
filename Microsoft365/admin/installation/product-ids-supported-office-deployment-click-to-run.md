@@ -26,7 +26,7 @@ This article lists product IDs that are supported by the Microsoft Office Deploy
 
 ## More Information
 
-The following product IDs are supported by the Office Deployment Tool in Office 365 and Microsoft 365 deployments:
+The following product IDs are supported by the Office Deployment Tool in Microsoft 365 and Microsoft 365 deployments:
 
 - O365ProPlusRetail
 - O365BusinessRetail
@@ -42,7 +42,7 @@ For more information about using these product IDs with the Office Deployment To
 
 The following table lists Office 365 and Microsoft 365 plan names and the correct product ID to use for that plan:
 
-|**Office 365 Plan**          |**Product ID**      |
+|**Plan**          |**Product ID**      |
 |-----------------------------|--------------------|
 |Microsoft 365 Apps for enterprise           |O365ProPlusRetail   |
 |Office 365 Enterprise E3     |O365ProPlusRetail   |
@@ -56,8 +56,7 @@ The following table lists Office 365 and Microsoft 365 plan names and the correc
 |Microsoft 365 E5 | O365ProPlusRetail |
 |Microsoft 365 Business Premium | O365BusinessRetail |
 
-
-In addition to these product IDs, the following non-Office 365 product IDs are supported by this tool:
+In addition to these product IDs, the following non-Microsoft 365 product IDs are supported by this tool:
 
 > [!NOTE]
 > For Lync or Skype for Business, see the table at the end of this article.

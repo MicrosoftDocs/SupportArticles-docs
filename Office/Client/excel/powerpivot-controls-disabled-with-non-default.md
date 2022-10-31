@@ -18,9 +18,7 @@ ms.date: 3/31/2022
 
 # PowerPivot controls disabled with non-default Excel file format
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 In Microsoft Excel, when attempting to use controls on the PowerPivot ribbon, you find that the controls are grayed out, as in the following figure.
 
@@ -28,14 +26,13 @@ In Microsoft Excel, when attempting to use controls on the PowerPivot ribbon, yo
 
 The behavior may appear to be inconsistent between existing files; however, it occurs in any new file you attempt to create in Excel.
 
-##  Cause
+## Cause
 
 This behavior can occur if the Save files in this format option is set to a file format other than the default Excel Workbook, as in the figure below.
 
 :::image type="content" source="media/powerpivot-controls-disabled-with-non-default/excel-options.png" alt-text="Screenshot shows the Save files in this format option in the Excel Options window.":::
 
 Here are some of the formats which may result in this behavior:
-
 
 - XML Spreadsheet 2003   
 - Strict Open XML Spreadsheet   
@@ -45,7 +42,7 @@ The availability of PowerPivot controls is specific to the file type of the acti
 
 New, unsaved documents will enable or disable the PowerPivot controls based on the current Save files in this format option setting. If the file is later saved as a file type that supports PowerPivot, the controls on the PowerPivot ribbon will then be enabled.
 
-##  Resolution
+## Resolution
 
 To allow the use of the PowerPivot ribbon controls in new documents, configure the Save files in this format option to the default setting of Excel Workbook, using the steps below.
 
@@ -56,7 +53,7 @@ To allow the use of the PowerPivot ribbon controls in new documents, configure t
 
 If you are currently working in a file that is not the default format, you may need to Save As an Excel Workbook, or open a new workbook before the PowerPivot ribbon controls become available.
 
-##  More Information
+## More Information
 
 The setting for the default Save format is stored in the Windows Registry under the following registry data:
 

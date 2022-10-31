@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # "Microsoft program cannot be opened because of a problem" error when you start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to start any Office for Mac applications (Microsoft Word, Microsoft Excel, Microsoft PowerPoint, Microsoft Entourage, or Microsoft Outlook for Mac) in Mac OS X 10.6.x (Snow Leopard), you receive the following error message:

@@ -26,8 +26,6 @@ ms.date: 3/31/2022
 
 # Error message in Office when a file is blocked by registry policy settings
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 A file is blocked when you open or save the file in a Microsoft Office program. In this situation, you may receive an error message that resembles one of the following:
 
 - You are attempting to open a file that is blocked by your registry policy setting.

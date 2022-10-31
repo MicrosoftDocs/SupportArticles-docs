@@ -1,6 +1,6 @@
 ---
 title: 0x80041015 error when you start an Office program
-description: Discusses that you receive a 0x80041015 error when you try to start a Microsoft Office 2013 or Microsoft Office 365 program. Provides a resolution.
+description: Discusses that you receive a 0x80041015 error when you try to start a Microsoft Office 2013 or Microsoft 365 program. Provides a resolution.
 author: helenclu
 manager: dcscontentpm
 localization_priority: Normal
@@ -12,20 +12,18 @@ ms.topic: troubleshooting
 ms.author: luche
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Home
-  - Office 365 Personal
+  - Microsoft 365 Family
+  - Microsoft 365 Personal
 ms.date: 3/31/2022
 ---
 
 # You receive a "0x80041015" error message when you try to start an Office program
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
-When you try to start a Microsoft Office 365 program, you receive the following error message:
+When you try to start a Microsoft 365 program, you receive the following error message:
 
-```adoc
+```output
 Sorry, we ran into a problem While trying to install the product key.
 
 If this keeps happening, you should try repairing your office product.
@@ -38,7 +36,7 @@ System error: 0x80041015
 This problem can occur when all the following conditions are true:
 
 - An Office product was activated before the May Public Update was installed.
-- There was an attempt to add another Office product (such as Microsoft Visio, OneDrive for Business, or Office 365) or to reinstall an Office product on the same computer after the May Public Update was installed.
+- There was an attempt to add another Office product (such as Microsoft Visio, OneDrive for Business, or Microsoft 365) or to reinstall an Office product on the same computer after the May Public Update was installed.
 
 ## Resolution
 

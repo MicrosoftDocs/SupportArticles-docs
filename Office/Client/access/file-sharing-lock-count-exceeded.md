@@ -23,8 +23,6 @@ ms.date: 3/31/2022
 
 # "File sharing lock count exceeded…" error during large transaction processing
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When one or more users process many transactions in a multi-user environment, the transactions may fail with the following error message:

@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 # "There isn't enough disk space or memory" error when you perform an operation on an Access table
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Advanced: Requires expert coding, interoperability, and multiuser skills. 
 
 This article applies only to a Microsoft Access database (.mdb).

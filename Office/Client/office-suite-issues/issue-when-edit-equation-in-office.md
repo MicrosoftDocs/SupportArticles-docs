@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Error when editing an equation in Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to edit an equation that was inserted using Equation Editor 3.0 in an Office application (such as Word), you see the following error: 

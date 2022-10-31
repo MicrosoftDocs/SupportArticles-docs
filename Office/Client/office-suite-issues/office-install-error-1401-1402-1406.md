@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Error 1401, 1402 or 1406 when you install an Office program or open an Office program or document
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you install a Microsoft Office program, you may receive one of the following error messages during or at the end of the installation process:

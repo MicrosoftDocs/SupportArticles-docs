@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Sample macro to insert/delete rows or columns on multiple sheets in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article contains a sample Microsoft Visual Basic for Applications macro (Sub procedure) that you can use to insert or delete rows or columns in multiple worksheets in Microsoft Excel.

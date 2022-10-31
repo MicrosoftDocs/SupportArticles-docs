@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # An update is available for Office to support migrations from AD RMS to Azure RMS
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 If an organization has Active Directory Rights Management Services (AD RMS) deployed and wants to migrate to Azure Information Protection, the typical migration process involves exporting the root keys from the AD RMS cluster and importing them into Azure RMS. Azure RMS is a service that is part of the Azure Information Protection platform.

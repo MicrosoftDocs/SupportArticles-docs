@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # How to use ADOX to create an SQL pass-through query in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 Moderate: Requires basic macro, coding, and interoperability skills. 
 
 This article applies only to a Microsoft Access database (.accdb and .mdb).

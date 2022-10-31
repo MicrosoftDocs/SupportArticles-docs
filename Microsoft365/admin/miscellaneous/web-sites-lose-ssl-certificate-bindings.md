@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Web sites lose SSL certificate bindings on Office Online Server
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Consider the following scenario: 

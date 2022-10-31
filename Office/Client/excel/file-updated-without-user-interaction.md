@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Excel files are updated without user interaction
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 The first time that you use either Excel Online or a recent version of the Microsoft Excel application to open an Excel workbook that’s stored in the document library, you notice that some fields such as **Modified**, **Modified By**, and **Version** are updated even though you didn’t make the updates.
 
 This behavior is by design. Excel applications have an internal calculation engine for each version. Excel workbooks contain information about the version of the calculation engine that was used to create them.

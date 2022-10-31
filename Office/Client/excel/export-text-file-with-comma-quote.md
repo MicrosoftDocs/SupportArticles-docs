@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Procedure to export a text file with both comma and quote delimiters in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Excel does not have a menu command to automatically export data to a text file so that the text file is exported with both quotation marks and commas as delimiters. For example, there is no command to automatically create a text file that contains the following data:

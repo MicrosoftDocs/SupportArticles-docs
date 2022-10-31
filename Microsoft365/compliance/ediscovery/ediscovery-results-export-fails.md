@@ -17,9 +17,9 @@ ms.date: 3/31/2022
 
 # "Export failed with error type FailedToSearchMailboxes" error when you try to export eDiscovery search results to a PST file in Exchange Online
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_&nbsp;2957583
+
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
 
 ## Problem
 

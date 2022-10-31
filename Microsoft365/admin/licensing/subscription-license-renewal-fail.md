@@ -1,5 +1,5 @@
 ---
-title: Office 365 subscription automatic license renewal fails
+title: Microsoft 365 subscription automatic license renewal fails
 description: The intention of this article is to identify an issue where the O365 subscription renewal fails.
 author: MaryQiu1987
 manager: dcscontentpm
@@ -12,18 +12,16 @@ ms.custom: CSSTroubleshoot
 ms.author: v-maqiu
 appliesto: 
   - Microsoft 365 Apps for enterprise
-  - Office 365 Business
-  - Office 365 Home
+  - Microsoft 365 Apps
+  - Microsoft 365 Family
 ms.date: 3/31/2022
 ---
 
-# Office 365 subscription automatic license renewal fails when sppcext.dll is missing
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Microsoft 365 subscription automatic license renewal fails when sppcext.dll is missing
 
 ## Symptoms
 
-When O365 paid subscription tries to renew, the license fails and eventually displays a red bar stating that the subscription is unlicensed.
+When Microsoft 365 paid subscription tries to renew, the license fails and eventually displays a red bar stating that the subscription is unlicensed.
 
 ```adoc
 Message 1:Couldn't Verify Subscription

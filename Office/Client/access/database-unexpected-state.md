@@ -25,8 +25,6 @@ ms.date: 3/31/2022
 
 This article fixes an issue that occurs when you use the DAO library to convert a database.
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 888634
 
 > [!NOTE]

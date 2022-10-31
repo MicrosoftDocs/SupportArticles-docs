@@ -22,8 +22,6 @@ ms.date: 3/31/2022
 
 # Error when opening the Click-to-Run version of an Office program or suite on a terminal server
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 Assume that you install the Click-to-Run version of a Microsoft Office program or suite on a terminal server. When you open the Office program or suite, you receive the following error message:

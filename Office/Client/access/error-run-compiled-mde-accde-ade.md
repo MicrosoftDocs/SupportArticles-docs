@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "The database cannot be opened because the VBA project contained in it cannot be read" when you run a compiled Microsoft Access MDE, ACCDE, or ADE file in Access 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Access databases that are created by using the 64-bit version of Microsoft Access 2010 and that are compiled as MDE, ACCDE, and ADE files have to be recompiled in Microsoft Access 2010 Service Pack 1 (SP1) to work correctly with Access 2010 SP1. 

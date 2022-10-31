@@ -1,5 +1,5 @@
 ---
-title: Office 365 subscription automatic license renewal fails when heartbeatcache in wrong location
+title: Microsoft 365 subscription automatic license renewal fails when heartbeatcache in wrong location
 description: The intention of this article is to identify reasons why paid subscriptions are not auto renewing as expected.
 author: MaryQiu1987
 ms.author: v-maqiu
@@ -15,9 +15,7 @@ appliesto:
 ms.date: 3/31/2022
 ---
 
-# Office 365 subscription automatic license renewal fails when heartbeatcache is in wrong location
-
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+# Microsoft 365 subscription automatic license renewal fails when heartbeatcache is in wrong location
 
 ## Symptoms
 
@@ -25,7 +23,7 @@ When O365 paid subscription tries to renew, the license fails and eventually dis
 
 Message 1: Couldn't Verify Subscription
 
-We couldn't verify your Office 365 subscription, so most features of \<application\> have been disabled. Please make sure you're connected to the internet and restart your application.
+We couldn't verify your Microsoft 365 subscription, so most features of \<application\> have been disabled. Please make sure you're connected to the internet and restart your application.
 
 :::image type="content" source="media/subscription-automatic-license-renew-fails/product-info.png" alt-text="Screenshot shows the message of Couldn't Verify Subscription.":::
 

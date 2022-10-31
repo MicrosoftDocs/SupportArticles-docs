@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # Excel statistical functions: STEYX
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 This article describes the STEYX function in Microsoft Office Excel 2003 and in later versions of Excel, illustrates how the function is used, and compares the results of the function for Excel 2003 and for later versions of Excel with the results of STEYX in earlier versions of Excel.

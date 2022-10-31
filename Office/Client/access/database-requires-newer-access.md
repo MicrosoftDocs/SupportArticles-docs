@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # "Database you are trying to open requires a newer version of Microsoft Access" error in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to open a Microsoft Access database, you receive the following error message:

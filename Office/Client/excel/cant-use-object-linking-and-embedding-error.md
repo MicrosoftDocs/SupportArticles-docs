@@ -17,18 +17,15 @@ ms.date: 3/31/2022
 
 # "Cannot use object linking and embedding" error in Excel 2016 for Mac
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
-##  Symptoms
+## Symptoms
 
 In Microsoft Excel 2016 for Mac, you receive the following error message:
 
 > Cannot use object linking and embedding
 
-##  Workaround
+## Workaround
 
 To work around this issue, follow these steps:
-
 
 1. Exit all Microsoft Office applications.   
 2. In the Finder, navigate to the following location:

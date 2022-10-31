@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # Error Message: That command cannot be used on multiple selections
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you attempt to copy nonadjacent cell or range selections, you may receive the following error message:

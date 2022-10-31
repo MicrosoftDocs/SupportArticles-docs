@@ -55,7 +55,7 @@ If your migration is taking longer than expected, choose the second option.
 
 ### Were you able to create/start the IMAP migration batch
 
-If you are not sure where to create a batch or you are not sure if you have an existing batch, sign in to the Exchange Admin Center (EAC) using your Office 365 tenant administrator credentials and navigate to **Recipients** > **Migration**.
+If you are not sure where to create a batch or you are not sure if you have an existing batch, sign in to the Exchange Admin Center (EAC) using your Microsoft 365 tenant administrator credentials and navigate to **Recipients** > **Migration**.
 
 If you are needing to create a new IMAP migration batch, you can select the + to get started. For more information, see [What you need to know about migrating your IMAP mailboxes to Microsoft 365 or Office 365](/Exchange/mailbox-migration/migrating-imap-mailboxes/migrating-imap-mailboxes) on how to create an IMAP migration batch.
 
@@ -84,7 +84,7 @@ Since you were able to create/start the migration batch, you may run into one of
 
 ### <a id="a-recipient-wasnt-found"></a> A recipient wasn't found for user@contoso.com on the target
 
-If you run into the below error, create a mailbox in Office 365 with the specified proxy address and retry creating/starting the batch. To create a new mailbox in Office 365, follow the steps in [Create user mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/create-user-mailboxes).
+If you run into the below error, create a mailbox in Microsoft 365 with the specified proxy address and retry creating/starting the batch. To create a new mailbox in Microsoft 365, follow the steps in [Create user mailboxes in Exchange Online](/exchange/recipients-in-exchange-online/create-user-mailboxes).
 
 A recipient wasn't found for `user@contoso.com` on the target. Create a recipient of the appropriate type for this migration on the target and try again.
 
@@ -212,7 +212,7 @@ For more information about assigning Exchange permissions, see [Assign permissio
 
 ### I'm seeing duplicate emails
 
-If you are migrating from Gmail/Google Apps, email duplication is known to occur when [labels](https://support.google.com/mail/answer/118708?hl=en) are used in the Gmail/Google Apps mailbox and/or when a folder called **[Gmail]** is not added to the list of excluded folders when the migration batch is created (see screenshot below). This will cause the Office 365 mailbox to double, or more, in size and may prevent the user's mailbox from completely migrating. Users that have already been migrated will need to manually clean up the duplication in their Office 365 mailboxes.
+If you are migrating from Gmail/Google Apps, email duplication is known to occur when [labels](https://support.google.com/mail/answer/118708?hl=en) are used in the Gmail/Google Apps mailbox and/or when a folder called **[Gmail]** is not added to the list of excluded folders when the migration batch is created (see screenshot below). This will cause the Microsoft 365 mailbox to double, or more, in size and may prevent the user's mailbox from completely migrating. Users that have already been migrated will need to manually clean up the duplication in their Microsoft 365 mailboxes.
 
 If you have additional mailboxes that you have not yet migrated, you can use the below steps to avoid email duplication:
 
@@ -238,7 +238,7 @@ If you have additional mailboxes that you have not yet migrated, you can use the
 
 ### This mailbox is full
 
-You will run into the below error if you have exceeded the storage limit for the Office 365 mailbox.
+You will run into the below error if you have exceeded the storage limit for the Microsoft 365 mailbox.
 
 > This mailbox is full. Please free up some space so that email can be downloaded.
 
@@ -248,7 +248,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
 
 1. Remove the existing batch.
 
-    1. First you will need to log into the Exchange Admin Center (EAC) using your Office 365 tenant administrator credentials.
+    1. First you will need to log into the Exchange Admin Center (EAC) using your Microsoft 365 tenant administrator credentials.
 
     2. Navigate to **Recipients** > **Migration**.
 
@@ -271,7 +271,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
     5. Select **Apply**.
     6. Repeat the previous five steps for each additional mailbox.
 
-3. Make room in your Office 365 mailbox by deleting the duplicate emails and the **[Gmail]** folder. To complete the removal of the duplicate emails and the **[Gmail]** folder, clear them from your Deleted Items folder.
+3. Make room in your Microsoft 365 mailbox by deleting the duplicate emails and the **[Gmail]** folder. To complete the removal of the duplicate emails and the **[Gmail]** folder, clear them from your Deleted Items folder.
 
 4. Recreate the batch, making sure to exclude the **[Gmail]** folder as shown below:
 
@@ -296,7 +296,7 @@ If you are migrating from Gmail/Google Apps, email duplication is known to occur
 
 ### My problem is none of the above errors
 
-Some problems can be fixed by removing and recreating the batch. Below are steps on how to do so. First you will need to log into the Exchange Admin Center (EAC)) using your Office 365 tenant administrator credentials.
+Some problems can be fixed by removing and recreating the batch. Below are steps on how to do so. First you will need to log into the Exchange Admin Center (EAC)) using your Microsoft 365 tenant administrator credentials.
 
 **Remove existing batch:**
 
@@ -333,7 +333,7 @@ Be aware of the following restrictions that apply to IMAP migrations:
 
 ### My problem is none of the above (if issue isn't resolved)
 
-Sometimes the connection settings in an existing IMAP migration endpoint can change and you will need to remove and recreate the endpoint. Below are steps on how to do so. First you will need to log into the Exchange Admin Center (EAC) using your Office 365 tenant administrator credentials. Follow the below steps to remove and recreate the endpoint.
+Sometimes the connection settings in an existing IMAP migration endpoint can change and you will need to remove and recreate the endpoint. Below are steps on how to do so. First you will need to log into the Exchange Admin Center (EAC) using your Microsoft 365 tenant administrator credentials. Follow the below steps to remove and recreate the endpoint.
 
 **Remove existing endpoint:**
 
@@ -366,7 +366,7 @@ There potentially may be a problem with the account that is being used to create
 
 Below are the steps on how to add the account to the appropriate role group so that you can rerun the migration batch with this account:
 
-1. Sign in to the [Exchange Administration Center](https://outlook.office365.com/ecp/) (EAC) with the Office 365 tenant administrator credentials.
+1. Sign in to the [Exchange Administration Center](https://outlook.office365.com/ecp/) (EAC) with the Microsoft 365 tenant administrator credentials.
 2. In the EAC, navigate to **Permissions** > **Admin Roles**.
 3. Select the role group you want to add members to, and then select **Edit** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/edit-icon.png" border="false":::.
 4. In the Members section, select **Add** :::image type="icon" source="media/troubleshoot-issues-with-imap-mailbox-migration/add-icon.png" border="false":::.
@@ -461,7 +461,7 @@ If you are migrating from an Exchange server, launch the Services application (*
 
 ### The connection to the server Servername.contoso.com timed out (if issue not resolved)
 
-If you are using an existing IMAP migration endpoint, remove and recreate the endpoint, and then try to create the IMAP migration batch. Follow the steps below to remove the existing endpoint and recreate it with the appropriate settings. First you will need to log into the [EAC](https://outlook.office365.com/ecp/) using your Office 365 tenant administrator credentials.
+If you are using an existing IMAP migration endpoint, remove and recreate the endpoint, and then try to create the IMAP migration batch. Follow the steps below to remove the existing endpoint and recreate it with the appropriate settings. First you will need to log into the [EAC](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials.
 
 **Remove existing endpoint:**
 
@@ -573,7 +573,7 @@ The CSV file can contain up to 50,000 rows, one row for each user, and can be as
 If you plan to migrate lots of users, decide which ones to include in each batch. For example, if you have 10,000 accounts to migrate, you could run four batches with 2,500 users each. You could also divide the batches alphabetically; by user type, such as faculty, students, and alumni; by class, such as freshman, sophomore, junior, and senior; or in other ways that meet your organization's needs.
 
 > [!NOTE]
-> One strategy is to create Exchange Online mailboxes and migrate email for the same group of users. For example, if you import 100 new users to your Office 365 organization, create a migration batch for those same 100 users. This is an effective way to organize and manage your migration from an on-premises messaging system to Exchange Online.
+> One strategy is to create Exchange Online mailboxes and migrate email for the same group of users. For example, if you import 100 new users to your Microsoft 365 organization, create a migration batch for those same 100 users. This is an effective way to organize and manage your migration from an on-premises messaging system to Exchange Online.
 
 **Did this solve your problem?**
 
@@ -638,7 +638,7 @@ In order to determine if a batch already exists with the same name, log into the
 
 You can often improve the performance of your IMAP migration by allowing for more simultaneous moves, without negatively impacting the source environment performance. The default number of simultaneous moves is 20. This value is located on the migration endpoint. Below are the steps on how to change it:
 
-1. Log into the [Exchange Admin Center](https://outlook.office365.com/ecp/) (EAC) using your Office 365 tenant administrator credentials.
+1. Log into the [Exchange Admin Center](https://outlook.office365.com/ecp/) (EAC) using your Microsoft 365 tenant administrator credentials.
 2. In the EAC, navigate to **Recipients** > **Migration**.
 3. Select **...** and then select **Migration endpoints**.
 4. Double-click on the IMAP migration endpoint.
@@ -655,7 +655,7 @@ If the migration batch is already started, you will need to stop it, make the ab
 
 We recommend that you have your users clean up their mailboxes before migration as this will help speed up the migration process. Also, as a tenant administrator, you may want to exclude certain folders such as Deleted Items, and shared or public folders. See the below steps on how to exclude folders:
 
-1. Log into the [Exchange Admin Center](https://outlook.office365.com/ecp/) (EAC) using your Office 365 tenant administrator credentials.
+1. Log into the [Exchange Admin Center](https://outlook.office365.com/ecp/) (EAC) using your Microsoft 365 tenant administrator credentials.
 2. Go to **recipient** > **migration**.
 3. Select **+** and choose **Migrate to Exchange Online**.
 4. Select **IMAP** **migration** and select **next**.
@@ -713,7 +713,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 2. Select the **Behavioral Intrusion Detection** tab, and then select **Configure Flood Mitigation Settings**.
 3. In the Flood Mitigation dialog box, follow these steps:
 
-   - Select the **IP Exceptions** tab, and then type the IP addresses that the Office 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Office 365, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
+   - Select the **IP Exceptions** tab, and then type the IP addresses that the Microsoft 365 environment uses to connect during the mailbox move operation. To view a list of the IP address ranges and URLs that are used by Exchange Online in Microsoft 365, see [Microsoft 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?preserve-view=true&view=o365-worldwide).
 
    - Select the **Flood Mitigation** tab, and then, next to **Maximum TCP Requests per minute per IP address**, select **Edit**. In the **Custom limit** box, type a number to increase the limit.
 
@@ -730,7 +730,7 @@ IMAP Migrations can sometimes be treated like a denial of service attack by cert
 > [!NOTE]
 > You can skip this page if you don't control the IMAP system that you are migrating from.
 
-The Office 365 Network Analysis Tool is designed to help analyze networking related issues between an external network and the Office 365 services.
+The Microsoft 365 Network Analysis Tool is designed to help analyze networking related issues between an external network and the Microsoft 365 services.
 
 1. Select one of the below appropriate regional URLs.
 
@@ -747,9 +747,9 @@ The Office 365 Network Analysis Tool is designed to help analyze networking rela
 5. After the machine reboots, go back to the appropriate regional URL listed above. You will then be prompted to run the application as shown below:
 
     :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/prompted-waring-to-run-this-application.png" alt-text="Screenshot of a security warning prompted to run the application.":::
-6. Once you install the application, you will then enter the Office 365 tenant name in the Office 365 Network Analysis tool as shown below:
+6. Once you install the application, you will then enter the Microsoft 365 tenant name in the Microsoft 365 Network Analysis tool as shown below:
 
-    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="Screenshot of entering the Office 365 tenant name in the Office 365 Network Analysis tool.":::
+    :::image type="content" source="media/troubleshoot-issues-with-imap-mailbox-migration/enter-office-365-tenant-name.png" alt-text="Screenshot of entering the Microsoft 365 tenant name in the Microsoft 365 Network Analysis tool.":::
 
 For more information on IMAP migration performance and best practices, see [Microsoft 365 and Office 365 email migration performance and best practices](/Exchange/mailbox-migration/office-365-migration-best-practices).
 
@@ -763,7 +763,7 @@ If you are migrating from Google apps refer to these articles concerning [bandwi
 ### My migration is slow (if issue still not solved)
 
 Some problems can be fixed by removing and recreating the batch. Below are steps on how to do so.
-First you will need to log into the [EAC](https://outlook.office365.com/ecp/) using your Office 365 tenant administrator credentials.
+First you will need to log into the [EAC](https://outlook.office365.com/ecp/) using your Microsoft 365 tenant administrator credentials.
 
 **Remove existing batch:**
 

@@ -1,6 +1,6 @@
 ---
 title: User contact photos in Lync aren't displayed correctly
-description: Describes scenarios in which a user's contact photos don't display correctly in Microsoft Skype for Business Online in Microsoft Office 365.
+description: Describes scenarios in which a user's contact photos don't display correctly in Microsoft Skype for Business Online in Microsoft 365.
 author: simonxjx
 manager: dcscontentpm
 localization_priority: Normal
@@ -30,7 +30,7 @@ When you connect to Skype for Business Online (formerly Lync Online), you may ex
 
 ### Resolution for Issue 1
 
-To resolve issue 1, upload a photo from the Office 365 portal. Depending on which version of Exchange mailbox the user has, there are different upload options. For more information about how to upload a photo from Lync 2010 or Lync 2013, go to the following Microsoft website:
+To resolve issue 1, upload a photo from the Microsoft 365 portal. Depending on which version of Exchange mailbox the user has, there are different upload options. For more information about how to upload a photo from Lync 2010 or Lync 2013, go to the following Microsoft website:
 
 [Change your picture in Lync](https://office.microsoft.com/redir/ha102925442.aspx)
 

@@ -21,8 +21,6 @@ ms.date: 3/31/2022
 
 # How to create a dynamic defined range in an Excel worksheet
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 In Microsoft Excel, you may have a named range that must be extended to include new information. This article describes a method to create a dynamic defined name.

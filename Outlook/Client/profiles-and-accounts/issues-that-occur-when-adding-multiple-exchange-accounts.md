@@ -16,7 +16,7 @@ appliesto:
   - Outlook 2016
   - Outlook 2013
   - Microsoft Outlook 2010
-  - Outlook for Office 365
+  - Outlook for Microsoft 365
 search.appverid: MET150
 ms.date: 3/31/2022
 ---
@@ -24,7 +24,7 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 981245
 
-In Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Office 365, you can add multiple Microsoft Exchange accounts to the same profile if one of the following conditions is true:
+In Microsoft Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 and Outlook for Microsoft 365, you can add multiple Microsoft Exchange accounts to the same profile if one of the following conditions is true:
 
 - You have Full Access permission to the additional Exchange mailboxes.
 - You have the credentials to access the additional Exchange mailboxes if you don't have Full Access permission to them.
@@ -36,7 +36,7 @@ This article describes the following two scenarios in which this feature can cau
 
 ## Scenario 1: The manager and delegate mailboxes are added to the same profile
 
-In Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Office 365 a manager can add a delegate's account to their profile and the delegate can add the manager's account to their profile. This type of profile configuration isn't supported, however there is no warning or error message displayed when this scenario is set up.
+In Outlook 2010, Outlook 2013, and Outlook 2016, Outlook 2019, and Outlook for Microsoft 365 a manager can add a delegate's account to their profile and the delegate can add the manager's account to their profile. This type of profile configuration isn't supported, however there is no warning or error message displayed when this scenario is set up.
 
 In the following example, an Outlook 2010 profile displays two Exchange accounts that have been added to it.
 
@@ -78,7 +78,7 @@ The following steps demonstrate two problems that may occur if manager and deleg
 
 **Note**: The Calendar sharing improvements introduced in Outlook for Microsoft 365 that are based on the REST protocol don't prevent such problems.
 
-1. In Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Office 365, use a profile for a manager's mailbox to configure a delegate for the manager's mailbox with default settings.
+1. In Outlook 2010, Outlook 2013, Outlook 2016, Outlook 2019 or Outlook for Microsoft 365, use a profile for a manager's mailbox to configure a delegate for the manager's mailbox with default settings.
 
     **Note**: The default delegate settings don't provide the delegate access to items that are owned by the manager and marked as private.
 

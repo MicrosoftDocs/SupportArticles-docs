@@ -20,6 +20,8 @@ ms.date: 3/31/2022
 
 _Original KB number:_ &nbsp; 2989744
 
+[!include[Purview banner](../../../includes/purview-rebrand.md)]
+
 ## Problem
 
 When you try to preview the results of an In-Place eDiscovery search in Exchange Online, message previews are not displayed when you select items in inactive mailboxes. Additionally, you receive an error message that resembles the following:

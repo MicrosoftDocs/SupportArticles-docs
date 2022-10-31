@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # "Runtime error 2147319779 (8002801d) library not registered" when setting a company as default
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 "Runtime error -2147319779 (8002801d) automation error library not registered." This error occurs when trying to set a company as default.

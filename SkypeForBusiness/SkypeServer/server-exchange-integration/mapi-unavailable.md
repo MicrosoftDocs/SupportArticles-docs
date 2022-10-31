@@ -24,7 +24,7 @@ In certain situations, the MAPI connection to Exchange Server may not be availab
 - You have a new installation of Office 2016, or you create a new Outlook 2016 profile.
 - You upgrade an existing Office 2013 installation to Office 2016, and then you create a new Outlook 2016 Exchange Server profile.
 
-This issue may occur for Office 365 Exchange Online or Exchange On-Premises users. When this issue occurs, the MAPI connection is unavailable to Skype for Business 2016 clients. Additionally, you may experience the following symptoms:
+This issue may occur for Microsoft 365 Exchange Online or Exchange On-Premises users. When this issue occurs, the MAPI connection is unavailable to Skype for Business 2016 clients. Additionally, you may experience the following symptoms:
 
 - The Skype for Business Configuration Information feature (hold down the Ctrl key and right-click the Skype for Business 2016 system tray icon) shows a "MAPI unavailable" status, as shown.
 
@@ -57,7 +57,7 @@ First Release Deferred Channel (FRDC): Fixed in builds 16.0.6965.2078 and later
 
 Deferred Channel (DC): Fixed in builds 16.0.6965.2092 and later
 
-For more information about C2R Channel builds, see [Office 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
+For more information about C2R Channel builds, see [Microsoft 365 client update channel releases](/officeupdates/release-notes-microsoft365-apps).
 
 ## Workaround
 

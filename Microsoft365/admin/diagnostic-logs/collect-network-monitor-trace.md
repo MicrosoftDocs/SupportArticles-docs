@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # How to collect a Network Monitor trace in Office 365 Dedicated/ITAR
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 To help you resolve an issue that you have reported, Microsoft Support may request that you run a network trace by using the Network Monitor (NetMon.exe) tool.  

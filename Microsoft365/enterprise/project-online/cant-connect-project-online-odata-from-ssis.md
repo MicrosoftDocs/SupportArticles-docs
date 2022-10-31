@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # You can't connect to Project Online OData from SSIS
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to connect to your Project Online OData feeds from SQL Server Integration Services (SSIS), you receive the following error message:

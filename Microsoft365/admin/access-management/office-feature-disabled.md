@@ -43,8 +43,6 @@ ms.date: 3/31/2022
 ---
 # (This feature has been disabled by your administrator) error in Microsoft Office
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you try to perform certain actions in Microsoft 365 Apps, Office LTSC 2021, Office 2019, Office 2016, or Office 2013 applications, you receive the following error message:

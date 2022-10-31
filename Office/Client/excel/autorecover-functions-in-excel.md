@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 
 # Description of the Auto-Recover functions in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Excel now has a built-in Auto-Recover feature that has replaced the Auto-Save add-in that exists in versions of Excel that are earlier than Microsoft Excel 2002. The Auto-Recover feature saves copies of all open Excel files at a user-definable fixed interval. The files can be recovered if Excel closes unexpectedly, for example, during a power failure.

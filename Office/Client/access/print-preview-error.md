@@ -19,8 +19,6 @@ ms.date: 3/31/2022
 ---
 # "No current record" error when you print or preview a report in Access
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 _Original KB number:_ &nbsp; 888635
 
 > [!NOTE]

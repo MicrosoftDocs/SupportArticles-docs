@@ -21,8 +21,6 @@ description: Describes a workaround for adding guest users to the Microsoft 365 
 
 # Enabling guest users to access resources through the Microsoft 365 admin center
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Administrators can make a change in Settings to allow team leaders and users who are not admins to add other guest users who work remotely. 

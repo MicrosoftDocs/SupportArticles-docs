@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # PowerPoint for Mac closes or quit unexpectedly when you start it or open a new presentation
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Symptoms
 
 When you start Microsoft PowerPoint for Mac, or when you try to open a new presentation, you experience one of the following conditions:

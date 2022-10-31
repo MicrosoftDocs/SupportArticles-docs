@@ -1,6 +1,6 @@
 ---
-title: A user or an administrator forgot their password
-description: Describes a scenario in which a user or an administrator forgets his or her password and can't sign in to Office 365, Azure, or Microsoft Intune. Provides a resolution.
+title: Forgot password to sign in to Microsoft 365, Intune, or Azure
+description: Provides a resolution for when a user or administrator forgets their password to sign in to Microsoft 365, Intune, or Azure.
 author: MaryQiu1987
 manager: dcscontentpm
 localization_priority: Normal
@@ -9,44 +9,47 @@ search.appverid:
 audience: ITPro
 ms.topic: troubleshooting
 ms.author: v-maqiu
-ms.custom: CSSTroubleshoot
+ms.custom: 
+  - CI 162285
+  - CSSTroubleshoot
 appliesto: 
   - Cloud Services (Web roles/Worker roles)
   - Azure Active Directory
   - Microsoft Intune
   - Azure Backup
-  - Office 365 Identity Management
+  - Microsoft 365
 ms.date: 3/31/2022
 ---
 
-# A user or an administrator forgot his or her password in Office 365, Azure, or Intune
+# Forgot password to sign in to Microsoft 365, Intune, or Azure
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
+## Symptoms
 
-## Problem
+You can't sign in to Microsoft 365, Microsoft Azure, or Microsoft Intune because you forgot your password.
 
-A user or admin forgot his or her password and can't sign in to Office 365, Microsoft Azure, or Microsoft Intune.
+## Resolution
 
-## Solution
+Use one of the following options to reset your password, depending on your existing privileges to the service that you're trying to sign in to.
 
-To fix this issue, do one of the following:
+If you don't have administrator privileges:
 
-- Try to reset your own password by using the Self-Service Password Reset wizard:
-  - If you're using a work or school account, go to [https://passwordreset.microsoftonline.com](https://passwordreset.microsoftonline.com/).
-  - If you're using a Microsoft account, go to [https://account.live.com/ResetPassword.aspx](https://account.live.com/resetpassword.aspx).
+- Ask your administrator to reset your password.
+- If your administrator has given you the ability to reset your own password, use the Self-Service Password Reset wizard.
+  - If you're using a work or school account, use [https://passwordreset.microsoftonline.com](https://passwordreset.microsoftonline.com/).
+  - If you're using a Microsoft account, use [https://account.live.com/ResetPassword.aspx](https://account.live.com/resetpassword.aspx).
 
-  If the admin turned on the capability to let you to reset your own password, you will be able to reset your own password. Otherwise, the password reset form gives you the option to contact your admin.
-- If you're an admin and you want to enable password reset for your users, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
-- If you're an admin, you can try to reset your own password if you had already set up an alternate email address and a mobile phone number.
-  - For more info about how to reset the password for your company admin account in Azure or Intune, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
-- If you're an admin and your company has more than one admin, ask another admin to reset your password.
+If you have administrator privileges:
 
-> [!NOTE]
-> - You can use the Self-Service Password Reset wizard to contact Support when self-service password reset fails. You may need to wait a few seconds before the link to contact Support appears.
-> - When you submit your request to Support, include your name, telephone number and email address so that Support knows how to contact you.
+- Reset your own password if you've already set up an alternative email address and a mobile phone number.
+- Request another administrator in your company to reset your password.
+- If you've forgotten the password for your company's administrator account in Azure or Intune, see [Quickstart: Self-service password reset](/azure/active-directory/authentication/quickstart-sspr).
 
 ## More information
 
-For more info about how to reset a user's password, see [Reset a user's password](/azure/active-directory/fundamentals/active-directory-users-reset-password-azure-portal).
-
-Still need help? Go to [Microsoft Community](https://answers.microsoft.com/) or the [Azure Active Directory Forums](https://social.msdn.microsoft.com/forums/azure/home?forum=windowsazuread) website.
+- You can use the Self-Service Password Reset wizard to contact Support if the self-service password reset fails. You may have to wait for a few seconds before the link to contact Support displays.
+- When you submit your request to Support, include your name, telephone number, and email address so that a Support professional can contact you.
+- If you're the only administrator on your Azure subscription, and you have forgotten the password, contact [Azure support](https://azure.microsoft.com/support/create-ticket/).  
+- You can also use the following resources to contact Support:
+  - Microsoft 365: [Get support for Microsoft 365](/microsoft-365/admin/get-help-support)
+  - Azure: [Get support for Azure](https://azure.microsoft.com/support/create-ticket/)
+  - Intune: [Get support for Intune](/mem/get-support)

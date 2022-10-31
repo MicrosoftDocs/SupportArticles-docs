@@ -20,8 +20,6 @@ ms.date: 3/31/2022
 
 # Delete cells by using a "For Each...Next" loop in Excel
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft Excel 2002 and later versions of Excel delete cells in a "For Each...Next" loop in a different way than Microsoft Excel 97 and earlier versions of Excel do.

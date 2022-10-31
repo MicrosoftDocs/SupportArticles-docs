@@ -18,8 +18,6 @@ ms.date: 3/31/2022
 
 # An overview of Microsoft Office Click-to-Run for Office 2010
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 Microsoft is offering a new way to download and install products of Microsoft Office 2010. This technology is called Microsoft Office Click-to-Run, and this article discusses how Office Click-to-Run works and lists some frequently asked questions (FAQ).

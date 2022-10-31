@@ -17,8 +17,6 @@ ms.date: 3/31/2022
 
 # How do I keep on running Microsoft 365 Apps for enterprise 2013?
 
-[!INCLUDE [Branding name note](../../../includes/branding-name-note.md)]
-
 ## Summary
 
 > [!NOTE]
@@ -29,14 +27,15 @@ To prevent Microsoft 365 Apps for enterprise from being automatically updated to
 > [!IMPORTANT]
 > Apply one of these methods only on installations of Microsoft 365 Apps for enterprise that are configured to automatically receive monthly updates over the Internet. If you've configured Microsoft 365 Apps for enterprise to receive updates from a location on your internal network, or if you've turned off automatic updates, you don't have to use these methods, because you control when the update to Office 2016 occurs.
 
-We've enhanced the upgrade and installation experience, and for Office 365 subscribers we've made changes to how Office 2016 apps will be updated from this point forward. We're also delivering new tools and resources to help you prepare, deploy, and manage Office.
+We've enhanced the upgrade and installation experience, and for Microsoft 365 subscribers we've made changes to how Office 2016 apps will be updated from this point forward. We're also delivering new tools and resources to help you prepare, deploy, and manage Office.
 
 ## Resolution
 
 There are two ways to prevent Microsoft 365 Apps for enterprise from updating to Office 2016. Use the method that works best for your organization. 
 
 > [!NOTE]
-> - These methods also work for Office 365 Business, which is the version of Office that comes with the Office 365 Business and Office 365 Business Premium plans.
+>
+> - These methods also work for Microsoft 365 Business.
 > - Prior to implementing either Method 1 or 2 below, ensure that you have the latest Office 2013 updates installed. 
 
 ### Method 1: Use Group Policy templates
@@ -76,4 +75,4 @@ Then, add the following value under the office update subkey:
 
 ## More Information
 
-Support for Office 2013 versions of the Office 365 client applications ended on February 28, 2016. Therefore, we recommend that you update to the Office 2016 version of Microsoft 365 Apps for enterprise as soon as possible. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).
+Support for Office 2013 versions of the Microsoft 365 client applications ended on February 28, 2016. Therefore, we recommend that you update to the Office 2016 version of Microsoft 365 Apps for enterprise as soon as possible. For more information, see [Support for the 2013 version of Microsoft 365 Apps for enterprise ends February 28, 2017](https://support.microsoft.com/help/3199744).
