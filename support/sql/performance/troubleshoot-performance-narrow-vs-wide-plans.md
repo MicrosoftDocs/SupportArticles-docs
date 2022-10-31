@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot performance issues with narrow and wide plans in SQL Server
-description: Provides information to understand and troubleshoot updates that use wide or narrow plans.
+description: Provides information to understand and troubleshoot update statements that use wide or narrow plans.
 ms.date: 10/28/2022
 ms.custom: sap:Performance
 ms.topic: troubleshooting
@@ -12,13 +12,17 @@ ms.author: liweiyin
 
 # Troubleshoot UPDATE performance issues with narrow and wide plans in SQL Server
 
+_Applies to:_ &nbsp; SQL Server
+
+This article provides information to understand and troubleshoot `UPDATE` statements that use wide or narrow plans.
+
 ## Symptoms
 
-An UPDATE statement may be faster in some cases and slower in others. There are many factors that can lead to such a variance, including the number of rows updated and the resource usage on the system (blocking, CPU, memory, or I/O). This article will cover one specific reason for the variance: the choice of query plan made by SQL Server.
+An `UPDATE` statement may be faster in some cases and slower in others. There are many factors that can lead to such a variance, including the number of rows updated and the resource usage on the system (blocking, CPU, memory, or I/O). This article will cover one specific reason for the variance: the choice of query plan made by SQL Server.
 
 ## What are narrow and wide plans?
 
-When you execute an UPDATE against a clustered index column, SQL Server updates not only the clustered index itself but also all the non-clustered indexes because the non-clustered indexes contain the cluster index key.
+When you execute an `UPDATE` statement against a clustered index column, SQL Server updates not only the clustered index itself but also all the non-clustered indexes because the non-clustered indexes contain the cluster index key.
 
 SQL Server has two options to do the update:
 
@@ -76,7 +80,7 @@ To understand how narrow and wide plans work, follow these steps in the followin
     CREATE INDEX ic5 ON mytable1(c5)
     ```
 
-1. Run the following three T-SQL update statements, and compare the query plans:
+1. Run the following three T-SQL `UPDATE` statements, and compare the query plans:
 
     - `UPDATE mytable1 SET c1=c1 WHERE c1=1 OPTION(RECOMPILE)` - one row is updated
     - `UPDATE mytable1 SET c1=c1 WHERE c1=50000 OPTION(RECOMPILE)` - 250 rows are updated.
@@ -177,7 +181,7 @@ To test if a wide plan is faster than a narrow plan when the data is in a buffer
 
     For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
 
-    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close, and the Per-Index update (wide plan) is less beneficial because the data is already in the buffer before the UPDATE was executed.
+    The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close, and the Per-Index update (wide plan) is less beneficial because the data is already in the buffer before the `UPDATE` statement was executed.
 
     The following screenshot shows wide and narrow plans when data is cached in the buffer pool:
 
@@ -353,5 +357,5 @@ The following screenshot shows that the wide plan is used when the partition sch
 
 - Wide plans boost performance at the expense of consuming extra memory.
 - If the expected query plan isn't used, it may be due to stale statistics (not reporting correct data size), max server memory setting, or other unrelated issues like parameter-sensitive plans.
-- The duration of updates using a wide plan depends on several factors, and in some cases, it may take longer than narrow plans.
+- The duration of `UPDATE` statements using a wide plan depends on several factors, and in some cases, it may take longer than narrow plans.
 - Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) will force a wide plan; trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338) will force a narrow plan.
