@@ -131,7 +131,7 @@ The answer is that it depends on whether the data and index pages are cached in 
 
 ### Data is cached in the buffer pool
 
-If the data is already in the buffer pool, the query with the wide plan doesn't offer other performance benefits because the wide plan is designed to improve the I/O performance (physical reads, not logical reads).
+If the data is already in the buffer pool, the query with the wide plan doesn't necessarily offer extra performance benefits compared to narrow plans because the wide plan is designed to improve the I/O performance (physical reads, not logical reads).
 
 To test if a wide plan is faster than a narrow plan when the data is in a buffer pool, follow these steps in the following environment:
 
