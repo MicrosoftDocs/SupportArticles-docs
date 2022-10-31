@@ -15,7 +15,7 @@ ms.technology: windows-server-active-directory
 ---
 # Support policy and known issues for Active Directory Migration Tool
 
-This article describes information about the current level of support for Active Directory Migration Tool on current Windows Client and Windows Server operating systems. This article also lists known issues that administrators may encounter when they attempt to migrate user profiles, security principals, passwords, or sIDHistory data between Active Directory domains and forests.
+This article describes information about the current level of support for Active Directory Migration Tool (ADMT) on current Windows Client and Windows Server operating systems. This article also lists known issues that administrators may encounter when they attempt to migrate user profiles, security principals, passwords, or sIDHistory data between Active Directory domains and forests.
 
 _Applies to:_ &nbsp; Windows Server 2022, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2  
 _Original KB number:_ &nbsp; 4089459
@@ -36,44 +36,49 @@ ADMT has not been updated to support the following operating systems:
 
 You may encounter the following known issues when you run ADMT on operating systems that are not supported:
 
-- Cannot migrate user profiles on Operating Systems newer than Windows 7 / Windows Server 2008 R2
-- Is incompatible with secure defaults in modern Operating Systems
-- Newer versions of SQL Server have not been tested and may have incompatibilities or issues
+- ADMT can't migrate user profiles from operating systems that are newer than Windows 7 or Windows Server 2008 R2 to other operating systems. You also can't migrate user profiles to operating systems that are newer than Windows 7 or Windows Server 2008 R2 from older operating systems.
+- ADMT isn't compatible with the secure defaults that modern operating systems use.
+- ADMT hasn't been tested together with newer versions of SQL Server. If you use ADMT in such circumstances, you may see incompatibilities or issues.
 
 > [!NOTE]  
-> Your experience may vary, depending on many factors, including the Windows version that you are migrating. Use at your own risk.
+> Your experience with ADMT depends on many factors, including the Windows version that you are migrating from and the Windows version that you are migrating to. Use the tool at your own risk.
 
 ## Support information
 
-The ADMT 3.2 code base has been deprecated and Microsoft has officially halted any development on the ADMT code base for years.
+### Commercial Windows support
 
-ADMT is not supported ineligible for security fixes, bug fixes or design changes. Similarly, support cases may not be escalated to the product teams and are completely on a "best effort" basis.
+Microsoft addresses support cases for ADMT issues completely on a "best effort" basis. Support cases may not be escalated to the product teams. Microsoft can't guarantee that issues will be resolved.
 
-1. Commercial Windows Support will continue to work ADMT cases with best effort.
-1. Issue resolution is not guaranteed.
-1. ADMT is not currently eligible for code level updates.
+### Code-level support
+
+The ADMT 3.2 code base has been deprecated. Microsoft has officially halted any development on the ADMT code base. ADMT isn't eligible for security fixes, bug fixes, or design changes.
 
 ## Common support scenarios and known issues
 
-Below is a list of commonly seen issues when troubleshooting ADMT.
+This section lists the most common issues that you may experience while using ADMT.
 
-### ADMT cannot be run on devices that have Windows Defender Credential Guard enabled
+### You can't run ADMT on devices that have Windows Defender Credential Guard enabled
 
-**Issue**: You may see errors similar to: Failed to move source object 'CN=User1. Verify that the caller's account is not marked sensitive and therefore cannot be delegated. hr=0x8009030e. No credentials are available in the security package.
+**Issue**: You see errors that resemble the following:
 
-**Solution**: Temporarily disable Credential Guard on the ADMT server. Note: Please work with your security team before making the changes to Credential Guard and take the backup of server before any changes.
+> Failed to move source object 'CN=User1. Verify that the caller's account is not marked sensitive and therefore cannot be delegated. hr=0x8009030e. No credentials are available in the security package.
 
-- To disable Credential Guard, run the script from this article then set the corresponding GPO to Disabled, otherwise CG will be re-enabled on the next reboot.
-- Computer Configuration -> Administrative Templates -> System -> Device Guard -> Secure Launch Configuration
+**Solution**: Temporarily disable Credential Guard on the ADMT server.
+
+> [!IMPORTANT]  
+> Please consult your security team before making  changes to Credential Guard. Back up the ADMT server before you make any changes.
+
+[Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO).
+Otherwise, the computer will re-enable Credential Guard the next time it restarts.
 
 > [!NOTE]  
-> A group policy setting of "Not Configured" means credential guard will be enabled on 22H2 devices).
+> On devices that run Windows Server 2022, version 2H, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
 
 ### Domain controllers cannot use unconstrained delegation
 
-**Issue**: ADMT requires Domain Controllers to use unconstrained delegation during the migration process which is no longer allowed or recommended
+**Issue**: ADMT requires Domain Controllers to use unconstrained delegation during the migration process. This practice is no longer allowed or recommended.
 
-**Solution**: Install and run ADMT apps on the target Domain Controller which removes the need for delegation.
+**Solution**: Install and run ADMT apps on the target Domain Controller. This configuration removes the need for delegation.
 
 ### Modern apps fail to start after user profile migration
 
