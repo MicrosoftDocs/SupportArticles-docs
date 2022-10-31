@@ -14,10 +14,6 @@ ms.author: liweiyin
 
 _Applies to:_ &nbsp; SQL Server
 
-This article provides information to understand and troubleshoot `UPDATE` statements that use wide or narrow plans.
-
-## Symptoms
-
 An `UPDATE` statement may be faster in some cases and slower in others. There are many factors that can lead to such a variance, including the number of rows updated and the resource usage on the system (blocking, CPU, memory, or I/O). This article will cover one specific reason for the variance: the choice of query plan made by SQL Server.
 
 ## What are narrow and wide plans?
