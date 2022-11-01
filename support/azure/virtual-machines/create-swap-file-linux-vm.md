@@ -1,6 +1,6 @@
 ---
-title: Create a SWAP file for a Azure Linux VM
-description: Describes how to create a SWAP file for a Azure Linux VM.
+title: Create a SWAP file for an Azure Linux VM
+description: Describes how to create a SWAP file for an Azure Linux VM.
 ms.date: 10/27/2022
 ms.service: virtual-machines
 ms.subservice: vm-cannot-start-stop
@@ -9,7 +9,7 @@ ms.author: mabicca
 author: mabicca
 ---
 
-# Create a SWAP file for a Azure Linux VM
+# Create a SWAP file for an Azure Linux VM
 
 To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. The resource disk is only recommended to be used for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
 
