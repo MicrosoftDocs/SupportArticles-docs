@@ -11,7 +11,7 @@ author: mabicca
 
 # Create a SWAP file for a Azure Linux VM
 
-To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It's also important to remember that SWAP or cache files are the only things we recommend using the resource disk for. This is because when a VM is stopped or moved to a different container or host, all data on the resource disk will be lost. So it's ideal for temporary caches and SWAP files.
+To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It is important to remember that the resource disk should never be used to store data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. The resource is only recommended to be used for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview#temporary-disk).
 
 ## Disable SWAP creation in waagent configuration
 
@@ -39,18 +39,18 @@ Then, create the SWAP file under the resource disk path or a custom path.
 
 ## Create a SWAP file under the resource disk path
 
-1. Create a new file named SWAP.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
+1. Create a new file named swap.sh under `/var/lib/cloud/scripts/per-boot` with the following script:
 
     ```bash
     #!/bin/sh
     size=`df -h --output=target, avail | grep -i ^\/mnt | awk '{print $2}' | cut -b1,2`
-    SWAPsize=`echo "scale=0; ($size*0.3)/1" | bc`
-    echo $SWAPsize
-    dd if=/dev/zero of=/mnt/SWAPfile bs=1073741824 count=$SWAPsize
-    chmod 0600 /mnt/SWAPfile
-    mkSWAP /mnt/SWAPfile
-    SWAPon /mnt/resource/SWAPfile
-    SWAPon -a;
+    swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
+    echo $swapsize
+    dd if=/dev/zero of=/mnt/swapfile bs=1073741824 count=$swapsize
+    chmod 0600 /mnt/swapfile
+    mkswap /mnt/swapfile
+    swapon /mnt/resource/swapfile
+    swapon -a;
     ```
 
     The script will be executed on every boot and allocates 30% of the available space in the resource disk. You can customize the values based on your situation.
@@ -58,7 +58,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
 2. Make sure the file is executable.
 
     ```bash
-    chmod +x /var/lib/cloud/scripts/pert-boot/SWAP.sh
+    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
 
 3.Stop and start the VM. This is only necessary the first time after you create the SWAP file.
@@ -85,19 +85,18 @@ Then, create the SWAP file under the resource disk path or a custom path.
     ```bash
     #!/bin/sh
     size=`df -h --output=target, avail | grep -i azure\/resource | awk '{print $2}' | cut -b1,2`
-    SWAPsize=`echo "scale=0; ($size*0.3)/1" | bc`
-    echo $SWAPsize
-    dd if=/dev/zero of=/azure/resource/SWAPfile bs=1073741824 count=$SWAPsize
-    #fallocate --length $SWAPsizeGib /mnt/SWAPfile
-    chmod 0600 /azure/resource/SWAPfile
-    mkSWAP /azure/resource/SWAPfile
-    SWAPon /azure/resource/SWAPfile
-    SWAPon -a
+    swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
+    echo $swapsize
+    dd if=/dev/zero of=/azure/resource/swapfile bs=1073741824 count=$swapsize
+    #fallocate --length $swapsizeGib /mnt/swapfile
+    chmod 0600 /azure/resource/swapfile
+    mkswap /azure/resource/swapfile
+    swapon /azure/resource/swapfile
+    swapon -a;
     ```
 4.	Make sure the file is executable:
 
     ```bash
-    chmod +x /var/lib/cloud/scripts/pert-boot/SWAP.sh
+    chmod +x /var/lib/cloud/scripts/per-boot/swap.sh
     ```
 5. Stop and start the VM. This is only necessary the first time after you create the SWAP file.
-
