@@ -2413,6 +2413,7 @@ _Original KB number:_ &nbsp; 3041345
 |100192|Backup failed because the disk-backup replica mount-point could not be found due to a transient issue.|Retry the online backup. If the issue persists, contact Microsoft Support.|
 |100193|Backup failed as the disk-backup replica could not be cloned.|Ensure that all previous disk-backup replica files (.vhdx) are unmounted and no disk to disk backup is in progress during online backups.|
 |100194|Backup failed because the disk-backup replica mount-point could not be found due to a transient issue.|Retry online backup. If the issue persists, contact Microsoft support.|
+|100195|This error indicated that the online recovery point creation of a datasource failed.| For a workaround and hotfix information, see [Online recovery point creation of a datasource might fail with error ID 33505 or 100195](/system-center/dpm/dpm-release-notes#online-recovery-point-creation-of-a-datasource-might-fail-with-error-id-33505-or-100195).|
 |100201|The current operation failed due to an internal service error **Authorization Failed**. Retry the operation after some time.|If the issue persists, contact Microsoft support.|
 |100202|The current operation failed due to an internal service error **Authentication Failed**. Retry the operation after some time.|If the issue persists, contact Microsoft support.|
 |100203|All folders which were part of the backup spec are not found.|Add the missing folders and try again.|
