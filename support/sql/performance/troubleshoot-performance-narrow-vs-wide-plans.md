@@ -175,7 +175,7 @@ To test if a wide plan is faster than a narrow plan when the data is in a buffer
     update mytable2 set c1=c1 where c2<260 option(querytraceon 2338) --trace flag 2338 will force Narrow plan
     ```
 
-    For more information, see Trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
+    For more information, see trace flag [8790](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf8790) and trace flag [2338](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql#tf2338).
 
     The query with the wide plan takes 0.136 seconds, while the query with the narrow plan only takes 0.112 seconds. The two durations are very close, and the Per-Index update (wide plan) is less beneficial because the data is already in the buffer before the `UPDATE` statement was executed.
 
