@@ -25,11 +25,11 @@ When you try to access a SharePoint Online site, you receive the following error
 > Bad Request - Header Field Too Long  
 > HTTP Error 400. A request header field is too long.  
 
-**Note:** This error indicates that the size of the HTTP request header sent from the browser is too large.  
+This error indicates that the size of the HTTP request header that was sent from the browser is too large.  
 
 ## Cause  
 
-This issue may occur when you try to access a SharePoint Online site many times in a short period of time before you complete the sign-in. In this case, there are too many cookies in the request, causing the HTTP request header to become too large.  
+This issue might occur if you try to access a SharePoint Online site many times in a short period before you complete the sign-in. In this situation, there are too many cookies in the request. This causes the HTTP request header to become too large.  
 
 ## Resolution  
 
