@@ -11,7 +11,7 @@ author: mabicca
 
 # Create a SWAP file for a Azure Linux VM
 
-To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It is important to remember that the resource disk should never be used to store data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. The resource is only recommended to be used for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](https://learn.microsoft.com/en-us/azure/virtual-machines/managed-disks-overview#temporary-disk).
+To create a SWAP file on Azure Linux VMs, you need to set up cloud-init to automatically create it on the ephemeral (resource) disk of the VM. The resource disk is mounted under `/mnt` by default. It’s located on the physical server where the Linux VM is hosted and has lower latency. It's not recommended to create SWAP partitions on OS disks or data disks that may impact the performance of the operating system and apps. It's important to remember that the resource disk should never be used to store regular data since it's only temporary storage. When a VM is moved to another host or stopped/deallocated, any data written to this disk will be wiped. The resource disk is only recommended to be used for data that can be removed such as SWAP and caching files. For more information, see [Temporary disk](/azure/virtual-machines/managed-disks-overview#temporary-disk).
 
 ## Disable SWAP creation in waagent configuration
 
@@ -50,7 +50,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     chmod 0600 /mnt/swapfile
     mkswap /mnt/swapfile
     swapon /mnt/resource/swapfile
-    swapon -a;
+    swapon -a
     ```
 
     The script will be executed on every boot and allocates 30% of the available space in the resource disk. You can customize the values based on your situation.
@@ -92,7 +92,7 @@ Then, create the SWAP file under the resource disk path or a custom path.
     chmod 0600 /azure/resource/swapfile
     mkswap /azure/resource/swapfile
     swapon /azure/resource/swapfile
-    swapon -a;
+    swapon -a
     ```
 4.	Make sure the file is executable:
 
