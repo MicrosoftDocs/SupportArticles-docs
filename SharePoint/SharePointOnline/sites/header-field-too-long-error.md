@@ -29,7 +29,7 @@ This error indicates that the size of the HTTP request header that was sent from
 
 ## Cause  
 
-This issue might occur if you try to access a SharePoint Online site many times in a short period before you complete the sign-in. In this situation, there are too many cookies in the request. This causes the HTTP request header to become too large.  
+This issue might occur if you try to access a SharePoint Online site many times in a short period before you complete the sign-in. In this situation, there's an excessive amount of cookies in the request. This causes the HTTP request header to become too large.  
 
 ## Resolution  
 
