@@ -115,7 +115,7 @@ az vm repair restore --verbose -g centos7 -n cent7
 
 Alternatively, once a repair vm is created, the changes can also be implemented by manually logging into the repair vm, mounting the attached copy of OS disk and making changes to its fstab file. Follow the steps here: 
  * Create a repair VM using the `az vm repair create` command.
- * In order to correctly mount and chroot to the filesystems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions] (./chroot-environment-linux) document.
+ * In order to mount and chroot to the filesystems of the attached OS disk in a rescue VM, follow the detailed [chroot instructions](./chroot-environment-linux.md).
  * Next, follow the same [fstab troubleshooting steps](#fstab-troubleshooting-steps) as above.
  * Once the changes are applied, `az vm repair restore` command can be used to perform automatic OS disk swap with the original VM. 
 
@@ -125,6 +125,7 @@ If both serial console and ALAR approach is not possible or fails , the repair h
 * [Attach the OS disk to a recovery VM using the Azure portal](./troubleshoot-recovery-disks-portal-linux.md)
 * [Attach the OS disk to a recovery VM using Azure CLI](./troubleshoot-recovery-disks-linux.md)
 
-Once the OS disk is successfully attached to the recovery VM, follow the [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropiate changes to the fstab file.
+Once the OS disk is successfully attached to the recovery VM, follow the detailed [chroot instructions](./chroot-environment-linux.md) to mount and chroot to the filesystems of the attached OS disk. Then, implement [fstab troubleshooting steps](#fstab-troubleshooting-steps) to make appropriate changes to the fstab file of the problematic OS disk.
+
 
 [!INCLUDE [Azure Help Support](../../includes/azure-help-support.md)]

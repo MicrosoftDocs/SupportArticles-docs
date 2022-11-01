@@ -7,6 +7,7 @@ author: mimckitt
 manager: dcscontentpm
 tags: azure-resource-manager
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 ms.collection: linux
 ms.devlang: na
 ms.topic: article

@@ -5,6 +5,7 @@ ms.date: 6/6/2022
 author: DennisLee-DennisLee
 ms.author: v-dele
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector so that I understand how to use collect logs and configuration files remotely on an Azure virtual machine.
 ---
 # VM Inspector for Azure virtual machines (Preview)

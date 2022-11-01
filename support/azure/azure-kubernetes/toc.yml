@@ -83,6 +83,8 @@
 
 - name: Troubleshoot scale operations
   items:
+  - name: Common issues with running or scaling large AKS clusters
+    href: aks-at-scale-troubleshoot-guide.md
   - name: Failed to fix node group sizes
     href: cluster-autoscaler-fails-to-scale.md
 
@@ -105,6 +107,8 @@
     href: connection-issues-application-hosted-aks-cluster.md
   - name: Custom NSG blocks traffic
     href: custom-nsg-blocks-traffic.md
+  - name: Failures in the "az aks command invoke" command
+    href: resolve-az-aks-command-invoke-failures.md
   - name: Get and analyze HTTP response codes
     href: get-and-analyze-http-response-codes.md
   - name: Intermittent timeouts or server issues

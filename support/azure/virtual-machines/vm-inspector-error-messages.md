@@ -6,6 +6,7 @@ author: DennisLee-DennisLee
 ms.author: v-dele
 ms.reviewer: mimckitt
 ms.service: virtual-machines
+ms.subservice: vm-troubleshooting-tools
 localization_priority: medium
 keywords:
 #Customer intent: As a customer, support agent, or third-party personnel with privileged access, I want to learn about VM Inspector error messages so that I can diagnose problems remotely on an Azure virtual machine.
