@@ -18,11 +18,11 @@ search.appverid:
   - MET150
 ms.date: 10/27/2022
 ---
-# The OneDrive sync status icon incorrectly shows "syncing" in File Explorer 
+# The OneDrive sync status icon incorrectly shows "syncing" in File Explorer
 
 After you sync files or folders to OneDrive, the OneDrive icon in the taskbar notification area shows an "**Up to date**" status for files or folders that are fully synced. However, some or all of the files and folders in the OneDrive folder in File Explorer are still shown as "syncing." This article provides possible solutions that you can use to solve these issues.  
 
-## Issue 1: Some files and folders show the "syncing" status  
+## Some files and folders show the "syncing" status  
 
 ### Cause
 
@@ -51,18 +51,17 @@ If there are no hidden or temporary files that cause the sync status to be incor
 2. Double-click **Windows Search**, and then change the **Startup type** to **Disabled**.
 3. In **Service status**, select **Stop**.
 4. Select **OK**.
-5. Refresh the File Explorer window. If the issue is resolved, it was caused by the cached search index. To resolve this issue, follow next steps.
+5. Refresh the File Explorer window. If the contents of the OneDrive folder no longer show as "syncing," the issue was caused by the cached search index. To resolve this issue, follow the next steps.
 6. Return to the Services application, and revert the **Startup type** of the **Windows Search** service to **Automatic (Delayed Start)**.
 7. Rebuild the Windows Search index:  
 
     1. Select **Start**, enter *Indexing*, and then select **Indexing Options** in the search results.
     1. Select **Advanced** > **Rebuild**.
-    
+
        > [!NOTE]
-       >
        > This process can take some time to finish. It runs faster if the computer isn't in use. Therefore, we recommend that you rebuild the index outside active hours, such as at night or on weekends. If the issue isn't resolved, there might be a problem in the indexing layer. For more information, see [Fix problems in Windows Search](/troubleshoot/windows-client/shell-experience/fix-problems-in-windows-search).
 
-## Issue 2: All files and folders show the "syncing" status
+## All files and folders show the "syncing" status
 
 ### Cause
 
