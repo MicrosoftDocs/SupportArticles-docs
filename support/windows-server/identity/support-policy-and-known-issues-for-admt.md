@@ -82,7 +82,10 @@ Otherwise, the computer will re-enable Credential Guard the next time it restart
 
 ### Modern apps fail to start after user profile migration
 
-**Issue**: The Windows Start menu, modern Apps installed from the Windows Store and Built-in modern applications including the Start menu and Search fail to start on Windows Client computers if security translation in ADMT 3.2 has been run against the user’s profile. Intra-forest migrations are most at risk as intra-forest migrated user accounts cannot be restored back to the original source domain.
+**Issue**: 
+Modern applications (both built-in, such as Windows Start menu and Search, and installed from the Windows Store) fail to start on Windows Client computers if security translation in ADMT 3.2 has been run against the user’s profile.
+
+Intra-forest migrations are most at risk because intra-forest migrated user accounts cannot be restored back to the original source domain.
 
 **Solution**: Post-migration, remove then re-install Modern applications installed from the Windows Store.
 
