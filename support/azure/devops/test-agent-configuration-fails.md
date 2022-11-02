@@ -4,7 +4,7 @@ description: This article provides resolutions for the error that occurs when yo
 ms.date: 08/17/2020
 ms.custom: sap:Test Plans
 ms.reviewer: georgea
-ms.service: azure-devops-server
+ms.service: azure-devops
 ms.subservice: ts-test-plans
 ---
 # Test agent configuration fails when you try to configure the test agent
