@@ -4,7 +4,8 @@ description: This article provides resolutions for the error that occurs when yo
 ms.date: 08/18/2020
 ms.custom: sap:Boards
 ms.reviewer: chcoope
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-boards
 ---
 # Error TF237201 when you try to add a new link to a work item in Team Foundation Server
 
