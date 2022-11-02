@@ -54,6 +54,10 @@ To fix this issue, follow these steps to verify the status of the JRE installat
    1. In the navigation pane, locate a subkey that is an exact match for the version (for example 1.8) under the JRE folder. In the details pane, there should be a **JavaHome** entry. The value of this entry is the JRE installation path.
 
       :::image type="content" source="media/error-run-copy-activity-azure/java-home-entry-image.png" alt-text="Screenshot of the JavaHome entry in the details pane.":::
+      
+      > [!NOTE]
+      >
+      > - For [Adoptium OpenJDK](https://adoptium.net/installation/windows/) installations, a `JAVA_HOME` environment variable should be set to the path of the `jre` subfolder in the installation directory.
 
 3. Locate the bin\server folder in the following path:
 
