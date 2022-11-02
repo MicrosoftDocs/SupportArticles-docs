@@ -1,6 +1,6 @@
 ---
 title: SQL Server diagnostics are added to detect unreported input/output (I/O) problems due to stale reads or lost writes
-description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server diagnostics.
+description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
 ms.date: 11/02/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: svccauto
@@ -9,9 +9,9 @@ ms.prod: sql
 
 # SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
 
-_Applies to_: SQL Server 
+_Applies to_: SQL Server
 
-This article explains about how SQL Server diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
+This article explains how SQL Server Diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 826433
