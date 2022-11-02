@@ -709,6 +709,8 @@
       href: tools/error-message-when-you-open-configuration-manager.md
     - name: MSDB database grows
       href: tools/msdb-database-grows.md
+    - name: Invalid Password error or slow response
+      href: tools/invalid-password-type-password-slowssms-sql-authentication.md
     - name: Description of the Replay Markup Language Utilities for SQL Server
       href: tools/replay-markup-language-utility.md
     - name: New data isn't uploaded to MDW database after configuring collection set
