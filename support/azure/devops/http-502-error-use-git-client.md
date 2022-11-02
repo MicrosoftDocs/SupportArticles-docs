@@ -4,7 +4,8 @@ description: This article provides a resolution for the problem where you experi
 ms.date: 09/25/2020
 ms.custom: sap:Repos
 ms.reviewer: mmitrik
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 # HTTP 502 error when you connect to TFS 2013 by using Git clients
 

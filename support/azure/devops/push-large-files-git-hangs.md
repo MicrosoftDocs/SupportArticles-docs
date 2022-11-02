@@ -4,7 +4,8 @@ description: This article provides resolutions for the problem that hangs when y
 ms.date: 08/14/2020
 ms.custom: sap:Repos
 ms.reviewer: Matt Cooper
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 # Pushing large files to Team Foundation Server by Git client hangs
 
