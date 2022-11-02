@@ -1,7 +1,7 @@
 ---
 title: SQL Server diagnostics are added to detect unreported input/output (I/O) problems due to stale reads or lost writes
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server diagnostics.
-ms.date: 10/28/2022
+ms.date: 11/02/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: svccauto
 ms.prod: sql
@@ -9,7 +9,7 @@ ms.prod: sql
 
 # SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
 
-_Applies to_: SQL Server 2008, SQL Server 2012, SQL Server 2014
+_Applies to_: SQL Server 
 
 This article explains about how SQL Server diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
 
@@ -50,7 +50,7 @@ If you receive any of the error messages that are mentioned in the [Symptoms](#s
 
 For example, Microsoft has confirmed scenarios where a WriteFile API call returns as successful, but an immediate, successful read of the same data block returns older data, including data that is likely stored in a hardware read cache. Sometimes, this problem occurs because of a read cache problem. In other cases, the write data is never actually written to the physical disk.
 
-To enable additional diagnostics for these types of problems, SQL Server has added trace flag 818. You can specify trace flag 818 as a startup parameter, -T818, for the computer that is running SQL Server, or you can run the following statement:
+To enable additional diagnostics for these types of problems, SQL Server has added trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16) as a startup parameter, -T818, for the computer that's running SQL Server, or you can run the following statement:
 
 ```sql
 `DBCC TRACEON(818, -1)`
@@ -137,16 +137,16 @@ Microsoft has noted that the root cause for the following sort read failures is 
 
 Because a stale read or a lost write results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
 
->Error 644 Severity Level 21 Message Text Could not find the index entry for RID '%.*hs' in index page %S_PGID, index ID %d, database '%.*ls'.
+> Error 644 Severity Level 21 Message Text Could not find the index entry for RID '%.*hs' in index page %S_PGID, index ID %d, database '%.*ls'.
 
->Error 625 Severity Level 21 Message Text Cannot retrieve row from page %S_PGID by RID because the slotid (%d) is not valid.
+> Error 625 Severity Level 21 Message Text Cannot retrieve row from page %S_PGID by RID because the slotid (%d) is not valid.
 
-Some customers have reported missing rows after they perform row count activities. This problem occurs because of a Lost Write. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
+Some customers have reported missing rows after they perform row count activities. This problem occurs because of a lost write. Perhaps, the page was supposed to be linked to the clustered index page chain. If the write was physically lost, the data is also lost.
 
 > [!IMPORTANT]
 > If you experience any of the behaviors, or if you are suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
-Note Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
+Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
 SQL Server requires systems to support guaranteed delivery to stable media as outlined under the [SQL Server I/O Reliability Program Requirements](https://support.microsoft.com/topic/kb826433-sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to-stale-reads-or-lost-writes-ca3f00af-2ee2-04e3-e6dc-e09169328982?preview=true). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](database-engine-input-output-requirements.md).
 
