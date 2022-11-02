@@ -76,28 +76,31 @@ Otherwise, the computer will re-enable Credential Guard the next time it restart
 
 ### Domain controllers cannot use unconstrained delegation
 
-**Issue**: ADMT requires Domain Controllers to use unconstrained delegation during the migration process. This practice is no longer allowed or recommended.
+**Issue**: During the migration process, ADMT requires that domain controllers use unconstrained delegation. This practice is no longer allowed or recommended.
 
-**Solution**: Install and run ADMT apps on the target Domain Controller. This configuration removes the need for delegation.
+**Solution**: Install and run ADMT apps on the target domain controller. This configuration removes the need for delegation.
 
-### Modern apps fail to start after user profile migration
+### Modern apps fail to start after you migrate a user profile
 
-**Issue**: 
-Modern applications (both built-in, such as Windows Start menu and Search, and installed from the Windows Store) fail to start on Windows Client computers if security translation in ADMT 3.2 has been run against the user’s profile.
+**Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer and then run the Security Translation wizard to update the profile, modern applications do not run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that were installed from the Windows Store.
 
-Intra-forest migrations are most at risk because intra-forest migrated user accounts cannot be restored back to the original source domain.
+Intra-forest migrations are most at risk for this behavior, because intra-forest migrated user accounts cannot be restored back to the original source domain.
 
-**Solution**: Post-migration, remove then re-install Modern applications installed from the Windows Store.
+**Solution**: After you complete the migration, uninstall the modern apps and then re-install them from the Windows Store.
+
+For more information about this issue, see [Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10](troubleshoot/windows-server/identity/windows-app-cant-start)
 
 ### Security translation resets file associations
 
-**Issue**: After running ADMT security translations in Add mode, file associations are reset to default if the source user logs in before the target user logs in. File associations in Windows 10 are protected against unwanted modifications by using a hash that is stored in the registry along with each customized association. The user SID is one piece of data that is used to produce this hash. When a user is migrated to a new domain, the new user account receives a new SID so the file association hashes must be updated
+**Issue**: You migrate a user profile and then run the security translation wizard in Add mode. When you sign in to the computer for the first time after the migration, you use the original (source) user credentials instead of the migrated (target) user credentials. The file associations reset to their default values, and any custom associations are lost.
 
-**Solution**: The source user account should be disabled immediately following the migration, which will prevent the source user from logging in and generating the scenario described in this article.
+In Windows 10, a custom file association is protected from unwanted modifications by using a hash that's based in part on the user's security identifier (SID). The custom file association and the hash are stored in the registry. When the user is migrated to a new domain, the new user account receives a new SID. All file association hashes must be updated accordingly.
+
+**Solution**: As soon as the migration finishes, disable the source user account. This action prevents the issue from occurring.
 
 ### Objects that have child objects are not migrated
 
-**Issue**: ADMT fails to migrate objects with the following error in the migration error log if the object being migrated contains a child object:
+**Issue**: When ADMT tries to migrate an object that has a child object, the migration fails and ADMT generates the following message in the migration error log:
 
 > ERR2:7422 Failed to move source object CN=\<_object name_>. hr=0x8007208c The operation cannot be performed because child objects exist. This operation can only be performed on a child object.
 
@@ -108,11 +111,11 @@ A few examples of child objects that block migration include but are not limited
 - Microsoft Dynamic GP
 - TermSrvLicensing
 
-**Solution**: You would have to delete the leaf object such as the Exchange ActiveSync object. Otherwise, there is no known workaround.
+**Solution**: You have to delete the child object (also known as a leaf object) to migrate the parent object. For example, you would have to delete the Exchange ActiveSync object. Otherwise, there is no known workaround.
 
-### Computer migration fails on devices with custom suffixes
+### Computer migration fails on devices that have custom DNS suffixes
 
-**Issue**: ADMT fails the post-migration check when verifying the domain membership of the migrated computer during an inter-forest migration. The errors include:
+**Issue**: During an inter-forest migration, you migrate computers that are configured to retain their primary DNS suffix when their domain membership changes. The ADMT post-migration check fails when ADMT tries to verify the domain membership of the migrated computer. The error messages resemble the following examples:
 
 > ERR2:7711 Unable to retrieve the DNS hostname for the migrated computer 'workstation1.contoso.com'. The ADSI property cannot be found in the property cache. (hr=0x8000500d) Post-check will be retried on the computer 'workstation1'
 
@@ -120,35 +123,35 @@ A few examples of child objects that block migration include but are not limited
 
 > ERR2:7675 Unable to verify the migrated computer 'workstation1' belongs to the domain 'tailspintoys.com'. Access is denied. (hr=0x80070005)
 
-The computers are configured to retain their primary DNS suffix when the domain membership changes. This is visible in the user interface as a selected **Change primary DNS suffix when domain membership changes** checkbox.
+To check this configuration, open the **System** properties on the computer. To do this, select **Start** > **Settings** > **About** > **Advanced system settings** > **Computer Name** > **Change** > **More**. If **Change primary DNS suffix when domain membership changes** is not selected, the computer is affected by this issue.
 
 **Solution**: Try one of the following methods:
 
-- After you join the computer, remove the SPNs from the account in the source domain. Deleting the computer account in the old domain is also an option.
+- **Manual configuration**. After you join the computer to the target domain, remove the SPNs from the account in the source domain. As an alternative, you can delete the computer account in the source domain.
 
-  OR
-
-- Set the machine to **SyncDomainWithMembership=1** which is equivalent of enabling **Change primary DNS suffix when domain membership changes**. It would then register SPNs matching the new domain and not conflict anymore.
+- **Answer file configuration**. Use [SyncDomainWithMembership](/windows-hardware/customize/desktop/unattend/microsoft-windows-workstationservice-syncdomainwithmembership). Setting `SyncDomainWithMembership` to **1** is the equivalent of enabling **Change primary DNS suffix when domain membership changes**. Then during migration, the computer registers SPNs that match the new domain and doesn't conflict anymore.
 
 ### ADMT 3.2 fails to start if TLS 1.0 is disabled on the SQL Server database host
 
-**Issue**: ADMT 3.2 fails to start and displays SSL Security errors if TLS 1.0 has been disabled on devices hosting the SQL DB instance, even if the SQL instance is local to the server that ADMT is installed on. ADMT fails to start with on-screen error:
+**Issue**: On a device that hosts a SQL Server database, ADMT 3.2 fails to start and displays SSL Security errors if TLS 1.0 has been disabled. This occurs even if ADMT is installed on the same computer as the SQL Server instance. The error message resembles the following:
 
 > The system cannot find the file specified.
 
-**Solution**: Temporarily, enable TLS 1.0 on the ADMT server. ADMT works even if TLS 1.0 is disabled on the Domain Controller.
+**Solution**: On the computer where ADMT is installed, temporarily enable TLS 1.0. ADMT works even if TLS 1.0 is disabled on the domain controller.
 
 ### Password Export Server (PES) fails if LSA Protection is enabled
 
-**Issue**: Password migration fails with the error "Unable to establish a session with the password export server. The RPC server is unavailable."
+**Issue**: Password migration fails and generates an error message that resembles the following:
 
-**Solution**: ADMT Password Migration only works with LSA protection disabled.
+> Unable to establish a session with the password export server. The RPC server is unavailable.
+
+**Solution**: ADMT Password Migration only works if LSA protection is disabled.
 
 > [!NOTE]  
-> Please work with your security team before making the changes to LSA Protection and take the backup of the server before any changes.
+> Before you make any changes to LSA Protection, back up the computer. Work with your security team to minimize potential issues.
 
 ### Local profiles are not migrated
 
-**Issue**: Local profiles do not get migrated when Security Translation wizard is run in ADMT 3.2. Local user accounts are correctly migrated.
+**Issue**: When you run ADMT 3.2 and the Security Translation wizard, ADMT migrates local user accounts but not local profiles.
 
 **Solution**: This behavior is by design.
