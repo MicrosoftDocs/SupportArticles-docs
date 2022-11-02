@@ -24,7 +24,7 @@ _Original KB number:_ &nbsp; 4089459
 
 ADMT was released as a free download to support the migration to Windows 2000 and Windows Server 2003-era operating systems.  
 
-ADMT has not been updated to support the following operating systems:
+ADMT hasn't been updated to support the following operating systems:
 
 - Windows 11
 - Windows 10
@@ -34,7 +34,7 @@ ADMT has not been updated to support the following operating systems:
 - Windows Server 2016
 - Windows Server 2012 R2
 
-You may encounter the following known issues when you run ADMT on operating systems that are not supported:
+You may encounter the following known issues when you run ADMT on operating systems that aren't supported:
 
 - ADMT can't migrate user profiles from operating systems that are newer than Windows 7 or Windows Server 2008 R2 to other operating systems. You also can't migrate user profiles to operating systems that are newer than Windows 7 or Windows Server 2008 R2 from older operating systems.
 - ADMT isn't compatible with the secure defaults that modern operating systems use.
@@ -74,7 +74,7 @@ Otherwise, the computer will re-enable Credential Guard the next time it restart
 > [!NOTE]  
 > On devices that run Windows Server 2022, version 2H, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
 
-### Domain controllers cannot use unconstrained delegation
+### Domain controllers can't use unconstrained delegation
 
 **Issue**: During the migration process, ADMT requires that domain controllers use unconstrained delegation. This practice is no longer allowed or recommended.
 
@@ -82,11 +82,11 @@ Otherwise, the computer will re-enable Credential Guard the next time it restart
 
 ### Modern apps fail to start after you migrate a user profile
 
-**Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer and then run the Security Translation wizard to update the profile, modern applications do not run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that were installed from the Windows Store.
+**Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer and then run the Security Translation wizard to update the profile, modern applications don't run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that were installed from the Windows Store.
 
-Intra-forest migrations are most at risk for this behavior, because intra-forest migrated user accounts cannot be restored back to the original source domain.
+Intra-forest migrations are most at risk for this behavior, because intra-forest migrated user accounts can't be restored back to the original source domain.
 
-**Solution**: After you complete the migration, uninstall the modern apps and then re-install them from the Windows Store.
+**Solution**: After you complete the migration, uninstall the modern apps and then reinstall them from the Windows Store.
 
 For more information about this issue, see [Windows App cannot start after ADMT 3.2 security translation runs in Windows 8, Windows 8.1 and Windows 10](troubleshoot/windows-server/identity/windows-app-cant-start)
 
@@ -98,13 +98,13 @@ In Windows 10, a custom file association is protected from unwanted modification
 
 **Solution**: As soon as the migration finishes, disable the source user account. This action prevents the issue from occurring.
 
-### Objects that have child objects are not migrated
+### Objects that have child objects aren't migrated
 
 **Issue**: When ADMT tries to migrate an object that has a child object, the migration fails and ADMT generates the following message in the migration error log:
 
 > ERR2:7422 Failed to move source object CN=\<_object name_>. hr=0x8007208c The operation cannot be performed because child objects exist. This operation can only be performed on a child object.
 
-A few examples of child objects that block migration include but are not limited to the following:
+A few examples of child objects that block migration include but aren't limited to the following:
 
 - Citrix SSOSecret and SSOConfig
 - Exchange Active Sync
@@ -123,7 +123,7 @@ A few examples of child objects that block migration include but are not limited
 
 > ERR2:7675 Unable to verify the migrated computer 'workstation1' belongs to the domain 'tailspintoys.com'. Access is denied. (hr=0x80070005)
 
-To check this configuration, open the **System** properties on the computer. To do this, select **Start** > **Settings** > **About** > **Advanced system settings** > **Computer Name** > **Change** > **More**. If **Change primary DNS suffix when domain membership changes** is not selected, the computer is affected by this issue.
+To check this configuration, open the **System** properties on the computer. To do this, select **Start** > **Settings** > **About** > **Advanced system settings** > **Computer Name** > **Change** > **More**. If **Change primary DNS suffix when domain membership changes** isn't selected, the computer is affected by this issue.
 
 **Solution**: Try one of the following methods:
 
@@ -150,7 +150,7 @@ To check this configuration, open the **System** properties on the computer. To 
 > [!NOTE]  
 > Before you make any changes to LSA Protection, back up the computer. Work with your security team to minimize potential issues.
 
-### Local profiles are not migrated
+### Local profiles aren't migrated
 
 **Issue**: When you run ADMT 3.2 and the Security Translation wizard, ADMT migrates local user accounts but not local profiles.
 
