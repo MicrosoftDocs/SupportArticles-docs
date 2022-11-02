@@ -1,5 +1,7 @@
 - name: Welcome
   href: welcome-dpm.yml
+- name: DPM error codes
+  href: vnext-dpm-error-codes.md
 - name: Agents
   items:
     - name: Agent communication issues
@@ -68,8 +70,6 @@
       href: deduplicated-volumes-backup-fails.md
     - name: Can't upgrade to DPM 2012
       href: cannot-run-sql-instance-to-upgrade-dpm.md
-    - name: DPM error codes
-      href: vnext-dpm-error-codes.md
     - name: DPM 2010 consistency check fails
       href: consistency-check-error-0x80070005.md
     - name: DPM 2012 SP1 error codes
