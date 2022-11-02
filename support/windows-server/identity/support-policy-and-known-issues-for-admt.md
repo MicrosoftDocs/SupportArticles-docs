@@ -43,13 +43,11 @@ You may encounter the following known issues when you run ADMT on operating syst
 > [!NOTE]  
 > Your experience with ADMT depends on many factors, including the Windows version that you are migrating from and the Windows version that you are migrating to. Use the tool at your own risk.
 
-## Support information
-
-### Commercial Windows support
+## Commercial Windows support case policy
 
 Microsoft addresses support cases for ADMT issues completely on a "best effort" basis. Support cases may not be escalated to the product teams. Microsoft can't guarantee that issues will be resolved.
 
-### Code-level support
+## Code-level support policy
 
 The ADMT 3.2 code base has been deprecated. Microsoft has officially halted any development on the ADMT code base. ADMT isn't eligible for security fixes, bug fixes, or design changes.
 
