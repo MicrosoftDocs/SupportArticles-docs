@@ -325,6 +325,8 @@
   items:
   - name: Configure multiple NICs
     href: linux-vm-multiple-virtual-network-interfaces-configuration.md
+  - name: Create SWAP file
+    href: create-swap-file-linux-vm.md
 
 - name: VM extensions troubleshooting
   items:

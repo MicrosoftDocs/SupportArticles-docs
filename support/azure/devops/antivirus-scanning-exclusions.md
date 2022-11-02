@@ -5,7 +5,7 @@ ms.date: 02/09/2022
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: chandrur
 ms.topic: article
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Antivirus exclusions for Azure DevOps
 

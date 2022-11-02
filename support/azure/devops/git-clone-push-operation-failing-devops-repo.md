@@ -5,7 +5,8 @@ author: HaiyingYu
 ms.author: haiyingyu
 ms.topic: troubleshooting 
 ms.date: 05/25/2022
-ms.service: az-devops-project
+ms.service: azure-devops
+ms.subservice: ts-repos
 ---
 
 # Troubleshoot issues when Git clone or push fails to an Azure DevOps repository

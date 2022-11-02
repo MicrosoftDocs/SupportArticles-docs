@@ -4,7 +4,7 @@ description: This article provides a workaround for the decrease performance in 
 ms.date: 08/14/2020
 ms.custom: sap:Installation, Migration, and Move
 ms.reviewer: andreas, georgea
-ms.service: az-devops-project
+ms.service: azure-devops-server
 ---
 # Performance decreases in Team Foundation Server 2013 Update 2 after you upgrade to SQL Server 2014
 
