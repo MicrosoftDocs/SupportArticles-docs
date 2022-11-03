@@ -41,7 +41,7 @@ To resolve this issue, check whether there are hidden or temporary files and fol
 4. If clearing the Office document cache doesn't remove any temporary Office files that are still syncing, determine whether the files can be manually deleted.
 
    > [!WARNING]
-   > Warning This may cause data loss of the Office document. Therefore, make sure that the files can be safely deleted.
+   > This may cause data loss of the Office document. Therefore, make sure that the files can be safely deleted.
 
 5. If the files aren't temporary Office files, determine whether they can be safely removed. If they can't be removed, move them out of the OneDrive folder to see whether the issue is resolved.
 
