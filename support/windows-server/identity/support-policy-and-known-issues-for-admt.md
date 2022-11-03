@@ -152,3 +152,7 @@ To check this configuration, open the **System** properties on the computer. To 
 **Issue**: When you run ADMT 3.2 and the Security Translation wizard, ADMT migrates local user accounts but not local profiles.
 
 **Solution**: This behavior is by design.
+
+## More information
+
+ADMT is available for download at [Active Directory Migration Tool version 3.2](/download/details.aspx?id=56570).
