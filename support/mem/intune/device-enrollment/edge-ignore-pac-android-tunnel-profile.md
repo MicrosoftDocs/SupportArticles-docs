@@ -1,23 +1,23 @@
 ---
-title: PAC setting in Tunnel profile is ignored by Microsoft Edge in Android 13
+title: PAC setting in Tunnel VPN profile is ignored by Microsoft Edge in Android 13
 description: Provides a workaround to an issue where Microsoft Edge in Android 13 ignores a PAC setting in Microsoft Tunnel profile.
 ms.date: 11/02/2022
 author: AmandaAZ
 ms.author: v-weizhu
 ms.service: microsoft-intune
 ms.subservice: intune-device-enrollment
-ms.reviewer: ochukwunyere, intunecic
+ms.reviewer: kaushika, ochukwunyere, intunecic
 ---
-# Microsoft Edge in Android 13 ignores PAC setting in Tunnel profile
+# Microsoft Edge in Android 13 ignores PAC setting in Tunnel VPN profile
 
-This article works around an issue where a Proxy Auto-Configuration (PAC) setting in a Microsoft Tunnel VPN profile is ignored by Microsoft Edge in Android 13.
+This article works around an issue where a Proxy Auto-Configuration (PAC) setting configured in a Microsoft Tunnel VPN profile is ignored by Microsoft Edge in Android 13.
 
 ## Symptoms
 
 Consider the following scenario:
 
-- The Intune administrator uses Microsoft Tunnel to provide per-app VPN on Android Enterprise devices.
-- In the VPN profile, a PAC setting is configured for Microsoft Edge to consume proxy settings.
+- Intune administrators use Microsoft Tunnel to provide per-app VPN on Android Enterprise devices.
+- A VPN profile is created and a PAC setting is configured for Microsoft Edge to consume proxy settings.
 - After the VPN connection is established, users launch Microsoft Edge on devices with Android 13.
 
 In this scenario, the PAC setting is ignored by Microsoft Edge.
