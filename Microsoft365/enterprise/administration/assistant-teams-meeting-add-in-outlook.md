@@ -19,7 +19,7 @@ ms.date: 10/25/2022
 
 The Teams Meeting Add-in for Outlook scenario automates all of the checks (except the two checks under [Check policies](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues#check-policies)) and recovery actions that are described and provided in [Resolve issues with Teams Meeting add-in for Outlook](/microsoftteams/troubleshoot/meetings/resolve-teams-meeting-add-in-issues).
 
-In the full version of the Assistant, the equivalent scene entry point is *Teams \ The Teams meeting option isn't shown or the Teams Meeting add-in doesn't load in Outlook*.
+In the full version of the Assistant, the equivalent scenario entry point is *Teams \ The Teams meeting option isn't shown or the Teams Meeting add-in doesn't load in Outlook*.
 
 **Note** This scenario doesn't require an elevated command prompt.
 

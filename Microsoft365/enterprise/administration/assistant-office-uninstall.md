@@ -19,7 +19,7 @@ ms.date: 10/25/2022
 
 The Office Uninstall scenario removes any version of Office from a device. This scenario automates all of the steps that are described and provided in [Uninstall Office from a PC](https://support.microsoft.com/office/9dd49b83-264a-477a-8fcc-2fdf5dbf61d8).
 
-In the full version of the Assistant, the equivalent scene entry point is *Office & Office Apps \ I have Office installed, but I'm having trouble uninstalling it*.
+In the full version of the Assistant, the equivalent scenario entry point is *Office & Office Apps \ I have Office installed, but I'm having trouble uninstalling it*.
 
 **Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 

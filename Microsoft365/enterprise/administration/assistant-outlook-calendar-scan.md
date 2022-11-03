@@ -19,7 +19,7 @@ ms.date: 10/25/2022
 
 The Outlook Calendar Scan scenario scans an Outlook calendar to identify and report issues such as permissions, free or busy publishing, delegate configuration, and automatic booking. For more information, see [Scan Outlook calendar by using Microsoft Support and Recovery Assistant](/outlook/troubleshoot/calendaring/scan-outlook-calendar-using-sara).
 
-In the full version of the Assistant, the equivalent scene entry point is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
+In the full version of the Assistant, the equivalent scenario entry point is *Advanced diagnostics \ Outlook \ Create a detailed scan of my Outlook Calendar to identify and resolve issues*.
 
 **Note** This scenario doesn't require an elevated command prompt.
 
@@ -42,7 +42,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|
 |`-P <Profile Name>`|`Profile Name` identifies the Outlook profile that's scanned by the scenario.|Optional|
 |`-LogFolder <Output Path>`|The `-LogFolder` switch forces *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|
-|`-HideProgress`|The `-HideProgress` switch hides the progress display for these scenarios. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
+|`-HideProgress`|The `-HideProgress` switch hides the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
 
 The following switches are available for all scenarios.
 

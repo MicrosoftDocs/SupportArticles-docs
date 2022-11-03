@@ -19,7 +19,7 @@ ms.date: 10/25/2022
 
 The Office Activation scenario automates checks and recoveries to reset activation-related settings to successfully activate a subscription version of Office.
 
-In the full version of the Assistant, the equivalent scene entry point is *Office & Office Apps \ I've installed a subscription version of Office, but I can't activate it*.
+In the full version of the Assistant, the equivalent scenario entry point is *Office & Office Apps \ I've installed a subscription version of Office, but I can't activate it*.
 
 **Note** This scenario requires an elevated command prompt. To open an elevated Command Prompt window, select **Start**, enter *cmd*, right-click **Command Prompt** in the results, and then select **Run as administrator**.
 

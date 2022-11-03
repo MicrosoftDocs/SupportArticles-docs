@@ -19,7 +19,7 @@ ms.date: 10/25/2022
 
 The Outlook Scan scenario scans and creates a detailed report of Outlook, Office, Windows and mailbox configurations.
 
-In the full version of the Assistant, the equivalent scene entry point is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
+In the full version of the Assistant, the equivalent scenario entry point is *Advanced diagnostics \ Outlook \ Create a detailed report of my Outlook, Office, Windows, and mailbox configuration*.
 
 **Note** This scenario doesn't require an elevated command prompt.
 
@@ -41,7 +41,7 @@ The following switches are available for this scenario. They aren't case-sensiti
 |`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run. For the Outlook Scan scenario, use `ExpertExperienceAdminTask` as the value of `scenarioname`.|Required|
 |`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|
 |`-LogFolder <Output Path>`|The `-LogFolder` switch forces *SaraCmd.exe* to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|
-|`-HideProgress`|The `-HideProgress` switch hides the progress display for these scenarios. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
+|`-HideProgress`|The `-HideProgress` switch hides the progress display for this scenario. The default feature of the Assistant is to always display the progress of tasks in the console.|Optional|
 |`-OfflineScan`|This switch forces Outlook to be scanned as an offline scan while the Outlook application is running.|Optional|
 
 The following switches are available for all scenarios.

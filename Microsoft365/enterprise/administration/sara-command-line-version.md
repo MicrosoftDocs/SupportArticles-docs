@@ -22,9 +22,9 @@ ms.date: 10/26/2022
 > [!NOTE]
 > This article is for Microsoft 365 administrators only. For help to diagnose and fix issues with Office, Microsoft 365 or Outlook on your computer, see [About the Microsoft Support and Recovery Assistant](https://aka.ms/SaRA_Home).
 
-The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook and Advance Diagnostics. This version of the Assistant runs at a command-line or through a script such as PowerShell. It's useful when administrators need to run the Assistant on computers in their organization remotely.
+The Enterprise version of Microsoft Support and Recovery Assistant is a self-contained enterprise-ready diagnostic tool that you can use to troubleshoot specific client issues with Office, Teams, Outlook or through Advanced Diagnostics. This version of the Assistant runs at a command-line or through a script such as PowerShell. It's useful when administrators need to run the Assistant on computers in their organization remotely.
 
-To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, the Enterprise version of the Assistant is helpful.
+To fix issues on a single computer, we recommend that you use the [full version of the Assistant](https://aka.ms/SaRA_Home). If multiple devices are impacted by an issue, the Enterprise version of the Assistant is recommended.
 
 ## Supported scenarios
 
@@ -68,11 +68,11 @@ The following switches are available for the Enterprise version of the Assistant
 |`-S <scenarioname>`|Use the `-S` switch to specify the scenario that you want to run.|Required|All|
 |`-AcceptEula`|The End User License Agreement (EULA) must be accepted before a scenario can be run.|Required|All|
 |`-LogFolder <Output Path>`| Use the `-LogFolder` switch to force SaraCmd.exe to output scenario-specific logs to the folder that's specified by \<Output Path\>.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
-|`-HideProgress`|The default feature is to always display the progress of the scenario. Use this switch to hide the progress display for the Outlook Scan scenario.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
+|`-HideProgress`|The default feature is to always display the progress of the scenario. Use this switch to hide the progress display for the listed scenarios.|Optional|`ExpertExperienceAdminTask`<br/>`OutlookCalendarCheckTask`|
 |`-OfflineScan`|This switch forces Outlook to be scanned as an offline scan while the Outlook application is running.|Optional|`ExpertExperienceAdminTask`|
 |`-OfficeVersion`|Using this switch only removes the Office version that's specified by the parameter. If you use **All** as a parameter, it removes all Office versions from your machine.|Optional|`OfficeScrubScenario`|
 |`-RemoveSCA`|This switch removes Shared Computer Activation (SCA) and configures non-SCA activation for Office.|Optional|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`|
-|`-CloseOffice`|Closes any opened Office apps.|Required|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`<br/>`ResetOfficeActivation`|
+|`-CloseOffice`|Closes any open Office apps.|Required|`OfficeActivationScenario`<br/>`OfficeSharedComputerScenario`<br/>`ResetOfficeActivation`|
 |`-CloseOutlook`|Closes Outlook if it's opened.|Required|`TeamsAddinScenario`|
 |`-P <profile name>`|\<Profile name\> is the Outlook profile that's scanned by the `OutlookCalendarCheckTask` scenario.|Optional|`OutlookCalendarCheckTask`|
 
