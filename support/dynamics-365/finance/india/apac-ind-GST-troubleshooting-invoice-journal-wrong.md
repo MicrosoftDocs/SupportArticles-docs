@@ -79,7 +79,7 @@ In the tax document, select **Voucher** to determine whether the amount is poste
 
     1. Set a breakpoint in `TaxAccountingPostTaxTransHandlerBase`.
 
-        :::image type="content" source="media/apac-ind-gst-troubleshooting-invoice-journal-wrong/breakpoint-at-taxaccountingposttaxtranshandlerbase.png" alt-text="Set a breakpoint for TaxAccountingPostTaxTransHandlerBase." lightbox="media/apac-ind-gst-troubleshooting-invoice-journal-wrong/breakpoint-at-taxaccountingposttaxtranshandlerbase.png":::
+        :::image type="content" source="media/apac-ind-gst-troubleshooting-invoice-journal-wrong/breakpoint-at-taxaccountingposttaxtranshandlerbase.png" alt-text="Set a breakpoint in TaxAccountingPostTaxTransHandlerBase." lightbox="media/apac-ind-gst-troubleshooting-invoice-journal-wrong/breakpoint-at-taxaccountingposttaxtranshandlerbase.png":::
 
     2. In `TaxAccountingPostTaxCompTransHandler`, set breakpoints where the incorrect value is assigned. For example, set breakpoints for `taxDocumentComponentTransaction.TaxAmount`.
 

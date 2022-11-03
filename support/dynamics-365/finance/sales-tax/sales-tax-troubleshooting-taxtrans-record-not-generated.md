@@ -46,9 +46,9 @@ To solve this issue, complete the steps in the following sections as required.
 1. For information about how to debug and determine whether **TmpTaxWorkTrans** and **TaxUncommitted** are correctly generated, see [Field value in TaxTrans is incorrect](sales-tax-troubleshooting-field-value-taxtrans-incorrect.md).
 2. If **TaxTmpWorkTrans** or **TaxUncommitted** is correctly generated, add a breakpoint at `TaxPost::SaveAndPost()` and `Tax::SaveAndPost` to debug the reason why **TaxTrans** isn't inserted. Here are the screenshots of this step:
 
-    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png" alt-text="The breakpoints that are added in code." lightbox="media/ales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png":::
+    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png" alt-text="The breakpoints that are added in code." lightbox="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png":::
 
-    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png" alt-text="The results of the added breakpoints." lightbox="media/ales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png":::
+    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png" alt-text="The results of the added breakpoints." lightbox="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png":::
 
 ## Determine whether customization exists
 

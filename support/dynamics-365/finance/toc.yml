@@ -39,8 +39,8 @@
           href: budgeting/position-budgeting-set-up-issues.md
     - name: India
       items:
-        - name: Troubleshoot GTE
-          href: india/tax-engine-trouble-shooting.md
+        - name: Troubleshoot issues with tax engine (GTE)
+          href: india/troubleshoot-tax-engine-gte-issues.md
         - name: Incorrect tax amount after calculation
           href: india/apac-ind-GST-troubleshooting-tax-amount-wrong-after-calculation.md
         - name: Tax configuration errors
@@ -52,7 +52,7 @@
         - name: TaxTrans or voucher isn't generated
           href: india/apac-ind-GST-troubleshooting-taxtrans-or-voucher-not-generated.md
         - name: Tax transaction ID is incorrect
-          href: india/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md   
+          href: india/apac-ind-gst-troubleshooting-tax-transaction-id-incorrect.md
         - name: Incorrect field values on the GSTR report
           href: india/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result.md
         - name: Incorrect field value in an invoice journal or voucher
@@ -67,4 +67,3 @@
           href: india/apac-ind-GST-troubleshooting-setoff-rule-error-transactions-on-voucher-not-balance.md
         - name: Default field value in tax information isn't as expected
           href: india/apac-ind-GST-troubleshooting-default-value-in-tax-information-not-expected.md
-    
