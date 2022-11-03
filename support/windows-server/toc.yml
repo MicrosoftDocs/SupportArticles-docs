@@ -189,7 +189,7 @@
     - name: Issues when you migrate to domain with ADMT 3.1
       href: ./identity/issues-admt-3dot1-migrate-to-domain.md
     - name: Support policy and Known Issues for ADMT
-      href: ./identity/support-for-admt-and-pes.md
+      href: ./identity/support-policy-and-known-issues-for-admt.md
     - name: Troubleshoot intra-forest password migrations
       href: ./identity/inter-forest-password-migration-with-admtv2.md
     - name: Troubleshoot sIDHistory migration with ADMTv2
