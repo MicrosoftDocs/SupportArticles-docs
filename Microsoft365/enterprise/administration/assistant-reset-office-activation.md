@@ -64,11 +64,11 @@ Here is a sample combination of switches to run this scenario:
 
 When you run a scenario by using the Enterprise version of the Assistant, you don't receive any prompts. It's a different experience from the full version of the Assistant. The following table describes the actions that the Enterprise version of the Assistant takes for each condition encountered by this scenario, and the corresponding output that it displays.
 
-> [!div class="mx-tdCol3BreakAll"]
+> [!div class="mx-tdBreakAll"]
 > |Condition|Action taken by the Enterprise version|Output shown in the command prompt window|
 > |---|---|---|
 > |Scan completed successfully|Exit the scenario|80: Successful run. Start any Office app and sign-in to activate.|
-> |User doesn't include the `-CloseOffice` switch|Exit the scenario 01: This scenario requires the `-CloseOffice` switch. Note, if Office is running, the `-CloseOffice` switch closes Office applications. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
+> |User doesn't include the `-CloseOffice` switch|Exit the scenario|01: This scenario requires the `-CloseOffice` switch. Note, if Office is running, the `-CloseOffice` switch closes Office applications. For additional information, please visit [https://aka.ms/SaRA_CommandLineVersion](https://aka.ms/SaRA_CommandLineVersion).|
 > |Error performing any action(s)|Exit the scenario|71: We ran into a problem. Please run the Office Activation scenario in the full UI version of SaRA. You can download SaRA from [https://aka.ms/SaRA-OfficeActivation-Cmdline](https://aka.ms/SaRA-OfficeActivation-Cmdline). |
 > |Command-prompt not elevated|Exit the scenario|72: The scenario requires an elevated command-prompt.|
 > |Failure to run the OLicenseCleanup script|Exit the scenario|73: We ran into a problem running OLicenseCleanup.vbs. See [https://learn.microsoft.com/office/troubleshoot/activation/reset-office-365-proplus-activation-state](/office/troubleshoot/activation/reset-office-365-proplus-activation-state) for manual reset steps.|
