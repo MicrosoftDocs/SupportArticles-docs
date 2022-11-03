@@ -18,7 +18,7 @@ This article provides an explanation on what optimizer timeout is and how it can
 ## What's an Optimizer timeout?
 
 
-SQL Server uses a cost-based query optimizer (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of the SQL Server query optimizer (QO) is to spend a "reasonable time" in query optimization as compared to query execution; optimizing a query is to be much faster than executing it. To accomplish this, QO has a built-in threshold of tasks to consider before it stops the optimization process. If this threshold is reached before QO has considered most, if not all, possible plans, then it has reached the Optimizer TimeOut limit. An optimizer timeout event is reported in the query plan as `TimeOut` under "Reason For Early Termination of Statement Optimization." It's important to understand that this threshold isn't based on clock time but on number of possibilities considered. In current SQL Server QO versions, over a half million possibilities are considered before a time out is reached.
+SQL Server uses a cost-based query optimizer (QO). For information on QO, see [Query processing architecture guide](/sql/relational-databases/query-processing-architecture-guide). A cost-based optimizer selects a query execution plan with the lowest cost after it has built and assessed multiple query plans. One of the objectives of the SQL Server query optimizer (QO) is to spend a "reasonable time" in query optimization as compared to query execution; optimizing a query is to be much faster than executing it. To accomplish this, QO has a built-in threshold of tasks to consider before it stops the optimization process. If this threshold is reached before QO has considered most, if not all, possible plans, then it has reached the Optimizer TimeOut limit. An optimizer timeout event is reported in the query plan as `TimeOut` under "Reason For Early Termination of Statement Optimization." It's important to understand that this threshold isn't based on clock time but on number of possibilities considered. In current SQL Server QO versions, over a half million tasks are considered before a time out is reached.
 
 The optimizer timeout is designed into SQL Server and in many cases encountering it isn't a factor affecting query performance. However, in some cases the SQL query plan choice may be negatively affected by the optimizer timeout and slower query performance could result. When you encounter such issues, understanding the optimizer timeout mechanism and how complex queries can be affected, can help you to troubleshoot and improve your query speed.
 
@@ -109,7 +109,7 @@ To illustrate, take an example of a join between three tables (T1, T2 and T3) an
 
 Now multiply six ways to three join orders and we have a minimum of 18 possible plans to choose from. Next, consider that either the clustered or non-clustered index could be used for data retrieval thus multiply 18 * 2 = 36 possibilities. If you include the possibility of parallelism and other factors like Seek or Scan of the HoBT, then the possible plans increase even more. If you're a math wizard you can figure out that when a query involves 10 tables, the possible plan combinations are in the millions or worst-case hundreds of millions. Therefore, you can see that a query with lots of joins is more likely to reach the optimizer timeout threshold than one with fewer joins.
 
-Keep in mind that query predicates (filters in the WHERE clause) and existence of constraints will reduce the number of access methods considered and thus the possibilities considered.
+Keep in mind that query predicates (filters in the WHERE clause) and existence of constraints and the combination of well-designed and up-to-date statistics will reduce the number of access methods considered and thus the possibilities considered.
 
 Again, the fact that QO stopped at the threshold does not mean you will end up with a slower query. But in some cases you may see slower query execution. 
 
@@ -139,10 +139,14 @@ Can you execute this same query with the same data set on a different build of S
 
 Examine your query in detail to determine its complexity. Upon initial examination, it may not be obvious that the query is complex and involves many joins. A common scenario here's when views or table-valued functions are involved. For example, on the surface, the query may appear to be simple because it joins two views. But when you examine the queries inside the views, you may find that each view joins seven tables and as a result when the two views are joined, you end up with a 14-table join. If your query uses the following objects, drill down into each object to see what the underlying queries inside it look like:
 
-- Views
-- Table Valued Functions (TFVs)
-- Subqueries or derived tables
-- Common Table Expressions (CTEs)
+- [Views](/sql/relational-databases/views/create-views)
+- [Table Valued Functions (TFVs)](/sql/relational-databases/user-defined-functions/create-user-defined-functions-database-engine)
+- [Subqueries or Dervied tables](/sql/relational-databases/performance/subqueries)
+- [Common Table Expressions (CTEs)](/sql/t-sql/queries/with-common-table-expression-transact-sql)
+- [UNION operators](/sql/t-sql/language-elements/set-operators-union-transact-sql)
+
+
+For all of these scenarios, the most common resolution would be to re-write the query and break it up into multiple queries. See [Step 9](#step-9-rewrite-the-query) for more details.
 
 #### Subqueries or derived tables
 
@@ -282,6 +286,44 @@ FROM Tvf1()
   JOIN Tvf2() ON...
   JOIN T9
 ```
+
+#### Union
+
+Union operators combine the results of multiple queries into a single result set. But they also combine the multiple queries into a single query under the covers. This makes for a single, complex query. The following example will end up with a single query plan that involves twelve tables.
+
+```sql
+SELECT 
+  ...
+FROM 
+  T1 
+  JOIN T2 ON...
+  JOIN T3 ON...
+  JOIN T4 ON...
+
+UNION ALL
+
+SELECT 
+  ...
+FROM 
+  T5 
+  JOIN T6 ON...
+  JOIN T7 ON...
+  JOIN T8 ON...
+
+UNION ALL
+
+SELECT 
+  ...
+FROM 
+  T9 
+  JOIN T10 ON...
+  JOIN T11 ON...
+  JOIN T12 ON...
+
+```
+
+
+
 
 
 ### Step 4. If you have a baseline query that runs faster, use its query plan
