@@ -20,7 +20,7 @@ ms.search.region: Global
 # ms.search.industry: 
 ms.author: wangchen
 ms.search.validFrom: 2021-10-26
-ms.dyn365.ops.version: Version 10.0.21
+ms.dyn365.ops.version: 10.0.21
 ---
 
 # The tax features list is empty in the Tax calculation parameters page

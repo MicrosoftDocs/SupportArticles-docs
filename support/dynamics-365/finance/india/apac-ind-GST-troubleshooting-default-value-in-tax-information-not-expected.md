@@ -116,7 +116,7 @@ For project transactions, the HSN/SAC/Exempt/NonGST is assigned differently.
 
 - When the HSN/SAC/Exempt/NonGST is a project transaction, set the breakpoint there, and start debugging.
 
-    :::image type="content" source="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project transaction-for-hsnsacexemptnongst.png" alt-text="Set a breakpoint for a project transaction for HSN, SAC, Exempt, or NonGST." lightbox="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project transaction-for-hsnsacexemptnongst.png":::
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-transaction.png" alt-text="Set a breakpoint for a project transaction for HSN, SAC, Exempt, or NonGST." lightbox="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-transaction.png":::
 
 - When the HSN/SAC/Exempt/NonGST is a project inventory item, such as an item journal or a project sales order, set a breakpoint there, and start debugging.
 
@@ -130,7 +130,7 @@ For project transactions, the HSN/SAC/Exempt/NonGST is assigned differently.
 
 - When the SAC is a project inventory item, such as an item journal or a project sales order, set a breakpoint there, and start debugging.
 
-    :::image type="content" source="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-inventory.png" alt-text="Set a breakpoint for a project inventory item." lightbox="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-inventory.png":::
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-inventory-item.png" alt-text="Set a breakpoint for a project inventory item." lightbox="media/apac-ind-gst-troubleshooting-default-value-in-tax-information-not-expected/breakpoint-for-project-inventory-item.png":::
 
 - When the SAC is a project category, set a breakpoint there, and start debugging.
 

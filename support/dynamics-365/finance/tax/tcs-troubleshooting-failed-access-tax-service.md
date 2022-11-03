@@ -20,7 +20,7 @@ ms.search.region: Global
 # ms.search.industry: 
 ms.author: hangwan
 ms.search.validFrom: 02/16/2022
-ms.dyn365.ops.version: Version 10.0.21
+ms.dyn365.ops.version: 10.0.21
 ---
 
 # "Failed to access tax service" error when selecting a value in Feature setup name
