@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "support/windows-server/identity/support-for-admt-and-pes.md",
+      "redirect_url": "/troubleshoot/windows-server/identity/support-policy-and-known-issues-for-admt",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "support/windows/win32/change-windows-active-directory-user-password.md",
       "redirect_url": "/troubleshoot/windows-server/identity/change-windows-active-directory-user-password",
       "redirect_document_id": true

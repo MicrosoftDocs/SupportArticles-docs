@@ -188,7 +188,7 @@
       href: ./identity/admt-3dot2-installation-incomplete.md
     - name: Issues when you migrate to domain with ADMT 3.1
       href: ./identity/issues-admt-3dot1-migrate-to-domain.md
-    - name: Support information for ADMT and PES
+    - name: Support policy and Known Issues for ADMT
       href: ./identity/support-for-admt-and-pes.md
     - name: Troubleshoot intra-forest password migrations
       href: ./identity/inter-forest-password-migration-with-admtv2.md

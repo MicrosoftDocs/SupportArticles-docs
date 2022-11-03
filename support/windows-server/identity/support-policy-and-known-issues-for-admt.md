@@ -1,5 +1,5 @@
 ﻿---
-title: Support policy and Known Issues for Active Directory Migration Tool
+title: Support policy and Known Issues for ADMT
 description: Learn Support policy and Known Issues for Active Directory Migration Tool.
 ms.date: 11/9/2022
 author: kaushika-msft
