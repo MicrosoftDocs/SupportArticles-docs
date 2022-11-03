@@ -72,7 +72,7 @@ To manage a public folder mailbox that exists in a different geo location than t
       Get-Mailbox -PublicFolder $mailboxGuid | fl PrimarySmtpAddress
       ```
 
-2. Open an Exchange Online PowerShell session that connects to the mailbox for the public folders that you're trying to work with:
+2. Open an Exchange Online PowerShell session that connects to the mailbox for the public folder that you're trying to work with:
 
    1. Connect to Exchange Online PowerShell by using a connection string that specifies the primary SMTP address of the public folder mailbox that you got in step 1:
 
