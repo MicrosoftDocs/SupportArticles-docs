@@ -63,6 +63,8 @@
       href: ../sync/error-0x8004de40-in-onedrive.md
     - name: Error when deleting OneDrive synced file locally
       href: ../sync/delete-onedrive-synced-file-error.md
+    - name: Install or access OneDrive error 0x80070005
+      href: ../sync/install-or-access-onedrive-error-0x80070005.md
     - name: OneDrive folders incorrectly show as syncing
       href: ../sync/folders-incorrectly-show-status-syncing.md
     - name: OneDrive for Business can't sync after tenant migration
