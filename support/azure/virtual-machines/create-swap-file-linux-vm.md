@@ -88,7 +88,6 @@ Then, create the SWAP file under the resource disk path or a custom path.
     swapsize=`echo "scale=0; ($size*0.3)/1" | bc`
     echo $swapsize
     dd if=/dev/zero of=/azure/resource/swapfile bs=1073741824 count=$swapsize
-    #fallocate --length $swapsizeGib /mnt/swapfile
     chmod 0600 /azure/resource/swapfile
     mkswap /azure/resource/swapfile
     swapon /azure/resource/swapfile
