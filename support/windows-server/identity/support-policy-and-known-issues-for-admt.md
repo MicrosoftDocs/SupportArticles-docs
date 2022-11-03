@@ -55,30 +55,29 @@ The ADMT 3.2 code base has been deprecated. Microsoft has officially halted any 
 
 This section lists the most common issues that you may experience while using ADMT.
 
-### You can't run ADMT on devices that have Windows Defender Credential Guard enabled
+### ADMT won't run on devices that have Windows Defender Credential Guard enabled
 
 **Issue**: You see errors that resemble the following:
 
-> Failed to move source object 'CN=User1. Verify that the caller's account is not marked sensitive and therefore cannot be delegated. hr=0x8009030e. No credentials are available in the security package.
+> Failed to move source object CN=User1. Verify that the caller's account is not marked sensitive and therefore cannot be delegated. hr=0x8009030e. No credentials are available in the security package.
 
 **Solution**: Temporarily disable Credential Guard on the ADMT server.
 
 > [!IMPORTANT]  
-> Please consult your security team before making  changes to Credential Guard. Back up the ADMT server before you make any changes.
+> Please consult your security team before changing the Credential Guard configuration. Back up the ADMT server before you make any changes.
 
-[Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO).
-Otherwise, the computer will re-enable Credential Guard the next time it restarts.
+[Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard. In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO). Otherwise, the computer will re-enable Credential Guard the next time it restarts.
 
 > [!NOTE]  
 > On devices that run Windows Server 2022, version 2H, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
 
 ### Domain controllers can't use unconstrained delegation
 
-**Issue**: During the migration process, ADMT requires that domain controllers use unconstrained delegation. This practice is no longer allowed or recommended.
+**Issue**: During the migration process, ADMT requires that domain controllers use [unconstrained delegation](/defender-for-identity/security-assessment-unconstrained-kerberos). This practice is no longer allowed or recommended.
 
 **Solution**: Install and run ADMT apps on the target domain controller. This configuration removes the need for delegation.
 
-### Modern apps fail to start after you migrate a user profile
+### Modern apps fail to start for a user who uses a migrated user profile
 
 **Issue**: When you use ADMT 3.2 to migrate a user profile to a Windows Client computer and then run the Security Translation wizard to update the profile, modern applications don't run. These apps include both built-in apps (such as the Windows Start menu and Search) and apps that were installed from the Windows Store.
 
