@@ -240,12 +240,14 @@ Here are possible causes for this error:
 - [Cause 1: Kubernetes secret doesn't reference the correct storage account name or key](#secretnotusecorrectstorageaccountkey)
 - [Cause 2: AKS's VNET and subnet aren't allowed for the storage account](#akssubnetnotallowed)
 - [Cause 3: Connectivity is via a private link but nodes and the private endpoint are in different VNETs](#aksnotawareprivateipaddress)
+- [Cause 4: Storage account is set to require encryption that the client doesn't support](#akssmbencryption)
 
 > [!NOTE]
 >
 > - Cause 1 applies to public and private scenarios.
 > - Cause 2 applies to the public scenario only.
 > - Cause 3 applies to the private scenario only.
+> - Cause 4 applies to public and private scenarios.
 
 ### <a id="secretnotusecorrectstorageaccountkey"></a>Cause 1: Kubernetes secret doesn't reference correct storage account name or key
 
@@ -388,6 +390,18 @@ To create the virtual network link, follow these steps:
 After the virtual network link is added, the FQDN should be resolved via a private IP address, and the mounting operation should succeed. See the following screenshot for an example:
 
 :::image type="content" source="media/fail-to-mount-azure-file-share/private-ip-address-resolved.png" alt-text="Screenshot shows private ip address is resolved.":::
+
+### <a id="akssmbencryption"></a>Cause 4: Storage account is set to require encryption that the client doesn't support
+
+[Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings) contain a number of options for controlling the security and encryption settings on storage accounts. As mentioned in the documentation for the SMB security settings, restricting allowed methods and algorithms can prevent clients from connecting.
+
+AKS versions before 1.25 are based on Ubuntu 18.04 LTS, which uses the Linux 5.4 kernel and only supports the AES-128-CCM and AES-128-GCM encryption algorithms. The **Maximum security** profile, or a **Custom** profile that disables AES-128-GCM, will cause share mapping failures.
+
+AKS versions 1.25 and newer are based on Ubuntu 22.04, which uses the Linux 5.15 kernel and has support for AES-256-GCM.
+
+#### Solution: Allow the AES-128-GCM encryption algorithm to be used
+
+Follow the directions on the [Azure Files Security Settings](/azure/storage/files/files-smb-protocol?tabs=azure-portal#smb-security-settings) documentation page to enable the AES-128-GCM algorithm by either selecting the **Maximum compatibility** profile or using a **Custom** profile that enables AES-128-GCM.
 
 ## More information
 
