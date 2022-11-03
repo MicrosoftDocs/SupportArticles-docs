@@ -2,10 +2,9 @@
 # required metadata
 
 title: Incorrect field values on the GSTR report
-description: This article provides troubleshooting information that can help when field values on the generated GSTR report are incorrect.
+description: Provides troubleshooting information that can help when field values on the generated GSTR report are incorrect.
 author: yungu
-ms.date: 10/21/2022
-ms.topic: article
+ms.date: 11/01/2022
 ms.prod: 
 
 ms.technology: 
@@ -26,7 +25,7 @@ ms.search.validFrom: 2021-04-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# Incorrect field values on the GSTR report
+# Field values are incorrect on the GSTR report
 
 When the GSTR report is generated, some of the field values might be incorrect. In this case, follow the steps in the sections of this article to try to fix the issue.
 
@@ -58,9 +57,9 @@ To determine whether the issue is related to Microsoft Excel, see [Details for i
     > [!NOTE]
     > In the last line of the query, replace **xx** with the invoice number from your GSTR report.
     >
-    > [![Invoice number in a generated GSTR report.](./media/field-value-incorrect-in-GSTR-report-result-Picture2.png)](./media/field-value-incorrect-in-GSTR-report-result-Picture2.png)
+    > :::image type="content" source="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/invoice-number.png" alt-text="Invoice number in a generated GSTR report." lightbox="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/invoice-number.png":::
 
-1. If the value is incorrect, the issue is related to posting. To fix the issue, see [Incorrect field value in an invoice journal or voucher](./apac-ind-GST-troubleshooting-invoice-journal-wrong.md). If the value is correct, move on to the next section.
+1. If the value is incorrect, the issue is related to posting. To fix the issue, see [Field value is incorrect in an invoice journal or voucher](./apac-ind-gst-troubleshooting-invoice-journal-wrong.md). If the value is correct, move on to the next section.
 
 ## Verify that the field value was transferred to the GSTR report
 
@@ -68,15 +67,15 @@ To determine whether the issue is related to Microsoft Excel, see [Details for i
 2. Select the configuration, and then select **Format designer**.
 3. On the **Format designer** page, select the **Mapping** tab.
 
-    [![Mapping tab on the Format designer page.](./media/field-value-incorrect-in-GSTR-report-result-Picture3.png)](./media/field-value-incorrect-in-GSTR-report-result-Picture3.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/mapping-tab.png" alt-text="The Mapping tab on the Format designer page." lightbox="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/mapping-tab.png":::
 
-4. In the tree, find the report name, expand **\<Report name\>** \> **Sequence** \> **Lines** \> **Sequence**, and verify that the field mapping is correct. In this example, the field mapping should be **parmPlaceOfSupply**.
+4. In the tree, find the report name, expand **\<Report name\>** \> **Sequence** \> **Lines** \> **Sequence**, and verify that the field mapping is correct. In this example, the field mapping should be `parmPlaceOfSupply`.
 
-    [![Field mapping in the expanded tree.](./media/field-value-incorrect-in-GSTR-report-result-Picture4.png)](./media/field-value-incorrect-in-GSTR-report-result-Picture4.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/field-mapping.png" alt-text="Double check the field mapping in the expanded tree." lightbox="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/field-mapping.png":::
 
-5. Go to the **TaxGSTRReportContract_IN** class, and search in the report configuration to determine whether the field mapping exists. In this example, search for **parmPlaceOfSupply** in the **TaxGSTRReportContract_IN** class.
+5. Go to the `TaxGSTRReportContract_IN` class, and search in the report configuration to determine whether the field mapping exists. In this example, search for `parmPlaceOfSupply` in the `TaxGSTRReportContract_IN`class.
 
-    [![Field mapping in the TaxGSTRReportContract_IN class.](./media/field-value-incorrect-in-GSTR-report-result-Picture5.png)](./media/field-value-incorrect-in-GSTR-report-result-Picture5.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/search-taxgstrreportcontract-in.png" alt-text="The field mapping in the TaxGSTRReportContract_IN class." lightbox="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/search-taxgstrreportcontract-in.png":::
 
 6. If the field mapping doesn't exist, report the issue to Microsoft. If the field mapping exists, move on to the next section.
 
@@ -85,7 +84,7 @@ To determine whether the issue is related to Microsoft Excel, see [Details for i
 1. Find references of the method as explained earlier in the article.
 2. Set breakpoints in the places where the method is called, and then debug it.
 
-    [![Breakpoints in references.](./media/field-value-incorrect-in-GSTR-report-result-Picture6.png)](./media/field-value-incorrect-in-GSTR-report-result-Picture6.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/breakpoints-in-references.png" alt-text="Set breakpoints in the places where the method is called." lightbox="media/apac-ind-gst-troubleshooting-field-value-incorrect-gstr-report-result/breakpoints-in-references.png":::
 
 ## Determine whether customization exists
 

@@ -2,10 +2,9 @@
 # required metadata
 
 title: Tax is posted to the wrong ledger account in the voucher
-description: This article provides troubleshooting information that can help when tax is posted to the wrong ledger account in the voucher.
+description: Provides troubleshooting information that can help when tax is posted to the wrong ledger account in the voucher.
 author: qire
-ms.date: 10/03/2022
-ms.topic: article
+ms.date: 10/31/2022
 ms.prod: 
 ms.technology: 
 
@@ -27,17 +26,17 @@ ms.dyn365.ops.version: 10.0.1
 
 # Tax is posted to the wrong ledger account in the voucher
 
-During posting, tax might be posted to the wrong ledger account in the voucher. To troubleshoot this issue, follow the steps in the following sections as required. The examples in this article use a sales order as the business document.
+During posting, tax might be posted to the wrong ledger account in the voucher. To solve this issue, follow the steps in the following sections as required. The examples in this article use a sales order as the business document.
 
 ## Find the tax code of the incorrectly posted tax transaction
 
 1. On the **Voucher transactions** page, select the transaction that you want to work with, and then select **Posted sales tax**.
-2. Review the value on the **Overview** tab in the **Sales tax code** field. 
+2. Review the value on the **Overview** tab in the **Sales tax code** field.
 
 ## Check the ledger posting group of the tax code
 
-1. Go to **Tax** > **Indirect taxes** > **Sales tax** > **Sales tax codes**.
-2. Find and select the tax code, and on the **General** FastTab, review the value in the **Ledger posting group** field. 
+1. Go to **Tax** \> **Indirect taxes** \> **Sales tax** \> **Sales tax codes**.
+2. Find and select the tax code, and on the **General** FastTab, review the value in the **Ledger posting group** field.
 3. The value in the **Ledger posting group** field is a link. To view the details of the group's configuration, select the link. Alternatively, select and hold (or right-click) in the field, and then select **View details**.
 4. In the **Sales tax payable** field, verify that the account number is correct, according to the transaction type. If it isn't, select the correct account to post to.
 
@@ -53,19 +52,19 @@ During posting, tax might be posted to the wrong ledger account in the voucher. 
     | Vendor cash discount   | The main account that is used to post a cash discount for sales tax codes that are associated with this ledger posting group. |
     | Customer case discount | The main account that is used to post a cash discount for sales tax codes that are associated with this ledger posting group. |
 
-    For more information, see, [Set up Ledger posting groups for sales tax](/dynamics365/finance/general-ledger/tasks/set-up-ledger-posting-groups-sales-tax)
+    For more information, see [Set up Ledger posting groups for sales tax](/dynamics365/finance/general-ledger/tasks/set-up-ledger-posting-groups-sales-tax).
 
 ## Debug in code to check ledger dimensions
 
 In the code, the posting account is determined by the ledger dimension. The ledger dimension saves the record ID of an account in the database.
 
-1. For a sales order, add a breakpoint at the **Tax::saveAndPost()** and **Tax::post()** methods. Pay attention to the value of **\_ledgerDimension**.
+1. For a sales order, add a breakpoint at the `Tax::saveAndPost()` and `Tax::post()` methods. Pay attention to the value of `_ledgerDimension`.
 
-    [![Sales order code sample that has a breakpoint.](./media/tax-posted-to-wrong-ledger-account-statement-1.png)](./media/tax-posted-to-wrong-ledger-account-statement-1.png)
+    :::image type="content" source="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/ledgerdimension-value.png" alt-text="Sales order code sample that has a breakpoint." lightbox="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/ledgerdimension-value.png":::
 
-    For a purchase order, add a breakpoint at the **TaxPost::saveAndPost()** and **TaxPost::postToTaxTrans()** methods. Pay attention to the value of **\_ledgerDimension**.
+    For a purchase order, add a breakpoint at the `TaxPost::saveAndPost()` and `TaxPost::postToTaxTrans()` methods. Pay attention to the value of `_ledgerDimension`.
 
-    [![Purchase order code sample that has a breakpoint.](./media/tax-posted-to-wrong-ledger-account-statement-2.png)](./media/tax-posted-to-wrong-ledger-account-statement-2.png)
+     :::image type="content" source="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/value-of-ledgerdimension.png" alt-text="Purchase order code sample that has a breakpoint." lightbox="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/value-of-ledgerdimension.png":::
 
 2. Run the following SQL query to find the display value of the account in the database, based on the record ID that is saved by the ledger dimension.
 
@@ -73,9 +72,9 @@ In the code, the posting account is determined by the ledger dimension. The ledg
     select * from DIMENSIONATTRIBUTEVALUECOMBINATION where recid={the value of _ledgerDimension}
     ```
 
-    [![Display value of the record ID.](./media/tax-posted-to-wrong-ledger-account-statement-3.png)](./media/tax-posted-to-wrong-ledger-account-statement-3.png)
+    :::image type="content" source="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/sql-query-to-show-value-of-account.png" alt-text="The SQL query that displays the value of the record ID." lightbox="media/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account/sql-query-to-show-value-of-account.png":::
 
-3. Examine the callstack to find where the **_ledgerDimension** value is assigned. Usually, the value is from **TmpTaxWorkTrans**. In this case, you should add a breakpoint at **TmpTaxWorkTrans::insert()** and **TmpTaxWorkTrans::update()** to find where the value assigned.
+3. Examine the callstack to find where the `_ledgerDimension` value is assigned. Usually, the value is from `TmpTaxWorkTrans`. In this case, you should add a breakpoint at `TmpTaxWorkTrans::insert()` and `TmpTaxWorkTrans::update()` to find where the value assigned.
 
 ## Determine whether customization exists
 

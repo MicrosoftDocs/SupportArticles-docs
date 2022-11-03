@@ -2,11 +2,10 @@
 # required metadata
 
 title: Tax isn't calculated
-description: This article provides troubleshooting information that can help when tax isn't calculated on tax documents.
+description: Provides troubleshooting information that can help when tax isn't calculated on tax documents.
 author: peter-xu
 manager: beya
-ms.date: 10/21/2022
-ms.topic: article
+ms.date: 10/27/2022
 ms.prod: 
 
 ms.technology: 
@@ -27,22 +26,22 @@ ms.search.validFrom: 2021-04-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# Tax isn't calculated
+# Tax isn't calculated on tax documents
 
-If you discover that tax component lines or tax document lines are missing from a tax document, follow the steps in this article to troubleshoot the issue. The procedures use a purchase order as an example to show the troubleshooting process.
+If you discover that tax component lines or tax document lines are missing from a tax document, follow the steps in this article to solve the issue. The procedures use a purchase order as an example to show the troubleshooting process.
 
 For more information about the Tax engine (also referred to as GTE) or components, see [Tax engine overview](/dynamics365/finance/general-ledger/tax-engine).
 
 ## Check the tax applicability in the tax configuration
 
-1. Open the designer for the current tax configuration. 
+1. Open the designer for the current tax configuration.
 2. If there are no tax document lines, select the **Header** node, and then, on the **Lookups** tab, verify that the condition is correct.
 
-    [![Condition field on the Lookups tab for the Header node on the Tax document page.](./media/tax-not-calculated-1.png)](./media/tax-not-calculated-1.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-tax-not-calculated/condition-field-for-header-node.png" alt-text="The Condition field on the Lookups tab for the Header node on the Tax document page.":::
 
 3. If there are no tax component lines, verify that the condition is correct on the **Lookups** tab for the **Lines**, **Tax type**, and **Tax component** nodes.
 
-    [![Condition field on the Lookups tab for the Lines node.](./media/tax-not-calculated-2.png)](./media/tax-not-calculated-2.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-tax-not-calculated/condition-field-for-lines-node.png" alt-text="The Condition field on the Lookups tab for the Lines node.":::
 
 ## Compare transaction details with other conditions
 
@@ -74,7 +73,7 @@ To prevent a transaction from being posted if GST hasn't been calculated, follow
 
     For this example, both fields are set to **Error**. Therefore, if someone tries to post a transaction, but GST hasn't been calculated, one of the following error messages is shown:
 
-    - **No tax lines exist:** "No tax document lines are found in tax document. If it is not expected, please contact your system administrator, check the tax configuration, and try again."
+    - **No tax lines exist:** "No tax document lines are found in tax document. If it isn't expected, contact your system administrator, check the tax configuration, and try again."
     - **No tax component lines exist:** "No tax component is applicable for line %1, please contact your system administrator, check the tax setup, and try again."
     - **The tax amount is 0 (zero):** "The tax amount is 0 for line %1, please contact your system administrator, check the tax setup, and try again."
 

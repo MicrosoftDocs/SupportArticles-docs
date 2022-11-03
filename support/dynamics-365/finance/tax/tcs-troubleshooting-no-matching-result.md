@@ -1,11 +1,10 @@
 ---
 # required metadata
 
-title: No matching result could be found
-description: This article explains how to troubleshoot the "No matching result could be found" error in the Tax Calculation service.
+title: No matching result could be found error
+description: Provides a resolution to solve the "No matching result could be found" error that occurs in the Tax Calculation service.
 author: hangwan
-ms.date: 09/30/2022
-ms.topic: troubleshooting
+ms.date: 10/31/2022
 ms.prod: 
 ms.technology: 
 
@@ -25,13 +24,15 @@ ms.dyn365.ops.version: Version 10.0.21
 ---
 
 
-# No matching result could be found
+# "No matching result could be found" error in the Tax Calculation service
 
-This article explains the troubleshooting steps that you can take if you receive the error, "No matching result could be found" in the Tax Calculation service.
+This article explains the troubleshooting steps that you can take if you receive the "No matching result could be found" error in the Tax Calculation service.
 
-## Symptom
+## Symptoms
 
-You receive the following error message: "Header/Lines - 1, Tax group, no matching result could be found."
+You receive the following error message:
+
+> Header/Lines - 1, Tax group, no matching result could be found.
 
 ```json
 ======================Tax service calculation result JSON:===========================
@@ -66,9 +67,9 @@ You receive the following error message: "Header/Lines - 1, Tax group, no matchi
 
 The issue occurs when the feature setup in Regulatory Configuration Service (RCS) is incorrect.
 
-## Troubleshoot
+## Resolution
 
-1. Download the troubleshooting file. For more information, see [Enable debug mode for troubleshooting](tcs-troubleshooting-enable-debug-mode.md).
+1. Download the troubleshooting file. For more information, see [How to enable debug mode for troubleshooting](tcs-troubleshooting-enable-debug-mode.md).
 2. Compare the Tax service calculation input with the feature setup to fix the setup issue.
 
     The following example shows the Tax service calculation input.
@@ -105,7 +106,7 @@ The issue occurs when the feature setup in Regulatory Configuration Service (RCS
     | Journal                 |                     |                           | Group A   |
     | Sales                   |                     | 30160                     | Group B   |
 
-    According to the Tax service calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of applicability rules in RCS. Because there's no matching line, the error occurs.
+    According to the Tax service calculation input, the **Business Process** value on the header is **Sales**, and the **Ship From Zip Code** value on the header is **30159**. This input is based on the setup of applicability rules in RCS. Because there's no matching line, the error message occurs.
 
     > [!NOTE]
     > If the value in the applicability rule is blank, the rule is applicable to any value.
@@ -114,7 +115,7 @@ The issue occurs when the feature setup in Regulatory Configuration Service (RCS
 
 Follow these steps to mitigate the error.
 
-1. In RCS, go to **Globalization features** > **Tax calculation**.
+1. In RCS, go to **Globalization features** \> **Tax calculation**.
 2. Create a new version of the feature.
 3. Add a line for the corresponding information.
 
@@ -125,4 +126,4 @@ Follow these steps to mitigate the error.
     | Sales                   |                     | 30159                    | Group B   |
 
 4. Publish the feature setup version.
-5. In Microsoft Dynamics 365 Finance, go to **Tax** > **Setup** > **Tax configuration** > **Tax calculation parameters**, and select the new version.
+5. In Microsoft Dynamics 365 Finance, go to **Tax** \> **Setup** \> **Tax configuration** \> **Tax calculation parameters**, and then select the new version.

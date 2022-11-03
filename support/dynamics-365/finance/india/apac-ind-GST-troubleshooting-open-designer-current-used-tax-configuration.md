@@ -2,31 +2,36 @@
 # required metadata
 
 title: Open the designer for the current tax configuration
-description: This article provides troubleshooting information about how to open the designer for the tax configuration that is currently used.
+description: Introduces how to open the designer for the tax configuration that is currently used.
 author: yungu
-ms.date: 10/21/2022
-ms.topic: article
-ms.prod: 
+ms.date: 10/28/2022
+ms.prod:
 
-ms.technology: 
+ms.technology:
 
 # optional metadata
 
-#ms.search.form:
+# ms.search.form:
 audience: Application user
-# ms.devlang: 
+
+# ms.devlang
+
 ms.reviewer: kfend
 
-# ms.tgt_pltfrm: 
-# ms.custom: 
+# ms.tgt_pltfrm
+
+# ms.custom
+
 ms.search.region: India
-# ms.search.industry: 
+
+# ms.search.industry
+
 ms.author: wangchen
 ms.search.validFrom: 2021-04-01
 ms.dyn365.ops.version: 10.0.1
 ---
 
-# Open the designer for the current tax configuration
+# How to open the designer for the current tax configuration
 
 This article explains how to open the designer for the tax configuration that is currently used. It uses the tax setup in a standard environment as an example.
 
@@ -34,9 +39,9 @@ This article explains how to open the designer for the tax configuration that is
 
 1. Go to **Tax** \> **Setup** \> **Tax configuration** \> **Tax setup**.
 2. On the **Companies** FastTab, select the related company, and then select **Setup**.
-3. Make a note of the configuration version that is shown in the tree. You will need this information later.
+3. Make a note of the configuration version that is shown in the tree. You'll need this information later.
 
-    [![Configuration version in the tree.](./media/open-designer-configuration.png)](./media/open-designer-configuration.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-open-designer-current-used-tax-configuration/open-designer-configuration.png" alt-text="You need to remember the configuration version that is shown in the tree.":::
 
 ## Open the designer for the currently used tax configuration
 

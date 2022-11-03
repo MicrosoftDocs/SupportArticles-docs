@@ -1,11 +1,10 @@
 ---
 # required metadata
 
-title: Records and fields don't appear on the GSTR report
-description: This article provides troubleshooting information that can help when records and fields don't appear on the GSTR report.
+title: Records and fields don't show on the GSTR report
+description: Provides troubleshooting information that can help when records and fields don't appear on the GSTR report.
 author: yungu
-ms.date: 10/03/2022
-ms.topic: article
+ms.date: 11/01/2022
 ms.prod: 
 
 ms.technology: 
@@ -36,7 +35,7 @@ To determine whether the issue is related to Microsoft Excel, see [Details for i
 
 ## Review the report controller setup
 
-1. Go to **Tax** > **Setup** > **Tax configuration** > **Tax setup** > **Configurations**.
+1. Go to **Tax** \> **Setup** \> **Tax configuration** \> **Tax setup**\ > **Configurations**.
 2. On the **Report configurations** tab, in the **Report controller** field, verify that the correct report controller is selected.
 3. If the selected controller is incorrect, select the correct one. If the correct is already selected, move to the next section.
 
@@ -44,13 +43,13 @@ To determine whether the issue is related to Microsoft Excel, see [Details for i
 
 If fields are missing from the report, review the field mapping in the report configuration.
 
-1. Go to **Workspaces** > **Electronic reporting** > **Reporting configurations**.
+1. Go to **Workspaces** \> **Electronic reporting** \> **Reporting configurations**.
 2. Select the report configuration, and then open the format designer.
-3. In the tree, find the report name, expand **\<Report name\>** \> **Sequence** \> **Header** \> **Sequence**, and verify that the field exists. 
+3. In the tree, find the report name, expand **\<Report name\>** \> **Sequence** \> **Header** \> **Sequence**, and verify that the field exists.
 
 ## If lines are missing from the report, review the filter formula in the report format configuration
 
-1. Go to **Workspaces** > **Electronic reporting** > **Reporting configurations**.
+1. Go to **Workspaces** \> **Electronic reporting** \> **Reporting configurations**.
 2. Select the format configuration that you want to work with, and then open the format designer.
 3. On the **Mapping** tab, select **Edit**.
 4. Select **Edit formula**.
@@ -66,7 +65,7 @@ This procedure uses the example of free text invoice lines that are missing reco
 2. Select and hold (or right-click) in a blank area of the **Invoice lines** grid, and then select **Form Name: CustFreeInvoice**.
 3. Make a note of the value in the **DataSource** field. In this example, it's **CustInvoiceLine**.
 4. Close the dialog box.
-5. On the **Free text invoice** page, on the header, make a note of the invoice ID in the **Invoice** field. 
+5. On the **Free text invoice** page, on the header, make a note of the invoice ID in the **Invoice** field.
 6. Run the following SQL query to determine whether the **TaxDocumentRowTransaction** table is missing records.
 
     ```sql
@@ -80,16 +79,16 @@ This procedure uses the example of free text invoice lines that are missing reco
 
 1. Set a breakpoint to determine whether **TaxGSTRReportDPHelper\_IN::queryTrans** gets the missing record in **tmpLineDetail**. If there appears to be an issue, report it to Microsoft.
 
-    [![Breakpoint at tmpLineDetail.](./media/records-fileds-not-show-in-GSTR-report-breakpoint-1.png)](./media/records-fileds-not-show-in-GSTR-report-breakpoint-1.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-tmplinedetail.png" alt-text="Set a breakpoint at tmpLineDetail to find the missing record." lightbox="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-tmplinedetail.png":::
 
 2. Set a breakpoint to determine whether **TaxGSTRReportDPHelper\_IN::filterTrans** filters the missing record. If there appears to be an issue, report it to Microsoft.
 
-    [![Breakpoint at filterTrans.](./media/records-fileds-not-show-in-GSTR-report-breakpoint-2.png)](./media/records-fileds-not-show-in-GSTR-report-breakpoint-2.png)
+    :::image type="content" source="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-filtertrans.png" alt-text="Set a breakpoint at filterTrans to find the missing record." lightbox="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-filtertrans.png":::
 
 3. Set a breakpoint to determine whether the **TransCategory** field of the missing record is correct, or whether the record is filtered again. If there appears to be an issue, report it to Microsoft.
 
-    [![Breakpoint at tmpLineDetail.TransCategory.](./media/records-fileds-not-show-in-GSTR-report-breakpoint-3.png)](./media/records-fileds-not-show-in-GSTR-report-breakpoint-3.png)
+     :::image type="content" source="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-tmplinedetail-transcategory.png" alt-text="Set a breakpoint at tmpLineDetail.TransCategory to find the missing record." lightbox="media/apac-ind-gst-troubleshooting-records-fields-not-showing-gstr-report/breakpoint-at-tmplinedetail-transcategory.png":::
 
 ## Determine whether customization exists
 
-If you've completed the steps in the previous section but have found no issue, determine whether customization exists. If no customization exists, create a Microsoft service request for further support.
+If you've completed the steps in the previous sections but have found no issue, determine whether customization exists. If no customization exists, create a Microsoft service request for further support.

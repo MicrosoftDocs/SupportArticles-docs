@@ -2,10 +2,9 @@
 # required metadata
 
 title: Tax calculation performance affects transactions
-description: This article provides troubleshooting information that is related to tax calculation performance and its effect on transactions.
+description: Provides troubleshooting information related to tax calculation performance and its effect on transactions.
 author: shtao
-ms.date: 09/30/2022
-ms.topic: troubleshooting
+ms.date: 10/31/2022
 ms.prod: 
 ms.technology: 
 
@@ -27,11 +26,11 @@ ms.dyn365.ops.version: 10.0.1
 
 # Tax calculation performance affects transactions
 
-Sometimes, a transaction is affected by performance issues that tax calculation is having. To troubleshoot this issue, follow the steps in the following sections as required.
+Sometimes, a transaction is affected by performance issues that tax calculation is having. To solve this issue, follow the steps in the following sections as required.
 
 ## Review the transaction line count
 
-Determine whether the transaction has a large number of lines (for example, more than several hundred). If it doesn't, move on to the next section. If the transaction does have several hundred lines, delay the tax calculation. For more information, see [Enable delayed tax calculation on journals](/dynamics365/finance/general-ledger/enable-delayed-tax-calculation). 
+Determine whether the transaction has a large number of lines (for example, more than several hundred). If it doesn't, move on to the next section. If the transaction does have several hundred lines, delay the tax calculation. For more information, see [Enable delayed tax calculation on journals](/dynamics365/finance/general-ledger/enable-delayed-tax-calculation).
 
 Next, you can determine whether any of the following conditions are met:
 
@@ -46,18 +45,18 @@ If any of these conditions are met, delay the tax calculation.
 Review the call stack to determine whether tax calculation is called multiple times. If it isn't, move on to the next section. If the call stack is called multiple times, follow these steps to help reduce the tax calculation times.
 
 1. If the journal has considered the transaction, delay the tax calculation. For more information, see [Enable delayed tax calculation on journals](/dynamics365/finance/general-ledger/enable-delayed-tax-calculation).
-2. If the transaction is a purchase order, and the application version is later than 10.0.15, you can delay the tax calculation until the final calculation by enabling the flighting for **PurchTableChangeMgmtDistributionUpdateOnToggle_KillSwitch**.
+2. If the transaction is a purchase order, and the application version is later than 10.0.15, you can delay the tax calculation until the final calculation by enabling the flighting for `PurchTableChangeMgmtDistributionUpdateOnToggle_KillSwitch`.
 
 ## Review the call stack timeline
 
-Review the call stack timeline to determine whether the following issues exist. If they do, enable the flighting for **TaxUncommittedDoIsolateScopeFlighting** to fix the issue.
+Review the call stack timeline to determine whether the following issues exist. If they do, enable the flighting for `TaxUncommittedDoIsolateScopeFlighting` to fix the issue.
 
-- The transaction causes the system to stop responding until the session ends. Therefore, the transaction can't calculate the tax result. 
-- The **TaxUncommitted** methods take more time than other methods. For example, the **TaxUncommitted::updateTaxUncommitted()** method could take 43,347.42 seconds, but other methods take 0.09 seconds.
+- The transaction causes the system to stop responding until the session ends. Therefore, the transaction can't calculate the tax result.
+- The `TaxUncommitted` methods take more time than other methods. For example, the `TaxUncommitted::updateTaxUncommitted()` method could take 43,347.42 seconds, but other methods take 0.09 seconds.
 
-## Customizing and calling tax calculation
+## Customize and call tax calculation
 
-When you customize, don't call tax calculation at the **insert()** or **update()** method for each line. Tax calculation should be called at the transaction level.
+When you customize, don't call tax calculation at the `insert()` or `update()` method for each line. Tax calculation should be called at the transaction level.
 
 ## Determine whether customization exists
 

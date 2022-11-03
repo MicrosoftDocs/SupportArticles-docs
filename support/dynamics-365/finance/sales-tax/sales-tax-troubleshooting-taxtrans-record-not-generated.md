@@ -1,11 +1,10 @@
 ---
 # required metadata
 
-title: TaxTrans record isn't generated
-description: This article provides troubleshooting information that can help when a TaxTrans record isn't generated.
+title: TaxTrans record isn't created
+description: Provides troubleshooting information that can help when a TaxTrans record isn't generated.
 author: qire
-ms.date: 10/03/2022
-ms.topic: article
+ms.date: 10/31/2022
 ms.prod: 
 ms.technology: 
 
@@ -29,7 +28,7 @@ ms.dyn365.ops.version: 10.0.1
 
 If you select **Posted sales tax** for a transaction, but the **Posted sales tax** page either shows no tax lines or is missing a tax line, the **TaxTrans** record might not have been generated.
 
-To troubleshoot this issue, complete the steps in the following sections as required.
+To solve this issue, complete the steps in the following sections as required.
 
 ## Check the sales tax before you post the transaction
 
@@ -38,19 +37,19 @@ To troubleshoot this issue, complete the steps in the following sections as requ
 
 ## Find the TaxTrans record in all posted sales tax
 
-1. Go to **Tax** \> **Inquiries and reports** \> **Sales tax inquiries** > **Posted sales tax**.
+1. Go to **Tax** \> **Inquiries and reports** \> **Sales tax inquiries** \> **Posted sales tax**.
 2. In the **Voucher** column heading, select the filter symbol to find the **TaxTrans** record.
 3. If you find the sales tax records that you're looking for, check the date. If the date differs from the date of the journal header, create a Microsoft service request for additional support.
 
 ## Debug to check details
 
 1. For information about how to debug and determine whether **TmpTaxWorkTrans** and **TaxUncommitted** are correctly generated, see [Field value in TaxTrans is incorrect](sales-tax-troubleshooting-field-value-taxtrans-incorrect.md).
-2. If **TaxTmpWorkTrans** or **TaxUncommitted** is correctly generated, add a breakpoint at **TaxPost::SaveAndPost()** and **Tax::SaveAndPost** to debug the reason why **TaxTrans** isn't inserted.
+2. If **TaxTmpWorkTrans** or **TaxUncommitted** is correctly generated, add a breakpoint at `TaxPost::SaveAndPost()` and `Tax::SaveAndPost` to debug the reason why **TaxTrans** isn't inserted. Here are the screenshots of this step:
 
-    [![Breakpoints added in code.](./media/taxtrans-is-not-generated-if-statement.png)](./media/taxtrans-is-not-generated-if-statement.png)
+    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png" alt-text="The breakpoints that are added in code." lightbox="media/ales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoint-taxpost-saveandpost.png":::
 
-    [![Results of added breakpoints.](./media/taxtrans-is-not-generated-second-statement.png)](./media/taxtrans-is-not-generated-second-statement.png)
+    :::image type="content" source="media/sales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png" alt-text="The results of the added breakpoints." lightbox="media/ales-tax-troubleshooting-taxtrans-record-not-generated/added-breakpoints-results.png":::
 
 ## Determine whether customization exists
 
-If you've completed the steps in the previous sections but have found no issue, determine whether customization exists. If no customization exists, create a Microsoft 
+If you've completed the steps in the previous sections but have found no issue, determine whether customization exists. If no customization exists, create a Microsoft service request for further support.
