@@ -16,9 +16,9 @@ This article works around an issue where a Proxy Auto-Configuration (PAC) settin
 
 Consider the following scenario:
 
-- Intune administrators use Microsoft Tunnel to provide per-app VPN on Android Enterprise devices.
+- In Microsoft Intune, administrators use Microsoft Tunnel to provide per-app VPN on Android Enterprise devices.
 - A VPN profile is created and a PAC setting is configured for Microsoft Edge to consume proxy settings.
-- After the VPN connection is established, users launch Microsoft Edge on devices with Android 13.
+- After the VPN connection is established, users open Microsoft Edge on devices with Android 13.
 
 In this scenario, the PAC setting is ignored by Microsoft Edge.
 
