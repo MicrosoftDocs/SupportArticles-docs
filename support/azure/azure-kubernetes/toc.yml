@@ -235,6 +235,10 @@
 
 - name: Extensions and add-ons
   items:
+  - name: Troubleshoot Azure Key Vault Provider for Secrets Store CSI Driver
+    href: troubleshoot-key-vault-csi-secrets-store-csi-driver.md
+  - name: Troubleshoot Dapr extension installation errors
+    href: troubleshoot-dapr-extension-installation-errors.md
   - name: Troubleshoot the KEDA add-on
     href: troubleshoot-kubernetes-event-driven-autoscaling-add-on.md
 
