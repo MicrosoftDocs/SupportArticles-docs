@@ -48,8 +48,8 @@ The registry entries that are listed in this section must be added to the follow
 
     This value is the maximum time difference that's permitted between the client computer, and the KDC.
 
-> [!NOTE]
-> The SkewTime is considered in the determination of Kerberos ticket validity for reuse. A ticket is considered expired if the expiration time is less than the current time + the SkewTime. For example, if the SkewTime is set to 20 minutes and the current time is 08:00, any ticket with an expiration time before 08:20 will be considered expired.
+    > [!NOTE]
+    > The SkewTime is considered in the determination of Kerberos ticket validity for reuse. A ticket is considered expired if the expiration time is less than the current time + the SkewTime. For example, if the SkewTime is set to 20 minutes and the current time is 08:00, any ticket with an expiration time before 08:20 will be considered expired.
 
 - Entry: LogLevel
 
