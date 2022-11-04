@@ -5,7 +5,7 @@ ms.date: 09/02/2020
 ms.custom: sap:Administration and Management
 ms.prod: sql
 ---
-# Interoperability of Columnstore indexes with large page memory model in SQL Server
+# Performance may be slow when Columnstore indexes used with Large Page memory 
 
 This article helps you resolve the performance issue when you use `Columnstore Index` feature and large page memory model in SQL Server.
 
