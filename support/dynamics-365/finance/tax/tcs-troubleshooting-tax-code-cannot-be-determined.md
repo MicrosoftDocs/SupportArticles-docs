@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Tax code can't be determined error
+title: Tax code cannot be determined error
 description: Provides a resolution to solve the "Tax code cannot be determined" error that occurs in the Tax Calculation service.
 author: hangwan
 ms.date: 10/31/2022
@@ -23,7 +23,7 @@ ms.search.validFrom: 03/23/2022
 ms.dyn365.ops.version: 10.0.21
 ---
 
-# "Tax code can't be determined" error in the Tax Calculation service
+# "Tax code cannot be determined" error in the Tax Calculation service
 
 This article explains the troubleshooting steps that you can take if you receive a "Tax code cannot be determined" error in the Tax Calculation service.
 

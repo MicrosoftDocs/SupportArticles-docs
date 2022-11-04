@@ -19,7 +19,7 @@
               href: tax/tcs-troubleshooting-no-matching-result.md
             - name: Tax features list is empty in Tax calculation parameters
               href: tax/tcs-troubleshooting-tax-feature-list-empty-tax-calculation-parameter.md
-            - name: '"Tax code can't be determined" error'
+            - name: '"Tax code cannot be determined" error'
               href: tax/tcs-troubleshooting-tax-code-cannot-be-determined.md
         - name: Sales tax
           items:
