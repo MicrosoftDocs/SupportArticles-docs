@@ -2702,6 +2702,8 @@
       href: ./virtualization/support-policy-nic-teaming.md
     - name: Upgrade computers with Hyper-V role installed
       href: ./virtualization/upgrade-computers-hyper-v-role.md
+    - name: Windows Server 2019 Hyper-V host minroot behaviors
+      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
   - name: Integration components
     items:
     - name: Degraded integration services message for non-Windows guests
@@ -2728,8 +2730,6 @@
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
-    - name: Windows Server 2019 Hyper-V host minroot behaviors
-      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
