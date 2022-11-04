@@ -1,7 +1,7 @@
 ---
 title: Space used by a table is not released
 description: This article provides workaround for the problem that a table uses cannot be released after you use a DELETE statement to delete all data from the table.
-ms.date: 01/20/2021
+ms.date: 11/04/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: georgel, haiwxu, willchen
 ---
@@ -33,7 +33,7 @@ This problem occurs because SQL Server only releases all the pages that a heap t
 
 If pages are not deallocated, other objects in the database cannot reuse the pages.
 
-However, when you enable a row `versioning-based` isolation level in a SQL Server 2005 database, pages cannot be released even if a table-level lock is being held. For more information about row `versioning-based` isolation levels, see the "Using Row Versioning-based Isolation Levels" topic in SQL Server 2005 Books Online.
+However, when you enable a row `versioning-based` isolation level in a SQL Server database, pages cannot be released even if a table-level lock is being held. For more information about row `versioning-based` isolation levels, see the [Isolation levels in the SQL Server Database Engine](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide#isolation-levels-in-the-) .
 
 ## Workaround
 
@@ -54,4 +54,4 @@ To work around this problem, use one of the following methods:
     TRUNCATE TABLE <TableName>
     ```
 
-- Create a clustered index on a column of the table. For more information about how to create a clustered index on a table, see the "Creating a Clustered Index" topic in SQL Server Books Online.
+- Create a clustered index on a column of the table. For more information about how to create a clustered index on a table, see the [Creating a Clustered Index](/sql/relational-databases/indexes/create-clustered-indexes).
