@@ -5,9 +5,6 @@ title: Tax configuration errors
 description: Provides troubleshooting information that can help with tax configuration errors.
 author: peter-xu
 ms.date: 10/27/2022
-ms.prod: 
-
-ms.technology: 
 
 # optional metadata
 

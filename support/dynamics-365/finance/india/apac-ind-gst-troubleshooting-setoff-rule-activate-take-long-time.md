@@ -6,9 +6,6 @@ description: Provides troubleshooting information to help speed up the activatio
 author: shaoling
 manager: beya
 ms.date: 11/02/2022
-ms.prod: 
-
-ms.technology: 
 
 # optional metadata
 

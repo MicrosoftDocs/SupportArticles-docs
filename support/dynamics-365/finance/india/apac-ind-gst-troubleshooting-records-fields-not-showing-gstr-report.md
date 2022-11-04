@@ -5,9 +5,6 @@ title: Records and fields don't show on the GSTR report
 description: Provides troubleshooting information that can help when records and fields don't appear on the GSTR report.
 author: yungu
 ms.date: 11/01/2022
-ms.prod: 
-
-ms.technology: 
 
 # optional metadata
 

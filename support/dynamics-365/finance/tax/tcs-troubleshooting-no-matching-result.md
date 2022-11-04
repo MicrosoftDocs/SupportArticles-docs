@@ -5,8 +5,6 @@ title: No matching result could be found error
 description: Provides a resolution to solve the "No matching result could be found" error that occurs in the Tax Calculation service.
 author: hangwan
 ms.date: 10/31/2022
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 

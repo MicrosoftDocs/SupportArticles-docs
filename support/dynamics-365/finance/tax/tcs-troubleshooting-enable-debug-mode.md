@@ -5,8 +5,6 @@ title: Enable debug mode in Tax Calculation
 description: Introduces how to enable the debug mode in the Tax Calculation service to investigate issues. 
 author: hangwan
 ms.date: 10/31/2022
-ms.prod: 
-ms.technology: 
 
 # optional metadata 
 

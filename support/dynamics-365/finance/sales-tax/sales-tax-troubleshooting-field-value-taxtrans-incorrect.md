@@ -5,8 +5,6 @@ title: Incorrect field value in TaxTrans
 description: Provides troubleshooting information that can help when field values are incorrect in TaxTrans.
 author: EricWangChen
 ms.date: 10/31/2022
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 

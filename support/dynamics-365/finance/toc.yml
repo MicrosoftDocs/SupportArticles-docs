@@ -33,7 +33,7 @@
               href: sales-tax/sales-tax-troubleshooting-taxtrans-record-not-generated.md
             - name: Tax is posted to the wrong ledger account in the voucher
               href: sales-tax/sales-tax-troubleshooting-tax-posted-to-wrong-ledger-account.md
-            - name: Voucher isn't created in Voucher transactions
+            - name: Voucher isn't created on Voucher transactions
               href: sales-tax/sales-tax-troubleshooting-voucher-not-generated.md
         - name: India
           items:

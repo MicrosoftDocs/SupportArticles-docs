@@ -6,9 +6,6 @@ title: Tax transaction ID is incorrect
 description: Provides steps to correct the tax transaction ID.
 author: shaoling
 ms.date: 10/27/2022
-ms.prod:
-
-ms.technology:
 
 # optional metadata
 

@@ -5,8 +5,6 @@ title: Failed to access tax service error
 description: Provides a resolution for the Failed to access tax service error that occurs when you try to access the Tax Calculation service.
 author: hangwan
 ms.date: 10/31/2022
-ms.prod: 
-ms.technology: 
 
 # optional metadata
 
