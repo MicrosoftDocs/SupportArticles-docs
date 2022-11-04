@@ -25,7 +25,7 @@ _Applies to:_ &nbsp; Windows Server 2019
 
 On a Windows Server Hyper-V host, the root partition (also known as the management partition) provides the management services that control all guest virtual machines, provides virtual device support for guests, and manages all device I/O for guest virtual machines. On systems that have a very high number of processors, Windows Server Hyper-V hosts run in a Minimum Root (minroot) configuration. In this configuration, the root partition is limited to a maximum of 320 processors, even if the host has more than 320 processors.
 
-For more information about the minroot configuration, see [Hyper-V Host CPU Resource Management: Minroot](windows-server/virtualization/hyper-v/manage/manage-hyper-v-minroot-2016#the-minimum-root-or-minroot-configuration).
+For more information about the minroot configuration, see [Hyper-V Host CPU Resource Management: Minroot](/windows-server/virtualization/hyper-v/manage/manage-hyper-v-minroot-2016#the-minimum-root-or-minroot-configuration).
 
 When you run a Windows Server 2019 Hyper-V host in minroot configuration, you may observe the following behaviors:
 

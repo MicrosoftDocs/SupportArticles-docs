@@ -2728,6 +2728,8 @@
       href: ./virtualization/starting-or-live-migrating-hyper-v-vms-fails.md
     - name: Troubleshoot live migration issues
       href: ./virtualization/troubleshoot-live-migration-issues.md
+    - name: Windows Server 2019 Hyper-V host minroot behaviors
+      href: ./virtualization/windows-server-hyper-v-host-minroot-behaviors.md
   - name: Snapshots, checkpoints, and differencing disks
     items:
     - name: Can't delete a recovery checkpoint for a VM in DPM
