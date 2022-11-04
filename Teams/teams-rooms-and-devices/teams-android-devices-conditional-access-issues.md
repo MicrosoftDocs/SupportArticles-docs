@@ -93,5 +93,5 @@ Below is the screenshot of an example device filter:
 - [App protection policies overview](/mem/intune/apps/app-protection-policy#microsoft-teams-android-devices)
 - [Conditional Access and compliance best practices for Microsoft Teams Rooms](/microsoftteams/rooms/conditional-access-and-compliance-for-devices)
 - [Authentication best practices for Microsoft Teams shared device management of Android devices](/MicrosoftTeams/devices/authentication-best-practices-for-android-devices#using-filters-for-devices)
-- [Known issues in Teams Rooms and devices](rooms-known-issues.md#teams-phone-devices)
+- [Known issues in Teams Rooms and devices](rooms-known-issues.md##issues-with-teams-phones)
 - [Video: Intune Compliance & Conditional Access with Teams Android devices](https://www.youtube.com/watch?v=uTQR_YuWZag)
