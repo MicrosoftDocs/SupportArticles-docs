@@ -1,14 +1,14 @@
 ---
 title: Database Engine Input/Output requirements
-description: This article describes the SQL Server Database Engine Input/Output requirements.
-ms.date: 09/07/2020
+description: This article describes the SQL Server Database Engine Disk I/O requirements.
+ms.date: 11/04/2022
 ms.custom: sap:Administration and Management
 ms.topic: article
 ms.prod: sql
 ---
-# SQL Server Database Engine Input/Output requirements
+# SQL Server Database Engine Disk Input/Output (I/O) requirements
 
-This article describes the SQL Server Database Engine Input/Output requirements.
+This article describes the SQL Server Database Engine Disk Input/Output (I/O) requirements.
 
 _Original product version:_ &nbsp; SQL Server  
 _Original KB number:_ &nbsp; 967576
@@ -21,8 +21,6 @@ SQL Server requires that systems support guaranteed delivery to stable media, as
 
 - [SQL Server IO Reliability Program Review Requirements](https://download.microsoft.com/download/f/1/e/f1ecc20c-85ee-4d73-baba-f87200e8dbc2/sql_server_io_reliability_program_review_requirements.pdf)
 
-  > [!NOTE]
-    > The above two documents also apply to SQL Server 2014.
 This requirement includes, but is not limited to, the following conditions:
 
 - Windows logo certification
@@ -30,7 +28,7 @@ This requirement includes, but is not limited to, the following conditions:
 - Caching stability
 - No data rewrites
 
-Systems that meet these requirements support SQL Server database storage. Systems do not have to be listed on the SQL Server storage solutions site, but they must guarantee that the requirements are met.
+Systems that meet these requirements support SQL Server database storage. Systems do not have to be listed on SQL Server storage solutions programs, but they must guarantee that the requirements are met.
 
 SQL Server maintains the atomicity, consistency, isolation, and durability (ACID) property by using the Write-Ahead Logging (WAL) protocol.
 
@@ -39,7 +37,7 @@ SQL Server maintains the atomicity, consistency, isolation, and durability (ACID
 
 ## Technical support
 
-Microsoft will provide full support for SQL Server and SQL Server-based applications. However, issues that have, or caused by, the I/O solution will be referred to the device manufacturer. Symptoms may include, but are not limited to, the following:
+Microsoft will provide full support for SQL Server and SQL Server-based applications. However, issues that are caused by the I/O solution will be referred to the device manufacturer. Symptoms may include, but are not limited to, the following:
 
 - Database corruption
 - Backup corruption
@@ -47,7 +45,7 @@ Microsoft will provide full support for SQL Server and SQL Server-based applicat
 - Missing transactions
 - Unexpected I/O performance variances
 
-Microsoft recommends use of Windows Logo certified products. To determine whether your solution supports "guaranteed delivery to stable media" as outlined under the SQL Server Always-On program, check with your vendor. We also recommend that you contact your vendor to verify that you have correctly deployed and configured the solution for transactional database use.
+To determine whether your hardware solution supports "guaranteed delivery to stable media" as outlined under the SQL Server Always-On program, check with your vendor. We also recommend that you contact your vendor to verify that you have correctly deployed and configured the solution for transactional database use.
 
 It is a common troubleshooting practice for a Microsoft Support professional to ask you to disable nonessential jobs and to disable or remove third-party components, move database files, uninstall drivers, and perform similar actions. We always try to reduce the scope of the issue while we work to identify it. After an issue is identified as unrelated to the jobs or third-party products, those jobs or third-party products may be reintroduced to production.
 
