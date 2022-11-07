@@ -59,8 +59,8 @@ Essentially, you have encountered the issue documented at the article [DPAPI Mas
 
 ## References
 
-- [CryptProtectData function](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata?redirectedfrom=MSDN)
+- [CryptProtectData function](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata)
 
-- [Windows Data Protection](/previous-versions/ms995355(v=msdn.10)?redirectedfrom=MSDN)
+- [Windows Data Protection](/previous-versions/ms995355(v=msdn.10))
 
 - [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md)
