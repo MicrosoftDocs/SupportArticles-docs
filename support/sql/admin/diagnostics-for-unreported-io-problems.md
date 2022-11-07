@@ -80,7 +80,7 @@ The behaviors mentioned in the preceding paragraph indicate a read caching probl
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
-Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated two times but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated twice with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
+Microsoft has also noted conditions that don't meet the criteria for error 605 or 823 but are caused by the same stale read or lost write activity. In some instances, a page appears to be updated twice but with the same LSN value. This behavior may occur if the Object ID and the Page ID are correct (page already allocated to the object), and a change is made to the page and flushed to the disk. The next page retrieval returns an older image, and then a second change is made. The SQL Server transaction log shows that the page was updated twice with the same LSN value. This action becomes a problem when you try to restore a transaction log sequence or with data consistency problems, such as foreign key failures or missing data entries. The following error message illustrates one example of this condition:
 
 > Error: 3456, Severity: 21, State: 1 Could not redo log record (276666:1664:19), for transaction ID (0:825853240), on page (1:1787100), database 'authors' (7). Page: LSN = (276658:4501:9), type = 1. Log: OpCode = 4, context 2, PrevPageLSN: (275565:3959:31)..
 
@@ -121,7 +121,6 @@ Microsoft has noted that the root cause for the following sort read failures is 
 * 008522B3 Module(sqlservr+004522B3) (merge_getnext+00000285)
 * 0085207D Module(sqlservr+0045207D) (mergenext+0000000D)
 * 004FC5FB Module(sqlservr+000FC5FB) (getsorted+00000021)
-
 
 Because a stale read or a lost write results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
 
