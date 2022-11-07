@@ -69,7 +69,7 @@ This section lists the most common issues that you may experience while using AD
 [Manage Windows Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage) provides a script that disables Credential Guard. In addition to running the script, disable the **Computer Configuration\\Administrative Templates\\System\\Device Guard\\Secure Launch Configuration** group policy object (GPO). Otherwise, the computer will re-enable Credential Guard the next time it restarts.
 
 > [!NOTE]  
-> On devices that run Windows Server 2022, version 2H, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
+> On devices that run Windows Server 2022, version H2, Credential Guard is enabled when the GPO described previously is set to **Not Configured**.
 
 ### Domain controllers can't use unconstrained delegation
 
@@ -99,14 +99,14 @@ In Windows 10, a custom file association is protected from unwanted modification
 
 **Issue**: When ADMT tries to migrate an object that has a child object, the migration fails and ADMT generates the following message in the migration error log:
 
-> ERR2:7422 Failed to move source object CN=\<_object name_>. hr=0x8007208c The operation cannot be performed because child objects exist. This operation can only be performed on a child object.
+> **ERR2:7422** Failed to move source object CN=\<_object name_>. hr=0x8007208c The operation cannot be performed because child objects exist. This operation can only be performed on a child object.
 
 A few examples of child objects that block migration include but aren't limited to the following:
 
-- Citrix SSOSecret and SSOConfig
 - Exchange Active Sync
 - Microsoft Dynamic GP
 - TermSrvLicensing
+- Citrix SSOSecret and SSOConfig
 
 **Solution**: You have to delete the child object (also known as a leaf object) to migrate the parent object. For example, you would have to delete the Exchange ActiveSync object. Otherwise, there is no known workaround.
 
@@ -114,11 +114,11 @@ A few examples of child objects that block migration include but aren't limited 
 
 **Issue**: During an inter-forest migration, you migrate computers that are configured to retain their primary DNS suffix when their domain membership changes. The ADMT post-migration check fails when ADMT tries to verify the domain membership of the migrated computer. The error messages resemble the following examples:
 
-> ERR2:7711 Unable to retrieve the DNS hostname for the migrated computer 'workstation1.contoso.com'. The ADSI property cannot be found in the property cache. (hr=0x8000500d) Post-check will be retried on the computer 'workstation1'
+> **ERR2:7711** Unable to retrieve the DNS hostname for the migrated computer 'workstation1.contoso.com'. The ADSI property cannot be found in the property cache. (hr=0x8000500d) Post-check will be retried on the computer 'workstation1'
 
-> ERR2:7709 Post-check failed on the computer 'workstation1.contoso.com'
+> **ERR2:7709** Post-check failed on the computer 'workstation1.contoso.com'
 
-> ERR2:7675 Unable to verify the migrated computer 'workstation1' belongs to the domain 'tailspintoys.com'. Access is denied. (hr=0x80070005)
+> **ERR2:7675** Unable to verify the migrated computer 'workstation1' belongs to the domain 'tailspintoys.com'. Access is denied. (hr=0x80070005)
 
 To check this configuration, open the **System** properties on the computer. To do this, select **Start** > **Settings** > **About** > **Advanced system settings** > **Computer Name** > **Change** > **More**. If **Change primary DNS suffix when domain membership changes** isn't selected, the computer is affected by this issue.
 
@@ -144,7 +144,7 @@ To check this configuration, open the **System** properties on the computer. To 
 
 **Solution**: ADMT Password Migration only works if LSA protection is disabled.
 
-> [!NOTE]  
+> [!IMPORTANT]  
 > Before you make any changes to LSA Protection, back up the computer. Work with your security team to minimize potential issues.
 
 ### Local profiles aren't migrated
