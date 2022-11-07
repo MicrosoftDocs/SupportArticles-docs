@@ -55,7 +55,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 - A GDR is released through the download center. A GDR is also released through Microsoft Update, Windows Update, or both.
 
-- For fixes to SQL Server versions that are out of extended support, review [What are Extended Security Updates?](/sql/sql-server/end-of-support/sql-server-extended-security-updates)
+- For fixes to SQL Server versions that are out of extended support, review [What are Extended Security Updates for SQL Server?](/sql/sql-server/end-of-support/sql-server-extended-security-updates)
 
 - Example: [KB5014356 – Description of the security update for SQL Server 2019 GDR: June 14, 2022](https://support.microsoft.com/topic/kb5014356-description-of-the-security-update-for-sql-server-2019-gdr-june-14-2022-568fdeaa-f05a-4f2e-8be5-b0a15d99fd8a)
 
@@ -80,7 +80,7 @@ The SQL Server team uses a scheduled delivery model for releasing fixes and prod
 
 |Support phase |Mainstream support |Extended Support |Extended Security Updates |
 |-|-|-|-|
-|Available release vehicles |CU, OD, GDR, SP (SQL Server 2016 and earlier versions only) |GDR/Security updates |GDR/Security updates with agreement |
+|**Available release vehicles** |CU, OD, GDR, SP (SQL Server 2016 and earlier versions only) |GDR/Security updates |GDR/Security updates with agreement |
 
 ### SQL Server 2017 and later versions
 
