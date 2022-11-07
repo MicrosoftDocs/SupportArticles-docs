@@ -1,6 +1,6 @@
 ---
 title: Fix Conditional Access-related issues for Teams Android devices
-description: Discusses how to excluse devices from Conditional Access policies or Intune device compliance policies that can prevent users from signing in to or using the Teams app on Android devices.
+description: Discusses how to exclude devices from Conditional Access policies or Intune device compliance policies that can prevent users from signing in to or using the Teams app on Android devices.
 ms.reviewer: taherr
 ms.topic: troubleshooting
 ms.date: 11/03/2022
@@ -26,7 +26,7 @@ If these policies are applied, you might experience one or more of the following
 
 - The devices can't sign in to Teams, or they get stuck in sign-in loops.
 - The devices automatically sign out of Teams randomly.
-- Microsoft Teams freezes or stops responding.
+- Microsoft Teams freezes or crashes.
 
 ## Cause
 
