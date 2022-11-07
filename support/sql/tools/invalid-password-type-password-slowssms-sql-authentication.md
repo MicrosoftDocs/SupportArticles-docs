@@ -1,7 +1,7 @@
 ---
 title: Invalid password error and slow response to typed password in SSMS
 description: This article provides workarounds for the "Invalid password" error and slow response to typed password in SQL Server Management Studio.
-ms.date: 10/31/2022
+ms.date: 11/07/2022
 ms.custom: sap:Other tools
 ms.author: cbenkler
 ms.prod: sql
@@ -23,13 +23,17 @@ Assume that you use SSMS 17.2 (or an older version of the program) to connect to
 
 This issue occurs because the Windows Data Protection API can't back up a MasterKey to a domain controller for the domain, which contains the Windows account that's used to start SSMS.
 
-## Workarounds
+## Workaround
 
-To work around this issue, use Windows authentication instead of SQL authentication, log in to Windows using a local account instead of a domain account, or follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
+To work around this issue:
+
+1. Use Windows authentication instead of SQL authentication.
+1. Log in to Windows using a local account instead of a domain account, or
+1. Follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
 
 ## Resolution
 
-To fix this issue, identify, and resolve the issue that's preventing backup of the Windows Data Protection API MasterKey.
+To fix this issue, identify and resolve the issue that's preventing backup of the Windows Data Protection API MasterKey.
 
 ## Status
 
@@ -49,9 +53,9 @@ The following steps describe what happens in this scenario:
 
 1. This causes the password that's sent to the SQL Server to be an empty string. When you encounter this issue, there are two symptoms:
 
-- Typing in the password box is noticeably slow due to the failed attempts to reach a writable domain controller.
+ - Typing in the password box is noticeably slow due to the failed attempts to reach a writable domain controller.
 
-- The SQL Server reports an invalid password in its error log even when the correct password is entered.
+ - The SQL Server reports an invalid password in its error log even when the correct password is entered.
 
 Essentially, you have encountered the issue documented at the article [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md). Microsoft has changed the SSMS code for the 17.3 and future releases. Therefore, if this issue is encountered, the system will report the exception that is thrown from DPAPI for much easier diagnosis.
 
