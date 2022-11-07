@@ -1,15 +1,13 @@
 ---
-title: SQL Server diagnostics are added to detect unreported input/output (I/O) problems due to stale reads or lost writes
+title: SQL Server diagnostics detect unreported I/O problems due to stale reads or lost writes
 description: This article helps you resolve the errors 605, 823, 3448, and 3456 using the SQL Server Diagnostics.
-ms.date: 11/02/2022
+ms.date: 11/07/2022
 ms.custom: sap:Administration and Management
 ms.reviewer: svccauto
 ms.prod: sql
 ---
 
-# SQL Server diagnostics added to detect unreported input/output (I/O) problems due to stale reads or lost writes
-
-_Applies to_: SQL Server
+# SQL Server diagnostics detect unreported I/O problems due to stale reads or lost writes
 
 This article explains how SQL Server Diagnostics helps detect unreported input or output problems that occur due to stale reads or lost writes.
 
@@ -52,8 +50,8 @@ For example, Microsoft has confirmed scenarios where a WriteFile API call return
 
 To enable additional diagnostics for these types of problems, SQL Server has added trace flag 818. You can specify trace flag [818](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql?view=sql-server-ver16&preserve-view=true) as a startup parameter, -T818, for the computer that's running SQL Server, or you can run the following statement:
 
-```sql
-`DBCC TRACEON(818, -1)`
+```
+DBCC TRACEON(818, -1)
 ```
 
 Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
