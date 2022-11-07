@@ -53,9 +53,9 @@ The following steps describe what happens in this scenario:
 
 1. This causes the password that's sent to the SQL Server to be an empty string. When you encounter this issue, there are two symptoms:
 
- - Typing in the password box is noticeably slow due to the failed attempts to reach a writable domain controller.
+  - Typing in the password box is noticeably slow due to the failed attempts to reach a writable domain controller.
 
- - The SQL Server reports an invalid password in its error log even when the correct password is entered.
+  - The SQL Server reports an invalid password in its error log even when the correct password is entered.
 
 Essentially, you have encountered the issue documented at the article [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md). Microsoft has changed the SSMS code for the 17.3 and future releases. Therefore, if this issue is encountered, the system will report the exception that is thrown from DPAPI for much easier diagnosis.
 
