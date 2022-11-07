@@ -1,6 +1,6 @@
 ---
 title: Invalid password error and slow response to typed password in SSMS
-description: This article provides workarounds for the "Invalid password" error and slow response to typed password in SQL Server Management Studio.
+description: This article provides workarounds for the Invalid password error and slow response to typed password in SQL Server Management Studio.
 ms.date: 11/07/2022
 ms.custom: sap:Other tools
 ms.author: cbenkler
@@ -29,7 +29,7 @@ To work around this issue:
 
 1. Use Windows authentication instead of SQL authentication.
 1. Log in to Windows using a local account instead of a domain account, or
-1. Follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md).
+1. Follow the steps in the "Resolution" section in [DPAPI MasterKey backup failures when RWDC isn't available](../../windows-server/identity/dpapi-masterkey-backup-failures.md#resolution).
 
 ## Resolution
 
