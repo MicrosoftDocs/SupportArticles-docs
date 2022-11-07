@@ -58,7 +58,7 @@ Essentially, you have encountered the issue documented at the article [DPAPI Mas
 
 ## References
 
-- [CryptProtectData function](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata?redirectedfrom=MSDN)
+- [CryptProtectData function](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata)
 
 - [Windows Data Protection](/previous-versions/ms995355(v=msdn.10))
 
