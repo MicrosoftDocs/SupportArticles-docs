@@ -240,7 +240,9 @@
   - name: Teams Rooms and devices
     items:
     - name: Collect Android Teams device logs
-      href: ./teams-rooms-and-devices/collect-device-logs.md  
+      href: ./teams-rooms-and-devices/collect-device-logs.md
+    - name: Conditional Access-related issues on Teams Android devices
+      href: ./teams-rooms-and-devices/teams-android-devices-conditional-access-issues.md
     - name: Known issues
       href: ./teams-rooms-and-devices/rooms-known-issues.md
     - name: Signed out of Teams Android devices
