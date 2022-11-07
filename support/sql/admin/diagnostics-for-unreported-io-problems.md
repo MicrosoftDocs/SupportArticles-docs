@@ -54,7 +54,7 @@ To enable additional diagnostics for these types of problems, SQL Server has add
 DBCC TRACEON(818, -1)
 ```
 
-Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that're performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
+Trace flag 818 enables an in-memory ring buffer that is used for tracking the last 2,048 successful write operations that are performed by the computer running SQL Server, not including sort and workfile I/Os. When errors such as 605, 823, or 3448 occur, the incoming buffer's log sequence number (LSN) value is compared to the recent write list. If the LSN that's retrieved during the read operation is older than the one specified during the write operation, a new error message is logged in the SQL Server error log. Most SQL Server write operations occur as checkpoints or as lazy writes. A lazy write is a background task that uses asynchronous I/O. The implementation of the ring buffer is lightweight, thereby making the performance affect on the system negligible.
 
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
@@ -76,7 +76,7 @@ You may see the following two common behaviors in stale read scenarios:
 
 - When you issue a checkpoint and run the `DBCC DROPCLEANBUFFERS` statement (to remove all database pages from the memory), and then run the `DBCC CHECKDB` statement on the database, the most recently written data is returned.
 
-The behaviors mentioned in the preceding paragraph indicate a read caching problem and they're frequently solved by disabling the read cache. The actions that're outlined in the preceding paragraph typically force a cache invalidation and the successful reads that occur show that the physical media is correctly updated. The lost write behavior occurs when the page that's read back is still the older version of the data, even after a forced flush of the caching mechanisms.
+The behaviors mentioned in the preceding paragraph indicate a read caching problem and they're frequently solved by disabling the read cache. The actions that are outlined in the preceding paragraph typically force a cache invalidation and the successful reads that occur show that the physical media is correctly updated. The lost write behavior occurs when the page that's read back is still the older version of the data, even after a forced flush of the caching mechanisms.
 
 Sometimes, the problem may not be specific to a hardware cache. It may be a problem with a filter driver. In such cases, review your software, including backup utilities and antivirus software, and then see if there are problems with the filter driver.
 
@@ -133,7 +133,7 @@ Some customers have reported missing rows after they perform row count activitie
 > [!IMPORTANT]
 > If you experience any of the behaviors, or if you are suspicious of similar problems together with disabling caching mechanisms, Microsoft strongly recommends that you obtain the latest update for SQL Server and the latest SQL Server I/O Stress Simulator. Microsoft also strongly encourages that you perform a strict review of your operating system and its associated configurations.
 
-Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
+Note that Microsoft has confirmed that under rare and heavy I/O loads, some hardware platforms can return a stale read. If the extended diagnostics indicate a possible stale read or lost write condition, contact your hardware vendor for immediate follow-up and test with the [SQLIOSim](../tools/sqliosim-utility-simulate-activity-disk-subsystem.md) utility.
 
 SQL Server requires systems to support guaranteed delivery to stable media as outlined under the [SQL Server I/O Reliability Program Requirements](https://support.microsoft.com/topic/kb826433-sql-server-diagnostics-added-to-detect-unreported-i-o-problems-due-to-stale-reads-or-lost-writes-ca3f00af-2ee2-04e3-e6dc-e09169328982?preview=true). For more information about the input and output requirements for the SQL Server database engine, see [Microsoft SQL Server Database Engine Input/Output Requirements](database-engine-input-output-requirements.md).
 
