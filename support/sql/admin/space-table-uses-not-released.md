@@ -54,4 +54,4 @@ To work around this problem, use one of the following methods:
     TRUNCATE TABLE <TableName>
     ```
 
-- Create a clustered index on a column of the table. For more information about how to create a clustered index on a table, see the [Create Clustered Indexes](/sql/relational-databases/indexes/create-clustered-indexes).
+- Create a clustered index on a column of the table. For more information about how to create a clustered index on a table, see [Create Clustered Indexes](/sql/relational-databases/indexes/create-clustered-indexes).
