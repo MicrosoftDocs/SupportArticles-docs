@@ -40,7 +40,7 @@ If operating system, driver, or hardware problems cause lost write or stale read
 
 Microsoft introduced extended tracking capabilities starting with SQL Server 2000 Service Pack 4 and these diagnostics have been part of the product in SQL Server 2005 and later versions. These capabilities are designed to help detect I/O related external problems and to troubleshoot the error messages described in the [Symptoms](#symptoms) section.
 
-If you receive any of the error messages that are mentioned in the [Symptoms](#symptoms) section and they can't be explained by an event such as a physical drive failure, then review any known problems with SQL Server, the operating system, the drivers, and the hardware. The diagnostics try to provide information about the following two conditions:
+If you receive any of the error messages that are listed in the [Symptoms](#symptoms) section and they aren't explained by an event like a physical drive failure, then review any known problems with SQL Server, the operating system, the drivers, and the hardware. The diagnostics try to provide information about the following two conditions:
 
 - *Lost Write*: A successful call to the WriteFile API, but the operating system, a driver, or the caching controller doesn't correctly flush the data to the physical media even though SQL Server is informed that the write was successful.
 
@@ -59,9 +59,7 @@ Trace flag 818 enables an in-memory ring buffer that is used for tracking the la
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
 > SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
-
 LSN returned (63361:16876:181), LSN expected (63361:16876:500)
-
 Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
 
 Starting with SQL Server 2005, the error message will be displayed as:
@@ -106,19 +104,16 @@ Some scenarios are outlined in more detail in the following lists:
 6Page Modified for a second time but because of stale image does not see first modification 
 7Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
 
-
 SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
 
 Microsoft has noted that the root cause for the following sort read failures is generally a stale read or a lost write:
 
-```
-2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
+> 2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
 
-2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
+> 2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
 
-2003-03-29 09:51:41.13 spid57 Error: 823, Severity: 24, State: 7
+> 2003-03-29 09:51:41.13 spid57 Error: 823, Severity: 24, State: 7
 2003-03-29 09:51:41.13 spid57 I/O error (bad page ID) detected during read at offset 0x000000027d2000 in file 'e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf'..
-
 * 00931097 Module(sqlservr+00531097) (utassert_fail+000002E3)
 * 005B1DA8 Module(sqlservr+001B1DA8) (RecBase::Resize+00000091)
 * 00407EE7 Module(sqlservr+00007EE7) (RecBase::LocateColumn+00000012)
@@ -126,7 +121,7 @@ Microsoft has noted that the root cause for the following sort read failures is 
 * 008522B3 Module(sqlservr+004522B3) (merge_getnext+00000285)
 * 0085207D Module(sqlservr+0045207D) (mergenext+0000000D)
 * 004FC5FB Module(sqlservr+000FC5FB) (getsorted+00000021)
-```
+
 
 Because a stale read or a lost write results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
 
