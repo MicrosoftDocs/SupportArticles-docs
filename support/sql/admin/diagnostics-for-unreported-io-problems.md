@@ -59,8 +59,8 @@ Trace flag 818 enables an in-memory ring buffer that is used for tracking the la
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
 > SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
-LSN returned (63361:16876:181), LSN expected (63361:16876:500)
-Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
+ LSN returned (63361:16876:181), LSN expected (63361:16876:500)
+ Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
 
 Starting with SQL Server 2005, the error message will be displayed as:
 
