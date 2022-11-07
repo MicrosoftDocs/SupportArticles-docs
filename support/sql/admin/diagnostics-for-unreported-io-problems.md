@@ -58,13 +58,11 @@ Trace flag 818 enables an in-memory ring buffer that is used for tracking the la
 
 The following message indicates that SQL Server didn't receive an error from the WriteFile API call or the ReadFile API call. However, when the LSN was reviewed, the value wasn't correct:
 
-```
-SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
+> SQL Server has detected an unreported OS/hardware level read or write problem on Page (1:75007) of database 12
 
 LSN returned (63361:16876:181), LSN expected (63361:16876:500)
 
 Contact the hardware vendor and consider disabling caching mechanisms to correct the problem
-```
 
 Starting with SQL Server 2005, the error message will be displayed as:
 
@@ -90,8 +88,7 @@ Microsoft has also noted conditions that don't meet the criteria for error 605 o
 
 Some scenarios are outlined in more detail in the following lists:
 
-```
-LSN SequenceAction
+> LSN SequenceAction
 1Checkpoint
 2Begin Transaction
 3Table created or truncated
@@ -99,10 +96,8 @@ LSN SequenceAction
 5Newly allocated page written to disk by Lazy Writer
 6Select from table - Scans IAM chain, newly allocated page read back from disk (LRU | HASHED = 0x9 in getpage message), encounters Error 605 - Invalid Object ID
 7Rollback of transaction initiated
-```
 
-```
-LSN SequenceAction
+> LSN SequenceAction
 1Checkpoint
 2Begin Transaction
 3Page Modification
@@ -110,7 +105,7 @@ LSN SequenceAction
 5Page read in for another modification (stale image returned)
 6Page Modified for a second time but because of stale image does not see first modification 
 7Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
-```
+
 
 SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
 
