@@ -150,7 +150,7 @@ Refer to the following screenshot as an example:
 
 ## <a id="curl-command-send-availability-test-result"></a>Curl command to send availability test result
 
-If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `ikey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
+If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `iKey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
 
 Here are sample curl commands that send a single availability test result:
 
