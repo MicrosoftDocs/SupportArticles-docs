@@ -86,7 +86,8 @@ Microsoft has also noted conditions that don't meet the criteria for error 605 o
 
 Some scenarios are outlined in more detail in the following lists:
 
-> LSN SequenceAction
+```sql
+LSN SequenceAction
 1Checkpoint
 2Begin Transaction
 3Table created or truncated
@@ -94,8 +95,10 @@ Some scenarios are outlined in more detail in the following lists:
 5Newly allocated page written to disk by Lazy Writer
 6Select from table - Scans IAM chain, newly allocated page read back from disk (LRU | HASHED = 0x9 in getpage message), encounters Error 605 - Invalid Object ID
 7Rollback of transaction initiated
+```
 
-> LSN SequenceAction
+```sql
+LSN SequenceAction
 1Checkpoint
 2Begin Transaction
 3Page Modification
@@ -103,16 +106,18 @@ Some scenarios are outlined in more detail in the following lists:
 5Page read in for another modification (stale image returned)
 6Page Modified for a second time but because of stale image does not see first modification 
 7Rollback - Fails - Transaction Log shows two different log records with the same PREV LSN for the page
+```
 
 SQL Server `sort` operators perform I/O activities, primarily to and from the `tempdb` database. These I/O operations are similar to the buffer I/O operations; however, they've already been designed to use read retry logic to try to resolve similar issues. The additional diagnostics explained in this article don't apply to these I/O operations.
 
 Microsoft has noted that the root cause for the following sort read failures is generally a stale read or a lost write:
 
-> 2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
+```sql
+2003-04-01 20:13:31.38 spid122 SQL Server Assertion: File: <p:\sql\ntdbms\storeng\drs\include\record.inl>, line=1447 Failed Assertion = 'm_SizeRec > 0 && m_SizeRec <= MAXDATAROW'.
 
-> 2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
+2003-03-29 09:51:41.12 spid57 Sort read failure (bad page ID). pageid = (0x1:0x13e9), dbid = 2, file = e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf. Retrying.
 
-> 2003-03-29 09:51:41.13 spid57 Error: 823, Severity: 24, State: 7
+2003-03-29 09:51:41.13 spid57 Error: 823, Severity: 24, State: 7
 2003-03-29 09:51:41.13 spid57 I/O error (bad page ID) detected during read at offset 0x000000027d2000 in file 'e:\program files\Microsoft SQL Server\mssql\data\tempdb.mdf'..
 * 00931097 Module(sqlservr+00531097) (utassert_fail+000002E3)
 * 005B1DA8 Module(sqlservr+001B1DA8) (RecBase::Resize+00000091)
@@ -121,6 +126,7 @@ Microsoft has noted that the root cause for the following sort read failures is 
 * 008522B3 Module(sqlservr+004522B3) (merge_getnext+00000285)
 * 0085207D Module(sqlservr+0045207D) (mergenext+0000000D)
 * 004FC5FB Module(sqlservr+000FC5FB) (getsorted+00000021)
+```
 
 Because a stale read or a lost write results in data storage that isn't expected, a wide variety of behaviors may occur. It may appear as missing data, but some of the more common effects of missing data appear as index corruptions, such as error 644 or 625:
 
