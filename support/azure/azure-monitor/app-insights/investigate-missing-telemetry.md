@@ -150,20 +150,20 @@ Refer to the following screenshot as an example:
 
 ## <a id="curl-command-send-availability-test-result"></a>Curl command to send availability test result
 
-If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `ikey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
+If you're running Linux VMs, use curl instead of PowerShell to send a similar REST request. You need to adjust the **ingestion endpoint hostname**, the `iKey` value, and the `time` values. The Application Insights ingestion endpoint doesn't accept any records older than 48 hours.
 
 Here are sample curl commands that send a single availability test result:
 
 - Curl command for Linux/MacOS:
 
     ```
-    curl -H "Content-Type: application/json" -X POST -d '{"data":{"baseData":{"ver":2,"id":"SampleRunId","name":"MicrosoftSupportSampleWebtestResultUsingCurl","duration":"00.00:00:10","success":true,"runLocation":"RegionName","message":"SampleWebtestResult","properties":{"SampleProperty":"SampleValue"}},"baseType":"AvailabilityData"},"ver":1,"name":"Microsoft.ApplicationInsights.Metric","time":"2022-09-01T12:00:00.0000000Z","sampleRate":100,"ikey":"########-####-####-####-############","flags":0}' https://dc.applicationinsights.azure.com/v2.1/track
+    curl -H "Content-Type: application/json" -X POST -d '{"data":{"baseData":{"ver":2,"id":"SampleRunId","name":"MicrosoftSupportSampleWebtestResultUsingCurl","duration":"00.00:00:10","success":true,"runLocation":"RegionName","message":"SampleWebtestResult","properties":{"SampleProperty":"SampleValue"}},"baseType":"AvailabilityData"},"ver":1,"name":"Microsoft.ApplicationInsights.Metric","time":"2022-09-01T12:00:00.0000000Z","sampleRate":100,"iKey":"########-####-####-####-############","flags":0}' https://dc.applicationinsights.azure.com/v2.1/track
     ```
 
 - Curl command for Windows:
 
     ```console
-    curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"ver\":2,\"id\":\"SampleRunId\",\"name\":\"MicrosoftSupportSampleWebtestResultUsingCurl\",\"duration\":\"00.00:00:10\",\"success\":true,\"runLocation\":\"RegionName\",\"message\":\"SampleWebtestResult\",\"properties\":{\"SampleProperty\":\"SampleValue\"}},\"baseType\":\"AvailabilityData\"},\"ver\":1,\"name\":\"Microsoft.ApplicationInsights.Metric\",\"time\":\"2021-10-05T22:00:00.0000000Z\",\"sampleRate\":100,\"ikey\":\"########-####-####-####-############\",\"flags\":0} https://dc.applicationinsights.azure.com/v2/track
+    curl -H "Content-Type: application/json" -X POST -d {\"data\":{\"baseData\":{\"ver\":2,\"id\":\"SampleRunId\",\"name\":\"MicrosoftSupportSampleWebtestResultUsingCurl\",\"duration\":\"00.00:00:10\",\"success\":true,\"runLocation\":\"RegionName\",\"message\":\"SampleWebtestResult\",\"properties\":{\"SampleProperty\":\"SampleValue\"}},\"baseType\":\"AvailabilityData\"},\"ver\":1,\"name\":\"Microsoft.ApplicationInsights.Metric\",\"time\":\"2021-10-05T22:00:00.0000000Z\",\"sampleRate\":100,\"iKey\":\"########-####-####-####-############\",\"flags\":0} https://dc.applicationinsights.azure.com/v2/track
     ```
 
 ## <a id="powershell-script-send-request-telemetry-record"></a>PowerShell script to send request telemetry record
