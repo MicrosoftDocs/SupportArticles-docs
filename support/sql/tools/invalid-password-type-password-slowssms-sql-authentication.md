@@ -40,7 +40,7 @@ Microsoft has confirmed that this is a problem in the Microsoft products that ar
 
 The following steps describe what happens in this scenario:
 
-1. When you type a character in the password box in SSMS, the [CryptProtectData](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata?redirectedfrom=MSDN) Windows Data Protection API (DPAPI) function is called to encrypt the password.
+1. When you type a character in the password box in SSMS, the [CryptProtectData](/windows/win32/api/dpapi/nf-dpapi-cryptprotectdata) Windows Data Protection API (DPAPI) function is called to encrypt the password.
 
 1. DPAPI initially generates a strong key called a MasterKey (because there's no valid MasterKey to be used), which is protected by the user's logon credentials, and the backup process is invoked.
 
