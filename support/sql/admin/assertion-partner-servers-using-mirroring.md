@@ -43,7 +43,7 @@ To resolve this issue, obtain the latest fix for your version of SQL Server. For
 |---------|---------|---------|
 |Different lock behavior between the primary and mirror     |  [2938828](https://support.microsoft.com/topic/kb2938828-fix-database-mirroring-hits-assert-and-mirroring-session-shows-suspended-state-in-sql-server-2012-or-sql-server-2014-dbadfab5-6679-6cb1-850b-40e9447fc4a3) FIX: Database mirroring hits assert, and mirroring session shows suspended state in SQL Server 2012 or SQL Server 2014       |   [2931693](https://support.microsoft.com/topic/kb2931693-cumulative-update-1-for-sql-server-2014-35643fd4-5930-2a14-9afd-5076b35abcf4) Cumulative Update 1 for SQL Server 2014, [2931078](https://support.microsoft.com/topic/kb2931078-cumulative-update-package-9-for-sql-server-2012-service-pack-1-b46a592f-77c0-5b1e-292a-333f787adf9c) Cumulative Update 9 for SQL Server 2012 SP1      |
 |Bulk Insert / BCP with Check_Constraints OFF     |         |   SQL Server 2012      |
-|Change of the encryption keys: Database master key,  Server instance master key   |         |   SQL Server 2012      |
+|Change of the encryption keys: Database master key, Server instance master key   |         |   SQL Server 2012      |
 
 > [!NOTE]
 > - In the preceding table, the last column lists only the first build that contains the fix. Because SQL Server builds are cumulative, later builds, such as SQL Server 2014 SP1 contains those fixes. However, those builds aren't listed in the table.
