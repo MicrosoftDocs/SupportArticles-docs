@@ -261,8 +261,8 @@ To do this, use one of the following methods:
 
         > [!NOTE]
         >
-        > - The  placeholder `<objID>` represents the object ID that you obtained in Step 9b.
-        > - The  placeholder `<idxID>` represents the index ID that you obtained in Step 9b.
+        > - The placeholder `<objID>` represents the object ID that you obtained in Step 9b.
+        > - The placeholder `<idxID>` represents the index ID that you obtained in Step 9b.
 
 1. If blocking is caused by an indexed view, we recommend that you drop the indexed view. If blocking is caused by a unique nonclustered index, we recommend that you drop the index, and then re-create a non-unique index.
 
